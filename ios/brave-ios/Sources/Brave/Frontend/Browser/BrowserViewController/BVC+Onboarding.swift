@@ -235,7 +235,9 @@ extension BrowserViewController {
     if !isDefault {
       steps.insert(.defaultBrowsing, at: 0)
     }
-    if !braveCore.p3aUtils.isP3APreferenceManaged {
+    if !braveCore.p3aUtils.isP3APreferenceManaged
+      || !braveCore.localState.isManagedPreference(forPath: kMetricsReportingEnabled)
+    {
       steps.append(.metricsOptIn)
     }
 
