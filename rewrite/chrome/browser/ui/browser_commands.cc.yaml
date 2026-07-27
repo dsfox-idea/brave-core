@@ -27,3 +27,16 @@ substitutions:
       re_pattern: (void CloseTab\(.*?toast_controller\(\);)
       re_flags: [DOTALL]
       replace: \1\n  toast_controller = nullptr;
+
+  - description:
+      Insert a detached tree-tab subtree via InsertDetachedTreeTabNodeAt instead
+      of InsertDetachedSplitTabAt, so moving a tab with children to a new window
+      (via MoveTabsToWindowImpl) preserves the tree hierarchy instead of
+      flattening it.
+    regex:
+      re_pattern: "(InsertDetachedTabGroupAt\\(std::move\\(\\*collection\\),\\s*target_model->count\\(\\)\\);\\s*\\}\\s*)else(\\s*\\{)"
+      re_flags: [DOTALL]
+      replace:
+        "\\1else if
+        (std::holds_alternative<\n                     std::unique_ptr<tabs::TreeTabNodeTabCollection>>(\n                     collection->get()->collection_))\\2\n        target_model->InsertDetachedTreeTabNodeAt(std::move(*collection),\n                                                  target_model->count());\n      }
+        else\\2"

@@ -1,0 +1,17 @@
+diff --git a/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc b/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
+index 78b8d7d648ee4fd628b2332f66caccb32cd9f561..7a584cbe96b761d23b4bd696e266432a8694f3ea 100644
+--- a/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
++++ b/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.cc
+@@ -1424,6 +1424,12 @@ void TabDragController::AttachToNewContext(
+         collection_indices =
+             attached_context_->GetTabStripModel()->InsertDetachedTabGroupAt(
+                 std::move(*detached_tab_collection), index);
++      } else if (std::holds_alternative<
++                     std::unique_ptr<tabs::TreeTabNodeTabCollection>>(
++                     detached_tab_collection->get()->collection_)) {
++        collection_indices =
++            attached_context_->GetTabStripModel()->InsertDetachedTreeTabNodeAt(
++                std::move(*detached_tab_collection), index);
+       } else {
+         collection_indices =
+             attached_context_->GetTabStripModel()->InsertDetachedSplitTabAt(

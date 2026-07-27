@@ -1660,3 +1660,74 @@ BraveTreeTabStripCollectionDelegate::GetTreeTabNodeIdForGroup(
   }
   return &static_cast<tabs::TreeTabNodeTabCollection*>(parent)->node().id();
 }
+
+void BraveTreeTabStripCollectionDelegate::PrepareTreeTabNodesForBatchDetach(
+    const std::vector<tabs::TabInterface*>& moving_tabs) {
+  const base::flat_set<tabs::TabInterface*> moving_tabs_set(moving_tabs.begin(),
+                                                            moving_tabs.end());
+  for (auto* moving_tab : base::Reversed(moving_tabs)) {
+    auto* moving_tab_tree_node = GetParentTreeNodeCollectionOfTab(moving_tab);
+    MoveNonSelectedChildrenOfTreeTabNodeToParent(moving_tab_tree_node,
+                                                 moving_tabs_set);
+  }
+}
+
+bool BraveTreeTabStripCollectionDelegate::ShouldDetachAsTreeSubtreeRoot(
+    tabs::TabInterface* tab,
+    const std::vector<tabs::TabInterface*>& moving_tabs) {
+  const base::flat_set<tabs::TabInterface*> moving_tabs_set(moving_tabs.begin(),
+                                                            moving_tabs.end());
+  auto* tree_node = GetParentTreeNodeCollectionOfTab(tab);
+  if (IsTreeNodeCoveredByMovingAncestor(tree_node, moving_tabs_set)) {
+    // An ancestor tree node will already carry this whole subtree along with
+    // it when it is detached, so this tab should not be detached separately.
+    return false;
+  }
+
+  // GetTreeNodeChildren() always includes the node's own current tab, so a
+  // leaf node (no descendants) reports exactly one child; only detach as a
+  // subtree unit when there's at least one real descendant to preserve.
+  const bool has_descendant =
+      std::ranges::any_of(tree_node->GetTreeNodeChildren(), [&](auto& child) {
+        auto* const* current_tab = std::get_if<tabs::TabInterface*>(&child);
+        return !current_tab || *current_tab != tree_node->GetCurrentTab();
+      });
+  if (!has_descendant) {
+    return false;
+  }
+
+  // Detaching a subtree containing a nested whole group/split is not yet
+  // supported here (it would require replicating group_model_/collection
+  // mapping bookkeeping for collections nested arbitrarily deep); fall back
+  // to the existing group/split-aware detach branches for those tabs instead
+  // of risking stale group/split registration across windows.
+  for (auto* node : tree_node->GetTreeTabNodeSubtreeRecursive()) {
+    if (node->current_value_type() !=
+        tabs::TreeTabNodeTabCollection::CurrentValueType::kTab) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+void BraveTreeTabStripCollectionDelegate::WillDetachTreeTabNodeSubtree(
+    tabs::TreeTabNodeTabCollection& subtree_root) {
+  CHECK(tree_tab_model_);
+  for (auto* node : subtree_root.GetTreeTabNodeSubtreeRecursive()) {
+    tree_tab_model_->RemoveTreeTabNode(node->node().id());
+  }
+}
+
+void BraveTreeTabStripCollectionDelegate::DidAttachTreeTabNodeSubtree(
+    tabs::TreeTabNodeTabCollection& subtree_root) {
+  CHECK(tree_tab_model_);
+  for (auto* node : subtree_root.GetTreeTabNodeSubtreeRecursive()) {
+    node->RebindTreeTabModelCallbacks(
+        base::BindRepeating(&TreeTabModel::AddTreeTabNode, tree_tab_model_),
+        base::BindRepeating(&TreeTabModel::RemoveTreeTabNode, tree_tab_model_),
+        base::BindRepeating(&TreeTabModel::OnTreeTabNodeMoved,
+                            tree_tab_model_));
+    tree_tab_model_->AddTreeTabNode(node->node());
+  }
+}

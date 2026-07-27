@@ -1,8 +1,20 @@
 diff --git a/chrome/browser/ui/browser_commands.cc b/chrome/browser/ui/browser_commands.cc
-index 83efe1922093d916df033033654f010c06632777..33e7d5623802aff6185d838bc065141d5529860e 100644
+index 83efe1922093d916df033033654f010c06632777..0bbf5c91cac4c7b1f2aa0b0d03ad7235a098901b 100644
 --- a/chrome/browser/ui/browser_commands.cc
 +++ b/chrome/browser/ui/browser_commands.cc
-@@ -1037,7 +1037,7 @@ void Reload(BrowserWindowInterface* browser,
+@@ -455,6 +455,11 @@ void MoveTabsToWindowImpl(BrowserWindowInterface* source,
+               collection->get()->collection_)) {
+         target_model->InsertDetachedTabGroupAt(std::move(*collection),
+                                                target_model->count());
++      } else if (std::holds_alternative<
++                     std::unique_ptr<tabs::TreeTabNodeTabCollection>>(
++                     collection->get()->collection_)) {
++        target_model->InsertDetachedTreeTabNodeAt(std::move(*collection),
++                                                  target_model->count());
+       } else {
+         bool pinned = collection->get()->pinned_;
+         target_model->InsertDetachedSplitTabAt(
+@@ -1037,7 +1042,7 @@ void Reload(BrowserWindowInterface* browser,
    ReloadInternal(browser, disposition, false);
  }
  
@@ -11,7 +23,7 @@ index 83efe1922093d916df033033654f010c06632777..33e7d5623802aff6185d838bc065141d
                            WindowOpenDisposition disposition) {
    base::RecordAction(UserMetricsAction("ReloadBypassingCache"));
    ReloadInternal(browser, disposition, true);
-@@ -1319,6 +1319,7 @@ void CloseTab(BrowserWindowInterface* browser) {
+@@ -1319,6 +1324,7 @@ void CloseTab(BrowserWindowInterface* browser) {
    }
  
    ToastController* toast_controller = browser->GetFeatures().toast_controller();
@@ -19,7 +31,7 @@ index 83efe1922093d916df033033654f010c06632777..33e7d5623802aff6185d838bc065141d
    if (!toast_controller) {
      CloseSelectedTabAndRecordTabCountMetric(browser);
      return;
-@@ -1621,7 +1622,7 @@ void NewSplitTab(BrowserWindowInterface* browser,
+@@ -1621,7 +1627,7 @@ void NewSplitTab(BrowserWindowInterface* browser,
    // the regular NTP which renders special content when in Incognito.
    const GURL new_tab_url = browser->GetProfile()->IsIncognitoProfile()
                                 ? chrome::ChromeUINewTabURLAsGURL()
