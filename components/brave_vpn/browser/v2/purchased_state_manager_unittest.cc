@@ -379,6 +379,13 @@ class PurchasedStateManagerTest : public testing::Test {
     return credential_store_.HasAnyCredential();
   }
 
+  bool RefreshScheduled() const {
+    return manager_->subscriber_credential_refresh_timer_.IsRunning();
+  }
+  base::TimeDelta RefreshDelay() const {
+    return manager_->subscriber_credential_refresh_timer_.GetCurrentDelay();
+  }
+
  protected:
   base::test::TaskEnvironment task_environment_{
       base::test::TaskEnvironment::TimeSource::MOCK_TIME};
@@ -1065,6 +1072,47 @@ TEST_F(PurchasedStateManagerTest, ExpiredSummaryMeansNotPurchased) {
 }
 
 #endif  // !BUILDFLAG(IS_ANDROID)
+
+// Success schedules a refresh, at expiry today; firing it clears the cache and
+// re-resolves from scratch (a full summary round-trip, visible as LOADING).
+TEST_F(PurchasedStateManagerTest, SuccessSchedulesRefreshThatReresolves) {
+  CreateManager();
+  const base::Time expiry = base::Time::Now() + base::Days(30);
+  SeedSkusCredential(expiry);
+  manager_->Load(CurrentDomain());
+
+  api_client_.ResolveExchange(base::ok(std::string(kTestSubscriberCredential)));
+  ASSERT_TRUE(manager_->IsPurchased());
+  EXPECT_TRUE(RefreshScheduled());
+  EXPECT_EQ(RefreshDelay(), expiry - base::Time::Now());
+
+  task_environment_.FastForwardBy(base::Days(30) - base::Seconds(1));
+  EXPECT_TRUE(HasAnyStoredCredential());
+  task_environment_.FastForwardBy(base::Seconds(1));
+  EXPECT_FALSE(HasAnyStoredCredential());
+
+  EXPECT_EQ(skus_client_.credential_summary_calls(), 1);
+  EXPECT_EQ(manager_->GetInfo().state, mojom::PurchasedState::LOADING);
+}
+
+// A transient error during the refresh leaves the user un-purchased with
+// nothing scheduled to recover. This is intended behavior: the refresh can be
+// manually triggered by a user in the UI.
+TEST_F(PurchasedStateManagerTest,
+       RefreshTransientFailureDoesntScheduleRecovery) {
+  CreateManager();
+  SeedSkusCredential(base::Time::Now() + base::Days(30));
+  manager_->Load(CurrentDomain());
+
+  api_client_.ResolveExchange(base::ok(std::string(kTestSubscriberCredential)));
+  ASSERT_TRUE(manager_->IsPurchased());
+
+  task_environment_.FastForwardBy(base::Days(30));
+  CallOnCredentialSummary(loading_sequence(), CurrentDomain(),
+                          SkusTransportError());
+  EXPECT_EQ(manager_->GetInfo().state, mojom::PurchasedState::FAILED);
+  EXPECT_FALSE(RefreshScheduled());
+}
 
 class PurchasedStateManagerWithRealSkusServiceTest
     : public PurchasedStateManagerTest {
