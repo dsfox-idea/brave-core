@@ -9,6 +9,7 @@
 #include <optional>
 #include <string>
 #include <utility>
+#include <vector>
 
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
@@ -187,6 +188,50 @@ TEST_F(BraveProxyingURLLoaderFactoryTest,
   EXPECT_TRUE(redirected_request_initiator->opaque());
   EXPECT_NE(initiator, *redirected_request_initiator);
   EXPECT_EQ(net::OK, client.completion_status().error_code);
+}
+
+TEST_F(BraveProxyingURLLoaderFactoryTest,
+       PreservesOriginalInitiatorForHandlerAfterBraveRedirect) {
+  // Regression coverage for the original-initiator fix: even though the
+  // outgoing network request's initiator is tainted to an opaque origin after a
+  // cross-origin Brave redirect (see the taint test above), the
+  // BraveRequestInfo handed to the request handler for the redirected request
+  // must still carry the real, original initiator so Shields/adblock can
+  // attribute the request to the true initiator. If the fix is reverted, the
+  // handler would observe the opaque tainted origin here instead.
+  const GURL request_url("https://redirect-source.example/resource");
+  const GURL redirected_url("https://redirect-target.example/resource");
+  const url::Origin initiator =
+      url::Origin::Create(GURL("https://initiator.example"));
+  ASSERT_FALSE(initiator.opaque());
+
+  request_handler_->SetRedirect(request_url, redirected_url);
+  test_factory_.AddResponse(redirected_url.spec(), "ok");
+
+  auto factory = CreateFactory();
+  network::TestURLLoaderClient client;
+  mojo::Remote<network::mojom::URLLoader> loader;
+  CreateLoaderAndStart(factory, loader, CreateRequest(request_url, initiator),
+                       client);
+
+  client.RunUntilRedirectReceived();
+  loader->FollowRedirect({}, std::nullopt);
+  client.RunUntilComplete();
+
+  EXPECT_EQ(net::OK, client.completion_status().error_code);
+
+  bool saw_redirected_request = false;
+  std::optional<url::Origin> initiator_for_redirected;
+  for (const auto& observation : request_handler_->observations()) {
+    if (observation.first == redirected_url) {
+      saw_redirected_request = true;
+      initiator_for_redirected = observation.second;
+    }
+  }
+  ASSERT_TRUE(saw_redirected_request);
+  ASSERT_TRUE(initiator_for_redirected.has_value());
+  EXPECT_FALSE(initiator_for_redirected->opaque());
+  EXPECT_EQ(initiator, *initiator_for_redirected);
 }
 
 }  // namespace

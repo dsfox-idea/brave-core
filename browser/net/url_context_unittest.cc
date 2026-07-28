@@ -50,7 +50,7 @@ TEST_F(BraveRequestInfoTest,
 
   auto ctx = BraveRequestInfo::MakeCTX(
       request, content::GlobalRenderFrameHostToken(), 1, &profile,
-      /*old_ctx=*/nullptr,
+      /*old_ctx=*/nullptr, /*original_request_initiator=*/std::nullopt,
       content::ContentBrowserClient::URLLoaderFactoryType::kWorkerSubResource,
       factory_initiator, factory_isolation_info);
 
@@ -81,7 +81,7 @@ TEST_F(BraveRequestInfoTest, RequestContextOverridesFactoryContext) {
 
   auto ctx = BraveRequestInfo::MakeCTX(
       request, content::GlobalRenderFrameHostToken(), 1, &profile,
-      /*old_ctx=*/nullptr,
+      /*old_ctx=*/nullptr, /*original_request_initiator=*/std::nullopt,
       content::ContentBrowserClient::URLLoaderFactoryType::kWorkerSubResource,
       factory_initiator, MakeIsolationInfo(factory_top_frame_origin));
 
@@ -107,7 +107,7 @@ TEST_F(BraveRequestInfoTest,
 
   auto ctx = BraveRequestInfo::MakeCTX(
       request, content::GlobalRenderFrameHostToken(), 1, &profile,
-      /*old_ctx=*/nullptr,
+      /*old_ctx=*/nullptr, /*original_request_initiator=*/std::nullopt,
       content::ContentBrowserClient::URLLoaderFactoryType::kDocumentSubResource,
       factory_initiator, MakeIsolationInfo(factory_top_frame_origin));
 

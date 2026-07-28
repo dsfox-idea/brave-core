@@ -192,6 +192,8 @@ class BraveRequestInfo {
       uint64_t request_identifier,
       content::BrowserContext* browser_context,
       brave::BraveRequestInfo* old_ctx,
+      base::optional_ref<const url::Origin> original_request_initiator =
+          std::nullopt,
       std::optional<content::ContentBrowserClient::URLLoaderFactoryType>
           url_loader_factory_type = std::nullopt,
       base::optional_ref<const url::Origin> factory_request_initiator =
