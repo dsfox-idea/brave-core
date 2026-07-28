@@ -4,25 +4,37 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 #include <memory>
+#include <string>
 #include <utility>
 
+#include "base/check.h"
 #include "base/feature_list.h"
 #include "brave/browser/ui/side_panel/ai_chat/ai_chat_side_panel_utils.h"
 #include "brave/browser/ui/views/side_panel/ai_chat/ai_chat_side_panel_tab_transfer_bridge.h"
+#include "brave/components/ai_chat/core/common/ai_chat_urls.h"
 #include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/constants/webui_url_constants.h"
+#include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/tab_list/tab_list_interface.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
+#include "chrome/browser/ui/browser_window/public/profile_browser_collection.h"
+#include "chrome/browser/ui/side_panel/side_panel_entry_id.h"
 #include "chrome/browser/ui/side_panel/side_panel_ui.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/interaction/browser_elements_views.h"
+#include "chrome/browser/ui/views/side_panel/side_panel.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_web_ui_view.h"
 #include "chrome/browser/ui/webui/webui_embedding_context.h"
 #include "components/tabs/public/tab_interface.h"
+#include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/web_contents.h"
 #include "ui/gfx/geometry/rect.h"
 #include "ui/views/controls/webview/webview.h"
+#include "ui/views/view_utils.h"
+#include "url/gurl.h"
 
 namespace ai_chat {
 
@@ -177,6 +189,102 @@ bool MaybeMoveSidePanelChatToTab(content::WebContents* ai_chat_web_contents) {
   }
 
   return transfer_bridge->MoveSidePanelContentsToTab(ai_chat_web_contents);
+}
+
+namespace {
+
+// Returns the live top-level `WebContents` of the side panel WebUI view
+// currently hosted in `browser`, or nullptr if the panel has no such view. Both
+// AI Chat side panel variants (the plain `SidePanelWebUIViewT` and the movable
+// `AIChatMovableSidePanelWebView`) share
+// `SidePanelWebUIView::kSidePanelWebViewId` and derive from `views::WebView`,
+// so a single id lookup handles both. Mirrors
+// `AIChatSidePanelTabTransferBridge::MoveSidePanelContentsToTab`, including the
+// animation-content fallback used while the panel is still sliding in.
+content::WebContents* GetSidePanelWebContents(BrowserWindowInterface* browser) {
+  BrowserView* browser_view = BrowserView::GetBrowserViewForBrowser(browser);
+  if (!browser_view) {
+    return nullptr;
+  }
+
+  views::WebView* web_view = views::AsViewClass<views::WebView>(
+      browser_view->GetSidePanelAnimationContent());
+  if (!web_view) {
+    web_view = views::AsViewClass<views::WebView>(
+        browser_view->side_panel()->GetViewByID(
+            SidePanelWebUIView::kSidePanelWebViewId));
+  }
+  return web_view ? web_view->web_contents() : nullptr;
+}
+
+// Whether `url` is served by the AI Chat WebUI (`chrome://leo-ai/...`). The
+// host is unique to AI Chat, so it alone identifies the WebUI.
+bool IsAIChatURL(const GURL& url) {
+  return url.host() == kAIChatUIHost;
+}
+
+}  // namespace
+
+void OpenConversationInSidePanel(Profile* profile,
+                                 const std::string& conversation_uuid) {
+  CHECK(profile);
+
+  // Only the global (window-scoped) side panel is supported.
+  if (!ShouldSidePanelBeGlobal(profile)) {
+    return;
+  }
+
+  // No eligible browser window for this profile (e.g. all windows closed):
+  // there is nothing to open the panel in.
+  ProfileBrowserCollection* collection =
+      ProfileBrowserCollection::GetForProfile(profile);
+  if (!collection) {
+    return;
+  }
+  BrowserWindowInterface* browser = collection->FindTabbedBrowser();
+  if (!browser) {
+    return;
+  }
+
+  // Window type without a side panel UI (not a normal browser window).
+  SidePanelUI* side_panel_ui = browser->GetFeatures().side_panel_ui();
+  if (!side_panel_ui) {
+    return;
+  }
+
+  const GURL conversation_url = ConversationUrl(conversation_uuid);
+  if (!conversation_url.is_valid()) {
+    return;
+  }
+
+  // If AI Chat is already the side panel view being shown, update the shown
+  // conversation in place - reusing the live `WebContents` preserves panel
+  // state and avoids a reload when the requested conversation is already
+  // showing. Guard on the URL: the shared web view id lookup returns whichever
+  // side panel WebUI view is current, which may belong to a different feature.
+  content::WebContents* shown = GetSidePanelWebContents(browser);
+  if (shown && IsAIChatURL(shown->GetVisibleURL())) {
+    if (!shown->GetVisibleURL().EqualsIgnoringRef(conversation_url)) {
+      shown->GetController().LoadURLWithParams(
+          content::NavigationController::LoadURLParams(conversation_url));
+    }
+    return;
+  }
+
+  // Otherwise the panel is closed or showing another entry: show AI Chat, which
+  // synchronously creates (or restores the cached) `WebContents`, then navigate
+  // it to the conversation.
+  side_panel_ui->Show(SidePanelEntryId::kChatUI);
+
+  // Defensive: `Show()` creates the AI Chat WebContents synchronously, so this
+  // is expected to be non-null; bail rather than crash if a window type ever
+  // produces no view.
+  content::WebContents* web_contents = GetSidePanelWebContents(browser);
+  if (!web_contents) {
+    return;
+  }
+  web_contents->GetController().LoadURLWithParams(
+      content::NavigationController::LoadURLParams(conversation_url));
 }
 
 }  // namespace ai_chat

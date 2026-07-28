@@ -9,6 +9,7 @@
 #include "base/path_service.h"
 #include "base/run_loop.h"
 #include "base/test/bind.h"
+#include "base/test/run_until.h"
 #include "brave/app/brave_command_ids.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
@@ -19,6 +20,7 @@
 #include "brave/components/ai_chat/core/browser/engine/engine_consumer.h"
 #include "brave/components/ai_chat/core/browser/engine/mock_engine_consumer.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
+#include "brave/components/ai_chat/core/common/ai_chat_urls.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "brave/components/ai_chat/core/common/mojom/common.mojom.h"
 #include "brave/components/constants/brave_paths.h"
@@ -28,6 +30,8 @@
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "chrome/browser/ui/views/frame/browser_view.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_web_ui_view.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/prefs/pref_service.h"
@@ -44,6 +48,8 @@
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "ui/base/mojom/menu_source_type.mojom.h"
+#include "ui/views/controls/webview/webview.h"
+#include "ui/views/view_utils.h"
 #include "url/gurl.h"
 
 #if BUILDFLAG(ENABLE_PDF)
@@ -253,6 +259,19 @@ class AIChatRenderViewContextMenuBrowserTest : public InProcessBrowserTest {
     return sidebar_controller->IsActiveIndex(index);
   }
 
+  // Returns the live WebContents hosting the AI Chat side panel view, or null
+  // if the panel is not hosting one. Both side panel view variants share
+  // `SidePanelWebUIView::kSidePanelWebViewId` and derive from `views::WebView`.
+  content::WebContents* GetAttachedSidePanelWebContents() {
+    auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser());
+    if (!browser_view) {
+      return nullptr;
+    }
+    auto* web_view = views::AsViewClass<views::WebView>(
+        browser_view->GetViewByID(SidePanelWebUIView::kSidePanelWebViewId));
+    return web_view ? web_view->web_contents() : nullptr;
+  }
+
   ConversationHandler* GetConversationHandler() {
     AIChatTabHelper* helper = AIChatTabHelper::FromWebContents(web_contents());
     if (!helper) {
@@ -419,12 +438,29 @@ IN_PROC_BROWSER_TEST_F(AIChatRenderViewContextMenuBrowserTest,
 
   ASSERT_TRUE(menu->IsCommandIdEnabled(IDC_AI_CHAT_CONTEXT_SUMMARIZE_TEXT));
 
+  // Capture the content-associated conversation the command submits to, so we
+  // can assert the side panel is routed to *that* conversation rather than a
+  // fresh/global one.
+  ConversationHandler* conversation_handler = GetConversationHandler();
+  ASSERT_TRUE(conversation_handler);
+  const std::string conversation_uuid =
+      conversation_handler->get_conversation_uuid();
+
   // Execute the command.
   menu->ExecuteCommand(IDC_AI_CHAT_CONTEXT_SUMMARIZE_TEXT, 0);
   run_loop.Run();
 
   EXPECT_EQ(submitted_text, "This is the way");
   EXPECT_TRUE(IsAIChatSidebarActive());
+
+  // With the (default) global side panel, the command routes through
+  // `AIChatService::OpenSidePanel()`, so the panel's live WebContents is
+  // navigated to the submitted conversation's URL.
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    content::WebContents* panel_contents = GetAttachedSidePanelWebContents();
+    return panel_contents && panel_contents->GetVisibleURL() ==
+                                 ai_chat::ConversationUrl(conversation_uuid);
+  }));
 }
 
 #if BUILDFLAG(ENABLE_PDF)

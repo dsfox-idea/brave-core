@@ -37,6 +37,11 @@ bool MaybeMoveFullPageChatToSidePanel(
 bool MaybeMoveSidePanelChatToTab(content::WebContents* ai_chat_web_contents) {
   return false;
 }
+
+void OpenConversationInSidePanel(Profile* profile,
+                                 const std::string& conversation_uuid) {
+  NOTIMPLEMENTED();
+}
 #endif
 
 bool ShouldSidePanelBeGlobal(Profile* profile) {

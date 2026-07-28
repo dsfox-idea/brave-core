@@ -234,6 +234,27 @@ class AIChatService : public KeyedService,
   bool GetIsContentAgentAllowed() const;
   void SetIsContentAgentAllowed(bool is_allowed);
 
+  // Opens (or focuses) the desktop AI Chat side panel and shows the
+  // conversation identified by `conversation_uuid`. The actual panel work is
+  // delegated to a browser-layer handler installed via
+  // `SetOpenSidePanelHandler()`, because this component-layer service must stay
+  // free of Browser / side-panel dependencies. A no-op when no handler is
+  // installed (e.g. platforms without a desktop side panel, or before any
+  // browser window exists). Only the global side panel is supported.
+  void OpenSidePanel(const std::string& conversation_uuid);
+
+  // Installs the browser-layer handler backing `OpenSidePanel()`. Set from the
+  // browser/ui layer on desktop; unset elsewhere. This is a post-construction
+  // setter rather than constructor injection because the handler lives in the
+  // toolkit_views layer (`//brave/browser/ui/...`), which depends on this
+  // service's factory - the factory therefore cannot depend on it back to bind
+  // the handler at construction time. It is installed (idempotently) per
+  // browser window; see
+  // `BrowserWindowFeatures::InitPostBrowserViewConstruction`.
+  using OpenSidePanelHandler =
+      base::RepeatingCallback<void(const std::string& conversation_uuid)>;
+  void SetOpenSidePanelHandler(OpenSidePanelHandler handler);
+
   bool HasUserOptedIn();
   bool IsPremiumStatus();
 
@@ -451,6 +472,11 @@ class AIChatService : public KeyedService,
   // Whether conversations can utilize content agent capabilities. For now,
   // this is profile-specific.
   bool is_content_agent_allowed_ = false;
+
+  // Browser-layer handler that opens the desktop side panel on a specific
+  // conversation. Installed via SetOpenSidePanelHandler(); null on platforms or
+  // configurations where opening a side panel is not supported.
+  OpenSidePanelHandler open_side_panel_handler_;
 
   // Background task runner for the database and sync bridge. Created
   // synchronously the first time MaybeInitStorage() succeeds so that a

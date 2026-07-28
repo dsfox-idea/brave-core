@@ -1372,6 +1372,16 @@ void AIChatService::SetIsContentAgentAllowed(bool is_allowed) {
   is_content_agent_allowed_ = is_allowed;
 }
 
+void AIChatService::OpenSidePanel(const std::string& conversation_uuid) {
+  if (open_side_panel_handler_) {
+    open_side_panel_handler_.Run(conversation_uuid);
+  }
+}
+
+void AIChatService::SetOpenSidePanelHandler(OpenSidePanelHandler handler) {
+  open_side_panel_handler_ = std::move(handler);
+}
+
 bool AIChatService::HasUserOptedIn() {
   return ai_chat::HasUserOptedIn(profile_prefs_);
 }

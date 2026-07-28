@@ -75,7 +75,9 @@ class BraveVPNController {};
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
+#include "brave/browser/ui/side_panel/ai_chat/ai_chat_side_panel_utils.h"
 #include "brave/browser/ui/views/side_panel/ai_chat/ai_chat_side_panel_tab_transfer_bridge.h"
+#include "brave/components/ai_chat/core/browser/ai_chat_service.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #endif
 
@@ -197,13 +199,25 @@ void BrowserWindowFeatures::InitPostBrowserViewConstruction(
   }
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
-  if (base::FeatureList::IsEnabled(
-          ai_chat::features::kAIChatMoveFullPageToSidePanel) &&
-      browser_->GetType() == BrowserWindowInterface::Type::TYPE_NORMAL &&
-      ai_chat::AIChatServiceFactory::GetForBrowserContext(
-          browser_->GetProfile())) {
-    ai_chat_side_panel_tab_transfer_bridge_ =
-        std::make_unique<AIChatSidePanelTabTransferBridge>(browser_);
+  if (browser_->GetType() == BrowserWindowInterface::Type::TYPE_NORMAL) {
+    if (ai_chat::AIChatService* ai_chat_service =
+            ai_chat::AIChatServiceFactory::GetForBrowserContext(
+                browser_->GetProfile())) {
+      // Install the browser-layer handler backing
+      // `AIChatService::OpenSidePanel()`, so the component-layer service can
+      // open the global AI Chat side panel on a specific conversation. The
+      // handler resolves the target window at call time, so setting it
+      // (idempotently) from each normal window is sufficient; it is independent
+      // of the `kAIChatMoveFullPageToSidePanel` handling.
+      ai_chat_service->SetOpenSidePanelHandler(base::BindRepeating(
+          &ai_chat::OpenConversationInSidePanel, browser_->GetProfile()));
+
+      if (base::FeatureList::IsEnabled(
+              ai_chat::features::kAIChatMoveFullPageToSidePanel)) {
+        ai_chat_side_panel_tab_transfer_bridge_ =
+            std::make_unique<AIChatSidePanelTabTransferBridge>(browser_);
+      }
+    }
   }
 #endif
 

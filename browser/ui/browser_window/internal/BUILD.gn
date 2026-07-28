@@ -34,6 +34,7 @@ source_set("internal") {
     deps += [
       "//brave/browser/ai_chat",
       "//brave/browser/ui/views/side_panel/ai_chat",
+      "//brave/components/ai_chat/core/browser",
       "//brave/components/ai_chat/core/common",
     ]
   }

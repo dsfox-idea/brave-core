@@ -11,11 +11,15 @@
 #include "base/test/test_future.h"
 #include "base/time/time.h"
 #include "brave/browser/ai_chat/ai_chat_agent_profile_helper.h"
+#include "brave/browser/ai_chat/ai_chat_service_factory.h"
 #include "brave/browser/ui/side_panel/ai_chat/ai_chat_side_panel_utils.h"
 #include "brave/browser/ui/views/side_panel/ai_chat/ai_chat_movable_side_panel_web_view.h"
 #include "brave/browser/ui/views/side_panel/ai_chat/ai_chat_side_panel_web_view.h"
 #include "brave/browser/ui/webui/ai_chat/ai_chat_ui.h"
+#include "brave/components/ai_chat/core/browser/ai_chat_service.h"
+#include "brave/components/ai_chat/core/browser/conversation_handler.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
+#include "brave/components/ai_chat/core/common/ai_chat_urls.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "chrome/browser/profiles/profile.h"
@@ -156,6 +160,28 @@ class AIChatGlobalSidePanelBrowserTest
     EXPECT_EQ(browser->tab_strip_model()->count(), 1);
 
     return stays_open_after_tab_switch;
+  }
+
+  // Creates a fresh, empty conversation via the AIChatService for `browser`'s
+  // profile and opens it in the side panel through the public
+  // `AIChatService::OpenSidePanel()` API. Returns the conversation uuid (empty
+  // only if a precondition EXPECT failed, in which case the test is already
+  // failing).
+  std::string CreateAndOpenConversationInSidePanel(Browser* browser) {
+    auto* service =
+        ai_chat::AIChatServiceFactory::GetForBrowserContext(browser->profile());
+    EXPECT_TRUE(service);
+    if (!service) {
+      return std::string();
+    }
+    ai_chat::ConversationHandler* conversation = service->CreateConversation();
+    EXPECT_TRUE(conversation);
+    if (!conversation) {
+      return std::string();
+    }
+    const std::string uuid = conversation->get_conversation_uuid();
+    service->OpenSidePanel(uuid);
+    return uuid;
   }
 
   base::test::ScopedFeatureList scoped_feature_list_;
@@ -687,6 +713,86 @@ IN_PROC_BROWSER_TEST_P(AIChatGlobalSidePanelBrowserTest,
             TabStripModel::kNoTab);
   ASSERT_TRUE(
       base::test::RunUntil([&]() { return !IsSidePanelOpen(browser()); }));
+}
+
+// `AIChatService::OpenSidePanel(uuid)` opens the (global) AI Chat side panel on
+// a specific conversation. When the panel is closed it shows the `kChatUI`
+// entry - which creates the WebContents - and navigates that to the
+// conversation URL. The browser-layer handler is installed per window by
+// `BrowserWindowFeatures`, so this also exercises that wiring end to end.
+IN_PROC_BROWSER_TEST_P(AIChatGlobalSidePanelBrowserTest,
+                       OpenSidePanelOpensConversationWhenClosed) {
+  if (!IsGlobalFlagEnabled()) {
+    GTEST_SKIP() << "OpenSidePanel only supports the global side panel.";
+  }
+
+  auto* coordinator = SidePanelCoordinator::From(browser());
+  ASSERT_TRUE(coordinator);
+  coordinator->SetNoDelaysForTesting(true);
+  ASSERT_FALSE(IsSidePanelOpen(browser()));
+
+  const std::string uuid = CreateAndOpenConversationInSidePanel(browser());
+  ASSERT_FALSE(uuid.empty());
+
+  // The panel now shows AI Chat, and its live WebContents was navigated to the
+  // conversation. Assert on the browser-side navigation (checked synchronously,
+  // before pumping the loop) so the result is independent of any later
+  // client-side routing in the WebUI.
+  EXPECT_TRUE(IsSidePanelOpen(browser()));
+  content::WebContents* panel_contents =
+      GetAttachedSidePanelWebContents(browser());
+  ASSERT_TRUE(panel_contents);
+  EXPECT_EQ(panel_contents->GetVisibleURL(), ai_chat::ConversationUrl(uuid));
+}
+
+// When the panel already hosts AI Chat, `OpenSidePanel(uuid)` updates the shown
+// conversation in place: it reuses the same live WebContents (no fresh contents
+// / no entry rebuild) and navigates it to the requested conversation.
+IN_PROC_BROWSER_TEST_P(AIChatGlobalSidePanelBrowserTest,
+                       OpenSidePanelUpdatesConversationWhenAlreadyOpen) {
+  if (!IsGlobalFlagEnabled()) {
+    GTEST_SKIP() << "OpenSidePanel only supports the global side panel.";
+  }
+
+  auto* coordinator = SidePanelCoordinator::From(browser());
+  ASSERT_TRUE(coordinator);
+  coordinator->SetNoDelaysForTesting(true);
+
+  // Open AI Chat first and read the live attached contents (avoid
+  // `GetWebContentsForTest`, which re-runs the entry factory and returns a
+  // fresh, unattached contents rather than the hosted one).
+  coordinator->Show(SidePanelEntry::Id::kChatUI);
+  content::WebContents* panel_contents = nullptr;
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    panel_contents = GetAttachedSidePanelWebContents(browser());
+    return IsSidePanelOpen(browser()) && panel_contents != nullptr;
+  }));
+  ASSERT_TRUE(content::WaitForLoadStop(panel_contents));
+
+  const std::string uuid = CreateAndOpenConversationInSidePanel(browser());
+  ASSERT_FALSE(uuid.empty());
+
+  // Same live WebContents, navigated in place to the conversation.
+  EXPECT_EQ(GetAttachedSidePanelWebContents(browser()), panel_contents);
+  EXPECT_EQ(panel_contents->GetVisibleURL(), ai_chat::ConversationUrl(uuid));
+  EXPECT_TRUE(IsSidePanelOpen(browser()));
+}
+
+// `OpenSidePanel` only supports the global side panel. With the global side
+// panel disabled (a per-tab / contextual panel) it is a no-op: the panel is not
+// opened and nothing is navigated.
+IN_PROC_BROWSER_TEST_P(AIChatGlobalSidePanelBrowserTest,
+                       OpenSidePanelIsNoOpWhenSidePanelNotGlobal) {
+  if (IsGlobalFlagEnabled()) {
+    GTEST_SKIP() << "Only applies when the side panel is not global.";
+  }
+  ASSERT_FALSE(ai_chat::ShouldSidePanelBeGlobal(browser()->profile()));
+
+  const std::string uuid = CreateAndOpenConversationInSidePanel(browser());
+  ASSERT_FALSE(uuid.empty());
+
+  EXPECT_FALSE(IsSidePanelOpen(browser()));
+  EXPECT_FALSE(GetAttachedSidePanelWebContents(browser()));
 }
 
 INSTANTIATE_TEST_SUITE_P(

@@ -6,6 +6,8 @@
 #ifndef BRAVE_BROWSER_UI_SIDE_PANEL_AI_CHAT_AI_CHAT_SIDE_PANEL_UTILS_H_
 #define BRAVE_BROWSER_UI_SIDE_PANEL_AI_CHAT_AI_CHAT_SIDE_PANEL_UTILS_H_
 
+#include <string>
+
 #include "content/public/browser/web_contents.h"
 #include "url/gurl.h"
 
@@ -48,6 +50,23 @@ void ClosePanelIfChatActive(content::WebContents* web_contents);
 // Returns true if the side panel should be global for all tabs in a tab strip,
 // or false if it should be per-tab.
 bool ShouldSidePanelBeGlobal(Profile* profile);
+
+// Opens (or focuses) the global AI Chat side panel in the most recently active
+// normal browser window for `profile` and shows the conversation identified by
+// `conversation_uuid`. Two cases, matching how the panel is hosted:
+//   * The panel is not currently hosting AI Chat (closed, or showing another
+//     entry): show the `kChatUI` entry - which creates its `WebContents` - and
+//     navigate that contents to the conversation URL.
+//   * The panel is already hosting AI Chat: reuse the live `WebContents` and
+//     navigate it to the conversation, preserving panel state (a no-op when the
+//     requested conversation is already the one shown).
+// No-op if `profile` is not in global side panel mode (see
+// `ShouldSidePanelBeGlobal()`) or has no eligible browser window. This is the
+// browser-layer backing for `ai_chat::AIChatService::OpenSidePanel()`. Desktop
+// only; the real definition lives in the toolkit_views translation unit, with a
+// NOTIMPLEMENTED stub otherwise.
+void OpenConversationInSidePanel(Profile* profile,
+                                 const std::string& conversation_uuid);
 
 }  // namespace ai_chat
 
