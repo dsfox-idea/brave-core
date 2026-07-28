@@ -25,6 +25,8 @@
 #include "extensions/browser/extension_registry.h"
 #include "extensions/browser/extension_registry_factory.h"
 #include "extensions/browser/extension_util.h"
+#include "extensions/browser/permissions/permissions_updater.h"
+#include "extensions/browser/pref_names.h"
 #include "extensions/common/constants.h"
 #include "extensions/common/extension_features.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
@@ -32,6 +34,14 @@
 namespace {
 
 constexpr char kVersion[] = "version";
+
+// User-facing keys under extensions.settings.<id> that should follow the user
+// from a WebStore-hosted MV2 extension to its Brave-hosted replacement.
+constexpr std::string_view kBrowserLevelPrefKeys[] = {
+    "granted_permissions", "runtime_granted_permissions",
+    "active_permissions",  "withholding_permissions",
+    "incognito",           "newAllowFileAccess",
+};
 
 constexpr base::FilePath::CharType kExtensionMV2BackupDir[] =
     FILE_PATH_LITERAL("MV2Backup");
@@ -323,6 +333,12 @@ void ExtensionsManifestV2Migrator::OnExtensionInstalled(
     return;
   }
 
+  // Transfer browser-level prefs (permissions, pin, etc.).
+  if (const auto webstore_extension_id =
+          GetWebStoreHostedExtensionId(extension->id())) {
+    CopyBrowserLevelSettings(*webstore_extension_id, extension->id());
+  }
+
   extensions::ExtensionRegistrar::Get(profile_)->DisableExtension(
       extension->id(), {extensions::disable_reason::DISABLE_RELOAD});
   extensions::GetExtensionFileTaskRunner()->PostTaskAndReply(
@@ -430,6 +446,47 @@ void ExtensionsManifestV2Migrator::OnSilentInstall(
           extensions::UninstallReason::UNINSTALL_REASON_INTERNAL_MANAGEMENT,
           nullptr);
     }
+  }
+}
+
+void ExtensionsManifestV2Migrator::CopyBrowserLevelSettings(
+    const extensions::ExtensionId& webstore_extension_id,
+    const extensions::ExtensionId& brave_hosted_extension_id) {
+  CHECK(IsKnownWebStoreHostedExtension(webstore_extension_id));
+  CHECK(IsKnownBraveHostedExtension(brave_hosted_extension_id));
+
+  auto* prefs = extensions::ExtensionPrefs::Get(profile_);
+  const base::DictValue* source_prefs =
+      prefs->pref_service()
+          ->GetDict(extensions::pref_names::kExtensions)
+          .FindDict(webstore_extension_id);
+  if (!source_prefs) {
+    return;
+  }
+
+  for (const std::string_view key : kBrowserLevelPrefKeys) {
+    if (const base::Value* value = source_prefs->Find(key)) {
+      prefs->UpdateExtensionPref(brave_hosted_extension_id, key,
+                                 value->Clone());
+    }
+  }
+
+  extensions::ExtensionIdList pinned = prefs->GetPinnedExtensions();
+  auto webstore_pin = std::ranges::find(pinned, webstore_extension_id);
+  if (webstore_pin != pinned.end()) {
+    if (std::ranges::contains(pinned, brave_hosted_extension_id)) {
+      pinned.erase(webstore_pin);
+    } else {
+      *webstore_pin = brave_hosted_extension_id;
+    }
+    prefs->SetPinnedExtensions(pinned);
+  }
+
+  if (const extensions::Extension* brave_extension =
+          extensions::ExtensionRegistry::Get(profile_)->GetInstalledExtension(
+              brave_hosted_extension_id)) {
+    extensions::PermissionsUpdater(profile_).InitializePermissions(
+        brave_extension);
   }
 }
 
