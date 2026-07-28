@@ -936,11 +936,33 @@ class NewTabPageViewController: UIViewController {
 
   private func tappedSponsorButton(_ logo: NTPSponsoredImageLogo) {
     UIImpactFeedbackGenerator(style: .medium).vibrate()
-    if let url = logo.destinationURL {
-      delegate?.navigateToInput(url.absoluteString, inNewTab: false, switchingToPrivateMode: false)
+    reportSponsoredBackgroundEvent(.clicked)
+
+    guard let url = logo.destinationURL else { return }
+    if !Preferences.General.followUniversalLinks.value
+      || (Preferences.General.keepYouTubeInBrave.value && url.isYouTubeURL)
+    {
+      delegate?.navigateToInput(
+        url.absoluteString,
+        inNewTab: false,
+        switchingToPrivateMode: false
+      )
+      return
     }
 
-    reportSponsoredBackgroundEvent(.clicked)
+    // Try to open the destination URL as a universal link in case there is
+    // an installed app configured to open it. Fall back to loading the URL
+    // in the browser if no app opened it.
+    UIApplication.shared.open(url, options: [.universalLinksOnly: true]) {
+      [weak self] didOpen in
+      if !didOpen {
+        self?.delegate?.navigateToInput(
+          url.absoluteString,
+          inNewTab: false,
+          switchingToPrivateMode: false
+        )
+      }
+    }
   }
 
   private func handleFavoriteAction(favorite: Favorite, action: BookmarksAction) {
