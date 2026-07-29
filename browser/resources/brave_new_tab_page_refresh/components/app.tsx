@@ -105,7 +105,7 @@ export function App() {
               )}
               <WidgetStack
                 name='right'
-                tabs={['vpn', 'rewards', 'talk']}
+                tabs={['rewards', 'talk']}
               />
             </>
           )}

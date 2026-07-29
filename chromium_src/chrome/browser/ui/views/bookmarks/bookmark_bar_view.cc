@@ -37,8 +37,9 @@ void LayoutBookmarkBarInstructionsView(views::View* bookmark_bar_view,
   DCHECK(model);
   DCHECK(browser);
 
-  const bool show_instructions =
-      model->loaded() && model->bookmark_bar_node()->children().empty();
+  // growser: промо-подсказка импорта закладок на панели скрыта (#17) —
+  // не показываем навязчивый nudge на пустой панели. Backlog удаления — #22.
+  const bool show_instructions = false;
   views::View* import_instruction_view = GetInstructionView(bookmark_bar_view);
   if (show_instructions) {
     DCHECK_GE(button_height, 0);
