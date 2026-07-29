@@ -6,7 +6,7 @@
   <message name="IDS_HISTORY_ACTION_MENU_DESCRIPTION" desc="Text used to identify the history entry drop-down menu for screen readers">
     Actions
   </message>
-  <message name="IDS_HISTORY_ACTOR_TASK_TOOLTIP" desc="This string indicates entries in Brave history that are the result of Gemini in Brave browsing while performing an auto browse task for the user. When users view their Brave history, this string appears as a tooltip on an auto browse history entry. This is a shortened version of the sentence: 'Auto browse worked on this task for you'. The tone should be short and telegraphic.">
+  <message name="IDS_HISTORY_ACTOR_TASK_TOOLTIP" desc="This string indicates entries in Growser history that are the result of Gemini in Growser browsing while performing an auto browse task for the user. When users view their Growser history, this string appears as a tooltip on an auto browse history entry. This is a shortened version of the sentence: 'Auto browse worked on this task for you'. The tone should be short and telegraphic.">
     Auto browse task
   </message>
   <message name="IDS_HISTORY_ARIA_ROLE_DESCRIPTION" desc="Text used for accessibility to describe the list of history entries.">
@@ -45,14 +45,14 @@
   <!-- Although navigation is handled programmatically, set the href for all -->
   <!-- `IDS_HISTORY_OTHER_FORMS_OF_HISTORY_*` strings. This is for user -->
   <!--  transparency, allowing them to see the destination URL on hover. -->
-  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_ONLY" desc="The notification at the bottom of the history page indicating that deleting Brave browsing history will not delete other forms of history stored at Brave My Activity.">
-    Your Brave sync chain may have other forms of browsing history at <ph name="BEGIN_LINK_GMA">&lt;a target="_blank" id="footerBraveMyActivityLink" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK_GMA">&lt;/a&gt;</ph>
+  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_ONLY" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Growser My Activity.">
+    Your Growser sync chain may have other forms of browsing history at <ph name="BEGIN_LINK_GMA">&lt;a target="_blank" id="footerBraveMyActivityLink" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK_GMA">&lt;/a&gt;</ph>
   </message>
-  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GAA_ONLY" desc="The notification at the bottom of the history page indicating that deleting Brave browsing history will not delete other forms of history stored at Gemini Apps Activity.">
-    Your Brave sync chain may have your <ph name="BEGIN_LINK_GAA">&lt;a target="_blank" id="footerGeminiAppsActivityLink" href="$1"&gt;</ph>Gemini Apps Activity<ph name="END_LINK_GAA">&lt;/a&gt;</ph>
+  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GAA_ONLY" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Gemini Apps Activity.">
+    Your Growser sync chain may have your <ph name="BEGIN_LINK_GAA">&lt;a target="_blank" id="footerGeminiAppsActivityLink" href="$1"&gt;</ph>Gemini Apps Activity<ph name="END_LINK_GAA">&lt;/a&gt;</ph>
   </message>
-  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_AND_GAA" desc="The notification at the bottom of the history page indicating that deleting Brave browsing history will not delete other forms of history stored at Brave My Activity and Gemini Apps Activity.">
-    Your Brave sync chain may have other forms of browsing history at <ph name="BEGIN_LINK_GMA">&lt;a target="_blank" id="footerBraveMyActivityLink" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK_GMA">&lt;/a&gt;</ph>, such as your <ph name="BEGIN_LINK_GAA">&lt;a target="_blank" id="footerGeminiAppsActivityLink" href="$2"&gt;</ph>Gemini Apps Activity<ph name="END_LINK_GAA">&lt;/a&gt;</ph>
+  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_AND_GAA" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Growser My Activity and Gemini Apps Activity.">
+    Your Growser sync chain may have other forms of browsing history at <ph name="BEGIN_LINK_GMA">&lt;a target="_blank" id="footerBraveMyActivityLink" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK_GMA">&lt;/a&gt;</ph>, such as your <ph name="BEGIN_LINK_GAA">&lt;a target="_blank" id="footerGeminiAppsActivityLink" href="$2"&gt;</ph>Gemini Apps Activity<ph name="END_LINK_GAA">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_HISTORY_LOADING" desc="Text shown when we're loading the user's history">
     Loading...
@@ -97,7 +97,7 @@
     Remove from history
   </message>
   <message name="IDS_HISTORY_REMOVE_PAGE_SUCCESS" desc="Screen reader message that is read after user successfully removes one history item from the item's options menu. The message will reference the page's title.">
-    '<ph name="PAGE_TITLE">$1<ex>Brave Store - My Cart</ex></ph>' deleted
+    '<ph name="PAGE_TITLE">$1<ex>Growser Store - My Cart</ex></ph>' deleted
   </message>
   <message name="IDS_HISTORY_REMOVE_SELECTED_ITEMS" desc="Title of the button that allows the user to remove the selected history items">
     Delete selected items
@@ -139,13 +139,13 @@
   <message name="IDS_HISTORY_SHOWFULLHISTORY_LINK" desc="The label of the Show Full History link at the bottom of the back/forward menu.">
     Show Full History
   </message>
-  <message name="IDS_HISTORY_SOURCE_FILTER_CHIPS_ARIA_LABEL" desc="This string is the ARIA label of the filter chips that filter the history results when the user selects them; they sit next to each other on top of the Brave history page, where users can see their browsing history.">
+  <message name="IDS_HISTORY_SOURCE_FILTER_CHIPS_ARIA_LABEL" desc="This string is the ARIA label of the filter chips that filter the history results when the user selects them; they sit next to each other on top of the Growser history page, where users can see their browsing history.">
     Auto browse filters
   </message>
-  <message name="IDS_HISTORY_SOURCE_FILTER_CHIP_ACTOR" desc="This string is found on a chip that filters the history results when the user selects it; it sits next to its opposite filter: 'You' (the user's browsing activity). It is at the top of the Brave history page, where users can see their browsing history. This text is a noun and is short for the longer phrase 'Browsing history that AUTO BROWSE performed.' The users will then see entries in Brave history that are the result of Gemini in Brave browsing while performing an auto browse task for the user. The tone should be short and telegraphic.">
+  <message name="IDS_HISTORY_SOURCE_FILTER_CHIP_ACTOR" desc="This string is found on a chip that filters the history results when the user selects it; it sits next to its opposite filter: 'You' (the user's browsing activity). It is at the top of the Growser history page, where users can see their browsing history. This text is a noun and is short for the longer phrase 'Browsing history that AUTO BROWSE performed.' The users will then see entries in Growser history that are the result of Gemini in Growser browsing while performing an auto browse task for the user. The tone should be short and telegraphic.">
     Auto browse
   </message>
-  <message name="IDS_HISTORY_SOURCE_FILTER_CHIP_USER" desc="This string is found on a chip that filters the history results when the user selects it; it sits next to its opposite filter: 'Auto browse' (browsing activity from an auto browse task). It is at the top of the Brave history page, where users can see their browsing history. This text is a noun and is short for the longer phrase 'Browsing history that YOU performed.' The tone should be short and telegraphic.">
+  <message name="IDS_HISTORY_SOURCE_FILTER_CHIP_USER" desc="This string is found on a chip that filters the history results when the user selects it; it sits next to its opposite filter: 'Auto browse' (browsing activity from an auto browse task). It is at the top of the Growser history page, where users can see their browsing history. This text is a noun and is short for the longer phrase 'Browsing history that YOU performed.' The tone should be short and telegraphic.">
     You
   </message>
   <message name="IDS_HISTORY_CLOSE_AND_RETURN_TO_PREFIX" desc="Text for the back-to-opener menu item. Format: Close and go back to &quot;[tab title]&quot;.">
@@ -165,23 +165,23 @@
     See your history on other devices
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGNED_OUT" desc="The promo body text for signed out users.">
-    To get your history from your other devices, sign in and sync history. You’ll also get your passwords and more on all your devices. You can stop syncing anytime in settings. Brave may personalize Search and other services based on your history.
+    To get your history from your other devices, sign in and sync history. You’ll also get your passwords and more on all your devices. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGN_IN_PENDING" desc="The promo body text for pending sign in users with sync history off.">
-    To get your history from your other devices, verify it’s you and sync your history and tabs. You can stop syncing anytime in settings. Brave may personalize Search and other services based on your history.
+    To get your history from your other devices, verify it’s you and sync your history and tabs. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGN_IN_PENDING_SYNC_HISTORY_ON" desc="The promo body text for pending sign in users with sync history on.">
-    To get your history from your other devices, verify it’s you. You can stop syncing anytime in settings. Brave may personalize Search and other services based on your history.
+    To get your history from your other devices, verify it’s you. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGNED_IN" desc="The promo body text for signed in users with sync history off.">
-    To get your history from your other devices, sync your history and tabs to <ph name="ACCOUNT_EMAIL">$1<ex>john@google.com</ex></ph>. You can stop syncing anytime in settings. Brave may personalize Search and other services based on your history.
+    To get your history from your other devices, sync your history and tabs to <ph name="ACCOUNT_EMAIL">$1<ex>john@google.com</ex></ph>. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
   </message>
 
-  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Brave for the history search feature.">
-    Your searches, best matches, and their page contents are sent to Brave and may be seen by human reviewers to improve this feature.
+  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Growser for the history search feature.">
+    Your searches, best matches, and their page contents are sent to Growser and may be seen by human reviewers to improve this feature.
   </message>
-  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER_LOGGING_OFF" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Brave for the history search feature when logging is disabled by policy.">
-    Your searches, best matches, and their page contents are sent to Brave. It will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
+  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER_LOGGING_OFF" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Growser for the history search feature when logging is disabled by policy.">
+    Your searches, best matches, and their page contents are sent to Growser. It will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
   </message>
   <message name="IDS_HISTORY_EMBEDDINGS_PROMO_LABEL" desc="On the history page, the accessiblility label for the promo for history search powered by AI." translateable="false">
     Promo
@@ -199,7 +199,7 @@
     Get answers from your history, powered by AI
   </message>
   <message name="IDS_HISTORY_EMBEDDINGS_ANSWERS_PROMO_BODY" desc="On the history page, the body text of the promo for history search powered by AI with answerer." translateable="false">
-    You can ask questions like "what ingredients were in that pasta recipe?" Using question words like "what" or "where" helps Brave give you better answers. Or describe what you're looking for in a few words. As you visit more sites, you'll see more AI-powered results.
+    You can ask questions like "what ingredients were in that pasta recipe?" Using question words like "what" or "where" helps Growser give you better answers. Or describe what you're looking for in a few words. As you visit more sites, you'll see more AI-powered results.
   </message>
   <message name="IDS_HISTORY_EMBEDDIGNS_PROMO_SETTINGS_LINK_TEXT" desc="On the history page, the text of the link to edit the user's history search setting." translateable="false">
     Manage your history search setting
@@ -294,7 +294,7 @@
     Comparison tables
   </message>
   <message name="IDS_COMPARE_HISTORY_INFO" desc="Info disclaimer text for comparison tables tab in history.">
-    Tabs you delete from your Brave history will still show up in your comparison tables
+    Tabs you delete from your Growser history will still show up in your comparison tables
   </message>
   <message name="IDS_COMPARE_HISTORY_MENU_ARIA_LABEL" desc="Aria label for menu button for a row in tab compare history">
     More actions for comparison table <ph name="COMPARE_SET_NAME"><ex>e-bikes</ex>$1</ph>

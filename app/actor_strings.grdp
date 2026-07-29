@@ -110,7 +110,7 @@
    Task complete
   </message>
   <message name="IDS_ACTOR_NOTIFICATION_BUTTON_GO_TO_CHROME" desc="Label for the notification button for the user to go to chrome." formatter_data="android_java">
-    Go to Brave
+    Go to Growser
   </message>
   <message name="IDS_ACTOR_NOTIFICATION_BODY_WORKING" desc="Notification body text when the actor is working on a task." formatter_data="android_java">
     <ph name="TASK_TITLE">%s<ex>My Task</ex></ph>: Gemini is working on your task and will let you know if more action is needed
@@ -122,7 +122,7 @@
     <ph name="TASK_TITLE">%s<ex>My Task</ex></ph>: Gemini stopped working on this task
   </message>
   <message name="IDS_ACTOR_NOTIFICATION_BODY_COMPLETE" desc="Notification body text when the actor has completed a task." formatter_data="android_java">
-    <ph name="TASK_TITLE">%s<ex>My Task</ex></ph>: Gemini completed your task, you can view it in Brave
+    <ph name="TASK_TITLE">%s<ex>My Task</ex></ph>: Gemini completed your task, you can view it in Growser
   </message>
   <message name="IDS_ACTOR_NOTIFICATION_BODY_STOPPED" desc="Notification body text when a task is stopped." formatter_data="android_java">
     <ph name="TASK_TITLE">%s<ex>My Task</ex></ph>: Gemini stopped working on this task
@@ -152,7 +152,7 @@
     View
   </message>
   <message name="IDS_PEEK_STATE_CLOSE_BUTTON_DESCRIPTION" desc="The accessibility content description for the button that closes peek view." formatter_data="android_java">
-    Close Gemini in Brave
+    Close Gemini in Growser
   </message>
   <message name="IDS_PEEK_STATE_PLAY_BUTTON_A11Y_LABEL" desc="Accessibility label for the button to resume/play the actor task." formatter_data="android_java" is_accessibility_with_no_ui="true">
     Resume
@@ -160,8 +160,8 @@
   <message name="IDS_PEEK_STATE_PAUSE_BUTTON_A11Y_LABEL" desc="Accessibility label for the button to pause the actor task." formatter_data="android_java" is_accessibility_with_no_ui="true">
     Pause
   </message>
-  <message name="IDS_PEEK_STATE_ACCESSIBLE_LABEL" desc="Accessibility label for the Gemini in Brave peek view which represents a minimized chat. The placeholder is the displayed text (e.g. title or description) of the peek view." formatter_data="android_java">
-    <ph name="DISPLAYED_TEXT">%1$s<ex>Ask Gemini</ex></ph>, Gemini in Brave
+  <message name="IDS_PEEK_STATE_ACCESSIBLE_LABEL" desc="Accessibility label for the Gemini in Growser peek view which represents a minimized chat. The placeholder is the displayed text (e.g. title or description) of the peek view." formatter_data="android_java">
+    <ph name="DISPLAYED_TEXT">%1$s<ex>Ask Gemini</ex></ph>, Gemini in Growser
   </message>
   <message name="IDS_ACTOR_LEAVE_SITE_DIALOG_TITLE" desc="Title of a dialog asking if the user really wants to stop the actor task." formatter_data="android_java">
     Leave site and end task?

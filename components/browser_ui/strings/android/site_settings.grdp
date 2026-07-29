@@ -38,10 +38,10 @@
   <message name="IDS_CLIPBOARD_PERMISSION_TITLE" desc="Title of the permission to read from clipboard [CHAR_LIMIT=32]">
     Clipboard
   </message>
-  <message name="IDS_THIRD_PARTY_COOKIES_PAGE_TITLE" desc="The title of a new page. Today, Brave has a 'Cookies and other site data' page at chrome://settings/cookies. As part of the Privacy Sandbox project (see below), Brave is deprecating third-party cookies but maintaining first-party cookies. As a step towards the ultimate deprecation of third-party cookies, we're first separating them from other forms of 'site data', making it easier to eventually remove this page completely. Cookies are often used for honorable objectives, and the difference between first and third-party cookies is important (see any of the many resources online such as https://termly.io/resources/articles/first-party-cookies-vs-third-party-cookies/.">
+  <message name="IDS_THIRD_PARTY_COOKIES_PAGE_TITLE" desc="The title of a new page. Today, Growser has a 'Cookies and other site data' page at chrome://settings/cookies. As part of the Privacy Sandbox project (see below), Growser is deprecating third-party cookies but maintaining first-party cookies. As a step towards the ultimate deprecation of third-party cookies, we're first separating them from other forms of 'site data', making it easier to eventually remove this page completely. Cookies are often used for honorable objectives, and the difference between first and third-party cookies is important (see any of the many resources online such as https://termly.io/resources/articles/first-party-cookies-vs-third-party-cookies/.">
     Third-party cookies
   </message>
-  <message name="IDS_SITE_DATA_PAGE_TITLE" desc="A page title for a new page. What is 'On-device site data'? When you interact with a site, that site can remember things about what you do. For example, you might place a pair of shoes in a shopping cart, close down your browser, and find those same shoes in your shopping cart when you visit the same site a week later. Sometimes that info is saved in the Cloud. Sometimes that info is saved on the user's device. There are several ways a site can save info to the user's device—for example, with cookies (text files saved to your device), small JavaScript databases, and even Brave's new ad settings that are part of the Privacy Sandbox project (see details below). This page introduces the concept of on-device site data, allows the user to see which sites are using it, and allows the user to delete all saved data or just data from specific sites.">
+  <message name="IDS_SITE_DATA_PAGE_TITLE" desc="A page title for a new page. What is 'On-device site data'? When you interact with a site, that site can remember things about what you do. For example, you might place a pair of shoes in a shopping cart, close down your browser, and find those same shoes in your shopping cart when you visit the same site a week later. Sometimes that info is saved in the Cloud. Sometimes that info is saved on the user's device. There are several ways a site can save info to the user's device—for example, with cookies (text files saved to your device), small JavaScript databases, and even Growser's new ad settings that are part of the Privacy Sandbox project (see details below). This page introduces the concept of on-device site data, allows the user to see which sites are using it, and allows the user to delete all saved data or just data from specific sites.">
     On-device site data
   </message>
   <message name="IDS_SITE_SETTINGS_PAGE_SITE_DATA_ALLOWED_SUB_LABEL" desc="1 of 3 possible states for the On-device site data setting. This text appears beneath the 'On-device site data' label and shows the user the state of the setting. With this status, sites have the most flexibility.">
@@ -161,7 +161,7 @@
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_ALLOWED_EXCEPT_THIRD_PARTY" desc="Summary text for when only third-party cookies are blocked.">
     Allowed, except third-party
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_PRECISE_GEO_ALLOWED_USING_APPROXIMATE" desc="Summary text explaining that geolocation permission is allowed for the site (and precise location access was granted by the user to the site), but the site is only receiving approximate location because Brave only has access to approximate location.">
+  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_PRECISE_GEO_ALLOWED_USING_APPROXIMATE" desc="Summary text explaining that geolocation permission is allowed for the site (and precise location access was granted by the user to the site), but the site is only receiving approximate location because Growser only has access to approximate location.">
     Allowed • Using approximate
   </message>
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_PRECISE_GEO_ALLOWED_THIS_TIME_USING_APPROXIMATE" desc="Summary text explaining that a permission is allowed ephemerally, but is using approximate location.">
@@ -176,7 +176,7 @@
   <message name="IDS_WEBSITE_SETTINGS_SITE_BLOCKED" desc="Summary text explaining that a permission is blocked for a site, e.g. google.com blocked.">
     <ph name="SITE_NAME">%1$s<ex>google.com</ex></ph> blocked
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_ASK" desc="Summary text explaining that Brave will ask the user before allowing a site to use a certain permission, e.g. JavaScript: ask first.">
+  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_ASK" desc="Summary text explaining that Growser will ask the user before allowing a site to use a certain permission, e.g. JavaScript: ask first.">
     Ask first
   </message>
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_NOT_ALLOWED" desc="Summary text explaining that a permission is not allowed (blocked), e.g. Notifications: not allowed.">
@@ -199,7 +199,7 @@
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_PERMISSION_QUIET" desc="Label for the quiet version of the permission prompt.">
     Collapse all requests
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_PERMISSION_CPSS" desc="Label for the CPSS version of the permission prompt. Brave decides to show either the loud or quiet version.">
+  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_PERMISSION_CPSS" desc="Label for the CPSS version of the permission prompt. Growser decides to show either the loud or quiet version.">
     Collapse unwanted requests (recommended)
   </message>
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_PERMISSION_LOUD" desc="Label for the loud version of the permission prompt.">
@@ -233,10 +233,10 @@
     Managed by app
   </message>
   <message name="IDS_ANDROID_PERMISSION_OFF" desc="Text at the top of the Website list, explaining to the user that a permission, such as the location service, is turned off. Contains a link to the settings menu to change it.">
-    Turn on permission for <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+    Turn on permission for <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_ANDROID_PERMISSION_OFF_PLURAL" desc="Text at the top of the Website list, explaining to the user that multiple permissions, such as the location service, are turned off. Contains a link to the settings menu to change it.">
-    Turn on permissions for <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+    Turn on permissions for <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_ANDROID_TURN_ON_GEO_PRECISE_PERMISSION" desc="Text at the top of the Website list, explaining to the user that the precise location permission is turned off and they can turn it on in the Android Settings.">
     You can turn on precise location in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
@@ -276,16 +276,16 @@
   <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_DESCRIPTION" desc="The description explaining what the website site settings page is for">
     Control this site's access to your device
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_ALLOW" desc="Summary text explaining that Brave will allow a website to access some permission, e.g. JavaScript: allow.">
+  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_ALLOW" desc="Summary text explaining that Growser will allow a website to access some permission, e.g. JavaScript: allow.">
     Allow
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_BLOCK" desc="Summary text explaining that Brave will block a website from accessing some permission, e.g. JavaScript: block.">
+  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_BLOCK" desc="Summary text explaining that Growser will block a website from accessing some permission, e.g. JavaScript: block.">
     Block
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_GEOLOCATION_APPROXIMATE" desc="Summary text explaining that Brave will allow a website to access approximate geolocation.">
+  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_GEOLOCATION_APPROXIMATE" desc="Summary text explaining that Growser will allow a website to access approximate geolocation.">
     Approximate
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_GEOLOCATION_PRECISE" desc="Summary text explaining that Brave will allow a website to access precise geolocation.">
+  <message name="IDS_WEBSITE_SETTINGS_PERMISSIONS_GEOLOCATION_PRECISE" desc="Summary text explaining that Growser will allow a website to access precise geolocation.">
     Precise
   </message>
   <message name="IDS_WEBSITE_SETTINGS_DOMAIN_EXCEPTION_LABEL" desc="The label for site exceptions that apply to the entire domain.">
@@ -451,12 +451,12 @@
     When on
   </message>
 
-  <message name="IDS_ANTI_ABUSE_WHEN_ON_SECTION_ONE" desc="Summary text explaining that Brave saves a small amount of data when the anti-abuse features are enabled.">
-    A site you visit can save a small amount of info with Brave, mainly to validate you're not a bot
+  <message name="IDS_ANTI_ABUSE_WHEN_ON_SECTION_ONE" desc="Summary text explaining that Growser saves a small amount of data when the anti-abuse features are enabled.">
+    A site you visit can save a small amount of info with Growser, mainly to validate you're not a bot
   </message>
 
   <message name="IDS_ANTI_ABUSE_WHEN_ON_SECTION_TWO" desc="Summary text explaining how the anti-abuse features work.">
-    As you keep browsing, sites can check with Brave and verify with a previous site you've visited that you're likely a real person
+    As you keep browsing, sites can check with Growser and verify with a previous site you've visited that you're likely a real person
   </message>
 
   <message name="IDS_ANTI_ABUSE_WHEN_ON_SECTION_THREE" desc="Summary text explaining that browsing could be helped by the anti-abuse features.">
@@ -483,7 +483,7 @@
     When on, sites can ask to track your camera position and learn about your surroundings. When off, sites can’t track your camera position or learn about your surroundings.
   </message>
   <message name="IDS_ANDROID_AR_CAMERA_PERMISSION_OFF" desc="The message to show when the camera permission needs to be turned on in Android settings in order to use Augmented Reality.">
-    To let <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> use AR, also turn on camera in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+    To let <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> use AR, also turn on camera in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_WEBSITE_SETTINGS_AR_PAGE_DESCRIPTION" desc="Description of Augmented reality content setting.">
     Sites usually track your camera position for AR features, like games or heads-up directions
@@ -536,7 +536,7 @@
   <!-- JavaScript Optimizer -->
 
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_JAVASCRIPT_OPTIMIZER_A11Y" desc="The screen reader announcement describing a toggle with two states, controlling whether JavaScript Optimizer is enabled. Disabling the JavaScript optimizer reduces performance but makes the JavaScript engine more resilient to attacks by malicious actors.">
-    When on, Brave runs faster and features that use JavaScript should work as designed. When off, this reduces performance but makes V8 more resistant to attacks.
+    When on, Growser runs faster and features that use JavaScript should work as designed. When off, this reduces performance but makes V8 more resistant to attacks.
   </message>
 
   <message name="IDS_WEBSITE_SETTINGS_ADD_SITE_DESCRIPTION_JAVASCRIPT_OPTIMIZER_ALLOW" desc="The description for the allow-v8-optimizer-for-website dialog.">
@@ -546,7 +546,7 @@
     Block site from using V8 optimizer.
   </message>
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_JAVASCRIPT_OPTIMIZER_TOGGLE" desc="Label for toggle for the JavaScript optimizer setting.">
-    Speed up sites with Brave's V8 engine but make Brave slightly less resistant to attacks
+    Speed up sites with Growser's V8 engine but make Growser slightly less resistant to attacks
   </message>
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_JAVASCRIPT_OPTIMIZER_ALLOWED_LIST" desc="Summary text explaining that sites will use the JavaScript optimizer. To be shown in the list of permission categories.">
     Sites are faster but less secure
@@ -555,19 +555,19 @@
     Sites are slower but more secure
   </message>
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_JAVASCRIPT_OPTIMIZER_PAGE_DESCRIPTION" desc="An explanation of what V8 is which appears beneath the page title: 'V8 optimizer'.">
-    V8 is Brave’s JavaScript and WebAssembly engine used to improve site performance
+    V8 is Growser’s JavaScript and WebAssembly engine used to improve site performance
   </message>
   <message name="IDS_WEBSITE_SETTINGS_PRIVACY_AND_SECURITY_JAVASCRIPT_OPTIMIZER_ROW_LABEL" desc="Title for the link row to the V8 security settings.">
     JavaScript optimization &amp; security
   </message>
   <message name="IDS_WEBSITE_SETTINGS_SINGLE_WEBSITE_JAVASCRIPT_OPTIMIZER_TOGGLE" desc="Label for toggle for the JavaScript optimizer setting.">
-    Speed up sites with Brave's V8 engine but make Brave slightly less resistant to attacks
+    Speed up sites with Growser's V8 engine but make Growser slightly less resistant to attacks
   </message>
   <message name="IDS_WEBSITE_SETTINGS_JAVASCRIPT_OPTIMIZER_ALLOWED" desc="Primary text corresponding to the allow button in the V8 optimizer permission radio button group.">
-    Speed up sites with Brave's V8 engine but make Brave slightly less resistant to attacks
+    Speed up sites with Growser's V8 engine but make Growser slightly less resistant to attacks
   </message>
   <message name="IDS_WEBSITE_SETTINGS_JAVASCRIPT_OPTIMIZER_BLOCKED" desc="Primary text corresponding to the block button in the V8 optimizer permission radio button group.">
-    Do not speed up sites with Brave's V8 engine but make Brave slightly more resistant to attacks
+    Do not speed up sites with Growser's V8 engine but make Growser slightly more resistant to attacks
   </message>
 
   <message name="IDS_WEBSITE_SETTINGS_JS_OPT_ADD_EXCEPTIONS_DISABLED_REASON" desc="Explains that the add-exception button is disabled because the Android device does not have enough RAM.">
@@ -606,8 +606,8 @@
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_CAMERA_A11Y" desc="The screen reader announcement describing a toggle with two states, controling whether sites can request permission to use camera. It is important to keep this string as two full sentences terminated by a period.">
     When on, sites can ask to use your camera. When off, sites can’t use your camera.
   </message>
-  <message name="IDS_ANDROID_CAMERA_PERMISSION_OFF" desc="The message to show when the camera permission needs to be turned on not just in Brave, but also in Android settings.">
-    To let <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> access your camera, also turn on camera in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+  <message name="IDS_ANDROID_CAMERA_PERMISSION_OFF" desc="The message to show when the camera permission needs to be turned on not just in Growser, but also in Android settings.">
+    To let <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> access your camera, also turn on camera in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_WEBSITE_SETTINGS_CAMERA_PAGE_DESCRIPTION" desc="Description of camera content setting.">
     Sites usually use your video camera for communication features like video chatting
@@ -647,7 +647,7 @@
   </message>
 
   <!-- Site data page -->
-  <message name="IDS_WEBSITE_SETTINGS_SITE_DATA_PAGE_DESCRIPTION" desc="A paragraph that appear beneath the page title: 'On-device site data'. It defines what on-device site data is. What is 'On-device site data'? When you interact with a site, that site can remember things about what you do. For example, you might place a pair of shoes in a shopping cart, close down your browser, and find those same shoes in your shopping cart when you visit the same site a week later. Sometimes that info is saved in the Cloud. Sometimes that info is saved on the user's device. There are several ways a site can save info to the user's device—for example, with cookies (text files saved to your device), small JavaScript databases, and even Brave's new ad settings that are part of the Privacy Sandbox project (see details below). This page introduces the concept of on-device site data, allows the user to see which sites are using it, and allows the user to delete all saved data or just data from specific sites.  **** CONTEXT PRIVACY SANDBOX **** Brave’s Privacy Sandbox initiative 1) deprecates third-party cookies in Brave, 2) supports free and open content on the web (by finding better ways to support ads online), 3) while providing stronger privacy protections for users. You can see a high-level description of this public project at www.privacysanbox.com.">
+  <message name="IDS_WEBSITE_SETTINGS_SITE_DATA_PAGE_DESCRIPTION" desc="A paragraph that appear beneath the page title: 'On-device site data'. It defines what on-device site data is. What is 'On-device site data'? When you interact with a site, that site can remember things about what you do. For example, you might place a pair of shoes in a shopping cart, close down your browser, and find those same shoes in your shopping cart when you visit the same site a week later. Sometimes that info is saved in the Cloud. Sometimes that info is saved on the user's device. There are several ways a site can save info to the user's device—for example, with cookies (text files saved to your device), small JavaScript databases, and even Growser's new ad settings that are part of the Privacy Sandbox project (see details below). This page introduces the concept of on-device site data, allows the user to see which sites are using it, and allows the user to delete all saved data or just data from specific sites.  **** CONTEXT PRIVACY SANDBOX **** Growser’s Privacy Sandbox initiative 1) deprecates third-party cookies in Growser, 2) supports free and open content on the web (by finding better ways to support ads online), 3) while providing stronger privacy protections for users. You can see a high-level description of this public project at www.privacysanbox.com.">
     A site you visit can save info about what you’re doing so that it works as expected — for example, to keep you signed in to a site or to save items in your shopping cart. Often sites save this info temporarily on your device.
   </message>
   <message name="IDS_WEBSITE_SETTINGS_SITE_DATA_PAGE_TOGGLE_SUB_LABEL_ALLOW" desc="A description of the 'On-device site data' setting. This text also reflects the state of the setting (on).">
@@ -748,10 +748,10 @@
   <message name="IDS_WEBSITE_SETTINGS_DOMAIN_DESKTOP_SITE_EXCEPTION_CHECKBOX_DESCRIPTION" desc="Description text of a checkbox in the dialog to add a website to a list.">
    Recommended for best experience
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_DESKTOP_SITE_ALLOW" desc="Summary text explaining that Brave will request desktop view for a website.">
+  <message name="IDS_WEBSITE_SETTINGS_DESKTOP_SITE_ALLOW" desc="Summary text explaining that Growser will request desktop view for a website.">
     Desktop site
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_DESKTOP_SITE_BLOCK" desc="Summary text explaining that Brave will request mobile view for a website.">
+  <message name="IDS_WEBSITE_SETTINGS_DESKTOP_SITE_BLOCK" desc="Summary text explaining that Growser will request mobile view for a website.">
     Mobile site
   </message>
   <message name="IDS_WEBSITE_SETTINGS_DESKTOP_SITE_PAGE_DESCRIPTION" desc="Description of Desktop site content setting.">
@@ -812,7 +812,7 @@
     When on, sites can ask to track your hands. When off, sites can’t track your hands.
   </message>
   <message name="IDS_ANDROID_HAND_TRACKING_PERMISSION_OFF" desc="The message to show when the hand tracking permission needs to be turned on in Android settings.">
-    To let <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> use hand tracking, also turn on hand tracking in <ph name="BEGIN_LINK">&lt;link&gt;</ph>system settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+    To let <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> use hand tracking, also turn on hand tracking in <ph name="BEGIN_LINK">&lt;link&gt;</ph>system settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
 
   <!-- Idle Detection -->
@@ -867,14 +867,14 @@
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_LOCATION_A11Y" desc="The screen reader announcement describing a toggle with two states, controling whether sites can request permission to use location. It is important to keep this string as two full sentences terminated by a period.">
     When on, sites can ask for your location. When off, sites can’t see your location.
   </message>
-  <message name="IDS_ANDROID_LOCATION_ALSO_OFF_GLOBALLY" desc="The additional message to show when Location has not just been turned off for Brave but also globally in Android. Contains a link to the settings menu to enable location.">
+  <message name="IDS_ANDROID_LOCATION_ALSO_OFF_GLOBALLY" desc="The additional message to show when Location has not just been turned off for Growser but also globally in Android. Contains a link to the settings menu to enable location.">
     Location access is also off for this device. Turn it on in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_ANDROID_LOCATION_OFF_GLOBALLY" desc="The message to show when Location has been turned off globally in Android. Contains a link to the settings menu to enable location.">
     Location access is off for this device. Turn it on in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
-  <message name="IDS_ANDROID_LOCATION_PERMISSION_OFF" desc="The message to show when the location permission needs to be turned on not just in Brave, but also in Android settings.">
-    To let <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> access your location, also turn on location in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+  <message name="IDS_ANDROID_LOCATION_PERMISSION_OFF" desc="The message to show when the location permission needs to be turned on not just in Growser, but also in Android settings.">
+    To let <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> access your location, also turn on location in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_WEBSITE_LOCATION_SETTINGS" is_accessibility_with_no_ui="true" desc="Accessibility string for the location settings">
     Open Location Settings
@@ -897,8 +897,8 @@
   <message name="IDS_WEBSITE_SETTINGS_CATEGORY_MIC_A11Y" desc="The screen reader announcement describing a toggle with two states, controling whether sites can request permission to use microphone. It is important to keep this string as two full sentences terminated by a period.">
     When on, sites can ask to use your microphone. When off, sites can’t use your microphone.
   </message>
-  <message name="IDS_ANDROID_MICROPHONE_PERMISSION_OFF" desc="The message to show when the microphone permission needs to be turned on not just in Brave, but also in Android settings.">
-    To let <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> access your microphone, also turn on microphone in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+  <message name="IDS_ANDROID_MICROPHONE_PERMISSION_OFF" desc="The message to show when the microphone permission needs to be turned on not just in Growser, but also in Android settings.">
+    To let <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> access your microphone, also turn on microphone in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_WEBSITE_SETTINGS_MIC_PAGE_DESCRIPTION" desc="Description of the microphone content settings.">
     Sites usually use your microphone for communication features like video chatting
@@ -994,8 +994,8 @@
   <message name="IDS_WEBSITE_SETTING_MANAGED_BY_APP" desc="String used to indicate that a site setting is managed by an installed app">
     Managed by <ph name="APP_NAME">%1$s<ex>App Name</ex></ph>
   </message>
-  <message name="IDS_ANDROID_NOTIFICATIONS_PERMISSION_OFF" desc="The message to show when the notifications permission needs to be turned on not just in Brave, but also in Android settings.">
-    To let <ph name="APP_NAME">%1$s<ex>Brave</ex></ph> send you notifications, also turn on notifications in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+  <message name="IDS_ANDROID_NOTIFICATIONS_PERMISSION_OFF" desc="The message to show when the notifications permission needs to be turned on not just in Growser, but also in Android settings.">
+    To let <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> send you notifications, also turn on notifications in <ph name="BEGIN_LINK">&lt;link&gt;</ph>Android Settings<ph name="END_LINK">&lt;/link&gt;</ph>.
   </message>
   <message name="IDS_WEBSITE_NOTIFICATION_SETTINGS" desc="Accessibility string for the notification settings">
     Open notification settings
@@ -1161,10 +1161,10 @@
   </message>
 
   <!-- Auto-darken web content -->
-  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_AUTO_DARK_ALLOWED" desc="Summary text explaining that sites are alllowed to be darkend with Brave branded darkening algorithm.">
-    Apply dark theme to sites when Brave uses dark theme, when possible
+  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_AUTO_DARK_ALLOWED" desc="Summary text explaining that sites are alllowed to be darkend with Growser branded darkening algorithm.">
+    Apply dark theme to sites when Growser uses dark theme, when possible
   </message>
-  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_AUTO_DARK_BLOCKED" desc="Summary text explaining that sites are blocked to be darkend with Brave branded darkening algorithm.">
+  <message name="IDS_WEBSITE_SETTINGS_CATEGORY_AUTO_DARK_BLOCKED" desc="Summary text explaining that sites are blocked to be darkend with Growser branded darkening algorithm.">
     Don’t apply dark theme to sites
   </message>
   <message name="IDS_WEBSITE_SETTINGS_ADD_SITE_DESCRIPTION_AUTO_DARK_BLOCK" desc="The description for the block auto darken for a specific website dialog.">
@@ -1299,13 +1299,13 @@
   </message>
 
   <!-- Advanced protection -->
-  <message name="IDS_SETTINGS_PRIVACY_AND_SECURITY_ADVANCED_PROTECTION_SECTION_TITLE" desc="Title for section on privacy settings page. Section displays information about how Android-OS advanced-protection 'on' setting affects Brave settings. Section is shown for for a few days after the user has turned on advanced-protection in Android-OS-settings.">
+  <message name="IDS_SETTINGS_PRIVACY_AND_SECURITY_ADVANCED_PROTECTION_SECTION_TITLE" desc="Title for section on privacy settings page. Section displays information about how Android-OS advanced-protection 'on' setting affects Growser settings. Section is shown for for a few days after the user has turned on advanced-protection in Android-OS-settings.">
     Advanced Protection is on
   </message>
-  <message name="IDS_SETTINGS_PRIVACY_AND_SECURITY_ADVANCED_PROTECTION_SECTION_MESSAGE" desc="Displays information about how Android-OS advanced-protection 'on' setting affects Brave settings.">
+  <message name="IDS_SETTINGS_PRIVACY_AND_SECURITY_ADVANCED_PROTECTION_SECTION_MESSAGE" desc="Displays information about how Android-OS advanced-protection 'on' setting affects Growser settings.">
 Manage in <ph name="BEGIN_LINK1">&lt;link_android_advanced_protection&gt;</ph>Android settings<ph name="END_LINK1">&lt;/link_android_advanced_protection&gt;</ph>
 
-Advanced Protection controls these Brave settings:
+Advanced Protection controls these Growser settings:
   </message>
   <message name="IDS_SETTINGS_PRIVACY_AND_SECURITY_ADVANCED_PROTECTION_SECURE_CONNECTIONS_BULLET" desc="Bullet point indicating that Always use secure connections is on when Advanced Protection is on.">
     "Always use secure connections" is on.

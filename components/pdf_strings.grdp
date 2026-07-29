@@ -420,8 +420,8 @@
       <message name="IDS_SAVE_TO_DRIVE_DIALOG_STORAGE_FULL_ERROR_MESSAGE" desc="A message telling the user that the upload failed due to their Google Drive storage being full.">
         Your Google Drive storage is full
       </message>
-      <message name="IDS_SAVE_TO_DRIVE_DIALOG_SUCCESS_MESSAGE" desc="A message telling the user can find their newly uploaded file in the bolded folder name in Google Drive. 'Save from Brave' is a folder name example.">
-        Saved to your <ph name="FOLDER_NAME">&lt;b&gt;$1<ex>Save from Brave</ex>&lt;/b&gt;</ph> folder
+      <message name="IDS_SAVE_TO_DRIVE_DIALOG_SUCCESS_MESSAGE" desc="A message telling the user can find their newly uploaded file in the bolded folder name in Google Drive. 'Save from Growser' is a folder name example.">
+        Saved to your <ph name="FOLDER_NAME">&lt;b&gt;$1<ex>Save from Growser</ex>&lt;/b&gt;</ph> folder
       </message>
       <message name="IDS_SAVE_TO_DRIVE_DIALOG_SUCCESS_TITLE" desc="Title of the dialog that appears when a file is successfully uploaded to Google Drive.">
         Upload successful

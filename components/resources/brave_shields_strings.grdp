@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_BRAVE_SHIELDS" translateable="false" desc="Title for Brave Shields">
-    Brave Shields
+  <message name="IDS_BRAVE_SHIELDS" translateable="false" desc="Title for Growser Shields">
+    Growser Shields
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_STANDALONE" desc="Label for back button on inner views of Shields panel">
     Shields
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_ENABLE" desc="An accessible label for Brave Shields switch button.">
-    Enable Brave Shields
+  <message name="IDS_BRAVE_SHIELDS_ENABLE" desc="An accessible label for Growser Shields switch button.">
+    Enable Growser Shields
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_UP" desc="Status label for when Brave Shields is enabled.">
+  <message name="IDS_BRAVE_SHIELDS_UP" desc="Status label for when Growser Shields is enabled.">
     <ph name="STATUS_BEFORE">$1</ph>Shields are UP<ph name="STATUS_AFTER">/$1</ph> for this site
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_DOWN" desc="Status label for when Brave Shields is disabled.">
+  <message name="IDS_BRAVE_SHIELDS_DOWN" desc="Status label for when Growser Shields is disabled.">
     <ph name="STATUS_BEFORE">$1</ph>Shields are DOWN<ph name="STATUS_AFTER">/$1</ph> for this site
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_STATUS_UP" desc="Status label for when Brave Shields is enabled." formatter_data="webui=BraveShields">
+  <message name="IDS_BRAVE_SHIELDS_STATUS_UP" desc="Status label for when Growser Shields is enabled." formatter_data="webui=BraveShields">
     Shields <ph name="UP_BEFORE">$1</ph>up<ph name="UP_AFTER">/$1</ph> for this site
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_STATUS_DOWN" desc="Status label for when Brave Shields is disabled." formatter_data="webui=BraveShields">
+  <message name="IDS_BRAVE_SHIELDS_STATUS_DOWN" desc="Status label for when Growser Shields is disabled." formatter_data="webui=BraveShields">
     Shields <ph name="DOWN_BEFORE">$1</ph>down<ph name="DOWN_AFTER">/$1</ph> for this site
   </message>
 
@@ -33,11 +33,11 @@
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_BROKEN_NOTE" desc="A footnote below the main Shields switch button to convey reduced privacy protections.">
-    <ph name="NOTE_BEFORE">$1</ph>Note: this may reduce Brave's privacy protections.<ph name="NOTE_AFTER">/$1</ph>
+    <ph name="NOTE_BEFORE">$1</ph>Note: this may reduce Growser's privacy protections.<ph name="NOTE_AFTER">/$1</ph>
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_PRIVACY_NOTE" desc="A note about reduced privacy protections with a link." formatter_data="webui=BraveShields">
-    This may reduce Brave's privacy protections. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    This may reduce Growser's privacy protections. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_TRACKERS_ADS_BLOCKED" desc="Summary text for blocked trackers and ads." formatter_data="webui=BraveShields">
@@ -65,7 +65,7 @@
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ARE_YOU_EXPERIENCING_ISSUES_WITH_THIS_SITE_DESC2" desc="Second part of the description for the alert if the user is experiencing issues with the site.">
-    Please note that for individual websites broken by Brave's privacy protections, you can set Shields to DOWN.
+    Please note that for individual websites broken by Growser's privacy protections, you can set Shields to DOWN.
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ENABLE_AD_BLOCK_ONLY_MODE" desc="A button label to enable Adblock-Only mode." formatter_data="webui=BraveShields">
@@ -108,8 +108,8 @@
     Trackers, ads, and more blocked <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_NOT_BLOCKED_NOTE" desc="Description to convey trackers, advertisement and more are not being blocked. Do not translate Brave SHields.">
-    Not protected by Brave Shields <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+  <message name="IDS_BRAVE_SHIELDS_NOT_BLOCKED_NOTE" desc="Description to convey trackers, advertisement and more are not being blocked. Do not translate Growser SHields.">
+    Not protected by Growser Shields <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ADVANCED_CTRLS" desc="A button label to expand/collapse more options.">
@@ -297,11 +297,11 @@
   </message>
 
    <message name="IDS_BRAVE_SHIELDS_DOWN_DESC" desc="Tell users the site's Shield is turned off">
-    You are viewing this site without Brave's privacy protections.
+    You are viewing this site without Growser's privacy protections.
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ICON_TOOLTIP" desc="The message shown on hover of the shields lion icon">
-    Brave Shields
+    Growser Shields
 <ph name="NUMBER">$1</ph> Trackers, ads, and more blocked
   </message>
 
@@ -342,30 +342,30 @@
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_NOT_VALID_ADDRESS" desc="Label for link about invalid pattern for content setting page dialog to add a site">
-    Wildcards are not allowed for Brave Shields.
+    Wildcards are not allowed for Growser Shields.
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_ONBOARDING_LABEL_WITHOUT_COMPANIES" desc="Label for the onboarding bubble UI, informing users about Brave Shields blocking number of trackers only.">
+  <message name="IDS_BRAVE_SHIELDS_ONBOARDING_LABEL_WITHOUT_COMPANIES" desc="Label for the onboarding bubble UI, informing users about Growser Shields blocking number of trackers only.">
     {BLOCKED_COUNT, plural,
-      =1 {Brave Shields blocked 1 tracker on <ph name="SITE_URL">$1</ph>}
-      other {Brave Shields blocked {BLOCKED_COUNT} trackers on <ph name="SITE_URL">$1</ph>}
+      =1 {Growser Shields blocked 1 tracker on <ph name="SITE_URL">$1</ph>}
+      other {Growser Shields blocked {BLOCKED_COUNT} trackers on <ph name="SITE_URL">$1</ph>}
     }
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ONBOARDING_CLICK_TO_VIEW_LABEL" desc="Label for the onboarding bubble to guide the user to the Shield icon">
-    Click the Brave icon to view Brave Shields.
+    Click the Growser icon to view Growser Shields.
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_SITE_INFO_LINK" desc="Link text for Site Info tab on Page Info bubble">
     Site Info
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_TEXT" desc="Text for the IPH bubble shown when Brave Shields has moved to Page Info.">
-    Brave Shields has a new home and design. It now integrates with site information for a one-stop experience.
+  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_TEXT" desc="Text for the IPH bubble shown when Growser Shields has moved to Page Info.">
+    Growser Shields has a new home and design. It now integrates with site information for a one-stop experience.
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_SCREENREADER_TEXT" desc="Screen reader text for the Brave Shields Page Info IPH bubble.">
-    Brave Shields has a new home and design. Access it by clicking the site icon in the address bar.
+  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_SCREENREADER_TEXT" desc="Screen reader text for the Growser Shields Page Info IPH bubble.">
+    Growser Shields has a new home and design. Access it by clicking the site icon in the address bar.
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_GO_BACK" desc="Accessible label for the back button on inner views of the Shields panel." formatter_data="webui=BraveShields">
@@ -383,78 +383,78 @@
   <!-- Fingerprinting related strings corresponding to the different web compat types specified at chromium_src/components/content_settings/core/common/content_settings_types.mojom. 
   Please note that the fingerprinting_details.style.ts auto applies capitalization on every word of these texts so we may need special attention when translating. -->
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_AUDIO_LABEL" desc="This label is associated with the Audio toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Audio APIs." formatter_data="webui=BraveShields">
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_AUDIO_LABEL" desc="This label is associated with the Audio toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Audio APIs." formatter_data="webui=BraveShields">
     Audio
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_CANVAS_LABEL" desc="This label is associated with the Canvas toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Canvas APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_CANVAS_LABEL" desc="This label is associated with the Canvas toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Canvas APIs." formatter_data="webui=BraveShields" >
     Canvas
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_DEVICE_MEMORY_LABEL" desc="This label is associated with the Device Memory toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Device Memory APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_DEVICE_MEMORY_LABEL" desc="This label is associated with the Device Memory toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Device Memory APIs." formatter_data="webui=BraveShields" >
     Device Memory
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_EVENT_SOURCE_POOL_LABEL" desc="This label is associated with the Event Source Pool toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Event Source Pool APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_EVENT_SOURCE_POOL_LABEL" desc="This label is associated with the Event Source Pool toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Event Source Pool APIs." formatter_data="webui=BraveShields" >
     Event Source Pool
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_FONT_LABEL" desc="This label is associated with the Font toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Font APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_FONT_LABEL" desc="This label is associated with the Font toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Font APIs." formatter_data="webui=BraveShields" >
     Font
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_HARDWARE_CONCURRENCY_LABEL" desc="This label is associated with the Hardware Concurrency toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Hardware Concurrency APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_HARDWARE_CONCURRENCY_LABEL" desc="This label is associated with the Hardware Concurrency toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Hardware Concurrency APIs." formatter_data="webui=BraveShields" >
     Hardware Concurrency
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_KEYBOARD_LABEL" desc="This label is associated with the Keyboard toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Keyboard APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_KEYBOARD_LABEL" desc="This label is associated with the Keyboard toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Keyboard APIs." formatter_data="webui=BraveShields" >
     Keyboard
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_LANGUAGE_LABEL" desc="This label is associated with the Language toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Language APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_LANGUAGE_LABEL" desc="This label is associated with the Language toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Language APIs." formatter_data="webui=BraveShields" >
     Language
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_MEDIA_DEVICES_LABEL" desc="This label is associated with the Media Devices toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Media Devices APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_MEDIA_DEVICES_LABEL" desc="This label is associated with the Media Devices toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Media Devices APIs." formatter_data="webui=BraveShields" >
     Media Devices
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_PLUGINS_LABEL" desc="This label is associated with the Plugins toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Plugins APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_PLUGINS_LABEL" desc="This label is associated with the Plugins toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Plugins APIs." formatter_data="webui=BraveShields" >
     Plugins
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_SCREEN_LABEL" desc="This label is associated with the Screen toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Screen APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_SCREEN_LABEL" desc="This label is associated with the Screen toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Screen APIs." formatter_data="webui=BraveShields" >
     Screen
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_SPEECH_SYNTHESIS_LABEL" desc="This label is associated with the Speech Synthesis toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Speech Synthesis APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_SPEECH_SYNTHESIS_LABEL" desc="This label is associated with the Speech Synthesis toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Speech Synthesis APIs." formatter_data="webui=BraveShields" >
     Speech Synthesis
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_USB_DEVICE_SERIAL_NUMBER_LABEL" desc="This label is associated with the USB Device Serial Number toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to USB Device Serial Number APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_USB_DEVICE_SERIAL_NUMBER_LABEL" desc="This label is associated with the USB Device Serial Number toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to USB Device Serial Number APIs." formatter_data="webui=BraveShields" >
     Usb Device Serial Number
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_USER_AGENT_LABEL" desc="This label is associated with the User Agent toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to User Agent APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_USER_AGENT_LABEL" desc="This label is associated with the User Agent toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to User Agent APIs." formatter_data="webui=BraveShields" >
     User Agent
   </message>
 
   <!-- WebGL is an abbreviation referring to a specific technical library and therefore is not translatable. -->
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEBGL_LABEL" desc="This label is associated with the WebGL toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to WebGL APIs." formatter_data="webui=BraveShields" translateable="false">
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEBGL_LABEL" desc="This label is associated with the WebGL toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to WebGL APIs." formatter_data="webui=BraveShields" translateable="false">
     WebGL
   </message>
 
   <!-- WebGL2 is an abbreviation referring to a specific technical library and therefore is not translatable. -->
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEBGL2_LABEL" desc="This label is associated with the WebGL2 toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to WebGL2 APIs." formatter_data="webui=BraveShields" translateable="false">
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEBGL2_LABEL" desc="This label is associated with the WebGL2 toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to WebGL2 APIs." formatter_data="webui=BraveShields" translateable="false">
     WebGL2
   </message>
 
   <!-- WebGPU is an abbreviation referring to a specific technical library and therefore is not translatable. -->
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEBGPU_LABEL" desc="This label is associated with the WebGPU toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to WebGPU APIs." formatter_data="webui=BraveShields" translateable="false">
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEBGPU_LABEL" desc="This label is associated with the WebGPU toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to WebGPU APIs." formatter_data="webui=BraveShields" translateable="false">
     WebGPU
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEB_SOCKETS_POOL_LABEL" desc="This label is associated with the Web Sockets Pool toggle inside the Brave shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Web Sockets Pool APIs." formatter_data="webui=BraveShields" >
+  <message name="IDS_BRAVE_SHIELDS_BLOCK_FINGERPRINTING_WEB_SOCKETS_POOL_LABEL" desc="This label is associated with the Web Sockets Pool toggle inside the Growser shields panel > Block Fingerprinting. It allows users to turn on / off the fingerprinting protections we have applied to Web Sockets Pool APIs." formatter_data="webui=BraveShields" >
     Web Sockets Pool
   </message>
 

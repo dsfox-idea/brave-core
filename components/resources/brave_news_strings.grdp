@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_BRAVE_NEWS_INTRO_TITLE" desc="Title for introduction to Brave News news feed section" formatter_data="webui=BraveNews">
-    Turn on Brave News, and never miss a story
+  <message name="IDS_BRAVE_NEWS_INTRO_TITLE" desc="Title for introduction to Growser News news feed section" formatter_data="webui=BraveNews">
+    Turn on Growser News, and never miss a story
   </message>
-  <message name="IDS_BRAVE_NEWS_INTRO_DESCRIPTION" desc="Description for introduction to Brave News news feed section. Do not translate the title Brave News." formatter_data="webui=BraveNews">
-    Follow your favorite sources, in a single feed. Just open a tab in Brave, scroll down, and… voila!
+  <message name="IDS_BRAVE_NEWS_INTRO_DESCRIPTION" desc="Description for introduction to Growser News news feed section. Do not translate the title Growser News." formatter_data="webui=BraveNews">
+    Follow your favorite sources, in a single feed. Just open a tab in Growser, scroll down, and… voila!
   </message>
-  <message name="IDS_BRAVE_NEWS_INTRO_DESCRIPTION_TWO" desc="Description second paragraph for introduction to Brave News news feed section. Do not translate the title Brave News." formatter_data="webui=BraveNews">
-    Brave News is ad-supported with private, anonymized ads. <ph name="LINK_START">$1</ph>Learn more.<ph name="LINK_END">/$1</ph>.
+  <message name="IDS_BRAVE_NEWS_INTRO_DESCRIPTION_TWO" desc="Description second paragraph for introduction to Growser News news feed section. Do not translate the title Growser News." formatter_data="webui=BraveNews">
+    Growser News is ad-supported with private, anonymized ads. <ph name="LINK_START">$1</ph>Learn more.<ph name="LINK_END">/$1</ph>.
   </message>
-  <message name="IDS_BRAVE_NEWS_OPT_IN_ACTION_LABEL" desc="Button text for opting in to Brave News" formatter_data="webui=BraveNews">
-    Turn on Brave News
+  <message name="IDS_BRAVE_NEWS_OPT_IN_ACTION_LABEL" desc="Button text for opting in to Growser News" formatter_data="webui=BraveNews">
+    Turn on Growser News
   </message>
-  <message name="IDS_BRAVE_NEWS_OPT_OUT_ACTION_LABEL" desc="Button text for opting out of Brave News" formatter_data="webui=BraveNews">
+  <message name="IDS_BRAVE_NEWS_OPT_OUT_ACTION_LABEL" desc="Button text for opting out of Growser News" formatter_data="webui=BraveNews">
     No thanks
   </message>
   <message name="IDS_BRAVE_NEWS_SETTINGS_TITLE" desc="Title for the News settings dialog" formatter_data="webui=BraveNews">
-    Brave News
+    Growser News
   </message>
   <message name="IDS_BRAVE_NEWS_BACK_TO_DASHBOARD" desc="Label for the back to dashboard button" formatter_data="webui=BraveNews">
     Back to <ph name="BEGIN_BOLD">$1</ph>Dashboard<ph name="END_BOLD">/$1</ph>
@@ -81,27 +81,27 @@
   <message name="IDS_BRAVE_NEWS_SUGGESTIONS_SUBTITLE" desc="Subtitle of the suggested sources section" formatter_data="webui=BraveNews">
     Some sources you might like. Suggestions are anonymous and matched only on your device.
   </message>
-  <message name="IDS_BRAVE_NEWS_ERROR_HEADING" desc="Message heading for when there is a Brave News error" formatter_data="webui=BraveNews">
+  <message name="IDS_BRAVE_NEWS_ERROR_HEADING" desc="Message heading for when there is a Growser News error" formatter_data="webui=BraveNews">
     Oops…
   </message>
-  <message name="IDS_BRAVE_NEWS_ERROR_MESSAGE" desc="Message body for when there is a Brave News error" formatter_data="webui=BraveNews">
-    Brave News was unable to fetch content.
+  <message name="IDS_BRAVE_NEWS_ERROR_MESSAGE" desc="Message body for when there is a Growser News error" formatter_data="webui=BraveNews">
+    Growser News was unable to fetch content.
   </message>
-  <message name="IDS_BRAVE_NEWS_ERROR_ACTION_LABEL" desc="Message action label for when there is a Brave News error" formatter_data="webui=BraveNews">
+  <message name="IDS_BRAVE_NEWS_ERROR_ACTION_LABEL" desc="Message action label for when there is a Growser News error" formatter_data="webui=BraveNews">
     Try again
   </message>
-  <message name="IDS_BRAVE_NEWS_NO_CONTENT_HEADING" desc="Message heading for when there is no Brave News content" formatter_data="webui=BraveNews">
+  <message name="IDS_BRAVE_NEWS_NO_CONTENT_HEADING" desc="Message heading for when there is no Growser News content" formatter_data="webui=BraveNews">
     Your Feed is Empty
   </message>
-  <message name="IDS_BRAVE_NEWS_NO_CONTENT_MESSAGE" desc="Message body for when there is no Brave News content" formatter_data="webui=BraveNews">
+  <message name="IDS_BRAVE_NEWS_NO_CONTENT_MESSAGE" desc="Message body for when there is no Growser News content" formatter_data="webui=BraveNews">
     Follow publishers and channels to see them in your feed.
   </message>
-  <message name="IDS_BRAVE_NEWS_NO_CONTENT_ACTION_LABEL" desc="Message action label for when there is no Brave News content" formatter_data="webui=BraveNews">
+  <message name="IDS_BRAVE_NEWS_NO_CONTENT_ACTION_LABEL" desc="Message action label for when there is no Growser News content" formatter_data="webui=BraveNews">
     Add content sources
   </message>
 
-  <message name="IDS_BRAVE_NEWS_CHANNEL_BRAVE" desc="Translation of the 'Brave' channel" formatter_data="webui=BraveNews">
-    Brave
+  <message name="IDS_BRAVE_NEWS_CHANNEL_BRAVE" desc="Translation of the 'Growser' channel" formatter_data="webui=BraveNews">
+    Growser
   </message>
   <message name="IDS_BRAVE_NEWS_CHANNEL_BUSINESS" desc="Translation of the 'Business' channel" formatter_data="webui=BraveNews">
     Business

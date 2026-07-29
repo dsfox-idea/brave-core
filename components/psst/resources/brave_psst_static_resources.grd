@@ -8,7 +8,7 @@
   </outputs>
   <release seq="1">
     <includes>
-      <!-- WebUI Brave Psst Dialog resources -->
+      <!-- WebUI Growser Psst Dialog resources -->
       <include name="IDR_BRAVE_PSST_DIALOG_HTML" file="ui/brave_psst_dialog.html" type="BINDATA" />
     </includes>
   </release>

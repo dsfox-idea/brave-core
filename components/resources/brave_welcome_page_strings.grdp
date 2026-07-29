@@ -2,7 +2,7 @@
 <grit-part>
 
   <message name="IDS_WELCOME_PAGE_TITLE" desc="The HTML title of the welcome page" formatter_data="webui=BraveWelcomePage">
-    Welcome to Brave
+    Welcome to Growser
   </message>
 
   <message name="IDS_WELCOME_PAGE_WELCOME_STEP_TITLE" desc="Title for welcome step" formatter_data="webui=BraveWelcomePage">
@@ -10,7 +10,7 @@
   </message>
 
   <message name="IDS_WELCOME_PAGE_WELCOME_STEP_TEXT" desc="Text on welcome step" formatter_data="webui=BraveWelcomePage">
-    Experience the web without being watched. Brave shields you from trackers, ads, and fingerprinting, all automatically.
+    Experience the web without being watched. Growser shields you from trackers, ads, and fingerprinting, all automatically.
   </message>
 
   <message name="IDS_WELCOME_PAGE_CONTINUE_BUTTON_LABEL" desc="Label for continue-to-next-step button" formatter_data="webui=BraveWelcomePage">
@@ -25,8 +25,8 @@
     Maybe later
   </message>
 
-  <message name="IDS_WELCOME_PAGE_SET_AS_DEFAULT_BUTTON_LABEL" desc="Label for button that makes Brave the default browser" formatter_data="webui=BraveWelcomePage">
-    Set Brave as default
+  <message name="IDS_WELCOME_PAGE_SET_AS_DEFAULT_BUTTON_LABEL" desc="Label for button that makes Growser the default browser" formatter_data="webui=BraveWelcomePage">
+    Set Growser as default
   </message>
 
   <message name="IDS_WELCOME_PAGE_SKIP_IMPORT_BUTTON_LABEL" desc="Label for button that skips profile import" formatter_data="webui=BraveWelcomePage">
@@ -42,7 +42,7 @@
   </message>
 
   <message name="IDS_WELCOME_PAGE_IMPORT_STEP_TEXT2" desc="Second paragraph text on import step" formatter_data="webui=BraveWelcomePage">
-    You can also do this later in Brave's settings.
+    You can also do this later in Growser's settings.
   </message>
 
   <message name="IDS_WELCOME_PAGE_IMPORT_STEP_TITLE" desc="Title for import step" formatter_data="webui=BraveWelcomePage">
@@ -54,7 +54,7 @@
   </message>
 
   <message name="IDS_WELCOME_PAGE_APPEARANCE_STEP_TITLE" desc="Title for appearance step" formatter_data="webui=BraveWelcomePage">
-    Customize Brave
+    Customize Growser
   </message>
 
   <message name="IDS_WELCOME_PAGE_APPEARANCE_STEP_TEXT" desc="Text on appearance step" formatter_data="webui=BraveWelcomePage">
@@ -134,7 +134,7 @@
   </message>
 
   <message name="IDS_WELCOME_PAGE_FEATURES_STEP_TITLE" desc="Title for the feature selection step" formatter_data="webui=BraveWelcomePage">
-    Customize Brave
+    Customize Growser
   </message>
 
   <message name="IDS_WELCOME_PAGE_FEATURES_STEP_TEXT" desc="Text on the feature selection step" formatter_data="webui=BraveWelcomePage">
@@ -157,19 +157,19 @@
     The secure, built-in crypto wallet that supercharges your browser for Web3.
   </message>
 
-  <message name="IDS_WELCOME_PAGE_PRODUCT_REWARDS_TITLE" desc="Title of the Brave Rewards product card" formatter_data="webui=BraveWelcomePage">
+  <message name="IDS_WELCOME_PAGE_PRODUCT_REWARDS_TITLE" desc="Title of the Growser Rewards product card" formatter_data="webui=BraveWelcomePage">
     Rewards
   </message>
 
-  <message name="IDS_WELCOME_PAGE_PRODUCT_REWARDS_DESCRIPTION" desc="Description of the Brave Rewards product card" formatter_data="webui=BraveWelcomePage">
-    Support content creators and earn tokens for ads you see in Brave.
+  <message name="IDS_WELCOME_PAGE_PRODUCT_REWARDS_DESCRIPTION" desc="Description of the Growser Rewards product card" formatter_data="webui=BraveWelcomePage">
+    Support content creators and earn tokens for ads you see in Growser.
   </message>
 
-  <message name="IDS_WELCOME_PAGE_PRODUCT_VPN_TITLE" desc="Title of the Brave VPN product card" formatter_data="webui=BraveWelcomePage">
+  <message name="IDS_WELCOME_PAGE_PRODUCT_VPN_TITLE" desc="Title of the Growser VPN product card" formatter_data="webui=BraveWelcomePage">
     VPN
   </message>
 
-  <message name="IDS_WELCOME_PAGE_PRODUCT_VPN_DESCRIPTION" desc="Description of the Brave VPN product card" formatter_data="webui=BraveWelcomePage">
+  <message name="IDS_WELCOME_PAGE_PRODUCT_VPN_DESCRIPTION" desc="Description of the Growser VPN product card" formatter_data="webui=BraveWelcomePage">
     Hide your IP address, mask your location, and access your favorite content on the go.
   </message>
 
@@ -178,7 +178,7 @@
   </message>
 
   <message name="IDS_WELCOME_PAGE_PRODUCT_WDP_TITLE" desc="Title of the Web Discovery Project opt-in card" formatter_data="webui=BraveWelcomePage">
-    Help Brave Search grow
+    Help Growser Search grow
   </message>
 
   <message name="IDS_WELCOME_PAGE_PRODUCT_WDP_DESCRIPTION" desc="Description of the Web Discovery Project opt-in card" formatter_data="webui=BraveWelcomePage">
@@ -190,7 +190,7 @@
   </message>
 
   <message name="IDS_WELCOME_PAGE_PRODUCT_P3A_DESCRIPTION" desc="Description of the privacy-preserving product analytics opt-in card" formatter_data="webui=BraveWelcomePage">
-    Share private and anonymous product insights about what features are being used by Brave's users
+    Share private and anonymous product insights about what features are being used by Growser's users
   </message>
 
   <message name="IDS_WELCOME_PAGE_PRODUCT_CRASH_REPORTS_TITLE" desc="Title of the crash reports opt-in card" formatter_data="webui=BraveWelcomePage">
@@ -202,11 +202,11 @@
   </message>
 
   <message name="IDS_WELCOME_PAGE_METRICS_STEP_TEXT1" desc="First paragraph on the metrics opt-in step" formatter_data="webui=BraveWelcomePage">
-    Help Brave be better and create better products by enabling these private metrics.
+    Help Growser be better and create better products by enabling these private metrics.
   </message>
 
   <message name="IDS_WELCOME_PAGE_METRICS_STEP_TEXT2" desc="Second paragraph on the metrics opt-in step. $1 wraps a link to the privacy settings page and $2 wraps a link to the privacy policy." formatter_data="webui=BraveWelcomePage">
-    You can change these choices at any time in Brave at <ph name="SETTINGS_LINK">$1</ph>. Read our full <ph name="PRIVACY_POLICY_LINK_BEGIN">$2</ph>Privacy Policy<ph name="PRIVACY_POLICY_LINK_END">/$2</ph>.
+    You can change these choices at any time in Growser at <ph name="SETTINGS_LINK">$1</ph>. Read our full <ph name="PRIVACY_POLICY_LINK_BEGIN">$2</ph>Privacy Policy<ph name="PRIVACY_POLICY_LINK_END">/$2</ph>.
   </message>
 
   <message name="IDS_WELCOME_PAGE_START_BROWSING_BUTTON_LABEL" desc="Label for the button that completes onboarding and starts browsing" formatter_data="webui=BraveWelcomePage">

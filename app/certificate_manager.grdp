@@ -12,8 +12,8 @@
     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_LOCAL_CERTIFICATES" desc="Label for the local certificates tab in certificate manager.">
       Local certificates
     </message>
-    <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_CRS_CERTIFICATES" desc="Label for the Brave Root Store certificates tab in certificate manager.">
-      Brave Root Store
+    <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_CRS_CERTIFICATES" desc="Label for the Growser Root Store certificates tab in certificate manager.">
+      Growser Root Store
     </message>
     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_HASH_COPIED_TOAST" desc="Label for the hash copied toast message in certificate manager.">
       Hash copied to clipboard
@@ -127,15 +127,15 @@
     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_LOCAL_CERTIFICATES_DESCRIPTION" desc="Description of the local certificates section of cert manager.">
       Local certificates that have been added by your operating system or your administrator.
     </message>
-    <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_CRS_CERTIFICATES_DESCRIPTION" desc="Description of the Brave Root Store certificates section of cert manager.">
-      The Brave Root Store contains certificates from Certificate Authorities trusted by the
+    <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_CRS_CERTIFICATES_DESCRIPTION" desc="Description of the Growser Root Store certificates section of cert manager.">
+      The Growser Root Store contains certificates from Certificate Authorities trusted by the
       Chrome Root Program, and is continually reviewed on an ongoing basis.
     </message>
-    <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_CRS_LEARN_MORE_LINK" desc="Link to learning more about the Brave Root Store.">
+    <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_CRS_LEARN_MORE_LINK" desc="Link to learning more about the Growser Root Store.">
       Learn more
     </message>
     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_CRS_LEARN_MORE_LINK_ARIA_LABEL" desc="Text read by screen readers when focusing on the Learn More link. If the link is activated, it will open a new tab with more information about the Chroem Root Store. This text will only be announced by screen readers and will not be visible in the UI.">
-      Learn more about the Brave Root Store in a new tab.
+      Learn more about the Growser Root Store in a new tab.
     </message>
     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_PLATFORM_CERTS_TOGGLE_LABEL" desc="Label for a toggle controlling if platform certs are imported or not.">
       Use imported local certificates from your operating system
@@ -161,7 +161,7 @@
       </message>
     </if>
     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_DELETE_SERVER_CERT_DESCRIPTION" desc="Contents of certificate manager dialog confirming deletion of a server certificate.">
-        If you delete a server certificate, Brave will no longer use it to identify servers.
+        If you delete a server certificate, Growser will no longer use it to identify servers.
     </message>
     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_READ_FILE_ERROR" desc="Eror message displayed in certificate manager when the user tried to import a certificate but the file could not be read.">
       Error reading file

@@ -48,77 +48,77 @@
   <message name="IDS_AVATAR_BUTTON_SCHOOL" desc="Short label for the avatar button when the profile is a school profile." meaning="Using a school profile">
     School
   </message>
-  <message name="IDS_AVATAR_BUTTON_GREETING" desc="Greeting that appears at the top of Brave after the user signs in. It becomes part of the entrypoint for the Brave Profile Menu. The greeting is casual and friendly, and it invokes the user's name.">
+  <message name="IDS_AVATAR_BUTTON_GREETING" desc="Greeting that appears at the top of Growser after the user signs in. It becomes part of the entrypoint for the Growser Profile Menu. The greeting is casual and friendly, and it invokes the user's name.">
     Hi, <ph name="PROFILE_NAME">$1<ex>User</ex></ph>
   </message>
 
   <!-- Identity error message for passkey unlock experiment -->
   <if expr="use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock Your Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock your passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get Your Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get your passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify It's You
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify it's you
     </message>
   </if>
-  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_UNLOCK" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_UNLOCK" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
     Verify it’s you to save and use your passkeys on this device
   </message>
-  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_GET" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
-    Get your passkeys on this device with Brave Password Manager
+  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_GET" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    Get your passkeys on this device with Growser Password Manager
   </message>
-  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_VERIFY" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_VERIFY" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
     Verify it’s you to get your passkeys on this device
   </message>
   <if expr="use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock Your Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock your passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify It's You
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Brave Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify it's you
     </message>
   </if>
@@ -147,14 +147,14 @@
     Turn on sync...
   </message>
 
-  <message name="IDS_PROFILES_DICE_WEB_ONLY_SIGNIN_BUTTON" desc="Button in the profile menu to sign in on Brave and turn on Sync for a specific web account that is signed in only on the web.">
+  <message name="IDS_PROFILES_DICE_WEB_ONLY_SIGNIN_BUTTON" desc="Button in the profile menu to sign in on Growser and turn on Sync for a specific web account that is signed in only on the web.">
     Continue as <ph name="ACCOUNT_NAME">$1<ex>John</ex></ph>
   </message>
   <message name="IDS_PROFILES_DICE_SYNC_DISABLED_TITLE" desc="Title of the profile user menu when sync is disabled.">
     Sync disabled
   </message>
   <message name="IDS_PROFILES_DASHER_FEATURE_DISABLED_TITLE" desc="Description of the profile user menu when certain features are disabled for Dasherless profile.">
-    This isn't a Brave sync chain. Items you save to Brave won't be available on other devices.
+    This isn't a Growser sync chain. Items you save to Growser won't be available on other devices.
   </message>
   <message name="IDS_PROFILES_DICE_SYNC_PAUSED_TITLE" desc="Title of the profile user menu when sync is paused.">
     Sync is paused
@@ -169,12 +169,12 @@
   </message>
 
   <if expr="use_titlecase">
-      <message name="IDS_PROFILES_VERIFY_ACCOUNT_BUTTON" desc="The label of the button that is shown when the user is in a Signin paused state. When the user clicks this button, they will be prompted to enter their Brave sync chain credentials.">
+      <message name="IDS_PROFILES_VERIFY_ACCOUNT_BUTTON" desc="The label of the button that is shown when the user is in a Signin paused state. When the user clicks this button, they will be prompted to enter their Growser sync chain credentials.">
         Verify It's You
       </message>
     </if>
     <if expr="not use_titlecase">
-      <message name="IDS_PROFILES_VERIFY_ACCOUNT_BUTTON" desc="The label of the button that is shown when the user is in a Signin paused state. When the user clicks this button, they will be prompted to enter their Brave sync chain credentials.">
+      <message name="IDS_PROFILES_VERIFY_ACCOUNT_BUTTON" desc="The label of the button that is shown when the user is in a Signin paused state. When the user clicks this button, they will be prompted to enter their Growser sync chain credentials.">
         Verify it's you
       </message>
     </if>
@@ -218,10 +218,10 @@
     <message name="IDS_PROFILE_MENU_CUSTOMIZE_PROFILE_BUTTON" desc="Button in the avatar menu bubble view for editing the current profile.">
       Customize profile
     </message>
-    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Brave account settings.">
-      Brave services settings
+    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Growser account settings.">
+      Growser services settings
     </message>
-    <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Brave autofill settings.">
+    <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Growser autofill settings.">
       Passwords and autofill
     </message>
     <message name="IDS_PROFILE_MENU_BATCH_UPLOAD_BUTTON" desc="Button in the profile menu to open the Batch Upload dialog.">
@@ -247,10 +247,10 @@
     <message name="IDS_PROFILE_MENU_CUSTOMIZE_PROFILE_BUTTON" desc="Button in the avatar menu bubble view for editing the current profile. ">
       Customize Profile
     </message>
-    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Brave account settings.">
-      Brave Services Settings
+    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Growser account settings.">
+      Growser Services Settings
     </message>
-    <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Brave autofill settings.">
+    <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Growser autofill settings.">
       Passwords and Autofill
     </message>
     <message name="IDS_PROFILE_MENU_BATCH_UPLOAD_BUTTON" desc="Button in the profile menu to open the Batch Upload dialog.">
@@ -566,7 +566,7 @@
 
   <if expr="not is_android">
 
-    <!-- Feature Showcase - Brave Password Manager -->
+    <!-- Feature Showcase - Growser Password Manager -->
     <message name="IDS_FEATURE_SHOWCASE_PASSWORD_MANAGER_NO_THANKS" desc="Label for the 'No thanks' button to not pin the Password Manager to toolbar.">
       No thanks
     </message>
@@ -575,67 +575,67 @@
     </message>
 
     <!-- Batch Upload Desktop -->
-    <message name="IDS_BATCH_UPLOAD_TITLE" desc="Title of the Batch Upload dialog on Desktop. This dialog appears when the user clicks on an informational message about items saved to their device. This title precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_TITLE" desc="Title of the Batch Upload dialog on Desktop. This dialog appears when the user clicks on an informational message about items saved to their device. This title precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       Save items in account
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_ITEMS_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if no special type exists. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle only mentions the total number of items that are shown. A special type will have its type name shown first instead of 'items' and potentially show 'and other items' if multiple sections exist, in different strings. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_ITEMS_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if no special type exists. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle only mentions the total number of items that are shown. A special type will have its type name shown first instead of 'items' and potentially show 'and other items' if multiple sections exist, in different strings. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {ITEM_COUNT, plural,
-      =1 {1 item is saved only to this device. To use it on your other devices, save it in your Brave sync chain. This will also clean up any duplicates.}
-      other {{ITEM_COUNT} items are saved only to this device. To use them on your other devices, save them in your Brave sync chain. This will also clean up any duplicates.}
+      =1 {1 item is saved only to this device. To use it on your other devices, save it in your Growser sync chain. This will also clean up any duplicates.}
+      other {{ITEM_COUNT} items are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if password type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of passwords items in the section. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if password type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of passwords items in the section. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {PASSWORD_COUNT, plural,
-      =1 {1 password is saved only to this device. To use it on your other devices, save it in your Brave sync chain. This will also clean up any duplicates.}
-      other {{PASSWORD_COUNT} passwords are saved only to this device. To use them on your other devices, save them in your Brave sync chain. This will also clean up any duplicates.}
+      =1 {1 password is saved only to this device. To use it on your other devices, save it in your Growser sync chain. This will also clean up any duplicates.}
+      other {{PASSWORD_COUNT} passwords are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS_COMBO_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if password type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of passwords items in the section as well as 'and other items' to reference the other types. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS_COMBO_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if password type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of passwords items in the section as well as 'and other items' to reference the other types. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {PASSWORD_COUNT, plural,
-      =1 {1 password and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain. This will also clean up any duplicates.}
-      other {{PASSWORD_COUNT} passwords and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain. This will also clean up any duplicates.}
+      =1 {1 password and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}
+      other {{PASSWORD_COUNT} passwords and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if bookmark type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of bookmarks in the section. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if bookmark type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of bookmarks in the section. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {BOOKMARK_COUNT, plural,
-      =1 {1 bookmark is saved only to this device. To use it on your other devices, save it in your Brave sync chain. This will also clean up any duplicates.}
-      other {{BOOKMARK_COUNT} bookmarks are saved only to this device. To use them on your other devices, save them in your Brave sync chain. This will also clean up any duplicates.}
+      =1 {1 bookmark is saved only to this device. To use it on your other devices, save it in your Growser sync chain. This will also clean up any duplicates.}
+      other {{BOOKMARK_COUNT} bookmarks are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS_COMBO_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if bookmark type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of bookmarks in the section as well as 'and other items' to reference the other types. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS_COMBO_WITH_DEDUPLICATION" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if bookmark type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of bookmarks in the section as well as 'and other items' to reference the other types. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {BOOKMARK_COUNT, plural,
-      =1 {1 bookmark and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain. This will also clean up any duplicates.}
-      other {{BOOKMARK_COUNT} bookmarks and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain. This will also clean up any duplicates.}
+      =1 {1 bookmark and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}
+      other {{BOOKMARK_COUNT} bookmarks and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_ITEMS" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if no special type exists. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle only mentions the total number of items that are shown. A special type will have its type name shown first instead of 'items' and potentially show 'and other items' if multiple sections exist, in different strings. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_ITEMS" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if no special type exists. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle only mentions the total number of items that are shown. A special type will have its type name shown first instead of 'items' and potentially show 'and other items' if multiple sections exist, in different strings. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {ITEM_COUNT, plural,
-      =1 {1 item is saved only to this device. To use it on your other devices, save it in your Brave sync chain.}
-      other {{ITEM_COUNT} items are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
+      =1 {1 item is saved only to this device. To use it on your other devices, save it in your Growser sync chain.}
+      other {{ITEM_COUNT} items are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if password type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of passwords items in the section. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if password type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of passwords items in the section. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {PASSWORD_COUNT, plural,
-      =1 {1 password is saved only to this device. To use it on your other devices, save it in your Brave sync chain.}
-      other {{PASSWORD_COUNT} passwords are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
+      =1 {1 password is saved only to this device. To use it on your other devices, save it in your Growser sync chain.}
+      other {{PASSWORD_COUNT} passwords are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS_COMBO" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if password type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of passwords items in the section as well as 'and other items' to reference the other types. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_PASSWORDS_COMBO" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if password type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of passwords items in the section as well as 'and other items' to reference the other types. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {PASSWORD_COUNT, plural,
-      =1 {1 password and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
-      other {{PASSWORD_COUNT} passwords and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
+      =1 {1 password and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
+      other {{PASSWORD_COUNT} passwords and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if bookmark type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of bookmarks in the section. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved to their device. This subtitle variant is shown if bookmark type exists with no other types. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of bookmarks in the section. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {BOOKMARK_COUNT, plural,
-      =1 {1 bookmark is saved only to this device. To use it on your other devices, save it in your Brave sync chain.}
-      other {{BOOKMARK_COUNT} bookmarks are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
+      =1 {1 bookmark is saved only to this device. To use it on your other devices, save it in your Growser sync chain.}
+      other {{BOOKMARK_COUNT} bookmarks are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS_COMBO" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if bookmark type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Brave sync chain. This subtitle mentions the number of bookmarks in the section as well as 'and other items' to reference the other types. When items are saved in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_SUBTITLE_DESCRIPTION_BOOKMARKS_COMBO" desc="Subtitle of the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. This subtitle variant is shown if bookmark type is the first type and it is not the only one. This subtitle precedes a list of items (passwords, bookmarks, and addresses), where the user can select the checkboxes for the items that they want to save in their Growser sync chain. This subtitle mentions the number of bookmarks in the section as well as 'and other items' to reference the other types. When items are saved in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. The tone should be motivating.">
       {BOOKMARK_COUNT, plural,
-      =1 {1 bookmark and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
-      other {{BOOKMARK_COUNT} bookmarks and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
+      =1 {1 bookmark and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
+      other {{BOOKMARK_COUNT} bookmarks and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
       }
     </message>
     <message name="IDS_BATCH_UPLOAD_SECTION_TITLE_PASSWORDS" desc="Title of the Passwords section in the Batch Upload dialog. This dialog appears when the user clicks on an informational message about items saved only to their device. The title of the dialog is ‘Save items in account’. The list of items has sections for each applicable data type: Passwords, Bookmarks, and more. This section shows the number of selected items in the section of the dialog, if any.">
@@ -691,35 +691,35 @@
     <message name="IDS_BATCH_UPLOAD_SCREEN_READER_SELECT_ALL" desc="Text read by the screen reader when focusing the toggle button of a section in the Batch Upload dialog and that toggle is turned off. Notifies that the action on the toggle would select all items in this section.">
       Select all
     </message>
-    <message name="IDS_BATCH_UPLOAD_PROMO_TITLE" desc="Title of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device. If the user chooses to save items in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. This promo leads to the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Brave sync chain. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_PROMO_TITLE" desc="Title of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device. If the user chooses to save items in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. This promo leads to the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Growser sync chain. The tone should be motivating.">
       Get your bookmarks and more on all your devices
     </message>
     <if expr="use_titlecase">
-      <message name="IDS_BATCH_UPLOAD_PROMO_TITLE_OK_BUTTON_LABEL" desc="Affirmative button of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks (and other items, if any) are on the device. If the user chooses to save items in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. When the user clicks this button, the items aren’t saved yet: the user first sees the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Brave sync chain. The tone should be motivating.">
+      <message name="IDS_BATCH_UPLOAD_PROMO_TITLE_OK_BUTTON_LABEL" desc="Affirmative button of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks (and other items, if any) are on the device. If the user chooses to save items in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. When the user clicks this button, the items aren’t saved yet: the user first sees the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Growser sync chain. The tone should be motivating.">
         Save in Account
       </message>
     </if>
     <if expr="not use_titlecase">
-      <message name="IDS_BATCH_UPLOAD_PROMO_TITLE_OK_BUTTON_LABEL" desc="Affirmative button of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks (and other items, if any) are on the device. If the user chooses to save items in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. When the user clicks this button, the items aren’t saved yet: the user first sees the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Brave sync chain. The tone should be motivating.">
+      <message name="IDS_BATCH_UPLOAD_PROMO_TITLE_OK_BUTTON_LABEL" desc="Affirmative button of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks (and other items, if any) are on the device. If the user chooses to save items in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. When the user clicks this button, the items aren’t saved yet: the user first sees the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Growser sync chain. The tone should be motivating.">
         Save in account
       </message>
     </if>
-    <message name="IDS_BATCH_UPLOAD_PROMO_SUBTITLE_BOOKMARKS" desc="Subtitle of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks are on the device. If the user chooses to save items in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. This promo leads to the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Brave sync chain. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_PROMO_SUBTITLE_BOOKMARKS" desc="Subtitle of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks are on the device. If the user chooses to save items in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. This promo leads to the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Growser sync chain. The tone should be motivating.">
       {BOOKMARK_COUNT, plural,
-      =1 {1 bookmark is saved only to this device. To use it on your other devices, save it in your Brave sync chain.}
-      other {{BOOKMARK_COUNT} bookmarks are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
+      =1 {1 bookmark is saved only to this device. To use it on your other devices, save it in your Growser sync chain.}
+      other {{BOOKMARK_COUNT} bookmarks are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
       }
     </message>
-    <message name="IDS_BATCH_UPLOAD_PROMO_SUBTITLE_BOOKMARKS_COMBO" desc="Subtitle of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks and other items are on the device. If the user chooses to save items in their Brave sync chain, the user can access them on any device where they’re signed in to Brave. This promo leads to the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Brave sync chain. The tone should be motivating.">
+    <message name="IDS_BATCH_UPLOAD_PROMO_SUBTITLE_BOOKMARKS_COMBO" desc="Subtitle of the Batch Upload promo. This promo appears to inform the user that there are items saved only to their device; this subtitle mentions how many bookmarks and other items are on the device. If the user chooses to save items in their Growser sync chain, the user can access them on any device where they’re signed in to Growser. This promo leads to the Batch Upload dialog, where the user can select the checkboxes for the items that they want to save in their Growser sync chain. The tone should be motivating.">
       {BOOKMARK_COUNT, plural,
-      =1 {1 bookmark and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
-      other {{BOOKMARK_COUNT} bookmarks and other items are saved only to this device. To use them on your other devices, save them in your Brave sync chain.}
+      =1 {1 bookmark and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
+      other {{BOOKMARK_COUNT} bookmarks and other items are saved only to this device. To use them on your other devices, save them in your Growser sync chain.}
       }
     </message>
     <message name="IDS_BATCH_UPLOAD_PROMO_SUBTITLE_ITEMS_WITH_LINK" desc="The text for a promotional banner located on the Account Settings page. It informs the user how many items on their local device are waiting to be uploaded. The text contains a placeholder for the number of items (e.g., '5 items') and acts as a clickable link that takes the user to the Batch Upload screen. Please ensure the placeholder handles pluralization correctly.">
       {ITEM_COUNT, plural,
-      =1 {1 item is saved only to this device. To use it on your other devices, <ph name="BEGIN_LINK">&lt;a href="'#'" id="openBatchUploadLink"&gt;</ph>save it in your Brave sync chain<ph name="END_LINK">&lt;/a&gt;</ph>.}
-      other {{ITEM_COUNT} items are saved only to this device. To use them on your other devices, <ph name="BEGIN_LINK">&lt;a href="'#'" id="openBatchUploadLink"&gt;</ph>save them in your Brave sync chain<ph name="END_LINK">&lt;/a&gt;</ph>.}
+      =1 {1 item is saved only to this device. To use it on your other devices, <ph name="BEGIN_LINK">&lt;a href="'#'" id="openBatchUploadLink"&gt;</ph>save it in your Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph>.}
+      other {{ITEM_COUNT} items are saved only to this device. To use them on your other devices, <ph name="BEGIN_LINK">&lt;a href="'#'" id="openBatchUploadLink"&gt;</ph>save them in your Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph>.}
       }
     </message>
   </if>
@@ -932,16 +932,16 @@
     <message name="IDS_ENTERPRISE_WELCOME_MERGE_BROWSING_DATA_CHOICE_DETAILS" desc="Additional information of a radio button option that lets the user add their existing data from a newly created work profile.">
       Your organization will be able to see and manage any existing browsing data, such as passwords and more
     </message>
-    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_PROFILE_INFORMATION_DETAILS" desc="Body text in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Brave startup to managed Brave users who have not previously acknowledged device signals collection. This string describes the profile-related information that their organization can see and manage.">
+    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_PROFILE_INFORMATION_DETAILS" desc="Body text in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Growser startup to managed Growser users who have not previously acknowledged device signals collection. This string describes the profile-related information that their organization can see and manage.">
       Your organization may need to see and manage browsing data in your work profile, such as your browsing history and passwords
     </message>
-    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_DEVICE_INFORMATION_DETAILS" desc="Body text in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Brave startup to managed Brave users who have not previously acknowledged device signals collection. This string describes the device-related information that their organization can see.">
+    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_DEVICE_INFORMATION_DETAILS" desc="Body text in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Growser startup to managed Growser users who have not previously acknowledged device signals collection. This string describes the device-related information that their organization can see.">
       To make sure this device can be used safely, your organization may need to see information about its operating system, browser, settings, and what software is installed on the device
     </message>
-    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_CONTINUE_BUTTON_LABEL" desc="Label of the primary confirmation button in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Brave startup to managed Brave users who have not previously acknowledged device signals collection. Clicking this button acknowledges the disclaimer, closes the dialog, and allows the user to continue using Brave.">
+    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_CONTINUE_BUTTON_LABEL" desc="Label of the primary confirmation button in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Growser startup to managed Growser users who have not previously acknowledged device signals collection. Clicking this button acknowledges the disclaimer, closes the dialog, and allows the user to continue using Growser.">
       Got it
     </message>
-    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_CANCEL_BUTTON_LABEL" desc="Label of the secondary/cancel button in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Brave startup to managed Brave users who have not previously acknowledged device signals collection. Clicking this button cancels the startup flow and signs the user out of their managed Brave profile.">
+    <message name="IDS_ENTERPRISE_DEVICE_SIGNALS_DISCLAIMER_CANCEL_BUTTON_LABEL" desc="Label of the secondary/cancel button in the enterprise device signals collection disclaimer modal dialog. The dialog is shown on Growser startup to managed Growser users who have not previously acknowledged device signals collection. Clicking this button cancels the startup flow and signs the user out of their managed Growser profile.">
       Sign out
     </message>
     <message name="IDS_BROWSING_HISTORY_COUNT" desc="Text describing the number of browsing history entries">
@@ -978,21 +978,21 @@
     </message>
 
     <!-- Supervised user profile signin IPH -->
-    <message name="IDS_SUPERVISED_USER_PROFILE_SIGNIN_IPH_TITLE" desc="Title of a reminder message, which is intended to help supervised users understand that they have been signed in to Brave.">
+    <message name="IDS_SUPERVISED_USER_PROFILE_SIGNIN_IPH_TITLE" desc="Title of a reminder message, which is intended to help supervised users understand that they have been signed in to Growser.">
       Welcome, <ph name="CHILD_NAME">$1<ex>Charlie</ex></ph>
     </message>
 
-    <message name="IDS_SUPERVISED_USER_PROFILE_SIGNIN_IPH_TEXT" desc="Body text of a reminder message, which is intended to help supervised users understand that they have been signed in to Brave. This body text string comes after the 'Welcome back, USER_NAME' string. It motivates kids to get their parents' help to stay safer online.">
+    <message name="IDS_SUPERVISED_USER_PROFILE_SIGNIN_IPH_TEXT" desc="Body text of a reminder message, which is intended to help supervised users understand that they have been signed in to Growser. This body text string comes after the 'Welcome back, USER_NAME' string. It motivates kids to get their parents' help to stay safer online.">
       Your parent's choices will now keep you safer online
     </message>
 
     <!-- Supervised user profile avatar badge -->
-    <message name="IDS_MANAGED_BY_PARENT_A11Y" desc="Accessibility label that describes the information conveyed by the Brave Family Link 'Kite' icon. When shown account profile photo or elsewhere in settings it indicates that the account is supervised.">
+    <message name="IDS_MANAGED_BY_PARENT_A11Y" desc="Accessibility label that describes the information conveyed by the Growser Family Link 'Kite' icon. When shown account profile photo or elsewhere in settings it indicates that the account is supervised.">
       Managed by your parent
     </message>
 
     <!-- Signout from a supervised user profile -->
-    <message name="IDS_CHROME_SIGNOUT_CONFIRMATION_PROMPT_KIDS_BODY" desc="This confirmation message is intended to help supervised users understand what will happen when they sign out of Brave. It appears on a dialog after users click to sign out of Brave. It motivates kids to get their parents' help to stay safer online.">
+    <message name="IDS_CHROME_SIGNOUT_CONFIRMATION_PROMPT_KIDS_BODY" desc="This confirmation message is intended to help supervised users understand what will happen when they sign out of Growser. It appears on a dialog after users click to sign out of Growser. It motivates kids to get their parents' help to stay safer online.">
       Your parent's choices won't apply after you sign out
     </message>
 
@@ -1004,7 +1004,7 @@
       Guest mode
     </message>
     <message name="IDS_PROFILE_PICKER_BACK_BUTTON_ARIA_LABEL" desc="Label for a button that navigates user to the previous page from a profile picker subpage">
-      Back from <ph name="PAGE_TITLE">$1<ex>Set up your new Brave profile</ex></ph> page
+      Back from <ph name="PAGE_TITLE">$1<ex>Set up your new Growser profile</ex></ph> page
     </message>
     <message name="IDS_PROFILE_PICKER_BACK_BUTTON_SIGN_IN_LABEL" desc="Label for a button that navigates user to the previous page from the 'Sign in' page">
       Back from sign in
@@ -1018,7 +1018,7 @@
     <message name="IDS_PROFILE_PICKER_PROFILE_CARD_NEEDS_SIGNIN_PROMPT" desc="Text on the profile card signaling that the user must sign-in in order to open a profile">
       Sign in
     </message>
-    <message name="IDS_PROFILE_PICKER_PROFILE_CARD_LABEL_SUPERVISED" desc="Accessibility label that is used on the profile card button that opens an existing profile. It includes information conveyed by the Brave Family Link 'Kite' icon, which indicates that the account is supervised.">
+    <message name="IDS_PROFILE_PICKER_PROFILE_CARD_LABEL_SUPERVISED" desc="Accessibility label that is used on the profile card button that opens an existing profile. It includes information conveyed by the Growser Family Link 'Kite' icon, which indicates that the account is supervised.">
       Open <ph name="PROFILE_NAME">$1<ex>User</ex></ph> profile. This profile is managed by your parent.
     </message>
     <message name="IDS_PROFILE_PICKER_PROFILE_CARD_LABEL" desc="Label for a profile card button that opens a new profile">
@@ -1133,57 +1133,57 @@
     </message>
 
     <!-- First Run Experience strings -->
-    <message name="IDS_FRE_SIGN_IN_SUBTITLE_0" desc="This is the subtitle on a full-page screen that asks the user to sign in to Brave with their Brave sync chain. It appears when the user launches Brave for the first time. When they sign in, they can personalize and customize Brave and remember their settings in their Brave sync chain. These features are also described in the cards below as 'All your devices', 'Stronger security', and 'Back up data'. The tone should be inviting and alluring.">
+    <message name="IDS_FRE_SIGN_IN_SUBTITLE_0" desc="This is the subtitle on a full-page screen that asks the user to sign in to Growser with their Growser sync chain. It appears when the user launches Growser for the first time. When they sign in, they can personalize and customize Growser and remember their settings in their Growser sync chain. These features are also described in the cards below as 'All your devices', 'Stronger security', and 'Back up data'. The tone should be inviting and alluring.">
       Get additional features
     </message>
-    <message name="IDS_FRE_DEVICES_CARD_TITLE" desc="This string is the headline in one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain. The cards appear on a full-page screen when the user launches Brave for the first time. This card's headline means that users can get their data (like bookmarks, history) on all the devices where they're signed in. The headline is followed by the body text 'Easily pick up where you left off'. The tone should be informative.">
+    <message name="IDS_FRE_DEVICES_CARD_TITLE" desc="This string is the headline in one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain. The cards appear on a full-page screen when the user launches Growser for the first time. This card's headline means that users can get their data (like bookmarks, history) on all the devices where they're signed in. The headline is followed by the body text 'Easily pick up where you left off'. The tone should be informative.">
       All your devices
     </message>
-    <message name="IDS_FRE_DEVICES_CARD_DESCRIPTION" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain. The cards appear on a full-page screen when the user launches Brave for the first time. The body is preceded by the headline 'All your devices'. This card's body means that users can get their data (like bookmarks, history) on all the devices where they're signed in. The tone should be informative.">
+    <message name="IDS_FRE_DEVICES_CARD_DESCRIPTION" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain. The cards appear on a full-page screen when the user launches Growser for the first time. The body is preceded by the headline 'All your devices'. This card's body means that users can get their data (like bookmarks, history) on all the devices where they're signed in. The tone should be informative.">
       Easily pick up where you left off
     </message>
-    <message name="IDS_FRE_SECURITY_CARD_TITLE" desc="This string is the headline in one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain. The cards appear on a full-page screen when the user launches Brave for the first time. This card's headline means that users can get a higher level of security. The headline is followed by the body text 'Protect your passwords against phishing'. The tone should be informative.">
+    <message name="IDS_FRE_SECURITY_CARD_TITLE" desc="This string is the headline in one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain. The cards appear on a full-page screen when the user launches Growser for the first time. This card's headline means that users can get a higher level of security. The headline is followed by the body text 'Protect your passwords against phishing'. The tone should be informative.">
       Stronger security
     </message>
-    <message name="IDS_FRE_SECURITY_CARD_DESCRIPTION" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain. The cards appear on a full-page screen when the user launches Brave for the first time. The body is preceded by the headline 'Stronger security'. This card's body means that users can get a higher level of security. Translate 'phishing' according to https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=60554f8 . The tone should be informative.">
+    <message name="IDS_FRE_SECURITY_CARD_DESCRIPTION" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain. The cards appear on a full-page screen when the user launches Growser for the first time. The body is preceded by the headline 'Stronger security'. This card's body means that users can get a higher level of security. Translate 'phishing' according to https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=60554f8 . The tone should be informative.">
       Protect your passwords against phishing
     </message>
-    <message name="IDS_FRE_BACKUP_CARD_TITLE" desc="This string is the headline in one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain. The cards appear on a full-page screen when the user launches Brave for the first time. This card's headline means that users can back up their data (like bookmarks, history, passwords, settings) so that the data can't get lost if a device malfunctions. The headline is followed by the body text 'Store your passwords, bookmarks, and more'. The tone should be informative.">
+    <message name="IDS_FRE_BACKUP_CARD_TITLE" desc="This string is the headline in one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain. The cards appear on a full-page screen when the user launches Growser for the first time. This card's headline means that users can back up their data (like bookmarks, history, passwords, settings) so that the data can't get lost if a device malfunctions. The headline is followed by the body text 'Store your passwords, bookmarks, and more'. The tone should be informative.">
       Back up your stuff
     </message>
-    <message name="IDS_UNO_FRE_BACKUP_CARD_DESCRIPTION" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain. The cards appear on a full-page screen when the user launches Brave for the first time. The body is preceded by the headline 'Back up data'. This card's body means that users can back up their data (like bookmarks, history, settings) so that the data can't get lost if a device malfunctions. Translate 'bookmarks' according to https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=59c31bb . Translate 'and more' so that it conveys that there are additional similar items that are not listed. The tone should be informative.">
+    <message name="IDS_UNO_FRE_BACKUP_CARD_DESCRIPTION" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain. The cards appear on a full-page screen when the user launches Growser for the first time. The body is preceded by the headline 'Back up data'. This card's body means that users can back up their data (like bookmarks, history, settings) so that the data can't get lost if a device malfunctions. Translate 'bookmarks' according to https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=59c31bb . Translate 'and more' so that it conveys that there are additional similar items that are not listed. The tone should be informative.">
       Save your bookmarks and more with sync
     </message>
-    <message name="IDS_UNO_FRE_BACKUP_CARD_DESCRIPTION_WITH_PASSWORDS" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain. The cards appear on a full-page screen when the user launches Brave for the first time. The body is preceded by the headline 'Back up data'. This card's body means that users can back up their data (like bookmarks, history, settings) so that the data can't get lost if a device malfunctions. Translate 'bookmarks' according to https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=59c31bb . Translate 'and more' so that it conveys that there are additional similar items that are not listed. The tone should be informative.">
+    <message name="IDS_UNO_FRE_BACKUP_CARD_DESCRIPTION_WITH_PASSWORDS" desc="This is the body text in one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain. The cards appear on a full-page screen when the user launches Growser for the first time. The body is preceded by the headline 'Back up data'. This card's body means that users can back up their data (like bookmarks, history, settings) so that the data can't get lost if a device malfunctions. Translate 'bookmarks' according to https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=59c31bb . Translate 'and more' so that it conveys that there are additional similar items that are not listed. The tone should be informative.">
       Store your passwords, bookmarks, and more
     </message>
-    <message name="IDS_UNO_FRE_REFRESH_BACKUP_CARD_DESCRIPTION_WITH_PASSWORDS" desc="This is the body text for the back-up benefit card (one of three cards that represent the top benefits for why a user should sign in to Brave with a Brave sync chain). The cards appear on a full-page screen when the user launches Brave for the first time. It lists specific items that will be synced to the cloud so that the data can't get lost if a device malfunctions. The tone should be informative.">
+    <message name="IDS_UNO_FRE_REFRESH_BACKUP_CARD_DESCRIPTION_WITH_PASSWORDS" desc="This is the body text for the back-up benefit card (one of three cards that represent the top benefits for why a user should sign in to Growser with a Growser sync chain). The cards appear on a full-page screen when the user launches Growser for the first time. It lists specific items that will be synced to the cloud so that the data can't get lost if a device malfunctions. The tone should be informative.">
       Store your passwords, bookmarks, and settings
     </message>
     <if expr="not use_titlecase">
-      <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to Brave">
+      <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to Growser">
         Don't sign in
       </message>
-      <message name="IDS_FRE_STAY_SIGNED_OUT_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to Brave">
+      <message name="IDS_FRE_STAY_SIGNED_OUT_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to Growser">
         Stay signed out
       </message>
-      <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice to sign in to Brave">
+      <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="The title of the button giving the users the choice to sign in to Growser">
         Sign in
       </message>
     </if>
     <if expr="use_titlecase">
-      <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice not to sign in to Brave">
+      <message name="IDS_FRE_DECLINE_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice not to sign in to Growser">
         Don't Sign In
       </message>
-      <message name="IDS_FRE_STAY_SIGNED_OUT_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to Brave">
+      <message name="IDS_FRE_STAY_SIGNED_OUT_BUTTON_TITLE" desc="The title of the button giving the users the choice not to sign in to Growser">
         Stay Signed Out
       </message>
-      <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice to sign in to Brave">
+      <message name="IDS_FRE_ACCEPT_SIGN_IN_BUTTON_TITLE" desc="In Title Case. The title of the button giving the users the choice to sign in to Growser">
         Sign In
       </message>
     </if>
-    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Brave is launched), informing users they can either sign in with an existing Brave account or create a new one in the next step(s).">
-      Use your Brave account or create a new one
+    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Growser is launched), informing users they can either sign in with an existing Growser account or create a new one in the next step(s).">
+      Use your Growser account or create a new one
     </message>
     <message name="IDS_FRE_SIGN_IN_CELEBRATION_WELCOME_TITLE" desc="Title for the sign in celebration screen (FRE).">
       Welcome, <ph name="USER_NAME">$1<ex>John</ex></ph>!
@@ -1217,21 +1217,21 @@
     </message>
 
     <!-- Default Browser Promo -->
-    <message name="IDS_FRE_DEFAULT_BROWSER_TITLE_NEW" desc="Title for the page that prompts user to set Brave as their default browser in the first run experience.">
+    <message name="IDS_FRE_DEFAULT_BROWSER_TITLE_NEW" desc="Title for the page that prompts user to set Growser as their default browser in the first run experience.">
       Set your default browser
     </message>
-    <message name="IDS_FRE_DEFAULT_BROWSER_SET_AS_DEFAULT" desc="The label for a button to confirm setting Brave as their default browser.">
+    <message name="IDS_FRE_DEFAULT_BROWSER_SET_AS_DEFAULT" desc="The label for a button to confirm setting Growser as their default browser.">
       Set as default
     </message>
-    <message name="IDS_FRE_DEFAULT_BROWSER_SKIP" desc="The label for a button to skip setting Brave as their default browser.">
+    <message name="IDS_FRE_DEFAULT_BROWSER_SKIP" desc="The label for a button to skip setting Growser as their default browser.">
       Skip
     </message>
 
     <!-- Default Browser Promo Refresh -->
-    <message name="IDS_FRE_REFRESH_DEFAULT_BROWSER_SET_AS_DEFAULT" desc="The label for a button to confirm setting Brave as their default browser.">
+    <message name="IDS_FRE_REFRESH_DEFAULT_BROWSER_SET_AS_DEFAULT" desc="The label for a button to confirm setting Growser as their default browser.">
       Set as default
     </message>
-    <message name="IDS_FRE_REFRESH_DEFAULT_BROWSER_NO_THANKS" desc="The label for a button to skip setting Brave as their default browser.">
+    <message name="IDS_FRE_REFRESH_DEFAULT_BROWSER_NO_THANKS" desc="The label for a button to skip setting Growser as their default browser.">
       No thanks
     </message>
 
@@ -1271,8 +1271,8 @@
     </message>
     <message name="IDS_SIGNOUT_CONFIRMATION_EXTENSIONS_SECTION_TOOLTIP" desc="Mouse over tooltip for the Extensions section in the Signout Confirmation dialog which allows users to remove extensions linked to their account when signing out.">
       {ACCOUNT_EXTENSIONS_COUNT, plural,
-      =1 {This extension is saved in your Brave sync chain, but any data it saved only on this device may be deleted}
-      other {These extensions are saved in your Brave sync chain, but any data they've saved only on this device may be deleted}
+      =1 {This extension is saved in your Growser sync chain, but any data it saved only on this device may be deleted}
+      other {These extensions are saved in your Growser sync chain, but any data they've saved only on this device may be deleted}
       }
     </message>
     <message name="IDS_SIGNOUT_CONFIRMATION_UNSYNCED_DATA_WITH_ACCOUNT_EXTENSIONS" desc="An additional message shown in the Signout Confirmation dialog if the user initiates a signout with unsynced data and they have account extensions installed.">
@@ -1287,7 +1287,7 @@
       To quickly get back to sites you’ve visited, sync your history and tabs
     </message>
     <message name="IDS_HISTORY_SYNC_OPT_IN_DESCRIPTION" desc="Description of the history sync opt in screen which offers the user to turn on the data types history, tabs, and saved tab groups.">
-      You can stop syncing anytime in settings. Brave may personalize Search and other services based on your history.
+      You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
     </message>
     <message name="IDS_HISTORY_SYNC_OPT_IN_ACCEPT_BUTTON" desc="Accept button of the history sync opt in screen which offers the user to turn on the data types history, tabs, and saved tab groups.">
       Yes, I’m in
@@ -1296,7 +1296,7 @@
       No thanks
     </message>
     <message name="IDS_TABS_DISABLED_ERROR_DESCRIPTION" desc="Message that is shown in an error dialog when a user tries to sign in to use a service that requires history sync opt in (e.g. sharing/joining tab groups), but sync is disabled.">
-      Your organization turned off saving tabs in your Brave sync chain
+      Your organization turned off saving tabs in your Growser sync chain
     </message>
     <!-- Avatar Button Promos Desktop -->
     <if expr="not use_titlecase">
@@ -1348,7 +1348,7 @@
       Continue
     </message>
     <message name="IDS_PROFILE_MENU_PROMO_DESCRIPTION_WITH_BATCH_UPLOAD" desc="The description of the identity section in the Profile Menu for users that can see the Batch Upload promo in the Avatar button, when having local data. This describes the action presented right below it in the button.">
-      To get your passwords, bookmarks, and more on all your devices, save them in your Brave sync chain
+      To get your passwords, bookmarks, and more on all your devices, save them in your Growser sync chain
     </message>
     <if expr="not use_titlecase">
       <message name="IDS_PROFILE_MENU_PROMO_BUTTON_WITH_BATCH_UPLOAD" desc="The button label in the Profile Menu identity section for users that can see the Batch Upload promo in the Avatar button, when having local data. When clicked, it opens the Batch Upload dialog.">
@@ -1361,14 +1361,14 @@
       </message>
     </if>
     <message name="IDS_PROFILE_MENU_PROMO_DESCRIPTION_WITH_BATCH_UPLOAD_BOOKMARK_CLEANUP" desc="The description of the identity section in the Profile Menu for users that can see the Batch Upload promo in the Avatar button with the emphasis on Bookmarks cleanup, when having local data. This describes the action presented right below it in the button.">
-      To clean up any duplicate bookmarks, save them in your Brave sync chain
+      To clean up any duplicate bookmarks, save them in your Growser sync chain
     </message>
   </if>
     <message name="IDS_SIGN_IN_BENEFITS_IPH_TEXT" desc="Text of the IPH bubble announcing benefits for users who signed in before the sync-to-signin migration.">
-      While you're signed in, you can use the bookmarks, extensions, and more saved in your Brave sync chain on all your devices
+      While you're signed in, you can use the bookmarks, extensions, and more saved in your Growser sync chain on all your devices
     </message>
     <message name="IDS_SIGN_IN_BENEFITS_WITHOUT_BOOKMARKS_AND_EXTENSIONS_IPH_TEXT" desc="Text of the IPH bubble announcing benefits for users who signed in before the sync-to-signin migration, not mentioning bookmarks and extensions because they require an explicit sign in.">
-      While you're signed in, you can use the themes, settings, and more saved in your Brave sync chain on all your devices
+      While you're signed in, you can use the themes, settings, and more saved in your Growser sync chain on all your devices
     </message>
     <!-- Sign in on your phone (QR code) strings  -->
     <if expr="not use_titlecase">

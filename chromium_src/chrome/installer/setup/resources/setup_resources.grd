@@ -94,7 +94,7 @@
       <!-- Windows Installer -->
       <if expr="is_win">
         <message name="IDS_SETUP_PATCH_FAILED" desc="Error message when setup.exe fails to patch itself.">
-          Installation failed due to unspecified error. Please download Brave again.
+          Installation failed due to unspecified error. Please download Growser again.
         </message>
       </if>
     </messages>

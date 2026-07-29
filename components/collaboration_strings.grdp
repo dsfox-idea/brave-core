@@ -6,10 +6,10 @@
     Collaborate in tab groups
   </message>
   <message name="IDS_COLLABORATION_SIGNIN_DESCRIPTION" desc="The description of the collaboration signin screen." formatter_data="android_java">
-    Sign in to Brave to share and join tab groups, and work together on ideas
+    Sign in to Growser to share and join tab groups, and work together on ideas
   </message>
   <message name="IDS_COLLABORATION_SIGNIN_BOTTOM_SHEET_TITLE" meaning="Title" desc="The title of the collaboration signin bottom sheet screen." formatter_data="android_java">
-    Sign in to Brave
+    Sign in to Growser
   </message>
   <message name="IDS_COLLABORATION_SIGNIN_BOTTOM_SHEET_DESCRIPTION" desc="The description of the collaboration signin bottom sheet screen." formatter_data="android_java">
     You’ll get to share, join, and collaborate in tab groups
@@ -52,28 +52,28 @@
     Contact the sender to ask for a new link
   </message>
   <message name="IDS_COLLABORATION_CHROME_OUT_OF_DATE_ERROR_DIALOG_HEADER" desc="The title for the chrome out of date dialog, shown when user tries to share a tab group." formatter_data="android_java">
-    Brave is out of date
+    Growser is out of date
   </message>
   <message name="IDS_COLLABORATION_SHARE_BUTTON_CHROME_OUT_OF_DATE_ERROR_DIALOG_BODY" desc="The body for the chrome out of date dialog, shown when user tries to share a tab group.">
-    To share tab groups, update Brave
+    To share tab groups, update Growser
   </message>
   <message name="IDS_COLLABORATION_JOIN_BUTTON_CHROME_OUT_OF_DATE_ERROR_DIALOG_BODY" desc="The body for the chrome out of date dialog, shown when user tries to share a tab group.">
-    To join this tab group, update Brave
+    To join this tab group, update Growser
   </message>
   <message name="IDS_COLLABORATION_CHROME_OUT_OF_DATE_ERROR_DIALOG_UPDATE_BUTTON" desc="The text of the button to update the app from the chrome out of date dialog, shown when user tries to share or join a tab group." formatter_data="android_java">
-    Update Brave
+    Update Growser
   </message>
   <message name="IDS_COLLABORATION_CHROME_OUT_OF_DATE_ERROR_DIALOG_NOT_NOW_BUTTON" desc="The text of the button to skip updating the app from the chrome out of date dialog, shown when user tries to share or join a tab group." formatter_data="android_java">
     Not now
   </message>
   <message name="IDS_COLLABORATION_CHROME_OUT_OF_DATE_ERROR_DIALOG_CONTINUE_BODY" desc="The body for the chrome out of date dialog, shown when user tries to continue using shared tab groups after a restart." formatter_data="android_java">
-    To continue using your shared tab groups, update Brave
+    To continue using your shared tab groups, update Growser
   </message>
   <message name="IDS_COLLABORATION_SIGNED_OUT_HEADER" desc="The title for the signed out dialog." formatter_data="android_java">
     You're signed out
   </message>
   <message name="IDS_COLLABORATION_SIGNED_OUT_BODY" desc="The body for the signed out dialog." formatter_data="android_java">
-    To share, join, and collaborate in tab groups, open settings and turn on Allow Brave sign-in
+    To share, join, and collaborate in tab groups, open settings and turn on Allow Growser sign-in
   </message>
   <message name="IDS_COLLABORATION_SIGNED_OUT_POSITIVE_BUTTON" desc="The positive button text for the signed out dialog." formatter_data="android_java">
     Settings
@@ -91,19 +91,19 @@
     Your organization doesn't allow you to sign in
   </message>
   <message name="IDS_COLLABORATION_ENTREPRISE_SIGNIN_DISABLED_BODY" desc="The body of the error dialog when entreprise signin disabled.">
-    To share or join tab groups, you must be able to sign in to Brave
+    To share or join tab groups, you must be able to sign in to Growser
   </message>
   <message name="IDS_COLLABORATION_ENTREPRISE_SIGNIN_DISABLED_SYNC_HISTORY_BODY" desc="The body of the error dialog when entreprise signin disabled.">
-    To share tabs and collaborate with others, you must be able to sign in to Brave
+    To share tabs and collaborate with others, you must be able to sign in to Growser
   </message>
   <message name="IDS_COLLABORATION_ENTREPRISE_SYNC_DISABLED_HEADER" desc="The header of the error dialog when entreprise sync disabled.">
     Your organization limits what you can save
   </message>
   <message name="IDS_COLLABORATION_ENTREPRISE_SYNC_DISABLED_BODY" desc="The body of the error dialog when entreprise sync disabled.">
-    When your organization limits saving to your Brave sync chain, you can’t share or join tab groups
+    When your organization limits saving to your Growser sync chain, you can’t share or join tab groups
   </message>
   <message name="IDS_COLLABORATION_ENTREPRISE_TABS_SYNC_DISABLED_BODY" desc="The body of the error dialog when entreprise sync disabled.">
-    When your organization limits saving to your Brave sync chain, you can’t share tabs or collaborate with others
+    When your organization limits saving to your Growser sync chain, you can’t share tabs or collaborate with others
   </message>
   <message name="IDS_COLLABORATION_ENTREPRISE_GROUP_CLOSED_HEADER" desc="The header of the error dialog when entreprise group is closed.">
     This group is closed
@@ -138,7 +138,7 @@
 
   <!-- Versioning -->
   <message name="IDS_COLLABORATION_SHARED_TAB_GROUPS_PANEL_OUT_OF_DATE_MESSAGE_CELL_TEXT" desc="Text for the out-of-date cell that can appear at the top of the tab groups panel when the app is out-of-date to support shared tab groups." formatter_data="android_java">
-    Update Brave to continue using your shared tab groups
+    Update Growser to continue using your shared tab groups
   </message>
   <message name="IDS_COLLABORATION_SHARED_TAB_GROUPS_AVAILABLE_AGAIN_IPH_MESSAGE" desc="The text that appears in the in-product help tooltip anchored on the tab groups panel when the shared tab groups are available again (typically after having updated the app)." formatter_data="android_java">
     Your shared tab groups are available again
@@ -159,10 +159,10 @@
     <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> changed this tab
   </message>
   <message name="IDS_TAB_AX_DATA_SHARING_RECENT_ACTIVITY_MEMBER_ADDED_THIS_TAB" desc="A description of the user adding the current tab including the title for accessibility. Only for Desktop." is_accessibility_with_no_ui="true">
-    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> added this tab, <ph name="TAB_TITLE">$2<ex>Brave</ex></ph>
+    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> added this tab, <ph name="TAB_TITLE">$2<ex>Growser</ex></ph>
   </message>
   <message name="IDS_TAB_AX_DATA_SHARING_RECENT_ACTIVITY_MEMBER_CHANGED_THIS_TAB" desc="A description of the user changing the current tab including the title for accessibility. Only for Desktop." is_accessibility_with_no_ui="true">
-    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> changed this tab, <ph name="TAB_TITLE">$2<ex>Brave</ex></ph>
+    <ph name="MEMBER_FIRST_NAME">$1<ex>Ali</ex></ph> changed this tab, <ph name="TAB_TITLE">$2<ex>Growser</ex></ph>
   </message>
   <message name="IDS_DATA_SHARING_RECENT_ACTIVITY_TAB_REMOVED" desc="Text on a recent activity bottom sheet row that says user removed a tab.">
     <ph name="USER_DISPLAY_NAME">$1<ex>User 1</ex></ph> removed a tab

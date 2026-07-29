@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_TOOLTIP_WALLET" desc="Tooltip to acccess the Brave Wallet">Brave Wallet</message>
-  <message name="IDS_ACCNAME_BRAVE_WALLET_BUTTON" desc="The accessible name for the Brave Wallet bubble.">Brave Wallet</message>
-  <message name="IDS_BRAVE_WALLET" desc="The name of the feature Brave Wallet">Brave Wallet</message>
+  <message name="IDS_TOOLTIP_WALLET" desc="Tooltip to acccess the Growser Wallet">Growser Wallet</message>
+  <message name="IDS_ACCNAME_BRAVE_WALLET_BUTTON" desc="The accessible name for the Growser Wallet bubble.">Growser Wallet</message>
+  <message name="IDS_BRAVE_WALLET" desc="The name of the feature Growser Wallet">Growser Wallet</message>
   <message name="IDS_BRAVE_WALLET_ACCOUNT" desc="General token">account</message>
   <message name="IDS_BRAVE_WALLET_CHAIN_ID" desc="General token">Chain ID</message>
   <message name="IDS_BRAVE_WALLET_DOMAIN" desc="General token">domain</message>
@@ -18,12 +18,12 @@
   <message name="IDS_WALLET_PARSING_ERROR" desc="There was a parsing error">A response parsing error has occurred</message>
   <message name="IDS_WALLET_REQUEST_PROCESSING_ERROR" desc="There was a request processing error">A generic request processing error has occurred</message>
   <message name="IDS_WALLET_REQUESTED_RESOURCE_NOT_AVAILABLE_ERROR" desc="The text of response when request panel is already open for current dapp">Requested resource not available</message>
-  <message name="IDS_WALLET_INVALID_MNEMONIC_ERROR" desc="The text for invalid mnemonic being imported error">The mnemonic being imported is not valid for Brave Wallet</message>
+  <message name="IDS_WALLET_INVALID_MNEMONIC_ERROR" desc="The text for invalid mnemonic being imported error">The mnemonic being imported is not valid for Growser Wallet</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_WALLET_TYPE_TITLE" desc="Title for selection wallet type to import">Which type of wallet would you like to import?</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_WALLET_TYPE_HOT_WALLET_TITLE" desc="Title for hot wallet option">Ethereum/Solana/Filecoin wallet</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_WALLET_TYPE_HOT_WALLET_DESCRIPTION" desc="Description for hot wallet option">Import your seed phrase from an existing wallet</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_WALLET_TYPE_HARDWARE_WALLET_TITLE" desc="Title for hardware wallet option">Hardware wallet</message>
-  <message name="IDS_BRAVE_WALLET_IMPORT_WALLET_TYPE_HARDWARE_WALLET_DESCRIPTION" desc="Description for hardware wallet option">Connect your hardware wallet with Brave</message>
+  <message name="IDS_BRAVE_WALLET_IMPORT_WALLET_TYPE_HARDWARE_WALLET_DESCRIPTION" desc="Description for hardware wallet option">Connect your hardware wallet with Growser</message>
   <message name="IDS_WALLET_ALREADY_IN_PROGRESS_ERROR" desc="The text of the response for wallet_(add|switch)EthereumChain call for existing request">A request is already in progress</message>
   <message name="IDS_WALLET_ETH_SEND_TRANSACTION_NO_TX_DATA" desc="The text of the response for eth_sendTransaction">Transaction data is missing</message>
   <message name="IDS_WALLET_ETH_SEND_TRANSACTION_TO_OR_DATA" desc="Transaction data is not validated">Transaction data 'to' or 'data' must be specified</message>
@@ -97,7 +97,7 @@
   <message name="IDS_BRAVE_WALLET_SEARCH_TOKENS" desc="Send tab search for tokens.">Search by name or paste address</message>
   <message name="IDS_BRAVE_WALLET_SEARCH_NFTS" desc="Send tab search for nfts.">Search NFT by name, id</message>
   <message name="IDS_BRAVE_WALLET_CHOOSE_ASSET" desc="Send tab choose asset button.">Choose Asset</message>
-  <message name="IDS_BRAVE_WALLET_ORDINALS_WARNING_MESSAGE" desc="Warning message when sending BTC.">Brave Wallet does not currently support Bitcoin NFTs (ordinals). Sending BTC from an address that has ordinals may result in its ordinals being transferred inadvertently.</message>
+  <message name="IDS_BRAVE_WALLET_ORDINALS_WARNING_MESSAGE" desc="Warning message when sending BTC.">Growser Wallet does not currently support Bitcoin NFTs (ordinals). Sending BTC from an address that has ordinals may result in its ordinals being transferred inadvertently.</message>
   <message name="IDS_BRAVE_WALLET_USER_UNDERSTANDS_LABEL" desc="Message for use to acknowledge a decision">I understand</message>
   <message name="IDS_BRAVE_WALLET_CHOOSE_RECIPIENT" desc="Select address modal title">Choose recipient</message>
   <message name="IDS_BRAVE_WALLET_MY_ADDRESSES" desc="Select address modal my addresses label">My addresses</message>
@@ -157,17 +157,17 @@
   <message name="IDS_BRAVE_WALLET_RECIPIENT" desc="Bridge and Swap recipient label">Recipient</message>
   <message name="IDS_BRAVE_WALLET_BUY_TAB_BUY_NOT_SUPPORTED_MESSAGE" desc="Message shown when the selected network is not supported for buy transactions">Buy not supported for selected network</message>
   <message name="IDS_BRAVE_WALLET_SEARCHING_FOR_DOMAIN" desc="Message shown when searching for a UD or ENS domain">Searching for domain...</message>
-  <message name="IDS_BRAVE_WALLET_ENS_OFF_CHAIN_LOOKUP_TITLE" desc="Message title shown when requesting to do an ENS off chain lookup.">Brave supports using off-chain gateways to resolve .eth domains.</message>
+  <message name="IDS_BRAVE_WALLET_ENS_OFF_CHAIN_LOOKUP_TITLE" desc="Message title shown when requesting to do an ENS off chain lookup.">Growser supports using off-chain gateways to resolve .eth domains.</message>
   <message name="IDS_BRAVE_WALLET_ENS_OFF_CHAIN_LOOKUP_DESCRIPTION" desc="Message description shown when requesting to do an ENS off chain lookup.">It looks like you've entered an ENS address. We'll need to use a third-party resolver to resolve this request, which may be able to see your IP address and domain.</message>
   <message name="IDS_BRAVE_WALLET_ENS_OFF_CHAIN_BUTTON" desc="ENS off chain lookup button text.">Use ENS domain</message>
   <message name="IDS_BRAVE_WALLET_SLIPPAGE_TOLERANCE_WARNING" desc="Warning if slippage tolerance is to high">Transaction may be frontrun</message>
   <message name="IDS_BRAVE_WALLET_EXPIRES_IN_TITLE" desc="BuySendSwap expires in title">Expires in</message>
   <message name="IDS_BRAVE_WALLET_SEND_PLACEHOLDER" desc="BuySendSwap send placeholder">Wallet address or URL</message>
   <message name="IDS_BRAVE_WALLET_SEND_NO_URL_PLACEHOLDER" desc="BuySendSwap send placeholder without URL">Wallet address</message>
-  <message name="IDS_BRAVE_WALLET_SWAP_DISCLAIMER" desc="Swap Security and Privacy Disclaimer">Brave uses <ph name="LINK_BEFORE">$1</ph><ph name="SWAP_PROVIDER">$3</ph><ph name="LINK_AFTER">$2</ph> as a DEX aggregator.</message>
+  <message name="IDS_BRAVE_WALLET_SWAP_DISCLAIMER" desc="Swap Security and Privacy Disclaimer">Growser uses <ph name="LINK_BEFORE">$1</ph><ph name="SWAP_PROVIDER">$3</ph><ph name="LINK_AFTER">$2</ph> as a DEX aggregator.</message>
   <message name="IDS_BRAVE_WALLET_SWAP_DISCLAIMER_DESCRIPTION" desc="Swap 0x Security and Privacy Disclaimer Description">0x will process the Ethereum address and IP address to fulfill a transaction (including getting quotes). 0x will ONLY use this data for the purposes of processing transactions.</message>
   <message name="IDS_BRAVE_WALLET_JUPITER_SWAP_DISCLAIMER_DESCRIPTION" desc="Swap Jupiter Security and Privacy Disclaimer Description">Jupiter will process the Solana address and IP address to fulfill a transaction (including getting quotes). Jupiter will ONLY use this data for the purposes of processing transactions.</message>
-  <message name="IDS_BRAVE_WALLET_SWAP_FEES_NOTICE" desc="Swap fees notice">Quote includes a <ph name="SWAP_FEE_PERCENTAGE">$1</ph> Brave fee.</message>
+  <message name="IDS_BRAVE_WALLET_SWAP_FEES_NOTICE" desc="Swap fees notice">Quote includes a <ph name="SWAP_FEE_PERCENTAGE">$1</ph> Growser fee.</message>
   <message name="IDS_BRAVE_WALLET_DECIMAL_PLACES_ERROR" desc="Amount decimal places error">Too many decimal places</message>
   <message name="IDS_BRAVE_WALLET_MIN_ONE_ADA_ERROR" desc="Minimum required ADA value for sending error">Minimum required is 1 ADA</message>
   <message name="IDS_BRAVE_WALLET_AMOUNT_TOO_SMALL_ERROR" desc="Send amount is too small error">Send amount is too small</message>
@@ -185,12 +185,12 @@
   <message name="IDS_BRAVE_WALLET_BUTTON_DONE" desc="General Done button">Done</message>
    <message name="IDS_BRAVE_WALLET_WELCOME_RESTORE_BUTTON" desc="Restore screen button">Restore</message>
   <message name="IDS_BRAVE_WALLET_WELCOME_TITLE" desc="Onboarding welcome screen title">Browser-native. Self-custody. And multi-chain.</message>
-  <message name="IDS_BRAVE_WALLET_WELCOME_DESCRIPTION" desc="Onboarding welcome screen description">Take control of your crypto and NFTs. Brave Wallet supports Ethereum, EVM chains, Solana, Filecoin, Bitcoin, and more.</message>
+  <message name="IDS_BRAVE_WALLET_WELCOME_DESCRIPTION" desc="Onboarding welcome screen description">Take control of your crypto and NFTs. Growser Wallet supports Ethereum, EVM chains, Solana, Filecoin, Bitcoin, and more.</message>
   <message name="IDS_BRAVE_WALLET_WELCOME_NEW_WALLET_TITLE" desc="Onboarding welcome screen, new wallet action">Need a new wallet?</message>
-  <message name="IDS_BRAVE_WALLET_WELCOME_NEW_WALLET_DESCRIPTION" desc="Onboarding welcome screen, new wallet action description">Get started with Brave Wallet in minutes.</message>
+  <message name="IDS_BRAVE_WALLET_WELCOME_NEW_WALLET_DESCRIPTION" desc="Onboarding welcome screen, new wallet action description">Get started with Growser Wallet in minutes.</message>
   <message name="IDS_BRAVE_WALLET_WELCOME_IMPORT_WALLET_TITLE" desc="Onboarding welcome screen, import wallet action title">Already have a wallet?</message>
   <message name="IDS_BRAVE_WALLET_WELCOME_WATCH_ONLY_TITLE" desc="Onboarding welcome screen, create watch only wallet">I need a watch-only wallet</message>
-  <message name="IDS_BRAVE_WALLET_WELCOME_COPYRIGHT" desc="Onboarding welcome screen copyright">©2025 Brave Software Inc. Brave and the Brave logo are registered trademarks of Brave Software, Inc. Other product names and logos may be trademarks of their respective companies. All rights reserved.</message>
+  <message name="IDS_BRAVE_WALLET_WELCOME_COPYRIGHT" desc="Onboarding welcome screen copyright">©2025 Growser Software Inc. Growser and the Growser logo are registered trademarks of Growser Software, Inc. Other product names and logos may be trademarks of their respective companies. All rights reserved.</message>
   <message name="IDS_BRAVE_WALLET_WELCOME_DIVIDER_TEXT" desc="Wallet onboarding welcome divider text">or</message>
   <message name="IDS_BRAVE_WALLET_WELCOME_IMPORT_WALLET_DESCRIPTION" desc="Onboarding welcome screen, import wallet action description">Already have a wallet?</message>
   <message name="IDS_BRAVE_WALLET_BACKUP_INTRO_TITLE" desc="Backup screen title">Back up your crypto wallet</message>
@@ -233,13 +233,13 @@
   <message name="IDS_BRAVE_WALLET_BACKUP_WARNING_TEXT" desc="Backup warning banner description">Back up your wallet now to protect your assets and ensure you never lose access.</message>
   <message name="IDS_BRAVE_WALLET_BACKUP_BUTTON" desc="Backup warning banner back up button">Back up now</message>
   <message name="IDS_BRAVE_WALLET_DISMISS_BUTTON" desc="Backup warning banner dismiss button">Dismiss</message>
-  <message name="IDS_BRAVE_WALLET_DEFAULT_WALLET_BANNER" desc="Default wallet banner description">Brave Wallet is not set as your default wallet and will not respond to Web3 DApps. Visit settings to change your default wallet.</message>
+  <message name="IDS_BRAVE_WALLET_DEFAULT_WALLET_BANNER" desc="Default wallet banner description">Growser Wallet is not set as your default wallet and will not respond to Web3 DApps. Visit settings to change your default wallet.</message>
   <message name="IDS_BRAVE_WALLET_RESTORE_TITE" desc="Restore Wallet screen title">Restore primary crypto accounts</message>
-  <message name="IDS_BRAVE_WALLET_RESTORE_DESCRIPTION" desc="Restore Wallet screen description">Enter your recovery phrase to restore your Brave wallet crypto account.</message>
+  <message name="IDS_BRAVE_WALLET_RESTORE_DESCRIPTION" desc="Restore Wallet screen description">Enter your recovery phrase to restore your Growser wallet crypto account.</message>
   <message name="IDS_BRAVE_WALLET_RESTORE_ERROR" desc="Restore Wallet screen recovery error">The recovery phrase entered is invalid.</message>
   <message name="IDS_BRAVE_WALLET_RESTORE_PLACEHOLDER" desc="Restore Wallet screen input placeholder">Paste recovery phrase from clipboard</message>
   <message name="IDS_BRAVE_WALLET_RESTORE_SHOW_PHRASE" desc="Restore Wallet screen show recovery phrase button">Show recovery phrase</message>
-  <message name="IDS_BRAVE_WALLET_RESTORE_LEGACY_CHECK_BOX" desc="Restore Wallet screen import legacy checkbox">Import from legacy Brave crypto wallets?</message>
+  <message name="IDS_BRAVE_WALLET_RESTORE_LEGACY_CHECK_BOX" desc="Restore Wallet screen import legacy checkbox">Import from legacy Growser crypto wallets?</message>
   <message name="IDS_BRAVE_WALLET_RESTORE_FORM_TEXT" desc="Restore Wallet new password input">New Password</message>
   <message name="IDS_BRAVE_WALLET_TOOL_TIP_COPY_TO_CLIPBOARD" desc="General tooltip copy to clipboard">Copy to Clipboard</message>
   <message name="IDS_BRAVE_WALLET_SKIP_BACKUP_WARNING" desc="Warning when user wants to skip recovery phrase backup">You can skip this step now, but you still need to back up your recovery phrase to ensure account security.</message>
@@ -297,7 +297,7 @@
   <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_WRONG_APPLICATION_USER_HINT" desc="User hint for wrong application being opened when connecting hardware wallet">This error may occur when the wrong application is open on the Ledger device.</message>
   <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_TREZOR" desc="Connect hardware wallet trezor button">Trezor</message>
   <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_LEDGER" desc="Connect hardware wallet ledger button">Ledger</message>
-  <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_AUTHORIZATION_NEEDED" desc="Authorize hardware wallet button">Grant Brave access to your <ph name="HARDWARE_DEVICE"><ex>Ledger</ex>$1</ph> device.</message>
+  <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_AUTHORIZATION_NEEDED" desc="Authorize hardware wallet button">Grant Growser access to your <ph name="HARDWARE_DEVICE"><ex>Ledger</ex>$1</ph> device.</message>
   <message name="IDS_BRAVE_WALLET_CONNECTING_HARDWARE_WALLET" desc="Connect hardware wallet connecting status">Connecting...</message>
   <message name="IDS_BRAVE_WALLET_ADD_CHECKED_ACCOUNTS_HARDWARE_WALLET" desc="Connect hardware wallet check box description">Add checked accounts</message>
   <message name="IDS_BRAVE_WALLET_LOAD_MORE_ACCOUNTS_HARDWARE_WALLET" desc="Connect hardware wallet load more button">Load more</message>
@@ -311,9 +311,9 @@
   <message name="IDS_BRAVE_WALLET_AUTHORIZE_HARDWARE_WALLET" desc="Authorize hardware wallet page title">Authorize your wallet</message>
   <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_WALLET" desc="Title for connect hardware wallet page">Connect hardware wallet</message>
   <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_WALLET_DESCRIPTION" desc="Description for connect hardware wallet page">We currently support <ph name="HARDWARE_DEVICE"><ex>Ledger</ex>$1</ph> and <ph name="HARDWARE_DEVICE1"><ex>Trezor</ex>$2</ph> devices.</message>
-  <message name="IDS_BRAVE_WALLET_IMPORT_HARDWARE_WALLET_DESCRIPTION" desc="Description for import hardware wallet page">Connect your hardware wallet to manage your assets directly from Brave Wallet</message>
+  <message name="IDS_BRAVE_WALLET_IMPORT_HARDWARE_WALLET_DESCRIPTION" desc="Description for import hardware wallet page">Connect your hardware wallet to manage your assets directly from Growser Wallet</message>
   <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_WALLET_SELECT_BLOCKCHAIN" desc="Page title for selecting blockchain for hardware wallet">Select a blockchain to import your hardware wallet</message>
-  <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_DEVICE_DESCRIPTION" desc="Connect a hardware wallet description">Connect your <ph name="HARDWARE_DEVICE"><ex>Ledger</ex>$1</ph> device to Brave Wallet</message>
+  <message name="IDS_BRAVE_WALLET_CONNECT_HARDWARE_DEVICE_DESCRIPTION" desc="Connect a hardware wallet description">Connect your <ph name="HARDWARE_DEVICE"><ex>Ledger</ex>$1</ph> device to Growser Wallet</message>
   <message name="IDS_BRAVE_WALLET_UNKNOWN_INTERNAL_ERROR" desc="Connect hardware wallet connection error">Unknown error, please reconnect your hardware wallet and try again.</message>
   <message name="IDS_BRAVE_WALLET_ACCOUNT_SETTINGS_WATCHLIST" desc="Account settings modal visible assets button">Visible assets</message>
   <message name="IDS_BRAVE_WALLET_ACCOUNT_SETTINGS_PRIVATE_KEY" desc="Account settings modal show private key button">Private key</message>
@@ -382,7 +382,7 @@
   <message name="IDS_BRAVE_WALLET_SWAP_LIMIT" desc="Swap tab limit button">Limit</message>
   <message name="IDS_BRAVE_WALLET_SWAP_PRICE_IN" desc="Swap tab price label">Price in</message>
   <message name="IDS_BRAVE_WALLET_SIGN_TRANSACTION_TITLE" desc="Sign panel title">Your signature is being requested</message>
-  <message name="IDS_BRAVE_WALLET_SIGN_WARNING" desc="Sign panel warning message">Note that Brave can’t verify what will happen if you sign. A signature could authorize nearly any operation in your account or on your behalf, including (but not limited to) giving total control of your account and crypto assets to the site making the request. Only sign if you’re sure you want to take this action, and trust the requesting site.</message>
+  <message name="IDS_BRAVE_WALLET_SIGN_WARNING" desc="Sign panel warning message">Note that Growser can’t verify what will happen if you sign. A signature could authorize nearly any operation in your account or on your behalf, including (but not limited to) giving total control of your account and crypto assets to the site making the request. Only sign if you’re sure you want to take this action, and trust the requesting site.</message>
   <message name="IDS_BRAVE_WALLET_SIGN_WARNING_TITLE" desc="Sign panel risk title">Sign at your own risk</message>
   <message name="IDS_BRAVE_WALLET_SIGN_TRANSACTION_MESSAGE_TITLE" desc="Sign panel message title">Message</message>
   <message name="IDS_BRAVE_WALLET_SIGN_TRANSACTION_EIP712_MESSAGE_HIDE_DETAILS" desc="Sign panel EIP-712 message hide details">Hide details</message>
@@ -411,7 +411,7 @@
   <message name="IDS_BRAVE_WALLET_CURRENT_APPROVAL_LIMIT" desc="Allow spend panel current approval limit label">Current approval limit</message>
   <message name="IDS_BRAVE_WALLET_PROPOSED_APPROVAL_LIMIT" desc="Allow spend panel proposed approval limit label">Proposed approval limit</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_TITLE" desc="Add network panel title">Allow this site to add a network?</message>
-  <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_DESCRIPTION" desc="Add network panel description">This will allow this network to be used within Brave Wallet.</message>
+  <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_DESCRIPTION" desc="Add network panel description">This will allow this network to be used within Growser Wallet.</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_LEARN_MORE_BUTTON" desc="Add network panel learn more button">Learn more.</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_NAME" desc="Add network panel name label">Network name</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_URL" desc="Add network panel url label">Network URL</message>
@@ -440,8 +440,8 @@
   <message name="IDS_BRAVE_WALLET_TRANSACTION_GAS_LIMIT" desc="Transaction gas limit">Gas Limit</message>
   <message name="IDS_BRAVE_WALLET_TRANSACTION_GAS_PREMIUM" desc="Transaction gas premium">Gas Premium</message>
   <message name="IDS_BRAVE_WALLET_TRANSACTION_GAS_FEE_CAP" desc="Transaction gas fee cap">Gas Fee Cap</message>
-  <message name="IDS_BRAVE_WALLET_PANEL_TITLE" desc="Brave Wallet panel title">Brave Wallet</message>
-  <message name="IDS_BRAVE_WALLET_PANEL_CONNECTED" desc="Brave Wallet panel connected status">Connected</message>
+  <message name="IDS_BRAVE_WALLET_PANEL_TITLE" desc="Growser Wallet panel title">Growser Wallet</message>
+  <message name="IDS_BRAVE_WALLET_PANEL_CONNECTED" desc="Growser Wallet panel connected status">Connected</message>
   <message name="IDS_BRAVE_WALLET_SITE_PERMISSIONS_ACCOUNTS" desc="Site Permissions panel accounts connected"><ph name="NUMBER_OF_ACCOUNTS"><ex>5</ex>$1</ph> accounts connected</message>
   <message name="IDS_BRAVE_WALLET_SITE_PERMISSIONS_DISCONNECT" desc="Site Permissions panel disconnect from site">Disconnect</message>
   <message name="IDS_BRAVE_WALLET_SITE_PERMISSIONS_SWITCH" desc="Site Permissions panel switch account for connected site">Switch</message>
@@ -455,10 +455,10 @@
   <message name="IDS_BRAVE_WALLET_AVAILABLE_ACCOUNTS" desc="DApp settings panel, available accounts list">Available accounts</message>
   <message name="IDS_BRAVE_WALLET_CONNECTIONS" desc="DApp Connections Button">Connections</message>
   <message name="IDS_BRAVE_WALLET_UNBLOCK" desc="DApp Connection Unblock Button">Unblock</message>
-  <message name="IDS_BRAVE_WALLET_PANEL_BLOCKED" desc="Brave Wallet panel blocked status">Blocked</message>
-  <message name="IDS_BRAVE_WALLET_TITLE" desc="Brave Wallet Title">Wallet</message>
+  <message name="IDS_BRAVE_WALLET_PANEL_BLOCKED" desc="Growser Wallet panel blocked status">Blocked</message>
+  <message name="IDS_BRAVE_WALLET_TITLE" desc="Growser Wallet Title">Wallet</message>
   <message name="IDS_BRAVE_WALLET_SITE_PERMISSIONS_NEW_ACCOUNT" desc="Site Permissions panel add a new account">New account</message>
-  <message name="IDS_BRAVE_WALLET_WELCOME_PANEL_DESCRIPTION" desc="Brave Wallet welcome panel description">Use this panel to securely access Web3 and all your crypto assets.</message>
+  <message name="IDS_BRAVE_WALLET_WELCOME_PANEL_DESCRIPTION" desc="Growser Wallet welcome panel description">Use this panel to securely access Web3 and all your crypto assets.</message>
   <message name="IDS_BRAVE_WALLET_LEARN_MORE" desc="Generic learn-more link text">Learn more</message>
   <message name="IDS_BRAVE_WALLET_TRANSACTION_DETAIL_BOX_FUNCTION" desc="Transaction detail box function label">FUNCTION TYPE</message>
   <message name="IDS_BRAVE_WALLET_TRANSACTION_DETAIL_BOX_HEX" desc="Transaction detail box hex data label">HEX DATA</message>
@@ -564,7 +564,7 @@
   <message name="IDS_BRAVE_WALLET_ZCASH_INVALID_UNIFIED_ADDRESS_MISSING_ORCHARD_PART" desc="Invalid recipient zcash unified address error - orchard part missing">Orchard part is missing</message>
   <message name="IDS_BRAVE_WALLET_ZCASH_INVALID_UNIFIED_ADDRESS_MISSING_TRANSPARENT_PART" desc="Invalid recipient zcash unified address error - transparent part missing">Transparent part is missing</message>
   <message name="IDS_BRAVE_WALLET_CHECKSUM_MODAL_TITLE" desc="Invalid checksum modal title">How can I find the right address?</message>
-  <message name="IDS_BRAVE_WALLET_CHECKSUM_MODAL_DESCRIPTION" desc="Invalid checksum modal description">Brave prevents users from sending funds to the wrong address due to incorrect capitalization. Make sure that it's the correct address by following the instructions below.</message>
+  <message name="IDS_BRAVE_WALLET_CHECKSUM_MODAL_DESCRIPTION" desc="Invalid checksum modal description">Growser prevents users from sending funds to the wrong address due to incorrect capitalization. Make sure that it's the correct address by following the instructions below.</message>
   <message name="IDS_BRAVE_WALLET_CHECKSUM_MODAL_STEP_ONE_TITLE" desc="Invalid checksum modal step one title">1. Visit</message>
   <message name="IDS_BRAVE_WALLET_CHECKSUM_MODAL_STEP_ONE_DESCRIPTION" desc="Invalid checksum modal step one description">Visit etherscan and paste the wallet address you want to send tokens. Then enter</message>
   <message name="IDS_BRAVE_WALLET_CHECKSUM_MODAL_STEP_TWO_TITLE" desc="Invalid checksum modal step two title">2. Copy and enter ETH address</message>
@@ -646,7 +646,7 @@
     Signing typed data is supported only on Trezor Model One with Firmware 1.10.5 or higher
   </message>
   <message name="IDS_BRAVE_WALLET_SWEEPSTAKES_TITLE" desc="The title for the swap sweepstakes banner">
-    Brave Swap-stakes
+    Growser Swap-stakes
   </message>
   <message name="IDS_BRAVE_WALLET_SWEEPSTAKES_DESCRIPTION" desc="A short description of the swap sweepstakes">
     7 days of crypto giveaways, ~&#36;500k in prizes.
@@ -666,7 +666,7 @@
   <message name="IDS_BRAVE_WALLET_NOT_VALID_FIL_ADDRESS" desc="Send input not valid FIL address error">Not a valid FIL address</message>
   <message name="IDS_BRAVE_WALLET_SELL_WITH_PROVIDER" desc="Sell with Provider option label">Sell with <ph name="OFFRAMP_PROVIDER">$1<ex>Ramp</ex></ph></message>
   <message name="IDS_BRAVE_WALLET_TRANSACTIONS_PARTNER" desc="Transactions partner modal title">Transactions partner</message>
-  <message name="IDS_BRAVE_WALLET_TRANSACTION_PARTNER_CONSENT" desc="Meld consent description">Brave Wallet uses Meld.io to help aggregate and surface various crypto providers for your region. We will share information with Meld.io to complete the transaction, including your wallet address and country code. For more information please read Meld’s terms of use.</message>
+  <message name="IDS_BRAVE_WALLET_TRANSACTION_PARTNER_CONSENT" desc="Meld consent description">Growser Wallet uses Meld.io to help aggregate and surface various crypto providers for your region. We will share information with Meld.io to complete the transaction, including your wallet address and country code. For more information please read Meld’s terms of use.</message>
   <message name="IDS_BRAVE_WALLET_MELD_TERMS_OF_USE" desc="Meld terms of use checkbox label">I have read and agree to the <ph name="LINK_BEFORE">$1</ph>Meld's Terms of use<ph name="LINK_AFTER">/$1</ph></message>
   <message name="IDS_BRAVE_WALLET_BEST_OPTION" desc="Best option label for buy option">Best Option</message>
   <message name="IDS_BRAVE_WALLET_EXCHANGE_RATE_WITH_FEES" desc="Buy exchange rate with fees label">Exchange rate with fees</message>
@@ -791,22 +791,22 @@
   <message name="IDS_BRAVE_WALLET_CREATING_ASSOCIATED_TOKEN_ACCOUNT" desc="Transaction intent for creating associated token account">Creating associated token account</message>
   <message name="IDS_BRAVE_WALLET_FAILED_TO_CREATE_ASSOCIATED_TOKEN_ACCOUNT" desc="Transaction intent for failed to create associated token account">Failed to create associated token account</message>
   <message name="IDS_BRAVE_WALLET_ASSOCIATED_TOKEN_ACCOUNT_CREATED" desc="Transaction intent for associated token account created">Associated token account created</message>
-  <message name="IDS_BRAVE_WALLET_SIGN_IN_WITH_BRAVE_WALLET" desc="Sign in with Brave Wallet Title">Sign in with Brave Wallet</message>
-  <message name="IDS_BRAVE_WALLET_SIGN_IN_WITH_BRAVE_WALLET_MESSAGE" desc="Sign in with Brave Wallet Message">You are signing into <ph name="ORIGIN">$1<ex>login.xyz</ex></ph>. Brave Wallet will share your wallet address with <ph name="ORIGIN">$1<ex>login.xyz</ex></ph>.</message>
-  <message name="IDS_BRAVE_WALLET_SEE_DETAILS" desc="Sign in with Brave Wallet See details button">See details</message>
-  <message name="IDS_BRAVE_WALLET_SIGN_IN" desc="Sign in with Brave Wallet Sign in Button">Sign in</message>
-  <message name="IDS_BRAVE_WALLET_ORIGIN" desc="Sign in with Brave Wallet Origin Label">Origin</message>
-  <message name="IDS_BRAVE_WALLET_ADDRESS" desc="Sign in with Brave Wallet Address Label">Address</message>
-  <message name="IDS_BRAVE_WALLET_STATEMENT" desc="Sign in with Brave Wallet Statement Label">Statement</message>
-  <message name="IDS_BRAVE_WALLET_URI" desc="Sign in with Brave Wallet URI Label">URI</message>
-  <message name="IDS_BRAVE_WALLET_VERSION" desc="Sign in with Brave Wallet Version Label">Version</message>
-  <message name="IDS_BRAVE_WALLET_NONCE" desc="Sign in with Brave Wallet Nonce Label">Nonce</message>
-  <message name="IDS_BRAVE_WALLET_ISSUED_AT" desc="Sign in with Brave Wallet Issued at Label">Issued at</message>
-  <message name="IDS_BRAVE_WALLET_EXPIRATION_TIME" desc="Sign in with Brave Wallet Expiration time Label">Expiration time</message>
-  <message name="IDS_BRAVE_WALLET_NOT_BEFORE" desc="Sign in with Brave Wallet Not before Label">Not before</message>
-  <message name="IDS_BRAVE_WALLET_REQUEST_ID" desc="Sign in with Brave Wallet Request ID label">Request ID</message>
-  <message name="IDS_BRAVE_WALLET_RESOURCES" desc="Sign in with Brave Wallet Resources Label">Resources</message>
-  <message name="IDS_BRAVE_WALLET_SECURITY_RISK_DETECTED" desc="Sign in with Brave Wallet Error Security risk">Security risk detected</message>
+  <message name="IDS_BRAVE_WALLET_SIGN_IN_WITH_BRAVE_WALLET" desc="Sign in with Growser Wallet Title">Sign in with Growser Wallet</message>
+  <message name="IDS_BRAVE_WALLET_SIGN_IN_WITH_BRAVE_WALLET_MESSAGE" desc="Sign in with Growser Wallet Message">You are signing into <ph name="ORIGIN">$1<ex>login.xyz</ex></ph>. Growser Wallet will share your wallet address with <ph name="ORIGIN">$1<ex>login.xyz</ex></ph>.</message>
+  <message name="IDS_BRAVE_WALLET_SEE_DETAILS" desc="Sign in with Growser Wallet See details button">See details</message>
+  <message name="IDS_BRAVE_WALLET_SIGN_IN" desc="Sign in with Growser Wallet Sign in Button">Sign in</message>
+  <message name="IDS_BRAVE_WALLET_ORIGIN" desc="Sign in with Growser Wallet Origin Label">Origin</message>
+  <message name="IDS_BRAVE_WALLET_ADDRESS" desc="Sign in with Growser Wallet Address Label">Address</message>
+  <message name="IDS_BRAVE_WALLET_STATEMENT" desc="Sign in with Growser Wallet Statement Label">Statement</message>
+  <message name="IDS_BRAVE_WALLET_URI" desc="Sign in with Growser Wallet URI Label">URI</message>
+  <message name="IDS_BRAVE_WALLET_VERSION" desc="Sign in with Growser Wallet Version Label">Version</message>
+  <message name="IDS_BRAVE_WALLET_NONCE" desc="Sign in with Growser Wallet Nonce Label">Nonce</message>
+  <message name="IDS_BRAVE_WALLET_ISSUED_AT" desc="Sign in with Growser Wallet Issued at Label">Issued at</message>
+  <message name="IDS_BRAVE_WALLET_EXPIRATION_TIME" desc="Sign in with Growser Wallet Expiration time Label">Expiration time</message>
+  <message name="IDS_BRAVE_WALLET_NOT_BEFORE" desc="Sign in with Growser Wallet Not before Label">Not before</message>
+  <message name="IDS_BRAVE_WALLET_REQUEST_ID" desc="Sign in with Growser Wallet Request ID label">Request ID</message>
+  <message name="IDS_BRAVE_WALLET_RESOURCES" desc="Sign in with Growser Wallet Resources Label">Resources</message>
+  <message name="IDS_BRAVE_WALLET_SECURITY_RISK_DETECTED" desc="Sign in with Growser Wallet Error Security risk">Security risk detected</message>
   <message name="IDS_BRAVE_WALLET_INPUT" desc="Transaction Details Input Label">Input</message>
   <message name="IDS_BRAVE_WALLET_OUTPUT" desc="Transaction Details Output Label">Output</message>
   <message name="IDS_BRAVE_WALLET_INPUTS" desc="Transaction Details Inputs Label">Inputs</message>
@@ -899,22 +899,22 @@
   <message name="IDS_BRAVE_WALLET_HELP_CENTER" desc="Help center link label">Help center</message>
   <message name="IDS_BRAVE_WALLET_HELP_CENTER_TEXT" desc="Help Center text description below buy-send-swap">Need help? See</message>
   <message name="IDS_BRAVE_WALLET_HARDWARE_OPERATION_UNSUPPORTED_ERROR" desc="Error message of unsupported hardware wallet operation">This hardware wallet does not support this operation.</message>
-  <message name="IDS_BRAVE_WALLET_ENTER_YOUR_BRAVE_WALLET_PASSWORD" desc="Prompt for the user to enter their Brave Wallet password">Enter your Brave Wallet password</message>
+  <message name="IDS_BRAVE_WALLET_ENTER_YOUR_BRAVE_WALLET_PASSWORD" desc="Prompt for the user to enter their Growser Wallet password">Enter your Growser Wallet password</message>
   <message name="IDS_BRAVE_WALLET_ENTER_YOUR_PASSWORD" desc="Prompt for the user to enter their password">Enter your password</message>
-  <message name="IDS_BRAVE_WALLET_LEARN_MORE_ABOUT_BRAVE_WALLET" desc="Link to article explaining wallet">Learn more about Brave Wallet</message>
+  <message name="IDS_BRAVE_WALLET_LEARN_MORE_ABOUT_BRAVE_WALLET" desc="Link to article explaining wallet">Learn more about Growser Wallet</message>
   <message name="IDS_BRAVE_WALLET_PASSWORD_STRENGTH_TOOLTIP_HEADING" desc="Heading of password strength tooltip">Password should have:</message>
   <message name="IDS_BRAVE_WALLET_PASSWORD_STRENGTH_TOOLTIP_IS_LONG_ENOUGH" desc="Password strength length requirements">At least 8 characters</message>
   <message name="IDS_BRAVE_WALLET_PASSWORD_MATCH" desc="Password and confirmed passwords match">Passwords match</message>
   <message name="IDS_BRAVE_WALLET_PASSWORD_IS_STRONG" desc="Password is strong">Strong!</message>
   <message name="IDS_BRAVE_WALLET_PASSWORD_IS_MEDIUM_STRENGTH" desc="Password is of medium strength">Medium</message>
   <message name="IDS_BRAVE_WALLET_PASSWORD_IS_WEAK" desc="Password is weak">Weak</message>
-  <message name="IDS_BRAVE_WALLET_AUTO_LOCK_TITLE" desc="Auto lock title">Brave Wallet will auto-lock after</message>
+  <message name="IDS_BRAVE_WALLET_AUTO_LOCK_TITLE" desc="Auto lock title">Growser Wallet will auto-lock after</message>
   <message name="IDS_BRAVE_WALLET_AUTO_LOCK_DURATION_MINUTES" desc="Auto lock duration - in minutes"><ph name="VALUE">$1<ex>10</ex></ph> Minutes</message>
   <message name="IDS_BRAVE_WALLET_AUTO_LOCK_DURATION_HOURS" desc="Auto lock duration -  one hour"><ph name="VALUE">$1<ex>1</ex></ph> Hour(s)</message>
   <message name="IDS_BRAVE_WALLET_CREATING_WALLET" desc="Is displayed while the wallet is being created.">Creating Wallet...</message>
   <message name="IDS_BRAVE_WALLET_ONBOARDING_RECOVERY_PHRASE_BACKUP_INTRO_TITLE" desc="Title before backing up wallet">Save your recovery phrase</message>
   <message name="IDS_BRAVE_WALLET_ONBOARDING_RECOVERY_PHRASE_BACKUP_INTRO_DESCRIPTION" desc="Recovery phrase backup description">The 12-24 word recovery phrase is a private key you can use to regain access to your wallet in case you lose a connected device(s). Store it someplace safe, and in the exact order it appears below.</message>
-  <message name="IDS_BRAVE_WALLET_RECOVERY_PHRASE_BACKUP_WARNING" desc="A warning regarding recovery phrase safety">Brave cannot access your secret recovery phrase. Keep it safe, and never share it with anyone else.</message>
+  <message name="IDS_BRAVE_WALLET_RECOVERY_PHRASE_BACKUP_WARNING" desc="A warning regarding recovery phrase safety">Growser cannot access your secret recovery phrase. Keep it safe, and never share it with anyone else.</message>
   <message name="IDS_BRAVE_WALLET_RECOVERY_PHRASE_BACKUP_WARNING_IMPORTANT" desc="An important warning regarding recovery phrase safety">Keep it in a secure place that is not accessible to others and avoid sharing it with anyone.</message>
   <message name="IDS_BRAVE_WALLET_RECOVERY_WORD_INSTRUCTIONS" desc="Recovery word instructions">Enter the word in position <ph name="VALUE">$1<ex>2</ex></ph> from your recovery phrase.</message>
   <message name="IDS_BRAVE_WALLET_VERIFY_RECOVERY_PHRASE_GO_BACK" desc="Label for button to go back to previous page">Forgot to save? Go back</message>
@@ -937,7 +937,7 @@
   <message name="IDS_BRAVE_WALLET_ORDINAL_SUFFIX_FEW" desc="Suffix for 'few' ordinal">rd</message>
   <message name="IDS_BRAVE_WALLET_ORDINAL_SUFFIX_OTHER" desc="Suffix for 'other' ordinal">th</message>
   <message name="IDS_BRAVE_WALLET_ONBOARDING_SUCCESS_TITLE" desc="Wallet is ready for use message">You’re all set!</message>
-  <message name="IDS_BRAVE_WALLET_ONBOARDING_SUCCESS_DESCRIPTION" desc="Wallet access description">Your Brave Wallet is now set up and ready for use.</message>
+  <message name="IDS_BRAVE_WALLET_ONBOARDING_SUCCESS_DESCRIPTION" desc="Wallet access description">Your Growser Wallet is now set up and ready for use.</message>
   <message name="IDS_BRAVE_WALLET_ONBOARDING_SUCCESS_GO_TO_PORTFOLIO" desc="Wallet success go to portfolio">Go to portfolio</message>
   <message name="IDS_BRAVE_WALLET_ARTICLE_LINK_HOW_TO_USE_A_WALLET" desc="Title of article link 'How to use a crypto wallet?'">How to use a crypto wallet?</message>
   <message name="IDS_BRAVE_WALLET_ARTICLE_LINK_WHATS_THE_BEST_WALLET" desc="Title of article link 'What’s the best crypto wallet?'">What’s the best crypto wallet?</message>
@@ -949,9 +949,9 @@
   <message name="IDS_BRAVE_WALLET_METAMASK_EXTENSION_IMPORT_DESCRIPTION" desc="Detected MetaMask Extension import description">You can easily import your MetaMask wallet just by inputting your password.</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_OR_RESTORE_WALLET_TITLE" desc="Title to Import or Restore Wallet onboarding screen">Connect to your existing wallet</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_OR_RESTORE_DESCRIPTION" desc="Description of Import or Restore Wallet onboarding screen">To connect a wallet you already have, you may need to enter your recovery phrase. At this time we support restoring / importing from Ethereum and Solana wallets.</message>
-  <message name="IDS_BRAVE_WALLET_RESTORE_MY_BRAVE_WALLET" desc="Button text to restore from an existing Brave Wallet">Import an existing wallet</message>
-  <message name="IDS_BRAVE_WALLET_RESTORE_MY_BRAVE_WALLET_DESCRIPTION" desc="Secondary button text to restore from an existing Brave Wallet">12-24 words</message>
-  <message name="IDS_BRAVE_WALLET_RESTORE_MY_BRAVE_WALLET_INSTRUCTIONS" desc="Instruction text to restore from an existing Brave Wallet seed">You can paste your entire recovery phrase into any field.</message>
+  <message name="IDS_BRAVE_WALLET_RESTORE_MY_BRAVE_WALLET" desc="Button text to restore from an existing Growser Wallet">Import an existing wallet</message>
+  <message name="IDS_BRAVE_WALLET_RESTORE_MY_BRAVE_WALLET_DESCRIPTION" desc="Secondary button text to restore from an existing Growser Wallet">12-24 words</message>
+  <message name="IDS_BRAVE_WALLET_RESTORE_MY_BRAVE_WALLET_INSTRUCTIONS" desc="Instruction text to restore from an existing Growser Wallet seed">You can paste your entire recovery phrase into any field.</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_FROM_META_MASK" desc="Button text to restore from an existing MetaMask wallet">Import from MetaMask</message>
   <message name="IDS_BRAVE_WALLET_IMPORT_FROM_META_MASK_DESCRIPTION" desc="Secondary button text to restore from an existing MetaMask wallet">Use your MetaMask password to import your seed phrase</message>
   <message name="IDS_BRAVE_WALLET_CREATE_WALLET_INSTEAD_LINK" desc="A navigation link to create a new wallet">Never mind, I’ll create a new wallet</message>
@@ -967,7 +967,7 @@
   <message name="IDS_BRAVE_WALLET_LEARN_ABOUT_MY_WALLET" desc="Link to an article explaining the wallet">Learn more about my new wallet</message>
   <message name="IDS_BRAVE_WALLET_DISCLOSURES_TITLE" desc="Title text for Wallet Disclosures page">Before we begin</message>
   <message name="IDS_BRAVE_WALLET_DISCLOSURES_DESCRIPTION" desc="Description text for Wallet Disclosures page">We require that you acknowledge the items below</message>
-  <message name="IDS_BRAVE_WALLET_SELF_CUSTODY_DISCLOSURE_CHECKBOX_TEXT" desc="Self-custody wallet responsibility acknowledgement text">I understand that this is a self-custody wallet, and that I am solely responsible for any associated funds, assets, or accounts, and for taking any appropriate action to secure, protect, and back up my wallet. I understand that Brave cannot access my wallet or reverse transactions on my behalf, and that my recovery phrase is the ONLY way to regain access in the event of a lost password, stolen device, or similar circumstance.</message>
+  <message name="IDS_BRAVE_WALLET_SELF_CUSTODY_DISCLOSURE_CHECKBOX_TEXT" desc="Self-custody wallet responsibility acknowledgement text">I understand that this is a self-custody wallet, and that I am solely responsible for any associated funds, assets, or accounts, and for taking any appropriate action to secure, protect, and back up my wallet. I understand that Growser cannot access my wallet or reverse transactions on my behalf, and that my recovery phrase is the ONLY way to regain access in the event of a lost password, stolen device, or similar circumstance.</message>
   <message name="IDS_BRAVE_WALLET_TERMS_OF_SERVICE_CHECKBOX_TEXT" desc="Wallet Terms of use acknowledgement text">I have read and agree to the <ph name="LINK_BEFORE">$1</ph>Terms of use<ph name="LINK_AFTER">/$1</ph>.</message>
   <message name="IDS_BRAVE_WALLET_RECOMMENDED" desc="Recommended label">Recommended</message>
   <message name="IDS_BRAVE_WALLET_TWELVE_WORDS" desc="12 word recovery phrase option">12 words</message>
@@ -1036,13 +1036,13 @@
   <message name="IDS_BRAVE_WALLET_ADD_ASSET_TOKEN_TAB_TITLE" desc="Title for token tab in add asset tabs">Token</message>
   <message name="IDS_BRAVE_WALLET_ADD_ASSET_NFT_TAB_TITLE" desc="Title for NFT tab in add asset tabs">NFT</message>
   <message name="IDS_BRAVE_WALLET_NO_TRANSACTIONS_YET" desc="Text for when zero transactions are currently availble for viewing">No transaction history</message>
-  <message name="IDS_BRAVE_WALLET_NO_TRANSACTIONS_YET_DESCRIPTION" desc="Explanation of why the transaction list is empty, and what to expect after the first transaction is available">Transactions made with your Brave Wallet will appear here.</message>
+  <message name="IDS_BRAVE_WALLET_NO_TRANSACTIONS_YET_DESCRIPTION" desc="Explanation of why the transaction list is empty, and what to expect after the first transaction is available">Transactions made with your Growser Wallet will appear here.</message>
   <message name="IDS_BRAVE_WALLET_NFT_FETCHING_ERROR" desc="Error message displayed when nft metadata is not successfully fetched">Something went wrong when fetching NFT details. Please try again later.</message>
   <message name="IDS_BRAVE_WALLET_EDIT_TOKEN" desc="Edit token form title">Edit Token</message>
   <message name="IDS_BRAVE_WALLET_FEVM_ADDRESS_TRANSLATION_TITLE" desc="Warning message title displayed when trying to send from f1 to 0x">ETH address will be translated to the Filecoin address.</message>
   <message name="IDS_BRAVE_WALLET_FEVM_ADDRESS_TRANSLATION_DESCRIPTION" desc="Warning message description displayed when trying to send from f1 to 0x"><ph name="FILECOIN_ADDRESS">$1</ph> address in the Filecoin namespace will be used for the transaction.</message>
   <message name="IDS_BRAVE_WALLET_ENTER_A_PASSWORD_TO_CONTINUE" desc="Prompt to enter a password before continuing">Enter a password to continue</message>
-  <message name="IDS_BRAVE_WALLET_ENTER_YOUR_PASSWORD_TO_START_BACKUP" desc="Password prompt description for backing up wallet">Enter your Brave Wallet password to start backing up wallet.</message>
+  <message name="IDS_BRAVE_WALLET_ENTER_YOUR_PASSWORD_TO_START_BACKUP" desc="Password prompt description for backing up wallet">Enter your Growser Wallet password to start backing up wallet.</message>
   <message name="IDS_BRAVE_SWAP" desc="Swap main title">Swap</message>
   <message name="IDS_BRAVE_SWAP_APPROVE_TOKEN" desc="Text for swap button while approving ERC20 token">Approve <ph name="TOKEN">$1</ph></message>
   <message name="IDS_BRAVE_SWAP_INSUFFICIENT_BALANCE" desc="Text for swap button when token token balance is insufficient">Insufficient <ph name="TOKEN">$1</ph> balance</message>
@@ -1070,8 +1070,8 @@
   <message name="IDS_BRAVE_SWAP_PRICE_IMPACT" desc="Swap price impact">Price impact</message>
   <message name="IDS_BRAVE_SWAP_MINIMUM_RECEIVED_AFTER_SLIPPAGE" desc="Minimum guaranteed amount user will get after the swap">Minimum received after slippage</message>
   <message name="IDS_BRAVE_SWAP_NETWORK_FEE" desc="Text indicating network fees">Network fee</message>
-  <message name="IDS_BRAVE_SWAP_BRAVE_FEE" desc="Text indicating Brave fee for swaps">Included Brave fee</message>
-  <message name="IDS_BRAVE_SWAP_FREE" desc="Text indicating free Brave fees for swaps">Free</message>
+  <message name="IDS_BRAVE_SWAP_BRAVE_FEE" desc="Text indicating Growser fee for swaps">Included Growser fee</message>
+  <message name="IDS_BRAVE_SWAP_FREE" desc="Text indicating free Growser fees for swaps">Free</message>
   <message name="IDS_BRAVE_SWAP_SWAP_AND_SEND" desc="Swap and send to a specific address in one transaction">Swap &amp; send</message>
   <message name="IDS_BRAVE_SWAP_NO_EXTRA_FEES" desc="Text indicating swap and send has no extra fees">NO extra fees!</message>
   <message name="IDS_BRAVE_SWAP_CONFIRM_ADDRESS" desc="Text to confirm that the address is correct">I confirm that the address above is correct</message>
@@ -1088,7 +1088,7 @@
   <message name="IDS_BRAVE_SWAP_EXCHANGES" desc="Exchanges to use for the swap trade">Exchanges</message>
   <message name="IDS_BRAVE_SWAP_DIRECT_ROUTE_TITLE" desc="Text indicating that swap must use direct routes in the trade">Direct route only</message>
   <message name="IDS_BRAVE_SWAP_DIRECT_ROUTE_DESCRIPTION" desc="Text description direct swap routes option">It insures only direct routing and also disables split trade trading</message>
-  <message name="IDS_BRAVE_SWAP_NETWORK_FEE_DESCRIPTION" desc="Network fee description">Brave uses the top 60 tokens for intermediate routing for performance optimization</message>
+  <message name="IDS_BRAVE_SWAP_NETWORK_FEE_DESCRIPTION" desc="Network fee description">Growser uses the top 60 tokens for intermediate routing for performance optimization</message>
   <message name="IDS_BRAVE_SWAP_COINGECKO_CHEAPER" desc="Quote rate is cheaper than CoinGecko"><ph name="VALUE">$1<ex>0.12</ex></ph>% cheaper than CoinGecko</message>
   <message name="IDS_BRAVE_SWAP_COINGECKO_WITHIN" desc="Quote rate is within small percentage of CoinGecko">Within <ph name="VALUE">$1<ex>0.12</ex></ph>% CoinGecko</message>
   <message name="IDS_BRAVE_SWAP_COINGECKO_EXPENSIVE" desc="Quote rate is more expensive than CoinGecko"><ph name="VALUE">$1<ex>12</ex></ph>% more expensive than CoinGecko</message>
@@ -1102,7 +1102,7 @@
   <message name="IDS_BRAVE_SWAP_HELP_CENTER" desc="Help center">Help Center</message>
   <message name="IDS_BRAVE_SWAP_PRIVACY_POLICY" desc="Privacy policy">Privacy Policy</message>
   <message name="IDS_BRAVE_SWAP_PRIVACY_DESCRIPTION" desc="Privacy policy description">This app uses the following third-party APIs:</message>
-  <message name="IDS_BRAVE_SWAP_V2_DISCLAIMER" desc="Swap V2 privacy policy disclaimer">Brave Swap uses <ph name="AGGREGATOR">$1<ex>0x</ex></ph> as a DEX aggregator for supported <ph name="NETWORKS">$2<ex>EVM</ex></ph> networks. <ph name="AGGREGATOR">$1<ex>0x</ex></ph> will process the <ph name="NETWORK">$3<ex>Ethereum</ex></ph> wallet address and IP address to fulfill a transaction (including getting quotes). <ph name="AGGREGATOR">$1<ex>0x</ex></ph> will ONLY use this data for the purposes of processing transactions.</message>
+  <message name="IDS_BRAVE_SWAP_V2_DISCLAIMER" desc="Swap V2 privacy policy disclaimer">Growser Swap uses <ph name="AGGREGATOR">$1<ex>0x</ex></ph> as a DEX aggregator for supported <ph name="NETWORKS">$2<ex>EVM</ex></ph> networks. <ph name="AGGREGATOR">$1<ex>0x</ex></ph> will process the <ph name="NETWORK">$3<ex>Ethereum</ex></ph> wallet address and IP address to fulfill a transaction (including getting quotes). <ph name="AGGREGATOR">$1<ex>0x</ex></ph> will ONLY use this data for the purposes of processing transactions.</message>
   <message name="IDS_BRAVE_SWAP_V2_PRIVACY" desc="Swap V2 full privacy policy link text">Click here for <ph name="AGGREGATOR">$1<ex>0x</ex></ph> Privacy Policy.</message>
   <message name="IDS_BRAVE_SWAP_CHANGE_NETWORK" desc="Swap change network dropdown">Change network</message>
   <message name="IDS_BRAVE_WALLET_ACTIVITY" desc="Wallet activity and transactions">Activity</message>
@@ -1130,13 +1130,13 @@
   <message name="IDS_BRAVE_WALLET_NFT_JUNK" desc="Junk label in NFT item">Junk</message>
   <message name="IDS_BRAVE_WALLET_NFT_MOVE_TO_SPAM" desc="Move to spam option label">Mark as junk</message>
   <message name="IDS_BRAVE_WALLET_ADD_NFT_MODAL_TITLE" desc="NFT Add NFT modal title">Add NFT</message>
-  <message name="IDS_BRAVE_WALLET_REMOVE_NFT_MODAL_HEADER" desc="Remove NFT modal header">Remove from Brave Wallet?</message>
-  <message name="IDS_BRAVE_WALLET_REMOVE_NFT_MODAL_DESCRIPTION" desc="Remove NFT modal description">NFT will be removed from Brave Wallet but will remain on the blockchain. If you remove it, then change your mind, you'll need to import it again manually.</message>
+  <message name="IDS_BRAVE_WALLET_REMOVE_NFT_MODAL_HEADER" desc="Remove NFT modal header">Remove from Growser Wallet?</message>
+  <message name="IDS_BRAVE_WALLET_REMOVE_NFT_MODAL_DESCRIPTION" desc="Remove NFT modal description">NFT will be removed from Growser Wallet but will remain on the blockchain. If you remove it, then change your mind, you'll need to import it again manually.</message>
   <message name="IDS_BRAVE_WALLET_REMOVE_NFT_MODAL_CANCEL" desc="Remove NFT modal cancel action">Cancel</message>
   <message name="IDS_BRAVE_WALLET_REMOVE_NFT_MODAL_CONFIRM" desc="Remove NFT modal confirm action">Remove</message>
   <message name="IDS_BRAVE_WALLET_EDIT_NFT_MODAL_TITLE" desc="NFT Import NFT modal title">Edit NFT</message>
   <message name="IDS_BRAVE_WALLET_ENABLE_NFT_AUTODISCOVERY_MODAL_HEADER" desc="Enable NFT auto-discovery modal header">Want your NFTs displayed automatically?</message>
-  <message name="IDS_BRAVE_WALLET_ENABLE_NFT_AUTODISCOVERY_MODAL_DESCRIPTION" desc="Enable NFT auto-discovery modal description">Brave Wallet can use a third-party service to automatically display your NFTs. Brave will share your wallet addresses with <ph name="BEFORE_UNDERLINE">$1</ph>SimpleHash<ph name="AFTER_UNDERLINE">/$1</ph> to provide this service. <ph name="BEFORE_URL">$2</ph>Learn more.<ph name="AFTER_URL">/$2</ph></message>
+  <message name="IDS_BRAVE_WALLET_ENABLE_NFT_AUTODISCOVERY_MODAL_DESCRIPTION" desc="Enable NFT auto-discovery modal description">Growser Wallet can use a third-party service to automatically display your NFTs. Growser will share your wallet addresses with <ph name="BEFORE_UNDERLINE">$1</ph>SimpleHash<ph name="AFTER_UNDERLINE">/$1</ph> to provide this service. <ph name="BEFORE_URL">$2</ph>Learn more.<ph name="AFTER_URL">/$2</ph></message>
   <message name="IDS_BRAVE_WALLET_ENABLE_NFT_AUTODISCOVERY_MODAL_CONFIRM" desc="Enable NFT auto-discovery modal confirm button text">Yes, proceed</message>
   <message name="IDS_BRAVE_WALLET_ENABLE_NFT_AUTODISCOVERY_MODAL_CANCEL" desc="Enable NFT auto-discovery modal cancel button text">No thanks, I’ll do it manually</message>
   <message name="IDS_BRAVE_WALLET_AUTO_DISCOVERY_EMPTY_STATE_HEADING" desc="NFTs tab empty state heading when auto discovery is enabled">No NFTs to display</message>
@@ -1155,7 +1155,7 @@
   <message name="IDS_BRAVE_WALLET_GAS_FEE_TOOLTIP" desc="Tooltip text for gas fee">This gas fee will replace the original.</message>
   <message name="IDS_BRAVE_WALLET_GAS_FEE_TOOLTIP_DESCRIPTION" desc="Tooltip description for gas fee">This will create a new transaction with a new gas fee to override and cancel the pending one. A cancellation can only be attempted if the transaction is still pending on the network.</message>
   <message name="IDS_BRAVE_WALLET_SPEED_PRIORITY" desc="Label for speed priority">Speed priority</message>
-  <message name="IDS_WALLET_EIP6963_PROVIDER_NAME" desc="Provider name which will be return when announce ethereum provider">Brave Wallet</message>
+  <message name="IDS_WALLET_EIP6963_PROVIDER_NAME" desc="Provider name which will be return when announce ethereum provider">Growser Wallet</message>
   <message name="IDS_BRAVE_WALLET_RECEIVE" desc="Receive asset event title">Receive</message>
   <message name="IDS_BRAVE_WALLET_FROM" desc="From address label">From</message>
   <message name="IDS_BRAVE_WALLET_UNLIMITED_ASSET_AMOUNT" desc="Spend approval for an unlimited amount of a token">Unlimited <ph name="ASSET_SYMBOL">$1<ex>USDC</ex></ph></message>
@@ -1163,18 +1163,18 @@
   <message name="IDS_BRAVE_WALLET_TOKEN_IS_VERIFIED" desc="Indicates that an asset has been verified">This token is verified</message>
   <message name="IDS_BRAVE_WALLET_TOKEN_IS_VERIFIED_BY_LISTS" desc="Indicates that an asset has been verified by multiple token list providers">This token is verified on <ph name="NUMBER_OF_LISTS">$1<ex>2</ex></ph> lists</message>
   <message name="IDS_BRAVE_WALLET_SPENDER_ADDRESS" desc="Indicates which address is spending funds">Spender: <ph name="ADDRESS">$1<ex>0x1234...abcd</ex></ph></message>
-  <message name="IDS_BRAVE_WALLET_UPHOLD" desc="Brave Rewards Uphold provider">Uphold</message>
-  <message name="IDS_BRAVE_WALLET_GEMINI" desc="Brave Rewards Gemini provider">Gemini</message>
-  <message name="IDS_BRAVE_WALLET_ZEBPAY" desc="Brave Rewards Zebpay provider">Zebpay</message>
-  <message name="IDS_BRAVE_WALLET_BITFLYER" desc="Brave Rewards bitFlyer provider">bitFlyer</message>
-  <message name="IDS_BRAVE_WALLET_REWARDS_ACCOUNT" desc="Brave Rewards provider account"><ph name="PROVIDER">$1<ex>Uphold</ex></ph> account</message>
-  <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS_TITLE" desc="Brave Rewards">Brave Rewards</message>
-  <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS_DESCRIPTION" desc="Brave Rewards token description">Brave Rewards BAT on <ph name="PROVIDER">$1<ex>Uphold</ex></ph></message>
-  <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS_LOGGED_OUT_DESCRIPTION" desc="Brave Rewards account is logged out description">You’re currently logged out of <ph name="PROVIDER">$1<ex>Uphold</ex></ph>. Please log in to view your balance.</message>
-  <message name="IDS_BRAVE_WALLET_LOG_IN" desc="Brave Rewards Log in button">Log in</message>
-  <message name="IDS_BRAVE_WALLET_VIEW_ON" desc="Brave Rewards account on provider website.">View on <ph name="PROVIDER">$1<ex>Uphold</ex></ph></message>
-  <message name="IDS_BRAVE_WALLET_REWARDS_SETTINGS" desc="Brave Rewards settings button.">Rewards settings</message>
-  <message name="IDS_BRAVE_WALLET_PLATFORMS" desc="Brave Rewards Platforms label">Platforms</message>
+  <message name="IDS_BRAVE_WALLET_UPHOLD" desc="Growser Rewards Uphold provider">Uphold</message>
+  <message name="IDS_BRAVE_WALLET_GEMINI" desc="Growser Rewards Gemini provider">Gemini</message>
+  <message name="IDS_BRAVE_WALLET_ZEBPAY" desc="Growser Rewards Zebpay provider">Zebpay</message>
+  <message name="IDS_BRAVE_WALLET_BITFLYER" desc="Growser Rewards bitFlyer provider">bitFlyer</message>
+  <message name="IDS_BRAVE_WALLET_REWARDS_ACCOUNT" desc="Growser Rewards provider account"><ph name="PROVIDER">$1<ex>Uphold</ex></ph> account</message>
+  <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS_TITLE" desc="Growser Rewards">Growser Rewards</message>
+  <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS_DESCRIPTION" desc="Growser Rewards token description">Growser Rewards BAT on <ph name="PROVIDER">$1<ex>Uphold</ex></ph></message>
+  <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS_LOGGED_OUT_DESCRIPTION" desc="Growser Rewards account is logged out description">You’re currently logged out of <ph name="PROVIDER">$1<ex>Uphold</ex></ph>. Please log in to view your balance.</message>
+  <message name="IDS_BRAVE_WALLET_LOG_IN" desc="Growser Rewards Log in button">Log in</message>
+  <message name="IDS_BRAVE_WALLET_VIEW_ON" desc="Growser Rewards account on provider website.">View on <ph name="PROVIDER">$1<ex>Uphold</ex></ph></message>
+  <message name="IDS_BRAVE_WALLET_REWARDS_SETTINGS" desc="Growser Rewards settings button.">Rewards settings</message>
+  <message name="IDS_BRAVE_WALLET_PLATFORMS" desc="Growser Rewards Platforms label">Platforms</message>
   <message name="IDS_BRAVE_WALLET_CONTINUE_WITH_X_ITEMS" desc="Continue button explaining that X number of items are selected">Continue with <ph name="HOW_MANY">$1<ex>2</ex></ph> <ph name="ITEM_NAME_MAYBE_PLURAL">$2<ex>Network(s)</ex></ph></message>
   <message name="IDS_BRAVE_WALLET_ADD_NETWORKS_ANYTIME_IN_SETTINGS" desc="Link text explaining that blockchain networks can be added from within the browser settings">You can add networks anytime in Settings.</message>
   <message name="IDS_BRAVE_WALLET_SUPPORTED_NETWORKS" desc="Title for the onboarding screen where the user is asked to select one or more supported blockchain network to use">Supported networks</message>
@@ -1209,7 +1209,7 @@
   <message name="IDS_BRAVE_WALLET_HIDE_NOT_OWNED_NF_TS" desc="Toggle label to enable or disable the display of NFTs that are not owned by any wallet account">Hide not owned NFTs</message>
   <message name="IDS_BRAVE_WALLET_GROUP_BY_COLLECTION" desc="Toggle label for grouping NFTs by collection">Group by collection</message>
   <message name="IDS_BRAVE_WALLET_ADD_CHAIN_INVALID_URL" desc="Error message for when the user enters an invalid URL for a custom chain">Invalid URL</message>
-  <message name="IDS_BRAVE_WALLET_ADD_NFT_MODAL_DESCRIPTION" desc="Description of the of the add-nft modal purpose">If you can't see an NFT automatically detected by Brave, or want to track one owned by others, you can import it manually.</message>
+  <message name="IDS_BRAVE_WALLET_ADD_NFT_MODAL_DESCRIPTION" desc="Description of the of the add-nft modal purpose">If you can't see an NFT automatically detected by Growser, or want to track one owned by others, you can import it manually.</message>
   <message name="IDS_BRAVE_WALLET_WHAT_IS_AN_NFT_CONTRACT_ADDRESS" desc="Explanation of what a contract address is for an NFT">The contract address when adding an NFT to a wallet is the unique address on the blockchain where the smart contract for the NFT collection resides. You can find the contract address from marketplace, or blockchain explorers, etc.</message>
   <message name="IDS_BRAVE_WALLET_WHAT_IS_AN_NFT_TOKEN_ID" desc="Explanation of what an NFT token ID is">The unique identifier for the specific NFT within the collection.</message>
   <message name="IDS_BRAVE_WALLET_FETCH_NFT_METADATA_ERROR" desc="Error message explaining that the NFT Metadata lookup failed">Unable to fetch NFT metadata</message>
@@ -1323,5 +1323,5 @@
   <message name="IDS_BRAVE_WALLET_PROCESS_TRANSACTION_ERROR_MESSAGE" desc="Warning alert in send screen when a UTXO transaction fails due to insufficient balance for the network fee; $1 is the token symbol">There was an error processing your transaction. In many cases, this means there isn't enough <ph name="SYMBOL">$1<ex>ADA</ex></ph> to cover the network fee. Try a smaller amount instead.</message>
   <message name="IDS_BRAVE_WALLET_GO_TO_PORTFOLIO" desc="Go to portfolio button text">Go to Portfolio</message>
   <message name="IDS_BRAVE_WALLET_ADD_TOKEN" desc="Add token button text">Add token</message>
-  <message name="IDS_BRAVE_WALLET_UTILITY_PROCESS_WALLET_UTILS_NAME" desc="The display name (in the system task manager, etc) of the service process used for running wallet utils">Brave Wallet Utility Service</message>
+  <message name="IDS_BRAVE_WALLET_UTILITY_PROCESS_WALLET_UTILS_NAME" desc="The display name (in the system task manager, etc) of the service process used for running wallet utils">Growser Wallet Utility Service</message>
 </grit-part>
