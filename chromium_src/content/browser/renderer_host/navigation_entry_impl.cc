@@ -28,7 +28,7 @@ const std::u16string& NavigationEntryImpl::GetTitleForDisplay() const {
   // "brave://host". Convert it for display.
   if (title_.empty() && !cached_display_title_.empty()) {
     static constexpr char16_t kChromePrefix[] = u"chrome://";
-    static constexpr char16_t kBravePrefix[] = u"brave://";
+    static constexpr char16_t kBravePrefix[] = u"growser://";
     if (cached_display_title_.starts_with(kChromePrefix)) {
       cached_display_title_.replace(0, std::size(kChromePrefix) - 1,
                                     kBravePrefix);

@@ -18,7 +18,7 @@ inline constexpr char kChromeUIScheme[] = "chrome";
 #endif
 
 namespace content {
-inline constexpr char kBraveUIScheme[] = "brave";
+inline constexpr char kBraveUIScheme[] = "growser";
 }
 
 #endif  // BRAVE_CHROMIUM_SRC_CONTENT_PUBLIC_COMMON_URL_CONSTANTS_H_
