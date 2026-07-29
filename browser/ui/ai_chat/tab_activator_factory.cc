@@ -9,7 +9,7 @@
 #include "brave/browser/ui/ai_chat/tab_activator.h"
 #include "brave/components/ai_chat/core/browser/tab_tracker_service.h"
 #include "chrome/browser/profiles/profile.h"
-#include "components/keyed_service/content/browser_context_dependency_manager.h"
+#include "chrome/browser/profiles/profile_selections.h"
 
 namespace ai_chat {
 
@@ -27,9 +27,8 @@ TabActivator* TabActivatorFactory::GetForBrowserContext(
 }
 
 TabActivatorFactory::TabActivatorFactory()
-    : BrowserContextKeyedServiceFactory(
-          "TabActivator",
-          BrowserContextDependencyManager::GetInstance()) {
+    : ProfileKeyedServiceFactory("TabActivator",
+                                 ProfileSelections::BuildForRegularProfile()) {
   DependsOn(TabTrackerServiceFactory::GetInstance());
 }
 
@@ -37,12 +36,6 @@ TabActivatorFactory::~TabActivatorFactory() = default;
 
 bool TabActivatorFactory::ServiceIsCreatedWithBrowserContext() const {
   return true;
-}
-
-content::BrowserContext* TabActivatorFactory::GetBrowserContextToUse(
-    content::BrowserContext* context) const {
-  return Profile::FromBrowserContext(context)->IsRegularProfile() ? context
-                                                                  : nullptr;
 }
 
 std::unique_ptr<KeyedService>

@@ -9,7 +9,7 @@
 #include <memory>
 
 #include "base/no_destructor.h"
-#include "components/keyed_service/content/browser_context_keyed_service_factory.h"
+#include "chrome/browser/profiles/profile_keyed_service_factory.h"
 
 namespace content {
 class BrowserContext;
@@ -19,15 +19,13 @@ namespace ai_chat {
 
 class TabActivator;
 
-class TabActivatorFactory : public BrowserContextKeyedServiceFactory {
+class TabActivatorFactory : public ProfileKeyedServiceFactory {
  public:
   static TabActivatorFactory* GetInstance();
   static TabActivator* GetForBrowserContext(content::BrowserContext* context);
 
  protected:
   bool ServiceIsCreatedWithBrowserContext() const override;
-  content::BrowserContext* GetBrowserContextToUse(
-      content::BrowserContext* context) const override;
 
  private:
   friend base::NoDestructor<TabActivatorFactory>;
