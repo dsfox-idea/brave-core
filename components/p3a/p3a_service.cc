@@ -93,8 +93,9 @@ P3AService::~P3AService() = default;
 
 void P3AService::RegisterPrefs(PrefRegistrySimple* registry, bool first_run) {
   MessageManager::RegisterPrefs(registry);
-  registry->RegisterBooleanPref(kP3AEnabled,
-                                !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED));
+  // growser: P3A-аналитика выключена по умолчанию (#17) — не отправляем данные
+  // и не показываем инфобар. Полное удаление функционала — backlog #21.
+  registry->RegisterBooleanPref(kP3AEnabled, false);
   // New users are shown the P3A notice via the welcome page.
   registry->RegisterBooleanPref(kP3ANoticeAcknowledged, first_run);
 

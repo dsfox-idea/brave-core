@@ -6,6 +6,8 @@
 #include "components/regional_capabilities/regional_capabilities_utils.h"
 
 #include "base/check.h"
+#include <algorithm>
+
 #include "base/check_op.h"
 #include "base/containers/fixed_flat_map.h"
 #include "base/containers/flat_map.h"
@@ -218,11 +220,23 @@ std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
   }
   DCHECK_GT(brave_engine_ids.size(), 0ul);
 
+  // growser: Yandex — поиск по умолчанию во всех регионах (#18), поэтому он
+  // должен присутствовать в списке любой страны, иначе fallback вернёт Brave.
+  std::vector<TemplateURLPrepopulateData::BravePrepopulatedEngineID> engine_ids(
+      brave_engine_ids.begin(), brave_engine_ids.end());
+  if (std::find(engine_ids.begin(), engine_ids.end(),
+                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX) ==
+      engine_ids.end()) {
+    engine_ids.insert(
+        engine_ids.begin(),
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX);
+  }
+
   // Build a vector PrepopulatedEngines from
   // TemplateURLPrepopulateData::BravePrepopulatedEngineIDs.
   std::vector<const PrepopulatedEngine*> engines =
-      GetEnginesFromEngineIDs(brave_engine_ids);
-  DCHECK(engines.size() == brave_engine_ids.size());
+      GetEnginesFromEngineIDs(engine_ids);
+  DCHECK(engines.size() == engine_ids.size());
 
   return engines;
 }
@@ -241,9 +255,10 @@ std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
 // set the default search engine back to what it was when the profile was
 // originally created. This way, a person doesn't get a new unexpected default
 // when they reset the profile; it goes back to the original value.
-TemplateURLPrepopulateData::BravePrepopulatedEngineID GetDefaultSearchEngine(
-    country_codes::CountryId country_id,
-    int version) {
+// growser: больше не вызывается — GetDefaultEngine всегда возвращает Yandex (#18).
+// Оставляем определение (версионные карты), помечаем как возможно неиспользуемое.
+[[maybe_unused]] TemplateURLPrepopulateData::BravePrepopulatedEngineID
+GetDefaultSearchEngine(country_codes::CountryId country_id, int version) {
   // LINT.IfChange
   const TemplateURLPrepopulateData::BravePrepopulatedEngineID default_v6 =
       TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE;
@@ -741,12 +756,8 @@ std::vector<const PrepopulatedEngine*> GetPrepopulatedEngines(
 TemplateURLPrepopulateData::BravePrepopulatedEngineID GetDefaultEngine(
     CountryId country_id,
     PrefService& prefs) {
-  int version = TemplateURLPrepopulateData::kBraveCurrentDataVersion;
-  if (prefs.HasPrefPath(::prefs::kBraveDefaultSearchVersion)) {
-    version = prefs.GetInteger(::prefs::kBraveDefaultSearchVersion);
-  }
-
-  return GetDefaultSearchEngine(country_id, version);
+  // growser: поиск по умолчанию — Yandex, независимо от региона и версии (#18).
+  return TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX;
 }
 
 }  // namespace regional_capabilities
