@@ -274,7 +274,8 @@ std::string GetBraveVPNPaymentsEnv(const std::string& env) {
 void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(prefs::kManagedBraveVPNDisabled, false);
   registry->RegisterDictionaryPref(prefs::kBraveVPNRootPref);
-  registry->RegisterBooleanPref(prefs::kBraveVPNShowButton, true);
+  // growser: кнопка Brave VPN в тулбаре скрыта по умолчанию (#27).
+  registry->RegisterBooleanPref(prefs::kBraveVPNShowButton, false);
 #if BUILDFLAG(IS_WIN)
   registry->RegisterBooleanPref(prefs::kBraveVPNShowNotificationDialog, true);
   registry->RegisterBooleanPref(prefs::kBraveVPNWireguardFallbackDialog, true);

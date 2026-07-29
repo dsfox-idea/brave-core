@@ -238,8 +238,14 @@ IN_PROC_BROWSER_TEST_F(BraveToolbarViewTest_VPNEnabled, VPNButtonVisibility) {
   auto* toolbar = static_cast<BraveToolbarView*>(browser_view->toolbar());
   auto* prefs = browser()->profile()->GetPrefs();
 
-  // Button is visible by default.
-  EXPECT_TRUE(prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton));
+  // growser: кнопка VPN скрыта по умолчанию (#27).
+  EXPECT_FALSE(prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton));
+  EXPECT_FALSE(toolbar->brave_vpn_button()->GetVisible());
+  EXPECT_EQ(browser_view->GetAnchorViewForBraveVPNPanel(),
+            static_cast<views::View*>(toolbar->app_menu_button()));
+
+  // Show button.
+  prefs->SetBoolean(brave_vpn::prefs::kBraveVPNShowButton, true);
   EXPECT_TRUE(toolbar->brave_vpn_button()->GetVisible());
   EXPECT_EQ(browser_view->GetAnchorViewForBraveVPNPanel(),
             toolbar->brave_vpn_button());
@@ -249,7 +255,8 @@ IN_PROC_BROWSER_TEST_F(BraveToolbarViewTest_VPNEnabled, VPNButtonVisibility) {
   EXPECT_FALSE(toolbar->brave_vpn_button()->GetVisible());
   EXPECT_EQ(browser_view->GetAnchorViewForBraveVPNPanel(),
             static_cast<views::View*>(toolbar->app_menu_button()));
-  // Show button.
+
+  // Show again, then block by policy.
   prefs->SetBoolean(brave_vpn::prefs::kBraveVPNShowButton, true);
   EXPECT_TRUE(toolbar->brave_vpn_button()->GetVisible());
   BlockVPNByPolicy(true);
