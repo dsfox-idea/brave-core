@@ -5,6 +5,8 @@
 
 #include "brave/components/brave_vpn/browser/v2/credential_store.h"
 
+#include <optional>
+#include <string>
 #include <utility>
 
 #include "base/json/values_util.h"
@@ -19,6 +21,8 @@
 
 namespace brave_vpn::v2 {
 namespace {
+using Credential = CredentialStore::Credential;
+
 constexpr char kTestCredential[] = "test-credential";
 constexpr char kTestSkusCredential[] = "test-skus-credential";
 }  // namespace
@@ -46,75 +50,93 @@ TEST_F(CredentialStoreTest, EmptyByDefault) {
   EXPECT_FALSE(store_.HasAnyCredential());
   EXPECT_FALSE(store_.HasValidSubscriberCredential());
   EXPECT_FALSE(store_.HasValidSkusCredential());
-  EXPECT_TRUE(store_.GetSubscriberCredential().empty());
-  EXPECT_TRUE(store_.GetSkusCredential().empty());
-  EXPECT_FALSE(store_.GetExpirationTime().has_value());
+  EXPECT_FALSE(store_.GetValidSubscriberCredential().has_value());
+  EXPECT_FALSE(store_.GetValidSkusCredential().has_value());
   EXPECT_FALSE(store_.IsExchangeRetried());
 }
 
 TEST_F(CredentialStoreTest, SubscriberCredentialRoundTrip) {
-  store_.SetSubscriberCredential(kTestCredential, Future());
+  store_.SetSubscriberCredential(
+      {.value = kTestCredential, .expiration = Future()});
 
   EXPECT_TRUE(store_.HasAnyCredential());
   EXPECT_TRUE(store_.HasValidSubscriberCredential());
-  EXPECT_EQ(store_.GetSubscriberCredential(), kTestCredential);
-  ASSERT_TRUE(store_.GetExpirationTime().has_value());
-  EXPECT_EQ(*store_.GetExpirationTime(), Future());
+  const std::optional<Credential> credential =
+      store_.GetValidSubscriberCredential();
+  ASSERT_TRUE(credential.has_value());
+  EXPECT_EQ(credential->value, kTestCredential);
+  EXPECT_EQ(credential->expiration, Future());
 }
 
 TEST_F(CredentialStoreTest, ExpiredSubscriberCredentialIsInvalid) {
-  store_.SetSubscriberCredential(kTestCredential, Past());
+  store_.SetSubscriberCredential(
+      {.value = kTestCredential, .expiration = Past()});
 
   EXPECT_TRUE(store_.HasAnyCredential());               // present but...
   EXPECT_FALSE(store_.HasValidSubscriberCredential());  // ...expired.
-  EXPECT_TRUE(store_.GetSubscriberCredential().empty());
-  EXPECT_FALSE(store_.GetExpirationTime().has_value());
+  EXPECT_FALSE(store_.GetValidSubscriberCredential().has_value());
 }
 
 TEST_F(CredentialStoreTest, SkusCredentialRoundTripAndLastExpiryStamp) {
-  store_.SetSkusCredential(kTestSkusCredential, Future());
+  store_.SetSkusCredential(
+      {.value = kTestSkusCredential, .expiration = Future()});
 
   EXPECT_TRUE(store_.HasValidSkusCredential());
-  EXPECT_EQ(store_.GetSkusCredential(), kTestSkusCredential);
+  const std::optional<Credential> credential = store_.GetValidSkusCredential();
+  ASSERT_TRUE(credential.has_value());
+  EXPECT_EQ(credential->value, kTestSkusCredential);
   EXPECT_EQ(prefs_.GetTime(prefs::kBraveVPNLastCredentialExpiry), Future());
 }
 
-TEST_F(CredentialStoreTest, ExpirationTimeRequiresValidCredential) {
-  ASSERT_FALSE(store_.GetExpirationTime().has_value());
+// A valid credential is returned as a bundle carrying its expiration; an empty
+// slot yields nullopt for both credential kinds.
+TEST_F(CredentialStoreTest, ValidCredentialCarriesExpiration) {
+  EXPECT_FALSE(store_.GetValidSkusCredential().has_value());
+  EXPECT_FALSE(store_.GetValidSubscriberCredential().has_value());
 
-  store_.SetSkusCredential(kTestSkusCredential, Future());
-  EXPECT_TRUE(store_.HasValidSkusCredential());
-  EXPECT_TRUE(store_.GetExpirationTime().has_value());
+  store_.SetSkusCredential(
+      {.value = kTestSkusCredential, .expiration = Future()});
+  const std::optional<Credential> skus = store_.GetValidSkusCredential();
+  ASSERT_TRUE(skus.has_value());
+  EXPECT_EQ(skus->expiration, Future());
 
-  store_.SetSubscriberCredential(kTestCredential, Future());
-  EXPECT_TRUE(store_.HasValidSubscriberCredential());
-  EXPECT_TRUE(store_.GetExpirationTime().has_value());
+  store_.SetSubscriberCredential(
+      {.value = kTestCredential, .expiration = Future()});
+  const std::optional<Credential> subscriber =
+      store_.GetValidSubscriberCredential();
+  ASSERT_TRUE(subscriber.has_value());
+  EXPECT_EQ(subscriber->expiration, Future());
 }
 
 TEST_F(CredentialStoreTest, SettingSubscriberDropsSkus) {
-  store_.SetSkusCredential(kTestSkusCredential, Future());
+  store_.SetSkusCredential(
+      {.value = kTestSkusCredential, .expiration = Future()});
   ASSERT_TRUE(store_.HasValidSkusCredential());
 
-  store_.SetSubscriberCredential(kTestCredential, Future());
+  store_.SetSubscriberCredential(
+      {.value = kTestCredential, .expiration = Future()});
 
   EXPECT_TRUE(store_.HasValidSubscriberCredential());
   EXPECT_FALSE(store_.HasValidSkusCredential());
-  EXPECT_TRUE(store_.GetSkusCredential().empty());
+  EXPECT_FALSE(store_.GetValidSkusCredential().has_value());
 }
 
 TEST_F(CredentialStoreTest, SettingSkusDropsSubscriber) {
-  store_.SetSubscriberCredential(kTestCredential, Future());
+  store_.SetSubscriberCredential(
+      {.value = kTestCredential, .expiration = Future()});
   ASSERT_TRUE(store_.HasValidSubscriberCredential());
 
-  store_.SetSkusCredential(kTestSkusCredential, Future());
+  store_.SetSkusCredential(
+      {.value = kTestSkusCredential, .expiration = Future()});
 
   EXPECT_TRUE(store_.HasValidSkusCredential());
   EXPECT_FALSE(store_.HasValidSubscriberCredential());
-  EXPECT_TRUE(store_.GetSubscriberCredential().empty());
+  EXPECT_FALSE(store_.GetValidSubscriberCredential().has_value());
 }
 
 TEST_F(CredentialStoreTest, ClearEmptiesTheSlot) {
-  store_.SetSubscriberCredential(kTestCredential, Future());
+  store_.SetSubscriberCredential(
+      {.value = kTestCredential, .expiration = Future()});
   ASSERT_TRUE(store_.HasAnyCredential());
 
   store_.Clear();
@@ -149,7 +171,10 @@ TEST_F(CredentialStoreTest, ReadsPreexistingV1Credential) {
   prefs_.SetDict(prefs::kBraveVPNSubscriberCredential, std::move(v1_dict));
 
   EXPECT_TRUE(store_.HasValidSubscriberCredential());
-  EXPECT_EQ(store_.GetSubscriberCredential(), kTestCredential);
+  const std::optional<Credential> credential =
+      store_.GetValidSubscriberCredential();
+  ASSERT_TRUE(credential.has_value());
+  EXPECT_EQ(credential->value, kTestCredential);
   // The stale persisted retry key does not feed the in-memory guard.
   EXPECT_FALSE(store_.IsExchangeRetried());
 }

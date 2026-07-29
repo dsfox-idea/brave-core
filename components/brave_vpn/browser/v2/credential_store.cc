@@ -5,6 +5,7 @@
 
 #include "brave/components/brave_vpn/browser/v2/credential_store.h"
 
+#include <optional>
 #include <string>
 #include <string_view>
 #include <utility>
@@ -46,10 +47,21 @@ bool IsCredentialValid(const base::DictValue& dict,
   return expiration.has_value() && *expiration >= base::Time::Now();
 }
 
-std::string GetCredential(const base::DictValue& dict,
-                          std::string_view credential_key) {
-  const std::string* credential = dict.FindString(credential_key);
-  return credential ? *credential : std::string();
+// Reads the keyed credential and the shared expiration from the slot as one
+// bundle, or nullopt if the credential is not valid. IsCredentialValid()
+// verifies - on this same dict - that the credential string and a parseable,
+// future expiration are both present, so the dereferences below cannot fail.
+std::optional<CredentialStore::Credential> GetValidCredential(
+    const base::DictValue& dict,
+    std::string_view credential_key) {
+  if (!IsCredentialValid(dict, credential_key)) {
+    return std::nullopt;
+  }
+  return CredentialStore::Credential{
+      .value = *dict.FindString(credential_key),
+      .expiration =
+          *base::ValueToTime(dict.Find(kSubscriberCredentialExpirationKey)),
+  };
 }
 
 }  // namespace
@@ -65,20 +77,18 @@ bool CredentialStore::HasValidSubscriberCredential() const {
       kSubscriberCredentialKey);
 }
 
-std::string CredentialStore::GetSubscriberCredential() const {
-  if (!HasValidSubscriberCredential()) {
-    return std::string();
-  }
-  return GetCredential(
+std::optional<CredentialStore::Credential>
+CredentialStore::GetValidSubscriberCredential() const {
+  return GetValidCredential(
       local_prefs_->GetDict(prefs::kBraveVPNSubscriberCredential),
       kSubscriberCredentialKey);
 }
 
-void CredentialStore::SetSubscriberCredential(const std::string& credential,
-                                              base::Time expiration) {
+void CredentialStore::SetSubscriberCredential(const Credential& credential) {
   base::DictValue dict;
-  dict.Set(kSubscriberCredentialKey, credential);
-  dict.Set(kSubscriberCredentialExpirationKey, base::TimeToValue(expiration));
+  dict.Set(kSubscriberCredentialKey, credential.value);
+  dict.Set(kSubscriberCredentialExpirationKey,
+           base::TimeToValue(credential.expiration));
   local_prefs_->SetDict(prefs::kBraveVPNSubscriberCredential, std::move(dict));
 }
 
@@ -88,40 +98,25 @@ bool CredentialStore::HasValidSkusCredential() const {
       kSkusCredentialKey);
 }
 
-std::string CredentialStore::GetSkusCredential() const {
-  if (!HasValidSkusCredential()) {
-    return std::string();
-  }
-  return GetCredential(
+std::optional<CredentialStore::Credential>
+CredentialStore::GetValidSkusCredential() const {
+  return GetValidCredential(
       local_prefs_->GetDict(prefs::kBraveVPNSubscriberCredential),
       kSkusCredentialKey);
 }
 
-void CredentialStore::SetSkusCredential(const std::string& credential,
-                                        base::Time expiration) {
+void CredentialStore::SetSkusCredential(const Credential& credential) {
   base::DictValue dict;
-  dict.Set(kSkusCredentialKey, credential);
-  dict.Set(kSubscriberCredentialExpirationKey, base::TimeToValue(expiration));
+  dict.Set(kSkusCredentialKey, credential.value);
+  dict.Set(kSubscriberCredentialExpirationKey,
+           base::TimeToValue(credential.expiration));
   local_prefs_->SetDict(prefs::kBraveVPNSubscriberCredential, std::move(dict));
-  local_prefs_->SetTime(prefs::kBraveVPNLastCredentialExpiry, expiration);
+  local_prefs_->SetTime(prefs::kBraveVPNLastCredentialExpiry,
+                        credential.expiration);
 }
 
 bool CredentialStore::HasAnyCredential() const {
   return !local_prefs_->GetDict(prefs::kBraveVPNSubscriberCredential).empty();
-}
-
-std::optional<base::Time> CredentialStore::GetExpirationTime() const {
-  if (!HasValidSkusCredential() && !HasValidSubscriberCredential()) {
-    return std::nullopt;
-  }
-  const base::DictValue& dict =
-      local_prefs_->GetDict(prefs::kBraveVPNSubscriberCredential);
-  const base::Value* expiration_value =
-      dict.Find(kSubscriberCredentialExpirationKey);
-  if (!expiration_value) {
-    return std::nullopt;
-  }
-  return base::ValueToTime(expiration_value);
 }
 
 void CredentialStore::Clear() {
