@@ -184,7 +184,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
   //
   // This has a narrow scoper scope than content::HasWebUIScheme(url) which also
   // allows both `chrome-untrusted` and `chrome-devtools`.
-  DCHECK(!url.SchemeIs("brave"));
+  DCHECK(!url.SchemeIs(content::kBraveUIScheme));
   if (!url.SchemeIs(content::kChromeUIScheme)) {
     return nullptr;
   }
