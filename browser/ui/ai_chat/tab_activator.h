@@ -7,23 +7,21 @@
 #define BRAVE_BROWSER_UI_AI_CHAT_TAB_ACTIVATOR_H_
 
 #include "base/memory/raw_ptr.h"
+#include "brave/components/ai_chat/core/browser/tab_tracker_service.h"
 #include "components/keyed_service/core/keyed_service.h"
 
 class Profile;
 
 namespace ai_chat {
 
-class TabTrackerService;
-
-// Installs an activator callback into the profile's TabTrackerService so that
-// Leo can switch the user to a tab by id. The activator resolves the id with
-// `tabs::TabHandle` and asks that tab's TabStripModel to activate it, ignoring
-// tabs outside `profile`.
+// Acts as the profile's TabTrackerService delegate so that Leo can switch the
+// user to a tab by id. Resolves the id with `tabs::TabHandle` and asks that
+// tab's TabStripModel to activate it, ignoring tabs outside `profile`.
 //
 // Lives in brave/browser/ui/ai_chat (not brave/browser/ai_chat) so the
 // activator can use chrome/browser/ui's BrowserList / TabStripModel without a
 // GN dependency cycle.
-class TabActivator : public KeyedService {
+class TabActivator : public KeyedService, public TabTrackerService::Delegate {
  public:
   TabActivator(Profile* profile, TabTrackerService* tab_tracker);
   ~TabActivator() override;
@@ -32,7 +30,8 @@ class TabActivator : public KeyedService {
   TabActivator& operator=(const TabActivator&) = delete;
 
  private:
-  bool ActivateTab(int32_t tab_id);
+  // TabTrackerService::Delegate:
+  bool ActivateTab(int32_t tab_id) override;
 
   raw_ptr<Profile> profile_;
   raw_ptr<TabTrackerService> tab_tracker_;

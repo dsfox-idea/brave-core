@@ -8,7 +8,7 @@
 
 #include <vector>
 
-#include "base/functional/callback.h"
+#include "base/memory/raw_ptr.h"
 #include "brave/components/ai_chat/core/common/mojom/tab_tracker.mojom.h"
 #include "components/keyed_service/core/keyed_service.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
@@ -30,17 +30,23 @@ class TabTrackerService : public KeyedService, public mojom::TabTrackerService {
 
   void Bind(mojo::PendingReceiver<mojom::TabTrackerService> receiver);
 
-  // Callback that activates the tab matching `tab_id`. Implementations live
-  // in code with chrome/browser/ui access (e.g. iterating BrowserList).
-  // Returns true if a tab was activated.
-  using ActivateTabCallback = base::RepeatingCallback<bool(int32_t tab_id)>;
+  // Bridge to tab activation, implemented in code with chrome/browser/ui
+  // access.
+  class Delegate {
+   public:
+    virtual ~Delegate() = default;
 
-  // Sets the bridge used by ActivateTab(). Called once at startup by the code
-  // owning the UI-side implementation.
-  void SetActivator(ActivateTabCallback activator);
+    // Activates the tab matching `tab_id`. Returns true if a tab was
+    // activated.
+    virtual bool ActivateTab(int32_t tab_id) = 0;
+  };
 
-  // Activates the tab matching `tab_id` via the configured activator. Returns
-  // false if no activator is installed or the tab cannot be found.
+  // Sets the delegate used by ActivateTab(). The delegate must clear itself
+  // by passing nullptr before it is destroyed.
+  void SetDelegate(Delegate* delegate);
+
+  // Activates the tab matching `tab_id` via the delegate. Returns false if no
+  // delegate is installed or the tab cannot be found.
   bool ActivateTab(int32_t tab_id);
 
   // mojom::TabTrackerService
@@ -57,7 +63,7 @@ class TabTrackerService : public KeyedService, public mojom::TabTrackerService {
   mojo::RemoteSet<mojom::TabDataObserver> observers_;
 
   std::vector<mojom::TabDataPtr> tabs_;
-  ActivateTabCallback activator_;
+  raw_ptr<Delegate> delegate_ = nullptr;
 };
 
 }  // namespace ai_chat

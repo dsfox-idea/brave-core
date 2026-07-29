@@ -5,7 +5,6 @@
 
 #include "brave/browser/ui/ai_chat/tab_activator.h"
 
-#include "base/functional/bind.h"
 #include "brave/components/ai_chat/core/browser/tab_tracker_service.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
@@ -18,20 +17,15 @@ namespace ai_chat {
 TabActivator::TabActivator(Profile* profile, TabTrackerService* tab_tracker)
     : profile_(profile), tab_tracker_(tab_tracker) {
   if (tab_tracker_) {
-    // The activator callback captures `this` via Unretained; we explicitly
-    // clear it from the destructor below. We avoid base::WeakPtr here because
-    // WeakPtr-bound callbacks may not return a value.
-    tab_tracker_->SetActivator(base::BindRepeating(&TabActivator::ActivateTab,
-                                                   base::Unretained(this)));
+    tab_tracker_->SetDelegate(this);
   }
 }
 
 TabActivator::~TabActivator() {
   // KeyedService destruction ordering guarantees `tab_tracker_` outlives us
-  // (we depend on it), but its stored activator callback would dangle, so
-  // clear it.
+  // (we depend on it), so clear ourselves as its delegate.
   if (tab_tracker_) {
-    tab_tracker_->SetActivator({});
+    tab_tracker_->SetDelegate(nullptr);
   }
 }
 

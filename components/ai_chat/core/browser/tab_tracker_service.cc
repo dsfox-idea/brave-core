@@ -47,15 +47,12 @@ void TabTrackerService::UpdateTab(int32_t tab_id, mojom::TabDataPtr tab) {
   NotifyObservers();
 }
 
-void TabTrackerService::SetActivator(ActivateTabCallback activator) {
-  activator_ = std::move(activator);
+void TabTrackerService::SetDelegate(Delegate* delegate) {
+  delegate_ = delegate;
 }
 
 bool TabTrackerService::ActivateTab(int32_t tab_id) {
-  if (!activator_) {
-    return false;
-  }
-  return activator_.Run(tab_id);
+  return delegate_ && delegate_->ActivateTab(tab_id);
 }
 
 void TabTrackerService::AddObserver(
