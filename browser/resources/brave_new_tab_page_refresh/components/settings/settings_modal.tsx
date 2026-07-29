@@ -42,7 +42,6 @@ export function SettingsModal(props: Props) {
   const panelBodyRef = React.useRef<HTMLDivElement>(null)
   const searchFeatureEnabled = useSearchState((s) => s.searchFeatureEnabled)
   const aiChatInputEnabled = useNewTabState((s) => s.aiChatInputEnabled)
-  const newsFeatureEnabled = useNewTabState((s) => s.newsFeatureEnabled)
 
   const [currentView, setCurrentView] = React.useState<SettingsView>(
     props.initialView || 'background',
@@ -65,8 +64,12 @@ export function SettingsModal(props: Props) {
     switch (view) {
       case 'search':
         return searchFeatureEnabled
+      // growser: секции «Growser News» и «Карты» (виджеты) убраны из настроек
+      // NTP (#29) — это точки входа в удаляемые фичи. Выпил — backlog #30/#31.
       case 'news':
-        return newsFeatureEnabled
+        return false
+      case 'widgets':
+        return false
       default:
         return true
     }
