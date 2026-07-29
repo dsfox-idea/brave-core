@@ -23,22 +23,12 @@ TabSearchUI::TabSearchUI(content::WebUI* web_ui)
   Profile* profile = Profile::FromWebUI(web_ui);
   base::DictValue update_data;
 
-#if BUILDFLAG(ENABLE_AI_CHAT)
-  update_data.Set(
-      "tabOrganizationEnabled",
-      ai_chat::AIChatServiceFactory::GetForBrowserContext(profile) &&
-          ai_chat::features::IsTabOrganizationEnabled() &&
-          profile->GetPrefs()->GetBoolean(
-              ai_chat::prefs::kBraveAIChatTabOrganizationEnabled));
-
-  // Show FRE if user doesn't explicitly enable/disble the feature pref.
-  update_data.Set("showTabOrganizationFRE",
-                  !profile->GetPrefs()->HasPrefPath(
-                      ai_chat::prefs::kBraveAIChatTabOrganizationEnabled));
-#else
+  // growser: во всплывашке Tab Search скрываем вкладку «Организовать»
+  // (AI Tab Focus) — оставляем только «Поиск». Когда tabOrganizationEnabled
+  // == false, фронтенд (brave_tab_search_app) не рендерит cr-tabs вовсе.
+  // Полное удаление функционала — отдельной задачей (backlog).
   update_data.Set("tabOrganizationEnabled", false);
   update_data.Set("showTabOrganizationFRE", false);
-#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
   update_data.Set("tabSearchTabName",
                   l10n_util::GetStringUTF16(IDS_BRAVE_TAB_SEARCH_TAB_NAME));

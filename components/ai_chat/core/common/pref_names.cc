@@ -36,7 +36,8 @@ void RegisterProfilePrefs(PrefRegistrySimple* registry) {
     registry->RegisterIntegerPref(kBraveChatSubscriptionLinkStatusAndroid, 0);
 #endif
     registry->RegisterBooleanPref(kBraveAIChatContextMenuEnabled, true);
-    registry->RegisterBooleanPref(kBraveAIChatShowToolbarButton, true);
+    // growser: кнопка Leo в тулбаре скрыта по умолчанию (#16).
+    registry->RegisterBooleanPref(kBraveAIChatShowToolbarButton, false);
     registry->RegisterBooleanPref(kBraveAIChatToolbarButtonOpensFullPage,
                                   false);
     registry->RegisterBooleanPref(kBraveAIChatTabOrganizationEnabled, true);
