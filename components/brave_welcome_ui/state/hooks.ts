@@ -86,11 +86,10 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
     // Brave Origin: skip HelpWDP (Web Discovery) but still show HelpImprove
     const nextAfterImport = ViewType.HelpImprove
     // <else>
-    // Skip HelpWDP only if web discovery is managed
-    const isWebDiscoveryEnabledManaged =
-        loadTimeData.getBoolean('isWebDiscoveryEnabledManaged')
-    const nextAfterImport = isWebDiscoveryEnabledManaged ?
-        ViewType.HelpImprove : ViewType.HelpWDP
+    // growser: экран WDP (Web Discovery Project) убран из онбординга (#24) —
+    // поиск у нас Yandex, продвигать «Growser Поиск» незачем. Всегда идём на
+    // HelpImprove, минуя HelpWDP. Полный выпил WDP — backlog #25.
+    const nextAfterImport = ViewType.HelpImprove
     // </if>
 
     return {
