@@ -16,9 +16,9 @@ namespace ai_chat {
 class TabTrackerService;
 
 // Installs an activator callback into the profile's TabTrackerService so that
-// Leo can switch the user to a tab by id. The activator iterates the browsers
-// belonging to `profile` and asks the matching TabStripModel to activate the
-// tab.
+// Leo can switch the user to a tab by id. The activator resolves the id with
+// `tabs::TabHandle` and asks that tab's TabStripModel to activate it, ignoring
+// tabs outside `profile`.
 //
 // Lives in brave/browser/ui/ai_chat (not brave/browser/ai_chat) so the
 // activator can use chrome/browser/ui's BrowserList / TabStripModel without a
