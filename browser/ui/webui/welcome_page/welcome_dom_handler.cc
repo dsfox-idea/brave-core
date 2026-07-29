@@ -184,7 +184,7 @@ void WelcomeDOMHandler::HandleOpenSettingsPage(const base::ListValue& args) {
                       ->GetBrowserForMigrationOnly();
   if (browser) {
     content::OpenURLParams open_params(
-        GURL("brave://settings/privacy"), content::Referrer(),
+        GURL("chrome://settings/privacy"), content::Referrer(),
         WindowOpenDisposition::NEW_BACKGROUND_TAB,
         ui::PAGE_TRANSITION_AUTO_TOPLEVEL, false);
     browser->OpenURL(open_params, /*navigation_handle_callback=*/{});

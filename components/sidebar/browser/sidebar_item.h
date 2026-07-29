@@ -55,15 +55,10 @@ struct SidebarItem {
 #if BUILDFLAG(ENABLE_PLAYLIST)
       + 1  // kPlaylist
 #endif
-#if BUILDFLAG(ENABLE_AI_CHAT)
-      + 1  // kChatUI
-#endif
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
       + 1  // kBraveNews
 #endif
-#if BUILDFLAG(ENABLE_BRAVE_TALK)
-      + 1  // kBraveTalk
-#endif
+      // growser: kChatUI (Leo) и kBraveTalk убраны из дефолтной боковой панели.
       ;
 
   static SidebarItem Create(const std::u16string& title,
