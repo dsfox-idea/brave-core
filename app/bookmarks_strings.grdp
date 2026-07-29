@@ -271,13 +271,13 @@
   <message name="IDS_BOOKMARK_DICE_PROMO_SYNC_MESSAGE" desc="Text of the sync promo displayed at the bottom of the bookmark bubble asking the user to enable sync.">
     To get your bookmarks on all your devices, turn on sync.
   </message>
-  <message name="IDS_BOOKMARK_VERIFY_PROMO_SUBTITLE" desc="This is the body text of a confirmation message and means that the bookmark is in an account-pending storage. In other words, it's waiting to be uploaded to the user's Brave sync chain. It appears when the user was signed in to Brave with account storage for bookmarks enabled but their sign-in credentials have expired; now, they need to sign back in to Brave. The string is after the 'Bookmark added' string. If the user wants to save this data to their Brave sync chain, they can click the 'Verify it's you' button at the bottom of this message. The tone should be motivating.">
+  <message name="IDS_BOOKMARK_VERIFY_PROMO_SUBTITLE" desc="This is the body text of a confirmation message and means that the bookmark is in an account-pending storage. In other words, it's waiting to be uploaded to the user's Growser sync chain. It appears when the user was signed in to Growser with account storage for bookmarks enabled but their sign-in credentials have expired; now, they need to sign back in to Growser. The string is after the 'Bookmark added' string. If the user wants to save this data to their Growser sync chain, they can click the 'Verify it's you' button at the bottom of this message. The tone should be motivating.">
     To get this bookmark on all your devices, verify it's you
   </message>
   <!-- End of Bookmarks Promo strings for Desktop Identity Consistency. -->
 
   <!-- UNO Promo strings for bookmarks -->
-  <message name="IDS_BOOKMARK_PROMO_TITLE" desc="This is the body text of a confirmation message and means that the bookmark was either saved locally, or to the user's pending account storage if their sign-in credentials have expired. It appears after a bookmark save if the user is not signed in to Brave or their sign-in credentials have expired. If the user wants to save this data to their Brave sync chain, they can click the button at the bottom of this message. The tone should be motivating.">
+  <message name="IDS_BOOKMARK_PROMO_TITLE" desc="This is the body text of a confirmation message and means that the bookmark was either saved locally, or to the user's pending account storage if their sign-in credentials have expired. It appears after a bookmark save if the user is not signed in to Growser or their sign-in credentials have expired. If the user wants to save this data to their Growser sync chain, they can click the button at the bottom of this message. The tone should be motivating.">
     Use bookmarks across devices
   </message>
   <!-- End of UNO Promo strings for bookmarks -->
@@ -595,16 +595,16 @@
 
   <!-- Begin of screen reader message strings. -->
   <message name="IDS_BOOKMARK_SCREEN_READER_CREATED" is_accessibility_with_no_ui="true" desc="Screen reader message that is read when a bookmark is created.">
-    '<ph name="BOOKMARK_TITLE">$1<ex>Brave</ex></ph>' bookmark created.
+    '<ph name="BOOKMARK_TITLE">$1<ex>Growser</ex></ph>' bookmark created.
   </message>
   <message name="IDS_BOOKMARK_SCREEN_READER_FOLDER_CREATED" is_accessibility_with_no_ui="true" desc="Screen reader message that is read when a bookmark folder is created.">
-    '<ph name="BOOKMARK_TITLE">$1<ex>Brave</ex></ph>' bookmark folder created.
+    '<ph name="BOOKMARK_TITLE">$1<ex>Growser</ex></ph>' bookmark folder created.
   </message>
   <message name="IDS_BOOKMARK_SCREEN_READER_REORDERED" desc="Screen reader message that is read when a bookmark is reordered.">
-    '<ph name="BOOKMARK_TITLE">$1<ex>Brave</ex></ph>' moved.
+    '<ph name="BOOKMARK_TITLE">$1<ex>Growser</ex></ph>' moved.
   </message>
   <message name="IDS_BOOKMARK_SCREEN_READER_MOVED" desc="Screen reader message that is read when a bookmark is moved into a different folder.">
-    '<ph name="BOOKMARK_TITLE">$1<ex>Brave</ex></ph>' moved into '<ph name="NEW_FOLDER_TITLE">$2<ex>Search engines</ex></ph>'.
+    '<ph name="BOOKMARK_TITLE">$1<ex>Growser</ex></ph>' moved into '<ph name="NEW_FOLDER_TITLE">$2<ex>Search engines</ex></ph>'.
   </message>
   <!-- End of screen reader message strings. -->
 

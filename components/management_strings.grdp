@@ -65,22 +65,22 @@
     <!-- Browser managed status section -->
     <if expr="not is_chromeos">
       <if expr="_google_chrome">
-        <message name="IDS_MANAGEMENT_BROWSER_NOTICE" desc="Message shown when the (Brave-branded) Brave browser is managed, it indicates what the administrator can do on the browser.">
-        Your administrator can make changes to your profile and browser remotely, analyze information about the browser through reporting, and perform other necessary tasks. Activity on this device may also be managed outside of Brave.  <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+        <message name="IDS_MANAGEMENT_BROWSER_NOTICE" desc="Message shown when the (Growser-branded) Growser browser is managed, it indicates what the administrator can do on the browser.">
+        Your administrator can make changes to your profile and browser remotely, analyze information about the browser through reporting, and perform other necessary tasks. Activity on this device may also be managed outside of Growser.  <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
         </message>
-        <message name="IDS_MANAGEMENT_NOT_MANAGED_NOTICE" desc="Message indicating that the (Brave-branded) Brave browser is not managed">
-        This browser is not managed by a company or other organization. Activity on this device may be managed outside of Brave. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+        <message name="IDS_MANAGEMENT_NOT_MANAGED_NOTICE" desc="Message indicating that the (Growser-branded) Growser browser is not managed">
+        This browser is not managed by a company or other organization. Activity on this device may be managed outside of Growser. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
         </message>
       </if>
       <if expr="not _google_chrome">
-        <message name="IDS_MANAGEMENT_BROWSER_NOTICE" desc="Message shown when the (non-Brave-branded) Brave browser is managed, it indicates what the administrator can do on the browser.">
-        Your administrator can make changes to your profile and browser remotely, analyze information about the browser through reporting, and perform other necessary tasks. Activity on this device may also be managed outside of Brave. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+        <message name="IDS_MANAGEMENT_BROWSER_NOTICE" desc="Message shown when the (non-Growser-branded) Growser browser is managed, it indicates what the administrator can do on the browser.">
+        Your administrator can make changes to your profile and browser remotely, analyze information about the browser through reporting, and perform other necessary tasks. Activity on this device may also be managed outside of Growser. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
         </message>
-        <message name="IDS_MANAGEMENT_NOT_MANAGED_NOTICE" desc="Message indicating that the (non-Brave-branded) Brave browser is not managed">
-        This browser is not managed by a company or other organization. Activity on this device may be managed outside of Brave. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+        <message name="IDS_MANAGEMENT_NOT_MANAGED_NOTICE" desc="Message indicating that the (non-Growser-branded) Growser browser is not managed">
+        This browser is not managed by a company or other organization. Activity on this device may be managed outside of Growser. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
         </message>
       </if>
-      <message name="IDS_MANAGEMENT_PROFILE_NOTICE" desc="Message shown when one profile from the Brave browser is managed, it indicates what the administrator can do for that profile.">
+      <message name="IDS_MANAGEMENT_PROFILE_NOTICE" desc="Message shown when one profile from the Growser browser is managed, it indicates what the administrator can do for that profile.">
         The profile you’re signed in to is a managed profile. Your administrator can make changes to your profile settings remotely, analyze information about the browser through reporting, and perform other necessary tasks. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1" aria-label="$2"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
       </message>
       <message name="IDS_MANAGEMENT_LEARN_MORE_ACCCESSIBILITY_TEXT" desc="Accessibility text for a 'Learn more' link that links to a help article about how the browser is managed.">
@@ -215,8 +215,8 @@
     <message name="IDS_MANAGEMENT_REPORT_LOGIN_LOGOUT" desc="Message stating that administrators can see device Login and Logout events.">
       Device access actions such as logins (including failed login reasons), logouts, locks, and unlocks
     </message>
-    <message name="IDS_MANAGEMENT_REPORT_CRD_SESSIONS" desc="Message stating that administrators can see Brave Remote Desktop events.">
-      Brave Remote Desktop history, including timestamps, hosts and client session ids
+    <message name="IDS_MANAGEMENT_REPORT_CRD_SESSIONS" desc="Message stating that administrators can see Growser Remote Desktop events.">
+      Growser Remote Desktop history, including timestamps, hosts and client session ids
     </message>
     <message name="IDS_MANAGEMENT_REPORT_ALL_WEBSITE_INFO_AND_ACTIVITY" desc="Message stating that administrators can see what websites are visited and when.">
       Which websites are visited and when.
@@ -265,8 +265,8 @@
     <message name="IDS_MANAGEMENT_DESK_SYNC_COOKIES_NOTICE" desc="This string is used to mention browser cookies in the list of data which is synced by the Desk sync feature. It also clarifies that cookies are responsible for the signed-in state on websites.">
       Website cookies (signed-in state on recently visited websites will be preserved)
     </message>
-    <message name="IDS_MANAGEMENT_DESK_SYNC_OPT_OUT" desc="Message explaining that the user can opt out from the effects of the Desk sync feature in Brave Sync settings.">
-      You can opt out of this policy in <ph name="BEGIN_LINK">&lt;a href='chrome://settings/syncSetup'&gt;</ph>Brave Sync settings<ph name="END_LINK">&lt;/a&gt;</ph>.
+    <message name="IDS_MANAGEMENT_DESK_SYNC_OPT_OUT" desc="Message explaining that the user can opt out from the effects of the Desk sync feature in Growser Sync settings.">
+      You can opt out of this policy in <ph name="BEGIN_LINK">&lt;a href='chrome://settings/syncSetup'&gt;</ph>Growser Sync settings<ph name="END_LINK">&lt;/a&gt;</ph>.
     </message>
     <message name="IDS_MANAGEMENT_DESK_SYNC_LEARN_MORE" desc="Learn more link for the section about the Desk sync feature to provide additional informaiton">
       <ph name="BEGIN_LINK">&lt;a target="_blank" href="https://support.google.com/chrome/a?p=office_cookies_sync" &gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
@@ -333,7 +333,7 @@
       Your device name and network address
     </message>
     <message name="IDS_MANAGEMENT_EXTENSION_REPORT_USERNAME" desc="Message explaining that an extension currently reports the user's username" formatter_data="android_java">
-      Your device username and Brave username
+      Your device username and Growser username
     </message>
     <message name="IDS_MANAGEMENT_EXTENSION_REPORT_VERSION" desc="Message explaining that an extension currently reports the user's browser and machine version" formatter_data="android_java">
       Version information about your device and browser
@@ -357,9 +357,9 @@
       A limited list of URLs of pages you visit where legacy technology events are occuring
     </message>
 
-    <!-- Strings related to Brave Enterprise Connectors -->
-    <message name="IDS_MANAGEMENT_THREAT_PROTECTION_MORE" desc="Label of a button to view more details about Brave Enterprise Connectors" formatter_data="android_java">
-      More about Brave Enterprise Connectors
+    <!-- Strings related to Growser Enterprise Connectors -->
+    <message name="IDS_MANAGEMENT_THREAT_PROTECTION_MORE" desc="Label of a button to view more details about Growser Enterprise Connectors" formatter_data="android_java">
+      More about Growser Enterprise Connectors
     </message>
     <message name="IDS_MANAGEMENT_FILE_ATTACHED_EVENT" desc="Event for the file attachment scanning feature.">
       File is attached
@@ -395,7 +395,7 @@
       Applications authorized by your administrator can capture all screens attached to your device. This information can be processed locally or uploaded to your organization’s servers.
     </message>
     <message name="IDS_MANAGEMENT_EXTENSION_TELEMETRY_VISIBLE_DATA" desc="Description of the visible data for the extension telemetry feature.">
-      When extensions are added to Brave, relevant data about these extensions is sent to third parties for analysis and may be visible to your administrator. The data includes information about the extensions such as name, install time, source of install as well as activity associated with these extensions (like changing tabs, contacting websites, or accessing cookies). This data is collected for extensions installed from the Web Store as well as off-store extensions.
+      When extensions are added to Growser, relevant data about these extensions is sent to third parties for analysis and may be visible to your administrator. The data includes information about the extensions such as name, install time, source of install as well as activity associated with these extensions (like changing tabs, contacting websites, or accessing cookies). This data is collected for extensions installed from the Web Store as well as off-store extensions.
     </message>
   </if>
 
@@ -457,7 +457,7 @@
   </if>
   <if expr="is_ios">
     <message name="IDS_IOS_MANAGEMENT_UI_DESC" desc="The descriptive text on chrome://management page when the browser is managed.">
-      Your administrator can change your browser setup remotely. Activity on this device may also be managed outside of Brave.
+      Your administrator can change your browser setup remotely. Activity on this device may also be managed outside of Growser.
     </message>
     <message name="IDS_IOS_MANAGEMENT_UI_LEARN_MORE_LINK" desc="The clickable text on chrome://management.">
       Learn more
@@ -470,22 +470,22 @@
     </message>
   </if>
 
-  <!-- Strings related to Brave Enterprise Device Signals Sharing -->
+  <!-- Strings related to Growser Enterprise Device Signals Sharing -->
   <if expr="is_win or is_linux or is_macosx or is_android">
     <message name="IDS_MANAGEMENT_DEVICE_SIGNALS_DISCLOSURE" desc="Disclosure message explaining that device signals can be shared.">
       Information about your browser, OS, device, installed software, files, and IP addresses
     </message>
   </if>
 
-  <!-- Strings related to Brave Enterprise Connectors -->
-  <message name="IDS_MANAGEMENT_THREAT_PROTECTION" desc="Title of the Brave Enterprise Connectors section of the page" formatter_data="android_java">
-    Brave Enterprise Connectors
+  <!-- Strings related to Growser Enterprise Connectors -->
+  <message name="IDS_MANAGEMENT_THREAT_PROTECTION" desc="Title of the Growser Enterprise Connectors section of the page" formatter_data="android_java">
+    Growser Enterprise Connectors
   </message>
-  <message name="IDS_MANAGEMENT_THREAT_PROTECTION_DESCRIPTION" desc="Description of the Brave Enterprise Connectors section of the page" formatter_data="android_java">
-    Your administrator has turned on Brave Enterprise Connectors on your browser. These connectors have access to some of your data.
+  <message name="IDS_MANAGEMENT_THREAT_PROTECTION_DESCRIPTION" desc="Description of the Growser Enterprise Connectors section of the page" formatter_data="android_java">
+    Your administrator has turned on Growser Enterprise Connectors on your browser. These connectors have access to some of your data.
   </message>
-  <message name="IDS_MANAGEMENT_THREAT_PROTECTION_DESCRIPTION_BY" desc="Description of the Brave Enterprise Connectors section of the page">
-    <ph name="ENROLLMENT_DOMAIN">$1<ex>example.com</ex></ph> has turned on Brave Enterprise Connectors on your browser. These connectors have access to some of your data.
+  <message name="IDS_MANAGEMENT_THREAT_PROTECTION_DESCRIPTION_BY" desc="Description of the Growser Enterprise Connectors section of the page">
+    <ph name="ENROLLMENT_DOMAIN">$1<ex>example.com</ex></ph> has turned on Growser Enterprise Connectors on your browser. These connectors have access to some of your data.
   </message>
   <message name="IDS_MANAGEMENT_CONNECTORS_EVENT" desc="Title of a column of the Connectors table showing the event that triggers a Connector" formatter_data="android_java">
     Event
@@ -509,7 +509,7 @@
     URLs of pages you visit are sent to Google Cloud or third parties for analysis, and may be visible to your administrator. For example, they might be scanned to detect unsafe websites or filter websites based on rules set by the administrator.
   </message>
   <message name="IDS_MANAGEMENT_ENTERPRISE_REPORTING_VISIBLE_DATA" desc="Description of the visible data for the Connectors reporting feature" formatter_data="android_java">
-    When security events are flagged by Brave, relevant data about the events is sent to your administrator. This can include URLs of pages you visit in Brave, URLs of pages you copied data from, file names or metadata, IP addresses, browser or tab crashes, and the username that you use to sign in to web based applications, your device and Brave.
+    When security events are flagged by Growser, relevant data about the events is sent to your administrator. This can include URLs of pages you visit in Growser, URLs of pages you copied data from, file names or metadata, IP addresses, browser or tab crashes, and the username that you use to sign in to web based applications, your device and Growser.
   </message>
 
   <!-- Management toolbar button dialog view -->
@@ -527,7 +527,7 @@
   </message>
 
   <!-- Managed profile required interstitial -->
-  <message name="IDS_MANAGED_PROFILE_INTERSTITIAL_TAB_TITLE" desc="The title of the tab of the interstitial that tells the user that their organization requires them to sign in to Brave with their managed account in order to access it.">
+  <message name="IDS_MANAGED_PROFILE_INTERSTITIAL_TAB_TITLE" desc="The title of the tab of the interstitial that tells the user that their organization requires them to sign in to Growser with their managed account in order to access it.">
     Profile management
   </message>
 
@@ -536,10 +536,10 @@
     Easily manage how your employees browse the web
   </message>
   <message name="IDS_MANAGEMENT_BANNER_PROMOTION_DESC" desc="The description of the promotion banner on chrome://management page.">
-    Brave Enterprise Core lets you manage browser policies, apps, and extensions from the cloud
+    Growser Enterprise Core lets you manage browser policies, apps, and extensions from the cloud
   </message>
   <message name="IDS_MANAGEMENT_BANNER_PROMOTION_BTN" desc="The text of the button to redirect to the guide page from the promotion banner on chrome://management page.">
-    Try Brave Enterprise Core
+    Try Growser Enterprise Core
   </message>
   <message name="IDS_MANAGEMENT_BANNER_ARIA_LABEL" desc="The aria-label of the promotion banner on chrome://management page.">
     Promotion banner

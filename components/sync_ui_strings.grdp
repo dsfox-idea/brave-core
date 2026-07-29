@@ -3,7 +3,7 @@
 <grit-part>
   <if expr="not is_android">
     <message name="IDS_SYNC_BASIC_ENCRYPTION_DATA" desc="Text of the radio that when selected enables basic encryption.">
-      Encrypt synced passwords with your Brave sync chain
+      Encrypt synced passwords with your Growser sync chain
     </message>
     <message name="IDS_SYNC_DATATYPE_AUTOFILL" desc="Form Autofill items, one of the data types that we allow syncing.">
       Addresses and More
@@ -49,7 +49,7 @@
     </message>
   </if>
   <!-- TODO(crbug.com/355237153): Make this string more i18n friendly. -->
-    <message name="IDS_BULK_UPLOAD_SUBTITLE" desc="The text appears as a note in a confirmation dialog where the user can choose to save some data to their Brave sync chain. When data is saved to the Brave sync chain, it's backed up safely and is available on any device where they're signed in to Brave. This line give the number of sites associated with the local data and two examples of such sites.">
+    <message name="IDS_BULK_UPLOAD_SUBTITLE" desc="The text appears as a note in a confirmation dialog where the user can choose to save some data to their Growser sync chain. When data is saved to the Growser sync chain, it's backed up safely and is available on any device where they're signed in to Growser. This line give the number of sites associated with the local data and two examples of such sites.">
     {count, plural,
       =1 {{website_1}}
       =2 {{website_1}, {website_2}}
@@ -63,25 +63,25 @@
       other {# bookmarks}
     }
     </message>
-    <message name="IDS_SYNC_DEVICE_NAME_COMPUTER_FORMAT" desc="Format for device name when it is a computer, combining manufacturer and 'Computer' (e.g. 'Brave Computer').">
-      <ph name="MANUFACTURER">$1<ex>Brave</ex></ph> Computer
+    <message name="IDS_SYNC_DEVICE_NAME_COMPUTER_FORMAT" desc="Format for device name when it is a computer, combining manufacturer and 'Computer' (e.g. 'Growser Computer').">
+      <ph name="MANUFACTURER">$1<ex>Growser</ex></ph> Computer
     </message>
-    <message name="IDS_SYNC_DEVICE_NAME_PHONE_FORMAT" desc="Format for device name when it is a phone, combining manufacturer and 'Phone' (e.g. 'Brave Phone').">
-      <ph name="MANUFACTURER">$1<ex>Brave</ex></ph> Phone
+    <message name="IDS_SYNC_DEVICE_NAME_PHONE_FORMAT" desc="Format for device name when it is a phone, combining manufacturer and 'Phone' (e.g. 'Growser Phone').">
+      <ph name="MANUFACTURER">$1<ex>Growser</ex></ph> Phone
     </message>
-    <message name="IDS_SYNC_DEVICE_NAME_TABLET_FORMAT" desc="Format for device name when it is a tablet, combining manufacturer and 'Tablet' (e.g. 'Brave Tablet').">
-      <ph name="MANUFACTURER">$1<ex>Brave</ex></ph> Tablet
+    <message name="IDS_SYNC_DEVICE_NAME_TABLET_FORMAT" desc="Format for device name when it is a tablet, combining manufacturer and 'Tablet' (e.g. 'Growser Tablet').">
+      <ph name="MANUFACTURER">$1<ex>Growser</ex></ph> Tablet
     </message>
-    <message name="IDS_SYNC_DEVICE_NAME_DEVICE_FORMAT" desc="Format for device name when it is an unknown device, combining manufacturer and 'Device' (e.g. 'Brave Device').">
-      <ph name="MANUFACTURER">$1<ex>Brave</ex></ph> Device
+    <message name="IDS_SYNC_DEVICE_NAME_DEVICE_FORMAT" desc="Format for device name when it is an unknown device, combining manufacturer and 'Device' (e.g. 'Growser Device').">
+      <ph name="MANUFACTURER">$1<ex>Growser</ex></ph> Device
     </message>
-    <message name="IDS_SYNC_DEVICE_NAME_DESKTOP_FORMAT" desc="Format for device name when it is a desktop computer, combining manufacturer and 'Desktop' (e.g. 'Brave Desktop').">
-      <ph name="MANUFACTURER">$1<ex>Brave</ex></ph> Desktop
+    <message name="IDS_SYNC_DEVICE_NAME_DESKTOP_FORMAT" desc="Format for device name when it is a desktop computer, combining manufacturer and 'Desktop' (e.g. 'Growser Desktop').">
+      <ph name="MANUFACTURER">$1<ex>Growser</ex></ph> Desktop
     </message>
-    <message name="IDS_SYNC_DEVICE_NAME_LAPTOP_FORMAT" desc="Format for device name when it is a laptop computer, combining manufacturer and 'Laptop' (e.g. 'Brave Laptop').">
-      <ph name="MANUFACTURER">$1<ex>Brave</ex></ph> Laptop
+    <message name="IDS_SYNC_DEVICE_NAME_LAPTOP_FORMAT" desc="Format for device name when it is a laptop computer, combining manufacturer and 'Laptop' (e.g. 'Growser Laptop').">
+      <ph name="MANUFACTURER">$1<ex>Growser</ex></ph> Laptop
     </message>
-    <message name="IDS_SYNC_DEVICE_NAME_WITH_MODEL_FORMAT" desc="Format for device name with model, combining the preferred device name and the model (e.g. 'Brave Phone Pixel 2').">
-      <ph name="DEVICE_NAME">$1<ex>Brave Phone</ex></ph> <ph name="MODEL">$2<ex>Pixel 2</ex></ph>
+    <message name="IDS_SYNC_DEVICE_NAME_WITH_MODEL_FORMAT" desc="Format for device name with model, combining the preferred device name and the model (e.g. 'Growser Phone Pixel 2').">
+      <ph name="DEVICE_NAME">$1<ex>Growser Phone</ex></ph> <ph name="MODEL">$2<ex>Pixel 2</ex></ph>
     </message>
 </grit-part>

@@ -57,7 +57,7 @@
     Repair
   </message>
   <message name="IDS_EXTENSIONS_MOVE_TO_ACCOUNT_ICON_TOOLTIP" desc="The tooltip displayed when the user hovers the button to move the extension to their account.">
-    Save in your Brave sync chain
+    Save in your Growser sync chain
   </message>
   <message name="IDS_EXTENSIONS_VIEW_IFRAME" desc="Text that signifies that the extension view is an iframe.">
     (iframe)
@@ -260,8 +260,8 @@
   <message name="IDS_EXTENSIONS_ITEM_ALLOW_USER_SCRIPTS" desc="The text next to the checkbox to enable an extension to run user scripts.">
     Allow User Scripts
   </message>
-  <message name="IDS_EXTENSIONS_ALLOW_USER_SCRIPTS_WARNING" desc="Warns the user that the extension will be able to run code not review by Brave. Displayed in extensions management UI after an extension is selected to allow these scripts.">
-    The extension will be able to run code which has not been reviewed by Brave. It may be unsafe and you should only enable this if you know what you are doing.
+  <message name="IDS_EXTENSIONS_ALLOW_USER_SCRIPTS_WARNING" desc="Warns the user that the extension will be able to run code not review by Growser. Displayed in extensions management UI after an extension is selected to allow these scripts.">
+    The extension will be able to run code which has not been reviewed by Growser. It may be unsafe and you should only enable this if you know what you are doing.
   </message>
   <message name="IDS_EXTENSIONS_ITEM_DEPENDENCIES" desc="The label above a list of any extensions that depend on this extension.">
     The following extensions depend on this extension:
@@ -308,7 +308,7 @@
   <message name="IDS_EXTENSIONS_ITEM_EXTENSION_WEBSITE" desc="Label for button to go to the website the extension developer specified.">
     Open extension website
   </message>
-  <message name="IDS_EXTENSIONS_ITEM_CHROME_WEB_STORE" desc="Label for button to visit the Brave web store.">
+  <message name="IDS_EXTENSIONS_ITEM_CHROME_WEB_STORE" desc="Label for button to visit the Growser web store.">
     View in Web Store
   </message>
   <message name="IDS_EXTENSIONS_VIEW_IN_DEVTOOLS" desc="Label for a button that opens DevTools for a specific error context">
@@ -503,17 +503,17 @@
   <message name="IDS_EXTENSIONS_EDIT_SHORTCUT_BUTTON_LABEL" desc="The label for a button to edit the shortcut.">
     Edit shortcut <ph name="SHORTCUT">$1</ph> for <ph name="EXTENSION_NAME">$2</ph>
   </message>
-  <message name="IDS_EXTENSIONS_SET_SHORTCUT_IN_SYSTEM_SETTINGS" desc="The label to indicate that shortcuts are managed in system settings instead of within Brave.">
+  <message name="IDS_EXTENSIONS_SET_SHORTCUT_IN_SYSTEM_SETTINGS" desc="The label to indicate that shortcuts are managed in system settings instead of within Growser.">
     Set in system settings
   </message>
   <message name="IDS_EXTENSIONS_SHORTCUT_SCOPE_LABEL" desc="The label for the dropdown menu that lets the user choose the scope of an extension command (within chrome or global).">
     Scope of <ph name="SHORTCUT">$1</ph> for <ph name="EXTENSION_NAME">$2</ph>
   </message>
-  <message name="IDS_EXTENSIONS_SHORTCUT_SCOPE_GLOBAL" desc="The label to indicate that a shortcut will be triggerable globally (including outside of the Brave application).">
+  <message name="IDS_EXTENSIONS_SHORTCUT_SCOPE_GLOBAL" desc="The label to indicate that a shortcut will be triggerable globally (including outside of the Growser application).">
     Global
   </message>
   <message name="IDS_EXTENSIONS_APPS_TITLE" desc="The text displayed in the sidebar to go to the apps section of the page.">
-    Brave Apps
+    Growser Apps
   </message>
   <message name="IDS_EXTENSIONS_REMOVE" desc="The generic label for a button to remove an entry.">
     Remove
@@ -661,10 +661,10 @@
     Find alternative
   </message>
   <message name="IDS_EXTENSIONS_MV2_DEPRECATION_PANEL_ACTION_MENU_BUTTON_LABEL" desc="The (accessible) label for the button whichs opens an extension's action menu.">
-    More options for <ph name="EXTENSION_NAME">$1<ex>Brave Translate</ex></ph>
+    More options for <ph name="EXTENSION_NAME">$1<ex>Growser Translate</ex></ph>
   </message>
   <message name="IDS_EXTENSIONS_MV2_DEPRECATION_PANEL_FIND_ALTERNATIVE_BUTTON_ACC_LABEL" desc="The (accessible) label for the button to find an alternative extension.">
-    Find alternative for  <ph name="EXTENSION_NAME">$1<ex>Brave Translate</ex></ph>
+    Find alternative for  <ph name="EXTENSION_NAME">$1<ex>Growser Translate</ex></ph>
   </message>
   <message name="IDS_EXTENSIONS_MV2_DEPRECATION_UNSUPPORTED_EXTENSION_OFF_TEXT" desc="The text that informs the user the extension was turned off because it's no longer supported.">
     This extension was turned off because it is no longer supported
@@ -723,16 +723,16 @@
     Supercharge your browser with extensions and themes
   </message>
   <message name="IDS_EXTENSIONS_ZERO_STATE_CHIPS_IPH_DESCRIPTION" desc="An one line description for the extensions zero state in-product-help promo.">
-    Extensions are add-ons for Brave that can help you do more
+    Extensions are add-ons for Growser that can help you do more
   </message>
   <message name="IDS_EXTENSIONS_ZERO_STATE_CHIPS_WITH_LINK_IPH_LINK_LABEL" desc="A label of extensions links to chrome web store home page.">
     Extensions
   </message>
   <message name="IDS_EXTENSIONS_ZERO_STATE_CHIPS_WITH_LINK_IPH_DESCRIPTION" desc="An one line description for the extensions zero state in-product-help promo with links to chrome web store home page.">
-    are add-ons for Brave that can help you do more
+    are add-ons for Growser that can help you do more
   </message>
   <message name="IDS_EXTENSIONS_ZERO_STATE_PLAIN_LINK_IPH_DESCRIPTION" desc="An one line description for the extensions zero state in-product-help promo.">
-    Extensions are add-ons to Brave that can help you
+    Extensions are add-ons to Growser that can help you
   </message>
   <message name="IDS_EXTENSIONS_ZERO_STATE_IPH_SHOPPING_CATEGORY_LABEL" desc="Label for the button that opens the Web Store shopping category page.">
     Find coupons

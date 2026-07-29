@@ -27,7 +27,7 @@
     Tab sent from <ph name="DEVICE_NAME">$1<ex>Jane's iPhone</ex></ph>
   </message>
   <message name="IDS_SEND_TAB_PUSH_NOTIFICATION_BODY" desc="Body text of the iOS send tab to self push notification.">
-    <ph name="SITE_TITLE">$1<ex>Brave - The Chromium Projects</ex></ph> on <ph name="SITE_DOMAIN_NAME">$2<ex>www.chromium.org</ex></ph>
+    <ph name="SITE_TITLE">$1<ex>Growser - The Chromium Projects</ex></ph> on <ph name="SITE_DOMAIN_NAME">$2<ex>www.chromium.org</ex></ph>
   </message>
   <message name="IDS_SEND_TAB_PUSH_NOTIFICATION_PLACEHOLDER_TITLE" desc="Title of the iOS send tab to self push notification when payload decryption fails.">
     Tab from Your Other Device
@@ -51,16 +51,16 @@
     Switch to tab
   </message>
   <message name="IDS_SEND_TAB_TO_SELF_POST_SEND_SUCCESS_TOAST" desc="Text for a toast indicating that the tab was successfully sent to another device.">
-    Sent to Brave on your <ph name="DEVICE_NAME">$1<ex>iPhone</ex></ph>.
+    Sent to Growser on your <ph name="DEVICE_NAME">$1<ex>iPhone</ex></ph>.
   </message>
   <message name="IDS_SEND_TAB_TO_SELF_POST_SEND_SUCCESS_TOAST_ANDROID" desc="Text for a toast indicating that the tab was successfully sent to another device." formatter_data="android_java">
-    Sent to Brave on your <ph name="DEVICE_NAME">%1$s<ex>iPhone</ex></ph>.
+    Sent to Growser on your <ph name="DEVICE_NAME">%1$s<ex>iPhone</ex></ph>.
   </message>
   <message name="IDS_SEND_TAB_TO_SELF_POST_SEND_THROTTLED_TOAST" desc="Text for a toast indicating that the tab was already sent to another device recently.">
-    Already sent to Brave on your <ph name="DEVICE_NAME">$1<ex>iPhone</ex></ph>
+    Already sent to Growser on your <ph name="DEVICE_NAME">$1<ex>iPhone</ex></ph>
   </message>
   <message name="IDS_SEND_TAB_TO_SELF_POST_SEND_THROTTLED_TOAST_ANDROID" desc="Text for a toast indicating that the tab was already sent to another device recently." formatter_data="android_java">
-    Already sent to Brave on your <ph name="DEVICE_NAME">%1$s<ex>iPhone</ex></ph>
+    Already sent to Growser on your <ph name="DEVICE_NAME">%1$s<ex>iPhone</ex></ph>
   </message>
   <message name="IDS_SEND_TAB_TO_SELF_POST_SEND_NO_INTERNET_TOAST" desc="Text for a toast indicating that the tab could not be sent because of no internet connection." formatter_data="android_java">
     Something went wrong. Check your internet connection and try again.

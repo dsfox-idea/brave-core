@@ -9,16 +9,16 @@
   </message>
 
   <if expr="not is_android">
-    <message name="IDS_BLOCKED_ADS_PROMPT_TITLE" desc="Title of the prompt shown to users in the omnibox or infobar when Brave has blocked ads on the site because the site tends to show intrusive ads. The title will stand alone next to an icon so there is no need for a period." formatter_data="android_java">
+    <message name="IDS_BLOCKED_ADS_PROMPT_TITLE" desc="Title of the prompt shown to users in the omnibox or infobar when Growser has blocked ads on the site because the site tends to show intrusive ads. The title will stand alone next to an icon so there is no need for a period." formatter_data="android_java">
       Ads blocked
     </message>
   </if>
 
   <if expr="is_android">
-    <message name="IDS_BLOCKED_ADS_INFOBAR_MESSAGE" desc="The mini infobar message shown to users on Android when Brave has blocked ads on the site because the site tends to show intrusive ads. Will be presented as a sentence, next to a Details link to expand the infobar.">
+    <message name="IDS_BLOCKED_ADS_INFOBAR_MESSAGE" desc="The mini infobar message shown to users on Android when Growser has blocked ads on the site because the site tends to show intrusive ads. Will be presented as a sentence, next to a Details link to expand the infobar.">
       Ads blocked.
     </message>
-    <message name="IDS_BLOCKED_ADS_MESSAGE_PRIMARY_TEXT" desc="The primary message text shown to users on Android when Brave has blocked ads on the site because the site tends to show intrusive ads. Will be presented next to a clickable gear icon.">
+    <message name="IDS_BLOCKED_ADS_MESSAGE_PRIMARY_TEXT" desc="The primary message text shown to users on Android when Growser has blocked ads on the site because the site tends to show intrusive ads. Will be presented next to a clickable gear icon.">
       Ads blocked
     </message>
     <message name="IDS_BLOCKED_ADS_DIALOG_TITLE" desc="The title of the Ads Blocked dialog shown to users upon acceptance of the Ads Blocked message." formatter_data="android_java">

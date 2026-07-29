@@ -35,7 +35,7 @@
 
   <if expr="not is_ios">
     <message name="IDS_MANAGEMENT_EXTENSION_TELEMETRY_VISIBLE_DATA" desc="Description of the visible data for the extension telemetry feature.">
-      When extensions are added to Brave, relevant data about these extensions is sent to third parties for analysis and may be visible to your administrator. The data includes information about the extensions such as name, install time, source of install as well as activity associated with these extensions (like changing tabs, contacting websites, or accessing cookies). This data is collected for extensions installed from the Web Store as well as off-store extensions.
+      When extensions are added to Growser, relevant data about these extensions is sent to third parties for analysis and may be visible to your administrator. The data includes information about the extensions such as name, install time, source of install as well as activity associated with these extensions (like changing tabs, contacting websites, or accessing cookies). This data is collected for extensions installed from the Web Store as well as off-store extensions.
     </message>
   </if>
 
