@@ -88,7 +88,8 @@ std::string GetBraveSearchProviderSyncGUID(Profile* profile) {
       regional_capabilities::RegionalCapabilitiesServiceFactory::GetForProfile(
           profile)
           ->GetRegionalPrepopulatedEngines(),
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE);
+      // growser: приватный поиск по умолчанию — Yandex (#26).
+      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX);
   DCHECK(data);
   return data->sync_guid;
 }
@@ -157,9 +158,9 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
       service->GetDefaultSearchProvider()->prepopulate_id();
   const int initial_private_provider_id =
       incognito_service->GetDefaultSearchProvider()->prepopulate_id();
-  // Check Brave Search is default provider for private window.
+  // growser: Yandex — поиск по умолчанию для приватного окна (#26).
   EXPECT_EQ(static_cast<int>(
-                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE),
+                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX),
             initial_private_provider_id);
 
   // Check changing normal provider doesn't affect private provider.
@@ -460,11 +461,10 @@ IN_PROC_BROWSER_TEST_F(ExtensionBrowserTest,
   UnloadExtension(extension->id());
   EXPECT_EQ(default_provider, url_service->GetDefaultSearchProvider());
 
-  // Check Brave Search is back to as a default provider for private window
-  // after unloading extension.
+  // growser: Yandex — снова дефолт приватного окна после выгрузки расширения (#26).
   current_incognito_dse = incognito_url_service->GetDefaultSearchProvider();
   EXPECT_EQ(static_cast<int>(
-                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE),
+                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX),
             current_incognito_dse->prepopulate_id());
   EXPECT_EQ(TemplateURL::NORMAL, current_incognito_dse->type());
 }
