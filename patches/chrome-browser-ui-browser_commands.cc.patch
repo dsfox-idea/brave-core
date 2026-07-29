@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/browser_commands.cc b/chrome/browser/ui/browser_commands.cc
-index 6157b951bdd962b41e6b7b57bfea1e8c24056657..35722203e12958069ad601d9553762c8e16fc201 100644
+index d6e1f1f85df55b8ed5fbcc838419e8d879a9c0ca..8843b52ff613d3b35dc5d43a878596c68cec9d86 100644
 --- a/chrome/browser/ui/browser_commands.cc
 +++ b/chrome/browser/ui/browser_commands.cc
 @@ -1067,7 +1067,7 @@ void Reload(BrowserWindowInterface* browser,
@@ -19,7 +19,7 @@ index 6157b951bdd962b41e6b7b57bfea1e8c24056657..35722203e12958069ad601d9553762c8
    if (!toast_controller) {
      CloseSelectedTabAndRecordTabCountMetric(browser);
      return;
-@@ -1671,7 +1672,7 @@ void NewSplitTab(BrowserWindowInterface* browser,
+@@ -1680,7 +1681,7 @@ void NewSplitTab(BrowserWindowInterface* browser,
    // the regular NTP which renders special content when in Incognito.
    const GURL new_tab_url = !browser->GetProfile()->IsIncognitoProfile() &&
                                     tab_strip_model->count() > 1

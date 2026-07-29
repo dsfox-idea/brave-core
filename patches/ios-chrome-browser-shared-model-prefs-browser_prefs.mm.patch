@@ -1,8 +1,8 @@
 diff --git a/ios/chrome/browser/shared/model/prefs/browser_prefs.mm b/ios/chrome/browser/shared/model/prefs/browser_prefs.mm
-index 612548b6ac7886b3be55d27b141cc9fb3c5a1ca0..81f2c64a0d6d2db489d6e32bc2def5023fe46fc0 100644
+index cc141ad91c7eb33e9ce3a8d7306533640c6ee8a2..7d6134d7aa8e060be63352ff56b27982609818ce 100644
 --- a/ios/chrome/browser/shared/model/prefs/browser_prefs.mm
 +++ b/ios/chrome/browser/shared/model/prefs/browser_prefs.mm
-@@ -508,6 +508,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
+@@ -502,6 +502,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
    registry->RegisterBooleanPref(kMetricsConsentRestructureFeatureState, false);
    registry->RegisterTimePref(kObsoleteManagementPlatformLastLogTime,
                               base::Time());
@@ -10,7 +10,7 @@ index 612548b6ac7886b3be55d27b141cc9fb3c5a1ca0..81f2c64a0d6d2db489d6e32bc2def502
  }
  
  void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
-@@ -992,6 +993,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
+@@ -981,6 +982,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
    // Deprecated 07/2026.
    registry->RegisterTimePref(kObsoleteManagementProfileLastLogTime,
                               base::Time());
@@ -18,7 +18,7 @@ index 612548b6ac7886b3be55d27b141cc9fb3c5a1ca0..81f2c64a0d6d2db489d6e32bc2def502
  }
  
  // This method should be periodically pruned of year+ old migrations.
-@@ -1023,6 +1025,7 @@ void MigrateObsoleteLocalStatePrefs(PrefService* prefs) {
+@@ -1012,6 +1014,7 @@ void MigrateObsoleteLocalStatePrefs(PrefService* prefs) {
  
    // Added 07/2026.
    prefs->ClearPref(kObsoleteManagementPlatformLastLogTime);
@@ -26,7 +26,7 @@ index 612548b6ac7886b3be55d27b141cc9fb3c5a1ca0..81f2c64a0d6d2db489d6e32bc2def502
  }
  
  // This method should be periodically pruned of year+ old migrations.
-@@ -1099,6 +1102,7 @@ void MigrateObsoleteProfilePrefs(PrefService* prefs) {
+@@ -1083,6 +1086,7 @@ void MigrateObsoleteProfilePrefs(PrefService* prefs) {
  
    // Added 07/2026.
    prefs->ClearPref(kObsoleteManagementProfileLastLogTime);

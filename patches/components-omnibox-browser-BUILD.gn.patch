@@ -1,5 +1,5 @@
 diff --git a/components/omnibox/browser/BUILD.gn b/components/omnibox/browser/BUILD.gn
-index 4c465fc31694809e670e47034fe0c92e2ea43670..2c8cecc53dc401e344501f9fe00e0f89d99a918f 100644
+index 3ea56d3d95d0d38e9a0f45a0ffa9014706d793c1..4f68bbad9a61cfcf4c78336d852779dcbbed26fa 100644
 --- a/components/omnibox/browser/BUILD.gn
 +++ b/components/omnibox/browser/BUILD.gn
 @@ -520,6 +520,9 @@ static_library("browser") {
@@ -12,7 +12,7 @@ index 4c465fc31694809e670e47034fe0c92e2ea43670..2c8cecc53dc401e344501f9fe00e0f89
  }
  
  source_set("pref_names") {
-@@ -1103,6 +1106,7 @@ fuzzer_test("search_suggestion_parser_fuzzer") {
+@@ -1104,6 +1107,7 @@ fuzzer_test("search_suggestion_parser_fuzzer") {
  }
  
  mojom("mojo_bindings") {
