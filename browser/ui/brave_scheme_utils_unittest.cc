@@ -10,11 +10,11 @@
 TEST(BraveSchemeUtilsTest, ReplaceChromeToBraveScheme) {
   std::u16string url_string = u"chrome://settings";
   EXPECT_TRUE(brave_utils::ReplaceChromeToBraveScheme(url_string));
-  EXPECT_EQ(url_string, u"brave://settings");
+  EXPECT_EQ(url_string, u"growser://settings");
 
   url_string = u"chrome://flags";
   EXPECT_TRUE(brave_utils::ReplaceChromeToBraveScheme(url_string));
-  EXPECT_EQ(url_string, u"brave://flags");
+  EXPECT_EQ(url_string, u"growser://flags");
 
   url_string = u"https://search.brave.com";
   EXPECT_FALSE(brave_utils::ReplaceChromeToBraveScheme(url_string));
