@@ -95,13 +95,17 @@ function getPageVisibility () {
     privacy: alwaysTrueProxy,
     // custom properties
     braveSync: !loadTimeData.getBoolean('isSyncDisabled'),
+    // growser: разделы Web3/Wallet и Leo скрыты из настроек (#16) — как в
+    // guest-mode выше. Прячем на уровне видимости страниц (меню + роуты),
+    // C++-гейты не трогаем (их тесты остаются зелёными). Полное удаление из
+    // билда — #4/#6.
     // <if expr="enable_brave_wallet">
-    braveWallet: loadTimeData.getBoolean('isBraveWalletAllowed'),
+    braveWallet: false,
     // </if>
     // <if expr="enable_ai_chat">
-    leoAssistant: loadTimeData.getBoolean('isLeoAssistantAllowed'),
-    leoPersonalization: loadTimeData.getBoolean('isLeoAssistantAllowed'),
-    leoModels: loadTimeData.getBoolean('isLeoAssistantAllowed'),
+    leoAssistant: false,
+    leoPersonalization: false,
+    leoModels: false,
     // </if>
     surveyPanelist: loadTimeData.getBoolean('isSurveyPanelistAllowed'),
     // <if expr="enable_containers">
