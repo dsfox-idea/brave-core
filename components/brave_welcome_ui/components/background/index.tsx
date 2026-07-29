@@ -102,8 +102,10 @@ function Background (props: BackgroundProps) {
   const handleImgLoad = () => {
     setHasLoaded(true)
 
-    // When animations are disabled, we trigger onLoad instantly
-    if (!shouldPlayAnimations) {
+    // growser (#11): статичный ночной композит — вызываем onLoad сразу, иначе
+    // не переключится вид и не отрисуется контент онбординга. Плюс прежнее
+    // поведение: мгновенный onLoad, когда анимации отключены.
+    if (props.static || !shouldPlayAnimations) {
       props.onLoad?.()
     }
   }
