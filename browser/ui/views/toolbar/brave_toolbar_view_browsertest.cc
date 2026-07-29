@@ -307,11 +307,11 @@ IN_PROC_BROWSER_TEST_F(BraveToolbarViewTest_AIChatEnabled,
                        AIChatButtonVisibility) {
   auto* prefs = browser()->profile()->GetPrefs();
 
-  // Button is visible by default.
-  EXPECT_TRUE(prefs->GetBoolean(ai_chat::prefs::kBraveAIChatShowToolbarButton));
-  EXPECT_TRUE(is_ai_chat_button_shown(browser()));
+  // growser: кнопка Leo скрыта по умолчанию (#16).
+  EXPECT_FALSE(prefs->GetBoolean(ai_chat::prefs::kBraveAIChatShowToolbarButton));
+  EXPECT_FALSE(is_ai_chat_button_shown(browser()));
 
-  // Hide button.
+  // Hide button (уже скрыта по умолчанию — проверяем идемпотентность).
   prefs->SetBoolean(ai_chat::prefs::kBraveAIChatShowToolbarButton, false);
   EXPECT_FALSE(is_ai_chat_button_shown(browser()));
 
