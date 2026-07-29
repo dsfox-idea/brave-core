@@ -265,7 +265,11 @@ void NewTabPageInitializer::AddStrings() {
   source_->AddLocalizedStrings(webui::kBraveNewsStrings);
   source_->AddLocalizedStrings(webui::kBraveRewardsStrings);
   source_->AddLocalizedStrings(webui::kBraveOmniboxStrings);
+  // growser: строки ai_chat уходят из .pak при enable_ai_chat=false (#4) —
+  // обёрнута и незащищённая ссылка на сгенерённый массив (политика build-flag).
+#if BUILDFLAG(ENABLE_AI_CHAT)
   source_->AddLocalizedStrings(webui::kAiChatStrings);
+#endif
 }
 
 void NewTabPageInitializer::AddPluralStrings() {
