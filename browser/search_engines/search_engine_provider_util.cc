@@ -42,9 +42,11 @@ void SetBraveAsDefaultPrivateSearchProvider(Profile& profile) {
   auto& prefs = *profile.GetPrefs();
   auto* prepopulate_data_resolver =
       TemplateURLPrepopulateData::ResolverFactory::GetForProfile(&profile);
+  // growser: приватный (инкогнито) поиск по умолчанию — Yandex, как и обычные
+  // окна (#26). Имя функции оставлено прежним (внутренний идентификатор).
   const auto template_url_data =
       prepopulate_data_resolver->GetPrepopulatedEngine(
-          TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE);
+          TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX);
   DCHECK(template_url_data);
   prefs.SetString(prefs::kSyncedDefaultPrivateSearchProviderGUID,
                   template_url_data->sync_guid);
