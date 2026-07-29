@@ -11,7 +11,6 @@
 #include <variant>
 #include <vector>
 
-#include "base/json/json_reader.h"
 #include "base/test/test_future.h"
 #include "base/test/values_test_util.h"
 #include "brave/browser/history_embeddings/open_tab_search.h"
@@ -134,27 +133,20 @@ TEST(TabSemanticSearchToolBuildResultsJsonTest, EmitsRankedTabs) {
       {/*tab_id=*/11, "Tab One", GURL("https://one.example/")},
   };
 
-  std::string json = internal::BuildSemanticSearchResultsJson(tabs);
-  auto parsed = base::JSONReader::ReadDict(json, base::JSON_PARSE_RFC);
-  ASSERT_TRUE(parsed.has_value());
-  const auto* results = parsed->FindList("results");
-  ASSERT_TRUE(results);
-  ASSERT_EQ(results->size(), 2u);
-  EXPECT_EQ(*(*results)[0].GetDict().FindInt("tab_id"), 22);
-  EXPECT_EQ(*(*results)[0].GetDict().FindString("title"), "Tab Two");
-  EXPECT_EQ(*(*results)[0].GetDict().FindString("url"), "https://two.example/");
-  EXPECT_EQ(*(*results)[1].GetDict().FindInt("tab_id"), 11);
-  EXPECT_EQ(*(*results)[1].GetDict().FindString("title"), "Tab One");
-  EXPECT_EQ(*(*results)[1].GetDict().FindString("url"), "https://one.example/");
+  EXPECT_EQ(
+      base::test::ParseJsonDict(internal::BuildSemanticSearchResultsJson(tabs)),
+      base::test::ParseJsonDict(R"({
+        "results": [
+          {"tab_id": 22, "title": "Tab Two", "url": "https://two.example/"},
+          {"tab_id": 11, "title": "Tab One", "url": "https://one.example/"}
+        ]
+      })"));
 }
 
 TEST(TabSemanticSearchToolBuildResultsJsonTest, EmptyTabsEmitsEmptyResults) {
-  std::string json = internal::BuildSemanticSearchResultsJson({});
-  auto parsed = base::JSONReader::ReadDict(json, base::JSON_PARSE_RFC);
-  ASSERT_TRUE(parsed.has_value());
-  const auto* results = parsed->FindList("results");
-  ASSERT_TRUE(results);
-  EXPECT_TRUE(results->empty());
+  EXPECT_EQ(
+      base::test::ParseJsonDict(internal::BuildSemanticSearchResultsJson({})),
+      base::test::ParseJsonDict(R"({"results":[]})"));
 }
 
 TEST(TabSemanticSearchToolBuildTabSourcesJsonTest, EmitsRankedTabSources) {
@@ -163,20 +155,18 @@ TEST(TabSemanticSearchToolBuildTabSourcesJsonTest, EmitsRankedTabSources) {
       {/*tab_id=*/11, "Tab One", GURL("https://one.example/")},
   };
 
-  std::string json = internal::BuildSemanticSearchTabSourcesJson(tabs);
-  auto parsed = base::JSONReader::ReadDict(json, base::JSON_PARSE_RFC);
-  ASSERT_TRUE(parsed.has_value());
-  const auto* sources = parsed->FindList("sources");
-  ASSERT_TRUE(sources);
-  ASSERT_EQ(sources->size(), 2u);
   // tab_id is emitted as an int32 so the frontend can hand it straight to
   // `SwitchToTab(int32)` without re-parsing.
-  EXPECT_EQ(*(*sources)[0].GetDict().FindInt("tab_id"), 22);
-  EXPECT_EQ(*(*sources)[0].GetDict().FindString("title"), "Tab Two");
-  EXPECT_EQ(*(*sources)[0].GetDict().FindString("url"), "https://two.example/");
-  EXPECT_EQ(*(*sources)[1].GetDict().FindInt("tab_id"), 11);
-  EXPECT_EQ(*(*sources)[1].GetDict().FindString("title"), "Tab One");
-  EXPECT_EQ(*(*sources)[1].GetDict().FindString("url"), "https://one.example/");
+  EXPECT_EQ(base::test::ParseJsonDict(
+                internal::BuildSemanticSearchTabSourcesJson(tabs)),
+            base::test::ParseJsonDict(R"({
+              "sources": [
+                {"tab_id": 22, "title": "Tab Two",
+                 "url": "https://two.example/"},
+                {"tab_id": 11, "title": "Tab One",
+                 "url": "https://one.example/"}
+              ]
+            })"));
 }
 
 TEST(TabSemanticSearchToolBuildTabSourcesJsonTest, EmptyTabsEmitsEmptyString) {
