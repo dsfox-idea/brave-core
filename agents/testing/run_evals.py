@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env vpython3
 
 # Copyright (c) 2026 The Brave Authors. All rights reserved.
 # This Source Code Form is subject to the terms of the Mozilla Public
@@ -16,14 +16,15 @@ container sandbox; it just shells to a pinned promptfoo. The heavy lifting
 claude_provider.py, which each test wires in as its promptfoo provider.
 
 Usage (from src/brave):
-    python3 agents/testing/run_evals.py
-    python3 agents/testing/run_evals.py --tag-filter stable
-    python3 agents/testing/run_evals.py --list
+    vpython3 agents/testing/run_evals.py
+    vpython3 agents/testing/run_evals.py --tag-filter stable
+    vpython3 agents/testing/run_evals.py --list
     # one config directly, bypassing this runner:
     npx promptfoo eval -c agents/prompts/eval/review-prs/CS-003.promptfoo.yaml
 
-Requires: node/npx on PATH, the Claude Code CLI on PATH (or $CLAUDE_BIN), and
-whatever auth Claude Code needs for headless runs.
+Run under `vpython3` (not plain `python3`): eval_config.py imports `yaml`, which
+vpython provides. Also requires node/npx on PATH, the Claude Code CLI on PATH (or
+$CLAUDE_BIN), and whatever auth Claude Code needs for headless runs.
 """
 
 import argparse
@@ -99,6 +100,13 @@ def run_one(test):
         )
         if proc.returncode == 0:
             passes += 1
+        # The pass/fail outcome is already decided once enough runs have passed
+        # (>= threshold) or too many have failed to still reach it — stop early
+        # to avoid burning tokens on runs that can't change the result.
+        remaining = test.runs_per_test - (i + 1)
+        if passes >= test.pass_k_threshold or (passes + remaining
+                                               < test.pass_k_threshold):
+            break
     return passes
 
 
