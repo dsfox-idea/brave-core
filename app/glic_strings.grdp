@@ -21,21 +21,21 @@
       $1<ex>Wikipedia</ex>
     </ph> - You're sharing this tab with Gemini for the duration of this conversation
   </message>
-  <message name="IDS_GLIC_PROMO_BODY" desc="Text for a promo pointing to the Gemini icon in Brave.">
+  <message name="IDS_GLIC_PROMO_BODY" desc="Text for a promo pointing to the Gemini icon in Growser.">
     Chat with voice or text to get answers, key takeaways, and more as you browse
   </message>
   <if expr="is_win or is_linux or is_chromeos or is_android">
-    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open Brave settings and change the keyboard shortcut for opening Gemini in Brave.">
+    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open Growser settings and change the keyboard shortcut for opening Gemini in Growser.">
       Customize keyboard shortcut
     </message>
   </if>
   <if expr="is_macosx">
-    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open Brave settings and change the keyboard shortcut for opening Gemini in Brave. [With ellipsis]">
+    <message name="IDS_GLIC_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Menu text for the Gemini icon on the system try to open Growser settings and change the keyboard shortcut for opening Gemini in Growser. [With ellipsis]">
       Customize Keyboard Shortcut...
     </message>
   </if>
   <if expr="is_win or is_linux or is_chromeos or is_android">
-    <message name="IDS_GLIC_STATUS_ICON_MENU_EXIT" desc="This is the menu item for exiting Brave.">
+    <message name="IDS_GLIC_STATUS_ICON_MENU_EXIT" desc="This is the menu item for exiting Growser.">
       Exit
     </message>
   </if>
@@ -113,7 +113,7 @@
     Your organization has turned off this feature
   </message>
   <message name="IDS_GLIC_INELIGIBLE_ACCOUNT_NOTICE_HEADER" desc="This is the headline on the Gemini ineligible account notice.">
-    Your account doesn't have access to Gemini in Brave
+    Your account doesn't have access to Gemini in Growser
   </message>
   <message name="IDS_GLIC_INELIGIBLE_ACCOUNT_NOTICE" desc="This is the text of the Gemini ineligible account notice.">
     Check that you're eligible and meet the requirements
@@ -143,7 +143,7 @@
     Don't show the floating menu when text is selected
   </message>
   <message name="IDS_SETTINGS_SITE_SETTINGS_INLINE_CUE_MENU_DESCRIPTION" desc="Description for the inline cue menu setting page.">
-    Brave can show a floating menu with actions when you select text on a site.
+    Growser can show a floating menu with actions when you select text on a site.
   </message>
   <message name="IDS_SETTINGS_SITE_SETTINGS_INLINE_CUE_MENU_BLOCKED_EXCEPTIONS" desc="Header for the list of sites blocked from showing the inline cue menu.">
     Sites where the floating menu is blocked
@@ -169,19 +169,19 @@
   <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_CLEAR_LABEL" desc="Label of the clear keyboard shortcut setting button.">
     Clear keyboard shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_LABEL" desc="Label for the 'Learn more' link in the sublabel for Gemini in Brave settings.">
+  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_LABEL" desc="Label for the 'Learn more' link in the sublabel for Gemini in Growser settings.">
     Learn more
   </message>
-  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the keyboard shortcut setting in Gemini in Brave settings.">
+  <message name="IDS_SETTINGS_GLIC_KEYBOARD_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the keyboard shortcut setting in Gemini in Growser settings.">
     Learn more about the keyboard shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the navigation shortcut setting in Gemini in Brave settings.">
+  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the navigation shortcut setting in Gemini in Growser settings.">
     Learn more about the navigation shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the selection shortcut setting in Gemini in Brave settings.">
+  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT_LEARN_MORE_ARIA_LABEL" desc="Aria label for the 'Learn more' link for the selection shortcut setting in Gemini in Growser settings.">
     Learn more about the selection shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT" desc="Title for the navigation shortcut setting to leave and return to Gemini in Brave.">
+  <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT" desc="Title for the navigation shortcut setting to leave and return to Gemini in Growser.">
     Navigation shortcut
   </message>
   <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_EDIT_LABEL" desc="Label of the edit navigation shortcut setting button.">
@@ -190,7 +190,7 @@
   <message name="IDS_SETTINGS_GLIC_NAVIGATION_SHORTCUT_CLEAR_LABEL" desc="Label of the clear navigation shortcut setting button.">
     Clear navigation shortcut
   </message>
-  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT" desc="Title for the selection shortcut setting to trigger selection mode in Gemini in Brave.">
+  <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT" desc="Title for the selection shortcut setting to trigger selection mode in Gemini in Growser.">
     Selection shortcut
   </message>
   <message name="IDS_SETTINGS_GLIC_SELECTION_SHORTCUT_EDIT_LABEL" desc="Label of the edit selection shortcut setting button.">
@@ -266,7 +266,7 @@
     You can easily ask Gemini questions about your current tab as you browse
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_TAB_ACCESS_CONSIDER_1" desc="First point in 'things to consider' column of the 'tab access' expando">
-    When you choose to share the current tab with Gemini, the tab’s full content, media and URL are sent to Brave.
+    When you choose to share the current tab with Gemini, the tab’s full content, media and URL are sent to Growser.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_TAB_ACCESS_CONSIDER_1_LEARN_MORE_LABEL" desc="Label for the 'Learn more' link in the 'things to consider' section.">
     Learn more
@@ -281,7 +281,7 @@
     Tabs opened from a chat or a shared tab are also shared with Gemini.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_DEFAULT_TAB_ACCESS_CONSIDER_1" desc="First point in 'things to consider' column of the 'default tab access' expands" formatter_data="android_java">
-    When tabs are shared, their page contents, media and URLs are sent to Brave.
+    When tabs are shared, their page contents, media and URLs are sent to Growser.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_DEFAULT_TAB_ACCESS_CONSIDER_2" desc="Second point in 'things to consider' column of the 'default tab access' expands">
     Conversations about shared tabs may be seen by human reviewers to improve Gemini.
@@ -305,10 +305,10 @@
     Let Gemini Spark browse on this device
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_SUB_LABEL" desc="Sublabel explaining Gemini Spark feature.">
-    Gemini Spark can use Brave auto browse on this device to interact with sites and complete tasks on your behalf. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Gemini Spark can use Growser auto browse on this device to interact with sites and complete tasks on your behalf. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_WHEN_ON_1" desc="Bullet point explaining what happens when Gemini Spark is enabled.">
-    Gemini Spark can only use auto browse on this device if the device is awake and Brave is running.
+    Gemini Spark can only use auto browse on this device if the device is awake and Growser is running.
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_WHEN_ON_2" desc="Bullet point explaining notifications when Gemini Spark is enabled.">
     Gemini Spark will decide which actions to take based on the tasks you start or update.
@@ -317,16 +317,16 @@
     Gemini Spark will have access to the same sites as you, including the sites you’re signed in to. It will share necessary info with third parties, which could include personal info you might find sensitive.
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_CONSIDER_2" desc="Bullet point explaining access risk when enabling Gemini Spark.">
-    Anybody with access to your Gemini Spark agent could control your Brave browser.
+    Anybody with access to your Gemini Spark agent could control your Growser browser.
   </message>
   <message name="IDS_SETTINGS_GLIC_EXPERIMENTAL_TRIGGERING_CONSIDER_3" desc="Bullet point explaining user responsibility and risks for Gemini Spark.">
     Gemini Spark is experimental and may do things like share your info or make purchases without asking. <ph name="LINK_BEGIN">&lt;a href="$1" target="_blank"&gt;</ph>Review the risks<ph name="LINK_END">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_CHROME_WEB_ACTUATION_TOGGLE" desc="Title for the Gemini feature introduction screen" formatter_data="android_java">
-    Let Brave browse for you
+    Let Growser browse for you
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_CHROME_WEB_ACTUATION_TOGGLE_SUBLABEL" desc="Subheader explaining what the Gemini feature does" formatter_data="android_java">
-    Gemini in Brave uses auto browse to work in your tabs and complete tasks you give it. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Gemini in Growser uses auto browse to work in your tabs and complete tasks you give it. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_WEB_ACTUATION_TOGGLE_WHEN_ON_1" desc="First point in 'when on' column of the 'let Gemini browse for you' expands" formatter_data="android_java">
     Gemini can help you book appointments, create shopping carts, or do other tasks you give it.
@@ -335,7 +335,7 @@
     Gemini shows its steps and tries to confirm before taking sensitive ones. You can stop or take over anytime.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_WEB_ACTUATION_TOGGLE_CONSIDER_1" desc="First point in 'things to consider' column of the 'let Gemini browse for you' expands" formatter_data="android_java">
-    The page content and URLs that Gemini uses during a task will be shared with Brave.
+    The page content and URLs that Gemini uses during a task will be shared with Growser.
   </message>
   <message name="IDS_SETTINGS_GLIC_PERMISSIONS_WEB_ACTUATION_TOGGLE_CONSIDER_2" desc="Second point in 'things to consider' column of the 'let Gemini browse for you' expands" formatter_data="android_java">
     Use Gemini carefully and <ph name="BEGIN_LINK1">&lt;a href="$1" target="_blank"&gt;</ph>safely<ph name="LINK_END1">&lt;/a&gt;</ph>. You are responsible for Gemini's actions during a task, including mistakes and <ph name="BEGIN_LINK2">&lt;a href="$2" target="_blank"&gt;</ph>unexpected results<ph name="LINK_END2">&lt;/a&gt;</ph> like purchases.
@@ -451,19 +451,19 @@
   </message>
 
   <!-- Gemini tab strip button label -->
-  <message name="IDS_GLIC_SETTING_LABEL" desc="Label in setting list used to open Gemini in Brave settings." formatter_data="android_java">
-    Gemini in Brave
+  <message name="IDS_GLIC_SETTING_LABEL" desc="Label in setting list used to open Gemini in Growser settings." formatter_data="android_java">
+    Gemini in Growser
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_LABEL" desc="Label on the button used to open Gemini in Brave." formatter_data="android_java">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_LABEL" desc="Label on the button used to open Gemini in Growser." formatter_data="android_java">
     Gemini
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_PINNED_LABEL" desc="Label on the button used to open Gemini in Brave when pinned." formatter_data="android_java">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_PINNED_LABEL" desc="Label on the button used to open Gemini in Growser when pinned." formatter_data="android_java">
     Toolbar shortcut
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_GEMINI_LABEL" desc="Label on the button used to open Gemini in Brave." formatter_data="android_java">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_GEMINI_LABEL" desc="Label on the button used to open Gemini in Growser." formatter_data="android_java">
     Ask Gemini
   </message>
-  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_ABOUT_THIS_PAGE_LABEL" desc="Label on the button used to open Gemini in Brave.">
+  <message name="IDS_GLIC_BUTTON_ENTRYPOINT_ASK_ABOUT_THIS_PAGE_LABEL" desc="Label on the button used to open Gemini in Growser.">
     Ask about this page?
   </message>
 
@@ -489,19 +489,19 @@
   <if expr="not use_titlecase">
     <message name="IDS_GLIC_PROMO_CONFIRM" desc="The button that a user clicks to open Gemini.">Try now</message>
   </if>
-  <message name="IDS_GLIC_TRYIT_TITLE" desc="Title for a promo pointing to the Gemini icon in Brave, that opens Gemini in Brave if selected.">
+  <message name="IDS_GLIC_TRYIT_TITLE" desc="Title for a promo pointing to the Gemini icon in Growser, that opens Gemini in Growser if selected.">
     Get help with your tasks
   </message>
-  <message name="IDS_GLIC_TRYIT_BODY" desc="Text for a promo pointing to the Gemini icon in Brave, that opens Gemini in Brave if selected.">
-    Chat with Gemini in Brave to get answers, key takeaways, and more as you browse
+  <message name="IDS_GLIC_TRYIT_BODY" desc="Text for a promo pointing to the Gemini icon in Growser, that opens Gemini in Growser if selected.">
+    Chat with Gemini in Growser to get answers, key takeaways, and more as you browse
   </message>
 
   <!-- Shortcut IPH -->
   <message name="IDS_GLIC_SHORTCUT_IPH_TEXT_TEMPLATE" desc="Placeholder for string to be shown for IPH informing users about Glic keyboard shortcut.">
-    <ph name="message">$1<ex>Use Ctrl+⌘+G to open Gemini in Brave</ex></ph>
+    <ph name="message">$1<ex>Use Ctrl+⌘+G to open Gemini in Growser</ex></ph>
   </message>
-  <message name="IDS_GLIC_SHORTCUT_IPH_TEXT" desc="Title for a promo pointing to the Gemini icon in Brave. It informs the user about a keyboard shortcut for quicly opening Gemini in Brave.">
-    Use <ph name="FOCUS_TOGGLE_HOTKEY">$1<ex>Ctrl+⌘+G</ex></ph> to open Gemini in Brave
+  <message name="IDS_GLIC_SHORTCUT_IPH_TEXT" desc="Title for a promo pointing to the Gemini icon in Growser. It informs the user about a keyboard shortcut for quicly opening Gemini in Growser.">
+    Use <ph name="FOCUS_TOGGLE_HOTKEY">$1<ex>Ctrl+⌘+G</ex></ph> to open Gemini in Growser
   </message>
 
   <!-- Selection Nudge -->
@@ -514,10 +514,10 @@
 
   <!-- Educational Tip -->
   <message name="IDS_EDUCATIONAL_TIP_GLIC_TITLE" desc="Title for the Glic educational tip card." formatter_data="android_java">
-    Meet Gemini on Brave
+    Meet Gemini on Growser
   </message>
   <message name="IDS_EDUCATIONAL_TIP_GLIC_DESCRIPTION" desc="Description for the Glic educational tip card." formatter_data="android_java">
-    Get the best of Brave AI. Pin Gemini to your toolbar for easy access, or open it anytime from the Brave menu.
+    Get the best of Growser AI. Pin Gemini to your toolbar for easy access, or open it anytime from the Growser menu.
   </message>
   <message name="IDS_EDUCATIONAL_TIP_GLIC_BUTTON" desc="Button text for the Glic educational tip card." formatter_data="android_java">
     Pin on toolbar
@@ -545,10 +545,10 @@
     Resizing Gemini...
   </message>
   <message name="IDS_GLIC_LOCATION_MISMATCH_NOTICE_HEADER" desc="Headline on the notice when Gemini is unavailable in the current dynamic location.">
-    Gemini in Brave isn't available
+    Gemini in Growser isn't available
   </message>
   <message name="IDS_GLIC_LOCATION_MISMATCH_NOTICE" desc="Text of the notice explaining location mismatch for travelers or VPN users.">
-    Gemini in Brave is expanding to different locations but isn't available everywhere
+    Gemini in Growser is expanding to different locations but isn't available everywhere
   </message>
   <message name="IDS_GLIC_GET_HELP" desc="Link or button label text to open help documentation.">
     Get help

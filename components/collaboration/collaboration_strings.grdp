@@ -161,14 +161,14 @@
 
   <!-- Data Sharing Owner Block Member Dialog -->
   <message name="IDS_COLLABORATION_OWNER_BLOCK_DIALOG_BODY" desc="The body for the owner's block member dialog.">
-    <ph name="MEMBER_FULL_NAME">%1$s<ex>John Doe</ex></ph> (<ph name="EMAIL">%2$s<ex>johndoe@gmail.com</ex></ph>) will immediately lose access to the “<ph name="GROUP_NAME">%3$s<ex>Vacation</ex></ph>” tab group, and will no longer be able to interact with you across Brave services.
+    <ph name="MEMBER_FULL_NAME">%1$s<ex>John Doe</ex></ph> (<ph name="EMAIL">%2$s<ex>johndoe@gmail.com</ex></ph>) will immediately lose access to the “<ph name="GROUP_NAME">%3$s<ex>Vacation</ex></ph>” tab group, and will no longer be able to interact with you across Growser services.
   </message>
   <!-- DataSharing Owner Block Member Dialog -->
 
 
   <!-- Data Sharing Block and Leave Dialog -->
   <message name="IDS_COLLABORATION_BLOCK_LEAVE_DIALOG_BODY" desc="The body for the block and leave group dialog.">
-    You’ll immediately lose access to the “<ph name="GROUP_NAME">%1$s<ex>Vacation</ex></ph>” tab group, and <ph name="BLOCKED_MEMBER_FULL_NAME">%1$s<ex>Ali Connors</ex></ph> (<ph name="BLOCKED_MEMBER_EMAIL">%2$s<ex>ali.connors@gmail.com</ex></ph>) will no longer be able to interact with you across Brave services.
+    You’ll immediately lose access to the “<ph name="GROUP_NAME">%1$s<ex>Vacation</ex></ph>” tab group, and <ph name="BLOCKED_MEMBER_FULL_NAME">%1$s<ex>Ali Connors</ex></ph> (<ph name="BLOCKED_MEMBER_EMAIL">%2$s<ex>ali.connors@gmail.com</ex></ph>) will no longer be able to interact with you across Growser services.
   </message>
   <message name="IDS_COLLABORATION_BLOCK_LEAVE_LEARN_MORE" desc="The text for the learn more link for the block and leave group dialog.">
     Learn about blocked accounts

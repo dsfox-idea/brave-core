@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the Brave AI product" formatter_data="webui=AiChat">
+  <message name="IDS_CHAT_UI_TITLE" translateable="false" desc="Title for the Growser AI product" formatter_data="webui=AiChat">
     Leo AI
   </message>
-  <message name="IDS_CHAT_UI_PWA_TITLE" translateable="false" desc="Title for the Brave AI product when installed" formatter_data="webui=AiChat">
-    Brave Leo AI
+  <message name="IDS_CHAT_UI_PWA_TITLE" translateable="false" desc="Title for the Growser AI product when installed" formatter_data="webui=AiChat">
+    Growser Leo AI
   </message>
   <message name="IDS_CHAT_UI_SUMMARIZE_FAILED_LABEL" desc="Label for when summarization is not possible" formatter_data="webui=AiChat">
     The summarizer feature is currently available only for select articles and other long-form web pages.
@@ -16,13 +16,13 @@
     About Leo
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION" desc="Outlining the functioning of AIChat (paragraph 1 of 3)" formatter_data="webui=AiChat">
-    Brave Leo is a private AI smart assistant that enhances your use of the web. Leo is free to use with limited access. Brave Leo Premium offers more models, higher limits and gives subscribers early access to new features. The default model will change from time to time. See the <ph name="LINK_BEFORE">$1</ph>Brave Help Center<ph name="LINK_AFTER">/$1</ph> for more details.
+    Growser Leo is a private AI smart assistant that enhances your use of the web. Leo is free to use with limited access. Growser Leo Premium offers more models, higher limits and gives subscribers early access to new features. The default model will change from time to time. See the <ph name="LINK_BEFORE">$1</ph>Growser Help Center<ph name="LINK_AFTER">/$1</ph> for more details.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_2" desc="Outlining the functioning of AIChat (paragraph 2 of 3)" formatter_data="webui=AiChat">
-    By default, when you ask Leo a question about a website or page you are viewing, the content of the webpage you are viewing or any text you highlight on a page, as well as your search query will be sent to Brave servers in order for Leo to provide a response. In some cases, Leo will send queries derived from your input to Brave Search and use the search results to better answer your question. Brave does not guarantee the accuracy of responses, and responses may include inaccurate, misleading, or false information. Don't submit sensitive or private information to Brave Leo, and use caution with any answers related to health, finance, personal safety, or similar. You can adjust Leo’s options in Settings any time. Go to Settings > Leo.
+    By default, when you ask Leo a question about a website or page you are viewing, the content of the webpage you are viewing or any text you highlight on a page, as well as your search query will be sent to Growser servers in order for Leo to provide a response. In some cases, Leo will send queries derived from your input to Growser Search and use the search results to better answer your question. Growser does not guarantee the accuracy of responses, and responses may include inaccurate, misleading, or false information. Don't submit sensitive or private information to Growser Leo, and use caution with any answers related to health, finance, personal safety, or similar. You can adjust Leo’s options in Settings any time. Go to Settings > Leo.
   </message>
   <message name="IDS_CHAT_UI_ABOUT_DESCRIPTION_3" desc="Outlining the functioning of AIChat (paragraph 3 of 3)" formatter_data="webui=AiChat">
-    Leo does not collect identifiers such as your IP address that can be linked to you. We do not train our models based on your data, including your search queries or Brave Leo’s responses. No personal data is stored on our servers, or retained by Brave. See the <ph name="LINK_BEFORE">$1</ph>privacy policy<ph name="LINK_AFTER">/$1</ph> for more information.
+    Leo does not collect identifiers such as your IP address that can be linked to you. We do not train our models based on your data, including your search queries or Growser Leo’s responses. No personal data is stored on our servers, or retained by Growser. See the <ph name="LINK_BEFORE">$1</ph>privacy policy<ph name="LINK_AFTER">/$1</ph> for more information.
   </message>
   <message name="IDS_CHAT_UI_PLACEHOLDER_ATTACHED_PAGES_LABEL" desc="Placeholder text for when there are attached pages in the input box" formatter_data="webui=AiChat">
     {PAGE_COUNT, plural,
@@ -109,52 +109,52 @@
     Model changes dynamically to use the best one for the task.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_QWEN" desc="AI Chat intro message for the qwen model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Qwen VL 30B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Qwen VL 30B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_NEAR_GLM_5" desc="AI Chat intro message for the glm-5 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by GLM-5, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GLM-5, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_NEAR_GLM_5_1" desc="AI Chat intro message for the glm-5.1 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by GLM-5.1, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5.1 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GLM-5.1, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5.1 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_INSTANT" desc="AI Chat intro message for the Claude Instant model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks. Claude Instant is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks. Claude Instant is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_HAIKU" desc="AI Chat intro message for the Claude Haiku model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Claude Haiku, a model created by Anthropic to power conversational and text processing tasks. Claude Haiku is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Claude Haiku, a model created by Anthropic to power conversational and text processing tasks. Claude Haiku is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_SONNET" desc="AI Chat intro message for the Claude Sonnet model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Claude Sonnet, a model created by Anthropic to power conversational and text processing tasks. Claude Sonnet is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Claude Sonnet, a model created by Anthropic to power conversational and text processing tasks. Claude Sonnet is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_GROK_4_3_BEDROCK" desc="AI Chat intro message for the Grok 4.3 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Grok 4.3, a model created by xAI to be performant and applicable to many use cases. Grok 4.3 is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Grok 4.3, a model created by xAI to be performant and applicable to many use cases. Grok 4.3 is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_GPT_5_4_BEDROCK" desc="AI Chat intro message for the GPT 5.4 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by GPT 5.4, a model created by OpenAI to be performant and applicable to many use cases. GPT 5.4 is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GPT 5.4, a model created by OpenAI to be performant and applicable to many use cases. GPT 5.4 is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_MISTRAL_LARGE" desc="AI Chat intro message for the Mistral Large model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Mistral Large, a model created by Mistral to be performant and applicable to many use cases. Mistral Large is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Mistral Large, a model created by Mistral to be performant and applicable to many use cases. Mistral Large is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_QWEN_3_235B" desc="AI Chat intro message for the Qwen 3 235B model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Qwen 3 235B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen 3 235B is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Qwen 3 235B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen 3 235B is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_DEEPSEEK_V3_2" desc="AI Chat intro message for the Deepseek V3.2 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Deepseek V3.2, a model created by Deepseek to be performant and applicable to many use cases. Deepseek V3.2 is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Deepseek V3.2, a model created by Deepseek to be performant and applicable to many use cases. Deepseek V3.2 is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_OPUS" desc="AI Chat intro message for the Claude Opus model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Claude Opus, a model created by Anthropic to power conversational and text processing tasks. Claude Opus is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Claude Opus, a model created by Anthropic to power conversational and text processing tasks. Claude Opus is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_GLM_4_7_FLASH" desc="AI Chat intro message for the GLM-4-7-Flash model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by GLM-4-7-Flash, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-4-7-Flash is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GLM-4-7-Flash, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-4-7-Flash is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_KIMI_K2_5" desc="AI Chat intro message for the Kimi K2.5 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Kimi K2.5, a model created by Moonshot AI to be performant and applicable to many use cases. Kimi K2.5 is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Kimi K2.5, a model created by Moonshot AI to be performant and applicable to many use cases. Kimi K2.5 is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_NEMOTRON_NANO_3_30B" desc="AI Chat intro message for the Nemotron Nano 3 30B model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Nemotron Nano 3 30B, a model created by NVIDIA to be performant and applicable to many use cases. Nemotron Nano 3 30B is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Nemotron Nano 3 30B, a model created by NVIDIA to be performant and applicable to many use cases. Nemotron Nano 3 30B is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
-  <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BRAVE_SUMMARY" desc="AI Chat intro message for the Brave Summary model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Brave Ocelot, a model created by Brave to summarise web pages. Brave Ocelot is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+  <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BRAVE_SUMMARY" desc="AI Chat intro message for the Growser Summary model" formatter_data="webui=AiChat">
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Growser Ocelot, a model created by Growser to summarise web pages. Growser Ocelot is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_MODEL_PREMIUM_LABEL_NON_PREMIUM" desc="Label indentifying that an AI Chat model is a premium model" formatter_data="webui=AiChat">
     Premium
@@ -225,7 +225,7 @@
   <message name="IDS_CHAT_UI_PREMIUM_FEATURE_3" desc="A premium feature: higher rate limits" formatter_data="webui=AiChat">
     Get higher rate limits for your conversations
   </message>
-  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for Brave premium products" formatter_data="webui=AiChat">
+  <message name="IDS_CHAT_UI_PREMIUM_LABEL" translateable="false" desc="A label for Growser premium products" formatter_data="webui=AiChat">
      Leo Premium
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_PRICING" desc="Price label to subscribe for Premium model" formatter_data="webui=AiChat">
@@ -253,7 +253,7 @@
     Unleash Leo's full powers with Premium:
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_DESCRIPTION" desc="Warning message when AI Chat Premium authentication is expired" formatter_data="webui=AiChat">
-    Your Brave account session has expired. Please visit your account page to refresh, then come back to use premium features.
+    Your Growser account session has expired. Please visit your account page to refresh, then come back to use premium features.
   </message>
   <message name="IDS_CHAT_UI_PREMIUM_REFRESH_WARNING_ACTION" desc="Action to take when AI Chat Premium authentication is expired" formatter_data="webui=AiChat">
     Refresh
@@ -283,7 +283,7 @@
     Dislike answer
   </message>
   <message name="IDS_CHAT_UI_PROVIDE_FEEDBACK_TITLE" desc="Title for feedback provision section" formatter_data="webui=AiChat">
-    Provide Brave AI Feedback
+    Provide Growser AI Feedback
   </message>
   <message name="IDS_CHAT_UI_SELECT_FEEDBACK_TOPIC" desc="Prompt to select feedback topic" formatter_data="webui=AiChat">
     Select your feedback topic
@@ -424,7 +424,7 @@
     Share this conversation
   </message>
   <message name="IDS_CHAT_UI_SHARE_CONVERSATION_DIALOG_DESCRIPTION" desc="Explanatory text in the share conversation dialog describing how the conversation is encrypted before being uploaded and when the shared link expires" formatter_data="webui=AiChat">
-    Your conversation will be uploaded encrypted and can only be decrypted with the generated link. Brave will not be able to view your conversation. Only you and the people you share this link with can decrypt your shared conversation. All shared conversations will expire after 7 days.
+    Your conversation will be uploaded encrypted and can only be decrypted with the generated link. Growser will not be able to view your conversation. Only you and the people you share this link with can decrypt your shared conversation. All shared conversations will expire after 7 days.
   </message>
   <message name="IDS_CHAT_UI_SHARE_CONVERSATION_DIALOG_GENERATE_LINK_BUTTON_LABEL" desc="A label for the button which generates and copies a shareable link for the current conversation" formatter_data="webui=AiChat">
     Generate link
@@ -466,7 +466,7 @@
     Response Feedback
   </message>
   <message name="IDS_CHAT_UI_RATE_MESSAGE_PRIVACY_MODAL_DESCRIPTION" desc="A description for the rate message privacy modal" formatter_data="webui=AiChat">
-    Liking or disliking an answer will send rating, conversation, model, language, version, and premium status to Brave in order to improve Leo. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Liking or disliking an answer will send rating, conversation, model, language, version, and premium status to Growser in order to improve Leo. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_SEND_CHAT_BUTTON_LABEL" desc="A button label for sending a chat message" formatter_data="webui=AiChat">
     Send message to Leo
@@ -643,7 +643,7 @@
     Automate the boring work
   </message>
   <message name="IDS_CHAT_UI_WELCOME_CARD_AUTOMATE_WORK_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users" formatter_data="webui=AiChat">
-    Let Brave browse with you and interact with everything you do in the browser. Offload the tedious tasks, and save your time for the important stuff.
+    Let Growser browse with you and interact with everything you do in the browser. Offload the tedious tasks, and save your time for the important stuff.
   </message>
   <message name="IDS_CHAT_UI_WELCOME_BRING_YOUR_OWN_MODEL_TITLE" desc="A title for welcome guide component presented for first time users" formatter_data="webui=AiChat">
     Bring your own model
@@ -655,7 +655,7 @@
     Learn more about Leo AI
   </message>
   <message name="IDS_CHAT_UI_PRIVACY_TITLE" desc="Title for privacy agreement modal." formatter_data="webui=AiChat">
-    Chat Privately with Brave Leo
+    Chat Privately with Growser Leo
   </message>
   <message name="IDS_CHAT_UI_CONTEXT_TOGGLE_LABEL" desc="Label for toggle that enabled/disabled contextual conversations." formatter_data="webui=AiChat">
     Shape answers based on the tab(s) contents
@@ -892,7 +892,7 @@
     Security warning
   </message>
   <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_SUMMARY" desc="Summary for permission challenge" formatter_data="webui=AiChat">
-    Brave AI needs your permission for: <ph name="TOOL_LABEL">$1<ex>Navigating to https://www.example.com/path/to/page</ex></ph>
+    Growser AI needs your permission for: <ph name="TOOL_LABEL">$1<ex>Navigating to https://www.example.com/path/to/page</ex></ph>
   </message>
   <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_ASSESSMENT_INTRO" desc="Introduction to an assessment for why a permission challenge is being presented" formatter_data="webui=AiChat">
     The operation was detected as potentially misaligned with your request:
@@ -939,8 +939,8 @@
   <message name="IDS_CHAT_UI_TOOL_LABEL_SEMANTIC_HISTORY_SEARCH_GENERIC" desc="Label shown while the assistant is searching the user's local browsing history when the query is not yet known." formatter_data="webui=AiChat">
     Searching your browser history
   </message>
-  <message name="IDS_CHAT_UI_TOOL_SEMANTIC_HISTORY_SEARCH_PERMISSION_IMPLICATIONS" desc="Explanation shown in the permission prompt when the assistant wants to search the user's local browsing history. Calls out that the search itself is on-device and only the matched pages flow to Brave AI." formatter_data="webui=AiChat">
-    Brave AI wants to search your browsing history. The search runs locally on your device, so your full history isn't sent anywhere. Only the matching pages' titles, URLs, and indexed text passages will be sent to Brave AI as part of this conversation.
+  <message name="IDS_CHAT_UI_TOOL_SEMANTIC_HISTORY_SEARCH_PERMISSION_IMPLICATIONS" desc="Explanation shown in the permission prompt when the assistant wants to search the user's local browsing history. Calls out that the search itself is on-device and only the matched pages flow to Growser AI." formatter_data="webui=AiChat">
+    Growser AI wants to search your browsing history. The search runs locally on your device, so your full history isn't sent anywhere. Only the matching pages' titles, URLs, and indexed text passages will be sent to Growser AI as part of this conversation.
   </message>
   <message name="IDS_CHAT_UI_CODE_EXECUTION_CODE_LABEL" desc="Label for code section in code execution tool" formatter_data="webui=AiChat">
     Code:
@@ -956,7 +956,7 @@
       Moving your tabs around
     </message>
     <message name="IDS_CHAT_UI_TOOL_TAB_MANAGEMENT_PERMISSION_IMPLICATIONS" desc="Implications for allowing the AI tab management tool" formatter_data="webui=AiChat">
-      Allowing this will send the <ph name="URL_FORMAT_START">$1<ex>&lt;b&gt;</ex></ph>URL<ph name="URL_FORMAT_END">/$1<ex>&lt;/b&gt;</ex></ph> and <ph name="TITLE_FORMAT_START">$2<ex>&lt;b&gt;</ex></ph>Title<ph name="TITLE_FORMAT_END">/$2<ex>&lt;/b&gt;</ex></ph> of all your Tabs and Tab Groups to Brave AI, and allow Brave AI to move them around. This permission applies only to this conversation.
+      Allowing this will send the <ph name="URL_FORMAT_START">$1<ex>&lt;b&gt;</ex></ph>URL<ph name="URL_FORMAT_END">/$1<ex>&lt;/b&gt;</ex></ph> and <ph name="TITLE_FORMAT_START">$2<ex>&lt;b&gt;</ex></ph>Title<ph name="TITLE_FORMAT_END">/$2<ex>&lt;/b&gt;</ex></ph> of all your Tabs and Tab Groups to Growser AI, and allow Growser AI to move them around. This permission applies only to this conversation.
     </message>
   </if>
   <message name="IDS_CHAT_UI_TOOL_LABEL_DEEP_RESEARCH" desc="Display label for the deep research tool shown above results" formatter_data="webui=AiChat">

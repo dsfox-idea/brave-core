@@ -9,13 +9,13 @@
     Reset
   </message>
   <message name="IDS_BRAVE_UI_RESET_WALLET" desc="">
-    Reset Brave Rewards
+    Reset Growser Rewards
   </message>
   <message name="IDS_BRAVE_UI_REWARDS_RESET_TEXT" desc="">
-    By resetting, your current Brave Rewards profile will be deleted, and Brave Rewards will no longer be enabled. If you enable Brave Rewards again later, you will start with a new profile. Read our <ph name="LINK_BEGIN">$1</ph>support article about resetting<ph name="LINK_END">/$1</ph> for more details.
+    By resetting, your current Growser Rewards profile will be deleted, and Growser Rewards will no longer be enabled. If you enable Growser Rewards again later, you will start with a new profile. Read our <ph name="LINK_BEGIN">$1</ph>support article about resetting<ph name="LINK_END">/$1</ph> for more details.
   </message>
   <message name="IDS_BRAVE_UI_REWARDS_RESET_CONSENT" desc="">
-    I understand that my current Brave Rewards profile and Brave Rewards data will be deleted from my device, and I've read the <ph name="LINK_BEGIN">$1</ph>support article about resetting<ph name="LINK_END">/$1</ph>.
+    I understand that my current Growser Rewards profile and Growser Rewards data will be deleted from my device, and I've read the <ph name="LINK_BEGIN">$1</ph>support article about resetting<ph name="LINK_END">/$1</ph>.
   </message>
   <message name="IDS_REWARDS_RESET_REWARDS_BUTTON_LABEL" desc="">
     Disable and reset Rewards
@@ -29,7 +29,7 @@
     Don't worry: Any BAT already in your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account won't be affected by resetting.
   </message>
   <message name="IDS_REWARDS_RESET_EXTERNAL_WALLET_TEXT" desc="" formatter_data="webui=BraveRewards">
-    You will not earn for ads while connected to <ph name="PROVIDER">$1<ex>Uphold</ex></ph>. Reset Brave Rewards and connect a different payout account to keep earning. <ph name="LINK_BEGIN">$2</ph>Learn more<ph name="LINK_END">/$2</ph>
+    You will not earn for ads while connected to <ph name="PROVIDER">$1<ex>Uphold</ex></ph>. Reset Growser Rewards and connect a different payout account to keep earning. <ph name="LINK_BEGIN">$2</ph>Learn more<ph name="LINK_END">/$2</ph>
   </message>
   <message name="IDS_REWARDS_RESET_EXTERNAL_WALLET_TITLE" desc="" formatter_data="webui=BraveRewards">
     <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account no longer supported.
@@ -43,13 +43,13 @@
     Any BAT already in your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account will stay there.
   </message>
   <message name="IDS_REWARDS_SWITCH_ACCOUNT_TEXT_2" desc="">
-    Your 30-day Ads History and other Brave Rewards settings will reset.
+    Your 30-day Ads History and other Growser Rewards settings will reset.
   </message>
   <message name="IDS_REWARDS_SWITCH_ACCOUNT_TEXT_3" desc="">
     You can choose a different payout account after this step.
   </message>
   <message name="IDS_REWARDS_SWITCH_ACCOUNT_TITLE" desc="">
-    Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account will be disconnected, and your Brave Rewards profile will be reset.
+    Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account will be disconnected, and your Growser Rewards profile will be reset.
   </message>
 
   <!-- Payout status banner -->
@@ -121,15 +121,15 @@
     <ph name="BOLD_BEGIN">$1</ph>Ready to start earning?<ph name="BOLD_END">/$1</ph> Connect an account so we have a place to send your earnings.
   </message>
   <message name="IDS_REWARDS_CONNECT_CONTRIBUTE_HEADER" desc="">
-    Send contributions with Brave Rewards
+    Send contributions with Growser Rewards
   </message>
   <message name="IDS_REWARDS_CONNECT_CONTRIBUTE_TEXT" desc="">
-    You'll be able to send on-demand contributions to your favorite creators with your Brave Rewards balance once you have a custodial account connected.
+    You'll be able to send on-demand contributions to your favorite creators with your Growser Rewards balance once you have a custodial account connected.
   </message>
   <message name="IDS_REWARDS_PUBLISHER_COUNT_TEXT" desc="">
     {PUBLISHER_COUNT, plural,
-      =1 {This month, you've visited # creator supported by Brave Rewards}
-      other {This month, you've visited # creators supported by Brave Rewards}
+      =1 {This month, you've visited # creator supported by Growser Rewards}
+      other {This month, you've visited # creators supported by Growser Rewards}
     }
   </message>
   <message name="IDS_REWARDS_CONNECT_ACCOUNT_TEXT_2" desc="">
@@ -155,7 +155,7 @@
 
   <!-- Rewards new tab page widget -->
   <message name="IDS_REWARDS_WIDGET_ABOUT_REWARDS" desc="">
-    Using Brave Rewards helps support content creators, and lets you earn BAT.
+    Using Growser Rewards helps support content creators, and lets you earn BAT.
   </message>
   <message name="IDS_REWARDS_WIDGET_BRAVE_REWARDS" desc="">
     Rewards
@@ -167,7 +167,7 @@
     How does it work?
   </message>
   <message name="IDS_REWARDS_WIDGET_OPT_IN_HEADER" desc="">
-    Earn tokens for private ads you see in Brave
+    Earn tokens for private ads you see in Growser
   </message>
   <message name="IDS_REWARDS_WIDGET_OPT_IN_TEXT" desc="">
     Support content creators and use your tokens to buy gift cards, exchange for other currencies, and more.
@@ -179,7 +179,7 @@
     Select your country
   </message>
   <message name="IDS_REWARDS_WIDGET_SELECT_COUNTRY_TEXT" desc="">
-    To continue using Brave Rewards, select your country so we can show you the right options and ads for your region. <ph name="LINK_BEGIN">$1</ph>Privacy Policy<ph name="LINK_END">/$1</ph>
+    To continue using Growser Rewards, select your country so we can show you the right options and ads for your region. <ph name="LINK_BEGIN">$1</ph>Privacy Policy<ph name="LINK_END">/$1</ph>
   </message>
   <message name="IDS_REWARDS_WIDGET_START_USING_REWARDS" desc="">
     Start using Rewards
@@ -199,7 +199,7 @@
     Unverified Creator
   </message>
   <message name="IDS_REWARDS_PANEL_UNVERIFIED_TEXT" desc="">
-    This creator is not yet verified with Brave Creators. You'll be able to send them contributions once they're verified.
+    This creator is not yet verified with Growser Creators. You'll be able to send them contributions once they're verified.
   </message>
   <message name="IDS_REWARDS_PANEL_VERIFIED_CREATOR" desc="">
     Verified Creator
@@ -208,7 +208,7 @@
     Refresh creator verification status
   </message>
   <message name="IDS_REWARDS_PANEL_PLATFORM_PUBLISHER_TITLE" desc="">
-    <ph name="NAME">$1<ex>Brave</ex></ph> on <ph name="PLATFORM">$2<ex>Twitter</ex></ph>
+    <ph name="NAME">$1<ex>Growser</ex></ph> on <ph name="PLATFORM">$2<ex>Twitter</ex></ph>
   </message>
   <message name="IDS_REWARDS_PANEL_ATTENTION" desc="">
     Attention
@@ -235,10 +235,10 @@
     Cancel
   </message>
   <message name="IDS_REWARDS_PANEL_HEADER_TITLE" desc="">
-    Brave Rewards
+    Growser Rewards
   </message>
   <message name="IDS_REWARDS_PANEL_HEADER_TEXT" desc="">
-    You are helping support Brave and the BAT community
+    You are helping support Growser and the BAT community
   </message>
   <message name="IDS_REWARDS_PANEL_REWARDS_SETTINGS" desc="">
     Rewards settings
@@ -298,7 +298,7 @@
 
   <!-- Adaptive captcha -->
   <message name="IDS_REWARDS_CAPTCHA_MAX_ATTEMPTS_EXCEEDED_TEXT" desc="">
-    Looks like this is not working, Brave ads will remain paused. Contact us if you need help with the captcha.
+    Looks like this is not working, Growser ads will remain paused. Contact us if you need help with the captcha.
   </message>
   <message name="IDS_REWARDS_CAPTCHA_MAX_ATTEMPTS_EXCEEDED_TITLE" desc="">
     Max attempts exceeded
@@ -307,7 +307,7 @@
     Solved!
   </message>
   <message name="IDS_REWARDS_CAPTCHA_SOLVED_TEXT" desc="">
-    Brave Ads will resume. Thanks for helping us protect Brave Rewards.
+    Growser Ads will resume. Thanks for helping us protect Growser Rewards.
   </message>
   <message name="IDS_REWARDS_CAPTCHA_CONTACT_SUPPORT" desc="">
     Contact support
@@ -327,7 +327,7 @@
     Continue
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_EARN_HEADER" desc="">
-    Earn tokens for private ads you see in Brave
+    Earn tokens for private ads you see in Growser
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_EARN_TEXT" desc="">
     Use tokens to buy gift cards, exchange for other currencies, support content creators, and more.
@@ -339,16 +339,16 @@
     Something went wrong
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_ERROR_HEADER_DISABLED" desc="">
-    Brave Rewards not available
+    Growser Rewards not available
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_ERROR_TEXT" desc="">
-    Unfortunately, there was an error while trying to set up Brave Rewards. Please try again.
+    Unfortunately, there was an error while trying to set up Growser Rewards. Please try again.
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_ERROR_TEXT_DECLARE_COUNTRY" desc="">
     Unfortunately, there was an error while trying to set your country. Please try again.
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_ERROR_TEXT_DISABLED" desc="">
-    New signups for Brave Rewards are currently disabled in your region. However, you can always try again later. <ph name="LINK_BEGIN">$1</ph>Learn more<ph name="LINK_END">/$1</ph>
+    New signups for Growser Rewards are currently disabled in your region. However, you can always try again later. <ph name="LINK_BEGIN">$1</ph>Learn more<ph name="LINK_END">/$1</ph>
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_GEO_HEADER" desc="">
     Select your country
@@ -360,7 +360,7 @@
     Now you can get rewarded for viewing ads. You're helping make the web a better place for everyone. And that's awesome!
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_HOW_DOES_BRAVE_REWARDS_WORK" desc="">
-    How does Brave Rewards work?
+    How does Growser Rewards work?
   </message>
   <message name="IDS_BRAVE_REWARDS_ONBOARDING_GEO_TEXT" desc="">
     Select your country so we can show you the right options and ads for your region.
@@ -384,27 +384,27 @@
     Select your region so we can show you the right options and ads for your region.
   </message>
   <message name="IDS_REWARDS_ONBOARDING_BUTTON_LABEL" desc="">
-    Start using Brave Rewards
+    Start using Growser Rewards
   </message>
   <message name="IDS_REWARDS_ONBOARDING_TERMS_TEXT" desc="">
     By enabling Rewards, you agree to the <ph name="TOS_LINK_BEGIN">$1</ph>Terms of Service<ph name="TOS_LINK_END">/$1</ph> and <ph name="PP_LINK_BEGIN">$2</ph>Privacy Policy<ph name="PP_LINK_END">/$2</ph>.
   </message>
   <message name="IDS_REWARDS_ONBOARDING_TEXT_ITEM_1" desc="" formatter_data="webui=BraveRewards">
-    Get paid for private ads you see in Brave
+    Get paid for private ads you see in Growser
   </message>
   <message name="IDS_REWARDS_ONBOARDING_TEXT_ITEM_2" desc="" formatter_data="webui=BraveRewards">
     Get special benefits and discounts
   </message>
   <message name="IDS_REWARDS_ONBOARDING_TITLE" desc="">
-    Turn on Brave Rewards
+    Turn on Growser Rewards
   </message>
 
   <!-- Rewards unsupported region notice -->
   <message name="IDS_BRAVE_REWARDS_UNSUPPORTED_REGION_NOTICE_HEADER" desc="">
-    Sorry, Brave Rewards is not available
+    Sorry, Growser Rewards is not available
   </message>
   <message name="IDS_BRAVE_REWARDS_UNSUPPORTED_REGION_NOTICE_SUBHEADER" desc="">
-    Unfortunately, it looks like you’re in a region where Brave Rewards is not available.
+    Unfortunately, it looks like you’re in a region where Growser Rewards is not available.
   </message>
   <message name="IDS_BRAVE_REWARDS_UNSUPPORTED_REGION_NOTICE_LEARN_MORE" desc="">
     <ph name="LINK_BEGIN">$1</ph>Learn more<ph name="LINK_END">/$1</ph>
@@ -464,13 +464,13 @@
     Updated Terms of Service
   </message>
   <message name="IDS_REWARDS_TOS_UPDATE_TEXT" desc="">
-    We’ve updated the Terms of Service for Brave Rewards. We’ve made these updates to clarify our terms and ensure they cover new features. If you continue to use Brave Rewards, you are agreeing to the updated Terms of Service. If you do not agree, you can <ph name="LINK_BEGIN">$1</ph>reset<ph name="LINK_END">/$1</ph> Brave Rewards, which will disable the feature.
+    We’ve updated the Terms of Service for Growser Rewards. We’ve made these updates to clarify our terms and ensure they cover new features. If you continue to use Growser Rewards, you are agreeing to the updated Terms of Service. If you do not agree, you can <ph name="LINK_BEGIN">$1</ph>reset<ph name="LINK_END">/$1</ph> Growser Rewards, which will disable the feature.
   </message>
   <message name="IDS_REWARDS_TOS_UPDATE_NTP_TEXT" desc="" formatter_data="webui=BraveRewards">
-    We've updated our Terms of Service. To keep using Brave Rewards, please review and agree to the updated terms.
+    We've updated our Terms of Service. To keep using Growser Rewards, please review and agree to the updated terms.
   </message>
   <message name="IDS_REWARDS_TOS_UPDATE_LINK_TEXT" desc="">
-    See <ph name="LINK_BEGIN">$1</ph>Brave Rewards Terms of Service<ph name="LINK_END">/$1</ph>
+    See <ph name="LINK_BEGIN">$1</ph>Growser Rewards Terms of Service<ph name="LINK_END">/$1</ph>
   </message>
   <message name="IDS_REWARDS_TOS_UPDATE_BUTTON_LABEL" desc="">
     I agree
@@ -487,7 +487,7 @@
     Set as monthly contribution
   </message>
   <message name="IDS_REWARDS_TIP_FEE_NOTICE" desc="">
-    Brave collects <ph name="FEE_PCT">$1</ph> of the sent amount as a processing fee.
+    Growser collects <ph name="FEE_PCT">$1</ph> of the sent amount as a processing fee.
   </message>
   <message name="IDS_REWARDS_TIP_SEND_FORM_TITLE" desc="">
     Support this creator
@@ -505,7 +505,7 @@
     Verified Creator
   </message>
   <message name="IDS_REWARDS_TIP_VERIFIED_TOOLTIP_TEXT" desc="">
-    This creator has registered with Brave and can receive contributions from Brave Rewards users.
+    This creator has registered with Growser and can receive contributions from Growser Rewards users.
   </message>
   <message name="IDS_REWARDS_TIP_MONTHLY_TOOLTIP_TEXT" desc="">
     Make this a monthly recurring contribution. You can cancel it at any time.
@@ -538,7 +538,7 @@
     Logged out of <ph name="PROVIDER">$1</ph>
   </message>
   <message name="IDS_REWARDS_TIP_RECONNECT_TEXT" desc="">
-    It looks like you're logged out of <ph name="PROVIDER">$1</ph> for Brave Rewards. Log in again to continue.
+    It looks like you're logged out of <ph name="PROVIDER">$1</ph> for Growser Rewards. Log in again to continue.
   </message>
   <message name="IDS_REWARDS_TIP_RECONNECT_WEB3_TEXT" desc="">
     You can also send crypto contributions to this creator by using your Web3 wallet.
@@ -550,7 +550,7 @@
     You don't have enough tokens
   </message>
   <message name="IDS_REWARDS_TIP_INSUFFICIENT_BALANCE_TEXT" desc="">
-    You can only send up to <ph name="AMOUNT">$1</ph> BAT using your Brave Rewards balance.
+    You can only send up to <ph name="AMOUNT">$1</ph> BAT using your Growser Rewards balance.
   </message>
   <message name="IDS_REWARDS_TIP_CONTRIBUTION_FAILED_TITLE" desc="">
     There was a problem sending your contribution
@@ -571,7 +571,7 @@
     Share your support
   </message>
   <message name="IDS_REWARDS_TIP_SHARE_TEXT" desc="">
-    I just contributed <ph name="AMOUNT">$1</ph> BAT using the Brave Browser! See how you can support your favorite creators and sites too: https://brave.com/rewards
+    I just contributed <ph name="AMOUNT">$1</ph> BAT using the Growser! See how you can support your favorite creators and sites too: https://brave.com/rewards
   </message>
   <message name="IDS_REWARDS_TIP_UNEXPECTED_ERROR_TITLE" desc="">
     An unexpected error has occurred
@@ -633,7 +633,7 @@
     To begin earning Basic Attention Token (BAT) rewards, connect an account. BAT you earn will be automatically transferred to your account every month.
   </message>
   <message name="IDS_REWARDS_CONNECT_SOLANA_BUTTON_LABEL" desc="">
-    Brave Wallet
+    Growser Wallet
   </message>
   <message name="IDS_REWARDS_CONNECT_SOLANA_MESSAGE" desc="">
     Or other wallet that supports Solana
@@ -656,25 +656,25 @@
     Error
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_DEVICE_LIMIT_REACHED_TEXT" desc="">
-    You’ve connected the maximum number of Brave Rewards profiles to this <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account.
+    You’ve connected the maximum number of Growser Rewards profiles to this <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_DEVICE_LIMIT_REACHED_TITLE" desc="">
     Limit reached on payout account
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_FLAGGED_WALLET_TEXT_1" desc="">
-    Unfortunately, your Brave Rewards profile was flagged because our automated checks found some unexpected Brave Ads activity.
+    Unfortunately, your Growser Rewards profile was flagged because our automated checks found some unexpected Growser Ads activity.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_FLAGGED_WALLET_TEXT_2" desc="">
-    While your profile is flagged, you may continue to see ads, but won't be eligible to receive payouts. You also won't be able to connect a custodial account to Brave Rewards.
+    While your profile is flagged, you may continue to see ads, but won't be eligible to receive payouts. You also won't be able to connect a custodial account to Growser Rewards.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_FLAGGED_WALLET_TEXT_3" desc="">
     It's possible your profile was flagged in error, and no immediate action is required on your part. The flag on your profile may be removed in the future.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_FLAGGED_WALLET_TEXT_4" desc="">
-    Learn more about Brave's process for flagging Rewards profiles.
+    Learn more about Growser's process for flagging Rewards profiles.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_FLAGGED_WALLET_TITLE" desc="">
-    Brave Rewards profile is flagged
+    Growser Rewards profile is flagged
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_KYC_REQUIRED_TEXT" desc="">
     Please try again after you have completed ID verification on <ph name="PROVIDER">$1<ex>Uphold</ex></ph>.
@@ -683,19 +683,19 @@
     You need a verified account to log in
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_MISMATCHED_COUNTRIES_TEXT" desc="">
-    Hmm, it looks like your Brave Rewards country does not match the country of the <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account you're trying to connect.
+    Hmm, it looks like your Growser Rewards country does not match the country of the <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account you're trying to connect.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_MISMATCHED_COUNTRIES_TITLE" desc="">
     Country mismatch
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_MISMATCHED_PROVIDER_ACCOUNTS_TEXT" desc="">
-    Hmm, it looks like your Brave Rewards has already been verified with another <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account. Please try verifying again using your previous account.
+    Hmm, it looks like your Growser Rewards has already been verified with another <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account. Please try verifying again using your previous account.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_MISMATCHED_PROVIDER_ACCOUNTS_TITLE" desc="">
     Different account
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_PROVIDER_UNAVAILABLE_TEXT_1" desc="">
-    It looks like connecting <ph name="PROVIDER">$1<ex>Uphold</ex></ph> to Brave Rewards is temporarily unavailable. Please try again later.
+    It looks like connecting <ph name="PROVIDER">$1<ex>Uphold</ex></ph> to Growser Rewards is temporarily unavailable. Please try again later.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_PROVIDER_UNAVAILABLE_TEXT_2" desc="">
     You can view <ph name="BEGIN_LINK">$1</ph>service status here<ph name="END_LINK">/$1</ph>.
@@ -704,10 +704,10 @@
     Connecting to selected custodian temporarily unavailable
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_REGION_NOT_SUPPORTED_TEXT_1" desc="">
-    Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account can't be connected to your Brave Rewards profile at this time. Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account is registered in a country that's not currently supported for connecting to Brave Rewards.
+    Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account can't be connected to your Growser Rewards profile at this time. Your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account is registered in a country that's not currently supported for connecting to Growser Rewards.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_REGION_NOT_SUPPORTED_TEXT_2" desc="">
-    See the <ph name="LINK_BEGIN">$1</ph>current list of supported regions and learn more<ph name="END_LINK">/$1</ph> about connecting a custodial account to Brave Rewards.
+    See the <ph name="LINK_BEGIN">$1</ph>current list of supported regions and learn more<ph name="END_LINK">/$1</ph> about connecting a custodial account to Growser Rewards.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_REGION_NOT_SUPPORTED_TITLE" desc="">
     Region currently not supported
@@ -725,7 +725,7 @@
     Limited Uphold account functionality
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_SIGNATURE_VERIFICATION_ERROR_TEXT" desc="">
-    There was a problem validating your request to connect your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account to Brave Rewards. You can <ph name="BEGIN_LINK">$2</ph>contact support<ph name="END_LINK">/$2</ph> for more help.
+    There was a problem validating your request to connect your <ph name="PROVIDER">$1<ex>Uphold</ex></ph> account to Growser Rewards. You can <ph name="BEGIN_LINK">$2</ph>contact support<ph name="END_LINK">/$2</ph> for more help.
   </message>
   <message name="IDS_REWARDS_AUTHORIZE_SIGNATURE_VERIFICATION_ERROR_TITLE" desc="">
     Request could not be validated
@@ -748,7 +748,7 @@
     Mark as inappropriate
   </message>
   <message name="IDS_REWARDS_ADS_HISTORY_EMPTY_TEXT" desc="">
-    There is currently no Brave Ads history.
+    There is currently no Growser Ads history.
   </message>
   <message name="IDS_REWARDS_ADS_HISTORY_TITLE" desc="">
     Ads history
@@ -780,16 +780,16 @@
     Total ads received this month
   </message>
   <message name="IDS_REWARDS_ADS_SETTINGS_NEWS_OFF_TOOLTIP" desc="">
-    Brave News is currently disabled.
+    Growser News is currently disabled.
   </message>
   <message name="IDS_REWARDS_ADS_SETTINGS_NEWS_ON_TOOLTIP" desc="">
-    Brave News contains ads that cannot be independently disabled.
+    Growser News contains ads that cannot be independently disabled.
   </message>
   <message name="IDS_REWARDS_ADS_SETTINGS_SUBDIVISION_LABEL" desc="">
     Regional ad relevance
   </message>
   <message name="IDS_REWARDS_ADS_SETTINGS_SUBDIVISION_TEXT" desc="">
-    This allows Brave to show you ads meant specifically for your region.
+    This allows Growser to show you ads meant specifically for your region.
   </message>
   <message name="IDS_REWARDS_ADS_SETTINGS_SUBDIVISION_DISABLED_LABEL" desc="">
     Disabled
@@ -801,10 +801,10 @@
     Ads settings
   </message>
   <message name="IDS_REWARDS_ADS_SETTINGS_TEXT" desc="">
-    Control what kinds of Brave Ads you see, and how often. The more you see, the more you can earn.
+    Control what kinds of Growser Ads you see, and how often. The more you see, the more you can earn.
   </message>
   <message name="IDS_REWARDS_ADS_VIEWED_TOOLTIP" desc="" formatter_data="webui=BraveRewards">
-    This shows the number of Brave Ads you've seen this month that qualify for earning BAT.
+    This shows the number of Growser Ads you've seen this month that qualify for earning BAT.
   </message>
   <message name="IDS_REWARDS_AD_TYPE_NEW_TAB_PAGE_LABEL" desc="">
     New tab page ads
@@ -852,10 +852,10 @@
   </message>
 
   <message name="IDS_REWARDS_BENEFITS_STORE_SUBTEXT" desc="">
-    Use promo code BRAVEREWARDS to get 10% off on all Brave merch store items.
+    Use promo code BRAVEREWARDS to get 10% off on all Growser merch store items.
   </message>
   <message name="IDS_REWARDS_BENEFITS_STORE_TEXT" desc="">
-    Brave merch store
+    Growser merch store
   </message>
   <message name="IDS_REWARDS_BENEFITS_TITLE" desc="">
     Your benefits
@@ -892,7 +892,7 @@
     Contribute
   </message>
   <message name="IDS_REWARDS_CONTRIBUTE_CHOOSE_METHOD_TEXT" desc="">
-    Choose the method you want to use to contribute to Brave Software:
+    Choose the method you want to use to contribute to Growser Software:
   </message>
   <message name="IDS_REWARDS_CONTRIBUTE_CUSTODIAL_SUBTEXT" desc="">
     Custodial wallet
@@ -910,7 +910,7 @@
     Log in to <ph name="PROVIDER">$1<ex>Uphold</ex></ph>
   </message>
   <message name="IDS_REWARDS_CONTRIBUTE_LOGGED_OUT_TEXT" desc="">
-    It looks like you’re logged out of <ph name="PROVIDER">$1<ex>Uphold</ex></ph> for Brave Rewards. Log in again to continue.
+    It looks like you’re logged out of <ph name="PROVIDER">$1<ex>Uphold</ex></ph> for Growser Rewards. Log in again to continue.
   </message>
   <message name="IDS_REWARDS_CONTRIBUTE_LOGGED_OUT_TITLE" desc="">
     Logged out of <ph name="PROVIDER">$1<ex>Uphold</ex></ph>
@@ -953,17 +953,17 @@
   </message>
 
   <message name="IDS_REWARDS_ADS_REGION_NOT_SUPPORTED_TEXT" desc="">
-    Brave Private Ads are not yet available in your region.
+    Growser Private Ads are not yet available in your region.
   </message>
   <message name="IDS_REWARDS_ADS_BROWSER_UPGRADE_REQUIRED_TEXT" desc="">
     Your browser needs to be updated to continue seeing ads.
   </message>
 
   <message name="IDS_REWARDS_WDP_CHECKBOX_LABEL" desc="">
-    Yes, I’d also like to contribute to Brave Search and opt in to <ph name="LINK_BEGIN">$1</ph>Web Discovery Project<ph name="LINK_END">/$1</ph>.
+    Yes, I’d also like to contribute to Growser Search and opt in to <ph name="LINK_BEGIN">$1</ph>Web Discovery Project<ph name="LINK_END">/$1</ph>.
   </message>
   <message name="IDS_REWARDS_WDP_OPT_IN_TEXT" desc="">
-    Contribute some anonymous search and browsing data to refine Brave Search with Web Discovery Project. It’s completely open-source.
+    Contribute some anonymous search and browsing data to refine Growser Search with Web Discovery Project. It’s completely open-source.
   </message>
   <message name="IDS_REWARDS_WDP_OPT_IN_TITLE" desc="">
     Web Discovery Project
@@ -973,7 +973,7 @@
     Community
   </message>
   <message name="IDS_REWARDS_MERCH_STORE_TITLE" desc="">
-    Brave merch store
+    Growser merch store
   </message>
   <message name="IDS_REWARDS_VIEW_STORE_LINK" desc="">
     View Store

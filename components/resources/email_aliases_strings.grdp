@@ -4,7 +4,7 @@
     Keep your personal email address private
   </message>
   <message name="IDS_SETTINGS_EMAIL_ALIASES_DESCRIPTION" desc="The description for the Email Aliases page" formatter_data="webui=EmailAliases">
-    Create unique, random addresses that forward to your Brave account email and can be deleted at any time. Keep your actual email address from being disclosed or used by advertisers.
+    Create unique, random addresses that forward to your Growser account email and can be deleted at any time. Keep your actual email address from being disclosed or used by advertisers.
   </message>
   <message name="IDS_SETTINGS_EMAIL_ALIASES_LEARN_MORE" desc="The label for the learn more link" formatter_data="webui=EmailAliases">
     Learn more
@@ -112,10 +112,10 @@
     Error retrieving email aliases from our servers. Please check your internet connection.
   </message>  
   <message name="IDS_SETTINGS_EMAIL_ALIASES_SIGN_IN_OR_CREATE_ACCOUNT" desc="The label for the sign in or create account" formatter_data="webui=EmailAliases">
-    Sign in or create a Brave account
+    Sign in or create a Growser account
   </message>
   <message name="IDS_SETTINGS_EMAIL_ALIASES_SIGN_IN_OR_CREATE_ACCOUNT_DESCRIPTION" desc="The label for the description to the get started button" formatter_data="webui=EmailAliases">
-    A Brave account will allow you to access certain Brave products and easily sync your information across all your devices.
+    A Growser account will allow you to access certain Growser products and easily sync your information across all your devices.
   </message>
   <message name="IDS_SETTINGS_EMAIL_ALIASES_GET_STARTED" desc="The label for the get login link button" formatter_data="webui=EmailAliases">
     Get login link
@@ -136,7 +136,7 @@
     Don't see the email? Check your spam folder or try again.
   </message>
   <message name="IDS_SETTINGS_EMAIL_ALIASES_AUTH_ERROR" desc="The label for the auth error" formatter_data="webui=EmailAliases">
-    Error authenticating with Brave Account. Please try again.
+    Error authenticating with Growser Account. Please try again.
   </message>
   <message name="IDS_SETTINGS_EMAIL_ALIASES_AUTH_TRY_AGAIN_BUTTON" desc="The label for the auth try again button" formatter_data="webui=EmailAliases">
     Start over
@@ -145,13 +145,13 @@
     No email provided
   </message>
   <message name="IDS_EMAIL_ALIASES_ERROR_INVALID_RESPONSE_BODY">
-    Invalid response from Brave Accounts service
+    Invalid response from Growser Accounts service
   </message>
   <message name="IDS_EMAIL_ALIASES_ERROR_NO_VERIFICATION_TOKEN">
-    No verification token received from Brave Accounts service
+    No verification token received from Growser Accounts service
   </message>
   <message name="IDS_EMAIL_ALIASES_ERROR_NO_RESPONSE_BODY">
-    No response from Brave Accounts service
+    No response from Growser Accounts service
   </message>
   <message name="IDS_EMAIL_ALIASES_ERROR_VERIFICATION_FAILED">
     Email verification failed
@@ -172,18 +172,18 @@
     Email aliases
   </message>
   <message name="IDS_EMAIL_ALIASES_PROMO_DLG_TOP_DESCRIPTION" desc="Description at the top of the email aliases promo dialog" formatter_data="webui=EmailAliases">
-    Create unique, random addresses that forward to your Brave account
+    Create unique, random addresses that forward to your Growser account
     email and can be deleted at any time. Keep your actual email address
     from being disclosed or used by advertisers.
   </message>
   <message name="IDS_EMAIL_ALIASES_PROMO_DLG_BOTTOM_DESCRIPTION" desc="Description at the bottom of the email aliases promo dialog" formatter_data="webui=EmailAliases">
-    To use Email aliases, you need to be logged in to your Brave account. Get
+    To use Email aliases, you need to be logged in to your Growser account. Get
     started by clicking the button below.
   </message>
   <message name="IDS_EMAIL_ALIASES_PROMO_DLG_GET_STARTED_BUTTON" desc="Label for the get started button in the email aliases promo dialog" formatter_data="webui=EmailAliases">
     Get started
   </message>
-  <message name="IDS_EMAIL_ALIASES_PROMO_EMAIL_LABEL" desc="Placeholder text inside the email address input field in the Brave Email Aliases promo dialog, instructing the user to enter their email to proceed" formatter_data="webui=EmailAliases" translateable="false">
+  <message name="IDS_EMAIL_ALIASES_PROMO_EMAIL_LABEL" desc="Placeholder text inside the email address input field in the Growser Email Aliases promo dialog, instructing the user to enter their email to proceed" formatter_data="webui=EmailAliases" translateable="false">
     Enter your email to continue
   </message>
   <message name="IDS_EMAIL_ALIASES_PROMO_YOUR_EMAIL" desc="Static text for the email field in the email aliases promo dialog" formatter_data="webui=EmailAliases" translateable="false">

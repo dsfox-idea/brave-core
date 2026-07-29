@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- android_chrome_strings.grd contains strings for Brave for Android.
+<!-- android_chrome_strings.grd contains strings for Growser for Android.
 
 FAQ:
   - How do I add, change, or remove a string?
@@ -118,13 +118,13 @@ CHAR_LIMIT guidelines:
         Private
       </message>
       <message name="IDS_IMPROVE_SEARCH_SUGGESTIONS_SUMMARY" desc="Summary for a checkbox in Settings that controls URL and search autocompletion and informs the user about the data shared by this feature.">
-        When you type in the address bar or search box, Brave sends what you type to your default search engine to get better suggestions. This is off in Private.
+        When you type in the address bar or search box, Growser sends what you type to your default search engine to get better suggestions. This is off in Private.
       </message>
       <message name="IDS_SETTINGS_INCOGNITO_TAB_LOCK_TITLE" desc="Title for a toggle in Settings that allows users to lock their existing Private tabs with a device reauthentication mechanism.">
-        Lock Private tabs when you leave Brave
+        Lock Private tabs when you leave Growser
       </message>
       <message name="IDS_SETTINGS_INCOGNITO_WINDOW_LOCK_TITLE" desc="Title for a toggle in Settings that allows users to lock their existing Private windows with a device reauthentication mechanism.">
-        Lock Private windows when you leave Brave
+        Lock Private windows when you leave Growser
       </message>
       <message name="IDS_SETTINGS_INCOGNITO_TAB_LOCK_SUMMARY_ANDROID_SETTING_ON" desc="Summary for a toggle in Settings that allows users to lock their existing Private tabs with a device reauthentication mechanism. This summary is shown to the user when the screen lock setting is on in the device.">
         Use screen lock to see open Private tabs
@@ -138,7 +138,7 @@ CHAR_LIMIT guidelines:
         </if>
 
       <message name="IDS_SAFETY_HUB_SAFETY_TIPS_INCOGNITO_TITLE" desc="Title for a entry in the Safety Hub user education section. The entry leads the user to a help center article about Private.">
-        Brave Private
+        Growser Private
       </message>
       <message name="IDS_SAFETY_HUB_SAFETY_TIPS_INCOGNITO_SUMMARY" desc="Subtitle for a entry in the Safety Hub user education section. The entry leads the user to a help center article about Private.">
         Private mode keeps your browsing private from others who use your device
@@ -155,7 +155,7 @@ CHAR_LIMIT guidelines:
       <message name="IDS_CONTEXTMENU_OPEN_IN_INCOGNITO_WINDOW" desc="Context sensitive menu item to open the selected link in a new Private window. [CHAR_LIMIT=30]">
         Open in Private window
       </message>
-      <message name="IDS_CONTEXTMENU_OPEN_IN_CHROME_INCOGNITO_TAB" desc="Context sensitive menu item to open the selected link in a Brave Private tab from Brave Custom Tab. [CHAR_LIMIT=30]">
+      <message name="IDS_CONTEXTMENU_OPEN_IN_CHROME_INCOGNITO_TAB" desc="Context sensitive menu item to open the selected link in a Growser Private tab from Growser Custom Tab. [CHAR_LIMIT=30]">
         Open in Private tab
       </message>
       <message name="IDS_DOWNLOAD_NOTIFICATION_INCOGNITO_SUBTEXT" desc="Displayed in Private mode download notification as subtext.">
@@ -174,18 +174,18 @@ CHAR_LIMIT guidelines:
       <message name="IDS_CLOSE_ALL_INCOGNITO_NOTIFICATION" desc="Message on the notification that closes all Private tabs.">
         Close all Private tabs
       </message>
-      <message name="IDS_HISTORY_OPEN_IN_INCOGNITO_CHROME" desc="App-specific history selection men item to open the selected link in Brave in private mode. [CHAR_LIMIT=30]">
-        Open in Private Brave tab
+      <message name="IDS_HISTORY_OPEN_IN_INCOGNITO_CHROME" desc="App-specific history selection men item to open the selected link in Growser in private mode. [CHAR_LIMIT=30]">
+        Open in Private Growser tab
       </message>
 
       <message name="IDS_INCOGNITO_REAUTH_PAGE_UNLOCK_INCOGNITO_BUTTON_LABEL" desc="The label of button which upon click allows user to start the re-authentication process to view their existing Private tabs.">
        Unlock Private
      </message>
      <message name="IDS_INCOGNITO_REAUTH_PROMO_TITLE" desc="The title of the private re-auth promo card.">
-       Lock Private tabs when you leave Brave
+       Lock Private tabs when you leave Growser
      </message>
      <message name="IDS_INCOGNITO_WINDOW_REAUTH_PROMO_TITLE" desc="The title of the private re-auth promo card when there is a dedicated window for Private tabs.">
-       Lock Private windows when you leave Brave
+       Lock Private windows when you leave Growser
      </message>
      <message name="IDS_INCOGNITO_REAUTH_PROMO_DESCRIPTION" desc="The description of the private re-auth promo card.">
        Use screen lock to see open Private tabs
@@ -193,11 +193,11 @@ CHAR_LIMIT guidelines:
      <message name="IDS_INCOGNITO_WINDOW_REAUTH_PROMO_DESCRIPTION" desc="The description of the private re-auth promo card when there is a dedicated window for Private tabs.">
        Use screen lock to see open Private windows
      </message>
-     <message name="IDS_INCOGNITO_REAUTH_LOCK_ACTION_TEXT" desc="The label of the button which upon click would turn on the corresponding Brave level Private lock setting after a re-authentication.">
+     <message name="IDS_INCOGNITO_REAUTH_LOCK_ACTION_TEXT" desc="The label of the button which upon click would turn on the corresponding Growser level Private lock setting after a re-authentication.">
        Turn on Private lock
      </message>
      <message name="IDS_INCOGNITO_REAUTH_SNACKBAR_TEXT" desc="The label of the snackbar notification which appears after the private re-authentication is turned on from the promo card shown inside the Private grid tab switcher.">
-        Private tabs will be locked when you leave Brave
+        Private tabs will be locked when you leave Growser
      </message>
 
       <message name="IDS_NEW_INCOGNITO_TAB_TITLE" desc="Title in tab strip when opening a new Private tab.">
@@ -229,8 +229,8 @@ CHAR_LIMIT guidelines:
           =1 {Close 1 Private window}
           other {Close # Private windows}}
       </message>
-      <message name="IDS_MENU_OPEN_IN_INCOGNITO_CHROME" desc="Context sensitive menu item for opening a link in Brave in a Private tab. [CHAR_LIMIT=30]" translateable="false">
-        Open in Private Brave
+      <message name="IDS_MENU_OPEN_IN_INCOGNITO_CHROME" desc="Context sensitive menu item for opening a link in Growser in a Private tab. [CHAR_LIMIT=30]" translateable="false">
+        Open in Private Growser
       </message>
       <message name="IDS_ACCESSIBILITY_NEW_INCOGNITO_TAB_PAGE" desc="Accessibility text to read aloud when the user focuses the new Private tab view.">
         New Private tab
@@ -360,10 +360,10 @@ CHAR_LIMIT guidelines:
         <ph name="TAB_TITLE">%1$s<ex>Welcome to Facebook</ex></ph>, Multiselected Pinned Private Tab
       </message>
 
-      <message name="IDS_KEYBOARD_SHORTCUT_NEW_INCOGNITO_TAB" desc="A text label that appears next to a keyboard shortcut to open a new tab in Private mode in Brave. The shortcut description is shown in a system dialog along with all other supported shortcuts. [CHAR_LIMIT=55]">
+      <message name="IDS_KEYBOARD_SHORTCUT_NEW_INCOGNITO_TAB" desc="A text label that appears next to a keyboard shortcut to open a new tab in Private mode in Growser. The shortcut description is shown in a system dialog along with all other supported shortcuts. [CHAR_LIMIT=55]">
         Open a new tab in Private mode
       </message>
-      <message name="IDS_KEYBOARD_SHORTCUT_NEW_INCOGNITO_WINDOW" desc="A text label that appears next to a keyboard shortcut to open a new window in Private mode in Brave. The shortcut description is shown in a system dialog along with all other supported shortcuts. [CHAR_LIMIT=55]">
+      <message name="IDS_KEYBOARD_SHORTCUT_NEW_INCOGNITO_WINDOW" desc="A text label that appears next to a keyboard shortcut to open a new window in Private mode in Growser. The shortcut description is shown in a system dialog along with all other supported shortcuts. [CHAR_LIMIT=55]">
         Open a new window in Private mode
       </message>
        <if expr="enable_arcore">
@@ -419,7 +419,7 @@ CHAR_LIMIT guidelines:
         Private is not available on this device
       </message>
 
-      <message name="IDS_NOTIFICATION_PERMISSION_RATIONALE_DIALOG_MESSAGE" desc="The body text of a dialog explaining the benefits of enabling Brave notifications.">
+      <message name="IDS_NOTIFICATION_PERMISSION_RATIONALE_DIALOG_MESSAGE" desc="The body text of a dialog explaining the benefits of enabling Growser notifications.">
         You’ll be able to easily manage media controls, Private sessions, downloads and more
       </message>
       <message name="IDS_WEBAUTHN_INCOGNITO_CONFIRMATION_TITLE" desc="The title of a bottomsheet that appears before the user saves passkey in Private mode. (See the glossary for translations of the word 'passkey'. Do not translate as 'password'.)" formatter_data="android_java">

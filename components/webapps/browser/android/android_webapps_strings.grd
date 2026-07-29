@@ -188,7 +188,7 @@
         Install app
       </message>
       <message name="IDS_ADDED_TO_HOMESCREEN" desc="Text in a toast indicating that the website with the specified name was added to the user's Home screen.">
-        <ph name="NAME">%1$s<ex>Brave</ex></ph> was added to your Home screen
+        <ph name="NAME">%1$s<ex>Growser</ex></ph> was added to your Home screen
       </message>
       <message name="IDS_PWA_INSTALL_BOTTOM_SHEET_ACCESSIBILITY" desc="The content description for the bottom sheet install UI.">
         Install this app
@@ -235,7 +235,7 @@
          Create shortcut
       </message>
       <message name="IDS_PWA_UNI_INSTALL_OPTION_SHORTCUT_EXPLANATION" desc="The label describing how shortcuts, created in the Universal Install sheet, open.">
-         Shortcuts open in Brave
+         Shortcuts open in Growser
       </message>
       <message name="IDS_PWA_UNI_INSTALL_TOAST_PLEASE_WAIT_MSG" desc="The text message shown in a toast while waiting for the Universal Install bottom sheet is waiting for the installability check.">
          Just a moment\u2026
@@ -265,7 +265,7 @@
          Restore web apps
       </message>
       <message name="IDS_PWA_RESTORE_DESCRIPTION_EXPANDED" desc="The sheet description when the PWA Restore BottomSheet UI is in expanded state.">
-         Choose web apps to restore on this device. Apps shown here are based on your Brave history.
+         Choose web apps to restore on this device. Apps shown here are based on your Growser history.
       </message>
       <message name="IDS_PWA_RESTORE_TITLE_EXPANDED" desc="The sheet title when the PWA Restore BottomSheet UI is in expanded state.">
          Review web apps

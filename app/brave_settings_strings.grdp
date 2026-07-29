@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Brave Settings WebUI strings (included from brave_generated_resources.grd). -->
+<!-- Growser Settings WebUI strings (included from brave_generated_resources.grd). -->
 <grit-part>
 
   <!--Add new items to the appropriate sections below -->
 
   <!-- Strings not associated with a particular section-->
-  <message name="IDS_SETTINGS_RESTART_NOTICE" desc="Notifies the user that they need to relaunch Brave">
-    Your changes will take effect the next time you relaunch Brave.
+  <message name="IDS_SETTINGS_RESTART_NOTICE" desc="Notifies the user that they need to relaunch Growser">
+    Your changes will take effect the next time you relaunch Growser.
   </message>
-  <message name="IDS_SETTINGS_RELAUNCH_BUTTON_LABEL" desc="Notifies the user that they need to relaunch Brave">
+  <message name="IDS_SETTINGS_RELAUNCH_BUTTON_LABEL" desc="Notifies the user that they need to relaunch Growser">
     Relaunch Now
   </message>
   <message name="IDS_SETTINGS_SELECT_VALUE_YES" desc="Select value">
@@ -47,7 +47,7 @@
 
   <!-- Settings / Appearance -->
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_BRAVE_THEMES" desc="The label for brave theme change setting options">
-    Brave colors
+    Growser colors
   </message>
   <message name="IDS_BRAVE_THEME_TYPE_LIGHT" desc="Text for light theme type">
     Light
@@ -83,7 +83,7 @@
     Get more themes
   </message>
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_BRAVE_DEFAULT_IMAGES_OPTION_LABEL" desc="The label for choosing default images over super referral">
-    Brave default images
+    Growser default images
   </message>
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_TOOLBAR_SECTION" desc="The label for section containing settings related to toolbar">
     Toolbar
@@ -240,8 +240,8 @@
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_LEO" desc="The label for settings checkbox en/disabling autcomplete provider with Leo assistant">
     Leo AI Assistant
   </message>
-  <message name="IDS_SETTINGS_SHOW_BRAVE_NEWS_BUTTON_LABEL" desc="The label for the settings switch controlling whether the Brave News button is shown in the toolbar">
-    Show Brave News button
+  <message name="IDS_SETTINGS_SHOW_BRAVE_NEWS_BUTTON_LABEL" desc="The label for the settings switch controlling whether the Growser News button is shown in the toolbar">
+    Show Growser News button
   </message>
   <message name="IDS_SETTINGS_SHOW_LEO_BUTTON_LABEL" desc="The label for the settings switch controlling whether the Leo button is shown in the toolbar">
     Show Leo AI button
@@ -319,8 +319,8 @@
   <message name="IDS_SETTINGS_NEW_TAB" desc="The text label for the New Tab settings page">
     New Tab Page
   </message>
-  <message name="IDS_SETTINGS_NEW_TAB_BRAVE_REWARDS" desc="The label for Brave Rewards show/hide feature toggle">
-    Brave Rewards
+  <message name="IDS_SETTINGS_NEW_TAB_BRAVE_REWARDS" desc="The label for Growser Rewards show/hide feature toggle">
+    Growser Rewards
   </message>
   <message name="IDS_SETTINGS_NEW_TAB_NEW_TAB_PAGE_SHOWS" desc="The label for New Tab Page shows customization">
     New tab page shows
@@ -351,7 +351,7 @@
         Click Pin and confirm in the following Windows notification
       </message>
       <message name="IDS_SETTINGS_SHORTCUT_PINNED" desc="The label for pinned state description">
-        Brave is already pinned
+        Growser is already pinned
       </message>
     </if>
     <if expr="is_macosx">
@@ -362,7 +362,7 @@
         Dock
       </message>
       <message name="IDS_SETTINGS_SHORTCUT_PINNED" desc="The label for docked state description">
-        Brave is already in Dock
+        Growser is already in Dock
       </message>
     </if>
   </if>
@@ -383,19 +383,19 @@
   <message name="IDS_SETTINGS_SITE_SETTINGS_SHIELDS_DOWN" desc="Label for shields status down site settings.">
     Shields Down
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_TITLE" desc="The title for Brave shields section in settings">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_TITLE" desc="The title for Growser shields section in settings">
     Shields
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_TITLE" desc="The title for Brave shields Defaults sub-section in settings">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_TITLE" desc="The title for Growser shields Defaults sub-section in settings">
     Block trackers and ads which follow you across the web
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_1" desc="The description for Brave shields Defaults sub-section in settings">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_1" desc="The description for Growser shields Defaults sub-section in settings">
     These are the default Shields settings. They apply to all websites unless you change something in the Shields panel on a particular site. Changing these won't affect your existing per-site settings.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_2" desc="The description for Brave shields Defaults sub-section in settings.">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DESCRIPTION_2" desc="The description for Growser shields Defaults sub-section in settings.">
     This will block most ads on websites.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_SHOW_STATS_BLOCKED_BADGE_LABEL" desc="Default Brave show stats blocked badge control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_SHOW_STATS_BLOCKED_BADGE_LABEL" desc="Default Growser show stats blocked badge control setting label">
     Show the number of blocked items on the Shields icon
   </message>
   <message name="IDS_SETTINGS_DE_AMP_LABEL" desc="The label to activate De-AMP feature">
@@ -410,13 +410,13 @@
   <message name="IDS_SETTINGS_DEBOUNCE_SUB_LABEL" desc="The sub-label describing debounce feature">
     Enable support for bypassing top-level redirect tracking URLs.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_REDUCE_LANGUAGE_CONTROL_LABEL" desc="Default Brave reduce language control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_REDUCE_LANGUAGE_CONTROL_LABEL" desc="Default Growser reduce language control setting label">
     Prevent sites from fingerprinting me based on my language preferences
   </message>
   <message name="IDS_SETTINGS_BRAVE_SHIELDS_REDUCE_LANGUAGE_SUBITEM" desc="Description that shows under main toggle setting for reduce language control setting label">
     Enabling this setting reduces how much web sites can learn about your language preferences
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_AD_CONTROL_LABEL" desc="Default Brave block cross-site trackers control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_AD_CONTROL_LABEL" desc="Default Growser block cross-site trackers control setting label">
     Trackers &amp; ads blocking
   </message>
   <message name="IDS_SETTINGS_BLOCK_ADS_TRACKERS_AGGRESSIVE" desc="Select value">
@@ -428,10 +428,10 @@
   <message name="IDS_SETTINGS_ALLOW_ADS_TRACKERS" desc="Select value">
     Disabled
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_NO_SCRIPT_CONTROL_LABEL" desc="Default Brave script blocking control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_NO_SCRIPT_CONTROL_LABEL" desc="Default Growser script blocking control setting label">
     Block scripts
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_FINGERPRINTING_CONTROL_LABEL" desc="Default Brave fingerprinting control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_FINGERPRINTING_CONTROL_LABEL" desc="Default Growser fingerprinting control setting label">
     Block fingerprinting
   </message>
   <message name="IDS_SETTINGS_STANDARD_FINGERPRINTING" desc="Select value">
@@ -443,7 +443,7 @@
   <message name="IDS_SETTINGS_STRICT_FINGERPRINTING" desc="Select value">
     Strict, may break sites
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_HTTPS_UPGRADE_CONTROL_LABEL" desc="Default Brave https upgrade control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_HTTPS_UPGRADE_CONTROL_LABEL" desc="Default Growser https upgrade control setting label">
     Upgrade connections to HTTPS
   </message>
   <message name="IDS_SETTINGS_STANDARD_HTTPS_UPGRADE" desc="Select value">
@@ -455,7 +455,7 @@
   <message name="IDS_SETTINGS_STRICT_HTTPS_UPGRADE" desc="Select value">
     Strict
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_COOKIE_CONTROL_LABEL" desc="Default Brave cookies control setting label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_COOKIE_CONTROL_LABEL" desc="Default Growser cookies control setting label">
     Block cookies
   </message>
   <message name="IDS_SETTINGS_BRAVE_SHIELDS_COOKIE_CONTROL_BLOCK_ALL_DEPRECATED_LABEL" desc="Block all cookies deprecation warning">
@@ -470,13 +470,13 @@
   <message name="IDS_SETTINGS_BLOCK_ALL_COOKIES" desc="Select value">
     Block all cookies
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DEFAULT_VIEW_LABEL" desc="Default Brave view title label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_DEFAULT_VIEW_LABEL" desc="Default Growser view title label">
     Default view
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_SIMPLE_VIEW_LABEL" desc="Default Brave simple view title label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_SIMPLE_VIEW_LABEL" desc="Default Growser simple view title label">
     Simple view
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_ADVANCED_VIEW_LABEL" desc="Default Brave advanced view title label">
+  <message name="IDS_SETTINGS_BRAVE_SHIELDS_DEFAULTS_ADVANCED_VIEW_LABEL" desc="Default Growser advanced view title label">
     Advanced view
   </message>
 
@@ -612,109 +612,109 @@
     Shortcuts
   </message>
 
-  <!-- Settings / Brave Origin -->
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TITLE" desc="The title for the Brave Origin section in settings">
-    Brave Origin
+  <!-- Settings / Growser Origin -->
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TITLE" desc="The title for the Growser Origin section in settings">
+    Growser Origin
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESTART_NOTICE" desc="Notifies the user that a browser restart is needed for all Brave Origin changes to fully take effect">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESTART_NOTICE" desc="Notifies the user that a browser restart is needed for all Growser Origin changes to fully take effect">
     Some changes require a browser restart to fully take effect.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ADS_SECTION_TITLE" desc="The title for the 'ads' section of Brave Origin in settings">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ADS_SECTION_TITLE" desc="The title for the 'ads' section of Growser Origin in settings">
     Ads
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_REWARDS_TOGGLE_TITLE" desc="The title for toggling the 'Rewards' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_REWARDS_TOGGLE_TITLE" desc="The title for toggling the 'Rewards' feature on/off for Growser Origin">
     Rewards
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ANALYTICS_SECTION_TITLE" desc="The title for the 'analytics' section of Brave Origin in settings">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ANALYTICS_SECTION_TITLE" desc="The title for the 'analytics' section of Growser Origin in settings">
     Analytics
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_FEATURES_SECTION_TITLE" desc="The title for the 'features' section of Brave Origin in settings">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_FEATURES_SECTION_TITLE" desc="The title for the 'features' section of Growser Origin in settings">
     Features
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LEO_AI_TOGGLE_TITLE" desc="The title for toggling the 'Leo AI' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LEO_AI_TOGGLE_TITLE" desc="The title for toggling the 'Leo AI' feature on/off for Growser Origin">
     Leo AI
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LOCAL_AI_TOGGLE_TITLE" desc="The title for toggling the 'On-Device AI' master switch (history embeddings and any future on-device AI features) on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_LOCAL_AI_TOGGLE_TITLE" desc="The title for toggling the 'On-Device AI' master switch (history embeddings and any future on-device AI features) on/off for Growser Origin">
     On-Device AI
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_NEWS_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_NEWS_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for Growser Origin">
     News
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TALK_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TALK_TOGGLE_TITLE" desc="The title for toggling the 'News' feature on/off for Growser Origin">
     Talk
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WAYBACK_MACHINE_TOGGLE_TITLE" desc="The title for toggling the 'wayback machine' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WAYBACK_MACHINE_TOGGLE_TITLE" desc="The title for toggling the 'wayback machine' feature on/off for Growser Origin">
     Wayback Machine
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_SPEED_READER_TOGGLE_TITLE" desc="The title for toggling the 'speedreader' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_SPEED_READER_TOGGLE_TITLE" desc="The title for toggling the 'speedreader' feature on/off for Growser Origin">
     Speedreader
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_PLAYLIST_TOGGLE_TITLE" desc="The title for toggling the 'playlist' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_PLAYLIST_TOGGLE_TITLE" desc="The title for toggling the 'playlist' feature on/off for Growser Origin">
     Playlist
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_EMAIL_ALIASES_TOGGLE_TITLE" desc="The title for toggling the 'email aliases' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_EMAIL_ALIASES_TOGGLE_TITLE" desc="The title for toggling the 'email aliases' feature on/off for Growser Origin">
     Email Aliases
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WEB_DISCOVERY_PROJECT_TOGGLE_TITLE" desc="The title for toggling the 'web discovery project' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WEB_DISCOVERY_PROJECT_TOGGLE_TITLE" desc="The title for toggling the 'web discovery project' feature on/off for Growser Origin">
     Web Discovery Project
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_P3A_TOGGLE_TITLE" desc="The title for toggling the 'privacy preserving analytics' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_P3A_TOGGLE_TITLE" desc="The title for toggling the 'privacy preserving analytics' feature on/off for Growser Origin">
     Privacy preserving analytics
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_STATS_REPORTING_TOGGLE_TITLE" desc="The title for toggling the 'statistics reporting' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_STATS_REPORTING_TOGGLE_TITLE" desc="The title for toggling the 'statistics reporting' feature on/off for Growser Origin">
     Statistics reporting
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TOR_WINDOWS_TOGGLE_TITLE" desc="The title for toggling the 'tor windows' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_TOR_WINDOWS_TOGGLE_TITLE" desc="The title for toggling the 'tor windows' feature on/off for Growser Origin">
     Tor windows
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_VPN_TOGGLE_TITLE" desc="The title for toggling the 'vpn' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_VPN_TOGGLE_TITLE" desc="The title for toggling the 'vpn' feature on/off for Growser Origin">
     VPN
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WALLET_TOGGLE_TITLE" desc="The title for toggling the 'wallet' feature on/off for Brave Origin">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_WALLET_TOGGLE_TITLE" desc="The title for toggling the 'wallet' feature on/off for Growser Origin">
     Wallet
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_CROSS_PROFILE_SUB_LABEL" desc="The sub-label shown under Brave Origin toggles that apply browser-wide rather than to the current profile">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_CROSS_PROFILE_SUB_LABEL" desc="The sub-label shown under Growser Origin toggles that apply browser-wide rather than to the current profile">
     Affects all browser profiles
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESET_TO_DEFAULTS_TITLE" desc="The title for resetting the toggles for Brave Origin back to their default values">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_RESET_TO_DEFAULTS_TITLE" desc="The title for resetting the toggles for Growser Origin back to their default values">
     Reset to defaults
   </message>
 
-  <!-- Settings / Brave Origin Onboarding -->
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_TITLE" desc="The section title for the Brave Origin onboarding in settings">
-    Brave Origin
+  <!-- Settings / Growser Origin Onboarding -->
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_TITLE" desc="The section title for the Growser Origin onboarding in settings">
+    Growser Origin
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_HEADING_TITLE" desc="The heading title for the Brave Origin onboarding section">
-    Customize your browser while still supporting Brave
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_HEADING_TITLE" desc="The heading title for the Growser Origin onboarding section">
+    Customize your browser while still supporting Growser
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_DESCRIPTION" desc="The first paragraph describing Brave Origin in the onboarding section">
-    Brave Origin is a paid version of the browser for users who don't need all the features that support Brave as a business, but still want the privacy that only Brave offers. Origin users will continue to benefit from our industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements.
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_DESCRIPTION" desc="The first paragraph describing Growser Origin in the onboarding section">
+    Growser Origin is a paid version of the browser for users who don't need all the features that support Growser as a business, but still want the privacy that only Growser offers. Origin users will continue to benefit from our industry-leading privacy, adblock, and speed (via Shields), as well as regular software updates, Chromium patches, and security and privacy improvements.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_BUY_NOW" desc="The label for the Buy now button in Brave Origin onboarding">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_BUY_NOW" desc="The label for the Buy now button in Growser Origin onboarding">
     Buy now
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_RESTORE_PURCHASE" desc="The label for the button to restore a previous Brave Origin purchase">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_RESTORE_PURCHASE" desc="The label for the button to restore a previous Growser Origin purchase">
     Restore purchase
   </message>
-  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_LEARN_MORE" desc="The label for the Learn more link in Brave Origin onboarding">
+  <message name="IDS_SETTINGS_BRAVE_ORIGIN_ONBOARDING_LEARN_MORE" desc="The label for the Learn more link in Growser Origin onboarding">
     Learn more
   </message>
 
-  <!-- Settings / Brave Rewards -->
+  <!-- Settings / Growser Rewards -->
   <message name="IDS_SETTINGS_BRAVE_REWARDS_TITLE" desc="The text label for the Rewards settings page">
-    Brave Rewards
+    Growser Rewards
   </message>
   <message name="IDS_SETTINGS_BRAVE_REWARDS_DISABLED_LABEL" desc="The text label for the Rewards disabled state">
-    Brave Rewards is disabled
+    Growser Rewards is disabled
   </message>
   <message name="IDS_SETTINGS_BRAVE_REWARDS_DISABLED_SUB_LABEL" desc="The text sublabel for the Rewards disabled state">
     Open Rewards panel to enable and get started
   </message>
   <message name="IDS_SETTINGS_BRAVE_REWARDS_PAGE_LABEL" desc="The text label for the link to the Rewards settings page">
-    Open full Brave Rewards settings
+    Open full Growser Rewards settings
   </message>
-  <message name="IDS_SETTINGS_BRAVE_REWARDS_SHOW_BRAVE_REWARDS_BUTTON_LABEL" desc="The label for settings switch controlling the visibility of Brave Rewards button">
-    Show Brave Rewards button
+  <message name="IDS_SETTINGS_BRAVE_REWARDS_SHOW_BRAVE_REWARDS_BUTTON_LABEL" desc="The label for settings switch controlling the visibility of Growser Rewards button">
+    Show Growser Rewards button
   </message>
 
   <!-- Settings / Adblock-Only mode -->
@@ -725,13 +725,13 @@
     Use Adblock-Only mode
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_DESC" desc="The description for settings option to enable shields Adblock-Only mode">
-    Adblock-Only mode retains core ad blocking rules of Brave Shields. Warning: removes all privacy protections. Please note that for individual websites broken by Brave's privacy protections, you can set Shields to DOWN. This is an experimental mode. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    Adblock-Only mode retains core ad blocking rules of Growser Shields. Warning: removes all privacy protections. Please note that for individual websites broken by Growser's privacy protections, you can set Shields to DOWN. This is an experimental mode. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_ALERT_TITLE" desc="Title for the alert shown when Adblock-Only mode is enabled">
     Shields options are currently disabled.
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_ALERT_DESC" desc="Description for the alert shown when Adblock-Only mode is enabled">
-    Adblock-Only mode retains core ad blocking rules of Brave Shields and turns off privacy protections. If you would like to enable standard Shields, please disable this mode.
+    Adblock-Only mode retains core ad blocking rules of Growser Shields and turns off privacy protections. If you would like to enable standard Shields, please disable this mode.
   </message>
   <message name="IDS_SETTINGS_AD_BLOCK_ONLY_MODE_ALERT_TURN_OFF_BUTTON" desc="Alert button text to turn off Adblock-Only mode">
     Turn off Adblock-Only mode
@@ -754,13 +754,13 @@
 
   <!-- Settings / Privacy and security -->
   <message name="IDS_SETTINGS_COOKIE_CONTROLLED_BY_SHIELDS_HEADER_TEXT" desc="Text for the header explaining some cookies controlled by Shields settings.">
-    Some cookie settings are controlled by Brave Shields. You can see them &lt;a href="/content/braveShields"&gt;here&lt;/a&gt;.
+    Some cookie settings are controlled by Growser Shields. You can see them &lt;a href="/content/braveShields"&gt;here&lt;/a&gt;.
   </message>
   <message name="IDS_SETTINGS_BRAVE_BLOCK_COOKIES_LINK_ROW_LABEL" desc="This text is the label of a page. Here, it serves as a button that opens the new page.">
     Block cookies
   </message>
   <message name="IDS_SETTINGS_COOKIE_CONTROLLED_BY_SHIELDS_TOOLTIP_TEXT" desc="Text for the tooltip explaining cookies generated by Shields settings.">
-    This setting is controlled by Brave Shields.
+    This setting is controlled by Growser Shields.
   </message>
   <message name="IDS_SETTINGS_COOKIE_CONTROLLED_BY_GOOGLE_SIGN_IN_TOOLTIP_TEXT" desc="Text for the tooltip explaining cookies generated by Google Sign-in settings.">
     This setting is controlled by Google Sign-in.
@@ -793,7 +793,7 @@
     Local history retention
   </message>
   <message name="IDS_SETTINGS_HISTORY_RETENTION_SUB_LABEL" desc="Description for the setting that controls how long browsing history is retained">
-    How long Brave stores your browsing history locally
+    How long Growser stores your browsing history locally
   </message>
   <message name="IDS_SETTINGS_HISTORY_RETENTION_ONE_DAY" desc="Dropdown option that keeps browsing history for one day">
     1 day
@@ -824,7 +824,7 @@
     Automatically send diagnostic reports
   </message>
   <message name="IDS_BRAVE_DIAGNOSTIC_REPORTS_PREF_DESC" desc="The description of the checkbox to enable/disable sending diagnostic reports (crashes, hangs).">
-    Help improve Brave's product stability by automatically sending diagnostic reports when the Brave Browser crashes or freezes
+    Help improve Growser's product stability by automatically sending diagnostic reports when the Growser crashes or freezes
   </message>
   <!-- Request OTR -->
   <if expr="enable_request_otr">
@@ -849,7 +849,7 @@
       Show Privacy settings tuning notification on compatible sites
     </message>
     <message name="IDS_SETTINGS_PSST_SUB_LABEL" desc="Privacy settings tuning sub-label">
-      Allows Brave to automatically suggest (and adjust) site-specific privacy settings.
+      Allows Growser to automatically suggest (and adjust) site-specific privacy settings.
     </message>
   </if>
   <if expr="is_win">
@@ -857,7 +857,7 @@
       Block Microsoft Recall
     </message>
     <message name="IDS_SETTINGS_WINDOWS_RECALL_DISABLED_SUBLABEL" desc="Windows Recall setting sub-label">
-      Block the Recall feature on Microsoft Windows computers from automatically taking screenshots of any open Brave tabs.
+      Block the Recall feature on Microsoft Windows computers from automatically taking screenshots of any open Growser tabs.
     </message>
   </if>
   <!-- Data collection -->
@@ -869,8 +869,8 @@
   <message name="IDS_SETTINGS_BRAVE_ON_EXIT" desc="Clear Browsing Data dialog On exit tab label">
     Delete data on exit
   </message>
-  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA" desc="The label for the link to clear 'Brave Ads' data">
-    Clear Brave Ads data...
+  <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA" desc="The label for the link to clear 'Growser Ads' data">
+    Clear Growser Ads data...
   </message>
   <message name="IDS_SETTINGS_CLEAR_BRAVE_ADS_DATA_TOAST_LABEL" desc="The label for the toast shown after Brave Ads data is cleared">
     Brave Ads data cleared
@@ -879,7 +879,7 @@
     Couldn't clear Brave Ads data. Try again.
   </message>
   <message name="IDS_SETTINGS_RESET_REWARDS_DATA" desc="The label for opening rewards manage wallet dialog">
-    Reset Brave Rewards data...
+    Reset Growser Rewards data...
   </message>
 
   <!-- Settings / Privacy and security / Cookies and other site data -->
@@ -962,7 +962,7 @@
   <!-- Settings / Privacy and security / Security -->
   <!-- Safe browsing -->
   <message name="IDS_SETTINGS_BRAVE_SAFEBROWSING_STANDARD_BULLET_TWO" desc="Second bullet point under the safe browsing standard protection mode">
-    Checks URLs with a list of unsafe sites stored in Brave.
+    Checks URLs with a list of unsafe sites stored in Growser.
   </message>
   <message name="IDS_SETTINGS_BRAVE_SAFEBROWSING_NONE_DESC" desc="Description for safe browsing no protection mode">
     Does not protect you against dangerous websites, downloads, and extensions.
@@ -1044,55 +1044,55 @@
   </message>
 
   <!-- Settings / Sync -->
-  <message name="IDS_SETTINGS_BRAVE_SYNC_TITLE" desc="The title for Brave Sync in settings">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_TITLE" desc="The title for Growser Sync in settings">
     Sync
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_ACTION_LABEL" desc="Brave Sync setup action label">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_ACTION_LABEL" desc="Growser Sync setup action label">
     Start using sync
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_TITLE" desc="Title for the Brave Sync settings setup section">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_TITLE" desc="Title for the Growser Sync settings setup section">
     Sync Setup
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_SUBTITLE" desc="Subtitle for the Brave Sync settings setup section">
-    To start, you will need Brave installed on all the devices you plan to sync. Then, securely link them together with a sync code.
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETUP_SUBTITLE" desc="Subtitle for the Growser Sync settings setup section">
+    To start, you will need Growser installed on all the devices you plan to sync. Then, securely link them together with a sync code.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGE_ACTION_LABEL" desc="Brave Sync manage action label">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGE_ACTION_LABEL" desc="Growser Sync manage action label">
     Manage your synced devices
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_COULD_NOT_SYNC_ACTION_LABEL" desc="Could not sync devices action label. It is displayed in the case when Brave Sync could not decrypt code words and start work">
-    Could not sync Brave on your devices
+  <message name="IDS_SETTINGS_BRAVE_SYNC_COULD_NOT_SYNC_ACTION_LABEL" desc="Could not sync devices action label. It is displayed in the case when Growser Sync could not decrypt code words and start work">
+    Could not sync Growser on your devices
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGER_TITLE" desc="Brave Sync manager title">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_MANAGER_TITLE" desc="Growser Sync manager title">
     Sync Manager
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_TITLE" desc="Brave Sync settings title">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_TITLE" desc="Growser Sync settings title">
     Sync Settings
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_SUBTITLE" desc="Brave Sync settings subtitle">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_SETTINGS_SUBTITLE" desc="Growser Sync settings subtitle">
     Manage what information you would like to sync between devices. These settings only affect this device.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_TITLE" desc="Brave Sync device list title">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_TITLE" desc="Growser Sync device list title">
     Device List
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_SUBTITLE" desc="Brave Sync device list subtitle">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_SUBTITLE" desc="Growser Sync device list subtitle">
     The device list below includes all devices in your sync chain. Each device can be managed from any other device.
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_COLUMN" desc="Brave Sync device list table column title for device name">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_COLUMN" desc="Growser Sync device list table column title for device name">
     Device Name
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_THIS_DEVICE" desc="Brave Sync device list label for device which is the device the user is currently using">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_NAME_THIS_DEVICE" desc="Growser Sync device list label for device which is the device the user is currently using">
     <ph name="DEVICE_NAME">$1<ex>my-computer-1</ex></ph> (This Device)
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_LAST_ACTIVE_COLUMN" desc="Brave Sync device list table column title for last active date">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_LAST_ACTIVE_COLUMN" desc="Growser Sync device list table column title for last active date">
     Last Active
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_REMOVE_COLUMN" desc="Brave Sync device list table column title for remove other device buttons">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_DEVICE_LIST_REMOVE_COLUMN" desc="Growser Sync device list table column title for remove other device buttons">
     Remove
   </message>
-  <message name="IDS_BRAVE_SYNC_SETUP_TITLE" desc="The Brave Sync title.">
+  <message name="IDS_BRAVE_SYNC_SETUP_TITLE" desc="The Growser Sync title.">
     Sync Setup
   </message>
-  <message name="IDS_SETTINGS_BRAVE_SYNC_WORD_COUNT" desc="Text for Brave Sync word count message.">
+  <message name="IDS_SETTINGS_BRAVE_SYNC_WORD_COUNT" desc="Text for Growser Sync word count message.">
     Word count: <ph name="WORD_COUNT">$1<ex>24</ex></ph>
   </message>
   <message name="IDS_SETTINGS_BRAVE_SYNC_COPIED_TEXT" desc="The success state telling the user that a secret code was copied to the clipboard">
@@ -1105,7 +1105,7 @@
     There was an error displaying the QR code, please refresh and try again.
   </message>
   <message name="IDS_BRAVE_SYNC_SETUP_DESCRIPTION" desc="The Sync phrase explaining what happens when you start a new sync chain. Appears when sync is disabled.">
-    To start, you will need Brave installed on all the devices you plan to sync. To chain them together, start a sync chain that you will use to securely link all of your devices together.
+    To start, you will need Growser installed on all the devices you plan to sync. To chain them together, start a sync chain that you will use to securely link all of your devices together.
   </message>
   <message name="IDS_BRAVE_SYNC_START_NEW_CHAIN_BUTTON" desc="The Sync button that triggers a modal to start a new sync chian">
     Start a new Sync Chain
@@ -1126,7 +1126,7 @@
     Sync Chain QR Code
   </message>
   <message name="IDS_BRAVE_SYNC_SCAN_CODE_DESCRIPTION_PARTIAL_1" desc="The Sync instructions for the `scan sync code` modal partial phrase (1)">
-    On your mobile device, navigate to Brave Sync in the Settings panel and click the button
+    On your mobile device, navigate to Growser Sync in the Settings panel and click the button
   </message>
   <message name="IDS_BRAVE_SYNC_SCAN_CODE_DESCRIPTION_PARTIAL_2" desc="The Sync instructions for the `scan sync code` modal partial phrase (2)">
     “Scan Sync Code”.
@@ -1138,7 +1138,7 @@
     Sync Chain Code
   </message>
   <message name="IDS_BRAVE_SYNC_VIEW_CODE_DESCRIPTION_PARTIAL_1" desc="The Sync instructions for the `view sync code` modal partial phrase (1)">
-    On your target computer, navigate to Brave Sync in settings and click the button
+    On your target computer, navigate to Growser Sync in settings and click the button
   </message>
   <message name="IDS_BRAVE_SYNC_VIEW_CODE_DESCRIPTION_PARTIAL_2" desc="The Sync instructions for the `view sync code` modal partial phrase (2)">
     “I have a Sync Code”.
@@ -1183,7 +1183,7 @@
     Internal account delete error
   </message>
   <message name="IDS_BRAVE_SYNC_CODE_FROM_DEPRECATED_VERSION" desc="Text for error when trying to use old version sync code after v1 sunset date.">
-    This code was generated by a deprecated version of Brave, please upgrade your other device first
+    This code was generated by a deprecated version of Growser, please upgrade your other device first
   </message>
   <message name="IDS_BRAVE_SYNC_CODE_EXPIRED" desc="Text for error when trying to use the sync code which has expired.">
     This code has expired. Please generate a new one on your other device and try again.
@@ -1201,17 +1201,17 @@
     Are you sure you want to remove the selected device from the sync chain?
   </message>
   <message name="IDS_BRAVE_SYNC_FINAL_SECURITY_WARNING_TEXT" desc="Confirmation message prompt to make sure the user aware his data will be shared with other devices in chain">
-    Warning: this will share your Brave data, including potentially your passwords, with the device that generated these code words.
+    Warning: this will share your Growser data, including potentially your passwords, with the device that generated these code words.
 
     Please double check that these code words were generated by a device that you own.
 
     Are you sure you want to do this?
   </message>
-  <message name="IDS_BRAVE_SYNC_PASSPHRASE_DECRYPTION_ERROR_MESSAGE" desc="Warning message that informs user about Brave Sync is not running and browser needs to have access to secure OS passwords store">
-    Brave could not access your operating system's safe storage. This is what's used to secure data such as passwords and cookies; it's also required for Brave Sync to connect your browser profile between devices. This means Brave Sync is not running. To resolve this issue, please see the <ph name="BEGIN_LINK_SYNC_GUIDE">&lt;a target="_blank" href="$1"&gt;</ph>Brave Sync troubleshooting guide<ph name="END_LINK_SYNC_GUIDE">&lt;/a&gt;</ph>.
+  <message name="IDS_BRAVE_SYNC_PASSPHRASE_DECRYPTION_ERROR_MESSAGE" desc="Warning message that informs user about Growser Sync is not running and browser needs to have access to secure OS passwords store">
+    Growser could not access your operating system's safe storage. This is what's used to secure data such as passwords and cookies; it's also required for Growser Sync to connect your browser profile between devices. This means Growser Sync is not running. To resolve this issue, please see the <ph name="BEGIN_LINK_SYNC_GUIDE">&lt;a target="_blank" href="$1"&gt;</ph>Growser Sync troubleshooting guide<ph name="END_LINK_SYNC_GUIDE">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_BRAVE_SYNC_PASSPHRASE_DECRYPTION_SS_UNLOCKED_ERROR_MESSAGE" desc="Warning">
-    It looks like the sync encryption key is different from the one used when you first set up Brave Sync. The easiest fix here is to reset and re-join the sync chain using the passphrase from one of your other synced devices.
+    It looks like the sync encryption key is different from the one used when you first set up Growser Sync. The easiest fix here is to reset and re-join the sync chain using the passphrase from one of your other synced devices.
   </message>
   <message name="IDS_BRAVE_SYNC_LEAVE_AND_REJOIN_THE_CHAIN_BUTTON" desc="Button which does reset the sync and offers to re-join the sync chain">
     Reset and re-join sync chain
@@ -1223,7 +1223,7 @@
     Permanently delete account
   </message>
   <message name="IDS_BRAVE_SYNC_DELETE_ACCOUNT_DESCRIPTION_PARTIAL_1" desc="">
-    Deleting your account will remove your encrypted data from Brave servers and disable Sync on all of your connected devices.
+    Deleting your account will remove your encrypted data from Growser servers and disable Sync on all of your connected devices.
   </message>
   <message name="IDS_BRAVE_SYNC_DELETE_ACCOUNT_DESCRIPTION_PARTIAL_2" desc="">
     It will not however delete the data that is stored locally on those devices.
@@ -1256,7 +1256,7 @@
     Improve search suggestions
   </message>
   <message name="IDS_SETTINGS_BRAVE_SEARCH_ENGINES_SEARCH_SUGGEST_DESC" desc="The desc of the option to enable/disable sending omnibox input to the user's default search engine to get additional suggestions.">
-    When on, Brave sends what you type in the address bar or search box to your default search engine to get better suggestions. When off, Brave only shows suggestions generated on your device. This is always off in private windows.
+    When on, Growser sends what you type in the address bar or search box to your default search engine to get better suggestions. When off, Growser only shows suggestions generated on your device. This is always off in private windows.
   </message>
   <message name="IDS_SETTINGS_NORMAL_PROFILE_SEARCH_EXPLANATION" desc="Explanation for the search engine setting.">
     Search engine used in the address bar.
@@ -1273,18 +1273,18 @@
   <message name="IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_TITLE" desc="Name of the settings page which displays search engine preferences for private profiles.">
     Search engine for Private Windows
   </message>
-  <message name="IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_CHOICE_SETTINGS_CONFIRMATION_TOAST_LABEL" desc="This confirmation message is intended to help users understand that their choice is now saved. It appears after the user changes their default private search engine in Brave settings. (A search engine provides answers to search queries; this is different from a browser, which displays web pages. A search engine powers many experiences within a browser.)">
-    <ph name="SEARCH_ENGINE_NAME">$1<ex>Brave</ex></ph> is now your default search engine for private windows
+  <message name="IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_CHOICE_SETTINGS_CONFIRMATION_TOAST_LABEL" desc="This confirmation message is intended to help users understand that their choice is now saved. It appears after the user changes their default private search engine in Growser settings. (A search engine provides answers to search queries; this is different from a browser, which displays web pages. A search engine powers many experiences within a browser.)">
+    <ph name="SEARCH_ENGINE_NAME">$1<ex>Growser</ex></ph> is now your default search engine for private windows
   </message>
-  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_DESCRIPTION" desc="The description shown with the Brave Search radio button in the search engines list.">
-    Brave Search is recommended for the best browsing experience while using Brave browser.
+  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_DESCRIPTION" desc="The description shown with the Growser Search radio button in the search engines list.">
+    Growser Search is recommended for the best browsing experience while using Growser browser.
   </message>
-  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_RECOMMENDED" desc="The label shown in the Brave Search radio button in the search engines list.">
+  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_RECOMMENDED" desc="The label shown in the Growser Search radio button in the search engines list.">
     Recommended
   </message>
 
   <!-- Settings / Extensions -->
-  <message name="IDS_SETTINGS_BRAVE_DEFAULT_EXTENSIONS_TITLE" desc="The title for Brave default extensions in settings">
+  <message name="IDS_SETTINGS_BRAVE_DEFAULT_EXTENSIONS_TITLE" desc="The title for Growser default extensions in settings">
     Extensions
   </message>
   <message name="IDS_SETTINGS_GOOGLE_LOGIN_FOR_EXTENSIONS" desc="Label for a switch control which allows Google login for extension">
@@ -1396,10 +1396,10 @@
     Manifest V2 extensions
   </message>
   <message name="IDS_SETTINGS_MANAGE_EXTENSIONS_V2_SUBLABEL" desc="The sub label of manage v2 extensions link in settings">
-    The following Manifest V2 extensions will be removed from the Chrome Web Store, but are still supported in Brave. Toggle to download and install, or to uninstall.
+    The following Manifest V2 extensions will be removed from the Chrome Web Store, but are still supported in Growser. Toggle to download and install, or to uninstall.
   </message>
   <message name="IDS_SETTINGS_MANAGE_EXTENSIONS_V2_WARN" desc="The warning message in v2 extensions in settings.">
-    Brave hosts these Manifest V2 extensions on Brave servers, but does not review or verify their content, security, or behavior. Please see each extension's official page for help. Read Brave's plans for Manifest V2 <ph name="BEGIN_LINK">&lt;a target="_blank" rel="noreferrer" href="$1"&gt;</ph>here<ph name="END_LINK">&lt;/a&gt;</ph>.
+    Growser hosts these Manifest V2 extensions on Growser servers, but does not review or verify their content, security, or behavior. Please see each extension's official page for help. Read Growser's plans for Manifest V2 <ph name="BEGIN_LINK">&lt;a target="_blank" rel="noreferrer" href="$1"&gt;</ph>here<ph name="END_LINK">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_SETTINGS_MANAGE_EXTENSIONS_V2_TOAST_CONFIRM" desc="The label of the error toast button in settings">
     Close
@@ -1452,7 +1452,7 @@
     Default Cardano wallet
   </message>
   <message name="IDS_BRAVE_WALLET_WEB3_PROVIDER_BRAVE" desc="Select control value for which web3 provider to use">
-    Brave Wallet
+    Growser Wallet
   </message>
   <message name="IDS_BRAVE_WALLET_WEB3_PROVIDER_ASK" desc="Select control value for which web3 provider to use">
     Ask
@@ -1461,7 +1461,7 @@
     Extensions (no fallback)
   </message>
   <message name="IDS_BRAVE_WALLET_WEB3_PROVIDER_BRAVE_PREFER_EXTENSIONS" desc="Select control value for which web3 provider to use">
-    Extensions (Brave Wallet fallback)
+    Extensions (Growser Wallet fallback)
   </message>
   <message name="IDS_SETTINGS_DEFAULT_BASE_CURRENCY_DESC" desc="The default base currency to use for the wallet prices">
     Default base currency
@@ -1469,8 +1469,8 @@
   <message name="IDS_SETTINGS_DEFAULT_BASE_CRYPTOCURRENCY_DESC" desc="The default base cryptocurrency to use for the wallet prices">
     Default base cryptocurrency
   </message>
-  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_ICON_ON_TOOLBAR" desc="The description for showing the Brave wallet panel icon on the toolbar">
-    Show Brave Wallet button
+  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_ICON_ON_TOOLBAR" desc="The description for showing the Growser wallet panel icon on the toolbar">
+    Show Growser Wallet button
   </message>
   <message name="IDS_SETTINGS_ENABLE_NFT_DISCOVERY_LABEL" desc="The label for enabling NFT discovery">
     Enable NFT discovery
@@ -1479,16 +1479,16 @@
     Automatically add NFTs you own to the Wallet using third party APIs.
   </message>
   <message name="IDS_SETTINGS_ENABLE_BRAVE_WALLET_IN_PRIVATE_WINDOWS_LABEL" desc="The label for enabling private window support">
-    Enable Brave Wallet in Private Windows
+    Enable Growser Wallet in Private Windows
   </message>
   <message name="IDS_SETTINGS_ENABLE_BRAVE_WALLET_IN_PRIVATE_WINDOWS_DESC" desc="The description for enabling private window support">
     Warning: Reusing a wallet address in a private window session can enable a site to link a private window session to a non-private window session
   </message>
-  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES" desc="The title for the amount of minutes it takes for the Brave Wallet to automatically lock">
-    Automatically lock Brave Wallet
+  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES" desc="The title for the amount of minutes it takes for the Growser Wallet to automatically lock">
+    Automatically lock Growser Wallet
   </message>
-  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES_DESC" desc="The description for the amount of minutes it takes for the Brave Wallet to automatically lock">
-    The number of minutes to wait until the Brave Wallet is automatically locked
+  <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES_DESC" desc="The description for the amount of minutes it takes for the Growser Wallet to automatically lock">
+    The number of minutes to wait until the Growser Wallet is automatically locked
   </message>
   <message name="IDS_SETTINGS_WALLET_NETWORKS_ITEM" desc="The label for opening wallet networks list">
     Wallet Networks
@@ -1555,7 +1555,7 @@
   <message name="IDS_SETTINGS_WALLET_POLKADOT_NETWORK_LIST_TITLE" desc="The title of the list with wallet Polkadot networks">
     Polkadot networks
   </message>
-  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_TEST_NETWORKS" desc="The description for showing the Brave wallet test networks">
+  <message name="IDS_SETTINGS_SHOW_BRAVE_WALLET_TEST_NETWORKS" desc="The description for showing the Growser wallet test networks">
     Show test networks
   </message>
 
@@ -1671,7 +1671,7 @@
   </message>
 
   <!-- Settings / Leo Assistant -->
-  <message name="IDS_SETTINGS_LEO_ASSISTANT" desc="Title for an item in the 'Leo Assistant' section of Brave Settings">
+  <message name="IDS_SETTINGS_LEO_ASSISTANT" desc="Title for an item in the 'Leo Assistant' section of Growser Settings">
     Leo
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_SHOW_ICON_ON_TOOLBAR_LABEL" desc="The text for settings option">
@@ -1708,7 +1708,7 @@
     Clear Leo data
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_RESET_AND_CLEAR_DATA_CONFIRMATION_LABEL" desc="The confirmation window message for reset option">
-    Resetting Leo AI will require you to opt-in to use Brave Leo AI in the future and will also clear your chat history, customizations, and memories. Clearing your chat history will delete all your previous conversations with Brave Leo AI. This action can't be undone.
+    Resetting Leo AI will require you to opt-in to use Growser Leo AI in the future and will also clear your chat history, customizations, and memories. Clearing your chat history will delete all your previous conversations with Growser Leo AI. This action can't be undone.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_AUTOCOMPLETE_LINK" desc="A label for a link to settings page to adjust autocomplete suggestion based on Leo">
     Adjust autocomplete suggestions
@@ -1723,10 +1723,10 @@
     About Leo AI
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_DESC_1" desc="Description for the about Leo assistant section">
-    Brave Leo provides privacy-first AI chat and other AI-powered interfaces in the browser. Leo never learns from your data or uses it for model training. All requests are proxied through an anonymizing server.
+    Growser Leo provides privacy-first AI chat and other AI-powered interfaces in the browser. Leo never learns from your data or uses it for model training. All requests are proxied through an anonymizing server.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_DESC_2" desc="Description for learning more about Leo privacy policy">
-    Read more about how Brave protects your use of AI in Leo's privacy policy. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    Read more about how Growser protects your use of AI in Leo's privacy policy. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_MODEL_SELECTION_LABEL" desc="Label for selecting default model">
     Default model for new conversations
@@ -1798,7 +1798,7 @@
     The maximum number of tokens the model can process in a single interaction. A larger context size allows the model to handle longer conversations. Different models support different maximum context sizes.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_PROXY_NOTE" desc="A note for users when adding model server info">
-    Brave doesn't proxy these requests, please read privacy terms of the chosen provider.
+    Growser doesn't proxy these requests, please read privacy terms of the chosen provider.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_ENDPOINT_ERROR" desc="An error note for users when url is invalidated">
     Non-local endpoints should employ the HTTPS protocol for secure data transmission.
@@ -1813,7 +1813,7 @@
     Private IPs Not Allowed
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_PRIVATE_IP_NOT_ALLOWED_BODY" desc="Body text for private IP not allowed dialog">
-    The address you entered appears to be from a private network—like your router or a local server. Brave blocks these automatically to keep you safe, but you can enable them if you're confident it's secure.
+    The address you entered appears to be from a private network—like your router or a local server. Growser blocks these automatically to keep you safe, but you can enable them if you're confident it's secure.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_PRIVATE_IP_NOT_ALLOWED_INSTRUCTIONS" desc="Instructions on how to enable private IPs">
     To proceed, visit brave://flags/, search for "brave-ai-chat-allow-private-ips," and enable the feature. Once enabled, you can use private network addresses in Leo settings.
@@ -1949,14 +1949,14 @@
   </message>
 
   <!-- Settings / Survey Panelist -->
-  <message name="IDS_SETTINGS_SURVEY_PANELIST" desc="Title for an item in the 'Survey Panelist' section of Brave Settings">
+  <message name="IDS_SETTINGS_SURVEY_PANELIST" desc="Title for an item in the 'Survey Panelist' section of Growser Settings">
     Survey Panelist
   </message>
   <message name="IDS_SETTINGS_SURVEY_PANELIST_LABEL" desc="The text for settings option to enable survey panelist">
-    Allow Brave surveys
+    Allow Growser surveys
   </message>
   <message name="IDS_SETTINGS_SURVEY_PANELIST_DESC" desc="The description for settings option to enable survey panelist">
-    Allows Brave to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    Allows Growser to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
 
   <!-- Settings / Playlist -->
@@ -1993,7 +1993,7 @@
   </message>
   <if expr="not is_android">
     <message name="IDS_BRAVE_AVATAR_LABEL_56" desc="The label for the avatar_edgy_brave.png avatar.">
-      Avatar Edgy Brave
+      Avatar Edgy Growser
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_57" desc="The label for the avatar_edgy_ocean.png avatar.">
       Avatar Edgy Ocean
@@ -2014,7 +2014,7 @@
       Avatar Paladin Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_63" desc="The label for the avatar_paladin_brave.png avatar.">
-      Avatar Paladin Brave
+      Avatar Paladin Growser
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_64" desc="The label for the avatar_paladin_ocean.png avatar.">
       Avatar Paladin Ocean
@@ -2035,7 +2035,7 @@
       Avatar Gleam Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_70" desc="The label for the avatar_gleam_brave.png avatar.">
-      Avatar Gleam Brave
+      Avatar Gleam Growser
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_71" desc="The label for the avatar_gleam_ocean.png avatar.">
       Avatar Gleam Ocean
@@ -2056,7 +2056,7 @@
       Avatar Oval Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_77" desc="The label for the avatar_oval_brave.png avatar.">
-      Avatar Oval Brave
+      Avatar Oval Growser
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_78" desc="The label for the avatar_oval_ocean.png avatar.">
       Avatar Oval Ocean
@@ -2077,7 +2077,7 @@
       Avatar Bonbon Rewards
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_84" desc="The label for the avatar_bonbon_brave.png avatar.">
-      Avatar Bonbon Brave
+      Avatar Bonbon Growser
     </message>
     <message name="IDS_BRAVE_AVATAR_LABEL_85" desc="The label for the avatar_bonbon_ocean.png avatar.">
       Avatar Bonbon Ocean
