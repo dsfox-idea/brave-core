@@ -220,15 +220,11 @@ TEST_F(SidebarModelTest, ActiveIndexChangedAfterItemAdded) {
 
 // Check that the expected item is top-most.
 TEST_F(SidebarModelTest, TopItemTest) {
-  // growser: Leo (kChatUI) и Talk (kBraveTalk) убраны из боковой панели,
-  // поэтому первым идёт Wallet (когда brave_wallet::IsAllowed()) или Bookmarks.
+  // growser: Leo (kChatUI), Talk (kBraveTalk) и Wallet (kWallet) убраны из панели,
+  // поэтому первым идёт Bookmarks.
   const auto first_item = service()->items()[0];
-  EXPECT_TRUE(first_item.built_in_item_type ==
-                  SidebarItem::BuiltInItemType::kWallet ||
-              first_item.built_in_item_type ==
-                  SidebarItem::BuiltInItemType::kBookmarks)
-      << "unexpected top sidebar item: "
-      << static_cast<int>(first_item.built_in_item_type);
+  EXPECT_EQ(first_item.built_in_item_type,
+            SidebarItem::BuiltInItemType::kBookmarks);
 }
 
 TEST(SidebarUtilTest, SidebarShowOptionsDefaultTest) {
