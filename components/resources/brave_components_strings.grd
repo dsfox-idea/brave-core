@@ -918,8 +918,10 @@
       <part file="brave_news_strings.grdp" />
       <part file="commands.grdp" />
       <part file="speedreader_strings.grdp" />
-      <part file="ai_chat_prompts.grdp" />
-      <part file="ai_chat_ui_strings.grdp" />
+      <if expr="enable_ai_chat">
+        <part file="ai_chat_prompts.grdp" />
+        <part file="ai_chat_ui_strings.grdp" />
+      </if>
       <if expr="enable_brave_ai_chat_agent_profile">
         <part file="ai_chat_agent_ntp_strings.grdp" />
       </if>
