@@ -11,7 +11,8 @@
 namespace brave_rewards {
 
 void RegisterProfilePrefs(PrefRegistrySimple* registry) {
-  registry->RegisterBooleanPref(prefs::kShowLocationBarButton, true);
+  // growser: кнопка Rewards (BAT) в омнибоксе скрыта по умолчанию.
+  registry->RegisterBooleanPref(prefs::kShowLocationBarButton, false);
   registry->RegisterStringPref(prefs::kNotifications, "");
   registry->RegisterTimeDeltaPref(prefs::kNotificationTimerInterval,
                                   base::Days(1));

@@ -49,9 +49,6 @@ struct SidebarItem {
   // Count of built-in items based on enabled features.
   static constexpr size_t kBuiltInItemsCount =
       3  // kBookmarks, kReadingList, kHistory
-#if BUILDFLAG(ENABLE_BRAVE_WALLET)
-      + 1  // kWallet
-#endif
 #if BUILDFLAG(ENABLE_PLAYLIST)
       + 1  // kPlaylist
 #endif
