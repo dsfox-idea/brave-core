@@ -17,7 +17,7 @@ std::u16string FormatOriginForSecurityDisplay(
     const url::Origin& origin,
     const SchemeDisplay scheme_display) {
   const url::Origin updated_origin = url::Origin::CreateFromNormalizedTuple(
-      origin.scheme() == "chrome" ? "brave" : origin.scheme(), origin.host(),
+      origin.scheme() == "chrome" ? "growser" : origin.scheme(), origin.host(),
       origin.port());
   return FormatOriginForSecurityDisplay_ChromiumImpl(updated_origin,
                                                      scheme_display);
