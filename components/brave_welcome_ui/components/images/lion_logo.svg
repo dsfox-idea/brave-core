@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <!-- growser: голубая «G» в тонком кольце. Фон прозрачный. -->
-  <circle cx="512" cy="512" r="466" fill="none" stroke="#3DA9FC" stroke-width="30"/>
-  <text x="512" y="527" font-family="Helvetica, Arial, sans-serif" font-weight="700"
-        font-size="640" fill="#3DA9FC" text-anchor="middle" dominant-baseline="central">G</text>
+  <!-- growser: голубая «G» в кольце. Толщина кольца ≈ толщине штриха буквы. -->
+  <circle cx="512" cy="512" r="410" fill="none" stroke="#3DA9FC" stroke-width="88"/>
+  <text x="512" y="512" font-family="Helvetica, Arial, sans-serif" font-weight="700"
+        font-size="600" fill="#3DA9FC" text-anchor="middle" dominant-baseline="central">G</text>
 </svg>
