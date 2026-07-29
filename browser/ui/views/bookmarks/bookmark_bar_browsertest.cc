@@ -98,15 +98,9 @@ class BookmarkBarTest : public InProcessBrowserTest {
 };
 
 IN_PROC_BROWSER_TEST_F(BookmarkBarTest, InstructionsViewTest) {
-  EXPECT_TRUE(GetInstructionView()->GetVisible());
-  InstructionViewVisibilityObserver observer(GetInstructionView());
-
-  bookmarks::BookmarkModel* model =
-      BookmarkModelFactory::GetForBrowserContext(browser()->profile());
-  model->AddURL(model->bookmark_bar_node(), 0, u"bookmark",
-                GURL("http://example.com"));
-  observer.Wait();
-  EXPECT_FALSE(GetInstructionView()->GetVisible());
+  // growser: промо импорта закладок скрыто всегда (#17) — вью не создаётся
+  // (show_instructions == false в bookmark_bar_view.cc).
+  EXPECT_EQ(nullptr, GetInstructionView());
 }
 
 IN_PROC_BROWSER_TEST_F(BookmarkBarTest, AllBookmarksButtonVisibility) {
