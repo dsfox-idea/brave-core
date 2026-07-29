@@ -144,6 +144,7 @@ void BraveLaunchShimForTesting(const base::FilePath& shim_path,  // IN-TEST
                                ShimLaunchedCallback launched_callback,
                                ShimTerminatedCallback terminated_callback,
                                const base::FilePath& chromium_path) {
+  LOG(ERROR) << "BRAVE-SHIM-PROBE: LaunchShimForTesting";
   base::CommandLine command_line = BuildCommandLineForShimLaunch();
   command_line.AppendSwitch(app_mode::kLaunchedForTest);
   command_line.AppendSwitch(app_mode::kIsNormalLaunch);
@@ -195,6 +196,7 @@ bool BraveLaunchTheFirstShimThatWorksOnFileThread(
   if (!base::CommandLine::ForCurrentProcess()->HasSwitch(switches::kTestType)) {
     return false;
   }
+  LOG(ERROR) << "BRAVE-SHIM-PROBE: LaunchTheFirstShimThatWorks";
   base::Process process = LaunchShimDirectly(shim_path, command_line);
   if (process.IsValid()) {
     RunAppLaunchCallbacksForDirectLaunch(std::move(process),
