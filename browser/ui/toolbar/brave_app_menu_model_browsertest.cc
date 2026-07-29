@@ -174,15 +174,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
 #if BUILDFLAG(ENABLE_TOR)
       IDC_NEW_OFFTHERECORD_WINDOW_TOR,
 #endif
-#if BUILDFLAG(ENABLE_AI_CHAT)
-      IDC_TOGGLE_AI_CHAT,
-#endif
-#if BUILDFLAG(ENABLE_BRAVE_WALLET)
-      IDC_SHOW_BRAVE_WALLET,
-#endif
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-      IDC_SHOW_BRAVE_VPN_PANEL,
-#endif
+      // growser: Leo/Wallet/VPN убраны из меню (#27) — см. disabled-список ниже.
 #if defined(TOOLKIT_VIEWS)
       IDC_SIDEBAR_SHOW_OPTION_MENU,
 #endif
@@ -203,6 +195,16 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
   std::vector<int> commands_disabled_for_normal_profile = {
       IDC_NEW_TOR_CONNECTION_FOR_SITE,
       IDC_SAVED_TAB_GROUPS_MENU,
+      // growser: Leo/Wallet/VPN убраны из главного меню (#27).
+#if BUILDFLAG(ENABLE_AI_CHAT)
+      IDC_TOGGLE_AI_CHAT,
+#endif
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)
+      IDC_SHOW_BRAVE_WALLET,
+#endif
+#if BUILDFLAG(ENABLE_BRAVE_VPN)
+      IDC_SHOW_BRAVE_VPN_PANEL,
+#endif
   };
   CheckCommandsAreInOrderInMenuModel(browser(),
                                      commands_in_order_for_normal_profile);
@@ -232,9 +234,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
 #if BUILDFLAG(ENABLE_TOR)
       IDC_NEW_OFFTHERECORD_WINDOW_TOR,
 #endif
-#if BUILDFLAG(ENABLE_BRAVE_WALLET)
-      IDC_SHOW_BRAVE_WALLET,
-#endif
+      // growser: Wallet убран из меню (#27).
 #if defined(TOOLKIT_VIEWS)
       IDC_SIDEBAR_SHOW_OPTION_MENU,
 #endif
@@ -253,6 +253,10 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
   std::vector<int> commands_disabled_for_private_profile = {
       IDC_NEW_TOR_CONNECTION_FOR_SITE,
       IDC_RECENT_TABS_MENU,
+      // growser: Wallet/VPN убраны из меню (#27).
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)
+      IDC_SHOW_BRAVE_WALLET,
+#endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
       IDC_SHOW_BRAVE_VPN_PANEL,
 #endif
@@ -338,9 +342,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
       IDC_NEW_WINDOW,
       IDC_NEW_INCOGNITO_WINDOW,
       IDC_NEW_OFFTHERECORD_WINDOW_TOR,
-#if BUILDFLAG(ENABLE_BRAVE_WALLET)
-      IDC_SHOW_BRAVE_WALLET,
-#endif
+      // growser: Wallet убран из меню (#27).
       IDC_BOOKMARKS_MENU,
       IDC_SHOW_DOWNLOADS,
       IDC_EXTENSIONS_SUBMENU,
@@ -355,6 +357,10 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
   std::vector<int> commands_disabled_for_tor_profile = {
       IDC_RECENT_TABS_MENU,
       IDC_TOGGLE_AI_CHAT,
+      // growser: Wallet убран из меню (#27).
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)
+      IDC_SHOW_BRAVE_WALLET,
+#endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
       IDC_SHOW_BRAVE_VPN_PANEL,
 #endif
@@ -372,30 +378,18 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 // Check vpn menu based on purchased status.
 IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, BraveVPNMenuTest) {
-  std::vector<int> commands_enabled_for_non_purchased = {
+  // growser: VPN убран из главного меню (#27) — пунктов VPN нет ни для
+  // некупленного, ни для купленного статуса.
+  std::vector<int> vpn_commands = {
       IDC_SHOW_BRAVE_VPN_PANEL,
-  };
-  std::vector<int> commands_disabled_for_non_purchased = {
       IDC_BRAVE_VPN_MENU,
   };
 
   SetPurchasedUserForBraveVPN(browser(), false);
-  CheckCommandsAreInOrderInMenuModel(browser(),
-                                     commands_enabled_for_non_purchased);
-  CheckCommandsAreDisabledInMenuModel(browser(),
-                                      commands_disabled_for_non_purchased);
-
-  std::vector<int> commands_enabled_for_purchased = {
-      IDC_BRAVE_VPN_MENU,
-  };
-  std::vector<int> commands_disabled_for_purchased = {
-      IDC_SHOW_BRAVE_VPN_PANEL,
-  };
+  CheckCommandsAreDisabledInMenuModel(browser(), vpn_commands);
 
   SetPurchasedUserForBraveVPN(browser(), true);
-  CheckCommandsAreInOrderInMenuModel(browser(), commands_enabled_for_purchased);
-  CheckCommandsAreDisabledInMenuModel(browser(),
-                                      commands_disabled_for_purchased);
+  CheckCommandsAreDisabledInMenuModel(browser(), vpn_commands);
 }
 #endif
 

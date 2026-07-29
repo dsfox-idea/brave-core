@@ -24,6 +24,7 @@
 #include "brave/components/ai_chat/core/common/ai_chat_urls.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "brave/components/ai_chat/core/common/mojom/common.mojom.h"
+#include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/constants/brave_paths.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/renderer_context_menu/render_view_context_menu.h"
@@ -136,6 +137,11 @@ class AIChatRenderViewContextMenuBrowserTest : public InProcessBrowserTest {
     https_server_.ServeFilesFromDirectory(test_data_dir.AppendASCII("ai_chat"));
     https_server_.ServeFilesFromDirectory(test_data_dir.AppendASCII("leo"));
     ASSERT_TRUE(https_server_.Start());
+
+    // growser: подменю Leo в контекст-меню скрыто по умолчанию (#27) —
+    // включаем явно, чтобы тесты проверяли поведение при доступном Leo.
+    browser()->profile()->GetPrefs()->SetBoolean(
+        ai_chat::prefs::kBraveAIChatContextMenuEnabled, true);
   }
 
   void SetUpInProcessBrowserTestFixture() override {
