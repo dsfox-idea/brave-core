@@ -13,6 +13,7 @@
 
 #include "base/json/json_reader.h"
 #include "base/test/test_future.h"
+#include "base/test/values_test_util.h"
 #include "brave/browser/history_embeddings/open_tab_search.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "brave/components/ai_chat/core/common/mojom/common.mojom.h"
@@ -123,7 +124,8 @@ TEST_F(TabSemanticSearchToolTest, NoOpenTabsReturnsEmptyResults) {
   // `SearchOpenTabsByContent()` returns no tabs for a `TestingProfile` with
   // no browser windows, exercising the early-return JSON path.
   std::string output = RunTool(tool_.get(), kValidInput);
-  EXPECT_THAT(output, testing::HasSubstr("\"results\":[]"));
+  EXPECT_EQ(base::test::ParseJsonDict(output),
+            base::test::ParseJsonDict(R"({"results":[]})"));
 }
 
 TEST(TabSemanticSearchToolBuildResultsJsonTest, EmitsRankedTabs) {
