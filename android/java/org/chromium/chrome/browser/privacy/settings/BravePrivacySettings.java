@@ -84,7 +84,6 @@ public class BravePrivacySettings extends PrivacySettings {
     private static final String PREF_HTTPS_FIRST_MODE_LEGACY = "https_first_mode_legacy";
     private static final String PREF_HTTPS_FIRST_MODE = "https_first_mode";
     private static final String PREF_INCOGNITO_SCREENSHOT = "incognito_screenshot";
-    private static final String PREF_INCOGNITO_LOCK = "incognito_lock";
     private static final String PREF_PHONE_AS_A_SECURITY_KEY = "phone_as_a_security_key";
     private static final String PREF_FINGERPRINT_LANGUAGE = "fingerprint_language";
     private static final String PREF_SHIELDS_SAVE_CONTACT_INFO = "brave_shields_save_contact_info";
@@ -179,7 +178,6 @@ public class BravePrivacySettings extends PrivacySettings {
         PREF_APP_LINKS,
         PREF_WEBRTC_POLICY,
         PREF_INCOGNITO_SCREENSHOT,
-        PREF_INCOGNITO_LOCK,
         PREF_CAN_MAKE_PAYMENT,
         PREF_UNSTOPPABLE_DOMAINS,
         PREF_ENS,
@@ -498,6 +496,7 @@ public class BravePrivacySettings extends PrivacySettings {
         removePreferenceIfPresent(PREF_AD_BLOCK);
         removePreferenceIfPresent(PREF_SYNC_AND_SERVICES_LINK);
         removePreferenceIfPresent(PREF_NETWORK_PREDICTIONS);
+        removePreferenceIfPresent("incognito_lock");
         removePreferenceIfPresent(PREF_PRIVACY_SANDBOX);
         removePreferenceIfPresent(PREF_PRIVACY_SECTION);
         removePreferenceIfPresent(PREF_THIRD_PARTY_COOKIES);
