@@ -10,6 +10,7 @@
 #include <utility>
 
 #include "base/check_op.h"
+#include "base/containers/extend.h"
 #include "base/containers/flat_map.h"
 #include "base/containers/map_util.h"
 #include "base/containers/to_vector.h"
@@ -94,7 +95,7 @@ void DispatchRankedTabs(
   for (const auto& row : result.scored_url_rows) {
     if (auto* matched =
             base::FindOrNull(tabs_by_url_id, row.scored_url.url_id)) {
-      ranked.insert(ranked.end(), matched->begin(), matched->end());
+      base::Extend(ranked, *matched);
     }
   }
   std::move(callback).Run(std::move(ranked));
