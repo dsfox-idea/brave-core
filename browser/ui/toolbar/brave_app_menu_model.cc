@@ -167,34 +167,10 @@ void BraveAppMenuModel::BuildBraveProductsSection() {
   // Needs to add separator as this section is brave specific section.
   bool need_separator = false;
 
-#if BUILDFLAG(ENABLE_AI_CHAT)
-  if (IsCommandIdEnabled(IDC_TOGGLE_AI_CHAT)) {
-    InsertItemWithStringIdAt(GetNextIndexOfBraveProductsSection(),
-                             IDC_TOGGLE_AI_CHAT, IDS_TOGGLE_AI_CHAT);
-    need_separator = true;
-  }
-#endif
-
-  if (IsCommandIdEnabled(IDC_SHOW_BRAVE_WALLET)) {
-    InsertItemWithStringIdAt(GetNextIndexOfBraveProductsSection(),
-                             IDC_SHOW_BRAVE_WALLET, IDS_SHOW_BRAVE_WALLET);
-    need_separator = true;
-  }
-
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-  if (IsCommandIdEnabled(IDC_BRAVE_VPN_MENU)) {
-    sub_menus().push_back(std::make_unique<BraveVPNMenuModel>(
-        browser(), browser()->profile()->GetPrefs()));
-    InsertSubMenuWithStringIdAt(GetNextIndexOfBraveProductsSection(),
-                                IDC_BRAVE_VPN_MENU, IDS_BRAVE_VPN_MENU,
-                                sub_menus().back().get());
-    need_separator = true;
-  } else if (IsCommandIdEnabled(IDC_SHOW_BRAVE_VPN_PANEL)) {
-    InsertItemWithStringIdAt(GetNextIndexOfBraveProductsSection(),
-                             IDC_SHOW_BRAVE_VPN_PANEL, IDS_BRAVE_VPN_MENU);
-    need_separator = true;
-  }
-#endif
+  // growser: пункты «ИИ-помощник Leo», «Кошелёк» (Wallet) и «Growser VPN»
+  // убраны из главного меню (#27) — это точки входа в удаляемые фичи.
+  // Команды/акселераторы не трогаем (чтобы не ломать command-controller).
+  // Полное удаление функционала — backlog #4/#6/#23.
 
 #if defined(TOOLKIT_VIEWS)
   if (sidebar::CanUseSidebar(browser())) {
