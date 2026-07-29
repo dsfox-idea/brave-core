@@ -103,10 +103,8 @@ export function App() {
                   tabs={['stats', 'news']}
                 />
               )}
-              <WidgetStack
-                name='right'
-                tabs={['rewards', 'talk']}
-              />
+              {/* growser: правый стек виджетов (VPN/Rewards/Talk) убран с NTP
+                  (#19 и далее) — это удаляемые фичи. */}
             </>
           )}
         </div>

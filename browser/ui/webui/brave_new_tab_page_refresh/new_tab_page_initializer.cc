@@ -79,23 +79,15 @@ namespace {
 
 using regional_capabilities::RegionalCapabilitiesServiceFactory;
 
-constexpr char kBraveSearchHost[] = "search.brave.com";
-constexpr char kYahooSearchHost[] = "search.yahoo.co.jp";
+// growser: поиск в строке новой вкладки по умолчанию — Yandex (#18), как и
+// omnibox. host = хост поискового URL движка (yandex.ru).
+constexpr char kYandexSearchHost[] = "yandex.ru";
 
 }  // namespace
 
 std::string_view GetSearchDefaultHost(
     regional_capabilities::RegionalCapabilitiesService* regional_capabilities) {
-  CHECK(regional_capabilities);
-  regional_capabilities::CountryIdHolder country_id =
-      regional_capabilities->GetCountryId();
-  regional_capabilities::CountryIdHolder japan_country_id(
-      country_codes::CountryId("JP"));
-  if (country_id == japan_country_id) {
-    return kYahooSearchHost;
-  }
-
-  return kBraveSearchHost;
+  return kYandexSearchHost;
 }
 
 NewTabPageInitializer::NewTabPageInitializer(content::WebUI& web_ui)
