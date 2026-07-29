@@ -52,6 +52,8 @@ import WebKit
   let persistChanges: Bool
   /// A list of filter list URLs and their enabled statuses
   @Published var filterListsURLs: [FilterListCustomURL]
+  /// The javascript of the custom scriptlet, if one is saved
+  @Published private(set) var customScriptlet: String?
 
   init(persistChanges: Bool) {
     self.persistChanges = persistChanges
@@ -81,6 +83,13 @@ import WebKit
       ContentBlockerManager.log.error(
         "Failed to load custom filter list: \(String(describing: error))"
       )
+    }
+
+    // Load the custom scriptlet. The resources are loaded before this point so they
+    // need to be rebuilt in order to include the scriptlet.
+    self.customScriptlet = try? await loadCustomScriptlet()
+    if customScriptlet != nil {
+      await AdBlockGroupsManager.shared.didUpdateCustomScriptlet()
     }
 
     // Load the custom exclusion rules so they are applied when engines next compile
@@ -119,6 +128,15 @@ import WebKit
       in: .userDomainMask
     ).appending(path: "custom_rules")
     return folderURL.appending(path: "exclusion_rules.txt")
+  }
+
+  /// File URL for the custom scriptlet's javascript
+  private func customScriptletFileURL() throws -> URL {
+    let folderURL = try AsyncFileManager.default.url(
+      for: .applicationSupportDirectory,
+      in: .userDomainMask
+    ).appending(path: "custom_rules")
+    return folderURL.appending(path: "custom_scriptlet.js")
   }
 
   /// Get the file URL to the custom filter list rules if it exists
@@ -218,6 +236,40 @@ import WebKit
     case .success(let date):
       filterListsURLs[index].downloadStatus = .downloaded(date)
     }
+  }
+
+  /// Load the custom scriptlet's javascript if it is saved
+  public func loadCustomScriptlet() async throws -> String? {
+    let fileURL = try customScriptletFileURL()
+    if await AsyncFileManager.default.fileExists(atPath: fileURL.path) {
+      return await AsyncFileManager.default.utf8Contents(at: fileURL)
+    } else {
+      return nil
+    }
+  }
+
+  /// Save the custom scriptlet's javascript and recompile the engines so it takes effect
+  public func save(customScriptlet: String) async throws {
+    let fileURL = try customScriptletFileURL()
+    if await AsyncFileManager.default.fileExists(atPath: fileURL.path) {
+      try await AsyncFileManager.default.removeItem(at: fileURL)
+    }
+    _ = try await getOrCreateCustomRulesFolder()
+    await AsyncFileManager.default.createUTF8File(
+      atPath: fileURL.path,
+      contents: customScriptlet
+    )
+    self.customScriptlet = customScriptlet
+    await AdBlockGroupsManager.shared.didUpdateCustomScriptlet()
+  }
+
+  /// Delete the saved custom scriptlet and recompile the engines so it is no longer available
+  func deleteCustomScriptlet() async throws {
+    let fileURL = try customScriptletFileURL()
+    guard await AsyncFileManager.default.fileExists(atPath: fileURL.path) else { return }
+    try await AsyncFileManager.default.removeItem(at: fileURL)
+    self.customScriptlet = nil
+    await AdBlockGroupsManager.shared.didUpdateCustomScriptlet()
   }
 
   /// Load the custom exclusion rules (rules to be removed from AdBlockEngine &
