@@ -6,7 +6,8 @@
 import * as React from 'react'
 
 import DataContext from './state/context'
-import { shouldPlayAnimations } from './state/hooks'
+// growser: анимированная сцена (sky+hills+абстрактные фигуры) отключена —
+// показываем статичный ночной композит background@2x.webp (#11).
 import { ViewType } from './state/component_types'
 
 import HelpImprove from './components/help-improve'
@@ -68,7 +69,7 @@ function MainContainer () {
 
   return (
     <Background
-      static={!shouldPlayAnimations}
+      static={true}
       onLoad={onBackgroundImgLoad}
     >
       <React.Suspense fallback={<Loader />}>
