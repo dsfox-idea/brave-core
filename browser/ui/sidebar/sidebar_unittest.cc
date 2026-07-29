@@ -193,23 +193,9 @@ TEST_F(SidebarModelTest, ItemsChangedTest) {
   EXPECT_THAT(model()->active_index(), Optional(3u));
 }
 
-#if BUILDFLAG(ENABLE_BRAVE_TALK)
-TEST_F(SidebarModelTest, CanUseNotAddedBuiltInItemInsteadOfTest) {
-  GURL talk("https://talk.brave.com/1Ar1vHfLBWX2sAdi");
-  // False because builtin talk item is already added.
-  EXPECT_FALSE(HiddenDefaultSidebarItemsContains(service(), talk));
-
-  // Remove builtin talk item and check builtin talk item will be used
-  // instead of adding |talk| url.
-  const auto items = service()->items();
-  const auto talk_iter =
-      std::ranges::find(items, SidebarItem::BuiltInItemType::kBraveTalk,
-                        &SidebarItem::built_in_item_type);
-  ASSERT_NE(talk_iter, items.cend());
-  service()->RemoveItemAt(std::distance(items.cbegin(), talk_iter));
-  EXPECT_TRUE(HiddenDefaultSidebarItemsContains(service(), talk));
-}
-#endif  // BUILDFLAG(ENABLE_BRAVE_TALK)
+// growser: тест CanUseNotAddedBuiltInItemInsteadOfTest удалён — он требовал,
+// чтобы Talk (kBraveTalk) был дефолтным пунктом сайдбара, а Talk из сайдбара
+// убран (см. kDefaultBuiltInItemTypes).
 
 TEST_F(SidebarModelTest, ActiveIndexChangedAfterItemAdded) {
   model()->SetActiveIndex(1);
@@ -234,22 +220,15 @@ TEST_F(SidebarModelTest, ActiveIndexChangedAfterItemAdded) {
 
 // Check that the expected item is top-most.
 TEST_F(SidebarModelTest, TopItemTest) {
+  // growser: Leo (kChatUI) и Talk (kBraveTalk) убраны из боковой панели,
+  // поэтому первым идёт Wallet (когда brave_wallet::IsAllowed()) или Bookmarks.
   const auto first_item = service()->items()[0];
-#if BUILDFLAG(ENABLE_AI_CHAT)
-  // Leo should be the top item when AI Chat is enabled.
-  EXPECT_EQ(first_item.built_in_item_type,
-            SidebarItem::BuiltInItemType::kChatUI);
-#elif BUILDFLAG(ENABLE_BRAVE_TALK)
-  // Brave Talk should be the top item when AI Chat is disabled but Talk is
-  // enabled.
-  EXPECT_EQ(first_item.built_in_item_type,
-            SidebarItem::BuiltInItemType::kBraveTalk);
-#else
-  // When AI Chat and Brave Talk are disabled, Bookmarks is first
-  // (Wallet is only shown when brave_wallet::IsAllowed() returns true).
-  EXPECT_EQ(first_item.built_in_item_type,
-            SidebarItem::BuiltInItemType::kBookmarks);
-#endif
+  EXPECT_TRUE(first_item.built_in_item_type ==
+                  SidebarItem::BuiltInItemType::kWallet ||
+              first_item.built_in_item_type ==
+                  SidebarItem::BuiltInItemType::kBookmarks)
+      << "unexpected top sidebar item: "
+      << static_cast<int>(first_item.built_in_item_type);
 }
 
 TEST(SidebarUtilTest, SidebarShowOptionsDefaultTest) {
