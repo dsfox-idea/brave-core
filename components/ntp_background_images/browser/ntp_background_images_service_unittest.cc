@@ -23,6 +23,7 @@
 #include "base/test/run_until.h"
 #include "base/test/task_environment.h"
 #include "base/test/values_test_util.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/mock_on_demand_updater.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_data.h"
 #include "brave/components/ntp_background_images/browser/ntp_sponsored_images_data.h"
@@ -206,43 +207,6 @@ constexpr char kTestSponsoredImagesWithMissingImageUrl[] = R"(
       ]
     })";
 
-constexpr char kSponsoredImageContentWithNonHttpsSchemeTargetUrl[] = R"(
-    {
-      "schemaVersion": 2,
-      "campaigns": [
-        {
-          "version": 1,
-          "campaignId": "65933e82-6b21-440b-9956-c0f675ca7435",
-          "creativeSets": [
-            {
-              "creativeSetId": "34ab06be-c9ed-4104-9ce0-9e639f4ad272",
-              "creatives": [
-                {
-                  "creativeInstanceId": "3b36d1b7-5c9b-4625-9227-7c8e9fe6e0b4",
-                  "companyName": "Image NTT Creative",
-                  "alt": "Some image content",
-                  "targetUrl": "http://basicattentiontoken.org",
-                  "wallpaper": {
-                    "type": "image",
-                    "missing_relativeUrl": "3b36d1b7-5c9b-4625-9227-7c8e9fe6e0b4/background.jpg",
-                    "focalPoint": {
-                      "x": 25,
-                      "y": 50
-                    },
-                    "button": {
-                      "image": {
-                        "relativeUrl": "3b36d1b7-5c9b-4625-9227-7c8e9fe6e0b4/button.png"
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    })";
-
 constexpr char
     kSponsoredImageContentWithWallpaperRelativeUrlReferencingParent[] = R"(
     {
@@ -371,6 +335,45 @@ constexpr char kTestBackgroundImages[] = R"(
         }
       ]
     })";
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+constexpr char kSponsoredImageContentWithNonHttpsSchemeTargetUrl[] = R"(
+        {
+          "schemaVersion": 2,
+          "campaigns": [
+            {
+              "version": 1,
+              "campaignId": "65933e82-6b21-440b-9956-c0f675ca7435",
+              "creativeSets": [
+                {
+                  "creativeSetId": "34ab06be-c9ed-4104-9ce0-9e639f4ad272",
+                  "creatives": [
+                    {
+                      "creativeInstanceId": "3b36d1b7-5c9b-4625-9227-7c8e9fe6e0b4",
+                      "companyName": "Image NTT Creative",
+                      "alt": "Some image content",
+                      "targetUrl": "http://basicattentiontoken.org",
+                      "wallpaper": {
+                        "type": "image",
+                        "relativeUrl": "3b36d1b7-5c9b-4625-9227-7c8e9fe6e0b4/background.jpg",
+                        "focalPoint": {
+                          "x": 25,
+                          "y": 50
+                        },
+                        "button": {
+                          "image": {
+                            "relativeUrl": "3b36d1b7-5c9b-4625-9227-7c8e9fe6e0b4/button.png"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        })";
+#endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
 
 std::string GetComponentId(std::string_view country_code) {
   std::optional<SponsoredImagesComponentInfo> component =
@@ -810,24 +813,6 @@ TEST_F(NTPBackgroundImagesServiceTest, MultipleCampaignsTest) {
 }
 
 TEST_F(NTPBackgroundImagesServiceTest,
-       DoNotGetSponsoredImageContentForNonHttpsSchemeTargetUrl) {
-  Init();
-
-  observer_.sponsored_images_data = nullptr;
-  service_->sponsored_images_data_.reset();
-  observer_.on_sponsored_images_updated = false;
-  service_->RegisterSponsoredImagesComponent();
-  service_->SetSponsoredImagesLoadedForTesting(
-      install_dir_, kSponsoredImageContentWithNonHttpsSchemeTargetUrl);
-
-  EXPECT_FALSE(service_->GetSponsoredImagesData(/*supports_rich_media=*/true));
-  EXPECT_TRUE(observer_.on_sponsored_images_updated);
-  EXPECT_THAT(observer_.sponsored_images_data->campaigns, ::testing::IsEmpty());
-  EXPECT_THAT(service_->sponsored_images_data_->campaigns,
-              ::testing::IsEmpty());
-}
-
-TEST_F(NTPBackgroundImagesServiceTest,
        DoNotGetSponsoredImageContentIfWallpaperUrlReferencesParent) {
   Init();
 
@@ -1256,5 +1241,25 @@ TEST_F(
             base::JSONReader::ReadDict(kTestSponsoredImages,
                                        base::JSON_PARSE_CHROMIUM_EXTENSIONS));
 }
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+TEST_F(NTPBackgroundImagesServiceTest,
+       DoNotGetSponsoredImageContentForNonHttpsSchemeTargetUrl) {
+  Init();
+
+  observer_.sponsored_images_data = nullptr;
+  service_->sponsored_images_data_.reset();
+  observer_.on_sponsored_images_updated = false;
+  service_->RegisterSponsoredImagesComponent();
+  service_->SetSponsoredImagesLoadedForTesting(
+      install_dir_, kSponsoredImageContentWithNonHttpsSchemeTargetUrl);
+
+  EXPECT_FALSE(service_->GetSponsoredImagesData(/*supports_rich_media=*/true));
+  EXPECT_TRUE(observer_.on_sponsored_images_updated);
+  EXPECT_THAT(observer_.sponsored_images_data->campaigns, ::testing::IsEmpty());
+  EXPECT_THAT(service_->sponsored_images_data_->campaigns,
+              ::testing::IsEmpty());
+}
+#endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
 
 }  // namespace ntp_background_images
