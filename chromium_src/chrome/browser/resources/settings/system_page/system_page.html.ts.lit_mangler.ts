@@ -35,8 +35,8 @@ mangle((root) => {
 
   // Note: browser.confirm_to_quit isn't registered as a pref outside of mac
   // (see chrome/browser/ui/cocoa/confirm_quit.cc), so the toggle for it must
-  // not be mounted at all on other platforms -- a build-time <if expr> can't
-  // be used here since lit_mangler runs *after* <if expr> preprocessing (see
+  // not be mounted at all on other platforms -- a build-time "if expr" can't
+  // be used here since lit_mangler runs *after* "if expr" preprocessing (see
   // tools/grit/preprocess_if_expr.py), so it'd never get stripped. A runtime
   // check (this.isMac_, from the companion system_page.ts override) with
   // Lit's own conditional templating is used instead. Its label similarly
