@@ -28,11 +28,21 @@ console.log(`Using brave-core generated dependency path of '${genPath}'`)
 
 // Override the path map we use in the browser with some additional mock
 // directories, so that we can replace things in Storybook.
-const pathMap = withMockOverrides(generatePathMap(genPath), {
-  chromeResourcesMockDir: path.resolve(__dirname, 'chrome-resources-mock'),
-  webCommonMockDir: path.resolve(__dirname, 'web-common-mock'),
-  genPath,
-})
+const pathMap = {
+  ...withMockOverrides(generatePathMap(genPath), {
+    chromeResourcesMockDir: path.resolve(__dirname, 'chrome-resources-mock'),
+    webCommonMockDir: path.resolve(__dirname, 'web-common-mock'),
+    genPath,
+  }),
+  // Nala keeps the icon base path in a single module-level store, and the last
+  // `setIconBasePath` call wins - including calls made at module scope by
+  // production entry points, which use `chrome://` paths the browser can't
+  // fetch when running on the web. Swap Nala's icon entry point for a mock that
+  // pins the path to Storybook's static `icons/` dir and no-ops
+  // `setIconBasePath`. The trailing `$` means only this exact specifier is
+  // aliased, so the mock can still import the real module by its `.js` path.
+  '@brave/leo/react/icon$': path.resolve(__dirname, 'leo-icon-mock.ts'),
+}
 
 const buildFlags = JSON.parse(
   fs.readFileSync(path.join(genPath, 'brave/build_flags.json'), 'utf8'),

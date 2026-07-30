@@ -6,33 +6,26 @@
 import 'emptykit.css'
 import * as React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
-import { setIconBasePath } from '@brave/leo/react/icon'
 import { getString } from './locale'
 import ThemeProvider from '../components/common/BraveCoreThemeProvider'
 import StyledComponentsProvider from '../components/common/StyledComponentsProvider'
+
+// Nala design tokens (the `--leo-*` custom properties). In the browser these
+// come from `chrome://resources/brave/css/nala.css`, which Storybook can't
+// load, so pull in the static token stylesheet globally here. It defines both
+// the light and dark values, keyed off `prefers-color-scheme`.
+import '@brave/leo/tokens/css/variables.css'
 
 // Fonts
 import '../ui/webui/resources/fonts/poppins.css'
 import '../ui/webui/resources/fonts/manrope.css'
 import '../ui/webui/resources/fonts/inter.css'
 
-// Icon path
-// The storybook might be hosted at the root, but it might also be hosted
-// somewhere deep. The icons will be hosted in the relative path of the
-// storybook. Let's find the relative path we're at, and give that to
-// Nala icons.
-if (!document.location.pathname.endsWith('/iframe.html')) {
-  // Perhaps storybook was upgraded and this changed?
-  console.error(
-    'Could not ascertain path that the storybook is hosted at. Not able to set static icon path!',
-  )
-} else {
-  const storybookPath = document.location.pathname.substring(
-    0,
-    document.location.pathname.lastIndexOf('/'),
-  )
-  setIconBasePath(`${storybookPath}/icons`)
-}
+// Point Nala icons at the icons Storybook serves statically. Imported for its
+// side effect, so the path is set before any story renders. `@brave/leo/react/
+// icon` is aliased to this module, which no-ops `setIconBasePath` so production
+// code can't override the path.
+import './leo-icon-mock'
 
 export const parameters = {
   backgrounds: {
