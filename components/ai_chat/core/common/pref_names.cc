@@ -23,7 +23,12 @@ void RegisterProfilePrefs(PrefRegistrySimple* registry) {
 #else
     registry->RegisterBooleanPref(kBraveChatStorageEnabled, true);
 #endif
-    registry->RegisterBooleanPref(kBraveChatAutocompleteProviderEnabled, true);
+    // growser: омнибокс-провайдер «Ask Leo» (Leo-подсказки в адресной строке)
+    // скрыт по умолчанию (#16). Pref-дефолт — не master-фича: флип не ломает
+    // тесты (leo_provider_unittest переопределяет IsLeoProviderEnabled→true и
+    // не зависит от дефолта). Сам провайдер остаётся зарегистрированным, но
+    // Start() не запускается → подсказок Leo нет.
+    registry->RegisterBooleanPref(kBraveChatAutocompleteProviderEnabled, false);
     registry->RegisterBooleanPref(kUserDismissedPremiumPrompt, false);
     registry->RegisterBooleanPref(kUserDismissedStorageNotice, false);
 #if BUILDFLAG(IS_ANDROID)
