@@ -14,6 +14,7 @@
   case CommandRestoreTab:               \
   case CommandBookmarkTab:              \
   case CommandShowVerticalTabs:         \
+  case CommandToggleTabMuted:           \
   case CommandBringAllTabsToThisWindow: \
   case CommandCloseDuplicateTabs:       \
   case CommandOpenInContainer:          \

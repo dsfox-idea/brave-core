@@ -10,15 +10,17 @@
 //   CommandRestoreTab - Restores a recently closed tab from history
 //   CommandBookmarkTab - Bookmarks the right-clicked tab
 //   CommandShowVerticalTabs - Toggles vertical tab strip display mode
+//   CommandToggleTabMuted - Toggles mute/unmute state of selected tabs
 //   CommandBringAllTabsToThisWindow
 //     - Moves all tabs from other windows to the current window
 //   CommandCloseDuplicateTabs - Closes duplicate tabs with the same URL
 //   CommandOpenInContainer - Container submenu
 //   CommandRenameTab - Allows renaming a tab with custom title
-#define CommandLast                                               \
-  CommandRestoreTab, CommandBookmarkTab, CommandShowVerticalTabs, \
-      CommandBringAllTabsToThisWindow, CommandCloseDuplicateTabs, \
-      CommandOpenInContainer, CommandRenameTab, CommandLast
+#define CommandLast                                                        \
+  CommandRestoreTab, CommandBookmarkTab, CommandShowVerticalTabs,          \
+      CommandToggleTabMuted, CommandBringAllTabsToThisWindow,              \
+      CommandCloseDuplicateTabs, CommandOpenInContainer, CommandRenameTab, \
+      CommandLast
 
 #define SelectRelativeTab(...)            \
   virtual SelectRelativeTab(__VA_ARGS__); \
