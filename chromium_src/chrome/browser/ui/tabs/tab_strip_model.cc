@@ -12,9 +12,8 @@
 #define CommandAddNote                  \
   CommandAddNote:                       \
   case CommandRestoreTab:               \
-  case CommandBookmarkAllTabs:          \
+  case CommandBookmarkTab:              \
   case CommandShowVerticalTabs:         \
-  case CommandToggleTabMuted:           \
   case CommandBringAllTabsToThisWindow: \
   case CommandCloseDuplicateTabs:       \
   case CommandOpenInContainer:          \
