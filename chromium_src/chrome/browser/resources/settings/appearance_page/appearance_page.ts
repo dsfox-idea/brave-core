@@ -8,6 +8,10 @@ import { css } from '//resources/lit/v3_0/lit.rollup.js'
 
 import { SettingsAppearancePageElement } from './appearance_page-chromium.js'
 
+// Registers <settings-brave-appearance-toolbar>, which is woven into
+// settings-appearance-page's template by the lit_mangler override below.
+import '../brave_appearance_page/toolbar.js'
+
 // These are hidden via CSS rather than removed from the template (in the
 // companion appearance_page.html.ts lit_mangler override), because
 // SettingsAppearancePageElement itself still references them: the first

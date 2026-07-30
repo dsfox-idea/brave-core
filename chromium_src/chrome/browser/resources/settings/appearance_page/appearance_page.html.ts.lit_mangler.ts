@@ -51,6 +51,7 @@ mangle((root) => {
     throw new Error(
       `[Settings] Appearance page: couldn't find sidePanelPosition container`)
   }
+  // The `div.cr-row` heading ("Side panel position") above the list-frame.
   sidePanelList.previousElementSibling?.remove()
   sidePanelList.remove()
 

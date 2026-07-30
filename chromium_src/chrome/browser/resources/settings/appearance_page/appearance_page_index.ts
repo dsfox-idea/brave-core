@@ -12,6 +12,13 @@ import {
   SettingsAppearancePageIndexElement as SettingsAppearancePageIndexElementChromium
 } from './appearance_page_index-chromium.js'
 
+// Registers <settings-brave-appearance-tabs> and
+// <settings-brave-appearance-sidebar>, which are woven into
+// settings-appearance-page-index's template by a lit_mangler override (see
+// appearance_page_index.html.ts.lit_mangler.ts).
+import '../brave_appearance_page/tabs.js'
+import '../brave_appearance_page/sidebar.js'
+
 // Brave's Tabs and Sidebar sections are additional top-level views appended
 // (via a lit_mangler override of appearance_page_index.html.ts) into the
 // same <cr-view-manager> as the upstream Appearance view, and are shown
