@@ -87,7 +87,7 @@ function findMangledFileAndOriginalFile(
 // able to account for via testing
 const skippedManglers = [
   'chromium_src/chrome/browser/resources/settings/appearance_page/appearance_page.html.ts.lit_mangler.ts',
-  'chromium_src/chrome/browser/resources/settings/system_page/system_page.html.ts.lit_mangler.ts'
+  'chromium_src/chrome/browser/resources/settings/system_page/system_page.html.ts.lit_mangler.ts',
 ]
 
 describe('mangled files should have up to date snapshots', () => {
