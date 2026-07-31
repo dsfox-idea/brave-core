@@ -10,7 +10,7 @@ import classnames from '$web-common/classnames'
 import { getLocale } from '$web-common/locale'
 import Button from '@brave/leo/react/button'
 
-import { WelcomeBrowserProxyImpl, DefaultBrowserBrowserProxyImpl, P3APhase } from '../../api/welcome_browser_proxy'
+import { DefaultBrowserBrowserProxyImpl } from '../../api/welcome_browser_proxy'
 import WebAnimationPlayer from '../../api/web_animation_player'
 
 import DataContext from '../../state/context'
@@ -37,12 +37,10 @@ function Welcome () {
   const handleSetAsDefaultBrowser = () => {
     DefaultBrowserBrowserProxyImpl.getInstance().setAsDefaultBrowser()
     goForward()
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Import)
     scenes?.s1.play()
   }
 
   const handleSkip = () => {
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Import)
     goForward()
     scenes?.s1.play()
   }

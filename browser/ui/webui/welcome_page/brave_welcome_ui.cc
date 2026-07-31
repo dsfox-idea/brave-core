@@ -23,9 +23,7 @@
 #include "brave/components/brave_welcome/resources/grit/brave_welcome_generated_map.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
-#include "brave/components/p3a/pref_names.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
-#include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
 #include "chrome/browser/ui/browser.h"
@@ -39,7 +37,6 @@
 #include "components/country_codes/country_codes.h"
 #include "components/grit/brave_components_resources.h"
 #include "components/grit/brave_components_strings.h"
-#include "components/metrics/metrics_pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "components/regional_capabilities/regional_capabilities_prefs.h"
 #include "content/public/browser/gpu_data_manager.h"
@@ -67,20 +64,11 @@ constexpr webui::LocalizedString kLocalizedStrings[] = {
     {"braveWelcomeSkipButtonLabel", IDS_BRAVE_WELCOME_SKIP_BUTTON_LABEL},
     {"braveWelcomeBackButtonLabel", IDS_BRAVE_WELCOME_BACK_BUTTON_LABEL},
     {"braveWelcomeNextButtonLabel", IDS_BRAVE_WELCOME_NEXT_BUTTON_LABEL},
-    {"braveWelcomeFinishButtonLabel", IDS_BRAVE_WELCOME_FINISH_BUTTON_LABEL},
     {"braveWelcomeSetDefaultButtonLabel",
      IDS_BRAVE_WELCOME_SET_DEFAULT_BUTTON_LABEL},
     {"braveWelcomeSelectAllButtonLabel",
      IDS_BRAVE_WELCOME_SELECT_ALL_BUTTON_LABEL},
-    {"braveWelcomeHelpImproveBraveTitle",
-     IDS_BRAVE_WELCOME_HELP_IMPROVE_BRAVE_TITLE},
-    {"braveWelcomeStabilityDiagnosticsTitle",
-     IDS_BRAVE_WELCOME_STABILITY_DIAGNOSTICS_TITLE},
-    {"braveWelcomeSendReportsLabel", IDS_BRAVE_WELCOME_SEND_REPORTS_LABEL},
-    {"braveWelcomeSendInsightsLabel", IDS_BRAVE_WELCOME_SEND_INSIGHTS_LABEL},
     {"braveWelcomeSetupCompleteLabel", IDS_BRAVE_WELCOME_SETUP_COMPLETE_LABEL},
-    {"braveWelcomeChangeSettingsNote", IDS_BRAVE_WELCOME_CHANGE_SETTINGS_NOTE},
-    {"braveWelcomePrivacyPolicyNote", IDS_BRAVE_WELCOME_PRIVACY_POLICY_NOTE},
     {"braveWelcomeSelectThemeLabel", IDS_BRAVE_WELCOME_SELECT_THEME_LABEL},
     {"braveWelcomeSelectThemeNote", IDS_BRAVE_WELCOME_SELECT_THEME_NOTE},
     {"braveWelcomeSelectThemeSystemLabel",
@@ -89,12 +77,15 @@ constexpr webui::LocalizedString kLocalizedStrings[] = {
      IDS_BRAVE_WELCOME_SELECT_THEME_LIGHT_LABEL},
     {"braveWelcomeSelectThemeDarkLabel",
      IDS_BRAVE_WELCOME_SELECT_THEME_DARK_LABEL},
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
     {"braveWelcomeHelpWDPTitle", IDS_BRAVE_WELCOME_HELP_WDP_TITLE},
     {"braveWelcomeHelpWDPSubtitle", IDS_BRAVE_WELCOME_HELP_WDP_SUBTITLE},
     {"braveWelcomeHelpWDPDescription", IDS_BRAVE_WELCOME_HELP_WDP_DESCRIPTION},
     {"braveWelcomeHelpWDPLearnMore", IDS_BRAVE_WELCOME_HELP_WDP_LEARN_MORE},
     {"braveWelcomeHelpWDPAccept", IDS_BRAVE_WELCOME_HELP_WDP_ACCEPT},
-    {"braveWelcomeHelpWDPReject", IDS_BRAVE_WELCOME_HELP_WDP_REJECT}};
+    {"braveWelcomeHelpWDPReject", IDS_BRAVE_WELCOME_HELP_WDP_REJECT},
+#endif  // BUILDFLAG(ENABLE_WEB_DISCOVERY)
+};
 
 void OpenJapanWelcomePage(Profile* profile) {
   auto* browser = ProfileBrowserCollection::GetForProfile(profile)
@@ -173,7 +164,6 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
       content::GpuDataManager::GetInstance()->HardwareAccelerationEnabled());
 
   // Add managed state information for welcome flow logic
-  PrefService* local_state = g_browser_process->local_state();
   source->AddBoolean(
       "isWebDiscoveryEnabledManaged",
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY)
@@ -181,11 +171,6 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
 #else
       false);
 #endif
-  source->AddBoolean("isMetricsReportingEnabledManaged",
-                     local_state->IsManagedPreference(
-                         metrics::prefs::kMetricsReportingEnabled));
-  source->AddBoolean("isP3AEnabledManaged",
-                     local_state->IsManagedPreference(p3a::kP3AEnabled));
 
   profile->GetPrefs()->SetBoolean(
       brave::welcome_ui::prefs::kHasSeenBraveWelcomePage, true);

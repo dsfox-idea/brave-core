@@ -13,8 +13,6 @@ export enum ViewType {
   ImportInProgress,
   ImportSucceeded,
   ImportFailed,
-  HelpImprove,
-  HelpWDP,
 }
 
 export enum BrowserType {

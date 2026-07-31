@@ -12,7 +12,7 @@ import DataContext from '../../state/context'
 import { ViewType } from '../../state/component_types'
 import { getUniqueBrowserTypes } from '../../state/utils'
 import { useViewTypeTransition } from '../../state/hooks'
-import { WelcomeBrowserProxyImpl, ImportDataBrowserProxyImpl, defaultImportTypes, P3APhase } from '../../api/welcome_browser_proxy'
+import { WelcomeBrowserProxyImpl, ImportDataBrowserProxyImpl, defaultImportTypes } from '../../api/welcome_browser_proxy'
 import { getLocale } from '$web-common/locale'
 
 import ChromeCanarySVG from '../svg/browser-icons/chrome-canary'
@@ -105,7 +105,6 @@ function SelectBrowser () {
 
     if (forward === ViewType.ImportSelectProfile) {
       setViewType(ViewType.ImportSelectProfile)
-      WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Import)
       return
     }
 
@@ -115,7 +114,6 @@ function SelectBrowser () {
         defaultImportTypes
       )
       incrementCount()
-      WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Consent)
       return
     }
 
@@ -125,7 +123,6 @@ function SelectBrowser () {
   const handleSkip = () => {
     scenes?.s2.play() // play the final animation on skip
     setViewType(skip!)
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Consent)
   }
 
   React.useEffect(() => {
