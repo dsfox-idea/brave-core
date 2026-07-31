@@ -28,6 +28,7 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/l10n/common/locale_util.h"
 #include "brave/components/ntp_background_images/common/pref_names.h"
+#include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "components/grit/brave_components_strings.h"
 #include "components/prefs/pref_change_registrar.h"
 #include "components/prefs/pref_service.h"
@@ -633,7 +634,9 @@ void RewardsPageHandler::EnableRewards(const std::string& country_code,
 void RewardsPageHandler::SetWebDiscoveryProjectEnabled(
     bool enabled,
     SetWebDiscoveryProjectEnabledCallback callback) {
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
   prefs_->SetBoolean(kWebDiscoveryEnabled, enabled);
+#endif  // BUILDFLAG(ENABLE_WEB_DISCOVERY)
   std::move(callback).Run();
 }
 

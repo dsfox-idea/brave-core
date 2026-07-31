@@ -11,13 +11,6 @@ import {
   BrowserProfile as _BrowserProfile,
 } from './import_data_browser_proxy'
 
-export enum P3APhase {
-  Welcome = 0,
-  Import = 1,
-  Consent = 2,
-  Finished = 3
-}
-
 export interface BrowserProfile extends _BrowserProfile {
   browserType?: string | undefined
 }
@@ -33,11 +26,7 @@ export const defaultImportTypes = {
 }
 
 export interface WelcomeBrowserProxy {
-  recordP3A: (phase: P3APhase) => void
-  setP3AEnabled: (enabled: boolean) => void
-  setMetricsReportingEnabled: (enabled: boolean) => void
   openSettingsPage: () => void
-  enableWebDiscovery: () => void
   getDefaultBrowser: () => Promise<string>
   getWelcomeCompleteURL: () => Promise<string>
 }
@@ -49,24 +38,8 @@ export {
 }
 
 export class WelcomeBrowserProxyImpl implements WelcomeBrowserProxy {
-  recordP3A (phase: P3APhase) {
-    chrome.send('recordP3A', [phase])
-  }
-
-  setP3AEnabled (enabled: boolean) {
-    chrome.send('setP3AEnabled', [enabled])
-  }
-
-  setMetricsReportingEnabled (enabled: boolean) {
-    chrome.send('setMetricsReportingEnabled', [enabled])
-  }
-
   openSettingsPage () {
     chrome.send('openSettingsPage')
-  }
-
-  enableWebDiscovery () {
-    chrome.send('enableWebDiscovery')
   }
 
   getDefaultBrowser (): Promise<string> {

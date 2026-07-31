@@ -82,15 +82,12 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
   const { browserProfiles, currentSelectedBrowserProfiles} = React.useContext(DataContext)
 
   const states = React.useMemo(() => {
-    // <if expr="is_brave_origin_branded">
-    // Brave Origin: skip HelpWDP (Web Discovery) but still show HelpImprove
-    const nextAfterImport = ViewType.HelpImprove
-    // <else>
-    // growser: экран WDP (Web Discovery Project) убран из онбординга (#24) —
-    // поиск у нас Yandex, продвигать «Growser Поиск» незачем. Всегда идём на
-    // HelpImprove, минуя HelpWDP. Полный выпил WDP — backlog #25.
-    const nextAfterImport = ViewType.HelpImprove
-    // </if>
+    // growser: экраны WDP (#24) и HelpImprove (#21) убраны из онбординга —
+    // поиск у нас Yandex (WDP не нужен), а opt-in в P3A/метрику через онбординг
+    // мы не показываем (pref'ы остаются off по дефолту). После импорта идём
+    // сразу на ImportSucceeded (SetupComplete): он показывает галочку и
+    // открывает welcome-complete URL, завершая онбординг.
+    const nextAfterImport = ViewType.ImportSucceeded
 
     return {
       [ViewType.DefaultBrowser]: {  // The initial state view
@@ -114,17 +111,11 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
         forward: ViewType.ImportSucceeded,
         fail: ViewType.ImportFailed,
       },
-      [ViewType.ImportSucceeded]: {
-        forward: nextAfterImport
-      },
+      // ImportSucceeded — терминал (self-loop): SetupComplete сам открывает
+      // welcome-complete URL по завершении Lottie-анимации и не использует forward.
+      [ViewType.ImportSucceeded]: { forward: ViewType.ImportSucceeded },
       [ViewType.ImportFailed]: {
         forward: nextAfterImport
-      },
-      [ViewType.HelpWDP]: {
-        forward: ViewType.HelpImprove
-      },
-      [ViewType.HelpImprove]: {
-        forward: ViewType.HelpImprove   // The end state view
       },
     }
   }, [browserProfiles, currentSelectedBrowserProfiles])

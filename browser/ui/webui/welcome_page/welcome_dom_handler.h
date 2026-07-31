@@ -39,16 +39,10 @@ class WelcomeDOMHandler : public content::WebUIMessageHandler {
 
  private:
   void HandleImportNowRequested(const base::ListValue& args);
-  void HandleRecordP3A(const base::ListValue& args);
   void HandleGetDefaultBrowser(const base::ListValue& args);
-  void SetLocalStateBooleanEnabled(const std::string& path,
-                                   const base::ListValue& args);
   void OnGetDefaultBrowser(shell_integration::DefaultWebClientState state,
                            const std::u16string& name);
-  void SetP3AEnabled(const base::ListValue& args);
   void HandleOpenSettingsPage(const base::ListValue& args);
-  void HandleSetMetricsReportingEnabled(const base::ListValue& args);
-  void HandleEnableWebDiscovery(const base::ListValue& args);
   void HandleGetWelcomeCompleteURL(const base::ListValue& args);
 
   void OnGettingStartedServerCheck(const std::string& callback_id,
@@ -56,7 +50,6 @@ class WelcomeDOMHandler : public content::WebUIMessageHandler {
 
   BrowserWindowInterface* GetBrowser();
 
-  size_t last_onboarding_phase_ = 0;
   std::u16string default_browser_name_;
   raw_ptr<Profile> profile_ = nullptr;
 #if BUILDFLAG(ENABLE_BRAVE_EDUCATION)

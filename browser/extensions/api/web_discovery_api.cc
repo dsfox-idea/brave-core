@@ -34,10 +34,14 @@ WebDiscoveryRetrieveBackupResultsFunction::
 
 ExtensionFunction::ResponseAction
 WebDiscoveryRetrieveBackupResultsFunction::Run() {
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
   auto* user_prefs = user_prefs::UserPrefs::Get(browser_context());
   if (!user_prefs || !user_prefs->GetBoolean(kWebDiscoveryEnabled)) {
     return RespondNow(Error("web discovery is not enabled"));
   }
+#else
+  return RespondNow(Error("web discovery is not enabled"));
+#endif  // BUILDFLAG(ENABLE_WEB_DISCOVERY)
   EXTENSION_FUNCTION_VALIDATE(has_args() && !args().empty());
   const auto* url_str = args().front().GetIfString();
   EXTENSION_FUNCTION_VALIDATE(url_str);
@@ -80,9 +84,13 @@ WebDiscoveryIsWebDiscoveryExtensionEnabledFunction::Run() {
       web_discovery::features::kBraveWebDiscoveryNative);
 #endif
 
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
   auto* user_prefs = user_prefs::UserPrefs::Get(browser_context());
   bool result = !native_enabled && user_prefs &&
                 user_prefs->GetBoolean(kWebDiscoveryEnabled);
+#else
+  bool result = false;
+#endif  // BUILDFLAG(ENABLE_WEB_DISCOVERY)
 
   return RespondNow(WithArguments(result));
 }
