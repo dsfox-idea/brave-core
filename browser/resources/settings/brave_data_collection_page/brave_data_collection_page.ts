@@ -24,7 +24,6 @@ const SettingBraveDataCollectionPageElementBase =
 
 interface SettingsBraveDataCollectionPageElement {
   $: {
-    p3aEnabled: SettingsToggleButtonElement,
     statsUsagePingEnabled: SettingsToggleButtonElement,
     metricsReportingControl: SettingsToggleButtonElement,
   }
@@ -47,14 +46,6 @@ extends SettingBraveDataCollectionPageElementBase
 
   static get properties() {
     return {
-      p3aEnabledPref_: {
-        type: Object,
-        value() {
-          // TODO(dbeam): this is basically only to appease PrefControlMixin.
-          // Maybe add a no-validate attribute instead? This makes little sense.
-          return {}
-        },
-      },
       statsUsagePingEnabledPref_: {
         type: Object,
         value() {
@@ -74,36 +65,25 @@ extends SettingBraveDataCollectionPageElementBase
       showRestartForMetricsReporting_: Boolean,
       showSurveyPanelist_: Boolean,
       isStatsReportingEnabledManaged_: Boolean,
-      isP3AEnabledManaged_: Boolean,
     }
   }
 
-  private declare p3aEnabledPref_: Object
   private declare statsUsagePingEnabledPref_: Object
   private declare metricsReportingPref_: chrome.settingsPrivate.PrefObject<boolean>
   private declare showRestartForMetricsReporting_: boolean
   private declare showSurveyPanelist_: boolean
   private declare isStatsReportingEnabledManaged_: boolean
-  private declare isP3AEnabledManaged_: boolean
 
   browserProxy_ = BraveDataCollectionBrowserProxyImpl.getInstance()
 
   override ready() {
     super.ready()
 
-    // Used for first time initialization of checked state.
-    // Can't use `prefs` property of `settings-toggle-button` directly
-    // because p3a enabled is a local state setting, but PrefControlMixin
-    // checks for a pref being valid, so have to fake it, same as upstream.
-    const setP3AEnabledPref = (userEnabled: boolean, isManaged: boolean) =>
-      this.setP3AEnabledPref_(userEnabled, isManaged)
+    // growser: P3A-тоггл убран (#21) — teleмetрия выпилена. P3A-init
+    // (setP3AEnabledPref / p3a-enabled-changed listener / getP3AEnabled)
+    // удалён вместе с тогглом. Остальные тогглы — не P3A.
 
     this.isStatsReportingEnabledManaged_ = loadTimeData.getBoolean('isStatsReportingEnabledManaged')
-    this.isP3AEnabledManaged_ = loadTimeData.getBoolean('isP3AEnabledManaged')
-
-    this.addWebUiListener('p3a-enabled-changed', setP3AEnabledPref)
-    this.browserProxy_.getP3AEnabled().then(
-      (enabled: boolean) => setP3AEnabledPref(enabled, this.isP3AEnabledManaged_))
 
     const setMetricsReportingPref = (metricsReporting: MetricsReporting) =>
         this.setMetricsReportingPref_(metricsReporting)
@@ -127,22 +107,6 @@ extends SettingBraveDataCollectionPageElementBase
       default:
         throw new Error(`Unknown child view id: ${childViewId}`)
     }
-  }
-
-  setP3AEnabledPref_(userEnabled: boolean, isManaged: boolean) {
-    const pref = {
-      key: '',
-      type: chrome.settingsPrivate.PrefType.BOOLEAN,
-      value: userEnabled,
-    }
-    this.p3aEnabledPref_ = pref
-    this.isP3AEnabledManaged_ = isManaged
-  }
-
-  onP3AEnabledChange_(event: Event) {
-    const target = event.target
-    assert(target instanceof SettingsToggleButtonElement)
-    this.browserProxy_.setP3AEnabled(target.checked)
   }
 
   setStatsUsagePingEnabledPref_(userEnabled: boolean, isManaged: boolean) {

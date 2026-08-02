@@ -112,6 +112,11 @@ void P3AService::InitCallback(std::string_view histogram_name) {
 }
 
 void P3AService::InitCallbacks() {
+  // growser: P3A выпилен функционально (#21) — телеметрия = ноль. Не
+  // регистрируем static histogram-observers → ничего не собирается. Объект
+  // сервиса остаётся (callers имеют валидный указатель), метод no-op. Тело
+  // обёрнуто в #if 0 (не -Wunreachable-code).
+#if 0
   for (const auto& [histogram_name, _] : kCollectedTypicalHistograms) {
     InitCallback(histogram_name);
   }
@@ -124,6 +129,7 @@ void P3AService::InitCallbacks() {
   for (const auto& [histogram_name, log_type] : dynamic_metric_log_types_) {
     RegisterDynamicMetric(histogram_name, log_type, false);
   }
+#endif  // growser P3A #21
 }
 
 void P3AService::StartTeardown() {
@@ -137,6 +143,11 @@ void P3AService::StartTeardown() {
 void P3AService::RegisterDynamicMetric(const std::string& histogram_name,
                                        MetricLogType log_type,
                                        bool should_be_on_ui_thread) {
+  // growser: P3A выпилен функционально (#21) — no-op. Per-feature модули
+  // зовут RegisterDynamicMetric, но без observers ничего не собирается.
+  // Тело обёрнуто в #if 0 (не -Wunreachable-code). Параметры оставлены
+  // (Chromium -Wno-unused-parameter).
+#if 0
   if (should_be_on_ui_thread) {
     DCheckCurrentlyOnUIThread();
   }
@@ -151,6 +162,7 @@ void P3AService::RegisterDynamicMetric(const std::string& histogram_name,
 
   ScopedDictPrefUpdate update(&*local_state_, kDynamicMetricsDictPref);
   update->Set(histogram_name, static_cast<int>(log_type));
+#endif  // growser P3A #21
 }
 
 void P3AService::RemoveDynamicMetric(const std::string& histogram_name) {
@@ -185,6 +197,12 @@ bool P3AService::IsP3AEnabled() const {
 void P3AService::Init(
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
     component_updater::ComponentUpdateService* cus) {
+  // growser: P3A выпилен функционально (#21) — телеметрия = ноль. Не
+  // регистрируем pref-observer, не ставим initialized_, не запускаем
+  // constellation-загрузку/ротацию → нет отправки. kP3AEnabled дефолтит false,
+  // opt-in из онбординга/настроек снят. Даже при принудительном включении
+  // pref'а данные никуда не уходят. Тело обёрнуто в #if 0 (не -Wunreachable-code).
+#if 0
   if (url_loader_factory) {
     url_loader_factory_ = url_loader_factory;
   }
@@ -216,6 +234,7 @@ void P3AService::Init(
   if (IsP3AEnabled()) {
     message_manager_->Start(url_loader_factory_);
   }
+#endif  // growser P3A #21
 }
 
 void P3AService::OnRotation(MetricLogType log_type) {

@@ -1,14 +1,8 @@
 <style include="settings-shared"></style>
 <settings-section page-title="$i18n{braveDataCollection}">
-  <template is="dom-if" if="[[!isP3AEnabledManaged_]]">
-    <settings-toggle-button id="p3aEnabled"
-        class="cr-row"
-        pref="[[p3aEnabledPref_]]"
-        label="$i18n{p3aEnableTitle}"
-        sub-label="$i18n{p3aEnabledDesc}"
-        on-settings-boolean-control-change="onP3AEnabledChange_">
-    </settings-toggle-button>
-  </template>
+  <!-- growser: P3A-тоггл убран (#21) — телеметрия выпилена, opt-in из настроек
+       невозможен. Остальные тогглы (stats usage ping, metrics reporting) — не
+       P3A, остаются. -->
   <template is="dom-if" if="[[!isStatsReportingEnabledManaged_]]">
     <settings-toggle-button id="statsUsagePingEnabled"
         class="cr-row"
