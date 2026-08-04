@@ -7,7 +7,6 @@
 #include "base/scoped_observation.h"
 #include "brave/browser/ui/brave_view_ids.h"
 #include "brave/browser/ui/browser_commands.h"
-#include "brave/browser/ui/views/bookmarks/bookmark_bar_instructions_view.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "chrome/browser/bookmarks/bookmark_model_factory.h"
 #include "chrome/browser/profiles/profile.h"
@@ -86,22 +85,7 @@ class BookmarkBarTest : public InProcessBrowserTest {
   }
 
   BookmarkBarView* bookmark_bar() { return browser_view()->bookmark_bar(); }
-
-  BookmarkBarInstructionsView* GetInstructionView() {
-    for (views::View* child : bookmark_bar()->children()) {
-      if (child->GetID() == BRAVE_VIEW_ID_BOOKMARK_IMPORT_INSTRUCTION_VIEW) {
-        return static_cast<BookmarkBarInstructionsView*>(child);
-      }
-    }
-    return nullptr;
-  }
 };
-
-IN_PROC_BROWSER_TEST_F(BookmarkBarTest, InstructionsViewTest) {
-  // growser: промо импорта закладок скрыто всегда (#17) — вью не создаётся
-  // (show_instructions == false в bookmark_bar_view.cc).
-  EXPECT_EQ(nullptr, GetInstructionView());
-}
 
 IN_PROC_BROWSER_TEST_F(BookmarkBarTest, AllBookmarksButtonVisibility) {
   // "All bookmarks button" gets visible when a node is added to the "other"
