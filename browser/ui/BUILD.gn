@@ -621,8 +621,6 @@ source_set("ui") {
 
   if (toolkit_views) {
     sources += [
-      "views/bookmarks/bookmark_bar_instructions_view.cc",
-      "views/bookmarks/bookmark_bar_instructions_view.h",
       "views/bookmarks/brave_bookmark_bar_view.cc",
       "views/bookmarks/brave_bookmark_bar_view.h",
       "views/bookmarks/saved_tab_groups/brave_saved_tab_group_button.cc",
