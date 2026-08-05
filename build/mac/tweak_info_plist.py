@@ -125,6 +125,12 @@ def Main():
     # Explicitly disable profiling
     plist['SUEnableSystemProfiling'] = False
 
+    # growser: CFBundleIconName тянет ассет AppIcon из Assets.car (лев Brave,
+    # готовый бинарь — не пересобирается из .xcassets) и перекрывает
+    # CFBundleIconFile (app.icns, наша «G») в доке и уведомлениях macOS.
+    # Срезаем ключ для всех каналов — авторитетным становится app.icns.
+    _RemoveKeys(plist, 'CFBundleIconName')
+
     if args.enable_updater:
         plist['KSProductID'] = plist['CFBundleIdentifier']
         plist['KSVersion'] = plist['CFBundleShortVersionString']
