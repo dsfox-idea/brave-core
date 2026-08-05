@@ -319,7 +319,10 @@ void AddBraveColorMixerForAllThemes(ui::ColorProvider* provider,
   mixer[kColorToolbarButtonActivated] = {SkColorSetRGB(0x7C, 0x91, 0xFF)};
   mixer[kColorSidebarButtonPressed] = {kColorToolbarButtonActivated};
 
-  mixer[kColorLocationBarFocusRing] = {nala::kColorPrimitivePrimary50};
+  // growser (#32): фокус-ринг омнибокса — бренд-зелёный Growser (#1EA362),
+  // не дефолтный Nala primary (#5b67e8 — сине-фиолетовый Brave). Применяется ко
+  // всем темам; private/tor-окна переопределяют ринг ниже своими цветами.
+  mixer[kColorLocationBarFocusRing] = {SkColorSetRGB(0x1E, 0xA3, 0x62)};
 
   // Search conversion button in omnibox.
   mixer[kColorSearchConversionButtonText] = {nala::kColorPrimary60};
