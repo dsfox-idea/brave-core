@@ -465,14 +465,15 @@ std::string GetDescriptionFromAppcastItem(id item) {
         command->GetSwitchValueASCII(switches::kUpdateFeedURL));
   }
 
-  return [NSString stringWithFormat:@"https://updates.bravesoftware.com/"
-                                    @"sparkle/%@/%s/appcast.xml",
-#if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
-                                    @"Brave-Origin",
-#else
-                                    @"Brave-Browser",
-#endif
-                                    GetUpdateChannel().c_str()];
+  // growser (#35): auto-update appcast feed is hosted on our site
+  // (https://growser.org/sparkle/<channel>/appcast.xml, GitHub Pages on
+  // growser.org). Bundles are served from dl.growser.org (Cloudflare R2).
+  // The --update-feed-url switch still overrides this for testing.
+  std::string channel = GetUpdateChannel();
+  if (channel.empty())
+    channel = "stable";
+  return [NSString stringWithFormat:@"https://growser.org/sparkle/%s/appcast.xml",
+                                    channel.c_str()];
 }
 @end
 
