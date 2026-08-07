@@ -250,8 +250,8 @@ if (is_win) {
       deps = [ "//chrome/installer/setup" ]
     }
     sign("signed_brave_exe") {
-      sources = [ "$root_out_dir/brave.exe" ]
-      outputs = [ "$root_out_dir/presigned_binaries/brave.exe" ]
+      sources = [ "$root_out_dir/$brave_exe" ]
+      outputs = [ "$root_out_dir/presigned_binaries/$brave_exe" ]
       deps = [ "//brave/build/win:copy_exe" ]
     }
     sign("signed_chrome_dll") {
