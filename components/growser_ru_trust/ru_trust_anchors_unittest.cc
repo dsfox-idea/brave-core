@@ -97,7 +97,8 @@ TEST(GrowserRuTrustAnchorsTest, CoversKnownRussianBankDomains) {
   std::vector<std::string> names =
       GetPermittedDnsNames(GetTrustAnchorsPrefDefault());
   for (std::string_view expected :
-       {"sberbank.ru", "vtb.ru", "alfabank.ru", "gosuslugi.ru"}) {
+       {"sberbank.ru", "vtb.ru", "alfabank.ru", "gosuslugi.ru", "mkb.ru",
+        "gazprombank.ru", "tinkoff.ru", "nalog.ru"}) {
     EXPECT_TRUE(std::ranges::contains(names, expected)) << expected;
   }
 }
