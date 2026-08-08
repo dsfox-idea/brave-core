@@ -354,6 +354,9 @@ test("brave_unit_tests") {
       "//brave/browser/day_zero_browser_ui_expt:unit_tests",
       "//brave/components/windows_recall",
       "//brave/components/windows_recall:unit_tests",
+
+      # growser (#64): the executable-name interception.
+      "//brave/sandbox/win:unit_tests",
     ]
   }
 

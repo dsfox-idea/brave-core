@@ -1,0 +1,22 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+assert(is_win)
+
+# growser (#64): the interception sources themselves are compiled into
+# //sandbox/win:sandbox through sources.gni, so this target only carries their
+# test. Depending on that component is what lets the test call the Target*
+# entry points with a fake original API.
+source_set("unit_tests") {
+  testonly = true
+
+  sources = [ "src/module_file_name_interception_unittest.cc" ]
+
+  deps = [
+    "//base",
+    "//sandbox/win:sandbox",
+    "//testing/gtest",
+  ]
+}
