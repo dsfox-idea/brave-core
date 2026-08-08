@@ -16,6 +16,12 @@ declare_args() {
   # redirect", matching how safebrowsing_api_endpoint already behaves.
   safebrowsing_filecheck_endpoint = "sb-ssl.brave.com"
   safebrowsing_crxlist_endpoint = "safebrowsing2.brave.com"
+
+  # Where component/CRLSet payload downloads are routed. static_redirect_helper
+  # sends Google's CDN hosts (gvt1.com, dl.google.com) to Brave's redirector,
+  # which 403s a fork - so the update check could succeed while every download
+  # failed. Default keeps the previous behaviour; empty means "do not redirect".
+  brave_redirector_endpoint = "redirector.brave.com"
 }
 
 buildflag_header("buildflags") {
@@ -24,6 +30,7 @@ buildflag_header("buildflags") {
     "SAFEBROWSING_ENDPOINT=\"$safebrowsing_api_endpoint\"",
     "SAFEBROWSING_FILECHECK_ENDPOINT=\"$safebrowsing_filecheck_endpoint\"",
     "SAFEBROWSING_CRXLIST_ENDPOINT=\"$safebrowsing_crxlist_endpoint\"",
+    "BRAVE_REDIRECTOR_ENDPOINT=\"$brave_redirector_endpoint\"",
   ]
 }
 
