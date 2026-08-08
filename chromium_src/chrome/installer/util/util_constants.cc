@@ -33,6 +33,6 @@ const char kUpdateSetupExe[] = "update-setup-exe";
 
 }  // namespace switches
 
-const wchar_t kChromeExe[] = L"brave.exe";
+const wchar_t kChromeExe[] = L"growser.exe";
 
 }  // namespace installer
