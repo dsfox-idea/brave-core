@@ -1,13 +1,13 @@
 caption: Control tracking query parameters filtering
 default: null
 desc: |-
-  This policy controls whether Brave automatically strips known tracking query parameters from URLs when Brave Shields is enabled. It has no affect when Brave Shields are disabled.
+  This policy controls whether Growser automatically strips known tracking query parameters from URLs when Growser Shields is enabled. It has no affect when Growser Shields are disabled.
 
-  If this policy is set to true, known tracking query parameters will be filtered when Brave Shields is enabled.
+  If this policy is set to true, known tracking query parameters will be filtered when Growser Shields is enabled.
 
   If this policy is set to false, known tracking query parameters will not be filtered.
 
-  If this policy is left unset, known tracking query parameters will be filtered when Brave Shields is enabled.
+  If this policy is left unset, known tracking query parameters will be filtered when Growser Shields is enabled.
 example_value: true
 features:
   can_be_mandatory: true

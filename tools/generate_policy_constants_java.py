@@ -43,7 +43,7 @@ def generate_java_constant_name(policy_name):
 
     Handles acronyms properly:
     - 'BraveWebDiscoveryEnabled' -> 'BRAVE_WEB_DISCOVERY_ENABLED'
-    - 'BraveP3AEnabled' -> 'BRAVE_P3A_ENABLED'
+    - 'GrowserP3AEnabled' -> 'GROWSER_P3A_ENABLED'
     - 'BraveAIChatEnabled' -> 'BRAVE_AI_CHAT_ENABLED'
     - 'BraveVPNDisabled' -> 'BRAVE_VPN_DISABLED'
     """

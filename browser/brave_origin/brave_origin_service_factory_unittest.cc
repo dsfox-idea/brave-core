@@ -36,7 +36,7 @@ TEST(BraveOriginServiceFactoryTest,
 
   // Test that P3A policy is correctly built (browser-level)
   const auto* p3a_info = base::FindOrNull(browser_policy_definitions,
-                                          policy::key::kBraveP3AEnabled);
+                                          policy::key::kGrowserP3AEnabled);
   ASSERT_NE(p3a_info, nullptr);
   EXPECT_EQ(p3a_info->pref_name, p3a::kP3AEnabled);
   EXPECT_EQ(p3a_info->default_value, false);
@@ -92,7 +92,7 @@ TEST(BraveOriginServiceFactoryTest,
 
   // Test that browser-level policies are NOT in profile definitions
   EXPECT_FALSE(
-      profile_policy_definitions.contains(policy::key::kBraveP3AEnabled))
+      profile_policy_definitions.contains(policy::key::kGrowserP3AEnabled))
       << "Browser-level policy should not be in profile definitions";
   EXPECT_FALSE(
       profile_policy_definitions.contains(policy::key::kBraveStatsPingEnabled))

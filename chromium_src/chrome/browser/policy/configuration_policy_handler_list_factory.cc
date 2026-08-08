@@ -38,7 +38,7 @@ std::unique_ptr<ConfigurationPolicyHandlerList> BuildHandlerList(
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
   handlers->AddHandler(std::make_unique<BooleanDisablingPolicyHandler>(
-      key::kBraveSearchResultAdsEnabled,
+      key::kGrowserSearchResultAdsEnabled,
       brave_ads::prefs::kOptedInToSearchResultAds));
 #endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
 

@@ -20,20 +20,23 @@ def _LoadPolicies(orig_func):
     # there will be one "group" for every folder found under
     # `//components/policy/resources/templates/policy_definitions`
     # Chromium considers the folder name the group name for the policy.
-    # Brave uses the group name "BraveSoftware". The child element for the
-    # group is the policy itself (those are the yaml files in the folder).
+    # growser (#62) uses the group name "Growser"; upstream Brave used
+    # "BraveSoftware". The child element for the group is the policy itself
+    # (those are the yaml files in the folder). Note that renaming the group
+    # orphans the old directory in Chromium's tree - the pruning below only
+    # covers groups the list still names.
     #
-    # Brave specific entries are get copied into place by `update_policy_files`.
+    # Our entries are copied into place by sync_policy_files() below.
     # We copy the files from:
-    # `//brave/components/policy/resources/templates/policy_definitions/BraveSoftware` # pylint: disable=line-too-long
+    # `//brave/components/policy/resources/templates/policy_definitions/Growser` # pylint: disable=line-too-long
     # to:
     # `//components/policy/resources/templates/policy_definitions`
     policy_definition_yaml = policies['policy_definitions']
     assert policy_definition_yaml, "'policy_definitions' is None (did upstream change?)"  # pylint: disable=line-too-long
 
     brave_policies = []
-    brave_policy_section = policy_definition_yaml['BraveSoftware']
-    assert brave_policy_section, "'policy_definitions > BraveSoftware' entries not found (failed to copy?)"  # pylint: disable=line-too-long
+    brave_policy_section = policy_definition_yaml['Growser']
+    assert brave_policy_section, "'policy_definitions > Growser' entries not found (failed to copy?)"  # pylint: disable=line-too-long
 
     brave_policy_items = brave_policy_section['policies']
     for key, _ in brave_policy_items.items():

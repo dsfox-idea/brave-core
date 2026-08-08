@@ -1,7 +1,7 @@
 caption: Enable Local AI
 default: null
 desc: |-
-  Master switch for Brave's local AI features (history embeddings and any future on-device AI surfaces).
+  Master switch for Growser's local AI features (history embeddings and any future on-device AI surfaces).
 
   When this policy is set to true, the local AI feature surfaces (the chrome://history side bar toggle, the brave-history-embeddings chrome://flags entry, the EmbeddingGemma model component install, etc.) become available to the user.
 

@@ -1,7 +1,7 @@
 caption: Control De-AMP feature to bypass Google-hosted AMP pages.
 default: null
 desc: |-
-  De-AMP allows Brave users to bypass Google-hosted AMP pages and instead visit the content's publisher directly. This protects users' privacy, security and internet experience by preventing tracking and profiling users through AMP.
+  De-AMP allows Growser users to bypass Google-hosted AMP pages and instead visit the content's publisher directly. This protects users' privacy, security and internet experience by preventing tracking and profiling users through AMP.
 
   If this policy is set to true, De-AMP will be enabled to redirect users away from AMP pages to the original publisher's content.
 

@@ -115,21 +115,21 @@ AdBlockOnlyModePolicies AdBlockOnlyModePolicyManager::GetPoliciesImpl() const {
                    base::Value(CONTENT_SETTING_BLOCK));
 
   // Disable language fingerprinting reduction.
-  policies.emplace(policy::key::kBraveReduceLanguageEnabled,
+  policies.emplace(policy::key::kGrowserReduceLanguageEnabled,
                    base::Value(false));
 
   // Disable De-AMP.
-  policies.emplace(policy::key::kBraveDeAmpEnabled, base::Value(false));
+  policies.emplace(policy::key::kGrowserDeAmpEnabled, base::Value(false));
 
   // Disable URL debouncing.
-  policies.emplace(policy::key::kBraveDebouncingEnabled, base::Value(false));
+  policies.emplace(policy::key::kGrowserDebouncingEnabled, base::Value(false));
 
   // Disable Brave Tracking Query Parameters Filtering.
-  policies.emplace(policy::key::kBraveTrackingQueryParametersFilteringEnabled,
+  policies.emplace(policy::key::kGrowserTrackingQueryParametersFilteringEnabled,
                    base::Value(false));
 
   // Disable Brave Global Privacy Control.
-  policies.emplace(policy::key::kBraveGlobalPrivacyControlEnabled,
+  policies.emplace(policy::key::kGrowserGlobalPrivacyControlEnabled,
                    base::Value(false));
 
   return policies;
