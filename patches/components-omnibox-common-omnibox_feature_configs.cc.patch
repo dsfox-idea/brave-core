@@ -1,5 +1,5 @@
 diff --git a/components/omnibox/common/omnibox_feature_configs.cc b/components/omnibox/common/omnibox_feature_configs.cc
-index fc14abacb1673..20aa99bcb4b10 100644
+index fc14abacb1673d29bd296c110f7b2d4cb20b6552..20aa99bcb4b10ace376c3c1159eb5a695b539c53 100644
 --- a/components/omnibox/common/omnibox_feature_configs.cc
 +++ b/components/omnibox/common/omnibox_feature_configs.cc
 @@ -375,7 +375,7 @@ DocumentProvider::~DocumentProvider() = default;

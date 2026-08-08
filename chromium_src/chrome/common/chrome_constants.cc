@@ -38,9 +38,9 @@ constexpr char kChromeVersion[] = CHROME_VERSION_STRING;
 
 #if BUILDFLAG(IS_WIN)
 const base::FilePath::CharType kBrowserProcessExecutableName[] =
-    FPL("brave.exe");
+    FPL("growser.exe");
 const base::FilePath::CharType kHelperProcessExecutableName[] =
-    FPL("brave.exe");
+    FPL("growser.exe");
 #elif BUILDFLAG(IS_MAC)
 const base::FilePath::CharType kBrowserProcessExecutableName[] =
     FPL(PRODUCT_STRING);
@@ -60,9 +60,9 @@ const base::FilePath::CharType kHelperProcessExecutableName[] = FPL("exe");
 
 #if BUILDFLAG(IS_WIN)
 const base::FilePath::CharType kBrowserProcessExecutablePath[] =
-    FPL("brave.exe");
+    FPL("growser.exe");
 const base::FilePath::CharType kHelperProcessExecutablePath[] =
-    FPL("brave.exe");
+    FPL("growser.exe");
 #elif BUILDFLAG(IS_MAC)
 const base::FilePath::CharType kBrowserProcessExecutablePath[] =
     FPL(PRODUCT_STRING ".app/Contents/MacOS/" PRODUCT_STRING);
