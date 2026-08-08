@@ -12,17 +12,24 @@
 
 namespace {
 
-// The Brave publisher key that is accepted in addition to upstream's
-// kPublisherKeyHash. This key may be used to verify updates of the browser
-// itself. If you change this constant, then you will likely also need to change
-// the associated file crx-private-key.der, which is not in Git.
-// Until May 2024, components were only signed with 0x93, 0x74, 0xd6... Since
-// then, they are also signed with this new key. Now, the value here ensures
-// that only binaries signed with the new key are accepted.
+// The growser publisher key, accepted in addition to upstream's
+// kPublisherKeyHash. It verifies updates of the browser itself and any
+// component we publish ourselves; upstream's key stays accepted because the
+// components we proxy are still Google's.
+//
+// The value is the SHA-256 of the SubjectPublicKeyInfo, which is what
+// VerifyCrx3() hashes and compares. The private half is publisher.der (PKCS #8
+// DER, the format crx_build_action expects) and lives outside this repository -
+// see growser docs/signing.md.
+//
+// The identifiers keep Brave's spelling on purpose: IsBravePublisher() is
+// called from patches/components-crx_file-crx_verifier.cc.patch, so renaming
+// them here would mean re-cutting that patch on every Chromium bump for no
+// gain.
 constexpr uint8_t kBravePublisherKeyHash[] = {
-    0xb8, 0xb9, 0xd3, 0x85, 0xd5, 0x1d, 0x37, 0x9d, 0x92, 0x56, 0xa0,
-    0xf0, 0xa7, 0xf5, 0x1b, 0xb0, 0x8e, 0x3e, 0xb5, 0x64, 0xab, 0x85,
-    0xbd, 0x19, 0xd6, 0xff, 0x49, 0xa7, 0x35, 0x19, 0x84, 0xf7};
+    0xe6, 0x04, 0x72, 0x47, 0xa5, 0x13, 0x67, 0xef, 0x44, 0x3f, 0xe1,
+    0x92, 0x5a, 0xad, 0x30, 0x3c, 0x47, 0xe4, 0xc2, 0x91, 0x2d, 0x5a,
+    0x22, 0x4e, 0x61, 0x77, 0x29, 0x3f, 0x4d, 0xb7, 0x37, 0x70};
 
 auto GetBravePublisherKeyHash() {
   static auto brave_publisher_key = std::to_array(kBravePublisherKeyHash);
