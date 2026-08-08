@@ -90,16 +90,22 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
     return;
   }
 
-  if (!safebrowsing_endpoint.empty() &&
+  // These two were hardcoded to Brave's proxies, so a fork that pointed
+  // safebrowsing_api_endpoint at its own host still sent them to Brave. Each now
+  // has its own buildflag with the same default; empty means "do not redirect".
+  std::string_view filecheck_endpoint =
+      BUILDFLAG(SAFEBROWSING_FILECHECK_ENDPOINT);
+  if (!filecheck_endpoint.empty() &&
       safebrowsingfilecheck_pattern->MatchesHost(request_url)) {
-    replacements.SetHostStr(kBraveSafeBrowsingSslProxy);
+    replacements.SetHostStr(filecheck_endpoint);
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
-  if (!safebrowsing_endpoint.empty() &&
+  std::string_view crxlist_endpoint = BUILDFLAG(SAFEBROWSING_CRXLIST_ENDPOINT);
+  if (!crxlist_endpoint.empty() &&
       safebrowsingcrxlist_pattern->MatchesHost(request_url)) {
-    replacements.SetHostStr(kBraveSafeBrowsing2Proxy);
+    replacements.SetHostStr(crxlist_endpoint);
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
