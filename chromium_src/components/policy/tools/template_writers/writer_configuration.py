@@ -16,12 +16,21 @@ def GetConfigurationForBuild(original_function, defines):
     return merged
 
 
+# growser (#62): the registry keys became ours in #58, but everything an
+# administrator actually reads was still Brave - the policy tree they import
+# said "Brave" while writing to Growser's keys. These are the display side of
+# the same configuration.
+#
+# The category path follows unbranded Chromium's single level rather than
+# Brave's two ('Cat_Brave' -> 'brave'): the outer level is a company grouping,
+# and we have no company component anywhere else either (kCompanyPathName is
+# empty, see chromium_install_modes.h).
 _BRAVE_VALUES = {
-    'build': 'brave',
-    'app_name': 'Brave',
-    'doc_url': 'https://support.brave.app/hc/en-us/articles/360039248271-Group-Policy',
-    'frame_name': 'Brave Frame',
-    'webview_name': 'Brave WebView',
+    'build': 'growser',
+    'app_name': 'Growser',
+    'doc_url': 'https://github.com/dsfox-idea/growser',
+    'frame_name': 'Growser Frame',
+    'webview_name': 'Growser WebView',
     'win_config': {
         'win': {
             # growser (#58): our own policy key. This feeds the GENERATED
@@ -31,19 +40,18 @@ _BRAVE_VALUES = {
             # Growser on the same machine.
             'reg_mandatory_key_name': 'Software\\Policies\\Growser',
             'reg_recommended_key_name': 'Software\\Policies\\Growser\\Recommended',
-            'mandatory_category_path': ['Cat_Brave', 'brave'],
-            'recommended_category_path': ['Cat_Brave', 'brave_recommended'],
+            'mandatory_category_path': ['growser'],
+            'recommended_category_path': ['growser_recommended'],
             'category_path_strings': {
-                'Cat_Brave': 'Brave Software',
-                'brave': 'Brave',
-                'brave_recommended': 'Brave - {doc_recommended}'
+                'growser': 'Growser',
+                'growser_recommended': 'Growser - {doc_recommended}'
             },
-            'namespace': 'BraveSoftware.Policies.Brave',
+            'namespace': 'Growser.Policies.Growser',
         },
     },
-    'admx_prefix': 'brave',
-    'linux_policy_path': '/etc/brave/policies/',
-    'bundle_id': 'com.brave.ios.core',
+    'admx_prefix': 'growser',
+    'linux_policy_path': '/etc/growser/policies/',
+    'bundle_id': 'com.growser.ios.core',
 }
 
 def _merge_dicts(src, dst):
