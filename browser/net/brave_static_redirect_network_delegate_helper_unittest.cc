@@ -6,10 +6,13 @@
 #include "brave/browser/net/brave_static_redirect_network_delegate_helper.h"
 
 #include <memory>
+#include <string_view>
 #include <string>
 
+#include "base/strings/strcat.h"
 #include "brave/browser/net/url_context.h"
 #include "brave/components/geolocation/brave_geolocation_buildflags.h"
+#include "brave/components/safebrowsing/buildflags.h"
 #include "brave/components/static_redirect_helper/static_redirect_helper.h"
 #include "components/component_updater/component_updater_url_constants.h"
 #include "net/base/net_errors.h"
@@ -259,12 +262,20 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest,
   const GURL url(
       "https://sb-ssl.google.com/safebrowsing/clientreport/download?"
       "key=DUMMY_KEY");
-  GURL expected_url(
-      "https://sb-ssl.brave.com/safebrowsing/clientreport/download?"
-      "key=DUMMY_KEY");
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
-  EXPECT_EQ(new_url, expected_url);
   EXPECT_EQ(rc, net::OK);
+
+  // The target is configurable (SAFEBROWSING_FILECHECK_ENDPOINT). An empty
+  // value means the build talks to Google directly, so nothing is rewritten.
+  constexpr std::string_view kEndpoint =
+      BUILDFLAG(SAFEBROWSING_FILECHECK_ENDPOINT);
+  if (kEndpoint.empty()) {
+    EXPECT_TRUE(new_url.is_empty());
+  } else {
+    EXPECT_EQ(new_url, GURL(base::StrCat(
+                           {"https://", kEndpoint,
+                            "/safebrowsing/clientreport/download?key=DUMMY_KEY"})));
+  }
 }

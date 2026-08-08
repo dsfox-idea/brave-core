@@ -8,11 +8,23 @@ import("//build/config/features.gni")
 
 declare_args() {
   safebrowsing_api_endpoint = "safebrowsing.brave.com"
+
+  # The other two Safe Browsing hosts Chromium talks to. They were hardcoded to
+  # Brave's proxies in static_redirect_helper, so a fork pointing
+  # safebrowsing_api_endpoint at its own proxy still sent these two to Brave.
+  # The defaults keep the previous behaviour; an empty value means "do not
+  # redirect", matching how safebrowsing_api_endpoint already behaves.
+  safebrowsing_filecheck_endpoint = "sb-ssl.brave.com"
+  safebrowsing_crxlist_endpoint = "safebrowsing2.brave.com"
 }
 
 buildflag_header("buildflags") {
   header = "buildflags.h"
-  flags = [ "SAFEBROWSING_ENDPOINT=\"$safebrowsing_api_endpoint\"" ]
+  flags = [
+    "SAFEBROWSING_ENDPOINT=\"$safebrowsing_api_endpoint\"",
+    "SAFEBROWSING_FILECHECK_ENDPOINT=\"$safebrowsing_filecheck_endpoint\"",
+    "SAFEBROWSING_CRXLIST_ENDPOINT=\"$safebrowsing_crxlist_endpoint\"",
+  ]
 }
 
 source_set("safebrowsing") {
