@@ -24,8 +24,13 @@ _BRAVE_VALUES = {
     'webview_name': 'Brave WebView',
     'win_config': {
         'win': {
-            'reg_mandatory_key_name': 'Software\\Policies\\BraveSoftware\\Brave',
-            'reg_recommended_key_name': 'Software\\Policies\\BraveSoftware\\Brave\\Recommended',
+            # growser (#58): our own policy key. This feeds the GENERATED
+            # components/policy/core/common/policy_constants.cc, which is why
+            # grepping the source tree for the old value finds nothing. Leaving
+            # it as Brave's meant an administrator's Brave policies applied to
+            # Growser on the same machine.
+            'reg_mandatory_key_name': 'Software\\Policies\\Growser',
+            'reg_recommended_key_name': 'Software\\Policies\\Growser\\Recommended',
             'mandatory_category_path': ['Cat_Brave', 'brave'],
             'recommended_category_path': ['Cat_Brave', 'brave_recommended'],
             'category_path_strings': {

@@ -177,7 +177,7 @@ constexpr TestData kTestData[] = {
 #else   // OFFICIAL_BUILD
 constexpr TestData kTestData[] = {
     {
-        L"C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser-Development"
+        L"C:\\Program Files (x86)\\Growser-Development"
         L"\\Application\\brave.exe",
         DEVELOPER_INDEX,
         true,
