@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grit-part>
-  <message name="IDS_BRAVE_SHIELDS" translateable="false" desc="Title for Growser Shields">
-    Growser Shields
+  <message name="IDS_BRAVE_SHIELDS" translateable="false" desc="Title for Brave Shields">
+    Brave Shields
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_STANDALONE" desc="Label for back button on inner views of Shields panel">
     Shields
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_ENABLE" desc="An accessible label for Growser Shields switch button.">
-    Enable Growser Shields
+  <message name="IDS_BRAVE_SHIELDS_ENABLE" desc="An accessible label for Brave Shields switch button.">
+    Enable Brave Shields
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_UP" desc="Status label for when Growser Shields is enabled.">
+  <message name="IDS_BRAVE_SHIELDS_UP" desc="Status label for when Brave Shields is enabled.">
     <ph name="STATUS_BEFORE">$1</ph>Shields are UP<ph name="STATUS_AFTER">/$1</ph> for this site
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_DOWN" desc="Status label for when Growser Shields is disabled.">
+  <message name="IDS_BRAVE_SHIELDS_DOWN" desc="Status label for when Brave Shields is disabled.">
     <ph name="STATUS_BEFORE">$1</ph>Shields are DOWN<ph name="STATUS_AFTER">/$1</ph> for this site
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_STATUS_UP" desc="Status label for when Growser Shields is enabled." formatter_data="webui=BraveShields">
+  <message name="IDS_BRAVE_SHIELDS_STATUS_UP" desc="Status label for when Brave Shields is enabled." formatter_data="webui=BraveShields">
     Shields <ph name="UP_BEFORE">$1</ph>up<ph name="UP_AFTER">/$1</ph> for this site
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_STATUS_DOWN" desc="Status label for when Growser Shields is disabled." formatter_data="webui=BraveShields">
+  <message name="IDS_BRAVE_SHIELDS_STATUS_DOWN" desc="Status label for when Brave Shields is disabled." formatter_data="webui=BraveShields">
     Shields <ph name="DOWN_BEFORE">$1</ph>down<ph name="DOWN_AFTER">/$1</ph> for this site
   </message>
 
@@ -109,7 +109,7 @@
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_NOT_BLOCKED_NOTE" desc="Description to convey trackers, advertisement and more are not being blocked. Do not translate Growser SHields.">
-    Not protected by Growser Shields <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Not protected by Brave Shields <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ADVANCED_CTRLS" desc="A button label to expand/collapse more options.">
@@ -301,7 +301,7 @@
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ICON_TOOLTIP" desc="The message shown on hover of the shields lion icon">
-    Growser Shields
+    Brave Shields
 <ph name="NUMBER">$1</ph> Trackers, ads, and more blocked
   </message>
 
@@ -342,30 +342,30 @@
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_NOT_VALID_ADDRESS" desc="Label for link about invalid pattern for content setting page dialog to add a site">
-    Wildcards are not allowed for Growser Shields.
+    Wildcards are not allowed for Brave Shields.
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_ONBOARDING_LABEL_WITHOUT_COMPANIES" desc="Label for the onboarding bubble UI, informing users about Growser Shields blocking number of trackers only.">
+  <message name="IDS_BRAVE_SHIELDS_ONBOARDING_LABEL_WITHOUT_COMPANIES" desc="Label for the onboarding bubble UI, informing users about Brave Shields blocking number of trackers only.">
     {BLOCKED_COUNT, plural,
-      =1 {Growser Shields blocked 1 tracker on <ph name="SITE_URL">$1</ph>}
-      other {Growser Shields blocked {BLOCKED_COUNT} trackers on <ph name="SITE_URL">$1</ph>}
+      =1 {Brave Shields blocked 1 tracker on <ph name="SITE_URL">$1</ph>}
+      other {Brave Shields blocked {BLOCKED_COUNT} trackers on <ph name="SITE_URL">$1</ph>}
     }
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_ONBOARDING_CLICK_TO_VIEW_LABEL" desc="Label for the onboarding bubble to guide the user to the Shield icon">
-    Click the Growser icon to view Growser Shields.
+    Click the Growser icon to view Brave Shields.
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_SITE_INFO_LINK" desc="Link text for Site Info tab on Page Info bubble">
     Site Info
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_TEXT" desc="Text for the IPH bubble shown when Growser Shields has moved to Page Info.">
-    Growser Shields has a new home and design. It now integrates with site information for a one-stop experience.
+  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_TEXT" desc="Text for the IPH bubble shown when Brave Shields has moved to Page Info.">
+    Brave Shields has a new home and design. It now integrates with site information for a one-stop experience.
   </message>
 
-  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_SCREENREADER_TEXT" desc="Screen reader text for the Growser Shields Page Info IPH bubble.">
-    Growser Shields has a new home and design. Access it by clicking the site icon in the address bar.
+  <message name="IDS_BRAVE_SHIELDS_PAGE_INFO_IPH_SCREENREADER_TEXT" desc="Screen reader text for the Brave Shields Page Info IPH bubble.">
+    Brave Shields has a new home and design. Access it by clicking the site icon in the address bar.
   </message>
 
   <message name="IDS_BRAVE_SHIELDS_GO_BACK" desc="Accessible label for the back button on inner views of the Shields panel." formatter_data="webui=BraveShields">

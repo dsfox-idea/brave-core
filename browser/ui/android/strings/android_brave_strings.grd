@@ -258,8 +258,8 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_TURN_ON_BRAVE_NOTIFICATIONS" desc="Text for button Turn on Growser notifications">
         Turn on Growser notifications
       </message>
-      <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_SHIELDS" desc="Content description for the button that is enable, disable Growser Shields.">
-        Enable/Disable Growser Shields
+      <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_SHIELDS" desc="Content description for the button that is enable, disable Brave Shields.">
+        Enable/Disable Brave Shields
       </message>
     <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_PIP" desc="Content description for the button that triggers picture-in-picture mode for YouTube videos.">
       Enter picture-in-picture mode
@@ -367,7 +367,7 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
         Analytics
       </message>
       <message name="IDS_BRAVE_SHIELDS_AND_PRIVACY" desc="Label for the settings related to shields and privacy">
-        Growser Shields &amp; privacy
+        Brave Shields &amp; privacy
       </message>
       <message name="IDS_BRAVE_SEARCH_ENGINES" desc="Label for the settings related to the search engines">
         Search engines
@@ -896,7 +896,7 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
         Skip
       </message>
       <message name="IDS_BRAVE_SHIELDS_ONBOARDING_TITLE" desc="Title for brave shield page">
-        Growser Shields
+        Brave Shields
       </message>
       <message name="IDS_TERMS_OF_SERVICE" desc="Text for terms of service">
         Terms of Service
@@ -3722,7 +3722,7 @@ If you don't accept this request, VPN will not reconnect and your internet conne
       Support our mission &amp; open-source work
     </message>
     <message name="IDS_ORIGIN_PAYWALL_TEXT_2" desc="Growser Origin paywall text">
-      Minimalist browser UI centered on Growser Shields
+      Minimalist browser UI centered on Brave Shields
     </message>
     <message name="IDS_ORIGIN_PAYWALL_TEXT_3" desc="Growser Origin paywall text">
       Maintain core adblock, privacy, &amp; speed

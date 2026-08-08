@@ -2634,7 +2634,7 @@
 <translation id="3773808439655997805">您目前正在使用「僅限廣告封鎖」模式。此模式僅提供廣告封鎖保護 (如果盾牌開啟)。如果您希望返回完整的盾牌模式，請在設定中停用此模式。</translation>
 <translation id="4820891023903368625">廣告已攔截 <ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">已封鎖追蹤程式、廣告等 <ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
-<translation id="7604553853176833536">未受 Growser Shields 保護 <ph name="LINK_BEFORE"/>深入瞭解<ph name="LINK_AFTER"/></translation>
+<translation id="7604553853176833536">未受 Brave Shields 保護 <ph name="LINK_BEFORE"/>深入瞭解<ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">進階控制</translation>
 <translation id="7939062555109487992">進階選項</translation>
 <translation id="5799940914270080805">變更這些設定可能會使網站無法正常運作。</translation>
@@ -2679,7 +2679,7 @@
 <translation id="2570787596946026998">僅限透過 HTTPS 連線</translation>
 <translation id="2387532482048804818">告訴我們網站是否在啟用 Shields 後就無法正常運作。</translation>
 <translation id="3795015906457257780">目前您是在缺少 Growser 隱私防護的情況下檢視這個網站。</translation>
-<translation id="7194012750329511146">Growser Shields
+<translation id="7194012750329511146">Brave Shields
 已封鎖 <ph name="NUMBER"/> 個追蹤程式、廣告等項目</translation>
 <translation id="2900068182947574679">指令碼</translation>
 <translation id="4292121526390005808">封鎖 scripts</translation>
@@ -2689,12 +2689,12 @@
 <translation id="5032505924781383272">套用保護措施不一定代表此網頁正試圖追蹤您瀏覽器的指紋。</translation>
 <translation id="1905384713982899903">封鎖的指紋</translation>
 <translation id="314364527871618241">允許的指紋</translation>
-<translation id="2808175374672429053">Growser Shields 不允許使用萬用字元。</translation>
+<translation id="2808175374672429053">Brave Shields 不允許使用萬用字元。</translation>
 <translation id="7630425922041907505">{BLOCKED_COUNT, plural,
-      =1 {Growser Shields 已在 <ph name="SITE_URL"/> 封鎖 1 個追蹤器}
-      other {Growser Shields 已在 <ph name="SITE_URL"/> 封鎖 {BLOCKED_COUNT} 個追蹤器}
+      =1 {Brave Shields 已在 <ph name="SITE_URL"/> 封鎖 1 個追蹤器}
+      other {Brave Shields 已在 <ph name="SITE_URL"/> 封鎖 {BLOCKED_COUNT} 個追蹤器}
     }</translation>
-<translation id="2540598191934725677">按一下 Growser 圖示即可檢視 Growser Shields。</translation>
+<translation id="2540598191934725677">按一下 Growser 圖示即可檢視 Brave Shields。</translation>
 <translation id="542789539047208469">網站資訊</translation>
 <translation id="7586067492365979844">Growser 盾牌有新的位置和設計。它現在與網站資訊整合以提供一站式體驗。</translation>
 <translation id="9114542678887529043">Growser 盾牌有新的位置和設計。透過按一下網址列中的網站圖示來存取。</translation>
