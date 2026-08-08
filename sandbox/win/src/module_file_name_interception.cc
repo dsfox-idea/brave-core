@@ -33,13 +33,13 @@ struct BraveToChrome;
 
 template <>
 struct BraveToChrome<char> {
-  static constexpr const std::string_view kBrave = "brave.exe";
+  static constexpr const std::string_view kBrave = "growser.exe";
   static constexpr const std::string_view kChrome = "chrome.exe";
 };
 
 template <>
 struct BraveToChrome<wchar_t> {
-  static constexpr const std::wstring_view kBrave = L"brave.exe";
+  static constexpr const std::wstring_view kBrave = L"growser.exe";
   static constexpr const std::wstring_view kChrome = L"chrome.exe";
 };
 
@@ -71,18 +71,27 @@ std::optional<DWORD> PatchFilenameImpl(CharT* filename,
 
   constexpr DWORD kBraveLen = FromTo<CharT>::kBrave.length();
   constexpr DWORD kChromeLen = FromTo<CharT>::kChrome.length();
-  static_assert(kBraveLen <= kChromeLen);
-  constexpr DWORD kLenDiff = kChromeLen - kBraveLen;
+  // growser (#64): signed, and no static_assert forbidding the shorter case.
+  // Upstream computed this as an unsigned DWORD, which only works while the
+  // replacement grows ("brave.exe" -> "chrome.exe"); ours shrinks
+  // ("growser.exe" -> "chrome.exe") and the subtraction underflowed, so the
+  // assert existed to keep anyone from trying. A shrinking name can never
+  // overflow the buffer it already fits in, so ERROR_INSUFFICIENT_BUFFER is
+  // unreachable in that direction - the comparison below covers both.
+  constexpr int kLenDiff =
+      static_cast<int>(kChromeLen) - static_cast<int>(kBraveLen);
 
   --size;  // space for null-terminator
 
   const size_t brave_pos = length - kBraveLen;
   ReplaceAt(UNSAFE_TODO(filename + brave_pos), size - brave_pos,
             FromTo<CharT>::kChrome);
-  if (size < length + kLenDiff) {
+  const DWORD patched_length =
+      static_cast<DWORD>(static_cast<int>(length) + kLenDiff);
+  if (size < patched_length) {
     ::SetLastError(ERROR_INSUFFICIENT_BUFFER);
   }
-  length = std::min(size, length + kLenDiff);
+  length = std::min(size, patched_length);
   UNSAFE_TODO(filename[length]) = 0;
   return length;
 }
