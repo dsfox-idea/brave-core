@@ -2635,7 +2635,7 @@ DuckDuckGo ไม่บันทึกประวัติการค้นห
 <translation id="3773808439655997805">ขณะนี้คุณกำลังใช้โหมดบล็อกโฆษณาเท่านั้น โหมดนี้จะให้การป้องกันเฉพาะการบล็อกโฆษณาเท่านั้น (หากเปิดใช้ Shields) หากคุณต้องการกลับไปยังโหมด Shields แบบเต็มรูปแบบ กรุณาปิดโหมดนี้จากการตั้งค่า</translation>
 <translation id="4820891023903368625">โฆษณาถูกบล็อก <ph name="LINK_BEFORE"/>เรียนรู้เพิ่มเติม<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">บล็อกตัวติดตาม โฆษณา และอื่นๆ <ph name="LINK_BEFORE"/>เรียนรู้เพิ่มเติม<ph name="LINK_AFTER"/></translation>
-<translation id="7604553853176833536">ไม่มีการปกป้องจาก Growser Shields <ph name="LINK_BEFORE"/>เรียนรู้เพิ่มเติม<ph name="LINK_AFTER"/></translation>
+<translation id="7604553853176833536">ไม่มีการปกป้องจาก Brave Shields <ph name="LINK_BEFORE"/>เรียนรู้เพิ่มเติม<ph name="LINK_AFTER"/></translation>
 <translation id="650318023204990401">การควบคุมขั้นสูง</translation>
 <translation id="7939062555109487992">ตัวเลือกขั้นสูง</translation>
 <translation id="5799940914270080805">การเปลี่ยนการตั้งค่าเหล่านี้อาจทำให้เว็บไซต์เสียหาย</translation>
@@ -2680,7 +2680,7 @@ DuckDuckGo ไม่บันทึกประวัติการค้นห
 <translation id="2570787596946026998">เชื่อมต่อกับ HTTPS เท่านั้น</translation>
 <translation id="2387532482048804818">แจ้งเราหากเว็บไซต์ทำงานผิดปกติเมื่อเปิด Shields</translation>
 <translation id="3795015906457257780">คุณกำลังดูเว็บไซต์นี้โดยไม่มีการป้องกันความเป็นส่วนตัวของ Growser</translation>
-<translation id="7194012750329511146">Growser Shields
+<translation id="7194012750329511146">Brave Shields
 บล็อกตัวติดตาม โฆษณา และอื่นๆ อีกมากมายกว่า <ph name="NUMBER"/> รายการด้วย</translation>
 <translation id="2900068182947574679">สคริปต์</translation>
 <translation id="4292121526390005808">บล็อคสคริปต์ถูกบล็อค</translation>
@@ -2690,15 +2690,15 @@ DuckDuckGo ไม่บันทึกประวัติการค้นห
 <translation id="5032505924781383272">การป้องกันที่ใช้ไม่ได้เป็นการบ่งบอกว่าหน้าเว็บนี้กำลังพยายามพิมพ์ลายนิ้วมือบนเบราว์เซอร์ของคุณ</translation>
 <translation id="1905384713982899903">บล็อกการพิมพ์ลายนิ้วมือแล้ว</translation>
 <translation id="314364527871618241">อนุญาตการพิมพ์ลายนิ้วมือแล้ว</translation>
-<translation id="2808175374672429053">ไม่สามารถใช้ Wildcard ได้กับ Growser Shields</translation>
+<translation id="2808175374672429053">ไม่สามารถใช้ Wildcard ได้กับ Brave Shields</translation>
 <translation id="7630425922041907505">{BLOCKED_COUNT, plural,
       =1 {เกราะป้องกันของ Growser บล็อก 1 ตัวติดตามบน <ph name="SITE_URL"/>}
       other {เกราะป้องกันของ Growser บล็อกอีก {BLOCKED_COUNT} ตัวติดตามบน <ph name="SITE_URL"/>}
     }</translation>
-<translation id="2540598191934725677">คลิกไอคอน Growser เพื่อดู Growser Shields</translation>
+<translation id="2540598191934725677">คลิกไอคอน Growser เพื่อดู Brave Shields</translation>
 <translation id="542789539047208469">ข้อมูลไซต์</translation>
-<translation id="7586067492365979844">Growser Shields มีหน้าแรกและการออกแบบใหม่ ตอนนี้จะรวมเข้ากับข้อมูลไซต์สำหรับประสบการณ์แบบครบครัน</translation>
-<translation id="9114542678887529043">Growser Shields มีหน้าแรกและการออกแบบใหม่ เข้าถึงได้โดยคลิกไอคอนไซต์ในแถบที่อยู่</translation>
+<translation id="7586067492365979844">Brave Shields มีหน้าแรกและการออกแบบใหม่ ตอนนี้จะรวมเข้ากับข้อมูลไซต์สำหรับประสบการณ์แบบครบครัน</translation>
+<translation id="9114542678887529043">Brave Shields มีหน้าแรกและการออกแบบใหม่ เข้าถึงได้โดยคลิกไอคอนไซต์ในแถบที่อยู่</translation>
 <translation id="4242533952199664413">เปิดการตั้งค่า</translation>
 <translation id="3616113530831147358">เสียง</translation>
 <translation id="7972837668077967426">Canvas</translation>
