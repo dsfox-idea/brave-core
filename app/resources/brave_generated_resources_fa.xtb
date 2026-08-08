@@ -2,7 +2,7 @@
 <!DOCTYPE translationbundle>
 <translationbundle lang="fa">
 <translation id="1751249301761991853">شخصی</translation>
-<translation id="3333887201479867589">پاداش‌های Brave</translation>
+<translation id="3333887201479867589">پاداش‌های Growser</translation>
 <translation id="7561196759112975576">همیشه</translation>
 <translation id="7961015016161918242">هرگز</translation>
 <translation id="8507663778530179003">دکمه نمایش همه نشانک‌ها</translation>
@@ -29,14 +29,14 @@
 <translation id="4900351245762303149">Google Widevine را نصب کنید</translation>
 <translation id="2313383941300459392">برای فعال کردن Google Widevine، مرورگر را دوباره راه‌اندازی کنید</translation>
 <translation id="8342816622062204340"><ph name="URL"/> مایل است به محتوای حفاظت‌شده ویدیوی Google Widevine دسترسی پیدا کند که برای آن نیاز است شما اجازه پشتیبانی از Widevine را به سیستم عامل Android خود بدهید. با این کار، شما با شرایط و قوانین استفاده از Google موافقت می‌کنید.</translation>
-<translation id="2200626478572277092">گاهی برای پخش رسانه در صفحه وب، به Widevine نیاز است. Widevine یک افزونه Google است که از سرورهای Google بارگذاری می‌شود و Brave نمی‌تواند آن را بررسی کند. نصب کردن آن به منزله موافقت شما با شرایط استفاده Google می‌باشد.</translation>
+<translation id="2200626478572277092">گاهی برای پخش رسانه در صفحه وب، به Widevine نیاز است. Widevine یک افزونه Google است که از سرورهای Google بارگذاری می‌شود و Growser نمی‌تواند آن را بررسی کند. نصب کردن آن به منزله موافقت شما با شرایط استفاده Google می‌باشد.</translation>
 <translation id="4931114810905682683"><ph name="LEARN_MORE_ABOUT_WIDEVINE"/>. یا بعداً در <ph name="SETTINGS_EXTENIONS_LINK"/> تغییر دهید.</translation>
 <translation id="6229752134959014186">درباره Widevine بیشتر بدانید</translation>
 <translation id="6061083111980694767"><ph name="SITE_NAME"/> از شما می‌خواهد که</translation>
 <translation id="3218385319396786393">پخش خودکار در این صفحه مسدود شد</translation>
 <translation id="4988333904713528597">همیشه در <ph name="HOST"/> به پخش خودکار اجازه داده شود</translation>
 <translation id="4150684676757176434">پخش خودکار همچنان مسدود شود</translation>
-<translation id="3477357195688115718">Brave ایمنی و امنیت افزونه‌ها را بررسی نمی‌کند. تنها درصورتی‌که به برنامه‌نویس اعتماد دارید، این افزونه را نصب کنید.</translation>
+<translation id="3477357195688115718">Growser ایمنی و امنیت افزونه‌ها را بررسی نمی‌کند. تنها درصورتی‌که به برنامه‌نویس اعتماد دارید، این افزونه را نصب کنید.</translation>
 <translation id="2928844661231356557">اعطای دسترسی به دستگاه بلوتوث به سایت امکان می‌دهد اطلاعات قابل تشخیص‌دهنده هویت و بالقوه حساس شما را بخواند. فقط به سایت‌هایی که به آن‌ها اعتماد دارید اجازه دهید به دستگاه‌های بلوتوث دسترسی داشته باشند. <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">پنجره های Tor</translation>
 <translation id="7965178729203412357">هویت تور جدید</translation>
@@ -50,10 +50,10 @@
 <translation id="1970435562892104727">این پنجره‌ای خصوصی با Tor است</translation>
 <translation id="1037341607922068025">باز کردن پنجره خصوصی با Tor</translation>
 <translation id="607982085107926247">باز کردن در Tor: <ph name="ADDRESS"/></translation>
-<translation id="496896260395129787">این حساب «همگام‌سازی Brave» از طریق دستگاه دیگری حذف شده است. اگر شما قصد غیرفعال کردن Sync را نداشتید،<ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">این حساب «همگام‌سازی Growser» از طریق دستگاه دیگری حذف شده است. اگر شما قصد غیرفعال کردن Sync را نداشتید،<ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/>حساب را مجدداً بسازید</translation>
 <translation id="6965382102122355670">قبول</translation>
-<translation id="3975865347033939965">سرویس همگام‌سازی راه‌اندازی نشد، Brave Sync اجرا نمی‌شود</translation>
+<translation id="3975865347033939965">سرویس همگام‌سازی راه‌اندازی نشد، Growser Sync اجرا نمی‌شود</translation>
 <translation id="4450893287417543264">دیگر نشان داده نشود</translation>
 <translation id="4595286989346610620">جزئیات را بررسی کنید</translation>
 <translation id="8324318899000695659">مسدودسازی عناصر</translation>
@@ -68,15 +68,15 @@
 <translation id="4759098689276706664">جای‌گذاری اجباری</translation>
 <translation id="1434416574322382019">Window with Tor خصوصی جدید</translation>
 <translation id="4703780849509456860">باز کردن پیوند در Window with Tor خصوصی</translation>
-<translation id="3488584642074079080">باز کردن پیوند در Window with Tor خصوصی Brave</translation>
+<translation id="3488584642074079080">باز کردن پیوند در Window with Tor خصوصی Growser</translation>
 <translation id="6313675821927505581">Window with Tor خصوصی جدید</translation>
 <translation id="2638041073279639246">باز کردن پیوند در Window with Tor خصوصی</translation>
-<translation id="3425600262621021599">باز کردن پیوند در Window with Tor خصوصی Brave</translation>
+<translation id="3425600262621021599">باز کردن پیوند در Window with Tor خصوصی Growser</translation>
 <translation id="474217410105706308">بی‌صدا کردن برگه</translation>
 <translation id="2804710924397009224">نماد جوایز بریو را پنهان کن.</translation>
-<translation id="5029193871181468990">مخفی کردن نماد Brave Rewards</translation>
-<translation id="2808103541110899519">پنهان کردن نماد کیف پول Brave</translation>
-<translation id="7595540212376041331">نماد «کیف پول Brave» را پنهان می‌کند</translation>
+<translation id="5029193871181468990">مخفی کردن نماد Growser Rewards</translation>
+<translation id="2808103541110899519">پنهان کردن نماد کیف پول Growser</translation>
+<translation id="7595540212376041331">نماد «کیف پول Growser» را پنهان می‌کند</translation>
 <translation id="3893997535859323951">مخفی کردن آیکون هوش مصنوعی Leo</translation>
 <translation id="8832245978592881387">باز کردن هوش مصنوعی Leo در یک زبانه جدید</translation>
 <translation id="4577675328803804820">باز کردن هوش مصنوعی Leo در نوار کناری</translation>
@@ -92,63 +92,63 @@
 <translation id="2026367923222947564">صفحه کامل</translation>
 <translation id="4928988318462976765">فروشگاه افزونه‌های وب</translation>
 <translation id="9181207987584064303">مشاهده در «فروشگاه افزونه‌های وب»</translation>
-<translation id="3161744659507801211">هشدار: Brave نمی‌تواند مانع از ثبت سابقه مرورتان توسط افزونه‌ها شود.</translation>
+<translation id="3161744659507801211">هشدار: Growser نمی‌تواند مانع از ثبت سابقه مرورتان توسط افزونه‌ها شود.</translation>
 <translation id="2162109630536601963">اگر این افزونه درخواست‌های شبکه ارائه می‌دهد، از Tor یا حالت خصوصی استفاده نمی‌کند.</translation>
 <translation id="2725327089319971976">برای غیرفعال کردن این افزونه در حالت خصوصی و حالت Tor، این گزینه را لغو انتخاب کنید.</translation>
-<translation id="438106944087726695">متکی بر Brave</translation>
-<translation id="3371343170427636147">برنامه‌های Nightly مرورگر Brave</translation>
-<translation id="4097979995947147464">برنامه‌های Beta مرورگر Brave</translation>
-<translation id="8303432794159193481">برنامه‌های Dev مرورگر Brave</translation>
-<translation id="8292967014767479012">برنامه‌های مرورگر Brave</translation>
-<translation id="4743468424889072281">برنامه‌های Development مرورگر Brave</translation>
+<translation id="438106944087726695">متکی بر Growser</translation>
+<translation id="3371343170427636147">برنامه‌های Nightly مرورگر Growser</translation>
+<translation id="4097979995947147464">برنامه‌های Beta مرورگر Growser</translation>
+<translation id="8303432794159193481">برنامه‌های Dev مرورگر Growser</translation>
+<translation id="8292967014767479012">برنامه‌های مرورگر Growser</translation>
+<translation id="4743468424889072281">برنامه‌های Development مرورگر Growser</translation>
 <translation id="5039804452771397117">اجازه دادن</translation>
 <translation id="7053983685419859001">مسدود کردن</translation>
-<translation id="1679356339067548863">وقتی «مروگر Brave» خراب یا متوقف می‌شود، با ارسال خودکار گزارش‌های عیب‌یابی به بهبود پایداری محصول Brave کمک کنید.</translation>
+<translation id="1679356339067548863">وقتی «مروگر Growser» خراب یا متوقف می‌شود، با ارسال خودکار گزارش‌های عیب‌یابی به بهبود پایداری محصول Growser کمک کنید.</translation>
 <translation id="660171790038410175">از <ph name="BROWSER_NAME"/> به‌طور غیرمنتظره خارج شدید.</translation>
-<translation id="1324417023773393937">مرورگر Brave</translation>
+<translation id="1324417023773393937">مرورگر Growser</translation>
 <translation id="7276554663454265692">هروقت بخواهید می‌توانید <ph name="SETTING_TEXT"/> را در تنظیمات مرورگر تغییر دهید.</translation>
 <translation id="6873781976650514089">این تنظیم</translation>
 <translation id="4684633335323013758">این سایت <ph name="PART_ONE"/>موقعیت مکانی کلی شما<ph name="PART_ONE_END"/> را درخواست داده است. <ph name="PART_TWO"/>بیشتر بدانید<ph name="PART_TWO_END"/></translation>
 <translation id="8117247596084706514">این سایت <ph name="PART_ONE"/>موقعیت مکانی دقیق شما<ph name="PART_ONE_END"/> را درخواست داده است. <ph name="PART_TWO"/>بیشتر بدانید<ph name="PART_TWO_END"/></translation>
-<translation id="5486652646100591203">این سایت <ph name="PART_ONE"/>موقعیت مکانی دقیق شما<ph name="PART_ONE_END"/>را درخواست داده است. Brave فقط می‌تواند <ph name="PART_TWO"/>داده‌های موقعیت مکانی کلی<ph name="PART_TWO_END"/> را ارائه دهد که به دلیل غیرفعال بودن <ph name="PART_THREE"/>خدمات موقعیت مکانی<ph name="PART_THREE_END"/> است. <ph name="PART_FOUR"/>بیشتر بدانید<ph name="PART_FOUR_END"/></translation>
+<translation id="5486652646100591203">این سایت <ph name="PART_ONE"/>موقعیت مکانی دقیق شما<ph name="PART_ONE_END"/>را درخواست داده است. Growser فقط می‌تواند <ph name="PART_TWO"/>داده‌های موقعیت مکانی کلی<ph name="PART_TWO_END"/> را ارائه دهد که به دلیل غیرفعال بودن <ph name="PART_THREE"/>خدمات موقعیت مکانی<ph name="PART_THREE_END"/> است. <ph name="PART_FOUR"/>بیشتر بدانید<ph name="PART_FOUR_END"/></translation>
 <translation id="8915916167043355778">بستن همه</translation>
 <translation id="4870911314065352661">همه زبانه‌ها بسته شود؟</translation>
 <translation id="7551864359422178684">شما <ph name="NUMBER_OF_TABS"/> زبانه باز در این پنجره مرورگر دارید.</translation>
 <translation id="2571596981920752023"><ph name="NUMBER_OF_TABS"/> زبانه</translation>
 <translation id="1307431692088049276">دیگر از من سؤال نشود</translation>
-<translation id="6919364924256365253">در گوگل جستجو نکنید. در بینگ جستجو نکنید. فقط در Brave جستجو کنید.</translation>
-<translation id="2640297688005939449">Brave Search اطلاعات شخصی شما را جمع‌آوری نمی‌کند و 100% مستقل است.</translation>
+<translation id="6919364924256365253">در گوگل جستجو نکنید. در بینگ جستجو نکنید. فقط در Growser جستجو کنید.</translation>
+<translation id="2640297688005939449">Growser Search اطلاعات شخصی شما را جمع‌آوری نمی‌کند و 100% مستقل است.</translation>
 <translation id="7295094278358921487">جستجو کنید و یافت خواهید کرد. به صورت خصوصی</translation>
-<translation id="3462465068145800637">Brave Search اطلاعات شخصی شما را جمع‌آوری نمی‌کند و 100% مستقل از شرکت‌های بزرگ فناوری است.</translation>
+<translation id="3462465068145800637">Growser Search اطلاعات شخصی شما را جمع‌آوری نمی‌کند و 100% مستقل از شرکت‌های بزرگ فناوری است.</translation>
 <translation id="42032117189492785">جستجوی مبتنی بر هوش مصنوعی با یک شاخص منحصر به فرد.</translation>
 <translation id="8606416238399082160">کاملاً خصوصی، 100% مستقل، و همراه با مشخصه‌های هوش مصنوعی عالی.</translation>
 <translation id="4381193110021038941">دریافت نتایج بهتر</translation>
-<translation id="3846545273704969734">«جستجوی Brave» به‌طور مستقل تأیید شده است که نتایج بهتری نسبت به Bing (یا موتورهای جستجوی مشابه Bing مانند DuckDuckGo) ارائه می‌دهد.</translation>
+<translation id="3846545273704969734">«جستجوی Growser» به‌طور مستقل تأیید شده است که نتایج بهتری نسبت به Bing (یا موتورهای جستجوی مشابه Bing مانند DuckDuckGo) ارائه می‌دهد.</translation>
 <translation id="2841164160723712537">بهبود نتایج جستجو</translation>
-<translation id="4639001639513524869">«جستجوی Brave» برای بیشتر جستارها، نتایجی بهتر از DuckDuckGo دارد. و کاملاً خصوصی است.</translation>
-<translation id="5240031343741051161">جستجوی Brave را امتحان کنید</translation>
+<translation id="4639001639513524869">«جستجوی Growser» برای بیشتر جستارها، نتایجی بهتر از DuckDuckGo دارد. و کاملاً خصوصی است.</translation>
+<translation id="5240031343741051161">جستجوی Growser را امتحان کنید</translation>
 <translation id="5234764350956374838">لغو کردن</translation>
-<translation id="8722651357687610395">Brave را به‌عنوان پیش فرض تنظیم کنید</translation>
+<translation id="8722651357687610395">Growser را به‌عنوان پیش فرض تنظیم کنید</translation>
 <translation id="2370739752330685659">شاید بعداً</translation>
-<translation id="5100490448228945668">تبدیل جستجوی Brave را ببندید، کلید Enter را فشار دهید تا این پیشنهاد حذف شود</translation>
-<translation id="6213208892248046484">رفتن به «جستجوی Brave»</translation>
+<translation id="5100490448228945668">تبدیل جستجوی Growser را ببندید، کلید Enter را فشار دهید تا این پیشنهاد حذف شود</translation>
+<translation id="6213208892248046484">رفتن به «جستجوی Growser»</translation>
 <translation id="9194637241566114638">با ارسال داده‌های استفاده ناشناس، به بهبود <ph name="SEARCH_NAME"/> کمک کنید. <ph name="MORE_INFO"/></translation>
-<translation id="7404610376221341525">جستجوی Brave</translation>
+<translation id="7404610376221341525">جستجوی Growser</translation>
 <translation id="8184318863960255706">اطلاعات بیشتر</translation>
 <translation id="780301667611848630">نه متشکرم</translation>
-<translation id="1162706247109707219">با کلیک کردن روی گزینه «تأیید»، شما می‌پذیرید که تا زمانی که به Windows 10 یا بعد از آن به روزرسانی انجام نداده‌اید، مرورگر Brave نصب‌شده شما قادر به دریافت اصلاحات امنیتی مهم نخواهد بود. این هشدار مجدداً نشان داده نمی‌شود.</translation>
-<translation id="2971591422768125177">با کلیک کردن روی گزینه «تأیید»، شما می‌پذیرید که تا زمانی که به macOS 13 یا بعد از آن به روزرسانی انجام نداده‌اید، مرورگر Brave نصب‌شده شما قادر به دریافت اصلاحات امنیتی مهم نخواهد بود. این هشدار مجدداً نشان داده نمی‌شود.</translation>
+<translation id="1162706247109707219">با کلیک کردن روی گزینه «تأیید»، شما می‌پذیرید که تا زمانی که به Windows 10 یا بعد از آن به روزرسانی انجام نداده‌اید، مرورگر Growser نصب‌شده شما قادر به دریافت اصلاحات امنیتی مهم نخواهد بود. این هشدار مجدداً نشان داده نمی‌شود.</translation>
+<translation id="2971591422768125177">با کلیک کردن روی گزینه «تأیید»، شما می‌پذیرید که تا زمانی که به macOS 13 یا بعد از آن به روزرسانی انجام نداده‌اید، مرورگر Growser نصب‌شده شما قادر به دریافت اصلاحات امنیتی مهم نخواهد بود. این هشدار مجدداً نشان داده نمی‌شود.</translation>
 <translation id="6020553119523541665">این زبانه در پنجره دیگری فعال است</translation>
 <translation id="4987392683074136770">کلیک کردن روی این زبانه، محتواهایش را به این پنجره انتقال می‌دهد</translation>
 <translation id="8355523213948477234">دکمه منوی نمای تقسیم</translation>
 <translation id="6040143037577758943">بستن</translation>
-<translation id="6665472986740899785">آگهی اعلان Brave</translation>
-<translation id="5253166205743627564">سپاسگزاریم که با کلیک روی تبلیغات خصوصی از مرورگر Brave پشتیبانی می‌کنید. برخلاف شرکت‌های بزرگ فناوری، ما عملکرد تبلیغات را به‌صورت ناشناس می‌سنجیم تا حریم خصوصی شما حفظ شود.</translation>
+<translation id="6665472986740899785">آگهی اعلان Growser</translation>
+<translation id="5253166205743627564">سپاسگزاریم که با کلیک روی تبلیغات خصوصی از مرورگر Growser پشتیبانی می‌کنید. برخلاف شرکت‌های بزرگ فناوری، ما عملکرد تبلیغات را به‌صورت ناشناس می‌سنجیم تا حریم خصوصی شما حفظ شود.</translation>
 <translation id="8748471354357836070">بیشتر بدانید/گزینه‌های انصراف</translation>
-<translation id="5927196110206824867">تصاویر پس‌زمینه دارای حامی مالی از مأموریت Brave برای ساخت یک وب مستقل با اولویت کاربر پشتیبانی می‌کند. برخلاف شرکت‌های بزرگ فناوری، ما عملکرد تبلیغات را به‌صورت ناشناس اندازه‌گیری می‌کنیم تا حریم خصوصی شما حفظ شود.</translation>
+<translation id="5927196110206824867">تصاویر پس‌زمینه دارای حامی مالی از مأموریت Growser برای ساخت یک وب مستقل با اولویت کاربر پشتیبانی می‌کند. برخلاف شرکت‌های بزرگ فناوری، ما عملکرد تبلیغات را به‌صورت ناشناس اندازه‌گیری می‌کنیم تا حریم خصوصی شما حفظ شود.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">مقداری داده ناشناس جستجو &amp; مرور را برای بهبود جستجوی Brave مشارکت دهید.</translation>
-<translation id="1516554614404600536">نکته‌ابزار Brave</translation>
+<translation id="8659271182272561965">مقداری داده ناشناس جستجو &amp; مرور را برای بهبود جستجوی Growser مشارکت دهید.</translation>
+<translation id="1516554614404600536">نکته‌ابزار Growser</translation>
 <translation id="4375473250631001683">مخفی کردن نماد نوار کناری</translation>
 <translation id="2613033293035359003">مخفی کردن نوار کناری</translation>
 <translation id="4233010476457917696">نمایش نوار جانبی</translation>
@@ -181,13 +181,13 @@
 <translation id="2702801445560668637">لیست خواندن</translation>
 <translation id="2533715613366623756">مدیریت نشانک‌ها</translation>
 <translation id="3405021928725149239">مدیریت نشانک‌ها</translation>
-<translation id="6284218950354553099">ارسال خودکار پینگ مصرف روزانه به Brave</translation>
-<translation id="694500751416448436">این پینگ خصوصی به Brave اجازه می‌دهد تا کاربران فعال را تخمین بزند</translation>
-<translation id="5047771074267454980">Brave از تجزیه‌وتحلیل‌های حافظ حریم خصوصی محصول برای تخمین استفاده کلی از بعضی از قابلیت‌ها استفاده می‌کند</translation>
+<translation id="6284218950354553099">ارسال خودکار پینگ مصرف روزانه به Growser</translation>
+<translation id="694500751416448436">این پینگ خصوصی به Growser اجازه می‌دهد تا کاربران فعال را تخمین بزند</translation>
+<translation id="5047771074267454980">Growser از تجزیه‌وتحلیل‌های حافظ حریم خصوصی محصول برای تخمین استفاده کلی از بعضی از قابلیت‌ها استفاده می‌کند</translation>
 <translation id="8712637175834984815">متوجه شدم</translation>
 <translation id="4394049700291259645">غیر فعال کردن</translation>
 <translation id="7142548388914389999">مجاز کردن تجزیه‌وتحلیل‌های محصول حفاظت‌کننده از حریم‌خصوصی (P3A)</translation>
-<translation id="8707615221880318679">این پاسخ‌های خصوصی به Brave کمک می‌کند تا استفاده کلی از برخی ویژگی‌ها را تخمین بزند و آنها را برای شما بهتر کند</translation>
+<translation id="8707615221880318679">این پاسخ‌های خصوصی به Growser کمک می‌کند تا استفاده کلی از برخی ویژگی‌ها را تخمین بزند و آنها را برای شما بهتر کند</translation>
 <translation id="193368604235852218">Web3</translation>
 <translation id="4738583579791001083">دامنه‌های Web3</translation>
 <translation id="4552520379838695057">متأسفیم، آن صفحه یافت نمی‌شود.</translation>
@@ -195,7 +195,7 @@
 <translation id="2609895996619941644">می‌خواهید بررسی کنید که آیا نسخه ذخیره‌شده‌ای در Wayback Machine موجود است؟</translation>
 <translation id="8010675257566903381">وی‌بک ماشین نتوانست نسخه ذخیره‌شده این سایت را پیدا کند.</translation>
 <translation id="1207694258341311738">بررسی نسخه ذخیره‌شده</translation>
-<translation id="191143826155037518">Brave تحت <ph name="BEGIN_LINK_MPL"/>مجوزهای عمومی Mozilla نسخه 2.0<ph name="END_LINK_MPL"/> (MPL) در اختیار شما قرار داده می‌شود و شامل <ph name="BEGIN_LINK_OSS"/>نرم‌افزار متن‌باز<ph name="END_LINK_OSS"/> تحت مجموعه دیگری از مجوزها است.
+<translation id="191143826155037518">Growser تحت <ph name="BEGIN_LINK_MPL"/>مجوزهای عمومی Mozilla نسخه 2.0<ph name="END_LINK_MPL"/> (MPL) در اختیار شما قرار داده می‌شود و شامل <ph name="BEGIN_LINK_OSS"/>نرم‌افزار متن‌باز<ph name="END_LINK_OSS"/> تحت مجموعه دیگری از مجوزها است.
 شما می‌توانید <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>دستورالعمل‌های مربوط به نحوه دانلود و ایجاد<ph name="END_LINK_BUILD_INSTRUCTIONS"/> کد منبع مشخص <ph name="BEGIN_LINK_SOURCE_CODE"/>استفاده‌شده برای ایجاد این نسخه را مطالعه کنید<ph name="END_LINK_SOURCE_CODE"/>.</translation>
 <translation id="4474155171896946103">نشانک‌گذاری همه برگه‌ها...</translation>
 <translation id="3987546108749866209">استفاده از زبانه‌های عمودی</translation>
@@ -229,16 +229,16 @@
 <translation id="5268098808165185458">در حال کپی کردن متن از تصویر...</translation>
 <translation id="4046485130884276245">متن از تصویر کپی شد</translation>
 <translation id="3639779775496569782">کپی کردن متن ناموفق بود</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
-<translation id="2506438154311626334">استفاده از پروتکل WireGuard در Brave VPN</translation>
-<translation id="8519170191215826548">این تنظیم هنگام متصل بودن Brave VPN قابل تغییر نیست.</translation>
+<translation id="3960619311638643872">Growser VPN</translation>
+<translation id="2506438154311626334">استفاده از پروتکل WireGuard در Growser VPN</translation>
+<translation id="8519170191215826548">این تنظیم هنگام متصل بودن Growser VPN قابل تغییر نیست.</translation>
 <translation id="1177917174080821247">نمایش آیکون VPN</translation>
-<translation id="3747459938663420752">هنگامی که فعال باشد، نوار وظیفه Windows آیکون سینی Brave VPN را نمایش می‌دهد.</translation>
+<translation id="3747459938663420752">هنگامی که فعال باشد، نوار وظیفه Windows آیکون سینی Growser VPN را نمایش می‌دهد.</translation>
 <translation id="4235920711083356755">نمایش دکمه VPN</translation>
 <translation id="4070612712151038707">دکمه VPN را در نوار ابزار نمایش می‌دهد</translation>
 <translation id="7705524343798198388">VPN</translation>
 <translation id="8593397073757037946">تغییر وضعیت VPN</translation>
-<translation id="2345974803401546682">درباره Brave VPN</translation>
+<translation id="2345974803401546682">درباره Growser VPN</translation>
 <translation id="4378551569595875038">در حال اتصال...</translation>
 <translation id="3368922792935385530">متصل</translation>
 <translation id="1536754031901697553">درحال قطع اتصال...</translation>
@@ -253,7 +253,7 @@
 <translation id="945522503751344254">ارسال بازخورد</translation>
 <translation id="3015685033234401792">مدیریت طرح من</translation>
 <translation id="4989337484121655457">دسترسی کامل به دیسک الزامی است</translation>
-<translation id="8025559074845816210">Brave برای وارد کردن «نشانک‌ها» از Safari، به مجوز دسترسی کامل به دیسک نیاز دارد.</translation>
+<translation id="8025559074845816210">Growser برای وارد کردن «نشانک‌ها» از Safari، به مجوز دسترسی کامل به دیسک نیاز دارد.</translation>
 <translation id="8515328844674404333">از «تنظیمات برگزیده سیستم» خود، با نحوه اعطای مجوز دسترسی کامل به دیسک آشنا شوید.</translation>
 <translation id="6414878884710400018">باز کردن تنظیمات برگزیده سیستم</translation>
 <translation id="4759238208242260848">بارگیری‌ها</translation>
@@ -342,26 +342,26 @@
 <translation id="6847541693235449912">برو</translation>
 <translation id="2079545284768500474">واگرد</translation>
 <translation id="1533980864758658574">پنجره جدیدی برای <ph name="TOPIC"/> ایجاد شد</translation>
-<translation id="7985042437720138349">این ویژگی داده‌های مربوط به برگه‌های بازِ شما را به Leo، دستیار مبتنی بر هوش مصنوعی مرورگر Brave، ارسال می‌کند.</translation>
+<translation id="7985042437720138349">این ویژگی داده‌های مربوط به برگه‌های بازِ شما را به Leo، دستیار مبتنی بر هوش مصنوعی مرورگر Growser، ارسال می‌کند.</translation>
 <translation id="6165508094623778733">بیشتر بدانید</translation>
 <translation id="7557539689487606886">تبدیل عضویت به Premium</translation>
 <translation id="1035309871698658326">وقتی این ویژگی باز شود، عناوین و مبدأ همه برگه‌های غیرخصوصی را به‌طور خودکار برای طبقه‌بندی به Leo ارسال می‌کند.</translation>
 <translation id="3435896845095436175">فعال کنید</translation>
-<translation id="9031526219709160683">Brave می‌تواند به شما کمک کند تا تنظیمات حریم خصوصی این سایت را بهینه کنید. آیا می‌خواهید پیشنهادهای Brave را بررسی کنید؟</translation>
+<translation id="9031526219709160683">Growser می‌تواند به شما کمک کند تا تنظیمات حریم خصوصی این سایت را بهینه کنید. آیا می‌خواهید پیشنهادهای Growser را بررسی کنید؟</translation>
 <translation id="5739953050957336013">بررسی پیشنهادها</translation>
 <translation id="515462386448976244">ابزار پیشنهاد تنظیمات حریم خصوصی</translation>
 <translation id="6911328085206170823">برای این سایت نشان داده نشود</translation>
 <translation id="6157507628047001360">غیرفعال کردن تنظیم تنظیمات حریم خصوصی</translation>
-<translation id="9082792303833649978">این تنظیم توسط مدیر شما یا خط‌مشی دیگری از Brave مدیریت می‌شود.</translation>
+<translation id="9082792303833649978">این تنظیم توسط مدیر شما یا خط‌مشی دیگری از Growser مدیریت می‌شود.</translation>
 <translation id="1940221956626514677">سفارشی کردن نوار ابزار</translation>
 <translation id="6501807887341963552">پوسته و رنگ‌ها</translation>
 <translation id="6724227215236550330">گذرواژه‌های ذخیره‌شده در اینجا نمایش داده می‌شوند. برای وارد کردن گذرواژه‌ها به <ph name="BRAND"/> در این دستگاه، <ph name="BEGIN_LINK"/>یک فایل CSV انتخاب کنید<ph name="END_LINK"/>؛</translation>
 <translation id="3575561030014162610">برای وارد کردن گذرواژه‌ها به <ph name="BRAND"/> در این دستگاه، یک فایل CSV انتخاب کنید</translation>
 <translation id="8570228839666486945">AI روی دستگاه</translation>
-<translation id="3456536577668402695">جست‌وجوها و محتوای صفحه‌های شما روی این دستگاه پردازش می‌شوند. هیچ چیزی به Brave ارسال نمی‌شود و هیچ بازبین انسانی آن را نمی‌بیند.</translation>
+<translation id="3456536577668402695">جست‌وجوها و محتوای صفحه‌های شما روی این دستگاه پردازش می‌شوند. هیچ چیزی به Growser ارسال نمی‌شود و هیچ بازبین انسانی آن را نمی‌بیند.</translation>
 <translation id="4751537843966994505">جستجوی معنایی تاریخچه</translation>
 <translation id="6175973371938222040">صفحاتی که بازدید می‌کنید را به صورت محلی نمایه‌سازی کنید تا بتوانید تاریخچه خود را بر اساس معنا جستجو کنید. تمام پردازش روی این دستگاه باقی می‌ماند.</translation>
-<translation id="9156965752763025780">‏دفعه بعدی که Brave را مجدداً راه‌اندازی می‌کنید، این تغییرات اعمال می‌شوند.</translation>
+<translation id="9156965752763025780">‏دفعه بعدی که Growser را مجدداً راه‌اندازی می‌کنید، این تغییرات اعمال می‌شوند.</translation>
 <translation id="7179921470347911571">اکنون راه‌اندازی مجدد شود</translation>
 <translation id="1426410128494586442">بله</translation>
 <translation id="4250680216510889253">خیر</translation>
@@ -372,7 +372,7 @@
 <translation id="984275831282074731">روش‌های پرداخت</translation>
 <translation id="6278858909990433658">ورودی‌های نمایه در حال استفاده است</translation>
 <translation id="9071187015476020102">برای وارد کردن افزونه‌ها یا تنظیمات دیگر، لطفاً ابتدا مرورگری را که در حال وارد کردن از آن هستید، ببندید.</translation>
-<translation id="2044383478723007273">رنگ‌های Brave</translation>
+<translation id="2044383478723007273">رنگ‌های Growser</translation>
 <translation id="1807246157184219062">روشن</translation>
 <translation id="2414886740292270097">تاریک</translation>
 <translation id="1360441190790440400">مشابه Linux</translation>
@@ -381,7 +381,7 @@
 <translation id="4171684937791228083">نوار ابزار همواره در حالت تمام صفحه نشان داده شود</translation>
 <translation id="5840822070878669614">باز کردن فروشگاه وب</translation>
 <translation id="1692470335103807198">دریافت طرح‌های زمینه بیشتر</translation>
-<translation id="2906510232093002459">تصاویر پیش‌فرض Brave</translation>
+<translation id="2906510232093002459">تصاویر پیش‌فرض Growser</translation>
 <translation id="8000020256436988724">نوار ابزار</translation>
 <translation id="8076492880354921740">برگه‌ها</translation>
 <translation id="8168435359814927499">محتوا</translation>
@@ -431,7 +431,7 @@
 <translation id="8820817407110198400">نشانک‌ها</translation>
 <translation id="4144468798716165316">دستورات سریع</translation>
 <translation id="7310387888625228830">دستیار هوش مصنوعی Leo</translation>
-<translation id="5222974844674487962">نمایش دکمه اخبار Brave</translation>
+<translation id="5222974844674487962">نمایش دکمه اخبار Growser</translation>
 <translation id="2085436423511121572">نمایش دکمه هوش مصنوعی Leo</translation>
 <translation id="6156323911414505561">نمایش نوار نشانک‌ها</translation>
 <translation id="4054323497808446566">نوار نشانک روی همه صفحات قابل مشاهده است</translation>
@@ -456,10 +456,10 @@
 <translation id="7537601449003285327">پین کردن به نوار وظیفه</translation>
 <translation id="7461924472993315131">پین</translation>
 <translation id="735832369569964359">در اعلان Windows بعدی، روی «سنجاق کردن» کلیک و تأیید کنید.</translation>
-<translation id="7506648566440714944">Brave قبلاً سنجاق شده است</translation>
+<translation id="7506648566440714944">Growser قبلاً سنجاق شده است</translation>
 <translation id="2307973900865360088">نگه داشتن در نوار ابزار</translation>
 <translation id="239275665037555969">نوار ابزار</translation>
-<translation id="4057614912106618659">Brave از قبل در نوار ابزار است</translation>
+<translation id="4057614912106618659">Growser از قبل در نوار ابزار است</translation>
 <translation id="3195845168740336657">تنظیمات سپر امنیتی</translation>
 <translation id="754769152790647708">وضعیت سپر امنیتی</translation>
 <translation id="4868109105992358853">محافظ‌ها می‌توانند ردیاب‌ها، آگهی‌ها و انگشت‌نگاری را مسدود کنند</translation>
@@ -529,7 +529,7 @@
 <translation id="2718718846210516552">اسکریپت یافت نشد.</translation>
 <translation id="4088315951291671239">کدی را که نمی‌فهمید یا خودتان آن را بررسی نکرده‌اید، اینجا پِیست نکنید. این امر می‌تواند به مهاجمان اجازه دهد هویت شما را سرقت کنند یا کنترل رایانه شما را به دست بگیرند.</translation>
 <translation id="3020183492814296499">میانبرها</translation>
-<translation id="2935698011275148880">Brave Origin</translation>
+<translation id="2935698011275148880">Growser Origin</translation>
 <translation id="3486906647205325617">برخی تغییرات نیاز به راه‌اندازی مجدد مرورگر دارند تا به‌طور کامل اعمال شوند.</translation>
 <translation id="1919345977826869612">آگهی‌ها</translation>
 <translation id="944736176598169208">پاداش‌ها</translation>
@@ -543,25 +543,25 @@
 <translation id="5990642573624858459">گزارش‌گیری آماری</translation>
 <translation id="6560669651825861597">روی همه نمایه‌های مرورگر تأثیر می‌گذارد</translation>
 <translation id="2441719842399509963">بازنشانی به حالت پیش‌فرض</translation>
-<translation id="2587535830241068901">مرورگر خود را شخصی‌سازی کنید و همچنان از Brave پشتیبانی کنید</translation>
-<translation id="123297831435065577">Brave Origin نسخهٔ پولی از مرورگر برای کاربرانی است که نیاز به تمام ویژگی‌هایی ندارند که Brave را به‌عنوان یک تجارت پشتیبانی می‌کنند، اما همچنان می‌خواهند از حریم خصوصی‌ای که تنها Brave ارائه می‌دهد بهره‌مند شوند. کاربران Origin همچنان از حریم خصوصی برتر صنعت، مسدود کردن تبلیغات و سرعت (از طریق سپرها)، و همچنین به‌روزرسانی‌های نرم‌افزاری منظم، رقعه‌های Chromium و بهبودهای امنیتی و حریم خصوصی بهره‌مند خواهند شد.</translation>
+<translation id="2587535830241068901">مرورگر خود را شخصی‌سازی کنید و همچنان از Growser پشتیبانی کنید</translation>
+<translation id="123297831435065577">Growser Origin نسخهٔ پولی از مرورگر برای کاربرانی است که نیاز به تمام ویژگی‌هایی ندارند که Growser را به‌عنوان یک تجارت پشتیبانی می‌کنند، اما همچنان می‌خواهند از حریم خصوصی‌ای که تنها Growser ارائه می‌دهد بهره‌مند شوند. کاربران Origin همچنان از حریم خصوصی برتر صنعت، مسدود کردن تبلیغات و سرعت (از طریق سپرها)، و همچنین به‌روزرسانی‌های نرم‌افزاری منظم، رقعه‌های Chromium و بهبودهای امنیتی و حریم خصوصی بهره‌مند خواهند شد.</translation>
 <translation id="7984508421152399880">اکنون بخرید</translation>
-<translation id="5567412479632285879">پاداش‌های Brave غیرفعال است</translation>
+<translation id="5567412479632285879">پاداش‌های Growser غیرفعال است</translation>
 <translation id="413570371620795359">برای فعال‌سازی و شروع، دریچه‌ی جوایز را باز کنید</translation>
-<translation id="1051600834033686945">تنظیمات کامل پاداش‌های Brave را باز کنید</translation>
-<translation id="8826461509529116322">نمایش دکمه «پاداش‌های Brave»</translation>
+<translation id="1051600834033686945">تنظیمات کامل پاداش‌های Growser را باز کنید</translation>
+<translation id="8826461509529116322">نمایش دکمه «پاداش‌های Growser»</translation>
 <translation id="4859866966646365361">حالت فقط مسدودکننده تبلیغات</translation>
 <translation id="4146834954839563870">استفاده از حالت فقط مسدودکننده تبلیغات</translation>
-<translation id="420732343671200734">حالت فقط مسدودکننده تبلیغات، قوانین اصلی مسدودسازی تبلیغات سپرهای Brave را حفظ می‌کند. هشدار: همه حفاظت‌های حریم خصوصی را حذف می‌کند. لطفاً توجه داشته باشید که برای وب‌سایت‌هایی که در اثر حفاظت‌های حریم خصوصی Brave دچار مشکل می‌شوند، می‌توانید سپرها را به حالت پایین تنظیم کنید. این یک حالت آزمایشی است. <ph name="BEGIN_LINK"/>بیشتر بدانید<ph name="END_LINK"/></translation>
+<translation id="420732343671200734">حالت فقط مسدودکننده تبلیغات، قوانین اصلی مسدودسازی تبلیغات سپرهای Growser را حفظ می‌کند. هشدار: همه حفاظت‌های حریم خصوصی را حذف می‌کند. لطفاً توجه داشته باشید که برای وب‌سایت‌هایی که در اثر حفاظت‌های حریم خصوصی Growser دچار مشکل می‌شوند، می‌توانید سپرها را به حالت پایین تنظیم کنید. این یک حالت آزمایشی است. <ph name="BEGIN_LINK"/>بیشتر بدانید<ph name="END_LINK"/></translation>
 <translation id="3055675200351793825">گزینه‌های سپرها در حال حاضر غیرفعال هستند.</translation>
-<translation id="2687830906359353344">حالت فقط مسدودکننده تبلیغات، قوانین اصلی مسدودسازی تبلیغات سپرهای Brave را حفظ کرده و حفاظت‌های حریم خصوصی را خاموش می‌کند. اگر می‌خواهید از سپرهای استاندارد استفاده کنید، لطفاً این حالت را غیرفعال کنید.</translation>
+<translation id="2687830906359353344">حالت فقط مسدودکننده تبلیغات، قوانین اصلی مسدودسازی تبلیغات سپرهای Growser را حفظ کرده و حفاظت‌های حریم خصوصی را خاموش می‌کند. اگر می‌خواهید از سپرهای استاندارد استفاده کنید، لطفاً این حالت را غیرفعال کنید.</translation>
 <translation id="3809423899581611047">خاموش کردن حالت فقط مسدودکننده تبلیغات</translation>
 <translation id="9185018653595759199">مسدود کردن رسانه اجتماعی</translation>
 <translation id="863171915776379000">مجاز کردن ورود به سیستم‌ها و پست‌های جاسازی‌شده</translation>
 <translation id="7791141927430186653">مجاز کردن توییت‌های جاسازی‌شده X (‏Twitter سابق)</translation>
 <translation id="958971637207126733">مجاز کردن پست‌های جاسازی‌شده LinkedIn</translation>
-<translation id="1244912498725894944">برخی تنظیمات کوکی توسط سپرهای ایمنی Brave کنترل می‌شوند. می‌توانید آن‌ها را در &lt;a href="/content/braveShields"&gt;اینجا&lt;/a&gt; مشاهده کنید.</translation>
-<translation id="5352519841984162795">این تنظیمات توسط سپرهای ایمنی Brave کنترل می‌شود.</translation>
+<translation id="1244912498725894944">برخی تنظیمات کوکی توسط سپرهای ایمنی Growser کنترل می‌شوند. می‌توانید آن‌ها را در &lt;a href="/content/braveShields"&gt;اینجا&lt;/a&gt; مشاهده کنید.</translation>
+<translation id="5352519841984162795">این تنظیمات توسط سپرهای ایمنی Growser کنترل می‌شود.</translation>
 <translation id="352287031024189516">این تنظیمات توسط «ورود به سیستم Google» کنترل می‌شود.</translation>
 <translation id="8792121506918889955">خط‌مشی مدیریت WebRTC IP</translation>
 <translation id="8798099450830957504">پیش‌فرض</translation>
@@ -570,7 +570,7 @@
 <translation id="1689062823386843231">غیرفعال کردن UDP غیرپروکسی</translation>
 <translation id="3540231253392253941">استفاده از سرویس‌های Google برای پیام‌رسانی فشاری</translation>
 <translation id="5813105074916486721">نگهداری تاریخچه محلی</translation>
-<translation id="5671611745062206644">مدت زمانی که Brave تاریخچه مرور شما را به صورت محلی ذخیره می‌کند</translation>
+<translation id="5671611745062206644">مدت زمانی که Growser تاریخچه مرور شما را به صورت محلی ذخیره می‌کند</translation>
 <translation id="7184510058087008090">1 روز</translation>
 <translation id="8097397186614425669">1 هفته</translation>
 <translation id="1600157116238060201">1 ماه</translation>
@@ -580,14 +580,14 @@
 <translation id="6796569320325473726">5 سال</translation>
 <translation id="1658834457013045127">برای همیشه</translation>
 <translation id="933652931229970927">ارسال خودکار گزارش‌های عیب‌یابی</translation>
-<translation id="8868426106596092089">وقتی «مروگر Brave» خراب یا متوقف می‌شود، با ارسال خودکار گزارش‌های عیب‌یابی به بهبود پایداری محصول Brave کمک کنید</translation>
+<translation id="8868426106596092089">وقتی «مروگر Growser» خراب یا متوقف می‌شود، با ارسال خودکار گزارش‌های عیب‌یابی به بهبود پایداری محصول Growser کمک کنید</translation>
 <translation id="4891600875049212418">هنگام بازدید از سایت‌های حساس، به «حالت خصوصی و محرمانه» بروید</translation>
 <translation id="509873765238158442">مسدود کردن فراخوانی Microsoft</translation>
-<translation id="4763421121695677716">قابلیت فراخوانی را در Microsoft Windows مسدود کنید تا به‌ صورت خودکار از زبانه‌های باز Brave عکس صفحه گرفته نشود.</translation>
+<translation id="4763421121695677716">قابلیت فراخوانی را در Microsoft Windows مسدود کنید تا به‌ صورت خودکار از زبانه‌های باز Growser عکس صفحه گرفته نشود.</translation>
 <translation id="1968895725257436430">جمع‌آوری داده</translation>
 <translation id="1700052872056357670">پاک کردن داده‌ها هنگام خروج</translation>
-<translation id="216468847346280584">پاک کردن داده‌های تبلیغات Brave...</translation>
-<translation id="2808630562319398131">بازنشانی داده‌های Brave Rewards…</translation>
+<translation id="216468847346280584">پاک کردن داده‌های تبلیغات Growser...</translation>
+<translation id="2808630562319398131">بازنشانی داده‌های Growser Rewards…</translation>
 <translation id="6438096877646138757">سایت‌هایی که با بسته شدن، کوکی‌ها را پاک می‌کنند</translation>
 <translation id="2988792685798128092">پاک کردن موقع بسته شدن سایت</translation>
 <translation id="7702907602086592255">دامنه</translation>
@@ -610,7 +610,7 @@
 <translation id="3432762828853624962">Shared Workers</translation>
 <translation id="2927017729816812676">فضای حافظه پنهان</translation>
 <translation id="1389601498324964367">فضای ذخیره‌سازی با مدیریت سهمیه</translation>
-<translation id="814018970995616154">نشانی‌های وب حاوی فهرست سایت‌های ناامن ذخیره‌شده در Brave بررسی می‌کند.</translation>
+<translation id="814018970995616154">نشانی‌های وب حاوی فهرست سایت‌های ناامن ذخیره‌شده در Growser بررسی می‌کند.</translation>
 <translation id="1144810021918451336">از شما در برابر وب‌سایت‌ها، بارگیری‌ها، و افزونه‌های خطرناک محافظت نمی‌کند.</translation>
 <translation id="4905744245455598930">از شما در برابر سایت‌ها، دانلودها و افزونه‌هایی که خطرناک شناسایی شده‌اند محافظت می‌کند.</translation>
 <translation id="5570470519803062774">تنظیمات سایت و سپر ایمنی</translation>
@@ -636,9 +636,9 @@
 <translation id="1145070115730668595">به سایت اجازه داده نشود که گپ هوش مصنوعی Leo را باز کند</translation>
 <translation id="5565355416171743213">شروع استفاده از همگام‌سازی</translation>
 <translation id="4332558599726753990">راه‌اندازی همگام‌سازی</translation>
-<translation id="2187778349654214731">برای شروع، باید در همه دستگاه‌هایی که قصد همگام‌سازی‌شان را دارید، Brave را نصب کنید، سپس با کد همگام‌سازی آنها را به‌صورت امن به هم پیوند دهید.</translation>
+<translation id="2187778349654214731">برای شروع، باید در همه دستگاه‌هایی که قصد همگام‌سازی‌شان را دارید، Growser را نصب کنید، سپس با کد همگام‌سازی آنها را به‌صورت امن به هم پیوند دهید.</translation>
 <translation id="7530575064080939974">مدیریت دستگاه‌های همگام‌سازی‌شده خود</translation>
-<translation id="8668872235103666008">امکان همگام‌سازی Brave با دستگاه‌های شما وجود ندارد</translation>
+<translation id="8668872235103666008">امکان همگام‌سازی Growser با دستگاه‌های شما وجود ندارد</translation>
 <translation id="7575156386943878014">مدیر همگام‌سازی</translation>
 <translation id="1755198127524719638">تنظیمات همگام‌سازی</translation>
 <translation id="7558480201297099157">اطلاعاتی را که می‌خواهید بین دستگاه‌ها همگام‌سازی شود مدیریت کنید. این تنظیمات فقط در این دستگاه اعمال می‌شوند.</translation>
@@ -651,18 +651,18 @@
 <translation id="7885157704277298658">کپی شد!</translation>
 <translation id="8802630444265810662">کد QR که باید به‌منظور انتقال کد همگام‌سازی شما با دستگاه تلفن همراه اسکن شود</translation>
 <translation id="6221331245829088299">خطایی در نمایش کد QR وجود داشت، لطفاً تازه‌سازی کنید و دوباره امتحان کنید.</translation>
-<translation id="298546024891487702">برای شروع، باید Brave را در همه دستگاه‌هایی که قصد همگام‌سازی‌شان را دارید نصب کنید. برای زنجیر کردن آنها به یکدیگر، یک زنجیره همگام‌سازی شروع کنید. برای پیوند کردن ایمن همه دستگاه‌هایتان به یکدیگر از این زنجیره استفاده خواهید کرد.</translation>
+<translation id="298546024891487702">برای شروع، باید Growser را در همه دستگاه‌هایی که قصد همگام‌سازی‌شان را دارید نصب کنید. برای زنجیر کردن آنها به یکدیگر، یک زنجیره همگام‌سازی شروع کنید. برای پیوند کردن ایمن همه دستگاه‌هایتان به یکدیگر از این زنجیره استفاده خواهید کرد.</translation>
 <translation id="6200528822592747640">شروع «زنجیره همگام‌سازی» جدید</translation>
 <translation id="5184726904895809379">کد همگام‌سازی دارم</translation>
 <translation id="8780295742023331191">مشاهده کد همگام‌سازی</translation>
 <translation id="9017050385815017931">تلفن/رایانه لوحی</translation>
 <translation id="1736420071277903564">رایانه</translation>
 <translation id="3407602902101449803">کد QR زنجیره همگام‌سازی</translation>
-<translation id="8369686073965491869">در دستگاه همراهتان، به «همگام‌سازی Brave» در «تنظیمات» بروید و روی دکمه کلیک کنید</translation>
+<translation id="8369686073965491869">در دستگاه همراهتان، به «همگام‌سازی Growser» در «تنظیمات» بروید و روی دکمه کلیک کنید</translation>
 <translation id="6527776448555649991">“کد همگام‌سازی را اسکن کنید”.</translation>
 <translation id="1400862780574843709">با استفاده از دوربینتان، کد QR زیر را اسکن کنید.</translation>
 <translation id="5086223971958279691">کد زنجیره همگام‌سازی</translation>
-<translation id="2899261497479389619">در رایانه هدفتان، به «همگام‌سازی Brave» در تنظیمات بروید و روی این دکمه کلیک کنید</translation>
+<translation id="2899261497479389619">در رایانه هدفتان، به «همگام‌سازی Growser» در تنظیمات بروید و روی این دکمه کلیک کنید</translation>
 <translation id="4827439149833241990">“کد همگام‌سازی دارم”.</translation>
 <translation id="8299617838343103908">کد زنجیره همگام‌سازی نشان‌داده‌شده در زیر را وارد کنید.</translation>
 <translation id="4485276108749547761">این کد را مانند گذرواژه در نظر بگیرید. اگر کسی به آن دسترسی پیدا کند، می‌تواند داده‌های همگام‌سازی‌شده شما را بخواند و تغییر دهد.</translation>
@@ -677,23 +677,23 @@
 <translation id="4432071071853308688">این کد خالی است</translation>
 <translation id="955848693465029904">خطای راه‌اندازی همگام‌سازی داخلی</translation>
 <translation id="7456398316301207582">خطا در حذف حساب داخلی</translation>
-<translation id="859506441384380749">این کد توسط نسخه منسوخ Brave ایجاد شده است، لطفاً ابتدا دستگاه دیگر خود را ارتقا دهید</translation>
+<translation id="859506441384380749">این کد توسط نسخه منسوخ Growser ایجاد شده است، لطفاً ابتدا دستگاه دیگر خود را ارتقا دهید</translation>
 <translation id="3132642509209154999">این کد منقضی شده است. لطفاً کد جدیدی در دستگاه دیگرتان ایجاد و دوباره تلاش کنید.</translation>
 <translation id="2859229680945501779">این کد نامعتبر است. لطفاً بررسی کنید که زمان و منطقه زمانی در دستگاهتان درست تنظیم شده باشند.</translation>
 <translation id="2339730291919608488">خروج از زنجیره همگام‌سازی</translation>
 <translation id="115699408012835975">اگر «همگام‌سازی» را بازنشانی کنید، باید کد همگام‌سازی را مجدداً از دستگاه دیگری وارد کنید تا همگام‌سازی با آن انجام شود. مطمئن هستید که می‌خواهید ادامه دهید؟</translation>
 <translation id="6092564993102418148">آیا مطمئن هستید که می‌خواهید دستگاه انتخاب‌شده را از زنجیره همگام‌سازی حذف کنید؟</translation>
-<translation id="4400414577602898435">هشدار: با این کار داده‌های Brave، از جمله احتمالاً رمز عبورهای شما، با دستگاهی که این کلمات کد را ایجاد کرده است به اشتراک گذاشته می‌شوند.
+<translation id="4400414577602898435">هشدار: با این کار داده‌های Growser، از جمله احتمالاً رمز عبورهای شما، با دستگاهی که این کلمات کد را ایجاد کرده است به اشتراک گذاشته می‌شوند.
 
 لطفاً دقیق بررسی کنید که این کلمات کد با دستگاهی ایجاد شده باشند که متعلق به شما است.
 
 مطمئنید می‌خواهید این کار را انجام دهید؟</translation>
-<translation id="7443185843787879670">Brave نتوانست به فضای ذخیره سازی ایمن سیستم عامل شما دسترسی پیدا کند. این چیزی است که برای ایمن سازی داده هایی مانند رمز عبور و کوکی ها استفاده می شود. همچنین برای Brave Sync برای اتصال نمایه مرورگر شما بین دستگاه ها لازم است. این بدان معناست که Brave Sync اجرا نمی شود. برای حل این مشکل، لطفاً به مراجعه کنید.<ph name="BEGIN_LINK_SYNC_GUIDE"/>راهنمای عیب‌یابی Brave Sync<ph name="END_LINK_SYNC_GUIDE"/>.</translation>
-<translation id="6802736947576520626">به نظر می‌رسد که کلید رمزگذاری همگام‌سازی با تنظیمات اولیه «همگام‌سازی Brave» همخوانی ندارد. آسان‌ترین روش برای حل این مسئله، بازنشانی و استفاده از عبارت عبور موجود روی دستگاه همگام‌سازی‌شده دیگری به‌منظور پیوستن مجدد به زنجیره همگام‌سازی است.</translation>
+<translation id="7443185843787879670">Growser نتوانست به فضای ذخیره سازی ایمن سیستم عامل شما دسترسی پیدا کند. این چیزی است که برای ایمن سازی داده هایی مانند رمز عبور و کوکی ها استفاده می شود. همچنین برای Growser Sync برای اتصال نمایه مرورگر شما بین دستگاه ها لازم است. این بدان معناست که Growser Sync اجرا نمی شود. برای حل این مشکل، لطفاً به مراجعه کنید.<ph name="BEGIN_LINK_SYNC_GUIDE"/>راهنمای عیب‌یابی Growser Sync<ph name="END_LINK_SYNC_GUIDE"/>.</translation>
+<translation id="6802736947576520626">به نظر می‌رسد که کلید رمزگذاری همگام‌سازی با تنظیمات اولیه «همگام‌سازی Growser» همخوانی ندارد. آسان‌ترین روش برای حل این مسئله، بازنشانی و استفاده از عبارت عبور موجود روی دستگاه همگام‌سازی‌شده دیگری به‌منظور پیوستن مجدد به زنجیره همگام‌سازی است.</translation>
 <translation id="4889767840132638381">بازنشانی و پیوستن مجدد به زنجیره همگام‌سازی</translation>
 <translation id="1680065323266179640">حذف حساب «همگام‌سازی»</translation>
 <translation id="9064376100690171155">حذف حساب برای همیشه</translation>
-<translation id="228906529296554286">با حذف حسابتان، داده‌های رمزگذاری‌شده شما از روی سرور‌های Brave حذف خواهد شد و «همگام‌سازی» روی تمامی دستگاه‌های متصلتان غیرفعال می‌شود.</translation>
+<translation id="228906529296554286">با حذف حسابتان، داده‌های رمزگذاری‌شده شما از روی سرور‌های Growser حذف خواهد شد و «همگام‌سازی» روی تمامی دستگاه‌های متصلتان غیرفعال می‌شود.</translation>
 <translation id="7578652532113583362">اگر چه این کار باعث حذف شدن داده‌های ذخیره‌شده محلی روی آن دستگاه‌ها نخواهد شد.</translation>
 <translation id="2516405584294312544">این حذف حساب دائمی است و هیچ راهی برای برگرداندن داده‌ها وجود ندارد. شما باید تصمیم بگیرید
  برای شروع استفاده مجدد از «همگام‌سازی»، به ساخت یک حساب جدید و افزودن مجدد همه دستگاه‌ها یکی پس از دیگری نیاز دارید.</translation>
@@ -704,13 +704,13 @@
 <translation id="7029809446516969842">گذرواژه‌ها</translation>
 <translation id="1571419474754278280">گفتگوهای Leo AI</translation>
 <translation id="6011308810877101166">بهبود پیشنهادهای جستجو</translation>
-<translation id="2332576387809612040">هنگامی که این گزینه فعال است، Brave آنچه را در نوار آدرس یا کادر جستجو تایپ می‌کنید به موتور جستجوی پیش‌فرض شما می‌فرستد تا پیشنهادهای بهتری دریافت کنید. وقتی غیرفعال است، Brave فقط پیشنهادهایی را نمایش می‌دهد که روی دستگاه خودتان تولید شده‌اند. این گزینه در پنجره‌های خصوصی همیشه غیرفعال است.</translation>
+<translation id="2332576387809612040">هنگامی که این گزینه فعال است، Growser آنچه را در نوار آدرس یا کادر جستجو تایپ می‌کنید به موتور جستجوی پیش‌فرض شما می‌فرستد تا پیشنهادهای بهتری دریافت کنید. وقتی غیرفعال است، Growser فقط پیشنهادهایی را نمایش می‌دهد که روی دستگاه خودتان تولید شده‌اند. این گزینه در پنجره‌های خصوصی همیشه غیرفعال است.</translation>
 <translation id="5522403133543437426">موتور جستجوی مورد استفاده در نوار نشانی.</translation>
 <translation id="280472502078788655">موتور جستجوی مورد استفاده در نوار نشانی برای پنجره‌های خصوصی.</translation>
 <translation id="7232120595886556478">پنجره عادی</translation>
 <translation id="6739674350896546324">موتور جستجو برای پنجره‌های خصوصی</translation>
 <translation id="1280261732441045146"><ph name="SEARCH_ENGINE_NAME"/> اکنون موتور جستجوی پیش‌فرض شما برای پنجره‌های خصوصی است</translation>
-<translation id="5363742888375478536">برای بهترین تجربه وب‌گردی با مرورگر Brave، استفاده از Brave جستجوی توصیه می‌شود.</translation>
+<translation id="5363742888375478536">برای بهترین تجربه وب‌گردی با مرورگر Growser، استفاده از Growser جستجوی توصیه می‌شود.</translation>
 <translation id="7298195798382681320">پیشنهاد شده</translation>
 <translation id="6864914031231797928">مجاز کردن ورود به سیستم Google برای افزونه‌ها</translation>
 <translation id="1519976482053221804">روتر رسانه قابلیت پخش را در مرورگر ممکن می‌سازد</translation>
@@ -746,8 +746,8 @@
 <translation id="4745128937437681681">سرویس‌های Onion خارج از پنجره‌های Tor در دسترس نخواهد بود</translation>
 <translation id="6305528566126073902">از مؤلفه مدیریت حقوق دیجیتال (DRM) Widevine برای مشاهده ویدیوی محافظت‌شده در حال پخش جریانی و سایر محتواها در مرورگر استفاده کنید</translation>
 <translation id="1314131187310290315">افزونه‌های Manifest V2</translation>
-<translation id="2488433650767270565">افزونه‌های Manifest V2 زیر از فروشگاه وب Chrome حذف خواهند شد، اما همچنان در Brave پشتیبانی می‌شوند. برای دانلود و نصب یا حذف نصب تغییر حالت دهید.</translation>
-<translation id="6918225713618473646">Brave این افزونه‌های Manifest V2 را روی سرورهای خود میزبانی می‌کند، اما محتوا، امنیت یا رفتار آن‌ها را بررسی یا تأیید نمی‌کند. لطفاً برای دریافت راهنمایی به صفحه رسمی هر افزونه مراجعه کنید. برنامه‌‌های Brave را برای Manifest V2 <ph name="BEGIN_LINK"/>اینجا<ph name="END_LINK"/> مطالعه کنید؛.</translation>
+<translation id="2488433650767270565">افزونه‌های Manifest V2 زیر از فروشگاه وب Chrome حذف خواهند شد، اما همچنان در Growser پشتیبانی می‌شوند. برای دانلود و نصب یا حذف نصب تغییر حالت دهید.</translation>
+<translation id="6918225713618473646">Growser این افزونه‌های Manifest V2 را روی سرورهای خود میزبانی می‌کند، اما محتوا، امنیت یا رفتار آن‌ها را بررسی یا تأیید نمی‌کند. لطفاً برای دریافت راهنمایی به صفحه رسمی هر افزونه مراجعه کنید. برنامه‌‌های Growser را برای Manifest V2 <ph name="BEGIN_LINK"/>اینجا<ph name="END_LINK"/> مطالعه کنید؛.</translation>
 <translation id="578671172657727816">NoScript™ را فعال کنید</translation>
 <translation id="9068475464170522036">NoScript یک افزونه Manifest V2 است که به شما امکان می‎‌دهد اسکریپت‌های فردی را که در حال اجرا یا تلاش برای اجرا در یک صفحه خاص هستند مسدود و یا رفع انسداد کنید.</translation>
 <translation id="1394592156621788100">uBlock Origin™ را فعال کنید</translation>
@@ -761,18 +761,18 @@
 <translation id="4954512758656527938">کیف پول پیش‌فرض اتریوم</translation>
 <translation id="7701023802820268122">کیف پول پیش‌فرض سولانا</translation>
 <translation id="3991455933137809014">کیف پول پیش‌فرض Cornado</translation>
-<translation id="8488282162676695335">کیف پول Brave</translation>
+<translation id="8488282162676695335">کیف پول Growser</translation>
 <translation id="6942354363301686374">افزونه‌ها (بدون بازگشت)</translation>
-<translation id="702381242110464396">افزونه‌ها (بازگشت کیف پول Brave)</translation>
+<translation id="702381242110464396">افزونه‌ها (بازگشت کیف پول Growser)</translation>
 <translation id="4718664830805652430">ارز پایه پیش‌فرض</translation>
 <translation id="7992507032049865603">رمزارز پایه پیش‌فرض</translation>
-<translation id="3044369626313583722">نمایش دکمه کیف پول Brave</translation>
+<translation id="3044369626313583722">نمایش دکمه کیف پول Growser</translation>
 <translation id="7568430944629653319">کشف NFT را فعال کنید</translation>
 <translation id="970496996377628529">NFT‌هایی را که دارید به طور خودکار با استفاده از API‌های شخص ثالث به Wallet اضافه کنید.</translation>
-<translation id="8421293929927030255">Brave Wallet را در پنجره‌های خصوصی فعال کنید</translation>
+<translation id="8421293929927030255">Growser Wallet را در پنجره‌های خصوصی فعال کنید</translation>
 <translation id="1729224157015744629">هشدار: استفاده مجدد از آدرس کیف پول در یک جلسه پنجره خصوصی می‌تواند سایت را قادر سازد تا یک جلسه پنجره خصوصی را به یک جلسه پنجره غیرخصوصی پیوند دهد</translation>
-<translation id="8239147115686034860">کیف پول Brave به‌طور خودکار قفل شود</translation>
-<translation id="414639769490080648">تعداد دقایقی که باید منتظر بمانید تا کیف پول Brave به‌طور خودکار قفل شود</translation>
+<translation id="8239147115686034860">کیف پول Growser به‌طور خودکار قفل شود</translation>
+<translation id="414639769490080648">تعداد دقایقی که باید منتظر بمانید تا کیف پول Growser به‌طور خودکار قفل شود</translation>
 <translation id="856371974127598760">شبکه‌های کیف پول</translation>
 <translation id="5975930666279943472">پاک کردن اطلاعات نانس و تراکنش کیف پول</translation>
 <translation id="5693968582510626466">ممکن است پاک کردن تراکنش‌ها برای توسعه‌دهندگان یا هنگام پاک کردن وضعیت در سرور محلی مفید باشد</translation>
@@ -840,11 +840,11 @@
 <translation id="5781842473834867765">سابقه گفتگوهایم را ذخیره کن</translation>
 <translation id="1082960401708055995">غیرفعال کردن ذخیره‌سازی گفتگوها، تمام گفتگوهای ذخیره‌شده قبلی را برای همیشه پاک خواهد کرد. این اقدام بازگشت‌ناپذیر است.</translation>
 <translation id="1014480593522400586">حذف داده‌های Leo</translation>
-<translation id="5256236967791936135">بعد از بازنشانی هوش مصنوعی Leo، برای استفاده دوباره از Brave Leo AI در آینده دوباره باید وارد شوید و همچنین همه سوابق گفتگو، سفارشی‌سازی‌ها و حافظه‌های شما پاک می‌شود. پاک کردن سوابق گفتگو، تمام مکالمات قبلی شما با Brave Leo AI را حذف خواهد کرد. این اقدام بازگشت‌ناپذیر است.</translation>
+<translation id="5256236967791936135">بعد از بازنشانی هوش مصنوعی Leo، برای استفاده دوباره از Growser Leo AI در آینده دوباره باید وارد شوید و همچنین همه سوابق گفتگو، سفارشی‌سازی‌ها و حافظه‌های شما پاک می‌شود. پاک کردن سوابق گفتگو، تمام مکالمات قبلی شما با Growser Leo AI را حذف خواهد کرد. این اقدام بازگشت‌ناپذیر است.</translation>
 <translation id="5574059574002819179">پیشنهادهای تکمیل خودکار را تنظیم کنید</translation>
 <translation id="7942415993090181327">سابقه گفتگو</translation>
-<translation id="5084498230659987096">Brave Leo سرویس چت مبتنی بر هوش مصنوعی و سایر قابلیت‌های مبتنی بر هوش مصنوعی را با رعایت حریم خصوصی در مرورگر ارائه می‌دهد. Leo هرگز از داده‌های شما برای یادگیری یا آموزش مدل استفاده نمی‌کند. تمام درخواست‌ها از طریق یک سرور ناشناس‌‌ساز منتقل می‌شوند.</translation>
-<translation id="6458721693611638005">برای کسب اطلاعات بیشتر درباره روش‌های محافظت Brave از حریم خصوصی شما هنگام استفاده از هوش مصنوعی، خط‌مشی حریم خصوصی Leo را بخوانید. <ph name="BEGIN_LINK"/>اطلاعات بیشتر<ph name="END_LINK"/></translation>
+<translation id="5084498230659987096">Growser Leo سرویس چت مبتنی بر هوش مصنوعی و سایر قابلیت‌های مبتنی بر هوش مصنوعی را با رعایت حریم خصوصی در مرورگر ارائه می‌دهد. Leo هرگز از داده‌های شما برای یادگیری یا آموزش مدل استفاده نمی‌کند. تمام درخواست‌ها از طریق یک سرور ناشناس‌‌ساز منتقل می‌شوند.</translation>
+<translation id="6458721693611638005">برای کسب اطلاعات بیشتر درباره روش‌های محافظت Growser از حریم خصوصی شما هنگام استفاده از هوش مصنوعی، خط‌مشی حریم خصوصی Leo را بخوانید. <ph name="BEGIN_LINK"/>اطلاعات بیشتر<ph name="END_LINK"/></translation>
 <translation id="614530507403667291">مدل پیش‌فرض برای مکالمات جدید</translation>
 <translation id="6340526405444716530">شخصی‌سازی</translation>
 <translation id="5077965667729100040">حافظه‌ها و پاسخ‌های Leo را سفارشی‌سازی کنید</translation>
@@ -867,12 +867,12 @@
 <translation id="1058790648388035953">برخی از چارچوب‌های سرویس‌دهی ممکن است به اعتبارنامه‌های احراز هویت، مانند یک کلید API یا یک توکن دسترسی نیاز داشته باشند. این موارد به سرصفحه درخواست اضافه خواهند شد.</translation>
 <translation id="4335128003329183586">اندازه زمینه</translation>
 <translation id="3153779001670804829">حداکثر تعداد توکن‌هایی که مدل می‌تواند در یک تعامل واحد پردازش کند. اندازه بزرگ‌تر زمینه به مدل امکان می‌دهد گفت‌وگوهای طولانی‌تری را مدیریت کند. مدل‌های مختلف از اندازه‌های متفاوت حداکثر زمینه پشتیبانی می‌کنند.</translation>
-<translation id="217141195370578385">Brave این درخواست‌ها را پراکسی نمی‌کند، لطفاً شرایط حریم خصوصی ارائه‌دهنده انتخابی را بخوانید.</translation>
+<translation id="217141195370578385">Growser این درخواست‌ها را پراکسی نمی‌کند، لطفاً شرایط حریم خصوصی ارائه‌دهنده انتخابی را بخوانید.</translation>
 <translation id="2645532768679870478">نقاط پایان غیرمحلی باید پروتکل HTTPS را برای ایمن‌سازی انتقال داده‌ها پیاده‌سازی کنند.</translation>
 <translation id="8177205483022887785">نشانی وب نامعتبری وارد کرده‌اید. لطفاً نشانی وب معتبری وارد کنید.</translation>
 <translation id="6333402912272476257">این نقطه پایان به‌طور بالقوه ناامن است.</translation>
 <translation id="4025470490371933693">آدرس‌های IP خصوصی مجاز نیستند</translation>
-<translation id="3670571614478401810">آدرسی که وارد کرده‌اید به نظر می‌رسد از یک شبکه خصوصی است - مانند روتر یا سرور محلی شما. مرورگر Brave به‌طور خودکار این آدرس‌ها را برای حفظ امنیت شما مسدود می‌کند، اما اگر اطمینان دارید که امن است، می‌توانید آن‌ها را فعال کنید.</translation>
+<translation id="3670571614478401810">آدرسی که وارد کرده‌اید به نظر می‌رسد از یک شبکه خصوصی است - مانند روتر یا سرور محلی شما. مرورگر Growser به‌طور خودکار این آدرس‌ها را برای حفظ امنیت شما مسدود می‌کند، اما اگر اطمینان دارید که امن است، می‌توانید آن‌ها را فعال کنید.</translation>
 <translation id="4932437543207655965">برای ادامه، به آدرس brave://flags/ بروید، عبارت «brave-ai-chat-allow-private-ips» را جستجو کنید و این ویژگی را فعال کنید. پس از فعال‌سازی، می‌توانید از آدرس‌های شبکه خصوصی در تنظیمات Leo استفاده کنید.</translation>
 <translation id="5249539665306267943">افزودن مدل جدید</translation>
 <translation id="7265212806651512211">هنوز مدلی متصل نکرده‌اید.</translation>
@@ -916,8 +916,8 @@
 <translation id="7402116145895962069">همگام‌سازی مدل‌های محلی Ollama شما</translation>
 <translation id="4835154437390745810">مدیریت‌شده توسط Ollama</translation>
 <translation id="5985516785067818307">عضو پنل نظرسنجی</translation>
-<translation id="8347743943525229984">مجاز کردن نظرسنجی‌های Brave</translation>
-<translation id="3204080538332044581">به Brave اجازه می‌دهد که در صفحه زبانه جدید لینک‌های نظرسنجی‌های خصوصی را نمایش دهد. نظرسنجی‌ها به ما کمک می‌کنند تا قابلیت‌های بهتری بسازیم و اثربخشی کمپین‌های تبلیغاتی مرورگرمحور را ارزیابی کنیم. <ph name="BEGIN_LINK"/>بیشتر بدانید<ph name="END_LINK"/></translation>
+<translation id="8347743943525229984">مجاز کردن نظرسنجی‌های Growser</translation>
+<translation id="3204080538332044581">به Growser اجازه می‌دهد که در صفحه زبانه جدید لینک‌های نظرسنجی‌های خصوصی را نمایش دهد. نظرسنجی‌ها به ما کمک می‌کنند تا قابلیت‌های بهتری بسازیم و اثربخشی کمپین‌های تبلیغاتی مرورگرمحور را ارزیابی کنیم. <ph name="BEGIN_LINK"/>بیشتر بدانید<ph name="END_LINK"/></translation>
 <translation id="349846214503465941">لیست پخش را فعال کنید</translation>
 <translation id="7903608716704052878">به‌طور خودکار فایل‌ها را برای مشاهده آفلاین اضافه کنید</translation>
 <translation id="384666453982355633">این گزینه به‌طور خودکار فایل‌های رسانه‌ای را ذخیره می‌کند تا بتوانید آنها را بدون اتصال به اینترنت پخش کنید</translation>
@@ -925,35 +925,35 @@
 <translation id="5646330590189545860">پیش‌فرض سیستم عامل یا Wikimedia</translation>
 <translation id="2026075482948458926">پیش‌فرض سیستم عامل یا Cloudflare</translation>
 <translation id="6624718837376802990">آواتار پاداش‌های نوآورانه</translation>
-<translation id="6617313057407561765">آواتار نوآورانه Brave</translation>
+<translation id="6617313057407561765">آواتار نوآورانه Growser</translation>
 <translation id="6754445808455578019">آواتار نوآورانه اقیانوس</translation>
 <translation id="1202230982786524987">آواتار نوآورانه سبزه</translation>
 <translation id="5795513892420634319">آواتار ذرت نوآورانه</translation>
 <translation id="3561521017993720050">آواتار سلطنتی نوآورانه</translation>
 <translation id="1235866128911626592">آواتار نینجای نوآورانه</translation>
 <translation id="2090755120827623384">آواتار پاداش‌های پالادین</translation>
-<translation id="2018119859356143702">آواتار پالادین Brave</translation>
+<translation id="2018119859356143702">آواتار پالادین Growser</translation>
 <translation id="4740488466586929481">آواتار اقیانوس پالادین</translation>
 <translation id="5006207620676644913">آواتار سبزه پالادین</translation>
 <translation id="3989232963815817109">آواتار پالادین ذرت</translation>
 <translation id="4594102608669574640">آواتار سلطنتی پالادین</translation>
 <translation id="2183738260538789532">آواتار نینجای پالادین</translation>
 <translation id="1364533449989493534">آواتار پاداش‌های انعکاس نور</translation>
-<translation id="7885078296101135895">آواتار Brave انعکاس نور</translation>
+<translation id="7885078296101135895">آواتار Growser انعکاس نور</translation>
 <translation id="5569105529336093187">آواتار اقیانوس انعکاس نور</translation>
 <translation id="8905105122495847950">آواتار سبزه انعکاس نور</translation>
 <translation id="5118043134512650846">آواتار ذرت انعکاس نور</translation>
 <translation id="7054896317531348319">آواتار سلطنتی انعکاس نور</translation>
 <translation id="5493441852328628982">آواتار نینجا انعکاس نور</translation>
 <translation id="2752844432779340213">آواتار پاداش‌های تخم مرغی</translation>
-<translation id="3981340065784739675">آواتار Brave تخم مرغی</translation>
+<translation id="3981340065784739675">آواتار Growser تخم مرغی</translation>
 <translation id="8950124663623888116">آواتار اقیانوس تخم مرغی</translation>
 <translation id="1029136880675307651">آواتار سبزه تخم مرغی</translation>
 <translation id="3285059582709531888">آواتار ذرت تخم مرغی</translation>
 <translation id="8540390244071055918">آواتار تخم مرغی سلطنتی</translation>
 <translation id="3435440003463944104">آواتار نینجا تخم مرغی</translation>
 <translation id="4222150638283443362">آواتار پاداش‌های آب‌نبات</translation>
-<translation id="8888471219870198387">آواتار Brave آب‌نبات</translation>
+<translation id="8888471219870198387">آواتار Growser آب‌نبات</translation>
 <translation id="2883756935342108947">آواتار اقیانوس آب‌نبات</translation>
 <translation id="6280956561199400472">آواتار سبزه آب‌نبات</translation>
 <translation id="5318548116565208315">آواتار ذرت آب‌نبات</translation>

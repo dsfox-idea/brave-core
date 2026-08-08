@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/>টি ট্যাব বন্ধ করা হয়েছে}one{<ph name="MANY_CLOSED"/>টি ট্যাব বন্ধ করা হয়েছে}other{<ph name="MANY_CLOSED"/>টি ট্যাব বন্ধ করা হয়েছে}}</translation>
 <translation id="2894757982205307093">গ্রুপে নতুন ট্যাব যোগ করুন</translation>
 <translation id="2918484639460781603">সেটিংসে যান</translation>
-<translation id="4691798003247738043">Brave | এই স্টোর সম্পর্কে</translation>
+<translation id="4691798003247738043">Growser | এই স্টোর সম্পর্কে</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/>টি বেছে নেওয়া হয়েছে}one{<ph name="ITEMS_COUNT_MANY"/>টি বেছে নেওয়া হয়েছে}other{<ph name="ITEMS_COUNT_MANY"/>টি বেছে নেওয়া হয়েছে}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{ট্যাব পিন করুন}one{ট্যাব পিন করুন}other{ট্যাব পিন করুন}}</translation>
 <translation id="3008554597174452548">প্রোডাক্ট আর ট্র্যাক করতে চাই না</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">ফুলস্ক্রিন গ্রিড লুকান</translation>
 <translation id="5076161749301278626">স্টোরের রিভিউ দেখতে চান?</translation>
 <translation id="5161254044473106830">শিরোনাম প্রয়োজন</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave অটোমেটিক <ph name="AUTO_DELETE_DELAY_ONE"/> মাস পরে চালু না থাকা ট্যাব ও ট্যাব গ্রুপ বন্ধ করে দেয়। আপনি সেটিংস থেকে এটি পরিবর্তন করতে পারবেন।}one{Brave অটোমেটিক <ph name="AUTO_DELETE_DELAY_MANY"/> মাস পরে চালু না থাকা ট্যাব ও ট্যাব গ্রুপ বন্ধ করে দেয়। আপনি সেটিংস থেকে এটি পরিবর্তন করতে পারবেন।}other{Brave অটোমেটিক <ph name="AUTO_DELETE_DELAY_MANY"/> মাস পরে চালু না থাকা ট্যাব ও ট্যাব গ্রুপ বন্ধ করে দেয়। আপনি সেটিংস থেকে এটি পরিবর্তন করতে পারবেন।}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser অটোমেটিক <ph name="AUTO_DELETE_DELAY_ONE"/> মাস পরে চালু না থাকা ট্যাব ও ট্যাব গ্রুপ বন্ধ করে দেয়। আপনি সেটিংস থেকে এটি পরিবর্তন করতে পারবেন।}one{Growser অটোমেটিক <ph name="AUTO_DELETE_DELAY_MANY"/> মাস পরে চালু না থাকা ট্যাব ও ট্যাব গ্রুপ বন্ধ করে দেয়। আপনি সেটিংস থেকে এটি পরিবর্তন করতে পারবেন।}other{Growser অটোমেটিক <ph name="AUTO_DELETE_DELAY_MANY"/> মাস পরে চালু না থাকা ট্যাব ও ট্যাব গ্রুপ বন্ধ করে দেয়। আপনি সেটিংস থেকে এটি পরিবর্তন করতে পারবেন।}}</translation>
 <translation id="5254233580564156835">মেমরির ব্যবহার: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">আপনার শেষ ট্যাব</translation>
 <translation id="5380159289133845234">ডুপ্লিকেট ট্যাব আর্কাইভ করুন</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{<ph name="TABS_COUNT_ONE"/>টি ট্যাব, <ph name="COLOR_NAME"/> কালার সহ, ট্যাব গ্রুপ বন্ধ করুন।}one{<ph name="TABS_COUNT_MANY"/>টি ট্যাব, <ph name="COLOR_NAME"/> কালার সহ, ট্যাব গ্রুপ বন্ধ করুন।}other{<ph name="TABS_COUNT_MANY"/>টি ট্যাব, <ph name="COLOR_NAME"/> কালার সহ, ট্যাব গ্রুপ বন্ধ করুন।}}</translation>
 <translation id="5556417849629758491">স্টোর সংক্রান্ত তথ্য দেখুন, স্ক্রিনের সবচেয়ে উপরের অংশে এই বিকল্প উপলভ্য আছে</translation>
 <translation id="5627941783489838464">কোনও ট্যাব সম্পর্কিত আপডেট নেই</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave থেকে <ph name="TABS_COUNT_ONE"/>টি লিঙ্ক}one{Brave থেকে <ph name="TABS_COUNT_MANY"/>টি লিঙ্ক}other{Brave থেকে <ph name="TABS_COUNT_MANY"/>টি লিঙ্ক}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Growser থেকে <ph name="TABS_COUNT_ONE"/>টি লিঙ্ক}one{Growser থেকে <ph name="TABS_COUNT_MANY"/>টি লিঙ্ক}other{Growser থেকে <ph name="TABS_COUNT_MANY"/>টি লিঙ্ক}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{ট্যাব বাঁদিকে সরান}one{ট্যাব বাঁদিকে সরান}other{ট্যাব বাঁদিকে সরান}}</translation>
 <translation id="5746204836956568669">আপনি দ্রুত কাজ করার জন্য <ph name="NUMBER_OF_TABS"/>টি ট্যাব গ্রুপে রাখতে চান?</translation>
 <translation id="5773295109010386583">ইনঅ্যাক্টিভ আইটেম অটোমেটিক বন্ধ করে দেয়</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/>টি আইটেম}one{<ph name="TABS_COUNT_MANY"/>টি আইটেম}other{<ph name="TABS_COUNT_MANY"/>টি আইটেম}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/>টি বেছে নেওয়া আইটেম ফিরিয়ে আনুন}one{<ph name="TABS_COUNT_MANY"/>টি বেছে নেওয়া আইটেম ফিরিয়ে আনুন}other{<ph name="TABS_COUNT_MANY"/>টি বেছে নেওয়া আইটেম ফিরিয়ে আনুন}}</translation>
 <translation id="753732157349120914">ট্যাব পাল্টানোর ফিচার</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Brave-এর তরফ থেকে <ph name="REVIEWS_COUNT_ONE"/>টি রিভিউ}one{Brave-এর তরফ থেকে <ph name="REVIEWS_COUNT_MANY"/>টি রিভিউ}other{Brave-এর তরফ থেকে <ph name="REVIEWS_COUNT_MANY"/>টি রিভিউ}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{Growser-এর তরফ থেকে <ph name="REVIEWS_COUNT_ONE"/>টি রিভিউ}one{Growser-এর তরফ থেকে <ph name="REVIEWS_COUNT_MANY"/>টি রিভিউ}other{Growser-এর তরফ থেকে <ph name="REVIEWS_COUNT_MANY"/>টি রিভিউ}}</translation>
 <translation id="7559245342362162951">ফুলস্ক্রিন গ্রিডে গ্রুপের ট্যাব দেখুন</translation>
 <translation id="7658239707568436148">বাতিল</translation>
 <translation id="7688386659311034820">অ্যাক্টিভ না থাকা ট্যাবের ডায়ালগ</translation>

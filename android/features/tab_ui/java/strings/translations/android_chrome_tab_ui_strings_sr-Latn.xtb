@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> kartica je zatvorena}one{<ph name="MANY_CLOSED"/> kartica je zatvorena}few{<ph name="MANY_CLOSED"/> kartice su zatvorene}other{<ph name="MANY_CLOSED"/> kartica je zatvoreno}}</translation>
 <translation id="2894757982205307093">Nova kartica u grupi</translation>
 <translation id="2918484639460781603">Idi na podešavanja</translation>
-<translation id="4691798003247738043">Brave | O ovoj prodavnici</translation>
+<translation id="4691798003247738043">Growser | O ovoj prodavnici</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> izabrana stavka}one{<ph name="ITEMS_COUNT_MANY"/> izabrana stavka}few{<ph name="ITEMS_COUNT_MANY"/> izabrane stavke}other{<ph name="ITEMS_COUNT_MANY"/> izabranih stavki}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Zakači karticu}one{Zakači kartice}few{Zakači kartice}other{Zakači kartice}}</translation>
 <translation id="3008554597174452548">Zaustavi praćenje proizvoda</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Sakrijte prikaz mreže na celom ekranu</translation>
 <translation id="5076161749301278626">Želite da vidite recenzije prodavnica?</translation>
 <translation id="5161254044473106830">Naslov je obavezan</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_ONE"/> meseca. Ovo možete da promenite u podešavanjima.}one{Brave automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_MANY"/> meseca. Ovo možete da promenite u podešavanjima.}few{Brave automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_MANY"/> meseca. Ovo možete da promenite u podešavanjima.}other{Brave automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_MANY"/> meseci. Ovo možete da promenite u podešavanjima.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_ONE"/> meseca. Ovo možete da promenite u podešavanjima.}one{Growser automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_MANY"/> meseca. Ovo možete da promenite u podešavanjima.}few{Growser automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_MANY"/> meseca. Ovo možete da promenite u podešavanjima.}other{Growser automatski zatvara neaktivne kartice i grupe kartica posle <ph name="AUTO_DELETE_DELAY_MANY"/> meseci. Ovo možete da promenite u podešavanjima.}}</translation>
 <translation id="5254233580564156835">Korišćenje memorije: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Poslednja kartica</translation>
 <translation id="5380159289133845234">Arhiviraj duplikate kartica</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Zatvorite grupu kartica sa <ph name="TABS_COUNT_ONE"/> karticom, boje <ph name="COLOR_NAME"/>.}one{Zatvorite grupu kartica sa <ph name="TABS_COUNT_MANY"/> karticom, boje <ph name="COLOR_NAME"/>.}few{Zatvorite grupu kartica sa <ph name="TABS_COUNT_MANY"/> kartice, boje <ph name="COLOR_NAME"/>.}other{Zatvorite grupu kartica sa <ph name="TABS_COUNT_MANY"/> kartica, boje <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">Pregledajte informacije o prodavnici, opciju koja je dostupna u vrhu ekrana</translation>
 <translation id="5627941783489838464">Nema ažuriranja kartica</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link iz Brave-a}one{<ph name="TABS_COUNT_MANY"/> link iz Brave-a}few{<ph name="TABS_COUNT_MANY"/> linka iz Brave-a}other{<ph name="TABS_COUNT_MANY"/> linkova iz Brave-a}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link iz Growser-a}one{<ph name="TABS_COUNT_MANY"/> link iz Growser-a}few{<ph name="TABS_COUNT_MANY"/> linka iz Growser-a}other{<ph name="TABS_COUNT_MANY"/> linkova iz Growser-a}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Premesti karticu ulevo}one{Premesti kartice ulevo}few{Premesti kartice ulevo}other{Premesti kartice ulevo}}</translation>
 <translation id="5746204836956568669">Želite da grupišete kartice (<ph name="NUMBER_OF_TABS"/>) da bi radile brže?</translation>
 <translation id="5773295109010386583">Automatski zatvaraj neaktivne stavke</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> stavka}one{<ph name="TABS_COUNT_MANY"/> stavka}few{<ph name="TABS_COUNT_MANY"/> stavke}other{<ph name="TABS_COUNT_MANY"/> stavki}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Vratite <ph name="TABS_COUNT_ONE"/> izabranu stavku}one{Vratite <ph name="TABS_COUNT_MANY"/> izabranu stavku}few{Vratite <ph name="TABS_COUNT_MANY"/> izabrane stavke}other{Vratite <ph name="TABS_COUNT_MANY"/> izabranih stavki}}</translation>
 <translation id="753732157349120914">Prebacivač kartica</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzija iz Brave-a}one{<ph name="REVIEWS_COUNT_MANY"/> recenzija iz Brave-a}few{<ph name="REVIEWS_COUNT_MANY"/> recenzije iz Brave-a}other{<ph name="REVIEWS_COUNT_MANY"/> recenzija iz Brave-a}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzija iz Growser-a}one{<ph name="REVIEWS_COUNT_MANY"/> recenzija iz Growser-a}few{<ph name="REVIEWS_COUNT_MANY"/> recenzije iz Growser-a}other{<ph name="REVIEWS_COUNT_MANY"/> recenzija iz Growser-a}}</translation>
 <translation id="7559245342362162951">Prikazuje kartice grupe u mreži na celom ekranu</translation>
 <translation id="7658239707568436148">Otkaži</translation>
 <translation id="7688386659311034820">Dijalog sa neaktivnim karticama</translation>

@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> вкладку закрито}one{<ph name="MANY_CLOSED"/> вкладку закрито}few{<ph name="MANY_CLOSED"/> вкладки закрито}many{<ph name="MANY_CLOSED"/> вкладок закрито}other{<ph name="MANY_CLOSED"/> вкладки закрито}}</translation>
 <translation id="2894757982205307093">Нова вкладка в групі</translation>
 <translation id="2918484639460781603">Перейти в налаштування</translation>
-<translation id="4691798003247738043">Brave | Про цей магазин</translation>
+<translation id="4691798003247738043">Growser | Про цей магазин</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{Вибрано <ph name="ITEMS_COUNT_ONE"/> об’єкт}one{Вибрано <ph name="ITEMS_COUNT_MANY"/> об’єкт}few{Вибрано <ph name="ITEMS_COUNT_MANY"/> об’єкти}many{Вибрано <ph name="ITEMS_COUNT_MANY"/> об’єктів}other{Вибрано <ph name="ITEMS_COUNT_MANY"/> об’єкта}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Закріпити вкладку}one{Закріпити вкладки}few{Закріпити вкладки}many{Закріпити вкладки}other{Закріпити вкладки}}</translation>
 <translation id="3008554597174452548">Вимкнути відстеження товару</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Сховати повноекранну сітку</translation>
 <translation id="5076161749301278626">Показати відгуки про магазин?</translation>
 <translation id="5161254044473106830">Введіть назву</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_ONE"/> місяць. За потреби ви можете це змінити в налаштуваннях.}one{Brave автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяць. За потреби ви можете це змінити в налаштуваннях.}few{Brave автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяці. За потреби ви можете це змінити в налаштуваннях.}many{Brave автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяців. За потреби ви можете це змінити в налаштуваннях.}other{Brave автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяця. За потреби ви можете це змінити в налаштуваннях.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_ONE"/> місяць. За потреби ви можете це змінити в налаштуваннях.}one{Growser автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяць. За потреби ви можете це змінити в налаштуваннях.}few{Growser автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяці. За потреби ви можете це змінити в налаштуваннях.}many{Growser автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяців. За потреби ви можете це змінити в налаштуваннях.}other{Growser автоматично закриває неактивні вкладки й групи вкладок через <ph name="AUTO_DELETE_DELAY_MANY"/> місяця. За потреби ви можете це змінити в налаштуваннях.}}</translation>
 <translation id="5254233580564156835">Використання пам’яті: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Остання вкладка</translation>
 <translation id="5380159289133845234">Архівувати повторювані вкладки</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Закрити групу з <ph name="TABS_COUNT_ONE"/> вкладкою; колір: <ph name="COLOR_NAME"/>.}one{Закрити групу з <ph name="TABS_COUNT_MANY"/> вкладкою; колір: <ph name="COLOR_NAME"/>.}few{Закрити групу з <ph name="TABS_COUNT_MANY"/> вкладками; колір: <ph name="COLOR_NAME"/>.}many{Закрити групу з <ph name="TABS_COUNT_MANY"/> вкладками; колір: <ph name="COLOR_NAME"/>.}other{Закрити групу з <ph name="TABS_COUNT_MANY"/> вкладки; колір: <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">Переглянути інформацію про магазин. Опція доступна вгорі екрана.</translation>
 <translation id="5627941783489838464">Немає оновлень щодо вкладок</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> посилання з Brave}one{<ph name="TABS_COUNT_MANY"/> посилання з Brave}few{<ph name="TABS_COUNT_MANY"/> посилання з Brave}many{<ph name="TABS_COUNT_MANY"/> посилань із Brave}other{<ph name="TABS_COUNT_MANY"/> посилання з Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> посилання з Growser}one{<ph name="TABS_COUNT_MANY"/> посилання з Growser}few{<ph name="TABS_COUNT_MANY"/> посилання з Growser}many{<ph name="TABS_COUNT_MANY"/> посилань із Growser}other{<ph name="TABS_COUNT_MANY"/> посилання з Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Перемістити вкладку ліворуч}one{Перемістити вкладки ліворуч}few{Перемістити вкладки ліворуч}many{Перемістити вкладки ліворуч}other{Перемістити вкладки ліворуч}}</translation>
 <translation id="5746204836956568669">Згрупувати вкладки (<ph name="NUMBER_OF_TABS"/>), щоб працювати швидше?</translation>
 <translation id="5773295109010386583">Автоматично закривати неактивні об’єкти</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> об’єкт}one{<ph name="TABS_COUNT_MANY"/> об’єкт}few{<ph name="TABS_COUNT_MANY"/> об’єкти}many{<ph name="TABS_COUNT_MANY"/> об’єктів}other{<ph name="TABS_COUNT_MANY"/> об’єкта}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Відновити <ph name="TABS_COUNT_ONE"/> вибраний об’єкт}one{Відновити <ph name="TABS_COUNT_MANY"/> вибраний об’єкт}few{Відновити <ph name="TABS_COUNT_MANY"/> вибрані об’єкти}many{Відновити <ph name="TABS_COUNT_MANY"/> вибраних об’єктів}other{Відновити <ph name="TABS_COUNT_MANY"/> вибраного об’єкта}}</translation>
 <translation id="753732157349120914">Перемикач вкладок</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> відгук із Brave}one{<ph name="REVIEWS_COUNT_MANY"/> відгук із Brave}few{<ph name="REVIEWS_COUNT_MANY"/> відгуки з Brave}many{<ph name="REVIEWS_COUNT_MANY"/> відгуків із Brave}other{<ph name="REVIEWS_COUNT_MANY"/> відгуку з Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> відгук із Growser}one{<ph name="REVIEWS_COUNT_MANY"/> відгук із Growser}few{<ph name="REVIEWS_COUNT_MANY"/> відгуки з Growser}many{<ph name="REVIEWS_COUNT_MANY"/> відгуків із Growser}other{<ph name="REVIEWS_COUNT_MANY"/> відгуку з Growser}}</translation>
 <translation id="7559245342362162951">Показувати вкладки групи в повноекранній сітці</translation>
 <translation id="7658239707568436148">Скасувати</translation>
 <translation id="7688386659311034820">Вікно "Неактивні вкладки"</translation>
