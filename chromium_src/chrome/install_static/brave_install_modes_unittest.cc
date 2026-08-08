@@ -69,11 +69,11 @@ TEST(InstallModes, VerifyModes) {
       ASSERT_THAT(mode.logo_suffix, StrNe(L""));
 
     // The modes must have an appguid if Google Update integration is supported.
-#if defined(OFFICIAL_BUILD)
-      ASSERT_THAT(mode.app_guid, StrNe(L""));
-#else
-      ASSERT_THAT(mode.app_guid, StrEq(L""));
-#endif
+    // growser (#51): unconditional. Upstream expects an unofficial build to
+    // have no update integration and asserts the guid is empty there; ours is
+    // an unofficial build that updates, so the mode carries a real guid and
+    // this assertion is what would catch it going back to empty.
+    ASSERT_THAT(mode.app_guid, StrNe(L""));
 
     // Every mode must have a base app name.
     ASSERT_THAT(mode.base_app_name, StrNe(L""));

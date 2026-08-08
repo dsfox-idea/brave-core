@@ -476,9 +476,11 @@ TEST_P(InstallStaticUtilTest, GetAppGuid) {
   EXPECT_THAT(GetAppGuid(),
               StrCaseEq(UNSAFE_TODO(kAppGuids[std::get<0>(GetParam())])));
 #else
-  // For brands that do not integrate with Omaha/Google Update, the app guid is
-  // an empty string.
-  EXPECT_STREQ(L"", GetAppGuid());
+  // growser (#51): upstream's assumption here is that a brand which does not
+  // integrate with Omaha has an empty app guid, and that an unofficial build is
+  // such a brand. Ours integrates - the guid is what Omaha 4 registers the
+  // browser under - so this pins our value instead of pinning emptiness.
+  EXPECT_STREQ(L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}", GetAppGuid());
 #endif
 }
 

@@ -474,8 +474,13 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .install_suffix =
             L"",  // Empty install_suffix for the primary install mode.
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
-        .app_guid =
-            L"",  // Empty app_guid since no integraion with Brave Update.
+        // growser (#51): we DO have update integration in this build. Brave
+        // left this empty because for them an unofficial build never updates -
+        // the same assumption that made uninstall crash in #50. Omaha 4
+        // registers the browser under exactly this value
+        // (chrome/browser/updater/browser_updater_client_win.cc:22), so an
+        // empty one means nothing can register.
+        .app_guid = L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}",
         // growser: every identifier below is ours. They are not cosmetic - the
         // GUIDs register COM classes machine-wide (the toast activator is what
         // Windows calls back for notifications, the elevator runs the elevated
