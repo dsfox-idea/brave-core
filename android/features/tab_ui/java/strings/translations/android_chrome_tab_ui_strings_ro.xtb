@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> filă închisă}few{<ph name="MANY_CLOSED"/> file închise}other{<ph name="MANY_CLOSED"/> de file închise}}</translation>
 <translation id="2894757982205307093">Filă nouă în grup</translation>
 <translation id="2918484639460781603">Accesați setările</translation>
-<translation id="4691798003247738043">Brave | Despre acest magazin</translation>
+<translation id="4691798003247738043">Growser | Despre acest magazin</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> selectat}few{<ph name="ITEMS_COUNT_MANY"/> selectate}other{<ph name="ITEMS_COUNT_MANY"/> selectate}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Fixează fila}few{Fixează filele}other{Fixează filele}}</translation>
 <translation id="3008554597174452548">Nu mai urmări produsul</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Ascunde grila pe ecran complet</translation>
 <translation id="5076161749301278626">Vezi recenziile magazinului?</translation>
 <translation id="5161254044473106830">Titlul este obligatoriu</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_ONE"/> lună. Poți modifica această opțiune din setări.}few{Brave închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_MANY"/> luni. Poți modifica această opțiune din setări.}other{Brave închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_MANY"/> de luni. Poți modifica această opțiune din setări.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_ONE"/> lună. Poți modifica această opțiune din setări.}few{Growser închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_MANY"/> luni. Poți modifica această opțiune din setări.}other{Growser închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_MANY"/> de luni. Poți modifica această opțiune din setări.}}</translation>
 <translation id="5254233580564156835">Utilizarea memoriei: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Ultima filă</translation>
 <translation id="5380159289133845234">Arhivează filele dublură</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Închide grupul de file cu <ph name="TABS_COUNT_ONE"/> filă, culoarea <ph name="COLOR_NAME"/>.}few{Închide grupul de file cu <ph name="TABS_COUNT_MANY"/> file, culoarea <ph name="COLOR_NAME"/>.}other{Închide grupul de file cu <ph name="TABS_COUNT_MANY"/> de file, culoarea <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">Vezi informații despre magazin, opțiune disponibilă în partea de sus a ecranului</translation>
 <translation id="5627941783489838464">Fără actualizări ale filelor</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link din Brave}few{<ph name="TABS_COUNT_MANY"/> linkuri din Brave}other{<ph name="TABS_COUNT_MANY"/> de linkuri din Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link din Growser}few{<ph name="TABS_COUNT_MANY"/> linkuri din Growser}other{<ph name="TABS_COUNT_MANY"/> de linkuri din Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Mută fila spre stânga}few{Mută filele spre stânga}other{Mută filele spre stânga}}</translation>
 <translation id="5746204836956568669">Grupezi <ph name="NUMBER_OF_TABS"/> file pentru a lucra mai rapid?</translation>
 <translation id="5773295109010386583">Închide automat elementele inactive</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> element}few{<ph name="TABS_COUNT_MANY"/> elemente}other{<ph name="TABS_COUNT_MANY"/> de elemente}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Restabilește <ph name="TABS_COUNT_ONE"/> element selectat}few{Restabilește <ph name="TABS_COUNT_MANY"/> elemente selectate}other{Restabilește <ph name="TABS_COUNT_MANY"/> de elemente selectate}}</translation>
 <translation id="753732157349120914">Comutator de file</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzie de pe Brave}few{<ph name="REVIEWS_COUNT_MANY"/> recenzii de pe Brave}other{<ph name="REVIEWS_COUNT_MANY"/> de recenzii de pe Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzie de pe Growser}few{<ph name="REVIEWS_COUNT_MANY"/> recenzii de pe Growser}other{<ph name="REVIEWS_COUNT_MANY"/> de recenzii de pe Growser}}</translation>
 <translation id="7559245342362162951">Arată filele grupului în grilă pe ecran complet</translation>
 <translation id="7658239707568436148">Anulează</translation>
 <translation id="7688386659311034820">Dialogul File inactive</translation>

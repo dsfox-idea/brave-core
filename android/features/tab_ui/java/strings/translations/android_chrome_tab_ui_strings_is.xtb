@@ -68,7 +68,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> flipa lokað}one{<ph name="MANY_CLOSED"/> flipa lokað}other{<ph name="MANY_CLOSED"/> flipum lokað}}</translation>
 <translation id="2894757982205307093">Nýr flipi í hópi</translation>
 <translation id="2918484639460781603">Opna stillingar</translation>
-<translation id="4691798003247738043">Brave | Um þessa verslun</translation>
+<translation id="4691798003247738043">Growser | Um þessa verslun</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> valið}one{<ph name="ITEMS_COUNT_MANY"/> valið}other{<ph name="ITEMS_COUNT_MANY"/> valin}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Festa flipa}one{Festa flipa}other{Festa flipa}}</translation>
 <translation id="3008554597174452548">Hætta að fylgjast með vöru</translation>
@@ -127,7 +127,7 @@
 <translation id="5073204694187207510">Hætta að sýna á öllum skjánum</translation>
 <translation id="5076161749301278626">Skoða umsagnir um verslun?</translation>
 <translation id="5161254044473106830">Titil vantar</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave lokar óvirkum flipum og flipahópum sjálfkrafa eftir <ph name="AUTO_DELETE_DELAY_ONE"/> mánuð. Þú getur breytt þessu í stillingum.}one{Brave lokar óvirkum flipum og flipahópum sjálfkrafa eftir <ph name="AUTO_DELETE_DELAY_MANY"/> mánuð. Þú getur breytt þessu í stillingum.}other{Brave lokar óvirkum flipum og flipahópum sjálfkrafa eftir <ph name="AUTO_DELETE_DELAY_MANY"/> mánuði. Þú getur breytt þessu í stillingum.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser lokar óvirkum flipum og flipahópum sjálfkrafa eftir <ph name="AUTO_DELETE_DELAY_ONE"/> mánuð. Þú getur breytt þessu í stillingum.}one{Growser lokar óvirkum flipum og flipahópum sjálfkrafa eftir <ph name="AUTO_DELETE_DELAY_MANY"/> mánuð. Þú getur breytt þessu í stillingum.}other{Growser lokar óvirkum flipum og flipahópum sjálfkrafa eftir <ph name="AUTO_DELETE_DELAY_MANY"/> mánuði. Þú getur breytt þessu í stillingum.}}</translation>
 <translation id="5254233580564156835">Minnisnotkun: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Síðasti flipi</translation>
 <translation id="5380159289133845234">Setja tvítekna flipa í geymslu</translation>
@@ -138,7 +138,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Loka flipahóp í litnum „<ph name="COLOR_NAME"/>“ sem inniheldur <ph name="TABS_COUNT_ONE"/> flipa.}one{Loka flipahóp í litnum „<ph name="COLOR_NAME"/>“ sem inniheldur <ph name="TABS_COUNT_MANY"/> flipa.}other{Loka flipahóp í litnum „<ph name="COLOR_NAME"/>“ sem inniheldur <ph name="TABS_COUNT_MANY"/> flipa.}}</translation>
 <translation id="5556417849629758491">Skoða upplýsingar um verslun, valkostir eru ofarlega á skjánum</translation>
 <translation id="5627941783489838464">Engar uppfærslur á flipum</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> tengill frá Brave}one{<ph name="TABS_COUNT_MANY"/> tengill frá Brave}other{<ph name="TABS_COUNT_MANY"/> tenglar frá Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> tengill frá Growser}one{<ph name="TABS_COUNT_MANY"/> tengill frá Growser}other{<ph name="TABS_COUNT_MANY"/> tenglar frá Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Færa flipa til vinstri}one{Færa flipa til vinstri}other{Færa flipa til vinstri}}</translation>
 <translation id="5746204836956568669">Skipa <ph name="NUMBER_OF_TABS"/> flipa saman til að vinna hraðar?</translation>
 <translation id="5773295109010386583">Loka óvirkum atriðum sjálfkrafa</translation>
@@ -193,7 +193,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> atriði}one{<ph name="TABS_COUNT_MANY"/> atriði}other{<ph name="TABS_COUNT_MANY"/> atriði}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Endurheimta <ph name="TABS_COUNT_ONE"/> valið atriði}one{Endurheimta <ph name="TABS_COUNT_MANY"/> valið atriði}other{Endurheimta <ph name="TABS_COUNT_MANY"/> valin atriði}}</translation>
 <translation id="753732157349120914">Flipaval</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> umsögn frá Brave}one{<ph name="REVIEWS_COUNT_MANY"/> umsögn frá Brave}other{<ph name="REVIEWS_COUNT_MANY"/> umsagnir frá Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> umsögn frá Growser}one{<ph name="REVIEWS_COUNT_MANY"/> umsögn frá Growser}other{<ph name="REVIEWS_COUNT_MANY"/> umsagnir frá Growser}}</translation>
 <translation id="7559245342362162951">Sýna flipa hóps á öllum skjánum</translation>
 <translation id="7658239707568436148">Hætta við</translation>
 <translation id="7688386659311034820">Gluggi með óvirkum flipum</translation>

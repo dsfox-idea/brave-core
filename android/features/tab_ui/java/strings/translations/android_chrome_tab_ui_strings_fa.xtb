@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{‫<ph name="ONE_CLOSED"/> زبانه بسته شد}one{‫<ph name="MANY_CLOSED"/> زبانه بسته شد}other{‫<ph name="MANY_CLOSED"/> زبانه بسته شد}}</translation>
 <translation id="2894757982205307093">برگه جدید در گروه</translation>
 <translation id="2918484639460781603">رفتن به «تنظیمات»</translation>
-<translation id="4691798003247738043">‏Brave | درباره این فروشگاه</translation>
+<translation id="4691798003247738043">‏Growser | درباره این فروشگاه</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{‫<ph name="ITEMS_COUNT_ONE"/> مورد انتخاب شده است}one{‫<ph name="ITEMS_COUNT_MANY"/> مورد انتخاب شده است}other{‫<ph name="ITEMS_COUNT_MANY"/> مورد انتخاب شده است}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{سنجاق کردن زبانه}one{سنجاق کردن زبانه}other{سنجاق کردن زبانه}}</translation>
 <translation id="3008554597174452548">توقف پیگیری محصول</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">پنهان کردن شبکه تمام‌صفحه</translation>
 <translation id="5076161749301278626">می‌خواهید مرورهای فروشگاه را ببینید؟</translation>
 <translation id="5161254044473106830">عنوان مورد نیاز است</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{‏‫Brave زبانه‌ها و گروه‌های زبانه غیرفعال را به‌طور خودکار پس‌از <ph name="AUTO_DELETE_DELAY_ONE"/> ماه می‌بندد. می‌توانید این قابلیت را در تنظیمات تغییر دهید.}one{‏‫Brave زبانه‌ها و گروه‌های زبانه غیرفعال را به‌طور خودکار پس‌از <ph name="AUTO_DELETE_DELAY_MANY"/> ماه می‌بندد. می‌توانید این قابلیت را در تنظیمات تغییر دهید.}other{‏‫Brave زبانه‌ها و گروه‌های زبانه غیرفعال را به‌طور خودکار پس‌از <ph name="AUTO_DELETE_DELAY_MANY"/> ماه می‌بندد. می‌توانید این قابلیت را در تنظیمات تغییر دهید.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{‏‫Growser زبانه‌ها و گروه‌های زبانه غیرفعال را به‌طور خودکار پس‌از <ph name="AUTO_DELETE_DELAY_ONE"/> ماه می‌بندد. می‌توانید این قابلیت را در تنظیمات تغییر دهید.}one{‏‫Growser زبانه‌ها و گروه‌های زبانه غیرفعال را به‌طور خودکار پس‌از <ph name="AUTO_DELETE_DELAY_MANY"/> ماه می‌بندد. می‌توانید این قابلیت را در تنظیمات تغییر دهید.}other{‏‫Growser زبانه‌ها و گروه‌های زبانه غیرفعال را به‌طور خودکار پس‌از <ph name="AUTO_DELETE_DELAY_MANY"/> ماه می‌بندد. می‌توانید این قابلیت را در تنظیمات تغییر دهید.}}</translation>
 <translation id="5254233580564156835">استفاده از حافظه: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">آخرین زبانه شما</translation>
 <translation id="5380159289133845234">بایگانی کردن برگه‌های تکراری</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{بستن گروه زبانه با <ph name="TABS_COUNT_ONE"/> زبانه، رنگ <ph name="COLOR_NAME"/>.}one{بستن گروه زبانه با <ph name="TABS_COUNT_MANY"/> زبانه، رنگ <ph name="COLOR_NAME"/>.}other{بستن گروه زبانه با <ph name="TABS_COUNT_MANY"/> زبانه، رنگ <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">مشاهده اطلاعات فروشگاه، گزینه مربوطه در نزدیکی بالای صفحه قرار دارد</translation>
 <translation id="5627941783489838464">زبانه هیچ به‌روزرسانی‌ای ندارد</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{‏<ph name="TABS_COUNT_ONE"/> پیوند از Brave}one{‏<ph name="TABS_COUNT_MANY"/> پیوند از Brave}other{‏<ph name="TABS_COUNT_MANY"/> پیوند از Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{‏<ph name="TABS_COUNT_ONE"/> پیوند از Growser}one{‏<ph name="TABS_COUNT_MANY"/> پیوند از Growser}other{‏<ph name="TABS_COUNT_MANY"/> پیوند از Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{انتقال زبانه به چپ}one{انتقال زبانه به چپ}other{انتقال زبانه‌ها به چپ}}</translation>
 <translation id="5746204836956568669">می‌خواهید <ph name="NUMBER_OF_TABS"/> زبانه را گروه‌بندی کنید تا سریع‌تر کار کنید؟</translation>
 <translation id="5773295109010386583">بستن خودکار موارد غیرفعال</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{‫<ph name="TABS_COUNT_ONE"/> مورد}one{‫<ph name="TABS_COUNT_MANY"/> مورد}other{‫<ph name="TABS_COUNT_MANY"/> مورد}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{بازیابی <ph name="TABS_COUNT_ONE"/> مورد انتخاب‌شده}one{بازیابی <ph name="TABS_COUNT_MANY"/> مورد انتخاب‌شده}other{بازیابی <ph name="TABS_COUNT_MANY"/> مورد انتخاب‌شده}}</translation>
 <translation id="753732157349120914">تعویض‌کننده زبانه</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{‏<ph name="REVIEWS_COUNT_ONE"/> مرور از Brave}one{‏<ph name="REVIEWS_COUNT_MANY"/> مرور از Brave}other{‏<ph name="REVIEWS_COUNT_MANY"/> مرور از Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{‏<ph name="REVIEWS_COUNT_ONE"/> مرور از Growser}one{‏<ph name="REVIEWS_COUNT_MANY"/> مرور از Growser}other{‏<ph name="REVIEWS_COUNT_MANY"/> مرور از Growser}}</translation>
 <translation id="7559245342362162951">نمایش برگه‌های گروه در شبکه تمام‌صفحه</translation>
 <translation id="7658239707568436148">لغو</translation>
 <translation id="7688386659311034820">کادر گفتگوی برگه‌های غیرفعال</translation>

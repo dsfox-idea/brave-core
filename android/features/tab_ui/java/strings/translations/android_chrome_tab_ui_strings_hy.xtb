@@ -68,7 +68,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> ներդիր փակվել է}one{<ph name="MANY_CLOSED"/> ներդիր փակվել է}other{<ph name="MANY_CLOSED"/> ներդիր փակվել է}}</translation>
 <translation id="2894757982205307093">Նոր ներդիր խմբում</translation>
 <translation id="2918484639460781603">Անցնել կարգավորումներ</translation>
-<translation id="4691798003247738043">Brave | Այս խանութի մասին</translation>
+<translation id="4691798003247738043">Growser | Այս խանութի մասին</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{Ընտրված է <ph name="ITEMS_COUNT_ONE"/> տարր}one{Ընտրված է <ph name="ITEMS_COUNT_MANY"/> տարր}other{Ընտրված է <ph name="ITEMS_COUNT_MANY"/> տարր}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Ամրացնել ներդիրը}one{Ամրացնել ներդիրը}other{Ամրացնել ներդիրները}}</translation>
 <translation id="3008554597174452548">Այլևս չհետևել ապրանքին</translation>
@@ -127,7 +127,7 @@
 <translation id="5073204694187207510">Թաքցնել լիաէկրան ցանցը</translation>
 <translation id="5076161749301278626">Ցուցադրե՞լ խանութի մասին կարծիքները</translation>
 <translation id="5161254044473106830">Վերնագիրը պարտադիր է</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave-ը ավտոմատ կերպով փակում է ոչ ակտիվ ներդիրներն ու ներդիրների խմբերը, որոնք դուք չեք օգտագործել ավելի քան <ph name="AUTO_DELETE_DELAY_ONE"/> ամիս։ Այս պարամետրը կարող եք փոխել կարգավորումներում։}one{Brave-ը ավտոմատ կերպով փակում է ոչ ակտիվ ներդիրներն ու ներդիրների խմբերը, որոնք դուք չեք օգտագործել ավելի քան <ph name="AUTO_DELETE_DELAY_MANY"/> ամիս։ Այս պարամետրը կարող եք փոխել կարգավորումներում։}other{Brave-ը ավտոմատ կերպով փակում է ոչ ակտիվ ներդիրներն ու ներդիրների խմբերը, որոնք դուք չեք օգտագործել ավելի քան <ph name="AUTO_DELETE_DELAY_MANY"/> ամիս։ Այս պարամետրը կարող եք փոխել կարգավորումներում։}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser-ը ավտոմատ կերպով փակում է ոչ ակտիվ ներդիրներն ու ներդիրների խմբերը, որոնք դուք չեք օգտագործել ավելի քան <ph name="AUTO_DELETE_DELAY_ONE"/> ամիս։ Այս պարամետրը կարող եք փոխել կարգավորումներում։}one{Growser-ը ավտոմատ կերպով փակում է ոչ ակտիվ ներդիրներն ու ներդիրների խմբերը, որոնք դուք չեք օգտագործել ավելի քան <ph name="AUTO_DELETE_DELAY_MANY"/> ամիս։ Այս պարամետրը կարող եք փոխել կարգավորումներում։}other{Growser-ը ավտոմատ կերպով փակում է ոչ ակտիվ ներդիրներն ու ներդիրների խմբերը, որոնք դուք չեք օգտագործել ավելի քան <ph name="AUTO_DELETE_DELAY_MANY"/> ամիս։ Այս պարամետրը կարող եք փոխել կարգավորումներում։}}</translation>
 <translation id="5254233580564156835">Հիշողության օգտագործում՝ <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Ձեր վերջին ներդիրը</translation>
 <translation id="5380159289133845234">Արխիվացնել կրկնօրինակ ներդիրները</translation>
@@ -138,7 +138,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Փակել ներդիրների խումբը, որին տրված է <ph name="COLOR_NAME"/> գույնը, այնտեղ կա <ph name="TABS_COUNT_ONE"/> ներդիր։}one{Փակել ներդիրների խումբը, որին տրված է <ph name="COLOR_NAME"/> գույնը, այնտեղ կա <ph name="TABS_COUNT_MANY"/> ներդիր։}other{Փակել ներդիրների խումբը, որին տրված է <ph name="COLOR_NAME"/> գույնը, այնտեղ կա <ph name="TABS_COUNT_MANY"/> ներդիր։}}</translation>
 <translation id="5556417849629758491">Դիտել խանութի մասին տեղեկությունները, գործողությունը հասանելի է էկրանի վերին մասում</translation>
 <translation id="5627941783489838464">Ներդիրների մասին թարմացումներ չկան</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> հղում Brave-ից}one{<ph name="TABS_COUNT_MANY"/> հղում Brave-ից}other{<ph name="TABS_COUNT_MANY"/> հղում Brave-ից}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> հղում Growser-ից}one{<ph name="TABS_COUNT_MANY"/> հղում Growser-ից}other{<ph name="TABS_COUNT_MANY"/> հղում Growser-ից}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Տեղափոխել ներդիրը ձախ}one{Տեղափոխել ներդիրը ձախ}other{Տեղափոխել ներդիրները ձախ}}</translation>
 <translation id="5746204836956568669">Խմբավորե՞լ <ph name="NUMBER_OF_TABS"/> ներդիրները՝ ավելի արագ աշխատանքի համար</translation>
 <translation id="5773295109010386583">Ավտոմատ փակել ոչ ակտիվ տարրերը</translation>
@@ -193,7 +193,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> տարր}one{<ph name="TABS_COUNT_MANY"/> տարր}other{<ph name="TABS_COUNT_MANY"/> տարր}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Վերականգնել ընտրված <ph name="TABS_COUNT_ONE"/> տարր}one{Վերականգնել ընտրված <ph name="TABS_COUNT_MANY"/> տարր}other{Վերականգնել ընտրված <ph name="TABS_COUNT_MANY"/> տարր}}</translation>
 <translation id="753732157349120914">Ներդիրների փոխանջատիչ</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> կարծիք Brave-ից}one{<ph name="REVIEWS_COUNT_MANY"/> կարծիք Brave-ից}other{<ph name="REVIEWS_COUNT_MANY"/> կարծիք Brave-ից}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> կարծիք Growser-ից}one{<ph name="REVIEWS_COUNT_MANY"/> կարծիք Growser-ից}other{<ph name="REVIEWS_COUNT_MANY"/> կարծիք Growser-ից}}</translation>
 <translation id="7559245342362162951">Ցուցադրել խմբի ներդիրները լիաէկրան ցանցի ռեժիմում</translation>
 <translation id="7658239707568436148">Չեղարկել</translation>
 <translation id="7688386659311034820">Անգործուն ներդիրների երկխոսության պատուհան</translation>

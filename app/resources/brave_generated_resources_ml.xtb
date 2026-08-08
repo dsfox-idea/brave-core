@@ -29,7 +29,7 @@
 <translation id="4900351245762303149">Google Widevine ഇൻസ്റ്റാൾ ചെയ്യുക</translation>
 <translation id="2313383941300459392">Google Widevine പ്രവർത്തനക്ഷമമാക്കാൻ browser പുനർമുള്ളാക്കുക</translation>
 <translation id="8342816622062204340"><ph name="URL"/> സംരക്ഷിത Google Widevine ഉള്ളടക്കം പ്ലേ ചെയ്യാൻ ആഗ്രഹിക്കുന്നു, Widevine നെ പിന്തുണയ്ക്കുന്നതിനായി നിങ്ങളെ Android സിസ്റ്റത്തിന് അനുമതി നൽകേണ്ടതുണ്ട്. അനുമതി നൽകുന്നുവെങ്കിൽ, നിങ്ങൾ Google ന്റെ ഉപയോഗ നിബന്ധനകൾക്ക് അർഹത നൽകുന്നുവെന്ന് സമ്മതിക്കുന്നു.</translation>
-<translation id="2200626478572277092">വെബ്പേജിലെ മീഡിയ പ്ലേ ചെയ്യാൻ ചിലപ്പോൾ Widevine ആവശ്യമുണ്ട്. ഇത് Google സെർവറുകളിൽ നിന്ന് ലോഡ് ചെയ്ത Google ഒരു extension ആണ്, ഇത് Brave പരിശോധിക്കാൻ കഴിയില്ല. ഇൻസ്റ്റാൾ ചെയ്യുന്നതിലൂടെ, നിങ്ങൾ Google ന്റെ ഉപയോഗ നിബന്ധനകൾക്ക് അർഹത നൽകുന്നുവെന്ന് സമ്മതിക്കുന്നു.</translation>
+<translation id="2200626478572277092">വെബ്പേജിലെ മീഡിയ പ്ലേ ചെയ്യാൻ ചിലപ്പോൾ Widevine ആവശ്യമുണ്ട്. ഇത് Google സെർവറുകളിൽ നിന്ന് ലോഡ് ചെയ്ത Google ഒരു extension ആണ്, ഇത് Growser പരിശോധിക്കാൻ കഴിയില്ല. ഇൻസ്റ്റാൾ ചെയ്യുന്നതിലൂടെ, നിങ്ങൾ Google ന്റെ ഉപയോഗ നിബന്ധനകൾക്ക് അർഹത നൽകുന്നുവെന്ന് സമ്മതിക്കുന്നു.</translation>
 <translation id="4931114810905682683"><ph name="LEARN_MORE_ABOUT_WIDEVINE"/>.
 'ബബ് ബപ്പ്-ൽ <ph name="SETTINGS_EXTENIONS_LINK"/> ന് ശേഷം മാറ്റണം.</translation>
 <translation id="6229752134959014186">Widevine നെ കുറിച്ച് കൂടുതലറിയുക</translation>
@@ -37,7 +37,7 @@
 <translation id="3218385319396786393">ഈ പേജിൽ autoplay തടയപ്പെട്ടിരിക്കുന്നു</translation>
 <translation id="4988333904713528597"><ph name="HOST"/> ൽ എപ്പോഴും autoplay അനുവദിക്കുക</translation>
 <translation id="4150684676757176434">autoplay തടയുന്നതിനെ തുടരും</translation>
-<translation id="3477357195688115718">Brave extension ങ്ങൾക്ക് സുരക്ഷയും സുരക്ഷിതത്വവും ഓവർവ്യൂ ചെയ്യുന്നില്ല. നിങ്ങൾ developer നെ വിശ്വസിച്ചാൽ മാത്രമേ ഈ extension ഇൻസ്റ്റാൾ ചെയ്യേണ്ടത്.</translation>
+<translation id="3477357195688115718">Growser extension ങ്ങൾക്ക് സുരക്ഷയും സുരക്ഷിതത്വവും ഓവർവ്യൂ ചെയ്യുന്നില്ല. നിങ്ങൾ developer നെ വിശ്വസിച്ചാൽ മാത്രമേ ഈ extension ഇൻസ്റ്റാൾ ചെയ്യേണ്ടത്.</translation>
 <translation id="2928844661231356557">Bluetooth ഉപകരണത്തിന് പ്രവേശനം നൽകുന്നത് ഇന്റ്റർനയ്ക്കായും ഗൂഢവിവരങ്ങളും ഉൾപ്പെടെ നിങ്ങൾക്കുറിച്ചുള്ള തിരിച്ചറിയാവുന്ന വിവരങ്ങൾ സൈറ്റിന് വായിക്കാൻ അനുവദിക്കും. നിങ്ങൾ വിശ്വസിക്കുന്ന സൈറ്റുകൾക്ക് മാത്രമേ Bluetooth ഉപകരണങ്ങളിലേക്ക് പ്രവേശനം അനുവദിക്കാവു. <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">Tor വിൻഡോകൾ</translation>
 <translation id="7965178729203412357">പുതിയ Tor ഐഡന്റിറ്റി</translation>
@@ -51,10 +51,10 @@
 <translation id="1970435562892104727">ഇത് Tor ഉപയോഗിച്ച് അദൃശ്യ വിൻഡോയാണ്</translation>
 <translation id="1037341607922068025">Tor ഉപയോഗിച്ച് അദൃഷ്യ വിൻഡോ തുറക്കുക</translation>
 <translation id="607982085107926247">Tor ൽ തുറക്കുക: <ph name="ADDRESS"/></translation>
-<translation id="496896260395129787">ഈ Brave Sync അക്കൗണ്ട് മറ്റൊരു ഉപകരണത്തിൽ നിന്നും മായ്ക്കിക്കോളയായി. താങ്ങ് Sync നിരോധിക്കേണ്ടതില്ലായിരുന്നു എങ്കിൽ,<ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">ഈ Growser Sync അക്കൗണ്ട് മറ്റൊരു ഉപകരണത്തിൽ നിന്നും മായ്ക്കിക്കോളയായി. താങ്ങ് Sync നിരോധിക്കേണ്ടതില്ലായിരുന്നു എങ്കിൽ,<ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/>അക്കൗണ്ട് പുതുക്കുക</translation>
 <translation id="6965382102122355670">ശരി</translation>
-<translation id="3975865347033939965">Sync സേവനം ആരംഭിക്കാൻ കഴിഞ്ഞില്ല, Brave Sync പ്രവർത്തിക്കുന്നില്ല</translation>
+<translation id="3975865347033939965">Sync സേവനം ആരംഭിക്കാൻ കഴിഞ്ഞില്ല, Growser Sync പ്രവർത്തിക്കുന്നില്ല</translation>
 <translation id="4450893287417543264">ഇത് വീണ്ടും ദൃശ്യമാക്കരുത്</translation>
 <translation id="4595286989346610620">വിശദാംശങ്ങൾ പരിശോധിക്കുക</translation>
 <translation id="8324318899000695659">ലഘുഭാഗം ഉപാദാനങ്ങൾ</translation>
@@ -69,15 +69,15 @@
 <translation id="4759098689276706664">പേസ്റ്റ് നിർബന്ധമാക്കുക</translation>
 <translation id="1434416574322382019">പുതിയ അദൃശ്യ ടോര്‍ വിൻഡോ</translation>
 <translation id="4703780849509456860">ടോര്‍ മൂന്ന് അദൃശ്യ വിൻഡോയില്‍ ലിങ്ക് തുറക്കുക</translation>
-<translation id="3488584642074079080">Brave അദൃശ്യ ടോർ വിൻഡോയിൽ ലിങ്ക് തുറക്കുക</translation>
+<translation id="3488584642074079080">Growser അദൃശ്യ ടോർ വിൻഡോയിൽ ലിങ്ക് തുറക്കുക</translation>
 <translation id="6313675821927505581">ടോരിന്റെ പുതിയ അദൃശ്യ വിൻഡോ</translation>
 <translation id="2638041073279639246">ടോർ ഗോപ്യമായ വിൻഡോയിൽ ലിങ്ക് തുറക്കുക</translation>
-<translation id="3425600262621021599">Brave ആൾമാറാട്ട പ്ലാറ്റ്ഫോമിലേക്ക് ടോർ ഉപയോഗിച്ച് ലിങ്ക് തുറക്കുക</translation>
+<translation id="3425600262621021599">Growser ആൾമാറാട്ട പ്ലാറ്റ്ഫോമിലേക്ക് ടോർ ഉപയോഗിച്ച് ലിങ്ക് തുറക്കുക</translation>
 <translation id="474217410105706308">ടാബ് മ്യൂട്ടുചെയ്യുക</translation>
-<translation id="2804710924397009224">Brave Rewards ഐക്കൺ മറയ്ക്കുക</translation>
-<translation id="5029193871181468990">Brave Rewards ഐക്കൺ മറയ്ക്കുക</translation>
-<translation id="2808103541110899519">Brave Wallet ഐക്കൺ മറയ്ക്കുക</translation>
-<translation id="7595540212376041331">Brave Wallet ഐക്കൺ മറയ്ക്കുക</translation>
+<translation id="2804710924397009224">Growser Rewards ഐക്കൺ മറയ്ക്കുക</translation>
+<translation id="5029193871181468990">Growser Rewards ഐക്കൺ മറയ്ക്കുക</translation>
+<translation id="2808103541110899519">Growser Wallet ഐക്കൺ മറയ്ക്കുക</translation>
+<translation id="7595540212376041331">Growser Wallet ഐക്കൺ മറയ്ക്കുക</translation>
 <translation id="3893997535859323951">Leo AI ഐക്കൺ മറയ്ക്കുക</translation>
 <translation id="8832245978592881387">പുതിയ ടാബിൽ ലിയോ AI തുറക്കൂ</translation>
 <translation id="4577675328803804820">സൈഡ്ബാറിൽ ലിയോ AI തുറക്കൂ</translation>
@@ -93,63 +93,63 @@
 <translation id="2026367923222947564">പൂർണ്ണ പേജ്</translation>
 <translation id="4928988318462976765">വെബ് എക്സ്റ്റെൻഷൻസ് സ്റ്റോർ</translation>
 <translation id="9181207987584064303">വെബ് എക്സ്റ്റെൻഷൻസ് സ്റ്റോറിൽ കാണുക</translation>
-<translation id="3161744659507801211">മുന്നറിയിപ്പ്: Brave ബ്രൗസർ നിങ്ങളുടെ ബ്രൗസിംഗ് ചരിത്രം എക്സ്റ്റെൻഷനുകൾ റെക്കോർഡ് ചെയ്യുന്നത് തടയാൻ കഴിയില്ല.</translation>
+<translation id="3161744659507801211">മുന്നറിയിപ്പ്: Growser ബ്രൗസർ നിങ്ങളുടെ ബ്രൗസിംഗ് ചരിത്രം എക്സ്റ്റെൻഷനുകൾ റെക്കോർഡ് ചെയ്യുന്നത് തടയാൻ കഴിയില്ല.</translation>
 <translation id="2162109630536601963">ഈ എക്സ്റ്റൻഷൻ നെറ്റ്‌വർക്കിനോട് അഭ്യർത്ഥനകൾ നിർമ്മിക്കുന്നുവെങ്കിൽ, അവ ടോർ അല്ലെങ്കിൽ പ്രൈവറ്റ് മോഡ് ഉപയോഗിക്കാതെ ഉണ്ടാകും.</translation>
 <translation id="2725327089319971976">പ്രൈവറ്റ് മോഡിലും ടോർ മോഡിലും ഈ എക്സ്റ്റൻഷൻ അപ്രാപ്‌തമാക്കാൻ, ഈ ഓപ്ഷൻ അസമയിച്ചുകൂടാത്തതാണെന്ന് ചൂണ്ടിക്കാണിക്കുക.</translation>
 <translation id="438106944087726695">ബ്രേവ്-ഹോസ്റ്റഡ്</translation>
-<translation id="3371343170427636147">Brave Browser Nightly ആപ്ലിക്കേഷനുകൾ</translation>
-<translation id="4097979995947147464">Brave Browser Beta ആപ്ലിക്കേഷനുകൾ</translation>
-<translation id="8303432794159193481">Brave Browser Dev ആപ്ലിക്കേഷനുകൾ</translation>
-<translation id="8292967014767479012">Brave Browser ആപ്ലിക്കേഷനുകൾ</translation>
-<translation id="4743468424889072281">Brave Browser Development ആപ്ലിക്കേഷനുകൾ</translation>
+<translation id="3371343170427636147">Growser Browser Nightly ആപ്ലിക്കേഷനുകൾ</translation>
+<translation id="4097979995947147464">Growser Browser Beta ആപ്ലിക്കേഷനുകൾ</translation>
+<translation id="8303432794159193481">Growser Browser Dev ആപ്ലിക്കേഷനുകൾ</translation>
+<translation id="8292967014767479012">Growser Browser ആപ്ലിക്കേഷനുകൾ</translation>
+<translation id="4743468424889072281">Growser Browser Development ആപ്ലിക്കേഷനുകൾ</translation>
 <translation id="5039804452771397117">അനുവദിക്കൂ</translation>
 <translation id="7053983685419859001">തടയുക</translation>
-<translation id="1679356339067548863">Help improve Brave's product stability by automatically sending diagnostic reports when the Brave Browser crashes or freezes.</translation>
+<translation id="1679356339067548863">Help improve Growser's product stability by automatically sending diagnostic reports when the Growser Browser crashes or freezes.</translation>
 <translation id="660171790038410175"><ph name="BROWSER_NAME"/> കാത്തിരിക്കുക.</translation>
-<translation id="1324417023773393937">Brave ബ്രൗസർ</translation>
+<translation id="1324417023773393937">Growser ബ്രൗസർ</translation>
 <translation id="7276554663454265692">നിങ്ങൾക്ക് ബ്രൗസർ ക്രമീകരണങ്ങളിൽ <ph name="SETTING_TEXT"/> എപ്പോഴും മാറ്റാനാകും.</translation>
 <translation id="6873781976650514089">ഈ ക്രമീകരണം</translation>
 <translation id="4684633335323013758">ഈ സൈറ്റ് നിങ്ങളുടെ <ph name="PART_ONE"/>സാദാ സ്ഥാനം<ph name="PART_ONE_END"/> അഭ്യർത്ഥിച്ചതായി ചേർത്തതാവും. <ph name="PART_TWO"/>കൂടുതൽ മനസിലാക്കുക<ph name="PART_TWO_END"/></translation>
 <translation id="8117247596084706514">ഈ സൈറ്റ് നിങ്ങളുടെ <ph name="PART_ONE"/>സ്പെസിഫിക് സ്ഥാനം<ph name="PART_ONE_END"/> അഭ്യർത്ഥിച്ചിരിക്കുന്നു. <ph name="PART_TWO"/>കൂടുതൽ മനസിലാക്കുക<ph name="PART_TWO_END"/></translation>
-<translation id="5486652646100591203">ഈ സൈറ്റ് നിങ്ങളുടെ <ph name="PART_ONE"/>സ്പെസിഫിക് സ്ഥാനം<ph name="PART_ONE_END"/> അഭ്യർത്ഥിച്ചിരിക്കുന്നു. Brave നിലവിൽ <ph name="PART_TWO"/>സാദാ സ്ഥാനം<ph name="PART_TWO_END"/> ഡാറ്റ മാത്രം നൽകി ചെയ്യാൻ കഴിയുന്നുവെന്നും വിദഗ്ദതാപൂർവ്വം<ph name="PART_THREE"/>ലൊക്കേഷൻ സേവനം<ph name="PART_THREE_END"/> പ്രവർത്തനരഹിതമായതിനാൽ. <ph name="PART_FOUR"/>കൂടുതൽ മനസിലാക്കുക<ph name="PART_FOUR_END"/></translation>
+<translation id="5486652646100591203">ഈ സൈറ്റ് നിങ്ങളുടെ <ph name="PART_ONE"/>സ്പെസിഫിക് സ്ഥാനം<ph name="PART_ONE_END"/> അഭ്യർത്ഥിച്ചിരിക്കുന്നു. Growser നിലവിൽ <ph name="PART_TWO"/>സാദാ സ്ഥാനം<ph name="PART_TWO_END"/> ഡാറ്റ മാത്രം നൽകി ചെയ്യാൻ കഴിയുന്നുവെന്നും വിദഗ്ദതാപൂർവ്വം<ph name="PART_THREE"/>ലൊക്കേഷൻ സേവനം<ph name="PART_THREE_END"/> പ്രവർത്തനരഹിതമായതിനാൽ. <ph name="PART_FOUR"/>കൂടുതൽ മനസിലാക്കുക<ph name="PART_FOUR_END"/></translation>
 <translation id="8915916167043355778">എല്ലാം അടയ്ക്കുക</translation>
 <translation id="4870911314065352661">എല്ലാ ടാബുകളും അടയ്ക്കണോ?</translation>
 <translation id="7551864359422178684">ഈ ബ്രൗസർ വിൻഡോയിൽ നിങ്ങൾക്ക് <ph name="NUMBER_OF_TABS"/> ടാബുകൾ തുറന്നിരിക്കുന്നു.</translation>
 <translation id="2571596981920752023"><ph name="NUMBER_OF_TABS"/> ടാബുകൾ</translation>
 <translation id="1307431692088049276">ഇനി നിന്നോട് ചോദിക്കരുത്</translation>
-<translation id="6919364924256365253">ഇത് Google ചെയ്യേണ്ട. Bing അല്ല. Brave ഉപയോഗിക്കുക.</translation>
-<translation id="2640297688005939449">Brave Search നിങ്ങളെ പ്രൊഫൈൽ ചെയ്യില്ല. ഇത് 100% സ്വതന്ത്രമാണ്.</translation>
+<translation id="6919364924256365253">ഇത് Google ചെയ്യേണ്ട. Bing അല്ല. Growser ഉപയോഗിക്കുക.</translation>
+<translation id="2640297688005939449">Growser Search നിങ്ങളെ പ്രൊഫൈൽ ചെയ്യില്ല. ഇത് 100% സ്വതന്ത്രമാണ്.</translation>
 <translation id="7295094278358921487">തിരയൂ: നിങ്ങൾ കണ്ടെത്തും. സ്വകാര്യമായി.</translation>
-<translation id="3462465068145800637">Brave Search നിങ്ങളെ പ്രൊഫൈൽ ചെയ്യില്ല. ഇത് Big Tech-ൽ നിന്ന് 100% സ്വതന്ത്രമാണ്.</translation>
+<translation id="3462465068145800637">Growser Search നിങ്ങളെ പ്രൊഫൈൽ ചെയ്യില്ല. ഇത് Big Tech-ൽ നിന്ന് 100% സ്വതന്ത്രമാണ്.</translation>
 <translation id="42032117189492785">AI-യിലൂടെ ശക്തമായ തിരയൽ, വ്യത്യസ്തമായ സൂചകം.</translation>
 <translation id="8606416238399082160">പൂർണ്ണമായ സ്വകാര്യത, 100% സ്വതന്ത്ര, ഉത്തമ AI സവിശേഷതകളോട് കൂടുക.</translation>
 <translation id="4381193110021038941">നല്ല ഫലങ്ങൾ നേടുക</translation>
-<translation id="3846545273704969734">Brave Search, Bing (അഥവാ Bing ക്ലോണുകൾ പോലെ DuckDuckGo) -ക്കേക്കാൾ നല്ല ഫലങ്ങൾ ലഭിക്കുന്നു എന്ന് സ്വതന്ത്രമായി സ്ഥിരീകരിച്ചു.</translation>
+<translation id="3846545273704969734">Growser Search, Bing (അഥവാ Bing ക്ലോണുകൾ പോലെ DuckDuckGo) -ക്കേക്കാൾ നല്ല ഫലങ്ങൾ ലഭിക്കുന്നു എന്ന് സ്വതന്ത്രമായി സ്ഥിരീകരിച്ചു.</translation>
 <translation id="2841164160723712537">തിരയൽ ഫലങ്ങൾ മെച്ചപ്പെടുത്തുക</translation>
-<translation id="4639001639513524869">Brave Search-നിഷ്ടമായുള്ള കൂടുതൽ queries ന് DuckDuckGo -ക്കേക്കാൾ നല്ല ഫലങ്ങൾ ഉണ്ട്. ഇത് യഥാർത്ഥത്തിൽ സ്വകാര്യമാണ്.</translation>
-<translation id="5240031343741051161">Brave Search ശ്രമിക്കുക</translation>
+<translation id="4639001639513524869">Growser Search-നിഷ്ടമായുള്ള കൂടുതൽ queries ന് DuckDuckGo -ക്കേക്കാൾ നല്ല ഫലങ്ങൾ ഉണ്ട്. ഇത് യഥാർത്ഥത്തിൽ സ്വകാര്യമാണ്.</translation>
+<translation id="5240031343741051161">Growser Search ശ്രമിക്കുക</translation>
 <translation id="5234764350956374838">ബഹിഷ്‌ക്കരിക്കുക</translation>
-<translation id="8722651357687610395">Brave നെ സ്ഥിരസ്ഥിതിയാക്കുക</translation>
+<translation id="8722651357687610395">Growser നെ സ്ഥിരസ്ഥിതിയാക്കുക</translation>
 <translation id="2370739752330685659">പിന്നീടെങ്ങിലും</translation>
-<translation id="5100490448228945668">Brave search conversion ഒഴിവാക്കുക, ഈ നിർദ്ദേശം നീക്കം ചെയ്യാൻ Enter അമർത്തുക</translation>
-<translation id="6213208892248046484">Brave Search-ലേക്ക് മാറുക</translation>
+<translation id="5100490448228945668">Growser search conversion ഒഴിവാക്കുക, ഈ നിർദ്ദേശം നീക്കം ചെയ്യാൻ Enter അമർത്തുക</translation>
+<translation id="6213208892248046484">Growser Search-ലേക്ക് മാറുക</translation>
 <translation id="9194637241566114638">പ더െന്പ ചർന്നിട്ട് <ph name="SEARCH_NAME"/> അനാമ സറിച്ച മൂൽ ഒപ്പ ചരെ ആദൽക <ph name="MORE_INFO"/></translation>
-<translation id="7404610376221341525">Brave Search</translation>
+<translation id="7404610376221341525">Growser Search</translation>
 <translation id="8184318863960255706">കൂടുതൽ‍ വിവരങ്ങള്‍</translation>
 <translation id="780301667611848630">വേണ്ട നന്ദി</translation>
-<translation id="1162706247109707219">OK അമർത്തുന്നതിലൂടെ, നിങ്ങൾ Brave-ന്റെ ഇൻസ്റ്റാളേഷൻ Windows 10 അല്ലെങ്കിൽ അതിനുശേഷം അപ്ഡേറ്റ് ചെയ്യുന്നതുവരെ നിർബന്ധമായ സുരക്ഷാ പരിഹാരങ്ങൾ നൽകില്ല എന്ന് സമ്മതിക്കുന്നു. ഈ മുന്നറിയിപ്പ് വീണ്ടും കാണിക്കില്ല.</translation>
-<translation id="2971591422768125177">OK അമർത്തുന്നതിലൂടെ, നിങ്ങൾ Brave-ന്റെ ഇൻസ്റ്റാളേഷൻ macOS 13 അല്ലെങ്കിൽ അതിനുശേഷം അപ്ഡേറ്റ് ചെയ്യുന്നതുവരെ നിർബന്ധമായ സുരക്ഷാ പരിഹാരങ്ങൾ നൽകില്ല എന്ന് സമ്മതിക്കുന്നു. ഈ മുന്നറിയിപ്പ് വീണ്ടും കാണിക്കില്ല.</translation>
+<translation id="1162706247109707219">OK അമർത്തുന്നതിലൂടെ, നിങ്ങൾ Growser-ന്റെ ഇൻസ്റ്റാളേഷൻ Windows 10 അല്ലെങ്കിൽ അതിനുശേഷം അപ്ഡേറ്റ് ചെയ്യുന്നതുവരെ നിർബന്ധമായ സുരക്ഷാ പരിഹാരങ്ങൾ നൽകില്ല എന്ന് സമ്മതിക്കുന്നു. ഈ മുന്നറിയിപ്പ് വീണ്ടും കാണിക്കില്ല.</translation>
+<translation id="2971591422768125177">OK അമർത്തുന്നതിലൂടെ, നിങ്ങൾ Growser-ന്റെ ഇൻസ്റ്റാളേഷൻ macOS 13 അല്ലെങ്കിൽ അതിനുശേഷം അപ്ഡേറ്റ് ചെയ്യുന്നതുവരെ നിർബന്ധമായ സുരക്ഷാ പരിഹാരങ്ങൾ നൽകില്ല എന്ന് സമ്മതിക്കുന്നു. ഈ മുന്നറിയിപ്പ് വീണ്ടും കാണിക്കില്ല.</translation>
 <translation id="6020553119523541665">ഈ ടാബ് മറ്റൊരു വിന്‍ഡോയില്‍ സജീവമാണ്</translation>
 <translation id="4987392683074136770">ഈ ടാബിനെ ക്ലിക്കുചെയ്യുന്നത് ഈ വിൻഡോയിലേക്ക് അതിന്റെ ഉള്ളടക്കം കൊണ്ടുവരും</translation>
 <translation id="8355523213948477234">നിരീക്ഷണ കാഴ്ച മെനു ബട്ടണ്2െ</translation>
 <translation id="6040143037577758943">അടയ്ക്കുക</translation>
-<translation id="6665472986740899785">Brave അറിയിപ്പ് പരസ്യം</translation>
+<translation id="6665472986740899785">Growser അറിയിപ്പ് പരസ്യം</translation>
 <translation id="5253166205743627564">ബിഗ് ടെക്കും പോലെ അല്ലാതെ, നിങ്ങളുടെ പ്രൈവസി കാത്തുസൂക്ഷിക്കുവാൻ അവയോധനാത്മകമായി പരസ്യത്തിന്റെ പ്രകടനം പ്രൊഫൈലുകൾ ഇല്ലാതാക്കുന്നു. തെറ്റായ പാട്ടുകൾ നിങ്ങൾക്ക് സഹായം ചെയ്യുന്നു പ്രൈവസി സംസ്ഥാനം മെച്ചപ്പെടുത്താൻ.</translation>
 <translation id="8748471354357836070">കൂടുതലറിയുക / തിരഞ്ഞെടുക്കുന്നതിന് നിന്ന് ഒഴിവാക്കാനുള്ള തീരുമാനങ്ങൾ</translation>
-<translation id="5927196110206824867">സ്പോൺസർ ചെയ്ത പശ്ചാത്തല ചിത്രങ്ങൾ Brave ന്റെ സ്വതന്ത്ര, ഉപയോക്തൃ-കേന്ദ്രത്തിലുള്ള വെബിന്റെ ദൗത്യത്തെ പിന്തുണക്കുന്നുണ്ട്. ബിഗ് ടെക്കിന് ആകറ്റ, അതിന്റെ പരസ്യ പ്രവര്‍ത്തനത്തെ സ്വയം സമര്‍പ്പിച്ച് Brave നിങ്ങളുടെ ചിന്തയില്‍ അഭിമുഖമായി അതിന്റെ സ്വകാര്യത രണ്ടാം ചെയ്യുന്നു.</translation>
+<translation id="5927196110206824867">സ്പോൺസർ ചെയ്ത പശ്ചാത്തല ചിത്രങ്ങൾ Growser ന്റെ സ്വതന്ത്ര, ഉപയോക്തൃ-കേന്ദ്രത്തിലുള്ള വെബിന്റെ ദൗത്യത്തെ പിന്തുണക്കുന്നുണ്ട്. ബിഗ് ടെക്കിന് ആകറ്റ, അതിന്റെ പരസ്യ പ്രവര്‍ത്തനത്തെ സ്വയം സമര്‍പ്പിച്ച് Growser നിങ്ങളുടെ ചിന്തയില്‍ അഭിമുഖമായി അതിന്റെ സ്വകാര്യത രണ്ടാം ചെയ്യുന്നു.</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">Brave Search മെച്ചപ്പെടുത്താൻ കുറച്ച് അജ്ഞാത തിരയൽ &amp; ബ്രൗസിംഗ് ഡാറ്റ സംഭാവന ചെയ്യുക.</translation>
-<translation id="1516554614404600536">Brave ടൂൾടിപ്പ്</translation>
+<translation id="8659271182272561965">Growser Search മെച്ചപ്പെടുത്താൻ കുറച്ച് അജ്ഞാത തിരയൽ &amp; ബ്രൗസിംഗ് ഡാറ്റ സംഭാവന ചെയ്യുക.</translation>
+<translation id="1516554614404600536">Growser ടൂൾടിപ്പ്</translation>
 <translation id="4375473250631001683">സൈഡ്ബാർ ചിഹ്നം മറയ്ക്കുക</translation>
 <translation id="2613033293035359003">സൈഡ്ബാർ മറയ്ക്കുക</translation>
 <translation id="4233010476457917696">സൈഡ്ബാർ കാണിക്കുക</translation>
@@ -182,9 +182,9 @@
 <translation id="2702801445560668637">Reading List</translation>
 <translation id="2533715613366623756">ബുക്ക്മാർക്കുകൾ മാനേജർ</translation>
 <translation id="3405021928725149239">ബുക്ക്മാർക്കുകൾ മാനേജർ</translation>
-<translation id="6284218950354553099">Brave's തീയരി വേയെജിങ് ആൻസൺ אותോപാലിക്കൽ സൌഹര്യം N.</translation>
-<translation id="694500751416448436">ഈ വ്യക്തിപറയിക്കരില്ല കാര്യംകൊണ്ട് Brave കാണിക്കുക ഈകൾവേറെ തുടർച്ചയായ വെക്തലിലും കുറക്കാനാഗാം.</translation>
-<translation id="5047771074267454980">ചില സവിശേഷതകളുടെ മൊത്തത്തിലുള്ള ഉപയോഗം കണക്കാക്കാൻ Brave സ്വകാര്യത സംരക്ഷിക്കുന്ന ഉൽപ്പന്ന അനലിറ്റിക്സ് ഉപയോഗിക്കുന്നു</translation>
+<translation id="6284218950354553099">Growser's തീയരി വേയെജിങ് ആൻസൺ אותോപാലിക്കൽ സൌഹര്യം N.</translation>
+<translation id="694500751416448436">ഈ വ്യക്തിപറയിക്കരില്ല കാര്യംകൊണ്ട് Growser കാണിക്കുക ഈകൾവേറെ തുടർച്ചയായ വെക്തലിലും കുറക്കാനാഗാം.</translation>
+<translation id="5047771074267454980">ചില സവിശേഷതകളുടെ മൊത്തത്തിലുള്ള ഉപയോഗം കണക്കാക്കാൻ Growser സ്വകാര്യത സംരക്ഷിക്കുന്ന ഉൽപ്പന്ന അനലിറ്റിക്സ് ഉപയോഗിക്കുന്നു</translation>
 <translation id="8712637175834984815">വിജയകരം</translation>
 <translation id="4394049700291259645">അപ്രാപ്‌തമാക്കുക</translation>
 <translation id="7142548388914389999">സ്വകാര്യത സംരക്ഷിക്കുന്ന ഉല്‍പ്പന്ന വിശകലനം അനുവദിക്കുക (P3A)</translation>
@@ -231,15 +231,15 @@
 <translation id="4046485130884276245">ചിത്രത്തിൽ നിന്ന് എഴുത്ത് പകര്‍ത്തി</translation>
 <translation id="3639779775496569782">എഴുത്ത് പകര്‍പ്പ് പരാജയപ്പെട്ടു</translation>
 <translation id="3960619311638643872">.ഐ വി പി എൻ</translation>
-<translation id="2506438154311626334">Brave VPN- ൽ WireGuard പ്രോട്ടോക്കോൾ ഉപയോഗിക്കുക</translation>
-<translation id="8519170191215826548">Brave VPN ബന്ധപ്പെടുത്തിയിരിക്കുന്നപ്പോഴാണ് ഈ ക്രമീകരണം മാറ്റാനാവുക.</translation>
+<translation id="2506438154311626334">Growser VPN- ൽ WireGuard പ്രോട്ടോക്കോൾ ഉപയോഗിക്കുക</translation>
+<translation id="8519170191215826548">Growser VPN ബന്ധപ്പെടുത്തിയിരിക്കുന്നപ്പോഴാണ് ഈ ക്രമീകരണം മാറ്റാനാവുക.</translation>
 <translation id="1177917174080821247">Windowsൽ VPN ട്രേ ഐക്കൺ കാണിക്കുക</translation>
 <translation id="3747459938663420752">പ്രാപ്തമാക്കിയാൽ, ബ്രേව් VPN-യുടെ ട്രേ ഐക്കൺ Windows ടാസ്ക്‌ബാറിൽ കാണിക്കും.</translation>
 <translation id="4235920711083356755">VPN ബട്ടൺ കാണിക്കുക</translation>
 <translation id="4070612712151038707">ടൂൾബാറിൽ VPN ബട്ടൺ കാണിക്കുന്നു</translation>
 <translation id="7705524343798198388">VPN</translation>
 <translation id="8593397073757037946">VPN മാറ്റുക</translation>
-<translation id="2345974803401546682">Brave VPN ന്‌ കുറിച്ച്</translation>
+<translation id="2345974803401546682">Growser VPN ന്‌ കുറിച്ച്</translation>
 <translation id="4378551569595875038">കണക്റ്റുചെയ്യുന്നു...</translation>
 <translation id="3368922792935385530">ബന്ധിപ്പിച്ചു</translation>
 <translation id="1536754031901697553">വിച്ഛേദിക്കുന്നു...</translation>
@@ -254,7 +254,7 @@
 <translation id="945522503751344254">ഫീഡ്ബാക്ക് അയയ്ക്കുക</translation>
 <translation id="3015685033234401792">എന്റെ പ്ലാൻ മാനേജുചെയ്യുക</translation>
 <translation id="4989337484121655457">പൂർണ്ണ ഡിസ്‌ക് ആക്സസ് ആവശ്യമാണ്</translation>
-<translation id="8025559074845816210">Safariയിൽ നിന്നുള്ള നിങ്ങളുടെ ബുക്ക്മാർക്കുകൾ ഇമ്പോർട്ടുചെയ്യാൻ Brave ന് പൂർണ്ണ ഡിസ്‌ക് ആക്സസ് ആവശ്യമാണ്.</translation>
+<translation id="8025559074845816210">Safariയിൽ നിന്നുള്ള നിങ്ങളുടെ ബുക്ക്മാർക്കുകൾ ഇമ്പോർട്ടുചെയ്യാൻ Growser ന് പൂർണ്ണ ഡിസ്‌ക് ആക്സസ് ആവശ്യമാണ്.</translation>
 <translation id="8515328844674404333">സിസ്റ്റം പ്രിഫറൻസുകളിൽ നിന്ന് പൂർണ്ണ ഡിസ്‌ക് ആക്‌സസ് എങ്ങനെ അനുവദിക്കാമെന്ന് മനസ്സിലാക്കുക.</translation>
 <translation id="6414878884710400018">സിസ്റ്റം പ്രിഫറൻസുകളിൽ തുറക്കുക</translation>
 <translation id="4759238208242260848">ഡൌണ്‍ലോഡുകള്‍</translation>
@@ -348,21 +348,21 @@
 <translation id="7557539689487606886">Go Premium</translation>
 <translation id="1035309871698658326">തുറക്കുമ്പോൾ, ലിയോയ്ക്ക് ക്ലാസിഫൈ ചെയ്യാൻ എല്ലാ താഴ്ന്ന-പ്രീവറ്റ് ടാബുകളുടെ തലക്കെട്ടുകളും ഉത്ഭവവും സ്വയമേ അയയ്ക്കും.</translation>
 <translation id="3435896845095436175">തയ്യാറാക്കുക</translation>
-<translation id="9031526219709160683">Brave നിങ്ങളെ ഈ സൈറ്റിന്റെ സ്വകാര്യത സെറ്റിംഗുകൾ ഒപ്റ്റിമൈസ് ചെയ്യാൻ സഹായിക്കും. Brave ന്റെ നിർദ്ദേശങ്ങൾ പരിശോധിക്കാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</translation>
+<translation id="9031526219709160683">Growser നിങ്ങളെ ഈ സൈറ്റിന്റെ സ്വകാര്യത സെറ്റിംഗുകൾ ഒപ്റ്റിമൈസ് ചെയ്യാൻ സഹായിക്കും. Growser ന്റെ നിർദ്ദേശങ്ങൾ പരിശോധിക്കാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</translation>
 <translation id="5739953050957336013">നിർദ്ദേശങ്ങൾ പരിശോധിക്കുക</translation>
 <translation id="515462386448976244">സ്വകാര്യതാ ക്രമീകരണ നിർദ്ദേശ ടൂൾ</translation>
 <translation id="6911328085206170823">ഈ സൈറ്റിന് കാണിക്കരുത്</translation>
 <translation id="6157507628047001360">സ്വകാര്യതാ ക്രമീകരണ ട്യൂണിംഗ് പ്രവർത്തനരഹിതമാക്കുക</translation>
-<translation id="9082792303833649978">ധാരണക്കാരൻ അല്ലെങ്കിൽ മറ്റൊരു Brave നയപ്രകാരം ഈ സെറ്റിംഗ് നിയന്ത്രിക്കപ്പെടുന്നു.</translation>
+<translation id="9082792303833649978">ധാരണക്കാരൻ അല്ലെങ്കിൽ മറ്റൊരു Growser നയപ്രകാരം ഈ സെറ്റിംഗ് നിയന്ത്രിക്കപ്പെടുന്നു.</translation>
 <translation id="1940221956626514677">ടുൾബാർ ഇഷ്‌ടാനുസൃതമാക്കുക</translation>
 <translation id="6501807887341963552">തീംയും നിറങ്ങളും</translation>
 <translation id="6724227215236550330">സംരക്ഷിച്ച പാസ്‌വേർഡുകൾ ഇവിടെ കാണും. ഈ ഉപകരണത്തിൽ <ph name="BRAND"/> ലേക്ക് പാസ്‌വേർഡുകൾ ഇറക്കുമതി ചെയ്യാൻ, <ph name="BEGIN_LINK"/> ഒരു CSV ഫയൽ തിരഞ്ഞെടുക്കുക<ph name="END_LINK"/></translation>
 <translation id="3575561030014162610">ഈ ഉപകരണത്തിൽ <ph name="BRAND"/> ലേക്ക് പാസ്‌വേർഡുകൾ ഇറക്കുമതി ചെയ്യാനായി, ഒരു CSV ഫയൽ തിരഞ്ഞെടുക്കുക</translation>
 <translation id="8570228839666486945">ഓൻ-ഡിവൈസ് AI</translation>
-<translation id="3456536577668402695">നിങ്ങളുടെ തിരയലുകളും പേജ് ഉള്ളടക്കങ്ങളും ഈ ഉപകരണത്തിൽ പ്രോസസ്സ് ചെയ്യപ്പെടുന്നു. ഒന്നും Brave-ലേക്ക് അയക്കുകയോ മനുഷ്യ പരിശോധകർ കാണുകയോ ചെയ്യില്ല.</translation>
+<translation id="3456536577668402695">നിങ്ങളുടെ തിരയലുകളും പേജ് ഉള്ളടക്കങ്ങളും ഈ ഉപകരണത്തിൽ പ്രോസസ്സ് ചെയ്യപ്പെടുന്നു. ഒന്നും Growser-ലേക്ക് അയക്കുകയോ മനുഷ്യ പരിശോധകർ കാണുകയോ ചെയ്യില്ല.</translation>
 <translation id="4751537843966994505">സെമാന്റിക് History Search</translation>
 <translation id="6175973371938222040">നിങ്ങൾ സന്ദർശിക്കുന്ന പേജുകൾ പ്രാദേശികമായി ഇൻഡെക്സ് ചെയ്യുക, അതുവഴി നിങ്ങൾക്ക് അർത്ഥം അനുസരിച്ച് നിങ്ങളുടെ history തിരയാൻ കഴിയും. എല്ലാ പ്രോസസ്സിംഗും ഈ device-ൽ തന്നെ തുടരും.</translation>
-<translation id="9156965752763025780">നിങ്ങളുടെ മാറ്റങ്ങൾ അടുത്ത തവണ Brave വീണ്ടും സമാരംഭിക്കുമ്പോൾ പ്രാബല്യത്തിൽ വരും.</translation>
+<translation id="9156965752763025780">നിങ്ങളുടെ മാറ്റങ്ങൾ അടുത്ത തവണ Growser വീണ്ടും സമാരംഭിക്കുമ്പോൾ പ്രാബല്യത്തിൽ വരും.</translation>
 <translation id="7179921470347911571">ഇപ്പോൾ വീണ്ടും ആരംഭിക്കുക</translation>
 <translation id="1426410128494586442">അതെ</translation>
 <translation id="4250680216510889253">ഇല്ല</translation>
@@ -373,16 +373,16 @@
 <translation id="984275831282074731">പേയ്‌മെന്റ് രീതികൾ</translation>
 <translation id="6278858909990433658">ഇറക്കുമതി പ്രൊഫൈൽ ഇപ്പോഴും ഉപയോഗത്തിൽ</translation>
 <translation id="9071187015476020102">അനുബന്ധങ്ങളോ മറ്റു ക്രമീകരണങ്ങളോ ഇറക്കുമതിചെയ്യാൻ, ആദ്യം നിങ്ങൾ ഇറക്കുമതി ചെയ്യുന്ന ബ്രൗസർ അടയ്‌ക്കുക.</translation>
-<translation id="2044383478723007273">Brave  നിറങ്ങൾ</translation>
+<translation id="2044383478723007273">Growser  നിറങ്ങൾ</translation>
 <translation id="1807246157184219062">ലൈറ്റ്</translation>
 <translation id="2414886740292270097">ഇരുണ്ടത്</translation>
 <translation id="1360441190790440400">Linux പോലെ</translation>
 <translation id="1336940801687497203">Windows  പോലെ</translation>
 <translation id="8721331068159819483">macOS പോലേ</translation>
 <translation id="4171684937791228083">പൂർണ്ണ സ്ക്രീനിൽ ടൂള്ബാർ എപ്പോഴും കാണിക്കുക</translation>
-<translation id="5840822070878669614">Brave വെബ് സ്‌റ്റോർ തുറക്കുക</translation>
+<translation id="5840822070878669614">Growser വെബ് സ്‌റ്റോർ തുറക്കുക</translation>
 <translation id="1692470335103807198">കൂടുതൽ തീമുകൾ നേടുക</translation>
-<translation id="2906510232093002459">Brave നാടെചിത്രങ്ങൾ</translation>
+<translation id="2906510232093002459">Growser നാടെചിത്രങ്ങൾ</translation>
 <translation id="8000020256436988724">ടൂള്പാർ</translation>
 <translation id="8076492880354921740">ടാബുകള്‍‌</translation>
 <translation id="8168435359814927499">ഉള്ളടക്കം</translation>
@@ -432,7 +432,7 @@
 <translation id="8820817407110198400">ബുക്ക്‌മാര്‍ക്കുകള്‍</translation>
 <translation id="4144468798716165316">ക്വിക് കമാൻഡുകൾ</translation>
 <translation id="7310387888625228830">Leo AI അസിസ്റ്റൻറ്</translation>
-<translation id="5222974844674487962">Brave News ബട്ടൺ കാണിക്കുക</translation>
+<translation id="5222974844674487962">Growser News ബട്ടൺ കാണിക്കുക</translation>
 <translation id="2085436423511121572">Leo AI ബട്ടൺ കാണിക്കുക</translation>
 <translation id="6156323911414505561">ബുക്ക്മാർക്ക് ബാർ കാണിക്കുക</translation>
 <translation id="4054323497808446566">എല്ലാ പേജുകളിലും ബുക്ക്മാർക്ക് ബാർ ദൃശ്യമാണ്</translation>
@@ -457,10 +457,10 @@
 <translation id="7537601449003285327">ടാസ്‌ക്‌ബാറിൽ പിന്‍‌ ചെയ്യുക</translation>
 <translation id="7461924472993315131">പിൻ ചെയ്യുക</translation>
 <translation id="735832369569964359">Click Pin and പോലെ Windows അറിയിപ്പിൽ ഉറപ്പിക്കുക</translation>
-<translation id="7506648566440714944">Brave ഇതിനകം പinned ആണ്</translation>
+<translation id="7506648566440714944">Growser ഇതിനകം പinned ആണ്</translation>
 <translation id="2307973900865360088">ഡോക്കിൽ സൂക്ഷിക്കുക</translation>
 <translation id="239275665037555969">ഡോക്കിൽ</translation>
-<translation id="4057614912106618659">Brave ഇതിനകം ഡോക്കിൽ ഉണ്ട്</translation>
+<translation id="4057614912106618659">Growser ഇതിനകം ഡോക്കിൽ ഉണ്ട്</translation>
 <translation id="3195845168740336657">ഷീല്ഡ്സ് ക്രമീകരണങ്ങൾ</translation>
 <translation id="754769152790647708">ഷീല്ഡ്സ് സ്ഥിതി</translation>
 <translation id="4868109105992358853">ഷീല്ഡ്സ് ട്രാക്കേഴ്സ്, പരസ്യങ്ങൾ, ഫിംഗർപ്രിന്റിംഗ് തടയാം</translation>
@@ -530,7 +530,7 @@
 <translation id="2718718846210516552">സ്ക്രിപ്റ്റ്let കണ്ടില്ല.</translation>
 <translation id="4088315951291671239">നിങ്ങളെ കൊണ്ട് വിവരമില്ലാത്ത അല്ലെങ്കിൽ നിങ്ങൾ സ്വയം അവലോകനം ചെയ്യാത്ത കോഡ് ഇവിടെ പതിപ്പിക്കരുത്. ഇത് ആക്രമികൾക്ക് നിങ്ങളുടെ പേരറിയാൻ അല്ലെങ്കിൽ നിങ്ങളുടെ കമ്പ്യൂട്ടർ നിയന്ത്രിക്കാനാവും.</translation>
 <translation id="3020183492814296499">കുറുക്കുവഴികൾ</translation>
-<translation id="2935698011275148880">Brave Origin</translation>
+<translation id="2935698011275148880">Growser Origin</translation>
 <translation id="3486906647205325617">ചില മാറ്റങ്ങൾ പൂർണ്ണമായി പ്രാബല്യത്തിൽ വരാൻ ബ്രൗസർ പുനരാരംഭിക്കേണ്ടതുണ്ട്.</translation>
 <translation id="1919345977826869612">പരസ്യങ്ങള്‍</translation>
 <translation id="944736176598169208">Rewards</translation>
@@ -544,18 +544,18 @@
 <translation id="5990642573624858459">Click സംഖ്യ റിപ്പോർട്ടിംഗ്</translation>
 <translation id="6560669651825861597">എല്ലാ browser profile-കളെയും ബാധിക്കുന്നു</translation>
 <translation id="2441719842399509963">സ്ഥിരസ്ഥിതികൾലേക്ക് പുനഃക്രമീകരിക്കുക</translation>
-<translation id="2587535830241068901">Brave നെ പിന്തുണയ്ക്കുന്നതിനോടൊപ്പം നിങ്ങളുടെ ബ്രൗസർ ഇഷ്ഷാനുസരിച്ചു ഒതുക്കുക</translation>
-<translation id="123297831435065577">Brave Origin എന്നത് ഒരു ബിസിനസ്സ് എന്ന നിലയിൽ Brave-നെ പിന്തുണയ്ക്കുന്ന എല്ലാ സവിശേഷതകളും ആവശ്യമില്ലാത്ത, എന്നാൽ Brave മാത്രം നൽകുന്ന സ്വകാര്യത ആഗ്രഹിക്കുന്ന ഉപയോക്താക്കൾക്കായുള്ള ബ്രൗസറിന്റെ പണമടച്ചുള്ള പതിപ്പാണ്. Origin ഉപയോക്താക്കൾക്ക് നമ്മുടെ വ്യവസായ-പ്രമുഖ സ്വകാര്യത, പരസ്യ ബ്ലോക്ക്, വേഗത (Shields വഴി), പതിവ് സോഫ്റ്റ്‌വെയർ അപ്ഡേറ്റുകൾ, Chromium പാച്ചുകൾ, സുരക്ഷാ-സ്വകാര്യത മെച്ചപ്പെടുത്തലുകൾ എന്നിവയിൽ നിന്നുള്ള പ്രയോജനങ്ങൾ തുടരും.</translation>
+<translation id="2587535830241068901">Growser നെ പിന്തുണയ്ക്കുന്നതിനോടൊപ്പം നിങ്ങളുടെ ബ്രൗസർ ഇഷ്ഷാനുസരിച്ചു ഒതുക്കുക</translation>
+<translation id="123297831435065577">Growser Origin എന്നത് ഒരു ബിസിനസ്സ് എന്ന നിലയിൽ Growser-നെ പിന്തുണയ്ക്കുന്ന എല്ലാ സവിശേഷതകളും ആവശ്യമില്ലാത്ത, എന്നാൽ Growser മാത്രം നൽകുന്ന സ്വകാര്യത ആഗ്രഹിക്കുന്ന ഉപയോക്താക്കൾക്കായുള്ള ബ്രൗസറിന്റെ പണമടച്ചുള്ള പതിപ്പാണ്. Origin ഉപയോക്താക്കൾക്ക് നമ്മുടെ വ്യവസായ-പ്രമുഖ സ്വകാര്യത, പരസ്യ ബ്ലോക്ക്, വേഗത (Shields വഴി), പതിവ് സോഫ്റ്റ്‌വെയർ അപ്ഡേറ്റുകൾ, Chromium പാച്ചുകൾ, സുരക്ഷാ-സ്വകാര്യത മെച്ചപ്പെടുത്തലുകൾ എന്നിവയിൽ നിന്നുള്ള പ്രയോജനങ്ങൾ തുടരും.</translation>
 <translation id="7984508421152399880">ഇപ്പോൾ വാങ്ങുക</translation>
-<translation id="5567412479632285879">Brave Rewards പ്രവർത്തനരഹിതമാക്കി</translation>
+<translation id="5567412479632285879">Growser Rewards പ്രവർത്തനരഹിതമാക്കി</translation>
 <translation id="413570371620795359">സുപ്രാപ്തമാക്കാൻ പാനൽ തുറക്കുക</translation>
-<translation id="1051600834033686945">Brave Rewards ക്രമീകരണങ്ങൾ തുറക്കുക</translation>
-<translation id="8826461509529116322">Brave Rewards ബട്ടൺ കാണിക്കുക</translation>
+<translation id="1051600834033686945">Growser Rewards ക്രമീകരണങ്ങൾ തുറക്കുക</translation>
+<translation id="8826461509529116322">Growser Rewards ബട്ടൺ കാണിക്കുക</translation>
 <translation id="4859866966646365361">Ad Block മാത്രം മോഡ്</translation>
 <translation id="4146834954839563870">Ad Block മാത്രം മോഡ് ഉപയോഗിക്കുക</translation>
-<translation id="420732343671200734">Ad Block മാത്രം മോഡിൽ Brave Shields ന്റെ അടിസ്ഥാന പരസ്യ തടയൽ നിയമങ്ങൾ നിലനിൽക്കും. മുന്നറിയിപ്പ്: എല്ലാ സ്വകാര്യതാ സംരക്ഷണങ്ങളും നീക്കം ചെയ്യപ്പെടും. Brave ന്റെ സ്വകാര്യതാ സംരക്ഷണങ്ങളാൽ തകരാറിലായ വ്യക്തിഗത വെബ്സൈറ്റുകൾക്കായി, നിങ്ങൾക്ക് Shields DOWN ആയി സജ്ജീകരിക്കാം. ഇതൊരു പ്രായോഗിക മോഡാണ്. <ph name="BEGIN_LINK"/>കൂടുതൽ അറിയുക<ph name="END_LINK"/></translation>
+<translation id="420732343671200734">Ad Block മാത്രം മോഡിൽ Growser Shields ന്റെ അടിസ്ഥാന പരസ്യ തടയൽ നിയമങ്ങൾ നിലനിൽക്കും. മുന്നറിയിപ്പ്: എല്ലാ സ്വകാര്യതാ സംരക്ഷണങ്ങളും നീക്കം ചെയ്യപ്പെടും. Growser ന്റെ സ്വകാര്യതാ സംരക്ഷണങ്ങളാൽ തകരാറിലായ വ്യക്തിഗത വെബ്സൈറ്റുകൾക്കായി, നിങ്ങൾക്ക് Shields DOWN ആയി സജ്ജീകരിക്കാം. ഇതൊരു പ്രായോഗിക മോഡാണ്. <ph name="BEGIN_LINK"/>കൂടുതൽ അറിയുക<ph name="END_LINK"/></translation>
 <translation id="3055675200351793825">Shields ഓപ്ഷനുകൾ നിലവിൽ അപ്രാപ്തമാണ്.</translation>
-<translation id="2687830906359353344">Ad Block മാത്രം മോഡ് Brave Shields ന്റെ അടിസ്ഥാന പരസ്യ തടയൽ നിയമങ്ങൾ നിലനിർത്തുകയും സ്വകാര്യതാ സംരക്ഷണങ്ങൾ അപ്രാപ്തമാക്കുകയും ചെയ്യുന്നു. നിങ്ങൾക്ക് സ്റ്റാൻഡേർഡ് Shields സജ്ജീകരിക്കാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, ഈ മോഡ് അപ്രാപ്തമാക്കുക.</translation>
+<translation id="2687830906359353344">Ad Block മാത്രം മോഡ് Growser Shields ന്റെ അടിസ്ഥാന പരസ്യ തടയൽ നിയമങ്ങൾ നിലനിർത്തുകയും സ്വകാര്യതാ സംരക്ഷണങ്ങൾ അപ്രാപ്തമാക്കുകയും ചെയ്യുന്നു. നിങ്ങൾക്ക് സ്റ്റാൻഡേർഡ് Shields സജ്ജീകരിക്കാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, ഈ മോഡ് അപ്രാപ്തമാക്കുക.</translation>
 <translation id="3809423899581611047">Ad Block മാത്രം മോഡ് ഓഫാക്കുക</translation>
 <translation id="9185018653595759199">സോഷ്യൽ മീഡിയ തടയൽ</translation>
 <translation id="863171915776379000">ഫേസ്ബുക്ക് ലോഗിൻകളും എംബെഡഡ് പോസ്റ്റുകളും അനുവദിക്കുക</translation>
@@ -571,7 +571,7 @@
 <translation id="1689062823386843231">നായയാം ഓഫ്-പ്രോക്സ്ഡ് UDP.</translation>
 <translation id="3540231253392253941">പുഷ് സന്ദേശങ്ങൾക്കായി Google സേവനങ്ങൾ ഉപയോഗിക്കുക</translation>
 <translation id="5813105074916486721">പ്രാദേശിക history നിലനിർത്തൽ</translation>
-<translation id="5671611745062206644">Brave നിങ്ങളുടെ browsing history പ്രാദേശികമായി എത്ര കാലം സംഭരിക്കുന്നു</translation>
+<translation id="5671611745062206644">Growser നിങ്ങളുടെ browsing history പ്രാദേശികമായി എത്ര കാലം സംഭരിക്കുന്നു</translation>
 <translation id="7184510058087008090">1 ദിവസം</translation>
 <translation id="8097397186614425669">1 ആഴ്ച</translation>
 <translation id="1600157116238060201">1 മാസം</translation>
@@ -581,14 +581,14 @@
 <translation id="6796569320325473726">5 വര്‍ഷം</translation>
 <translation id="1658834457013045127">എന്നേക്കേറ്റ</translation>
 <translation id="933652931229970927">താനീകമായി ഡയഗ്ണോസ്റ്റിക് റിപ്പോർട്ടുകൾ അയയ്ക്കുക</translation>
-<translation id="8868426106596092089">Help improve Brave's product stability by automatically sending diagnostic reports when the Brave Browser crashes or freezes</translation>
+<translation id="8868426106596092089">Help improve Growser's product stability by automatically sending diagnostic reports when the Growser Browser crashes or freezes</translation>
 <translation id="4891600875049212418">സെൻസിറ്റീവ് സൈറ്റുകൾ സന്ദർശിക്കുമ്പോൾ റിക്കോർഡിൽ നിന്നും മാറുക</translation>
 <translation id="509873765238158442">മൈക്രോസോഫ്റ്റ് റികോൾ ബ്ലോക്കൂ</translation>
 <translation id="4763421121695677716">ബ്ലോക്ക് ചെയ്തത് മൈക്രോസോഫ്റ്റ് വിൻഡോസ് കമ്പ്യൂട്ടറുകളിൽ പ്രവർത്തിക്കുന്നതില്‍ നിന്ന് സ്ക്രീൻഷോട്ടുകൾ സ്വമേധയാ എടുക്കുന്നത്.</translation>
 <translation id="1968895725257436430">ഡാറ്റ ശേഖരണം</translation>
 <translation id="1700052872056357670">പുറത്തിരിക്കുന്നപ്പോൾ എല്ലാ ഡാറ്റയും മായ്ക്കുക</translation>
-<translation id="216468847346280584">Brave പരസ്യ ഡാറ്റ മായ്ച്ചുകളയുക...</translation>
-<translation id="2808630562319398131">Brave Rewards ഡാറ്റ പുനസജ്ജമാക്കുക...</translation>
+<translation id="216468847346280584">Growser പരസ്യ ഡാറ്റ മായ്ച്ചുകളയുക...</translation>
+<translation id="2808630562319398131">Growser Rewards ഡാറ്റ പുനസജ്ജമാക്കുക...</translation>
 <translation id="6438096877646138757">സൈറ്റുകൾ അടയ്ക്കുമ്പോൾ കുക്കികൾ കഴുകുക</translation>
 <translation id="2988792685798128092">സൈറ്റ് അടയ്ക്കുമ്പോൾ മായ്ക്കുക</translation>
 <translation id="7702907602086592255">ഡൊമെയ്‌ൻ</translation>
@@ -611,7 +611,7 @@
 <translation id="3432762828853624962">പങ്കിട്ട വർക്കർമാർ</translation>
 <translation id="2927017729816812676">കാഷെ സ്‌റ്റോറേജ്</translation>
 <translation id="1389601498324964367">കൗട്ടാ-പ്രബന്ധിത സംഭരണസ്ഥലം</translation>
-<translation id="814018970995616154">Brave ൽ സംഭരിച്ചിരിക്കുന്ന സുരക്ഷിതമല്ലാത്ത സൈറ്റുകളുടെ പട്ടികയ്ക്ക് URLs പരിശോദിക്കാം</translation>
+<translation id="814018970995616154">Growser ൽ സംഭരിച്ചിരിക്കുന്ന സുരക്ഷിതമല്ലാത്ത സൈറ്റുകളുടെ പട്ടികയ്ക്ക് URLs പരിശോദിക്കാം</translation>
 <translation id="1144810021918451336">നിങ്ങളുടെ വേദിയിൽ അപകടകരമായ സൈറ്റുകൾക്ക്, ഡൗൺലോഡ്‌സ്‌, ഒരു ഒഴിവാക്കൽ ചൂട.</translation>
 <translation id="4905744245455598930">ഭാര്യേഷ് സൈറ്റുകൾ, ഡൌൺലോഡുകൾ, എക്സ്റ്റൻഷനുകൾ എന്നിവ അപകടകരമാണ് എന്ന് അറിയപ്പെടുന്നവയിൽ നിന്ന് സംരക്ഷിക്കുന്നു.</translation>
 <translation id="5570470519803062774">സൈറ്റും ShIELDS ക്രമീകരണങ്ങളും</translation>
@@ -637,9 +637,9 @@
 <translation id="1145070115730668595">സൈറ്റ് Leo AI ചാറ്റ് തുറക്കാൻ അനുവദിക്കരുത്</translation>
 <translation id="5565355416171743213">Sync ഉപയോഗിച്ചാരംഭിക്കുക</translation>
 <translation id="4332558599726753990">സിങ്ക് ക്രമീകരണം</translation>
-<translation id="2187778349654214731">ആരഭിക്കുന്നതിന്, നിങ്ങൾ ബന്ധിപ്പിക്കാൻ ആഗ്രഹിക്കുന്ന എല്ലായുള്ളതും Brave ഇൻസ്റ്റാൾ ചെയ്യണം. തുടർന്ന്, നിങ്ങളുടെ കുറ്റിക്കുന്നു Sync കോഡിൽ ചേർക്കാം.</translation>
+<translation id="2187778349654214731">ആരഭിക്കുന്നതിന്, നിങ്ങൾ ബന്ധിപ്പിക്കാൻ ആഗ്രഹിക്കുന്ന എല്ലായുള്ളതും Growser ഇൻസ്റ്റാൾ ചെയ്യണം. തുടർന്ന്, നിങ്ങളുടെ കുറ്റിക്കുന്നു Sync കോഡിൽ ചേർക്കാം.</translation>
 <translation id="7530575064080939974">നിങ്ങളുടെ സജ്ജീകരണങ്ങളായുന്നത് നിയന്ത്രിക്കുക</translation>
-<translation id="8668872235103666008">Brave നിങ്ങളുടെ ഉപകരണങ്ങളിൽ Sync ചെയ്യാൻ കഴിഞ്ഞില്ല</translation>
+<translation id="8668872235103666008">Growser നിങ്ങളുടെ ഉപകരണങ്ങളിൽ Sync ചെയ്യാൻ കഴിഞ്ഞില്ല</translation>
 <translation id="7575156386943878014">Sync Manager</translation>
 <translation id="1755198127524719638">Sync ക്രമീകരണങ്ങൾ</translation>
 <translation id="7558480201297099157">നിങ്ങളുടെ ഉപകരണങ്ങൾ തമ്മിലുള്ള同步ആരോഗ്യമുള്ള വിവരങ്ങൾ നിങ്ങൾക്കിഷ്‌ടപ്പെട്ട രീതിയിൽ Sync ചെയ്യാനുള്ള ക്രമീകരണങ്ങൾ. ഈ സജ്ജീകരണങ്ങൾ മാത്രം ഈ ഉപകരണത്തിന് ബാധകമാണ്.</translation>
@@ -652,18 +652,18 @@
 <translation id="7885157704277298658">നകകളിച്ചു!</translation>
 <translation id="8802630444265810662">Sync കോഡ് പൊരുത്തപ്പെടുന്നുണ്ടോ നോക്കാൻ മൊബൈൽ ഉപകരണം ഉപയോഗിച്ച് QR കോഡ് സ്കാൻ ചെയ്യുക</translation>
 <translation id="6221331245829088299">QR കോഡ് പ്രദർശിപ്പിക്കുന്നതിനിടെ ഒരു പിഴവ് സംഭവിച്ചു, ശുദ്ധീകരിച്ച് വീണ്ടും ശ്രമിക്കുക.</translation>
-<translation id="298546024891487702">ആറാൻ, നിങ്ങൾ ബന്ധിപ്പിക്കാൻ ആഗ്രഹിക്കുന്ന ഉപകരണങ്ങളിൽ Brave ഇൻസ്റ്റാൾ ചെയ്യണം. തുടർന്ന്, നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങളെയും ടീമിന്റെ sync കോഡ് ഉപയോഗിച്ച് ബന്ധിപ്പിക്കാം.</translation>
+<translation id="298546024891487702">ആറാൻ, നിങ്ങൾ ബന്ധിപ്പിക്കാൻ ആഗ്രഹിക്കുന്ന ഉപകരണങ്ങളിൽ Growser ഇൻസ്റ്റാൾ ചെയ്യണം. തുടർന്ന്, നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങളെയും ടീമിന്റെ sync കോഡ് ഉപയോഗിച്ച് ബന്ധിപ്പിക്കാം.</translation>
 <translation id="6200528822592747640">പുതിയ Sync ചൈന ആരംഭിക്കുക</translation>
 <translation id="5184726904895809379">എനിക്ക് ഒരു Sync കോഡ് ഉണ്ട്</translation>
 <translation id="8780295742023331191">Sync കോഡ് കാണുക</translation>
 <translation id="9017050385815017931">ഫോൺ/ടാബ്ലറ്റ്</translation>
 <translation id="1736420071277903564">കമ്പ്യൂട്ടർ</translation>
 <translation id="3407602902101449803">Sync ചൈന QR കോഡ്</translation>
-<translation id="8369686073965491869">നിങ്ങളുടെ മൊബൈൽ ഉപകരണത്തിൽ, ക്രമീകരണങ്ങളുടെ Brave Sync നഷ്ടപ്പെട്ട്, Sync കോഡ് സ്കാൻ ചെയ്ത് കണക്ഷൻ വൈകിക്കുനെ.</translation>
+<translation id="8369686073965491869">നിങ്ങളുടെ മൊബൈൽ ഉപകരണത്തിൽ, ക്രമീകരണങ്ങളുടെ Growser Sync നഷ്ടപ്പെട്ട്, Sync കോഡ് സ്കാൻ ചെയ്ത് കണക്ഷൻ വൈകിക്കുനെ.</translation>
 <translation id="6527776448555649991">“സിങ്ക് കോഡ് സ്കാൻ ചെയ്യുക”.</translation>
 <translation id="1400862780574843709">താഴെയുള്ള QR കോഡ് സ്‌കാൻ ചെയ്യാൻ നിങ്ങളുടെ ക്യാമറ ഉപയോഗിക്കുക.</translation>
 <translation id="5086223971958279691">സിങ്ക് ചെയിൻ കോഡ്</translation>
-<translation id="2899261497479389619">നിങ്ങളുടെ ലക്ഷ്യ കമ്പ്യൂട്ടറിൽ Brave സിങ്ക് സജ്ജീകരണങ്ങൾ വഴി നാവിഗേറ്റ് ചെയ്‌തു ബട്ടൺ ക്ലിക്കുചെയ്യുക</translation>
+<translation id="2899261497479389619">നിങ്ങളുടെ ലക്ഷ്യ കമ്പ്യൂട്ടറിൽ Growser സിങ്ക് സജ്ജീകരണങ്ങൾ വഴി നാവിഗേറ്റ് ചെയ്‌തു ബട്ടൺ ക്ലിക്കുചെയ്യുക</translation>
 <translation id="4827439149833241990">"എനിക്ക് സിങ്ക് കോഡ് ഉണ്ട്".</translation>
 <translation id="8299617838343103908">താഴെ കാണുന്ന സിങ്ക് ചെയിൻ കോഡ് വാക്കുകൾ നൽകുക.</translation>
 <translation id="4485276108749547761">ഈ കോഡ് ഒരു പാസ്‌വേർഡ് പോലെ കൂടെ ഉപയോഗിക്കുക. ആരെങ്കിലും ഇത് പിടിക്കുകയാണെങ്കിൽ, അവരുടെ സിങ്ക് ചെയിൻ ഡാറ്റ വായിക്കുകയും തയ്യാറാക്കുകയും ചെയ്യുന്നു.</translation>
@@ -678,23 +678,23 @@
 <translation id="4432071071853308688">ഈ കോഡ് ശൂന്യമായിരിക്കുന്നു</translation>
 <translation id="955848693465029904">അകത്തു വന്ന സിങ്ക് സജ്ജീകരണ പിശക്</translation>
 <translation id="7456398316301207582">അകത്തു നിന്ന അക്കൗണ്ട് നീക്കം ചെയ്യുന്നതിൽ പിശക്</translation>
-<translation id="859506441384380749">ഈ കോഡ് Brave-ന്റെ ആരംഭം കാലഘട്ടത്തിൽ ജെനറേറ്റുചെയ്തതാണ്, ആദ്യം നിങ്ങളുടെ മറ്റൊരു സംവിധാനത്തിൽ അപ്ഗ്രേഡ് ചെയ്യുക</translation>
+<translation id="859506441384380749">ഈ കോഡ് Growser-ന്റെ ആരംഭം കാലഘട്ടത്തിൽ ജെനറേറ്റുചെയ്തതാണ്, ആദ്യം നിങ്ങളുടെ മറ്റൊരു സംവിധാനത്തിൽ അപ്ഗ്രേഡ് ചെയ്യുക</translation>
 <translation id="3132642509209154999">ഈ കോഡ് കാലഹരണപ്പെട്ടു. നിങ്ങളുടെ മറ്റൊരു ഉപകരണത്തിൽ നിന്ന് പുതിയൊരു കോഡ് ജനറേറ്റ് ചെയ്ത് വീണ്ടും ശ്രമിക്കുക.</translation>
 <translation id="2859229680945501779">ഈ കോഡ് അസാധുവാണ്. നിങ്ങളുടെ ഉപകരണത്തിലെ സമയംയും ടൈംസോണും ശരിയായി സെറ്റ് ചെയ്തുണ്ടെന്നു പരിശോധിക്കുക.</translation>
 <translation id="2339730291919608488">സിങ്ക് ചെയിൻ വിടുക</translation>
 <translation id="115699408012835975">നിങ്ങൾ സിങ്ക് പുനഃസജ്ജീകരിച്ചാൽ, മറ്റൊരു ഉപകരണത്തിൽനിന്ന് സിങ്ക് ചെയിൻ കോഡ് വീണ്ടും നൽകേണ്ടി വരും. നിങ്ങൾക്ക് തുടങ്ങിയോട്ടാനുണ്ടോ എന്ന് ഉറപ്പുള്ളോ?</translation>
 <translation id="6092564993102418148">സിങ്ക് ചെയിനിൽ നിന്നുള്ള തിരഞ്ഞെടുക്കപ്പെട്ട ഉപകരണം നീക്കംചെയ്യാൻ നിങ്ങൾക്ക് താല്പര്യമാണോ?</translation>
-<translation id="4400414577602898435">മുന്നറിയിപ്പ്: ഇത് നിങ്ങളുടെ Brave ഡാറ്റ, അതിന്റെ ഭാഗമായ നിങ്ങളുടെ പാസ്‌വേർഡുകൾ ഉൾപ്പെടെ, ഈ കോഡ് വാക്കുകൾ നിർമ്മിച്ച ഉപകരണവുമായി പങ്കിടും.
+<translation id="4400414577602898435">മുന്നറിയിപ്പ്: ഇത് നിങ്ങളുടെ Growser ഡാറ്റ, അതിന്റെ ഭാഗമായ നിങ്ങളുടെ പാസ്‌വേർഡുകൾ ഉൾപ്പെടെ, ഈ കോഡ് വാക്കുകൾ നിർമ്മിച്ച ഉപകരണവുമായി പങ്കിടും.
 
  ദയവായിക്കു ഉറപ്പുവരുത്തുക ഈ കോഡ് വാക്കുകൾ നിങ്ങൾ സ്വന്തമാക്കുന്ന ഉപകരണത്തിൽ നിന്നാണ് നിർമ്മിച്ചത്.
 
  നിങ്ങൾക്ക് ഇത് ചെയ്യാൻ ആഗ്രഹമാണോ?</translation>
-<translation id="7443185843787879670">Brave നിങ്ങളുടെ ഓപ്പറേറ്റിങ് സിസ്റ്റത്തിന്റെ ഫയൽ സംഭരണത്തിൽ നിന്ന് സുരക്ഷിതത്തെ അപ്രാപിപ്പിക്കാതിരിയ്യുന്നു. ഇത് HTTPS വീക്ഷണം ഇല്ലാതല്ലാത്ത വൈമി മുതൽ എന്നിവയിലാണ് ഉപയോഗിക്കുന്നത്; ഇത് Brave സിങ്കിനെ നിങ്ങളുടെ ബ്രൗസർ പ്രൊഫൈൽ ഉപകരണങ്ങളോടു ചേർക്കാന് ആവശ്യമാണ്. ഇത് അർത്ഥം സൂചിപ്പിക്കും വിജയം നടത്തീൽ. ഈ പ്രശ്നം പരിഹരിക്കാൻ, ദയവായി <ph name="BEGIN_LINK_SYNC_GUIDE"/>Brave Sync troubleshooting guide<ph name="END_LINK_SYNC_GUIDE"/> നോക്കുക.</translation>
-<translation id="6802736947576520626">Brave Sync സജ്ജീകരണത്തിലെ പാസ്ഫ്രൈസ ഉപയോഗിച്ചിരിക്കുന്നതിന് വ്യത്യസ്തമായ സമ്മതം വിക്കി ഉപയോഗിച്ച് നിങ്ങളുടെ പാസ്ഫ്രൈസ ഡീക്രിപ്റ്റ് ചെയ്തില്ല. ഇത് പരിഹരിക്കാൻ എളുപ്പമായ ഒരു മാർഗം സിങ്ക് ചെയിൻ പുനഃസജ്ജമാക്കുകയും മറ്റുഉപകരണത്തിൽ നിന്നുള്ള പാസ്ഫ്രൈസ ഉപയോഗിച്ച് വീണ്ടും ചേർക്കുകയും ചെയ്യുക.</translation>
+<translation id="7443185843787879670">Growser നിങ്ങളുടെ ഓപ്പറേറ്റിങ് സിസ്റ്റത്തിന്റെ ഫയൽ സംഭരണത്തിൽ നിന്ന് സുരക്ഷിതത്തെ അപ്രാപിപ്പിക്കാതിരിയ്യുന്നു. ഇത് HTTPS വീക്ഷണം ഇല്ലാതല്ലാത്ത വൈമി മുതൽ എന്നിവയിലാണ് ഉപയോഗിക്കുന്നത്; ഇത് Growser സിങ്കിനെ നിങ്ങളുടെ ബ്രൗസർ പ്രൊഫൈൽ ഉപകരണങ്ങളോടു ചേർക്കാന് ആവശ്യമാണ്. ഇത് അർത്ഥം സൂചിപ്പിക്കും വിജയം നടത്തീൽ. ഈ പ്രശ്നം പരിഹരിക്കാൻ, ദയവായി <ph name="BEGIN_LINK_SYNC_GUIDE"/>Growser Sync troubleshooting guide<ph name="END_LINK_SYNC_GUIDE"/> നോക്കുക.</translation>
+<translation id="6802736947576520626">Growser Sync സജ്ജീകരണത്തിലെ പാസ്ഫ്രൈസ ഉപയോഗിച്ചിരിക്കുന്നതിന് വ്യത്യസ്തമായ സമ്മതം വിക്കി ഉപയോഗിച്ച് നിങ്ങളുടെ പാസ്ഫ്രൈസ ഡീക്രിപ്റ്റ് ചെയ്തില്ല. ഇത് പരിഹരിക്കാൻ എളുപ്പമായ ഒരു മാർഗം സിങ്ക് ചെയിൻ പുനഃസജ്ജമാക്കുകയും മറ്റുഉപകരണത്തിൽ നിന്നുള്ള പാസ്ഫ്രൈസ ഉപയോഗിച്ച് വീണ്ടും ചേർക്കുകയും ചെയ്യുക.</translation>
 <translation id="4889767840132638381">സിങ്ക് ചെയിൻ പുനഃസജ്ജമാക്കുക</translation>
 <translation id="1680065323266179640">സിങ്ക് അക്കൗണ്ട് ഇല്ലാതാക്കുക</translation>
 <translation id="9064376100690171155">മറ്റൊന്നു ലൈവ് ചെയ്യുക</translation>
-<translation id="228906529296554286">നിങ്ങളുടെ അക്കൗണ്ട്  ഡിലീറ്റ് ചെയ്താൽ, നിങ്ങളുടെ എൻക്രിപ്റ്റഡ് ഡാറ്റ Brave സെർവറുകളിൽ നിന്നു  നീക്കുകയും എല്ലാ സിഞ്ചിംഗ് ഉപകരണങ്ങളിൽ നിന്ന് സതിരെ ബ്രേഗ്ഗോളം  ചെയ്യുകയാണു.</translation>
+<translation id="228906529296554286">നിങ്ങളുടെ അക്കൗണ്ട്  ഡിലീറ്റ് ചെയ്താൽ, നിങ്ങളുടെ എൻക്രിപ്റ്റഡ് ഡാറ്റ Growser സെർവറുകളിൽ നിന്നു  നീക്കുകയും എല്ലാ സിഞ്ചിംഗ് ഉപകരണങ്ങളിൽ നിന്ന് സതിരെ ബ്രേഗ്ഗോളം  ചെയ്യുകയാണു.</translation>
 <translation id="7578652532113583362">അത് അവിടെ സുരക്ഷിതമായ  സൂക്ഷിച്ചിരിക്കുന്ന ഡാറ്റകളെ  ഇല്ല.</translation>
 <translation id="2516405584294312544">ഈ ഡിലീറ്റ് ആക മർത്തം മര വറായതിന ചാൻസ് ഇല്ല. ഉറക്കെ സിന്ത് തിന്നേണ്ട, കൂടാലിൻ നിങ്ങളുടെ ഉച്ഛയ്യൊഡ് ബ്രൗസൊ അറ  പുതിയ ബപ്പ് പറഞ്ഞു സ്വന്തം ഉപകരണങ്ങളിലും ഉണ്ടാക്കും.</translation>
 <translation id="4860996720371753023">അക്കൗണ്ട് നീക്കുന്നതിന...</translation>
@@ -746,7 +746,7 @@
 <translation id="4745128937437681681">ഓണിയൻ സർവീസുകൾ Tor വിൻഡോകളിക്ക് പുറത്തുപോവില്ല</translation>
 <translation id="6305528566126073902">സുരക്ഷിത സ്ട്രീമിംഗ് വീഡിയോ ഒപ്പം മറ്റ് ഉള്ളടക്കം ബ്രൗസറിൽ കാണാനും Widevine ഡിജിറ്റൽ അവകാശം മാനേജ്‌മെന്റ് (DRM) ഘടകം ഉപയോഗിക്കാനും</translation>
 <translation id="1314131187310290315">മാനിഫെസ്റ്റ് V2 എക്സ്റ്റെൻഷനുകൾ</translation>
-<translation id="2488433650767270565">ചുവടെ കാണുന്ന മൂടുവീരയണയ്ക്കുന്ന തീരുമാനാവത്തിൽ പ്രസാധിക്കമ്പെ നിലനിൽക്കും, പക്ഷെ നിന്നും Brave-ഇൽ എപ്പോഴും പ്രവർത്തിക്കാൻ കഴിയും. ഡൌൺലോഡ് ചെയ്യാനും ഇൻസ്റ്റാൾ ചെയ്യാനും അല്ലെങ്കിൽ അൺസ്റ്റാൾ ചെയ്യാനും ടോഗിൾ ചെയ്യുക.</translation>
+<translation id="2488433650767270565">ചുവടെ കാണുന്ന മൂടുവീരയണയ്ക്കുന്ന തീരുമാനാവത്തിൽ പ്രസാധിക്കമ്പെ നിലനിൽക്കും, പക്ഷെ നിന്നും Growser-ഇൽ എപ്പോഴും പ്രവർത്തിക്കാൻ കഴിയും. ഡൌൺലോഡ് ചെയ്യാനും ഇൻസ്റ്റാൾ ചെയ്യാനും അല്ലെങ്കിൽ അൺസ്റ്റാൾ ചെയ്യാനും ടോഗിൾ ചെയ്യുക.</translation>
 <translation id="6918225713618473646">ബ്രേവ് സെർവറുകളിൽ ഈ മാനിഫെസ്റ്റ് V2 എക്സ്റ്റൻഷനുകൾ ഹോസ്റ്റ് ചെയ്യുന്നു, എന്നാൽ അവയുടെ ഉള്ളടക്കം, സുരക്ഷ അല്ലെങ്കിൽ പെരുമാറ്റം പരിശോധിക്കുകയോ തിരിച്ച് നിശ്ചയിക്കുകയോ ചെയ്യുന്നില്ല. എക്സ്റ്റൻഷന്റെ ഔദ്യോഗിക പേജിൽ സഹായം കാണുക. V2 മാനിഫെസ്റ്റ് <ph name="BEGIN_LINK"/>ഇവിടെയാണു<ph name="END_LINK"/>. ബ്രേവിന്റെ പദ്ധതിയുമായി കൂടുതൽ വായിക്കുക.</translation>
 <translation id="578671172657727816">NoScript™ പ്രാപ്തമാക്കുക</translation>
 <translation id="9068475464170522036">NoScript™ ഒരു മാനിഫെസ്റ്റ് V2 എക്സ്റ്റൻഷൻ ആൺ, ഇത് ഒരു പേജ് ഓടിക്കുന്ന അല്ലെങ്കിൽ ഓടിക്കുന്നതിന്റെ ശ്രമിക്കുന്ന വ്യക്തിഗത സ്ക്രിപ്റ്റുകൾ തടയാൻ അല്ലെങ്കിൽ അൺബ്ലോക്ക് ചെയ്യാൻ നിങ്ങളെ അനുവദിക്കുന്നു.</translation>
@@ -761,18 +761,18 @@
 <translation id="4954512758656527938">സ്ഥിരസ്ഥിതിയായി ഇഥീരിയം വാലറ്റ്</translation>
 <translation id="7701023802820268122">സ്ഥിരസ്ഥിതിയായി സോളാന വാലറ്റ്</translation>
 <translation id="3991455933137809014">ഡീഫോൾട്ട് കാര്‍ഡാനോ വാലറ്റ്</translation>
-<translation id="8488282162676695335">Brave വാലറ്റ്</translation>
+<translation id="8488282162676695335">Growser വാലറ്റ്</translation>
 <translation id="6942354363301686374">എക്സ്റ്റെന്ഷനുകൾ (ഫാൾബാക്ക് ഇല്ല)</translation>
-<translation id="702381242110464396">എക്സ്റ്റെൻഷൻ (Brave Wallet fallback)</translation>
+<translation id="702381242110464396">എക്സ്റ്റെൻഷൻ (Growser Wallet fallback)</translation>
 <translation id="4718664830805652430">സ്റ്റാൻഡേർഡിന്റെ അടിസ്ഥാന കറൻസി</translation>
 <translation id="7992507032049865603">സ്വകാര്യ ക്രിപ്റ്റോകറൻസി</translation>
-<translation id="3044369626313583722">Brave വാലറ്റ് ബട്ടൺ കാണിക്കുക</translation>
+<translation id="3044369626313583722">Growser വാലറ്റ് ബട്ടൺ കാണിക്കുക</translation>
 <translation id="7568430944629653319">NFT കണ്ടെത്തൽ സജീവമാക്കുക</translation>
 <translation id="970496996377628529">നിങ്ങൾക്ക് സ്വന്തമായുള്ള NFTs മറ്റുള്ളവയുടെ APIs ഉപയോഗിച്ച് സ്വയമേവം വാലറ്റിലേക്ക് ചേർക്കുക.</translation>
 <translation id="8421293929927030255">സ്വകാര്യ വിൻഡോകളിൽ ബ്രേവ് വാലറ്റ് പ്രാപ്തമാക്കുക</translation>
 <translation id="1729224157015744629">മുന്നറിയിപ്പ്: സ്വകാര്യ വിൻഡോ സെഷനിൽ വാലറ്റ് വിലാസം വീണ്ടും ഉപയോഗിക്കുക എന്നത് ഒരു സൈറ്റിന് സ്വകാര്യ വിൻഡോ സെഷനേയും ഒരു സ്വകാര്യമല്ലാത്ത വിൻഡോ സെഷനേയും ബന്ധിപ്പിക്കാൻ സഹായകമാകാം</translation>
-<translation id="8239147115686034860">Brave Wallet ഒനം ഓട്ടോളുക്ക്.</translation>
-<translation id="414639769490080648">Brave Wallet ഓട്ടോളുടയ്ക്കുന്ന നമ്മും അറിയുമ.</translation>
+<translation id="8239147115686034860">Growser Wallet ഒനം ഓട്ടോളുക്ക്.</translation>
+<translation id="414639769490080648">Growser Wallet ഓട്ടോളുടയ്ക്കുന്ന നമ്മും അറിയുമ.</translation>
 <translation id="856371974127598760">വാലറ്റ് നെറ്റ്വർക്കുകൾ</translation>
 <translation id="5975930666279943472">വാലറ്റ് ട്രാൻസക്ഷൻ, നോൺസ് വിവരം മായ്ക്കുക</translation>
 <translation id="5693968582510626466">ഡെവലപ്പേര്‍ക്ക് നിരപേക്ഷ്യാവമായി ഇങ്ങനെ കെഴ്ത്തും പോയായിക്കാനാഗാം.</translation>
@@ -840,7 +840,7 @@
 <translation id="5781842473834867765">ലീയോ AI</translation>
 <translation id="1082960401708055995">സംഭാഷണ ഭണ്ഡാര നഗദ് ചെയ്തത് എല്ലാ സംഭാഷണ പ്രവർത്തനങ്ങളും അപ്രത്യക്ഷമാക്കുന്നു. ഈ പ്രവർത്തനം വീണ്ടും ഇല്ലാതല്ലകുന്നു.</translation>
 <translation id="1014480593522400586">Leo ഡാറ്റ കേടുപാടുകള്‍ പുനഃസജ്ജമാക്കുക, നീക്കംചെയ്യുക</translation>
-<translation id="5256236967791936135">Leo AI പുനക്രമീകരിക്കുന്നത് ബദല്‍ വെക്കുന്നതിന് താങ്കളെ അനുമതി ചെയ്യേണ്ടത് Brave Leo AI ഭാവിയിൽ ഉപയോഗിക്കാൻ ആവശ്യമാണ്. കൂടാതെ താങ്കളുടെ ചാറ്റ് ചരിത്രം, ഇഷ്ടാനുസരണങ്ങൾ, ഓർമ്മകൾ എല്ലാം നീക്കംചെയ്യും. അടുത്ത പരീക്ഷണം കഴിയുന്നില്ല.</translation>
+<translation id="5256236967791936135">Leo AI പുനക്രമീകരിക്കുന്നത് ബദല്‍ വെക്കുന്നതിന് താങ്കളെ അനുമതി ചെയ്യേണ്ടത് Growser Leo AI ഭാവിയിൽ ഉപയോഗിക്കാൻ ആവശ്യമാണ്. കൂടാതെ താങ്കളുടെ ചാറ്റ് ചരിത്രം, ഇഷ്ടാനുസരണങ്ങൾ, ഓർമ്മകൾ എല്ലാം നീക്കംചെയ്യും. അടുത്ത പരീക്ഷണം കഴിയുന്നില്ല.</translation>
 <translation id="5574059574002819179">ഓട്ടോകൊമ്പ്ലീറ്റ് നിർദ്ദേശങ്ങൾ ക്രമീകരിക്കുക</translation>
 <translation id="7942415993090181327">ചാറ്റ് ചരിത്രം</translation>
 <translation id="5084498230659987096">ബ്രേവ് ലിയോ പ്രൈവസി-ഫസ്റ്റ് AI ചാറ്റ് ചാറ്റ് അടുത്ത AI ന്റെ അടയാളങ്ങൾ ബ്രൌസർ പ്രകശ്യപ്പെട്ടു ആകുന്നു. ലിയോ നിങ്ങളുടെ ഡാറ്റയിൽ നിന്നും പഠിച്ചിട്ടില്ല അല്ലെങ്കിൽ മോഡൽ ട്രെയിനിംഗിനു ഉപയോഗിക്കുന്നതല്ല. എല്ലാ അപേക്ഷകളും അനോണിമൈസിങ് സെർവർ വഴി പ്രോക്സി ചെയ്യുന്നു.</translation>
@@ -916,8 +916,8 @@
 <translation id="7402116145895962069">നിന്റെ Ollama ലോക്കൽ മോഡലുകൾ സിങ്ക് ചെയ്യുക</translation>
 <translation id="4835154437390745810">Ollama দ্বারা നിയന്ത്രിക്കുന്നു</translation>
 <translation id="5985516785067818307">സർവേ പാനലിസ്റ്റ്</translation>
-<translation id="8347743943525229984">Brave സർവേകള്‍ അനുവദിക്കുക</translation>
-<translation id="3204080538332044581">Brave-നെ പുതിയ ടാബ് പേജില്‍ സ്വകാര്യ സർവേകളിലേക്ക് ലിങ്കുകള്‍ കാണിക്കാന്‍ അനുവദിക്കുന്നു. സർവെകള്‍ ഞങ്ങളുടെ ഫീച്ചറുകള്‍ മെച്ചപ്പെടുത്താന്‍ സഹായിക്കുന്നു കൂടാതെ ബ്രൗസര്‍ അടിസ്ഥാനമാക്കിയുള്ള പരസ്യ കാമ്പൈനുകളുടെ ഫലപ്രാപ്തി അളക്കുന്നു. <ph name="BEGIN_LINK"/>കൂടുതല്‍ അറിയുക<ph name="END_LINK"/></translation>
+<translation id="8347743943525229984">Growser സർവേകള്‍ അനുവദിക്കുക</translation>
+<translation id="3204080538332044581">Growser-നെ പുതിയ ടാബ് പേജില്‍ സ്വകാര്യ സർവേകളിലേക്ക് ലിങ്കുകള്‍ കാണിക്കാന്‍ അനുവദിക്കുന്നു. സർവെകള്‍ ഞങ്ങളുടെ ഫീച്ചറുകള്‍ മെച്ചപ്പെടുത്താന്‍ സഹായിക്കുന്നു കൂടാതെ ബ്രൗസര്‍ അടിസ്ഥാനമാക്കിയുള്ള പരസ്യ കാമ്പൈനുകളുടെ ഫലപ്രാപ്തി അളക്കുന്നു. <ph name="BEGIN_LINK"/>കൂടുതല്‍ അറിയുക<ph name="END_LINK"/></translation>
 <translation id="349846214503465941">Playlist സജ്ജമാക്കുക</translation>
 <translation id="7903608716704052878">ഓഫ്ലൈൻ വീക്ഷണത്തിനു ഫയലുകൾ ഓട്ടോമാറ്റിക്കായി ചേർക്കണം</translation>
 <translation id="384666453982355633">ഈ ഓപ്ഷൻ സ്വയമേവ മീഡിയ ഫയലുകൾ ക്യാഷെ ചെയ്യും, നിങ്ങൾക്ക് ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ലാതെ അവ പ്ലേ ചെയ്യാൻ കഴിയും</translation>

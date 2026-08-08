@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> lap bezárva}other{<ph name="MANY_CLOSED"/> lap bezárva}}</translation>
 <translation id="2894757982205307093">Új lap a csoportban</translation>
 <translation id="2918484639460781603">Ugrás a beállításokhoz</translation>
-<translation id="4691798003247738043">Brave | Az üzletről</translation>
+<translation id="4691798003247738043">Growser | Az üzletről</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> kiválasztva}other{<ph name="ITEMS_COUNT_MANY"/> kiválasztva}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Lap rögzítése}other{Lapok rögzítése}}</translation>
 <translation id="3008554597174452548">Termék nyomon követésének leállítása</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Teljes képernyős rács elrejtése</translation>
 <translation id="5076161749301278626">Lát véleményeket az üzletről?</translation>
 <translation id="5161254044473106830">Cím megadása kötelező</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{<ph name="AUTO_DELETE_DELAY_ONE"/> hónap elteltével a Brave automatikusan bezárja az inaktív lapokat és lapcsoportokat. Ezt a beállításokban módosíthatja.}other{<ph name="AUTO_DELETE_DELAY_MANY"/> hónap elteltével a Brave automatikusan bezárja az inaktív lapokat és lapcsoportokat. Ezt a beállításokban módosíthatja.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{<ph name="AUTO_DELETE_DELAY_ONE"/> hónap elteltével a Growser automatikusan bezárja az inaktív lapokat és lapcsoportokat. Ezt a beállításokban módosíthatja.}other{<ph name="AUTO_DELETE_DELAY_MANY"/> hónap elteltével a Growser automatikusan bezárja az inaktív lapokat és lapcsoportokat. Ezt a beállításokban módosíthatja.}}</translation>
 <translation id="5254233580564156835">Memóriahasználat: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">A legutóbbi lap</translation>
 <translation id="5380159289133845234">Ismétlődő lapok archiválása</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{<ph name="TABS_COUNT_ONE"/> lapot tartalmazó, <ph name="COLOR_NAME"/> színű lapcsoport bezárása.}other{<ph name="TABS_COUNT_MANY"/> lapot tartalmazó, <ph name="COLOR_NAME"/> színű lapcsoport bezárása.}}</translation>
 <translation id="5556417849629758491">Az üzlet adatainak megtekintése; a lehetőség a képernyő tetején található</translation>
 <translation id="5627941783489838464">Nincsenek lapfrissítések</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link a Brave-ból}other{<ph name="TABS_COUNT_MANY"/> link a Brave-ból}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link a Growser-ból}other{<ph name="TABS_COUNT_MANY"/> link a Growser-ból}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Lap áthelyezése balra}other{Lapok áthelyezése balra}}</translation>
 <translation id="5746204836956568669">Csoportosít <ph name="NUMBER_OF_TABS"/> lapot a gyorsabb munkavégzés érdekében?</translation>
 <translation id="5773295109010386583">Inaktív elemek automatikus bezárása</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> elem}other{<ph name="TABS_COUNT_MANY"/> elem}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> kijelölt elem visszaállítása}other{<ph name="TABS_COUNT_MANY"/> kijelölt elem visszaállítása}}</translation>
 <translation id="753732157349120914">Lapváltó</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> vélemény a Brave-on}other{<ph name="REVIEWS_COUNT_MANY"/> vélemény a Brave-on}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> vélemény a Growser-on}other{<ph name="REVIEWS_COUNT_MANY"/> vélemény a Growser-on}}</translation>
 <translation id="7559245342362162951">A csoportban lévő lapok teljes képernyős rácsszerkezetben való megjelenítése</translation>
 <translation id="7658239707568436148">Mégse</translation>
 <translation id="7688386659311034820">Inaktív lapok párbeszédpanel</translation>

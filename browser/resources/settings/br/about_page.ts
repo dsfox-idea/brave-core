@@ -29,8 +29,12 @@ const buildBraveVersionLink = (braveVersion: string, build: string) => {
   wrapper.setAttribute('id', 'release-notes')
   wrapper.setAttribute('target', '_blank')
   wrapper.setAttribute('rel', 'noopener noreferrer')
-  wrapper.setAttribute('href', 'https://brave.com/latest/')
-  wrapper.textContent = `Brave ${braveVersion} ${build}`
+  // growser: the product name and the release-notes target were hardcoded here,
+  // so the About page rendered "Brave <version>" under a Growser logo and sent
+  // the user to brave.com. We have no release-notes page yet, so the link
+  // points at our site root rather than at a URL that would 404.
+  wrapper.setAttribute('href', 'https://growser.org/')
+  wrapper.textContent = `Growser ${braveVersion} ${build}`
 
   return wrapper
 }

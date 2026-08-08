@@ -68,7 +68,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> картица је затворена}one{<ph name="MANY_CLOSED"/> картица је затворена}few{<ph name="MANY_CLOSED"/> картице су затворене}other{<ph name="MANY_CLOSED"/> картица је затворено}}</translation>
 <translation id="2894757982205307093">Нова картица у групи</translation>
 <translation id="2918484639460781603">Иди на подешавања</translation>
-<translation id="4691798003247738043">Brave | О овој продавници</translation>
+<translation id="4691798003247738043">Growser | О овој продавници</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> изабрана ставка}one{<ph name="ITEMS_COUNT_MANY"/> изабрана ставка}few{<ph name="ITEMS_COUNT_MANY"/> изабране ставке}other{<ph name="ITEMS_COUNT_MANY"/> изабраних ставки}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Закачи картицу}one{Закачи картице}few{Закачи картице}other{Закачи картице}}</translation>
 <translation id="3008554597174452548">Заустави праћење производа</translation>
@@ -127,7 +127,7 @@
 <translation id="5073204694187207510">Сакријте приказ мреже на целом екрану</translation>
 <translation id="5076161749301278626">Желите да видите рецензије продавница?</translation>
 <translation id="5161254044473106830">Наслов је обавезан</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_ONE"/> месеца. Ово можете да промените у подешавањима.}one{Brave аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_MANY"/> месеца. Ово можете да промените у подешавањима.}few{Brave аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_MANY"/> месеца. Ово можете да промените у подешавањима.}other{Brave аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_MANY"/> месеци. Ово можете да промените у подешавањима.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_ONE"/> месеца. Ово можете да промените у подешавањима.}one{Growser аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_MANY"/> месеца. Ово можете да промените у подешавањима.}few{Growser аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_MANY"/> месеца. Ово можете да промените у подешавањима.}other{Growser аутоматски затвара неактивне картице и групе картица после <ph name="AUTO_DELETE_DELAY_MANY"/> месеци. Ово можете да промените у подешавањима.}}</translation>
 <translation id="5254233580564156835">Коришћење меморије: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Последња картица</translation>
 <translation id="5380159289133845234">Архивирај дупликате картица</translation>
@@ -138,7 +138,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Затворите групу картица са <ph name="TABS_COUNT_ONE"/> картицом, боје <ph name="COLOR_NAME"/>.}one{Затворите групу картица са <ph name="TABS_COUNT_MANY"/> картицом, боје <ph name="COLOR_NAME"/>.}few{Затворите групу картица са <ph name="TABS_COUNT_MANY"/> картице, боје <ph name="COLOR_NAME"/>.}other{Затворите групу картица са <ph name="TABS_COUNT_MANY"/> картица, боје <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">Прегледајте информације о продавници, опцију која је доступна у врху екрана</translation>
 <translation id="5627941783489838464">Нема ажурирања картица</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> линк из Brave-а}one{<ph name="TABS_COUNT_MANY"/> линк из Brave-а}few{<ph name="TABS_COUNT_MANY"/> линкa из Brave-а}other{<ph name="TABS_COUNT_MANY"/> линковa из Brave-а}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> линк из Growser-а}one{<ph name="TABS_COUNT_MANY"/> линк из Growser-а}few{<ph name="TABS_COUNT_MANY"/> линкa из Growser-а}other{<ph name="TABS_COUNT_MANY"/> линковa из Growser-а}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Премести картицу улево}one{Премести картице улево}few{Премести картице улево}other{Премести картице улево}}</translation>
 <translation id="5746204836956568669">Желите да групишете картице (<ph name="NUMBER_OF_TABS"/>) да би радиле брже?</translation>
 <translation id="5773295109010386583">Аутоматски затварај неактивне ставке</translation>
@@ -193,7 +193,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ставка}one{<ph name="TABS_COUNT_MANY"/> ставка}few{<ph name="TABS_COUNT_MANY"/> ставке}other{<ph name="TABS_COUNT_MANY"/> ставки}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Вратите <ph name="TABS_COUNT_ONE"/> изабрану ставку}one{Вратите <ph name="TABS_COUNT_MANY"/> изабрану ставку}few{Вратите <ph name="TABS_COUNT_MANY"/> изабране ставке}other{Вратите <ph name="TABS_COUNT_MANY"/> изабраних ставки}}</translation>
 <translation id="753732157349120914">Пребацивач картица</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> рецензија из Brave-а}one{<ph name="REVIEWS_COUNT_MANY"/> рецензија из Brave-а}few{<ph name="REVIEWS_COUNT_MANY"/> рецензије из Brave-а}other{<ph name="REVIEWS_COUNT_MANY"/> рецензија из Brave-а}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> рецензија из Growser-а}one{<ph name="REVIEWS_COUNT_MANY"/> рецензија из Growser-а}few{<ph name="REVIEWS_COUNT_MANY"/> рецензије из Growser-а}other{<ph name="REVIEWS_COUNT_MANY"/> рецензија из Growser-а}}</translation>
 <translation id="7559245342362162951">Приказује картице групе у мрежи на целом екрану</translation>
 <translation id="7658239707568436148">Откажи</translation>
 <translation id="7688386659311034820">Дијалог са неактивним картицама</translation>

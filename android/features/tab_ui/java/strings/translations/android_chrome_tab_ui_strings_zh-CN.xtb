@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{已关闭 <ph name="ONE_CLOSED"/> 个标签页}other{已关闭 <ph name="MANY_CLOSED"/> 个标签页}}</translation>
 <translation id="2894757982205307093">在组内添加新标签页</translation>
 <translation id="2918484639460781603">前往“设置”</translation>
-<translation id="4691798003247738043">Brave | 关于此商店</translation>
+<translation id="4691798003247738043">Growser | 关于此商店</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{已选择 <ph name="ITEMS_COUNT_ONE"/> 项}other{已选择 <ph name="ITEMS_COUNT_MANY"/> 项}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{固定标签页}other{固定标签页}}</translation>
 <translation id="3008554597174452548">停止跟踪产品</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">隐藏“全屏网格状视图”按钮</translation>
 <translation id="5076161749301278626">查看商店评价？</translation>
 <translation id="5161254044473106830">必须提供标题</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave 会在 <ph name="AUTO_DELETE_DELAY_ONE"/> 个月后自动关闭闲置的标签页和标签页分组。您可以在设置中进行更改。}other{Brave 会在 <ph name="AUTO_DELETE_DELAY_MANY"/> 个月后自动关闭闲置的标签页和标签页分组。您可以在设置中进行更改。}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser 会在 <ph name="AUTO_DELETE_DELAY_ONE"/> 个月后自动关闭闲置的标签页和标签页分组。您可以在设置中进行更改。}other{Growser 会在 <ph name="AUTO_DELETE_DELAY_MANY"/> 个月后自动关闭闲置的标签页和标签页分组。您可以在设置中进行更改。}}</translation>
 <translation id="5254233580564156835">内存用量：<ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">您的最后一个标签页</translation>
 <translation id="5380159289133845234">归档重复的标签页</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{关闭包含 <ph name="TABS_COUNT_ONE"/> 个标签页的标签页分组，颜色为<ph name="COLOR_NAME"/>。}other{关闭包含 <ph name="TABS_COUNT_MANY"/> 个标签页的标签页分组，颜色为<ph name="COLOR_NAME"/>。}}</translation>
 <translation id="5556417849629758491">查看商店信息，屏幕顶部附近有可用选项</translation>
 <translation id="5627941783489838464">无标签页更新</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave 中的 <ph name="TABS_COUNT_ONE"/> 个链接}other{Brave 中的 <ph name="TABS_COUNT_MANY"/> 个链接}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Growser 中的 <ph name="TABS_COUNT_ONE"/> 个链接}other{Growser 中的 <ph name="TABS_COUNT_MANY"/> 个链接}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{左移标签页}other{左移标签页}}</translation>
 <translation id="5746204836956568669">要将 <ph name="NUMBER_OF_TABS"/> 个标签页分组，以提高工作效率吗？</translation>
 <translation id="5773295109010386583">自动关闭闲置标签页</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> 项}other{<ph name="TABS_COUNT_MANY"/> 项}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{恢复 <ph name="TABS_COUNT_ONE"/> 项所选内容}other{恢复 <ph name="TABS_COUNT_MANY"/> 项所选内容}}</translation>
 <translation id="753732157349120914">标签页切换器</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> 条来自 Brave 的评价}other{<ph name="REVIEWS_COUNT_MANY"/> 条来自 Brave 的评价}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> 条来自 Growser 的评价}other{<ph name="REVIEWS_COUNT_MANY"/> 条来自 Growser 的评价}}</translation>
 <translation id="7559245342362162951">以全屏网格状视图显示组中的标签页</translation>
 <translation id="7658239707568436148">取消</translation>
 <translation id="7688386659311034820">“闲置标签页”对话框</translation>

@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> onglet fermé}one{<ph name="MANY_CLOSED"/> onglet fermé}other{<ph name="MANY_CLOSED"/> onglets fermés}}</translation>
 <translation id="2894757982205307093">Nouvel onglet dans le groupe</translation>
 <translation id="2918484639460781603">Accéder aux paramètres</translation>
-<translation id="4691798003247738043">Brave | À propos de ce magasin</translation>
+<translation id="4691798003247738043">Growser | À propos de ce magasin</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> sélectionné}one{<ph name="ITEMS_COUNT_MANY"/> sélectionné}other{<ph name="ITEMS_COUNT_MANY"/> sélectionnés}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Épingler l'onglet}one{Épingler l'onglet}other{Épingler les onglets}}</translation>
 <translation id="3008554597174452548">Arrêter de suivre le produit</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Masquer la grille en plein écran</translation>
 <translation id="5076161749301278626">Afficher les avis sur le magasin ?</translation>
 <translation id="5161254044473106830">Veuillez saisir un titre.</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave ferme automatiquement les onglets et groupes d'onglets inactifs après <ph name="AUTO_DELETE_DELAY_ONE"/> mois. Vous pouvez modifier cette option dans les paramètres.}one{Brave ferme automatiquement les onglets et groupes d'onglets inactifs après <ph name="AUTO_DELETE_DELAY_MANY"/> mois. Vous pouvez modifier cette option dans les paramètres.}other{Brave ferme automatiquement les onglets et groupes d'onglets inactifs après <ph name="AUTO_DELETE_DELAY_MANY"/> mois. Vous pouvez modifier cette option dans les paramètres.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser ferme automatiquement les onglets et groupes d'onglets inactifs après <ph name="AUTO_DELETE_DELAY_ONE"/> mois. Vous pouvez modifier cette option dans les paramètres.}one{Growser ferme automatiquement les onglets et groupes d'onglets inactifs après <ph name="AUTO_DELETE_DELAY_MANY"/> mois. Vous pouvez modifier cette option dans les paramètres.}other{Growser ferme automatiquement les onglets et groupes d'onglets inactifs après <ph name="AUTO_DELETE_DELAY_MANY"/> mois. Vous pouvez modifier cette option dans les paramètres.}}</translation>
 <translation id="5254233580564156835">Utilisation de la mémoire : <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Votre dernier onglet</translation>
 <translation id="5380159289133845234">Archiver les onglets en double</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Fermer le groupe d'onglets de couleur <ph name="COLOR_NAME"/> comprenant <ph name="TABS_COUNT_ONE"/> onglet.}one{Fermer le groupe d'onglets de couleur <ph name="COLOR_NAME"/> comprenant <ph name="TABS_COUNT_MANY"/> onglet.}other{Fermer le groupe d'onglets de couleur <ph name="COLOR_NAME"/> comprenant <ph name="TABS_COUNT_MANY"/> onglets.}}</translation>
 <translation id="5556417849629758491">Afficher les infos sur le magasin, option disponible en haut de l'écran</translation>
 <translation id="5627941783489838464">Aucun onglet modifié</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> lien de Brave}one{<ph name="TABS_COUNT_MANY"/> lien de Brave}other{<ph name="TABS_COUNT_MANY"/> liens de Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> lien de Growser}one{<ph name="TABS_COUNT_MANY"/> lien de Growser}other{<ph name="TABS_COUNT_MANY"/> liens de Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Déplacer l'onglet vers la gauche}one{Déplacer l'onglet vers la gauche}other{Déplacer les onglets vers la gauche}}</translation>
 <translation id="5746204836956568669">Regrouper ces <ph name="NUMBER_OF_TABS"/> onglets pour travailler plus rapidement ?</translation>
 <translation id="5773295109010386583">Fermer automatiquement les éléments inactifs</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> élément}one{<ph name="TABS_COUNT_MANY"/> élément}other{<ph name="TABS_COUNT_MANY"/> éléments}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Restaurer <ph name="TABS_COUNT_ONE"/> élément sélectionné}one{Restaurer <ph name="TABS_COUNT_MANY"/> élément sélectionné}other{Restaurer <ph name="TABS_COUNT_MANY"/> éléments sélectionnés}}</translation>
 <translation id="753732157349120914">Sélecteur d'onglets</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> avis issus de Brave}one{<ph name="REVIEWS_COUNT_MANY"/> avis issus de Brave}other{<ph name="REVIEWS_COUNT_MANY"/> avis issus de Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> avis issus de Growser}one{<ph name="REVIEWS_COUNT_MANY"/> avis issus de Growser}other{<ph name="REVIEWS_COUNT_MANY"/> avis issus de Growser}}</translation>
 <translation id="7559245342362162951">Afficher les onglets du groupe dans une grille en plein écran</translation>
 <translation id="7658239707568436148">Annuler</translation>
 <translation id="7688386659311034820">Boîte de dialogue des onglets inactifs</translation>
