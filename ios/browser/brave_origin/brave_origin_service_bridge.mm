@@ -21,8 +21,8 @@ BraveOriginPolicyKey const BraveOriginPolicyKeyNewsDisabled =
 BraveOriginPolicyKey const BraveOriginPolicyKeyVPNDisabled =
     base::SysUTF8ToNSString(policy::key::kBraveVPNDisabled);
 BraveOriginPolicyKey const BraveOriginPolicyKeyP3AEnabled =
-    base::SysUTF8ToNSString(policy::key::kBraveP3AEnabled);
+    base::SysUTF8ToNSString(policy::key::kGrowserP3AEnabled);
 BraveOriginPolicyKey const BraveOriginPolicyKeyStatsPingEnabled =
     base::SysUTF8ToNSString(policy::key::kBraveStatsPingEnabled);
 BraveOriginPolicyKey const BraveOriginPolicyKeyPlaylistEnabled =
-    base::SysUTF8ToNSString(policy::key::kBravePlaylistEnabled);
+    base::SysUTF8ToNSString(policy::key::kGrowserPlaylistEnabled);

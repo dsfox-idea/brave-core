@@ -1,10 +1,10 @@
-caption: Specify Brave Sync server URL
+caption: Specify Growser Sync server URL
 default: null
 desc: |-
-  Specify the URL for Brave to use with its sync service.
+  Specify the URL for Growser to use with its sync service.
 
-  If this policy is set to a non empty string, that string will be used as the URL with Brave Sync.
-  If this policy is not set, the URL will default to Brave's sync server URL.
+  If this policy is set to a non empty string, that string will be used as the URL with Growser Sync.
+  If this policy is not set, the URL will default to Growser's sync server URL.
   The provided URL must use the `https` scheme.
 example_value: https://sync-v2.brave.com/v2
 features:
@@ -15,7 +15,7 @@ features:
 items:
 - caption: Example of setting a host
   value: https://sync-v2.brave.com/v2
-- caption: Default to Brave's sync service
+- caption: Default to Growser's sync service
   value: null
 owners:
 - alexey@brave.com

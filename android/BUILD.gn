@@ -42,7 +42,7 @@ action_with_pydeps("brave_policy_constants_java_srcjar") {
   # Collect all YAML policy files as inputs (excluding .group.details.yaml)
   _policy_yaml_inputs = []
   foreach(policy_file, brave_policies) {
-    if (policy_file != "BraveSoftware/.group.details.yaml") {
+    if (policy_file != "Growser/.group.details.yaml") {
       _policy_yaml_inputs += [ "//brave/components/policy/resources/templates/policy_definitions/$policy_file" ]
     }
   }
@@ -53,7 +53,7 @@ action_with_pydeps("brave_policy_constants_java_srcjar") {
   args = [
     "--policy-dir",
     rebase_path(
-        "//brave/components/policy/resources/templates/policy_definitions/BraveSoftware",
+        "//brave/components/policy/resources/templates/policy_definitions/Growser",
         root_build_dir),
     "--output-srcjar",
     rebase_path("$target_gen_dir/$target_name.srcjar", root_build_dir),
