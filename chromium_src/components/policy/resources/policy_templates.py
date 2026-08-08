@@ -76,9 +76,30 @@ def sync_policy_files():
     with open("gen/brave_policies_sync_config.json", "r") as f:
         brave_policies = json.load(f)
 
-        for policy in brave_policies["policies"]:
-            copy_only_if_modified(f'{brave_policies["copy_from"]}/{policy}',
-                                  f'{brave_policies["copy_to"]}/{policy}')
+    copy_from = brave_policies["copy_from"]
+    copy_to = brave_policies["copy_to"]
+    for policy in brave_policies["policies"]:
+        copy_only_if_modified(f'{copy_from}/{policy}', f'{copy_to}/{policy}')
+
+    # growser (#62): drop copies whose source is gone.
+    #
+    # copy_only_if_modified only ever writes. A policy removed from the list
+    # stayed behind in Chromium's tree and kept being generated into
+    # policy_templates.json and policy_constants.h - so the removal built
+    # cleanly, changed nothing, and gave no hint why. Found by checking the
+    # generated header rather than trusting a green build.
+    #
+    # Pruning is limited to the group directories the list itself names, so
+    # Chromium's own policy definitions are never touched.
+    wanted = set(brave_policies["policies"])
+    groups = {os.path.dirname(p) for p in wanted if os.path.dirname(p)}
+    for group in groups:
+        dest_dir = os.path.join(copy_to, group)
+        if not os.path.isdir(dest_dir):
+            continue
+        for name in os.listdir(dest_dir):
+            if f'{group}/{name}' not in wanted:
+                os.remove(os.path.join(dest_dir, name))
 
 
 def copy_only_if_modified(src, dst):
