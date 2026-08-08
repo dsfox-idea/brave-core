@@ -105,8 +105,16 @@ brave_updater_branding = {
   IPolicyStatusValueSystemGUID = "2592AA42-E23E-43C8-829A-46ECE27A5AA3"
 
   declare_args() {
-    # Omaha 4 update server:
-    update_check_url =
-        "https://updates.bravesoftware.com/prod/service/update2/json"
+    # Omaha 4 update server.
+    #
+    # growser (#51): ours, not Brave's. The rest of this scope is still Brave's
+    # - the product names and the ~40 COM interface GUIDs - and rebranding it is
+    # the bulk of #51. This one line comes first because it is the only one that
+    # is a live outbound address: kBraveUseOmaha4 is FEATURE_DISABLED_BY_DEFAULT
+    # today, but a feature flag can be flipped remotely (that is what #56 is),
+    # and #40 exists precisely so that flipping it cannot point our users at
+    # Brave. The endpoint does not answer yet; a 404 is the correct failure
+    # while there is no update server.
+    update_check_url = "https://backend.growser.org/update"
   }
 }
