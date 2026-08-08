@@ -110,6 +110,23 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
     return;
   }
 
+  // Payload downloads for components and the CRLSet. Also hardcoded to Brave's
+  // redirector, so the update check could succeed while every download 403'd.
+  // Empty means "do not redirect": the client fetches from Google's CDN.
+  std::string_view redirector = BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT);
+  if (!redirector.empty() &&
+      (crlSet_pattern1->MatchesURL(request_url) ||
+       crlSet_pattern2->MatchesURL(request_url) ||
+       crlSet_pattern3->MatchesURL(request_url) ||
+       crlSet_pattern4->MatchesURL(request_url) ||
+       gvt1_pattern->MatchesURL(request_url) ||
+       googleDl_pattern->MatchesURL(request_url))) {
+    replacements.SetSchemeStr("https");
+    replacements.SetHostStr(redirector);
+    *new_url = request_url.ReplaceComponents(replacements);
+    return;
+  }
+
   if (autofill_pattern->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
     replacements.SetHostStr(kBraveStaticProxy);
@@ -123,47 +140,11 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
     return;
   }
 
-  if (crlSet_pattern1->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (crlSet_pattern2->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (crlSet_pattern3->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (crlSet_pattern4->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (gvt1_pattern->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr(kBraveRedirectorProxy);
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (googleDl_pattern->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr(kBraveRedirectorProxy);
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 }
 
 }  // namespace brave
