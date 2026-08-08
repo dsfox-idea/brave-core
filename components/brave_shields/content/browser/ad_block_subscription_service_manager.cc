@@ -100,6 +100,16 @@ SubscriptionInfo BuildInfoFromDict(const GURL& sub_url,
 const base::FilePath::CharType kSubscriptionsDir[] =
     FILE_PATH_LITERAL("FilterListSubscriptionCache");
 
+// growser (#57): the filter lists seeded on first run, taken from their own
+// publishers. Ads, tracking, and a Russian-language list because that is our
+// audience. Verified to serve a plain Adblock Plus list over HTTPS; the RU one
+// is spelled as its post-redirect URL so we do not depend on the redirect.
+constexpr const char* kGrowserDefaultSubscriptions[] = {
+    "https://easylist.to/easylist/easylist.txt",
+    "https://easylist.to/easylist/easyprivacy.txt",
+    "https://easylist-downloads.adblockplus.org/ruadlist.txt",
+};
+
 }  // namespace
 
 SubscriptionInfo::SubscriptionInfo() = default;
@@ -420,6 +430,30 @@ void AdBlockSubscriptionServiceManager::LoadSubscriptionServices() {
 
   if (!local_state_) {
     return;
+  }
+
+  // growser (#57): seed the default filter lists as subscriptions.
+  //
+  // Upstream delivers them through the component updater, which our build
+  // cannot use - go-updater.brave.com requires Brave's own service key and
+  // answers 403 without it, so every component sits at version 0.0.0.0 and
+  // Shields has nothing to block with. Subscriptions do not take that path:
+  // they are ordinary background downloads, so they work.
+  //
+  // The lists come from their own publishers rather than from a repackager,
+  // and the payload is the same either way - the component provider reads a
+  // plain "list.txt" too.
+  //
+  // Seeded once, tracked by its own pref: a default list the user deletes in
+  // settings must stay deleted rather than reappear on the next start.
+  if (!local_state_->GetBoolean(prefs::kAdBlockDefaultSubscriptionsSeeded)) {
+    local_state_->SetBoolean(prefs::kAdBlockDefaultSubscriptionsSeeded, true);
+    for (const char* url : kGrowserDefaultSubscriptions) {
+      const GURL sub_url(url);
+      if (sub_url.is_valid()) {
+        CreateSubscription(sub_url);
+      }
+    }
   }
 
   subscriptions_ =

@@ -25,6 +25,10 @@ inline constexpr char kAdBlockRegionalFilters[] =
     "brave.ad_block.regional_filters";
 inline constexpr char kAdBlockListSubscriptions[] =
     "brave.ad_block.list_subscriptions";
+// growser: set once the default filter list subscriptions have been seeded, so
+// a user who deletes them does not get them back on the next start (growser#57).
+inline constexpr char kAdBlockDefaultSubscriptionsSeeded[] =
+    "brave.ad_block.default_subscriptions_seeded";
 inline constexpr char kAdBlockDebugMode[] = "brave.ad_block.debug_mode";
 inline constexpr char kAdBlockDeveloperMode[] = "brave.ad_block.developer_mode";
 

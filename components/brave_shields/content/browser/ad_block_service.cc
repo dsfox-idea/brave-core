@@ -447,6 +447,8 @@ void RegisterPrefsForAdBlockService(PrefRegistrySimple* registry) {
   registry->RegisterStringPref(prefs::kAdBlockCustomFilters, std::string());
   registry->RegisterDictionaryPref(prefs::kAdBlockRegionalFilters);
   registry->RegisterDictionaryPref(prefs::kAdBlockListSubscriptions);
+  registry->RegisterBooleanPref(prefs::kAdBlockDefaultSubscriptionsSeeded,
+                                false);
   registry->RegisterBooleanPref(prefs::kAdBlockCheckedDefaultRegion, false);
   registry->RegisterBooleanPref(prefs::kAdBlockCheckedAllDefaultRegions, false);
   registry->RegisterBooleanPref(prefs::kAdBlockOnlyModeEnabled, false);
