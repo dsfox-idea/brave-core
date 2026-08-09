@@ -1,7 +1,7 @@
 caption: Control adblock behavior
 default: null
 desc: |-
-  This policy determines how Brave handles ads on web pages.
+  This policy determines how <ph name="PRODUCT_NAME">$1<ex>Growser</ex></ph> handles ads on web pages.
 
   If this policy is set to 1 (AllowAds), ads are allowed to be displayed on websites.
 
