@@ -1,0 +1,26 @@
+diff --git a/chrome/browser/metrics/chrome_metrics_services_manager_client.cc b/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
+index e8ac3896642e88e204c240b5818b08a1e6029519..bdc51b30e180a2fe0e18f7b70b3cbc0579fa5208 100644
+--- a/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
++++ b/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
+@@ -394,6 +394,21 @@ void ChromeMetricsServicesManagerClient::UpdateRunningServices(
+   // consent, and as mentioned, on the crashpad side we check both. See
+   // SetUploadConsent() in components/crash/core/app/crashpad.cc for how this
+   // gets used.
++#if defined(OFFICIAL_BUILD)
+   SetUploadConsent_ExportThunk(may_record && may_upload);
++#else
++  // growser (#66): crash uploads are not gated on metrics consent here.
++  //
++  // chrome_elf sets the consent true at startup (see GetCollectStatsConsent in
++  // chrome/app/chrome_crash_reporter_client_win.cc), and this call used to
++  // overwrite it a moment later with the metrics state - which is off in our
++  // build by construction (#38, #39). The visible symptom was a minidump that
++  // sat in Crashpad\reports forever while settings.dat kept uploads_enabled=0,
++  // with nothing anywhere saying why.
++  //
++  // The registry write above is left alone: it carries the crash sampling
++  // state, not consent.
++  SetUploadConsent_ExportThunk(true);
++#endif
+ }
+ #endif  // BUILDFLAG(IS_WIN)

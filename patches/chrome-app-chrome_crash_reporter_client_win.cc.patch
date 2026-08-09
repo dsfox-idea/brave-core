@@ -1,0 +1,29 @@
+diff --git a/chrome/app/chrome_crash_reporter_client_win.cc b/chrome/app/chrome_crash_reporter_client_win.cc
+index e59af188c8140cbbc16f14bf49ef162cace60dc9..45c9891d60c45997e5f8bb60098ecdead18490c7 100644
+--- a/chrome/app/chrome_crash_reporter_client_win.cc
++++ b/chrome/app/chrome_crash_reporter_client_win.cc
+@@ -142,7 +142,24 @@ bool ChromeCrashReporterClient::IsRunningUnattended() {
+ }
+ 
+ bool ChromeCrashReporterClient::GetCollectStatsConsent() {
++#if !defined(OFFICIAL_BUILD)
++  // growser (#66): consent is implied for our own non-official product, the
++  // same decision #33 made for the other platforms in
++  // chrome/app/chrome_crash_reporter_client.cc. Windows needs its own version
++  // because it has a separate client and a different mechanism entirely:
++  // consent lives in the registry (usagestats under the ClientState key) and
++  // the browser writes it there from the metrics-reporting preference. We
++  // deliberately removed that telemetry (#38, #39), so the browser writes 0 on
++  // every start and crash uploads could never happen - the value cannot even be
++  // set by hand, because it is overwritten at startup.
++  //
++  // This decouples crash reports from metrics consent rather than turning
++  // telemetry back on. Policy still wins: SetUploadConsent() consults
++  // ReportingIsEnforcedByPolicy() before this value is used at all.
++  return true;
++#else
+   return install_static::GetCollectStatsConsent();
++#endif
+ }
+ 
+ bool ChromeCrashReporterClient::GetCollectStatsInSample() {
