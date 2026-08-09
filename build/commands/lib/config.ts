@@ -356,10 +356,10 @@ export class Config {
   }
 
   isOfficialBuild() {
-    // growser: official-сборка требует ключи сервисов Brave (assert
-    // brave_services_key != "") и точный macOS SDK 26.5, а также включает
-    // ThinLTO. Для нашего форка на этой машине это недоступно, поэтому по флагу
-    // GROWSER_NON_OFFICIAL=1 собираем оптимизированный НЕ-official Release.
+    // growser: an official build wants Brave's service keys (assert
+    // brave_services_key != "") and the exact macOS SDK 26.5, and it turns on
+    // ThinLTO. None of that is available to our fork here, so with
+    // GROWSER_NON_OFFICIAL=1 we build an optimised NON-official Release.
     if (process.env.GROWSER_NON_OFFICIAL === '1') {
       return false
     }

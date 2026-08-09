@@ -238,7 +238,7 @@ IN_PROC_BROWSER_TEST_F(BraveToolbarViewTest_VPNEnabled, VPNButtonVisibility) {
   auto* toolbar = static_cast<BraveToolbarView*>(browser_view->toolbar());
   auto* prefs = browser()->profile()->GetPrefs();
 
-  // growser: кнопка VPN скрыта по умолчанию (#27).
+  // growser: the VPN button is hidden by default (#27).
   EXPECT_FALSE(prefs->GetBoolean(brave_vpn::prefs::kBraveVPNShowButton));
   EXPECT_FALSE(toolbar->brave_vpn_button()->GetVisible());
   EXPECT_EQ(browser_view->GetAnchorViewForBraveVPNPanel(),
@@ -314,11 +314,11 @@ IN_PROC_BROWSER_TEST_F(BraveToolbarViewTest_AIChatEnabled,
                        AIChatButtonVisibility) {
   auto* prefs = browser()->profile()->GetPrefs();
 
-  // growser: кнопка Leo скрыта по умолчанию (#16).
+  // growser: the Leo button is hidden by default (#16).
   EXPECT_FALSE(prefs->GetBoolean(ai_chat::prefs::kBraveAIChatShowToolbarButton));
   EXPECT_FALSE(is_ai_chat_button_shown(browser()));
 
-  // Hide button (уже скрыта по умолчанию — проверяем идемпотентность).
+  // Hide button (already hidden by default - this checks idempotence).
   prefs->SetBoolean(ai_chat::prefs::kBraveAIChatShowToolbarButton, false);
   EXPECT_FALSE(is_ai_chat_button_shown(browser()));
 

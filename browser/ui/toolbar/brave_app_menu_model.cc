@@ -167,10 +167,10 @@ void BraveAppMenuModel::BuildBraveProductsSection() {
   // Needs to add separator as this section is brave specific section.
   bool need_separator = false;
 
-  // growser: пункты «ИИ-помощник Leo», «Кошелёк» (Wallet) и «Growser VPN»
-  // убраны из главного меню (#27) — это точки входа в удаляемые фичи.
-  // Команды/акселераторы не трогаем (чтобы не ломать command-controller).
-  // Полное удаление функционала — backlog #4/#6/#23.
+  // growser: the "Leo AI assistant", "Wallet" and "Growser VPN" items are
+  // out of the main menu (#27) - entry points into features being removed.
+  // The commands and accelerators are left alone, so command-controller
+  // keeps working. Removing the features themselves is #4/#6/#23.
 
 #if defined(TOOLKIT_VIEWS)
   if (sidebar::CanUseSidebar(browser())) {

@@ -113,8 +113,8 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
         forward: ViewType.ImportSucceeded,
         fail: ViewType.ImportFailed,
       },
-      // ImportSucceeded — терминал (self-loop): SetupComplete сам открывает
-      // welcome-complete URL по завершении Lottie-анимации и не использует forward.
+      // ImportSucceeded is terminal (a self-loop): SetupComplete opens the
+      // welcome-complete URL itself when the Lottie finishes, and never uses forward.
       [ViewType.ImportSucceeded]: { forward: ViewType.ImportSucceeded },
       [ViewType.ImportFailed]: {
         forward: nextAfterImport

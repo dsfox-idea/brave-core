@@ -918,13 +918,16 @@
       <part file="brave_news_strings.grdp" />
       <part file="commands.grdp" />
       <part file="speedreader_strings.grdp" />
-      <!-- growser: AiChat-строки генерируем БЕЗУСЛОВНО (#4, compile-out Leo).
-           WebUI-слой Brave не держит guard'ы (TODO #53190): NTP imports_from
-           тащит ai_chat-ресурсы в граф компиляции при любом enable_ai_chat, а те
-           статически импортят AiChatStrings. Под enable_ai_chat=false оригинальный
-           <if expr="enable_ai_chat"> вырезает строки → TS2305. Безусловный include
-           кораблит неиспользуемые строки (мёртвые байты), но Leo-точки входа
-           функционально выпиливаются C++-слоем. Строки без <if> внутри grdp. -->
+      <!-- growser: the AiChat strings are generated UNCONDITIONALLY (#4, Leo is
+           compiled out). Brave's WebUI layer has no guards for this
+           (brave-browser#53190): the NTP's imports_from pulls the ai_chat
+           resources into the compilation graph whatever enable_ai_chat is set
+           to, and those statically import AiChatStrings. With
+           enable_ai_chat=false the original <if expr="enable_ai_chat"> removes
+           the strings and TypeScript fails with TS2305. Including them
+           unconditionally ships strings nobody reads - dead bytes in the .pak -
+           while the Leo entry points are removed by the C++ layer instead. The
+           strings carry no <if> inside the grdp. -->
       <part file="ai_chat_prompts.grdp" />
       <part file="ai_chat_ui_strings.grdp" />
       <if expr="enable_brave_ai_chat_agent_profile">

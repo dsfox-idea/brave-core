@@ -95,10 +95,10 @@ function getPageVisibility () {
     privacy: alwaysTrueProxy,
     // custom properties
     braveSync: !loadTimeData.getBoolean('isSyncDisabled'),
-    // growser: разделы Web3/Wallet и Leo скрыты из настроек (#16) — как в
-    // guest-mode выше. Прячем на уровне видимости страниц (меню + роуты),
-    // C++-гейты не трогаем (их тесты остаются зелёными). Полное удаление из
-    // билда — #4/#6.
+    // growser: the Web3/Wallet and Leo sections are hidden from settings
+    // (#16), the same way guest mode hides its own above. Hidden at the
+    // page-visibility level (menu and routes); the C++ gates are left alone,
+    // so their tests stay green. Removing them from the build is #4/#6.
     // <if expr="enable_brave_wallet">
     braveWallet: false,
     // </if>

@@ -55,7 +55,7 @@ struct SidebarItem {
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
       + 1  // kBraveNews
 #endif
-      // growser: kChatUI (Leo) и kBraveTalk убраны из дефолтной боковой панели.
+      // growser: kChatUI (Leo) and kBraveTalk are out of the default sidebar.
       ;
 
   static SidebarItem Create(const std::u16string& title,

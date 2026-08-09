@@ -23,11 +23,11 @@ void RegisterProfilePrefs(PrefRegistrySimple* registry) {
 #else
     registry->RegisterBooleanPref(kBraveChatStorageEnabled, true);
 #endif
-    // growser: омнибокс-провайдер «Ask Leo» (Leo-подсказки в адресной строке)
-    // скрыт по умолчанию (#16). Pref-дефолт — не master-фича: флип не ломает
-    // тесты (leo_provider_unittest переопределяет IsLeoProviderEnabled→true и
-    // не зависит от дефолта). Сам провайдер остаётся зарегистрированным, но
-    // Start() не запускается → подсказок Leo нет.
+    // growser: the "Ask Leo" omnibox provider (Leo suggestions in the address
+    // bar) is hidden by default (#16). A pref default is not a master switch:
+    // flipping it breaks no tests (leo_provider_unittest overrides
+    // IsLeoProviderEnabled to true and does not depend on the default). The
+    // provider stays registered, but Start() never runs, so there are no hints.
     registry->RegisterBooleanPref(kBraveChatAutocompleteProviderEnabled, false);
     registry->RegisterBooleanPref(kUserDismissedPremiumPrompt, false);
     registry->RegisterBooleanPref(kUserDismissedStorageNotice, false);
@@ -40,9 +40,9 @@ void RegisterProfilePrefs(PrefRegistrySimple* registry) {
     // 0 is not linked
     registry->RegisterIntegerPref(kBraveChatSubscriptionLinkStatusAndroid, 0);
 #endif
-    // growser: подменю «Leo Tools» в контекст-меню страницы скрыто (#27).
+    // growser: the "Leo Tools" submenu in the page context menu is hidden (#27).
     registry->RegisterBooleanPref(kBraveAIChatContextMenuEnabled, false);
-    // growser: кнопка Leo в тулбаре скрыта по умолчанию (#16).
+    // growser: the Leo toolbar button is hidden by default (#16).
     registry->RegisterBooleanPref(kBraveAIChatShowToolbarButton, false);
     registry->RegisterBooleanPref(kBraveAIChatToolbarButtonOpensFullPage,
                                   false);

@@ -76,8 +76,8 @@ const IconButton = styled.button`
   }
 `
 
-// growser: логотип приватной вкладки — зелёное кольцо+G (белое кольцо для
-// контраста на тёмном фоне) + wordmark «Growser» (зелёная G, светлые буквы).
+// growser: the private-tab logo is a green ring plus G (the ring is white for
+// contrast on the dark background) and a "Growser" wordmark (green G, light letters).
 function BraveSearchLogo () {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="248" height="64" fill="none" aria-label="Growser">

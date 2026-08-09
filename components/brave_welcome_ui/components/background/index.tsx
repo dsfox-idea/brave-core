@@ -102,9 +102,9 @@ function Background (props: BackgroundProps) {
   const handleImgLoad = () => {
     setHasLoaded(true)
 
-    // growser (#11): статичный ночной композит — вызываем onLoad сразу, иначе
-    // не переключится вид и не отрисуется контент онбординга. Плюс прежнее
-    // поведение: мгновенный onLoad, когда анимации отключены.
+    // growser (#11): a static night composite - call onLoad straight away, or
+    // the view never switches and the onboarding content is not drawn. This
+    // also matches the previous behaviour when animations were disabled.
     if (props.static || !shouldPlayAnimations) {
       props.onLoad?.()
     }

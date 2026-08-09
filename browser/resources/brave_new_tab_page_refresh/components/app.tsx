@@ -103,8 +103,8 @@ export function App() {
                   tabs={['stats', 'news']}
                 />
               )}
-              {/* growser: правый стек виджетов (VPN/Rewards/Talk) убран с NTP
-                  (#19 и далее) — это удаляемые фичи. */}
+              {/* growser: the right-hand widget stack (VPN/Rewards/Talk) is
+                  gone from the NTP (#19 onwards) - those are features we remove. */}
             </>
           )}
         </div>

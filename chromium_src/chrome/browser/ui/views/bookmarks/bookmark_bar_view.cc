@@ -9,12 +9,12 @@
 #include "components/bookmarks/browser/bookmark_model.h"
 #include "ui/views/controls/highlight_path_generator.h"
 
-// growser: промо/nudge импорта закладок выпилен из билда (#22). Раньше здесь
-// был Brave-override, инжектирующий layout «Import bookmarks»-инструкций в
-// upstream bookmark_bar_view.cc через макрос BRAVE_LAYOUT + класс
-// BookmarkBarInstructionsView (создавался на пустой панели). Класс удалён,
-// BRAVE_LAYOUT — empty (no-op): навязчивой подсказки нет. Сам импорт закладок
-// как функцию меню не трогаем.
+// growser: the bookmark-import promo/nudge is out of the build (#22). There
+// used to be a Brave override here injecting the "Import bookmarks"
+// instruction layout into upstream bookmark_bar_view.cc through the
+// BRAVE_LAYOUT macro and a BookmarkBarInstructionsView, created whenever the
+// bar was empty. The class is gone and BRAVE_LAYOUT is empty, so there is no
+// nagging hint. Bookmark import as a menu item is untouched.
 #define BRAVE_LAYOUT
 #include <chrome/browser/ui/views/bookmarks/bookmark_bar_view.cc>
 #undef BRAVE_LAYOUT

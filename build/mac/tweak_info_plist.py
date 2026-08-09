@@ -129,12 +129,12 @@ def Main():
         plist['KSProductID'] = plist['CFBundleIdentifier']
         plist['KSVersion'] = plist['CFBundleShortVersionString']
 
-    # growser: CFBundleIconName ссылается на ассет AppIcon из Assets.car, где
-    # всё ещё лежит лев Brave. Этот ключ перекрывает CFBundleIconFile (app.icns =
-    # наша «G»), из-за чего док и — главное — иконка macOS-уведомлений (баннер
-    # «…хочет слать вам уведомления» и сами уведомления) показывают льва Brave.
-    # Убираем ключ для всех сборок и каналов: иконкой становится app.icns.
-    # Assets.car (лев Brave) остаётся в бандле неиспользуемым — переживает бампы.
+    # growser: CFBundleIconName points at the AppIcon asset in Assets.car,
+    # where the Brave lion still lives. That key wins over CFBundleIconFile
+    # (app.icns = our "G"), which is why the dock and - what matters more -
+    # the macOS notification icon (the "... wants to send notifications"
+    # banner and the notifications themselves) showed the Brave lion. The key
+    # is stripped for every build and channel, so app.icns becomes the icon.
     _RemoveKeys(plist, 'CFBundleIconName')
 
     # Now that all keys have been mutated, rewrite the file.

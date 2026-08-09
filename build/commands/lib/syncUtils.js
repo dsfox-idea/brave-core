@@ -211,9 +211,9 @@ function syncChromium(program) {
   const requiredChromiumRef = config.getProjectRef('chrome')
   let args = ['sync', '--nohooks', '--reset', '--upstream']
 
-  // growser: ограничиваем параллелизм gclient. По умолчанию он равен числу ядер
-  // (здесь 18) => сотни одновременных git-fetch к chromium.googlesource.com
-  // ловят HTTP 429 (rate limit) и sync падает. Надёжность важнее скорости.
+  // growser: cap gclient's parallelism. It defaults to the core count (18
+  // here), which means hundreds of concurrent git fetches against
+  // chromium.googlesource.com, HTTP 429, and a failed sync. Reliability first.
   args.push('--jobs', '4')
 
   if (!gclientWithoutRevision) {

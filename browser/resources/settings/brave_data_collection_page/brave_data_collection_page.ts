@@ -79,9 +79,9 @@ extends SettingBraveDataCollectionPageElementBase
   override ready() {
     super.ready()
 
-    // growser: P3A-тоггл убран (#21) — teleмetрия выпилена. P3A-init
+    // growser: the P3A toggle is gone (#21) - telemetry is removed. Its
     // (setP3AEnabledPref / p3a-enabled-changed listener / getP3AEnabled)
-    // удалён вместе с тогглом. Остальные тогглы — не P3A.
+    // wiring went with it. The remaining toggles are not P3A.
 
     this.isStatsReportingEnabledManaged_ = loadTimeData.getBoolean('isStatsReportingEnabledManaged')
 

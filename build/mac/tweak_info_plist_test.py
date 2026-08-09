@@ -14,14 +14,14 @@ import tweak_info_plist
 
 
 def _make_plist(path):
-    """Минимальный app-Info.plist с двумя иконками-ключами."""
+    """A minimal app-Info.plist carrying both icon keys."""
     with open(path, 'wb') as f:
         plistlib.dump({
             'CFBundleIdentifier': 'com.growser.Browser',
             'CFBundleShortVersionString': '1.0.0',
-            # app.icns = наша «G»
+            # app.icns = our "G"
             'CFBundleIconFile': 'app.icns',
-            # AppIcon из Assets.car = лев Brave; должен быть срезан.
+            # AppIcon from Assets.car = the Brave lion; must be stripped.
             'CFBundleIconName': 'AppIcon',
         }, f)
 
@@ -51,11 +51,11 @@ class TestRemoveBundleIconName(unittest.TestCase):
             with open(out, 'rb') as f:
                 plist = plistlib.load(f)
             self.assertNotIn('CFBundleIconName', plist,
-                             'CFBundleIconName должен быть срезан — иначе '
-                             'Assets.car (лев Brave) перекрывает app.icns')
+                             'CFBundleIconName must be stripped - otherwise '
+                             'Assets.car (the Brave lion) wins over app.icns')
 
     def test_cf_bundle_icon_file_preserved(self):
-        # app.icns (наша «G») должен остаться авторитетной иконкой.
+        # app.icns (our "G") must stay the authoritative icon.
         with tempfile.TemporaryDirectory() as tmp:
             src = os.path.join(tmp, 'Info.plist')
             out = os.path.join(tmp, 'Out.plist')
@@ -66,7 +66,7 @@ class TestRemoveBundleIconName(unittest.TestCase):
             self.assertEqual(plist.get('CFBundleIconFile'), 'app.icns')
 
     def test_idempotent_when_key_absent(self):
-        # Если ключа уже нет (напр. upstream убрал) — скрипт не должен падать.
+        # If the key is already gone (upstream dropped it) this must not fail.
         with tempfile.TemporaryDirectory() as tmp:
             src = os.path.join(tmp, 'Info.plist')
             out = os.path.join(tmp, 'Out.plist')
