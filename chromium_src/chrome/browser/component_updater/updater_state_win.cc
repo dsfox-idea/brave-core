@@ -3,32 +3,35 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#include "brave/components/brave_origin/buildflags/buildflags.h"
-
 namespace component_updater {
 namespace {
 
-// Brave Update group policy settings.
+// growser (#61): our own update namespace, not Brave's.
+//
+// The component updater reads these to learn what an administrator configured
+// for updates. Brave's keys are set by their own updater (Omaha 3), which we do
+// not ship, so today the read simply finds nothing either way - but pointing at
+// another product's namespace means that on a machine with Brave installed we
+// would obey their administrator's policy. The policy root matches #58
+// (SOFTWARE\Policies\Growser) and the app GUID matches our install mode.
+//
+// The IS_BRAVE_ORIGIN_BRANDED split above this in brave-core chose between two
+// of their GUIDs; we build neither variant, so one constant is enough.
 const wchar_t kGoogleUpdatePoliciesKey[] =
-    L"SOFTWARE\\Policies\\BraveSoftware\\Update";
+    L"SOFTWARE\\Policies\\Growser\\Update";
 const wchar_t kCheckPeriodOverrideMinutes[] = L"AutoUpdateCheckPeriodMinutes";
 const wchar_t kUpdatePolicyValue[] = L"UpdateDefault";
-#if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 const wchar_t kChromeUpdatePolicyOverride[] =
-    L"Update{F1EF32DE-F987-4289-81D2-6C4780027F9B}";
-#else
-const wchar_t kChromeUpdatePolicyOverride[] =
-    L"Update{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}";
-#endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+    L"Update{B003E671-954C-4C60-A0D4-4172D74FD4C1}";
 
 // Don't allow update periods longer than six weeks (Chrome release cadence).
 const int kCheckPeriodOverrideMinutesMax = 60 * 24 * 7 * 6;
 
-// Brave Update registry settings.
-const wchar_t kRegPathGoogleUpdate[] = L"Software\\BraveSoftware\\Update";
+// growser (#61): the updater's own registry state, ours as well.
+const wchar_t kRegPathGoogleUpdate[] = L"Software\\Growser\\Update";
 const wchar_t kRegPathClientsGoogleUpdate[] =
-    L"Software\\BraveSoftware\\Update\\Clients\\"
-    L"{B131C935-9BE6-41DA-9599-1F776BEB8019}";
+    L"Software\\Growser\\Update\\Clients\\"
+    L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}";
 
 }  // namespace
 }  // namespace component_updater

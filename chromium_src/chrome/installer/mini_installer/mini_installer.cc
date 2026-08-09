@@ -43,6 +43,17 @@
     }                                                          \
   }
 
+// growser (#60): the previous-version argument only - no referral code.
+//
+// Brave's version also read HKCU\Software\BraveSoftware\Promo\StubInstallerPath,
+// which their stub installer writes, and turned it into --brave-referral-code.
+// We ship no stub installer and no promo mechanism, so the read could only ever
+// find another product's value and pass it to our setup - and it was the last
+// BraveSoftware string left in mini_installer.exe after #50.
+//
+// ParseReferralCode and its tests are left in place: they are upstream's and
+// harmless, and deleting them would widen the diff against brave-core for no
+// gain. What mattered was the call.
 #define BRAVE_MAYBE_APPEND_PREVIOUS_VERSION_AND_PARSE_REFERRAL_CODE         \
   if (configuration.previous_version() &&                                   \
       (!cmd_line.append(L" --") || !cmd_line.append(kCmdPreviousVersion) || \
@@ -50,23 +61,6 @@
        !cmd_line.append(configuration.previous_version()) ||                \
        !cmd_line.append(L"\""))) {                                          \
     return ProcessExitResult(COMMAND_STRING_OVERFLOW);                      \
-  }                                                                         \
-  PathString installer_filename;                                            \
-  wchar_t value[MAX_PATH] = {                                               \
-      0,                                                                    \
-  };                                                                        \
-  const bool result = RegKey::ReadSZValue(                                  \
-      HKEY_CURRENT_USER, L"Software\\BraveSoftware\\Promo",                 \
-      L"StubInstallerPath", value, _countof(value));                        \
-  if (result && installer_filename.assign(value) &&                         \
-      installer_filename.length() != 0) {                                   \
-    ReferralCodeString referral_code;                                       \
-    if (ParseReferralCode(installer_filename.get(), &referral_code)) {      \
-      cmd_line.append(L" --brave-referral-code");                           \
-      cmd_line.append(L"=\"");                                              \
-      cmd_line.append(referral_code.get());                                 \
-      cmd_line.append(L"\"");                                               \
-    }                                                                       \
   }
 
 #define BRAVE_APPEND_FULL_SUFFIX_IN_REGISTRY SetInstallerFlags(configuration);
