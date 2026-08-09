@@ -143,14 +143,17 @@ class P3AService : public base::RefCountedThreadSafe<P3AService>,
  private:
   friend class base::RefCountedThreadSafe<P3AService>;
   friend class P3AServiceTest;
-  FRIEND_TEST_ALL_PREFIXES(P3AServiceTest, MessageManagerStartedWhenP3AEnabled);
+  // growser (#21): the three renamed tests assert that P3A stays inert, which
+  // is the opposite of what Brave's versions asserted. Same access, opposite
+  // expectation.
+  FRIEND_TEST_ALL_PREFIXES(P3AServiceTest,
+                           MessageManagerStaysInactiveEvenWhenP3AEnabled);
   FRIEND_TEST_ALL_PREFIXES(P3AServiceTest,
                            MessageManagerNotStartedWhenP3ADisabled);
   FRIEND_TEST_ALL_PREFIXES(P3AServiceTest,
                            MessageManagerNotStartedWhenP3ADisabledByPolicy);
-  FRIEND_TEST_ALL_PREFIXES(P3AServiceTest,
-                           MessageManagerStartsAndStopsOnPrefChange);
-  FRIEND_TEST_ALL_PREFIXES(P3AServiceTest, MetricValueStored);
+  FRIEND_TEST_ALL_PREFIXES(P3AServiceTest, MessageManagerIgnoresPrefChanges);
+  FRIEND_TEST_ALL_PREFIXES(P3AServiceTest, MetricValueNotStored);
 
   ~P3AService() override;
 

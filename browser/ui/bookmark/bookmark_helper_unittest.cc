@@ -15,9 +15,11 @@ TEST(BookmarkStateUnittest, SetState) {
   BookmarkPrefsServiceFactory::GetInstance()->RegisterProfilePrefs(
       service.registry());
   bookmarks::RegisterProfilePrefs(service.registry());
-  // By default only NTP is enabled.
+  // growser (#28): the bookmark bar is hidden on the new tab page by default,
+  // because that extra row makes the toolbar look double height. Brave's
+  // default was kNtp.
   EXPECT_EQ(brave::GetBookmarkBarState(&service),
-            brave::BookmarkBarState::kNtp);
+            brave::BookmarkBarState::kNever);
 
   // Show bookmark bar always.
   brave::SetBookmarkState(brave::BookmarkBarState::kAlways, &service);

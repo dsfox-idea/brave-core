@@ -163,10 +163,12 @@ TEST_F(BraveBookmarkContextMenuControllerTest, AddBraveBookmarksSubmenu) {
       controller.GetLabelForCommandId(IDC_BRAVE_BOOKMARK_BAR_NTP),
       bookmark_submenu_model->GetLabelForCommandId(IDC_BRAVE_BOOKMARK_BAR_NTP));
 
-  // Default state is NTP only.
+  // growser (#28): the bookmark bar is hidden on the new tab page by default,
+  // because that extra row makes the toolbar look double height. Brave's
+  // default was kNtp.
   EXPECT_FALSE(controller.IsCommandIdChecked(IDC_BRAVE_BOOKMARK_BAR_ALWAYS));
-  EXPECT_FALSE(controller.IsCommandIdChecked(IDC_BRAVE_BOOKMARK_BAR_NEVER));
-  EXPECT_TRUE(controller.IsCommandIdChecked(IDC_BRAVE_BOOKMARK_BAR_NTP));
+  EXPECT_TRUE(controller.IsCommandIdChecked(IDC_BRAVE_BOOKMARK_BAR_NEVER));
+  EXPECT_FALSE(controller.IsCommandIdChecked(IDC_BRAVE_BOOKMARK_BAR_NTP));
 
   // Set state as Always.
   brave::SetBookmarkState(brave::BookmarkBarState::kAlways,

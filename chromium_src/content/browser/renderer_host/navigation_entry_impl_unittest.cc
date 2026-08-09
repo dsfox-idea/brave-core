@@ -7,6 +7,9 @@
 #include <optional>
 #include <string>
 
+#include "base/strings/strcat.h"
+#include "base/strings/utf_string_conversions.h"
+#include "brave/components/constants/url_constants.h"
 #include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/navigation_entry.h"
 #include "content/public/common/referrer.h"
@@ -18,6 +21,15 @@
 #include "url/gurl.h"
 
 namespace content {
+
+namespace {
+// The UI scheme carries the product name, and growser renamed it. Building the
+// expectation from kBraveUIScheme keeps the test about the rewrite of chrome://
+// rather than about what the browser happens to be called.
+std::u16string UIUrl(std::string_view path) {
+  return base::UTF8ToUTF16(base::StrCat({kBraveUIScheme, "://", path}));
+}
+}  // namespace
 
 class BraveNavigationEntryTest : public testing::Test {
  private:
@@ -37,13 +49,13 @@ class BraveNavigationEntryTest : public testing::Test {
 TEST_F(BraveNavigationEntryTest,
        GetTitleForDisplayConvertsChromeSchemeToBrave) {
   auto entry = CreateEntry(GURL("chrome://settings"));
-  EXPECT_EQ(u"brave://settings", entry->GetTitleForDisplay());
+  EXPECT_EQ(UIUrl("settings"), entry->GetTitleForDisplay());
 
   entry = CreateEntry(GURL("chrome://history"));
-  EXPECT_EQ(u"brave://history", entry->GetTitleForDisplay());
+  EXPECT_EQ(UIUrl("history"), entry->GetTitleForDisplay());
 
   entry = CreateEntry(GURL("chrome://flags"));
-  EXPECT_EQ(u"brave://flags", entry->GetTitleForDisplay());
+  EXPECT_EQ(UIUrl("flags"), entry->GetTitleForDisplay());
 }
 
 TEST_F(BraveNavigationEntryTest, GetTitleForDisplayPreservesExplicitTitle) {
@@ -57,8 +69,8 @@ TEST_F(BraveNavigationEntryTest,
   auto entry = CreateEntry(GURL("https://example.com"));
   EXPECT_EQ(u"example.com", entry->GetTitleForDisplay());
 
-  entry = CreateEntry(GURL("brave://settings"));
-  EXPECT_EQ(u"brave://settings", entry->GetTitleForDisplay());
+  entry = CreateEntry(GURL(base::StrCat({kBraveUIScheme, "://settings"})));
+  EXPECT_EQ(UIUrl("settings"), entry->GetTitleForDisplay());
 
   entry = CreateEntry(GURL("http://chrome.com"));
   EXPECT_EQ(u"chrome.com", entry->GetTitleForDisplay());

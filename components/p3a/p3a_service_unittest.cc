@@ -60,14 +60,20 @@ class P3AServiceTest : public testing::Test {
   TestingPrefServiceSimple local_state_;
 };
 
-TEST_F(P3AServiceTest, MessageManagerStartedWhenP3AEnabled) {
+// growser (#21): P3A is neutralised rather than compiled out - Init(),
+// InitCallbacks() and RegisterDynamicMetric() have empty bodies, so no histogram
+// observer is ever installed and nothing is ever prepared for sending. Brave's
+// versions of the three tests below asserted the opposite; inverted, they become
+// the gate that keeps the removal from being undone quietly - including when the
+// pref is forced on by hand, which is the case that matters.
+TEST_F(P3AServiceTest, MessageManagerStaysInactiveEvenWhenP3AEnabled) {
   local_state_.SetBoolean(kP3AEnabled, true);
   CreateP3AService();
 
   EXPECT_FALSE(p3a_service_->message_manager_->IsActive());
 
   TriggerRemoteConfigLoad();
-  EXPECT_TRUE(p3a_service_->message_manager_->IsActive());
+  EXPECT_FALSE(p3a_service_->message_manager_->IsActive());
 }
 
 TEST_F(P3AServiceTest, MessageManagerNotStartedWhenP3ADisabled) {
@@ -80,64 +86,43 @@ TEST_F(P3AServiceTest, MessageManagerNotStartedWhenP3ADisabled) {
   EXPECT_FALSE(p3a_service_->message_manager_->IsActive());
 }
 
-TEST_F(P3AServiceTest, MessageManagerStartsAndStopsOnPrefChange) {
+TEST_F(P3AServiceTest, MessageManagerIgnoresPrefChanges) {
   local_state_.SetBoolean(kP3AEnabled, false);
   CreateP3AService();
 
   EXPECT_FALSE(p3a_service_->message_manager_->IsActive());
 
   TriggerRemoteConfigLoad();
-
   EXPECT_FALSE(p3a_service_->message_manager_->IsActive());
 
+  // Turning the pref on used to start the manager. It must not any more.
   local_state_.SetBoolean(kP3AEnabled, true);
-  EXPECT_TRUE(p3a_service_->message_manager_->IsActive());
+  EXPECT_FALSE(p3a_service_->message_manager_->IsActive());
 
   local_state_.SetBoolean(kP3AEnabled, false);
   EXPECT_FALSE(p3a_service_->message_manager_->IsActive());
 }
 
-TEST_F(P3AServiceTest, MetricValueStored) {
+TEST_F(P3AServiceTest, MetricValueNotStored) {
   local_state_.SetBoolean(kP3AEnabled, true);
 
   CreateP3AService();
 
-  EXPECT_TRUE(local_state_.GetDict(kTypicalConstellationPrepPrefName).empty());
-  EXPECT_TRUE(local_state_.GetDict(kExpressConstellationPrepPrefName).empty());
-  EXPECT_TRUE(local_state_.GetDict(kSlowConstellationPrepPrefName).empty());
-
   base::UmaHistogramExactLinear(kTestTypicalHistogramName, 0, 10);
   p3a_service_->OnHistogramChanged(kTestTypicalHistogramName, 1, 0);
-  task_environment_.FastForwardBy(base::Seconds(3));
-
-  EXPECT_TRUE(local_state_.GetDict(kTypicalConstellationPrepPrefName).empty());
-
-  TriggerRemoteConfigLoad();
-
-  const auto* stored_log =
-      local_state_.GetDict(kTypicalConstellationPrepPrefName)
-          .FindDict(kTestTypicalHistogramName);
-  EXPECT_TRUE(stored_log != nullptr);
-
-  EXPECT_TRUE(local_state_.GetDict(kExpressConstellationPrepPrefName).empty());
-
   base::UmaHistogramExactLinear(kTestExpressHistogramName, 0, 10);
   p3a_service_->OnHistogramChanged(kTestExpressHistogramName, 1, 0);
-  task_environment_.FastForwardBy(base::Seconds(3));
-
-  stored_log = local_state_.GetDict(kExpressConstellationPrepPrefName)
-                   .FindDict(kTestExpressHistogramName);
-  EXPECT_TRUE(stored_log != nullptr);
-
-  EXPECT_TRUE(local_state_.GetDict(kSlowConstellationPrepPrefName).empty());
-
   base::UmaHistogramExactLinear(kTestSlowHistogramName, 0, 10);
   p3a_service_->OnHistogramChanged(kTestSlowHistogramName, 1, 0);
   task_environment_.FastForwardBy(base::Seconds(3));
 
-  stored_log = local_state_.GetDict(kSlowConstellationPrepPrefName)
-                   .FindDict(kTestSlowHistogramName);
-  EXPECT_TRUE(stored_log != nullptr);
+  TriggerRemoteConfigLoad();
+  task_environment_.FastForwardBy(base::Seconds(3));
+
+  // Nothing is prepared for sending, in any cadence, at any point.
+  EXPECT_TRUE(local_state_.GetDict(kTypicalConstellationPrepPrefName).empty());
+  EXPECT_TRUE(local_state_.GetDict(kExpressConstellationPrepPrefName).empty());
+  EXPECT_TRUE(local_state_.GetDict(kSlowConstellationPrepPrefName).empty());
 }
 
 TEST_F(P3AServiceTest, CustomAttributeStored) {
