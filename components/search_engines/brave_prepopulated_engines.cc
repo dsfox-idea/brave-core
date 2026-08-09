@@ -100,7 +100,7 @@ const PrepopulatedEngine duckduckgo = MakeBravePrepopulatedEngine(
     u":d",
     "https://duckduckgo.com/favicon.ico",
     "IDR_SEARCH_ENGINE_DUCKDUCKGO",
-    "https://duckduckgo.com/?q={searchTerms}&t=brave",
+    "https://duckduckgo.com/?q={searchTerms}",
     "UTF-8",
     "https://ac.duckduckgo.com/ac/?q={searchTerms}&type=list",
     SEARCH_ENGINE_DUCKDUCKGO,
@@ -112,7 +112,7 @@ const PrepopulatedEngine duckduckgo_de =
     ModifyEngineParams(duckduckgo,
                        nullptr,
                        nullptr,
-                       "https://duckduckgo.com/?q={searchTerms}&t=bravened",
+                       "https://duckduckgo.com/?q={searchTerms}",
                        nullptr,
                        nullptr,
                        PREPOPULATED_ENGINE_ID_DUCKDUCKGO_DE);
@@ -123,7 +123,7 @@ const PrepopulatedEngine duckduckgo_au_nz_ie =
     ModifyEngineParams(duckduckgo,
                        nullptr,
                        nullptr,
-                       "https://duckduckgo.com/?q={searchTerms}&t=braveed",
+                       "https://duckduckgo.com/?q={searchTerms}",
                        nullptr,
                        nullptr,
                        PREPOPULATED_ENGINE_ID_DUCKDUCKGO_AU_NZ_IE);
@@ -136,7 +136,7 @@ const PrepopulatedEngine duckduckgo_lite = MakeBravePrepopulatedEngine(
     u":dl",
     "https://duckduckgo.com/favicon.ico",
     "IDR_SEARCH_ENGINE_DUCKDUCKGO",
-    "https://duckduckgo.com/lite/?q={searchTerms}&t=brave",
+    "https://duckduckgo.com/lite/?q={searchTerms}",
     "UTF-8",
     "https://ac.duckduckgo.com/ac/?q={searchTerms}&type=list",
     SEARCH_ENGINE_DUCKDUCKGO,
@@ -167,7 +167,7 @@ const PrepopulatedEngine qwant = MakeBravePrepopulatedEngine(
     u":q",
     "https://www.qwant.com/favicon.ico",
     "IDR_SEARCH_ENGINE_QWANT",
-    "https://www.qwant.com/?q={searchTerms}&client=brz-brave",
+    "https://www.qwant.com/?q={searchTerms}",
     "UTF-8",
     "https://api.qwant.com/api/suggest/?q={searchTerms}&client=opensearch",
     SEARCH_ENGINE_QWANT,
@@ -192,15 +192,12 @@ const PrepopulatedEngine brave_yandex =
     ModifyEngineParams(yandex_com,
                        u"Yandex",
                        nullptr,
-                       "https://yandex.ru/search/?clid="
-#if BUILDFLAG(IS_ANDROID)
-                       "2423859"
-#else
-                       "2353835"
-#endif
-                       "&text={searchTerms}",
+                       // growser: no clid. Brave's partner id attributed every
+                       // search our users make to them - the same defect as
+                       // ref=BRV001 in #38. Search works without it.
+                       "https://yandex.ru/search/?text={searchTerms}",
                        "https://suggest.yandex.ru/suggest-ff.cgi?"
-                       "part={searchTerms}&v=3&sn=5&srv=brave_desktop",
+                       "part={searchTerms}&v=3&sn=5",
                        nullptr,
                        PREPOPULATED_ENGINE_ID_YANDEX);
 // LINT.ThenChange(//brave/components/search_engines/brave_prepopulated_engines.h:kBraveCurrentDataVersion)

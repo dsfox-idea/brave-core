@@ -28,7 +28,7 @@ namespace TemplateURLPrepopulateData {
 
 // growser: bump за смену дефолтного поиска на Yandex (#18) — триггерит миграцию
 // списка/дефолта в существующих профилях.
-inline constexpr int kBraveCurrentDataVersion = 33;
+inline constexpr int kBraveCurrentDataVersion = 34;
 
 // DO NOT CHANGE THIS ONE. Used for backfilling kBraveDefaultSearchVersion.
 inline constexpr int kBraveFirstTrackedDataVersion = 6;

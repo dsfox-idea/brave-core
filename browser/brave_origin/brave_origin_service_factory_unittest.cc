@@ -43,14 +43,9 @@ TEST(BraveOriginServiceFactoryTest,
   EXPECT_EQ(p3a_info->user_settable, true);
   EXPECT_EQ(p3a_info->brave_origin_pref_key, p3a::kP3AEnabled);
 
-  // Test that Stats reporting policy is correctly built (browser-level)
-  const auto* stats_info = base::FindOrNull(
-      browser_policy_definitions, policy::key::kBraveStatsPingEnabled);
-  ASSERT_NE(stats_info, nullptr);
-  EXPECT_EQ(stats_info->pref_name, kStatsReportingEnabled);
-  EXPECT_EQ(stats_info->default_value, false);
-  EXPECT_EQ(stats_info->user_settable, true);
-  EXPECT_EQ(stats_info->brave_origin_pref_key, kStatsReportingEnabled);
+  // growser (#62): the stats-ping policy was removed with the stats updater
+  // itself, which is compiled out (#38). There is nothing left to assert here -
+  // the policy no longer exists, so it cannot appear in the definitions.
 
 #if BUILDFLAG(ENABLE_TOR)
   // Test that Tor disabled policy is correctly built (browser-level)
@@ -93,9 +88,6 @@ TEST(BraveOriginServiceFactoryTest,
   // Test that browser-level policies are NOT in profile definitions
   EXPECT_FALSE(
       profile_policy_definitions.contains(policy::key::kGrowserP3AEnabled))
-      << "Browser-level policy should not be in profile definitions";
-  EXPECT_FALSE(
-      profile_policy_definitions.contains(policy::key::kBraveStatsPingEnabled))
       << "Browser-level policy should not be in profile definitions";
 }
 

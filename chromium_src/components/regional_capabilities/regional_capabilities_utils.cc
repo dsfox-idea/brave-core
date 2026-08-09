@@ -36,7 +36,7 @@ namespace {
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesDefault[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
@@ -49,7 +49,7 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesWithEcosia[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
@@ -63,7 +63,6 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesWithYandex[] = {
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
@@ -75,7 +74,7 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesDE[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_DE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
@@ -88,7 +87,7 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesFR[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
@@ -101,7 +100,7 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesAUIE[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_AU_NZ_IE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
@@ -114,8 +113,8 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesJP[] = {
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YAHOO_JP,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
@@ -127,7 +126,7 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesKR[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_NAVER,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DAUM,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
@@ -137,7 +136,7 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesNZ[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_AU_NZ_IE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
