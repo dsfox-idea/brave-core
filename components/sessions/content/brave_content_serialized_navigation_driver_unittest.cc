@@ -5,6 +5,8 @@
 
 #include "components/sessions/content/content_serialized_navigation_driver.h"
 
+#include "base/strings/strcat.h"
+#include "brave/components/constants/url_constants.h"
 #include "components/sessions/core/serialized_navigation_entry.h"
 #include "components/sessions/core/serialized_navigation_entry_test_helper.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -61,7 +63,7 @@ TEST(BraveContentSerializedNavigationDriverTest,
   EXPECT_EQ(std::string(), driver->GetSanitizedPageStateForPickle(&navigation));
 }
 
-// Tests that restored brave:// pages are converted to chrome://
+// Tests that restored pages in our own UI scheme are converted to chrome://
 TEST(BraveContentSerializedNavigationDriverTest,
      SanitizeConvertsBraveVirtualUrlToChrome) {
   ContentSerializedNavigationDriver* driver =
@@ -71,7 +73,8 @@ TEST(BraveContentSerializedNavigationDriverTest,
 
   // Check encoded data is not empty but clean state only with url info for
   // chrome overridable url by extension.
-  navigation.set_virtual_url(GURL("brave://flags"));
+  navigation.set_virtual_url(
+      GURL(base::StrCat({kBraveUIScheme, "://flags"})));
   driver->Sanitize(&navigation);
   EXPECT_EQ(GURL("chrome://flags"), navigation.virtual_url());
 }

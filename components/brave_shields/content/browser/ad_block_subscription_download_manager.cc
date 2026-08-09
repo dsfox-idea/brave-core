@@ -55,7 +55,13 @@ AdBlockSubscriptionDownloadManager::AdBlockSubscriptionDownloadManager(
     download::BackgroundDownloadService* download_service,
     scoped_refptr<base::SequencedTaskRunner> background_task_runner)
     : download_service_(download_service),
-      is_available_for_downloads_(true),
+      // Without a download service there is nothing to download with, and
+      // StartDownload() dereferences it unconditionally. Reporting "available"
+      // in that state is what made every AdBlockServiceTest crash once growser
+      // began seeding default subscriptions at startup (#57): the seeding calls
+      // CreateSubscription() during construction, which is a path the tests had
+      // never reached before, and their manager is built with a null service.
+      is_available_for_downloads_(download_service != nullptr),
       background_task_runner_(background_task_runner) {}
 
 AdBlockSubscriptionDownloadManager::~AdBlockSubscriptionDownloadManager() =

@@ -10,6 +10,9 @@
 #include <utility>
 
 #include "base/callback_list.h"
+#include "base/strings/strcat.h"
+#include "base/strings/utf_string_conversions.h"
+#include "brave/components/constants/url_constants.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/tab_ui_helper.h"
 #include "chrome/browser/ui/tabs/public/tab_features.h"
@@ -117,7 +120,8 @@ TEST_F(FocusModeTitleBarViewTest, UpdatesOnNavigation) {
   EXPECT_EQ(GetDomainText(), u"http://insecure.example.com");
 
   tab->NavigateAndCommit(GURL("chrome://abc"));
-  EXPECT_EQ(GetDomainText(), u"brave://abc");
+  EXPECT_EQ(GetDomainText(),
+            base::UTF8ToUTF16(base::StrCat({kBraveUIScheme, "://abc"})));
 
   tab->NavigateAndCommit(GURL("chrome-untrusted://print"));
   EXPECT_EQ(GetDomainText(), u"chrome-untrusted://print");
