@@ -82,11 +82,13 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
   const { browserProfiles, currentSelectedBrowserProfiles} = React.useContext(DataContext)
 
   const states = React.useMemo(() => {
-    // growser: экраны WDP (#24) и HelpImprove (#21) убраны из онбординга —
-    // поиск у нас Yandex (WDP не нужен), а opt-in в P3A/метрику через онбординг
-    // мы не показываем (pref'ы остаются off по дефолту). После импорта идём
-    // сразу на ImportSucceeded (SetupComplete): он показывает галочку и
-    // открывает welcome-complete URL, завершая онбординг.
+    // growser: the WDP (#24) and Help Improve (#21) screens are out of the flow.
+    // Web Discovery is pointless with Yandex as the search default, and the Help
+    // Improve screen existed to opt the user into P3A and metrics reporting -
+    // it initialised both toggles to true and wrote them on Finish, which
+    // quietly undid our off-by-default prefs (#39). After import we go straight
+    // to ImportSucceeded (SetupComplete), which shows the check mark and opens
+    // the welcome-complete URL.
     const nextAfterImport = ViewType.ImportSucceeded
 
     return {
