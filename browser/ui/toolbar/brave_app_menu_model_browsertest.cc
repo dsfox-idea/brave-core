@@ -174,7 +174,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
 #if BUILDFLAG(ENABLE_TOR)
       IDC_NEW_OFFTHERECORD_WINDOW_TOR,
 #endif
-      // growser: Leo/Wallet/VPN убраны из меню (#27) — см. disabled-список ниже.
+      // growser: Leo/Wallet/VPN are out of the menu (#27) - see the disabled list below.
 #if defined(TOOLKIT_VIEWS)
       IDC_SIDEBAR_SHOW_OPTION_MENU,
 #endif
@@ -195,7 +195,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
   std::vector<int> commands_disabled_for_normal_profile = {
       IDC_NEW_TOR_CONNECTION_FOR_SITE,
       IDC_SAVED_TAB_GROUPS_MENU,
-      // growser: Leo/Wallet/VPN убраны из главного меню (#27).
+      // growser: Leo/Wallet/VPN are out of the main menu (#27).
 #if BUILDFLAG(ENABLE_AI_CHAT)
       IDC_TOGGLE_AI_CHAT,
 #endif
@@ -234,7 +234,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
 #if BUILDFLAG(ENABLE_TOR)
       IDC_NEW_OFFTHERECORD_WINDOW_TOR,
 #endif
-      // growser: Wallet убран из меню (#27).
+      // growser: Wallet is out of the menu (#27).
 #if defined(TOOLKIT_VIEWS)
       IDC_SIDEBAR_SHOW_OPTION_MENU,
 #endif
@@ -253,7 +253,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
   std::vector<int> commands_disabled_for_private_profile = {
       IDC_NEW_TOR_CONNECTION_FOR_SITE,
       IDC_RECENT_TABS_MENU,
-      // growser: Wallet/VPN убраны из меню (#27).
+      // growser: Wallet and VPN are out of the menu (#27).
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
       IDC_SHOW_BRAVE_WALLET,
 #endif
@@ -342,7 +342,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
       IDC_NEW_WINDOW,
       IDC_NEW_INCOGNITO_WINDOW,
       IDC_NEW_OFFTHERECORD_WINDOW_TOR,
-      // growser: Wallet убран из меню (#27).
+      // growser: Wallet is out of the menu (#27).
       IDC_BOOKMARKS_MENU,
       IDC_SHOW_DOWNLOADS,
       IDC_EXTENSIONS_SUBMENU,
@@ -357,7 +357,7 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
   std::vector<int> commands_disabled_for_tor_profile = {
       IDC_RECENT_TABS_MENU,
       IDC_TOGGLE_AI_CHAT,
-      // growser: Wallet убран из меню (#27).
+      // growser: Wallet is out of the menu (#27).
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
       IDC_SHOW_BRAVE_WALLET,
 #endif
@@ -378,8 +378,8 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 // Check vpn menu based on purchased status.
 IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, BraveVPNMenuTest) {
-  // growser: VPN убран из главного меню (#27) — пунктов VPN нет ни для
-  // некупленного, ни для купленного статуса.
+  // growser: VPN is out of the main menu (#27) - there are no VPN items for
+  // either the purchased or the unpurchased state.
   std::vector<int> vpn_commands = {
       IDC_SHOW_BRAVE_VPN_PANEL,
       IDC_BRAVE_VPN_MENU,

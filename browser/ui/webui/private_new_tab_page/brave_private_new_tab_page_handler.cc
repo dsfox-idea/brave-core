@@ -118,8 +118,8 @@ void BravePrivateNewTabPageHandler::GoToBraveSearch(const std::string& input,
                                                     bool open_new_tab) {
   CHECK(profile_);
 
-  // growser: строка поиска приватной вкладки — Yandex в обычном инкогнито (#26);
-  // Tor-окна оставляем на приватном поиске (Yandex поверх Tor снижал бы анонимность).
+  // growser: the private-tab search box is Yandex in ordinary incognito (#26);
+  // Tor windows keep the private search - Yandex over Tor would weaken anonymity.
   auto provider_data = TemplateURLDataFromPrepopulatedEngine(
       profile_->IsTor() ? TemplateURLPrepopulateData::brave_search_tor
                         : TemplateURLPrepopulateData::brave_yandex);

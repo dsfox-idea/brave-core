@@ -26,8 +26,8 @@ namespace TemplateURLPrepopulateData {
 // For more info, see:
 // ComputeMergeEnginesRequirements in components/search_engines/util.cc;
 
-// growser: bump за смену дефолтного поиска на Yandex (#18) — триггерит миграцию
-// списка/дефолта в существующих профилях.
+// growser: bumped for the switch of the default search to Yandex (#18) - it
+// triggers the list/default migration in existing profiles.
 inline constexpr int kBraveCurrentDataVersion = 34;
 
 // DO NOT CHANGE THIS ONE. Used for backfilling kBraveDefaultSearchVersion.

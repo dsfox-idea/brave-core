@@ -23,10 +23,10 @@ TabSearchUI::TabSearchUI(content::WebUI* web_ui)
   Profile* profile = Profile::FromWebUI(web_ui);
   base::DictValue update_data;
 
-  // growser: во всплывашке Tab Search скрываем вкладку «Организовать»
-  // (AI Tab Focus) — оставляем только «Поиск». Когда tabOrganizationEnabled
-  // == false, фронтенд (brave_tab_search_app) не рендерит cr-tabs вовсе.
-  // Полное удаление функционала — отдельной задачей (backlog).
+  // growser: the Tab Search bubble hides its "Organize" tab (AI Tab Focus)
+  // and keeps only "Search". With tabOrganizationEnabled == false the
+  // frontend (brave_tab_search_app) does not render cr-tabs at all.
+  // Removing the feature itself is a separate task (backlog).
   update_data.Set("tabOrganizationEnabled", false);
   update_data.Set("showTabOrganizationFRE", false);
 

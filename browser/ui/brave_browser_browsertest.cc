@@ -251,7 +251,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTest) {
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(browser())->bookmark_bar_state());
 
-  // growser: показ панели закладок на NTP выключен по умолчанию (#28).
+  // growser: showing the bookmark bar on the NTP is off by default (#28).
   EXPECT_FALSE(profile->GetPrefs()->GetBoolean(
       bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP));
 
@@ -260,7 +260,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTest) {
       content::NavigateToURL(contents, GURL(chrome::kChromeUINewTabURL)));
   EXPECT_TRUE(NewTabUI::IsNewTab(contents->GetLastCommittedURL()));
 
-  // growser: панель закладок на NTP скрыта по умолчанию (нет лишнего ряда).
+  // growser: the bookmark bar is hidden on the NTP by default (no extra row).
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(browser())->bookmark_bar_state());
 
@@ -289,7 +289,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTestIncognito) {
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(incognito)->bookmark_bar_state());
 
-  // growser: показ панели закладок на NTP выключен по умолчанию (#28).
+  // growser: showing the bookmark bar on the NTP is off by default (#28).
   EXPECT_FALSE(profile->GetPrefs()->GetBoolean(
       bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP));
 
@@ -298,7 +298,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTestIncognito) {
       content::NavigateToURL(contents, GURL(chrome::kChromeUINewTabURL)));
   EXPECT_TRUE(NewTabUI::IsNewTab(contents->GetLastCommittedURL()));
 
-  // growser: панель закладок на NTP скрыта по умолчанию.
+  // growser: the bookmark bar is hidden on the NTP by default.
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(incognito)->bookmark_bar_state());
 

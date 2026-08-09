@@ -152,7 +152,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
       static_cast<int>(brave_wallet::mojom::DefaultWallet::BraveWallet));
   registry->RegisterStringPref(kDefaultBaseCurrency, "USD");
   registry->RegisterStringPref(kDefaultBaseCryptocurrency, "BTC");
-  // growser: кнопка Wallet в тулбаре скрыта по умолчанию (#16).
+  // growser: the Wallet toolbar button is hidden by default (#16).
   registry->RegisterBooleanPref(kShowWalletIconOnToolbar, false);
   registry->RegisterDictionaryPref(kBraveWalletKeyrings);
   registry->RegisterBooleanPref(kBraveWalletKeyringEncryptionKeysMigrated,

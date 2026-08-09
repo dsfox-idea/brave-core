@@ -193,9 +193,9 @@ TEST_F(SidebarModelTest, ItemsChangedTest) {
   EXPECT_THAT(model()->active_index(), Optional(3u));
 }
 
-// growser: тест CanUseNotAddedBuiltInItemInsteadOfTest удалён — он требовал,
-// чтобы Talk (kBraveTalk) был дефолтным пунктом сайдбара, а Talk из сайдбара
-// убран (см. kDefaultBuiltInItemTypes).
+// growser: the CanUseNotAddedBuiltInItemInsteadOfTest test is deleted - it
+// required Talk (kBraveTalk) to be a default sidebar item, and Talk is out
+// of the sidebar (see kDefaultBuiltInItemTypes).
 
 TEST_F(SidebarModelTest, ActiveIndexChangedAfterItemAdded) {
   model()->SetActiveIndex(1);
@@ -220,8 +220,8 @@ TEST_F(SidebarModelTest, ActiveIndexChangedAfterItemAdded) {
 
 // Check that the expected item is top-most.
 TEST_F(SidebarModelTest, TopItemTest) {
-  // growser: Leo (kChatUI), Talk (kBraveTalk) и Wallet (kWallet) убраны из панели,
-  // поэтому первым идёт Bookmarks.
+  // growser: Leo (kChatUI), Talk (kBraveTalk) and Wallet (kWallet) are out of
+  // the panel, so Bookmarks comes first.
   const auto first_item = service()->items()[0];
   EXPECT_EQ(first_item.built_in_item_type,
             SidebarItem::BuiltInItemType::kBookmarks);

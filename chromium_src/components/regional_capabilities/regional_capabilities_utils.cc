@@ -219,8 +219,8 @@ std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
   }
   DCHECK_GT(brave_engine_ids.size(), 0ul);
 
-  // growser: Yandex — поиск по умолчанию во всех регионах (#18), поэтому он
-  // должен присутствовать в списке любой страны, иначе fallback вернёт Brave.
+  // growser: Yandex is the search default in every region (#18), so it has to
+  // appear in every country list - otherwise the fallback returns Brave.
   std::vector<TemplateURLPrepopulateData::BravePrepopulatedEngineID> engine_ids(
       brave_engine_ids.begin(), brave_engine_ids.end());
   if (std::find(engine_ids.begin(), engine_ids.end(),
@@ -254,8 +254,8 @@ std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
 // set the default search engine back to what it was when the profile was
 // originally created. This way, a person doesn't get a new unexpected default
 // when they reset the profile; it goes back to the original value.
-// growser: больше не вызывается — GetDefaultEngine всегда возвращает Yandex (#18).
-// Оставляем определение (версионные карты), помечаем как возможно неиспользуемое.
+// growser: no longer called - GetDefaultEngine always returns Yandex (#18).
+// The definition stays (the versioned maps) and is marked possibly unused.
 [[maybe_unused]] TemplateURLPrepopulateData::BravePrepopulatedEngineID
 GetDefaultSearchEngine(country_codes::CountryId country_id, int version) {
   // LINT.IfChange
@@ -755,7 +755,7 @@ std::vector<const PrepopulatedEngine*> GetPrepopulatedEngines(
 TemplateURLPrepopulateData::BravePrepopulatedEngineID GetDefaultEngine(
     CountryId country_id,
     PrefService& prefs) {
-  // growser: поиск по умолчанию — Yandex, независимо от региона и версии (#18).
+  // growser: the search default is Yandex, whatever the region or version (#18).
   return TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX;
 }
 
