@@ -1,7 +1,7 @@
 caption: Control HTTPS upgrade behavior
 default: null
 desc: |-
-  This policy determines how Brave handles HTTP to HTTPS upgrades to improve connection security.
+  This policy determines how <ph name="PRODUCT_NAME">$1<ex>Growser</ex></ph> handles HTTP to HTTPS upgrades to improve connection security.
 
   If this policy is set to 1 (Disabled), HTTP connections are allowed.
 

@@ -1,7 +1,7 @@
 caption: Disable Brave Shields for URLs
 default: null
 desc: |-
-  Forces the shields in Brave to be disabled for specific web sites.
+  Forces the shields in <ph name="PRODUCT_NAME">$1<ex>Growser</ex></ph> to be disabled for specific web sites.
 
   You can use special syntax to wildcard a domain.
 example_value:
