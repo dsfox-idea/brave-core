@@ -32,12 +32,17 @@ export function MetricsStep(props: Props) {
 
   const webDiscoveryFeatureEnabled = api.useWebDiscoveryFeatureEnabledData()
   const isWebDiscoveryPrefManaged = api.useIsWebDiscoveryPrefManagedData()
-  const isP3APrefManaged = api.useIsP3APrefManagedData()
   const isCrashReportingPrefManaged = api.useIsCrashReportingPrefManagedData()
 
   const showWebDiscovery =
     webDiscoveryFeatureEnabled && !isWebDiscoveryPrefManaged
-  const showP3A = !isP3APrefManaged
+  // growser (#78): no P3A card. P3A is functionally removed (#21) - Init() is
+  // wrapped in #if 0, so nothing is ever sent even with the pref forced on.
+  // Offering someone a switch for it during onboarding asks them to make a
+  // decision that has no effect. The comment in p3a_service.cc claimed the
+  // onboarding opt-in was already gone; it was gone from the older welcome
+  // flow, not from this one.
+  const showP3A: boolean = false
   const showCrashReports = !isCrashReportingPrefManaged
 
   const [webDiscoveryEnabled, setWebDiscoveryEnabled] = React.useState(true)
@@ -75,7 +80,11 @@ export function MetricsStep(props: Props) {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  brave://settings/privacy
+                  {/* growser (#78): the visible address is our scheme, not
+                      Brave's. The href stays chrome:// because that is what
+                      resolves; only the text was wrong, and it is the first
+                      internal address a new user is ever shown. */}
+                  growser://settings/privacy
                 </a>
               ),
               $2: (content) => (
