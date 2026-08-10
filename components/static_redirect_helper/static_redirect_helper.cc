@@ -127,15 +127,28 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
     return;
   }
 
+  // growser (#45): these two are the last redirects that pointed at Brave, and
+  // both carry a signal about the user rather than about the product.
+  //
+  // The favicon one is the sharper of the two: Chromium's UI asks Google's
+  // faviconV2 service for icons of sites in history, bookmarks and new-tab
+  // tiles, so whoever answers it learns which sites a person keeps. Brave
+  // proxies it so that Google does not - which for our users only moves the
+  // knowledge to Brave. Autofill data is the same shape, quieter.
+  //
+  // Same treatment as the component updater (#41) and Safe Browsing (#42):
+  // through our own backend, which keeps the feature working and takes both
+  // Google and Brave out of it. The paths are preserved, so the Worker knows
+  // which upstream a request belongs to.
   if (autofill_pattern->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
-    replacements.SetHostStr(kBraveStaticProxy);
+    replacements.SetHostStr(BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT));
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
   if (favicon_pattern->MatchesURL(request_url)) {
-    replacements.SetHostStr("favicons.proxy.brave.com");
+    replacements.SetHostStr(BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT));
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
