@@ -104,6 +104,20 @@ def sync_policy_files():
             if f'{group}/{name}' not in wanted:
                 os.remove(os.path.join(dest_dir, name))
 
+    # growser(#62): drop whole Brave group directories the list no longer names.
+    # The per-file loop above only walks the groups the current list names, so
+    # renaming our group (BraveSoftware -> Growser) orphaned the old directory:
+    # its stale Brave*.yaml kept being loaded as a policy group whose names are
+    # absent from the id map (only the Growser group is injected into
+    # policies.yaml by _LoadPolicies), and _BuildPolicyTemplate raised
+    # KeyError: 'BraveAIChatEnabled'. Only names Brave has ever owned are
+    # ever removed, so Chromium's own groups are still never touched.
+    brave_group_names = {"Growser", "BraveSoftware"}
+    for brave_group in brave_group_names - groups:
+        orphan_dir = os.path.join(copy_to, brave_group)
+        if os.path.isdir(orphan_dir):
+            shutil.rmtree(orphan_dir)
+
 
 def copy_only_if_modified(src, dst):
     """Copy file if it doesn't exist or if its hash is different."""
