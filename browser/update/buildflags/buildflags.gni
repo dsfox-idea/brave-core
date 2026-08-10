@@ -1,0 +1,19 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+declare_args() {
+  # growser (#76): whether the browser updates itself.
+  #
+  # True for builds we distribute ourselves - Sparkle on macOS, and whatever
+  # #51 brings on Windows. FALSE for a build handed to a store, because the
+  # store owns updates for what it distributes: two update paths means one of
+  # them is wrong, and the wrong one either fights the store or silently
+  # replaces a package the store believes it controls.
+  #
+  # Turning this off is not the whole job on Windows - `enable_updater` must
+  # come off too, since that decides whether the updater is even compiled in.
+  # This flag is the runtime gate; that one is the compile gate.
+  growser_enable_self_update = true
+}
