@@ -63,7 +63,11 @@ const modifyAboutPage = (root: ShadowRoot) => {
     wrapper.setAttribute('id', 'release-notes')
     wrapper.setAttribute('target', '_blank')
     wrapper.setAttribute('rel', 'noopener noreferrer')
-    wrapper.setAttribute('href', 'https://brave.com/latest/')
+    // growser (#78/#81): our release notes, not Brave's. The version number on
+    // this page is a link, so it is one of the few Brave links a user is
+    // certain to see, and it described a different browser's releases.
+    wrapper.setAttribute(
+      'href', 'https://github.com/dsfox-idea/brave-core/releases')
 
     const parent = version.parentNode
     parent?.replaceChild(wrapper, version)
@@ -81,15 +85,12 @@ const modifyAboutPage = (root: ShadowRoot) => {
   const updateStatusMessageLink =
     root.querySelector<HTMLAnchorElement>('#updateStatusMessage a')
   if (updateStatusMessageLink) {
-    // <if expr="is_win">
-    updateStatusMessageLink.href =
-      'https://support.brave.app/hc/en-us/articles/360042816611-Why-isn-t-Brave-updating-automatically-on-Windows-'
-    // </if>
-
-    // <if expr="not is_win">
-      updateStatusMessageLink.href =
-        'https://community.brave.app?p=update_error'
-    // </if>
+    // growser (#78/#81): this fires when OUR updater fails, and it used to
+    // send the reader to Brave's article about why BRAVE is not updating -
+    // which cannot help them, because our updates come from our own backend
+    // (#51). Same destination on both platforms now: the page that explains
+    // how our updates work and offers the current build by hand.
+    updateStatusMessageLink.href = 'https://growser.org/updates.html'
   }
 }
 
