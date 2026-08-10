@@ -15,15 +15,12 @@ inline constexpr char kRewardsUpholdSupport[] =
 inline constexpr char kP3ALearnMoreURL[] = "https://brave.com/P3A";
 inline constexpr char kP3ASettingsLink[] = "chrome://settings/privacy";
 inline constexpr char kImportDataHelpURL[] =
-    "https://support.brave.app/hc/en-us/articles/360019782291#safari";
-inline constexpr char kPermissionPromptLearnMoreUrl[] =
-    "https://github.com/brave/brave-browser/wiki/Web-API-Permissions";
+    "https://growser.org/";
+// growser (#78/#81): permission prompts explain themselves on our site.
+inline constexpr char kPermissionPromptLearnMoreUrl[] = "https://growser.org/";
 inline constexpr char kPermissionPromptHardwareAccessPrivacyRisksURL[] =
-    "https://github.com/brave/brave-browser/wiki/"
-    "Privacy-risks-from-allowing-sites-to-access-hardware";
-inline constexpr char kSpeedreaderLearnMoreUrl[] =
-    "https://support.brave.app/hc/en-us/articles/"
-    "360045031392-What-is-SpeedReader";
+    "https://growser.org/";
+inline constexpr char kSpeedreaderLearnMoreUrl[] = "https://growser.org/";
 inline constexpr char kWebDiscoveryLearnMoreUrl[] =
     "https://brave.com/privacy/browser/#web-discovery-project";
 inline constexpr char kBraveSearchHost[] = "search.brave.com";

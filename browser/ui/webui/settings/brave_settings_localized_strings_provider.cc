@@ -85,8 +85,7 @@ namespace settings {
 namespace {
 
 constexpr char16_t kWebRTCLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/"
-    u"360017989132-How-do-I-change-my-Privacy-Settings-#webrtc";
+    u"https://growser.org/";
 // growser (#78/#81): our repository, not Brave's - these two are shown on the
 // About page and describe how THIS browser is built and what a given version
 // contains.
@@ -100,8 +99,7 @@ constexpr char16_t kContainersLearnMoreURL[] =
     u"https://growser.org/features.html#containers";
 #endif
 constexpr char16_t kGoogleLoginLearnMoreURL[] =
-    u"https://github.com/brave/brave-browser/wiki/"
-    u"Allow-Google-login---Third-Parties-and-Extensions";
+    u"https://growser.org/";
 constexpr char16_t kUnstoppableDomainsLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/"
     u"Resolve-Methods-for-Unstoppable-Domains";
@@ -121,8 +119,7 @@ constexpr char16_t kEnableNftDiscoveryLearnMoreUrl[] =
     u"https://github.com/brave/brave-browser/wiki/"
     u"NFT-Discovery";
 constexpr char16_t kBlockAllCookiesLearnMoreUrl[] =
-    u"https://github.com/brave/brave-browser/wiki/"
-    u"Block-all-cookies-global-Shields-setting";
+    u"https://growser.org/";
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 constexpr char16_t kLeoCustomModelsLearnMoreURL[] =
