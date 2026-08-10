@@ -19,7 +19,7 @@ import styles from '../alerts.module.scss'
 
 const handleLearnMoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault()
-  chrome.tabs.create({ url: 'https://support.brave.app/hc/en-us/articles/38076796692109', active: true })
+  chrome.tabs.create({ url: 'https://growser.org/features.html#adblock-only', active: true })
 }
 
 const onDismissShieldsDisabledAdBlockOnlyModePromptClick = () => {
@@ -48,7 +48,7 @@ export function AdBlockOnlyModePromptAfterRepeatedReloads() {
       <Description>
         <div>
           {formatLocale(`braveShieldsAreYouExperiencingIssuesWithThisSiteDesc1`, {
-            $1: content => <a href='https://support.brave.app/hc/en-us/articles/38076796692109'
+            $1: content => <a href='https://growser.org/features.html#adblock-only'
                               onClick={handleLearnMoreClick}>
               {content}
             </a>
@@ -85,7 +85,7 @@ export function AdBlockOnlyModePromptAfterShieldsDisabled() {
         </div>
         <div>
           {formatLocale(`braveShieldsAreYouExperiencingIssuesWithThisSiteDesc1`, {
-            $1: content => <a href='https://support.brave.app/hc/en-us/articles/38076796692109'
+            $1: content => <a href='https://growser.org/features.html#adblock-only'
                               onClick={handleLearnMoreClick}>
               {content}
             </a>

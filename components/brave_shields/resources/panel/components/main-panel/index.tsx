@@ -32,7 +32,7 @@ const ManagedIcon = styled(Icon).attrs({ name: 'news-business' })`
 
 const handleLearnMoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault()
-  chrome.tabs.create({ url: 'https://brave.com/privacy-features/', active: true })
+  chrome.tabs.create({ url: 'https://growser.org/features.html#shields', active: true })
 }
 
 function MainPanel () {
@@ -57,7 +57,7 @@ function MainPanel () {
       ? 'braveShieldsBlockedNote'
       : 'braveShieldsNOTBlockedNote';
   const braveShieldsNote = formatLocale(braveShieldsNoteKey, {
-    $1: content => <a href='https://brave.com/privacy-features/'
+    $1: content => <a href='https://growser.org/features.html#shields'
                       onClick={handleLearnMoreClick}>
       {content}
     </a>

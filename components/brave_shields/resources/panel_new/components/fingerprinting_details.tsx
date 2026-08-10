@@ -14,7 +14,7 @@ import { DetailsHeader } from './details_header'
 import { style } from './fingerprinting_details.style'
 
 const learnMoreUrl =
-  'https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing#h_01HXSZ8JPHR8YMBEZCT5M0VZTR'
+  'https://growser.org/features.html#shields'
 
 const webcompatSettingNames = new Map(
   Object.entries(ContentSettingsType)
