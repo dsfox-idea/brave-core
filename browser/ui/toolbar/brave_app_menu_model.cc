@@ -59,8 +59,13 @@ class BraveHelpMenuModel : public ui::SimpleMenuModel {
   void Build() {
     AddItemWithStringId(IDC_ABOUT, IDS_ABOUT);
     AddItemWithStringId(IDC_HELP_PAGE_VIA_MENU, IDS_HELP_PAGE);
-    AddItemWithStringId(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER,
-                        IDS_SHOW_BRAVE_WEBCOMPAT_REPORTER);
+    // growser (#78): no "report a broken site". The report carries the URL the
+    // user is on, and webcompat.brave.com accepts ours - it needs no service
+    // key, so unlike the rest of Brave's endpoints this one is not dead for a
+    // fork. That makes it worse, not better: someone reporting a broken site
+    // reasonably believes they are telling us, and instead their address goes
+    // to a third party who cannot act for them anyway - our filter lists come
+    // from the upstream publishers now (#57), not from Brave.
   }
 };
 }  // namespace

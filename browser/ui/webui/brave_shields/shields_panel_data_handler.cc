@@ -210,13 +210,11 @@ void ShieldsPanelDataHandler::SetWebcompatEnabled(
 }
 
 void ShieldsPanelDataHandler::OpenWebCompatWindow() {
-  if (!active_shields_data_controller_) {
-    return;
-  }
-
-  webcompat_reporter::OpenReporterDialog(
-      active_shields_data_controller_->web_contents(),
-      webcompat_reporter::UISource::kShieldsPanel);
+  // growser (#78): the reporter is closed - it uploads the user's URL to
+  // webcompat.brave.com, a third party to us. The panel buttons are gone and
+  // growser://webcompat is unregistered; this keeps the mojo method, which the
+  // panel's renderer can still call, from opening a page that no longer
+  // exists.
 }
 
 void ShieldsPanelDataHandler::AreAnyBlockedElementsPresent(

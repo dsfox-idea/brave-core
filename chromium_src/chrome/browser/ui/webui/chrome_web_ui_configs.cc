@@ -134,8 +134,10 @@ void RegisterChromeWebUIConfigs() {
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   map.AddWebUIConfig(std::make_unique<SpeedreaderToolbarUIConfig>());
 #endif
-  map.AddWebUIConfig(
-      std::make_unique<webcompat_reporter::WebcompatReporterUIConfig>());
+  // growser (#78): no growser://webcompat. Removing the menu entry and the
+  // Shields buttons leaves the page itself, and it is a page that uploads the
+  // user's URL to webcompat.brave.com - reachable by typing the address is
+  // still reachable.
   if (brave_account::features::IsBraveAccountEnabled()) {
     map.AddWebUIConfig(std::make_unique<BraveAccountUIDesktopConfig>());
   }

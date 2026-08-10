@@ -406,7 +406,10 @@ void BraveBrowserCommandController::UpdateCommandForBraveRewards() {
 }
 
 void BraveBrowserCommandController::UpdateCommandForWebcompatReporter() {
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER, true);
+  // growser (#78): see brave_app_menu_model.cc - the report goes to Brave with
+  // the user's URL in it. The menu entry is gone; this closes the command so
+  // any other caller (an accelerator, a panel button) is closed with it.
+  UpdateCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER, false);
 }
 
 #if BUILDFLAG(ENABLE_TOR)
