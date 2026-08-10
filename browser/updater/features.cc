@@ -12,7 +12,10 @@
 
 namespace brave_updater {
 
-BASE_FEATURE(kBraveUseOmaha4, base::FEATURE_DISABLED_BY_DEFAULT);
+// growser (#51): enabled. Brave keeps it off while they migrate from their
+// Omaha 3, which we never had - our updater is Omaha 4 and our update endpoint
+// answers only that protocol.
+BASE_FEATURE(kBraveUseOmaha4, base::FEATURE_ENABLED_BY_DEFAULT);
 
 BASE_FEATURE_PARAM(int,
                    kLegacyFallbackIntervalDays,
@@ -33,13 +36,13 @@ bool ShouldUseOmaha4Impl(base::Time now, std::optional<bool>& state) {
     // every X days. This lets us recover from a situation where updates with
     // Omaha 4 are broken because of a bug. Once Omaha 4 is stable, we can
     // remove the periodic fallback.
-    int days_since_null = (now - base::Time()).InDays();
-    int legacy_fallback_interval_days = kLegacyFallbackIntervalDays.Get();
-    if (days_since_null % legacy_fallback_interval_days == 0) {
-      state = false;
-    } else {
-      state = base::FeatureList::IsEnabled(kBraveUseOmaha4);
-    }
+    // growser (#51): no periodic fallback. Upstream lets the LEGACY updater run
+    // every few days so that a bug in Omaha 4 cannot strand users - a sound
+    // idea when you have two working updaters. We have one: there is no Omaha 3
+    // in this build and no server for it, so falling back would simply mean no
+    // update check that day, and a user unlucky with the calendar could sit on
+    // an old build indefinitely without anything looking wrong.
+    state = base::FeatureList::IsEnabled(kBraveUseOmaha4);
     VLOG(1) << "Using Omaha 4: " << state.value();
   }
   return state.value();
