@@ -89,7 +89,7 @@ export function MetricsStep(props: Props) {
               ),
               $2: (content) => (
                 <a
-                  href='https://brave.com/privacy/browser/'
+                  href='https://growser.org/features.html#privacy'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -127,7 +127,7 @@ export function MetricsStep(props: Props) {
               description={getString(
                 'WELCOME_PAGE_PRODUCT_CRASH_REPORTS_DESCRIPTION',
               )}
-              learnMoreUrl='https://support.brave.app/hc/en-us/articles/360017905872-How-do-I-enable-or-disable-automatic-crash-reporting'
+              learnMoreUrl='https://growser.org/features.html#crash-reports'
               checked={crashReportingEnabled}
               onChange={setCrashReportingEnabled}
             />

@@ -97,7 +97,7 @@ constexpr char16_t kBraveReleaseTagPrefix[] =
     u"https://github.com/dsfox-idea/brave-core/releases/tag/v";
 #if BUILDFLAG(ENABLE_CONTAINERS)
 constexpr char16_t kContainersLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/39077103885325";
+    u"https://growser.org/features.html#containers";
 #endif
 constexpr char16_t kGoogleLoginLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/"
@@ -109,10 +109,14 @@ constexpr char16_t kEnsOffchainLookupLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/ENS-offchain-lookup";
 constexpr char16_t kBraveSyncGuideUrl[] =
     u"https://support.brave.app/hc/en-us/articles/360047642371-Sync-FAQ";
+// growser (#78/#81): the five "learn more" links below describe features we
+// ship, and they used to describe them on Brave's site under Brave's name. They
+// now point at our own page, section by section - see site/features.html in the
+// growser repo, which is the source of what growser.org serves.
 constexpr char16_t kDeAmpLearnMoreUrl[] =
-    u"https://support.brave.app/hc/en-us/articles/8611298579981";
+    u"https://growser.org/features.html#de-amp";
 constexpr char16_t kDebounceLearnMoreUrl[] =
-    u"https://brave.com/privacy-updates/11-debouncing/";
+    u"https://growser.org/features.html#debounce";
 constexpr char16_t kEnableNftDiscoveryLearnMoreUrl[] =
     u"https://github.com/brave/brave-browser/wiki/"
     u"NFT-Discovery";
@@ -137,13 +141,13 @@ constexpr char16_t kLeoPrivacyPolicyURL[] =
 #endif
 
 constexpr char16_t kAdBlockOnlyModeLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/38076796692109";
+    u"https://growser.org/features.html#adblock-only";
 
 constexpr char16_t kSurveyPanelistLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/36550092449165";
 
 constexpr char16_t kExtensionsV2LearnMoreURL[] =
-    u"https://brave.com/blog/brave-shields-manifest-v3/";
+    u"https://growser.org/features.html#extensions-mv2";
 
 #if BUILDFLAG(ENABLE_PSST)
 constexpr char16_t kPsstLearnMoreUrl[] =
