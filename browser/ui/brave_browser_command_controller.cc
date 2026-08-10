@@ -589,7 +589,10 @@ void BraveBrowserCommandController::UpdateCommandForSplitView() {
 }
 
 void BraveBrowserCommandController::UpdateCommandForBraveSync() {
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_SYNC, true);
+  // growser (#79): ask the same question the settings page asks, so the menu
+  // entry and the settings section cannot disagree about whether sync exists.
+  // See chromium_src/components/sync/base/command_line_switches.cc.
+  UpdateCommandEnabled(IDC_SHOW_BRAVE_SYNC, syncer::IsSyncAllowedByFlag());
 }
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)

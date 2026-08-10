@@ -39,6 +39,17 @@ TEST(BraveMainDelegateUnitTest, DefaultCommandLineOverrides) {
                    .c_str());
 }
 
+// growser (#79): sync is off until we run a server of our own, and this is the
+// gate rather than a note in the docs. What matters is not that the switch is
+// in the list - it is that IsSyncAllowedByFlag() comes out false, because that
+// is the single question the settings section, the /braveSync route and the
+// menu command all ask. If anyone re-enables sync, this fails and says why.
+TEST(BraveMainDelegateUnitTest, SyncIsDisabled) {
+  BraveMainDelegate::AppendCommandLineOptions();
+
+  EXPECT_FALSE(syncer::IsSyncAllowedByFlag());
+}
+
 TEST(BraveMainDelegateUnitTest, OverrideSwitchFromCommandLine) {
   base::CommandLine& command_line = *base::CommandLine::ForCurrentProcess();
   const std::string override_sync_url = "https://sync.com";
