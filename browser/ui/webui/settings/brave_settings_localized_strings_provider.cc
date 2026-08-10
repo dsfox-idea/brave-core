@@ -87,11 +87,14 @@ namespace {
 constexpr char16_t kWebRTCLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/"
     u"360017989132-How-do-I-change-my-Privacy-Settings-#webrtc";
+// growser (#78/#81): our repository, not Brave's - these two are shown on the
+// About page and describe how THIS browser is built and what a given version
+// contains.
 constexpr char16_t kBraveBuildInstructionsUrl[] =
-    u"https://github.com/brave/brave-browser/wiki";
+    u"https://github.com/dsfox-idea/brave-core";
 constexpr char16_t kBraveLicenseUrl[] = u"https://mozilla.org/MPL/2.0/";
 constexpr char16_t kBraveReleaseTagPrefix[] =
-    u"https://github.com/brave/brave-browser/releases/tag/v";
+    u"https://github.com/dsfox-idea/brave-core/releases/tag/v";
 #if BUILDFLAG(ENABLE_CONTAINERS)
 constexpr char16_t kContainersLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/39077103885325";

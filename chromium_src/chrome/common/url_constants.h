@@ -16,17 +16,33 @@
 
 namespace chrome {
 
+// growser (#78/#81): the generic "help with this browser" destination is ours.
+//
+// Brave had already replaced Chromium's Google help links with their own
+// support site; every one of those that carries no article path means nothing
+// more specific than "here is where you get help", and for our users that is
+// not Brave's support desk - it describes a different product under a
+// different name, and clicking it hands them to a third party. The most
+// visible of them is the Help item in the app menu.
+//
+// Article-specific links (support.brave.app/hc/en-us/articles/NNN) are
+// deliberately left alone here: each one is about a particular feature, we
+// have no article to put in its place, and a link that is wrongly branded is
+// still better than one that goes nowhere useful. They stay on the judged list
+// in scripts/brave-links-allowed.txt as LIVE, which is where the decision
+// about them belongs.
+
 // "Learn more" URL linked in the dialog to cast using a code.
 inline constexpr char kAccessCodeCastLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // "Learn more" URL for accessibility image labels, linked from the permissions
 // dialog shown when a user enables the feature.
 inline constexpr char kAccessibilityLabelsLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // "Learn more" URL for Ad Privacy.
-inline constexpr char kAdPrivacyLearnMoreURL[] = "https://support.brave.app/";
+inline constexpr char kAdPrivacyLearnMoreURL[] = "https://growser.org/";
 
 // "Learn more" URL for when profile settings are automatically reset.
 inline constexpr char kAutomaticSettingsResetLearnMoreURL[] =
@@ -35,7 +51,7 @@ inline constexpr char kAutomaticSettingsResetLearnMoreURL[] =
 
 // "Learn more" URL for Advanced Protection download warnings.
 inline constexpr char kAdvancedProtectionDownloadLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // "Chrome Settings" URL for the appearance page.
 inline constexpr char kBrowserSettingsSearchEngineURL[] =
@@ -49,16 +65,16 @@ inline constexpr char16_t kBatterySaverModeLearnMoreUrl[] =
 
 // The URL for providing help when the Bluetooth adapter is off.
 inline constexpr char kBluetoothAdapterOffHelpURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // "Learn more" URL shown in the dialog to enable cloud services for Cast.
 inline constexpr char kCastCloudServicesHelpURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the help center article to show when no Cast destination has been
 // found.
 inline constexpr char kCastNoDestinationFoundURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the WebHID API help center article.
 inline constexpr char kChooserHidOverviewUrl[] =
@@ -78,18 +94,18 @@ inline constexpr char kChromeBetaForumURL[] =
 
 // The URL for the help center article to fix Chrome update problems.
 inline constexpr char16_t kChromeFixUpdateProblems[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // General help links for Chrome, opened using various actions.
 inline constexpr char kChromeHelpViaKeyboardURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
-inline constexpr char kChromeHelpViaMenuURL[] = "https://support.brave.app/";
+inline constexpr char kChromeHelpViaMenuURL[] = "https://growser.org/";
 
-inline constexpr char kChromeHelpViaWebUIURL[] = "https://support.brave.app/";
+inline constexpr char kChromeHelpViaWebUIURL[] = "https://growser.org/";
 
 inline constexpr char kRelatedWebsiteSetsLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The isolated-app: scheme is used for Isolated Web Apps. A public explainer
 // can be found here: https://github.com/reillyeon/isolated-web-apps
@@ -101,7 +117,7 @@ inline constexpr char16_t kIsolatedAppSchemeUtf16[] = u"isolated-app";
 inline constexpr char kChromeNativeScheme[] = "chrome-native";
 
 // The URL of safe section in Chrome page.
-inline constexpr char16_t kChromeSafePageURL[] = u"https://support.brave.app/";
+inline constexpr char16_t kChromeSafePageURL[] = u"https://growser.org/";
 
 // Pages under chrome-search.
 inline constexpr char kChromeSearchLocalNtpHost[] = "local-ntp";
@@ -145,9 +161,11 @@ inline constexpr char kChromeSearchScheme[] = "chrome-search";
 inline constexpr char kChromeUIUntrustedNewTabPageUrl[] =
     "chrome-untrusted://new-tab-page/";
 
-// The URL for the Chromium project used in the About dialog.
+// The URL for the Chromium project used in the About dialog. growser
+// (#78/#81): ours - the About dialog offering another fork's repository as
+// "the project" is simply wrong about what the reader is running.
 inline constexpr char16_t kChromiumProjectURL[] =
-    u"https://github.com/brave/brave-browser/";
+    u"https://github.com/dsfox-idea/brave-core/";
 
 inline constexpr char16_t kContentSettingsExceptionsLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/"
@@ -207,14 +225,14 @@ inline constexpr char kExtensionInvalidRequestURL[] =
 
 // Link for creating family group with Google Families.
 inline constexpr char16_t kFamilyGroupCreateURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // Link for viewing family group with Google Families.
-inline constexpr char16_t kFamilyGroupViewURL[] = u"https://support.brave.app/";
+inline constexpr char16_t kFamilyGroupViewURL[] = u"https://growser.org/";
 
 // "Learn more" URL for Incognito tracking protections.
 inline constexpr char kIncognitoTrackingProtectionsLearnMoreUrl[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // Url to a blogpost about Flash deprecation.
 inline constexpr char kFlashDeprecationLearnMoreURL[] =
@@ -222,42 +240,42 @@ inline constexpr char kFlashDeprecationLearnMoreURL[] =
 
 // URL of the 'Activity controls' section of the privacy settings page.
 inline constexpr char kGoogleAccountActivityControlsURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // URL of the 'Activity controls' section of the privacy settings page, with
 // privacy guide parameters and a link for users to manage data.
 inline constexpr char kGoogleAccountActivityControlsURLInPrivacyGuide[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // URL of the 'Linked services' section of the privacy settings page.
 inline constexpr char kGoogleAccountLinkedServicesURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // URL of the Google Account.
-inline constexpr char kGoogleAccountURL[] = "https://support.brave.app/";
+inline constexpr char kGoogleAccountURL[] = "https://growser.org/";
 
 // URL of the Google Account chooser.
-inline constexpr char kGoogleAccountChooserURL[] = "https://support.brave.app/";
+inline constexpr char kGoogleAccountChooserURL[] = "https://growser.org/";
 
 // URL of the Google Account page showing the known user devices.
 inline constexpr char kGoogleAccountDeviceActivityURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // URL of the Google Account home address page.
 inline constexpr char kGoogleAccountHomeAddressURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // URL of the Google Account work address page.
 inline constexpr char kGoogleAccountWorkAddressURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // URL of the change Google Account name page.
 inline constexpr char kGoogleAccountNameEmailAddressEditURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // URL of the two factor authentication setup required intersitial.
 inline constexpr char kGoogleTwoFactorIntersitialURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The scheme used for google-chrome:// URLs.
 // TODO(b/446672134): Use a distinct value for each brand (e.g.,
@@ -266,7 +284,7 @@ inline constexpr char kGoogleTwoFactorIntersitialURL[] =
 inline constexpr char kGoogleChromeURLScheme[] = "google-chrome";
 
 // URL of the Google Password Manager.
-inline constexpr char kGooglePasswordManagerURL[] = "https://support.brave.app";
+inline constexpr char kGooglePasswordManagerURL[] = "https://growser.org/";
 
 // The URL for the "Learn more" link for the High Efficiency Mode.
 inline constexpr char16_t kMemorySaverModeLearnMoreUrl[] =
@@ -275,11 +293,11 @@ inline constexpr char16_t kMemorySaverModeLearnMoreUrl[] =
 // The URL in the help text for the High Efficiency Mode tab discarding
 // exceptions add dialog.
 inline constexpr char16_t kMemorySaverModeTabDiscardingHelpUrl[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL to the help center article of Incognito mode.
 inline constexpr char16_t kIncognitoHelpCenterURL[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // TODO(crbug.com/498632327): Replace this URL with P-link.
 // "Learn more" URL for the web app installation flow, linked from installation
@@ -298,10 +316,10 @@ inline constexpr char kLearnMoreReportingURL[] =
     "360017905872-How-do-I-enable-or-disable-automatic-crash-reporting-";
 
 // The URL for the Help Center page about managing third-party cookies.
-inline constexpr char kManage3pcHelpCenterURL[] = "https://support.brave.app/";
+inline constexpr char kManage3pcHelpCenterURL[] = "https://growser.org/";
 
 // The URL for the tab group sync help center page.
-inline constexpr char kTabGroupsLearnMoreURL[] = "https://support.brave.app/";
+inline constexpr char kTabGroupsLearnMoreURL[] = "https://growser.org/";
 
 // The URL for the Learn More page about policies and enterprise enrollment.
 inline constexpr char16_t kManagedUiLearnMoreUrl[] =
@@ -309,37 +327,37 @@ inline constexpr char16_t kManagedUiLearnMoreUrl[] =
 
 // The URL for the "Learn more" page for insecure download blocking.
 inline constexpr char kInsecureDownloadBlockingLearnMoreUrl[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // "myactivity.google.com" URLs with their respective UTM sources.
 // - In the Clear Browsing Data footer.
 // - In the Clear Browsing Data "notice about other forms of history".
 // - On the history page.
 inline constexpr char16_t kMyActivityUrlInClearBrowsingData[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 inline constexpr char16_t kMyActivityUrlInClearBrowsingDataNotice[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 inline constexpr char16_t kMyActivityUrlInHistory[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for the Gemini Personal Context page.
 inline constexpr char16_t kGeminiPersonalContextUrl[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for "Your Gemini Apps Activity" page.inline constexpr char16_t
 // kMyActivityGeminiAppsUrl[] =
 inline constexpr char16_t kMyActivityGeminiAppsUrl[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for Glic activity button.
-inline constexpr char kGlicActivityUrl[] = "https://support.brave.app/";
+inline constexpr char kGlicActivityUrl[] = "https://growser.org/";
 
 // The URL for the AI Mode activity page.
 inline constexpr char16_t kMyActivityAiModeUrl[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 inline constexpr char16_t kMyActivitySearchServicesAppsUrl[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // Help URL for the Omnibox setting.
 inline constexpr char16_t kOmniboxLearnMoreURL[] =
@@ -353,15 +371,15 @@ inline constexpr char kPageInfoHelpCenterURL[] =
 
 // Help center article URL for automated password change.
 inline constexpr char16_t kPasswordChangeLearnMoreURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // Help URL for the bulk password check.
 inline constexpr char kPasswordCheckLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // Help URL for password generation.
 inline constexpr char kPasswordGenerationLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 inline constexpr char16_t kPasswordManagerLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/"
@@ -369,49 +387,49 @@ inline constexpr char16_t kPasswordManagerLearnMoreURL[] =
 
 // Help URL for passwords import.
 inline constexpr char kPasswordManagerImportLearnMoreURL[] =
-    "https://support.brave.app";
+    "https://growser.org/";
 
 // Help URL for password sharing.
 inline constexpr char kPasswordSharingLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // Help URL for troubleshooting password sharing.
 inline constexpr char kPasswordSharingTroubleshootURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // Help URL for the Payment methods page of the Google Pay site.
-inline constexpr char16_t kPaymentMethodsURL[] = u"https://support.brave.app";
+inline constexpr char16_t kPaymentMethodsURL[] = u"https://growser.org/";
 
 // Help URL for the newer GPay Web site instead of the legacy Payments Center.
 inline constexpr char16_t kPaymentMethodsURLForGPayWeb[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // The URL for the "Fill out forms automatically" support page.
 inline constexpr char kAddressesAndPaymentMethodsLearnMoreURL[] =
-    "https://support.brave.app";
+    "https://growser.org/";
 
 // The URL for the "Pay over time" support page.
 inline constexpr char16_t kPayOverTimeLearnMoreUrl[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // The URL for the Wallet website.
-inline constexpr char16_t kWalletUrl[] = u"https://support.brave.app";
+inline constexpr char16_t kWalletUrl[] = u"https://growser.org/";
 
 // Help URL for Autofill Prediction Improvements.
 inline constexpr char16_t kAutofillAiLearnMoreURL[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // "Learn more" URL for the autofill show card benefits setting.
 inline constexpr char16_t kCardBenefitsLearnMoreURL[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // "Learn more" URL for the performance intervention notification setting.
 inline constexpr char16_t kPerformanceInterventionLearnMoreUrl[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // "Learn more" URL for the preloading section in Performance settings.
 inline constexpr char16_t kPreloadingLearnMoreUrl[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // "Learn more" URL for the Privacy section under Options.
 inline constexpr char kPrivacyLearnMoreURL[] =
@@ -435,19 +453,19 @@ inline constexpr char kSafeBrowsingHelpCenterURL[] =
 
 // Updated "Info icon" URL for Safebrowsing
 inline constexpr char kSafeBrowsingHelpCenterUpdatedURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // "Learn more" URL for Enhanced Protection
 inline constexpr char16_t kSafeBrowsingInChromeHelpCenterURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL of Safe Browsing p-tour.
 inline constexpr char16_t kSafeBrowsingUseInChromeURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // "Learn more" URL for Safety Check page.
 inline constexpr char16_t kSafetyHubHelpCenterURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // "Learn more" URL for safety tip bubble.
 inline constexpr char kSafetyTipHelpCenterURL[] =
@@ -456,77 +474,77 @@ inline constexpr char kSafetyTipHelpCenterURL[] =
 // Google search history URL that leads users of the CBD dialog to their search
 // history in their Google account.
 inline constexpr char16_t kSearchHistoryUrlInClearBrowsingData[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for the "See more security tips" with advices how to create a strong
 // password.
-inline constexpr char kSeeMoreSecurityTipsURL[] = "https://support.brave.app/";
+inline constexpr char kSeeMoreSecurityTipsURL[] = "https://growser.org/";
 
 // Help URL for the settings page's search feature.
 inline constexpr char16_t kSettingsSearchHelpURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for the Learn More page about Sync and Google services.
 inline constexpr char kSyncAndGoogleServicesLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" page on sync encryption.
 inline constexpr char16_t kSyncEncryptionHelpURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for the "Learn more" link when there is a sync error.
-inline constexpr char kSyncErrorsHelpURL[] = "https://support.brave.app/";
+inline constexpr char kSyncErrorsHelpURL[] = "https://growser.org/";
 
 // Legacy URL to the sync google dashboard.
 inline constexpr char kLegacySyncGoogleDashboardURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // New URL to the sync google dashboard.
 inline constexpr char kNewSyncGoogleDashboardURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
-inline constexpr char kSyncGoogleDashboardURL[] = "https://support.brave.app/";
+inline constexpr char kSyncGoogleDashboardURL[] = "https://growser.org/";
 
 // The URL for the "Learn more" page for sync setup on the personal stuff page.
-inline constexpr char16_t kSyncLearnMoreURL[] = u"https://support.brave.app/";
+inline constexpr char16_t kSyncLearnMoreURL[] = u"https://growser.org/";
 
 // The URL for the "Learn more" page for signing in to chrome with expanded
 // section on "Sign in and turn on sync" in the Computer/Desktop tab.
 inline constexpr char kSigninOnDesktopLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" page for adding a new profile to Chrome.
 inline constexpr char kAddNewProfileOnDesktopLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" page for AI settings for managed users.
 inline constexpr char16_t kAiSettingsLearnMorePageManagedUrl[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for the "Learn more" page for Help me Write.
-inline constexpr char kComposeLearnMorePageURL[] = "https://support.brave.app/";
+inline constexpr char kComposeLearnMorePageURL[] = "https://growser.org/";
 
 // The URL for the "Learn more" page for Help me Write for managed users.
 inline constexpr char kComposeLearnMorePageManagedURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" links for pages related to History search.
 // TODO(crbug.com/328300718): Update help article URL.
 inline constexpr char kHistorySearchLearnMorePageURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more about shortcuts" page for Glic.
 inline constexpr char kGlicKeyboardShortcutLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more about shortcuts" page for Glic for managed users.
 inline constexpr char kGlicKeyboardShortcutLearnMoreManagedURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" links for pages related to History search for
 // managed users.
 inline constexpr char kHistorySearchLearnMorePageManagedURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the Settings page to enable history search.
 inline constexpr char16_t kHistorySearchSettingURL[] =
@@ -539,18 +557,18 @@ inline constexpr char16_t kHistorySearchV2SettingURL[] =
 
 // The URL for the "Learn more" page for Wallpaper Search.
 inline constexpr char kWallpaperSearchLearnMorePageURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the passed in Google Wallet.
-inline constexpr char kWalletPassesPageURL[] = "https://support.brave.app/";
+inline constexpr char kWalletPassesPageURL[] = "https://growser.org/";
 
 // The help center article URL on using Wallet private passes across Google.
 inline constexpr char kWalletPrivatePassHelpCenterURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" page for Wallpaper Search for managed users.
 inline constexpr char kWallpaperSearchLearnMorePageManagedURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" page for Tab Organization.
 inline constexpr char kTabOrganizationLearnMorePageURL[] =
@@ -559,30 +577,30 @@ inline constexpr char kTabOrganizationLearnMorePageURL[] =
 
 // The URL for the "Learn more" page for Tab Organization for managed users.
 inline constexpr char kTabOrganizationLearnMorePageManagedURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "Learn more" link in the enterprise disclaimer for managed
 // profile in the Signin Intercept bubble.
 inline constexpr char kSigninInterceptManagedDisclaimerLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 #if !BUILDFLAG(IS_ANDROID)
 // The URL for the trusted vault sync passphrase opt in.
 inline constexpr char kSyncTrustedVaultOptInURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 #endif
 
 // The URL for the "Learn more" link for the trusted vault sync passphrase.
 inline constexpr char kSyncTrustedVaultLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the Help Center page about Tracking Protection settings.
 inline constexpr char16_t kTrackingProtectionHelpCenterURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for the Help Center page about User Bypass.
 inline constexpr char16_t kUserBypassHelpCenterURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 inline constexpr char kUpgradeHelpCenterBaseURL[] =
     "https://support.brave.app/hc/en-us/articles/"
@@ -590,34 +608,34 @@ inline constexpr char kUpgradeHelpCenterBaseURL[] =
 
 // Help center URL for who the account administrator is.
 inline constexpr char16_t kWhoIsMyAdministratorHelpURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL for the "Learn more" link about CWS Enhanced Safe Browsing.
 inline constexpr char16_t kCwsEnhancedSafeBrowsingLearnMoreURL[] =
-    u"https://support.brave.app/";
+    u"https://growser.org/";
 
 // The URL path to Google's Privacy Policy page.
-inline constexpr char kPrivacyPolicyURL[] = "https://support.brave.app/";
+inline constexpr char kPrivacyPolicyURL[] = "https://growser.org/";
 
 // The URL path to Google's Privacy Policy page for users in China.
-inline constexpr char kPrivacyPolicyURLChina[] = "https://support.brave.app/";
+inline constexpr char kPrivacyPolicyURLChina[] = "https://growser.org/";
 
 // The URL path to Google's Embedded Privacy Policy page.
 inline constexpr char kPrivacyPolicyOnlineURLPath[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL path to Google's Embedded Privacy Policy page - Dark Mode.
 inline constexpr char kPrivacyPolicyOnlineDarkModeURLPath[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL path to Google's Embedded Privacy Policy page for users in China.
 inline constexpr char kPrivacyPolicyEmbeddedURLPathChina[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL path to Google's Embedded Privacy Policy page for users in China -
 // Dark Mode.
 inline constexpr char kPrivacyPolicyEmbeddedDarkModeURLPathChina[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 #if BUILDFLAG(IS_ANDROID)
 // "Learn more" URL for the enhanced playback notification dialog.
@@ -629,7 +647,7 @@ inline constexpr char kEnhancedPlaybackNotificationLearnMoreURL[] =
 #if BUILDFLAG(IS_MAC)
 // "Learn more" URL for the enterprise sign-in confirmation dialog.
 inline constexpr char kChromeEnterpriseSignInLearnMoreURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the "learn more" link on the macOS version obsolescence infobar.
 inline constexpr char kMacOsObsoleteURL[] =
@@ -640,7 +658,7 @@ inline constexpr char kMacOsObsoleteURL[] =
 #if BUILDFLAG(IS_WIN)
 // The URL for the Windows XP/Vista deprecation help center article.
 inline constexpr char kWindowsXPVistaDeprecationURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 
 // The URL for the Windows 7/8.1 deprecation help center article.
 inline constexpr char kWindows78DeprecationURL[] =
@@ -648,11 +666,11 @@ inline constexpr char kWindows78DeprecationURL[] =
 
 // The URL for the "Learn more" page for process isolation.
 inline constexpr char kProcessIsolationLearnMoreUrl[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 #endif  // BUILDFLAG(IS_WIN)
 
 // "Learn more" URL for the one click signin infobar.
-inline constexpr char kChromeSyncLearnMoreURL[] = "https://support.brave.app/";
+inline constexpr char kChromeSyncLearnMoreURL[] = "https://growser.org/";
 
 #if BUILDFLAG(ENABLE_PLUGINS)
 // The URL for the "Learn more" page for the outdated plugin infobar.
@@ -678,7 +696,7 @@ inline constexpr char kChromeRootStoreSettingsHelpCenterURL[] =
 // TODO(crbug.com/436926181): Make sure the URL is not a dead link.
 // "Learn more" URL for how to save PDF to Google Drive from the PDF viewer.
 inline constexpr char kPdfViewerSaveToDriveHelpCenterURL[] =
-    "https://support.brave.app/";
+    "https://growser.org/";
 #endif
 
 }  // namespace chrome
