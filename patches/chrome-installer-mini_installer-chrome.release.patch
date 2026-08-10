@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/mini_installer/chrome.release b/chrome/installer/mini_installer/chrome.release
-index 5add215198e878e161e75f1918aaf9826eb8e47c..93f22c68407f008fbcebf60307daeed984058134 100644
+index 5add215198e878e161e75f1918aaf9826eb8e47c..0a95ca0f50abe4356ec4e4ed300105bba5c75c34 100644
 --- a/chrome/installer/mini_installer/chrome.release
 +++ b/chrome/installer/mini_installer/chrome.release
 @@ -6,7 +6,7 @@
@@ -11,11 +11,18 @@ index 5add215198e878e161e75f1918aaf9826eb8e47c..93f22c68407f008fbcebf60307daeed9
  chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir assembly manifest.
-@@ -18,9 +18,19 @@ chrome_proxy.exe: %(ChromeDir)s\
+@@ -18,9 +18,26 @@ chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir entries, sorted alphabetically.
  #
 +growser.exe.sig: %(VersionDir)s\
++# growser (#51): the updater ships with the browser.
++#
++# Chromium's setup.exe does not install the updater - in Google's product that
++# is the metainstaller's job, and we have no metainstaller. Shipping updater.exe
++# in the version directory lets setup run it once, which is all it needs: it
++# copies itself into its own directory and registers a scheduled task.
++updater.exe: %(VersionDir)s\
 +brave_vpn_helper.exe: %(VersionDir)s\
 +brave_vpn_wireguard_service.exe: %(VersionDir)s\BraveVpnWireguardService\
 +tunnel.dll: %(VersionDir)s\BraveVpnWireguardService\
@@ -31,7 +38,7 @@ index 5add215198e878e161e75f1918aaf9826eb8e47c..93f22c68407f008fbcebf60307daeed9
  chrome_elf.dll: %(VersionDir)s\
  chrome_pwa_launcher.exe: %(VersionDir)s\
  chrome_wer.dll: %(VersionDir)s\
-@@ -72,6 +82,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
+@@ -72,6 +89,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
  
  [HIDPI]
  chrome_200_percent.pak: %(VersionDir)s\
