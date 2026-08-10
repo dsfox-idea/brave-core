@@ -72,7 +72,11 @@
     </settings-dropdown-menu>
 </div>
 <!-- <if expr="enable_psst"> -->
-<template is="dom-if" if="[[isPsstFeatureEnabled_]]">
+<!-- growser (#78): PSST adjusts privacy settings on sites from a rules list
+     that arrives as a Brave component. Brave's component server answers
+     403 to a fork and Google does not know the id, so the rules can never
+     arrive and the toggle would switch on a feature with no rules. -->
+<template is="dom-if" if="[[false]]">
   <settings-toggle-button
     class="cr-row"
     pref="{{prefs.brave.psst.settings.enable_psst}}"
