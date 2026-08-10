@@ -21,7 +21,6 @@ export function TopSitesPanel() {
   const actions = useTopSitesActions()
 
   const showTopSites = useTopSitesState((s) => s.showTopSites)
-  const showSponsoredSites = useTopSitesState((s) => s.showSponsoredSites)
   const listKind = useTopSitesState((s) => s.topSitesListKind)
 
   function renderSelectedMarker(kind: TopSitesListKind) {
@@ -49,20 +48,10 @@ export function TopSitesPanel() {
           {getString(S.NEW_TAB_SHOW_TOP_SITES_LABEL)}
         </span>
       </Toggle>
-      {showTopSites && (
-        <Toggle
-          className='toggle-row'
-          size='small'
-          checked={showSponsoredSites}
-          onChange={({ checked }) => {
-            actions.setShowSponsoredSites(checked)
-          }}
-        >
-          <span className='label'>
-            {getString(S.NEW_TAB_SHOW_SPONSORED_SITES_LABEL)}
-          </span>
-        </Toggle>
-      )}
+      {/* growser (#78): no "show sponsored sites" switch. The sites come from
+          the NTP background-images component, and our component updater gets
+          403 from Brave for want of a service key, so SponsoredSitesFacade
+          always returns an empty list. The switch controlled nothing. */}
       {showTopSites && (
         <div className='list-view-options'>
           <button
