@@ -87,19 +87,6 @@ constexpr webui::LocalizedString kLocalizedStrings[] = {
 #endif  // BUILDFLAG(ENABLE_WEB_DISCOVERY)
 };
 
-void OpenJapanWelcomePage(Profile* profile) {
-  auto* browser = ProfileBrowserCollection::GetForProfile(profile)
-                      ->FindTabbedBrowser()
-                      ->GetBrowserForMigrationOnly();
-  if (browser) {
-    content::OpenURLParams open_params(
-        GURL("https://brave.com/ja/desktop-ntp-tutorial"), content::Referrer(),
-        WindowOpenDisposition::NEW_BACKGROUND_TAB,
-        ui::PAGE_TRANSITION_AUTO_TOPLEVEL, false);
-    browser->OpenURL(open_params, /*navigation_handle_callback=*/{});
-  }
-}
-
 }  // namespace
 
 BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
@@ -134,19 +121,15 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
       regional_capabilities::RegionalCapabilitiesServiceFactory::GetForProfile(
           profile)));
 
-  // Open additional page in Japanese region
+  // growser (#78/#81): no extra page on first run in Japan. Three seconds into
+  // a first run there, this opened a background tab on
+  // brave.com/ja/desktop-ntp-tutorial - a tutorial for another browser's new
+  // tab page, shown by ours, before the user had done anything. We have no
+  // Japanese tutorial of our own, and the honest alternative to someone else's
+  // is none. The country is still read: the onboarding cards below use it.
   country_codes::CountryId country_id =
       country_codes::CountryId::Deserialize(profile->GetPrefs()->GetInteger(
           regional_capabilities::prefs::kCountryIDAtInstall));
-  const bool is_jpn = country_id == country_codes::CountryId("JP");
-  if (!profile->GetPrefs()->GetBoolean(
-          brave::welcome_ui::prefs::kHasSeenBraveWelcomePage)) {
-    if (is_jpn) {
-      base::SingleThreadTaskRunner::GetCurrentDefault()->PostDelayedTask(
-          FROM_HERE, base::BindOnce(&OpenJapanWelcomePage, profile),
-          base::Seconds(3));
-    }
-  }
 
   for (const auto& str : kLocalizedStrings) {
     std::u16string l10n_str = l10n_util::GetStringUTF16(str.id);
