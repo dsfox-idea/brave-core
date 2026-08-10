@@ -317,7 +317,13 @@ if (is_official_build && !skip_signing) {
 action("package") {
   outputs = [
     dmg_path,
-    "$packaged_basename.pkg",
+    # growser: no .pkg in outputs. The fork sets package_as_pkg=False in
+    # internal_config.py (no Developer ID *Installer* certificate, only
+    # *Application*), so sign_chrome does not produce a pkg. Listing it here
+    # would make ninja/siso fail with "missing local outputs ...pkg" even
+    # though notarization+stapling succeeded. We distribute as ZIP/DMG. Add
+    # "$packaged_basename.pkg" back together with package_as_pkg=True if an
+    # Installer certificate is ever obtained.
     zip_path,
   ]
   deps = [
