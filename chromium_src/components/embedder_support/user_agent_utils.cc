@@ -10,7 +10,20 @@
 
 namespace {
 
-constexpr char kBraveBrandNameForCHUA[] = "Brave";
+// growser (#82): the brand a site reads from navigator.userAgentData is
+// "Google Chrome", which makes our client-hint brand list byte for byte what
+// Chrome sends: the GREASE entry, "Google Chrome" and "Chromium".
+//
+// Brave puts "Brave" here and accepts being identified. We cannot: our
+// condition is that sites must not be able to tell us from Chrome, because a
+// site that decides we are not Chrome stops loading, and no privacy property
+// survives a page that will not open. Announcing "Brave" fails that twice over
+// - it is not Chrome, and it is not even what this browser is.
+//
+// This is the same claim our UA string already makes ("Chrome/151.0.0.0"), in
+// the newer format, and it is the one place a site can check that claim
+// against.
+constexpr char kBraveBrandNameForCHUA[] = "Google Chrome";
 
 }  // namespace
 
