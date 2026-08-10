@@ -31,10 +31,6 @@ function IsTheSiteWorkingCorrectlyNowAdBlockOnlyModeNotice(
     getPanelBrowserAPI().panelHandler.closeUI()
   }
 
-  const onReportClick = () => {
-    getPanelBrowserAPI().dataHandler.openWebCompatWindow()
-  }
-
   return (
     <Container>
       <HeaderRow>
@@ -62,19 +58,13 @@ function IsTheSiteWorkingCorrectlyNowAdBlockOnlyModeNotice(
           {getLocale('braveShieldsIsThisSiteWorkingCorrectlyNowDesc')}
         </div>
         <div slot='actions' className={styles.actionsWrapper}>
-          {isBraveShieldsEnabled ? (
+          {/* growser (#78): no "report site" - see main-panel/index.tsx. */}
+          {isBraveShieldsEnabled && (
             <div className={styles.buttonsWrapper}>
               <Button size="medium" onClick={onLooksGoodClick}>
                 {getLocale('braveShieldsIsThisSiteWorkingCorrectlyNowLooksGood')}
               </Button>
-              <Button kind="plain" size="medium" onClick={onReportClick}>
-                {getLocale('braveShieldsIsThisSiteWorkingCorrectlyNowReportSite')}
-              </Button>
             </div>
-          ) : (
-            <Button size="medium" onClick={onReportClick}>
-              {getLocale('braveShieldsIsThisSiteWorkingCorrectlyNowReportSite')}
-            </Button>
           )}
         </div>
       </Alert>

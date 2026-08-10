@@ -108,14 +108,7 @@ function AdBlockOnlyFeedbackPrompt() {
             'BRAVE_SHIELDS_IS_THIS_SITE_WORKING_CORRECTLY_NOW_LOOKS_GOOD',
           )}
         </Button>
-        <Button
-          kind='plain'
-          onClick={api.openWebCompatWindow}
-        >
-          {getString(
-            'BRAVE_SHIELDS_IS_THIS_SITE_WORKING_CORRECTLY_NOW_REPORT_SITE',
-          )}
-        </Button>
+        {/* growser (#78): no "report site" - see main_card.tsx. */}
       </div>
     </div>
   )
