@@ -11,7 +11,9 @@
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 
-constexpr char kBraveCommunitySupportUrl[] = "https://community.brave.app/";
+// growser (#78/#81): "learn more" from a content-setting bubble is help
+// with this browser, so it goes to ours.
+constexpr char kBraveCommunitySupportUrl[] = "https://growser.org/";
 
 BraveBrowserContentSettingBubbleModelDelegate::
     BraveBrowserContentSettingBubbleModelDelegate(
