@@ -585,6 +585,11 @@ TEST_F(AcceleratorServiceUnitTestWithLocalState, PolicyFiltering) {
   const std::vector<int> tor_commands = {IDC_NEW_OFFTHERECORD_WINDOW_TOR,
                                          IDC_NEW_TOR_CONNECTION_FOR_SITE};
 
+  // growser (#78): Tor is disabled by default in this browser, so the state
+  // this test calls "initially" has to be asked for. What it checks is that
+  // the policy pref drives the commands, and that still holds.
+  local_state()->SetBoolean(tor::prefs::kTorDisabled, false);
+
   // Initially, commands should not be disabled
   for (int command : tor_commands) {
     EXPECT_FALSE(service.IsCommandDisabledByPolicy(command));

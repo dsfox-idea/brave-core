@@ -12,10 +12,12 @@
 #include "brave/browser/tor/tor_profile_manager.h"
 #include "brave/browser/tor/tor_profile_service_factory.h"
 #include "brave/components/tor/mock_tor_launcher_factory.h"
+#include "brave/components/tor/pref_names.h"
 #include "brave/components/tor/tor_profile_service.h"
 #include "chrome/test/base/testing_browser_process.h"
 #include "chrome/test/base/testing_profile.h"
 #include "chrome/test/base/testing_profile_manager.h"
+#include "components/prefs/testing_pref_service.h"
 #include "content/public/browser/navigation_handle.h"
 #include "content/public/test/browser_task_environment.h"
 #include "content/public/test/mock_navigation_handle.h"
@@ -44,6 +46,11 @@ class TorNavigationThrottleUnitTest : public testing::Test {
     TestingBrowserProcess* browser_process = TestingBrowserProcess::GetGlobal();
     profile_manager_ = std::make_unique<TestingProfileManager>(browser_process);
     ASSERT_TRUE(profile_manager_->SetUp());
+    // growser (#78): Tor is disabled by default in this browser, and a
+    // disabled Tor has no profile to give. These tests are about the throttle,
+    // not about the default, so ask for Tor explicitly.
+    browser_process->GetTestingLocalState()->SetBoolean(prefs::kTorDisabled,
+                                                        false);
     Profile* profile = profile_manager_->CreateTestingProfile(kTestProfileName);
     Profile* tor_profile =
         TorProfileManager::GetInstance().GetTorProfile(profile);

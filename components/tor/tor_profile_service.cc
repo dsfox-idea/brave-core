@@ -17,7 +17,15 @@ TorProfileService::~TorProfileService() = default;
 
 // static
 void TorProfileService::RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
-  registry->RegisterBooleanPref(prefs::kTorDisabled, false);
+  // growser (#78): Tor is off by default. The Tor client itself arrives as a
+  // component, and our component updater gets 403 from Brave for want of a
+  // service key, so Tor cannot run in this browser at all. Disabling the
+  // commands and hiding the settings section was not enough - "open link in
+  // Tor window" survived in the page context menu, which is gated on this
+  // pref rather than on the commands. This is Brave's own switch (the
+  // TorDisabled policy sets the same pref), so every surface that asks
+  // IsTorDisabled() is closed at once, including any we did not enumerate.
+  registry->RegisterBooleanPref(prefs::kTorDisabled, true);
   registry->RegisterDictionaryPref(prefs::kBridgesConfig);
   registry->RegisterTimePref(prefs::kBuiltinBridgesRequestTime, base::Time());
 }
