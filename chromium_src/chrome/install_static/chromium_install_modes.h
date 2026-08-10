@@ -49,7 +49,14 @@ inline constexpr wchar_t kProductPathName[] = L"Brave-Browser";
 // The official modes above still carry Brave's names and GUIDs; they are dead
 // configuration here and stay untouched until an official build becomes real
 // (growser#51).
-inline constexpr wchar_t kProductPathName[] = L"Growser-Development";
+//
+// The name is "Growser", not "Growser-Development", even though this is
+// upstream's developer mode: it decides the install directory, the profile path
+// under %LOCALAPPDATA% and what a user sees in Programs and Features. Shipping
+// the word "Development" to users would be a slip of the build system into the
+// product, and renaming it after anyone has a profile means moving their
+// profile.
+inline constexpr wchar_t kProductPathName[] = L"Growser";
 #endif
 
 // The brand-specific safe browsing client name.
@@ -488,15 +495,15 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         // over the same registrations on any machine that has both. The three
         // CLSIDs/IIDs and the Active Setup GUID are freshly generated for
         // growser and appear nowhere else.
-        .base_app_name = L"Growser Development",     // A distinct base_app_name.
-        .base_app_id = L"GrowserDevelopment",        // A distinct base_app_id.
-        .browser_prog_id_prefix = L"GrowserDHTM",  // Browser ProgID prefix.
+        .base_app_name = L"Growser",                 // A distinct base_app_name.
+        .base_app_id = L"Growser",                   // A distinct base_app_id.
+        .browser_prog_id_prefix = L"GrowserHTML",  // Browser ProgID prefix (<=11).
         .browser_prog_id_description =
-            L"Growser Development HTML Document",  // Browser ProgID description.
-        .direct_launch_url_scheme = "growser-development",
-        .pdf_prog_id_prefix = L"GrowserDPDF",  // PDF ProgID prefix.
+            L"Growser HTML Document",  // Browser ProgID description.
+        .direct_launch_url_scheme = "growser",
+        .pdf_prog_id_prefix = L"GrowserPDF",  // PDF ProgID prefix (<=11).
         .pdf_prog_id_description =
-            L"Growser Development PDF Document",  // PDF ProgID description.
+            L"Growser PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{AD0A8A35-2AF7-48DC-A0F0-D2B8CABD7EE9}",  // Active Setup GUID.
         .toast_activator_clsid = {0x83127675,

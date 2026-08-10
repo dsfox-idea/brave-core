@@ -32,7 +32,7 @@ std::wstring& BraveAppendChromeInstallSubDirectory(const InstallConstants& mode,
   // Special case to handle the Policy version of the path.
   // The policy key is shorter than the install directory - growser uses
   // `SOFTWARE\Policies\Growser` rather than `SOFTWARE\Policies\
-  // Growser-Development` - and it must agree with the value generated into
+  // Growser` - and it must agree with the value generated into
   // components/policy from writer_configuration.py, which is a different
   // mechanism reaching the same registry key (growser#58). Upstream Brave
   // appended L"Brave" here for the same reason.
