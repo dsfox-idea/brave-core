@@ -6,12 +6,21 @@
 #include "brave/browser/update_util.h"
 
 #include "base/command_line.h"
+#include "brave/browser/update/buildflags/buildflags.h"
 #include "brave/components/constants/brave_switches.h"
 #include "content/public/common/content_switches.h"
 
 namespace brave {
 
 bool UpdateEnabled() {
+#if !BUILDFLAG(GROWSER_ENABLE_SELF_UPDATE)
+  // growser (#76): a build we hand to a store must not update itself - the
+  // store owns updates for what it distributes, and a second update path
+  // either fights it or silently replaces a package it believes it controls.
+  // This is the runtime gate; on Windows `enable_updater` is the compile gate
+  // and comes off with it.
+  return false;
+#else
   // growser (#35): enable Sparkle auto-update in our non-official builds.
   // Upstream gates UpdateEnabled() on OFFICIAL_BUILD; our fork ships
   // non-official Release (the isOfficialBuild() patch in config.ts sets
@@ -25,6 +34,7 @@ bool UpdateEnabled() {
   return !cmdline->HasSwitch(switches::kDisableBraveUpdate) &&
          // Don't check for updates in browser tests.
          !cmdline->HasSwitch(switches::kTestType);
+#endif  // !BUILDFLAG(GROWSER_ENABLE_SELF_UPDATE)
 }
 
 }  // namespace brave
