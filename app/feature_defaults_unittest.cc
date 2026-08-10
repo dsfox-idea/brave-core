@@ -126,7 +126,6 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &blink::features::kPrerender2,
       &blink::features::kPreloadingEagerViewportHeuristics,
       &blink::features::kPrivateAggregationApi,
-      &blink::features::kTranslationAPI,
       &blink::features::kUserMediaElement,
 #if BUILDFLAG(IS_ANDROID)
       &chrome::android::kAndroidPageInfoAsAppMenuItem,
