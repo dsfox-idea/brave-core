@@ -33,7 +33,7 @@ const wchar_t kUserDataDirNameSuffix[] =
 #endif
 #else
 const wchar_t kUserDataDirNameSuffix[] =
-    L"\\Growser-Development\\User Data";
+    L"\\Growser\\User Data";
 #endif
 
 const wchar_t kUserDataDirRegistryKey[] = L"UserDataDir";

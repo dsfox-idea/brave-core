@@ -303,7 +303,7 @@ class InstallStaticUtilTest
 #endif
 #else
     static constexpr wchar_t kPolicyKey[] =
-        L"Software\\Policies\\Growser-Development";
+        L"Software\\Policies\\Growser";
 #endif
 
     ASSERT_EQ(ERROR_SUCCESS,
@@ -364,7 +364,7 @@ TEST_P(InstallStaticUtilTest, GetChromeInstallSubDirectory) {
   // The directory strings for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr const wchar_t* kInstallDirs[] = {
-      L"Growser-Development",
+      L"Growser",
   };
 #endif
   static_assert(std::size(kInstallDirs) == NUM_INSTALL_MODES,
@@ -398,7 +398,7 @@ TEST_P(InstallStaticUtilTest, GetRegistryPath) {
   // The registry path strings for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr const wchar_t* kRegistryPaths[] = {
-      L"Software\\Growser-Development",
+      L"Software\\Growser",
   };
 #endif
   static_assert(std::size(kRegistryPaths) == NUM_INSTALL_MODES,
@@ -442,7 +442,7 @@ TEST_P(InstallStaticUtilTest, GetUninstallRegistryPath) {
   // kInstallModes.
   static constexpr const wchar_t* kUninstallRegistryPaths[] = {
       L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"  // (cont'd)
-      L"Growser-Development",
+      L"Growser",
   };
 #endif
   static_assert(std::size(kUninstallRegistryPaths) == NUM_INSTALL_MODES,
@@ -503,7 +503,7 @@ TEST_P(InstallStaticUtilTest, GetBaseAppId) {
 #else
   // The base app ids for the brand's install modes; parallel to kInstallModes.
   static constexpr const wchar_t* kBaseAppIds[] = {
-      L"GrowserDevelopment",
+      L"Growser",
   };
 #endif
   static_assert(std::size(kBaseAppIds) == NUM_INSTALL_MODES,
@@ -586,12 +586,12 @@ TEST_P(InstallStaticUtilTest, GetToastActivatorClsid) {
         0xce10,
         0x4ac5,
         { 0x9c, 0x10, 0x3f, 0xf2, 0xe7, 0xd4, 0x53,
-          0x99 } },  // Growser-Development.
+          0x99 } },  // Growser.
   };
 
   // The string representation of the CLSIDs above.
   static constexpr const wchar_t* kToastActivatorClsidsString[] = {
-      L"{83127675-CE10-4AC5-9C10-3FF2E7D45399}"  // Growser-Development.
+      L"{83127675-CE10-4AC5-9C10-3FF2E7D45399}"  // Growser.
   };
 #endif
   static_assert(std::size(kToastActivatorClsids) == NUM_INSTALL_MODES,
