@@ -24,6 +24,11 @@
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/component_updater/component_updater_utils.h"
 
+#if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
+#include "chrome/browser/component_updater/translate_kit_component_installer.h"
+#include "components/on_device_translation/features.h"
+#endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
+
 #if BUILDFLAG(ENABLE_PSST)
 #include "brave/components/psst/core/browser/psst_component_installer.h"
 #endif
@@ -66,6 +71,29 @@ void RegisterComponentsForUpdate() {
   local_ai::RegisterOnDeviceSpeechModelsComponent(cus);
 #endif
   RegisterQueryFilterComponent(cus);
+
+#if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
+  // growser (#70): install the translation ENGINE, not only the language packs.
+  //
+  // Upstream registers TranslateKit with force_install=false, which does
+  // nothing until something has already asked for it once - and the only thing
+  // that asks is the Translator API, which refuses to install anything without
+  // a user gesture in the page. Our translation starts from browser UI, which
+  // gives the page no gesture, so that first ask can never happen: measured as
+  // NotAllowedError with the language pack already sitting on disk and
+  // availability() answering "downloadable" forever.
+  //
+  // The packs are pre-installed too (see the features.cc override), and a pack
+  // without the engine that reads it is 56 MB of nothing - so the two belong
+  // together, gated on the same feature.
+  if (base::FeatureList::IsEnabled(
+          on_device_translation::kAutoDownloadTranslateLanguagePacks)) {
+    RegisterTranslateKitComponent(cus, g_browser_process->local_state(),
+                                  /*force_install=*/true,
+                                  /*registered_callback=*/base::OnceClosure(),
+                                  /*on_ready_callback=*/base::DoNothing());
+  }
+#endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
 }
 
 }  // namespace component_updater
