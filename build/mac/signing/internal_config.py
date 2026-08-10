@@ -33,7 +33,16 @@ class InternalCodeSignConfig(ChromiumCodeSignConfig):
         return [
             Distribution(channel=BRAVE_CHANNEL,
                          package_as_dmg=True,
-                         package_as_pkg=True,
+                         # growser: no .pkg. A pkg is the managed-deployment
+                         # (MDM) installer and needs a Developer ID *Installer*
+                         # certificate to sign (pipeline._package_and_sign_pkg
+                         # asserts dist_config.installer_identity). The fork
+                         # only has a Developer ID *Application* certificate, so
+                         # the assert fails and the release build goes red. We
+                         # distribute as a ZIP (and a DMG), not a pkg, so the
+                         # pkg is simply not produced. Flip back to True if an
+                         # Installer certificate is ever obtained.
+                         package_as_pkg=False,
                          package_as_zip=True)
         ]
 

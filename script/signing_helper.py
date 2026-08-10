@@ -45,38 +45,47 @@ def BraveModifyPartsForSigning(parts, config):
     # to True.
     del parts['liboptimization_guide_internal.dylib']
 
-    development = (config.provisioning_profile_basename is None)
-
     full_hardened_runtime_options = (
         CodeSignOptions.HARDENED_RUNTIME | CodeSignOptions.RESTRICT
         | CodeSignOptions.LIBRARY_VALIDATION | CodeSignOptions.KILL)
 
-    # Add Sparkle
-    if not development:
-        # Add Sparkle binaries
-        parts['sparkle-framework-fileop'] = CodeSignedProduct(
-            '{0.framework_dir}/Versions/{0.version}/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'  # pylint: disable=line-too-long
-            .format(config),
-            'fileop',
-            verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
-        parts['sparkle-framework-fileop'].options = (
-            full_hardened_runtime_options
-        )
+    # Add Sparkle. growser: sign Sparkle UNCONDITIONALLY, not gated on
+    # `not development`. A non-official Release passes --development to
+    # sign_chrome (build/mac/BUILD.gn: `if (!is_official_build)
+    # args += ["--development"]`), which makes DevelopmentCodeSignConfig
+    # return provisioning_profile_basename=None. The upstream gate
+    # `if not development:` then SKIPPED Sparkle entirely, so it kept the
+    # build-time adhoc signature with no secure timestamp, and Apple
+    # notarization rejected the bundle ("not signed with a valid Developer ID
+    # certificate" / "does not include a secure timestamp"). Sparkle is always
+    # in the bundle for a mac Release (enable_sparkle = !is_component_build &&
+    # is_mac, config.gni:15), so signing it here whenever the parts list is
+    # built is correct. `--timestamp` is added by signing.py for every part
+    # when notarize is on, so the timestamp comes with the Developer-ID sign.
+    # Add Sparkle binaries
+    parts['sparkle-framework-fileop'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/fileop'  # pylint: disable=line-too-long
+        .format(config),
+        'fileop',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['sparkle-framework-fileop'].options = (
+        full_hardened_runtime_options
+    )
 
-        parts['sparkle-framework-autoupdate'] = CodeSignedProduct(
-            '{0.framework_dir}/Versions/{0.version}/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate'  # pylint: disable=line-too-long
-            .format(config),
-            'org.sparkle-project.Sparkle.Autoupdate',
-            verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
-        parts['sparkle-framework-autoupdate'].options = (
-            full_hardened_runtime_options
-        )
+    parts['sparkle-framework-autoupdate'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Frameworks/Sparkle.framework/Versions/A/Resources/Autoupdate.app/Contents/MacOS/Autoupdate'  # pylint: disable=line-too-long
+        .format(config),
+        'org.sparkle-project.Sparkle.Autoupdate',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['sparkle-framework-autoupdate'].options = (
+        full_hardened_runtime_options
+    )
 
-        parts['sparkle-framework'] = CodeSignedProduct(
-            '{.framework_dir}/Frameworks/Sparkle.framework'.format(config),
-            'org.sparkle-project.Sparkle',
-            verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
-        parts['sparkle-framework'].options = full_hardened_runtime_options
+    parts['sparkle-framework'] = CodeSignedProduct(
+        '{.framework_dir}/Frameworks/Sparkle.framework'.format(config),
+        'org.sparkle-project.Sparkle',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['sparkle-framework'].options = full_hardened_runtime_options
 
     # Overwrite to avoid TeamID mismatch with widevine dylib.
     parts['helper-app'].entitlements = 'helper-entitlements.plist'
