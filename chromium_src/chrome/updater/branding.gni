@@ -26,12 +26,12 @@ brave_updater_branding = {
   updater_company_short_name_uppercase = "GROWSER"
   updater_copyright = "Copyright 2026 Growser. All rights reserved."
   updater_product_full_name = "GrowserUpdater"
-  # growser: still Brave's Apple team identifier, and it must not stay that way -
-  # it is what macOS checks when the updater talks to its privileged helper, so
-  # a signed build with somebody else's team id is a signed build that cannot
-  # update itself. Changing it belongs with the macOS signing work (#35), on the
-  # machine that has the certificate; from here it would be a guess.
-  mac_team_identifier = "KL8N8XSYF4"
+  # growser: our Apple Developer team identifier. macOS checks it when the
+  # updater talks to its privileged helper, so a signed build with somebody
+  # else's team id is a signed build that cannot update itself. Was Brave's
+  # KL8N8XSYF4 until the macOS signing work (#35); now our C3DL5896VG, matching
+  # MAC_TEAM_ID in app/theme/brave/BRANDING and the Developer ID certificate.
+  mac_team_identifier = "C3DL5896VG"
   grdfile_name = "brave_strings"
 
   # The updater (Omaha 4) is shared between Brave Browser and Brave Origin.
@@ -44,18 +44,24 @@ brave_updater_branding = {
   privileged_helper_bundle_name = "GrowserUpdaterPrivilegedHelper"
   updater_app_icon_path = "//brave/app/theme/brave/mac/app.icns"
 
-  # growser: the macOS BROWSER bundle identifier below is still Brave's. Renaming
-  # it moves the profile, the keychain entries and the notification permissions
-  # of every macOS install, exactly as the Windows rename did - so it is done
-  # once, deliberately, on the macOS machine, and not from here where it cannot
-  # be tested. Tracked with #35.
+  # growser: the macOS BROWSER bundle identifier as the updater (Omaha 4) knows
+  # it - the id it registers and manages the browser by, and the id the
+  # privileged helper's SMAuthorizedClients accepts. It MUST match the app's
+  # CFBundleIdentifier (MAC_BUNDLE_ID in app/theme/brave/BRANDING), which is
+  # already com.growser.Browser; the updater branding simply had to catch up.
+  # The profile/keychain/notification-permission move the original comment feared
+  # does not apply here - the app bundle id was renamed ahead of the updater, so
+  # the profile already lives under com.growser.Browser; this only makes the
+  # updater agree. Done as part of the macOS signing work (#35): without it
+  # sign_chrome looks for com.growser.Browser.UpdaterPrivilegedHelper while the
+  # build produces com.brave.Browser.UpdaterPrivilegedHelper -> "No such file".
   #
   # Brave Origin uses a separate browser bundle identifier for side-by-side
   # installation with Brave Browser.
   if (is_brave_origin_branded) {
-    mac_browser_bundle_identifier = "com.brave.Browser.origin"
+    mac_browser_bundle_identifier = "com.growser.Browser.origin"
   } else {
-    mac_browser_bundle_identifier = "com.brave.Browser"
+    mac_browser_bundle_identifier = "com.growser.Browser"
   }
   privileged_helper_name =
       "${mac_browser_bundle_identifier}.UpdaterPrivilegedHelper"
