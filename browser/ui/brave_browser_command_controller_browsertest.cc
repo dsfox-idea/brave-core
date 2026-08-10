@@ -52,6 +52,12 @@
 #include "brave/components/ai_chat/core/browser/utils.h"
 #endif
 
+// growser (#78): every Tor expectation here is FALSE. The commands are disabled
+// unconditionally because Tor cannot work in this build - its client is a
+// separate component and neither Brave's server nor Google will hand it to a
+// fork. The expectations are inverted rather than deleted so the decision has a
+// guard: if someone re-enables the commands without shipping a Tor client, this
+// file says so.
 #if BUILDFLAG(ENABLE_TOR)
 #include "brave/browser/tor/tor_profile_service_factory.h"
 #endif
@@ -233,7 +239,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 #if BUILDFLAG(ENABLE_TOR)
   EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE));
-  EXPECT_TRUE(
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR));
 #else
   EXPECT_FALSE(
@@ -287,7 +293,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 #if BUILDFLAG(ENABLE_TOR)
   EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE));
-  EXPECT_TRUE(
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR));
 #endif
 
@@ -354,9 +360,9 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   auto* command_controller = tor_browser->command_controller();
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS));
 
-  EXPECT_TRUE(
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE));
-  EXPECT_TRUE(
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR));
 
   if (syncer::IsSyncAllowedByFlag()) {
