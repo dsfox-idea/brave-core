@@ -9,13 +9,13 @@
 #include "chrome/common/chrome_constants.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
-// Only checks prefix (Brave Browser/Brave Origin) because test build don't
-// update branding.
+// Only checks the product prefix because test builds don't update the full
+// branding. The product is Growser (growser#65), so kFrameworkName is
+// "Growser Framework" - not "Brave Browser".
 TEST(ChromeConstantsTest, ProductStringTest) {
 #if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
   EXPECT_EQ(std::string(chrome::kFrameworkName).substr(0, 12), "Brave Origin");
 #else
-  EXPECT_EQ(std::string(chrome::kFrameworkName).substr(0, 13),
-            "Brave Browser");
+  EXPECT_EQ(std::string(chrome::kFrameworkName).substr(0, 7), "Growser");
 #endif
 }
