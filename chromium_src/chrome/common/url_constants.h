@@ -18,6 +18,11 @@ namespace chrome {
 
 // growser (#78/#81): the generic "help with this browser" destination is ours.
 //
+// Three of these still pointed at support.google.com after Brave's pass - the
+// web-app install dialog, IP protection and the Chrome apps deprecation notice
+// - so they went to Google rather than merely to the wrong fork. Same
+// treatment.
+//
 // Brave had already replaced Chromium's Google help links with their own
 // support site; every one of those that carries no article path means nothing
 // more specific than "here is where you get help", and for our users that is
@@ -78,15 +83,15 @@ inline constexpr char kCastNoDestinationFoundURL[] =
 
 // The URL for the WebHID API help center article.
 inline constexpr char kChooserHidOverviewUrl[] =
-    "https://github.com/brave/brave-browser/wiki/Web-API-Permissions";
+    "https://growser.org/";
 
 // The URL for the Web Serial API help center article.
 inline constexpr char kChooserSerialOverviewUrl[] =
-    "https://github.com/brave/brave-browser/wiki/Web-API-Permissions";
+    "https://growser.org/";
 
 // The URL for the WebUsb help center article.
 inline constexpr char kChooserUsbOverviewURL[] =
-    "https://github.com/brave/brave-browser/wiki/Web-API-Permissions";
+    "https://growser.org/";
 
 // Link to the forum for Chrome Beta.
 inline constexpr char kChromeBetaForumURL[] =
@@ -288,7 +293,7 @@ inline constexpr char kGooglePasswordManagerURL[] = "https://growser.org/";
 
 // The URL for the "Learn more" link for the High Efficiency Mode.
 inline constexpr char16_t kMemorySaverModeLearnMoreUrl[] =
-    u"https://support.brave.app/hc/en-us/articles/13383683902733";
+    u"https://growser.org/";
 
 // The URL in the help text for the High Efficiency Mode tab discarding
 // exceptions add dialog.
@@ -303,11 +308,11 @@ inline constexpr char16_t kIncognitoHelpCenterURL[] =
 // "Learn more" URL for the web app installation flow, linked from installation
 // dialog and options view.
 inline constexpr char kInstallDialogFlowLearnMoreURL[] =
-    "https://support.google.com/chrome/answer/9658361";
+    "https://growser.org/";
 
 // The URL for the Help Center page about IP Protection.
 inline constexpr char kIpProtectionHelpCenterURL[] =
-    "https://support.google.com/chrome?p=ip_protection";
+    "https://growser.org/";
 
 // The URL for the "Learn more" page for the usage/crash reporting option in the
 // first run dialog.
@@ -323,7 +328,7 @@ inline constexpr char kTabGroupsLearnMoreURL[] = "https://growser.org/";
 
 // The URL for the Learn More page about policies and enterprise enrollment.
 inline constexpr char16_t kManagedUiLearnMoreUrl[] =
-    u"https://support.brave.app/hc/en-us/articles/360039248271-Group-Policy";
+    u"https://growser.org/";
 
 // The URL for the "Learn more" page for insecure download blocking.
 inline constexpr char kInsecureDownloadBlockingLearnMoreUrl[] =
@@ -469,7 +474,7 @@ inline constexpr char16_t kSafetyHubHelpCenterURL[] =
 
 // "Learn more" URL for safety tip bubble.
 inline constexpr char kSafetyTipHelpCenterURL[] =
-    "https://support.brave.app/hc/en-us/articles/17550072876045-Lookalike-URLs";
+    "https://growser.org/";
 
 // Google search history URL that leads users of the CBD dialog to their search
 // history in their Google account.
@@ -662,7 +667,7 @@ inline constexpr char kWindowsXPVistaDeprecationURL[] =
 
 // The URL for the Windows 7/8.1 deprecation help center article.
 inline constexpr char kWindows78DeprecationURL[] =
-    "https://support.brave.app/hc/en-us/articles/11197967945613";
+    "https://growser.org/";
 
 // The URL for the "Learn more" page for process isolation.
 inline constexpr char kProcessIsolationLearnMoreUrl[] =
@@ -682,7 +687,7 @@ inline constexpr char kOutdatedPluginLearnMoreURL[] =
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 // "Learn more" URL for the chrome apps deprecation dialog.
 inline constexpr char kChromeAppsDeprecationLearnMoreURL[] =
-    "https://support.google.com/chrome/?p=chrome_app_deprecation";
+    "https://growser.org/";
 #endif
 
 #if BUILDFLAG(CHROME_ROOT_STORE_SUPPORTED)
