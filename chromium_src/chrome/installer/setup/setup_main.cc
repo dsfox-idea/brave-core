@@ -10,6 +10,7 @@
 #include "base/files/file_util.h"
 #include "base/logging.h"
 #include "base/path_service.h"
+#include "base/process/launch.h"
 #include "brave/installer/setup/archive_patch_helper.h"
 #include "chrome/common/chrome_paths.h"
 #include "chrome/installer/setup/brand_behaviors.h"
@@ -100,10 +101,48 @@ void SavePromoCode(installer::InstallStatus install_status) {
   }
 }
 
+// growser (#51): install the updater alongside the browser.
+//
+// Chromium's setup.exe does not do this - in Google's product the metainstaller
+// installs Omaha, and we have no metainstaller. updater.exe ships in the version
+// directory (chrome.release) and installing it is one call: it copies itself
+// into its own directory and registers a scheduled task. Measured: exit 0,
+// %LOCALAPPDATA%\Growser\GrowserUpdater created, task registered.
+//
+// Deliberately not fatal. A browser that installed but whose updater did not is
+// a browser that works and does not update; failing the whole installation over
+// it would be the worse trade. It is also idempotent - running it again on an
+// existing install is how an upgrade re-registers.
+void InstallUpdater(installer::InstallStatus install_status) {
+  if (InstallUtil::GetInstallReturnCode(install_status)) {
+    return;  // The browser did not install; there is nothing to update.
+  }
+  base::FilePath setup_exe;
+  if (!base::PathService::Get(base::FILE_EXE, &setup_exe)) {
+    return;
+  }
+  // ...\Application\<version>\Installer\setup.exe -> ...\<version>\updater.exe
+  const base::FilePath updater =
+      setup_exe.DirName().DirName().Append(FILE_PATH_LITERAL("updater.exe"));
+  if (!base::PathExists(updater)) {
+    LOG(WARNING) << "No updater at " << updater << "; updates are off.";
+    return;
+  }
+  base::CommandLine command(updater);
+  command.AppendSwitch("install");
+  command.AppendSwitch("silent");
+  base::LaunchOptions options;
+  options.start_hidden = true;
+  if (!base::LaunchProcess(command, options).IsValid()) {
+    LOG(WARNING) << "Could not start the updater installer.";
+  }
+}
+
 }  // namespace
 
 #define DoLegacyCleanups         \
   SavePromoCode(install_status); \
+  InstallUpdater(install_status); \
   DoLegacyCleanups
 
 // The macros BRAVE_SETUP_MAIN, UpdateInstallStatus and BRAVE_INSTALL_PRODUCTS
