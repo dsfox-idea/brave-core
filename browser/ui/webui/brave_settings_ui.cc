@@ -269,12 +269,12 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
   // Origin branded builds, so the setting is never available there.
   html_source->AddBoolean("isSurveyPanelistAllowed", false);
 #else
-  html_source->AddBoolean("isSurveyPanelistAllowed",
-                          base::FeatureList::IsEnabled(
-                              ntp_background_images::features::
-                                  kBraveNTPBrandedWallpaperSurveyPanelist) &&
-                              !profile->GetPrefs()->GetBoolean(
-                                  brave_rewards::prefs::kDisabledByPolicy));
+  // growser (#78): never. The survey panel is Brave's research programme, it
+  // is tied to Rewards - compiled out here - and it reported through P3A,
+  // which #21 removed entirely. Set at the source rather than hidden per
+  // page, because two different surfaces read this value: the settings
+  // section and the link row on the data-collection page.
+  html_source->AddBoolean("isSurveyPanelistAllowed", false);
 #endif
 #if BUILDFLAG(ENABLE_PLAYLIST)
   html_source->AddBoolean(
