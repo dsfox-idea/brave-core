@@ -11,17 +11,19 @@
 // various help pages both local (such as chrome://password-manager/settings)
 // and remote (on https://www.google.com and https://support.google.com).
 // For remote URLs going to Google we want to point users to our community site
-// instead.
+// instead. growser (#78/#81): "our" means ours - this is a catch-all for every
+// help page Chromium would open on google.com, so whatever it points at is
+// where a good part of the browser's help ends up.
 void ShowSingletonTab(BrowserWindowInterface* browser, const GURL& url) {
   GURL new_url =
-      url.DomainIs("google.com") ? GURL("https://community.brave.app/") : url;
+      url.DomainIs("google.com") ? GURL("https://growser.org/") : url;
 
   ShowSingletonTab_ChromiumImpl(browser, new_url);
 }
 
 void ShowSingletonTab(Profile* profile, const GURL& url) {
   GURL new_url =
-      url.DomainIs("google.com") ? GURL("https://community.brave.app/") : url;
+      url.DomainIs("google.com") ? GURL("https://growser.org/") : url;
 
   ShowSingletonTab_ChromiumImpl(profile, new_url);
 }
