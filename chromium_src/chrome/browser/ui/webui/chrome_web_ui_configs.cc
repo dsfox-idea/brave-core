@@ -156,9 +156,12 @@ void RegisterChromeWebUIConfigs() {
   }
 #endif
 
-#if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
-  map.AddWebUIConfig(std::make_unique<BraveEducationPageUIConfig>());
-#endif
+  // growser (#78): no growser://getting-started. The page frames content from
+  // browser-education.brave.com, which answers us with a real 21 KB page - so
+  // opening it hands Brave the visitor and shows them Brave's onboarding
+  // inside our browser. Nothing reaches that host on its own: the welcome
+  // flow only asks for it when kShowGettingStartedPage is enabled, and that
+  // feature is disabled by default. Typing the address was the way in.
 
 #if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
   map.AddWebUIConfig(std::make_unique<BraveOriginStartupUIConfig>());
