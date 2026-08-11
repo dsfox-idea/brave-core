@@ -713,6 +713,37 @@ export class Config {
   }
 
   #getBraveVersion() {
+    // growser (#84): our own version, derived from the date.
+    //
+    // Brave's number comes from package.json, and for anything that is not a
+    // Brave release build the patch component is zeroed a few lines below. Both
+    // together mean every build we ever made was 151.1.95.0 - the same version
+    // for different code, so the updater could never see anything newer and an
+    // update could not happen at all.
+    //
+    // The scheme is <YY>.<MMDD>.<serial>, which lands in chrome/VERSION as
+    // MINOR/BUILD/PATCH under the Chromium milestone: 151.26.811.0. It cannot
+    // be forgotten, because nobody assigns it; it cannot be reused, because the
+    // date moves; it stays ordered across a year boundary (27.101 > 26.1231);
+    // and it does not touch package.json, so `pnpm run sync` has nothing to
+    // fight over. Each component stays well inside the 16-bit limit Windows
+    // puts on version fields.
+    //
+    // The serial is for a second release on one day. It is deliberately not
+    // automatic: a number that changes on its own between two builds of the
+    // same code would defeat the point.
+    if (process.env.GROWSER_DATE_VERSION === '1') {
+      const now = new Date()
+      const yy = now.getFullYear() % 100
+      const mmdd = (now.getMonth() + 1) * 100 + now.getDate()
+      const serial = parseInt(process.env.GROWSER_BUILD_SERIAL ?? '0', 10)
+      assert(
+        Number.isInteger(serial) && serial >= 0 && serial <= 65535,
+        `GROWSER_BUILD_SERIAL must be 0..65535, got ${process.env.GROWSER_BUILD_SERIAL}`,
+      )
+      return `${yy}.${mmdd}.${serial}`
+    }
+
     const braveVersion = envConfig.getPackageVersion()
     if (!this.ignorePatchVersionNumber) {
       return braveVersion
