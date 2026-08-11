@@ -122,31 +122,10 @@ void BraveMainDelegate::AppendCommandLineOptions() {
   command_line->AppendSwitch(switches::kEnableDomDistiller);
   command_line->AppendSwitch(switches::kEnableDistillabilityService);
 
-  // growser (#79): sync is off until we run a sync server of our own.
-  //
-  // The endpoint compiled in is Brave's (BRAVE_SYNC_ENDPOINT ->
-  // sync-v2.brave.com/v2) and it refuses a fork: POST /v2/command/ answers
-  // 403 "Missing auth header" with no key, with an empty key - which is what
-  // we send - and with a wrong one. A sync chain set up here cannot work.
-  //
-  // The reason to close it rather than leave it visible is that the failure is
-  // silent. Every other dead Brave service costs the user nothing when it
-  // fails; this is the one where someone puts the bookmarks and passwords they
-  // expect to find on their other machine. A switch that quietly does nothing
-  // is worse than no switch.
-  //
-  // Done with Chromium's own switch rather than by overriding
-  // IsSyncAllowedByFlag(), because everything already asks that function - the
-  // settings section through "isSyncDisabled" (brave_settings_ui.cc), which
-  // also decides whether the /braveSync route is created at all, and the menu
-  // command in brave_browser_command_controller.cc - and because a hardcoded
-  // false leaves the sync unit tests no way to build a sync service (31 of
-  // them crash). This path is browser startup only, so the tests are untouched
-  // and keep testing what they always did.
-  //
-  // Reversing this is one line, and reversing it is the plan: when
-  // brave_sync_endpoint points at a server of ours, this goes away.
-  command_line->AppendSwitch(syncer::kDisableSync);
+  // growser (#78): sync is switched off at brave_sync::features::kBraveSync,
+  // not here. Appending --disable-sync from this function does nothing:
+  // ChromeBrowserMainParts::PreProfileInit runs later and removes the switch
+  // whenever that feature is on.
 
   if (!base::CommandLine::ForCurrentProcess()->HasSwitch(
           embedder_support::kOriginTrialPublicKey)) {

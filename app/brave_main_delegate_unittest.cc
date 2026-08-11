@@ -10,6 +10,7 @@
 #include "base/command_line.h"
 #include "brave/components/brave_sync/buildflags.h"
 #include "brave/components/variations/buildflags.h"
+#include "brave/components/brave_sync/features.h"
 #include "components/embedder_support/switches.h"
 #include "components/sync/base/command_line_switches.h"
 #include "components/variations/variations_switches.h"
@@ -39,15 +40,17 @@ TEST(BraveMainDelegateUnitTest, DefaultCommandLineOverrides) {
                    .c_str());
 }
 
-// growser (#79): sync is off until we run a server of our own, and this is the
-// gate rather than a note in the docs. What matters is not that the switch is
-// in the list - it is that IsSyncAllowedByFlag() comes out false, because that
-// is the single question the settings section, the /braveSync route and the
-// menu command all ask. If anyone re-enables sync, this fails and says why.
+// growser (#78): sync stays off, and this asserts the switch that decides it.
+//
+// The previous version of this test asserted that AppendCommandLineOptions
+// leaves IsSyncAllowedByFlag() false - which it did, and which proved nothing:
+// ChromeBrowserMainParts::PreProfileInit runs later and removes --disable-sync
+// whenever brave_sync::features::kBraveSync is on. The test passed while the
+// browser went on offering Sync in its settings, and it took looking at a
+// running browser to notice. Assert the feature, because the feature is what
+// the rest of the code reads.
 TEST(BraveMainDelegateUnitTest, SyncIsDisabled) {
-  BraveMainDelegate::AppendCommandLineOptions();
-
-  EXPECT_FALSE(syncer::IsSyncAllowedByFlag());
+  EXPECT_FALSE(base::FeatureList::IsEnabled(brave_sync::features::kBraveSync));
 }
 
 TEST(BraveMainDelegateUnitTest, OverrideSwitchFromCommandLine) {
