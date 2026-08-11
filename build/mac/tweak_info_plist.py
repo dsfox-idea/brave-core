@@ -44,18 +44,22 @@ def _RemoveKeys(plist, *keys):
 
 
 def _OverrideVersionKey(plist, brave_version):
-    """ `minor.build` version string is used for update.
-    When we begin to use the Major version component, Brave version string will
-    be `1.0.0` for example and `Minor.Build` (`0.0`) would be used for update
-    check. Without modifying these numbers, update will fail as `0.0` is lower
-    than `70.121` for example.
+    """Set CFBundleVersion to the full product version, e.g. 151.26.811.0.
 
-    To ensure minor version is higher than existing minor versions, we can
-    multiply the major version by 100 and set it to `CFBundleVersion`."""
-    version_values = brave_version.split('.')
-    if int(version_values[0]) >= 1:
-        adjusted_minor = int(version_values[1]) + (100 * int(version_values[0]))
-        plist['CFBundleVersion'] = str(adjusted_minor) + '.' + version_values[2]
+    The version passed from BUILD.gn is chromium_version_major + "." +
+    brave_version, which is monotonic across the date-derived scheme
+    (<chromium major>.<YY>.<MMDD>.<serial>) and sorts the way Sparkle compares
+    it - component-wise as integers: 151.26.1231.0 sorts below 151.27.101.0.
+    The old "minor + 100 * major" formula broke exactly at the year boundary
+    (26.1231 -> 3831, 27.101 -> 2801, so a January build looked older than a
+    December one) and silently blocked every auto-update across it.
+
+    CFBundleShortVersionString is already written by Chromium's apple
+    tweak_info_plist as @MAJOR@.@MINOR@.@BUILD@.@PATCH@ from src/chrome/VERSION,
+    so it carries the same value; here we only align CFBundleVersion, which is
+    what Sparkle compares."""
+    if brave_version:
+        plist['CFBundleVersion'] = brave_version
 
 
 def Main():
