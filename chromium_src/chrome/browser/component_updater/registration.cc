@@ -7,14 +7,24 @@
 
 #include "base/functional/bind.h"
 
+// growser: drop the Media Engagement Index preload component.
+//
+// It is a list Google curates of sites allowed to autoplay with sound - an
+// editorial policy, not a privacy or security mechanism, and the only one of
+// the components that install successfully for us that buys the user nothing.
+// The header comes first so the declaration is parsed before the name turns
+// into a macro; the call inside registration.cc then compiles away.
+#include "chrome/browser/component_updater/mei_preload_component_installer.h"
+#define RegisterMediaEngagementPreloadComponent(...) ((void)0)
+
 #define RegisterComponentsForUpdate RegisterComponentsForUpdate_ChromiumImpl
 
 #include <chrome/browser/component_updater/registration.cc>
 
 #undef RegisterComponentsForUpdate
+#undef RegisterMediaEngagementPreloadComponent
 
 #include "brave/browser/brave_browser_process.h"
-#include "brave/components/brave_user_agent/browser/brave_user_agent_component_installer.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/local_ai/buildflags/buildflags.h"
 #include "brave/components/p3a/component_installer.h"
@@ -64,7 +74,10 @@ void RegisterComponentsForUpdate() {
   // Currently behind !BUILDFLAG(IS_ANDROID) in upstream.
   RegisterZxcvbnDataComponent(cus);
 #endif  // BUILDFLAG(IS_ANDROID)
-  brave_user_agent::RegisterBraveUserAgentComponent(cus);
+  // growser: Brave's user-agent exceptions component is not registered. It
+  // lists sites where Brave has to soften its own user agent; ours is already
+  // Chrome's, byte for byte, because sites must not be able to tell us apart -
+  // so there is nothing for the exceptions to fix.
 #if BUILDFLAG(ENABLE_LOCAL_AI)
   local_ai::ManageLocalModelsComponentRegistration(
       cus, g_browser_process->local_state());

@@ -611,8 +611,10 @@ TEST_F(NTPBackgroundImagesServiceTest, BasicTest) {
   Init();
   // NTP SI Component is registered after ads is initialized.
   EXPECT_FALSE(service_->sponsored_images_component_started);
-  // If ENABLE_NTP_BACKGROUND_IMAGES then BI shall be registered
-  EXPECT_TRUE(service_->background_images_component_started);
+  // growser: the background images component is deliberately NOT registered -
+  // it carries Brave's photo pack, we ship one bundled background, and the
+  // component's server refuses our builds anyway.
+  EXPECT_FALSE(service_->background_images_component_started);
 }
 
 TEST_F(NTPBackgroundImagesServiceTest, InternalDataTest) {
