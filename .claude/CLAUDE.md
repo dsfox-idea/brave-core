@@ -14,6 +14,13 @@ the list at @../docs/README.md
 When working directly on code, consult with only relevant best practices listed
 at @../docs/best_practices.md
 
+## Language
+
+Everything that goes into this repository is English only: code, code
+comments, commit messages, branch names, PR titles and descriptions,
+docs. Russian (or any other language) may appear only as quoted data -
+UI strings, test fixtures, or verification output being cited.
+
 ## Destructive Operations
 
 - NEVER delete caches, build output directories, or any machine state outside
