@@ -28,7 +28,7 @@ namespace TemplateURLPrepopulateData {
 
 // growser: bumped for the switch of the default search to Yandex (#18) - it
 // triggers the list/default migration in existing profiles.
-inline constexpr int kBraveCurrentDataVersion = 34;
+inline constexpr int kBraveCurrentDataVersion = 35;
 
 // DO NOT CHANGE THIS ONE. Used for backfilling kBraveDefaultSearchVersion.
 inline constexpr int kBraveFirstTrackedDataVersion = 6;

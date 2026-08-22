@@ -191,8 +191,12 @@ void RegisterPrefs(PrefRegistrySimple* registry) {
   registry->RegisterBooleanPref(prefs::kShowNTPSearchBox, true);
   registry->RegisterBooleanPref(prefs::kShowNTPChatInput, true);
   registry->RegisterBooleanPref(prefs::kMigratedNTPChatInputFromSearch, false);
+  // growser: the new tab search box starts on DuckDuckGo. Upstream points it at
+  // search.brave.com, which we do not offer at all (#45), so on a fresh profile
+  // the box asked for an engine that is not in the list and fell back to
+  // whatever the list happened to lead with.
   registry->RegisterStringPref(prefs::kLastUsedNTPSearchEngine,
-                               "search.brave.com");
+                               "duckduckgo.com");
   registry->RegisterBooleanPref(prefs::kPromptEnableSuggestions, true);
   registry->RegisterTimePref(prefs::kMaybeLaterClickedTime, base::Time());
   registry->RegisterIntegerPref(prefs::kDDGBannerTypeIndex, 0);

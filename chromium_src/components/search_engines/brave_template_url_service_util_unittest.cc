@@ -119,11 +119,11 @@ TEST_F(BraveTemplateURLServiceUtilTest, GetSearchProvidersUsingKeywordResult) {
       updated_keywords_metadata, nullptr);
 
   // Verify count and order.
-  // Default prepopulated engines order is :br, :g, :d, :q, :b, :sp
-  // growser (#45): Brave Search is not offered, and Yandex is the default
-  // everywhere - so ":br" is gone and ":ya" leads.
+  // Default prepopulated engines order upstream is :br, :g, :d, :q, :b, :sp.
+  // growser (#45): Brave Search is not offered, so ":br" is gone; and the
+  // default engine is DuckDuckGo, so ":d" leads and Yandex follows it.
   TestDefaultOrder(template_urls,
-                   {":ya", ":g", ":d", ":q", ":b", ":sp", "random1", "random2",
+                   {":d", ":ya", ":g", ":q", ":b", ":sp", "random1", "random2",
                     "@bookmarks", "@history", "@tabs", "@ask"});
 }
 
@@ -156,8 +156,9 @@ TEST_F(BraveTemplateURLServiceUtilTest,
       updated_keywords_metadata, nullptr);
 
   // Verify count and order.
-  // Prepopulated engines order for DE is :br, :d, :q, :g, :sp, :e
+  // Prepopulated engines order for DE upstream is :br, :d, :q, :g, :sp, :e;
+  // ours drops Brave Search and leads with the German DuckDuckGo.
   TestDefaultOrder(template_urls,
-                   {":ya", ":d", ":q", ":g", ":b", ":sp", ":e", "@bookmarks",
+                   {":d", ":ya", ":q", ":g", ":b", ":sp", ":e", "@bookmarks",
                     "@history", "@tabs", "@ask"});
 }

@@ -80,14 +80,16 @@ namespace {
 using regional_capabilities::RegionalCapabilitiesServiceFactory;
 
 // growser: the new-tab search box defaults to Yandex (#18), like the omnibox.
-// host = the host of the engine's search URL (yandex.ru).
-constexpr char kYandexSearchHost[] = "yandex.ru";
+// host = the host of the engine's search URL. Every DuckDuckGo variant we ship
+// searches on duckduckgo.com - the German and the AU/NZ/IE ones differ only by
+// query parameters - so one constant covers every region.
+constexpr char kDuckDuckGoSearchHost[] = "duckduckgo.com";
 
 }  // namespace
 
 std::string_view GetSearchDefaultHost(
     regional_capabilities::RegionalCapabilitiesService* regional_capabilities) {
-  return kYandexSearchHost;
+  return kDuckDuckGoSearchHost;
 }
 
 NewTabPageInitializer::NewTabPageInitializer(content::WebUI& web_ui)
