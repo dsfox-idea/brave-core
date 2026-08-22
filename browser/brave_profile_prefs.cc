@@ -425,7 +425,12 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(kShowSidePanelButton,
                                 !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED));
   registry->RegisterBooleanPref(kShowScreenshotButton, false);
-  registry->RegisterBooleanPref(kLocationBarIsWide, false);
+  // growser: the wide address bar is on by default. Brave centres the location
+  // bar and leaves the space either side empty, which reads as a design choice
+  // rather than as room for what a user types; we would rather give the URL the
+  // width. The setting stays where it was, so anyone who prefers the narrow one
+  // turns it off.
+  registry->RegisterBooleanPref(kLocationBarIsWide, true);
   registry->RegisterBooleanPref(kMRUCyclingEnabled, false);
   registry->RegisterBooleanPref(kTabMuteIndicatorNotClickable, false);
 
