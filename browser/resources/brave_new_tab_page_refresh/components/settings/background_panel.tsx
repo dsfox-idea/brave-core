@@ -12,15 +12,11 @@ import {
   useBackgroundState,
   useBackgroundActions,
 } from '../../context/background_context'
-import { useRewardsState } from '../../context/rewards_context'
 import { getString } from '../../lib/strings'
 import { inlineCSSVars } from '../../lib/inline_css_vars'
 import { BackgroundTypePanel } from './background_type_panel'
 import { SettingsPanel } from './settings_panel'
-import { Link } from '../common/link'
-import { formatString } from '$web-common/formatString'
 import classnames from '$web-common/classnames'
-import { settingsURL } from '../../../../../components/brave_rewards/resources/shared/lib/rewards_urls'
 
 import {
   SelectedBackgroundType,
@@ -31,9 +27,6 @@ import {
 
 import { style } from './background_panel.style'
 
-const sponsoredImageLearnMoreURL =
-  'https://support.brave.app/hc/en-us/articles/35182999599501'
-
 export function BackgroundPanel() {
   const actions = useBackgroundActions()
 
@@ -41,14 +34,9 @@ export function BackgroundPanel() {
   const backgroundsCustomizable = useBackgroundState(
     (s) => s.backgroundsCustomizable,
   )
-  const sponsoredImagesEnabled = useBackgroundState(
-    (s) => s.sponsoredImagesEnabled,
-  )
   const selectedBackground = useBackgroundState((s) => s.selectedBackground)
   const braveBackgrounds = useBackgroundState((s) => s.braveBackgrounds)
   const customBackgrounds = useBackgroundState((s) => s.customBackgrounds)
-  const rewardsFeatureEnabled = useRewardsState((s) => s.rewardsFeatureEnabled)
-  const rewardsEnabled = useRewardsState((s) => s.rewardsEnabled)
 
   const [panelType, setPanelType] =
     React.useState<SelectedBackgroundType | null>(null)
@@ -185,49 +173,11 @@ export function BackgroundPanel() {
           {getString(S.NEW_TAB_SHOW_BACKGROUNDS_LABEL)}
         </span>
       </Toggle>
-      {backgroundsEnabled && rewardsFeatureEnabled && (
-        <Toggle
-          className='toggle-row'
-          size='small'
-          checked={sponsoredImagesEnabled}
-          onChange={({ checked }) => {
-            actions.setSponsoredImagesEnabled(checked)
-          }}
-        >
-          <div className='label'>
-            <div>
-              {getString(S.NEW_TAB_SHOW_SPONSORED_IMAGES_LABEL)}
-              <div
-                className='subtext'
-                onClick={(e) => e.stopPropagation()}
-              >
-                {!rewardsEnabled
-                  && formatString(
-                    getString(S.NEW_TAB_SHOW_SPONSORED_IMAGES_EARNING_TEXT),
-                    {
-                      $1: (content) => (
-                        <Link
-                          url={settingsURL}
-                          openInNewTab
-                        >
-                          {content}
-                        </Link>
-                      ),
-                      $2: (content) => (
-                        <Link
-                          url={sponsoredImageLearnMoreURL}
-                          openInNewTab
-                        >
-                          {content}
-                        </Link>
-                      ),
-                    },
-                  )}
-              </div>
-            </div>
-          </div>
-        </Toggle>
-      )}
+      {/* growser (#78): no "show sponsored images" switch. Its whole branch is
+          behind rewardsFeatureEnabled, and Rewards is compiled out
+          (ENABLE_BRAVE_REWARDS=0), so the row never rendered - it only carried a
+          support.brave.app link into the bundle. Same treatment as the
+          sponsored-sites switch in the top sites panel. */}
       {backgroundsEnabled && backgroundsCustomizable && (
         <>
           <div className='background-options'>
