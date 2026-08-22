@@ -283,7 +283,7 @@ void NewTabPageInitializer::AddPluralStrings() {
 
 void NewTabPageInitializer::AddResourcePaths() {
   source_->AddResourcePaths(
-      {{"dylan-malval_sea-min.webp", IDR_BRAVE_NEW_TAB_BACKGROUND1}});
+      {{"growser_bay-01.webp", IDR_BRAVE_NEW_TAB_BACKGROUND1}});
 }
 
 void NewTabPageInitializer::AddFaviconDataSource() {
