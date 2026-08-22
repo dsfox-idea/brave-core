@@ -53,12 +53,6 @@ export function App() {
       <div className='background-filter allow-background-pointer-events' />
       <main className='allow-background-pointer-events'>
         <button
-          className='clock'
-          onClick={() => setSettingsView('clock')}
-        >
-          <Clock />
-        </button>
-        <button
           className='settings'
           onClick={() => setSettingsView('background')}
         >
@@ -80,6 +74,12 @@ export function App() {
         >
           <BackgroundClickRegion />
         </div>
+        <button
+          className='clock'
+          onClick={() => setSettingsView('clock')}
+        >
+          <Clock />
+        </button>
         <div className='caption-container allow-background-pointer-events'>
           <BackgroundCaption />
         </div>

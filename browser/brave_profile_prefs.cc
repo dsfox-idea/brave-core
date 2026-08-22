@@ -490,11 +490,18 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(kImportDialogPayments, true);
 
   // New Tab Page
-  registry->RegisterBooleanPref(kNewTabPageShowClock, false);
+  //
+  // growser: the page shows three things by default - top sites, the search box
+  // and the clock - and nothing else. Every one of these remains a setting, so
+  // what is off can be turned back on; what changes is what a person meets on a
+  // fresh profile. The search box (brave_search_conversion's kShowNTPSearchBox)
+  // and the top sites tiles are already on by default upstream, so only the
+  // clock has to be switched on here and the rest switched off.
+  registry->RegisterBooleanPref(kNewTabPageShowClock, true);
   registry->RegisterStringPref(kNewTabPageClockFormat, "");
-  registry->RegisterBooleanPref(kNewTabPageShowStats, true);
-  registry->RegisterBooleanPref(kNewTabPageShowRewards, true);
-  registry->RegisterBooleanPref(kNewTabPageShowSponsoredSites, true);
+  registry->RegisterBooleanPref(kNewTabPageShowStats, false);
+  registry->RegisterBooleanPref(kNewTabPageShowRewards, false);
+  registry->RegisterBooleanPref(kNewTabPageShowSponsoredSites, false);
 
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
   registry->RegisterBooleanPref(brave_talk::prefs::kNewTabPageShowBraveTalk,
