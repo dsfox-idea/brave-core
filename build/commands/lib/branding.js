@@ -257,15 +257,19 @@ const update = () => {
       'text_defaults_md.css',
     ),
   ])
-  // Replace chrome dark logo with channel specific brave logo.
+  // Replace chrome dark logo with our own.
+  //
+  // growser: upstream takes this from node_modules/@brave/leo, which is outside
+  // git and rewritten by every `pnpm install`, so the lion could only ever be
+  // replaced here. It is the logo the settings header shows in dark mode - not
+  // product_logo_32, which is what everyone edits and which is already ours.
   fileMap.add([
     path.join(
       config.braveCoreDir,
-      'node_modules',
-      '@brave',
-      'leo',
-      'icons',
-      config.getBraveLogoIconName(),
+      'app',
+      'theme',
+      'brave',
+      'product_logo.svg',
     ),
     path.join(
       config.srcDir,
