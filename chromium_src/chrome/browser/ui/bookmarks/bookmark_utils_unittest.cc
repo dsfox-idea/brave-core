@@ -10,19 +10,23 @@
 
 namespace chrome {
 
+// growser: the internal scheme is growser://, not brave:// - see
+// kBraveSchema16 in brave/browser/ui/brave_scheme_utils.cc. These expectations
+// are upstream's with our scheme substituted; the behaviour under test is
+// unchanged.
 TEST(BraveBookmarkUtilsTest, ChromeUISchemeIsDisplayedAsBrave) {
-  EXPECT_EQ(u"brave://settings",
+  EXPECT_EQ(u"growser://settings",
             FormatBookmarkURLForDisplay(GURL("chrome://settings/")));
 
   // Only the scheme changes; path and query are preserved.
-  EXPECT_EQ(u"brave://settings/clearBrowserData?foo=bar",
+  EXPECT_EQ(u"growser://settings/clearBrowserData?foo=bar",
             FormatBookmarkURLForDisplay(
                 GURL("chrome://settings/clearBrowserData?foo=bar")));
 }
 
 TEST(BraveBookmarkUtilsTest, BraveUISchemeIsDisplayedUnchanged) {
-  EXPECT_EQ(u"brave://settings",
-            FormatBookmarkURLForDisplay(GURL("brave://settings/")));
+  EXPECT_EQ(u"growser://settings",
+            FormatBookmarkURLForDisplay(GURL("growser://settings/")));
 }
 
 TEST(BraveBookmarkUtilsTest, OtherSchemesAreNotRebranded) {
