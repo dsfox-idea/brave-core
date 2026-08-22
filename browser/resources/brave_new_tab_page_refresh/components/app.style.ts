@@ -121,9 +121,10 @@ export const style = scoped.css`
       letter-spacing: .01em;
       opacity: .9;
 
-      /* the locale writes the weekday in lower case in most languages, and
-       * capitalising every word ("22 Августа 2026 Г.") is wrong in all of
-       * them - only the first letter goes up */
+      /* most locales write the weekday and the month in lower case, and
+       * text-transform: capitalize raises every word - which in Russian turns
+       * "22 august 2026 y." into "22 August 2026 Y." Only the first letter of
+       * the line goes up. */
       &::first-letter {
         text-transform: uppercase;
       }
