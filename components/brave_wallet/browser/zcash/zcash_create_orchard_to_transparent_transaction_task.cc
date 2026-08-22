@@ -79,7 +79,7 @@ void ZCashCreateOrchardToTransparentTransactionTask::GetSpendableNotes() {
     return;
   }
   context_.sync_state->AsyncCall(&OrchardSyncState::GetSpendableNotes)
-      .WithArgs(context_.account_id.Clone(),
+      .WithArgs(OrchardPool::kOrchard, context_.account_id.Clone(),
                 context_.account_internal_addr.value())
       .Then(base::BindOnce(
           &ZCashCreateOrchardToTransparentTransactionTask::OnGetSpendableNotes,
@@ -116,6 +116,7 @@ void ZCashCreateOrchardToTransparentTransactionTask::CreateTransaction() {
   CHECK(spendable_notes_);
 
   ZCashTransaction zcash_transaction;
+  zcash_transaction.init_v5_part();
 
   // Pick Orchard inputs.
   auto pick_result =

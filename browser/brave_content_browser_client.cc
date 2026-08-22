@@ -29,6 +29,7 @@
 #include "brave/browser/brave_search/backup_results_service_factory.h"
 #include "brave/browser/brave_shields/brave_shields_settings_service_factory.h"
 #include "brave/browser/brave_shields/brave_shields_web_contents_observer.h"
+#include "brave/browser/brave_stats/first_run_util.h"
 #include "brave/browser/cosmetic_filters/cosmetic_filters_tab_helper.h"
 #include "brave/browser/debounce/debounce_service_factory.h"
 #include "brave/browser/ephemeral_storage/ephemeral_storage_service_factory.h"
@@ -115,7 +116,6 @@
 #include "components/content_settings/browser/page_specific_content_settings.h"
 #include "components/content_settings/core/browser/host_content_settings_map.h"
 #include "components/embedder_support/switches.h"
-#include "components/history_embeddings/core/history_embeddings_features.h"
 #include "components/prefs/pref_service.h"
 #include "components/services/heap_profiling/public/mojom/heap_profiling_client.mojom.h"
 #include "components/user_prefs/user_prefs.h"
@@ -172,10 +172,8 @@
 #endif  // !BUILDFLAG(IS_ANDROID)
 
 #if BUILDFLAG(ENABLE_LOCAL_AI)
-#include "brave/browser/ui/webui/local_ai/local_ai_ui.h"
 #include "brave/browser/ui/webui/local_ai/on_device_speech_recognition_worker_ui.h"
 #include "brave/components/local_ai/core/features.h"
-#include "brave/components/local_ai/core/local_ai.mojom.h"
 #include "brave/components/local_ai/core/on_device_speech_recognition.mojom.h"
 #endif
 
@@ -213,8 +211,8 @@
 using blink::web_pref::WebPreferences;
 using brave_shields::BraveShieldsWebContentsObserver;
 using brave_shields::ControlType;
-using brave_shields::GetBraveShieldsEnabled;
 using brave_shields::GetFingerprintingControlType;
+using brave_shields::IsBraveShieldsEnabled;
 using content::BrowserThread;
 using content::ContentBrowserClient;
 using content::RenderFrameHost;
@@ -366,7 +364,9 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
 #include "brave/browser/ui/webui/brave_wallet/wallet_page/wallet_page_ui.h"
 #if !BUILDFLAG(IS_ANDROID)
+#include "brave/browser/ui/webui/brave_wallet/ledger/ledger_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/wallet_panel/wallet_panel_ui.h"
+#include "brave/components/brave_wallet/common/ledger_bridge.mojom.h"
 #endif
 #endif
 
@@ -402,9 +402,6 @@ void BindBraveSearchFallbackHost(
   content::BrowserContext* context = render_process_host->GetBrowserContext();
   auto* backup_results_service =
       brave_search::BackupResultsServiceFactory::GetForBrowserContext(context);
-  if (!backup_results_service) {
-    return;
-  }
   mojo::MakeSelfOwnedReceiver(
       std::make_unique<brave_search::BraveSearchFallbackHost>(
           backup_results_service),
@@ -723,6 +720,9 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   registry.ForWebUI<brave_wallet::WalletPageUI>()
       .Add<brave_wallet::mojom::PageHandlerFactory>()
+#if !BUILDFLAG(IS_ANDROID)
+      .Add<brave_wallet::mojom::LedgerBridgeService>()
+#endif  // !BUILDFLAG(IS_ANDROID)
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
       .Add<brave_rewards::mojom::RewardsPageHandler>()
 #endif  // BUILDFLAG(ENABLE_BRAVE_REWARDS)
@@ -730,6 +730,7 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 #if !BUILDFLAG(IS_ANDROID)
   registry.ForWebUI<WalletPanelUI>()
       .Add<brave_wallet::mojom::PanelHandlerFactory>()
+      .Add<brave_wallet::mojom::LedgerBridgeService>()
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
       .Add<brave_rewards::mojom::RewardsPageHandler>()
 #endif  // BUILDFLAG(ENABLE_BRAVE_REWARDS)
@@ -760,7 +761,9 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
   if (ai_chat::features::IsAIChatEnabled() &&
-      ai_chat::features::IsShowAIChatInputOnNewTabPageEnabled()) {
+      ai_chat::features::IsShowAIChatInputOnNewTabPageEnabled(
+          g_browser_process->local_state(),
+          brave_stats::IsFirstRun(g_browser_process->local_state()))) {
     ntp_refresh_registration.Add<ai_chat::mojom::AIChatUIHandler>()
         .Add<ai_chat::mojom::Service>()
         .Add<ai_chat::mojom::TabTrackerService>()
@@ -852,6 +855,13 @@ void BraveContentBrowserClient::RegisterUntrustedWebUIInterfaceBrokers(
   if (base::FeatureList::IsEnabled(brave_news::features::kBraveNewsSidebar)) {
     registry.ForWebUI<BraveNewsUI>()
         .Add<brave_news::mojom::BraveNewsController>();
+  }
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_WALLET) && !BUILDFLAG(IS_ANDROID)
+  if (brave_wallet::IsMojoForHardwareWalletEnabled()) {
+    registry.ForWebUI<ledger::UntrustedLedgerUI>()
+        .Add<brave_wallet::mojom::LedgerBridgeUIHandler>();
   }
 #endif
 }
@@ -999,10 +1009,6 @@ void BraveContentBrowserClient::RegisterBrowserInterfaceBindersForFrame(
   map->Add<skus::mojom::SkusService>(
       base::BindRepeating(&MaybeBindSkusSdkImpl));
 #if BUILDFLAG(ENABLE_LOCAL_AI)
-  if (base::FeatureList::IsEnabled(history_embeddings::kHistoryEmbeddings)) {
-    content::RegisterWebUIControllerInterfaceBinder<
-        local_ai::mojom::LocalAIService, local_ai::UntrustedLocalAIUI>(map);
-  }
   if (base::FeatureList::IsEnabled(local_ai::kBraveOnDeviceSpeechRecognition)) {
     content::RegisterWebUIControllerInterfaceBinder<
         local_ai::mojom::SpeechRecognitionFactoryHost,
@@ -1167,7 +1173,7 @@ BraveContentBrowserClient::CreateURLLoaderThrottles(
 
       auto producer =
           speedreader::SpeedreaderDistilledPageProducer::MaybeCreate(
-              tab_helper->GetWeakPtr());
+              request.url, tab_helper->GetWeakPtr());
       if (producer) {
         body_sniffer_throttle->SetBodyProducer(std::move(producer));
       }
@@ -1323,7 +1329,7 @@ void BraveContentBrowserClient::MaybeHideReferrer(
   Profile* profile = Profile::FromBrowserContext(browser_context);
   const bool allow_referrers = brave_shields::AreReferrersAllowed(
       HostContentSettingsMapFactory::GetForProfile(profile), document_url);
-  const bool shields_up = brave_shields::GetBraveShieldsEnabled(
+  const bool shields_up = brave_shields::IsBraveShieldsEnabled(
       HostContentSettingsMapFactory::GetForProfile(profile), document_url);
 
   content::Referrer new_referrer;
@@ -1515,7 +1521,7 @@ bool PreventDarkModeFingerprinting(WebContents* web_contents,
   const GURL url =
       main_frame_site.GetSecurityPrincipal().GetDeprecatedSiteURL();
   const bool shields_up =
-      brave_shields::GetBraveShieldsEnabled(host_content_settings_map, url);
+      brave_shields::IsBraveShieldsEnabled(host_content_settings_map, url);
   auto fingerprinting_type = brave_shields::GetFingerprintingControlType(
       host_content_settings_map, url);
   // https://github.com/brave/brave-browser/issues/15265

@@ -30,6 +30,7 @@
 #include "components/prefs/pref_member.h"
 #include "ui/base/accelerators/accelerator.h"
 #include "ui/base/metadata/metadata_header_macros.h"
+#include "ui/gfx/geometry/rounded_corners_f.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/browser/ui/views/toolbar/brave_vpn_panel_controller.h"
@@ -68,6 +69,7 @@ class BraveBrowser;
 class BraveShieldsToolbarButton;
 class BraveHelpBubbleHostView;
 class BraveMultiContentsView;
+class BrowserWindowInterface;
 class ContentsLayoutManager;
 class FocusModeTitleBarView;
 class FocusModeTopOverlay;
@@ -96,7 +98,7 @@ class BraveBrowserView : public BrowserView,
   // We use rounded corners even rounded corners setting is disabled.
   // Call this when we want to know
   static bool ShouldUseBraveWebViewRoundedCornersForContents(
-      const Browser* browser);
+      const BrowserWindowInterface* browser);
 
   void SetStarredState(bool is_starred) override;
   void ShowUpdateChromeDialog() override;
@@ -117,7 +119,6 @@ class BraveBrowserView : public BrowserView,
 #endif
 
   // BrowserView overrides:
-  void Layout(PassKey) override;
   void StartTabCycling() override;
   views::View* GetAnchorViewForBraveVPNPanel();
   gfx::Rect GetShieldsBubbleRect() override;
@@ -165,7 +166,18 @@ class BraveBrowserView : public BrowserView,
   // FocusModeController::Observer:
   void OnFocusModeToggled(bool enabled) override;
 
+  // True when the active content area should always display its domain in the
+  // mini toolbar.
+  bool show_active_contents_domain_in_mini_toolbar() const {
+    return show_active_contents_domain_;
+  }
+
   BraveMultiContentsView* GetBraveMultiContentsView() const;
+
+  // Applies the contents area corner radii computed by the layout. Called at
+  // the end of every layout pass.
+  void UpdateContentsCornerRadii(const gfx::RoundedCornersF& corner_radii);
+
   void UpdateRoundedCornersUI();
   void UpdateVerticalTabStripBorder();
   void UpdateSidebarBorder();
@@ -203,6 +215,16 @@ class BraveBrowserView : public BrowserView,
   // Returns the PWA Shields toolbar button, if it exists. Note that this
   // returns valid pointer only when it's web app browser.
   BraveShieldsToolbarButton* GetPwaShieldsToolbarButton();
+
+  // Should be called once, when the button is first created for this window.
+  // Cached directly here, in order to keep track of the button regardless of
+  // its current widget. (e.g. in macOS immersive fullscreen, the button is
+  // reparented into other widget)
+  void SetPwaShieldsToolbarButton(BraveShieldsToolbarButton* button);
+#endif
+
+#if BUILDFLAG(IS_MAC)
+  views::View* CreateMacOverlayView() override;
 #endif
 
  private:
@@ -271,7 +293,6 @@ class BraveBrowserView : public BrowserView,
   void OnPreferenceChanged(const std::string& pref_name);
   void OnWindowClosingConfirmResponse(bool allowed_to_close);
   BraveBrowser* GetBraveBrowser() const;
-  void UpdateWebViewRoundedCorners();
   void UpdateFocusModeState();
   bool ShouldDisableFocusModeForActiveTab() const;
 
@@ -301,6 +322,7 @@ class BraveBrowserView : public BrowserView,
   std::unique_ptr<views::Widget> vertical_tab_strip_widget_;
 
   bool closing_confirm_dialog_activated_ = false;
+  bool show_active_contents_domain_ = false;
   raw_ptr<BraveHelpBubbleHostView> brave_help_bubble_host_view_ = nullptr;
   raw_ptr<SidebarContainerView> sidebar_container_view_ = nullptr;
   raw_ptr<views::View> contents_background_view_ = nullptr;
@@ -309,6 +331,13 @@ class BraveBrowserView : public BrowserView,
       vertical_tab_strip_container_view_ = nullptr;
   raw_ptr<FocusModeTitleBarView> focus_mode_title_bar_view_ = nullptr;
   raw_ptr<FocusModeTopOverlay> focus_mode_top_overlay_ = nullptr;
+
+#if BUILDFLAG(ENABLE_EXTENSIONS)
+  // Caches the PWA Shields toolbar button for this window. Note that this
+  // button could belong to overlay widget in macOS fullscreen. That's why we
+  // cache it here instead of looking it up via BrowserElementsViews.
+  raw_ptr<BraveShieldsToolbarButton> pwa_shields_toolbar_button_;
+#endif
 
 #if defined(USE_AURA)
   raw_ptr<views::View> sidebar_host_view_ = nullptr;

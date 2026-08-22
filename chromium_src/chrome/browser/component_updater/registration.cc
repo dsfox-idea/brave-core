@@ -5,6 +5,7 @@
 
 #include "chrome/browser/component_updater/registration.h"
 
+#include "base/feature_list.h"
 #include "base/functional/bind.h"
 
 // growser: drop the Media Engagement Index preload component.
@@ -25,6 +26,7 @@
 #undef RegisterMediaEngagementPreloadComponent
 
 #include "brave/browser/brave_browser_process.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/local_ai/buildflags/buildflags.h"
 #include "brave/components/p3a/component_installer.h"
@@ -41,6 +43,12 @@
 
 #if BUILDFLAG(ENABLE_PSST)
 #include "brave/components/psst/core/browser/psst_component_installer.h"
+#endif
+
+#if BUILDFLAG(ENABLE_AI_CHAT)
+#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/web_mcp/core/browser/web_mcp_component_installer.h"
+#include "third_party/blink/public/common/features.h"
 #endif
 
 #if BUILDFLAG(IS_ANDROID)
@@ -68,6 +76,15 @@ void RegisterComponentsForUpdate() {
 #endif  // BUILDFLAG(ENABLE_BRAVE_WALLET)
 #if BUILDFLAG(ENABLE_PSST)
   psst::RegisterPsstComponent(cus);
+#endif
+#if BUILDFLAG(ENABLE_AI_CHAT)
+  // Only fetch WebMCP tool scripts when AI Chat is enabled and the WebMCP
+  // feature is enabled. Note: this is the process-wide feature/policy state,
+  // not per-profile as components are shared across all profiles.
+  if (ai_chat::features::IsAIChatEnabled() &&
+      base::FeatureList::IsEnabled(blink::features::kWebMCP)) {
+    web_mcp::RegisterWebMcpComponent(cus);
+  }
 #endif
   p3a::MaybeToggleP3AComponent(cus, g_brave_browser_process->p3a_service());
 #if BUILDFLAG(IS_ANDROID)

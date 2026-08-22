@@ -70,7 +70,7 @@ class RewardsPageHandler::UpdateObserver
                         kNewTabPageShowSponsoredImagesBackgroundImage,
                     UpdateSource::kAds);
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
-    AddPrefListener(brave_ads::prefs::kOptedInToNotificationAds,
+    AddPrefListener(brave_ads::prefs::kNotificationsEnabled,
                     UpdateSource::kAds);
     AddPrefListener(brave_ads::prefs::kMaximumNotificationAdsPerHour,
                     UpdateSource::kAds);
@@ -418,7 +418,7 @@ void RewardsPageHandler::GetAdsSettings(GetAdsSettingsCallback callback) {
       prefs_->GetBoolean(ntp_background_images::prefs::
                              kNewTabPageShowSponsoredImagesBackgroundImage);
   settings->notification_ads_enabled =
-      prefs_->GetBoolean(brave_ads::prefs::kOptedInToNotificationAds);
+      prefs_->GetBoolean(brave_ads::prefs::kNotificationsEnabled);
 
   settings->notification_ads_per_hour =
       ads_service_->GetMaximumNotificationAdsPerHour();
@@ -511,7 +511,7 @@ void RewardsPageHandler::SetAdTypeEnabled(brave_ads::mojom::AdType ad_type,
                          enabled);
       break;
     case AdType::kNotificationAd:
-      prefs_->SetBoolean(brave_ads::prefs::kOptedInToNotificationAds, enabled);
+      prefs_->SetBoolean(brave_ads::prefs::kNotificationsEnabled, enabled);
       break;
     case AdType::kSearchResultAd:
     case AdType::kUndefined:

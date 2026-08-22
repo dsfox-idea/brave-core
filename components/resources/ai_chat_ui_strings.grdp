@@ -108,14 +108,8 @@
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_AUTOMATIC" desc="AI Chat intro message for the default model" formatter_data="webui=AiChat">
     Model changes dynamically to use the best one for the task.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
-  <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BASIC" desc="AI Chat intro message for the basic model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Llama 3.1 8B, a model created by Meta to be performant and applicable to many use cases. Llama is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
-  </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_QWEN" desc="AI Chat intro message for the qwen model" formatter_data="webui=AiChat">
     Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Qwen VL 30B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
-  </message>
-  <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_NEAR_GLM_5" desc="AI Chat intro message for the glm-5 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GLM-5, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_NEAR_GLM_5_1" desc="AI Chat intro message for the glm-5.1 model" formatter_data="webui=AiChat">
     Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GLM-5.1, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5.1 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
@@ -570,9 +564,6 @@
   <message name="IDS_CHAT_UI_NOTICE_CONVERSATION_HISTORY_DISABLED_PREF_BUTTON" desc="Button label to enable conversation history preference" formatter_data="webui=AiChat">
     Enable
   </message>
-  <message name="IDS_CHAT_UI_CHAT_BASIC_SUBTITLE" desc="A description for default chat model" formatter_data="webui=AiChat">
-    Fast • Search
-  </message>
   <message name="IDS_CHAT_UI_CHAT_CLAUDE_INSTANT_SUBTITLE" desc="A description for claude-instant-v1 model" formatter_data="webui=AiChat">
     Conversation and text generation
   </message>
@@ -584,9 +575,6 @@
   </message>
   <message name="IDS_CHAT_UI_CHAT_QWEN_SUBTITLE" desc="A description for qwen model" formatter_data="webui=AiChat">
     Fast • Search • Vision
-  </message>
-  <message name="IDS_CHAT_UI_CHAT_NEAR_GLM_5_SUBTITLE" desc="A description for glm-5 model" formatter_data="webui=AiChat">
-    Verifiably Private With NEAR AI TEE
   </message>
   <message name="IDS_CHAT_UI_CHAT_NEAR_GLM_5_1_SUBTITLE" desc="A description for glm-5.1 model" formatter_data="webui=AiChat">
     Verifiably Private With NEAR AI TEE

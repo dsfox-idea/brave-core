@@ -67,6 +67,7 @@ import org.chromium.chrome.browser.share.qrcode.QRCodeGenerator;
 import org.chromium.chrome.browser.sync.BraveSyncDevices;
 import org.chromium.chrome.browser.sync.SyncServiceFactory;
 import org.chromium.chrome.browser.sync.settings.BraveManageSyncSettings;
+import org.chromium.chrome.browser.theme.BraveDynamicColors;
 import org.chromium.components.browser_ui.settings.SettingsNavigation;
 import org.chromium.components.browser_ui.settings.search.BaseSearchIndexProvider;
 import org.chromium.components.browser_ui.widget.displaystyle.UiConfig;
@@ -137,6 +138,11 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
     // One-shot listener used to re-apply the wide-display layout correction once the fragment root
     // gets its post-rotation size (see correctWideDisplayLayoutAfterRotation).
     private View.OnLayoutChangeListener mRotationLayoutListener;
+
+    // The title resource of the currently shown Sync (sub-)screen. Remembered so it can be
+    // re-applied to the correct title source after a rotation flips the column mode (see
+    // setScreenTitle / correctWideDisplayLayoutAfterRotation).
+    private int mCurrentScreenTitleResId = R.string.sync_category_title;
 
     // Below enum is matching the values of GetDeviceTypeString() in brave_device_info.cc
     public enum DeviceType {
@@ -253,6 +259,10 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
                     v.removeOnLayoutChangeListener(mRotationLayoutListener);
                     mRotationLayoutListener = null;
                     applyWideDisplayLayoutCorrection();
+                    // The rotation may have flipped the column mode; re-apply the current screen
+                    // title to the correct source (detail-pane supplier vs activity title) now that
+                    // isTwoColumnSettingsVisible() reflects the settled layout.
+                    setScreenTitle(mCurrentScreenTitleResId);
                 };
         mRootView.addOnLayoutChangeListener(mRotationLayoutListener);
     }
@@ -513,6 +523,7 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
         mScanChainCodeButton = getView().findViewById(R.id.brave_sync_btn_scan_chain_code);
         if (mScanChainCodeButton != null) {
             mScanChainCodeButton.setOnClickListener(this);
+            BraveDynamicColors.applyToFilledButtonIfEnabled(mScanChainCodeButton);
         }
 
         mStartNewChainButton = getView().findViewById(R.id.brave_sync_btn_start_new_chain);
@@ -532,11 +543,13 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
         mDoneButton = getView().findViewById(R.id.brave_sync_btn_done);
         if (mDoneButton != null) {
             mDoneButton.setOnClickListener(this);
+            BraveDynamicColors.applyToFilledButtonIfEnabled(mDoneButton);
         }
 
         mDoneLaptopButton = getView().findViewById(R.id.brave_sync_btn_add_laptop_done);
         if (mDoneLaptopButton != null) {
             mDoneLaptopButton.setOnClickListener(this);
+            BraveDynamicColors.applyToFilledButtonIfEnabled(mDoneLaptopButton);
         }
 
         mUseCameraButton = getView().findViewById(R.id.brave_sync_btn_use_camera);
@@ -547,6 +560,7 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
         mConfirmCodeWordsButton = getView().findViewById(R.id.brave_sync_confirm_code_words);
         if (mConfirmCodeWordsButton != null) {
             mConfirmCodeWordsButton.setOnClickListener(this);
+            BraveDynamicColors.applyToFilledButtonIfEnabled(mConfirmCodeWordsButton);
         }
 
         mMobileButton = getView().findViewById(R.id.brave_sync_btn_mobile);
@@ -584,6 +598,7 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
         mAddDeviceButton = getView().findViewById(R.id.brave_sync_btn_add_device);
         if (null != mAddDeviceButton) {
             mAddDeviceButton.setOnClickListener(this);
+            BraveDynamicColors.applyToFilledButtonIfEnabled(mAddDeviceButton);
         }
 
         mDeleteAccountButton = getView().findViewById(R.id.brave_sync_btn_delete_account);
@@ -603,10 +618,12 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
         mNewCodeWordsButton = getView().findViewById(R.id.brave_sync_btn_add_laptop_new_code);
         assert mNewCodeWordsButton != null;
         mNewCodeWordsButton.setOnClickListener(this);
+        BraveDynamicColors.applyToOutlinedButtonIfEnabled(mNewCodeWordsButton);
 
         mNewQrCodeButton = getView().findViewById(R.id.brave_sync_btn_add_mobile_new_code);
         assert mNewQrCodeButton != null;
         mNewQrCodeButton.setOnClickListener(this);
+        BraveDynamicColors.applyToOutlinedButtonIfEnabled(mNewQrCodeButton);
 
         mTabLayout = getView().findViewById(R.id.tab_layout);
         mTabLayout.addOnTabSelectedListener(
@@ -651,8 +668,14 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
      * driven by the activity title. In cr151 Multi-column Settings the activity title is the left
      * list-pane toolbar ("Settings") and must not be overwritten by a Sync sub-screen; the detail
      * (right) pane title is driven by {@link #getPageTitle()} instead, so update that supplier.
+     *
+     * <p>The chosen source depends on the current column mode, but a rotation can flip that mode
+     * without a screen transition, leaving the other source stale. We remember the current title in
+     * {@link #mCurrentScreenTitleResId} and re-apply it once the post-rotation layout settles (see
+     * {@link #correctWideDisplayLayoutAfterRotation}).
      */
     private void setScreenTitle(int titleResId) {
+        mCurrentScreenTitleResId = titleResId;
         Activity activity = getActivity();
         if (activity == null) {
             return;
@@ -1489,6 +1512,9 @@ public class BraveSyncScreensPreference extends BravePreferenceFragment
         }
         if (null != mScrollViewSyncDone) {
             mScrollViewSyncDone.setVisibility(View.GONE);
+        }
+        if (null != mAddDeviceTab) {
+            mAddDeviceTab.setVisibility(View.GONE);
         }
         adjustImageButtons(
                 getActivity()

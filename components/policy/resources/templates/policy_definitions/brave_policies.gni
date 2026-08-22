@@ -13,7 +13,6 @@ brave_policies = [
   "Growser/GrowserP3AEnabled.yaml",
   "Growser/GrowserPlaylistEnabled.yaml",
   "Growser/GrowserReduceLanguageEnabled.yaml",
-  "Growser/GrowserSearchResultAdsEnabled.yaml",
   "Growser/BraveShieldsDisabledForUrls.yaml",
   "Growser/BraveShieldsEnabledForUrls.yaml",
   "Growser/GrowserSpeedreaderEnabled.yaml",
@@ -26,6 +25,7 @@ brave_policies = [
   "Growser/DefaultBraveReferrersSetting.yaml",
   "Growser/DefaultBraveRemember1PStorageSetting.yaml",
   "Growser/EmailAliasesEnabled.yaml",
+  "Growser/PsstEnabled.yaml",
   "Growser/IPFSEnabled.yaml",
   "Growser/TorDisabled.yaml",
 ]

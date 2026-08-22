@@ -15,6 +15,7 @@
 #include "base/test/run_until.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
+#include "base/test/test_future.h"
 #include "base/time/time.h"
 #include "base/values.h"
 #include "brave/components/brave_ads/browser/test/fake_ads_service_delegate.h"
@@ -124,6 +125,10 @@ class BraveAdsAdsServiceImplTest : public testing::Test {
   }
 
   void Shutdown() { ads_service_->Shutdown(); }
+
+  void ClearData(ResultCallback callback) {
+    ads_service_->ClearData(std::move(callback));
+  }
 
   void NotifyBrowserWillShutdown() {
     shutdown_monitor_->NotifyAppTerminating();
@@ -367,7 +372,7 @@ TEST_F(BraveAdsAdsServiceImplTest, ServiceStartsWhenOptedInToNotificationAds) {
   ASSERT_EQ(0U, bat_ads_service_factory_->launch_count());
 
   // Act
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, true);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, true);
 
   // Assert
   EXPECT_EQ(1U, bat_ads_service_factory_->launch_count());
@@ -391,12 +396,12 @@ TEST_F(
   // Arrange
   prefs_.SetBoolean(prefs::kOptedInToSearchResultAds, true);
   prefs_.SetBoolean(brave_rewards::prefs::kEnabled, true);
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, true);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, true);
   Startup();
   ASSERT_EQ(1U, bat_ads_service_factory_->launch_count());
 
   // Act
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, false);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, false);
 
   // Assert
   EXPECT_EQ(1U, bat_ads_service_factory_->launch_count());
@@ -442,7 +447,7 @@ TEST_F(BraveAdsAdsServiceImplTest,
   // Arrange
   prefs_.SetBoolean(prefs::kOptedInToSearchResultAds, false);
   prefs_.SetBoolean(brave_rewards::prefs::kEnabled, true);
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, true);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, true);
   prefs_.SetManagedPref(brave_rewards::prefs::kDisabledByPolicy,
                         base::Value(true));
 
@@ -642,7 +647,7 @@ TEST_F(BraveAdsAdsServiceImplTest,
        ClearsNotificationAdsPrefOnShutdownIfUserHasOptedInToNotificationAds) {
   // Arrange
   prefs_.SetBoolean(brave_rewards::prefs::kEnabled, true);
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, true);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, true);
   prefs_.SetList(prefs::kNotificationAds, base::ListValue().Append("foo"));
 
   // Act
@@ -673,7 +678,7 @@ TEST_F(
   // this profile, so notification ads must be closed as soon as
   // `OnBrowserWillShutdown()` fires rather than only at `Shutdown()`.
   prefs_.SetBoolean(brave_rewards::prefs::kEnabled, true);
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, true);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, true);
   prefs_.SetList(prefs::kNotificationAds, base::ListValue().Append("foo"));
 
   // Act
@@ -690,7 +695,7 @@ TEST_F(BraveAdsAdsServiceImplTest,
   // initialization so `bat_ads_service_remote_` is bound.
   prefs_.SetBoolean(prefs::kOptedInToSearchResultAds, true);
   prefs_.SetBoolean(brave_rewards::prefs::kEnabled, true);
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, false);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, false);
   Startup();
   ASSERT_TRUE(base::test::RunUntil(
       [&] { return bat_ads_service_factory_->initialize_count() == 1U; }));
@@ -698,7 +703,7 @@ TEST_F(BraveAdsAdsServiceImplTest,
   EXPECT_CALL(mock_resource_component_, RegisterLanguageComponent);
 
   // Act
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, true);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, true);
 }
 
 TEST_F(BraveAdsAdsServiceImplTest,
@@ -707,7 +712,7 @@ TEST_F(BraveAdsAdsServiceImplTest,
   // is already registered; service must be running before opting out.
   prefs_.SetBoolean(prefs::kOptedInToSearchResultAds, true);
   prefs_.SetBoolean(brave_rewards::prefs::kEnabled, true);
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, true);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, true);
   Startup();
   ASSERT_TRUE(base::test::RunUntil(
       [&] { return bat_ads_service_factory_->initialize_count() == 1U; }));
@@ -715,7 +720,7 @@ TEST_F(BraveAdsAdsServiceImplTest,
   EXPECT_CALL(mock_resource_component_, UnregisterLanguageComponent());
 
   // Act
-  prefs_.SetBoolean(prefs::kOptedInToNotificationAds, false);
+  prefs_.SetBoolean(prefs::kNotificationsEnabled, false);
 }
 #endif  // BUILDFLAG(ENABLE_BRAVE_REWARDS)
 
@@ -737,5 +742,23 @@ TEST_F(BraveAdsAdsServiceImplTest,
                         base::Value(true));
 }
 #endif  // !BUILDFLAG(IS_ANDROID)
+
+TEST_F(BraveAdsAdsServiceImplTest,
+       ClearDataReportsFailureWhenBatAdsDisconnectsDuringShutdown) {
+  // Arrange
+  prefs_.SetBoolean(prefs::kOptedInToSearchResultAds, true);
+  bat_ads_service_factory_->set_simulate_shutdown_disconnect();
+  Startup();
+  ASSERT_TRUE(base::test::RunUntil(
+      [&] { return bat_ads_service_factory_->initialize_count() == 1U; }));
+
+  base::test::TestFuture<bool> test_future;
+
+  // Act
+  ClearData(test_future.GetCallback());
+
+  // Assert
+  EXPECT_FALSE(test_future.Get());
+}
 
 }  // namespace brave_ads

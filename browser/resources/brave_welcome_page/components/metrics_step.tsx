@@ -10,7 +10,9 @@ import { formatString } from '$web-common/formatString'
 
 import { useWelcomeApi } from '../api/welcome_api_context'
 import { useStepTransition } from './use_step_transition'
+import { useAvailableMetrics } from './use_available_metrics'
 import { getString } from '../lib/strings'
+import { StepComponentProps } from './step_component_props'
 import { StepHeader } from './step_header'
 import { ProductCard } from './product_card'
 
@@ -20,43 +22,24 @@ import wdpImage from '../assets/wdp.svg'
 import p3aImage from '../assets/p3a.svg'
 import crashesImage from '../assets/crashes.svg'
 
-interface Props {
-  onBack: () => void
-  onNext: () => void
-}
-
-export function MetricsStep(props: Props) {
+export function MetricsStep(props: StepComponentProps) {
   const api = useWelcomeApi()
+  const availableMetrics = useAvailableMetrics()
 
   useStepTransition()
-
-  const webDiscoveryFeatureEnabled = api.useWebDiscoveryFeatureEnabledData()
-  const isWebDiscoveryPrefManaged = api.useIsWebDiscoveryPrefManagedData()
-  const isCrashReportingPrefManaged = api.useIsCrashReportingPrefManagedData()
-
-  const showWebDiscovery =
-    webDiscoveryFeatureEnabled && !isWebDiscoveryPrefManaged
-  // growser (#78): no P3A card. P3A is functionally removed (#21) - Init() is
-  // wrapped in #if 0, so nothing is ever sent even with the pref forced on.
-  // Offering someone a switch for it during onboarding asks them to make a
-  // decision that has no effect. The comment in p3a_service.cc claimed the
-  // onboarding opt-in was already gone; it was gone from the older welcome
-  // flow, not from this one.
-  const showP3A: boolean = false
-  const showCrashReports = !isCrashReportingPrefManaged
 
   const [webDiscoveryEnabled, setWebDiscoveryEnabled] = React.useState(true)
   const [p3aEnabled, setP3AEnabled] = React.useState(true)
   const [crashReportingEnabled, setCrashReportingEnabled] = React.useState(true)
 
   function saveAndContinue() {
-    if (showWebDiscovery) {
+    if (availableMetrics.webDiscovery) {
       api.setWebDiscoveryEnabled([webDiscoveryEnabled])
     }
-    if (showP3A) {
+    if (availableMetrics.p3a) {
       api.setP3AEnabled([p3aEnabled])
     }
-    if (showCrashReports) {
+    if (availableMetrics.crashReports) {
       api.setCrashReportsEnabled([crashReportingEnabled])
     }
     props.onNext()
@@ -100,7 +83,7 @@ export function MetricsStep(props: Props) {
           </p>
         </div>
         <div className='step-ui'>
-          {showWebDiscovery && (
+          {availableMetrics.webDiscovery && (
             <ProductCard
               image={wdpImage}
               title={getString('WELCOME_PAGE_PRODUCT_WDP_TITLE')}
@@ -110,7 +93,7 @@ export function MetricsStep(props: Props) {
               onChange={setWebDiscoveryEnabled}
             />
           )}
-          {showP3A && (
+          {availableMetrics.p3a && (
             <ProductCard
               image={p3aImage}
               title={getString('WELCOME_PAGE_PRODUCT_P3A_TITLE')}
@@ -120,7 +103,7 @@ export function MetricsStep(props: Props) {
               onChange={setP3AEnabled}
             />
           )}
-          {showCrashReports && (
+          {availableMetrics.crashReports && (
             <ProductCard
               image={crashesImage}
               title={getString('WELCOME_PAGE_PRODUCT_CRASH_REPORTS_TITLE')}
@@ -150,7 +133,9 @@ export function MetricsStep(props: Props) {
             size='large'
             onClick={saveAndContinue}
           >
-            {getString('WELCOME_PAGE_START_BROWSING_BUTTON_LABEL')}
+            {props.isLastStep
+              ? getString('WELCOME_PAGE_START_BROWSING_BUTTON_LABEL')
+              : getString('WELCOME_PAGE_CONTINUE_BUTTON_LABEL')}
           </Button>
         </div>
       </footer>

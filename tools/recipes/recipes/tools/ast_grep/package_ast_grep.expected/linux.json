@@ -6,7 +6,7 @@
       "--depth",
       "1",
       "https://chromium.googlesource.com/chromium/tools/depot_tools",
-      "[WORKSPACE]/brave-browser/src/third_party/depot_tools"
+      "[WORKSPACE]/b/src/third_party/depot_tools"
     ],
     "env": {
       "CHROME_HEADLESS": "1"
@@ -31,7 +31,7 @@
       "--unmanaged",
       "https://chromium.googlesource.com/chromium/src.git"
     ],
-    "cwd": "[WORKSPACE]/brave-browser",
+    "cwd": "[WORKSPACE]/b",
     "env": {
       "CHROME_HEADLESS": "1"
     },
@@ -47,8 +47,8 @@
       "https://chromium.googlesource.com/chromium/src.git",
       "--reset-fetch-config",
       "--no-fetch-tags",
-      "--depth",
-      "1"
+      "--ref",
+      "refs/tags/151.0.7917.1"
     ],
     "env": {
       "CHROME_HEADLESS": "1"
@@ -77,8 +77,10 @@
       "--no-checkout",
       "--local",
       "--shared",
+      "--depth",
+      "1",
       "/b/cache/chromium.googlesource.com-chromium-src",
-      "[WORKSPACE]/brave-browser/src"
+      "[WORKSPACE]/b/src"
     ],
     "env": {
       "CHROME_HEADLESS": "1"
@@ -92,7 +94,7 @@
       "gc.auto",
       "0"
     ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
+    "cwd": "[WORKSPACE]/b/src",
     "env": {
       "CHROME_HEADLESS": "1"
     },
@@ -105,7 +107,7 @@
       "gc.autodetach",
       "0"
     ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
+    "cwd": "[WORKSPACE]/b/src",
     "env": {
       "CHROME_HEADLESS": "1"
     },
@@ -118,7 +120,7 @@
       "gc.autopacklimit",
       "0"
     ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
+    "cwd": "[WORKSPACE]/b/src",
     "env": {
       "CHROME_HEADLESS": "1"
     },
@@ -129,63 +131,14 @@
       "git",
       "checkout",
       "--force",
-      "origin/HEAD",
+      "refs/tags/151.0.7917.1",
       "--"
     ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
+    "cwd": "[WORKSPACE]/b/src",
     "env": {
       "CHROME_HEADLESS": "1"
     },
-    "name": "checkout origin/HEAD"
-  },
-  {
-    "cmd": [
-      "git",
-      "cache",
-      "populate",
-      "--cache-dir",
-      "/b/cache",
-      "https://chromium.googlesource.com/chromium/src.git",
-      "--reset-fetch-config",
-      "--no-fetch-tags",
-      "--ref",
-      "refs/tags/151.0.7917.1",
-      "--depth",
-      "1"
-    ],
-    "env": {
-      "CHROME_HEADLESS": "1"
-    },
-    "name": "git cache populate for ref"
-  },
-  {
-    "cmd": [
-      "git",
-      "cache",
-      "exists",
-      "--quiet",
-      "--cache-dir",
-      "/b/cache",
-      "https://chromium.googlesource.com/chromium/src.git"
-    ],
-    "env": {
-      "CHROME_HEADLESS": "1"
-    },
-    "name": "git cache exists for ref"
-  },
-  {
-    "cmd": [
-      "git",
-      "remote",
-      "set-url",
-      "origin",
-      "/b/cache/chromium.googlesource.com-chromium-src"
-    ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
-    "env": {
-      "CHROME_HEADLESS": "1"
-    },
-    "name": "point origin at git cache"
+    "name": "checkout tag"
   },
   {
     "cmd": [
@@ -196,38 +149,11 @@
       "origin",
       "https://chromium.googlesource.com/chromium/src.git"
     ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
+    "cwd": "[WORKSPACE]/b/src",
     "env": {
       "CHROME_HEADLESS": "1"
     },
     "name": "restore origin push url"
-  },
-  {
-    "cmd": [
-      "git",
-      "fetch",
-      "--no-tags",
-      "origin",
-      "refs/tags/151.0.7917.1:refs/tags/151.0.7917.1"
-    ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
-    "env": {
-      "CHROME_HEADLESS": "1"
-    },
-    "name": "fetch tag"
-  },
-  {
-    "cmd": [
-      "git",
-      "checkout",
-      "--force",
-      "FETCH_HEAD"
-    ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
-    "env": {
-      "CHROME_HEADLESS": "1"
-    },
-    "name": "checkout FETCH_HEAD"
   },
   {
     "cmd": [
@@ -236,7 +162,7 @@
       "--force",
       "-D"
     ],
-    "cwd": "[WORKSPACE]/brave-browser/src",
+    "cwd": "[WORKSPACE]/b/src",
     "env": {
       "CHROME_HEADLESS": "1"
     },
@@ -253,7 +179,7 @@
       "--branch",
       "master",
       "git@github.com:brave/brave-core.git",
-      "[WORKSPACE]/brave-browser/src/brave"
+      "[WORKSPACE]/b/src/brave"
     ],
     "name": "clone brave-core (shallow, sparse)"
   },
@@ -261,7 +187,7 @@
     "cmd": [
       "git",
       "-C",
-      "[WORKSPACE]/brave-browser/src/brave",
+      "[WORKSPACE]/b/src/brave",
       "sparse-checkout",
       "list"
     ],
@@ -271,7 +197,7 @@
     "cmd": [
       "git",
       "-C",
-      "[WORKSPACE]/brave-browser/src/brave",
+      "[WORKSPACE]/b/src/brave",
       "sparse-checkout",
       "add",
       "third_party/ast-grep",
@@ -281,8 +207,8 @@
   },
   {
     "cmd": [
-      "[WORKSPACE]/brave-browser/src/third_party/depot_tools/vpython3",
-      "[WORKSPACE]/brave-browser/src/brave/third_party/ast-grep/package_ast_grep.py",
+      "[WORKSPACE]/b/src/third_party/depot_tools/vpython3",
+      "[WORKSPACE]/b/src/brave/third_party/ast-grep/package_ast_grep.py",
       "--clean",
       "--out-dir",
       "[WORKSPACE]/out",

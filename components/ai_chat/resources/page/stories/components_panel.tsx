@@ -10,7 +10,7 @@ import { useArgs } from '@storybook/preview-api'
 import { Meta, StoryObj } from '@storybook/react'
 import '@brave/leo/tokens/css/variables.css'
 import { getKeysForMojomEnum } from '$web-common/mojomUtils'
-import { InferControlsFromArgs } from '../../../../../.storybook/utils'
+import { InferControlsFromArgs } from '$storybook/utils'
 import * as Mojom from '../../common/mojom'
 import FullPage from '../components/full_page'
 import Loading from '../components/loading'
@@ -167,33 +167,6 @@ const MODELS: Mojom.Model[] = [
         endpoint: { url: 'https://example.com' },
         apiKey: '123456',
       },
-    },
-  },
-  {
-    key: 'chat-near-glm-5',
-    displayName: 'GLM-5',
-    visionSupport: false,
-    audioSupport: false,
-    videoSupport: false,
-    supportsTools: false,
-    supportedCapabilities: [
-      Mojom.ConversationCapability.CHAT,
-      Mojom.ConversationCapability.DEEP_RESEARCH,
-    ],
-    isSuggestedModel: true,
-    isNearModel: true,
-    supportsPrivateInference: false,
-    options: {
-      leoModelOptions: {
-        name: 'near-glm-5',
-        displayMaker: 'Z.ai',
-        description: '',
-        category: Mojom.ModelCategory.CHAT,
-        access: Mojom.ModelAccess.BASIC_AND_PREMIUM,
-        maxAssociatedContentLength: 128000,
-        longConversationWarningCharacterLimit: 128000,
-      },
-      customModelOptions: undefined,
     },
   },
 ]
@@ -649,6 +622,7 @@ function StoryContext(
         isMobile: args.isMobile,
         isHistoryFeatureEnabled: args.isHistoryEnabled,
         isConversationShareEnabled: true,
+        isAIChatExportJSONEnabled: true,
         skillDialog: args.skillDialog,
       }}
       conversationOverrides={{

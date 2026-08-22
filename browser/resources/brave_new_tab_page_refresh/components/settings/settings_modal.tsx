@@ -19,6 +19,7 @@ import { TopSitesPanel } from './top_sites_panel'
 import { ClockPanel } from './clock_panel'
 import { WidgetsPanel } from './widgets_panel'
 import { getString } from '../../lib/strings'
+import { useAnimatedResize } from '../../lib/animated_resize'
 
 import { style } from './settings_modal.style'
 
@@ -38,12 +39,15 @@ interface Props {
 
 export function SettingsModal(props: Props) {
   const braveNews = useBraveNews()
+  const panelBodyRef = React.useRef<HTMLDivElement>(null)
   const searchFeatureEnabled = useSearchState((s) => s.searchFeatureEnabled)
   const aiChatInputEnabled = useNewTabState((s) => s.aiChatInputEnabled)
 
   const [currentView, setCurrentView] = React.useState<SettingsView>(
     props.initialView || 'background',
   )
+
+  useAnimatedResize(panelBodyRef)
 
   React.useEffect(() => {
     if (props.isOpen) {
@@ -73,7 +77,7 @@ export function SettingsModal(props: Props) {
   }
 
   function renderPanel() {
-    if (!shouldShowView(currentView)) {
+    if (!props.isOpen || !shouldShowView(currentView)) {
       return null
     }
     switch (currentView) {
@@ -155,11 +159,14 @@ export function SettingsModal(props: Props) {
         isOpen={props.isOpen}
         showClose
         onClose={() => props.onClose()}
-        backdropClickCloses={!braveNews.customizePage}
+        backdropClickCloses={false}
       >
-        <h3>{getString(S.NEW_TAB_SETTINGS_TITLE)}</h3>
-        <div className='panel-body'>
+        <div
+          className='panel-body'
+          ref={panelBodyRef}
+        >
           <nav>
+            <h4>{getString(S.NEW_TAB_SETTINGS_TITLE)}</h4>
             <Navigation>
               {renderNavItem('background')}
               {renderNavItem('search')}

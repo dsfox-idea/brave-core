@@ -281,7 +281,7 @@ bool AdsServiceImpl::UserHasOptedInToNewTabPageAds() const {
 
 bool AdsServiceImpl::UserHasOptedInToNotificationAds() const {
   return prefs_->GetBoolean(brave_rewards::prefs::kEnabled) &&
-         prefs_->GetBoolean(prefs::kOptedInToNotificationAds);
+         prefs_->GetBoolean(prefs::kNotificationsEnabled);
 }
 
 bool AdsServiceImpl::UserHasOptedInToSearchResultAds() const {
@@ -755,7 +755,7 @@ void AdsServiceImpl::InitializeNewTabPageAdsPrefChangeRegistrar() {
 
 void AdsServiceImpl::InitializeNotificationAdsPrefChangeRegistrar() {
   pref_change_registrar_.Add(
-      prefs::kOptedInToNotificationAds,
+      prefs::kNotificationsEnabled,
       base::BindRepeating(&AdsServiceImpl::OnAdsPrefChanged,
                           base::Unretained(this)));
 
@@ -782,7 +782,7 @@ void AdsServiceImpl::OnAdsPrefChanged(const std::string& path) {
     return ShutdownAdsService();
   }
 
-  if (path == prefs::kOptedInToNotificationAds &&
+  if (path == prefs::kNotificationsEnabled &&
       bat_ads_service_remote_.is_bound()) {
     RegisterOrUnregisterLanguageResourceComponent();
 
@@ -1041,8 +1041,10 @@ void AdsServiceImpl::ShutdownAds(ResultCallback callback) {
   // Use `weak_ptr_factory_` because `bat_ads_service_weak_ptr_factory_` is
   // invalidated to cancel pending startups; this callback must always fire.
   bat_ads_associated_remote_->Shutdown(
-      base::BindOnce(&AdsServiceImpl::ShutdownAdsCallback,
-                     weak_ptr_factory_.GetWeakPtr(), std::move(callback)));
+      mojo::WrapCallbackWithDefaultInvokeIfNotRun(
+          base::BindOnce(&AdsServiceImpl::ShutdownAdsCallback,
+                         weak_ptr_factory_.GetWeakPtr(), std::move(callback)),
+          /*success=*/false));
 }
 
 void AdsServiceImpl::ShutdownAdsCallback(ResultCallback callback,

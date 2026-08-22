@@ -456,6 +456,7 @@ std::unique_ptr<brave::BraveRequestInfo> BraveRequestInfo::MakeCTX(
     uint64_t request_identifier,
     content::BrowserContext* browser_context,
     brave::BraveRequestInfo* old_ctx,
+    base::optional_ref<const url::Origin> original_request_initiator,
     std::optional<content::ContentBrowserClient::URLLoaderFactoryType>
         url_loader_factory_type,
     base::optional_ref<const url::Origin> factory_request_initiator,
@@ -467,7 +468,9 @@ std::unique_ptr<brave::BraveRequestInfo> BraveRequestInfo::MakeCTX(
   const bool use_factory_context =
       url_loader_factory_type &&
       ShouldUseFactoryURLLoaderContext(*url_loader_factory_type);
-  std::optional<url::Origin> request_initiator = request.request_initiator;
+  std::optional<url::Origin> request_initiator =
+      original_request_initiator ? *original_request_initiator
+                                 : request.request_initiator;
   if (!request_initiator && use_factory_context && factory_request_initiator) {
     request_initiator = *factory_request_initiator;
   }
@@ -522,7 +525,7 @@ std::unique_ptr<brave::BraveRequestInfo> BraveRequestInfo::MakeCTX(
   Profile* profile = Profile::FromBrowserContext(browser_context);
   auto* map = HostContentSettingsMapFactory::GetForProfile(profile);
   ctx->set_allow_brave_shields(
-      map ? brave_shields::GetBraveShieldsEnabled(map, ctx->tab_origin())
+      map ? brave_shields::IsBraveShieldsEnabled(map, ctx->tab_origin())
           : true);
   ctx->set_allow_ads(map &&
                      brave_shields::GetAdControlType(map, ctx->tab_origin()) ==

@@ -30,7 +30,7 @@ class ChromiumCheckoutTestApi(RecipeTestApi):
 
     def existing_checkout(self) -> TestData:
         """Simulate a valid existing checkout (`chrome/VERSION` present)."""
-        return self.m.path.files('brave-browser/src/chrome/VERSION')
+        return self.m.path.files('b/src/chrome/VERSION')
 
     def git_cache_populated(self, mirror_dir: str = _MIRROR_DIR) -> TestData:
         """Seed `clone`/`checkout_ref`'s `git cache exists` lookups.
@@ -38,7 +38,32 @@ class ChromiumCheckoutTestApi(RecipeTestApi):
         Both `clone` and `checkout_ref` run a `git cache exists` step to
         resolve the mirror directory `git cache populate` just fetched into;
         required whenever either of them runs, since the simulated stdout is
-        `None` (not an empty string) unless seeded.
+        an empty string unless seeded.
         """
-        return (self.step_data('git cache exists', stdout=mirror_dir) +
-                self.step_data('git cache exists for ref', stdout=mirror_dir))
+        stdout = self.m.raw_io.output_text(mirror_dir)
+        return (self.step_data('git cache exists', stdout=stdout) +
+                self.step_data('git cache exists for ref', stdout=stdout))
+
+    def win_toolchain_hash(self,
+                           toolchain_hash: str = '',
+                           published_hash: str | None = None) -> TestData:
+        """Seed `_pin_win_toolchain_hash`'s lookup result.
+
+        This is `checkout_ref`'s own default for the `resolve win toolchain
+        hash` step (via `step_test_data`): with no *published_hash*, nothing
+        is published yet for the upstream hash, so `GYP_MSVS_HASH_*` stays
+        unset -- matching what an unseeded step should report.
+        """
+        return self.m.json.output({
+            'toolchain_hash': toolchain_hash,
+            'published_hash': published_hash,
+        })
+
+    def win_toolchain_published(self, toolchain_hash: str,
+                                published_hash: str) -> TestData:
+        """Simulate Brave having already republished a toolchain for the
+        upstream *toolchain_hash*, resolving to *published_hash*.
+        """
+        return self.step_data(
+            'resolve win toolchain hash',
+            self.win_toolchain_hash(toolchain_hash, published_hash))

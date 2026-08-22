@@ -4,6 +4,7 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_education/buildflags.gni")
 import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
@@ -17,6 +18,8 @@ mojom("mojom") {
 
 source_set("brave_welcome_page") {
   sources = [
+    "brave_welcome_page_prefs.cc",
+    "brave_welcome_page_prefs.h",
     "brave_welcome_page_ui.cc",
     "brave_welcome_page_ui.h",
     "welcome_page_features.cc",
@@ -37,6 +40,9 @@ source_set("brave_welcome_page") {
     "//brave/browser/resources/brave_welcome_page:generated_resources",
     "//brave/browser/ui:brave_tab_prefs",
     "//brave/components/ai_chat/core/common/buildflags",
+    "//brave/components/brave_education",
+    "//brave/components/brave_education:buildflags",
+    "//brave/components/brave_rewards/core",
     "//brave/components/brave_rewards/core/buildflags",
     "//brave/components/brave_search_conversion",
     "//brave/components/brave_vpn/common/buildflags",
@@ -51,8 +57,11 @@ source_set("brave_welcome_page") {
     "//chrome/browser/search/background",
     "//chrome/browser/ui/webui:webui_util",
     "//chrome/browser/ui/webui/cr_components/theme_color_picker:impl",
+    "//components/country_codes",
+    "//components/regional_capabilities",
     "//content/public/browser",
     "//mojo/public/cpp/bindings",
+    "//ui/base",
     "//ui/webui",
   ]
 
@@ -63,11 +72,12 @@ source_set("brave_welcome_page") {
     ]
   }
 
+  if (enable_brave_education) {
+    deps += [ "//brave/browser/ui/webui/brave_education" ]
+  }
+
   if (enable_brave_rewards) {
-    deps += [
-      "//brave/browser/brave_rewards:util",
-      "//brave/components/brave_rewards/core",
-    ]
+    deps += [ "//brave/browser/brave_rewards:util" ]
   }
 
   if (enable_brave_vpn) {

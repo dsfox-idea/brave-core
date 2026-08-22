@@ -16,6 +16,8 @@
 
 static_assert(BUILDFLAG(ENABLE_AI_CHAT));
 
+class PrefService;
+
 namespace ai_chat::features {
 
 COMPONENT_EXPORT(AI_CHAT_COMMON) BASE_DECLARE_FEATURE(kAIChat);
@@ -84,6 +86,8 @@ COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsAIChatFirstEnabled();
 
 COMPONENT_EXPORT(AI_CHAT_COMMON) BASE_DECLARE_FEATURE(kAIChatUserChoiceTool);
 
+COMPONENT_EXPORT(AI_CHAT_COMMON) BASE_DECLARE_FEATURE(kAIChatWorkspaceTools);
+
 // Enables experimental features being enabled in a separate profile. If
 // disabled, the features will not be enabled anywhere.
 COMPONENT_EXPORT(AI_CHAT_COMMON) BASE_DECLARE_FEATURE(kAIChatAgentProfile);
@@ -141,10 +145,6 @@ BASE_DECLARE_FEATURE(kTabManagementTool);
 
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kNEARModels);
-COMPONENT_EXPORT(AI_CHAT_COMMON)
-extern const base::FeatureParam<bool> kNEARModelsEncryption;
-COMPONENT_EXPORT(AI_CHAT_COMMON)
-extern const base::FeatureParam<bool> kNEARModelsEncryptionSearch;
 COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsNEARModelsEnabled();
 
 COMPONENT_EXPORT(AI_CHAT_COMMON)
@@ -175,7 +175,9 @@ COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsAIChatWebUIEnabled();
 
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kShowAIChatInputOnNewTabPage);
-COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsShowAIChatInputOnNewTabPageEnabled();
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+bool IsShowAIChatInputOnNewTabPageEnabled(PrefService* local_state,
+                                          bool is_first_run);
 
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kAIChatDeepResearch);
@@ -185,6 +187,7 @@ COMPONENT_EXPORT(AI_CHAT_COMMON) BASE_DECLARE_FEATURE(kBraveSyncAIChat);
 COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsBraveSyncAIChatEnabled();
 
 // Enables sharing a conversation from the conversation header.
+// https://github.com/brave/brave-browser/issues/56444
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kAIChatConversationShare);
 
@@ -194,6 +197,12 @@ BASE_DECLARE_FEATURE(kAIChatConversationShare);
 // fragment.
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 extern const base::FeatureParam<std::string> kAIChatConversationShareBaseUrl;
+
+// Enables copying serialized conversation data as JSON to the clipboard when
+// using the alt+meta modifier keys and the "Copy entire conversation" menu
+// option.
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+BASE_DECLARE_FEATURE(kAIChatExportJSON);
 
 }  // namespace ai_chat::features
 

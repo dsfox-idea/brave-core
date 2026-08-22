@@ -28,7 +28,7 @@
 #include "url/origin.h"
 
 template <template <typename> class T>
-class BraveRequestHandler;
+class BraveRequestHandlerImpl;
 
 namespace content {
 class BrowserContext;
@@ -186,12 +186,18 @@ class BraveRequestInfo {
   const std::optional<std::string>& devtools_request_id() const;
   void set_devtools_request_id(const std::optional<std::string>& value);
 
+  // Builds request context using |original_request_initiator| when provided;
+  // otherwise uses |request.request_initiator|, with
+  // |factory_request_initiator| as a worker-factory fallback when neither is
+  // available.
   static std::unique_ptr<brave::BraveRequestInfo> MakeCTX(
       const network::ResourceRequest& request,
       content::GlobalRenderFrameHostToken render_frame_token,
       uint64_t request_identifier,
       content::BrowserContext* browser_context,
       brave::BraveRequestInfo* old_ctx,
+      base::optional_ref<const url::Origin> original_request_initiator =
+          std::nullopt,
       std::optional<content::ContentBrowserClient::URLLoaderFactoryType>
           url_loader_factory_type = std::nullopt,
       base::optional_ref<const url::Origin> factory_request_initiator =
@@ -207,7 +213,7 @@ class BraveRequestInfo {
   // Please don't add any more friends here if it can be avoided.
   // We should also remove the one below.
   template <template <typename> class T>
-  friend class ::BraveRequestHandler;
+  friend class ::BraveRequestHandlerImpl;
 
   GURL* new_url() const;
   void set_new_url(GURL* value);
