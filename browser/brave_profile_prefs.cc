@@ -206,6 +206,13 @@ void OverrideDefaultPrefValues(user_prefs::PrefRegistrySyncable* registry) {
   registry->SetDefaultPrefValue(
       bookmarks_webui::prefs::kBookmarksViewType,
       base::Value(static_cast<int>(side_panel::mojom::ViewType::kCompact)));
+
+  // growser: the sidebar opens on the left. Chromium registers this as
+  // !IsRTL(), i.e. on the right for a left-to-right locale
+  // (chrome/browser/ui/side_panel/side_panel_prefs.cc); true means right. It
+  // stays a setting - this changes where it starts, not where it can be.
+  registry->SetDefaultPrefValue(prefs::kSidePanelHorizontalAlignment,
+                                base::Value(false));
 #endif  // BUILDFLAG(IS_ANDROID)
 
   // Restore last profile on restart
