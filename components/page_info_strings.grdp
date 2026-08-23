@@ -24,7 +24,7 @@
     Be careful on this site
   </message>
   <message name="IDS_PAGE_INFO_SUSPICIOUS_SITE_DETAILS" desc="Description of the page info bubble for a suspicious site.">
-    Brave has detected details that are common on sites associated with phishing, malware, or scams. <ph name="BEGIN_LINK">&lt;link&gt;<ex>&lt;link&gt;</ex></ph>Learn more<ph name="END_LINK">&lt;/link&gt;<ex>&lt;/link&gt;</ex></ph>
+    Growser has detected details that are common on sites associated with phishing, malware, or scams. <ph name="BEGIN_LINK">&lt;link&gt;<ex>&lt;link&gt;</ex></ph>Learn more<ph name="END_LINK">&lt;/link&gt;<ex>&lt;/link&gt;</ex></ph>
   </message>
   <message name="IDS_PAGE_INFO_SUSPICIOUS_SITE_BUTTON_MARK_AS_SAFE" desc="Button text to mark a suspicious site as safe." formatter_data="android_java">
     Mark as safe
