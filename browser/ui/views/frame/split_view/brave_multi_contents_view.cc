@@ -110,6 +110,14 @@ bool BraveMultiContentsView::IsWebPanelVisible() const {
   return contents_container_view_for_web_panel_->GetVisible();
 }
 
+views::View*
+BraveMultiContentsView::GetWebPanelContentsViewForTesting()  // IN-TEST
+    const {
+  return contents_container_view_for_web_panel_
+             ? contents_container_view_for_web_panel_->contents_view()
+             : nullptr;
+}
+
 void BraveMultiContentsView::SetWebPanelWidth(int width) {
   web_panel_width_ = width;
   InvalidateLayout();
@@ -225,7 +233,8 @@ void BraveMultiContentsView::UpdateContentsBorderAndOverlay() {
       /*is_in_split*/ false, /*is_active*/ true,
       /*is_highlighted*/ false);
 
-  for (auto* contents_container_view : contents_container_views_) {
+  for (ContentsContainerView* contents_container_view :
+       contents_container_views_) {
     contents_container_view->UpdateBorderAndOverlay(IsInSplitView(),
                                                     /*is_active*/ false,
                                                     /*is_highlighted*/ false);

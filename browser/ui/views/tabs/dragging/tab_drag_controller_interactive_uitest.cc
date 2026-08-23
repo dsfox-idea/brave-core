@@ -3,6 +3,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include "chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h"
+
 #include <algorithm>
 #include <memory>
 
@@ -19,6 +21,7 @@
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
+#include "chrome/browser/ui/browser_element_identifiers.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_collection_observer.h"
 #include "chrome/browser/ui/browser_window/public/global_browser_collection.h"
@@ -26,7 +29,7 @@
 #include "chrome/browser/ui/tabs/tab_model.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/frame/tab_strip_region_view.h"
-#include "chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h"
+#include "chrome/browser/ui/views/interaction/browser_elements_views.h"
 #include "chrome/browser/ui/views/tabs/dragging/tab_drag_controller_interactive_test_mixin.h"
 #include "chrome/browser/ui/views/tabs/tab_strip.h"
 #include "chrome/test/base/in_process_browser_test.h"
@@ -113,11 +116,9 @@ void ResizeUsingMouseEmulation(Browser* browser,
   }
 
   // Move the window.
-  auto* tab_strip_region_view =
-      views::AsViewClass<HorizontalTabStripRegionView>(
-          browser->GetBrowserView().tab_strip_view());
   auto* grab_handle_space =
-      tab_strip_region_view->reserved_grab_handle_space_for_testing();
+      BrowserElementsViews::From(browser)->GetViewAs<views::View>(
+          kTabStripFrameGrabHandleElementId);
   auto grab_coordinates =
       ui_test_utils::GetCenterInScreenCoordinates(grab_handle_space);
   gfx::Vector2d grab_offset = {grab_coordinates.x(), grab_coordinates.y()};
@@ -255,10 +256,10 @@ class TreeTabDragControllerTest
 
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
-    browser()->profile()->GetPrefs()->SetBoolean(
+    browser()->GetProfile()->GetPrefs()->SetBoolean(
         brave_tabs::kVerticalTabsEnabled, true);
-    browser()->profile()->GetPrefs()->SetBoolean(brave_tabs::kTreeTabsEnabled,
-                                                 true);
+    browser()->GetProfile()->GetPrefs()->SetBoolean(
+        brave_tabs::kTreeTabsEnabled, true);
   }
 
   // Creates a new Browser and resizes browser() and the new browser to be
@@ -296,7 +297,7 @@ class TreeTabDragControllerTest
       browser_rect.set_x(browser_rect.right() - 2 * window_decoration_width);
     }
 
-    Browser* browser2 = CreateBrowser(browser()->profile());
+    Browser* browser2 = CreateBrowser(browser()->GetProfile());
     if (PlatformSupportsScreenCoordinates()) {
       ui_test_utils::SetAndWaitForBounds(*browser2, browser_rect);
     } else {
@@ -390,7 +391,7 @@ IN_PROC_BROWSER_TEST_F(
   tabs::TabInterface* const parent_tab = source_model.GetTabAtIndex(0);
   auto child_interface = std::make_unique<tabs::TabModel>(
       content::WebContents::Create(
-          content::WebContents::CreateParams(browser()->profile())),
+          content::WebContents::CreateParams(browser()->GetProfile())),
       &source_model);
   child_interface->set_opener(parent_tab);
   source_model.AddTab(std::move(child_interface), -1,
@@ -404,7 +405,7 @@ IN_PROC_BROWSER_TEST_F(
   // current selection when we press on it below.
   auto sibling = std::make_unique<tabs::TabModel>(
       content::WebContents::Create(
-          content::WebContents::CreateParams(browser()->profile())),
+          content::WebContents::CreateParams(browser()->GetProfile())),
       &source_model);
   source_model.AddTab(std::move(sibling), -1, ui::PAGE_TRANSITION_AUTO_BOOKMARK,
                       ADD_NONE);

@@ -10,24 +10,11 @@
 namespace blink::features {
 
 OVERRIDE_FEATURE_DEFAULT_STATES({{
-    // Upgrade all mixed content
-    {kMixedContentAutoupgrade, base::FEATURE_ENABLED_BY_DEFAULT},
-    {kReducedReferrerGranularity, base::FEATURE_ENABLED_BY_DEFAULT},
-    {kUACHOverrideBlank, base::FEATURE_ENABLED_BY_DEFAULT},
-
     {kAdInterestGroupAPI, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kAllowURNsInIframes, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kBackgroundResourceFetch, base::FEATURE_DISABLED_BY_DEFAULT},
     {kControlledFrame, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kFencedFrames, base::FEATURE_DISABLED_BY_DEFAULT},
     {kFledge, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kFledgeBiddingAndAuctionServer, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kFledgeConsiderKAnonymity, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kFledgeEnforceKAnonymity, base::FEATURE_DISABLED_BY_DEFAULT},
     {kParakeet, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kPreloadingEagerViewportHeuristics, base::FEATURE_DISABLED_BY_DEFAULT},
     {kPrerender2, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kPrivateAggregationApi, base::FEATURE_DISABLED_BY_DEFAULT},
     // This feature uses shared memory to reduce IPCs to access cookies, but
     // Ephemeral Storage can switch cookie storage backend at runtime, so we
     // can't use it.

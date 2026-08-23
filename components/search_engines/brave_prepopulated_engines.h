@@ -26,9 +26,12 @@ namespace TemplateURLPrepopulateData {
 // For more info, see:
 // ComputeMergeEnginesRequirements in components/search_engines/util.cc;
 
-// growser: bumped for the switch of the default search to Yandex (#18) - it
-// triggers the list/default migration in existing profiles.
-inline constexpr int kBraveCurrentDataVersion = 35;
+// growser: bumped for the switch of the default search (#18) - it triggers
+// the list/default migration in existing profiles. Bumped again on the merge
+// to upstream Chromium 152: upstream went 32 -> 33 with an engine definition
+// change of their own, and a profile that had already stored our 35 would
+// never re-merge it. 36 is above both, so every existing profile migrates.
+inline constexpr int kBraveCurrentDataVersion = 36;
 
 // DO NOT CHANGE THIS ONE. Used for backfilling kBraveDefaultSearchVersion.
 inline constexpr int kBraveFirstTrackedDataVersion = 6;

@@ -16,6 +16,9 @@
 #include "base/types/expected.h"
 #include "brave/components/brave_account/endpoint_client/client.h"
 #include "brave/components/brave_account/endpoint_client/with_headers.h"
+#include "brave/components/brave_vpn/browser/v2/api/purchase_endpoints.h"
+#include "brave/components/brave_vpn/browser/v2/api/region_endpoints.h"
+#include "brave/components/brave_vpn/browser/v2/api/support_endpoints.h"
 #include "net/base/net_errors.h"
 #include "net/http/http_status_code.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
@@ -28,8 +31,12 @@ using brave_account::endpoint_client::WithHeaders;
 
 namespace brave_vpn::v2 {
 
+using endpoints::CreateSupportTicket;
+using endpoints::GetHostnamesForRegion;
+using endpoints::GetServerRegions;
 using endpoints::GetSubscriberCredential;
 using endpoints::GetSubscriberCredentialV12;
+using endpoints::GetTimezonesForRegions;
 using endpoints::VerifyPurchaseToken;
 
 namespace {
@@ -96,6 +103,22 @@ BraveVpnApiClient::BraveVpnApiClient(
 }
 
 BraveVpnApiClient::~BraveVpnApiClient() = default;
+
+void BraveVpnApiClient::OnRawJsonResponse(RawJsonCallback callback,
+                                          RawJsonResponse response) {
+  if (auto unrecoverable = MaybeDescribeUnrecoverableResponse(response)) {
+    return std::move(callback).Run(base::unexpected(*std::move(unrecoverable)));
+  }
+
+  std::move(callback).Run(
+      std::move(CHECK_DEREF(response.body))
+          .transform([](endpoints::RawJsonResponseBody success) {
+            return std::move(success.json);
+          })
+          .transform_error([](endpoints::VpnErrorBody error) {
+            return std::move(error.error_title);
+          }));
+}
 
 void BraveVpnApiClient::GetSubscriberCredential(
     SubscriberCredentialCallback callback,
@@ -186,6 +209,60 @@ void BraveVpnApiClient::OnVerifyPurchaseTokenResponse(
           .transform_error([](endpoints::RawJsonResponseBody error) {
             return std::move(error.json);
           }));
+}
+
+void BraveVpnApiClient::CreateSupportTicket(
+    RawJsonCallback callback,
+    const std::string& email,
+    const std::string& subject,
+    const std::string& body,
+    const std::string& subscriber_credential,
+    const std::string& timezone) {
+  auto request = MakeRequest<CreateSupportTicket::Request>();
+  request.body.email = email;
+  request.body.subject = subject;
+  request.body.body = body;
+  request.body.subscriber_credential = subscriber_credential;
+  request.body.timezone = timezone;
+
+  Client<endpoints::CreateSupportTicket>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::GetServerRegions(RawJsonCallback callback,
+                                         const std::string& region_precision) {
+  auto request = MakeRequest<GetServerRegions::Request>();
+  request.url_replacements.SetPath(
+      base::StrCat({GetServerRegions::URL().path(), "/", region_precision}));
+
+  Client<endpoints::GetServerRegions>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::GetTimezonesForRegions(RawJsonCallback callback) {
+  auto request = MakeRequest<GetTimezonesForRegions::Request>();
+  Client<endpoints::GetTimezonesForRegions>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::GetHostnamesForRegion(
+    RawJsonCallback callback,
+    const std::string& region,
+    const std::string& region_precision) {
+  auto request = MakeRequest<GetHostnamesForRegion::Request>();
+  request.body.region = region;
+  request.body.region_precision = region_precision;
+
+  Client<endpoints::GetHostnamesForRegion>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
 }
 
 }  // namespace brave_vpn::v2

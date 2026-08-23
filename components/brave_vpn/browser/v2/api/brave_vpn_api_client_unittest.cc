@@ -15,9 +15,12 @@
 #include "base/test/test_future.h"
 #include "base/types/expected.h"
 #include "brave/components/brave_account/endpoint_client/test_support.h"
+#include "brave/components/brave_account/endpoint_client/url_replacements.h"
 #include "brave/components/brave_vpn/browser/v2/api/error_body.h"
 #include "brave/components/brave_vpn/browser/v2/api/purchase_endpoints.h"
 #include "brave/components/brave_vpn/browser/v2/api/raw_json_response_body.h"
+#include "brave/components/brave_vpn/browser/v2/api/region_endpoints.h"
+#include "brave/components/brave_vpn/browser/v2/api/support_endpoints.h"
 #include "net/base/net_errors.h"
 #include "net/http/http_status_code.h"
 #include "services/network/public/cpp/weak_wrapper_shared_url_loader_factory.h"
@@ -37,6 +40,12 @@ constexpr char kTestBundleId[] = "test-bundle-id";
 constexpr char kTestSkusCredential[] = "test-skus-credential";
 constexpr char kTestSubscriberCredential[] = "test-subscriber-credential";
 constexpr char kTestEnvironment[] = "test-env";
+constexpr char kTestEmail[] = "user@example.com";
+constexpr char kTestSubject[] = "Help";
+constexpr char kTestBody[] = "It doesn't connect.";
+constexpr char kTestTimezone[] = "America/Los_Angeles";
+constexpr char kTestRegion[] = "us-east";
+constexpr char kTestRegionPrecision[] = "city-by-country";
 
 // Canonical JSON (compact, keys sorted): MockResponseFor re-serializes the
 // body via ToValue() and the client re-parses it via FromValue(), so only
@@ -218,8 +227,8 @@ INSTANTIATE_TEST_SUITE_P(
                           .body = base::ok(endpoints::RawJsonResponseBody{
                               .json = kTestSuccessJson})},
              .expected = base::ok(kTestSuccessJson)},
-         // non-2xx error body is *also* forwarded verbatim (raw on both sides),
-         // not collapsed to a VpnErrorBody title.
+         // A non-2xx error body is *also* forwarded verbatim (raw on both
+         // sides), not collapsed to a VpnErrorBody title.
          VerifyPurchaseTokenTestCase{
              .test_name = "RequestError",
              .response = {.net_error = net::OK,
@@ -228,6 +237,173 @@ INSTANTIATE_TEST_SUITE_P(
                               base::unexpected(endpoints::RawJsonResponseBody{
                                   .json = kTestErrorJson})},
              .expected = base::unexpected(kTestErrorJson)}})),
+    [](const auto& info) { return info.param.test_name; });
+
+struct CreateSupportTicketTestCase {
+  std::string test_name;
+  endpoints::CreateSupportTicket::Response response;
+  base::expected<std::string, std::string> expected;
+};
+
+using BraveVpnApiClientCreateSupportTicketTest =
+    BraveVpnApiClientTest<CreateSupportTicketTestCase>;
+
+TEST_P(BraveVpnApiClientCreateSupportTicketTest, MapsResponseToResult) {
+  const auto& test_case = GetParam();
+  MockResponseFor<endpoints::CreateSupportTicket>(url_loader_factory_,
+                                                  test_case.response);
+  EXPECT_EQ(CallClientApi(&BraveVpnApiClient::CreateSupportTicket, kTestEmail,
+                          kTestSubject, kTestBody, kTestSubscriberCredential,
+                          kTestTimezone),
+            test_case.expected);
+}
+
+INSTANTIATE_TEST_SUITE_P(
+    BraveVpnApiClientTests,
+    BraveVpnApiClientCreateSupportTicketTest,
+    testing::ValuesIn(WithCommonUnrecoverableCases<CreateSupportTicketTestCase>(
+        {// 2xx echoes the confirmation JSON verbatim.
+         CreateSupportTicketTestCase{
+             .test_name = "Success",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_OK,
+                          .body = base::ok(endpoints::RawJsonResponseBody{
+                              .json = kTestSuccessJson})},
+             .expected = base::ok(kTestSuccessJson)},
+         // A non-2xx response with a parseable error body surfaces its title.
+         CreateSupportTicketTestCase{
+             .test_name = "RequestError",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_BAD_REQUEST,
+                          .body = base::unexpected(endpoints::VpnErrorBody{
+                              .error_title = "Invalid credential.",
+                              .error_message = "expired"})},
+             .expected = base::unexpected("Invalid credential.")}})),
+    [](const auto& info) { return info.param.test_name; });
+
+struct GetServerRegionsTestCase {
+  std::string test_name;
+  endpoints::GetServerRegions::Response response;
+  base::expected<std::string, std::string> expected;
+};
+
+using BraveVpnApiClientGetServerRegionsTest =
+    BraveVpnApiClientTest<GetServerRegionsTestCase>;
+
+TEST_P(BraveVpnApiClientGetServerRegionsTest, MapsResponseToResult) {
+  const auto& test_case = GetParam();
+  brave_account::endpoint_client::UrlReplacements url_replacements;
+  url_replacements.SetPath(base::StrCat(
+      {endpoints::GetServerRegions::URL().path(), "/", kTestRegionPrecision}));
+  MockResponseFor<endpoints::GetServerRegions>(
+      url_loader_factory_, test_case.response, url_replacements);
+  EXPECT_EQ(
+      CallClientApi(&BraveVpnApiClient::GetServerRegions, kTestRegionPrecision),
+      test_case.expected);
+}
+
+INSTANTIATE_TEST_SUITE_P(
+    BraveVpnApiClientTests,
+    BraveVpnApiClientGetServerRegionsTest,
+    testing::ValuesIn(WithCommonUnrecoverableCases<GetServerRegionsTestCase>(
+        {GetServerRegionsTestCase{
+             .test_name = "Success",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_OK,
+                          .body = base::ok(endpoints::RawJsonResponseBody{
+                              .json = kTestSuccessJson})},
+             .expected = base::ok(kTestSuccessJson)},
+         GetServerRegionsTestCase{
+             .test_name = "RequestError",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_BAD_REQUEST,
+                          .body = base::unexpected(endpoints::VpnErrorBody{
+                              .error_title = "Invalid precision.",
+                              .error_message = "bad"})},
+             .expected = base::unexpected("Invalid precision.")}})),
+    [](const auto& info) { return info.param.test_name; });
+
+struct GetTimezonesForRegionsTestCase {
+  std::string test_name;
+  endpoints::GetTimezonesForRegions::Response response;
+  base::expected<std::string, std::string> expected;
+};
+
+using BraveVpnApiClientGetTimezonesForRegionsTest =
+    BraveVpnApiClientTest<GetTimezonesForRegionsTestCase>;
+
+TEST_P(BraveVpnApiClientGetTimezonesForRegionsTest, MapsResponseToResult) {
+  const auto& test_case = GetParam();
+  MockResponseFor<endpoints::GetTimezonesForRegions>(url_loader_factory_,
+                                                     test_case.response);
+  EXPECT_EQ(CallClientApi(&BraveVpnApiClient::GetTimezonesForRegions),
+            test_case.expected);
+}
+
+INSTANTIATE_TEST_SUITE_P(
+    BraveVpnApiClientTests,
+    BraveVpnApiClientGetTimezonesForRegionsTest,
+    testing::ValuesIn(WithCommonUnrecoverableCases<
+                      GetTimezonesForRegionsTestCase>(
+        {// 2xx body is forwarded verbatim.
+         GetTimezonesForRegionsTestCase{
+             .test_name = "Success",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_OK,
+                          .body = base::ok(endpoints::RawJsonResponseBody{
+                              .json = kTestSuccessJson})},
+             .expected = base::ok(kTestSuccessJson)},
+         // A non-2xx response with a parseable error body surfaces its title.
+         GetTimezonesForRegionsTestCase{
+             .test_name = "RequestError",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_BAD_REQUEST,
+                          .body = base::unexpected(endpoints::VpnErrorBody{
+                              .error_title = "Invalid request.",
+                              .error_message = "bad"})},
+             .expected = base::unexpected("Invalid request.")}})),
+    [](const auto& info) { return info.param.test_name; });
+
+struct GetHostnamesForRegionTestCase {
+  std::string test_name;
+  endpoints::GetHostnamesForRegion::Response response;
+  base::expected<std::string, std::string> expected;
+};
+
+using BraveVpnApiClientGetHostnamesForRegionTest =
+    BraveVpnApiClientTest<GetHostnamesForRegionTestCase>;
+
+TEST_P(BraveVpnApiClientGetHostnamesForRegionTest, MapsResponseToResult) {
+  const auto& test_case = GetParam();
+  MockResponseFor<endpoints::GetHostnamesForRegion>(url_loader_factory_,
+                                                    test_case.response);
+  EXPECT_EQ(CallClientApi(&BraveVpnApiClient::GetHostnamesForRegion,
+                          kTestRegion, kTestRegionPrecision),
+            test_case.expected);
+}
+
+INSTANTIATE_TEST_SUITE_P(
+    BraveVpnApiClientTests,
+    BraveVpnApiClientGetHostnamesForRegionTest,
+    testing::ValuesIn(WithCommonUnrecoverableCases<
+                      GetHostnamesForRegionTestCase>(
+        {// 2xx body is forwarded verbatim.
+         GetHostnamesForRegionTestCase{
+             .test_name = "Success",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_OK,
+                          .body = base::ok(endpoints::RawJsonResponseBody{
+                              .json = kTestSuccessJson})},
+             .expected = base::ok(kTestSuccessJson)},
+         // A non-2xx response with a parseable error body surfaces its title.
+         GetHostnamesForRegionTestCase{
+             .test_name = "RequestError",
+             .response = {.net_error = net::OK,
+                          .status_code = net::HTTP_BAD_REQUEST,
+                          .body = base::unexpected(endpoints::VpnErrorBody{
+                              .error_title = "Invalid region.",
+                              .error_message = "bad"})},
+             .expected = base::unexpected("Invalid region.")}})),
     [](const auto& info) { return info.param.test_name; });
 
 }  // namespace brave_vpn::v2

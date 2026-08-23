@@ -17,6 +17,7 @@
 #include "base/notreached.h"
 #include "base/numerics/byte_conversions.h"
 #include "base/numerics/safe_conversions.h"
+#include "brave/components/brave_user_agent/common/brand_names.h"
 #include "brave/third_party/blink/renderer/brave_farbling_constants.h"
 #include "brave/third_party/blink/renderer/brave_font_whitelist.h"
 #include "build/build_config.h"
@@ -209,6 +210,23 @@ bool BlockScreenFingerprinting(ExecutionContext* context,
   return level != BraveFarblingLevel::OFF;
 }
 
+blink::UserAgentMetadata MaybeHideBraveBrand(
+    ExecutionContext* context,
+    blink::UserAgentMetadata metadata) {
+  if (!context || !BraveSessionCache::From(*context).ShouldHideBraveBrand()) {
+    return metadata;
+  }
+  for (auto* brand_list :
+       {&metadata.brand_version_list, &metadata.brand_full_version_list}) {
+    for (auto& brand_version : *brand_list) {
+      if (brand_version.brand == brave_user_agent::kBraveBrand) {
+        brand_version.brand = brave_user_agent::kGoogleChromeBrand;
+      }
+    }
+  }
+  return metadata;
+}
+
 int FarbledPointerScreenCoordinate(const DOMWindow* view,
                                    FarbleKey key,
                                    int client_coordinate,
@@ -367,7 +385,7 @@ void BraveSessionCache::PerturbPixelsInternal(base::span<uint8_t> data) {
       }
       // choose which channel (R, G, or B) to perturb
       uint8_t channel = v % 3;
-      uint64_t pixel_index = 4 * (v % pixel_count) + channel;
+      size_t pixel_index = 4 * (v % pixel_count) + channel;
       data[pixel_index] = data[pixel_index] ^ (bit & 0x1);
       bit = bit >> 1;
       // find next pixel to perturb

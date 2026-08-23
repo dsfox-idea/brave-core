@@ -283,6 +283,7 @@ brave_chrome_browser_deps = [
   "//chrome/browser/infobars",
   "//chrome/browser/lifetime",
   "//chrome/browser/metrics",
+  "//chrome/browser/new_tab_page/prefs",
   "//chrome/browser/obsolete_system",
   "//chrome/browser/prefetch",
   "//chrome/browser/prefs:util",
@@ -513,8 +514,11 @@ if (enable_containers) {
 }
 
 if (enable_traffic_control) {
-  brave_chrome_browser_deps +=
-      [ "//brave/components/traffic_control/core/common" ]
+  brave_chrome_browser_deps += [
+    "//brave/browser/traffic_control",
+    "//brave/components/traffic_control/core/browser",
+    "//brave/components/traffic_control/core/common",
+  ]
 }
 
 if (enable_brave_talk) {
@@ -910,14 +914,12 @@ if (enable_brave_rewards) {
 
 if (toolkit_views) {
   brave_chrome_browser_deps += [
-    "//brave/browser/ui/sidebar:sidebar_impl",
+    "//brave/browser/ui/sidebar",
     "//brave/browser/ui/views/location_bar",
     "//brave/browser/ui/views/page_info",
   ]
-  brave_chrome_browser_allow_circular_includes_from += [
-    "//brave/browser/ui/sidebar:sidebar_impl",
-    "//brave/browser/ui/views/location_bar",
-  ]
+  brave_chrome_browser_allow_circular_includes_from +=
+      [ "//brave/browser/ui/views/location_bar" ]
 }
 
 # https://github.com/brave/brave-browser/issues/41418

@@ -13,6 +13,7 @@ import("//brave/components/text_recognition/common/buildflags/buildflags.gni")
 import("//brave/resources/brave_grit.gni")
 import("//build/config/features.gni")
 import("//build/config/locales.gni")
+import("//pdf/features.gni")
 
 action("generate_command_metadata") {
   command_files = [ "//brave/app/brave_command_ids.h" ]
@@ -141,8 +142,10 @@ source_set("unit_tests") {
     "//chrome/browser/ui:ui_features",
     "//chrome/browser/ui/omnibox",
     "//components/aggregation_service",
-    "//components/attribution_reporting",
+    "//components/attribution_reporting:features",
     "//components/autofill/core/common",
+    "//components/browser_actuator/internal:features",
+    "//components/browser_actuator/public:feature_list",
     "//components/browsing_data/core",
     "//components/commerce/core:feature_list",
     "//components/compose/core/browser:features",
@@ -165,12 +168,14 @@ source_set("unit_tests") {
     "//components/metrics/structured:structured_metrics_features",
     "//components/multistep_filter/core:features",
     "//components/network_time",
+    "//components/ntp_tiles",
     "//components/omnibox/browser",
     "//components/one_time_tokens/core/common:features",
     "//components/optimization_guide/core",
     "//components/page_image_service",
     "//components/page_info/core",
     "//components/passage_embeddings/core",
+    "//components/password_manager/core/browser/features:password_features",
     "//components/performance_manager",
     "//components/permissions",
     "//components/personal_context/core:features",
@@ -188,6 +193,7 @@ source_set("unit_tests") {
     "//components/user_education/common",
     "//components/webapps/browser",
     "//gpu/config",
+    "//pdf:buildflags",
     "//services/device/public/cpp:device_features",
     "//services/network/public/cpp",
     "//testing/gtest",
@@ -225,6 +231,9 @@ source_set("unit_tests") {
   }
   if (enable_brave_vpn_v2_apps) {
     deps += [ "//brave/components/brave_vpn/app/v2/shared" ]
+  }
+  if (enable_pdf) {
+    deps += [ "//pdf:features" ]
   }
 }
 

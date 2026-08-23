@@ -12,18 +12,18 @@ import path from 'node:path'
 import process from 'node:process'
 import { Option, program } from 'commander'
 import { isCI } from '../lib/ciDetect.ts'
-import { createBuildConfigArgument } from '../lib/commandsUtils.ts'
+import * as buildOptions from '../lib/buildOptions.ts'
 import config from '../lib/config.ts'
 import util from '../lib/util.js'
+import { getPassthroughArgs } from '../lib/commandsUtils.ts'
 
 program
   .description(
     'Build Storybook generated deps, then run Storybook (dev or static build)',
   )
-  .addArgument(createBuildConfigArgument())
-  .option('-C <build_dir>', 'build directory, relative to out/ or absolute')
-  .option('--target_arch <target_arch>', 'target architecture')
-  .option('--target_os <target_os>', 'target OS')
+  .apply(buildOptions.supportBuildConfigArg)
+  .apply(buildOptions.supportBuildDir)
+  .apply(buildOptions.supportTargetConfig)
   .addOption(
     new Option('--command <command>', 'Storybook command')
       .choices(['build', 'dev'])
@@ -96,7 +96,7 @@ program
         break
       case 'dev':
         // Pass through any additional arguments in dev mode.
-        nodeArgs.push(...program.args)
+        nodeArgs.push(...getPassthroughArgs(program))
         break
     }
 

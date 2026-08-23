@@ -46,8 +46,8 @@ import {
 import { getLocale } from '../../../../common/locale'
 import { isRewardsAssetId } from '../../../utils/rewards_utils'
 import {
-  makeDepositFundsRoute,
-  makeFundWalletRoute,
+  makeDepositRoute,
+  makeBuyRoute,
   makeSendRoute,
   makeSwapOrBridgeRoute,
 } from '../../../utils/routes-utils'
@@ -352,7 +352,7 @@ export const FungibleAssetDetails = () => {
       selectedAssetFromParams && fullAssetBalance
         ? new Amount(fullAssetBalance)
             .divideByDecimals(selectedAssetFromParams.decimals)
-            .formatAsAsset(6, selectedAssetFromParams.symbol)
+            .compactAsAsset(6, selectedAssetFromParams.symbol)
         : '',
     [selectedAssetFromParams, fullAssetBalance],
   )
@@ -362,7 +362,7 @@ export const FungibleAssetDetails = () => {
       selectedAssetFromParams && fullAssetBalance
         ? new Amount(fullAssetBalance)
             .divideByDecimals(selectedAssetFromParams.decimals)
-            .formatAsAsset(8)
+            .compactAsAsset(8)
         : '',
     [selectedAssetFromParams, fullAssetBalance],
   )
@@ -407,15 +407,13 @@ export const FungibleAssetDetails = () => {
 
   const onClickBuy = React.useCallback(() => {
     if (foundMeldBuyToken) {
-      openOrPushRoute(makeFundWalletRoute(foundMeldBuyToken))
+      openOrPushRoute(makeBuyRoute(foundMeldBuyToken))
     }
   }, [openOrPushRoute, foundMeldBuyToken])
 
   const onClickDeposit = React.useCallback(() => {
     if (selectedAssetFromParams) {
-      openOrPushRoute(
-        makeDepositFundsRoute(getAssetIdKey(selectedAssetFromParams)),
-      )
+      openOrPushRoute(makeDepositRoute(getAssetIdKey(selectedAssetFromParams)))
     }
   }, [openOrPushRoute, selectedAssetFromParams])
 
@@ -542,7 +540,7 @@ export const FungibleAssetDetails = () => {
               selectedAsset={selectedAssetFromParams}
               selectedAssetNetwork={selectedAssetsNetwork}
               assetBalance={formattedAssetBalance}
-              formattedFiatBalance={fullAssetFiatBalance.formatAsFiat(
+              formattedFiatBalance={fullAssetFiatBalance.compactAsFiat(
                 defaultFiat,
               )}
               onShowHideTokenModal={() => setShowHideTokenModal(true)}

@@ -5,9 +5,11 @@
 
 #include "brave/ios/browser/ui/webui/ai_chat/ai_chat_untrusted_conversation_ui.h"
 
+#include <optional>
 #include <string>
 #include <utility>
 
+#include "base/feature_list.h"
 #include "base/notimplemented.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"
@@ -107,6 +109,13 @@ class UIHandler : public ai_chat::mojom::UntrustedUIHandler {
 
   void OpenStorageSupportUrl() override {
     OpenURL(GURL(ai_chat::kLeoStorageSupportUrl));
+  }
+
+  void SwitchToTab(int32_t tab_id) override {}
+
+  void SearchForTabs(const std::string& query,
+                     SearchForTabsCallback callback) override {
+    std::move(callback).Run(std::nullopt);
   }
 
   // No current thumbnail tracker need or support on iOS
@@ -237,6 +246,9 @@ AIChatUntrustedConversationUI::AIChatUntrustedConversationUI(
   source->AddBoolean("isMobile", true);
   source->AddBoolean("isHistoryEnabled",
                      ai_chat::features::IsAIChatHistoryEnabled());
+  source->AddBoolean(
+      "isMathRenderingEnabled",
+      base::FeatureList::IsEnabled(ai_chat::features::kAIChatMathRendering));
 
   // If the feature is not enabled then don't add the origin to the CSP.
   if (base::FeatureList::IsEnabled(ai_chat::features::kRichSearchWidgets)) {

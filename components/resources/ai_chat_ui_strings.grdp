@@ -423,11 +423,32 @@
   <message name="IDS_CHAT_UI_SHARE_CONVERSATION_DIALOG_DESCRIPTION" desc="Explanatory text in the share conversation dialog describing how the conversation is encrypted before being uploaded and when the shared link expires" formatter_data="webui=AiChat">
     Your conversation will be uploaded encrypted and can only be decrypted with the generated link. Growser will not be able to view your conversation. Only you and the people you share this link with can decrypt your shared conversation. All shared conversations will expire after 7 days.
   </message>
+  <message name="IDS_CHAT_UI_SHARE_CONVERSATION_DIALOG_MANAGE_SHARES_LINK" desc="Text with an inline link at the bottom of the share conversation dialog. The link opens the dialog which lists every conversation the user has shared, where they can be copied or deleted." formatter_data="webui=AiChat">
+    You can <ph name="LINK_BEFORE">$1</ph>manage your shares<ph name="LINK_AFTER">/$1</ph> to find or delete them at any time.
+  </message>
   <message name="IDS_CHAT_UI_SHARE_CONVERSATION_DIALOG_GENERATE_LINK_BUTTON_LABEL" desc="A label for the button which generates and copies a shareable link for the current conversation" formatter_data="webui=AiChat">
     Generate link
   </message>
-  <message name="IDS_CHAT_UI_SHARE_CONVERSATION_DIALOG_LINK_COPIED_BUTTON_LABEL" desc="A label shown on the share button after the shareable link has been copied to the clipboard" formatter_data="webui=AiChat">
+  <message name="IDS_CHAT_UI_SHARE_CONVERSATION_DIALOG_LINK_COPIED_BUTTON_LABEL" desc="Confirmation that the shareable link has been copied to the clipboard. Shown as a label on the share button, and as a notification when a link is copied from the list of shared conversations" formatter_data="webui=AiChat">
     Link copied to clipboard
+  </message>
+  <message name="IDS_CHAT_UI_MENU_MANAGE_SHARED_CONVERSATIONS" desc="Menu entry which opens a dialog listing the conversations the user has shared" formatter_data="webui=AiChat">
+    Manage shared conversations
+  </message>
+  <message name="IDS_CHAT_UI_SHARED_CONVERSATIONS_DIALOG_DESCRIPTION" desc="Explanatory text at the top of the dialog listing the conversations the user has shared" formatter_data="webui=AiChat">
+    Anyone with the link can view these conversations until they expire. Delete a shared conversation to stop its link from working.
+  </message>
+  <message name="IDS_CHAT_UI_SHARED_CONVERSATIONS_DIALOG_EMPTY" desc="Text shown in the shared conversations dialog when the user has not shared any conversations" formatter_data="webui=AiChat">
+    You haven't shared any conversations.
+  </message>
+  <message name="IDS_CHAT_UI_SHARED_CONVERSATIONS_DELETE_BUTTON_LABEL" desc="A label for the button which deletes a shared conversation so that its link stops working" formatter_data="webui=AiChat">
+    Delete shared conversation
+  </message>
+  <message name="IDS_CHAT_UI_SHARED_CONVERSATIONS_COPY_LINK_BUTTON_LABEL" desc="A label for the button which copies the link to a shared conversation" formatter_data="webui=AiChat">
+    Copy link
+  </message>
+  <message name="IDS_CHAT_UI_SHARED_CONVERSATIONS_DELETE_ERROR" desc="An error message shown when a shared conversation could not be deleted" formatter_data="webui=AiChat">
+    Couldn't delete the shared conversation. Check your connection and try again.
   </message>
   <message name="IDS_CHAT_UI_MENU_RENAME_CONVERSATION" desc="Menu entry for renaming a conversation" formatter_data="webui=AiChat">
     Rename conversation
@@ -497,6 +518,12 @@
   </message>
   <message name="IDS_CHAT_UI_SEARCH_QUERIES" desc="AI Response status to indicate that search queries were used to enhance the response" formatter_data="webui=AiChat">
     Searching the web for <ph name="SEARCH_TERMS">$1<ex>"my first search engine query", "my second search engine query"</ex></ph>.
+  </message>
+  <message name="IDS_CHAT_UI_TAB_SEARCH_IN_PROGRESS" desc="Status shown while the browser searches the user's open tabs for a query the AI assistant asked about" formatter_data="webui=AiChat">
+    Searching your open tabs for "<ph name="QUERY">$1<ex>react hooks</ex></ph>"…
+  </message>
+  <message name="IDS_CHAT_UI_TAB_SEARCH_NO_RESULTS" desc="Message shown when none of the user's open tabs match what the AI assistant searched for" formatter_data="webui=AiChat">
+    No open tabs match "<ph name="QUERY">$1<ex>react hooks</ex></ph>".
   </message>
   <message name="IDS_CHAT_UI_SOURCES" desc="Heading for a list of website sources that were used to generate an AI chat response" formatter_data="webui=AiChat">
     Sources
@@ -887,6 +914,9 @@
   </message>
   <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_SUMMARY" desc="Summary for permission challenge" formatter_data="webui=AiChat">
     Growser AI needs your permission for: <ph name="TOOL_LABEL">$1<ex>Navigating to https://www.example.com/path/to/page</ex></ph>
+  </message>
+  <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_WEB_TOOL_SUMMARY" desc="Summary for a permission challenge raised by a website-provided (WebMCP) tool. Supports markdown, which is used to bold the tool name and site origin." formatter_data="webui=AiChat">
+    Brave AI would like to execute **<ph name="TOOL_NAME">$1<ex>get_stock_price</ex></ph>** on **<ph name="SITE_ORIGIN">$2<ex>https://www.example.com</ex></ph>**
   </message>
   <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_ASSESSMENT_INTRO" desc="Introduction to an assessment for why a permission challenge is being presented" formatter_data="webui=AiChat">
     The operation was detected as potentially misaligned with your request:

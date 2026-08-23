@@ -3,20 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import { Argument } from 'commander'
-
-// Returns an Argument that parses the current build configuration
-export function createBuildConfigArgument() {
-  // Build config argument that's valid only if it's not an option.
-  return new Argument('[build_config]', 'build configuration').argParser(
-    (value) => {
-      if (value.startsWith('-')) {
-        return undefined
-      }
-      return value
-    },
-  )
-}
+import { type Command } from 'commander'
 
 // Collects values into an array.
 export function collect(
@@ -56,4 +43,13 @@ export function parseBoolean(value: string): boolean {
     console.error(`Value is not a boolean: ${value}`)
     process.exit(1)
   }
+}
+
+// Returns argv tokens that were not consumed as declared command arguments.
+export function getPassthroughArgs(
+  command: Command<any[], any, any>,
+): string[] {
+  return command.args.filter(
+    (_, index) => command.processedArgs[index] === undefined,
+  )
 }

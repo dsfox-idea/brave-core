@@ -33,17 +33,28 @@ void BraveVpnServiceImpl::GetPurchaseToken(GetPurchaseTokenCallback callback) {
 }
 
 void BraveVpnServiceImpl::GetTimezonesForRegions(ResponseCallback callback) {
-  NOTIMPLEMENTED();
+  if (!api_client_) {
+    std::move(callback).Run({}, false);
+    return;
+  }
+  api_client_->GetTimezonesForRegions(
+      base::BindOnce(&RunResponseCallback, std::move(callback)));
 }
 
 void BraveVpnServiceImpl::GetHostnamesForRegion(
     ResponseCallback callback,
     const std::string& region,
     const std::string& region_precision) {
-  NOTIMPLEMENTED();
+  if (!api_client_) {
+    std::move(callback).Run({}, false);
+    return;
+  }
+  api_client_->GetHostnamesForRegion(
+      base::BindOnce(&RunResponseCallback, std::move(callback)), region,
+      region_precision);
 }
 
-void BraveVpnServiceImpl::GetProfileCredentials(
+void BraveVpnServiceImpl::GetIKEv2ProfileCredentials(
     ResponseCallback callback,
     const std::string& subscriber_credential,
     const std::string& hostname) {

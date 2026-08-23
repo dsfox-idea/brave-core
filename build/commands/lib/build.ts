@@ -6,12 +6,17 @@
 import config from './config.ts'
 import util from './util.js'
 import branding from './branding.js'
+import type * as buildOptions from './buildOptions.ts'
 import * as buildUtils from './buildUtils.ts'
 
-const build = async (
+export async function build(
   buildConfig = config.defaultBuildConfig,
-  options: Record<string, unknown> = {},
-) => {
+  options: buildOptions.BuildDirOptions
+    & buildOptions.TargetConfigOptions
+    & buildOptions.GnArgsOptions
+    & buildOptions.GnGenOptions
+    & buildOptions.NinjaOptions,
+) {
   config.buildConfig = buildConfig
   config.update(options)
   buildUtils.checkVersionsMatch()
@@ -34,5 +39,3 @@ const build = async (
     await util.buildTargets()
   }
 }
-
-export default build

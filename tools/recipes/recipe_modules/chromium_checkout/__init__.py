@@ -6,5 +6,5 @@
 
 DEPS = [
     'path', 'raw_io', 'json', 'step', 'context', 'depot_tools', 'env',
-    'platform'
+    'git_cache', 'platform'
 ]

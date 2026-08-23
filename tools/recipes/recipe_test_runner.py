@@ -35,6 +35,9 @@ import sys
 import time
 from typing import TYPE_CHECKING
 
+import gevent
+
+import config_types
 import engine
 from engine_types import PerGreenletStateRegistry
 import simulation
@@ -170,6 +173,10 @@ def _simulate(
     # instances are per-engine, so without this the previous case's states pile
     # up and get their setters replayed into this case's greenlets.
     PerGreenletStateRegistry.clear()
+    # Defense-in-depth: a case whose DEPS never instantiate the `path` module
+    # would otherwise inherit whatever separator a previous case's `path`
+    # module left behind in this class-level variable.
+    config_types.reset_global_variable_assignments()
     # A fresh engine per case: module instances are cached per engine, so
     # reusing one would leak state (deployed depot_tools, set env vars, ...).
     eng = engine._Engine(  # pylint: disable=protected-access
@@ -190,7 +197,7 @@ def _simulate(
     except Exception as exc:  # pylint: disable=broad-except
         # Any other exception is an infra/logic error (bad input, missing dep).
         failure = {'humanReason': str(exc)}
-    steps = simulation.build_steps(ctx.step_runner, failure, ctx)
+    steps = simulation.build_steps(ctx.step_runner, failure)
     return steps, ctx
 
 
@@ -472,6 +479,11 @@ def main(argv: list[str] | None = None) -> int:
                         action='store_true',
                         help='enable step/debug logging (noisy)')
     args = parser.parse_args(argv)
+
+    # We disable gevent's exception stream because it prints tracebacks for
+    # every exception thrown, when actually the exception is still caught and
+    # returned by the Future.
+    gevent.get_hub().exception_stream = None
 
     # Keep step logging quiet by default so test output is just the report.
     logging.basicConfig(

@@ -76,7 +76,7 @@ class BookmarkBarTest : public InProcessBrowserTest {
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
 
-    browser()->profile()->GetPrefs()->SetBoolean(
+    browser()->GetProfile()->GetPrefs()->SetBoolean(
         bookmarks::prefs::kShowBookmarkBar, true);
   }
 
@@ -97,7 +97,7 @@ IN_PROC_BROWSER_TEST_F(BookmarkBarTest, AllBookmarksButtonVisibility) {
   EXPECT_FALSE(is_all_bookmarks_button_visible());
 
   bookmarks::BookmarkModel* model =
-      BookmarkModelFactory::GetForBrowserContext(browser()->profile());
+      BookmarkModelFactory::GetForBrowserContext(browser()->GetProfile());
   const auto* node = model->AddURL(model->bookmark_bar_node(), 0, u"bookmark",
                                    GURL("http://example.com"));
   model->Move(node, model->other_node(), 0);

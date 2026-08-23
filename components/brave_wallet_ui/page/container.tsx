@@ -62,8 +62,6 @@ import {
   ProtectedRoute, //
 } from '../components/shared/protected-routing/protected-route'
 import { UnlockedWalletRoutes } from './router/unlocked_wallet_routes'
-import { Swap } from './screens/swap/swap'
-import { SendScreen } from './screens/send/send_screen/send_screen'
 import { DevZCash } from './screens/dev-zcash/dev-zcash'
 import {
   PartnersConsentModal, //
@@ -129,7 +127,7 @@ export const Container = () => {
   const handleDeclinePartnerConsent = () => {
     setShowPartnerConsentModal(false)
     // Not able to use history.goBack() in this instance
-    // since users could manually navigate to brave://wallet/crypto/fund-wallet
+    // since users could manually navigate to brave://wallet/crypto/buy
     // in a new tab and there would be no history to go back to.
     history.push(WalletRoutes.Portfolio)
   }
@@ -193,7 +191,7 @@ export const Container = () => {
   React.useEffect(() => {
     if (
       !acceptedPartnerConsentTerms
-      && pathname.includes(WalletRoutes.FundWalletPageStart)
+      && pathname.includes(WalletRoutes.BuyPageStart)
       && !walletNotYetCreated
     ) {
       setShowPartnerConsentModal(true)
@@ -261,38 +259,11 @@ export const Container = () => {
         </ProtectedRoute>
 
         <ProtectedRoute
-          path={WalletRoutes.Swap}
-          requirement={!isWalletLocked && !walletNotYetCreated}
-          redirectRoute={defaultRedirect}
-          exact={true}
-        >
-          <Swap key='swap' />
-        </ProtectedRoute>
-
-        <ProtectedRoute
-          path={WalletRoutes.Bridge}
-          requirement={!isWalletLocked && !walletNotYetCreated}
-          redirectRoute={defaultRedirect}
-          exact={true}
-        >
-          <Swap key='bridge' />
-        </ProtectedRoute>
-
-        <ProtectedRoute
-          path={WalletRoutes.Send}
-          requirement={!isWalletLocked && !walletNotYetCreated}
-          redirectRoute={defaultRedirect}
-          exact={true}
-        >
-          <SendScreen key='send' />
-        </ProtectedRoute>
-
-        <ProtectedRoute
           path={WalletRoutes.CryptoPage}
           requirement={!isWalletLocked && !walletNotYetCreated}
           redirectRoute={defaultRedirect}
         >
-          <UnlockedWalletRoutes sessionRoute={sessionRoute} />
+          <UnlockedWalletRoutes />
         </ProtectedRoute>
 
         <ProtectedRoute
@@ -316,6 +287,19 @@ export const Container = () => {
         >
           <DevZCash />
         </ProtectedRoute>
+
+        {/* Deprecated routes, kept for redirecting to the new routes */}
+        <Route path={WalletRoutes.SwapDeprecated}>
+          <Redirect to={WalletRoutes.Swap} />
+        </Route>
+
+        <Route path={WalletRoutes.SendDeprecated}>
+          <Redirect to={WalletRoutes.Send} />
+        </Route>
+
+        <Route path={WalletRoutes.BridgeDeprecated}>
+          <Redirect to={WalletRoutes.Bridge} />
+        </Route>
 
         {/* Insures that we redirect to the default route if the user
             manually navigates to the root url. */}

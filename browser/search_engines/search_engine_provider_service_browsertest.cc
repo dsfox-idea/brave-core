@@ -98,7 +98,7 @@ std::string GetBraveSearchProviderSyncGUID(Profile* profile) {
 
 IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
                        PRE_InvalidPrivateSearchProviderRestoreTest) {
-  auto* profile = browser()->profile();
+  auto* profile = browser()->GetProfile();
   auto* service = TemplateURLServiceFactory::GetForProfile(profile);
   EXPECT_TRUE(VerifyTemplateURLServiceLoad(service));
   profile->GetPrefs()->SetString(prefs::kSyncedDefaultPrivateSearchProviderGUID,
@@ -107,7 +107,7 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
 
 IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
                        InvalidPrivateSearchProviderRestoreTest) {
-  auto* profile = browser()->profile();
+  auto* profile = browser()->GetProfile();
   auto* service = TemplateURLServiceFactory::GetForProfile(profile);
   EXPECT_TRUE(VerifyTemplateURLServiceLoad(service));
 
@@ -130,7 +130,7 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
 // Check default search provider in private/tor window.
 IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
                        CheckDefaultSearchProviderTest) {
-  Profile* profile = browser()->profile();
+  Profile* profile = browser()->GetProfile();
   Profile* incognito_profile =
       profile->GetPrimaryOTRProfile(/*create_if_needed=*/true);
 
@@ -210,8 +210,8 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
 
 #if BUILDFLAG(ENABLE_TOR)
   Browser* tor_browser =
-      TorProfileManager::SwitchToTorProfile(browser()->profile());
-  Profile* tor_profile = tor_browser->profile();
+      TorProfileManager::SwitchToTorProfile(browser()->GetProfile());
+  Profile* tor_profile = tor_browser->GetProfile();
   EXPECT_TRUE(tor_profile->IsTor());
 
   // Wait for the search provider to initialize.
@@ -247,9 +247,9 @@ class SearchSuggestionsEnabledTest : public InProcessBrowserTest,
 
 IN_PROC_BROWSER_TEST_P(SearchSuggestionsEnabledTest,
                        DefaultSearchSuggestEnabledTest) {
-  auto* prefs = browser()->profile()->GetPrefs();
+  auto* prefs = browser()->GetProfile()->GetPrefs();
   auto* service =
-      TemplateURLServiceFactory::GetForProfile(browser()->profile());
+      TemplateURLServiceFactory::GetForProfile(browser()->GetProfile());
   auto brave_search_data = TemplateURLDataFromPrepopulatedEngine(
       TemplateURLPrepopulateData::brave_search);
   TemplateURL brave_template_url(*brave_search_data);
@@ -296,10 +296,10 @@ class MigrateSearchEnginePrefsInJPTest : public InProcessBrowserTest {
   }
 
   TemplateURLService* service() {
-    return TemplateURLServiceFactory::GetForProfile(browser()->profile());
+    return TemplateURLServiceFactory::GetForProfile(browser()->GetProfile());
   }
 
-  PrefService* prefs() { return browser()->profile()->GetPrefs(); }
+  PrefService* prefs() { return browser()->GetProfile()->GetPrefs(); }
 
  private:
   const brave_l10n::test::ScopedDefaultLocale default_locale{"ja_JP"};
@@ -416,7 +416,7 @@ std::unique_ptr<TemplateURLData> TestExtensionSearchEngine(Profile* profile) {
 IN_PROC_BROWSER_TEST_F(ExtensionBrowserTest,
                        ExtensionSearchProviderWithPrivateWindow) {
   TemplateURLService* url_service =
-      TemplateURLServiceFactory::GetForProfile(profile());
+      TemplateURLServiceFactory::GetForProfile(GetProfile());
   ASSERT_TRUE(url_service);
   EXPECT_TRUE(VerifyTemplateURLServiceLoad(url_service));
   const TemplateURL* default_provider = url_service->GetDefaultSearchProvider();
