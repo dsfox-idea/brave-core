@@ -62,7 +62,9 @@ void ApplyBraveHardwareConcurrencyOverride(blink::ExecutionContext* context,
           candidates++;
         }
       }
-      // true_value > 2 here, so at least the entry for 2 qualifies.
+      // The early return above leaves true_value >= kFakeMinProcessors
+      // (upstream raised that floor from 2 to 4 in Chromium 152), so the
+      // entry equal to it always qualifies.
       CHECK_GT(candidates, 0u);
       // Walked rather than indexed: -Wunsafe-buffer-usage rejects subscripting
       // a raw array, and a second pass is clearer here than a span.

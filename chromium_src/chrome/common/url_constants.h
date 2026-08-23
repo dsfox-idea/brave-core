@@ -430,7 +430,7 @@ inline constexpr char16_t kCardBenefitsLearnMoreURL[] =
 
 // "Learn more" URL for the Gmail OTP filling setting.
 inline constexpr char16_t kGmailOtpFillingLearnMoreURL[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // "Learn more" URL for the performance intervention notification setting.
 inline constexpr char16_t kPerformanceInterventionLearnMoreUrl[] =
