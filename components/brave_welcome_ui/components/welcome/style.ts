@@ -97,6 +97,21 @@ export const CrashReportsBox = styled.div`
   margin: 0 auto 18px auto;
   text-align: left;
 
+  .crash-reports-choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #2fd07f;
+    cursor: pointer;
+  }
+
   span {
     color: white;
     font: var(--leo-font-default-regular);

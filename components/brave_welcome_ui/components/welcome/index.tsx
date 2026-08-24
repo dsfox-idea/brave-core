@@ -9,7 +9,6 @@ import * as S from './style'
 import classnames from '$web-common/classnames'
 import { getLocale } from '$web-common/locale'
 import Button from '@brave/leo/react/button'
-import Checkbox from '@brave/leo/react/checkbox'
 
 import {
   DefaultBrowserBrowserProxyImpl,
@@ -105,13 +104,19 @@ function Welcome () {
           </div>
         </div>
         <S.CrashReportsBox>
-          <Checkbox
-            checked={sendCrashReports}
-            onChange={(e: { checked: boolean }) =>
-              setSendCrashReports(e.checked)}
-          >
+          {/* A plain input rather than the design-system checkbox: this
+              screen is a bespoke dark surface, not a Leo-themed one, and the
+              component draws nothing here - measured in the running browser,
+              the box is laid out at 20x20 and never becomes visible. A native
+              control with accent-color renders everywhere and is one line. */}
+          <label className="crash-reports-choice">
+            <input
+              type="checkbox"
+              checked={sendCrashReports}
+              onChange={(e) => setSendCrashReports(e.currentTarget.checked)}
+            />
             <span>{getLocale('braveWelcomeCrashReportsLabel')}</span>
-          </Checkbox>
+          </label>
           <p>{getLocale('braveWelcomeCrashReportsDesc')}</p>
         </S.CrashReportsBox>
         <S.ActionBox>
