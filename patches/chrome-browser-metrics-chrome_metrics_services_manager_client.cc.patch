@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/metrics/chrome_metrics_services_manager_client.cc b/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
-index e8ac3896642e88e204c240b5818b08a1e6029519..bdc51b30e180a2fe0e18f7b70b3cbc0579fa5208 100644
+index c28e0ba06d6bfe8aefb814c418e77f080c76e008..bef9ef31f625852e7286c928de87db7c4469d5c5 100644
 --- a/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
 +++ b/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
-@@ -394,6 +394,21 @@ void ChromeMetricsServicesManagerClient::UpdateRunningServices(
+@@ -391,6 +391,21 @@ void ChromeMetricsServicesManagerClient::UpdateRunningServices(
    // consent, and as mentioned, on the crashpad side we check both. See
    // SetUploadConsent() in components/crash/core/app/crashpad.cc for how this
    // gets used.
