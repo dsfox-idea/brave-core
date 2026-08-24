@@ -1,29 +1,26 @@
 diff --git a/chrome/app/chrome_crash_reporter_client_win.cc b/chrome/app/chrome_crash_reporter_client_win.cc
-index e59af188c8140cbbc16f14bf49ef162cace60dc9..45c9891d60c45997e5f8bb60098ecdead18490c7 100644
+index e59af188c8140cbbc16f14bf49ef162cace60dc9..2643c194c04df7d26f71c105ce279a23aa7ba947 100644
 --- a/chrome/app/chrome_crash_reporter_client_win.cc
 +++ b/chrome/app/chrome_crash_reporter_client_win.cc
-@@ -142,7 +142,24 @@ bool ChromeCrashReporterClient::IsRunningUnattended() {
+@@ -142,6 +142,21 @@ bool ChromeCrashReporterClient::IsRunningUnattended() {
  }
  
  bool ChromeCrashReporterClient::GetCollectStatsConsent() {
-+#if !defined(OFFICIAL_BUILD)
-+  // growser (#66): consent is implied for our own non-official product, the
-+  // same decision #33 made for the other platforms in
-+  // chrome/app/chrome_crash_reporter_client.cc. Windows needs its own version
-+  // because it has a separate client and a different mechanism entirely:
-+  // consent lives in the registry (usagestats under the ClientState key) and
-+  // the browser writes it there from the metrics-reporting preference. We
-+  // deliberately removed that telemetry (#38, #39), so the browser writes 0 on
-+  // every start and crash uploads could never happen - the value cannot even be
-+  // set by hand, because it is overwritten at startup.
++  // growser (#92): the registry value decides, in every build.
 +  //
-+  // This decouples crash reports from metrics consent rather than turning
-+  // telemetry back on. Policy still wins: SetUploadConsent() consults
++  // This used to be a hard-coded true for non-official builds (#66). The reason
++  // was real: removing the telemetry (#38, #39) left the browser writing 0 into
++  // usagestats on every start, so crash uploads could never happen and the
++  // value could not even be set by hand. The cure was to stop reading it.
++  //
++  // Now the browser writes the user's own answer there instead - the checkbox
++  // on the welcome screen and the switch in settings, both bound to
++  // metrics::prefs::kMetricsReportingEnabled - so the value means something
++  // again and the constant can go. A person who says no is not asked twice by
++  // a build that ignores them.
++  //
++  // Policy still wins over both: SetUploadConsent() consults
 +  // ReportingIsEnforcedByPolicy() before this value is used at all.
-+  return true;
-+#else
    return install_static::GetCollectStatsConsent();
-+#endif
  }
  
- bool ChromeCrashReporterClient::GetCollectStatsInSample() {

@@ -1,5 +1,5 @@
 diff --git a/chrome/app/chrome_crash_reporter_client.cc b/chrome/app/chrome_crash_reporter_client.cc
-index f0c0ff0871ee92a9ae7f4c634372cf0a550321d0..99b72b9553354409dda8ea100c89fe98f34c97fb 100644
+index f0c0ff0871ee92a9ae7f4c634372cf0a550321d0..baa06410f83dd581a4af3834344e68d1b3fbf0c7 100644
 --- a/chrome/app/chrome_crash_reporter_client.cc
 +++ b/chrome/app/chrome_crash_reporter_client.cc
 @@ -169,7 +169,7 @@ bool ChromeCrashReporterClient::IsRunningUnattended() {
@@ -11,17 +11,20 @@ index f0c0ff0871ee92a9ae7f4c634372cf0a550321d0..99b72b9553354409dda8ea100c89fe98
    bool is_official_chrome_build = true;
  #else
    bool is_official_chrome_build = false;
-@@ -196,9 +196,10 @@ bool ChromeCrashReporterClient::GetCollectStatsConsent() {
+@@ -195,11 +195,11 @@ bool ChromeCrashReporterClient::GetCollectStatsConsent() {
+   // do not upload them.
    return is_official_chrome_build;
  #else   // !BUILDFLAG(IS_ANDROID)
-   if (!is_official_chrome_build) {
+-  if (!is_official_chrome_build) {
 -    VLOG(1) << "GetCollectStatsConsent(): is_official_chrome_build is false "
 -            << "so returning false";
 -    return false;
-+    // growser (#33): non-official builds upload Crashpad minidumps to our
-+    // self-hosted GlitchTip. Consent is implied for our own product.
-+    VLOG(1) << "GetCollectStatsConsent(): growser non-official -> true";
-+    return true;
-   }
+-  }
++  // growser (#92): a non-official build asks the same question as an official
++  // one instead of answering it for the user. Upstream returns false here,
++  // because a Chromium build has nowhere to send a report; ours does - our own
++  // GlitchTip (#33) - so the consent setting below is what decides, and it
++  // carries the answer given on the welcome screen or in settings.
    bool settings_consent = GoogleUpdateSettings::GetCollectStatsConsent();
    VLOG(1) << "GetCollectStatsConsent(): settings_consent: " << settings_consent
+           << " so returning that";

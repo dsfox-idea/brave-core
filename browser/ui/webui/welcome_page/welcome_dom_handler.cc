@@ -14,6 +14,7 @@
 #include "brave/browser/brave_browser_features.h"
 #include "brave/common/importer/importer_constants.h"
 #include "brave/components/brave_education/buildflags.h"
+#include "chrome/browser/metrics/metrics_reporting_state.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
@@ -98,6 +99,30 @@ void WelcomeDOMHandler::RegisterMessages() {
       "getWelcomeCompleteURL",
       base::BindRepeating(&WelcomeDOMHandler::HandleGetWelcomeCompleteURL,
                           base::Unretained(this)));
+  web_ui()->RegisterMessageCallback(
+      "setMetricsReportingEnabled",
+      base::BindRepeating(&WelcomeDOMHandler::HandleSetMetricsReportingEnabled,
+                          base::Unretained(this)));
+}
+
+// growser (#92): the answer to the crash-reporting checkbox on the welcome
+// screen. It goes through ChangeMetricsReportingState() rather than writing the
+// preference, because that function is what also writes the platform consent
+// store the crash handler reads - the registry value on Windows, the consent
+// file on macOS. Writing the pref alone would leave a browser that says it
+// reports crashes and does not, or the reverse.
+//
+// In this build the preference has no other consumer: UMA and P3A are compiled
+// out (#38, #39), so what this governs is crash reports and nothing else.
+void WelcomeDOMHandler::HandleSetMetricsReportingEnabled(
+    const base::ListValue& args) {
+  CHECK_EQ(1U, args.size());
+  if (!args[0].is_bool()) {
+    return;
+  }
+  metrics::ChangeMetricsReportingState(
+      args[0].GetBool(),
+      metrics::ChangeMetricsReportingStateCalledFrom::kUiFirstRun);
 }
 
 void WelcomeDOMHandler::HandleImportNowRequested(const base::ListValue& args) {

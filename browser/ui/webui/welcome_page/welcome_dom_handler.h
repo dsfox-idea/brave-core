@@ -44,6 +44,8 @@ class WelcomeDOMHandler : public content::WebUIMessageHandler {
                            const std::u16string& name);
   void HandleOpenSettingsPage(const base::ListValue& args);
   void HandleGetWelcomeCompleteURL(const base::ListValue& args);
+  // growser (#92): the crash-reporting checkbox on the first screen.
+  void HandleSetMetricsReportingEnabled(const base::ListValue& args);
 
   void OnGettingStartedServerCheck(const std::string& callback_id,
                                    bool available);

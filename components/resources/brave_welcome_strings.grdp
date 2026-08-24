@@ -32,6 +32,15 @@
   Import profiles
 </message>
 
+<!-- growser (#92): the crash-reporting choice, made where a person can see it -->
+<message name="IDS_BRAVE_WELCOME_CRASH_REPORTS_LABEL" desc="Label of the checkbox on the first welcome screen that decides whether crash reports are sent">
+  Send crash reports
+</message>
+
+<message name="IDS_BRAVE_WELCOME_CRASH_REPORTS_DESC" desc="Description under the crash reports checkbox on the first welcome screen">
+  A report is a snapshot of the browser taken at the moment it stopped working. It goes to us and to nobody else, and you can change this later in settings.
+</message>
+
 <message name="IDS_BRAVE_WELCOME_SKIP_BUTTON_LABEL" desc="A button to skip the current step">
   Skip
 </message>

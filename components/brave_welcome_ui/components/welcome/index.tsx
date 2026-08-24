@@ -9,8 +9,12 @@ import * as S from './style'
 import classnames from '$web-common/classnames'
 import { getLocale } from '$web-common/locale'
 import Button from '@brave/leo/react/button'
+import Checkbox from '@brave/leo/react/checkbox'
 
-import { DefaultBrowserBrowserProxyImpl } from '../../api/welcome_browser_proxy'
+import {
+  DefaultBrowserBrowserProxyImpl,
+  WelcomeBrowserProxyImpl
+} from '../../api/welcome_browser_proxy'
 import WebAnimationPlayer from '../../api/web_animation_player'
 
 import DataContext from '../../state/context'
@@ -24,6 +28,12 @@ function Welcome () {
   const { viewType, setViewType, scenes } = React.useContext(DataContext)
   const { forward } = useViewTypeTransition(viewType)
 
+  // growser (#92): checked when the screen appears, and the answer is sent
+  // whichever way the person leaves it - the button or the skip link. A
+  // default that is visible and one click from off is a different thing
+  // from sending silently, which is what this build did before.
+  const [sendCrashReports, setSendCrashReports] = React.useState(true)
+
   const ref = React.useRef<HTMLDivElement>(null)
   let logoShadowFilter =
     'drop-shadow(7px 2px 5px rgba(14, 1, 41, 0.2)) drop-shadow(14px 3px 10px rgba(32, 5, 89, 0.3)) drop-shadow(20px 3px 15px rgba(37, 7, 87, 0.2)) drop-shadow(25px 5px 30px rgba(25, 3, 73, 0.1)) drop-shadow(50px 4px 50px rgba(19, 3, 40, 0.1))'
@@ -34,13 +44,20 @@ function Welcome () {
 
   const goForward = () => setViewType(forward)
 
+  const saveCrashReportsChoice = () => {
+    WelcomeBrowserProxyImpl.getInstance()
+      .setMetricsReportingEnabled(sendCrashReports)
+  }
+
   const handleSetAsDefaultBrowser = () => {
+    saveCrashReportsChoice()
     DefaultBrowserBrowserProxyImpl.getInstance().setAsDefaultBrowser()
     goForward()
     scenes?.s1.play()
   }
 
   const handleSkip = () => {
+    saveCrashReportsChoice()
     goForward()
     scenes?.s1.play()
   }
@@ -87,6 +104,16 @@ function Welcome () {
             <p className="view-desc">{getLocale('braveWelcomeDesc')}</p>
           </div>
         </div>
+        <S.CrashReportsBox>
+          <Checkbox
+            checked={sendCrashReports}
+            onChange={(e: { checked: boolean }) =>
+              setSendCrashReports(e.checked)}
+          >
+            <span>{getLocale('braveWelcomeCrashReportsLabel')}</span>
+          </Checkbox>
+          <p>{getLocale('braveWelcomeCrashReportsDesc')}</p>
+        </S.CrashReportsBox>
         <S.ActionBox>
           <Button
             kind="filled"

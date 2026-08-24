@@ -29,6 +29,7 @@ export interface WelcomeBrowserProxy {
   openSettingsPage: () => void
   getDefaultBrowser: () => Promise<string>
   getWelcomeCompleteURL: () => Promise<string>
+  setMetricsReportingEnabled: (enabled: boolean) => void
 }
 
 export {
@@ -48,6 +49,13 @@ export class WelcomeBrowserProxyImpl implements WelcomeBrowserProxy {
 
   getWelcomeCompleteURL (): Promise<string> {
     return sendWithPromise('getWelcomeCompleteURL')
+  }
+
+  // growser (#92): the crash-reporting answer from the first screen. The
+  // handler routes it through ChangeMetricsReportingState, which is what also
+  // writes the consent the crash handler reads.
+  setMetricsReportingEnabled (enabled: boolean) {
+    chrome.send('setMetricsReportingEnabled', [enabled])
   }
 
   static getInstance (): WelcomeBrowserProxy {
