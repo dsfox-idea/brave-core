@@ -12,22 +12,16 @@
       $i18n{webRTCPolicySubLabel}
     </a>
   </div>
-  <settings-dropdown-menu label="$i18n{webRTCLearnMoreURL}"
+  <settings-dropdown-menu label="$i18n{webRTCPolicyLabel}"
       pref-key="webrtc.ip_handling_policy"
       menu-options="[[webRTCPolicies_]]">
   </settings-dropdown-menu>
 </div>
-<settings-toggle-button id="pushMessagingEnabled"
-    class="cr-row"
-    pref="{{prefs.brave.gcm.channel_status}}"
-    label="$i18n{pushMessagingLabel}">
-    <template is="dom-if" if="[[shouldShowRestart_(
-      prefs.brave.gcm.channel_status.value)]]">
-    <cr-button on-click="restartBrowser_" slot="more-actions">
-      $i18n{restart}
-    </cr-button>
-  </template>
-</settings-toggle-button>
+<!-- growser (#78): "Use Google services for push messaging" is gone. GCM
+     registration needs Google API keys, and this build ships none on purpose
+     (brave_google_api_key, google_default_client_id and
+     google_default_client_secret are all empty in args_generated.gni), so the
+     switch could only ever turn on a service that cannot connect. -->
 <div class="settings-box">
   <div class="start" id="labelWrapper">
     <div class="label">$i18n{historyRetentionLabel}</div>

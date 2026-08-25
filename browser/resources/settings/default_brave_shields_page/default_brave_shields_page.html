@@ -145,13 +145,11 @@
     pref="[[isForgetFirstPartyStorageEnabled_]]"
     disabled="[[isAdBlockOnlyModeEnabled_]]">
   </settings-toggle-button>
-  <settings-toggle-button id="setContactInfoSaveFlagToggle"
-      class="cr-row"
-      pref="[[isContactInfoSaveFlagEnabled_]]"
-      label="$i18n{braveShieldsSaveContactInfo}"
-      sub-label="$i18n{braveShieldsSaveContactInfoSublabel}"
-      on-settings-boolean-control-change="onSaveContactInfoToggle_">
-  </settings-toggle-button>
+  <!-- growser (#78): the contact-information toggle is gone with the feature
+       it fed. The webcompat reporter - the "report a broken site" flow - was
+       removed because the report carries the address the user is on and goes
+       to webcompat.brave.com, a third party to us. Saving contact details for
+       a report that can no longer be sent is a promise about nothing. -->
   <settings-toggle-button id="allowElementBlockerInPrivateModeToggle"
       hidden="[[!isBlockElementFeatureEnabled_]]"
       class="cr-row"
