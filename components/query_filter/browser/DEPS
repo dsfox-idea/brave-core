@@ -1,7 +1,9 @@
 include_rules = [
   "+components/component_updater",
+  "+components/grit/brave_components_resources.h",
   "+components/update_client",
   "+third_party/re2/src/re2/re2.h",
+  "+ui/base/resource/resource_bundle.h",
 ]
 
 specific_include_rules = {

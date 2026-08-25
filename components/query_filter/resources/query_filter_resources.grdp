@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2026 The Brave Authors. All rights reserved.
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+<grit-part>
+  <!-- growser (#87): the query-filter rules, bundled. The component that
+       normally delivers them is served by go-updater.brave.com, which answers
+       a fork "403 Missing auth header", so without this the browser strips no
+       tracking parameters at all. Refreshed by scripts/update-vendored-data.py
+       from the upstream data repository, github.com/brave/adblock-lists. -->
+  <include name="IDR_QUERY_FILTER_JSON" file="../query_filter/resources/query-filter.json" type="BINDATA" compress="gzip" />
+</grit-part>
