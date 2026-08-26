@@ -56,6 +56,16 @@ class NET_EXPORT ProxyConfigServiceTor : public net::ProxyConfigService {
 
   static NetworkTrafficAnnotationTag GetTorAnnotationTagForTesting();
 
+  // growser (#88): drop every cached circuit password.
+  //
+  // The passwords live in a process-global map keyed by the raw
+  // ProxyResolutionService pointer, and nothing removes an entry when a
+  // service is destroyed - so a later service allocated at the same address
+  // inherits the previous one's circuits. In tests that is state leaking from
+  // one case into the next, which is why two of them failed only when run
+  // after their neighbours.
+  static void ClearTorCircuitsForTesting();
+
  private:
   static bool bypass_tor_proxy_config_for_testing_;
   base::ObserverList<Observer>::Unchecked observers_;

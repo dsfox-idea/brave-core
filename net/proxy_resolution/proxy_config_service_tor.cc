@@ -262,6 +262,11 @@ void ProxyConfigServiceTor::SetBypassTorProxyConfigForTesting(bool bypass) {
 }
 
 // static
+void ProxyConfigServiceTor::ClearTorCircuitsForTesting() {
+  g_tor_proxy_map.get()->clear();
+}
+
+// static
 NetworkTrafficAnnotationTag
 ProxyConfigServiceTor::GetTorAnnotationTagForTesting() {
   return kTorProxyTrafficAnnotation;
