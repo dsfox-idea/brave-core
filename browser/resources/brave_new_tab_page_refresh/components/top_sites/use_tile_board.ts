@@ -10,6 +10,7 @@ import { CachedTile, readTileCache, writeTileCache } from '../../lib/tile_cache'
 import { tileIconURL } from '../../lib/favicon_url'
 import { tileColorFor } from '../../lib/tile_color'
 import { tileLabel } from '../../lib/tile_label'
+import { lookupPackedIcon } from '../../lib/icon_pack'
 import { maxTileCount } from './tile_rows'
 
 export type BoardTile = CachedTile
@@ -67,16 +68,32 @@ export function useTileBoard(
       // just removed.
       return initialized ? [] : (cachedTiles ?? [])
     }
-    return sites.slice(0, maxTileCount).map((site) => ({
-      url: site.url,
-      title: site.title,
-      label: tileLabel(site.title, site.url),
-      color: colorsRef.current.get(site.url) ?? null,
-    }))
+    return sites.slice(0, maxTileCount).map((site) => {
+      // The pack first: a drawing we made and a colour we chose beat anything
+      // read off a favicon, and asking it costs no request at all.
+      const packed = lookupPackedIcon(site.url)
+      if (packed) {
+        return {
+          url: site.url,
+          title: site.title,
+          label: tileLabel(site.title, site.url),
+          color: packed.colour,
+          kind: packed.kind,
+          drawing: packed.drawing,
+        }
+      }
+      return {
+        url: site.url,
+        title: site.title,
+        label: tileLabel(site.title, site.url),
+        color: colorsRef.current.get(site.url) ?? null,
+      }
+    })
     // `colorVersion` is what makes a resolved colour reach the board; the
     // colours themselves live in a ref so that resolving one does not rebuild
     // the map for all of them.
   }, [sites, cachedTiles, colorVersion, initialized])
+
 
   React.useEffect(() => {
     // Not before the cache has been read, or every colour it holds would be
@@ -86,9 +103,12 @@ export function useTileBoard(
       return
     }
     let cancelled = false
+    // Only sites the pack does not know: for the rest the colour is already
+    // decided and reading a favicon would be work for nothing.
     const missing = sites
       .slice(0, maxTileCount)
-      .filter((site) => !colorsRef.current.has(site.url))
+      .filter((site) => !colorsRef.current.has(site.url)
+        && !lookupPackedIcon(site.url))
     if (missing.length === 0) {
       return
     }

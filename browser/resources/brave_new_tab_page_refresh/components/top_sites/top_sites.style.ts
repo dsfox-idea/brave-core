@@ -127,6 +127,38 @@ export const style = scoped.css`
     pointer-events: none;
   }
 
+  /* A drawing from the pack, carried as a data URL rather than inlined: the
+     page enforces Trusted Types and innerHTML is not available to it. A
+     single-colour mark has its white written in before it is handed over,
+     because an image cannot inherit a colour from the page around it. */
+  .top-site-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--self-tile-icon-size);
+    height: var(--self-tile-icon-size);
+    flex: 0 0 auto;
+    pointer-events: none;
+  }
+
+  .top-site-art {
+    object-fit: contain;
+  }
+
+  /* A brand the pack knows but has no drawing for. The name is the tile, so
+     there is nothing to reveal on hover and no caption underneath. */
+  .top-site-name {
+    color: ${color.white};
+    font: ${font.default.semibold};
+    text-align: center;
+    padding: 0 12px;
+    line-height: 1.2;
+    max-height: 100%;
+    overflow: hidden;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+  }
+
   .top-site-monogram {
     color: ${color.white};
     font-size: calc(var(--self-tile-icon-size) * 0.72);

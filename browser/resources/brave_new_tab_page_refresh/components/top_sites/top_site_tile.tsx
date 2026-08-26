@@ -6,6 +6,7 @@
 import * as React from 'react'
 
 import { tileIconURL } from '../../lib/favicon_url'
+import { drawingSource } from '../../lib/icon_pack'
 import { inlineCSSVars } from '../../lib/inline_css_vars'
 import { BoardTile } from './use_tile_board'
 import { defaultTileColor } from './top_sites.style'
@@ -33,7 +34,7 @@ interface Props {
 }
 
 export function TopSitesTile(props: Props) {
-  const { color, label, title, url } = props.tile
+  const { color, drawing, kind, label, title, url } = props.tile
   const [iconMissing, setIconMissing] = React.useState(false)
   // The icon's own resolution, which is what caps how large it may be drawn.
   const [iconNatural, setIconNatural] = React.useState(0)
@@ -50,9 +51,49 @@ export function TopSitesTile(props: Props) {
     }
   }
 
+  // Three ways a tile can carry its site, in the order they look best.
+  //
+  // A drawing from the pack is ours: made once, checked by eye, and the same
+  // on every machine. A single-colour mark is painted white, so the tile's
+  // own colour lights it and no favicon's white background can show through
+  // as a sticker.
+  //
+  // A brand the pack knows but could not draw shows its name, which is a
+  // deliberate tile rather than a failure.
+  //
+  // Everything else falls back to the site's own icon, which is the path the
+  // browser had before the pack existed and still the only answer for the
+  // long tail of the web.
+  function renderArt() {
+    if (drawing) {
+      return (
+        <img
+          className='top-site-art'
+          src={drawingSource(drawing, kind === 'mono')}
+          alt=''
+        />
+      )
+    }
+    if (kind === 'name') {
+      return <span className='top-site-name'>{label || title}</span>
+    }
+    if (iconMissing) {
+      return <span className='top-site-monogram'>{monogram(label, url)}</span>
+    }
+    return (
+      <img
+        className='top-site-icon'
+        src={tileIconURL(url)}
+        alt=''
+        onLoad={(event) => setIconNatural(event.currentTarget.naturalWidth)}
+        onError={() => setIconMissing(true)}
+      />
+    )
+  }
+
   return (
     <a
-      className='top-site-tile'
+      className={'top-site-tile' + (kind === 'name' ? ' named' : '')}
       href={sanitizeTileURL(url)}
       title={title}
       draggable={false}
@@ -63,18 +104,8 @@ export function TopSitesTile(props: Props) {
         ...(iconNatural ? { '--self-icon-natural': iconNatural } : {}),
       })}
     >
-      {iconMissing ? (
-        <span className='top-site-monogram'>{monogram(label, url)}</span>
-      ) : (
-        <img
-          className='top-site-icon'
-          src={tileIconURL(url)}
-          alt=''
-          onLoad={(event) => setIconNatural(event.currentTarget.naturalWidth)}
-          onError={() => setIconMissing(true)}
-        />
-      )}
-      <span className='top-site-label'>{label}</span>
+      {renderArt()}
+      {kind !== 'name' && <span className='top-site-label'>{label}</span>}
     </a>
   )
 }

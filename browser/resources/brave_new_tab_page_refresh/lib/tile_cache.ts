@@ -23,6 +23,10 @@ export interface CachedTile {
   title: string
   label: string
   color: string | null
+  // From the icon pack, when it knows this site: 'mono' and 'full' come with
+  // a drawing, 'name' means the tile carries the site's name instead.
+  kind?: 'mono' | 'full' | 'name'
+  drawing?: string | null
 }
 
 function request<T>(source: IDBRequest<T>): Promise<T> {
@@ -60,7 +64,8 @@ function parseTiles(value: unknown): CachedTile[] | null {
     if (!entry || typeof entry !== 'object') {
       return null
     }
-    const { url, title, label, color } = entry as Record<string, unknown>
+    const { url, title, label, color, kind, drawing } =
+      entry as Record<string, unknown>
     if (
       typeof url !== 'string'
       || typeof title !== 'string'
@@ -69,7 +74,17 @@ function parseTiles(value: unknown): CachedTile[] | null {
     ) {
       return null
     }
-    tiles.push({ url, title, label, color })
+    // Written back exactly as it was read: a record from a build that knew
+    // nothing of the pack must not come back with empty pack fields bolted
+    // on, or every read would look like a change and rewrite the cache.
+    const tile: CachedTile = { url, title, label, color }
+    if (kind === 'mono' || kind === 'full' || kind === 'name') {
+      tile.kind = kind
+    }
+    if (typeof drawing === 'string') {
+      tile.drawing = drawing
+    }
+    tiles.push(tile)
   }
   return tiles
 }
