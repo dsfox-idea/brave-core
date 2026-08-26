@@ -8,6 +8,8 @@ brave_browser_new_tab_deps = []
 
 if (!is_android) {
   brave_browser_new_tab_sources += [
+    "//brave/browser/new_tab/board_hosts.cc",
+    "//brave/browser/new_tab/board_hosts.h",
     "//brave/browser/new_tab/new_tab_shows_navigation_throttle.cc",
     "//brave/browser/new_tab/new_tab_shows_navigation_throttle.h",
     "//brave/browser/new_tab/new_tab_shows_options.cc",
@@ -23,6 +25,9 @@ if (!is_android) {
 
   brave_browser_new_tab_deps += [
     "//base",
+    "//components/favicon/core",
+    "//components/history/core/browser",
+    "//components/ntp_tiles",
     "//brave/app:brave_generated_resources_grit",
     "//brave/components/constants",
     "//chrome/common",

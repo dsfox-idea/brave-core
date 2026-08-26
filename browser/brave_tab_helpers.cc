@@ -5,6 +5,9 @@
 
 #include "brave/browser/brave_tab_helpers.h"
 
+#include "brave/browser/new_tab/board_hosts.h"
+#include "components/favicon/content/content_favicon_driver.h"
+
 #include <memory>
 #include <utility>
 
@@ -141,6 +144,19 @@ void AttachTabHelpers(content::WebContents* web_contents) {
 #if BUILDFLAG(IS_ANDROID)
   YouTubeScriptInjectorTabHelper::CreateForWebContents(web_contents);
 #else
+  // growser (#90): the new tab board draws an icon far larger than the 16 dip
+  // favicon the desktop browser collects, and only the sites the board shows
+  // need one. Telling the favicon driver which those are is what keeps the
+  // extra request off every other page - see brave/browser/new_tab/
+  // board_hosts.h. Chrome's TabHelpers::AttachTabHelpers has already created
+  // the driver by the time this runs.
+  if (auto* favicon_driver =
+          favicon::ContentFaviconDriver::FromWebContents(web_contents)) {
+    favicon_driver->SetLargeIconPolicy(
+        brave_new_tab::BoardHosts::PolicyFor(Profile::FromBrowserContext(
+            web_contents->GetBrowserContext())->GetOriginalProfile()));
+  }
+
   // Add tab helpers here unless they are intended for android too
   brave_shields::BraveShieldsTabHelper::CreateForWebContents(web_contents);
   ThumbnailTabHelper::CreateForWebContents(web_contents);

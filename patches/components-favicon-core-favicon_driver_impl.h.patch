@@ -1,0 +1,44 @@
+diff --git a/components/favicon/core/favicon_driver_impl.h b/components/favicon/core/favicon_driver_impl.h
+index aa48d0d14947e81aa9d6be6c8d8fd54d471fd25a..5e44c3131c6d2c957ff8f95cfda4af72afee7bc6 100644
+--- a/components/favicon/core/favicon_driver_impl.h
++++ b/components/favicon/core/favicon_driver_impl.h
+@@ -8,6 +8,7 @@
+ #include <memory>
+ #include <vector>
+ 
++#include "base/functional/callback.h"
+ #include "base/memory/raw_ptr.h"
+ #include "components/favicon/core/favicon_driver.h"
+ #include "components/favicon/core/favicon_handler.h"
+@@ -39,6 +40,14 @@ class FaviconDriverImpl : public FaviconDriver,
+   // data from the CoreFaviconService. Reserved for testing.
+   bool HasPendingTasksForTest();
+ 
++  // growser (#90): decides, per page, whether the large icons are worth
++  // collecting. Only the new tab board draws an icon big enough to need them,
++  // so only the handful of sites the board shows should pay for them - one
++  // extra request on a page that makes fifty. Without a policy set, no large
++  // icon is collected at all and the driver behaves exactly as upstream's.
++  using LargeIconPolicy = base::RepeatingCallback<bool(const GURL& page_url)>;
++  void SetLargeIconPolicy(LargeIconPolicy policy);
++
+  protected:
+   // `favicon_service` may be null, which means favicons are not saved.
+   explicit FaviconDriverImpl(CoreFaviconService* favicon_service);
+@@ -63,8 +72,16 @@ class FaviconDriverImpl : public FaviconDriver,
+   // but if it is defined, it must outlive the FaviconDriverImpl.
+   raw_ptr<CoreFaviconService> favicon_service_;
+ 
++  // growser (#90): true when this page's large icons are worth collecting.
++  bool WantsLargeIcons(const GURL& page_url) const;
++
+   // FaviconHandlers used to download the different kind of favicons.
+   std::vector<std::unique_ptr<FaviconHandler>> handlers_;
++
++  // growser (#90): the handlers that collect the large icons, kept apart so
++  // they can be skipped for pages that will never appear on the board.
++  std::vector<std::unique_ptr<FaviconHandler>> large_handlers_;
++  LargeIconPolicy large_icon_policy_;
+ };
+ 
+ }  // namespace favicon
