@@ -11,6 +11,7 @@
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/brave_shields/brave_shields_web_contents_observer.h"
 #include "brave/browser/new_tab/new_tab_shows_options.h"
+#include "brave/browser/new_tab/tile_icon_fetcher.h"
 #include "brave/browser/search_engines/search_engine_tracker.h"
 #include "brave/browser/translate/brave_translate_prefs_migration.h"
 #include "brave/browser/ui/bookmark/brave_bookmark_prefs.h"
@@ -528,6 +529,8 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 // Private New Tab Page
 #if !BUILDFLAG(IS_ANDROID)
   brave_private_new_tab::prefs::RegisterProfilePrefs(registry);
+  // growser (#90): when each board site was last asked for a large icon.
+  brave_new_tab::TileIconFetcher::RegisterProfilePrefs(registry);
 #endif
 
   registry->RegisterIntegerPref(

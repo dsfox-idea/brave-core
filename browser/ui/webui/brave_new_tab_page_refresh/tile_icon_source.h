@@ -52,7 +52,8 @@ class TileIconSource : public content::URLDataSource {
       content::URLDataSource::GotDataCallback callback) override;
 
  private:
-  void OnIconAvailable(content::URLDataSource::GotDataCallback callback,
+  void OnIconAvailable(GURL page_url,
+                       content::URLDataSource::GotDataCallback callback,
                        const favicon_base::FaviconRawBitmapResult& result);
 
   raw_ptr<Profile> profile_ = nullptr;

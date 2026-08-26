@@ -17,6 +17,8 @@ import { TopSitesGrid } from './top_sites_grid'
 import { TopSiteEditModal } from './top_site_edit_modal'
 import { BoardTile, useTileBoard } from './use_tile_board'
 import { maxTileCount } from './tile_rows'
+import { useDevicePixelRatio } from '../../lib/device_pixel_ratio'
+import { inlineCSSVars } from '../../lib/inline_css_vars'
 import { Popover } from '../common/popover'
 
 import { style } from './top_sites.style'
@@ -38,6 +40,7 @@ export function TopSites() {
 
   const rootRef = React.useRef<HTMLDivElement>(null)
   const tiles = useTileBoard(topSites, initialized)
+  const devicePixelRatio = useDevicePixelRatio()
 
   const canAddSite = tiles.length < maxTileCount
 
@@ -82,6 +85,7 @@ export function TopSites() {
       ref={rootRef}
       className='allow-background-pointer-events'
       data-css-scope={style.scope}
+      style={inlineCSSVars({ '--self-dpr': devicePixelRatio })}
     >
       <div className='top-site-context-menu-anchor' />
       <div className='top-sites'>

@@ -35,9 +35,12 @@ interface Props {
 export function TopSitesTile(props: Props) {
   const { color, label, title, url } = props.tile
   const [iconMissing, setIconMissing] = React.useState(false)
+  // The icon's own resolution, which is what caps how large it may be drawn.
+  const [iconNatural, setIconNatural] = React.useState(0)
 
   React.useEffect(() => {
     setIconMissing(false)
+    setIconNatural(0)
   }, [url])
 
   function onContextMenu(event: React.MouseEvent) {
@@ -55,7 +58,10 @@ export function TopSitesTile(props: Props) {
       draggable={false}
       onClick={props.onNavigate}
       onContextMenu={onContextMenu}
-      style={inlineCSSVars({ '--self-tile-color': color || defaultTileColor })}
+      style={inlineCSSVars({
+        '--self-tile-color': color || defaultTileColor,
+        ...(iconNatural ? { '--self-icon-natural': iconNatural } : {}),
+      })}
     >
       {iconMissing ? (
         <span className='top-site-monogram'>{monogram(label, url)}</span>
@@ -64,6 +70,7 @@ export function TopSitesTile(props: Props) {
           className='top-site-icon'
           src={tileIconURL(url)}
           alt=''
+          onLoad={(event) => setIconNatural(event.currentTarget.naturalWidth)}
           onError={() => setIconMissing(true)}
         />
       )}

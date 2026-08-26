@@ -29,6 +29,7 @@ source_set("unittest") {
     sources = [
       "board_hosts_unittest.cc",
       "new_tab_shows_options_unittest.cc",
+      "tile_icon_fetcher_unittest.cc",
     ]
     deps = [
       "//brave/browser",

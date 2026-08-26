@@ -107,14 +107,22 @@ export const style = scoped.css`
     }
   }
 
-  /* Auto width with a cap, never a fixed size: an icon is drawn at its own
-     resolution and only ever scaled DOWN. A site that gave us 32 pixels gets
-     32 sharp ones rather than 56 soft ones. */
+  /* An icon is only ever scaled DOWN, and the limit is counted in the screen's
+     own pixels rather than CSS ones. At 150% scaling a 56px slot is 84 real
+     pixels, so a 64px icon stretched to fill it is still stretched - which is
+     how apple.com stayed soft after the first attempt at this. Capped by its
+     own resolution, it draws smaller and sharp. */
   .top-site-icon {
     width: auto;
     height: auto;
-    max-width: var(--self-tile-icon-size);
-    max-height: var(--self-tile-icon-size);
+    max-width:
+      min(
+        var(--self-tile-icon-size),
+        calc(var(--self-icon-natural, 9999) * 1px / var(--self-dpr, 1)));
+    max-height:
+      min(
+        var(--self-tile-icon-size),
+        calc(var(--self-icon-natural, 9999) * 1px / var(--self-dpr, 1)));
     flex: 0 0 auto;
     pointer-events: none;
   }
