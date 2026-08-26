@@ -272,6 +272,14 @@ void AdBlockComponentServiceManager::StartRegionalServices() {
       // existing providers to account for modified or removed catalog entries.
       // They'll be handled after a browser restart.
       if (existing_provider == component_filters_providers_.end()) {
+        // growser (#87): as in EnableFilterList - if the catalogue names a
+        // publisher, subscribe to it and do not register a component that
+        // would keep the engine waiting forever.
+        if (!list_source_handler_.is_null() &&
+            !catalog_entry.source_urls.empty()) {
+          NotifyListSources(catalog_entry, true);
+          continue;
+        }
         auto regional_filters_provider =
             std::make_unique<AdBlockComponentFiltersProvider>(
                 component_update_service_, filters_provider_manager_,
@@ -394,6 +402,23 @@ bool AdBlockComponentServiceManager::IsFilterListEnabled(
   return false;
 }
 
+void AdBlockComponentServiceManager::SetListSourceHandler(
+    ListSourceHandler handler) {
+  list_source_handler_ = std::move(handler);
+}
+
+void AdBlockComponentServiceManager::NotifyListSources(
+    const FilterListCatalogEntry& entry,
+    bool enabled) {
+  if (list_source_handler_.is_null() || entry.source_urls.empty()) {
+    return;
+  }
+  // Every source, not just the first: the component packs them together, so
+  // subscribing to one of several would quietly block less than the list
+  // promises.
+  list_source_handler_.Run(entry.source_urls, enabled);
+}
+
 void AdBlockComponentServiceManager::EnableFilterList(const std::string& uuid,
                                                       bool enabled) {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
@@ -410,24 +435,43 @@ void AdBlockComponentServiceManager::EnableFilterList(const std::string& uuid,
     return;
   }
 
+  // growser (#87): a list we can fetch from its publisher does NOT get a
+  // component provider. Registering one would be worse than useless: it can
+  // never install (403), and AdBlockFiltersProviderManager waits for every
+  // provider to deliver before it rebuilds the engine - so a handful of
+  // permanently pending providers stalls ad blocking altogether. That is not
+  // a theory: it is what the existing SimpleBlocking tests caught when this
+  // first landed.
+  const bool from_publisher =
+      !list_source_handler_.is_null() && !catalog_entry->source_urls.empty();
+
   // Enable or disable the specified filter list
   auto it = component_filters_providers_.find(uuid);
+  const bool already_on = from_publisher ? IsFilterListEnabled(uuid)
+                                         : it != component_filters_providers_.end();
+  if (already_on == enabled) {
+    return;
+  }
+
   if (enabled) {
-    if (it != component_filters_providers_.end()) {
-      return;
+    if (from_publisher) {
+      NotifyListSources(*catalog_entry, true);
+    } else {
+      auto regional_filters_provider =
+          std::make_unique<AdBlockComponentFiltersProvider>(
+              component_update_service_, filters_provider_manager_,
+              *catalog_entry, catalog_entry->first_party_protections);
+      component_filters_providers_.insert(
+          {uuid, std::move(regional_filters_provider)});
     }
-    auto regional_filters_provider =
-        std::make_unique<AdBlockComponentFiltersProvider>(
-            component_update_service_, filters_provider_manager_,
-            *catalog_entry, catalog_entry->first_party_protections);
-    component_filters_providers_.insert(
-        {uuid, std::move(regional_filters_provider)});
   } else {
-    if (it == component_filters_providers_.end()) {
-      return;
+    if (from_publisher) {
+      NotifyListSources(*catalog_entry, false);
     }
-    it->second->UnregisterComponent();
-    component_filters_providers_.erase(it);
+    if (it != component_filters_providers_.end()) {
+      it->second->UnregisterComponent();
+      component_filters_providers_.erase(it);
+    }
   }
 
   // Update preferences to reflect enabled/disabled state of specified

@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 
+#include "base/functional/callback.h"
 #include "base/memory/raw_ptr.h"
 #include "base/sequence_checker.h"
 #include "base/thread_annotations.h"
@@ -66,6 +67,18 @@ class AdBlockComponentServiceManager
   bool IsFilterListEnabled(const std::string& uuid) const;
   void EnableFilterList(const std::string& uuid, bool enabled);
 
+  // growser (#87): every catalogue list is delivered by its own component,
+  // and go-updater.brave.com answers a fork "403 Missing auth header" for all
+  // of them - so enabling a list here registers a component that can never
+  // install. The catalogue also names the publisher each list comes from, and
+  // a plain download needs no key, so the content layer (which owns the
+  // subscription machinery this core layer must not reach into) hands us a
+  // handler and we tell it which URLs a list just turned on or off.
+  using ListSourceHandler =
+      base::RepeatingCallback<void(const std::vector<std::string>& urls,
+                                   bool enabled)>;
+  void SetListSourceHandler(ListSourceHandler handler);
+
   void UpdateFilterLists(base::OnceCallback<void(bool)> callback);
 
   void ResetProviders();
@@ -74,6 +87,9 @@ class AdBlockComponentServiceManager
   void OnFilterListCatalogLoaded(const std::string& catalog_json) override;
 
  private:
+  void NotifyListSources(const FilterListCatalogEntry& entry, bool enabled);
+
+  ListSourceHandler list_source_handler_;
   friend class ::AdBlockServiceTest;
 
   void StartRegionalServices();

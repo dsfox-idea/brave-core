@@ -39,6 +39,7 @@
 #include "components/prefs/pref_change_registrar.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
+#include "url/url_constants.h"
 #include "services/network/public/cpp/features.h"
 
 namespace brave_shields {
@@ -132,6 +133,23 @@ void AdBlockService::SourceProviderObserver::OnAllLoaded(
     AdblockResourceStorageBox storage) {
   on_resources_loaded_.Run(engine_is_default_, std::nullopt,
                            std::move(filter_set), std::move(storage));
+}
+
+void AdBlockService::OnCatalogListSourcesToggled(
+    const std::vector<std::string>& urls,
+    bool enabled) {
+  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+  if (!subscription_service_manager_) {
+    return;
+  }
+  for (const auto& url : urls) {
+    const GURL source_url(url);
+    if (!source_url.is_valid() || !source_url.SchemeIs(url::kHttpsScheme)) {
+      continue;
+    }
+    subscription_service_manager_->SetCatalogSubscription(source_url,
+                                                          enabled);
+  }
 }
 
 AdBlockComponentServiceManager* AdBlockService::component_service_manager() {
@@ -238,6 +256,15 @@ AdBlockService::AdBlockService(
           &list_p3a_);
   custom_filters_provider_ = std::make_unique<AdBlockCustomFiltersProvider>(
       local_state_, filters_provider_manager_.get());
+
+  // growser (#87): a catalogue list turned on here cannot arrive as a
+  // component - go-updater.brave.com refuses a fork - so subscribe to the
+  // publisher the catalogue names instead. The core layer that owns the
+  // catalogue must not reach into the subscription machinery, so it calls
+  // back into this one.
+  component_service_manager_->SetListSourceHandler(base::BindRepeating(
+      &AdBlockService::OnCatalogListSourcesToggled,
+      weak_factory_.GetWeakPtr()));
 
   if (base::FeatureList::IsEnabled(
           network::features::kLocalNetworkAccessChecks) &&

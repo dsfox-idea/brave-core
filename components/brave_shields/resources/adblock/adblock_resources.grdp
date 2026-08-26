@@ -12,4 +12,10 @@ You can obtain one at https://mozilla.org/MPL/2.0/.
        ##+js(...) rule in every filter list is inert. Refreshed by
        scripts/update-vendored-data.py from github.com/brave/adblock-resources. -->
   <include name="IDR_ADBLOCK_RESOURCES_JSON" file="../brave_shields/resources/adblock/resources.json" type="BINDATA" compress="gzip" />
+
+  <!-- growser (#87): the catalogue of filter lists. Its own component answers
+       403 like the rest, and without it the "Content filtering" settings page
+       has nothing to offer. Every entry also names the publisher its list
+       comes from, which is the path that works for us. -->
+  <include name="IDR_ADBLOCK_LIST_CATALOG_JSON" file="../brave_shields/resources/adblock/list_catalog.json" type="BINDATA" compress="gzip" />
 </grit-part>

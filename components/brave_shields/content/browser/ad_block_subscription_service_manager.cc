@@ -129,6 +129,8 @@ void SubscriptionInfo::RegisterJSONConverter(
       "last_successful_update_attempt",
       &SubscriptionInfo::last_successful_update_attempt, &ParseTimeValue);
   converter->RegisterBoolField("enabled", &SubscriptionInfo::enabled);
+  converter->RegisterBoolField("from_catalog",
+                               &SubscriptionInfo::from_catalog);
   converter->RegisterCustomValueField<std::optional<std::string>>(
       "homepage", &SubscriptionInfo::homepage, &ParseOptionalStringField);
   converter->RegisterCustomValueField<std::optional<std::string>>(
@@ -268,6 +270,39 @@ void AdBlockSubscriptionServiceManager::CreateSubscription(
   StartDownload(sub_url, true);
 }
 
+// growser (#87): catalogue-backed subscriptions are deliberately absent from
+// this list. It is what the settings page renders as "custom filter lists",
+// and a list that already has a catalogue toggle would appear twice, with two
+// controls that can disagree.
+void AdBlockSubscriptionServiceManager::SetCatalogSubscription(
+    const GURL& sub_url,
+    bool enabled) {
+  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+
+  std::optional<SubscriptionInfo> existing = GetInfo(sub_url);
+
+  if (enabled) {
+    if (existing) {
+      // Already here. If the user had added the same URL by hand, leave it
+      // as theirs: hiding it from their list because a catalogue entry
+      // happens to name the same publisher would be a surprise.
+      return;
+    }
+    CreateSubscription(sub_url);
+    std::optional<SubscriptionInfo> info = GetInfo(sub_url);
+    if (info) {
+      info->from_catalog = true;
+      UpdateSubscriptionPrefs(sub_url, *info);
+    }
+    return;
+  }
+
+  // Only remove what the catalogue put there.
+  if (existing && existing->from_catalog) {
+    DeleteSubscription(sub_url);
+  }
+}
+
 std::vector<SubscriptionInfo>
 AdBlockSubscriptionServiceManager::GetSubscriptions() {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
@@ -277,6 +312,9 @@ AdBlockSubscriptionServiceManager::GetSubscriptions() {
   for (const auto subscription : subscriptions_) {
     auto info = GetInfo(GURL(subscription.first));
     DCHECK(info);
+    if (info->from_catalog) {
+      continue;
+    }
     infos.push_back(*info);
   }
 
@@ -500,6 +538,7 @@ void AdBlockSubscriptionServiceManager::UpdateSubscriptionPrefs(
     base::DictValue& subscriptions = update.Get();
     base::DictValue subscription_dict;
     subscription_dict.Set("enabled", info.enabled);
+    subscription_dict.Set("from_catalog", info.from_catalog);
     subscription_dict.Set("last_update_attempt",
                           base::TimeToValue(info.last_update_attempt));
     subscription_dict.Set(

@@ -54,6 +54,12 @@ struct SubscriptionInfo {
   // for a subscription service.
   GURL subscription_url;
 
+  // growser (#87): true when this subscription stands in for a catalogue
+  // list. The catalogue toggle owns it, so it is hidden from the "custom
+  // filter lists" section - two controls for one list is how a UI starts
+  // telling lies.
+  bool from_catalog = false;
+
   // These are base::Time::Min() if no download has been
   // attempted/succeeded. If a subscription has been successfully downloaded,
   // both of these are exactly equal.
@@ -100,6 +106,13 @@ class AdBlockSubscriptionServiceManager {
   void DeleteSubscription(const GURL& sub_url);
   void RefreshSubscription(const GURL& sub_url, bool from_ui);
   void CreateSubscription(const GURL& sub_url);
+
+  // growser (#87): enable or disable a list the catalogue offers. Enabling
+  // subscribes to the publisher URL the catalogue names, because the
+  // component that would otherwise carry it is refused to a fork. Disabling
+  // removes it - but only if the catalogue put it there, so a list the user
+  // added by hand survives.
+  void SetCatalogSubscription(const GURL& sub_url, bool enabled);
 
   AdBlockSubscriptionDownloadManager* download_manager() {
     DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);

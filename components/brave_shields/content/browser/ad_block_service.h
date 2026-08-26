@@ -148,6 +148,11 @@ class AdBlockService {
   ~AdBlockService();
 
   AdBlockComponentServiceManager* component_service_manager();
+
+  // growser (#87): turns a catalogue list on or off by subscribing to the
+  // publisher URLs the catalogue names, because its component never installs.
+  void OnCatalogListSourcesToggled(const std::vector<std::string>& urls,
+                                   bool enabled);
   AdBlockSubscriptionServiceManager* subscription_service_manager();
   AdBlockDefaultResourceProvider* default_resource_provider();
   AdBlockCustomFiltersProvider* custom_filters_provider();
