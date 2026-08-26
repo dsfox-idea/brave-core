@@ -31,6 +31,7 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
 #include "chrome/browser/themes/theme_syncable_service.h"
+#include "brave/browser/ui/webui/brave_new_tab_page_refresh/tile_icon_source.h"
 #include "chrome/browser/ui/webui/favicon_source.h"
 #include "chrome/browser/ui/webui/plural_string_handler.h"
 #include "chrome/browser/ui/webui/theme_source.h"
@@ -118,6 +119,7 @@ void NewTabPageInitializer::Initialize() {
   AddResourcePaths();
 
   AddFaviconDataSource();
+  AddTileIconDataSource();
   AddCustomImageDataSource();
   AddSanitizedImageDataSource();
 
@@ -167,7 +169,7 @@ void NewTabPageInitializer::AddCSPOverrides() {
       "img-src chrome://brave-image chrome://resources chrome://theme "
       "chrome://background-wallpaper chrome://custom-wallpaper "
       "chrome://branded-wallpaper chrome://sponsored-site-image "
-      "chrome://favicon2 blob: data: 'self';");
+      "chrome://favicon2 chrome://growser-tile-icon blob: data: 'self';");
 
   source_->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameSrc,
@@ -301,6 +303,14 @@ void NewTabPageInitializer::AddFaviconDataSource() {
   content::URLDataSource::Add(
       profile, std::make_unique<FaviconSource>(
                    profile, chrome::FaviconUrlFormat::kFavicon2));
+}
+
+// growser (#90): the board draws each site's own icon at the resolution the
+// site gave it. chrome://favicon2 cannot serve that - see tile_icon_source.h.
+void NewTabPageInitializer::AddTileIconDataSource() {
+  auto* profile = GetProfile();
+  content::URLDataSource::Add(profile,
+                              std::make_unique<TileIconSource>(profile));
 }
 
 void NewTabPageInitializer::AddCustomImageDataSource() {

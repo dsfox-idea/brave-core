@@ -32,7 +32,7 @@ function site(host: string, title: string): TopSite {
 
 function iconOf(host: string) {
   return (
-    'chrome://favicon2/?size=64&pageUrl='
+    'chrome://growser-tile-icon/?pageUrl='
     + encodeURIComponent('https://' + host + '/')
   )
 }

@@ -107,11 +107,24 @@ export const style = scoped.css`
     }
   }
 
+  /* Auto width with a cap, never a fixed size: an icon is drawn at its own
+     resolution and only ever scaled DOWN. A site that gave us 32 pixels gets
+     32 sharp ones rather than 56 soft ones. */
   .top-site-icon {
-    width: var(--self-tile-icon-size);
-    height: var(--self-tile-icon-size);
+    width: auto;
+    height: auto;
+    max-width: var(--self-tile-icon-size);
+    max-height: var(--self-tile-icon-size);
     flex: 0 0 auto;
-    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .top-site-monogram {
+    color: ${color.white};
+    font-size: calc(var(--self-tile-icon-size) * 0.72);
+    font-weight: 600;
+    line-height: 1;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
     pointer-events: none;
   }
 

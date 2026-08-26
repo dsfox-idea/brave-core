@@ -5,7 +5,7 @@
 
 import * as React from 'react'
 
-import { faviconURL } from '../../lib/favicon_url'
+import { tileIconURL } from '../../lib/favicon_url'
 import { inlineCSSVars } from '../../lib/inline_css_vars'
 import { BoardTile } from './use_tile_board'
 import { defaultTileColor } from './top_sites.style'
@@ -18,6 +18,14 @@ function sanitizeTileURL(url: string) {
   }
 }
 
+// What to draw when a site has given us no icon at all. A letter is what the
+// browser itself falls back to, and it reads as a deliberate tile rather than
+// as a picture that failed to load.
+function monogram(label: string, url: string) {
+  const source = label || url.replace(/^https?:[/][/](www[.])?/, '')
+  return source.trim().charAt(0).toUpperCase()
+}
+
 interface Props {
   tile: BoardTile
   onContextMenu?: (event: React.MouseEvent) => void
@@ -26,6 +34,11 @@ interface Props {
 
 export function TopSitesTile(props: Props) {
   const { color, label, title, url } = props.tile
+  const [iconMissing, setIconMissing] = React.useState(false)
+
+  React.useEffect(() => {
+    setIconMissing(false)
+  }, [url])
 
   function onContextMenu(event: React.MouseEvent) {
     if (props.onContextMenu) {
@@ -44,11 +57,16 @@ export function TopSitesTile(props: Props) {
       onContextMenu={onContextMenu}
       style={inlineCSSVars({ '--self-tile-color': color || defaultTileColor })}
     >
-      <img
-        className='top-site-icon'
-        src={faviconURL(url)}
-        alt=''
-      />
+      {iconMissing ? (
+        <span className='top-site-monogram'>{monogram(label, url)}</span>
+      ) : (
+        <img
+          className='top-site-icon'
+          src={tileIconURL(url)}
+          alt=''
+          onError={() => setIconMissing(true)}
+        />
+      )}
       <span className='top-site-label'>{label}</span>
     </a>
   )

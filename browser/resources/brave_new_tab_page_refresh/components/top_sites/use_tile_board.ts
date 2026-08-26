@@ -7,7 +7,7 @@ import * as React from 'react'
 
 import { TopSite } from '../../state/top_sites_store'
 import { CachedTile, readTileCache, writeTileCache } from '../../lib/tile_cache'
-import { faviconURL } from '../../lib/favicon_url'
+import { tileIconURL } from '../../lib/favicon_url'
 import { tileColorFor } from '../../lib/tile_color'
 import { tileLabel } from '../../lib/tile_label'
 import { maxTileCount } from './tile_rows'
@@ -94,7 +94,7 @@ export function useTileBoard(
     }
     Promise.all(
       missing.map(async (site) => {
-        const color = await tileColorFor(faviconURL(site.url))
+        const color = await tileColorFor(tileIconURL(site.url))
         if (color) {
           colorsRef.current.set(site.url, color)
         }

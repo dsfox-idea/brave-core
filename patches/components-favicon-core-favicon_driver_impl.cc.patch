@@ -1,0 +1,19 @@
+diff --git a/components/favicon/core/favicon_driver_impl.cc b/components/favicon/core/favicon_driver_impl.cc
+index 2d92b8005a3d40572b0142d14566d3c4c5c71346..e035d480cc23392f38ed9507f132f97df3845537 100644
+--- a/components/favicon/core/favicon_driver_impl.cc
++++ b/components/favicon/core/favicon_driver_impl.cc
+@@ -34,6 +34,14 @@ FaviconDriverImpl::FaviconDriverImpl(CoreFaviconService* favicon_service)
+   } else {
+     handlers_.push_back(std::make_unique<FaviconHandler>(
+         favicon_service_, this, FaviconDriverObserver::NON_TOUCH_16_DIP));
++    // growser (#90): desktop stores only the 16 dip favicon, which is all the
++    // tab strip needs and far too little for the new tab board - a 32 pixel
++    // icon blown up to a tile looks exactly as poor as it is. This second
++    // handler also collects the largest apple-touch-icon and web manifest icon
++    // the page offers, at their own resolution. The 16 dip handler above is
++    // left alone, so the tab strip keeps the icon the site tuned for it.
++    handlers_.push_back(std::make_unique<FaviconHandler>(
++        favicon_service_, this, FaviconDriverObserver::TOUCH_LARGEST));
+   }
+ }
+ 

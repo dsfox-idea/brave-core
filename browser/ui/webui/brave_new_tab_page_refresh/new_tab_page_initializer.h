@@ -54,6 +54,7 @@ class NewTabPageInitializer {
   void AddPluralStrings();
   void AddResourcePaths();
   void AddFaviconDataSource();
+  void AddTileIconDataSource();
   void AddCustomImageDataSource();
   void AddSanitizedImageDataSource();
 

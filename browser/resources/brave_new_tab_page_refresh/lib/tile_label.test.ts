@@ -13,14 +13,14 @@ describe('tile_label', () => {
 
   it('drops the site name bolted on after a dash', () => {
     expect(tileLabel('Почта — Яндекс', 'https://mail.yandex.ru/')).toBe('Почта')
-    expect(tileLabel('Inbox - Gmail', 'https://mail.google.com/')).toBe('Inbox')
+    expect(tileLabel('Inbox - Gmail', 'https://mail.example.com/')).toBe('Inbox')
     expect(tileLabel('Docs | Cloudflare', 'https://cloudflare.com/')).toBe(
       'Docs',
     )
   })
 
   it('drops a notification count', () => {
-    expect(tileLabel('(12) Gmail', 'https://mail.google.com/')).toBe('Gmail')
+    expect(tileLabel('(12) Gmail', 'https://mail.example.com/')).toBe('Gmail')
     expect(tileLabel('[3] Slack', 'https://slack.com/')).toBe('Slack')
   })
 
