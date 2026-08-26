@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit-part>
+  <!-- growser (#95): shown on the certificate interstitial when the site's
+       certificate comes from the Russian national CA and its domain is not on
+       the allowlist. Without it the user gets the generic "not secure" page and
+       no way to tell an attack from a site we simply have not listed yet. -->
+  <message name="IDS_GROWSER_CERT_ERROR_RU_TRUST_NOT_LISTED" desc="Extra explanation on the certificate error page for sites whose certificate is issued by the Russian national certification authority, which this browser trusts only for a fixed list of sites.">
+    This certificate was issued by the Russian national certification authority. Growser trusts it only for a fixed list of sites, and this one is not on it - so the certificate cannot be checked here. If you expected this site to work, tell us at support@growser.org.
+  </message>
+</grit-part>

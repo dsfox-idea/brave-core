@@ -1,0 +1,22 @@
+diff --git a/components/ssl_errors/error_info.cc b/components/ssl_errors/error_info.cc
+index fc56ac32c7a1a4bb5c9adcee09ae840f9d74e378..fc7379cf728a5dd986b15ce5e695a0b9abbc40b2 100644
+--- a/components/ssl_errors/error_info.cc
++++ b/components/ssl_errors/error_info.cc
+@@ -22,6 +22,9 @@
+ 
+ using base::UTF8ToUTF16;
+ 
++#if !defined(BRAVE_SSL_ERROR_INFO_AUTHORITY_INVALID)
++#define BRAVE_SSL_ERROR_INFO_AUTHORITY_INVALID
++#endif
+ namespace ssl_errors {
+ 
+ ErrorInfo::ErrorInfo(const std::u16string& details,
+@@ -111,6 +114,7 @@ ErrorInfo ErrorInfo::CreateError(ErrorType error_type,
+ #endif
+           ,
+           UTF8ToUTF16(request_url.GetHost()));
++      BRAVE_SSL_ERROR_INFO_AUTHORITY_INVALID
+       short_description = l10n_util::GetStringUTF16(
+           IDS_CERT_ERROR_AUTHORITY_INVALID_DESCRIPTION);
+       break;
