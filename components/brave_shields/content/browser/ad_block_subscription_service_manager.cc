@@ -100,11 +100,15 @@ SubscriptionInfo BuildInfoFromDict(const GURL& sub_url,
 const base::FilePath::CharType kSubscriptionsDir[] =
     FILE_PATH_LITERAL("FilterListSubscriptionCache");
 
-// growser (#57): the filter lists seeded on first run, taken from their own
-// publishers. Ads, tracking, and a Russian-language list because that is our
-// audience. Verified to serve a plain Adblock Plus list over HTTPS; the RU one
-// is spelled as its post-redirect URL so we do not depend on the redirect.
-constexpr const char* kGrowserDefaultSubscriptions[] = {
+// growser (#87): the lists #57 seeded on first run, kept here only to remove
+// them again.
+//
+// They were a workaround for a catalogue that could not load: with no
+// catalogue, nothing enabled any list, so three were subscribed by hand. The
+// catalogue is bundled now and enables the same lists itself - EasyList and
+// EasyPrivacy from the very same URLs, and RU AdList by locale as advblock.txt
+// - so keeping the seeds means downloading and compiling the same rules twice.
+constexpr const char* kGrowserSeededSubscriptions[] = {
     "https://easylist.to/easylist/easylist.txt",
     "https://easylist.to/easylist/easyprivacy.txt",
     "https://easylist-downloads.adblockplus.org/ruadlist.txt",
@@ -470,26 +474,22 @@ void AdBlockSubscriptionServiceManager::LoadSubscriptionServices() {
     return;
   }
 
-  // growser (#57): seed the default filter lists as subscriptions.
+  // growser (#87): remove what #57 seeded, once.
   //
-  // Upstream delivers them through the component updater, which our build
-  // cannot use - go-updater.brave.com requires Brave's own service key and
-  // answers 403 without it, so every component sits at version 0.0.0.0 and
-  // Shields has nothing to block with. Subscriptions do not take that path:
-  // they are ordinary background downloads, so they work.
+  // Nothing seeds any more: the catalogue is bundled and enables these lists
+  // itself. A profile from before that still carries them would fetch and
+  // compile the same rules a second time, and show them under "custom filter
+  // lists" as though the user had added them.
   //
-  // The lists come from their own publishers rather than from a repackager,
-  // and the payload is the same either way - the component provider reads a
-  // plain "list.txt" too.
-  //
-  // Seeded once, tracked by its own pref: a default list the user deletes in
-  // settings must stay deleted rather than reappear on the next start.
-  if (!local_state_->GetBoolean(prefs::kAdBlockDefaultSubscriptionsSeeded)) {
-    local_state_->SetBoolean(prefs::kAdBlockDefaultSubscriptionsSeeded, true);
-    for (const char* url : kGrowserDefaultSubscriptions) {
+  // Only the three that were seeded, and only in a profile that was seeded -
+  // a list someone typed in by hand is not ours to delete.
+  if (local_state_->GetBoolean(prefs::kAdBlockDefaultSubscriptionsSeeded) &&
+      !local_state_->GetBoolean(prefs::kAdBlockSeededSubscriptionsRemoved)) {
+    local_state_->SetBoolean(prefs::kAdBlockSeededSubscriptionsRemoved, true);
+    for (const char* url : kGrowserSeededSubscriptions) {
       const GURL sub_url(url);
       if (sub_url.is_valid()) {
-        CreateSubscription(sub_url);
+        DeleteSubscription(sub_url);
       }
     }
   }
