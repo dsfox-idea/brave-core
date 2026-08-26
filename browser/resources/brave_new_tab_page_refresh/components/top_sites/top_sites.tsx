@@ -6,61 +6,40 @@
 import * as React from 'react'
 import Icon from '@brave/leo/react/icon'
 
-import {
-  TopSite,
-  TopSitesListKind,
-  sponsoredSiteLearnMoreURL,
-} from '../../state/top_sites_store'
+import { TopSite, TopSitesListKind } from '../../state/top_sites_store'
 import {
   useTopSitesState,
   useTopSitesActions,
 } from '../../context/top_sites_context'
-import { usePersistedJSON } from '$web-common/usePersistedState'
 import { getString } from '../../lib/strings'
 import { RemoveToast } from './remove_toast'
 import { TopSitesGrid } from './top_sites_grid'
-import { useTopSitesGridItems } from './top_sites_grid_items'
 import { TopSiteEditModal } from './top_site_edit_modal'
+import { BoardTile, useTileBoard } from './use_tile_board'
+import { maxTileCount } from './tile_rows'
 import { Popover } from '../common/popover'
-import { Link } from '../common/link'
 
-import { style, collapsedTileColumnCount } from './top_sites.style'
+import { style } from './top_sites.style'
 
 export function TopSites() {
   const actions = useTopSitesActions()
 
-  const maxCustomTopSites = useTopSitesState((s) => s.maxCustomTopSites)
   const showTopSites = useTopSitesState((s) => s.showTopSites)
   const listKind = useTopSitesState((s) => s.topSitesListKind)
-  const topSitesCount = useTopSitesState((s) => s.topSites.length)
-
-  const [expanded, setExpanded] = usePersistedJSON(
-    'ntp-top-sites-expanded',
-    Boolean,
-  )
+  const topSites = useTopSitesState((s) => s.topSites)
+  const initialized = useTopSitesState((s) => s.initialized)
 
   const [showEditSite, setShowEditSite] = React.useState(false)
   const [editSite, setEditSite] = React.useState<TopSite | null>(null)
   const [showTopSitesMenu, setShowTopSitesMenu] = React.useState(false)
-  const [contextMenuSite, setContextMenuSite] = React.useState<TopSite | null>(
-    null,
-  )
-  const [showSponsoredMenu, setShowSponsoredMenu] = React.useState(false)
+  const [contextMenuTile, setContextMenuTile] =
+    React.useState<BoardTile | null>(null)
   const [showRemoveToast, setShowRemoveToast] = React.useState(false)
 
   const rootRef = React.useRef<HTMLDivElement>(null)
+  const tiles = useTileBoard(topSites, initialized)
 
-  React.useEffect(() => {
-    if (showTopSites && expanded) {
-      document.body.classList.add('ntp-top-sites-wide')
-    }
-    return () => document.body.classList.remove('ntp-top-sites-wide')
-  }, [showTopSites, expanded])
-
-  const showAddButton =
-    listKind === TopSitesListKind.kCustom && topSitesCount < maxCustomTopSites
-  const gridItems = useTopSitesGridItems({ canAddSite: showAddButton })
-  const tileCount = gridItems.length
+  const canAddSite = tiles.length < maxTileCount
 
   function setContextMenuPosition(event: React.MouseEvent) {
     const elem = rootRef.current
@@ -70,15 +49,9 @@ export function TopSites() {
     }
   }
 
-  function onTopSiteContextMenu(topSite: TopSite, event: React.MouseEvent) {
-    setContextMenuSite(topSite)
+  function onTopSiteContextMenu(tile: BoardTile, event: React.MouseEvent) {
+    setContextMenuTile(tile)
     setContextMenuPosition(event)
-  }
-
-  function onSponsoredSiteContextMenu(event: React.MouseEvent) {
-    event.preventDefault()
-    setContextMenuPosition(event)
-    setShowSponsoredMenu(true)
   }
 
   function topSitesMenuAction(fn: () => void) {
@@ -89,11 +62,18 @@ export function TopSites() {
   }
 
   function onAddTopSite() {
+    // Adding a site is only meaningful for a list the user owns. Switching
+    // carries the current tiles over as they are (MostVisitedSites seeds the
+    // custom list from them), so the board does not change under the user -
+    // it just becomes theirs to edit.
+    if (listKind === TopSitesListKind.kMostVisited) {
+      actions.setTopSitesListKind(TopSitesListKind.kCustom)
+    }
     setEditSite(null)
     setShowEditSite(true)
   }
 
-  if (!showTopSites || tileCount === 0) {
+  if (!showTopSites || tiles.length === 0) {
     return null
   }
 
@@ -107,12 +87,10 @@ export function TopSites() {
       <div className='top-sites'>
         <div className='left-spacer allow-background-pointer-events' />
         <TopSitesGrid
-          expanded={expanded}
-          canAddSite={showAddButton}
-          canReorderSites={listKind === TopSitesListKind.kCustom}
+          tiles={tiles}
+          canAddSite={canAddSite}
           onAddTopSite={onAddTopSite}
           onTopSiteContextMenu={onTopSiteContextMenu}
-          onSponsoredSiteContextMenu={onSponsoredSiteContextMenu}
         />
         <button
           className='menu-button'
@@ -126,22 +104,10 @@ export function TopSites() {
           onClose={() => setShowTopSitesMenu(false)}
         >
           <div className='popover-menu'>
-            {listKind === TopSitesListKind.kCustom && (
+            {canAddSite && (
               <button onClick={topSitesMenuAction(onAddTopSite)}>
                 <Icon name='browser-add' />
                 {getString(S.NEW_TAB_ADD_TOP_SITE_LABEL)}
-              </button>
-            )}
-            {tileCount > collapsedTileColumnCount && (
-              <button
-                onClick={topSitesMenuAction(() => {
-                  setExpanded(!expanded)
-                })}
-              >
-                <Icon name={expanded ? 'contract' : 'expand'} />
-                {expanded
-                  ? getString(S.NEW_TAB_TOP_SITES_SHOW_LESS_LABEL)
-                  : getString(S.NEW_TAB_TOP_SITES_SHOW_MORE_LABEL)}
               </button>
             )}
             <div className='menu-divider' />
@@ -174,17 +140,18 @@ export function TopSites() {
           </div>
         </Popover>
         <Popover
-          isOpen={Boolean(contextMenuSite)}
+          isOpen={Boolean(contextMenuTile)}
           className='top-site-context-menu'
-          onClose={() => setContextMenuSite(null)}
+          onClose={() => setContextMenuTile(null)}
         >
           <div className='popover-menu'>
             {listKind === TopSitesListKind.kCustom && (
               <button
                 onClick={() => {
-                  setEditSite(contextMenuSite)
+                  const url = contextMenuTile?.url
+                  setEditSite(topSites.find((site) => site.url === url) ?? null)
                   setShowEditSite(true)
-                  setContextMenuSite(null)
+                  setContextMenuTile(null)
                 }}
               >
                 <Icon name='edit-pencil' />
@@ -193,9 +160,9 @@ export function TopSites() {
             )}
             <button
               onClick={() => {
-                if (contextMenuSite) {
-                  actions.removeTopSite(contextMenuSite.url)
-                  setContextMenuSite(null)
+                if (contextMenuTile) {
+                  actions.removeTopSite(contextMenuTile.url)
+                  setContextMenuTile(null)
                   setShowRemoveToast(true)
                 }
               }}
@@ -203,32 +170,6 @@ export function TopSites() {
               <Icon name='trash' />
               {getString(S.NEW_TAB_REMOVE_TOP_SITE_LABEL)}
             </button>
-          </div>
-        </Popover>
-        <Popover
-          isOpen={showSponsoredMenu}
-          className='top-site-context-menu'
-          onClose={() => setShowSponsoredMenu(false)}
-        >
-          <div className='popover-menu'>
-            <button
-              onClick={() => {
-                actions.setShowSponsoredSites(false)
-                setShowSponsoredMenu(false)
-              }}
-            >
-              <Icon name='trash' />
-              {getString(S.NEW_TAB_REMOVE_SPONSORED_SITES_LABEL)}
-            </button>
-            <div className='menu-divider' />
-            <Link
-              url={sponsoredSiteLearnMoreURL}
-              openInNewTab
-              onClick={() => setShowSponsoredMenu(false)}
-            >
-              <Icon name='help-outline' />
-              {getString(S.NEW_TAB_WHAT_ARE_SPONSORED_SITES_LABEL)}
-            </Link>
           </div>
         </Popover>
         <TopSiteEditModal

@@ -6,21 +6,42 @@
 import { color, font } from '@brave/leo/tokens/css/variables'
 import { scoped } from '$web-common/scoped_css'
 
-export const collapsedTileColumnCount = 7
-export const collapsedTileRowCount = 1
-export const minTileColumnCount = 4
-export const maxTileColumnCount = 12
-export const maxTileRowCount = 2
-export const tileWidth = 72
-export const tileHeight = 82
-export const nonGridWidth = 64
+// The tile at its largest. Below a window wide enough for eight of them the
+// tiles shrink instead of the row wrapping, because how many tiles sit in a
+// row is a rule the owner set, not a consequence of the window.
+export const tileWidth = 168
+
+// Width : height, and the icon as a share of the height. Everything else is
+// derived, so one number changes the size of the board.
+const tileAspect = 1.5
+const iconShareOfHeight = 0.5
+
+// Eight tiles, seven gaps, and the room the menu button and its opposite
+// spacer take either side.
+const gap = 16
+const asideWidth = 24
+
+// What a tile is painted when its favicon has not been read yet, or has no
+// colour to give. Neutral rather than branded: a wrong guess that looks like a
+// deliberate choice is worse than one that looks like a placeholder.
+export const defaultTileColor = '#4a5058'
+
+// The brand gradient runs #33C57B to #148C50 - one hue, lightness 0.49 down to
+// 0.31. A tile reproduces that fall around whatever colour its favicon gave,
+// so every tile is lit the same way the logo is.
+const gradientTopMix = '16%'
+const gradientBottomMix = '18%'
 
 export const style = scoped.css`
   & {
-    --self-tile-width: ${tileWidth}px;
-    --self-tile-height: ${tileHeight}px;
-    --self-tile-icon-size: 56px;
-    --self-transition-duration: 180ms;
+    --self-tile-width:
+      min(
+        ${tileWidth}px,
+        (100cqw - ${gap * 7 + asideWidth * 2}px) / 8);
+    --self-tile-height: calc(var(--self-tile-width) / ${tileAspect});
+    --self-tile-icon-size:
+      calc(var(--self-tile-height) * ${iconShareOfHeight});
+    --self-transition-duration: 160ms;
 
     width: 100%;
     container-type: inline-size;
@@ -31,164 +52,98 @@ export const style = scoped.css`
     align-items: flex-start;
     gap: 8px;
     width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
   }
 
-  .top-site-tiles-mask {
-    --self-page-width:
-      calc(var(--self-columns-per-page) * var(--self-tile-width));
-
-    /* Do not add transform/filter/backdrop-filter/contain to this rule or
-       any ancestor between it and the root selector above. Any of those
-       properties establishes a new containing block for position:fixed
-       descendants, which will result in embedded tooltips getting
-       clipped. */
-    position: relative;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    scroll-snap-stop: always;
-    overscroll-behavior: none;
-    max-width: var(--self-page-width);
-    max-height: fit-content;
-    display: flex;
-    gap: 16px;
-
-    transition: max-width var(--self-transition-duration);
+  /* Keeps the grid centred against the menu button on the other side. */
+  .left-spacer {
+    flex: 0 0 ${asideWidth}px;
   }
 
-  .top-site-tiles {
+  .top-site-rows {
     display: flex;
     flex-direction: column;
-    gap: 16px;
     align-items: center;
-    scroll-snap-align: start;
-    min-width: var(--self-page-width);
+    gap: ${gap}px;
   }
 
   .top-site-row {
     display: flex;
+    gap: ${gap}px;
   }
 
   .top-site-tile {
+    position: relative;
     width: var(--self-tile-width);
+    height: var(--self-tile-height);
+    border-radius: 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 
-    .sorting & {
-      transition: translate var(--self-transition-duration);
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--self-tile-color), white ${gradientTopMix}) 0%,
+      color-mix(in oklab, var(--self-tile-color), black ${gradientBottomMix})
+        100%);
+
+    /* Only the transform animates, so a hover costs the compositor a matrix
+       and nothing else - no layout, no paint. */
+    transition: transform var(--self-transition-duration) ease-out;
+    will-change: transform;
+
+    &:hover, &:focus-visible {
+      transform: scale(1.1);
+      z-index: 1;
+      outline: none;
     }
 
-    &.dragging {
-      opacity: 0;
-      transition: opacity var(--self-transition-duration);
+    &:focus-visible {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
     }
   }
 
   .top-site-icon {
-    --leo-icon-size: 32px;
-    --leo-icon-color: ${color.white};
-
-    position: relative;
-    margin: 0 calc((var(--self-tile-width) - var(--self-tile-icon-size)) / 2);
     width: var(--self-tile-icon-size);
     height: var(--self-tile-icon-size);
-    padding: 12px;
-    border-radius: 16px;
-    background: rgba(217, 217, 222, 0.56);
-    backdrop-filter: blur(50px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    /* Gradient border */
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 16px;
-      padding: 1px;
-      background: linear-gradient(
-        156.52deg,
-        rgba(0, 0, 0, 0.05) 2.12%,
-        rgba(0, 0, 0, 0) 39%,
-        rgba(0, 0, 0, 0) 54.33%,
-        rgba(0, 0, 0, 0.15) 93.02%);
-      mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      pointer-events: none;
-    }
+    flex: 0 0 auto;
+    object-fit: contain;
+    pointer-events: none;
   }
 
-  .top-site-tile:hover .top-site-icon {
-    background: rgba(217, 217, 222, 0.66);
+  .add-tile {
+    --leo-icon-size: 32px;
+    --leo-icon-color: ${color.white};
+    --self-tile-color: rgba(255, 255, 255, 0.22);
+
+    backdrop-filter: blur(30px);
+    box-shadow: none;
   }
 
-  .top-site-tile:focus-visible {
-    outline: none;
-
-    .top-site-icon {
-      background: rgba(217, 217, 222, 0.66);
-    }
-  }
-
-  .top-site-title {
+  .top-site-label {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 10px;
     color: ${color.white};
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font: ${font.small.semibold};
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.40);
     text-align: center;
-  }
-
-  .sponsored-site-tooltip {
-    max-width: 320px;
-  }
-
-  /* Collapses the tooltip's shadow-DOM bubble, which stays visible even
-     when the text inside it is hidden. */
-  .top-sites:has(:popover-open) {
-    --leo-tooltip-background: transparent;
-    --leo-tooltip-padding: 0;
-    --leo-tooltip-shadow: none;
-  }
-
-  .top-sites:has(:popover-open) .sponsored-site-tooltip {
-    display: none;
-  }
-
-  .top-site-ad-disclosure {
-    overflow: hidden;
     white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
-    align-self: stretch;
-    color: ${color.white};
-    text-align: center;
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.20);
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    letter-spacing: -0.08px;
-    opacity: 0.6;
-    margin-top: -6px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    transition: opacity var(--self-transition-duration) ease-out;
   }
 
-  .left-spacer {
-    flex: 0 0 24px;
+  .top-site-tile:hover .top-site-label,
+  .top-site-tile:focus-visible .top-site-label {
+    opacity: 1;
   }
 
   .menu-button {
@@ -197,7 +152,7 @@ export const style = scoped.css`
 
     anchor-name: --top-sites-menu-button;
 
-    height: var(--self-tile-icon-size);
+    height: var(--self-tile-height);
     display: flex;
     align-items: center;
     opacity: 0;
@@ -241,21 +196,6 @@ export const style = scoped.css`
     position-area: block-end span-inline-end;
     position-try-fallbacks: flip-inline, flip-block;
     margin: -8px;
-  }
-
-  .page-nav {
-    --leo-navdots-active-color: #fff;
-    --leo-navdots-active-color-hover: #fff;
-    --leo-navdots-color: #fff;
-    --leo-navdots-color-hover: #fff;
-
-    margin-top: 16px;
-    opacity: 1;
-    transition: opacity 500ms;
-
-    @starting-style {
-      opacity: 0;
-    }
   }
 
   &:hover, :has(:popover-open) {

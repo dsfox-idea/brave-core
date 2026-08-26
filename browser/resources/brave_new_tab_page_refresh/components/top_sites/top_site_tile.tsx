@@ -5,8 +5,10 @@
 
 import * as React from 'react'
 
-import { TopSite } from '../../state/top_sites_store'
 import { faviconURL } from '../../lib/favicon_url'
+import { inlineCSSVars } from '../../lib/inline_css_vars'
+import { BoardTile } from './use_tile_board'
+import { defaultTileColor } from './top_sites.style'
 
 function sanitizeTileURL(url: string) {
   try {
@@ -17,14 +19,13 @@ function sanitizeTileURL(url: string) {
 }
 
 interface Props {
-  topSite: TopSite
-  canDrag: boolean
+  tile: BoardTile
   onContextMenu?: (event: React.MouseEvent) => void
   onNavigate: () => void
 }
 
 export function TopSitesTile(props: Props) {
-  const { favicon, title, url } = props.topSite
+  const { color, label, title, url } = props.tile
 
   function onContextMenu(event: React.MouseEvent) {
     if (props.onContextMenu) {
@@ -37,19 +38,18 @@ export function TopSitesTile(props: Props) {
     <a
       className='top-site-tile'
       href={sanitizeTileURL(url)}
-      draggable={props.canDrag}
+      title={title}
+      draggable={false}
       onClick={props.onNavigate}
-      onDragStart={(event) => {
-        event.dataTransfer.setData('text/uri-list', url)
-      }}
+      onContextMenu={onContextMenu}
+      style={inlineCSSVars({ '--self-tile-color': color || defaultTileColor })}
     >
-      <span
+      <img
         className='top-site-icon'
-        onContextMenu={onContextMenu}
-      >
-        <img src={favicon || faviconURL(url)} />
-      </span>
-      <span className='top-site-title'>{title}</span>
+        src={faviconURL(url)}
+        alt=''
+      />
+      <span className='top-site-label'>{label}</span>
     </a>
   )
 }
