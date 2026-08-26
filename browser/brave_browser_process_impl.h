@@ -11,6 +11,7 @@
 #include "base/memory/scoped_refptr.h"
 #include "base/sequence_checker.h"
 #include "brave/browser/brave_browser_process.h"
+#include "brave/components/growser_ru_trust/ru_trust_updater.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/brave_component.h"
@@ -179,6 +180,9 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
   // to be destroyed last
   std::unique_ptr<brave_component_updater::LocalDataFilesService>
       local_data_files_service_;
+  // growser (#95): keeps the Russian CA domain allowlist current between
+  // releases.
+  std::unique_ptr<growser_ru_trust::RuTrustUpdater> ru_trust_updater_;
   std::unique_ptr<brave_component_updater::BraveComponent::Delegate>
       brave_component_updater_delegate_;
   std::unique_ptr<brave_shields::AdBlockService> ad_block_service_;

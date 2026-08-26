@@ -5,6 +5,8 @@
 
 #include "brave/browser/brave_local_state_prefs.h"
 
+#include "brave/components/growser_ru_trust/ru_trust_updater.h"
+
 #include <string>
 
 #include "base/values.h"
@@ -179,6 +181,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   brave_stats::RegisterLocalStatePrefs(registry);
 #endif
   brave_origin::RegisterLocalStatePrefs(registry);
+  growser_ru_trust::RuTrustUpdater::RegisterLocalStatePrefs(registry);
 #if BUILDFLAG(ENABLE_LOCAL_AI)
   local_ai::prefs::RegisterLocalStatePrefs(registry);
 #endif

@@ -5,6 +5,9 @@
 
 #include "brave/components/growser_ru_trust/ru_trust_anchors.h"
 
+#include <functional>
+#include <set>
+#include <string>
 #include <string_view>
 
 #include "base/containers/span.h"
@@ -26,10 +29,24 @@ constexpr std::string_view kPermittedDnsNames[] = {
 
 }  // namespace
 
-base::ListValue GetTrustAnchorsPrefDefault() {
-  base::ListValue permitted_dns_names;
-  permitted_dns_names.reserve(std::size(kPermittedDnsNames));
+base::ListValue GetTrustAnchorsPrefDefault(
+    const base::ListValue* extra_domains) {
+  std::set<std::string, std::less<>> names;
   for (std::string_view name : kPermittedDnsNames) {
+    names.emplace(name);
+  }
+  // Union, not replacement - see the header.
+  if (extra_domains) {
+    for (const base::Value& value : *extra_domains) {
+      if (value.is_string() && !value.GetString().empty()) {
+        names.insert(value.GetString());
+      }
+    }
+  }
+
+  base::ListValue permitted_dns_names;
+  permitted_dns_names.reserve(names.size());
+  for (const std::string& name : names) {
     permitted_dns_names.Append(name);
   }
 

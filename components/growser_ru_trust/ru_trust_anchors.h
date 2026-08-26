@@ -18,7 +18,12 @@ namespace growser_ru_trust {
 // The shape is the one the CACertificatesWithConstraints enterprise policy
 // uses:
 // [{"certificate": <base64 DER>, "constraints": {"permitted_dns_names": [...]}}]
-base::ListValue GetTrustAnchorsPrefDefault();
+// growser (#95): `extra_domains` are the ones fetched from our backend
+// since the build. They are added to the bundled list, never substituted
+// for it - a truncated or hostile payload can only widen what already
+// works, never take away a domain the user relies on.
+base::ListValue GetTrustAnchorsPrefDefault(
+    const base::ListValue* extra_domains = nullptr);
 
 }  // namespace growser_ru_trust
 

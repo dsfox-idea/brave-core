@@ -5,6 +5,8 @@
 
 #include "brave/browser/brave_browser_process_impl.h"
 
+#include "brave/components/growser_ru_trust/ru_trust_updater.h"
+
 #include <memory>
 #include <string>
 #include <utility>
@@ -329,6 +331,13 @@ void BraveBrowserProcessImpl::StartBraveServices() {
   URLSanitizerComponentInstaller();
   // Now start the local data files service, which calls all observers.
   local_data_files_service()->Start();
+
+  // growser (#95): the bundled domain allowlist for the Russian CA is as
+  // old as the build; this fetches a newer, signed one. It applies at the
+  // next start rather than mid-session - see ru_trust_updater.h.
+  ru_trust_updater_ = std::make_unique<growser_ru_trust::RuTrustUpdater>(
+      local_state(), shared_url_loader_factory());
+  ru_trust_updater_->Start();
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   brave_wallet::WalletDataFilesInstaller::GetInstance().SetDelegate(

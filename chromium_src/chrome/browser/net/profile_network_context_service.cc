@@ -27,11 +27,21 @@
 // ordinary way, and the constraints mean the root vouches for nothing outside
 // the list - unlike installing it into the system store, where it would be
 // valid for every domain there is.
+// The fetched half lives in local state (#95); absent it, the bundled
+// list stands alone, which is the state every fresh install starts in.
 #define BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF        \
-  registry->RegisterListPref(prefs::kCACertificatesWithConstraints, \
-                             growser_ru_trust::GetTrustAnchorsPrefDefault());
+  registry->RegisterListPref(                                             \
+      prefs::kCACertificatesWithConstraints,                              \
+      growser_ru_trust::GetTrustAnchorsPrefDefault(                       \
+          g_browser_process && g_browser_process->local_state()           \
+              ? &g_browser_process->local_state()->GetList(               \
+                    growser_ru_trust::kRuTrustDomainsPref)                \
+              : nullptr));
 
 #include "brave/components/growser_ru_trust/ru_trust_anchors.h"
+#include "brave/components/growser_ru_trust/ru_trust_updater.h"
+#include "chrome/browser/browser_process.h"
+#include "components/prefs/pref_service.h"
 
 #include <chrome/browser/net/profile_network_context_service.cc>
 #undef BRAVE_PROFILE_NETWORK_CONTEXT_SERVICE_GET_CT_POLICY

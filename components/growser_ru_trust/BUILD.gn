@@ -5,11 +5,18 @@
 
 source_set("growser_ru_trust") {
   sources = [
+    "ru_trust_updater.cc",
+    "ru_trust_updater.h",
     "ru_trust_anchors.cc",
     "ru_trust_anchors.h",
   ]
 
   inputs = [ "ru_trusted_domains.inc" ]
 
-  deps = [ "//base" ]
+  deps = [
+    "//components/prefs",
+    "//crypto",
+    "//net",
+    "//services/network/public/cpp",
+    "//url", "//base" ]
 }
