@@ -1,7 +1,16 @@
 diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
-index c9ae7f58abdc9e650501363db9da48231ffecc15..619f5d8fdefd42a167e9f8f33b68f8a94505c0ef 100644
+index c9ae7f58abdc9e650501363db9da48231ffecc15..17a86036c2f5de958a725d3495ee0f57549043c5 100644
 --- a/chrome/browser/net/profile_network_context_service.cc
 +++ b/chrome/browser/net/profile_network_context_service.cc
+@@ -655,7 +655,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
+                                 false);
+   registry->RegisterListPref(prefs::kHSTSPolicyBypassList);
+   registry->RegisterListPref(prefs::kCACertificates);
+-  registry->RegisterListPref(prefs::kCACertificatesWithConstraints);
++  BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
+   registry->RegisterListPref(prefs::kCADistrustedCertificates);
+   registry->RegisterListPref(prefs::kCAHintCertificates);
+   // For information about whether to reset the HTTP Cache or not, defaults
 @@ -746,6 +746,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
    std::vector<std::string> excluded_spkis(
        TranslateStringArray(ct_excluded_spkis));

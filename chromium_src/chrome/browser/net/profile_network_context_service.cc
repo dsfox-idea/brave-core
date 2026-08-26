@@ -17,5 +17,22 @@
 // honest than an empty list.
 #define BRAVE_PROFILE_NETWORK_CONTEXT_SERVICE_GET_CT_POLICY
 
+// growser (#36): trust the Russian Ministry of Digital Development root
+// ("Russian Trusted Root CA"), constrained to an allowlist of domains.
+//
+// Western CAs revoked the Russian banks' certificates in 2026, and the banks
+// moved to this root - without it they do not open at all. It is registered as
+// the DEFAULT VALUE of the very pref the CACertificatesWithConstraints
+// enterprise policy writes, so an administrator still overrides us the
+// ordinary way, and the constraints mean the root vouches for nothing outside
+// the list - unlike installing it into the system store, where it would be
+// valid for every domain there is.
+#define BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF        \
+  registry->RegisterListPref(prefs::kCACertificatesWithConstraints, \
+                             growser_ru_trust::GetTrustAnchorsPrefDefault());
+
+#include "brave/components/growser_ru_trust/ru_trust_anchors.h"
+
 #include <chrome/browser/net/profile_network_context_service.cc>
 #undef BRAVE_PROFILE_NETWORK_CONTEXT_SERVICE_GET_CT_POLICY
+#undef BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
