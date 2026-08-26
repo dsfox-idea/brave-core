@@ -11,6 +11,7 @@
 
 #include "base/component_export.h"
 #include "base/files/file_path.h"
+#include "base/memory/weak_ptr.h"
 #include "base/observer_list.h"
 #include "brave/components/brave_component_updater/browser/brave_component.h"
 
@@ -51,11 +52,24 @@ class COMPONENT_EXPORT(BRAVE_COMPONENT_UPDATER) LocalDataFilesService
       const std::string& manifest) override;
 
  private:
+  // growser (#87): the component this service registers is served by
+  // go-updater.brave.com, which answers a fork "403 Missing auth header", so
+  // it never becomes ready and all five consumers - debouncing, the URL
+  // sanitizer, the HTTPS upgrade exceptions, request-OTR and the webcompat
+  // exceptions - sit idle forever. The payload is bundled with the build, so
+  // lay it out on disk the way the component would and tell the observers.
+  void UseBundledDataUnlessComponentArrives();
+  void OnBundledDataWritten(const base::FilePath& install_dir);
+
   static std::string g_local_data_files_component_id_;
   static std::string g_local_data_files_component_base64_public_key_;
 
   bool initialized_;
+  // Set once a real component has been delivered; the bundled copy then
+  // stands down rather than overwriting newer data with older.
+  bool component_ready_ = false;
   base::ObserverList<LocalDataFilesObserver>::Unchecked observers_;
+  base::WeakPtrFactory<LocalDataFilesService> weak_factory_{this};
 };
 
 // Creates the LocalDataFilesService

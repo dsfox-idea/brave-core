@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2026 The Brave Authors. All rights reserved.
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+<grit-part>
+  <!-- growser (#87): the payload of the Local Data Updater component, which
+       go-updater.brave.com refuses a fork with "403 Missing auth header". Five
+       mechanisms read these files - debouncing, the URL sanitizer, the HTTPS
+       upgrade exceptions, request-OTR and the webcompat exceptions - and each
+       of them does nothing at all while the component is absent, which for us
+       is always. Refreshed by scripts/update-vendored-data.py from
+       github.com/brave/adblock-lists. -->
+  <include name="IDR_LOCAL_DATA_DEBOUNCE_JSON" file="../brave_component_updater/resources/local_data/1/debounce.json" type="BINDATA" compress="gzip" />
+  <include name="IDR_LOCAL_DATA_CLEAN_URLS_JSON" file="../brave_component_updater/resources/local_data/1/clean-urls.json" type="BINDATA" compress="gzip" />
+  <include name="IDR_LOCAL_DATA_CLEAN_URLS_PERMISSIONS_JSON" file="../brave_component_updater/resources/local_data/1/clean-urls-permissions.json" type="BINDATA" compress="gzip" />
+  <include name="IDR_LOCAL_DATA_REQUEST_OTR_JSON" file="../brave_component_updater/resources/local_data/1/request-otr.json" type="BINDATA" compress="gzip" />
+  <include name="IDR_LOCAL_DATA_WEBCOMPAT_EXCEPTIONS_JSON" file="../brave_component_updater/resources/local_data/1/webcompat-exceptions.json" type="BINDATA" compress="gzip" />
+  <include name="IDR_LOCAL_DATA_HTTPS_UPGRADE_EXCEPTIONS_TXT" file="../brave_component_updater/resources/local_data/1/https-upgrade-exceptions-list.txt" type="BINDATA" compress="gzip" />
+</grit-part>

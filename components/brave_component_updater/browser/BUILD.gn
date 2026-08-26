@@ -74,11 +74,14 @@ component("browser") {
 
   deps = [
     "//base",
+    "//brave/components/resources",
+    "//brave/components/resources:static_resources_grit",
     "//components/component_updater",
     "//components/crx_file",
     "//components/prefs",
     "//components/update_client",
     "//crypto",
+    "//ui/base",
   ]
 
   configs += [ "//build/config/compiler:wexit_time_destructors" ]
