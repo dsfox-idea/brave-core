@@ -57,7 +57,7 @@
 #endif
 
 #if !BUILDFLAG(IS_ANDROID)
-#include "brave/browser/infobars/brave_confirm_p3a_infobar_delegate.h"
+// growser: the P3A infobar is not shown (#21) - the include went with Create.
 #include "brave/browser/infobars/brave_sync_account_deleted_infobar_delegate.h"
 #include "brave/browser/infobars/sync_cannot_run_infobar_delegate.h"
 #include "chrome/browser/ui/browser.h"
@@ -155,8 +155,9 @@ void ChromeBrowserMainParts::PostBrowserStart() {
       infobars::ContentInfoBarManager* infobar_manager =
           infobars::ContentInfoBarManager::FromWebContents(active_web_contents);
       if (infobar_manager) {
-        BraveConfirmP3AInfoBarDelegate::Create(
-            infobar_manager, g_browser_process->local_state());
+        // growser: the P3A infobar is not shown (#21) - telemetry is removed.
+        // BraveConfirmP3AInfoBarDelegate::Create(
+        //     infobar_manager, g_browser_process->local_state());
 
         BraveSyncAccountDeletedInfoBarDelegate::Create(active_web_contents,
                                                        profile);

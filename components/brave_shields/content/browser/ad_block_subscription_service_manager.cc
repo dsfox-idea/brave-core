@@ -100,6 +100,20 @@ SubscriptionInfo BuildInfoFromDict(const GURL& sub_url,
 const base::FilePath::CharType kSubscriptionsDir[] =
     FILE_PATH_LITERAL("FilterListSubscriptionCache");
 
+// growser (#87): the lists #57 seeded on first run, kept here only to remove
+// them again.
+//
+// They were a workaround for a catalogue that could not load: with no
+// catalogue, nothing enabled any list, so three were subscribed by hand. The
+// catalogue is bundled now and enables the same lists itself - EasyList and
+// EasyPrivacy from the very same URLs, and RU AdList by locale as advblock.txt
+// - so keeping the seeds means downloading and compiling the same rules twice.
+constexpr const char* kGrowserSeededSubscriptions[] = {
+    "https://easylist.to/easylist/easylist.txt",
+    "https://easylist.to/easylist/easyprivacy.txt",
+    "https://easylist-downloads.adblockplus.org/ruadlist.txt",
+};
+
 }  // namespace
 
 SubscriptionInfo::SubscriptionInfo() = default;
@@ -119,6 +133,8 @@ void SubscriptionInfo::RegisterJSONConverter(
       "last_successful_update_attempt",
       &SubscriptionInfo::last_successful_update_attempt, &ParseTimeValue);
   converter->RegisterBoolField("enabled", &SubscriptionInfo::enabled);
+  converter->RegisterBoolField("from_catalog",
+                               &SubscriptionInfo::from_catalog);
   converter->RegisterCustomValueField<std::optional<std::string>>(
       "homepage", &SubscriptionInfo::homepage, &ParseOptionalStringField);
   converter->RegisterCustomValueField<std::optional<std::string>>(
@@ -258,6 +274,39 @@ void AdBlockSubscriptionServiceManager::CreateSubscription(
   StartDownload(sub_url, true);
 }
 
+// growser (#87): catalogue-backed subscriptions are deliberately absent from
+// this list. It is what the settings page renders as "custom filter lists",
+// and a list that already has a catalogue toggle would appear twice, with two
+// controls that can disagree.
+void AdBlockSubscriptionServiceManager::SetCatalogSubscription(
+    const GURL& sub_url,
+    bool enabled) {
+  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+
+  std::optional<SubscriptionInfo> existing = GetInfo(sub_url);
+
+  if (enabled) {
+    if (existing) {
+      // Already here. If the user had added the same URL by hand, leave it
+      // as theirs: hiding it from their list because a catalogue entry
+      // happens to name the same publisher would be a surprise.
+      return;
+    }
+    CreateSubscription(sub_url);
+    std::optional<SubscriptionInfo> info = GetInfo(sub_url);
+    if (info) {
+      info->from_catalog = true;
+      UpdateSubscriptionPrefs(sub_url, *info);
+    }
+    return;
+  }
+
+  // Only remove what the catalogue put there.
+  if (existing && existing->from_catalog) {
+    DeleteSubscription(sub_url);
+  }
+}
+
 std::vector<SubscriptionInfo>
 AdBlockSubscriptionServiceManager::GetSubscriptions() {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
@@ -267,6 +316,9 @@ AdBlockSubscriptionServiceManager::GetSubscriptions() {
   for (const auto subscription : subscriptions_) {
     auto info = GetInfo(GURL(subscription.first));
     DCHECK(info);
+    if (info->from_catalog) {
+      continue;
+    }
     infos.push_back(*info);
   }
 
@@ -422,6 +474,26 @@ void AdBlockSubscriptionServiceManager::LoadSubscriptionServices() {
     return;
   }
 
+  // growser (#87): remove what #57 seeded, once.
+  //
+  // Nothing seeds any more: the catalogue is bundled and enables these lists
+  // itself. A profile from before that still carries them would fetch and
+  // compile the same rules a second time, and show them under "custom filter
+  // lists" as though the user had added them.
+  //
+  // Only the three that were seeded, and only in a profile that was seeded -
+  // a list someone typed in by hand is not ours to delete.
+  if (local_state_->GetBoolean(prefs::kAdBlockDefaultSubscriptionsSeeded) &&
+      !local_state_->GetBoolean(prefs::kAdBlockSeededSubscriptionsRemoved)) {
+    local_state_->SetBoolean(prefs::kAdBlockSeededSubscriptionsRemoved, true);
+    for (const char* url : kGrowserSeededSubscriptions) {
+      const GURL sub_url(url);
+      if (sub_url.is_valid()) {
+        DeleteSubscription(sub_url);
+      }
+    }
+  }
+
   subscriptions_ =
       local_state_->GetDict(prefs::kAdBlockListSubscriptions).Clone();
 
@@ -466,6 +538,7 @@ void AdBlockSubscriptionServiceManager::UpdateSubscriptionPrefs(
     base::DictValue& subscriptions = update.Get();
     base::DictValue subscription_dict;
     subscription_dict.Set("enabled", info.enabled);
+    subscription_dict.Set("from_catalog", info.from_catalog);
     subscription_dict.Set("last_update_attempt",
                           base::TimeToValue(info.last_update_attempt));
     subscription_dict.Set(

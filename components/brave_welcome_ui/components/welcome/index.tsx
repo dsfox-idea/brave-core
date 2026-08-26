@@ -10,7 +10,10 @@ import classnames from '$web-common/classnames'
 import { getLocale } from '$web-common/locale'
 import Button from '@brave/leo/react/button'
 
-import { WelcomeBrowserProxyImpl, DefaultBrowserBrowserProxyImpl, P3APhase } from '../../api/welcome_browser_proxy'
+import {
+  DefaultBrowserBrowserProxyImpl,
+  WelcomeBrowserProxyImpl
+} from '../../api/welcome_browser_proxy'
 import WebAnimationPlayer from '../../api/web_animation_player'
 
 import DataContext from '../../state/context'
@@ -24,6 +27,12 @@ function Welcome () {
   const { viewType, setViewType, scenes } = React.useContext(DataContext)
   const { forward } = useViewTypeTransition(viewType)
 
+  // growser (#92): checked when the screen appears, and the answer is sent
+  // whichever way the person leaves it - the button or the skip link. A
+  // default that is visible and one click from off is a different thing
+  // from sending silently, which is what this build did before.
+  const [sendCrashReports, setSendCrashReports] = React.useState(true)
+
   const ref = React.useRef<HTMLDivElement>(null)
   let logoShadowFilter =
     'drop-shadow(7px 2px 5px rgba(14, 1, 41, 0.2)) drop-shadow(14px 3px 10px rgba(32, 5, 89, 0.3)) drop-shadow(20px 3px 15px rgba(37, 7, 87, 0.2)) drop-shadow(25px 5px 30px rgba(25, 3, 73, 0.1)) drop-shadow(50px 4px 50px rgba(19, 3, 40, 0.1))'
@@ -34,15 +43,20 @@ function Welcome () {
 
   const goForward = () => setViewType(forward)
 
+  const saveCrashReportsChoice = () => {
+    WelcomeBrowserProxyImpl.getInstance()
+      .setMetricsReportingEnabled(sendCrashReports)
+  }
+
   const handleSetAsDefaultBrowser = () => {
+    saveCrashReportsChoice()
     DefaultBrowserBrowserProxyImpl.getInstance().setAsDefaultBrowser()
     goForward()
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Import)
     scenes?.s1.play()
   }
 
   const handleSkip = () => {
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Import)
+    saveCrashReportsChoice()
     goForward()
     scenes?.s1.play()
   }
@@ -89,6 +103,22 @@ function Welcome () {
             <p className="view-desc">{getLocale('braveWelcomeDesc')}</p>
           </div>
         </div>
+        <S.CrashReportsBox>
+          {/* A plain input rather than the design-system checkbox: this
+              screen is a bespoke dark surface, not a Leo-themed one, and the
+              component draws nothing here - measured in the running browser,
+              the box is laid out at 20x20 and never becomes visible. A native
+              control with accent-color renders everywhere and is one line. */}
+          <label className="crash-reports-choice">
+            <input
+              type="checkbox"
+              checked={sendCrashReports}
+              onChange={(e) => setSendCrashReports(e.currentTarget.checked)}
+            />
+            <span>{getLocale('braveWelcomeCrashReportsLabel')}</span>
+          </label>
+          <p>{getLocale('braveWelcomeCrashReportsDesc')}</p>
+        </S.CrashReportsBox>
         <S.ActionBox>
           <Button
             kind="filled"

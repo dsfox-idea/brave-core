@@ -122,6 +122,11 @@ void BraveMainDelegate::AppendCommandLineOptions() {
   command_line->AppendSwitch(switches::kEnableDomDistiller);
   command_line->AppendSwitch(switches::kEnableDistillabilityService);
 
+  // growser (#78): sync is switched off at brave_sync::features::kBraveSync,
+  // not here. Appending --disable-sync from this function does nothing:
+  // ChromeBrowserMainParts::PreProfileInit runs later and removes the switch
+  // whenever that feature is on.
+
   if (!base::CommandLine::ForCurrentProcess()->HasSwitch(
           embedder_support::kOriginTrialPublicKey)) {
     command_line->AppendSwitchASCII(embedder_support::kOriginTrialPublicKey,

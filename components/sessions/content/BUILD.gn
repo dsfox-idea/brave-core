@@ -9,6 +9,7 @@ source_set("unit_tests") {
 
   deps = [
     "//base/test:test_support",
+    "//brave/components/constants",
     "//components/sessions:test_support",
     "//testing/gmock",
     "//testing/gtest",

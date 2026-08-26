@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{Isinara ang <ph name="ONE_CLOSED"/>}one{Isinara ang <ph name="MANY_CLOSED"/> tab}other{Isinara ang <ph name="MANY_CLOSED"/> na tab}}</translation>
 <translation id="2894757982205307093">Bagong tab sa grupo</translation>
 <translation id="2918484639460781603">Pumunta sa mga setting</translation>
-<translation id="4691798003247738043">Brave | Tungkol sa store na ito</translation>
+<translation id="4691798003247738043">Growser | Tungkol sa store na ito</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> ang napili}one{<ph name="ITEMS_COUNT_MANY"/> ang napili}other{<ph name="ITEMS_COUNT_MANY"/> ang napili}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{I-pin ang tab}one{I-pin ang mga tab}other{I-pin ang mga tab}}</translation>
 <translation id="3008554597174452548">Ihinto ang pagsubaybay sa produkto</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Itago ang fullscreen grid</translation>
 <translation id="5076161749301278626">Tingnan ang mga review ng store?</translation>
 <translation id="5161254044473106830">Kailangan ng pamagat</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Awtomatikong isinasara ng Brave ang mga hindi aktibong tab at grupo ng tab pagkalipas ng <ph name="AUTO_DELETE_DELAY_ONE"/> buwan. Mababago mo ito sa mga setting.}one{Awtomatikong isinasara ng Brave ang mga hindi aktibong tab at grupo ng tab pagkalipas ng <ph name="AUTO_DELETE_DELAY_MANY"/> buwan. Mababago mo ito sa mga setting.}other{Awtomatikong isinasara ng Brave ang mga hindi aktibong tab at grupo ng tab pagkalipas ng <ph name="AUTO_DELETE_DELAY_MANY"/> na buwan. Mababago mo ito sa mga setting.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Awtomatikong isinasara ng Growser ang mga hindi aktibong tab at grupo ng tab pagkalipas ng <ph name="AUTO_DELETE_DELAY_ONE"/> buwan. Mababago mo ito sa mga setting.}one{Awtomatikong isinasara ng Growser ang mga hindi aktibong tab at grupo ng tab pagkalipas ng <ph name="AUTO_DELETE_DELAY_MANY"/> buwan. Mababago mo ito sa mga setting.}other{Awtomatikong isinasara ng Growser ang mga hindi aktibong tab at grupo ng tab pagkalipas ng <ph name="AUTO_DELETE_DELAY_MANY"/> na buwan. Mababago mo ito sa mga setting.}}</translation>
 <translation id="5254233580564156835">Paggamit ng memory: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Ang iyong huling tab</translation>
 <translation id="5380159289133845234">Mag-archive ng mga duplicate na tab</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Isara ang grupo ng tab na may <ph name="TABS_COUNT_ONE"/> tab, na may kulay na <ph name="COLOR_NAME"/>.}one{Isara ang grupo ng tab na may <ph name="TABS_COUNT_MANY"/> tab, na may kulay na <ph name="COLOR_NAME"/>.}other{Isara ang grupo ng tab na may <ph name="TABS_COUNT_MANY"/> na tab, na may kulay na <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">Tingnan ang impormasyon ng store, available ang opsyon malapit sa itaas ng screen</translation>
 <translation id="5627941783489838464">Walang update sa tab</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link mula sa Brave}one{<ph name="TABS_COUNT_MANY"/> link mula sa Brave}other{<ph name="TABS_COUNT_MANY"/> na link mula sa Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link mula sa Growser}one{<ph name="TABS_COUNT_MANY"/> link mula sa Growser}other{<ph name="TABS_COUNT_MANY"/> na link mula sa Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Ilipat ang tab sa kaliwa}one{Ilipat ang mga tab sa kaliwa}other{Ilipat ang mga tab sa kaliwa}}</translation>
 <translation id="5746204836956568669">Igrupo ang <ph name="NUMBER_OF_TABS"/> (na) tab para makapagtrabaho nang mas mabilis?</translation>
 <translation id="5773295109010386583">Awtomatikong isara ang mga hindi aktibong item</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> item}one{<ph name="TABS_COUNT_MANY"/> item}other{<ph name="TABS_COUNT_MANY"/> na item}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{I-restore ang <ph name="TABS_COUNT_ONE"/> napiling item}one{I-restore ang <ph name="TABS_COUNT_MANY"/> napiling item}other{I-restore ang <ph name="TABS_COUNT_MANY"/> na napiling item}}</translation>
 <translation id="753732157349120914">Tab Switcher</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> review mula sa Brave}one{<ph name="REVIEWS_COUNT_MANY"/> review mula sa Brave}other{<ph name="REVIEWS_COUNT_MANY"/> na review mula sa Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> review mula sa Growser}one{<ph name="REVIEWS_COUNT_MANY"/> review mula sa Growser}other{<ph name="REVIEWS_COUNT_MANY"/> na review mula sa Growser}}</translation>
 <translation id="7559245342362162951">Ipakita ang mga tab ng grupo sa fullscreen grid</translation>
 <translation id="7658239707568436148">Kanselahin</translation>
 <translation id="7688386659311034820">Dialog ng mga hindi aktibong tab</translation>

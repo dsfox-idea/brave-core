@@ -4,7 +4,6 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import * as React from 'react'
-import Button from '@brave/leo/react/button'
 import Toggle from '@brave/leo/react/toggle'
 
 import { formatString } from '$web-common/formatString'
@@ -28,14 +27,11 @@ export function MainCard() {
 
   function renderBlockInfo() {
     if (!shieldsEnabled) {
-      return (
-        <div className='report-prompt'>
-          {getString('BRAVE_SHIELDS_SITE_NOT_WORKING')}
-          <Button onClick={api.openWebCompatWindow}>
-            {getString('BRAVE_SHIELDS_REPORT')}
-          </Button>
-        </div>
-      )
+      // growser (#78): the report prompt is gone with the reporter itself -
+      // the report carries the user's URL to webcompat.brave.com, which is a
+      // third party to us. Nothing useful is left to say here, so say nothing
+      // rather than leave a prompt whose only action does not exist.
+      return null
     }
     return (
       <div className='block-info'>

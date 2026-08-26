@@ -22,7 +22,7 @@ const wchar_t kSxSBrowserAppGuid[] = L"{C6CB981E-DB30-4876-8639-109F8933582C}";
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 
 // Copied from util_constants.cc.
-const wchar_t kChromeExe[] = L"brave.exe";
+const wchar_t kChromeExe[] = L"growser.exe";
 
 }  // namespace
 }  // namespace chrome_launcher_support

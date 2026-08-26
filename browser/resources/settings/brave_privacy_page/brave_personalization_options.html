@@ -12,22 +12,16 @@
       $i18n{webRTCPolicySubLabel}
     </a>
   </div>
-  <settings-dropdown-menu label="$i18n{webRTCLearnMoreURL}"
+  <settings-dropdown-menu label="$i18n{webRTCPolicyLabel}"
       pref-key="webrtc.ip_handling_policy"
       menu-options="[[webRTCPolicies_]]">
   </settings-dropdown-menu>
 </div>
-<settings-toggle-button id="pushMessagingEnabled"
-    class="cr-row"
-    pref="{{prefs.brave.gcm.channel_status}}"
-    label="$i18n{pushMessagingLabel}">
-    <template is="dom-if" if="[[shouldShowRestart_(
-      prefs.brave.gcm.channel_status.value)]]">
-    <cr-button on-click="restartBrowser_" slot="more-actions">
-      $i18n{restart}
-    </cr-button>
-  </template>
-</settings-toggle-button>
+<!-- growser (#78): "Use Google services for push messaging" is gone. GCM
+     registration needs Google API keys, and this build ships none on purpose
+     (brave_google_api_key, google_default_client_id and
+     google_default_client_secret are all empty in args_generated.gni), so the
+     switch could only ever turn on a service that cannot connect. -->
 <div class="settings-box">
   <div class="start" id="labelWrapper">
     <div class="label">$i18n{historyRetentionLabel}</div>
@@ -72,7 +66,11 @@
     </settings-dropdown-menu>
 </div>
 <!-- <if expr="enable_psst"> -->
-<template is="dom-if" if="[[isPsstFeatureEnabled_]]">
+<!-- growser (#78): PSST adjusts privacy settings on sites from a rules list
+     that arrives as a Brave component. Brave's component server answers
+     403 to a fork and Google does not know the id, so the rules can never
+     arrive and the toggle would switch on a feature with no rules. -->
+<template is="dom-if" if="[[false]]">
   <settings-toggle-button
     class="cr-row"
     pref="{{prefs.brave.psst.settings.enable_psst}}"

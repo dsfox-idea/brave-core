@@ -18,7 +18,7 @@
 #include "brave/components/query_filter/common/pref_names.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"
-#include "chrome/browser/new_tab_page/ntp_pref_names.h"
+#include "chrome/browser/new_tab_page/prefs/ntp_pref_names.h"
 #include "chrome/browser/prefetch/pref_names.h"
 #include "chrome/browser/preloading/preloading_prefs.h"
 #include "chrome/browser/profiles/profile.h"
@@ -107,7 +107,7 @@ IN_PROC_BROWSER_TEST_F(BraveProfilePrefsBrowserTest, MiscBravePrefs) {
   EXPECT_EQ(brave_wallet::GetDefaultCardanoWallet(
                 chrome_test_utils::GetProfile(this)->GetPrefs()),
             brave_wallet::mojom::DefaultWallet::BraveWallet);
-  // growser: кнопка Wallet в тулбаре скрыта по умолчанию (#16).
+  // growser: the Wallet toolbar button is hidden by default (#16).
   EXPECT_FALSE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
       brave_wallet::kShowWalletIconOnToolbar));
 #endif

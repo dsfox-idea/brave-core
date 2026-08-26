@@ -59,8 +59,13 @@ class BraveHelpMenuModel : public ui::SimpleMenuModel {
   void Build() {
     AddItemWithStringId(IDC_ABOUT, IDS_ABOUT);
     AddItemWithStringId(IDC_HELP_PAGE_VIA_MENU, IDS_HELP_PAGE);
-    AddItemWithStringId(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER,
-                        IDS_SHOW_BRAVE_WEBCOMPAT_REPORTER);
+    // growser (#78): no "report a broken site". The report carries the URL the
+    // user is on, and webcompat.brave.com accepts ours - it needs no service
+    // key, so unlike the rest of Brave's endpoints this one is not dead for a
+    // fork. That makes it worse, not better: someone reporting a broken site
+    // reasonably believes they are telling us, and instead their address goes
+    // to a third party who cannot act for them anyway - our filter lists come
+    // from the upstream publishers now (#57), not from Brave.
   }
 };
 }  // namespace
@@ -121,7 +126,7 @@ void BraveAppMenuModel::Build() {
 
   if (const auto reading_list_submenu_index =
           bookmark_sub_menu_model()->GetIndexOfCommandId(
-              IDC_READING_LIST_MENU)) {
+              kReadingListMenuPlaceholder)) {
     auto* reading_list_submenu = bookmark_sub_menu_model()->GetSubmenuModelAt(
         *reading_list_submenu_index);
     CHECK(reading_list_submenu);
@@ -130,13 +135,13 @@ void BraveAppMenuModel::Build() {
 }
 
 void BraveAppMenuModel::BuildPasswordsAndAutofillSubmenu() {
-  if (!GetIndexOfCommandId(IDC_PASSWORDS_AND_AUTOFILL_MENU)) {
+  if (!GetIndexOfCommandId(kPasswordsAndAutofillMenuPlaceholder)) {
     return;
   }
 
   auto* autofill_menu_model =
       static_cast<ui::SimpleMenuModel*>(GetSubmenuModelAt(
-          GetIndexOfCommandId(IDC_PASSWORDS_AND_AUTOFILL_MENU).value()));
+          GetIndexOfCommandId(kPasswordsAndAutofillMenuPlaceholder).value()));
   CHECK(autofill_menu_model);
 
   if (IsCommandIdEnabled(IDC_SHOW_EMAIL_ALIASES)) {
@@ -167,10 +172,10 @@ void BraveAppMenuModel::BuildBraveProductsSection() {
   // Needs to add separator as this section is brave specific section.
   bool need_separator = false;
 
-  // growser: пункты «ИИ-помощник Leo», «Кошелёк» (Wallet) и «Growser VPN»
-  // убраны из главного меню (#27) — это точки входа в удаляемые фичи.
-  // Команды/акселераторы не трогаем (чтобы не ломать command-controller).
-  // Полное удаление функционала — backlog #4/#6/#23.
+  // growser: the "Leo AI assistant", "Wallet" and "Growser VPN" items are
+  // out of the main menu (#27) - entry points into features being removed.
+  // The commands and accelerators are left alone, so command-controller
+  // keeps working. Removing the features themselves is #4/#6/#23.
 
 #if defined(TOOLKIT_VIEWS)
   if (sidebar::CanUseSidebar(browser())) {
@@ -229,7 +234,7 @@ void BraveAppMenuModel::BuildBrowserSection() {
   // Downloads
   // Extensions
   std::optional<size_t> bookmark_item_index =
-      GetIndexOfCommandId(IDC_BOOKMARKS_MENU);
+      GetIndexOfCommandId(kBookmarksMenuPlaceholder);
 
   // If bookmark is not used, we don't need to adjust download item.
   if (bookmark_item_index.has_value()) {
@@ -243,8 +248,8 @@ void BraveAppMenuModel::BuildBrowserSection() {
 
 void BraveAppMenuModel::BuildMoreToolsSubMenu() {
   ui::SimpleMenuModel* more_tools_menu_model =
-      static_cast<ui::SimpleMenuModel*>(
-          GetSubmenuModelAt(GetIndexOfCommandId(IDC_MORE_TOOLS_MENU).value()));
+      static_cast<ui::SimpleMenuModel*>(GetSubmenuModelAt(
+          GetIndexOfCommandId(kMoreToolsMenuPlaceholder).value()));
   DCHECK(more_tools_menu_model);
 
   size_t next_target_index = 0;
@@ -283,7 +288,7 @@ void BraveAppMenuModel::BuildMoreToolsSubMenu() {
     need_separator = false;
   }
 
-  if (!browser()->profile()->IsOffTheRecord()) {
+  if (!browser()->GetProfile()->IsOffTheRecord()) {
     if (auto index =
             more_tools_menu_model->GetIndexOfCommandId(IDC_NAME_WINDOW)) {
       more_tools_menu_model->InsertItemWithStringIdAt(
@@ -312,20 +317,21 @@ void BraveAppMenuModel::BuildHelpSubMenu() {
   // Put help sub menu above the settings menu.
   if (const auto index = GetIndexOfCommandId(IDC_OPTIONS)) {
     sub_menus().push_back(std::make_unique<BraveHelpMenuModel>(this));
-    InsertSubMenuWithStringIdAt(*index, IDC_HELP_MENU, IDS_HELP_MENU,
+    InsertSubMenuWithStringIdAt(*index, kHelpMenuPlaceholder, IDS_HELP_MENU,
                                 sub_menus().back().get());
   }
 }
 
 void BraveAppMenuModel::RemoveUpstreamMenus() {
-  ui::SimpleMenuModel* more_tools_model = static_cast<ui::SimpleMenuModel*>(
-      GetSubmenuModelAt(GetIndexOfCommandId(IDC_MORE_TOOLS_MENU).value()));
+  ui::SimpleMenuModel* more_tools_model =
+      static_cast<ui::SimpleMenuModel*>(GetSubmenuModelAt(
+          GetIndexOfCommandId(kMoreToolsMenuPlaceholder).value()));
   DCHECK(more_tools_model);
 
   {
     // Remove upstream's profile menu. "Add new profile" will be added into more
     // tools sub menu.
-    auto index = GetIndexOfCommandId(IDC_PROFILE_MENU_IN_APP_MENU);
+    auto index = GetIndexOfCommandId(kProfileMenuPlaceholder);
     CHECK(index);
     RemoveItemAt(*index);
 
@@ -346,7 +352,7 @@ void BraveAppMenuModel::RemoveUpstreamMenus() {
 
   // Remove upstream's "Tab groups" menu item, as this functionality is already
   // available in multiple other places
-  if (const auto index = GetIndexOfCommandId(IDC_SAVED_TAB_GROUPS_MENU)) {
+  if (const auto index = GetIndexOfCommandId(kSavedTabGroupsMenuPlaceholder)) {
     RemoveItemAt(*index);
   }
 
@@ -395,7 +401,7 @@ void BraveAppMenuModel::ExecuteCommand(int id, int event_flags) {
       id == IDC_SIDEBAR_SHOW_OPTION_MOUSEOVER ||
       id == IDC_SIDEBAR_SHOW_OPTION_NEVER) {
     auto* service =
-        sidebar::SidebarServiceFactory::GetForProfile(browser()->profile());
+        sidebar::SidebarServiceFactory::GetForProfile(browser()->GetProfile());
     service->SetSidebarShowOption(ConvertIDCToSidebarShowOptions(id));
     return;
   }

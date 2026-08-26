@@ -90,74 +90,74 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
     return;
   }
 
-  if (!safebrowsing_endpoint.empty() &&
+  // These two were hardcoded to Brave's proxies, so a fork that pointed
+  // safebrowsing_api_endpoint at its own host still sent them to Brave. Each now
+  // has its own buildflag with the same default; empty means "do not redirect".
+  std::string_view filecheck_endpoint =
+      BUILDFLAG(SAFEBROWSING_FILECHECK_ENDPOINT);
+  if (!filecheck_endpoint.empty() &&
       safebrowsingfilecheck_pattern->MatchesHost(request_url)) {
-    replacements.SetHostStr(kBraveSafeBrowsingSslProxy);
+    replacements.SetHostStr(filecheck_endpoint);
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
-  if (!safebrowsing_endpoint.empty() &&
+  std::string_view crxlist_endpoint = BUILDFLAG(SAFEBROWSING_CRXLIST_ENDPOINT);
+  if (!crxlist_endpoint.empty() &&
       safebrowsingcrxlist_pattern->MatchesHost(request_url)) {
-    replacements.SetHostStr(kBraveSafeBrowsing2Proxy);
+    replacements.SetHostStr(crxlist_endpoint);
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
+  // Payload downloads for components and the CRLSet. Also hardcoded to Brave's
+  // redirector, so the update check could succeed while every download 403'd.
+  // Empty means "do not redirect": the client fetches from Google's CDN.
+  std::string_view redirector = BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT);
+  if (!redirector.empty() &&
+      (crlSet_pattern1->MatchesURL(request_url) ||
+       crlSet_pattern2->MatchesURL(request_url) ||
+       crlSet_pattern3->MatchesURL(request_url) ||
+       crlSet_pattern4->MatchesURL(request_url) ||
+       gvt1_pattern->MatchesURL(request_url) ||
+       googleDl_pattern->MatchesURL(request_url))) {
+    replacements.SetSchemeStr("https");
+    replacements.SetHostStr(redirector);
+    *new_url = request_url.ReplaceComponents(replacements);
+    return;
+  }
+
+  // growser (#45): these two are the last redirects that pointed at Brave, and
+  // both carry a signal about the user rather than about the product.
+  //
+  // The favicon one is the sharper of the two: Chromium's UI asks Google's
+  // faviconV2 service for icons of sites in history, bookmarks and new-tab
+  // tiles, so whoever answers it learns which sites a person keeps. Brave
+  // proxies it so that Google does not - which for our users only moves the
+  // knowledge to Brave. Autofill data is the same shape, quieter.
+  //
+  // Same treatment as the component updater (#41) and Safe Browsing (#42):
+  // through our own backend, which keeps the feature working and takes both
+  // Google and Brave out of it. The paths are preserved, so the Worker knows
+  // which upstream a request belongs to.
   if (autofill_pattern->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
-    replacements.SetHostStr(kBraveStaticProxy);
+    replacements.SetHostStr(BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT));
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
   if (favicon_pattern->MatchesURL(request_url)) {
-    replacements.SetHostStr("favicons.proxy.brave.com");
+    replacements.SetHostStr(BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT));
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
-  if (crlSet_pattern1->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (crlSet_pattern2->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (crlSet_pattern3->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (crlSet_pattern4->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (gvt1_pattern->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr(kBraveRedirectorProxy);
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 
-  if (googleDl_pattern->MatchesURL(request_url)) {
-    replacements.SetSchemeStr("https");
-    replacements.SetHostStr(kBraveRedirectorProxy);
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
 }
 
 }  // namespace brave

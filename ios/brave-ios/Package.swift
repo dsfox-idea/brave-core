@@ -56,7 +56,6 @@ var package = Package(
     .executable(name: "LeoAssetCatalogGenerator", targets: ["LeoAssetCatalogGenerator"]),
     .plugin(name: "IntentBuilderPlugin", targets: ["IntentBuilderPlugin"]),
     .plugin(name: "LoggerPlugin", targets: ["LoggerPlugin"]),
-    .plugin(name: "LeoAssetsPlugin", targets: ["LeoAssetsPlugin"]),
   ],
   dependencies: [
     .package(url: "https://github.com/SnapKit/SnapKit", from: "5.0.1"),
@@ -65,10 +64,6 @@ var package = Package(
     .package(url: "https://github.com/SDWebImage/SDWebImage", exact: "5.10.3"),
     .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI", from: "2.2.0"),
     .package(url: "https://github.com/nmdias/FeedKit", from: "9.1.2"),
-    .package(
-      url: "https://github.com/brave/PanModal",
-      revision: "e67e9eff53c05f19b41bbb2ca7d27ff5859a586c"
-    ),
     .package(url: "https://github.com/apple/swift-collections", from: "1.0.0"),
     .package(url: "https://github.com/siteline/SwiftUI-Introspect", from: "0.1.3"),
     .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
@@ -292,7 +287,6 @@ var package = Package(
       dependencies: [
         "Strings",
         "DesignSystem",
-        "PanModal",
         "SDWebImage",
         "SnapKit",
         .product(name: "Introspect", package: "SwiftUI-Introspect"),
@@ -316,8 +310,7 @@ var package = Package(
     ),
     .target(
       name: "DesignSystem",
-      dependencies: ["Then", "NalaAssets"],
-      plugins: ["LeoAssetsPlugin"]
+      dependencies: ["Then", "NalaAssets"]
     ),
     .binaryTarget(name: "NalaAssets", path: "../../../out/ios_current_link/NalaAssets.xcframework"),
     .binaryTarget(
@@ -365,7 +358,6 @@ var package = Package(
         "DesignSystem",
         "Favicon",
         "Strings",
-        "PanModal",
         "SDWebImageSwiftUI",
         "SnapKit",
         "Then",
@@ -507,7 +499,6 @@ var package = Package(
       ],
       plugins: ["LoggerPlugin"]
     ),
-    .testTarget(name: "OnboardingTests", dependencies: ["Onboarding"]),
     .testTarget(
       name: "BraveNewsTests",
       dependencies: ["BraveNews"],
@@ -628,10 +619,6 @@ var package = Package(
     .testTarget(name: "BrowserMenuTests", dependencies: ["BrowserMenu"]),
     .plugin(name: "IntentBuilderPlugin", capability: .buildTool()),
     .plugin(name: "LoggerPlugin", capability: .buildTool()),
-    .plugin(
-      name: "LeoAssetsPlugin",
-      capability: .buildTool()
-    ),
     .executableTarget(name: "LeoAssetCatalogGenerator"),
     .target(
       name: "BraveTalk",

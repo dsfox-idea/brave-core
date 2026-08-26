@@ -28,14 +28,23 @@ bool ContainsBrandVersion(const blink::UserAgentBrandList& brand_list,
 
 }  // namespace
 
+// growser (#82): the brand a site reads must be Chrome's, not this browser's.
+// Sites that decide we are not Chrome stop loading, so the client-hint brand
+// list is one of the places we must be indistinguishable. This is the gate on
+// that, and it is deliberately strict about the name: "Brave" is as wrong as
+// "Growser" would be.
 TEST(UserAgentUtilsTest, UserAgentMetadata) {
   auto metadata = GetUserAgentMetadata();
 
   const std::string major_version = version_info::GetMajorVersionNumber();
-  const blink::UserAgentBrandVersion product_brand_version = {"Brave",
-                                                              major_version};
-  EXPECT_TRUE(
-      ContainsBrandVersion(metadata.brand_version_list, product_brand_version));
+  EXPECT_TRUE(ContainsBrandVersion(metadata.brand_version_list,
+                                   {"Google Chrome", major_version}));
+  EXPECT_TRUE(ContainsBrandVersion(metadata.brand_version_list,
+                                   {"Chromium", major_version}));
+  EXPECT_FALSE(ContainsBrandVersion(metadata.brand_version_list,
+                                    {"Brave", major_version}));
+  EXPECT_FALSE(ContainsBrandVersion(metadata.brand_version_list,
+                                    {"Growser", major_version}));
 }
 
 TEST(UserAgentUtilsTest, UserAgentFromCommandLine) {

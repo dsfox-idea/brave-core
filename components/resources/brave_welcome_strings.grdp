@@ -32,6 +32,15 @@
   Import profiles
 </message>
 
+<!-- growser (#92): the crash-reporting choice, made where a person can see it -->
+<message name="IDS_BRAVE_WELCOME_CRASH_REPORTS_LABEL" desc="Label of the checkbox on the first welcome screen that decides whether crash reports are sent">
+  Send crash reports
+</message>
+
+<message name="IDS_BRAVE_WELCOME_CRASH_REPORTS_DESC" desc="Description under the crash reports checkbox on the first welcome screen">
+  A report is a snapshot of the browser taken at the moment it stopped working. It goes to us and to nobody else, and you can change this later in settings.
+</message>
+
 <message name="IDS_BRAVE_WELCOME_SKIP_BUTTON_LABEL" desc="A button to skip the current step">
   Skip
 </message>
@@ -44,10 +53,6 @@
   Next
 </message>
 
-<message name="IDS_BRAVE_WELCOME_FINISH_BUTTON_LABEL" desc="A button that exits the welcome page, inidicating all steps has been completed">
-  Finish
-</message>
-
 <message name="IDS_BRAVE_WELCOME_SET_DEFAULT_BUTTON_LABEL" desc="A button that sets Growser browser as default">
   Set Growser as default browser
 </message>
@@ -56,32 +61,8 @@
   Select All
 </message>
 
-<message name="IDS_BRAVE_WELCOME_HELP_IMPROVE_BRAVE_TITLE" desc="A title for screen that asks user to opt-in for analytics and reports">
-  Help make Growser better.
-</message>
-
-<message name="IDS_BRAVE_WELCOME_STABILITY_DIAGNOSTICS_TITLE" desc="A title for screen that asks user to opt-in for diagnostic reports (Growser Origin)">
-  Stability
-</message>
-
-<message name="IDS_BRAVE_WELCOME_SEND_REPORTS_LABEL" desc="A checkbox label for user to opt-in opt-out to send diagnostic reports">
-  Send diagnostic reports if you experience a crash or freeze. <ph name="LINK_BEFORE">$1</ph>Learn more.<ph name="LINK_AFTER">/$1</ph>
-</message>
-
-<message name="IDS_BRAVE_WELCOME_SEND_INSIGHTS_LABEL" desc="A checkbox label for user to opt-in opt-out to share anonymous, product insights information">
-  Share private and anonymous product insights about what features are being used by Growser's users. <ph name="LINK_BEFORE">$1</ph>Learn more.<ph name="LINK_AFTER">/$1</ph>
-</message>
-
 <message name="IDS_BRAVE_WELCOME_SETUP_COMPLETE_LABEL" desc="A title for screen when user has completed all the steps">
   Setup complete
-</message>
-
-<message name="IDS_BRAVE_WELCOME_CHANGE_SETTINGS_NOTE" desc="A footnote with a link to change settings.">
-  Change these choices at any time in Growser at <ph name="LINK_BEFORE1">$1</ph>brave://settings/privacy<ph name="LINK_AFTER2">/$1</ph>.
-</message>
-
-<message name="IDS_BRAVE_WELCOME_PRIVACY_POLICY_NOTE" desc="A footnote with a link to Growser's privacy polcy.">
-  Read our full <ph name="LINK_BEFORE">$1</ph>Privacy Policy<ph name="LINK_AFTER">/$1</ph>
 </message>
 
 <message name="IDS_BRAVE_WELCOME_SELECT_THEME_LABEL" desc="A title for screen to select color theme">
@@ -104,6 +85,7 @@
   Dark mode
 </message>
 
+<if expr="enable_web_discovery">
 <message name="IDS_BRAVE_WELCOME_HELP_WDP_TITLE" desc="A title in 'help wdp' page">
   Want better search results?
 </message>
@@ -127,6 +109,7 @@
 <message name="IDS_BRAVE_WELCOME_HELP_WDP_REJECT" desc="A label 'help wdp' page">
   Maybe later
 </message>
+</if>
 
 <message name="IDS_WELCOME_HEADER" desc="A message which will appear as the header on the Welcome UI if the user has never run Growser before.">
   Welcome to Growser

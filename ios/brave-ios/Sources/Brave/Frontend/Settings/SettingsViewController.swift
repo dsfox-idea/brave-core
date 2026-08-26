@@ -316,9 +316,19 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   }()
 
   private lazy var defaultBrowserSection: Static.Section = {
-    let addToDockRows: [Row] =
-      AddToDockEligibility.isEligible
-      ? [
+    Static.Section(
+      rows: [
+        Row(
+          text: Strings.setDefaultBrowserSettingsCell,
+          selection: { [unowned self] in
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+              return
+            }
+            UIApplication.shared.open(settingsUrl)
+          },
+          image: UIImage(braveSystemNamed: "leo.set.as-default"),
+          cellClass: MultilineButtonCell.self
+        ),
         Row(
           text: Strings.addToDockSettingsCell,
           selection: { [weak self] in
@@ -326,7 +336,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
             let controller = OnboardingController(
               environment: .init(
                 p3aUtils: p3aUtilities,
-                attributionManager: attributionManager
+                attributionManager: attributionManager,
+                localState: localState
               ),
               steps: [.addToDock],
               showSplashScreen: false,
@@ -337,24 +348,9 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
             }
             self.present(controller, animated: true)
           },
+          image: UIImage(braveSystemNamed: "leo.dock"),
           cellClass: MultilineButtonCell.self
-        )
-      ]
-      : []
-
-    return Static.Section(
-      rows: [
-        Row(
-          text: Strings.setDefaultBrowserSettingsCell,
-          selection: { [unowned self] in
-            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-              return
-            }
-            UIApplication.shared.open(settingsUrl)
-          },
-          cellClass: MultilineButtonCell.self
-        )
-      ] + addToDockRows + [
+        ),
         Row(
           text: Strings.importBrowsingDataSettingsMenuTitle,
           selection: { [unowned self] in
@@ -377,8 +373,9 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
             )
             self.navigationController?.pushViewController(controller, animated: true)
           },
+          image: UIImage(braveSystemNamed: "leo.import.arrow"),
           cellClass: MultilineButtonCell.self
-        )
+        ),
       ]
     )
   }()
@@ -723,6 +720,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           .BRAVE_ACCOUNT_RESEND_CONFIRMATION_EMAIL_MAXIMUM_SEND_ATTEMPTS_EXCEEDED,
         .emailAlreadyVerified:
           .BRAVE_ACCOUNT_RESEND_CONFIRMATION_EMAIL_ALREADY_VERIFIED,
+        .maximumCodeVerificationAttemptsExceeded:
+          .BRAVE_ACCOUNT_RESEND_CONFIRMATION_EMAIL_MAXIMUM_CODE_VERIFICATION_ATTEMPTS_EXCEEDED,
         .tokenHasExpired:
           .BRAVE_ACCOUNT_RESEND_CONFIRMATION_EMAIL_TOKEN_HAS_EXPIRED,
       ],
@@ -748,7 +747,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         .emailAlreadyVerified:
           .BRAVE_ACCOUNT_PASSWORD_RESET_EMAIL_ALREADY_VERIFIED,
         .maximumCodeVerificationAttemptsExceeded:
-          .BRAVE_ACCOUNT_PASSWORD_RESET_MAXIMUM_CODE_VERIFICATION_ATTEMPTS_EXCEEDED,
+          .BRAVE_ACCOUNT_RESEND_CONFIRMATION_EMAIL_MAXIMUM_CODE_VERIFICATION_ATTEMPTS_EXCEEDED,
         .invalidVerificationCode:
           .BRAVE_ACCOUNT_REGISTER_INVALID_VERIFICATION_CODE,
         .tokenHasExpired:
@@ -784,6 +783,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
                   ),
                   braveCore: braveCore,
                   p3aUtils: p3aUtilities,
+                  localState: localState,
                   rewards: rewards,
                   braveStats: braveCore.braveStats,
                   webcompatReporterHandler: WebcompatReporter.ServiceFactory.get(
@@ -1322,7 +1322,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       optionsViewController.navigationItem.title = Strings.themesDisplayBrightness
 
       let nightModeSection = Section(
-        header: .title(Strings.NightMode.sectionTitle.uppercased()),
+        header: .title(Strings.NightMode.sectionTitle),
         rows: [
           .boolRow(
             title: Strings.NightMode.settingsTitle,
@@ -1644,7 +1644,10 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? ""
     )
     let titleLabel = UITableViewHeaderFooterView().then {
-      $0.textLabel?.text = Strings.about.uppercased()
+      $0.textLabel?.text = Strings.about
+      if #unavailable(iOS 26.0) {
+        $0.textLabel?.text = $0.textLabel?.text?.uppercased()
+      }
       $0.isUserInteractionEnabled = true
       $0.addGestureRecognizer(
         UITapGestureRecognizer(target: self, action: #selector(tappedAboutHeader))
@@ -1887,7 +1890,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
             self.navigationController?.pushViewController(
               RetentionPreferencesDebugMenuViewController(
                 p3aUtilities: p3aUtilities,
-                attributionManager: attributionManager
+                attributionManager: attributionManager,
+                localState: localState
               ),
               animated: true
             )

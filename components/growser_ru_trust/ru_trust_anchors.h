@@ -10,12 +10,13 @@
 
 namespace growser_ru_trust {
 
-// Значение по умолчанию для pref kCACertificatesWithConstraints: корень НУЦ
-// Минцифры («Russian Trusted Root CA») с доверием, ограниченным белым списком
-// доменов. Вне списка корень не может подтвердить ни один сертификат, поэтому
-// он не даёт возможности подменить произвольный сайт (growser#36).
+// The default value of the kCACertificatesWithConstraints pref: the Russian
+// Ministry of Digital Development root ("Russian Trusted Root CA"), trusted
+// only for an allowlist of domains. Outside that list the root vouches for
+// nothing, so it cannot be used to impersonate an arbitrary site (growser#36).
 //
-// Формат совпадает с enterprise-политикой CACertificatesWithConstraints:
+// The shape is the one the CACertificatesWithConstraints enterprise policy
+// uses:
 // [{"certificate": <base64 DER>, "constraints": {"permitted_dns_names": [...]}}]
 base::ListValue GetTrustAnchorsPrefDefault();
 

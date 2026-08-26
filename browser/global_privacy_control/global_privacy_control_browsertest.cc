@@ -216,7 +216,7 @@ class GlobalPrivacyControlPolicyTest : public GlobalPrivacyControlBrowserTest {
 
   void SetGlobalPrivacyControlPolicy(bool enabled) {
     policy::PolicyMap policies;
-    policies.Set(policy::key::kBraveGlobalPrivacyControlEnabled,
+    policies.Set(policy::key::kGrowserGlobalPrivacyControlEnabled,
                  policy::POLICY_LEVEL_MANDATORY, policy::POLICY_SCOPE_USER,
                  policy::POLICY_SOURCE_PLATFORM, base::Value(enabled), nullptr);
     provider_.UpdateChromePolicy(policies);

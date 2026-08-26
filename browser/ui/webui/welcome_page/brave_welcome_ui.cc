@@ -15,23 +15,20 @@
 #include "base/task/single_thread_task_runner.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/ui/webui/brave_webui_source.h"
+#include "brave/browser/ui/webui/brave_welcome_page/brave_welcome_page_prefs.h"
 #include "brave/browser/ui/webui/settings/brave_import_bulk_data_handler.h"
 #include "brave/browser/ui/webui/settings/brave_search_engines_handler.h"
-#include "brave/browser/ui/webui/welcome_page/brave_welcome_ui_prefs.h"
 #include "brave/browser/ui/webui/welcome_page/welcome_dom_handler.h"
 #include "brave/components/brave_welcome/common/features.h"
 #include "brave/components/brave_welcome/resources/grit/brave_welcome_generated_map.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
-#include "brave/components/p3a/pref_names.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
-#include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/browser_window/public/profile_browser_collection.h"
-#include "chrome/browser/ui/webui/settings/privacy_sandbox_handler.h"
 #include "chrome/browser/ui/webui/settings/settings_default_browser_handler.h"
 #include "chrome/browser/ui/webui/theme_source.h"
 #include "chrome/common/pref_names.h"
@@ -39,7 +36,6 @@
 #include "components/country_codes/country_codes.h"
 #include "components/grit/brave_components_resources.h"
 #include "components/grit/brave_components_strings.h"
-#include "components/metrics/metrics_pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "components/regional_capabilities/regional_capabilities_prefs.h"
 #include "content/public/browser/gpu_data_manager.h"
@@ -65,22 +61,15 @@ constexpr webui::LocalizedString kLocalizedStrings[] = {
     {"braveWelcomeImportProfilesButtonLabel",
      IDS_BRAVE_WELCOME_IMPORT_PROFILES_BUTTON_LABEL},
     {"braveWelcomeSkipButtonLabel", IDS_BRAVE_WELCOME_SKIP_BUTTON_LABEL},
+    {"braveWelcomeCrashReportsLabel", IDS_BRAVE_WELCOME_CRASH_REPORTS_LABEL},
+    {"braveWelcomeCrashReportsDesc", IDS_BRAVE_WELCOME_CRASH_REPORTS_DESC},
     {"braveWelcomeBackButtonLabel", IDS_BRAVE_WELCOME_BACK_BUTTON_LABEL},
     {"braveWelcomeNextButtonLabel", IDS_BRAVE_WELCOME_NEXT_BUTTON_LABEL},
-    {"braveWelcomeFinishButtonLabel", IDS_BRAVE_WELCOME_FINISH_BUTTON_LABEL},
     {"braveWelcomeSetDefaultButtonLabel",
      IDS_BRAVE_WELCOME_SET_DEFAULT_BUTTON_LABEL},
     {"braveWelcomeSelectAllButtonLabel",
      IDS_BRAVE_WELCOME_SELECT_ALL_BUTTON_LABEL},
-    {"braveWelcomeHelpImproveBraveTitle",
-     IDS_BRAVE_WELCOME_HELP_IMPROVE_BRAVE_TITLE},
-    {"braveWelcomeStabilityDiagnosticsTitle",
-     IDS_BRAVE_WELCOME_STABILITY_DIAGNOSTICS_TITLE},
-    {"braveWelcomeSendReportsLabel", IDS_BRAVE_WELCOME_SEND_REPORTS_LABEL},
-    {"braveWelcomeSendInsightsLabel", IDS_BRAVE_WELCOME_SEND_INSIGHTS_LABEL},
     {"braveWelcomeSetupCompleteLabel", IDS_BRAVE_WELCOME_SETUP_COMPLETE_LABEL},
-    {"braveWelcomeChangeSettingsNote", IDS_BRAVE_WELCOME_CHANGE_SETTINGS_NOTE},
-    {"braveWelcomePrivacyPolicyNote", IDS_BRAVE_WELCOME_PRIVACY_POLICY_NOTE},
     {"braveWelcomeSelectThemeLabel", IDS_BRAVE_WELCOME_SELECT_THEME_LABEL},
     {"braveWelcomeSelectThemeNote", IDS_BRAVE_WELCOME_SELECT_THEME_NOTE},
     {"braveWelcomeSelectThemeSystemLabel",
@@ -89,25 +78,15 @@ constexpr webui::LocalizedString kLocalizedStrings[] = {
      IDS_BRAVE_WELCOME_SELECT_THEME_LIGHT_LABEL},
     {"braveWelcomeSelectThemeDarkLabel",
      IDS_BRAVE_WELCOME_SELECT_THEME_DARK_LABEL},
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
     {"braveWelcomeHelpWDPTitle", IDS_BRAVE_WELCOME_HELP_WDP_TITLE},
     {"braveWelcomeHelpWDPSubtitle", IDS_BRAVE_WELCOME_HELP_WDP_SUBTITLE},
     {"braveWelcomeHelpWDPDescription", IDS_BRAVE_WELCOME_HELP_WDP_DESCRIPTION},
     {"braveWelcomeHelpWDPLearnMore", IDS_BRAVE_WELCOME_HELP_WDP_LEARN_MORE},
     {"braveWelcomeHelpWDPAccept", IDS_BRAVE_WELCOME_HELP_WDP_ACCEPT},
-    {"braveWelcomeHelpWDPReject", IDS_BRAVE_WELCOME_HELP_WDP_REJECT}};
-
-void OpenJapanWelcomePage(Profile* profile) {
-  auto* browser = ProfileBrowserCollection::GetForProfile(profile)
-                      ->FindTabbedBrowser()
-                      ->GetBrowserForMigrationOnly();
-  if (browser) {
-    content::OpenURLParams open_params(
-        GURL("https://brave.com/ja/desktop-ntp-tutorial"), content::Referrer(),
-        WindowOpenDisposition::NEW_BACKGROUND_TAB,
-        ui::PAGE_TRANSITION_AUTO_TOPLEVEL, false);
-    browser->OpenURL(open_params, /*navigation_handle_callback=*/{});
-  }
-}
+    {"braveWelcomeHelpWDPReject", IDS_BRAVE_WELCOME_HELP_WDP_REJECT},
+#endif  // BUILDFLAG(ENABLE_WEB_DISCOVERY)
+};
 
 }  // namespace
 
@@ -143,19 +122,15 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
       regional_capabilities::RegionalCapabilitiesServiceFactory::GetForProfile(
           profile)));
 
-  // Open additional page in Japanese region
+  // growser (#78/#81): no extra page on first run in Japan. Three seconds into
+  // a first run there, this opened a background tab on
+  // brave.com/ja/desktop-ntp-tutorial - a tutorial for another browser's new
+  // tab page, shown by ours, before the user had done anything. We have no
+  // Japanese tutorial of our own, and the honest alternative to someone else's
+  // is none. The country is still read: the onboarding cards below use it.
   country_codes::CountryId country_id =
       country_codes::CountryId::Deserialize(profile->GetPrefs()->GetInteger(
           regional_capabilities::prefs::kCountryIDAtInstall));
-  const bool is_jpn = country_id == country_codes::CountryId("JP");
-  if (!profile->GetPrefs()->GetBoolean(
-          brave::welcome_ui::prefs::kHasSeenBraveWelcomePage)) {
-    if (is_jpn) {
-      base::SingleThreadTaskRunner::GetCurrentDefault()->PostDelayedTask(
-          FROM_HERE, base::BindOnce(&OpenJapanWelcomePage, profile),
-          base::Seconds(3));
-    }
-  }
 
   for (const auto& str : kLocalizedStrings) {
     std::u16string l10n_str = l10n_util::GetStringUTF16(str.id);
@@ -173,7 +148,6 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
       content::GpuDataManager::GetInstance()->HardwareAccelerationEnabled());
 
   // Add managed state information for welcome flow logic
-  PrefService* local_state = g_browser_process->local_state();
   source->AddBoolean(
       "isWebDiscoveryEnabledManaged",
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY)
@@ -181,14 +155,9 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
 #else
       false);
 #endif
-  source->AddBoolean("isMetricsReportingEnabledManaged",
-                     local_state->IsManagedPreference(
-                         metrics::prefs::kMetricsReportingEnabled));
-  source->AddBoolean("isP3AEnabledManaged",
-                     local_state->IsManagedPreference(p3a::kP3AEnabled));
 
   profile->GetPrefs()->SetBoolean(
-      brave::welcome_ui::prefs::kHasSeenBraveWelcomePage, true);
+      brave_welcome_page::prefs::kHasSeenBraveWelcomePage, true);
 
   AddBackgroundColorToSource(source, web_ui->GetWebContents());
 

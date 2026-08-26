@@ -7,18 +7,13 @@ import * as React from 'react'
 import Icon from '@brave/leo/react/icon'
 import Toggle from '@brave/leo/react/toggle'
 
-import {
-  TopSitesListKind,
-  sponsoredSiteLearnMoreURL,
-} from '../../state/top_sites_store'
+import { TopSitesListKind } from '../../state/top_sites_store'
 import {
   useTopSitesState,
   useTopSitesActions,
 } from '../../context/top_sites_context'
 import { getString } from '../../lib/strings'
 import { SettingsPanel } from './settings_panel'
-import { formatString } from '$web-common/formatString'
-import { Link } from '../common/link'
 import classNames from '$web-common/classnames'
 
 import { style } from './top_sites_panel.style'
@@ -27,7 +22,6 @@ export function TopSitesPanel() {
   const actions = useTopSitesActions()
 
   const showTopSites = useTopSitesState((s) => s.showTopSites)
-  const showSponsoredSites = useTopSitesState((s) => s.showSponsoredSites)
   const listKind = useTopSitesState((s) => s.topSitesListKind)
 
   function renderSelectedMarker(kind: TopSitesListKind) {
@@ -58,35 +52,10 @@ export function TopSitesPanel() {
           {getString(S.NEW_TAB_SHOW_TOP_SITES_LABEL)}
         </span>
       </Toggle>
-      {showTopSites && (
-        <Toggle
-          className='toggle-row'
-          size='small'
-          checked={showSponsoredSites}
-          onChange={({ checked }) => {
-            actions.setShowSponsoredSites(checked)
-          }}
-        >
-          <span className='label'>
-            {getString(S.NEW_TAB_SHOW_SPONSORED_SITES_LABEL)}
-            <div
-              className='subtext'
-              onClick={(e) => e.stopPropagation()}
-            >
-              {formatString(getString(S.NEW_TAB_SPONSORED_SITES_DESCRIPTION), {
-                $1: (content) => (
-                  <Link
-                    url={sponsoredSiteLearnMoreURL}
-                    openInNewTab
-                  >
-                    {content}
-                  </Link>
-                ),
-              })}
-            </div>
-          </span>
-        </Toggle>
-      )}
+      {/* growser (#78): no "show sponsored sites" switch. The sites come from
+          the NTP background-images component, and our component updater gets
+          403 from Brave for want of a service key, so SponsoredSitesFacade
+          always returns an empty list. The switch controlled nothing. */}
       {showTopSites && (
         <div className='list-view-options'>
           <button

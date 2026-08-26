@@ -99,9 +99,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, DisabledFeatureURLLoadTest) {
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, OpenNewTabWhenTabStripIsEmpty) {
   ASSERT_TRUE(embedded_test_server()->Start());
-  Browser* new_browser = OpenNewBrowser(browser()->profile());
+  Browser* new_browser = OpenNewBrowser(browser()->GetProfile());
   ASSERT_TRUE(new_browser);
-  new_browser->profile()->GetPrefs()->SetBoolean(kEnableClosingLastTab, false);
+  new_browser->GetProfile()->GetPrefs()->SetBoolean(kEnableClosingLastTab,
+                                                    false);
   TabStripModel* tab_strip = new_browser->tab_strip_model();
   auto page_url = embedded_test_server()->GetURL("/empty.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(new_browser, page_url));
@@ -137,7 +138,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, OpenNewTabWhenTabStripIsEmpty) {
   ASSERT_EQ(3, tab_strip->count());
   EXPECT_EQ(GlobalBrowserCollection::GetInstance()->GetSize(), 2u);
   // Close the browser window.
-  new_browser->window()->Close();
+  BrowserWindow::FromBrowser(new_browser)->Close();
   base::RunLoop().RunUntilIdle();
   EXPECT_EQ(GlobalBrowserCollection::GetInstance()->GetSize(), 1u);
 }
@@ -145,9 +146,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, OpenNewTabWhenTabStripIsEmpty) {
 IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest,
                        DoNotOpenNewTabWhenTabStripIsEmpty) {
   ASSERT_TRUE(embedded_test_server()->Start());
-  Browser* new_browser = OpenNewBrowser(browser()->profile());
+  Browser* new_browser = OpenNewBrowser(browser()->GetProfile());
   ASSERT_TRUE(new_browser);
-  new_browser->profile()->GetPrefs()->SetBoolean(kEnableClosingLastTab, true);
+  new_browser->GetProfile()->GetPrefs()->SetBoolean(kEnableClosingLastTab,
+                                                    true);
   TabStripModel* tab_strip = new_browser->tab_strip_model();
   auto page_url = embedded_test_server()->GetURL("/empty.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(new_browser, page_url));
@@ -167,9 +169,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest,
   // Given that kEnableClosingLastTab is false, which normally creates a new tab
   // when tab strip is empty.
   ASSERT_TRUE(embedded_test_server()->Start());
-  Browser* new_browser = OpenNewBrowser(browser()->profile());
+  Browser* new_browser = OpenNewBrowser(browser()->GetProfile());
   ASSERT_TRUE(new_browser);
-  new_browser->profile()->GetPrefs()->SetBoolean(kEnableClosingLastTab, false);
+  new_browser->GetProfile()->GetPrefs()->SetBoolean(kEnableClosingLastTab,
+                                                    false);
 
   // When "Bring all tabs to this window" commands executes
   brave::BringAllTabs(browser());
@@ -182,8 +185,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest,
                        CloseBrowserAfterDetachingAllTabToAnotherBrowser) {
-  browser()->profile()->GetPrefs()->SetBoolean(kEnableClosingLastTab, false);
-  Browser* browser2 = CreateBrowser(browser()->profile());
+  browser()->GetProfile()->GetPrefs()->SetBoolean(kEnableClosingLastTab, false);
+  Browser* browser2 = CreateBrowser(browser()->GetProfile());
   ASSERT_TRUE(browser2);
 
   TabStripModel* tab_strip = browser()->tab_strip_model();
@@ -202,7 +205,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest,
 IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest,
                        CreateAnotherWindowWithExistingTab) {
   ASSERT_TRUE(embedded_test_server()->Start());
-  browser()->profile()->GetPrefs()->SetBoolean(kEnableClosingLastTab, false);
+  browser()->GetProfile()->GetPrefs()->SetBoolean(kEnableClosingLastTab, false);
   TabStripModel* tab_strip = browser()->tab_strip_model();
 
   auto page_url = embedded_test_server()->GetURL("/empty.html");
@@ -243,7 +246,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTest) {
-  auto* profile = browser()->profile();
+  auto* profile = browser()->GetProfile();
   auto* contents = browser()->tab_strip_model()->GetActiveWebContents();
 
   // Check Bookmark bar is hidden by default for non NTP.
@@ -251,7 +254,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTest) {
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(browser())->bookmark_bar_state());
 
-  // growser: показ панели закладок на NTP выключен по умолчанию (#28).
+  // growser: showing the bookmark bar on the NTP is off by default (#28).
   EXPECT_FALSE(profile->GetPrefs()->GetBoolean(
       bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP));
 
@@ -260,7 +263,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTest) {
       content::NavigateToURL(contents, GURL(chrome::kChromeUINewTabURL)));
   EXPECT_TRUE(NewTabUI::IsNewTab(contents->GetLastCommittedURL()));
 
-  // growser: панель закладок на NTP скрыта по умолчанию (нет лишнего ряда).
+  // growser: the bookmark bar is hidden on the NTP by default (no extra row).
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(browser())->bookmark_bar_state());
 
@@ -281,7 +284,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTest) {
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTestIncognito) {
   Browser* incognito = CreateIncognitoBrowser();
-  auto* profile = incognito->profile();
+  auto* profile = incognito->GetProfile();
   auto* contents = incognito->tab_strip_model()->GetActiveWebContents();
 
   // Check Bookmark bar is hidden by default for non NTP.
@@ -289,7 +292,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTestIncognito) {
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(incognito)->bookmark_bar_state());
 
-  // growser: показ панели закладок на NTP выключен по умолчанию (#28).
+  // growser: showing the bookmark bar on the NTP is off by default (#28).
   EXPECT_FALSE(profile->GetPrefs()->GetBoolean(
       bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP));
 
@@ -298,7 +301,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, BookmarkBarOnNTPTestIncognito) {
       content::NavigateToURL(contents, GURL(chrome::kChromeUINewTabURL)));
   EXPECT_TRUE(NewTabUI::IsNewTab(contents->GetLastCommittedURL()));
 
-  // growser: панель закладок на NTP скрыта по умолчанию.
+  // growser: the bookmark bar is hidden on the NTP by default.
   EXPECT_EQ(BookmarkBar::HIDDEN,
             BookmarkBarController::From(incognito)->bookmark_bar_state());
 
@@ -333,7 +336,7 @@ class BraveBrowserBrowserTestWithBringAllTabsFeature
 
 IN_PROC_BROWSER_TEST_P(BraveBrowserBrowserTestWithBringAllTabsFeature,
                        CanBringAllTabs) {
-  Browser* new_browser = OpenNewBrowser(browser()->profile());
+  Browser* new_browser = OpenNewBrowser(browser()->GetProfile());
   ASSERT_TRUE(new_browser);
   if (GetParam()) {
     EXPECT_TRUE(brave::CanBringAllTabs(browser()));

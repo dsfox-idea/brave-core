@@ -319,7 +319,10 @@ void AddBraveColorMixerForAllThemes(ui::ColorProvider* provider,
   mixer[kColorToolbarButtonActivated] = {SkColorSetRGB(0x7C, 0x91, 0xFF)};
   mixer[kColorSidebarButtonPressed] = {kColorToolbarButtonActivated};
 
-  mixer[kColorLocationBarFocusRing] = {nala::kColorPrimitivePrimary50};
+  // growser (#32): the omnibox focus ring is the Growser brand green
+  // (#1EA362), not the default Nala primary (#5b67e8, Brave blue-violet). It
+  // applies to every theme; private and Tor windows override it below.
+  mixer[kColorLocationBarFocusRing] = {SkColorSetRGB(0x1E, 0xA3, 0x62)};
 
   // Search conversion button in omnibox.
   mixer[kColorSearchConversionButtonText] = {nala::kColorPrimary60};

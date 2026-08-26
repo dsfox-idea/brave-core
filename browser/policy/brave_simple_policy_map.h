@@ -24,6 +24,7 @@
 #include "brave/components/local_ai/buildflags/buildflags.h"
 #include "brave/components/p3a/pref_names.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
+#include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/query_filter/common/pref_names.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
@@ -83,6 +84,10 @@
 #include "brave/components/email_aliases/pref_names.h"
 #endif
 
+#if BUILDFLAG(ENABLE_PSST)
+#include "brave/components/psst/core/browser/pref_names.h"
+#endif
+
 namespace policy {
 
 inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
@@ -98,7 +103,7 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
      kManagedBraveShieldsDisabledForUrls, base::Value::Type::LIST},
     {policy::key::kBraveShieldsEnabledForUrls,
      kManagedBraveShieldsEnabledForUrls, base::Value::Type::LIST},
-    {policy::key::kBraveSyncUrl, brave_sync::kCustomSyncServiceUrl,
+    {policy::key::kGrowserSyncUrl, brave_sync::kCustomSyncServiceUrl,
      base::Value::Type::STRING},
 #if BUILDFLAG(ENABLE_TOR)
     {policy::key::kTorDisabled, tor::prefs::kTorDisabled,
@@ -113,15 +118,13 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
      base::Value::Type::BOOLEAN},
 #endif
 #if BUILDFLAG(ENABLE_LOCAL_AI)
-    {policy::key::kBraveLocalAIEnabled, local_ai::prefs::kBraveLocalAIEnabled,
+    {policy::key::kGrowserLocalAIEnabled, local_ai::prefs::kBraveLocalAIEnabled,
      base::Value::Type::BOOLEAN},
 #endif
-    {policy::key::kBraveP3AEnabled, p3a::kP3AEnabled,
-     base::Value::Type::BOOLEAN},
-    {policy::key::kBraveStatsPingEnabled, kStatsReportingEnabled,
+    {policy::key::kGrowserP3AEnabled, p3a::kP3AEnabled,
      base::Value::Type::BOOLEAN},
 #if BUILDFLAG(ENABLE_PLAYLIST)
-    {policy::key::kBravePlaylistEnabled, playlist::kPlaylistEnabledPref,
+    {policy::key::kGrowserPlaylistEnabled, playlist::kPlaylistEnabledPref,
      base::Value::Type::BOOLEAN},
 #endif
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY)
@@ -137,11 +140,11 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
      base::Value::Type::BOOLEAN},
 #endif
 #if BUILDFLAG(ENABLE_SPEEDREADER)
-    {policy::key::kBraveSpeedreaderEnabled, speedreader::kSpeedreaderEnabled,
+    {policy::key::kGrowserSpeedreaderEnabled, speedreader::kSpeedreaderEnabled,
      base::Value::Type::BOOLEAN},
 #endif
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
-    {policy::key::kBraveWaybackMachineEnabled, kBraveWaybackMachineEnabled,
+    {policy::key::kGrowserWaybackMachineEnabled, kBraveWaybackMachineEnabled,
      base::Value::Type::BOOLEAN},
 #endif
 #if BUILDFLAG(DEPRECATE_IPFS)
@@ -152,16 +155,20 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
     {policy::key::kEmailAliasesEnabled,
      email_aliases::prefs::kEmailAliasesEnabled, base::Value::Type::BOOLEAN},
 #endif
-    {policy::key::kBraveReduceLanguageEnabled,
+#if BUILDFLAG(ENABLE_PSST)
+    {policy::key::kPsstEnabled, psst::prefs::kPsstEnabled,
+     base::Value::Type::BOOLEAN},
+#endif
+    {policy::key::kGrowserReduceLanguageEnabled,
      brave_shields::prefs::kReduceLanguageEnabled, base::Value::Type::BOOLEAN},
-    {policy::key::kBraveDeAmpEnabled, de_amp::kDeAmpPrefEnabled,
+    {policy::key::kGrowserDeAmpEnabled, de_amp::kDeAmpPrefEnabled,
      base::Value::Type::BOOLEAN},
-    {policy::key::kBraveDebouncingEnabled, debounce::prefs::kDebounceEnabled,
+    {policy::key::kGrowserDebouncingEnabled, debounce::prefs::kDebounceEnabled,
      base::Value::Type::BOOLEAN},
-    {policy::key::kBraveTrackingQueryParametersFilteringEnabled,
+    {policy::key::kGrowserTrackingQueryParametersFilteringEnabled,
      query_filter::kTrackingQueryParametersFilteringEnabled,
      base::Value::Type::BOOLEAN},
-    {policy::key::kBraveGlobalPrivacyControlEnabled,
+    {policy::key::kGrowserGlobalPrivacyControlEnabled,
      global_privacy_control::kGlobalPrivacyControlEnabled,
      base::Value::Type::BOOLEAN},
 };

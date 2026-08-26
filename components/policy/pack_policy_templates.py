@@ -4,11 +4,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-# Script that prepares a Brave-specific version of the `policy_templates.zip`
-# file that folks expect for administering Brave via Windows group policy.
+# Script that prepares a growser-specific version of the `policy_templates.zip`
+# file that folks expect for administering Growser via Windows group policy.
+#
+# growser (#62): the rename below is what gives the files the names an
+# administrator sees - upstream generates chrome.admx / chrome.adm / chrome.adml
+# and this is the only place they become ours.
 #
 # For more info, see:
-# https://support.brave.app/hc/en-us/articles/360039248271-Group-Policy
+# https://github.com/dsfox-idea/growser
 # and
 # https://github.com/brave/brave-browser/issues/26502
 #
@@ -65,7 +69,7 @@ def _pack_policy_templates(chrome_policy_zip, dest_zip):
                 for filename in filenames:
                     filepath = join(dirpath, filename)
                     arcname = relpath(filepath,
-                                      tmp_dir).replace('chrome', 'brave')
+                                      tmp_dir).replace('chrome', 'growser')
                     dest_zipfile.write(filepath, arcname=arcname)
 
 if __name__ == '__main__':

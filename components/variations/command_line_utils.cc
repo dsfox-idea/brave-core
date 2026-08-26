@@ -43,6 +43,19 @@ void AppendBraveCommandLineOptions(base::CommandLine& command_line) {
         variations::switches::kDisableVariationsSeedFetchThrottling);
   }
 
+  // growser: an empty BRAVE_VARIATIONS_SERVER_URL means "we run no variations
+  // server". Leaving the switches out entirely is the correct off-state, not a
+  // workaround: for a build that is not GOOGLE_CHROME_BRANDING - ours -
+  // VariationsService::IsFetchingEnabled() returns false unless
+  // --variations-server-url is present, so nothing is ever fetched and nothing
+  // fails. The two alternatives are both worse: passing an empty URL makes
+  // GetVariationsServerURL() fall back to Chromium's default
+  // (clientservices.googleapis.com), and passing a dead URL would produce
+  // periodic failing fetches.
+  if (variations_server_url.empty()) {
+    return;
+  }
+
   if (!command_line.HasSwitch(variations::switches::kVariationsServerURL)) {
     command_line.AppendSwitchASCII(variations::switches::kVariationsServerURL,
                                    variations_server_url);

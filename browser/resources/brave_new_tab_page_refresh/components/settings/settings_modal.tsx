@@ -64,8 +64,9 @@ export function SettingsModal(props: Props) {
     switch (view) {
       case 'search':
         return searchFeatureEnabled
-      // growser: секции «Growser News» и «Карты» (виджеты) убраны из настроек
-      // NTP (#29) — это точки входа в удаляемые фичи. Выпил — backlog #30/#31.
+      // growser: the "Growser News" and "Maps" (widgets) sections are out of
+      // the NTP settings (#29) - they are entry points into features being
+      // removed. Removing the features themselves is #30/#31.
       case 'news':
         return false
       case 'widgets':

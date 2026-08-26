@@ -85,20 +85,21 @@ namespace settings {
 namespace {
 
 constexpr char16_t kWebRTCLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/"
-    u"360017989132-How-do-I-change-my-Privacy-Settings-#webrtc";
+    u"https://growser.org/";
+// growser (#78/#81): our repository, not Brave's - these two are shown on the
+// About page and describe how THIS browser is built and what a given version
+// contains.
 constexpr char16_t kBraveBuildInstructionsUrl[] =
-    u"https://github.com/brave/brave-browser/wiki";
+    u"https://github.com/dsfox-idea/brave-core";
 constexpr char16_t kBraveLicenseUrl[] = u"https://mozilla.org/MPL/2.0/";
 constexpr char16_t kBraveReleaseTagPrefix[] =
-    u"https://github.com/brave/brave-browser/releases/tag/v";
+    u"https://github.com/dsfox-idea/brave-core/releases/tag/v";
 #if BUILDFLAG(ENABLE_CONTAINERS)
 constexpr char16_t kContainersLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/39077103885325";
+    u"https://growser.org/features.html#containers";
 #endif
 constexpr char16_t kGoogleLoginLearnMoreURL[] =
-    u"https://github.com/brave/brave-browser/wiki/"
-    u"Allow-Google-login---Third-Parties-and-Extensions";
+    u"https://growser.org/";
 constexpr char16_t kUnstoppableDomainsLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/"
     u"Resolve-Methods-for-Unstoppable-Domains";
@@ -106,16 +107,19 @@ constexpr char16_t kEnsOffchainLookupLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/ENS-offchain-lookup";
 constexpr char16_t kBraveSyncGuideUrl[] =
     u"https://support.brave.app/hc/en-us/articles/360047642371-Sync-FAQ";
+// growser (#78/#81): the five "learn more" links below describe features we
+// ship, and they used to describe them on Brave's site under Brave's name. They
+// now point at our own page, section by section - see site/features.html in the
+// growser repo, which is the source of what growser.org serves.
 constexpr char16_t kDeAmpLearnMoreUrl[] =
-    u"https://support.brave.app/hc/en-us/articles/8611298579981";
+    u"https://growser.org/features.html#de-amp";
 constexpr char16_t kDebounceLearnMoreUrl[] =
-    u"https://brave.com/privacy-updates/11-debouncing/";
+    u"https://growser.org/features.html#debounce";
 constexpr char16_t kEnableNftDiscoveryLearnMoreUrl[] =
     u"https://github.com/brave/brave-browser/wiki/"
     u"NFT-Discovery";
 constexpr char16_t kBlockAllCookiesLearnMoreUrl[] =
-    u"https://github.com/brave/brave-browser/wiki/"
-    u"Block-all-cookies-global-Shields-setting";
+    u"https://growser.org/";
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 constexpr char16_t kLeoCustomModelsLearnMoreURL[] =
@@ -134,18 +138,21 @@ constexpr char16_t kLeoPrivacyPolicyURL[] =
 #endif
 
 constexpr char16_t kAdBlockOnlyModeLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/38076796692109";
+    u"https://growser.org/features.html#adblock-only";
 
 constexpr char16_t kSurveyPanelistLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/36550092449165";
 
 constexpr char16_t kExtensionsV2LearnMoreURL[] =
-    u"https://brave.com/blog/brave-shields-manifest-v3/";
+    u"https://growser.org/features.html#extensions-mv2";
 
 #if BUILDFLAG(ENABLE_PSST)
 constexpr char16_t kPsstLearnMoreUrl[] =
     u"https://support.brave.app/hc/en-us/articles/47405731650957";
 #endif
+
+constexpr char16_t kBraveAccountLearnMoreURL[] =
+    u"https://support.brave.app/hc/en-us/articles/45530506862349";
 
 void BraveAddCommonStrings(content::WebUIDataSource* html_source,
                            Profile* profile) {
@@ -214,6 +221,9 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_BRAVE_ORIGIN_PLAYLIST_TOGGLE_TITLE},
       {"braveEmailAliasesToggleTitle",
        IDS_SETTINGS_BRAVE_ORIGIN_EMAIL_ALIASES_TOGGLE_TITLE},
+#if BUILDFLAG(ENABLE_PSST)
+      {"bravePsstToggleTitle", IDS_SETTINGS_BRAVE_ORIGIN_PSST_TOGGLE_TITLE},
+#endif
       {"braveOriginWebDiscoveryProjectToggleTitle",
        IDS_SETTINGS_BRAVE_ORIGIN_WEB_DISCOVERY_PROJECT_TOGGLE_TITLE},
       {"braveOriginP3AToggleTitle", IDS_SETTINGS_BRAVE_ORIGIN_P3A_TOGGLE_TITLE},
@@ -645,8 +655,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"braveLeoModelSubtitle-chat-claude-sonnet",
        IDS_CHAT_UI_CHAT_CLAUDE_SONNET_SUBTITLE},
       {"braveLeoModelSubtitle-chat-qwen", IDS_CHAT_UI_CHAT_QWEN_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-near-glm-5",
-       IDS_CHAT_UI_CHAT_NEAR_GLM_5_SUBTITLE},
       {"braveLeoModelSubtitle-chat-near-glm-5-1",
        IDS_CHAT_UI_CHAT_NEAR_GLM_5_1_SUBTITLE},
       {"braveLeoModelSubtitle-chat-glm-4-7-flash",
@@ -1302,6 +1310,8 @@ void BraveAddEmailAliasesStrings(content::WebUIDataSource* html_source) {
 void BraveAddBraveAccountStrings(content::WebUIDataSource* html_source) {
   if (brave_account::features::IsBraveAccountEnabled()) {
     html_source->AddLocalizedStrings(webui::kBraveAccountSettingsStrings);
+    html_source->AddString("braveAccountLearnMoreURL",
+                           kBraveAccountLearnMoreURL);
   }
 }
 

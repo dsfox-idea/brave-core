@@ -145,10 +145,6 @@ BASE_DECLARE_FEATURE(kTabManagementTool);
 
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kNEARModels);
-COMPONENT_EXPORT(AI_CHAT_COMMON)
-extern const base::FeatureParam<bool> kNEARModelsEncryption;
-COMPONENT_EXPORT(AI_CHAT_COMMON)
-extern const base::FeatureParam<bool> kNEARModelsEncryptionSearch;
 COMPONENT_EXPORT(AI_CHAT_COMMON) bool IsNEARModelsEnabled();
 
 COMPONENT_EXPORT(AI_CHAT_COMMON)
@@ -202,11 +198,24 @@ BASE_DECLARE_FEATURE(kAIChatConversationShare);
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 extern const base::FeatureParam<std::string> kAIChatConversationShareBaseUrl;
 
+// How long the sharing server keeps a shared conversation before deleting it.
+// Locally stored records of shares are purged on the same schedule so that the
+// share management UI doesn't list shares which no longer exist.
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+extern const base::FeatureParam<int> kAIChatConversationShareExpiryDays;
+
 // Enables copying serialized conversation data as JSON to the clipboard when
 // using the alt+meta modifier keys and the "Copy entire conversation" menu
 // option.
 COMPONENT_EXPORT(AI_CHAT_COMMON)
 BASE_DECLARE_FEATURE(kAIChatExportJSON);
+
+// Enables rendering LaTeX expressions in assistant responses as typeset math.
+// Kill switch: this changes how every assistant response is parsed, so it must
+// remain remotely disableable.
+// https://github.com/brave/brave-browser/issues/56523
+COMPONENT_EXPORT(AI_CHAT_COMMON)
+BASE_DECLARE_FEATURE(kAIChatMathRendering);
 
 }  // namespace ai_chat::features
 

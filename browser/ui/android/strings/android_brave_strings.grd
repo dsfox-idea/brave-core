@@ -180,9 +180,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_ADD_YOUR_SUGGESTIONS"  desc="Text for Add your suggestions">
         Add your suggestions
       </message>
-      <message name="IDS_BRAVE_OPTIONAL"  desc="Text for Optional">
-        Optional
-      </message>
       <message name="IDS_IN_ONE_EMOJI_EXPERIENCE_WITH_BRAVE"  desc="Text for In one emoji, how's your experience with Growser?">
         In one emoji, how's your experience with Growser?
       </message>
@@ -204,8 +201,20 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_THANKS_FOR_YOUR_FEEDBACK"  desc="Text for Thanks for your feedback!">
         Thanks for your feedback!
       </message>
-      <message name="IDS_LET_US_KNOW_HOW_WE_CAN_IMPROVE_BRAVE"  desc="Text for Let us know how we can improve Growser.">
-        Let us know how we can improve Growser.
+      <message name="IDS_LET_US_KNOW_HOW_WE_CAN_IMPROVE_BRAVE"  desc="Text for Let us know how we can improve Growser">
+        Let us know how we can improve Growser
+      </message>
+      <message name="IDS_BRAVE_RATING_SEND_FEEDBACK" desc="Label for the button that submits written feedback from the rating prompt.">
+        Send
+      </message>
+      <message name="IDS_BRAVE_RATING_ADD_SUGGESTIONS_OPTIONAL" desc="Floating label for the optional free-text field on the rating feedback prompt.">
+        Add your suggestions (Optional)
+      </message>
+      <message name="IDS_BRAVE_RATING_FEEDBACK_SENT" desc="Confirmation shown after the user submits written feedback from the rating prompt.">
+        Feedback sent. Thank you!
+      </message>
+      <message name="IDS_BRAVE_RATING_DONT_SHOW_AGAIN" desc="Label for the checkbox on the rating prompt that stops the prompt from being shown again.">
+        Don't show again
       </message>
       <message name="IDS_BRAVE_NOTIFICATION_PERMISSION_RATIONALE_DIALOG_TITLE" desc="The title of a dialog shown to users before asking for notification permission.">
         Growser notifications make it easier
@@ -258,8 +267,8 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_TURN_ON_BRAVE_NOTIFICATIONS" desc="Text for button Turn on Growser notifications">
         Turn on Growser notifications
       </message>
-      <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_SHIELDS" desc="Content description for the button that is enable, disable Growser Shields.">
-        Enable/Disable Growser Shields
+      <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_SHIELDS" desc="Content description for the button that is enable, disable Brave Shields.">
+        Enable/Disable Brave Shields
       </message>
     <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_BRAVE_PIP" desc="Content description for the button that triggers picture-in-picture mode for YouTube videos.">
       Enter picture-in-picture mode
@@ -367,7 +376,7 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
         Analytics
       </message>
       <message name="IDS_BRAVE_SHIELDS_AND_PRIVACY" desc="Label for the settings related to shields and privacy">
-        Growser Shields &amp; privacy
+        Brave Shields &amp; privacy
       </message>
       <message name="IDS_BRAVE_SEARCH_ENGINES" desc="Label for the settings related to the search engines">
         Search engines
@@ -896,7 +905,7 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
         Skip
       </message>
       <message name="IDS_BRAVE_SHIELDS_ONBOARDING_TITLE" desc="Title for brave shield page">
-        Growser Shields
+        Brave Shields
       </message>
       <message name="IDS_TERMS_OF_SERVICE" desc="Text for terms of service">
         Terms of Service
@@ -993,9 +1002,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
         <message name="IDS_WEBAPP" desc="WebApp placeholder used in menu item customization preferences">
         WebApp
-      </message>
-      <message name="IDS_BRAVE_UI_SETTINGS" desc="Settings button text">
-        Settings
       </message>
       <message name="IDS_BRAVE_ADS_EXISTING_USER_OFFER_TITLE" desc="Title for Growser Ads offer.">
         Growser Ads are here!
@@ -1998,9 +2004,6 @@ Are you sure you want to do this?
     </message>
     <message name="IDS_BRAVE_WALLET_SHIELDING" desc="Shielding label">
       Shielding
-    </message>
-    <message name="IDS_BRAVE_WALLET_TOOLBAR_LOCK" desc="Title for brave wallet toolbar lock option.">
-      Lock
     </message>
     <message name="IDS_BRAVE_WALLET_HELP_CENTER" desc="Title for help center link">
       Help center
@@ -3734,7 +3737,7 @@ If you don't accept this request, VPN will not reconnect and your internet conne
       Support our mission &amp; open-source work
     </message>
     <message name="IDS_ORIGIN_PAYWALL_TEXT_2" desc="Growser Origin paywall text">
-      Minimalist browser UI centered on Growser Shields
+      Minimalist browser UI centered on Brave Shields
     </message>
     <message name="IDS_ORIGIN_PAYWALL_TEXT_3" desc="Growser Origin paywall text">
       Maintain core adblock, privacy, &amp; speed

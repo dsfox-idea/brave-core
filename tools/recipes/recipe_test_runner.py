@@ -35,7 +35,11 @@ import sys
 import time
 from typing import TYPE_CHECKING
 
+import gevent
+
+import config_types
 import engine
+from engine_types import PerGreenletStateRegistry
 import simulation
 from recipe_test_api import TestData
 
@@ -45,6 +49,16 @@ if TYPE_CHECKING:
 # -- Recipe discovery ---------------------------------------------------------
 
 
+def _is_resource(path: Path) -> bool:
+    """Whether *path* sits under a `<name>.resources/` directory.
+
+    A `.resources` sibling holds standalone scripts a recipe or module shells
+    out to directly (e.g. via `vpython3`) -- ordinary Python files, not
+    recipes/modules themselves, so discovery must not try to import them.
+    """
+    return any(part.endswith('.resources') for part in path.parts)
+
+
 def _iter_recipe_ids() -> list[str]:
     """Every candidate recipe id, from `recipes/` and module examples/tests."""
     root = engine.RECIPES_ROOT
@@ -52,7 +66,7 @@ def _iter_recipe_ids() -> list[str]:
 
     recipes_root = root / engine.RECIPES_PKG
     for path in sorted(recipes_root.rglob('*.py')):
-        if path.name == '__init__.py':
+        if path.name == '__init__.py' or _is_resource(path):
             continue
         ids.append(path.relative_to(recipes_root).with_suffix('').as_posix())
 
@@ -63,7 +77,7 @@ def _iter_recipe_ids() -> list[str]:
             if not directory.is_dir():
                 continue
             for path in sorted(directory.rglob('*.py')):
-                if path.name == '__init__.py':
+                if path.name == '__init__.py' or _is_resource(path):
                     continue
                 ids.append(
                     path.relative_to(modules_root).with_suffix('').as_posix())
@@ -155,6 +169,14 @@ def _simulate(
         test_data: TestData) -> tuple[dict[str, dict], simulation.TestContext]:
     """Run one recipe case in a fresh test-mode engine; return (steps, ctx)."""
     ctx = simulation.TestContext.from_test_data(test_data)
+    # The registry holds every `PerGreenletState` ever constructed, and module
+    # instances are per-engine, so without this the previous case's states pile
+    # up and get their setters replayed into this case's greenlets.
+    PerGreenletStateRegistry.clear()
+    # Defense-in-depth: a case whose DEPS never instantiate the `path` module
+    # would otherwise inherit whatever separator a previous case's `path`
+    # module left behind in this class-level variable.
+    config_types.reset_global_variable_assignments()
     # A fresh engine per case: module instances are cached per engine, so
     # reusing one would leak state (deployed depot_tools, set env vars, ...).
     eng = engine._Engine(  # pylint: disable=protected-access
@@ -175,7 +197,7 @@ def _simulate(
     except Exception as exc:  # pylint: disable=broad-except
         # Any other exception is an infra/logic error (bad input, missing dep).
         failure = {'humanReason': str(exc)}
-    steps = simulation.build_steps(ctx.step_runner, failure, ctx)
+    steps = simulation.build_steps(ctx.step_runner, failure)
     return steps, ctx
 
 
@@ -457,6 +479,11 @@ def main(argv: list[str] | None = None) -> int:
                         action='store_true',
                         help='enable step/debug logging (noisy)')
     args = parser.parse_args(argv)
+
+    # We disable gevent's exception stream because it prints tracebacks for
+    # every exception thrown, when actually the exception is still caught and
+    # returned by the Future.
+    gevent.get_hub().exception_stream = None
 
     # Keep step logging quiet by default so test output is just the report.
     logging.basicConfig(

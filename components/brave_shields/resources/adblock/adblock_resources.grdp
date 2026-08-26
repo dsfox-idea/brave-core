@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2026 The Brave Authors. All rights reserved.
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+<grit-part>
+  <!-- growser (#87): the scriptlets and redirect resources that cosmetic
+       filter rules refer to. Their component is served by go-updater.brave.com,
+       which answers a fork "403 Missing auth header", so without this every
+       ##+js(...) rule in every filter list is inert. Refreshed by
+       scripts/update-vendored-data.py from github.com/brave/adblock-resources. -->
+  <include name="IDR_ADBLOCK_RESOURCES_JSON" file="../brave_shields/resources/adblock/resources.json" type="BINDATA" compress="gzip" />
+
+  <!-- growser (#87): the catalogue of filter lists. Its own component answers
+       403 like the rest, and without it the "Content filtering" settings page
+       has nothing to offer. Every entry also names the publisher its list
+       comes from, which is the path that works for us. -->
+  <include name="IDR_ADBLOCK_LIST_CATALOG_JSON" file="../brave_shields/resources/adblock/list_catalog.json" type="BINDATA" compress="gzip" />
+</grit-part>

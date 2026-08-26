@@ -122,8 +122,8 @@ EXE_SUFFIX = '.exe' if sys.platform == 'win32' else ''
 LLD = 'lld' + EXE_SUFFIX
 
 # Basenames of the prebuilt host tools used as bootstrap's stage-1 compiler in
-# `--no-full-toolchain` mode (see USE_PREBUILT_RUSTC_FOR_WASM_STD). They live
-# under `RUST_TOOLCHAIN_OUT_DIR/bin/` and carry the platform's executable suffix.
+# `--no-full-toolchain` mode (see `--use-prebuilt-rustc`). They live under
+# `RUST_TOOLCHAIN_OUT_DIR/bin/` and carry the platform's executable suffix.
 RUSTC = f'rustc{EXE_SUFFIX}'
 CARGO = f'cargo{EXE_SUFFIX}'
 
@@ -189,17 +189,6 @@ STAGE1_RUSTLIB = Path('stage1') / 'lib' / 'rustlib'
 # stage-0 build output.
 STAGE0_STD = Path('stage0-std')
 STAGE0_RUSTLIB = Path('stage0-sysroot') / 'lib' / 'rustlib'
-
-# When True, the `--no-full-toolchain` build compiles only the wasm32 standard
-# library against the prebuilt `rustc` that gclient already syncs to
-#
-# Only affects `--no-full-toolchain`: the full-toolchain build ships its own
-# freshly built `rustc`, so its wasm std must come from that same build (which
-# already reuses the compiler incrementally rather than rebuilding it).
-#
-# This is the default; override it per-invocation with
-# `--use-prebuilt-rustc` / `--no-use-prebuilt-rustc`.
-USE_PREBUILT_RUSTC_FOR_WASM_STD = True
 
 # vpython3 that is selected by `depot_tools` from `$PATH`.
 # This little Windows specific quirk is only needed when calling this script on
@@ -620,16 +609,6 @@ class ToolchainBuilder:
 
     def _assemble_stage0_wasm_sysroot(self) -> Path:
         """Assemble a wasm32 sysroot from the prebuilt stage-0 build output.
-
-        `x.py build library --stage 0` (the `--no-full-toolchain` path) compiles
-        the wasm32 std with the synced stage-0 compiler, so the rlibs are
-        byte-compatible with the toolchain we overlay, but leaves them in
-        cargo's output dir instead of assembling a `lib/rustlib/<target>/lib/`
-        sysroot.  This copies the compiled `.rlib`/`.rmeta` crates plus the
-        `self-contained/` linker directory into a freshly built sysroot under the
-        build tree and returns its `wasm32-unknown-unknown` directory (laid out
-        so `_create_archive` can add it as `WASM32_ARCNAME` unchanged).
-
         Raises:
             RuntimeError: if the stage-0 std output cannot be found.
         """
@@ -637,17 +616,18 @@ class ToolchainBuilder:
         build_dir = Path(
             self._build_rust_module.RUST_BUILD_DIR) / target_triple
 
-        # Compiled crates: stage0-std/<wasm>/<profile>/deps/*.{rlib,rmeta}. The
-        # profile dir name (e.g. `dist`) is matched with a glob; pick the one
-        # that actually holds rlibs.
         std_out = build_dir / STAGE0_STD / WASM32_UNKNOWN_UNKNOWN
-        deps_dir = next(
-            (d
-             for d in sorted(std_out.glob('*/deps')) if any(d.glob('*.rlib'))),
+        profile_dir = next(
+            (d for d in sorted(std_out.glob('*')) if any(d.glob('*.rlib'))),
             None)
-        if deps_dir is None:
+        if profile_dir is None:
             raise RuntimeError(
                 f'No stage-0 wasm32 std crates found under {std_out}; did the '
+                f'`build library --stage 0` step run?')
+        stamp = profile_dir / '.libstd-stamp'
+        if not stamp.is_file():
+            raise RuntimeError(
+                f'No stage-0 wasm32 std stamp file found at {stamp}; did the '
                 f'`build library --stage 0` step run?')
 
         # Assemble into a clean sysroot so stale crates from a prior run cannot
@@ -659,9 +639,13 @@ class ToolchainBuilder:
         lib_dir = wasm_dir / 'lib'
         lib_dir.mkdir(parents=True)
 
-        crates = list(deps_dir.glob('*.rlib')) + list(deps_dir.glob('*.rmeta'))
+        crates = [
+            Path(part[1:].decode('utf-8'))
+            for part in stamp.read_bytes().split(b'\0')
+            if part and chr(part[0]) == 't'
+        ]
         logging.info('Assembling %d wasm32 std crates from %s into %s',
-                     len(crates), deps_dir, lib_dir)
+                     len(crates), stamp, lib_dir)
         for crate in crates:
             shutil.copy2(crate, lib_dir / crate.name)
 
@@ -1049,11 +1033,8 @@ class ToolchainBuilder:
 
         return True
 
-    def run(self,
-            clear: bool = False,
-            upload: bool = False,
-            full_toolchain: bool = False,
-            use_prebuilt_rustc: bool = (USE_PREBUILT_RUSTC_FOR_WASM_STD)):
+    def run(self, *, clear: bool, upload: bool, full_toolchain: bool,
+            use_prebuilt_rustc: bool):
         """Execute the full build-and-package pipeline.
 
         Coordinates the phases in order:
@@ -1069,7 +1050,7 @@ class ToolchainBuilder:
               - `_prepare_run_xpy` — clone, build LLVM, generate config.toml.
               - `_run_xpy` — compile the wasm32 stdlib via x.py, either building
                 a stage-1 `rustc` or reusing the prebuilt one (see
-                `USE_PREBUILT_RUSTC_FOR_WASM_STD`).
+                `--use-prebuilt-rustc`).
         3. Resolve the wasm32 sysroot, using `_assemble_stage0_wasm_sysroot` for
            the prebuilt path, `_stage1_wasm_stdlib_dir` otherwise, and assemble
            the output .tar.xz:
@@ -1095,12 +1076,11 @@ class ToolchainBuilder:
                 `package_rust.py` and overlay the wasm32 sysroot onto it. If
                 False (the default), package only the minimal rust-lld + wasm32
                 subset via `_create_archive`.
-            use_prebuilt_rustc: When True (the default, from
-                `USE_PREBUILT_RUSTC_FOR_WASM_STD`), the `--no-full-toolchain`
-                build compiles the wasm32 std against the prebuilt `rustc`
-                gclient synced instead of building one from scratch. Ignored
-                when `full_toolchain` is True, which always builds its own
-                `rustc`.
+            use_prebuilt_rustc: When True (the default), the
+                `--no-full-toolchain` build compiles the wasm32 std against
+                the prebuilt `rustc` gclient synced instead of building one
+                from scratch. Ignored when `full_toolchain` is True, which
+                always builds its own `rustc`.
         Raises:
             RuntimeError: If --chromium-src does not point at a valid Chromium
             checkout.
@@ -1174,8 +1154,8 @@ class ToolchainBuilder:
 
         # In `--no-full-toolchain` mode, compile only the wasm32 std against the
         # prebuilt `rustc` gclient already synced rather than building one from
-        # scratch (see USE_PREBUILT_RUSTC_FOR_WASM_STD). The full-toolchain build
-        # ships its own `rustc` and so must build the wasm std alongside it.
+        # scratch (see `--use-prebuilt-rustc`). The full-toolchain build ships
+        # its own `rustc` and so must build the wasm std alongside it.
         use_prebuilt_rustc = (use_prebuilt_rustc and not full_toolchain)
 
         # Cherry picks upstream commits (committership reproducibility fix and
@@ -1262,7 +1242,7 @@ def main():
         '--use-prebuilt-rustc',
         dest='use_prebuilt_rustc',
         action='store_true',
-        default=USE_PREBUILT_RUSTC_FOR_WASM_STD,
+        default=True,
         help='In --no-full-toolchain mode, compile the wasm32 std against the '
         'prebuilt rustc gclient synced rather than building one from scratch '
         '(default).')

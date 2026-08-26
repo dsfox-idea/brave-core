@@ -20,20 +20,23 @@ def _LoadPolicies(orig_func):
     # there will be one "group" for every folder found under
     # `//components/policy/resources/templates/policy_definitions`
     # Chromium considers the folder name the group name for the policy.
-    # Brave uses the group name "BraveSoftware". The child element for the
-    # group is the policy itself (those are the yaml files in the folder).
+    # growser (#62) uses the group name "Growser"; upstream Brave used
+    # "BraveSoftware". The child element for the group is the policy itself
+    # (those are the yaml files in the folder). Note that renaming the group
+    # orphans the old directory in Chromium's tree - the pruning below only
+    # covers groups the list still names.
     #
-    # Brave specific entries are get copied into place by `update_policy_files`.
+    # Our entries are copied into place by sync_policy_files() below.
     # We copy the files from:
-    # `//brave/components/policy/resources/templates/policy_definitions/BraveSoftware` # pylint: disable=line-too-long
+    # `//brave/components/policy/resources/templates/policy_definitions/Growser` # pylint: disable=line-too-long
     # to:
     # `//components/policy/resources/templates/policy_definitions`
     policy_definition_yaml = policies['policy_definitions']
     assert policy_definition_yaml, "'policy_definitions' is None (did upstream change?)"  # pylint: disable=line-too-long
 
     brave_policies = []
-    brave_policy_section = policy_definition_yaml['BraveSoftware']
-    assert brave_policy_section, "'policy_definitions > BraveSoftware' entries not found (failed to copy?)"  # pylint: disable=line-too-long
+    brave_policy_section = policy_definition_yaml['Growser']
+    assert brave_policy_section, "'policy_definitions > Growser' entries not found (failed to copy?)"  # pylint: disable=line-too-long
 
     brave_policy_items = brave_policy_section['policies']
     for key, _ in brave_policy_items.items():
@@ -76,9 +79,44 @@ def sync_policy_files():
     with open("gen/brave_policies_sync_config.json", "r") as f:
         brave_policies = json.load(f)
 
-        for policy in brave_policies["policies"]:
-            copy_only_if_modified(f'{brave_policies["copy_from"]}/{policy}',
-                                  f'{brave_policies["copy_to"]}/{policy}')
+    copy_from = brave_policies["copy_from"]
+    copy_to = brave_policies["copy_to"]
+    for policy in brave_policies["policies"]:
+        copy_only_if_modified(f'{copy_from}/{policy}', f'{copy_to}/{policy}')
+
+    # growser (#62): drop copies whose source is gone.
+    #
+    # copy_only_if_modified only ever writes. A policy removed from the list
+    # stayed behind in Chromium's tree and kept being generated into
+    # policy_templates.json and policy_constants.h - so the removal built
+    # cleanly, changed nothing, and gave no hint why. Found by checking the
+    # generated header rather than trusting a green build.
+    #
+    # Pruning is limited to the group directories the list itself names, so
+    # Chromium's own policy definitions are never touched.
+    wanted = set(brave_policies["policies"])
+    groups = {os.path.dirname(p) for p in wanted if os.path.dirname(p)}
+    for group in groups:
+        dest_dir = os.path.join(copy_to, group)
+        if not os.path.isdir(dest_dir):
+            continue
+        for name in os.listdir(dest_dir):
+            if f'{group}/{name}' not in wanted:
+                os.remove(os.path.join(dest_dir, name))
+
+    # growser(#62): drop whole Brave group directories the list no longer names.
+    # The per-file loop above only walks the groups the current list names, so
+    # renaming our group (BraveSoftware -> Growser) orphaned the old directory:
+    # its stale Brave*.yaml kept being loaded as a policy group whose names are
+    # absent from the id map (only the Growser group is injected into
+    # policies.yaml by _LoadPolicies), and _BuildPolicyTemplate raised
+    # KeyError: 'BraveAIChatEnabled'. Only names Brave has ever owned are
+    # ever removed, so Chromium's own groups are still never touched.
+    brave_group_names = {"Growser", "BraveSoftware"}
+    for brave_group in brave_group_names - groups:
+        orphan_dir = os.path.join(copy_to, brave_group)
+        if os.path.isdir(orphan_dir):
+            shutil.rmtree(orphan_dir)
 
 
 def copy_only_if_modified(src, dst):

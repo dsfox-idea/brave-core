@@ -5,7 +5,6 @@
 
 #include "brave/browser/history_embeddings/brave_passage_embeddings_service_controller.h"
 
-#include <memory>
 #include <utility>
 
 #include "base/functional/bind.h"
@@ -22,10 +21,6 @@
 namespace passage_embeddings {
 
 namespace {
-
-// The LiteRT model files ship in the shared EmbeddingGemma component, under a
-// litert/ subdir of its model dir.
-constexpr char kLitertModelSubdir[] = "litert";
 
 // Launches the sandboxed Passage Embeddings utility process, whose LoadModels
 // is chromium_src-overridden to run EmbeddingGemma on LiteRT's CompiledModel
@@ -77,12 +72,12 @@ bool BravePassageEmbeddingsServiceController::MaybeUpdateModelInfo(
 
 void BravePassageEmbeddingsServiceController::OnLocalModelsReady(
     const base::FilePath& install_dir) {
-  // The component ships the LiteRT model under a litert/ subdir, laid out the
-  // way optimization guide expects: model.tflite, model-info.pb, and the
-  // SentencePiece model listed in its additional_files. Loading it here reads
-  // the version and the embedder metadata from the component rather than
-  // hard-coding them, and reports no model at all when an older component (or
-  // a withheld download) leaves any of those files missing.
+  // The component ships the LiteRT model in optimization guide's own layout:
+  // model.tflite, model-info.pb, and the SentencePiece model listed in its
+  // additional_files. Loading it here reads the version and the embedder
+  // metadata from the component rather than hard-coding them, and reports no
+  // model at all when an older component (or a withheld download) leaves any
+  // of those files missing.
   base::ThreadPool::PostTaskAndReplyWithResult(
       FROM_HERE,
       {base::MayBlock(), base::TaskPriority::USER_VISIBLE,
@@ -91,15 +86,14 @@ void BravePassageEmbeddingsServiceController::OnLocalModelsReady(
           &optimization_guide::LoadAndVerifyModelInfoOffThread,
           optimization_guide::proto::OPTIMIZATION_TARGET_PASSAGE_EMBEDDER,
           local_ai::LocalModelsUpdaterState::GetInstance()
-              ->GetEmbeddingGemmaModelDir()
-              .AppendASCII(kLitertModelSubdir)),
+              ->GetEmbeddingGemmaLitertDir()),
       base::BindOnce(
           &BravePassageEmbeddingsServiceController::OnLitertModelInfoLoaded,
           base::Unretained(this)));
 }
 
 void BravePassageEmbeddingsServiceController::OnLitertModelInfoLoaded(
-    std::unique_ptr<optimization_guide::ModelInfo> model_info) {
+    std::optional<optimization_guide::ModelInfo> model_info) {
   if (!model_info) {
     VLOG(1) << "No usable LiteRT model in the EmbeddingGemma component; "
                "passage embeddings disabled until it ships one";
@@ -107,7 +101,7 @@ void BravePassageEmbeddingsServiceController::OnLitertModelInfoLoaded(
   // Upstream validates the metadata, records the model paths and notifies
   // observers. With no model info it clears the model recorded before, whose
   // dir the component updater removes once this version is installed.
-  PassageEmbeddingsServiceController::MaybeUpdateModelInfo(model_info.get());
+  PassageEmbeddingsServiceController::MaybeUpdateModelInfo(model_info);
 }
 
 }  // namespace passage_embeddings

@@ -15,6 +15,7 @@
 #include <variant>
 #include <vector>
 
+#include "base/dcheck_is_on.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
@@ -27,6 +28,7 @@
 #include "base/task/thread_pool.h"
 #include "base/test/bind.h"
 #include "base/test/gmock_callback_support.h"
+#include "base/test/gtest_util.h"
 #include "base/test/mock_callback.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
@@ -347,16 +349,17 @@ class ConversationHandlerUnitTest : public testing::Test {
       }
 
       auto entry = mojom::ConversationTurn::New(
-          "turn-" + base::NumberToString(i),
+          "turn-" + base::NumberToString(i), std::nullopt /* thread_uuid */,
           is_human ? mojom::CharacterType::HUMAN
                    : mojom::CharacterType::ASSISTANT,
           is_human ? mojom::ActionType::QUERY : mojom::ActionType::RESPONSE,
           entries[i].first /* text */, std::nullopt /* prompt */,
           std::nullopt /* selected_text */, std::move(events),
           base::Time::Now(), std::nullopt /* edits */,
-          std::nullopt /* uploaed_images */, nullptr /* skill */,
+          std::nullopt /* uploaded_images */, nullptr /* skill */,
           entries[i].second /* from_brave_search_SERP */,
-          std::nullopt /* model_key */, nullptr /* near_verification_status */);
+          std::nullopt /* model_key */, nullptr /* near_verification_status */,
+          std::vector<std::string>{} /* child_thread_uuids */);
       expected_history.push_back(entry.Clone());
       history.push_back(std::move(entry));
     }
@@ -427,10 +430,10 @@ MATCHER_P(LastTurnHasText, expected_text, "") {
   if (arg.empty()) {
     return false;
   }
-  const mojom::ConversationTurnPtr& entry =
-      (arg.back()->edits.has_value() && !arg.back()->edits->empty()
-           ? arg.back()->edits->back()
-           : arg.back());
+  const mojom::ConversationTurn* entry = arg.back();
+  if (entry->edits.has_value() && !entry->edits->empty()) {
+    entry = entry->edits->back().get();
+  }
   return entry->prompt.value_or(entry->text) == expected_text;
 }
 
@@ -548,21 +551,23 @@ TEST_F(ConversationHandlerUnitTest, SubmitSelectedText) {
   std::vector<mojom::ConversationTurnPtr> expected_history;
 
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::HUMAN,
+      std::nullopt, std::nullopt /* thread_uuid */, mojom::CharacterType::HUMAN,
       mojom::ActionType::SUMMARIZE_SELECTED_TEXT, expected_turn_text,
       std::nullopt, selected_text, std::nullopt, base::Time::Now(),
       std::nullopt, std::nullopt, nullptr /* skill */, false,
-      std::nullopt /* model_key */, nullptr /* near_verification_status */));
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   std::vector<mojom::ConversationEntryEventPtr> response_events;
   response_events.push_back(mojom::ConversationEntryEvent::NewCompletionEvent(
       mojom::CompletionEvent::New(expected_response)));
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::ASSISTANT,
-      mojom::ActionType::RESPONSE, expected_response, std::nullopt,
-      std::nullopt, std::move(response_events), base::Time::Now(), std::nullopt,
-      std::nullopt, nullptr /* skill */, false, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */));
+      std::nullopt, std::nullopt /* thread_uuid */,
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE,
+      expected_response, std::nullopt, std::nullopt, std::move(response_events),
+      base::Time::Now(), std::nullopt, std::nullopt, nullptr /* skill */, false,
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
   EXPECT_CALL(client, OnAPIRequestInProgress(true)).Times(1);
@@ -630,21 +635,23 @@ TEST_F(ConversationHandlerUnitTest, SubmitSelectedText_WithNEARVerification) {
   std::vector<mojom::ConversationTurnPtr> expected_history;
 
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::HUMAN,
+      std::nullopt, std::nullopt /* thread_uuid */, mojom::CharacterType::HUMAN,
       mojom::ActionType::SUMMARIZE_SELECTED_TEXT, expected_turn_text,
       std::nullopt, selected_text, std::nullopt, base::Time::Now(),
       std::nullopt, std::nullopt, nullptr /* skill */, false,
-      std::nullopt /* model_key */, nullptr /* near_verification_status */));
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   std::vector<mojom::ConversationEntryEventPtr> response_events;
   response_events.push_back(mojom::ConversationEntryEvent::NewCompletionEvent(
       mojom::CompletionEvent::New(expected_response)));
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::ASSISTANT,
-      mojom::ActionType::RESPONSE, expected_response, std::nullopt,
-      std::nullopt, std::move(response_events), base::Time::Now(), std::nullopt,
-      std::nullopt, nullptr /* skill */, false, std::nullopt /* model_key */,
-      mojom::NEARVerificationStatus::New(true)));
+      std::nullopt, std::nullopt /* thread_uuid */,
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE,
+      expected_response, std::nullopt, std::nullopt, std::move(response_events),
+      base::Time::Now(), std::nullopt, std::nullopt, nullptr /* skill */, false,
+      std::nullopt /* model_key */, mojom::NEARVerificationStatus::New(true),
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
   EXPECT_CALL(client, OnAPIRequestInProgress(true)).Times(1);
@@ -706,21 +713,23 @@ TEST_F(ConversationHandlerUnitTest, SubmitSelectedText_WithAssociatedContent) {
 
   std::vector<mojom::ConversationTurnPtr> expected_history;
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::HUMAN,
+      std::nullopt, std::nullopt /* thread_uuid */, mojom::CharacterType::HUMAN,
       mojom::ActionType::SUMMARIZE_SELECTED_TEXT, expected_turn_text,
       std::nullopt, selected_text, std::nullopt, base::Time::Now(),
       std::nullopt, std::nullopt, nullptr /* skill */, false,
-      std::nullopt /* model_key */, nullptr /* near_verification_status */));
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   std::vector<mojom::ConversationEntryEventPtr> response_events;
   response_events.push_back(mojom::ConversationEntryEvent::NewCompletionEvent(
       mojom::CompletionEvent::New(expected_response)));
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::ASSISTANT,
-      mojom::ActionType::RESPONSE, expected_response, std::nullopt,
-      std::nullopt, std::move(response_events), base::Time::Now(), std::nullopt,
-      std::nullopt, nullptr /* skill */, false, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */));
+      std::nullopt, std::nullopt /* thread_uuid */,
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE,
+      expected_response, std::nullopt, std::nullopt, std::move(response_events),
+      base::Time::Now(), std::nullopt, std::nullopt, nullptr /* skill */, false,
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
   EXPECT_CALL(client, OnAPIRequestInProgress(true)).Times(1);
@@ -1912,11 +1921,12 @@ TEST_F(ConversationHandlerUnitTest, RegenerateAnswer_ErrorCases) {
   // Test regenerating a conversation with just a single assistant entry
   std::vector<mojom::ConversationTurnPtr> single_entry_history;
   single_entry_history.push_back(mojom::ConversationTurn::New(
-      "assistant_uuid", mojom::CharacterType::ASSISTANT,
-      mojom::ActionType::RESPONSE, "original answer", std::nullopt,
-      std::nullopt, std::nullopt, base::Time::Now(), std::nullopt, std::nullopt,
-      nullptr /* skill */, false, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */));
+      "assistant_uuid", std::nullopt /* thread_uuid */,
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE,
+      "original answer", std::nullopt, std::nullopt, std::nullopt,
+      base::Time::Now(), std::nullopt, std::nullopt, nullptr /* skill */, false,
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   conversation_handler_->SetChatHistoryForTesting(
       CloneHistory(single_entry_history));
@@ -1962,18 +1972,22 @@ TEST_F(ConversationHandlerUnitTest,
   auto& history = conversation_handler_->GetConversationHistory();
   std::vector<mojom::ConversationTurnPtr> expected_history;
   expected_history.push_back(mojom::ConversationTurn::New(
-      "turn-1", mojom::CharacterType::HUMAN, mojom::ActionType::QUERY, "query",
-      std::nullopt, std::nullopt, std::nullopt, base::Time::Now(), std::nullopt,
-      std::nullopt, nullptr /* skill */, true, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */));
+      "turn-1", std::nullopt /* thread_uuid */, mojom::CharacterType::HUMAN,
+      mojom::ActionType::QUERY, "query", std::nullopt, std::nullopt,
+      std::nullopt, base::Time::Now(), std::nullopt, std::nullopt,
+      nullptr /* skill */, true, std::nullopt /* model_key */,
+      nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
   std::vector<mojom::ConversationEntryEventPtr> events;
   events.push_back(mojom::ConversationEntryEvent::NewCompletionEvent(
       mojom::CompletionEvent::New("summary")));
   expected_history.push_back(mojom::ConversationTurn::New(
-      "turn-2", mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE,
-      "summary", std::nullopt, std::nullopt, std::move(events),
-      base::Time::Now(), std::nullopt, std::nullopt, nullptr /* skill */, true,
-      std::nullopt /* model_key */, nullptr /* near_verification_status */));
+      "turn-2", std::nullopt /* thread_uuid */, mojom::CharacterType::ASSISTANT,
+      mojom::ActionType::RESPONSE, "summary", std::nullopt, std::nullopt,
+      std::move(events), base::Time::Now(), std::nullopt, std::nullopt,
+      nullptr /* skill */, true, std::nullopt /* model_key */,
+      nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
   ASSERT_EQ(history.size(), expected_history.size());
   for (size_t i = 0; i < history.size(); i++) {
     expected_history[i]->created_time = history[i]->created_time;
@@ -2029,34 +2043,40 @@ TEST_F(ConversationHandlerUnitTest,
   auto& history = conversation_handler_->GetConversationHistory();
   std::vector<mojom::ConversationTurnPtr> expected_history;
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::HUMAN, mojom::ActionType::QUERY,
-      "query", std::nullopt, std::nullopt, std::nullopt, base::Time::Now(),
-      std::nullopt, std::nullopt, nullptr /* skill */, true,
-      std::nullopt /* model_key */, nullptr /* near_verification_status */));
+      std::nullopt, std::nullopt /* thread_uuid */, mojom::CharacterType::HUMAN,
+      mojom::ActionType::QUERY, "query", std::nullopt, std::nullopt,
+      std::nullopt, base::Time::Now(), std::nullopt, std::nullopt,
+      nullptr /* skill */, true, std::nullopt /* model_key */,
+      nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
   std::vector<mojom::ConversationEntryEventPtr> events;
   events.push_back(mojom::ConversationEntryEvent::NewCompletionEvent(
       mojom::CompletionEvent::New("summary")));
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::ASSISTANT,
-      mojom::ActionType::RESPONSE, "summary", std::nullopt, std::nullopt,
-      std::move(events), base::Time::Now(), std::nullopt, std::nullopt,
-      nullptr /* skill */, true, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */));
+      std::nullopt, std::nullopt /* thread_uuid */,
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE, "summary",
+      std::nullopt, std::nullopt, std::move(events), base::Time::Now(),
+      std::nullopt, std::nullopt, nullptr /* skill */, true,
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::HUMAN, mojom::ActionType::QUERY,
-      "query2", std::nullopt, std::nullopt, std::nullopt, base::Time::Now(),
-      std::nullopt, std::nullopt, nullptr /* skill */, true,
-      std::nullopt /* model_key */, nullptr /* near_verification_status */));
+      std::nullopt, std::nullopt /* thread_uuid */, mojom::CharacterType::HUMAN,
+      mojom::ActionType::QUERY, "query2", std::nullopt, std::nullopt,
+      std::nullopt, base::Time::Now(), std::nullopt, std::nullopt,
+      nullptr /* skill */, true, std::nullopt /* model_key */,
+      nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
   std::vector<mojom::ConversationEntryEventPtr> events2;
   events2.push_back(mojom::ConversationEntryEvent::NewCompletionEvent(
       mojom::CompletionEvent::New("summary2")));
   expected_history.push_back(mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::ASSISTANT,
-      mojom::ActionType::RESPONSE, "summary2", std::nullopt, std::nullopt,
-      std::move(events2), base::Time::Now(), std::nullopt, std::nullopt,
-      nullptr /* skill */, true, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */));
+      std::nullopt, std::nullopt /* thread_uuid */,
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE, "summary2",
+      std::nullopt, std::nullopt, std::move(events2), base::Time::Now(),
+      std::nullopt, std::nullopt, nullptr /* skill */, true,
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */));
 
   ASSERT_EQ(history.size(), expected_history.size());
   for (size_t i = 0; i < history.size(); i++) {
@@ -2094,11 +2114,12 @@ TEST_F(ConversationHandlerUnitTest,
   events3.push_back(mojom::ConversationEntryEvent::NewCompletionEvent(
       mojom::CompletionEvent::New("new answer")));
   auto expected_turn = mojom::ConversationTurn::New(
-      std::nullopt, mojom::CharacterType::ASSISTANT,
-      mojom::ActionType::RESPONSE, "new answer", std::nullopt, std::nullopt,
-      std::move(events3), base::Time::Now(), std::nullopt, std::nullopt,
-      nullptr /* skill */, false, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */);
+      std::nullopt, std::nullopt /* thread_uuid */,
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE,
+      "new answer", std::nullopt, std::nullopt, std::move(events3),
+      base::Time::Now(), std::nullopt, std::nullopt, nullptr /* skill */, false,
+      std::nullopt /* model_key */, nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */);
   EXPECT_CALL(client, OnConversationHistoryUpdate(TurnEq(expected_turn.get())))
       .Times(testing::AtLeast(2));
 
@@ -2311,7 +2332,7 @@ TEST_F(ConversationHandlerUnitTest, UploadFile) {
   EXPECT_CALL(*engine, GenerateAssistantResponse)
       .WillRepeatedly(
           [](PageContentsMap page_contents,
-             const std::vector<mojom::ConversationTurnPtr>& history,
+             const EngineConsumer::ConversationHistoryView& history,
              bool is_temporary_chat,
              const std::vector<base::WeakPtr<Tool>>& tools,
              std::optional<std::string_view> preferred_tool_name,
@@ -4491,12 +4512,14 @@ TEST_F(ConversationHandlerUnitTest, NoScreenshotWhenScreenshotsAlreadyExist) {
   // Add existing screenshots to conversation history
   std::vector<mojom::ConversationTurnPtr> history;
   auto turn_with_screenshots = mojom::ConversationTurn::New(
-      "turn-screenshots", mojom::CharacterType::HUMAN, mojom::ActionType::QUERY,
+      "turn-screenshots", std::nullopt /* thread_uuid */,
+      mojom::CharacterType::HUMAN, mojom::ActionType::QUERY,
       "Previous question", std::nullopt, std::nullopt, std::nullopt,
       base::Time::Now(), std::nullopt,
       CreateSampleUploadedFiles(1, mojom::UploadedFileType::kScreenshot),
       nullptr /* skill */, false, std::nullopt /* model_key */,
-      nullptr /* near_verification_status */);
+      nullptr /* near_verification_status */,
+      std::vector<std::string>{} /* child_thread_uuids */);
   history.push_back(std::move(turn_with_screenshots));
   conversation_handler_->SetChatHistoryForTesting(std::move(history));
 
@@ -4630,7 +4653,7 @@ TEST_F(ConversationHandlerUnitTest, VisionModelSwitchOnScreenshots) {
   EXPECT_CALL(*engine, GenerateAssistantResponse)
       .WillRepeatedly(
           [](PageContentsMap page_contents,
-             const std::vector<mojom::ConversationTurnPtr>& history,
+             const EngineConsumer::ConversationHistoryView& history,
              bool is_temporary_chat,
              const std::vector<base::WeakPtr<Tool>>& tools,
              std::optional<std::string_view> preferred_tool_name,
@@ -5716,7 +5739,8 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge) {
                     mojom::PermissionChallenge::New(
                         "Server determined this tool use "
                         "is off-topic",  // assessment
-                        std::nullopt),   // plan
+                        std::nullopt,    // plan
+                        std::nullopt),   // description
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
                     mojom::ConversationEntryEvent::NewToolUseEvent(
@@ -5830,8 +5854,9 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_ToolReturnsChallenge) {
       .WillByDefault([](const mojom::ToolUseEvent& tool_use) {
         return std::variant<bool, mojom::PermissionChallengePtr>(
             mojom::PermissionChallenge::New(
-                std::nullopt,                             // assessment
-                "This tool needs to manage your tabs"));  // plan
+                std::nullopt,                           // assessment
+                "This tool needs to manage your tabs",  // plan
+                std::nullopt));                         // description
       });
 
   ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
@@ -5928,7 +5953,8 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_UserDeniesPermission) {
                             mojom::PermissionChallenge::New(
                                 "Server determined this tool use "
                                 "is off-topic",  // assessment
-                                std::nullopt),   // plan
+                                std::nullopt,    // plan
+                                std::nullopt),   // description
                             false)),
                     std::nullopt));
                 // Second tool use
@@ -6011,7 +6037,8 @@ TEST_F(ConversationHandlerUnitTest,
         return std::variant<bool, mojom::PermissionChallengePtr>(
             mojom::PermissionChallenge::New(
                 std::nullopt,  // assessment
-                "Client-side: This tool needs to access your tabs"));  // plan
+                "Client-side: This tool needs to access your tabs",  // plan
+                std::nullopt));  // description
       });
 
   ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
@@ -6036,7 +6063,7 @@ TEST_F(ConversationHandlerUnitTest,
                     std::nullopt, std::nullopt,
                     mojom::PermissionChallenge::New(
                         "Server-side: This tool use needs alignment check",
-                        std::nullopt),
+                        std::nullopt, std::nullopt),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
                     mojom::ConversationEntryEvent::NewToolUseEvent(
@@ -6115,6 +6142,82 @@ TEST_F(ConversationHandlerUnitTest,
   ASSERT_TRUE(final_tool_event->output.has_value());
   EXPECT_MOJOM_EQ(final_tool_event->output.value(),
                   CreateContentBlocksForText("Tool executed successfully"));
+}
+
+TEST_F(ConversationHandlerUnitTest,
+       PermissionChallenge_ServerChallengeDecoratedWithToolDescription) {
+  // A PermissionChallenge raised by the server's alignment check only knows
+  // the raw tool name, so it can't provide a human-readable `description`
+  // (e.g. naming a WebMCP tool and its origin instead of a mangled,
+  // model-facing name). Verify that ConversationHandler asks the matching
+  // Tool to fill in a description for such a challenge before showing it,
+  // without ever calling RequiresUserInteractionBeforeHandling (Gate 2) or
+  // UserPermissionGranted for it.
+  conversation_handler_->associated_content_manager()->ClearContent();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+
+  auto tool1 = std::make_unique<NiceMock<MockTool>>("test_tool", "Test tool");
+  ON_CALL(*tool1, GetPermissionChallengeDescription)
+      .WillByDefault([](const mojom::ToolUseEvent& tool_use) {
+        return "Brave AI would like to execute **thing** on "
+               "**https://example.com**";
+      });
+
+  EXPECT_CALL(*tool1, RequiresUserInteractionBeforeHandling).Times(0);
+  EXPECT_CALL(*tool1, UserPermissionGranted).Times(0);
+
+  ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
+    std::vector<base::WeakPtr<Tool>> tools;
+    tools.push_back(tool1->GetWeakPtr());
+    return tools;
+  });
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+
+  base::RunLoop loop;
+  // Engine returns tool use event with only a server-side permission
+  // challenge (assessment only, no description - this is all oai_parsing.cc
+  // ever sets).
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                auto tool_use = mojom::ToolUseEvent::New(
+                    "test_tool", "tool_id_1", "{}", std::nullopt, std::nullopt,
+                    mojom::PermissionChallenge::New(
+                        "Server determined this tool use is off-topic",
+                        std::nullopt, std::nullopt),
+                    false);
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewToolUseEvent(
+                        std::move(tool_use)),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        mojom::ConversationEntryEvent::NewCompletionEvent(
+                            mojom::CompletionEvent::New("")),
+                        std::nullopt)));
+                loop.Quit();
+              })));
+
+  conversation_handler_->SubmitHumanConversationEntry("Test", std::nullopt);
+  loop.Run();
+
+  const auto& history = conversation_handler_->GetConversationHistory();
+  auto* tool_event =
+      history.back()->events.value()[0]->get_tool_use_event().get();
+  ASSERT_TRUE(tool_event->permission_challenge);
+  // The server's assessment is preserved...
+  EXPECT_EQ(tool_event->permission_challenge->assessment,
+            "Server determined this tool use is off-topic");
+  // ...and the Tool's description has been added to the same challenge.
+  EXPECT_EQ(
+      tool_event->permission_challenge->description,
+      "Brave AI would like to execute **thing** on **https://example.com**");
 }
 
 TEST_F(ConversationHandlerUnitTest, OnTaskStateChanged_Paused) {
@@ -6955,5 +7058,89 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
     testing::Mock::VerifyAndClearExpectations(engine);
   }
 }
+
+TEST_F(ConversationHandlerUnitTest, FallsBackWhenModelKeyNoLongerExists) {
+  auto conversation = mojom::Conversation::New(
+      "stale-model-uuid", "title", base::Time::Now(), false,
+      "this-model-key-does-not-exist", 0, 0, false,
+      std::vector<mojom::AssociatedContentPtr>());
+
+  std::vector<std::unique_ptr<ToolProvider>> tool_providers;
+  tool_providers.push_back(std::make_unique<NiceMock<MockToolProvider>>());
+
+  auto handler = std::make_unique<ConversationHandler>(
+      conversation.get(), ai_chat_service_.get(), model_service_.get(),
+      ai_chat_service_->GetCredentialManagerForTesting(),
+      mock_feedback_api_.get(), &prefs_, shared_url_loader_factory_,
+      std::move(tool_providers));
+
+  EXPECT_EQ(handler->GetCurrentModel().key, kChatAutomaticModelKey);
+}
+
+using ConversationHandlerDeathTest = ConversationHandlerUnitTest;
+
+// The configured default failing to resolve means it's actually broken, so
+// this case is a same-build internal-consistency violation, not a resolvable
+// fallback.
+//
+// DUMP_WILL_BE_NOTREACHED() is only guaranteed fatal outside official builds
+// or with DCHECKs enabled; skip this death test in the one configuration
+// (official build, DCHECKs off) where it wouldn't actually crash.
+#if !defined(OFFICIAL_BUILD) || DCHECK_IS_ON()
+TEST_F(ConversationHandlerDeathTest,
+       CrashesWhenConfiguredDefaultModelDoesNotExist) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kAIChat,
+      {{features::kAIModelsDefaultKey.name, "this-default-does-not-exist"}});
+
+  auto conversation = mojom::Conversation::New(
+      "stale-model-and-default-uuid", "title", base::Time::Now(), false,
+      "this-model-key-does-not-exist", 0, 0, false,
+      std::vector<mojom::AssociatedContentPtr>());
+
+  std::vector<std::unique_ptr<ToolProvider>> tool_providers;
+  tool_providers.push_back(std::make_unique<NiceMock<MockToolProvider>>());
+
+  EXPECT_NOTREACHED_DEATH(
+      auto handler = std::make_unique<ConversationHandler>(
+          conversation.get(), ai_chat_service_.get(), model_service_.get(),
+          ai_chat_service_->GetCredentialManagerForTesting(),
+          mock_feedback_api_.get(), &prefs_, shared_url_loader_factory_,
+          std::move(tool_providers)));
+}
+#endif  // !defined(OFFICIAL_BUILD) || DCHECK_IS_ON()
+
+// Bypasses InitEngine()'s up-front resolution to exercise GetCurrentModel()'s
+// own fallback.
+TEST_F(ConversationHandlerUnitTest,
+       GetCurrentModelFallsBackToConfiguredDefault) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kAIChat,
+      {{features::kAIModelsDefaultKey.name, kClaudeSonnetModelKey}});
+
+  conversation_handler_->SetModelKeyForTesting("this-model-key-does-not-exist");
+
+  EXPECT_EQ(conversation_handler_->GetCurrentModel().key,
+            kClaudeSonnetModelKey);
+}
+
+// DUMP_WILL_BE_NOTREACHED() is only guaranteed fatal outside official builds
+// or with DCHECKs enabled; skip this death test in the one configuration
+// (official build, DCHECKs off) where it wouldn't actually crash.
+#if !defined(OFFICIAL_BUILD) || DCHECK_IS_ON()
+TEST_F(ConversationHandlerDeathTest,
+       CrashesWhenConfiguredDefaultModelAlsoMissingInGetCurrentModel) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kAIChat,
+      {{features::kAIModelsDefaultKey.name, "this-default-does-not-exist"}});
+
+  conversation_handler_->SetModelKeyForTesting("this-model-key-does-not-exist");
+
+  EXPECT_NOTREACHED_DEATH(conversation_handler_->GetCurrentModel());
+}
+#endif  // !defined(OFFICIAL_BUILD) || DCHECK_IS_ON()
 
 }  // namespace ai_chat

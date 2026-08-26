@@ -21,6 +21,27 @@
 
 namespace {
 
+// growser (#87): the catalogue lists a publisher URL (sometimes several) for
+// every entry, in a field upstream does not read because it fetches the
+// component instead. We read it, because the component is the one thing we
+// cannot fetch.
+bool GetSourceUrls(const base::Value* value,
+                   std::vector<std::string>* field) {
+  if (value == nullptr || !value->is_list()) {
+    return false;
+  }
+  for (const base::Value& source : value->GetList()) {
+    if (!source.is_dict()) {
+      continue;
+    }
+    const auto* url = source.GetDict().FindString("url");
+    if (url && !url->empty()) {
+      field->push_back(*url);
+    }
+  }
+  return true;
+}
+
 bool GetComponentId(const base::Value* value, std::string* field) {
   if (value == nullptr || !value->is_dict()) {
     return false;
@@ -164,6 +185,8 @@ void FilterListCatalogEntry::RegisterJSONConverter(
       &GetBase64PublicKey);
   converter->RegisterCustomValueField<std::vector<std::string>>(
       "platforms", &FilterListCatalogEntry::platforms, &GetStringVector);
+  converter->RegisterCustomValueField<std::vector<std::string>>(
+      "sources", &FilterListCatalogEntry::source_urls, &GetSourceUrls);
 }
 
 bool FilterListCatalogEntry::SupportsCurrentPlatform() const {

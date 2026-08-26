@@ -56,7 +56,7 @@ export function Footer() {
         <p>
           {formatString(getString('BRAVE_SHIELDS_PRIVACY_NOTE'), {
             $1: (content) => (
-              <OpenTabLink url='https://brave.com/privacy-features/'>
+              <OpenTabLink url='https://growser.org/features.html#shields'>
                 {content}
               </OpenTabLink>
             ),

@@ -71,6 +71,7 @@
 #include "brave/components/brave_shields/core/common/brave_shield_constants.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_shields/core/common/shields_settings.mojom.h"
+#include "brave/components/brave_user_agent/browser/brave_user_agent_exceptions.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
@@ -307,7 +308,11 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 #endif
 
 #if BUILDFLAG(IS_ANDROID)
+#include "base/files/memory_mapped_file.h"
 #include "brave/browser/ui/webui/new_tab_takeover/android/new_tab_takeover_ui.h"
+#include "chrome/common/chrome_descriptors_android.h"
+#include "content/public/browser/posix_file_descriptor_info.h"
+#include "ui/base/resource/resource_bundle_android.h"
 #endif  // BUILDFLAG(IS_ANDROID)
 
 #if !BUILDFLAG(IS_ANDROID)
@@ -364,7 +369,9 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
 #include "brave/browser/ui/webui/brave_wallet/wallet_page/wallet_page_ui.h"
 #if !BUILDFLAG(IS_ANDROID)
+#include "brave/browser/ui/webui/brave_wallet/ledger/ledger_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/wallet_panel/wallet_panel_ui.h"
+#include "brave/components/brave_wallet/common/ledger_bridge.mojom.h"
 #endif
 #endif
 
@@ -704,6 +711,9 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
   registry.ForWebUI<AdsInternalsUI>().Add<bat_ads::mojom::AdsInternals>();
+#if BUILDFLAG(ENABLE_BRAVE_REWARDS)
+  registry.ForWebUI<AdsInternalsUI>().Add<bat_ads::mojom::AdsInternalsLogs>();
+#endif  // BUILDFLAG(ENABLE_BRAVE_REWARDS)
 #endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
 
   if (base::FeatureList::IsEnabled(skus::features::kSkusFeature)) {
@@ -718,6 +728,9 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   registry.ForWebUI<brave_wallet::WalletPageUI>()
       .Add<brave_wallet::mojom::PageHandlerFactory>()
+#if !BUILDFLAG(IS_ANDROID)
+      .Add<brave_wallet::mojom::LedgerBridgeService>()
+#endif  // !BUILDFLAG(IS_ANDROID)
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
       .Add<brave_rewards::mojom::RewardsPageHandler>()
 #endif  // BUILDFLAG(ENABLE_BRAVE_REWARDS)
@@ -725,6 +738,7 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 #if !BUILDFLAG(IS_ANDROID)
   registry.ForWebUI<WalletPanelUI>()
       .Add<brave_wallet::mojom::PanelHandlerFactory>()
+      .Add<brave_wallet::mojom::LedgerBridgeService>()
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
       .Add<brave_rewards::mojom::RewardsPageHandler>()
 #endif  // BUILDFLAG(ENABLE_BRAVE_REWARDS)
@@ -851,6 +865,13 @@ void BraveContentBrowserClient::RegisterUntrustedWebUIInterfaceBrokers(
         .Add<brave_news::mojom::BraveNewsController>();
   }
 #endif
+
+#if BUILDFLAG(ENABLE_BRAVE_WALLET) && !BUILDFLAG(IS_ANDROID)
+  if (brave_wallet::IsMojoForHardwareWalletEnabled()) {
+    registry.ForWebUI<ledger::UntrustedLedgerUI>()
+        .Add<brave_wallet::mojom::LedgerBridgeUIHandler>();
+  }
+#endif
 }
 
 std::optional<base::UnguessableToken>
@@ -911,7 +932,8 @@ BraveContentBrowserClient::WorkerGetBraveShieldSettings(
   return brave_shields::mojom::ShieldsSettings::New(
       farbling_level, farbling_token, std::vector<std::string>(),
       brave_shields::IsReduceLanguageEnabledForProfile(pref_service),
-      IsJsBlockingEnforced(browser_context, url));
+      IsJsBlockingEnforced(browser_context, url),
+      brave_user_agent::ShouldHideBraveBrand(url));
 }
 
 bool BraveContentBrowserClient::CanCreateWindow(
@@ -1693,3 +1715,24 @@ bool BraveContentBrowserClient::IsJitDisabledForSite(
   return ChromeContentBrowserClient::IsJitDisabledForSite(browser_context,
                                                           site_url);
 }
+
+#if BUILDFLAG(IS_ANDROID)
+void BraveContentBrowserClient::GetAdditionalMappedFilesForChildProcess(
+    const base::CommandLine& command_line,
+    int child_process_id,
+    content::PosixFileDescriptorInfo* mappings) {
+  ChromeContentBrowserClient::GetAdditionalMappedFilesForChildProcess(
+      command_line, child_process_id, mappings);
+
+  // Share brave_resources.pak (opened by the browser via JNI) with child
+  // processes. Native-only (javaless) renderers have no JVM and cannot open the
+  // APK asset themselves; they load it from this descriptor. Mirrors how Chrome
+  // shares resources.pak (see ChromeContentBrowserClient with
+  // kAndroidUIResourcesPakDescriptor).
+  base::MemoryMappedFile::Region region;
+  int fd = ui::GetBraveResourcesPackFd(&region);
+  if (fd != -1) {
+    mappings->ShareWithRegion(kBraveResourcesPakDescriptor, fd, region);
+  }
+}
+#endif  // BUILDFLAG(IS_ANDROID)

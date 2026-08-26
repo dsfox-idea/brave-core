@@ -27,6 +27,18 @@ export function Clock() {
     })
   }, [clockFormat])
 
+  // growser: the clock carries the date and the weekday under the time. The
+  // locale decides the wording and the order, so this is one format request
+  // rather than a string we assemble ourselves.
+  const dateFormatter = React.useMemo(() => {
+    return new Intl.DateTimeFormat(undefined, {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+  }, [])
+
   React.useEffect(() => {
     if (!showClock) {
       return
@@ -41,19 +53,22 @@ export function Clock() {
 
   return (
     <>
-      {formatter.formatToParts(time).map((item) => {
-        if (item.type === 'dayPeriod') {
-          return (
-            <span
-              className='day-period'
-              key='day-period'
-            >
-              {item.value}
-            </span>
-          )
-        }
-        return item.value
-      })}
+      <span className='time'>
+        {formatter.formatToParts(time).map((item) => {
+          if (item.type === 'dayPeriod') {
+            return (
+              <span
+                className='day-period'
+                key='day-period'
+              >
+                {item.value}
+              </span>
+            )
+          }
+          return item.value
+        })}
+      </span>
+      <span className='date'>{dateFormatter.format(time)}</span>
     </>
   )
 }

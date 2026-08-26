@@ -23,6 +23,7 @@ class QuickViewController: UIViewController {
   private let profile: any Profile
   private let syncAPI: BraveSyncAPI
   private let sendTabAPI: BraveSendTabAPI
+  private let historyAPI: BraveHistoryAPI
   private let toolbarViewModel: QuickViewToolbarModel
   private lazy var toolbarHostingController = UIHostingController(
     rootView: QuickViewToolbarView(viewModel: toolbarViewModel)
@@ -60,6 +61,7 @@ class QuickViewController: UIViewController {
     profile: any Profile,
     syncAPI: BraveSyncAPI,
     sendTabAPI: BraveSendTabAPI,
+    historyAPI: BraveHistoryAPI,
     onOpenInNewTab: ((URLRequest, Bool) -> Void)?,
     onOpenInNewWindow: ((URL, Bool) -> Void)?,
     onAttachTab: ((any TabState) -> Void)?
@@ -68,6 +70,7 @@ class QuickViewController: UIViewController {
     self.profile = profile
     self.syncAPI = syncAPI
     self.sendTabAPI = sendTabAPI
+    self.historyAPI = historyAPI
     self.toolbarViewModel = QuickViewToolbarModel(
       url: url,
       isPrivate: profile.isOffTheRecord
@@ -76,7 +79,7 @@ class QuickViewController: UIViewController {
     self.onOpenInNewWindow = onOpenInNewWindow
     self.onAttachTab = onAttachTab
     super.init(nibName: nil, bundle: nil)
-    modalPresentationStyle = .fullScreen
+    modalPresentationStyle = .pageSheet
   }
 
   @available(*, unavailable)
@@ -116,6 +119,17 @@ class QuickViewController: UIViewController {
     tab.addObserver(toolbarViewModel)
     tab.addObserver(self)
     tab.browserData = TabBrowserData(tab: tab)
+    if FeatureList.kUseProfileWebViewConfiguration.enabled {
+      let braveShieldsHelper: BraveShieldsTabHelper = .init(
+        tab: tab,
+        braveShieldsSettings: BraveShieldsSettingsServiceFactory.get(profile: tab.profile)
+      )
+      tab.braveShieldsHelper = braveShieldsHelper
+      tab.addPolicyDecider(braveShieldsHelper)
+      tab.requestBlockingTabHelper = .init(tab: tab)
+      tab.cosmeticFilteringTabHelper = .init(tab: tab)
+    }
+    tab.protectionStats = .init(tab: tab)
     tab.readerMode = .init(tab: tab, readerModeCache: ReaderModeScriptHandler.cache(for: tab))
     tab.readerMode?.onStateChanged = { [weak self, weak tab] in
       self?.toolbarViewModel.readerModeState = tab?.readerMode?.state ?? .unavailable
@@ -123,6 +137,7 @@ class QuickViewController: UIViewController {
     tab.readerMode?.onReaderModeDisplayed = { [weak self] in
       self?.showReaderModeBar()
     }
+    tab.historyTabHelper = .init(tab: tab, historyAPI: historyAPI)
     tab.createWebView()
     tab.delegate = self
     tab.webViewProxy?.scrollView?.layer.masksToBounds = true
@@ -170,6 +185,7 @@ class QuickViewController: UIViewController {
           guard let self, let currentTab = self.currentTab else { return }
           currentTab.removeObserver(self.toolbarViewModel)
           currentTab.removeObserver(self)
+          currentTab.historyTabHelper = nil
           self.onAttachTab?(currentTab)
         }
       case .share:
@@ -201,6 +217,14 @@ class QuickViewController: UIViewController {
         self?.presentSSLStatusView()
       case .playlist, .translate:
         break
+      }
+    }
+    toolbarViewModel.onTappedCollapsedBarTopArea = { [weak self] in
+      guard let self else { return }
+      if self.isKeyboardVisible {
+        self.view.endEditing(true)
+      } else {
+        self.toolbarVisibilityViewModel.toolbarState = .expanded
       }
     }
   }
@@ -537,6 +561,7 @@ extension QuickViewController: TabDelegate {
       guard let self, let currentTab = self.currentTab else { return }
       currentTab.removeObserver(self.toolbarViewModel)
       currentTab.removeObserver(self)
+      currentTab.historyTabHelper = nil
       self.onAttachTab?(currentTab)
       self.onOpenInNewTab?(request, profile.isOffTheRecord)
     }
@@ -725,9 +750,9 @@ extension QuickViewController: TabDelegate {
 
 extension QuickViewController: TabObserver {
   func tabDidCreateWebView(_ tab: some TabState) {
-    if let detachedTabPrivacyHelper = DetachedTabPrivacyHelper(
-      tab: tab
-    ) {
+    if !FeatureList.kUseProfileWebViewConfiguration.enabled,
+      let detachedTabPrivacyHelper = DetachedTabPrivacyHelper(tab: tab)
+    {
       tab.detachedPrivacyHelper = detachedTabPrivacyHelper
     }
   }

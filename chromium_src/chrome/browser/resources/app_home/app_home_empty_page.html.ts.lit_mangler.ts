@@ -10,5 +10,5 @@ mangle(fragment => {
   if (!anchor) {
     throw new Error('anchor not found')
   }
-  anchor.href = 'https://support.brave.app/hc/en-us/articles/39077114659597'
+  anchor.href = 'https://growser.org/'
 })

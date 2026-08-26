@@ -68,7 +68,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> ٹیب بند ہو گیا}other{<ph name="MANY_CLOSED"/> ٹیبز بند ہو گئے}}</translation>
 <translation id="2894757982205307093">گروپ میں نیا ٹیب</translation>
 <translation id="2918484639460781603">ترتیبات پر جائیں</translation>
-<translation id="4691798003247738043">‏Brave | اس اسٹور کے بارے میں</translation>
+<translation id="4691798003247738043">‏Growser | اس اسٹور کے بارے میں</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{‫<ph name="ITEMS_COUNT_ONE"/> منتخب کیا گیا}other{‫<ph name="ITEMS_COUNT_MANY"/> منتخب کیے گئے}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{ٹیب کو پن کریں}other{ٹیبز کو پن کریں}}</translation>
 <translation id="3008554597174452548">پروڈکٹ کو ٹریک کرنا بند کریں</translation>
@@ -127,7 +127,7 @@
 <translation id="5073204694187207510">پوری اسکرین گرڈ کو چھپائیں</translation>
 <translation id="5076161749301278626">اسٹور کے جائزے دیکھیں؟</translation>
 <translation id="5161254044473106830">عنوان درکار ہے</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{‏‫Brave خودکار طور پر غیر فعال ٹیبز اور ٹیب گروپس کو <ph name="AUTO_DELETE_DELAY_ONE"/> ماہ بعد بند کر دیتا ہے۔ آپ ترتیبات میں اسے تبدیل کر سکتے ہیں۔}other{‏‫Brave خودکار طور پر غیر فعال ٹیبز اور ٹیب گروپس کو <ph name="AUTO_DELETE_DELAY_MANY"/> ماہ بعد بند کر دیتا ہے۔ آپ ترتیبات میں اسے تبدیل کر سکتے ہیں۔}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{‏‫Growser خودکار طور پر غیر فعال ٹیبز اور ٹیب گروپس کو <ph name="AUTO_DELETE_DELAY_ONE"/> ماہ بعد بند کر دیتا ہے۔ آپ ترتیبات میں اسے تبدیل کر سکتے ہیں۔}other{‏‫Growser خودکار طور پر غیر فعال ٹیبز اور ٹیب گروپس کو <ph name="AUTO_DELETE_DELAY_MANY"/> ماہ بعد بند کر دیتا ہے۔ آپ ترتیبات میں اسے تبدیل کر سکتے ہیں۔}}</translation>
 <translation id="5254233580564156835">میموری کا استعمال: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">آپ کا آخری ٹیب</translation>
 <translation id="5380159289133845234">ڈپلیکیٹ ٹیبز کو آرکائیو کریں</translation>
@@ -138,7 +138,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{<ph name="TABS_COUNT_ONE"/> ٹیب، <ph name="COLOR_NAME"/> رنگ کے ساتھ ٹیب گروپ کو بند کریں}other{<ph name="TABS_COUNT_MANY"/> ٹیبز، <ph name="COLOR_NAME"/> رنگ کے ساتھ ٹیب گروپ کو بند کریں}}</translation>
 <translation id="5556417849629758491">اسٹور کی معلومات دیکھنے کا اختیار اسکرین کے اوپری حصے کے قریپ دستیاب ہے</translation>
 <translation id="5627941783489838464">کوئی ٹیب اپ ڈیٹ نہیں ہے</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{‏Brave سے <ph name="TABS_COUNT_ONE"/> لنک}other{‏Brave سے <ph name="TABS_COUNT_MANY"/> لنکس}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{‏Growser سے <ph name="TABS_COUNT_ONE"/> لنک}other{‏Growser سے <ph name="TABS_COUNT_MANY"/> لنکس}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{ٹیب کو بائیں طرف منتقل کریں}other{ٹیبز کو بائیں طرف منتقل کریں}}</translation>
 <translation id="5746204836956568669">زیادہ تیز کام کرنے کیلئے، <ph name="NUMBER_OF_TABS"/> ٹیبز کو گروپ بند کریں؟</translation>
 <translation id="5773295109010386583">غیر فعال آئٹمز کو خودکار طور پر بند کریں</translation>
@@ -193,7 +193,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{‫<ph name="TABS_COUNT_ONE"/> آئٹم}other{‫<ph name="TABS_COUNT_MANY"/> آئٹمز}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{منتخب کردہ <ph name="TABS_COUNT_ONE"/> آئٹم کو بحال کریں}other{منتخب کردہ <ph name="TABS_COUNT_MANY"/> آئٹمز کو بحال کریں}}</translation>
 <translation id="753732157349120914">ٹیب سوئچر</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{‏Brave سے <ph name="REVIEWS_COUNT_ONE"/> جائزہ}other{‏Brave سے <ph name="REVIEWS_COUNT_MANY"/> جائزے}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{‏Growser سے <ph name="REVIEWS_COUNT_ONE"/> جائزہ}other{‏Growser سے <ph name="REVIEWS_COUNT_MANY"/> جائزے}}</translation>
 <translation id="7559245342362162951">پوری اسکرین گرڈ میں گروپ کے ٹیبز دکھائیں</translation>
 <translation id="7658239707568436148">منسوخ کریں</translation>
 <translation id="7688386659311034820">غیر فعال ٹیبز کا ڈائیلاگ</translation>

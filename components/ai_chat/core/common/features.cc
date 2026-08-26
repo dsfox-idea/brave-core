@@ -164,12 +164,6 @@ BASE_FEATURE(kNEARModels,
              "AIChatNEARModels",
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-const base::FeatureParam<bool> kNEARModelsEncryption{&kNEARModels, "encryption",
-                                                     false};
-
-const base::FeatureParam<bool> kNEARModelsEncryptionSearch{
-    &kNEARModels, "encryption_search", false};
-
 bool IsNEARModelsEnabled() {
   return base::FeatureList::IsEnabled(features::kNEARModels);
 }
@@ -255,6 +249,11 @@ const base::FeatureParam<std::string> kAIChatConversationShareBaseUrl{
     &kAIChatConversationShare, "viewer_base_url",
     "https://leo-ai.brave.app/shared/"};
 
+const base::FeatureParam<int> kAIChatConversationShareExpiryDays{
+    &kAIChatConversationShare, "expiry_days", 7};
+
 BASE_FEATURE(kAIChatExportJSON, base::FEATURE_DISABLED_BY_DEFAULT);
+
+BASE_FEATURE(kAIChatMathRendering, base::FEATURE_ENABLED_BY_DEFAULT);
 
 }  // namespace ai_chat::features

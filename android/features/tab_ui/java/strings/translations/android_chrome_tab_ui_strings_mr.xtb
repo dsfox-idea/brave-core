@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> टॅब बंद केला}other{<ph name="MANY_CLOSED"/> टॅब बंद केले}}</translation>
 <translation id="2894757982205307093">गटामधील नवीन टॅब</translation>
 <translation id="2918484639460781603">सेटिंग्ज वर जा</translation>
-<translation id="4691798003247738043">Brave | या स्टोअरबद्दल</translation>
+<translation id="4691798003247738043">Growser | या स्टोअरबद्दल</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> निवडला आहे}other{<ph name="ITEMS_COUNT_MANY"/> निवडले आहेत}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{टॅब पिन करा}other{टॅब पिन करा}}</translation>
 <translation id="3008554597174452548">उत्पादनाचा माग ठेवणे थांबवा</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">फुलस्क्रीन ग्रिड लपवा</translation>
 <translation id="5076161749301278626">स्टोअरशी संबंधित पुनरावलोकने पहायची आहेत का?</translation>
 <translation id="5161254044473106830">शीर्षक आवश्यक</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave <ph name="AUTO_DELETE_DELAY_ONE"/> महिन्यानंतर इनॅक्टिव्ह टॅब आणि टॅब गट आपोआप बंद करते. तुम्ही हे सेटिंग्‍जमध्‍ये बदलू शकता.}other{Brave <ph name="AUTO_DELETE_DELAY_MANY"/> महिन्यांनंतर इनॅक्टिव्ह टॅब आणि टॅब गट आपोआप बंद करते. तुम्ही हे सेटिंग्‍जमध्‍ये बदलू शकता.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser <ph name="AUTO_DELETE_DELAY_ONE"/> महिन्यानंतर इनॅक्टिव्ह टॅब आणि टॅब गट आपोआप बंद करते. तुम्ही हे सेटिंग्‍जमध्‍ये बदलू शकता.}other{Growser <ph name="AUTO_DELETE_DELAY_MANY"/> महिन्यांनंतर इनॅक्टिव्ह टॅब आणि टॅब गट आपोआप बंद करते. तुम्ही हे सेटिंग्‍जमध्‍ये बदलू शकता.}}</translation>
 <translation id="5254233580564156835">मेमरी वापर: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">तुमचा शेवटचा टॅब</translation>
 <translation id="5380159289133845234">डुप्लिकेट टॅब संग्रहित करा</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{टॅब गट <ph name="TABS_COUNT_ONE"/> टॅब, <ph name="COLOR_NAME"/> रंग वापरून बंद करा.}other{टॅब गट <ph name="TABS_COUNT_MANY"/> टॅब, <ph name="COLOR_NAME"/> रंग वापरून बंद करा.}}</translation>
 <translation id="5556417849629758491">स्टोअरची माहिती पहा, पर्याय स्क्रीनच्या सर्वात वर उपलब्ध आहे</translation>
 <translation id="5627941783489838464">टॅब अपडेट नाहीत</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave वरील <ph name="TABS_COUNT_ONE"/> लिंक}other{Brave वरील <ph name="TABS_COUNT_MANY"/> लिंक}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Growser वरील <ph name="TABS_COUNT_ONE"/> लिंक}other{Growser वरील <ph name="TABS_COUNT_MANY"/> लिंक}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{टॅब डावीकडे हलवा}other{टॅब डावीकडे हलवा}}</translation>
 <translation id="5746204836956568669">अधिक जलद काम करण्यासाठी <ph name="NUMBER_OF_TABS"/> टॅबचा गट करायचा आहे का?</translation>
 <translation id="5773295109010386583">इनॅक्टिव्ह आयटम आपोआप बंद करा</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> आयटम}other{<ph name="TABS_COUNT_MANY"/> आयटम}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{निवडलेला <ph name="TABS_COUNT_ONE"/> आयटम रिस्टोअर करा}other{निवडलेले <ph name="TABS_COUNT_MANY"/> आयटम रिस्टोअर करा}}</translation>
 <translation id="753732157349120914">टॅब स्विचर</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Brave कडून <ph name="REVIEWS_COUNT_ONE"/> पुनरावलोकन}other{Brave कडून <ph name="REVIEWS_COUNT_MANY"/> पुनरावलोकने}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{Growser कडून <ph name="REVIEWS_COUNT_ONE"/> पुनरावलोकन}other{Growser कडून <ph name="REVIEWS_COUNT_MANY"/> पुनरावलोकने}}</translation>
 <translation id="7559245342362162951">फुलस्क्रीन ग्रिडमध्ये गटाचे टॅब दाखवा</translation>
 <translation id="7658239707568436148">रद्द करा</translation>
 <translation id="7688386659311034820">इनॅक्टिव्ह टॅब डायलॉग</translation>

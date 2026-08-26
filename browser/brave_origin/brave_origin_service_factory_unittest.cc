@@ -13,9 +13,11 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/p3a/pref_names.h"
 #include "chrome/test/base/testing_browser_process.h"
+#include "chrome/test/base/testing_profile.h"
 #include "chrome/test/base/testing_profile_manager.h"
 #include "components/policy/core/common/policy_details.h"
 #include "components/policy/policy_constants.h"
+#include "components/prefs/pref_service.h"
 #include "content/public/test/browser_task_environment.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
@@ -36,21 +38,16 @@ TEST(BraveOriginServiceFactoryTest,
 
   // Test that P3A policy is correctly built (browser-level)
   const auto* p3a_info = base::FindOrNull(browser_policy_definitions,
-                                          policy::key::kBraveP3AEnabled);
+                                          policy::key::kGrowserP3AEnabled);
   ASSERT_NE(p3a_info, nullptr);
   EXPECT_EQ(p3a_info->pref_name, p3a::kP3AEnabled);
   EXPECT_EQ(p3a_info->default_value, false);
   EXPECT_EQ(p3a_info->user_settable, true);
   EXPECT_EQ(p3a_info->brave_origin_pref_key, p3a::kP3AEnabled);
 
-  // Test that Stats reporting policy is correctly built (browser-level)
-  const auto* stats_info = base::FindOrNull(
-      browser_policy_definitions, policy::key::kBraveStatsPingEnabled);
-  ASSERT_NE(stats_info, nullptr);
-  EXPECT_EQ(stats_info->pref_name, kStatsReportingEnabled);
-  EXPECT_EQ(stats_info->default_value, false);
-  EXPECT_EQ(stats_info->user_settable, true);
-  EXPECT_EQ(stats_info->brave_origin_pref_key, kStatsReportingEnabled);
+  // growser (#62): the stats-ping policy was removed with the stats updater
+  // itself, which is compiled out (#38). There is nothing left to assert here -
+  // the policy no longer exists, so it cannot appear in the definitions.
 
 #if BUILDFLAG(ENABLE_TOR)
   // Test that Tor disabled policy is correctly built (browser-level)
@@ -92,10 +89,7 @@ TEST(BraveOriginServiceFactoryTest,
 
   // Test that browser-level policies are NOT in profile definitions
   EXPECT_FALSE(
-      profile_policy_definitions.contains(policy::key::kBraveP3AEnabled))
-      << "Browser-level policy should not be in profile definitions";
-  EXPECT_FALSE(
-      profile_policy_definitions.contains(policy::key::kBraveStatsPingEnabled))
+      profile_policy_definitions.contains(policy::key::kGrowserP3AEnabled))
       << "Browser-level policy should not be in profile definitions";
 }
 
@@ -232,6 +226,27 @@ TEST_F(BraveOriginServiceFactoryProfileTest, NoServiceForGuestProfile) {
   // Verify that BraveOriginService is not created for guest profiles
   auto* service = BraveOriginServiceFactory::GetForProfile(guest_profile);
   EXPECT_EQ(service, nullptr);
+}
+
+// Every pref that Brave Origin claims as a profile policy must be registered
+// on a real profile. Brave Origin shows its settings toggles (and writes these
+// prefs via SetPolicyValue) gated only on build flags, so a pref registered
+// solely behind a runtime feature flag would hit an unregistered-pref
+// NOTREACHED when toggled with the feature off. Registering these prefs
+// unconditionally in brave::RegisterProfilePrefs keeps them in sync.
+TEST_F(BraveOriginServiceFactoryProfileTest, ProfilePolicyPrefsAreRegistered) {
+  auto* profile = profile_manager_.CreateTestingProfile("test");
+  auto* prefs = profile->GetPrefs();
+
+  for (const auto& [policy_key, info] :
+       BraveOriginServiceFactory::GetProfilePolicyDefinitions()) {
+    EXPECT_NE(prefs->FindPreference(info.pref_name), nullptr)
+        << "Profile policy " << policy_key << " references pref "
+        << info.pref_name
+        << " which is not registered. Register it unconditionally in "
+           "brave::RegisterProfilePrefs (brave/browser/brave_profile_prefs.cc) "
+           "so it exists regardless of any runtime feature flag.";
+  }
 }
 
 }  // namespace brave_origin

@@ -47,6 +47,11 @@ class FilterListCatalogEntry {
   std::string url;
   std::string title;
   std::vector<std::string> langs;
+  // growser (#87): where the list text can be fetched without a component.
+  // Brave delivers every catalogue list through its own component updater,
+  // which answers a fork 403, but the catalogue also names the publishers
+  // the lists come from - and those serve plain text over HTTPS.
+  std::vector<std::string> source_urls;
   std::string support_url;
   std::string desc;
 

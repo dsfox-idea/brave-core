@@ -303,7 +303,7 @@ class InstallStaticUtilTest
 #endif
 #else
     static constexpr wchar_t kPolicyKey[] =
-        L"Software\\Policies\\BraveSoftware\\Brave-Browser-Development";
+        L"Software\\Policies\\Growser";
 #endif
 
     ASSERT_EQ(ERROR_SUCCESS,
@@ -364,7 +364,7 @@ TEST_P(InstallStaticUtilTest, GetChromeInstallSubDirectory) {
   // The directory strings for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr const wchar_t* kInstallDirs[] = {
-      L"BraveSoftware\\Brave-Browser-Development",
+      L"Growser",
   };
 #endif
   static_assert(std::size(kInstallDirs) == NUM_INSTALL_MODES,
@@ -398,7 +398,7 @@ TEST_P(InstallStaticUtilTest, GetRegistryPath) {
   // The registry path strings for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr const wchar_t* kRegistryPaths[] = {
-      L"Software\\BraveSoftware\\Brave-Browser-Development",
+      L"Software\\Growser",
   };
 #endif
   static_assert(std::size(kRegistryPaths) == NUM_INSTALL_MODES,
@@ -442,7 +442,7 @@ TEST_P(InstallStaticUtilTest, GetUninstallRegistryPath) {
   // kInstallModes.
   static constexpr const wchar_t* kUninstallRegistryPaths[] = {
       L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"  // (cont'd)
-      L"BraveSoftware Brave-Browser-Development",
+      L"Growser",
   };
 #endif
   static_assert(std::size(kUninstallRegistryPaths) == NUM_INSTALL_MODES,
@@ -476,9 +476,11 @@ TEST_P(InstallStaticUtilTest, GetAppGuid) {
   EXPECT_THAT(GetAppGuid(),
               StrCaseEq(UNSAFE_TODO(kAppGuids[std::get<0>(GetParam())])));
 #else
-  // For brands that do not integrate with Omaha/Google Update, the app guid is
-  // an empty string.
-  EXPECT_STREQ(L"", GetAppGuid());
+  // growser (#51): upstream's assumption here is that a brand which does not
+  // integrate with Omaha has an empty app guid, and that an unofficial build is
+  // such a brand. Ours integrates - the guid is what Omaha 4 registers the
+  // browser under - so this pins our value instead of pinning emptiness.
+  EXPECT_STREQ(L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}", GetAppGuid());
 #endif
 }
 
@@ -501,7 +503,7 @@ TEST_P(InstallStaticUtilTest, GetBaseAppId) {
 #else
   // The base app ids for the brand's install modes; parallel to kInstallModes.
   static constexpr const wchar_t* kBaseAppIds[] = {
-      L"BraveDevelopment",
+      L"Growser",
   };
 #endif
   static_assert(std::size(kBaseAppIds) == NUM_INSTALL_MODES,
@@ -580,16 +582,16 @@ TEST_P(InstallStaticUtilTest, GetToastActivatorClsid) {
   // The toast activator CLSIDs for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr CLSID kToastActivatorClsids[] = {
-      { 0xeb41c6e8,
-        0xba35,
-        0x4c06,
-        { 0x96, 0xe8, 0x6f, 0x30, 0xf1, 0x8c, 0xa5,
-          0x5c } },  // Brave-Browser-Development.
+      { 0x83127675,
+        0xce10,
+        0x4ac5,
+        { 0x9c, 0x10, 0x3f, 0xf2, 0xe7, 0xd4, 0x53,
+          0x99 } },  // Growser.
   };
 
   // The string representation of the CLSIDs above.
   static constexpr const wchar_t* kToastActivatorClsidsString[] = {
-      L"{EB41C6E8-BA35-4C06-96E8-6F30F18CA55C}"  // Brave-Browser-Development.
+      L"{83127675-CE10-4AC5-9C10-3FF2E7D45399}"  // Growser.
   };
 #endif
   static_assert(std::size(kToastActivatorClsids) == NUM_INSTALL_MODES,

@@ -10,6 +10,7 @@
 #include "base/memory/raw_ptr.h"
 #include "base/test/bind.h"
 #include "brave/components/constants/pref_names.h"
+#include "brave/components/tor/pref_names.h"
 #include "chrome/browser/devtools/devtools_window.h"
 #include "chrome/browser/media/router/media_router_feature.h"
 #include "chrome/common/pref_names.h"
@@ -17,6 +18,7 @@
 #include "chrome/test/base/testing_profile.h"
 #include "chrome/test/base/testing_profile_manager.h"
 #include "components/prefs/pref_service.h"
+#include "components/prefs/testing_pref_service.h"
 #include "components/safe_browsing/core/common/safe_browsing_prefs.h"
 #include "components/translate/core/browser/translate_pref_names.h"
 #include "content/public/test/browser_task_environment.h"
@@ -37,6 +39,11 @@ class TorProfileManagerUnitTest : public testing::Test {
     TestingBrowserProcess* browser_process = TestingBrowserProcess::GetGlobal();
     profile_manager_ = std::make_unique<TestingProfileManager>(browser_process);
     ASSERT_TRUE(profile_manager_->SetUp());
+    // growser (#78): Tor is disabled by default in this browser, and a
+    // disabled Tor has no profile to give. These tests are about what a Tor
+    // profile looks like, not about the default, so ask for Tor explicitly.
+    browser_process->GetTestingLocalState()->SetBoolean(
+        tor::prefs::kTorDisabled, false);
     profile_ = profile_manager_->CreateTestingProfile(kTestProfileName);
   }
 

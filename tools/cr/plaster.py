@@ -11,6 +11,7 @@ import argparse
 import ast
 from dataclasses import dataclass, field
 import hashlib
+import itertools
 import logging
 import mmap
 from pathlib import Path, PurePath
@@ -23,7 +24,7 @@ import subprocess
 import sys
 import textwrap
 from types import MappingProxyType
-from typing import ClassVar, Final
+from typing import Callable, ClassVar, Final
 
 from rich.markdown import Markdown
 import yaml
@@ -384,6 +385,28 @@ class PatchinfoBuilder:
         self.patchinfo.save_if_changed(content)
 
 
+@dataclass(frozen=True)
+class BlankForParseOptions:
+    """ File level blank-related flags used by ast parsers.
+
+    This type merely bundles these values together.
+    """
+
+    # Blanks class-head export macros and preprocessor conditionals.
+    macros: bool = False
+
+    # Blanks a macro/identifier directly adjacent to a string literal.
+    string_adjacent_macros: bool = False
+
+    # Blanks the Views METADATA_HEADER/BEGIN_METADATA/END_METADATA macros.
+    metadata_header_macros: bool = False
+
+    def __bool__(self) -> bool:
+        """True if any pass is enabled, i.e. parsing needs preparation at all."""
+        return (self.macros or self.string_adjacent_macros
+                or self.metadata_header_macros)
+
+
 class Rewriter(abc.ABC):
     """A single transformation applied to a plaster's target file.
 
@@ -409,12 +432,14 @@ class Rewriter(abc.ABC):
     HELP: ClassVar[str] = ''
 
     @abc.abstractmethod
-    def apply(self,
-              contents: str,
-              *,
-              count: int,
-              description: str,
-              blank_for_parse: bool = False) -> tuple[str, list[str]]:
+    def apply(
+        self,
+        contents: str,
+        *,
+        count: int,
+        description: str,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
         """Transform `contents`, returning (new_contents, validation_errors).
 
         `count` is the entry's `count:` (default 1, `0` meaning "one or more").
@@ -422,8 +447,9 @@ class Rewriter(abc.ABC):
         the expected number of matches. A composed rewriter may instead give
         each of its operations its own expectation. `errors` is the list of
         human-readable count/validation failures (empty when the entry applied
-        as expected). `blank_for_parse` is the file-wide
-        `blank_macros_for_ast_parsing` flag used by AST rewriters.
+        as expected). `blank_for_parse` bundles the file-wide
+        `blank_macros_for_ast_parsing` / `blank_string_adjacent_macros_for_ast_parsing`
+        / `blank_metadata_header_macros` flags used by AST rewriters.
         """
 
     @classmethod
@@ -452,8 +478,12 @@ class Rewriter(abc.ABC):
 
 
 # The file-wide plaster keys allowed at the top level of a YAML plaster.
-_TOP_LEVEL_KEYS: Final = frozenset(
-    {'substitutions', 'blank_macros_for_ast_parsing'})
+_TOP_LEVEL_KEYS: Final = frozenset({
+    'substitutions',
+    'blank_macros_for_ast_parsing',
+    'blank_string_adjacent_macros_for_ast_parsing',
+    'blank_metadata_header_macros',
+})
 
 # Target-source suffixes plaster treats as C++. `blank_macros_for_ast_parsing`
 # blanks constructs for the tree-sitter C++ parser, so it is only meaningful for
@@ -474,9 +504,17 @@ class PlasterSpec:
     # The `substitutions:` entries, in order.
     substitutions: list[Substitution]
 
-    # Indicates to the AST-rewriter that it needs to blank all cxx preprocessor
-    # directives that can interfere with parsing.
+    # Used to indicate that preprocessor #if/#endif and other macros should be
+    # blanked before AST parsing. C++-only.
     blank_macros_for_ast_parsing: bool = False
+
+    # Used to indicate that preprocessor macros adjacent to string literals
+    # should be blanked before AST parsing. C++-only.
+    blank_string_adjacent_macros_for_ast_parsing: bool = False
+
+    # Used to indicate that the Views METADATA_HEADER/BEGIN_METADATA/
+    # END_METADATA macros should be blanked before AST parsing. C++-only.
+    blank_metadata_header_macros: bool = False
 
 
 @dataclass(frozen=True)
@@ -497,10 +535,12 @@ class Substitution:
     # The rewriter this entry composes; `apply` delegates to it.
     rewriter: Rewriter
 
-    def apply(self,
-              contents: str,
-              *,
-              blank_for_parse: bool = False) -> tuple[str, list[str]]:
+    def apply(
+        self,
+        contents: str,
+        *,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
         """Apply the composed rewriter, returning (new_contents, errors).
         """
         return self.rewriter.apply(contents,
@@ -558,10 +598,21 @@ class Substitution:
                              ', '.join(repr(k)
                                        for k in unknown) + '; allowed: ' +
                              ', '.join(sorted(_TOP_LEVEL_KEYS)))
-        blank_for_parse = data.get('blank_macros_for_ast_parsing', False)
-        if not isinstance(blank_for_parse, bool):
+        blank_macros = data.get('blank_macros_for_ast_parsing', False)
+        if not isinstance(blank_macros, bool):
             raise ValueError(
                 '`blank_macros_for_ast_parsing` must be a boolean')
+        blank_string_adjacent_macros = data.get(
+            'blank_string_adjacent_macros_for_ast_parsing', False)
+        if not isinstance(blank_string_adjacent_macros, bool):
+            raise ValueError(
+                '`blank_string_adjacent_macros_for_ast_parsing` must be a '
+                'boolean')
+        blank_metadata_header_macros = data.get('blank_metadata_header_macros',
+                                                False)
+        if not isinstance(blank_metadata_header_macros, bool):
+            raise ValueError(
+                '`blank_metadata_header_macros` must be a boolean')
         raw = data.get('substitutions')
         if raw is None:
             raise ValueError(
@@ -574,7 +625,10 @@ class Substitution:
             )
         return PlasterSpec(
             substitutions=[Substitution._from_item(entry) for entry in raw],
-            blank_macros_for_ast_parsing=blank_for_parse)
+            blank_macros_for_ast_parsing=blank_macros,
+            blank_string_adjacent_macros_for_ast_parsing=(
+                blank_string_adjacent_macros),
+            blank_metadata_header_macros=blank_metadata_header_macros)
 
     @staticmethod
     def _from_item(data: object) -> Substitution:
@@ -710,6 +764,28 @@ class MatchExpectation:
                 f'{self.minimum}..{upper})')
 
 
+def _is_valid_re_flag_name(flag: str) -> bool:
+    """True if `flag` names a real `re` module flag (e.g. `DOTALL`)."""
+    return flag.isupper() and hasattr(re, flag)
+
+
+def _parse_re_flags(flags_raw: object, description: str) -> int:
+    """Combine `re_flags` flag names (e.g. `['DOTALL']`) into one `re` mask.
+    """
+    if not isinstance(flags_raw, list):
+        raise ValueError(
+            f're_flags must be a list of strings (in "{description}")')
+    re_flags = 0
+    for flag in flags_raw:
+        if not isinstance(flag, str):
+            raise ValueError(
+                f're_flags entries must be strings (in "{description}")')
+        if not _is_valid_re_flag_name(flag):
+            raise ValueError(f'Invalid re flag specified: {flag}')
+        re_flags |= getattr(re, flag)
+    return re_flags
+
+
 class Regex(Rewriter):
     """A regex substitution applied with `re.subn` (the native rewriter).
     """
@@ -753,12 +829,14 @@ class Regex(Rewriter):
         self._replace = replace
         self._re_flags = re_flags
 
-    def apply(self,
-              contents: str,
-              *,
-              count: int,
-              description: str,
-              blank_for_parse: bool = False) -> tuple[str, list[str]]:
+    def apply(
+        self,
+        contents: str,
+        *,
+        count: int,
+        description: str,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
         del description  # Only the count matters for the regex diagnostic.
         del blank_for_parse  # Text substitution never parses; nothing to relax.
         # `count=0` here means "replace every match"; how many were expected is
@@ -806,23 +884,8 @@ class Regex(Rewriter):
 
         return cls(re_pattern=re_pattern,
                    replace=replace,
-                   re_flags=cls._parse_flags(body.get('re_flags', []),
-                                             description))
-
-    @staticmethod
-    def _parse_flags(flags_raw: object, description: str) -> int:
-        if not isinstance(flags_raw, list):
-            raise ValueError(
-                f're_flags must be a list of strings (in "{description}")')
-        re_flags = 0
-        for flag in flags_raw:
-            if not isinstance(flag, str):
-                raise ValueError(
-                    f're_flags entries must be strings (in "{description}")')
-            if not (flag.isupper() and hasattr(re, flag)):
-                raise ValueError(f'Invalid re flag specified: {flag}')
-            re_flags |= getattr(re, flag)
-        return re_flags
+                   re_flags=_parse_re_flags(body.get('re_flags', []),
+                                            description))
 
 
 @dataclass(frozen=True)
@@ -900,12 +963,14 @@ class _AstGrepRewriter(Rewriter):
                       MatchExpectation.from_count(count))
         ]
 
-    def apply(self,
-              contents: str,
-              *,
-              count: int,
-              description: str,
-              blank_for_parse: bool = False) -> tuple[str, list[str]]:
+    def apply(
+        self,
+        contents: str,
+        *,
+        count: int,
+        description: str,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
         engine = AstRewriter(RewritersEval.load(),
                              contents,
                              blank_for_parse=blank_for_parse)
@@ -1515,12 +1580,14 @@ class AddToProtected(_AstGrepRewriter):
         self._class_name = class_name
         self._code = code
 
-    def apply(self,
-              contents: str,
-              *,
-              count: int,
-              description: str,
-              blank_for_parse: bool = False) -> tuple[str, list[str]]:
+    def apply(
+        self,
+        contents: str,
+        *,
+        count: int,
+        description: str,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
         # The code is inserted exactly once either in an existing protected
         # section or in a new one created just before a private section. Each
         # placement is indented to the anchor's real column (Chromium members
@@ -1631,12 +1698,14 @@ class AddToPublic(_AstGrepRewriter):
         self._class_name = class_name
         self._code = code
 
-    def apply(self,
-              contents: str,
-              *,
-              count: int,
-              description: str,
-              blank_for_parse: bool = False) -> tuple[str, list[str]]:
+    def apply(
+        self,
+        contents: str,
+        *,
+        count: int,
+        description: str,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
         # The code is appended exactly once, either just before the section
         # that follows public or, when public is last, before the closing brace.
         # Each placement is indented to the anchor's real column so a nested
@@ -1804,12 +1873,14 @@ class AddEnumEntries(_AstGrepRewriter):
         self._entries = entries
         self._max_value = max_value
 
-    def apply(self,
-              contents: str,
-              *,
-              count: int,
-              description: str,
-              blank_for_parse: bool = False) -> tuple[str, list[str]]:
+    def apply(
+        self,
+        contents: str,
+        *,
+        count: int,
+        description: str,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
         # The insertion happens exactly once, either above the declared
         # max-value entry or after the enum's current last entry. Both
         # placements anchor on that last entry, so the new entries take its
@@ -2033,11 +2104,19 @@ class PlasterFile:
         if suffix == '.yaml':
             doc = Substitution.from_yaml(info.plaster_contents)
             is_cxx = _is_cxx_source(self.path)
-            if doc.blank_macros_for_ast_parsing and not is_cxx:
-                raise ValueError(
-                    '`blank_macros_for_ast_parsing` is only supported for C++ '
-                    f'sources (in {self.path})')
             if not is_cxx:
+                if doc.blank_macros_for_ast_parsing:
+                    raise ValueError(
+                        '`blank_macros_for_ast_parsing` is only supported for '
+                        f'C++ sources (in {self.path})')
+                if doc.blank_string_adjacent_macros_for_ast_parsing:
+                    raise ValueError(
+                        '`blank_string_adjacent_macros_for_ast_parsing` is '
+                        f'only supported for C++ sources (in {self.path})')
+                if doc.blank_metadata_header_macros:
+                    raise ValueError(
+                        '`blank_metadata_header_macros` is only supported '
+                        f'for C++ sources (in {self.path})')
                 for substitution in doc.substitutions:
                     if substitution.rewriter.source_language() == 'cxx':
                         raise ValueError(
@@ -2045,8 +2124,19 @@ class PlasterFile:
                             f'only supported for C++ sources (in {self.path})')
         else:
             raise ValueError(f'Unsupported plaster file extension: {suffix}')
-        contents = repository.chromium.read_file(info.source)
+        try:
+            contents = repository.chromium.read_file(info.source)
+        except subprocess.CalledProcessError as e:
+            raise OrphanedPlasterError(
+                f'Failed to read the source targeted by {self.path} from '
+                f'git: {info.source}. The upstream file may have been moved '
+                'or deleted') from e
         errors = []
+        blank_for_parse = BlankForParseOptions(
+            macros=doc.blank_macros_for_ast_parsing,
+            string_adjacent_macros=(
+                doc.blank_string_adjacent_macros_for_ast_parsing),
+            metadata_header_macros=doc.blank_metadata_header_macros)
 
         try:
             for substitution in doc.substitutions:
@@ -2054,7 +2144,7 @@ class PlasterFile:
                 # composed rewriters) and reports any failures; we just attach
                 # the file being patched.
                 contents, sub_errors = substitution.apply(
-                    contents, blank_for_parse=doc.blank_macros_for_ast_parsing)
+                    contents, blank_for_parse=blank_for_parse)
                 errors.extend(f'{error} in {self.path}'
                               for error in sub_errors)
 
@@ -2081,6 +2171,14 @@ class PlasterError(Exception):
 
 class PlasterFileNeedsRegen(PlasterError):
     pass
+
+
+class OrphanedPlasterError(PlasterError):
+    """Raised when a plaster's target source cannot be read from git.
+
+    Typically this means the upstream file was moved or deleted, so the plaster
+    now points at a path that no longer exists in HEAD.
+    """
 
 
 class PlasterApplyError(PlasterError):
@@ -2238,6 +2336,24 @@ _REWRITER_SCHEMA = {
     'result': _RESULT_SCHEMA,
 }
 
+# Regex macros have input fields, and those input fields also require a
+# documentation for them.
+_REGEX_MACRO_INPUT_SCHEMA = {
+    'name': _NON_EMPTY_STR,
+    'description': _NON_EMPTY_STR,
+}
+
+# A regex macro schema. A regex macro is similar to a substitution, so it has
+# the same entries that a regular regex rewriter has.
+_REGEX_MACRO_SCHEMA = {
+    'description': _NON_EMPTY_STR,
+    'inputs': [_REGEX_MACRO_INPUT_SCHEMA],
+    schema.Optional('pattern'): _NON_EMPTY_STR,
+    schema.Optional('re_pattern'): _NON_EMPTY_STR,
+    'replace': str,
+    schema.Optional('re_flags'): [str],
+}
+
 # Top-level schema for rewriters.pyl.
 _REWRITERS_SCHEMA = schema.Schema({
     schema.Optional('ast.matcher'): {
@@ -2245,6 +2361,9 @@ _REWRITERS_SCHEMA = schema.Schema({
     },
     schema.Optional('ast.rewriter'): {
         schema.Optional(_OP_ID): _REWRITER_SCHEMA
+    },
+    schema.Optional('regex_macro'): {
+        schema.Optional(_OP_ID): _REGEX_MACRO_SCHEMA
     },
 })
 
@@ -2276,6 +2395,7 @@ class RewritersEval:
             raise RewritersSchemaError(f'{source}: {e}') from e
         self._matchers = data.get('ast.matcher', {})
         self._rewriters = data.get('ast.rewriter', {})
+        self._regex_macros = data.get('regex_macro', {})
         self._check_cross_references()
 
     @classmethod
@@ -2313,6 +2433,19 @@ class RewritersEval:
         except KeyError:
             raise RewritersSchemaError(
                 f'unknown rewriter op: {op_id!r}') from None
+
+    @property
+    def regex_macros(self) -> MappingProxyType[str, dict]:
+        """Read-only mapping of regex macro op id -> validated macro spec."""
+        return MappingProxyType(self._regex_macros)
+
+    def regex_macro(self, op_id: str) -> dict:
+        """Return the regex macro spec for `op_id`, or raise if unknown."""
+        try:
+            return self._regex_macros[op_id]
+        except KeyError:
+            raise RewritersSchemaError(
+                f'unknown regex macro op: {op_id!r}') from None
 
     @classmethod
     def language_of(cls, op_id: str) -> str:
@@ -2356,6 +2489,8 @@ class RewritersEval:
             self._check_matcher_captures(op_id, spec)
         for op_id, spec in self._rewriters.items():
             self._check_rewriter_interface(op_id, spec)
+        for op_id, spec in self._regex_macros.items():
+            self._check_regex_macro_interface(op_id, spec)
 
     def _check_matcher_captures(self, op_id: str, spec: dict) -> None:
         """Every metavariable a capture reads must be bound by the template."""
@@ -2421,6 +2556,52 @@ class RewritersEval:
         if unused:
             raise RewritersSchemaError(
                 f'{self._source}: rewriter {op_id!r} declares input(s) '
+                f'never used in its templates: {", ".join(unused)}')
+
+    def _check_regex_macro_interface(self, op_id: str, spec: dict) -> None:
+        """A regex macro's `pattern`/`replace` fields and declared `inputs`
+        must line up.
+
+        The macro must pick exactly one of `pattern`/`re_pattern` (the same
+        mutual exclusivity `Regex.parse` enforces for a plain `regex:` block)
+        and name only real `re` flags. Each `inputs` entry's `name` must be
+        unique, and the set of names must be exactly the union of
+        `{placeholder}`s used across the active pattern field and `replace`,
+        so the macro's advertised interface never drifts from what it
+        actually consumes or leaves an input undocumented.
+        """
+        has_pattern = 'pattern' in spec
+        has_re_pattern = 're_pattern' in spec
+        if has_pattern == has_re_pattern:
+            raise RewritersSchemaError(
+                f'{self._source}: regex macro {op_id!r} must specify exactly '
+                f'one of `pattern` or `re_pattern`')
+        for flag in spec.get('re_flags', []):
+            if not _is_valid_re_flag_name(flag):
+                raise RewritersSchemaError(
+                    f'{self._source}: regex macro {op_id!r} has an invalid '
+                    f're_flags entry: {flag!r}')
+
+        names = [entry['name'] for entry in spec['inputs']]
+        duplicates = sorted({name for name in names if names.count(name) > 1})
+        if duplicates:
+            raise RewritersSchemaError(
+                f'{self._source}: regex macro {op_id!r} declares duplicate '
+                f'input name(s): {", ".join(duplicates)}')
+
+        declared = set(names)
+        used = _placeholders(spec.get('pattern', spec.get('re_pattern')))
+        used |= _placeholders(spec['replace'])
+
+        undeclared = sorted(used - declared)
+        if undeclared:
+            raise RewritersSchemaError(
+                f'{self._source}: regex macro {op_id!r} templates use '
+                f'undeclared input(s): {", ".join(undeclared)}')
+        unused = sorted(declared - used)
+        if unused:
+            raise RewritersSchemaError(
+                f'{self._source}: regex macro {op_id!r} declares input(s) '
                 f'never used in its templates: {", ".join(unused)}')
 
 
@@ -2567,6 +2748,152 @@ def run_ast_grep(*, language: str, rule_body: str,
     return matches
 
 
+class CxxMacrosEraser:
+    """Blanks C++ macros that confuse `ast-grep`.
+
+    Every substitution replaces characters in place, so byte offsets into the
+    original source stay valid.
+
+    There are two types of erasure done in this class. The common macros one
+    (e.g #if, #endif, FOO_EXPORT), which is less controversial, and then the
+    more targeted erasure of macros that are adjacent to string literals, which
+    should be used sparingly. The metadata-header pass goes further and keeps
+    identifiers as literal, unmoved text, so a later op like `rename_class`
+    can still find and rename them there.
+    """
+
+    @dataclass(frozen=True)
+    class _OpaqueSpan:
+        """A byte range to copy through untouched."""
+
+        start: int
+        end: int
+        text: str
+
+    # `class MODULES_EXPORT Foo`: tree-sitter reads the macro as the name.
+    _EXPORT_MACRO_RE = re.compile(r'(\b(?:class|struct)\s+)'
+                                  r'([A-Z][A-Z0-9_]*_EXPORT(?:\s*\([^()]*\))?)'
+                                  r'(\s+[A-Za-z_])')
+
+    # `#if`/`#ifdef`/.../`#endif`: no grammar node in e.g. a base-specifier
+    # list.
+    _CXX_CONDITIONAL_RE = re.compile(
+        r'(?m)^[ \t]*#[ \t]*(?:if|ifdef|ifndef|elif|else|endif)\b.*$')
+
+    # Any directive line. `#define FOO "bar"` has the same shape as the
+    # macro-adjacent-string regexes below but isn't one so we skip them in
+    # `_blank_outside_opaque_spans`.
+    _CXX_DIRECTIVE_LINE_RE = re.compile(r'(?m)^[ \t]*#.*$')
+
+    # Raw string literal, matched by its real delimiter-based close so an
+    # embedded `"` isn't mistaken for it. These are also skipped in
+    # `_blank_outside_opaque_spans`.
+    _CXX_RAW_STRING_RE = re.compile(
+        r'(?:u8|u|U|L)?R"([^"\\()\s]{0,16})\(.*?\)\1"', re.DOTALL)
+
+    # Plain string literal. This regex excludes encoding-prefixed forms
+    # (`u8"..."`), which this idiom doesn't use and raw strings already need
+    # separate handling for.
+    _CXX_STRING_LIT = r'(?<![A-Za-z0-9_])"(?:[^"\\]|\\.)*"'
+
+    # Bare identifier with an optional single-level call, e.g. `FOO(BAR)`.
+    _CXX_MACRO_TOKEN = r'[A-Za-z_]\w*(?:\([^()]*\))?'
+
+    # `"Skia/" STRINGIZE(SK_MILESTONE)`: only valid once macros that expand to
+    # (or stringize into) a string literal have run.
+    _CXX_MACRO_AFTER_STRING_RE = re.compile(
+        f'({_CXX_STRING_LIT})([ \\t]+)({_CXX_MACRO_TOKEN})')
+    _CXX_MACRO_BEFORE_STRING_RE = re.compile(
+        f'({_CXX_MACRO_TOKEN})([ \\t]+)({_CXX_STRING_LIT})')
+
+    # `METADATA_HEADER(Foo, views::View)`: a bare macro call with no trailing
+    # `;`, sitting directly in a class body where only a declaration is valid.
+    _METADATA_HEADER_RE = re.compile(
+        r'METADATA_HEADER\(\s*([\w:]+)\s*(?:,\s*([\w:]+)\s*)?\)')
+
+    # `BEGIN_METADATA(Foo, views::View)` ... `END_METADATA`: the same problem
+    # at namespace scope, usually with property-registration macro calls
+    # (e.g. `ADD_PROPERTY_METADATA(...)`) in between. Those inner calls are
+    # blanked wholesale rather than parsed, since nothing else in plaster ever
+    # needs to match them.
+    _BEGIN_METADATA_RE = re.compile(
+        r'BEGIN_METADATA\(\s*([\w:]+)\s*(?:,\s*([\w:]+)\s*)?\)(.*?)'
+        r'END_METADATA', re.DOTALL)
+
+    def __init__(self, blank_for_parse: BlankForParseOptions):
+        self._blank_for_parse = blank_for_parse
+
+    def erase(self, source: str) -> str:
+        """Blank the constructs `self._blank_for_parse` enables."""
+        if self._blank_for_parse.macros:
+            source = self._EXPORT_MACRO_RE.sub(
+                lambda m: m.group(1) + ' ' * len(m.group(2)) + m.group(3),
+                source)
+            source = self._CXX_CONDITIONAL_RE.sub(
+                lambda line: ' ' * len(line.group(0)), source)
+        if self._blank_for_parse.string_adjacent_macros:
+            source = self._blank_outside_opaque_spans(
+                source, self._CXX_MACRO_AFTER_STRING_RE,
+                lambda m: m.group(1) + m.group(2) + ' ' * len(m.group(3)))
+            source = self._blank_outside_opaque_spans(
+                source, self._CXX_MACRO_BEFORE_STRING_RE,
+                lambda m: ' ' * len(m.group(1)) + m.group(2) + m.group(3))
+        if self._blank_for_parse.metadata_header_macros:
+            source = self._METADATA_HEADER_RE.sub(self._blank_metadata_header,
+                                                  source)
+            source = self._BEGIN_METADATA_RE.sub(self._blank_begin_metadata,
+                                                 source)
+        return source
+
+    @staticmethod
+    def _metadata_header_using_decl(match: re.Match) -> tuple[str, int]:
+        """Builds `using name[,base]` (no trailing `;`) from `match`'s `name`/
+        `base` groups, padded so each keeps its original byte offset.
+
+        Returns the declaration text and the offset (relative to the match
+        start) where it ends, so callers with trailing content of their own
+        (`_BEGIN_METADATA_RE`'s property-macro block) know where to resume.
+        """
+        name, base = match.group(1), match.group(2)
+        prefix = 'using '.ljust(match.start(1) - match.start(0))
+        if base is None:
+            return prefix + name, match.end(1) - match.start(0)
+        middle = ','.ljust(match.start(2) - match.end(1))
+        return prefix + name + middle + base, match.end(2) - match.start(0)
+
+    @classmethod
+    def _blank_metadata_header(cls, match: re.Match) -> str:
+        decl, decl_end = cls._metadata_header_using_decl(match)
+        return decl + ';'.ljust(len(match.group(0)) - decl_end)
+
+    @classmethod
+    def _blank_begin_metadata(cls, match: re.Match) -> str:
+        decl, decl_end = cls._metadata_header_using_decl(match)
+        header_len = match.start(3) - match.start(0)
+        header = decl + ';'.ljust(header_len - decl_end)
+        blanked_middle = re.sub(r'[^\n]', ' ', match.group(3))
+        return header + blanked_middle + ' ' * len('END_METADATA')
+
+    def _blank_outside_opaque_spans(self, source: str, pattern: re.Pattern,
+                                    repl: Callable[[re.Match], str]) -> str:
+        """Apply `pattern.sub(repl, ...)`, skipping directive lines and raw strings."""
+        spans = sorted((self._OpaqueSpan(m.start(), m.end(), m.group(0))
+                        for m in itertools.chain(
+                            self._CXX_DIRECTIVE_LINE_RE.finditer(source),
+                            self._CXX_RAW_STRING_RE.finditer(source))),
+                       key=lambda span: span.start)
+        pieces = []
+        pos = 0
+        for span in spans:
+            if span.start < pos:
+                continue  # Overlaps a span already copied.
+            pieces.append(pattern.sub(repl, source[pos:span.start]))
+            pieces.append(span.text)
+            pos = span.end
+        pieces.append(pattern.sub(repl, source[pos:]))
+        return ''.join(pieces)
+
+
 class AstRewriter:
     """Applies ast-grep rewriter ops to the contents of a single file.
 
@@ -2579,59 +2906,22 @@ class AstRewriter:
     operations to run.
     """
 
-    # Class-head export macro (e.g. `MODULES_EXPORT`, `COMPONENT_EXPORT(FOO)`):
-    # the keyword and its space, the macro, then the start of the real name.
-    # Used by `_prepare_cxx_for_parse`.
-    _EXPORT_MACRO_RE = re.compile(r'(\b(?:class|struct)\s+)'
-                                  r'([A-Z][A-Z0-9_]*_EXPORT(?:\s*\([^()]*\))?)'
-                                  r'(\s+[A-Za-z_])')
-
-    # A preprocessor conditional directive line (`#if`, `#ifdef` ...), matched
-    # without its trailing newline. Used by `_prepare_cxx_for_parse`.
-    _CXX_CONDITIONAL_RE = re.compile(
-        r'(?m)^[ \t]*#[ \t]*(?:if|ifdef|ifndef|elif|else|endif)\b.*$')
-
-    def __init__(self,
-                 rewriters: RewritersEval,
-                 content: str,
-                 *,
-                 blank_for_parse: bool = False):
+    def __init__(
+        self,
+        rewriters: RewritersEval,
+        content: str,
+        *,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()):
         self._rewriters = rewriters
         self._source = content
-        # When set, blank constructs tree-sitter cannot parse before matching
-        # (see `_prepare_cxx_for_parse`). Off by default. Opt-in per file.
-        self._blank_for_parse = blank_for_parse
+        # None when no pass is enabled, so `_locate` has nothing to run.
+        self._macros_eraser = (CxxMacrosEraser(blank_for_parse)
+                               if blank_for_parse else None)
 
     @property
     def content(self) -> str:
         """The current file contents, reflecting every applied rewrite."""
         return self._source
-
-    def _prepare_cxx_for_parse(self) -> str:
-        """Normalise C++ source for tree-sitter parsing
-
-        Two constructs are handled:
-
-        - A class-head export macro (`class MODULES_EXPORT Foo`): tree-sitter
-          has no macro definitions, so it reads the macro as the class name and
-          drops the real name, any `final`, and the body into an error node.
-          Blanking the macro leaves a plain `class Foo ...`.
-        - A preprocessor conditional (`#if`/`#endif`/...), most damaging inside
-          a base-specifier list (`#if defined(USE_AURA)`), which has no grammar
-          node and breaks the class head. Blanking the directive lines, keeping
-          the guarded code, makes the head parse.
-
-        Both substitutions only replace characters in place, so every byte
-        offset is preserved. Blanking every conditional file-wide is safe
-        because the caller opts in per file via `blank_macros_for_ast_parsing`,
-        and a directive guarding an alternative definition would leave two
-        matches that the count check flags.
-        """
-        source = self._EXPORT_MACRO_RE.sub(
-            lambda m: m.group(1) + ' ' * len(m.group(2)) + m.group(3),
-            self._source)
-        return self._CXX_CONDITIONAL_RE.sub(
-            lambda line: ' ' * len(line.group(0)), source)
 
     def _locate(self, op: Operation) -> list[AstMatch]:
         """Every match for `op`'s matcher, in source order.
@@ -2641,11 +2931,9 @@ class AstRewriter:
         language = self._rewriters.language_of(op.op_id)
         rule_body = matcher['template'].format(**op.inputs)
 
-        # `_prepare_cxx_for_parse` blanks C++-specific constructs, so it only
-        # applies to `cxx.` ops.
-        blank = self._blank_for_parse and op.op_id.startswith('cxx.')
-        source_for_parse = (self._prepare_cxx_for_parse()
-                            if blank else self._source)
+        source_for_parse = self._source
+        if self._macros_eraser is not None:
+            source_for_parse = self._macros_eraser.erase(self._source)
         return run_ast_grep(language=language,
                             rule_body=rule_body,
                             source=source_for_parse)
@@ -2816,6 +3104,171 @@ class AstRewriter:
             source = source[:start] + new_text.encode('utf-8') + source[end:]
         self._source = source.decode('utf-8')
         return total
+
+
+class RegexMacroEngine:
+    """Applies named `regex_macro` ops (from `rewriters.pyl`) to file contents.
+
+    Similar to `AstRewriter` this type is constructed with `RewritersEval`, but
+    it is dedicated to handle regex macros.
+    """
+
+    def __init__(self, rewriters: RewritersEval, content: str):
+        self._rewriters = rewriters
+        self._source = content
+
+    @property
+    def content(self) -> str:
+        """The current file contents, reflecting every applied rewrite."""
+        return self._source
+
+    def run(self, op_id: str, inputs: dict[str, str]) -> int:
+        """Run one regex macro, mutate content, return the change count.
+
+        `inputs` must supply exactly the op's declared `inputs`, no more and
+        no fewer. `pattern` (escaped) or `re_pattern`, and `replace`, are
+        rendered with `inputs` via `str.format` before being handed to
+        `re.subn`, so the macro's own backreferences (`\\1`) reach `re.subn`
+        untouched. `re_pattern` gets each input escaped first though to avoid
+        confusion.
+        """
+        spec = self._rewriters.regex_macro(op_id)
+        declared = frozenset(entry['name'] for entry in spec['inputs'])
+        provided = frozenset(inputs)
+        if provided != declared:
+            problems = []
+            missing = sorted(declared - provided)
+            if missing:
+                problems.append(f'missing input(s): {", ".join(missing)}')
+            unknown = sorted(provided - declared)
+            if unknown:
+                problems.append(f'unknown input(s): {", ".join(unknown)}')
+            raise ValueError(f'{op_id}: ' + '; '.join(problems))
+
+        re_pattern = spec.get('re_pattern')
+        if re_pattern is not None:
+            escaped_inputs = {
+                key: re.escape(value)
+                for key, value in inputs.items()
+            }
+            pattern = re_pattern.format(**escaped_inputs)
+        else:
+            pattern = re.escape(spec['pattern'].format(**inputs))
+        replace = spec['replace'].format(**inputs)
+        flags = _parse_re_flags(spec.get('re_flags', []), op_id)
+        self._source, matches = re.subn(pattern,
+                                        replace,
+                                        self._source,
+                                        flags=flags)
+        return matches
+
+
+class RegexMacro(Rewriter):
+    """Applies a named `regex_macro` op (declared in `rewriters.pyl`) as a
+    substitution.
+
+    Every `regex_macro` op gets a `RegexMacro` subclass generated automatically
+    from its `rewriters.pyl` spec (see `_regex_macro_rewriters`), carrying only
+    the per-op `NAME` (the `substitutions:` key that selects it), `OP_ID`, and
+    the `SUMMARY`/ `HELP` `plaster --help` renders.
+
+    Behaviour validating a body's keys against the op's declared `inputs`, and
+    applying it via `RegexMacroEngine` lives in this class.
+    """
+
+    # Set on the generated subclass (see `_regex_macro_rewriters`): the
+    # `rewriters.pyl` op id this resolves to (e.g.
+    # `cxx.set_feature_flag_default_state`).
+    OP_ID: ClassVar[str] = ''
+
+    def __init__(self, inputs: dict[str, str]):
+        self._inputs = inputs
+
+    def source_language(self) -> str:
+        """The `<lang>.` prefix for the op (e.g. `cxx`)."""
+        return self.OP_ID.split('.', 1)[0]
+
+    def apply(
+        self,
+        contents: str,
+        *,
+        count: int,
+        description: str,
+        blank_for_parse: BlankForParseOptions = BlankForParseOptions()
+    ) -> tuple[str, list[str]]:
+        del description  # Only the count matters for the regex diagnostic.
+        del blank_for_parse  # Regex macros run over plain text; nothing to relax.
+        engine = RegexMacroEngine(RewritersEval.load(), contents)
+        matches = engine.run(self.OP_ID, self._inputs)
+        error = MatchExpectation.from_count(count).error_for(matches)
+        return engine.content, [error] if error else []
+
+    @classmethod
+    def parse(cls, body: object, *, description: str) -> RegexMacro:
+        """Validate a `<macro-name>:` body against the op's declared `inputs`.
+        """
+        if not isinstance(body, dict):
+            raise ValueError(
+                f'"{cls.NAME}" must be a mapping (in "{description}")')
+        keys = frozenset(
+            entry['name']
+            for entry in RewritersEval.load().regex_macro(cls.OP_ID)['inputs'])
+        unknown = sorted(set(body) - keys)
+        if unknown:
+            raise ValueError(
+                f'Unrecognised {cls.NAME} arg(s): '
+                f'{", ".join(repr(k) for k in unknown)} (in "{description}")')
+        missing = sorted(keys - set(body))
+        if missing:
+            raise ValueError(f'{cls.NAME} requires arg(s): '
+                             f'{", ".join(missing)} (in "{description}")')
+        for key in sorted(keys):
+            if not isinstance(body[key], str):
+                raise ValueError(f'{cls.NAME} `{key}` must be a string '
+                                 f'(in "{description}")')
+        return cls({key: body[key] for key in keys})
+
+
+def _regex_macro_help(spec: dict) -> str:
+    """Full `plaster --help <macro>` text for one `regex_macro` spec.
+
+    This function produces the markdown text used to show the help section for
+    a given regex macro.
+    """
+    lines = spec['description'].rstrip('\n').splitlines()
+    fields = ['Fields:', ''] + [
+        f"- `{entry['name']}` — {entry['description']}"
+        for entry in spec['inputs']
+    ]
+    for index, line in enumerate(lines):
+        if line.startswith('```'):
+            return '\n'.join(lines[:index] + fields + [''] + lines[index:])
+    return '\n'.join(lines + [''] + fields)
+
+
+def _regex_macro_rewriters() -> dict[str, type[RegexMacro]]:
+    """One auto-generated `RegexMacro` subclass per declared `regex_macro` op.
+
+    This function produces a list of entries to be used by `_REWRITERS` to
+    register all the `regex_macro` ops declared in `rewriters.pyl`.
+    """
+    rewriters: dict[str, type[RegexMacro]] = {}
+    for op_id, spec in RewritersEval.load().regex_macros.items():
+        name = op_id.split('.', 1)[1]
+        first_paragraph = spec['description'].strip().split('\n\n', 1)[0]
+        rewriters[name] = type(
+            f'RegexMacro_{name}', (RegexMacro, ), {
+                'NAME': name,
+                'OP_ID': op_id,
+                'SUMMARY': ' '.join(first_paragraph.split()),
+                'HELP': _regex_macro_help(spec),
+            })
+    return rewriters
+
+
+# Every `regex_macro` op declared in `rewriters.pyl` joins `_REWRITERS`
+# alongside the hand-written rewriters above, each under its own bare name.
+_REWRITERS = MappingProxyType({**_REWRITERS, **_regex_macro_rewriters()})
 
 
 def get_plaster_files(filepaths: list[str] | None = None) -> list[PlasterFile]:

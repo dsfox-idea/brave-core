@@ -488,21 +488,12 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->is_suggested_model = true;
       model->is_near_model = true;
 
-      if (features::kNEARModelsEncryption.Get()) {
-        // GLM 5.1 (private inference / OHTTP)
-        options->name = "near-glm-5-1";
-        model->key = "chat-near-glm-5-1";
-        model->display_name = "GLM 5.1";
-        model->supported_capabilities = {mojom::ConversationCapability::CHAT};
-        model->supports_private_inference = true;
-      } else {
-        options->name = "near-glm-5";
-        model->key = "chat-near-glm-5";
-        model->display_name = "GLM-5";
-        model->supported_capabilities = {
-            mojom::ConversationCapability::CHAT,
-            mojom::ConversationCapability::DEEP_RESEARCH};
-      }
+      // GLM 5.1 (private inference / OHTTP)
+      options->name = "near-glm-5-1";
+      model->key = "chat-near-glm-5-1";
+      model->display_name = "GLM 5.1";
+      model->supported_capabilities = {mojom::ConversationCapability::CHAT};
+      model->supports_private_inference = true;
 
       model->options =
           mojom::ModelOptions::NewLeoModelOptions(std::move(options));
@@ -856,9 +847,6 @@ ModelService::GetModelsWithSubtitles() {
       } else if (model->key == "chat-qwen") {
         model_with_subtitle->subtitle =
             l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_QWEN_SUBTITLE);
-      } else if (model->key == "chat-near-glm-5") {
-        model_with_subtitle->subtitle =
-            l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_NEAR_GLM_5_SUBTITLE);
       } else if (model->key == "chat-near-glm-5-1") {
         model_with_subtitle->subtitle =
             l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_NEAR_GLM_5_1_SUBTITLE);
@@ -1196,6 +1184,12 @@ std::unique_ptr<EngineConsumer> ModelService::GetEngineForModel(
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
     AIChatCredentialManager* credential_manager) {
   const mojom::Model* model = GetModel(model_key);
+  if (!model) {
+    // Model no longer exists — fall back to the configured default.
+    model = GetModel(features::kAIModelsDefaultKey.Get());
+  }
+  CHECK(model) << "Default model missing from model list";
+
   std::unique_ptr<EngineConsumer> engine;
   if (model->supports_private_inference ||
       model->options->is_custom_model_options()) {

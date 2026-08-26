@@ -22,7 +22,6 @@ import { UISelectors, WalletSelectors } from '../../../common/selectors'
 // Types
 import {
   BraveWallet,
-  CoinTypesMap,
   WalletRoutes,
   AccountModalTypes,
   AccountPageTabs,
@@ -43,7 +42,7 @@ import {
 import { filterNetworksForAccount } from '../../../utils/network-utils'
 import {
   makeAccountRoute,
-  makeFundWalletRoute,
+  makeBuyRoute,
   makePortfolioAssetRoute,
   openTab,
 } from '../../../utils/routes-utils'
@@ -76,8 +75,8 @@ import {
   VerticalSpace,
   Text,
 } from '../../../components/shared/style'
-import { EmptyTransactionsIcon } from '../../../components/desktop/views/portfolio/style'
-import { NftGrid } from '../../../components/desktop/views/nfts/components/nfts.styles'
+import { EmptyTransactionsIcon } from '../page-screen.styles'
+import { NftGrid } from '../nfts/nfts.styles'
 
 // Components
 import {
@@ -92,10 +91,10 @@ import {
 } from '../../../components/shared/segmented_control/segmented_control'
 import {
   NFTGridViewItem, //
-} from '../../../components/desktop/views/portfolio/components/nft-grid-view/nft-grid-view-item'
+} from '../nfts/components/nft_grid_views/nft_grid_view_item/nft_grid_view_item'
 import {
   NftsEmptyState, //
-} from '../../../components/desktop/views/nfts/components/nfts-empty-state/nfts-empty-state'
+} from '../nfts/components/nfts_empty_state/nfts_empty_state'
 import {
   AddOrEditNftModal, //
 } from '../../../components/desktop/popup-modals/add-edit-nft-modal/add-edit-nft-modal'
@@ -353,38 +352,15 @@ export const AccountDetails = () => {
     if (!selectedAccount) {
       return []
     }
-    // Since LOCALHOST's chainId is shared between coinType's
-    // this check will make sure we are returning the correct
-    // LOCALHOST asset for each account.
-    const hasLocalHostNetwork = networkList.some(
-      (network) =>
-        network.chainId === BraveWallet.LOCALHOST_CHAIN_ID
-        && network.coin === selectedAccount.accountId.coin,
-    )
-    const coinName = CoinTypesMap[selectedAccount.accountId.coin]
-    const localHostCoins = userVisibleTokensInfo.filter(
-      (token) => token.chainId === BraveWallet.LOCALHOST_CHAIN_ID,
-    )
-    const accountsLocalHost = localHostCoins.find(
-      (token) => token.symbol.toUpperCase() === coinName,
-    )
+
     const chainList = filterNetworksForAccount(
       networkList,
       selectedAccount.accountId,
     ).map((network) => network.chainId)
     const list =
-      userVisibleTokensInfo.filter(
-        (token) =>
-          chainList.includes(token?.chainId ?? '')
-          && token.chainId !== BraveWallet.LOCALHOST_CHAIN_ID,
+      userVisibleTokensInfo.filter((token) =>
+        chainList.includes(token?.chainId ?? ''),
       ) ?? []
-    if (
-      accountsLocalHost
-      && hasLocalHostNetwork
-      && selectedAccount.accountId.keyringId !== BraveWallet.KeyringId.kFilecoin
-    ) {
-      return [...list, accountsLocalHost]
-    }
     return list
   }, [userVisibleTokensInfo, selectedAccount, networkList])
 
@@ -654,10 +630,10 @@ export const AccountDetails = () => {
 
   const onClickBuy = React.useCallback(() => {
     if (foundMeldBuyToken) {
-      openOrPushRoute(makeFundWalletRoute(foundMeldBuyToken, selectedAccount))
+      openOrPushRoute(makeBuyRoute(foundMeldBuyToken, selectedAccount))
       return
     }
-    openOrPushRoute(WalletRoutes.FundWalletPageStart)
+    openOrPushRoute(WalletRoutes.BuyPageStart)
   }, [foundMeldBuyToken, openOrPushRoute, selectedAccount])
 
   if (!selectedAccount) {

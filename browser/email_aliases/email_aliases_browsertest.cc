@@ -187,10 +187,10 @@ class EmailAliasesBrowserTestBase : public InProcessBrowserTest {
     if (features::IsEmailAliasesEnabled()) {
       // Skip the promo as it is tested in
       // BraveBrowserCommandControllerWithEmailAliasesTest.
-      user_prefs::UserPrefs::Get(browser()->profile())
+      user_prefs::UserPrefs::Get(browser()->GetProfile())
           ->SetBoolean(prefs::kPromoShown, true);
 
-      brave_account::BraveAccountServiceFactory::GetFor(browser()->profile())
+      brave_account::BraveAccountServiceFactory::GetFor(browser()->GetProfile())
           ->BindInterface(authentication_.BindNewPipeAndPassReceiver());
     }
   }
@@ -380,7 +380,7 @@ class EmailAliasesBrowserTestBase : public InProcessBrowserTest {
 
   EmailAliasesService* email_aliases_service() {
     return EmailAliasesServiceFactory::GetServiceForProfile(
-        browser()->profile());
+        browser()->GetProfile());
   }
 
   void RunContextMenuOn(const std::string& element_id) {
@@ -565,15 +565,26 @@ IN_PROC_BROWSER_TEST_F(EmailAliasesBrowserTest, ContextMenuAuthorizedCancel) {
   EXPECT_TRUE(AwaitText("#type-email", ""));  // text not changed
 }
 IN_PROC_BROWSER_TEST_F(EmailAliasesBrowserTest, LogInLogOut) {
+  browser()->GetProfile()->GetPrefs()->SetBoolean(prefs::kPromoShown, false);
+
   SetBraveAccountLoggedIn();
+
+  // Login stops promo showing.
+  EXPECT_TRUE(
+      browser()->GetProfile()->GetPrefs()->GetBoolean(prefs::kPromoShown));
 
   // Settings in logged-in state
   Navigate(GURL("chrome://settings/email-aliases"));
   InjectHelpers(ActiveWebContents());
   Wait("#create-new-item-button");
+  Wait("settings-toggle-button[icon='email-shield']");
 
   SetBraveAccountLoggedOut();
   WaitDisappear("#create-new-item-button");  // Settings in sing-in state.
+  // Still showing the toggle.
+  Wait("settings-toggle-button[icon='email-shield']");
+  EXPECT_TRUE(
+      browser()->GetProfile()->GetPrefs()->GetBoolean(prefs::kPromoShown));
 
   SetBraveAccountLoggedIn();
   Wait("#create-new-item-button");  // Logged-in state.

@@ -23,6 +23,8 @@
 #include "brave/components/query_filter/common/features.h"
 #include "components/component_updater/component_installer.h"
 #include "components/component_updater/component_updater_service.h"
+#include "components/grit/brave_components_resources.h"
+#include "ui/base/resource/resource_bundle.h"
 
 namespace {
 inline constexpr char kQueryFilterComponentName[] = "Query Filter";
@@ -47,6 +49,30 @@ std::string ReadQueryFilterFile(const base::FilePath& path) {
 
 // Reads the |json_data| and updates the component version iff the current rules
 // were updated.
+// growser (#87): the rules bundled with the build.
+//
+// The component that normally carries them is served by
+// go-updater.brave.com, which answers a fork "403 Missing auth header", so it
+// installs never and the browser strips no tracking parameters at all - the
+// rules list starts empty and only ComponentReady fills it. This loads the
+// copy vendored from Brave's public adblock-lists repository as a floor.
+//
+// It does not fight the component: if one ever does arrive it calls
+// PopulateDataFromComponent on the same singleton with its own version, which
+// replaces these rules wholesale.
+void LoadBundledQueryFilterRules() {
+  auto* data = query_filter::QueryFilterData::GetInstance();
+  if (!data || !data->rules().empty()) {
+    return;
+  }
+  const std::string json_data =
+      ui::ResourceBundle::GetSharedInstance().LoadDataResourceString(
+          IDR_QUERY_FILTER_JSON);
+  if (!data->PopulateDataFromComponent(json_data)) {
+    LOG(WARNING) << "bundled query-filter.json did not parse";
+  }
+}
+
 void OnQueryFilterFileRead(const base::Version& version,
                            const std::string& json_data) {
   if (json_data.empty()) {
@@ -162,6 +188,8 @@ void RegisterQueryFilterComponent(
       !cus) {
     return;
   }
+
+  LoadBundledQueryFilterRules();
 
   auto installer = base::MakeRefCounted<component_updater::ComponentInstaller>(
       std::make_unique<QueryFilterComponentInstallerPolicy>());

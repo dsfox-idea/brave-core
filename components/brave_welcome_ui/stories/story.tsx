@@ -14,7 +14,6 @@ import './locale'
 import SelectBrowser from '../components/select-browser'
 import SelectProfile from '../components/select-profile'
 import SelectTheme from '../components/select-theme'
-import HelpImprove from '../components/help-improve'
 import ImportInProgress from '../components/import-in-progress'
 import SetupComplete from '../components/setup-complete'
 import Welcome from '../components/welcome'
@@ -22,7 +21,6 @@ import Welcome from '../components/welcome'
 import DataContext from '../state/context'
 import { ViewType, Scenes } from '../state/component_types'
 import Background from '../components/background'
-import HelpWDP from '../components/help-wdp'
 
 const payload = [
   {
@@ -152,12 +150,6 @@ export const _SelectTheme = {
   }
 }
 
-export const _HelpImprove = {
-  render: () => {
-    return <HelpImprove />
-  }
-}
-
 export const _ImportInProgress = {
   render: () => {
     return <ImportInProgress />
@@ -179,11 +171,5 @@ export const _Welcome = {
 export const _Background = {
   render: () => {
     return <Background static={true} />
-  }
-}
-
-export const _HelpWDP = {
-  render: () => {
-    return <HelpWDP />
   }
 }

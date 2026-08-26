@@ -11,7 +11,6 @@ export const threeColumnBreakpoint = '1275px'
 export const horizontalContentPadding = 24
 
 const topControlsNarrowBreakpoint = '1075px'
-const topControlsWideBreakpoint = threeColumnBreakpoint
 
 export const style = scoped.css`
   & {
@@ -77,26 +76,60 @@ export const style = scoped.css`
     }
   }
 
+  /* growser: the clock sits at the bottom of the screen, centred, and carries
+   * the date under the time. Upstream tucks it into the top-left corner at
+   * 56px, where it reads as a label on the wallpaper; centred and larger it
+   * becomes the thing the page is for when nothing else is on it. */
   .clock {
-    position: absolute;
+    /* In the flow rather than absolutely positioned: the photo caption stops
+     * being absolute on a narrow window and returns to the column, and an
+     * absolute clock lands on top of it. As a flow item the clock is centred at
+     * any width and nothing overlaps anything. */
     z-index: 2;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    margin: 24px;
+    align-self: center;
+    margin: 0 0 24px;
+    width: fit-content;
 
-    padding: 8px;
+    padding: 8px 16px;
     font: ${font.large.semibold};
-    font-size: 56px;
+    font-size: 96px;
     font-weight: 500;
     line-height: 100%;
-    text-shadow: var(--top-controls-text-shadow);
+    /* the wallpaper can be bright, and white on a pale sky is unreadable with
+     * the 1px shadow the top controls use - this one carries the text over
+     * anything */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .40), 0 2px 24px rgba(0, 0, 0, .35);
 
     color: #fff;
     opacity: .9;
 
     display: flex;
-    align-items: flex-start;
-    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    .time {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .date {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: .01em;
+      opacity: .9;
+
+      /* most locales write the weekday and the month in lower case, and
+       * text-transform: capitalize raises every word - which in Russian turns
+       * "22 august 2026 y." into "22 August 2026 Y." Only the first letter of
+       * the line goes up. */
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
 
     .day-period {
       font-size: 14px;
@@ -105,24 +138,11 @@ export const style = scoped.css`
       margin-top: 7px;
     }
 
-    .ntp-top-sites-wide & {
-      @container (width < ${topControlsWideBreakpoint}) {
-        font-size: 16px;
-
-        .day-period {
-          display: none;
-        }
-      }
-    }
-
-    @container (width < ${topControlsNarrowBreakpoint}) {
-      margin: 12px;
-      font-size: 16px;
-
-      .day-period {
-        display: none;
-      }
-    }
+    /* growser: upstream shrinks the clock to 16px and hides the AM/PM marker
+     * once the window narrows, because there it shares the top row with the
+     * top-site tiles and the settings button. Ours lives at the bottom of the
+     * page on its own, so there is nothing to make room for - it keeps its size
+     * at every width. */
   }
 
   main {

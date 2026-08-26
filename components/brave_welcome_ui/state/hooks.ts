@@ -82,15 +82,14 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
   const { browserProfiles, currentSelectedBrowserProfiles} = React.useContext(DataContext)
 
   const states = React.useMemo(() => {
-    // <if expr="is_brave_origin_branded">
-    // Brave Origin: skip HelpWDP (Web Discovery) but still show HelpImprove
-    const nextAfterImport = ViewType.HelpImprove
-    // <else>
-    // growser: экран WDP (Web Discovery Project) убран из онбординга (#24) —
-    // поиск у нас Yandex, продвигать «Growser Поиск» незачем. Всегда идём на
-    // HelpImprove, минуя HelpWDP. Полный выпил WDP — backlog #25.
-    const nextAfterImport = ViewType.HelpImprove
-    // </if>
+    // growser: the WDP (#24) and Help Improve (#21) screens are out of the flow.
+    // Web Discovery is pointless with Yandex as the search default, and the Help
+    // Improve screen existed to opt the user into P3A and metrics reporting -
+    // it initialised both toggles to true and wrote them on Finish, which
+    // quietly undid our off-by-default prefs (#39). After import we go straight
+    // to ImportSucceeded (SetupComplete), which shows the check mark and opens
+    // the welcome-complete URL.
+    const nextAfterImport = ViewType.ImportSucceeded
 
     return {
       [ViewType.DefaultBrowser]: {  // The initial state view
@@ -114,17 +113,11 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
         forward: ViewType.ImportSucceeded,
         fail: ViewType.ImportFailed,
       },
-      [ViewType.ImportSucceeded]: {
-        forward: nextAfterImport
-      },
+      // ImportSucceeded is terminal (a self-loop): SetupComplete opens the
+      // welcome-complete URL itself when the Lottie finishes, and never uses forward.
+      [ViewType.ImportSucceeded]: { forward: ViewType.ImportSucceeded },
       [ViewType.ImportFailed]: {
         forward: nextAfterImport
-      },
-      [ViewType.HelpWDP]: {
-        forward: ViewType.HelpImprove
-      },
-      [ViewType.HelpImprove]: {
-        forward: ViewType.HelpImprove   // The end state view
       },
     }
   }, [browserProfiles, currentSelectedBrowserProfiles])

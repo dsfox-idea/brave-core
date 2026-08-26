@@ -18,12 +18,16 @@ export function useAvailableMetrics(): AvailableMetrics {
 
   const webDiscoveryFeatureEnabled = api.useWebDiscoveryFeatureEnabledData()
   const isWebDiscoveryPrefManaged = api.useIsWebDiscoveryPrefManagedData()
-  const isP3APrefManaged = api.useIsP3APrefManagedData()
   const isCrashReportingPrefManaged = api.useIsCrashReportingPrefManagedData()
 
   return {
     webDiscovery: webDiscoveryFeatureEnabled && !isWebDiscoveryPrefManaged,
-    p3a: !isP3APrefManaged,
+    // growser (#78): no P3A card. P3A is functionally removed (#21) - Init()
+    // is wrapped in #if 0, so nothing is ever sent even with the pref forced
+    // on. Offering someone a switch for it during onboarding asks them to make
+    // a decision that has no effect. The managed-pref flag it used to read is
+    // not published by brave_welcome_ui.cc any more either.
+    p3a: false,
     crashReports: !isCrashReportingPrefManaged,
   }
 }

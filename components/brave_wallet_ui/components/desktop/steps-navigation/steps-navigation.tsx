@@ -14,7 +14,9 @@ import { WalletRoutes } from '../../../constants/types'
 
 // style
 import { LinkText } from '../../../components/shared/style'
-import { BackIcon } from '../../buy-send-swap/select-header/style'
+import {
+  BackIcon, //
+} from '../../../page/screens/deposit/components/select_header/select_header.style'
 import {
   BackButton,
   DotsWrapper,

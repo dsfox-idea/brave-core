@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/mini_installer/chrome.release b/chrome/installer/mini_installer/chrome.release
-index 5add215198e878e161e75f1918aaf9826eb8e47c..e69d33d85f1b7c88ef1b9281c11ffbf3c7210727 100644
+index cf4c3fa1816ed500b7f2168abc105fcec5f18a84..cf9a3c8e971105312e22c99ece44dab9328c7571 100644
 --- a/chrome/installer/mini_installer/chrome.release
 +++ b/chrome/installer/mini_installer/chrome.release
 @@ -6,7 +6,7 @@
@@ -7,15 +7,24 @@ index 5add215198e878e161e75f1918aaf9826eb8e47c..e69d33d85f1b7c88ef1b9281c11ffbf3
  # Chrome Application dir entries, sorted alphabetically.
  #
 -chrome.exe: %(ChromeDir)s\
-+brave.exe: %(ChromeDir)s\
++growser.exe: %(ChromeDir)s\
  chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir assembly manifest.
-@@ -18,9 +18,19 @@ chrome_proxy.exe: %(ChromeDir)s\
+@@ -18,9 +18,28 @@ chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir entries, sorted alphabetically.
  #
-+brave.exe.sig: %(VersionDir)s\
++growser.exe.sig: %(VersionDir)s\
++# growser (#51/#76): the updater does NOT ship, because it is not built.
++#
++# It used to be listed here so setup could run it once and register a scheduled
++# task. Then #76 turned Windows into a Store-only product and the updater was
++# compiled out (enable_updater=false): nothing rebuilt updater.exe, and this
++# line kept picking up whatever copy was left in the output directory - a
++# 151.1.95.0 binary went out inside a 152 installer that way. A file list is
++# not a build dependency, so it cannot notice that its target stopped being
++# produced. The line comes back with #51, together with the flag.
 +brave_vpn_helper.exe: %(VersionDir)s\
 +brave_vpn_wireguard_service.exe: %(VersionDir)s\BraveVpnWireguardService\
 +tunnel.dll: %(VersionDir)s\BraveVpnWireguardService\
@@ -31,7 +40,7 @@ index 5add215198e878e161e75f1918aaf9826eb8e47c..e69d33d85f1b7c88ef1b9281c11ffbf3
  chrome_elf.dll: %(VersionDir)s\
  chrome_pwa_launcher.exe: %(VersionDir)s\
  chrome_wer.dll: %(VersionDir)s\
-@@ -72,6 +82,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
+@@ -72,6 +91,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
  
  [HIDPI]
  chrome_200_percent.pak: %(VersionDir)s\

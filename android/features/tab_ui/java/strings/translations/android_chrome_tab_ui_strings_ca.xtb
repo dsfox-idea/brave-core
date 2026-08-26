@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{S'ha tancat <ph name="ONE_CLOSED"/> pestanya}other{S'han tancat <ph name="MANY_CLOSED"/> pestanyes}}</translation>
 <translation id="2894757982205307093">Pestanya nova al grup</translation>
 <translation id="2918484639460781603">Ves a la configuració</translation>
-<translation id="4691798003247738043">Brave | Sobre aquesta botiga</translation>
+<translation id="4691798003247738043">Growser | Sobre aquesta botiga</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> seleccionat}other{<ph name="ITEMS_COUNT_MANY"/> seleccionats}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Fixa la pestanya}other{Fixa les pestanyes}}</translation>
 <translation id="3008554597174452548">Atura el seguiment del producte</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Amaga la quadrícula en pantalla completa</translation>
 <translation id="5076161749301278626">Vols veure les ressenyes de la botiga?</translation>
 <translation id="5161254044473106830">Cal indicar un títol</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave tanca automàticament les pestanyes i els grups de pestanyes inactius al cap d’<ph name="AUTO_DELETE_DELAY_ONE"/> mes. Pots canviar-ho a Configuració.}other{Brave tanca automàticament les pestanyes i els grups de pestanyes inactius al cap de <ph name="AUTO_DELETE_DELAY_MANY"/> mesos. Pots canviar-ho a Configuració.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser tanca automàticament les pestanyes i els grups de pestanyes inactius al cap d’<ph name="AUTO_DELETE_DELAY_ONE"/> mes. Pots canviar-ho a Configuració.}other{Growser tanca automàticament les pestanyes i els grups de pestanyes inactius al cap de <ph name="AUTO_DELETE_DELAY_MANY"/> mesos. Pots canviar-ho a Configuració.}}</translation>
 <translation id="5254233580564156835">Ús de memòria: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">La teva darrera pestanya</translation>
 <translation id="5380159289133845234">Arxiva les pestanyes duplicades</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Tanca el grup de pestanyes de color <ph name="COLOR_NAME"/> amb <ph name="TABS_COUNT_ONE"/> pestanya.}other{Tanca el grup de pestanyes de color <ph name="COLOR_NAME"/> amb <ph name="TABS_COUNT_MANY"/> pestanyes.}}</translation>
 <translation id="5556417849629758491">Consulta la informació de la botiga, opció disponible a prop de la part superior de la pantalla</translation>
 <translation id="5627941783489838464">Cap actualització de pestanyes</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> enllaç de Brave}other{<ph name="TABS_COUNT_MANY"/> enllaços de Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> enllaç de Growser}other{<ph name="TABS_COUNT_MANY"/> enllaços de Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Mou la pestanya cap a l'esquerra}other{Mou les pestanyes cap a l'esquerra}}</translation>
 <translation id="5746204836956568669">Vols agrupar <ph name="NUMBER_OF_TABS"/> pestanyes per treballar més ràpidament?</translation>
 <translation id="5773295109010386583">Tanca automàticament els elements inactius</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> element}other{<ph name="TABS_COUNT_MANY"/> elements}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Restaura <ph name="TABS_COUNT_ONE"/> element seleccionat}other{Restaura els <ph name="TABS_COUNT_MANY"/> elements seleccionats}}</translation>
 <translation id="753732157349120914">Selector de pestanyes</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ressenya de Brave}other{<ph name="REVIEWS_COUNT_MANY"/> ressenyes de Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ressenya de Growser}other{<ph name="REVIEWS_COUNT_MANY"/> ressenyes de Growser}}</translation>
 <translation id="7559245342362162951">Mostra les pestanyes del grup en una quadrícula en pantalla completa</translation>
 <translation id="7658239707568436148">Cancel·la</translation>
 <translation id="7688386659311034820">Quadre de diàleg Pestanyes inactives</translation>

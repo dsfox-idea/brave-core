@@ -21,7 +21,7 @@ namespace growser_ru_trust {
 
 namespace {
 
-// Отпечаток «Russian Trusted Root CA» (НУЦ Минцифры), SHA-256.
+// SHA-256 fingerprint of "Russian Trusted Root CA".
 constexpr char kExpectedRootSha256[] =
     "D26D2D0231B7C39F92CC738512BA54103519E4405D68B5BD703E9788CA8ECF31";
 
@@ -42,9 +42,9 @@ std::vector<std::string> GetPermittedDnsNames(const base::ListValue& anchors) {
 
 }  // namespace
 
-// Дефолт имеет форму, которую ожидает ProfileNetworkContextService при чтении
-// pref kCACertificatesWithConstraints: ровно один якорь с сертификатом и
-// непустым набором ограничений.
+// The default has the shape ProfileNetworkContextService expects when it
+// reads kCACertificatesWithConstraints: exactly one anchor, with a
+// certificate and a non-empty set of constraints.
 TEST(GrowserRuTrustAnchorsTest, PrefDefaultHasExpectedShape) {
   base::ListValue anchors = GetTrustAnchorsPrefDefault();
   ASSERT_EQ(1u, anchors.size());
@@ -60,7 +60,7 @@ TEST(GrowserRuTrustAnchorsTest, PrefDefaultHasExpectedShape) {
   EXPECT_FALSE(dns_names->empty());
 }
 
-// Вшит именно корень НУЦ и он парсится как валидный X.509.
+// The bundled certificate really is that root, and parses as valid X.509.
 TEST(GrowserRuTrustAnchorsTest, CertificateIsRussianTrustedRootCa) {
   base::ListValue anchors = GetTrustAnchorsPrefDefault();
   const std::string* cert_b64 = GetOnlyAnchor(anchors).FindString("certificate");
@@ -77,22 +77,22 @@ TEST(GrowserRuTrustAnchorsTest, CertificateIsRussianTrustedRootCa) {
             base::HexEncode(cert->CalculateChainFingerprint256()));
 }
 
-// Все ограничения проходят валидацию ProfileNetworkContextService
-// (IsValidDNSConstraint: ASCII и не длиннее 255 символов), иначе якорь будет
-// молча отброшен целиком.
+// Every constraint passes the validation ProfileNetworkContextService does
+// (IsValidDNSConstraint: ASCII, no longer than 255 characters). One that
+// does not would make it drop the whole anchor, silently.
 TEST(GrowserRuTrustAnchorsTest, AllDnsConstraintsAreValid) {
   for (const std::string& name : GetPermittedDnsNames(GetTrustAnchorsPrefDefault())) {
     EXPECT_TRUE(base::IsStringASCII(name)) << name;
     EXPECT_LE(name.length(), 255u) << name;
     EXPECT_FALSE(name.empty());
-    // Wildcard и ведущая точка в permittedSubtrees недопустимы: они расширили
-    // бы доверие шире, чем задумано.
+    // A wildcard or a leading dot in permittedSubtrees would widen the trust
+    // beyond what is intended.
     EXPECT_EQ(std::string::npos, name.find('*')) << name;
     EXPECT_NE('.', name.front()) << name;
   }
 }
 
-// Ради чего всё затевалось: домены банков, перешедших на НУЦ, покрыты.
+// The point of the exercise: the banks that moved to this root are covered.
 TEST(GrowserRuTrustAnchorsTest, CoversKnownRussianBankDomains) {
   std::vector<std::string> names =
       GetPermittedDnsNames(GetTrustAnchorsPrefDefault());
@@ -103,9 +103,9 @@ TEST(GrowserRuTrustAnchorsTest, CoversKnownRussianBankDomains) {
   }
 }
 
-// Главный защитный инвариант: этот корень не должен получить право подписывать
-// сертификаты для мировых сервисов. Тест страхует от ошибки при обновлении
-// списка доменов.
+// The invariant that matters: this root must never be able to vouch for the
+// global services. The test is here to catch a careless edit of the domain
+// list, which is the way that would happen.
 TEST(GrowserRuTrustAnchorsTest, DoesNotCoverGlobalServices) {
   std::vector<std::string> names =
       GetPermittedDnsNames(GetTrustAnchorsPrefDefault());

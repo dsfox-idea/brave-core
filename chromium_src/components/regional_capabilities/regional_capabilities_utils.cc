@@ -36,9 +36,9 @@ namespace {
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesDefault[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_STARTPAGE,
@@ -49,9 +49,9 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesWithEcosia[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_STARTPAGE,
@@ -62,10 +62,9 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesWithYandex[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_STARTPAGE,
@@ -75,8 +74,8 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesDE[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_DE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
@@ -88,10 +87,10 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesFR[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_STARTPAGE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_ECOSIA,
@@ -101,8 +100,8 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesAUIE[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_AU_NZ_IE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
@@ -114,10 +113,10 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesJP[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YAHOO_JP,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YAHOO_JP,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_STARTPAGE,
@@ -127,7 +126,8 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesKR[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_NAVER,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DAUM,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
@@ -137,8 +137,8 @@ constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
 // LINT.IfChange
 constexpr TemplateURLPrepopulateData::BravePrepopulatedEngineID
     kBraveEnginesNZ[] = {
-        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO_AU_NZ_IE,
+        TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_GOOGLE,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_QWANT,
         TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING,
@@ -190,13 +190,15 @@ constexpr auto kDefaultEnginesByCountryIdMap = base::MakeFixedFlatMap<
 
 // Builds a vector of PrepulatedEngine objects from the given array of
 // |engine_ids|.
-std::vector<const PrepopulatedEngine*> GetEnginesFromEngineIDs(
+std::vector<raw_ptr<const TemplateURLPrepopulateData::PrepopulatedEngine>>
+GetEnginesFromEngineIDs(
     base::span<const TemplateURLPrepopulateData::BravePrepopulatedEngineID>
         engine_ids) {
-  std::vector<const PrepopulatedEngine*> engines;
+  std::vector<raw_ptr<const TemplateURLPrepopulateData::PrepopulatedEngine>>
+      engines;
   for (TemplateURLPrepopulateData::BravePrepopulatedEngineID engine_id :
        engine_ids) {
-    const PrepopulatedEngine* engine = base::FindPtrOrNull(
+    const auto* engine = base::FindPtrOrNull(
         TemplateURLPrepopulateData::kBraveEngines, engine_id);
     CHECK(engine);
     engines.push_back(engine);
@@ -207,8 +209,8 @@ std::vector<const PrepopulatedEngine*> GetEnginesFromEngineIDs(
 // Uses brave_engines_XX localized arrays of engine IDs instead of Chromium's
 // localized arrays of PrepopulatedEngines to construct the vector of
 // TemplateURLData.
-std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
-    country_codes::CountryId country_id) {
+std::vector<raw_ptr<const TemplateURLPrepopulateData::PrepopulatedEngine>>
+GetBravePrepopulatedEnginesForCountryID(country_codes::CountryId country_id) {
   base::span<const TemplateURLPrepopulateData::BravePrepopulatedEngineID>
       brave_engine_ids = kBraveEnginesDefault;
 
@@ -220,8 +222,8 @@ std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
   }
   DCHECK_GT(brave_engine_ids.size(), 0ul);
 
-  // growser: Yandex — поиск по умолчанию во всех регионах (#18), поэтому он
-  // должен присутствовать в списке любой страны, иначе fallback вернёт Brave.
+  // growser: Yandex is the search default in every region (#18), so it has to
+  // appear in every country list - otherwise the fallback returns Brave.
   std::vector<TemplateURLPrepopulateData::BravePrepopulatedEngineID> engine_ids(
       brave_engine_ids.begin(), brave_engine_ids.end());
   if (std::find(engine_ids.begin(), engine_ids.end(),
@@ -234,8 +236,8 @@ std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
 
   // Build a vector PrepopulatedEngines from
   // TemplateURLPrepopulateData::BravePrepopulatedEngineIDs.
-  std::vector<const PrepopulatedEngine*> engines =
-      GetEnginesFromEngineIDs(engine_ids);
+  std::vector<raw_ptr<const TemplateURLPrepopulateData::PrepopulatedEngine>>
+      engines = GetEnginesFromEngineIDs(engine_ids);
   DCHECK(engines.size() == engine_ids.size());
 
   return engines;
@@ -255,8 +257,8 @@ std::vector<const PrepopulatedEngine*> GetBravePrepopulatedEnginesForCountryID(
 // set the default search engine back to what it was when the profile was
 // originally created. This way, a person doesn't get a new unexpected default
 // when they reset the profile; it goes back to the original value.
-// growser: больше не вызывается — GetDefaultEngine всегда возвращает Yandex (#18).
-// Оставляем определение (версионные карты), помечаем как возможно неиспользуемое.
+// growser: no longer called - GetDefaultEngine always returns Yandex (#18).
+// The definition stays (the versioned maps) and is marked possibly unused.
 [[maybe_unused]] TemplateURLPrepopulateData::BravePrepopulatedEngineID
 GetDefaultSearchEngine(country_codes::CountryId country_id, int version) {
   // LINT.IfChange
@@ -746,18 +748,30 @@ GetDefaultSearchEngine(country_codes::CountryId country_id, int version) {
 
 }  // namespace
 
-std::vector<const PrepopulatedEngine*> GetPrepopulatedEngines(
-    CountryId country_id,
-    PrefService& prefs,
-    SearchEngineListType search_engine_list_type) {
+std::vector<raw_ptr<const TemplateURLPrepopulateData::PrepopulatedEngine>>
+GetPrepopulatedEngines(CountryId country_id,
+                       PrefService& prefs,
+                       SearchEngineListType search_engine_list_type) {
   return GetBravePrepopulatedEnginesForCountryID(country_id);
 }
 
 TemplateURLPrepopulateData::BravePrepopulatedEngineID GetDefaultEngine(
     CountryId country_id,
     PrefService& prefs) {
-  // growser: поиск по умолчанию — Yandex, независимо от региона и версии (#18).
-  return TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX;
+  // growser: the default is the first engine of the country's own list, which
+  // is DuckDuckGo everywhere. Naming DuckDuckGo directly would be wrong for the
+  // regions that carry a variant of it - Germany has DUCKDUCKGO_DE, Australia,
+  // New Zealand and Ireland share DUCKDUCKGO_AU_NZ_IE - and an engine that is
+  // not in the country's list makes the fallback pick something else entirely.
+  // Reading the head of the list keeps one source of truth: the lists above.
+  base::span<const TemplateURLPrepopulateData::BravePrepopulatedEngineID>
+      engine_ids = kBraveEnginesDefault;
+  if (const auto* country_engines =
+          base::FindOrNull(kDefaultEnginesByCountryIdMap, country_id)) {
+    engine_ids = *country_engines;
+  }
+  CHECK(!engine_ids.empty());
+  return engine_ids.front();
 }
 
 }  // namespace regional_capabilities

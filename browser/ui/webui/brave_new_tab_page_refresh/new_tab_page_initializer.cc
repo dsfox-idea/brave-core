@@ -81,15 +81,17 @@ namespace {
 
 using regional_capabilities::RegionalCapabilitiesServiceFactory;
 
-// growser: поиск в строке новой вкладки по умолчанию — Yandex (#18), как и
-// omnibox. host = хост поискового URL движка (yandex.ru).
-constexpr char kYandexSearchHost[] = "yandex.ru";
+// growser: the new-tab search box defaults to Yandex (#18), like the omnibox.
+// host = the host of the engine's search URL. Every DuckDuckGo variant we ship
+// searches on duckduckgo.com - the German and the AU/NZ/IE ones differ only by
+// query parameters - so one constant covers every region.
+constexpr char kDuckDuckGoSearchHost[] = "duckduckgo.com";
 
 }  // namespace
 
 std::string_view GetSearchDefaultHost(
     regional_capabilities::RegionalCapabilitiesService* regional_capabilities) {
-  return kYandexSearchHost;
+  return kDuckDuckGoSearchHost;
 }
 
 NewTabPageInitializer::NewTabPageInitializer(content::WebUI& web_ui)
@@ -268,12 +270,13 @@ void NewTabPageInitializer::AddLoadTimeValues() {
 }
 
 void NewTabPageInitializer::AddStrings() {
+  source_->AddLocalizedString("title", IDS_NEW_TAB_TITLE);
   source_->AddLocalizedStrings(webui::kBraveNewTabPageStrings);
   source_->AddLocalizedStrings(webui::kBraveNewsStrings);
   source_->AddLocalizedStrings(webui::kBraveRewardsStrings);
   source_->AddLocalizedStrings(webui::kBraveOmniboxStrings);
-  // growser: строки ai_chat уходят из .pak при enable_ai_chat=false (#4) —
-  // обёрнута и незащищённая ссылка на сгенерённый массив (политика build-flag).
+  // growser: the ai_chat strings leave the .pak when enable_ai_chat=false (#4)
+  // - the unguarded reference to the generated array is wrapped too (build-flag policy).
 #if BUILDFLAG(ENABLE_AI_CHAT)
   source_->AddLocalizedStrings(webui::kAiChatStrings);
 #endif
@@ -290,7 +293,7 @@ void NewTabPageInitializer::AddPluralStrings() {
 
 void NewTabPageInitializer::AddResourcePaths() {
   source_->AddResourcePaths(
-      {{"dylan-malval_sea-min.webp", IDR_BRAVE_NEW_TAB_BACKGROUND1}});
+      {{"growser_bay-01.webp", IDR_BRAVE_NEW_TAB_BACKGROUND1}});
 }
 
 void NewTabPageInitializer::AddFaviconDataSource() {

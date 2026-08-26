@@ -1,0 +1,31 @@
+diff --git a/chrome/browser/metrics/chrome_metrics_services_manager_client.cc b/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
+index c28e0ba06d6bfe8aefb814c418e77f080c76e008..d7592adc0d4689431fcf773231f6d2589fcddce5 100644
+--- a/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
++++ b/chrome/browser/metrics/chrome_metrics_services_manager_client.cc
+@@ -391,6 +391,25 @@ void ChromeMetricsServicesManagerClient::UpdateRunningServices(
+   // consent, and as mentioned, on the crashpad side we check both. See
+   // SetUploadConsent() in components/crash/core/app/crashpad.cc for how this
+   // gets used.
+-  SetUploadConsent_ExportThunk(may_record && may_upload);
++  // growser (#92): the user's answer, in every build.
++  //
++  // This was forced to true for non-official builds (#66) because the metrics
++  // state it derives from was off by construction after the telemetry removals
++  // (#38, #39) - the symptom was a minidump sitting in Crashpad's reports
++  // directory forever while settings.dat kept uploads_enabled=0. The switch in
++  // settings and the welcome-screen checkbox now write that same state through
++  // ChangeMetricsReportingState(), so it carries a real answer and this line
++  // can go back to reading it.
++  //
++  // In this build the preference has no other consumer: UMA and P3A are
++  // compiled out, so what it governs is crash reports and nothing else.
++  // may_record and may_upload are derived from the state of the metrics
++  // services, and this build compiles those out (#38, #39) - they come back
++  // false however the preference is set, which is why the value here used to be
++  // forced (#66) and why forcing it was the wrong cure. The provider below
++  // answers the only question that matters here: has the person consented. It
++  // reads the same preference the welcome-screen checkbox and the settings
++  // switch write, and policy still overrides both.
++  SetUploadConsent_ExportThunk(enabled_state_provider_->IsConsentGiven());
+ }
+ #endif  // BUILDFLAG(IS_WIN)

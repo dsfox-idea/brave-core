@@ -149,7 +149,14 @@ void NTPBackgroundImagesService::Init() {
         << override_sponsored_images_component_path.LossyDisplayName();
     OnSponsoredComponentReady(override_sponsored_images_component_path);
   } else {
-    RegisterBackgroundImagesComponent();
+    // growser: the NTP background images component is not registered.
+    //
+    // It carries Brave's rotating photo pack, and our new tab page ships one
+    // bundled background instead - GetBraveBackgrounds() returns an empty list
+    // without it, which is what the page already sees today, because the
+    // component is served from go-updater.brave.com and that answers our
+    // builds with 403 (no service key). Registering it only adds a component
+    // that can never install.
 
     pref_change_registrar_.Add(
         variations::prefs::kVariationsCountry,
@@ -237,7 +244,7 @@ std::string NTPBackgroundImagesService::GetCountryCode() const {
 
 void NTPBackgroundImagesService::RegisterSponsoredImagesComponent() {
   const std::string variations_country_code = GetCountryCode();
-  const std::optional<SponsoredImagesComponentInfo> sponsored_images_component =
+  std::optional<SponsoredImagesComponentInfo> sponsored_images_component =
       GetSponsoredImagesComponent(variations_country_code);
   if (!sponsored_images_component) {
     // Unsupported.
@@ -521,7 +528,7 @@ NTPBackgroundImagesService::HandleSponsoredSitesData(
     return std::nullopt;
   }
 
-  const std::optional<base::DictValue> dict =
+  std::optional<base::DictValue> dict =
       base::JSONReader::ReadDict(json, base::JSON_PARSE_CHROMIUM_EXTENSIONS);
   if (!dict) {
     return std::nullopt;

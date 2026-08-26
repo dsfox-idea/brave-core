@@ -6,6 +6,18 @@ All files in this src/brave directory are for Brave customizations. The chromium
 repository is the parent directory at src/ and all other children of that
 directory.
 
+## Language
+
+Everything that goes into this repository is English only: code, code
+comments, commit messages, branch names, PR titles and descriptions,
+docs. Russian (or any other language) may appear only as quoted data -
+UI strings, test fixtures, or verification output being cited.
+
+## Conventions
+
+- Keep comments, commit messages, and PR descriptions succinct — essential "why"
+  only.
+
 ## Development Tasks
 
 When asked to explore a task, read only the docs that you need from docs/ using
@@ -13,13 +25,6 @@ the list at @../docs/README.md
 
 When working directly on code, consult with only relevant best practices listed
 at @../docs/best_practices.md
-
-## Language
-
-Everything that goes into this repository is English only: code, code
-comments, commit messages, branch names, PR titles and descriptions,
-docs. Russian (or any other language) may appear only as quoted data -
-UI strings, test fixtures, or verification output being cited.
 
 ## Destructive Operations
 

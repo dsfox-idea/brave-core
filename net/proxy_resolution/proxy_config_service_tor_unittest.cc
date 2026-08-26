@@ -38,6 +38,14 @@ class ProxyConfigServiceTorTest : public TestWithTaskEnvironment {
   ~ProxyConfigServiceTorTest() override = default;
 
   void SetUp() override {
+    // growser (#88): the circuit passwords live in a process-global map keyed
+    // by the ProxyResolutionService pointer, and nothing erases an entry when
+    // a service dies - so a service allocated at the same address inherits the
+    // last test's circuits, timestamped on a mock clock the last test had
+    // already fast-forwarded. That is why CircuitTimeout_MultiSite passed
+    // alone and failed straight after CircuitTimeout.
+    ProxyConfigServiceTor::ClearTorCircuitsForTesting();
+
     auto config_service =
         net::ProxyConfigService::CreateSystemProxyConfigService(
             base::SingleThreadTaskRunner::GetCurrentDefault());

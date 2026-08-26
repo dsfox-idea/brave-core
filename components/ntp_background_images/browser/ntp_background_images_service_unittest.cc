@@ -413,7 +413,7 @@ class ObserverMock : public NTPBackgroundImagesService::Observer {
     sponsored_content_data_.reset();
   }
 
-  const std::optional<base::DictValue>& sponsored_content_data() {
+  const std::optional<base::DictValue>& sponsored_content_data() const {
     return sponsored_content_data_;
   }
 
@@ -614,8 +614,10 @@ TEST_F(NTPBackgroundImagesServiceTest, BasicTest) {
   Init();
   // NTP SI Component is registered after ads is initialized.
   EXPECT_FALSE(service_->sponsored_images_component_started);
-  // If ENABLE_NTP_BACKGROUND_IMAGES then BI shall be registered
-  EXPECT_TRUE(service_->background_images_component_started);
+  // growser: the background images component is deliberately NOT registered -
+  // it carries Brave's photo pack, we ship one bundled background, and the
+  // component's server refuses our builds anyway.
+  EXPECT_FALSE(service_->background_images_component_started);
 }
 
 TEST_F(NTPBackgroundImagesServiceTest, InternalDataTest) {
@@ -1023,7 +1025,7 @@ TEST_F(NTPBackgroundImagesServiceTest,
   const base::FilePath image_dir = SetUpSponsoredSiteWithImage();
   service_->SetSponsoredImagesInstalledDirForTesting(installed_dir_.GetPath());
 
-  const std::optional<base::FilePath> result =
+  std::optional<base::FilePath> result =
       service_->MaybeGetSponsoredSiteImageFilePath(
           base::FilePath::FromUTF8Unsafe("tiles/image.webp"));
 

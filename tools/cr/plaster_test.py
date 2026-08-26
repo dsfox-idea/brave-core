@@ -9,6 +9,7 @@ from pathlib import Path
 import argparse
 import contextlib
 import copy
+import dataclasses
 import hashlib
 import io
 import json
@@ -1248,6 +1249,50 @@ class RewriterFormsTest(unittest.TestCase):
             '      method_name: Foo\n')
         self.assertEqual(result, 'class C {\n  virtual void Foo();\n};\n')
 
+    def test_make_virtual_on_inline_defined_method(self):
+        # A method defined inline (with a body, not just declared) parses as
+        # a function_definition, not a field_declaration -- the real bug this
+        # covers: `UpdateContent` in tab_hover_card_bubble_view.cc is defined
+        # this way, and make_virtual used to find nothing to match.
+        source = ('class C {\n'
+                  ' public:\n'
+                  '  void UpdateContent(const Data* data) {\n'
+                  '    Apply(data);\n'
+                  '  }\n'
+                  '};\n')
+        result = self._apply(
+            'inline_defined.h', source, 'substitutions:\n'
+            '  - description: make the inline-defined method virtual\n'
+            '    make_virtual:\n'
+            '      class_name: C\n'
+            '      method_name: UpdateContent\n')
+        self.assertEqual(
+            result,
+            source.replace('  void UpdateContent',
+                           '  virtual void UpdateContent'))
+
+    def test_make_virtual_on_inline_defined_method_qualified_nested_class(
+            self):
+        # The real fixture: an out-of-line nested class (needing the fully
+        # qualified `class_name`, per the earlier fix) whose method is also
+        # defined inline (needing this fix), together.
+        source = ('class Outer::Inner : public views::View {\n'
+                  ' public:\n'
+                  '  void UpdateContent(const Data* data) {\n'
+                  '    Apply(data);\n'
+                  '  }\n'
+                  '};\n')
+        result = self._apply(
+            'inline_defined_nested.h', source, 'substitutions:\n'
+            '  - description: make the inline-defined nested method virtual\n'
+            '    make_virtual:\n'
+            '      class_name: Outer::Inner\n'
+            '      method_name: UpdateContent\n')
+        self.assertEqual(
+            result,
+            source.replace('  void UpdateContent',
+                           '  virtual void UpdateContent'))
+
     def test_make_virtual_after_leading_attribute(self):
         # `virtual` must land after a leading attribute, not before it.
         result = self._apply(
@@ -1305,6 +1350,102 @@ class RewriterFormsTest(unittest.TestCase):
                 '    make_virtual:\n'
                 '      class_name: C\n'
                 '      method_name: Foo\n')
+
+    def test_make_virtual_skips_defined_function_template_overload(self):
+        # Real-world overload set: a plain overload plus a function-template
+        # overload (constrained with `requires`) that forwards to it. `virtual`
+        # is illegal on a function template, so only the plain overload should
+        # match -- exercising whether make_virtual can tell the two apart.
+        source = (
+            'class C {\n'
+            ' public:\n'
+            '  void AddTabRecursive(ScopedTab tab,\n'
+            '                       size_t index,\n'
+            '                       std::optional<tab_groups::TabGroupId> new_group_id,\n'
+            '                       bool new_pinned_state);\n'
+            '\n'
+            '  template <typename T>\n'
+            '    requires std::derived_from<T, TabInterface>\n'
+            '  void AddTabRecursive(std::unique_ptr<T> tab,\n'
+            '                       size_t index,\n'
+            '                       std::optional<tab_groups::TabGroupId> new_group_id,\n'
+            '                       bool new_pinned_state) {\n'
+            '    AddTabRecursive(ScopedTab(tab.release()), index, new_group_id,\n'
+            '                    new_pinned_state);\n'
+            '  }\n'
+            '};\n')
+        result = self._apply(
+            'template_overload.h', source, 'substitutions:\n'
+            '  - description: make the non-template overload virtual\n'
+            '    make_virtual:\n'
+            '      class_name: C\n'
+            '      method_name: AddTabRecursive\n')
+        expected = source.replace(
+            '  void AddTabRecursive(ScopedTab tab,',
+            '  virtual void AddTabRecursive(ScopedTab tab,')
+        self.assertEqual(result, expected)
+
+    def test_make_virtual_cannot_exclude_declaration_only_function_template(
+            self):
+        # Same overload set, but the template overload is a bare declaration
+        # (no body), matching the same `field_declaration`/`declaration` shape
+        # the matcher looks for. make_virtual has no way to distinguish a
+        # function template from an ordinary method here, so it counts 2
+        # matches for a 1-match default and refuses to apply. It fails closed
+        # rather than incorrectly stamping `virtual` on the template, but
+        # there is currently no arg to select just the non-template overload.
+        source = (
+            'class C {\n'
+            ' public:\n'
+            '  void AddTabRecursive(ScopedTab tab, size_t index);\n'
+            '\n'
+            '  template <typename T>\n'
+            '    requires std::derived_from<T, TabInterface>\n'
+            '  void AddTabRecursive(std::unique_ptr<T> tab, size_t index);\n'
+            '};\n')
+        with self.assertRaises(plaster.PlasterApplyError) as ctx:
+            self._apply(
+                'template_overload_decl.h', source, 'substitutions:\n'
+                '  - description: make the non-template overload virtual\n'
+                '    make_virtual:\n'
+                '      class_name: C\n'
+                '      method_name: AddTabRecursive\n')
+        self.assertIn('Unexpected number of matches (2 vs 1)',
+                      str(ctx.exception))
+
+    def test_make_virtual_on_out_of_line_nested_class_fully_qualified(self):
+        # As with add_friend, a class defined out-of-line as a nested class
+        # (`class Outer::Inner`) has a qualified `name` field, so
+        # `class_name` must be spelled fully qualified to match it.
+        result = self._apply(
+            'nested_virt.h', 'class Outer::Inner : public Base {\n'
+            ' public:\n'
+            '  void Foo();\n'
+            '};\n', 'substitutions:\n'
+            '  - description: make Foo virtual on the nested class\n'
+            '    make_virtual:\n'
+            '      class_name: Outer::Inner\n'
+            '      method_name: Foo\n')
+        self.assertEqual(
+            result, 'class Outer::Inner : public Base {\n'
+            ' public:\n'
+            '  virtual void Foo();\n'
+            '};\n')
+
+    def test_make_virtual_bare_name_does_not_match_out_of_line_nested_class(
+            self):
+        with self.assertRaises(plaster.PlasterApplyError) as ctx:
+            self._apply(
+                'nested_virt_bare.h', 'class Outer::Inner : public Base {\n'
+                ' public:\n'
+                '  void Foo();\n'
+                '};\n', 'substitutions:\n'
+                '  - description: bare name does not match\n'
+                '    make_virtual:\n'
+                '      class_name: Inner\n'
+                '      method_name: Foo\n')
+        self.assertIn('Unexpected number of matches (0 vs 1)',
+                      str(ctx.exception))
 
     def test_make_virtual_unknown_arg_rejected(self):
         self._expect_value_error(
@@ -1403,6 +1544,99 @@ class RewriterFormsTest(unittest.TestCase):
             result, 'class Foo {\n public:\n'
             '  class Bar {\n   private:\n    int y_;\n  };\n'
             ' private:\n  friend class BraveFoo;\n  int x_;\n};\n')
+
+    def test_add_friend_bare_name_does_not_match_out_of_line_nested_class(
+            self):
+        # A nested class defined out-of-line spells its class-head with its
+        # enclosing class as a qualifier (`class Outer::Inner : public Base`),
+        # so the class_specifier's `name` field is a qualified_identifier
+        # ("Outer::Inner"), not a bare identifier ("Inner"). A bare
+        # `class_name` does *not* match this -- it must be spelled fully
+        # qualified (see the test below) -- e.g. TabHoverCardBubbleView::
+        # TabCardView in
+        # chrome/browser/ui/views/tabs/hovercard/tab_hover_card_bubble_view.cc.
+        with self.assertRaises(plaster.PlasterApplyError) as ctx:
+            self._apply(
+                'out_of_line_nested.h', 'class Outer::Inner : public Base {\n'
+                ' public:\n'
+                '  void Foo();\n'
+                '\n'
+                ' private:\n'
+                '  int x_;\n'
+                '};\n', 'substitutions:\n'
+                '  - description: friend the Brave subclass\n'
+                '    add_friend:\n'
+                '      class_name: Inner\n'
+                '      friend_type: class BraveInner\n')
+        self.assertIn('Unexpected number of matches (0 vs 1)',
+                      str(ctx.exception))
+
+    def test_add_friend_on_out_of_line_nested_class_fully_qualified(self):
+        # `class_name` must be spelled fully qualified (`Outer::Inner`) to
+        # match an out-of-line nested class definition; this also
+        # disambiguates it from an unrelated same-named top-level class.
+        result = self._apply(
+            'out_of_line_nested_qualified.h', 'class Inner {\n'
+            ' private:\n'
+            '  int unrelated_;\n'
+            '};\n'
+            '\n'
+            'class Outer::Inner : public Base {\n'
+            ' public:\n'
+            '  void Foo();\n'
+            '\n'
+            ' private:\n'
+            '  int x_;\n'
+            '};\n', 'substitutions:\n'
+            '  - description: friend the Brave subclass of the nested class\n'
+            '    add_friend:\n'
+            '      class_name: Outer::Inner\n'
+            '      friend_type: class BraveInner\n')
+        self.assertEqual(
+            result, 'class Inner {\n'
+            ' private:\n'
+            '  int unrelated_;\n'
+            '};\n'
+            '\n'
+            'class Outer::Inner : public Base {\n'
+            ' public:\n'
+            '  void Foo();\n'
+            '\n'
+            ' private:\n'
+            '  friend class BraveInner;\n'
+            '  int x_;\n'
+            '};\n')
+
+    def test_add_friend_bare_name_ignores_out_of_line_nested_class(self):
+        # A bare `class_name` matching an unrelated top-level class is
+        # unaffected by a same-named out-of-line nested class elsewhere in
+        # the file -- the qualified name never matches the bare regex, so
+        # there is no ambiguity to resolve.
+        result = self._apply(
+            'bare_name_top_level_only.h', 'class Inner {\n'
+            ' private:\n'
+            '  int unrelated_;\n'
+            '};\n'
+            '\n'
+            'class Outer::Inner : public Base {\n'
+            ' private:\n'
+            '  int x_;\n'
+            '};\n', 'substitutions:\n'
+            '  - description: friend the top-level class only\n'
+            '    add_friend:\n'
+            '      class_name: Inner\n'
+            '      friend_type: class BraveInner\n')
+        self.assertEqual(
+            result, 'class Inner {\n'
+            ' private:\n'
+            '  friend class BraveInner;\n'
+            '  int unrelated_;\n'
+            '};\n'
+            '\n'
+            'class Outer::Inner : public Base {\n'
+            ' private:\n'
+            '  int x_;\n'
+            '};\n')
 
     def test_add_friend_no_private_section_fails(self):
         with self.assertRaises(plaster.PlasterApplyError):
@@ -1534,6 +1768,29 @@ class RewriterFormsTest(unittest.TestCase):
             result, 'void FreeFunc(int x) {\n  if (!Enabled()) return;\n'
             '  Upstream(x);\n}\n')
 
+    def test_preempt_function_impl_templated_multiline_free_function(self):
+        # Reproduces CreateHorizontalTabStripRegionView: a free function whose
+        # templated return type sits on its own line, above the declarator.
+        source = ('std::unique_ptr<TabStripRegionView> '
+                  'CreateHorizontalTabStripRegionView(\n'
+                  '    BrowserView* browser_view) {\n'
+                  '  return std::make_unique<Old>(browser_view);\n}\n')
+        result = self._apply(
+            'multiline.cc', source, 'substitutions:\n'
+            '  - description: guard a templated multiline free function\n'
+            '    preempt_function_impl:\n'
+            '      function_name: CreateHorizontalTabStripRegionView\n'
+            '      code: |-\n'
+            '        if (!Enabled()) {\n'
+            '          return std::make_unique<Brave>(browser_view);\n'
+            '        }\n')
+        self.assertEqual(
+            result,
+            source.replace(
+                '{\n  return std::make_unique<Old>', '{\n  if (!Enabled()) {\n'
+                '    return std::make_unique<Brave>(browser_view);\n  }\n'
+                '  return std::make_unique<Old>'))
+
     def test_preempt_function_impl_ignores_forward_declaration(self):
         # A forward declaration is a bodyless `declaration`, not a
         # `function_definition`, so the matcher skips it (count stays 1) and the
@@ -1660,6 +1917,37 @@ class RewriterFormsTest(unittest.TestCase):
         self.assertEqual(
             result, 'void C::A() {\n  a();\n}\n\n'
             'void C::B() {\n  if (g()) return;\n  b();\n}\n')
+
+    def test_preempt_function_impl_nested_class_out_of_line_method(self):
+        # A method of a nested class defined out-of-line is declared with its
+        # full enclosing scope (`Outer::Inner::Method`), not just
+        # `Inner::Method` -- the same qualification rule as `add_friend` and
+        # `make_virtual` on the nested class itself.
+        result = self._apply(
+            'nested_method.cc', 'void Outer::Inner::Method(int x) {\n'
+            '  Upstream(x);\n}\n', 'substitutions:\n'
+            '  - description: guard a nested class out-of-line method\n'
+            '    preempt_function_impl:\n'
+            '      function_name: Outer::Inner::Method\n'
+            "      return_if: '!Enabled()'\n")
+        self.assertEqual(
+            result, 'void Outer::Inner::Method(int x) {\n'
+            '  if (!Enabled()) return;\n  Upstream(x);\n}\n')
+
+    def test_preempt_function_impl_partial_qualification_fails(self):
+        # `Inner::Method` (missing the `Outer::` scope) does not match --
+        # the declarator's full qualified text must be given, not a suffix.
+        with self.assertRaises(plaster.PlasterApplyError) as ctx:
+            self._apply(
+                'nested_method_partial.cc',
+                'void Outer::Inner::Method(int x) {\n'
+                '  Upstream(x);\n}\n', 'substitutions:\n'
+                '  - description: partial qualification does not match\n'
+                '    preempt_function_impl:\n'
+                '      function_name: Inner::Method\n'
+                "      return_if: '!Enabled()'\n")
+        self.assertIn('Unexpected number of matches (0 vs 1)',
+                      str(ctx.exception))
 
     def test_preempt_function_impl_overloads_need_count(self):
         result = self._apply(
@@ -2857,6 +3145,35 @@ class RewriterFormsTest(unittest.TestCase):
             'void C::Foo() {\n  [&]() -> void {\n  Upstream();\n  }();\n'
             '  Prepare();\n\n  Track();\n}\n')
 
+    def test_after_function_impl_nested_class_out_of_line_method(self):
+        # As with preempt_function_impl, a method of a nested class defined
+        # out-of-line must be named with its full enclosing scope.
+        result = self._apply(
+            'append_nested_method.cc', 'void Outer::Inner::Method(int x) {\n'
+            '  Upstream(x);\n}\n', 'substitutions:\n'
+            '  - description: append after a nested class method\n'
+            '    after_function_impl:\n'
+            '      function_name: Outer::Inner::Method\n'
+            '      code: |-\n'
+            '        AfterNested(x);\n')
+        self.assertEqual(
+            result, 'void Outer::Inner::Method(int x) {\n  [&]() -> void {\n'
+            '  Upstream(x);\n  }();\n  AfterNested(x);\n}\n')
+
+    def test_after_function_impl_partial_qualification_fails(self):
+        with self.assertRaises(plaster.PlasterApplyError) as ctx:
+            self._apply(
+                'append_nested_method_partial.cc',
+                'void Outer::Inner::Method(int x) {\n'
+                '  Upstream(x);\n}\n', 'substitutions:\n'
+                '  - description: partial qualification does not match\n'
+                '    after_function_impl:\n'
+                '      function_name: Inner::Method\n'
+                '      code: |-\n'
+                '        AfterNested(x);\n')
+        self.assertIn('Unexpected number of matches (0 vs 1)',
+                      str(ctx.exception))
+
     def test_after_function_impl_targets_named_function_only(self):
         # Only the named function's body is wrapped, not a sibling.
         result = self._apply(
@@ -3036,6 +3353,232 @@ class RewriterFormsTest(unittest.TestCase):
             self._AURA_CLASS.replace(' private:\n',
                                      ' private:\n  friend class BraveC;\n'))
 
+    # -- classes wrapped in Views METADATA_HEADER/BEGIN_METADATA/END_METADATA
+    #
+    # METADATA_HEADER(Name, Base) (in the class body) and
+    # BEGIN_METADATA(Name, Base) ... END_METADATA (right after it, at
+    # namespace scope) are bare macro calls with no trailing `;`; tree-sitter
+    # turns the call -- and, for BEGIN_METADATA, everything after it -- into
+    # one ERROR node. This mirrors the real bug: an unrelated class's
+    # BEGIN_METADATA/END_METADATA sitting just before the target class broke
+    # every AST rewriter's ability to reach it.
+
+    # The leading comment lines and blank line before the class are load-
+    # bearing for the repro: tree-sitter's error recovery only cascades all
+    # the way to `class Outer::Inner` with this exact shape ahead of it
+    # (confirmed empirically -- dropping them, or the constructor's member
+    # initializer, makes it recover locally instead, same as it does for
+    # `blank_macros_for_ast_parsing`'s export-macro/conditional cases).
+    _METADATA_CLASS = ('BEGIN_METADATA(Unrelated, views::View)\n'
+                       'END_METADATA\n'
+                       '\n'
+                       '// Outer::Inner\n'
+                       '// ----------------------------------------------\n'
+                       'class Outer::Inner : public views::View {\n'
+                       '  METADATA_HEADER(Inner, views::View)\n'
+                       '\n'
+                       ' public:\n'
+                       '  explicit Inner(Outer* bubble_view)\n'
+                       '      : bubble_view_(bubble_view) {\n'
+                       '    CHECK(bubble_view_);\n'
+                       '  }\n'
+                       '\n'
+                       '  void Foo();\n'
+                       '\n'
+                       ' private:\n'
+                       '  int x_;\n'
+                       '};\n'
+                       '\n'
+                       'BEGIN_METADATA(Inner, views::View)\n'
+                       'END_METADATA\n')
+
+    def test_add_friend_reaches_class_after_begin_metadata(self):
+        result = self._apply(
+            'metadata_friend.h', self._METADATA_CLASS,
+            'blank_metadata_header_macros: true\n'
+            'substitutions:\n'
+            '  - description: friend the Brave subclass past BEGIN_METADATA\n'
+            '    add_friend:\n'
+            '      class_name: Outer::Inner\n'
+            '      friend_type: class BraveInner\n')
+        self.assertEqual(
+            result,
+            self._METADATA_CLASS.replace(
+                ' private:\n', ' private:\n  friend class BraveInner;\n'))
+
+    def test_make_virtual_reaches_class_after_begin_metadata(self):
+        result = self._apply(
+            'metadata_virt.h', self._METADATA_CLASS,
+            'blank_metadata_header_macros: true\n'
+            'substitutions:\n'
+            '  - description: make Foo virtual past BEGIN_METADATA\n'
+            '    make_virtual:\n'
+            '      class_name: Outer::Inner\n'
+            '      method_name: Foo\n')
+        self.assertEqual(
+            result,
+            self._METADATA_CLASS.replace('  void Foo();',
+                                         '  virtual void Foo();'))
+
+    def test_rename_class_renames_name_inside_metadata_macros(self):
+        # The blanking preserves `name`'s byte offset exactly so the edit,
+        # which is always spliced onto the real (unblanked) source, lands on
+        # the literal `Inner` inside METADATA_HEADER and BEGIN_METADATA too --
+        # not just the class declaration itself.
+        result = self._apply(
+            'metadata_rename.h', self._METADATA_CLASS,
+            'blank_metadata_header_macros: true\n'
+            'substitutions:\n'
+            '  - description: rename Inner\n'
+            '    rename_class:\n'
+            '      class_name: Inner\n'
+            '      rename: Inner_ChromiumImpl\n')
+        expected = self._METADATA_CLASS
+        for old, new in (
+            ('class Outer::Inner :', 'class Outer::Inner_ChromiumImpl :'),
+            ('explicit Inner(', 'explicit Inner_ChromiumImpl('),
+            ('METADATA_HEADER(Inner,', 'METADATA_HEADER(Inner_ChromiumImpl,'),
+            ('BEGIN_METADATA(Inner,', 'BEGIN_METADATA(Inner_ChromiumImpl,'),
+        ):
+            expected = expected.replace(old, new)
+        self.assertEqual(result, expected)
+
+    def test_metadata_header_flag_off_by_default_fails(self):
+        # Without the flag, BEGIN_METADATA breaks tree-sitter's parse of
+        # everything after it, so add_friend finds nothing to friend.
+        with self.assertRaises(plaster.PlasterApplyError):
+            self._apply(
+                'metadata_no_flag.h', self._METADATA_CLASS, 'substitutions:\n'
+                '  - description: no flag, so BEGIN_METADATA breaks parsing\n'
+                '    add_friend:\n'
+                '      class_name: Outer::Inner\n'
+                '      friend_type: class BraveInner\n')
+
+    def test_metadata_header_flag_must_be_boolean(self):
+        self._expect_value_error(
+            'blank_metadata_header_macros: yes please\n'
+            'substitutions:\n'
+            '  - description: bad flag type\n'
+            '    drop_final:\n'
+            '      class_name: C\n',
+            '`blank_metadata_header_macros` must be a boolean')
+
+    def test_metadata_header_flag_rejected_for_non_cxx_source(self):
+        self._expect_value_error(
+            'blank_metadata_header_macros: true\n'
+            'substitutions:\n'
+            '  - description: flag on a non-C++ source\n'
+            '    regex:\n'
+            "      re_pattern: 'x'\n"
+            "      replace: 'y'\n",
+            '`blank_metadata_header_macros` is only supported for C++ '
+            'sources')
+
+    def test_metadata_header_flag_allowed_for_cxx_source(self):
+        result = self._apply(
+            'metadata_cxx_flag.h', 'A Chromium thing.\n',
+            'blank_metadata_header_macros: true\n'
+            'substitutions:\n'
+            '  - description: flag on a C++ source\n'
+            '    regex:\n'
+            "      re_pattern: 'Chromium'\n"
+            "      replace: 'Brave'\n")
+        self.assertEqual(result, 'A Brave thing.\n')
+
+    def test_metadata_header_flag_independent_of_other_blank_flags(self):
+        # Enabling the other two blanking passes must not also enable this
+        # one -- BEGIN_METADATA still breaks the parse.
+        with self.assertRaises(plaster.PlasterApplyError):
+            self._apply(
+                'metadata_other_flags.h', self._METADATA_CLASS,
+                'blank_macros_for_ast_parsing: true\n'
+                'blank_string_adjacent_macros_for_ast_parsing: true\n'
+                'substitutions:\n'
+                '  - description: wrong flags for this construct\n'
+                '    add_friend:\n'
+                '      class_name: Outer::Inner\n'
+                '      friend_type: class BraveInner\n')
+
+    # -- functions with a macro-adjacent string literal -------------------
+    #
+    # A bare macro touching a string literal (only valid post-preprocessing,
+    # e.g. Skia's `STRINGIZE(SK_MILESTONE)` version string idiom) drops into
+    # a tree-sitter error node that can swallow everything up to the next
+    # construct it resyncs on. Regression coverage for a real bug: this once
+    # made `after_function_impl` on the *first* function wrap the *second*
+    # function's body too.
+
+    _VERSION_STRING_FUNCTION = (
+        'base::DictValue C::GetClientInfo() {\n'
+        '  base::DictValue dict;\n'
+        '  dict.Set("graphics_backend",\n'
+        '           std::string("Skia/" STRINGIZE(SK_MILESTONE) " " '
+        'SKIA_COMMIT_HASH));\n'
+        '  return dict;\n'
+        '}\n'
+        '\n'
+        'base::ListValue C::GetLogMessages() {\n'
+        '  return GetLogs();\n'
+        '}\n')
+
+    def test_after_function_impl_unaffected_by_later_macro_adjacent_string(
+            self):
+        # Without the fix, `after_function_impl` on `GetClientInfo` would
+        # wrap `GetLogMessages` too, since the STRINGIZE construct inside
+        # `GetClientInfo` throws tree-sitter's parse off. Confirm it now stays
+        # scoped to the target function's own body.
+        result = self._apply(
+            'version_string.cc', self._VERSION_STRING_FUNCTION,
+            'blank_string_adjacent_macros_for_ast_parsing: true\n'
+            'substitutions:\n'
+            '  - description: report the executable path after the body\n'
+            '    after_function_impl:\n'
+            '      function_name: C::GetClientInfo\n'
+            '      result_var: dict\n'
+            '      code: |-\n'
+            '        return dict;\n')
+        self.assertEqual(
+            result, 'base::DictValue C::GetClientInfo() {\n'
+            '  base::DictValue dict = [&]() -> base::DictValue {\n'
+            '  base::DictValue dict;\n'
+            '  dict.Set("graphics_backend",\n'
+            '           std::string("Skia/" STRINGIZE(SK_MILESTONE) " " '
+            'SKIA_COMMIT_HASH));\n'
+            '  return dict;\n'
+            '  }();\n'
+            '  return dict;\n'
+            '}\n'
+            '\n'
+            'base::ListValue C::GetLogMessages() {\n'
+            '  return GetLogs();\n'
+            '}\n')
+
+    def test_make_virtual_unaffected_by_macro_adjacent_string_in_sibling(self):
+        # A macro-adjacent string literal in one method must not stop a
+        # rewriter from correctly reaching a *different* method in the same
+        # class.
+        result = self._apply(
+            'version_string.h', 'class C {\n'
+            ' public:\n'
+            '  void GetClientInfo() {\n'
+            '    Log("Skia/" STRINGIZE(SK_MILESTONE) " " SKIA_COMMIT_HASH);\n'
+            '  }\n'
+            '  void Foo();\n'
+            '};\n', 'blank_string_adjacent_macros_for_ast_parsing: true\n'
+            'substitutions:\n'
+            '  - description: make Foo virtual\n'
+            '    make_virtual:\n'
+            '      class_name: C\n'
+            '      method_name: Foo\n')
+        self.assertEqual(
+            result, 'class C {\n'
+            ' public:\n'
+            '  void GetClientInfo() {\n'
+            '    Log("Skia/" STRINGIZE(SK_MILESTONE) " " SKIA_COMMIT_HASH);\n'
+            '  }\n'
+            '  virtual void Foo();\n'
+            '};\n')
+
     def test_blanking_is_off_by_default(self):
         # Without `blank_macros_for_ast_parsing`, the export-macro class is
         # unparseable, so the rewriter matches nothing and the apply fails.
@@ -3099,6 +3642,126 @@ class RewriterFormsTest(unittest.TestCase):
             "      re_pattern: 'Chromium'\n"
             "      replace: 'Brave'\n")
         self.assertEqual(result, 'A Brave thing.\n')
+
+    # -- `blank_string_adjacent_macros_for_ast_parsing` (separate flag) ----
+    #
+    # A distinct opt-in from `blank_macros_for_ast_parsing`, with the same
+    # validation shape, plus coverage that the two are independent end to end
+    # (not just at the `CxxMacrosEraser.erase` unit level above).
+
+    _VERSION_STRING_CLASS = ('class C {\n'
+                             ' public:\n'
+                             '  void Bar() { Log("v" STRINGIZE(V)); }\n'
+                             '  void Foo();\n'
+                             '};\n')
+
+    def test_string_adjacent_flag_off_by_default(self):
+        # `after_function_impl` needs `GetClientInfo`'s function_definition
+        # node intact to find its body; on this fixture, without the flag,
+        # the STRINGIZE construct's error node swallows enough of it that the
+        # query comes up empty (0 matches) rather than finding *a* match.
+        # (On the real, larger file this bug was found in, tree-sitter's
+        # error recovery instead re-synced onto a much later, wrong
+        # `compound_statement` -- still broken, just a different symptom.)
+        with self.assertRaises(plaster.PlasterApplyError):
+            self._apply(
+                'no_string_blank.cc', self._VERSION_STRING_FUNCTION,
+                'substitutions:\n'
+                '  - description: report the executable path after the body\n'
+                '    after_function_impl:\n'
+                '      function_name: C::GetClientInfo\n'
+                '      result_var: dict\n'
+                '      code: |-\n'
+                '        return dict;\n')
+
+    def test_string_adjacent_flag_must_be_boolean(self):
+        self._expect_value_error(
+            'blank_string_adjacent_macros_for_ast_parsing: yes please\n'
+            'substitutions:\n'
+            '  - description: bad flag type\n'
+            '    drop_final:\n'
+            '      class_name: C\n',
+            '`blank_string_adjacent_macros_for_ast_parsing` must be a boolean')
+
+    def test_string_adjacent_flag_rejected_for_non_cxx_source(self):
+        self._expect_value_error(
+            'blank_string_adjacent_macros_for_ast_parsing: true\n'
+            'substitutions:\n'
+            '  - description: flag on a non-C++ source\n'
+            '    regex:\n'
+            "      re_pattern: 'x'\n"
+            "      replace: 'y'\n",
+            '`blank_string_adjacent_macros_for_ast_parsing` is only '
+            'supported for C++ sources')
+
+    def test_macros_flag_alone_does_not_enable_string_adjacent_pass(self):
+        # Setting `blank_macros_for_ast_parsing` must not also enable the
+        # separate string-adjacent pass this construct needs: still fails.
+        with self.assertRaises(plaster.PlasterApplyError):
+            self._apply(
+                'macros_only.cc', self._VERSION_STRING_FUNCTION,
+                'blank_macros_for_ast_parsing: true\n'
+                'substitutions:\n'
+                '  - description: wrong flag for this construct\n'
+                '    after_function_impl:\n'
+                '      function_name: C::GetClientInfo\n'
+                '      result_var: dict\n'
+                '      code: |-\n'
+                '        return dict;\n')
+
+    def test_string_adjacent_flag_alone_fixes_the_match(self):
+        result = self._apply(
+            'string_adjacent_only.cc', self._VERSION_STRING_FUNCTION,
+            'blank_string_adjacent_macros_for_ast_parsing: true\n'
+            'substitutions:\n'
+            '  - description: report the executable path after the body\n'
+            '    after_function_impl:\n'
+            '      function_name: C::GetClientInfo\n'
+            '      result_var: dict\n'
+            '      code: |-\n'
+            '        return dict;\n')
+        # Correctly scoped: the wrap closes right after GetClientInfo's own
+        # `return dict;`, well before GetLogMessages even starts.
+        self.assertNotIn('GetLogMessages', result[:result.index('}();')])
+
+    def test_string_adjacent_flag_alone_reaches_sibling_method(self):
+        # A construct simple enough that tree-sitter handles it fine even
+        # without the flag; this only confirms the flag does not itself
+        # break normal operation on it.
+        result = self._apply(
+            'string_adjacent_only.h', self._VERSION_STRING_CLASS,
+            'blank_string_adjacent_macros_for_ast_parsing: true\n'
+            'substitutions:\n'
+            '  - description: make Foo virtual\n'
+            '    make_virtual:\n'
+            '      class_name: C\n'
+            '      method_name: Foo\n')
+        self.assertEqual(
+            result,
+            self._VERSION_STRING_CLASS.replace('void Foo();',
+                                               'virtual void Foo();'))
+
+    def test_both_blank_flags_together(self):
+        # The two flags compose: an export-macro class *and* a
+        # STRINGIZE-guarded method in the same file, both reached in one pass.
+        result = self._apply(
+            'both_flags.h', 'class MODULES_EXPORT C {\n'
+            ' public:\n'
+            '  void Bar() { Log("v" STRINGIZE(V)); }\n'
+            '  void Foo();\n'
+            '};\n', 'blank_macros_for_ast_parsing: true\n'
+            'blank_string_adjacent_macros_for_ast_parsing: true\n'
+            'substitutions:\n'
+            '  - description: make Foo virtual on an exported, STRINGIZE-using class\n'
+            '    make_virtual:\n'
+            '      class_name: C\n'
+            '      method_name: Foo\n')
+        self.assertEqual(
+            result, 'class MODULES_EXPORT C {\n'
+            ' public:\n'
+            '  void Bar() { Log("v" STRINGIZE(V)); }\n'
+            '  virtual void Foo();\n'
+            '};\n')
 
     def test_ast_rewriter_rejected_for_non_cxx_source(self):
         # AST rewriters (cxx.* ops) only work on C++ sources; the `.idl` target
@@ -3184,6 +3847,199 @@ class RewriterFormsTest(unittest.TestCase):
             "    re_pattern: 'x'\n"
             "    replace: 'y'\n"
             '    re_flag: [DOTALL]\n', 'Unrecognised substitution key')
+
+
+class RegexMacroDispatchTest(unittest.TestCase):
+    """End-to-end tests for dispatching a `regex_macro:`-style substitution
+    key (e.g. `set_feature_flag_default_state:`) to `RegexMacro`.
+
+    Every `regex_macro` op declared in `rewriters.pyl` is handled by the same
+    `RegexMacro` class (see `_regex_macro_rewriters`), so these tests exercise
+    that generic dispatch/validation path via the one macro currently shipped
+    (`set_feature_flag_default_state`), rather than the macro's own regex --
+    that is `ToggleBaseFeatureDefaultStateTest`'s job (renamed
+    `OverrideFeatureDefaultStateTest`).
+    """
+
+    def setUp(self):
+        self.fake_chromium_src = FakeChromiumRepo()
+        self.fake_chromium_src.setup()
+        self.addCleanup(self.fake_chromium_src.cleanup)
+
+    def _apply(self, name: str, source: str, yaml_body: str) -> str:
+        """Write `source`+plaster, apply, and return the rewritten source."""
+        src = Path('chrome/common/extensions/api') / name
+        self.fake_chromium_src.write_and_stage_file(
+            src, source, self.fake_chromium_src.chromium)
+        self.fake_chromium_src.commit(f'Add {name}',
+                                      self.fake_chromium_src.chromium)
+        plaster_path = plaster.PLASTER_FILES_PATH / (str(src) + '.yaml')
+        plaster_path.parent.mkdir(parents=True, exist_ok=True)
+        plaster_path.write_text(yaml_body)
+        plaster.PlasterFile(plaster_path).apply()
+        return (self.fake_chromium_src.chromium / src).read_text()
+
+    def test_macro_op_applies(self):
+        result = self._apply(
+            'feature.cc',
+            'BASE_FEATURE(kFoo, base::FEATURE_ENABLED_BY_DEFAULT);',
+            'substitutions:\n'
+            '  - description: Ship kFoo disabled.\n'
+            '    set_feature_flag_default_state:\n'
+            '      feature_name: kFoo\n'
+            '      value: base::FEATURE_DISABLED_BY_DEFAULT\n')
+        self.assertEqual(
+            result, '// kFoo feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);')
+
+    def test_registered_under_its_bare_name(self):
+        # The YAML key is the op id with its `cxx.` prefix stripped.
+        self.assertIn('set_feature_flag_default_state', plaster._REWRITERS)
+        cls = plaster._REWRITERS['set_feature_flag_default_state']
+        self.assertTrue(issubclass(cls, plaster.RegexMacro))
+        self.assertEqual(cls.OP_ID, 'cxx.set_feature_flag_default_state')
+
+    def test_help_text_lists_every_input(self):
+        # `plaster --help <macro>` must document each input, not just the
+        # macro's own top-level `description`.
+        cls = plaster._REWRITERS['set_feature_flag_default_state']
+        help_text = cls.help_text()
+        self.assertIn('Fields:', help_text)
+        self.assertIn('feature_name', help_text)
+        self.assertIn('value', help_text)
+        spec = plaster.RewritersEval.load().regex_macro(cls.OP_ID)
+        for entry in spec['inputs']:
+            self.assertIn(entry['name'], help_text)
+            self.assertIn(entry['description'], help_text)
+
+    def test_missing_required_arg_is_rejected(self):
+        spec = 'substitutions:\n' \
+              '  - description: d\n' \
+              '    set_feature_flag_default_state:\n' \
+              '      feature_name: kFoo\n'
+        with self.assertRaises(ValueError) as cm:
+            plaster.Substitution.from_yaml(spec)
+        self.assertIn('requires arg(s): value', str(cm.exception))
+
+    def test_unknown_arg_is_rejected(self):
+        spec = ('substitutions:\n'
+                '  - description: d\n'
+                '    set_feature_flag_default_state:\n'
+                '      feature_name: kFoo\n'
+                '      value: base::FEATURE_DISABLED_BY_DEFAULT\n'
+                '      bogus: x\n')
+        with self.assertRaises(ValueError) as cm:
+            plaster.Substitution.from_yaml(spec)
+        self.assertIn("Unrecognised set_feature_flag_default_state arg(s)",
+                      str(cm.exception))
+        self.assertIn("'bogus'", str(cm.exception))
+
+    def test_non_string_arg_is_rejected(self):
+        spec = ('substitutions:\n'
+                '  - description: d\n'
+                '    set_feature_flag_default_state:\n'
+                '      feature_name: kFoo\n'
+                '      value: 1\n')
+        with self.assertRaises(ValueError) as cm:
+            plaster.Substitution.from_yaml(spec)
+        self.assertIn('must be a string', str(cm.exception))
+
+    def test_unknown_macro_name_is_unrecognised(self):
+        # A name that is not a rewriter and not a declared regex macro falls
+        # through to the same "unrecognised" path as any other bad key.
+        self._expect_value_error(
+            'substitutions:\n'
+            '  - description: d\n'
+            '    not_a_real_macro:\n'
+            '      feature_name: kFoo\n', 'Unknown rewriter')
+
+    def test_only_one_rewriter_allowed_alongside_a_macro(self):
+        self._expect_value_error(
+            'substitutions:\n'
+            '  - description: d\n'
+            "    regex:\n"
+            "      re_pattern: 'a'\n"
+            "      replace: 'b'\n"
+            '    set_feature_flag_default_state:\n'
+            '      feature_name: kFoo\n'
+            '      value: base::FEATURE_DISABLED_BY_DEFAULT\n',
+            'Only one rewriter allowed per entry')
+
+    def test_still_matches_and_applies_when_value_already_set(self):
+        # The macro always matches -- and so always reports a `count:` of 1,
+        # never 0 -- even when the current value already equals the one
+        # being set, so the substitution can never silently stop applying as
+        # upstream's own default happens to converge on ours. The comment it
+        # inserts is what makes this rerun visible in the diff.
+        result = self._apply(
+            'already_set.cc',
+            'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);',
+            'substitutions:\n'
+            '  - description: Ship kFoo disabled.\n'
+            '    set_feature_flag_default_state:\n'
+            '      feature_name: kFoo\n'
+            '      value: base::FEATURE_DISABLED_BY_DEFAULT\n')
+        self.assertEqual(
+            result, '// kFoo feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);')
+
+    def test_rejected_on_a_non_cxx_source(self):
+        with self.assertRaises(ValueError) as cm:
+            self._apply(
+                'feature.idl', 'irrelevant', 'substitutions:\n'
+                '  - description: Ship kFoo disabled.\n'
+                '    set_feature_flag_default_state:\n'
+                '      feature_name: kFoo\n'
+                '      value: base::FEATURE_DISABLED_BY_DEFAULT\n')
+        self.assertIn(
+            'the `set_feature_flag_default_state` rewriter is only '
+            'supported for C++ sources', str(cm.exception))
+
+    def _expect_value_error(self, yaml_body: str, substr: str):
+        with self.assertRaises(ValueError) as ctx:
+            self._apply('validation.cc', 'dummy', yaml_body)
+        self.assertIn(substr, str(ctx.exception))
+
+
+class RegexMacroHelpTest(unittest.TestCase):
+    """Unit tests for `_regex_macro_help`, independent of the shipped macro.
+    """
+
+    @staticmethod
+    def _spec(description: str) -> dict:
+        return {
+            'description': description,
+            'inputs': [
+                {
+                    'name': 'foo',
+                    'description': 'The foo to use.'
+                },
+                {
+                    'name': 'bar',
+                    'description': 'The bar to use.'
+                },
+            ],
+        }
+
+    def test_fields_inserted_before_example_code_block(self):
+        help_text = plaster._regex_macro_help(
+            self._spec('Does a thing.\n\n```cpp\ncode here\n```\n'))
+        fields_index = help_text.index('Fields:')
+        example_index = help_text.index('```cpp')
+        self.assertLess(fields_index, example_index)
+        self.assertIn('- `foo` — The foo to use.', help_text)
+        self.assertIn('- `bar` — The bar to use.', help_text)
+
+    def test_fields_appended_when_no_code_block(self):
+        help_text = plaster._regex_macro_help(self._spec('Does a thing.'))
+        self.assertTrue(help_text.startswith('Does a thing.'))
+        self.assertIn('Fields:', help_text)
+        self.assertIn('- `foo` — The foo to use.', help_text)
+        self.assertIn('- `bar` — The bar to use.', help_text)
+
+    def test_field_order_matches_declared_inputs(self):
+        help_text = plaster._regex_macro_help(self._spec('Does a thing.'))
+        self.assertLess(help_text.index('`foo`'), help_text.index('`bar`'))
 
 
 class RewriterRegistryTest(unittest.TestCase):
@@ -3775,16 +4631,22 @@ _SYNTHETIC_SPEC = {
 }
 
 
-class PrepareForParseTest(unittest.TestCase):
-    """Unit tests for AstRewriter._prepare_cxx_for_parse (no ast-grep binary)."""
+class CxxMacrosEraserTest(unittest.TestCase):
+    """Unit tests for CxxMacrosEraser."""
 
-    def _prepared(self, source: str) -> str:
-        """Return the parse-prepared source, asserting length is preserved.
+    # Both passes on by default: most tests below exercise one pass's
+    # mechanics in isolation and don't care about the other's gating (that
+    # independence gets its own tests further down).
+    _BOTH_PASSES = plaster.BlankForParseOptions(macros=True,
+                                                string_adjacent_macros=True)
 
-        `_prepare_cxx_for_parse` only reads the held source and the class regexes,
-        so the rewriters registry is irrelevant and left as None here.
-        """
-        result = plaster.AstRewriter(None, source)._prepare_cxx_for_parse()
+    def _prepared(
+            self,
+            source: str,
+            blank_for_parse: plaster.BlankForParseOptions = _BOTH_PASSES
+    ) -> str:
+        """Return the erased source, asserting length is preserved."""
+        result = plaster.CxxMacrosEraser(blank_for_parse).erase(source)
         # The whole point is that offsets are preserved for byte-for-byte
         # remapping onto the untouched source.
         self.assertEqual(len(result.encode('utf-8')),
@@ -3861,6 +4723,270 @@ class PrepareForParseTest(unittest.TestCase):
         for src in ('#include <memory>\n', '#define FOO 1\n',
                     '#pragma once\n'):
             self.assertEqual(self._prepared(src), src)
+
+    # -- macros adjacent to string literals --------------------------------
+    #
+    # A bare identifier (optionally called) touching a string literal, with
+    # only whitespace between them, has no raw C++ grammar: it is only valid
+    # once a macro that expands to (or stringizes into) a string literal has
+    # run. Left alone, tree-sitter drops the expression into an error node
+    # that can swallow everything up to the next construct it can resync on.
+
+    def test_blanks_macro_after_string_literal(self):
+        self._assert_blanks('std::string("Skia/" STRINGIZE(SK_MILESTONE));',
+                            'STRINGIZE(SK_MILESTONE)')
+
+    def test_blanks_bare_macro_after_string_literal(self):
+        self._assert_blanks('std::string("Skia/" SKIA_COMMIT_HASH);',
+                            'SKIA_COMMIT_HASH')
+
+    def test_blanks_macro_before_string_literal(self):
+        self._assert_blanks('std::string(SKIA_COMMIT_HASH " built");',
+                            'SKIA_COMMIT_HASH')
+
+    def test_blanks_macro_chain_between_string_literals(self):
+        # The real construct that triggered this: a `STRINGIZE(...)` call and
+        # a bare macro, each adjacent to a string literal on at least one
+        # side, chained together.
+        result = self._prepared(
+            'std::string("Skia/" STRINGIZE(SK_MILESTONE) " " '
+            'SKIA_COMMIT_HASH);')
+        self.assertNotIn('STRINGIZE', result)
+        self.assertNotIn('SKIA_COMMIT_HASH', result)
+        for kept in ('"Skia/"', '" "'):
+            self.assertIn(kept, result)
+
+    def test_leaves_plain_string_concatenation_untouched(self):
+        # Two string literals with only whitespace between them is valid,
+        # unrelated C++ (adjacent string literal concatenation).
+        self.assertEqual(self._prepared('"foo" "bar"'), '"foo" "bar"')
+
+    def test_leaves_string_with_operator_untouched(self):
+        # An operator between the string and the identifier makes this
+        # ordinary, already-parseable C++; nothing to blank.
+        for src in ('"foo" + bar', '"foo" == bar', 'foo + "bar"'):
+            self.assertEqual(self._prepared(src), src)
+
+    def test_leaves_user_defined_literal_suffix_untouched(self):
+        # No whitespace: a real user-defined literal suffix, not this
+        # construct.
+        self.assertEqual(self._prepared('"foo"s'), '"foo"s')
+
+    def test_leaves_string_literal_prefix_untouched(self):
+        # No whitespace: a real encoding prefix, not this construct.
+        for src in ('u8"foo"', 'L"foo"', 'u"foo"', 'U"foo"'):
+            self.assertEqual(self._prepared(src), src)
+
+    def test_macro_after_string_handles_escaped_quote(self):
+        self._assert_blanks(r'std::string("a\"b" FOO);', 'FOO')
+
+    def test_leaves_encoded_prefix_adjacent_to_macro_untouched(self):
+        # `u8"foo"`/`L"foo"`/etc. are excluded from `_CXX_STRING_LIT`
+        # entirely (see its comment), so a macro next to one is left alone
+        # rather than risk misreading the prefixed form.
+        for src in ('std::string(u8"Skia/" FOO);', 'std::string(FOO L"x");'):
+            self.assertEqual(self._prepared(src), src)
+
+    def test_leaves_preprocessor_directive_with_string_untouched(self):
+        # `#define FOO "bar"` and `#include "foo.h"` have the same *shape*
+        # as the macro-adjacent-string construct (identifier/token then
+        # whitespace then a string literal), but they are directive syntax,
+        # not an expression -- the name/path must survive intact.
+        for src in ('#define FOO "bar"\n', '#include "foo.h"\n',
+                    '#define VERSION_STRING "v" MY_STRINGIZE(X)\n'):
+            self.assertEqual(self._prepared(src), src)
+
+    def test_directive_with_string_inside_conditional_still_protected(self):
+        # The conditional lines around it are blanked as usual, but the
+        # `#define` line's own content survives untouched.
+        src = '#if X\n#define FOO "bar"\n#endif\n'
+        result = self._prepared(src)
+        self.assertIn('#define FOO "bar"', result)
+        for directive in ('#if X', '#endif'):
+            self.assertNotIn(directive, result)
+
+    def test_leaves_raw_string_with_embedded_quote_untouched(self):
+        # A raw string's content may contain unescaped `"` characters
+        # (`some "quoted" text` below); naively pairing quotes would misread
+        # `"quoted"` as a standalone string literal sandwiched between two
+        # bare words, and blank them as if they were macros.
+        src = 'Log(R"foo(some "quoted" text)foo" BAR);\n'
+        self.assertEqual(self._prepared(src), src)
+
+    def test_leaves_raw_string_adjacent_to_macro_untouched(self):
+        # A raw string with no embedded quote is safe to reason about, but is
+        # still excluded wholesale (rather than only when it has embedded
+        # quotes) to keep the rule simple and uniformly safe.
+        for src in ('Log(R"(hello)" FOO);\n', 'Log(FOO R"(hello)");\n'):
+            self.assertEqual(self._prepared(src), src)
+
+    def test_raw_string_delimiter_must_match_on_both_sides(self):
+        # `)foo"` inside the content of a `R"bar(...)bar"` literal must not
+        # be mistaken for that literal's own close.
+        src = 'Log(R"bar(text with )foo" inside)bar" BAZ);\n'
+        self.assertEqual(self._prepared(src), src)
+
+    # -- Views METADATA_HEADER / BEGIN_METADATA / END_METADATA ------------
+    #
+    # Both are bare macro calls with no trailing `;`, sitting where only a
+    # declaration is valid (a class body, or namespace scope right after the
+    # class). Left alone, tree-sitter turns the call -- and, for
+    # BEGIN_METADATA, everything up to end of file -- into one ERROR node.
+
+    _METADATA_OPTS = plaster.BlankForParseOptions(metadata_header_macros=True)
+
+    def test_blanks_metadata_header(self):
+        result = self._prepared(
+            'class Foo {\n  METADATA_HEADER(Foo, views::View)\n};\n',
+            self._METADATA_OPTS)
+        self.assertNotIn('METADATA_HEADER', result)
+        for kept in ('Foo', 'views::View'):
+            self.assertIn(kept, result)
+
+    def test_blanks_metadata_header_single_arg(self):
+        result = self._prepared('class Foo {\n  METADATA_HEADER(Foo)\n};\n',
+                                self._METADATA_OPTS)
+        self.assertNotIn('METADATA_HEADER', result)
+        self.assertIn('Foo', result)
+
+    def test_blanks_begin_metadata_block(self):
+        result = self._prepared(
+            'BEGIN_METADATA(Foo, views::View)\nEND_METADATA\n',
+            self._METADATA_OPTS)
+        self.assertNotIn('BEGIN_METADATA', result)
+        self.assertNotIn('END_METADATA', result)
+        for kept in ('Foo', 'views::View'):
+            self.assertIn(kept, result)
+
+    def test_blanks_begin_metadata_single_arg(self):
+        result = self._prepared('BEGIN_METADATA(Foo)\nEND_METADATA\n',
+                                self._METADATA_OPTS)
+        self.assertNotIn('BEGIN_METADATA', result)
+        self.assertNotIn('END_METADATA', result)
+        self.assertIn('Foo', result)
+
+    def test_blanks_property_macros_between_begin_and_end_metadata(self):
+        # Property-registration calls in between are blanked wholesale --
+        # nothing else in plaster ever needs to match them.
+        result = self._prepared(
+            'BEGIN_METADATA(Foo, views::View)\n'
+            'ADD_PROPERTY_METADATA(int, SomeProp)\n'
+            'END_METADATA\n', self._METADATA_OPTS)
+        self.assertNotIn('ADD_PROPERTY_METADATA', result)
+        self.assertNotIn('SomeProp', result)
+
+    def test_metadata_header_name_and_base_keep_their_byte_offsets(self):
+        # The whole point of this pass: a later op (e.g. rename_class) matches
+        # against the blanked copy but edits the real source at the same byte
+        # offsets, so `Foo`/`views::View` must land at the same position in
+        # both, not merely leave the overall text the same length.
+        src = 'class C {\n  METADATA_HEADER(Foo, views::View)\n};\n'
+        result = self._prepared(src, self._METADATA_OPTS)
+        self.assertEqual(result.index('Foo'), src.index('Foo'))
+        self.assertEqual(result.index('views::View'), src.index('views::View'))
+
+    def test_metadata_header_macros_off_by_default(self):
+        src = 'class Foo {\n  METADATA_HEADER(Foo, views::View)\n};\n'
+        self.assertEqual(self._prepared(src, plaster.BlankForParseOptions()),
+                         src)
+
+    def test_metadata_header_macros_not_enabled_by_the_other_two_flags(self):
+        src = 'BEGIN_METADATA(Foo, views::View)\nEND_METADATA\n'
+        result = self._prepared(
+            src,
+            plaster.BlankForParseOptions(macros=True,
+                                         string_adjacent_macros=True))
+        self.assertEqual(result, src)
+
+    def test_metadata_header_macros_does_not_enable_the_other_two_passes(self):
+        src = ('class MODULES_EXPORT Foo final {\n'
+               '#if X\n'
+               '  void Bar() { Log("v" STRINGIZE(V)); }\n'
+               '#endif\n'
+               '};\n')
+        self.assertEqual(self._prepared(src, self._METADATA_OPTS), src)
+
+    # -- the two passes are independently gated ----------------------------
+    #
+    # `blank_macros_for_ast_parsing` and
+    # `blank_string_adjacent_macros_for_ast_parsing` are separate opt-ins:
+    # each pass only runs when its own flag is set, regardless of the other.
+
+    def test_string_adjacent_macros_alone_does_not_blank_export_macro(self):
+        src = 'class MODULES_EXPORT Foo final {};'
+        result = self._prepared(
+            src,
+            plaster.BlankForParseOptions(macros=False,
+                                         string_adjacent_macros=True))
+        self.assertEqual(result, src)
+
+    def test_string_adjacent_macros_alone_does_not_blank_conditional(self):
+        src = 'a\n#if X\nb\n#endif\n'
+        result = self._prepared(
+            src,
+            plaster.BlankForParseOptions(macros=False,
+                                         string_adjacent_macros=True))
+        self.assertEqual(result, src)
+
+    def test_macros_alone_does_not_blank_macro_after_string_literal(self):
+        src = 'std::string("Skia/" STRINGIZE(SK_MILESTONE));'
+        result = self._prepared(
+            src,
+            plaster.BlankForParseOptions(macros=True,
+                                         string_adjacent_macros=False))
+        self.assertEqual(result, src)
+
+    def test_neither_flag_blanks_anything(self):
+        src = ('class MODULES_EXPORT Foo final {\n'
+               '#if X\n'
+               '  void Bar() { Log("v" STRINGIZE(V)); }\n'
+               '#endif\n'
+               '};\n')
+        self.assertEqual(self._prepared(src, plaster.BlankForParseOptions()),
+                         src)
+
+    def test_both_flags_blank_both_constructs(self):
+        result = self._prepared(
+            'class MODULES_EXPORT Foo final {\n'
+            '  void Bar() { Log("v" STRINGIZE(V)); }\n'
+            '};\n',
+            plaster.BlankForParseOptions(macros=True,
+                                         string_adjacent_macros=True))
+        self.assertNotIn('MODULES_EXPORT', result)
+        self.assertNotIn('STRINGIZE', result)
+
+    # -- construction / identity -------------------------------------------
+
+    def test_regexes_are_shared_across_instances(self):
+        # Class-level: compiled once, not per `CxxMacrosEraser()` call.
+        a = plaster.CxxMacrosEraser(plaster.BlankForParseOptions())
+        b = plaster.CxxMacrosEraser(plaster.BlankForParseOptions())
+        self.assertIs(a._EXPORT_MACRO_RE, b._EXPORT_MACRO_RE)
+        self.assertIs(a._CXX_MACRO_AFTER_STRING_RE,
+                      b._CXX_MACRO_AFTER_STRING_RE)
+
+    def test_two_instances_do_not_share_options(self):
+        macros_only = plaster.CxxMacrosEraser(
+            plaster.BlankForParseOptions(macros=True))
+        string_adjacent_only = plaster.CxxMacrosEraser(
+            plaster.BlankForParseOptions(string_adjacent_macros=True))
+        src = 'class MODULES_EXPORT C { void F() { Log("v" FOO); } };'
+        self.assertNotIn('MODULES_EXPORT', macros_only.erase(src))
+        self.assertIn('FOO', macros_only.erase(src))
+        self.assertIn('MODULES_EXPORT', string_adjacent_only.erase(src))
+        self.assertNotIn('FOO', string_adjacent_only.erase(src))
+
+    def test_erase_is_repeatable_on_the_same_instance(self):
+        eraser = plaster.CxxMacrosEraser(
+            plaster.BlankForParseOptions(macros=True))
+        src = 'class MODULES_EXPORT C {};'
+        self.assertEqual(eraser.erase(src), eraser.erase(src))
+
+    def test_opaque_span_is_frozen(self):
+        span = plaster.CxxMacrosEraser._OpaqueSpan(0, 3, 'abc')
+        self.assertEqual((span.start, span.end, span.text), (0, 3, 'abc'))
+        with self.assertRaises(dataclasses.FrozenInstanceError):
+            span.start = 1
 
 
 class RunAstGrepTest(unittest.TestCase):
@@ -4761,6 +5887,800 @@ class PatchinfoTest(unittest.TestCase):
         self.assertIsNotNone(original)
         roundtripped = plaster.Patchinfo.from_json(original.to_json())
         self.assertEqual(original, roundtripped)
+
+
+class RegexMacroSchemaTest(unittest.TestCase):
+    """Schema and cross-reference validation for `regex_macro` ops."""
+
+    def setUp(self):
+        # load() memoises a process-wide instance; clear it so tests that
+        # exercise the singleton start from a clean slate.
+        plaster.RewritersEval._instance = None
+        self.addCleanup(setattr, plaster.RewritersEval, '_instance', None)
+
+    @staticmethod
+    def _input(name: str, description: str = 'doc') -> dict:
+        """A documented `inputs` entry: `{name, description}`."""
+        return {'name': name, 'description': description}
+
+    @classmethod
+    def _valid_spec(cls) -> dict:
+        """A minimal, schema-valid `regex_macro` spec as a Python dict."""
+        return {
+            'regex_macro': {
+                'cxx.rename_constant': {
+                    'description': 'Renames a constant.',
+                    'inputs': [
+                        cls._input('old_name'),
+                        cls._input('new_name'),
+                    ],
+                    're_pattern': r'\b{old_name}\b',
+                    'replace': '{new_name}',
+                    're_flags': ['MULTILINE'],
+                },
+            },
+        }
+
+    def _eval_valid(self) -> plaster.RewritersEval:
+        return plaster.RewritersEval(repr(self._valid_spec()))
+
+    def _assert_invalid(self, mutate, expected_substr=None):
+        """Apply `mutate` to a valid spec and assert it fails validation."""
+        spec = self._valid_spec()
+        mutate(spec)
+        with self.assertRaises(plaster.RewritersSchemaError) as cm:
+            plaster.RewritersEval(repr(spec))
+        if expected_substr is not None:
+            self.assertIn(expected_substr, str(cm.exception))
+
+    # -- access ---------------------------------------------------------
+
+    def test_valid_spec_round_trips(self):
+        rewriters = self._eval_valid()
+        self.assertEqual(list(rewriters.regex_macros), ['cxx.rename_constant'])
+        self.assertEqual(
+            rewriters.regex_macro('cxx.rename_constant')['inputs'],
+            [self._input('old_name'),
+             self._input('new_name')])
+        self.assertEqual(
+            rewriters.regex_macro('cxx.rename_constant')['description'],
+            'Renames a constant.')
+
+    def test_unknown_op_access_raises(self):
+        rewriters = self._eval_valid()
+        with self.assertRaises(plaster.RewritersSchemaError):
+            rewriters.regex_macro('cxx.nope')
+
+    def test_exposed_mapping_is_read_only(self):
+        rewriters = self._eval_valid()
+        with self.assertRaises(TypeError):
+            rewriters.regex_macros['x'] = {}
+
+    def test_present_but_empty_is_valid(self):
+        rewriters = plaster.RewritersEval("{'regex_macro': {}}")
+        self.assertEqual(dict(rewriters.regex_macros), {})
+
+    def test_absent_is_valid(self):
+        # `regex_macro` is an optional top-level key, like `ast.matcher` and
+        # `ast.rewriter`.
+        rewriters = plaster.RewritersEval('{}')
+        self.assertEqual(dict(rewriters.regex_macros), {})
+
+    # -- op id ------------------------------------------------------------
+
+    def test_op_id_unknown_prefix_rejected(self):
+
+        def mutate(s):
+            s['regex_macro']['py.rename_constant'] = s['regex_macro'].pop(
+                'cxx.rename_constant')
+
+        self._assert_invalid(mutate, 'Wrong keys')
+
+    # -- field schema -------------------------------------------------------
+
+    def test_missing_description_key_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].pop(
+                'description'), 'Missing keys')
+
+    def test_missing_inputs_key_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].pop('inputs'),
+            'Missing keys')
+
+    def test_missing_replace_key_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].pop('replace'),
+            'Missing keys')
+
+    def test_unknown_field_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].update(
+                {'extra': 'x'}), 'Wrong keys')
+
+    def test_inputs_must_be_a_list(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].__setitem__(
+                'inputs', 'old_name'), "should be instance of 'list'")
+
+    def test_input_entry_must_be_a_mapping(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].__setitem__(
+                'inputs', ['old_name', self._input('new_name')]))
+
+    def test_input_entry_missing_description_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].__setitem__(
+                'inputs', [{
+                    'name': 'old_name'
+                }, self._input('new_name')]), 'Missing keys')
+
+    def test_input_entry_unknown_field_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].__setitem__(
+                'inputs', [{
+                    **self._input('old_name'), 'extra': 'x'
+                },
+                           self._input('new_name')]), 'Wrong keys')
+
+    def test_re_flags_must_be_list_of_strings(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].__setitem__(
+                're_flags', 'MULTILINE'), "should be instance of 'list'")
+
+    # -- pattern / re_pattern mutual exclusivity -----------------------------
+
+    def test_both_pattern_and_re_pattern_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].update(
+                {'pattern': '{old_name}'}), 'exactly one of')
+
+    def test_neither_pattern_nor_re_pattern_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].pop(
+                're_pattern'), 'exactly one of')
+
+    def test_pattern_only_is_valid(self):
+        spec = self._valid_spec()
+        macro = spec['regex_macro']['cxx.rename_constant']
+        del macro['re_pattern']
+        macro['pattern'] = '{old_name}'
+        rewriters = plaster.RewritersEval(repr(spec))
+        self.assertEqual(
+            rewriters.regex_macro('cxx.rename_constant')['pattern'],
+            '{old_name}')
+
+    # -- re_flags validity ----------------------------------------------
+
+    def test_invalid_re_flags_entry_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].__setitem__(
+                're_flags', ['NOT_A_FLAG']), 'invalid')
+
+    # -- inputs <-> template cross-reference ---------------------------------
+
+    def test_undeclared_input_rejected(self):
+        # `replace` uses `{new_name}`, but it is dropped from `inputs`.
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant'].__setitem__(
+                'inputs', [self._input('old_name')]), 'undeclared input')
+
+    def test_unused_input_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant']['inputs'].append(
+                self._input('unused')), 'never used')
+
+    def test_duplicate_input_name_rejected(self):
+        self._assert_invalid(
+            lambda s: s['regex_macro']['cxx.rename_constant']['inputs'].append(
+                self._input('old_name')), 'duplicate')
+
+    # -- the real on-disk spec ------------------------------------------
+
+    def test_real_rewriters_file_exposes_toggle_macro(self):
+        rewriters = plaster.RewritersEval.load()
+        self.assertIn('cxx.set_feature_flag_default_state',
+                      rewriters.regex_macros)
+        spec = rewriters.regex_macro('cxx.set_feature_flag_default_state')
+        self.assertEqual([entry['name'] for entry in spec['inputs']],
+                         ['feature_name', 'value'])
+
+
+class RegexMacroEngineTest(unittest.TestCase):
+    """Behavioural tests for `RegexMacroEngine.run`, against synthetic specs."""
+
+    @staticmethod
+    def _rewriters(macro: dict) -> plaster.RewritersEval:
+        """Build a `RewritersEval` from a macro body given as `name: str`
+        inputs; fills in the `description`/`{name, description}` schema
+        boilerplate the individual test bodies below do not care about.
+        """
+        macro = dict(macro)
+        macro.setdefault('description', 'A regex macro used for testing.')
+        macro['inputs'] = [{
+            'name': name,
+            'description': 'doc'
+        } for name in macro['inputs']]
+        return plaster.RewritersEval(
+            repr({'regex_macro': {
+                'cxx.rename_constant': macro
+            }}))
+
+    def test_re_pattern_and_replace_are_rendered_with_inputs(self):
+        rewriters = self._rewriters({
+            'inputs': ['old_name', 'new_name'],
+            're_pattern': r'\b{old_name}\b',
+            'replace': '{new_name}',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'int kOld = kOld + 1;')
+        matches = engine.run('cxx.rename_constant', {
+            'old_name': 'kOld',
+            'new_name': 'kNew',
+        })
+        self.assertEqual(matches, 2)
+        self.assertEqual(engine.content, 'int kNew = kNew + 1;')
+
+    def test_pattern_is_escaped_and_rendered_with_inputs(self):
+        # `pattern` is a literal: the rendered text is escaped for regex, so a
+        # regex-meaningful input character like '.' matches only itself.
+        rewriters = self._rewriters({
+            'inputs': ['old_name', 'new_name'],
+            'pattern': '{old_name}',
+            'replace': '{new_name}',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'a.b + axb')
+        matches = engine.run('cxx.rename_constant', {
+            'old_name': 'a.b',
+            'new_name': 'X',
+        })
+        self.assertEqual(matches, 1)
+        self.assertEqual(engine.content, 'X + axb')
+
+    def test_re_flags_are_honoured(self):
+        rewriters = self._rewriters({
+            'inputs': ['name'],
+            're_pattern': '^{name}$',
+            're_flags': ['MULTILINE'],
+            'replace': 'X',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'foo\nfoo\n')
+        matches = engine.run('cxx.rename_constant', {'name': 'foo'})
+        self.assertEqual(matches, 2)
+        self.assertEqual(engine.content, 'X\nX\n')
+
+    def test_backreferences_in_replace_are_preserved(self):
+        # `.format()` only touches `{}`; a `\1` backreference must reach
+        # `re.subn` untouched.
+        rewriters = self._rewriters({
+            'inputs': ['name'],
+            're_pattern': '({name})',
+            'replace': r'[\1]',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'foo bar')
+        matches = engine.run('cxx.rename_constant', {'name': 'foo'})
+        self.assertEqual(matches, 1)
+        self.assertEqual(engine.content, '[foo] bar')
+
+    def test_missing_input_raises(self):
+        rewriters = self._rewriters({
+            'inputs': ['old_name', 'new_name'],
+            're_pattern': '{old_name}',
+            'replace': '{new_name}',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'kOld')
+        with self.assertRaises(ValueError) as cm:
+            engine.run('cxx.rename_constant', {'old_name': 'kOld'})
+        self.assertIn('missing input(s): new_name', str(cm.exception))
+
+    def test_unknown_input_raises(self):
+        rewriters = self._rewriters({
+            'inputs': ['name'],
+            're_pattern': '{name}',
+            'replace': 'x',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'kOld')
+        with self.assertRaises(ValueError) as cm:
+            engine.run('cxx.rename_constant', {'name': 'kOld', 'extra': '1'})
+        self.assertIn('unknown input(s): extra', str(cm.exception))
+
+    def test_unknown_op_raises(self):
+        rewriters = self._rewriters({
+            'inputs': ['name'],
+            're_pattern': '{name}',
+            'replace': 'x',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'kOld')
+        with self.assertRaises(plaster.RewritersSchemaError):
+            engine.run('cxx.nope', {'name': 'kOld'})
+
+    def test_no_match_returns_zero_and_leaves_content_untouched(self):
+        rewriters = self._rewriters({
+            'inputs': ['name'],
+            're_pattern': '{name}',
+            'replace': 'x',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'unrelated text')
+        matches = engine.run('cxx.rename_constant', {'name': 'kOld'})
+        self.assertEqual(matches, 0)
+        self.assertEqual(engine.content, 'unrelated text')
+
+    def test_successive_runs_accumulate_edits(self):
+        rewriters = self._rewriters({
+            'inputs': ['old_name', 'new_name'],
+            're_pattern': r'\b{old_name}\b',
+            'replace': '{new_name}',
+        })
+        engine = plaster.RegexMacroEngine(rewriters, 'kOne kTwo')
+        engine.run('cxx.rename_constant', {
+            'old_name': 'kOne',
+            'new_name': 'kA'
+        })
+        engine.run('cxx.rename_constant', {
+            'old_name': 'kTwo',
+            'new_name': 'kB'
+        })
+        self.assertEqual(engine.content, 'kA kB')
+
+
+class OverrideFeatureDefaultStateTest(unittest.TestCase):
+    """Exercises the shipped `cxx.set_feature_flag_default_state` macro.
+
+    The macro replaces a `BASE_FEATURE` call's whole last argument -- from its
+    last top-level comma to the call's own closing `);` -- rather than trying
+    to recognise a particular spelling of the state itself. These tests cover
+    every argument shape the macro is meant to handle, plus the corner cases
+    that shape implies: telling one call's `);` apart from a nested one's, and
+    not running past this call into the next.
+    """
+
+    _OP_ID = 'cxx.set_feature_flag_default_state'
+
+    def setUp(self):
+        self.rewriters = plaster.RewritersEval.load()
+
+    def _run(self, content: str, **inputs) -> tuple[int, str]:
+        engine = plaster.RegexMacroEngine(self.rewriters, content)
+        matches = engine.run(self._OP_ID, inputs)
+        return matches, engine.content
+
+    # -- legacy three-argument form: BASE_FEATURE(kFoo, "Foo", state) -------
+
+    def test_three_argument_flips_disabled_to_enabled(self):
+        source = ('BASE_FEATURE(kIPHDiscardRingFeature,\n'
+                  '             "IPH_DiscardRing",\n'
+                  '             base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kIPHDiscardRingFeature',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(content, (
+            '// kIPHDiscardRingFeature feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kIPHDiscardRingFeature,\n'
+            '             "IPH_DiscardRing",\n'
+            '             base::FEATURE_ENABLED_BY_DEFAULT);\n'))
+
+    def test_three_argument_flips_enabled_to_disabled(self):
+        source = ('BASE_FEATURE(kFoo,\n'
+                  '             "Foo",\n'
+                  '             base::FEATURE_ENABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFoo',
+                                     value='base::FEATURE_DISABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kFoo feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFoo,\n'
+             '             "Foo",\n'
+             '             base::FEATURE_DISABLED_BY_DEFAULT);\n'))
+
+    def test_three_argument_single_line(self):
+        source = 'BASE_FEATURE(kFoo, "Foo", base::FEATURE_DISABLED_BY_DEFAULT);'
+        matches, content = self._run(source,
+                                     feature_name='kFoo',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content, '// kFoo feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFoo, "Foo", base::FEATURE_ENABLED_BY_DEFAULT);')
+
+    # -- modern two-argument form: BASE_FEATURE(kFoo, state) -----------------
+    # The display-name string was dropped entirely (https://crbug.com/1362858).
+
+    def test_two_argument_form_multiline(self):
+        source = ('BASE_FEATURE(kMyFeature,\n'
+                  '             base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kMyFeature',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kMyFeature feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kMyFeature,\n'
+             '             base::FEATURE_ENABLED_BY_DEFAULT);\n'))
+
+    def test_two_argument_form_single_line(self):
+        source = 'BASE_FEATURE(kMyFeature, base::FEATURE_DISABLED_BY_DEFAULT);'
+        matches, content = self._run(source,
+                                     feature_name='kMyFeature',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            '// kMyFeature feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kMyFeature, base::FEATURE_ENABLED_BY_DEFAULT);')
+
+    # -- preprocessor-conditional state: per-platform default states are
+    # spelled out as an #if/#else/#endif rather than a single token. The whole
+    # thing is the "last argument" here, and gets replaced wholesale, since
+    # the macro overrides the state unconditionally.
+
+    def test_preprocessor_conditional_state_is_replaced_wholesale(self):
+        source = ('BASE_FEATURE(kStackScanMaxFramePointerToStackEndGap,\n'
+                  '#if BUILDFLAG(IS_CHROMEOS)\n'
+                  '             FEATURE_ENABLED_BY_DEFAULT\n'
+                  '#else\n'
+                  '             FEATURE_DISABLED_BY_DEFAULT\n'
+                  '#endif\n'
+                  ');\n')
+        matches, content = self._run(
+            source,
+            feature_name='kStackScanMaxFramePointerToStackEndGap',
+            value='base::FEATURE_DISABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        # The whole conditional is gone -- not merely one branch of it.
+        self.assertNotIn('#if', content)
+        self.assertNotIn('#else', content)
+        self.assertNotIn('#endif', content)
+        self.assertNotIn('BUILDFLAG', content)
+        self.assertNotIn('FEATURE_ENABLED_BY_DEFAULT', content)
+        self.assertIn('BASE_FEATURE(kStackScanMaxFramePointerToStackEndGap,',
+                      content)
+        self.assertIn(
+            '// kStackScanMaxFramePointerToStackEndGap feature state is '
+            'enforced via plaster rewrite.', content)
+        self.assertTrue(
+            content.rstrip().endswith('base::FEATURE_DISABLED_BY_DEFAULT);'))
+
+    def test_preprocessor_conditional_does_not_confuse_nested_parens(self):
+        # `BUILDFLAG(IS_CHROMEOS)` has its own closing `)`, immediately after
+        # the feature name's comma; the match must not stop there instead of
+        # at the call's real, statement-ending `);`.
+        source = ('BASE_FEATURE(kFoo,\n'
+                  '#if BUILDFLAG(IS_CHROMEOS)\n'
+                  '             FEATURE_ENABLED_BY_DEFAULT\n'
+                  '#else\n'
+                  '             FEATURE_DISABLED_BY_DEFAULT\n'
+                  '#endif\n'
+                  ');\n')
+        matches, content = self._run(source,
+                                     feature_name='kFoo',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content, '// kFoo feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFoo,\n'
+            'base::FEATURE_ENABLED_BY_DEFAULT);\n')
+
+    # -- namespace qualification: the state is matched wholesale, so any
+    # spelling works without special-casing.
+
+    def test_unqualified_state_inside_base_namespace(self):
+        source = 'BASE_FEATURE(kMyFeature, FEATURE_DISABLED_BY_DEFAULT);'
+        matches, content = self._run(source,
+                                     feature_name='kMyFeature',
+                                     value='FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            '// kMyFeature feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kMyFeature, FEATURE_ENABLED_BY_DEFAULT);')
+
+    def test_fully_qualified_state(self):
+        source = 'BASE_FEATURE(kMyFeature, ::base::FEATURE_DISABLED_BY_DEFAULT);'
+        matches, content = self._run(
+            source,
+            feature_name='kMyFeature',
+            value='::base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            '// kMyFeature feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kMyFeature, ::base::FEATURE_ENABLED_BY_DEFAULT);')
+
+    def test_closing_parenthesis_is_preserved(self):
+        # Regression check: the closing `);` sits in its own capture group,
+        # so a careless replace template could swallow it.
+        source = 'BASE_FEATURE(kMyFeature, base::FEATURE_DISABLED_BY_DEFAULT);'
+        _, content = self._run(source,
+                               feature_name='kMyFeature',
+                               value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertTrue(content.rstrip().endswith(');'))
+
+    # -- `value` introducing a brand-new conditional: `value` is only ever
+    # spliced into `replace`, never into the compiled `re_pattern`, so a
+    # `BUILDFLAG(IS_ANDROID)` inside it can no longer shift the pattern's own
+    # capture-group numbering. The inserted comment names `feature_name`
+    # rather than `value` for exactly this case: `feature_name` is always a
+    # single identifier, so the comment stays a single, short line above the
+    # `BASE_FEATURE` call regardless of how many lines a multi-line `value`
+    # like this one spans below it.
+
+    def test_new_conditional_value_with_parens_keeps_the_closing_paren(self):
+        source = 'BASE_FEATURE(kFoo, base::FEATURE_ENABLED_BY_DEFAULT);\n'
+        value = ('\n'
+                 '#if BUILDFLAG(IS_ANDROID)\n'
+                 '             base::FEATURE_ENABLED_BY_DEFAULT\n'
+                 '#else\n'
+                 '             base::FEATURE_DISABLED_BY_DEFAULT\n'
+                 '#endif')
+        matches, content = self._run(source, feature_name='kFoo', value=value)
+        self.assertEqual(matches, 1)
+        self.assertIn('BUILDFLAG(IS_ANDROID)', content)
+        self.assertTrue(content.rstrip('\n').endswith('#endif);'))
+        self.assertEqual(
+            content, '// kFoo feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFoo, \n'
+            '#if BUILDFLAG(IS_ANDROID)\n'
+            '             base::FEATURE_ENABLED_BY_DEFAULT\n'
+            '#else\n'
+            '             base::FEATURE_DISABLED_BY_DEFAULT\n'
+            '#endif);\n')
+
+    # -- multiple features in one file: every pairing of "fewer commas"
+    # (two-argument/conditional) and "more commas" (three-argument) forms,
+    # targeting either one, must stay within its own call. A two-argument
+    # feature followed by a three-argument one is the case that actually
+    # regressed: greedily matching "up to the last comma" without also
+    # forbidding `;` let the match run straight past the two-argument call's
+    # own `);` and land on the three-argument call's instead.
+
+    def test_two_then_three_argument_targeting_the_first(self):
+        source = (
+            'BASE_FEATURE(kFeatureA, base::FEATURE_DISABLED_BY_DEFAULT);\n'
+            '\n'
+            'BASE_FEATURE(kFeatureB,\n'
+            '             "FeatureB",\n'
+            '             base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFeatureA',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kFeatureA feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFeatureA, base::FEATURE_ENABLED_BY_DEFAULT);\n'
+             '\n'
+             'BASE_FEATURE(kFeatureB,\n'
+             '             "FeatureB",\n'
+             '             base::FEATURE_DISABLED_BY_DEFAULT);\n'))
+
+    def test_two_then_three_argument_targeting_the_second(self):
+        source = (
+            'BASE_FEATURE(kFeatureA, base::FEATURE_DISABLED_BY_DEFAULT);\n'
+            '\n'
+            'BASE_FEATURE(kFeatureB,\n'
+            '             "FeatureB",\n'
+            '             base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFeatureB',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('BASE_FEATURE(kFeatureA, base::FEATURE_DISABLED_BY_DEFAULT);\n'
+             '\n'
+             '// kFeatureB feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFeatureB,\n'
+             '             "FeatureB",\n'
+             '             base::FEATURE_ENABLED_BY_DEFAULT);\n'))
+
+    def test_three_then_two_argument_targeting_the_first(self):
+        source = (
+            'BASE_FEATURE(kFeatureA,\n'
+            '             "FeatureA",\n'
+            '             base::FEATURE_DISABLED_BY_DEFAULT);\n'
+            '\n'
+            'BASE_FEATURE(kFeatureB, base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFeatureA',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kFeatureA feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFeatureA,\n'
+             '             "FeatureA",\n'
+             '             base::FEATURE_ENABLED_BY_DEFAULT);\n'
+             '\n'
+             'BASE_FEATURE(kFeatureB, base::FEATURE_DISABLED_BY_DEFAULT);\n'))
+
+    def test_three_then_two_argument_targeting_the_second(self):
+        source = (
+            'BASE_FEATURE(kFeatureA,\n'
+            '             "FeatureA",\n'
+            '             base::FEATURE_DISABLED_BY_DEFAULT);\n'
+            '\n'
+            'BASE_FEATURE(kFeatureB, base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFeatureB',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('BASE_FEATURE(kFeatureA,\n'
+             '             "FeatureA",\n'
+             '             base::FEATURE_DISABLED_BY_DEFAULT);\n'
+             '\n'
+             '// kFeatureB feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFeatureB, base::FEATURE_ENABLED_BY_DEFAULT);\n'))
+
+    def test_only_the_named_feature_is_overridden_when_both_are_three_argument(
+            self):
+        source = ('BASE_FEATURE(kFeatureA,\n'
+                  '             "FeatureA",\n'
+                  '             base::FEATURE_DISABLED_BY_DEFAULT);\n'
+                  '\n'
+                  'BASE_FEATURE(kFeatureB,\n'
+                  '             "FeatureB",\n'
+                  '             base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFeatureB',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertIn(
+            'kFeatureA,\n'
+            '             "FeatureA",\n'
+            '             base::FEATURE_DISABLED_BY_DEFAULT', content)
+        self.assertIn(
+            '// kFeatureB feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFeatureB,\n'
+            '             "FeatureB",\n'
+            '             base::FEATURE_ENABLED_BY_DEFAULT', content)
+
+    # -- always-matches cases -------------------------------------------------
+    #
+    # Setting a feature to the value it already has still finds a match
+    # (`count` of 1, never 0) and still rewrites the text, inserting the
+    # `// <feature_name> feature state is enforced via plaster rewrite.`
+    # comment: `count` answers "is this override in force", not "did the
+    # text change shape", so the substitution can never silently stop
+    # applying just because upstream's own default has converged on the
+    # value Brave wants.
+
+    def test_still_matches_when_two_argument_form_already_has_the_value(self):
+        source = 'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);'
+        matches, content = self._run(source,
+                                     feature_name='kFoo',
+                                     value='base::FEATURE_DISABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content, '// kFoo feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);')
+
+    def test_still_matches_when_three_argument_form_already_has_the_value(
+            self):
+        source = ('BASE_FEATURE(kFoo,\n'
+                  '             "Foo",\n'
+                  '             base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFoo',
+                                     value='base::FEATURE_DISABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kFoo feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFoo,\n'
+             '             "Foo",\n'
+             '             base::FEATURE_DISABLED_BY_DEFAULT);\n'))
+
+    def test_still_matches_when_the_value_actually_differs(self):
+        # Sanity check alongside the always-matches cases above: a genuinely
+        # different value must still be found and applied.
+        source = ('BASE_FEATURE(kFoo,\n'
+                  '             "Foo",\n'
+                  '             base::FEATURE_DISABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFoo',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kFoo feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFoo,\n'
+             '             "Foo",\n'
+             '             base::FEATURE_ENABLED_BY_DEFAULT);\n'))
+
+    def test_match_is_specific_to_the_named_feature(self):
+        # The other feature in the file already holds the value being set on
+        # kFeatureA; that's irrelevant to kFeatureA's own match, and kFeatureB
+        # is untouched since it isn't the one named.
+        source = (
+            'BASE_FEATURE(kFeatureA, base::FEATURE_DISABLED_BY_DEFAULT);\n'
+            '\n'
+            'BASE_FEATURE(kFeatureB, base::FEATURE_ENABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFeatureA',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kFeatureA feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFeatureA, base::FEATURE_ENABLED_BY_DEFAULT);\n'
+             '\n'
+             'BASE_FEATURE(kFeatureB, base::FEATURE_ENABLED_BY_DEFAULT);\n'))
+
+    def test_already_set_match_does_not_leak_into_a_later_call(self):
+        # kFeatureA already has the value being set -- and now matches
+        # because of that, not despite it -- while kFeatureB, later in the
+        # file, isn't targeted at all. kFeatureA's match must not cause the
+        # engine to drift onto kFeatureB instead.
+        source = (
+            'BASE_FEATURE(kFeatureA, base::FEATURE_DISABLED_BY_DEFAULT);\n'
+            '\n'
+            'BASE_FEATURE(kFeatureB,\n'
+            '             "FeatureB",\n'
+            '             base::FEATURE_ENABLED_BY_DEFAULT);\n')
+        matches, content = self._run(source,
+                                     feature_name='kFeatureA',
+                                     value='base::FEATURE_DISABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content,
+            ('// kFeatureA feature state is enforced via plaster rewrite.\n'
+             'BASE_FEATURE(kFeatureA, base::FEATURE_DISABLED_BY_DEFAULT);\n'
+             '\n'
+             'BASE_FEATURE(kFeatureB,\n'
+             '             "FeatureB",\n'
+             '             base::FEATURE_ENABLED_BY_DEFAULT);\n'))
+
+    def test_preprocessor_conditional_state_is_replaced_by_a_matching_branch(
+            self):
+        # A conditional last argument is never a bare token, so it can never
+        # equal `value` outright -- but every match rewrites regardless, so
+        # setting either branch's own value still replaces the whole
+        # conditional wholesale.
+        source = ('BASE_FEATURE(kFoo,\n'
+                  '#if BUILDFLAG(IS_CHROMEOS)\n'
+                  '             FEATURE_ENABLED_BY_DEFAULT\n'
+                  '#else\n'
+                  '             FEATURE_DISABLED_BY_DEFAULT\n'
+                  '#endif\n'
+                  ');\n')
+        matches, content = self._run(source,
+                                     feature_name='kFoo',
+                                     value='FEATURE_DISABLED_BY_DEFAULT')
+        self.assertEqual(matches, 1)
+        self.assertEqual(
+            content, '// kFoo feature state is enforced via plaster rewrite.\n'
+            'BASE_FEATURE(kFoo,\n'
+            'FEATURE_DISABLED_BY_DEFAULT);\n')
+
+    def test_no_match_for_a_different_feature_name(self):
+        source = 'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);'
+        matches, content = self._run(source,
+                                     feature_name='kOther',
+                                     value='base::FEATURE_ENABLED_BY_DEFAULT')
+        self.assertEqual(matches, 0)
+        self.assertEqual(content, source)
+
+    # -- input validation -----------------------------------------------
+
+    def test_missing_inputs_raise(self):
+        engine = plaster.RegexMacroEngine(self.rewriters, 'irrelevant')
+        with self.assertRaises(ValueError):
+            engine.run(self._OP_ID, {'feature_name': 'kFoo'})
+
+    def test_unknown_input_raises(self):
+        engine = plaster.RegexMacroEngine(self.rewriters, 'irrelevant')
+        with self.assertRaises(ValueError):
+            engine.run(
+                self._OP_ID, {
+                    'feature_name': 'kFoo',
+                    'value': 'base::FEATURE_ENABLED_BY_DEFAULT',
+                    'extra': 'x',
+                })
 
 
 if __name__ == '__main__':

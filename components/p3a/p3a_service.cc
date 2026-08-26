@@ -93,8 +93,8 @@ P3AService::~P3AService() = default;
 
 void P3AService::RegisterPrefs(PrefRegistrySimple* registry, bool first_run) {
   MessageManager::RegisterPrefs(registry);
-  // growser: P3A-аналитика выключена по умолчанию (#17) — не отправляем данные
-  // и не показываем инфобар. Полное удаление функционала — backlog #21.
+  // growser: P3A analytics is off by default (#17) - nothing is sent and no
+  // infobar is shown. Removing the feature outright is #21.
   registry->RegisterBooleanPref(kP3AEnabled, false);
   // New users are shown the P3A notice via the welcome page.
   registry->RegisterBooleanPref(kP3ANoticeAcknowledged, first_run);
@@ -112,6 +112,11 @@ void P3AService::InitCallback(std::string_view histogram_name) {
 }
 
 void P3AService::InitCallbacks() {
+  // growser: P3A is functionally removed (#21) - telemetry is zero. No static
+  // histogram observers are registered, so nothing is collected. The service
+  // object stays (callers hold a valid pointer) and the method is a no-op.
+  // The body is wrapped in #if 0 rather than left unreachable.
+#if 0
   for (const auto& [histogram_name, _] : kCollectedTypicalHistograms) {
     InitCallback(histogram_name);
   }
@@ -124,6 +129,7 @@ void P3AService::InitCallbacks() {
   for (const auto& [histogram_name, log_type] : dynamic_metric_log_types_) {
     RegisterDynamicMetric(histogram_name, log_type, false);
   }
+#endif  // growser P3A #21
 }
 
 void P3AService::StartTeardown() {
@@ -137,6 +143,11 @@ void P3AService::StartTeardown() {
 void P3AService::RegisterDynamicMetric(const std::string& histogram_name,
                                        MetricLogType log_type,
                                        bool should_be_on_ui_thread) {
+  // growser: P3A is functionally removed (#21) - a no-op. Per-feature modules
+  // still call RegisterDynamicMetric, but with no observers nothing is
+  // collected. The body is wrapped in #if 0; the parameters are kept
+  // (Chromium -Wno-unused-parameter).
+#if 0
   if (should_be_on_ui_thread) {
     DCheckCurrentlyOnUIThread();
   }
@@ -151,6 +162,7 @@ void P3AService::RegisterDynamicMetric(const std::string& histogram_name,
 
   ScopedDictPrefUpdate update(&*local_state_, kDynamicMetricsDictPref);
   update->Set(histogram_name, static_cast<int>(log_type));
+#endif  // growser P3A #21
 }
 
 void P3AService::RemoveDynamicMetric(const std::string& histogram_name) {
@@ -185,6 +197,12 @@ bool P3AService::IsP3AEnabled() const {
 void P3AService::Init(
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
     component_updater::ComponentUpdateService* cus) {
+  // growser: P3A is functionally removed (#21) - telemetry is zero. No pref
+  // observer is registered, initialized_ is never set and no constellation
+  // load or rotation starts, so nothing is ever sent. kP3AEnabled defaults to
+  // false and the onboarding and settings opt-ins are gone. Even with the pref
+  // forced on, no data leaves. The body is wrapped in #if 0.
+#if 0
   if (url_loader_factory) {
     url_loader_factory_ = url_loader_factory;
   }
@@ -216,6 +234,7 @@ void P3AService::Init(
   if (IsP3AEnabled()) {
     message_manager_->Start(url_loader_factory_);
   }
+#endif  // growser P3A #21
 }
 
 void P3AService::OnRotation(MetricLogType log_type) {

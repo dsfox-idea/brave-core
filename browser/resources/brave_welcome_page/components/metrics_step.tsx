@@ -28,7 +28,7 @@ export function MetricsStep(props: StepComponentProps) {
 
   useStepTransition()
 
-  const [webDiscoveryEnabled, setWebDiscoveryEnabled] = React.useState(true)
+  const [webDiscoveryEnabled, setWebDiscoveryEnabled] = React.useState(false)
   const [p3aEnabled, setP3AEnabled] = React.useState(true)
   const [crashReportingEnabled, setCrashReportingEnabled] = React.useState(true)
 
@@ -63,12 +63,16 @@ export function MetricsStep(props: StepComponentProps) {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  brave://settings/privacy
+                  {/* growser (#78): the visible address is our scheme, not
+                      Brave's. The href stays chrome:// because that is what
+                      resolves; only the text was wrong, and it is the first
+                      internal address a new user is ever shown. */}
+                  growser://settings/privacy
                 </a>
               ),
               $2: (content) => (
                 <a
-                  href='https://brave.com/privacy/browser/'
+                  href='https://growser.org/features.html#privacy'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -79,16 +83,6 @@ export function MetricsStep(props: StepComponentProps) {
           </p>
         </div>
         <div className='step-ui'>
-          {availableMetrics.webDiscovery && (
-            <ProductCard
-              image={wdpImage}
-              title={getString('WELCOME_PAGE_PRODUCT_WDP_TITLE')}
-              description={getString('WELCOME_PAGE_PRODUCT_WDP_DESCRIPTION')}
-              learnMoreUrl='https://support.brave.app/hc/articles/4409406835469-What-is-the-Web-Discovery-Project'
-              checked={webDiscoveryEnabled}
-              onChange={setWebDiscoveryEnabled}
-            />
-          )}
           {availableMetrics.p3a && (
             <ProductCard
               image={p3aImage}
@@ -106,9 +100,19 @@ export function MetricsStep(props: StepComponentProps) {
               description={getString(
                 'WELCOME_PAGE_PRODUCT_CRASH_REPORTS_DESCRIPTION',
               )}
-              learnMoreUrl='https://support.brave.app/hc/en-us/articles/360017905872-How-do-I-enable-or-disable-automatic-crash-reporting'
+              learnMoreUrl='https://growser.org/features.html#crash-reports'
               checked={crashReportingEnabled}
               onChange={setCrashReportingEnabled}
+            />
+          )}
+          {availableMetrics.webDiscovery && (
+            <ProductCard
+              image={wdpImage}
+              title={getString('WELCOME_PAGE_PRODUCT_WDP_TITLE')}
+              description={getString('WELCOME_PAGE_PRODUCT_WDP_DESCRIPTION')}
+              learnMoreUrl='https://support.brave.app/hc/articles/4409406835469-What-is-the-Web-Discovery-Project'
+              checked={webDiscoveryEnabled}
+              onChange={setWebDiscoveryEnabled}
             />
           )}
         </div>

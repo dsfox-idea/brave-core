@@ -11,14 +11,18 @@ source_set("api") {
   sources = [
     "brave_vpn_api_client.cc",
     "brave_vpn_api_client.h",
+    "empty_request_body.h",
+    "endpoint_constants.h",
     "error_body.h",
     "purchase_endpoints.h",
+    "raw_json_response_body.h",
+    "region_endpoints.h",
+    "support_endpoints.h",
   ]
 
   public_deps = [
     "//base",
     "//brave/components/brave_account/endpoint_client",
-    "//brave/components/brave_vpn/common",
     "//url",
   ]
 
@@ -32,7 +36,12 @@ source_set("api") {
 source_set("unit_tests") {
   testonly = true
 
-  sources = [ "brave_vpn_api_client_unittest.cc" ]
+  sources = [
+    "brave_vpn_api_client_unittest.cc",
+    "purchase_endpoints_unittest.cc",
+    "region_endpoints_unittest.cc",
+    "support_endpoints_unittest.cc",
+  ]
 
   deps = [
     ":api",

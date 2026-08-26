@@ -15,15 +15,12 @@ inline constexpr char kRewardsUpholdSupport[] =
 inline constexpr char kP3ALearnMoreURL[] = "https://brave.com/P3A";
 inline constexpr char kP3ASettingsLink[] = "chrome://settings/privacy";
 inline constexpr char kImportDataHelpURL[] =
-    "https://support.brave.app/hc/en-us/articles/360019782291#safari";
-inline constexpr char kPermissionPromptLearnMoreUrl[] =
-    "https://github.com/brave/brave-browser/wiki/Web-API-Permissions";
+    "https://growser.org/";
+// growser (#78/#81): permission prompts explain themselves on our site.
+inline constexpr char kPermissionPromptLearnMoreUrl[] = "https://growser.org/";
 inline constexpr char kPermissionPromptHardwareAccessPrivacyRisksURL[] =
-    "https://github.com/brave/brave-browser/wiki/"
-    "Privacy-risks-from-allowing-sites-to-access-hardware";
-inline constexpr char kSpeedreaderLearnMoreUrl[] =
-    "https://support.brave.app/hc/en-us/articles/"
-    "360045031392-What-is-SpeedReader";
+    "https://growser.org/";
+inline constexpr char kSpeedreaderLearnMoreUrl[] = "https://growser.org/";
 inline constexpr char kWebDiscoveryLearnMoreUrl[] =
     "https://brave.com/privacy/browser/#web-discovery-project";
 inline constexpr char kBraveSearchHost[] = "search.brave.com";
@@ -31,7 +28,10 @@ inline constexpr char kWidevineLearnMoreUrl[] =
     "https://support.brave.app/hc/en-us/articles/"
     "360023851591-How-do-I-view-DRM-protected-content-";
 
-inline constexpr char kDownloadBraveUrl[] = "https://www.brave.com/download";
+// growser (#78/#81): the "your browser is out of date" bubble offers a
+// download, and it has to be ours - brave.com would replace the browser
+// rather than update it.
+inline constexpr char kDownloadBraveUrl[] = "https://growser.org/";
 inline constexpr char kAIChatAboutUrl[] = "https://brave.com/leo/";
 
 #endif  // BRAVE_COMPONENTS_CONSTANTS_URL_CONSTANTS_H_

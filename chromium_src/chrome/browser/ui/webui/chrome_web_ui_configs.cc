@@ -7,6 +7,7 @@
 
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_account/features.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_education/buildflags.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
 #include "brave/components/brave_rewards/core/buildflags/buildflags.h"
@@ -56,6 +57,10 @@
 
 #include "brave/browser/ui/webui/brave_adblock_internals_ui.h"
 #include "brave/browser/ui/webui/brave_adblock_ui.h"
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+#include "brave/browser/ui/webui/ads_internals/ads_internals_ui.h"
+#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
 #include "brave/browser/ui/webui/brave_education/brave_education_page_ui.h"
@@ -134,8 +139,10 @@ void RegisterChromeWebUIConfigs() {
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   map.AddWebUIConfig(std::make_unique<SpeedreaderToolbarUIConfig>());
 #endif
-  map.AddWebUIConfig(
-      std::make_unique<webcompat_reporter::WebcompatReporterUIConfig>());
+  // growser (#78): no growser://webcompat. Removing the menu entry and the
+  // Shields buttons leaves the page itself, and it is a page that uploads the
+  // user's URL to webcompat.brave.com - reachable by typing the address is
+  // still reachable.
   if (brave_account::features::IsBraveAccountEnabled()) {
     map.AddWebUIConfig(std::make_unique<BraveAccountUIDesktopConfig>());
   }
@@ -147,6 +154,9 @@ void RegisterChromeWebUIConfigs() {
 #endif  // !BUILDFLAG(IS_ANDROID)
   map.AddWebUIConfig(std::make_unique<BraveAdblockUIConfig>());
   map.AddWebUIConfig(std::make_unique<BraveAdblockInternalsUIConfig>());
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+  map.AddWebUIConfig(std::make_unique<AdsInternalsUIConfig>());
+#endif
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
   if (ai_chat::features::IsAIChatEnabled()) {
@@ -154,9 +164,12 @@ void RegisterChromeWebUIConfigs() {
   }
 #endif
 
-#if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
-  map.AddWebUIConfig(std::make_unique<BraveEducationPageUIConfig>());
-#endif
+  // growser (#78): no growser://getting-started. The page frames content from
+  // browser-education.brave.com, which answers us with a real 21 KB page - so
+  // opening it hands Brave the visitor and shows them Brave's onboarding
+  // inside our browser. Nothing reaches that host on its own: the welcome
+  // flow only asks for it when kShowGettingStartedPage is enabled, and that
+  // feature is disabled by default. Typing the address was the way in.
 
 #if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
   map.AddWebUIConfig(std::make_unique<BraveOriginStartupUIConfig>());

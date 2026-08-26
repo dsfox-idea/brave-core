@@ -74,8 +74,12 @@ if (is_brave_origin_branded) {
   brave_linux_package_name = "brave-origin"
 } else {
   _product_brand = "Browser"
-  brave_dist_name = "brave"
-  brave_linux_package_name = "brave-browser"
+
+  # growser: the distributable follows brave_product_name, the same way
+  # $brave_exe already does. Hardcoding it meant the artifacts a user actually
+  # downloads were still called brave-*, whatever the product was named.
+  brave_dist_name = brave_product_name
+  brave_linux_package_name = brave_product_name
 }
 
 if (is_win) {
@@ -131,7 +135,10 @@ if (is_win) {
     _arch = "32"
   }
 
-  brave_installer_exe = "brave_installer.exe"
+  # growser: follows the product name too - this is the file a user downloads
+  # and double-clicks, so calling it brave_installer.exe was the most visible
+  # leftover of all.
+  brave_installer_exe = "${brave_product_name}_installer.exe"
   brave_stub_installer_exe = "Brave$_product_brand$_channel" +
                              "Setup$_arch$brave_underline_full_version.exe"
   brave_untagged_stub_installer_exe =

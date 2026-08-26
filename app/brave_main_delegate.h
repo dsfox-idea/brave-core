@@ -44,6 +44,8 @@ class BraveMainDelegate : public ChromeMainDelegate {
                            DefaultCommandLineOverrides);
   FRIEND_TEST_ALL_PREFIXES(BraveMainDelegateUnitTest,
                            OverrideSwitchFromCommandLine);
+  // growser (#79): the gate that sync stays off until we run a sync server.
+  FRIEND_TEST_ALL_PREFIXES(BraveMainDelegateUnitTest, SyncIsDisabled);
 
   static void AppendCommandLineOptions();
 };

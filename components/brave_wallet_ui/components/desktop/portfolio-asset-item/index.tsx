@@ -135,7 +135,7 @@ export const PortfolioAssetItem = ({
     ? new Amount(assetBalance).divideByDecimals(token.decimals).format()
     : new Amount(assetBalance)
         .divideByDecimals(token.decimals)
-        .formatAsAsset(6, token.symbol)
+        .compactAsAsset(6, token.symbol)
 
   const fiatBalance = React.useMemo(() => {
     if (!spotPrice) {
@@ -147,7 +147,7 @@ export const PortfolioAssetItem = ({
       .times(spotPrice)
   }, [spotPrice, assetBalance, token.decimals])
 
-  const formattedFiatBalance = fiatBalance.formatAsFiat(defaultFiatCurrency)
+  const formattedFiatBalance = fiatBalance.compactAsFiat(defaultFiatCurrency)
 
   const isLoading = formattedAssetBalance === '' && !isNonFungibleToken
 
@@ -235,11 +235,13 @@ export const PortfolioAssetItem = ({
                       <LoadingSkeleton
                         width={assetNameSkeletonWidth}
                         height={18}
+                        inline={true}
                       />
                       <Spacer />
                       <LoadingSkeleton
                         width={assetNetworkSkeletonWidth}
                         height={18}
+                        inline={true}
                       />
                     </>
                   ) : (
@@ -291,6 +293,7 @@ export const PortfolioAssetItem = ({
                       <LoadingSkeleton
                         width={60}
                         height={18}
+                        inline={true}
                       />
                       <Spacer />
                     </>
@@ -309,6 +312,7 @@ export const PortfolioAssetItem = ({
                         <LoadingSkeleton
                           width={60}
                           height={18}
+                          inline={true}
                         />
                       )}
                     </>

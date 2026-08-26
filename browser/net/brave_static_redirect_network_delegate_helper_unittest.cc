@@ -6,10 +6,13 @@
 #include "brave/browser/net/brave_static_redirect_network_delegate_helper.h"
 
 #include <memory>
+#include <string_view>
 #include <string>
 
+#include "base/strings/strcat.h"
 #include "brave/browser/net/url_context.h"
 #include "brave/components/geolocation/brave_geolocation_buildflags.h"
+#include "brave/components/safebrowsing/buildflags.h"
 #include "brave/components/static_redirect_helper/static_redirect_helper.h"
 #include "components/component_updater/component_updater_url_constants.h"
 #include "net/base/net_errors.h"
@@ -18,6 +21,12 @@
 #include "url/url_constants.h"
 
 using brave::ResponseCallback;
+
+// The redirector host is a build argument (brave_redirector_endpoint): growser
+// points it at its own backend, because Brave's redirector 403s a fork. Building
+// the expectation from the same flag the code reads keeps these tests about the
+// redirect logic - which host and path map to what - rather than about who
+// happens to operate the redirector.
 
 TEST(BraveStaticRedirectNetworkDelegateHelperTest, NoModifyTypicalURL) {
   const GURL url("https://bradhatesprimes.brave.com/composite_numbers_ftw");
@@ -42,9 +51,10 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyCRLSet1) {
   const GURL url(
       "https://dl.google.com/release2/chrome_component/AJ4r388iQSJq_4819/"
       "4819_all_crl-set-5934829738003798040.data.crx3");
-  const GURL expected_url(
-      "https://redirector.brave.com/release2/chrome_component/"
-      "AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3");
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/release2/chrome_component/"
+      "AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -57,9 +67,10 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyCRLSet2) {
       "https://r2---sn-8xgp1vo-qxoe.gvt1.com/edgedl/release2/"
       "chrome_component/AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040"
       ".data.crx3");
-  const GURL expected_url(
-      "https://redirector.brave.com/edgedl/release2/chrome_compone"
-      "nt/AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3");
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/edgedl/release2/chrome_compone"
+      "nt/AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -72,10 +83,11 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyCRLSet3) {
       "https://www.google.com/dl/release2/chrome_component/"
       "LLjIBPPmveI_4988/"
       "4988_all_crl-set-6296993568184466307.data.crx3");
-  const GURL expected_url(
-      "https://redirector.brave.com/dl/release2/chrome_component/"
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/dl/release2/chrome_component/"
       "LLjIBPPmveI_4988/"
-      "4988_all_crl-set-6296993568184466307.data.crx3");
+      "4988_all_crl-set-6296993568184466307.data.crx3"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -87,9 +99,10 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyCRLSet1_http) {
   const GURL url(
       "http://dl.google.com/release2/chrome_component/AJ4r388iQSJq_4819/"
       "4819_all_crl-set-5934829738003798040.data.crx3");
-  const GURL expected_url(
-      "https://redirector.brave.com/release2/chrome_component/"
-      "AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3");
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/release2/chrome_component/"
+      "AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -102,9 +115,10 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyCRLSet2_http) {
       "http://r2---sn-8xgp1vo-qxoe.gvt1.com/edgedl/release2/"
       "chrome_component/AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040"
       ".data.crx3");
-  const GURL expected_url(
-      "https://redirector.brave.com/edgedl/release2/chrome_compone"
-      "nt/AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3");
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/edgedl/release2/chrome_compone"
+      "nt/AJ4r388iQSJq_4819/4819_all_crl-set-5934829738003798040.data.crx3"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -116,10 +130,11 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyCRLSet3_http) {
   const GURL url(
       "http://www.google.com/dl/release2/chrome_component/LLjIBPPmveI_4988/"
       "4988_all_crl-set-6296993568184466307.data.crx3");
-  const GURL expected_url(
-      "https://redirector.brave.com/dl/release2/chrome_component/"
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/dl/release2/chrome_component/"
       "LLjIBPPmveI_4988/"
-      "4988_all_crl-set-6296993568184466307.data.crx3");
+      "4988_all_crl-set-6296993568184466307.data.crx3"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -133,11 +148,12 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyCRLSet5_http) {
       "cxpsjblnoxgjoqggdsbvujtof4_58/"
       "khaoiebndkojlmppeemjhbpbandiljpe_58_win_advr4ucepztwtigvw3fduftsvbeq."
       "crx3");
-  const GURL expected_url(
-      "https://redirector.brave.com/dl/release2/chrome_component/"
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/dl/release2/chrome_component/"
       "cxpsjblnoxgjoqggdsbvujtof4_58/"
       "khaoiebndkojlmppeemjhbpbandiljpe_58_win_advr4ucepztwtigvw3fduftsvbeq."
-      "crx3");
+      "crx3"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -179,9 +195,10 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyGvt1) {
   const GURL url(
       "http://redirector.gvt1.com/edgedl/release2/"
       "NfaZYtcKdtFc0LUvFkcNFA_0.3/AKveSIjhHAm2K09XAMovFEQ");
-  const GURL expected_url(
-      "https://redirector.brave.com/edgedl/release2/"
-      "NfaZYtcKdtFc0LUvFkcNFA_0.3/AKveSIjhHAm2K09XAMovFEQ");
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/edgedl/release2/"
+      "NfaZYtcKdtFc0LUvFkcNFA_0.3/AKveSIjhHAm2K09XAMovFEQ"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -193,9 +210,10 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest, ModifyGoogleDl) {
   const GURL url(
       "http://dl.google.com/release2/"
       "NfaZYtcKdtFc0LUvFkcNFA_0.3/AKveSIjhHAm2K09XAMovFEQ");
-  const GURL expected_url(
-      "https://redirector.brave.com/release2/"
-      "NfaZYtcKdtFc0LUvFkcNFA_0.3/AKveSIjhHAm2K09XAMovFEQ");
+  const GURL expected_url(base::StrCat({
+      "https://", BUILDFLAG(BRAVE_REDIRECTOR_ENDPOINT),
+      "/release2/"
+      "NfaZYtcKdtFc0LUvFkcNFA_0.3/AKveSIjhHAm2K09XAMovFEQ"}));
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
@@ -259,12 +277,20 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest,
   const GURL url(
       "https://sb-ssl.google.com/safebrowsing/clientreport/download?"
       "key=DUMMY_KEY");
-  GURL expected_url(
-      "https://sb-ssl.brave.com/safebrowsing/clientreport/download?"
-      "key=DUMMY_KEY");
 
   GURL new_url;
   int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
-  EXPECT_EQ(new_url, expected_url);
   EXPECT_EQ(rc, net::OK);
+
+  // The target is configurable (SAFEBROWSING_FILECHECK_ENDPOINT). An empty
+  // value means the build talks to Google directly, so nothing is rewritten.
+  constexpr std::string_view kEndpoint =
+      BUILDFLAG(SAFEBROWSING_FILECHECK_ENDPOINT);
+  if (kEndpoint.empty()) {
+    EXPECT_TRUE(new_url.is_empty());
+  } else {
+    EXPECT_EQ(new_url, GURL(base::StrCat(
+                           {"https://", kEndpoint,
+                            "/safebrowsing/clientreport/download?key=DUMMY_KEY"})));
+  }
 }

@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> ਟੈਬ ਨੂੰ ਬੰਦ ਕੀਤਾ ਗਿਆ}one{<ph name="MANY_CLOSED"/> ਟੈਬ ਨੂੰ ਬੰਦ ਕੀਤਾ ਗਿਆ}other{<ph name="MANY_CLOSED"/> ਟੈਬਾਂ ਨੂੰ ਬੰਦ ਕੀਤਾ ਗਿਆ}}</translation>
 <translation id="2894757982205307093">ਗਰੁੱਪ ਵਿੱਚ ਨਵੀਂ ਟੈਬ</translation>
 <translation id="2918484639460781603">ਸੈਟਿੰਗਾਂ 'ਤੇ ਜਾਓ</translation>
-<translation id="4691798003247738043">Brave | ਇਸ ਸਟੋਰ ਬਾਰੇ</translation>
+<translation id="4691798003247738043">Growser | ਇਸ ਸਟੋਰ ਬਾਰੇ</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{<ph name="ITEMS_COUNT_ONE"/> ਨੂੰ ਚੁਣਿਆ ਗਿਆ}one{<ph name="ITEMS_COUNT_MANY"/> ਨੂੰ ਚੁਣਿਆ ਗਿਆ}other{<ph name="ITEMS_COUNT_MANY"/> ਨੂੰ ਚੁਣਿਆ ਗਿਆ}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{ਟੈਬ ਪਿੰਨ ਕਰੋ}one{ਟੈਬ ਪਿੰਨ ਕਰੋ}other{ਟੈਬਾਂ ਪਿੰਨ ਕਰੋ}}</translation>
 <translation id="3008554597174452548">ਉਤਪਾਦ ਨੂੰ ਟਰੈਕ ਕਰਨਾ ਬੰਦ ਕਰੋ</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">ਪੂਰੀ-ਸਕ੍ਰੀਨ ਗ੍ਰਿਡ ਨੂੰ ਲੁਕਾਓ</translation>
 <translation id="5076161749301278626">ਕੀ ਸਟੋਰ ਦੀਆਂ ਸਮੀਖਿਆਵਾਂ ਦੇਖਣੀਆਂ ਹਨ?</translation>
 <translation id="5161254044473106830">ਸਿਰਲੇਖ ਲਾਜ਼ਮੀ</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਅਕਿਰਿਆਸ਼ੀਲ ਟੈਬਾਂ ਅਤੇ ਟੈਬ ਗਰੁੱਪਾਂ ਨੂੰ <ph name="AUTO_DELETE_DELAY_ONE"/> ਮਹੀਨੇ ਬਾਅਦ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।}one{Brave ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਅਕਿਰਿਆਸ਼ੀਲ ਟੈਬਾਂ ਅਤੇ ਟੈਬ ਗਰੁੱਪਾਂ ਨੂੰ <ph name="AUTO_DELETE_DELAY_MANY"/> ਮਹੀਨੇ ਬਾਅਦ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।}other{Brave ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਅਕਿਰਿਆਸ਼ੀਲ ਟੈਬਾਂ ਅਤੇ ਟੈਬ ਗਰੁੱਪਾਂ ਨੂੰ <ph name="AUTO_DELETE_DELAY_MANY"/> ਮਹੀਨਿਆਂ ਬਾਅਦ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਅਕਿਰਿਆਸ਼ੀਲ ਟੈਬਾਂ ਅਤੇ ਟੈਬ ਗਰੁੱਪਾਂ ਨੂੰ <ph name="AUTO_DELETE_DELAY_ONE"/> ਮਹੀਨੇ ਬਾਅਦ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।}one{Growser ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਅਕਿਰਿਆਸ਼ੀਲ ਟੈਬਾਂ ਅਤੇ ਟੈਬ ਗਰੁੱਪਾਂ ਨੂੰ <ph name="AUTO_DELETE_DELAY_MANY"/> ਮਹੀਨੇ ਬਾਅਦ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।}other{Growser ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਅਕਿਰਿਆਸ਼ੀਲ ਟੈਬਾਂ ਅਤੇ ਟੈਬ ਗਰੁੱਪਾਂ ਨੂੰ <ph name="AUTO_DELETE_DELAY_MANY"/> ਮਹੀਨਿਆਂ ਬਾਅਦ ਬੰਦ ਕਰ ਦਿੰਦਾ ਹੈ। ਤੁਸੀਂ ਇਸਨੂੰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।}}</translation>
 <translation id="5254233580564156835">ਮੈਮੋਰੀ ਵਰਤੋਂ: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">ਤੁਹਾਡੀ ਪਿਛਲੀ ਟੈਬ</translation>
 <translation id="5380159289133845234">ਡੁਪਲੀਕੇਟ ਟੈਬਾਂ ਪੁਰਾਲੇਖਬੱਧ ਕਰੋ</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{<ph name="COLOR_NAME"/> ਰੰਗ ਅਤੇ <ph name="TABS_COUNT_ONE"/> ਟੈਬ ਵਾਲੇ ਟੈਬ ਗਰੁੱਪ ਨੂੰ ਬੰਦ ਕਰੋ।}one{<ph name="COLOR_NAME"/> ਰੰਗ ਅਤੇ <ph name="TABS_COUNT_MANY"/> ਟੈਬ ਵਾਲੇ ਟੈਬ ਗਰੁੱਪ ਨੂੰ ਬੰਦ ਕਰੋ।}other{<ph name="COLOR_NAME"/> ਰੰਗ ਅਤੇ <ph name="TABS_COUNT_MANY"/> ਟੈਬਾਂ ਵਾਲੇ ਟੈਬ ਗਰੁੱਪ ਨੂੰ ਬੰਦ ਕਰੋ।}}</translation>
 <translation id="5556417849629758491">ਸਟੋਰ ਦੀ ਜਾਣਕਾਰੀ ਦੇਖੋ, ਇਹ ਵਿਕਲਪ ਸਕ੍ਰੀਨ ਦੇ ਸਿਖਰ ਦੇ ਨੇੜੇ ਉਪਲਬਧ ਹੈ</translation>
 <translation id="5627941783489838464">ਕੋਈ ਟੈਬ ਅੱਪਡੇਟ ਨਹੀਂ</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Brave ਤੋਂ <ph name="TABS_COUNT_ONE"/> ਲਿੰਕ}one{Brave ਤੋਂ <ph name="TABS_COUNT_MANY"/> ਲਿੰਕ}other{Brave ਤੋਂ <ph name="TABS_COUNT_MANY"/> ਲਿੰਕ}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{Growser ਤੋਂ <ph name="TABS_COUNT_ONE"/> ਲਿੰਕ}one{Growser ਤੋਂ <ph name="TABS_COUNT_MANY"/> ਲਿੰਕ}other{Growser ਤੋਂ <ph name="TABS_COUNT_MANY"/> ਲਿੰਕ}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{ਟੈਬ ਨੂੰ ਖੱਬੇ ਪਾਸੇ ਲਿਜਾਓ}one{ਟੈਬ ਨੂੰ ਖੱਬੇ ਪਾਸੇ ਲਿਜਾਓ}other{ਟੈਬਾਂ ਨੂੰ ਖੱਬੇ ਪਾਸੇ ਲਿਜਾਓ}}</translation>
 <translation id="5746204836956568669">ਕੀ ਤੇਜ਼ੀ ਨਾਲ ਕੰਮ ਕਰਨ ਲਈ <ph name="NUMBER_OF_TABS"/> ਟੈਬਾਂ ਨੂੰ ਗਰੁੱਪਬੱਧ ਕਰਨਾ ਹੈ?</translation>
 <translation id="5773295109010386583">ਅਕਿਰਿਆਸ਼ੀਲ ਆਈਟਮਾਂ ਨੂੰ ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਬੰਦ ਕਰੋ</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ਆਈਟਮ}one{<ph name="TABS_COUNT_MANY"/> ਆਈਟਮ}other{<ph name="TABS_COUNT_MANY"/> ਆਈਟਮਾਂ}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{ਚੁਣੀ ਗਈ <ph name="TABS_COUNT_ONE"/> ਆਈਟਮ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕਰੋ}one{ਚੁਣੀ ਗਈ <ph name="TABS_COUNT_MANY"/> ਆਈਟਮ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕਰੋ}other{ਚੁਣੀ ਗਈ <ph name="TABS_COUNT_MANY"/> ਆਈਟਮਾਂ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕਰੋ}}</translation>
 <translation id="753732157349120914">ਟੈਬ ਸਵਿੱਚਰ</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{Brave ਤੋਂ <ph name="REVIEWS_COUNT_ONE"/> ਸਮੀਖਿਆ}one{Brave ਤੋਂ <ph name="REVIEWS_COUNT_MANY"/> ਸਮੀਖਿਆ}other{Brave ਤੋਂ <ph name="REVIEWS_COUNT_MANY"/> ਸਮੀਖਿਆਵਾਂ}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{Growser ਤੋਂ <ph name="REVIEWS_COUNT_ONE"/> ਸਮੀਖਿਆ}one{Growser ਤੋਂ <ph name="REVIEWS_COUNT_MANY"/> ਸਮੀਖਿਆ}other{Growser ਤੋਂ <ph name="REVIEWS_COUNT_MANY"/> ਸਮੀਖਿਆਵਾਂ}}</translation>
 <translation id="7559245342362162951">ਪੂਰੀ-ਸਕ੍ਰੀਨ ਗ੍ਰਿਡ ਵਿੱਚ ਗਰੁੱਪ ਦੀਆਂ ਟੈਬਾਂ ਦਿਖਾਓ</translation>
 <translation id="7658239707568436148">ਰੱਦ ਕਰੋ</translation>
 <translation id="7688386659311034820">ਅਕਿਰਿਆਸ਼ੀਲ ਟੈਬਾਂ ਦੀ ਵਿੰਡੋ</translation>

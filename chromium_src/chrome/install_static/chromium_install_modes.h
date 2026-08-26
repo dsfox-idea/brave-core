@@ -23,7 +23,12 @@ namespace install_static {
 
 // The brand-specific company name to be included as a component of the install
 // and user data directory paths. May be empty if no such dir is to be used.
-inline constexpr wchar_t kCompanyPathName[] = L"BraveSoftware";
+//
+// growser: empty, the way unbranded Chromium leaves it. Keeping
+// "BraveSoftware" would install us under Brave's directory and, worse, put our
+// user data next to theirs; adding a "Growser" company on top of a "Growser"
+// product would only produce Growser\Growser\Application.
+inline constexpr wchar_t kCompanyPathName[] = L"";
 
 // The brand-specific product name to be included as a component of the install
 // and user data directory paths.
@@ -38,7 +43,20 @@ inline constexpr wchar_t kProductPathName[] = L"Brave-Browser";
 #else
 // If you change this, then you also need to change occurrences of this string
 // in mini_installer_constants.cc.
-inline constexpr wchar_t kProductPathName[] = L"Brave-Browser-Development";
+//
+// growser: this is the mode we actually build and ship - GROWSER_NON_OFFICIAL
+// makes isOfficialBuild() false, so OFFICIAL_BUILD is never defined for us.
+// The official modes above still carry Brave's names and GUIDs; they are dead
+// configuration here and stay untouched until an official build becomes real
+// (growser#51).
+//
+// The name is "Growser", not "Growser-Development", even though this is
+// upstream's developer mode: it decides the install directory, the profile path
+// under %LOCALAPPDATA% and what a user sees in Programs and Features. Shipping
+// the word "Development" to users would be a slip of the build system into the
+// product, and renaming it after anyone has a profile means moving their
+// profile.
+inline constexpr wchar_t kProductPathName[] = L"Growser";
 #endif
 
 // The brand-specific safe browsing client name.
@@ -463,33 +481,45 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .install_suffix =
             L"",  // Empty install_suffix for the primary install mode.
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
-        .app_guid =
-            L"",  // Empty app_guid since no integraion with Brave Update.
-        .base_app_name = L"Brave Development",     // A distinct base_app_name.
-        .base_app_id = L"BraveDevelopment",        // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveDevHTM",  // Browser ProgID prefix.
+        // growser (#51): we DO have update integration in this build. Brave
+        // left this empty because for them an unofficial build never updates -
+        // the same assumption that made uninstall crash in #50. Omaha 4
+        // registers the browser under exactly this value
+        // (chrome/browser/updater/browser_updater_client_win.cc:22), so an
+        // empty one means nothing can register.
+        .app_guid = L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}",
+        // growser: every identifier below is ours. They are not cosmetic - the
+        // GUIDs register COM classes machine-wide (the toast activator is what
+        // Windows calls back for notifications, the elevator runs the elevated
+        // service), so shipping Brave's values would mean two products fighting
+        // over the same registrations on any machine that has both. The three
+        // CLSIDs/IIDs and the Active Setup GUID are freshly generated for
+        // growser and appear nowhere else.
+        .base_app_name = L"Growser",                 // A distinct base_app_name.
+        .base_app_id = L"Growser",                   // A distinct base_app_id.
+        .browser_prog_id_prefix = L"GrowserHTML",  // Browser ProgID prefix (<=11).
         .browser_prog_id_description =
-            L"Brave Development HTML Document",  // Browser ProgID description.
-        .direct_launch_url_scheme = "brave-browser-development",
-        .pdf_prog_id_prefix = L"BraveDevPDF",  // PDF ProgID prefix.
+            L"Growser HTML Document",  // Browser ProgID description.
+        .direct_launch_url_scheme = "growser",
+        .pdf_prog_id_prefix = L"GrowserPDF",  // PDF ProgID prefix (<=11).
         .pdf_prog_id_description =
-            L"Brave Development PDF Document",  // PDF ProgID description.
+            L"Growser PDF Document",  // PDF ProgID description.
         .active_setup_guid =
-            L"{D6527C63-5CDD-4EF3-9299-1504E17CBD18}",  // Active Setup GUID.
-        .toast_activator_clsid = {0xeb41c6e8,
-                                  0xba35,
-                                  0x4c06,
-                                  {0x96, 0xe8, 0x6f, 0x30, 0xf1, 0x8c, 0xa5,
-                                   0x5c}},  // Toast activator CLSID.
-        .elevator_clsid = {0x5693e62d,
-                           0xd6,
-                           0x4421,
-                           {0xaf, 0xe8, 0x58, 0xf3, 0xc9, 0x47, 0x43,
-                            0x6a}},  // Elevator CLSID.
-        .elevator_iid = {0x17239bf1,
-                         0xa1dc,
-                         0x4642,
-                         {0x84, 0x6c, 0x1b, 0xac, 0x85, 0xf9, 0x6a, 0x10}},
+            L"{AD0A8A35-2AF7-48DC-A0F0-D2B8CABD7EE9}",  // Active Setup GUID.
+        .toast_activator_clsid = {0x83127675,
+                                  0xce10,
+                                  0x4ac5,
+                                  {0x9c, 0x10, 0x3f, 0xf2, 0xe7, 0xd4, 0x53,
+                                   0x99}},  // Toast activator CLSID.
+        .elevator_clsid = {0xfd440037,
+                           0x1c1c,
+                           0x4ec3,
+                           {0xb4, 0x7a, 0x34, 0xf1, 0xb3, 0x58, 0x8c,
+                            0xb6}},  // Elevator CLSID.
+        .elevator_iid = {0x87070ee1,
+                         0xc7d8,
+                         0x473f,
+                         {0xb2, 0x34, 0x94, 0x77, 0x97, 0xa8, 0x77, 0xec}},
         .default_channel_name =
             L"",  // Empty default channel name since no update integration.
         .channel_strategy = ChannelStrategy::UNSUPPORTED,
@@ -499,9 +529,13 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .app_icon_resource_index =
             icon_resources::kApplicationIndex,  // App icon resource index.
         .app_icon_resource_id = IDR_MAINFRAME,  // App icon resource id.
+        // growser: distinct trailing RID. This prefix names the sandbox's
+        // AppContainer profiles, and Brave gives each channel its own
+        // (...148 through ...156) precisely so they do not share; ...148 is
+        // Brave Development's, so we take an unused one rather than sit in it.
         .sandbox_sid_prefix =
             L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
-            L"934012148-",  // App container sid prefix for sandbox.
+            L"934012160-",  // App container sid prefix for sandbox.
     },
 });
 #endif

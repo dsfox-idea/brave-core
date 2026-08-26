@@ -12,11 +12,9 @@ import AvatarIconSVG from '../svg/avatar-icon'
 import DataContext from '../../state/context'
 import { useViewTypeTransition } from '../../state/hooks'
 import {
-  WelcomeBrowserProxyImpl,
   ImportDataBrowserProxyImpl,
   ImportDataStatus,
   defaultImportTypes,
-  P3APhase,
 } from '../../api/welcome_browser_proxy'
 import { getLocale } from '$web-common/locale'
 import { addWebUiListener } from 'chrome://resources/js/cr.js'
@@ -123,7 +121,6 @@ function SelectProfile () {
     } else {
       ImportDataBrowserProxyImpl.getInstance().importDataBulk(entries, defaultImportTypes)
     }
-    WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Consent)
   }
   const getImportEntryName = (entry: any) => {
     let name = entry.name

@@ -16,6 +16,7 @@ import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
+import("//brave/components/web_discovery/buildflags/buildflags.gni")
 import("//brave/resources/brave_grit.gni")
 import("//build/config/locales.gni")
 import("//extensions/buildflags/buildflags.gni")
@@ -235,6 +236,7 @@ brave_grit("strings") {
     "enable_tor=$enable_tor",
     "enable_brave_vpn=$enable_brave_vpn",
     "enable_psst=$enable_psst",
+    "enable_web_discovery=$enable_web_discovery",
   ]
 
   foreach(locale, all_chrome_locales) {
@@ -262,5 +264,5 @@ action("about_credits") {
 
   outputs = [ "$root_gen_dir/npm_licenses.checked" ]
 
-  args = [ rebase_path("$root_gen_dir/npm_licenses.checked") ]
+  args = [ rebase_path("$root_gen_dir/npm_licenses.checked", root_build_dir) ]
 }

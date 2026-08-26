@@ -118,8 +118,8 @@ void BravePrivateNewTabPageHandler::GoToBraveSearch(const std::string& input,
                                                     bool open_new_tab) {
   CHECK(profile_);
 
-  // growser: строка поиска приватной вкладки — Yandex в обычном инкогнито (#26);
-  // Tor-окна оставляем на приватном поиске (Yandex поверх Tor снижал бы анонимность).
+  // growser: the private-tab search box is Yandex in ordinary incognito (#26);
+  // Tor windows keep the private search - Yandex over Tor would weaken anonymity.
   auto provider_data = TemplateURLDataFromPrepopulatedEngine(
       profile_->IsTor() ? TemplateURLPrepopulateData::brave_search_tor
                         : TemplateURLPrepopulateData::brave_yandex);
@@ -161,7 +161,10 @@ void BravePrivateNewTabPageHandler::GoToBraveSupport() {
     web_contents = web_contents_;
 
   web_contents->OpenURL(
-      content::OpenURLParams(GURL("https://support.brave.app/"),
+      // growser (#78/#81): "learn more" on the private window page goes to our
+      // site, for the same reason the app menu's Help item does - see
+      // chromium_src/chrome/common/url_constants.h.
+      content::OpenURLParams(GURL("https://growser.org/"),
                              content::Referrer(),
                              WindowOpenDisposition::NEW_FOREGROUND_TAB,
                              ui::PageTransition::PAGE_TRANSITION_LINK, false),

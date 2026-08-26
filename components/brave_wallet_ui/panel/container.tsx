@@ -30,9 +30,9 @@ import {
 import {
   DecryptMessageRequestPanel, //
 } from '../components/extension/public_encryption_key_panels/decrypt_message_request_panel'
-
+import { ConfirmationPopup } from '../components/extension/confirmation_popup/confirmation_popup'
 import { ConnectWithSiteWrapper } from '../stories/style'
-import { PanelWrapper } from './style'
+import { PanelWrapper } from './panel_wrapper/panel_wrapper'
 import { FullScreenWrapper } from '../page/screens/page-screen.styles'
 
 import { TransactionStatus } from '../components/extension/post-confirmation'
@@ -86,8 +86,6 @@ function Container() {
   const hasInitialized = useSafeWalletSelector(WalletSelectors.hasInitialized)
   const isWalletCreated = useSafeWalletSelector(WalletSelectors.isWalletCreated)
   const isWalletLocked = useSafeWalletSelector(WalletSelectors.isWalletLocked)
-
-  // ui selectors (safe)
   const isSidePanel = useSafeUISelector(UISelectors.isSidePanel)
 
   // panel selectors (safe)
@@ -150,10 +148,43 @@ function Container() {
     || isLoadingSignMessageErrorData
     || isLoadingAddTokenRequests
 
+  const pendingOrConfirmingTransaction =
+    selectedPendingTransaction ?? submittingTransaction
+
+  const sidePanelConfirmations = React.useMemo(() => {
+    if (
+      selectedPanel === 'transactionStatus'
+      && selectedTransactionId
+      && !submittingTransaction
+    ) {
+      return (
+        <ConfirmationPopup>
+          <TransactionStatus transactionLookup={selectedTransactionId} />
+        </ConfirmationPopup>
+      )
+    }
+    if (pendingOrConfirmingTransaction) {
+      return (
+        <ConfirmationPopup isLoading={isLoadingPendingActions}>
+          <PendingTransactionPanel
+            selectedPendingTransaction={pendingOrConfirmingTransaction}
+          />
+        </ConfirmationPopup>
+      )
+    }
+    return null
+  }, [
+    selectedPanel,
+    selectedTransactionId,
+    submittingTransaction,
+    pendingOrConfirmingTransaction,
+    isLoadingPendingActions,
+  ])
+
   // render
-  if (!hasInitialized || isLoadingPendingActions) {
+  if (!hasInitialized || (isLoadingPendingActions && !isSidePanel)) {
     return (
-      <PanelWrapper isSidePanel={isSidePanel}>
+      <PanelWrapper>
         <FullScreenWrapper>
           <ProgressRing mode='indeterminate' />
         </FullScreenWrapper>
@@ -163,7 +194,7 @@ function Container() {
 
   if (!isWalletCreated) {
     return (
-      <PanelWrapper isSidePanel={isSidePanel}>
+      <PanelWrapper>
         <WelcomePanel />
       </PanelWrapper>
     )
@@ -171,7 +202,7 @@ function Container() {
 
   if (isWalletLocked) {
     return (
-      <PanelWrapper isSidePanel={isSidePanel}>
+      <PanelWrapper>
         <PageContainer />
       </PanelWrapper>
     )
@@ -284,6 +315,7 @@ function Container() {
     selectedPanel === 'transactionStatus'
     && selectedTransactionId
     && !submittingTransaction
+    && !isSidePanel
   ) {
     return (
       <PanelWrapper>
@@ -292,10 +324,7 @@ function Container() {
     )
   }
 
-  const pendingOrConfirmingTransaction =
-    selectedPendingTransaction ?? submittingTransaction
-
-  if (pendingOrConfirmingTransaction) {
+  if (pendingOrConfirmingTransaction && !isSidePanel) {
     return (
       <PanelWrapper>
         <PendingTransactionPanel
@@ -322,8 +351,9 @@ function Container() {
   }
 
   return (
-    <PanelWrapper isSidePanel={isSidePanel}>
+    <PanelWrapper>
       <PageContainer />
+      {isSidePanel && sidePanelConfirmations}
     </PanelWrapper>
   )
 }

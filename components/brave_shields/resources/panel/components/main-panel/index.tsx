@@ -5,7 +5,6 @@
 import * as React from 'react'
 
 import Toggle from '@brave/leo/react/toggle'
-import Button from '@brave/leo/react/button'
 import Icon from '@brave/leo/react/icon'
 
 import * as S from './style'
@@ -33,7 +32,7 @@ const ManagedIcon = styled(Icon).attrs({ name: 'news-business' })`
 
 const handleLearnMoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   e.preventDefault()
-  chrome.tabs.create({ url: 'https://brave.com/privacy-features/', active: true })
+  chrome.tabs.create({ url: 'https://growser.org/features.html#shields', active: true })
 }
 
 function MainPanel () {
@@ -58,7 +57,7 @@ function MainPanel () {
       ? 'braveShieldsBlockedNote'
       : 'braveShieldsNOTBlockedNote';
   const braveShieldsNote = formatLocale(braveShieldsNoteKey, {
-    $1: content => <a href='https://brave.com/privacy-features/'
+    $1: content => <a href='https://growser.org/features.html#shields'
                       onClick={handleLearnMoreClick}>
       {content}
     </a>
@@ -69,10 +68,6 @@ function MainPanel () {
     if (detail.checked) {
       if (getSiteSettings) getSiteSettings()
     }
-  }
-
-  const handleReportSite = async () => {
-    await getPanelBrowserAPI().dataHandler.openWebCompatWindow()
   }
 
   const [areAnyBlockedElementsPresent,
@@ -162,30 +157,9 @@ function MainPanel () {
       </S.GlobalDefaultsButton>
     )
 
-    reportSiteOrFootnoteElement = (
-      <S.ReportSiteBox>
-        <S.ReportSiteAction>
-          <span>{getLocale('braveShieldsReportSiteDesc')}</span>
-          {siteBlockInfo?.showShieldsDisabledAdBlockOnlyModePrompt ? (
-              <Button
-                kind="outline"
-                size="medium"
-                onClick={handleReportSite}
-              >
-                {getLocale('braveShieldsReportSite')}
-              </Button>
-            ) : (
-              <Button
-                kind="filled"
-                onClick={handleReportSite}
-              >
-                {getLocale('braveShieldsReportSite')}
-              </Button>
-            )
-          }
-        </S.ReportSiteAction>
-      </S.ReportSiteBox>
-    )
+    // growser (#78): no "report site" - the report carries the user's URL to
+    // webcompat.brave.com, a third party to us. Leaving this assignment out
+    // keeps the footnote the variable already holds.
   }
 
   return (

@@ -25,10 +25,7 @@ import {
 // Utils
 import { getAssetIdKey } from '../../../utils/asset-utils'
 import { getLocale } from '../../../../common/locale'
-import {
-  makeDepositFundsRoute,
-  makeFundWalletRoute,
-} from '../../../utils/routes-utils'
+import { makeDepositRoute, makeBuyRoute } from '../../../utils/routes-utils'
 import { getIsRewardsToken } from '../../../utils/rewards_utils'
 import {
   getStoredPortfolioTimeframe, //
@@ -313,14 +310,14 @@ export const MarketAssetDetails = () => {
 
   const onSelectBuy = React.useCallback(() => {
     if (foundMeldBuyToken) {
-      openOrPushRoute(makeFundWalletRoute(foundMeldBuyToken))
+      openOrPushRoute(makeBuyRoute(foundMeldBuyToken))
     }
   }, [openOrPushRoute, foundMeldBuyToken])
 
   const onSelectDeposit = React.useCallback(() => {
     if (foundTokens.length === 1) {
       openOrPushRoute(
-        makeDepositFundsRoute(getAssetIdKey(foundTokens[0]), {
+        makeDepositRoute(getAssetIdKey(foundTokens[0]), {
           searchText: foundTokens[0].symbol,
         }),
       )
@@ -329,7 +326,7 @@ export const MarketAssetDetails = () => {
 
     if (foundTokens.length > 1) {
       openOrPushRoute(
-        makeDepositFundsRoute('', {
+        makeDepositRoute('', {
           searchText: foundTokens[0].symbol,
         }),
       )
@@ -420,7 +417,7 @@ export const MarketAssetDetails = () => {
               selectedAsset={selectedAssetFromParams}
               selectedAssetNetwork={selectedAssetsNetwork}
               assetBalance={undefined}
-              formattedFiatBalance={fullAssetFiatBalance.formatAsFiat(
+              formattedFiatBalance={fullAssetFiatBalance.compactAsFiat(
                 defaultFiat,
               )}
               onShowHideTokenModal={() => setShowHideTokenModal(true)}

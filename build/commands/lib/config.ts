@@ -12,6 +12,7 @@ import EnvConfig from './envConfig.ts'
 import * as Log from './log.ts'
 import util from './util.js'
 import { isCI, isTeamcity } from './ciDetect.ts'
+import type * as buildOptions from './buildOptions.ts'
 
 type ExecOptions = {
   env: NodeJS.ProcessEnv
@@ -21,6 +22,15 @@ type ExecOptions = {
   onStdOutLine?: (line: string) => void
   onStdErrLine?: (line: string) => void
 }
+
+type UpdateOptions = buildOptions.BuildDirOptions
+  & buildOptions.TargetConfigOptions
+  & buildOptions.GnArgsOptions
+  & buildOptions.GnGenOptions
+  & buildOptions.NinjaOptions & {
+    build_config?: string | undefined
+    gclient_verbose?: boolean | undefined
+  }
 
 const validTargetOSValues = ['android', 'ios', 'linux', 'mac', 'win'] as const
 type TargetOS = (typeof validTargetOSValues)[number]
@@ -317,7 +327,10 @@ export class Config {
   }
 
   isComponentBuild() {
-    return this.buildConfig === 'Debug' || this.buildConfig === 'Component'
+    return (
+      !this.isAndroid()
+      && (this.buildConfig === 'Debug' || this.buildConfig === 'Component')
+    )
   }
 
   isDebug() {
@@ -351,15 +364,14 @@ export class Config {
     // LSAN only works with ASAN and has very low overhead.
     // Chromium supports LeakSanitizer is supported on x86_64 Linux only.
     // See https://www.chromium.org/developers/testing/leaksanitizer/
-    // Temporarily disable LSAN: https://github.com/brave/brave-browser/issues/56047
-    return false
+    return this.isAsan() && this.targetOS === 'linux'
   }
 
   isOfficialBuild() {
-    // growser: official-сборка требует ключи сервисов Brave (assert
-    // brave_services_key != "") и точный macOS SDK 26.5, а также включает
-    // ThinLTO. Для нашего форка на этой машине это недоступно, поэтому по флагу
-    // GROWSER_NON_OFFICIAL=1 собираем оптимизированный НЕ-official Release.
+    // growser: an official build wants Brave's service keys (assert
+    // brave_services_key != "") and the exact macOS SDK 26.5, and it turns on
+    // ThinLTO. None of that is available to our fork here, so with
+    // GROWSER_NON_OFFICIAL=1 we build an optimised NON-official Release.
     if (process.env.GROWSER_NON_OFFICIAL === '1') {
       return false
     }
@@ -470,22 +482,15 @@ export class Config {
     return path.join(this.cacheDir, name)
   }
 
-  updateInternal(options) {
-    if (options.universal) {
-      this.targetArch = 'arm64'
-      this.isUniversalBinary = true
-    }
-
-    if (options.target_cpu) {
-      options.target_arch = options.target_cpu
-    }
-
+  updateInternal(options: UpdateOptions) {
     if (options.target_arch === 'x86') {
       this.targetArch = options.target_arch
       this.gypTargetArch = 'ia32'
     } else if (options.target_arch === 'ia32') {
       this.targetArch = 'x86'
       this.gypTargetArch = options.target_arch
+    } else if (options.target_arch === 'host_cpu') {
+      this.targetArch = process.arch
     } else if (options.target_arch) {
       this.targetArch = options.target_arch
     }
@@ -497,6 +502,8 @@ export class Config {
         this.targetOS = 'mac'
       } else if (options.target_os === 'windows') {
         this.targetOS = 'win'
+      } else if (options.target_os === 'host_os') {
+        this.targetOS = this.hostOS
       } else {
         this.targetOS = options.target_os
       }
@@ -520,6 +527,16 @@ export class Config {
 
     if (options.build_config) {
       this.buildConfig = options.build_config
+    }
+
+    // Component build is not supported on Android since cr152, fallback to
+    // Static build.
+    if (this.isAndroid() && this.buildConfig === 'Component') {
+      this.buildConfig = 'Static'
+    }
+
+    if (options.universal) {
+      this.isUniversalBinary = true
     }
 
     if (options.is_asan) {
@@ -682,11 +699,12 @@ export class Config {
       '--no-gn-gen is experimental and only gn args that match command '
         + 'line options will be processed',
     )
+    gnArgs.target_arch = gnArgs.target_cpu
     this.updateInternal(Object.assign({}, gnArgs, options))
     assert(!isCI)
   }
 
-  update(options) {
+  update(options: UpdateOptions) {
     if (this.use_no_gn_gen) {
       this.fromGnArgs(options)
     } else {
@@ -713,6 +731,37 @@ export class Config {
   }
 
   #getBraveVersion() {
+    // growser (#84): our own version, derived from the date.
+    //
+    // Brave's number comes from package.json, and for anything that is not a
+    // Brave release build the patch component is zeroed a few lines below. Both
+    // together mean every build we ever made was 151.1.95.0 - the same version
+    // for different code, so the updater could never see anything newer and an
+    // update could not happen at all.
+    //
+    // The scheme is <YY>.<MMDD>.<serial>, which lands in chrome/VERSION as
+    // MINOR/BUILD/PATCH under the Chromium milestone: 151.26.811.0. It cannot
+    // be forgotten, because nobody assigns it; it cannot be reused, because the
+    // date moves; it stays ordered across a year boundary (27.101 > 26.1231);
+    // and it does not touch package.json, so `pnpm run sync` has nothing to
+    // fight over. Each component stays well inside the 16-bit limit Windows
+    // puts on version fields.
+    //
+    // The serial is for a second release on one day. It is deliberately not
+    // automatic: a number that changes on its own between two builds of the
+    // same code would defeat the point.
+    if (process.env.GROWSER_DATE_VERSION === '1') {
+      const now = new Date()
+      const yy = now.getFullYear() % 100
+      const mmdd = (now.getMonth() + 1) * 100 + now.getDate()
+      const serial = parseInt(process.env.GROWSER_BUILD_SERIAL ?? '0', 10)
+      assert(
+        Number.isInteger(serial) && serial >= 0 && serial <= 65535,
+        `GROWSER_BUILD_SERIAL must be 0..65535, got ${process.env.GROWSER_BUILD_SERIAL}`,
+      )
+      return `${yy}.${mmdd}.${serial}`
+    }
+
     const braveVersion = envConfig.getPackageVersion()
     if (!this.ignorePatchVersionNumber) {
       return braveVersion

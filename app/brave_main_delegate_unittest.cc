@@ -10,6 +10,7 @@
 #include "base/command_line.h"
 #include "brave/components/brave_sync/buildflags.h"
 #include "brave/components/variations/buildflags.h"
+#include "brave/components/brave_sync/features.h"
 #include "components/embedder_support/switches.h"
 #include "components/sync/base/command_line_switches.h"
 #include "components/variations/variations_switches.h"
@@ -37,6 +38,19 @@ TEST(BraveMainDelegateUnitTest, DefaultCommandLineOverrides) {
                    .GetSwitchValueASCII(
                        variations::switches::kVariationsInsecureServerURL)
                    .c_str());
+}
+
+// growser (#78): sync stays off, and this asserts the switch that decides it.
+//
+// The previous version of this test asserted that AppendCommandLineOptions
+// leaves IsSyncAllowedByFlag() false - which it did, and which proved nothing:
+// ChromeBrowserMainParts::PreProfileInit runs later and removes --disable-sync
+// whenever brave_sync::features::kBraveSync is on. The test passed while the
+// browser went on offering Sync in its settings, and it took looking at a
+// running browser to notice. Assert the feature, because the feature is what
+// the rest of the code reads.
+TEST(BraveMainDelegateUnitTest, SyncIsDisabled) {
+  EXPECT_FALSE(base::FeatureList::IsEnabled(brave_sync::features::kBraveSync));
 }
 
 TEST(BraveMainDelegateUnitTest, OverrideSwitchFromCommandLine) {

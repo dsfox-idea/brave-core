@@ -63,7 +63,8 @@ extension BrowserViewController {
     let controller = OnboardingController(
       environment: .init(
         p3aUtils: braveCore.p3aUtils,
-        attributionManager: attributionManager
+        attributionManager: attributionManager,
+        localState: braveCore.localState
       ),
       steps: [.metricsOptIn],
       showSplashScreen: false,
@@ -121,7 +122,8 @@ extension BrowserViewController {
     let defaultBrowserCallout = OnboardingController(
       environment: .init(
         p3aUtils: braveCore.p3aUtils,
-        attributionManager: attributionManager
+        attributionManager: attributionManager,
+        localState: braveCore.localState
       ),
       steps: [.defaultBrowsing],
       showSplashScreen: false,
@@ -206,7 +208,7 @@ extension BrowserViewController {
     }
 
     if Preferences.DebugFlag.skipNTPCallouts == true || isOnboardingOrFullScreenCalloutPresented
-      || topToolbar.inOverlayMode
+      || isSearchContainerVisible
     {
       return false
     }

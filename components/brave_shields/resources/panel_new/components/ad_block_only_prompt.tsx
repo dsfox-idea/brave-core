@@ -8,12 +8,13 @@ import Button from '@brave/leo/react/button'
 
 import { useShieldsApi } from '../api/shields_api_context'
 import { getString } from './strings'
+import { OpenTabLink } from './open_tab_link'
 import { formatString } from '$web-common/formatString'
 
 import { style } from './ad_block_only_prompt.style'
 
 const learnMoreURL =
-  'https://support.brave.app/hc/en-us/articles/38076796692109'
+  'https://growser.org/features.html#adblock-only'
 
 export function MaybeAdBlockOnlyPrompt() {
   const api = useShieldsApi()
@@ -65,9 +66,7 @@ function AdBlockOnlyEnablePrompt() {
           ),
           {
             $1: (content) => (
-              <button onClick={() => api.openTab(learnMoreURL)}>
-                {content}
-              </button>
+              <OpenTabLink url={learnMoreURL}>{content}</OpenTabLink>
             ),
           },
         )}
@@ -108,14 +107,7 @@ function AdBlockOnlyFeedbackPrompt() {
             'BRAVE_SHIELDS_IS_THIS_SITE_WORKING_CORRECTLY_NOW_LOOKS_GOOD',
           )}
         </Button>
-        <Button
-          kind='plain'
-          onClick={api.openWebCompatWindow}
-        >
-          {getString(
-            'BRAVE_SHIELDS_IS_THIS_SITE_WORKING_CORRECTLY_NOW_REPORT_SITE',
-          )}
-        </Button>
+        {/* growser (#78): no "report site" - see main_card.tsx. */}
       </div>
     </div>
   )

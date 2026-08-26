@@ -71,6 +71,7 @@ export const defaultConversationState: Mojom.ConversationState & {
 
 const emptyTurn: Mojom.ConversationTurn = {
   uuid: '',
+  threadUuid: undefined,
   text: '',
   characterType: Mojom.CharacterType.HUMAN,
   actionType: Mojom.ActionType.UNSPECIFIED,
@@ -84,6 +85,7 @@ const emptyTurn: Mojom.ConversationTurn = {
   skill: undefined,
   modelKey: '',
   nearVerificationStatus: undefined,
+  childThreadUuids: [],
 }
 
 /**
@@ -173,6 +175,9 @@ export function createMockService(
           url: 'https://leo-ai.brave.app/sharing/mock-share-id#mock-key',
         },
       }),
+    getConversationShares: () => Promise.resolve({ shares: [] }),
+    deleteConversationShare: () => Promise.resolve({ success: true }),
+    copyConversationShareLink: () => {},
     createSkill: () => {},
     updateSkill: () => {},
     deleteSkill: () => {},

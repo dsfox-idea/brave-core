@@ -17,7 +17,10 @@ inline constexpr char kBraveSafeBrowsing2Proxy[] = "safebrowsing2.brave.com";
 inline constexpr char kBraveSafeBrowsingSslProxy[] = "sb-ssl.brave.com";
 inline constexpr char kBraveRedirectorProxy[] = "redirector.brave.com";
 inline constexpr char kBraveClients4Proxy[] = "clients4.brave.com";
-inline constexpr char kBraveStaticProxy[] = "static1.brave.com";
+// growser (#45): kBraveStaticProxy is gone. It named Brave's autofill-data
+// proxy, and the one place that used it now points at our own backend - leaving
+// the constant behind would only be a Brave host sitting in the binary waiting
+// to be used again by mistake.
 
 inline constexpr char kAutofillPrefix[] = "https://www.gstatic.com/autofill/*";
 inline constexpr char kClients4Prefix[] = "*://clients4.google.com/";

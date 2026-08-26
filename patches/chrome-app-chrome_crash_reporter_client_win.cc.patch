@@ -1,0 +1,26 @@
+diff --git a/chrome/app/chrome_crash_reporter_client_win.cc b/chrome/app/chrome_crash_reporter_client_win.cc
+index e59af188c8140cbbc16f14bf49ef162cace60dc9..2643c194c04df7d26f71c105ce279a23aa7ba947 100644
+--- a/chrome/app/chrome_crash_reporter_client_win.cc
++++ b/chrome/app/chrome_crash_reporter_client_win.cc
+@@ -142,6 +142,21 @@ bool ChromeCrashReporterClient::IsRunningUnattended() {
+ }
+ 
+ bool ChromeCrashReporterClient::GetCollectStatsConsent() {
++  // growser (#92): the registry value decides, in every build.
++  //
++  // This used to be a hard-coded true for non-official builds (#66). The reason
++  // was real: removing the telemetry (#38, #39) left the browser writing 0 into
++  // usagestats on every start, so crash uploads could never happen and the
++  // value could not even be set by hand. The cure was to stop reading it.
++  //
++  // Now the browser writes the user's own answer there instead - the checkbox
++  // on the welcome screen and the switch in settings, both bound to
++  // metrics::prefs::kMetricsReportingEnabled - so the value means something
++  // again and the constant can go. A person who says no is not asked twice by
++  // a build that ignores them.
++  //
++  // Policy still wins over both: SetUploadConsent() consults
++  // ReportingIsEnforcedByPolicy() before this value is used at all.
+   return install_static::GetCollectStatsConsent();
+ }
+ 

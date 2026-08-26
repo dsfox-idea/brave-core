@@ -52,6 +52,7 @@ import("//brave/components/local_ai/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
+import("//brave/components/traffic_control/buildflags/buildflags.gni")
 import("//brave/components/web_discovery/buildflags/buildflags.gni")
 import("//chrome/browser/buildflags.gni")
 import("//extensions/buildflags/buildflags.gni")
@@ -149,7 +150,9 @@ brave_chrome_browser_deps = [
   "//brave/browser/brave_shields:brave_shields_impl",
   "//brave/browser/brave_stats",
   "//brave/browser/component_updater",
+  "//brave/browser/download",
   "//brave/browser/metrics/buildflags",
+  "//brave/browser/update/buildflags",
   "//brave/browser/misc_metrics",
   "//brave/browser/misc_metrics:misc_metrics_impl",
   "//brave/browser/net:features",
@@ -220,10 +223,12 @@ brave_chrome_browser_deps = [
   "//brave/components/de_amp/common",
   "//brave/components/debounce/content/browser",
   "//brave/components/email_aliases/buildflags",
+  "//brave/components/extension_malware_blocklist/common",
   "//brave/components/global_privacy_control",
   "//brave/components/google_sign_in_permission",
   "//brave/components/growser_ru_trust",
   "//brave/components/https_upgrade_exceptions/browser",
+  "//brave/components/image_metadata_stripper/common",
   "//brave/components/ipfs",
   "//brave/components/ipfs/buildflags",
   "//brave/components/l10n/common",
@@ -251,6 +256,7 @@ brave_chrome_browser_deps = [
   "//brave/components/speech_to_text:buildflags",
   "//brave/components/speedreader/common/buildflags",
   "//brave/components/tor/buildflags",
+  "//brave/components/traffic_control/buildflags",
   "//brave/components/v8/buildflags",
   "//brave/components/version_info",
   "//brave/components/web_discovery/buildflags",
@@ -269,6 +275,7 @@ brave_chrome_browser_deps = [
   "//chrome/browser/bluetooth",
   "//chrome/browser/browsing_data",
   "//chrome/browser/component_updater",
+  "//chrome/browser/content_settings",
   "//chrome/browser/content_settings:content_settings_factory",
   "//chrome/browser/favicon",
   "//chrome/browser/first_run",
@@ -277,6 +284,7 @@ brave_chrome_browser_deps = [
   "//chrome/browser/infobars",
   "//chrome/browser/lifetime",
   "//chrome/browser/metrics",
+  "//chrome/browser/new_tab_page/prefs",
   "//chrome/browser/obsolete_system",
   "//chrome/browser/prefetch",
   "//chrome/browser/prefs:util",
@@ -383,6 +391,7 @@ if (enable_brave_wallet) {
   if (!is_android) {
     brave_chrome_browser_deps += [
       "//brave/browser/brave_wallet/notifications",
+      "//brave/browser/ui/webui/brave_wallet/ledger",
       "//brave/browser/ui/webui/brave_wallet/wallet_panel",
     ]
   }
@@ -502,6 +511,14 @@ if (enable_containers) {
     "//brave/components/containers/content/browser:tab_restore",
     "//brave/components/containers/core/browser",
     "//brave/components/containers/core/common",
+  ]
+}
+
+if (enable_traffic_control) {
+  brave_chrome_browser_deps += [
+    "//brave/browser/traffic_control",
+    "//brave/components/traffic_control/core/browser",
+    "//brave/components/traffic_control/core/common",
   ]
 }
 
@@ -738,6 +755,10 @@ if (is_win) {
   ]
 }
 
+if (is_win || is_mac || is_android) {
+  brave_chrome_browser_deps += [ "//brave/browser/enterprise" ]
+}
+
 if (is_win || is_android) {
   brave_chrome_browser_sources += [
     "//brave/browser/day_zero_browser_ui_expt/day_zero_browser_ui_expt_manager.cc",
@@ -754,6 +775,7 @@ brave_chrome_browser_public_deps = [
   "//brave/components/brave_sync:constants",
   "//brave/components/containers/buildflags",
   "//brave/components/psst/buildflags",
+  "//brave/components/traffic_control/buildflags",
   "//brave/components/v8/buildflags",
   "//brave/components/variations",
 ]
@@ -893,14 +915,12 @@ if (enable_brave_rewards) {
 
 if (toolkit_views) {
   brave_chrome_browser_deps += [
-    "//brave/browser/ui/sidebar:sidebar_impl",
+    "//brave/browser/ui/sidebar",
     "//brave/browser/ui/views/location_bar",
     "//brave/browser/ui/views/page_info",
   ]
-  brave_chrome_browser_allow_circular_includes_from += [
-    "//brave/browser/ui/sidebar:sidebar_impl",
-    "//brave/browser/ui/views/location_bar",
-  ]
+  brave_chrome_browser_allow_circular_includes_from +=
+      [ "//brave/browser/ui/views/location_bar" ]
 }
 
 # https://github.com/brave/brave-browser/issues/41418

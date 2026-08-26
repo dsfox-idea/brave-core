@@ -6,6 +6,8 @@
 #ifndef BRAVE_COMPONENTS_BRAVE_SHIELDS_CORE_BROWSER_AD_BLOCK_DEFAULT_RESOURCE_PROVIDER_H_
 #define BRAVE_COMPONENTS_BRAVE_SHIELDS_CORE_BROWSER_AD_BLOCK_DEFAULT_RESOURCE_PROVIDER_H_
 
+#include <string>
+
 #include "base/functional/callback.h"
 #include "brave/components/brave_shields/core/browser/ad_block_resource_provider.h"
 
@@ -41,6 +43,12 @@ class AdBlockDefaultResourceProvider : public AdBlockResourceProvider {
   friend class ::AdBlockServiceTest;
 
   void OnComponentReady(const base::FilePath&);
+
+  // growser (#87): the resources bundled with the build, used while the
+  // component has delivered nothing - which for a fork is always, since its
+  // update server answers 403 without a Brave services key.
+  void LoadBundledResources();
+  void OnBundledResourcesRead(const std::string& resources_json);
 
   base::FilePath component_path_;
 

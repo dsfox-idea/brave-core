@@ -182,11 +182,6 @@ constexpr NSString* kAdsResourceComponentMetadataVersion = @".v1";
   return adsService != nil && adsService->IsInitialized();
 }
 
-- (BOOL)isOptedInToSearchResultAds {
-  return self.profilePrefService->GetBoolean(
-      brave_ads::prefs::kOptedInToSearchResultAds);
-}
-
 - (BOOL)shouldShowSearchResultAdClickedInfoBar {
   return self.profilePrefService->GetBoolean(
       brave_ads::prefs::kShouldShowSearchResultAdClickedInfoBar);
@@ -240,7 +235,7 @@ constexpr NSString* kAdsResourceComponentMetadataVersion = @".v1";
 - (void)setEnabled:(BOOL)enabled {
   [self setProfilePref:brave_rewards::prefs::kEnabled
                  value:base::Value(enabled)];
-  [self setProfilePref:brave_ads::prefs::kOptedInToNotificationAds
+  [self setProfilePref:brave_ads::prefs::kNotificationsEnabled
                  value:base::Value(enabled)];
 }
 

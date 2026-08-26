@@ -138,8 +138,9 @@ class AIChatRenderViewContextMenuBrowserTest : public InProcessBrowserTest {
     https_server_.ServeFilesFromDirectory(test_data_dir.AppendASCII("leo"));
     ASSERT_TRUE(https_server_.Start());
 
-    // growser: подменю Leo в контекст-меню скрыто по умолчанию (#27) —
-    // включаем явно, чтобы тесты проверяли поведение при доступном Leo.
+    // growser: the Leo submenu in the page context menu is hidden by
+    // default (#27) - turned on here so the tests still exercise the
+    // behaviour with Leo available.
     browser()->profile()->GetPrefs()->SetBoolean(
         ai_chat::prefs::kBraveAIChatContextMenuEnabled, true);
   }
@@ -158,7 +159,7 @@ class AIChatRenderViewContextMenuBrowserTest : public InProcessBrowserTest {
     return browser()->tab_strip_model()->GetActiveWebContents();
   }
 
-  PrefService* GetPrefs() { return browser()->profile()->GetPrefs(); }
+  PrefService* GetPrefs() { return browser()->GetProfile()->GetPrefs(); }
 
   net::EmbeddedTestServer* https_server() { return &https_server_; }
 
@@ -269,7 +270,7 @@ class AIChatRenderViewContextMenuBrowserTest : public InProcessBrowserTest {
     }
 
     return AIChatServiceFactory::GetInstance()
-        ->GetForBrowserContext(browser()->profile())
+        ->GetForBrowserContext(browser()->GetProfile())
         ->GetOrCreateConversationHandlerForContent(
             helper->web_contents_content().content_id(),
             helper->web_contents_content().GetWeakPtr());

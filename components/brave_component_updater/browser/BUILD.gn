@@ -41,6 +41,7 @@ component("browser") {
     "//brave/components/brave_shields/content/test:test_support",
     "//brave/components/brave_shields/core/browser",
     "//brave/components/debounce/core/browser",
+    "//brave/components/extension_malware_blocklist/browser",
     "//brave/components/https_upgrade_exceptions/browser",
     "//brave/components/request_otr/browser",
     "//brave/components/tor",
@@ -73,11 +74,14 @@ component("browser") {
 
   deps = [
     "//base",
+    "//brave/components/resources",
+    "//brave/components/resources:static_resources_grit",
     "//components/component_updater",
     "//components/crx_file",
     "//components/prefs",
     "//components/update_client",
     "//crypto",
+    "//ui/base",
   ]
 
   configs += [ "//build/config/compiler:wexit_time_destructors" ]

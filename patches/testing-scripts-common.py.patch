@@ -1,0 +1,22 @@
+diff --git a/testing/scripts/common.py b/testing/scripts/common.py
+index b8f19747c381ce04f69d2f919ac809a8374a025d..368975ebba8cd073a16c9b678b58827c18884376 100644
+--- a/testing/scripts/common.py
++++ b/testing/scripts/common.py
+@@ -66,9 +66,16 @@ def set_lpac_acls(acl_dir, is_test_script=False):
+   if sys.getwindowsversion().build < 19041:
+     return
+   try:
++    # icacls writes in the console OEM codepage, not in Python's preferred
++    # encoding. On an English Windows its output happens to be ASCII so the
++    # mismatch is invisible, but on a localized one (e.g. ru-RU: OEM cp866)
++    # decoding it as UTF-8 dies with UnicodeDecodeError. Brave sets
++    # PYTHONUTF8=1 for the build, which makes UTF-8 the preferred encoding, so
++    # this is reproducible on every localized Windows. The 'oem' codec is
++    # exactly the console codepage and is Windows-only, as is this function.
+     existing_acls = subprocess.check_output(['icacls', acl_dir],
+                                             stderr=subprocess.STDOUT,
+-                                            universal_newlines=True)
++                                            encoding='oem')
+   except subprocess.CalledProcessError as e:
+     logging.error('Failed to retrieve existing ACLs for directory %s', acl_dir)
+     logging.error('Command output: %s', e.output)

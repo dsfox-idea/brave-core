@@ -6,16 +6,14 @@
 import * as React from 'react'
 
 import DataContext from './state/context'
-// growser: анимированная сцена (sky+hills+абстрактные фигуры) отключена —
-// показываем статичный ночной композит background@2x.webp (#11).
+// growser: the animated scene (sky, hills, abstract shapes) is off - we show
+// the static night composite background@2x.webp instead (#11).
 import { ViewType } from './state/component_types'
 
-import HelpImprove from './components/help-improve'
 import ImportInProgress from './components/import-in-progress'
 import Background from './components/background'
 import Welcome from './components/welcome'
 import Loader from './components/loader'
-import HelpWDP from './components/help-wdp'
 
 const SelectBrowser = React.lazy(() => import('./components/select-browser'))
 const SelectProfile = React.lazy(() => import('./components/select-profile'))
@@ -51,16 +49,8 @@ function MainContainer () {
     mainEl = <p>Failed...</p>
   }
 
-  if (viewType === ViewType.HelpImprove) {
-    mainEl = <HelpImprove />
-  }
-
   if (viewType === ViewType.DefaultBrowser) {
     mainEl = <Welcome />
-  }
-
-  if (viewType === ViewType.HelpWDP) {
-    mainEl = <HelpWDP />
   }
 
   const onBackgroundImgLoad = () => {

@@ -6,65 +6,15 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "brave/browser/ui/brave_view_ids.h"
-#include "brave/browser/ui/views/bookmarks/bookmark_bar_instructions_view.h"
 #include "components/bookmarks/browser/bookmark_model.h"
 #include "ui/views/controls/highlight_path_generator.h"
 
-namespace {
-constexpr int kBookmarkBarInstructionsPadding = 6;
-
-BookmarkBarInstructionsView* GetInstructionView(
-    views::View* bookmark_bar_view) {
-  for (views::View* child : bookmark_bar_view->children()) {
-    if (child->GetID() == BRAVE_VIEW_ID_BOOKMARK_IMPORT_INSTRUCTION_VIEW)
-      return static_cast<BookmarkBarInstructionsView*>(child);
-  }
-  return nullptr;
-}
-
-void LayoutBookmarkBarInstructionsView(views::View* bookmark_bar_view,
-                                       bookmarks::BookmarkModel* model,
-                                       Browser* browser,
-                                       int button_height,
-                                       int x,
-                                       int max_x,
-                                       int y) {
-  // Parent view is not ready to layout bookmark bar instruction view.
-  if (max_x <= 0)
-    return;
-
-  DCHECK(bookmark_bar_view);
-  DCHECK(model);
-  DCHECK(browser);
-
-  // growser: промо-подсказка импорта закладок на панели скрыта (#17) —
-  // не показываем навязчивый nudge на пустой панели. Backlog удаления — #22.
-  const bool show_instructions = false;
-  views::View* import_instruction_view = GetInstructionView(bookmark_bar_view);
-  if (show_instructions) {
-    DCHECK_GE(button_height, 0);
-    DCHECK_GE(x, 0);
-    DCHECK_GE(y, 0);
-
-    if (!import_instruction_view) {
-      import_instruction_view = new BookmarkBarInstructionsView(browser);
-      bookmark_bar_view->AddChildView(import_instruction_view);
-    }
-    import_instruction_view->SetVisible(true);
-    gfx::Size pref = import_instruction_view->GetPreferredSize();
-    import_instruction_view->SetBounds(
-        x + kBookmarkBarInstructionsPadding, y,
-        std::min(static_cast<int>(pref.width()), max_x - x), button_height);
-  } else {
-    if (import_instruction_view)
-      import_instruction_view->SetVisible(false);
-  }
-}
-
-}  // namespace
-
-#define BRAVE_LAYOUT                                                           \
-  LayoutBookmarkBarInstructionsView(this, bookmark_service_->bookmark_model(), \
-                                    browser(), button_height, x, max_x, y);
+// growser: the bookmark-import promo/nudge is out of the build (#22). There
+// used to be a Brave override here injecting the "Import bookmarks"
+// instruction layout into upstream bookmark_bar_view.cc through the
+// BRAVE_LAYOUT macro and a BookmarkBarInstructionsView, created whenever the
+// bar was empty. The class is gone and BRAVE_LAYOUT is empty, so there is no
+// nagging hint. Bookmark import as a menu item is untouched.
+#define BRAVE_LAYOUT
 #include <chrome/browser/ui/views/bookmarks/bookmark_bar_view.cc>
 #undef BRAVE_LAYOUT

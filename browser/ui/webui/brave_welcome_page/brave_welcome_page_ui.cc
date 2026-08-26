@@ -10,9 +10,13 @@
 #include "base/check_deref.h"
 #include "base/containers/flat_set.h"
 #include "base/feature_list.h"
+#include "base/functional/bind.h"
+#include "base/memory/weak_ptr.h"
+#include "base/time/time.h"
 #include "brave/browser/resources/brave_welcome_page/grit/brave_welcome_page_generated_map.h"
 #include "brave/browser/ui/webui/brave_webui_source.h"
 #include "brave/browser/ui/webui/brave_welcome_page/brave_welcome_page.mojom.h"
+#include "brave/browser/ui/webui/brave_welcome_page/brave_welcome_page_prefs.h"
 #include "brave/browser/ui/webui/brave_welcome_page/welcome_page_features.h"
 #include "brave/browser/ui/webui/brave_welcome_page/welcome_page_handler.h"
 #include "brave/browser/ui/webui/settings/brave_import_bulk_data_handler.h"
@@ -32,11 +36,15 @@
 #include "components/grit/brave_components_webui_strings.h"
 #include "components/metrics/metrics_pref_names.h"
 #include "components/prefs/pref_service.h"
+#include "content/public/browser/page_navigator.h"
 #include "content/public/browser/web_contents.h"
 #include "content/public/browser/web_ui.h"
 #include "content/public/browser/web_ui_data_source.h"
 #include "content/public/common/url_constants.h"
+#include "ui/base/page_transition_types.h"
+#include "ui/base/window_open_disposition.h"
 #include "ui/webui/webui_util.h"
+#include "url/gurl.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
 #include "brave/browser/ui/webui/brave_education/brave_education_server_checker.h"
@@ -47,6 +55,11 @@
 namespace {
 
 inline constexpr char kBraveWelcomePageHost[] = "welcome-new";
+
+// growser (#78/#81): no extra page on first run in Japan, here as on the live
+// welcome page. This is brave-core's second welcome implementation, served at
+// growser://welcome-new while the old one still answers growser://welcome
+// (lesson 37) - reachable by typing the address, so it gets the same treatment.
 
 }  // namespace
 
@@ -93,6 +106,9 @@ BraveWelcomePageUI::BraveWelcomePageUI(content::WebUI* web_ui)
   source->AddBoolean("rewardsFeatureEnabled",
                      features.contains(Feature::kRewards));
   source->AddBoolean("vpnFeatureEnabled", features.contains(Feature::kVPN));
+
+  profile->GetPrefs()->SetBoolean(
+      brave_welcome_page::prefs::kHasSeenBraveWelcomePage, true);
 }
 
 BraveWelcomePageUI::~BraveWelcomePageUI() = default;

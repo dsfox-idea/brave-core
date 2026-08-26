@@ -5,6 +5,7 @@
 
 #include "third_party/blink/renderer/core/execution_context/navigator_base.h"
 
+#include "base/check_op.h"
 #include "base/compiler_specific.h"
 #include "base/notreached.h"
 #include "base/system/sys_info.h"
@@ -20,11 +21,11 @@ namespace blink::probe {
 
 void ApplyBraveHardwareConcurrencyOverride(blink::ExecutionContext* context,
                                            unsigned int* hardware_concurrency) {
-  static constexpr unsigned kFakeMinProcessors = 2;
+  static constexpr unsigned kFakeMinProcessors = 4;
   static constexpr unsigned kFakeMaxProcessors = 8;
   unsigned true_value =
       static_cast<unsigned>(base::SysInfo::NumberOfProcessors());
-  if (true_value <= 2) {
+  if (true_value < kFakeMinProcessors) {
     *hardware_concurrency = true_value;
     return;
   }
@@ -42,10 +43,42 @@ void ApplyBraveHardwareConcurrencyOverride(blink::ExecutionContext* context,
       [[fallthrough]];
     }
     case BraveFarblingLevel::BALANCED: {
+      // growser (#82): still farbled, but only to a value a machine could
+      // actually have.
+      //
+      // The old line picked any integer in [2, true_value], which produced
+      // counts like 29 - a number no CPU reports. Reporting an impossible core
+      // count does not hide the visitor among Chrome users, it announces that
+      // this browser rewrites the property, which is exactly the signal we are
+      // trying not to send. Picking from the counts real machines have keeps
+      // the per-origin variation and costs nothing.
+      static constexpr unsigned kPlausibleProcessorCounts[] = {
+          2, 4, 6, 8, 10, 12, 16, 20, 24, 32};
       brave_shields::FarblingPRNG prng =
           brave::BraveSessionCache::From(*context).MakePseudoRandomGenerator();
-      farbled_value =
-          kFakeMinProcessors + (prng() % (true_value + 1 - kFakeMinProcessors));
+      unsigned candidates = 0;
+      for (unsigned count : kPlausibleProcessorCounts) {
+        if (count >= kFakeMinProcessors && count <= true_value) {
+          candidates++;
+        }
+      }
+      // The early return above leaves true_value >= kFakeMinProcessors
+      // (upstream raised that floor from 2 to 4 in Chromium 152), so the
+      // entry equal to it always qualifies.
+      CHECK_GT(candidates, 0u);
+      // Walked rather than indexed: -Wunsafe-buffer-usage rejects subscripting
+      // a raw array, and a second pass is clearer here than a span.
+      unsigned pick = prng() % candidates;
+      for (unsigned count : kPlausibleProcessorCounts) {
+        if (count < kFakeMinProcessors || count > true_value) {
+          continue;
+        }
+        if (pick == 0) {
+          farbled_value = count;
+          break;
+        }
+        pick--;
+      }
       break;
     }
     default:

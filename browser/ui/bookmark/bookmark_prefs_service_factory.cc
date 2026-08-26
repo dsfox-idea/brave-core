@@ -53,9 +53,9 @@ bool BookmarkPrefsServiceFactory::ServiceIsCreatedWithBrowserContext() const {
 
 void BookmarkPrefsServiceFactory::RegisterProfilePrefs(
     user_prefs::PrefRegistrySyncable* registry) {
-  // growser: панель закладок НЕ показывается на NTP по умолчанию (#28) —
-  // иначе на новой вкладке появляется лишний ряд (с кнопкой групп вкладок),
-  // из-за чего тулбар выглядит двойной высоты. Панель доступна через ⌘⇧B.
+  // growser: the bookmark bar is NOT shown on the NTP by default (#28) -
+  // otherwise the new tab gains an extra row (with the tab-groups button) and
+  // the toolbar looks double height. The bar is still there on Cmd+Shift+B.
   registry->RegisterBooleanPref(bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP,
                                 false);
 }

@@ -1,5 +1,6 @@
 include_rules = [
   "+components/component_updater",
+  "+components/grit/brave_components_resources.h",
   "+components/content_settings/core",
   "+components/keyed_service/core/keyed_service.h",
   "+components/pref_registry",
@@ -7,6 +8,7 @@ include_rules = [
   "+components/value_store",
   "+components/sync_preferences",
   "+crypto",
+  "+ui/base/resource/resource_bundle.h",
 ]
 
 specific_include_rules = {

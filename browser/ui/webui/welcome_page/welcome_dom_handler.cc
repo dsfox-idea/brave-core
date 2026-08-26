@@ -5,32 +5,24 @@
 
 #include "brave/browser/ui/webui/welcome_page/welcome_dom_handler.h"
 
-#include <algorithm>
-
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/feature_list.h"
-#include "base/metrics/histogram_macros.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/values.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/common/importer/importer_constants.h"
 #include "brave/components/brave_education/buildflags.h"
-#include "brave/components/constants/pref_names.h"
-#include "brave/components/p3a/pref_names.h"
-#include "brave/components/web_discovery/buildflags/buildflags.h"
-#include "chrome/browser/browser_process.h"
 #include "chrome/browser/metrics/metrics_reporting_state.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/browser_window/public/global_browser_collection.h"
 #include "chrome/browser/ui/browser_window/public/profile_browser_collection.h"
 #include "chrome/browser/ui/chrome_pages.h"
 #include "chrome/common/webui_url_constants.h"
 #include "chrome/grit/branded_strings.h"
-#include "components/prefs/pref_service.h"
-#include "extensions/buildflags/buildflags.h"
 #include "ui/base/l10n/l10n_util.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
@@ -44,21 +36,6 @@ constexpr char16_t kChromeBetaMacBrowserName[] = u"Chrome Beta";
 constexpr char16_t kChromeDevMacBrowserName[] = u"Chrome Dev";
 constexpr char16_t kChromeBetaLinuxBrowserName[] = u"Google Chrome (beta)";
 constexpr char16_t kChromeDevLinuxBrowserName[] = u"Google Chrome (unstable)";
-constexpr char kP3AOnboardingHistogramName[] =
-    "Brave.Welcome.InteractionStatus.2";
-constexpr size_t kMaxP3AOnboardingPhases = 3;
-
-// What was the last screen that you viewed during the browser onboarding
-// process?
-// 0. Only viewed the welcome screen, performed no action
-// 1. Viewed the profile import screen
-// 2. Viewed the diagnostic/analytics consent screen
-// 3. Finished the onboarding process
-void RecordP3AHistogram(size_t last_onboarding_phase) {
-  int answer = std::min(last_onboarding_phase, kMaxP3AOnboardingPhases);
-  UMA_HISTOGRAM_EXACT_LINEAR(kP3AOnboardingHistogramName, answer,
-                             kMaxP3AOnboardingPhases + 1);
-}
 
 bool IsChromeBeta(const std::u16string& browser_name) {
   return browser_name ==
@@ -98,9 +75,7 @@ WelcomeDOMHandler::WelcomeDOMHandler(Profile* profile)
                          weak_ptr_factory_.GetWeakPtr()));
 }
 
-WelcomeDOMHandler::~WelcomeDOMHandler() {
-  RecordP3AHistogram(last_onboarding_phase_);
-}
+WelcomeDOMHandler::~WelcomeDOMHandler() = default;
 
 BrowserWindowInterface* WelcomeDOMHandler::GetBrowser() {
   return GlobalBrowserCollection::GetInstance()->FindBrowserWithTab(
@@ -113,31 +88,41 @@ void WelcomeDOMHandler::RegisterMessages() {
       base::BindRepeating(&WelcomeDOMHandler::HandleImportNowRequested,
                           base::Unretained(this)));
   web_ui()->RegisterMessageCallback(
-      "recordP3A", base::BindRepeating(&WelcomeDOMHandler::HandleRecordP3A,
-                                       base::Unretained(this)));
-  web_ui()->RegisterMessageCallback(
-      "setP3AEnabled", base::BindRepeating(&WelcomeDOMHandler::SetP3AEnabled,
-                                           base::Unretained(this)));
-  web_ui()->RegisterMessageCallback(
       "openSettingsPage",
       base::BindRepeating(&WelcomeDOMHandler::HandleOpenSettingsPage,
-                          base::Unretained(this)));
-  web_ui()->RegisterMessageCallback(
-      "setMetricsReportingEnabled",
-      base::BindRepeating(&WelcomeDOMHandler::HandleSetMetricsReportingEnabled,
                           base::Unretained(this)));
   web_ui()->RegisterMessageCallback(
       "getDefaultBrowser",
       base::BindRepeating(&WelcomeDOMHandler::HandleGetDefaultBrowser,
                           base::Unretained(this)));
   web_ui()->RegisterMessageCallback(
-      "enableWebDiscovery",
-      base::BindRepeating(&WelcomeDOMHandler::HandleEnableWebDiscovery,
-                          base::Unretained(this)));
-  web_ui()->RegisterMessageCallback(
       "getWelcomeCompleteURL",
       base::BindRepeating(&WelcomeDOMHandler::HandleGetWelcomeCompleteURL,
                           base::Unretained(this)));
+  web_ui()->RegisterMessageCallback(
+      "setMetricsReportingEnabled",
+      base::BindRepeating(&WelcomeDOMHandler::HandleSetMetricsReportingEnabled,
+                          base::Unretained(this)));
+}
+
+// growser (#92): the answer to the crash-reporting checkbox on the welcome
+// screen. It goes through ChangeMetricsReportingState() rather than writing the
+// preference, because that function is what also writes the platform consent
+// store the crash handler reads - the registry value on Windows, the consent
+// file on macOS. Writing the pref alone would leave a browser that says it
+// reports crashes and does not, or the reverse.
+//
+// In this build the preference has no other consumer: UMA and P3A are compiled
+// out (#38, #39), so what this governs is crash reports and nothing else.
+void WelcomeDOMHandler::HandleSetMetricsReportingEnabled(
+    const base::ListValue& args) {
+  CHECK_EQ(1U, args.size());
+  if (!args[0].is_bool()) {
+    return;
+  }
+  metrics::ChangeMetricsReportingState(
+      args[0].GetBool(),
+      metrics::ChangeMetricsReportingStateCalledFrom::kUiFirstRun);
 }
 
 void WelcomeDOMHandler::HandleImportNowRequested(const base::ListValue& args) {
@@ -168,15 +153,6 @@ void WelcomeDOMHandler::OnGetDefaultBrowser(
   default_browser_name_ = browser_name;
 }
 
-void WelcomeDOMHandler::HandleRecordP3A(const base::ListValue& args) {
-  CHECK_EQ(1U, args.size());
-  CHECK(args[0].is_int());
-
-  last_onboarding_phase_ = args[0].GetInt();
-
-  RecordP3AHistogram(last_onboarding_phase_);
-}
-
 void WelcomeDOMHandler::HandleOpenSettingsPage(const base::ListValue& args) {
   CHECK(profile_);
   auto* browser = ProfileBrowserCollection::GetForProfile(profile_)
@@ -189,24 +165,6 @@ void WelcomeDOMHandler::HandleOpenSettingsPage(const base::ListValue& args) {
         ui::PAGE_TRANSITION_AUTO_TOPLEVEL, false);
     browser->OpenURL(open_params, /*navigation_handle_callback=*/{});
   }
-}
-
-void WelcomeDOMHandler::HandleSetMetricsReportingEnabled(
-    const base::ListValue& args) {
-  CHECK_EQ(args.size(), 1U);
-  if (!args[0].is_bool()) {
-    return;
-  }
-  bool enabled = args[0].GetBool();
-  ChangeMetricsReportingState(
-      enabled, metrics::ChangeMetricsReportingStateCalledFrom::kUiSettings);
-}
-
-void WelcomeDOMHandler::HandleEnableWebDiscovery(const base::ListValue& args) {
-  CHECK(profile_);
-#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
-  profile_->GetPrefs()->SetBoolean(kWebDiscoveryEnabled, true);
-#endif
 }
 
 void WelcomeDOMHandler::HandleGetWelcomeCompleteURL(
@@ -246,21 +204,4 @@ void WelcomeDOMHandler::OnGettingStartedServerCheck(
   url = GURL(chrome::kChromeUINewTabURL);
 #endif  // BUILDFLAG(ENABLE_BRAVE_EDUCATION)
   ResolveJavascriptCallback(base::Value(callback_id), base::Value(url.spec()));
-}
-
-void WelcomeDOMHandler::SetLocalStateBooleanEnabled(
-    const std::string& path,
-    const base::ListValue& args) {
-  CHECK_EQ(args.size(), 1U);
-  if (!args[0].is_bool()) {
-    return;
-  }
-
-  bool enabled = args[0].GetBool();
-  PrefService* local_state = g_browser_process->local_state();
-  local_state->SetBoolean(path, enabled);
-}
-
-void WelcomeDOMHandler::SetP3AEnabled(const base::ListValue& args) {
-  SetLocalStateBooleanEnabled(p3a::kP3AEnabled, args);
 }

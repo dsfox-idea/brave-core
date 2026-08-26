@@ -7,6 +7,7 @@ import { setIconBasePath } from '@brave/leo/react/icon'
 import { spacing } from '@brave/leo/tokens/css/variables'
 import * as React from 'react'
 import { createRoot } from 'react-dom/client'
+import { getLocale } from '$web-common/locale'
 import StyledComponentsProvider from '$web-common/StyledComponentsProvider'
 import styled from 'styled-components'
 import Feed from './Feed'
@@ -35,8 +36,7 @@ const Header = styled.div`
   gap: ${spacing.m};
   padding-inline: ${spacing.xl};
 
-  background: var(--bn-glass-container);
-  backdrop-filter: blur(64px);
+  background: var(--leo-color-page-background);
 `
 
 const Content = styled.div`
@@ -63,7 +63,9 @@ export function Sidebar() {
       <Header>
         <Controls
           onCustomize={() => getBraveNewsController().openSettings()}
+          onClose={() => getBraveNewsController().closeUI()}
           showMenu
+          title={getLocale(S.BRAVE_NEWS_TITLE)}
         />
       </Header>
       <Content>

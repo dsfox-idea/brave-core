@@ -604,7 +604,6 @@ provideStrings({
   braveWalletNetworkETH: 'Ethereum',
   braveWalletNetworkMain: 'Mainnet',
   braveWalletNetworkTest: 'Test Network',
-  braveWalletNetworkLocalhost: 'Localhost',
   braveWalletAddNetworksAnytimeInSettings:
     'You can add networks anytime in Settings.',
   braveWalletSupportedNetworks: 'Supported networks',
@@ -852,6 +851,8 @@ provideStrings({
   braveWalletConfirmTransactionNext: 'next',
   braveWalletConfirmTransactionFirst: 'first',
   braveWalletConfirmTransactions: 'transactions',
+  braveWalletConfirmTransactionPolkadotSignaturePayload:
+    'Estimated Signature Payload',
   braveWalletConfirmTransactionAccountCreationFee:
     'The associated token account does not exist yet. '
     + 'A small amount of SOL will be spent to create and fund it.',

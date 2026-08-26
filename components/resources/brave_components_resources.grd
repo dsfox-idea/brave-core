@@ -55,14 +55,6 @@
           <include name="IDR_BRAVE_WALLET_LEDGER_BRIDGE_HTML" file="../brave_wallet_ui/ledger/ledger.html" type="BINDATA" />
           <include name="IDR_BRAVE_WALLET_TREZOR_BRIDGE_HTML" file="../brave_wallet_ui/trezor/trezor.html" type="BINDATA" />
         </if>
-
-        <!-- WebUI swap, send, and deposit page resources for Android -->
-        <if expr="is_android">
-          <include name="IDR_BRAVE_WALLET_SWAP_PAGE_HTML" file="../brave_wallet_ui/page/screens/swap/android/swap.html" type="BINDATA" />
-          <include name="IDR_BRAVE_WALLET_SEND_PAGE_HTML" file="../brave_wallet_ui/page/screens/send/android/send.html" type="BINDATA" />
-          <include name="IDR_BRAVE_WALLET_DEPOSIT_PAGE_HTML" file="../brave_wallet_ui/page/screens/fund-wallet/android/deposit-funds.html" type="BINDATA" />
-          <include name="IDR_BRAVE_WALLET_FUND_WALLET_PAGE_HTML" file="../brave_wallet_ui/page/screens/android-buy/android/fund-wallet.html" type="BINDATA" />
-        </if>
       </if>
       <!-- WebUI vpn resources -->
       <if expr="not is_android">
@@ -73,7 +65,7 @@
 
       <!-- Imagery links -->
       <if expr="not is_android">
-        <include name="IDR_BRAVE_NEW_TAB_BACKGROUND1" file="../img/newtab/backgrounds/dylan-malval_sea-min.webp" type="BINDATA" />
+        <include name="IDR_BRAVE_NEW_TAB_BACKGROUND1" file="../img/newtab/backgrounds/growser_bay-01.webp" type="BINDATA" />
       </if>
 
       <!-- WebUI private new tab resources -->
@@ -94,6 +86,9 @@
 
       <part file="../brave_ads/browser/resources/ads_internals_resources.grdp" />
       <part file="../brave_perf_predictor/resources/brave_perf_predictor_resources.grdp" />
+      <part file="../query_filter/resources/query_filter_resources.grdp" />
+      <part file="../brave_shields/resources/adblock/adblock_resources.grdp" />
+      <part file="../brave_component_updater/resources/local_data_resources.grdp" />
       <part file="../misc_metrics/resources/misc_metrics_resources.grdp" />
       <part file="../playlist/content/browser/resources/playlist_resources.grdp" />
       <part file="../brave_news/browser/resources/news_resources.grdp" />

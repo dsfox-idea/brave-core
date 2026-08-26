@@ -25,6 +25,18 @@ inline constexpr char kAdBlockRegionalFilters[] =
     "brave.ad_block.regional_filters";
 inline constexpr char kAdBlockListSubscriptions[] =
     "brave.ad_block.list_subscriptions";
+// growser: set once the default filter list subscriptions were seeded
+// (growser#57). Nothing seeds any more - the catalogue enables the same lists
+// itself (growser#87) - but the pref stays registered because profiles carry
+// it, and the cleanup below reads it.
+inline constexpr char kAdBlockDefaultSubscriptionsSeeded[] =
+    "brave.ad_block.default_subscriptions_seeded";
+// growser (#87): set once the seeded subscriptions have been removed from a
+// profile that still had them. One-time, and separate from the flag above so
+// the two questions - "were they seeded" and "have they been cleaned up" -
+// cannot be confused for each other.
+inline constexpr char kAdBlockSeededSubscriptionsRemoved[] =
+    "brave.ad_block.seeded_subscriptions_removed";
 inline constexpr char kAdBlockDebugMode[] = "brave.ad_block.debug_mode";
 inline constexpr char kAdBlockDeveloperMode[] = "brave.ad_block.developer_mode";
 

@@ -42,7 +42,7 @@ class SidebarServiceFactory : public BrowserContextKeyedServiceFactory {
   // This is the default display order
   static constexpr auto kDefaultBuiltInItemTypes =
       std::to_array<SidebarItem::BuiltInItemType>({
-// growser: убраны Leo AI (kChatUI), Talk (kBraveTalk) и Wallet (kWallet) из панели.
+// growser: Leo AI (kChatUI), Talk (kBraveTalk) and Wallet (kWallet) are out of the panel.
           SidebarItem::BuiltInItemType::kBookmarks,
           SidebarItem::BuiltInItemType::kReadingList,
           SidebarItem::BuiltInItemType::kHistory,

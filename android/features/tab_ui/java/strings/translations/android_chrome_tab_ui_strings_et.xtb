@@ -66,7 +66,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{<ph name="ONE_CLOSED"/> vaheleht suleti}other{<ph name="MANY_CLOSED"/> vahelehte suleti}}</translation>
 <translation id="2894757982205307093">Uus vaheleht grupis</translation>
 <translation id="2918484639460781603">Ava seaded</translation>
-<translation id="4691798003247738043">Brave | Teave selle poe kohta</translation>
+<translation id="4691798003247738043">Growser | Teave selle poe kohta</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{Valitud on <ph name="ITEMS_COUNT_ONE"/>}other{<ph name="ITEMS_COUNT_MANY"/> valitud}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Kinnita vaheleht}other{Kinnita vahelehed}}</translation>
 <translation id="3008554597174452548">Lõpeta toote jälgimine</translation>
@@ -125,7 +125,7 @@
 <translation id="5073204694187207510">Peida täisekraani ruudustik</translation>
 <translation id="5076161749301278626">Kas kuvada poe arvustused?</translation>
 <translation id="5161254044473106830">Pealkiri on kohustuslik</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave sulgeb inaktiivsed vahelehed ja vahelehegrupid <ph name="AUTO_DELETE_DELAY_ONE"/> kuu pärast automaatselt. Saate seda seadetes muuta.}other{Brave sulgeb inaktiivsed vahelehed ja vahelehegrupid <ph name="AUTO_DELETE_DELAY_MANY"/> kuu pärast automaatselt. Saate seda seadetes muuta.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser sulgeb inaktiivsed vahelehed ja vahelehegrupid <ph name="AUTO_DELETE_DELAY_ONE"/> kuu pärast automaatselt. Saate seda seadetes muuta.}other{Growser sulgeb inaktiivsed vahelehed ja vahelehegrupid <ph name="AUTO_DELETE_DELAY_MANY"/> kuu pärast automaatselt. Saate seda seadetes muuta.}}</translation>
 <translation id="5254233580564156835">Mälukasutus: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Viimane vaheleht</translation>
 <translation id="5380159289133845234">Vahelehtede duplikaatide arhiivimine</translation>
@@ -136,7 +136,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Sule <ph name="TABS_COUNT_ONE"/> vahelehega vahelehegrupp, värv on <ph name="COLOR_NAME"/>.}other{Sule <ph name="TABS_COUNT_MANY"/> vahelehega vahelehegrupp, värv on <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">Poe teabe vaatamine, valik saadaval ekraanikuva ülaosas</translation>
 <translation id="5627941783489838464">Vahelehtede värskendused puuduvad</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link Brave'ist}other{<ph name="TABS_COUNT_MANY"/> linki Brave'ist}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link Growser'ist}other{<ph name="TABS_COUNT_MANY"/> linki Growser'ist}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Vahelehe teisaldamine vasakule}other{Vahelehtede teisaldamine vasakule}}</translation>
 <translation id="5746204836956568669">Kas grupeerida kiiremaks töötegemiseks <ph name="NUMBER_OF_TABS"/> vahelehte?</translation>
 <translation id="5773295109010386583">Sulge automaatselt mitteaktiivsed üksused</translation>
@@ -191,7 +191,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> üksus}other{<ph name="TABS_COUNT_MANY"/> üksust}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Taasta <ph name="TABS_COUNT_ONE"/> valitud üksus}other{Taasta <ph name="TABS_COUNT_MANY"/> valitud üksust}}</translation>
 <translation id="753732157349120914">Vahelehtede vaheti</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> arvustus Brave'ist}other{<ph name="REVIEWS_COUNT_MANY"/> arvustust Brave'ist}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> arvustus Growser'ist}other{<ph name="REVIEWS_COUNT_MANY"/> arvustust Growser'ist}}</translation>
 <translation id="7559245342362162951">Kuva grupi vahelehed täisekraani ruudustikus</translation>
 <translation id="7658239707568436148">Tühista</translation>
 <translation id="7688386659311034820">Dialoog Inaktiivsed vahelehed</translation>

@@ -16,7 +16,18 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kAISummarizationAPI, base::FEATURE_DISABLED_BY_DEFAULT},
     {kAIWriterAPI, base::FEATURE_DISABLED_BY_DEFAULT},
     {kLanguageDetectionAPI, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kTranslationAPI, base::FEATURE_DISABLED_BY_DEFAULT},
+    // growser (#70): kTranslationAPI stays ENABLED - it is what gives us page
+    // translation at all. Brave turns it off because the API is a fingerprinting
+    // surface (Translator.availability() tells a site which language packs are
+    // installed, which differs per user) and because it runs a Google binary
+    // locally. Weighed against that: without it translation does not work in
+    // this fork at all - Brave's endpoint refuses a fork, Google's wants a key
+    // Chrome has and we do not, and a paid provider was declined (#45). Chrome
+    // exposes this API to every site by default, so the exposure is the
+    // ordinary one rather than something unusual to us.
+    //
+    // The neighbours above stay disabled: they are the writing and prompting
+    // APIs, which buy us nothing.
     {kUserMediaElement, base::FEATURE_DISABLED_BY_DEFAULT},
 }});
 

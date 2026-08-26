@@ -2,7 +2,7 @@
 <!DOCTYPE translationbundle>
 <translationbundle lang="zh-CN">
 <translation id="1751249301761991853">个人</translation>
-<translation id="3333887201479867589">Brave 奖励</translation>
+<translation id="3333887201479867589">Growser 奖励</translation>
 <translation id="7561196759112975576">始终</translation>
 <translation id="7961015016161918242">一律不</translation>
 <translation id="8507663778530179003">显示所有书签按钮</translation>
@@ -29,14 +29,14 @@
 <translation id="4900351245762303149">安装 Google Widevine</translation>
 <translation id="2313383941300459392">重新启动浏览器以启用 Google Widevine</translation>
 <translation id="8342816622062204340"><ph name="URL"/>希望播放受保护的 Google Widevine 内容，这需要您允许 Android 系统支持 Widevine。允许后，您将同意 Google 的使用条款。</translation>
-<translation id="2200626478572277092">有时需要 Widevine 才能在网页上播放媒体。这是一个从 Google 服务器加载的 Google 扩展程序，Brave 无法进行检查。安装即表示您同意 Google 的使用条款。</translation>
+<translation id="2200626478572277092">有时需要 Widevine 才能在网页上播放媒体。这是一个从 Google 服务器加载的 Google 扩展程序，Growser 无法进行检查。安装即表示您同意 Google 的使用条款。</translation>
 <translation id="4931114810905682683"><ph name="LEARN_MORE_ABOUT_WIDEVINE"/>。若稍后需更改选项，请前往 <ph name="SETTINGS_EXTENIONS_LINK"/>。</translation>
 <translation id="6229752134959014186">详细了解 Widevine</translation>
 <translation id="6061083111980694767"><ph name="SITE_NAME"/>正请求您</translation>
 <translation id="3218385319396786393">已禁止在此网页上运行自动播放</translation>
 <translation id="4988333904713528597">始终允许自动播放<ph name="HOST"/></translation>
 <translation id="4150684676757176434">继续禁止自动播放</translation>
-<translation id="3477357195688115718">Brave 不审查扩展程序的安全性。如果您信任这个开发者，请仅安装这个扩展程序。</translation>
+<translation id="3477357195688115718">Growser 不审查扩展程序的安全性。如果您信任这个开发者，请仅安装这个扩展程序。</translation>
 <translation id="2928844661231356557">授予对蓝牙设备的访问权限将允许该站点读取有关您的身份信息和潜在的敏感信息。仅允许您信任的站点访问蓝牙设备。<ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">Tor 窗口</translation>
 <translation id="7965178729203412357">新 Tor 身份</translation>
@@ -50,10 +50,10 @@
 <translation id="1970435562892104727">这是 Tor 的私人窗口</translation>
 <translation id="1037341607922068025">打开 Tor 的私人窗口</translation>
 <translation id="607982085107926247">在 Tor 中开启：<ph name="ADDRESS"/></translation>
-<translation id="496896260395129787">此 Brave 同步账户已从其他设备删除。如果您未故意禁用同步，<ph name="LINK_TEXT"/></translation>
+<translation id="496896260395129787">此 Growser 同步账户已从其他设备删除。如果您未故意禁用同步，<ph name="LINK_TEXT"/></translation>
 <translation id="4353815407425635948"><ph name="INFOBAR_TEXT"/>重新创建账户</translation>
 <translation id="6965382102122355670">确定</translation>
-<translation id="3975865347033939965">同步服务无法启动，Brave Sync 未运行</translation>
+<translation id="3975865347033939965">同步服务无法启动，Growser Sync 未运行</translation>
 <translation id="4450893287417543264">不再显示</translation>
 <translation id="4595286989346610620">查看详情</translation>
 <translation id="8324318899000695659">拦截元素</translation>
@@ -68,15 +68,15 @@
 <translation id="4759098689276706664">强制粘贴</translation>
 <translation id="1434416574322382019">用 Tor 打开新的私人窗口</translation>
 <translation id="4703780849509456860">用 Tor 在私人窗口中打开链接</translation>
-<translation id="3488584642074079080">用 Tor 在 Brave 私人窗口中打开链接</translation>
+<translation id="3488584642074079080">用 Tor 在 Growser 私人窗口中打开链接</translation>
 <translation id="6313675821927505581">用 Tor 打开新的隐私窗口</translation>
 <translation id="2638041073279639246">用 Tor 在隐私窗口中打开</translation>
-<translation id="3425600262621021599">用 Tor 在 Brave 隐私窗口中打开链接</translation>
+<translation id="3425600262621021599">用 Tor 在 Growser 隐私窗口中打开链接</translation>
 <translation id="474217410105706308">将此标签页静音</translation>
-<translation id="2804710924397009224">隐藏 Brave 奖励图标</translation>
-<translation id="5029193871181468990">隐藏 Brave 奖励图标</translation>
-<translation id="2808103541110899519">隐藏 Brave 的钱包图标</translation>
-<translation id="7595540212376041331">隐藏 Brave 的钱包图标</translation>
+<translation id="2804710924397009224">隐藏 Growser 奖励图标</translation>
+<translation id="5029193871181468990">隐藏 Growser 奖励图标</translation>
+<translation id="2808103541110899519">隐藏 Growser 的钱包图标</translation>
+<translation id="7595540212376041331">隐藏 Growser 的钱包图标</translation>
 <translation id="3893997535859323951">隐藏 Leo AI 图标</translation>
 <translation id="8832245978592881387">在新标签页中打开 Leo AI</translation>
 <translation id="4577675328803804820">在侧边栏中打开 Leo AI</translation>
@@ -92,63 +92,63 @@
 <translation id="2026367923222947564">整个页面</translation>
 <translation id="4928988318462976765">网络扩展程序商店</translation>
 <translation id="9181207987584064303">在网络扩展程序商店中查看</translation>
-<translation id="3161744659507801211">警告：Brave 无法阻止扩展程序记录您的浏览活动。</translation>
+<translation id="3161744659507801211">警告：Growser 无法阻止扩展程序记录您的浏览活动。</translation>
 <translation id="2162109630536601963">如果此扩展程序发出网络请求，则它们将不会使用 Tor 或专用模式。</translation>
 <translation id="2725327089319971976">要在无痕模式下停用该扩展程序，请取消选中此选项。</translation>
-<translation id="438106944087726695">Brave 托管</translation>
-<translation id="3371343170427636147">Brave 浏览器夜间模式应用</translation>
-<translation id="4097979995947147464">Brave 浏览器 Beta 应用</translation>
-<translation id="8303432794159193481">Brave 浏览器开发应用</translation>
-<translation id="8292967014767479012">Brave 浏览器应用</translation>
-<translation id="4743468424889072281">Brave 浏览器开发应用</translation>
+<translation id="438106944087726695">Growser 托管</translation>
+<translation id="3371343170427636147">Growser 浏览器夜间模式应用</translation>
+<translation id="4097979995947147464">Growser 浏览器 Beta 应用</translation>
+<translation id="8303432794159193481">Growser 浏览器开发应用</translation>
+<translation id="8292967014767479012">Growser 浏览器应用</translation>
+<translation id="4743468424889072281">Growser 浏览器开发应用</translation>
 <translation id="5039804452771397117">允许</translation>
 <translation id="7053983685419859001">禁止</translation>
-<translation id="1679356339067548863">Brave 浏览器崩溃或无响应时自动发送诊断报告，帮助提高产品稳定性。</translation>
+<translation id="1679356339067548863">Growser 浏览器崩溃或无响应时自动发送诊断报告，帮助提高产品稳定性。</translation>
 <translation id="660171790038410175"><ph name="BROWSER_NAME"/>意外退出</translation>
-<translation id="1324417023773393937">Brave 浏览器</translation>
+<translation id="1324417023773393937">Growser 浏览器</translation>
 <translation id="7276554663454265692">您可以随时在浏览器设置中更改 <ph name="SETTING_TEXT"/>。</translation>
 <translation id="6873781976650514089">此设置</translation>
 <translation id="4684633335323013758">此网站已要求您提供<ph name="PART_ONE"/>一般所在位置<ph name="PART_ONE_END"/>。<ph name="PART_TWO"/>了解更多<ph name="PART_TWO_END"/></translation>
 <translation id="8117247596084706514">此网站已要求您提供<ph name="PART_ONE"/>精确的所在位置<ph name="PART_ONE_END"/>。<ph name="PART_TWO"/>了解更多<ph name="PART_TWO_END"/></translation>
-<translation id="5486652646100591203">此网站已要求您提供<ph name="PART_ONE"/>精确的所在位置<ph name="PART_ONE_END"/>。Brave 将只能提供<ph name="PART_TWO"/>一般所在位置<ph name="PART_TWO_END"/>资料，因为<ph name="PART_THREE"/>定位服务<ph name="PART_THREE_END"/> 已停用。<ph name="PART_FOUR"/>了解更多<ph name="PART_FOUR_END"/></translation>
+<translation id="5486652646100591203">此网站已要求您提供<ph name="PART_ONE"/>精确的所在位置<ph name="PART_ONE_END"/>。Growser 将只能提供<ph name="PART_TWO"/>一般所在位置<ph name="PART_TWO_END"/>资料，因为<ph name="PART_THREE"/>定位服务<ph name="PART_THREE_END"/> 已停用。<ph name="PART_FOUR"/>了解更多<ph name="PART_FOUR_END"/></translation>
 <translation id="8915916167043355778">全部关闭</translation>
 <translation id="4870911314065352661">关闭所有标签页？</translation>
 <translation id="7551864359422178684">在此浏览器窗口中还有 <ph name="NUMBER_OF_TABS"/> 个标签页处于开启状态。</translation>
 <translation id="2571596981920752023"><ph name="NUMBER_OF_TABS"/> 个标签页</translation>
 <translation id="1307431692088049276">不要再问我了</translation>
-<translation id="6919364924256365253">不要谷歌。不能必应。只是使用 Brave。</translation>
-<translation id="2640297688005939449">Brave 搜索不会对您进行个人档案分析。它是 100% 独立的。</translation>
+<translation id="6919364924256365253">不要谷歌。不能必应。只是使用 Growser。</translation>
+<translation id="2640297688005939449">Growser 搜索不会对您进行个人档案分析。它是 100% 独立的。</translation>
 <translation id="7295094278358921487">您会在搜索里找到，搜索记录是无痕的。</translation>
-<translation id="3462465068145800637">Brave 搜索不会对您进行个人档案分析。它 100% 独立于大型科技公司。</translation>
+<translation id="3462465068145800637">Growser 搜索不会对您进行个人档案分析。它 100% 独立于大型科技公司。</translation>
 <translation id="42032117189492785">人工智能搜索，独一无二的索引。</translation>
 <translation id="8606416238399082160">完全无痕、100% 独立，并具有强大的人工智能功能。</translation>
 <translation id="4381193110021038941">获得更好的结果</translation>
-<translation id="3846545273704969734">经独立验证，Brave 搜索的搜索结果优于 Bing（或 Bing 克隆产品，如 DuckDuckGo）。</translation>
+<translation id="3846545273704969734">经独立验证，Growser 搜索的搜索结果优于 Bing（或 Bing 克隆产品，如 DuckDuckGo）。</translation>
 <translation id="2841164160723712537">改善搜索结果</translation>
-<translation id="4639001639513524869">在大多数查询中，Brave 搜索的结果都比 DuckDuckGo 好。而且它是真正私密的。</translation>
+<translation id="4639001639513524869">在大多数查询中，Growser 搜索的结果都比 DuckDuckGo 好。而且它是真正私密的。</translation>
 <translation id="5240031343741051161">尝试Brave搜索</translation>
 <translation id="5234764350956374838">关闭</translation>
-<translation id="8722651357687610395">将 Brave 设置为默认</translation>
+<translation id="8722651357687610395">将 Growser 设置为默认</translation>
 <translation id="2370739752330685659">回头再说</translation>
-<translation id="5100490448228945668">解除 Brave 搜索转换功能，按回车键删除此建议</translation>
-<translation id="6213208892248046484">切换至 Brave 搜索</translation>
+<translation id="5100490448228945668">解除 Growser 搜索转换功能，按回车键删除此建议</translation>
+<translation id="6213208892248046484">切换至 Growser 搜索</translation>
 <translation id="9194637241566114638">发送匿名的使用数据以协助改善<ph name="SEARCH_NAME"/>。<ph name="MORE_INFO"/></translation>
-<translation id="7404610376221341525">Brave 搜索</translation>
+<translation id="7404610376221341525">Growser 搜索</translation>
 <translation id="8184318863960255706">更多信息</translation>
 <translation id="780301667611848630">不用了，谢谢</translation>
-<translation id="1162706247109707219">通过单击“确定”，确认在更新到 Windows 10 或更高版本之前，您安装的 Brave 浏览器将不会收到关键安全补丁。此警告将不会再次显示。</translation>
-<translation id="2971591422768125177">点击“确定”即表示您确认，在更新到 macOS 13 或更高版本之前，您安装的 Brave 浏览器将不会收到关键安全补丁。此警告将不会再次显示。</translation>
+<translation id="1162706247109707219">通过单击“确定”，确认在更新到 Windows 10 或更高版本之前，您安装的 Growser 浏览器将不会收到关键安全补丁。此警告将不会再次显示。</translation>
+<translation id="2971591422768125177">点击“确定”即表示您确认，在更新到 macOS 13 或更高版本之前，您安装的 Growser 浏览器将不会收到关键安全补丁。此警告将不会再次显示。</translation>
 <translation id="6020553119523541665">该选项卡在另一个窗口中处于活动状态</translation>
 <translation id="4987392683074136770">点击该选项卡，其内容将显示在此窗口中</translation>
 <translation id="8355523213948477234">分割视图菜单按钮</translation>
 <translation id="6040143037577758943">关闭</translation>
-<translation id="6665472986740899785">Brave 的通知广告</translation>
-<translation id="5253166205743627564">感谢您通过点击私人广告支持 Brave 搜索。与大型科技公司不同，我们以匿名方式衡量广告效果，以保护您的隐私。</translation>
+<translation id="6665472986740899785">Growser 的通知广告</translation>
+<translation id="5253166205743627564">感谢您通过点击私人广告支持 Growser 搜索。与大型科技公司不同，我们以匿名方式衡量广告效果，以保护您的隐私。</translation>
 <translation id="8748471354357836070">了解更多 / 退出选择</translation>
-<translation id="5927196110206824867">赞助背景图片支持 Brave 实现构建独立与用户优先网络的使命。不同于大型科技公司，我们通过匿名方式衡量广告效果，以保护您的隐私。</translation>
+<translation id="5927196110206824867">赞助背景图片支持 Growser 实现构建独立与用户优先网络的使命。不同于大型科技公司，我们通过匿名方式衡量广告效果，以保护您的隐私。</translation>
 <translation id="4174337572777167894">Web Discovery Project</translation>
-<translation id="8659271182272561965">贡献一些匿名的搜索和浏览数据，以改进 Brave 搜索。</translation>
-<translation id="1516554614404600536">Brave 工具提示</translation>
+<translation id="8659271182272561965">贡献一些匿名的搜索和浏览数据，以改进 Growser 搜索。</translation>
+<translation id="1516554614404600536">Growser 工具提示</translation>
 <translation id="4375473250631001683">隐藏侧边栏图标</translation>
 <translation id="2613033293035359003">隐藏侧边栏</translation>
 <translation id="4233010476457917696">显示侧边栏</translation>
@@ -181,13 +181,13 @@
 <translation id="2702801445560668637">读取列表</translation>
 <translation id="2533715613366623756">书签管理器</translation>
 <translation id="3405021928725149239">书签管理器</translation>
-<translation id="6284218950354553099">自动向 Brave 发送每日使用 ping</translation>
-<translation id="694500751416448436">这种私人 ping 可以让 Brave 估算活跃用户数量</translation>
-<translation id="5047771074267454980">Brave 使用完全隐私的产品分析来估计某些功能的整体使用情况</translation>
+<translation id="6284218950354553099">自动向 Growser 发送每日使用 ping</translation>
+<translation id="694500751416448436">这种私人 ping 可以让 Growser 估算活跃用户数量</translation>
+<translation id="5047771074267454980">Growser 使用完全隐私的产品分析来估计某些功能的整体使用情况</translation>
 <translation id="8712637175834984815">知道了</translation>
 <translation id="4394049700291259645">停用</translation>
 <translation id="7142548388914389999">允许保留隐私的产品分析 (P3A)</translation>
-<translation id="8707615221880318679">这些私人回复有助于 Brave 估算某些功能的总体使用情况，并使其更适合您</translation>
+<translation id="8707615221880318679">这些私人回复有助于 Growser 估算某些功能的总体使用情况，并使其更适合您</translation>
 <translation id="193368604235852218">Web3</translation>
 <translation id="4738583579791001083">Web3 域</translation>
 <translation id="4552520379838695057">抱歉，该页面缺失。</translation>
@@ -195,7 +195,7 @@
 <translation id="2609895996619941644">想要检查 Wayback Machine 上是否有保存的版本？</translation>
 <translation id="8010675257566903381">Wayback Machine 未找到此网站已保存的版本。</translation>
 <translation id="1207694258341311738">查看已保存的版本</translation>
-<translation id="191143826155037518">根据 <ph name="BEGIN_LINK_MPL"/>Mozilla Public License 2.0<ph name="END_LINK_MPL"/> (MPL)，您可以使用 Brave（这里有 <ph name="BEGIN_LINK_OSS"/>根据各种其他许可获得的开源软件）<ph name="END_LINK_OSS"/>。
+<translation id="191143826155037518">根据 <ph name="BEGIN_LINK_MPL"/>Mozilla Public License 2.0<ph name="END_LINK_MPL"/> (MPL)，您可以使用 Growser（这里有 <ph name="BEGIN_LINK_OSS"/>根据各种其他许可获得的开源软件）<ph name="END_LINK_OSS"/>。
         您可以自己阅读一下 <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>有关如何自行下载和构建<ph name="END_LINK_BUILD_INSTRUCTIONS"/>用来创建此副本的特定 <ph name="BEGIN_LINK_SOURCE_CODE"/>源代码的说明<ph name="END_LINK_SOURCE_CODE"/>。</translation>
 <translation id="4474155171896946103">为所有标签页添加书签...</translation>
 <translation id="3987546108749866209">使用垂直标签</translation>
@@ -229,16 +229,16 @@
 <translation id="5268098808165185458">从图像中复制文本……</translation>
 <translation id="4046485130884276245">文本已从图像中复制成功</translation>
 <translation id="3639779775496569782">文本复制失败</translation>
-<translation id="3960619311638643872">Brave VPN</translation>
-<translation id="2506438154311626334">在 Brave VPN 中使用 WireGuard 协议</translation>
-<translation id="8519170191215826548">连接 Brave VPN 时无法更改此设置。</translation>
+<translation id="3960619311638643872">Growser VPN</translation>
+<translation id="2506438154311626334">在 Growser VPN 中使用 WireGuard 协议</translation>
+<translation id="8519170191215826548">连接 Growser VPN 时无法更改此设置。</translation>
 <translation id="1177917174080821247">显示 VPN 托盘图标</translation>
-<translation id="3747459938663420752">启用后，Windows 任务栏将显示 Brave VPN 的托盘图标。</translation>
+<translation id="3747459938663420752">启用后，Windows 任务栏将显示 Growser VPN 的托盘图标。</translation>
 <translation id="4235920711083356755">显示 VPN 按钮</translation>
 <translation id="4070612712151038707">显示工具栏中的 VPN 按钮</translation>
 <translation id="7705524343798198388">VPN</translation>
 <translation id="8593397073757037946">开/关 VPN</translation>
-<translation id="2345974803401546682">关于 Brave VPN</translation>
+<translation id="2345974803401546682">关于 Growser VPN</translation>
 <translation id="4378551569595875038">正在连接…</translation>
 <translation id="3368922792935385530">已连接</translation>
 <translation id="1536754031901697553">正在断开连接…</translation>
@@ -253,7 +253,7 @@
 <translation id="945522503751344254">发送反馈</translation>
 <translation id="3015685033234401792">管理我的计划</translation>
 <translation id="4989337484121655457">需要完全的磁盘访问权限</translation>
-<translation id="8025559074845816210">Brave  需要完全的磁盘访问权限才能从 Safari 导入书签。</translation>
+<translation id="8025559074845816210">Growser  需要完全的磁盘访问权限才能从 Safari 导入书签。</translation>
 <translation id="8515328844674404333">了解如何从系统偏好设置中授予完全的磁盘访问权限。</translation>
 <translation id="6414878884710400018">打开系统偏好设置</translation>
 <translation id="4759238208242260848">下载内容</translation>
@@ -342,7 +342,7 @@
 <translation id="6847541693235449912">开始</translation>
 <translation id="2079545284768500474">撤消</translation>
 <translation id="1533980864758658574">已创建“<ph name="TOPIC"/>”的新窗口</translation>
-<translation id="7985042437720138349">此功能会将已打开的标签页的数据发送给 Leo，即 Brave 的 AI 驱动浏览器助手。</translation>
+<translation id="7985042437720138349">此功能会将已打开的标签页的数据发送给 Leo，即 Growser 的 AI 驱动浏览器助手。</translation>
 <translation id="6165508094623778733">了解更多</translation>
 <translation id="7557539689487606886">订阅 Premium</translation>
 <translation id="1035309871698658326">开启后，这会自动将所有非无痕标签页的标题和来源发送给 Leo 以进行分类。</translation>
@@ -352,16 +352,16 @@
 <translation id="515462386448976244">隐私设置建议工具</translation>
 <translation id="6911328085206170823">不为此站点显示</translation>
 <translation id="6157507628047001360">禁用隐私设置调整</translation>
-<translation id="9082792303833649978">此设置由您的管理员或其他 Brave 策略管理。</translation>
+<translation id="9082792303833649978">此设置由您的管理员或其他 Growser 策略管理。</translation>
 <translation id="1940221956626514677">自定义工具栏</translation>
 <translation id="6501807887341963552">主题和颜色</translation>
 <translation id="6724227215236550330">保存的密码会在此处显示。如要将密码导入到此设备上的 <ph name="BRAND"/>，请<ph name="BEGIN_LINK"/>选择 CSV 文件<ph name="END_LINK"/></translation>
 <translation id="3575561030014162610">如要将密码导入到此设备上的 <ph name="BRAND"/>，请选择 CSV 文件</translation>
 <translation id="8570228839666486945">设备端AI</translation>
-<translation id="3456536577668402695">您的搜索和页面内容在此设备上处理。不会发送任何内容给 Brave 或被人工审核员看到。</translation>
+<translation id="3456536577668402695">您的搜索和页面内容在此设备上处理。不会发送任何内容给 Growser 或被人工审核员看到。</translation>
 <translation id="4751537843966994505">语义历史记录搜索</translation>
 <translation id="6175973371938222040">在本地为您访问的页面建立索引，以便您可以按含义搜索历史记录。所有处理都在本设备上进行。</translation>
-<translation id="9156965752763025780">您所做的更改会在下次重新启动 Brave 时生效。</translation>
+<translation id="9156965752763025780">您所做的更改会在下次重新启动 Growser 时生效。</translation>
 <translation id="7179921470347911571">立即重新启动</translation>
 <translation id="1426410128494586442">是</translation>
 <translation id="4250680216510889253">否</translation>
@@ -372,7 +372,7 @@
 <translation id="984275831282074731">付款方式</translation>
 <translation id="6278858909990433658">导入的个人资料仍在使用中</translation>
 <translation id="9071187015476020102">如要导入扩展或其他设置，请先关闭您要导入的浏览器。</translation>
-<translation id="2044383478723007273">Brave 颜色</translation>
+<translation id="2044383478723007273">Growser 颜色</translation>
 <translation id="1807246157184219062">亮</translation>
 <translation id="2414886740292270097">暗</translation>
 <translation id="1360441190790440400">与 Linux 相同</translation>
@@ -381,7 +381,7 @@
 <translation id="4171684937791228083">始终在全屏显示工具栏</translation>
 <translation id="5840822070878669614">打开应用商店</translation>
 <translation id="1692470335103807198">获得更多主题</translation>
-<translation id="2906510232093002459">Brave 默认图片</translation>
+<translation id="2906510232093002459">Growser 默认图片</translation>
 <translation id="8000020256436988724">工具栏</translation>
 <translation id="8076492880354921740">标签页</translation>
 <translation id="8168435359814927499">内容</translation>
@@ -431,7 +431,7 @@
 <translation id="8820817407110198400">书签栏</translation>
 <translation id="4144468798716165316">快捷指令</translation>
 <translation id="7310387888625228830">Leo 人工智能助手</translation>
-<translation id="5222974844674487962">显示 Brave 新闻按钮</translation>
+<translation id="5222974844674487962">显示 Growser 新闻按钮</translation>
 <translation id="2085436423511121572">显示 Leo AI 按钮</translation>
 <translation id="6156323911414505561">显示书签栏</translation>
 <translation id="4054323497808446566">所有页面均可见书签栏</translation>
@@ -456,10 +456,10 @@
 <translation id="7537601449003285327">固定在任务栏上</translation>
 <translation id="7461924472993315131">固定</translation>
 <translation id="735832369569964359">点击大头针并在以下 Windows 通知中确认</translation>
-<translation id="7506648566440714944">Brave 已被固定</translation>
+<translation id="7506648566440714944">Growser 已被固定</translation>
 <translation id="2307973900865360088">保存于 Dock</translation>
 <translation id="239275665037555969">Dock</translation>
-<translation id="4057614912106618659">Brave 已位于 Dock 中</translation>
+<translation id="4057614912106618659">Growser 已位于 Dock 中</translation>
 <translation id="3195845168740336657">Shields 设置</translation>
 <translation id="754769152790647708">Shields 状态</translation>
 <translation id="4868109105992358853">Shields 可以屏蔽追踪器、广告和指纹识别</translation>
@@ -529,7 +529,7 @@
 <translation id="2718718846210516552">未找到小脚本。</translation>
 <translation id="4088315951291671239">请勿在此处粘贴您不理解或未经您审查的代码。这可能会让攻击者窃取你的身份信息或控制你的电脑。</translation>
 <translation id="3020183492814296499">快捷方式</translation>
-<translation id="2935698011275148880">Brave Origin</translation>
+<translation id="2935698011275148880">Growser Origin</translation>
 <translation id="3486906647205325617">某些更改需要重启浏览器才能完全生效。</translation>
 <translation id="1919345977826869612">广告</translation>
 <translation id="944736176598169208">奖励</translation>
@@ -543,25 +543,25 @@
 <translation id="5990642573624858459">统计报告</translation>
 <translation id="6560669651825861597">影响所有浏览器配置文件</translation>
 <translation id="2441719842399509963">重置为默认值</translation>
-<translation id="2587535830241068901">在支持 Brave 的同时定制您的浏览器</translation>
-<translation id="123297831435065577">Brave Origin 是一款为不需要支持 Brave 作为业务的所有功能但仍想要只有 Brave 提供的隐私保护的用户提供的付费浏览器版本。Origin 用户将继续受益于我们行业领先的隐私、广告拦截和速度（通过 Brave 盾牌），以及定期的软件更新、Chromium 补丁和安全及隐私改进。</translation>
+<translation id="2587535830241068901">在支持 Growser 的同时定制您的浏览器</translation>
+<translation id="123297831435065577">Growser Origin 是一款为不需要支持 Growser 作为业务的所有功能但仍想要只有 Growser 提供的隐私保护的用户提供的付费浏览器版本。Origin 用户将继续受益于我们行业领先的隐私、广告拦截和速度（通过 Growser 盾牌），以及定期的软件更新、Chromium 补丁和安全及隐私改进。</translation>
 <translation id="7984508421152399880">立即购买</translation>
-<translation id="5567412479632285879">Brave 奖励已禁用</translation>
+<translation id="5567412479632285879">Growser 奖励已禁用</translation>
 <translation id="413570371620795359">打开奖励面板，启用并开始体验服务</translation>
-<translation id="1051600834033686945">打开完整的 Brave 奖励设置</translation>
-<translation id="8826461509529116322">显示 Brave 奖励按钮</translation>
+<translation id="1051600834033686945">打开完整的 Growser 奖励设置</translation>
+<translation id="8826461509529116322">显示 Growser 奖励按钮</translation>
 <translation id="4859866966646365361">仅限广告屏蔽模式</translation>
 <translation id="4146834954839563870">使用 "仅限广告屏蔽" 模式</translation>
-<translation id="420732343671200734">仅广告屏蔽模式保留 Brave 盾牌 的核心广告屏蔽规则。警告：移除所有隐私保护。请注意，对于被 Brave 隐私保护功能破坏的个别网站，您可以将 盾牌 设置为 DOWN。这是一种实验模式。 <ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
+<translation id="420732343671200734">仅广告屏蔽模式保留 Growser 盾牌 的核心广告屏蔽规则。警告：移除所有隐私保护。请注意，对于被 Growser 隐私保护功能破坏的个别网站，您可以将 盾牌 设置为 DOWN。这是一种实验模式。 <ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
 <translation id="3055675200351793825">屏蔽选项目前已禁用。</translation>
-<translation id="2687830906359353344">仅广告屏蔽模式保留了 Brave 盾牌 的核心广告屏蔽规则，并关闭了隐私保护功能。如果您想启用标准 盾牌，请禁用此模式。</translation>
+<translation id="2687830906359353344">仅广告屏蔽模式保留了 Growser 盾牌 的核心广告屏蔽规则，并关闭了隐私保护功能。如果您想启用标准 盾牌，请禁用此模式。</translation>
 <translation id="3809423899581611047">关闭 "仅限广告屏蔽" 模式</translation>
 <translation id="9185018653595759199">阻止社交媒体</translation>
 <translation id="863171915776379000">允许Facebook登陆和嵌入帖子</translation>
 <translation id="7791141927430186653">允许 X（原为 Twitter）嵌入的推文</translation>
 <translation id="958971637207126733">允许 LinkedIn 嵌入帖子</translation>
-<translation id="1244912498725894944">某些 cookie 设置由 Brave 盾牌控制。您可以在&lt;a href="/content/braveShields"&gt;此处&lt;/a&gt;查看这些设置。</translation>
-<translation id="5352519841984162795">此设置由 Brave 盾牌控制。</translation>
+<translation id="1244912498725894944">某些 cookie 设置由 Growser 盾牌控制。您可以在&lt;a href="/content/braveShields"&gt;此处&lt;/a&gt;查看这些设置。</translation>
+<translation id="5352519841984162795">此设置由 Growser 盾牌控制。</translation>
 <translation id="352287031024189516">此设置由 Google Sign-in 控制。</translation>
 <translation id="8792121506918889955">WebRTC IP 处理政策</translation>
 <translation id="8798099450830957504">默认</translation>
@@ -570,7 +570,7 @@
 <translation id="1689062823386843231">禁用无代理的 UDP</translation>
 <translation id="3540231253392253941">使用 Google 服务进行推送消息传递</translation>
 <translation id="5813105074916486721">本地历史记录保留时间</translation>
-<translation id="5671611745062206644">Brave 在本地存储您浏览历史记录的时长</translation>
+<translation id="5671611745062206644">Growser 在本地存储您浏览历史记录的时长</translation>
 <translation id="7184510058087008090">1 天</translation>
 <translation id="8097397186614425669">1 周</translation>
 <translation id="1600157116238060201">1 个月</translation>
@@ -580,14 +580,14 @@
 <translation id="6796569320325473726">5 年</translation>
 <translation id="1658834457013045127">始终</translation>
 <translation id="933652931229970927">自动发送诊断报告</translation>
-<translation id="8868426106596092089">Brave 浏览器崩溃或无响应时自动发送诊断报告，帮助提高产品稳定性</translation>
+<translation id="8868426106596092089">Growser 浏览器崩溃或无响应时自动发送诊断报告，帮助提高产品稳定性</translation>
 <translation id="4891600875049212418">访问敏感网站时不记录在案</translation>
 <translation id="509873765238158442">阻止  Microsoft Recall</translation>
-<translation id="4763421121695677716">在 Microsoft Windows 电脑上阻止 Recall 功能，停止自动截取任何打开的 Brave 标签页的屏幕截图。</translation>
+<translation id="4763421121695677716">在 Microsoft Windows 电脑上阻止 Recall 功能，停止自动截取任何打开的 Growser 标签页的屏幕截图。</translation>
 <translation id="1968895725257436430">资料合集</translation>
 <translation id="1700052872056357670">退出时删除数据</translation>
-<translation id="216468847346280584">清除 Brave 广告数据…</translation>
-<translation id="2808630562319398131">重置 Brave Rewards 计划数据...</translation>
+<translation id="216468847346280584">清除 Growser 广告数据…</translation>
+<translation id="2808630562319398131">重置 Growser Rewards 计划数据...</translation>
 <translation id="6438096877646138757">关闭时所有网站窗口时清除 cookie 的网站</translation>
 <translation id="2988792685798128092">站点关闭时清除</translation>
 <translation id="7702907602086592255">域名</translation>
@@ -610,7 +610,7 @@
 <translation id="3432762828853624962">Shared Workers</translation>
 <translation id="2927017729816812676">缓存空间</translation>
 <translation id="1389601498324964367">配额管理存储</translation>
-<translation id="814018970995616154">检查带有保存在 Brave 中的不安全站点列表的 URL。</translation>
+<translation id="814018970995616154">检查带有保存在 Growser 中的不安全站点列表的 URL。</translation>
 <translation id="1144810021918451336">不能保护您免受危险网站、下载和扩展名的侵害。</translation>
 <translation id="4905744245455598930">防止已知危险的网站、下载和扩展。</translation>
 <translation id="5570470519803062774">站点和屏蔽设置</translation>
@@ -636,9 +636,9 @@
 <translation id="1145070115730668595">不允许网站打开 Leo AI 聊天</translation>
 <translation id="5565355416171743213">开始使用同步</translation>
 <translation id="4332558599726753990">同步设置</translation>
-<translation id="2187778349654214731">首先，请在所有需要同步的设备上安装 Brave。然后，请通过同步代码将它们妥善的连接在一起。</translation>
+<translation id="2187778349654214731">首先，请在所有需要同步的设备上安装 Growser。然后，请通过同步代码将它们妥善的连接在一起。</translation>
 <translation id="7530575064080939974">管理您已同步的设备</translation>
-<translation id="8668872235103666008">无法在您的设备上同步 Brave</translation>
+<translation id="8668872235103666008">无法在您的设备上同步 Growser</translation>
 <translation id="7575156386943878014">同步管理器</translation>
 <translation id="1755198127524719638">同步设置</translation>
 <translation id="7558480201297099157">管理您要在设备间同步的信息。这些设置只应用于此设备。</translation>
@@ -677,23 +677,23 @@
 <translation id="4432071071853308688">此代码为空</translation>
 <translation id="955848693465029904">内部同步设置错误</translation>
 <translation id="7456398316301207582">内部账户删除错误</translation>
-<translation id="859506441384380749">此代码由已弃用的 Brave 版本生成，请先升级您的其他设备</translation>
+<translation id="859506441384380749">此代码由已弃用的 Growser 版本生成，请先升级您的其他设备</translation>
 <translation id="3132642509209154999">此代码已过期。请在其他设备上生成新的代码，然后重试。</translation>
 <translation id="2859229680945501779">此代码无效。请检查您设备上的时间和时区设置是否正确。</translation>
 <translation id="2339730291919608488">离开同步链</translation>
 <translation id="115699408012835975">如果您重置同步，则您需要重新输入另一台设备的同步代码，以便与其进行同步。您确定想要继续吗？</translation>
 <translation id="6092564993102418148">你确定要从同步链中删除所选设备吗?</translation>
-<translation id="4400414577602898435">警告：这会与生成这些代码单词的设备共享您的 Brave 数据，可能包括您的密码。
+<translation id="4400414577602898435">警告：这会与生成这些代码单词的设备共享您的 Growser 数据，可能包括您的密码。
 
 请再次确认这些单词由您所拥有的设备生成。
 
 确定要这么做吗？</translation>
-<translation id="7443185843787879670">Brave 无法访问您操作系统的安全存储。这用于保护密码和 cookie 等数据； Brave Sync 还需要在设备之间连接您的浏览器配置文件。这意味着 Brave Sync 未运行。要解决此问题，请参阅 <ph name="BEGIN_LINK_SYNC_GUIDE"/>Brave Sync 故障排除指南<ph name="END_LINK_SYNC_GUIDE"/>。</translation>
-<translation id="6802736947576520626">似乎同步加密密钥与您第一次设置 Brave 同步时使用的密钥不同。最简单的解决方法是使用其他已同步设备的密码短语重置并重新加入同步链。</translation>
+<translation id="7443185843787879670">Growser 无法访问您操作系统的安全存储。这用于保护密码和 cookie 等数据； Growser Sync 还需要在设备之间连接您的浏览器配置文件。这意味着 Growser Sync 未运行。要解决此问题，请参阅 <ph name="BEGIN_LINK_SYNC_GUIDE"/>Growser Sync 故障排除指南<ph name="END_LINK_SYNC_GUIDE"/>。</translation>
+<translation id="6802736947576520626">似乎同步加密密钥与您第一次设置 Growser 同步时使用的密钥不同。最简单的解决方法是使用其他已同步设备的密码短语重置并重新加入同步链。</translation>
 <translation id="4889767840132638381">重置并重新加入同步链</translation>
 <translation id="1680065323266179640">删除同步账户</translation>
 <translation id="9064376100690171155">永久删除账户</translation>
-<translation id="228906529296554286">若删除您的账户将删除 Brave 服务器上的加密数据，并禁用您的所有连接设备上的同步功能。</translation>
+<translation id="228906529296554286">若删除您的账户将删除 Growser 服务器上的加密数据，并禁用您的所有连接设备上的同步功能。</translation>
 <translation id="7578652532113583362">但是，将不会删除本地存储在这些设备上的数据。</translation>
 <translation id="2516405584294312544">这种删除是永久性的，没有办法恢复数据。您应该决定
 再次开始使用同步时，您需要创建一个新账户，并逐个重新添加每个设备。</translation>
@@ -704,13 +704,13 @@
 <translation id="7029809446516969842">密码</translation>
 <translation id="1571419474754278280">Leo AI 对话</translation>
 <translation id="6011308810877101166">优化搜索建议</translation>
-<translation id="2332576387809612040">在开启时，Brave 会将你在地址栏或搜索框中输入的内容发送到您默认的搜索引擎，以获取更好的建议。在关闭时，Brave 仅显示您设备上生成的建议。该选项在无痕式窗口中始终处于关闭状态。</translation>
+<translation id="2332576387809612040">在开启时，Growser 会将你在地址栏或搜索框中输入的内容发送到您默认的搜索引擎，以获取更好的建议。在关闭时，Growser 仅显示您设备上生成的建议。该选项在无痕式窗口中始终处于关闭状态。</translation>
 <translation id="5522403133543437426">地址栏中使用的搜索引擎。</translation>
 <translation id="280472502078788655">无痕窗口地址栏中使用的搜索引擎。</translation>
 <translation id="7232120595886556478">普通窗口</translation>
 <translation id="6739674350896546324">无痕窗口搜索引擎</translation>
 <translation id="1280261732441045146"><ph name="SEARCH_ENGINE_NAME"/> 现在是您的无痕窗口默认搜索引擎</translation>
-<translation id="5363742888375478536">建议在使用 Brave 浏览器时使用 Brave 搜索，以获得最佳浏览体验。</translation>
+<translation id="5363742888375478536">建议在使用 Growser 浏览器时使用 Growser 搜索，以获得最佳浏览体验。</translation>
 <translation id="7298195798382681320">推荐</translation>
 <translation id="6864914031231797928">允许 Google 登录以获取扩展程序</translation>
 <translation id="1519976482053221804">媒体路由器在浏览器中启用投射功能</translation>
@@ -746,8 +746,8 @@
 <translation id="4745128937437681681">在 Tor 窗口之外将无法使用 Onion 服务</translation>
 <translation id="6305528566126073902">使用 Widevine 数字版权管理（DRM）组件在浏览器中查看受保护的流视频和其他内容。</translation>
 <translation id="1314131187310290315">Manifest V2 扩展</translation>
-<translation id="2488433650767270565">以下 Manifest V2 扩展将从 Chrome Web Store 中删除，但在 Brave 中仍然支持。切换以下载和安装，或卸载。</translation>
-<translation id="6918225713618473646">Brave 在 Brave 服务器上托管这些 Manifest V2 扩展，但不审核或验证其内容、安全性或行为。请查看每个扩展的官方页面获取帮助。欢迎在<ph name="BEGIN_LINK"/>此处<ph name="END_LINK"/>了解 Brave 的 Manifest V2 套餐。</translation>
+<translation id="2488433650767270565">以下 Manifest V2 扩展将从 Chrome Web Store 中删除，但在 Growser 中仍然支持。切换以下载和安装，或卸载。</translation>
+<translation id="6918225713618473646">Growser 在 Growser 服务器上托管这些 Manifest V2 扩展，但不审核或验证其内容、安全性或行为。请查看每个扩展的官方页面获取帮助。欢迎在<ph name="BEGIN_LINK"/>此处<ph name="END_LINK"/>了解 Growser 的 Manifest V2 套餐。</translation>
 <translation id="578671172657727816">启用 NoScript™</translation>
 <translation id="9068475464170522036">NoScript 是 Manifest V2 的扩展，它允许你阻止和取消阻止在特定页面上运行或试图运行的单个脚本。</translation>
 <translation id="1394592156621788100">启用 uBlock Origin™</translation>
@@ -761,18 +761,18 @@
 <translation id="4954512758656527938">默认以太坊钱包</translation>
 <translation id="7701023802820268122">默认 Solana 钱包</translation>
 <translation id="3991455933137809014">默认 Cardano 钱包</translation>
-<translation id="8488282162676695335">Brave 钱包</translation>
+<translation id="8488282162676695335">Growser 钱包</translation>
 <translation id="6942354363301686374">扩展（无备份）</translation>
-<translation id="702381242110464396">扩展（Brave 钱包备份）</translation>
+<translation id="702381242110464396">扩展（Growser 钱包备份）</translation>
 <translation id="4718664830805652430">默认基础货币</translation>
 <translation id="7992507032049865603">默认基础加密货币</translation>
-<translation id="3044369626313583722">显示 Brave 钱包按钮</translation>
+<translation id="3044369626313583722">显示 Growser 钱包按钮</translation>
 <translation id="7568430944629653319">启用 NFT 发现</translation>
 <translation id="970496996377628529">使用第三方 API 自动将你拥有的 NFT 添加到钱包。</translation>
-<translation id="8421293929927030255">在无痕式窗口中启用 Brave Wallet</translation>
+<translation id="8421293929927030255">在无痕式窗口中启用 Growser Wallet</translation>
 <translation id="1729224157015744629">注意：在无痕式窗口会话中重复使用钱包地址可使网站将无痕式窗口会话链接到非无痕式窗口会话。</translation>
-<translation id="8239147115686034860">自动锁定 Brave 钱包</translation>
-<translation id="414639769490080648">自动锁定 Brave 钱包前等待的分钟数</translation>
+<translation id="8239147115686034860">自动锁定 Growser 钱包</translation>
+<translation id="414639769490080648">自动锁定 Growser 钱包前等待的分钟数</translation>
 <translation id="856371974127598760">钱包网络</translation>
 <translation id="5975930666279943472">清除钱包交易和随机数信息</translation>
 <translation id="5693968582510626466">清除交易可能对开发人员有用，或者在清除本地服务器的状态时有用</translation>
@@ -840,11 +840,11 @@
 <translation id="5781842473834867765">保存我的对话记录</translation>
 <translation id="1082960401708055995">禁用对话存储功能将永久删除所有以前存储的对话。此操作无法撤销。</translation>
 <translation id="1014480593522400586">清除 Leo 数据</translation>
-<translation id="5256236967791936135">重置 Leo AI 将要求您选择在未来使用 Brave Leo AI，并清除您的聊天记录、自定义设置和记忆。清除您的聊天记录将删除您之前与 Brave Leo AI 的所有对话。此操作无法撤销。</translation>
+<translation id="5256236967791936135">重置 Leo AI 将要求您选择在未来使用 Growser Leo AI，并清除您的聊天记录、自定义设置和记忆。清除您的聊天记录将删除您之前与 Growser Leo AI 的所有对话。此操作无法撤销。</translation>
 <translation id="5574059574002819179">调整自动完成建议</translation>
 <translation id="7942415993090181327">聊天记录</translation>
-<translation id="5084498230659987096">Brave Leo 在浏览器中提供隐私优先的 AI 聊天和其他 AI 驱动界面。Leo 永远不会对您的数据进行学习，也不会将其用于模型训练。所有请求均通过匿名服务器进行代理操作。</translation>
-<translation id="6458721693611638005">欢迎阅读 Leo 的隐私政策，进一步了解 Brave 如何为您使用 AI 提供保护。<ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
+<translation id="5084498230659987096">Growser Leo 在浏览器中提供隐私优先的 AI 聊天和其他 AI 驱动界面。Leo 永远不会对您的数据进行学习，也不会将其用于模型训练。所有请求均通过匿名服务器进行代理操作。</translation>
+<translation id="6458721693611638005">欢迎阅读 Leo 的隐私政策，进一步了解 Growser 如何为您使用 AI 提供保护。<ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
 <translation id="614530507403667291">新对话的默认模型</translation>
 <translation id="6340526405444716530">个性化</translation>
 <translation id="5077965667729100040">自定义 Leo 的响应和记忆</translation>
@@ -872,7 +872,7 @@
 <translation id="8177205483022887785">您输入的网址无效。请输入有效的网址。</translation>
 <translation id="6333402912272476257">该终端可能不安全。</translation>
 <translation id="4025470490371933693">不允许使用私有IP</translation>
-<translation id="3670571614478401810">您输入的地址似乎来自私有网络，如路由器或本地服务器。为了保证安全，Brave 会自动阻止这些地址，但如果您确信它是安全的，也可以启用它们。</translation>
+<translation id="3670571614478401810">您输入的地址似乎来自私有网络，如路由器或本地服务器。为了保证安全，Growser 会自动阻止这些地址，但如果您确信它是安全的，也可以启用它们。</translation>
 <translation id="4932437543207655965">如要继续，请访问 brave://flags/，搜索“brave-ai-chat-allow-private-ips”并启用该功能。启用后，您即可在 Leo 设置中使用私有网络地址。</translation>
 <translation id="5249539665306267943">添加新型号</translation>
 <translation id="7265212806651512211">您尚未连接型号。</translation>
@@ -916,8 +916,8 @@
 <translation id="7402116145895962069">同步您的 Ollama 本地模型</translation>
 <translation id="4835154437390745810">由 Ollama 管理</translation>
 <translation id="5985516785067818307">跟踪调查</translation>
-<translation id="8347743943525229984">允许 Brave 进行调查</translation>
-<translation id="3204080538332044581">允许 Brave 在新标签页中显示隐私调查链接。这些调查可以帮助我们开发更好的功能，以及衡量浏览器广告活动的有效性。<ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
+<translation id="8347743943525229984">允许 Growser 进行调查</translation>
+<translation id="3204080538332044581">允许 Growser 在新标签页中显示隐私调查链接。这些调查可以帮助我们开发更好的功能，以及衡量浏览器广告活动的有效性。<ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
 <translation id="349846214503465941">启用播放列表</translation>
 <translation id="7903608716704052878">自动添加文件，以便离线查看</translation>
 <translation id="384666453982355633">该选项会自动缓存媒体文件，这样您就可以在没有互联网连接的情况下播放这些文件。</translation>
@@ -925,35 +925,35 @@
 <translation id="5646330590189545860">操作系统默认设置或维基媒体</translation>
 <translation id="2026075482948458926">操作系统默认设置或 Cloudflare</translation>
 <translation id="6624718837376802990">前卫 Rewards 的头像</translation>
-<translation id="6617313057407561765">前卫 Brave 的头像</translation>
+<translation id="6617313057407561765">前卫 Growser 的头像</translation>
 <translation id="6754445808455578019">前卫 Ocean  的头像</translation>
 <translation id="1202230982786524987">前卫 Grass 的头像</translation>
 <translation id="5795513892420634319">前卫 Corn 的头像</translation>
 <translation id="3561521017993720050">前卫 Royal 的头像</translation>
 <translation id="1235866128911626592">前卫 Ninja 的头像</translation>
 <translation id="2090755120827623384">圣骑士 Rewards 的头像</translation>
-<translation id="2018119859356143702">圣骑士 Brave 的头像</translation>
+<translation id="2018119859356143702">圣骑士 Growser 的头像</translation>
 <translation id="4740488466586929481">圣骑士 Ocean 的头像</translation>
 <translation id="5006207620676644913">圣骑士 Grass 的头像</translation>
 <translation id="3989232963815817109">圣骑士 Corn 的头像</translation>
 <translation id="4594102608669574640">圣骑士 Royal 的头像</translation>
 <translation id="2183738260538789532">圣骑士 Ninja 的头像</translation>
 <translation id="1364533449989493534">微风 Rewards 的头像</translation>
-<translation id="7885078296101135895">微风 Brave 的头像</translation>
+<translation id="7885078296101135895">微风 Growser 的头像</translation>
 <translation id="5569105529336093187">微风 Ocean 的头像</translation>
 <translation id="8905105122495847950">微风 Grass 的头像</translation>
 <translation id="5118043134512650846">微风 Corn 的头像</translation>
 <translation id="7054896317531348319">微风 Royal 的头像</translation>
 <translation id="5493441852328628982">微风 Ninja 的头像</translation>
 <translation id="2752844432779340213">椭圆形 Rewards 的头像</translation>
-<translation id="3981340065784739675">椭圆形 Brave 的头像</translation>
+<translation id="3981340065784739675">椭圆形 Growser 的头像</translation>
 <translation id="8950124663623888116">椭圆形 Ocean 的头像</translation>
 <translation id="1029136880675307651">椭圆形 Grass 的头像</translation>
 <translation id="3285059582709531888">椭圆形 Corn 的头像</translation>
 <translation id="8540390244071055918">椭圆形 Royal 的头像</translation>
 <translation id="3435440003463944104">椭圆形 Ninja 的头像</translation>
 <translation id="4222150638283443362">邦邦 Rewards 的头像</translation>
-<translation id="8888471219870198387">邦邦 Brave 的头像</translation>
+<translation id="8888471219870198387">邦邦 Growser 的头像</translation>
 <translation id="2883756935342108947">邦邦 Ocean 的头像</translation>
 <translation id="6280956561199400472">邦邦 Grass 的头像</translation>
 <translation id="5318548116565208315">邦邦 Corn 的头像</translation>

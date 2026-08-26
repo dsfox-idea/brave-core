@@ -12,7 +12,10 @@
 #include "base/memory/scoped_refptr.h"
 #include "base/memory/weak_ptr.h"
 #include "base/types/expected.h"
+#include "brave/components/brave_account/endpoint_client/response.h"
+#include "brave/components/brave_vpn/browser/v2/api/error_body.h"
 #include "brave/components/brave_vpn/browser/v2/api/purchase_endpoints.h"
+#include "brave/components/brave_vpn/browser/v2/api/raw_json_response_body.h"
 
 namespace network {
 class SharedURLLoaderFactory;
@@ -34,21 +37,82 @@ class BraveVpnApiClient {
   BraveVpnApiClient& operator=(const BraveVpnApiClient&) = delete;
   virtual ~BraveVpnApiClient();
 
-  // Connect API: GetSubscriberCredentialV12.
-  // Exchanges a SKUS credential for a subscriber credential.
+  // The response shape common to every Guardian Connect-API endpoint whose
+  // success is forwarded as opaque JSON and whose error is a parsed
+  // VpnErrorBody title.
+  using RawJsonResponse =
+      brave_account::endpoint_client::Response<endpoints::RawJsonResponseBody,
+                                               endpoints::VpnErrorBody>;
+  using RawJsonCallback =
+      base::OnceCallback<void(base::expected<std::string, std::string>)>;
+
+  // Connect API: GetSubscriberCredential (legacy, store purchase token).
+  // Exchanges store purchase details for a subscriber credential.
   // On success: the subscriber credential.
   // On failure: a user-facing error string (transport/HTTP failure, or the
   // server's reported error message).
   using SubscriberCredentialCallback =
       base::OnceCallback<void(base::expected<std::string, std::string>)>;
+  virtual void GetSubscriberCredential(SubscriberCredentialCallback callback,
+                                       const std::string& product_type,
+                                       const std::string& product_id,
+                                       const std::string& validation_method,
+                                       const std::string& purchase_token,
+                                       const std::string& bundle_id);
+
+  // Connect API: GetSubscriberCredentialV12.
+  // Exchanges a SKUS credential for a subscriber credential.
+  // On success: the subscriber credential.
+  // On failure: a user-facing error string (transport/HTTP failure, or the
+  // server's reported error message).
   virtual void GetSubscriberCredentialV12(SubscriberCredentialCallback callback,
                                           const std::string& skus_credential,
                                           const std::string& environment);
 
+  // Connect API: VerifyPurchaseToken.
+  // Verifies a store purchase token and returns the server's JSON response
+  // verbatim.
+  using VerifyPurchaseTokenCallback =
+      base::OnceCallback<void(base::expected<std::string, std::string>)>;
+  virtual void VerifyPurchaseToken(VerifyPurchaseTokenCallback callback,
+                                   const std::string& purchase_token,
+                                   const std::string& product_id,
+                                   const std::string& product_type,
+                                   const std::string& bundle_id);
+
+  // Connect API: CreateSupportTicket.
+  // Submits a customer support inquiry. On success: the server's confirmation
+  // JSON (an echo of the submitted data). On failure: a user-facing error
+  // string.
+  virtual void CreateSupportTicket(RawJsonCallback callback,
+                                   const std::string& email,
+                                   const std::string& subject,
+                                   const std::string& body,
+                                   const std::string& subscriber_credential,
+                                   const std::string& timezone);
+
+  // Connect API: GetServerRegions.
+  // Returns all regions at the given precision, as the server's JSON response
+  // verbatim. Typed parsing is left to the caller (e.g. a region data manager).
+  virtual void GetServerRegions(RawJsonCallback callback,
+                                const std::string& region_precision);
+
+  // Connect API: GetTimezonesForRegions.
+  virtual void GetTimezonesForRegions(RawJsonCallback callback);
+
+  // Connect API: GetHostnamesForRegion.
+  virtual void GetHostnamesForRegion(RawJsonCallback callback,
+                                     const std::string& region,
+                                     const std::string& region_precision);
+
  private:
-  void OnGetSubscriberCredentialV12Response(
+  void OnRawJsonResponse(RawJsonCallback callback, RawJsonResponse response);
+  void OnGetSubscriberCredentialResponse(
       SubscriberCredentialCallback callback,
-      endpoints::GetSubscriberCredentialV12::Response response);
+      endpoints::GetSubscriberCredential::Response response);
+  void OnVerifyPurchaseTokenResponse(
+      VerifyPurchaseTokenCallback callback,
+      endpoints::VerifyPurchaseToken::Response response);
 
   scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory_;
   base::WeakPtrFactory<BraveVpnApiClient> weak_factory_{this};

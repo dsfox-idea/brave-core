@@ -68,7 +68,7 @@
 <translation id="2883875523421277445">{NUMBER_OF_TABS_CLOSED,plural, =1{Укладак закрыта: <ph name="ONE_CLOSED"/>}one{Укладак закрыта: <ph name="MANY_CLOSED"/>}few{Укладак закрыта: <ph name="MANY_CLOSED"/>}many{Укладак закрыта: <ph name="MANY_CLOSED"/>}other{Укладак закрыта: <ph name="MANY_CLOSED"/>}}</translation>
 <translation id="2894757982205307093">Стварыць у групе новую ўкладку</translation>
 <translation id="2918484639460781603">Перайсці ў налады</translation>
-<translation id="4691798003247738043">Brave | Пра гэту краму</translation>
+<translation id="4691798003247738043">Growser | Пра гэту краму</translation>
 <translation id="2978860912612699943">{ITEMS_COUNT,plural, =1{Выбрана: <ph name="ITEMS_COUNT_ONE"/>}one{Выбрана: <ph name="ITEMS_COUNT_MANY"/>}few{Выбрана: <ph name="ITEMS_COUNT_MANY"/>}many{Выбрана: <ph name="ITEMS_COUNT_MANY"/>}other{Выбрана: <ph name="ITEMS_COUNT_MANY"/>}}</translation>
 <translation id="2991702137079525605">{TABS_COUNT,plural, =1{Замацаваць укладку}one{Замацаваць укладкі}few{Замацаваць укладкі}many{Замацаваць укладкі}other{Замацаваць укладкі}}</translation>
 <translation id="3008554597174452548">Перастаць адсочваць прадукт</translation>
@@ -127,7 +127,7 @@
 <translation id="5073204694187207510">Схаваць поўнаэкранную сетку</translation>
 <translation id="5076161749301278626">Паказаць водгукі аб краме?</translation>
 <translation id="5161254044473106830">Патрабуецца назва</translation>
-<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Brave аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_ONE"/> месяц. Гэту функцыю можна змяніць у наладах.}one{Brave аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяц. Гэту функцыю можна змяніць у наладах.}few{Brave аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяцы. Гэту функцыю можна змяніць у наладах.}many{Brave аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяцаў. Гэту функцыю можна змяніць у наладах.}other{Brave аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяца. Гэту функцыю можна змяніць у наладах.}}</translation>
+<translation id="1600515547518251664">{AUTO_DELETE_DELAY,plural, =1{Growser аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_ONE"/> месяц. Гэту функцыю можна змяніць у наладах.}one{Growser аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяц. Гэту функцыю можна змяніць у наладах.}few{Growser аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяцы. Гэту функцыю можна змяніць у наладах.}many{Growser аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяцаў. Гэту функцыю можна змяніць у наладах.}other{Growser аўтаматычна закрые неактыўныя ўкладкі і групы ўкладак праз <ph name="AUTO_DELETE_DELAY_MANY"/> месяца. Гэту функцыю можна змяніць у наладах.}}</translation>
 <translation id="5254233580564156835">Выкарыстанне памяці: <ph name="MEMORY_USAGE"/></translation>
 <translation id="5339733443032484186">Ваша апошняя ўкладка</translation>
 <translation id="5380159289133845234">Архіваваць паўторныя ўкладкі</translation>
@@ -138,7 +138,7 @@
 <translation id="5551694449008560081">{NUMBER_OF_TABS,plural, =1{Закрыць групу ўкладак з <ph name="TABS_COUNT_ONE"/> укладкай, колер: <ph name="COLOR_NAME"/>.}one{Закрыць групу ўкладак з <ph name="TABS_COUNT_MANY"/> укладкай, колер: <ph name="COLOR_NAME"/>.}few{Закрыць групу ўкладак з <ph name="TABS_COUNT_MANY"/> укладкамі, колер: <ph name="COLOR_NAME"/>.}many{Закрыць групу ўкладак з <ph name="TABS_COUNT_MANY"/> укладкамі, колер: <ph name="COLOR_NAME"/>.}other{Закрыць групу ўкладак з <ph name="TABS_COUNT_MANY"/> укладкі, колер: <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="5556417849629758491">Прагледзець звесткі пра краму; гэты варыянт выбару даступны ўверсе экрана</translation>
 <translation id="5627941783489838464">Абнаўленняў укладак няма</translation>
-<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> спасылка з Brave}one{<ph name="TABS_COUNT_MANY"/> спасылка з Brave}few{<ph name="TABS_COUNT_MANY"/> спасылкі з Brave}many{<ph name="TABS_COUNT_MANY"/> спасылак з Brave}other{<ph name="TABS_COUNT_MANY"/> спасылкі з Brave}}</translation>
+<translation id="3225229609960545342">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> спасылка з Growser}one{<ph name="TABS_COUNT_MANY"/> спасылка з Growser}few{<ph name="TABS_COUNT_MANY"/> спасылкі з Growser}many{<ph name="TABS_COUNT_MANY"/> спасылак з Growser}other{<ph name="TABS_COUNT_MANY"/> спасылкі з Growser}}</translation>
 <translation id="5740354908255726955">{TAB_COUNT,plural, =1{Перамясціць укладку ўлева}one{Перамясціць укладкі ўлева}few{Перамясціць укладкі ўлева}many{Перамясціць укладкі ўлева}other{Перамясціць укладкі ўлева}}</translation>
 <translation id="5746204836956568669">Згрупаваць укладкі (<ph name="NUMBER_OF_TABS"/>), каб паскорыць працу?</translation>
 <translation id="5773295109010386583">Аўтаматычна закрываць неактыўныя элементы</translation>
@@ -193,7 +193,7 @@
 <translation id="7501728912575021674">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> элемент}one{<ph name="TABS_COUNT_MANY"/> элемент}few{<ph name="TABS_COUNT_MANY"/> элементы}many{<ph name="TABS_COUNT_MANY"/> элементаў}other{<ph name="TABS_COUNT_MANY"/> элемента}}</translation>
 <translation id="7507010952168401940">{TABS_COUNT,plural, =1{Аднавіць <ph name="TABS_COUNT_ONE"/> выбраны элемент}one{Аднавіць <ph name="TABS_COUNT_MANY"/> выбраны элемент}few{Аднавіць <ph name="TABS_COUNT_MANY"/> выбраныя элементы}many{Аднавіць <ph name="TABS_COUNT_MANY"/> выбраных элементаў}other{Аднавіць <ph name="TABS_COUNT_MANY"/> выбранага элемента}}</translation>
 <translation id="753732157349120914">Пераключальнік укладак</translation>
-<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> водгук з Brave}one{<ph name="REVIEWS_COUNT_MANY"/> водгук з Brave}few{<ph name="REVIEWS_COUNT_MANY"/> водгукі з Brave}many{<ph name="REVIEWS_COUNT_MANY"/> водгукаў з Brave}other{<ph name="REVIEWS_COUNT_MANY"/> водгуку з Brave}}</translation>
+<translation id="1068242749670180460">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> водгук з Growser}one{<ph name="REVIEWS_COUNT_MANY"/> водгук з Growser}few{<ph name="REVIEWS_COUNT_MANY"/> водгукі з Growser}many{<ph name="REVIEWS_COUNT_MANY"/> водгукаў з Growser}other{<ph name="REVIEWS_COUNT_MANY"/> водгуку з Growser}}</translation>
 <translation id="7559245342362162951">Паказваць укладкі групы ў поўнаэкраннай сетцы</translation>
 <translation id="7658239707568436148">Скасаваць</translation>
 <translation id="7688386659311034820">Дыялогавае акно "Неактыўныя ўкладкі"</translation>

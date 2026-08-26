@@ -25,9 +25,17 @@ std::wstring GetProgIdForFileType() {
       break;
   }
   // install_static::GetChromeChannel() only gives above four types
-  // for official build. And we don't support installer build for
-  // unofficial build.
-  NOTREACHED();
+  // for official build. Brave does not support an installer built from an
+  // unofficial build and hit NOTREACHED here.
+  //
+  // growser (#50): we do exactly that - GROWSER_NON_OFFICIAL means
+  // OFFICIAL_BUILD is never defined, so the channel is none of the four and
+  // this is reachable. It cost a real failure: uninstall crashed here after it
+  // had already removed the registry entries and the Start menu shortcut but
+  // before deleting any files, leaving 676 MB behind and no way to uninstall
+  // again. The value matches the sole install mode we build, whose ProgID
+  // prefixes are GrowserDHTM / GrowserDPDF.
+  return L"GrowserDevFile";
 }
 
 bool ShouldUseFileTypeProgId(std::wstring_view ext) {

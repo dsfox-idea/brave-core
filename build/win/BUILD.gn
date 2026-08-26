@@ -22,7 +22,9 @@ group("brave") {
 copy("copy_exe") {
   sources = [ "$root_out_dir/chrome.exe" ]
 
-  outputs = [ "$root_out_dir/brave.exe" ]
+  # $brave_exe, not a hardcoded name: build/config.gni derives it from the
+  # brave_product_name build arg, so the executable follows the product.
+  outputs = [ "$root_out_dir/$brave_exe" ]
 
   deps = [ "//chrome:reorder_imports" ]
 }
@@ -30,7 +32,7 @@ copy("copy_exe") {
 copy("copy_pdb") {
   sources = [ "$root_out_dir/chrome.exe.pdb" ]
 
-  outputs = [ "$root_out_dir/brave.exe.pdb" ]
+  outputs = [ "$root_out_dir/$brave_exe.pdb" ]
 
   deps = [ "//chrome:reorder_imports" ]
 }

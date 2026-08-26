@@ -1,0 +1,191 @@
+[
+  {
+    "include": [
+      "*://maps.gsi.go.jp/*"
+    ],
+    "exceptions": [
+      "canvas"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/35755"
+  },
+  {
+    "include": [
+      "*://www.britishairways.com/*",
+      "*://www.ba.com/*"
+    ],
+    "exceptions": [
+      "language"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/36814"
+  },
+  {
+    "include": [
+      "*://www.harkins.com/*"
+    ],
+    "exceptions": [
+      "canvas"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/35750"
+  },
+  {
+    "include": [
+      "*://www.hanes.com/*"
+    ],
+    "exceptions": [
+      "language"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/46653"
+  },
+  {
+    "include": [
+      "*://www.nperf.com/*"
+    ],
+    "exceptions": [
+      "canvas"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/35020"
+  },
+  {
+    "include": [
+      "*://docs.google.com/*"
+    ],
+    "exceptions": [
+      "plugins"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/26079"
+  },
+  {
+    "include": [
+      "*://www.google.com/maps/*",
+      "*://www.google.com.au/maps/*",
+      "*://www.google.com.mx/maps/*",
+      "*://www.google.ca/maps/*",
+      "*://www.google.co.nz/maps/*",
+      "*://www.google.co.uk/maps/*",
+      "*://www.google.fr/maps/*",
+      "*://www.google.de/maps/*",
+      "*://www.google.nl/maps/*",
+      "*://www.google.es/maps/*",
+      "*://www.google.pt/maps/*",
+      "*://www.google.ie/maps/*",
+      "*://www.google.dk/maps/*",
+      "*://www.google.it/maps/*",
+      "*://www.google.pl/maps/*",
+      "*://www.google.se/maps/*",
+      "*://www.google.no/maps/*"
+    ],
+    "exceptions": [
+      "canvas"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/37075"
+  },
+  {
+    "include": [
+      "*://www.google.com/*"
+    ],
+    "exceptions": [
+      "screen"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/50100"
+  },
+  {
+    "include": [
+      "*://workspace.google.com/*"
+    ],
+    "exceptions": [
+      "canvas"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/44574"
+  },
+  {
+    "include": [
+      "*://meet.google.com/*"
+    ],
+    "exceptions": [
+      "canvas"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/32836"
+  },
+  {
+    "include": [
+      "*://tools.usps.com/*"
+    ],
+    "exceptions": [
+      "screen"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/58371"
+  },
+  {
+    "include": [
+      "*://editor.graphite.art/*"
+    ],
+    "exceptions": [
+      "keyboard"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/56352"
+  },
+  {
+    "include": [
+      "*://vizzy.io/*"
+    ],
+    "exceptions": [
+      "audio"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/40440"
+  },
+  {
+    "include": [
+      "*://tileman.io/*"
+    ],
+    "exceptions": [
+      "keyboard"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/43055"
+  },
+  {
+    "include": [
+      "*://www.homedepot.com/*"
+    ],
+    "exceptions": [
+      "language"
+    ],
+     "issue": "https://github.com/brave/brave-browser/issues/51162"
+   },
+   {
+    "include": [
+      "*://www.athenacrisis.com/*",
+      "*://athenacrisis.com/*"
+    ],
+    "exceptions": [
+      "canvas"
+    ],
+     "issue": "https://github.com/brave/brave-browser/issues/41686"
+   },
+   {
+    "include": [
+      "*://www.fedex.com/*"
+    ],
+    "exceptions": [
+      "referrer"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/44976"
+   },
+   {
+    "include": [
+      "*://ospfranco.com/*"
+    ],
+    "exceptions": [
+      "webgl2"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/46599"
+   },
+   {
+    "include": [
+      "*://web.whatsapp.com/*"
+    ],
+    "exceptions": [
+      "hardware-concurrency"
+    ],
+    "issue": "https://github.com/brave/brave-browser/issues/56766"
+   }
+]

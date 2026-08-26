@@ -86,6 +86,44 @@ export const Box = styled.div`
   }
 `
 
+/* growser (#92): the crash-reporting choice sits above the buttons, in the
+   same column, so it is read before either of them is pressed. */
+export const CrashReportsBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  grid-gap: 6px;
+  padding: 0 40px;
+  max-width: 450px;
+  margin: 0 auto 18px auto;
+  text-align: left;
+
+  .crash-reports-choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #2fd07f;
+    cursor: pointer;
+  }
+
+  span {
+    color: white;
+    font: var(--leo-font-default-regular);
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.65);
+    font: var(--leo-font-small-regular);
+    margin: 0;
+  }
+`
+
 export const ActionBox = styled.div`
   display: flex;
   flex-direction: column;

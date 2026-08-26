@@ -405,7 +405,7 @@
       <message name="IDS_BRAVE_NEW_TAB_REFRESH_BACKGROUND_ON_NEW_TAB" desc="Label for random toggle button">Refresh on every new tab</message>
       <message name="IDS_BRAVE_NEW_TAB_REWARDS_OPEN_PANEL" desc="Label for menu item to open the Rewards panel">Open Rewards panel</message>
 
-      <message name="IDS_BRAVE_NEWS_TITLE" translateable="false" desc="Title for Growser News news feed section">
+      <message name="IDS_BRAVE_NEWS_TITLE" translateable="false" desc="Title for Growser News news feed section" formatter_data="webui=BraveNews">
         Growser News
       </message>
       <message name="IDS_BRAVE_NEWS_BUBBLE_FEED_ITEM_LOADING" desc="The text displayed while a feed is being subscribed or unsubscribed">
@@ -688,8 +688,6 @@
       <message name="IDS_REWARDS_BROWSER_NEEDS_UPDATE_TO_SEE_ADS" desc="">Your browser needs to be updated to continue seeing ads.</message>
 
       <!-- WebUI rewards internals resources -->
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_AD_DIAGNOSTIC_ID" desc="Ad diagnostic id">Diagnostic Id</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_AD_DIAGNOSTIC_INFO" desc="Ad diagnostic info">Diagnostic Info</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_ADS_NOT_INITIALIZED" desc="Ads not initialized">Ads not initialized, please refresh the page.</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_AMOUNT" desc="Amount">Amount:</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_AUTO_REFRESH" desc="">Automatically refresh every 5 seconds</message>
@@ -737,7 +735,6 @@
       <message name="IDS_BRAVE_REWARDS_INTERNALS_REWARDS_TYPE_AUTO" desc="Auto Contribute">Auto Contribute</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_REWARDS_TYPE_ONE_TIME_TIP" desc="On-demand tip">Contribution</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_REWARDS_TYPE_RECURRING_TIP" desc="Recurring tip">Recurring contribution</message>
-      <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_AD_DIAGNOSTICS" desc="">Ad diagnostics</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_CONTRIBUTIONS" desc="">Contributions</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_EVENT_LOGS" desc="">Event logs</message>
       <message name="IDS_BRAVE_REWARDS_INTERNALS_TAB_GENERAL_INFO" desc="">General info</message>
@@ -759,7 +756,7 @@
       <message name="IDS_BRAVE_REWARDS_INTERNALS_CURRENT_ENVIRONMENT" desc="">Current environment:</message>
 
       <!-- WebUI brave ui resources -->
-      <message name="IDS_BRAVE_UI_ACTIVITY_COPY" desc=""> Growser Software. Growser is a registered trademark of Growser Software. Site names may be trademarks or registered trademarks of the site owner.</message>
+      <message name="IDS_BRAVE_UI_ACTIVITY_COPY" desc=""> Dmitry Golubnichiy. Growser is a registered trademark of Dmitry Golubnichiy. Site names may be trademarks or registered trademarks of the site owner.</message>
       <message name="IDS_BRAVE_UI_ACTIVITY_NOTE" desc="">To protect your privacy, this Growser Rewards statement is not saved, recorded or logged anywhere other than on your device (this computer). It cannot be retrieved from Growser in the event of data loss on your device.</message>
       <message name="IDS_BRAVE_UI_ADS" desc="">Ads</message>
       <message name="IDS_BRAVE_UI_ADS_ALL">All</message>
@@ -888,7 +885,7 @@
       <!-- WebUI Crypto Wallets resources -->
       <message name="IDS_BRAVE_WALLET_WELCOME" desc="">Welcome to Growser Crypto Wallets</message>
       <message name="IDS_BRAVE_WALLET_DISCLOSURE_ONE" desc="">Crypto Wallets lets you work with cryptocurrency and related assets in Growser. Crypto Wallets supports Ethereum tokens like ETH and BAT, as well as collectibles, and lets you work with Ðapps and other smart contracts. All this is meant for people who are familiar with Ethereum and other blockchain systems — or are excited to learn.</message>
-      <message name="IDS_BRAVE_WALLET_DISCLOSURE_TWO" desc="">Only use Crypto Wallets if you accept that you alone are responsible for all risk associated with this use, and that Growser Software bears no responsibility or liability for any losses including incidental or consequential losses you might suffer as a result of this use.</message>
+      <message name="IDS_BRAVE_WALLET_DISCLOSURE_TWO" desc="">Only use Crypto Wallets if you accept that you alone are responsible for all risk associated with this use, and that Dmitry Golubnichiy bears no responsibility or liability for any losses including incidental or consequential losses you might suffer as a result of this use.</message>
       <message name="IDS_BRAVE_WALLET_DISCLOSURE_THREE" desc="">All of this is completely separate from</message>
       <message name="IDS_BRAVE_WALLET_DISCLOSURE_FOUR" desc="">So if you were looking to support your favorite sites, head over there instead.</message>
       <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS" desc="">Growser Rewards</message>
@@ -918,6 +915,16 @@
       <part file="brave_news_strings.grdp" />
       <part file="commands.grdp" />
       <part file="speedreader_strings.grdp" />
+      <!-- growser: the AiChat strings are generated UNCONDITIONALLY (#4, Leo is
+           compiled out). Brave's WebUI layer has no guards for this
+           (brave-browser#53190): the NTP's imports_from pulls the ai_chat
+           resources into the compilation graph whatever enable_ai_chat is set
+           to, and those statically import AiChatStrings. With
+           enable_ai_chat=false the original <if expr="enable_ai_chat"> removes
+           the strings and TypeScript fails with TS2305. Including them
+           unconditionally ships strings nobody reads - dead bytes in the .pak -
+           while the Leo entry points are removed by the C++ layer instead. The
+           strings carry no <if> inside the grdp. -->
       <part file="ai_chat_prompts.grdp" />
       <part file="ai_chat_ui_strings.grdp" />
       <if expr="enable_brave_ai_chat_agent_profile">

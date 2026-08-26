@@ -16,97 +16,122 @@ import("//build/config/chrome_build.gni")
 import("//build/util/branding.gni")
 
 brave_updater_branding = {
-  browser_name = "Brave"
+  browser_name = "Growser"
   browser_product_name = chrome_product_full_name
-  crash_product_name = "BraveUpdater"
-  crash_upload_url = "https://cr.brave.com"
-  help_center_url = "https://support.brave.app/hc/sections/360003286112"
-  updater_company_full_name = "Brave Software, Inc"
-  updater_company_short_name = "BraveSoftware"
-  updater_company_short_name_uppercase = "BRAVESOFTWARE"
-  updater_copyright = "Copyright 2024 The Brave Authors. All rights reserved."
-  updater_product_full_name = "BraveUpdater"
-  mac_team_identifier = "KL8N8XSYF4"
+  crash_product_name = "GrowserUpdater"
+  crash_upload_url = "https://growser-crashes.humans.top"
+  help_center_url = "https://growser.org/"
+  updater_company_full_name = "Growser"
+  updater_company_short_name = "Growser"
+  updater_company_short_name_uppercase = "GROWSER"
+  updater_copyright = "Copyright 2026 Growser. All rights reserved."
+  updater_product_full_name = "GrowserUpdater"
+  # growser: our Apple Developer team identifier. macOS checks it when the
+  # updater talks to its privileged helper, so a signed build with somebody
+  # else's team id is a signed build that cannot update itself. Was Brave's
+  # KL8N8XSYF4 until the macOS signing work (#35); now our C3DL5896VG, matching
+  # MAC_TEAM_ID in app/theme/brave/BRANDING and the Developer ID certificate.
+  mac_team_identifier = "C3DL5896VG"
   grdfile_name = "brave_strings"
 
   # The updater (Omaha 4) is shared between Brave Browser and Brave Origin.
   # It manages multiple applications, so we don't need separate updater
   # installations - just different app registrations within the same updater.
   # The following vars are intentionally the same for both brands:
-  keystone_app_name = "BraveSoftwareUpdate"
-  keystone_bundle_identifier = "com.brave.Keystone"
-  mac_updater_bundle_identifier = "com.brave.BraveUpdater"
-  privileged_helper_bundle_name = "BraveUpdaterPrivilegedHelper"
+  keystone_app_name = "GrowserUpdate"
+  keystone_bundle_identifier = "org.growser.Keystone"
+  mac_updater_bundle_identifier = "org.growser.GrowserUpdater"
+  privileged_helper_bundle_name = "GrowserUpdaterPrivilegedHelper"
   updater_app_icon_path = "//brave/app/theme/brave/mac/app.icns"
 
+  # growser: the macOS BROWSER bundle identifier as the updater (Omaha 4) knows
+  # it - the id it registers and manages the browser by, and the id the
+  # privileged helper's SMAuthorizedClients accepts. It MUST match the app's
+  # CFBundleIdentifier (MAC_BUNDLE_ID in app/theme/brave/BRANDING), which is
+  # already com.growser.Browser; the updater branding simply had to catch up.
+  # The profile/keychain/notification-permission move the original comment feared
+  # does not apply here - the app bundle id was renamed ahead of the updater, so
+  # the profile already lives under com.growser.Browser; this only makes the
+  # updater agree. Done as part of the macOS signing work (#35): without it
+  # sign_chrome looks for com.growser.Browser.UpdaterPrivilegedHelper while the
+  # build produces com.brave.Browser.UpdaterPrivilegedHelper -> "No such file".
+  #
   # Brave Origin uses a separate browser bundle identifier for side-by-side
   # installation with Brave Browser.
   if (is_brave_origin_branded) {
-    mac_browser_bundle_identifier = "com.brave.Browser.origin"
+    mac_browser_bundle_identifier = "com.growser.Browser.origin"
   } else {
-    mac_browser_bundle_identifier = "com.brave.Browser"
+    mac_browser_bundle_identifier = "com.growser.Browser"
   }
   privileged_helper_name =
       "${mac_browser_bundle_identifier}.UpdaterPrivilegedHelper"
 
   # The following values come from our Omaha 3 implementation:
-  legacy_service_name_prefix = "brave"
-  UpdaterLegacyLibGUID = "6FF4F468-0B5A-4878-ACEB-86263DAAD877"
-  GoogleUpdate3WebUserClassGUID = "2F78AECB-0A7F-4474-89D5-C325293DE960"
-  GoogleUpdate3WebSystemClassGUID = "00B16F95-319A-4F01-AC81-CE69B8F4E387"
-  GoogleUpdate3WebServiceClassGUID = "3A9D7221-2278-41DD-930B-C2356B7D3725"
-  PolicyStatusUserClassGUID = "02FA9A9C-3856-48A8-A62B-F898C64E45C5"
-  PolicyStatusSystemClassGUID = "598BBE98-5919-4392-B62A-50D7115F10A3"
-  ProcessLauncherClassGUID = "4C3BA8F3-1264-4BDB-BB2D-CA44734AD00D"
-  IAppVersionWebGUID = "35A4470F-5EEC-4715-A2DC-6AA9F8E21183"
-  ICurrentStateGUID = "E6836CFF-5949-44BC-B6BE-9C8C48DD8D97"
-  IGoogleUpdate3WebGUID = "C9190589-ECEC-43F8-8AEC-62496BB87B26"
-  IAppBundleWebGUID = "852A0F87-D117-4B7C-ABA9-2F76D91BCB9D"
-  IAppWebGUID = "FB43AAD0-DDBA-4D01-A3E0-FAB100E7926B"
-  IAppCommandWebGUID = "19F4616B-B7DD-4B3F-8084-C81C5C77AAA4"
-  IPolicyStatusGUID = "10DB7BD5-BD0B-4886-9705-174203FE0ADA"
-  IPolicyStatus2GUID = "EFF9CA12-4CD3-474B-B881-CDE1D92F1996"
-  IPolicyStatus3GUID = "C974F2DD-CFB8-4466-8E6D-96ED901DAACA"
-  IPolicyStatusValueGUID = "931E73FD-D487-4458-AA08-1FF41413377B"
-  IProcessLauncherGUID = "70E5ECF5-2CA7-4019-9B23-916789A13C2C"
-  IProcessLauncher2GUID = "D5627FC9-E2F0-484B-89A4-5DACFE7FAAD3"
+  legacy_service_name_prefix = "growser"
+  UpdaterLegacyLibGUID = "E7EB662A-F8BE-4A22-8A0D-578B27A8DBEC"
+  GoogleUpdate3WebUserClassGUID = "AF1135A6-C7C4-46C3-9612-889FECA29513"
+  GoogleUpdate3WebSystemClassGUID = "9DC9D92E-4F94-4E97-8D13-975376EFE7BE"
+  GoogleUpdate3WebServiceClassGUID = "62B8B017-3244-494A-8083-E197CD76EEF7"
+  PolicyStatusUserClassGUID = "6C28C401-45DB-4D8F-8FB1-6CEFF33B63A2"
+  PolicyStatusSystemClassGUID = "BF870855-751E-45E5-8EB8-4048B49E3F9D"
+  ProcessLauncherClassGUID = "F1782E25-11A6-460B-A841-672105B9F0C0"
+  IAppVersionWebGUID = "57F4DDFD-FBDF-44BA-B436-B3CE2675CDEA"
+  ICurrentStateGUID = "1C14F474-D717-42F0-B30B-1C50746CB96A"
+  IGoogleUpdate3WebGUID = "53CD93CB-6F1E-46DD-935E-D386ACEB0A0A"
+  IAppBundleWebGUID = "292ACA8E-5644-4135-A8E9-2B1C9C6DFAA6"
+  IAppWebGUID = "94B3A9EA-CA3E-4335-A797-3545648E8B81"
+  IAppCommandWebGUID = "F5F604F9-DF86-4E8C-BEC1-0D6C2F63C4A4"
+  IPolicyStatusGUID = "AA8FEECD-0646-4A42-9FAA-9B790B3AB171"
+  IPolicyStatus2GUID = "38A92592-76D0-4655-88B5-574C328E24BC"
+  IPolicyStatus3GUID = "B9B4F36B-8A00-46FB-ACCA-074A99114E1C"
+  IPolicyStatusValueGUID = "2BC27790-CBAA-4636-91D1-763DE30732FA"
+  IProcessLauncherGUID = "B1E115E9-FCAA-4B99-A4BF-72DF3CDEE6BF"
+  IProcessLauncher2GUID = "CC706704-6985-43EC-8A64-FEBA1916B66A"
   if (is_mac) {
     # Mirror upstream:
     legacy_google_update_appid = keystone_bundle_identifier
   } else {
-    legacy_google_update_appid = "{B131C935-9BE6-41DA-9599-1F776BEB8019}"
+    legacy_google_update_appid = "{159C2805-ABB4-4BCD-B6AF-4626A0AEFAC3}"
   }
 
   # These constants are defined upstream, but not in Omaha 3. Their values
   # were randomly generated to make sure our GUIDs do not clash with upstream:
-  updater_appid = "{72cffe90-7630-4699-85ef-e1ca7199f29c}"
-  qualification_appid = "{912564a7-d68a-4db7-9c0c-9053037b0c96}"
-  prefs_access_mutex = "{102CE911-5DF8-471E-98DD-7EA671821241}"
-  setup_mutex_prefix = "{96CFCDD9-360E-4F0B-A133-A4495C726440}"
-  IAppVersionWebUserGUID = "B1FC3654-D8D0-466C-A048-A9DCB7ADB1F3"
-  IAppVersionWebSystemGUID = "69F71AD3-C3AE-45C1-A39B-35E013BB162A"
-  ICurrentStateUserGUID = "AEA2D927-1846-45D3-BA0A-AEC6B13A663D"
-  ICurrentStateSystemGUID = "DC2BD9D2-0933-4775-B13B-2EFBD927BD23"
-  IGoogleUpdate3WebUserGUID = "D9D17688-1005-4BA6-9A49-E7BB21383A95"
-  IGoogleUpdate3WebSystemGUID = "542FDCA9-D22F-458C-823A-35C268A7D7D4"
-  IAppBundleWebUserGUID = "BDC213E1-5D1B-4573-B271-F4FEF558BCB8"
-  IAppBundleWebSystemGUID = "AFDC61C3-CF90-4111-BB47-CFB493F39650"
-  IAppWebUserGUID = "0C1FE5B1-C4D8-433D-942F-85C2F1D6BAC1"
-  IAppWebSystemGUID = "A503E901-FA2B-4CCF-A127-C3ED8E1007B3"
-  IAppCommandWebUserGUID = "2060892B-2104-4D2D-84BE-0D8519ABA2A3"
-  IAppCommandWebSystemGUID = "236890BC-E89C-4540-8B37-BA2DE9239D90"
-  IPolicyStatusUserGUID = "6A158B68-78AD-4269-A589-1AFE9442B029"
-  IPolicyStatusSystemGUID = "F5AD0205-0CBC-470F-96BC-8986DCBF4591"
-  IPolicyStatus2UserGUID = "20643077-D0AC-4C46-97E6-31C364B726AB"
-  IPolicyStatus2SystemGUID = "047DE128-B634-4C05-A18E-756AA4C8C409"
-  IPolicyStatus3UserGUID = "A3335B17-1DEE-45DB-A2DF-357942F04DE7"
-  IPolicyStatus3SystemGUID = "F7F9F3E7-4EAF-41B4-901F-250B8EBA8D6C"
-  IPolicyStatusValueUserGUID = "63107867-A897-46C3-AC56-89A07C0A2044"
-  IPolicyStatusValueSystemGUID = "2592AA42-E23E-43C8-829A-46ECE27A5AA3"
+  updater_appid = "{A5809EB5-B98A-4D10-9951-77B2A21EBB3C}"
+  qualification_appid = "{4A755265-EAE7-484A-87CD-8A21F095C058}"
+  prefs_access_mutex = "{8C1BBB55-2BBC-427C-BD03-48D13CC8D1C6}"
+  setup_mutex_prefix = "{9E4C67DF-69D2-4C33-A6DB-0B88B4D53471}"
+  IAppVersionWebUserGUID = "61F39003-01C1-491D-B0CE-D51C22D7EAAB"
+  IAppVersionWebSystemGUID = "87DB1C62-0009-445E-B7E3-0F0CFD93D0C3"
+  ICurrentStateUserGUID = "7F955E70-63C2-4DF8-8A64-10856465544A"
+  ICurrentStateSystemGUID = "58B306DD-2F03-4B35-9E1A-4D67FB8647E3"
+  IGoogleUpdate3WebUserGUID = "80DB6CF4-FA77-468F-A998-43EC7D416238"
+  IGoogleUpdate3WebSystemGUID = "CA646024-2949-41BA-900E-A63F4D3B6F9E"
+  IAppBundleWebUserGUID = "E0A4A3B5-8A8C-4298-946C-BC9565CA2242"
+  IAppBundleWebSystemGUID = "E8F64259-4754-4AC6-8790-7F7A62BA27CD"
+  IAppWebUserGUID = "B1544062-CCD3-4A09-8EE6-C2D4E679C2A4"
+  IAppWebSystemGUID = "E1127EA7-616B-4D1A-AA53-22ECD37C126E"
+  IAppCommandWebUserGUID = "C063804D-20FC-4980-A98E-A036A41274F4"
+  IAppCommandWebSystemGUID = "3798A34E-CACA-4160-A065-CBD578EFB305"
+  IPolicyStatusUserGUID = "0FDE0F32-EB25-44B0-B20E-94CC7636E128"
+  IPolicyStatusSystemGUID = "873BB73C-543E-4728-B3F6-A78EC60EB0EE"
+  IPolicyStatus2UserGUID = "4EBEA35C-76DC-484B-9997-E869762B48D7"
+  IPolicyStatus2SystemGUID = "E0FCFDB4-9B66-41C0-9734-B7ED0D104F00"
+  IPolicyStatus3UserGUID = "67423A84-293C-4971-BCE0-6B5E36D6AFBA"
+  IPolicyStatus3SystemGUID = "A4EC3C16-8B96-40AD-A874-D69AA24113B9"
+  IPolicyStatusValueUserGUID = "C40728A5-9175-49FD-B7B1-8979448D15F4"
+  IPolicyStatusValueSystemGUID = "BB8F0D94-2B93-4AFE-AF75-EC77861CC13D"
 
   declare_args() {
-    # Omaha 4 update server:
-    update_check_url =
-        "https://updates.bravesoftware.com/prod/service/update2/json"
+    # Omaha 4 update server.
+    #
+    # growser (#51): ours, not Brave's. The rest of this scope is still Brave's
+    # - the product names and the ~40 COM interface GUIDs - and rebranding it is
+    # the bulk of #51. This one line comes first because it is the only one that
+    # is a live outbound address: kBraveUseOmaha4 is FEATURE_DISABLED_BY_DEFAULT
+    # today, but a feature flag can be flipped remotely (that is what #56 is),
+    # and #40 exists precisely so that flipping it cannot point our users at
+    # Brave. The endpoint does not answer yet; a 404 is the correct failure
+    # while there is no update server.
+    update_check_url = "https://backend.growser.org/update"
   }
 }

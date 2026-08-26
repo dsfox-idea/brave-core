@@ -46,6 +46,9 @@ class AdBlockFilterListCatalogProvider {
 
  private:
   void OnFilterListCatalogLoaded(const std::string& catalog_json);
+  // growser (#87): hand a newly added observer the bundled catalogue when no
+  // component has delivered one, which for a fork is always.
+  void NotifyBundledCatalog(Observer* observer);
   void OnComponentReady(const base::FilePath&);
 
   base::FilePath component_path_;

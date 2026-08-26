@@ -27,23 +27,30 @@ written into a step log), which needs step presentation, and `symlink_tree`
 from __future__ import annotations
 
 from collections.abc import Callable, Sequence
-import os
 from pathlib import Path
 import subprocess
 from typing import Any, TypeVar
 
 from google.protobuf.message import Message
 
+import config_types
 from recipe_api import OutputPlaceholder, Placeholder, RecipeApi
 from recipe_test_api import StepTestData
 from step_data import StepData
 
-# The resource script `_run` invokes for every operation. Lives alongside this
-# module (not under brave-core), so it's always present -- no sparse checkout
-# needed, unlike e.g. `tools/cr/toolchains/ephemeral_xcode.py`.
-_FILEUTIL = Path(__file__).resolve().parent / 'resources' / 'fileutil.py'
-
 ProtoMessage = TypeVar('ProtoMessage', bound=Message)
+
+
+def _as_path(
+        source: str | Path | config_types.Path) -> Path | config_types.Path:
+    """*source* as a Path, without re-wrapping an already-Path-like value.
+
+    Re-wrapping a `config_types.Path` (simulated) in a real `pathlib.Path`
+    would force it back onto the host's native separator.
+    """
+    if isinstance(source, (Path, config_types.Path)):
+        return source
+    return Path(source)
 
 
 class FileApi(RecipeApi):
@@ -80,7 +87,8 @@ class FileApi(RecipeApi):
         """
         vpython3 = self.m.depot_tools.vpython3()
         cmd = [
-            vpython3, '-u', _FILEUTIL, '--json-output',
+            vpython3, '-u',
+            self.resource('fileutil.py'), '--json-output',
             self.m.json.output(), *args
         ]
         result = self.m.step(name,
@@ -439,7 +447,7 @@ class FileApi(RecipeApi):
             args,
             step_test_data=lambda: self.test_api.glob_paths(test_data),
             stdout=self.m.raw_io.output_text())
-        return [Path(source) / line for line in result.stdout.splitlines()]
+        return [_as_path(source) / line for line in result.stdout.splitlines()]
 
     def listdir(
         self,
@@ -472,7 +480,7 @@ class FileApi(RecipeApi):
             args,
             step_test_data=lambda: self.test_api.listdir(test_data),
             stdout=self.m.raw_io.output_text())
-        return [Path(source) / line for line in result.stdout.splitlines()]
+        return [_as_path(source) / line for line in result.stdout.splitlines()]
 
     def ensure_directory(self,
                          name: str,
@@ -578,7 +586,7 @@ class FileApi(RecipeApi):
         Raises:
             Error: If hashing failed.
         """
-        rel_paths = [os.path.relpath(str(p), str(base_path)) for p in paths]
+        rel_paths = [self.m.path.relpath(p, base_path) for p in paths]
         result = self._run(
             name, ['compute_hash', str(base_path), *rel_paths],
             step_test_data=lambda: self.test_api.compute_hash(test_data),

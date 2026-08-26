@@ -35,7 +35,10 @@ declare module '../page_visibility.js' {
     // </if>
     surveyPanelist?: boolean,
     braveTor?: boolean,
-    emailAliases?: boolean
+    emailAliases?: boolean,
+    // <if expr="enable_psst">
+    psst?: boolean,
+    // </if>
   }
 }
 
@@ -73,6 +76,9 @@ function getPageVisibility () {
       surveyPanelist: false,
       braveTor: false,
       emailAliases: false,
+      // <if expr="enable_psst">
+      psst: false,
+      // </if>
     }
   }
   // We need to specify values for every attribute in pageVisibility instead of
@@ -95,10 +101,10 @@ function getPageVisibility () {
     privacy: alwaysTrueProxy,
     // custom properties
     braveSync: !loadTimeData.getBoolean('isSyncDisabled'),
-    // growser: разделы Web3/Wallet и Leo скрыты из настроек (#16) — как в
-    // guest-mode выше. Прячем на уровне видимости страниц (меню + роуты),
-    // C++-гейты не трогаем (их тесты остаются зелёными). Полное удаление из
-    // билда — #4/#6.
+    // growser: the Web3/Wallet and Leo sections are hidden from settings
+    // (#16), the same way guest mode hides its own above. Hidden at the
+    // page-visibility level (menu and routes); the C++ gates are left alone,
+    // so their tests stay green. Removing them from the build is #4/#6.
     // <if expr="enable_brave_wallet">
     braveWallet: false,
     // </if>
@@ -107,7 +113,9 @@ function getPageVisibility () {
     leoPersonalization: false,
     leoModels: false,
     // </if>
-    surveyPanelist: loadTimeData.getBoolean('isSurveyPanelistAllowed'),
+    // growser (#78): Brave's own research panel, and it reported through P3A,
+    // which this build removed entirely (#21). Nothing behind the switch.
+    surveyPanelist: false,
     // <if expr="enable_containers">
     containers: loadTimeData.getBoolean('isContainersEnabled'),
     // </if>
@@ -117,12 +125,24 @@ function getPageVisibility () {
     // <if expr="enable_speedreader">
     speedreader: loadTimeData.getBoolean('isSpeedreaderAllowed'),
     // </if>
+    // growser (#78): Tor cannot work here, so the setting must not offer it.
+    // The Tor client is a separate component and both sources are closed to a
+    // fork: Brave's component server answers 403 Missing auth header, and
+    // Google - asked through our own proxy - answers error-unknownApplication,
+    // because Brave's component id means nothing to them. The feature is still
+    // compiled in (enable_tor defaults on), so this is what hides it. If we
+    // ever ship a Tor client of our own, this is one line to undo.
     // <if expr="enable_tor">
-    braveTor: !loadTimeData.getBoolean('braveTorDisabledByPolicy') ||
-              loadTimeData.getBoolean('shouldExposeElementsForTesting'),
+    braveTor: false,
     // </if>
+    // growser (#78): the whole feature is an API against
+    // aliases.bravesoftware.com - a Brave account service we have no account
+    // with and no intention of running. There is nothing to configure.
     // <if expr="enable_email_aliases">
-    emailAliases: loadTimeData.getBoolean('isEmailAliasesEnabled'),
+    emailAliases: false,
+    // </if>
+    // <if expr="enable_psst">
+    psst: loadTimeData.getBoolean('isPsstEnabled'),
     // </if>
     origin: loadTimeData.getBoolean('isBraveOriginPurchased') &&
             !loadTimeData.getBoolean('isBraveOriginBrandedBuild'),

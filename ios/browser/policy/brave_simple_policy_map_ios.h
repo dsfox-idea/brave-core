@@ -70,7 +70,7 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
     },
 #endif
     {
-        policy::key::kBraveP3AEnabled,
+        policy::key::kGrowserP3AEnabled,
         p3a::kP3AEnabled,
         base::Value::Type::BOOLEAN,
     },
@@ -80,7 +80,7 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
         base::Value::Type::BOOLEAN,
     },
     {
-        policy::key::kBravePlaylistEnabled,
+        policy::key::kGrowserPlaylistEnabled,
         playlist::kPlaylistEnabledPref,
         base::Value::Type::BOOLEAN,
     },
