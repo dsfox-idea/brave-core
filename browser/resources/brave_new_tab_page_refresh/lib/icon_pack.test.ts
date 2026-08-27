@@ -34,13 +34,15 @@ describe('icon_pack', () => {
   })
 
   it('gives one drawing to every domain of a brand', () => {
-    // Nineteen of the selected domains are Google; the pack holds one mark.
-    const com = lookupPackedIcon('https://google.com/')
-    const ru = lookupPackedIcon('https://google.ru/')
-    expect(com).not.toBeNull()
-    expect(ru).not.toBeNull()
-    expect(ru!.drawing).toBe(com!.drawing)
-    expect(ru!.colour).toBe(com!.colour)
+    // Several domains of the selection are one brand - nineteen of them are
+    // Google - and the pack holds one mark for each brand, not one per
+    // domain.
+    const org = lookupPackedIcon('https://telegram.org/')
+    const short = lookupPackedIcon('https://t.me/')
+    expect(org).not.toBeNull()
+    expect(short).not.toBeNull()
+    expect(short!.drawing).toBe(org!.drawing)
+    expect(short!.colour).toBe(org!.colour)
   })
 
   it('falls back to the registrable parent for a section of a site', () => {
