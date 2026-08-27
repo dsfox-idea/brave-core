@@ -16,6 +16,16 @@ export const tileWidth = 168
 const tileAspect = 1.5
 const iconShareOfHeight = 0.5
 
+// A drawing is not a favicon: it keeps whatever shape its brand drew it in,
+// and a wordmark three times as wide as it is tall, fitted into a square
+// slot, comes out a third the height it could be - Adobe, achmea and aruba
+// were unreadable for that reason alone. So the slot a PACK drawing gets is
+// as wide as two thirds of the tile, and the drawing is fitted into it
+// proportionally about its centre. A square mark is unaffected: it still
+// meets the height first. The two thirds is what keeps a margin at the
+// edges, whatever the shape.
+const artShareOfWidth = 0.66
+
 // Eight tiles, seven gaps, and the room the menu button and its opposite
 // spacer take either side.
 const gap = 16
@@ -41,6 +51,8 @@ export const style = scoped.css`
     --self-tile-height: calc(var(--self-tile-width) / ${tileAspect});
     --self-tile-icon-size:
       calc(var(--self-tile-height) * ${iconShareOfHeight});
+    --self-tile-art-width:
+      calc(var(--self-tile-width) * ${artShareOfWidth});
     --self-transition-duration: 160ms;
 
     width: 100%;
@@ -135,7 +147,7 @@ export const style = scoped.css`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--self-tile-icon-size);
+    width: var(--self-tile-art-width);
     height: var(--self-tile-icon-size);
     flex: 0 0 auto;
     pointer-events: none;
