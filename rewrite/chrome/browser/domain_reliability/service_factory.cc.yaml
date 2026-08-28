@@ -1,0 +1,20 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Ship Domain Reliability off (growser#104).
+
+      Domain Reliability uploads connectivity beacons about Google-owned
+      domains (the baked-in configs include DoubleClick's ad CDN) to
+      clients2.google.com. Upstream gates it only on the metrics-and-crash
+      consent pref - which in this fork the welcome screen's crash-reports
+      checkbox sets, so accepting crash reporting (to OUR server) would
+      silently opt the user into Google beacons too. Flip the compiled
+      default; the --disable-domain-reliability switch and the field trial
+      branch are unaffected, and no field trial exists in this fork.
+    regex:
+      pattern: 'const bool kDefaultEnabled = true;'
+      replace: 'const bool kDefaultEnabled = false;'

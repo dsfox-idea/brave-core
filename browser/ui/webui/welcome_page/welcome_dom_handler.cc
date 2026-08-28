@@ -112,8 +112,12 @@ void WelcomeDOMHandler::RegisterMessages() {
 // file on macOS. Writing the pref alone would leave a browser that says it
 // reports crashes and does not, or the reverse.
 //
-// In this build the preference has no other consumer: UMA and P3A are compiled
-// out (#38, #39), so what this governs is crash reports and nothing else.
+// In this build the preference's consumers are crash reports and - until
+// #104 flipped its compiled default off - Domain Reliability, which read
+// this consent as permission to upload connectivity beacons to Google. UMA
+// and P3A are compiled out (#38, #98). If a bump adds a new consumer of
+// this pref, it inherits the crash-consent answer - check what it does
+// with it (#104 is the precedent).
 void WelcomeDOMHandler::HandleSetMetricsReportingEnabled(
     const base::ListValue& args) {
   CHECK_EQ(1U, args.size());

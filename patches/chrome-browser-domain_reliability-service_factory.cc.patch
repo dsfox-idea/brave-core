@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/domain_reliability/service_factory.cc b/chrome/browser/domain_reliability/service_factory.cc
+index e3f85943ed5b9b3b6c194f48c823ef409f324436..9cc08b072ec4204e3749326752e7eafbcdd00dfc 100644
+--- a/chrome/browser/domain_reliability/service_factory.cc
++++ b/chrome/browser/domain_reliability/service_factory.cc
+@@ -13,7 +13,7 @@ namespace domain_reliability {
+ namespace {
+ 
+ // If Domain Reliability is enabled in the absence of a flag or field trial.
+-const bool kDefaultEnabled = true;
++const bool kDefaultEnabled = false;
+ 
+ // The name and value of the field trial to turn Domain Reliability on.
+ const char kFieldTrialName[] = "DomRel-Enable";
