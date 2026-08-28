@@ -1,0 +1,17 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+declare_args() {
+  # growser (#98): whether the P3A reporting engine compiles in. The engine -
+  # message manager, uploader, schedulers, STAR/Constellation rust lib, Nitro
+  # attestation, remote config, component installer - has been functionally
+  # dead since #21 (no-op service, kP3AEnabled defaults to false); this flag
+  # takes it out of the binary. The per-feature metric WRITERS (p3a_utils and
+  # the *_p3a.cc files) stay compiled either way: they only write local UMA
+  # histograms, and guarding all ~180 of them would be a war on every bump.
+  # Off is the product state; the flag does not exist upstream, so merges do
+  # not fight over it.
+  enable_p3a = false
+}

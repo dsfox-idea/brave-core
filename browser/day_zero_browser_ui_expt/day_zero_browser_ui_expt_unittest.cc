@@ -7,8 +7,11 @@
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/day_zero_browser_ui_expt/day_zero_browser_ui_expt_manager.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/p3a/p3a_service.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/components/p3a/pref_names.h"
+#if BUILDFLAG(ENABLE_P3A)
+#include "brave/components/p3a/p3a_service.h"
+#endif
 #include "chrome/browser/profiles/profile_manager_observer.h"
 #include "chrome/test/base/testing_browser_process.h"
 #include "chrome/test/base/testing_profile.h"
@@ -27,7 +30,13 @@ class DayZeroBrowserUIExptTest : public testing::Test,
 
   void SetUp() override {
     ASSERT_TRUE(testing_profile_manager_.SetUp());
+#if BUILDFLAG(ENABLE_P3A)
     p3a::P3AService::RegisterPrefs(testing_local_state_.registry(), true);
+#else
+    // The engine is compiled out (#98); the manager only watches this pref.
+    testing_local_state_.registry()->RegisterBooleanPref(p3a::kP3AEnabled,
+                                                         false);
+#endif
 
     if (IsDayZeroEnabled()) {
       // base::WrapUnique for using private ctor.

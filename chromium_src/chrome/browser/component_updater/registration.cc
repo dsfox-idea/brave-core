@@ -31,8 +31,11 @@
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/extension_malware_blocklist/browser/extension_malware_blocklist_component_installer.h"
 #include "brave/components/local_ai/buildflags/buildflags.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_P3A)
 #include "brave/components/p3a/component_installer.h"
 #include "brave/components/p3a/p3a_service.h"
+#endif
 #include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/query_filter/browser/query_filter_component_installer.h"
 #include "chrome/browser/browser_process.h"
@@ -89,7 +92,9 @@ void RegisterComponentsForUpdate() {
     web_mcp::RegisterWebMcpComponent(cus);
   }
 #endif
+#if BUILDFLAG(ENABLE_P3A)
   p3a::MaybeToggleP3AComponent(cus, g_brave_browser_process->p3a_service());
+#endif
 #if BUILDFLAG(IS_ANDROID)
   // Currently behind !BUILDFLAG(IS_ANDROID) in upstream.
   RegisterZxcvbnDataComponent(cus);

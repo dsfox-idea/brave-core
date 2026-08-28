@@ -16,6 +16,7 @@
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/brave_component.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/tor/brave_tor_pluggable_transport_updater.h"
 #include "brave/components/tor/buildflags/buildflags.h"
@@ -205,8 +206,10 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
   std::unique_ptr<tor::BraveTorPluggableTransportUpdater>
       tor_pluggable_transport_updater_;
 #endif
+#if BUILDFLAG(ENABLE_P3A)
   scoped_refptr<p3a::P3AService> p3a_service_;
   scoped_refptr<p3a::HistogramsBraveizer> histogram_braveizer_;
+#endif
   std::unique_ptr<ntp_background_images::NTPBackgroundImagesService>
       ntp_background_images_service_;
 

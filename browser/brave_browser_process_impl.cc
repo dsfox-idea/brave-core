@@ -42,9 +42,12 @@
 #include "brave/components/debounce/core/common/features.h"
 #include "brave/components/https_upgrade_exceptions/browser/https_upgrade_exceptions_service.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_P3A)
 #include "brave/components/p3a/histograms_braveizer.h"
 #include "brave/components/p3a/p3a_config.h"
 #include "brave/components/p3a/p3a_service.h"
+#endif
 #include "brave/components/webcompat/content/browser/webcompat_exceptions_service.h"
 #include "brave/components/webcompat/core/common/features.h"
 #include "brave/services/network/public/cpp/system_request_handler.h"
@@ -153,11 +156,13 @@ BraveBrowserProcessImpl::BraveBrowserProcessImpl(StartupData* startup_data)
   g_browser_process = this;
   g_brave_browser_process = this;
 
+#if BUILDFLAG(ENABLE_P3A)
   // Disabled on mobile platforms, see for instance issues/6176
   // Create P3A Service early to catch more histograms. The full initialization
   // should be started once browser process impl is ready.
   p3a_service();
   histogram_braveizer_ = p3a::HistogramsBraveizer::Create();
+#endif
 
   // early initialize misc metrics
   process_misc_metrics();
@@ -256,9 +261,11 @@ void BraveBrowserProcessImpl::StartTearDown() {
   if (ntp_background_images_service_) {
     ntp_background_images_service_->StartTearDown();
   }
+#if BUILDFLAG(ENABLE_P3A)
   if (p3a_service_) {
     p3a_service_->StartTeardown();
   }
+#endif
 #if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
   ai_chat_agent_profile_manager_.reset();
 #endif
@@ -479,6 +486,7 @@ void BraveBrowserProcessImpl::OnTorEnabledChanged() {
 #endif
 
 p3a::P3AService* BraveBrowserProcessImpl::p3a_service() {
+#if BUILDFLAG(ENABLE_P3A)
   if (p3a_service_) {
     return p3a_service_.get();
   }
@@ -488,6 +496,10 @@ p3a::P3AService* BraveBrowserProcessImpl::p3a_service() {
       p3a::P3AConfig::LoadFromCommandLine());
   p3a_service()->InitCallbacks();
   return p3a_service_.get();
+#else
+  // growser (#98): the engine is compiled out; callers null-check.
+  return nullptr;
+#endif
 }
 
 brave::BraveReferralsService*
@@ -574,10 +586,12 @@ BraveBrowserProcessImpl::process_misc_metrics() {
   if (!process_misc_metrics_) {
     process_misc_metrics_ =
         std::make_unique<misc_metrics::ProcessMiscMetrics>(local_state());
+#if BUILDFLAG(ENABLE_P3A)
     if (p3a_service_) {
       p3a_service_->SetDefaultBrowserMonitor(
           process_misc_metrics_->default_browser_monitor());
     }
+#endif
   }
   return process_misc_metrics_.get();
 }

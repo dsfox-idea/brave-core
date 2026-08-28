@@ -37,9 +37,13 @@
 #include "brave/components/misc_metrics/quick_search_metrics.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
 #include "brave/components/ntp_background_images/common/view_counter_pref_registry.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/components/p3a/metric_log_store.h"
-#include "brave/components/p3a/p3a_service.h"
+#include "brave/components/p3a/pref_names.h"
 #include "brave/components/p3a/rotation_scheduler.h"
+#if BUILDFLAG(ENABLE_P3A)
+#include "brave/components/p3a/p3a_service.h"
+#endif
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/skus/browser/skus_utils.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
@@ -200,6 +204,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
       metrics::prefs::kMetricsReportingEnabled,
       base::Value(GetDefaultPrefValueForMetricsReporting()));
 
+#if BUILDFLAG(ENABLE_P3A)
   p3a::P3AService::RegisterPrefs(registry,
 #if !BUILDFLAG(IS_ANDROID)
                                  first_run::IsChromeFirstRun());
@@ -208,6 +213,15 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
                                  // doesn't use this arg on Android
                                  false);
 #endif  // !BUILDFLAG(IS_ANDROID)
+#else
+  // growser (#98): the engine is compiled out, but these two prefs are read
+  // elsewhere - day_zero watches kP3AEnabled through a PrefChangeRegistrar
+  // (an unregistered pref there is a CHECK crash), and the welcome page asks
+  // whether it is managed. Registered here so existing readers keep working;
+  // false forever.
+  registry->RegisterBooleanPref(p3a::kP3AEnabled, false);
+  registry->RegisterBooleanPref(p3a::kP3ANoticeAcknowledged, false);
+#endif  // BUILDFLAG(ENABLE_P3A)
 
   brave_shields::RegisterShieldsP3ALocalPrefs(registry);
 #if !BUILDFLAG(IS_ANDROID)
