@@ -18,7 +18,9 @@ export const Box = styled.div`
   text-align: center;
 
   .view-backdrop {
-    background: rgba(255, 255, 255, 0.1);
+    /* growser (#80): dark glass - the background is a light photo now and the
+       card carries white text; the old 10% white plate washed out on it. */
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
     border-radius: 30px;
     position: absolute;

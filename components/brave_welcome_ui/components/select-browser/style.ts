@@ -6,7 +6,8 @@
 import styled from 'styled-components'
 
 export const MainBox = styled.div`
-  background: rgba(255, 255, 255, 0.1);
+  /* growser (#80): dark glass, in step with the welcome card. */
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
   border-radius: 30px;
   max-width: 800px;
