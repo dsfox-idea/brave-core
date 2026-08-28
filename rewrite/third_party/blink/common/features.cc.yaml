@@ -30,10 +30,18 @@ substitutions:
       feature_name: kBackgroundResourceFetch
       value: base::FEATURE_DISABLED_BY_DEFAULT
 
-  - description: 'Ship kFencedFrames disabled.'
-    set_feature_flag_default_state:
-      feature_name: kFencedFrames
-      value: base::FEATURE_DISABLED_BY_DEFAULT
+  # kFencedFrames is deliberately NOT disabled here (growser#82). Chromium 152
+  # made the ResolveInvalidConfigurations() takedown of the FencedFrames Blink
+  # flag conditional on the PrivacySandboxAdsAPIs overrides being enabled; with
+  # both of those disabled (as we require), the renderer exposes
+  # HTMLFencedFrameElement from the json5 default no matter what this feature
+  # says, and a browser process with kFencedFrames disabled answers the
+  # element's mojo call with ReceivedBadMessage - any page appending
+  # <fencedframe> kills the renderer. Enabling browser-side support restores
+  # Chrome's exact shape: element present, creation works, and no way to load
+  # ad content into it (the config sources - shared storage worklets and ad
+  # auctions - are absent from this build). scripts/check-ad-apis.py in the
+  # control repo gates this from coming back on a merge.
 
   - description: 'Ship kPreloadingEagerViewportHeuristics disabled.'
     set_feature_flag_default_state:

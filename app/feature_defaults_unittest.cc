@@ -130,7 +130,6 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &blink::features::kAllowURNsInIframes,
       &blink::features::kBackgroundResourceFetch,
       &blink::features::kControlledFrame,
-      &blink::features::kFencedFrames,
       &blink::features::kFledge,
       &blink::features::kLanguageDetectionAPI,
       &blink::features::kParakeet,
@@ -319,6 +318,13 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
 TEST(FeatureDefaultsTest, EnabledFeatures) {
   const base::Feature* enabled_features[] = {
       &omnibox::kAblateSearchProviderWarmup,
+      // Chromium 152 exposes HTMLFencedFrameElement from the json5 default
+      // whenever the PrivacySandboxAdsAPIs overrides are disabled, and a
+      // browser process with kFencedFrames off answers the element's mojo
+      // call with ReceivedBadMessage, killing the renderer. Keep browser-side
+      // support on: Chrome's shape, and no config sources exist in this build
+      // to load ad content into the frame (growser#82).
+      &blink::features::kFencedFrames,
       &blink::features::kMixedContentAutoupgrade,
       &blink::features::kReducedReferrerGranularity,
       &blink::features::kReduceUserAgentMinorVersion,
