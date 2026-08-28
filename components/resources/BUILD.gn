@@ -111,7 +111,10 @@ repack("resources") {
     "$root_gen_dir/components/brave_components_static.pak",
   ]
 
-  if (enable_local_ai) {
+  # growser (#110): the foundation (enable_local_ai) always builds via the
+  # worker UI's own dep on the grit target; only the 13.2 MB WASM payload is
+  # merged into brave_resources.pak here, and only when it is meant to ship.
+  if (enable_local_ai && bundle_local_ai_speech_worker) {
     deps += [ "//brave/components/local_ai/resources/speech_worker:on_device_speech_recognition_worker_generated" ]
     sources += [ "$root_gen_dir/brave/components/local_ai/resources/on_device_speech_recognition_worker_generated.pak" ]
   }

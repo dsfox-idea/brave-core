@@ -7,4 +7,12 @@ import("//brave/components/brave_origin/buildflags/buildflags.gni")
 
 declare_args() {
   enable_local_ai = !is_android && !is_brave_origin_branded
+
+  # growser (#110): whether the 13.2 MB ONNX Runtime speech WASM is bundled
+  # into brave_resources.pak. The local_ai foundation (component installer,
+  # controller, mojo, worker UI, webpack target) is unaffected and always
+  # built with enable_local_ai; this gates only the shipped payload for a
+  # feature that is DISABLED_BY_DEFAULT and not yet reachable by users. Flip
+  # to true (or deliver the WASM by component updater) when the feature ships.
+  bundle_local_ai_speech_worker = false
 }
