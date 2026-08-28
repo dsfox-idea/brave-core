@@ -1,0 +1,14 @@
+diff --git a/content/child/runtime_features.cc b/content/child/runtime_features.cc
+index 6eb5b8f045ff8e00fa1203b7edea461b8c08fa27..90fe69ddcaf9b11e4b87e601609ea68a648f8cd7 100644
+--- a/content/child/runtime_features.cc
++++ b/content/child/runtime_features.cc
+@@ -568,8 +568,7 @@ void ResolveInvalidConfigurations() {
+     WebRuntimeFeatures::EnableSharedStorageAPI(false);
+   }
+ 
+-  if (!base::FeatureList::IsEnabled(
+-          attribution_reporting::features::kConversionMeasurement)) {
++  if (false /* growser #109: keep attributionSrc exposed like Chrome */) {
+     LOG_IF(WARNING, WebRuntimeFeatures::IsAttributionReportingEnabled())
+         << "AttributionReporting cannot be enabled in this "
+            "configuration. Use --"

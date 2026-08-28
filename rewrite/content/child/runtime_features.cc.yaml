@@ -1,0 +1,23 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Keep attributionSrc exposed to match Chrome's shape (growser#109).
+
+      ResolveInvalidConfigurations() takes the AttributionReporting Blink
+      runtime feature down when kConversionMeasurement is disabled, which we
+      disable. But that Blink feature is status:stable, so stock Chrome
+      exposes the attributionSrc IDL attribute on <a>/<area>/<img>/<script>,
+      and taking it down makes `"attributionSrc" in HTMLAnchorElement.prototype`
+      answer false here - a one-line JS tell that we are not Chrome (the #82
+      condition). Neutralizing the guard leaves the feature at its stable
+      default, so the attribute is present exactly as in Chrome. Nothing can
+      register through it: kConversionMeasurement stays disabled browser-side
+      and its implementation was deleted upstream in 152, so this is pure
+      surface parity, not a data flow.
+    regex:
+      re_pattern: '!base::FeatureList::IsEnabled\(\s*attribution_reporting::features::kConversionMeasurement\)'
+      replace: 'false /* growser #109: keep attributionSrc exposed like Chrome */'
