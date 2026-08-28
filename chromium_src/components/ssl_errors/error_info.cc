@@ -4,6 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include "components/grit/brave_components_strings.h"
+#include "base/strings/strcat.h"
 
 // growser (#95): say why a Russian-rooted certificate was refused.
 //
