@@ -18,12 +18,40 @@
 #include "chrome/browser/component_updater/mei_preload_component_installer.h"
 #define RegisterMediaEngagementPreloadComponent(...) ((void)0)
 
+// growser (#106): drop six more registrations, each serving a feature that
+// is compiled out or force-disabled in this fork. They cost every user a
+// poll of our backend proxy per update cycle and disk for payloads nothing
+// reads: First-Party Sets (RWS disabled by our settings substitution),
+// Optimization Hints (remote fetching stubbed to false), OnDeviceHeadSuggest
+// (Google-search suggestions; our search is different), CrowdDeny
+// (notification crowd data for a Google service), CommerceHeuristics
+// (commerce::* features all off), ActorSafetyLists (agent features off).
+// Same idiom as MEI above: header first, then the name becomes a macro.
+#include "chrome/browser/component_updater/commerce_heuristics_component_installer.h"
+#include "chrome/browser/component_updater/crowd_deny_component_installer.h"
+#include "chrome/browser/component_updater/first_party_sets_component_installer.h"
+#include "components/component_updater/installer_policies/actor_safety_lists_component_installer.h"
+#include "components/component_updater/installer_policies/on_device_head_suggest_component_installer.h"
+#include "components/component_updater/installer_policies/optimization_hints_component_installer.h"
+#define RegisterCommerceHeuristicsComponent(...) ((void)0)
+#define RegisterCrowdDenyComponent(...) ((void)0)
+#define RegisterFirstPartySetsComponent(...) ((void)0)
+#define RegisterActorSafetyListsComponent(...) ((void)0)
+#define RegisterOnDeviceHeadSuggestComponent(...) ((void)0)
+#define RegisterOptimizationHintsComponent(...) ((void)0)
+
 #define RegisterComponentsForUpdate RegisterComponentsForUpdate_ChromiumImpl
 
 #include <chrome/browser/component_updater/registration.cc>
 
 #undef RegisterComponentsForUpdate
 #undef RegisterMediaEngagementPreloadComponent
+#undef RegisterCommerceHeuristicsComponent
+#undef RegisterCrowdDenyComponent
+#undef RegisterFirstPartySetsComponent
+#undef RegisterActorSafetyListsComponent
+#undef RegisterOnDeviceHeadSuggestComponent
+#undef RegisterOptimizationHintsComponent
 
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_global_features.h"
