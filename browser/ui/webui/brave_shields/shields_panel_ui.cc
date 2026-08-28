@@ -16,7 +16,6 @@
 #include "brave/components/brave_shields/core/browser/brave_shields_utils.h"
 #include "brave/components/brave_shields/core/common/brave_shield_localized_strings.h"
 #include "brave/components/brave_shields/core/common/features.h"
-#include "brave/components/brave_shields/resources/panel/grit/brave_shields_panel_generated_map.h"
 #include "brave/components/brave_shields/resources/panel_new/grit/brave_shields_panel_new_generated_map.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
@@ -81,15 +80,13 @@ ShieldsPanelUI::ShieldsPanelUI(content::WebUI* web_ui)
   content::URLDataSource::Add(profile_,
                               std::make_unique<ThemeSource>(profile_));
 
-  if (base::FeatureList::IsEnabled(
-          brave_shields::features::kShowUpdatedShieldsPanel)) {
-    source->AddLocalizedStrings(webui::kBraveShieldsStrings);
-    webui::SetupWebUIDataSource(source, kBraveShieldsPanelNewGenerated,
-                                IDR_SHIELDS_PANEL_NEW_HTML);
-  } else {
-    webui::SetupWebUIDataSource(source, kBraveShieldsPanelGenerated,
-                                IDR_SHIELDS_PANEL_HTML);
-  }
+  // growser (#112): the updated panel is the only one shipped now; the old
+  // panel resources and its about://flags fallback were removed. The
+  // kShowUpdatedShieldsPanel feature stays declared for iOS, which we do not
+  // build.
+  source->AddLocalizedStrings(webui::kBraveShieldsStrings);
+  webui::SetupWebUIDataSource(source, kBraveShieldsPanelNewGenerated,
+                              IDR_SHIELDS_PANEL_NEW_HTML);
 
   AddBackgroundColorToSource(source, web_ui->GetWebContents());
 }

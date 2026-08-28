@@ -1505,14 +1505,6 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
           FEATURE_VALUE_TYPE(brave_shields::features::kAdblockOnlyMode),       \
       },                                                                       \
       {                                                                        \
-          "brave-show-updated-shields-panel",                                  \
-          "Show updated shields panel",                                        \
-          "Shows an updated WebUI for the Brave Shields panel.",               \
-          kOsWin | kOsLinux | kOsMac,                                          \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_shields::features::kShowUpdatedShieldsPanel),              \
-      },                                                                       \
-      {                                                                        \
           "brave-sync-default-passwords",                                      \
           "Enable password syncing by default",                                \
           "Turn on password syncing when Sync is enabled.",                    \
