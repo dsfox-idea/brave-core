@@ -191,6 +191,10 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
       &features::kFewerUpdateConfirmations,
 #endif
+      // growser (#115): Glic is Google's in-browser Gemini surface, off with
+      // its user-status fetcher; a merge must not re-enable either.
+      &features::kGlic,
+      &features::kGlicUserStatusCheck,
       &features::kHttpsFirstBalancedMode,
       &features::kIdleDetection,
       &features::kIndigo,

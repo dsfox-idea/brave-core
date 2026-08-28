@@ -50,3 +50,26 @@ substitutions:
     set_feature_flag_default_state:
       feature_name: kTrustSafetySentimentSurveyV2
       value: base::FEATURE_DISABLED_BY_DEFAULT
+
+  - description: |-
+      Ship kGlic disabled everywhere (growser#115).
+
+      Glic is Google's in-browser Gemini assistant surface, ENABLED_BY_DEFAULT
+      on Win/Mac/CrOS. Same class as ai_chat and lens, which we removed. Its
+      user-status fetcher only phones Google for a signed-in enterprise Google
+      account (dormant otherwise, the CBCM shape), but the surface is a Google
+      AI product with no place in this browser. kGlic is the master gate read
+      by GlicEnabling; disabling it turns the whole surface off. Its multi-line
+      per-platform default needs a regex rather than set_feature_flag.
+    regex:
+      re_pattern: 'BASE_FEATURE\(kGlic,\s*#if BUILDFLAG\(IS_MAC\) \|\| BUILDFLAG\(IS_WIN\) \|\| BUILDFLAG\(IS_CHROMEOS\)\s*base::FEATURE_ENABLED_BY_DEFAULT\s*#else\s*base::FEATURE_DISABLED_BY_DEFAULT\s*#endif\s*\);'
+      replace: 'BASE_FEATURE(kGlic, base::FEATURE_DISABLED_BY_DEFAULT);'
+
+  - description: |-
+      Ship kGlicUserStatusCheck disabled (growser#115): belt-and-braces on the
+      data flow - this gates GlicUserStatusFetcher, which sends to Google's
+      glic user-status endpoint on startup and every 23h for a signed-in
+      enterprise account. Off with the surface.
+    set_feature_flag_default_state:
+      feature_name: kGlicUserStatusCheck
+      value: base::FEATURE_DISABLED_BY_DEFAULT
