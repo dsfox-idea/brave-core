@@ -93,6 +93,18 @@ export function getBuildArgs(config: Config) {
     args.dcheck_always_on = false
   }
 
+  // growser (#114): DCHECKs stay ON for every build we run ourselves. Our
+  // non-official Release has dcheck_always_on=true by default
+  // (build/config/dcheck_always_on.gni), which is exactly what we want
+  // locally - a red brave_unit_tests or a bad-input DCHECK reaches us early
+  // (strict rule 8). The ONLY build that turns them off is one we actually
+  // SHIP to users, where a release-active DCHECK could crash a user on edge
+  // input. GROWSER_SHIP=1 is that marker, set by the distribution/signing
+  // step; a build without it always keeps DCHECKs on.
+  if (process.env.GROWSER_SHIP === '1') {
+    args.dcheck_always_on = false
+  }
+
   if (!config.isBraveReleaseBuild()) {
     args.chrome_pgo_phase = 0
 
