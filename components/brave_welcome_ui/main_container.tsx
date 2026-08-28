@@ -7,7 +7,8 @@ import * as React from 'react'
 
 import DataContext from './state/context'
 // growser: the animated scene (sky, hills, abstract shapes) is off - we show
-// the static night composite background@2x.webp instead (#11).
+// a static background instead (#11): the NTP image growser_bay-01.webp,
+// copied in as background@2x.webp (#80).
 import { ViewType } from './state/component_types'
 
 import ImportInProgress from './components/import-in-progress'

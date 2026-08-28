@@ -102,7 +102,7 @@ function Background (props: BackgroundProps) {
   const handleImgLoad = () => {
     setHasLoaded(true)
 
-    // growser (#11): a static night composite - call onLoad straight away, or
+    // growser (#11): a static background - call onLoad straight away, or
     // the view never switches and the onboarding content is not drawn. This
     // also matches the previous behaviour when animations were disabled.
     if (props.static || !shouldPlayAnimations) {

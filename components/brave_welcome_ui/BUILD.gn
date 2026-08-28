@@ -14,7 +14,11 @@ if (is_brave_origin_branded) {
   _sky_source = "assets/sky_origin.webp"
 } else {
   _welcome_logo_source = "assets/brave_logo_3d@2x.webp"
-  _background_source = "assets/background@2x.webp"
+
+  # growser (#80): the onboarding background is the NTP background - the one
+  # bundled image is part of the identity now (was: the abstract night
+  # composite background@2x.webp).
+  _background_source = "//brave/components/img/newtab/backgrounds/growser_bay-01.webp"
   _hill_source = "assets/hill.webp"
   _pyramid_source = "assets/pyramid.webp"
   _sky_source = "assets/sky.webp"
