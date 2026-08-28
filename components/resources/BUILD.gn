@@ -14,6 +14,7 @@ import("//brave/components/email_aliases/buildflags/buildflags.gni")
 import("//brave/components/local_ai/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
+import("//brave/components/request_otr/common/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
 import("//brave/components/web_discovery/buildflags/buildflags.gni")
@@ -48,8 +49,11 @@ brave_grit("static_resources") {
   deps = [
     ":strings",
     "//brave/components/brave_shields/resources:bundle_js",
-    "//brave/components/request_otr/resources:bundle_js",
   ]
+
+  if (enable_request_otr) {
+    deps += [ "//brave/components/request_otr/resources:bundle_js" ]
+  }
 
   if (enable_ai_chat) {
     deps += [ "//brave/components/ai_chat/resources" ]
@@ -84,6 +88,7 @@ brave_grit("static_resources") {
     "enable_brave_wallet=$enable_brave_wallet",
     "enable_email_aliases=$enable_email_aliases",
     "enable_playlist_webui=$enable_playlist_webui",
+    "enable_request_otr=$enable_request_otr",
     "enable_speedreader=$enable_speedreader",
   ]
 
@@ -232,6 +237,7 @@ brave_grit("strings") {
     "enable_ai_chat_tab_management_tool=$enable_ai_chat_tab_management_tool",
     "enable_email_aliases=$enable_email_aliases",
     "enable_containers=$enable_containers",
+    "enable_request_otr=$enable_request_otr",
     "enable_speedreader=$enable_speedreader",
     "enable_tor=$enable_tor",
     "enable_brave_vpn=$enable_brave_vpn",

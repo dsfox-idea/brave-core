@@ -16,7 +16,9 @@ You can obtain one at https://mozilla.org/MPL/2.0/.
   <include name="IDR_LOCAL_DATA_DEBOUNCE_JSON" file="../brave_component_updater/resources/local_data/1/debounce.json" type="BINDATA" compress="gzip" />
   <include name="IDR_LOCAL_DATA_CLEAN_URLS_JSON" file="../brave_component_updater/resources/local_data/1/clean-urls.json" type="BINDATA" compress="gzip" />
   <include name="IDR_LOCAL_DATA_CLEAN_URLS_PERMISSIONS_JSON" file="../brave_component_updater/resources/local_data/1/clean-urls-permissions.json" type="BINDATA" compress="gzip" />
-  <include name="IDR_LOCAL_DATA_REQUEST_OTR_JSON" file="../brave_component_updater/resources/local_data/1/request-otr.json" type="BINDATA" compress="gzip" />
+  <if expr="enable_request_otr">
+    <include name="IDR_LOCAL_DATA_REQUEST_OTR_JSON" file="../brave_component_updater/resources/local_data/1/request-otr.json" type="BINDATA" compress="gzip" />
+  </if>
   <include name="IDR_LOCAL_DATA_WEBCOMPAT_EXCEPTIONS_JSON" file="../brave_component_updater/resources/local_data/1/webcompat-exceptions.json" type="BINDATA" compress="gzip" />
   <include name="IDR_LOCAL_DATA_HTTPS_UPGRADE_EXCEPTIONS_TXT" file="../brave_component_updater/resources/local_data/1/https-upgrade-exceptions-list.txt" type="BINDATA" compress="gzip" />
 </grit-part>

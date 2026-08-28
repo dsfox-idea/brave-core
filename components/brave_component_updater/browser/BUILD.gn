@@ -74,6 +74,7 @@ component("browser") {
 
   deps = [
     "//base",
+    "//brave/components/request_otr/common/buildflags",
     "//brave/components/resources",
     "//brave/components/resources:static_resources_grit",
     "//components/component_updater",

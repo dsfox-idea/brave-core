@@ -25,8 +25,11 @@
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/psst/buildflags/buildflags.h"
-#include "brave/components/request_otr/common/pref_names.h"
+#include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_REQUEST_OTR)
+#include "brave/components/request_otr/common/pref_names.h"
+#endif
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/components/webcompat_reporter/common/pref_names.h"
@@ -334,9 +337,11 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kString;
   (*s_brave_allowlist)[prefs::kBraveHistoryRetentionDays] =
       settings_api::PrefType::kNumber;
+#if BUILDFLAG(ENABLE_REQUEST_OTR)
   // Request OTR feature
   (*s_brave_allowlist)[request_otr::kRequestOTRActionOption] =
       settings_api::PrefType::kNumber;
+#endif
 
   (*s_brave_allowlist)[decentralized_dns::kUnstoppableDomainsResolveMethod] =
       settings_api::PrefType::kNumber;

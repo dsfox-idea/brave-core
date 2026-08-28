@@ -102,7 +102,9 @@
       <part file="speedreader_resources.grdp" />
       <part file="brave_flags_ui_resources.grdp" />
       <part file="domain_block_resources.grdp" />
-      <part file="request_otr_resources.grdp" />
+      <if expr="enable_request_otr">
+        <part file="request_otr_resources.grdp" />
+      </if>
       <if expr="not is_ios and enable_brave_wallet">
         <part file="decentralized_dns_resources.grdp" />
       </if>

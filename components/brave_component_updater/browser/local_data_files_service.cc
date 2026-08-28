@@ -15,6 +15,7 @@
 #include "base/functional/bind.h"
 #include "base/path_service.h"
 #include "base/task/thread_pool.h"
+#include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "components/component_updater/component_updater_paths.h"
 #include "components/grit/brave_components_resources.h"
 #include "ui/base/resource/resource_bundle.h"
@@ -40,7 +41,9 @@ constexpr auto kBundledFiles = std::to_array<BundledFile>({
     {IDR_LOCAL_DATA_CLEAN_URLS_JSON, "clean-urls.json"},
     {IDR_LOCAL_DATA_CLEAN_URLS_PERMISSIONS_JSON,
      "clean-urls-permissions.json"},
+#if BUILDFLAG(ENABLE_REQUEST_OTR)
     {IDR_LOCAL_DATA_REQUEST_OTR_JSON, "request-otr.json"},
+#endif
     {IDR_LOCAL_DATA_WEBCOMPAT_EXCEPTIONS_JSON, "webcompat-exceptions.json"},
     {IDR_LOCAL_DATA_HTTPS_UPGRADE_EXCEPTIONS_TXT,
      "https-upgrade-exceptions-list.txt"},

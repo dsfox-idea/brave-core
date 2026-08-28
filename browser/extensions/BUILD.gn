@@ -14,6 +14,7 @@ import("//brave/components/containers/buildflags/buildflags.gni")
 import("//brave/components/email_aliases/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
+import("//brave/components/request_otr/common/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
 import("//brave/components/web_discovery/buildflags/buildflags.gni")
@@ -119,7 +120,7 @@ source_set("extensions") {
     "//brave/components/debounce/core/common",
     "//brave/components/email_aliases/buildflags",
     "//brave/components/ntp_background_images/common",
-    "//brave/components/request_otr/common",
+    "//brave/components/request_otr/common/buildflags",
     "//brave/components/sidebar/browser",
     "//brave/components/speedreader/common/buildflags",
     "//brave/components/tor/buildflags",
@@ -141,6 +142,10 @@ source_set("extensions") {
     "//components/user_prefs",
     "//content/public/browser",
   ]
+
+  if (enable_request_otr) {
+    deps += [ "//brave/components/request_otr/common" ]
+  }
 
   public_deps = [
     ":component_loader",
