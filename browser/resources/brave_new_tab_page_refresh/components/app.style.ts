@@ -157,15 +157,18 @@ export const style = scoped.css`
     gap: 16px;
     padding: 16px ${horizontalContentPadding}px;
 
+    /* growser (#117): siblings fade out on search focus with opacity only.
+       Upstream also scales them to 0.9, which repaints six subtrees (top-site
+       tiles, live widgets, clock) on every frame at the same time as the box
+       moves and the backdrop dims. Opacity alone reads the same "recede" and
+       stays cheap. */
     > * {
       transition:
         opacity var(--search-transition-duration),
-        transform var(--search-transition-duration),
         visibility var(--search-transition-duration) allow-discrete;
 
       .search-box-expanded & {
         opacity: 0;
-        transform: scale(0.9);
         visibility: hidden;
       }
     }
@@ -183,7 +186,6 @@ export const style = scoped.css`
 
     .search-box-expanded & {
       opacity: 1;
-      transform: none;
       visibility: visible;
     }
   }

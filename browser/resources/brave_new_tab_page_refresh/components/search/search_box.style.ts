@@ -11,6 +11,13 @@ export const style = scoped.css`
   & {
     --self-transition-duration: var(--search-transition-duration, 120ms);
 
+    /* growser (#117): how far the box glides down on focus. Driven by transform
+       (composited) rather than inset-block-start (a layout property that reflows
+       on every frame - the source of the stutter). The collapsed position is
+       left untouched at its natural anchor; tune this one value by eye if the
+       expanded resting spot needs to sit higher or lower. */
+    --search-expand-travel: 13vh;
+
     anchor-name: --search-box-anchor;
     color: ${color.text.primary};
     min-height: 48px;
@@ -27,27 +34,26 @@ export const style = scoped.css`
     width: calc(100vw - 32px);
     max-width: 416px;
 
-    transition-property: overlay, max-width, inset-block-start;
+    transition-property: overlay, max-width, translate;
     transition-duration: var(--self-transition-duration);
     transition-timing-function: ease-out;
     transition-behavior: allow-discrete;
 
+    /* growser (#117): the dim toggles instantly instead of fading. Fading the
+       backdrop's background means a full-viewport repaint on every frame of the
+       focus transition, competing with the box move and the sibling fade. The
+       0.2 scrim still appears - it just does not animate. */
     &::backdrop {
       background: rgba(0, 0, 0, 0);
-      transition: all var(--self-transition-duration) allow-discrete;
     }
 
     &:popover-open::backdrop {
       background: rgba(0, 0, 0, 0.2);
-
-      @starting-style {
-        background: rgba(0, 0, 0, 0);
-      }
     }
   }
 
   &.expanded .search-container {
-    inset-block-start: 27vh;
+    translate: 0 var(--search-expand-travel);
     max-width: 540px;
   }
 
