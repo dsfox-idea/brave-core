@@ -35,6 +35,19 @@ export const style = scoped.css`
     line-height: 1.45;
   }
 
+  // Emphasized keychain instruction: the OS WILL prompt, and the user must
+  // always allow. Visually set apart from the body so it is not missed.
+  .callout {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(30, 163, 98, 0.14);
+    border: 1px solid rgba(47, 208, 127, 0.34);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
   .restart {
     font-size: 14px;
     opacity: 0.8;

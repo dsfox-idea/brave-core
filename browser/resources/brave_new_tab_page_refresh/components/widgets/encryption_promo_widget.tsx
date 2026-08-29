@@ -25,7 +25,7 @@ export function EncryptionPromoWidget() {
   const [justEnabled, setJustEnabled] = React.useState(false)
 
   React.useEffect(() => {
-    (async () => {
+    ;(async () => {
       const { enabled, dismissed } =
         await NewTabPageProxy.getInstance().handler.getCookieEncryptionState()
       setEnabled(enabled)
@@ -43,13 +43,17 @@ export function EncryptionPromoWidget() {
   }
 
   async function onDismiss() {
-    await NewTabPageProxy.getInstance()
-        .handler.setCookieEncryptionPromoDismissed(true)
+    await NewTabPageProxy.getInstance().handler.setCookieEncryptionPromoDismissed(
+      true,
+    )
     setDismissed(true)
   }
 
   return (
-    <div data-css-scope={style.scope} className='encryption-promo'>
+    <div
+      data-css-scope={style.scope}
+      className='encryption-promo'
+    >
       <Icon name='shield-done' />
       <div className='body'>
         <div className='title'>
@@ -64,11 +68,20 @@ export function EncryptionPromoWidget() {
             <div className='text'>
               {getString(S.NEW_TAB_ENCRYPTION_PROMO_BODY)}
             </div>
+            <div className='callout'>
+              {getString(S.NEW_TAB_ENCRYPTION_PROMO_KEYCHAIN)}
+            </div>
             <div className='actions'>
-              <Button size='small' onClick={onEnable}>
+              <Button
+                size='small'
+                onClick={onEnable}
+              >
                 {getString(S.NEW_TAB_ENCRYPTION_PROMO_ENABLE)}
               </Button>
-              <button className='dismiss' onClick={onDismiss}>
+              <button
+                className='dismiss'
+                onClick={onDismiss}
+              >
                 {getString(S.NEW_TAB_ENCRYPTION_PROMO_DISMISS)}
               </button>
             </div>

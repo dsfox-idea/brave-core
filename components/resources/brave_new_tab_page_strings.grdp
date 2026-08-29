@@ -446,7 +446,11 @@
   </message>
 
   <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_BODY" desc="Body of the NTP promo offering to turn on cookie encryption, explaining the tradeoff" formatter_data="webui=BraveNewTabPage">
-    macOS can encrypt the data Growser stores on this disk. Turn this on to protect it if your Mac is lost or stolen, or someone uses it without your password. You may be asked for your keychain password - allow it always.
+    macOS can encrypt the data Growser stores on this disk. Turn this on to protect it if your Mac is lost or stolen, or someone uses it without your password.
+  </message>
+
+  <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_KEYCHAIN" desc="Emphasized callout in the NTP cookie-encryption promo, telling the user that the OS will prompt for a password and that they must always allow it" formatter_data="webui=BraveNewTabPage">
+    macOS will ask for your password - enter it and click 'Always Allow'.
   </message>
 
   <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_ENABLE" desc="Button that turns on cookie encryption from the NTP promo" formatter_data="webui=BraveNewTabPage">
