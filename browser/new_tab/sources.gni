@@ -16,6 +16,10 @@ if (!is_android) {
     "//brave/browser/new_tab/new_tab_shows_navigation_throttle.h",
     "//brave/browser/new_tab/new_tab_shows_options.cc",
     "//brave/browser/new_tab/new_tab_shows_options.h",
+    "//brave/browser/new_tab/warm_new_tab_page_manager.cc",
+    "//brave/browser/new_tab/warm_new_tab_page_manager.h",
+    "//brave/browser/new_tab/warm_new_tab_page_manager_factory.cc",
+    "//brave/browser/new_tab/warm_new_tab_page_manager_factory.h",
   ]
 
   if (is_win) {
@@ -36,7 +40,9 @@ if (!is_android) {
     "//skia",
     "//brave/app:brave_generated_resources_grit",
     "//brave/components/constants",
+    "//chrome/browser/profiles:profile",
     "//chrome/common",
+    "//components/keyed_service/core",
     "//components/prefs",
     "//content/public/browser",
     "//ui/base",
