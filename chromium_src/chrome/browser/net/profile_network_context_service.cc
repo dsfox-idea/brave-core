@@ -38,11 +38,35 @@
                     growser_ru_trust::kRuTrustDomainsPref)                \
               : nullptr));
 
+#include "brave/components/constants/pref_names.h"
 #include "brave/components/growser_ru_trust/ru_trust_anchors.h"
 #include "brave/components/growser_ru_trust/ru_trust_updater.h"
 #include "chrome/browser/browser_process.h"
 #include "components/prefs/pref_service.h"
 
+// growser: cookie encryption is opt-in. The upstream code unconditionally
+// wires a CookieEncryptionProvider and leaves `enable_encrypted_cookies` at its
+// mojom default (true), so the cookie store always creates an OSCrypt delegate
+// and its first `LoadCookiesForKey` waits for the Encryptor - which on macOS
+// waits on the login keychain. That keychain access is what gates the first
+// navigation. With the pref off (the default) we set
+// `enable_encrypted_cookies=false` and skip the provider, so the cookie store
+// loads with no OSCrypt and no navigation blocks on the keychain. Opting in via
+// the NTP promo flips the pref and restarts into the upstream strong-crypto
+// path; plaintext cookies load as-is and new ones encrypt on write, so opting
+// in costs no existing cookies.
+#define BRAVE_ADD_COOKIE_ENCRYPTION_MANAGER_TO_NETWORK_CONTEXT_PARAMS(params) \
+  do {                                                                       \
+    if (profile_->GetPrefs()->GetBoolean(kGrowserCookieEncryptionEnabled)) { \
+      g_browser_process->system_network_context_manager()                    \
+          ->AddCookieEncryptionManagerToNetworkContextParams(params);        \
+      (params)->enable_encrypted_cookies = true;                             \
+    } else {                                                                 \
+      (params)->enable_encrypted_cookies = false;                            \
+    }                                                                        \
+  } while (0)
+
 #include <chrome/browser/net/profile_network_context_service.cc>
 #undef BRAVE_PROFILE_NETWORK_CONTEXT_SERVICE_GET_CT_POLICY
 #undef BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
+#undef BRAVE_ADD_COOKIE_ENCRYPTION_MANAGER_TO_NETWORK_CONTEXT_PARAMS

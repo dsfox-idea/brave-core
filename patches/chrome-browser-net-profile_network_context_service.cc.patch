@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
-index c9ae7f58abdc9e650501363db9da48231ffecc15..17a86036c2f5de958a725d3495ee0f57549043c5 100644
+index c9ae7f58abdc9e650501363db9da48231ffecc15..7bd4c1d27f74794f5bac0b6ebc8c79012b375972 100644
 --- a/chrome/browser/net/profile_network_context_service.cc
 +++ b/chrome/browser/net/profile_network_context_service.cc
 @@ -655,7 +655,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
@@ -19,3 +19,15 @@ index c9ae7f58abdc9e650501363db9da48231ffecc15..17a86036c2f5de958a725d3495ee0f57
    return network::mojom::CTPolicy::New(std::move(excluded),
                                         std::move(excluded_spkis));
  }
+@@ -1415,9 +1416,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
+     network_context_params->file_paths->cookie_database_name =
+         base::FilePath(chrome::kCookieFilename);
+ 
+-    g_browser_process->system_network_context_manager()
+-        ->AddCookieEncryptionManagerToNetworkContextParams(
+-            network_context_params);
++    BRAVE_ADD_COOKIE_ENCRYPTION_MANAGER_TO_NETWORK_CONTEXT_PARAMS(
++        network_context_params);
+ 
+ #if BUILDFLAG(ENTERPRISE_CACHE_ENCRYPTION)
+     if (enterprise_encryption::ShouldEncryptHttpCache(profile_->GetPrefs())) {

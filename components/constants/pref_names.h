@@ -49,6 +49,14 @@ inline constexpr char kShowBookmarksButton[] = "brave.show_bookmarks_button";
 inline constexpr char kShowSidePanelButton[] = "brave.show_side_panel_button";
 inline constexpr char kShowScreenshotButton[] = "brave.show_screenshot_button";
 inline constexpr char kLocationBarIsWide[] = "brave.location_bar_is_wide";
+// growser: off by default. macOS OSCrypt reads the login keychain to derive the
+// cookie-encryption key, and that keychain access is what gates the first
+// navigation (the cookie store waits for the Encryptor, which waits on the
+// keychain). With this off, the cookie store loads without OSCrypt and no
+// navigation ever blocks on the keychain. The NTP promo offers the user to opt
+// in (stronger at-rest protection) at the cost of a possible keychain prompt.
+inline constexpr char kGrowserCookieEncryptionEnabled[] =
+    "growser.cookie_encryption_enabled";
 inline constexpr char kReferralDownloadID[] = "brave.referral.download_id";
 inline constexpr char kReferralTimestamp[] = "brave.referral.timestamp";
 inline constexpr char kReferralAttemptTimestamp[] =
