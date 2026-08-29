@@ -20,7 +20,11 @@ class WarmNewTabPageManager;
 class WarmNewTabPageManagerFactory : public ProfileKeyedServiceFactory {
  public:
   static WarmNewTabPageManagerFactory* GetInstance();
+  // Creates the manager for `profile` (and thus starts warming) if needed.
   static WarmNewTabPageManager* GetForProfile(Profile* profile);
+  // Returns the existing manager for `profile`, or nullptr if none - never
+  // creates one, so the tab-adoption path cannot warm in headless/automation.
+  static WarmNewTabPageManager* GetForProfileIfExists(Profile* profile);
 
   WarmNewTabPageManagerFactory(const WarmNewTabPageManagerFactory&) = delete;
   WarmNewTabPageManagerFactory& operator=(const WarmNewTabPageManagerFactory&) =

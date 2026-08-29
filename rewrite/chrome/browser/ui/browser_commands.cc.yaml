@@ -12,6 +12,14 @@ substitutions:
       replace: \1_ChromiumImpl(
 
   - description:
+      Rename NewTab to NewTab_ChromiumImpl so Brave can adopt a warm,
+      pre-rendered New Tab Page (growser #119) before falling back to the
+      upstream tab creation.
+    regex:
+      re_pattern: (content::WebContents& NewTab)\(
+      replace: \1_ChromiumImpl(
+
+  - description:
       Replace chrome::kChromeUISplitViewNewTabPageURL to kChromeUINewTabURL in
       NewSplitTab(). We don't want to have a separate NTP URL for split view.
     regex:

@@ -27,6 +27,13 @@ WarmNewTabPageManager* WarmNewTabPageManagerFactory::GetForProfile(
       GetInstance()->GetServiceForBrowserContext(profile, /*create=*/true));
 }
 
+// static
+WarmNewTabPageManager* WarmNewTabPageManagerFactory::GetForProfileIfExists(
+    Profile* profile) {
+  return static_cast<WarmNewTabPageManager*>(
+      GetInstance()->GetServiceForBrowserContext(profile, /*create=*/false));
+}
+
 WarmNewTabPageManagerFactory::WarmNewTabPageManagerFactory()
     : ProfileKeyedServiceFactory("WarmNewTabPageManager",
                                  ProfileSelections::BuildForRegularProfile()) {}

@@ -20,6 +20,7 @@
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/importer/brave_importer_p3a.h"
+#include "brave/browser/new_tab/warm_new_tab_page_activator.h"
 #include "brave/browser/p3a/p3a_core_metrics.h"
 #include "brave/browser/ui/webui/new_tab_page/brave_new_tab_message_handler.h"
 #include "chrome/browser/first_run/first_run.h"
@@ -98,6 +99,7 @@ void BraveBrowserMainExtraParts::PreMainMessageLoopRun() {
   // The code below is not supported on android.
 #if !BUILDFLAG(IS_ANDROID)
   brave::BraveWindowTracker::CreateInstance(g_browser_process->local_state());
+  growser::WarmNewTabPageActivator::CreateInstance();
 #endif  // !BUILDFLAG(IS_ANDROID)
   g_brave_browser_process->process_misc_metrics()->uptime_monitor()->Init();
 }
@@ -109,6 +111,9 @@ void BraveBrowserMainExtraParts::PostDestroyThreads() {
   // and the collection will go out of scope with the browser process.
   if (brave::BraveWindowTracker::HasInstance()) {
     brave::BraveWindowTracker::ClearInstance();
+  }
+  if (growser::WarmNewTabPageActivator::HasInstance()) {
+    growser::WarmNewTabPageActivator::ClearInstance();
   }
 #endif  // !BUILDFLAG(IS_ANDROID)
 }

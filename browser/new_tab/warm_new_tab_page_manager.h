@@ -19,6 +19,7 @@ class BrowserContext;
 class WebContents;
 }  // namespace content
 
+class BrowserWindowInterface;
 class Profile;
 
 namespace growser {
@@ -26,6 +27,13 @@ namespace growser {
 // Gates the whole warm New Tab Page mechanism. Enabled by default; a kill
 // switch while it is stabilized.
 BASE_DECLARE_FEATURE(kWarmNewTabPage);
+
+// If a warm New Tab Page is ready for `browser`'s profile, adopts it into
+// `browser` as the active foreground tab and returns it; otherwise returns
+// nullptr and the caller builds the tab the ordinary way. Only adopts for a
+// regular tabbed window. Never creates or warms a page itself - it only
+// consumes one the activator prepared, so it is inert in headless/automation.
+content::WebContents* MaybeAdoptWarmNewTab(BrowserWindowInterface* browser);
 
 // Keeps one hidden, fully-rendered New Tab Page WebContents warm per profile so
 // that opening a new tab shows an already-painted page instead of building it

@@ -5,14 +5,24 @@
 
 #include "brave/browser/new_tab/warm_new_tab_page_manager.h"
 
+#include <memory>
+#include <optional>
 #include <utility>
 
+#include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/location.h"
 #include "base/logging.h"
 #include "base/task/single_thread_task_runner.h"
+#include "brave/browser/new_tab/warm_new_tab_page_manager_factory.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
+#include "chrome/browser/ui/tabs/tab_enums.h"
+#include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/common/webui_url_constants.h"
+#include "components/tab_groups/tab_group_id.h"
+#include "components/tabs/public/tab_interface.h"
 #include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/site_instance.h"
 #include "content/public/browser/web_contents.h"
@@ -129,6 +139,44 @@ void WarmNewTabPageManager::BuildWarmContents() {
 void WarmNewTabPageManager::OnWarmContentsReady() {
   is_ready_ = true;
   VLOG(1) << "WarmNTP: warm NTP ready to show";
+}
+
+content::WebContents* MaybeAdoptWarmNewTab(BrowserWindowInterface* browser) {
+  if (!base::FeatureList::IsEnabled(kWarmNewTabPage)) {
+    return nullptr;
+  }
+  Browser* chrome_browser = browser->GetBrowserForMigrationOnly();
+  if (!chrome_browser || !chrome_browser->SupportsWindowFeature(
+                             Browser::WindowFeature::kFeatureTabStrip)) {
+    return nullptr;
+  }
+  Profile* profile = browser->GetProfile();
+  if (!profile) {
+    return nullptr;
+  }
+  // Only adopt an already-prepared page; never create/warm here, so this stays
+  // inert in headless/automation where the activator never ran.
+  WarmNewTabPageManager* manager =
+      WarmNewTabPageManagerFactory::GetForProfileIfExists(profile);
+  if (!manager) {
+    return nullptr;
+  }
+  std::unique_ptr<content::WebContents> warm = manager->TakeWarmContents();
+  if (!warm) {
+    return nullptr;
+  }
+
+  // Match chrome::NewTab: the new tab joins the active tab's group, if any.
+  TabStripModel* tab_strip_model = browser->GetTabStripModel();
+  const tabs::TabInterface* active_tab = tab_strip_model->GetActiveTab();
+  const std::optional<tab_groups::TabGroupId> group =
+      active_tab ? active_tab->GetGroup() : std::nullopt;
+
+  content::WebContents* raw = warm.get();
+  tab_strip_model->AddWebContents(std::move(warm), /*index=*/-1,
+                                  ui::PAGE_TRANSITION_TYPED,
+                                  AddTabTypes::ADD_ACTIVE, group);
+  return raw;
 }
 
 }  // namespace growser

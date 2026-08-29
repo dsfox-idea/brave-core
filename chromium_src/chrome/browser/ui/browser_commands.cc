@@ -6,12 +6,16 @@
 #include "brave/browser/ui/browser_commands.h"
 
 #include "base/check.h"
+#include "base/metrics/histogram_macros.h"
+#include "base/metrics/user_metrics.h"
+#include "brave/browser/new_tab/warm_new_tab_page_manager.h"
 #include "brave/components/commander/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/common/webui_url_constants.h"
+#include "content/public/browser/web_contents.h"
 
 class ReadingListModel;
 
@@ -37,6 +41,26 @@ void ReloadBypassingCache(BrowserWindowInterface* browser,
   }
 #endif
   ReloadBypassingCache_ChromiumImpl(browser, disposition);
+}
+
+// Upstream function, renamed by rewrite rule.
+content::WebContents& NewTab_ChromiumImpl(BrowserWindowInterface* browser,
+                                          NewTabTypes context);
+
+// Adopt a warm, pre-rendered New Tab Page if one is ready, so [+] shows an
+// already-loaded page instead of building it from scratch (growser #119).
+content::WebContents& NewTab(BrowserWindowInterface* browser,
+                             NewTabTypes context) {
+  if (content::WebContents* adopted = growser::MaybeAdoptWarmNewTab(browser)) {
+    // NewTab_ChromiumImpl is skipped, so record the metrics it would have.
+    if (context != NewTabTypes::kNoUserAction) {
+      base::RecordAction(base::UserMetricsAction("NewTab"));
+    }
+    UMA_HISTOGRAM_ENUMERATION("Tab.NewTab", context,
+                              NewTabTypes::kNewTabEnumCount);
+    return *adopted;
+  }
+  return NewTab_ChromiumImpl(browser, context);
 }
 
 }  // namespace chrome
