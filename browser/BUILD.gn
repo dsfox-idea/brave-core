@@ -120,8 +120,13 @@ group("browser") {
 source_set("unit_tests") {
   testonly = true
 
-  sources = []
-  deps = []
+  sources = [ "growser_cookie_encryption_prefs_unittest.cc" ]
+  deps = [
+    "//base",
+    "//brave/components/constants",
+    "//components/sync_preferences",
+    "//testing/gtest",
+  ]
 
   if (is_win) {
     sources += [ "default_protocol_handler_utils_win_unittest.cc" ]
@@ -129,7 +134,6 @@ source_set("unit_tests") {
     deps += [
       "//base",
       "//brave/browser",
-      "//testing/gtest",
     ]
   }
 }
