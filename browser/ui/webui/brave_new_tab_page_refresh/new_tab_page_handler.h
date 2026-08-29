@@ -97,6 +97,15 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   void GetShowSearchBox(GetShowSearchBoxCallback callback) override;
   void SetShowSearchBox(bool show_search_box,
                         SetShowSearchBoxCallback callback) override;
+  // growser: opt-in cookie encryption (see kGrowserCookieEncryptionEnabled).
+  void GetCookieEncryptionState(
+      GetCookieEncryptionStateCallback callback) override;
+  void SetCookieEncryptionEnabled(bool enabled,
+                                  SetCookieEncryptionEnabledCallback callback)
+      override;
+  void SetCookieEncryptionPromoDismissed(
+      bool dismissed,
+      SetCookieEncryptionPromoDismissedCallback callback) override;
   void GetShowChatInput(GetShowChatInputCallback callback) override;
   void SetShowChatInput(bool show_chat_input,
                         SetShowChatInputCallback callback) override;

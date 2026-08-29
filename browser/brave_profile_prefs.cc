@@ -447,6 +447,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // growser: cookie encryption is opt-in. Off by default so navigation never
   // blocks on the macOS keychain (see kGrowserCookieEncryptionEnabled).
   registry->RegisterBooleanPref(kGrowserCookieEncryptionEnabled, false);
+  registry->RegisterBooleanPref(kGrowserCookieEncryptionPromoDismissed, false);
   registry->RegisterBooleanPref(kMRUCyclingEnabled, false);
   registry->RegisterBooleanPref(kTabMuteIndicatorNotClickable, false);
 

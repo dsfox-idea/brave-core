@@ -441,4 +441,24 @@
     Cards
   </message>
 
+  <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_TITLE" desc="Title of the NTP promo offering to turn on cookie encryption" formatter_data="webui=BraveNewTabPage">
+    Protect your data on this Mac
+  </message>
+
+  <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_BODY" desc="Body of the NTP promo offering to turn on cookie encryption, explaining the tradeoff" formatter_data="webui=BraveNewTabPage">
+    macOS can encrypt the data Growser stores on this disk. Turn this on to protect it if your Mac is lost or stolen, or someone uses it without your password. You may be asked for your keychain password - allow it always.
+  </message>
+
+  <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_ENABLE" desc="Button that turns on cookie encryption from the NTP promo" formatter_data="webui=BraveNewTabPage">
+    Turn on encryption
+  </message>
+
+  <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_DISMISS" desc="Button that dismisses the NTP cookie-encryption promo without enabling it" formatter_data="webui=BraveNewTabPage">
+    Not now
+  </message>
+
+  <message name="IDS_NEW_TAB_ENCRYPTION_PROMO_RESTART" desc="Message shown after enabling cookie encryption, telling the user to restart" formatter_data="webui=BraveNewTabPage">
+    Encryption is on. Restart Growser to finish.
+  </message>
+
 </grit-part>

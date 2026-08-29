@@ -273,4 +273,13 @@ interface NewTabPageHandler {
   // Records VPN widget usage metrics.
   ReportVPNWidgetUsage() => ();
 
+  // growser: cookie encryption is opt-in. Returns whether it is enabled and
+  // whether the NTP promo offering to enable it has been dismissed.
+  GetCookieEncryptionState() => (bool enabled, bool dismissed);
+  // Enables cookie encryption (takes effect after a browser restart, when the
+  // cookie store is recreated with OSCrypt).
+  SetCookieEncryptionEnabled(bool enabled) => ();
+  // Dismisses the NTP cookie-encryption promo without enabling it.
+  SetCookieEncryptionPromoDismissed(bool dismissed) => ();
+
 };

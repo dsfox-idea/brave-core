@@ -57,6 +57,10 @@ inline constexpr char kLocationBarIsWide[] = "brave.location_bar_is_wide";
 // in (stronger at-rest protection) at the cost of a possible keychain prompt.
 inline constexpr char kGrowserCookieEncryptionEnabled[] =
     "growser.cookie_encryption_enabled";
+// growser: set when the user dismisses the NTP cookie-encryption promo without
+// enabling it, so the card does not nag on every new tab.
+inline constexpr char kGrowserCookieEncryptionPromoDismissed[] =
+    "growser.cookie_encryption_promo_dismissed";
 inline constexpr char kReferralDownloadID[] = "brave.referral.download_id";
 inline constexpr char kReferralTimestamp[] = "brave.referral.timestamp";
 inline constexpr char kReferralAttemptTimestamp[] =

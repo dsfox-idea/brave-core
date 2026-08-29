@@ -214,6 +214,27 @@ void NewTabPageHandler::SetShowSearchBox(bool show_search_box,
   std::move(callback).Run();
 }
 
+void NewTabPageHandler::GetCookieEncryptionState(
+    GetCookieEncryptionStateCallback callback) {
+  std::move(callback).Run(
+      pref_service_->GetBoolean(kGrowserCookieEncryptionEnabled),
+      pref_service_->GetBoolean(kGrowserCookieEncryptionPromoDismissed));
+}
+
+void NewTabPageHandler::SetCookieEncryptionEnabled(
+    bool enabled,
+    SetCookieEncryptionEnabledCallback callback) {
+  pref_service_->SetBoolean(kGrowserCookieEncryptionEnabled, enabled);
+  std::move(callback).Run();
+}
+
+void NewTabPageHandler::SetCookieEncryptionPromoDismissed(
+    bool dismissed,
+    SetCookieEncryptionPromoDismissedCallback callback) {
+  pref_service_->SetBoolean(kGrowserCookieEncryptionPromoDismissed, dismissed);
+  std::move(callback).Run();
+}
+
 void NewTabPageHandler::GetShowChatInput(GetShowChatInputCallback callback) {
   std::move(callback).Run(pref_service_->GetBoolean(
       brave_search_conversion::prefs::kShowNTPChatInput));

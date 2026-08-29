@@ -15,6 +15,7 @@ import { TopSites } from './top_sites/top_sites'
 import { Clock } from './common/clock'
 import { LazyNewsFeed } from './news/lazy_news_feed'
 import { WidgetStack } from './widgets/widget_stack'
+import { EncryptionPromoWidget } from './widgets/encryption_promo_widget'
 import { useSearchLayoutReady, useWidgetLayoutReady } from './app_layout_ready'
 import useMediaQuery from '$web-common/useMediaQuery'
 
@@ -65,6 +66,9 @@ export function App() {
           {searchLayoutReady && (
             <Search showSearchSettings={() => setSettingsView('search')} />
           )}
+        </div>
+        <div className='encryption-promo-container allow-background-pointer-events'>
+          <EncryptionPromoWidget />
         </div>
         <div
           className='
