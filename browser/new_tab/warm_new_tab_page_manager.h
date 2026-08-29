@@ -6,12 +6,15 @@
 #ifndef BRAVE_BROWSER_NEW_TAB_WARM_NEW_TAB_PAGE_MANAGER_H_
 #define BRAVE_BROWSER_NEW_TAB_WARM_NEW_TAB_PAGE_MANAGER_H_
 
+#include <map>
 #include <memory>
 
 #include "base/feature_list.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/weak_ptr.h"
 #include "components/keyed_service/core/keyed_service.h"
+#include "components/ntp_tiles/most_visited_sites.h"
+#include "components/prefs/pref_change_registrar.h"
 #include "content/public/browser/web_contents_observer.h"
 
 namespace content {
@@ -47,11 +50,12 @@ content::WebContents* MaybeAdoptWarmNewTab(BrowserWindowInterface* browser);
 //    warms top-chrome WebUIs).
 //  - TakeWarmContents() hands the ready contents to the tab strip and schedules
 //    a fresh one.
-//  - The warm contents is rebuilt only when the top-sites composition changes
-//    (wired in a later step) and dropped under memory pressure. Clock,
-//    background and widgets keep their live mojo bindings while hidden, so they
-//    update in place and do not force a rebuild.
-class WarmNewTabPageManager : public KeyedService {
+//  - The warm contents is rebuilt only when the top-sites composition changes -
+//    a tile added/removed/reordered/pinned, or the tiles' visibility toggled.
+//    Clock, background and widgets keep their live mojo bindings while hidden,
+//    so they update in place and do not force a rebuild.
+class WarmNewTabPageManager : public KeyedService,
+                              public ntp_tiles::MostVisitedSites::Observer {
  public:
   explicit WarmNewTabPageManager(Profile* profile);
   WarmNewTabPageManager(const WarmNewTabPageManager&) = delete;
@@ -79,14 +83,31 @@ class WarmNewTabPageManager : public KeyedService {
   // KeyedService:
   void Shutdown() override;
 
+  // ntp_tiles::MostVisitedSites::Observer: the composition-change signal the NTP
+  // itself reads (covers most-visited, blocked and custom-link edits).
+  void OnURLsAvailable(
+      bool is_user_triggered,
+      const std::map<ntp_tiles::SectionType, ntp_tiles::NTPTilesVector>&
+          sections) override;
+  void OnIconMadeAvailable(const GURL& site_url) override {}
+
   void BuildWarmContents();
   void OnWarmContentsReady();
+  // Rebuilds the warm page because the top-sites composition changed.
+  void OnTopSitesChanged();
 
   const raw_ptr<Profile> profile_;
 
   std::unique_ptr<content::WebContents> warm_contents_;
   std::unique_ptr<PaintWatcher> paint_watcher_;
   bool is_ready_ = false;
+
+  // Watches the top-sites composition so the warm page can be rebuilt when the
+  // tiles change. Owned like brave's TopSitesFacade owns its own instance.
+  std::unique_ptr<ntp_tiles::MostVisitedSites> most_visited_sites_;
+  PrefChangeRegistrar pref_change_registrar_;
+  // OnURLsAvailable fires once on initial load; only later ones are changes.
+  bool seen_initial_sites_ = false;
 
   base::WeakPtrFactory<WarmNewTabPageManager> weak_factory_{this};
 };

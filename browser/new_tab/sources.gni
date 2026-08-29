@@ -43,6 +43,8 @@ if (!is_android) {
     "//brave/app:brave_generated_resources_grit",
     "//brave/components/constants",
     "//chrome/browser/headless",
+    "//chrome/browser/new_tab_page/prefs",
+    "//chrome/browser/ntp_tiles",
     "//chrome/browser/profiles:profile",
     "//chrome/browser/ui",
     "//chrome/common",

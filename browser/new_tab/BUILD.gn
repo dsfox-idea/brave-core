@@ -30,8 +30,11 @@ source_set("unittest") {
       "board_hosts_unittest.cc",
       "new_tab_shows_options_unittest.cc",
       "tile_icon_fetcher_unittest.cc",
+      "warm_new_tab_page_manager_unittest.cc",
     ]
     deps = [
+      "//base",
+      "//base/test:test_support",
       "//brave/browser",
       "//brave/common",
       "//brave/components/constants",

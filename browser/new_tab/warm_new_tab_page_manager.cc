@@ -15,12 +15,16 @@
 #include "base/logging.h"
 #include "base/task/single_thread_task_runner.h"
 #include "brave/browser/new_tab/warm_new_tab_page_manager_factory.h"
+#include "chrome/browser/new_tab_page/prefs/ntp_pref_names.h"
+#include "chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/tabs/tab_enums.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/common/webui_url_constants.h"
+#include "components/ntp_tiles/constants.h"
+#include "components/prefs/pref_service.h"
 #include "components/tab_groups/tab_group_id.h"
 #include "components/tabs/public/tab_interface.h"
 #include "content/public/browser/navigation_controller.h"
@@ -77,6 +81,22 @@ class WarmNewTabPageManager::PaintWatcher : public content::WebContentsObserver 
 
 WarmNewTabPageManager::WarmNewTabPageManager(Profile* profile)
     : profile_(profile) {
+  // Watch the same composition signal the NTP reads, so the warm page can be
+  // rebuilt when the tiles change. Mirrors brave's TopSitesFacade.
+  most_visited_sites_ =
+      ChromeMostVisitedSitesFactory::NewForProfile(profile_.get());
+  most_visited_sites_->AddMostVisitedURLsObserver(this,
+                                                  ntp_tiles::kMaxNumMostVisited);
+  pref_change_registrar_.Init(profile_->GetPrefs());
+  pref_change_registrar_.Add(
+      ntp_prefs::kNtpShortcutsVisible,
+      base::BindRepeating(&WarmNewTabPageManager::OnTopSitesChanged,
+                          base::Unretained(this)));
+  pref_change_registrar_.Add(
+      ntp_prefs::kNtpCustomLinksVisible,
+      base::BindRepeating(&WarmNewTabPageManager::OnTopSitesChanged,
+                          base::Unretained(this)));
+
   // Build off the current task so the WebContents is created after startup has
   // finished bringing up //content, not in the middle of profile creation.
   base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
@@ -106,9 +126,32 @@ void WarmNewTabPageManager::Rebuild() {
 }
 
 void WarmNewTabPageManager::Shutdown() {
+  pref_change_registrar_.RemoveAll();
+  most_visited_sites_.reset();
   paint_watcher_.reset();
   warm_contents_.reset();
   is_ready_ = false;
+}
+
+void WarmNewTabPageManager::OnURLsAvailable(
+    bool is_user_triggered,
+    const std::map<ntp_tiles::SectionType, ntp_tiles::NTPTilesVector>&
+        sections) {
+  // The first callback is the initial load, whose tiles the warm page is
+  // already building with; only later ones are genuine composition changes.
+  if (!seen_initial_sites_) {
+    seen_initial_sites_ = true;
+    return;
+  }
+  OnTopSitesChanged();
+}
+
+void WarmNewTabPageManager::OnTopSitesChanged() {
+  VLOG(1) << "WarmNTP: top-sites changed, rebuilding warm NTP";
+  // Rebuild off the current task to avoid re-entering the observer/pref call.
+  base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
+      FROM_HERE, base::BindOnce(&WarmNewTabPageManager::BuildWarmContents,
+                                weak_factory_.GetWeakPtr()));
 }
 
 void WarmNewTabPageManager::BuildWarmContents() {
