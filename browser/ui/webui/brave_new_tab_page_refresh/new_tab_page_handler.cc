@@ -11,6 +11,7 @@
 #include "base/functional/callback_helpers.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/types/to_address.h"
+#include "build/build_config.h"
 #include "brave/browser/ntp_background/new_tab_takeover_infobar_delegate.h"
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/background_facade.h"
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/custom_image_chooser.h"
@@ -216,9 +217,17 @@ void NewTabPageHandler::SetShowSearchBox(bool show_search_box,
 
 void NewTabPageHandler::GetCookieEncryptionState(
     GetCookieEncryptionStateCallback callback) {
+#if BUILDFLAG(IS_MAC)
   std::move(callback).Run(
       pref_service_->GetBoolean(kGrowserCookieEncryptionEnabled),
       pref_service_->GetBoolean(kGrowserCookieEncryptionPromoDismissed));
+#else
+  // Cookie encryption is a macOS keychain feature (the promo speaks of "this
+  // Mac" and the keychain "Always Allow" prompt). Elsewhere cookies are already
+  // encrypted at the OS layer - DPAPI on Windows - so report it as on and never
+  // show the opt-in promo.
+  std::move(callback).Run(/*enabled=*/true, /*dismissed=*/false);
+#endif
 }
 
 void NewTabPageHandler::SetCookieEncryptionEnabled(
