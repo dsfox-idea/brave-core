@@ -205,14 +205,7 @@ export const style = scoped.css`
     border-radius: inherit;
     background: linear-gradient(
       to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.62));
-    opacity: 0;
-    transition: opacity var(--self-transition-duration) ease-out;
     pointer-events: none;
-  }
-
-  .top-site-tile:hover::after,
-  .top-site-tile:focus-visible::after {
-    opacity: 1;
   }
 
   .top-site-label {
@@ -220,9 +213,11 @@ export const style = scoped.css`
     left: 8px;
     right: 8px;
     bottom: 8px;
-    /* Always the page's address, always at full contrast: pure white on
-       the dark shade below, with a shadow strong enough that no tile
-       colour greys it out. */
+    /* Always the page's address, always VISIBLE, always at full contrast:
+       pure white ABOVE the shade - the shade is a ::after sibling that
+       paints after children, and without the z-index it veiled the text
+       into grey. */
+    z-index: 1;
     color: #fff;
     font: ${font.small.semibold};
     text-align: center;
@@ -230,15 +225,8 @@ export const style = scoped.css`
     overflow: hidden;
     text-overflow: ellipsis;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
-
-    opacity: 0;
-    transition: opacity var(--self-transition-duration) ease-out;
   }
 
-  .top-site-tile:hover .top-site-label,
-  .top-site-tile:focus-visible .top-site-label {
-    opacity: 1;
-  }
 
   .menu-button {
     --leo-icon-color: rgba(255, 255, 255, .8);
