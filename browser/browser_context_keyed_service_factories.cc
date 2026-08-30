@@ -22,7 +22,10 @@
 #include "brave/browser/search_engines/search_engine_provider_service_factory.h"
 #include "brave/browser/search_engines/search_engine_tracker.h"
 #include "brave/browser/serp_metrics/serp_metrics_service_factory.h"
+#include "brave/components/skus/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_SKUS)
 #include "brave/browser/skus/skus_service_factory.h"
+#endif
 #include "brave/browser/sync/brave_sync_alerts_service_factory.h"
 #include "brave/browser/url_sanitizer/url_sanitizer_service_factory.h"
 #include "brave/browser/webcompat_reporter/webcompat_reporter_service_factory.h"
@@ -186,7 +189,9 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
 
   EphemeralStorageServiceFactory::GetInstance();
   PermissionLifetimeManagerFactory::GetInstance();
+#if BUILDFLAG(ENABLE_SKUS)
   skus::SkusServiceFactory::GetInstance();
+#endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   brave_vpn::BraveVpnServiceFactory::GetInstance();
 #endif

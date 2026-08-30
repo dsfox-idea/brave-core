@@ -24,6 +24,7 @@ import("//brave/components/local_ai/buildflags/buildflags.gni")
 import("//brave/components/ntp_background_images/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 import("//brave/components/request_otr/common/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
@@ -259,9 +260,7 @@ test("brave_unit_tests") {
     "//brave/components/serp_metrics:unit_tests",
     "//brave/components/sessions/content:unit_tests",
     "//brave/components/signin/public/identity_manager:unit_tests",
-    "//brave/components/skus/browser:unit_tests",
     "//brave/components/skus/common",
-    "//brave/components/skus/renderer:unit_tests",
     "//brave/components/sync/engine:unit_tests",
     "//brave/components/sync/service:unit_tests",
     "//brave/components/tor/buildflags",
@@ -453,11 +452,16 @@ test("brave_unit_tests") {
     deps += [ "//brave/browser/widevine:unittests" ]
   }
 
+  if (enable_skus) {
+    deps += [
+      "//brave/components/skus/browser:unit_tests",
+      "//brave/components/skus/renderer:unit_tests",
+    ]
+  }
   if (enable_brave_vpn) {
     deps += [
       "//brave/components/brave_vpn/browser:unit_tests",
       "//brave/components/brave_vpn/common:unit_tests",
-      "//brave/components/skus/browser:unit_tests",
     ]
   }
   if (enable_brave_vpn_v1) {
@@ -1039,7 +1043,6 @@ test("brave_browser_tests") {
     "//brave/browser/sandbox:browser_tests",
     "//brave/browser/script_injector:browser_tests",
     "//brave/browser/serp_metrics:browser_tests",
-    "//brave/browser/skus/test:browser_tests",
     "//brave/browser/storage_access_api:browser_tests",
     "//brave/browser/test:browser_tests",
     "//brave/browser/themes",
@@ -1094,6 +1097,13 @@ test("brave_browser_tests") {
     ]
   }
 
+  if (enable_skus) {
+    deps += [
+      "//brave/browser/skus/test:browser_tests",
+      "//brave/renderer/skus:browser_tests",
+    ]
+  }
+
   deps += [
     "//brave/components/brave_account:features",
     "//brave/components/brave_news/common/buildflags",
@@ -1128,7 +1138,6 @@ test("brave_browser_tests") {
     "//brave/components/url_sanitizer/core/browser",
     "//brave/components/web_discovery/buildflags",
     "//brave/components/webcompat/core/common",
-    "//brave/renderer/skus:browser_tests",
     "//brave/renderer/test:browser_tests",
     "//brave/third_party/blink/renderer",
     "//build:chromeos_buildflags",

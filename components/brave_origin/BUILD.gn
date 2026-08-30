@@ -3,6 +3,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/skus/buildflags/buildflags.gni")
+
 source_set("features") {
   sources = [
     "features.cc",
@@ -69,13 +71,17 @@ static_library("brave_origin") {
   deps = [
     "//brave/brave_domains",
     "//brave/components/brave_policy:brave_policy_observer",
-    "//brave/components/skus/browser",
+    "//brave/components/skus/buildflags",
     "//brave/components/skus/common",
     "//brave/components/skus/common:mojom",
     "//components/keyed_service/core",
     "//components/policy/core/common",
     "//components/prefs",
   ]
+
+  if (enable_skus) {
+    deps += [ "//brave/components/skus/browser" ]
+  }
 }
 
 source_set("unit_tests") {
@@ -83,7 +89,6 @@ source_set("unit_tests") {
 
   sources = [
     "brave_origin_policy_manager_unittest.cc",
-    "brave_origin_service_unittest.cc",
     "brave_origin_settings_handler_impl_unittest.cc",
     "brave_origin_utils_unittest.cc",
     "profile_id_unittest.cc",
@@ -92,10 +97,17 @@ source_set("unit_tests") {
   deps = [
     ":brave_origin",
     "//base/test:test_support",
-    "//brave/components/skus/browser",
-    "//brave/components/skus/browser:test_support",
     "//components/policy/core/common:test_support",
     "//components/prefs:test_support",
     "//testing/gtest",
   ]
+
+  # The service test exercises the SKUS purchase flow through FakeSkusService.
+  if (enable_skus) {
+    sources += [ "brave_origin_service_unittest.cc" ]
+    deps += [
+      "//brave/components/skus/browser",
+      "//brave/components/skus/browser:test_support",
+    ]
+  }
 }

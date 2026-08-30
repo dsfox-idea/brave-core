@@ -13,7 +13,10 @@
 #include "base/no_destructor.h"
 #include "brave/browser/brave_origin/brave_origin_navigation.h"
 #include "brave/browser/policy/brave_simple_policy_map.h"
+#include "brave/components/skus/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_SKUS)
 #include "brave/browser/skus/skus_service_factory.h"
+#endif
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/buildflags/buildflags.h"
 #include "brave/components/brave_origin/brave_origin_policy_manager.h"
@@ -264,7 +267,9 @@ BraveOriginServiceFactory::BraveOriginServiceFactory()
     : ProfileKeyedServiceFactory(
           "BraveOriginService",
           ProfileSelections::BuildRedirectedInIncognito()) {
+#if BUILDFLAG(ENABLE_SKUS)
   DependsOn(skus::SkusServiceFactory::GetInstance());
+#endif
   // This factory owns the lazy initialization of `BraveOriginPolicyManager`
   // (in `BuildServiceInstanceForBrowserContext`). Mark the manager as
   // expected-to-be-initialized as soon as the factory is registered so that

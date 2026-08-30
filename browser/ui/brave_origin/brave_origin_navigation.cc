@@ -5,7 +5,10 @@
 
 #include "brave/browser/brave_origin/brave_origin_navigation.h"
 
+#include "brave/components/skus/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_SKUS)
 #include "brave/browser/skus/skus_service_factory.h"
+#endif
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
 
@@ -32,7 +35,13 @@ void BraveOriginNavigationDelegate::OpenOriginSettings() {
 
 mojo::PendingRemote<skus::mojom::SkusService>
 BraveOriginNavigationDelegate::GetSkusService() {
+#if BUILDFLAG(ENABLE_SKUS)
   return skus::SkusServiceFactory::GetForContext(&*profile_);
+#else
+  // The SDK is compiled out (growser#126); the purchase flow that consumes
+  // this only runs in Brave-Origin-branded builds.
+  return mojo::NullRemote();
+#endif
 }
 
 }  // namespace brave_origin

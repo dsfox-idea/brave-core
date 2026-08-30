@@ -1,0 +1,19 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+declare_args() {
+  # growser (#126): whether the SKUS premium-account SDK compiles in. Every
+  # consumer (VPN, Leo, Brave Origin purchases) is compiled out of this build,
+  # yet the SDK stayed live: window.chrome.braveSkus injected on
+  # account.brave.com origins, a mojo service (rust crate behind it) bound for
+  # those origins, and chrome://skus-internals. A fork has no Brave account
+  # backend, so the surface can only misdescribe the product and distinguish
+  # it from Chrome. skus/common (+mojom) stays compiled either way: interface
+  # types and origin lists are referenced by always-built code (brave_origin
+  # navigation, extensions client) and are inert without the service. Off is
+  # the product state; the flag does not exist upstream, so merges do not
+  # fight over it.
+  enable_skus = false
+}

@@ -14,7 +14,10 @@
 #include "base/no_destructor.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/ntp_background/view_counter_service_factory.h"
+#include "brave/components/skus/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_SKUS)
 #include "brave/browser/ui/webui/skus_internals_ui.h"
+#endif
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/buildflags/buildflags.h"
@@ -89,8 +92,14 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
   Profile* profile = Profile::FromBrowserContext(
       web_ui->GetWebContents()->GetBrowserContext());
   CHECK(profile);
-  if (host == kSkusInternalsHost) {
+  // growser (#126): an unconditional first arm so the flag-guarded
+  // "} else if" arms below always have something to chain from; the
+  // SkusInternals arm that stood here compiles out with enable_skus.
+  if (false) {
+#if BUILDFLAG(ENABLE_SKUS)
+  } else if (host == kSkusInternalsHost) {
     return new SkusInternalsUI(web_ui, url.host());
+#endif
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
   } else if (host == kRewardsPageHost &&
              // We don't want to check for supported profile type here because
@@ -194,8 +203,13 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
       url.host() == kRewardsPageHost || url.host() == kRewardsInternalsHost ||
 #endif
+#if BUILDFLAG(ENABLE_SKUS)
       (url.host() == kSkusInternalsHost &&
-       base::FeatureList::IsEnabled(skus::features::kSkusFeature))) {
+       base::FeatureList::IsEnabled(skus::features::kSkusFeature)) ||
+#endif
+      // growser (#126): unconditional tail so the guarded clauses above can
+      // all end with "||" whatever combination of flags is on.
+      false) {
     return &NewWebUI;
   }
 

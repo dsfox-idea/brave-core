@@ -51,6 +51,7 @@ import("//brave/components/ipfs/buildflags/buildflags.gni")
 import("//brave/components/local_ai/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
 import("//brave/components/traffic_control/buildflags/buildflags.gni")
 import("//brave/components/web_discovery/buildflags/buildflags.gni")
@@ -160,7 +161,6 @@ brave_chrome_browser_deps = [
   "//brave/browser/policy/handlers",
   "//brave/browser/serp_metrics",
   "//brave/browser/serp_metrics:impl",
-  "//brave/browser/skus",
   "//brave/browser/sync",
   "//brave/browser/themes",
   "//brave/browser/ui",
@@ -249,7 +249,7 @@ brave_chrome_browser_deps = [
   "//brave/components/serp_metrics",
   "//brave/components/serp_metrics:features",
   "//brave/components/serp_metrics:prefs",
-  "//brave/components/skus/browser",
+  "//brave/components/skus/buildflags",
   "//brave/components/skus/common",
   "//brave/components/skus/common:mojom",
   "//brave/components/speech_to_text",
@@ -416,6 +416,13 @@ if (enable_local_ai) {
     "//brave/components/local_ai/core",
     "//brave/components/local_ai/core:features",
     "//brave/components/local_ai/core:speech_recognition_mojom",
+  ]
+}
+
+if (enable_skus) {
+  brave_chrome_browser_deps += [
+    "//brave/browser/skus",
+    "//brave/components/skus/browser",
   ]
 }
 

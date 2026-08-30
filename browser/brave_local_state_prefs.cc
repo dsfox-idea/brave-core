@@ -45,7 +45,10 @@
 #include "brave/components/p3a/p3a_service.h"
 #endif
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
+#include "brave/components/skus/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_SKUS)
 #include "brave/components/skus/browser/skus_utils.h"
+#endif
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
@@ -264,7 +267,9 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   ai_chat::prefs::RegisterLocalStatePrefs(registry);
 #endif
 
+#if BUILDFLAG(ENABLE_SKUS)
   skus::RegisterLocalStatePrefs(registry);
+#endif
 
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
   DayZeroBrowserUIExptManager::RegisterLocalStatePrefs(registry);

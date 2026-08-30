@@ -15,6 +15,7 @@ import("//brave/components/ipfs/buildflags/buildflags.gni")
 import("//brave/components/local_ai/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
 import("//build/config/features.gni")
@@ -31,7 +32,6 @@ source_set("brave_origin") {
   deps = [
     "//base",
     "//brave/browser/policy:brave_simple_policy_map",
-    "//brave/browser/skus",
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_news/common/buildflags",
     "//brave/components/brave_policy",
@@ -48,6 +48,7 @@ source_set("brave_origin") {
     "//brave/components/p3a",
     "//brave/components/playlist/core/common/buildflags",
     "//brave/components/psst/buildflags",
+    "//brave/components/skus/buildflags",
     "//brave/components/speedreader/common/buildflags",
     "//brave/components/tor/buildflags",
     "//chrome/browser:browser_process",
@@ -56,6 +57,10 @@ source_set("brave_origin") {
     "//components/policy/core/browser",
     "//components/policy/core/common",
   ]
+
+  if (enable_skus) {
+    deps += [ "//brave/browser/skus" ]
+  }
 
   if (is_android) {
     sources += [ "android/brave_origin_service_factory_android.cc" ]

@@ -3,6 +3,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/skus/buildflags/buildflags.gni")
+
+# growser (#126): the SKUS SDK is compiled out; nothing may depend on the
+# factory without the flag.
+assert(enable_skus)
+
 static_library("skus") {
   sources = [
     "//brave/browser/skus/skus_service_factory.cc",

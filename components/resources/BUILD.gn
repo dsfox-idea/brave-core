@@ -15,6 +15,7 @@ import("//brave/components/local_ai/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
 import("//brave/components/request_otr/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
 import("//brave/components/web_discovery/buildflags/buildflags.gni")
@@ -102,14 +103,17 @@ repack("resources") {
     ":static_resources",
     "//brave/components/brave_account/resources",
     "//brave/components/cosmetic_filters/resources/data:generated_resources",
-    "//brave/components/skus/browser/resources:generated_resources",
   ]
   sources = [
     "$root_gen_dir/brave/components/brave_account/resources/brave_account_resources.pak",
     "$root_gen_dir/brave/components/cosmetic_filters/resources/cosmetic_filters_generated.pak",
-    "$root_gen_dir/brave/components/skus/browser/resources/skus_internals_generated.pak",
     "$root_gen_dir/components/brave_components_static.pak",
   ]
+
+  if (enable_skus) {
+    deps += [ "//brave/components/skus/browser/resources:generated_resources" ]
+    sources += [ "$root_gen_dir/brave/components/skus/browser/resources/skus_internals_generated.pak" ]
+  }
 
   # growser (#110): the foundation (enable_local_ai) always builds via the
   # worker UI's own dep on the grit target; only the 13.2 MB WASM payload is

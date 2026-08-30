@@ -20,7 +20,10 @@
 #include "brave/components/brave_origin/buildflags/buildflags.h"
 #include "brave/components/brave_origin/features.h"
 #include "brave/components/brave_origin/pref_names.h"
+#include "brave/components/skus/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_SKUS)
 #include "brave/components/skus/browser/pref_names.h"
+#endif
 #include "components/policy/core/common/policy_map.h"
 #include "components/policy/core/common/policy_namespace.h"
 #include "components/policy/core/common/policy_service.h"
@@ -84,11 +87,13 @@ BraveOriginService::BraveOriginService(
 
   // Re-check purchase state whenever SKU credentials change (e.g. after
   // the user completes a purchase on account.brave.com).
+#if BUILDFLAG(ENABLE_SKUS)
   skus_pref_registrar_.Init(local_state_);
   skus_pref_registrar_.Add(
       skus::prefs::kSkusState,
       base::BindRepeating(&BraveOriginService::OnSkusStateChanged,
                           base::Unretained(this)));
+#endif
 
   // Record whether Origin was enforcing policies in the previous session.
   startup_was_enforcing_ =

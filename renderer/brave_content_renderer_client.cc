@@ -21,8 +21,11 @@
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/safe_builtins/renderer/safe_builtins.h"
 #include "brave/components/script_injector/renderer/script_injector_render_frame_observer.h"
+#include "brave/components/skus/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_SKUS)
 #include "brave/components/skus/common/features.h"
 #include "brave/components/skus/renderer/skus_render_frame_observer.h"
+#endif
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/renderer/brave_render_frame_observer.h"
@@ -213,10 +216,12 @@ void BraveContentRendererClient::RenderFrameCreated(
         render_frame, content::ISOLATED_WORLD_ID_GLOBAL);
   }
 
+#if BUILDFLAG(ENABLE_SKUS)
   if (base::FeatureList::IsEnabled(skus::features::kSkusFeature) &&
       !process_state::IsIncognitoProcess()) {
     skus::SkusRenderFrameObserver::Create(render_frame);
   }
+#endif
 
 #if BUILDFLAG(IS_ANDROID)
   bool should_create_subscription_observer = false;
