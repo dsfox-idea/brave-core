@@ -166,9 +166,7 @@
 #include "brave/browser/ui/webui/brave_welcome_page/brave_welcome_page.mojom.h"
 #include "brave/browser/ui/webui/brave_welcome_page/brave_welcome_page_ui.h"
 #include "brave/browser/ui/webui/history/brave_history_ui.h"
-#include "brave/browser/ui/webui/new_tab_page/brave_new_tab_ui.h"
 #include "brave/browser/ui/webui/private_new_tab_page/brave_private_new_tab_ui.h"
-#include "brave/components/brave_new_tab_ui/brave_new_tab_page.mojom.h"
 #include "brave/components/brave_private_new_tab_ui/common/brave_private_new_tab.mojom.h"
 #if BUILDFLAG(ENABLE_LOCAL_AI)
 #include "brave/browser/ui/webui/history/brave_history_embeddings.mojom.h"
@@ -766,14 +764,6 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
           .Add<
               ntp_background_images::mojom::SponsoredRichMediaAdEventHandler>();
 
-  auto ntp_registration =
-      registry.ForWebUI<BraveNewTabUI>()
-          .Add<brave_new_tab_page::mojom::PageHandlerFactory>()
-#if BUILDFLAG(ENABLE_BRAVE_NEWS)
-          .Add<brave_news::mojom::BraveNewsController>()
-#endif
-      ;
-
 #if BUILDFLAG(ENABLE_AI_CHAT)
   if (ai_chat::features::IsAIChatEnabled() &&
       ai_chat::features::IsShowAIChatInputOnNewTabPageEnabled(
@@ -790,13 +780,11 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   if (brave_vpn::IsBraveVPNFeatureEnabled()) {
     ntp_refresh_registration.Add<brave_vpn::mojom::ServiceHandler>();
-    ntp_registration.Add<brave_vpn::mojom::ServiceHandler>();
   }
 #endif
 
   if (base::FeatureList::IsEnabled(features::kBraveNtpSearchWidget)) {
     ntp_refresh_registration.Add<searchbox::mojom::PageHandlerFactory>();
-    ntp_registration.Add<searchbox::mojom::PageHandlerFactory>();
   }
 
   registry.ForWebUI<BraveWelcomePageUI>()

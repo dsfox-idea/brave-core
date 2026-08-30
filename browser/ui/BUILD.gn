@@ -379,16 +379,6 @@ source_set("ui") {
       "webui/brave_shields/shields_panel_handler.h",
       "webui/brave_shields/shields_panel_ui.cc",
       "webui/brave_shields/shields_panel_ui.h",
-      "webui/new_tab_page/brave_new_tab_message_handler.cc",
-      "webui/new_tab_page/brave_new_tab_message_handler.h",
-      "webui/new_tab_page/brave_new_tab_page_handler.cc",
-      "webui/new_tab_page/brave_new_tab_page_handler.h",
-      "webui/new_tab_page/brave_new_tab_ui.cc",
-      "webui/new_tab_page/brave_new_tab_ui.h",
-      "webui/new_tab_page/brave_new_tab_ui_utils.cc",
-      "webui/new_tab_page/brave_new_tab_ui_utils.h",
-      "webui/new_tab_page/top_sites_message_handler.cc",
-      "webui/new_tab_page/top_sites_message_handler.h",
       "webui/private_new_tab_page/brave_private_new_tab_page_handler.cc",
       "webui/private_new_tab_page/brave_private_new_tab_page_handler.h",
       "webui/private_new_tab_page/brave_private_new_tab_ui.cc",
@@ -1216,7 +1206,9 @@ source_set("ui") {
       "//brave/app:brave_generated_resources_grit",
       "//brave/browser/resources/settings:resources",
       "//brave/common/importer",
-      "//brave/components/brave_new_tab_ui:generated_resources",
+      # growser (#112): the old NTP's generated_resources are unwired; the
+      # mojom stays - misc_metrics::NewTabMetrics implements its interface
+      # and the refresh NTP reports through it.
       "//brave/components/brave_new_tab_ui:mojom",
       "//brave/components/brave_private_new_tab_ui/common",
       "//brave/components/brave_private_new_tab_ui/common:mojom",

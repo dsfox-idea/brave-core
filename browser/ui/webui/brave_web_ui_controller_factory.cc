@@ -39,7 +39,6 @@
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page_ui.h"
-#include "brave/browser/ui/webui/new_tab_page/brave_new_tab_ui.h"
 #include "brave/browser/ui/webui/welcome_page/brave_welcome_ui.h"
 #include "brave/components/commands/common/features.h"
 #include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
@@ -143,21 +142,9 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
       return new AIChatAgentNewTabPageUI(web_ui);
     }
 #endif
-    if (base::FeatureList::IsEnabled(
-            features::kBraveNewTabPageRefreshEnabled)) {
-      return new BraveNewTabPageUI(web_ui);
-    }
-    return new BraveNewTabUI(
-        web_ui, url.host(),
-#if BUILDFLAG(ENABLE_BRAVE_ADS)
-        brave_ads::AdsServiceFactory::GetForProfile(profile),
-#else
-        nullptr,
-#endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
-        ntp_background_images::ViewCounterServiceFactory::GetForProfile(
-            profile),
-        regional_capabilities::RegionalCapabilitiesServiceFactory::
-            GetForProfile(profile));
+    // growser (#112): the refresh NTP is the only implementation; the old
+    // BraveNewTabUI path (controller branch, flag, resources) is unwired.
+    return new BraveNewTabPageUI(web_ui);
 #endif  // !BUILDFLAG(IS_ANDROID)
 #if BUILDFLAG(ENABLE_TOR)
   } else if (host == kTorInternalsHost) {

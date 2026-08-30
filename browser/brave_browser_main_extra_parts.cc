@@ -22,7 +22,6 @@
 #include "brave/browser/importer/brave_importer_p3a.h"
 #include "brave/browser/new_tab/warm_new_tab_page_activator.h"
 #include "brave/browser/p3a/p3a_core_metrics.h"
-#include "brave/browser/ui/webui/new_tab_page/brave_new_tab_message_handler.h"
 #include "chrome/browser/first_run/first_run.h"
 #endif  // !BUILDFLAG(IS_ANDROID)
 
@@ -43,8 +42,6 @@ void RecordInitialP3AValues() {
     RecordImporterP3A(user_data_importer::ImporterType::TYPE_UNKNOWN);
   }
 
-  BraveNewTabMessageHandler::RecordInitialP3AValues(
-      g_browser_process->local_state());
 #endif  // !BUILDFLAG(IS_ANDROID)
 
   brave_shields::MaybeRecordShieldsUsageP3A(brave_shields::kNeverClicked,
