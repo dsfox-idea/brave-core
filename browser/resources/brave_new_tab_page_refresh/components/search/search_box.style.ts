@@ -34,7 +34,13 @@ export const style = scoped.css`
     width: calc(100vw - 32px);
     max-width: 416px;
 
-    transition-property: overlay, max-width, translate;
+    /* The box LIVES at its expanded height: it used to ride down
+       --search-expand-travel on focus, and the owner asked for the resting
+       box to sit where the click would have taken it. Only the width still
+       animates. */
+    translate: 0 var(--search-expand-travel);
+
+    transition-property: overlay, max-width;
     transition-duration: var(--self-transition-duration);
     transition-timing-function: ease-out;
     transition-behavior: allow-discrete;
@@ -53,7 +59,6 @@ export const style = scoped.css`
   }
 
   &.expanded .search-container {
-    translate: 0 var(--search-expand-travel);
     max-width: 540px;
   }
 
