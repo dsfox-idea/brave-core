@@ -71,12 +71,11 @@ export const style = scoped.css`
     padding: 8px;
     border-radius: 12px;
     background: ${color.container.background};
+    /* One shadow, always the same one: the hover used to raise the
+       elevation and the box wore two shades - the owner took the hover
+       one out. */
     box-shadow: ${effect.elevation['03']};
     color: ${color.text.primary};
-
-    &:hover, &:focus-within {
-      box-shadow: ${effect.elevation['04']};
-    }
   }
 
   input {
