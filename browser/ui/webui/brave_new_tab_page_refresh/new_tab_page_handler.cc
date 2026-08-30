@@ -45,6 +45,7 @@
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/cpp/simple_url_loader.h"
 #include "services/network/public/mojom/fetch_api.mojom.h"
+#include "services/network/public/mojom/url_response_head.mojom.h"
 #include "third_party/re2/src/re2/re2.h"
 #include "ui/base/window_open_disposition_utils.h"
 #include "url/gurl.h"
