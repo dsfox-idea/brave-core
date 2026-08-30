@@ -171,6 +171,13 @@ void NewTabPageInitializer::AddCSPOverrides() {
       "chrome://branded-wallpaper chrome://sponsored-site-image "
       "chrome://favicon2 chrome://growser-tile-icon blob: data: 'self';");
 
+  // The icon service (growser#96): a board tile whose domain the bundled
+  // pack does not know asks icon.growser.org once, with the domain and
+  // nothing else. This is the only remote origin the page may talk to.
+  source_->OverrideContentSecurityPolicy(
+      network::mojom::CSPDirectiveName::ConnectSrc,
+      "connect-src https://icon.growser.org 'self';");
+
   source_->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameSrc,
       base::StrCat({"frame-src ", kNTPNewTabTakeoverRichMediaUrl, ";"}));

@@ -10,7 +10,8 @@ import { CachedTile, readTileCache, writeTileCache } from '../../lib/tile_cache'
 import { tileIconURL } from '../../lib/favicon_url'
 import { tileColorFor } from '../../lib/tile_color'
 import { tileLabel } from '../../lib/tile_label'
-import { lookupPackedIcon } from '../../lib/icon_pack'
+import { lookupPackedIcon, PackedIcon } from '../../lib/icon_pack'
+import { lookupServerIcon } from '../../lib/server_icon'
 import { maxTileCount } from './tile_rows'
 
 export type BoardTile = CachedTile
@@ -29,6 +30,10 @@ export function useTileBoard(
   initialized: boolean,
 ): BoardTile[] {
   const colorsRef = React.useRef(new Map<string, string>())
+  // Answers from icon.growser.org for sites the bundled pack does not
+  // know: an icon, or null for a confirmed "not there" (which stops the
+  // favicon-colour path below from being second-guessed every render).
+  const serverIconsRef = React.useRef(new Map<string, PackedIcon | null>())
   const [cachedTiles, setCachedTiles] = React.useState<BoardTile[] | null>(null)
   const [cacheRead, setCacheRead] = React.useState(false)
   const [colorVersion, setColorVersion] = React.useState(0)
@@ -70,8 +75,11 @@ export function useTileBoard(
     }
     return sites.slice(0, maxTileCount).map((site) => {
       // The pack first: a drawing we made and a colour we chose beat anything
-      // read off a favicon, and asking it costs no request at all.
+      // read off a favicon, and asking it costs no request at all. The
+      // server tail second: the same drawings, made between releases, at
+      // the cost of one cached request per domain (growser#96).
       const packed = lookupPackedIcon(site.url)
+        ?? serverIconsRef.current.get(site.url)
       if (packed) {
         return {
           url: site.url,
@@ -104,19 +112,26 @@ export function useTileBoard(
     }
     let cancelled = false
     // Only sites the pack does not know: for the rest the colour is already
-    // decided and reading a favicon would be work for nothing.
+    // decided and reading a favicon would be work for nothing. Each one is
+    // offered to the server tail first - a drawing made between releases
+    // beats a favicon - and only a confirmed "not there" falls through to
+    // the favicon colour.
     const missing = sites
       .slice(0, maxTileCount)
-      .filter((site) => !colorsRef.current.has(site.url)
-        && !lookupPackedIcon(site.url))
+      .filter((site) => !lookupPackedIcon(site.url)
+        && serverIconsRef.current.get(site.url) === undefined)
     if (missing.length === 0) {
       return
     }
     Promise.all(
       missing.map(async (site) => {
-        const color = await tileColorFor(tileIconURL(site.url))
-        if (color) {
-          colorsRef.current.set(site.url, color)
+        const served = await lookupServerIcon(site.url)
+        serverIconsRef.current.set(site.url, served)
+        if (!served && !colorsRef.current.has(site.url)) {
+          const color = await tileColorFor(tileIconURL(site.url))
+          if (color) {
+            colorsRef.current.set(site.url, color)
+          }
         }
       }),
     ).then(() => {
