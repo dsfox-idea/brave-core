@@ -189,42 +189,15 @@ export const style = scoped.css`
     box-shadow: none;
   }
 
-  /* The caption is white, and a tile is now allowed to be nearly white when
-     that is what makes its logo readable - so the caption gets its own
-     ground rather than relying on the tile being dark. It fades in with the
-     label, so a resting tile is still only its colour and its mark. The
-     owner's rule for its shape: the shade stands only as tall as the text
-     and its paddings - it must not curtain the drawing above. */
-  .top-site-tile::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 34px;
-    border-radius: inherit;
-    background: linear-gradient(
-      to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.62));
-    opacity: 0;
-    transition: opacity var(--self-transition-duration) ease-out;
-    pointer-events: none;
-  }
-
-  .top-site-tile:hover::after,
-  .top-site-tile:focus-visible::after {
-    opacity: 1;
-  }
-
+  /* No shade under the caption - the owner took it out. The white text
+     carries its own contrast through its shadow. */
   .top-site-label {
     position: absolute;
     left: 8px;
     right: 8px;
     bottom: 8px;
-    /* Always the page's address, shown on hover only, at full contrast:
-       pure white ABOVE the shade - the shade is a ::after sibling that
-       paints after children, and without the z-index it veiled the text
-       into grey. */
-    z-index: 1;
+    /* Always the page's address, shown on hover only: pure white, with a
+       shadow strong enough to read on any tile colour. */
     color: #fff;
     font: ${font.small.semibold};
     text-align: center;
