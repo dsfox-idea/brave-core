@@ -6,7 +6,7 @@
 import * as React from 'react'
 
 import { tileIconURL } from '../../lib/favicon_url'
-import { drawingSource } from '../../lib/icon_pack'
+import { drawingSource, packKeyFor } from '../../lib/icon_pack'
 import { inlineCSSVars } from '../../lib/inline_css_vars'
 import { BoardTile } from './use_tile_board'
 import { defaultTileColor } from './top_sites.style'
@@ -95,7 +95,6 @@ export function TopSitesTile(props: Props) {
     <a
       className={'top-site-tile' + (kind === 'name' ? ' named' : '')}
       href={sanitizeTileURL(url)}
-      title={title}
       draggable={false}
       onClick={props.onNavigate}
       onContextMenu={onContextMenu}
@@ -105,7 +104,7 @@ export function TopSitesTile(props: Props) {
       })}
     >
       {renderArt()}
-      {kind !== 'name' && <span className='top-site-label'>{label}</span>}
+      <span className='top-site-label'>{packKeyFor(url) || label}</span>
     </a>
   )
 }

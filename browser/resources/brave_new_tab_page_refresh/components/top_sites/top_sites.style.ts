@@ -192,17 +192,19 @@ export const style = scoped.css`
   /* The caption is white, and a tile is now allowed to be nearly white when
      that is what makes its logo readable - so the caption gets its own
      ground rather than relying on the tile being dark. It fades in with the
-     label, so a resting tile is still only its colour and its mark. */
+     label, so a resting tile is still only its colour and its mark. The
+     owner's rule for its shape: the shade stands only as tall as the text
+     and its paddings - it must not curtain the drawing above. */
   .top-site-tile::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 46%;
+    height: 34px;
     border-radius: inherit;
     background: linear-gradient(
-      to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.42));
+      to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.62));
     opacity: 0;
     transition: opacity var(--self-transition-duration) ease-out;
     pointer-events: none;
@@ -217,14 +219,17 @@ export const style = scoped.css`
     position: absolute;
     left: 8px;
     right: 8px;
-    bottom: 10px;
-    color: ${color.white};
+    bottom: 8px;
+    /* Always the page's address, always at full contrast: pure white on
+       the dark shade below, with a shadow strong enough that no tile
+       colour greys it out. */
+    color: #fff;
     font: ${font.small.semibold};
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 
     opacity: 0;
     transition: opacity var(--self-transition-duration) ease-out;

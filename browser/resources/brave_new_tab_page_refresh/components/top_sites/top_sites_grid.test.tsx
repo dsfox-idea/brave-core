@@ -66,12 +66,22 @@ describe('top_sites_grid', () => {
     expect(tile.getAttribute('draggable')).toBe('false')
   })
 
-  it('renders the label for every tile', () => {
+  it('captions every tile with its address, not its title', () => {
     const { container } = renderGrid(3)
     const labels = Array.from(
       container.querySelectorAll('.top-site-label'),
     ).map((node) => node.textContent)
-    expect(labels).toEqual(['Site 0', 'Site 1', 'Site 2'])
+    expect(labels).toEqual([
+      'site0.example',
+      'site1.example',
+      'site2.example',
+    ])
+  })
+
+  it('offers no tooltip on a tile', () => {
+    const { container } = renderGrid(2)
+    const tile = container.querySelector('.top-site-tile') as HTMLElement
+    expect(tile.getAttribute('title')).toBeNull()
   })
 
   it('calls back when the add button is pressed', () => {
