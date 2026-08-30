@@ -9,9 +9,22 @@ import { PackedIcon, packKeyFor } from './icon_pack'
 // answers most boards without a request; a domain it does not know is
 // asked of icon.growser.org ONCE, and the answer - either a tile drawn
 // between browser releases, or "not there" - is cached here so the same
-// domain is not asked again for days. The request carries the domain and
-// nothing else: no cookies, no identifier, no path of the page.
-const ENDPOINT = 'https://icon.growser.org/icon?domain='
+// domain is not asked again for days.
+//
+// The page NEVER touches the network itself (a WebUI page is a privileged
+// context - lesson 53): the ask goes over mojo to the browser process,
+// which sends the domain and nothing else, with no cookies.
+export interface TailAnswer {
+  status: number
+  entryJson: string
+}
+
+export type TailFetcher = (domain: string) => Promise<TailAnswer>
+
+async function askOverMojo(domain: string): Promise<TailAnswer> {
+  const { NewTabPageProxy } = await import('../state/new_tab_page_proxy')
+  return NewTabPageProxy.getInstance().handler.fetchPackTailIcon(domain)
+}
 
 // An icon changes about as often as a company rebrands; a miss becomes a
 // hit only when we draw the tile, which happens on the scale of days.
@@ -88,16 +101,12 @@ const inFlight = new Map<string, Promise<PackedIcon | null>>()
 
 export async function lookupServerIcon(
   url: string,
-  // Resolved lazily rather than as `= fetch`: a default parameter is
-  // evaluated at call time, and naming an undefined global there throws
-  // before the body can decide anything (jsdom has no fetch).
-  fetcher?: typeof fetch,
+  fetcher: TailFetcher = askOverMojo,
   factory: IDBFactory | undefined = globalThis.indexedDB,
   now: () => number = Date.now,
 ): Promise<PackedIcon | null> {
-  const doFetch = fetcher ?? globalThis.fetch
   const key = packKeyFor(url)
-  if (!key || !factory || !doFetch) {
+  if (!key || !factory) {
     return null
   }
   const running = inFlight.get(key)
@@ -113,11 +122,9 @@ export async function lookupServerIcon(
           return stored.icon
         }
       }
-      const response = await doFetch(ENDPOINT + encodeURIComponent(key), {
-        credentials: 'omit',
-      })
-      if (response.status === 200) {
-        const entry = await response.json()
+      const answer = await fetcher(key)
+      if (answer.status === 200 && answer.entryJson) {
+        const entry = JSON.parse(answer.entryJson)
         const icon: PackedIcon = {
           kind: entry.kind,
           colour: entry.colour,
@@ -128,7 +135,7 @@ export async function lookupServerIcon(
                           { icon, fetchedAt: now() }).catch(() => {})
         return icon
       }
-      if (response.status === 404) {
+      if (answer.status === 404) {
         await writeStored(factory, key,
                           { icon: null, fetchedAt: now() }).catch(() => {})
       }

@@ -6,7 +6,9 @@
 #ifndef BRAVE_BROWSER_UI_WEBUI_BRAVE_NEW_TAB_PAGE_REFRESH_NEW_TAB_PAGE_HANDLER_H_
 #define BRAVE_BROWSER_UI_WEBUI_BRAVE_NEW_TAB_PAGE_REFRESH_NEW_TAB_PAGE_HANDLER_H_
 
+#include <list>
 #include <memory>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -24,6 +26,10 @@
 class GURL;
 class PrefService;
 class TemplateURLService;
+
+namespace network {
+class SimpleURLLoader;
+}  // namespace network
 enum class WindowOpenDisposition;
 
 namespace misc_metrics {
@@ -152,6 +158,8 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   void SetTopSitesListKind(mojom::TopSitesListKind list_kind,
                            SetTopSitesListKindCallback callback) override;
   void GetTopSites(GetTopSitesCallback callback) override;
+  void FetchPackTailIcon(const std::string& domain,
+                         FetchPackTailIconCallback callback) override;
   void AddCustomTopSite(const std::string& url,
                         const std::string& title,
                         AddCustomTopSiteCallback callback) override;
@@ -203,6 +211,11 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   void ReportVPNWidgetUsage(ReportVPNWidgetUsageCallback callback) override;
 
  private:
+  void OnPackTailIconFetched(
+      std::list<std::unique_ptr<network::SimpleURLLoader>>::iterator held,
+      FetchPackTailIconCallback callback,
+      std::optional<std::string> body);
+
   void OnGetSponsoredImageBackground(
       GetSponsoredImageBackgroundCallback callback,
       mojom::SponsoredImageBackgroundPtr sponsored_background);
@@ -230,6 +243,10 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   raw_ptr<misc_metrics::NavigationSourceMetrics> navigation_source_metrics_ =
       nullptr;
   bool was_restored_ = false;
+  // In-flight icon service requests (growser#96). Each loader lives until
+  // its completion callback runs; the list dies with the handler, which
+  // cancels whatever is still on the wire.
+  std::list<std::unique_ptr<network::SimpleURLLoader>> icon_loaders_;
   base::WeakPtrFactory<NewTabPageHandler> weak_factory_{this};
 };
 

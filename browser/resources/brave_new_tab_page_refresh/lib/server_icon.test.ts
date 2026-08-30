@@ -62,13 +62,13 @@ function fakeIndexedDB() {
 
 function answering(status: number, body?: unknown) {
   const calls: string[] = []
-  const fetcher = (async (input: RequestInfo | URL) => {
-    calls.push(String(input))
+  const fetcher = async (domain: string) => {
+    calls.push(domain)
     return {
       status,
-      json: async () => body,
-    } as Response
-  }) as typeof fetch
+      entryJson: body ? JSON.stringify(body) : '',
+    }
+  }
   return { fetcher, calls }
 }
 
@@ -84,8 +84,7 @@ describe('server_icon', () => {
     const { fetcher, calls } = answering(200, TILE)
     const icon = await lookupServerIcon(
       'https://www.drawn-brand.example/page?q=1', fetcher, fakeIndexedDB())
-    expect(calls).toEqual(
-      ['https://icon.growser.org/icon?domain=drawn-brand.example'])
+    expect(calls).toEqual(['drawn-brand.example'])
     expect(icon?.colour).toBe('#33c57b')
     expect(icon?.drawing).toContain('<svg')
   })

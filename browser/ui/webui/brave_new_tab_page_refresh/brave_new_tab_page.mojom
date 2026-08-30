@@ -200,6 +200,13 @@ interface NewTabPageHandler {
   // Returns the current list of top sites for the user.
   GetTopSites() => (array<TopSite> top_sites);
 
+  // Asks the icon service (icon.growser.org) for a board tile the bundled
+  // pack does not know (growser#96). The request runs in the browser
+  // process with no cookies; the page itself never touches the network.
+  // `status` is the HTTP status (200 with the pack-shaped entry_json, 404
+  // for a confirmed miss worth caching) or 0 for a failure worth retrying.
+  FetchPackTailIcon(string domain) => (int32 status, string entry_json);
+
   // Adds a site to the list of custom top sites.
   AddCustomTopSite(string url, string title) => ();
 

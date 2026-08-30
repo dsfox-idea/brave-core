@@ -9,6 +9,8 @@
 
 #include "base/check.h"
 #include "base/functional/callback_helpers.h"
+#include "base/strings/escape.h"
+#include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/types/to_address.h"
 #include "build/build_config.h"
@@ -35,6 +37,15 @@
 #include "components/search_engines/search_engine_type.h"
 #include "components/search_engines/template_url_service.h"
 #include "components/tabs/public/tab_interface.h"
+#include "content/public/browser/browser_context.h"
+#include "content/public/browser/storage_partition.h"
+#include "net/http/http_response_headers.h"
+#include "net/traffic_annotation/network_traffic_annotation.h"
+#include "services/network/public/cpp/resource_request.h"
+#include "services/network/public/cpp/shared_url_loader_factory.h"
+#include "services/network/public/cpp/simple_url_loader.h"
+#include "services/network/public/mojom/fetch_api.mojom.h"
+#include "third_party/re2/src/re2/re2.h"
 #include "ui/base/window_open_disposition_utils.h"
 #include "url/gurl.h"
 
@@ -420,6 +431,79 @@ void NewTabPageHandler::SetTopSitesListKind(
 
 void NewTabPageHandler::GetTopSites(GetTopSitesCallback callback) {
   top_sites_facade_->GetSites(std::move(callback));
+}
+
+void NewTabPageHandler::FetchPackTailIcon(const std::string& domain,
+                                          FetchPackTailIconCallback callback) {
+  // The page is a privileged context and must never reach the network
+  // itself (lesson 53); this request runs here, in the browser process,
+  // with no cookies and only the domain in the URL.
+  static constexpr char kIconService[] = "https://icon.growser.org/icon";
+  if (!re2::RE2::FullMatch(domain, "[a-z0-9.-]{3,253}") ||
+      domain.find('.') == std::string::npos) {
+    std::move(callback).Run(404, std::string());
+    return;
+  }
+
+  auto request = std::make_unique<network::ResourceRequest>();
+  request->url = GURL(base::StrCat(
+      {kIconService, "?domain=", base::EscapeQueryParamValue(domain, true)}));
+  request->credentials_mode = network::mojom::CredentialsMode::kOmit;
+
+  auto annotation = net::DefineNetworkTrafficAnnotation("growser_icon_tail", R"(
+      semantics {
+        sender: "Growser icon service"
+        description:
+          "The new tab board draws site tiles from an icon pack bundled "
+          "with the browser. A domain the bundle does not know is asked of "
+          "growser's own icon service once, so a tile drawn after this "
+          "browser was released can still appear."
+        trigger: "Opening a new tab whose board holds a site the bundled "
+                 "icon pack does not cover."
+        data: "The site's domain. No cookies or identifiers."
+        destination: OTHER
+        destination_other: "icon.growser.org"
+      }
+      policy {
+        cookies_allowed: NO
+        setting: "Cannot be disabled separately from the top sites board."
+        policy_exception_justification: "Not implemented."
+      })");
+
+  auto loader = network::SimpleURLLoader::Create(std::move(request),
+                                                 annotation);
+  loader->SetTimeoutDuration(base::Seconds(15));
+  auto* loader_ptr = loader.get();
+  icon_loaders_.push_back(std::move(loader));
+  auto held = std::prev(icon_loaders_.end());
+
+  loader_ptr->DownloadToString(
+      web_contents_->GetBrowserContext()
+          ->GetDefaultStoragePartition()
+          ->GetURLLoaderFactoryForBrowserProcess()
+          .get(),
+      base::BindOnce(&NewTabPageHandler::OnPackTailIconFetched,
+                     weak_factory_.GetWeakPtr(), held, std::move(callback)),
+      64 * 1024);
+}
+
+void NewTabPageHandler::OnPackTailIconFetched(
+    std::list<std::unique_ptr<network::SimpleURLLoader>>::iterator held,
+    FetchPackTailIconCallback callback,
+    std::optional<std::string> body) {
+  auto* loader = held->get();
+  int status = 0;
+  if (loader->ResponseInfo() && loader->ResponseInfo()->headers) {
+    status = loader->ResponseInfo()->headers->response_code();
+  }
+  icon_loaders_.erase(held);
+  // A tile, a confirmed miss, or - anything else - a failure the page
+  // may retry. Only 200 carries a body worth handing over.
+  if (status == 200 && body && !body->empty()) {
+    std::move(callback).Run(200, *body);
+  } else {
+    std::move(callback).Run(status == 404 ? 404 : 0, std::string());
+  }
 }
 
 void NewTabPageHandler::AddCustomTopSite(const std::string& url,
