@@ -71,6 +71,10 @@
 <if expr="enable_web_discovery">
   <template is="dom-if" if="[[!isPrefManaged_(
       prefs.brave.web_discovery_enabled)]]" restamp>
+<!-- <if expr="enable_web_discovery"> -->
+<!-- Guarded at preprocess time like requestOTR on the privacy page: the
+     provider registers these $i18n keys only with the flag on, and a
+     missing key is a renderer CHECK when the resource is served. -->
     <settings-toggle-button id="webDiscoveryEnabledExtension"
         class="cr-row"
         pref="{{prefs.brave.web_discovery_enabled}}"
@@ -78,5 +82,6 @@
         sub-label="$i18n{braveWebDiscoverySubLabel}"
         learn-more-url="$i18n{webDiscoveryLearnMoreURL}">
     </settings-toggle-button>
+<!-- </if> -->
   </template>
 </if>

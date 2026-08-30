@@ -56,6 +56,11 @@
   label="$i18n{reduceLanguageControlLabel}"
   sub-label="$i18n{reduceLanguageDesc}">
 </settings-toggle-button>
+<!-- <if expr="enable_request_otr"> -->
+<!-- Guarded at PREPROCESS time, not only at runtime: $i18n keys resolve
+     when the resource is served, and with the flag off the missing
+     requestOTRLabel was a renderer CHECK - settings died with
+     STATUS_BREAKPOINT before the page could hide anything. -->
 <div hidden="[[!isRequestOTRFeatureEnabled_]]" class="settings-box">
     <div class="start" id="labelWrapper">
         <div class="label">$i18n{requestOTRLabel}</div>
@@ -65,6 +70,7 @@
                             menu-options="[[requestOTRActions_]]">
     </settings-dropdown-menu>
 </div>
+<!-- </if> -->
 <!-- <if expr="enable_psst"> -->
 <!-- growser (#78): PSST adjusts privacy settings on sites from a rules list
      that arrives as a Brave component. Brave's component server answers

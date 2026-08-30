@@ -110,7 +110,13 @@ export class SettingsBravePersonalizationOptions extends SettingsBravePersonaliz
         readOnly: true,
         type: Boolean,
         value: function () {
+          // The boolean itself is only registered with the flag on.
+          // <if expr="enable_request_otr">
           return loadTimeData.getBoolean('isRequestOTRFeatureEnabled')
+          // </if>
+          // <if expr="not enable_request_otr">
+          return false
+          // </if>
         },
       },
       isPsstFeatureEnabled_: {
@@ -124,11 +130,19 @@ export class SettingsBravePersonalizationOptions extends SettingsBravePersonaliz
         readOnly: true,
         type: Array,
         value: function () {
+          // Guarded at preprocess time to match the provider: with the
+          // flag off these keys are not registered and getString would
+          // assert while the page initializes.
+          // <if expr="enable_request_otr">
           return [
             { value: 0, name: loadTimeData.getString('requestOTRDefault') },
             { value: 1, name: loadTimeData.getString('requestOTRAlways') },
             { value: 2, name: loadTimeData.getString('requestOTRNever') },
           ]
+          // </if>
+          // <if expr="not enable_request_otr">
+          return []
+          // </if>
         },
       },
       requestOTRAction_: String,
