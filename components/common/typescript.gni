@@ -240,7 +240,12 @@ template("transpile_web_ui") {
       args += [ "--output_module" ]
     }
 
-    if (is_official_build) {
+    # growser (#121): production is keyed on the build configuration, not on
+    # officialness - a non-official Release otherwise ships every WebUI
+    # bundle unminified with inline source maps and development React
+    # (the refresh NTP bundle alone was 12.9 MB). Component and Debug keep
+    # development mode for iteration speed and debuggability.
+    if (is_official_build || (!is_debug && !is_component_build)) {
       args += [ "--mode=production" ]
     } else {
       args += [ "--mode=development" ]
