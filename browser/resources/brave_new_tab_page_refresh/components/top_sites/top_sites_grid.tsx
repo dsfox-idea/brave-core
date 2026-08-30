@@ -50,7 +50,7 @@ export function TopSitesGrid(props: Props) {
                 key='add-button'
                 className='top-site-tile add-tile'
                 onClick={props.onAddTopSite}
-                title={getString(S.NEW_TAB_ADD_TOP_SITE_LABEL)}
+                aria-label={getString(S.NEW_TAB_ADD_TOP_SITE_LABEL)}
               >
                 <Icon name='plus-add' />
                 <span className='top-site-label'>
