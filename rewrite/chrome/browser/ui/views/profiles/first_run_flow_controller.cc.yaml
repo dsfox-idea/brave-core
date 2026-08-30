@@ -1,0 +1,16 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+# growser (#116): the intro FLAC resources are removed from
+# browser_resources.grd (companion recipe), so their IDR_INTRO_SOUND_*
+# ids no longer exist. The FRE that would play them never runs here
+# (skipped by policy), so the sounds manager simply stays uninitialized.
+
+substitutions:
+  - description: 'Drop the sound initializations of the removed intro FLACs.'
+    regex:
+      re_pattern: '\s*sounds_manager_->Initialize\([^;]+?IDR_INTRO_SOUND[^;]+?\);'
+      replace: ''
+    count: 6

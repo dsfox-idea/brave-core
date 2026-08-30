@@ -1,0 +1,28 @@
+diff --git a/chrome/browser/ui/views/profiles/first_run_flow_controller.cc b/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
+index e0f96c71abc1fe95e84c479aa3781f09caae5fcf..e3f560f5bcd53e0d4dac97cedc62fb0869111940 100644
+--- a/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
++++ b/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
+@@ -1013,23 +1013,6 @@ void FirstRunFlowController::Init() {
+           content::GetAudioServiceStreamFactoryBinder());
+     }
+     if (sounds_manager_) {
+-      sounds_manager_->Initialize(kLogoSoundKey, IDR_INTRO_SOUND_LOGO_FLAC,
+-                                  media::AudioCodec::kFLAC, /*loop=*/false);
+-      sounds_manager_->Initialize(kAmbientSoundKey,
+-                                  IDR_INTRO_SOUND_AMBIENT_FLAC,
+-                                  media::AudioCodec::kFLAC, /*loop=*/true);
+-      sounds_manager_->Initialize(kWelcomeBackSoundKey,
+-                                  IDR_INTRO_SOUND_WELCOME_BACK_FLAC,
+-                                  media::AudioCodec::kFLAC, /*loop=*/false);
+-      sounds_manager_->Initialize(kFeatureShowcaseAmbientSoundKey,
+-                                  IDR_INTRO_SOUND_FEATURE_SHOWCASE_AMBIENT_FLAC,
+-                                  media::AudioCodec::kFLAC, /*loop=*/true);
+-      sounds_manager_->Initialize(
+-          kFeatureShowcaseProgressSoundKey,
+-          IDR_INTRO_SOUND_FEATURE_SHOWCASE_PROGRESS_FLAC,
+-          media::AudioCodec::kFLAC, /*loop=*/false);
+-      sounds_manager_->Initialize(kAllSetSoundKey, IDR_INTRO_SOUND_ALL_SET_FLAC,
+-                                  media::AudioCodec::kFLAC, /*loop=*/false);
+       if (AreEffectsEnabled()) {
+         sounds_manager_->Play(kLogoSoundKey);
+         sounds_manager_->Play(kAmbientSoundKey);

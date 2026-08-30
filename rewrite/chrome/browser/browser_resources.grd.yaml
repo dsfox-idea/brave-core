@@ -1,0 +1,18 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+# growser (#116): Chrome's first-run intro experience never runs in this
+# browser - the FRE is skipped by policy (kSigninAllowed=false makes
+# TryMarkFirstRunAlreadyFinished finish it as kSkippedByPolicies, see
+# chromium_src/chrome/browser/ui/startup/first_run_service.cc) and the
+# product serves its own onboarding instead. Its six FLAC sounds are
+# ~4.8 MB of dead weight in resources.pak. The id references in
+# first_run_flow_controller.cc are dropped by a companion recipe.
+
+substitutions:
+  - description: 'Drop the first-run intro FLAC sounds from the pak.'
+    regex:
+      re_pattern: '\s*<if expr="is_win or is_macosx or is_linux">\s*<!-- First Run audio resources -->[\s\S]+?</if>'
+      replace: ''
