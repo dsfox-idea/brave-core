@@ -19,6 +19,7 @@
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/update_observer.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
 #include "components/search_engines/template_url_service.h"
+#include "components/search_engines/template_url_service_observer.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "mojo/public/cpp/bindings/receiver.h"
@@ -56,7 +57,7 @@ class VPNFacade;
 // implementations should be fairly trivial. Any non-trivial operations should
 // be delegated to a helper class.
 class NewTabPageHandler : public mojom::NewTabPageHandler,
-                          public TemplateURLService::Observer {
+                          public TemplateURLServiceObserver {
  public:
   NewTabPageHandler(
       mojo::PendingReceiver<mojom::NewTabPageHandler> receiver,
@@ -74,7 +75,7 @@ class NewTabPageHandler : public mojom::NewTabPageHandler,
 
   ~NewTabPageHandler() override;
 
-  // TemplateURLService::Observer:
+  // TemplateURLServiceObserver:
   // growser: the first NTP of a fresh profile can ask for the engines before
   // the service has loaded; the pending callbacks are answered here.
   void OnTemplateURLServiceChanged() override;
