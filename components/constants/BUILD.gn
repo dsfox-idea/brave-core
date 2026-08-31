@@ -12,9 +12,12 @@ declare_args() {
   brave_services_key = ""
 }
 
-if (is_official_build) {
-  assert(brave_services_key != "")
-}
+# growser (#120): the empty-key assert is lifted. This fork deliberately
+# ships with no Brave services key - every consumer of BRAVE_SERVICES_KEY
+# handles the empty value (months of non-official operation proved it), and
+# the assert was the only thing standing between a Windows build and
+# is_official_build=true, which carries the optimization tier every shipping
+# Chromium browser uses (DCHECKs off, optimize_max, PGO, ThinLTO).
 
 buildflag_header("brave_services_key") {
   # Please use //brave/components/constants instead.

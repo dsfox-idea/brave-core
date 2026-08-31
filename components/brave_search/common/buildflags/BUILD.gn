@@ -9,9 +9,9 @@ declare_args() {
   service_key_search = ""
 }
 
-if (is_official_build) {
-  assert(service_key_search != "")
-}
+# growser (#120): the official-build key assert is lifted - Brave Search is
+# not this product's engine and the key has no consumer here; the empty
+# value fails closed exactly as it did in months of non-official builds.
 
 buildflag_header("buildflags") {
   header = "buildflags.h"

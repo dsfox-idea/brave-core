@@ -14,7 +14,10 @@ declare_args() {
   service_key_aichat = ""
 }
 
-if (is_official_build) {
+# growser (#120): the key is only needed when the feature compiles in - the
+# same reasoning as the Brave Origin exemption below, generalised to any
+# build with enable_ai_chat=false.
+if (is_official_build && enable_ai_chat) {
   # Not needed for Brave Origin builds, which ship with AI Chat disabled
   # (enable_ai_chat = !is_brave_origin_branded).
   if (!is_brave_origin_branded) {

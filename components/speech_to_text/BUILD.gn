@@ -10,9 +10,10 @@ declare_args() {
   service_key_stt = ""
 }
 
-if (is_official_build) {
-  assert(service_key_stt != "")
-}
+# growser (#120): the official-build key assert is lifted - this fork ships
+# no Brave STT key on purpose; the service fails closed on the empty value
+# (proven by months of non-official operation), and officialness is about
+# the optimization tier, not about Brave's service entitlements.
 
 buildflag_header("buildflags") {
   header = "buildflags.h"

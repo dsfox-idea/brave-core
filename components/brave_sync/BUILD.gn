@@ -13,9 +13,9 @@ declare_args() {
   brave_sync_endpoint = "https://sync-v2.brave.com/v2"
 }
 
-if (is_official_build) {
-  assert(brave_sync_endpoint != "")
-}
+# growser (#120): the official-build endpoint assert is lifted - this fork
+# rides the baked-in default sync endpoint (an own server is growser#43),
+# and the empty arg is handled the same way non-official builds handle it.
 
 buildflag_header("buildflags") {
   header = "buildflags.h"

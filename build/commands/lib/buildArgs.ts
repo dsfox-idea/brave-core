@@ -82,7 +82,10 @@ export function getBuildArgs(config: Config) {
 
   config.forwardEnvConfigVarsToObject(FORWARD_ENV_CONFIG_VARS_TO_GN_ARGS, args)
 
-  if (config.isOfficialBuild()) {
+  if (config.isOfficialBuild() && args.enable_updater === undefined) {
+    // growser (#120): respect an explicit enable_updater=false from .env -
+    // this fork ships without the Omaha updater stack (growser#76) and an
+    // official build must not force it back in.
     args.enable_updater = true
   }
 
