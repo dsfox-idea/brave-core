@@ -28,8 +28,10 @@ const wchar_t kPolicyRegistryKey[] =
 const wchar_t kUserDataDirNameSuffix[] =
     L"\\BraveSoftware\\Brave-Origin\\User Data";
 #else
+// growser (#128): the same path in every build kind - official must not
+// move existing profiles.
 const wchar_t kUserDataDirNameSuffix[] =
-    L"\\BraveSoftware\\Brave-Browser\\User Data";
+    L"\\Growser\\User Data";
 #endif
 #else
 const wchar_t kUserDataDirNameSuffix[] =

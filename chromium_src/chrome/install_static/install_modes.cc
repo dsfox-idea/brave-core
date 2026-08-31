@@ -11,39 +11,29 @@ namespace install_static {
 
 namespace {
 
-#if !defined(OFFICIAL_BUILD)
+// growser (#128): one path for every build kind, official included. The
+// BraveSoftware\Update\{Clients,ClientState,ClientStateMedium} vendor keys
+// belonged to Brave's Omaha, which this product does not run (MS Store
+// updates, growser#76); and every existing install already keeps its state -
+// including the crash-consent usagestats value - under Software\Growser.
+// An official build moving it to a Brave vendor key would both orphan that
+// state and write another product's registry identity.
 std::wstring GetUnregisteredKeyPathForProduct() {
   return std::wstring(L"Software\\").append(kProductPathName);
 }
-#endif
 
 }  // namespace
 
 std::wstring GetClientsKeyPath(const wchar_t* app_guid) {
-#if defined(OFFICIAL_BUILD)
-  return std::wstring(L"Software\\BraveSoftware\\Update\\Clients\\")
-      .append(app_guid);
-#else
   return GetUnregisteredKeyPathForProduct();
-#endif
 }
 
 std::wstring GetClientStateKeyPath(const wchar_t* app_guid) {
-#if defined(OFFICIAL_BUILD)
-  return std::wstring(L"Software\\BraveSoftware\\Update\\ClientState\\")
-      .append(app_guid);
-#else
   return GetUnregisteredKeyPathForProduct();
-#endif
 }
 
 std::wstring GetClientStateMediumKeyPath(const wchar_t* app_guid) {
-#if defined(OFFICIAL_BUILD)
-  return std::wstring(L"Software\\BraveSoftware\\Update\\ClientStateMedium\\")
-      .append(app_guid);
-#else
   return GetUnregisteredKeyPathForProduct();
-#endif
 }
 
 }  // namespace install_static

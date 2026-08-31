@@ -94,7 +94,8 @@ if (is_win) {
   if (is_brave_origin_branded) {
     brave_app_guid = "{F1EF32DE-F987-4289-81D2-6C4780027F9B}"
   } else {
-    brave_app_guid = "{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}"
+    # growser (#128): ours, matching chromium_install_modes.h stable.
+    brave_app_guid = "{B003E671-954C-4C60-A0D4-4172D74FD4C1}"
   }
   if (brave_channel == "nightly") {
     # Temporary support PR's non-Release builds on nightly channel.
@@ -106,7 +107,7 @@ if (is_win) {
     if (is_brave_origin_branded) {
       brave_app_guid = "{50474E96-9CD2-4BC8-B0A7-0D4B6EF2E709}"
     } else {
-      brave_app_guid = "{C6CB981E-DB30-4876-8639-109F8933582C}"
+      brave_app_guid = "{97E119AD-4AD1-473F-AABA-5204810AA9DE}"
     }
   } else if (is_official_build) {
     if (brave_channel == "beta") {
@@ -114,14 +115,14 @@ if (is_win) {
       if (is_brave_origin_branded) {
         brave_app_guid = "{56DA94FD-D872-416B-BFC4-1D7011DA7473}"
       } else {
-        brave_app_guid = "{103BD053-949B-43A8-9120-2E424887DE11}"
+        brave_app_guid = "{3C158BB8-E5D2-4180-B58E-E3F9BB45F4F6}"
       }
     } else if (brave_channel == "dev") {
       _channel = "Dev"
       if (is_brave_origin_branded) {
         brave_app_guid = "{716D6A4A-D071-47A8-AC64-DBDE3EE3797B}"
       } else {
-        brave_app_guid = "{CB2150F2-595F-4633-891A-E39720CE0531}"
+        brave_app_guid = "{81B04A9D-2573-4FC0-BE7F-79583A591680}"
       }
     } else {
       assert(brave_channel == "", "Unknown channel name")
@@ -139,19 +140,27 @@ if (is_win) {
   # and double-clicks, so calling it brave_installer.exe was the most visible
   # leftover of all.
   brave_installer_exe = "${brave_product_name}_installer.exe"
-  brave_stub_installer_exe = "Brave$_product_brand$_channel" +
+
+  # growser (#128): the installer artifacts carry OUR name. Brave Origin
+  # keeps its own prefix so the origin-branded build stays intact.
+  if (is_brave_origin_branded) {
+    _installer_brand = "Brave$_product_brand"
+  } else {
+    _installer_brand = "Growser"
+  }
+  brave_stub_installer_exe = "$_installer_brand$_channel" +
                              "Setup$_arch$brave_underline_full_version.exe"
   brave_untagged_stub_installer_exe =
-      "Brave${_product_brand}Untagged$_channel" +
+      "${_installer_brand}Untagged$_channel" +
       "Setup$_arch$brave_underline_full_version.exe"
   brave_standalone_installer_exe =
-      "Brave${_product_brand}Standalone$_channel" +
+      "${_installer_brand}Standalone$_channel" +
       "Setup$_arch$brave_underline_full_version.exe"
   brave_silent_installer_exe =
-      "Brave${_product_brand}StandaloneSilent$_channel" +
+      "${_installer_brand}StandaloneSilent$_channel" +
       "Setup$_arch$brave_underline_full_version.exe"
   brave_untagged_installer_exe =
-      "Brave${_product_brand}StandaloneUntagged$_channel" +
+      "${_installer_brand}StandaloneUntagged$_channel" +
       "Setup$_arch$brave_underline_full_version.exe"
 } else if (is_mac) {
   brave_exe = "$chrome_product_full_name.app"

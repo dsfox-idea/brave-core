@@ -22,7 +22,7 @@
   UNCOMPRESSING, PATCHING  // Patching chrome.7z with differential update.
 
 #define kGoogleUpdateIsMachineEnvVar                               \
-  kGoogleUpdateIsMachineEnvVar[] = "BraveSoftwareUpdateIsMachine"; \
+  kGoogleUpdateIsMachineEnvVar[] = "GrowserUpdateIsMachine"; \
   inline constexpr char kGoogleUpdateIsMachineEnvVar_UnUsed
 
 #include <chrome/installer/util/util_constants.h>  // IWYU pragma: export

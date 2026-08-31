@@ -10,7 +10,7 @@ namespace {
 
 // Brave Update registry settings.
 const wchar_t kInstallationRegKey[] =
-    L"Software\\BraveSoftware\\Update\\ClientState";
+    L"Software\\Growser\\Update\\ClientState";
 
 // Copied from brave/chromium_src/chrome/install_static/chromium_install_modes.h
 #if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)

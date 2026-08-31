@@ -293,15 +293,12 @@ class InstallStaticUtilTest
   }
 
   void SetMetricsReportingPolicy(DWORD value) {
-#if defined(OFFICIAL_BUILD)
-#if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+#if defined(OFFICIAL_BUILD) && BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
     static constexpr wchar_t kPolicyKey[] =
         L"Software\\Policies\\BraveSoftware\\Brave-Origin";
 #else
-    static constexpr wchar_t kPolicyKey[] =
-        L"Software\\Policies\\BraveSoftware\\Brave-Browser";
-#endif
-#else
+    // growser (#128): kCompanyPathName is empty and kProductPathName is
+    // "Growser" in every build kind, so the policy key never moves.
     static constexpr wchar_t kPolicyKey[] =
         L"Software\\Policies\\Growser";
 #endif
@@ -317,16 +314,9 @@ class InstallStaticUtilTest
   std::wstring GetUsageStatsKeyPath(bool medium) {
     EXPECT_TRUE(!medium || system_level_);
 
+    // growser (#128): one registry home for every build kind.
     std::wstring result(L"Software\\");
-#if defined(OFFICIAL_BUILD)
-      result.append(L"BraveSoftware\\Update\\ClientState");
-      if (medium)
-        result.append(L"Medium");
-      result.push_back(L'\\');
-      result.append(mode_->app_guid);
-#else
-      result.append(kProductPathName);
-#endif
+    result.append(kProductPathName);
     return result;
   }
 
@@ -353,11 +343,12 @@ TEST_P(InstallStaticUtilTest, GetChromeInstallSubDirectory) {
 #else
   // The directory strings for the brand's install modes; parallel to
   // kInstallModes.
+  // growser (#128): empty company dir, "Growser" product path.
   static constexpr const wchar_t* kInstallDirs[] = {
-      L"BraveSoftware\\Brave-Browser",
-      L"BraveSoftware\\Brave-Browser-Beta",
-      L"BraveSoftware\\Brave-Browser-Dev",
-      L"BraveSoftware\\Brave-Browser-Nightly",
+      L"Growser",
+      L"Growser-Beta",
+      L"Growser-Dev",
+      L"Growser-Nightly",
   };
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 #else
@@ -387,11 +378,12 @@ TEST_P(InstallStaticUtilTest, GetRegistryPath) {
 #else
   // The registry path strings for the brand's install modes; parallel to
   // kInstallModes.
+  // growser (#128): empty company dir, "Growser" product path.
   static constexpr const wchar_t* kRegistryPaths[] = {
-      L"Software\\BraveSoftware\\Brave-Browser",
-      L"Software\\BraveSoftware\\Brave-Browser-Beta",
-      L"Software\\BraveSoftware\\Brave-Browser-Dev",
-      L"Software\\BraveSoftware\\Brave-Browser-Nightly",
+      L"Software\\Growser",
+      L"Software\\Growser-Beta",
+      L"Software\\Growser-Dev",
+      L"Software\\Growser-Nightly",
   };
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 #else
@@ -426,15 +418,16 @@ TEST_P(InstallStaticUtilTest, GetUninstallRegistryPath) {
 #else
   // The uninstall registry path strings for the brand's install modes; parallel
   // to kInstallModes.
+  // growser (#128): empty company name, "Growser" product path.
   static constexpr const wchar_t* kUninstallRegistryPaths[] = {
       L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"  // (cont'd)
-      L"BraveSoftware Brave-Browser",
+      L"Growser",
       L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"  // (cont'd)
-      L"BraveSoftware Brave-Browser-Beta",
+      L"Growser-Beta",
       L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"  // (cont'd)
-      L"BraveSoftware Brave-Browser-Dev",
+      L"Growser-Dev",
       L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"  // (cont'd)
-      L"BraveSoftware Brave-Browser-Nightly",
+      L"Growser-Nightly",
   };
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 #else
@@ -465,10 +458,10 @@ TEST_P(InstallStaticUtilTest, GetAppGuid) {
 #else
   // The app guids for the brand's install modes; parallel to kInstallModes.
   static constexpr const wchar_t* kAppGuids[] = {
-      L"{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}",  // Brave-Browser.
-      L"{103BD053-949B-43A8-9120-2E424887DE11}",  // Brave-Browser-Beta.
-      L"{CB2150F2-595F-4633-891A-E39720CE0531}",  // Brave-Browser-Dev.
-      L"{C6CB981E-DB30-4876-8639-109F8933582C}",  // Brave-Browser-Nightly.
+      L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}",  // Growser.
+      L"{3C158BB8-E5D2-4180-B58E-E3F9BB45F4F6}",  // Growser-Beta.
+      L"{81B04A9D-2573-4FC0-BE7F-79583A591680}",  // Growser-Dev.
+      L"{97E119AD-4AD1-473F-AABA-5204810AA9DE}",  // Growser-Nightly.
   };
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
   static_assert(std::size(kAppGuids) == NUM_INSTALL_MODES,
@@ -497,7 +490,7 @@ TEST_P(InstallStaticUtilTest, GetBaseAppId) {
 #else
   // The base app ids for the brand's install modes; parallel to kInstallModes.
   static constexpr const wchar_t* kBaseAppIds[] = {
-      L"Brave", L"BraveBeta", L"BraveDev", L"BraveNightly",
+      L"Growser", L"GrowserBeta", L"GrowserDev", L"GrowserNightly",
   };
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 #else
@@ -548,34 +541,34 @@ TEST_P(InstallStaticUtilTest, GetToastActivatorClsid) {
   // The toast activator CLSIDs for the brand's install modes; parallel to
   // kInstallModes.
   static constexpr CLSID kToastActivatorClsids[] = {
-      { 0x6c9646d,
-        0x2807,
-        0x44c0,
-        { 0x97, 0xd2, 0x6d, 0xa0, 0xdb, 0x62, 0x3d,
-          0xb4 } },  // Brave-Browser.
-      { 0x9560028d,
-        0xcca,
-        0x49f0,
-        { 0x8d, 0x47, 0xef, 0x22, 0xbb, 0xc4, 0xb,
-          0xa7 } },  // Brave-Browser-Beta.
-      { 0x20b22981,
-        0xf63a,
-        0x47a6,
-        { 0xa5, 0x47, 0x69, 0x1c, 0xc9, 0x4c, 0xae,
-          0xe0 } },  // Brave-Browser-Dev.
-      { 0xf2edbc59,
-        0x7217,
-        0x4da5,
-        { 0xa2, 0x59, 0x3, 0x2, 0xda, 0x6a, 0x0,
-          0xe1 } },  // Brave-Browser-Nightly.
+      { 0x83127675,
+        0xce10,
+        0x4ac5,
+        { 0x9c, 0x10, 0x3f, 0xf2, 0xe7, 0xd4, 0x53,
+          0x99 } },  // Growser.
+      { 0xdda9dde5,
+        0x20e3,
+        0x45a7,
+        { 0xb0, 0x77, 0x05, 0xa5, 0xe9, 0xa2, 0x65,
+          0x3e } },  // Growser-Beta.
+      { 0x08a67cbc,
+        0x18f1,
+        0x4c37,
+        { 0x8c, 0x37, 0x92, 0x60, 0xcd, 0xb5, 0xaa,
+          0x82 } },  // Growser-Dev.
+      { 0x2a6a7aa0,
+        0xec67,
+        0x4393,
+        { 0xa2, 0x09, 0x8c, 0x08, 0x87, 0x37, 0x08,
+          0x96 } },  // Growser-Nightly.
   };
 
   // The string representation of the CLSIDs above.
   static constexpr const wchar_t* kToastActivatorClsidsString[] = {
-      L"{06C9646D-2807-44C0-97D2-6DA0DB623DB4}",  // Brave-Browser.
-      L"{9560028D-0CCA-49F0-8D47-EF22BBC40BA7}",  // Brave-Browser-Beta.
-      L"{20B22981-F63A-47A6-A547-691CC94CAEE0}",  // Brave-Browser-Dev.
-      L"{F2EDBC59-7217-4DA5-A259-0302DA6A00E1}",  // Brave-Browser-Nightly.
+      L"{83127675-CE10-4AC5-9C10-3FF2E7D45399}",  // Growser.
+      L"{DDA9DDE5-20E3-45A7-B077-05A5E9A2653E}",  // Growser-Beta.
+      L"{08A67CBC-18F1-4C37-8C37-9260CDB5AA82}",  // Growser-Dev.
+      L"{2A6A7AA0-EC67-4393-A209-8C0887370896}",  // Growser-Nightly.
   };
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 #else

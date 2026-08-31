@@ -54,27 +54,17 @@ class FakeInstallDetails : public InstallDetails {
   Payload payload = Payload();
 };
 
+// growser (#128): one registry home for every build kind.
 TEST(InstallDetailsTest, GetClientStateKeyPath) {
   FakeInstallDetails details;
-#if defined(OFFICIAL_BUILD)
   EXPECT_THAT(details.GetClientStateKeyPath(),
-              StrEq(L"Software\\BraveSoftware\\Update\\ClientState\\testguid"));
-#else
-    EXPECT_THAT(details.GetClientStateKeyPath(),
-                StrEq(std::wstring(L"Software\\").append(kProductPathName)));
-#endif
+              StrEq(std::wstring(L"Software\\").append(kProductPathName)));
 }
 
 TEST(InstallDetailsTest, GetClientStateMediumKeyPath) {
   FakeInstallDetails details;
-#if defined(OFFICIAL_BUILD)
-    EXPECT_THAT(
-        details.GetClientStateMediumKeyPath(),
-        StrEq(L"Software\\BraveSoftware\\Update\\ClientStateMedium\\testguid"));
-#else
-    EXPECT_THAT(details.GetClientStateKeyPath(),
-                StrEq(std::wstring(L"Software\\").append(kProductPathName)));
-#endif
+  EXPECT_THAT(details.GetClientStateKeyPath(),
+              StrEq(std::wstring(L"Software\\").append(kProductPathName)));
 }
 
 TEST(InstallDetailsTest, VersionMismatch) {

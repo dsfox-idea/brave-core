@@ -109,41 +109,27 @@ TEST(InstallModes, VerifyModes) {
   }
 }
 
+// growser (#128): one registry home for every build kind - official builds
+// must not move state to a BraveSoftware vendor key.
 TEST(InstallModes, GetClientsKeyPath) {
   constexpr wchar_t kAppGuid[] = L"test";
 
-#if defined(OFFICIAL_BUILD)
-    ASSERT_THAT(GetClientsKeyPath(kAppGuid),
-                StrEq(L"Software\\BraveSoftware\\Update\\Clients\\test"));
-#else
-    ASSERT_THAT(GetClientsKeyPath(kAppGuid),
-                StrEq(std::wstring(L"Software\\").append(kProductPathName)));
-#endif
+  ASSERT_THAT(GetClientsKeyPath(kAppGuid),
+              StrEq(std::wstring(L"Software\\").append(kProductPathName)));
 }
 
 TEST(InstallModes, GetClientStateKeyPath) {
   constexpr wchar_t kAppGuid[] = L"test";
 
-#if defined(OFFICIAL_BUILD)
-    ASSERT_THAT(GetClientStateKeyPath(kAppGuid),
-                StrEq(L"Software\\BraveSoftware\\Update\\ClientState\\test"));
-#else
-    ASSERT_THAT(GetClientStateKeyPath(kAppGuid),
-                StrEq(std::wstring(L"Software\\").append(kProductPathName)));
-#endif
+  ASSERT_THAT(GetClientStateKeyPath(kAppGuid),
+              StrEq(std::wstring(L"Software\\").append(kProductPathName)));
 }
 
 TEST(InstallModes, GetClientStateMediumKeyPath) {
   constexpr wchar_t kAppGuid[] = L"test";
 
-#if defined(OFFICIAL_BUILD)
-    ASSERT_THAT(
-        GetClientStateMediumKeyPath(kAppGuid),
-        StrEq(L"Software\\BraveSoftware\\Update\\ClientStateMedium\\test"));
-#else
-    ASSERT_THAT(GetClientStateMediumKeyPath(kAppGuid),
-                StrEq(std::wstring(L"Software\\").append(kProductPathName)));
-#endif
+  ASSERT_THAT(GetClientStateMediumKeyPath(kAppGuid),
+              StrEq(std::wstring(L"Software\\").append(kProductPathName)));
 }
 
 #if defined(OFFICIAL_BUILD)

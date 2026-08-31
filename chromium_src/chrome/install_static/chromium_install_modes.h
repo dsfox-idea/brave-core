@@ -38,17 +38,20 @@ inline constexpr wchar_t kCompanyPathName[] = L"";
 // side-by-side installation with Brave Browser.
 inline constexpr wchar_t kProductPathName[] = L"Brave-Origin";
 #else
-inline constexpr wchar_t kProductPathName[] = L"Brave-Browser";
+// growser (#128): the SAME name as the developer mode below, on purpose -
+// every existing install and profile lives under "Growser", and the first
+// official build must keep those paths, not move them.
+inline constexpr wchar_t kProductPathName[] = L"Growser";
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 #else
 // If you change this, then you also need to change occurrences of this string
 // in mini_installer_constants.cc.
 //
-// growser: this is the mode we actually build and ship - GROWSER_NON_OFFICIAL
-// makes isOfficialBuild() false, so OFFICIAL_BUILD is never defined for us.
-// The official modes above still carry Brave's names and GUIDs; they are dead
-// configuration here and stay untouched until an official build becomes real
-// (growser#51).
+// growser: the developer mode, used by non-official builds. Since #128 the
+// OFFICIAL_BUILD modes above carry the same Growser identity (stable is
+// byte-for-byte this mode's identity; beta/dev/nightly are gn-flag debug
+// channels with their own fresh GUIDs), so either build kind is the same
+// product on disk and in the registry.
 //
 // The name is "Growser", not "Growser-Development", even though this is
 // upstream's developer mode: it decides the install directory, the profile path
@@ -277,8 +280,15 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
     },
 });
 #else   // !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+// growser (#128): every identifier in all four modes is ours. The STABLE
+// mode carries the exact identity of the developer mode below - app GUID,
+// COM CLSIDs, ProgIDs, sandbox SID - because that is what every existing
+// install has registered, and the first official build must be the same
+// product, not a new one. Beta/Dev/Nightly exist for gn-flag channel
+// debugging (brave_channel=...) with freshly generated identities so a
+// debug channel installs side by side and never fights the real one.
 inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
-    // The primary install mode for stable Brave.
+    // The primary install mode for stable Growser.
     {
         .size = sizeof(InstallConstants),
         .index = STABLE_INDEX,  // The first mode is for stable/beta/dev.
@@ -287,33 +297,38 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .install_suffix =
             L"",  // Empty install_suffix for the primary install mode.
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
-        .app_guid = L"{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}",
-        .base_app_name = L"Brave",               // A distinct base_app_name.
-        .base_app_id = L"Brave",                 // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveHTML",  // Browser ProgID prefix.
+        .app_guid = L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}",
+        .base_app_name = L"Growser",               // A distinct base_app_name.
+        .base_app_id = L"Growser",                 // A distinct base_app_id.
+        .browser_prog_id_prefix = L"GrowserHTML",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave HTML Document",  // Browser ProgID description.
-        .direct_launch_url_scheme = "brave-browser",
-        .pdf_prog_id_prefix = L"BravePDF",  // PDF ProgID prefix.
+            L"Growser HTML Document",  // Browser ProgID description.
+        .direct_launch_url_scheme = "growser",
+        .pdf_prog_id_prefix = L"GrowserPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave PDF Document",  // PDF ProgID description.
+            L"Growser PDF Document",  // PDF ProgID description.
         .active_setup_guid =
-            L"{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}",  // Active Setup GUID.
-        .toast_activator_clsid = {0x6c9646d,
-                                  0x2807,
-                                  0x44c0,
-                                  {0x97, 0xd2, 0x6d, 0xa0, 0xdb, 0x62, 0x3d,
-                                   0xb4}},  // Toast activator CLSID.
-        .elevator_clsid = {0x576b31af,
-                           0x6369,
-                           0x4b6b,
-                           {0x85, 0x60, 0xe4, 0xb2, 0x3, 0xa9, 0x7a,
-                            0x8b}},  // Elevator CLSID.
-        .elevator_iid = {0xf396861e,
-                         0x0c8e,
-                         0x4c71,
-                         {0x82, 0x56, 0x2f, 0xae, 0x6d, 0x75, 0x9c, 0xe9}},
+            L"{AD0A8A35-2AF7-48DC-A0F0-D2B8CABD7EE9}",  // Active Setup GUID.
+        .toast_activator_clsid = {0x83127675,
+                                  0xce10,
+                                  0x4ac5,
+                                  {0x9c, 0x10, 0x3f, 0xf2, 0xe7, 0xd4, 0x53,
+                                   0x99}},  // Toast activator CLSID.
+        .elevator_clsid = {0xfd440037,
+                           0x1c1c,
+                           0x4ec3,
+                           {0xb4, 0x7a, 0x34, 0xf1, 0xb3, 0x58, 0x8c,
+                            0xb6}},  // Elevator CLSID.
+        .elevator_iid = {0x87070ee1,
+                         0xc7d8,
+                         0x473f,
+                         {0xb2, 0x34, 0x94, 0x77, 0x97, 0xa8, 0x77, 0xec}},
         .default_channel_name = L"",  // The empty string means "stable".
+        // FLOATING is the only primary-mode option here: official builds
+        // force USE_GOOGLE_UPDATE_INTEGRATION=1 (install_constants.h
+        // override), which compiles UNSUPPORTED out of the enum. Nothing
+        // writes an "ap" value under Software\Growser, so the channel
+        // floats on an absent value - i.e. stable, same as today.
         .channel_strategy = ChannelStrategy::FLOATING,
         .supports_system_level = true,  // Supports system-level installs.
         .supports_set_as_default_browser =
@@ -323,9 +338,9 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .app_icon_resource_id = IDR_MAINFRAME,  // App icon resource id.
         .sandbox_sid_prefix =
             L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
-            L"934012149-",  // App container sid prefix for sandbox.
+            L"934012160-",  // App container sid prefix for sandbox.
     },
-    // A secondary install mode for Brave Beta
+    // A secondary install mode for Growser Beta (gn-flag debug channel).
     {
         .size = sizeof(InstallConstants),
         .index = BETA_INDEX,  // The mode for the side-by-side beta channel.
@@ -333,32 +348,32 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .install_suffix = L"-Beta",       // Install suffix.
         .logo_suffix = L"Beta",           // Logo suffix.
         .app_guid =
-            L"{103BD053-949B-43A8-9120-2E424887DE11}",  // A distinct app GUID.
-        .base_app_name = L"Brave Beta",           // A distinct base_app_name.
-        .base_app_id = L"BraveBeta",              // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveBHTML",  // Browser ProgID prefix.
+            L"{3C158BB8-E5D2-4180-B58E-E3F9BB45F4F6}",  // A distinct app GUID.
+        .base_app_name = L"Growser Beta",           // A distinct base_app_name.
+        .base_app_id = L"GrowserBeta",              // A distinct base_app_id.
+        .browser_prog_id_prefix = L"GrowserBHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave Beta HTML Document",  // Browser ProgID description.
-        .direct_launch_url_scheme = "brave-browser-beta",
-        .pdf_prog_id_prefix = L"BraveBPDF",  // PDF ProgID prefix.
+            L"Growser Beta HTML Document",  // Browser ProgID description.
+        .direct_launch_url_scheme = "growser-beta",
+        .pdf_prog_id_prefix = L"GrowserBPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave Beta PDF Document",  // PDF ProgID description.
+            L"Growser Beta PDF Document",  // PDF ProgID description.
         .active_setup_guid =
-            L"{103BD053-949B-43A8-9120-2E424887DE11}",  // Active Setup GUID.
-        .toast_activator_clsid = {0x9560028d,
-                                  0xcca,
-                                  0x49f0,
-                                  {0x8d, 0x47, 0xef, 0x22, 0xbb, 0xc4, 0xb,
-                                   0xa7}},  // Toast activator CLSID.
-        .elevator_clsid = {0x2313f1cd,
-                           0x41f3,
-                           0x4347,
-                           {0xbe, 0xc0, 0xd7, 0x22, 0xca, 0x41, 0x2c,
-                            0x75}},  // Elevator CLSID.
-        .elevator_iid = {0x9ebad7ac,
-                         0x6e1e,
-                         0x4a1c,
-                         {0xaa, 0x85, 0x1a, 0x70, 0xca, 0xda, 0x8d, 0x82}},
+            L"{3C158BB8-E5D2-4180-B58E-E3F9BB45F4F6}",  // Active Setup GUID.
+        .toast_activator_clsid = {0xdda9dde5,
+                                  0x20e3,
+                                  0x45a7,
+                                  {0xb0, 0x77, 0x05, 0xa5, 0xe9, 0xa2, 0x65,
+                                   0x3e}},  // Toast activator CLSID.
+        .elevator_clsid = {0xda5873a9,
+                           0xc3e0,
+                           0x416e,
+                           {0x93, 0xc0, 0xdf, 0xe3, 0x2c, 0x20, 0x0f,
+                            0x6e}},  // Elevator CLSID.
+        .elevator_iid = {0x4a786777,
+                         0xf291,
+                         0x4e37,
+                         {0x89, 0x62, 0x50, 0xd0, 0xed, 0x5f, 0xc2, 0xaf}},
         .default_channel_name = L"beta",  // Forced channel name.
         .channel_strategy = ChannelStrategy::FIXED,
         .supports_system_level = true,  // Supports system-level installs.
@@ -369,9 +384,9 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .app_icon_resource_id = IDR_X005_BETA,      // App icon resource id.
         .sandbox_sid_prefix =
             L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
-            L"934012150-",  // App container sid prefix for sandbox.
+            L"934012161-",  // App container sid prefix for sandbox.
     },
-    // A secondary install mode for Brave Dev
+    // A secondary install mode for Growser Dev (gn-flag debug channel).
     {
         .size = sizeof(InstallConstants),
         .index = DEV_INDEX,  // The mode for the side-by-side dev channel.
@@ -379,32 +394,32 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .install_suffix = L"-Dev",       // Install suffix.
         .logo_suffix = L"Dev",           // Logo suffix.
         .app_guid =
-            L"{CB2150F2-595F-4633-891A-E39720CE0531}",  // A distinct app GUID.
-        .base_app_name = L"Brave Dev",            // A distinct base_app_name.
-        .base_app_id = L"BraveDev",               // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveDHTML",  // Browser ProgID prefix.
+            L"{81B04A9D-2573-4FC0-BE7F-79583A591680}",  // A distinct app GUID.
+        .base_app_name = L"Growser Dev",            // A distinct base_app_name.
+        .base_app_id = L"GrowserDev",               // A distinct base_app_id.
+        .browser_prog_id_prefix = L"GrowserDHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave Dev HTML Document",  // Browser ProgID description.
-        .direct_launch_url_scheme = "brave-browser-dev",
-        .pdf_prog_id_prefix = L"BraveDPDF",  // PDF ProgID prefix.
+            L"Growser Dev HTML Document",  // Browser ProgID description.
+        .direct_launch_url_scheme = "growser-dev",
+        .pdf_prog_id_prefix = L"GrowserDPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave Dev PDF Document",  // PDF ProgID description.
+            L"Growser Dev PDF Document",  // PDF ProgID description.
         .active_setup_guid =
-            L"{CB2150F2-595F-4633-891A-E39720CE0531}",  // Active Setup GUID.
-        .toast_activator_clsid = {0x20b22981,
-                                  0xf63a,
-                                  0x47a6,
-                                  {0xa5, 0x47, 0x69, 0x1c, 0xc9, 0x4c, 0xae,
-                                   0xe0}},  // Toast activator CLSID.
-        .elevator_clsid = {0x9129ed6a,
-                           0x11d3,
-                           0x43b7,
-                           {0xb7, 0x18, 0x8f, 0x82, 0x61, 0x45, 0x97,
-                            0xa3}},  // Elevator CLSID.
-        .elevator_iid = {0x1e43c77b,
-                         0x48e6,
-                         0x4a4c,
-                         {0x9d, 0xb2, 0xc2, 0x97, 0x17, 0x06, 0xc2, 0x55}},
+            L"{81B04A9D-2573-4FC0-BE7F-79583A591680}",  // Active Setup GUID.
+        .toast_activator_clsid = {0x08a67cbc,
+                                  0x18f1,
+                                  0x4c37,
+                                  {0x8c, 0x37, 0x92, 0x60, 0xcd, 0xb5, 0xaa,
+                                   0x82}},  // Toast activator CLSID.
+        .elevator_clsid = {0x934dfc41,
+                           0x966d,
+                           0x45af,
+                           {0xb4, 0x65, 0xa4, 0x64, 0x71, 0xb3, 0xce,
+                            0x9a}},  // Elevator CLSID.
+        .elevator_iid = {0x07e21793,
+                         0xc8f1,
+                         0x4863,
+                         {0xbe, 0x43, 0xd7, 0x52, 0x27, 0xb1, 0xb5, 0x0c}},
         .default_channel_name = L"dev",  // Forced channel name.
         .channel_strategy = ChannelStrategy::FIXED,
         .supports_system_level = true,  // Supports system-level installs.
@@ -415,9 +430,9 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .app_icon_resource_id = IDR_X004_DEV,      // App icon resource id.
         .sandbox_sid_prefix =
             L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
-            L"934012151-",  // App container sid prefix for sandbox.
+            L"934012162-",  // App container sid prefix for sandbox.
     },
-    // A secondary install mode for Brave SxS (canary).
+    // A secondary install mode for Growser Nightly (gn-flag debug channel).
     {
         .size = sizeof(InstallConstants),
         .index =
@@ -426,32 +441,32 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .install_suffix = L"-Nightly",   // Install suffix.
         .logo_suffix = L"Canary",        // Logo suffix.
         .app_guid =
-            L"{C6CB981E-DB30-4876-8639-109F8933582C}",  // A distinct app GUID.
-        .base_app_name = L"Brave Nightly",        // A distinct base_app_name.
-        .base_app_id = L"BraveNightly",           // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveSSHTM",  // Browser ProgID prefix.
+            L"{97E119AD-4AD1-473F-AABA-5204810AA9DE}",  // A distinct app GUID.
+        .base_app_name = L"Growser Nightly",        // A distinct base_app_name.
+        .base_app_id = L"GrowserNightly",           // A distinct base_app_id.
+        .browser_prog_id_prefix = L"GrowserNHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave Nightly HTML Document",  // Browser ProgID description.
-        .direct_launch_url_scheme = "brave-browser-nightly",
-        .pdf_prog_id_prefix = L"BraveSSPDF",  // PDF ProgID prefix.
+            L"Growser Nightly HTML Document",  // Browser ProgID description.
+        .direct_launch_url_scheme = "growser-nightly",
+        .pdf_prog_id_prefix = L"GrowserNPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave Nightly PDF Document",  // PDF ProgID description.
+            L"Growser Nightly PDF Document",  // PDF ProgID description.
         .active_setup_guid =
-            L"{C6CB981E-DB30-4876-8639-109F8933582C}",  // Active Setup GUID.
-        .toast_activator_clsid = {0xf2edbc59,
-                                  0x7217,
-                                  0x4da5,
-                                  {0xa2, 0x59, 0x3, 0x2, 0xda, 0x6a, 0x0,
-                                   0xe1}},  // Toast activator CLSID.
-        .elevator_clsid = {0x1ce2f84f,
-                           0x70cb,
-                           0x4389,
-                           {0x87, 0xdb, 0xd0, 0x99, 0x48, 0x30, 0xbb,
-                            0x17}},  // Elevator CLSID.
-        .elevator_iid = {0x1db2116f,
-                         0x71b7,
-                         0x49f0,
-                         {0x89, 0x70, 0x33, 0xb1, 0xda, 0xcf, 0xb0, 0x72}},
+            L"{97E119AD-4AD1-473F-AABA-5204810AA9DE}",  // Active Setup GUID.
+        .toast_activator_clsid = {0x2a6a7aa0,
+                                  0xec67,
+                                  0x4393,
+                                  {0xa2, 0x09, 0x8c, 0x08, 0x87, 0x37, 0x08,
+                                   0x96}},  // Toast activator CLSID.
+        .elevator_clsid = {0x7b9d07aa,
+                           0x6e5d,
+                           0x42b8,
+                           {0x93, 0x32, 0x0b, 0x2f, 0xa6, 0x91, 0x51,
+                            0xe1}},  // Elevator CLSID.
+        .elevator_iid = {0x797f1ca7,
+                         0x8c30,
+                         0x48c3,
+                         {0x80, 0xa3, 0x25, 0xc6, 0x62, 0xe3, 0xc9, 0x9f}},
         .default_channel_name = L"nightly",  // Forced channel name.
         .channel_strategy = ChannelStrategy::FIXED,
         .supports_system_level = true,  // Support system-level installs.
@@ -462,7 +477,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .app_icon_resource_id = IDR_SXS,           // App icon resource id.
         .sandbox_sid_prefix =
             L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
-            L"934012152-",  // App container sid prefix for sandbox.
+            L"934012163-",  // App container sid prefix for sandbox.
     },
 });
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)

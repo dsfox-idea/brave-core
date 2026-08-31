@@ -40,8 +40,9 @@ DWORD BraveGetEnvironmentVariableW(const wchar_t* var,
                                    wchar_t* value,
                                    DWORD bufSize) {
   assert(::lstrcmp(var, L"GoogleUpdateIsMachine") == 0);
-  return ::GetEnvironmentVariableW(L"BraveSoftwareUpdateIsMachine", value,
-                                   bufSize);
+  // growser (#128): our name. Nothing sets it in this product (updates come
+  // from the MS Store), but the identity is ours everywhere on principle.
+  return ::GetEnvironmentVariableW(L"GrowserUpdateIsMachine", value, bufSize);
 }
 }  // namespace
 #define GetEnvironmentVariableW BraveGetEnvironmentVariableW

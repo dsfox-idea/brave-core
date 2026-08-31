@@ -131,45 +131,47 @@ constexpr TestData kTestData[] = {
     },
 };
 #else   // !IS_BRAVE_ORIGIN_BRANDED
+// growser (#128): our paths - kCompanyPathName is empty and
+// kProductPathName is "Growser", so no vendor directory.
 constexpr TestData kTestData[] = {
     {
-        L"C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser\\Application"
-        L"\\brave.exe",
+        L"C:\\Program Files (x86)\\Growser\\Application"
+        L"\\growser.exe",
         STABLE_INDEX, true, L"",
     },
     {
-        L"C:\\Users\\user\\AppData\\Local\\BraveSoftware\\Brave-Browser"
-        L"\\Application\\brave.exe",
+        L"C:\\Users\\user\\AppData\\Local\\Growser"
+        L"\\Application\\growser.exe",
         STABLE_INDEX, false, L"",
     },
     {
-        L"C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser-Beta"
-        L"\\Application\\brave.exe",
+        L"C:\\Program Files (x86)\\Growser-Beta"
+        L"\\Application\\growser.exe",
         BETA_INDEX, true, L"beta",
     },
     {
-        L"C:\\Users\\user\\AppData\\Local\\BraveSoftware\\Brave-Browser-Beta"
-        L"\\Application\\brave.exe",
+        L"C:\\Users\\user\\AppData\\Local\\Growser-Beta"
+        L"\\Application\\growser.exe",
         BETA_INDEX, false, L"beta",
     },
     {
-        L"C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser-Dev"
-        L"\\Application\\brave.exe",
+        L"C:\\Program Files (x86)\\Growser-Dev"
+        L"\\Application\\growser.exe",
         DEV_INDEX, true, L"dev",
     },
     {
-        L"C:\\Users\\user\\AppData\\Local\\BraveSoftware\\Brave-Browser-Dev"
-        L"\\Application\\brave.exe",
+        L"C:\\Users\\user\\AppData\\Local\\Growser-Dev"
+        L"\\Application\\growser.exe",
         DEV_INDEX, false, L"dev",
     },
     {
-        L"C:\\Users\\user\\AppData\\Local\\BraveSoftware\\Brave-Browser-Nightly"
-        L"\\Application\\brave.exe",
+        L"C:\\Users\\user\\AppData\\Local\\Growser-Nightly"
+        L"\\Application\\growser.exe",
         NIGHTLY_INDEX, false, L"nightly",
     },
     {
-        L"C:\\Users\\user\\AppData\\Local\\BraveSoftware\\Brave-Browser-Nightly"
-        L"\\Application\\brave.exe",
+        L"C:\\Users\\user\\AppData\\Local\\Growser-Nightly"
+        L"\\Application\\growser.exe",
         NIGHTLY_INDEX, false, L"nightly",
     },
 };
@@ -241,13 +243,9 @@ class MakeProductDetailsTest : public testing::TestWithParam<TestData> {
  private:
   // Returns the registry path for the product's ClientState key.
   std::wstring GetClientStateKeyPath() {
+    // growser (#128): one registry home for every build kind.
     std::wstring result(L"Software\\");
-#if defined(OFFICIAL_BUILD)
-      result.append(L"BraveSoftware\\Update\\ClientState\\");
-      result.append(UNSAFE_TODO(kInstallModes[test_data().index]).app_guid);
-#else
-      result.append(kProductPathName);
-#endif
+    result.append(kProductPathName);
     return result;
   }
 
