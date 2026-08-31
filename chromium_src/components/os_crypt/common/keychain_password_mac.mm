@@ -5,9 +5,16 @@
 
 #include "components/os_crypt/common/keychain_password_mac.h"
 
+#include <Security/Security.h>
+
+#include <optional>
+#include <string>
 #include <utility>
 
-#include "base/command_line.h"
+#include "base/apple/osstatus_logging.h"
+#include "base/apple/scoped_cftyperef.h"
+#include "base/strings/sys_string_conversions.h"
+#include "components/os_crypt/common/growser_keychain_migration.h"
 
 namespace {
 
@@ -15,6 +22,102 @@ KeychainPassword::KeychainNameType& GetBraveServiceName();
 KeychainPassword::KeychainNameType& GetBraveAccountName();
 
 }  // namespace
+
+namespace growser::os_crypt {
+
+namespace {
+
+// Raw Sec query helpers. KeychainV2 (used by the included base file) does not
+// expose "add this exact value", which is what migrating the pre-rebrand key
+// needs, so these go straight to the SecItem API.
+
+CFMutableDictionaryRef BaseItemQuery(const std::string& service,
+                                     const std::string& account) {
+  CFMutableDictionaryRef query = CFDictionaryCreateMutable(
+      kCFAllocatorDefault, 0, &kCFTypeDictionaryKeyCallBacks,
+      &kCFTypeDictionaryValueCallBacks);
+  CFDictionaryAddValue(query, kSecClass, kSecClassGenericPassword);
+  base::apple::ScopedCFTypeRef<CFStringRef> service_ref(
+      base::SysCFStringRef(service));
+  base::apple::ScopedCFTypeRef<CFStringRef> account_ref(
+      base::SysCFStringRef(account));
+  CFDictionaryAddValue(query, kSecAttrService, service_ref.get());
+  CFDictionaryAddValue(query, kSecAttrAccount, account_ref.get());
+  return query;
+}
+
+}  // namespace
+
+bool HasKeychainItem(const std::string& service, const std::string& account) {
+  base::apple::ScopedCFTypeRef<CFMutableDictionaryRef> query(
+      BaseItemQuery(service, account));
+  CFDictionaryAddValue(query, kSecMatchLimit, kSecMatchLimitOne);
+  base::apple::ScopedCFTypeRef<CFTypeRef> result;
+  OSStatus status = SecItemCopyMatching(query, result.InitializeInto());
+  return status == errSecSuccess;
+}
+
+std::optional<std::string> FindKeychainItemValue(
+    const std::string& service, const std::string& account) {
+  base::apple::ScopedCFTypeRef<CFMutableDictionaryRef> query(
+      BaseItemQuery(service, account));
+  CFDictionaryAddValue(query, kSecReturnData, kCFBooleanTrue);
+  CFDictionaryAddValue(query, kSecMatchLimit, kSecMatchLimitOne);
+  base::apple::ScopedCFTypeRef<CFDataRef> data;
+  OSStatus status = SecItemCopyMatching(query, data.InitializeInto());
+  if (status != errSecSuccess) {
+    return std::nullopt;
+  }
+  return std::string(reinterpret_cast<const char*>(CFDataGetBytePtr(data)),
+                      CFDataGetLength(data));
+}
+
+bool AddKeychainItemWithValue(const std::string& service,
+                              const std::string& account,
+                              const std::string& value) {
+  base::apple::ScopedCFTypeRef<CFMutableDictionaryRef> item(
+      BaseItemQuery(service, account));
+  base::apple::ScopedCFTypeRef<CFDataRef> value_ref(CFDataCreate(
+      kCFAllocatorDefault,
+      reinterpret_cast<const UInt8*>(value.data()), value.size()));
+  CFDictionaryAddValue(item, kSecValueData, value_ref.get());
+  OSStatus status = SecItemAdd(item, nullptr);
+  if (status != errSecSuccess) {
+    OSSTATUS_LOG(ERROR, status) << "growser keychain migration add failed";
+  }
+  return status == errSecSuccess;
+}
+
+bool MigrateKeychainItemForTest(const std::string& legacy_service,
+                                const std::string& legacy_account,
+                                const std::string& service,
+                                const std::string& account) {
+  if (HasKeychainItem(service, account)) {
+    return false;
+  }
+  auto legacy = FindKeychainItemValue(legacy_service, legacy_account);
+  if (!legacy) {
+    return false;
+  }
+  return AddKeychainItemWithValue(service, account, *legacy);
+}
+
+void MigrateLegacyBraveKeychainItem() {
+  // C++11 magic statics: exactly once per process, lazily, thread-safe.
+  static const bool migrated = [] {
+    // The pre-rebrand item names. The migration read of the legacy item is
+    // the ONE macOS access prompt a user may see (the item was created under
+    // a Brave code signature); after it no Brave identity remains anywhere
+    // in the keychain. Every failure simply leaves the base behavior in
+    // place: it mints a fresh random key under the Growser name.
+    MigrateKeychainItemForTest("Brave Safe Storage", "Brave",
+                               "Growser Safe Storage", "Growser");
+    return true;
+  }();
+  (void)migrated;
+}
+
+}  // namespace growser::os_crypt
 
 #define BRAVE_GET_SERVICE_NAME return GetBraveServiceName();
 #define BRAVE_GET_ACCOUNT_NAME return GetBraveAccountName();
@@ -52,9 +155,15 @@ KeychainPassword::KeychainNameType& GetBraveServiceName() {
     static KeychainNameContainerType kOperaServiceName("Opera Safe Storage");
     return *kOperaServiceName;
   } else {
-    static KeychainNameContainerType kBraveDefaultServiceName(
-        "Brave Safe Storage");
-    return *kBraveDefaultServiceName;
+    // growser: our own keychain item, created by our code signature, so the
+    // first access never has to ask the user to let a Brave-signed item go.
+    // The pre-rebrand item migrates into this name once (see
+    // MigrateLegacyBraveKeychainItem), keeping every value encrypted with
+    // the old key readable.
+    growser::os_crypt::MigrateLegacyBraveKeychainItem();
+    static KeychainNameContainerType kGrowserDefaultServiceName(
+        "Growser Safe Storage");
+    return *kGrowserDefaultServiceName;
   }
 }
 
@@ -83,8 +192,8 @@ KeychainPassword::KeychainNameType& GetBraveAccountName() {
     static KeychainNameContainerType kOperaAccountName("Opera");
     return *kOperaAccountName;
   } else {
-    static KeychainNameContainerType kBraveDefaultAccountName("Brave");
-    return *kBraveDefaultAccountName;
+    static KeychainNameContainerType kGrowserDefaultAccountName("Growser");
+    return *kGrowserDefaultAccountName;
   }
 }
 

@@ -136,4 +136,12 @@ source_set("unit_tests") {
       "//brave/browser",
     ]
   }
+
+  if (is_mac) {
+    # The keychain migration test exercises the pre-rebrand item copy
+    # (growser#128 session: brave-safe-storage -> growser-safe-storage).
+    sources += [ "growser_keychain_migration_unittest.mm" ]
+
+    deps += [ "//components/os_crypt/common:keychain_password_mac" ]
+  }
 }
