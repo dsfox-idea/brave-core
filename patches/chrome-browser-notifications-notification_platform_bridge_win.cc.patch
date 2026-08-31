@@ -1,0 +1,71 @@
+diff --git a/chrome/browser/notifications/notification_platform_bridge_win.cc b/chrome/browser/notifications/notification_platform_bridge_win.cc
+index e7e4b67adcfe8187b253e4ea1e0c80274f47bf76..d96c885081798218fa15035f9b57d3a658cacdb2 100644
+--- a/chrome/browser/notifications/notification_platform_bridge_win.cc
++++ b/chrome/browser/notifications/notification_platform_bridge_win.cc
+@@ -6,6 +6,7 @@
+ 
+ #include <objbase.h>
+ 
++#include <appmodel.h>
+ #include <wrl/event.h>
+ 
+ #include <map>
+@@ -92,6 +93,27 @@ namespace {
+ // applying Creators Update (build 15063).
+ constexpr wchar_t kGroup[] = L"Notifications";
+ 
++// growser (#132): the AUMID of the MSIX package this process runs from, or an
++// empty string when the process is not packaged. Windows accepts no other id
++// from inside a package, and a packaged build has none of the registry state
++// that the installer-based path derives its id - and its readiness - from.
++std::wstring GetPackageAppUserModelId() {
++  UINT32 length = 0;
++  if (::GetCurrentApplicationUserModelId(&length, nullptr) !=
++      ERROR_INSUFFICIENT_BUFFER) {
++    // APPMODEL_ERROR_NO_PACKAGE for every non-packaged build.
++    return std::wstring();
++  }
++  std::wstring app_user_model_id(length, L'\0');
++  if (::GetCurrentApplicationUserModelId(&length, app_user_model_id.data()) !=
++      ERROR_SUCCESS) {
++    return std::wstring();
++  }
++  // On success `length` counts the terminating null, which the string owns.
++  app_user_model_id.resize(length ? length - 1 : 0);
++  return app_user_model_id;
++}
++
+ typedef winfoundtn::ITypedEventHandler<
+     winui::Notifications::ToastNotification*,
+     winui::Notifications::ToastDismissedEventArgs*>
+@@ -831,9 +853,15 @@ class NotificationPlatformBridgeWinImpl
+       NotificationPlatformBridge::NotificationBridgeReadyCallback callback) {
+     DCHECK(notification_task_runner_->RunsTasksInCurrentSequence());
+ 
+-    bool activator_registered = IsToastActivatorRegistered();
++    // growser (#132): a packaged (MSIX) build declares its toast activator in
++    // the app manifest and has no Start Menu .lnk at all, so both probes below
++    // are false by construction - the browser then quietly drew notifications
++    // itself, with no Action Center entry, no per-app control in Windows
++    // settings and no do-not-disturb. Package identity stands in for both.
++    const bool packaged = !GetPackageAppUserModelId().empty();
++    bool activator_registered = packaged || IsToastActivatorRegistered();
+     bool shortcut_installed =
+-        InstallUtil::IsStartMenuShortcutWithActivatorGuidInstalled();
++        packaged || InstallUtil::IsStartMenuShortcutWithActivatorGuidInstalled();
+ 
+     int status = static_cast<int>(SetReadyCallbackStatus::kSuccess);
+     bool enabled = activator_registered && shortcut_installed;
+@@ -910,6 +938,12 @@ class NotificationPlatformBridgeWinImpl
+   }
+ 
+   static std::wstring GetBrowserAppId() {
++    // growser (#132): inside a package the only id Windows accepts is the
++    // package's own; ShellUtil's id names an installer-based layout that a
++    // packaged build never writes.
++    std::wstring package_app_id = GetPackageAppUserModelId();
++    if (!package_app_id.empty())
++      return package_app_id;
+     return ShellUtil::GetBrowserModelId(InstallUtil::IsPerUserInstall());
+   }
+ 
