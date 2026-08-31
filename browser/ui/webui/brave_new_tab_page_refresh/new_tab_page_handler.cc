@@ -99,7 +99,11 @@ NewTabPageHandler::NewTabPageHandler(
       &NewTabPageHandler::OnSponsoredSitesUpdate, weak_factory_.GetWeakPtr()));
 }
 
-NewTabPageHandler::~NewTabPageHandler() = default;
+NewTabPageHandler::~NewTabPageHandler() {
+  if (!pending_search_engines_callbacks_.empty()) {
+    template_url_service_->RemoveObserver(this);
+  }
+}
 
 void NewTabPageHandler::SetNewTabPage(
     mojo::PendingRemote<mojom::NewTabPage> page) {
@@ -309,8 +313,8 @@ void NewTabPageHandler::SetLastUsedSearchEngine(
   std::move(callback).Run();
 }
 
-void NewTabPageHandler::GetAvailableSearchEngines(
-    GetAvailableSearchEnginesCallback callback) {
+std::vector<mojom::SearchEngineInfoPtr>
+NewTabPageHandler::BuildSearchEnginesList() {
   std::vector<mojom::SearchEngineInfoPtr> search_engines;
   for (auto template_url : template_url_service_->GetTemplateURLs()) {
     if (template_url->GetBuiltinEngineType() !=
@@ -330,7 +334,46 @@ void NewTabPageHandler::GetAvailableSearchEngines(
     search_engine->favicon_url = template_url->favicon_url().spec();
     search_engines.push_back(std::move(search_engine));
   }
-  std::move(callback).Run(std::move(search_engines));
+  return search_engines;
+}
+
+void NewTabPageHandler::GetAvailableSearchEngines(
+    GetAvailableSearchEnginesCallback callback) {
+  // growser: on a fresh profile the first NTP can ask while the service is
+  // still loading, and iterating a not-yet-loaded service answered an empty
+  // list - the page showed no default engine and a generic placeholder
+  // until the next tab. Wait for the load and answer from the real list.
+  if (!template_url_service_->loaded()) {
+    template_url_service_->Load();
+    if (pending_search_engines_callbacks_.empty()) {
+      template_url_service_->AddObserver(this);
+    }
+    pending_search_engines_callbacks_.push_back(std::move(callback));
+    return;
+  }
+  std::move(callback).Run(BuildSearchEnginesList());
+}
+
+void NewTabPageHandler::OnTemplateURLServiceChanged() {
+  if (!template_url_service_->loaded()) {
+    return;
+  }
+  auto callbacks = std::move(pending_search_engines_callbacks_);
+  pending_search_engines_callbacks_.clear();
+  if (callbacks.empty()) {
+    return;
+  }
+  template_url_service_->RemoveObserver(this);
+  auto engines = BuildSearchEnginesList();
+  for (auto& callback : callbacks) {
+    // The list is shared; the renderer consumes it for the picker.
+    std::vector<mojom::SearchEngineInfoPtr> engines_copy;
+    engines_copy.reserve(engines.size());
+    for (const auto& engine : engines) {
+      engines_copy.push_back(engine.Clone());
+    }
+    std::move(callback).Run(std::move(engines_copy));
+  }
 }
 
 void NewTabPageHandler::OpenSearch(const std::string& query,

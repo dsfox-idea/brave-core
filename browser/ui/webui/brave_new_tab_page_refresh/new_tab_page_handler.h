@@ -18,6 +18,7 @@
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page.mojom.h"
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/update_observer.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
+#include "components/search_engines/template_url_service.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "mojo/public/cpp/bindings/receiver.h"
@@ -54,7 +55,8 @@ class VPNFacade;
 // Handler for messages from the NTP front end application. Interface method
 // implementations should be fairly trivial. Any non-trivial operations should
 // be delegated to a helper class.
-class NewTabPageHandler : public mojom::NewTabPageHandler {
+class NewTabPageHandler : public mojom::NewTabPageHandler,
+                          public TemplateURLService::Observer {
  public:
   NewTabPageHandler(
       mojo::PendingReceiver<mojom::NewTabPageHandler> receiver,
@@ -71,6 +73,11 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
       bool was_restored);
 
   ~NewTabPageHandler() override;
+
+  // TemplateURLService::Observer:
+  // growser: the first NTP of a fresh profile can ask for the engines before
+  // the service has loaded; the pending callbacks are answered here.
+  void OnTemplateURLServiceChanged() override;
 
   // mojom::NewTabPageHandler:
   void SetNewTabPage(mojo::PendingRemote<mojom::NewTabPage> page) override;
@@ -227,6 +234,10 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   void OnSponsoredSitesUpdate();
   void OpenGURL(const GURL& gurl, WindowOpenDisposition disposition);
 
+  // Builds the engine list from the (loaded) TemplateURLService; shared by
+  // the direct answer and the delayed one for a not-yet-loaded service.
+  std::vector<mojom::SearchEngineInfoPtr> BuildSearchEnginesList();
+
   mojo::Receiver<mojom::NewTabPageHandler> receiver_;
   mojo::Remote<mojom::NewTabPage> page_;
   UpdateObserver update_observer_;
@@ -238,6 +249,10 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   raw_ref<content::WebContents> web_contents_;
   raw_ref<PrefService> pref_service_;
   raw_ref<TemplateURLService> template_url_service_;
+  // growser: engine-list answers parked while the service loads (fresh
+  // profile, first NTP). Non-empty also marks the observer as added.
+  std::vector<GetAvailableSearchEnginesCallback>
+      pending_search_engines_callbacks_;
   raw_ref<misc_metrics::NewTabMetrics> new_tab_metrics_;
   raw_ptr<misc_metrics::BraveSearchMetrics> brave_search_metrics_ = nullptr;
   raw_ptr<misc_metrics::NavigationSourceMetrics> navigation_source_metrics_ =
