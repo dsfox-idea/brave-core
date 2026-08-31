@@ -6,12 +6,16 @@
 import { color } from '@brave/leo/tokens/css/variables'
 import { scoped } from '$web-common/scoped_css'
 
-// growser: the NTP cookie-encryption opt-in promo. A single, dismissible card
-// shown above the widget stacks while cookie encryption is off and the user has
-// not dismissed it. Scoped so it does not leak into the rest of the NTP.
+// growser: the NTP cookie-encryption opt-in promo. A single, dismissible
+// offer card in the bottom-right corner (#118's offer surface), blurred,
+// never blocking the search box or the tile board while cookie encryption
+// is off and the user has not dismissed it. Scoped so it does not leak into
+// the rest of the NTP.
 export const style = scoped.css`
   & {
-    position: relative;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
     display: flex;
     gap: 12px;
     align-items: flex-start;
@@ -20,8 +24,8 @@ export const style = scoped.css`
     background: ${color.material.thin};
     backdrop-filter: blur(50px);
     color: ${color.text.primary};
-    max-width: 560px;
-    margin: 0 auto;
+    max-width: 420px;
+    z-index: 2;
   }
 
   .title {
