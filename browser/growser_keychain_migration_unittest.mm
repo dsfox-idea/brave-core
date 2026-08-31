@@ -30,9 +30,9 @@ OSStatus DeleteItem(const std::string& service, const std::string& account) {
       &kCFTypeDictionaryValueCallBacks);
   CFDictionaryAddValue(query, kSecClass, kSecClassGenericPassword);
   base::apple::ScopedCFTypeRef<CFStringRef> service_ref(
-      base::SysCFStringRef(service));
+      base::SysUTF8ToCFStringRef(service));
   base::apple::ScopedCFTypeRef<CFStringRef> account_ref(
-      base::SysCFStringRef(account));
+      base::SysUTF8ToCFStringRef(account));
   CFDictionaryAddValue(query, kSecAttrService, service_ref.get());
   CFDictionaryAddValue(query, kSecAttrAccount, account_ref.get());
   OSStatus status = SecItemDelete(query);

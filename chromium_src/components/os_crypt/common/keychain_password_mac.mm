@@ -11,8 +11,10 @@
 #include <string>
 #include <utility>
 
+#include "base/apple/foundation_util.h"
 #include "base/apple/osstatus_logging.h"
 #include "base/apple/scoped_cftyperef.h"
+#include "base/command_line.h"
 #include "base/strings/sys_string_conversions.h"
 #include "components/os_crypt/common/growser_keychain_migration.h"
 
@@ -38,9 +40,9 @@ CFMutableDictionaryRef BaseItemQuery(const std::string& service,
       &kCFTypeDictionaryValueCallBacks);
   CFDictionaryAddValue(query, kSecClass, kSecClassGenericPassword);
   base::apple::ScopedCFTypeRef<CFStringRef> service_ref(
-      base::SysCFStringRef(service));
+      base::SysUTF8ToCFStringRef(service));
   base::apple::ScopedCFTypeRef<CFStringRef> account_ref(
-      base::SysCFStringRef(account));
+      base::SysUTF8ToCFStringRef(account));
   CFDictionaryAddValue(query, kSecAttrService, service_ref.get());
   CFDictionaryAddValue(query, kSecAttrAccount, account_ref.get());
   return query;
@@ -51,9 +53,9 @@ CFMutableDictionaryRef BaseItemQuery(const std::string& service,
 bool HasKeychainItem(const std::string& service, const std::string& account) {
   base::apple::ScopedCFTypeRef<CFMutableDictionaryRef> query(
       BaseItemQuery(service, account));
-  CFDictionaryAddValue(query, kSecMatchLimit, kSecMatchLimitOne);
+  CFDictionaryAddValue(query.get(), kSecMatchLimit, kSecMatchLimitOne);
   base::apple::ScopedCFTypeRef<CFTypeRef> result;
-  OSStatus status = SecItemCopyMatching(query, result.InitializeInto());
+  OSStatus status = SecItemCopyMatching(query.get(), result.InitializeInto());
   return status == errSecSuccess;
 }
 
@@ -61,15 +63,23 @@ std::optional<std::string> FindKeychainItemValue(
     const std::string& service, const std::string& account) {
   base::apple::ScopedCFTypeRef<CFMutableDictionaryRef> query(
       BaseItemQuery(service, account));
-  CFDictionaryAddValue(query, kSecReturnData, kCFBooleanTrue);
-  CFDictionaryAddValue(query, kSecMatchLimit, kSecMatchLimitOne);
-  base::apple::ScopedCFTypeRef<CFDataRef> data;
-  OSStatus status = SecItemCopyMatching(query, data.InitializeInto());
+  CFDictionaryAddValue(query.get(), kSecReturnData, kCFBooleanTrue);
+  CFDictionaryAddValue(query.get(), kSecMatchLimit, kSecMatchLimitOne);
+  // SecItemCopyMatching hands the value back as a CFTypeRef; the idiom
+  // (crypto/apple/keychain_v2.mm) is to receive it that way and cast.
+  base::apple::ScopedCFTypeRef<CFTypeRef> result;
+  OSStatus status = SecItemCopyMatching(query.get(), result.InitializeInto());
   if (status != errSecSuccess) {
     return std::nullopt;
   }
-  return std::string(reinterpret_cast<const char*>(CFDataGetBytePtr(data)),
-                      CFDataGetLength(data));
+  base::apple::ScopedCFTypeRef<CFDataRef> data(
+      base::apple::CFCast<CFDataRef>(result.get()));
+  if (!data) {
+    return std::nullopt;
+  }
+  return std::string(
+      reinterpret_cast<const char*>(CFDataGetBytePtr(data.get())),
+      CFDataGetLength(data.get()));
 }
 
 bool AddKeychainItemWithValue(const std::string& service,
@@ -80,8 +90,8 @@ bool AddKeychainItemWithValue(const std::string& service,
   base::apple::ScopedCFTypeRef<CFDataRef> value_ref(CFDataCreate(
       kCFAllocatorDefault,
       reinterpret_cast<const UInt8*>(value.data()), value.size()));
-  CFDictionaryAddValue(item, kSecValueData, value_ref.get());
-  OSStatus status = SecItemAdd(item, nullptr);
+  CFDictionaryAddValue(item.get(), kSecValueData, value_ref.get());
+  OSStatus status = SecItemAdd(item.get(), nullptr);
   if (status != errSecSuccess) {
     OSSTATUS_LOG(ERROR, status) << "growser keychain migration add failed";
   }
