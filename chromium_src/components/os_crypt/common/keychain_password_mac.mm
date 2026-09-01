@@ -65,21 +65,22 @@ std::optional<std::string> FindKeychainItemValue(
       BaseItemQuery(service, account));
   CFDictionaryAddValue(query.get(), kSecReturnData, kCFBooleanTrue);
   CFDictionaryAddValue(query.get(), kSecMatchLimit, kSecMatchLimitOne);
-  // SecItemCopyMatching hands the value back as a CFTypeRef; the idiom
-  // (crypto/apple/keychain_v2.mm) is to receive it that way and cast.
+  // SecItemCopyMatching hands the value back as a CFTypeRef. CFCast is a
+  // NON-retaining cast (base/apple/foundation_util.h): `result` stays the
+  // owner, and wrapping the cast pointer in a ScopedCFTypeRef would
+  // double-release it - the crash the first built binary took at startup.
   base::apple::ScopedCFTypeRef<CFTypeRef> result;
   OSStatus status = SecItemCopyMatching(query.get(), result.InitializeInto());
   if (status != errSecSuccess) {
     return std::nullopt;
   }
-  base::apple::ScopedCFTypeRef<CFDataRef> data(
-      base::apple::CFCast<CFDataRef>(result.get()));
+  CFDataRef data = base::apple::CFCast<CFDataRef>(result.get());
   if (!data) {
     return std::nullopt;
   }
   return std::string(
-      reinterpret_cast<const char*>(CFDataGetBytePtr(data.get())),
-      CFDataGetLength(data.get()));
+      reinterpret_cast<const char*>(CFDataGetBytePtr(data)),
+      CFDataGetLength(data));
 }
 
 bool AddKeychainItemWithValue(const std::string& service,
