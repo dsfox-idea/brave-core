@@ -19,7 +19,8 @@
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
 #include "brave/browser/ui/views/sidebar/sidebar_button_view.h"
-#include "brave/browser/ui/views/sidebar/sidebar_item_view.h"
+#include "brave/browser/ui/views/sidebar/sidebar_pinned_tab_view.h"
+#include "brave/browser/ui/views/tabs/brave_tab_strip.h"
 #include "brave/components/sidebar/browser/pref_names.h"
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "chrome/browser/profiles/profile.h"
@@ -199,7 +200,7 @@ bool SidebarPinnedTabsView::IsWindowClosing() const {
 }
 
 void SidebarPinnedTabsView::RebuildEntries() {
-  for (SidebarItemView* entry : entries_) {
+  for (SidebarPinnedTabView* entry : entries_) {
     RemoveChildViewT(entry);
   }
   entries_.clear();
@@ -211,7 +212,7 @@ void SidebarPinnedTabsView::RebuildEntries() {
           ? browser_->tab_strip_model()->IndexOfFirstNonPinnedTab()
           : 0;
   for (int i = 0; i < pinned_count; ++i) {
-    auto* entry = AddChildView(std::make_unique<SidebarItemView>(u""));
+    auto* entry = AddChildView(std::make_unique<SidebarPinnedTabView>(u""));
     entry->set_context_menu_controller(this);
     entry->SetCallback(
         base::BindRepeating(&SidebarPinnedTabsView::OnEntryPressed,
@@ -233,7 +234,7 @@ void SidebarPinnedTabsView::UpdateEntry(size_t entry_index) {
     return;
   }
 
-  SidebarItemView* entry = entries_[entry_index];
+  SidebarPinnedTabView* entry = entries_[entry_index];
 
   std::u16string title = contents->GetTitle();
   if (title.empty()) {
@@ -257,6 +258,17 @@ void SidebarPinnedTabsView::UpdateEntry(size_t entry_index) {
   }
 
   entry->SetActiveState(model->active_index() == index);
+
+  // Whatever the tab strip would draw for this tab, drawn here too. Asked of
+  // the strip rather than worked out again, so the two cannot disagree.
+  auto* tab_strip = GetBraveTabStrip();
+  Tab* tab = GetTabForEntry(entry_index);
+  if (tab_strip && tab && tab_strip->ShouldPaintTabAccent(tab)) {
+    entry->SetContainerAccent(tab_strip->GetTabAccentColors(tab),
+                              tab_strip->GetTabAccentIcon(tab));
+  } else {
+    entry->SetContainerAccent(std::nullopt, ui::ImageModel());
+  }
 }
 
 void SidebarPinnedTabsView::OnEntryPressed(size_t entry_index) {
@@ -271,8 +283,23 @@ void SidebarPinnedTabsView::OnEntryPressed(size_t entry_index) {
                            TabStripUserGestureDetails::GestureType::kOther));
 }
 
+SidebarPinnedTabView* SidebarPinnedTabsView::GetEntryForTesting(
+    size_t entry_index) {
+  return entry_index < entries_.size() ? entries_[entry_index].get() : nullptr;
+}
+
 Tab* SidebarPinnedTabsView::GetTabForEntryForTesting(size_t entry_index) {
   return GetTabForEntry(entry_index);
+}
+
+BraveTabStrip* SidebarPinnedTabsView::GetBraveTabStrip() const {
+  auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser_);
+  if (!browser_view) {
+    return nullptr;
+  }
+
+  return views::AsViewClass<BraveTabStrip>(
+      browser_view->GetViewByID(VIEW_ID_TAB_STRIP));
 }
 
 Tab* SidebarPinnedTabsView::GetTabForEntry(size_t entry_index) const {
@@ -282,13 +309,7 @@ Tab* SidebarPinnedTabsView::GetTabForEntry(size_t entry_index) const {
     return nullptr;
   }
 
-  auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser_);
-  if (!browser_view) {
-    return nullptr;
-  }
-
-  auto* tab_strip = views::AsViewClass<TabStrip>(
-      browser_view->GetViewByID(VIEW_ID_TAB_STRIP));
+  auto* tab_strip = GetBraveTabStrip();
   if (!tab_strip) {
     return nullptr;
   }
@@ -318,10 +339,7 @@ void SidebarPinnedTabsView::ShowContextMenuForViewImpl(
   // the tab has in the strip" is the requirement, and this is that menu - the
   // model, the Brave items and the delegate that knows what Brave's own
   // commands mean (BraveBrowserTabStripController) all come with it.
-  auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser_);
-  auto* tab_strip = views::AsViewClass<TabStrip>(
-      browser_view->GetViewByID(VIEW_ID_TAB_STRIP));
-  tab_strip->ShowContextMenuForTab(tab, point, source_type);
+  GetBraveTabStrip()->ShowContextMenuForTab(tab, point, source_type);
 }
 
 void SidebarPinnedTabsView::OnSettingChanged() {

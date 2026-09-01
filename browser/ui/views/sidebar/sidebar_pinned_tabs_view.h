@@ -17,7 +17,8 @@
 #include "ui/views/view.h"
 
 class BraveBrowser;
-class SidebarItemView;
+class BraveTabStrip;
+class SidebarPinnedTabView;
 class Tab;
 
 namespace views {
@@ -54,6 +55,7 @@ class SidebarPinnedTabsView : public views::View,
   // The tab whose context menu an entry's right click opens; null when the
   // entry does not correspond to a pinned tab any more.
   Tab* GetTabForEntryForTesting(size_t entry_index);  // IN-TEST
+  SidebarPinnedTabView* GetEntryForTesting(size_t entry_index);  // IN-TEST
 
   // views::View:
   void Layout(PassKey) override;
@@ -81,6 +83,7 @@ class SidebarPinnedTabsView : public views::View,
  private:
   // The Tab the entry mirrors, looked up in the tab strip.
   Tab* GetTabForEntry(size_t entry_index) const;
+  BraveTabStrip* GetBraveTabStrip() const;
 
   // False when the feature is off, the tab strip is vertical, or the sidebar is
   // not permanently visible. In the last case hosting would hide pinned tabs
@@ -102,7 +105,7 @@ class SidebarPinnedTabsView : public views::View,
 
   raw_ptr<BraveBrowser> browser_ = nullptr;
   raw_ptr<views::Separator> separator_ = nullptr;
-  std::vector<raw_ptr<SidebarItemView>> entries_;
+  std::vector<raw_ptr<SidebarPinnedTabView>> entries_;
   int hosted_count_ = 0;
 
   BooleanPrefMember show_pinned_tabs_;

@@ -16,6 +16,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "base/test/bind.h"
 #include "base/test/run_until.h"
+#include "base/files/file_util.h"
 #include "base/test/scoped_feature_list.h"
 #include "brave/app/brave_command_ids.h"
 #include "brave/browser/ui/browser_commands.h"
@@ -43,6 +44,11 @@
 #include "brave/browser/ui/views/sidebar/sidebar_items_contents_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_scroll_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_pinned_tabs_view.h"
+#include "brave/browser/ui/views/sidebar/sidebar_pinned_tab_view.h"
+#include "brave/browser/ui/views/tabs/brave_tab_strip.h"
+#include "brave/components/containers/core/browser/containers_test_utils.h"
+#include "brave/components/containers/core/common/features.h"
+#include "brave/components/containers/core/mojom/containers.mojom.h"
 #include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
 #include "brave/browser/ui/views/toolbar/side_panel_button.h"
 #include "brave/common/pref_names.h"
@@ -64,6 +70,7 @@
 #include "chrome/browser/ui/browser_command_controller.h"
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
+#include "brave/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/layout_constants.h"
@@ -105,6 +112,9 @@
 #include "ui/views/test/views_test_utils.h"
 #include "ui/views/view_utils.h"
 #include "ui/views/controls/menu/menu_controller.h"
+#include "ui/gfx/codec/png_codec.h"
+#include "ui/views/paint_info.h"
+#include "ui/compositor/canvas_painter.h"
 #include "ui/views/widget/widget_utils.h"
 #include "url/url_constants.h"
 
@@ -2665,6 +2675,158 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, UnpinFromTheEntrysMenu) {
   EXPECT_EQ(kPinnedTabCount - 1, tab_model()->IndexOfFirstNonPinnedTab());
   EXPECT_EQ(kPinnedTabCount - 1, HostedBySidebar());
   EXPECT_EQ(0, DrawnByTabStrip());
+}
+
+
+// Growser-148
+// Containers are behind a feature, and the accent is gated on it - so this
+// lives in its own fixture rather than turning the feature on for every test
+// above.
+class SidebarPinnedTabsContainerBrowserTest
+    : public SidebarPinnedTabsBrowserTest {
+ public:
+  SidebarPinnedTabsContainerBrowserTest() {
+    feature_list_.InitAndEnableFeature(containers::features::kContainers);
+  }
+
+ private:
+  base::test::ScopedFeatureList feature_list_;
+};
+
+// A pinned tab in a container wears the container's accent in the sidebar, and
+// wears the tab strip's answer rather than one worked out again here: the test
+// compares against what BraveTabStrip gives for the same tab, so the two
+// surfaces cannot drift apart without this failing.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsContainerBrowserTest,
+                       EntryWearsContainerAccent) {
+  containers::SetContainersEnabled(true, browser()->GetProfile()->GetPrefs());
+
+  auto container = containers::mojom::Container::New();
+  container->id = "growser-148-test";
+  container->name = "Test";
+  container->icon = containers::mojom::Icon::kWork;
+  container->background_color = SK_ColorBLUE;
+  // A real URL, not about:blank: the container is carried by the storage
+  // partition the tab is created with, and about:blank does not get one.
+  ASSERT_TRUE(embedded_test_server()->Start());
+  brave::OpenUrlInContainer(browser(),
+                            embedded_test_server()->GetURL("/title1.html"),
+                            container);
+
+  content::WebContents* contents = tab_model()->GetActiveWebContents();
+  ASSERT_TRUE(contents);
+  tab_model()->SetTabPinned(tab_model()->GetIndexOfWebContents(contents), true);
+  const int index = tab_model()->GetIndexOfWebContents(contents);
+  ASSERT_LT(index, tab_model()->IndexOfFirstNonPinnedTab());
+
+  // Capture what the strip draws for this tab BEFORE the sidebar takes it
+  // over: a hosted tab is hidden, and a hidden view paints nothing, so a
+  // capture taken afterwards would be blank and prove nothing.
+  {
+    auto* strip_before = views::AsViewClass<BraveTabStrip>(
+        browser_view()->horizontal_tab_strip_for_testing());
+    Tab* tab_before = strip_before->tab_at(index);
+    if (const char* dir = getenv("GROWSER_TEST_PNG_DIR")) {
+      SkBitmap tab_bitmap;
+      const gfx::Size tab_size(tab_before->bounds().right(), tab_before->bounds().bottom());
+      {
+        ui::CanvasPainter tab_painter(&tab_bitmap, tab_size, 1.f,
+                                      SK_ColorTRANSPARENT, false);
+        tab_before->Paint(views::PaintInfo::CreateRootPaintInfo(tab_painter.context(),
+                                                         tab_size));
+      }
+      std::optional<std::vector<uint8_t>> tab_png =
+          gfx::PNGCodec::EncodeBGRASkBitmap(tab_bitmap, false);
+      if (tab_png) {
+        base::WriteFile(base::FilePath::FromUTF8Unsafe(dir).AppendASCII(
+                            "tabstrip-pinned-tab.png"),
+                        *tab_png);
+      }
+    }
+
+  }
+
+  SetShowPinnedTabs(true);
+  ASSERT_GT(HostedBySidebar(), index);
+
+  auto* tab_strip = views::AsViewClass<BraveTabStrip>(
+      browser_view()->horizontal_tab_strip_for_testing());
+  Tab* tab = tab_strip->tab_at(index);
+  ASSERT_TRUE(tab_strip->ShouldPaintTabAccent(tab))
+      << "the tab strip does not think this tab is in a container";
+
+  auto* entry = GetSidebarPinnedTabsView()->GetEntryForTesting(index);
+  ASSERT_TRUE(entry);
+  ASSERT_TRUE(entry->accent_colors().has_value());
+
+  const auto expected = tab_strip->GetTabAccentColors(tab);
+  ASSERT_TRUE(expected.has_value());
+  EXPECT_EQ(expected->border_color, entry->accent_colors()->border_color);
+  EXPECT_EQ(expected->background_color,
+            entry->accent_colors()->background_color);
+  EXPECT_EQ(expected->icon_border_color,
+            entry->accent_colors()->icon_border_color);
+  EXPECT_TRUE(entry->has_accent_icon());
+
+  // Painted, not just stored: the ring has to reach the pixels. The entry is
+  // rendered into a bitmap and the border colour looked for around its edge -
+  // and the image is written out so it can be looked at as well as counted.
+  {
+    // View::Paint places a view at its own bounds inside the canvas, so the
+    // canvas has to be big enough to contain that offset - painting the block
+    // into a canvas the size of one entry drops everything off the edge and
+    // reads back as "nothing was painted".
+    views::View* block = GetSidebarPinnedTabsView();
+    SkBitmap bitmap;
+    const gfx::Size size(block->bounds().right(), block->bounds().bottom());
+    {
+      // CanvasPainter rasterises into the bitmap in its destructor, so the
+      // bitmap is empty until the painter is gone - reading it inside this
+      // scope reports "nothing was painted" for a view that painted fine.
+      ui::CanvasPainter painter(&bitmap, size, 1.f, SK_ColorTRANSPARENT, false);
+      block->Paint(
+          views::PaintInfo::CreateRootPaintInfo(painter.context(), size));
+    }
+
+    // The stroke is anti-aliased, so its exact colour may never land on a
+    // pixel; the filled disc under it does, and that is the accent too.
+    int accent_pixels = 0;
+    int painted_pixels = 0;
+    for (int x = 0; x < size.width(); x++) {
+      for (int y = 0; y < size.height(); y++) {
+        const SkColor color = bitmap.getColor(x, y);
+        if (SkColorGetA(color) != SK_AlphaTRANSPARENT) {
+          painted_pixels++;
+        }
+        if (color == expected->background_color ||
+            color == expected->border_color) {
+          accent_pixels++;
+        }
+      }
+    }
+
+    if (const char* dir = getenv("GROWSER_TEST_PNG_DIR")) {
+      std::optional<std::vector<uint8_t>> png =
+          gfx::PNGCodec::EncodeBGRASkBitmap(bitmap, false);
+      LOG(ERROR) << "entry " << size.ToString() << " painted=" << painted_pixels
+                 << " accent=" << accent_pixels << " png=" << png.has_value();
+      if (png) {
+        base::WriteFile(base::FilePath::FromUTF8Unsafe(dir).AppendASCII(
+                            "sidebar-entry-accent.png"),
+                        *png);
+      }
+    }
+
+    EXPECT_GT(accent_pixels, 0)
+        << "the accent never reached the pixels; " << painted_pixels
+        << " pixels were painted at all, in a " << size.ToString() << " block";
+  }
+
+  // A tab in no container is drawn plain - the entries the fixture pinned.
+  auto* plain = GetSidebarPinnedTabsView()->GetEntryForTesting(0);
+  ASSERT_TRUE(plain);
+  EXPECT_FALSE(plain->accent_colors().has_value());
+  EXPECT_FALSE(plain->has_accent_icon());
 }
 
 }  // namespace sidebar
