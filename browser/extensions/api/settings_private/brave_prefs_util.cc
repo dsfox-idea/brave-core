@@ -194,6 +194,8 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
 #if defined(TOOLKIT_VIEWS)
   (*s_brave_allowlist)[sidebar::kSidebarShowOption] =
       settings_api::PrefType::kNumber;
+  (*s_brave_allowlist)[sidebar::kSidebarShowPinnedTabs] =
+      settings_api::PrefType::kBoolean;
 #endif
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   (*s_brave_allowlist)[speedreader::kSpeedreaderEnabled] =
