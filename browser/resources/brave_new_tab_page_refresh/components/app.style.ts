@@ -81,13 +81,25 @@ export const style = scoped.css`
    * 56px, where it reads as a label on the wallpaper; centred and larger it
    * becomes the thing the page is for when nothing else is on it. */
   .clock {
-    /* In the flow rather than absolutely positioned: the photo caption stops
-     * being absolute on a narrow window and returns to the column, and an
-     * absolute clock lands on top of it. As a flow item the clock is centred at
-     * any width and nothing overlaps anything. */
+    /* growser (#136): pinned 100px below the SEARCH ROW and nailed there -
+     * a resize, a narrower window, a taller or shorter search box must not
+     * change that distance. Hence CSS anchor positioning rather than the flow
+     * it used to sit in: the anchor is the search row itself, so the clock
+     * follows it instead of following whatever else the column contains.
+     * (The caption below uses the same mechanism against the widget
+     * container.) Centred by spanning the anchor's inline extent and letting
+     * the margins do the work: the anchor-center keyword is newer than the
+     * Chromium this builds against. Note there are no backticks in this
+     * comment - the whole stylesheet is a template literal, and one would end
+     * it. */
+    position: absolute;
+    position-anchor: --ntp-search-row;
+    inset-block-start: calc(anchor(end) + 100px);
+    inset-inline-start: anchor(start);
+    inset-inline-end: anchor(end);
+    margin-inline: auto;
+
     z-index: 2;
-    align-self: center;
-    margin: 0 0 24px;
     width: fit-content;
 
     padding: 8px 16px;
@@ -183,6 +195,9 @@ export const style = scoped.css`
 
   .searchbox-container {
     align-self: stretch;
+
+    /* growser (#136): what the clock hangs from. */
+    anchor-name: --ntp-search-row;
 
     .search-box-expanded & {
       opacity: 1;

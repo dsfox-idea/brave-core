@@ -4,133 +4,65 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import * as React from 'react'
-import Icon from '@brave/leo/react/icon'
 
 import { SearchBox } from './search/search_box'
 import { Background } from './background/background'
-import { BackgroundClickRegion } from './background/background_click_region'
-import { BackgroundCaption } from './background/background_caption'
-import { SettingsModal, SettingsView } from './settings/settings_modal'
 import { TopSites } from './top_sites/top_sites'
 import { Clock } from './common/clock'
-import { LazyNewsFeed } from './news/lazy_news_feed'
-import { WidgetStack } from './widgets/widget_stack'
-import { EncryptionPromoWidget } from './widgets/encryption_promo_widget'
-import { useSearchLayoutReady, useWidgetLayoutReady } from './app_layout_ready'
-import useMediaQuery from '$web-common/useMediaQuery'
+import { useSearchLayoutReady } from './app_layout_ready'
 
-import { style, threeColumnBreakpoint } from './app.style'
+import { style } from './app.style'
 
 // <if expr="enable_ai_chat">
 import { useNewTabState } from '../context/new_tab_context'
 import { LazyQueryBox } from './query_box/lazy_query_box'
 // </if>
 
-const threeColumnQuery = `(width > ${threeColumnBreakpoint})`
-
+// growser (#136): the page is three things - the board, the search row and the
+// clock - and nothing else. Everything customizable went with the settings
+// that reached it: the gear, the clock's own click, the search box's
+// "customize" entry, the widget stacks, the news feed, the encryption promo,
+// the photo caption and the ?openSettings= deep link that let the rest of the
+// browser open this page's settings.
+//
+// What is gone is the WAY IN, not the feature. SettingsModal, the widgets, the
+// news feed and the background service are all still compiled and still work;
+// putting an element back here restores its screen. That keeps the diff small,
+// keeps the conflict surface with upstream low on every Chromium bump, and
+// makes the whole thing revertible.
+//
+// The one surface deliberately left room for is the informational widget the
+// mac side is building (#118) - "important infobars stay" means that one.
 export function App() {
   const searchLayoutReady = useSearchLayoutReady()
-  const widgetLayoutReady = useWidgetLayoutReady()
-
-  const [settingsView, setSettingsView] = React.useState<SettingsView | null>(
-    null,
-  )
-
-  const threeColumnWidth = useMediaQuery(threeColumnQuery)
-
-  React.useEffect(() => {
-    const params = new URLSearchParams(location.search)
-    const settingsArg = params.get('openSettings')
-    if (settingsArg === null) {
-      return
-    }
-    setSettingsView(settingsArg === 'BraveNews' ? 'news' : 'background')
-    history.pushState(null, '', '/')
-  }, [])
 
   return (
     <div data-css-scope={style.scope}>
       <Background />
       <div className='background-filter allow-background-pointer-events' />
       <main className='allow-background-pointer-events'>
-        <button
-          className='settings'
-          onClick={() => setSettingsView('background')}
-        >
-          <Icon name='settings' />
-        </button>
         <div className='topsites-container allow-background-pointer-events'>
           <TopSites />
         </div>
         <div className='searchbox-container allow-background-pointer-events'>
-          {searchLayoutReady && (
-            <Search showSearchSettings={() => setSettingsView('search')} />
-          )}
+          {searchLayoutReady && <Search />}
         </div>
-        <div className='encryption-promo-container allow-background-pointer-events'>
-          <EncryptionPromoWidget />
-        </div>
-        <div
-          className='
-          spacer
-          sponsored-background-safe-area
-          allow-background-pointer-events'
-        >
-          <BackgroundClickRegion />
-        </div>
-        <button
-          className='clock'
-          onClick={() => setSettingsView('clock')}
-        >
+        <div className='clock allow-background-pointer-events'>
           <Clock />
-        </button>
-        <div className='caption-container allow-background-pointer-events'>
-          <BackgroundCaption />
-        </div>
-        <div className='widget-container allow-background-pointer-events'>
-          {widgetLayoutReady && (
-            <>
-              {threeColumnWidth ? (
-                <>
-                  <WidgetStack
-                    name='left'
-                    tabs={['stats']}
-                  />
-                  <WidgetStack
-                    name='center'
-                    tabs={['news']}
-                  />
-                </>
-              ) : (
-                <WidgetStack
-                  name='left'
-                  tabs={['stats', 'news']}
-                />
-              )}
-              {/* growser: the right-hand widget stack (VPN/Rewards/Talk) is
-                  gone from the NTP (#19 onwards) - those are features we remove. */}
-            </>
-          )}
         </div>
       </main>
-      <div className='news-container'>
-        <LazyNewsFeed />
-      </div>
-      <SettingsModal
-        isOpen={settingsView !== null}
-        initialView={settingsView}
-        onClose={() => setSettingsView(null)}
-      />
     </div>
   )
 }
 
-function Search(props: { showSearchSettings: () => void }) {
+function Search() {
   // <if expr="enable_ai_chat">
   const aiChatInputEnabled = useNewTabState((s) => s.aiChatInputEnabled)
   if (aiChatInputEnabled) {
-    return <LazyQueryBox showSearchSettings={props.showSearchSettings} />
+    // AI chat is compiled out of this build, so this branch never renders -
+    // but webpack still type-checks it, and upstream's prop is required.
+    return <LazyQueryBox showSearchSettings={() => {}} />
   }
   // </if>
-  return <SearchBox showSearchSettings={props.showSearchSettings} />
+  return <SearchBox />
 }

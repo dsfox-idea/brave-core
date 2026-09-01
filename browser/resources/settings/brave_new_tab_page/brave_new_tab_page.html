@@ -17,14 +17,11 @@
       menu-options="[[newTabShowOptions_]]">
     </settings-dropdown-menu>
   </div>
-  <template is="dom-if" if="[[showNewTabDashboardSettings_]]">
-    <div class="settings-row">
-      <cr-link-row
-	class="hr"
-	label="$i18n{braveNewTabNewTabCustomizeWidgets}"
-	on-click="openNewTabPage_" external>
-      </cr-link-row>
-    </div>
-  </template>
+  <!-- growser (#136): the "customize the new tab page" row is gone. It opened
+       chrome://newTab?openSettings=1, which is the way into the page's own
+       settings modal - and those are no longer reachable, by design. What the
+       new tab SHOWS stays a choice; how the dashboard looks is not one any
+       more. The handler and its listener are left in the TypeScript so the
+       row is one markup block away from coming back. -->
 
 </settings-section>

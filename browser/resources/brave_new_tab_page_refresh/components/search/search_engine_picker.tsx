@@ -17,7 +17,10 @@ interface Props {
   selectedEngine: SearchEngineInfo | null
   searchEngines: SearchEngineInfo[]
   onSelectEngine: (engine: SearchEngineInfo) => void
-  onCustomizeClick: () => void
+  // growser (#136): optional. Without a handler the menu lists the engines and
+  // nothing else - the "customize" entry is a way into the new tab page's
+  // settings, and those are no longer reachable.
+  onCustomizeClick?: () => void
 }
 
 export function SearchEnginePicker(props: Props) {
@@ -49,13 +52,17 @@ export function SearchEnginePicker(props: Props) {
             {engine.name}
           </leo-menu-item>
         ))}
-        <div className='divider' />
-        <leo-menu-item
-          onClick={props.onCustomizeClick}
-          data-customize='customize'
-        >
-          {getString(S.NEW_TAB_SEARCH_CUSTOMIZE_ENGINE_LIST_TEXT)}
-        </leo-menu-item>
+        {props.onCustomizeClick && (
+          <>
+            <div className='divider' />
+            <leo-menu-item
+              onClick={props.onCustomizeClick}
+              data-customize='customize'
+            >
+              {getString(S.NEW_TAB_SEARCH_CUSTOMIZE_ENGINE_LIST_TEXT)}
+            </leo-menu-item>
+          </>
+        )}
       </ButtonMenu>
     </div>
   )

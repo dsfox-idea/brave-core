@@ -19,7 +19,9 @@ import classNames from '$web-common/classnames'
 import { style } from './search_box.style'
 
 interface Props {
-  showSearchSettings: () => void
+  // growser (#136): optional - see search_engine_picker. The page passes
+  // nothing, so the engine menu offers engines and no way into settings.
+  showSearchSettings?: () => void
 }
 
 export function SearchBox(props: Props) {
