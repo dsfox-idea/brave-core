@@ -25,6 +25,7 @@ class SidebarContainerView;
 
 namespace views {
 class MenuRunner;
+class Separator;
 }  // namespace views
 
 namespace sidebar {
@@ -94,6 +95,9 @@ class SidebarControlView : public views::View,
   raw_ptr<Delegate> delegate_ = nullptr;
   raw_ptr<BraveBrowser> browser_ = nullptr;
   raw_ptr<SidebarItemsScrollView> sidebar_items_view_ = nullptr;
+  raw_ptr<views::Separator> bottom_separator_ = nullptr;
+  // Growser-149: never created any more - the sidebar has no add button. Left
+  // in place so the code that talks to it does not have to be unpicked.
   raw_ptr<SidebarItemAddButton> sidebar_item_add_view_ = nullptr;
   // Growser-140
   raw_ptr<SidebarPinnedTabsView> sidebar_pinned_tabs_view_ = nullptr;

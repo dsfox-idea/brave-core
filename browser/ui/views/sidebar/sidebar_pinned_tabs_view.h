@@ -21,13 +21,7 @@ class BraveTabStrip;
 class SidebarPinnedTabView;
 class Tab;
 
-namespace views {
-class Separator;
-}  // namespace views
-
-// The pinned tabs the sidebar hosts, drawn below the built-in sidebar items and
-// divided from them by a separator - the same divider the tab strip draws
-// between pinned and unpinned tabs.
+// The pinned tabs the sidebar hosts, at the top of the sidebar.
 //
 // The block hosts as many pinned tabs as fit by height and no more: entries
 // keep a fixed height and are never squeezed to let one more in. Whatever does
@@ -105,7 +99,6 @@ class SidebarPinnedTabsView : public views::View,
   void PublishHostedCount(int count);
 
   raw_ptr<BraveBrowser> browser_ = nullptr;
-  raw_ptr<views::Separator> separator_ = nullptr;
   std::vector<raw_ptr<SidebarPinnedTabView>> entries_;
   int hosted_count_ = 0;
 

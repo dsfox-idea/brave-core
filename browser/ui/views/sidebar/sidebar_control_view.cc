@@ -13,6 +13,8 @@
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
 #include "brave/browser/ui/sidebar/sidebar_utils.h"
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
+// Growser-149: the add button is not created any more, but its code stays in
+// the tree - the body below is kept intact behind an early return.
 #include "brave/browser/ui/views/sidebar/sidebar_item_add_button.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_scroll_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_pinned_tabs_view.h"
@@ -34,6 +36,7 @@
 #include "ui/views/background.h"
 #include "ui/views/border.h"
 #include "ui/views/controls/menu/menu_runner.h"
+#include "ui/views/controls/separator.h"
 #include "ui/views/layout/flex_layout.h"
 
 namespace {
@@ -70,7 +73,7 @@ SidebarControlView::SidebarControlView(Delegate* delegate,
     : delegate_(delegate), browser_(browser) {
   // Don't follow RTL layout. Sidebar position is determined by its own setting.
   SetMirrored(false);
-  set_context_menu_controller(this);
+  // Growser-149: no context menu on the sidebar's legacy surface.
 
   AddChildViews();
   UpdateItemAddButtonState();
@@ -105,6 +108,9 @@ void SidebarControlView::UpdateBorder() {
 
 SidebarControlView::~SidebarControlView() = default;
 
+// Growser-149: no context menu on the sidebar's legacy surface. The body is
+// kept, unreachable, because nothing sets this view as a context menu
+// controller any more.
 void SidebarControlView::ShowContextMenuForViewImpl(
     views::View* source,
     const gfx::Point& point,
@@ -173,32 +179,18 @@ void SidebarControlView::OnItemRemoved(size_t index) {
 }
 
 void SidebarControlView::AddChildViews() {
-  sidebar_items_view_ =
-      AddChildView(std::make_unique<SidebarItemsScrollView>(browser_));
-  sidebar_items_view_->SetProperty(
-      views::kFlexBehaviorKey,
-      views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
-          .WithOrder(2));
-  sidebar_item_add_view_ = AddChildView(std::make_unique<SidebarItemAddButton>(
-      browser_,
-      l10n_util::GetStringUTF16(IDS_SIDEBAR_ADD_ITEM_BUTTON_TOOLTIP)));
-  sidebar_item_add_view_->set_context_menu_controller(this);
-  // Remove top margin as the last item view has bottom margin.
-  sidebar_item_add_view_->GetProperty(views::kMarginsKey)->set_top(0);
-
-  // Growser-140
-  // Pinned tabs sit below the built-in items and take whatever height is left
-  // after them, which is why they come last in flex order: the built-in items
-  // keep their space, pinned tabs get the remainder and hand back to the tab
-  // strip whatever does not fit.
+  // Growser-149: pinned tabs first, at the very top of the sidebar. What is
+  // left of the legacy sidebar - bookmarks, reading list - sits at the bottom
+  // with the settings gear, behind a separator.
   sidebar_pinned_tabs_view_ =
       AddChildView(std::make_unique<SidebarPinnedTabsView>(browser_));
   sidebar_pinned_tabs_view_->SetProperty(
       views::kFlexBehaviorKey,
       views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
-          .WithOrder(3));
+          .WithOrder(2));
 
-  // This helps the settings button to be on the bottom
+  // Pushes the bottom block down. Everything in that block is inflexible, so
+  // it always keeps its space and the pinned tabs take whatever is left.
   auto* spacer = AddChildView(std::make_unique<views::View>());
   spacer->SetEnabled(false);
   spacer->SetProperty(
@@ -206,6 +198,26 @@ void SidebarControlView::AddChildViews() {
       views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero,
                                views::MaximumFlexSizeRule::kUnbounded)
           .WithOrder(1));
+
+  // Growser-149: the divider the pinned block used to draw above itself now
+  // belongs here - it separates the pinned tabs from what is below them.
+  bottom_separator_ = AddChildView(std::make_unique<views::Separator>());
+  bottom_separator_->SetColorId(kColorSidebarSeparator);
+  bottom_separator_->SetProperty(
+      views::kMarginsKey,
+      gfx::Insets::VH(SidebarButtonView::kMargin, SidebarButtonView::kMargin));
+
+  sidebar_items_view_ =
+      AddChildView(std::make_unique<SidebarItemsScrollView>(browser_));
+  sidebar_items_view_->SetProperty(
+      views::kFlexBehaviorKey,
+      views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
+          .WithOrder(3));
+
+  // Growser-149: the add button is gone. Nothing creates it any more, and
+  // SidebarItemAddButton stays in the tree switched off rather than deleted -
+  // a Chromium bump should not turn this into a merge conflict, and putting it
+  // back is then a one-line change.
 
   sidebar_settings_view_ = AddChildView(std::make_unique<SidebarButtonView>(
       l10n_util::GetStringUTF16(IDS_SIDEBAR_SETTINGS_BUTTON_TOOLTIP)));
@@ -231,7 +243,12 @@ void SidebarControlView::Update() {
 }
 
 void SidebarControlView::UpdateItemAddButtonState() {
-  DCHECK(sidebar_item_add_view_);
+  // Growser-149: there is no add button any more. Kept as a no-op so the call
+  // sites (item added/removed, theme changes) stay untouched.
+  if (!sidebar_item_add_view_) {
+    return;
+  }
+
   // Determine add button enabled state.
   bool should_enable = true;
   if (browser_->GetFeatures()
@@ -271,9 +288,7 @@ bool SidebarControlView::IsBubbleWidgetVisible() const {
     return true;
   }
 
-  if (sidebar_item_add_view_->IsBubbleVisible()) {
-    return true;
-  }
+  // Growser-149: no add button, so no add bubble to be visible.
 
   if (sidebar_items_view_->IsBubbleVisible()) {
     return true;
