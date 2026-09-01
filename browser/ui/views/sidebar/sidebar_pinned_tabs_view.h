@@ -69,6 +69,9 @@ class SidebarPinnedTabsView : public views::View, public TabStripModelObserver {
   // along with the sidebar, or make them jump surfaces on every hover.
   bool IsHostingEnabled() const;
 
+  // True once the window is closing every tab it has.
+  bool IsWindowClosing() const;
+
   // Recreates one entry per pinned tab. Cheap: pinned tabs are few, and this
   // only runs when the pinned set itself changes.
   void RebuildEntries();

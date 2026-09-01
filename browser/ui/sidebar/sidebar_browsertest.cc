@@ -2483,7 +2483,7 @@ class SidebarPinnedTabsBrowserTest : public SidebarBrowserTest {
   }
 
   // Pinned tabs the strip is actually drawing.
-  int DrawnByTabStrip() const {
+  int DrawnByTabStrip() {
     auto* tab_strip = browser_view()->horizontal_tab_strip_for_testing();
     int drawn = 0;
     for (int i = 0; i < tab_model()->IndexOfFirstNonPinnedTab(); i++) {
@@ -2569,6 +2569,19 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, InertWithVerticalTabs) {
   RunLayout();
 
   EXPECT_EQ(0, HostedBySidebar());
+}
+
+// Control for the two tests below: pinned tabs exist and the sidebar is hidden,
+// but the feature was never turned on. Tells a fault in the hosting path apart
+// from one in the fixture itself.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       ControlHiddenSidebarWithFeatureOff) {
+  SidebarServiceFactory::GetForProfile(browser()->GetProfile())
+      ->SetSidebarShowOption(SidebarService::ShowSidebarOption::kShowNever);
+  RunLayout();
+
+  EXPECT_EQ(0, HostedBySidebar());
+  EXPECT_EQ(kPinnedTabCount, DrawnByTabStrip());
 }
 
 // A sidebar that is not permanently visible hosts nothing: hiding it must not

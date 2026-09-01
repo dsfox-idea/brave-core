@@ -129,6 +129,10 @@ void SidebarPinnedTabsView::OnTabStripModelChanged(
     TabStripModel* tab_strip_model,
     const TabStripModelChange& change,
     const TabStripSelectionChange& selection) {
+  if (IsWindowClosing()) {
+    return;
+  }
+
   const size_t pinned_count = static_cast<size_t>(
       browser_->tab_strip_model()->IndexOfFirstNonPinnedTab());
   if (pinned_count != entries_.size()) {
@@ -145,6 +149,10 @@ void SidebarPinnedTabsView::OnTabStripModelChanged(
 
 void SidebarPinnedTabsView::OnTabPinnedStateChanged(tabs::TabInterface* tab,
                                                     int index) {
+  if (IsWindowClosing()) {
+    return;
+  }
+
   RebuildEntries();
 }
 
@@ -176,14 +184,26 @@ bool SidebarPinnedTabsView::IsHostingEnabled() const {
              sidebar::SidebarService::ShowSidebarOption::kShowAlways);
 }
 
+// Every tab is on its way out, so there is nothing to mirror. Rebuilding here
+// would tear down entry views in the middle of the window's own teardown, and
+// a view destroyed while the accessibility layer still holds a reference to it
+// leaves a ghost platform node behind.
+bool SidebarPinnedTabsView::IsWindowClosing() const {
+  return browser_->tab_strip_model()->closing_all();
+}
+
 void SidebarPinnedTabsView::RebuildEntries() {
   for (SidebarItemView* entry : entries_) {
     RemoveChildViewT(entry);
   }
   entries_.clear();
 
+  // A block that is not hosting keeps no entries at all: fewer views to build,
+  // and nothing to destroy when the sidebar or the window goes away.
   const int pinned_count =
-      browser_->tab_strip_model()->IndexOfFirstNonPinnedTab();
+      IsHostingEnabled()
+          ? browser_->tab_strip_model()->IndexOfFirstNonPinnedTab()
+          : 0;
   for (int i = 0; i < pinned_count; ++i) {
     auto* entry = AddChildView(std::make_unique<SidebarItemView>(u""));
     entry->SetCallback(
@@ -245,6 +265,10 @@ void SidebarPinnedTabsView::OnEntryPressed(size_t entry_index) {
 }
 
 void SidebarPinnedTabsView::OnSettingChanged() {
+  // The entries themselves follow the setting now, so this both creates and
+  // drops them.
+  RebuildEntries();
+
   // Hosting can only be turned off from here, and an invisible or zero-height
   // block is never laid out again - so hand the tabs back right away rather
   // than waiting for a layout that may not come.
@@ -252,7 +276,6 @@ void SidebarPinnedTabsView::OnSettingChanged() {
     PublishHostedCount(0);
   }
 
-  PreferredSizeChanged();
   InvalidateLayout();
 }
 
