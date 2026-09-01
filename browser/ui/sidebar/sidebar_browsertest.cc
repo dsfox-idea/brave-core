@@ -2768,36 +2768,32 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsContainerBrowserTest,
             entry->accent_colors()->icon_border_color);
   EXPECT_TRUE(entry->has_accent_icon());
 
-  // Painted, not just stored: the ring has to reach the pixels. The entry is
-  // rendered into a bitmap and the border colour looked for around its edge -
-  // and the image is written out so it can be looked at as well as counted.
+  // Painted, not just stored - but the accent lives on its own layer (it has
+  // to, to sit above the ink drop), and a layer is absent from any capture of
+  // the button's canvas. So the overlay is painted directly and the accent
+  // colours are looked for in that.
   {
-    // View::Paint places a view at its own bounds inside the canvas, so the
-    // canvas has to be big enough to contain that offset - painting the block
-    // into a canvas the size of one entry drops everything off the edge and
-    // reads back as "nothing was painted".
-    views::View* block = GetSidebarPinnedTabsView();
+    views::View* overlay = entry->GetAccentOverlayForTesting();
+    ASSERT_TRUE(overlay);
+    EXPECT_TRUE(entry->IsAccentOnItsOwnLayer());
+    EXPECT_EQ(entry->GetContentsBounds().size(), overlay->size())
+        << "the accent overlay does not cover the button";
+
     SkBitmap bitmap;
-    const gfx::Size size(block->bounds().right(), block->bounds().bottom());
+    const gfx::Size size(overlay->bounds().right(), overlay->bounds().bottom());
     {
-      // CanvasPainter rasterises into the bitmap in its destructor, so the
-      // bitmap is empty until the painter is gone - reading it inside this
-      // scope reports "nothing was painted" for a view that painted fine.
+      // CanvasPainter rasterises into the bitmap in its destructor: reading it
+      // while the painter is alive reports "nothing painted" for a view that
+      // painted fine.
       ui::CanvasPainter painter(&bitmap, size, 1.f, SK_ColorTRANSPARENT, false);
-      block->Paint(
+      overlay->Paint(
           views::PaintInfo::CreateRootPaintInfo(painter.context(), size));
     }
 
-    // The stroke is anti-aliased, so its exact colour may never land on a
-    // pixel; the filled disc under it does, and that is the accent too.
     int accent_pixels = 0;
-    int painted_pixels = 0;
     for (int x = 0; x < size.width(); x++) {
       for (int y = 0; y < size.height(); y++) {
         const SkColor color = bitmap.getColor(x, y);
-        if (SkColorGetA(color) != SK_AlphaTRANSPARENT) {
-          painted_pixels++;
-        }
         if (color == expected->background_color ||
             color == expected->border_color) {
           accent_pixels++;
@@ -2808,8 +2804,7 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsContainerBrowserTest,
     if (const char* dir = getenv("GROWSER_TEST_PNG_DIR")) {
       std::optional<std::vector<uint8_t>> png =
           gfx::PNGCodec::EncodeBGRASkBitmap(bitmap, false);
-      LOG(ERROR) << "entry " << size.ToString() << " painted=" << painted_pixels
-                 << " accent=" << accent_pixels << " png=" << png.has_value();
+      LOG(ERROR) << "overlay " << size.ToString() << " accent=" << accent_pixels;
       if (png) {
         base::WriteFile(base::FilePath::FromUTF8Unsafe(dir).AppendASCII(
                             "sidebar-entry-accent.png"),
@@ -2817,10 +2812,9 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsContainerBrowserTest,
       }
     }
 
-    EXPECT_GT(accent_pixels, 0)
-        << "the accent never reached the pixels; " << painted_pixels
-        << " pixels were painted at all, in a " << size.ToString() << " block";
+    EXPECT_GT(accent_pixels, 0) << "the accent never reached the pixels";
   }
+
 
   // A tab in no container is drawn plain - the entries the fixture pinned.
   auto* plain = GetSidebarPinnedTabsView()->GetEntryForTesting(0);

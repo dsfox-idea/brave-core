@@ -9,6 +9,7 @@
 #include <optional>
 #include <string>
 
+#include "base/memory/raw_ptr.h"
 #include "brave/browser/ui/views/sidebar/sidebar_item_view.h"
 #include "brave/browser/ui/views/tabs/accent_color/brave_tab_accent_types.h"
 #include "ui/base/metadata/metadata_header_macros.h"
@@ -39,15 +40,26 @@ class SidebarPinnedTabView : public SidebarItemView {
   const std::optional<TabAccentColors>& accent_colors() const {
     return accent_colors_;
   }
-  bool has_accent_icon() const { return !accent_icon_.IsEmpty(); }
+  bool has_accent_icon() const { return has_accent_icon_; }
+
+  // The accent has to be on a layer of its own to sit above the ink drop; a
+  // test holds it to that, because losing the layer is invisible in the code
+  // and shows up only as a washed-out entry after a hover.
+  bool IsAccentOnItsOwnLayer() const;
+
+  // The accent overlay, for tests that want to look at what it draws: it is on
+  // a layer, so it is absent from any capture of this view's canvas.
+  views::View* GetAccentOverlayForTesting();  // IN-TEST
 
   // views::View:
-  void OnPaintBorder(gfx::Canvas* canvas) override;
-  void PaintChildren(const views::PaintInfo& paint_info) override;
+  void Layout(PassKey key) override;
 
  private:
+  class AccentOverlayView;
+
+  raw_ptr<AccentOverlayView> accent_overlay_ = nullptr;
   std::optional<TabAccentColors> accent_colors_;
-  ui::ImageModel accent_icon_;
+  bool has_accent_icon_ = false;
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_SIDEBAR_SIDEBAR_PINNED_TAB_VIEW_H_
