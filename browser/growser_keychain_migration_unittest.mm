@@ -12,6 +12,8 @@
 
 #include <string>
 
+#include "base/process/process_handle.h"
+#include "base/strings/stringprintf.h"
 #include "base/strings/sys_string_conversions.h"
 #include "components/os_crypt/common/growser_keychain_migration.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -40,48 +42,72 @@ OSStatus DeleteItem(const std::string& service, const std::string& account) {
   return status;
 }
 
+// Every test gets item names of its own. These run against the REAL login
+// keychain and the launcher runs tests in parallel processes, so names shared
+// across the suite raced: one test created the new-named item while a sibling
+// asserted it was absent, and the add came back errSecDuplicateItem. Three
+// builds in a row carried a red test here that the launcher's retry turned
+// green again - a gate that has stopped measuring (lessons 44/47). The test
+// name separates siblings; the pid separates parallel processes, a retry, and
+// anything an interrupted earlier run left behind.
 struct GrowserKeychainMigrationTest : testing::Test {
-  ~GrowserKeychainMigrationTest() override {
-    // The fixtures this test creates are its own; remove them either way.
-    DeleteItem(kLegacyService, kLegacyAccount);
-    DeleteItem(kNewService, kNewAccount);
+  GrowserKeychainMigrationTest() {
+    const std::string unique = base::StringPrintf(
+        " %s.%d",
+        testing::UnitTest::GetInstance()->current_test_info()->name(),
+        base::GetCurrentProcId());
+    legacy_service_ = kLegacyService + unique;
+    legacy_account_ = kLegacyAccount + unique;
+    new_service_ = kNewService + unique;
+    new_account_ = kNewAccount + unique;
   }
+
+  ~GrowserKeychainMigrationTest() override {
+    // The items this test creates are its own; remove them either way.
+    DeleteItem(legacy_service_, legacy_account_);
+    DeleteItem(new_service_, new_account_);
+  }
+
+  std::string legacy_service_;
+  std::string legacy_account_;
+  std::string new_service_;
+  std::string new_account_;
 };
 
 }  // namespace
 
 TEST_F(GrowserKeychainMigrationTest, CopiesLegacyValueUnderNewName) {
   ASSERT_TRUE(growser::os_crypt::AddKeychainItemWithValue(
-      kLegacyService, kLegacyAccount, kValue));
+      legacy_service_, legacy_account_, kValue));
 
   EXPECT_TRUE(growser::os_crypt::MigrateKeychainItemForTest(
-      kLegacyService, kLegacyAccount, kNewService, kNewAccount));
-  EXPECT_TRUE(growser::os_crypt::HasKeychainItem(kNewService, kNewAccount));
+      legacy_service_, legacy_account_, new_service_, new_account_));
+  EXPECT_TRUE(growser::os_crypt::HasKeychainItem(new_service_, new_account_));
 
-  auto value = growser::os_crypt::FindKeychainItemValue(kNewService,
-                                                        kNewAccount);
+  auto value = growser::os_crypt::FindKeychainItemValue(new_service_,
+                                                        new_account_);
   ASSERT_TRUE(value);
   EXPECT_EQ(*value, kValue);
 }
 
 TEST_F(GrowserKeychainMigrationTest, NoLegacyItemMeansNoNewItem) {
-  EXPECT_FALSE(growser::os_crypt::HasKeychainItem(kNewService, kNewAccount));
+  EXPECT_FALSE(growser::os_crypt::HasKeychainItem(new_service_, new_account_));
   EXPECT_FALSE(growser::os_crypt::MigrateKeychainItemForTest(
-      kLegacyService, kLegacyAccount, kNewService, kNewAccount));
-  EXPECT_FALSE(growser::os_crypt::HasKeychainItem(kNewService, kNewAccount));
+      legacy_service_, legacy_account_, new_service_, new_account_));
+  EXPECT_FALSE(growser::os_crypt::HasKeychainItem(new_service_, new_account_));
 }
 
 TEST_F(GrowserKeychainMigrationTest, ExistingNewItemIsLeftAlone) {
   ASSERT_TRUE(growser::os_crypt::AddKeychainItemWithValue(
-      kNewService, kNewAccount, "fresh"));
+      new_service_, new_account_, "fresh"));
   ASSERT_TRUE(growser::os_crypt::AddKeychainItemWithValue(
-      kLegacyService, kLegacyAccount, "stale"));
+      legacy_service_, legacy_account_, "stale"));
 
   EXPECT_FALSE(growser::os_crypt::MigrateKeychainItemForTest(
-      kLegacyService, kLegacyAccount, kNewService, kNewAccount));
+      legacy_service_, legacy_account_, new_service_, new_account_));
 
-  auto value = growser::os_crypt::FindKeychainItemValue(kNewService,
-                                                        kNewAccount);
+  auto value = growser::os_crypt::FindKeychainItemValue(new_service_,
+                                                        new_account_);
   ASSERT_TRUE(value);
   EXPECT_EQ(*value, "fresh");
 }
