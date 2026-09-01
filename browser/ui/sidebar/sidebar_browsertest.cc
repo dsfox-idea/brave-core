@@ -2552,15 +2552,22 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, FollowsTheWindowHeight) {
       browser_view()->GetWidget()->GetWindowBoundsInScreen();
   ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
 
-  // Short enough that the sidebar cannot hold them all: the remainder must be
-  // back on the tab strip rather than nowhere.
+  // Shrink until the sidebar cannot hold them all. Growser-149 moved the block
+  // to the top of the sidebar and took away the divider above it, so it fits
+  // more than it used to - a single hard-coded height stopped being short
+  // enough, and would quietly stop testing anything again after the next
+  // layout change. The invariant is checked at every step, which is the part
+  // that matters: whatever the split, no tab is ever on neither surface.
   gfx::Rect short_bounds = original_bounds;
-  short_bounds.set_height(300);
-  browser_view()->GetWidget()->SetBounds(short_bounds);
-  RunLayout();
+  for (int height = original_bounds.height(); height >= 200; height -= 50) {
+    short_bounds.set_height(height);
+    browser_view()->GetWidget()->SetBounds(short_bounds);
+    RunLayout();
+    ExpectNoTabLostOrDoubled();
+  }
 
-  EXPECT_LT(HostedBySidebar(), kPinnedTabCount);
-  ExpectNoTabLostOrDoubled();
+  EXPECT_LT(HostedBySidebar(), kPinnedTabCount)
+      << "a window this short must hand pinned tabs back to the strip";
 
   // And growing it takes them back.
   browser_view()->GetWidget()->SetBounds(original_bounds);
@@ -2845,6 +2852,49 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsContainerBrowserTest,
   ASSERT_TRUE(plain);
   EXPECT_FALSE(plain->accent_colors().has_value());
   EXPECT_FALSE(plain->has_accent_icon());
+}
+
+
+// Growser-149
+// The sidebar's shape: pinned tabs at the very top, and what is left of the
+// legacy sidebar at the bottom with the settings gear behind a separator. No
+// way to add or rearrange those buttons any more - the add button is not built
+// at all, and neither the items nor the sidebar itself carries a context menu.
+IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PinnedTabsOnTopLegacyAtTheBottom) {
+  auto* control = GetSidebarControlView();
+  ASSERT_TRUE(control);
+
+  const auto& children = control->children();
+  ASSERT_GE(children.size(), 4u);
+  EXPECT_EQ(GetSidebarPinnedTabsView(), children.front())
+      << "pinned tabs must be the first thing in the sidebar";
+  EXPECT_EQ(GetSidebarSettingsButton(), children.back())
+      << "the settings gear must be the last";
+
+  const auto index_of = [&children](const views::View* view) {
+    return std::ranges::find(children, view) - children.begin();
+  };
+  EXPECT_LT(index_of(GetSidebarBottomSeparator()),
+            index_of(GetSidebarItemsScrollViewAsView()))
+      << "the separator divides the pinned tabs from the bottom block";
+  EXPECT_LT(index_of(GetSidebarItemsScrollViewAsView()),
+            index_of(GetSidebarSettingsButton()));
+
+  EXPECT_FALSE(SidebarHasAddButton())
+      << "the add button must not be built at all";
+  EXPECT_FALSE(control->context_menu_controller())
+      << "the sidebar itself must not offer a context menu";
+
+  // The accessor hands back a raw_ptr, so take it as one.
+  auto items = GetSidebarItemsContentsView(controller());
+  ASSERT_TRUE(items);
+  EXPECT_FALSE(items->context_menu_controller());
+  for (views::View* item : items->children()) {
+    EXPECT_FALSE(item->context_menu_controller())
+        << "a legacy sidebar button must not offer a context menu";
+    EXPECT_FALSE(item->drag_controller())
+        << "legacy sidebar buttons must not be draggable";
+  }
 }
 
 }  // namespace sidebar

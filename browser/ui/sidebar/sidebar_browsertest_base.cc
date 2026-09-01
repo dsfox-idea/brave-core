@@ -138,6 +138,23 @@ SidebarPinnedTabsView* SidebarBrowserTest::GetSidebarPinnedTabsView() const {
   return GetSidebarControlView()->sidebar_pinned_tabs_view_;
 }
 
+// Growser-149
+views::View* SidebarBrowserTest::GetSidebarBottomSeparator() const {
+  return GetSidebarControlView()->bottom_separator_;
+}
+
+views::View* SidebarBrowserTest::GetSidebarSettingsButton() const {
+  return GetSidebarControlView()->sidebar_settings_view_;
+}
+
+views::View* SidebarBrowserTest::GetSidebarItemsScrollViewAsView() const {
+  return GetSidebarControlView()->sidebar_items_view_;
+}
+
+bool SidebarBrowserTest::SidebarHasAddButton() const {
+  return !!GetSidebarControlView()->sidebar_item_add_view_;
+}
+
 SidebarContainerView* SidebarBrowserTest::GetSidebarContainerView() const {
   return static_cast<SidebarContainerView*>(controller()->sidebar());
 }

@@ -19,7 +19,6 @@
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
 #include "brave/browser/ui/views/sidebar/sidebar_button_view.h"
-#include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/views/sidebar/sidebar_pinned_tab_view.h"
 #include "brave/browser/ui/views/tabs/brave_tab_strip.h"
 #include "brave/components/sidebar/browser/pref_names.h"
@@ -42,7 +41,6 @@
 #include "ui/gfx/image/image_skia_operations.h"
 #include "ui/gfx/shadow_value.h"
 #include "ui/gfx/skia_paint_util.h"
-#include "ui/views/controls/separator.h"
 #include "ui/views/layout/box_layout.h"
 #include "ui/views/widget/widget.h"
 #include "ui/views/view_class_properties.h"
@@ -57,10 +55,10 @@ constexpr gfx::Size kIconSize(SidebarButtonView::kExternalIconSize,
 // margins. Margin collapsing makes the gap between two of them one margin.
 constexpr int kEntryHeight = SidebarButtonView::kSidebarButtonSize;
 constexpr int kSpacing = SidebarButtonView::kMargin;
-// What the block spends above its first entry: the separator and its own top
-// margin. The margin below the separator collapses into the entry's.
-constexpr int kLeadingHeight =
-    views::Separator::kThickness + SidebarButtonView::kMargin;
+// Growser-149: the block sits at the very top of the sidebar now, so it has
+// nothing above its first entry - the divider moved down to the block that
+// carries bookmarks, reading list and the gear.
+constexpr int kLeadingHeight = 0;
 
 // Growser-150: the active tab's light. A thin bar, and a glow that is a real
 // blur rather than a gradient rectangle - a rectangle has hard top and bottom
@@ -84,12 +82,6 @@ SidebarPinnedTabsView::SidebarPinnedTabsView(BraveBrowser* browser)
   SetLayoutManager(std::make_unique<views::BoxLayout>(
                        views::BoxLayout::Orientation::kVertical))
       ->SetCollapseMarginsSpacing(true);
-
-  separator_ = AddChildView(std::make_unique<views::Separator>());
-  separator_->SetColorId(kColorBraveVerticalTabSeparator);
-  separator_->SetProperty(
-      views::kMarginsKey,
-      gfx::Insets::VH(SidebarButtonView::kMargin, SidebarButtonView::kMargin));
 
   auto* prefs = browser_->GetProfile()->GetPrefs();
   auto on_setting_changed = base::BindRepeating(
@@ -116,9 +108,6 @@ void SidebarPinnedTabsView::Layout(PassKey) {
                          : 0;
   const int hosted = std::min(capacity, static_cast<int>(entries_.size()));
 
-  // The separator only divides two non-empty sides, exactly like the one the
-  // tab strip draws between pinned and unpinned tabs.
-  separator_->SetVisible(hosted > 0);
   for (size_t i = 0; i < entries_.size(); ++i) {
     entries_[i]->SetVisible(static_cast<int>(i) < hosted);
   }

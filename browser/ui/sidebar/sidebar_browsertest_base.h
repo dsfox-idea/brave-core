@@ -88,6 +88,14 @@ class SidebarBrowserTest : public InProcessBrowserTest {
   SidebarControlView* GetSidebarControlView() const;
   // Growser-140
   SidebarPinnedTabsView* GetSidebarPinnedTabsView() const;
+
+  // Growser-149: the sidebar's bottom block - the divider, the legacy items
+  // and the gear - and whether the add button exists at all. Friendship is not
+  // inherited, so a test body cannot reach these itself.
+  views::View* GetSidebarBottomSeparator() const;
+  views::View* GetSidebarSettingsButton() const;
+  views::View* GetSidebarItemsScrollViewAsView() const;
+  bool SidebarHasAddButton() const;
   SidebarContainerView* GetSidebarContainerView() const;
 
   SidePanel* GetSidePanel();

@@ -102,7 +102,9 @@ SidebarItemsContentsView::SidebarItemsContentsView(
       drag_controller_(drag_controller),
       sidebar_model_(browser->GetFeatures().sidebar_controller()->model()) {
   DCHECK(browser_);
-  set_context_menu_controller(this);
+  // Growser-149: no context menu on the legacy sidebar buttons, and no
+  // reordering them by drag. The machinery below is left in place, unreachable,
+  // rather than deleted - see the note in SidebarControlView::AddChildViews.
   SetLayoutManager(std::make_unique<views::BoxLayout>(
                        views::BoxLayout::Orientation::kVertical))
       ->SetCollapseMarginsSpacing(true);
@@ -304,11 +306,11 @@ void SidebarItemsContentsView::AddItemView(const sidebar::SidebarItem& item,
       AddChildViewAt(std::make_unique<SidebarItemView>(
                          sidebar_model_->GetAllSidebarItems()[index].title),
                      index);
-  item_view->set_context_menu_controller(this);
+  // Growser-149: item_view->set_context_menu_controller(this) - removed.
   item_view->SetCallback(
       base::BindRepeating(&SidebarItemsContentsView::OnItemPressed,
                           base::Unretained(this), item_view));
-  item_view->set_drag_controller(drag_controller_);
+  // Growser-149: item_view->set_drag_controller(drag_controller_) - removed.
 
   if (item.is_web_type()) {
     SetDefaultImageFor(item);
