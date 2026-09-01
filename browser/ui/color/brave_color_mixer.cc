@@ -228,9 +228,9 @@ void AddChromeLightThemeColorMixer(ui::ColorProvider* provider,
   mixer[kColorToolbarButtonIconInactive] = {
       ui::SetAlpha(kColorToolbarButtonIcon, kBraveDisabledControlAlpha)};
   mixer[ui::kColorToggleButtonThumbOff] = {SK_ColorWHITE};
-  mixer[ui::kColorToggleButtonThumbOn] = {SkColorSetRGB(0x4C, 0x54, 0xD2)};
+  mixer[ui::kColorToggleButtonThumbOn] = {SkColorSetRGB(0x00, 0x7C, 0x47)};
   mixer[ui::kColorToggleButtonTrackOff] = {SkColorSetRGB(0xDA, 0xDC, 0xE8)};
-  mixer[ui::kColorToggleButtonTrackOn] = {SkColorSetRGB(0xE1, 0xE2, 0xF6)};
+  mixer[ui::kColorToggleButtonTrackOn] = {SkColorSetRGB(0xD7, 0xE9, 0xDD)};
 
   mixer[kColorTabCloseButtonFocusRingActive] = {
       ui::kColorFocusableBorderFocused};
@@ -265,9 +265,9 @@ void AddChromeDarkThemeColorMixer(ui::ColorProvider* provider,
   mixer[kColorToolbarTopSeparatorFrameActive] = {kColorToolbar};
   mixer[kColorToolbarTopSeparatorFrameInactive] = {kColorToolbar};
   mixer[ui::kColorToggleButtonThumbOff] = {SK_ColorWHITE};
-  mixer[ui::kColorToggleButtonThumbOn] = {SkColorSetRGB(0x44, 0x36, 0xE1)};
+  mixer[ui::kColorToggleButtonThumbOn] = {SkColorSetRGB(0x00, 0x70, 0x3F)};
   mixer[ui::kColorToggleButtonTrackOff] = {SkColorSetRGB(0x5E, 0x61, 0x75)};
-  mixer[ui::kColorToggleButtonTrackOn] = {SkColorSetRGB(0x76, 0x79, 0xB1)};
+  mixer[ui::kColorToggleButtonTrackOn] = {SkColorSetRGB(0x55, 0x8E, 0x6A)};
 
   mixer[kColorTabCloseButtonFocusRingActive] = {
       ui::kColorFocusableBorderFocused};
@@ -316,7 +316,7 @@ void AddBraveColorMixerForAllThemes(ui::ColorProvider* provider,
 
   // Custom theme will use this color. Other themes could have another
   // color by their color mixers.
-  mixer[kColorToolbarButtonActivated] = {SkColorSetRGB(0x7C, 0x91, 0xFF)};
+  mixer[kColorToolbarButtonActivated] = {SkColorSetRGB(0x2A, 0xB7, 0x70)};
   mixer[kColorSidebarButtonPressed] = {kColorToolbarButtonActivated};
 
   // growser (#32): the omnibox focus ring is the Growser brand green
@@ -397,26 +397,26 @@ void AddBraveLightThemeColorMixer(ui::ColorProvider* provider,
   mixer[kColorMenuItemSubText] = {SkColorSetRGB(0x86, 0x8E, 0x96)};
   // It's "Themeable/Blue/10" but leo/color.h doesn't have it.
   mixer[kColorSearchConversionBannerTypeBackground] = {
-      SkColorSetRGB(0xEA, 0xF1, 0xFF)};
+      SkColorSetRGB(0xE7, 0xF5, 0xEB)};
   mixer[kColorSearchConversionBannerTypeDescText] = {
       SkColorSetRGB(0x2E, 0x30, 0x39)};
   mixer[kColorSearchConversionBannerTypeBackgroundBorder] = {
-      SkColorSetRGB(0xE2, 0xE3, 0xF8)};
+      SkColorSetRGB(0xD7, 0xEB, 0xDD)};
   mixer[kColorSearchConversionBannerTypeBackgroundBorderHovered] = {
-      SkColorSetRGB(0x83, 0x89, 0xE0)};
+      SkColorSetRGB(0x49, 0xA9, 0x72)};
   mixer[kColorSearchConversionBannerTypeBackgroundGradientFrom] = {
       SkColorSetARGB(104, 0xFF, 0xFF, 0xFF)};
   mixer[kColorSearchConversionBannerTypeBackgroundGradientTo] = {
-      SkColorSetRGB(0xEF, 0xEF, 0xFB)};
+      SkColorSetRGB(0xE9, 0xF4, 0xEC)};
 
   mixer[kColorDialogDontAskAgainButton] = {SkColorSetRGB(0x86, 0x8E, 0x96)};
   mixer[kColorDialogDontAskAgainButtonHovered] = {
       SkColorSetRGB(0x49, 0x50, 0x57)};
   mixer[kColorSidebarAddBubbleHeaderText] = {SkColorSetRGB(0x17, 0x17, 0x1F)};
   mixer[kColorSidebarAddBubbleItemTextBackgroundHovered] = {
-      SkColorSetRGB(0x4C, 0x54, 0xD2)};
+      SkColorSetRGB(0x00, 0x7C, 0x47)};
   mixer[kColorSidebarAddBubbleItemTextHovered] = {
-      SkColorSetRGB(0xF0, 0xF2, 0xFF)};
+      SkColorSetRGB(0xEB, 0xF7, 0xEE)};
   mixer[kColorSidebarAddBubbleItemTextNormal] = {
       SkColorSetRGB(0x21, 0x25, 0x29)};
   mixer[kColorSidebarArrowBackgroundHovered] = {kColorToolbarInkDropHover};
@@ -437,14 +437,14 @@ void AddBraveLightThemeColorMixer(ui::ColorProvider* provider,
   mixer[kColorWebDiscoveryInfoBarBackground] = {
       SkColorSetRGB(0xFF, 0xFF, 0xFF)};
   mixer[kColorWebDiscoveryInfoBarMessage] = {SkColorSetRGB(0x1D, 0x1F, 0x25)};
-  mixer[kColorWebDiscoveryInfoBarLink] = {SkColorSetRGB(0x4C, 0x54, 0xD2)};
+  mixer[kColorWebDiscoveryInfoBarLink] = {SkColorSetRGB(0x00, 0x7C, 0x47)};
   mixer[kColorWebDiscoveryInfoBarNoThanks] = {SkColorSetRGB(0x6B, 0x70, 0x84)};
   mixer[kColorWebDiscoveryInfoBarClose] = {SkColorSetRGB(0x6B, 0x70, 0x84)};
 
   // Color for download button when all completed and button needs user
   // interaction.
   mixer[kColorBraveDownloadToolbarButtonActive] = {
-      SkColorSetRGB(0x5F, 0x5C, 0xF1)};
+      SkColorSetRGB(0x00, 0x8D, 0x51)};
 
   mixer[kColorLocationBarHoveredShadow] = {
       SkColorSetA(SK_ColorBLACK, 0.07 * 255)};
@@ -475,19 +475,19 @@ void AddBraveDarkThemeColorMixer(ui::ColorProvider* provider,
   mixer[kColorSearchConversionBannerTypeDescText] = {
       SkColorSetRGB(0xE2, 0xE3, 0xE7)};
   mixer[kColorSearchConversionBannerTypeBackgroundBorder] = {
-      SkColorSetRGB(0x1F, 0x25, 0x7A)};
+      SkColorSetRGB(0x00, 0x3F, 0x21)};
   mixer[kColorSearchConversionBannerTypeBackgroundBorderHovered] = {
-      SkColorSetRGB(0x5F, 0x67, 0xD7)};
+      SkColorSetRGB(0x00, 0x8D, 0x51)};
   mixer[kColorSearchConversionBannerTypeBackgroundGradientFrom] = {
       SkColorSetARGB(104, 0x17, 0x19, 0x1E)};
   mixer[kColorSearchConversionBannerTypeBackgroundGradientTo] = {
-      SkColorSetARGB(104, 0x1F, 0x25, 0x7A)};
+      SkColorSetARGB(104, 0x00, 0x3F, 0x21)};
   mixer[kColorDialogDontAskAgainButton] = {SkColorSetRGB(0x84, 0x88, 0x9C)};
   mixer[kColorDialogDontAskAgainButtonHovered] = {
       SkColorSetRGB(0xC2, 0xC4, 0xCF)};
   mixer[kColorSidebarAddBubbleHeaderText] = {SkColorSetRGB(0xF0, 0xF0, 0xFF)};
   mixer[kColorSidebarAddBubbleItemTextBackgroundHovered] = {
-      SkColorSetRGB(0x4C, 0x54, 0xD2)};
+      SkColorSetRGB(0x00, 0x7C, 0x47)};
   mixer[kColorSidebarAddBubbleItemTextHovered] = {
       SkColorSetRGB(0xF0, 0xF0, 0xFF)};
   mixer[kColorSidebarAddBubbleItemTextNormal] = {
@@ -509,14 +509,14 @@ void AddBraveDarkThemeColorMixer(ui::ColorProvider* provider,
   mixer[kColorWebDiscoveryInfoBarBackground] = {
       SkColorSetRGB(0x1A, 0x1C, 0x22)};
   mixer[kColorWebDiscoveryInfoBarMessage] = {SkColorSetRGB(0xFF, 0xFF, 0xFF)};
-  mixer[kColorWebDiscoveryInfoBarLink] = {SkColorSetRGB(0xA6, 0xAB, 0xEC)};
+  mixer[kColorWebDiscoveryInfoBarLink] = {SkColorSetRGB(0x6E, 0xBF, 0x8D)};
   mixer[kColorWebDiscoveryInfoBarNoThanks] = {
       SkColorSetARGB(0xBF, 0xEC, 0xEF, 0xF2)};
   mixer[kColorWebDiscoveryInfoBarClose] = {
       SkColorSetARGB(0xBF, 0x8C, 0x90, 0xA1)};
 
   mixer[kColorBraveDownloadToolbarButtonActive] = {
-      SkColorSetRGB(0x87, 0x84, 0xF4)};
+      SkColorSetRGB(0x1C, 0xB0, 0x69)};
 
   mixer[kColorLocationBarHoveredShadow] = {
       SkColorSetA(SK_ColorBLACK, 0.4 * 255)};
