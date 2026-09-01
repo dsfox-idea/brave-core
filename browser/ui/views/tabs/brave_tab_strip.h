@@ -9,6 +9,7 @@
 #include <memory>
 #include <optional>
 
+#include "base/callback_list.h"
 #include "base/gtest_prod_util.h"
 #include "base/memory/weak_ptr.h"
 #include "brave/components/containers/buildflags/buildflags.h"
@@ -23,6 +24,11 @@
 class BraveTabContainer;
 class BraveVerticalTabStripRegionView;
 class Tab;
+
+namespace sidebar {
+class SidebarController;
+}  // namespace sidebar
+
 class BraveTabStrip : public TabStrip {
   METADATA_HEADER(BraveTabStrip, TabStrip)
  public:
@@ -40,6 +46,11 @@ class BraveTabStrip : public TabStrip {
   BraveTabContainer* GetBraveTabContainer();
 
   void InvalidateTabContainerLayout();
+
+  // How many leading pinned tabs the sidebar is showing right now. The strip
+  // skips exactly this many so a pinned tab is never drawn twice. Always 0
+  // unless the sidebar hosts pinned tabs (horizontal tabs only).
+  int GetPinnedTabCountHostedBySidebar() const;
 
   // TabStrip:
   void ShowHover(Tab* tab, TabStyle::ShowHoverStyle style) override;
@@ -108,6 +119,8 @@ class BraveTabStrip : public TabStrip {
   void UpdateOrientation();
   bool ShouldShowVerticalTabs() const;
 
+  sidebar::SidebarController* GetSidebarController() const;
+
   // Helper method to get the vertical tab strip region view if available.
   // Returns nullptr if vertical tabs are not shown or the view is not
   // available (e.g., during startup or window closing).
@@ -133,6 +146,12 @@ class BraveTabStrip : public TabStrip {
   BooleanPrefMember always_use_mini_accent_icon_;
 #endif  // BUILDFLAG(ENABLE_CONTAINERS)
   IntegerPrefMember tab_min_width_mode_;
+
+  // Relays out the strip when the sidebar takes over or hands back a pinned
+  // tab, which the strip has no other way of hearing about: the count follows
+  // the sidebar's height, and a window resize does not touch the strip's own
+  // bounds.
+  base::CallbackListSubscription pinned_tabs_hosted_by_sidebar_subscription_;
 
   base::WeakPtrFactory<BraveTabStrip> weak_factory_{this};
 };

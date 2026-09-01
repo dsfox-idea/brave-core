@@ -302,6 +302,15 @@
     <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_SHOW_SIDEBAR_BUTTON" desc="The label for whether the side panel button should be shown or not">
       Show Sidebar button
     </message>
+    <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_SIDEBAR_SHOW_PINNED_TABS" desc="The label for the option that moves pinned tabs into the sidebar">
+      Show pinned tabs
+    </message>
+    <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_SIDEBAR_SHOW_PINNED_TABS_SUB_LABEL" desc="The sub-label explaining what happens when pinned tabs are shown in the sidebar">
+      Pinned tabs move to the sidebar. The ones that do not fit stay on the tab strip
+    </message>
+    <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_SIDEBAR_SHOW_PINNED_TABS_VERTICAL_TABS_TOOLTIP" desc="Tooltip explaining why the option is unavailable while vertical tabs are turned on">
+      Available with horizontal tabs only. Vertical tabs already show pinned tabs in the tab strip
+    </message>
     <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_UI_FEATURE_ALIGN_LEFT" desc="Label for the button that allows UI features to appear on the left side of the browser. Translate this verbatim, do not localize for RTL languages.">
       Show on the left
     </message>

@@ -30,6 +30,8 @@ class BraveTabStrip;
   friend class BraveTabContainer;                                     \
   bool FillGroupInfo(std::vector<TabWidthConstraints>& tab_widths);   \
   bool FillNestingInfo(std::vector<TabWidthConstraints>& tab_widths); \
+  void HidePinnedTabsHostedBySidebar(                                 \
+      std::vector<TabWidthConstraints>& tab_widths);                  \
   BraveTabStrip* GetBraveTabStrip() const;                            \
   bool use_vertical_tabs_ = false;                                    \
   bool use_tree_tabs_ = false;                                        \

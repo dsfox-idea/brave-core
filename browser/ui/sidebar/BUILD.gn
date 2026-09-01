@@ -19,6 +19,7 @@ source_set("sidebar") {
     "sidebar.h",
     "sidebar_controller.h",
     "sidebar_model.h",
+    "sidebar_pinned_tabs_layout.h",
     "sidebar_service_factory.h",
     "sidebar_tab_helper.h",
     "sidebar_utils.h",
@@ -45,6 +46,7 @@ source_set("sidebar_impl") {
   sources = [
     "sidebar_controller.cc",
     "sidebar_model.cc",
+    "sidebar_pinned_tabs_layout.cc",
     "sidebar_service_factory.cc",
     "sidebar_tab_helper.cc",
     "sidebar_utils.cc",
@@ -227,7 +229,10 @@ source_set("interactive_ui_tests") {
 source_set("unit_tests") {
   testonly = true
 
-  sources = [ "sidebar_unittest.cc" ]
+  sources = [
+    "sidebar_pinned_tabs_layout_unittest.cc",
+    "sidebar_unittest.cc",
+  ]
 
   deps = [
     ":sidebar",

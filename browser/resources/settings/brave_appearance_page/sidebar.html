@@ -43,4 +43,17 @@
     </controlled-radio-button>
   </settings-radio-group>
 
+  <!-- The tooltip hangs off the row, not off the toggle: a disabled control is
+       not a reliable hover target, the row around it is. -->
+  <div id="showPinnedTabsRow"
+    title="[[computeShowPinnedTabsTooltip_(verticalTabsEnabledPref_.value)]]">
+    <settings-toggle-button
+      class="cr-row"
+      pref-key="brave.sidebar.show_pinned_tabs"
+      label="$i18n{appearanceSettingsSidebarShowPinnedTabs}"
+      sub-label="$i18n{appearanceSettingsSidebarShowPinnedTabsSubLabel}"
+      disabled="[[verticalTabsEnabledPref_.value]]">
+    </settings-toggle-button>
+  </div>
+
 </settings-section>

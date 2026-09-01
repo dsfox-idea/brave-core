@@ -30,7 +30,7 @@
 #include "brave/browser/ui/webui/speedreader/speedreader_toolbar_data_handler_impl.h"
 #include "brave/common/pref_names.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
+#include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/constants/brave_paths.h"
 #include "brave/components/speedreader/common/features.h"
 #include "brave/components/speedreader/common/speedreader.mojom.h"
@@ -342,10 +342,12 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, DisableSiteWorks) {
 // scenario in this one, so a temporary disabling will not affect the health
 // check of the feature.
 IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, DISABLED_SmokeTest) {
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)
   // Solana web3.js console warning will interfere with console observer
   brave_wallet::SetDefaultSolanaWallet(
       browser()->GetProfile()->GetPrefs(),
       brave_wallet::mojom::DefaultWallet::None);
+#endif  // BUILDFLAG(ENABLE_BRAVE_WALLET)
 
   const std::string kGetContentLength = "document.body.innerHTML.length";
 

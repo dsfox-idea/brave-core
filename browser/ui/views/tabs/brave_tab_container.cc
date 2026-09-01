@@ -19,6 +19,7 @@
 #include "base/feature_list.h"
 #include "base/notimplemented.h"
 #include "brave/browser/ui/color/brave_color_id.h"
+#include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
@@ -294,6 +295,12 @@ void BraveTabContainer::EnterTabClosingMode(std::optional<int> override_width,
 }
 
 bool BraveTabContainer::ShouldTabBeVisible(const Tab* tab) const {
+  // The sidebar draws the leading pinned tabs it hosts; the strip lays them out
+  // with no width at all, and a zero-width tab must not paint either.
+  if (IsPinnedTabHostedBySidebar(tab)) {
+    return false;
+  }
+
   auto scroll_direction = GetScrollDirection();
   if (scroll_direction == views::LayoutOrientation::kVertical) {
     // Dragging or detached tabs should always be visible regardless of pinned
@@ -1836,6 +1843,32 @@ bool BraveTabContainer::IsHorizontalScrollableTabStripEnabled() const {
   }
 
   return *scrollable_horizontal_tab_strip_;
+}
+
+bool BraveTabContainer::IsPinnedTabHostedBySidebar(const Tab* tab) const {
+  CHECK(tab);
+
+  if (!tab->data().pinned) {
+    return false;
+  }
+
+  auto* browser_window_interface =
+      tab_slot_controller_->GetBrowserWindowInterface();
+  if (!browser_window_interface) {
+    return false;
+  }
+
+  auto* sidebar_controller =
+      browser_window_interface->GetFeatures().sidebar_controller();
+  if (!sidebar_controller) {
+    return false;
+  }
+
+  // Pinned tabs lead the model, so the view index is the model index, and the
+  // sidebar always takes them from the front.
+  const auto index = tabs_view_model_.GetIndexOfView(tab);
+  return index.has_value() &&
+         *index < sidebar_controller->pinned_tab_count_hosted_by_sidebar();
 }
 
 bool BraveTabContainer::IsPinned(const Tab* tab) const {

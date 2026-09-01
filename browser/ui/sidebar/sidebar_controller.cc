@@ -6,6 +6,7 @@
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 
 #include <optional>
+#include <utility>
 #include <vector>
 
 #include "base/check.h"
@@ -272,6 +273,21 @@ void SidebarController::UpdateActiveItemState(
   if (auto index = sidebar_model_->GetIndexOf(*active_panel_item)) {
     ActivateItemAt(*index);
   }
+}
+
+void SidebarController::SetPinnedTabCountHostedBySidebar(int count) {
+  if (pinned_tab_count_hosted_by_sidebar_ == count) {
+    return;
+  }
+
+  pinned_tab_count_hosted_by_sidebar_ = count;
+  pinned_tab_count_changed_callbacks_.Notify();
+}
+
+base::CallbackListSubscription
+SidebarController::RegisterPinnedTabCountHostedBySidebarChangedCallback(
+    base::RepeatingClosure callback) {
+  return pinned_tab_count_changed_callbacks_.Add(std::move(callback));
 }
 
 void SidebarController::SetSidebar(Sidebar* sidebar) {

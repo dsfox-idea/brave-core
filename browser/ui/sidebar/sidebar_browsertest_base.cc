@@ -24,6 +24,7 @@
 #include "brave/browser/ui/views/sidebar/sidebar_control_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_contents_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_scroll_view.h"
+#include "brave/browser/ui/views/sidebar/sidebar_pinned_tabs_view.h"
 #include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
 #include "brave/browser/ui/views/toolbar/side_panel_button.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
@@ -130,6 +131,10 @@ void SidebarBrowserTest::HandleBrowserWindowMouseEvent() {
 
 SidebarControlView* SidebarBrowserTest::GetSidebarControlView() const {
   return GetSidebarContainerView()->sidebar_control_view_;
+}
+
+SidebarPinnedTabsView* SidebarBrowserTest::GetSidebarPinnedTabsView() const {
+  return GetSidebarControlView()->sidebar_pinned_tabs_view_;
 }
 
 SidebarContainerView* SidebarBrowserTest::GetSidebarContainerView() const {

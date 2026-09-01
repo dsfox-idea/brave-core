@@ -42,6 +42,7 @@
 #include "brave/browser/ui/views/sidebar/sidebar_item_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_contents_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_scroll_view.h"
+#include "brave/browser/ui/views/sidebar/sidebar_pinned_tabs_view.h"
 #include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
 #include "brave/browser/ui/views/toolbar/side_panel_button.h"
 #include "brave/common/pref_names.h"
@@ -62,6 +63,7 @@
 #include "chrome/browser/themes/theme_service_factory.h"
 #include "chrome/browser/ui/browser_command_controller.h"
 #include "chrome/browser/ui/browser_commands.h"
+#include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/layout_constants.h"
@@ -75,6 +77,8 @@
 #include "chrome/browser/ui/views/frame/multi_contents_view.h"
 #include "chrome/browser/ui/views/frame/toolbar_button_provider.h"
 #include "chrome/browser/ui/views/side_panel/side_panel.h"
+#include "chrome/browser/ui/views/tabs/tab.h"
+#include "chrome/browser/ui/views/tabs/tab_strip.h"
 #include "chrome/common/chrome_switches.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/test/base/in_process_browser_test.h"
@@ -97,8 +101,10 @@
 #include "ui/gfx/geometry/rounded_corners_f.h"
 #include "ui/views/animation/ink_drop.h"
 #include "ui/views/layout/layout_provider.h"
+#include "ui/views/test/views_test_utils.h"
 #include "ui/views/view_utils.h"
 #include "ui/views/widget/widget_utils.h"
+#include "url/url_constants.h"
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/components/ai_chat/core/common/features.h"
@@ -2435,6 +2441,162 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithFocusMode,
 
   focus_mode_controller()->SetEnabled(false);
   EXPECT_FALSE(sidebar_container->IsSidebarVisible());
+}
+
+// Pinned tabs in the sidebar (growser#140). The rule these tests hold the
+// feature to is that a pinned tab is drawn exactly once: what the sidebar
+// hosts leaves the tab strip, and what the sidebar cannot fit stays there.
+class SidebarPinnedTabsBrowserTest : public SidebarBrowserTest {
+ public:
+  SidebarPinnedTabsBrowserTest() = default;
+  ~SidebarPinnedTabsBrowserTest() override = default;
+
+ protected:
+  static constexpr int kPinnedTabCount = 3;
+
+  void SetUpOnMainThread() override {
+    SidebarBrowserTest::SetUpOnMainThread();
+
+    SidebarServiceFactory::GetForProfile(browser()->GetProfile())
+        ->SetSidebarShowOption(SidebarService::ShowSidebarOption::kShowAlways);
+
+    for (int i = 0; i < kPinnedTabCount; i++) {
+      chrome::AddTabAt(browser(), GURL(url::kAboutBlankURL), -1, false);
+      tab_model()->SetTabPinned(i, true);
+    }
+    ASSERT_EQ(kPinnedTabCount, tab_model()->IndexOfFirstNonPinnedTab());
+  }
+
+  void SetShowPinnedTabs(bool enabled) {
+    browser()->GetProfile()->GetPrefs()->SetBoolean(kSidebarShowPinnedTabs,
+                                                    enabled);
+    RunLayout();
+  }
+
+  void RunLayout() {
+    views::test::RunScheduledLayout(browser_view());
+    browser_view()->DeprecatedLayoutImmediately();
+  }
+
+  int HostedBySidebar() const {
+    return GetSidebarPinnedTabsView()->hosted_count();
+  }
+
+  // Pinned tabs the strip is actually drawing.
+  int DrawnByTabStrip() {
+    auto* tab_strip = browser_view()->horizontal_tab_strip_for_testing();
+    int drawn = 0;
+    for (int i = 0; i < tab_model()->IndexOfFirstNonPinnedTab(); i++) {
+      if (tab_strip->tab_at(i)->GetVisible()) {
+        drawn++;
+      }
+    }
+    return drawn;
+  }
+
+  // The invariant the whole feature rests on: every pinned tab is on exactly
+  // one of the two surfaces.
+  void ExpectNoTabLostOrDoubled() {
+    EXPECT_EQ(kPinnedTabCount, HostedBySidebar() + DrawnByTabStrip());
+  }
+};
+
+// Off by default, and turning it on moves the pinned tabs out of the strip.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, MovesPinnedTabsAndBack) {
+  EXPECT_FALSE(
+      browser()->GetProfile()->GetPrefs()->GetBoolean(kSidebarShowPinnedTabs));
+  EXPECT_EQ(0, HostedBySidebar());
+  EXPECT_EQ(kPinnedTabCount, DrawnByTabStrip());
+
+  SetShowPinnedTabs(true);
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  EXPECT_EQ(0, DrawnByTabStrip());
+  ExpectNoTabLostOrDoubled();
+
+  // Turning it back off hands every one of them back.
+  SetShowPinnedTabs(false);
+  EXPECT_EQ(0, HostedBySidebar());
+  EXPECT_EQ(kPinnedTabCount, DrawnByTabStrip());
+}
+
+// Unpinning a tab the sidebar hosts returns it to the strip as a normal tab.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, UnpinReturnsTheTab) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  tab_model()->SetTabPinned(0, false);
+  RunLayout();
+
+  EXPECT_EQ(kPinnedTabCount - 1, tab_model()->IndexOfFirstNonPinnedTab());
+  EXPECT_EQ(kPinnedTabCount - 1, HostedBySidebar());
+  EXPECT_EQ(0, DrawnByTabStrip());
+}
+
+// The split follows the window height, in both directions, with no user action.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, FollowsTheWindowHeight) {
+  SetShowPinnedTabs(true);
+  const gfx::Rect original_bounds =
+      browser_view()->GetWidget()->GetWindowBoundsInScreen();
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  // Short enough that the sidebar cannot hold them all: the remainder must be
+  // back on the tab strip rather than nowhere.
+  gfx::Rect short_bounds = original_bounds;
+  short_bounds.set_height(300);
+  browser_view()->GetWidget()->SetBounds(short_bounds);
+  RunLayout();
+
+  EXPECT_LT(HostedBySidebar(), kPinnedTabCount);
+  ExpectNoTabLostOrDoubled();
+
+  // And growing it takes them back.
+  browser_view()->GetWidget()->SetBounds(original_bounds);
+  RunLayout();
+
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  ExpectNoTabLostOrDoubled();
+}
+
+// Vertical tabs already show pinned tabs in a column of their own, so the
+// sidebar hosts nothing while they are on - the setting is inert, not a way to
+// make pinned tabs disappear from both places.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, InertWithVerticalTabs) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      brave_tabs::kVerticalTabsEnabled, true);
+  RunLayout();
+
+  EXPECT_EQ(0, HostedBySidebar());
+}
+
+// Control for the two tests below: pinned tabs exist and the sidebar is hidden,
+// but the feature was never turned on. Tells a fault in the hosting path apart
+// from one in the fixture itself.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       ControlHiddenSidebarWithFeatureOff) {
+  SidebarServiceFactory::GetForProfile(browser()->GetProfile())
+      ->SetSidebarShowOption(SidebarService::ShowSidebarOption::kShowNever);
+  RunLayout();
+
+  EXPECT_EQ(0, HostedBySidebar());
+  EXPECT_EQ(kPinnedTabCount, DrawnByTabStrip());
+}
+
+// A sidebar that is not permanently visible hosts nothing: hiding it must not
+// take pinned tabs with it.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       HiddenSidebarHostsNothing) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  SidebarServiceFactory::GetForProfile(browser()->GetProfile())
+      ->SetSidebarShowOption(SidebarService::ShowSidebarOption::kShowNever);
+  RunLayout();
+
+  EXPECT_EQ(0, HostedBySidebar());
+  EXPECT_EQ(kPinnedTabCount, DrawnByTabStrip());
 }
 
 }  // namespace sidebar

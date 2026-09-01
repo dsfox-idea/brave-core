@@ -23,6 +23,7 @@ class SidebarContainerView;
 class SidebarControlView;
 class SidebarItemsContentsView;
 class SidebarItemsScrollView;
+class SidebarPinnedTabsView;
 class SidePanel;
 class SidePanelButton;
 class TabStripModel;
@@ -85,6 +86,7 @@ class SidebarBrowserTest : public InProcessBrowserTest {
   void HandleBrowserWindowMouseEvent();
 
   SidebarControlView* GetSidebarControlView() const;
+  SidebarPinnedTabsView* GetSidebarPinnedTabsView() const;
   SidebarContainerView* GetSidebarContainerView() const;
 
   SidePanel* GetSidePanel();
