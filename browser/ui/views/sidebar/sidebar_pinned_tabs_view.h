@@ -59,6 +59,7 @@ class SidebarPinnedTabsView : public views::View,
 
   // views::View:
   void Layout(PassKey) override;
+  void OnPaintBackground(gfx::Canvas* canvas) override;
   gfx::Size CalculatePreferredSize(
       const views::SizeBounds& available_size) const override;
   void OnThemeChanged() override;

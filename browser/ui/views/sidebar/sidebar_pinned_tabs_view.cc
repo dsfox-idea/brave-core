@@ -19,6 +19,7 @@
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
 #include "brave/browser/ui/views/sidebar/sidebar_button_view.h"
+#include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/views/sidebar/sidebar_pinned_tab_view.h"
 #include "brave/browser/ui/views/tabs/brave_tab_strip.h"
 #include "brave/components/sidebar/browser/pref_names.h"
@@ -36,8 +37,11 @@
 #include "content/public/browser/web_contents.h"
 #include "skia/ext/image_operations.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
+#include "ui/color/color_provider.h"
 #include "ui/gfx/geometry/insets.h"
 #include "ui/gfx/image/image_skia_operations.h"
+#include "ui/gfx/shadow_value.h"
+#include "ui/gfx/skia_paint_util.h"
 #include "ui/views/controls/separator.h"
 #include "ui/views/layout/box_layout.h"
 #include "ui/views/widget/widget.h"
@@ -57,6 +61,21 @@ constexpr int kSpacing = SidebarButtonView::kMargin;
 // margin. The margin below the separator collapses into the entry's.
 constexpr int kLeadingHeight =
     views::Separator::kThickness + SidebarButtonView::kMargin;
+
+// Growser-150: the active tab's light. A thin bar, and a glow that is a real
+// blur rather than a gradient rectangle - a rectangle has hard top and bottom
+// edges and reads as a block, which is what the first attempt looked like.
+//
+// The glow is blurred from a shape wider than the bar: blurring the 2px bar
+// alone spreads far too little mass to see (measured: it peaked at 18% alpha
+// and died within 10px, well before reaching the icon). It is not offset
+// either - pushing the blur left moves its bright core off the bar, which
+// reads as a separate smudge rather than as light coming from the edge.
+constexpr int kActiveBarWidth = 2;
+constexpr int kActiveGlowSourceWidth = 10;
+constexpr int kActiveGlowBlur = 22;
+constexpr int kActiveGlowOffset = 0;
+constexpr SkAlpha kActiveGlowAlpha = 0xB3;
 
 }  // namespace
 
@@ -107,6 +126,65 @@ void SidebarPinnedTabsView::Layout(PassKey) {
   LayoutSuperclass<views::View>(this);
 
   PublishHostedCount(hosted);
+}
+
+// Growser-150: the light for the tab the user is looking at - a 2px bar at the
+// sidebar's right edge, as tall as the entry's icon square, with a real glow
+// around it (a Skia shadow, offset to the left so it reaches under the icon).
+//
+// Painted by the block rather than by the entry, for two reasons: the block
+// paints before its children, so the glow lands under the favicons, and it is
+// tall enough that the glow fades out on its own instead of being cut off at
+// an entry's 32px edge.
+void SidebarPinnedTabsView::OnPaintBackground(gfx::Canvas* canvas) {
+  views::View::OnPaintBackground(canvas);
+
+  const ui::ColorProvider* color_provider = GetColorProvider();
+  if (!color_provider) {
+    return;
+  }
+
+  for (SidebarPinnedTabView* entry : entries_) {
+    if (!entry->GetVisible() || !entry->is_active_tab()) {
+      continue;
+    }
+
+    // The container's colour when there is one, so the light and the container
+    // accent read as one thing rather than two decorations.
+    const SkColor color =
+        entry->accent_colors().has_value()
+            ? entry->accent_colors()->border_color
+            : color_provider->GetColor(kColorSidebarButtonPressed);
+
+    // As tall as the icon square the entry draws, not as the favicon inside it.
+    gfx::Rect icon = entry->GetContentsBounds();
+    icon.Offset(entry->bounds().OffsetFromOrigin());
+
+    // The glow first, blurred out of a wider shape and pushed left so it
+    // reaches under the icon. The source shape itself is not painted - only
+    // its shadow is, which is what a glow is.
+    cc::PaintFlags glow_flags;
+    glow_flags.setAntiAlias(true);
+    glow_flags.setStyle(cc::PaintFlags::kFill_Style);
+    glow_flags.setColor(SK_ColorTRANSPARENT);
+    glow_flags.setLooper(gfx::CreateShadowDrawLooper(
+        {gfx::ShadowValue(gfx::Vector2d(-kActiveGlowOffset, 0), kActiveGlowBlur,
+                          SkColorSetA(color, kActiveGlowAlpha))}));
+    canvas->DrawRoundRect(
+        gfx::RectF(width() - kActiveGlowSourceWidth, icon.y(),
+                   kActiveGlowSourceWidth, icon.height()),
+        kActiveGlowSourceWidth / 2.0f, glow_flags);
+
+    cc::PaintFlags bar_flags;
+    bar_flags.setAntiAlias(true);
+    bar_flags.setStyle(cc::PaintFlags::kFill_Style);
+    bar_flags.setColor(color);
+    canvas->DrawRoundRect(
+        gfx::RectF(width() - kActiveBarWidth, icon.y(), kActiveBarWidth,
+                   icon.height()),
+        kActiveBarWidth / 2.0f, bar_flags);
+    return;
+  }
 }
 
 gfx::Size SidebarPinnedTabsView::CalculatePreferredSize(
