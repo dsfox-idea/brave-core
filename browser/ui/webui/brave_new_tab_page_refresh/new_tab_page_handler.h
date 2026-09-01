@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 
+#include "base/callback_list.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 #include "base/memory/weak_ptr.h"
@@ -56,8 +57,7 @@ class VPNFacade;
 // Handler for messages from the NTP front end application. Interface method
 // implementations should be fairly trivial. Any non-trivial operations should
 // be delegated to a helper class.
-class NewTabPageHandler : public mojom::NewTabPageHandler,
-                          public TemplateURLServiceObserver {
+class NewTabPageHandler : public mojom::NewTabPageHandler {
  public:
   NewTabPageHandler(
       mojo::PendingReceiver<mojom::NewTabPageHandler> receiver,
@@ -74,11 +74,6 @@ class NewTabPageHandler : public mojom::NewTabPageHandler,
       bool was_restored);
 
   ~NewTabPageHandler() override;
-
-  // TemplateURLServiceObserver:
-  // growser: the first NTP of a fresh profile can ask for the engines before
-  // the service has loaded; the pending callbacks are answered here.
-  void OnTemplateURLServiceChanged() override;
 
   // mojom::NewTabPageHandler:
   void SetNewTabPage(mojo::PendingRemote<mojom::NewTabPage> page) override;
@@ -238,6 +233,9 @@ class NewTabPageHandler : public mojom::NewTabPageHandler,
   // Builds the engine list from the (loaded) TemplateURLService; shared by
   // the direct answer and the delayed one for a not-yet-loaded service.
   std::vector<mojom::SearchEngineInfoPtr> BuildSearchEnginesList();
+  // growser: answers the parked engine-list callbacks once the service has
+  // finished loading (fresh profile, first NTP).
+  void OnTemplateURLServiceLoaded();
 
   mojo::Receiver<mojom::NewTabPageHandler> receiver_;
   mojo::Remote<mojom::NewTabPage> page_;
@@ -251,9 +249,12 @@ class NewTabPageHandler : public mojom::NewTabPageHandler,
   raw_ref<PrefService> pref_service_;
   raw_ref<TemplateURLService> template_url_service_;
   // growser: engine-list answers parked while the service loads (fresh
-  // profile, first NTP). Non-empty also marks the observer as added.
+  // profile, first NTP), and the load-completion subscription that flushes
+  // them. TemplateURLServiceObserver is NOT notified of the initial load -
+  // RegisterOnLoadedCallback is the API for that.
   std::vector<GetAvailableSearchEnginesCallback>
       pending_search_engines_callbacks_;
+  base::CallbackListSubscription on_template_urls_loaded_;
   raw_ref<misc_metrics::NewTabMetrics> new_tab_metrics_;
   raw_ptr<misc_metrics::BraveSearchMetrics> brave_search_metrics_ = nullptr;
   raw_ptr<misc_metrics::NavigationSourceMetrics> navigation_source_metrics_ =

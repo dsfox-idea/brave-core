@@ -99,11 +99,7 @@ NewTabPageHandler::NewTabPageHandler(
       &NewTabPageHandler::OnSponsoredSitesUpdate, weak_factory_.GetWeakPtr()));
 }
 
-NewTabPageHandler::~NewTabPageHandler() {
-  if (!pending_search_engines_callbacks_.empty()) {
-    template_url_service_->RemoveObserver(this);
-  }
-}
+NewTabPageHandler::~NewTabPageHandler() = default;
 
 void NewTabPageHandler::SetNewTabPage(
     mojo::PendingRemote<mojom::NewTabPage> page) {
@@ -346,7 +342,13 @@ void NewTabPageHandler::GetAvailableSearchEngines(
   if (!template_url_service_->loaded()) {
     template_url_service_->Load();
     if (pending_search_engines_callbacks_.empty()) {
-      template_url_service_->AddObserver(this);
+      // TemplateURLService does NOT notify TemplateURLServiceObserver of the
+      // initial load (ChangeToLoadedState only fires on_loaded_callbacks_);
+      // this is the API that fires.
+      on_template_urls_loaded_ =
+          template_url_service_->RegisterOnLoadedCallback(base::BindOnce(
+              &NewTabPageHandler::OnTemplateURLServiceLoaded,
+              weak_factory_.GetWeakPtr()));
     }
     pending_search_engines_callbacks_.push_back(std::move(callback));
     return;
@@ -354,16 +356,9 @@ void NewTabPageHandler::GetAvailableSearchEngines(
   std::move(callback).Run(BuildSearchEnginesList());
 }
 
-void NewTabPageHandler::OnTemplateURLServiceChanged() {
-  if (!template_url_service_->loaded()) {
-    return;
-  }
+void NewTabPageHandler::OnTemplateURLServiceLoaded() {
   auto callbacks = std::move(pending_search_engines_callbacks_);
   pending_search_engines_callbacks_.clear();
-  if (callbacks.empty()) {
-    return;
-  }
-  template_url_service_->RemoveObserver(this);
   auto engines = BuildSearchEnginesList();
   for (auto& callback : callbacks) {
     // The list is shared; the renderer consumes it for the picker.
