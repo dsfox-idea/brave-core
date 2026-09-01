@@ -501,13 +501,13 @@ New bookmarks can’t be saved in your account until you delete some. If you sig
         <then>
           <message name="IDS_ABOUT_VERSION_COMPANY_NAME" desc="Company name on the about pages"></message>
           <message name="IDS_ABOUT_VERSION_COPYRIGHT" desc="Copyright information on the about pages">
-            Copyright © <ph name="YEAR">{0,date,y}<ex>2016</ex></ph> The Brave Authors. All rights reserved.
+            © Dmitry Golubnichiy &amp; Brave Software Inc, <ph name="YEAR">{0,date,y}<ex>2016</ex></ph>. All rights reserved.
           </message>
         </then>
         <else>
           <message name="IDS_ABOUT_VERSION_COMPANY_NAME" desc="Company name on the about pages"></message>
           <message name="IDS_ABOUT_VERSION_COPYRIGHT" desc="Copyright information on the about pages">
-            Copyright © <ph name="YEAR">{0,date,y}<ex>2016</ex></ph> The Brave Authors. All rights reserved.
+            © Dmitry Golubnichiy &amp; Brave Software Inc, <ph name="YEAR">{0,date,y}<ex>2016</ex></ph>. All rights reserved.
           </message>
         </else>
       </if>
