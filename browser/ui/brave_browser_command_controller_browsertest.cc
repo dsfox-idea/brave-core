@@ -21,6 +21,7 @@
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_account/features.h"
 #include "brave/components/brave_shields/core/common/features.h"
+#include "brave/components/brave_rewards/core/buildflags/buildflags.h"  // Growser-152
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/email_aliases/buildflags/buildflags.h"
@@ -236,7 +237,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsEnableTest) {
   // Test normal browser's brave commands status.
   auto* command_controller = browser()->command_controller();
-  EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS));
+  // Growser-152: the command follows its buildflag now, so with rewards
+  // compiled out it is off - see UpdateCommandForBraveRewards().
+  EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
+            BUILDFLAG(ENABLE_BRAVE_REWARDS));
 
 #if BUILDFLAG(ENABLE_TOR)
   EXPECT_FALSE(
@@ -272,7 +276,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_ADD_NEW_PROFILE));
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_OPEN_GUEST_PROFILE));
-  EXPECT_TRUE(
+  // Growser-152: growser#78 closed the webcompat reporter (the report
+  // carries the user's URL to Brave), and these assertions were left
+  // saying the opposite - red since that change went in.
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
 
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_TOGGLE_SIDEBAR));
@@ -290,7 +297,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsEnableTestPrivateWindow) {
   auto* private_browser = CreateIncognitoBrowser();
   auto* command_controller = private_browser->command_controller();
-  EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS));
+  // Growser-152: the command follows its buildflag now, so with rewards
+  // compiled out it is off - see UpdateCommandForBraveRewards().
+  EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
+            BUILDFLAG(ENABLE_BRAVE_REWARDS));
 
 #if BUILDFLAG(ENABLE_TOR)
   EXPECT_FALSE(
@@ -310,7 +320,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 #endif
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_ADD_NEW_PROFILE));
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_OPEN_GUEST_PROFILE));
-  EXPECT_TRUE(
+  // Growser-152: growser#78 closed the webcompat reporter (the report
+  // carries the user's URL to Brave), and these assertions were left
+  // saying the opposite - red since that change went in.
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
 #if BUILDFLAG(ENABLE_AI_CHAT)
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
@@ -343,7 +356,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 #endif
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_ADD_NEW_PROFILE));
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_OPEN_GUEST_PROFILE));
-  EXPECT_TRUE(
+  // Growser-152: growser#78 closed the webcompat reporter (the report
+  // carries the user's URL to Brave), and these assertions were left
+  // saying the opposite - red since that change went in.
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
 #if BUILDFLAG(ENABLE_AI_CHAT)
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
@@ -360,7 +376,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   DCHECK(tor_browser);
   EXPECT_TRUE(tor_browser->GetProfile()->IsTor());
   auto* command_controller = tor_browser->command_controller();
-  EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS));
+  // Growser-152: the command follows its buildflag now, so with rewards
+  // compiled out it is off - see UpdateCommandForBraveRewards().
+  EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
+            BUILDFLAG(ENABLE_BRAVE_REWARDS));
 
   EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE));
@@ -378,7 +397,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 #endif
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_ADD_NEW_PROFILE));
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_OPEN_GUEST_PROFILE));
-  EXPECT_TRUE(
+  // Growser-152: growser#78 closed the webcompat reporter (the report
+  // carries the user's URL to Brave), and these assertions were left
+  // saying the opposite - red since that change went in.
+  EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
 #if BUILDFLAG(ENABLE_AI_CHAT)
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
