@@ -93,7 +93,14 @@ export const style = scoped.css`
      * comment - the whole stylesheet is a template literal, and one would end
      * it. */
     position: absolute;
-    position-anchor: --ntp-search-row;
+    /* The anchor is the box a person SEES, not the column slot it belongs to.
+     * The searchbox-container is a full-width placeholder at the top of the
+     * column; the visible row is absolutely positioned inside it and rides
+     * 13vh lower (--search-expand-travel, #117), so anchoring to the container
+     * put the clock 12px ON TOP of the search box while measuring a tidy
+     * 100px. The name below is the visible row's own, declared in
+     * search_box.style.ts and already used by its dropdown. */
+    position-anchor: --search-input-container;
     inset-block-start: calc(anchor(end) + 100px);
     inset-inline-start: anchor(start);
     inset-inline-end: anchor(end);
@@ -195,9 +202,6 @@ export const style = scoped.css`
 
   .searchbox-container {
     align-self: stretch;
-
-    /* growser (#136): what the clock hangs from. */
-    anchor-name: --ntp-search-row;
 
     .search-box-expanded & {
       opacity: 1;
