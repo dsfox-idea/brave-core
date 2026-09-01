@@ -1198,6 +1198,10 @@ source_set("ui") {
       "views/sidebar/sidebar_items_contents_view.h",
       "views/sidebar/sidebar_items_scroll_view.cc",
       "views/sidebar/sidebar_items_scroll_view.h",
+      # Growser-148
+      "views/sidebar/sidebar_pinned_tab_view.cc",
+      "views/sidebar/sidebar_pinned_tab_view.h",
+
       # Growser-140
       "views/sidebar/sidebar_pinned_tabs_view.cc",
       "views/sidebar/sidebar_pinned_tabs_view.h",
