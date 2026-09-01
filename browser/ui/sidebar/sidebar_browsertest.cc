@@ -223,13 +223,13 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, BasicTest) {
 
   // Navigate to a non-NTP page first to ensure we can add it to sidebar
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://settings/")));
+      ui_test_utils::NavigateToURL(browser(), GURL("chrome://settings/")));
 
   // If current active tab is not NTP, we can add current url to sidebar.
   EXPECT_TRUE(CanAddCurrentActiveTabToSidebar(browser()));
 
   // If current active tab is NTP, we can't add current url to sidebar.
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("brave://newtab/")));
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("chrome://newtab/")));
   EXPECT_FALSE(CanAddCurrentActiveTabToSidebar(browser()));
 
   // Check |BrowserView::find_bar_host_view_| is the last child view.
@@ -247,7 +247,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, WebTypePanelTest) {
 
   // Add an item
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://settings/")));
+      ui_test_utils::NavigateToURL(browser(), GURL("chrome://settings/")));
   int current_tab_index = tab_model()->active_index();
   EXPECT_EQ(0, current_tab_index);
   EXPECT_TRUE(CanAddCurrentActiveTabToSidebar(browser()));
@@ -257,13 +257,13 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, WebTypePanelTest) {
 
   // Load NTP in a new tab and activate it. (tab index 1)
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   current_tab_index = tab_model()->active_index();
   EXPECT_EQ(1, current_tab_index);
 
-  // Activate sidebar item(brave://settings) and check existing first tab is
+  // Activate sidebar item(chrome://settings) and check existing first tab is
   // activated.
   auto items = model()->GetAllSidebarItems();
   auto iter =
@@ -349,7 +349,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWalletSidePanel,
   ASSERT_TRUE(wallet_item_index.has_value());
 
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_EQ(2, tab_model()->count());
@@ -1162,7 +1162,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithTabSpecificAIChat,
   ASSERT_TRUE(tab_specific_item_index.has_value());
 
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_EQ(tab_model()->count(), 2);
@@ -1179,11 +1179,11 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithTabSpecificAIChat,
 
   // Create two more tab for test below.
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_EQ(tab_model()->count(), 3);
@@ -1219,11 +1219,11 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithTabSpecificAIChat,
   ASSERT_TRUE(tab_specific_item_index.has_value());
   // Open 2 more tabs
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_EQ(tab_model()->count(), 3);
@@ -1291,11 +1291,11 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithTabSpecificAIChat,
   ASSERT_TRUE(tab_specific_item_index.has_value());
   // Open 2 more tabs
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_TRUE(ui_test_utils::NavigateToURLWithDisposition(
-      browser(), GURL("brave://newtab/"),
+      browser(), GURL("chrome://newtab/"),
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
   ASSERT_EQ(tab_model()->count(), 3);
@@ -1322,9 +1322,23 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithTabSpecificAIChat,
 
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
+// Growser-151: the default the product actually ships. Upstream starts the
+// sidebar on the right and every test around this one now sets the alignment
+// it needs, so without this nothing states the default at all - and a lost
+// default is exactly the kind of change that reaches a user unannounced.
+IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, StartsOnTheLeftByDefault) {
+  EXPECT_TRUE(IsSidebarUIOnLeft());
+  EXPECT_FALSE(browser()->GetProfile()->GetPrefs()->GetBoolean(
+      prefs::kSidePanelHorizontalAlignment));
+}
+
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, SidebarRightSideTest) {
-  // Sidebar is on right by default
-  EXPECT_FALSE(IsSidebarUIOnLeft());
+  // Growser-151: the right is UPSTREAM's default. Growser starts the sidebar
+  // on the left (brave_profile_prefs.cc), and this test is about the
+  // right-hand layout - so it asks for that layout instead of assuming it.
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      prefs::kSidePanelHorizontalAlignment, true);
+  ASSERT_FALSE(IsSidebarUIOnLeft());
 
   brave::ToggleVerticalTabStrip(browser());
   ASSERT_TRUE(VerticalTabController::FromBrowser(browser())
@@ -1444,7 +1458,11 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PanelPositionTest) {
   ASSERT_TRUE(panel->GetVisible());
   ASSERT_TRUE(sidebar->IsSidebarVisible());
 
-  // --- Sidebar on right (default LTR: kSidePanelHorizontalAlignment = true)
+  // --- Sidebar on right. Growser-151: growser's default is the left, so the
+  // right-hand half of this test sets the alignment it measures.
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      prefs::kSidePanelHorizontalAlignment, true);
+  RunScheduledLayouts();
   ASSERT_FALSE(sidebar->sidebar_on_left());
 
   auto* contents = browser_view->contents_container();
@@ -1800,8 +1818,9 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
   side_panel->DisableAnimationsForTesting();
   auto* prefs = browser()->GetProfile()->GetPrefs();
 
-  // Default: sidebar on right.
-  ASSERT_TRUE(prefs->GetBoolean(prefs::kSidePanelHorizontalAlignment));
+  // Growser-151: growser's default is the left; this test measures the
+  // right-hand layout, so it sets it.
+  prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, true);
 
   panel_ui->Toggle();
   ASSERT_TRUE(base::test::RunUntil([&]() { return side_panel->GetVisible(); }));
@@ -2233,6 +2252,11 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PanelRoundedOutline) {
   side_panel->DisableAnimationsForTesting();
   auto* prefs = browser()->GetProfile()->GetPrefs();
 
+  // Growser-151: the insets below name a content-facing (left) and an outer
+  // (right) edge, which is the right-hand layout. Growser starts the sidebar
+  // on the left, where those two swap, so the layout under test is set here.
+  prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, true);
+
   // Open the panel with rounded corners off: a plain separator, no top gap.
   prefs->SetBoolean(kWebViewRoundedCorners, false);
   panel_ui->Toggle();
@@ -2336,7 +2360,10 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, ControlViewBorderOverlapGap) {
   const int button_width =
       SidebarButtonView::kSidebarButtonSize + SidebarButtonView::kMargin * 2;
 
-  // Default: sidebar on right (kSidePanelHorizontalAlignment = true).
+  // Growser-151: growser's default is the left; the insets under test belong
+  // to the right-hand layout, so it is set here.
+  prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, true);
+  RunScheduledLayouts();
   ASSERT_FALSE(IsSidebarUIOnLeft());
 
   // Rounded corners off: no overlap needed, all insets should be zero and the
