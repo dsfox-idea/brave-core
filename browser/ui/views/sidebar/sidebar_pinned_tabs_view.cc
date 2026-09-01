@@ -26,6 +26,10 @@
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_user_gesture_details.h"
+#include "chrome/browser/ui/view_ids.h"
+#include "chrome/browser/ui/views/frame/browser_view.h"
+#include "chrome/browser/ui/views/tabs/tab.h"
+#include "chrome/browser/ui/views/tabs/tab_strip.h"
 #include "components/favicon/content/content_favicon_driver.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/browser/web_contents.h"
@@ -35,7 +39,9 @@
 #include "ui/gfx/image/image_skia_operations.h"
 #include "ui/views/controls/separator.h"
 #include "ui/views/layout/box_layout.h"
+#include "ui/views/widget/widget.h"
 #include "ui/views/view_class_properties.h"
+#include "ui/views/view_utils.h"
 
 namespace {
 
@@ -206,6 +212,7 @@ void SidebarPinnedTabsView::RebuildEntries() {
           : 0;
   for (int i = 0; i < pinned_count; ++i) {
     auto* entry = AddChildView(std::make_unique<SidebarItemView>(u""));
+    entry->set_context_menu_controller(this);
     entry->SetCallback(
         base::BindRepeating(&SidebarPinnedTabsView::OnEntryPressed,
                             base::Unretained(this), static_cast<size_t>(i)));
@@ -262,6 +269,59 @@ void SidebarPinnedTabsView::OnEntryPressed(size_t entry_index) {
   model->ActivateTabAt(index,
                        TabStripUserGestureDetails(
                            TabStripUserGestureDetails::GestureType::kOther));
+}
+
+Tab* SidebarPinnedTabsView::GetTabForEntryForTesting(size_t entry_index) {
+  return GetTabForEntry(entry_index);
+}
+
+Tab* SidebarPinnedTabsView::GetTabForEntry(size_t entry_index) const {
+  if (entry_index >= entries_.size() ||
+      static_cast<int>(entry_index) >=
+          browser_->tab_strip_model()->IndexOfFirstNonPinnedTab()) {
+    return nullptr;
+  }
+
+  auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser_);
+  if (!browser_view) {
+    return nullptr;
+  }
+
+  auto* tab_strip = views::AsViewClass<TabStrip>(
+      browser_view->GetViewByID(VIEW_ID_TAB_STRIP));
+  if (!tab_strip) {
+    return nullptr;
+  }
+
+  // Pinned tabs lead the model, so the entry index is the tab index. The tab is
+  // laid out with no width and is not painted while the sidebar hosts it, which
+  // the menu does not care about: it works off the model index.
+  return tab_strip->tab_at(static_cast<int>(entry_index));
+}
+
+void SidebarPinnedTabsView::ShowContextMenuForViewImpl(
+    views::View* source,
+    const gfx::Point& point,
+    ui::mojom::MenuSourceType source_type) {
+  const auto entry = std::ranges::find(entries_, source);
+  if (entry == entries_.end()) {
+    return;
+  }
+
+  Tab* tab = GetTabForEntry(
+      static_cast<size_t>(std::distance(entries_.begin(), entry)));
+  if (!tab) {
+    return;
+  }
+
+  // Hand it to the tab strip rather than building a menu here: "the same menu
+  // the tab has in the strip" is the requirement, and this is that menu - the
+  // model, the Brave items and the delegate that knows what Brave's own
+  // commands mean (BraveBrowserTabStripController) all come with it.
+  auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser_);
+  auto* tab_strip = views::AsViewClass<TabStrip>(
+      browser_view->GetViewByID(VIEW_ID_TAB_STRIP));
+  tab_strip->ShowContextMenuForTab(tab, point, source_type);
 }
 
 void SidebarPinnedTabsView::OnSettingChanged() {
