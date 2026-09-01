@@ -11,12 +11,12 @@ export const style = scoped.css`
   & {
     --self-transition-duration: var(--search-transition-duration, 120ms);
 
-    /* growser (#117): how far the box glides down on focus. Driven by transform
+    /* growser (#117): how far the box sits below its slot. Driven by transform
        (composited) rather than inset-block-start (a layout property that reflows
-       on every frame - the source of the stutter). The collapsed position is
-       left untouched at its natural anchor; tune this one value by eye if the
-       expanded resting spot needs to sit higher or lower. */
-    --search-expand-travel: 13vh;
+       on every frame - the source of the stutter). The value moved to the page
+       root in app.style.ts (#136) because the clock is positioned from it too,
+       and one number with two readers must have one home; it inherits down to
+       here. Tune it there if the resting spot needs to sit higher or lower. */
 
     anchor-name: --search-box-anchor;
     color: ${color.text.primary};

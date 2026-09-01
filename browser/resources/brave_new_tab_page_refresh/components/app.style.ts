@@ -17,6 +17,16 @@ export const style = scoped.css`
     --search-transition-duration: 120ms;
     --top-controls-text-shadow: rgba(0, 0, 0, 0.33) 0 1px 2px;
 
+    /* growser (#117, #136): how far below its slot the search row is drawn.
+     * It lives here, at the page root, rather than in search_box.style.ts,
+     * because two things need it now: the row itself, which translates by it,
+     * and the clock, which is pinned 100px below the row and must compute
+     * that from the row's SLOT - the row itself teleports into the top layer
+     * when it expands, and an anchor that disappears drops its anchored
+     * element back to the top of the page. Custom properties inherit down, so
+     * the search box still reads it from here. */
+    --search-expand-travel: 13vh;
+
     /* As of CR146, scrollbars for elements slotted into shadow DOM trees
      * sometimes do not respect the user's color scheme. Adding a rule for
      * "color-scheme" ensures that scrollbars are consistent.
@@ -93,15 +103,20 @@ export const style = scoped.css`
      * comment - the whole stylesheet is a template literal, and one would end
      * it. */
     position: absolute;
-    /* The anchor is the box a person SEES, not the column slot it belongs to.
-     * The searchbox-container is a full-width placeholder at the top of the
-     * column; the visible row is absolutely positioned inside it and rides
-     * 13vh lower (--search-expand-travel, #117), so anchoring to the container
-     * put the clock 12px ON TOP of the search box while measuring a tidy
-     * 100px. The name below is the visible row's own, declared in
-     * search_box.style.ts and already used by its dropdown. */
-    position-anchor: --search-input-container;
-    inset-block-start: calc(anchor(end) + 100px);
+    /* Anchored to the search row's SLOT, offset by the same travel the row
+     * itself uses - so the distance a person sees is 100px from the bottom of
+     * the row, computed from something that never moves.
+     *
+     * Two wrong ways were tried first, and both are worth remembering.
+     * Anchoring to the container WITHOUT the travel measured a tidy 100px and
+     * put the clock 12px on top of the search box. Anchoring to the visible
+     * row fixed that and introduced a worse fault: the row becomes a popover
+     * on focus and leaves the flow, its anchor stops resolving, and the clock
+     * drops to its static position - the top of the page, over the tiles -
+     * which is the flash the owner saw. */
+    position-anchor: --ntp-search-row;
+    inset-block-start: calc(
+      anchor(end) + var(--search-expand-travel) + 100px);
     inset-inline-start: anchor(start);
     inset-inline-end: anchor(end);
     margin-inline: auto;
@@ -202,6 +217,10 @@ export const style = scoped.css`
 
   .searchbox-container {
     align-self: stretch;
+
+    /* What the clock hangs from: this stays in the flow whatever the search
+     * row does. */
+    anchor-name: --ntp-search-row;
 
     .search-box-expanded & {
       opacity: 1;
