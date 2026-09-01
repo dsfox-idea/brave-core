@@ -6,16 +6,19 @@
 #ifndef BRAVE_BROWSER_UI_VIEWS_SIDEBAR_SIDEBAR_PINNED_TABS_VIEW_H_
 #define BRAVE_BROWSER_UI_VIEWS_SIDEBAR_SIDEBAR_PINNED_TABS_VIEW_H_
 
+#include <memory>
 #include <vector>
 
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/ui/tabs/tab_strip_model_observer.h"
 #include "components/prefs/pref_member.h"
 #include "ui/base/metadata/metadata_header_macros.h"
+#include "ui/views/context_menu_controller.h"
 #include "ui/views/view.h"
 
 class BraveBrowser;
 class SidebarItemView;
+class Tab;
 
 namespace views {
 class Separator;
@@ -32,7 +35,9 @@ class Separator;
 //
 // It only ever hosts anything when the sidebar is permanently visible and the
 // tab strip is horizontal - see IsHostingEnabled().
-class SidebarPinnedTabsView : public views::View, public TabStripModelObserver {
+class SidebarPinnedTabsView : public views::View,
+                              public TabStripModelObserver,
+                              public views::ContextMenuController {
   METADATA_HEADER(SidebarPinnedTabsView, views::View)
 
  public:
@@ -45,6 +50,10 @@ class SidebarPinnedTabsView : public views::View, public TabStripModelObserver {
   // How many pinned tabs this view is showing right now. The tab strip skips
   // exactly this many leading pinned tabs.
   int hosted_count() const { return hosted_count_; }
+
+  // The tab whose context menu an entry's right click opens; null when the
+  // entry does not correspond to a pinned tab any more.
+  Tab* GetTabForEntryForTesting(size_t entry_index);  // IN-TEST
 
   // views::View:
   void Layout(PassKey) override;
@@ -63,7 +72,16 @@ class SidebarPinnedTabsView : public views::View, public TabStripModelObserver {
                       int index,
                       TabChangeType change_type) override;
 
+  // views::ContextMenuController:
+  void ShowContextMenuForViewImpl(
+      views::View* source,
+      const gfx::Point& point,
+      ui::mojom::MenuSourceType source_type) override;
+
  private:
+  // The Tab the entry mirrors, looked up in the tab strip.
+  Tab* GetTabForEntry(size_t entry_index) const;
+
   // False when the feature is off, the tab strip is vertical, or the sidebar is
   // not permanently visible. In the last case hosting would hide pinned tabs
   // along with the sidebar, or make them jump surfaces on every hover.
