@@ -104,6 +104,7 @@
 #include "ui/views/layout/layout_provider.h"
 #include "ui/views/test/views_test_utils.h"
 #include "ui/views/view_utils.h"
+#include "ui/views/controls/menu/menu_controller.h"
 #include "ui/views/widget/widget_utils.h"
 #include "url/url_constants.h"
 
@@ -2623,6 +2624,28 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntriesPointAtTheirTabs) {
 
   // Past the end, and past the pinned tabs, there is no tab to ask about.
   EXPECT_FALSE(view->GetTabForEntryForTesting(kPinnedTabCount));
+}
+
+// A right click on an entry really opens a menu. The test above proves the
+// right tab is asked about; this one proves the click gets that far at all -
+// the button could as easily swallow it, which is not visible from the code.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, RightClickOpensAMenu) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  views::View* entry = GetSidebarPinnedTabsView()->children()[1];
+  ASSERT_TRUE(entry->GetVisible());
+
+  ui::test::EventGenerator generator(
+      views::GetRootWindow(browser_view()->GetWidget()));
+  generator.MoveMouseTo(entry->GetBoundsInScreen().CenterPoint());
+  generator.ClickRightButton();
+
+  views::MenuController* menu = views::MenuController::GetActiveInstance();
+  EXPECT_TRUE(menu) << "no menu came up for a right click on a pinned entry";
+  if (menu) {
+    menu->Cancel(views::MenuController::ExitType::kAll);
+  }
 }
 
 // Unpinning through the menu removes the entry the menu belongs to. Runs the
