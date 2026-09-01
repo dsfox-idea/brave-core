@@ -501,6 +501,12 @@ bool AcceleratorService::IsCommandDisabledByPolicy(int command_id) const {
 #else
       return true;  // Wallet not compiled in, always disabled
 #endif
+    // Growser-152: the webcompat reporter is closed in this build (growser#78
+    // - the report carries the user's URL to Brave), so it is not a shortcut
+    // anybody can be offered either. The command is disabled rather than
+    // compiled out, which no other case here covers.
+    case IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER:
+      return true;
     case IDC_SHOW_BRAVE_REWARDS:
     case IDC_OFFERS_AND_REWARDS_FOR_PAGE:
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)

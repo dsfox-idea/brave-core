@@ -484,6 +484,19 @@ TEST_F(AcceleratorServiceUnitTest, AcceleratorsForCommandAccessors) {
   EXPECT_TRUE(service.GetDefaultAcceleratorsForCommand(99999).empty());
 }
 
+// Growser-152: a command we closed must not be offered a shortcut either.
+// The webcompat reporter is disabled in the command controller (growser#78,
+// the report carries the user's URL to Brave) rather than compiled out, so
+// nothing else in this switch covers it - and the shortcuts page lists what
+// the policy filter allows, not what the browser can run. Without the case,
+// the row stayed bindable and the key did nothing.
+TEST_F(AcceleratorServiceUnitTest, ClosedCommandsAreNotOfferedAShortcut) {
+  commands::AcceleratorService service(profile().GetPrefs(), MakeDefaults());
+
+  EXPECT_TRUE(
+      service.IsCommandDisabledByPolicy(IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER));
+}
+
 TEST_F(AcceleratorServiceUnitTest, PolicyFiltering) {
   commands::AcceleratorService service(profile().GetPrefs(), MakeDefaults());
 

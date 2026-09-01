@@ -75,6 +75,9 @@ class AcceleratorService : public mojom::CommandsService, public KeyedService {
 
  private:
   FRIEND_TEST_ALL_PREFIXES(AcceleratorServiceUnitTest, PolicyFiltering);
+  // Growser-152: friendship here is per test NAME, not per fixture.
+  FRIEND_TEST_ALL_PREFIXES(AcceleratorServiceUnitTest,
+                           ClosedCommandsAreNotOfferedAShortcut);
   FRIEND_TEST_ALL_PREFIXES(AcceleratorServiceUnitTestWithLocalState,
                            PolicyFiltering);
 

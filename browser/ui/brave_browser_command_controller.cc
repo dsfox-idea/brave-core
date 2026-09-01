@@ -22,6 +22,7 @@
 #include "brave/browser/ui/sidebar/sidebar_utils.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/buildflags/buildflags.h"
+#include "brave/components/brave_rewards/core/buildflags/buildflags.h"  // Growser-152
 #include "brave/components/brave_rewards/core/rewards_util.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
@@ -408,7 +409,13 @@ void BraveBrowserCommandController::UpdateCommandsForFullscreenMode() {
 }
 
 void BraveBrowserCommandController::UpdateCommandForBraveRewards() {
-  UpdateCommandEnabled(IDC_SHOW_BRAVE_REWARDS, true);
+  // Growser-152: rewards is compiled out here, and the page this command opens
+  // is not registered - it answers ERR_INVALID_URL. An enabled command is not
+  // a dead one: the command palette lists whatever IsCommandEnabled() allows,
+  // so the entry was offered and led nowhere. The shortcuts page had already
+  // hidden it (AcceleratorService::IsCommandDisabledByPolicy), which is what
+  // made the two surfaces disagree.
+  UpdateCommandEnabled(IDC_SHOW_BRAVE_REWARDS, BUILDFLAG(ENABLE_BRAVE_REWARDS));
 }
 
 void BraveBrowserCommandController::UpdateCommandForWebcompatReporter() {
