@@ -20,6 +20,7 @@
 class BraveBrowser;
 class SidebarItemAddButton;
 class SidebarItemsScrollView;
+class SidebarPinnedTabsView;
 class SidebarContainerView;
 
 namespace views {
@@ -94,6 +95,7 @@ class SidebarControlView : public views::View,
   raw_ptr<BraveBrowser> browser_ = nullptr;
   raw_ptr<SidebarItemsScrollView> sidebar_items_view_ = nullptr;
   raw_ptr<SidebarItemAddButton> sidebar_item_add_view_ = nullptr;
+  raw_ptr<SidebarPinnedTabsView> sidebar_pinned_tabs_view_ = nullptr;
   raw_ptr<SidebarButtonView> sidebar_settings_view_ = nullptr;
   std::unique_ptr<ui::SimpleMenuModel> context_menu_model_;
   std::unique_ptr<views::MenuRunner> context_menu_runner_;

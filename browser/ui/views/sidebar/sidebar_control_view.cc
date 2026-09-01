@@ -15,6 +15,7 @@
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
 #include "brave/browser/ui/views/sidebar/sidebar_item_add_button.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_scroll_view.h"
+#include "brave/browser/ui/views/sidebar/sidebar_pinned_tabs_view.h"
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "brave/components/vector_icons/vector_icons.h"
 #include "brave/grit/brave_generated_resources.h"
@@ -184,6 +185,17 @@ void SidebarControlView::AddChildViews() {
   sidebar_item_add_view_->set_context_menu_controller(this);
   // Remove top margin as the last item view has bottom margin.
   sidebar_item_add_view_->GetProperty(views::kMarginsKey)->set_top(0);
+
+  // Pinned tabs sit below the built-in items and take whatever height is left
+  // after them, which is why they come last in flex order: the built-in items
+  // keep their space, pinned tabs get the remainder and hand back to the tab
+  // strip whatever does not fit.
+  sidebar_pinned_tabs_view_ =
+      AddChildView(std::make_unique<SidebarPinnedTabsView>(browser_));
+  sidebar_pinned_tabs_view_->SetProperty(
+      views::kFlexBehaviorKey,
+      views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
+          .WithOrder(3));
 
   // This helps the settings button to be on the bottom
   auto* spacer = AddChildView(std::make_unique<views::View>());

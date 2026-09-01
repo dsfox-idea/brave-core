@@ -10,6 +10,8 @@
 #include <optional>
 #include <string>
 
+#include "base/callback_list.h"
+#include "base/functional/callback_forward.h"
 #include "base/memory/raw_ptr.h"
 #include "base/scoped_observation.h"
 #include "brave/components/sidebar/browser/sidebar_item.h"
@@ -87,6 +89,18 @@ class SidebarController : public SidebarService::Observer {
 
   void TearDownPreBrowserWindowDestruction();
 
+  // How many leading pinned tabs the sidebar is currently showing. The tab
+  // strip skips exactly this many: the two surfaces split the pinned tabs
+  // between them, and the sidebar - the side that knows its own height - owns
+  // the split. Set by the sidebar view, read by the tab strip.
+  void SetPinnedTabCountHostedBySidebar(int count);
+  int pinned_tab_count_hosted_by_sidebar() const {
+    return pinned_tab_count_hosted_by_sidebar_;
+  }
+  [[nodiscard]] base::CallbackListSubscription
+  RegisterPinnedTabCountHostedBySidebarChangedCallback(
+      base::RepeatingClosure callback);
+
   void SetSidebar(Sidebar* sidebar);
   Sidebar* sidebar() const { return sidebar_; }
   SidebarModel* model() const { return sidebar_model_.get(); }
@@ -111,6 +125,8 @@ class SidebarController : public SidebarService::Observer {
 
   // Sidebar is visible when pinned regardless of show option.
   bool sidebar_pinned_ = false;
+  int pinned_tab_count_hosted_by_sidebar_ = 0;
+  base::RepeatingClosureList pinned_tab_count_changed_callbacks_;
   raw_ptr<TabStripModel> tab_strip_model_ = nullptr;
   raw_ptr<Profile> profile_ = nullptr;
   raw_ptr<Browser> browser_ = nullptr;

@@ -298,6 +298,10 @@ class BraveTabContainer : public TabContainerImpl,
   bool ShouldShowVerticalTabs() const;
   bool IsPinned(const Tab* tab) const;
 
+  // True while the sidebar is the surface showing this pinned tab. The strip
+  // still owns the tab, it just neither sizes nor paints it.
+  bool IsPinnedTabHostedBySidebar(const Tab* tab) const;
+
   // Called when the tree tabs enabled state changes.
   void OnTreeTabsEnabledChanged();
 

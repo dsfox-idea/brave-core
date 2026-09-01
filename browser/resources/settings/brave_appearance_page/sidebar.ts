@@ -19,6 +19,7 @@ const SettingsBraveAppearanceSidebarElementBase =
 }
 
 const kSidebarShowOptionPrefName = 'brave.sidebar.sidebar_show_option'
+const kVerticalTabsEnabledPrefName = 'brave.tabs.vertical_tabs_enabled'
 
 /**
  * 'settings-brave-appearance-sidebar' is the settings page area containing
@@ -66,6 +67,7 @@ export class SettingsBraveAppearanceSidebarElement extends SettingsBraveAppearan
         }
       },
       sidebarShowOptionPref_: Object,
+      verticalTabsEnabledPref_: Object,
     }
   }
 
@@ -80,10 +82,21 @@ export class SettingsBraveAppearanceSidebarElement extends SettingsBraveAppearan
   private declare sidebarShowEnabledLabel_: string
   private declare sidebarShowOptionPref_:
       chrome.settingsPrivate.PrefObject<number>|undefined
+  private declare verticalTabsEnabledPref_:
+      chrome.settingsPrivate.PrefObject<boolean>|undefined
 
   override connectedCallback() {
     super.connectedCallback()
     this.mirrorPref(kSidebarShowOptionPrefName, 'sidebarShowOptionPref_')
+    this.mirrorPref(kVerticalTabsEnabledPrefName, 'verticalTabsEnabledPref_')
+  }
+
+  // Empty when the row is usable: a title attribute only shows a tooltip when
+  // it has text, so this doubles as "explain why the row is disabled".
+  private computeShowPinnedTabsTooltip_(verticalTabsEnabled?: boolean): string {
+    return verticalTabsEnabled
+        ? this.i18n('appearanceSettingsSidebarShowPinnedTabsVerticalTabsTooltip')
+        : ''
   }
 
   private onShowOptionChanged_() {

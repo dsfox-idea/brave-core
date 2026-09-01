@@ -14,7 +14,9 @@
 #include "base/check_is_test.h"
 #include "base/check_op.h"
 #include "base/feature_list.h"
+#include "base/functional/bind.h"
 #include "brave/browser/ui/color/brave_color_id.h"
+#include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
 #include "brave/browser/ui/tabs/shared_pinned_tab_service.h"
@@ -259,6 +261,17 @@ void BraveTabStrip::MaybeStartDrag(TabSlotView* source,
 void BraveTabStrip::AddedToWidget() {
   TabStrip::AddedToWidget();
 
+  // The sidebar is built after the browser view, so this is the first moment
+  // its controller exists.
+  if (auto* sidebar_controller = GetSidebarController()) {
+    pinned_tabs_hosted_by_sidebar_subscription_ =
+        sidebar_controller
+            ->RegisterPinnedTabCountHostedBySidebarChangedCallback(
+                base::BindRepeating(
+                    &BraveTabStrip::InvalidateTabContainerLayout,
+                    base::Unretained(this)));
+  }
+
   // When Chromium's upstream vertical tabs feature is active,
   // TabStrip::Initialize() is never called so tab_container_ remains null.
   // Skip UpdateOrientation() to avoid crashing when accessing it.
@@ -432,6 +445,20 @@ TabContainer* BraveTabStrip::GetTabContainerForTesting() {
 
 BraveTabContainer* BraveTabStrip::GetBraveTabContainer() {
   return views::AsViewClass<BraveTabContainer>(tab_container_.get());
+}
+
+int BraveTabStrip::GetPinnedTabCountHostedBySidebar() const {
+  auto* sidebar_controller = GetSidebarController();
+  return sidebar_controller
+             ? sidebar_controller->pinned_tab_count_hosted_by_sidebar()
+             : 0;
+}
+
+sidebar::SidebarController* BraveTabStrip::GetSidebarController() const {
+  auto* browser_window_interface = GetBrowserWindowInterface();
+  return browser_window_interface
+             ? browser_window_interface->GetFeatures().sidebar_controller()
+             : nullptr;
 }
 
 void BraveTabStrip::InvalidateTabContainerLayout() {
