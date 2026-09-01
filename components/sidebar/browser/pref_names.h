@@ -13,7 +13,7 @@ inline constexpr char kSidebarHiddenBuiltInItems[] =
     "brave.sidebar.hidden_built_in_items";
 inline constexpr char kSidebarShowOption[] =
     "brave.sidebar.sidebar_show_option";
-// With horizontal tabs, moves pinned tabs into the sidebar: as many as fit
+// Growser-140: // With horizontal tabs, moves pinned tabs into the sidebar: as many as fit
 // by height live there, the rest stay on the tab strip. Ignored while
 // vertical tabs are on.
 inline constexpr char kSidebarShowPinnedTabs[] =

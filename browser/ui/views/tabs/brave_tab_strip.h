@@ -47,6 +47,7 @@ class BraveTabStrip : public TabStrip {
 
   void InvalidateTabContainerLayout();
 
+  // Growser-140
   // How many leading pinned tabs the sidebar is showing right now. The strip
   // skips exactly this many so a pinned tab is never drawn twice. Always 0
   // unless the sidebar hosts pinned tabs (horizontal tabs only).

@@ -298,6 +298,7 @@ class BraveTabContainer : public TabContainerImpl,
   bool ShouldShowVerticalTabs() const;
   bool IsPinned(const Tab* tab) const;
 
+  // Growser-140
   // True while the sidebar is the surface showing this pinned tab. The strip
   // still owns the tab, it just neither sizes nor paints it.
   bool IsPinnedTabHostedBySidebar(const Tab* tab) const;

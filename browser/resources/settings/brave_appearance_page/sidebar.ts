@@ -19,6 +19,7 @@ const SettingsBraveAppearanceSidebarElementBase =
 }
 
 const kSidebarShowOptionPrefName = 'brave.sidebar.sidebar_show_option'
+// Growser-140
 const kVerticalTabsEnabledPrefName = 'brave.tabs.vertical_tabs_enabled'
 
 /**

@@ -186,6 +186,7 @@ void SidebarControlView::AddChildViews() {
   // Remove top margin as the last item view has bottom margin.
   sidebar_item_add_view_->GetProperty(views::kMarginsKey)->set_top(0);
 
+  // Growser-140
   // Pinned tabs sit below the built-in items and take whatever height is left
   // after them, which is why they come last in flex order: the built-in items
   // keep their space, pinned tabs get the remainder and hand back to the tab

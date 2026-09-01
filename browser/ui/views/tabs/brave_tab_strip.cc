@@ -261,6 +261,7 @@ void BraveTabStrip::MaybeStartDrag(TabSlotView* source,
 void BraveTabStrip::AddedToWidget() {
   TabStrip::AddedToWidget();
 
+  // Growser-140
   // The sidebar is built after the browser view, so this is the first moment
   // its controller exists.
   if (auto* sidebar_controller = GetSidebarController()) {
@@ -447,6 +448,7 @@ BraveTabContainer* BraveTabStrip::GetBraveTabContainer() {
   return views::AsViewClass<BraveTabContainer>(tab_container_.get());
 }
 
+// Growser-140
 int BraveTabStrip::GetPinnedTabCountHostedBySidebar() const {
   auto* sidebar_controller = GetSidebarController();
   return sidebar_controller

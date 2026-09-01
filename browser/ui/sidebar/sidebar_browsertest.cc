@@ -2445,6 +2445,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithFocusMode,
   EXPECT_FALSE(sidebar_container->IsSidebarVisible());
 }
 
+// Growser-140
 // Pinned tabs in the sidebar (growser#140). The rule these tests hold the
 // feature to is that a pinned tab is drawn exactly once: what the sidebar
 // hosts leaves the tab strip, and what the sidebar cannot fit stays there.
@@ -2602,6 +2603,7 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
 }
 
 
+// Growser-147
 // A sidebar entry's right click opens the menu of the tab it mirrors
 // (growser#147). What the menu contains is not asserted here on purpose: the
 // view hands the click to TabStrip::ShowContextMenuForTab, so it is the tab's

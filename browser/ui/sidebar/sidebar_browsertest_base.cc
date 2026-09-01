@@ -133,6 +133,7 @@ SidebarControlView* SidebarBrowserTest::GetSidebarControlView() const {
   return GetSidebarContainerView()->sidebar_control_view_;
 }
 
+// Growser-140
 SidebarPinnedTabsView* SidebarBrowserTest::GetSidebarPinnedTabsView() const {
   return GetSidebarControlView()->sidebar_pinned_tabs_view_;
 }

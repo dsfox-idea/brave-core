@@ -8,6 +8,7 @@
 #include "base/check.h"
 #include "brave/browser/ui/views/tabs/brave_tab_strip.h"
 
+// Growser-140
 // The leading comma runs the sidebar pass before either branch computes the
 // bounds; the value the call site receives is still the ternary's.
 #define CalculateTabBounds                                          \
@@ -43,6 +44,7 @@ bool TabStripLayoutHelper::FillGroupInfo(
   return true;
 }
 
+// Growser-140
 // A pinned tab the sidebar is showing must not be drawn in the strip as well.
 // Marking it closed is how a tab takes no room here - collapsed tree tabs do
 // the same below - and it leaves the pinned tabs that stay behind at their

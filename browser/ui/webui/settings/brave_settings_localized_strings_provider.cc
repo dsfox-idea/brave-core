@@ -356,6 +356,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"sideBar", IDS_SETTINGS_APPEARNCE_SETTINGS_SIDEBAR_PART_TITLE},
       {"appearanceSettingsShowOptionTitle",
        IDS_SETTINGS_SIDEBAR_SHOW_OPTION_TITLE},
+      // Growser-140
       {"appearanceSettingsSidebarShowPinnedTabs",
        IDS_SETTINGS_APPEARANCE_SETTINGS_SIDEBAR_SHOW_PINNED_TABS},
       {"appearanceSettingsSidebarShowPinnedTabsSubLabel",

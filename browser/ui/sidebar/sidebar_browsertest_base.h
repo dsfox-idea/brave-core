@@ -86,6 +86,7 @@ class SidebarBrowserTest : public InProcessBrowserTest {
   void HandleBrowserWindowMouseEvent();
 
   SidebarControlView* GetSidebarControlView() const;
+  // Growser-140
   SidebarPinnedTabsView* GetSidebarPinnedTabsView() const;
   SidebarContainerView* GetSidebarContainerView() const;
 

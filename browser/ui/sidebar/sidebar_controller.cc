@@ -275,6 +275,7 @@ void SidebarController::UpdateActiveItemState(
   }
 }
 
+// Growser-140
 void SidebarController::SetPinnedTabCountHostedBySidebar(int count) {
   if (pinned_tab_count_hosted_by_sidebar_ == count) {
     return;

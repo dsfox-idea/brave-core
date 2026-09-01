@@ -19,6 +19,7 @@ source_set("sidebar") {
     "sidebar.h",
     "sidebar_controller.h",
     "sidebar_model.h",
+    # Growser-140
     "sidebar_pinned_tabs_layout.h",
     "sidebar_service_factory.h",
     "sidebar_tab_helper.h",

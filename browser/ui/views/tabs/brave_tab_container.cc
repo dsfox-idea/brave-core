@@ -295,6 +295,7 @@ void BraveTabContainer::EnterTabClosingMode(std::optional<int> override_width,
 }
 
 bool BraveTabContainer::ShouldTabBeVisible(const Tab* tab) const {
+  // Growser-140
   // The sidebar draws the leading pinned tabs it hosts; the strip lays them out
   // with no width at all, and a zero-width tab must not paint either.
   if (IsPinnedTabHostedBySidebar(tab)) {
@@ -1845,6 +1846,7 @@ bool BraveTabContainer::IsHorizontalScrollableTabStripEnabled() const {
   return *scrollable_horizontal_tab_strip_;
 }
 
+// Growser-140
 bool BraveTabContainer::IsPinnedTabHostedBySidebar(const Tab* tab) const {
   CHECK(tab);
 

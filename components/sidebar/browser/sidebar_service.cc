@@ -119,6 +119,7 @@ void SidebarService::RegisterProfilePrefs(
   registry->RegisterIntegerPref(
       kLastUsedBuiltInItemType,
       static_cast<int>(SidebarItem::BuiltInItemType::kNone));
+  // Growser-140
   registry->RegisterBooleanPref(kSidebarShowPinnedTabs, false);
   registry->RegisterBooleanPref(kSidebarSettingChangeInitialP3AReport, false);
 }

@@ -342,6 +342,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, DisableSiteWorks) {
 // scenario in this one, so a temporary disabling will not affect the health
 // check of the feature.
 IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, DISABLED_SmokeTest) {
+// Growser-140: the wallet is compiled out here.
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   // Solana web3.js console warning will interfere with console observer
   brave_wallet::SetDefaultSolanaWallet(

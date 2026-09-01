@@ -89,6 +89,7 @@ class SidebarController : public SidebarService::Observer {
 
   void TearDownPreBrowserWindowDestruction();
 
+  // Growser-140
   // How many leading pinned tabs the sidebar is currently showing. The tab
   // strip skips exactly this many: the two surfaces split the pinned tabs
   // between them, and the sidebar - the side that knows its own height - owns
