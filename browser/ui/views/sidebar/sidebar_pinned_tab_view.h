@@ -37,6 +37,12 @@ class SidebarPinnedTabView : public SidebarItemView {
   void SetContainerAccent(std::optional<TabAccentColors> colors,
                           ui::ImageModel icon);
 
+  // Growser-150: the entry of the tab the user is looking at carries a light
+  // on the sidebar's right edge. SidebarItemView::SetActiveState is not
+  // virtual, so the state is recorded here as well as passed on.
+  void SetActiveTab(bool active);
+  bool is_active_tab() const { return is_active_tab_; }
+
   const std::optional<TabAccentColors>& accent_colors() const {
     return accent_colors_;
   }
@@ -52,6 +58,7 @@ class SidebarPinnedTabView : public SidebarItemView {
   views::View* GetAccentOverlayForTesting();  // IN-TEST
 
   // views::View:
+  void OnPaintBackground(gfx::Canvas* canvas) override;
   void Layout(PassKey key) override;
 
  private:
@@ -59,6 +66,7 @@ class SidebarPinnedTabView : public SidebarItemView {
 
   raw_ptr<AccentOverlayView> accent_overlay_ = nullptr;
   std::optional<TabAccentColors> accent_colors_;
+  bool is_active_tab_ = false;
   bool has_accent_icon_ = false;
 };
 

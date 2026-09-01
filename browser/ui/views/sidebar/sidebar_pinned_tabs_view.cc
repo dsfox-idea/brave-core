@@ -257,7 +257,7 @@ void SidebarPinnedTabsView::UpdateEntry(size_t entry_index) {
     }
   }
 
-  entry->SetActiveState(model->active_index() == index);
+  entry->SetActiveTab(model->active_index() == index);
 
   // Whatever the tab strip would draw for this tab, drawn here too. Asked of
   // the strip rather than worked out again, so the two cannot disagree.

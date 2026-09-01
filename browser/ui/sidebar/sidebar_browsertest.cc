@@ -2813,6 +2813,30 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsContainerBrowserTest,
     }
 
     EXPECT_GT(accent_pixels, 0) << "the accent never reached the pixels";
+
+    // Growser-150: the light for the active tab is painted on the entry's own
+    // canvas (it has to be, to sit under the favicon), so unlike the accent it
+    // does show up in a canvas capture - of the whole block, so that "only the
+    // active entry has it" is visible in one picture.
+    if (const char* dir = getenv("GROWSER_TEST_PNG_DIR")) {
+      views::View* block = GetSidebarPinnedTabsView();
+      SkBitmap block_bitmap;
+      const gfx::Size block_size(block->bounds().right(),
+                                 block->bounds().bottom());
+      {
+        ui::CanvasPainter block_painter(&block_bitmap, block_size, 1.f,
+                                        SK_ColorTRANSPARENT, false);
+        block->Paint(views::PaintInfo::CreateRootPaintInfo(
+            block_painter.context(), block_size));
+      }
+      std::optional<std::vector<uint8_t>> block_png =
+          gfx::PNGCodec::EncodeBGRASkBitmap(block_bitmap, false);
+      if (block_png) {
+        base::WriteFile(base::FilePath::FromUTF8Unsafe(dir).AppendASCII(
+                            "sidebar-block-live.png"),
+                        *block_png);
+      }
+    }
   }
 
 

@@ -8,12 +8,15 @@
 #include <memory>
 #include <utility>
 
+#include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/views/sidebar/sidebar_button_view.h"
 #include "cc/paint/paint_flags.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
+#include "ui/color/color_provider.h"
 #include "ui/compositor/layer.h"
 #include "ui/gfx/canvas.h"
 #include "ui/gfx/geometry/rect_f.h"
+#include "ui/gfx/skia_paint_util.h"
 #include "ui/views/view.h"
 
 namespace {
@@ -28,6 +31,15 @@ constexpr int kBadgeIconSize = 12;
 // ring reads as a different thing standing next to the strip.
 constexpr float kOutlineStrokeWidth = 1.0f;
 constexpr float kOutlineCornerRadius = 8.0f;
+
+// Growser-150: the light on the sidebar's right edge for the tab the user is
+// looking at. The bar is as tall as the favicon; the glow reaches left from it
+// and is fully transparent before the icon's left edge, so it fades out
+// instead of ending at one.
+constexpr int kActiveBarWidth = 3;
+constexpr int kActiveGlowWidth = 26;
+constexpr int kActiveGlowVerticalPadding = 4;
+constexpr SkAlpha kActiveGlowAlpha = 0x4D;
 
 }  // namespace
 
@@ -128,6 +140,58 @@ void SidebarPinnedTabView::SetContainerAccent(
 
 bool SidebarPinnedTabView::IsAccentOnItsOwnLayer() const {
   return accent_overlay_->layer() != nullptr;
+}
+
+void SidebarPinnedTabView::SetActiveTab(bool active) {
+  SetActiveState(active);
+
+  if (is_active_tab_ == active) {
+    return;
+  }
+  is_active_tab_ = active;
+  SchedulePaint();
+}
+
+void SidebarPinnedTabView::OnPaintBackground(gfx::Canvas* canvas) {
+  SidebarItemView::OnPaintBackground(canvas);
+
+  const ui::ColorProvider* color_provider = GetColorProvider();
+  if (!is_active_tab_ || !color_provider) {
+    return;
+  }
+
+  // The container's colour when there is one, so the light and the container
+  // accent read as one thing rather than two decorations.
+  const SkColor color =
+      accent_colors_.has_value()
+          ? accent_colors_->border_color
+          : color_provider->GetColor(kColorSidebarButtonPressed);
+
+  const gfx::Rect contents = GetContentsBounds();
+  const int bar_height = SidebarButtonView::kExternalIconSize;
+  const int top = contents.CenterPoint().y() - bar_height / 2;
+  const int right = GetLocalBounds().right();
+
+  // The glow goes first: painted in the background, it ends up under the
+  // favicon, which is where it belongs.
+  const gfx::Rect glow(right - kActiveGlowWidth,
+                       top - kActiveGlowVerticalPadding, kActiveGlowWidth,
+                       bar_height + kActiveGlowVerticalPadding * 2);
+  cc::PaintFlags glow_flags;
+  glow_flags.setAntiAlias(true);
+  glow_flags.setShader(gfx::CreateGradientShader(
+      glow.right_center(), glow.left_center(),
+      SkColorSetA(color, kActiveGlowAlpha),
+      SkColorSetA(color, SK_AlphaTRANSPARENT)));
+  canvas->DrawRect(glow, glow_flags);
+
+  cc::PaintFlags bar_flags;
+  bar_flags.setAntiAlias(true);
+  bar_flags.setStyle(cc::PaintFlags::kFill_Style);
+  bar_flags.setColor(color);
+  canvas->DrawRoundRect(
+      gfx::RectF(right - kActiveBarWidth, top, kActiveBarWidth, bar_height),
+      kActiveBarWidth / 2.0f, bar_flags);
 }
 
 views::View* SidebarPinnedTabView::GetAccentOverlayForTesting() {
