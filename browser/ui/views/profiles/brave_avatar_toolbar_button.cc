@@ -137,7 +137,10 @@ void BraveAvatarToolbarButton::SetHighlight(
 void BraveAvatarToolbarButton::OnThemeChanged() {
   AvatarToolbarButton::OnThemeChanged();
 
-  constexpr int kNormalProfileHighlightRadius = 36;
+  // growser (#139): 12px is the ceiling for corners; 36 drew a pill on a
+  // button this size. Private and guest windows keep the maximum-emphasis
+  // metric below, which is upstream behaviour rather than ours.
+  constexpr int kNormalProfileHighlightRadius = 12;
   int radius = kNormalProfileHighlightRadius;
   bool is_private = state_manager_.browser()->GetProfile()->IsOffTheRecord() ||
                     state_manager_.browser()->GetProfile()->IsGuestSession();

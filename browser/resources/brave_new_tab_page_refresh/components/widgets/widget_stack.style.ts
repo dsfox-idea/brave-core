@@ -19,7 +19,8 @@ export const style = scoped.css`
 
     display: flex;
     flex-direction: column;
-    border-radius: 16px 0 0 16px;
+    /* growser (#139): 12px is the ceiling for corners in this product. */
+    border-radius: 12px 0 0 12px;
     overflow: clip;
 
     > * {

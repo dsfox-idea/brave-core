@@ -30,7 +30,7 @@ export const style = scoped.css`
   }
 
   .input-container {
-    border-radius: 16px;
+    border-radius: 12px; /* growser #139: ceiling */
     background: ${color.container.background};
     box-shadow: ${effect.elevation['03']};
     color: ${color.text.primary};

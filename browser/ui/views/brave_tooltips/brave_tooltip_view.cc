@@ -52,12 +52,14 @@ constexpr int kTitleFontSize = 14;
 constexpr int kBodyLineHeight = 16;
 constexpr int kTitleLineHeight = 20;
 
-constexpr float kButtonCornerRadius = 48.0;
+// growser (#139): 12px is the ceiling for corners in this product.
+constexpr float kButtonCornerRadius = 12.0;
 
 constexpr gfx::Font::Weight kBodyFontWeight = gfx::Font::Weight::NORMAL;
 constexpr gfx::Font::Weight kTitleFontWeight = gfx::Font::Weight::SEMIBOLD;
 
-constexpr SkColor kDefaultButtonColor = SkColorSetRGB(0x4C, 0x54, 0xD2);
+// growser (#137): the primary accent is ours, not Brave blue-violet.
+constexpr SkColor kDefaultButtonColor = SkColorSetRGB(0x00, 0x7C, 0x47);
 constexpr SkColor kLightModeButtonColor = SkColorSetRGB(0xFF, 0xFF, 0xFF);
 constexpr SkColor kDarkModeButtonColor = SkColorSetRGB(0x3B, 0x3E, 0x4F);
 constexpr SkColor kLightModeDefaultButtonTextColor =

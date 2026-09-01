@@ -85,7 +85,9 @@ class SidebarItemsArrowView : public views::ImageButton {
         flags.setColor(hovered_bg_color);
         flags.setStyle(cc::PaintFlags::kFill_Style);
         // Use smaller area for hover rounded rect.
-        constexpr int kInset = 2, kRadius = 34;
+        // growser (#139): 12px is the product's ceiling for corners. 34 on a
+        // control this small drew a pill.
+        constexpr int kInset = 2, kRadius = 12;
         bounds.Inset(gfx::Insets::VH(kInset, 0));
         canvas->DrawRoundRect(bounds, kRadius, flags);
       }

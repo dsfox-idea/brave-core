@@ -10,7 +10,7 @@ export const style = scoped.css`
   & {
     position: relative;
     color: ${color.text.primary};
-    border-radius: 16px;
+    border-radius: 12px; /* growser #139: ceiling */
     background: ${color.material.thin};
     backdrop-filter: blur(50px);
     display: flex;
