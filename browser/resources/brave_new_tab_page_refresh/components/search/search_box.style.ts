@@ -122,7 +122,8 @@ export const style = scoped.css`
     visibility: hidden;
     opacity: 0;
 
-    border-radius: 16px;
+    /* growser (#139): 12px is the ceiling; the row above it is already 12. */
+    border-radius: 12px;
     background: ${color.container.background};
     overflow: clip;
     box-shadow: ${effect.elevation['01']};

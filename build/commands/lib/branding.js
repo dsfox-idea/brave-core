@@ -495,6 +495,54 @@ const update = () => {
     }
   }
 
+  // growser (#139): 12px is the ceiling for corners in this product, and the
+  // ceiling has to be applied to the token scale, not to call sites: Leo
+  // re-declares its tokens INSIDE each component's shadow root, so nothing
+  // set from the page can reach them - overriding --leo-radius-full at
+  // runtime leaves every toggle exactly as round as it was. Changing the file
+  // is the only lever, and like the colour ramp above it has to be re-applied
+  // on every build because `pnpm install` rewrites node_modules.
+  //
+  // Only the steps ABOVE the ceiling move; xs/s/m/l are already under it. The
+  // "full" pill radius becomes 12 as well, which squares off toggles, pill
+  // buttons and segmented controls - and leaves genuinely round things round,
+  // because a radius larger than half the box is clamped: a 16px toggle thumb
+  // with a 12px radius is still a circle.
+  const radiusCap = 12
+  const cappedRadii = { Xl: 16, Xxl: 24, Full: 1000 }
+  if (fs.existsSync(leoTokensDir)) {
+    // Each file carries the number differently, and the CSS one carries a
+    // unit: a replacement that drops it writes `--leo-radius-full: 12`, which
+    // is not a length and is ignored, so every corner silently keeps its old
+    // shape. Hence a per-file suffix rather than one clever pattern.
+    const radiusFiles = [
+      ['css/variables.css', 'px',
+        (name, value) => `(--leo-radius-${name.toLowerCase()}\\s*:\\s*)${value}px`],
+      ['json/styles.json', '',
+        (name, value) => `("Radius${name}"\\s*:\\s*)${value}`],
+      ['skia/radius.h', '',
+        (name, value) => `(constexpr int kRadius${name} = )${value}`],
+    ]
+    for (const [name, suffix, makePattern] of radiusFiles) {
+      const tokenFile = path.join(leoTokensDir, ...name.split('/'))
+      if (!fs.existsSync(tokenFile)) {
+        continue
+      }
+      const before = fs.readFileSync(tokenFile, 'utf8')
+      let after = before
+      for (const [token, value] of Object.entries(cappedRadii)) {
+        after = after.replace(
+          new RegExp(makePattern(token, value), 'g'),
+          `$1${radiusCap}${suffix}`,
+        )
+      }
+      if (after !== before) {
+        fs.writeFileSync(tokenFile, after)
+        console.log('radius ceiling applied to ' + tokenFile)
+      }
+    }
+  }
+
   if (config.targetOS === 'android') {
     let braveOverwrittenFiles = new Set()
     const removeUnlistedAndroidResources = (braveOverwrittenFiles) => {

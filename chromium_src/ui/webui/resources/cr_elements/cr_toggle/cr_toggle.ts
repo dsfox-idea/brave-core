@@ -22,7 +22,25 @@ export class CrToggleElement extends CrLitElement {
     knob: HTMLElement
   }
 
-  static override get styles(): CSSResultGroup{ return css`` }
+  // growser (#139): the toggle gets 4px corners of its own.
+  //
+  // The product ceiling is 12px, and it leaves this control exactly as round
+  // as it was: a border-radius is clamped to half the box, the bar is 27px
+  // tall, so anything at or above 13.7px draws the same pill. The value that
+  // shows a corner has to be smaller than that, which is a decision about
+  // this control rather than about the scale.
+  //
+  // Set on the host: custom properties inherit through the shadow boundary,
+  // and the bar lives in a closed shadow root that cannot be reached any
+  // other way. The thumb reads the same property and squares off with it -
+  // chosen by the owner from 12 / 8 / 6 / 4 rendered on the real page.
+  static override get styles(): CSSResultGroup {
+    return css`
+      :host {
+        --leo-radius-full: 4px;
+      }
+    `
+  }
 
   override render() {
     return getHtml.bind(this)();

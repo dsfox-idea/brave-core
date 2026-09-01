@@ -12,7 +12,8 @@ export const style = scoped.css`
 
     position: fixed;
     margin: auto;
-    border-radius: 16px;
+    /* growser (#139): 12px is the ceiling for corners in this product. */
+    border-radius: 12px;
     background: ${color.container.background};
     box-shadow: ${effect.elevation['05']};
     display: none;

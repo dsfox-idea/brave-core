@@ -89,7 +89,10 @@ export const style = scoped.css`
     position: relative;
     width: var(--self-tile-width);
     height: var(--self-tile-height);
-    border-radius: 20px;
+    /* growser (#139): 12px is the product's ceiling for corners, and the
+     * tiles are where it starts. Picked by looking at 20/16/14/12/10/8 on the
+     * real board rather than in the abstract. */
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
