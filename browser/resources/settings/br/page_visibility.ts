@@ -125,15 +125,12 @@ function getPageVisibility () {
     // <if expr="enable_speedreader">
     speedreader: loadTimeData.getBoolean('isSpeedreaderAllowed'),
     // </if>
-    // growser (#78): Tor cannot work here, so the setting must not offer it.
-    // The Tor client is a separate component and both sources are closed to a
-    // fork: Brave's component server answers 403 Missing auth header, and
-    // Google - asked through our own proxy - answers error-unknownApplication,
-    // because Brave's component id means nothing to them. The feature is still
-    // compiled in (enable_tor defaults on), so this is what hides it. If we
-    // ever ship a Tor client of our own, this is one line to undo.
+    // Growser-157: the Tor section is back. growser#78 hid it because the
+    // client could not reach a fork; we publish our own component now, and the
+    // pref this reads is the one thing that decides whether Tor is offered.
     // <if expr="enable_tor">
-    braveTor: false,
+    braveTor: !loadTimeData.getBoolean('braveTorDisabledByPolicy') ||
+              loadTimeData.getBoolean('shouldExposeElementsForTesting'),
     // </if>
     // growser (#78): the whole feature is an API against
     // aliases.bravesoftware.com - a Brave account service we have no account

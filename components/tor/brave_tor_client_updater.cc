@@ -40,7 +40,11 @@ base::FilePath InitTorPath(const base::FilePath& install_dir) {
     base::FileEnumerator::FileInfo file_info = traversal.GetInfo();
     if (RE2::FullMatch(
             file_info.GetName().MaybeAsASCII(),
-            "tor-\\d+\\.\\d+\\.\\d+\\.\\d+-\\w+(-\\w+)?-brave-\\d+")) {
+            // Growser-157: our package names the binary after the product that
+            // ships it. Brave's spelling stays accepted so a profile that
+            // already carries their component keeps working.
+            "tor-\\d+\\.\\d+\\.\\d+\\.\\d+-\\w+(-\\w+)?-(brave|growser)-"
+            "\\d+")) {
       executable_path = current;
     }
 

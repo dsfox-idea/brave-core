@@ -427,22 +427,12 @@ void BraveBrowserCommandController::UpdateCommandForWebcompatReporter() {
 
 #if BUILDFLAG(ENABLE_TOR)
 void BraveBrowserCommandController::UpdateCommandForTor() {
-  // growser (#78): the Tor commands stay disabled, which takes their menu
-  // entries with them - brave_app_menu_model.cc only adds an item when its
-  // command is enabled.
-  //
-  // Tor cannot work in this build. The client is a separate component and both
-  // sources are closed to a fork: Brave's component server answers
-  // 403 Missing auth header, and Google - asked through our own proxy - answers
-  // error-unknownApplication, because Brave's component id means nothing to
-  // them. Offering "New private window with Tor" when no Tor client can ever
-  // arrive is a promise the browser cannot keep.
-  //
-  // The feature is left compiled in rather than flagged out: the removal is one
-  // decision to undo if we ever ship a Tor client of our own, and cutting the
-  // trees out is the war this project does not fight.
-  UpdateCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE, false);
-  UpdateCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR, false);
+  // Growser-157: back to following the pref, as upstream does. growser#78 held
+  // these off because no Tor client could reach a fork; we publish one now.
+  const bool enabled = !TorProfileServiceFactory::IsTorDisabled(
+      browser_->GetProfile());
+  UpdateCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE, enabled);
+  UpdateCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR, enabled);
 }
 #endif
 

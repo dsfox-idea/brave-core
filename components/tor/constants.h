@@ -14,18 +14,24 @@
 namespace tor {
 
 #if BUILDFLAG(IS_WIN)
+// Growser-157: our own component. Brave's server answers a fork 403,
+// so the client is published by us - see scripts/make-tor-component.py
+// and deploy/growser-backend. The id is the first 128 bits of the key's
+// SHA-256, so these two lines cannot disagree without the updater
+// refusing whatever it downloads. Windows only for now: no macOS or
+// Linux package exists yet, and Tor stays off there.
 inline constexpr char kTorClientComponentName[] =
-    "Brave Tor Client Updater (Windows)";
+    "Growser Tor Client Updater (Windows)";
 inline constexpr char kTorClientComponentId[] =
-    "cpoalefficncklhjfpglfiplenlpccdb";
+    "magogemiibiafhlbpenemlaomhplhiok";
 inline constexpr char kTorClientComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1AYAsmR/VoRwkZCsjRpD"
-    "58xjrgngW5y17H6BqQ7/CeNSpmXlcMXy6bJs2D/yeS96rhZSrQSHTzS9h/ieo/NZ"
-    "F5PIwcv07YsG5sRd6zF5a6m92aWCQa1OkbL6jpcpL2Tbc4mCqNxhKMErT7EtIIWL"
-    "9cW+mtFUjUjvV3rJLQ3Vy9u6fEi77Y8b25kGnTJoVt3uETAIHBnyNpL7ac2f8Iq+"
-    "4Qa6VFmuoBhup54tTZvMv+ikoKKaQkHzkkjTa4hV5AzdnFDKO8C9qJb3T/Ef0+MO"
-    "IuZjyySVzGNcOfASeHkhxhlwMQSQuhCN5mdFW5YBnVZ/5QWx8WzbhqBny/ZynS4e"
-    "rQIDAQAB";
+    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsU43JFRgCUOdCDiDksl0"
+    "d6gLxxhcqij3Oa4PPvCvDniiheV8pzgglEjvzaTrcL9rZTND+3Mefo10jVo4MlRm"
+    "9pvrqtiRbU9eBUcOzrM75XPvadw8s09LUXcXvIOw/ywSqm7uPAD11iICQCiKNtAz"
+    "C+5WXyrCvvZ36+U5YA1ZTilDP2Mjlx8gWrli7J5URjkV1BCGaDjfd0M+xUAXuKPn"
+    "wp4je9D7bn+gET/jkxgPlG19DIW7MIcRR+b+wQIMN+5zkyWUNlrNxOJmO9Pfbn4n"
+    "Afw2HcTEpwaDhn3Q7Ns7lEZ0WjM+oCyjEvLwE1jm4R9cZJXCuzDn5UWvMrfxJ4Ku"
+    "rwIDAQAB";
 #elif BUILDFLAG(IS_MAC)
 inline constexpr char kTorClientComponentName[] =
     "Brave Tor Client Updater (Mac)";
