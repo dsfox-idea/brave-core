@@ -394,7 +394,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorWithCustomProfileBrowserTest, Incognito) {
   EXPECT_TRUE(TorProfileServiceFactory::IsTorManaged(browser()->GetProfile()));
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("brave://settings/privacy")));
+                                           GURL("chrome://settings/privacy")));
   web_contents = browser()->tab_strip_model()->GetActiveWebContents();
 
   // When Tor is managed the toggle is hidden (not stamped) rather than just
@@ -426,7 +426,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorWithCustomProfileBrowserTest, Incognito) {
   EXPECT_TRUE(tor_profile->IsTor());
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("brave://settings/privacy")));
+                                           GURL("chrome://settings/privacy")));
   web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   // No longer managed: the toggle is stamped again and enabled.
   EXPECT_TRUE(does_element_exist("torEnabled"));

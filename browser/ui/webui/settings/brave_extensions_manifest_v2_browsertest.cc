@@ -158,7 +158,7 @@ class BraveExtensionsManifestV2BrowserTest : public InProcessBrowserTest {
 
 IN_PROC_BROWSER_TEST_F(BraveExtensionsManifestV2BrowserTest, InstallFail) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
-      browser(), GURL("brave://settings/extensions/v2")));
+      browser(), GURL("chrome://settings/extensions/v2")));
   auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   content::WebContentsConsoleObserver console_observer(web_contents);
   console_observer.SetPattern("Failed to download extension manifest.");
@@ -174,7 +174,7 @@ IN_PROC_BROWSER_TEST_F(BraveExtensionsManifestV2BrowserTest, InstallFail) {
 IN_PROC_BROWSER_TEST_F(BraveExtensionsManifestV2BrowserTest,
                        InstallDisableEnableUninstall) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
-      browser(), GURL("brave://settings/extensions/v2")));
+      browser(), GURL("chrome://settings/extensions/v2")));
   auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   EXPECT_FALSE(IsExtensionToggled(web_contents));
   EXPECT_TRUE(IsExtensionToggleEnabled(web_contents));
@@ -280,7 +280,7 @@ IN_PROC_BROWSER_TEST_F(BraveExtensionsManifestV2InstallerBrowserTest,
       extensions::ScopedInstallVerifierBypassForTest::kForceOn};
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
-      browser(), GURL("brave://settings/extensions/v2")));
+      browser(), GURL("chrome://settings/extensions/v2")));
   auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   EXPECT_FALSE(IsExtensionToggled(web_contents));
   EXPECT_TRUE(IsExtensionToggleEnabled(web_contents));
@@ -304,7 +304,7 @@ IN_PROC_BROWSER_TEST_F(BraveExtensionsManifestV2InstallerBrowserTest,
       extensions::ScopedInstallVerifierBypassForTest::kForceOn};
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
-      browser(), GURL("brave://settings/extensions/v2")));
+      browser(), GURL("chrome://settings/extensions/v2")));
   auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   EXPECT_FALSE(IsExtensionToggled(web_contents));
   EXPECT_TRUE(IsExtensionToggleEnabled(web_contents));

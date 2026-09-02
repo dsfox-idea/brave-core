@@ -453,11 +453,11 @@ IN_PROC_BROWSER_TEST_F(SplitViewBrowserTest, SelectTabTest) {
       brave_multi_contents_view()->mini_toolbar_for_testing(1)->GetVisible());
 
   // Load settings page on inactive split tab and check url displays brave
-  // scheme (chrome:// replaced with brave://).
+  // scheme (chrome:// replaced with growser://).
   ASSERT_TRUE(
       content::NavigateToURL(browser()->tab_strip_model()->GetWebContentsAt(2),
                              GURL("chrome://settings")));
-  EXPECT_EQ(u"brave://settings", brave_multi_contents_view()
+  EXPECT_EQ(u"growser://settings", brave_multi_contents_view()
                                      ->mini_toolbar_for_testing(0)
                                      ->domain_label_for_testing()
                                      ->GetText());

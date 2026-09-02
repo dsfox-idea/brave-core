@@ -42,14 +42,14 @@ class NTPBackgroundImagesSourceTest : public testing::Test {
 
 TEST_F(NTPBackgroundImagesSourceTest, BackgroundImagesFormatTest) {
   EXPECT_EQ("image/jpeg", background_images_source_->GetMimeType(
-                              GURL("brave://test/wallpaper-0.jpg")));
+                              GURL("chrome://test/wallpaper-0.jpg")));
   EXPECT_EQ("image/webp", background_images_source_->GetMimeType(
-                              GURL("brave://test/wallpaper-0.webp")));
+                              GURL("chrome://test/wallpaper-0.webp")));
   EXPECT_EQ("image/png", background_images_source_->GetMimeType(
-                             GURL("brave://test/wallpaper-0.png")));
+                             GURL("chrome://test/wallpaper-0.png")));
   EXPECT_EQ("image/avif", background_images_source_->GetMimeType(
-                              GURL("brave://test/wallpaper-0.avif")));
-  EXPECT_THAT(background_images_source_->GetMimeType(GURL("brave://test/")),
+                              GURL("chrome://test/wallpaper-0.avif")));
+  EXPECT_THAT(background_images_source_->GetMimeType(GURL("chrome://test/")),
               ::testing::IsEmpty());
 }
 

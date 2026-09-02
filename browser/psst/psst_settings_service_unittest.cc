@@ -96,7 +96,7 @@ TEST_F(PsstSettingsServiceUnitTest, DontAllowToSaveMetadataForWrongSchema) {
   ASSERT_FALSE(settings_service()->GetPsstWebsiteSettings(
       file_scheme_origin, first_metadata->user_id));
   const url::Origin brave_scheme_origin =
-      url::Origin::Create(GURL("brave://a.test"));
+      url::Origin::Create(GURL("chrome://a.test"));
   ASSERT_FALSE(settings_service()->GetPsstWebsiteSettings(
       brave_scheme_origin, first_metadata->user_id));
   settings_service()->SetPsstWebsiteSettings(

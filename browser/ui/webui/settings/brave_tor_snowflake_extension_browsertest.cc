@@ -102,7 +102,7 @@ class TorSnowflakeExtensionBrowserTest : public InProcessBrowserTest {
 
 IN_PROC_BROWSER_TEST_F(TorSnowflakeExtensionBrowserTest, InstallFail) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("brave://settings/privacy")));
+                                           GURL("chrome://settings/privacy")));
   auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   content::WebContentsConsoleObserver console_observer(web_contents);
   console_observer.SetPattern("Could not fetch data from the Chrome Web Store");
@@ -115,7 +115,7 @@ IN_PROC_BROWSER_TEST_F(TorSnowflakeExtensionBrowserTest, InstallFail) {
 IN_PROC_BROWSER_TEST_F(TorSnowflakeExtensionBrowserTest,
                        InstallDisableEnableUninstall) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("brave://settings/privacy")));
+                                           GURL("chrome://settings/privacy")));
   auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   EXPECT_FALSE(IsSnowflakeToggled(web_contents));
   EXPECT_TRUE(IsSnowflakeToggleEnabled(web_contents));
@@ -150,7 +150,7 @@ IN_PROC_BROWSER_TEST_F(TorSnowflakeExtensionBrowserTest, CheckPolicy) {
   SetTorDisabledPolicy(true);
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(),
-                                           GURL("brave://settings/privacy")));
+                                           GURL("chrome://settings/privacy")));
   auto* web_contents = browser()->tab_strip_model()->GetActiveWebContents();
   EXPECT_FALSE(IsSnowflakeToggled(web_contents));
   EXPECT_FALSE(IsSnowflakeToggleEnabled(web_contents));

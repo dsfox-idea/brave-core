@@ -212,7 +212,7 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
   VerifyTabSwitcherNotRendered(bubble_view);
 
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://settings")));
+      ui_test_utils::NavigateToURL(browser(), GURL("chrome://settings")));
   OpenPageInfoBubble(browser());
   EXPECT_FALSE(GetBubbleView());
 
