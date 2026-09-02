@@ -6,6 +6,7 @@
 #include "base/feature_list.h"
 #include "brave/browser/metrics/buildflags/buildflags.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
+#include "brave/components/brave_rewards/core/buildflags/buildflags.h"  // Growser-142
 #include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_shields/core/common/pref_names.h"
@@ -95,8 +96,13 @@ IN_PROC_BROWSER_TEST_F(BraveProfilePrefsBrowserTest, MiscBravePrefs) {
   EXPECT_TRUE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
       kBraveWaybackMachineEnabled));
 #endif
+  // Growser-142: rewards is compiled out here, so its location-bar button
+  // pref is not registered with a true default - guarded the way the wallet
+  // and wayback expectations around it already are.
+#if BUILDFLAG(ENABLE_BRAVE_REWARDS)
   EXPECT_TRUE(chrome_test_utils::GetProfile(this)->GetPrefs()->GetBoolean(
       brave_rewards::prefs::kShowLocationBarButton));
+#endif
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   EXPECT_EQ(brave_wallet::GetDefaultEthereumWallet(
                 chrome_test_utils::GetProfile(this)->GetPrefs()),
