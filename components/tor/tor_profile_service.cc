@@ -7,6 +7,7 @@
 
 #include "base/time/time.h"
 #include "brave/components/tor/pref_names.h"
+#include "build/build_config.h"
 #include "components/prefs/pref_registry_simple.h"
 
 namespace tor {
@@ -25,7 +26,17 @@ void TorProfileService::RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   // pref rather than on the commands. This is Brave's own switch (the
   // TorDisabled policy sets the same pref), so every surface that asks
   // IsTorDisabled() is closed at once, including any we did not enumerate.
+  // Growser-157: Tor is on again where a client can actually arrive. growser#78
+  // turned it off because the client is a component and Brave's server answers
+  // a fork 403; we publish our own now (scripts/make-tor-component.py,
+  // deploy/growser-backend), but only for Windows. On the other platforms no
+  // package exists yet, and offering Tor there would be the same promise this
+  // pref was set to stop making.
+#if BUILDFLAG(IS_WIN)
+  registry->RegisterBooleanPref(prefs::kTorDisabled, false);
+#else
   registry->RegisterBooleanPref(prefs::kTorDisabled, true);
+#endif
   registry->RegisterDictionaryPref(prefs::kBridgesConfig);
   registry->RegisterTimePref(prefs::kBuiltinBridgesRequestTime, base::Time());
 }

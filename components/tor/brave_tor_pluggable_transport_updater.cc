@@ -20,17 +20,19 @@
 namespace tor {
 
 #if BUILDFLAG(IS_WIN)
-constexpr const char kComponentName[] = "Brave Pluggable Transports (Windows)";
+// Growser-157: ours, for the same reason as the client component.
+constexpr const char kComponentName[] =
+    "Growser Tor Pluggable Transports (Windows)";
 constexpr const char kTorPluggableTransportComponentId[] =
-    "dnkcahhmfcanmkjhnjejoomdihffoefm";
+    "pbbiomhpfnaklbbjmaciapdcnmhhndcd";
 constexpr const char kComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0IHQS/8g4/"
-    "MBIKh6qQRVQ4auvWHFaqMtCO+8C8VEqNxCxR9BWZb5kL+0QaLOeDjdbzO/YXdFSt/9tRiH4sQ/"
-    "/0XEuxmatKebzKSBBwg30oTveQeGrmtQf0FU3f6iPoPjtujNVmMtG2Azp33NqTH+"
-    "lYwdTSDpXwZwgpt2xxBdEaBwWf/"
-    "gz8OYaAniqu4xKvFpa7ai5ihRhOEP05gGFTJGSB9KbyRo4P6VSJwMZoeGlNxYSJkRr1ZpzU0lN"
-    "L1qWBpBR2LCk8SpDXluT4CZeDWJ/Ux9c5nb1yma/"
-    "uOscVniKvRRohudxoXxwsGSFtowmNLOZWSo49j+k3eBrFjdkzxn6QIDAQAB";
+    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm8HIH0ZArglIkTPmf7iz"
+    "VW9MBEdTlkFzXa2jc1hRdwyVWZ4IlwRyLO9SPmRxp5/gJP6XhAooAqKEeH6dC0Ed"
+    "R1gKdpfxkOL4qNr09zT4fkhi2+nzZqGI1y+A55gF9epNLxrOHsWlw2X7oJX0omJU"
+    "GFEV9yau6RdYicPmAE/QMtk025N8GtCtO0zAILvb9P4gP2T6aTsKGC/UmYYQlnTC"
+    "LEeK82jy1y1cQ03gOE9gOnmTV5L+8rUcWJzP/zeg83ky3iYt2Dgs6kT4zCPILBrX"
+    "WBwE6v2rX5tgz+NIYQ1vzSwY5fJMsRlKuaPswzTXotX+VfsIpRBvMXMeHhOMIhxH"
+    "BwIDAQAB";
 #elif BUILDFLAG(IS_MAC)
 constexpr const char kComponentName[] = "Brave Pluggable Transports (Mac)";
 constexpr const char kTorPluggableTransportComponentId[] =
