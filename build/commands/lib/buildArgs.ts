@@ -50,6 +50,10 @@ export function getBuildArgs(config: Config) {
     is_universal_binary: config.isUniversalBinary,
     target_cpu: config.targetArch,
     is_official_build: config.isOfficialBuild(),
+    // growser (#146): the app icon is red unless this build is the one people
+    // install. Passed explicitly rather than left to the gn default so that
+    // args_generated.gni always records which of the two was built.
+    growser_public_release: config.isPublicRelease(),
     is_debug: config.isDebug(),
     brave_channel: config.channel,
     enable_hangout_services_extension: config.enable_hangout_services_extension,

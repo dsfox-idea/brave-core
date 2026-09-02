@@ -367,6 +367,15 @@ export class Config {
     return this.isAsan() && this.targetOS === 'linux'
   }
 
+  isPublicRelease() {
+    // growser (#146): only the build people install keeps the release icon;
+    // everything else carries the same mark in red so the two cannot be
+    // confused on the taskbar. Opt IN, so a forgotten flag costs a rebuild
+    // rather than shipping a red icon to users. `build-release.ps1
+    // -PublicRelease` is what sets it.
+    return process.env.GROWSER_PUBLIC_RELEASE === '1'
+  }
+
   isOfficialBuild() {
     // growser: an official build wants Brave's service keys (assert
     // brave_services_key != "") and the exact macOS SDK 26.5, and it turns on

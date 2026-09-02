@@ -1,12 +1,12 @@
 diff --git a/chrome/BUILD.gn b/chrome/BUILD.gn
-index a33fe738ba4a36e9419bdd39ecf0f4a68b8a32c8..d478db959eeb6c9d81a8b7a1ddd637b166e5dd46 100644
+index a33fe738ba4a36e9419bdd39ecf0f4a68b8a32c8..e09f053097ab64b208408c93155f0c1a8b7ed427 100644
 --- a/chrome/BUILD.gn
 +++ b/chrome/BUILD.gn
 @@ -195,6 +195,7 @@ if (!is_android && !is_mac) {
          "app/main_dll_loader_win.cc",
          "app/main_dll_loader_win.h",
        ]
-+      sources -= [ "app/chrome_exe.rc", ] sources += [ "//brave/app/brave_exe.rc", ] import("//brave/components/brave_origin/buildflags/buildflags.gni") if (is_brave_origin_branded) { defines += [ "IS_BRAVE_ORIGIN_BRANDED" ] }
++      sources -= [ "app/chrome_exe.rc", ] sources += [ "//brave/app/brave_exe.rc", ] import("//brave/components/brave_origin/buildflags/buildflags.gni") if (is_brave_origin_branded) { defines += [ "IS_BRAVE_ORIGIN_BRANDED" ] } import("//brave/build/growser.gni") if (growser_public_release) { defines += [ "GROWSER_PUBLIC_RELEASE" ] }  # Growser-146
  
        deps += [
          ":chrome_dll",

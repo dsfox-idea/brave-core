@@ -1,0 +1,25 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+declare_args() {
+  # growser (#146): whether this build is the one people install.
+  #
+  # It decides the application icon: true keeps the release mark, false uses
+  # the same mark in RED, so a build the owner is looking at cannot be
+  # confused on the taskbar with the browser everyone else has.
+  #
+  # The default is false, and that is the whole point. A build that forgot the
+  # flag comes out red, so the failure mode is "the owner sees red on a build
+  # that was meant to ship" - noticed immediately, costing one rebuild - and
+  # never "a red icon reached people", which nobody would notice until it was
+  # in the Store. Set it through GROWSER_PUBLIC_RELEASE=1 (config.ts), which
+  # is what `build-release.ps1 -PublicRelease` does.
+  #
+  # A consequence worth knowing before it alarms someone: the published .exe
+  # stays reproducible, but whoever rebuilds it to compare against ours has to
+  # set the flag too. Without it the binaries differ - in the icon, and only
+  # there.
+  growser_public_release = false
+}

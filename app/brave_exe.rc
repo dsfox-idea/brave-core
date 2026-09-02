@@ -38,8 +38,13 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #if defined(OFFICIAL_BUILD)
 #if defined(IS_BRAVE_ORIGIN_BRANDED)
 IDR_MAINFRAME           ICON       "theme\\brave_origin\\win\\brave.ico"
-#else
+#elif defined(GROWSER_PUBLIC_RELEASE)  // Growser-146
 IDR_MAINFRAME           ICON       "theme\\brave\\win\\brave.ico"
+#else
+// Growser-146: not the build people install - the same mark in red, so the two
+// cannot be confused on the taskbar. OFFICIAL_BUILD stopped answering this
+// question at growser#120/#128, when every build of ours became official.
+IDR_MAINFRAME           ICON       "theme\\brave\\win\\brave_development.ico"
 #endif
 // These three are no longer used, but remain as placeholders. (They cannot be
 // removed, or existing shortcuts to the later resources will break.)
