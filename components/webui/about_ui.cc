@@ -15,17 +15,23 @@
 namespace brave {
 
 std::string ReplaceAboutUIChromeURLs(std::string chrome_urls) {
-  // Replace Chrome -> Brave.
+  // Replace Chrome -> Growser.
+  // Growser-154: hardcoded here, so no string catalogue reaches them. Note this
+  // is NOT the page a user sees today: Chromium 152 serves the list from the
+  // chrome_urls WebUI, branded by
+  // chromium_src/components/webui/chrome_urls/resources/app.html.ts.lit_mangler.ts.
+  // Editing this file alone changed nothing on the running page, which is how
+  // that one was found. Corrected here too so the two cannot disagree.
   constexpr std::string_view kChromeHeader = "Chrome URLs";
-  constexpr std::string_view kBraveHeader = "Brave URLs";
+  constexpr std::string_view kBraveHeader = "Growser URLs";
   constexpr std::string_view kChromePagesHeader = "List of Chrome URLs";
-  constexpr std::string_view kBravePagesHeader = "List of Brave URLs";
+  constexpr std::string_view kBravePagesHeader = "List of Growser URLs";
   constexpr std::string_view kChromeInternalPagesHeader =
       "List of chrome://internals pages";
   constexpr std::string_view kBraveInternalPagesHeader =
-      "List of brave://internals pages";
+      "List of growser://internals pages";
   constexpr std::string_view kChromeURLList = ">chrome://";
-  constexpr std::string_view kBraveURLList = ">brave://";
+  constexpr std::string_view kBraveURLList = ">growser://";
 
   RE2::GlobalReplace(&chrome_urls, kChromeHeader, kBraveHeader);
   RE2::GlobalReplace(&chrome_urls, kChromePagesHeader, kBravePagesHeader);
@@ -37,7 +43,7 @@ std::string ReplaceAboutUIChromeURLs(std::string chrome_urls) {
   auto html_lines = base::SplitStringPiece(
       chrome_urls, "\n", base::KEEP_WHITESPACE, base::SPLIT_WANT_ALL);
   constexpr auto kURLsToRemove = base::MakeFixedFlatSet<std::string_view>({
-      "brave://memories",
+      "growser://memories",  // Growser-154
   });
   // URLs in html should be sorted so it's okay to iterate over sorted
   // kURLsToRemove.

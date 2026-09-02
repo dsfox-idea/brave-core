@@ -62,7 +62,7 @@ IN_PROC_BROWSER_TEST_F(BraveSessionRestoreBrowserTest,
   SessionService* const session_service =
       SessionServiceFactory::GetForProfile(browser()->GetProfile());
   ui_test_utils::NavigateToURLBlockUntilNavigationsComplete(
-      browser(), GURL("brave://newtab/"), 1);
+      browser(), GURL("chrome://newtab/"), 1);
   ASSERT_EQ(true, EvalJs(web_contents,
                          R"(
         var textarea = document.createElement('textarea')
@@ -105,7 +105,9 @@ IN_PROC_BROWSER_TEST_F(BraveSessionRestoreBrowserTest,
   SessionService* const session_service =
       SessionServiceFactory::GetForProfile(browser()->GetProfile());
   ui_test_utils::NavigateToURLBlockUntilNavigationsComplete(
-      browser(), GURL("brave://rewards/"), 1);
+      // Growser-154: any WebUI page with a body does for this test, and
+      // rewards is compiled out of this build.
+      browser(), GURL("chrome://version/"), 1);
   ASSERT_EQ(true, EvalJs(web_contents,
                          R"(
         var textarea = document.createElement('textarea')
@@ -129,7 +131,7 @@ IN_PROC_BROWSER_TEST_F(BraveSessionRestoreBrowserTest,
         EXPECT_EQ(windows[0]->tabs[0]->navigations.size(), 2u);
         const auto& serialized_navigation = windows[0]->tabs[0]->navigations[1];
         EXPECT_EQ(serialized_navigation.virtual_url(),
-                  GURL("chrome://rewards/"));
+                  GURL("chrome://version/"));  // Growser-154
 
         // Check encoded data is empty.
         EXPECT_TRUE(serialized_navigation.encoded_page_state().empty());

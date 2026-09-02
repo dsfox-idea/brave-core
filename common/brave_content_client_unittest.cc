@@ -17,7 +17,7 @@ TEST(BraveContentClientTest, AdditionalSchemesTest) {
   content::SetContentClient(&content_client);
   content::ReRegisterContentSchemesForTests();
 
-  const GURL sync_url("brave://sync");
+  const GURL sync_url("growser://sync");
   EXPECT_TRUE(sync_url.is_valid());
   EXPECT_TRUE(sync_url.has_host());
   EXPECT_EQ("sync", sync_url.host());

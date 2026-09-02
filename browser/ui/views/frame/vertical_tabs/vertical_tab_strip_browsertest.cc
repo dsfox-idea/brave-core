@@ -850,7 +850,7 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripBrowserTest,
   // Navigate to a real URL so the first tab is restorable (about:blank tabs
   // are not saved by TabRestoreService).
   ASSERT_TRUE(
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://version/")));
+      ui_test_utils::NavigateToURL(browser(), GURL("chrome://version/")));
 
   // Create 3 tabs total.
   AppendTab(browser());

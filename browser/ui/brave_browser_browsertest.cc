@@ -76,7 +76,7 @@ void AddBookmarkNode(Profile* profile) {
 }  // namespace
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserBrowserTest, NTPFaviconTest) {
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("brave://newtab/")));
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("chrome://newtab/")));
 
   tabs::TabInterface* const tab_interface =
       browser()->tab_strip_model()->GetActiveTab();

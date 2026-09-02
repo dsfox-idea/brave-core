@@ -425,7 +425,7 @@ IN_PROC_BROWSER_TEST_F(DeAmpBrowserTest, CanonicalJSRedirectsToAmp) {
 
 IN_PROC_BROWSER_TEST_F(DeAmpBrowserTest, NonHttpScheme) {
   TogglePref(true);
-  SetRequestHandler(kTestAmpPage, Amp(GURL("brave://settings")));
+  SetRequestHandler(kTestAmpPage, Amp(GURL("chrome://settings")));
   StartServer();
 
   NavigateToURLAndWaitForRedirects(kTestAmpPage, kTestAmpPage);

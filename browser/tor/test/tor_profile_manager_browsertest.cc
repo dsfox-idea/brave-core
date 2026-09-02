@@ -506,7 +506,7 @@ IN_PROC_BROWSER_TEST_F(TorProfileManagerTest, CanShare) {
 
   Browser* tor_browser =
       SwitchToTorProfile(browser()->GetProfile(), GetTorLauncherFactory(), 1,
-                         GURL("brave://newtab"));
+                         GURL("chrome://newtab"));
   Profile* tor_profile = tor_browser->GetProfile();
 
   auto* tor_contents = tor_browser->tab_strip_model()->GetActiveWebContents();
@@ -519,7 +519,7 @@ IN_PROC_BROWSER_TEST_F(TorProfileManagerTest, CanShare) {
   EXPECT_EQ(false, content::EvalJs(tor_contents, kCheckNavigatorShare));
 
   auto* regular_contents =
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://newtab"));
+      ui_test_utils::NavigateToURL(browser(), GURL("chrome://newtab"));
   // Enabled in regular windows (except Linux, where it is not implemented).
   EXPECT_EQ(kDefaultValue,
             content::EvalJs(regular_contents, kCheckNavigatorShare));
@@ -550,7 +550,7 @@ IN_PROC_BROWSER_TEST_F(TorProfileManagerTest, CanWebRTC) {
 
   Browser* tor_browser =
       SwitchToTorProfile(browser()->GetProfile(), GetTorLauncherFactory(), 1,
-                         GURL("brave://newtab"));
+                         GURL("chrome://newtab"));
   Profile* tor_profile = tor_browser->GetProfile();
 
   auto* tor_contents = tor_browser->tab_strip_model()->GetActiveWebContents();
@@ -559,7 +559,7 @@ IN_PROC_BROWSER_TEST_F(TorProfileManagerTest, CanWebRTC) {
   EXPECT_EQ(false, content::EvalJs(tor_contents, kCheckWebRTC));
 
   auto* regular_contents =
-      ui_test_utils::NavigateToURL(browser(), GURL("brave://newtab"));
+      ui_test_utils::NavigateToURL(browser(), GURL("chrome://newtab"));
   EXPECT_EQ(true, content::EvalJs(regular_contents, kCheckWebRTC));
 
   EXPECT_CALL(*GetTorLauncherFactory(), KillTorProcess);

@@ -112,7 +112,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadChromeURL) {
   };
 
   std::vector<std::string> schemes{
-      "brave://",
+      "growser://",
       "chrome://",
   };
 
@@ -128,7 +128,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadChromeURL) {
                                       ->GetFeatures()
                                       .location_bar_model()
                                       ->GetFormattedFullURL()),
-                ("brave://" + page));
+                ("growser://" + page));
       EXPECT_EQ(contents->GetController()
                     .GetLastCommittedEntry()
                     ->GetVirtualURL()
@@ -147,7 +147,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadCustomBravePages) {
   };
 
   std::vector<std::string> schemes{
-      "brave://",
+      "growser://",
       "chrome://",
   };
 
@@ -163,7 +163,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadCustomBravePages) {
                                       ->GetFeatures()
                                       .location_bar_model()
                                       ->GetFormattedFullURL()),
-                ("brave://" + page));
+                ("growser://" + page));
       EXPECT_EQ(contents->GetController()
                     .GetLastCommittedEntry()
                     ->GetVirtualURL()
@@ -179,7 +179,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadCustomBravePages) {
 IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadAboutHost) {
   std::vector<std::string> schemes{
       "chrome://",
-      "brave://",
+      "growser://",
   };
 
   for (const std::string& scheme : schemes) {
@@ -193,7 +193,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadAboutHost) {
                                     ->GetFeatures()
                                     .location_bar_model()
                                     ->GetFormattedFullURL()),
-              "brave://about");
+              "growser://about");
     EXPECT_EQ(contents->GetController()
                   .GetLastCommittedEntry()
                   ->GetVirtualURL()
@@ -206,7 +206,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadAboutHost) {
 }
 IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, RewriteChromeSync) {
   std::vector<std::string> schemes{
-      "brave://",
+      "growser://",
       "chrome://",
   };
 
@@ -221,18 +221,22 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, RewriteChromeSync) {
                                     ->GetFeatures()
                                     .location_bar_model()
                                     ->GetFormattedFullURL()),
-              "brave://sync");
+              "growser://sync");
     EXPECT_EQ(
         contents->GetController().GetLastCommittedEntry()->GetVirtualURL(),
         GURL("chrome://sync"));
+    // Growser-154: sync has no section in this browser's settings, so the
+    // rewrite lands on the settings root rather than on a braveSync subpage
+    // that does not exist. The rewrite itself is what this test is about, and
+    // it still happens.
     EXPECT_EQ(contents->GetController().GetLastCommittedEntry()->GetURL(),
-              GURL("chrome://settings/braveSync"));
+              GURL("chrome://settings/"));
   }
 }
 
 IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, RewriteAdblock) {
   std::vector<std::string> schemes{
-      "brave://",
+      "growser://",
       "chrome://",
   };
 
@@ -245,7 +249,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, RewriteAdblock) {
                                     ->GetFeatures()
                                     .location_bar_model()
                                     ->GetFormattedFullURL()),
-              "brave://settings/shields/filters");
+              "growser://settings/shields/filters");
     EXPECT_EQ(browser()->GetFeatures().location_bar_model()->GetURL(),
               GURL("chrome://settings/shields/filters"));
     EXPECT_EQ(

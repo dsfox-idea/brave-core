@@ -211,7 +211,7 @@ class AdblockCustomResourcesTest : public AdBlockServiceTest {
 IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_Add) {
   EnableDeveloperMode(true);
 
-  NavigateToURL(GURL("brave://settings/shields/filters"));
+  NavigateToURL(GURL("chrome://settings/shields/filters"));
 
   constexpr const char kContent[] = "window.test = 'custom-script'";
 
@@ -234,7 +234,7 @@ IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_Add) {
 IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_Edit) {
   EnableDeveloperMode(true);
 
-  NavigateToURL(GURL("brave://settings/shields/filters"));
+  NavigateToURL(GURL("chrome://settings/shields/filters"));
 
   base::test::TestFuture<
       brave_shields::AdBlockCustomResourceProvider::ErrorCode>
@@ -274,7 +274,7 @@ IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_Edit) {
 IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_Delete) {
   EnableDeveloperMode(true);
 
-  NavigateToURL(GURL("brave://settings/shields/filters"));
+  NavigateToURL(GURL("chrome://settings/shields/filters"));
 
   base::test::TestFuture<
       brave_shields::AdBlockCustomResourceProvider::ErrorCode>
@@ -304,7 +304,7 @@ IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_Delete) {
 IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_ExecCustomScriptlet) {
   EnableDeveloperMode(true);
 
-  NavigateToURL(GURL("brave://settings/shields/filters"));
+  NavigateToURL(GURL("chrome://settings/shields/filters"));
 
   constexpr const char kContent[] = "window.test = 'custom-script'";
 
@@ -340,7 +340,7 @@ IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_NameConflicts) {
   UpdateAdBlockResources(base::ReplaceStringPlaceholders(
       kBraveFixResource, {base::Base64Encode(kBraveFix)}, nullptr));
 
-  NavigateToURL(GURL("brave://settings/shields/filters"));
+  NavigateToURL(GURL("chrome://settings/shields/filters"));
 
   constexpr const char kContent[] = "window.test = 'custom-script'";
 
@@ -411,7 +411,7 @@ IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_TwoProfiles) {
 
   UpdateAdBlockInstanceWithRules("a.com##+js(user-1)");
 
-  NavigateToURL(GURL("brave://settings/shields/filters"));
+  NavigateToURL(GURL("chrome://settings/shields/filters"));
 
   ProfileManager* profile_manager = g_browser_process->profile_manager();
   const base::FilePath& profile_path =
@@ -423,7 +423,7 @@ IN_PROC_BROWSER_TEST_F(AdblockCustomResourcesTest, MAYBE_TwoProfiles) {
   auto* second_web_contents =
       second_browser->tab_strip_model()->GetActiveWebContents();
   content::NavigateToURLBlockUntilNavigationsComplete(
-      second_web_contents, GURL("brave://settings/shields/filters"), 1, true);
+      second_web_contents, GURL("chrome://settings/shields/filters"), 1, true);
 
   base::test::TestFuture<
       brave_shields::AdBlockCustomResourceProvider::ErrorCode>
