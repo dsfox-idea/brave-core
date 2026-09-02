@@ -17,8 +17,13 @@ bool UpdateEnabled() {
   // growser (#76): a build we hand to a store must not update itself - the
   // store owns updates for what it distributes, and a second update path
   // either fights it or silently replaces a package it believes it controls.
-  // This is the runtime gate; on Windows `enable_updater` is the compile gate
-  // and comes off with it.
+  // This is the runtime gate. On Windows `enable_updater` decides whether the
+  // updater is compiled in - but NOT whether something still tries to talk to
+  // one: growser#161 found the About page doing exactly that, because its
+  // updater is picked by is_official_build in
+  // chrome/browser/ui/webui/help/BUILD.gn. Nothing on Windows calls this
+  // function at all; it is macOS that consults it (sparkle_glue.mm). Do not
+  // read a false gate off this comment again - check the call sites.
   return false;
 #else
   // growser (#35): enable Sparkle auto-update in our non-official builds.

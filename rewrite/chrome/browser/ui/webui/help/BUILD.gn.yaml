@@ -5,13 +5,28 @@
 
 substitutions:
   - description: |
-      Build `version_updater_win.cc` for every official build, not just branded
+      growser (#161): make the flag that says we ship an updater available here
+    regex:
+      re_pattern: 'import\("//chrome/common/features\.gni"\)'
+      replace: 'import("//brave/browser/update/buildflags/buildflags.gni")  # Growser-161\nimport("//chrome/common/features.gni")'
+  - description: |
+      Build `version_updater_win.cc` for every official build that ships an
+      updater, not just branded ones
 
       Brave is official but not `is_chrome_branded`, and still needs the real
       Windows updater rather than the `version_updater_basic.cc` no-op.
+
+      growser (#161): being official is not proof of having an updater, though.
+      Ours ships none when it is built for a store
+      (`growser_enable_self_update=false`, growser#76), while
+      `version_updater_win.cc` calls `BeginUpdateCheck` unconditionally - so
+      the About page greeted every Store user with a failed update check
+      (`0x80004005`) for a mechanism the build deliberately leaves out.
+      `version_updater_basic.cc` answers `DISABLED` and shows nothing, which is
+      the truth when the store owns updates.
     regex:
       re_pattern: '(if \(is_win\) \{\s+if \()is_chrome_branded(\) \{)'
-      replace: '\1is_official_build\2'
+      replace: '\1is_official_build && growser_enable_self_update\2  # Growser-161'
   - description: |
       Add dependency on group that brings in deps introduced by includes in
       `brave/chromium_src/chrome/browser/ui/webui/help/version_updater.h`

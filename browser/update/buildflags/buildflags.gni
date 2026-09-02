@@ -13,7 +13,15 @@ declare_args() {
   # replaces a package the store believes it controls.
   #
   # Turning this off is not the whole job on Windows - `enable_updater` must
-  # come off too, since that decides whether the updater is even compiled in.
-  # This flag is the runtime gate; that one is the compile gate.
+  # come off too, since that decides whether the updater itself is compiled in.
+  #
+  # growser (#161): and `enable_updater` is NOT the compile gate for everything
+  # that talks to an updater, which this comment used to claim. The About
+  # page's updater is chosen in chrome/browser/ui/webui/help/BUILD.gn by
+  # is_official_build alone, so going official (#120/#128) pulled in
+  # version_updater_win.cc - which calls Omaha unconditionally - and every
+  # Store user was shown a failed update check. That BUILD.gn now consults
+  # this flag as well. Expect more places that assume "official implies an
+  # updater"; they are found by the artifact, not by reading.
   growser_enable_self_update = true
 }
