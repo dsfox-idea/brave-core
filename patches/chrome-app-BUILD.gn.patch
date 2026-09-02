@@ -1,12 +1,12 @@
 diff --git a/chrome/app/BUILD.gn b/chrome/app/BUILD.gn
-index c87ac7038e1fb42731344a5c143fbe7f62f4f746..153ec8c24d70d9a4a1255174457ccf4a7ed879f0 100644
+index c87ac7038e1fb42731344a5c143fbe7f62f4f746..62a477ae35ca6b135fba9f2f66b8df811f8118e0 100644
 --- a/chrome/app/BUILD.gn
 +++ b/chrome/app/BUILD.gn
 @@ -61,6 +61,7 @@ source_set("chrome_dll_resources") {
        "//build:branding_buildflags",
        "//printing/buildflags",
      ]
-+    import("//brave/components/brave_origin/buildflags/buildflags.gni") if (is_brave_origin_branded) { defines = [ "IS_BRAVE_ORIGIN_BRANDED" ] }
++    import("//brave/components/brave_origin/buildflags/buildflags.gni") if (is_brave_origin_branded) { defines = [ "IS_BRAVE_ORIGIN_BRANDED" ] } import("//brave/build/growser.gni") if (growser_public_release) { if (defined(defines)) { defines += [ "GROWSER_PUBLIC_RELEASE" ] } else { defines = [ "GROWSER_PUBLIC_RELEASE" ] } }  # Growser-146
    }
  }
  
