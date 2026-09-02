@@ -1,8 +1,8 @@
 diff --git a/chrome/app/chrome_dll.rc b/chrome/app/chrome_dll.rc
-index 02e08e0d4904342e50d3af2e6465cbc0f8bc1c6b..95509e9e7037a41c344753162de6d4d9a282e442 100644
+index 02e08e0d4904342e50d3af2e6465cbc0f8bc1c6b..e0645b7bcc5141a87f0ce0c4ad6475eece72e387 100644
 --- a/chrome/app/chrome_dll.rc
 +++ b/chrome/app/chrome_dll.rc
-@@ -166,6 +166,26 @@ END
+@@ -166,6 +166,37 @@ END
  // the icon from the current module). We can perhaps work around this in the
  // future to get the icon from the .exe, which would save a copy.
  
@@ -12,8 +12,19 @@ index 02e08e0d4904342e50d3af2e6465cbc0f8bc1c6b..95509e9e7037a41c344753162de6d4d9
 +IDR_SXS             ICON                        "theme\brave_origin\win\brave_canary.ico"
 +IDR_X004_DEV        ICON                        "theme\brave_origin\win\brave_dev.ico"
 +IDR_X005_BETA       ICON                        "theme\brave_origin\win\brave_beta.ico"
-+#else
++#elif defined(GROWSER_PUBLIC_RELEASE)  // Growser-146
 +IDR_MAINFRAME       ICON                        "theme\brave\win\brave.ico"
++IDR_SXS             ICON                        "theme\brave\win\brave_canary.ico"
++IDR_X004_DEV        ICON                        "theme\brave\win\brave_dev.ico"
++IDR_X005_BETA       ICON                        "theme\brave\win\brave_beta.ico"
++#else
++// Growser-146: THIS is the icon a running window shows on the taskbar.
++// ChromeViewsDelegate::GetDefaultWindowIcon -> GetAppIcon() loads IDR_MAINFRAME
++// from the CURRENT MODULE, which is chrome.dll - the copy above the comment at
++// the top of this block exists for exactly that reason. Colouring only the
++// .exe left every running window green while the file and its shortcuts were
++// red, which is the state this file was found in.
++IDR_MAINFRAME       ICON                        "theme\brave\win\brave_development.ico"
 +IDR_SXS             ICON                        "theme\brave\win\brave_canary.ico"
 +IDR_X004_DEV        ICON                        "theme\brave\win\brave_dev.ico"
 +IDR_X005_BETA       ICON                        "theme\brave\win\brave_beta.ico"
@@ -29,7 +40,7 @@ index 02e08e0d4904342e50d3af2e6465cbc0f8bc1c6b..95509e9e7037a41c344753162de6d4d9
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  IDR_MAINFRAME       ICON                        "theme\google_chrome\win\chrome.ico"
  IDR_SXS             ICON                        "theme\google_chrome\win\chrome_sxs.ico"
-@@ -176,6 +196,7 @@ IDR_MAINFRAME       ICON                        "theme\google_chrome\google_chro
+@@ -176,6 +207,7 @@ IDR_MAINFRAME       ICON                        "theme\google_chrome\google_chro
  #else
  IDR_MAINFRAME       ICON                        "theme\chromium\win\chromium.ico"
  #endif

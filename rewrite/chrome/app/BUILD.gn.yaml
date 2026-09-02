@@ -26,3 +26,19 @@ substitutions:
       replace:
         '\1\n    import("//brave/components/brave_origin/buildflags/buildflags.gni")
         if (is_brave_origin_branded) { defines = [ "IS_BRAVE_ORIGIN_BRANDED" ] }'
+
+  # growser (#146): the same define, for the same reason the comment above
+  # gives - this .rc is where a RUNNING window gets its icon, so it is the copy
+  # a person actually sees. Colouring only the .exe left every window green
+  # while the file and its shortcuts were red. Appended after the Brave line
+  # because that line is what this anchors on, and `defines` may not exist yet
+  # when we are not origin-branded.
+  - description: 'Add GROWSER_PUBLIC_RELEASE define to chrome_dll_resources.'
+    regex:
+      re_pattern:
+        '(if \(is_brave_origin_branded\) \{ defines = \[ "IS_BRAVE_ORIGIN_BRANDED"
+        \] \})'
+      replace:
+        '\1 import("//brave/build/growser.gni") if (growser_public_release) {
+        if (defined(defines)) { defines += [ "GROWSER_PUBLIC_RELEASE" ] } else {
+        defines = [ "GROWSER_PUBLIC_RELEASE" ] } }  # Growser-146'
