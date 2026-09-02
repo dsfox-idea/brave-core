@@ -379,6 +379,16 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripBrowserTest, MinHeight) {
 }
 
 IN_PROC_BROWSER_TEST_F(VerticalTabStripBrowserTest, VisualState) {
+  // Growser-156: the insets below assume the sidebar sits on the OTHER side
+  // from the vertical tabs, which is upstream's default - growser starts both
+  // on the left (brave_profile_prefs.cc). With them on the same side
+  // UpdateBorder() deliberately keeps the full margin, so the expanded state
+  // measures 1 rather than -2 and the difference this test is about - a border
+  // only while floating - stops being visible at all. So it asks for the
+  // layout it measures, the way the sidebar tests do since growser#151.
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      prefs::kSidePanelHorizontalAlignment, true);
+
   ToggleVerticalTabStrip();
 
   // Pre-condition: Floating mode is enabled by default.
