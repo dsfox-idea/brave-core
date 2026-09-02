@@ -29,6 +29,7 @@
 #include "ui/base/clipboard/clipboard.h"
 #include "ui/base/clipboard/scoped_clipboard_writer.h"
 #include "ui/base/clipboard/test/clipboard_test_util.h"
+#include "ui/base/clipboard/test/test_clipboard.h"  // Growser-156
 #include "ui/strings/grit/ui_strings.h"
 #include "ui/views/controls/textfield/textfield.h"
 #include "url/gurl.h"
@@ -55,6 +56,24 @@ testing::AssertionResult VerifyTemplateURLServiceLoad(
 
 class BraveOmniboxViewViewsTest : public InProcessBrowserTest {
  public:
+  // Growser-156: these tests share one machine-wide clipboard, and the launcher
+  // runs several of them at once - so a copy test's write lands between this
+  // test's write and its paste. It was invisible while the copied URL used a
+  // scheme this build does not have (pasting brave://version searched for it,
+  // which is what PasteAndSearchTest expects anyway); once growser#154 made the
+  // scheme real, pasting it navigated and the test failed - reproducibly, in
+  // both of two runs of this suite alone. A per-process clipboard removes the
+  // sharing rather than the symptom.
+  void SetUpOnMainThread() override {
+    InProcessBrowserTest::SetUpOnMainThread();
+    ui::TestClipboard::CreateForCurrentThread();
+  }
+
+  void TearDownOnMainThread() override {
+    ui::Clipboard::DestroyClipboardForCurrentThread();
+    InProcessBrowserTest::TearDownOnMainThread();
+  }
+
   LocationBarView* location_bar_view() {
     auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser());
     return browser_view->toolbar()->location_bar_view();
@@ -214,8 +233,14 @@ IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsTest, CopyCleanURLToClipboardTest) {
   SetSanitizerRules(R"([
     { "include": [ "*://*/*"], "params": ["utm_content"] }
   ])");
+  // Growser-155: this build bundles Brave's published clean-urls data as a
+  // floor (docs/components.md), and one of its rules strips brave_testing1
+  // and brave_testing2 on exactly this page - upstream never sees that,
+  // because the component does not install in its tests. That rule excludes
+  // the "exempted" path, so the test keeps its host and its meaning: the
+  // only rule that applies is the one it sets itself.
   const std::string test_url(
-      "https://dev-pages.bravesoftware.com/clean-urls/"
+      "https://dev-pages.bravesoftware.com/clean-urls/exempted/"
       "?brave_testing1=foo&brave_testing2=bar&brave_testing3=keep&&;b&"
       "d&utm_content=removethis&e=&f=g&=end");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL(test_url)));
@@ -227,7 +252,7 @@ IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsTest, CopyCleanURLToClipboardTest) {
       clipboard, ui::ClipboardBuffer::kCopyPaste,
       /* data_dst = */ nullptr);
   EXPECT_EQ(text_from_clipboard,
-            "https://dev-pages.bravesoftware.com/clean-urls/"
+            "https://dev-pages.bravesoftware.com/clean-urls/exempted/"
             "?brave_testing1=foo&brave_testing2=bar&brave_testing3=keep&&;b&d&"
             "e=&f=g&=end");
 }

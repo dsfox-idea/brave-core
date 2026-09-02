@@ -227,8 +227,18 @@ IN_PROC_BROWSER_TEST_P(OnionLocationHeaderNavigationThrottleBrowserTest,
   EXPECT_FALSE(onion_location_view->GetVisible());
 }
 
+// Growser-156: growser#78 disables Tor in this build - no Tor client can reach
+// a fork, so nothing launches and every assertion after the first one is noise
+// (a launch that never happens, a run loop that times out, a component that
+// cannot install). These tests describe the browser growser#157 means to ship
+// again; until then they say so instead of failing. The macro has to expand in
+// the test body: GTEST_SKIP() returns from the function it sits in, so hidden
+// in a helper it would mark the test skipped and then carry on running it.
+#define SKIP_IF_TOR_DISABLED()                                                if (TorProfileServiceFactory::IsTorDisabled(browser()->GetProfile())) {       GTEST_SKIP() << "Tor is disabled in this build (growser#78); "                              "growser#157 turns it back on.";                          }
+
 IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest,
                        OnionDomain) {
+  SKIP_IF_TOR_DISABLED();
   content::WebContents* web_contents =
       browser()->tab_strip_model()->GetActiveWebContents();
   content::TestNavigationObserver nav_observer(web_contents);
@@ -251,6 +261,9 @@ IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest,
 
 IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest,
                        OnionDomain_TorWindow) {
+  // Growser-156: OpenTorWindow() hands back nullptr with Tor off, and the
+  // next line dereferences it - a crash, not a failure.
+  SKIP_IF_TOR_DISABLED();
   auto* tor_browser = OpenTorWindow();
   ASSERT_TRUE(ui_test_utils::NavigateToURL(tor_browser, GURL(kTestOnionURL)));
   auto* web_contents = tor_browser->tab_strip_model()->GetActiveWebContents();
@@ -338,6 +351,9 @@ IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, HTTPHost) {
 }
 
 IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, ErrorPage) {
+  // Growser-156: OpenTorWindow() hands back nullptr with Tor off, and the
+  // next line dereferences it - a crash, not a failure.
+  SKIP_IF_TOR_DISABLED();
   auto* tor_browser = OpenTorWindow();
   const GURL url = test_server()->GetURL(kTestErrorPage);
   const GURL error_url("https://google.goom/");
@@ -358,6 +374,7 @@ IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, ErrorPage) {
 }
 
 IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, History) {
+  SKIP_IF_TOR_DISABLED();
   content::WebContents* web_contents =
       browser()->tab_strip_model()->GetActiveWebContents();
   {
@@ -402,6 +419,7 @@ IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, History) {
 }
 
 IN_PROC_BROWSER_TEST_F(OnionLocationNavigationThrottleBrowserTest, Download) {
+  SKIP_IF_TOR_DISABLED();
   const GURL url = test_server()->GetURL("/onion");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
   content::WebContents* web_contents =

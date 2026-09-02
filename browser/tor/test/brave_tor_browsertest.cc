@@ -227,7 +227,17 @@ class BraveTorBrowserTest : public InProcessBrowserTest {
   }
 };
 
+// Growser-156: growser#78 disables Tor in this build - no Tor client can reach
+// a fork, so nothing launches and every assertion after the first one is noise
+// (a launch that never happens, a run loop that times out, a component that
+// cannot install). These tests describe the browser growser#157 means to ship
+// again; until then they say so instead of failing. The macro has to expand in
+// the test body: GTEST_SKIP() returns from the function it sits in, so hidden
+// in a helper it would mark the test skipped and then carry on running it.
+#define SKIP_IF_TOR_DISABLED()                                                if (TorProfileServiceFactory::IsTorDisabled(browser()->GetProfile())) {       GTEST_SKIP() << "Tor is disabled in this build (growser#78); "                              "growser#157 turns it back on.";                          }
+
 IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest, OpenCloseDisableTorWindow) {
+  SKIP_IF_TOR_DISABLED();
   EXPECT_FALSE(
       TorProfileServiceFactory::IsTorDisabled(browser()->GetProfile()));
   DownloadTorClient();
@@ -464,6 +474,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorWithCustomProfileBrowserTest, Autofill) {
 #define MAYBE_PRE_ResetBridges PRE_ResetBridges
 #endif
 IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest, MAYBE_PRE_ResetBridges) {
+  SKIP_IF_TOR_DISABLED();
   EXPECT_FALSE(
       TorProfileServiceFactory::IsTorDisabled(browser()->GetProfile()));
   DownloadTorClient();
@@ -497,6 +508,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest, MAYBE_PRE_ResetBridges) {
 #define MAYBE_ResetBridges ResetBridges
 #endif
 IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest, MAYBE_ResetBridges) {
+  SKIP_IF_TOR_DISABLED();
   // Tor is enabled and bridges are disabled check pluggable transports are
   // removed.
   EXPECT_TRUE(CheckComponentExists(tor::kTorClientComponentId));
@@ -504,6 +516,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest, MAYBE_ResetBridges) {
 }
 
 IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest, HttpAllowlistIsolation) {
+  SKIP_IF_TOR_DISABLED();
   // Normal window
   Profile* main_profile = browser()->GetProfile();
   auto* main_storage_partition = main_profile->GetDefaultStoragePartition();
