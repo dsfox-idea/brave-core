@@ -13,10 +13,6 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/feature_list.h"
-#include "base/functional/bind.h"
-#include "base/location.h"
-#include "base/no_destructor.h"
-#include "base/task/sequenced_task_runner.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
@@ -32,58 +28,9 @@
 #include "components/tabs/public/tab_group.h"
 #include "ui/views/view_utils.h"
 
-namespace {
+BraveTabDragController::BraveTabDragController() = default;
 
-// Growser-165: the mark left by MarkNextDragAsStartedFromSidebar(), waiting
-// for the next instance's constructor to take it.
-BraveTabDragController::DragEndedCallback& PendingSidebarDragCallback() {
-  static base::NoDestructor<BraveTabDragController::DragEndedCallback> callback;
-  return *callback;
-}
-
-}  // namespace
-
-// static
-void BraveTabDragController::MarkNextDragAsStartedFromSidebar(
-    DragEndedCallback on_ended) {
-  PendingSidebarDragCallback() = std::move(on_ended);
-}
-
-BraveTabDragController::BraveTabDragController()
-    : sidebar_drag_ended_(std::move(PendingSidebarDragCallback())) {}
-
-BraveTabDragController::~BraveTabDragController() {
-  // Growser-165: a session can go away without EndDrag() - a window closing
-  // under it, for instance. The sidebar still has to hear, or it hosts nothing
-  // for the rest of this browser's life. Nothing was dropped anywhere, so the
-  // tab keeps its pin.
-  if (sidebar_drag_ended_) {
-    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
-        FROM_HERE,
-        base::BindOnce(std::move(sidebar_drag_ended_), /*unpin=*/false));
-  }
-}
-
-// Growser-165
-void BraveTabDragController::EndDrag(EndDragReason reason) {
-  // Both of these have to be read before the base call: it finishes the
-  // session, resets the state behind them, and may delete `this`.
-  //
-  // A tear-off keeps the pin - the tab lands in the new window's own sidebar -
-  // and so does a cancelled drag, which puts the tab back where it started.
-  // Everything else means the tab was dropped on a tab strip and is an
-  // ordinary tab now.
-  const bool unpin =
-      reason != EndDragReason::kCancel && !is_dragging_new_browser_;
-  DragEndedCallback on_ended = std::move(sidebar_drag_ended_);
-
-  TabDragController::EndDrag(reason);
-
-  if (on_ended) {
-    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
-        FROM_HERE, base::BindOnce(std::move(on_ended), unpin));
-  }
-}
+BraveTabDragController::~BraveTabDragController() = default;
 
 BraveTabDragController::Liveness BraveTabDragController::Init(
     TabDragContext* source_context,

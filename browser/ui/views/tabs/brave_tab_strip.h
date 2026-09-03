@@ -53,21 +53,6 @@ class BraveTabStrip : public TabStrip {
   // unless the sidebar hosts pinned tabs (horizontal tabs only).
   int GetPinnedTabCountHostedBySidebar() const;
 
-  // Growser-165
-  // Take over a drag that began on a pinned tab's entry in the sidebar. From
-  // here it is an ordinary tab drag - the tear-off window, the other windows'
-  // strips and the drag image all come with TabDragController, and keep
-  // working across Chromium bumps because none of it is ours.
-  //
-  // The caller has to have stopped the sidebar hosting this tab first, or the
-  // strip lays it out closed and there is nothing to pick up. `on_ended` runs
-  // when the drag finishes, saying whether the tab should lose its pin.
-  // Returns whether a drag session actually started; if it did not, `on_ended`
-  // is dropped rather than kept for somebody else's drag.
-  bool StartDragFromSidebar(Tab* tab,
-                            const gfx::Point& point_in_screen,
-                            base::OnceCallback<void(bool unpin)> on_ended);
-
   // TabStrip:
   void ShowHover(Tab* tab, TabStyle::ShowHoverStyle style) override;
   void HideHover(Tab* tab, TabStyle::HideHoverStyle style) override;

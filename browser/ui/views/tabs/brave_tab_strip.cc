@@ -30,7 +30,6 @@
 #include "brave/browser/ui/views/tabs/brave_tab.h"
 #include "brave/browser/ui/views/tabs/brave_tab_container.h"
 #include "brave/browser/ui/views/tabs/brave_tab_hover_card_controller.h"
-#include "brave/browser/ui/views/tabs/dragging/tab_drag_controller.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/themes/theme_service.h"
@@ -39,8 +38,6 @@
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/tabs/features.h"
 #include "chrome/browser/ui/tabs/tab_group_model.h"
-#include "chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h"
-#include "ui/events/base_event_utils.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "chrome/browser/ui/views/tabs/shared/tab_strip_observer.h"
 #include "chrome/browser/ui/views/tabs/tab.h"
@@ -60,7 +57,6 @@
 #include "ui/gfx/color_utils.h"
 #include "ui/views/layout/flex_layout.h"
 #include "ui/views/view_utils.h"
-#include "ui/views/widget/widget.h"
 
 #if BUILDFLAG(ENABLE_CONTAINERS)
 #include "brave/browser/containers/containers_service_factory.h"
@@ -450,51 +446,6 @@ TabContainer* BraveTabStrip::GetTabContainerForTesting() {
 
 BraveTabContainer* BraveTabStrip::GetBraveTabContainer() {
   return views::AsViewClass<BraveTabContainer>(tab_container_.get());
-}
-
-// Growser-165
-bool BraveTabStrip::StartDragFromSidebar(
-    Tab* tab,
-    const gfx::Point& point_in_screen,
-    base::OnceCallback<void(bool unpin)> on_ended) {
-  if (!tab || IsAnimatingInTabStrip()) {
-    return false;
-  }
-
-  // The grab point is the tab's middle, not where the pointer really is: the
-  // pointer is outside the strip altogether, and TabDragController::Init()
-  // reads this as an offset INSIDE the source view. A point from over the
-  // sidebar would hold the tab by a corner far from the cursor.
-  const gfx::Point offset = tab->GetLocalBounds().CenterPoint();
-  const ui::MouseEvent press(ui::EventType::kMousePressed, offset,
-                             point_in_screen, ui::EventTimeForNow(),
-                             ui::EF_LEFT_MOUSE_BUTTON,
-                             ui::EF_LEFT_MOUSE_BUTTON);
-  BraveTabDragController::MarkNextDragAsStartedFromSidebar(std::move(on_ended));
-  MaybeStartDrag(tab, press, GetSelectionModel());
-
-  // MaybeStartDrag says nothing; the session either exists now or it does not,
-  // and the caller has to put the sidebar back if it does not.
-  if (!TabDragController::IsActive()) {
-    // No controller was constructed, so nothing took the mark. Take it back,
-    // or the next ordinary drag would inherit it.
-    BraveTabDragController::MarkNextDragAsStartedFromSidebar({});
-    return false;
-  }
-
-  // A session exists; what makes it move is another matter. TabDragController
-  // takes capture itself only for a touch drag (Init(): `if (event_source ==
-  // kTouch)`) - a mouse drag is driven by the real press having made the tab
-  // the widget's mouse handler, so that every later OnMouseDragged reaches
-  // Tab -> TabStrip::ContinueDrag. Our press was synthesized and the pointer
-  // is over the sidebar, so nothing ever pointed the widget at this tab.
-  // Without this line the drag exists, answers IsActive(), and stays in
-  // kNotStarted forever while the window sits under a live session that
-  // nothing can end.
-  if (views::Widget* widget = GetWidget()) {
-    widget->SetCapture(tab);
-  }
-  return true;
 }
 
 // Growser-140

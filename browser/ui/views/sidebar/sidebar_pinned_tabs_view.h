@@ -11,7 +11,6 @@
 #include <vector>
 
 #include "base/memory/raw_ptr.h"
-#include "base/memory/weak_ptr.h"
 #include "brave/browser/ui/views/sidebar/sidebar_item_drag_context.h"
 #include "brave/browser/ui/views/sidebar/sidebar_pinned_tab_view.h"
 #include "chrome/browser/ui/tabs/tab_strip_model_observer.h"
@@ -24,10 +23,6 @@
 class BraveBrowser;
 class BraveTabStrip;
 class Tab;
-
-namespace content {
-class WebContents;
-}  // namespace content
 
 // The pinned tabs the sidebar hosts, at the top of the sidebar.
 //
@@ -64,7 +59,6 @@ class SidebarPinnedTabsView : public views::View,
   // that only looks at the model afterwards cannot say whether a drag was
   // never recognised or was recognised and dropped nowhere.
   bool IsDraggingForTesting() const { return dragging_; }  // IN-TEST
-  bool IsHandedOffForTesting() const { return handed_off_; }  // IN-TEST
 
   // views::View:
   void Layout(PassKey) override;
@@ -112,14 +106,6 @@ class SidebarPinnedTabsView : public views::View,
   // True once the window is closing every tab it has.
   bool IsWindowClosing() const;
 
-  // The pinned tabs this block mirrors: one entry each, less the one on loan
-  // to the tab strip while a drag is handed over.
-  size_t CountMirroredTabs() const;
-
-  // How many entries the block is showing: as many as fit by height, and no
-  // more than there are.
-  int CalculateHostedCount() const;
-
   // Recreates one entry per pinned tab. Cheap: pinned tabs are few, and this
   // only runs when the pinned set itself changes.
   void RebuildEntries();
@@ -138,21 +124,6 @@ class SidebarPinnedTabsView : public views::View,
   void ClearDragIndicator();
   void ResetDrag();
 
-  // Growser-165: the pointer has left the sidebar sideways, so the gesture
-  // stops being ours. Runs from a posted task, never inline: it stops the
-  // block hosting anything, which destroys the very entry whose event is on
-  // the stack.
-  void HandOffToTabStrip(size_t entry_index, gfx::Point point_in_screen);
-
-  // The handed-over drag is over. Hosting resumes either way; `unpin` says the
-  // tab was dropped on a tab strip and is an ordinary tab now.
-  void OnHandedOffDragEnded(base::WeakPtr<content::WebContents> dragged,
-                            bool unpin);
-
-  // Undoes the move that put the dragged tab at the end of the pinned range,
-  // when the drag left it here and still pinned.
-  void ReturnLoanedTab(content::WebContents* contents);
-
   raw_ptr<BraveBrowser> browser_ = nullptr;
   std::vector<raw_ptr<SidebarPinnedTabView>> entries_;
   int hosted_count_ = 0;
@@ -161,20 +132,10 @@ class SidebarPinnedTabsView : public views::View,
   // Where the button was pressed, in this view's coordinates.
   gfx::Point press_point_;
   bool dragging_ = false;
-  // True from the moment the gesture is handed to the tab strip. One pinned
-  // tab - the one being dragged - is on loan to the strip while it is set, so
-  // that tab has real bounds there for TabDragController to work with. The
-  // rest stay here.
-  bool handed_off_ = false;
-  // Where that tab was before it was moved to the end of the pinned range for
-  // the strip to draw it; -1 when nothing is on loan.
-  int loaned_from_index_ = -1;
 
   BooleanPrefMember show_pinned_tabs_;
   BooleanPrefMember vertical_tabs_enabled_;
   IntegerPrefMember sidebar_show_option_;
-
-  base::WeakPtrFactory<SidebarPinnedTabsView> weak_factory_{this};
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_SIDEBAR_SIDEBAR_PINNED_TABS_VIEW_H_

@@ -11,9 +11,7 @@
 
 #include "base/check_op.h"
 #include "base/functional/bind.h"
-#include "base/location.h"
 #include "base/strings/utf_string_conversions.h"
-#include "base/task/sequenced_task_runner.h"
 #include "brave/browser/ui/brave_browser.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
@@ -27,8 +25,6 @@
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
-#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
-#include "chrome/browser/ui/browser_window/public/global_browser_collection.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_user_gesture_details.h"
 #include "chrome/browser/ui/view_ids.h"
@@ -46,6 +42,7 @@
 #include "ui/gfx/shadow_value.h"
 #include "ui/gfx/skia_paint_util.h"
 #include "ui/views/layout/box_layout.h"
+#include "ui/views/widget/widget.h"
 #include "ui/views/view_class_properties.h"
 #include "ui/views/view_utils.h"
 
@@ -104,38 +101,12 @@ SidebarPinnedTabsView::SidebarPinnedTabsView(BraveBrowser* browser)
 // already be on its way out - hence nothing here.
 SidebarPinnedTabsView::~SidebarPinnedTabsView() = default;
 
-// The pinned tabs this block mirrors, one entry each. A block that is not
-// hosting keeps no entries at all: fewer views to build, and nothing to
-// destroy when the sidebar or the window goes away.
-//
-// Growser-165: less the one on loan to the tab strip while a drag is being
-// handed over. That tab was moved to the end of the pinned range, because the
-// strip hides the hosted tabs from the front and that is the only way to say
-// "draw this one and no other". The rest stay here: picking up one entry is no
-// reason for the whole row to jump surfaces.
-size_t SidebarPinnedTabsView::CountMirroredTabs() const {
-  if (!IsHostingEnabled()) {
-    return 0;
-  }
-
-  size_t count = static_cast<size_t>(
-      browser_->tab_strip_model()->IndexOfFirstNonPinnedTab());
-  if (handed_off_ && count > 0) {
-    --count;
-  }
-  return count;
-}
-
-int SidebarPinnedTabsView::CalculateHostedCount() const {
+void SidebarPinnedTabsView::Layout(PassKey) {
   const int capacity =
       IsHostingEnabled() ? sidebar::CalculatePinnedTabsCapacity(
                                height(), kEntryHeight, kSpacing, kLeadingHeight)
                          : 0;
-  return std::min(capacity, static_cast<int>(entries_.size()));
-}
-
-void SidebarPinnedTabsView::Layout(PassKey) {
-  const int hosted = CalculateHostedCount();
+  const int hosted = std::min(capacity, static_cast<int>(entries_.size()));
 
   for (size_t i = 0; i < entries_.size(); ++i) {
     entries_[i]->SetVisible(static_cast<int>(i) < hosted);
@@ -236,7 +207,9 @@ void SidebarPinnedTabsView::OnTabStripModelChanged(
     return;
   }
 
-  if (CountMirroredTabs() != entries_.size()) {
+  const size_t pinned_count = static_cast<size_t>(
+      browser_->tab_strip_model()->IndexOfFirstNonPinnedTab());
+  if (pinned_count != entries_.size()) {
     RebuildEntries();
     return;
   }
@@ -304,8 +277,13 @@ void SidebarPinnedTabsView::RebuildEntries() {
   }
   entries_.clear();
 
-  const int mirrored = static_cast<int>(CountMirroredTabs());
-  for (int i = 0; i < mirrored; ++i) {
+  // A block that is not hosting keeps no entries at all: fewer views to build,
+  // and nothing to destroy when the sidebar or the window goes away.
+  const int pinned_count =
+      IsHostingEnabled()
+          ? browser_->tab_strip_model()->IndexOfFirstNonPinnedTab()
+          : 0;
+  for (int i = 0; i < pinned_count; ++i) {
     auto* entry = AddChildView(std::make_unique<SidebarPinnedTabView>(u""));
     entry->set_context_menu_controller(this);
     entry->set_drag_delegate(this);  // Growser-165
@@ -495,149 +473,8 @@ bool SidebarPinnedTabsView::OnEntryMouseDragged(SidebarPinnedTabView* entry,
   }
   dragging_ = true;
 
-  // Sideways out of the sidebar and the gesture stops being ours: from here it
-  // is a tab drag like any other, with the tear-off window and the other
-  // windows' strips that come with it. Only a horizontal exit counts - below
-  // the block are Brave's own sidebar buttons, which take no part in this.
-  //
-  // Posted rather than done here: handing over stops the block hosting
-  // anything, which destroys the entry whose event is on this stack.
-  if (!handed_off_ &&
-      (p.x() < -SidebarButtonView::kMargin ||
-       p.x() > width() + SidebarButtonView::kMargin)) {
-    // No gap to fall into any more. The button can be released before the
-    // posted task runs, and without this the release would reorder to
-    // whichever gap the pointer was last over inside the block.
-    DrawDragIndicator(std::nullopt);
-
-    gfx::Point in_screen = event.location();
-    views::View::ConvertPointToScreen(entry, &in_screen);
-    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
-        FROM_HERE, base::BindOnce(&SidebarPinnedTabsView::HandOffToTabStrip,
-                                  weak_factory_.GetWeakPtr(),
-                                  *drag_context_.source_index(), in_screen));
-    return true;
-  }
-
   DrawDragIndicator(CalculateDragIndicatorIndex(p));
   return true;
-}
-
-void SidebarPinnedTabsView::HandOffToTabStrip(size_t entry_index,
-                                              gfx::Point point_in_screen) {
-  // The button can be let go before this task runs, and a drag session with
-  // no button held down is worse than no drag at all: nothing would ever end
-  // it.
-  if (!dragging_) {
-    return;
-  }
-
-  auto* tab_strip = GetBraveTabStrip();
-  auto* model = browser_->tab_strip_model();
-  const int pinned_count = model->IndexOfFirstNonPinnedTab();
-  int index = static_cast<int>(entry_index);
-  if (!tab_strip || index >= pinned_count) {
-    return;
-  }
-
-  // The strip hides the tabs the sidebar hosts from the FRONT of the pinned
-  // range, so "show this one and keep the rest here" can only be said by
-  // making the dragged tab the last pinned one. The alternative - stopping
-  // hosting altogether - sends every pinned tab up into the strip, which is
-  // what a person sees as the whole row jumping surfaces because they picked
-  // up one entry.
-  loaned_from_index_ = index;
-  if (index != pinned_count - 1) {
-    model->MoveWebContentsAt(index, pinned_count - 1,
-                             /*select_after_move=*/false);
-    index = pinned_count - 1;
-  }
-
-  handed_off_ = true;
-  ResetDrag();
-  RebuildEntries();
-  PublishHostedCount(CalculateHostedCount());
-
-  // Make the strip catch up now: MaybeStartDrag refuses outright while the
-  // strip is animating, and the tab has no bounds until it has laid out.
-  tab_strip->StopAnimating();
-
-  // The drag set is built from the selection model, and
-  // TabDragContextImpl::MaybeStartDrag CHECKs that the source is in it.
-  // Pressing a tab in the strip selects it, so this is only what the same
-  // gesture would have done over there.
-  model->ActivateTabAt(index,
-                       TabStripUserGestureDetails(
-                           TabStripUserGestureDetails::GestureType::kOther));
-
-  content::WebContents* contents = model->GetWebContentsAt(index);
-  if (!tab_strip->StartDragFromSidebar(
-          tab_strip->tab_at(index), point_in_screen,
-          base::BindOnce(&SidebarPinnedTabsView::OnHandedOffDragEnded,
-                         weak_factory_.GetWeakPtr(),
-                         contents ? contents->GetWeakPtr()
-                                  : base::WeakPtr<content::WebContents>()))) {
-    // Nobody took the gesture, so nobody will hand the tabs back either.
-    handed_off_ = false;
-    ReturnLoanedTab(contents);
-    RebuildEntries();
-    InvalidateLayout();
-  }
-}
-
-// Growser-165: put the tab that was moved to the end of the pinned range back
-// where the user had it. A tab that was torn off, dropped elsewhere or
-// unpinned is where the user put it, and each of those cases leaves it either
-// out of this model or out of the pinned range - so this only ever undoes a
-// move nobody asked for.
-void SidebarPinnedTabsView::ReturnLoanedTab(content::WebContents* contents) {
-  if (loaned_from_index_ < 0) {
-    return;
-  }
-  const int to = loaned_from_index_;
-  loaned_from_index_ = -1;
-  if (!contents) {
-    return;
-  }
-
-  TabStripModel* model = browser_->tab_strip_model();
-  const int index = model->GetIndexOfWebContents(contents);
-  if (index == TabStripModel::kNoTab || index == to ||
-      !model->IsTabPinned(index)) {
-    return;
-  }
-  model->MoveWebContentsAt(index, to, /*select_after_move=*/false);
-}
-
-void SidebarPinnedTabsView::OnHandedOffDragEnded(
-    base::WeakPtr<content::WebContents> dragged,
-    bool unpin) {
-  handed_off_ = false;
-
-  // Dropped on a tab strip, so it is an ordinary tab now - any strip,
-  // including this window's own. That case is the reason the rule exists: this
-  // window hosts pinned tabs in its sidebar, so a tab dropped on its own strip
-  // while still pinned would be pulled straight back into the sidebar the user
-  // had just dragged it out of.
-  if (unpin && dragged) {
-    auto* browser =
-        GlobalBrowserCollection::GetInstance()->FindBrowserWithTab(
-            dragged.get());
-    if (browser) {
-      TabStripModel* model = browser->GetTabStripModel();
-      const int index = model->GetIndexOfWebContents(dragged.get());
-      if (index != TabStripModel::kNoTab && model->IsTabPinned(index)) {
-        model->SetTabPinned(index, false);
-      }
-    }
-  }
-
-  // Cancelled, and the tab is back here at the end of the pinned range where
-  // the hand-over put it - not where the user had it.
-  ReturnLoanedTab(dragged.get());
-
-  RebuildEntries();
-  InvalidateLayout();
 }
 
 void SidebarPinnedTabsView::OnEntryMouseReleased(SidebarPinnedTabView* entry,
