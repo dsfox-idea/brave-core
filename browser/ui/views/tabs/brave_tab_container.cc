@@ -1935,8 +1935,15 @@ bool BraveTabContainer::IsPinnedTabHostedBySidebar(const Tab* tab) const {
   // Pinned tabs lead the model, so the view index is the model index, and the
   // sidebar always takes them from the front.
   const auto index = tabs_view_model_.GetIndexOfView(tab);
-  return index.has_value() &&
-         *index < sidebar_controller->pinned_tab_count_hosted_by_sidebar();
+  // The count is an int and the index a size_t, so the comparison needs the
+  // cast spelled out - clang refuses the mixed-sign form under -Werror, which
+  // is what broke the first macOS build of this feature. The guard is not
+  // decoration: SetPinnedTabCountHostedBySidebar takes an int and does not
+  // reject a negative one, and casting that to size_t would make every index
+  // "hosted".
+  const int hosted = sidebar_controller->pinned_tab_count_hosted_by_sidebar();
+  return index.has_value() && hosted > 0 &&
+         *index < static_cast<size_t>(hosted);
 }
 
 bool BraveTabContainer::IsPinned(const Tab* tab) const {
