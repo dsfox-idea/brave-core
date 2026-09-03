@@ -166,6 +166,30 @@ std::string GetDescriptionFromAppcastItem(id item) {
   if ([_su_updater automaticallyDownloadsUpdates]) {
     [_su_updater setAutomaticallyChecksForUpdates:YES];
   }
+
+  // growser (#168): check once shortly after launch. Sparkle's scheduled
+  // check only fires on the interval above and a relaunch does not bring it
+  // forward, so a browser that is left running for days - or one whose About
+  // page is broken, which is the only manual trigger the product has - can
+  // sit on a stale build indefinitely. The owner sat a month on one that way.
+  // A restart is the thing every user tries; this makes it work.
+  //
+  // Delayed rather than immediate: startup is the busiest moment of the
+  // process and an update check is never urgent to the second. WithoutUi so
+  // a routine check cannot put a dialog in front of someone who just opened
+  // their browser; the download is automatic and installs on quit as before.
+  constexpr NSTimeInterval kGrowserStartupCheckDelayInSec = 10;
+  __weak SparkleGlue* weakSelf = self;
+  dispatch_after(
+      dispatch_time(DISPATCH_TIME_NOW,
+                    (int64_t)(kGrowserStartupCheckDelayInSec * NSEC_PER_SEC)),
+      dispatch_get_main_queue(), ^{
+        SparkleGlue* strongSelf = weakSelf;
+        if (strongSelf) {
+          [strongSelf checkForUpdatesInBackground];
+        }
+      });
+
   [self updateStatus:kAutoupdateRegistered version:nil error:nil];
 }
 
