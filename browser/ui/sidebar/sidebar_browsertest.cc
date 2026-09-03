@@ -2592,6 +2592,23 @@ class SidebarPinnedTabsBrowserTest : public SidebarBrowserTest {
     DragEntryThrough(from, {to}, recognised);
   }
 
+  // Presses the entry at |index| and drags sideways out of the sidebar, which
+  // hands the gesture over to the tab strip. Returns the dragged tab's
+  // contents, so a caller can follow that tab wherever the drag leaves it.
+  content::WebContents* HandOffEntry(int index) {
+    auto* block = GetSidebarPinnedTabsView();
+    content::WebContents* contents = tab_model()->GetWebContentsAt(index);
+    views::View* entry = EntryAt(index);
+    entry->OnMousePressed(MouseEventAt(ui::EventType::kMousePressed,
+                                       entry->GetLocalBounds().CenterPoint()));
+    gfx::Point out(block->width() + 300, entry->bounds().CenterPoint().y());
+    views::View::ConvertPointToTarget(block, entry, &out);
+    entry->OnMouseDragged(MouseEventAt(ui::EventType::kMouseDragged, out));
+    base::RunLoop().RunUntilIdle();
+    RunLayout();
+    return contents;
+  }
+
   // The gap above the entry at |index|, in the block's coordinates - where a
   // drop puts the dragged tab.
   gfx::Point GapAbove(int index) {
@@ -2930,6 +2947,59 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
 
   browser_view()->horizontal_tab_strip_for_testing()->EndDrag(
       EndDragReason::kCancel);
+}
+
+// Dropped on a tab strip, the tab loses its pin. Any strip, this window's own
+// included - and that case is the reason the rule exists, because this window
+// hosts pinned tabs in its sidebar, so a tab dropped on its own strip while
+// still pinned would slide straight back into the sidebar the user had just
+// dragged it out of.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       DroppedOnTheTabStripTheTabLosesItsPin) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  content::WebContents* dragged = HandOffEntry(1);
+  ASSERT_TRUE(TabDragController::IsActive());
+
+  browser_view()->horizontal_tab_strip_for_testing()->EndDrag(
+      EndDragReason::kComplete);
+  base::RunLoop().RunUntilIdle();
+  RunLayout();
+
+  const int index = tab_model()->GetIndexOfWebContents(dragged);
+  ASSERT_NE(TabStripModel::kNoTab, index) << "the tab went missing";
+  EXPECT_FALSE(tab_model()->IsTabPinned(index));
+  EXPECT_EQ(kPinnedTabCount - 1, tab_model()->IndexOfFirstNonPinnedTab());
+
+  EXPECT_FALSE(GetSidebarPinnedTabsView()->IsHandedOffForTesting())
+      << "the sidebar has to host again once the drag is over";
+  EXPECT_EQ(kPinnedTabCount - 1, HostedBySidebar());
+}
+
+// A cancelled drag puts the tab back exactly as it was, pin included - the
+// sidebar must not read "the drag ended" as "the tab was dropped somewhere".
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       ACancelledDragKeepsThePinAndTheSidebar) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  content::WebContents* dragged = HandOffEntry(1);
+  ASSERT_TRUE(TabDragController::IsActive());
+
+  browser_view()->horizontal_tab_strip_for_testing()->EndDrag(
+      EndDragReason::kCancel);
+  base::RunLoop().RunUntilIdle();
+  RunLayout();
+
+  const int index = tab_model()->GetIndexOfWebContents(dragged);
+  ASSERT_NE(TabStripModel::kNoTab, index);
+  EXPECT_TRUE(tab_model()->IsTabPinned(index));
+  EXPECT_EQ(kPinnedTabCount, tab_model()->IndexOfFirstNonPinnedTab());
+
+  EXPECT_FALSE(GetSidebarPinnedTabsView()->IsHandedOffForTesting());
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  ExpectNoTabLostOrDoubled();
 }
 
 // A gesture that became a drag is not a click, even when it is released back

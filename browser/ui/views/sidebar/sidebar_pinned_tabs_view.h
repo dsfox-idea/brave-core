@@ -25,6 +25,10 @@ class BraveBrowser;
 class BraveTabStrip;
 class Tab;
 
+namespace content {
+class WebContents;
+}  // namespace content
+
 // The pinned tabs the sidebar hosts, at the top of the sidebar.
 //
 // The block hosts as many pinned tabs as fit by height and no more: entries
@@ -131,6 +135,11 @@ class SidebarPinnedTabsView : public views::View,
   // block hosting anything, which destroys the very entry whose event is on
   // the stack.
   void HandOffToTabStrip(size_t entry_index, gfx::Point point_in_screen);
+
+  // The handed-over drag is over. Hosting resumes either way; `unpin` says the
+  // tab was dropped on a tab strip and is an ordinary tab now.
+  void OnHandedOffDragEnded(base::WeakPtr<content::WebContents> dragged,
+                            bool unpin);
 
   raw_ptr<BraveBrowser> browser_ = nullptr;
   std::vector<raw_ptr<SidebarPinnedTabView>> entries_;

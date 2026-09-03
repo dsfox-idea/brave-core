@@ -27,6 +27,8 @@
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
+#include "chrome/browser/ui/browser_window/public/global_browser_collection.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_user_gesture_details.h"
 #include "chrome/browser/ui/view_ids.h"
@@ -539,13 +541,45 @@ void SidebarPinnedTabsView::HandOffToTabStrip(size_t entry_index,
     GetWidget()->ReleaseCapture();
   }
 
-  if (!tab_strip->StartDragFromSidebar(tab_strip->tab_at(index),
-                                       point_in_screen)) {
+  content::WebContents* contents = model->GetWebContentsAt(index);
+  if (!tab_strip->StartDragFromSidebar(
+          tab_strip->tab_at(index), point_in_screen,
+          base::BindOnce(&SidebarPinnedTabsView::OnHandedOffDragEnded,
+                         weak_factory_.GetWeakPtr(),
+                         contents ? contents->GetWeakPtr()
+                                  : base::WeakPtr<content::WebContents>()))) {
     // Nobody took the gesture, so nobody will hand the tabs back either.
     handed_off_ = false;
     RebuildEntries();
     InvalidateLayout();
   }
+}
+
+void SidebarPinnedTabsView::OnHandedOffDragEnded(
+    base::WeakPtr<content::WebContents> dragged,
+    bool unpin) {
+  handed_off_ = false;
+
+  // Dropped on a tab strip, so it is an ordinary tab now - any strip,
+  // including this window's own. That case is the reason the rule exists: this
+  // window hosts pinned tabs in its sidebar, so a tab dropped on its own strip
+  // while still pinned would be pulled straight back into the sidebar the user
+  // had just dragged it out of.
+  if (unpin && dragged) {
+    auto* browser =
+        GlobalBrowserCollection::GetInstance()->FindBrowserWithTab(
+            dragged.get());
+    if (browser) {
+      TabStripModel* model = browser->GetTabStripModel();
+      const int index = model->GetIndexOfWebContents(dragged.get());
+      if (index != TabStripModel::kNoTab && model->IsTabPinned(index)) {
+        model->SetTabPinned(index, false);
+      }
+    }
+  }
+
+  RebuildEntries();
+  InvalidateLayout();
 }
 
 void SidebarPinnedTabsView::OnEntryMouseReleased(SidebarPinnedTabView* entry,

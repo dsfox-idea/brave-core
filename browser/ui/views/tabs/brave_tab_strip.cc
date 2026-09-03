@@ -30,6 +30,7 @@
 #include "brave/browser/ui/views/tabs/brave_tab.h"
 #include "brave/browser/ui/views/tabs/brave_tab_container.h"
 #include "brave/browser/ui/views/tabs/brave_tab_hover_card_controller.h"
+#include "brave/browser/ui/views/tabs/dragging/tab_drag_controller.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/themes/theme_service.h"
@@ -451,8 +452,10 @@ BraveTabContainer* BraveTabStrip::GetBraveTabContainer() {
 }
 
 // Growser-165
-bool BraveTabStrip::StartDragFromSidebar(Tab* tab,
-                                         const gfx::Point& point_in_screen) {
+bool BraveTabStrip::StartDragFromSidebar(
+    Tab* tab,
+    const gfx::Point& point_in_screen,
+    base::OnceCallback<void(bool unpin)> on_ended) {
   if (!tab || IsAnimatingInTabStrip()) {
     return false;
   }
@@ -466,11 +469,18 @@ bool BraveTabStrip::StartDragFromSidebar(Tab* tab,
                              point_in_screen, ui::EventTimeForNow(),
                              ui::EF_LEFT_MOUSE_BUTTON,
                              ui::EF_LEFT_MOUSE_BUTTON);
+  BraveTabDragController::MarkNextDragAsStartedFromSidebar(std::move(on_ended));
   MaybeStartDrag(tab, press, GetSelectionModel());
 
   // MaybeStartDrag says nothing; the session either exists now or it does not,
   // and the caller has to put the sidebar back if it does not.
-  return TabDragController::IsActive();
+  if (!TabDragController::IsActive()) {
+    // No controller was constructed, so nothing took the mark. Take it back,
+    // or the next ordinary drag would inherit it.
+    BraveTabDragController::MarkNextDragAsStartedFromSidebar({});
+    return false;
+  }
+  return true;
 }
 
 // Growser-140

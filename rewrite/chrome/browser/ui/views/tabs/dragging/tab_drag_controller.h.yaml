@@ -24,6 +24,14 @@ substitutions:
       class_name: TabDragController
       method_name: StartDraggingTabsSession
 
+  # Growser-165: a drag that began on a pinned tab's sidebar entry has to know
+  # where it ended - the sidebar resumes hosting either way, and unpins the tab
+  # unless the drag tore off a window of its own.
+  - description: 'Make EndDrag virtual'
+    make_virtual:
+      class_name: TabDragController
+      method_name: EndDrag
+
   - description: 'Friend BraveTabDragController'
     add_friend:
       class_name: TabDragController

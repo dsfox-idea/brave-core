@@ -60,9 +60,13 @@ class BraveTabStrip : public TabStrip {
   // working across Chromium bumps because none of it is ours.
   //
   // The caller has to have stopped the sidebar hosting this tab first, or the
-  // strip lays it out closed and there is nothing to pick up. Returns whether
-  // a drag session actually started.
-  bool StartDragFromSidebar(Tab* tab, const gfx::Point& point_in_screen);
+  // strip lays it out closed and there is nothing to pick up. `on_ended` runs
+  // when the drag finishes, saying whether the tab should lose its pin.
+  // Returns whether a drag session actually started; if it did not, `on_ended`
+  // is dropped rather than kept for somebody else's drag.
+  bool StartDragFromSidebar(Tab* tab,
+                            const gfx::Point& point_in_screen,
+                            base::OnceCallback<void(bool unpin)> on_ended);
 
   // TabStrip:
   void ShowHover(Tab* tab, TabStyle::ShowHoverStyle style) override;

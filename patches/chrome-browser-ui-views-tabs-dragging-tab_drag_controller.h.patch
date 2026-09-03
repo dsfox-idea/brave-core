@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h b/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h
-index d7dbafa23db7043deca475d63ea82dab960555b1..3e8a8ec7c564d81142bb0326cc26f0e2baa390c1 100644
+index d7dbafa23db7043deca475d63ea82dab960555b1..f87b7d1284b9d214343eefdeccf0bceb5cf4c397 100644
 --- a/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h
 +++ b/chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h
 @@ -135,7 +135,7 @@ class TabDragController : public views::WidgetObserver,
@@ -11,6 +11,15 @@ index d7dbafa23db7043deca475d63ea82dab960555b1..3e8a8ec7c564d81142bb0326cc26f0e2
                                TabSlotView* source_view,
                                const std::vector<TabSlotView*>& dragging_views,
                                const gfx::Point& offset_from_source_view,
+@@ -203,7 +203,7 @@ class TabDragController : public views::WidgetObserver,
+   [[nodiscard]] Liveness Drag(const gfx::Point& point_in_screen);
+ 
+   // Complete the current drag session.
+-  void EndDrag(EndDragReason reason);
++  virtual void EndDrag(EndDragReason reason);
+ 
+   // Set a callback to be called when the nested drag loop / system DnD session
+   // finishes.
 @@ -228,6 +228,7 @@ class TabDragController : public views::WidgetObserver,
    const TabDragContext* GetAttachedContext() const override;
  
