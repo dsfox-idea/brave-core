@@ -34,17 +34,23 @@ constexpr const char kComponentBase64PublicKey[] =
     "WBwE6v2rX5tgz+NIYQ1vzSwY5fJMsRlKuaPswzTXotX+VfsIpRBvMXMeHhOMIhxH"
     "BwIDAQAB";
 #elif BUILDFLAG(IS_MAC)
-constexpr const char kComponentName[] = "Brave Pluggable Transports (Mac)";
+// Growser-163: our own component, with a key of its own. The id is derived
+// from the key, so these two lines cannot disagree without the updater
+// refusing whatever it downloads. A pair per platform is what upstream does
+// and what we need: sharing the Windows id would give two platforms the same
+// appid for different bytes, and the Worker filters by appid.
+constexpr const char kComponentName[] =
+    "Growser Tor Pluggable Transports (macOS)";
 constexpr const char kTorPluggableTransportComponentId[] =
-    "einfndjnccmoohcngmlldpmellegjjnk";
+    "kimmbaggbekmbachcdhfefjkkkibhfda";
 constexpr const char kComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArO9CH6FdCcJkYZx073Atx+1OryS/"
-    "0uD2sHghK2ol3/SDmUmoJYSCMLgQ6DF+GtLpNTckRxss7ZM4HS1o/"
-    "RmUi02Y4siJzKjMiaXilI7EXMxwMmgTz8A6WEQo6uayBICFUQ1gzrqiQKSwQ47bjRfx2f5zuwn"
-    "Xb1sTJm+jRXpCIIeKs/YDG4e5hUHObnGR6dZCBt1R9N5DgKIPJttbfKRhJCCxY/"
-    "qeJ5maTLDHor8/h45B+VCw8w8jJ2e/"
-    "XO6PsXziSEJUIqbMBjeeLKrrFd7C7jU92MYAUzT3FWPW4Bd270iMfyLxbMhIpMeqzJvs+"
-    "wZdPOb8kowtrAtpRAQAFDX/twIDAQAB";
+    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAujNFvBV5CHNM2qpHZlb9"
+    "3HTpbFLnNxkdC6//qqQKqqL0tQUiGzGpLY3qdhci/1g/uNvR3tzM/Njj7aoSiSyA"
+    "Z1eQxSI6MT7LMZFhOjpHNCBOpzCDh/3/ntBjajQj5nyqma04sdwhAIk5YQZiP9wu"
+    "vnD0egL6eYuKQ2hmA3GLDxgMBxqpULi6og9Pwq2V4yY2HmukUJscpT09zmP2KjV0"
+    "BXfL/S1Ec/xpuzPAty7pK8j+P5W8WqP+w5NxpjghR+ldnF1CUn3larksNhci76ej"
+    "cbYMQFyf0j7n9ccb1SSP6x7c8F0DqZecRbb4JEP8f9Qw5ITJNGBJtRifWjSBMS4n"
+    "0wIDAQAB";
 #elif BUILDFLAG(IS_LINUX)
 constexpr const char kComponentName[] = "Brave Pluggable Transports (Linux)";
 constexpr const char kTorPluggableTransportComponentId[] =

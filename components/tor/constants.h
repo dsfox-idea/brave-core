@@ -33,18 +33,23 @@ inline constexpr char kTorClientComponentBase64PublicKey[] =
     "Afw2HcTEpwaDhn3Q7Ns7lEZ0WjM+oCyjEvLwE1jm4R9cZJXCuzDn5UWvMrfxJ4Ku"
     "rwIDAQAB";
 #elif BUILDFLAG(IS_MAC)
+// Growser-163: our own component, with a key of its own - the Brave id that
+// stood here names a package we do not publish and the Worker does not serve.
+// A pair per platform is what upstream does and what we need: sharing the
+// Windows id would give two platforms the same appid for different bytes, and
+// the Worker filters by appid.
 inline constexpr char kTorClientComponentName[] =
-    "Brave Tor Client Updater (Mac)";
+    "Growser Tor Client Updater (macOS)";
 inline constexpr char kTorClientComponentId[] =
-    "cldoidikboihgcjfkhdeidbpclkineef";
+    "egpeghkdljbldfmebcbpceiegojamnac";
 inline constexpr char kTorClientComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw2QUXSbVuRxYpItYApZ8"
-    "Ly/fGeUD3A+vb3J7Ot62CF32wTfWweANWyyB+EBGfbtNDAuRlAbNk0QYeCQEttuf"
-    "jLh3Kd5KR5fSyyNNd2cAzAckQ8p7JdiFYjvqZLGC5vlnHgqq4O8xACX5EPwHLNFD"
-    "iSpsthNmz3GCUrHrzPHjHVfy+IuucQXygnRv2fwIaAIxJmTbYm4fqsGKpfolWdMe"
-    "jKVAy1hc9mApZSyt4oGvUu4SJZnxlYMrY4Ze+OWbDesi2JGy+6dA1ddL9IdnwCb3"
-    "9CBOMNjaHeCVz0MKxdCWGPieQM0R7S1KvDCVqAkss6NAbLB6AVM0JulqxC9b+hr/"
-    "xwIDAQAB";
+    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh1eNm711Om6MWVbJJ+06"
+    "qcd05WCdLFdvPSA/r8NesxFQNXYSki0PPlK3s16AL6ndkYaI6/yLRPpm8nsgbSf6"
+    "TC9Vt/fyyHIS6CziWR+RPF+ZIq1Yd2gkJpsP6GHgUnuG0Vv4u1OwqoVzyxUpFwKJ"
+    "wCs8Ud8uoRqF7v3y8PtgYp8mbfJyGaDo4MupGFJ2dnslP6Pd4bQ+izpqBoyQh0/7"
+    "WPMlLDwHd8c6wxUXt9V2ZnlIUE6NMGD8BjstL4m9wmGRdK9WPxDJNF2QqzAeSeqf"
+    "SFvyl97MZmeBvYWXCiIkY3x5RUTp/4Uo84RBXkzP9hrigvhMpR+tfFStwvHKkvQ/"
+    "TQIDAQAB";
 #elif BUILDFLAG(IS_LINUX)
 inline constexpr char kTorClientComponentName[] =
     "Brave Tor Client Updater (Linux)";
