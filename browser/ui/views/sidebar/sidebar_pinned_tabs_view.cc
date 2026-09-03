@@ -267,6 +267,11 @@ bool SidebarPinnedTabsView::IsWindowClosing() const {
 }
 
 void SidebarPinnedTabsView::RebuildEntries() {
+  // Growser-165: the drag holds a pointer to one of these. A pinned tab
+  // appearing or leaving while the pointer is down is rare and not worth
+  // following - dropping the gesture is.
+  ResetDrag();
+
   for (SidebarPinnedTabView* entry : entries_) {
     RemoveChildViewT(entry);
   }
@@ -281,6 +286,7 @@ void SidebarPinnedTabsView::RebuildEntries() {
   for (int i = 0; i < pinned_count; ++i) {
     auto* entry = AddChildView(std::make_unique<SidebarPinnedTabView>(u""));
     entry->set_context_menu_controller(this);
+    entry->set_drag_delegate(this);  // Growser-165
     entry->SetCallback(
         base::BindRepeating(&SidebarPinnedTabsView::OnEntryPressed,
                             base::Unretained(this), static_cast<size_t>(i)));
@@ -431,6 +437,121 @@ void SidebarPinnedTabsView::VisibilityChanged(views::View* starting_from,
   if (!is_visible) {
     PublishHostedCount(0);
   }
+}
+
+// Growser-165: the drag inside the sidebar.
+//
+// Entry i mirrors model index i, so a reorder is nothing but a move in the tab
+// strip model - the entries never change places, they redraw with the tab that
+// is now at their index. Both indices are inside the pinned range, so the
+// model's own ConstrainMoveIndex() has nothing to clamp.
+void SidebarPinnedTabsView::OnEntryMousePressed(SidebarPinnedTabView* entry,
+                                                const ui::MouseEvent& event) {
+  const auto found = std::ranges::find(entries_, entry);
+  if (found == entries_.end()) {
+    return;
+  }
+
+  press_point_ = event.location();
+  views::View::ConvertPointToTarget(entry, this, &press_point_);
+  drag_context_.set_source(entry);
+  drag_context_.set_source_index(
+      static_cast<size_t>(std::distance(entries_.begin(), found)));
+}
+
+bool SidebarPinnedTabsView::OnEntryMouseDragged(SidebarPinnedTabView* entry,
+                                                const ui::MouseEvent& event) {
+  if (!drag_context_.source_index() || drag_context_.source() != entry) {
+    return false;
+  }
+
+  gfx::Point p = event.location();
+  views::View::ConvertPointToTarget(entry, this, &p);
+
+  if (!dragging_ && !SidebarItemDragContext::CanStartDrag(press_point_, p)) {
+    return false;
+  }
+  dragging_ = true;
+
+  DrawDragIndicator(CalculateDragIndicatorIndex(p));
+  return true;
+}
+
+void SidebarPinnedTabsView::OnEntryMouseReleased(SidebarPinnedTabView* entry,
+                                                 const ui::MouseEvent& event) {
+  if (!dragging_) {
+    ResetDrag();
+    return;
+  }
+
+  if (drag_context_.ShouldMoveItem()) {
+    const int from = static_cast<int>(*drag_context_.source_index());
+    const int to = static_cast<int>(drag_context_.GetTargetIndex());
+    browser_->tab_strip_model()->MoveWebContentsAt(from, to,
+                                                  /*select_after_move=*/false);
+  }
+
+  ResetDrag();
+}
+
+void SidebarPinnedTabsView::OnEntryDragCancelled(SidebarPinnedTabView* entry) {
+  ResetDrag();
+}
+
+std::optional<size_t> SidebarPinnedTabsView::CalculateDragIndicatorIndex(
+    const gfx::Point& p) const {
+  if (hosted_count_ <= 0) {
+    return std::nullopt;
+  }
+
+  // The block reaches exactly as far as the entries it is showing, and no
+  // further: the rest of its height is room it asked for, and below it are
+  // Brave's own sidebar buttons, which take no part in this. A pointer outside
+  // that has no gap to fall into, so nothing is drawn and nothing moves.
+  gfx::Rect region = entries_.front()->bounds();
+  region.Union(entries_[static_cast<size_t>(hosted_count_) - 1]->bounds());
+  region.Outset(SidebarButtonView::kMargin);
+  if (!region.Contains(p)) {
+    return std::nullopt;
+  }
+
+  for (int i = 0; i < hosted_count_; ++i) {
+    const gfx::Rect bounds = entries_[static_cast<size_t>(i)]->bounds();
+    if (p.y() < bounds.CenterPoint().y()) {
+      return static_cast<size_t>(i);
+    }
+  }
+  return static_cast<size_t>(hosted_count_);
+}
+
+void SidebarPinnedTabsView::DrawDragIndicator(std::optional<size_t> index) {
+  ClearDragIndicator();
+  drag_context_.set_drag_indicator_index(index);
+
+  // Right before or right after the entry being dragged is where it already
+  // is, so there is nothing to show.
+  const auto source = drag_context_.source_index();
+  if (!index || !source || hosted_count_ <= 0 || *source == *index ||
+      *source + 1 == *index) {
+    return;
+  }
+
+  // The gap is drawn as the top border of the entry below it, except past the
+  // last entry, where it is that entry's bottom border.
+  const bool top = *index != static_cast<size_t>(hosted_count_);
+  entries_[top ? *index : *index - 1]->DrawHorizontalBorder(top);
+}
+
+void SidebarPinnedTabsView::ClearDragIndicator() {
+  for (SidebarPinnedTabView* entry : entries_) {
+    entry->ClearHorizontalBorder();
+  }
+}
+
+void SidebarPinnedTabsView::ResetDrag() {
+  ClearDragIndicator();
+  drag_context_.Reset();
+  dragging_ = false;
 }
 
 void SidebarPinnedTabsView::PublishHostedCount(int count) {

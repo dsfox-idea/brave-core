@@ -26,8 +26,29 @@ class SidebarPinnedTabView : public SidebarItemView {
   METADATA_HEADER(SidebarPinnedTabView, SidebarItemView)
 
  public:
+  // Growser-165: the block owns the gesture, not the entry. An entry cannot
+  // tell a click from the start of a drag by itself - that answer is about
+  // where the pointer went relative to the other entries - so it forwards its
+  // mouse events and lets the block decide.
+  class DragDelegate {
+   public:
+    virtual void OnEntryMousePressed(SidebarPinnedTabView* entry,
+                                     const ui::MouseEvent& event) = 0;
+    // True once the gesture has become a drag.
+    virtual bool OnEntryMouseDragged(SidebarPinnedTabView* entry,
+                                     const ui::MouseEvent& event) = 0;
+    virtual void OnEntryMouseReleased(SidebarPinnedTabView* entry,
+                                      const ui::MouseEvent& event) = 0;
+    virtual void OnEntryDragCancelled(SidebarPinnedTabView* entry) = 0;
+
+   protected:
+    virtual ~DragDelegate() = default;
+  };
+
   explicit SidebarPinnedTabView(const std::u16string& accessible_name);
   ~SidebarPinnedTabView() override;
+
+  void set_drag_delegate(DragDelegate* delegate) { drag_delegate_ = delegate; }
 
   SidebarPinnedTabView(const SidebarPinnedTabView&) = delete;
   SidebarPinnedTabView& operator=(const SidebarPinnedTabView&) = delete;
@@ -60,6 +81,15 @@ class SidebarPinnedTabView : public SidebarItemView {
 
   // views::View:
   void Layout(PassKey key) override;
+  bool OnMousePressed(const ui::MouseEvent& event) override;
+  bool OnMouseDragged(const ui::MouseEvent& event) override;
+  void OnMouseReleased(const ui::MouseEvent& event) override;
+  void OnMouseCaptureLost() override;
+
+  // views::Button:
+  // Growser-165: a gesture that turned into a drag is not a click, so
+  // releasing over the entry must not also activate its tab.
+  bool IsTriggerableEvent(const ui::Event& e) override;
 
  private:
   class AccentOverlayView;
@@ -68,6 +98,9 @@ class SidebarPinnedTabView : public SidebarItemView {
   std::optional<TabAccentColors> accent_colors_;
   bool is_active_tab_ = false;
   bool has_accent_icon_ = false;
+
+  raw_ptr<DragDelegate> drag_delegate_ = nullptr;
+  bool dragging_ = false;
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_SIDEBAR_SIDEBAR_PINNED_TAB_VIEW_H_

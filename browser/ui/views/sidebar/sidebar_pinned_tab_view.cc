@@ -151,5 +151,46 @@ void SidebarPinnedTabView::Layout(PassKey key) {
   accent_overlay_->SetBoundsRect(GetContentsBounds());
 }
 
+// Growser-165: everything below only forwards. The block decides what the
+// gesture is; this class just makes sure the button half of the entry stops
+// pretending a completed drag was a click.
+bool SidebarPinnedTabView::OnMousePressed(const ui::MouseEvent& event) {
+  if (drag_delegate_) {
+    drag_delegate_->OnEntryMousePressed(this, event);
+  }
+  return SidebarItemView::OnMousePressed(event);
+}
+
+bool SidebarPinnedTabView::OnMouseDragged(const ui::MouseEvent& event) {
+  if (drag_delegate_ && drag_delegate_->OnEntryMouseDragged(this, event)) {
+    dragging_ = true;
+    return true;
+  }
+  return SidebarItemView::OnMouseDragged(event);
+}
+
+void SidebarPinnedTabView::OnMouseReleased(const ui::MouseEvent& event) {
+  if (drag_delegate_) {
+    drag_delegate_->OnEntryMouseReleased(this, event);
+  }
+
+  // The superclass consults IsTriggerableEvent(), which is false while
+  // `dragging_` - so this settles the button's state without firing a click.
+  SidebarItemView::OnMouseReleased(event);
+  dragging_ = false;
+}
+
+void SidebarPinnedTabView::OnMouseCaptureLost() {
+  if (drag_delegate_) {
+    drag_delegate_->OnEntryDragCancelled(this);
+  }
+  dragging_ = false;
+  SidebarItemView::OnMouseCaptureLost();
+}
+
+bool SidebarPinnedTabView::IsTriggerableEvent(const ui::Event& e) {
+  return !dragging_ && SidebarItemView::IsTriggerableEvent(e);
+}
+
 BEGIN_METADATA(SidebarPinnedTabView)
 END_METADATA

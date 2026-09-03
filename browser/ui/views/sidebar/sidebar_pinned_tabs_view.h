@@ -7,18 +7,21 @@
 #define BRAVE_BROWSER_UI_VIEWS_SIDEBAR_SIDEBAR_PINNED_TABS_VIEW_H_
 
 #include <memory>
+#include <optional>
 #include <vector>
 
 #include "base/memory/raw_ptr.h"
+#include "brave/browser/ui/views/sidebar/sidebar_item_drag_context.h"
+#include "brave/browser/ui/views/sidebar/sidebar_pinned_tab_view.h"
 #include "chrome/browser/ui/tabs/tab_strip_model_observer.h"
 #include "components/prefs/pref_member.h"
 #include "ui/base/metadata/metadata_header_macros.h"
+#include "ui/gfx/geometry/point.h"
 #include "ui/views/context_menu_controller.h"
 #include "ui/views/view.h"
 
 class BraveBrowser;
 class BraveTabStrip;
-class SidebarPinnedTabView;
 class Tab;
 
 // The pinned tabs the sidebar hosts, at the top of the sidebar.
@@ -32,7 +35,8 @@ class Tab;
 // tab strip is horizontal - see IsHostingEnabled().
 class SidebarPinnedTabsView : public views::View,
                               public TabStripModelObserver,
-                              public views::ContextMenuController {
+                              public views::ContextMenuController,
+                              public SidebarPinnedTabView::DragDelegate {
   METADATA_HEADER(SidebarPinnedTabsView, views::View)
 
  public:
@@ -50,6 +54,11 @@ class SidebarPinnedTabsView : public views::View,
   // entry does not correspond to a pinned tab any more.
   Tab* GetTabForEntryForTesting(size_t entry_index);  // IN-TEST
   SidebarPinnedTabView* GetEntryForTesting(size_t entry_index);  // IN-TEST
+
+  // Growser-165: whether the gesture in progress has become a drag. A test
+  // that only looks at the model afterwards cannot say whether a drag was
+  // never recognised or was recognised and dropped nowhere.
+  bool IsDraggingForTesting() const { return dragging_; }  // IN-TEST
 
   // views::View:
   void Layout(PassKey) override;
@@ -75,6 +84,15 @@ class SidebarPinnedTabsView : public views::View,
       const gfx::Point& point,
       ui::mojom::MenuSourceType source_type) override;
 
+  // SidebarPinnedTabView::DragDelegate:
+  void OnEntryMousePressed(SidebarPinnedTabView* entry,
+                           const ui::MouseEvent& event) override;
+  bool OnEntryMouseDragged(SidebarPinnedTabView* entry,
+                           const ui::MouseEvent& event) override;
+  void OnEntryMouseReleased(SidebarPinnedTabView* entry,
+                            const ui::MouseEvent& event) override;
+  void OnEntryDragCancelled(SidebarPinnedTabView* entry) override;
+
  private:
   // The Tab the entry mirrors, looked up in the tab strip.
   Tab* GetTabForEntry(size_t entry_index) const;
@@ -98,9 +116,22 @@ class SidebarPinnedTabsView : public views::View,
   // Tells the tab strip how many leading pinned tabs it must not draw.
   void PublishHostedCount(int count);
 
+  // Growser-165: the drag, while the pointer is still in the sidebar.
+  // The gap the entry would drop into, counted in visible entries, so 0 is
+  // above the first and `hosted_count_` is below the last.
+  std::optional<size_t> CalculateDragIndicatorIndex(const gfx::Point& p) const;
+  void DrawDragIndicator(std::optional<size_t> index);
+  void ClearDragIndicator();
+  void ResetDrag();
+
   raw_ptr<BraveBrowser> browser_ = nullptr;
   std::vector<raw_ptr<SidebarPinnedTabView>> entries_;
   int hosted_count_ = 0;
+
+  SidebarItemDragContext drag_context_;
+  // Where the button was pressed, in this view's coordinates.
+  gfx::Point press_point_;
+  bool dragging_ = false;
 
   BooleanPrefMember show_pinned_tabs_;
   BooleanPrefMember vertical_tabs_enabled_;

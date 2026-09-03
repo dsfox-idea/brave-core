@@ -2539,6 +2539,82 @@ class SidebarPinnedTabsBrowserTest : public SidebarBrowserTest {
   void ExpectNoTabLostOrDoubled() {
     EXPECT_EQ(kPinnedTabCount, HostedBySidebar() + DrawnByTabStrip());
   }
+
+  // Growser-165
+  views::View* EntryAt(int index) {
+    return GetSidebarPinnedTabsView()->children()[index];
+  }
+
+  // The gesture is driven at the view layer rather than with
+  // ui::test::EventGenerator, and that is deliberate. Measured in this suite:
+  // a generated left button never reaches this widget at all - after
+  // MoveMouseTo the entry does not even go to STATE_HOVERED - while a right
+  // click through the same generator does arrive and opens a menu
+  // (RightClickOpensAMenu). Rather than test the harness, these drive the
+  // handlers directly and assert separately, with EventHandlerAt(), that a
+  // real click at that point would be delivered to the entry.
+  ui::MouseEvent MouseEventAt(ui::EventType type, const gfx::Point& p) {
+    return ui::MouseEvent(type, p, p, ui::EventTimeForNow(),
+                          ui::EF_LEFT_MOUSE_BUTTON, ui::EF_LEFT_MOUSE_BUTTON);
+  }
+
+  // Presses on the entry at |from| and drags through |waypoints| (given in the
+  // block's coordinates), releasing at the last one. |recognised| reports
+  // whether the block ever saw the gesture become a drag, so a caller can tell
+  // "never recognised" from "recognised and dropped nowhere" - the model alone
+  // says the same thing for both.
+  void DragEntryThrough(int from,
+                        const std::vector<gfx::Point>& waypoints,
+                        bool* recognised = nullptr) {
+    views::View* entry = EntryAt(from);
+    entry->OnMousePressed(MouseEventAt(ui::EventType::kMousePressed,
+                                       entry->GetLocalBounds().CenterPoint()));
+
+    gfx::Point last;
+    for (const gfx::Point& waypoint : waypoints) {
+      last = waypoint;
+      views::View::ConvertPointToTarget(GetSidebarPinnedTabsView(), entry,
+                                        &last);
+      entry->OnMouseDragged(MouseEventAt(ui::EventType::kMouseDragged, last));
+    }
+    if (recognised) {
+      *recognised = GetSidebarPinnedTabsView()->IsDraggingForTesting();
+    }
+    entry->OnMouseReleased(MouseEventAt(ui::EventType::kMouseReleased, last));
+    RunLayout();
+  }
+
+  void DragEntryTo(int from,
+                   const gfx::Point& to,
+                   bool* recognised = nullptr) {
+    DragEntryThrough(from, {to}, recognised);
+  }
+
+  // The gap above the entry at |index|, in the block's coordinates - where a
+  // drop puts the dragged tab.
+  gfx::Point GapAbove(int index) {
+    const gfx::Rect bounds = EntryAt(index)->bounds();
+    return gfx::Point(bounds.CenterPoint().x(), bounds.y() + 1);
+  }
+
+  // Which view a click at |point_in_screen| would actually be delivered to.
+  // A test that presses somewhere and asserts on the result cannot tell "the
+  // handler ignored it" from "something else was on top", and those need
+  // different fixes.
+  views::View* EventHandlerAt(const gfx::Point& point_in_screen) {
+    views::View* root = browser_view()->GetWidget()->GetRootView();
+    gfx::Point local = point_in_screen;
+    views::View::ConvertPointFromScreen(root, &local);
+    return root->GetEventHandlerForPoint(local);
+  }
+
+  std::vector<content::WebContents*> PinnedContents() {
+    std::vector<content::WebContents*> contents;
+    for (int i = 0; i < tab_model()->IndexOfFirstNonPinnedTab(); i++) {
+      contents.push_back(tab_model()->GetWebContentsAt(i));
+    }
+    return contents;
+  }
 };
 
 // Off by default, and turning it on moves the pinned tabs out of the strip.
@@ -2709,6 +2785,136 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, UnpinFromTheEntrysMenu) {
   EXPECT_EQ(kPinnedTabCount - 1, tab_model()->IndexOfFirstNonPinnedTab());
   EXPECT_EQ(kPinnedTabCount - 1, HostedBySidebar());
   EXPECT_EQ(0, DrawnByTabStrip());
+}
+
+
+// Growser-165
+// Dragging an entry inside the sidebar reorders the pinned tabs. What is
+// asserted is the MODEL, not the views: entry i mirrors model index i, so the
+// entries stay exactly where they are and redraw with the tab that is now at
+// their index. Watching a view move would be watching the wrong thing.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, DragReordersPinnedTabs) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  const std::vector<content::WebContents*> before = PinnedContents();
+  ASSERT_EQ(3u, before.size());
+
+  views::View* handler =
+      EventHandlerAt(EntryAt(2)->GetBoundsInScreen().CenterPoint());
+  ASSERT_EQ(EntryAt(2), handler)
+      << "the press would go to "
+      << (handler ? handler->GetClassName() : "nothing");
+
+  bool recognised = false;
+  DragEntryTo(2, GapAbove(0), &recognised);
+  EXPECT_TRUE(recognised) << "the block never saw the gesture become a drag";
+
+  EXPECT_EQ(before[2], tab_model()->GetWebContentsAt(0));
+  EXPECT_EQ(before[0], tab_model()->GetWebContentsAt(1));
+  EXPECT_EQ(before[1], tab_model()->GetWebContentsAt(2));
+  EXPECT_EQ(kPinnedTabCount, tab_model()->IndexOfFirstNonPinnedTab())
+      << "the drag must not unpin anything";
+  ExpectNoTabLostOrDoubled();
+}
+
+// Dropping an entry back where it started is not a move. Worth its own test
+// because the indicator index and the target index are not the same number,
+// and getting that wrong shifts every drop by one. The gesture goes away and
+// comes back so that it is unmistakably a drag by the time it is released.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       DragToItsOwnPlaceChangesNothing) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  const std::vector<content::WebContents*> before = PinnedContents();
+
+  bool recognised = false;
+  DragEntryThrough(1, {GapAbove(0), GapAbove(1)}, &recognised);
+  ASSERT_TRUE(recognised);
+
+  EXPECT_EQ(before, PinnedContents());
+  ExpectNoTabLostOrDoubled();
+}
+
+// A press and release that never became a drag is still a click, and a click
+// still activates the tab. The drag code sits on the same three events, so
+// this is the thing it can break without breaking anything else.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, AClickIsStillAClick) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  const std::vector<content::WebContents*> before = PinnedContents();
+  ASSERT_NE(2, tab_model()->active_index());
+
+  // That a real click would land here, rather than on something covering the
+  // entry, is the half this test cannot drive itself.
+  const gfx::Point center_in_screen =
+      EntryAt(2)->GetBoundsInScreen().CenterPoint();
+  views::View* handler = EventHandlerAt(center_in_screen);
+  ASSERT_EQ(EntryAt(2), handler)
+      << "a click on the entry would go to "
+      << (handler ? handler->GetClassName() : "nothing");
+
+  views::View* entry = EntryAt(2);
+  const gfx::Point center = entry->GetLocalBounds().CenterPoint();
+  entry->OnMousePressed(MouseEventAt(ui::EventType::kMousePressed, center));
+  EXPECT_EQ(views::Button::STATE_PRESSED,
+            GetSidebarPinnedTabsView()->GetEntryForTesting(2)->GetState())
+      << "the press did not put the entry's button in its pressed state";
+  entry->OnMouseReleased(MouseEventAt(ui::EventType::kMouseReleased, center));
+  RunLayout();
+
+  EXPECT_EQ(2, tab_model()->active_index());
+  EXPECT_EQ(before, PinnedContents()) << "a click must not reorder anything";
+}
+
+// Brave's own sidebar buttons take no part in this: an entry dragged out of
+// the pinned block and dropped on them does nothing at all. The block reaches
+// exactly as far as the entries it shows, so there is no gap out there to fall
+// into - and because the gesture did become a drag, the release must not be
+// treated as a click on the entry either.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       DraggingOntoTheLegacyButtonsDoesNothing) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  const std::vector<content::WebContents*> before = PinnedContents();
+
+  // Well below the last entry, where Brave's own buttons live.
+  const gfx::Rect last = EntryAt(kPinnedTabCount - 1)->bounds();
+  bool recognised = false;
+  DragEntryTo(0, gfx::Point(last.CenterPoint().x(), last.bottom() + 60),
+              &recognised);
+  ASSERT_TRUE(recognised);
+
+  EXPECT_EQ(before, PinnedContents());
+  ExpectNoTabLostOrDoubled();
+}
+
+// A gesture that became a drag is not a click, even when it is released back
+// over the entry it started on. Without that, reordering a pinned tab and
+// changing your mind would also switch to it - and the suppression lives in
+// IsTriggerableEvent(), which nothing else here would exercise, because every
+// other drag ends somewhere the button would not have fired anyway.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       ADragThatReturnsHomeIsNotAClick) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  const std::vector<content::WebContents*> before = PinnedContents();
+  const int active_before = tab_model()->active_index();
+  ASSERT_NE(2, active_before);
+
+  const gfx::Rect entry = EntryAt(2)->bounds();
+  bool recognised = false;
+  DragEntryThrough(2, {GapAbove(0), entry.CenterPoint()}, &recognised);
+  ASSERT_TRUE(recognised);
+
+  EXPECT_EQ(active_before, tab_model()->active_index())
+      << "a drag released over its own entry must not count as a click";
+  EXPECT_EQ(before, PinnedContents());
+  ExpectNoTabLostOrDoubled();
 }
 
 
