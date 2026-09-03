@@ -11,7 +11,9 @@
 
 #include "base/check_op.h"
 #include "base/functional/bind.h"
+#include "base/location.h"
 #include "base/strings/utf_string_conversions.h"
+#include "base/task/sequenced_task_runner.h"
 #include "brave/browser/ui/brave_browser.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
@@ -239,6 +241,14 @@ void SidebarPinnedTabsView::OnTabChangedAt(tabs::TabInterface* tab,
 }
 
 bool SidebarPinnedTabsView::IsHostingEnabled() const {
+  // Growser-165: the gesture belongs to the tab strip now, and the tab it is
+  // carrying has to be laid out there - a tab the sidebar hosts is drawn
+  // closed in the strip, and a tab with no bounds is not something a drag can
+  // pick up.
+  if (handed_off_) {
+    return false;
+  }
+
   if (!show_pinned_tabs_.GetValue()) {
     return false;
   }
@@ -473,8 +483,69 @@ bool SidebarPinnedTabsView::OnEntryMouseDragged(SidebarPinnedTabView* entry,
   }
   dragging_ = true;
 
+  // Sideways out of the sidebar and the gesture stops being ours: from here it
+  // is a tab drag like any other, with the tear-off window and the other
+  // windows' strips that come with it. Only a horizontal exit counts - below
+  // the block are Brave's own sidebar buttons, which take no part in this.
+  //
+  // Posted rather than done here: handing over stops the block hosting
+  // anything, which destroys the entry whose event is on this stack.
+  if (!handed_off_ &&
+      (p.x() < -SidebarButtonView::kMargin ||
+       p.x() > width() + SidebarButtonView::kMargin)) {
+    gfx::Point in_screen = event.location();
+    views::View::ConvertPointToScreen(entry, &in_screen);
+    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
+        FROM_HERE, base::BindOnce(&SidebarPinnedTabsView::HandOffToTabStrip,
+                                  weak_factory_.GetWeakPtr(),
+                                  *drag_context_.source_index(), in_screen));
+    return true;
+  }
+
   DrawDragIndicator(CalculateDragIndicatorIndex(p));
   return true;
+}
+
+void SidebarPinnedTabsView::HandOffToTabStrip(size_t entry_index,
+                                              gfx::Point point_in_screen) {
+  auto* tab_strip = GetBraveTabStrip();
+  auto* model = browser_->tab_strip_model();
+  const int index = static_cast<int>(entry_index);
+  if (!tab_strip || index >= model->IndexOfFirstNonPinnedTab()) {
+    return;
+  }
+
+  // Stop hosting before anything else, so the strip lays the tab out for real.
+  handed_off_ = true;
+  ResetDrag();
+  RebuildEntries();
+  PublishHostedCount(0);
+
+  // ...and make the strip catch up now: MaybeStartDrag refuses outright while
+  // the strip is animating, and the tab has no bounds until it has laid out.
+  tab_strip->StopAnimating();
+
+  // The drag set is built from the selection model, and
+  // TabDragContextImpl::MaybeStartDrag CHECKs that the source is in it.
+  // Pressing a tab in the strip selects it, so this is only what the same
+  // gesture would have done over there.
+  model->ActivateTabAt(index,
+                       TabStripUserGestureDetails(
+                           TabStripUserGestureDetails::GestureType::kOther));
+
+  // TabDragController takes capture in Init(), and it cannot while our own
+  // widget still holds it.
+  if (GetWidget()) {
+    GetWidget()->ReleaseCapture();
+  }
+
+  if (!tab_strip->StartDragFromSidebar(tab_strip->tab_at(index),
+                                       point_in_screen)) {
+    // Nobody took the gesture, so nobody will hand the tabs back either.
+    handed_off_ = false;
+    RebuildEntries();
+    InvalidateLayout();
+  }
 }
 
 void SidebarPinnedTabsView::OnEntryMouseReleased(SidebarPinnedTabView* entry,

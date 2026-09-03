@@ -38,6 +38,8 @@
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/tabs/features.h"
 #include "chrome/browser/ui/tabs/tab_group_model.h"
+#include "chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h"
+#include "ui/events/base_event_utils.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "chrome/browser/ui/views/tabs/shared/tab_strip_observer.h"
 #include "chrome/browser/ui/views/tabs/tab.h"
@@ -446,6 +448,29 @@ TabContainer* BraveTabStrip::GetTabContainerForTesting() {
 
 BraveTabContainer* BraveTabStrip::GetBraveTabContainer() {
   return views::AsViewClass<BraveTabContainer>(tab_container_.get());
+}
+
+// Growser-165
+bool BraveTabStrip::StartDragFromSidebar(Tab* tab,
+                                         const gfx::Point& point_in_screen) {
+  if (!tab || IsAnimatingInTabStrip()) {
+    return false;
+  }
+
+  // The grab point is the tab's middle, not where the pointer really is: the
+  // pointer is outside the strip altogether, and TabDragController::Init()
+  // reads this as an offset INSIDE the source view. A point from over the
+  // sidebar would hold the tab by a corner far from the cursor.
+  const gfx::Point offset = tab->GetLocalBounds().CenterPoint();
+  const ui::MouseEvent press(ui::EventType::kMousePressed, offset,
+                             point_in_screen, ui::EventTimeForNow(),
+                             ui::EF_LEFT_MOUSE_BUTTON,
+                             ui::EF_LEFT_MOUSE_BUTTON);
+  MaybeStartDrag(tab, press, GetSelectionModel());
+
+  // MaybeStartDrag says nothing; the session either exists now or it does not,
+  // and the caller has to put the sidebar back if it does not.
+  return TabDragController::IsActive();
 }
 
 // Growser-140

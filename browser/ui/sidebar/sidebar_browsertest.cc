@@ -46,6 +46,8 @@
 #include "brave/browser/ui/views/sidebar/sidebar_pinned_tabs_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_pinned_tab_view.h"
 #include "brave/browser/ui/views/tabs/brave_tab_strip.h"
+#include "chrome/browser/ui/views/tabs/dragging/tab_drag_controller.h"
+#include "chrome/browser/ui/views/tabs/shared/tab_strip_types.h"
 #include "brave/components/containers/core/browser/containers_test_utils.h"
 #include "brave/components/containers/core/common/features.h"
 #include "brave/components/containers/core/mojom/containers.mojom.h"
@@ -2890,6 +2892,44 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
 
   EXPECT_EQ(before, PinnedContents());
   ExpectNoTabLostOrDoubled();
+}
+
+// Dragged sideways out of the sidebar, the gesture stops being ours: the block
+// hands every pinned tab back to the strip and an ordinary tab drag takes over.
+// What that drag then does - the tear-off window, another window's strip - is
+// Chromium's and is not re-tested here. The hand-over is.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       DraggingOutOfTheSidebarHandsOverToTheTabStrip) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+  ASSERT_FALSE(TabDragController::IsActive());
+
+  auto* block = GetSidebarPinnedTabsView();
+  views::View* entry = EntryAt(1);
+  entry->OnMousePressed(MouseEventAt(ui::EventType::kMousePressed,
+                                     entry->GetLocalBounds().CenterPoint()));
+
+  // Well to the right of the sidebar, over the page.
+  gfx::Point out(block->width() + 300,
+                 entry->bounds().CenterPoint().y());
+  views::View::ConvertPointToTarget(block, entry, &out);
+  entry->OnMouseDragged(MouseEventAt(ui::EventType::kMouseDragged, out));
+
+  // Posted on purpose: handing over stops the block hosting anything, which
+  // destroys the entry whose event is on the stack.
+  EXPECT_FALSE(block->IsHandedOffForTesting())
+      << "the hand-over must not happen inside the entry's own event";
+  base::RunLoop().RunUntilIdle();
+  RunLayout();
+
+  EXPECT_TRUE(block->IsHandedOffForTesting());
+  EXPECT_EQ(0, HostedBySidebar());
+  EXPECT_EQ(kPinnedTabCount, DrawnByTabStrip())
+      << "the tabs have to be back in the strip, or there is nothing to drag";
+  EXPECT_TRUE(TabDragController::IsActive()) << "no tab drag session started";
+
+  browser_view()->horizontal_tab_strip_for_testing()->EndDrag(
+      EndDragReason::kCancel);
 }
 
 // A gesture that became a drag is not a click, even when it is released back
