@@ -112,6 +112,14 @@ class SidebarPinnedTabsView : public views::View,
   // True once the window is closing every tab it has.
   bool IsWindowClosing() const;
 
+  // The pinned tabs this block mirrors: one entry each, less the one on loan
+  // to the tab strip while a drag is handed over.
+  size_t CountMirroredTabs() const;
+
+  // How many entries the block is showing: as many as fit by height, and no
+  // more than there are.
+  int CalculateHostedCount() const;
+
   // Recreates one entry per pinned tab. Cheap: pinned tabs are few, and this
   // only runs when the pinned set itself changes.
   void RebuildEntries();
@@ -141,6 +149,10 @@ class SidebarPinnedTabsView : public views::View,
   void OnHandedOffDragEnded(base::WeakPtr<content::WebContents> dragged,
                             bool unpin);
 
+  // Undoes the move that put the dragged tab at the end of the pinned range,
+  // when the drag left it here and still pinned.
+  void ReturnLoanedTab(content::WebContents* contents);
+
   raw_ptr<BraveBrowser> browser_ = nullptr;
   std::vector<raw_ptr<SidebarPinnedTabView>> entries_;
   int hosted_count_ = 0;
@@ -149,10 +161,14 @@ class SidebarPinnedTabsView : public views::View,
   // Where the button was pressed, in this view's coordinates.
   gfx::Point press_point_;
   bool dragging_ = false;
-  // True from the moment the gesture is handed to the tab strip. The block
-  // hosts nothing while it is set, so the dragged tab has real bounds in the
-  // strip for TabDragController to work with.
+  // True from the moment the gesture is handed to the tab strip. One pinned
+  // tab - the one being dragged - is on loan to the strip while it is set, so
+  // that tab has real bounds there for TabDragController to work with. The
+  // rest stay here.
   bool handed_off_ = false;
+  // Where that tab was before it was moved to the end of the pinned range for
+  // the strip to draw it; -1 when nothing is on loan.
+  int loaned_from_index_ = -1;
 
   BooleanPrefMember show_pinned_tabs_;
   BooleanPrefMember vertical_tabs_enabled_;

@@ -117,6 +117,7 @@
 #include "ui/gfx/codec/png_codec.h"
 #include "ui/views/paint_info.h"
 #include "ui/compositor/canvas_painter.h"
+#include "ui/views/widget/root_view.h"
 #include "ui/views/widget/widget_utils.h"
 #include "url/url_constants.h"
 
@@ -2912,9 +2913,10 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
 }
 
 // Dragged sideways out of the sidebar, the gesture stops being ours: the block
-// hands every pinned tab back to the strip and an ordinary tab drag takes over.
-// What that drag then does - the tear-off window, another window's strip - is
-// Chromium's and is not re-tested here. The hand-over is.
+// lends the strip the one tab being dragged - and only that one - and an
+// ordinary tab drag takes over. What that drag then does (the tear-off window,
+// another window's strip) is Chromium's and is not re-tested here. The
+// hand-over is: what goes where, and what makes the session actually move.
 IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
                        DraggingOutOfTheSidebarHandsOverToTheTabStrip) {
   SetShowPinnedTabs(true);
@@ -2922,6 +2924,7 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
   ASSERT_FALSE(TabDragController::IsActive());
 
   auto* block = GetSidebarPinnedTabsView();
+  content::WebContents* dragged = tab_model()->GetWebContentsAt(1);
   views::View* entry = EntryAt(1);
   entry->OnMousePressed(MouseEventAt(ui::EventType::kMousePressed,
                                      entry->GetLocalBounds().CenterPoint()));
@@ -2940,13 +2943,32 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
   RunLayout();
 
   EXPECT_TRUE(block->IsHandedOffForTesting());
-  EXPECT_EQ(0, HostedBySidebar());
-  EXPECT_EQ(kPinnedTabCount, DrawnByTabStrip())
-      << "the tabs have to be back in the strip, or there is nothing to drag";
+  EXPECT_EQ(kPinnedTabCount - 1, HostedBySidebar())
+      << "only the tab being dragged goes to the strip - picking up one entry "
+         "is no reason for the whole row to jump surfaces";
+  EXPECT_EQ(1, DrawnByTabStrip())
+      << "the dragged tab has to be drawn there, or there is nothing to drag";
+  EXPECT_EQ(kPinnedTabCount - 1, tab_model()->GetIndexOfWebContents(dragged))
+      << "the strip hides hosted tabs from the FRONT of the pinned range, so "
+         "the one it must draw has to be the last of them";
   EXPECT_TRUE(TabDragController::IsActive()) << "no tab drag session started";
 
-  browser_view()->horizontal_tab_strip_for_testing()->EndDrag(
-      EndDragReason::kCancel);
+  // A session existing is not a session that moves. TabDragController takes
+  // capture itself only for a touch drag; a mouse drag runs because the real
+  // press made the tab the widget's mouse handler, so every later
+  // OnMouseDragged reaches Tab -> TabStrip::ContinueDrag. Our press is
+  // synthesized, so nothing would have pointed the widget at this tab - and
+  // the drag would sit in kNotStarted while the window is left under a live
+  // session that nothing can end. Asserting IsActive() alone says none of
+  // this: it was true of the broken build too.
+  auto* tab_strip = browser_view()->horizontal_tab_strip_for_testing();
+  EXPECT_TRUE(browser_view()->GetWidget()->HasCapture());
+  EXPECT_EQ(tab_strip->tab_at(kPinnedTabCount - 1),
+            static_cast<views::internal::RootView*>(
+                browser_view()->GetWidget()->GetRootView())
+                ->mouse_pressed_handler_for_testing());
+
+  tab_strip->EndDrag(EndDragReason::kCancel);
 }
 
 // Letting go before the hand-over runs cancels it, and cancels it cleanly. The
@@ -3024,6 +3046,7 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
   SetShowPinnedTabs(true);
   ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
 
+  const std::vector<content::WebContents*> before = PinnedContents();
   content::WebContents* dragged = HandOffEntry(1);
   ASSERT_TRUE(TabDragController::IsActive());
 
@@ -3036,6 +3059,9 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
   ASSERT_NE(TabStripModel::kNoTab, index);
   EXPECT_TRUE(tab_model()->IsTabPinned(index));
   EXPECT_EQ(kPinnedTabCount, tab_model()->IndexOfFirstNonPinnedTab());
+  EXPECT_EQ(before, PinnedContents())
+      << "the hand-over moved the tab to the end of the pinned range for the "
+         "strip's sake; a cancelled drag has to undo that too";
 
   EXPECT_FALSE(GetSidebarPinnedTabsView()->IsHandedOffForTesting());
   EXPECT_EQ(kPinnedTabCount, HostedBySidebar());

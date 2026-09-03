@@ -60,6 +60,7 @@
 #include "ui/gfx/color_utils.h"
 #include "ui/views/layout/flex_layout.h"
 #include "ui/views/view_utils.h"
+#include "ui/views/widget/widget.h"
 
 #if BUILDFLAG(ENABLE_CONTAINERS)
 #include "brave/browser/containers/containers_service_factory.h"
@@ -479,6 +480,19 @@ bool BraveTabStrip::StartDragFromSidebar(
     // or the next ordinary drag would inherit it.
     BraveTabDragController::MarkNextDragAsStartedFromSidebar({});
     return false;
+  }
+
+  // A session exists; what makes it move is another matter. TabDragController
+  // takes capture itself only for a touch drag (Init(): `if (event_source ==
+  // kTouch)`) - a mouse drag is driven by the real press having made the tab
+  // the widget's mouse handler, so that every later OnMouseDragged reaches
+  // Tab -> TabStrip::ContinueDrag. Our press was synthesized and the pointer
+  // is over the sidebar, so nothing ever pointed the widget at this tab.
+  // Without this line the drag exists, answers IsActive(), and stays in
+  // kNotStarted forever while the window sits under a live session that
+  // nothing can end.
+  if (views::Widget* widget = GetWidget()) {
+    widget->SetCapture(tab);
   }
   return true;
 }
