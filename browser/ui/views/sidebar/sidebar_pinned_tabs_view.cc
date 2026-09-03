@@ -495,6 +495,11 @@ bool SidebarPinnedTabsView::OnEntryMouseDragged(SidebarPinnedTabView* entry,
   if (!handed_off_ &&
       (p.x() < -SidebarButtonView::kMargin ||
        p.x() > width() + SidebarButtonView::kMargin)) {
+    // No gap to fall into any more. The button can be released before the
+    // posted task runs, and without this the release would reorder to
+    // whichever gap the pointer was last over inside the block.
+    DrawDragIndicator(std::nullopt);
+
     gfx::Point in_screen = event.location();
     views::View::ConvertPointToScreen(entry, &in_screen);
     base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
@@ -510,6 +515,13 @@ bool SidebarPinnedTabsView::OnEntryMouseDragged(SidebarPinnedTabView* entry,
 
 void SidebarPinnedTabsView::HandOffToTabStrip(size_t entry_index,
                                               gfx::Point point_in_screen) {
+  // The button can be let go before this task runs, and a drag session with
+  // no button held down is worse than no drag at all: nothing would ever end
+  // it.
+  if (!dragging_) {
+    return;
+  }
+
   auto* tab_strip = GetBraveTabStrip();
   auto* model = browser_->tab_strip_model();
   const int index = static_cast<int>(entry_index);

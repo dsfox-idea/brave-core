@@ -2949,6 +2949,46 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
       EndDragReason::kCancel);
 }
 
+// Letting go before the hand-over runs cancels it, and cancels it cleanly. The
+// hand-over is posted, so a quick release can reach the block first; without
+// care that release would reorder to whichever gap the pointer was last over
+// inside the block, and the task would then start a drag session with no
+// button held down - one nothing would ever end.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       ReleasingBeforeTheHandOverRunsCancelsIt) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  const std::vector<content::WebContents*> before = PinnedContents();
+  auto* block = GetSidebarPinnedTabsView();
+  views::View* entry = EntryAt(2);
+
+  entry->OnMousePressed(MouseEventAt(ui::EventType::kMousePressed,
+                                     entry->GetLocalBounds().CenterPoint()));
+  // First over a gap inside the block, so there is a stale target to reorder
+  // to, and only then out of the sidebar.
+  gfx::Point gap = GapAbove(0);
+  views::View::ConvertPointToTarget(block, entry, &gap);
+  entry->OnMouseDragged(MouseEventAt(ui::EventType::kMouseDragged, gap));
+
+  gfx::Point out(block->width() + 300, entry->bounds().CenterPoint().y());
+  views::View::ConvertPointToTarget(block, entry, &out);
+  entry->OnMouseDragged(MouseEventAt(ui::EventType::kMouseDragged, out));
+
+  // Released before the posted hand-over gets to run.
+  entry->OnMouseReleased(MouseEventAt(ui::EventType::kMouseReleased, out));
+  base::RunLoop().RunUntilIdle();
+  RunLayout();
+
+  EXPECT_EQ(before, PinnedContents())
+      << "the release must not reorder to a gap the pointer had left";
+  EXPECT_FALSE(TabDragController::IsActive())
+      << "a drag session with no button held down would never end";
+  EXPECT_FALSE(block->IsHandedOffForTesting());
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  ExpectNoTabLostOrDoubled();
+}
+
 // Dropped on a tab strip, the tab loses its pin. Any strip, this window's own
 // included - and that case is the reason the rule exists, because this window
 // hosts pinned tabs in its sidebar, so a tab dropped on its own strip while
