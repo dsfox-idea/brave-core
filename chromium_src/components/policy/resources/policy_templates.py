@@ -11,12 +11,16 @@ import override_utils
 
 # Brave's policy templates directory mirrors the upstream layout, so the
 # upstream loader can be pointed at it as-is:
-# `//brave/components/policy/resources/templates/policy_definitions/BraveSoftware` # pylint: disable=line-too-long
+# `//brave/components/policy/resources/templates/policy_definitions/Growser` # pylint: disable=line-too-long
 BRAVE_TEMPLATES_PATH = os.path.relpath(
     brave_chromium_utils.wspath(
         '//brave/components/policy/resources/templates'))
 
-BRAVE_GROUP_NAME = 'BraveSoftware'
+# Growser-62 (renamed again by Growser-174): our group directory is Growser,
+# not BraveSoftware. Upstream turned this name into a constant during the 153
+# cycle - and their side of the merge naturally carried their own spelling,
+# which the loader then looked for and could not find.
+BRAVE_GROUP_NAME = 'Growser'
 
 
 @override_utils.override_function(globals())
