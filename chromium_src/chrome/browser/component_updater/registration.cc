@@ -60,6 +60,11 @@
 #include "brave/components/query_filter/browser/query_filter_component_installer.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/component_updater/component_updater_utils.h"
+// Growser-174: included explicitly now. This flag used to arrive transitively
+// through `#include <chrome/browser/component_updater/registration.cc>`, which
+// upstream moved from the top of this file to the bottom - so by the time the
+// guard below is reached, nothing has defined it any more.
+#include "components/on_device_translation/buildflags/buildflags.h"
 #include "extensions/buildflags/buildflags.h"
 
 #if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
