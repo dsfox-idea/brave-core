@@ -28,6 +28,8 @@ source_set("unit_tests") {
     ":static_redirect_helper",
     "//base",
     "//base/test:test_support",
+    # Growser-45: the expectations are built from the redirector endpoint.
+    "//brave/components/safebrowsing:buildflags",
     "//testing/gtest",
     "//url",
   ]
