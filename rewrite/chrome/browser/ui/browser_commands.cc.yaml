@@ -13,7 +13,7 @@ substitutions:
 
   - description:
       Rename NewTab to NewTab_ChromiumImpl so Brave can adopt a warm,
-      pre-rendered New Tab Page (growser #119) before falling back to the
+      pre-rendered New Tab Page (growser#119) before falling back to the
       upstream tab creation.
     regex:
       re_pattern: (content::WebContents& NewTab)\(
