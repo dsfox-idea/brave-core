@@ -126,6 +126,13 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &blink::features::kAllowURNsInIframes,
       &blink::features::kBackgroundResourceFetch,
       &blink::features::kControlledFrame,
+      // Growser-174: two switches, and only both off keep <fencedframe> out
+      // of the web surface. kFencedFrames is the browser-side support;
+      // kFencedFramesRuntime is the base::Feature upstream generates to back
+      // the Blink runtime flag, named apart from the first one on purpose so
+      // the two cannot collide.
+      &blink::features::kFencedFrames,
+      &blink::features::kFencedFramesRuntime,
       &blink::features::kFledge,
       &blink::features::kLanguageDetectionAPI,
       &blink::features::kParakeet,
@@ -314,13 +321,6 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
 TEST(FeatureDefaultsTest, EnabledFeatures) {
   const base::Feature* enabled_features[] = {
       &omnibox::kAblateSearchProviderWarmup,
-      // Chromium 152 exposes HTMLFencedFrameElement from the json5 default
-      // whenever the PrivacySandboxAdsAPIs overrides are disabled, and a
-      // browser process with kFencedFrames off answers the element's mojo
-      // call with ReceivedBadMessage, killing the renderer. Keep browser-side
-      // support on: Chrome's shape, and no config sources exist in this build
-      // to load ad content into the frame (growser#82).
-      &blink::features::kFencedFrames,
       &blink::features::kMixedContentAutoupgrade,
       &blink::features::kReducedReferrerGranularity,
       &blink::features::kReduceUserAgentMinorVersion,
