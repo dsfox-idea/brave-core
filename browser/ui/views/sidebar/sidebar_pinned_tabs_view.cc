@@ -231,8 +231,14 @@ void SidebarPinnedTabsView::OnTabPinnedStateChanged(tabs::TabInterface* tab,
 }
 
 void SidebarPinnedTabsView::OnTabChangedAt(tabs::TabInterface* tab,
-                                           int index,
                                            TabChangeType change_type) {
+  // Growser-174: the index used to be an argument; Chromium 153 dropped it, so
+  // it is looked up. Entry i mirrors model index i, which is what makes that
+  // lookup meaningful at all.
+  if (!tab) {
+    return;
+  }
+  const int index = browser_->tab_strip_model()->GetIndexOfTab(tab);
   if (index >= 0 && static_cast<size_t>(index) < entries_.size()) {
     UpdateEntry(static_cast<size_t>(index));
   }

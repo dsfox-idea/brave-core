@@ -74,8 +74,8 @@ class SidebarPinnedTabsView : public views::View,
       const TabStripModelChange& change,
       const TabStripSelectionChange& selection) override;
   void OnTabPinnedStateChanged(tabs::TabInterface* tab, int index) override;
+  // Growser-174: Chromium 153 dropped the index from this observer call.
   void OnTabChangedAt(tabs::TabInterface* tab,
-                      int index,
                       TabChangeType change_type) override;
 
   // views::ContextMenuController:
