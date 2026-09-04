@@ -238,7 +238,8 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsEnableTest) {
   // Test normal browser's brave commands status.
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller =
+      chrome::BrowserCommandController::From(browser());
   // Growser-152: the command follows its buildflag now, so with rewards
   // compiled out it is off - see UpdateCommandForBraveRewards().
   EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
@@ -298,7 +299,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsEnableTestPrivateWindow) {
   auto* private_browser = CreateIncognitoBrowser();
-  auto* command_controller = private_browser->command_controller();
+  auto* command_controller =
+      chrome::BrowserCommandController::From(private_browser);
   // Growser-152: the command follows its buildflag now, so with rewards
   // compiled out it is off - see UpdateCommandForBraveRewards().
   EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
@@ -378,7 +380,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   Browser* tor_browser = tor_browser_creation_observer.Wait();
   DCHECK(tor_browser);
   EXPECT_TRUE(tor_browser->GetProfile()->IsTor());
-  auto* command_controller = tor_browser->command_controller();
+  auto* command_controller =
+      chrome::BrowserCommandController::From(tor_browser);
   // Growser-152: the command follows its buildflag now, so with rewards
   // compiled out it is off - see UpdateCommandForBraveRewards().
   EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
