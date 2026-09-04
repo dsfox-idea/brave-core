@@ -40,6 +40,11 @@
     'chrome/install_static/brave_restore_google_update_integration.h',
     'chrome/install_static/brave_stash_google_update_integration.h',
     'chrome/install_static/brave_user_data_dir_win_unittest.cc',
+    // Growser-128: ours, not an override - there is no upstream file of this
+    // name to shadow. It declares the helpers that rename the macOS keychain
+    // item to Growser and carry the pre-rebrand value across; its caller is
+    // an .mm, which is why nothing in the .cc/.h sweep points at it either.
+    'components/os_crypt/common/growser_keychain_migration.h',
     'components/search_engines/brave_template_url_prepopulate_data_unittest.cc',
     'components/search_engines/brave_template_url_service_util_unittest.cc',
     'components/variations/service/field_trial_unittest.cc',
