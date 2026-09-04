@@ -4532,7 +4532,7 @@ are declared in tools/grit/grit_args.gni.
       <message name="IDS_TAB_SHARING_INFOBAR_STOP_BUTTON" desc="Text displayed on the button to stop sharing a tab.">
        Stop sharing
       </message>
-      <message name="IDS_TAB_SHARING_INFOBAR_SWITCH_TO_BUTTON" desc="The user is sharing (presenting) a tab via a screensharing app like Growser Meet. This button allows the user to continue sharing a tab but view a different tab [url] at the same time. The URL should not appear in the middle of the button in any language; please observe the structure of [message: url].">
+      <message name="IDS_TAB_SHARING_INFOBAR_SWITCH_TO_BUTTON" desc="The user is sharing (presenting) a tab via a screensharing app like Google Meet. This button allows the user to continue sharing a tab but view a different tab [url] at the same time. The URL should not appear in the middle of the button in any language; please observe the structure of [message: url].">
        View tab: <ph name="TAB_ORIGIN">$1<ex>meet.google.com</ex></ph>
       </message>
       <message name="IDS_TAB_SHARING_INFOBAR_SWITCH_TO_CAPTURER_BUTTON" desc="Text displayed on an infobar button offering to change focus to the capturer if its hostname cannot be determined. (Otherwise, IDS_TAB_SHARING_INFOBAR_SWITCH_TO_BUTTON will be used.)">
@@ -7472,7 +7472,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_NTP_CUSTOMIZE_FOOTER_HEADER" desc="The toggle for the Footer title in the customization menu on the New Tab Page." meaning="The footer which shows at the bottom of the New Tab page.">
         Footer
       </message>
-      <message name="IDS_NTP_CUSTOMIZE_TOOLS_HEADER" desc="The heading for the Growser Search tools section in the Customize Growser Side Panel." meaning="Setting controlling visibility of different Google Search tools. Search is a proper noun.">
+      <message name="IDS_NTP_CUSTOMIZE_TOOLS_HEADER" desc="The heading for the Google Search tools section in the Customize Growser Side Panel." meaning="Setting controlling visibility of different Google Search tools. Search is a proper noun.">
         Search tools
       </message>
       <message name="IDS_NTP_MANAGED_BY_SEARCH_ENGINE" desc="The string that shows on the customize chrome UI when a 3rd party manages the new tab page.">
@@ -7511,10 +7511,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_NTP_CUSTOMIZE_SHOW_FOOTER_LABEL" desc="The label for the option to show footer in the customization menu on the New Tab Page">
         Show footer on New Tab page
       </message>
-      <message name="IDS_NTP_CUSTOMIZE_SHOW_CHIPS_LABEL" desc="The label for the option to show the Growser Search tools options in the New Tab Page" meaning="Toggle to display/hide the Search tool options in the New Tab Page.">
+      <message name="IDS_NTP_CUSTOMIZE_SHOW_CHIPS_LABEL" desc="The label for the option to show the Google Search tools options in the New Tab Page" meaning="Toggle to display/hide the Search tool options in the New Tab Page.">
         Show options
       </message>
-      <message name="IDS_NTP_CUSTOMIZE_SHOW_SUGGESTIONS_CHIPS_LABEL" desc="The label for the option to show the Growser Search tool suggestions in the New Tab Page" meaning="Toggle to display/hide the Search tool suggestions in the New Tab Page.">
+      <message name="IDS_NTP_CUSTOMIZE_SHOW_SUGGESTIONS_CHIPS_LABEL" desc="The label for the option to show the Google Search tool suggestions in the New Tab Page" meaning="Toggle to display/hide the Search tool suggestions in the New Tab Page.">
         Show suggestions
       </message>
       <message name="IDS_NTP_CUSTOMIZE_SHOW_SHORTCUTS_LABEL" desc="The label for the option to show shortcuts in the customization menu on the New Tab Page">
@@ -8190,7 +8190,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_CATEGORY_SIDE_PANELS" desc="The label for the category of actions that open side panels, such as reading mode and show all bookmarks.">
           Side Panels
         </message>
-        <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_CATEGORY_TOOLS_AND_ACTIONS" desc="The label for the category of actions that open special purpose tools, such as Growser Translate or developer tools.">
+        <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_CATEGORY_TOOLS_AND_ACTIONS" desc="The label for the category of actions that open special purpose tools, such as Google Translate or developer tools.">
           Tools and Actions
         </message>
         <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_RESET_TO_DEFAULT_BUTTON_LABEL" desc="The label for the button to reset the set of pinned toolbar actions to the default.">
@@ -8201,7 +8201,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_CATEGORY_SIDE_PANELS" desc="The label for the category of actions that open side panels, such as reading mode and show all bookmarks.">
           Side panels
         </message>
-        <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_CATEGORY_TOOLS_AND_ACTIONS" desc="The label for the category of actions that open special purpose tools, such as Growser Translate or developer tools.">
+        <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_CATEGORY_TOOLS_AND_ACTIONS" desc="The label for the category of actions that open special purpose tools, such as Google Translate or developer tools.">
           Tools and actions
         </message>
         <message name="IDS_NTP_CUSTOMIZE_TOOLBAR_RESET_TO_DEFAULT_BUTTON_LABEL" desc="The label for the button to reset the set of pinned toolbar actions to the default.">
@@ -8612,7 +8612,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_NTP_MODULES_MICROSOFT_SIGN_OUT_BUTTON_TEXT" desc="Button text for signing out of Microsoft for the Microsoft cards on the NTP." meaning="Sign out of account.">
         Sign out of Microsoft
       </message>
-      <message name="IDS_NTP_MODULES_OUTLOOK_CALENDAR_TITLE" desc="Title of the Growser Calendar module shown in various UIs for Customize Growser and the NTP." meaning="Title of feature for showing a glimpse of a user's Google Calendar.">
+      <message name="IDS_NTP_MODULES_OUTLOOK_CALENDAR_TITLE" desc="Title of the Google Calendar module shown in various UIs for Customize Growser and the NTP." meaning="Title of feature for showing a glimpse of a user's Google Calendar.">
         Outlook Calendar
       </message>
       <message name="IDS_NTP_MODULES_OUTLOOK_CALENDAR_DISABLE_BUTTON_TEXT" desc="Text shown on the disable button of a NTP Outlook Calendar card." translateable="false">

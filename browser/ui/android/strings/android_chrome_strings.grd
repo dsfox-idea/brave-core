@@ -736,7 +736,7 @@ For more settings that use data to improve your Growser experience, go to <ph na
         A virtual card hides your actual card to help protect you from potential fraud. <ph name="BEGIN_LINK1">&lt;link1&gt;</ph>Learn more about virtual cards<ph name="END_LINK1">&lt;/link1&gt;</ph>
       </message>
       <message name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_DIALOG_EDUCATION_TEXT_V2" desc="Text explaining the benefit of enrolling a credit card as a virtual card. Also contains a link to learn more about virtual cards from IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL.">
-        A virtual card number will be filled when you check out with this card to protect your actual details. Manage in Growser Wallet. <ph name="BEGIN_LINK1">&lt;link1&gt;</ph>Learn more about virtual cards<ph name="END_LINK1">&lt;/link1&gt;</ph>
+        A virtual card number will be filled when you check out with this card to protect your actual details. Manage in Google Wallet. <ph name="BEGIN_LINK1">&lt;link1&gt;</ph>Learn more about virtual cards<ph name="END_LINK1">&lt;/link1&gt;</ph>
       </message>
       <message name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_DIALOG_CARD_CONTAINER_TITLE" desc="Text describing how the virtual card will be shown to the user in autofill suggestions.">
         Virtual card
@@ -790,8 +790,8 @@ For more settings that use data to improve your Growser experience, go to <ph na
       <message name="IDS_AUTOFILL_DELETE_SAVED_CVCS_CONFIRMATION_DIALOG_MESSAGE" desc="Message for the dialog where the user confirms their intention to delete their saved CVCs.">
         All security codes saved on your device and in your Growser sync chain will be deleted
       </message>
-      <message name="IDS_AUTOFILL_DELETE_SAVED_CVCS_IN_WALLET_CONFIRMATION_DIALOG_MESSAGE" desc="Message for the dialog where the user confirms their intention to delete their saved CVCs in Growser Wallet.">
-        All security codes saved on your device and in Growser Wallet will be deleted
+      <message name="IDS_AUTOFILL_DELETE_SAVED_CVCS_IN_WALLET_CONFIRMATION_DIALOG_MESSAGE" desc="Message for the dialog where the user confirms their intention to delete their saved CVCs in Google Wallet.">
+        All security codes saved on your device and in Google Wallet will be deleted
       </message>
       <message name="IDS_AUTOFILL_DELETE_SAVED_CVCS_CONFIRMATION_DIALOG_DELETE_BUTTON_LABEL" desc="Label shown on the button that the user clicks on to delete their saved CVCs.">
         Delete
@@ -1173,7 +1173,7 @@ Your Growser account may have other forms of browsing history like searches and 
       <message name="IDS_PASSWORD_MANAGER_LINK_OUT_DESCRIPTION" desc="Description for the link out button in the Clear Browsing Data dialog that redirects to the Growser Password Manager.">
         Manage in Growser Password Manager
       </message>
-            <message name="IDS_SEARCH_HISTORY_LINK_OUT_TITLE" desc="Title for the link out button in the Clear Browsing Data dialog that redirects to the Growser Search History page.">
+            <message name="IDS_SEARCH_HISTORY_LINK_OUT_TITLE" desc="Title for the link out button in the Clear Browsing Data dialog that redirects to the Google Search History page.">
         Search history
       </message>
       <message name="IDS_SEARCH_HISTORY_LINK_OUT_DESCRIPTION_OTHER_DSE" desc="Description for the tab in the Clear Browsing Data dialog that instructs users to refer to their default search engine provider to manage search history.">
@@ -1859,11 +1859,11 @@ Your Growser account may have other forms of browsing history like searches and 
       <message name="IDS_LANGUAGES_LIST_DESCRIPTION" desc="Description on the Languages settings screen. Appears above a list of one or more languages that the user selects, to tell Growser which languages they prefer to use to read website content.">
         Let websites know the languages you speak. They’ll show content in those languages, when possible.
       </message>
-      <message name="IDS_LANGUAGES_OFFER_TRANSLATE_SWITCH" desc="Appears next to the 'offer to translate' switch that controls whether or not Growser will display the Growser Translate UI on web pages that are not in the user's preferred language(s).">
+      <message name="IDS_LANGUAGES_OFFER_TRANSLATE_SWITCH" desc="Appears next to the 'offer to translate' switch that controls whether or not Growser will display the Google Translate UI on web pages that are not in the user's preferred language(s).">
         Offer to translate pages in other languages
       </message>
-      <message name="IDS_LANGUAGES_SEND_TRANSLATE_SWITCH" desc="Appears next to the switch controlling whether or not Growser will offer to translate pages in other languages.  When enabled the Growser Translate UI will be displayed on web pages that are not in the user's preferred language(s).">
-        Offer to send pages in other languages to Growser Translate
+      <message name="IDS_LANGUAGES_SEND_TRANSLATE_SWITCH" desc="Appears next to the switch controlling whether or not Growser will offer to translate pages in other languages.  When enabled the Google Translate UI will be displayed on web pages that are not in the user's preferred language(s).">
+        Offer to send pages in other languages to Google Translate
       </message>
       <message name="IDS_LANGUAGES_ITEM_OPTION_OFFER_TO_TRANSLATE" desc="Option in language item menu. User can click the 'Offer to translate' option to toggle whether they want Growser to translate pages in this language. [CHAR_LIMIT=32]">
         Offer to translate
@@ -2334,8 +2334,8 @@ Your Growser account may have other forms of browsing history like searches and 
       <message name="IDS_ACCOUNT_SECTION_PAYMENTS_TOGGLE" desc="Google Pay data for Autofill, one of the data types that we allow syncing. 'Google Pay' should not be translated as it is the product name. Shown on next to the toggle that controls whether Google Pay data for Autofill should be saved in the Growser sync chain and synced across devices.">
         Payment methods, offers, and addresses using Google Pay
       </message>
-      <message name="IDS_ACCOUNT_SECTION_PAYMENTS_AND_INFO_TOGGLE" desc="Growser Wallet data for Autofill, one of the data types that we allow syncing. 'Growser Wallet' should not be translated as it is the product name. Shown on next to the toggle that controls whether payments and other data from Growser Wallet, for use in Autofill, should be saved in the Growser sync chain and synced across devices.">
-        Payment methods and other info from Growser Wallet
+      <message name="IDS_ACCOUNT_SECTION_PAYMENTS_AND_INFO_TOGGLE" desc="Google Wallet data for Autofill, one of the data types that we allow syncing. 'Google Wallet' should not be translated as it is the product name. Shown on next to the toggle that controls whether payments and other data from Google Wallet, for use in Autofill, should be saved in the Growser sync chain and synced across devices.">
+        Payment methods and other info from Google Wallet
       </message>
       <message name="IDS_ACCOUNT_SECTION_SETTINGS_TOGGLE" desc="Settings, one of the data types that we allow syncing. Shown on next to the toggle that controls whether Settings should be saved in the Growser sync chain and synced across devices.">
         Settings
@@ -3520,10 +3520,10 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
         Show me how
       </message>
       <message name="IDS_LIGHTWEIGHT_FRE_ASSOCIATED_APP_TOS" desc="Message explaining that use of Growser is governed by Growser's terms of service.">
-        <ph name="APP_NAME">%1$s<ex>Growser Maps</ex></ph> will open in Growser. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Growser Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Growser and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
+        <ph name="APP_NAME">%1$s<ex>Google Maps</ex></ph> will open in Growser. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Growser Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Growser and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
       </message>
       <message name="IDS_LIGHTWEIGHT_FRE_ASSOCIATED_APP_TOS_AND_PRIVACY_CHILD_ACCOUNT" desc="Message explaining that use of Growser is governed by Growser's terms of service, and the Growser Privacy Policy.">
-        <ph name="APP_NAME">%1$s<ex>Growser Maps</ex></ph> will open in Growser. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Growser Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Growser and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>. The <ph name="BEGIN_LINK3">&lt;LINK3&gt;</ph>Privacy Policy<ph name="END_LINK3">&lt;/LINK3&gt;</ph> also applies.
+        <ph name="APP_NAME">%1$s<ex>Google Maps</ex></ph> will open in Growser. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Growser Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Growser and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>. The <ph name="BEGIN_LINK3">&lt;LINK3&gt;</ph>Privacy Policy<ph name="END_LINK3">&lt;/LINK3&gt;</ph> also applies.
       </message>
       <message name="IDS_FRE_ACCEPT_CONTINUE" desc="Text for first page accept and continue button [CHAR_LIMIT=20]">
         Accept &amp; continue

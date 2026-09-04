@@ -1505,13 +1505,13 @@
     <message name="IDS_AUTOFILL_BOTTOM_SHEET_BACK_BUTTON_DESCRIPTION" desc="Accessibility string for the icon that allows closing the current screen and going back to the intial screen on a bottomsheet." formatter_data="android_java">
       Back
     </message>
-    <message name="IDS_AUTOFILL_BOTTOM_SHEET_MANAGE_LOYALTY_CARDS" desc="An option in the autofill bottom sheet that triggers navigation to the loyalty cards management UI in Growser Wallet." formatter_data="android_java">
+    <message name="IDS_AUTOFILL_BOTTOM_SHEET_MANAGE_LOYALTY_CARDS" desc="An option in the autofill bottom sheet that triggers navigation to the loyalty cards management UI in Google Wallet." formatter_data="android_java">
       Manage loyalty cards
     </message>
     <message name="IDS_AUTOFILL_PAYMENT_METHOD_BOTTOM_SHEET_TITLE" desc="The title of the touch to fill bottom sheet for payments that appears under the GPay icon." formatter_data="android_java">
       Autofill payment info
     </message>
-    <message name="IDS_AUTOFILL_LOYALTY_CARD_BOTTOM_SHEET_TITLE" desc="The title of the touch to fill bottom sheet for loyalty cards that appears under the Growser Wallet icon." formatter_data="android_java">
+    <message name="IDS_AUTOFILL_LOYALTY_CARD_BOTTOM_SHEET_TITLE" desc="The title of the touch to fill bottom sheet for loyalty cards that appears under the Google Wallet icon." formatter_data="android_java">
       Autofill loyalty card
     </message>
     <message name="IDS_AUTOFILL_LOYALTY_CARD_FIRST_TIME_USAGE_BOTTOM_SHEET_TITLE" desc="The title of the touch to fill bottom sheet for loyalty cards that appears under the Google Wallet icon. This title is shown to promote loyalty card filling to users." formatter_data="android_java">
@@ -1526,7 +1526,7 @@
     <message name="IDS_AUTOFILL_LOYALTY_CARD_AUTOFILL_BUTTON" desc="The label of the button, which would fill in the web form with a loyalty card number." formatter_data="android_java">
       Autofill
     </message>
-    <message name="IDS_AUTOFILL_LOYALTY_CARD_WALLET_SETTINGS_BUTTON" desc="The label of the button, which redirects the user to the Growser Wallet loyalty card settings in Growser." formatter_data="android_java">
+    <message name="IDS_AUTOFILL_LOYALTY_CARD_WALLET_SETTINGS_BUTTON" desc="The label of the button, which redirects the user to the Google Wallet loyalty card settings in Growser." formatter_data="android_java">
       Wallet settings
     </message>
     <message name="IDS_AUTOFILL_PAYMENT_METHOD_BOTTOM_SHEET_CONTENT_DESCRIPTION" desc="Accessibility string read when the bottom sheet is opened. It describes the bottom sheet where a user can pick a payment method to fill into a form." formatter_data="android_java">

@@ -19,10 +19,10 @@
   </message>
 
   <!-- Settings: Option 1: When On / Things To Consider -->
-  <message name="IDS_STS_SETTINGS_OPTION_1_SHARE_OPEN_TABS_FOR_EVERY_THREAD_V3" desc="Label for a setting that allows users to share relevant tabs in every Growser Search AI Mode thread.">
+  <message name="IDS_STS_SETTINGS_OPTION_1_SHARE_OPEN_TABS_FOR_EVERY_THREAD_V3" desc="Label for a setting that allows users to share relevant tabs in every Google Search AI Mode thread.">
     Automatically share relevant open tabs in every thread
   </message>
-  <message name="IDS_STS_SETTINGS_OPTION_1_CHOOSE_HOW_RELEVANT_OPEN_TABS_CAN_BE_USED_V3" desc="This string is the subheading of a setting for 'Share relevant tabs in every thread'. This string explains what Growser shares with Growser Search AI Mode when turned on.">
+  <message name="IDS_STS_SETTINGS_OPTION_1_CHOOSE_HOW_RELEVANT_OPEN_TABS_CAN_BE_USED_V3" desc="This string is the subheading of a setting for 'Share relevant tabs in every thread'. This string explains what Growser shares with Google Search AI Mode when turned on.">
     Growser will automatically send the page content and URLs of open tabs that may be relevant to your question to Growser to get more personalized responses. Growser will only share tabs from the window you're working in.
   </message>
   <message name="IDS_STS_SETTINGS_OPTION_1_LEARN_MORE" desc="No implementation or screenshot yet. See http://crbug.com/490510281 for context.">
@@ -31,10 +31,10 @@
   <message name="IDS_STS_SETTINGS_OPTION_1_NEVER_SHARE_THESE_SITES" desc="Header for the exclusion list for smart tab sharing. Sites added here will not be referenced for responses.">
     Never share these sites
   </message>
-  <message name="IDS_STS_SETTINGS_OPTION_1_SITES_ADDED_HERE_WONT_BE_REFERENCED_V2" desc="This string is a subheading of a label for how a user can exclude certain sites from being shared with Growser Search AI Mode when 'Share relevant tabs in every thread' is on.">
+  <message name="IDS_STS_SETTINGS_OPTION_1_SITES_ADDED_HERE_WONT_BE_REFERENCED_V2" desc="This string is a subheading of a label for how a user can exclude certain sites from being shared with Google Search AI Mode when 'Share relevant tabs in every thread' is on.">
     Sites you add here won't be referenced for responses, even if the tab is open.
   </message>
-  <message name="IDS_STS_SETTINGS_OPTION_1_SITES_ADDED_HERE_WONT_BE_REFERENCED_V3" desc="This string is a subheading of a label for how a user can exclude certain sites from being shared with Growser Search AI Mode when 'Share relevant tabs in every thread' is on.">
+  <message name="IDS_STS_SETTINGS_OPTION_1_SITES_ADDED_HERE_WONT_BE_REFERENCED_V3" desc="This string is a subheading of a label for how a user can exclude certain sites from being shared with Google Search AI Mode when 'Share relevant tabs in every thread' is on.">
     Sites you add here won't be referenced for responses, even if the tab is open. If a site you add is currently being used in a thread, it can take up to 30 minutes for the thread to stop referencing it.
   </message>
 
