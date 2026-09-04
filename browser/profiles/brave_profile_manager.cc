@@ -25,7 +25,7 @@
 #include "brave/components/constants/brave_constants.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/content_settings/core/browser/brave_content_settings_pref_provider.h"
-#include "brave/components/ntp_background_images/browser/ntp_p3a_util.h"
+#include "brave/components/local_ai/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/common/pref_names.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
@@ -49,10 +49,16 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
 #include "brave/browser/brave_ads/ads_service_factory.h"
+#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
+#include "brave/components/ntp_background_images/browser/ntp_p3a_util.h"
 #endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
 
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
+#endif
+
+#if BUILDFLAG(ENABLE_LOCAL_AI)
+#include "brave/browser/history_embeddings/brave_history_embeddings_status.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
@@ -70,8 +76,6 @@
 using brave_shields::ControlType;
 using content::BrowserThread;
 using ntp_background_images::prefs::kNewTabPageShowBackgroundImage;
-using ntp_background_images::prefs::
-    kNewTabPageShowSponsoredImagesBackgroundImage;  // NOLINT
 
 namespace {
 
@@ -105,14 +109,16 @@ void MigrateHttpsUpgradeSettings(Profile* profile) {
 }
 
 void RecordInitialP3AValues(Profile* profile) {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
   // Preference is unregistered for some reason in profile_manager_unittest
   // TODO(bsclifton): create a proper testing profile
   if (!profile->GetPrefs()->FindPreference(kNewTabPageShowBackgroundImage) ||
       !profile->GetPrefs()->FindPreference(
-          kNewTabPageShowSponsoredImagesBackgroundImage)) {
+          brave_ads::prefs::kSponsoredEnabled)) {
     return;
   }
   ntp_background_images::RecordSponsoredImagesEnabledP3A(profile->GetPrefs());
+#endif  // BUILDFLAG(ENABLE_BRAVE_ADS)
   if (profile->IsRegularProfile()) {
     auto* map = HostContentSettingsMapFactory::GetForProfile(profile);
     MaybeRecordInitialShieldsSettings(
@@ -175,6 +181,12 @@ void BraveProfileManager::InitProfileUserPrefs(Profile* profile) {
   brave::SetDefaultSearchVersion(profile, profile->IsNewProfile());
   brave::SetDefaultThirdPartyCookieBlockValue(profile);
   perf::MaybeEnableBraveFeaturesPrefsForPerfTesting(profile);
+
+#if BUILDFLAG(ENABLE_LOCAL_AI)
+  // Capture the Semantic History Search setting before the embedding services
+  // are built on it.
+  history_embeddings::BraveHistoryEmbeddingsStatus::CreateForProfile(profile);
+#endif
 }
 
 void BraveProfileManager::DoFinalInitForServices(Profile* profile,

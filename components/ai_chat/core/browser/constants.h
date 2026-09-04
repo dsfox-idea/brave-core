@@ -24,11 +24,23 @@ namespace ai_chat {
 base::span<const webui::LocalizedString> GetLocalizedStrings();
 std::vector<mojom::ActionGroupPtr> GetActionMenuList();
 
+// Serialized into the `brave_capability` request field. Any capability a
+// conversation can enable needs an entry, or CreateJSONRequestBody CHECKs.
+// FILES and SUMMARY are absent as they're only ever model capabilities.
 inline constexpr auto kCapabilityStringMap =
     base::MakeFixedFlatMap<mojom::ConversationCapability, std::string_view>(
         {{mojom::ConversationCapability::CHAT, "chat"},
          {mojom::ConversationCapability::CONTENT_AGENT, "content_agent"},
-         {mojom::ConversationCapability::DEEP_RESEARCH, "deep_research"}});
+         {mojom::ConversationCapability::DEEP_RESEARCH, "deep_research"},
+         {mojom::ConversationCapability::MATH_ML, "math_ml"}});
+
+// Hints about how the server should handle a request - these are intended to
+// let the server know what the client can do. For example, when we send the
+// math_ml capability the server can modify the system prompt so models know
+// they can output math-ml.
+inline constexpr auto kServerHintCapabilities =
+    base::MakeFixedFlatSet<mojom::ConversationCapability>(
+        {mojom::ConversationCapability::MATH_ML});
 
 inline constexpr char kLeoModelSupportUrl[] =
     "https://support.brave.app/hc/en-us/articles/26727364100493-"

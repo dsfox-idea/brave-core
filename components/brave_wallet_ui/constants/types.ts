@@ -152,6 +152,12 @@ export interface UIState {
   isSidePanel: boolean
   isMobile: boolean
   isIOS: boolean
+  selectedTransactionId?: TransactionInfoLookup
+  /**
+   * Set while a transaction is being submitted (e.g. ZCash); keeps confirm UI
+   * visible until status is shown.
+   */
+  submittingTransaction?: SerializableTransactionInfo
 }
 
 export interface WalletState {
@@ -169,6 +175,7 @@ export interface WalletState {
   isAnkrBalancesFeatureEnabled: boolean
   isRefreshingNetworksAndTokens: boolean
   isZCashShieldedTransactionsEnabled: boolean
+  isZCashIronwoodEnabled: boolean
   isCardanoEnabled: boolean
   isCardanoDappSupportEnabled: boolean
   isPolkadotEnabled: boolean
@@ -180,12 +187,6 @@ export interface PanelState {
   selectedPanel: PanelTypes
   connectingAccounts: string[]
   hardwareWalletCode?: HardwareWalletResponseCodeType
-  selectedTransactionId?: TransactionInfoLookup
-  /**
-   * Set while a transaction is being submitted (e.g. ZCash); keeps panel on
-   * pending view until status is shown.
-   */
-  submittingTransaction?: SerializableTransactionInfo
 }
 
 export interface PageState {

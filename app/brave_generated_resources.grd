@@ -180,6 +180,9 @@
       <!-- Growser App Management strings -->
       <part file="brave_app_management.grdp" />
 
+      <!-- Custom profile image strings -->
+      <part file="custom_profile_image_strings.grdp" />
+
       <!--Add new items to the appropriate sections below -->
 
       <!-- Profile menu -->
@@ -635,6 +638,9 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
       <message name="IDS_BRAVE_SCREENSHOT_PREVIEW_DIALOG_DOWNLOAD_BUTTON" desc="Label of the button in the screenshot preview dialog that proceeds to save the screenshot">
         Download
       </message>
+      <message name="IDS_BRAVE_SCREENSHOT_PREVIEW_DIALOG_COPY_BUTTON" desc="Label of the button in the screenshot preview dialog that copies the screenshot to clipboard">
+        Copy to clipboard
+      </message>
 
       <!-- Extensions page strings -->
       <message name="IDS_EXTENSIONS_BRAVE_ITEM_SOURCE_WEBSTORE" desc="The text to indicate that an extension is from the Web Extensions Store.">
@@ -1082,7 +1088,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
           Close duplicate tabs
         </message>
         <if expr="enable_containers">
-          <message name="IDS_CXMENU_NO_CONTAINER" desc="The label of the 'No container' context menu item, indicating that the tab is not in any container">
+          <message name="IDS_CXMENU_NO_CONTAINER" desc="The label of the 'No container' context menu item, indicating that the tab is not in any container" formatter_data="webui=Containers">
             No container
           </message>
           <message name="IDS_CXMENU_OPEN_IN_CONTAINER" desc="The label of the 'Open in Container' context menu item">
@@ -1094,7 +1100,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
           <message name="IDS_CXMENU_OPEN_CONTAINERS_SETTINGS" desc="The label of the context menu item for opening the Containers settings page.">
             Manage containers
           </message>
-          <message name="IDS_CXMENU_NEW_TEMPORARY_CONTAINER" desc="Creates a new local-only temporary container and opens the URL in it.">
+          <message name="IDS_CXMENU_NEW_TEMPORARY_CONTAINER" desc="Creates a new local-only temporary container and opens the URL in it." formatter_data="webui=Containers">
             New temporary container
           </message>
         </if>
@@ -1128,7 +1134,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
           Close Duplicate Tabs
         </message>
         <if expr="enable_containers">
-          <message name="IDS_CXMENU_NO_CONTAINER" desc="The label of the 'No container' context menu item, indicating that the tab is not in any container">
+          <message name="IDS_CXMENU_NO_CONTAINER" desc="The label of the 'No container' context menu item, indicating that the tab is not in any container" formatter_data="webui=Containers">
             No Container
           </message>
           <message name="IDS_CXMENU_OPEN_IN_CONTAINER" desc="The label of the 'Open in Container' context menu item">
@@ -1140,7 +1146,7 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
           <message name="IDS_CXMENU_OPEN_CONTAINERS_SETTINGS" desc="The label of the tab context menu item for opening the Containers settings page.">
             Manage Containers
           </message>
-          <message name="IDS_CXMENU_NEW_TEMPORARY_CONTAINER" desc="Creates a new local-only temporary container and opens the URL in it.">
+          <message name="IDS_CXMENU_NEW_TEMPORARY_CONTAINER" desc="Creates a new local-only temporary container and opens the URL in it." formatter_data="webui=Containers">
             New Temporary Container
           </message>
         </if>
@@ -1578,6 +1584,9 @@ Or change later at <ph name="SETTINGS_EXTENIONS_LINK">$2<ex>brave://settings/ext
       </message>
       <message name="IDS_BRAVE_ORGANIZE_TAB_WINDOW_CREATED_MESSAGE" desc="Message shown when a new window is created">
         New window created for <ph name="TOPIC">$1<ex>Social media</ex></ph>
+      </message>
+      <message name="IDS_BRAVE_ORGANIZE_TAB_NO_MATCHING_TABS_MESSAGE" desc="Message shown when no open tab matches the topic the user asked for">
+        No tabs matched that topic. Try describing it differently.
       </message>
       <message name="IDS_BRAVE_ORGANIZE_TAB_SEND_TAB_DATA_MESSAGE" desc="Description of how tab data is shared with Leo">
         This feature sends data about your open tabs to Leo, Growser's AI-powered browser assistant.

@@ -493,13 +493,13 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
         Today’s top stories in a private feed, just for you.
       </message>
       <message name="IDS_BRAVE_NEWS_SETTINGS_OPTIN_TITLE" desc="Text for opt in card title in settings">
-        Turn on Growser News, and never miss a story
+        Turn on Growser News and never miss a story
       </message>
       <message name="IDS_BRAVE_NEWS_OPTIN_SUBTITLE" desc="Text for opt in card subtitle">
         Growser News is ad-supported with private and anonymized ads matched on your device.
       </message>
       <message name="IDS_BRAVE_NEWS_SETTINGS_OPTIN_SUBTITLE" desc="Text for opt in card subtitle in settings">
-        Follow your favorite sources, in a single feed. Just open a tab in Growser, scroll down, and... voila!\nBrave News is ad-supported with private, anonymized ads.
+        Follow your favorite sources in a single feed. Just open a tab in Growser, scroll down, and… voila!
       </message>
       <message name="IDS_TURN_ON_BRAVE_NEWS" desc="Text for opt in card button in settings">
         Turn on Growser News
@@ -740,6 +740,12 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
       <message name="IDS_BRAVE_STATS_TEXT_TIME" desc="Title for the estimated saved time">
         Est. Time\nSaved
+      </message>
+      <message name="IDS_SPONSORED_ADS_ENABLED_TITLE" desc="Title of the settings toggle that enables Sponsored Ads">
+        Enable Sponsored Ads
+      </message>
+      <message name="IDS_SPONSORED_ADS_ENABLED_SUMMARY" desc="Description under the settings toggle that enables Sponsored Ads">
+        Help support Brave's mission to build an independent, user-first Web with Sponsored Ads. We measure ad performance privately, without identifying you.
       </message>
       <message name="IDS_SURVEY_PANELIST_TITLE" desc="Title for enable/disable brave survey panelist toggle.">
         Allow Growser surveys
@@ -2336,6 +2342,12 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     </message>
     <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_AMOUNT_FEE" desc="Confirm transaction panel total fee label">
       Amount + fee
+    </message>
+    <message name="IDS_BRAVE_WALLET_INSUFFICIENT_BALANCE" desc="Confirm transaction panel error shown when the account balance does not cover the transaction">
+      Insufficient balance
+    </message>
+    <message name="IDS_BRAVE_WALLET_INSUFFICIENT_FUNDS_FOR_GAS" desc="Confirm transaction panel error shown when the account balance does not cover the network fee">
+      Insufficient funds for gas
     </message>
     <message name="IDS_TRANSACTION" desc="Growser crypto wallet transaction title">
       Transaction

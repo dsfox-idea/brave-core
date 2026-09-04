@@ -117,6 +117,7 @@ export function createMockConversationHandler(
     getIsRequestInProgress: () =>
       Promise.resolve({ isRequestInProgress: false }),
     getAssociatedContentInfo: () => Promise.resolve({ associatedContent: [] }),
+    getContentTools: () => Promise.resolve({ tools: [] }),
 
     // Mutation methods - return empty/default results
     getScreenshots: () => Promise.resolve({ screenshots: [] }),
@@ -240,6 +241,7 @@ export function createMockUIHandler(
     getPluralString: () => Promise.resolve({ pluralString: '' }),
     getFaviconDataURL: () => Promise.resolve({ dataUrl: null }),
     setChatUI: () => Promise.resolve({ isStandalone: false }),
+    showWorkspaceFolderPicker: () => Promise.resolve({ selectedPath: null }),
 
     // Action methods - fire and forget stubs
     newConversation: () => {},

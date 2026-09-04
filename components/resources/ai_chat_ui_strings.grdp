@@ -693,6 +693,12 @@
   <message name="IDS_CHAT_UI_TOOLS_ATTACHMENT_REMOVE_LABEL" desc="Accessible label for the button that removes an attached page's tools" formatter_data="webui=AiChat">
     Remove tools
   </message>
+  <message name="IDS_CHAT_UI_WEBSITE_TOOLS_TITLE" desc="Title of the dialog that lists the tools an attached website provides to Leo" formatter_data="webui=AiChat">
+    Available website tools
+  </message>
+  <message name="IDS_CHAT_UI_WEBSITE_TOOLS_LIST_LABEL" desc="Heading above the list of tools in the website tools dialog. The placeholder is the number of tools, e.g. 'Available tools (10)'" formatter_data="webui=AiChat">
+    Available tools (<ph name="TOOL_COUNT">$1<ex>10</ex></ph>)
+  </message>
   <message name="IDS_CHAT_UI_SUBSCRIPTION_POLICY_INFO" desc="An info text that is shown below various subcription prices" formatter_data="webui=AiChat">
     All subscriptions are auto-renewed but can be cancelled at any time before renewal.
   </message>
@@ -810,6 +816,9 @@
   <message name="IDS_AI_CHAT_ATTACH_OPEN_HISTORY_BUTTON_LABEL" desc="The button label for attaching history" formatter_data="webui=AiChat">
     History…
   </message>
+  <message name="IDS_AI_CHAT_WORKSPACE_FOLDER_BUTTON_LABEL" desc="The button label for selecting a local workspace folder for Leo's experimental workspace tools" formatter_data="webui=AiChat">
+    Workspace folder
+  </message>
   <message name="IDS_AI_CHAT_USE_MICROPHONE_BUTTON_LABEL" desc="The button label for Leo's microphone feature" formatter_data="webui=AiChat">
     Use microphone
   </message>
@@ -926,6 +935,12 @@
   </message>
   <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_DENY_BUTTON" desc="Button text to deny the permission challenge" formatter_data="webui=AiChat">
     Deny
+  </message>
+  <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_SHOW_ARGUMENTS_BUTTON" desc="Button label on the tool permission prompt that expands a section showing the full arguments the AI wants to pass to the tool" formatter_data="webui=AiChat">
+    Show tool arguments
+  </message>
+  <message name="IDS_CHAT_UI_PERMISSION_CHALLENGE_HIDE_ARGUMENTS_BUTTON" desc="Button label on the tool permission prompt that collapses the section showing the full arguments the AI wants to pass to the tool" formatter_data="webui=AiChat">
+    Hide tool arguments
   </message>
   <message name="IDS_AI_CHAT_VERIFIED_LABEL" desc="Label for the verified NEAR AI model" formatter_data="webui=AiChat">
     Verified

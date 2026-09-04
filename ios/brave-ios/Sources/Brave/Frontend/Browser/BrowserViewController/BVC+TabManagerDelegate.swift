@@ -176,11 +176,24 @@ extension BrowserViewController: TabManagerDelegate {
       )
       if let sheet = quickViewController.sheetPresentationController {
         sheet.prefersGrabberVisible = true
-        sheet.detents = [.large()]
+
+        let customDetentId = "customDetent"
+        let customDetent = UISheetPresentationController.Detent.custom(
+          identifier: .init(customDetentId)
+        ) { context in
+          context.maximumDetentValue * 0.95
+        }
+        sheet.detents = [
+          customDetent,
+          .large(),
+        ]
+        sheet.selectedDetentIdentifier = .init(customDetentId)
+
         sheet.prefersEdgeAttachedInCompactHeight = true
       }
       self.present(quickViewController, animated: true)
     }
+    tab.blockedDomainTabHelper = .init(tab: tab)
   }
 
   func tabManager(
@@ -329,6 +342,17 @@ extension BrowserViewController: TabManagerDelegate {
       coins: dappSupportedCoins
     )
     updateURLBarWalletButton()
+
+    if #available(iOS 26.0, *) {
+      if let topEdgeInteraction {
+        topEdgeView.removeInteraction(topEdgeInteraction)
+      }
+      let interaction = UIScrollEdgeElementContainerInteraction()
+      interaction.edge = .top
+      interaction.scrollView = selected?.webViewProxy?.scrollView
+      topEdgeView.addInteraction(interaction)
+      topEdgeInteraction = interaction
+    }
   }
 
   func tabManager(_ tabManager: TabManager, willAddTab tab: some TabState) {
@@ -340,11 +364,14 @@ extension BrowserViewController: TabManagerDelegate {
       updateToolbarUsingTabManager(tabManager)
     }
     tab.addObserver(self)
-    tab.addPolicyDecider(self)
     tab.delegate = self
     tab.downloadDelegate = self
     tab.certificateStore = profile.certStore
     attachTabHelpers(to: tab)
+    /// Add BVC as the last TabPolicyDecider, so it only executes on requests
+    /// that all other policy deciders have decided to allow. This is for
+    /// legacy logic that hasn't been migrated to it's own TabPolicyDecider yet
+    tab.addPolicyDecider(self)
 
     SnackBarTabHelper.from(tab: tab)?.delegate = self
 
@@ -413,7 +440,7 @@ extension BrowserViewController: TabManagerDelegate {
       duration: duration,
       makeConstraints: { make in
         make.left.right.equalTo(self.view)
-        make.bottom.equalTo(self.webViewContainer)
+        make.bottom.equalTo(self.pageOverlayLayoutGuide)
       },
       completion: { [weak self] in
         if toast is ButtonToast {

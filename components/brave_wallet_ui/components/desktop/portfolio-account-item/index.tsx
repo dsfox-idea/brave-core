@@ -64,7 +64,7 @@ interface Props {
   account: BraveWallet.AccountInfo
   asset: BraveWallet.BlockchainToken
   assetBalance: string
-  selectedNetwork?: BraveWallet.NetworkInfo | null
+  assetNetwork?: BraveWallet.NetworkInfo | null
   hideBalances?: boolean
   isSellSupported: boolean
   showSellModal: () => void
@@ -75,7 +75,7 @@ export const PortfolioAccountItem = (props: Props) => {
     asset,
     assetBalance,
     account,
-    selectedNetwork,
+    assetNetwork,
     hideBalances,
     isSellSupported,
     showSellModal,
@@ -85,7 +85,7 @@ export const PortfolioAccountItem = (props: Props) => {
   const history = useHistory()
 
   // Hooks
-  const onClickViewOnBlockExplorer = useExplorer(selectedNetwork)
+  const onClickViewOnBlockExplorer = useExplorer(assetNetwork)
 
   // State
   const [showDepositModal, setShowDepositModal] = React.useState<boolean>(false)
@@ -187,7 +187,7 @@ export const PortfolioAccountItem = (props: Props) => {
                 <>
                   <VerticalSpacer space='6px' />
                   <BraveRewardsIndicator>
-                    {getLocale('braveWalletBraveRewardsTitle')}
+                    {getLocale(S.BRAVE_WALLET_BRAVE_REWARDS_TITLE)}
                   </BraveRewardsIndicator>
                 </>
               )}
@@ -249,7 +249,7 @@ export const PortfolioAccountItem = (props: Props) => {
 
       {showDepositModal && (
         <PopupModal
-          title={getLocale('braveWalletDepositCryptoButton')}
+          title={getLocale(S.BRAVE_WALLET_DEPOSIT_CRYPTO_BUTTON)}
           onClose={() => setShowDepositModal(false)}
           ref={depositModalRef}
         >

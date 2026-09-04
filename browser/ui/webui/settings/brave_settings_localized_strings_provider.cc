@@ -5,6 +5,7 @@
 
 #include "brave/browser/ui/webui/settings/brave_settings_localized_strings_provider.h"
 
+#include "base/feature_list.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
@@ -32,10 +33,12 @@
 #include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
+#include "brave/components/traffic_control/buildflags/buildflags.h"
 #include "brave/components/version_info/version_info.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/grit/brave_generated_resources.h"
 #include "brave/grit/brave_generated_resources_webui_strings.h"
+#include "brave/ui/webui/custom_profile_image/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/media/router/media_router_feature.h"
@@ -54,6 +57,10 @@
 #include "extensions/common/extension_urls.h"
 #include "net/base/features.h"
 #include "ui/base/l10n/l10n_util.h"
+
+#if BUILDFLAG(ENABLE_CUSTOM_PROFILE_IMAGE)
+#include "brave/browser/ui/webui/custom_profile_image/features.h"
+#endif  // BUILDFLAG(ENABLE_CUSTOM_PROFILE_IMAGE)
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/components/ai_chat/core/browser/model_validator.h"
@@ -97,6 +104,10 @@ constexpr char16_t kBraveReleaseTagPrefix[] =
 #if BUILDFLAG(ENABLE_CONTAINERS)
 constexpr char16_t kContainersLearnMoreURL[] =
     u"https://growser.org/features.html#containers";
+#endif
+#if BUILDFLAG(ENABLE_TRAFFIC_CONTROL)
+constexpr char16_t kTrafficControlLearnMoreURL[] =
+    u"https://support.brave.app/hc/en-us/articles/48295270280333";
 #endif
 constexpr char16_t kGoogleLoginLearnMoreURL[] =
     u"https://growser.org/";
@@ -223,6 +234,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_BRAVE_ORIGIN_EMAIL_ALIASES_TOGGLE_TITLE},
 #if BUILDFLAG(ENABLE_PSST)
       {"bravePsstToggleTitle", IDS_SETTINGS_BRAVE_ORIGIN_PSST_TOGGLE_TITLE},
+      {"bravePsstToggleSubLabel", IDS_SETTINGS_PSST_SUB_LABEL},
 #endif
       {"braveOriginWebDiscoveryProjectToggleTitle",
        IDS_SETTINGS_BRAVE_ORIGIN_WEB_DISCOVERY_PROJECT_TOGGLE_TITLE},
@@ -947,6 +959,10 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"statsUsagePingEnabledDesc", IDS_BRAVE_STATS_USAGE_PING_SETTING_SUBITEM},
       {"p3aEnableTitle", IDS_BRAVE_P3A_ENABLE_SETTING},
       {"p3aEnabledDesc", IDS_BRAVE_P3A_ENABLE_SETTING_SUBITEM},
+      {"sponsoredAdsEnabledTitle",
+       IDS_BRAVE_SETTINGS_SPONSORED_ADS_ENABLED_TITLE},
+      {"sponsoredAdsEnabledDesc",
+       IDS_BRAVE_SETTINGS_SPONSORED_ADS_ENABLED_DESC},
       {"siteSettings", IDS_SETTINGS_SITE_AND_SHIELDS_SETTINGS},
       {"showFullUrls", IDS_SETTINGS_ALWAYS_SHOW_FULL_URLS},
       {"resetZCashSyncStateInfo",
@@ -1223,6 +1239,11 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
   html_source->AddLocalizedStrings(webui::kContainersStrings);
   html_source->AddString("containersLearnMoreURL", kContainersLearnMoreURL);
 #endif  // BUILDFLAG(ENABLE_CONTAINERS)
+#if BUILDFLAG(ENABLE_TRAFFIC_CONTROL)
+  html_source->AddLocalizedStrings(webui::kTrafficControlStrings);
+  html_source->AddString("trafficControlLearnMoreURL",
+                         kTrafficControlLearnMoreURL);
+#endif  // BUILDFLAG(ENABLE_TRAFFIC_CONTROL)
   html_source->AddString(
       "ensOffchainLookupDesc",
       l10n_util::GetStringFUTF16(IDS_SETTINGS_ENABLE_ENS_OFFCHAIN_LOOKUP_DESC,
@@ -1494,6 +1515,17 @@ void BraveAddLocalizedStrings(content::WebUIDataSource* html_source,
       l10n_util::GetStringUTF16(
           IDS_SETTINGS_COOKIES_LOCAL_STORAGE_SIZE_ON_DISK_LABEL));
   html_source->AddLocalizedStrings(webui::kBraveSettingsStrings);
+  html_source->AddLocalizedStrings(webui::kCustomProfileImageStrings);
+
+  html_source->AddBoolean(
+      "customProfileImageEnabled",
+#if BUILDFLAG(ENABLE_CUSTOM_PROFILE_IMAGE)
+      base::FeatureList::IsEnabled(
+          custom_profile_image::features::kBraveCustomProfileImage)
+#else
+      false
+#endif  // BUILDFLAG(ENABLE_CUSTOM_PROFILE_IMAGE)
+  );
 
   // We add strings regardless of the FeatureFlag state to prevent crash
 

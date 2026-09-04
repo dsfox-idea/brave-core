@@ -23,6 +23,7 @@
 #include "base/containers/span.h"
 #include "base/containers/to_vector.h"
 #include "base/debug/crash_logging.h"
+#include "base/feature_list.h"
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
@@ -189,6 +190,11 @@ void ConversationHandler::BuildCapabilitiesSet() {
   if (features::IsAIChatDeepResearchEnabled()) {
     conversation_capabilities_.insert(
         mojom::ConversationCapability::DEEP_RESEARCH);
+  }
+  // Only advertise MathML while the client is actually able to render it,
+  // otherwise the kill switch would leave responses as raw LaTeX.
+  if (base::FeatureList::IsEnabled(features::kAIChatMathRendering)) {
+    conversation_capabilities_.insert(mojom::ConversationCapability::MATH_ML);
   }
 }
 
@@ -1981,6 +1987,11 @@ void ConversationHandler::StopTask() {
 void ConversationHandler::SetToolsAttached(mojom::AssociatedContentPtr content,
                                            bool tools_attached) {
   associated_content_manager_->SetToolsAttached(content->uuid, tools_attached);
+}
+
+void ConversationHandler::GetContentTools(const std::string& content_uuid,
+                                          GetContentToolsCallback callback) {
+  associated_content_manager_->GetToolInfos(content_uuid, std::move(callback));
 }
 
 void ConversationHandler::OnTaskStateChanged(ToolProvider* tool_provider) {

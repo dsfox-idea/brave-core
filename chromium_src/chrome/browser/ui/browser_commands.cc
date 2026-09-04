@@ -9,6 +9,7 @@
 #include "base/metrics/histogram_macros.h"
 #include "base/metrics/user_metrics.h"
 #include "brave/browser/new_tab/warm_new_tab_page_manager.h"
+#include "brave/browser/ui/tabs/brave_tab_strip_model.h"
 #include "brave/components/commander/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/profiles/profile.h"

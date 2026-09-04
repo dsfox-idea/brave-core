@@ -22,7 +22,7 @@ import { TopSitesPanel } from './top_sites_panel'
 jest.mock('$web-common/locale', () => ({
   getLocale: (key: string) => {
     if (key === 'NEW_TAB_SPONSORED_SITES_DESCRIPTION') {
-      return 'Sponsored sites help keep Brave free. $1Learn more/$1.'
+      return 'New tab page ads help keep Brave free. $1Learn more/$1.'
     }
     return key
   },

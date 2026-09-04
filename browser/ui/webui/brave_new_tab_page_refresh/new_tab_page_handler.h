@@ -29,6 +29,7 @@
 class GURL;
 class PrefService;
 class TemplateURLService;
+class ChromeAutocompleteSchemeClassifier;
 
 namespace network {
 class SimpleURLLoader;
@@ -66,6 +67,7 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
       std::unique_ptr<SponsoredSitesFacade> sponsored_sites_facade,
       std::unique_ptr<TopSitesFacade> top_sites_facade,
       std::unique_ptr<VPNFacade> vpn_facade,
+      std::unique_ptr<ChromeAutocompleteSchemeClassifier> scheme_classifier,
       content::WebContents& web_contents,
       PrefService& pref_service,
       TemplateURLService& template_url_service,
@@ -142,6 +144,8 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   void OpenURLFromSearch(const std::string& url,
                          mojom::EventDetailsPtr details,
                          OpenURLFromSearchCallback callback) override;
+  void GetUrlFromSearchInput(const std::string& input,
+                             GetUrlFromSearchInputCallback callback) override;
   void SetDefaultSearchEngineAsBraveSearch(
       SetDefaultSearchEngineAsBraveSearchCallback callback) override;
   void ReportSearchBoxHidden(ReportSearchBoxHiddenCallback callback) override;
@@ -245,6 +249,7 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   std::unique_ptr<SponsoredSitesFacade> sponsored_sites_facade_;
   std::unique_ptr<TopSitesFacade> top_sites_facade_;
   std::unique_ptr<VPNFacade> vpn_facade_;
+  std::unique_ptr<ChromeAutocompleteSchemeClassifier> scheme_classifier_;
   raw_ref<content::WebContents> web_contents_;
   raw_ref<PrefService> pref_service_;
   raw_ref<TemplateURLService> template_url_service_;

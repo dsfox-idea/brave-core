@@ -516,9 +516,10 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // clock has to be switched on here and the rest switched off.
   registry->RegisterBooleanPref(kNewTabPageShowClock, true);
   registry->RegisterStringPref(kNewTabPageClockFormat, "");
+  // Growser-78: off by default, unlike upstream. The sponsored-sites pref that
+  // used to sit here went with its constant upstream in this range.
   registry->RegisterBooleanPref(kNewTabPageShowStats, false);
   registry->RegisterBooleanPref(kNewTabPageShowRewards, false);
-  registry->RegisterBooleanPref(kNewTabPageShowSponsoredSites, false);
 
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
   registry->RegisterBooleanPref(brave_talk::prefs::kNewTabPageShowBraveTalk,

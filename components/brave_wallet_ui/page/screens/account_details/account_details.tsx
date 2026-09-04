@@ -68,6 +68,7 @@ import {
   EmptyStateWrapper,
   SyncAlert,
   SyncAlertWrapper,
+  ZCashMigrationBannerWrapper,
 } from './account_details.style'
 import {
   Column,
@@ -122,6 +123,9 @@ import {
 import {
   TransactionDetailsModal, //
 } from '../../../components/desktop/popup-modals/transaction_details_modal/transaction_details_modal'
+import {
+  ZCashMigrationBanner, //
+} from '../../../components/desktop/banners/zcash_migration_banner/zcash_migration_banner'
 
 // options
 import { AccountDetailsOptions } from '../../../options/nav-options'
@@ -658,6 +662,11 @@ export const AccountDetails = () => {
         />
       }
     >
+      {selectedAccount?.accountId.coin === BraveWallet.CoinType.ZEC && (
+        <ZCashMigrationBannerWrapper fullWidth={true}>
+          <ZCashMigrationBanner />
+        </ZCashMigrationBannerWrapper>
+      )}
       {showSyncWarning && (
         <SyncAlertWrapper
           margin='0px 0px 32px 0px'
@@ -676,11 +685,11 @@ export const AccountDetails = () => {
           >
             <div slot='title'>
               {!chainTipStatus
-                ? getLocale('braveWalletOutOfSyncTitle')
+                ? getLocale(S.BRAVE_WALLET_OUT_OF_SYNC_TITLE)
                 : getLocale(
                     blocksBehind < 1000
-                      ? 'braveWalletBlocksBehind'
-                      : 'braveWalletOutOfSyncBlocksBehindTitle',
+                      ? S.BRAVE_WALLET_BLOCKS_BEHIND
+                      : S.BRAVE_WALLET_OUT_OF_SYNC_BLOCKS_BEHIND_TITLE,
                   ).replace('$1', blocksBehind.toLocaleString())}
             </div>
             <div>
@@ -688,7 +697,9 @@ export const AccountDetails = () => {
                 && zcashBalance
                 && (zcashBalance.orchardPendingBalance > 0
                   || zcashBalance.ironwoodPendingBalance > 0)
-                && getLocale('braveWalletZCashPendingBalanceTitle').replace(
+                && getLocale(
+                  S.BRAVE_WALLET_ZCASH_PENDING_BALANCE_TITLE,
+                ).replace(
                   '$1',
                   formatTokenBalanceWithSymbol(
                     (
@@ -700,7 +711,7 @@ export const AccountDetails = () => {
                   ),
                 )}
             </div>
-            {getLocale('braveWalletOutOfSyncDescription')}
+            {getLocale(S.BRAVE_WALLET_OUT_OF_SYNC_DESCRIPTION)}
             <Row
               slot='actions'
               width='unset'
@@ -716,15 +727,15 @@ export const AccountDetails = () => {
                   slot='icon-before'
                 />
                 {isAccountSyncing
-                  ? getLocale('braveWalletSyncAccountButtonInProgress')
-                  : getLocale('braveWalletSyncAccountButton')}
+                  ? getLocale(S.BRAVE_WALLET_SYNC_ACCOUNT_BUTTON_IN_PROGRESS)
+                  : getLocale(S.BRAVE_WALLET_SYNC_ACCOUNT_BUTTON)}
               </Button>
               <Button
                 size='small'
                 kind='plain-faint'
                 onClick={() => setSyncWarningDismissed(true)}
               >
-                {getLocale('braveWalletDismissButton')}
+                {getLocale(S.BRAVE_WALLET_DISMISS_BUTTON)}
               </Button>
             </Row>
           </SyncAlert>
@@ -829,7 +840,7 @@ export const AccountDetails = () => {
                 textSize='16px'
                 isBold={true}
               >
-                {getLocale('braveWalletNoTransactionsYet')}
+                {getLocale(S.BRAVE_WALLET_NO_TRANSACTIONS_YET)}
               </Text>
               <VerticalSpace space='10px' />
               <Text
@@ -837,7 +848,7 @@ export const AccountDetails = () => {
                 textColor='tertiary'
                 isBold={false}
               >
-                {getLocale('braveWalletNoTransactionsYetDescription')}
+                {getLocale(S.BRAVE_WALLET_NO_TRANSACTIONS_YET_DESCRIPTION)}
               </Text>
             </Column>
           )}

@@ -1336,6 +1336,7 @@ export class MockedWalletApiProxy {
           isAnkrBalancesFeatureEnabled: false,
           isTransactionSimulationsFeatureEnabled: true,
           isZCashShieldedTransactionsEnabled: false,
+          isZCashIronwoodEnabled: false,
           enabledCoins: [
             BraveWallet.CoinType.BTC,
             BraveWallet.CoinType.ZEC,
@@ -1517,6 +1518,11 @@ export class MockedWalletApiProxy {
       }
     },
     resetSyncState: async (_accountId) => {
+      return {
+        errorMessage: null,
+      }
+    },
+    resetSyncStateToIronwoodActivation: async (_accountId) => {
       return {
         errorMessage: null,
       }

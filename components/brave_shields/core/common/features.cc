@@ -120,7 +120,11 @@ BASE_FEATURE(kBraveShieldsElementPicker,
              base::FEATURE_ENABLED_BY_DEFAULT);
 
 BASE_FEATURE(kAdblockOnlyMode,
+#if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_ANDROID)
              base::FEATURE_DISABLED_BY_DEFAULT);
+#else
+             base::FEATURE_ENABLED_BY_DEFAULT);
+#endif  // BUILDFLAG(IS_IOS) || BUILDFLAG(IS_ANDROID)
 
 // Enables extra TRACE_EVENTs in content filter js. The feature is
 // primary designed for local debugging.
@@ -132,6 +136,10 @@ BASE_FEATURE(kCosmeticFilteringJsPerformance,
 
 BASE_FEATURE(kWebKitAdvancedPrivacyProtections,
              base::FEATURE_DISABLED_BY_DEFAULT);
+
+// When enabled, WebKit attaches the Global Privacy Control signal to iOS
+// navigation requests.
+BASE_FEATURE(kWebKitGlobalPrivacyControl, base::FEATURE_ENABLED_BY_DEFAULT);
 
 constexpr base::FeatureParam<int> kComponentUpdateCheckIntervalMins{
     &kAdBlockDefaultResourceUpdateInterval, "update_interval_mins", 100};

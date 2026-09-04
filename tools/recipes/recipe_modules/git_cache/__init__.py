@@ -7,6 +7,6 @@
 
 from PB.recipe_modules.brave.git_cache.properties import EnvProperties
 
-DEPS = ['env', 'path', 'raw_io', 'step']
+DEPS = ['env', 'git', 'path', 'raw_io', 'step']
 
 ENV_PROPERTIES = EnvProperties

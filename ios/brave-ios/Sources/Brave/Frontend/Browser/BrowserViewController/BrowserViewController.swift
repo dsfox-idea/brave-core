@@ -87,9 +87,6 @@ public class BrowserViewController: UIViewController {
     return bottomTouchArea
   }()
 
-  /// These constraints allow to show/hide tabs bar
-  private var webViewContainerTopOffset: Constraint?
-
   /// Backdrop used for displaying greyed background for private tabs
   private let webViewContainerBackdrop: UIView = {
     let webViewContainerBackdrop = UIView()
@@ -107,6 +104,18 @@ public class BrowserViewController: UIViewController {
     let statusBarOverlay = UIView()
     statusBarOverlay.backgroundColor = privateBrowsingManager.browserColors.chromeBackground
     return statusBarOverlay
+  }()
+
+  // On 26 this is the `UIScrollEdgeElementContainerInteraction` assigned to the top of the web view
+  var topEdgeInteraction: (any UIInteraction)?
+  let topEdgeView: UIView = {
+    if #available(iOS 26, *) {
+      let view = UIVisualEffectView(effect: UIGlassEffect(style: .regular))
+      view.isUserInteractionEnabled = false
+      return view
+    } else {
+      return UIView()
+    }
   }()
 
   private(set) var toolbar: BottomToolbarView?
@@ -678,7 +687,86 @@ public class BrowserViewController: UIViewController {
     super.viewSafeAreaInsetsDidChange()
 
     topTouchArea.isEnabled = view.safeAreaInsets.top > 0
-    statusBarOverlay.isHidden = view.safeAreaInsets.top.isZero
+    statusBarOverlay.isHidden = isStatusBarOverlayHidden
+  }
+
+  private var isStatusBarOverlayHidden: Bool {
+    if #unavailable(iOS 26.0) {
+      return view.safeAreaInsets.top.isZero
+    }
+    return isUsingBottomBar || view.safeAreaInsets.top.isZero
+  }
+
+  @available(iOS 26.0, *)
+  func updateWebViewObscuredInsets() {
+    guard let webViewProxy = tabManager.selectedTab?.webViewProxy else { return }
+
+    collapsedURLBarView.layoutIfNeeded()
+    header.expandedBarStackView.layoutIfNeeded()
+
+    var minViewportInset = UIEdgeInsets()
+    var maxViewportInset = UIEdgeInsets()
+    if isUsingBottomBar {
+      minViewportInset.top = view.safeAreaInsets.top
+      maxViewportInset.top = view.safeAreaInsets.top
+      minViewportInset.bottom = footer.bounds.height + collapsedURLBarView.bounds.height
+      maxViewportInset.bottom = footer.bounds.height + header.expandedBarStackView.bounds.height
+    } else {
+      minViewportInset.top = view.safeAreaInsets.top + collapsedURLBarView.bounds.height
+      maxViewportInset.top = view.safeAreaInsets.top + header.expandedBarStackView.bounds.height
+      minViewportInset.bottom = footer.bounds.height
+      maxViewportInset.bottom = footer.bounds.height
+    }
+    if let readerModeBar {
+      readerModeBar.layoutIfNeeded()
+      minViewportInset.top += readerModeBar.bounds.height
+      maxViewportInset.top += readerModeBar.bounds.height
+    }
+    webViewProxy.setMinimumViewportInset(minViewportInset, maximumViewportInset: maxViewportInset)
+
+    let toolbarInsets = UIEdgeInsets(
+      top: max(
+        0,
+        pageOverlayLayoutGuide.layoutFrame.minY
+      ),
+      left: 0,
+      bottom: max(
+        0,
+        view.bounds.height - pageOverlayLayoutGuide.layoutFrame.maxY
+      ),
+      right: 0
+    )
+
+    // Obscured insets actually have to include safe area insets for some reason, toolbarInsets
+    // already include it so we override the values entirely
+    var obscuredInsets = view.safeAreaInsets
+    obscuredInsets.top = toolbarInsets.top
+    obscuredInsets.bottom = toolbarInsets.bottom
+
+    // Setting obscuredInsets actually includes a side-effect of setting the web views contentInset
+    webViewProxy.obscuredInsets = obscuredInsets
+
+    // But we still need to update the scroll indicator insets manually
+    var scrollIndicatorInsets = UIEdgeInsets(
+      top: max(0, toolbarInsets.top - view.safeAreaInsets.top),
+      left: 0,
+      bottom: max(0, toolbarInsets.bottom - view.safeAreaInsets.bottom),
+      right: 0
+    )
+
+    if let keyboardState, case let keyboardHeight = keyboardState.intersectionHeightForView(view),
+      keyboardHeight > 0
+    {
+      var contentInsets = webViewProxy.scrollView?.contentInset ?? .zero
+      contentInsets.bottom = keyboardHeight + toolbarInsets.bottom
+      webViewProxy.scrollView?.contentInset = contentInsets
+      if isUsingBottomBar {
+        scrollIndicatorInsets.bottom = 0
+      } else {
+        scrollIndicatorInsets.bottom -= toolbarInsets.bottom
+      }
+    }
+    webViewProxy.scrollView?.scrollIndicatorInsets = scrollIndicatorInsets
   }
 
   fileprivate func updateToolbarStateForTraitCollection(
@@ -864,6 +952,8 @@ public class BrowserViewController: UIViewController {
       searchContainer?.isUsingBottomBar = isUsingBottomBar
       bottomBarKeyboardBackground.isHidden = !isUsingBottomBar
       topToolbar.displayTabTraySwipeGestureRecognizer?.isEnabled = isUsingBottomBar
+      statusBarOverlay.isHidden = isStatusBarOverlayHidden
+      topEdgeView.isHidden = !isUsingBottomBar
       updateTabsBarVisibility()
       updateStatusBarOverlayColor()
       updateViewConstraints()
@@ -897,6 +987,10 @@ public class BrowserViewController: UIViewController {
     view.addSubview(footer)
     view.addSubview(statusBarOverlay)
     view.addSubview(header)
+
+    if #available(iOS 26.0, *) {
+      view.addSubview(topEdgeView)
+    }
 
     // For now we hide some elements so they are not visible
     header.isHidden = true
@@ -1226,6 +1320,12 @@ public class BrowserViewController: UIViewController {
       make.height.equalTo(UX.TabsBar.height)
     }
 
+    if #available(iOS 26.0, *) {
+      webViewContainer.snp.makeConstraints {
+        $0.edges.equalToSuperview()
+      }
+    }
+
     webViewContainerBackdrop.snp.makeConstraints { make in
       make.edges.equalTo(webViewContainer)
     }
@@ -1243,9 +1343,25 @@ public class BrowserViewController: UIViewController {
 
   override public func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    statusBarOverlay.snp.remakeConstraints { make in
-      make.top.left.right.equalTo(self.view)
-      make.bottom.equalTo(view.safeArea.top)
+
+    if #available(iOS 26, *), isUsingBottomBar {
+      // UIScrollEdgeElementContainerInteraction does not work unless the view its added to contains
+      // a glass view hierarchy in it (UIGlassEffect/UIGlassContainerEffect). The top edge in bottom
+      // bar doesn't contain any real chrome in that spot so we create a temporary
+      // view which has no real visibility (non-zero width)
+      topEdgeView.frame = .init(
+        x: 0,
+        y: 0,
+        width: CGFloat.leastNormalMagnitude,
+        height: view.safeAreaInsets.top
+      )
+    } else {
+      statusBarOverlay.frame = .init(
+        x: 0,
+        y: 0,
+        width: view.bounds.width,
+        height: view.safeAreaInsets.top
+      )
     }
 
     toolbarVisibilityViewModel.transitionDistance =
@@ -1257,6 +1373,17 @@ public class BrowserViewController: UIViewController {
       view.bounds.height - view.safeAreaInsets.top
     toolbarVisibilityViewModel.minimumCollapsableTransitionDistance =
       header.bounds.height + footer.bounds.height
+
+    if #available(iOS 26.0, *) {
+      updateWebViewObscuredInsets()
+      activeNewTabPageViewController?.additionalSafeAreaInsets = UIEdgeInsets(
+        top: pageOverlayLayoutGuide.layoutFrame.minY - view.safeAreaInsets.top,
+        left: 0,
+        bottom: view.bounds.height - pageOverlayLayoutGuide.layoutFrame.maxY
+          - view.safeAreaInsets.bottom,
+        right: 0
+      )
+    }
   }
 
   override public var canBecomeFirstResponder: Bool {
@@ -1416,22 +1543,21 @@ public class BrowserViewController: UIViewController {
       }
     }
 
-    webViewContainer.snp.remakeConstraints { make in
-      make.left.right.equalTo(self.view)
+    if #unavailable(iOS 26.0) {
+      webViewContainer.snp.remakeConstraints { make in
+        make.left.right.equalTo(self.view)
 
-      if self.isUsingBottomBar {
-        webViewContainerTopOffset =
+        if self.isUsingBottomBar {
           make.top.equalTo(self.readerModeBar?.snp.bottom ?? self.toolbarLayoutGuide.snp.top)
-          .constraint
-      } else {
-        webViewContainerTopOffset =
-          make.top.equalTo(self.readerModeBar?.snp.bottom ?? self.header.snp.bottom).constraint
-      }
+        } else {
+          make.top.equalTo(self.readerModeBar?.snp.bottom ?? self.header.snp.bottom)
+        }
 
-      if self.isUsingBottomBar {
-        make.bottom.equalTo(self.header.snp.top)
-      } else {
-        make.bottom.equalTo(self.footer.snp.top)
+        if self.isUsingBottomBar {
+          make.bottom.equalTo(self.header.snp.top)
+        } else {
+          make.bottom.equalTo(self.footer.snp.top)
+        }
       }
     }
 
@@ -1489,11 +1615,9 @@ public class BrowserViewController: UIViewController {
     // The home controller may change sizes if we tap the URL bar while on about:home.
     pageOverlayLayoutGuide.snp.remakeConstraints { make in
       if self.isUsingBottomBar {
-        webViewContainerTopOffset =
-          make.top.equalTo(readerModeBar?.snp.bottom ?? self.toolbarLayoutGuide).constraint
+        make.top.equalTo(readerModeBar?.snp.bottom ?? self.toolbarLayoutGuide)
       } else {
-        webViewContainerTopOffset =
-          make.top.equalTo(readerModeBar?.snp.bottom ?? self.header.snp.bottom).constraint
+        make.top.equalTo(readerModeBar?.snp.bottom ?? self.header.snp.bottom)
       }
 
       make.left.right.equalTo(self.view)
@@ -1573,12 +1697,17 @@ public class BrowserViewController: UIViewController {
       activeNewTabPageViewController = ntpController
 
       addChild(ntpController)
-      let subview = isUsingBottomBar ? header : statusBarOverlay
-      view.insertSubview(ntpController.view, belowSubview: subview)
+      view.insertSubview(ntpController.view, belowSubview: footer)
       ntpController.didMove(toParent: self)
 
-      ntpController.view.snp.makeConstraints {
-        $0.edges.equalTo(pageOverlayLayoutGuide)
+      if #available(iOS 26, *) {
+        ntpController.view.snp.makeConstraints {
+          $0.edges.equalTo(self.view)
+        }
+      } else {
+        ntpController.view.snp.makeConstraints {
+          $0.edges.equalTo(pageOverlayLayoutGuide)
+        }
       }
       ntpController.view.layoutIfNeeded()
 
@@ -2110,16 +2239,21 @@ public class BrowserViewController: UIViewController {
   }
 
   public override var preferredStatusBarStyle: UIStatusBarStyle {
-    if isUsingBottomBar, let tab = tabManager.selectedTab, let url = tab.visibleURL,
-      !url.isNewTabURL, !InternalURL.isValid(url: url),
-      let color = tab.sampledPageTopColor
-    {
-      return color.isLight ? .darkContent : .lightContent
+    if #unavailable(iOS 26.0) {
+      if isUsingBottomBar, let tab = tabManager.selectedTab, let url = tab.visibleURL,
+        !url.isNewTabURL, !InternalURL.isValid(url: url),
+        let color = tab.sampledPageTopColor
+      {
+        return color.isLight ? .darkContent : .lightContent
+      }
     }
     return super.preferredStatusBarStyle
   }
 
   func updateStatusBarOverlayColor() {
+    if #available(iOS 26.0, *) {
+      return
+    }
     defer { setNeedsStatusBarAppearanceUpdate() }
     guard isUsingBottomBar, let tab = tabManager.selectedTab, let url = tab.visibleURL,
       !url.isNewTabURL, !InternalURL.isValid(url: url),

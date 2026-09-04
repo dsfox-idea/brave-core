@@ -1,6 +1,6 @@
 {
   "name": "brave-core",
-  "version": "1.96.8",
+  "version": "1.96.36",
   "description": "Brave browser for Android, iOS, Linux, macOS, and Windows",
   "main": "index.js",
   "type": "module",
@@ -79,7 +79,7 @@
     "projects": {
       "chrome": {
         "dir": "src",
-        "tag": "152.0.7977.54",
+        "tag": "152.0.7977.64",
         "repository": {
           "url": "https://chromium.googlesource.com/chromium/src.git"
         },
@@ -90,7 +90,8 @@
         "custom_vars": {
           "checkout_clang_coverage_tools": true,
           "checkout_clangd": true,
-          "download_reclient": true
+          "download_reclient": true,
+          "gn_version": "git_revision:c7ffaf80713afbe5a4f4d95a605c0a98084374de"
         }
       },
       "depot_tools": {

@@ -63,7 +63,10 @@ enum ConversationCapability {
   CONTENT_AGENT,
   DEEP_RESEARCH,
   FILES,
-  SUMMARY
+  SUMMARY,
+  // Client can render MathML. A hint to the server, not a model capability -
+  // see kServerHintCapabilities in browser/constants.h.
+  MATH_ML
 };
 
 // Which action the user was taking for the entry. This can be used
@@ -158,6 +161,13 @@ struct AssociatedContent {
 
   // Whether this content has tools available for the LLM to use.
   bool tools_attached;
+};
+
+// Describes a tool for display to the user - its name and description as they
+// were registered, rather than the mangled model-facing variants.
+struct ToolInfo {
+  string name;
+  string description;
 };
 
 struct UploadedFile {

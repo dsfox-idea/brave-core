@@ -86,12 +86,14 @@ source_set("browser_tests") {
 
   deps = [
     "//base",
+    "//brave/browser/ui/tabs:tabs_public",
     "//brave/browser/ui/webui/psst",
     "//brave/components/brave_shields/content/browser",
     "//brave/components/cosmetic_filters/browser",
     "//brave/components/psst/buildflags",
     "//brave/components/psst/core/browser",
     "//brave/components/psst/core/common",
+    "//chrome/browser/ui/views/infobars",
     "//chrome/test:test_support",
     "//components/component_updater:test_support",
     "//components/infobars/content",

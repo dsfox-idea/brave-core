@@ -20,6 +20,8 @@
 #include "brave/browser/ui/views/frame/vertical_tabs/vertical_tab_strip_container_view.h"
 #include "brave/browser/ui/views/frame/vertical_tabs/vertical_tab_strip_region_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_container_view.h"
+#include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
+#include "brave/browser/ui/views/toolbar/screenshot_button.h"
 #include "brave/common/pref_names.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
@@ -28,6 +30,7 @@
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/infobars/confirm_infobar_creator.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/ui/browser_command_controller.h"
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
@@ -59,7 +62,9 @@
 #include "content/public/browser/web_contents.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
+#include "ui/base/accelerators/accelerator.h"
 #include "ui/compositor/layer.h"
+#include "ui/events/keycodes/keyboard_codes.h"
 #include "ui/gfx/animation/animation.h"
 #include "ui/gfx/animation/animation_test_api.h"
 #include "ui/views/layout/layout_provider.h"
@@ -140,6 +145,11 @@ class BraveBrowserViewTest : public InProcessBrowserTest {
   }
 
   BookmarkBarView* bookmark_bar() { return browser_view()->bookmark_bar(); }
+
+  ScreenshotButton* screenshot_button() {
+    return static_cast<BraveToolbarView*>(browser_view()->toolbar())
+        ->screenshot_button();
+  }
 };
 
 // Tests bookmark/infobar/contents container layout with vertical tab.
@@ -294,6 +304,63 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest, TopSeparatorWithPanelTest) {
   EXPECT_TRUE(brave_browser_view()
                   ->top_container_separator_for_testing()
                   ->GetVisible());
+}
+
+// Cmd/Ctrl+Shift+S (IDC_SHARING_HUB_SCREENSHOT) should open Brave's own
+// screenshot bubble instead of upstream's Sharing Hub one, and should
+// temporarily reveal the screenshot toolbar button when it's hidden by the
+// "show screenshot button" pref, hiding it again once the bubble closes.
+IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
+                       ScreenshotCommandShowsBubbleAndTogglesButton) {
+  ASSERT_FALSE(
+      browser()->GetProfile()->GetPrefs()->GetBoolean(kShowScreenshotButton));
+
+  auto* button = screenshot_button();
+  ASSERT_TRUE(button);
+  EXPECT_FALSE(button->GetVisible());
+
+  const ui::Accelerator screenshot_accelerator(
+      ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR | ui::EF_SHIFT_DOWN);
+
+  // Pressing the accelerator is handled by Brave (not passed through to
+  // upstream), reveals the button, and shows the bubble.
+  EXPECT_TRUE(browser_view()->AcceleratorPressed(screenshot_accelerator));
+  EXPECT_TRUE(button->GetVisible());
+
+  // The pref itself must remain untouched by the temporary reveal.
+  EXPECT_FALSE(
+      browser()->GetProfile()->GetPrefs()->GetBoolean(kShowScreenshotButton));
+
+  // Pressing it again toggles the bubble closed, and the button should hide
+  // again since it was only shown for the shortcut.
+  EXPECT_TRUE(browser_view()->AcceleratorPressed(screenshot_accelerator));
+  ASSERT_TRUE(base::test::RunUntil([&]() { return !button->GetVisible(); }));
+
+  // Other paths that trigger the same command should also show the bubble and
+  // reveal the button temporarily.
+  browser()->command_controller()->ExecuteCommand(IDC_SHARING_HUB_SCREENSHOT);
+  EXPECT_TRUE(button->GetVisible());
+}
+
+// If the user has the screenshot button permanently shown via the pref, the
+// accelerator must not hide it afterwards.
+IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
+                       ScreenshotAcceleratorLeavesButtonVisibleWhenPrefOn) {
+  browser()->GetProfile()->GetPrefs()->SetBoolean(kShowScreenshotButton, true);
+
+  auto* button = screenshot_button();
+  ASSERT_TRUE(button);
+  ASSERT_TRUE(button->GetVisible());
+
+  const ui::Accelerator screenshot_accelerator(
+      ui::VKEY_S, ui::EF_PLATFORM_ACCELERATOR | ui::EF_SHIFT_DOWN);
+  EXPECT_TRUE(browser_view()->AcceleratorPressed(screenshot_accelerator));
+  EXPECT_TRUE(button->GetVisible());
+
+  // Close the bubble and confirm the button, still pref-controlled, stays
+  // visible.
+  EXPECT_TRUE(browser_view()->AcceleratorPressed(screenshot_accelerator));
+  EXPECT_TRUE(button->GetVisible());
 }
 
 // Regression test: BraveBrowserView's constructor unconditionally hides the

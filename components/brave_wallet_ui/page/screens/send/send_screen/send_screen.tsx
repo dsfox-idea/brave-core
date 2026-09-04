@@ -106,6 +106,7 @@ import {
   SelectAddressButton, //
 } from '../../composer_ui/select_address_button/select_address_button'
 import { AddMemo } from '../components/add_memo/add_memo'
+import { ZCashMigrationBanner } from '../../../../components/desktop/banners/zcash_migration_banner/zcash_migration_banner'
 
 type SendAmountValidationErrorType =
   | 'fromAmountDecimalsOverflow'
@@ -166,6 +167,9 @@ export const SendScreen = React.memo(() => {
   const isKeyboardVisible = useIsKeyboardVisible()
   const isZCashShieldedTransactionsEnabled = useSafeWalletSelector(
     WalletSelectors.isZCashShieldedTransactionsEnabled,
+  )
+  const isZCashIronwoodEnabled = useSafeWalletSelector(
+    WalletSelectors.isZCashIronwoodEnabled,
   )
 
   // Mutations
@@ -256,8 +260,10 @@ export const SendScreen = React.memo(() => {
     tokenFromParams
     && toAddressOrUrl !== ''
     && tokenFromParams.coin === BraveWallet.CoinType.ZEC
-    && getZCashTransactionTypeResult.txType
+    && (getZCashTransactionTypeResult.txType
       === BraveWallet.ZCashTxType.kShieldingIronwood
+      || getZCashTransactionTypeResult.txType
+        === BraveWallet.ZCashTxType.kTransparentToIronwood)
   const isUnshieldingFunds =
     tokenFromParams
     && toAddressOrUrl !== ''
@@ -266,11 +272,14 @@ export const SendScreen = React.memo(() => {
       === BraveWallet.ZCashTxType.kUnshieldingOrchard
       || getZCashTransactionTypeResult.txType
         === BraveWallet.ZCashTxType.kUnshieldingIronwood)
-  // Ironwood transactions support TBD.
   const isUnsupportedIronwoodTransaction =
-    tokenFromParams?.coin === BraveWallet.CoinType.ZEC
-    && (getZCashTransactionTypeResult.txType
-      === BraveWallet.ZCashTxType.kShieldingIronwood
+    !isZCashIronwoodEnabled
+    && tokenFromParams?.coin === BraveWallet.CoinType.ZEC
+    && (tokenFromParams.zcashTokenType === BraveWallet.ZCashTokenType.kIronwood
+      || getZCashTransactionTypeResult.error
+        === BraveWallet.ZCashAddressError.kInvalidRecipientType
+      || getZCashTransactionTypeResult.txType
+        === BraveWallet.ZCashTxType.kShieldingIronwood
       || getZCashTransactionTypeResult.txType
         === BraveWallet.ZCashTxType.kTransparentToIronwood
       || getZCashTransactionTypeResult.txType
@@ -409,11 +418,11 @@ export const SendScreen = React.memo(() => {
               .multiplyByDecimals(tokenFromParams.decimals)
               .toHex(),
           }).unwrap()
-          resetSendFields()
+          setSendAmount('')
         } catch (error) {
           console.error('Btc send failed:', error)
           setTransactionProcessFailedMessage(
-            getLocale('braveWalletProcessTransactionErrorMessage').replace(
+            getLocale(S.BRAVE_WALLET_PROCESS_TRANSACTION_ERROR_MESSAGE).replace(
               '$1',
               tokenFromParams.symbol,
             ),
@@ -433,7 +442,7 @@ export const SendScreen = React.memo(() => {
             contractAddress: tokenFromParams.contractAddress,
             data: [],
           })
-          resetSendFields()
+          setSendAmount('')
           return
         }
 
@@ -448,7 +457,7 @@ export const SendScreen = React.memo(() => {
             tokenId: tokenFromParams.tokenId ?? '',
             data: [],
           })
-          resetSendFields()
+          setSendAmount('')
           return
         }
 
@@ -468,7 +477,7 @@ export const SendScreen = React.memo(() => {
             contractAddress: '0x2b3ef6906429b580b7b2080de5ca893bc282c225',
             data: [],
           })
-          resetSendFields()
+          setSendAmount('')
           return
         }
 
@@ -482,7 +491,7 @@ export const SendScreen = React.memo(() => {
           gasLimit: '',
           data: [],
         })
-        resetSendFields()
+        setSendAmount('')
         return
       }
 
@@ -495,7 +504,7 @@ export const SendScreen = React.memo(() => {
             .multiplyByDecimals(tokenFromParams.decimals)
             .format(),
         })
-        resetSendFields()
+        setSendAmount('')
         return
       }
 
@@ -518,7 +527,6 @@ export const SendScreen = React.memo(() => {
             decimals: tokenFromParams.decimals,
             isCompressedNft: tokenFromParams.isCompressed,
           })
-          resetSendFields()
           return
         }
 
@@ -530,7 +538,7 @@ export const SendScreen = React.memo(() => {
             .multiplyByDecimals(tokenFromParams.decimals)
             .toHex(),
         })
-        resetSendFields()
+        setSendAmount('')
         return
       }
 
@@ -550,11 +558,11 @@ export const SendScreen = React.memo(() => {
               .toHex(),
             memo: memoArray ? Array.from(memoArray) : undefined,
           }).unwrap()
-          resetSendFields()
+          setSendAmount('')
         } catch (error) {
           console.error('Zec send failed:', error)
           setTransactionProcessFailedMessage(
-            getLocale('braveWalletProcessTransactionErrorMessage').replace(
+            getLocale(S.BRAVE_WALLET_PROCESS_TRANSACTION_ERROR_MESSAGE).replace(
               '$1',
               tokenFromParams.symbol,
             ),
@@ -576,11 +584,11 @@ export const SendScreen = React.memo(() => {
               .toHex(),
             tokenId: tokenFromParams.contractAddress || undefined,
           }).unwrap()
-          resetSendFields()
+          setSendAmount('')
         } catch (error) {
           console.error('Cardano send failed:', error)
           setTransactionProcessFailedMessage(
-            getLocale('braveWalletProcessTransactionErrorMessage').replace(
+            getLocale(S.BRAVE_WALLET_PROCESS_TRANSACTION_ERROR_MESSAGE).replace(
               '$1',
               tokenFromParams.symbol,
             ),
@@ -599,7 +607,7 @@ export const SendScreen = React.memo(() => {
             .multiplyByDecimals(tokenFromParams.decimals)
             .toHex(),
         })
-        resetSendFields()
+        setSendAmount('')
       }
     }
   }, [
@@ -612,7 +620,6 @@ export const SendScreen = React.memo(() => {
     sendAmount,
     resolvedDomainAddress,
     memoText,
-    resetSendFields,
     sendEvmTransaction,
     sendERC20Transfer,
     sendERC721TransferFrom,
@@ -694,7 +701,6 @@ export const SendScreen = React.memo(() => {
     || (tokenFromParams?.coin === BraveWallet.CoinType.BTC
       && !isWarningAcknowledged)
     || isAccountSyncing
-    // Ironwood transaction creation is not yet supported.
     || isUnsupportedIronwoodTransaction
 
   // render
@@ -709,11 +715,11 @@ export const SendScreen = React.memo(() => {
           isSidePanel ? (
             <DefaultPanelHeader
               expandRoute={WalletRoutes.Send}
-              title={getLocale('braveWalletSend')}
+              title={getLocale(S.BRAVE_WALLET_SEND)}
             />
           ) : isMobileOrPanel ? (
             <PanelActionHeader
-              title={getLocale('braveWalletSend')}
+              title={getLocale(S.BRAVE_WALLET_SEND)}
               expandRoute={WalletRoutes.Send}
             />
           ) : undefined
@@ -723,6 +729,14 @@ export const SendScreen = React.memo(() => {
           fullWidth={true}
           fullHeight={true}
         >
+          {tokenFromParams?.coin === BraveWallet.CoinType.ZEC && (
+            <Column
+              fullWidth={true}
+              padding='16px 16px 0px 16px'
+            >
+              <ZCashMigrationBanner />
+            </Column>
+          )}
           <FromAsset
             onInputChange={handleFromAssetValueChange}
             onClickSelectToken={openSelectTokenModal}
@@ -757,7 +771,7 @@ export const SendScreen = React.memo(() => {
                     textSize='14px'
                     isBold={false}
                   >
-                    {getLocale('braveWalletSwapTo')}
+                    {getLocale(S.BRAVE_WALLET_SWAP_TO)}
                   </ToText>
                 </ToRow>
                 <InputRow
@@ -797,7 +811,9 @@ export const SendScreen = React.memo(() => {
                     padding='16px 0px 0px 0px'
                   >
                     <AlertMessage type='info'>
-                      {getLocale('braveWalletShieldingFundsAlertDescription')}
+                      {getLocale(
+                        S.BRAVE_WALLET_SHIELDING_FUNDS_ALERT_DESCRIPTION,
+                      )}
                     </AlertMessage>
                   </Row>
                 )}
@@ -807,7 +823,9 @@ export const SendScreen = React.memo(() => {
                     padding='16px 0px 0px 0px'
                   >
                     <AlertMessage type='info'>
-                      {getLocale('braveWalletUnshieldingFundsAlertDescription')}
+                      {getLocale(
+                        S.BRAVE_WALLET_UNSHIELDING_FUNDS_ALERT_DESCRIPTION,
+                      )}
                     </AlertMessage>
                   </Row>
                 )}
@@ -902,23 +920,23 @@ function getReviewButtonText(
   isUnshieldingFunds?: boolean,
 ) {
   if (sendAmountValidationError === 'fromAmountDecimalsOverflow') {
-    return 'braveWalletDecimalPlacesError'
+    return S.BRAVE_WALLET_DECIMAL_PLACES_ERROR
   }
   if (sendAmountValidationError === 'fromAmountADAValueToLow') {
-    return 'braveWalletMinOneAdaError'
+    return S.BRAVE_WALLET_MIN_ONE_ADA_ERROR
   }
   if (insufficientFundsError) {
-    return 'braveWalletNotEnoughFunds'
+    return S.BRAVE_WALLET_NOT_ENOUGH_FUNDS
   }
   if (isAccountSyncing) {
-    return 'braveWalletAccountIsSyncing'
+    return S.BRAVE_WALLET_ACCOUNT_IS_SYNCING
   }
   if (isShieldingFunds) {
-    return 'braveWalletReviewShield'
+    return S.BRAVE_WALLET_REVIEW_SHIELD
   }
   if (isUnshieldingFunds) {
-    return 'braveWalletReviewUnshield'
+    return S.BRAVE_WALLET_REVIEW_UNSHIELD
   }
 
-  return 'braveWalletReviewSend'
+  return S.BRAVE_WALLET_REVIEW_SEND
 }

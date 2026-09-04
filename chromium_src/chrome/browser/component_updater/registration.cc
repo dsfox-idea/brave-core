@@ -40,18 +40,10 @@
 #define RegisterOnDeviceHeadSuggestComponent(...) ((void)0)
 #define RegisterOptimizationHintsComponent(...) ((void)0)
 
-#define RegisterComponentsForUpdate RegisterComponentsForUpdate_ChromiumImpl
-
-#include <chrome/browser/component_updater/registration.cc>
-
-#undef RegisterComponentsForUpdate
-#undef RegisterMediaEngagementPreloadComponent
-#undef RegisterCommerceHeuristicsComponent
-#undef RegisterCrowdDenyComponent
-#undef RegisterFirstPartySetsComponent
-#undef RegisterActorSafetyListsComponent
-#undef RegisterOnDeviceHeadSuggestComponent
-#undef RegisterOptimizationHintsComponent
+// Growser-174: upstream moved `#include <...registration.cc>` from here to the
+// end of the file and dropped the _ChromiumImpl redefinition with it, so only
+// the macros above stay at the top - they still have to be defined before that
+// include is reached. The matching #undefs now sit after it.
 
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_global_features.h"
@@ -100,8 +92,9 @@
 
 namespace component_updater {
 
-void RegisterComponentsForUpdate() {
-  RegisterComponentsForUpdate_ChromiumImpl();
+namespace {
+
+void RegisterBraveComponentsForUpdate() {
   ComponentUpdateService* cus = g_browser_process->component_updater();
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   brave_wallet::WalletDataFilesInstaller::GetInstance()
@@ -168,4 +161,16 @@ void RegisterComponentsForUpdate() {
 #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
 }
 
+}  // namespace
+
 }  // namespace component_updater
+
+#include <chrome/browser/component_updater/registration.cc>
+
+#undef RegisterMediaEngagementPreloadComponent
+#undef RegisterCommerceHeuristicsComponent
+#undef RegisterCrowdDenyComponent
+#undef RegisterFirstPartySetsComponent
+#undef RegisterActorSafetyListsComponent
+#undef RegisterOnDeviceHeadSuggestComponent
+#undef RegisterOptimizationHintsComponent

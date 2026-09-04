@@ -1023,6 +1023,7 @@ struct WalletInfo {
   bool is_ankr_balances_feature_enabled;
   bool is_transaction_simulations_feature_enabled;
   bool is_z_cash_shielded_transactions_enabled;
+  bool is_z_cash_ironwood_enabled;
   bool is_cardano_enabled;
   array<CoinType> enabled_coins;
   bool is_cardano_dapp_support_enabled;
@@ -2265,6 +2266,11 @@ interface ZCashWalletService {
 
   // `account_birthday_block` is 0 if account birthday shouldn't be changed.
   ResetSyncState(AccountId account_id, uint32 account_birthday_block)
+      => (string? error_message);
+
+  // Rewinds sync state to immediately before Ironwood activation so the
+  // activation block is rescanned. Does not change account birthday.
+  ResetSyncStateToIronwoodActivation(AccountId account_id)
       => (string? error_message);
 
   GetChainTipStatus(AccountId account_id)

@@ -16,6 +16,7 @@
 #include "base/types/expected.h"
 #include "brave/components/brave_account/endpoint_client/client.h"
 #include "brave/components/brave_account/endpoint_client/with_headers.h"
+#include "brave/components/brave_vpn/browser/v2/api/device_endpoints.h"
 #include "brave/components/brave_vpn/browser/v2/api/purchase_endpoints.h"
 #include "brave/components/brave_vpn/browser/v2/api/region_endpoints.h"
 #include "brave/components/brave_vpn/browser/v2/api/support_endpoints.h"
@@ -32,11 +33,16 @@ using brave_account::endpoint_client::WithHeaders;
 namespace brave_vpn::v2 {
 
 using endpoints::CreateSupportTicket;
+using endpoints::GetAvailableMultihopExitRegions;
 using endpoints::GetHostnamesForRegion;
+using endpoints::GetProfileCredentials;
 using endpoints::GetServerRegions;
 using endpoints::GetSubscriberCredential;
 using endpoints::GetSubscriberCredentialV12;
 using endpoints::GetTimezonesForRegions;
+using endpoints::InvalidateCredentials;
+using endpoints::SetMultihopExitRegion;
+using endpoints::VerifyCredentials;
 using endpoints::VerifyPurchaseToken;
 
 namespace {
@@ -260,6 +266,129 @@ void BraveVpnApiClient::GetHostnamesForRegion(
   request.body.region_precision = region_precision;
 
   Client<endpoints::GetHostnamesForRegion>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::GetProfileCredentials(
+    RawJsonCallback callback,
+    const std::string& hostname,
+    const std::string& subscriber_credential,
+    endpoints::TransportProtocol transport_protocol,
+    const std::optional<std::string>& public_key,
+    const std::optional<std::string>& multihop_exit_region) {
+  CHECK_EQ(public_key.has_value(),
+           transport_protocol == endpoints::TransportProtocol::kWireguard)
+      << "public key must be set if and only if transport protocol is "
+         "WireGuard";
+
+  auto request = MakeRequest<GetProfileCredentials::Request>();
+  request.body.subscriber_credential = subscriber_credential;
+  request.body.transport_protocol = transport_protocol;
+  request.body.public_key = public_key.value_or("");
+  request.body.multihop_exit_region = multihop_exit_region;
+  request.url_replacements.SetHost(hostname);
+
+  Client<endpoints::GetProfileCredentials>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::VerifyCredentials(RawJsonCallback callback,
+                                          const std::string& hostname,
+                                          const std::string& client_id,
+                                          const std::string& api_auth_token) {
+  auto request = MakeRequest<WithHeaders<VerifyCredentials::Request>>();
+  request.headers.SetHeader(endpoints::kHeaderGrdApiAuthToken, api_auth_token);
+  request.url_replacements.SetHost(hostname);
+  request.url_replacements.SetPath(
+      base::StrCat({VerifyCredentials::URL().path(), "/", client_id, "/",
+                    endpoints::kDeviceApiVerifyCredentialsSuffix}));
+
+  Client<endpoints::VerifyCredentials>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::InvalidateCredentials(
+    RawJsonCallback callback,
+    const std::string& hostname,
+    const std::string& client_id,
+    const std::string& api_auth_token,
+    const std::string& subscriber_credential) {
+  auto request = MakeRequest<InvalidateCredentials::Request>();
+  request.body.api_auth_token = api_auth_token;
+  request.body.subscriber_credential = subscriber_credential;
+  request.url_replacements.SetHost(hostname);
+  request.url_replacements.SetPath(
+      base::StrCat({InvalidateCredentials::URL().path(), "/", client_id, "/",
+                    endpoints::kDeviceApiInvalidateCredentialsSuffix}));
+
+  Client<endpoints::InvalidateCredentials>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::GetAvailableMultihopExitRegions(
+    RawJsonCallback callback,
+    const std::string& hostname,
+    const std::string& client_id,
+    const std::string& api_auth_token) {
+  auto request =
+      MakeRequest<WithHeaders<GetAvailableMultihopExitRegions::Request>>();
+  request.headers.SetHeader(endpoints::kHeaderGrdApiAuthToken, api_auth_token);
+  request.url_replacements.SetHost(hostname);
+  request.url_replacements.SetPath(base::StrCat(
+      {GetAvailableMultihopExitRegions::URL().path(), "/", client_id, "/",
+       endpoints::kDeviceApiConfigMultihopSuffix}));
+
+  Client<endpoints::GetAvailableMultihopExitRegions>::Send(
+      url_loader_factory_, std::move(request),
+      base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void BraveVpnApiClient::SetMultihopExitRegion(
+    RawJsonCallback callback,
+    const std::string& hostname,
+    const std::string& client_id,
+    const std::string& api_auth_token,
+    const std::string& multihop_exit_region) {
+  CHECK(!multihop_exit_region.empty());
+  CHECK_NE(multihop_exit_region, endpoints::kMultihopDisabledValue)
+      << "Use ClearMultihopExitRegion() to disable multihop.";
+  DoSetMultihopExitRegion(std::move(callback), hostname, client_id,
+                          api_auth_token, multihop_exit_region);
+}
+
+void BraveVpnApiClient::ClearMultihopExitRegion(
+    RawJsonCallback callback,
+    const std::string& hostname,
+    const std::string& client_id,
+    const std::string& api_auth_token) {
+  DoSetMultihopExitRegion(std::move(callback), hostname, client_id,
+                          api_auth_token, endpoints::kMultihopDisabledValue);
+}
+
+void BraveVpnApiClient::DoSetMultihopExitRegion(
+    RawJsonCallback callback,
+    const std::string& hostname,
+    const std::string& client_id,
+    const std::string& api_auth_token,
+    const std::string& multihop_exit_region) {
+  auto request = MakeRequest<SetMultihopExitRegion::Request>();
+  request.body.api_auth_token = api_auth_token;
+  request.body.multihop_exit_region = multihop_exit_region;
+  request.url_replacements.SetHost(hostname);
+  request.url_replacements.SetPath(
+      base::StrCat({SetMultihopExitRegion::URL().path(), "/", client_id, "/",
+                    endpoints::kDeviceApiConfigMultihopSuffix}));
+
+  Client<endpoints::SetMultihopExitRegion>::Send(
       url_loader_factory_, std::move(request),
       base::BindOnce(&BraveVpnApiClient::OnRawJsonResponse,
                      weak_factory_.GetWeakPtr(), std::move(callback)));

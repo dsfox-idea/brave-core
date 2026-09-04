@@ -266,6 +266,9 @@ void NewTabPageInitializer::AddLoadTimeValues() {
   source_->AddBoolean(
       "isAIChatExportJSONEnabled",
       base::FeatureList::IsEnabled(ai_chat::features::kAIChatExportJSON));
+  source_->AddBoolean(
+      "isWorkspaceToolsEnabled",
+      base::FeatureList::IsEnabled(ai_chat::features::kAIChatWorkspaceTools));
 #endif
 
   source_->AddBoolean("aiChatInputEnabled", ai_chat_input_enabled);

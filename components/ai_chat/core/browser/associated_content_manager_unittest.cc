@@ -49,6 +49,7 @@ class MockAIChatCredentialManager : public AIChatCredentialManager {
     std::move(callback).Run(mojom::PremiumStatus::Inactive,
                             mojom::PremiumInfo::New());
   }
+  MOCK_METHOD(void, PutCredentialInCache, (CredentialCacheEntry), (override));
 };
 
 }  // namespace
@@ -667,6 +668,44 @@ TEST_F(AssociatedContentManagerUnitTest,
   EXPECT_TRUE(manager->GetTools().empty());
 }
 
+TEST_F(AssociatedContentManagerUnitTest, GetToolInfos_DescribesTools) {
+  NiceMock<MockAssociatedContent> content;
+  EXPECT_CALL(content, GetContentTools)
+      .WillRepeatedly(
+          [](AssociatedContentDelegate::GetContentToolsCallback cb) {
+            std::vector<std::unique_ptr<Tool>> tools;
+            tools.push_back(std::make_unique<NiceMock<MockTool>>(
+                "browse_store", "Browse OR navigate to store collections."));
+            tools.push_back(std::make_unique<NiceMock<MockTool>>(
+                "cancel_cart", "Remove all items from the cart."));
+            std::move(cb).Run(std::move(tools));
+          });
+
+  auto* manager = conversation_handler_->associated_content_manager();
+  manager->AddContent(&content);
+
+  base::test::TestFuture<std::vector<mojom::ToolInfoPtr>> infos;
+  manager->GetToolInfos(content.uuid(), infos.GetCallback());
+  const auto& result = infos.Get();
+  ASSERT_EQ(2u, result.size());
+  EXPECT_EQ("browse_store", result[0]->name);
+  EXPECT_EQ("Browse OR navigate to store collections.", result[0]->description);
+  EXPECT_EQ("cancel_cart", result[1]->name);
+  EXPECT_EQ("Remove all items from the cart.", result[1]->description);
+}
+
+TEST_F(AssociatedContentManagerUnitTest, GetToolInfos_UnknownContentIsEmpty) {
+  // The dialog can outlive the content it was opened for, e.g. if the user
+  // detaches the tab while it's open.
+  NiceMock<MockAssociatedContent> content;
+  auto* manager = conversation_handler_->associated_content_manager();
+  manager->AddContent(&content);
+
+  base::test::TestFuture<std::vector<mojom::ToolInfoPtr>> infos;
+  manager->GetToolInfos("not-an-attached-content", infos.GetCallback());
+  EXPECT_TRUE(infos.Get().empty());
+}
+
 TEST_F(AssociatedContentManagerUnitTest,
        AddContent_TriggersUpdateAndNotifiesConversation) {
   // Test that removed content doesn't appear in the cached contents map
@@ -694,6 +733,39 @@ TEST_F(AssociatedContentManagerUnitTest,
   ASSERT_EQ(1u, conversation_->associated_content.size());
   EXPECT_EQ(conversation_->associated_content[0]->content_type,
             mojom::ContentType::VideoTranscript);
+}
+
+// Content is attached before it can offer tools: a workspace only registers
+// them once its hidden page has loaded, long after it was attached.
+TEST_F(AssociatedContentManagerUnitTest, SurfacesToolsAttachedAfterTheFact) {
+  NiceMock<MockAssociatedContent> associated_content;
+  associated_content.SetUrl(GURL("https://example.com"));
+  conversation_handler_->associated_content_manager()->AddContent(
+      &associated_content);
+
+  ASSERT_EQ(1u, conversation_->associated_content.size());
+  ASSERT_FALSE(conversation_->associated_content[0]->tools_attached);
+
+  associated_content.set_tools_attached(true);
+
+  ASSERT_EQ(1u, conversation_->associated_content.size());
+  EXPECT_TRUE(conversation_->associated_content[0]->tools_attached);
+}
+
+TEST_F(AssociatedContentManagerUnitTest, SurfacesToolsBeingDetached) {
+  NiceMock<MockAssociatedContent> associated_content;
+  associated_content.SetUrl(GURL("https://example.com"));
+  conversation_handler_->associated_content_manager()->AddContent(
+      &associated_content);
+  associated_content.set_tools_attached(true);
+
+  ASSERT_EQ(1u, conversation_->associated_content.size());
+  ASSERT_TRUE(conversation_->associated_content[0]->tools_attached);
+
+  associated_content.set_tools_attached(false);
+
+  ASSERT_EQ(1u, conversation_->associated_content.size());
+  EXPECT_FALSE(conversation_->associated_content[0]->tools_attached);
 }
 
 }  // namespace ai_chat

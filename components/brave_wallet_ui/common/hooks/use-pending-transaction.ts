@@ -114,6 +114,8 @@ export const usePendingTransactions = () => {
   const selectedPendingTransactionId = useSafeUISelector(
     UISelectors.selectedPendingTransactionId,
   )
+  const isPanel = useSafeUISelector(UISelectors.isPanel)
+  const isSidePanel = useSafeUISelector(UISelectors.isSidePanel)
 
   // mutations
   const [rejectTransactions] = useRejectTransactionsMutation()
@@ -516,9 +518,9 @@ export const usePendingTransactions = () => {
       return
     }
 
-    // Keep panel on pending transaction view until we navigate to
-    // transactionStatus (e.g. ZCash submission can take several seconds)
-    dispatch(PanelActions.setSubmittingTransaction(transactionInfo))
+    // Keep confirm UI visible until we navigate to transaction status
+    // (e.g. ZCash submission can take several seconds)
+    dispatch(UIActions.setSubmittingTransaction(transactionInfo))
 
     try {
       const result = await approveTransaction({
@@ -553,16 +555,18 @@ export const usePendingTransactions = () => {
       )
     } finally {
       dispatch(
-        PanelActions.setSelectedTransactionId({
+        UIActions.setSelectedTransactionId({
           chainId: transactionInfo.chainId,
           coin: getCoinFromTxDataUnion(transactionInfo.txDataUnion),
           id: transactionInfo.id,
         }),
       )
-      dispatch(PanelActions.navigateTo('transactionStatus'))
-      dispatch(PanelActions.setSubmittingTransaction(undefined))
+      if (isPanel && !isSidePanel) {
+        dispatch(PanelActions.navigateTo('transactionStatus'))
+      }
+      dispatch(UIActions.setSubmittingTransaction(undefined))
     }
-  }, [approveTransaction, dispatch, transactionInfo])
+  }, [approveTransaction, dispatch, isPanel, isSidePanel, transactionInfo])
 
   const {
     data: getZCashTransactionTypeResult = { txType: null, error: null },
@@ -594,13 +598,20 @@ export const usePendingTransactions = () => {
   const transactionTitle = React.useMemo(
     (): string =>
       isShieldingFunds
-        ? getLocale('braveWalletShielding')
-        : isSolanaDappTransaction
-          ? getLocale('braveWalletApproveTransaction')
-          : transactionDetails?.isSwap
-            ? getLocale('braveWalletSwap')
-            : getLocale('braveWalletSend'),
-    [isShieldingFunds, isSolanaDappTransaction, transactionDetails?.isSwap],
+        ? getLocale(S.BRAVE_WALLET_SHIELDING)
+        : isUnshieldingFunds
+          ? getLocale(S.BRAVE_WALLET_UNSHIELDING)
+          : isSolanaDappTransaction
+            ? getLocale(S.BRAVE_WALLET_APPROVE_TRANSACTION)
+            : transactionDetails?.isSwap
+              ? getLocale(S.BRAVE_WALLET_SWAP)
+              : getLocale(S.BRAVE_WALLET_SEND),
+    [
+      isShieldingFunds,
+      isUnshieldingFunds,
+      isSolanaDappTransaction,
+      transactionDetails?.isSwap,
+    ],
   )
 
   const isLoadingGasFee = React.useMemo(() => {

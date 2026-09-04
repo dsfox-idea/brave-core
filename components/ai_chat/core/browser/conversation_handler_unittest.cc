@@ -93,6 +93,7 @@ class MockAIChatCredentialManager : public AIChatCredentialManager {
               GetPremiumStatus,
               (mojom::Service::GetPremiumStatusCallback callback),
               (override));
+  MOCK_METHOD(void, PutCredentialInCache, (CredentialCacheEntry), (override));
 };
 
 // TODO(https://github.com/brave/brave-browser/issues/55381): Use
@@ -6968,6 +6969,7 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
     std::string name;
     bool is_content_agent_allowed;
     bool deep_research_enabled;
+    bool math_rendering_enabled;
     ConversationCapabilitySet expected_capabilities;
   };
 
@@ -6976,29 +6978,46 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
           "Chat",
           /*is_content_agent_allowed=*/false,
           /*deep_research_enabled=*/false,
-          {mojom::ConversationCapability::CHAT},
+          /*math_rendering_enabled=*/true,
+          {mojom::ConversationCapability::CHAT,
+           mojom::ConversationCapability::MATH_ML},
       },
       {
           "ChatWithDeepResearch",
           /*is_content_agent_allowed=*/false,
           /*deep_research_enabled=*/true,
+          /*math_rendering_enabled=*/true,
           {mojom::ConversationCapability::CHAT,
-           mojom::ConversationCapability::DEEP_RESEARCH},
+           mojom::ConversationCapability::DEEP_RESEARCH,
+           mojom::ConversationCapability::MATH_ML},
       },
       {
           "ContentAgent",
           /*is_content_agent_allowed=*/true,
           /*deep_research_enabled=*/false,
+          /*math_rendering_enabled=*/true,
           {mojom::ConversationCapability::CHAT,
-           mojom::ConversationCapability::CONTENT_AGENT},
+           mojom::ConversationCapability::CONTENT_AGENT,
+           mojom::ConversationCapability::MATH_ML},
       },
       {
           "ContentAgentWithDeepResearch",
           /*is_content_agent_allowed=*/true,
           /*deep_research_enabled=*/true,
+          /*math_rendering_enabled=*/true,
           {mojom::ConversationCapability::CHAT,
            mojom::ConversationCapability::CONTENT_AGENT,
-           mojom::ConversationCapability::DEEP_RESEARCH},
+           mojom::ConversationCapability::DEEP_RESEARCH,
+           mojom::ConversationCapability::MATH_ML},
+      },
+      // Don't tell the server we can render MathML when the kill switch is
+      // off, or responses come back as raw LaTeX.
+      {
+          "MathRenderingDisabled",
+          /*is_content_agent_allowed=*/false,
+          /*deep_research_enabled=*/false,
+          /*math_rendering_enabled=*/false,
+          {mojom::ConversationCapability::CHAT},
       },
   };
 
@@ -7006,11 +7025,9 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
     SCOPED_TRACE(test_params.name);
 
     base::test::ScopedFeatureList feature_list;
-    if (test_params.deep_research_enabled) {
-      feature_list.InitAndEnableFeature(features::kAIChatDeepResearch);
-    } else {
-      feature_list.InitAndDisableFeature(features::kAIChatDeepResearch);
-    }
+    feature_list.InitWithFeatureStates(
+        {{features::kAIChatDeepResearch, test_params.deep_research_enabled},
+         {features::kAIChatMathRendering, test_params.math_rendering_enabled}});
 
     ai_chat_service_->SetIsContentAgentAllowed(
         test_params.is_content_agent_allowed);

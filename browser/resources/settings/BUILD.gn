@@ -21,8 +21,10 @@ import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
+import("//brave/components/traffic_control/buildflags/buildflags.gni")
 import("//brave/components/web_discovery/buildflags/buildflags.gni")
 import("//brave/resources/brave_grit.gni")
+import("//brave/ui/webui/custom_profile_image/buildflags/buildflags.gni")
 import("//chrome/common/features.gni")
 import("//extensions/buildflags/buildflags.gni")
 import("//tools/grit/preprocess_if_expr.gni")
@@ -109,6 +111,7 @@ preprocess_if_expr("preprocess") {
     "enable_brave_vpn_wireguard=$enable_brave_vpn_wireguard",
     "enable_brave_wallet=$enable_brave_wallet",
     "enable_containers=$enable_containers",
+    "enable_custom_profile_image=$enable_brave_custom_profile_image_webui",
     "enable_email_aliases=$enable_email_aliases",
     "enable_extensions=$enable_extensions",
     "enable_local_ai=$enable_local_ai",
@@ -117,6 +120,7 @@ preprocess_if_expr("preprocess") {
     "enable_psst=$enable_psst",
     "enable_request_otr=$enable_request_otr",
     "enable_speedreader=$enable_speedreader",
+    "enable_traffic_control=$enable_traffic_control",
     "enable_web_discovery=$enable_web_discovery",
     "enable_web_discovery_native=$enable_web_discovery_native",
   ]

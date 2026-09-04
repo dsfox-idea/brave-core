@@ -13,8 +13,6 @@
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/location.h"
-#include "base/logging.h"
-#include "base/memory/ptr_util.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"
 #include "brave/components/image_metadata_stripper/common/features.h"
@@ -43,15 +41,17 @@ bool BraveDownloadManagerDelegate::IsDownloadReadyForCompletion(
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
 
   if (!base::FeatureList::IsEnabled(
-          image_metadata_stripper::features::kStripDownloadedImageMetadata)) {
+          image_metadata_stripper::features::kStripImageMetadataV1)) {
     return ChromeDownloadManagerDelegate::IsDownloadReadyForCompletion(
         item, std::move(internal_complete_callback));
   }
 
-  // IPTC metadata stripping only available for png/jpeg types. So, for non
+  // IPTC metadata stripping only available for jpeg types. So, for non
   // types rely on upstream flow.
+  // TODO(https://github.com/brave/brave-browser/issues/5238): PNG formats needs
+  // more investigation whether FBMD is present or not. So, tackling only jpeg.
   const std::string mime_type = item->GetMimeType();
-  if (mime_type != "image/png" && mime_type != "image/jpeg") {
+  if (mime_type != "image/jpeg") {
     return ChromeDownloadManagerDelegate::IsDownloadReadyForCompletion(
         item, std::move(internal_complete_callback));
   }
@@ -98,6 +98,7 @@ bool BraveDownloadManagerDelegate::IsDownloadReadyForCompletion(
       {base::MayBlock(), base::TaskPriority::USER_VISIBLE,
        base::TaskShutdownBehavior::SKIP_ON_SHUTDOWN},
       base::BindOnce(&image_metadata_stripper::RemoveIptcMetadata,
+                     image_metadata_stripper::StrippingClient::kDownloadManager,
                      item->GetFullPath()),
       base::BindOnce(&BraveDownloadManagerDelegate::OnImageMetadataStripped,
                      weak_ptr_factory_.GetWeakPtr(), item->GetId()));
@@ -105,12 +106,8 @@ bool BraveDownloadManagerDelegate::IsDownloadReadyForCompletion(
 }
 
 void BraveDownloadManagerDelegate::OnImageMetadataStripped(uint32_t download_id,
-                                                           bool success) {
+                                                           bool /*stripped*/) {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
-
-  if (!success) {
-    DVLOG(1) << "Failed to strip image metadata from download file.";
-  }
 
   // The download may have been removed while the stripping task was running, so
   // the item and its keyed state have to be looked up again.

@@ -5,7 +5,6 @@
 
 #include "base/debug/debugging_buildflags.h"
 #include "base/feature_list.h"
-#include "base/feature_override.h"
 #include "base/features.h"
 #include "chrome/browser/browser_features.h"
 #include "chrome/browser/devtools/features.h"
@@ -251,6 +250,7 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &metrics::structured::kPhoneHubStructuredMetrics,
       &multistep_filter::kMultistepFilter,
       &net::features::kEnableWebTransportDraft07,
+      &net::features::kTLSTrustAnchorIDs,
       &network::features::kBrowsingTopics,
       &network::features::kSharedStorageAPI,
       &network_time::kNetworkTimeServiceQuerying,

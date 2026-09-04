@@ -80,6 +80,14 @@ class AssociatedContentManager : public ToolProvider,
   // detaching via the tools pill.
   void SetToolsAttached(std::string_view content_uuid, bool tools_attached);
 
+  // Fetches the tools the content with |content_uuid| exposes, described for
+  // display to the user. Empty if there's no such content. Capped at the same
+  // limit as the tools handed to the LLM, so the UI doesn't overpromise.
+  using GetToolInfosCallback =
+      base::OnceCallback<void(std::vector<mojom::ToolInfoPtr>)>;
+  void GetToolInfos(std::string_view content_uuid,
+                    GetToolInfosCallback callback);
+
   // Clears all content from the conversation.
   void ClearContent();
 
@@ -127,6 +135,7 @@ class AssociatedContentManager : public ToolProvider,
   void OnRequestArchive(AssociatedContentDelegate* delegate) override;
   void OnDestroyed(AssociatedContentDelegate* delegate) override;
   void OnTitleChanged(AssociatedContentDelegate* delegate) override;
+  void OnToolsAttachedChanged(AssociatedContentDelegate* delegate) override;
 
   std::vector<AssociatedContentDelegate*> GetContentDelegatesForTesting() {
     return content_delegates_;

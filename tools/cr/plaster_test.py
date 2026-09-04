@@ -6,6 +6,7 @@
 
 import unittest
 from pathlib import Path
+from unittest import mock
 import argparse
 import contextlib
 import copy
@@ -17,6 +18,8 @@ import os
 import time
 
 import plaster
+import repository
+import terminal
 
 from test.fake_chromium_repo import FakeChromiumRepo
 
@@ -152,6 +155,55 @@ class PlasterTest(unittest.TestCase):
         self.assertNotEqual(mtime_after, mtime_changed)
         self.assertEqual(temp_file.read_text(), 'bar')
         temp_file.unlink()
+
+    def test_save_patch_pins_diff_algorithm_and_attributes(self):
+        """save_patch_if_changed must pin the diff algorithm and attributes.
+
+        Regression test: a user's own `.gitconfig` (`diff.algorithm`) or
+        gitattributes could otherwise make the same substitution produce
+        different patch bytes than what CI generates, failing presubmit.
+        """
+        test_file_chromium = Path('chrome/common/pin_test.cc')
+        self.fake_chromium_src.write_and_stage_file(
+            test_file_chromium, 'Initial content for Chromium file.\n',
+            self.fake_chromium_src.chromium)
+        self.fake_chromium_src.commit('Add pin_test.cc',
+                                      self.fake_chromium_src.chromium)
+
+        plaster_path = plaster.PLASTER_FILES_PATH / (str(test_file_chromium) +
+                                                     '.yaml')
+        plaster_path.parent.mkdir(parents=True, exist_ok=True)
+        plaster_path.write_text('''
+          substitutions:
+            - description: Simple test substitution
+              regex:
+                re_pattern: 'Chromium'
+                replace: 'Plaster'
+        ''')
+
+        plaster_file = plaster.PlasterFile(plaster_path)
+        with mock.patch.object(
+                repository.Repository,
+                'run_git',
+                autospec=True,
+                side_effect=repository.Repository.run_git) as run_git_mock:
+            plaster_file.apply()
+
+        # `autospec` includes the bound `self` as the first positional arg.
+        diff_calls = [
+            call for call in run_git_mock.call_args_list
+            if 'diff' in call.args[1:]
+        ]
+        self.assertEqual(len(diff_calls), 1)
+        diff_args = diff_calls[0].args[1:]
+        pinned_options = set(zip(diff_args, diff_args[1:]))
+        self.assertIn(('-c', 'diff.algorithm=histogram'), pinned_options)
+        self.assertIn(
+            ('-c',
+             f'core.attributesFile={plaster.PLASTER_GITATTRIBUTES_PATH}'),
+            pinned_options)
+        self.assertEqual(
+            diff_calls[0].kwargs.get('env', {}).get('GIT_ATTR_NOSYSTEM'), '1')
 
     def test_checksum_hashes_raw_bytes_without_newline_normalization(self):
         # The checksum must be over the file's raw bytes so it matches
@@ -1202,9 +1254,16 @@ class RewriterFormsTest(unittest.TestCase):
         plaster.PlasterFile(plaster_path).apply()
         return (self.fake_chromium_src.chromium / src).read_text()
 
-    def _expect_value_error(self, yaml_body: str, substr: str):
+    def _expect_value_error(self,
+                            yaml_body: str,
+                            substr: str,
+                            name: str = 'validation.cc'):
+        # Defaults to a C++ target, since most callers check how a cxx
+        # rewriter validates its own body -- which it only gets to do once the
+        # name has resolved to it, so the target has to be one it serves. Pass
+        # a `name` outside that namespace to test the resolution itself.
         with self.assertRaises(ValueError) as ctx:
-            self._apply('validation.idl', 'dummy', yaml_body)
+            self._apply(name, 'dummy', yaml_body)
         self.assertIn(substr, str(ctx.exception))
 
     # -- regex op -----------------------------------------------------------
@@ -3472,7 +3531,8 @@ class RewriterFormsTest(unittest.TestCase):
             "      re_pattern: 'x'\n"
             "      replace: 'y'\n",
             '`blank_metadata_header_macros` is only supported for C++ '
-            'sources')
+            'sources',
+            name='validation.idl')
 
     def test_metadata_header_flag_allowed_for_cxx_source(self):
         result = self._apply(
@@ -3619,8 +3679,8 @@ class RewriterFormsTest(unittest.TestCase):
             '      class_name: C\n', 'Unrecognised top-level plaster key')
 
     def test_blank_flag_rejected_for_non_cxx_source(self):
-        # `_expect_value_error` targets a `.idl` source; the flag only applies
-        # to C++ files, so it is rejected there.
+        # The flag only applies to C++ files, so it is rejected on a `.idl`
+        # target.
         self._expect_value_error(
             'blank_macros_for_ast_parsing: true\n'
             'substitutions:\n'
@@ -3628,7 +3688,8 @@ class RewriterFormsTest(unittest.TestCase):
             '    regex:\n'
             "      re_pattern: 'x'\n"
             "      replace: 'y'\n",
-            '`blank_macros_for_ast_parsing` is only supported for C++ sources')
+            '`blank_macros_for_ast_parsing` is only supported for C++ sources',
+            name='validation.idl')
 
     def test_blank_flag_allowed_for_cxx_source(self):
         # The same flag is accepted for a `.h` source (here with no AST work to
@@ -3692,7 +3753,8 @@ class RewriterFormsTest(unittest.TestCase):
             "      re_pattern: 'x'\n"
             "      replace: 'y'\n",
             '`blank_string_adjacent_macros_for_ast_parsing` is only '
-            'supported for C++ sources')
+            'supported for C++ sources',
+            name='validation.idl')
 
     def test_macros_flag_alone_does_not_enable_string_adjacent_pass(self):
         # Setting `blank_macros_for_ast_parsing` must not also enable the
@@ -3764,15 +3826,17 @@ class RewriterFormsTest(unittest.TestCase):
             '};\n')
 
     def test_ast_rewriter_rejected_for_non_cxx_source(self):
-        # AST rewriters (cxx.* ops) only work on C++ sources; the `.idl` target
-        # of `_expect_value_error` is not one.
+        # AST rewriters belong to the `cxx` namespace, which a `.idl` target
+        # is not in, so the name resolves to nothing usable here.
         self._expect_value_error(
             'substitutions:\n'
             '  - description: AST rewriter on a non-C++ source\n'
             '    make_virtual:\n'
             '      class_name: C\n'
             '      method_name: Foo\n',
-            'the `make_virtual` rewriter is only supported for C++ sources')
+            'the `make_virtual` rewriter is not available for this source, '
+            'which is not in any namespace it serves (cxx)',
+            name='validation.idl')
 
     def test_regex_rewriter_allowed_for_non_cxx_source(self):
         # Text rewriters are language-agnostic, so they work on any source.
@@ -3783,6 +3847,165 @@ class RewriterFormsTest(unittest.TestCase):
             "      re_pattern: 'Chromium'\n"
             "      replace: 'Brave'\n")
         self.assertEqual(result, 'A Brave thing.\n')
+
+    # -- js.set_blink_runtime_enabled_feature_state op (real ast-grep) ------
+    #
+    # Targets `runtime_enabled_features.json5`, parsed with ast-grep's `js`
+    # grammar. The rewriter is composite: per entry, it works out at apply
+    # time whether to add the field or override the one already there.
+
+    _FEATURE_YAML = ('substitutions:\n'
+                     '  - description: Ship MyFeature disabled.\n'
+                     '    set_blink_runtime_enabled_feature_state:\n'
+                     '      feature_name: MyFeature\n'
+                     '      value: disabled\n')
+
+    def test_blink_runtime_enabled_feature_state_adds_a_missing_field(self):
+        result = self._apply(
+            'runtime_enabled_features.json5', '[\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '];\n', self._FEATURE_YAML)
+        self.assertEqual(
+            result, '[\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    base_feature_status: "disabled",  '
+            '// feature state is enforced via plaster rewrite.\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '];\n')
+
+    def test_blink_runtime_enabled_feature_state_overrides_an_existing_field(
+            self):
+        # Upstream puts the field last, by the origin-trial keys rather than
+        # by `name`; it is overridden where it stands, not moved.
+        result = self._apply(
+            'runtime_enabled_features.json5', '[\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    origin_trial_feature_name: "MyFeature",\n'
+            '    base_feature_status: "enabled",\n'
+            '    copied_from_base_feature_if: "overridden",\n'
+            '  },\n'
+            '];\n', self._FEATURE_YAML)
+        self.assertEqual(
+            result, '[\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    origin_trial_feature_name: "MyFeature",\n'
+            '    base_feature_status: "disabled",  '
+            '// feature state is enforced via plaster rewrite.\n'
+            '    copied_from_base_feature_if: "overridden",\n'
+            '  },\n'
+            '];\n')
+
+    def test_blink_runtime_enabled_feature_state_survives_a_leading_comment(
+            self):
+        # A comment before `name` -- common upstream -- must not defeat the
+        # match, as a positional `{name: "...", $$$REST}` pattern would.
+        result = self._apply(
+            'runtime_enabled_features.json5', '[\n'
+            '  {\n'
+            '    // PARAKEET ad serving runtime flag/JS API.\n'
+            '    name: "MyFeature",\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '];\n', self._FEATURE_YAML)
+        self.assertIn(
+            '    name: "MyFeature",\n'
+            '    base_feature_status: "disabled",  '
+            '// feature state is enforced via plaster rewrite.\n', result)
+
+    def test_blink_runtime_enabled_feature_state_ignores_a_longer_name_field(
+            self):
+        # `origin_trial_feature_name` ends in the same characters as `name`
+        # and often carries the same value; the field must land after the
+        # real `name`, not after that one.
+        result = self._apply(
+            'runtime_enabled_features.json5', '[\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    origin_trial_feature_name: "MyFeature",\n'
+            '  },\n'
+            '];\n', self._FEATURE_YAML)
+        self.assertEqual(
+            result, '[\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    base_feature_status: "disabled",  '
+            '// feature state is enforced via plaster rewrite.\n'
+            '    origin_trial_feature_name: "MyFeature",\n'
+            '  },\n'
+            '];\n')
+
+    def test_blink_runtime_enabled_feature_state_leaves_sibling_entries_alone(
+            self):
+        result = self._apply(
+            'runtime_enabled_features.json5', '[\n'
+            '  {\n'
+            '    name: "OtherFeature",\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '];\n', self._FEATURE_YAML)
+        self.assertEqual(
+            result, '[\n'
+            '  {\n'
+            '    name: "OtherFeature",\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    base_feature_status: "disabled",  '
+            '// feature state is enforced via plaster rewrite.\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '];\n')
+
+    def test_blink_runtime_enabled_feature_state_reapplies_unchanged(self):
+        # Rerunning over already-migrated text takes the override branch and
+        # must not stack up a second comment.
+        once = self._apply(
+            'runtime_enabled_features.json5', '[\n'
+            '  {\n'
+            '    name: "MyFeature",\n'
+            '    status: "stable",\n'
+            '  },\n'
+            '];\n', self._FEATURE_YAML)
+        twice = self._apply('runtime_enabled_features.json5', once,
+                            self._FEATURE_YAML)
+        self.assertEqual(once, twice)
+        self.assertEqual(
+            twice.count('// feature state is enforced via plaster rewrite.'),
+            1)
+
+    def test_blink_runtime_enabled_feature_state_unknown_feature_fails(self):
+        with self.assertRaises(plaster.PlasterApplyError):
+            self._apply(
+                'runtime_enabled_features.json5', '[\n'
+                '  {\n'
+                '    name: "OtherFeature",\n'
+                '    status: "stable",\n'
+                '  },\n'
+                '];\n', self._FEATURE_YAML)
+
+    def test_blink_runtime_enabled_feature_state_count_other_than_one_rejected(
+            self):
+        self._expect_value_error(
+            'substitutions:\n'
+            '  - description: bogus count\n'
+            '    count: 2\n'
+            '    set_blink_runtime_enabled_feature_state:\n'
+            '      feature_name: MyFeature\n'
+            '      value: disabled\n',
+            'does not accept a count other than 1',
+            name='validation.json5')
 
     # -- validation ---------------------------------------------------------
 
@@ -3854,7 +4077,7 @@ class RegexMacroDispatchTest(unittest.TestCase):
     key (e.g. `set_feature_flag_default_state:`) to `RegexMacro`.
 
     Every `regex_macro` op declared in `rewriters.pyl` is handled by the same
-    `RegexMacro` class (see `_regex_macro_rewriters`), so these tests exercise
+    `RegexMacro` class (see `_generated_rewriters`), so these tests exercise
     that generic dispatch/validation path via the one macro currently shipped
     (`set_feature_flag_default_state`), rather than the macro's own regex --
     that is `ToggleBaseFeatureDefaultStateTest`'s job (renamed
@@ -3893,16 +4116,20 @@ class RegexMacroDispatchTest(unittest.TestCase):
             'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);')
 
     def test_registered_under_its_bare_name(self):
-        # The YAML key is the op id with its `cxx.` prefix stripped.
+        # The YAML key is the op id with its `cxx.` prefix stripped, and the
+        # prefix becomes the namespace it is registered under.
         self.assertIn('set_feature_flag_default_state', plaster._REWRITERS)
-        cls = plaster._REWRITERS['set_feature_flag_default_state']
+        cls = plaster._REWRITERS.resolve('set_feature_flag_default_state',
+                                         'cxx')
         self.assertTrue(issubclass(cls, plaster.RegexMacro))
         self.assertEqual(cls.OP_ID, 'cxx.set_feature_flag_default_state')
+        self.assertEqual(cls.namespace(), 'cxx')
 
     def test_help_text_lists_every_input(self):
         # `plaster --help <macro>` must document each input, not just the
         # macro's own top-level `description`.
-        cls = plaster._REWRITERS['set_feature_flag_default_state']
+        cls = plaster._REWRITERS.resolve('set_feature_flag_default_state',
+                                         'cxx')
         help_text = cls.help_text()
         self.assertIn('Fields:', help_text)
         self.assertIn('feature_name', help_text)
@@ -3918,7 +4145,7 @@ class RegexMacroDispatchTest(unittest.TestCase):
               '    set_feature_flag_default_state:\n' \
               '      feature_name: kFoo\n'
         with self.assertRaises(ValueError) as cm:
-            plaster.Substitution.from_yaml(spec)
+            plaster.Substitution.from_yaml(spec, namespace='cxx')
         self.assertIn('requires arg(s): value', str(cm.exception))
 
     def test_unknown_arg_is_rejected(self):
@@ -3929,7 +4156,7 @@ class RegexMacroDispatchTest(unittest.TestCase):
                 '      value: base::FEATURE_DISABLED_BY_DEFAULT\n'
                 '      bogus: x\n')
         with self.assertRaises(ValueError) as cm:
-            plaster.Substitution.from_yaml(spec)
+            plaster.Substitution.from_yaml(spec, namespace='cxx')
         self.assertIn("Unrecognised set_feature_flag_default_state arg(s)",
                       str(cm.exception))
         self.assertIn("'bogus'", str(cm.exception))
@@ -3941,7 +4168,7 @@ class RegexMacroDispatchTest(unittest.TestCase):
                 '      feature_name: kFoo\n'
                 '      value: 1\n')
         with self.assertRaises(ValueError) as cm:
-            plaster.Substitution.from_yaml(spec)
+            plaster.Substitution.from_yaml(spec, namespace='cxx')
         self.assertIn('must be a string', str(cm.exception))
 
     def test_unknown_macro_name_is_unrecognised(self):
@@ -3983,7 +4210,8 @@ class RegexMacroDispatchTest(unittest.TestCase):
             result, '// kFoo feature state is enforced via plaster rewrite.\n'
             'BASE_FEATURE(kFoo, base::FEATURE_DISABLED_BY_DEFAULT);')
 
-    def test_rejected_on_a_non_cxx_source(self):
+    def test_rejected_on_a_source_outside_every_namespace_it_serves(self):
+        # The name belongs to `cxx` alone, and a `.idl` target is not in it.
         with self.assertRaises(ValueError) as cm:
             self._apply(
                 'feature.idl', 'irrelevant', 'substitutions:\n'
@@ -3992,8 +4220,9 @@ class RegexMacroDispatchTest(unittest.TestCase):
                 '      feature_name: kFoo\n'
                 '      value: base::FEATURE_DISABLED_BY_DEFAULT\n')
         self.assertIn(
-            'the `set_feature_flag_default_state` rewriter is only '
-            'supported for C++ sources', str(cm.exception))
+            'the `set_feature_flag_default_state` rewriter is not available '
+            'for this source, which is not in any namespace it serves '
+            '(cxx)', str(cm.exception))
 
     def _expect_value_error(self, yaml_body: str, substr: str):
         with self.assertRaises(ValueError) as ctx:
@@ -4001,28 +4230,33 @@ class RegexMacroDispatchTest(unittest.TestCase):
         self.assertIn(substr, str(ctx.exception))
 
 
-class RegexMacroHelpTest(unittest.TestCase):
-    """Unit tests for `_regex_macro_help`, independent of the shipped macro.
+class DeclaredOpHelpTest(unittest.TestCase):
+    """Unit tests for `_declared_op_help`, independent of any shipped op.
+
+    The builder is shared by every backend whose rewriters are generated from
+    `rewriters.pyl` -- regex macros and gn edit ops -- so it is exercised on a
+    synthetic spec rather than through either of them.
     """
 
     @staticmethod
-    def _spec(description: str) -> dict:
-        return {
-            'description': description,
-            'inputs': [
-                {
-                    'name': 'foo',
-                    'description': 'The foo to use.'
-                },
-                {
-                    'name': 'bar',
-                    'description': 'The bar to use.'
-                },
-            ],
-        }
+    def _spec(description: str, *, variadic: str = '') -> dict:
+        inputs = [
+            {
+                'name': 'foo',
+                'description': 'The foo to use.'
+            },
+            {
+                'name': 'bar',
+                'description': 'The bar to use.'
+            },
+        ]
+        for entry in inputs:
+            if entry['name'] == variadic:
+                entry['variadic'] = True
+        return {'description': description, 'inputs': inputs}
 
     def test_fields_inserted_before_example_code_block(self):
-        help_text = plaster._regex_macro_help(
+        help_text = plaster._declared_op_help(
             self._spec('Does a thing.\n\n```cpp\ncode here\n```\n'))
         fields_index = help_text.index('Fields:')
         example_index = help_text.index('```cpp')
@@ -4031,34 +4265,243 @@ class RegexMacroHelpTest(unittest.TestCase):
         self.assertIn('- `bar` — The bar to use.', help_text)
 
     def test_fields_appended_when_no_code_block(self):
-        help_text = plaster._regex_macro_help(self._spec('Does a thing.'))
+        help_text = plaster._declared_op_help(self._spec('Does a thing.'))
         self.assertTrue(help_text.startswith('Does a thing.'))
         self.assertIn('Fields:', help_text)
         self.assertIn('- `foo` — The foo to use.', help_text)
         self.assertIn('- `bar` — The bar to use.', help_text)
 
     def test_field_order_matches_declared_inputs(self):
-        help_text = plaster._regex_macro_help(self._spec('Does a thing.'))
+        help_text = plaster._declared_op_help(self._spec('Does a thing.'))
         self.assertLess(help_text.index('`foo`'), help_text.index('`bar`'))
+
+    def test_a_variadic_input_says_a_list_is_accepted(self):
+        # A caller cannot tell from the name alone whether a field takes one
+        # value or many, so the help has to say so.
+        help_text = plaster._declared_op_help(
+            self._spec('Does a thing.', variadic='bar'))
+        self.assertIn(
+            '- `bar` — The bar to use. May be a single value or a '
+            'list of them.', help_text)
+
+    def test_a_non_variadic_input_makes_no_such_claim(self):
+        help_text = plaster._declared_op_help(
+            self._spec('Does a thing.', variadic='bar'))
+        self.assertIn('- `foo` — The foo to use.\n', help_text)
+        self.assertNotIn('- `foo` — The foo to use. May be', help_text)
+
+
+class RewriterNamespaceTest(unittest.TestCase):
+    """`RewriterNamespace` binds op-id prefixes, target suffixes and grammars.
+
+    It is the one table a new language is added to, so these check both that
+    the shipped entries are coherent and that a plaster's target resolves to
+    the namespace claiming its suffix.
+    """
+
+    # -- the shipped table ---------------------------------------------------
+
+    def test_every_namespace_is_indexed_under_its_own_name(self):
+        for name, namespace in plaster._NAMESPACE_BY_NAME.items():
+            self.assertEqual(namespace.name, name)
+
+    def test_a_source_namespace_claims_suffixes(self):
+        # Everything but the global namespace describes a real kind of
+        # source, so it must say which targets it covers. Whether it also
+        # names a grammar is a separate question -- see below.
+        for name, namespace in plaster._NAMESPACE_BY_NAME.items():
+            if name == plaster._GLOBAL_NAMESPACE:
+                continue
+            self.assertTrue(namespace.suffixes, f'{name} claims no suffixes')
+
+    def test_a_grammar_is_optional_and_independent_of_suffixes(self):
+        # A namespace names a grammar only when ast-grep can parse it. A
+        # language it cannot parse (GN, say) is still a perfectly good
+        # namespace with its own suffixes -- it just hosts text ops only. So
+        # claiming suffixes must not be taken to imply having a grammar.
+        for name, namespace in plaster._NAMESPACE_BY_NAME.items():
+            if namespace.ast_grep_language is None:
+                continue
+            self.assertTrue(
+                namespace.ast_grep_language,
+                f'{name} has an empty grammar id; use None to '
+                f'mean "ast-grep cannot parse this"')
+
+    def test_the_global_namespace_has_no_grammar_and_no_suffixes(self):
+        # `all` describes what a rewriter can be used on, not a kind of
+        # source: nothing is in it, and its ops are never parsed.
+        namespace = plaster._NAMESPACE_BY_NAME[plaster._GLOBAL_NAMESPACE]
+        self.assertIsNone(namespace.ast_grep_language)
+        self.assertEqual(namespace.suffixes, frozenset())
+
+    def test_no_suffix_is_claimed_by_two_namespaces(self):
+        # `_NAMESPACE_BY_SUFFIX` is built by flattening, so a suffix claimed
+        # twice would silently resolve to whichever namespace came last.
+        claimed = [
+            suffix for namespace in plaster._NAMESPACES
+            for suffix in namespace.suffixes
+        ]
+        self.assertCountEqual(claimed, set(claimed))
+
+    def test_suffix_index_covers_every_declared_suffix(self):
+        for namespace in plaster._NAMESPACES:
+            for suffix in namespace.suffixes:
+                self.assertIs(plaster._NAMESPACE_BY_SUFFIX[suffix], namespace)
+
+    # -- resolving a plaster's target ----------------------------------------
+
+    def test_cxx_targets_resolve_to_the_cxx_namespace(self):
+        for name in ('foo.cc.yaml', 'foo.h.yaml', 'foo.mm.yaml',
+                     'foo.cpp.yaml'):
+            self.assertEqual(
+                plaster._namespace_of_source(Path('rewrite/dir') / name),
+                'cxx', name)
+
+    def test_unclaimed_suffix_resolves_to_no_namespace(self):
+        self.assertIsNone(
+            plaster._namespace_of_source(Path('rewrite/foo.idl.yaml')))
+        self.assertIsNone(
+            plaster._namespace_of_source(Path('rewrite/foo.grd.yaml')))
+
+    def test_only_the_suffix_before_yaml_decides(self):
+        # A `.cc` earlier in the name must not make a `.idl` target C++.
+        self.assertIsNone(
+            plaster._namespace_of_source(Path('rewrite/foo.cc.idl.yaml')))
+
+    def test_is_cxx_source_agrees_with_the_namespace(self):
+        self.assertTrue(plaster._is_cxx_source(Path('rewrite/foo.cc.yaml')))
+        self.assertFalse(plaster._is_cxx_source(Path('rewrite/foo.idl.yaml')))
+
+    def test_no_target_resolves_to_the_global_namespace(self):
+        # `all` is a fallback, never something a target is in, so no suffix
+        # may lead to it.
+        self.assertNotIn(
+            plaster._GLOBAL_NAMESPACE,
+            {ns.name
+             for ns in plaster._NAMESPACE_BY_SUFFIX.values()})
 
 
 class RewriterRegistryTest(unittest.TestCase):
-    """The `_REWRITERS` registry drives both YAML dispatch and help."""
+    """`RewriterRegistry` drives both YAML dispatch and help.
 
-    def test_regex_is_registered_under_its_name(self):
-        self.assertIs(plaster._REWRITERS['regex'], plaster.Regex)
+    The shipped registry (`_REWRITERS`) is checked for the invariants every
+    rewriter must hold; the namespace machinery itself is exercised against
+    purpose-built registries, so the cases stay stable as real rewriters come
+    and go.
+    """
 
-    def test_registry_is_read_only(self):
+    @staticmethod
+    def _rewriter(name: str,
+                  namespace: str,
+                  summary: str = 's') -> type[plaster.Rewriter]:
+        """A throwaway rewriter class with the given name and namespace."""
+        return type(
+            f'{namespace.capitalize()}{name}Rewriter',
+            (plaster.AllRegexRewriter, ), {
+                'NAME': name,
+                'SUMMARY': summary,
+                'HELP': 'help',
+                'namespace': classmethod(lambda cls, ns=namespace: ns),
+            })
+
+    # -- the shipped registry ------------------------------------------------
+
+    def test_regex_is_registered_in_the_global_namespace(self):
+        self.assertEqual(plaster.AllRegexRewriter.namespace(),
+                         plaster._GLOBAL_NAMESPACE)
+        self.assertEqual(dict(plaster._REWRITERS.candidates('regex')),
+                         {plaster._GLOBAL_NAMESPACE: plaster.AllRegexRewriter})
+
+    def test_a_global_rewriter_resolves_for_any_target(self):
+        for target in ('cxx', None):
+            self.assertIs(plaster._REWRITERS.resolve('regex', target),
+                          plaster.AllRegexRewriter)
+
+    def test_candidates_are_read_only(self):
         with self.assertRaises(TypeError):
-            plaster._REWRITERS['regex'] = plaster.Regex
+            plaster._REWRITERS.candidates('regex')[
+                plaster._GLOBAL_NAMESPACE] = None
 
     def test_every_rewriter_is_self_describing(self):
-        # Each rewriter must be keyed by its own NAME and carry the metadata the
-        # help system relies on, so a new rewriter can never show up blank.
-        for name, cls in plaster._REWRITERS.items():
-            self.assertEqual(cls.NAME, name)
-            self.assertTrue(cls.SUMMARY, f'{name} is missing a SUMMARY')
-            self.assertTrue(cls.help_text(), f'{name} is missing help text')
+        # Each rewriter must be keyed by its own NAME, agree with the
+        # namespace it is filed under, and carry the metadata the help system
+        # relies on, so a new rewriter can never show up blank or misfiled.
+        for name in plaster._REWRITERS.names:
+            for namespace, cls in plaster._REWRITERS.candidates(name).items():
+                label = f'{name} ({namespace})'
+                self.assertEqual(cls.NAME, name)
+                self.assertEqual(cls.namespace(), namespace)
+                self.assertTrue(cls.SUMMARY, f'{label} is missing a SUMMARY')
+                self.assertTrue(cls.help_text(), f'{label} has no help text')
+
+    def test_every_rewriter_names_a_known_namespace(self):
+        known = set(plaster._NAMESPACE_BY_NAME)
+        for name in plaster._REWRITERS.names:
+            for namespace in plaster._REWRITERS.candidates(name):
+                self.assertIn(
+                    namespace, known,
+                    f'{name} is filed under an unregistered namespace')
+
+    # -- resolution ----------------------------------------------------------
+
+    def test_resolve_prefers_an_exact_namespace_match(self):
+        cxx = self._rewriter('shared', 'cxx')
+        js = self._rewriter('shared', 'js')
+        registry = plaster.RewriterRegistry(cxx, js)
+        self.assertIs(registry.resolve('shared', 'cxx'), cxx)
+        self.assertIs(registry.resolve('shared', 'js'), js)
+
+    def test_resolve_falls_back_to_the_global_namespace(self):
+        # A global rewriter reads the target as text, so it fits a target in
+        # any namespace -- and one in no namespace at all.
+        globally = self._rewriter('anywhere', plaster._GLOBAL_NAMESPACE)
+        registry = plaster.RewriterRegistry(globally)
+        self.assertIs(registry.resolve('anywhere', 'cxx'), globally)
+        self.assertIs(registry.resolve('anywhere', None), globally)
+
+    def test_exact_match_wins_over_the_global_fallback(self):
+        cxx = self._rewriter('shared', 'cxx')
+        globally = self._rewriter('shared', plaster._GLOBAL_NAMESPACE)
+        registry = plaster.RewriterRegistry(cxx, globally)
+        self.assertIs(registry.resolve('shared', 'cxx'), cxx)
+        self.assertIs(registry.resolve('shared', 'js'), globally)
+
+    def test_resolve_returns_none_for_a_namespace_it_does_not_serve(self):
+        registry = plaster.RewriterRegistry(self._rewriter('cxx_only', 'cxx'))
+        self.assertIsNone(registry.resolve('cxx_only', 'js'))
+        self.assertIsNone(registry.resolve('cxx_only', None))
+
+    def test_same_name_in_one_namespace_is_rejected(self):
+        # Two rewriters sharing a name *and* a namespace would silently
+        # shadow one another, so building the registry fails outright.
+        with self.assertRaises(AssertionError) as ctx:
+            plaster.RewriterRegistry(self._rewriter('clash', 'cxx'),
+                                     self._rewriter('clash', 'cxx'))
+        self.assertIn('registered twice', str(ctx.exception))
+        self.assertIn("'cxx'", str(ctx.exception))
+
+    def test_names_are_reported_once_regardless_of_namespace(self):
+        registry = plaster.RewriterRegistry(
+            self._rewriter('shared', 'cxx'), self._rewriter('shared', 'js'),
+            self._rewriter('solo', plaster._GLOBAL_NAMESPACE))
+        self.assertEqual(sorted(registry.names), ['shared', 'solo'])
+        self.assertIn('shared', registry)
+        self.assertNotIn('absent', registry)
+
+    # -- help grouping -------------------------------------------------------
+
+    def test_by_namespace_groups_and_sorts_with_the_global_one_last(self):
+        registry = plaster.RewriterRegistry(
+            self._rewriter('shared', 'js'), self._rewriter('shared', 'cxx'),
+            self._rewriter('alpha', 'cxx'),
+            self._rewriter('solo', plaster._GLOBAL_NAMESPACE))
+        grouped = [(namespace, [rewriter.NAME for rewriter in rewriters])
+                   for namespace, rewriters in registry.by_namespace()]
+        self.assertEqual(grouped, [
+            ('cxx', ['alpha', 'shared']),
+            ('js', ['shared']),
+            (plaster._GLOBAL_NAMESPACE, ['solo']),
+        ])
 
 
 class AstGrepCompositionTest(unittest.TestCase):
@@ -4071,13 +4514,13 @@ class AstGrepCompositionTest(unittest.TestCase):
     def test_declared_inputs_read_from_spec(self):
         # The accepted arg keys come from the op spec, not a duplicated class
         # constant.
-        self.assertEqual(plaster.MakeVirtual.declared_inputs(),
+        self.assertEqual(plaster.CxxMakeVirtualRewriter.declared_inputs(),
                          frozenset({'class_name', 'method_name'}))
-        self.assertEqual(plaster.DropFinal.declared_inputs(),
+        self.assertEqual(plaster.CxxDropFinalRewriter.declared_inputs(),
                          frozenset({'class_name'}))
 
     def test_flat_rewriter_expands_to_one_operation(self):
-        rewriter = plaster.MakeVirtual.parse(
+        rewriter = plaster.CxxMakeVirtualRewriter.parse(
             {
                 'class_name': 'C',
                 'method_name': 'Foo'
@@ -4090,7 +4533,7 @@ class AstGrepCompositionTest(unittest.TestCase):
         ])
 
     def test_add_friend_single_expands_to_one_operation(self):
-        rewriter = plaster.AddFriend.parse(
+        rewriter = plaster.CxxAddFriendRewriter.parse(
             {
                 'class_name': 'C',
                 'friend_type': 'class BraveC'
@@ -4106,7 +4549,7 @@ class AstGrepCompositionTest(unittest.TestCase):
     def test_add_friend_list_expands_reversed_to_preserve_order(self):
         # Each insertion goes to the top of the private section, so the ops are
         # emitted in reverse of the authored list to land them in order.
-        rewriter = plaster.AddFriend.parse(
+        rewriter = plaster.CxxAddFriendRewriter.parse(
             {
                 'class_name': 'C',
                 'friend_type': ['class BraveC', 'class BraveCTest'],
@@ -4274,6 +4717,43 @@ class RewritersEvalTest(unittest.TestCase):
                 'ast.matcher'].pop('cxx.find_class_method_decl')
 
         self._assert_invalid(mutate, 'Wrong keys')
+
+    def test_ast_op_in_the_global_namespace_is_rejected(self):
+        # `all` is a known namespace, so the op id itself is well-formed --
+        # but it names no grammar, and an ast op cannot be parsed without one.
+        def mutate(s):
+            s['ast.matcher']['all.find_class_method_decl'] = s[
+                'ast.matcher'].pop('cxx.find_class_method_decl')
+
+        self._assert_invalid(mutate, 'names no grammar to parse with')
+
+    def test_ast_rewriter_in_the_global_namespace_is_rejected(self):
+
+        def mutate(s):
+            s['ast.rewriter']['all.make_virtual'] = s['ast.rewriter'].pop(
+                'cxx.make_virtual')
+
+        self._assert_invalid(mutate, 'names no grammar to parse with')
+
+    def test_ast_op_in_an_unparseable_source_namespace_is_rejected(self):
+        # The same rejection, for the other reason a namespace can lack a
+        # grammar: a real kind of source, with its own suffixes, that
+        # ast-grep has no parser for. Text ops there are fine; ast ops are
+        # not, and must fail at load rather than at invocation.
+        unparseable = plaster.RewriterNamespace(name='gn',
+                                                ast_grep_language=None,
+                                                suffixes=frozenset(
+                                                    {'.gn', '.gni'}))
+        namespaces = dict(plaster._NAMESPACE_BY_NAME) | {'gn': unparseable}
+        self.addCleanup(setattr, plaster, '_NAMESPACE_BY_NAME',
+                        plaster._NAMESPACE_BY_NAME)
+        plaster._NAMESPACE_BY_NAME = namespaces
+
+        def mutate(s):
+            s['ast.matcher']['gn.find_class_method_decl'] = s[
+                'ast.matcher'].pop('cxx.find_class_method_decl')
+
+        self._assert_invalid(mutate, 'names no grammar to parse with')
 
     # -- matcher schema ------------------------------------------------------
 
@@ -5414,7 +5894,7 @@ class _ComposingAstGrepRewriter(plaster._AstGrepRewriter):
 
     Exists only to prove the base's `apply` drives and accumulates across an
     arbitrary `operations()` list -- the composition seam itself, with no
-    concrete rewriter (MakeVirtual/AddFriend/DropFinal) in the picture.
+    concrete rewriter (CxxMakeVirtualRewriter/CxxAddFriendRewriter/CxxDropFinalRewriter) in the picture.
     """
 
     NAME = 'composing_test_op'
@@ -5681,11 +6161,85 @@ class HelpTest(unittest.TestCase):
         self.assertIn('regex', out)
         self.assertNotIn('Commands', out)
 
+    def test_rewriters_are_grouped_by_namespace(self):
+        # One `Rewriters` index, with the namespaces as headings inside it --
+        # the header and its hint are not repeated per group.
+        code, out = self._parse('rewriters')
+        self.assertEqual(code, 0)
+        self.assertEqual(out.count('type "plaster --help <rewriter>"'), 1)
+        for namespace in plaster._NAMESPACE_BY_NAME:
+            self.assertIn(f'{namespace}:', out)
+        # The namespace-agnostic rewriters get a heading of their own, last.
+        self.assertIn('all:', out)
+        self.assertLess(out.index('cxx:'), out.index('all:'))
+
+    def test_namespaced_rewriter_is_listed_under_its_namespace(self):
+        code, out = self._parse('rewriters')
+        self.assertEqual(code, 0)
+        cxx_section = out[out.index('cxx:'):out.index('all:')]
+        agnostic_section = out[out.index('all:'):]
+        self.assertIn('make_virtual', cxx_section)
+        self.assertNotIn('make_virtual', agnostic_section)
+        self.assertIn('regex', agnostic_section)
+
     def test_rewriter_topic_prints_its_docs(self):
         code, out = self._parse('regex')
         self.assertEqual(code, 0)
         self.assertIn('re.subn', out)
         self.assertIn('re_flags', out)
+
+    def test_namespace_qualified_rewriter_topic_prints_its_docs(self):
+        # `<namespace>.<name>` asks for one specific rewriter.
+        code, out = self._parse('cxx.make_virtual')
+        self.assertEqual(code, 0)
+        self.assertIn('class_name', out)
+
+    def test_qualified_topic_in_the_wrong_namespace_is_an_error(self):
+        # The name is real, so the error names the namespaces it does serve
+        # rather than falling through to the generic unknown-topic message.
+        code, out = self._parse('js.make_virtual')
+        self.assertEqual(code, 1)
+        self.assertNotIn('Unknown help topic', out)
+        self.assertIn('make_virtual', out)
+        self.assertIn('js', out)
+        self.assertIn('cxx', out)
+
+    def test_qualified_topic_with_an_unknown_name_is_unknown(self):
+        code, out = self._parse('cxx.not_a_rewriter')
+        self.assertEqual(code, 1)
+        self.assertIn('Unknown help topic', out)
+
+    def test_shared_name_documents_every_namespace_and_hints_at_narrowing(
+            self):
+        # A bare name covers each namespace it is in, labels them, and says
+        # how to ask for just one. Uses a purpose-built registry so the case
+        # holds whether or not a real name happens to be shared today.
+        shared = type(
+            'AllSharedRewriter', (plaster.AllRegexRewriter, ), {
+                'NAME': 'shared',
+                'SUMMARY': 'The global one.',
+                'HELP': 'Global docs.',
+            })
+        cxx = type(
+            'CxxSharedRewriter', (plaster.AllRegexRewriter, ), {
+                'NAME': 'shared',
+                'SUMMARY': 'The C++ one.',
+                'HELP': 'Cxx docs.',
+                'namespace': classmethod(lambda cls: 'cxx'),
+            })
+        self.addCleanup(setattr, plaster, '_REWRITERS', plaster._REWRITERS)
+        plaster._REWRITERS = plaster.RewriterRegistry(shared, cxx)
+
+        code, out = self._parse('shared')
+        self.assertEqual(code, 0)
+        self.assertIn('Cxx docs.', out)
+        self.assertIn('Global docs.', out)
+        self.assertIn('<namespace>.shared', out)
+
+        code, out = self._parse('cxx.shared')
+        self.assertEqual(code, 0)
+        self.assertIn('Cxx docs.', out)
+        self.assertNotIn('Global docs.', out)
 
     def test_command_topic_prints_argparse_help(self):
         code, out = self._parse('apply')
@@ -6681,6 +7235,1032 @@ class OverrideFeatureDefaultStateTest(unittest.TestCase):
                     'value': 'base::FEATURE_ENABLED_BY_DEFAULT',
                     'extra': 'x',
                 })
+
+
+class DeclaredInputsTest(unittest.TestCase):
+    """`_check_declared_inputs` guards both declarative backends.
+
+    An op renders templates over a declared interface, so it can neither
+    render with an input missing nor quietly ignore one it never declared.
+    """
+
+    def test_an_exact_match_passes(self):
+        plaster._check_declared_inputs('ns.op',
+                                       declared=frozenset({'a', 'b'}),
+                                       provided=frozenset({'a', 'b'}))
+
+    def test_no_inputs_at_all_passes(self):
+        plaster._check_declared_inputs('ns.op',
+                                       declared=frozenset(),
+                                       provided=frozenset())
+
+    def test_a_missing_input_is_named(self):
+        with self.assertRaises(ValueError) as cm:
+            plaster._check_declared_inputs('ns.op',
+                                           declared=frozenset({'a', 'b'}),
+                                           provided=frozenset({'a'}))
+        self.assertIn('ns.op', str(cm.exception))
+        self.assertIn('missing input(s): b', str(cm.exception))
+
+    def test_an_unknown_input_is_named(self):
+        with self.assertRaises(ValueError) as cm:
+            plaster._check_declared_inputs('ns.op',
+                                           declared=frozenset({'a'}),
+                                           provided=frozenset({'a', 'z'}))
+        self.assertIn('unknown input(s): z', str(cm.exception))
+
+    def test_both_problems_are_reported_together(self):
+        # One pass over the interface should surface everything wrong with it,
+        # rather than making the author fix it one round-trip at a time.
+        with self.assertRaises(ValueError) as cm:
+            plaster._check_declared_inputs('ns.op',
+                                           declared=frozenset({'a', 'b'}),
+                                           provided=frozenset({'a', 'z'}))
+        self.assertIn('missing input(s): b', str(cm.exception))
+        self.assertIn('unknown input(s): z', str(cm.exception))
+
+
+class GeneratedRewritersTest(unittest.TestCase):
+    """`_generated_rewriters` builds the classes for a declarative backend."""
+
+    @staticmethod
+    def _specs(op_id: str) -> dict:
+        return {
+            op_id: {
+                'description': 'Does a thing.\n\nMore detail here.',
+                'inputs': [{
+                    'name': 'foo',
+                    'description': 'The foo.'
+                }],
+            }
+        }
+
+    def _generate(self, op_id: str, base=None):
+        """The single rewriter generated for `op_id`."""
+        generated = plaster._generated_rewriters(
+            base or plaster.GnEditRewriter, self._specs(op_id))
+        self.assertEqual(len(generated), 1)
+        return generated[0]
+
+    def test_name_and_op_id_come_from_the_op(self):
+        generated = self._generate('gn.add_thing')
+        self.assertEqual(generated.NAME, 'add_thing')
+        self.assertEqual(generated.OP_ID, 'gn.add_thing')
+        self.assertTrue(issubclass(generated, plaster.GnEditRewriter))
+
+    def test_class_name_carries_the_namespace(self):
+        # Two ops sharing a NAME across namespaces must not collide on a
+        # class name either.
+        self.assertEqual(
+            self._generate('gn.add_thing').__name__, 'GnAddThingRewriter')
+
+    def test_summary_is_the_first_paragraph_on_one_line(self):
+        self.assertEqual(
+            self._generate('gn.add_thing').SUMMARY, 'Does a thing.')
+
+    def test_help_documents_the_inputs(self):
+        self.assertIn('- `foo` — The foo.',
+                      self._generate('gn.add_thing').HELP)
+
+    def test_the_base_class_is_honoured(self):
+        # The same generator serves both declarative backends.
+        generated = self._generate('cxx.do_thing', base=plaster.RegexMacro)
+        self.assertTrue(issubclass(generated, plaster.RegexMacro))
+        self.assertEqual(generated.__name__, 'CxxDoThingRewriter')
+
+    def test_no_specs_generates_nothing(self):
+        self.assertEqual(
+            plaster._generated_rewriters(plaster.GnEditRewriter, {}), [])
+
+
+class GnEditQuotingTest(unittest.TestCase):
+    """`_quote_for_gn_command` feeds gn's own `std::quoted` tokenizer.
+
+    `gn edit` takes a subcommand and its values as one argument and splits it
+    itself, so anything with whitespace or a quote has to arrive escaped the
+    way `std::quoted` expects.
+    """
+
+    def test_an_ordinary_label_is_left_alone(self):
+        # The overwhelmingly common case: quoting it would only add noise to
+        # the command plaster builds.
+        for value in ('//brave/foo', '//brave/foo:bar', 'a/b/c.cc', ':dep'):
+            self.assertEqual(plaster._quote_for_gn_command(value), value)
+
+    def test_a_value_with_a_space_is_quoted(self):
+        self.assertEqual(plaster._quote_for_gn_command('has space.cc'),
+                         '"has space.cc"')
+
+    def test_a_tab_or_newline_is_quoted(self):
+        self.assertEqual(plaster._quote_for_gn_command('a\tb'), '"a\tb"')
+        self.assertEqual(plaster._quote_for_gn_command('a\nb'), '"a\nb"')
+
+    def test_a_quote_is_escaped(self):
+        self.assertEqual(plaster._quote_for_gn_command('quote".cc'),
+                         '"quote\\".cc"')
+
+    def test_a_backslash_is_escaped(self):
+        # Escaped before the quote character, so the two do not interfere.
+        self.assertEqual(plaster._quote_for_gn_command('back\\slash.cc'),
+                         '"back\\\\slash.cc"')
+
+    def test_a_backslash_before_a_quote_survives_both_escapes(self):
+        self.assertEqual(plaster._quote_for_gn_command('a\\"b'), '"a\\\\\\"b"')
+
+    def test_an_empty_value_becomes_empty_quotes(self):
+        # Without quoting an empty value would vanish from the command and
+        # silently shift every later token.
+        self.assertEqual(plaster._quote_for_gn_command(''), '""')
+
+
+class GnEditSandboxTest(unittest.TestCase):
+    """`GnEditSandbox` bridges plaster's in-memory text and gn's on-disk edit.
+    """
+
+    _TARGET = 'source_set("foo") {\n  deps = [ "//b" ]\n}\n'
+
+    def test_the_dotfile_declares_a_buildconfig(self):
+        # gn's `DoSetupForEditing` does not validate the dotfile the way a
+        # full setup does: one declaring no `buildconfig` segfaults it rather
+        # than drawing an error, so this must never regress to an empty file.
+        self.assertIn('buildconfig', plaster.GnEditSandbox._DOTFILE_CONTENTS)
+
+    def test_the_root_is_laid_out_for_gn(self):
+        with plaster.GnEditSandbox(self._TARGET) as sandbox:
+            root = sandbox._build_file.parent
+            self.assertEqual(sandbox._build_file.name, 'BUILD.gn')
+            self.assertEqual(sandbox._build_file.read_text(), self._TARGET)
+            self.assertEqual((root / '.gn').read_text(),
+                             plaster.GnEditSandbox._DOTFILE_CONTENTS)
+
+    def test_every_file_is_written_with_unix_newlines(self):
+        # Plaster diffs the same bytes on every platform, so the sandbox must
+        # not let the host's line ending convention leak into anything it
+        # lays out. This asserts on the `newline` argument rather than on the
+        # bytes written, because an omitted one translates to `os.linesep` --
+        # which is already a newline everywhere but Windows, so the bytes
+        # alone would not catch the omission off Windows.
+        written = []
+        real_write_text = Path.write_text
+
+        def spy(self_path, data, **kwargs):
+            written.append((self_path.name, kwargs.get('newline')))
+            return real_write_text(self_path, data, **kwargs)
+
+        with mock.patch.object(Path, 'write_text', spy):
+            with plaster.GnEditSandbox('a = 1\nb = 2\n') as sandbox:
+                root = sandbox._build_file.parent
+                self.assertNotIn(b'\r\n', sandbox._build_file.read_bytes())
+                self.assertNotIn(b'\r\n', (root / '.gn').read_bytes())
+
+        self.assertCountEqual(written, [('.gn', '\n'), ('BUILD.gn', '\n')])
+
+    def test_the_root_is_removed_on_exit(self):
+        with plaster.GnEditSandbox(self._TARGET) as sandbox:
+            root = sandbox._build_file.parent
+            self.assertTrue(root.exists())
+        self.assertFalse(root.exists())
+
+    def test_the_root_is_removed_even_when_the_body_raises(self):
+        with self.assertRaises(RuntimeError):
+            with plaster.GnEditSandbox(self._TARGET) as sandbox:
+                root = sandbox._build_file.parent
+                raise RuntimeError('boom')
+        self.assertFalse(root.exists())
+
+    def test_an_edit_reports_the_new_contents_and_that_it_changed(self):
+        with plaster.GnEditSandbox(self._TARGET) as sandbox:
+            outcome = sandbox.run(command='add deps //brave/a',
+                                  pattern='//:foo')
+        self.assertTrue(outcome.changed)
+        self.assertIn('"//brave/a"', outcome.contents)
+
+    def test_a_redundant_edit_reports_no_change(self):
+        # gn edits are idempotent, which is what makes "unchanged" a usable
+        # signal that a substitution has become redundant.
+        with plaster.GnEditSandbox(self._TARGET) as sandbox:
+            outcome = sandbox.run(command='add deps //b', pattern='//:foo')
+        self.assertFalse(outcome.changed)
+        self.assertEqual(outcome.contents, self._TARGET)
+
+    def test_an_unmatched_pattern_raises(self):
+        with plaster.GnEditSandbox(self._TARGET) as sandbox:
+            with self.assertRaises(plaster.GnEditError) as cm:
+                sandbox.run(command='add deps //brave/a', pattern='//:nope')
+        self.assertIn('Target(s) not found', str(cm.exception))
+
+    def test_a_command_gn_rejects_raises(self):
+        with plaster.GnEditSandbox(self._TARGET) as sandbox:
+            with self.assertRaises(plaster.GnEditError) as cm:
+                sandbox.run(command='bogus deps //brave/a', pattern='//:foo')
+        self.assertIn('Unknown edit command', str(cm.exception))
+
+    def test_a_missing_binary_is_reported_as_a_gn_edit_error(self):
+        with mock.patch.object(plaster, 'GN_BIN', '/nonexistent/gn') as _:
+            with plaster.GnEditSandbox(self._TARGET) as sandbox:
+                with self.assertRaises(plaster.GnEditError) as cm:
+                    sandbox.run(command='add deps //brave/a', pattern='//:foo')
+        self.assertIn('gn binary is missing', str(cm.exception))
+
+    def test_gni_contents_are_editable_under_the_build_file_name(self):
+        # A label only ever resolves to a `BUILD.gn`, so handing gn the text
+        # under that name is exactly what makes a `.gni` target addressable.
+        gni = ('template("t") {\n'
+               '  source_set("inner") {\n'
+               '    deps = []\n'
+               '  }\n'
+               '}\n')
+        with plaster.GnEditSandbox(gni) as sandbox:
+            outcome = sandbox.run(command='add deps //brave/a',
+                                  pattern='//:inner')
+        self.assertTrue(outcome.changed)
+        self.assertIn('"//brave/a"', outcome.contents)
+
+
+class GnEditEngineTest(unittest.TestCase):
+    """Behavioural tests for `GnEditEngine.run`, against synthetic specs."""
+
+    _OP_ID = 'gn.add_thing'
+
+    @classmethod
+    def _rewriters(cls, op: dict) -> plaster.RewritersEval:
+        """Build a `RewritersEval` from an op body, filling in the schema
+        boilerplate the test bodies below do not care about. `inputs` entries
+        may be a bare name or a full `{name, description, variadic}` dict.
+        """
+        op = dict(op)
+        op.setdefault('description', 'A gn edit op used for testing.')
+        op['inputs'] = [
+            entry if isinstance(entry, dict) else {
+                'name': entry,
+                'description': 'doc'
+            } for entry in op['inputs']
+        ]
+        return plaster.RewritersEval(repr({'gn_edit': {cls._OP_ID: op}}))
+
+    def _engine(self, op: dict, content: str) -> plaster.GnEditEngine:
+        return plaster.GnEditEngine(self._rewriters(op), content)
+
+    _SIMPLE_OP = {
+        'inputs': ['target', 'values'],
+        'pattern': '//:{target}',
+        'command': 'add deps {values}',
+    }
+
+    def test_pattern_and_command_are_rendered_with_inputs(self):
+        engine = self._engine(self._SIMPLE_OP,
+                              'source_set("foo") {\n  deps = []\n}\n')
+        outcome = engine.run(self._OP_ID, {
+            'target': 'foo',
+            'values': '//brave/a',
+        })
+        self.assertTrue(outcome.changed)
+        self.assertIn('"//brave/a"', engine.content)
+
+    def test_content_accumulates_across_runs(self):
+        # A composed rewriter may emit several operations, each building on
+        # what the last one wrote.
+        engine = self._engine(
+            {
+                'inputs': ['target', 'attribute', 'values'],
+                'pattern': '//:{target}',
+                'command': 'add {attribute} {values}',
+            }, 'source_set("foo") {\n}\n')
+        engine.run(self._OP_ID, {
+            'target': 'foo',
+            'attribute': 'deps',
+            'values': '//brave/a',
+        })
+        engine.run(self._OP_ID, {
+            'target': 'foo',
+            'attribute': 'sources',
+            'values': 'x.cc',
+        })
+        self.assertIn('"//brave/a"', engine.content)
+        self.assertIn('"x.cc"', engine.content)
+
+    def test_content_is_unchanged_after_a_redundant_run(self):
+        source = 'source_set("foo") {\n  deps = [ "//b" ]\n}\n'
+        engine = self._engine(self._SIMPLE_OP, source)
+        outcome = engine.run(self._OP_ID, {
+            'target': 'foo',
+            'values': '//b',
+        })
+        self.assertFalse(outcome.changed)
+        self.assertEqual(engine.content, source)
+
+    def test_a_missing_input_is_rejected_before_gn_runs(self):
+        engine = self._engine(self._SIMPLE_OP, 'source_set("foo") {\n}\n')
+        with self.assertRaises(ValueError) as cm:
+            engine.run(self._OP_ID, {'target': 'foo'})
+        self.assertIn('missing input(s): values', str(cm.exception))
+
+    def test_an_unknown_input_is_rejected_before_gn_runs(self):
+        engine = self._engine(self._SIMPLE_OP, 'source_set("foo") {\n}\n')
+        with self.assertRaises(ValueError) as cm:
+            engine.run(self._OP_ID, {
+                'target': 'foo',
+                'values': '//a',
+                'extra': 'x',
+            })
+        self.assertIn('unknown input(s): extra', str(cm.exception))
+
+    def test_an_unknown_op_id_raises(self):
+        engine = self._engine(self._SIMPLE_OP, 'source_set("foo") {\n}\n')
+        with self.assertRaises(plaster.RewritersSchemaError):
+            engine.run('gn.nope', {'target': 'foo', 'values': '//a'})
+
+
+class GnEditSchemaTest(unittest.TestCase):
+    """Schema and cross-reference validation for `gn_edit` ops."""
+
+    def setUp(self):
+        # load() memoises a process-wide instance; clear it so tests that
+        # exercise the singleton start from a clean slate.
+        plaster.RewritersEval._instance = None
+        self.addCleanup(setattr, plaster.RewritersEval, '_instance', None)
+
+    @staticmethod
+    def _input(name: str, description: str = 'doc') -> dict:
+        return {'name': name, 'description': description}
+
+    @classmethod
+    def _valid_spec(cls) -> dict:
+        """A minimal, schema-valid `gn_edit` spec as a Python dict."""
+        return {
+            'gn_edit': {
+                'gn.add_thing': {
+                    'description': 'Adds a thing.',
+                    'inputs': [
+                        cls._input('target'),
+                        dict(cls._input('values'), variadic=True),
+                    ],
+                    'pattern': '//:{target}',
+                    'command': 'add deps {values}',
+                },
+            },
+        }
+
+    def _eval_valid(self) -> plaster.RewritersEval:
+        return plaster.RewritersEval(repr(self._valid_spec()))
+
+    def _assert_invalid(self, mutate, expected_substr=None):
+        """Apply `mutate` to a valid spec and assert it fails validation."""
+        spec = self._valid_spec()
+        mutate(spec)
+        with self.assertRaises(plaster.RewritersSchemaError) as cm:
+            plaster.RewritersEval(repr(spec))
+        if expected_substr is not None:
+            self.assertIn(expected_substr, str(cm.exception))
+
+    # -- access -------------------------------------------------------------
+
+    def test_valid_spec_round_trips(self):
+        rewriters = self._eval_valid()
+        self.assertEqual(list(rewriters.gn_edits), ['gn.add_thing'])
+        spec = rewriters.gn_edit('gn.add_thing')
+        self.assertEqual(spec['pattern'], '//:{target}')
+        self.assertEqual(spec['command'], 'add deps {values}')
+        self.assertEqual(spec['description'], 'Adds a thing.')
+
+    def test_unknown_op_access_raises(self):
+        with self.assertRaises(plaster.RewritersSchemaError):
+            self._eval_valid().gn_edit('gn.nope')
+
+    def test_exposed_mapping_is_read_only(self):
+        with self.assertRaises(TypeError):
+            self._eval_valid().gn_edits['x'] = {}
+
+    def test_present_but_empty_is_valid(self):
+        rewriters = plaster.RewritersEval("{'gn_edit': {}}")
+        self.assertEqual(dict(rewriters.gn_edits), {})
+
+    def test_absent_is_valid(self):
+        rewriters = plaster.RewritersEval('{}')
+        self.assertEqual(dict(rewriters.gn_edits), {})
+
+    # -- shape --------------------------------------------------------------
+
+    def test_pattern_is_required(self):
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing'].pop('pattern'))
+
+    def test_command_is_required(self):
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing'].pop('command'))
+
+    def test_description_is_required(self):
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing'].pop('description'))
+
+    def test_an_input_must_be_documented(self):
+        # An op is meant to be read and reused by someone other than its
+        # author, so a bare input name is not enough.
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing'].update(inputs=[{
+                'name': 'target'
+            }, {
+                'name': 'values'
+            }]))
+
+    def test_variadic_must_be_a_bool(self):
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing'].update(inputs=[
+                self._input('target'),
+                dict(self._input('values'), variadic='yes'),
+            ]))
+
+    def test_variadic_is_optional(self):
+        spec = self._valid_spec()
+        spec['gn_edit']['gn.add_thing']['inputs'] = [
+            self._input('target'),
+            self._input('values'),
+        ]
+        rewriters = plaster.RewritersEval(repr(spec))
+        self.assertEqual(list(rewriters.gn_edits), ['gn.add_thing'])
+
+    def test_an_unknown_field_is_rejected(self):
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing'].update(extra='x'))
+
+    # -- cross references ---------------------------------------------------
+
+    def test_a_template_using_an_undeclared_input_is_rejected(self):
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing'].update(
+                command='add deps {nope}'), 'undeclared input(s): nope')
+
+    def test_a_declared_input_no_template_uses_is_rejected(self):
+        # An advertised input that reaches neither template would silently do
+        # nothing when a plaster passed it.
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing']['inputs'].append(
+                self._input('unused')), 'never used in its templates: unused')
+
+    def test_a_duplicate_input_name_is_rejected(self):
+        self._assert_invalid(
+            lambda s: s['gn_edit']['gn.add_thing']['inputs'].append(
+                self._input('target')), 'duplicate input name(s): target')
+
+    def test_an_input_used_only_by_pattern_is_enough(self):
+        # The two templates are checked as a union, not individually.
+        spec = self._valid_spec()
+        spec['gn_edit']['gn.add_thing']['command'] = 'remove deps'
+        spec['gn_edit']['gn.add_thing']['inputs'] = [self._input('target')]
+        rewriters = plaster.RewritersEval(repr(spec))
+        self.assertEqual(list(rewriters.gn_edits), ['gn.add_thing'])
+
+    def test_an_op_outside_the_gn_namespace_is_rejected(self):
+        # A gn edit op offered on, say, a C++ target would hand gn something
+        # it cannot parse.
+        def move_to_cxx(spec):
+            spec['gn_edit']['cxx.add_thing'] = spec['gn_edit'].pop(
+                'gn.add_thing')
+
+        self._assert_invalid(
+            move_to_cxx, "gn edit op 'cxx.add_thing' cannot be used in the "
+            "'cxx' namespace")
+
+    def test_an_unknown_namespace_is_rejected(self):
+
+        def move_to_nowhere(spec):
+            spec['gn_edit']['nope.add_thing'] = spec['gn_edit'].pop(
+                'gn.add_thing')
+
+        self._assert_invalid(move_to_nowhere)
+
+    # -- the shipped ops ----------------------------------------------------
+
+    def test_the_shipped_ops_validate(self):
+        # `load()` validates on construction, so this fails loudly if a
+        # shipped op ever drifts from its declared interface.
+        self.assertEqual(sorted(plaster.RewritersEval.load().gn_edits), [
+            'gn.add_configs', 'gn.add_deps', 'gn.add_public_deps',
+            'gn.add_sources', 'gn.add_visibility'
+        ])
+
+
+class GnEditRewriterTest(unittest.TestCase):
+    """`GnEditRewriter` validates a substitution body and drives the engine."""
+
+    @staticmethod
+    def _cls(name: str = 'add_deps'):
+        return plaster._REWRITERS.resolve(name, plaster._GN_NAMESPACE)
+
+    def _parse(self, body, name='add_deps', description='t'):
+        return self._cls(name).parse(body, description=description)
+
+    def _expect_parse_error(self, body, substr, name='add_deps'):
+        with self.assertRaises(ValueError) as cm:
+            self._parse(body, name=name)
+        self.assertIn(substr, str(cm.exception))
+
+    # -- registration -------------------------------------------------------
+
+    def test_registered_under_its_bare_name_in_the_gn_namespace(self):
+        for op_id in sorted(plaster.RewritersEval.load().gn_edits):
+            name = op_id.split('.', 1)[1]
+            cls = self._cls(name)
+            self.assertTrue(issubclass(cls, plaster.GnEditRewriter))
+            self.assertEqual(cls.OP_ID, op_id)
+            self.assertEqual(cls.namespace(), 'gn')
+
+    def test_help_documents_every_input_including_variadicity(self):
+        help_text = self._cls().HELP
+        self.assertIn('- `target` — ', help_text)
+        self.assertIn('May be a single value or a list of them.', help_text)
+
+    # -- count --------------------------------------------------------------
+
+    def test_a_count_other_than_one_is_rejected(self):
+        # gn reports whether the file changed, never how many places it
+        # touched, so there is no number for a `count:` to assert against.
+        for count in (0, 2, 7):
+            with self.assertRaises(ValueError) as cm:
+                self._cls().validate_count(count, 't')
+            self.assertIn('does not accept a count other than 1',
+                          str(cm.exception))
+
+    def test_the_implicit_count_of_one_is_accepted(self):
+        self._cls().validate_count(1, 't')
+
+    # -- body validation ----------------------------------------------------
+
+    def test_a_non_mapping_body_is_rejected(self):
+        self._expect_parse_error(['not', 'a', 'mapping'], 'must be a mapping')
+
+    def test_a_missing_arg_is_rejected(self):
+        self._expect_parse_error({'target': 'foo'}, 'requires arg(s): deps')
+
+    def test_an_unknown_arg_is_rejected(self):
+        self._expect_parse_error({
+            'target': 'foo',
+            'deps': '//a',
+            'nope': 1
+        }, "Unrecognised add_deps arg(s): 'nope'")
+
+    def test_an_empty_scalar_input_is_rejected(self):
+        self._expect_parse_error({
+            'target': '',
+            'deps': '//a'
+        }, '`target` must be a non-empty string')
+
+    def test_a_non_string_scalar_input_is_rejected(self):
+        self._expect_parse_error({
+            'target': 7,
+            'deps': '//a'
+        }, '`target` must be a non-empty string')
+
+    def test_a_variadic_input_accepts_a_bare_string(self):
+        self._parse({'target': 'foo', 'deps': '//a'})
+
+    def test_a_variadic_input_accepts_a_list(self):
+        self._parse({'target': 'foo', 'deps': ['//a', '//b']})
+
+    def test_an_empty_variadic_list_is_rejected(self):
+        self._expect_parse_error({
+            'target': 'foo',
+            'deps': []
+        }, '`deps` must be a non-empty string or a non-empty list of them')
+
+    def test_a_variadic_list_of_non_strings_is_rejected(self):
+        self._expect_parse_error({
+            'target': 'foo',
+            'deps': [123]
+        }, '`deps` must be a non-empty string or a non-empty list of them')
+
+    def test_a_variadic_list_with_an_empty_entry_is_rejected(self):
+        self._expect_parse_error({
+            'target': 'foo',
+            'deps': ['//a', '']
+        }, '`deps` must be a non-empty string or a non-empty list of them')
+
+    # -- apply --------------------------------------------------------------
+
+    def test_apply_adds_the_values(self):
+        rewriter = self._parse({'target': 'foo', 'deps': ['//brave/a']})
+        result, errors = rewriter.apply(
+            'source_set("foo") {\n  deps = []\n}\n', count=1, description='d')
+        self.assertEqual(errors, [])
+        self.assertIn('"//brave/a"', result)
+
+    def test_apply_reports_an_edit_that_changed_nothing(self):
+        rewriter = self._parse({'target': 'foo', 'deps': '//b'})
+        source = 'source_set("foo") {\n  deps = [ "//b" ]\n}\n'
+        result, errors = rewriter.apply(source, count=1, description='d')
+        self.assertEqual(result, source)
+        self.assertEqual(len(errors), 1)
+        self.assertIn('changed nothing', errors[0])
+        self.assertIn('(in "d")', errors[0])
+
+    def test_apply_reports_a_gn_failure_as_a_substitution_error(self):
+        # A pattern matching no target is a mistake in the plaster, so it is
+        # reported like any other substitution failure rather than aborting
+        # the run with a traceback.
+        rewriter = self._parse({'target': 'nope', 'deps': '//brave/a'})
+        source = 'source_set("foo") {\n}\n'
+        result, errors = rewriter.apply(source, count=1, description='d')
+        self.assertEqual(result, source)
+        self.assertEqual(len(errors), 1)
+        self.assertIn('Target(s) not found', errors[0])
+        self.assertIn('(in "d")', errors[0])
+
+    def test_apply_sends_every_value_in_one_gn_invocation(self):
+        # The values share one edit and one format pass, so they must not be
+        # spread over a call each.
+        calls = []
+        real_run = terminal.terminal.run
+
+        def spy(cmd, **kwargs):
+            calls.append([str(part) for part in cmd])
+            return real_run(cmd, **kwargs)
+
+        with mock.patch.object(terminal.terminal, 'run', side_effect=spy):
+            self._parse({
+                'target': 'foo',
+                'deps': ['//brave/a', '//brave/b'],
+            }).apply('source_set("foo") {\n  deps = []\n}\n',
+                     count=1,
+                     description='d')
+        self.assertEqual(len(calls), 1)
+        self.assertIn('add deps //brave/a //brave/b', calls[0])
+
+    def test_apply_quotes_a_value_needing_it(self):
+        calls = []
+        real_run = terminal.terminal.run
+
+        def spy(cmd, **kwargs):
+            calls.append([str(part) for part in cmd])
+            return real_run(cmd, **kwargs)
+
+        with mock.patch.object(terminal.terminal, 'run', side_effect=spy):
+            self._parse({
+                'target': 'foo',
+                'sources': 'has space.cc',
+            },
+                        name='add_sources').apply(
+                            'source_set("foo") {\n  sources = []\n}\n',
+                            count=1,
+                            description='d')
+        self.assertIn('add sources "has space.cc"', calls[0])
+
+    def test_add_sources_adds_to_sources(self):
+        rewriter = self._parse({
+            'target': 'foo',
+            'sources': ['b.cc', 'a.cc'],
+        },
+                               name='add_sources')
+        result, errors = rewriter.apply(
+            'source_set("foo") {\n  sources = [ "existing.cc" ]\n}\n',
+            count=1,
+            description='d')
+        self.assertEqual(errors, [])
+        for expected in ('"a.cc"', '"b.cc"', '"existing.cc"'):
+            self.assertIn(expected, result)
+
+    def test_each_op_adds_to_the_attribute_it_names(self):
+        # The ops differ only by the attribute their `command` template names,
+        # so this checks each one lands in its own attribute and leaves the
+        # neighbouring ones alone -- the failure a copy-pasted spec produces.
+        source = ('source_set("foo") {\n'
+                  '  deps = []\n'
+                  '  public_deps = []\n'
+                  '  configs = []\n'
+                  '  visibility = []\n'
+                  '  sources = []\n'
+                  '}\n')
+        for name, attribute, value in (
+            ('add_configs', 'configs', '//brave/common:constants_configs'),
+            ('add_deps', 'deps', '//brave/a'),
+            ('add_public_deps', 'public_deps', '//brave/b'),
+            ('add_sources', 'sources', 'brave.cc'),
+            ('add_visibility', 'visibility', '//brave/content/*'),
+        ):
+            with self.subTest(name):
+                result, errors = self._parse(
+                    {
+                        'target': 'foo',
+                        attribute: value
+                    }, name=name).apply(source, count=1, description='d')
+                self.assertEqual(errors, [])
+                self.assertIn(f'{attribute} = [ "{value}" ]', result)
+                # Every other attribute is still empty.
+                for other in ('deps', 'public_deps', 'configs', 'visibility',
+                              'sources'):
+                    if other != attribute:
+                        self.assertIn(f'{other} = []', result)
+
+    def test_every_op_accepts_a_list_for_its_variadic_input(self):
+        # `variadic` is per-op declared data, so an op whose spec omitted the
+        # flag would reject a list body while every other op accepted one --
+        # and the single-value cases above would not notice.
+        source = ('source_set("foo") {\n'
+                  '  deps = []\n'
+                  '  public_deps = []\n'
+                  '  configs = []\n'
+                  '  visibility = []\n'
+                  '  sources = []\n'
+                  '}\n')
+        for op_id, spec in sorted(
+                plaster.RewritersEval.load().gn_edits.items()):
+            name = op_id.split('.', 1)[1]
+            variadic = [
+                entry['name'] for entry in spec['inputs']
+                if entry.get('variadic')
+            ]
+            with self.subTest(name):
+                self.assertEqual(variadic, [name.removeprefix('add_')])
+                result, errors = self._parse(
+                    {
+                        'target': 'foo',
+                        variadic[0]: ['//brave/a', '//brave/b']
+                    },
+                    name=name).apply(source, count=1, description='d')
+                self.assertEqual(errors, [])
+                self.assertIn('"//brave/a"', result)
+                self.assertIn('"//brave/b"', result)
+
+    def test_add_visibility_creates_the_attribute_when_absent(self):
+        # Worth pinning because it is a behaviour change rather than an
+        # addition: a target declaring no `visibility` is visible everywhere,
+        # so the first entry restricts it to exactly what is listed.
+        result, errors = self._parse(
+            {
+                'target': 'foo',
+                'visibility': '//brave/content/*'
+            },
+            name='add_visibility').apply(
+                'source_set("foo") {\n'
+                '  sources = [ "a.cc" ]\n'
+                '}\n',
+                count=1,
+                description='d')
+        self.assertEqual(errors, [])
+        self.assertIn('visibility = [ "//brave/content/*" ]', result)
+
+
+class GnEditDispatchTest(unittest.TestCase):
+    """End-to-end tests for dispatching a `gn_edit:`-style substitution key.
+
+    These run a real plaster apply against a fake Chromium repo, so they
+    cover suffix-based namespace resolution, the real `gn` binary, and the
+    patch that comes out the other end.
+    """
+
+    def setUp(self):
+        self.fake_chromium_src = FakeChromiumRepo()
+        self.fake_chromium_src.setup()
+        self.addCleanup(self.fake_chromium_src.cleanup)
+
+    def _apply(self, name: str, source: str, yaml_body: str) -> str:
+        """Write `source`+plaster, apply, and return the rewritten source."""
+        src = Path('components/omnibox/browser') / name
+        self.fake_chromium_src.write_and_stage_file(
+            src, source, self.fake_chromium_src.chromium)
+        self.fake_chromium_src.commit(f'Add {name}',
+                                      self.fake_chromium_src.chromium)
+        plaster_path = plaster.PLASTER_FILES_PATH / (str(src) + '.yaml')
+        plaster_path.parent.mkdir(parents=True, exist_ok=True)
+        plaster_path.write_text(yaml_body)
+        plaster.PlasterFile(plaster_path).apply()
+        return (self.fake_chromium_src.chromium / src).read_text()
+
+    _SOURCE = ('source_set("browser") {\n'
+               '  sources = [ "browser.cc" ]\n'
+               '  deps = [ "//base" ]\n'
+               '}\n')
+
+    def test_add_deps_applies_to_a_build_gn_target(self):
+        result = self._apply(
+            'BUILD.gn', self._SOURCE, 'substitutions:\n'
+            '  - description: Depend on the Brave omnibox additions.\n'
+            '    add_deps:\n'
+            '      target: browser\n'
+            '      deps:\n'
+            '        - //brave/components/omnibox/browser\n'
+            '        - //brave/components/omnibox/common\n')
+        self.assertEqual(
+            result, 'source_set("browser") {\n'
+            '  sources = [ "browser.cc" ]\n'
+            '  deps = [\n'
+            '    "//base",\n'
+            '    "//brave/components/omnibox/browser",\n'
+            '    "//brave/components/omnibox/common",\n'
+            '  ]\n'
+            '}\n')
+
+    def test_add_sources_applies_to_a_build_gn_target(self):
+        result = self._apply(
+            'BUILD.gn', self._SOURCE, 'substitutions:\n'
+            '  - description: Build the Brave sources.\n'
+            '    add_sources:\n'
+            '      target: browser\n'
+            '      sources: //brave/components/omnibox/browser/extra.cc\n')
+        self.assertIn('"//brave/components/omnibox/browser/extra.cc"', result)
+
+    def test_several_substitutions_accumulate(self):
+        result = self._apply(
+            'BUILD.gn', self._SOURCE, 'substitutions:\n'
+            '  - description: Add the Brave deps.\n'
+            '    add_deps:\n'
+            '      target: browser\n'
+            '      deps: //brave/components/omnibox/browser\n'
+            '  - description: Add the Brave sources.\n'
+            '    add_sources:\n'
+            '      target: browser\n'
+            '      sources: //brave/x.cc\n')
+        self.assertIn('"//brave/components/omnibox/browser"', result)
+        self.assertIn('"//brave/x.cc"', result)
+
+    def test_applies_to_a_gni_target(self):
+        result = self._apply(
+            'sources.gni', 'template("t") {\n'
+            '  source_set("inner") {\n'
+            '    deps = []\n'
+            '  }\n'
+            '}\n', 'substitutions:\n'
+            '  - description: Depend on the Brave additions.\n'
+            '    add_deps:\n'
+            '      target: inner\n'
+            '      deps: //brave/a\n')
+        self.assertIn('"//brave/a"', result)
+
+    def test_only_the_named_target_is_edited(self):
+        result = self._apply(
+            'BUILD.gn', 'source_set("a") {\n'
+            '  deps = []\n'
+            '}\n'
+            'source_set("b") {\n'
+            '  deps = []\n'
+            '}\n', 'substitutions:\n'
+            '  - description: Only a.\n'
+            '    add_deps:\n'
+            '      target: a\n'
+            '      deps: //brave/a\n')
+        self.assertEqual(
+            result, 'source_set("a") {\n'
+            '  deps = [ "//brave/a" ]\n'
+            '}\n'
+            'source_set("b") {\n'
+            '  deps = []\n'
+            '}\n')
+
+    def test_upstream_formatting_is_otherwise_untouched(self):
+        # gn reserialises the whole file, so a plaster must not smuggle in
+        # unrelated reformatting alongside the edit it asked for.
+        source = ('# A leading comment.\n'
+                  'source_set("browser") {\n'
+                  '  # An inner comment.\n'
+                  '  deps = [ "//base" ]\n'
+                  '\n'
+                  '  if (is_android) {\n'
+                  '    deps += [ "//android" ]\n'
+                  '  }\n'
+                  '}\n')
+        result = self._apply(
+            'BUILD.gn', source, 'substitutions:\n'
+            '  - description: Add a Brave dep.\n'
+            '    add_deps:\n'
+            '      target: browser\n'
+            '      deps: //brave/a\n')
+        self.assertEqual(
+            result, '# A leading comment.\n'
+            'source_set("browser") {\n'
+            '  # An inner comment.\n'
+            '  deps = [\n'
+            '    "//base",\n'
+            '    "//brave/a",\n'
+            '  ]\n'
+            '\n'
+            '  if (is_android) {\n'
+            '    deps += [ "//android" ]\n'
+            '  }\n'
+            '}\n')
+
+    def test_a_redundant_substitution_fails_the_apply(self):
+        with self.assertRaises(plaster.PlasterApplyError) as cm:
+            self._apply(
+                'BUILD.gn', self._SOURCE, 'substitutions:\n'
+                '  - description: Already there.\n'
+                '    add_deps:\n'
+                '      target: browser\n'
+                '      deps: //base\n')
+        self.assertIn('changed nothing', str(cm.exception))
+
+    def test_an_unmatched_target_fails_the_apply(self):
+        with self.assertRaises(plaster.PlasterApplyError) as cm:
+            self._apply(
+                'BUILD.gn', self._SOURCE, 'substitutions:\n'
+                '  - description: No such target.\n'
+                '    add_deps:\n'
+                '      target: nope\n'
+                '      deps: //brave/a\n')
+        self.assertIn('Target(s) not found', str(cm.exception))
+
+    def test_a_count_is_rejected_for_a_gn_target(self):
+        with self.assertRaises(ValueError) as cm:
+            self._apply(
+                'BUILD.gn', self._SOURCE, 'substitutions:\n'
+                '  - description: Counting makes no sense here.\n'
+                '    count: 2\n'
+                '    add_deps:\n'
+                '      target: browser\n'
+                '      deps: //brave/a\n')
+        self.assertIn('does not accept a count other than 1',
+                      str(cm.exception))
+
+    def test_a_cxx_only_file_flag_is_rejected_for_a_gn_target(self):
+        with self.assertRaises(ValueError) as cm:
+            self._apply(
+                'BUILD.gn', self._SOURCE,
+                'blank_macros_for_ast_parsing: true\n'
+                'substitutions:\n'
+                '  - description: Add a Brave dep.\n'
+                '    add_deps:\n'
+                '      target: browser\n'
+                '      deps: //brave/a\n')
+        self.assertIn('only supported for C++ sources', str(cm.exception))
+
+    def test_a_gn_rewriter_is_unavailable_on_a_cxx_target(self):
+        with self.assertRaises(ValueError) as cm:
+            self._apply(
+                'browser.cc', 'int x = 1;\n', 'substitutions:\n'
+                '  - description: Wrong kind of source.\n'
+                '    add_deps:\n'
+                '      target: browser\n'
+                '      deps: //brave/a\n')
+        self.assertIn('not available for this source', str(cm.exception))
+
+    def test_the_regex_rewriter_is_still_available_on_a_gn_target(self):
+        # `regex` lives in the global namespace, so introducing a `gn`
+        # namespace must not have taken it away from build files.
+        result = self._apply(
+            'BUILD.gn', 'source_set("browser") {\n}\n', 'substitutions:\n'
+            '  - description: A plain regex on a build file.\n'
+            '    regex:\n'
+            "      pattern: 'source_set'\n"
+            "      replace: 'static_library'\n")
+        self.assertEqual(result, 'static_library("browser") {\n}\n')
+
+    def test_a_patch_is_generated_for_the_edit(self):
+        self._apply(
+            'BUILD.gn', self._SOURCE, 'substitutions:\n'
+            '  - description: Add a Brave dep.\n'
+            '    add_deps:\n'
+            '      target: browser\n'
+            '      deps: //brave/a\n')
+        patch = (self.fake_chromium_src.brave_patches /
+                 'components-omnibox-browser-BUILD.gn.patch')
+        self.assertTrue(patch.exists())
+        contents = patch.read_text()
+        self.assertIn('+    "//brave/a",', contents)
+
+
+class GnBinaryPathTest(unittest.TestCase):
+    """`GN_BIN` names the depot_tools shim, resolved off PATH."""
+
+    def test_gn_bin_is_the_bare_shim_name(self):
+        self.assertEqual(plaster.GN_BIN, 'gn')
+
+
+class GnNamespaceTest(unittest.TestCase):
+    """The `gn` namespace claims build files and names no grammar."""
+
+    def test_an_ast_op_cannot_live_in_the_gn_namespace(self):
+        # `gn` is a second grammar-less namespace alongside `all`, so the rule
+        # that ast ops need a parseable namespace now has another way to be
+        # broken.
+        spec = {
+            'ast.matcher': {
+                'gn.find_thing': {
+                    'template': 'pattern: $X',
+                    'result': {
+                        'node': 'identifier'
+                    },
+                },
+            },
+        }
+        with self.assertRaises(plaster.RewritersSchemaError) as cm:
+            plaster.RewritersEval(repr(spec))
+        self.assertIn('names no grammar to parse with', str(cm.exception))
+
+    def test_build_gn_and_gni_targets_resolve_to_the_gn_namespace(self):
+        for name in ('BUILD.gn.yaml', 'sources.gni.yaml', 'build_webui.gni'
+                     '.yaml'):
+            self.assertEqual(
+                plaster._namespace_of_source(Path('rewrite/dir') / name), 'gn',
+                name)
+
+    def test_the_gn_namespace_names_no_grammar(self):
+        # gn does its own parsing, so there is no ast-grep language for it and
+        # an ast op may never be declared in this namespace.
+        namespace = plaster._NAMESPACE_BY_NAME[plaster._GN_NAMESPACE]
+        self.assertIsNone(namespace.ast_grep_language)
+
+    def test_a_gn_target_is_not_a_cxx_source(self):
+        self.assertFalse(plaster._is_cxx_source(Path('rewrite/BUILD.gn.yaml')))
+        self.assertFalse(
+            plaster._is_cxx_source(Path('rewrite/sources.gni.yaml')))
 
 
 if __name__ == '__main__':

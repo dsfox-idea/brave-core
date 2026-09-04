@@ -23,6 +23,7 @@
 #include "brave/components/brave_wallet/browser/brave_wallet_constants.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/eip1559_transaction.h"
+#include "brave/components/brave_wallet/browser/eth_data_builder.h"
 #include "brave/components/brave_wallet/browser/eth_data_parser.h"
 #include "brave/components/brave_wallet/browser/eth_nonce_tracker.h"
 #include "brave/components/brave_wallet/browser/eth_transaction.h"
@@ -37,6 +38,7 @@
 #include "brave/components/brave_wallet/browser/tx_storage.h"
 #include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
+#include "components/grit/brave_components_strings.h"
 #include "components/sync_preferences/testing_pref_service_syncable.h"
 #include "components/value_store/value_store_frontend.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"
@@ -248,7 +250,10 @@ class EthTxManagerUnitTest : public testing::Test {
     tx_storage_ptr_ = tx_storage.get();
     tx_service_ = std::make_unique<TxService>(
         json_rpc_service_.get(), nullptr, nullptr, nullptr, nullptr,
-        *keyring_service_, GetPrefs(), std::move(tx_storage));
+        *keyring_service_, GetPrefs(), std::move(tx_storage),
+        base::BindRepeating([](bool* granted, const url::Origin&,
+                               const mojom::AccountIdPtr&) { return *granted; },
+                            base::Unretained(&permission_granted_)));
 
     GetAccountUtils().CreateWallet(kMnemonicAbandonAbandon,
                                    kTestWalletPassword);
@@ -450,6 +455,7 @@ class EthTxManagerUnitTest : public testing::Test {
   std::unique_ptr<NetworkManager> network_manager_;
   std::unique_ptr<JsonRpcService> json_rpc_service_;
   std::unique_ptr<KeyringService> keyring_service_;
+  bool permission_granted_ = true;
   std::unique_ptr<TxService> tx_service_;
   raw_ptr<TxStorage> tx_storage_ptr_ = nullptr;
   std::vector<uint8_t> data_;
@@ -658,6 +664,119 @@ TEST_F(EthTxManagerUnitTest, RestrictedFromAddress) {
         from(), GetOrigin(), false, unapproved_future.GetCallback());
 
     const auto& [success, tx_meta_id, error] = unapproved_future.Take();
+    EXPECT_FALSE(success);
+    EXPECT_TRUE(tx_meta_id.empty());
+    EXPECT_EQ(error, WalletInternalErrorMessage());
+  }
+}
+
+TEST_F(EthTxManagerUnitTest, RestrictedRecipientInCalldata) {
+  struct TestData {
+    std::string label;
+    std::vector<uint8_t> tx;
+    std::string encoded_tx;
+  };
+
+  constexpr char kRestricted[] = "0xbfb30a082f650c2a15d0632f0e87be4f8e64460a";
+  constexpr char kAllowed[] = "0xbfb30a082f650c2a15d0632f0e87be4f8e64460f";
+  // What the dApp asks us to call: never the party being paid.
+  constexpr char kTokenContract[] =
+      "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c";
+
+  // Every token transfer flavor that names its recipient in the calldata.
+  auto calldata_paying = [kAllowed](const std::string& recipient) {
+    std::vector<TestData> test_data(5);
+
+    test_data[0].label = "erc20::Transfer";
+    EXPECT_TRUE(erc20::Transfer(recipient, 10, &test_data[0].encoded_tx));
+    EXPECT_TRUE(
+        PrefixedHexStringToBytes(test_data[0].encoded_tx, &test_data[0].tx));
+
+    test_data[1].label = "erc20::Approve";
+    EXPECT_TRUE(erc20::Approve(recipient, 10, &test_data[1].encoded_tx));
+    EXPECT_TRUE(
+        PrefixedHexStringToBytes(test_data[1].encoded_tx, &test_data[1].tx));
+
+    test_data[2].label = "erc721::TransferFromOrSafeTransferFrom";
+    EXPECT_TRUE(erc721::TransferFromOrSafeTransferFrom(
+        false, kAllowed, recipient, 10, &test_data[2].encoded_tx));
+    EXPECT_TRUE(
+        PrefixedHexStringToBytes(test_data[2].encoded_tx, &test_data[2].tx));
+
+    test_data[3].label = "erc721::TransferFromOrSafeTransferFrom";
+    EXPECT_TRUE(erc721::TransferFromOrSafeTransferFrom(
+        true, kAllowed, recipient, 10, &test_data[3].encoded_tx));
+    EXPECT_TRUE(
+        PrefixedHexStringToBytes(test_data[3].encoded_tx, &test_data[3].tx));
+
+    test_data[4].label = "erc1155::SafeTransferFrom";
+    EXPECT_TRUE(erc1155::SafeTransferFrom(kAllowed, recipient, 10, 1,
+                                          &test_data[4].encoded_tx));
+    EXPECT_TRUE(
+        PrefixedHexStringToBytes(test_data[4].encoded_tx, &test_data[4].tx));
+
+    return test_data;
+  };
+
+  BlockchainRegistry::ScopedRestrictedAddressesForTesting scoped_restricted(
+      {kRestricted});
+
+  for (const auto& [label, data, encoded_data] : calldata_paying(kRestricted)) {
+    base::test::TestFuture<bool, const std::string&, const std::string&>
+        unapproved_future;
+
+    AddUnapprovedEvmDappTransaction(
+        mojom::TxData::New(mojom::kMainnetChainId, "0x06", "0x09184e72a000",
+                           "0x0974", kTokenContract, "0x0", data),
+        from(), unapproved_future.GetCallback());
+
+    const auto& [success, tx_meta_id, error] = unapproved_future.Take();
+    EXPECT_FALSE(success) << label;
+    EXPECT_TRUE(tx_meta_id.empty());
+    EXPECT_EQ(error, WalletInternalErrorMessage());
+  }
+
+  // The same calls to an address that is not on the list still go through.
+  for (const auto& [label, data, encoded_data] : calldata_paying(kAllowed)) {
+    base::test::TestFuture<bool, const std::string&, const std::string&>
+        unapproved_future;
+
+    AddUnapprovedEvmDappTransaction(
+        mojom::TxData::New(mojom::kMainnetChainId, "0x06", "0x09184e72a000",
+                           "0x0974", kTokenContract, "0x0", data),
+        from(), unapproved_future.GetCallback());
+
+    const auto& [success, tx_meta_id, error] = unapproved_future.Take();
+    EXPECT_TRUE(success) << label;
+    EXPECT_FALSE(tx_meta_id.empty());
+    EXPECT_TRUE(error.empty());
+  }
+
+  // A transaction stored before the address was listed cannot be retried onto
+  // it either.
+  {
+    std::string hex_data;
+    ASSERT_TRUE(erc20::Transfer(kRestricted, 10, &hex_data));
+    std::vector<uint8_t> data;
+    ASSERT_TRUE(PrefixedHexStringToBytes(hex_data, &data));
+
+    auto tx = EthTransaction::FromTxData(
+        mojom::TxData::New(mojom::kMainnetChainId, "0x07", "0x17fcf18322",
+                           "0x0974", kTokenContract, "0x0", data),
+        false);
+    ASSERT_TRUE(tx);
+
+    EthTxMeta meta(from(), std::make_unique<EthTransaction>(*tx));
+    meta.set_id("001");
+    meta.set_chain_id(mojom::kMainnetChainId);
+    meta.set_status(mojom::TransactionStatus::Error);
+    ASSERT_TRUE(eth_tx_manager()->tx_state_manager().AddOrUpdateTx(meta));
+
+    base::test::TestFuture<bool, const std::string&, const std::string&>
+        retry_future;
+    eth_tx_manager()->RetryTransaction("001", retry_future.GetCallback());
+
+    const auto& [success, tx_meta_id, error] = retry_future.Take();
     EXPECT_FALSE(success);
     EXPECT_TRUE(tx_meta_id.empty());
     EXPECT_EQ(error, WalletInternalErrorMessage());
@@ -2485,6 +2604,32 @@ TEST_F(EthTxManagerUnitTest, GetSignedTransaction) {
             "6c7d89a26051f74c88016345785d8a000083000102c080a0353cfbd58e495f3f39"
             "32e9f39c21358ea1bddf6bc873b2c56ec18d21ba19226da016f887fee07e5fa871"
             "591135699691adda8d2df99383a4a16172eca36421077a");
+}
+
+TEST_F(EthTxManagerUnitTest,
+       RejectUnapprovedTransactionsWithoutPermission_RejectsPendingTx) {
+  auto tx_data =
+      mojom::TxData::New("0x1", "0x06", "0x09184e72a000", "0x0974",
+                         "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
+                         "0x016345785d8a0000", data_);
+
+  base::test::TestFuture<bool, const std::string&, const std::string&>
+      add_tx_future;
+  eth_tx_manager()->AddUnapprovedEvmDappTransaction(
+      std::move(tx_data), from(), GetOrigin(), false,
+      add_tx_future.GetCallback());
+  auto [added, tx_meta_id, add_error] = add_tx_future.Take();
+  ASSERT_FALSE(tx_meta_id.empty());
+
+  ASSERT_EQ(eth_tx_manager()->GetTransactionInfo(tx_meta_id)->tx_status,
+            mojom::TransactionStatus::Unapproved);
+
+  permission_granted_ = false;
+
+  tx_service_->RejectUnapprovedTransactionsWithoutPermission();
+
+  EXPECT_EQ(eth_tx_manager()->GetTransactionInfo(tx_meta_id)->tx_status,
+            mojom::TransactionStatus::Rejected);
 }
 
 }  //  namespace brave_wallet
