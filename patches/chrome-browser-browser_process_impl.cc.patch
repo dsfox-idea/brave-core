@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/browser_process_impl.cc b/chrome/browser/browser_process_impl.cc
-index eabd45b1f1b2e7b151a4d9d1c4ab62140af8916b..de3b1e164fb314297aa7cc0330c44b27bf33f839 100644
+index 5e0f458c31aa4ab0ce29323817f4cb93bfa0199f..363a336c7599e7bbcf5e09891c3277e92a1f7da7 100644
 --- a/chrome/browser/browser_process_impl.cc
 +++ b/chrome/browser/browser_process_impl.cc
-@@ -1606,6 +1606,7 @@ void BrowserProcessImpl::PreMainMessageLoopRun() {
+@@ -1610,6 +1610,7 @@ void BrowserProcessImpl::PreMainMessageLoopRun() {
    os_crypt_async_ =
        std::make_unique<os_crypt_async::OSCryptAsync>(std::move(providers));
  
@@ -10,7 +10,7 @@ index eabd45b1f1b2e7b151a4d9d1c4ab62140af8916b..de3b1e164fb314297aa7cc0330c44b27
    // Trigger async initialization of OSCrypt key providers.
    os_crypt_async_->GetInstance(base::BindOnce(
        [](base::TimeTicks start_time,
-@@ -1614,6 +1615,16 @@ void BrowserProcessImpl::PreMainMessageLoopRun() {
+@@ -1618,6 +1619,16 @@ void BrowserProcessImpl::PreMainMessageLoopRun() {
                                  base::TimeTicks::Now() - start_time);
        },
        base::TimeTicks::Now()));

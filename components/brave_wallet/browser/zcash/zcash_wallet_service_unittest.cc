@@ -178,10 +178,10 @@ class ZCashWalletServiceUnitTest : public testing::Test {
   void SetUp() override {
 #if BUILDFLAG(IS_IOS)
     feature_list_.InitWithFeaturesAndParameters(
-        {{features::kBraveWalletZCashFeature,
-          { {"zcash_shielded_transactions_enabled", "true"} }},
-         { features::kBraveWalletWebUIFeature,
-           {} }},
+        {
+            {features::kBraveWalletZCashFeature,
+             { {"zcash_shielded_transactions_enabled", "true"} }},
+        },
         {}  // disabled features
     );
 #else
@@ -1766,6 +1766,9 @@ TEST_F(ZCashWalletServiceUnitTest, GetTransactionType_IronwoodMatrix) {
   auto account_1 =
       GetAccountUtils().EnsureAccount(mojom::KeyringId::kZCashMainnet, 0);
   auto account_id_1 = account_1->account_id.Clone();
+  auto account_2 =
+      GetAccountUtils().EnsureAccount(mojom::KeyringId::kZCashMainnet, 1);
+  auto account_id_2 = account_2->account_id.Clone();
 
   static constexpr char kOrchardUnifiedAddress[] =
       "u1ay3aawlldjrmxqnjf5medr5ma6p3acnet464ht8lmwplq5cd3"
@@ -1776,6 +1779,9 @@ TEST_F(ZCashWalletServiceUnitTest, GetTransactionType_IronwoodMatrix) {
       "t1WTZNzKCvU2GeM1ZWRyF7EvhMHhr7magiT";
 
   auto account_info = keyring_service_->GetZCashAccountInfo(account_id_1);
+  auto account_2_info = keyring_service_->GetZCashAccountInfo(account_id_2);
+  ASSERT_NE(account_info->orchard_internal_address,
+            account_2_info->orchard_internal_address);
 
   auto get_tx_type = [&](mojom::ZCashTokenType from_token,
                          const std::string& addr) {
@@ -1815,6 +1821,35 @@ TEST_F(ZCashWalletServiceUnitTest, GetTransactionType_IronwoodMatrix) {
     std::tie(t, e) =
         get_tx_type(mojom::ZCashTokenType::kTransparent,
                     account_info->orchard_internal_address.value());
+    EXPECT_EQ(t, mojom::ZCashTxType::kShieldingIronwood);
+    EXPECT_EQ(e, mojom::ZCashAddressError::kNoError);
+
+    // orchard → orchard_internal → kMigratingIronwood
+    std::tie(t, e) =
+        get_tx_type(mojom::ZCashTokenType::kOrchard,
+                    account_info->orchard_internal_address.value());
+    EXPECT_EQ(t, mojom::ZCashTxType::kMigratingIronwood);
+    EXPECT_EQ(e, mojom::ZCashAddressError::kNoError);
+
+    // ironwood → orchard_internal → kIronwoodToIronwood
+    std::tie(t, e) =
+        get_tx_type(mojom::ZCashTokenType::kIronwood,
+                    account_info->orchard_internal_address.value());
+    EXPECT_EQ(t, mojom::ZCashTxType::kIronwoodToIronwood);
+    EXPECT_EQ(e, mojom::ZCashAddressError::kNoError);
+
+    // Another same-keyring account's internal address counts as a migration
+    // target too, so orchard → that address is still kMigratingIronwood.
+    std::tie(t, e) =
+        get_tx_type(mojom::ZCashTokenType::kOrchard,
+                    account_2_info->orchard_internal_address.value());
+    EXPECT_EQ(t, mojom::ZCashTxType::kMigratingIronwood);
+    EXPECT_EQ(e, mojom::ZCashAddressError::kNoError);
+
+    // t → another account's orchard_internal → kShieldingIronwood
+    std::tie(t, e) =
+        get_tx_type(mojom::ZCashTokenType::kTransparent,
+                    account_2_info->orchard_internal_address.value());
     EXPECT_EQ(t, mojom::ZCashTxType::kShieldingIronwood);
     EXPECT_EQ(e, mojom::ZCashAddressError::kNoError);
 
@@ -2922,9 +2957,6 @@ TEST_F(ZCashWalletServiceUnitTest, ShieldFunds_FailsOnNetworkError) {
   feature_list.InitWithFeaturesAndParameters(
       {{features::kBraveWalletZCashFeature,
         {{"zcash_shielded_transactions_enabled", "true"}}},
-#if BUILDFLAG(IS_IOS)
-       {features::kBraveWalletWebUIFeature, {}}
-#endif
       },
       {}  // disabled features
   );
@@ -3013,9 +3045,6 @@ TEST_F(ZCashWalletServiceUnitTest, MAYBE_ShieldFunds) {
       {{features::kBraveWalletZCashFeature,
         {{"zcash_shielded_transactions_enabled", "true"},
          {"zcash_ironwood_enabled", "true"}}},
-#if BUILDFLAG(IS_IOS)
-       {features::kBraveWalletWebUIFeature, {}}
-#endif
       },
       {}  // disabled features
   );
@@ -3539,9 +3568,6 @@ TEST_F(ZCashWalletServiceUnitTest, MAYBE_ShieldAllFunds) {
       {{features::kBraveWalletZCashFeature,
         {{"zcash_shielded_transactions_enabled", "true"},
          {"zcash_ironwood_enabled", "true"}}},
-#if BUILDFLAG(IS_IOS)
-       {features::kBraveWalletWebUIFeature, {}}
-#endif
       },
       {}  // disabled features
   );
@@ -3989,9 +4015,6 @@ TEST_F(ZCashWalletServiceUnitTest, MAYBE_SendShieldedFunds) {
       {{features::kBraveWalletZCashFeature,
         {{"zcash_shielded_transactions_enabled", "true"},
          {"zcash_ironwood_enabled", "true"}}},
-#if BUILDFLAG(IS_IOS)
-       {features::kBraveWalletWebUIFeature, {}}
-#endif
       },
       {}  // disabled features
   );
@@ -4568,9 +4591,6 @@ TEST_F(ZCashWalletServiceUnitTest, MAYBE_OrchardToIronwood) {
       {{features::kBraveWalletZCashFeature,
         {{"zcash_shielded_transactions_enabled", "true"},
          {"zcash_ironwood_enabled", "true"}}},
-#if BUILDFLAG(IS_IOS)
-       {features::kBraveWalletWebUIFeature, {}}
-#endif
       },
       {}  // disabled features
   );
@@ -5415,9 +5435,6 @@ TEST_F(ZCashWalletServiceUnitTest, MAYBE_UnshieldFunds) {
   feature_list.InitWithFeaturesAndParameters(
       {{features::kBraveWalletZCashFeature,
         {{"zcash_shielded_transactions_enabled", "true"}}},
-#if BUILDFLAG(IS_IOS)
-       {features::kBraveWalletWebUIFeature, {}}
-#endif
       },
       {}  // disabled features
   );
@@ -6170,9 +6187,6 @@ TEST_F(ZCashWalletServiceUnitTest, MAYBE_IronwoodUnshieldFunds) {
       {{features::kBraveWalletZCashFeature,
         {{"zcash_shielded_transactions_enabled", "true"},
          {"zcash_ironwood_enabled", "true"}}},
-#if BUILDFLAG(IS_IOS)
-       {features::kBraveWalletWebUIFeature, {}}
-#endif
       },
       {}  // disabled features
   );
@@ -7020,10 +7034,14 @@ TEST_F(ZCashWalletServiceUnitTest, MAYBE_IronwoodUnshieldFunds) {
 }
 
 TEST_F(ZCashWalletServiceUnitTest, ShieldSync) {
+  // Ironwood is pinned off here: with it on, StartShieldSync first rewinds the
+  // sync state and completes asynchronously, which
+  // StartShieldSync_IronwoodMigration_RewindsWhenNeeded covers instead.
   base::test::ScopedFeatureList feature_list;
   feature_list.InitAndEnableFeatureWithParameters(
       features::kBraveWalletZCashFeature,
-      {{"zcash_shielded_transactions_enabled", "true"}});
+      {{"zcash_shielded_transactions_enabled", "true"},
+       {"zcash_ironwood_enabled", "false"}});
 
   keyring_service()->Reset();
   keyring_service()->RestoreWallet(kGateJuniorMnemonic, kTestWalletPassword,

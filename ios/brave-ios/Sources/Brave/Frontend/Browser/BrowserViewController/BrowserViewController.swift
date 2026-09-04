@@ -291,6 +291,8 @@ public class BrowserViewController: UIViewController {
 
   let defaultBrowserHelper: DefaultBrowserHelper = .init()
 
+  let downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?
+
   public init(
     windowId: UUID,
     profile: LegacyBrowserProfile,
@@ -300,7 +302,8 @@ public class BrowserViewController: UIViewController {
     rewards: BraveRewards,
     crashedLastSession: Bool,
     newsFeedDataSource: FeedDataSource,
-    privateBrowsingManager: PrivateBrowsingManager
+    privateBrowsingManager: PrivateBrowsingManager,
+    downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?,
   ) {
     self.windowId = windowId
     self.profile = profile
@@ -314,6 +317,8 @@ public class BrowserViewController: UIViewController {
     self.feedDataSource = newsFeedDataSource
     self.prefsChangeRegistrar = PrefChangeRegistrar(prefService: profileController.profile.prefs)
     self.braveTalkJitsiCoordinator = .init(prefService: profileController.profile.prefs)
+    self.downloadBackgroundTaskModel = downloadBackgroundTaskModel
+
     feedDataSource.historyAPI = profileController.historyAPI
     backgroundDataSource = .init(
       service: profileController.backgroundImagesService,
@@ -743,10 +748,6 @@ public class BrowserViewController: UIViewController {
     obscuredInsets.top = toolbarInsets.top
     obscuredInsets.bottom = toolbarInsets.bottom
 
-    // Setting obscuredInsets actually includes a side-effect of setting the web views contentInset
-    webViewProxy.obscuredInsets = obscuredInsets
-
-    // But we still need to update the scroll indicator insets manually
     var scrollIndicatorInsets = UIEdgeInsets(
       top: max(0, toolbarInsets.top - view.safeAreaInsets.top),
       left: 0,
@@ -757,15 +758,21 @@ public class BrowserViewController: UIViewController {
     if let keyboardState, case let keyboardHeight = keyboardState.intersectionHeightForView(view),
       keyboardHeight > 0
     {
-      var contentInsets = webViewProxy.scrollView?.contentInset ?? .zero
-      contentInsets.bottom = keyboardHeight + toolbarInsets.bottom
-      webViewProxy.scrollView?.contentInset = contentInsets
+      // The keyboard must be included in the obscured insets themselves. WKWebView derives and
+      // re-asserts the scroll view's contentInset from obscuredContentInsets, so adjusting the
+      // scroll view's contentInset manually would be overwritten by the web process.
+      obscuredInsets.bottom = max(obscuredInsets.bottom, keyboardHeight)
       if isUsingBottomBar {
         scrollIndicatorInsets.bottom = 0
       } else {
         scrollIndicatorInsets.bottom -= toolbarInsets.bottom
       }
     }
+
+    // Setting obscuredInsets actually includes a side-effect of setting the web views contentInset
+    webViewProxy.obscuredInsets = obscuredInsets
+
+    // But we still need to update the scroll indicator insets manually
     webViewProxy.scrollView?.scrollIndicatorInsets = scrollIndicatorInsets
   }
 
@@ -1056,18 +1063,23 @@ public class BrowserViewController: UIViewController {
       }
     }
 
-    BraveGlobalShieldStats.shared.$adblock
-      .scan(
-        (BraveGlobalShieldStats.shared.adblock, BraveGlobalShieldStats.shared.adblock),
-        { ($0.1, $1) }
-      )
-      .sink { [weak self] (oldValue, newValue) in
+    func observeAdblockChangeForDataSavedP3A(from oldValue: Int) {
+      let stats = BraveGlobalShieldStats.shared
+      withObservationTracking {
+        let newValue = stats.adblock
         let change = newValue - oldValue
         if change > 0 {
-          self?.recordDataSavedP3A(change: change)
+          recordDataSavedP3A(change: change)
+        }
+      } onChange: {
+        let oldValue = stats.adblock
+        DispatchQueue.main.async {
+          observeAdblockChangeForDataSavedP3A(from: oldValue)
         }
       }
-      .store(in: &cancellables)
+    }
+
+    observeAdblockChangeForDataSavedP3A(from: BraveGlobalShieldStats.shared.adblock)
 
     KeyboardHelper.defaultHelper.addDelegate(self)
     UNUserNotificationCenter.current().delegate = self
@@ -1950,7 +1962,7 @@ public class BrowserViewController: UIViewController {
       return true
     } else if let selectedTab = tabManager.selectedTab, selectedTab.canGoBack {
       selectedTab.goBack()
-      selectedTab.browserData?.resetExternalAlertProperties()
+      selectedTab.externalAppURLHelper?.reset()
       return true
     }
     return false
@@ -3330,11 +3342,6 @@ extension BrowserViewController {
 }
 
 extension BrowserViewController {
-  private func openAIChatURL(_ url: URL) {
-    let forcedPrivate = self.privateBrowsingManager.isPrivateBrowsing
-    self.openURLInNewTab(url, isPrivate: forcedPrivate, isPrivileged: false)
-  }
-
   func openBraveLeo(with query: String? = nil) {
     if !AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs) {
       let alert = UIAlertController(
@@ -3360,48 +3367,27 @@ extension BrowserViewController {
       return
     }
 
-    if FeatureList.kAIChatWebUIEnabled.enabled {
-      if let query,
-        let conversationURL = AIChatUtils.openLeoURL(
-          withQuerySubmitted: query,
-          profile: profileController.profile
-        )
-      {
-        tabManager.addTabAndSelect(URLRequest(url: conversationURL), isPrivate: false)
-      } else {
-        let tab = tabManager.addTab(
-          URLRequest(url: .webUI.aiChat),
-          // Ensure we don't start loading the WebUI until we assign the selected tab
-          zombie: true,
-          isPrivate: false
-        )
-        if let selectedTab = tabManager.selectedTab, let url = selectedTab.lastCommittedURL,
-          url.isWebPage(includeDataURIs: false)
-        {
-          tab.aiChatWebUIHelper?.associatedTab = selectedTab
-        }
-        tabManager.selectTab(tab)
-      }
-      return
-    }
-
-    let webDelegate = (query == nil) ? tabManager.selectedTab?.leoTabHelper : nil
-
-    let model = AIChatViewModel(
-      braveCore: profileController,
-      webDelegate: webDelegate,
-      braveTalkScript: self.braveTalkJitsiCoordinator,
-      querySubmited: query
-    )
-
-    let chatController = UIHostingController(
-      rootView: AIChatView(
-        model: model,
-        speechRecognizer: speechRecognizer,
-        openURL: openAIChatURL
+    if let query,
+      let conversationURL = AIChatUtils.openLeoURL(
+        withQuerySubmitted: query,
+        profile: profileController.profile
       )
-    )
-    present(chatController, animated: true)
+    {
+      tabManager.addTabAndSelect(URLRequest(url: conversationURL), isPrivate: false)
+    } else {
+      let tab = tabManager.addTab(
+        URLRequest(url: .webUI.aiChat),
+        // Ensure we don't start loading the WebUI until we assign the selected tab
+        zombie: true,
+        isPrivate: false
+      )
+      if let selectedTab = tabManager.selectedTab, let url = selectedTab.lastCommittedURL,
+        url.isWebPage(includeDataURIs: false)
+      {
+        tab.aiChatWebUIHelper?.associatedTab = selectedTab
+      }
+      tabManager.selectTab(tab)
+    }
   }
 }
 

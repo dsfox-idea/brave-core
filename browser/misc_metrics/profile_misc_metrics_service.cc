@@ -79,7 +79,7 @@ ProfileMiscMetricsService::ProfileMiscMetricsService(
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
   }
   auto* profile = Profile::FromBrowserContext(context);
-  if (local_state && profile && !profile->IsOffTheRecord() &&
+  if (local_state && profile &&
       base::FeatureList::IsEnabled(features::kFingerprintInputMetrics)) {
     fingerprint_frequency_metrics_ =
         std::make_unique<FingerprintFrequencyMetrics>(local_state, profile);

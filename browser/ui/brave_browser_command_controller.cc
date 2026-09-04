@@ -46,6 +46,7 @@
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_command_controller.h"
 #include "chrome/browser/ui/browser_commands.h"
+#include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/tabs/features.h"
@@ -150,9 +151,8 @@ BraveBrowserCommandController::BraveBrowserCommandController(
 BraveBrowserCommandController::~BraveBrowserCommandController() = default;
 
 void BraveBrowserCommandController::OnTabChangedAt(tabs::TabInterface* tab,
-                                                   int index,
                                                    TabChangeType change_type) {
-  BrowserCommandController::OnTabChangedAt(tab, index, change_type);
+  BrowserCommandController::OnTabChangedAt(tab, change_type);
   UpdateCommandEnabled(IDC_CLOSE_DUPLICATE_TABS,
                        brave::HasDuplicatesOfActiveTab(&*browser_));
   UpdateCommandEnabled(IDC_CLOSE_ALL_DUPLICATE_TABS,
@@ -165,6 +165,7 @@ void BraveBrowserCommandController::OnTabChangedAt(tabs::TabInterface* tab,
 void BraveBrowserCommandController::OnTabPinnedStateChanged(
     tabs::TabInterface* tab,
     int index) {
+  BrowserCommandController::OnTabPinnedStateChanged(tab, index);
   UpdateCommandsForPin();
 }
 
@@ -186,7 +187,8 @@ void BraveBrowserCommandController::OnTabStripModelChanged(
   UpdateCommandsForPin();
   UpdateCommandForBlockElements();
 
-  if (browser_->is_type_normal() && selection.active_tab_changed()) {
+  if (browser_->GetType() == BrowserWindowInterface::Type::TYPE_NORMAL &&
+      selection.active_tab_changed()) {
     UpdateCommandForSplitView();
   }
 }
@@ -211,15 +213,16 @@ bool BraveBrowserCommandController::IsCommandEnabled(int id) const {
                              : BrowserCommandController::IsCommandEnabled(id);
 }
 
-bool BraveBrowserCommandController::ExecuteCommandWithDispositionImpl(
+bool BraveBrowserCommandController::ExecuteCommandWithDispositionAndContext(
     int id,
     WindowOpenDisposition disposition,
-    base::TimeTicks time_stamp,
-    std::optional<actions::ActionInvocationContext> context) {
+    std::optional<actions::ActionInvocationContext> context,
+    base::TimeTicks time_stamp) {
   return IsBraveCommands(id) || IsBraveOverrideCommands(id)
              ? ExecuteBraveCommandWithDisposition(id, disposition, time_stamp)
-             : BrowserCommandController::ExecuteCommandWithDispositionImpl(
-                   id, disposition, time_stamp, std::move(context));
+             : BrowserCommandController::
+                   ExecuteCommandWithDispositionAndContext(
+                       id, disposition, std::move(context), time_stamp);
 }
 
 void BraveBrowserCommandController::AddCommandObserver(
@@ -387,7 +390,7 @@ void BraveBrowserCommandController::InitBraveCommandState() {
       ContainersServiceFactory::GetForProfile(browser_->GetProfile()));
 #endif
 
-  if (browser_->is_type_normal()) {
+  if (browser_->GetType() == BrowserWindowInterface::Type::TYPE_NORMAL) {
     // Delete these when upstream enables by default.
     UpdateCommandEnabled(IDC_READING_LIST_MENU_ADD_TAB, true);
     UpdateCommandEnabled(IDC_READING_LIST_MENU_SHOW_UI, true);
@@ -514,7 +517,7 @@ void BraveBrowserCommandController::UpdateCommandForPlaylist() {
   if (playlist::IsPlaylistAllowed(browser_->GetProfile()->GetPrefs())) {
     UpdateCommandEnabled(
         IDC_SHOW_PLAYLIST_BUBBLE,
-        browser_->is_type_normal() &&
+        browser_->GetType() == BrowserWindowInterface::Type::TYPE_NORMAL &&
             playlist::PlaylistServiceFactory::GetForBrowserContext(
                 browser_->GetProfile()));
   }
@@ -629,16 +632,18 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
     case IDC_NEW_WINDOW:
       // Use chromium's action for non-Tor profiles.
       if (!browser_->GetProfile()->IsTor()) {
-        return BrowserCommandController::ExecuteCommandWithDispositionImpl(
-            id, disposition, time_stamp, std::nullopt);
+        return BrowserCommandController::
+            ExecuteCommandWithDispositionAndContext(id, disposition,
+                                                    std::nullopt, time_stamp);
       }
       NewEmptyWindow(browser_->GetProfile()->GetOriginalProfile());
       break;
     case IDC_NEW_INCOGNITO_WINDOW:
       // Use chromium's action for non-Tor profiles.
       if (!browser_->GetProfile()->IsTor()) {
-        return BrowserCommandController::ExecuteCommandWithDispositionImpl(
-            id, disposition, time_stamp, std::nullopt);
+        return BrowserCommandController::
+            ExecuteCommandWithDispositionAndContext(id, disposition,
+                                                    std::nullopt, time_stamp);
       }
       NewIncognitoWindow(browser_->GetProfile()->GetOriginalProfile());
       break;
@@ -840,9 +845,9 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
 #endif
 #if BUILDFLAG(ENABLE_CONTAINERS)
     case IDC_NEW_TEMPORARY_CONTAINER:
-      brave::CreateTemporaryContainerAndOpenUrl(base::to_address(browser_),
-                                                browser_->GetNewTabURL(),
-                                                /*is_link=*/false);
+      brave::CreateTemporaryContainerAndOpenUrl(
+          base::to_address(browser_), chrome::GetNewTabURL(&*browser_),
+          /*is_link=*/false);
       break;
 #endif
     case IDC_WINDOW_GROUP_UNGROUPED_TABS:

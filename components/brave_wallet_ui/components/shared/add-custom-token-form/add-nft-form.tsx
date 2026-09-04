@@ -4,6 +4,7 @@
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
+import { assertNotReached } from 'chrome://resources/js/assert.js'
 import { skipToken } from '@reduxjs/toolkit/query/react'
 import Input, { InputEventDetail } from '@brave/leo/react/input'
 import Alert from '@brave/leo/react/alert'
@@ -22,6 +23,10 @@ import {
   getAssetIdKey,
   type GetBlockchainTokenIdArg,
 } from '../../../utils/asset-utils'
+import {
+  isValidEVMAddress,
+  isValidSolanaAddress,
+} from '../../../utils/address-utils'
 
 // hooks
 import useGetTokenInfo from '../../../common/hooks/use-get-token-info'
@@ -41,6 +46,7 @@ import { NetworksDropdown } from '../dropdowns/networks_dropdown'
 import { FormErrorsList } from './form-errors-list'
 import { NftIcon } from '../nft-icon/nft-icon'
 import { InfoIconTooltip } from '../info_icon_tooltip/info_icon_tooltip'
+import { NumberInput } from '../number_input/number_input'
 
 // styles
 import {
@@ -66,6 +72,24 @@ const NftIconWithPlaceholder = withPlaceholderIcon(NftIcon, {
   marginLeft: 0,
   marginRight: 0,
 })
+
+function isValidContractAddressForCoin(
+  coin: BraveWallet.CoinType | undefined,
+  address: string,
+): boolean {
+  switch (coin) {
+    case undefined:
+      return false
+    case BraveWallet.CoinType.SOL:
+      return isValidSolanaAddress(address)
+    case BraveWallet.CoinType.ETH:
+      return isValidEVMAddress(address)
+    default:
+      // Networks are limited to CustomAssetSupportedCoinTypes, so a new NFT
+      // coin must be handled above rather than silently validated as EVM.
+      assertNotReached(`Unsupported custom NFT coin ${coin}`)
+  }
+}
 
 interface Props {
   selectedAsset?: BraveWallet.BlockchainToken
@@ -107,6 +131,15 @@ export const AddNftForm = (props: Props) => {
     BraveWallet.NetworkInfo | undefined
   >(selectedAssetNetwork)
 
+  // Gate every lookup on a syntactically valid address so partial or wrong-
+  // coin input never reaches the RPC / gate3 (brave/brave-browser#58531).
+  // Deliberately an approximate sync check so the form stays keystroke-
+  // responsive; SimpleHashClient::GetNftsUrl is the authoritative validator.
+  const isContractAddressValid = isValidContractAddressForCoin(
+    customAssetsNetwork?.coin,
+    tokenContractAddress,
+  )
+
   // mutations
   const [addUserToken] = useAddUserTokenMutation()
   const [updateUserToken] = useUpdateUserTokenMutation()
@@ -118,7 +151,7 @@ export const AddNftForm = (props: Props) => {
     isError: hasGetTokenInfoError,
   } = useGetTokenInfo(
     customAssetsNetwork
-      && tokenContractAddress
+      && isContractAddressValid
       && (customAssetsNetwork.coin === BraveWallet.CoinType.ETH
         ? !!customTokenID
         : true)
@@ -137,7 +170,7 @@ export const AddNftForm = (props: Props) => {
 
   const metadataLookupArg: GetBlockchainTokenIdArg | undefined =
     React.useMemo(() => {
-      if (!customAssetsNetwork || !tokenContractAddress) {
+      if (!customAssetsNetwork || !isContractAddressValid) {
         return undefined
       }
 
@@ -155,7 +188,12 @@ export const AddNftForm = (props: Props) => {
         isNft: true,
         zcashTokenType: BraveWallet.ZCashTokenType.kNone,
       }
-    }, [customAssetsNetwork, tokenContractAddress, customTokenID])
+    }, [
+      customAssetsNetwork,
+      isContractAddressValid,
+      tokenContractAddress,
+      customTokenID,
+    ])
 
   // TODO: need symbol in response in order to simplify adding SOL NFTs
   const {
@@ -179,10 +217,13 @@ export const AddNftForm = (props: Props) => {
   const tokenSymbolError = !customTokenSymbol
   const tokenIdError =
     selectedAssetNetwork?.coin === BraveWallet.CoinType.ETH && !customTokenID
-  const tokenContractAddressError =
-    tokenContractAddress === ''
-    || (customAssetsNetwork?.coin !== BraveWallet.CoinType.SOL
-      && !tokenContractAddress.toLowerCase().startsWith('0x'))
+  const tokenContractAddressError = !isContractAddressValid
+  // Hold the inline error back until a network is picked and something has
+  // been typed, so an untouched form is not pre-filled with red.
+  const showContractAddressError =
+    !!customAssetsNetwork
+    && tokenContractAddress !== ''
+    && !isContractAddressValid
 
   const buttonDisabled =
     isTokenInfoLoading
@@ -420,6 +461,7 @@ export const AddNftForm = (props: Props) => {
           <Input
             value={tokenContractAddress}
             onInput={handleTokenAddressChanged}
+            showErrors={showContractAddressError}
             placeholder={getLocale(S.BRAVE_WALLET_EXEMPLI_GRATIA).replace(
               '$1',
               '0xbd3531da5cf5857e7cfaa92426877b022e612cf8',
@@ -439,20 +481,28 @@ export const AddNftForm = (props: Props) => {
                 text={getLocale(S.BRAVE_WALLET_WHAT_IS_AN_NFT_CONTRACT_ADDRESS)}
               />
             </Row>
+
+            <ErrorText
+              slot='errors'
+              textColor='error'
+              textAlign='left'
+              variant='small.regular'
+            >
+              {getLocale(S.BRAVE_WALLET_INVALID_TOKEN_CONTRACT_ADDRESS_ERROR)}
+            </ErrorText>
           </Input>
         </FullWidthFormColumn>
 
         {customAssetsNetwork
           && customAssetsNetwork?.coin !== BraveWallet.CoinType.SOL && (
             <FullWidthFormColumn>
-              <Input
+              <NumberInput
                 value={
                   customTokenID
                     ? new Amount(customTokenID).format(undefined, false)
                     : ''
                 }
                 onInput={handleTokenIDChanged}
-                type='number'
                 placeholder={getLocale(S.BRAVE_WALLET_EXEMPLI_GRATIA).replace(
                   '$1',
                   '1234',
@@ -470,7 +520,7 @@ export const AddNftForm = (props: Props) => {
                     text={getLocale(S.BRAVE_WALLET_WHAT_IS_AN_NFT_TOKEN_ID)}
                   />
                 </Row>
-              </Input>
+              </NumberInput>
             </FullWidthFormColumn>
           )}
 

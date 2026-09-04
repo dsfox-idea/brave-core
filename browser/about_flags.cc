@@ -170,10 +170,15 @@ const flags_ui::FeatureEntry::FeatureParam
 const flags_ui::FeatureEntry::FeatureParam kZCashShieldedTransactionsEnabled[] =
     {{"zcash_shielded_transactions_enabled", "true"}};
 
+const flags_ui::FeatureEntry::FeatureParam kZCashIronwoodEnabled[] = {
+    {"zcash_ironwood_enabled", "true"},
+    {"zcash_shielded_transactions_enabled", "true"}};
+
 const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
     {"- Shielded support disabled", kZCashShieldedTransactionsDisabled,
      nullptr},
-    {"- Shielded support enabled", kZCashShieldedTransactionsEnabled, nullptr}};
+    {"- Shielded support enabled", kZCashShieldedTransactionsEnabled, nullptr},
+    {"- Ironwood support enabled", kZCashIronwoodEnabled, nullptr}};
 
 const flags_ui::FeatureEntry::FeatureParam kPolkadotAssetDiscoveryDisabled[] = {
     {"polkadot_asset_discovery", "false"}};
@@ -1151,14 +1156,6 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
               brave_shields::features::kBraveAdblockShowHiddenComponents),     \
-      },                                                                       \
-      {                                                                        \
-          "brave-dark-mode-block",                                             \
-          "Enable dark mode blocking fingerprinting protection",               \
-          "Always report light mode when fingerprinting protections set to "   \
-          "Strict",                                                            \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(brave_shields::features::kBraveDarkModeBlock),    \
       },                                                                       \
       {                                                                        \
           "brave-domain-block",                                                \

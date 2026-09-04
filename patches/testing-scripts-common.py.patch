@@ -1,8 +1,8 @@
 diff --git a/testing/scripts/common.py b/testing/scripts/common.py
-index b8f19747c381ce04f69d2f919ac809a8374a025d..368975ebba8cd073a16c9b678b58827c18884376 100644
+index 8bf51c22f61ac99fcba04976189bba1808cf1ae6..1b3b79828a6a5693f34a0ef0ecf63a0be49cdec1 100644
 --- a/testing/scripts/common.py
 +++ b/testing/scripts/common.py
-@@ -66,9 +66,16 @@ def set_lpac_acls(acl_dir, is_test_script=False):
+@@ -83,8 +83,15 @@ def set_lpac_acls(acl_dir, is_test_script=False):
    if sys.getwindowsversion().build < 19041:
      return
    try:
@@ -13,10 +13,9 @@ index b8f19747c381ce04f69d2f919ac809a8374a025d..368975ebba8cd073a16c9b678b58827c
 +    # PYTHONUTF8=1 for the build, which makes UTF-8 the preferred encoding, so
 +    # this is reproducible on every localized Windows. The 'oem' codec is
 +    # exactly the console codepage and is Windows-only, as is this function.
-     existing_acls = subprocess.check_output(['icacls', acl_dir],
-                                             stderr=subprocess.STDOUT,
--                                            universal_newlines=True)
-+                                            encoding='oem')
+     existing_acls = subprocess.check_output(
+-      ['icacls', acl_dir], stderr=subprocess.STDOUT, universal_newlines=True
++      ['icacls', acl_dir], stderr=subprocess.STDOUT, encoding='oem'
+     )
    except subprocess.CalledProcessError as e:
      logging.error('Failed to retrieve existing ACLs for directory %s', acl_dir)
-     logging.error('Command output: %s', e.output)

@@ -47,6 +47,10 @@ if (!is_android) {
     "//chrome/browser/ntp_tiles",
     "//chrome/browser/profiles:profile",
     "//chrome/browser/ui",
+    # Growser-174: SupportsWindowFeature moved out of Browser and into this
+    # target in Chromium 153; //chrome/browser/ui depends on it privately, so
+    # including its header needs a dep of our own.
+    "//chrome/browser/ui/window_feature_controller",
     "//chrome/common",
     "//components/keyed_service/core",
     "//components/prefs",

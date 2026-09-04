@@ -37,6 +37,7 @@
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/create_browser_window.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
@@ -143,13 +144,13 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
     // Call explicitely to update vpn commands status because mojo works in
     // async way.
     static_cast<chrome::BraveBrowserCommandController*>(
-        browser->command_controller())
+        chrome::BrowserCommandController::From(browser))
         ->OnPurchasedStateChanged(target_state, std::nullopt);
   }
 
   void CheckBraveVPNCommands(Browser* browser) {
     // Only IDC_BRAVE_VPN_MENU command is changed based on purchased state.
-    auto* command_controller = browser->command_controller();
+    auto* command_controller = chrome::BrowserCommandController::From(browser);
     SetPurchasedUserForBraveVPN(browser, false);
     EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_VPN_PANEL));
     EXPECT_TRUE(command_controller->IsCommandEnabled(
@@ -178,7 +179,7 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
   }
 
   void CheckBraveVPNCommandsDisabledByPolicy(Browser* browser) {
-    auto* command_controller = browser->command_controller();
+    auto* command_controller = chrome::BrowserCommandController::From(browser);
     SetPurchasedUserForBraveVPN(browser, false);
     EXPECT_FALSE(
         command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_VPN_PANEL));
@@ -212,8 +213,9 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
 #if defined(TOOLKIT_VIEWS)
   void WaitForSidePanelClose() {
     ASSERT_TRUE(base::test::RunUntil([&]() {
-      return browser()->GetBrowserView().side_panel()->state() ==
-             SidePanel::State::kClosed;
+      return BrowserView::GetBrowserViewForBrowser(browser())
+                 ->side_panel()
+                 ->state() == SidePanel::State::kClosed;
     }));
   }
 #endif  // #if defined(TOOLKIT_VIEWS)
@@ -236,7 +238,8 @@ class BraveBrowserCommandControllerTest : public InProcessBrowserTest {
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsEnableTest) {
   // Test normal browser's brave commands status.
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller =
+      chrome::BrowserCommandController::From(browser());
   // Growser-152: the command follows its buildflag now, so with rewards
   // compiled out it is off - see UpdateCommandForBraveRewards().
   EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
@@ -296,7 +299,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsEnableTestPrivateWindow) {
   auto* private_browser = CreateIncognitoBrowser();
-  auto* command_controller = private_browser->command_controller();
+  auto* command_controller =
+      chrome::BrowserCommandController::From(private_browser);
   // Growser-152: the command follows its buildflag now, so with rewards
   // compiled out it is off - see UpdateCommandForBraveRewards().
   EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
@@ -339,7 +343,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   Browser* guest_browser = browser_creation_observer.Wait();
   DCHECK(guest_browser);
   EXPECT_TRUE(guest_browser->GetProfile()->IsGuestSession());
-  auto* command_controller = guest_browser->command_controller();
+  auto* command_controller =
+      chrome::BrowserCommandController::From(guest_browser);
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS));
 
 #if BUILDFLAG(ENABLE_TOR)
@@ -375,7 +380,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   Browser* tor_browser = tor_browser_creation_observer.Wait();
   DCHECK(tor_browser);
   EXPECT_TRUE(tor_browser->GetProfile()->IsTor());
-  auto* command_controller = tor_browser->command_controller();
+  auto* command_controller =
+      chrome::BrowserCommandController::From(tor_browser);
   // Growser-152: the command follows its buildflag now, so with rewards
   // compiled out it is off - see UpdateCommandForBraveRewards().
   EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
@@ -408,7 +414,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 
   // Check tor commands when tor is disabled.
   TorProfileServiceFactory::SetTorDisabled(true);
-  command_controller = browser()->command_controller();
+  command_controller = chrome::BrowserCommandController::From(browser());
   EXPECT_FALSE(
       command_controller->IsCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE));
   EXPECT_FALSE(
@@ -419,7 +425,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 #if BUILDFLAG(ENABLE_AI_CHAT)
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        ToggleAIChat_ControlledByPolicy) {
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
   // Sanity check policy is enabled by default
   EXPECT_TRUE(ai_chat::IsAIChatEnabled(browser()->GetProfile()->GetPrefs()));
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_TOGGLE_AI_CHAT));
@@ -434,7 +440,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsCloseTabsToLeft) {
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
 
   // Browser starts with a single about:blank page. Shouldn't be able to close
   // tabs to the left because there's nothing to the left.
@@ -466,7 +472,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsCloseUnpinnedTabs) {
   auto* tsm = browser()->tab_strip_model();
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
   // Should start with one open tab which isn't pinned.
   EXPECT_TRUE(
       command_controller->IsCommandEnabled(IDC_WINDOW_CLOSE_UNPINNED_TABS));
@@ -522,7 +528,7 @@ class BraveBrowserCommandControllerElementPickerTest
 // such a page is active, and follow same-tab navigations.
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerElementPickerTest,
                        EnabledOnlyOnHttpPages) {
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
 
   // The initial tab isn't an http(s) page, so the command starts disabled.
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_BLOCK_ELEMENTS));
@@ -557,7 +563,7 @@ class BraveBrowserCommandControllerElementPickerDisabledTest
 // (IDC_BLOCK_ELEMENTS) should never be available, even on http(s) pages.
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerElementPickerDisabledTest,
                        CommandUnavailableWhenFeatureDisabled) {
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
 
   // Disabled on the initial (non-http) tab.
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_BLOCK_ELEMENTS));
@@ -576,7 +582,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerElementPickerDisabledTest,
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsCloseAllDuplicateTabs) {
   auto* tsm = browser()->tab_strip_model();
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
 
   // Start with a single about:blank tab, so there are no duplicates.
   EXPECT_FALSE(
@@ -621,7 +627,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsCloseDuplicatesOfActiveTab) {
   auto* tsm = browser()->tab_strip_model();
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
 
   // The lone active about:blank tab has no duplicates.
   EXPECT_FALSE(command_controller->IsCommandEnabled(IDC_CLOSE_DUPLICATE_TABS));
@@ -667,7 +673,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsAddAllToNewGroup) {
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
   auto* tsm = browser()->tab_strip_model();
 
   // This test sometimes crashes on exit. The stack trace shows that when
@@ -714,17 +720,20 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
       SidePanelEntry::Key(SidePanelEntryId::kChatUI);
   auto* side_panel_coordinator = SidePanelCoordinator::From(browser());
   ASSERT_TRUE(base::test::RunUntil([&]() {
-    return browser()->GetBrowserView().side_panel()->state() ==
-           SidePanel::State::kClosed;
+    return BrowserView::GetBrowserViewForBrowser(browser())
+               ->side_panel()
+               ->state() == SidePanel::State::kClosed;
   }));
 
   // initially no panel is showing
   EXPECT_FALSE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
   // after command, ai chat panel is showing
-  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  chrome::BrowserCommandController::From(browser())->ExecuteCommand(
+      IDC_TOGGLE_AI_CHAT);
   EXPECT_TRUE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
   // after command again, no panel is showing
-  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  chrome::BrowserCommandController::From(browser())->ExecuteCommand(
+      IDC_TOGGLE_AI_CHAT);
   WaitForSidePanelClose();
   EXPECT_FALSE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
 
@@ -734,10 +743,12 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   side_panel_coordinator->Toggle(bookmarks_key,
                                  SidePanelOpenTrigger::kToolbarButton);
   // after command, ai chat panel is showing
-  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  chrome::BrowserCommandController::From(browser())->ExecuteCommand(
+      IDC_TOGGLE_AI_CHAT);
   EXPECT_TRUE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
   // after command again, no panel is showing
-  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_AI_CHAT);
+  chrome::BrowserCommandController::From(browser())->ExecuteCommand(
+      IDC_TOGGLE_AI_CHAT);
   WaitForSidePanelClose();
   EXPECT_FALSE(side_panel_coordinator->IsSidePanelEntryShowing(ai_chat_key));
 }
@@ -745,7 +756,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsToggleVerticalTabs) {
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_TOGGLE_VERTICAL_TABS));
   auto* vtc = VerticalTabController::FromBrowser(browser());
   ASSERT_FALSE(vtc->ShouldShowBraveVerticalTabs());
@@ -771,13 +782,13 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   // Enter browser fullscreen.
   chrome::ToggleFullscreenMode(browser());
   EXPECT_TRUE(BrowserWindow::FromBrowser(browser())->IsFullscreen());
-  browser()->command_controller()->FullscreenStateChanged();
+  chrome::BrowserCommandController::From(browser())->FullscreenStateChanged();
   EXPECT_FALSE(tabs::utils::IsVerticalTabToggleEnabled(browser()));
 
   // Exit fullscreen.
   chrome::ToggleFullscreenMode(browser());
   EXPECT_FALSE(BrowserWindow::FromBrowser(browser())->IsFullscreen());
-  browser()->command_controller()->FullscreenStateChanged();
+  chrome::BrowserCommandController::From(browser())->FullscreenStateChanged();
   EXPECT_TRUE(tabs::utils::IsVerticalTabToggleEnabled(browser()));
 }
 #endif
@@ -790,7 +801,9 @@ class BraveBrowserCommandControllerWithSideBySideTest
 
   TabStripModel* tab_strip_model() { return browser()->tab_strip_model(); }
 
-  CommandUpdater* command_updater() { return browser()->command_controller(); }
+  CommandUpdater* command_updater() {
+    return chrome::BrowserCommandController::From(browser());
+  }
 };
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerWithSideBySideTest,
@@ -880,21 +893,23 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerFocusModeTest,
 
   EXPECT_FALSE(controller->IsEnabled());
 
-  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_FOCUS_MODE);
+  chrome::BrowserCommandController::From(browser())->ExecuteCommand(
+      IDC_TOGGLE_FOCUS_MODE);
   EXPECT_TRUE(controller->IsEnabled());
 
-  browser()->command_controller()->ExecuteCommand(IDC_TOGGLE_FOCUS_MODE);
+  chrome::BrowserCommandController::From(browser())->ExecuteCommand(
+      IDC_TOGGLE_FOCUS_MODE);
   EXPECT_FALSE(controller->IsEnabled());
 }
 
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerFocusModeTest,
                        FocusModeDisabledForPopupWindow) {
-  Browser* popup = Browser::Create(Browser::CreateParams(
-      Browser::TYPE_POPUP, browser()->GetProfile(), true));
+  auto* popup = CreateBrowserWindow(BrowserWindowCreateParams(
+      BrowserWindowInterface::TYPE_POPUP, browser()->GetProfile(), true));
   chrome::AddTabAt(popup, GURL("about:blank"), -1, true);
   BrowserWindow::FromBrowser(popup)->Show();
-  EXPECT_FALSE(
-      popup->command_controller()->IsCommandEnabled(IDC_TOGGLE_FOCUS_MODE));
+  EXPECT_FALSE(chrome::BrowserCommandController::From(popup)->IsCommandEnabled(
+      IDC_TOGGLE_FOCUS_MODE));
 }
 
 #if BUILDFLAG(ENABLE_EMAIL_ALIASES)
@@ -922,7 +937,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerWithEmailAliasesTest,
   browser()->GetProfile()->GetPrefs()->SetBoolean(
       email_aliases::prefs::kPromoShown, true);
 
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
   ASSERT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_EMAIL_ALIASES));
   command_controller->ExecuteCommand(IDC_SHOW_EMAIL_ALIASES);
   ASSERT_TRUE(base::test::RunUntil([&]() {
@@ -945,7 +960,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerWithEmailAliasesTest,
         false);
   };
 
-  auto* command_controller = browser()->command_controller();
+  auto* command_controller = chrome::BrowserCommandController::From(browser());
   ASSERT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_EMAIL_ALIASES));
   command_controller->ExecuteCommand(IDC_SHOW_EMAIL_ALIASES);
 

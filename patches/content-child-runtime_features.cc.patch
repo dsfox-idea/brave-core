@@ -1,9 +1,9 @@
 diff --git a/content/child/runtime_features.cc b/content/child/runtime_features.cc
-index 6eb5b8f045ff8e00fa1203b7edea461b8c08fa27..90fe69ddcaf9b11e4b87e601609ea68a648f8cd7 100644
+index 95b2766f0a8b02bd0beb52cd46f1be94698f3acb..869e514e6074a8482ac248ab70cb7282eba2d44b 100644
 --- a/content/child/runtime_features.cc
 +++ b/content/child/runtime_features.cc
-@@ -568,8 +568,7 @@ void ResolveInvalidConfigurations() {
-     WebRuntimeFeatures::EnableSharedStorageAPI(false);
+@@ -515,8 +515,7 @@ void ResolveInvalidConfigurations() {
+         "FencedFramesLocalUnpartitionedDataAccess", false);
    }
  
 -  if (!base::FeatureList::IsEnabled(

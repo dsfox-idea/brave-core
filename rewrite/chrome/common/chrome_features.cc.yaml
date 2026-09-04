@@ -73,3 +73,15 @@ substitutions:
     set_feature_flag_default_state:
       feature_name: kGlicUserStatusCheck
       value: base::FEATURE_DISABLED_BY_DEFAULT
+
+  - description: |-
+      Ship kRemoteActorCredentialSharing disabled (growser#174). It gates
+      RemoteActorCredentialStoreClient, which PATCHes the user's saved
+      credentials to passbox-pa.googleapis.com so a remote agent can act with
+      them. Chromium ships it off, so this changes nothing today - and that is
+      precisely the state a Chromium default can leave without telling anyone,
+      which is how kGlic came back on in this very merge. Passwords are not a
+      surface to leave riding on somebody else's default.
+    set_feature_flag_default_state:
+      feature_name: kRemoteActorCredentialSharing
+      value: base::FEATURE_DISABLED_BY_DEFAULT

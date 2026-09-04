@@ -18,10 +18,10 @@
 #include "chrome/browser/new_tab_page/prefs/ntp_pref_names.h"
 #include "chrome/browser/ntp_tiles/chrome_most_visited_sites_factory.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/tabs/tab_enums.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "chrome/browser/ui/window_feature_controller/window_feature_controller.h"
 #include "chrome/common/webui_url_constants.h"
 #include "components/ntp_tiles/constants.h"
 #include "components/prefs/pref_service.h"
@@ -188,9 +188,14 @@ content::WebContents* MaybeAdoptWarmNewTab(BrowserWindowInterface* browser) {
   if (!base::FeatureList::IsEnabled(kWarmNewTabPage)) {
     return nullptr;
   }
-  Browser* chrome_browser = browser->GetBrowserForMigrationOnly();
-  if (!chrome_browser || !chrome_browser->SupportsWindowFeature(
-                             Browser::WindowFeature::kFeatureTabStrip)) {
+  // Growser-174: SupportsWindowFeature moved onto WindowFeatureController in
+  // Chromium 153; it takes the interface we already hold. Same check as in
+  // warm_new_tab_page_activator.cc - no tab strip, no warm page to adopt.
+  const WindowFeatureController* features =
+      WindowFeatureController::From(browser);
+  if (!features
+      || !features->SupportsWindowFeature(
+             WindowFeatureController::WindowFeature::kFeatureTabStrip)) {
     return nullptr;
   }
   Profile* profile = browser->GetProfile();

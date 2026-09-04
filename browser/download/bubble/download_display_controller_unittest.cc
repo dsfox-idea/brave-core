@@ -10,10 +10,10 @@
 #include "chrome/browser/download/bubble/download_display_controller.h"
 
 #include <algorithm>
+#include <ranges>
 
 #include "base/check_op.h"
 #include "base/command_line.h"
-#include "base/containers/adapters.h"
 #include "base/files/file_path.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
@@ -29,6 +29,7 @@
 #include "chrome/browser/download/offline_item_model_manager_factory.h"
 #include "chrome/browser/offline_items_collection/offline_content_aggregator_factory.h"
 #include "chrome/browser/ui/browser.h"
+#include "chrome/browser/ui/browser_window/public/create_browser_window.h"
 #include "chrome/browser/ui/download/download_display.h"
 #include "chrome/common/chrome_switches.h"
 #include "chrome/test/base/test_browser_window.h"
@@ -252,7 +253,7 @@ class MockDownloadBubbleUpdateService : public DownloadBubbleUpdateService {
   void AddModel(ModelType type) { model_types_.push_back(type); }
 
   void RemoveLastDownload() {
-    auto it = std::ranges::find(base::Reversed(model_types_),
+    auto it = std::ranges::find(std::views::reverse(model_types_),
                                 ModelType::kDownloadItem);
     if (it != model_types_.rend()) {
       model_types_.erase(std::prev(it.base()));
@@ -331,10 +332,10 @@ class DownloadDisplayControllerTest : public testing::Test {
         .WillRepeatedly(Return(DownloadDisplay::ProgressInfo()));
     display_ = std::make_unique<FakeDownloadDisplay>();
     auto window = std::make_unique<TestBrowserWindow>();
-    Browser::CreateParams params(profile_, true);
+    BrowserWindowCreateParams params(profile_, true);
     params.type = Browser::TYPE_NORMAL;
     params.window = window.release();
-    browser_ = Browser::DeprecatedCreateOwnedForTesting(params);
+    browser_ = DeprecatedCreateOwnedBrowserWindowForTesting(std::move(params));
     bubble_controller_ = std::make_unique<DownloadBubbleUIController>(
         browser_.get(), mock_update_service_.get());
     controller_ = std::make_unique<DownloadDisplayController>(
