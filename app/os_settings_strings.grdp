@@ -437,11 +437,11 @@
   <message name="IDS_OS_SETTINGS_LANGUAGES_OFFER_TRANSLATION_SUBLABEL" desc="Description for setting that allows the system to offer to translate websites that appear in other languages.">
     Offer to translate websites in other languages
   </message>
-  <message name="IDS_OS_SETTINGS_LANGUAGES_OFFER_GOOGLE_TRANSLATE_LABEL" desc="Title for setting that allows the system to offer to translate websites that appear in other languages using Growser Translate.">
-    Offer Growser Translate for websites in other languages
+  <message name="IDS_OS_SETTINGS_LANGUAGES_OFFER_GOOGLE_TRANSLATE_LABEL" desc="Title for setting that allows the system to offer to translate websites that appear in other languages using Google Translate.">
+    Offer Google Translate for websites in other languages
   </message>
-  <message name="IDS_OS_SETTINGS_LANGUAGES_OFFER_GOOGLE_TRANSLATE_LABEL_WITH_PDF" desc="Title for setting that allows the system to offer to translate websites and PDFs that appear in other languages using Growser Translate.">
-    Offer Growser Translate for websites and PDFs in other languages
+  <message name="IDS_OS_SETTINGS_LANGUAGES_OFFER_GOOGLE_TRANSLATE_LABEL_WITH_PDF" desc="Title for setting that allows the system to offer to translate websites and PDFs that appear in other languages using Google Translate.">
+    Offer Google Translate for websites and PDFs in other languages
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_INPUT_METHOD_LIST_TITLE" desc="Title for the list of enabled input methods (keyboard layouts and input method editors).">
     Input methods
@@ -6936,13 +6936,13 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     <ph name="SENSOR_NAME">$1<ex>Front Camera</ex></ph> (blocked)
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_CAMERA_APP_PERMISSION_ROW_ARIA_LABEL" desc="ARIA (accessibility) label describing the action button (toggle button or external link button or managed icon) in the app permission rows of the privacy hub camera subpage.">
-    <ph name="APP_NAME">$1<ex>Growser Meet</ex></ph> camera permission
+    <ph name="APP_NAME">$1<ex>Google Meet</ex></ph> camera permission
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_LOCATION_APP_PERMISSION_ROW_ARIA_LABEL" desc="ARIA (accessibility) label describing the action button (toggle button or external link button or managed icon) in the app permission rows of the privacy hub location subpage.">
-    <ph name="APP_NAME">$1<ex>Growser Meet</ex></ph> location permission
+    <ph name="APP_NAME">$1<ex>Google Meet</ex></ph> location permission
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_MICROPHONE_APP_PERMISSION_ROW_ARIA_LABEL" desc="ARIA (accessibility) label describing the action button (toggle button or external link button or managed icon) in the app permission rows of the privacy hub microphone subpage.">
-    <ph name="APP_NAME">$1<ex>Growser Meet</ex></ph> microphone permission
+    <ph name="APP_NAME">$1<ex>Google Meet</ex></ph> microphone permission
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_APP_PERMISSION_ROW_ARIA_DESCRIPTION" desc="ARIA (accessibility) description describing the action buttons (toggle button or managed icon) in the app permission rows of the privacy hub subpages.">
     Permission is <ph name="PERMISSION_STATE">$1<ex>Ask every time</ex></ph>

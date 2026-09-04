@@ -61,13 +61,13 @@
     Translate page
   </message>
   <message name="IDS_OMNIBOX_PEDAL_TRANSLATE_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, TRANSLATE">
-    Translate this page with Growser Translate
+    Translate this page with Google Translate
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_TRANSLATE_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to TRANSLATE.">
-    <ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to translate this page with Growser Translate
+    <ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to translate this page with Google Translate
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_TRANSLATE" desc="Announcement when pedal action button is focused, TRANSLATE">
-    Translate page button, activate to translate this page with Growser Translate
+    Translate page button, activate to translate this page with Google Translate
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_UPDATE_CHROME_HINT" desc="The button text contents to suggest pedal action, UPDATE_CHROME">
@@ -227,13 +227,13 @@
     Create event
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_CALENDAR_EVENT_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CREATE_GOOGLE_CALENDAR_EVENT">
-    Create a new event in Growser Calendar quickly
+    Create a new event in Google Calendar quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_CALENDAR_EVENT_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to CREATE_GOOGLE_CALENDAR_EVENT.">
-    <ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new event in Growser Calendar quickly
+    <ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new event in Google Calendar quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_CALENDAR_EVENT" desc="Announcement when pedal action button is focused, CREATE_GOOGLE_CALENDAR_EVENT">
-    Create event button, activate to create a new event in Growser Calendar quickly
+    Create event button, activate to create a new event in Google Calendar quickly
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_SITE_HINT" desc="The button text contents to suggest pedal action, CREATE_GOOGLE_SITE">

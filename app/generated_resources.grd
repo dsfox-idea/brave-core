@@ -382,10 +382,10 @@ are declared in tools/grit/grit_args.gni.
         </message>
         <!-- Search Promotion specific strings -->
         <message name="IDS_SEARCH_PROMOTION_IPH_TITLE_ARM_A" desc="Title of the search promotion IPH bubble for Arm A.">
-          Bring Growser Search to Edge
+          Bring Google Search to Edge
         </message>
         <message name="IDS_SEARCH_PROMOTION_IPH_BODY_ARM_A" desc="Body text of the search promotion IPH bubble for Arm A.">
-          Use Growser Search right from your browser's address bar and when you open a new tab.
+          Use Google Search right from your browser's address bar and when you open a new tab.
         </message>
         <message name="IDS_SEARCH_PROMOTION_IPH_CTA_ARM_A" desc="Custom CTA button text of the search promotion IPH bubble for Arm A.">
           Open Edge
@@ -394,10 +394,10 @@ are declared in tools/grit/grit_args.gni.
           No Thanks
         </message>
         <message name="IDS_SEARCH_PROMOTION_IPH_TITLE_ARM_B" desc="Title of the search promotion IPH bubble for Arm B.">
-          Install Growser Search for Microsoft Edge extension
+          Install Google Search for Microsoft Edge extension
         </message>
         <message name="IDS_SEARCH_PROMOTION_IPH_BODY_ARM_B" desc="Body text of the search promotion IPH bubble for Arm B.">
-          Use Growser Search right from your browser's address bar and when you open a new tab.
+          Use Google Search right from your browser's address bar and when you open a new tab.
         </message>
         <message name="IDS_SEARCH_PROMOTION_IPH_CTA_ARM_B" desc="Custom CTA button text of the search promotion IPH bubble for Arm B.">
           Install for Edge
@@ -3260,7 +3260,7 @@ are declared in tools/grit/grit_args.gni.
           Install
         </message>
         <message name="IDS_OMNIBOX_PWA_INSTALL_ICON_TOOLTIP" desc="Tooltip for the omnibox icon label promoting an app installation">
-          Install <ph name="APP_NAME">$1<ex>Growser Maps</ex></ph>
+          Install <ph name="APP_NAME">$1<ex>Google Maps</ex></ph>
         </message>
       </if>
 
@@ -4810,7 +4810,7 @@ are declared in tools/grit/grit_args.gni.
         GPU Process
       </message>
       <message name="IDS_TASK_MANAGER_PRINT_PREFIX" desc="The prefix for a print preview process row in the Task Manager">
-        Print: <ph name="PRINT_NAME">$1<ex>Growser Maps</ex></ph>
+        Print: <ph name="PRINT_NAME">$1<ex>Google Maps</ex></ph>
       </message>
       <message name="IDS_TASK_MANAGER_SUBFRAME_PREFIX" desc="The prefix for a out-of-process-iframe row in the Task Manager (these processes are created when site isolation is enabled)">
         Subframe: <ph name="SUBFRAME_SITE">$1<ex>https://youtube.com/</ex></ph>
@@ -5959,7 +5959,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Did you mean to change your search provider?
       </message>
       <message name="IDS_EXTENSION_SEARCH_OVERRIDDEN_DIALOG_TITLE_BACK_TO_GOOGLE" desc="The title of the dialog informing the user that the default search engine has been overridden by an extension, and asking if they want to change back to Growser.">
-        Change back to Growser Search?
+        Change back to Google Search?
       </message>
       <message name="IDS_EXTENSION_SEARCH_OVERRIDDEN_DIALOG_TITLE_BACK_TO_OTHER" desc="The title of the dialog informing the user that the default search engine has been overridden by an extension, and asking if they want to change back to their old provider.">
         Change back to <ph name="OLD_SEARCH_PROVIDER">$1<ex>DuckDuckGo</ex></ph>?
@@ -7206,7 +7206,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Allow Search to access Drive content?
       </message>
       <message name="IDS_NTP_DRIVE_DISCLAIMER_BODY" desc="Body text explaining how Drive data is handled in AIM.">
-        Your Google Drive content is accessed only to provide this file search feature. It is not used to improve Growser Search. Growser will not access your Google Drive content unless you explicitly upload a file.
+        Your Google Drive content is accessed only to provide this file search feature. It is not used to improve Google Search. Growser will not access your Google Drive content unless you explicitly upload a file.
       </message>
       <message name="IDS_NTP_DRIVE_DISCLAIMER_CANCEL" desc="Label on the button to cancel the Google Drive connection to AIM.">
         Cancel
@@ -8214,7 +8214,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         AI Mode
       </message>
       <message name="IDS_NTP_COMPOSE_ENTRYPOINT_A11Y_LABEL" desc="The accessibility label for the compose entrypoint in the searchbox on the New Tab Page.">
-        Ask AI Mode in Growser Search
+        Ask AI Mode in Google Search
       </message>
       <message name="IDS_NTP_COMPOSE_PLACEHOLDER_TEXT" desc="The placeholder for the input in the compose box.">
         Ask AI Mode
@@ -8588,26 +8588,26 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_NTP_MODULES_DISMISS_FOR_DAYS_BUTTON_TEXT" desc="Text shown on the dismiss button of an NTP module that specifies length of time in days.">
         Hide for <ph name="DISMISS_DAYS">$1<ex>5</ex></ph> days
       </message>
-      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_DISMISS_TOAST_MESSAGE" desc="Text shown on the toast on the NTP indicating that the Growser Calendar card has been dismissed.">
-        Growser Calendar hidden
+      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_DISMISS_TOAST_MESSAGE" desc="Text shown on the toast on the NTP indicating that the Google Calendar card has been dismissed.">
+        Google Calendar hidden
       </message>
-      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_DISABLE_TOAST_MESSAGE" desc="Text shown on the toast on the NTP indicating that the Growser Calendar card has been disabled.">
-        You won't see Growser Calendar on this page again
+      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_DISABLE_TOAST_MESSAGE" desc="Text shown on the toast on the NTP indicating that the Google Calendar card has been disabled.">
+        You won't see Google Calendar on this page again
       </message>
       <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_INFO" desc="Text shown in the body of the info dialog of the google calendar module.">
-        You’re seeing your calendar to help you easily navigate to your next event in Growser Calendar.
+        You’re seeing your calendar to help you easily navigate to your next event in Google Calendar.
         <ph name="BREAK">&lt;br&gt;</ph>
         <ph name="BREAK">&lt;br&gt;</ph>
         You can manage settings from the card menu or see more options in Customize Growser.
       </message>
-      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_MORE_ACTIONS" desc="Text shown on the tooltip for the 3 dot menu on the Growser Calendar card on the NTP.">
-        More actions for Growser Calendar
+      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_MORE_ACTIONS" desc="Text shown on the tooltip for the 3 dot menu on the Google Calendar card on the NTP.">
+        More actions for Google Calendar
       </message>
-      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_TITLE" desc="Title of the Growser Calendar module shown in various UIs for Customize Growser and the NTP." meaning="Title of feature for showing a glimpse of a user's Google Calendar.">
-        Growser Calendar
+      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_TITLE" desc="Title of the Google Calendar module shown in various UIs for Customize Growser and the NTP." meaning="Title of feature for showing a glimpse of a user's Google Calendar.">
+        Google Calendar
       </message>
-      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_DISABLE_BUTTON_TEXT" desc="Text shown on the disable button of a NTP Growser Calendar card.">
-        Don't show Growser Calendar
+      <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_DISABLE_BUTTON_TEXT" desc="Text shown on the disable button of a NTP Google Calendar card.">
+        Don't show Google Calendar
       </message>
       <message name="IDS_NTP_MODULES_MICROSOFT_SIGN_OUT_BUTTON_TEXT" desc="Button text for signing out of Microsoft for the Microsoft cards on the NTP." meaning="Sign out of account.">
         Sign out of Microsoft
@@ -8649,7 +8649,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         See more
       </message>
       <message name="IDS_NTP_MODULES_CALENDAR_SEE_MORE_ACCNAME" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the see more link is focused.">
-        See more in Growser Calendar
+        See more in Google Calendar
       </message>
       <message name="IDS_NTP_MODULES_KALEIDOSCOPE_TITLE" desc="Title shown in the header of the Kaleidoscope module.">
         Top picks for you
@@ -9004,17 +9004,17 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_ACCNAME_SIDE_PANEL_SELECTOR" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the side panel header combobox is focused.">
         Side Panel Selector
       </message>
-      <message name="IDS_ACCNAME_SIDE_PANEL_COMPANION_SHOW" desc="Screen reader announcement when the toolbar super G icon is focused and Growser Search side panel is closed.">
-        Open Growser Search side panel
+      <message name="IDS_ACCNAME_SIDE_PANEL_COMPANION_SHOW" desc="Screen reader announcement when the toolbar super G icon is focused and Google Search side panel is closed.">
+        Open Google Search side panel
       </message>
-      <message name="IDS_ACCNAME_SIDE_PANEL_COMPANION_HIDE" desc="Screen reader announcement when the toolbar super G icon is focused and Growser Search side panel is open.">
-        Close Growser Search side panel
+      <message name="IDS_ACCNAME_SIDE_PANEL_COMPANION_HIDE" desc="Screen reader announcement when the toolbar super G icon is focused and Google Search side panel is open.">
+        Close Google Search side panel
       </message>
       <message name="IDS_SIDE_PANEL_COMPANION_TITLE" desc="The name of the companion feature in the side panel combo box.">
         Search
       </message>
       <message name="IDS_SIDE_PANEL_COMPANION_TOOLBAR_TOOLTIP" desc="The tooltip for the companion feature toolbar button.">
-        Growser Search side panel
+        Google Search side panel
       </message>
       <message name="IDS_SIDE_PANEL_COMPANION_PROMO" desc="Text shown on promotional UI appearing next to the pinned companion button, which encourages users to try the feature.">
         Get a page summary, related searches, and other useful info about this page
@@ -9023,7 +9023,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         You can search this page with Growser to get additional useful info
       </message>
       <message name="IDS_SIDE_PANEL_COMPANION_PROMO_SCREEN_READER" is_accessibility_with_no_ui="true" desc="Screen reader announcement on the promotional UI appearing next to the pinned companion button, which excourages users to try the feature.">
-        To get a page summary, related searches, and other useful info about this page, select Growser Search side panel button in the toolbar
+        To get a page summary, related searches, and other useful info about this page, select Google Search side panel button in the toolbar
       </message>
       <message name="IDS_SIDE_PANEL_COMPANION_ERROR_PAGE_FIRST_LINE" desc="Text shown on the side panel for the companion feature when there is a network or other navigation error. The texts informs the user the panel can not be loaded.">
         Can't load this panel right now
@@ -10616,7 +10616,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Restore
       </message>
       <message name="IDS_ACCNAME_CLOSE_TAB" desc="The accessible name for the button that is used to close a specific tab.">
-        Close <ph name="TAB_NAME">$1<ex>Growser Search</ex></ph>
+        Close <ph name="TAB_NAME">$1<ex>Google Search</ex></ph>
       </message>
       <message name="IDS_ACCNAME_ZOOM_SET_DEFAULT" desc="The accessible description of the Reset button in the Zoom bubble.">
         Reset to default zoom level
@@ -10764,7 +10764,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         To add this page to your reading list, click the Bookmark icon
       </message>
       <message name="IDS_DESKTOP_PWA_INSTALL_PROMO" desc="Text shown on promotional UI appearing next to the PWA install icon">
-        To get back here quickly, install <ph name="APP_NAME">$1<ex>Growser Maps</ex></ph> by clicking the install button
+        To get back here quickly, install <ph name="APP_NAME">$1<ex>Google Maps</ex></ph> by clicking the install button
       </message>
       <message name="IDS_DESKTOP_PWA_LINK_CAPTURING_TEXT" desc="Text shown on app opened via link capturing.">
         You can change how links open in App settings
@@ -16450,8 +16450,8 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_TAB_AX_LABEL_NETWORK_ERROR_FORMAT" desc="Accessibility label text, when tab has encountered a network error such as being disconnected from the internet. Example: 'www.google.com - Network error'">
         <ph name="WINDOW_TITLE">$1<ex>www.google.com</ex></ph> - Network error
       </message>
-      <message name="IDS_TAB_AX_LABEL_CRASHED_FORMAT" desc="Accessibility label text, when a tab has crashed. Example: 'Growser Search - Crashed'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Crashed
+      <message name="IDS_TAB_AX_LABEL_CRASHED_FORMAT" desc="Accessibility label text, when a tab has crashed. Example: 'Google Search - Crashed'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Crashed
       </message>
       <message name="IDS_TAB_AX_LABEL_DESKTOP_CAPTURING_FORMAT" desc="Accessibility label text, when the tab is capturing and sharing desktop content using screen sharing. Example: 'Growser Hangouts - Desktop content shared'">
         <ph name="WINDOW_TITLE">$1<ex>Growser Hangouts</ex></ph> - Desktop content shared
@@ -16461,47 +16461,47 @@ Please help our engineers fix this problem. Tell us what happened right before y
           $1<ex>A VR-enabled website</ex>
         </ph> - VR presenting to headset
       </message>
-      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_LEFT_VIEW_FORMAT" desc="Accessibility label text for a tab, when it is the left tab of a split view. Example: 'Growser Search - Left view'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Left view
+      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_LEFT_VIEW_FORMAT" desc="Accessibility label text for a tab, when it is the left tab of a split view. Example: 'Google Search - Left view'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Left view
       </message>
-      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_RIGHT_VIEW_FORMAT" desc="Accessibility label text for a tab, when it is the right tab of a split view. Example: 'Growser Search - Right view'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Right view
+      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_RIGHT_VIEW_FORMAT" desc="Accessibility label text for a tab, when it is the right tab of a split view. Example: 'Google Search - Right view'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Right view
       </message>
-      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_TOP_VIEW_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text for a tab, when it is the top tab of a split view. Example: 'Growser Search - Top view'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Top view
+      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_TOP_VIEW_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text for a tab, when it is the top tab of a split view. Example: 'Google Search - Top view'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Top view
       </message>
-      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_BOTTOM_VIEW_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text for a tab, when it is the bottom tab of a split view. Example: 'Growser Search - Bottom view'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Bottom view
+      <message name="IDS_TAB_AX_LABEL_SPLIT_TAB_BOTTOM_VIEW_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text for a tab, when it is the bottom tab of a split view. Example: 'Google Search - Bottom view'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Bottom view
       </message>
-      <message name="IDS_TAB_AX_LABEL_UNNAMED_GROUP_FORMAT" desc="Accessibility label text for a tab, when it is in a group that has not been named by the user. Example: 'Growser Search - Part of unnamed group'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Part of unnamed group
+      <message name="IDS_TAB_AX_LABEL_UNNAMED_GROUP_FORMAT" desc="Accessibility label text for a tab, when it is in a group that has not been named by the user. Example: 'Google Search - Part of unnamed group'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Part of unnamed group
       </message>
-      <message name="IDS_TAB_AX_LABEL_NAMED_GROUP_FORMAT" desc="Accessibility label text for a tab, when it is in a group that has been named by the user. Example: 'Growser Search - Part of group MyGroupName'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Part of group <ph name="GROUP_NAME">$2</ph>
+      <message name="IDS_TAB_AX_LABEL_NAMED_GROUP_FORMAT" desc="Accessibility label text for a tab, when it is in a group that has been named by the user. Example: 'Google Search - Part of group MyGroupName'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Part of group <ph name="GROUP_NAME">$2</ph>
       </message>
-      <message name="IDS_TAB_AX_LABEL_PINNED_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when a tab is pinned. Example: 'Growser Search - Pinned'">
-        <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Pinned
+      <message name="IDS_TAB_AX_LABEL_PINNED_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when a tab is pinned. Example: 'Google Search - Pinned'">
+        <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Pinned
       </message>
       <if expr="is_chromeos">
-        <message name="IDS_TAB_AX_LABEL_PERMISSION_REQUESTED_FORMAT" desc="Accessibility label text for ChromeOS, when a tab has a pending request. Example: 'Growser Search - Permission requested, press F6 to respond'.">
-          <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Permission requested, press Ctrl + Forward to respond
+        <message name="IDS_TAB_AX_LABEL_PERMISSION_REQUESTED_FORMAT" desc="Accessibility label text for ChromeOS, when a tab has a pending request. Example: 'Google Search - Permission requested, press F6 to respond'.">
+          <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Permission requested, press Ctrl + Forward to respond
         </message>
       </if>
       <if expr="is_macosx">
-        <message name="IDS_TAB_AX_LABEL_PERMISSION_REQUESTED_FORMAT" desc="Accessibility label text for MacOS, when a tab has a pending request. Example: 'Growser Search - Permission requested, press F6 to respond'.">
-          <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Permission requested, press ⌘ + Option + Up arrow to respond
+        <message name="IDS_TAB_AX_LABEL_PERMISSION_REQUESTED_FORMAT" desc="Accessibility label text for MacOS, when a tab has a pending request. Example: 'Google Search - Permission requested, press F6 to respond'.">
+          <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Permission requested, press ⌘ + Option + Up arrow to respond
         </message>
       </if>
       <if expr="not is_chromeos and not is_macosx and toolkit_views">
-        <message name="IDS_TAB_AX_LABEL_PERMISSION_REQUESTED_FORMAT" desc="Accessibility label text for Windows, Linux or Fuchsia, when a tab has a pending request. Example: 'Growser Search - Permission requested, press F6 to respond'.">
-          <ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph> - Permission requested, press F6 to respond
+        <message name="IDS_TAB_AX_LABEL_PERMISSION_REQUESTED_FORMAT" desc="Accessibility label text for Windows, Linux or Fuchsia, when a tab has a pending request. Example: 'Google Search - Permission requested, press F6 to respond'.">
+          <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Permission requested, press F6 to respond
         </message>
       </if>
-      <message name="IDS_GROUP_AX_LABEL_UNNAMED_GROUP_FORMAT" desc="Spoken by screen readers when a tab group header that has not been named by the user gets focused but is not visually rendered. Example: 'Unnamed group - Growser Search and 3 other tabs - Expanded'">
-       <ph name="SHARE_STATE">$1<ex>Shared</ex></ph> unnamed group - <ph name="GROUP_CONTENTS">$2<ex>Growser Search and 3 other tabs</ex></ph> - <ph name="COLLAPSED_STATE">$3</ph>
+      <message name="IDS_GROUP_AX_LABEL_UNNAMED_GROUP_FORMAT" desc="Spoken by screen readers when a tab group header that has not been named by the user gets focused but is not visually rendered. Example: 'Unnamed group - Google Search and 3 other tabs - Expanded'">
+       <ph name="SHARE_STATE">$1<ex>Shared</ex></ph> unnamed group - <ph name="GROUP_CONTENTS">$2<ex>Google Search and 3 other tabs</ex></ph> - <ph name="COLLAPSED_STATE">$3</ph>
       </message>
-      <message name="IDS_GROUP_AX_LABEL_NAMED_GROUP_FORMAT" desc="Spoken by screen readers when a tab group header that has been named by the user gets focused but is not visually rendered. Example: 'Group MyGroupName - Growser Search and 3 other tabs - Collapsed'">
-       <ph name="SHARE_STATE">$1<ex>Shared</ex></ph> group <ph name="GROUP_NAME">$2</ph> - <ph name="GROUP_CONTENTS">$3<ex>Growser Search and 3 other tabs</ex></ph> - <ph name="COLLAPSED_STATE">$4</ph>
+      <message name="IDS_GROUP_AX_LABEL_NAMED_GROUP_FORMAT" desc="Spoken by screen readers when a tab group header that has been named by the user gets focused but is not visually rendered. Example: 'Group MyGroupName - Google Search and 3 other tabs - Collapsed'">
+       <ph name="SHARE_STATE">$1<ex>Shared</ex></ph> group <ph name="GROUP_NAME">$2</ph> - <ph name="GROUP_CONTENTS">$3<ex>Google Search and 3 other tabs</ex></ph> - <ph name="COLLAPSED_STATE">$4</ph>
       </message>
       <message name="IDS_GROUP_AX_LABEL_COLLAPSED" desc="Used as part of the accessibility label text of a group header for a collapsed tab group.">
         Collapsed
@@ -16546,16 +16546,16 @@ Please help our engineers fix this problem. Tell us what happened right before y
         Tab moved to end of tabstrip
       </message>
       <message name="IDS_TAB_AX_ANNOUNCE_TAB_ADDED_TO_UNNAMED_GROUP" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the user inputs a hotkey for moving the currently-selected tab and it results in the tab being added to a tab group with no title">
-        Tab moved into unnamed group - <ph name="GROUP_CONTENTS">$1<ex>Growser Search and 3 other tabs</ex></ph>
+        Tab moved into unnamed group - <ph name="GROUP_CONTENTS">$1<ex>Google Search and 3 other tabs</ex></ph>
       </message>
       <message name="IDS_TAB_AX_ANNOUNCE_TAB_ADDED_TO_NAMED_GROUP" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the user inputs a hotkey for moving the currently-selected tab and it results in the tab being added to a tab group with a title">
-        Tab moved into group <ph name="GROUP_NAME">$1</ph> - <ph name="GROUP_CONTENTS">$2<ex>Growser Search and 3 other tabs</ex></ph>
+        Tab moved into group <ph name="GROUP_NAME">$1</ph> - <ph name="GROUP_CONTENTS">$2<ex>Google Search and 3 other tabs</ex></ph>
       </message>
       <message name="IDS_TAB_AX_ANNOUNCE_TAB_REMOVED_FROM_UNNAMED_GROUP" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the user inputs a hotkey for moving the currently-selected tab and it results in the tab being removed from a tab group with no title">
-        Tab removed from unnamed group - <ph name="GROUP_CONTENTS">$1<ex>Growser Search and 3 other tabs</ex></ph>
+        Tab removed from unnamed group - <ph name="GROUP_CONTENTS">$1<ex>Google Search and 3 other tabs</ex></ph>
       </message>
       <message name="IDS_TAB_AX_ANNOUNCE_TAB_REMOVED_FROM_NAMED_GROUP" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the user inputs a hotkey for moving the currently-selected tab and it results in the tab being removed from a tab group with a title">
-        Tab removed from group <ph name="GROUP_NAME">$1</ph> - <ph name="GROUP_CONTENTS">$2<ex>Growser Search and 3 other tabs</ex></ph>
+        Tab removed from group <ph name="GROUP_NAME">$1</ph> - <ph name="GROUP_CONTENTS">$2<ex>Google Search and 3 other tabs</ex></ph>
       </message>
       <message name="IDS_PAGE_LOADING_AX_TITLE_FORMAT" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the back/forward button is focused and has been pressed. If the title of the page can be obtained, it will be included. Example: 'Loading Growser News'.">
           Loading <ph name="WINDOW_TITLE">$1<ex>Growser News</ex></ph>
@@ -16776,23 +16776,23 @@ Please help our engineers fix this problem. Tell us what happened right before y
         <then>
           <message name="IDS_WEBHID_SYSTEM_TRAY_ICON_EXTENSION_LIST" desc="Text for the WebHID pinned notification message.">
             {NUM_EXTENSION, plural,
-            =1 {<ph name="EXTENSION1">{1}<ex>Growser Translate</ex></ph> is accessing HID devices}
-            =2 {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Growser Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph>}
-            other {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Growser Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph> +{3} more}}
+            =1 {<ph name="EXTENSION1">{1}<ex>Google Translate</ex></ph> is accessing HID devices}
+            =2 {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Google Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph>}
+            other {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Google Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph> +{3} more}}
           </message>
           <message name="IDS_WEBUSB_SYSTEM_TRAY_ICON_EXTENSION_LIST" desc="Text for the WebUSB pinned notification message.">
             {NUM_EXTENSION, plural,
-            =1 {<ph name="EXTENSION1">{1}<ex>Growser Translate</ex></ph> is accessing USB devices}
-            =2 {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Growser Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph>}
-            other {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Growser Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph> +{3} more}}
+            =1 {<ph name="EXTENSION1">{1}<ex>Google Translate</ex></ph> is accessing USB devices}
+            =2 {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Google Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph>}
+            other {Extensions accessing devices: <ph name="EXTENSION1">{1}<ex>Google Translate</ex></ph>, <ph name="EXTENSION2">{2}<ex>Secure Shell</ex></ph> +{3} more}}
           </message>
         </then>
         <else>
           <message name="IDS_DEVICE_CONNECTED_BY_EXTENSION" desc="Text for the WebHID or WebUSB system tray icon button that displays how many active connections for the extension and opens the extension's site setting page.">
             {NUM_CONNECTION, plural,
-            =0 {Extension "<ph name="EXTENSION">{1}<ex>Growser Translate</ex></ph>" was accessing devices}
-            =1 {Extension "<ph name="EXTENSION">{1}<ex>Growser Translate</ex></ph>" is accessing {0} device}
-            other {Extension "<ph name="EXTENSION">{1}<ex>Growser Translate</ex></ph>" is accessing {0} devices}}
+            =0 {Extension "<ph name="EXTENSION">{1}<ex>Google Translate</ex></ph>" was accessing devices}
+            =1 {Extension "<ph name="EXTENSION">{1}<ex>Google Translate</ex></ph>" is accessing {0} device}
+            other {Extension "<ph name="EXTENSION">{1}<ex>Google Translate</ex></ph>" is accessing {0} devices}}
           </message>
         </else>
       </if>
@@ -18964,10 +18964,10 @@ Please help our engineers fix this problem. Tell us what happened right before y
       Your security preferences do not allow installation of isolated web apps. <ph name="CHANGE_PREFERENCE">$1<ex>Change your preferences</ex></ph>.
     </message>
     <message name="IDS_IWA_INSTALLER_ALREADY_INSTALLED_TITLE" desc="Title of an error dialog shown when the bundle trying to be installed is already installed.">
-      <ph name="APP_NAME">$1<ex>Growser Maps</ex></ph> is already installed
+      <ph name="APP_NAME">$1<ex>Google Maps</ex></ph> is already installed
     </message>
     <message name="IDS_IWA_INSTALLER_ALREADY_INSTALLED_SUBTITLE" desc="Subtitle of an error dialog shown when the bundle trying to be installed is already installed.">
-      <ph name="APP_NAME">$1<ex>Growser Maps</ex></ph> version <ph name="APP_VERSION">$2<ex>1.0</ex></ph> is already installed on this device
+      <ph name="APP_NAME">$1<ex>Google Maps</ex></ph> version <ph name="APP_VERSION">$2<ex>1.0</ex></ph> is already installed on this device
     </message>
     <message name="IDS_IWA_INSTALLER_BODY_SCREENREADER_NAME" desc="Name that screen readers should call the body (top) section of the IWA installer UI.">
       Body
@@ -18988,7 +18988,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       This application will be installed on your device
     </message>
     <message name="IDS_IWA_INSTALLER_SHOW_METADATA_APP_NAME_LABEL" desc="Label before the Isolated Web App name in the pre-install app info summary screen">
-      Application: <ph name="APP_NAME">$1<ex>Growser Maps</ex></ph>
+      Application: <ph name="APP_NAME">$1<ex>Google Maps</ex></ph>
     </message>
     <message name="IDS_IWA_INSTALLER_SHOW_METADATA_APP_VERSION_LABEL" desc="Label before the Isolated Web App version in the pre-install app info summary screen">
       Version: <ph name="APP_VERSION">$1<ex>1.0.0</ex></ph>
@@ -19030,7 +19030,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       Retry
     </message>
     <message name="IDS_IWA_INSTALLER_SUCCESS_SUBTITLE" desc="Subtitle of the page shown after an Isolated Web App has successfully been installed.">
-      Congrats! <ph name="APP_NAME">$1<ex>Growser Maps</ex></ph> has been successfully installed on your device
+      Congrats! <ph name="APP_NAME">$1<ex>Google Maps</ex></ph> has been successfully installed on your device
     </message>
     <message name="IDS_IWA_INSTALLER_SUCCESS_FINISH" desc="Text of the close button shown on the page after an Isolated Web App has been successfully installed">
       Finish
@@ -19057,7 +19057,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       This bundle might be broken or compromised. Please close this window and download it again
     </message>
     <message name="IDS_IWA_SUB_APPS_INSTALLER_PARENT_APP_NAME" desc="Label before the Sub App's parent Isolated Web App name in the app related dialogs.">
-    Parent App: <ph name="APP_NAME">$1<ex>Growser Maps</ex></ph>
+    Parent App: <ph name="APP_NAME">$1<ex>Google Maps</ex></ph>
     </message>
     <message name="IDS_IWA_SUB_APPS_UNINSTALL_INFO" desc="Explanation shown in the uninstall dialog clarifying that removing this specific Sub App will not remove its parent app or other related Sub Apps.">
     This app was installed by <ph name="PARENT_APP_NAME">$1<ex>Growser Workspace</ex></ph>. Uninstalling <ph name="APP_NAME">$2<ex>Docs</ex></ph> does not affect <ph name="PARENT_APP_NAME">$1<ex>Growser Workspace</ex></ph> or any other apps it has installed.

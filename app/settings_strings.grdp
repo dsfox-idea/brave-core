@@ -326,14 +326,14 @@
     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_GLIC" desc="Label for configuring Gemini side panel alignment.">
       Gemini
     </message>
-    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS" desc="Label for configuring Growser Search AI Mode side panel alignment.">
-      Growser Search AI Mode
+    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS" desc="Label for configuring Google Search AI Mode side panel alignment.">
+      Google Search AI Mode
     </message>
     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CHROME_PANELS" desc="Label for the default Growser Panels alignment setting.">
       Growser Panels
     </message>
     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_A11Y_LABEL" is_accessibility_with_no_ui="true" desc="Accessible label for side panel alignment dropdown menus, combining the side panel item name and the side panel position category name for screen readers.">
-      <ph name="ITEM_NAME">$1<ex>Growser Search AI Mode</ex></ph> <ph name="CATEGORY_NAME">$2<ex>Side panel position</ex></ph>
+      <ph name="ITEM_NAME">$1<ex>Google Search AI Mode</ex></ph> <ph name="CATEGORY_NAME">$2<ex>Side panel position</ex></ph>
     </message>
     <message name="IDS_SETTINGS_TAB_SEARCH_POSITION" desc="Title for the tab search section. Allows the user to toggle which side the side panel is displayed on.">
       Tab search position
@@ -564,8 +564,8 @@
     <message name="IDS_AUTOFILL_EDIT_SERVER_CREDIT_CARD" desc="The text shown in the secondary action menu button to direct users to pay.google.com to edit the information of credit cards stored in Google Payments.">
       Edit in Google Pay
     </message>
-    <message name="IDS_AUTOFILL_EDIT_SERVER_CREDIT_CARD_IN_WALLET" desc="The text shown in the secondary action menu button to direct users to wallet.google.com to edit the information of credit cards stored in Growser Wallet.">
-      Edit in Growser Wallet
+    <message name="IDS_AUTOFILL_EDIT_SERVER_CREDIT_CARD_IN_WALLET" desc="The text shown in the secondary action menu button to direct users to wallet.google.com to edit the information of credit cards stored in Google Wallet.">
+      Edit in Google Wallet
     </message>
     <message name="IDS_AUTOFILL_VIRTUAL_CARD_TURNED_ON_LABEL" desc="The text shown next to the card summary to indicate that a virtual card has been enabled for the credit card. Virtual cards are credit cards generated from the actual cards and provide extra security.">
       Virtual card turned on
@@ -606,14 +606,14 @@
     <message name="IDS_SETTINGS_LOCAL_PAYMENT_METHOD_REMOVE_CONFIRMATION_DESCRIPTION" desc="The notice/warning for the user before the card or IBAN (International Bank Account Number) deletion.">
       This payment method will be deleted from this device
     </message>
-    <message name="IDS_SETTINGS_GOOGLE_WALLET" desc="Label used to differentiate when an Autofill AI entity (such as vehicle information) is stored in Growser Wallet.">
-      Growser Wallet
+    <message name="IDS_SETTINGS_GOOGLE_WALLET" desc="Label used to differentiate when an Autofill AI entity (such as vehicle information) is stored in Google Wallet.">
+      Google Wallet
     </message>
-    <message name="IDS_SETTINGS_PAYMENTS_MANAGE_LOYALTY_CARDS_AND_PAYMENT_METHODS" desc="Shown in the payments section of settings. Descriptive text to inform the user that payment methods and loyalty cards can be accessed via link. Growser Wallet should not be translated because it is the product name. Has two links that opens different pages on Growser Wallet.">
-     Visit Growser Wallet to add or manage <ph name="BEGIN_LINK_LOYALTY_CARDS">&lt;a href="$1" target="_blank"&gt;</ph>loyalty cards<ph name="END_LINK_LOYALTY_CARDS">&lt;/a&gt;</ph> or Google Pay <ph name="BEGIN_LINK_PAYMENT_METHODS">&lt;a href="$2" target="_blank"&gt;</ph>payment methods<ph name="END_LINK_PAYMENT_METHODS">&lt;/a&gt;</ph>
+    <message name="IDS_SETTINGS_PAYMENTS_MANAGE_LOYALTY_CARDS_AND_PAYMENT_METHODS" desc="Shown in the payments section of settings. Descriptive text to inform the user that payment methods and loyalty cards can be accessed via link. Google Wallet should not be translated because it is the product name. Has two links that opens different pages on Google Wallet.">
+     Visit Google Wallet to add or manage <ph name="BEGIN_LINK_LOYALTY_CARDS">&lt;a href="$1" target="_blank"&gt;</ph>loyalty cards<ph name="END_LINK_LOYALTY_CARDS">&lt;/a&gt;</ph> or Google Pay <ph name="BEGIN_LINK_PAYMENT_METHODS">&lt;a href="$2" target="_blank"&gt;</ph>payment methods<ph name="END_LINK_PAYMENT_METHODS">&lt;/a&gt;</ph>
     </message>
     <message name="IDS_SETTINGS_REMOTE_WALLET_PASSES_LINK_LABEL" desc="The title and ARIA (accessibility) label for a link in Growser settings that opens the payment methods settings on https://wallet.google.com/wallet/passes. Note that the ARIA role and the link icon already convey that this is a link that will be opened when you click on it. Therefore, the message does not contain a verb.">
-      Your Growser Wallet passes
+      Your Google Wallet passes
     </message>
     <message name="IDS_SETTINGS_PAYMENTS_SAVED_TO_THIS_DEVICE_ONLY" desc="Shown in the payments section of settings. Descriptive text to inform the user that this credit card will be saved to local device only.">
      This card will be saved to this device only
@@ -628,7 +628,7 @@
       Your payment methods in Google Pay
     </message>
     <message name="IDS_SETTINGS_REMOTE_PAYMENT_METHODS_WALLET_LINK_LABEL" desc="The title and ARIA (accessibility) label for a link in chrome://settings/payments that opens the payment methods settings on https://wallet.google.com. Note that the ARIA role and the link icon already convey that this is a link that will be opened when you click on it. Therefore, the message does not contain a verb.">
-      Your payment methods in Growser Wallet
+      Your payment methods in Google Wallet
     </message>
     <message name="IDS_SETTINGS_NAME_ON_CREDIT_CARD" desc="The title for the input that lets users modify the name on the credit card.">
       Name on card
@@ -775,7 +775,7 @@
       * <ph name="FIELD_LIST">$1<ex>Name, Address, or Phone Number</ex></ph> is required
     </message>
     <message name="IDS_SETTINGS_WALLETABLE_PASS_DETECTION_TOGGLE_LABEL" desc="Label for the toggle in Settings that allows managing the full page save settings for wallet.">
-      Save info to Growser Wallet from pages you view
+      Save info to Google Wallet from pages you view
     </message>
     <message name="IDS_SETTINGS_WALLETABLE_PASS_DETECTION_TOGGLE_SUB_LABEL" desc="The sub-label of the page in Settings that allows managing the full page save settings for wallet.">
       Access your passes, like event tickets and loyalty cards, from your device
@@ -790,7 +790,7 @@
       To offer suggestions and improve this feature, the URL and full page content of the site you visit are shared with Growser
     </message>
     <message name="IDS_SETTINGS_WALLETABLE_PASS_DETECTION_TO_CONSIDER_DATA_STORAGE" desc="Bullet 2 of 2 that appears beneath the 'Things to consider' title for wallet.">
-      Your info is available in Growser Wallet on any signed-in device
+      Your info is available in Google Wallet on any signed-in device
     </message>
 
     <if expr="is_win or is_macosx">
@@ -849,10 +849,10 @@
       Remove this info from Growser autofill?
     </message>
     <message name="IDS_SETTINGS_HOME_ADDRESS_REMOVE_CONFIRMATION_DIALOG_NOTICE" desc="Body for the dialog that asks for confirmation to remove the selected home address from Growser.">
-      Your home address can help you get things done across Growser services, like more relevant Search results and directions in Growser Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
+      Your home address can help you get things done across Growser services, like more relevant Search results and directions in Google Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
     </message>
     <message name="IDS_SETTINGS_WORK_ADDRESS_REMOVE_CONFIRMATION_DIALOG_NOTICE" desc="Body for the dialog that asks for confirmation to remove the selected work address from Growser.">
-      Your work address can help you get things done across Growser services, like more relevant Search results and directions in Growser Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
+      Your work address can help you get things done across Growser services, like more relevant Search results and directions in Google Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
     </message>
     <message name="IDS_SETTINGS_NAME_EMAIL_ADDRESS_REMOVE_CONFIRMATION_DIALOG_NOTICE" desc="Body for the dialog that asks for confirmation to remove the selected name and email address from Growser.">
       You can edit your name in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>
@@ -1208,13 +1208,13 @@
         Let websites know the languages you speak. They'll show content in those languages, when possible.
       </message>
       <message name="IDS_SETTINGS_LANGUAGES_OFFER_TO_ENABLE_TRANSLATE" desc="The label of the check-box that enables the prompt to translate a page.">
-        Use Growser Translate
+        Use Google Translate
       </message>
       <message name="IDS_SETTINGS_LANGUAGES_OFFER_TO_ENABLE_TRANSLATE_SUBLABEL" desc="The sublabel of the check-box that enables the prompt to translate a page.">
-        When on, Growser Translate will offer to translate sites into your preferred language. It can also automatically translate sites.
+        When on, Google Translate will offer to translate sites into your preferred language. It can also automatically translate sites.
       </message>
       <message name="IDS_SETTINGS_LANGUAGES_OFFER_TO_ENABLE_TRANSLATE_SUBLABEL_WITH_PDF" desc="The sublabel of the check-box that enables the prompt to translate a page or PDF.">
-  When on, Growser Translate will offer to translate sites and PDFs into your preferred language. It can also automatically translate sites.
+  When on, Google Translate will offer to translate sites and PDFs into your preferred language. It can also automatically translate sites.
 </message>
       <message name="IDS_SETTINGS_LANGUAGES_TRANSLATE_TARGET" desc="The label under a language's name in a list of enabled languages indicating that pages will be translated to this language.">
         This language is used when translating pages
@@ -1235,7 +1235,7 @@
         Remove <ph name="LANGUAGE_NAME">$1<ex>Swahili</ex></ph> from never offer translation languages
       </message>
       <message name="IDS_SETTINGS_TRANSLATE_PAGE_TITLE" desc="Name of the settings page which displays translate preferences.">
-        Growser Translate
+        Google Translate
       </message>
       <message name="IDS_SETTINGS_TARGET_TRANSLATE_LABEL" desc="Label for the element to select the target language">
         Translate into this language
@@ -3833,8 +3833,8 @@
     </message>
 
     <!-- Growser Search AI Mode and connected apps (AIM Workspace) -->
-    <message name="IDS_SETTINGS_GOOGLE_SEARCH_AI_MODE_WORKSPACE_LABEL" desc="Label of the setting row that opens connection settings for Growser Search AI Mode and Workspace connected apps.">
-      Growser Search AI Mode and connected apps
+    <message name="IDS_SETTINGS_GOOGLE_SEARCH_AI_MODE_WORKSPACE_LABEL" desc="Label of the setting row that opens connection settings for Google Search AI Mode and Workspace connected apps.">
+      Google Search AI Mode and connected apps
     </message>
     <message name="IDS_SETTINGS_GOOGLE_SEARCH_AI_MODE_WORKSPACE_SUBLABEL" desc="Sublabel of the setting row that opens connection settings for Growser Search AI Mode and Workspace connected apps. This sublabel explains that the user can manage the connection between search personalization services and their Growser Workspace apps (like Google Drive).">
       Manage the connection between Search services and Growser Workspace apps, like Google Drive
