@@ -1,5 +1,5 @@
 diff --git a/third_party/blink/renderer/platform/runtime_enabled_features.json5 b/third_party/blink/renderer/platform/runtime_enabled_features.json5
-index 36b777784f45f99e198ee531293df11ee8cd0388..0e8356be3679300536ca8894d1b89e9a1a77e2c9 100644
+index 36b777784f45f99e198ee531293df11ee8cd0388..2eba60bf6a1f1192dcc92148c7047868bec8a1df 100644
 --- a/third_party/blink/renderer/platform/runtime_enabled_features.json5
 +++ b/third_party/blink/renderer/platform/runtime_enabled_features.json5
 @@ -297,6 +297,7 @@
@@ -151,15 +151,6 @@ index 36b777784f45f99e198ee531293df11ee8cd0388..0e8356be3679300536ca8894d1b89e9a
        name: "ReduceUserAgentMinorVersion",
 +      base_feature_status: "enabled",  // feature state is enforced via plaster rewrite.
        status: "stable",
-     },
-     {
-@@ -6440,7 +6453,7 @@
-         "ChromeOS": "stable",
-         "default": "",
-       },
--      base_feature_status: "enabled",
-+      base_feature_status: "disabled",  // feature state is enforced via plaster rewrite.
-       copied_from_base_feature_if: "overridden",
      },
      {
 @@ -6615,6 +6628,7 @@
