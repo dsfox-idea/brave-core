@@ -4,6 +4,8 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import os.path
+import subprocess
+
 import override_utils
 
 
@@ -37,8 +39,40 @@ async def _customize_and_sign_chrome(original_function, paths, dist_config,
         type(base_config).inject_get_task_allow_entitlement = property(
             lambda self: False)
 
+        # growser (#166): and do not spctl-assess inside sign_chrome. Upstream
+        # turns run_spctl_assess on for notarize=STAPLE, saying in
+        # internal_config.py that the check "only makes sense when the binary
+        # was notarized and stapled" - but validate_app runs it during
+        # SIGNING, before notarization has happened. On an official build that
+        # is a guaranteed failure: spctl reports "rejected / Unnotarized
+        # Developer ID" and the packaging step dies AFTER the whole compile.
+        # (Worse, it dies obscurely: signing.py raises
+        # subprocess.CalledProcessError without importing subprocess, so the
+        # real reason is replaced by a NameError.) The assessment is not lost -
+        # build-release.sh checks spctl on the finished artifact, which is the
+        # only place the answer can be true.
+        type(base_config).run_spctl_assess = property(lambda self: False)
+
     try:
-        return await original_function(paths, dist_config, *args)
+        result = await original_function(paths, dist_config, *args)
+        # growser (#167): strip AFTER signing, which is the only moment that
+        # works. The app is COPIED into paths.work inside original_function
+        # (pipeline.py: "Copy the app to sign into the work dir"), so a strip
+        # before it runs cleans a directory that does not exist yet - the
+        # mistake this replaces. The copy carries com.apple.FinderInfo along
+        # from the source tree, and codesign --verify --deep --strict then
+        # refuses the bundle: "resource fork, Finder information, or similar
+        # detritus not allowed". Nothing in the pipeline notices - the DMG
+        # signs, notarizes and staples - and the INSTALLED browser quits
+        # uncleanly forever after, spinner and exit_type=Crashed.
+        #
+        # Removing the xattr does not harm the signature or the notarization
+        # (measured: spctl still accepted / Notarized Developer ID, stapler
+        # still worked); FinderInfo is precisely what codesign objects to.
+        app_path = os.path.join(paths.work, dist_config.app_dir)
+        if os.path.isdir(app_path):
+            subprocess.run(['xattr', '-rc', app_path], check=False)
+        return result
     finally:
         base_config.is_in_sign_chrome = value_before
 

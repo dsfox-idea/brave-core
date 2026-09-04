@@ -301,21 +301,10 @@ if (install_omaha4_with_pkg) {
   }
 }
 
-if (is_official_build && !skip_signing) {
-  if (is_release_channel) {
-    provisionprofile_basename = "release"
-  } else {
-    provisionprofile_basename = brave_channel
-  }
-  copy("copy_provisionprofile") {
-    sources = [ "${provisionprofile_basename}.provisionprofile" ]
-    outputs = [ "${packaging_dir}/${provisionprofile_basename}.24b42420108116ac21f215640e39f7d004e51498.provisionprofile" ]
-  }
-}
-
 action("package") {
   outputs = [
     dmg_path,
+
     # growser: no .pkg in outputs. The fork sets package_as_pkg=False in
     # internal_config.py (no Developer ID *Installer* certificate, only
     # *Application*), so sign_chrome does not produce a pkg. Listing it here
@@ -359,10 +348,19 @@ action("package") {
   }
   if (skip_signing) {
     args += [ "--skip_signing" ]
-  } else if (is_official_build) {
-    deps += [ ":copy_provisionprofile" ]
-    args += [ "--provisioning_profile_basename=$provisionprofile_basename" ]
   }
+
+  # growser (#166): no provisioning profile. Upstream embeds one for an
+  # official build, but a profile is an Apple document tied to an App ID and a
+  # team's distribution certificate - it is what App Store or
+  # special-entitlement distribution needs. We ship Developer ID plus
+  # notarization, which needs none, and we have no profile of our own: the
+  # files in this directory are Brave's, and the copy rule names its output
+  # with a checksum hardcoded from Brave's own (24b4242...), which the signer
+  # then fails to find because it derives the name from the file it expects
+  # (e3e5189...). Turning officialness on (#166) is what first reached this
+  # code, and it fails at the packaging step, after the whole build.
+  # Passing no basename makes parts.py skip the embed entirely.
   if (notarize) {
     args += [ "--notarize" ]
     notary_args = [
