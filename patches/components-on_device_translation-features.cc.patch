@@ -1,0 +1,15 @@
+diff --git a/components/on_device_translation/features.cc b/components/on_device_translation/features.cc
+index 23eec92ff27539488ab686c9f135126a5620aacd..3adca4a1d2221fbdad085d93e78d63925208901d 100644
+--- a/components/on_device_translation/features.cc
++++ b/components/on_device_translation/features.cc
+@@ -38,8 +38,9 @@ const base::FeatureParam<base::TimeDelta> kTranslationAPIServiceIdleTimeout{
+ const base::FeatureParam<size_t> kTranslationAPIMaxServiceCount{
+     &blink::features::kTranslationAPI, "TranslationAPIMaxServiceCount", 10};
+ 
++// kAutoDownloadTranslateLanguagePacks feature state is enforced via plaster rewrite.
+ BASE_FEATURE(kAutoDownloadTranslateLanguagePacks,
+-             base::FEATURE_DISABLED_BY_DEFAULT);
++             base::FEATURE_ENABLED_BY_DEFAULT);
+ 
+ const base::FeatureParam<std::string>
+     kAutoDownloadTranslateLanguagePacksLanguagePairs{

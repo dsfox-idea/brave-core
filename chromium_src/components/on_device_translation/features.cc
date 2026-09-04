@@ -30,13 +30,13 @@
 
 #undef kAutoDownloadTranslateLanguagePacksLanguagePairs
 
-#include "base/feature_override.h"
+// Growser-174: the feature's default is set from
+// rewrite/components/on_device_translation/features.cc.yaml now. Upstream
+// removed base/feature_override.h - and with it
+// OVERRIDE_FEATURE_DEFAULT_STATES - when they moved every such override to
+// plaster; only the language-pair param below still belongs here.
 
 namespace on_device_translation {
-
-OVERRIDE_FEATURE_DEFAULT_STATES({{
-    {kAutoDownloadTranslateLanguagePacks, base::FEATURE_ENABLED_BY_DEFAULT},
-}});
 
 const base::FeatureParam<std::string>
     kAutoDownloadTranslateLanguagePacksLanguagePairs{

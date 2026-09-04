@@ -1,0 +1,21 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  # Growser-70 (moved here by Growser-174): pre-install the translation model
+  # instead of waiting for a page to ask for it. The Translator API refuses to
+  # download anything without a user gesture, and our translation starts from
+  # browser UI - a click there gives the page no gesture at all, so
+  # availability sits at "downloadable" forever and nothing can bootstrap it
+  # from the page side.
+  #
+  # This used to be an OVERRIDE_FEATURE_DEFAULT_STATES block in
+  # chromium_src/components/on_device_translation/features.cc; upstream removed
+  # base/feature_override.h in their plaster migration, which is what took the
+  # build down 1h20m in.
+  - description: 'Ship kAutoDownloadTranslateLanguagePacks enabled.'
+    set_feature_flag_default_state:
+      feature_name: kAutoDownloadTranslateLanguagePacks
+      value: base::FEATURE_ENABLED_BY_DEFAULT
