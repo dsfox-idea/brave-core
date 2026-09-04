@@ -2298,7 +2298,7 @@ Farðu í <ph name="BEGIN_LINK"/>greiðslustillingar<ph name="END_LINK"/> til a�
 <translation id="4506599922270137252">Hafa samband við kerfisstjórann</translation>
 <translation id="4506763601327080673">Skrifaðu drög að ágripi</translation>
 <translation id="450710068430902550">Deilir með kerfisstjóra.</translation>
-<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ýttu á Tab og svo Enter til að þýða þessa síðu með Growser Translate</translation>
+<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ýttu á Tab og svo Enter til að þýða þessa síðu með Google Translate</translation>
 <translation id="4510703642214459906">Staður</translation>
 <translation id="4892470328555495647">Kort og heimilisföng eru fengin úr Growser og Growser reikningnum þínum (<ph name="ACCOUNT_EMAIL"/>). Þú getur haft umsjón með þeim í <ph name="BEGIN_LINK"/>stillingunum<ph name="END_LINK"/>.</translation>
 <translation id="4515847625438516456">Smábílar og borgarbílar</translation>
@@ -2643,7 +2643,7 @@ Farðu í <ph name="BEGIN_LINK"/>greiðslustillingar<ph name="END_LINK"/> til a�
 <translation id="5051254010007014901"><ph name="TOOLBELT_PRECEDING_MATCH_TEXT"/>, ýttu á flipann til að fá fleiri tiltækar leitarflýtileiðir eftir þessa leitartillögu</translation>
 <translation id="5052488928733955073">Vandamál kom upp við að fylla út upplýsingarnar þínar. Athugaðu tenginguna þína.</translation>
 <translation id="5052517576853118371">Virk umfjöllunarefni</translation>
-<translation id="4845759156174221500">Númer sýndarkorts verður fyllt út þegar þú gengur frá kaupum með þessu korti til að vernda raunupplýsingarnar þínar. Stjórna í Growser Wallet. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="4845759156174221500">Númer sýndarkorts verður fyllt út þegar þú gengur frá kaupum með þessu korti til að vernda raunupplýsingarnar þínar. Stjórna í Google Wallet. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
 <translation id="5056425809654826431">{NUM_FILES,plural, =1{Losaðu um pláss (<ph name="DISK_SPACE_SIZE"/>) í tækinu þínu til að senda þessa skrá með nærdeilingu}one{Losaðu um pláss (<ph name="DISK_SPACE_SIZE"/>) í tækinu þínu til að senda þessa skrá með nærdeilingu}other{Losaðu um pláss (<ph name="DISK_SPACE_SIZE"/>) í tækinu þínu til að senda þessar skrár með nærdeilingu}}</translation>
 <translation id="5056587122125565772">Búa til mynd</translation>
 <translation id="505757197798929356">Gefðu upp ástæðu opnunar (áskilið)</translation>
@@ -3027,7 +3027,7 @@ Farðu í <ph name="BEGIN_LINK"/>greiðslustillingar<ph name="END_LINK"/> til a�
 <translation id="5610142619324316209">Athuga tenginguna</translation>
 <translation id="5610807607761827392">Þú getur haft umsjón með kortum og heimilisföngum í <ph name="BEGIN_LINK"/>stillingunum<ph name="END_LINK"/>.</translation>
 <translation id="5611398002774823980">Vista á reikningi</translation>
-<translation id="2012723355262040739">Þýða þessa síðu með Growser Translate</translation>
+<translation id="2012723355262040739">Þýða þessa síðu með Google Translate</translation>
 <translation id="5612720917913232150"><ph name="URL"/> vill fá að nota staðsetningu tölvunnar</translation>
 <translation id="5613958591683399697">Spyrja <ph name="ENGINE_NAME"/></translation>
 <translation id="5614190747811328134">Notandatilkynning</translation>
@@ -3158,7 +3158,7 @@ Farðu í <ph name="BEGIN_LINK"/>greiðslustillingar<ph name="END_LINK"/> til a�
 <translation id="5820751560028604030">Lokað á staðbundið niðurhal</translation>
 <translation id="5826507051599432481">Almennt heiti (CN)</translation>
 <translation id="5830698870816298009">notkun og hreyfing myndavélar</translation>
-<translation id="8488282162676695335">Growser Wallet</translation>
+<translation id="8488282162676695335">Google Wallet</translation>
 <translation id="583281660410589416">Óþekkt</translation>
 <translation id="5832976493438355584">Læst</translation>
 <translation id="5837220895135257862">Losaðu um pláss á <ph name="CLOUD_PROVIDER"/> áður en þú reynir aftur</translation>
@@ -3328,7 +3328,7 @@ Farðu í <ph name="BEGIN_LINK"/>greiðslustillingar<ph name="END_LINK"/> til a�
 <translation id="6085149458302186532">Merkimiðar (litaðir)</translation>
 <translation id="6087312102907839798">Tengdar leitir</translation>
 <translation id="7851017866080575588">Flipar sem þú eyðir úr Growser ferlinum koma samt fram í samanburðartöflum</translation>
-<translation id="8165276822290438118">Growser Wallet lógóið</translation>
+<translation id="8165276822290438118">Google Wallet lógóið</translation>
 <translation id="6091691259076781835">Vistaðu þetta CVC-númer í tækinu þínu til að flýta fyrir greiðslu</translation>
 <translation id="6093599771645355227">Gulur 1</translation>
 <translation id="6093795393556121384">Kortið er staðfest</translation>
@@ -5079,7 +5079,7 @@ Farðu í <ph name="BEGIN_LINK"/>greiðslustillingar<ph name="END_LINK"/> til a�
 <translation id="8776789089819232268">Allar pantanirnar þínar</translation>
 <translation id="877985182522063539">A4</translation>
 <translation id="5756777435786575965">Þegar þú sendir beiðni um ítarlega sjálfvirka útfyllingu er notkunargögnum, beiðnum og upplýsingum um síður deilt með Brave til að bæta upplifun af sjálfvirkri útfyllingu</translation>
-<translation id="514805123051954646">Hnappurinn „Þýða síðu“, virkjaðu til að þýða þessa síðu með Growser Translate</translation>
+<translation id="514805123051954646">Hnappurinn „Þýða síðu“, virkjaðu til að þýða þessa síðu með Google Translate</translation>
 <translation id="8785658048882205566">Mótorhjól</translation>
 <translation id="8790007591277257123">Endu&amp;rtaka eyðingu</translation>
 <translation id="8790668801880409584">Vista og fylla út ferðaupplýsingar</translation>

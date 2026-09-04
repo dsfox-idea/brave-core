@@ -5932,7 +5932,7 @@
 <translation id="6696046606263842994">Подставить пароль</translation>
 <translation id="6392949597336980679">Входите на сайты со своими учётными записями</translation>
 <translation id="764039527863829425">Lorem <ph name="TRIGGER_TEXT"/> ipsum dolor sit amet.</translation>
-<translation id="3893842210062389199">Пропущено: устройство не подключено к Growser Cloud Management.</translation>
+<translation id="3893842210062389199">Пропущено: устройство не подключено к Google Cloud Management.</translation>
 <translation id="8725446099711639469"><ph name="SYNCABLE_PART"/>; <ph name="NON_SYNCABLE_PART"/></translation>
 <translation id="9022014388710162159">Изменить имя можно в <ph name="BEGIN_LINK"/>цепочке синхронизации Growser<ph name="END_LINK"/> <ph name="ACCOUNT"/></translation>
 <translation id="1283368694927385833">Чтобы удалить файлы cookie Growser с этого устройства, <ph name="BEGIN_LINK"/>выйдите из Growser<ph name="END_LINK"/>.</translation>
@@ -5970,12 +5970,12 @@
 <translation id="8091531337360854594">Чтобы использовать менеджер паролей со Связкой ключей macOS, перезапустите Growser и разрешите доступ к Связке ключей. Вкладки откроются снова после перезапуска.</translation>
 <translation id="7913985008041244680">Ваша поисковая система в Growser</translation>
 <translation id="7261463765917514051">Безопасная оплата с автозаполнением</translation>
-<translation id="8976201074166844880">Включите автозаполнение, чтобы безопасно платить в интернете. Данные карты шифруются в Growser Wallet.</translation>
-<translation id="1479421657434973844">Данные карты будут подставляться автоматически при оплате в интернете. Карты надежно хранятся в Growser Wallet.</translation>
+<translation id="8976201074166844880">Включите автозаполнение, чтобы безопасно платить в интернете. Данные карты шифруются в Google Wallet.</translation>
+<translation id="1479421657434973844">Данные карты будут подставляться автоматически при оплате в интернете. Карты надежно хранятся в Google Wallet.</translation>
 <translation id="667044980437620424">Автозаполнение включено</translation>
 <translation id="7055814742378298611">Теперь способы оплаты можно сохранять и подставлять при оплате в Growser. <ph name="LINK_TEXT"/></translation>
 <translation id="1507635939006264930">Включение автозаполнения</translation>
-<translation id="6122692344784127234">Настройки Growser Wallet применяются к данным, сохраненным из Growser</translation>
+<translation id="6122692344784127234">Настройки Google Wallet применяются к данным, сохраненным из Growser</translation>
 <translation id="2096183846792489672">Содержимое и адреса посещаемых страниц могут обрабатываться в защищенной области облака</translation>
 <translation id="5950372091762099512">Помогите Growser лучше понимать и заполнять сложные формы, безопасно обрабатывая данные на серверах Growser. Ваши данные остаются конфиденциальными, и никто их не просматривает.</translation>
 <translation id="3008410317623852235">Теперь можно находить и подставлять данные из Gmail и других сервисов.</translation>
@@ -5986,4 +5986,60 @@
 <translation id="7382980704744807223">Подозрительный файл</translation>
 <translation id="830868413617744215">Бета</translation>
 <translation id="4873312501243535625">Проверка медиафайлов</translation>
+<translation id="6091115085465716987">Логотип Growser Кошелька</translation>
+<translation id="6253380015872250643">Сохраните карту в Growser Кошельке</translation>
+<translation id="7062344833049251424">Чтобы оплачивать покупки быстрее, сохраните карту и платежный адрес в Growser Кошельке.</translation>
+<translation id="1413235258620101697">CVC-код этой карты будет зашифрован и сохранен в Growser Кошельке, чтобы вы могли оплачивать покупки быстрее.</translation>
+<translation id="4954891067389874142">Так вы сможете оплачивать покупки быстрее. Реквизиты карты будут зашифрованы в Growser Кошельке.</translation>
+<translation id="4599572944836204718">Так вы сможете быстрее оплачивать покупки через Google Pay. Реквизиты карты будут зашифрованы в Growser Кошельке.</translation>
+<translation id="6186962377036474023">После того как вы сохраните эту карту в Growser Кошельке, ее реквизиты будут заполняться автоматически при покупках в Growser.</translation>
+<translation id="828282277746732142">Сохраните код IBAN в Growser Кошельке</translation>
+<translation id="5398461103557553443">Чтобы в следующий раз этот код IBAN подставился автоматически, сохраните его в Growser Кошельке.</translation>
+<translation id="5053116470141135293">При оплате этой картой будет указан номер виртуальной. Это поможет защитить настоящие реквизиты. Изменить настройки можно в Growser Кошельке. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="1151858212483238980">Можно автоматически подставлять данные карт, сохраненных в Growser Кошельке</translation>
+<translation id="1205344127823614428">Можно автоматически подставлять данные карт, сохраненных в Growser Кошельке.</translation>
+<translation id="5848445080378515710">После проверки заказа войдите в аккаунт <ph name="BNPL_ISSUER_NAME"/> или создайте его. Этот аккаунт будет автоматически связан с Growser Кошельком.</translation>
+<translation id="8163468049564974856">Включите автозаполнение, чтобы безопасно платить в интернете. Данные карты шифруются в Google Wallet.</translation>
+<translation id="5717281954932320486">Данные карты будут подставляться автоматически при оплате в интернете. Карты надежно хранятся в Google Wallet.</translation>
+<translation id="7170930892977483182">Все защитные коды, сохраненные на вашем устройстве и в Growser Кошельке, будут удалены.</translation>
+<translation id="7412081313067625215">Карта сохранена в Growser Кошельке. В дальнейшем ее реквизиты будут автоматически подставляться при покупках.</translation>
+<translation id="1217736002299446702">Карта сохранена в Growser Кошельке. Теперь вам будет удобнее использовать ее в сервисах Growser.</translation>
+<translation id="4740434610174859636">Не удалось сохранить карту в Growser Кошельке. Она была сохранена в Growser на этом устройстве.</translation>
+<translation id="4126931475340193253">Этот код IBAN сохранен в Кошельке и может использоваться в сервисах Growser.</translation>
+<translation id="1583007191864786102">Не удалось сохранить код IBAN в Growser Кошельке. Он был сохранен в Growser на этом устройстве. Браузер предложит повторить попытку, когда вы снова воспользуетесь кодом IBAN.</translation>
+<translation id="376462579087900096">Не удалось сохранить код IBAN в Growser Кошельке. Он был сохранен в Growser на этом устройстве.</translation>
+<translation id="3018324413453812839">С домашним адресом сервисы Growser становятся лучше: например, вы получаете более подходящие результаты в Поиске и маршруты в Картах. Настроить или удалить адрес можно <ph name="BEGIN_LINK"/>в вашем аккаунте Growser, <ph name="ACCOUNT"/><ph name="END_LINK"/>.</translation>
+<translation id="4096490883822723823">С рабочим адресом сервисы Growser становятся лучше: например, вы получаете более подходящие результаты в Поиске и маршруты в Картах. Настроить или удалить адрес можно <ph name="BEGIN_LINK"/>в вашем аккаунте Growser, <ph name="ACCOUNT"/><ph name="END_LINK"/>.</translation>
+<translation id="7299769361777046949">Настроить карты постоянного клиента в Growser Кошельке</translation>
+<translation id="2450019289047528273">Способы оплаты и другие данные из Growser Кошелька</translation>
+<translation id="1125406338060147524">Настройки Google Wallet применяются к данным, сохраненным из Growser</translation>
+<translation id="6935077351544118151">Теперь вы можете автоматически заполнять данные карт постоянного клиента из Growser Кошелька</translation>
+<translation id="4169189393773057143">Чтобы изменить настройки карт постоянного клиента или отключить эти подсказки, перейдите в Growser Кошелек.</translation>
+<translation id="2326283484705860548">Теперь вы можете автоматически заполнять больше данных из Growser Кошелька</translation>
+<translation id="5831217499016131155">Growser Кошелек</translation>
+<translation id="4619669610757527494">Сохраните водительское удостоверение в Growser Кошельке</translation>
+<translation id="1912750443952232242">Сохраните удостоверение личности в Growser Кошельке</translation>
+<translation id="5447103258548475868">Сохраните паспорт в Growser Кошельке</translation>
+<translation id="760632772920590778">Сохраните данные автомобиля в Growser Кошельке</translation>
+<translation id="5914185423510719251">Сохраните номер KTN в Growser Кошельке</translation>
+<translation id="1449251255954293933">Сохраните данные Redress Number в Growser Кошельке</translation>
+<translation id="8393948304336153065">Обновите данные водительского удостоверения в Growser Кошельке</translation>
+<translation id="7570524564113479209">Обновите данные удостоверения личности в Growser Кошельке</translation>
+<translation id="3426672782316020729">Обновите паспортные данные в Growser Кошельке</translation>
+<translation id="2124081665399116863">Обновите данные об автомобиле в Growser Кошельке</translation>
+<translation id="4770909831299304090">Обновите данные KTN в Growser Кошельке</translation>
+<translation id="1732796940245838248">Обновите данные Redress Number в Growser Кошельке</translation>
+<translation id="8369722293913575142">Информацию не удалось сохранить в Growser Кошельке. Она добавлена в Growser на этом устройстве. Браузер предложит сохранить ее в Кошельке при следующем использовании.</translation>
+<translation id="3237427677128462778">Не удалось сохранить данные в Growser Кошелек.</translation>
+<translation id="5912796581727968237">Открыть Growser Кошелек</translation>
+<translation id="561165882404867731">Перевести эту страницу с помощью Growser Переводчика</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Нажмите Tab и затем Ввод, чтобы с помощью Growser Переводчика ознакомиться с содержанием страницы.</translation>
+<translation id="8781278378794969337">Кнопка "Перевести страницу". Нажмите ее, чтобы перевести эту страницу с помощью Growser Переводчика.</translation>
+<translation id="7582602800368606489">Быстро создать мероприятие в Growser Календаре</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Чтобы быстро создать мероприятие в Growser Календаре, нажмите Tab, а затем Ввод.</translation>
+<translation id="2009942480257059311">Кнопка "Создать мероприятие". Нажмите ее, чтобы быстро создать мероприятие в Growser Календаре.</translation>
+<translation id="161612500287664753">Спросить об этой странице у Growser Поиска</translation>
+<translation id="5000497292978544380">Режим ИИ в Growser Поиске</translation>
+<translation id="7297228218361240128">Сохраняйте в Growser Кошельке информацию с просматриваемых страниц</translation>
+<translation id="1829026591231985685">о сохранении информации в Growser Кошельке в настройках</translation>
 </translationbundle>

@@ -2658,7 +2658,7 @@ Du kan administrere innstillingene for denne kontoen ved å installere Family Li
 <translation id="3038612606416062604">Legg til en skriver manuelt</translation>
 <translation id="3038628620670416486">Finn knapper på musen</translation>
 <translation id="303955801043931176">Fanen er lukket</translation>
-<translation id="3565088180637574018">Kortene og billettene dine i Growser Wallet</translation>
+<translation id="3565088180637574018">Kortene og billettene dine i Google Wallet</translation>
 <translation id="304169924727249890">Bli med i fanegruppen med <ph name="OWNER_FIRST_NAME"/></translation>
 <translation id="3042097545107738107">Endre strategien for optimalisert lading.</translation>
 <translation id="3043016484125065343">Logg på for å se bokmerkene dine</translation>
@@ -6144,7 +6144,7 @@ Bruk Ctrl + Alt + lysstyrke ned for å zoome ut.</translation>
 <translation id="5784291589716625675">Endre språk for appen</translation>
 <translation id="7171242884588191792">Growser Filverktøy</translation>
 <translation id="5787420647064736989">Enhetsnavn</translation>
-<translation id="3481489625298495279">Gå til Growser Wallet for å legge til eller administrere <ph name="BEGIN_LINK_LOYALTY_CARDS"/>stamkundekort<ph name="END_LINK_LOYALTY_CARDS"/> eller Google Pay-<ph name="BEGIN_LINK_PAYMENT_METHODS"/>betalingsmåter<ph name="END_LINK_PAYMENT_METHODS"/></translation>
+<translation id="3481489625298495279">Gå til Google Wallet for å legge til eller administrere <ph name="BEGIN_LINK_LOYALTY_CARDS"/>stamkundekort<ph name="END_LINK_LOYALTY_CARDS"/> eller Google Pay-<ph name="BEGIN_LINK_PAYMENT_METHODS"/>betalingsmåter<ph name="END_LINK_PAYMENT_METHODS"/></translation>
 <translation id="5789581866075720267">For å importere passord til <ph name="BRAND"/> på denne enheten, velg en CSV-fil.</translation>
 <translation id="5790085346892983794">Fullført</translation>
 <translation id="5790651917470750848">Porten er allerede viderekoblet</translation>
@@ -6202,10 +6202,10 @@ Bruk Ctrl + Alt + lysstyrke ned for å zoome ut.</translation>
 <translation id="5828633471261496623">Skriver ut …</translation>
 <translation id="5829137022934788067">Fortell meg om dette valget</translation>
 <translation id="5829214552954466783">Del <ph name="CREDENTIAL_TYPE"/> for brukernavnet <ph name="USER_EMAIL"/></translation>
-<translation id="4505167298598179061">Betalingsmåtene dine i Growser Wallet</translation>
+<translation id="4505167298598179061">Betalingsmåtene dine i Google Wallet</translation>
 <translation id="5830512293931520102">Passordet ditt er kryptert og blir aldri sett av noen</translation>
 <translation id="5830720307094128296">L&amp;agre side som</translation>
-<translation id="8488282162676695335">Growser Wallet</translation>
+<translation id="8488282162676695335">Google Wallet</translation>
 <translation id="583179300286794292">Logget på som <ph name="SPAN_START"/><ph name="DRIVE_ACCOUNT_EMAIL"/><ph name="SPAN_END"/></translation>
 <translation id="5831950941058843834">Vil du slette nettstedsdata og tillatelser for <ph name="SITE_NAME"/>, alle undernettsteder og den tilhørende installerte appen?</translation>
 <translation id="583281660410589416">Ukjent</translation>
@@ -6689,7 +6689,7 @@ Bruk Ctrl + Alt + lysstyrke ned for å zoome ut.</translation>
 <translation id="6212168817037875041">Slå av skjermen</translation>
 <translation id="6212752530110374741">Send linken på e-post</translation>
 <translation id="6214106213498203737">Vannfarger</translation>
-<translation id="5940545598733494637">Rediger i Growser Wallet</translation>
+<translation id="5940545598733494637">Rediger i Google Wallet</translation>
 <translation id="621470880408090483">Ikke la nettsteder koble til Bluetooth-enheter</translation>
 <translation id="6215039389782910006">{1,plural, =1{For å beskytte passordene dine låses <ph name="BRAND"/> etter 1 minutt uten aktivitet}other{For å beskytte passordene dine låses <ph name="BRAND"/> etter # minutter uten aktivitet}}</translation>
 <translation id="6216154119179790291">Bla til første fane</translation>
@@ -7483,7 +7483,7 @@ Du har # passord til som er utsatt for sikkerhetsbrudd. Growser Passordlagring a
 <translation id="6832815922179448173">{MULTI_GROUP_TAB_COUNT,plural, =0{Vil du fjerne fanen og slette gruppen?}=1{Vil du fjerne fanene og slette gruppen?}other{Vil du fjerne fanene og slette gruppene?}}</translation>
 <translation id="6833479554815567477">Fanen er fjernet fra gruppen <ph name="GROUP_NAME"/> – <ph name="GROUP_CONTENTS"/></translation>
 <translation id="6833753236242482566">Balansert (anbefales)</translation>
-<translation id="4261412862774039180">Jobbadressen din kan hjelpe deg med å få ting gjort i Growser-tjenester, for eksempel mer relevante søkeresultater og veibeskrivelser i Growser Maps. Du kan endre eller slette adressen i <ph name="BEGIN_LINK"/>Growser-kontoen din <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
+<translation id="4261412862774039180">Jobbadressen din kan hjelpe deg med å få ting gjort i Growser-tjenester, for eksempel mer relevante søkeresultater og veibeskrivelser i Google Maps. Du kan endre eller slette adressen i <ph name="BEGIN_LINK"/>Growser-kontoen din <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
 <translation id="6838992358006915573">Forstørrelsesglasset følger ChromeVox-fokuset</translation>
 <translation id="6840155290835956714">Spør før noe sendes</translation>
 <translation id="6840184929775541289">Er ikke en sertifiseringsinstans</translation>
@@ -8071,7 +8071,7 @@ Du har # passord til som er utsatt for sikkerhetsbrudd. Growser Passordlagring a
 <translation id="7292195267473691167"><ph name="LOCALE"/> (<ph name="VARIANT"/>)</translation>
 <translation id="7293774463163321848">Søkeloggen, Gemini-loggen og passord kan slettes i innstillingene for administrering</translation>
 <translation id="7296503797589217366">Velg mappen <ph name="FOLDER_TITLE"/></translation>
-<translation id="5119862674579456673">Lagre informasjon i Growser Wallet fra sider du ser på</translation>
+<translation id="5119862674579456673">Lagre informasjon i Google Wallet fra sider du ser på</translation>
 <translation id="7297726121602187087">Mørk grønn</translation>
 <translation id="7298195798382681320">Anbefalt</translation>
 <translation id="7299515639584427954">Vil du bytte standardapp for støttede linker?</translation>
@@ -8718,7 +8718,7 @@ Trykk på en tilordnet bryter eller tast for å fjerne tilordningen.</translatio
 <translation id="7786889348652477777">&amp;Last inn appen på nytt</translation>
 <translation id="7787308148023287649">Vis på en annen skjerm</translation>
 <translation id="7788976206742181876">Omaha-forespørsel</translation>
-<translation id="2320538105463162259">Hjemmeadressen din kan hjelpe deg med å få ting gjort i Growser-tjenester, for eksempel mer relevante søkeresultater og veibeskrivelser i Growser Maps. Du kan endre eller slette adressen i <ph name="BEGIN_LINK"/>Growser-kontoen din <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
+<translation id="2320538105463162259">Hjemmeadressen din kan hjelpe deg med å få ting gjort i Growser-tjenester, for eksempel mer relevante søkeresultater og veibeskrivelser i Google Maps. Du kan endre eller slette adressen i <ph name="BEGIN_LINK"/>Growser-kontoen din <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
 <translation id="7791543448312431591">Legg til</translation>
 <translation id="7792388396321542707">Stopp deling</translation>
 <translation id="779308894558717334">Lys grønn</translation>
@@ -9104,7 +9104,7 @@ Oppbevar nøkkelfilen på et trygt sted. Du får bruk for den når du skal oppre
 <translation id="8084417885464859041">Bruk Gemini trygt</translation>
 <translation id="8084429490152575036">Innstillinger for mobil-APN</translation>
 <translation id="8084628902026812045">Dette nettstedet bruker ikke en sikker tilkobling, og filen kan ha blitt tuklet med</translation>
-<translation id="1687447852120925634">Informasjonen din er tilgjengelig i Growser Wallet på alle enheter du er logget på</translation>
+<translation id="1687447852120925634">Informasjonen din er tilgjengelig i Google Wallet på alle enheter du er logget på</translation>
 <translation id="8086015605808120405">Konfigurerer <ph name="PRINTER_NAME"/> …</translation>
 <translation id="8086121155774250556">Denne fanen deler skjermen din</translation>
 <translation id="80866457114322936">{NUM_FILES,plural, =1{Denne filen er kryptert. Spør eieren om å dekryptere den.}other{Noen av disse filene er krypterte. Spør eieren om å dekryptere dem.}}</translation>
@@ -10831,11 +10831,11 @@ Dette kan omfatte informasjon om installert programvare, filer, nettleseren, enh
     <ph name="BEGIN_DESCRIPTION3"/>Organisasjonen kan få ekstern tilgang til enhetsøkter for feilsøkingsformål.<ph name="END_DESCRIPTION3"/>
     <ph name="BEGIN_SUBTITLE4"/><ph name="BEGIN_BOLD"/>Aktivering av tilgang<ph name="END_BOLD"/><ph name="END_SUBTITLE4"/>
     <ph name="BEGIN_DESCRIPTION4"/>Organisasjonens apper, tjenester og nettverk er kanskje bare tilgjengelige på registrerte enheter.<ph name="END_DESCRIPTION4"/></translation>
-<translation id="1991829061375381344">Du har ikke nok ledige lisenser til å registrere denne Growser Meet-enheten. Kontakt forhandleren din for å kjøpe flere. Hvis du mener dette er en feil, kan du kontakte forhandleren din.</translation>
+<translation id="1991829061375381344">Du har ikke nok ledige lisenser til å registrere denne Google Meet-enheten. Kontakt forhandleren din for å kjøpe flere. Hvis du mener dette er en feil, kan du kontakte forhandleren din.</translation>
 <translation id="2004413981947727241">Bruk passordene dine på alle enheter</translation>
 <translation id="200928901437634269">Bruk barnets Growser-konto eller en skolekonto. Du kan også konfigurere foreldrekontroll.</translation>
 <translation id="2013550551806600826">Prøv det. Slå innstillingen av eller på, og rull med to fingre på styreflaten i testområdet. Du kan også finne dette senere i Innstillinger &gt; Enhet &gt; Mus og styreflate.</translation>
-<translation id="2016574333161572915">Growser Meet-enhetene dine er klare til konfigurering</translation>
+<translation id="2016574333161572915">Google Meet-enhetene dine er klare til konfigurering</translation>
 <translation id="2018189721942291407">Er du ikke sikker på om du skal registrere deg?</translation>
 <translation id="2040460856718599782">Beklager!  Det oppsto en feil da vi forsøkte å autentisere deg. Kontroller påloggingslegitimasjonen, og prøv på nytt.</translation>
 <translation id="2088092308059522196">Registrering støttes bare etter at du har installert <ph name="DEVICE_OS"/>.</translation>
@@ -10859,7 +10859,7 @@ Dette kan omfatte informasjon om installert programvare, filer, nettleseren, enh
 <translation id="2387052489799050037">Gå til startsiden</translation>
 <translation id="2395616325548404795"><ph name="DEVICE_TYPE"/>-enheten din er nå registrert for bedriftsadministrering. Den sendte imidlertid ikke ressurs- og plasseringsinformasjon. Denne informasjonen må legges inn manuelt i administrasjonskonsollen for denne enheten.</translation>
 <translation id="2418307627282545839">Hold det lett og luftig</translation>
-<translation id="243179355394256322">Organisasjonen din begrenser registrering av enheter til kun autoriserte brukere. Denne brukeren er ikke autorisert til å registrere enheter. Sørg for at brukeren har administratorrettigheten «Registrer Growser Meet-enheter» i Brukere-delen av administrasjonskonsollen.</translation>
+<translation id="243179355394256322">Organisasjonen din begrenser registrering av enheter til kun autoriserte brukere. Denne brukeren er ikke autorisert til å registrere enheter. Sørg for at brukeren har administratorrettigheten «Registrer Google Meet-enheter» i Brukere-delen av administrasjonskonsollen.</translation>
 <translation id="24786041351753425">Slå på tjenesten for datagjenoppretting.</translation>
 <translation id="2485681265915754872">Vilkår for bruk av Google Play</translation>
 <translation id="2501278716633472235">Gå tilbake</translation>
@@ -10884,7 +10884,7 @@ Dette kan omfatte informasjon om installert programvare, filer, nettleseren, enh
 <translation id="2722540561488096675">Enheten slår seg av om <ph name="TIME_LEFT"/>. Fjern USB-enheten før du slår enheten på igjen. Deretter kan du begynne å bruke <ph name="DEVICE_OS"/>.</translation>
 <translation id="2729661575355442512"><ph name="BEGIN_PARAGRAPH1"/>Når Posisjonsnøyaktighet er på, brukes informasjon om trådløse signaler, for eksempel fra wifi-tilgangspunkter og mobilmaster, sammen med sensordata fra enheten, for eksempel fra akselerometeret og gyroskopet, for å anslå en mer nøyaktig enhetsposisjon. Android-apper og -tjenester bruker denne for å levere posisjonsbaserte funksjoner. For å gjøre dette samler Growser jevnlig inn informasjon om enhetssensorer og trådløse signaler i nærheten av denne enheten for å bidra til crowdsourcing av posisjonene til trådløse signaler.<ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>Growser bruker denne informasjonen som er samlet inn fra denne enheten, til å forbedre posisjonsnøyaktigheten og posisjonsbaserte tjenester og generelt forbedre, levere og vedlikeholde Braves tjenester. Vi behandler denne informasjonen basert på Braves og tredjeparters berettigede interesser i å oppfylle brukernes behov. Denne informasjonen brukes ikke til å identifisere enkeltpersoner.<ph name="END_PARAGRAPH2"/>
-    <ph name="BEGIN_PARAGRAPH3"/>Du kan når som helst slå av Posisjonsnøyaktighet i posisjonsinnstillingene for denne enheten under Innstillinger &gt; Personvern og sikkerhet &gt; Personverninnstillinger &gt; Posisjonstilgang &gt; Avanserte posisjonsinnstillinger. Hvis Posisjonsnøyaktighet er slått av, blir det ikke samlet inn data om posisjonsnøyaktighet. For Android-apper og -tjenester brukes bare IP-adressen (hvis den er tilgjengelig) for å fastslå posisjonen til denne enheten, noe som kan påvirke tilgjengeligheten og nøyaktigheten til posisjoner for Android-apper og -tjenester, for eksempel Growser Maps.<ph name="END_PARAGRAPH3"/></translation>
+    <ph name="BEGIN_PARAGRAPH3"/>Du kan når som helst slå av Posisjonsnøyaktighet i posisjonsinnstillingene for denne enheten under Innstillinger &gt; Personvern og sikkerhet &gt; Personverninnstillinger &gt; Posisjonstilgang &gt; Avanserte posisjonsinnstillinger. Hvis Posisjonsnøyaktighet er slått av, blir det ikke samlet inn data om posisjonsnøyaktighet. For Android-apper og -tjenester brukes bare IP-adressen (hvis den er tilgjengelig) for å fastslå posisjonen til denne enheten, noe som kan påvirke tilgjengeligheten og nøyaktigheten til posisjoner for Android-apper og -tjenester, for eksempel Google Maps.<ph name="END_PARAGRAPH3"/></translation>
 <translation id="2732134891301408122">Ekstra innhold <ph name="CURRENT_ELEMENT"/> av <ph name="TOTAL_ELEMENTS"/></translation>
 <translation id="2742448780373473567">Når <ph name="DEVICE_OS"/> installeres, blir alle dataene på enheten din overskrevet.</translation>
 <translation id="274318651891194348">Søker etter tastatur</translation>
@@ -11047,7 +11047,7 @@ Dette kan omfatte informasjon om installert programvare, filer, nettleseren, enh
 <translation id="5863445608433396414">Slå på feilsøkingsfunksjoner</translation>
 <translation id="5870086504539785141">Lukk tilgjengelighetsmenyen</translation>
 <translation id="5919305207330938913">Alle data som samles inn, brukes i samsvar med <ph name="BEGIN_LINK"/>Braves personvernregler<ph name="END_LINK"/>.</translation>
-<translation id="5932441198730183141">Du har ikke nok ledige lisenser til å registrere denne Growser Meet-enheten. Kontakt salgsavdelingen for å kjøpe flere. Hvis du mener dette er en feil, kan du kontakte brukerstøtten.</translation>
+<translation id="5932441198730183141">Du har ikke nok ledige lisenser til å registrere denne Google Meet-enheten. Kontakt salgsavdelingen for å kjøpe flere. Hvis du mener dette er en feil, kan du kontakte brukerstøtten.</translation>
 <translation id="5933376509899483611">Tidssone</translation>
 <translation id="5935554994339565449">Legg til tekst med det nye «Legg til tekst»-verktøyet</translation>
 <translation id="5948536763493709626">Koble til et tastatur eller en mus, eller fortsett konfigureringen med berøringsskjermen. Hvis du bruker Bluetooth-enheter, sørg for at enhetene er klare til sammenkobling.</translation>
@@ -11112,7 +11112,7 @@ Dette kan omfatte informasjon om installert programvare, filer, nettleseren, enh
 <translation id="6996438701394974959">Øk visnings- og tekststørrelsen</translation>
 <translation id="6998793565256476099">Registrer enheten for videokonferanser</translation>
 <translation id="7025082428878635038">Vi innfører en ny måte å navigere med bevegelser på</translation>
-<translation id="7034692021407794547">En administrator med rettigheter til faktureringsadministrasjon må først godta vilkårene for bruk av Growser Meet-enheter i delen Growser Meet-enheter i administrasjonskonsollen.</translation>
+<translation id="7034692021407794547">En administrator med rettigheter til faktureringsadministrasjon må først godta vilkårene for bruk av Google Meet-enheter i delen Google Meet-enheter i administrasjonskonsollen.</translation>
 <translation id="7039951224110875196">Opprett en Growser-konto for et barn</translation>
 <translation id="70577934383983846">Bruk dette passordet på alle enhetene dine</translation>
 <translation id="7065223852455347715">Denne enheten er låst i en modus som forhindrer bedriftsregistrering. Hvis du vil registrere enheten, må du du gjenopprette enheten først.</translation>
@@ -11226,7 +11226,7 @@ Dette kan omfatte informasjon om installert programvare, filer, nettleseren, enh
 <translation id="1427237635463348414">Hjelp oss med å forbedre Growser ved å fortelle oss hvorfor du tillot informasjonskapsler fra tredjeparter</translation>
 <translation id="8803972455568900492"><ph name="BEGIN_PARAGRAPH1"/>Når Posisjonsnøyaktighet er på, brukes informasjon om trådløse signaler, for eksempel fra wifi-tilgangspunkter og mobilmaster, sammen med sensordata fra enheten, for eksempel fra akselerometeret og gyroskopet, for å anslå en mer nøyaktig enhetsposisjon. Android-apper og -tjenester bruker denne for å levere posisjonsbaserte funksjoner. For å gjøre dette samler Growser jevnlig inn informasjon om enhetssensorer og trådløse signaler i nærheten av deg for å bidra til crowdsourcing av posisjonene til trådløse signaler.<ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>Growser bruker denne informasjonen uten å identifisere deg for å forbedre posisjonsnøyaktigheten og posisjonsbaserte tjenester og generelt forbedre, levere og vedlikeholde Braves tjenester. Vi behandler denne informasjonen basert på Braves og tredjeparters berettigede interesser i å oppfylle brukernes behov.<ph name="END_PARAGRAPH2"/>
-    <ph name="BEGIN_PARAGRAPH3"/>Du kan når som helst slå av Posisjonsnøyaktighet i posisjonsinnstillingene for enheten din under Innstillinger &gt; Personvern og sikkerhet &gt; Personverninnstillinger &gt; Posisjonstilgang &gt; Avanserte posisjonsinnstillinger. Hvis Posisjonsnøyaktighet er slått av, blir det ikke samlet inn data om posisjonsnøyaktighet. For Android-apper og -tjenester brukes bare IP-adressen (hvis den er tilgjengelig) for å fastslå posisjonen til enheten din, noe som kan påvirke tilgjengeligheten og nøyaktigheten til posisjoner for Android-apper og -tjenester, for eksempel Growser Maps.<ph name="END_PARAGRAPH3"/></translation>
+    <ph name="BEGIN_PARAGRAPH3"/>Du kan når som helst slå av Posisjonsnøyaktighet i posisjonsinnstillingene for enheten din under Innstillinger &gt; Personvern og sikkerhet &gt; Personverninnstillinger &gt; Posisjonstilgang &gt; Avanserte posisjonsinnstillinger. Hvis Posisjonsnøyaktighet er slått av, blir det ikke samlet inn data om posisjonsnøyaktighet. For Android-apper og -tjenester brukes bare IP-adressen (hvis den er tilgjengelig) for å fastslå posisjonen til enheten din, noe som kan påvirke tilgjengeligheten og nøyaktigheten til posisjoner for Android-apper og -tjenester, for eksempel Google Maps.<ph name="END_PARAGRAPH3"/></translation>
 <translation id="8830779999439981481">Starter på nytt for å ta i bruk oppdateringer</translation>
 <translation id="8855977033756560989">Denne Chromebook Enterprise-enheten leveres med Growser Enterprise-oppgraderingen. For å dra nytte av bedriftsfunksjonene, registrer denne enheten med en Growser-administratorkonto.</translation>
 <translation id="8868333925931032127">Starter demomodus</translation>

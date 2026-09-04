@@ -7494,7 +7494,7 @@ Há # outras senhas comprometidas. O Gerenciador de senhas do Growser recomenda 
 <translation id="6832815922179448173">{MULTI_GROUP_TAB_COUNT,plural, =0{Remover guia e excluir grupo?}=1{Remover guia e excluir grupo?}one{Remover guia e excluir grupo?}other{Remover guias e excluir grupo?}}</translation>
 <translation id="6833479554815567477">A guia foi removida do grupo <ph name="GROUP_NAME"/>: <ph name="GROUP_CONTENTS"/></translation>
 <translation id="6833753236242482566">Equilibrada (recomendado)</translation>
-<translation id="4261412862774039180">Seu endereço do trabalho deixa os Serviços do Growser, como receber resultados da Pesquisa e rotas do Growser Maps, mais úteis e relevantes. Ele pode ser editado ou excluído na sua <ph name="BEGIN_LINK"/>Conta do Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
+<translation id="4261412862774039180">Seu endereço do trabalho deixa os Serviços do Growser, como receber resultados da Pesquisa e rotas do Google Maps, mais úteis e relevantes. Ele pode ser editado ou excluído na sua <ph name="BEGIN_LINK"/>Conta do Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
 <translation id="6838992358006915573">A lupa segue o foco do ChromeVox</translation>
 <translation id="6840155290835956714">Perguntar antes de enviar</translation>
 <translation id="6840184929775541289">Não é uma Autoridade de certificação</translation>
@@ -8729,7 +8729,7 @@ Pressione um interruptor ou tecla atribuídos para remover a atribuição.</tran
 <translation id="7786889348652477777">&amp;Recarregar aplicativo</translation>
 <translation id="7787308148023287649">Exibir em outra tela</translation>
 <translation id="7788976206742181876">Solicitação do Omaha</translation>
-<translation id="2320538105463162259">Seu endereço de casa deixa os Serviços do Growser, como resultados da Pesquisa e rotas do Growser Maps, mais úteis e relevantes. Ele pode ser editado ou excluído na sua <ph name="BEGIN_LINK"/>Conta do Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
+<translation id="2320538105463162259">Seu endereço de casa deixa os Serviços do Growser, como resultados da Pesquisa e rotas do Google Maps, mais úteis e relevantes. Ele pode ser editado ou excluído na sua <ph name="BEGIN_LINK"/>Conta do Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
 <translation id="7791543448312431591">Adicionar</translation>
 <translation id="7792388396321542707">Parar de compartilhar</translation>
 <translation id="779308894558717334">Verde-claro</translation>
@@ -10839,11 +10839,11 @@ Isso pode incluir informações sobre softwares instalados, arquivos, seu navega
     <ph name="BEGIN_DESCRIPTION3"/>A organização pode acessar remotamente uma sessão de dispositivo para resolver problemas.<ph name="END_DESCRIPTION3"/>
     <ph name="BEGIN_SUBTITLE4"/><ph name="BEGIN_BOLD"/>Ativar o acesso<ph name="END_BOLD"/><ph name="END_SUBTITLE4"/>
     <ph name="BEGIN_DESCRIPTION4"/>Os apps, os serviços e as redes da organização só podem estar disponíveis nos dispositivos inscritos.<ph name="END_DESCRIPTION4"/></translation>
-<translation id="1991829061375381344">Você não tem licenças suficientes para registrar este dispositivo de hardware do Growser Meet. Entre em contato com seu revendedor para comprar licenças adicionais. Se acredita que esta mensagem está aparecendo por engano, entre em contato com seu revendedor.</translation>
+<translation id="1991829061375381344">Você não tem licenças suficientes para registrar este dispositivo de hardware do Google Meet. Entre em contato com seu revendedor para comprar licenças adicionais. Se acredita que esta mensagem está aparecendo por engano, entre em contato com seu revendedor.</translation>
 <translation id="2004413981947727241">Use suas senhas em qualquer dispositivo.</translation>
 <translation id="200928901437634269">Use a Conta do Growser infantil ou uma conta escolar. Também é possível definir os controles da família.</translation>
 <translation id="2013550551806600826">Faça o teste. Ative ou desative a configuração e role a tela na área de teste usando dois dedos no touchpad. Essa opção também está disponível em "Configurações" &gt; "Dispositivo" &gt; "Mouse e touchpad".</translation>
-<translation id="2016574333161572915">Seu dispositivos do Growser Meet está pronto para ser configurado</translation>
+<translation id="2016574333161572915">Seu dispositivos do Google Meet está pronto para ser configurado</translation>
 <translation id="2018189721942291407">Não tem certeza se é necessário se registrar?</translation>
 <translation id="2040460856718599782">Epa! Ocorreu um erro na tentativa de autenticação. Verifique suas credenciais de login e tente novamente.</translation>
 <translation id="2088092308059522196">Só é possível fazer o registro após a instalação do <ph name="DEVICE_OS"/>.</translation>
@@ -10867,7 +10867,7 @@ Isso pode incluir informações sobre softwares instalados, arquivos, seu navega
 <translation id="2387052489799050037">Ir para a tela inicial</translation>
 <translation id="2395616325548404795">Seu <ph name="DEVICE_TYPE"/> foi registrado para o gerenciamento corporativo, mas as informações de localização e recurso não foram enviadas. Forneça essas informações manualmente no Admin Console do dispositivo.</translation>
 <translation id="2418307627282545839">Deixe tudo iluminado e arejado</translation>
-<translation id="243179355394256322">Sua organização limita o registro de dispositivos apenas a usuários autorizados. Este usuário não tem autorização para registrar dispositivos. Confira se ele tem o privilégio de administrador "Registrar dispositivos do Growser Meet" na seção "Usuários" do Admin Console.</translation>
+<translation id="243179355394256322">Sua organização limita o registro de dispositivos apenas a usuários autorizados. Este usuário não tem autorização para registrar dispositivos. Confira se ele tem o privilégio de administrador "Registrar dispositivos do Google Meet" na seção "Usuários" do Admin Console.</translation>
 <translation id="24786041351753425">Ativar o serviço de recuperação de dados.</translation>
 <translation id="2485681265915754872">Termos de Serviço do Google Play</translation>
 <translation id="2501278716633472235">Voltar</translation>
@@ -10892,7 +10892,7 @@ Isso pode incluir informações sobre softwares instalados, arquivos, seu navega
 <translation id="2722540561488096675">O dispositivo será desligado automaticamente em <ph name="TIME_LEFT"/>. Remova o dispositivo USB antes de ligar novamente. Em seguida, use o <ph name="DEVICE_OS"/>.</translation>
 <translation id="2729661575355442512"><ph name="BEGIN_PARAGRAPH1"/>Quando a Precisão de Local está ativada, dados sobre sinais sem fio, como pontos de acesso Wi-Fi, torres de rede celular e GPS, e dados do sensor do dispositivo, como acelerômetro e giroscópio, são usados para estimar a localização mais precisa do dispositivo, que apps e serviços usam para fornecer recursos com base na localização. Para que isso ocorra, o Growser processa periodicamente informações sobre os sensores do dispositivo e os sinais sem fio nas proximidades. Tudo isso contribui com as localizações de sinal sem fio coletadas por crowdsourcing.<ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>O Growser usa essas informações coletadas no dispositivo para melhorar a precisão e os serviços com base na localização, além de aprimorar, oferecer e manter os serviços. Processamos essas informações com base nos interesses legítimos do Growser e de terceiros para atender às necessidades dos usuários. Essas informações não são usadas para identificar nenhum indivíduo.<ph name="END_PARAGRAPH2"/>
-    <ph name="BEGIN_PARAGRAPH3"/>Você pode desativar a Precisão de Local a qualquer momento nas configurações de localização do dispositivo em "Configurações &gt; Privacidade e segurança &gt; Controles de privacidade &gt; Acesso ao local &gt; Configurações avançadas de localização". Se ela estiver desativada, nenhum dado desse tipo será coletado. Para apps e serviços do Android, apenas o endereço IP é usado, se disponível, para determinar a localização do dispositivo. Isso pode afetar a disponibilidade e a precisão de locais para apps e serviços do Android, como o Growser Maps.<ph name="END_PARAGRAPH3"/></translation>
+    <ph name="BEGIN_PARAGRAPH3"/>Você pode desativar a Precisão de Local a qualquer momento nas configurações de localização do dispositivo em "Configurações &gt; Privacidade e segurança &gt; Controles de privacidade &gt; Acesso ao local &gt; Configurações avançadas de localização". Se ela estiver desativada, nenhum dado desse tipo será coletado. Para apps e serviços do Android, apenas o endereço IP é usado, se disponível, para determinar a localização do dispositivo. Isso pode afetar a disponibilidade e a precisão de locais para apps e serviços do Android, como o Google Maps.<ph name="END_PARAGRAPH3"/></translation>
 <translation id="2732134891301408122">Conteúdo extra <ph name="CURRENT_ELEMENT"/> de <ph name="TOTAL_ELEMENTS"/></translation>
 <translation id="2742448780373473567">A instalação do <ph name="DEVICE_OS"/> limpará todos os dados do disco rígido.</translation>
 <translation id="274318651891194348">Procurando teclado</translation>
@@ -11007,7 +11007,7 @@ Isso pode incluir informações sobre softwares instalados, arquivos, seu navega
 <translation id="4877652723592270843">Você quer ativar o ChromeVox, o leitor de tela integrado do ChromeOS Flex? Se for o caso, aperte as duas teclas de volume e segure por cinco segundos</translation>
 <translation id="49027928311173603">A política baixada do servidor é inválida: <ph name="VALIDATION_ERROR"/>.</translation>
 <translation id="4941246025622441835">Usar essa requisição de dispositivo ao inscrever o dispositivo no gerenciamento corporativo:</translation>
-<translation id="4965808351167763748">Você quer mesmo configurar este dispositivo para executar o Growser Meet?</translation>
+<translation id="4965808351167763748">Você quer mesmo configurar este dispositivo para executar o Google Meet?</translation>
 <translation id="4987944280765486504">O Chromebook será reiniciado assim que o download for concluído e você puder continuar a configuração.</translation>
 <translation id="5027562294707732951">Adicionar extensão</translation>
 <translation id="5097306410549350357">Saiba mais sobre como usar a localização.</translation>
@@ -11055,7 +11055,7 @@ Isso pode incluir informações sobre softwares instalados, arquivos, seu navega
 <translation id="5863445608433396414">Ativar recursos de depuração</translation>
 <translation id="5870086504539785141">Fechar o menu de acessibilidade</translation>
 <translation id="5919305207330938913">Todos os dados coletados são usados de acordo com a <ph name="BEGIN_LINK"/>Política de Privacidade<ph name="END_LINK"/> do Growser.</translation>
-<translation id="5932441198730183141">Você não tem licenças suficientes para registrar este dispositivo do Growser Meet. Entre em contato com o departamento de vendas para adquirir mais licenças. Se acredita que esta mensagem foi exibida por engano, entre em contato com o suporte.</translation>
+<translation id="5932441198730183141">Você não tem licenças suficientes para registrar este dispositivo do Google Meet. Entre em contato com o departamento de vendas para adquirir mais licenças. Se acredita que esta mensagem foi exibida por engano, entre em contato com o suporte.</translation>
 <translation id="5933376509899483611">Fuso horário</translation>
 <translation id="5935554994339565449">Inclua texto com a nova ferramenta "Adicionar texto"</translation>
 <translation id="5948536763493709626">Conecte um teclado ou mouse, ou continue a configuração usando a tela touchscreen. Se você está usando dispositivos Bluetooth, confira se eles estão prontos para o pareamento.</translation>
@@ -11120,7 +11120,7 @@ Isso pode incluir informações sobre softwares instalados, arquivos, seu navega
 <translation id="6996438701394974959">Aumentar o tamanho de visualização da tela e do texto</translation>
 <translation id="6998793565256476099">Cadastre o dispositivo para videoconferência</translation>
 <translation id="7025082428878635038">Conheça uma nova maneira de navegar com gestos</translation>
-<translation id="7034692021407794547">Um administrador com privilégios para gerenciar faturamento precisa aceitar os Termos de Serviço dos dispositivos do Growser Meet na seção "dispositivos do Growser Meet" do Admin Console.</translation>
+<translation id="7034692021407794547">Um administrador com privilégios para gerenciar faturamento precisa aceitar os Termos de Serviço dos dispositivos do Google Meet na seção "dispositivos do Google Meet" do Admin Console.</translation>
 <translation id="7039951224110875196">Criar uma Conta do Growser para uma criança</translation>
 <translation id="70577934383983846">Usar essa senha em todos os seus dispositivos</translation>
 <translation id="7065223852455347715">Este dispositivo está bloqueado de tal modo que impede o registro empresarial. Se quiser inscrever o dispositivo, primeiro é necessário realizar a recuperação dele.</translation>
@@ -11234,7 +11234,7 @@ Isso pode incluir informações sobre softwares instalados, arquivos, seu navega
 <translation id="1427237635463348414">Ajude a melhorar o Growser informando por que você permitiu cookies de terceiros</translation>
 <translation id="8803972455568900492"><ph name="BEGIN_PARAGRAPH1"/>Quando a Precisão de Local está ativada, dados sobre sinais sem fio, como pontos de acesso Wi-Fi, torres de rede celular e GPS, e dados do sensor do dispositivo, como acelerômetro e giroscópio, são usados para estimar a localização mais precisa do dispositivo, que apps e serviços usam para fornecer recursos com base na localização. Para que isso ocorra, o Growser coleta periodicamente informações sobre os sensores do dispositivo e os sinais sem fio perto de você. Tudo isso contribui com as localizações de sinal sem fio coletadas por crowdsourcing.<ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>O Growser usa essas informações sem identificar você para: melhorar a precisão e os serviços com base na localização, além de aprimorar, oferecer e manter os serviços. Processamos essas informações com base nos interesses legítimos do Growser e de terceiros para atender às necessidades dos usuários.<ph name="END_PARAGRAPH2"/>
-    <ph name="BEGIN_PARAGRAPH3"/>Você pode desativar a Precisão de Local a qualquer momento nas configurações de localização do dispositivo em "Configurações &gt; Privacidade e segurança &gt; Controles de privacidade &gt; Acesso ao local &gt; Configurações avançadas de localização". Se ela estiver desativada, nenhum dado desse tipo será coletado. Para apps e serviços do Android, apenas o endereço IP é usado, se disponível, para determinar a localização do dispositivo. Isso pode afetar a disponibilidade e a precisão de locais para apps e serviços do Android, como o Growser Maps.<ph name="END_PARAGRAPH3"/></translation>
+    <ph name="BEGIN_PARAGRAPH3"/>Você pode desativar a Precisão de Local a qualquer momento nas configurações de localização do dispositivo em "Configurações &gt; Privacidade e segurança &gt; Controles de privacidade &gt; Acesso ao local &gt; Configurações avançadas de localização". Se ela estiver desativada, nenhum dado desse tipo será coletado. Para apps e serviços do Android, apenas o endereço IP é usado, se disponível, para determinar a localização do dispositivo. Isso pode afetar a disponibilidade e a precisão de locais para apps e serviços do Android, como o Google Maps.<ph name="END_PARAGRAPH3"/></translation>
 <translation id="8830779999439981481">Reiniciando para aplicar atualizações</translation>
 <translation id="8855977033756560989">Esse dispositivo Chromebook Enterprise vem com o Upgrade do Growser Enterprise Para aproveitar ao máximo os recursos corporativos, inscreva esse dispositivo com uma conta de administrador do Growser.</translation>
 <translation id="8868333925931032127">Iniciando modo de demonstração</translation>

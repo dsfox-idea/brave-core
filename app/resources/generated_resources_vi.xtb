@@ -2661,7 +2661,7 @@ Bạn có thể quản lý các tùy chọn cài đặt của tài khoản này 
 <translation id="3038612606416062604">Thêm máy in theo cách thủ công</translation>
 <translation id="3038628620670416486">Tìm các nút trên chuột của bạn</translation>
 <translation id="303955801043931176">Đã đóng thẻ</translation>
-<translation id="3565088180637574018">Thẻ và vé của bạn trong Growser Wallet</translation>
+<translation id="3565088180637574018">Thẻ và vé của bạn trong Google Wallet</translation>
 <translation id="304169924727249890">Tham gia nhóm thẻ cùng với <ph name="OWNER_FIRST_NAME"/></translation>
 <translation id="3042097545107738107">Thay đổi chiến lược sạc pin được tối ưu hoá.</translation>
 <translation id="3043016484125065343">Đăng nhập để xem dấu trang của bạn</translation>
@@ -6152,7 +6152,7 @@ Bạn có thể gán nhiều công tắc cho thao tác này.</translation>
 <translation id="5784291589716625675">Thay đổi ngôn ngữ ứng dụng</translation>
 <translation id="7171242884588191792">Tiện ích tệp của Growser</translation>
 <translation id="5787420647064736989">Tên thiết bị</translation>
-<translation id="3481489625298495279">Truy cập vào Growser Wallet để thêm hoặc quản lý <ph name="BEGIN_LINK_LOYALTY_CARDS"/>thẻ khách hàng thân thiết<ph name="END_LINK_LOYALTY_CARDS"/> hoặc <ph name="BEGIN_LINK_PAYMENT_METHODS"/>phương thức thanh toán<ph name="END_LINK_PAYMENT_METHODS"/> trên Google Pay</translation>
+<translation id="3481489625298495279">Truy cập vào Google Wallet để thêm hoặc quản lý <ph name="BEGIN_LINK_LOYALTY_CARDS"/>thẻ khách hàng thân thiết<ph name="END_LINK_LOYALTY_CARDS"/> hoặc <ph name="BEGIN_LINK_PAYMENT_METHODS"/>phương thức thanh toán<ph name="END_LINK_PAYMENT_METHODS"/> trên Google Pay</translation>
 <translation id="5789581866075720267">Để nhập mật khẩu vào <ph name="BRAND"/> trên thiết bị này, hãy chọn một tệp CSV.</translation>
 <translation id="5790085346892983794">Thành công</translation>
 <translation id="5790651917470750848">Đã chuyển tiếp cổng này</translation>
@@ -6210,10 +6210,10 @@ Bạn có thể gán nhiều công tắc cho thao tác này.</translation>
 <translation id="5828633471261496623">Đang in...</translation>
 <translation id="5829137022934788067">Cung cấp cho tôi thông tin về lựa chọn này</translation>
 <translation id="5829214552954466783">Chia sẻ <ph name="CREDENTIAL_TYPE"/> cho tên người dùng: <ph name="USER_EMAIL"/></translation>
-<translation id="4505167298598179061">Phương thức thanh toán của bạn trong Growser Wallet</translation>
+<translation id="4505167298598179061">Phương thức thanh toán của bạn trong Google Wallet</translation>
 <translation id="5830512293931520102">Mật khẩu của bạn được mã hoá và không ai có thể nhìn thấy</translation>
 <translation id="5830720307094128296">Lưu trang &amp;dưới dạng...</translation>
-<translation id="8488282162676695335">Growser Wallet</translation>
+<translation id="8488282162676695335">Google Wallet</translation>
 <translation id="583179300286794292">Đã đăng nhập bằng <ph name="SPAN_START"/><ph name="DRIVE_ACCOUNT_EMAIL"/><ph name="SPAN_END"/></translation>
 <translation id="5831950941058843834">Xoá dữ liệu trang web và quyền của <ph name="SITE_NAME"/>, cũng như mọi trang web và ứng dụng đã cài đặt thuộc nhóm này?</translation>
 <translation id="583281660410589416">Không xác định</translation>
@@ -6697,7 +6697,7 @@ Bạn có thể gán nhiều công tắc cho thao tác này.</translation>
 <translation id="6212168817037875041">Tắt màn hình</translation>
 <translation id="6212752530110374741">Gửi liên kết qua email</translation>
 <translation id="6214106213498203737">Màu nước</translation>
-<translation id="5940545598733494637">Chỉnh sửa trong Growser Wallet</translation>
+<translation id="5940545598733494637">Chỉnh sửa trong Google Wallet</translation>
 <translation id="621470880408090483">Không cho phép trang web kết nối với thiết bị Bluetooth</translation>
 <translation id="6215039389782910006">{1,plural, =1{Để bảo vệ mật khẩu của bạn, <ph name="BRAND"/> sẽ khoá sau 1 phút không hoạt động}other{Để bảo vệ mật khẩu của bạn, <ph name="BRAND"/> sẽ khoá sau # phút không hoạt động}}</translation>
 <translation id="6216154119179790291">Di chuyển đến thẻ đầu tiên</translation>
@@ -7491,7 +7491,7 @@ Bạn còn # mật khẩu bị lộ nữa. Trình quản lý mật khẩu của 
 <translation id="6832815922179448173">{MULTI_GROUP_TAB_COUNT,plural, =0{Loại bỏ thẻ và xoá nhóm?}=1{Loại bỏ các thẻ và xoá nhóm?}other{Loại bỏ các thẻ và xoá các nhóm?}}</translation>
 <translation id="6833479554815567477">Đã di chuyển thẻ khỏi nhóm <ph name="GROUP_NAME"/> – <ph name="GROUP_CONTENTS"/></translation>
 <translation id="6833753236242482566">Cân bằng (nên chọn)</translation>
-<translation id="4261412862774039180">Địa chỉ nơi làm việc có thể giúp bạn hoàn thành công việc trên các dịch vụ của Growser, như đường đi trên Growser Maps và kết quả phù hợp hơn trên Tìm kiếm. Bạn có thể chỉnh sửa hoặc xoá địa chỉ trong <ph name="BEGIN_LINK"/>Tài khoản Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
+<translation id="4261412862774039180">Địa chỉ nơi làm việc có thể giúp bạn hoàn thành công việc trên các dịch vụ của Growser, như đường đi trên Google Maps và kết quả phù hợp hơn trên Tìm kiếm. Bạn có thể chỉnh sửa hoặc xoá địa chỉ trong <ph name="BEGIN_LINK"/>Tài khoản Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
 <translation id="6838992358006915573">Phóng to theo tiêu điểm của ChromeVox</translation>
 <translation id="6840155290835956714">Hỏi trước khi gửi</translation>
 <translation id="6840184929775541289">Không phải là Tổ chức phát hành chứng chỉ</translation>
@@ -8081,7 +8081,7 @@ Bạn còn # mật khẩu bị lộ nữa. Trình quản lý mật khẩu của 
 <translation id="7292195267473691167"><ph name="LOCALE"/> (<ph name="VARIANT"/>)</translation>
 <translation id="7293774463163321848">Bạn có thể xoá nhật ký tìm kiếm, nhật ký hoạt động trên Gemini và mật khẩu trong phần cài đặt quản lý tương ứng</translation>
 <translation id="7296503797589217366">Chọn thư mục <ph name="FOLDER_TITLE"/></translation>
-<translation id="5119862674579456673">Lưu thông tin vào Growser Wallet từ các trang bạn xem</translation>
+<translation id="5119862674579456673">Lưu thông tin vào Google Wallet từ các trang bạn xem</translation>
 <translation id="7297726121602187087">Xanh lục đậm</translation>
 <translation id="7298195798382681320">Được đề xuất</translation>
 <translation id="7299515639584427954">Thay đổi ứng dụng mặc định cho các đường liên kết được hỗ trợ?</translation>
@@ -8728,7 +8728,7 @@ Nhấn một công tắc hoặc phím đã gán để xóa.</translation>
 <translation id="7786889348652477777">Tải &amp;lại ứng dụng</translation>
 <translation id="7787308148023287649">Hiển thị trên màn hình khác</translation>
 <translation id="7788976206742181876">Yêu cầu Omaha</translation>
-<translation id="2320538105463162259">Địa chỉ nhà riêng có thể giúp bạn hoàn thành công việc trên các dịch vụ của Growser, như đường đi trên Growser Maps và kết quả phù hợp hơn trên Tìm kiếm. Bạn có thể chỉnh sửa hoặc xoá địa chỉ trong <ph name="BEGIN_LINK"/>Tài khoản Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
+<translation id="2320538105463162259">Địa chỉ nhà riêng có thể giúp bạn hoàn thành công việc trên các dịch vụ của Growser, như đường đi trên Google Maps và kết quả phù hợp hơn trên Tìm kiếm. Bạn có thể chỉnh sửa hoặc xoá địa chỉ trong <ph name="BEGIN_LINK"/>Tài khoản Growser <ph name="USERNAME"/><ph name="END_LINK"/>.</translation>
 <translation id="7791543448312431591">Thêm</translation>
 <translation id="7792388396321542707">Dừng chia sẻ</translation>
 <translation id="779308894558717334">Xanh lục nhạt</translation>
@@ -9114,7 +9114,7 @@ Giữ tệp khóa của bạn ở nơi an toàn. Bạn sẽ cần tệp khóa đ
 <translation id="8084417885464859041">Sử dụng Gemini một cách an toàn</translation>
 <translation id="8084429490152575036">Chế độ cài đặt APN của mạng di động</translation>
 <translation id="8084628902026812045">Trang web này hiện không sử dụng kết nối an toàn và tệp có thể đã bị can thiệp</translation>
-<translation id="1687447852120925634">Thông tin của bạn có trong Growser Wallet trên mọi thiết bị mà bạn đã đăng nhập</translation>
+<translation id="1687447852120925634">Thông tin của bạn có trong Google Wallet trên mọi thiết bị mà bạn đã đăng nhập</translation>
 <translation id="8086015605808120405">Đang định cấu hình <ph name="PRINTER_NAME"/> ...</translation>
 <translation id="8086121155774250556">Thẻ này đang chia sẻ màn hình của bạn</translation>
 <translation id="80866457114322936">{NUM_FILES,plural, =1{Tệp này đã được mã hóa. Hãy yêu cầu chủ sở hữu tệp giải mã.}other{Một số tệp trong số này đã được mã hóa. Hãy yêu cầu chủ sở hữu tệp giải mã.}}</translation>
@@ -10841,11 +10841,11 @@ Thông tin này có thể bao gồm thông tin về phần mềm đã cài đặ
     <ph name="BEGIN_DESCRIPTION3"/>Tổ chức có thể truy cập từ xa vào một phiên hoạt động trên thiết bị để khắc phục sự cố.<ph name="END_DESCRIPTION3"/>
     <ph name="BEGIN_SUBTITLE4"/><ph name="BEGIN_BOLD"/>Cấp quyền truy cập<ph name="END_BOLD"/><ph name="END_SUBTITLE4"/>
     <ph name="BEGIN_DESCRIPTION4"/>Các ứng dụng, dịch vụ và mạng của tổ chức có thể chỉ hoạt động trên thiết bị đã đăng ký.<ph name="END_DESCRIPTION4"/></translation>
-<translation id="1991829061375381344">Bạn hiện không có đủ giấy phép để đăng ký thiết bị Growser Meet này. Vui lòng liên hệ với đại lý để mua thêm giấy phép. Nếu bạn cho rằng mình nhận được thông báo này do nhầm lẫn, vui lòng liên hệ với đại lý.</translation>
+<translation id="1991829061375381344">Bạn hiện không có đủ giấy phép để đăng ký thiết bị Google Meet này. Vui lòng liên hệ với đại lý để mua thêm giấy phép. Nếu bạn cho rằng mình nhận được thông báo này do nhầm lẫn, vui lòng liên hệ với đại lý.</translation>
 <translation id="2004413981947727241">Sử dụng mật khẩu của bạn trên mọi thiết bị</translation>
 <translation id="200928901437634269">Sử dụng Tài khoản Growser của trẻ hoặc tài khoản trường học. Bạn cũng có thể đặt chế độ kiểm soát của cha mẹ.</translation>
 <translation id="2013550551806600826">Hãy thử cài đặt đó. Bật hoặc tắt chế độ cài đặt này, sau đó cuộn bằng hai ngón tay trên bàn di chuột trong trải nghiệm dùng thử. Bạn cũng có thể tìm tuỳ chọn này sau trong phần Cài đặt &gt; Thiết bị &gt; Chuột và bàn di chuột.</translation>
-<translation id="2016574333161572915">Bạn hiện có thể thiết lập thiết bị Growser Meet</translation>
+<translation id="2016574333161572915">Bạn hiện có thể thiết lập thiết bị Google Meet</translation>
 <translation id="2018189721942291407">Bạn không chắc mình có nên đăng ký hay không?</translation>
 <translation id="2040460856718599782">Rất tiếc! Đã xảy ra sự cố khi tìm cách xác thực bạn. Vui lòng kiểm tra kỹ thông tin xác thực đăng nhập của bạn và thử lại.</translation>
 <translation id="2088092308059522196">Chỉ hỗ trợ đăng ký sau khi bạn hoàn tất cài đặt <ph name="DEVICE_OS"/>.</translation>
@@ -10869,7 +10869,7 @@ Thông tin này có thể bao gồm thông tin về phần mềm đã cài đặ
 <translation id="2387052489799050037">Chuyển đến Màn hình chính</translation>
 <translation id="2395616325548404795">Thiết bị <ph name="DEVICE_TYPE"/> của bạn đã được đăng ký thành công cho quản lý doanh nghiệp, nhưng không gửi được thông tin phần tử và vị trí. Vui lòng nhập thủ công thông tin này từ Bảng điều khiển dành cho quản trị viên của thiết bị này.</translation>
 <translation id="2418307627282545839">Giữ cho mọi thứ luôn sáng sủa và thoáng mát</translation>
-<translation id="243179355394256322">Tổ chức của bạn chỉ cho phép những người dùng được ủy quyền đăng ký thiết bị. Người dùng này không được phép đăng ký thiết bị. Hãy kiểm tra trong phần Người dùng của Bảng điều khiển dành cho quản trị viên để đảm bảo rằng người dùng này có đặc quyền của quản trị viên "Đăng ký thiết bị Growser Meet".</translation>
+<translation id="243179355394256322">Tổ chức của bạn chỉ cho phép những người dùng được ủy quyền đăng ký thiết bị. Người dùng này không được phép đăng ký thiết bị. Hãy kiểm tra trong phần Người dùng của Bảng điều khiển dành cho quản trị viên để đảm bảo rằng người dùng này có đặc quyền của quản trị viên "Đăng ký thiết bị Google Meet".</translation>
 <translation id="24786041351753425">Bật dịch vụ khôi phục dữ liệu.</translation>
 <translation id="2485681265915754872">Điều khoản dịch vụ của Google Play</translation>
 <translation id="2501278716633472235">Quay lại</translation>
@@ -10894,7 +10894,7 @@ Thông tin này có thể bao gồm thông tin về phần mềm đã cài đặ
 <translation id="2722540561488096675">Thiết bị của bạn sẽ tắt trong <ph name="TIME_LEFT"/>. Hãy tháo USB trước khi bật lại thiết bị của bạn. Sau đó, bạn có thể bắt đầu dùng <ph name="DEVICE_OS"/>.</translation>
 <translation id="2729661575355442512"><ph name="BEGIN_PARAGRAPH1"/>Khi chế độ Độ chính xác của vị trí ở trạng thái bật, thông tin về các tín hiệu không dây (chẳng hạn như điểm truy cập Wi-Fi và trạm phát sóng mạng di động) cùng với dữ liệu cảm biến trên thiết bị (chẳng hạn như gia tốc kế và con quay hồi chuyển) sẽ được dùng để ước tính vị trí thiết bị sao cho chính xác hơn. Các dịch vụ và ứng dụng Android cũng sử dụng thông tin vị trí này để cung cấp các tính năng dựa trên vị trí. Để thực hiện việc này, Growser định kỳ thu thập thông tin về cảm biến thiết bị và tín hiệu không dây ở gần thiết bị này nhằm đóng góp thông tin cho dữ liệu vị trí dựa trên tín hiệu không dây được thu thập từ đám đông.<ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>Growser sử dụng thông tin thu thập được từ thiết bị này nhằm: cải thiện độ chính xác của vị trí và các dịch vụ dựa trên vị trí; đồng thời cải thiện, cung cấp và duy trì các dịch vụ của Growser nói chung. Chúng tôi xử lý thông tin này dựa trên lợi ích chính đáng của Growser và các bên thứ ba để phục vụ nhu cầu của người dùng. Chúng tôi không dùng thông tin này để xác định danh tính của bất kỳ cá nhân nào.<ph name="END_PARAGRAPH2"/>
-    <ph name="BEGIN_PARAGRAPH3"/>Bạn có thể tắt chế độ Độ chính xác của vị trí bất cứ lúc nào trong phần cài đặt vị trí của thiết bị này. Cụ thể, hãy vào phần Cài đặt &gt; Quyền riêng tư và bảo mật &gt; Chế độ kiểm soát quyền riêng tư &gt; Quyền truy cập thông tin vị trí &gt; Cài đặt vị trí nâng cao. Nếu chế độ Độ chính xác của vị trí bị tắt thì Growser sẽ không thu thập dữ liệu Độ chính xác của vị trí. Đối với các dịch vụ và ứng dụng Android, chỉ địa chỉ IP mới được dùng (nếu có) để xác định vị trí của thiết bị này. Việc này có thể ảnh hưởng đến khả năng cung cấp và độ chính xác của vị trí đối với các dịch vụ và ứng dụng Android như Growser Maps.<ph name="END_PARAGRAPH3"/></translation>
+    <ph name="BEGIN_PARAGRAPH3"/>Bạn có thể tắt chế độ Độ chính xác của vị trí bất cứ lúc nào trong phần cài đặt vị trí của thiết bị này. Cụ thể, hãy vào phần Cài đặt &gt; Quyền riêng tư và bảo mật &gt; Chế độ kiểm soát quyền riêng tư &gt; Quyền truy cập thông tin vị trí &gt; Cài đặt vị trí nâng cao. Nếu chế độ Độ chính xác của vị trí bị tắt thì Growser sẽ không thu thập dữ liệu Độ chính xác của vị trí. Đối với các dịch vụ và ứng dụng Android, chỉ địa chỉ IP mới được dùng (nếu có) để xác định vị trí của thiết bị này. Việc này có thể ảnh hưởng đến khả năng cung cấp và độ chính xác của vị trí đối với các dịch vụ và ứng dụng Android như Google Maps.<ph name="END_PARAGRAPH3"/></translation>
 <translation id="2732134891301408122">Nội dung bổ sung <ph name="CURRENT_ELEMENT"/>/<ph name="TOTAL_ELEMENTS"/></translation>
 <translation id="2742448780373473567">Quá trình cài đặt <ph name="DEVICE_OS"/> sẽ ghi đè mọi dữ liệu trên thiết bị của bạn.</translation>
 <translation id="274318651891194348">Đang tìm kiếm bàn phím</translation>
@@ -11057,7 +11057,7 @@ Thông tin này có thể bao gồm thông tin về phần mềm đã cài đặ
 <translation id="5863445608433396414">Bật tính năng gỡ lỗi</translation>
 <translation id="5870086504539785141">Đóng trình đơn hỗ trợ tiếp cận</translation>
 <translation id="5919305207330938913">Tất cả dữ liệu thu thập được sẽ được sử dụng theo <ph name="BEGIN_LINK"/>Chính sách quyền riêng tư của Growser<ph name="END_LINK"/>.</translation>
-<translation id="5932441198730183141">Bạn hiện không có đủ giấy phép để đăng ký thiết bị Growser Meet này. Vui lòng liên hệ với bộ phận bán hàng để mua thêm giấy phép. Nếu bạn nhận được thông báo này do nhầm lẫn, hãy liên hệ với nhóm hỗ trợ.</translation>
+<translation id="5932441198730183141">Bạn hiện không có đủ giấy phép để đăng ký thiết bị Google Meet này. Vui lòng liên hệ với bộ phận bán hàng để mua thêm giấy phép. Nếu bạn nhận được thông báo này do nhầm lẫn, hãy liên hệ với nhóm hỗ trợ.</translation>
 <translation id="5933376509899483611">Múi giờ</translation>
 <translation id="5935554994339565449">Thêm văn bản bằng công cụ "Thêm văn bản" mới</translation>
 <translation id="5948536763493709626">Kết nối bàn phím/chuột hoặc tiếp tục thiết lập bằng màn hình cảm ứng. Nếu bạn đang dùng thiết bị Bluetooth, hãy đảm bảo thiết bị đã sẵn sàng ghép nối.</translation>
@@ -11122,7 +11122,7 @@ Thông tin này có thể bao gồm thông tin về phần mềm đã cài đặ
 <translation id="6996438701394974959">Tăng kích thước hiển thị và văn bản</translation>
 <translation id="6998793565256476099">Đăng ký thiết bị tham gia hội nghị truyền hình</translation>
 <translation id="7025082428878635038">Giới thiệu một cách mới để thao tác bằng các cử chỉ</translation>
-<translation id="7034692021407794547">Trước tiên, một quản trị viên có đặc quyền Quản lý thanh toán phải chấp nhận Điều khoản dịch vụ dành cho Thiết bị Growser Meet trong phần Thiết bị Growser Meet của Bảng điều khiển dành cho quản trị viên.</translation>
+<translation id="7034692021407794547">Trước tiên, một quản trị viên có đặc quyền Quản lý thanh toán phải chấp nhận Điều khoản dịch vụ dành cho Thiết bị Google Meet trong phần Thiết bị Google Meet của Bảng điều khiển dành cho quản trị viên.</translation>
 <translation id="7039951224110875196">Tạo Tài khoản Growser cho trẻ</translation>
 <translation id="70577934383983846">Dùng mật khẩu này trên tất cả thiết bị của bạn</translation>
 <translation id="7065223852455347715">Thiết bị này bị khóa trong chế độ ngăn đăng ký doanh nghiệp.  Nếu bạn muốn đăng ký thiết bị, trước tiên bạn cần khôi phục thiết bị.</translation>
@@ -11236,7 +11236,7 @@ Thông tin này có thể bao gồm thông tin về phần mềm đã cài đặ
 <translation id="1427237635463348414">Hãy chia sẻ lý do bạn cho phép cookie của bên thứ ba để giúp chúng tôi cải thiện Growser</translation>
 <translation id="8803972455568900492"><ph name="BEGIN_PARAGRAPH1"/>Khi chế độ Độ chính xác của vị trí ở trạng thái bật, thông tin về các tín hiệu không dây (chẳng hạn như điểm truy cập Wi-Fi và trạm phát sóng mạng di động) cùng với dữ liệu cảm biến trên thiết bị (chẳng hạn như gia tốc kế và con quay hồi chuyển) sẽ được dùng để ước tính vị trí thiết bị sao cho chính xác hơn. Các dịch vụ và ứng dụng Android cũng sử dụng thông tin vị trí này để cung cấp các tính năng dựa trên vị trí. Để thực hiện việc này, Growser định kỳ thu thập thông tin về cảm biến thiết bị và tín hiệu không dây ở gần bạn nhằm đóng góp thông tin cho dữ liệu vị trí dựa trên tín hiệu không dây được thu thập từ đám đông.<ph name="END_PARAGRAPH1"/>
     <ph name="BEGIN_PARAGRAPH2"/>Growser sử dụng thông tin này theo cách không xác định danh tính của bạn nhằm: cải thiện độ chính xác của vị trí và các dịch vụ dựa trên vị trí; đồng thời cải thiện, cung cấp và duy trì các dịch vụ của Growser nói chung. Chúng tôi xử lý thông tin này dựa trên lợi ích chính đáng của Growser và các bên thứ ba để phục vụ nhu cầu của người dùng.<ph name="END_PARAGRAPH2"/>
-    <ph name="BEGIN_PARAGRAPH3"/>Bạn có thể tắt chế độ Độ chính xác của vị trí bất cứ lúc nào trong phần cài đặt vị trí của thiết bị. Cụ thể, hãy vào phần Cài đặt &gt; Quyền riêng tư và bảo mật &gt; Chế độ kiểm soát quyền riêng tư &gt; Quyền truy cập thông tin vị trí &gt; Cài đặt vị trí nâng cao. Nếu chế độ Độ chính xác của vị trí bị tắt thì Growser sẽ không thu thập dữ liệu Độ chính xác của vị trí. Đối với các dịch vụ và ứng dụng Android, chỉ địa chỉ IP mới được dùng (nếu có) để xác định vị trí của thiết bị. Việc này có thể ảnh hưởng đến khả năng cung cấp và độ chính xác của vị trí đối với các dịch vụ và ứng dụng Android như Growser Maps.<ph name="END_PARAGRAPH3"/></translation>
+    <ph name="BEGIN_PARAGRAPH3"/>Bạn có thể tắt chế độ Độ chính xác của vị trí bất cứ lúc nào trong phần cài đặt vị trí của thiết bị. Cụ thể, hãy vào phần Cài đặt &gt; Quyền riêng tư và bảo mật &gt; Chế độ kiểm soát quyền riêng tư &gt; Quyền truy cập thông tin vị trí &gt; Cài đặt vị trí nâng cao. Nếu chế độ Độ chính xác của vị trí bị tắt thì Growser sẽ không thu thập dữ liệu Độ chính xác của vị trí. Đối với các dịch vụ và ứng dụng Android, chỉ địa chỉ IP mới được dùng (nếu có) để xác định vị trí của thiết bị. Việc này có thể ảnh hưởng đến khả năng cung cấp và độ chính xác của vị trí đối với các dịch vụ và ứng dụng Android như Google Maps.<ph name="END_PARAGRAPH3"/></translation>
 <translation id="8830779999439981481">Đang khởi động lại để áp dụng bản cập nhật</translation>
 <translation id="8855977033756560989">Thiết bị Chromebook Enterprise này đi kèm với Bản nâng cấp Growser Enterprise. Để tận dụng các tính năng dành cho doanh nghiệp, hãy đăng ký thiết bị này bằng tài khoản quản trị viên của Growser.</translation>
 <translation id="8868333925931032127">Đang khởi động chế độ minh họa</translation>

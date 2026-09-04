@@ -94,7 +94,7 @@
 <translation id="1149617035358809955">ਆਪਣੀ ਪਛਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ, ਤਾਂ ਜੋ ਇਹ ਤੁਹਾਡੀ ਭੁਗਤਾਨ ਜਾਣਕਾਰੀ ਨੂੰ ਭਰ ਸਕੇ</translation>
 <translation id="1150565364351027703">ਧੁੱਪ ਦੀਆਂ ਐਨਕਾਂ</translation>
 <translation id="1150979032973867961">ਇਹ ਸਰਵਰ ਇਹ ਸਾਬਤ ਨਹੀਂ ਕਰ ਸਕਿਆ ਕਿ ਇਹ <ph name="DOMAIN"/> ਹੈ; ਇਸਦਾ ਸੁਰੱਖਿਆ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਤੁਹਾਡੇ ਕੰਪਿਊਟਰ ਦੇ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਵੱਲੋਂ ਭਰੋਸੇਯੋਗ ਨਹੀਂ ਹੈ। ਇਹ ਇੱਕ ਗਲਤ ਸੰਰੂਪਣ ਕਾਰਨ ਹੋ ਸਕਦਾ ਹੈ ਜਾਂ ਕੋਈ ਹਮਲਾਵਰ ਤੁਹਾਡੇ ਕਨੈਕਸ਼ਨ ਨੂੰ ਰਾਹ ਵਿੱਚ ਰੋਕ ਰਿਹਾ ਹੈ।</translation>
-<translation id="1115388613038124176">ਤੁਸੀਂ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਕਾਰਡਾਂ ਨੂੰ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ</translation>
+<translation id="1115388613038124176">ਤੁਸੀਂ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਕਾਰਡਾਂ ਨੂੰ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ</translation>
 <translation id="1151972924205500581">ਪਾਸਵਰਡ ਲੋੜੀਂਦਾ</translation>
 <translation id="1156303062776767266">ਤੁਸੀਂ ਸਥਾਨਕ ਜਾਂ ਸਾਂਝੀ ਕੀਤੀ ਗਈ ਫ਼ਾਈਲ ਦੇਖ ਰਹੇ ਹੋ</translation>
 <translation id="1158211211994409885"><ph name="HOST_NAME"/> ਨੇ ਅਚਾਨਕ ਕਨੈਕਸ਼ਨ ਬੰਦ ਕੀਤਾ।</translation>
@@ -133,7 +133,7 @@
 <translation id="1201895884277373915">ਇਸ ਸਾਈਟ ਤੋਂ ਹੋਰ</translation>
 <translation id="1204184165594298176">{0,plural, =1{ਫ਼ਾਈਲ ਨੂੰ ਕਾਪੀ ਕਰਨ ਤੋਂ ਬਲਾਕ ਕੀਤਾ ਗਿਆ}one{<ph name="FILE_COUNT"/> ਫ਼ਾਈਲ ਨੂੰ ਕਾਪੀ ਕਰਨ ਤੋਂ ਬਲਾਕ ਕੀਤਾ ਗਿਆ}other{<ph name="FILE_COUNT"/> ਫ਼ਾਈਲਾਂ ਨੂੰ ਕਾਪੀ ਕਰਨ ਤੋਂ ਬਲਾਕ ਕੀਤਾ ਗਿਆ}}</translation>
 <translation id="120509973613679868">ਕਾਰੋਬਾਰੀ ਯਾਤਰਾ</translation>
-<translation id="1476484148752770616">ਤੁਸੀਂ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਕਾਰਡਾਂ ਨੂੰ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ।</translation>
+<translation id="1476484148752770616">ਤੁਸੀਂ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਕਾਰਡਾਂ ਨੂੰ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ।</translation>
 <translation id="120587177308723209">ਕਾਲਪਨਿਕ ਖੇਡਾਂ</translation>
 <translation id="1206967143813997005">ਗਲਤ ਛੋਟੇ ਹਸਤਾਖਰ</translation>
 <translation id="1209206284964581585">ਫਿਲਹਾਲ ਲੁਕਾਓ</translation>
@@ -274,7 +274,7 @@
 <translation id="1410306713026702438"><ph name="SUGGESTION_TITLE"/>, <ph name="SUGGESTION_DESCRIPTION"/>। <ph name="SUGGESTION_TYPE"/>। <ph name="GROUP_HEADER"/> ਗਰੁੱਪ ਵਿੱਚ, <ph name="NUM_MATCHES_IN_GROUP"/> ਵਿੱਚੋਂ <ph name="MATCH_POSITION"/>।</translation>
 <translation id="5488251800208457874">ਹੋਰ ਲੋਕ ਜੋ ਇਸ ਡੀਵਾਈਸ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਨ, ਉਹ ਤੁਹਾਡੀ ਸਰਗਰਮੀ ਨਹੀਂ ਦੇਖ ਸਕਣਗੇ, ਇਸ ਲਈ ਤੁਸੀਂ ਜ਼ਿਆਦਾ ਨਿੱਜੀ ਤੌਰ 'ਤੇ ਬ੍ਰਾਊਜ਼ ਕਰ ਸਕਦੇ ਹੋ। ਇਸ ਨਾਲ ਤੁਹਾਡੇ ਵੱਲੋਂ ਦੇਖੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਤੋਂ ਡਾਟਾ ਇਕੱਤਰ ਕੀਤੇ ਜਾਣ ਦੇ ਤਰੀਕੇ ਅਤੇ Growser ਸਮੇਤ ਉਨ੍ਹਾਂ ਵੱਲੋਂ ਵਰਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਸੇਵਾਵਾਂ ਵਿੱਚ ਤਬਦੀਲੀ ਨਹੀਂ ਆਵੇਗੀ। ਡਾਊਨਲੋਡਾਂ, ਬੁੱਕਮਾਰਕਾਂ ਅਤੇ ਪੜ੍ਹਨ-ਸੂਚੀ ਦੀਆਂ ਆਈਟਮਾਂ ਨੂੰ ਰੱਖਿਅਤ ਕੀਤਾ ਜਾਵੇਗਾ।</translation>
 <translation id="1410941016594047814">ਸੱਦੇ ਵਾਲਾ ਲਿਫ਼ਾਫ਼ਾ</translation>
-<translation id="648124447162177252">ਤੇਜ਼ੀ ਨਾਲ ਚੈੱਕ-ਆਊਟ ਕਰਨ ਲਈ, ਤੁਹਾਡੇ ਕਾਰਡ ਦੇ CVC ਨੂੰ ਇਨਕ੍ਰਿਪਟ ਕਰ ਕੇ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਜਾਵੇਗਾ</translation>
+<translation id="648124447162177252">ਤੇਜ਼ੀ ਨਾਲ ਚੈੱਕ-ਆਊਟ ਕਰਨ ਲਈ, ਤੁਹਾਡੇ ਕਾਰਡ ਦੇ CVC ਨੂੰ ਇਨਕ੍ਰਿਪਟ ਕਰ ਕੇ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਜਾਵੇਗਾ</translation>
 <translation id="1413809658975081374">ਪਰਦੇਦਾਰੀ ਗੜਬੜ</translation>
 <translation id="1414134146594747368">ਪ੍ਰੀ-ਸਕੂਲ</translation>
 <translation id="5305237486453576422">'Growser ਵਿੱਚ ਡਾਊਨਲੋਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ' ਬਟਨ, Growser ਵਿੱਚ ਤੁਹਾਡੇ ਵੱਲੋਂ ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਫ਼ਾਈਲਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ ਇਸਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
@@ -303,7 +303,7 @@
 <translation id="1445896388055045436">ਚੈੱਕ-ਆਊਟ ਵੇਲੇ ਕਾਰਡ ਦੇ ਉਪਲਬਧ ਲਾਭਾਂ ਅਤੇ ਇਨਾਮਾਂ ਨੂੰ ਦਿਖਾਓ। ਜਾਰੀਕਰਤਾ ਦੇ ਨਿਯਮ ਲਾਗੂ ਹਨ।</translation>
 <translation id="1447067628680007684">(x86_64)</translation>
 <translation id="1448166547804028941">ਕੁੰਜੀਆਂ "<ph name="DATA_CONTROLS_FIRST_KEY_SET"/>" ਨੂੰ "<ph name="DATA_CONTROLS_SECOND_KEY_SET"/>" ਕੁੰਜੀਆਂ ਵਾਂਗ ਸ਼ਬਦਕੋਸ਼ ਵਿੱਚ ਸੈੱਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ</translation>
-<translation id="923286722567024030">ਰੈਜ਼ੋਲਿਊਸ਼ਨ ਨੰਬਰ ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="923286722567024030">ਰੈਜ਼ੋਲਿਊਸ਼ਨ ਨੰਬਰ ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="1455413310270022028">ਰਬੜ</translation>
 <translation id="1457992721081300557">{NUM_REVIEWS,plural, =0{ਦੇਖਣ ਲਈ ਕੋਈ ਸਮੀਖਿਆ ਨਹੀਂ ਹੈ}=1{1 ਸਮੀਖਿਆ ਦੇਖੋ}other{ਸਾਰੀਆਂ # ਸਮੀਖਿਆਵਾਂ ਦੇਖੋ}}</translation>
 <translation id="1458059624921545588">ਲੋਕ ਅਤੇ ਸਮਾਜ</translation>
@@ -409,7 +409,7 @@
 <translation id="1612199629998703524">ਵਿਸ਼ਿਆਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="1615178538289490617"><ph name="PORT_NAME"/> ਲਈ ਪਹੁੰਚ ਰੱਦ ਕਰੋ</translation>
 <translation id="1615402009686901181">ਗੁਪਤ ਸਮੱਗਰੀ ਦੇ ਦਿਸਣਯੋਗ ਹੋਣ 'ਤੇ ਪ੍ਰਸ਼ਾਸਕ ਨੀਤੀ ਸਕ੍ਰੀਨ ਕੈਪਚਰ ਨੂੰ ਬੰਦ ਕਰ ਦਿੰਦੀ ਹੈ</translation>
-<translation id="5716510827141729993">ਇਸ ਪੰਨੇ ਬਾਰੇ Growser Search ਤੋਂ ਪੁੱਛੋ</translation>
+<translation id="5716510827141729993">ਇਸ ਪੰਨੇ ਬਾਰੇ Google Search ਤੋਂ ਪੁੱਛੋ</translation>
 <translation id="1617276713587758852">ਕ੍ਰਾਸਓਵਰ</translation>
 <translation id="1619007254056372606">ਡੀਵਾਈਸ 'ਤੇ ਸਾਈਟ ਡਾਟੇ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="1619648179761984213"><ph name="USER_DISPLAY_NAME"/> ਨੇ ਇੱਕ ਟੈਬ ਹਟਾ ਦਿੱਤੀ</translation>
@@ -487,7 +487,7 @@
 <translation id="173080396488393970">ਇਸ ਤਰ੍ਹਾਂ ਦਾ ਕਾਰਡ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ</translation>
 <translation id="1731563515262205847">ML-DSA-65</translation>
 <translation id="1732445923934584865">ਇਸਦੀ ਬਜਾਏ ਵਿਅਕਤੀਗਤ ਤੌਰ 'ਤੇ ਪੁੱਛੋ</translation>
-<translation id="5456336665142990002">Growser Wallet ਵਿੱਚ ਰਿਡਰੈੱਸ ਨੰਬਰ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
+<translation id="5456336665142990002">Google Wallet ਵਿੱਚ ਰਿਡਰੈੱਸ ਨੰਬਰ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="1733064249834771892">ਫ਼ੌਂਟ</translation>
 <translation id="1733631169686303142">ਆਡੀਓ ਉਪਕਰਨ</translation>
 <translation id="1733762317901693627">ਇੱਥੋਂ ਤੱਕ ਕਿ ਉਹ ਸਾਈਟਾਂ ਜੋ ਆਮ ਤੌਰ 'ਤੇ ਸੁਰੱਖਿਅਤ ਹੁੰਦੀਆਂ ਹਨ, ਉਨ੍ਹਾਂ ਵਿੱਚ ਵੀ ਕਈ ਵਾਰ ਹਮਲਾਵਰਾਂ ਵੱਲੋਂ ਛੇੜਛਾੜ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਜੇ ਤੁਸੀਂ ਪੱਕਾ ਕਰਦੇ ਹੋ ਕਿ ਤੁਹਾਨੂੰ ਜੋਖਮਾਂ ਦੀ ਸਮਝ ਹੈ, ਸਿਰਫ਼ ਤਾਂ ਹੀ <ph name="BEGIN_LINK"/>ਇਸ ਅਸੁਰੱਖਿਅਤ ਸਾਈਟ<ph name="END_LINK"/> 'ਤੇ ਜਾਓ।</translation>
@@ -552,7 +552,7 @@
 <translation id="1823768272150895732">ਫ਼ੌਂਟ</translation>
 <translation id="1824402189105105503">ਅੱਠਵਾਂ ਰੋਲ</translation>
 <translation id="1826516787628120939">ਜਾਂਚ ਕਰ ਰਿਹਾ ਹੈ</translation>
-<translation id="6275942451098940709">ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ Growser Wallet ਵਿੱਚ ਜਾਣਕਾਰੀ ਨੂੰ ਰੱਖਿਅਤ ਕਰਨ</translation>
+<translation id="6275942451098940709">ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ Google Wallet ਵਿੱਚ ਜਾਣਕਾਰੀ ਨੂੰ ਰੱਖਿਅਤ ਕਰਨ</translation>
 <translation id="1832474362231610822">ਫ਼ੋਟੋ ਨੂੰ OneDrive ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ</translation>
 <translation id="1832730227369924598">ਡੈਸਕ ਸਿੰਕ</translation>
 <translation id="1834452765064623979">ਉਸਾਰੀ ਅਤੇ ਸਾਂਭ-ਸੰਭਾਲ</translation>
@@ -595,7 +595,7 @@
 <translation id="1902576642799138955">ਪ੍ਰਮਾਣਿਕਤਾ ਮਿਆਦ</translation>
 <translation id="1908217026282415406">ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਅਤੇ ਹਲਚਲ</translation>
 <translation id="1908690643053136980">ਤੁਹਾਡਾ ਪ੍ਰਸ਼ਾਸਕ ਇਸ ਸਾਈਟ ਲਈ <ph name="PERMISSION"/> ਦੀ ਆਗਿਆ ਨਹੀਂ ਦਿੰਦਾ ਹੈ</translation>
-<translation id="5430059593940336932">Growser Wallet ਵਿੱਚ ਆਈਡੀ ਕਾਰਡ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="5430059593940336932">Google Wallet ਵਿੱਚ ਆਈਡੀ ਕਾਰਡ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="1913037223029790376">ਇਸ ਆਭਾਸੀ ਕਾਰਡ ਲਈ CVC ਵਰਤੋ</translation>
 <translation id="191374271204266022">JSON ਵਜੋਂ ਕਾਪੀ ਕਰੋ</translation>
 <translation id="1914326953223720820">ਅਣ-ਜ਼ਿਪ ਸੇਵਾ</translation>
@@ -652,7 +652,7 @@
 <translation id="2001469757375372617">ਕੋਈ ਗੜਬੜ ਹੋ ਗਈ। ਤੁਹਾਡੀ ਤਬਦੀਲੀ ਨੂੰ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ।</translation>
 <translation id="2003709556000175978">ਹੁਣੇ ਆਪਣਾ ਪਾਸਵਰਡ ਰੀਸੈੱਟ ਕਰੋ</translation>
 <translation id="2003775180883135320">ਉੱਪਰ ਚਾਰ ਮੋਰੀਆਂ</translation>
-<translation id="6855500251167861792">'ਇਵੈਂਟ ਬਣਾਓ' ਬਟਨ, Growser Calendar ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਨਵਾਂ ਇਵੈਂਟ ਬਣਾਉਣ ਲਈ ਇਸਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
+<translation id="6855500251167861792">'ਇਵੈਂਟ ਬਣਾਓ' ਬਟਨ, Google Calendar ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਨਵਾਂ ਇਵੈਂਟ ਬਣਾਉਣ ਲਈ ਇਸਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
 <translation id="2342444980304536062">Growser ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਅਤੇ ਸਾਰੀਆਂ ਸਾਈਟਾਂ ਵਿੱਚ ਸਟੋਰ ਕੀਤੇ ਡਾਟੇ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="2017251371756906434">ਕਰਿਆਨੇ ਦੀ ਸੂਚੀ ਬਣਾਓ</translation>
 <translation id="2018769312928511665">ਕੱਪੜਾ (ਗਲੋਸੀ)</translation>
@@ -727,7 +727,7 @@
 <translation id="2122165854541876335">ਖਪਤਕਾਰ ਸਰੋਤ</translation>
 <translation id="2122214041802369259">ਕੀਮਤ ਵੱਧ ਹੈ</translation>
 <translation id="2122719317867821810">ਇਹ ਨੀਤੀ ਉਮੀਦ ਮੁਤਾਬਕ ਕੰਮ ਕਰ ਰਹੀ ਹੈ ਪਰ ਕੋਈ ਵਿਵਾਦਗ੍ਰਸਤ ਮੁੱਲ ਕਿਸੇ ਹੋਰ ਥਾਂ 'ਤੇ ਸੈੱਟ ਹੈ ਅਤੇ ਇਸ ਨੀਤੀ ਵੱਲੋਂ ਓਵਰਰਾਈਡ ਕੀਤਾ ਗਿਆ ਹੈ।</translation>
-<translation id="1405760536280692221">Growser Wallet ਵਿੱਚ ਵਾਹਨ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
+<translation id="1405760536280692221">Google Wallet ਵਿੱਚ ਵਾਹਨ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="2126374524350484896">PDF ਨਿਰਮਾਤਾ:</translation>
 <translation id="2127090458081644412">ਇਸ ਡੀਵਾਈਸ 'ਤੇ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਪਾਸਵਰਡ</translation>
 <translation id="2127747486437921899">ਤਿਰਛਾ</translation>
@@ -875,7 +875,7 @@
 <translation id="2320564945062300737">ਚਿਹਰੇ ਦੀ ਦੇਖਭਾਲ ਲਈ ਉਤਪਾਦ</translation>
 <translation id="2321291402658100099">ਜਾਣਕਾਰੀ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="2322254345061973671">{COUNT,plural, =1{1 ਵਿੰਡੋ}one{# ਵਿੰਡੋ}other{# ਵਿੰਡੋਆਂ}}</translation>
-<translation id="4848600035394410348">ਹੁਣ ਤੁਸੀਂ Growser Wallet ਤੋਂ ਹੋਰ ਜਾਣਕਾਰੀ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ</translation>
+<translation id="4848600035394410348">ਹੁਣ ਤੁਸੀਂ Google Wallet ਤੋਂ ਹੋਰ ਜਾਣਕਾਰੀ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ</translation>
 <translation id="2326747055382936979">ਵਿਸਤ੍ਰਿਤ ਆਟੋਫਿਲ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="2328651992442742497">ਇਜਾਜ਼ਤ ਹੈ (ਪੂਰਵ-ਨਿਰਧਾਰਿਤ)</translation>
 <translation id="2328955282645810595">ਉਸਾਰੀ ਅਤੇ ਪਾਵਰ ਟੂਲ</translation>
@@ -930,7 +930,7 @@
 <translation id="2396249848217231973">&amp;ਮਿਟਾਏ ਗਏ ਨੂੰ ਅਣਕੀਤਾ ਕਰੋ</translation>
 <translation id="4124760202519850347">ਇਸ IBAN ਨੂੰ ਤੁਹਾਡੇ Growser ਖਾਤੇ ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਇਸਨੂੰ Growser ਸੇਵਾਵਾਂ ਵਿੱਚ ਵਰਤ ਸਕੋ।</translation>
 <translation id="2400263725572336749">ਪਾਸਪੋਰਟ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਕਰੋ</translation>
-<translation id="1258449952808226603">Growser Wallet ਵਿੱਚ ਆਪਣੇ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
+<translation id="1258449952808226603">Google Wallet ਵਿੱਚ ਆਪਣੇ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="2400600116338235695">ਸਾਈਟ ਸੀਰੀਅਲ ਪੋਰਟਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਪੁੱਛ ਸਕਦੀ ਹੈ</translation>
 <translation id="2403474027143565107">ਸਟੀਕ</translation>
 <translation id="240450251994300576">ਸੈਕੰਡਰੀ ਸਿਰਲੇਖ ਦਾ ਲੋਗੋ</translation>
@@ -948,7 +948,7 @@
 <translation id="2438874542388153331">ਸੱਜੇ ਪਾਸੇ ਚਾਰ ਮੋਰੀਆਂ</translation>
 <translation id="2441854154602066476">ਸਪਰਸ਼ ਕਰ ਕੇ ਭਰੇ ਜਾਣ ਵਾਲੀਆਂ ਉਪਲਬਧ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਦੀ ਸੂਚੀ। ਕੀ-ਬੋਰਡ ਅਦਿੱਖ ਹੈ।</translation>
 <translation id="2448295565072560657">ਤੁਹਾਡੇ ਲੌਗ-ਇਨ ਕੀਤੇ ਹੋਣ ਦੌਰਾਨ ਇਸ ਡੀਵਾਈਸ ਨਾਲ ਜੁੜੇ ਪੈਰੀਫਿਰਲ</translation>
-<translation id="7174054574169352743">Growser Wallet ਤੋਂ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਅਤੇ ਹੋਰ ਜਾਣਕਾਰੀ</translation>
+<translation id="7174054574169352743">Google Wallet ਤੋਂ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਅਤੇ ਹੋਰ ਜਾਣਕਾਰੀ</translation>
 <translation id="2451201933352935301"><ph name="URL"/> ਸਾਈਟ ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਡਿਸਪਲੇਆਂ 'ਤੇ ਵਿੰਡੋਆਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨਾ ਚਾਹੁੰਦੀ ਹੈ</translation>
 <translation id="2451607499823206582">ਨਜ਼ਰ ਰੱਖੀ ਜਾ ਰਹੀ ਹੈ</translation>
 <translation id="2452098632681057184">ਵਾਤਾਵਰਨ ਵਿਗਿਆਨ ਅਤੇ ਵਾਤਾਵਰਨ</translation>
@@ -1306,7 +1306,7 @@
 <translation id="4839141088909071432">Brave ਨੇ ਅਜਿਹੇ ਵੇਰਵਿਆਂ ਦਾ ਪਤਾ ਲਗਾਇਆ ਹੈ, ਜੋ ਫ਼ਿਸ਼ਿੰਗ, ਮਾਲਵੇਅਰ ਜਾਂ ਘਪਲਿਆਂ ਨਾਲ ਸੰਬੰਧਿਤ ਸਾਈਟਾਂ 'ਤੇ ਆਮ ਹੁੰਦੇ ਹਨ। <ph name="BEGIN_LINK"/>ਹੋਰ ਜਾਣੋ<ph name="END_LINK"/></translation>
 <translation id="3027915437837548462">SVG ਚਿੱਤਰ</translation>
 <translation id="3030331669969285614">ਇਹ ਫਲੈਗ ਬ੍ਰੇਕਿੰਗ ਚੇਂਜ ਨੂੰ ਰੋਕਦੇ ਜਾਂ ਵਾਪਸ ਲਿਜਾਉਂਦੇ ਹਨ ਅਤੇ ਇਹ ਸਿਰਫ਼ ਸੀਮਤ ਸਮੇਂ ਲਈ ਹੀ ਉਪਲਬਧ ਹੋਣਗੇ।</translation>
-<translation id="5877261609750575671">ਤੁਹਾਡੇ ਘਰ ਦਾ ਪਤਾ Growser ਸੇਵਾਵਾਂ 'ਤੇ ਚੀਜ਼ਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਢੁਕਵੇਂ ਖੋਜ ਨਤੀਜੇ ਅਤੇ Growser Maps 'ਤੇ ਦਿਸ਼ਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰਨਾ। ਤੁਸੀਂ ਆਪਣੇ <ph name="BEGIN_LINK"/>Growser ਖਾਤੇ <ph name="ACCOUNT"/><ph name="END_LINK"/> ਵਿੱਚ ਆਪਣੇ ਪਤੇ ਦਾ ਸੰਪਾਦਨ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਉਸਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹੋ।</translation>
+<translation id="5877261609750575671">ਤੁਹਾਡੇ ਘਰ ਦਾ ਪਤਾ Growser ਸੇਵਾਵਾਂ 'ਤੇ ਚੀਜ਼ਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਢੁਕਵੇਂ ਖੋਜ ਨਤੀਜੇ ਅਤੇ Google Maps 'ਤੇ ਦਿਸ਼ਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰਨਾ। ਤੁਸੀਂ ਆਪਣੇ <ph name="BEGIN_LINK"/>Growser ਖਾਤੇ <ph name="ACCOUNT"/><ph name="END_LINK"/> ਵਿੱਚ ਆਪਣੇ ਪਤੇ ਦਾ ਸੰਪਾਦਨ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਉਸਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹੋ।</translation>
 <translation id="3033777742142108756">ਫ਼ਿਲਹਾਲ ਮੋਸ਼ਨ ਅਤੇ ਲਾਈਟ ਸੈਂਸਰਾਂ ਦੀ ਆਗਿਆ ਹੈ</translation>
 <translation id="3034526003882782781">ਸਕ੍ਰੋਲ ਅਤੇ ਜ਼ੂਮ ਕਰਨ ਦੀ ਆਗਿਆ ਹੈ</translation>
 <translation id="3036894576201005614">ਘਰੇਲੂ ਸਫ਼ਾਈ ਸੰਬੰਧੀ ਸਪਲਾਈਆਂ</translation>
@@ -1455,7 +1455,7 @@
 <translation id="323585066388831737">ਹਲਕਾ ਲਾਲ</translation>
 <translation id="3235902901585019063">ਸਥਾਨਕ ਫ਼ਾਈਲਾਂ <ph name="DATE_TIME"/> ਨੂੰ ਮਿਟਾ ਦਿੱਤੀਆਂ ਜਾਣਗੀਆਂ। ਪੱਕਾ ਕਰੋ ਕਿ ਕੋਈ ਵੀ ਮਹੱਤਵਪੂਰਨ ਕਾਰੋਬਾਰ ਜਾਂ ਨਿੱਜੀ ਡਾਟਾ ਬਾਹਰੀ ਤੌਰ 'ਤੇ ਸਟੋਰ ਕੀਤਾ ਗਿਆ ਹੋਵੇ।</translation>
 <translation id="3236212803136366317">ਕਾਰਡ ਦੇ ਲਾਭ</translation>
-<translation id="2816340899490518371">Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</translation>
+<translation id="2816340899490518371">Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</translation>
 <translation id="3240683217920639535"><ph name="MANAGE_CHROME_THEMES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab ਦਬਾ ਕੇ, ਫਿਰ ਆਪਣੇ ਬ੍ਰਾਊਜ਼ਰ ਦੀ ਦਿੱਖ ਨੂੰ ਵਿਉਂਤਬੱਧ ਕਰਨ ਲਈ Enter ਦਬਾਓ</translation>
 <translation id="3243131902823383230"><ph name="MANUFACTURER"/> ਲੈਪਟਾਪ</translation>
 <translation id="3243650379537999343">ਡਰਾਅ</translation>
@@ -1463,7 +1463,7 @@
 <translation id="3249102948665905108"><ph name="CLOUD_PROVIDER"/> 'ਤੇ ਅੱਪਲੋਡ ਕੀਤੀ ਫ਼ਾਈਲ ਵਿੱਚ ਕੁਝ ਗੜਬੜਾਂ ਹਨ</translation>
 <translation id="3252772880526154546">ਉਸਾਰੀ ਕਲਾ</translation>
 <translation id="3254301855501243548">18 x 22 ਇੰਚ</translation>
-<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Calendar ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਨਵਾਂ ਇਵੈਂਟ ਬਣਾਉਣ ਲਈ Tab ਦਬਾ ਕੇ ਫਿਰ Enter ਦਬਾਓ</translation>
+<translation id="6900454207575412115"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Google Calendar ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਨਵਾਂ ਇਵੈਂਟ ਬਣਾਉਣ ਲਈ Tab ਦਬਾ ਕੇ ਫਿਰ Enter ਦਬਾਓ</translation>
 <translation id="3261180263071638338">'Gmail ਅਤੇ ਹੋਰਾਂ ਤੋਂ ਆਟੋਫਿਲ' ਵਾਲਾ ਨੋਟਿਸ ਬੰਦ ਹੋ ਗਿਆ ਹੈ</translation>
 <translation id="3261488570342242926">ਆਭਾਸੀ ਕਾਰਡ ਬਾਰੇ ਜਾਣੋ</translation>
 <translation id="3262698603497362968">ਖਰੀਦਦਾਰੀ ਦੇ ਵਿਕਲਪ</translation>
@@ -1560,7 +1560,7 @@
 <translation id="3422472998109090673"><ph name="HOST_NAME"/> ਵਰਤਮਾਨ ਤੌਰ 'ਤੇ ਪਹੁੰਚਯੋਗ ਨਹੀਂ ਹੈ।</translation>
 <translation id="3422794267539320056">ਖੇਡਣ ਲਈ dino 'ਤੇ ਟੈਪ ਕਰੋ ਜਾਂ ਸਪੇਸ ਦਬਾਓ</translation>
 <translation id="3423742043356668186">ਸਿਸਟਮ ਵੱਲੋਂ ਨਿਰਧਾਰਿਤ</translation>
-<translation id="6418111414395514325">Growser Wallet ਵਿੱਚ ਪਾਸਪੋਰਟ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
+<translation id="6418111414395514325">Google Wallet ਵਿੱਚ ਪਾਸਪੋਰਟ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="3427342743765426898">ਸੰਪਾਦਨ ਕਰਕੇ &amp;ਮੁੜ-ਓਹੀ ਕਰੋ</translation>
 <translation id="3428151540071562330">ਇੱਕ ਜਾਂ ਇੱਕ ਤੋਂ ਵੱਧ DnsOverHttpsTemplates ਸਰਵਰ ਟੈਮਪਲੇਟ URI ਅਵੈਧ ਹਨ ਅਤੇ ਉਹਨਾਂ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕੀਤੀ ਜਾਵੇਗੀ।</translation>
 <translation id="3432601291244612633">ਪੰਨਾ ਬੰਦ ਕਰੋ</translation>
@@ -1641,7 +1641,7 @@
 <translation id="3549904448933807997">ਬ੍ਰਾਊਜ਼ਰ ਅਤੇ ਪ੍ਰੋਫਾਈਲਾਂ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ (ਨਿੱਜੀ ਅਤੇ ਕਾਰਜ ਪ੍ਰੋਫਾਈਲਾਂ ਸਮੇਤ)</translation>
 <translation id="3552155506104542239">ਚਿਤਾਵਨੀ: ਇਹ ਨੀਤੀ <ph name="POLICY_NAME"/> ਦੇ ਖਿਲਾਫ਼ ਹੈ ਅਤੇ ਇਸਦਾ Android ਐਪਾਂ 'ਤੇ ਕੋਈ ਪ੍ਰਭਾਵ ਨਹੀਂ ਪਵੇਗਾ। ਹਾਲਾਂਕਿ, ਇਹ ਨੀਤੀ ਉਮੀਦ ਮੁਤਾਬਕ ਕੰਮ ਕਰ ਰਹੀ ਹੈ।</translation>
 <translation id="3552297013052089404">ਸਾਂਸ-ਸੈਰਿਫ ਫ਼ੌਂਟ</translation>
-<translation id="379073195905791294">IBAN ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ</translation>
+<translation id="379073195905791294">IBAN ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ</translation>
 <translation id="3558573058928565255">ਦਿਨ ਦਾ ਸਮਾਂ</translation>
 <translation id="3559897352860026926">ਆਪਣੇ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ <ph name="CLOUD_PROVIDER"/> ਦੀਆਂ ਆਪਣੀਆਂ ਸੰਰੂਪਣ ਸੈਟਿੰਗਾਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਕਹੋ।</translation>
 <translation id="3560824484345057728">ਸੰਬੰਧਿਤ ਸਾਈਟਾਂ ਦੇਖੋ</translation>
@@ -1684,7 +1684,7 @@
 <translation id="3274500070896023877"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab ਦਬਾ ਕੇ, ਫਿਰ Growser ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੁਰੱਖਿਆ ਜਾਂਚ ਚਲਾਉਣ ਲਈ Enter ਦਬਾਓ</translation>
 <translation id="3615309852743236517">ਹੱਥਾਂ ਅਤੇ ਨਹੁੰਆਂ ਦੀ ਸਫ਼ਾਈ ਅਤੇ ਪੈਰਾਂ ਦੀ ਸਫ਼ਾਈ</translation>
 <translation id="3620239073311576716">ਵਰਦੀਆਂ ਅਤੇ ਕੰਮ 'ਤੇ ਪਾਉਣ ਵਾਲੇ ਕੱਪੜੇ</translation>
-<translation id="8284620253545560278">ਇਸ IBAN ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ। ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਇਸ IBAN ਦੀ ਵਰਤੋਂ ਕਰੋਗੇ, ਤਾਂ Growser ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਪੁੱਛੇਗਾ।</translation>
+<translation id="8284620253545560278">ਇਸ IBAN ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ। ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਇਸ IBAN ਦੀ ਵਰਤੋਂ ਕਰੋਗੇ, ਤਾਂ Growser ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਪੁੱਛੇਗਾ।</translation>
 <translation id="3621401353678567613">ਤੁਹਾਡੇ ਵੱਲੋਂ ਟਰੈਕ ਕੀਤੇ ਜਾਣ ਵਾਲੇ ਉਤਪਾਦਾਂ ਲਈ ਕੀਮਤ ਘਟਣ ਸੰਬੰਧੀ ਅਲਰਟ ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਸਤੇ, ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਨੂੰ ਚਾਲੂ ਕਰੋ।</translation>
 <translation id="362276910939193118">ਪੂਰਾ ਇਤਿਹਾਸ ਦਿਖਾਓ</translation>
 <translation id="5043591794632164789">ਆਪਣੇ ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ, <ph name="LINK"/> ਵਿੱਚ ਜਾ ਕੇ Growser ਨੂੰ ਇਸ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ।</translation>
@@ -1713,7 +1713,7 @@
 <translation id="365641980390710834">ਆਮ ਲਿਬਾਸ</translation>
 <translation id="3658742229777143148">ਸੁਧਾਈ</translation>
 <translation id="3659521826520353662">ਕਿਹੜੀਆਂ ਪ੍ਰਸ਼ਾਸਕ-ਪਰਿਭਾਸ਼ਿਤ ਵੈੱਬਸਾਈਟਾਂ ਨੂੰ ਦੇਖਿਆ ਗਿਆ ਹੈ ਅਤੇ ਕਦੋਂ: <ph name="ALLOWLISTED_WEBSITES"/></translation>
-<translation id="4298771595289948957">ਇਸ IBAN ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਇਸਨੂੰ Growser ਸੇਵਾਵਾਂ ਵਿੱਚ ਵਰਤ ਸਕੋ।</translation>
+<translation id="4298771595289948957">ਇਸ IBAN ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਇਸਨੂੰ Growser ਸੇਵਾਵਾਂ ਵਿੱਚ ਵਰਤ ਸਕੋ।</translation>
 <translation id="3664479564786885722">ਇਸ ਉਤਪਾਦ ਨੂੰ ਵੇਚਣ ਵਾਲੇ ਹੋਰ ਸਟੋਰਾਂ ਤੋਂ ਖਰੀਦਣ ਸੰਬੰਧੀ ਹੋਰ ਵਿਕਲਪ ਖੋਜੋ।</translation>
 <translation id="3664782872746246217">ਪ੍ਰਮੁੱਖ-ਸ਼ਬਦ:</translation>
 <translation id="3665806835792525231"><ph name="BEGIN_LINK1"/>ਹੋਰ ਜਾਣੋ<ph name="LINK_END1"/></translation>
@@ -2048,7 +2048,7 @@
 <translation id="4159784952369912983">ਜਾਮਨੀ</translation>
 <translation id="4165422751765527461">ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਮਦਦ ਕੇਂਦਰ ਸੰਬੰਧੀ ਲੇਖ ਖੋਲ੍ਹਦਾ ਹੈ</translation>
 <translation id="4165986682804962316">ਸਾਈਟ ਸੈਟਿੰਗਾਂ</translation>
-<translation id="535085301118821481">Growser Wallet ਵਿੱਚ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ ਜਾਂ ਇਨ੍ਹਾਂ ਸੁਝਾਵਾਂ ਨੂੰ ਬੰਦ ਕਰੋ</translation>
+<translation id="535085301118821481">Google Wallet ਵਿੱਚ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ ਜਾਂ ਇਨ੍ਹਾਂ ਸੁਝਾਵਾਂ ਨੂੰ ਬੰਦ ਕਰੋ</translation>
 <translation id="4169535189173047238">ਨਾ ਕਰਨ ਦਿਓ</translation>
 <translation id="4170851022123611628">ਵਫ਼ਾਦਾਰੀ ਕਾਰਡਾਂ ਦੀ ਸੂਚੀ ਬੰਦ ਹੈ।</translation>
 <translation id="4171400957073367226">ਖ਼ਰਾਬ ਜਾਂਚ ਹਸਤਾਖਰ</translation>
@@ -2266,7 +2266,7 @@
 <translation id="4506599922270137252">ਸਿਸਟਮ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਸੰਪਰਕ ਕਰੋ</translation>
 <translation id="4506763601327080673">ਆਊਟਲਾਈਨ ਦਾ ਡਰਾਫਟ ਤਿਆਰ ਕਰੋ</translation>
 <translation id="450710068430902550">ਪ੍ਰਸ਼ਾਸਕ ਨਾਲ ਸ਼ੇਅਰਿੰਗ</translation>
-<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab ਦਬਾਓ, ਫਿਰ Growser Translate ਨਾਲ ਇਸ ਪੰਨੇ ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਲਈ Enter ਦਬਾਓ</translation>
+<translation id="7581711177899574338"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Tab ਦਬਾਓ, ਫਿਰ Google Translate ਨਾਲ ਇਸ ਪੰਨੇ ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਲਈ Enter ਦਬਾਓ</translation>
 <translation id="4510703642214459906">ਸਥਾਨ</translation>
 <translation id="4892470328555495647">ਕਾਰਡ ਅਤੇ ਪਤੇ Growser ਅਤੇ ਤੁਹਾਡੇ Growser ਖਾਤੇ (<ph name="ACCOUNT_EMAIL"/>) ਤੋਂ ਹਨ। ਤੁਸੀਂ ਉਹਨਾਂ ਦਾ ਪ੍ਰਬੰਧਨ <ph name="BEGIN_LINK"/>ਸੈਟਿੰਗਾਂ<ph name="END_LINK"/> ਵਿੱਚ ਕਰ ਸਕਦੇ ਹੋ।</translation>
 <translation id="4515847625438516456">ਮਾਈਕ੍ਰੋਕਾਰਾਂ ਅਤੇ ਸਬਕੰਪੈਕਟ</translation>
@@ -2298,7 +2298,7 @@
 <translation id="4557573143631562971">ਘਰ ਦਾ ਬੀਮਾ</translation>
 <translation id="4558551763791394412">ਆਪਣੀਆਂ ਐਕਸਟੈਂਸ਼ਨਾਂ ਨੂੰ ਅਯੋਗ ਬਣਾਉਣਾ ਅਜ਼ਮਾਓ।</translation>
 <translation id="4566017918361049074">ਬਾਹਰੀ ਮਨੋਰੰਜਨ</translation>
-<translation id="6895010158785274408">Growser Wallet ਵਿੱਚ ਪਛਾਣ ਕਾਰਡ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
+<translation id="6895010158785274408">Google Wallet ਵਿੱਚ ਪਛਾਣ ਕਾਰਡ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="4569155249847375786">ਪ੍ਰਮਾਣਿਤ</translation>
 <translation id="4570008401337135432">ਲਿਖਤ ਦੀ ਇਕਸਾਰਤਾ</translation>
 <translation id="457875822857220463">ਡਿਲੀਵਰੀ</translation>
@@ -2311,7 +2311,7 @@
 <translation id="4594403342090139922">&amp;ਮਿਟਾਏ ਗਏ ਨੂੰ ਅਣਕੀਤਾ ਕਰੋ</translation>
 <translation id="4598556348158889687">ਸਟੋਰੇਜ ਪ੍ਰਬੰਧਨ</translation>
 <translation id="459914240367517409">ਵੈੱਬ ਡਿਜ਼ਾਈਨ ਅਤੇ ਵਿਕਾਸ</translation>
-<translation id="5585910165070997524">ਆਪਣਾ ਕਾਰਡ ਰੱਖਿਅਤ ਹੋਣ 'ਤੇ Google Pay ਨਾਲ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ। ਕਾਰਡ ਦੇ ਵੇਰਵੇ Growser Wallet ਵਿੱਚ ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।</translation>
+<translation id="5585910165070997524">ਆਪਣਾ ਕਾਰਡ ਰੱਖਿਅਤ ਹੋਣ 'ਤੇ Google Pay ਨਾਲ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ। ਕਾਰਡ ਦੇ ਵੇਰਵੇ Google Wallet ਵਿੱਚ ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।</translation>
 <translation id="4602465984861132303">ਗੇਂਦਬਾਜੀ</translation>
 <translation id="4603727370377253901">ਉਡਾਣ ਦੇ ਰਾਖਵੇਂਕਰਨ</translation>
 <translation id="8338928872956435647">Growser ਸੰਬੰਧੀ ਨੁਕਤੇ ਦੇਖੋ</translation>
@@ -2322,7 +2322,7 @@
 <translation id="46128681529823442">ਫੁੱਟਬਾਲ ਦੇ ਉਪਕਰਨ</translation>
 <translation id="4612904677925722054">ਇਹ ਸਾਈਟ ਵਿੱਚ ਬਾਲਗ ਸਮੱਗਰੀ ਹੋ ਸਕਦੀ ਹੈ। ਮਾਂ-ਪਿਓ ਜਾਂ ਸਰਪ੍ਰਸਤ ਨੂੰ ਇਹ ਕਹਿਣਾ ਹੋਵੇਗਾ ਕਿ ਤੁਸੀਂ ਇਸ ਵੈੱਬਸਾਈਟ 'ਤੇ ਜਾ ਸਕਦੇ ਹੋ।</translation>
 <translation id="4619564267100705184">ਆਪਣੀ ਪਛਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</translation>
-<translation id="3127071008735497897">Growser Wallet ਵਿੱਚ ਡਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="3127071008735497897">Google Wallet ਵਿੱਚ ਡਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="4622292761762557753">ਫਿਰ ਵੀ ਟ੍ਰਾਂਸਫ਼ਰ ਕਰੋ</translation>
 <translation id="4622647778991854660">ਸੂਚਨਾ ਕੇਂਦਰ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਨੂੰ ਚਾਲੂ ਕਰੋ। <ph name="LINK"/> ਖੋਲ੍ਹੋ।</translation>
 <translation id="4623894491222334521">ਪਛਾਣ ਸੰਬੰਧੀ ਦਸਤਾਵੇਜ਼</translation>
@@ -2426,7 +2426,7 @@
 <translation id="4766713847338118463">ਹੇਠਾਂ ਦੋ ਪਿੰਨਾਂ</translation>
 <translation id="4768816584204270288">ਜਦੋਂ ਤੁਸੀਂ ਸਮੇਂ-ਸਿਰ ਭੁਗਤਾਨ ਕਰਦੇ ਹੋ, ਤਾਂ ਇੱਕ ਵਾਰ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਆਭਾਸੀ ਕਾਰਡ ਨੰਬਰ ਭਰਿਆ ਜਾਂਦਾ ਹੈ। ਤੁਸੀਂ ਇਸ ਖਰੀਦ ਲਈ ਕਾਰਡ ਦੇ ਵੇਰਵਿਆਂ ਨੂੰ ਕਾਪੀ ਅਤੇ ਪੇਸਟ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰ ਸਕਦੇ ਹੋ।</translation>
 <translation id="4768864802656530630">ਵੇਰਵੇ ਸਹਿਤ ਸਿਸਟਮ ਲੌਗ। <ph name="BEGIN_LINK"/>ਹੋਰ ਜਾਣੋ<ph name="END_LINK"/></translation>
-<translation id="4341731325100657394">Growser Wallet ਵਿੱਚ KTN ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
+<translation id="4341731325100657394">Google Wallet ਵਿੱਚ KTN ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="4771249073710170730">ਰੇਡੀਓ ਕੰਟਰੋਲ ਅਤੇ ਮਾਡਲਿੰਗ</translation>
 <translation id="4771973620359291008">ਇੱਕ ਅਗਿਆਤ ਗੜਬੜ ਹੋਈ ਹੈ।</translation>
 <translation id="4774055414220872623">ਕਲਾ ਅਤੇ ਸ਼ਿਪਲਕਾਰੀ ਸੰਬੰਧੀ ਸਪਲਾਈਆਂ</translation>
@@ -2546,7 +2546,7 @@
 <translation id="495170559598752135">ਕਿਰਿਆਵਾਂ</translation>
 <translation id="4953689047182316270">ਪਹੁੰਚਯੋਗਤਾ ਇਵੈਂਟਾਂ 'ਤੇ ਪ੍ਰਤਿਕਿਰਿਆ ਕਰੋ</translation>
 <translation id="2087849210737883918">ਸੁਝਾਵਾਂ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਨ ਅਤੇ ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ, ਪੰਨੇ ਦੇ URL ਅਤੇ ਸਮੱਗਰੀ ਨੂੰ Growser ਨਾਲ ਸਾਂਝਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</translation>
-<translation id="888946399124114802">ਆਪਣਾ ਕਾਰਡ ਰੱਖਿਅਤ ਹੋਣ 'ਤੇ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ। ਕਾਰਡ ਦੇ ਵੇਰਵੇ Growser Wallet ਵਿੱਚ ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।</translation>
+<translation id="888946399124114802">ਆਪਣਾ ਕਾਰਡ ਰੱਖਿਅਤ ਹੋਣ 'ਤੇ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ। ਕਾਰਡ ਦੇ ਵੇਰਵੇ Google Wallet ਵਿੱਚ ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।</translation>
 <translation id="2351178841237473727">'ਆਪਣਾ Growser ਇਤਿਹਾਸ ਦੇਖੋ' ਬਟਨ, Growser ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਆਪਣੇ ਬ੍ਰਾਊਜ਼ਿੰਗ ਇਤਿਹਾਸ ਨੂੰ ਦੇਖਣ ਅਤੇ ਉਸਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ ਇਸਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
 <translation id="4957781475307065660">{DOMAIN_COUNT,plural, =1{1 ਹੋਰ ਸਾਈਟ}one{# ਹੋਰ ਸਾਈਟ}other{# ਹੋਰ ਸਾਈਟਾਂ}}</translation>
 <translation id="4958444002117714549">ਸੂਚੀ ਦਾ ਵਿਸਤਾਰ ਕਰੋ</translation>
@@ -2570,7 +2570,7 @@
 <translation id="4995474875135717171">ਸੋਧਣ ਦਾ ਸਮਾਂ:</translation>
 <translation id="4995749490935861684"><ph name="CUSTOMIZE_SEARCH_ENGINES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ਸਾਈਟ ਖੋਜ ਅਤੇ ਆਪਣੇ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਖੋਜ ਇੰਜਣ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ Tab ਅਤੇ ਫਿਰ Enter ਦਬਾਓ</translation>
 <translation id="4998950033665438990">ਸਿੰਗਲ ਫੇਸ</translation>
-<translation id="2033688757301422080">Growser Search AI ਮੋਡ</translation>
+<translation id="2033688757301422080">Google Search AI ਮੋਡ</translation>
 <translation id="5001338033791319371">ਪੂਰੀ ਸਕ੍ਰੀਨ ਤੋਂ ਬਾਹਰ ਜਾਣ ਅਤੇ ਡਾਊਨਲੋਡ ਦੇਖਣ ਲਈ, ਸਿਖਰ ਤੋਂ ਹੇਠਾਂ ਵੱਲ ਘਸੀਟੋ ਅਤੇ 'ਪਿੱਛੇ' ਬਟਨ 'ਤੇ ਸਪਰਸ਼ ਕਰੋ</translation>
 <translation id="5001526427543320409">ਤੀਜੀ-ਧਿਰ ਦੀਆਂ ਕੁਕੀਜ਼</translation>
 <translation id="5007344584818503324">ਸਾਂਝੀ ਕੀਤੀ ਗਈ ਟੈਬ ਗਰੁੱਪ ਨਾਲ ਸੰਬੰਧਿਤ ਸਰਗਰਮੀ</translation>
@@ -2609,7 +2609,7 @@
 <translation id="5051254010007014901"><ph name="TOOLBELT_PRECEDING_MATCH_TEXT"/>, ਇਸ ਖੋਜ ਸੁਝਾਅ ਤੋਂ ਬਾਅਦ ਉਪਲਬਧ ਹੋਰ ਵੀ ਖੋਜ ਸੰਬੰਧੀ ਸ਼ਾਰਟਕੱਟ ਲਈ Tab ਦਬਾਓ</translation>
 <translation id="5052488928733955073">ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਭਰਨ ਵਿੱਚ ਸਮੱਸਿਆ ਆਈ। ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।</translation>
 <translation id="5052517576853118371">ਕਿਰਿਆਸ਼ੀਲ ਵਿਸ਼ੇ</translation>
-<translation id="4845759156174221500">ਤੁਹਾਡੇ ਅਸਲ ਵੇਰਵਿਆਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ, ਇਸ ਕਾਰਡ ਨਾਲ ਚੈੱਕ-ਆਊਟ ਕਰਨ ਵੇਲੇ ਆਭਾਸੀ ਕਾਰਡ ਨੰਬਰ ਭਰਿਆ ਜਾਵੇਗਾ। Growser Wallet ਵਿੱਚ ਪ੍ਰਬੰਧਨ ਕਰੋ। <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="4845759156174221500">ਤੁਹਾਡੇ ਅਸਲ ਵੇਰਵਿਆਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ, ਇਸ ਕਾਰਡ ਨਾਲ ਚੈੱਕ-ਆਊਟ ਕਰਨ ਵੇਲੇ ਆਭਾਸੀ ਕਾਰਡ ਨੰਬਰ ਭਰਿਆ ਜਾਵੇਗਾ। Google Wallet ਵਿੱਚ ਪ੍ਰਬੰਧਨ ਕਰੋ। <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
 <translation id="5056425809654826431">{NUM_FILES,plural, =1{ਨਜ਼ਦੀਕੀ ਸਾਂਝ ਦੀ ਵਰਤੋਂ ਕਰਦਿਆਂ ਇਹ ਫ਼ਾਈਲ ਭੇਜਣ ਲਈ, ਆਪਣੇ ਡੀਵਾਈਸ 'ਤੇ ਜਗ੍ਹਾ (<ph name="DISK_SPACE_SIZE"/>) ਖਾਲੀ ਕਰੋ}one{ਨਜ਼ਦੀਕੀ ਸਾਂਝ ਦੀ ਵਰਤੋਂ ਕਰਦਿਆਂ ਇਹ ਫ਼ਾਈਲ ਭੇਜਣ ਲਈ, ਆਪਣੇ ਡੀਵਾਈਸ 'ਤੇ ਜਗ੍ਹਾ (<ph name="DISK_SPACE_SIZE"/>) ਖਾਲੀ ਕਰੋ}other{ਨਜ਼ਦੀਕੀ ਸਾਂਝ ਦੀ ਵਰਤੋਂ ਕਰਦਿਆਂ ਇਨ੍ਹਾਂ ਫ਼ਾਈਲਾਂ ਨੂੰ ਭੇਜਣ ਲਈ, ਆਪਣੇ ਡੀਵਾਈਸ 'ਤੇ ਜਗ੍ਹਾ (<ph name="DISK_SPACE_SIZE"/>) ਖਾਲੀ ਕਰੋ}}</translation>
 <translation id="5056587122125565772">ਚਿੱਤਰ ਬਣਾਓ</translation>
 <translation id="505757197798929356">ਖੋਲ੍ਹਣ ਦਾ ਕਾਰਨ ਮੁਹੱਈਆ ਕਰਵਾਓ (ਲੋੜੀਂਦਾ)</translation>
@@ -2833,7 +2833,7 @@
 <translation id="5396631636586785122">ਸੱਜੇ ਕਿਨਾਰੇ ਤੋਂ ਸਿਲਾਈ</translation>
 <translation id="5396837962335265787"><ph name="ATTRIBUTE_NAME"/>, ਪਹਿਲਾਂ ਕੀਮਤ <ph name="OLD_ATTRIBUTE_ATTRIBUTE"/> ਸੀ</translation>
 <translation id="5397794290049113714">ਤੁਸੀਂ</translation>
-<translation id="7948560911043168202">ਅਗਲੀ ਵਾਰ ਇਸ IBAN ਨੂੰ ਆਟੋਫਿਲ ਕਰਨ ਲਈ, ਇਸਨੂੰ ਆਪਣੇ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="7948560911043168202">ਅਗਲੀ ਵਾਰ ਇਸ IBAN ਨੂੰ ਆਟੋਫਿਲ ਕਰਨ ਲਈ, ਇਸਨੂੰ ਆਪਣੇ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="5398772614898833570">ਵਿਗਿਆਪਨ ਬਲੌਕ ਕੀਤੇ ਗਏ</translation>
 <translation id="5400836586163650660">ਸਲੇਟੀ</translation>
 <translation id="5401344472773249513">ਮਸ਼ਹੂਰ-ਹਸਤੀਆਂ ਅਤੇ ਮਨੋਰੰਜਨ ਖਬਰਾਂ</translation>
@@ -2863,12 +2863,12 @@
             <ph name="LIST_ITEM"/>ਕੁਕੀਜ਼ ਅਤੇ ਸਾਈਟ ਡਾਟਾ
             <ph name="LIST_ITEM"/>ਫ਼ਾਰਮਾਂ ਵਿੱਚ ਦਾਖਲ ਕੀਤੀ ਜਾਣਕਾਰੀ
           <ph name="END_LIST"/></translation>
-<translation id="4203264631355936344">ਤੇਜ਼ੀ ਨਾਲ ਚੈੱਕ-ਆਊਟ ਕਰਨ ਲਈ, ਇਸ CVC ਨੂੰ Growser Wallet (<ph name="ACCOUNT_EMAIL"/>) ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="4203264631355936344">ਤੇਜ਼ੀ ਨਾਲ ਚੈੱਕ-ਆਊਟ ਕਰਨ ਲਈ, ਇਸ CVC ਨੂੰ Google Wallet (<ph name="ACCOUNT_EMAIL"/>) ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="5436307623797390637">ਡੀਵਾਈਸ 'ਤੇ ਐਪਾਂ</translation>
 <translation id="543656192084990644">ਮੋਸ਼ਨ ਸੈਂਸਰਾਂ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ</translation>
 <translation id="5441409130426352029"><ph name="ATTRIBUTE_VALUE"/>, ਪਹਿਲਾਂ ਕੀਮਤ <ph name="PREVIOUS_VALUE"/> ਸੀ</translation>
 <translation id="5443468954631487277">ਉਲਟੇ ਕ੍ਰਮ ਵਿੱਚ ਪਾਸਾ ਉੱਪਰ ਕੀਤੇ ਹੋਏ</translation>
-<translation id="4784093498984929780">Growser Wallet ਵਿੱਚ ਪਾਸਪੋਰਟ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="4784093498984929780">Google Wallet ਵਿੱਚ ਪਾਸਪੋਰਟ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="5447235695608032700"><ph name="SITE"/> ਨੂੰ ਉਨ੍ਹਾਂ ਵੱਲੋਂ ਤੁਹਾਡੇ ਬਾਰੇ ਰੱਖਿਅਤ ਕੀਤੀ ਜਾਣਕਾਰੀ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ</translation>
 <translation id="5447973833955560753">ਰਿਕਵਰੀ ਪਾਸਵਰਡ</translation>
 <translation id="6108397422772394696">Growser ਵੱਲੋਂ ਸੁਰੱਖਿਆ ਇਵੈਂਟਾਂ ਨੂੰ ਫਲੈਗ ਕੀਤੇ ਜਾਣ 'ਤੇ, ਇਵੈਂਟਾਂ ਸੰਬੰਧੀ ਢੁਕਵਾਂ ਡਾਟਾ ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਵਿੱਚ ਤੁਹਾਡੇ ਵੱਲੋਂ Growser ਵਿੱਚ ਦੇਖੇ ਜਾਂਦੇ ਪੰਨਿਆਂ ਦੇ URL, ਉਨ੍ਹਾਂ ਪੰਨਿਆਂ ਦੇ URL ਜਿਨ੍ਹਾਂ ਤੋਂ ਤੁਸੀਂ ਡਾਟਾ ਕਾਪੀ ਕੀਤਾ ਹੈ, ਫ਼ਾਈਲਾਂ ਦੇ ਨਾਮ ਜਾਂ ਮੈਟਾਡਾਟਾ, IP ਪਤੇ, ਬ੍ਰਾਊਜ਼ਰ ਜਾਂ ਟੈਬ ਕ੍ਰੈਸ਼ਾਂ ਅਤੇ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਅਤੇ Growser ਵਿੱਚ ਵੈੱਬ-ਆਧਾਰਿਤ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿੱਚ ਸਾਈਨ-ਇਨ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਵੱਲੋਂ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਵਰਤੋਂਕਾਰ ਨਾਮ ਸ਼ਾਮਲ ਹੋ ਸਕਦਾ ਹੈ।</translation>
@@ -2968,7 +2968,7 @@
 <translation id="5580958916614886209">ਆਪਣੀ ਮਿਆਦ ਸਮਾਪਤੀ ਦੇ ਮਹੀਨੇ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ</translation>
 <translation id="5582453333200265572">ਆਈਡੀ ਕਾਰਡ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="5583442610070676234">ਤੁਲਨਾ ਸਾਰਨੀ <ph name="COMPARE_SET_NAME"/> ਲਈ ਹੋਰ ਕਾਰਵਾਈਆਂ</translation>
-<translation id="1279569289359558111">ਇਸ IBAN ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ।</translation>
+<translation id="1279569289359558111">ਇਸ IBAN ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ।</translation>
 <translation id="558420943003240152">ਪਾਸਵਰਡਾਂ ਅਤੇ ਪਾਸਕੀਆਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ…</translation>
 <translation id="5586446728396275693">ਕੋਈ ਰੱਖਿਅਤ ਪਤੇ ਨਹੀਂ ਹਨ</translation>
 <translation id="5586831831248371458"><ph name="KEYWORD_SUFFIX"/> ਖੋਜੋ</translation>
@@ -2990,7 +2990,7 @@
 <translation id="5610142619324316209">ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ</translation>
 <translation id="5610807607761827392">ਤੁਸੀਂ <ph name="BEGIN_LINK"/>ਸੈਟਿੰਗਾਂ<ph name="END_LINK"/> ਵਿੱਚ ਕਾਰਡਾਂ ਅਤੇ ਪਤਿਆਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦੇ ਹੋ।</translation>
 <translation id="5611398002774823980">ਖਾਤੇ ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
-<translation id="2012723355262040739">ਇਸ ਪੰਨੇ ਦਾ Growser Translate ਨਾਲ ਅਨੁਵਾਦ ਕਰੋ</translation>
+<translation id="2012723355262040739">ਇਸ ਪੰਨੇ ਦਾ Google Translate ਨਾਲ ਅਨੁਵਾਦ ਕਰੋ</translation>
 <translation id="5612720917913232150"><ph name="URL"/> ਦੀ ਤੁਹਾਡੇ ਕੰਪਿਊਟਰ ਦੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਵਰਤਣ ਦੀ ਇੱਛਾ ਹੈ</translation>
 <translation id="5613958591683399697"><ph name="ENGINE_NAME"/> ਨੂੰ ਪੁੱਛੋ</translation>
 <translation id="5614190747811328134">ਵਰਤੋਂਕਾਰ ਨੋਟਿਸ</translation>
@@ -3121,7 +3121,7 @@
 <translation id="5820751560028604030">ਸਥਾਨਕ ਡਾਊਨਲੋਡ ਬਲਾਕ ਕੀਤਾ ਗਿਆ</translation>
 <translation id="5826507051599432481">ਆਮ ਨਾਮ (CN)</translation>
 <translation id="5830698870816298009">ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਅਤੇ ਹਿਲਜੁਲ</translation>
-<translation id="8488282162676695335">Growser Wallet</translation>
+<translation id="8488282162676695335">Google Wallet</translation>
 <translation id="583281660410589416">ਅਗਿਆਤ</translation>
 <translation id="5832976493438355584">ਲੌਕ ਕੀਤਾ</translation>
 <translation id="5837220895135257862">ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ <ph name="CLOUD_PROVIDER"/> ਵਿੱਚ ਜਗ੍ਹਾ ਖਾਲੀ ਕਰੋ</translation>
@@ -3132,7 +3132,7 @@
 <translation id="5843987376989109187">ਇਹ ਭਾਸ਼ਾ ਅਜੇ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।
     <ph name="BEGIN_LINK"/>ਹੋਰ ਜਾਣੋ<ph name="END_LINK"/></translation>
 <translation id="5847181246682413476">ਪਾਵਰ ਸਪਲਾਈਆਂ</translation>
-<translation id="8224714187340014040">ਆਪਣੇ ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਡਾ <ph name="BNPL_ISSUER_NAME"/> ਵਿੱਚ ਸਾਈਨ-ਇਨ ਕਰਨਾ ਜਾਂ ਇਸ ਨਾਲ ਖਾਤਾ ਬਣਾਉਣਾ ਲਾਜ਼ਮੀ ਹੈ। ਇਹ ਖਾਤਾ ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ Growser Wallet ਵਿੱਚ ਲਿੰਕ ਹੋ ਜਾਵੇਗਾ।</translation>
+<translation id="8224714187340014040">ਆਪਣੇ ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਡਾ <ph name="BNPL_ISSUER_NAME"/> ਵਿੱਚ ਸਾਈਨ-ਇਨ ਕਰਨਾ ਜਾਂ ਇਸ ਨਾਲ ਖਾਤਾ ਬਣਾਉਣਾ ਲਾਜ਼ਮੀ ਹੈ। ਇਹ ਖਾਤਾ ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ Google Wallet ਵਿੱਚ ਲਿੰਕ ਹੋ ਜਾਵੇਗਾ।</translation>
 <translation id="584902713199270089">ਡੇਟਿੰਗ ਅਤੇ ਵਿਅਕਤੀਗਤ ਲੋੜਾਂ ਨਾਲ ਸੰਬੰਧਿਤ ਸੇਵਾਵਾਂ</translation>
 <translation id="5851548754964597211">ਟੈਬ ਸੂਚੀ</translation>
 <translation id="5851868085455377790">ਜਾਰੀਕਰਤਾ</translation>
@@ -3165,13 +3165,13 @@
 <translation id="5898767305816764989">'ਸਲਾਹੋ' ਬਟਨ, ਤੁਹਾਨੂੰ <ph name="THUMBS_UP_SUGGESTION_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/> ਪਸੰਦ ਆਇਆ, ਇਸ ਬਾਰੇ ਵਿਚਾਰ ਸਪੁਰਦ ਕਰਨ ਲਈ 'ਦਾਖਲ ਕਰੋ' ਦਬਾਓ</translation>
 <translation id="5901630391730855834">ਪੀਲਾ</translation>
 <translation id="5903264686717710770">ਸਿਰਲੇਖ:</translation>
-<translation id="3704860399319731107">ਤੁਹਾਡੇ ਕਾਰਜ-ਸਥਾਨ ਦਾ ਪਤਾ Growser ਸੇਵਾਵਾਂ 'ਤੇ ਚੀਜ਼ਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਢੁਕਵੇਂ ਖੋਜ ਨਤੀਜੇ ਅਤੇ Growser Maps 'ਤੇ ਦਿਸ਼ਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰਨਾ। ਤੁਸੀਂ ਆਪਣੇ <ph name="BEGIN_LINK"/>Growser ਖਾਤੇ <ph name="ACCOUNT"/><ph name="END_LINK"/> ਵਿੱਚ ਆਪਣੇ ਪਤੇ ਦਾ ਸੰਪਾਦਨ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਉਸਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹੋ।</translation>
+<translation id="3704860399319731107">ਤੁਹਾਡੇ ਕਾਰਜ-ਸਥਾਨ ਦਾ ਪਤਾ Growser ਸੇਵਾਵਾਂ 'ਤੇ ਚੀਜ਼ਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਢੁਕਵੇਂ ਖੋਜ ਨਤੀਜੇ ਅਤੇ Google Maps 'ਤੇ ਦਿਸ਼ਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰਨਾ। ਤੁਸੀਂ ਆਪਣੇ <ph name="BEGIN_LINK"/>Growser ਖਾਤੇ <ph name="ACCOUNT"/><ph name="END_LINK"/> ਵਿੱਚ ਆਪਣੇ ਪਤੇ ਦਾ ਸੰਪਾਦਨ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਉਸਨੂੰ ਮਿਟਾ ਸਕਦੇ ਹੋ।</translation>
 <translation id="5908541034548427511"><ph name="TYPE_1"/> (ਸਿੰਕ ਕੀਤਾ)</translation>
 <translation id="5910140988253729859">ਆਟੋਫਿਲ ਨੂੰ ਅਣਕੀਤਾ ਕਰੋ</translation>
 <translation id="5911020115933784199">ਇਵੈਂਟ ਅਤੇ ਸੂਚੀਆਂ</translation>
 <translation id="5911110632211230665">ਖੋਲ੍ਹਣ ਦੀ ਸੁਵਿਧਾ ਨੂੰ ਬਲਾਕ ਕੀਤਾ ਗਿਆ</translation>
-<translation id="1765144800915733093">Growser Wallet ਖੋਲ੍ਹੋ</translation>
-<translation id="7227888833179196534">Growser Wallet ਵਿੱਚ KTN ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="1765144800915733093">Google Wallet ਖੋਲ੍ਹੋ</translation>
+<translation id="7227888833179196534">Google Wallet ਵਿੱਚ KTN ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="5914465277418006379"><ph name="MEMBER_FIRST_NAME"/> ਨੇ ਇਸ ਟੈਬ ਨੂੰ ਸ਼ਾਮਲ ਕੀਤਾ</translation>
 <translation id="5915189366813702112">ਕੰਮ ਸੰਬੰਧੀ ਅਨੁਕੂਲ ਵਿਵਸਥਾਵਾਂ</translation>
 <translation id="59174027418879706">ਸਮਰਥਿਤ</translation>
@@ -3291,7 +3291,7 @@
 <translation id="6085149458302186532">ਲੇਬਲ (ਰੰਗੀਨ)</translation>
 <translation id="6087312102907839798">ਸੰਬੰਧਿਤ ਖੋਜਾਂ</translation>
 <translation id="7851017866080575588">ਜਿਨ੍ਹਾਂ ਟੈਬਾਂ ਨੂੰ ਤੁਸੀਂ ਆਪਣੇ Growser ਇਤਿਹਾਸ ਤੋਂ ਮਿਟਾਉਂਦੇ ਹੋ, ਉਹ ਹਾਲੇ ਵੀ ਤੁਹਾਡੀਆਂ ਤੁਲਨਾ ਸਾਰਨੀਆਂ ਵਿੱਚ ਦਿਖਾਈ ਦੇਣਗੀਆਂ</translation>
-<translation id="8165276822290438118">Growser Wallet ਲੋਗੋ</translation>
+<translation id="8165276822290438118">Google Wallet ਲੋਗੋ</translation>
 <translation id="6091691259076781835">ਤੇਜ਼ੀ ਨਾਲ ਚੈੱਕ-ਆਊਟ ਲਈ, ਆਪਣੇ ਡੀਵਾਈਸ 'ਤੇ ਇਸ CVC ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="6093599771645355227">ਪੀਲਾ 1</translation>
 <translation id="6093795393556121384">ਤੁਹਾਡਾ ਕਾਰਡ ਪ੍ਰਮਾਣਿਤ ਕੀਤਾ ਗਿਆ ਹੈ</translation>
@@ -3404,7 +3404,7 @@
 <translation id="6250932670816326647">ਨਹਾਉਣ ਲਈ ਅਤੇ ਸਰੀਰ 'ਤੇ ਵਰਤੇ ਜਾਣ ਵਾਲੇ ਉਤਪਾਦ</translation>
 <translation id="6251906504834538140">{0,plural, =1{ਫ਼ਾਈਲ ਨੂੰ ਲਿਜਾਉਣ ਤੋਂ ਬਲਾਕ ਕੀਤਾ ਗਿਆ}one{<ph name="FILE_COUNT"/> ਫ਼ਾਈਲ ਨੂੰ ਲਿਜਾਉਣ ਤੋਂ ਬਲਾਕ ਕੀਤਾ ਗਿਆ}other{<ph name="FILE_COUNT"/> ਫ਼ਾਈਲਾਂ ਨੂੰ ਲਿਜਾਉਣ ਤੋਂ ਬਲਾਕ ਕੀਤਾ ਗਿਆ}}</translation>
 <translation id="3917320044622606497"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ਵਿੱਚ ਤੁਹਾਡੇ ਵੱਲੋਂ ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਫ਼ਾਈਲਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ Tab ਅਤੇ ਫਿਰ Enter ਦਬਾਓ</translation>
-<translation id="8057290549484414862">Growser Wallet ਵਿੱਚ ਕਾਰਡ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="8057290549484414862">Google Wallet ਵਿੱਚ ਕਾਰਡ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="6254436959401408446">ਇਸ ਪੰਨੇ ਨੂੰ ਖੋਲ੍ਹਣ ਲਈ ਲੋੜੀਂਦੀ ਮੈਮੋਰੀ ਨਹੀਂ ਹੈ</translation>
 <translation id="625463612687472648">ਆਗਿਆ ਬੰਦ ਕਰੋ</translation>
 <translation id="6259156558325130047">&amp;ਦੁਬਾਰਾ ਕ੍ਰਮ ਦੇਣ ਨੂੰ ਰੀਡੂ ਕਰੋ</translation>
@@ -3624,7 +3624,7 @@
 <translation id="6579858392010591435">ਛੁੱਟੀਆਂ ਅਤੇ ਮੌਸਮੀ ਇਵੈਂਟ</translation>
 <translation id="6581831440014388355">ਸਰੀਰ ਅਤੇ ਚਿਹਰੇ ਦੇ ਅਣਚਾਹੇ ਵਾਲ ਹਟਾਉਣਾ</translation>
 <translation id="3157702622633401823">ਜਿਸ ਸਾਈਟ 'ਤੇ ਤੁਸੀਂ ਜਾਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ, ਉਸ 'ਤੇ ਹਮਲਾਵਰ ਅਜਿਹਾ ਨੁਕਸਾਨਦੇਹ ਸਾਫ਼ਟਵੇਅਰ ਸਥਾਪਤ ਕਰ ਸਕਦੇ ਹਨ, ਜੋ ਤੁਹਾਡੇ ਪਾਸਵਰਡਾਂ, ਫ਼ੋਟੋਆਂ, ਸੁਨੇਹੇ ਜਾਂ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਨੰਬਰਾਂ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਚੋਰੀ ਕਰ ਸਕਦਾ ਹੈ ਜਾਂ ਮਿਟਾ ਸਕਦਾ ਹੈ। Growser ਤੁਹਾਨੂੰ ਇਸ ਸਾਈਟ 'ਤੇ ਨਾ ਜਾਣ ਦੀ ਜ਼ੋਰਦਾਰ ਸਿਫ਼ਾਰਸ਼ ਕਰਦਾ ਹੈ। <ph name="BEGIN_LEARN_MORE_LINK"/>ਇਸ ਚਿਤਾਵਨੀ ਬਾਰੇ ਹੋਰ ਜਾਣੋ<ph name="END_LEARN_MORE_LINK"/></translation>
-<translation id="2571911185264872034">Growser Wallet ਵਿੱਚ ਸਟੋਰ ਕੀਤੇ ਗਏ</translation>
+<translation id="2571911185264872034">Google Wallet ਵਿੱਚ ਸਟੋਰ ਕੀਤੇ ਗਏ</translation>
 <translation id="6587893660316489419">B5 ਆਕਾਰ ਦਾ ਲਿਫ਼ਾਫ਼ਾ</translation>
 <translation id="6587923378399804057">ਤੁਹਾਡੇ ਵੱਲੋਂ ਕਾਪੀ ਕੀਤਾ ਲਿੰਕ</translation>
 <translation id="6591833882275308647">ਤੁਹਾਡਾ <ph name="DEVICE_TYPE"/> ਪ੍ਰਬੰਧਿਤ ਨਹੀਂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</translation>
@@ -3651,7 +3651,7 @@
 <translation id="6635900375070654124">ਪ੍ਰਮਾਣਕ ਡੀਵਾਈਸ</translation>
 <translation id="6641852376826221947">ਆਪਣੀ ਖਰੀਦ ਦੀ ਤਸਦੀਕ ਕਰੋ</translation>
 <translation id="6643016212128521049">ਹਟਾਓ</translation>
-<translation id="6978162289423667633">ਇਸ ਕਾਰਡ ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ।</translation>
+<translation id="6978162289423667633">ਇਸ ਕਾਰਡ ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ।</translation>
 <translation id="6645291930348198241">ਕੁਕੀਜ਼ ਅਤੇ ਸਾਈਟ ਡਾਟਾ ਤੱਕ ਪਹੁੰਚ ਕਰੋ।</translation>
 <translation id="6645478838938543427">ਕੀਮਤ ਘਟਣ ਸੰਬੰਧੀ ਅਲਰਟਾਂ ਨੂੰ <ph name="EMAIL_ADDRESS"/> 'ਤੇ ਭੇਜਿਆ ਜਾਵੇਗਾ</translation>
 <translation id="6678472970290886941">ਤੁਹਾਡਾ ਪ੍ਰਸ਼ਾਸਕ ਦੂਰ-ਦੁਰਾਡੇ ਤੋਂ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ ਸੈੱਟਅੱਪ ਨੂੰ ਬਦਲ ਸਕਦਾ ਹੈ। ਇਸ ਡੀਵਾਈਸ ਦੀ ਸਰਗਰਮੀ ਦਾ ਪ੍ਰਬੰਧਨ Growser ਤੋਂ ਬਾਹਰ ਵੀ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।</translation>
@@ -3838,7 +3838,7 @@
 <translation id="6927878187051807444">ਕੈਮਰਾ ਫ਼ਾਈਲਾਂ ਅਤੇ ਸਕ੍ਰੀਨਸ਼ਾਟ</translation>
 <translation id="6090573860187511325"><ph name="BEGIN_BOLD"/>ਤੁਹਾਡਾ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ ਖੋਜ ਇੰਜਣ ਤੁਹਾਨੂੰ ਵੈੱਬ 'ਤੇ ਖੋਜ ਕਰਨ ਅਤੇ Growser ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦਿੰਦਾ ਹੈ<ph name="END_BOLD"/> ਜਿਵੇਂ ਕਿ ਪਤਾ ਬਾਰ ਅਤੇ ਵੈੱਬ ਪੰਨਿਆਂ 'ਤੇ ਮੌਜੂਦ ਚਿੱਤਰਾਂ ਦੀ ਮਦਦ ਨਾਲ ਖੋਜ ਕਰਨਾ। ਜੇ ਤੁਹਾਡਾ ਖੋਜ ਇੰਜਣ ਕਿਸੇ ਸੁਵਿਧਾ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ, ਤਾਂ ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਉਪਲਬਧ ਨਾ ਹੋਵੇ।</translation>
 <translation id="6722453239914327220">ਇਹ ਨਾਮ ਤੁਹਾਡੇ Growser ਖਾਤੇ ਤੋਂ ਲਿਆ ਗਿਆ ਹੈ</translation>
-<translation id="7372037107287931628">ਹੁਣ ਤੁਸੀਂ Growser Wallet ਤੋਂ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ</translation>
+<translation id="7372037107287931628">ਹੁਣ ਤੁਸੀਂ Google Wallet ਤੋਂ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡ ਆਟੋਫਿਲ ਕਰ ਸਕਦੇ ਹੋ</translation>
 <translation id="6935082727755903526">ਲੇਖਾਕਾਰੀ ਜਾਂ ਵਿੱਤੀ ਖੇਤਰ ਵਾਲੀਆਂ ਨੌਕਰੀਆਂ</translation>
 <translation id="6935179587384421592"><ph name="SIZE"/>। ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਤੁਹਾਡੀ ਅਗਲੀ ਫੇਰੀ 'ਤੇ ਕੁਝ ਸਾਈਟਾਂ ਵਧੇਰੇ ਹੌਲੀ ਲੋਡ ਹੋਣ।</translation>
 <translation id="6936976777388162184">ਇਹ ਬੰਡਲ ਡੀਵਾਈਸ ਹੈ ਅਤੇ ਇਸਨੂੰ ਕਿਓਸਕ ਅਤੇ ਸਾਈਨੇਜ ਅੱਪਗ੍ਰੇਡ ਨਾਲ ਦਰਜ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</translation>
@@ -3929,7 +3929,7 @@
 <translation id="7058163556978339998"><ph name="BROWSER"/> ਨੇ ਇਹ ਪੁਸ਼ਟੀ ਕੀਤੀ ਹੈ ਕਿ ਇਸ ਵੈੱਬਸਾਈਟ ਦਾ ਪ੍ਰਮਾਣ-ਪੱਤਰ <ph name="ISSUER"/> ਨੇ ਜਾਰੀ ਕੀਤਾ ਹੈ।</translation>
 <translation id="7058774143982824355">CSV ਪਾਸਵਰਡ ਪਾਰਸਰ ਸੇਵਾ</translation>
 <translation id="7059913660448028407">ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</translation>
-<translation id="6761410840196521760">ਅਗਲੀ ਵਾਰ ਵਧੇਰੇ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਕਰਨ ਲਈ, ਆਪਣੇ ਕਾਰਡ ਅਤੇ ਬਿਲਿੰਗ ਪਤੇ ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="6761410840196521760">ਅਗਲੀ ਵਾਰ ਵਧੇਰੇ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਕਰਨ ਲਈ, ਆਪਣੇ ਕਾਰਡ ਅਤੇ ਬਿਲਿੰਗ ਪਤੇ ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="5320462991730735481">Growser ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਪਤੇ ਸ਼ਾਮਲ ਕਰੋ ਅਤੇ ਉਹਨਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="7063157783216323487">ਹਰਾ 2</translation>
 <translation id="7064443976734085921">ਛੋਟੀਆਂ ਕਾਰਾਂ</translation>
@@ -3998,7 +3998,7 @@
 <translation id="7162277662076933695">ਸਮਾਰਟ ਕਾਰਡ ਰੀਡਰ</translation>
 <translation id="7163295244162773898">{0,plural, =1{ਕੀ ਗੁਪਤ ਫ਼ਾਈਲ ਨੂੰ ਕਾਪੀ ਕਰਨਾ ਹੈ?}one{ਕੀ ਗੁਪਤ ਫ਼ਾਈਲ ਨੂੰ ਕਾਪੀ ਕਰਨਾ ਹੈ?}other{ਕੀ ਗੁਪਤ ਫ਼ਾਈਲਾਂ ਨੂੰ ਕਾਪੀ ਕਰਨਾ ਹੈ?}}</translation>
 <translation id="7168625890036931112">ਇਸ ਪਲੇਟਫਾਰਮ 'ਤੇ "<ph name="DATA_CONTROLS_RESTRICTION"/>" ਪਾਬੰਦੀ ਨੂੰ ਨਹੀਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ</translation>
-<translation id="6390064556944765055">ਤੁਹਾਡੇ ਡੀਵਾਈਸ 'ਤੇ ਅਤੇ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਸਾਰੇ ਸੁਰੱਖਿਆ ਕੋਡਾਂ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ</translation>
+<translation id="6390064556944765055">ਤੁਹਾਡੇ ਡੀਵਾਈਸ 'ਤੇ ਅਤੇ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਸਾਰੇ ਸੁਰੱਖਿਆ ਕੋਡਾਂ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ</translation>
 <translation id="717330890047184534">GAIA ਆਈ.ਡੀ.:</translation>
 <translation id="7173338713290252554">ਵੈੱਬ 'ਤੇ ਕੀਮਤ ਦਾ ਇਤਿਹਾਸ</translation>
 <translation id="7174545416324379297">ਵਿਲੀਨ ਕੀਤਾ ਗਿਆ</translation>
@@ -4066,11 +4066,11 @@
 <translation id="7286908876112207905">ਇਸ ਸਮੱਗਰੀ ਨੂੰ ਇਸ ਸਾਈਟ 'ਤੇ ਪੇਸਟ ਕਰਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ</translation>
 <translation id="7291578327729322058">ਡਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਕਰੋ</translation>
 <translation id="7292031607255951991">ਪ੍ਰਾਪਤਕਰਤਾ ਦਾ ਨਾਮ</translation>
-<translation id="5119862674579456673">ਤੁਹਾਡੇ ਵੱਲੋਂ ਦੇਖੇ ਜਾਣ ਵਾਲੇ ਪੰਨਿਆਂ ਤੋਂ Growser Wallet ਵਿੱਚ ਜਾਣਕਾਰੀ ਨੂੰ ਰੱਖਿਅਤ ਕਰਨਾ</translation>
+<translation id="5119862674579456673">ਤੁਹਾਡੇ ਵੱਲੋਂ ਦੇਖੇ ਜਾਣ ਵਾਲੇ ਪੰਨਿਆਂ ਤੋਂ Google Wallet ਵਿੱਚ ਜਾਣਕਾਰੀ ਨੂੰ ਰੱਖਿਅਤ ਕਰਨਾ</translation>
 <translation id="7298195798382681320">ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤਾ</translation>
 <translation id="7299471494012161875">ਨੱਥੀ ਕੀਤੇ ਡਿਸਪਲੇ ਪੈਰੀਫੈਰਲ</translation>
 <translation id="7299721129597238157">ਬੁੱਕਮਾਰਕ ਮਿਟਾਓ</translation>
-<translation id="7996735040909243152">Growser Wallet ਵਿੱਚ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
+<translation id="7996735040909243152">Google Wallet ਵਿੱਚ ਵਫ਼ਾਦਾਰੀ ਕਾਰਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="7304030187361489308">ਵੱਧ</translation>
 <translation id="244157907932852817">Growser ਖਾਤਾ ਪਰਦੇਦਾਰੀ ਸੈਟਿੰਗਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
 <translation id="7305756307268530424">ਹੌਲੀ-ਹੌਲੀ ਸ਼ੁਰੂ ਕਰੋ</translation>
@@ -4148,7 +4148,7 @@
 <translation id="7408613996403626141">ਖਿਡੌਣੇ</translation>
 <translation id="7410852728357935715">ਕਿਸੇ ਡੀਵਾਈਸ 'ਤੇ ਕਾਸਟ ਕਰੋ</translation>
 <translation id="741204030948306876">ਹਾਂ, ਸਹਿਮਤ ਹਾਂ</translation>
-<translation id="2863838403912088928">ਤੁਹਾਡਾ ਕਾਰਡ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਭਵਿੱਖੀ ਖਰੀਦਾਂ ਲਈ ਆਟੋਫਿਲ ਕਰ ਸਕੋ</translation>
+<translation id="2863838403912088928">ਤੁਹਾਡਾ ਕਾਰਡ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਭਵਿੱਖੀ ਖਰੀਦਾਂ ਲਈ ਆਟੋਫਿਲ ਕਰ ਸਕੋ</translation>
 <translation id="7416351320495623771">ਪਾਸਵਰਡਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ…</translation>
 <translation id="7416898721136759658">ਅਨੁਦਾਨ, ਵਜ਼ੀਫ਼ੇ ਅਤੇ ਵਿੱਤੀ ਸਹਾਇਤਾ</translation>
 <translation id="741772962178517671">Affirm</translation>
@@ -4262,7 +4262,7 @@
 <translation id="7569072768465750771">{COUNT,plural, =0{ਕੋਈ ਨਹੀਂ}=1{ਇਸ ਡੀਵਾਈਸ 'ਤੇ 1 ਟੈਬ}other{ਇਸ ਡੀਵਾਈਸ 'ਤੇ # ਟੈਬਾਂ}}</translation>
 <translation id="7569490014721427265">ਗੌਲਫ਼</translation>
 <translation id="7569983096843329377">ਕਾਲਾ</translation>
-<translation id="5042051836875308124">Growser Wallet ਵਿੱਚ ਆਈਡੀ ਕਾਰਡ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
+<translation id="5042051836875308124">Google Wallet ਵਿੱਚ ਆਈਡੀ ਕਾਰਡ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="7570862164055912832">ਰੀਡਰੈੱਸ ਨੰਬਰ</translation>
 <translation id="5806362888687058351">Growser AI ਮੋਡ</translation>
 <translation id="7574998639136359461">ਸਰਦੀ ਦੀਆਂ ਖੇਡਾਂ ਦੇ ਉਪਕਰਨ</translation>
@@ -4272,7 +4272,7 @@
 <translation id="7579113844074980463"><ph name="MANUFACTURER"/> ਟੈਬਲੈੱਟ</translation>
 <translation id="7579442726219254162">"<ph name="APPLICATION_ID"/>" ਦੇ ਪ੍ਰਤਿਬੰਧਿਤ ਸੰਰੂਪਣ ਵਿੱਚ ਅਗਿਆਤ ਵੇਰੀਏਬਲ "<ph name="VARIABLE"/>".</translation>
 <translation id="7581199239021537589">ਸਾਈਡ 2 ਚਿੱਤਰ Y ਸ਼ਿਫਟ</translation>
-<translation id="4790068920551988473">Growser Calendar ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਨਵਾਂ ਇਵੈਂਟ ਬਣਾਓ</translation>
+<translation id="4790068920551988473">Google Calendar ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਨਵਾਂ ਇਵੈਂਟ ਬਣਾਓ</translation>
 <translation id="7584287158780898016">ਕੀਮਤ ਸੰਬੰਧੀ ਟਰੈਕਿੰਗ ਅਲਰਟ ਚਾਲੂ ਕਰੋ</translation>
 <translation id="7586676035079382730">ਸੂਚਨਾਵਾਂ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ</translation>
 <translation id="7588707273764747927">ਟ੍ਰਾਂਸਫ਼ਰ ਕਰੋ</translation>
@@ -4287,7 +4287,7 @@
 <translation id="7599089013883397081">ਡਾਊਨਲੋਡ ਦਾ ਟਾਈਮ-ਆਊਟ ਹੋ ਗਿਆ ਹੈ</translation>
 <translation id="1062868744766141611">Growser ਤੋਂ ਇਸ ਪੰਨੇ ਬਾਰੇ ਪੁੱਛੋ</translation>
 <translation id="7606123685356405076">Gemini 3 ਮਾਡਲ</translation>
-<translation id="7138721839933201978">Growser Wallet ਵਿੱਚ ਵਾਹਨ ਨਾਲ ਸੰਬੰਧਿਤ ਜਾਣਕਾਰੀ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="7138721839933201978">Google Wallet ਵਿੱਚ ਵਾਹਨ ਨਾਲ ਸੰਬੰਧਿਤ ਜਾਣਕਾਰੀ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="7610193165460212391">ਵੈਲਯੂ <ph name="VALUE"/> ਰੇਂਜ ਤੋਂ ਬਾਹਰ ਹੈ।</translation>
 <translation id="761261689936461781">ਮੋਟਾ</translation>
 <translation id="7613889955535752492">ਮਿਆਦ ਸਮਾਪਤ: <ph name="EXPIRATION_MONTH"/>/<ph name="EXPIRATION_YEAR"/></translation>
@@ -4296,7 +4296,7 @@
 <translation id="7615932826417658001">ਪਛਾਣ ਕਾਰਡ ਸ਼ਾਮਲ ਕਰੋ</translation>
 <translation id="7616390733770379387">ਇਹ ਬੇਤਰਤੀਬਵਾਰ ਕ੍ਰਮ ਵਿੱਚ ਦਿਖਾਏ ਜਾਂਦੇ ਹਨ।</translation>
 <translation id="8565825862287624454">ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਾਸਕ ਨੇ ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ 'ਤੇ Growser Enterprise Connectors ਨੂੰ ਚਾਲੂ ਕੀਤਾ। ਇਹਨਾਂ ਕਨੈਕਟਰਾਂ ਦੀ ਤੁਹਾਡੇ ਕੁਝ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਹੈ।</translation>
-<translation id="6114261010694947707">ਇਸ ਕਾਰਡ ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਇਸਨੂੰ Growser ਸੇਵਾਵਾਂ ਵਿੱਚ ਵਰਤ ਸਕੋ</translation>
+<translation id="6114261010694947707">ਇਸ ਕਾਰਡ ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ, ਤਾਂ ਜੋ ਤੁਸੀਂ ਇਸਨੂੰ Growser ਸੇਵਾਵਾਂ ਵਿੱਚ ਵਰਤ ਸਕੋ</translation>
 <translation id="7617825962482469577">C7/C6 ਆਕਾਰ ਦਾ ਲਿਫ਼ਾਫ਼ਾ</translation>
 <translation id="7618270539713451657">ਮਾਰਸ਼ਲ ਆਰਟਸ</translation>
 <translation id="7619838219691048931">ਆਖਰੀ ਸ਼ੀਟ</translation>
@@ -4319,7 +4319,7 @@
 <translation id="7648133459447652947">ਆਪਣਾ ਕਰਸਰ ਦਿਖਾਉਣ ਲਈ, ਐਪਾਂ ਨੂੰ ਸਵਿੱਚ ਕਰੋ, ਪੰਨੇ ਨੂੰ ਰੀਲੋਡ ਕਰੋ ਜਾਂ ਵਾਪਸ ਜਾਓ</translation>
 <translation id="764847582138410250">ਆਪਣੇ ਫ਼ੋਨ ਨਾਲ ਸਾਈਨ-ਇਨ ਕਰਨ ਲਈ ਸਕੈਨ ਕਰੋ</translation>
 <translation id="7648527891719919697">ਇਹ ਸਾਈਟ ਬਲਾਕ ਰਹੇਗੀ ਕਿਉਂਕਿ ਤੁਸੀਂ Android ਸੈਟਿੰਗਾਂ ਵਿੱਚ <ph name="BEGIN_ANDROID_SETTINGS_LINK"/>ਅਡਵਾਂਸ ਸੁਰੱਖਿਆ<ph name="END_ANDROID_SETTINGS_LINK"/> ਨੂੰ ਚਾਲੂ ਕੀਤਾ ਹੋਇਆ ਹੈ। <ph name="BEGIN_LEARN_MORE_LINK"/>ਇਸ ਚਿਤਾਵਨੀ ਬਾਰੇ ਹੋਰ ਜਾਣੋ<ph name="END_LEARN_MORE_LINK"/></translation>
-<translation id="1658842203772810888">Growser Wallet ਵਿੱਚ ਯਾਤਰਾ ਆਈਡੀ ਨੰਬਰ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="1658842203772810888">Google Wallet ਵਿੱਚ ਯਾਤਰਾ ਆਈਡੀ ਨੰਬਰ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="7648992873808071793">ਇਸ ਡੀਵਾਈਸ 'ਤੇ ਫਾਈਲਾਂ ਸਟੋਰ ਕਰੋ</translation>
 <translation id="7649070708921625228">ਸਹਾਇਤਾ</translation>
 <translation id="7650141368285545431">ਕਿਸੇ ਹੋਰ ਡੀਵਾਈਸ ਤੋਂ ਪਾਸਕੀ ਵਰਤੋ</translation>
@@ -4413,7 +4413,7 @@
 <translation id="7773005668374414287">ਉਹੀ ਕ੍ਰਮ ਵਿੱਚ ਪਾਸਾ ਉੱਪਰ ਕੀਤੇ</translation>
 <translation id="7779418012194492374"><ph name="DEVICE_NAME"/> ਲਈ ਪਹੁੰਚ ਰੱਦ ਕਰੋ</translation>
 <translation id="7781829728241885113">ਕੱਲ੍ਹ</translation>
-<translation id="15891224440739379">Growser Wallet ਵਿੱਚ ਪਛਾਣ ਕਾਰਡ ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="15891224440739379">Google Wallet ਵਿੱਚ ਪਛਾਣ ਕਾਰਡ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="7782465647372057580">ਖਾਤਾ ਜਾਣਕਾਰੀ ਇਨਕ੍ਰਿਪਟਡ ਹੈ ਅਤੇ ਇਸਨੂੰ ਨਿੱਜੀ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ</translation>
 <translation id="7785471469930192436">ਲਾਗੂ ਹੋਣ 'ਤੇ, ਆਪਣਾ ਖੋਜ ਇਤਿਹਾਸ ਮਿਟਾਉਣ ਲਈ ਆਪਣੇ ਖੋਜ ਇੰਜਣ ਦੀਆਂ ਹਿਦਾਇਤਾਂ ਦੇਖੋ</translation>
 <translation id="7785790577395078482">ਇਹ ਟੈਬਲੈੱਟ</translation>
@@ -4723,7 +4723,7 @@
 <translation id="8281886186245836920">ਛੱਡੋ</translation>
 <translation id="8282292167096638950">ਡਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਮਿਟਾਓ</translation>
 <translation id="8282409409360764263">ਵਿਹੜੇ ਦੀ ਸਾਂਭ-ਸੰਭਾਲ</translation>
-<translation id="792704835644878748">Growser Wallet ਵਿੱਚ IBAN ਰੱਖਿਅਤ ਕਰੋ</translation>
+<translation id="792704835644878748">Google Wallet ਵਿੱਚ IBAN ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="8282947398454257691">ਆਪਣੇ ਬੇਜੋੜ ਡੀਵਾਈਸ ਪਛਾਣਕਰਤਾ ਬਾਰੇ ਜਾਣੋ</translation>
 <translation id="8283946103133796868">ਮੇਰੇ ਵੇਟਿਡ GPA ਦੀ ਗਣਨਾ ਕਰੋ</translation>
 <translation id="4596532552309852907">Growser ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਆਪਣੀ ਸੁਰੱਖਿਅਤ ਬ੍ਰਾਊਜ਼ਿੰਗ ਅਤੇ ਹੋਰ ਚੀਜ਼ਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</translation>
@@ -4797,7 +4797,7 @@
 <translation id="8389940864052787379">ਵਿਉਂਤਬੱਧ ਅਤੇ ਕਾਰਗੁਜ਼ਾਰੀ ਸੰਬੰਧੀ ਵਾਹਨ</translation>
 <translation id="8390725133630534698">ਪ੍ਰਸ਼ਾਸਕ ਨੀਤੀ ਵੱਲੋਂ <ph name="ORIGIN_NAME"/> ਤੋਂ <ph name="VM_NAME"/> ਵਿੱਚ ਸਾਂਝਾਕਰਨ ਨੂੰ ਬਲਾਕ ਕੀਤਾ ਗਿਆ ਹੈ</translation>
 <translation id="8392783408127179588">ਨੀਤੀਆਂ ਨੂੰ ਰੀਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</translation>
-<translation id="2792973694349074955">Growser Wallet ਵਿੱਚ ਡਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
+<translation id="2792973694349074955">Google Wallet ਵਿੱਚ ਡਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ</translation>
 <translation id="8396522675989118466">ਇਹ <ph name="SIDE_OF_CARD"/> 'ਤੇ ਦਿੱਤਾ <ph name="NUMBER_OF_DIGITS"/>-ਅੰਕੀ ਕੋਡ ਹੁੰਦਾ ਹੈ</translation>
 <translation id="8398335999901363925">ਸਪਰਸ਼ ਕਰ ਕੇ ਭਰੇ ਜਾਣ ਵਾਲੀਆਂ ਉਪਲਬਧ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਦੀ ਸੂਚੀ ਪੂਰੀ ਉਚਾਈ ਤੱਕ ਖੁੱਲ੍ਹੀ ਹੋਈ ਹੈ।</translation>
 <translation id="8398446215576328011">ਲਾਗੂ ਨੀਤੀਆਂ ਵਾਪਸ ਲਿਜਾਓ</translation>
@@ -5030,7 +5030,7 @@
 <translation id="8776789089819232268">ਤੁਹਾਡੇ ਸਾਰੇ ਆਰਡਰ</translation>
 <translation id="877985182522063539">A4</translation>
 <translation id="5756777435786575965">ਜਦੋਂ ਤੁਸੀਂ ਵਿਸਤ੍ਰਿਤ ਆਟੋਫਿਲ ਲਈ ਬੇਨਤੀ ਕਰਦੇ ਹੋ, ਤਾਂ ਆਟੋਫਿਲ ਦੇ ਅਨੁਭਵ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਤੁਹਾਡਾ ਵਰਤੋਂ ਡਾਟਾ, ਬੇਨਤੀਆਂ ਅਤੇ ਪੰਨੇ ਦੇ ਵੇਰਵਿਆਂ ਨੂੰ Brave ਨਾਲ ਸਾਂਝਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</translation>
-<translation id="514805123051954646">'ਪੰਨੇ ਦਾ ਅਨੁਵਾਦ ਕਰੋ' ਬਟਨ, Growser Translate ਨਾਲ ਇਸ ਪੰਨੇ ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਲਈ ਇਸਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
+<translation id="514805123051954646">'ਪੰਨੇ ਦਾ ਅਨੁਵਾਦ ਕਰੋ' ਬਟਨ, Google Translate ਨਾਲ ਇਸ ਪੰਨੇ ਦਾ ਅਨੁਵਾਦ ਕਰਨ ਲਈ ਇਸਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
 <translation id="8785658048882205566">ਮੋਟਰਸਾਈਕਲ</translation>
 <translation id="8790007591277257123">&amp;ਮਿਟਾਏ ਗਏ ਨੂੰ ਮੁੜ-ਓਹੀ ਕਰੋ</translation>
 <translation id="8790668801880409584">ਯਾਤਰਾ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ ਰੱਖਿਅਤ ਕਰੋ ਅਤੇ ਭਰੋ</translation>
@@ -5079,7 +5079,7 @@
 <translation id="4764754838347156633">ਜੇਕਰ ਤੁਸੀਂ ਆਪਣੇ <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> ਪਾਸਵਰਡ ਨੂੰ ਹੋਰ ਸਾਈਟਾਂ 'ਤੇ ਮੁੜ ਵਰਤਿਆ ਹੈ, ਤਾਂ Growser ਵੱਲੋਂ ਇਸਨੂੰ ਰੀਸੈੱਟ ਕਰਨ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।</translation>
 <translation id="885906927438988819">ਜੇ ਸ਼ਬਦ-ਜੋੜ ਸਹੀ ਹੈ, ਤਾਂ <ph name="BEGIN_LINK"/>Windows ਨੈੱਟਵਰਕ ਤਸ਼ਖੀਸਾਂ ਨੂੰ ਚਲਾ ਕੇ ਦੇਖੋ<ph name="END_LINK"/>।</translation>
 <translation id="8861126751581835107">ਫ਼ੋਟੋਗ੍ਰਾਫ਼ਿਕ ਅਤੇ ਡਿਜੀਟਲ ਕਲਾਵਾਂ</translation>
-<translation id="1154336171889402657">ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਤੁਹਾਡੇ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ। ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਇਸਦੀ ਵਰਤੋਂ ਕਰੋਗੇ, ਤਾਂ Growser ਇਸਨੂੰ Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰਨ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰੇਗਾ।</translation>
+<translation id="1154336171889402657">ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਤੁਹਾਡੇ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਜਾਏ ਇਸਨੂੰ ਇਸ ਡੀਵਾਈਸ 'ਤੇ Growser ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ। ਅਗਲੀ ਵਾਰ ਜਦੋਂ ਤੁਸੀਂ ਇਸਦੀ ਵਰਤੋਂ ਕਰੋਗੇ, ਤਾਂ Growser ਇਸਨੂੰ Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕਰਨ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰੇਗਾ।</translation>
 <translation id="8863218129525348270">ਅਗਲੀ ਵਾਰ ਜ਼ਿਆਦਾ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਕਰਨ ਲਈ, ਆਪਣੇ ਕਾਰਡ ਨੂੰ ਆਪਣੇ ਡੀਵਾਈਸ 'ਤੇ ਰੱਖਿਅਤ ਕਰੋ</translation>
 <translation id="8864939224504814334">ਸੂਟ ਅਤੇ ਕਾਰੋਬਾਰੀ ਪਹਿਰਾਵਾ</translation>
 <translation id="8866132857352163524">ਸਾਊਂਡਟਰੈਕ</translation>
@@ -5356,7 +5356,7 @@
 <translation id="975560348586398090">{COUNT,plural, =0{ਕੋਈ ਨਹੀਂ}=1{1 ਆਈਟਮ}other{# ਆਈਟਮਾਂ}}</translation>
 <translation id="976522784004777030">5 x 8 ਇੰਚ</translation>
 <translation id="977502174772294970">ਵਿਆਹ</translation>
-<translation id="3666543487519182654">ਇਸ ਕਾਰਡ ਨੂੰ Growser Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਜਾਣ 'ਤੇ, Growser ਵਿੱਚ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਖਰੀਦਾਂ ਲਈ ਇਸਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਆਟੋਫਿਲ ਕਰੋ</translation>
+<translation id="3666543487519182654">ਇਸ ਕਾਰਡ ਨੂੰ Google Wallet ਵਿੱਚ ਰੱਖਿਅਤ ਕੀਤੇ ਜਾਣ 'ਤੇ, Growser ਵਿੱਚ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਖਰੀਦਾਂ ਲਈ ਇਸਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਆਟੋਫਿਲ ਕਰੋ</translation>
 <translation id="979107176848483472">ਤੁਹਾਡੇ ਬ੍ਰਾਊਜ਼ਰ ਅਤੇ ਪ੍ਰੋਫਾਈਲ ਦਾ ਪ੍ਰਬੰਧਨ <ph name="DOMAIN"/> ਵੱਲੋਂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</translation>
 <translation id="979189555234810423">ਪ੍ਰਦਰਸ਼ਨੀਆਂ ਅਤੇ ਸੰਮੇਲਨ</translation>
 <translation id="981121421437150478">ਆਫ਼ਲਾਈਨ</translation>
@@ -5435,7 +5435,7 @@
 <translation id="2031095660415483845">ਕਿਸੇ ਵੀ ਥਾਂ ਤੋਂ ਖੋਜੋ ਅਤੇ ਭਰੋ...</translation>
 <translation id="2088913896151127116">ਲਿਖਤ ਸ਼ਾਮਲ ਕਰੋ</translation>
 <translation id="2384823392576123225">ਬੁੱਕਮਾਰਕ ਖੋਜੋ</translation>
-<translation id="2796865350547626179">Growser Search ਵਿੱਚ AI ਮੋਡ ਤੋਂ ਪੁੱਛੋ</translation>
+<translation id="2796865350547626179">Google Search ਵਿੱਚ AI ਮੋਡ ਤੋਂ ਪੁੱਛੋ</translation>
 <translation id="998875513896293677">ਪੰਨਾ ਸਿਰਲੇਖ ਅਤੇ URL Growser ਨੂੰ ਭੇਜੇ ਜਾਂਦੇ ਹਨ ਅਤੇ ਮਨੁੱਖੀ ਸਮੀਖਿਅਕਾਂ ਵੱਲੋਂ ਇਨ੍ਹਾਂ ਦੀ ਸਮੀਖਿਆ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ</translation>
 <translation id="4445694043187340808"><ph name="STARTER_PACK_TABS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ਟੈਬਾਂ ਖੋਜਣ ਲਈ Enter ਦਬਾਓ</translation>
 <translation id="4451684391620232683">ਵਰਤੋਂਕਾਰ ਨੂੰ ਲਿਖਤ ਪੇਸ਼ ਕੀਤੀ ਗਈ:</translation>
@@ -5444,7 +5444,7 @@
 <translation id="5026466266082155886"><ph name="STARTER_PACK_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ਖੋਜ ਇਤਿਹਾਸ ਲਈ Enter ਦਬਾਓ</translation>
 <translation id="5102512728737175215">AI ਮੋਡ ਤੋਂ ਪੁੱਛਣ ਲਈ Tab ਦਬਾਓ, ਫਿਰ Enter ਦਬਾਓ</translation>
 <translation id="5924782825030413055">ਪਿਛਲੇ ਸਹਿਮਤੀ ਅੱਪਡੇਟ ਦਾ ਸਰੋਤ:</translation>
-<translation id="9087355787326807249"><ph name="STARTER_PACK_AI_MODE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Search ਵਿੱਚ AI ਮੋਡ ਚਾਲੂ ਕਰਨ ਲਈ Enter ਦਬਾਓ</translation>
+<translation id="9087355787326807249"><ph name="STARTER_PACK_AI_MODE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Google Search ਵਿੱਚ AI ਮੋਡ ਚਾਲੂ ਕਰਨ ਲਈ Enter ਦਬਾਓ</translation>
 <translation id="6184099524311454384">ਖੋਜ ਟੈਬਾਂ</translation>
 <translation id="3718751461629938404">ਜਦੋਂ ਤੁਸੀਂ ਬਿਹਤਰ ਆਟੋਫਿਲ ਲਈ ਬੇਨਤੀ ਟਾਈਪ ਕਰਦੇ ਹੋ, ਤਾਂ Growser ਲੌਗ ਕਰਦਾ ਹੈ ਕਿ ਤੁਸੀਂ ਵਿਸ਼ੇਸ਼ਤਾ ਦੀ ਵਰਤੋਂ ਕਿਵੇਂ ਕਰਦੇ ਹੋ, ਜਿਵੇਂ ਕਿ ਤੁਸੀਂ ਆਟੋਫਿਲ ਸੁਝਾਵਾਂ ਨੂੰ ਸਵੀਕਾਰ ਕਰਦੇ ਹੋ, ਉਨ੍ਹਾਂ ਦਾ ਸੰਪਾਦਨ ਕਰਦੇ ਹੋ ਜਾਂ ਉਨ੍ਹਾਂ ਨੂੰ ਅਣਡਿੱਠ ਕਰਦੇ ਹੋ</translation>
 <translation id="6496531801333278234">ਪਰਸਨਲ ਇੰਟੈਲੀਜੈਂਸ ਵੱਲੋਂ ਲੱਭਿਆ ਗਿਆ। ਤੁਸੀਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਆਪਣੀ ਜਾਣਕਾਰੀ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰ ਸਕਦੇ ਹੋ।</translation>
@@ -5452,7 +5452,7 @@
 <translation id="7117290130383718594">ਲਿਖਤ ਐਨੋਟੇਸ਼ਨਾਂ</translation>
 <translation id="7140922144008419614">'ਟੈਬਾਂ ਖੋਜੋ' ਬਟਨ, ਟੈਬਾਂ ਖੋਜਣ ਲਈ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
 <translation id="7313260329718515829">Gemini ਨਾਲ ਪਰਸਨਲ ਇੰਟੈਲੀਜੈਂਸ ਨੂੰ ਭੇਜੀਆਂ ਗਈਆਂ ਬੇਨਤੀਆਂ ਦਾ ਆਟੋਫਿਲ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ ਵਿਸ਼ਲੇਸ਼ਣ ਕੀਤਾ ਜਾਂਦਾ ਹੈ</translation>
-<translation id="3809868392588077336">AI ਮੋਡ ਬਟਨ, Growser Search ਵਿੱਚ AI ਮੋਡ ਚਾਲੂ ਕਰਨ ਲਈ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
+<translation id="3809868392588077336">AI ਮੋਡ ਬਟਨ, Google Search ਵਿੱਚ AI ਮੋਡ ਚਾਲੂ ਕਰਨ ਲਈ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ</translation>
 <translation id="7534473948927234329"><ph name="STARTER_PACK_BOOKMARKS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ਬੁੱਕਮਾਰਕ ਖੋਜਣ ਲਈ Enter ਦਬਾਓ</translation>
 <translation id="7630470133768862132">ਸਹਿਮਤੀ ਦੀ ਸਥਿਤੀ:</translation>
 <translation id="6144294577598632959">Gemini ਹੁਣ ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ Growser ਐਪਾਂ ਤੋਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨੂੰ ਯਾਦ ਰੱਖ ਸਕਦਾ ਹੈ ਅਤੇ ਉਸ ਪੰਨੇ 'ਤੇ ਇਸਨੂੰ ਆਟੋਫਿਲ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਸਨੂੰ ਤੁਸੀਂ ਦੇਖ ਰਹੇ ਹੋ।</translation>
