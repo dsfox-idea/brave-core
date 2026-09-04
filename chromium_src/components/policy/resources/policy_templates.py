@@ -3,11 +3,52 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import hashlib
-import json
+import glob
 import os
+
+import brave_chromium_utils
 import override_utils
-import shutil
+
+# Brave's policy templates directory mirrors the upstream layout, so the
+# upstream loader can be pointed at it as-is:
+# `//brave/components/policy/resources/templates/policy_definitions/BraveSoftware` # pylint: disable=line-too-long
+BRAVE_TEMPLATES_PATH = os.path.relpath(
+    brave_chromium_utils.wspath(
+        '//brave/components/policy/resources/templates'))
+
+BRAVE_GROUP_NAME = 'BraveSoftware'
+
+
+@override_utils.override_function(globals())
+def _GetPoliciesAndGroups(orig_func):
+    # Load Brave's policy definitions in addition to the upstream ones by
+    # running the upstream loader a second time with `TEMPLATES_PATH` pointing
+    # at Brave's templates directory. Brave policies must never be copied into
+    # the Chromium tree: files created by a build action are unknown to the
+    # build graph, which makes the generated depfile reference dependencies the
+    # build system doesn't know exist.
+    # The override runs in the scope of the overridden script, so its globals
+    # are shared with it.
+    # pylint: disable=global-statement,global-variable-undefined
+    # pylint: disable=used-before-assignment
+    global TEMPLATES_PATH
+
+    result = orig_func()
+    # Ignore leftovers of the old copy-into-Chromium-tree approach.
+    result.pop(BRAVE_GROUP_NAME, None)
+
+    chromium_templates_path = TEMPLATES_PATH
+    TEMPLATES_PATH = BRAVE_TEMPLATES_PATH
+    try:
+        brave_result = orig_func()
+    finally:
+        TEMPLATES_PATH = chromium_templates_path
+
+    assert BRAVE_GROUP_NAME in brave_result, (
+        f"'{BRAVE_GROUP_NAME}' policies not found in {BRAVE_TEMPLATES_PATH}")
+    result.update(brave_result)
+
+    return result
 
 
 @override_utils.override_function(globals())
@@ -134,6 +175,14 @@ def copy_only_if_modified(src, dst):
 
 
 @override_utils.override_function(globals())
-def main(orig_func):
-    sync_policy_files()
-    orig_func()
+def _WriteDepFile(orig_func, dep_file, target, source_files):
+    # Upstream only globs its own templates directory, so list Brave's policy
+    # files as dependencies too. Leftover copies in the Chromium tree (see
+    # `_GetPoliciesAndGroups`) are filtered out, they are not used anymore.
+    stale_path = f'/{POLICY_DEFINITIONS_KEY}/{BRAVE_GROUP_NAME}/'
+    source_files = [f for f in source_files if stale_path not in f]
+    brave_files = sorted(
+        f.replace('\\', '/') for f in glob.glob(
+            f'{BRAVE_TEMPLATES_PATH}/**/*.yaml', recursive=True))
+
+    orig_func(dep_file, target, source_files + brave_files)

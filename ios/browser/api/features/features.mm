@@ -138,11 +138,6 @@
                                               kBraveAdblockScriptletDebugLogs];
 }
 
-+ (Feature*)kBraveDarkModeBlock {
-  return [[Feature alloc]
-      initWithFeature:&brave_shields::features::kBraveDarkModeBlock];
-}
-
 + (Feature*)kBraveDeAMP {
   return [[Feature alloc] initWithFeature:&de_amp::features::kBraveDeAMP];
 }
@@ -351,28 +346,16 @@
 }
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
-+ (Feature*)kBraveWalletWebUIIOS {
-  return [[Feature alloc]
-      initWithFeature:&brave_wallet::features::kBraveWalletWebUIFeature];
-}
 + (Feature*)kBraveWalletCardanoDAppSupportIOS {
   return
       [[Feature alloc] initWithFeature:&brave_wallet::features::
                                            kBraveWalletCardanoDAppSupportIOS];
 }
 #else
-+ (nullable Feature*)kBraveWalletWebUIIOS {
-  return nil;
-}
 + (nullable Feature*)kBraveWalletCardanoDAppSupportIOS {
   return nil;
 }
 #endif
-
-+ (Feature*)kAIChatWebUIEnabled {
-  return
-      [[Feature alloc] initWithFeature:&ai_chat::features::kAIChatWebUIEnabled];
-}
 
 + (Feature*)kBraveSyncDefaultPasswords {
   return [[Feature alloc]

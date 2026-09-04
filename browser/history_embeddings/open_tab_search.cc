@@ -17,6 +17,7 @@
 #include "base/functional/bind.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/cancelable_task_tracker.h"
+#include "base/task/sequenced_task_runner.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/browser_window/public/global_browser_collection.h"
@@ -107,11 +108,12 @@ void DispatchRankedTabs(
 
 void OnUrlIdsResolved(std::vector<OpenTabInfo> tabs,
                       std::string query,
-                      HistoryEmbeddingsSearch* embeddings_search,
+                      base::WeakPtr<HistoryEmbeddingsSearch> embeddings_search,
                       RankedOpenTabsCallback callback,
                       std::optional<std::vector<history::URLID>> url_ids) {
-  // HistoryService returned no result (e.g. shutdown / cancellation).
-  if (!url_ids) {
+  // HistoryService returned no result (e.g. shutdown / cancellation), or the
+  // embeddings service was shut down while the URL lookup was in flight.
+  if (!url_ids || !embeddings_search) {
     std::move(callback).Run({});
     return;
   }
@@ -149,18 +151,21 @@ void OnUrlIdsResolved(std::vector<OpenTabInfo> tabs,
 
 }  // namespace
 
-void SearchOpenTabsByContent(Profile* profile,
-                             history::HistoryService* history_service,
-                             HistoryEmbeddingsSearch* embeddings_search,
-                             std::string query,
-                             RankedOpenTabsCallback callback,
-                             base::CancelableTaskTracker* task_tracker) {
+void SearchOpenTabsByContent(
+    Profile* profile,
+    history::HistoryService* history_service,
+    base::WeakPtr<HistoryEmbeddingsSearch> embeddings_search,
+    std::string query,
+    RankedOpenTabsCallback callback,
+    base::CancelableTaskTracker* task_tracker) {
   std::vector<OpenTabInfo> tabs = SnapshotOpenTabs(profile);
   // No tracked tabs to rank against — `SnapshotOpenTabs` only keeps
   // tracked-browser HTTP(S) tabs, so non-normal windows, other profiles and
   // incognito don't reach here.
   if (tabs.empty()) {
-    std::move(callback).Run({});
+    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
+        FROM_HERE,
+        base::BindOnce(std::move(callback), std::vector<OpenTabInfo>()));
     return;
   }
   // Sequence the read-from-`tabs` (for URLs) before the move-of-`tabs` into
@@ -171,7 +176,7 @@ void SearchOpenTabsByContent(Profile* profile,
   history_service->QueryUrlIds(
       urls,
       base::BindOnce(&OnUrlIdsResolved, std::move(tabs), std::move(query),
-                     embeddings_search, std::move(callback)),
+                     std::move(embeddings_search), std::move(callback)),
       task_tracker);
 }
 

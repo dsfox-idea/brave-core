@@ -60,6 +60,7 @@ class ProfileMiscMetricsService : public KeyedService {
   void Shutdown() override;
 
   PageMetrics* GetPageMetrics();
+
 #if BUILDFLAG(ENABLE_AI_CHAT)
   ai_chat::AIChatMetrics* GetAIChatMetrics();
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)

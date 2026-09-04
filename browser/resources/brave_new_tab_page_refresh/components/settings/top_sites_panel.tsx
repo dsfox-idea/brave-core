@@ -12,6 +12,7 @@ import {
   useTopSitesState,
   useTopSitesActions,
 } from '../../context/top_sites_context'
+import { useRewardsState } from '../../context/rewards_context'
 import { getString } from '../../lib/strings'
 import { SettingsPanel } from './settings_panel'
 import classNames from '$web-common/classnames'
@@ -23,6 +24,8 @@ export function TopSitesPanel() {
 
   const showTopSites = useTopSitesState((s) => s.showTopSites)
   const listKind = useTopSitesState((s) => s.topSitesListKind)
+  const rewardsFeatureEnabled = useRewardsState((s) => s.rewardsFeatureEnabled)
+  const rewardsExternalWallet = useRewardsState((s) => s.rewardsExternalWallet)
 
   function renderSelectedMarker(kind: TopSitesListKind) {
     if (kind === listKind) {

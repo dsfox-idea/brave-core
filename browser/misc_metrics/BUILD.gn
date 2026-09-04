@@ -19,6 +19,7 @@ source_set("misc_metrics") {
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/misc_metrics",
     "//brave/components/time_period_storage",
+    "//chrome/browser/profiles:profile",
     "//components/keyed_service/content",
     "//components/keyed_service/core",
     "//components/prefs",
@@ -210,6 +211,7 @@ source_set("browser_tests") {
   deps = [
     "//base",
     "//base/test:test_support",
+    "//brave/browser/misc_metrics",
     "//brave/browser/misc_metrics:misc_metrics_impl",
     "//brave/components/constants",
     "//brave/components/misc_metrics",

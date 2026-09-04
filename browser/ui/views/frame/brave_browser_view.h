@@ -75,7 +75,6 @@ class BraveShieldsToolbarButton;
 class BraveHelpBubbleHostView;
 class BraveMultiContentsView;
 class BrowserWindowInterface;
-class ContentsLayoutManager;
 class FocusModeTitleBarView;
 class FocusModeTopOverlay;
 class SidebarContainerView;
@@ -225,6 +224,10 @@ class BraveBrowserView : public BrowserView,
     return vertical_tab_strip_host_view_;
   }
 
+  views::View* main_background_region_for_testing() const {
+    return main_background_region_;
+  }
+
 #if BUILDFLAG(ENABLE_EXTENSIONS)
   // Returns the PWA Shields toolbar button, if it exists. Note that this
   // returns valid pointer only when it's web app browser.
@@ -270,8 +273,6 @@ class BraveBrowserView : public BrowserView,
                            ShowVerticalTabOnMouseOverTest);
   FRIEND_TEST_ALL_PREFIXES(SplitViewWithRoundedCornersTest,
                            TabFullscreenStateTest);
-  FRIEND_TEST_ALL_PREFIXES(BraveBrowserViewWithRoundedCornersTest,
-                           ContentsBackgroundEventHandleTest);
   FRIEND_TEST_ALL_PREFIXES(sidebar::SidebarBrowserWithSplitViewTest,
                            ShowSidebarOnMouseOverTest);
 
@@ -356,7 +357,6 @@ class BraveBrowserView : public BrowserView,
   bool show_active_contents_domain_ = false;
   raw_ptr<BraveHelpBubbleHostView> brave_help_bubble_host_view_ = nullptr;
   raw_ptr<SidebarContainerView> sidebar_container_view_ = nullptr;
-  raw_ptr<views::View> contents_background_view_ = nullptr;
   raw_ptr<views::View> vertical_tab_strip_host_view_ = nullptr;
   raw_ptr<BraveVerticalTabStripContainerView>
       vertical_tab_strip_container_view_ = nullptr;

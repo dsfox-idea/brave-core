@@ -6,6 +6,7 @@
 #include "brave/browser/history_embeddings/open_tab_search.h"
 
 #include <cstdint>
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -123,6 +124,43 @@ class OpenTabSearchBrowserTest : public InProcessBrowserTest {
   content::ContentMockCertVerifier mock_cert_verifier_;
 };
 
+// With no tracked HTTP(S) tabs there is nothing to rank, and the result still
+// arrives asynchronously.
+IN_PROC_BROWSER_TEST_F(OpenTabSearchBrowserTest, NoTabsAnswersAsynchronously) {
+  ai_chat::FakeHistoryEmbeddingsSearch fake;
+
+  base::test::TestFuture<std::vector<OpenTabInfo>> future;
+  SearchOpenTabsByContent(profile(), history_service(), fake.GetWeakPtr(),
+                          "query", future.GetCallback(), &tracker_);
+
+  EXPECT_FALSE(future.IsReady());
+  EXPECT_TRUE(future.Take().empty());
+}
+
+// The URL lookup is asynchronous, so the search can stop resolving before it
+// returns. The result is then empty and the caller still hears back.
+IN_PROC_BROWSER_TEST_F(OpenTabSearchBrowserTest, SearchGoneDuringUrlLookup) {
+  const GURL foo_url = GetURL("foo.com", "/empty.html");
+  AppendTab(browser(), foo_url, "Foo");
+  AddToHistory(foo_url);
+  const history::URLID foo_url_id = QueryUrlId(foo_url);
+  ASSERT_NE(foo_url_id, 0);
+
+  ai_chat::FakeHistoryEmbeddingsSearch fake;
+  fake.SetScoredRows({ai_chat::FakeHistoryEmbeddingsSearch::MakeRow(
+      foo_url_id, foo_url, u"Foo", base::Time::Now(), /*score=*/1.0)});
+
+  base::test::TestFuture<std::vector<OpenTabInfo>> future;
+  SearchOpenTabsByContent(profile(), history_service(), fake.GetWeakPtr(),
+                          "query", future.GetCallback(), &tracker_);
+
+  // Still in the URL lookup. Dereferencing the search after this would CHECK,
+  // so a result at all means it was skipped rather than read through.
+  fake.InvalidateWeakPtrs();
+
+  EXPECT_TRUE(future.Take().empty());
+}
+
 // Results follow the scored-row order (best first), and open tabs whose URL
 // isn't among the scored rows are dropped.
 IN_PROC_BROWSER_TEST_F(OpenTabSearchBrowserTest, RanksAndDropsUnmatchedTabs) {
@@ -156,8 +194,8 @@ IN_PROC_BROWSER_TEST_F(OpenTabSearchBrowserTest, RanksAndDropsUnmatchedTabs) {
   });
 
   base::test::TestFuture<std::vector<OpenTabInfo>> future;
-  SearchOpenTabsByContent(profile(), history_service(), &fake, "query",
-                          future.GetCallback(), &tracker_);
+  SearchOpenTabsByContent(profile(), history_service(), fake.GetWeakPtr(),
+                          "query", future.GetCallback(), &tracker_);
   const std::vector<OpenTabInfo> ranked = future.Take();
 
   // Every eligible open tab is offered to `Search()` for scoring...
@@ -203,8 +241,8 @@ IN_PROC_BROWSER_TEST_F(OpenTabSearchBrowserTest, ExcludesOtherProfileTabs) {
   });
 
   base::test::TestFuture<std::vector<OpenTabInfo>> future;
-  SearchOpenTabsByContent(profile(), history_service(), &fake, "query",
-                          future.GetCallback(), &tracker_);
+  SearchOpenTabsByContent(profile(), history_service(), fake.GetWeakPtr(),
+                          "query", future.GetCallback(), &tracker_);
   const std::vector<OpenTabInfo> ranked = future.Take();
 
   // Only the regular-profile tab reaches the URL-id filter and the results.
@@ -234,8 +272,8 @@ IN_PROC_BROWSER_TEST_F(OpenTabSearchBrowserTest, SameUrlYieldsEveryTab) {
       url_id, url, u"Shared", base::Time::Now(), /*score=*/0.9f)});
 
   base::test::TestFuture<std::vector<OpenTabInfo>> future;
-  SearchOpenTabsByContent(profile(), history_service(), &fake, "query",
-                          future.GetCallback(), &tracker_);
+  SearchOpenTabsByContent(profile(), history_service(), fake.GetWeakPtr(),
+                          "query", future.GetCallback(), &tracker_);
   const std::vector<OpenTabInfo> ranked = future.Take();
 
   EXPECT_THAT(fake.last_url_id_filter(), testing::ElementsAre(url_id));

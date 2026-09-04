@@ -18,6 +18,7 @@
 #include "base/debug/stack_trace.h"
 #include "base/feature_list.h"
 #include "base/notimplemented.h"
+#include "base/task/sequenced_task_runner.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
@@ -158,15 +159,19 @@ BraveTabContainer::~BraveTabContainer() {
   // closed tabs were cleaned up from OnTabCloseAnimationCompleted().
   CancelAnimation();
   DCHECK(closing_tabs_.empty()) << "There are dangling closed tabs.";
-  DCHECK(!layout_locked_)
-      << "The lock returned by LockLayout() shouldn't outlive this object";
+  // Note: |layout_locked_| may still be true here. The unlock closure
+  // returned by LockLayout() is bound to a weak pointer, so a lock that
+  // outlives this object is benign (e.g. the window is closed while a
+  // session-restore insert batch holds the lock).
 }
 
 base::OnceClosure BraveTabContainer::LockLayout() {
   DCHECK(!layout_locked_) << "LockLayout() doesn't allow reentrance";
   layout_locked_ = true;
+  // Bind weakly: during session restore the closure is posted to the task
+  // queue, and the window (with this container) can be closed before it runs.
   return base::BindOnce(&BraveTabContainer::OnUnlockLayout,
-                        base::Unretained(this));
+                        weak_factory_.GetWeakPtr());
 }
 
 bool BraveTabContainer::ShouldShowVerticalTabs() const {
@@ -317,16 +322,22 @@ bool BraveTabContainer::ShouldTabBeVisible(const Tab* tab) const {
       return true;
     }
 
-    // Handle unpinned tabs in vertical tabs mode.
-    // Only show tab if it is not hidden under the pinned tab area.
+    // Handle unpinned tabs in vertical tabs mode. Only show tabs that
+    // intersect the viewport: tabs scrolled up under the pinned tab area and
+    // tabs scrolled down below the container bottom are hidden. Ideal bounds
+    // already include the current scroll offset (see UpdateIdealBounds), so
+    // comparing against [pinned area bottom, height()] tests viewport
+    // intersection.
     if (auto tab_index = GetTabIndex(tab)) {
-      const auto tab_bottom =
-          tabs_view_model_.ideal_bounds(*tab_index).bottom();
+      const auto& ideal_bounds = tabs_view_model_.ideal_bounds(*tab_index);
       const int pinned_tabs_area_bottom =
           visibility_pass_cache_
               ? visibility_pass_cache_->pinned_tabs_area_bottom
               : GetPinnedTabsAreaBottom();
-      return tab_bottom > pinned_tabs_area_bottom;
+      if (ideal_bounds.bottom() <= pinned_tabs_area_bottom) {
+        return false;
+      }
+      return ideal_bounds.y() < height();
     }
   } else if (scroll_direction == views::LayoutOrientation::kHorizontal) {
     if (tab->data().pinned || tab->dragging()) {
@@ -351,6 +362,15 @@ bool BraveTabContainer::ShouldTabBeVisible(const Tab* tab) const {
 
 std::vector<Tab*> BraveTabContainer::AddTabs(
     std::vector<TabInsertionParams> tabs_params) {
+  // Session restore inserts tabs one batch after another, and every insert
+  // triggers a full O(tab count) strip layout. Lock the layout for the rest
+  // of the current task batch and post the unlock closure, so all inserts
+  // that pile up in the task queue are laid out in a single pass.
+  if (GetScrollDirection() && !layout_locked_ && IsSessionRestoreInProgress()) {
+    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(FROM_HERE,
+                                                             LockLayout());
+  }
+
   std::vector<Tab*> added_tabs =
       TabContainerImpl::AddTabs(std::move(tabs_params));
   // Session restore inserts many background tabs back-to-back; scrolling to
@@ -575,6 +595,16 @@ void BraveTabContainer::PaintBoundingBoxForSplitTab(
 }
 
 void BraveTabContainer::OnUnlockLayout() {
+  if (IsSessionRestoreInProgress()) {
+    // Session restore for this profile is still (or again) in progress by
+    // the time this deferred task runs (e.g. during the profile chooser
+    // startup flow). Wait for it to finish rather than unlocking early.
+    base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
+        FROM_HERE, base::BindOnce(&BraveTabContainer::OnUnlockLayout,
+                                  weak_factory_.GetWeakPtr()));
+    return;
+  }
+
   layout_locked_ = false;
 
   InvalidateIdealBounds();

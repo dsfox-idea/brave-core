@@ -134,6 +134,7 @@
 
 #if BUILDFLAG(ENABLE_LOCAL_AI)
 #include "brave/components/local_ai/core/local_models_updater.h"
+#include "brave/components/local_ai/core/on_device_speech_models_component_installer.h"
 #endif
 
 using brave_component_updater::BraveComponent;
@@ -286,6 +287,7 @@ void BraveBrowserProcessImpl::StartTearDown() {
   // Drop the local models registrar's pointers to CrxUpdateService and
   // local_state before either is destroyed.
   local_ai::ShutdownLocalModelsComponentRegistration();
+  local_ai::ShutdownOnDeviceSpeechModelsComponentRegistration();
 #endif
   // Reset BraveOriginPolicyManager to prevent dangling pointer to local_state_
   brave_origin::BraveOriginPolicyManager::GetInstance()->Shutdown();
@@ -488,7 +490,7 @@ void BraveBrowserProcessImpl::OnTorEnabledChanged() {
   GlobalBrowserCollection::GetInstance()->ForEach(
       [](BrowserWindowInterface* browser) {
         static_cast<chrome::BraveBrowserCommandController*>(
-            browser->GetBrowserForMigrationOnly()->command_controller())
+            chrome::BrowserCommandController::From(browser))
             ->UpdateCommandForTor();
         return true;
       });

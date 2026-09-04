@@ -17,17 +17,15 @@ namespace ai_chat::prefs {
 void RegisterProfilePrefs(PrefRegistrySimple* registry) {
   if (ai_chat::features::IsAIChatEnabled()) {
     registry->RegisterTimePref(kLastAcceptedDisclaimer, {});
-#if BUILDFLAG(IS_IOS)
-    registry->RegisterBooleanPref(kBraveChatStorageEnabled,
-                                  ai_chat::features::IsAIChatWebUIEnabled());
-#else
     registry->RegisterBooleanPref(kBraveChatStorageEnabled, true);
-#endif
     // growser: the "Ask Leo" omnibox provider (Leo suggestions in the address
     // bar) is hidden by default (#16). A pref default is not a master switch:
     // flipping it breaks no tests (leo_provider_unittest overrides
     // IsLeoProviderEnabled to true and does not depend on the default). The
     // provider stays registered, but Start() never runs, so there are no hints.
+    //
+    // Growser-174: the #endif that used to sit above this comment went with
+    // upstream's IS_IOS branch around kBraveChatStorageEnabled.
     registry->RegisterBooleanPref(kBraveChatAutocompleteProviderEnabled, false);
     registry->RegisterBooleanPref(kUserDismissedPremiumPrompt, false);
     registry->RegisterBooleanPref(kUserDismissedStorageNotice, false);
