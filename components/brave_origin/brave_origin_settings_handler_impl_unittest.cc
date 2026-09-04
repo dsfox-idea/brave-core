@@ -20,7 +20,7 @@
 #include "brave/components/brave_origin/buildflags/buildflags.h"
 #include "brave/components/brave_origin/features.h"
 #include "brave/components/brave_origin/pref_names.h"
-#include "brave/components/skus/browser/test/fake_skus_service.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "components/policy/core/common/mock_policy_service.h"
 #include "components/prefs/pref_registry_simple.h"
@@ -28,9 +28,20 @@
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
+#if BUILDFLAG(ENABLE_SKUS)
+#include "brave/components/skus/browser/test/fake_skus_service.h"
+#endif
+
 namespace brave_origin {
 
+// Growser-174: the SKUs SDK is compiled out here (enable_skus=false), so the
+// fake service and everything built on it go with it. The BUILD.gn already
+// adds skus/browser:test_support only under enable_skus; this file used it
+// unguarded, which left brave_components_unittests unable to link - a target
+// nothing in the build gates, so nobody saw it.
+#if BUILDFLAG(ENABLE_SKUS)
 using skus::FakeSkusService;
+#endif
 
 // Minimal delegate for tests that don't need SKU connectivity.
 class NullDelegate : public BraveOriginService::Delegate {
@@ -41,6 +52,7 @@ class NullDelegate : public BraveOriginService::Delegate {
   }
 };
 
+#if BUILDFLAG(ENABLE_SKUS)
 // Delegate backed by a FakeSkusService.
 class SkusTestDelegate : public BraveOriginService::Delegate {
  public:
@@ -54,6 +66,7 @@ class SkusTestDelegate : public BraveOriginService::Delegate {
  private:
   raw_ptr<skus::FakeSkusService> fake_skus_;
 };
+#endif  // BUILDFLAG(ENABLE_SKUS)
 
 // Test constants
 constexpr char kTestProfileId[] = "test-profile-id";
@@ -395,6 +408,7 @@ TEST_F(BraveOriginHandlerTest, GetNeedsRestart_AfterRevert_ReturnsFalse) {
   }
 }
 
+#if BUILDFLAG(ENABLE_SKUS)
 // Test fixture for handler with a FakeSkusService wired up.
 class BraveOriginHandlerWithSkusTest : public testing::Test {
  public:
@@ -512,6 +526,7 @@ TEST_F(BraveOriginHandlerWithSkusTest,
   handler_->IsBraveOriginUser(result.GetCallback());
   EXPECT_TRUE(result.Get());
 }
+#endif  // BUILDFLAG(ENABLE_SKUS)
 
 // Test class for when BraveOrigin feature is disabled
 class BraveOriginHandlerDisabledTest : public testing::Test {

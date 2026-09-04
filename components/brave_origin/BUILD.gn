@@ -97,6 +97,9 @@ source_set("unit_tests") {
   deps = [
     ":brave_origin",
     "//base/test:test_support",
+    # Growser-174: the handler test guards its FakeSkusService section on
+    # ENABLE_SKUS, so it needs the flag itself.
+    "//brave/components/skus/buildflags",
     "//components/policy/core/common:test_support",
     "//components/prefs:test_support",
     "//testing/gtest",
