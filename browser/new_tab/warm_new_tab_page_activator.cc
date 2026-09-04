@@ -14,10 +14,10 @@
 #include "brave/browser/new_tab/warm_new_tab_page_manager_factory.h"
 #include "chrome/browser/headless/headless_mode_util.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_window/public/browser_collection.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/browser_window/public/global_browser_collection.h"
+#include "chrome/browser/ui/window_feature_controller/window_feature_controller.h"
 #include "content/public/common/content_switches.h"
 
 namespace growser {
@@ -72,9 +72,16 @@ void WarmNewTabPageActivator::WarmForBrowser(BrowserWindowInterface* browser) {
           ::switches::kEnableAutomation)) {
     return;
   }
-  Browser* chrome_browser = browser->GetBrowserForMigrationOnly();
-  if (!chrome_browser || !chrome_browser->SupportsWindowFeature(
-                             Browser::WindowFeature::kFeatureTabStrip)) {
+  // Growser-174: Chromium 153 moved SupportsWindowFeature off Browser and onto
+  // WindowFeatureController, which takes the interface we already hold - so the
+  // migration-only Browser* this used to go through is gone. The controller can
+  // still be absent: we are called as the browser is being added, before its
+  // features are attached, and no tab strip yet is a reason not to warm.
+  const WindowFeatureController* features =
+      WindowFeatureController::From(browser);
+  if (!features
+      || !features->SupportsWindowFeature(
+             WindowFeatureController::WindowFeature::kFeatureTabStrip)) {
     return;
   }
   Profile* profile = browser->GetProfile();
