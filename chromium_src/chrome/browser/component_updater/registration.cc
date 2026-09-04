@@ -7,6 +7,14 @@
 
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
+// Growser-174: base::OnceClosure and base::DoNothing are used by our
+// TranslateKit registration below (#70). They used to arrive transitively
+// through `#include <chrome/browser/component_updater/registration.cc>`, which
+// upstream moved to the bottom of this file - and upstream never noticed,
+// because that registration is ours and sits behind a flag their own build
+// does not turn on.
+#include "base/functional/callback.h"
+#include "base/functional/callback_helpers.h"
 
 // growser: drop the Media Engagement Index preload component.
 //
