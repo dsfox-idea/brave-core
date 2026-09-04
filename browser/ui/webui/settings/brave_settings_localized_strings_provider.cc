@@ -106,8 +106,12 @@ constexpr char16_t kContainersLearnMoreURL[] =
     u"https://growser.org/features.html#containers";
 #endif
 #if BUILDFLAG(ENABLE_TRAFFIC_CONTROL)
-constexpr char16_t kTrafficControlLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/48295270280333";
+// Growser-81 (arrived with the growser#174 merge): Brave's support desk is not
+// a destination for our users - it does not answer for a fork (lesson 30), and
+// the feature is compiled IN here, so the link really does ship. Pointed at our
+// own site, the same as kGoogleLoginLearnMoreURL below, until there is an
+// article to aim at.
+constexpr char16_t kTrafficControlLearnMoreURL[] = u"https://growser.org/";
 #endif
 constexpr char16_t kGoogleLoginLearnMoreURL[] =
     u"https://growser.org/";
