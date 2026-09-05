@@ -41,7 +41,15 @@ class EdgeHoverDetectorTest : public views::test::WidgetTest {
     widget_.reset(CreateTopLevelNativeWidget(
         views::Widget::InitParams::CLIENT_OWNS_WIDGET));
     widget_->SetSize(gfx::Size(200, 200));
-    widget_->Show();
+    // Growser-185: NOT shown, deliberately. The detector puts a real
+    // EventMonitor on this widget's native window, so a window on screen also
+    // receives the machine's own mouse events - and one kMouseExited is all it
+    // takes to cancel a pending enter, which is how
+    // MouseExitedEventStartsExitTimer failed once in a release build and
+    // passed on the retry. Every test here drives the detector through
+    // HandleEventForTesting or DetectHoverState, and neither needs a visible
+    // window; leaving it hidden is what keeps the machine's cursor out of the
+    // test.
     detector_ = std::make_unique<EdgeHoverDetector>(
         widget_.get(),
         base::BindRepeating(&EdgeHoverDetectorTest::IsHoverPoint,
