@@ -2690,6 +2690,43 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, FollowsTheWindowHeight) {
   ExpectNoTabLostOrDoubled();
 }
 
+// Growser-182: and the block below them does not move while that happens. It
+// used to be the flexible one - FlexLayout serves by increasing order, the
+// pinned block had order 2 and the legacy scroll view order 3, so the scroll
+// view took whatever was left. A scroll view turns "what is left" into
+// scrolling, so a short window slid bookmarks and the gear under their own
+// chevrons while every pinned tab stayed exactly where it was.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       TheLegacyBlockNeverGivesWay) {
+  SetShowPinnedTabs(true);
+  auto* legacy = GetSidebarItemsScrollViewAsView();
+  ASSERT_TRUE(legacy);
+  const int wanted = legacy->GetPreferredSize().height();
+  ASSERT_GT(wanted, 0);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  const gfx::Rect original_bounds =
+      browser_view()->GetWidget()->GetWindowBoundsInScreen();
+  gfx::Rect short_bounds = original_bounds;
+  for (int height = original_bounds.height(); height >= 200; height -= 50) {
+    short_bounds.set_height(height);
+    browser_view()->GetWidget()->SetBounds(short_bounds);
+    RunLayout();
+    EXPECT_EQ(wanted, legacy->height())
+        << "the legacy block shrank at window height " << height
+        << ", which is the scrolling this test exists to prevent";
+  }
+
+  EXPECT_LT(HostedBySidebar(), kPinnedTabCount)
+      << "the pinned tabs are what gives way on a short window, and did not";
+  ExpectNoTabLostOrDoubled();
+
+  browser_view()->GetWidget()->SetBounds(original_bounds);
+  RunLayout();
+  EXPECT_EQ(wanted, legacy->height());
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+}
+
 // Vertical tabs already show pinned tabs in a column of their own, so the
 // sidebar hosts nothing while they are on - the setting is inert, not a way to
 // make pinned tabs disappear from both places.

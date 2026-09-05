@@ -25,6 +25,7 @@
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_user_gesture_details.h"
 #include "chrome/browser/ui/view_ids.h"
@@ -149,20 +150,27 @@ void SidebarPinnedTabsView::OnPaintBackground(gfx::Canvas* canvas) {
     gfx::Rect icon = entry->GetContentsBounds();
     icon.Offset(entry->bounds().OffsetFromOrigin());
 
-    // The glow first, blurred out of a wider shape and pushed left so it
-    // reaches under the icon. The source shape itself is not painted - only
-    // its shadow is, which is what a glow is.
-    cc::PaintFlags glow_flags;
-    glow_flags.setAntiAlias(true);
-    glow_flags.setStyle(cc::PaintFlags::kFill_Style);
-    glow_flags.setColor(SK_ColorTRANSPARENT);
-    glow_flags.setLooper(gfx::CreateShadowDrawLooper(
-        {gfx::ShadowValue(gfx::Vector2d(-kActiveGlowOffset, 0), kActiveGlowBlur,
-                          SkColorSetA(color, kActiveGlowAlpha))}));
-    canvas->DrawRoundRect(
-        gfx::RectF(width() - kActiveGlowSourceWidth, icon.y(),
-                   kActiveGlowSourceWidth, icon.height()),
-        kActiveGlowSourceWidth / 2.0f, glow_flags);
+    // Growser-183: the glow is a dark-theme decoration - see
+    // sidebar::ShouldPaintActiveTabGlow, which owns that rule and is tested.
+    const bool dark_surface = sidebar::ShouldPaintActiveTabGlow(
+        color_provider->GetColor(kColorToolbar));
+
+    // The glow first, blurred out of a wider shape. The source shape itself is
+    // not painted - only its shadow is, which is what a glow is.
+    if (dark_surface) {
+      cc::PaintFlags glow_flags;
+      glow_flags.setAntiAlias(true);
+      glow_flags.setStyle(cc::PaintFlags::kFill_Style);
+      glow_flags.setColor(SK_ColorTRANSPARENT);
+      glow_flags.setLooper(gfx::CreateShadowDrawLooper(
+          {gfx::ShadowValue(gfx::Vector2d(-kActiveGlowOffset, 0),
+                            kActiveGlowBlur,
+                            SkColorSetA(color, kActiveGlowAlpha))}));
+      canvas->DrawRoundRect(
+          gfx::RectF(width() - kActiveGlowSourceWidth, icon.y(),
+                     kActiveGlowSourceWidth, icon.height()),
+          kActiveGlowSourceWidth / 2.0f, glow_flags);
+    }
 
     cc::PaintFlags bar_flags;
     bar_flags.setAntiAlias(true);

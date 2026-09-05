@@ -208,12 +208,18 @@ void SidebarControlView::AddChildViews() {
       views::kMarginsKey,
       gfx::Insets::VH(SidebarButtonView::kMargin, SidebarButtonView::kMargin));
 
+  // Growser-182: no flex specification, deliberately. A child without one is
+  // inflexible in FlexLayout: it always gets its preferred size, which for
+  // SidebarItemsScrollView is its whole contents, so the block neither shrinks
+  // nor scrolls and its arrows never appear. With a flex rule it was served
+  // after the pinned tabs (order 3 against 2) and took what was left, which a
+  // scroll view turns into scrolling - so on a short window the legacy block
+  // slid under its own chevrons while every pinned tab stayed put. The pinned
+  // block is the one that gives way now: it is the only flexible child left,
+  // and its Layout() turns the height it gets into the number of tabs it
+  // hosts, handing the rest to the tabstrip.
   sidebar_items_view_ =
       AddChildView(std::make_unique<SidebarItemsScrollView>(browser_));
-  sidebar_items_view_->SetProperty(
-      views::kFlexBehaviorKey,
-      views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
-          .WithOrder(3));
 
   // Growser-149: the add button is gone. Nothing creates it any more, and
   // SidebarItemAddButton stays in the tree switched off rather than deleted -
