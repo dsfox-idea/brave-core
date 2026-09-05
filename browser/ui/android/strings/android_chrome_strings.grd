@@ -317,21 +317,21 @@ CHAR_LIMIT guidelines:
       <message name="IDS_PREFS_SECTION_ACCOUNT_AND_GOOGLE_SERVICES" desc="Title for the group of account-related entries and google services in Settings. [CHAR_LIMIT=32]">
         You and Google
       </message>
-      <message name="IDS_SIGN_IN_TO_CHROME" meaning="Button" desc="Title for the button to sign in to Google using one's Google account. [CHAR_LIMIT=27]">
-        Sign in to Google
+      <message name="IDS_SIGN_IN_TO_CHROME" meaning="Button" desc="Title for the button to sign in to Growser using one's Google account. [CHAR_LIMIT=27]">
+        Sign in to Growser
       </message>
-      <message name="IDS_SIGN_IN_PERSONALIZE_GOOGLE_SERVICES_TITLE" desc="This is the title of a setting that directs users to other settings where they can control how Google history can be used to personalize other Google services. It appears in Google’s Advanced Sync settings and is before the “Control how browsing history is used with your other data across Google services” string. [CHAR_LIMIT=30]">
+      <message name="IDS_SIGN_IN_PERSONALIZE_GOOGLE_SERVICES_TITLE" desc="This is the title of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. It appears in Growser’s Advanced Sync settings and is before the “Control how browsing history is used with your other data across Google services” string. [CHAR_LIMIT=30]">
         Personalization
       </message>
-      <message name="IDS_SIGN_IN_PERSONALIZE_GOOGLE_SERVICES_TITLE_EEA" desc="This is the title of a setting that directs users to other settings where they can control how Google history can be used to personalize other Google services. It appears in Google’s Advanced Sync settings and is before the “Control how browsing history is used with your other data across Google services” string. “Linking” refers to the ability to link Google services; this verb should align with the verb for the branded term “linked Google services” in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2. [CHAR_LIMIT=30]">
+      <message name="IDS_SIGN_IN_PERSONALIZE_GOOGLE_SERVICES_TITLE_EEA" desc="This is the title of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. It appears in Growser’s Advanced Sync settings and is before the “Control how browsing history is used with your other data across Google services” string. “Linking” refers to the ability to link Google services; this verb should align with the verb for the branded term “linked Google services” in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2. [CHAR_LIMIT=30]">
         Personalization &amp; Linking
       </message>
-      <message name="IDS_SIGN_IN_PERSONALIZE_GOOGLE_SERVICES_SUMMARY" desc="This is the subtitle of a setting that directs users to other settings where they can control how Google history can be used to personalize other Google services. This subtitle appears in Google’s Advanced Sync settings, after the “Personalization &amp; linking” or “Personalization“ string.">
+      <message name="IDS_SIGN_IN_PERSONALIZE_GOOGLE_SERVICES_SUMMARY" desc="This is the subtitle of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. This subtitle appears in Growser’s Advanced Sync settings, after the “Personalization &amp; linking” or “Personalization“ string.">
         Control how browsing history is used with your other data across Google services
       </message>
       <!-- Personalized Growser services preferences-->
-      <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_SUMMARY" desc="This is the body text of a setting that helps users find the settings to control how Google history can be used to personalize other Google services. This text appears in Google’s Advanced Sync settings, on the subpage that links out to Web &amp; App Activity and linked Google services.">
-        To get the most personalized experience, include Google in Web &amp; App Activity and linked Google services
+      <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_SUMMARY" desc="This is the body text of a setting that helps users find the settings to control how Growser history can be used to personalize other Google services. This text appears in Growser’s Advanced Sync settings, on the subpage that links out to Web &amp; App Activity and linked Google services.">
+        To get the most personalized experience, include Growser in Web &amp; App Activity and linked Google services
       </message>
       <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_WAA_TITLE" desc="This string is found on a link in Growser’s Advanced Sync settings. When the user taps it, the link takes the user to “Web &amp; App Activity” in the Growser sync chain’s Activity Controls. This text should match the branded term “Web &amp; App Activity” in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75.">
         Web &amp; App Activity
@@ -347,10 +347,10 @@ CHAR_LIMIT guidelines:
         Growser services
       </message>
       <message name="IDS_ALLOW_CHROME_SIGNIN_TITLE" desc="Title for a checkbox in Google services that controls sign-in and sync prompts.">
-        Allow Google sign-in
+        Allow Growser sign-in
       </message>
       <message name="IDS_ALLOW_CHROME_SIGNIN_SUMMARY" desc="Summary for a checkbox in Google services that controls sign-in and sync prompts.">
-        Shows prompts to sign in to Google
+        Shows prompts to sign in to Growser
       </message>
       <message name="IDS_IMPROVE_SEARCH_SUGGESTIONS_TITLE" desc="Title for a checkbox in Settings that controls URL and search autocompletion and informs the user about the data shared by this feature.">
         Improve search suggestions
@@ -404,7 +404,7 @@ CHAR_LIMIT guidelines:
         If you allow cookies, Growser may use them for preloading.
       </message>
       <message name="IDS_PRELOAD_PAGES_STANDARD_PRELOADING_BULLET_THREE" desc="Third bullet point under the Preload Pages standard preloading mode. Informs the user about what the standard preloading setting does.">
-        When a Google site or app asks to privately preload links on their page, Google encrypts and preloads pages through Google servers without cookies. This hides your identity from the preloaded site.
+        When a Google site or app asks to privately preload links on their page, Growser encrypts and preloads pages through Google servers without cookies. This hides your identity from the preloaded site.
       </message>
       <message name="IDS_PRELOAD_PAGES_STANDARD_PRELOADING_BULLET_FOUR" desc="Fourth bullet point under the Preload Pages standard preloading mode. Informs the user about what the standard preloading setting does.">
         Because the preloaded pages are encrypted, and the site or app linking to the pages is a Google site or app, Google servers don’t receive new information when privately preloading these pages.
@@ -425,7 +425,7 @@ CHAR_LIMIT guidelines:
         If you allow cookies, Growser may use them for preloading.
       </message>
       <message name="IDS_PRELOAD_PAGES_EXTENDED_PRELOADING_BULLET_THREE" desc="Third bullet point under the Preload Pages extended preloading mode. Informs the user about what the extended preloading setting does.">
-        When a site or app asks to privately preload links on their page, Google encrypts and preloads pages through Google servers without cookies. This hides your identity from the preloaded site.
+        When a site or app asks to privately preload links on their page, Growser encrypts and preloads pages through Google servers without cookies. This hides your identity from the preloaded site.
       </message>
       <message name="IDS_PRELOAD_PAGES_EXTENDED_PRELOADING_BULLET_FOUR" desc="Fourth bullet point under the Preload Pages extended preloading mode. Informs the user about what the extended preloading setting does.">
         Because the preloaded pages are encrypted, Growser will not learn anything about the preloaded page content. Growser servers will learn which sites are privately preloaded. This information is only used to preload the pages, and is not linked to other information from your Growser sync chain.
@@ -445,7 +445,7 @@ CHAR_LIMIT guidelines:
 For more settings that use data to improve your Growser experience, go to <ph name="BEGIN_LINK2">&lt;link2&gt;</ph>Growser Services<ph name="END_LINK2">&lt;/link2&gt;</ph>.
       </message>
       <message name="IDS_PRIVACY_CHROME_DATA_AND_GOOGLE_SERVICES_SIGNED_OUT_FOOTER" desc="Footer to invite the signed out user to open the Google Services settings.">
-        For more settings that use data to improve your Google experience, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>Google Services<ph name="END_LINK">&lt;/link&gt;</ph>.
+        For more settings that use data to improve your Growser experience, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>Google Services<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_USAGE_AND_CRASH_REPORTS_TITLE" desc="Title for a preference that enables sending usage statistics and crash reports.">
         Help improve Growser\u2019s features and performance
@@ -847,8 +847,8 @@ For more settings that use data to improve your Growser experience, go to <ph na
       <message name="IDS_PASSWORDS_LEAK_DETECTION_SWITCH_TITLE" desc="Title for the switch toggling whether Growser should check that entered credentials have been part of a leak.">
         Warn you if a password was compromised in a data breach
       </message>
-      <message name="IDS_PASSWORDS_LEAK_DETECTION_SWITCH_SUMMARY" desc="Summary for the switch toggling whether Google should check that entered credentials have been part of a leak.">
-        When you use a password, Google warns you if it has been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google.
+      <message name="IDS_PASSWORDS_LEAK_DETECTION_SWITCH_SUMMARY" desc="Summary for the switch toggling whether Growser should check that entered credentials have been part of a leak.">
+        When you use a password, Growser warns you if it has been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google.
       </message>
       <message name="IDS_PASSWORD_ENTRY_EDIT_EMPTY_PASSWORD_ERROR" desc="Error text displayed when the user has left the password field empty in the credential editor.">
         Enter password
@@ -871,7 +871,7 @@ For more settings that use data to improve your Growser experience, go to <ph na
       <message name="IDS_PWD_ACCESS_LOSS_WARNING_UPDATE_GMS_CORE_BUTTON_TEXT" desc="The button text of the password access loss warning sheet when the GMS Core version doesn't support local passwords." formatter_data="android_java">
         Update
       </message>
-      <message name="IDS_SOME_PASSWORDS_ARE_NOT_ACCESSIBLE_SUBTITLE" desc="Subtitle shown under the Google Password Manager entry point, when the password manager is available for the user, but they have unmigrated passwords left behind in Google.">
+      <message name="IDS_SOME_PASSWORDS_ARE_NOT_ACCESSIBLE_SUBTITLE" desc="Subtitle shown under the Google Password Manager entry point, when the password manager is available for the user, but they have unmigrated passwords left behind in Growser.">
         Some of your passwords aren’t accessible
       </message>
       <message name="IDS_GPM_STOPPED_WORKING_SUBTITLE" desc="Subtitle shown under the Google Password Manager entry point, when the password manager is not available for the user. Among other reasons, this can happen when Google Play services is not updated.">
@@ -904,13 +904,13 @@ For more settings that use data to improve your Growser experience, go to <ph na
       <message name="IDS_KEEP_ACCESS_TO_YOUR_PASSWORDS_DIALOG_TITLE" desc="Title for a dialog shown to users when they have unmigrated passwords left over in Growser after Growser's storage has been deprecated">
         Keep access to your passwords
       </message>
-      <message name="IDS_CSV_DOWNLOAD_DIALOG_WITH_GMS_PARAGRAPH1" desc="First paragraph of the description in the dialog shown to users when they have unmigrated passwords left over in Google after Google's storage has been deprecated. This text is shown to users who have Google Play Services on the device.">
+      <message name="IDS_CSV_DOWNLOAD_DIALOG_WITH_GMS_PARAGRAPH1" desc="First paragraph of the description in the dialog shown to users when they have unmigrated passwords left over in Growser after Growser's storage has been deprecated. This text is shown to users who have Google Play Services on the device.">
         To keep access to your passwords, export them now, update Google Play Services, and then import them back to Google Password Manager. <ph name="BEGIN_LINK">&lt;link&gt;</ph>See full instructions<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_CSV_DOWNLOAD_DIALOG_PARAGRAPH2" desc="Second paragraph of the description in the dialog shown to users when they have unmigrated passwords left over in Growser after Growser's storage has been deprecated">
         The exported file may be accessible to others, including apps. Once you export, your passwords are deleted from Growser.
       </message>
-      <message name="IDS_CSV_DOWNLOAD_DIALOG_NO_GMS_PARAGRAPH1" desc="First paragraph of the description in the dialog shown to users when they have unmigrated passwords left over in Google after Google's storage has been deprecated. This text is shown to users who don't have Google Play Services.">
+      <message name="IDS_CSV_DOWNLOAD_DIALOG_NO_GMS_PARAGRAPH1" desc="First paragraph of the description in the dialog shown to users when they have unmigrated passwords left over in Growser after Growser's storage has been deprecated. This text is shown to users who don't have Google Play Services.">
         To keep access to your passwords, export them now and then import them to your preferred password manager. Google Password Manager stopped working because Google Play services isn’t available.
       </message>
       <message name="IDS_CSV_DOWNLOAD_DIALOG_POSITIVE_BUTTON_TEXT" desc="The text for the dialog button through which users can initiate password export. The dilog is shown to users who have unmigrated passwords left over in Growser after Growser's storage has been deprecated.">
@@ -1100,7 +1100,7 @@ For example, some websites may respond to this request by showing you ads that a
         Deleted Growser data
       </message>
       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_DIALOG_DATA_TEXT" desc="Text of the dialog that is shown after the deletion of browsing history items finished, indicating that the selected data has been removed, but there may be other forms of browsing history still present in user's Google account.">
-        The selected data has been removed from Google and your synced devices.
+        The selected data has been removed from Growser and your synced devices.
 
 Your Google account may have other forms of browsing history like searches and activity from other Google services at <ph name="BEGIN_LINK">&lt;link&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
@@ -1316,7 +1316,7 @@ Your Google account may have other forms of browsing history like searches and a
         Web &amp; App Activity
       </message>
       <message name="IDS_PRIVACY_GUIDE_WEB_APP_ACTIVITY_DESCRIPTION" desc="Description for the Web and App Activity item on the final page of the privacy guide">
-        Choose whether to include Google history for more personalized experiences in Google services
+        Choose whether to include Growser history for more personalized experiences in Google services
       </message>
       <message name="IDS_PRIVACY_GUIDE_EXPLANATION_CONTENT_DESCRIPTION" desc="The content description for the privacy guide explanation bottom sheet. Read as accessibility string when tapping on the bottom sheet.">
         Privacy guide explanation
@@ -2458,8 +2458,8 @@ Your Google account may have other forms of browsing history like searches and a
         Enter passphrase
       </message>
       <message name="IDS_SYNC_ENCRYPTION_CREATE_PASSPHRASE" desc="The message displayed when the signed in user needs to enter its sync passphrase.">
-        Payment methods and addresses won’t be encrypted. Browsing history from Google won’t sync.
-Only someone with your passphrase can read your encrypted data. The passphrase is not sent to or stored by Google. If you forget your passphrase or want to change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>clear the Google data in your account<ph name="END_LINK">END_LINK</ph>.
+        Payment methods and addresses won’t be encrypted. Browsing history from Growser won’t sync.
+Only someone with your passphrase can read your encrypted data. The passphrase is not sent to or stored by Google. If you forget your passphrase or want to change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>clear the Growser data in your account<ph name="END_LINK">END_LINK</ph>.
       </message>
       <message name="IDS_SYNC_ENTER_CUSTOM_PASSPHRASE_HINT" desc="Hint for the passphrase field when user is to type in a passphrase. [CHAR_LIMIT=30]">
         Passphrase
@@ -3519,11 +3519,11 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       <message name="IDS_SAFETY_FRE_PROMO_SHOW_ME_HOW_BUTTON" desc="Text on the button to show the user how to configure safety settings from the Safety Promo screen of the First Run Experience.">
         Show me how
       </message>
-      <message name="IDS_LIGHTWEIGHT_FRE_ASSOCIATED_APP_TOS" desc="Message explaining that use of Google is governed by Google's terms of service.">
-        <ph name="APP_NAME">%1$s<ex>Google Maps</ex></ph> will open in Google. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Google Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Google and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
+      <message name="IDS_LIGHTWEIGHT_FRE_ASSOCIATED_APP_TOS" desc="Message explaining that use of Growser is governed by Growser's terms of service.">
+        <ph name="APP_NAME">%1$s<ex>Google Maps</ex></ph> will open in Growser. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Google Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Growser and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>.
       </message>
-      <message name="IDS_LIGHTWEIGHT_FRE_ASSOCIATED_APP_TOS_AND_PRIVACY_CHILD_ACCOUNT" desc="Message explaining that use of Google is governed by Google's terms of service, and the Google Privacy Policy.">
-        <ph name="APP_NAME">%1$s<ex>Google Maps</ex></ph> will open in Google. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Google Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Google and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>. The <ph name="BEGIN_LINK3">&lt;LINK3&gt;</ph>Privacy Policy<ph name="END_LINK3">&lt;/LINK3&gt;</ph> also applies.
+      <message name="IDS_LIGHTWEIGHT_FRE_ASSOCIATED_APP_TOS_AND_PRIVACY_CHILD_ACCOUNT" desc="Message explaining that use of Growser is governed by Growser's terms of service, and the Google Privacy Policy.">
+        <ph name="APP_NAME">%1$s<ex>Google Maps</ex></ph> will open in Growser. By continuing, you agree to the <ph name="BEGIN_LINK1">&lt;LINK1&gt;</ph>Google Terms of Service<ph name="END_LINK1">&lt;/LINK1&gt;</ph>, and the <ph name="BEGIN_LINK2">&lt;LINK2&gt;</ph>Growser and ChromeOS Additional Terms of Service<ph name="END_LINK2">&lt;/LINK2&gt;</ph>. The <ph name="BEGIN_LINK3">&lt;LINK3&gt;</ph>Privacy Policy<ph name="END_LINK3">&lt;/LINK3&gt;</ph> also applies.
       </message>
       <message name="IDS_FRE_ACCEPT_CONTINUE" desc="Text for first page accept and continue button [CHAR_LIMIT=20]">
         Accept &amp; continue
@@ -3545,11 +3545,11 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       <message name="IDS_SIGNIN_FRE_STAY_SIGNED_OUT_BUTTON" desc="Button on the sign in screen of the Growser First Run Experience to stay signed out of Growser.">
         Stay signed out
       </message>
-      <message name="IDS_SIGNIN_FRE_FOOTER_TOS" desc="The text is displayed in a footer on the very first screen of Google. The link ‘Terms of Service’ opens the Google Terms of Service.">
+      <message name="IDS_SIGNIN_FRE_FOOTER_TOS" desc="The text is displayed in a footer on the very first screen of Growser. The link ‘Terms of Service’ opens the Google Terms of Service.">
         By continuing, you agree to the <ph name="BEGIN_TOS_LINK">&lt;TOS_LINK&gt;</ph>Terms of Service<ph name="END_TOS_LINK">&lt;/TOS_LINK&gt;</ph>.
       </message>
-      <message name="IDS_SIGNIN_FRE_FOOTER_METRICS_REPORTING" desc="The text is displayed in a footer on the very first screen of Google. Preferably, ensure consistency with the “Usage statistics and crash reports” section of the Google Privacy Policy (google.com/chrome/privacy).">
-        To help improve the app, Google sends usage and crash data to Google. <ph name="BEGIN_UMA_LINK">&lt;UMA_LINK&gt;</ph>Manage<ph name="END_UMA_LINK">&lt;/UMA_LINK&gt;</ph>
+      <message name="IDS_SIGNIN_FRE_FOOTER_METRICS_REPORTING" desc="The text is displayed in a footer on the very first screen of Growser. Preferably, ensure consistency with the “Usage statistics and crash reports” section of the Growser Privacy Policy (google.com/chrome/privacy).">
+        To help improve the app, Growser sends usage and crash data to Google. <ph name="BEGIN_UMA_LINK">&lt;UMA_LINK&gt;</ph>Manage<ph name="END_UMA_LINK">&lt;/UMA_LINK&gt;</ph>
       </message>
       <message name="IDS_SIGNIN_FRE_FOOTER_METRICS_REPORTING_SETTINGS" is_accessibility_with_no_ui="true" desc="The content description for the manage button to access usage and crash data settings. Used with the string IDS_SIGNIN_FRE_FOOTER_METRICS_REPORTING.">
         Manage usage and crash data settings
@@ -5708,7 +5708,7 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       </message>
 
       <!-- Storage Preference UI strings for clearing storage. -->
-      <message name="IDS_STORAGE_MANAGEMENT_ACTIVITY_LABEL" desc="Title for Google's Manage Space Activity.">
+      <message name="IDS_STORAGE_MANAGEMENT_ACTIVITY_LABEL" desc="Title for Growser's Manage Space Activity.">
          Google <ph name="APP_NAME">%1$s<ex>Growser</ex></ph> storage
       </message>
       <message name="IDS_STORAGE_MANAGEMENT_UNIMPORTANT_SITE_DATA_DESCRIPTION" desc="Text to describe the data stored by unimportant or infrequent sites.">
@@ -6620,7 +6620,7 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       </message>
 
       <!-- Chime DFM module strings -->
-      <message name="IDS_CHIME_MODULE_TITLE" desc="Text shown when the chime module is referenced in install start, success, failure UI (e.g. in IDS_MODULE_INSTALL_START_TEXT, which will expand to 'Installing Google Notifications Platform for Google…').">
+      <message name="IDS_CHIME_MODULE_TITLE" desc="Text shown when the chime module is referenced in install start, success, failure UI (e.g. in IDS_MODULE_INSTALL_START_TEXT, which will expand to 'Installing Google Notifications Platform for Growser…').">
         Google Notifications Platform
       </message>
 
@@ -6675,8 +6675,8 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       <message name="IDS_CHROME_REENGAGEMENT_NOTIFICATION_2_DESCRIPTION" desc="The body text of a notification shown to suggest that users use Growser.  Users probably have not opened Growser in a while.  Promotes data savings.">
         Use Lite mode on Growser
       </message>
-      <message name="IDS_CHROME_REENGAGEMENT_NOTIFICATION_3_TITLE" desc="The title of a notification shown to suggest that users use Google.  Users probably have not opened Google in a while.">
-        Google recommends Google
+      <message name="IDS_CHROME_REENGAGEMENT_NOTIFICATION_3_TITLE" desc="The title of a notification shown to suggest that users use Growser.  Users probably have not opened Growser in a while.">
+        Google recommends Growser
       </message>
       <message name="IDS_CHROME_REENGAGEMENT_NOTIFICATION_3_DESCRIPTION" desc="The title of a notification shown to suggest that users use Growser.  Users probably have not opened Growser in a while.  Promotes data savings and relevant news.">
         Save up to 60% data, read today's news

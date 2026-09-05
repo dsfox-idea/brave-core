@@ -322,7 +322,7 @@
   </message>
   <if expr="reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Google settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL_2" desc="Label describing the OS sync feature.">
       Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Growser sync chain. To manage what browser data is saved in your Growser sync chain, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
@@ -330,7 +330,7 @@
   </if>
   <if expr="not reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Google settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL_2" desc="Label describing the OS sync feature.">
       Your apps and settings will sync across all ChromeOS devices where you are signed in with your Growser sync chain. To manage what browser data is saved in your Growser sync chain, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
@@ -498,7 +498,7 @@
     Grammar check currently available for English only
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_ENHANCED_LABEL" desc="Label for enhanced spell check toggle, the type of spell check that sends the text the user types to Google spelling service. It is important that it is communicated that the text the user types will be sent to Google.">
-    Enhanced spell check in Google browser (text is sent to Google for spelling suggestions)
+    Enhanced spell check in Growser browser (text is sent to Google for spelling suggestions)
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_LANGUAGES_LIST_TITLE" desc="Title for the list of languages that support spell check, from which users can enable or disable spell check for.">
     Spell check languages

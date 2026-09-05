@@ -236,7 +236,7 @@
     <message name="IDS_PROFILE_MENU_CUSTOMIZE_PROFILE_BUTTON" desc="Button in the avatar menu bubble view for editing the current profile.">
       Customize profile
     </message>
-    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Google account settings.">
+    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Growser account settings.">
       Google services settings
     </message>
     <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Growser autofill settings.">
@@ -265,7 +265,7 @@
     <message name="IDS_PROFILE_MENU_CUSTOMIZE_PROFILE_BUTTON" desc="Button in the avatar menu bubble view for editing the current profile. ">
       Customize Profile
     </message>
-    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Google account settings.">
+    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Growser account settings.">
       Google Services Settings
     </message>
     <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Growser autofill settings.">
@@ -1204,7 +1204,7 @@
         Sign In
       </message>
     </if>
-    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Google is launched), informing users they can either sign in with an existing Google account or create a new one in the next step(s).">
+    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Growser is launched), informing users they can either sign in with an existing Google account or create a new one in the next step(s).">
       Use your Google account or create a new one
     </message>
     <message name="IDS_FRE_SIGN_IN_CELEBRATION_WELCOME_TITLE" desc="Title for the sign in celebration screen (FRE).">

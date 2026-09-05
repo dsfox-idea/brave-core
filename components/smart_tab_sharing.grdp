@@ -22,8 +22,8 @@
   <message name="IDS_STS_SETTINGS_OPTION_1_SHARE_OPEN_TABS_FOR_EVERY_THREAD_V3" desc="Label for a setting that allows users to share relevant tabs in every Google Search AI Mode thread.">
     Automatically share relevant open tabs in every thread
   </message>
-  <message name="IDS_STS_SETTINGS_OPTION_1_CHOOSE_HOW_RELEVANT_OPEN_TABS_CAN_BE_USED_V3" desc="This string is the subheading of a setting for 'Share relevant tabs in every thread'. This string explains what Google shares with Google Search AI Mode when turned on.">
-    Google will automatically send the page content and URLs of open tabs that may be relevant to your question to Google to get more personalized responses. Google will only share tabs from the window you're working in.
+  <message name="IDS_STS_SETTINGS_OPTION_1_CHOOSE_HOW_RELEVANT_OPEN_TABS_CAN_BE_USED_V3" desc="This string is the subheading of a setting for 'Share relevant tabs in every thread'. This string explains what Growser shares with Google Search AI Mode when turned on.">
+    Growser will automatically send the page content and URLs of open tabs that may be relevant to your question to Google to get more personalized responses. Growser will only share tabs from the window you're working in.
   </message>
   <message name="IDS_STS_SETTINGS_OPTION_1_LEARN_MORE" desc="No implementation or screenshot yet. See http://crbug.com/490510281 for context.">
     Learn more

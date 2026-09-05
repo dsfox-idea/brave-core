@@ -96,7 +96,7 @@
       Get image descriptions from Google
     </message>
     <message name="IDS_SETTINGS_ACCESSIBLE_IMAGE_LABELS_SUBTITLE" desc="Subtitle for screen reader image labels feature.">
-      If an image doesn’t have a useful description, Google will try to provide one for you. To create descriptions, images are sent to Google.
+      If an image doesn’t have a useful description, Growser will try to provide one for you. To create descriptions, images are sent to Google.
     </message>
     <message name="IDS_SETTINGS_MAIN_NODE_ANNOTATIONS_DOWNLOAD_COMPLETE" desc="Success message when it has downloaded main node annotation files.">
       Main node annotation files downloaded
@@ -465,7 +465,7 @@
     <message name="IDS_PASSWORDS_PAGE_EXPORT_AUTHENTICATION_PROMPT_BIOMETRIC_SUFFIX" desc="Shown after 'Growser is trying to ' (or in some languages, 'Growser wants to ') in a dialog message. Text for the dialog box that prompts the user for the biometric authentication before exporting passwords to a file.">
       export passwords
     </message>
-    <message name="IDS_PASSWORDS_PAGE_DELETE_ALL_DATA_AUTHENTICATION_PROMPT_BIOMETRIC_SUFFIX" desc="Shown on MacOS after 'Google is trying to ' (or in some languages, 'Google wants to ') in a dialog message. Text for the dialog box that prompts the user for the biometric authentication before deleting all Google Password Manager data.">
+    <message name="IDS_PASSWORDS_PAGE_DELETE_ALL_DATA_AUTHENTICATION_PROMPT_BIOMETRIC_SUFFIX" desc="Shown on MacOS after 'Growser is trying to ' (or in some languages, 'Growser wants to ') in a dialog message. Text for the dialog box that prompts the user for the biometric authentication before deleting all Google Password Manager data.">
       delete your <ph name="BRAND">$1<ex>Growser Password Manager</ex></ph> data
     </message>
     <message name="IDS_SETTINGS_AUTOFILL_AND_PASSWORDS" desc="Name of the settings page which allows managing passwords, payment methods and addresses settings.">
@@ -983,7 +983,7 @@
     <message name="IDS_SETTINGS_DELETION_CONFIRMATION_ALL_TIME_TOAST_LABEL" desc="This is the label for the confirmation toast shown on the 'Privacy and security' page after the deletion is completed in the 'Delete browsing data' dialog and the dialog was closed. This is the label shown when the user selected the data to be deleted for all time.">
       Deleted
     </message>
-    <message name="IDS_SETTINGS_SEARCH_GEMINI_PASSWORDS_OTHER_DATA_SUB_LABEL" desc="Sub-label for the 'Manage Other Google Data' option in the 'Delete Browsing Data' dialog, explaining to the user that search history, Gemini history, and passwords can be deleted outside of Google in their respective management settings.">
+    <message name="IDS_SETTINGS_SEARCH_GEMINI_PASSWORDS_OTHER_DATA_SUB_LABEL" desc="Sub-label for the 'Manage Other Google Data' option in the 'Delete Browsing Data' dialog, explaining to the user that search history, Gemini history, and passwords can be deleted outside of Growser in their respective management settings.">
       Search history, Gemini history, and passwords can be deleted in their management settings
     </message>
 
@@ -3609,7 +3609,7 @@
     <message name="IDS_SETTINGS_SYNC_SETTINGS_SAVED_TOAST_LABEL" desc="The notification shown to user after they saved sync settings, and sync is now started.">
       Settings saved. Sync started.
     </message>
-    <message name="IDS_SETTINGS_CHROME_SIGNIN_OPTION_SAVED_TOAST_LABEL" desc="The notification shown to user after they save the setting that controls whether a user gets signed in to Google when signing in to Google Services.">
+    <message name="IDS_SETTINGS_CHROME_SIGNIN_OPTION_SAVED_TOAST_LABEL" desc="The notification shown to user after they save the setting that controls whether a user gets signed in to Growser when signing in to Google Services.">
       Choice saved. Your choice will apply when you sign in to other Google services.
     </message>
 
@@ -3693,7 +3693,7 @@
     <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_TITLE" desc="Title of the personalize Google services section. When clicked, takes the user to the Google Activity Controls.">
       Control how your browsing history is used to personalize Search and more
     </message>
-    <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_TITLE_V2" desc="This is the title of a setting that directs users to other settings where they can control how Google history can be used to personalize other Google services. This title appears in Google's Advanced Sync settings, before the 'To get personalization and other features' string.">
+    <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_TITLE_V2" desc="This is the title of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. This title appears in Growser's Advanced Sync settings, before the 'To get personalization and other features' string.">
       Control how browsing history is used with your other data across Google services
     </message>
     <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_WAA_TITLE" desc="This string is found on a link in Growser's Advanced Sync settings. When the user taps it, the link takes the user to 'Web &amp; App Activity' in the Growser sync chain's Activity Controls. This text should match the branded term 'Web &amp; App Activity' in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75.">
@@ -3702,16 +3702,16 @@
     <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_TITLE" desc="This string is found on a link in Growser's Advanced Sync settings. When the user taps it, the link takes the user to 'Linked Growser services' in the Growser sync chain's Data &amp; privacy settings. The link is on a setting that users see in Growser's Advanced Sync settings. This text should match the branded term 'linked Growser services' in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
       Linked Growser services
     </message>
-    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_PLACEHOLDER" desc="Placeholder for the dropdown list of options for the setting 'Sign in to Google when you sign in to other Google services'. This choice is not selectable and only exist and shown if the user did not do any prior choice. It will be overriden by any choice made by the user.">
+    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_PLACEHOLDER" desc="Placeholder for the dropdown list of options for the setting 'Sign in to Growser when you sign in to other Google services'. This choice is not selectable and only exist and shown if the user did not do any prior choice. It will be overriden by any choice made by the user.">
       Select an option
     </message>
-    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_SIGNIN" desc="One of three options for the setting is called 'Sign in to Google when you sign in to other Google services'. When the user chooses this option, the user will automatically sign in to Google after they sign in to a Google service (like Gmail) using Google. The verb tense should be descriptive, not imperative.">
+    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_SIGNIN" desc="One of three options for the setting is called 'Sign in to Growser when you sign in to other Google services'. When the user chooses this option, the user will automatically sign in to Growser after they sign in to a Google service (like Gmail) using Growser. The verb tense should be descriptive, not imperative.">
       Sign in
     </message>
-    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_DO_NOT_SIGNIN" desc="One of three options for the setting is called 'Sign in to Google when you sign in to other Google services'. When the user chooses this option, the user will NOT automatically sign in to Google after they sign in to a Google service (like Gmail) using Google. The verb tense should be descriptive, not imperative.">
+    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_DO_NOT_SIGNIN" desc="One of three options for the setting is called 'Sign in to Growser when you sign in to other Google services'. When the user chooses this option, the user will NOT automatically sign in to Growser after they sign in to a Google service (like Gmail) using Growser. The verb tense should be descriptive, not imperative.">
       Don’t sign in
     </message>
-    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_ALWAYS_ASK" desc="One of three options for the setting is called 'Sign in to Google when you sign in to other Google services'. When the user chooses this option, the user will be asked whether they want to sign in to Google after they sign in to a Google service (like Gmail) using Google. The verb tense should be descriptive, not imperative.">
+    <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_ALWAYS_ASK" desc="One of three options for the setting is called 'Sign in to Growser when you sign in to other Google services'. When the user chooses this option, the user will be asked whether they want to sign in to Growser after they sign in to a Google service (like Gmail) using Growser. The verb tense should be descriptive, not imperative.">
       Ask every time
     </message>
     <message name="IDS_SETTINGS_GOOGLE_ACCOUNT" desc="Label for the section that takes the user to the Growser sync chain website from Related Growser services.">
@@ -4218,7 +4218,7 @@
     <message name="IDS_SETTINGS_SAFETY_HUB_PASSWORD_CHECK_SUBHEADER_SIGN_IN" desc="This text conveys to the user that they currently do not have the full protection for their passwords and informs the user that additional protection (in form of Growser checking whether saved passwords are compromised) is available by signing into Growser. Compromised passwords are concepts in Growser Password Manager, this should be translated the same way. It is shown only to signed-out users. This text appears in the subtitle of the passwords card on the Safety Hub page, below a title that lists already known password issues. The title above this may read e.g. '2 weak passwords', or 'No weak or reused passwords').">
       To check for compromised passwords, sign in to your Growser sync chain
     </message>
-    <message name="IDS_SETTINGS_SAFETY_HUB_PASSWORD_CHECK_SUBHEADER_GO_TO_PASSWORD_MANAGER" desc="This text conveys to the user that they currently do not have the full protection for their passwords and informs the user that additional protection (in form of Google checking whether saved passwords are compromised) is available by clicking on the card containing this text, which will redirect to Google Password Manager. Compromised passwords are a concept in Google password manager, this should be translated the same way. This text appears in the subtitle of the passwords card one the Safety Hub page, below the title 'No weak or reused passwords'.">
+    <message name="IDS_SETTINGS_SAFETY_HUB_PASSWORD_CHECK_SUBHEADER_GO_TO_PASSWORD_MANAGER" desc="This text conveys to the user that they currently do not have the full protection for their passwords and informs the user that additional protection (in form of Growser checking whether saved passwords are compromised) is available by clicking on the card containing this text, which will redirect to Google Password Manager. Compromised passwords are a concept in Growser password manager, this should be translated the same way. This text appears in the subtitle of the passwords card one the Safety Hub page, below the title 'No weak or reused passwords'.">
       To check for compromised passwords, go to Google Password Manager
     </message>
     <message name="IDS_SETTINGS_SAFETY_HUB_PASSWORD_CHECK_HEADER_NO_PASSWORDS" desc="This text is the header of the passwords card of SafetyHub when the user has no passwords saved in Growser. Below this text there is a subheader that give the user more details: 'Growser can check your passwords when you save them' or 'Your organization turned off saving passwords'. The card this text is part of is in a neutral state.">
@@ -4346,8 +4346,8 @@
       <message name="IDS_SETTINGS_AI_PAGE_TITLE" desc="This label is on the left Navigation sidebar in Growser’s settings. It tells the user that they can see settings related to AI (artificial intelligence) in this section. It is a noun phrase that refers to our collection of AI settings. These settings include Help me write and more.">
         AI in Growser
       </message>
-      <message name="IDS_SETTINGS_AI_PAGE_MAIN_SUBLABEL_3" desc="This is a bullet point on a card that sets the context for the ‘AI innovations’ section of Google’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This bullet point is after the ‘Reimagine Google, supercharged with AI’ title and ‘Things to consider’ subheading. We want users to read this card and understand the considerations that apply to all Google’s AI features. This bullet point specifically notes that AI features are actively developing and results may include errors. The tone should be informative.">
-        Data sent to Google may be seen by human reviewers to improve Google AI’s technology
+      <message name="IDS_SETTINGS_AI_PAGE_MAIN_SUBLABEL_3" desc="This is a bullet point on a card that sets the context for the ‘AI innovations’ section of Growser’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This bullet point is after the ‘Reimagine Growser, supercharged with AI’ title and ‘Things to consider’ subheading. We want users to read this card and understand the considerations that apply to all Growser’s AI features. This bullet point specifically notes that AI features are actively developing and results may include errors. The tone should be informative.">
+        Data sent to Google may be seen by human reviewers to improve Growser AI’s technology
       </message>
       <message name="IDS_SETTINGS_AI_PAGE_MAIN_MANAGED_LEARN_MORE_ACCESSIBILITY_LABEL" desc="This string is found in a link that takes the user to the AI features and policies help center article when the user taps it. The tone should be informative">
         Learn more about using generative AI at work
@@ -4369,8 +4369,8 @@
       <message name="IDS_SETTINGS_PASSWORD_CHANGE_LABEL" desc="Primary label for password change entry in settings. The user is in settings and this string represents the name of the feature. We were careful to choose “automated” and not “automatic” because we don’t want to give the user the impression that this will happen without their knowledge. There is an ‘automated’ process that the user initiates, but the process isn’t ‘automatic’ in the sense that it might be happening behind the scenes without the user’s knowledge.">
         Automated Password Change
       </message>
-      <message name="IDS_SETTINGS_PASSWORD_CHANGE_SUBLABEL" desc="Sublabel for password change entry in settings. The description of the feature beneath the “Automated password change” feature title. This and the bullets beneath this paragraph represent the full description of the feature. * “public” does two things: 1) it provides distance between “Google” and “data breach”, because we don’t want users to associate the breach with Google (Google didn’t have a data leak, 2) and related, it might reassure the user to know that Google is using public information to establish these lists of compromised passwords. * “Google Password Manager can offer…”: The user has to agree to have this feature update their password for them each time. So Google Password Manager is ‘offering’ to do something for the user.">
-        If Google finds one of your passwords in a public data breach, Google Password Manager can offer to change your password for you if you're signed in.
+      <message name="IDS_SETTINGS_PASSWORD_CHANGE_SUBLABEL" desc="Sublabel for password change entry in settings. The description of the feature beneath the “Automated password change” feature title. This and the bullets beneath this paragraph represent the full description of the feature. * “public” does two things: 1) it provides distance between “Growser” and “data breach”, because we don’t want users to associate the breach with Growser (Growser didn’t have a data leak, 2) and related, it might reassure the user to know that Growser is using public information to establish these lists of compromised passwords. * “Google Password Manager can offer…”: The user has to agree to have this feature update their password for them each time. So Google Password Manager is ‘offering’ to do something for the user.">
+        If Growser finds one of your passwords in a public data breach, Google Password Manager can offer to change your password for you if you're signed in.
       </message>
       <message name="IDS_SETTINGS_PASSWORD_CHANGE_DATA_BREACH" desc="Bullet 1 of 2 that appears beneath the “When used” subtitle. This string is repetitive of the feature description, but we want to have a complete description of what happens when the feature is used. * “Google Password Manager asks…”: This part is similar to the general feature description above, but it’s written as if the feature is being used by the user, so we use “asks” and not “can offer”. * “Strong password”: As an existing autofill feature, Google Password Manager can offer to generate and save passwords for the user. These passwords are typically stronger than passwords the user might create on their own">
         If one of your passwords is found in a data breach, Google Password Manager asks if you want it changed to a strong password
@@ -4411,7 +4411,7 @@
   <message name="IDS_SETTINGS_AI_PAGE_MAIN_SUBLABEL_1" desc="This is a bullet point on a card that sets the context for the ‘AI innovations’ section of Growser’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This bullet point is after the ‘Reimagine Growser, supercharged with AI’ title and ‘Things to consider’ subheading. We want users to read this card and understand the considerations that apply to all Growser’s AI features. This bullet point specifically notes that AI features are actively developing and results may include errors. The tone should be informative." formatter_data="android_java">
     These features use AI, are in early development, and won’t always get it right
   </message>
-  <message name="IDS_SETTINGS_AI_PAGE_MAIN_SUBLABEL_2" desc="This is a bullet point on a card that sets the context for the ‘AI innovations’ section of Google’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This bullet point is after the ‘Reimagine Google, supercharged with AI’ title and ‘Things to consider’ subheading. We want users to read this card and understand the considerations that apply to all Google’s AI features. This bullet point specifically notes that AI features will send data to Google servers in order to provide the feature’s respective benefit. The tone should be informative." formatter_data="android_java">
+  <message name="IDS_SETTINGS_AI_PAGE_MAIN_SUBLABEL_2" desc="This is a bullet point on a card that sets the context for the ‘AI innovations’ section of Growser’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This bullet point is after the ‘Reimagine Growser, supercharged with AI’ title and ‘Things to consider’ subheading. We want users to read this card and understand the considerations that apply to all Growser’s AI features. This bullet point specifically notes that AI features will send data to Google servers in order to provide the feature’s respective benefit. The tone should be informative." formatter_data="android_java">
     When you use these features, relevant data is sent to Google in order to create AI experiences
   </message>
   <if expr="is_android">
