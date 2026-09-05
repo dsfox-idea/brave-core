@@ -25,6 +25,7 @@
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_user_gesture_details.h"
 #include "chrome/browser/ui/view_ids.h"
@@ -37,6 +38,7 @@
 #include "skia/ext/image_operations.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/color/color_provider.h"
+#include "ui/gfx/color_utils.h"
 #include "ui/gfx/geometry/insets.h"
 #include "ui/gfx/image/image_skia_operations.h"
 #include "ui/gfx/shadow_value.h"
@@ -149,20 +151,30 @@ void SidebarPinnedTabsView::OnPaintBackground(gfx::Canvas* canvas) {
     gfx::Rect icon = entry->GetContentsBounds();
     icon.Offset(entry->bounds().OffsetFromOrigin());
 
-    // The glow first, blurred out of a wider shape and pushed left so it
-    // reaches under the icon. The source shape itself is not painted - only
-    // its shadow is, which is what a glow is.
-    cc::PaintFlags glow_flags;
-    glow_flags.setAntiAlias(true);
-    glow_flags.setStyle(cc::PaintFlags::kFill_Style);
-    glow_flags.setColor(SK_ColorTRANSPARENT);
-    glow_flags.setLooper(gfx::CreateShadowDrawLooper(
-        {gfx::ShadowValue(gfx::Vector2d(-kActiveGlowOffset, 0), kActiveGlowBlur,
-                          SkColorSetA(color, kActiveGlowAlpha))}));
-    canvas->DrawRoundRect(
-        gfx::RectF(width() - kActiveGlowSourceWidth, icon.y(),
-                   kActiveGlowSourceWidth, icon.height()),
-        kActiveGlowSourceWidth / 2.0f, glow_flags);
+    // Growser-183: the glow belongs to a dark surface. Around a thin bar on a
+    // dark toolbar it reads as light coming off the edge; on a light one the
+    // same shadow only tints the background green, bleeding past the
+    // sidebar's edge and under the favicon. Asked of the surface's own colour
+    // rather than of the OS setting, so a dark custom theme under a light
+    // system still gets it - the idiom the tree already uses in
+    // chrome/browser/ui/views/frame/shadow_frame_view.cc.
+    if (color_utils::IsDark(color_provider->GetColor(kColorToolbar))) {
+      // The glow first, blurred out of a wider shape and pushed left so it
+      // reaches under the icon. The source shape itself is not painted - only
+      // its shadow is, which is what a glow is.
+      cc::PaintFlags glow_flags;
+      glow_flags.setAntiAlias(true);
+      glow_flags.setStyle(cc::PaintFlags::kFill_Style);
+      glow_flags.setColor(SK_ColorTRANSPARENT);
+      glow_flags.setLooper(gfx::CreateShadowDrawLooper(
+          {gfx::ShadowValue(gfx::Vector2d(-kActiveGlowOffset, 0),
+                            kActiveGlowBlur,
+                            SkColorSetA(color, kActiveGlowAlpha))}));
+      canvas->DrawRoundRect(
+          gfx::RectF(width() - kActiveGlowSourceWidth, icon.y(),
+                     kActiveGlowSourceWidth, icon.height()),
+          kActiveGlowSourceWidth / 2.0f, glow_flags);
+    }
 
     cc::PaintFlags bar_flags;
     bar_flags.setAntiAlias(true);
