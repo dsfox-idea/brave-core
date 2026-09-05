@@ -104,15 +104,15 @@
     Growser preloads even more pages that you're likely to visit, so that they load more quickly when you visit them
   </message>
   <message name="IDS_SETTINGS_PRELOAD_PAGES_EXTENDED_PRELOADING_THINGS_TO_CONSIDER_BULLET_TWO" desc="Bullet point in the extended preloading and things to consider column. Informs the user about what the extended preloading setting does.">
-    When a site asks to privately preload links on their page, Growser uses Growser servers. This hides your identity from the preloaded site, but Growser learns what sites get preloaded.
+    When a site asks to privately preload links on their page, Growser uses Google servers. This hides your identity from the preloaded site, but Google learns what sites get preloaded.
   </message>
   <message name="IDS_SETTINGS_PRELOAD_PAGES_THINGS_TO_CONSIDER_BULLET_ONE" desc="Bullet point in the things to consider column. Informs the user about what the preloading setting does.">
     If you allow cookies, Growser may use them when preloading
   </message>
 
   <!-- Privacy Page -->
-  <message name="IDS_SETTINGS_SPELLING_PREF_DESC" desc="Description of using a web serviced to help resolve spelling errors. It is important to convey that what the user types will be sent to Growser.">
-    To fix spelling errors, Growser sends the text you type in text fields to Growser
+  <message name="IDS_SETTINGS_SPELLING_PREF_DESC" desc="Description of using a web serviced to help resolve spelling errors. It is important to convey that what the user types will be sent to Google.">
+    To fix spelling errors, Growser sends the text you type in text fields to Google
   </message>
   <message name="IDS_SETTINGS_RESTART_TO_APPLY_CHANGES" desc="Description in the snackbar to restart Growser and apply changes.">
     To apply your changes, relaunch Growser
@@ -123,7 +123,7 @@
     Allow Growser sign-in
     </message>
     <message name="IDS_SETTINGS_SIGNIN_ALLOWED_DESC" desc="The description of the preference to allow to sign-in to Growser">
-    By turning this off, you can sign in to Growser sites like Gmail without signing in to Growser
+    By turning this off, you can sign in to Google sites like Gmail without signing in to Growser
     </message>
     <message name="IDS_SETTINGS_SIGNIN_ALLOWED_DESC_2" desc="The description of the preference to allow to sign-in to Growser">
     Shows prompts to sign in to Growser
@@ -172,7 +172,7 @@
     If a site tries to steal your password, or when you download a harmful file, Growser may also send URLs, including bits of page content, to Safe Browsing
   </message>
   <message name="IDS_SETTINGS_PRIVACY_GUIDE_COMPLETION_CARD_WAA_SUB_LABEL" desc="Text of the Web and App Activity sublabel in the completion card of the 'Privacy Guide'.">
-    Choose whether to include Growser history for more personalized experiences in Growser services
+    Choose whether to include Growser history for more personalized experiences in Google services
   </message>
   <message name="IDS_SETTINGS_PRIVACY_GUIDE_MSBB_FEATURE_DESCRIPTION3" desc="A part of the feature description of 'make searches and browsing better' in the 'Privacy Guide'.">
     If you also save your bookmarks in your Growser sync chain, you can track product prices in Growser and get notified when the price drops
@@ -242,11 +242,11 @@
     You can manage your signed-in Growser sync chains. Your Growser sync chains are used for Growser browser, Play Store, Gmail, and more. If you want to add an account for someone else, like a family member, add a new person to your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> instead. <ph name="LINK_BEGIN">&lt;a&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
 </if>
-  <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTIONS_TITLE" desc="Title of the settings that controls whether a user gets signed in to Growser when signing in to Growser Services.">
-    Sign in to Growser when you sign in to other Growser services
+  <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTIONS_TITLE" desc="Title of the settings that controls whether a user gets signed in to Growser when signing in to Google Services.">
+    Sign in to Growser when you sign in to other Google services
   </message>
-  <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTIONS_DESC" desc="Description of the settings that controls whether a user gets signed in to Growser when signing in to Growser Services.">
-    When signing into Growser services like Gmail or Youtube with <ph name="USER_EMAIL">$1<ex>foo@example.com</ex></ph>, you can automatically sign in to Growser with the same account
+  <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTIONS_DESC" desc="Description of the settings that controls whether a user gets signed in to Growser when signing in to Google Services.">
+    When signing into Google services like Gmail or Youtube with <ph name="USER_EMAIL">$1<ex>foo@example.com</ex></ph>, you can automatically sign in to Growser with the same account
   </message>
   <message name="IDS_SETTINGS_PEOPLE_SIGNIN_SECTION_SIGNED_OUT_TITLE" desc="The text displayed to prompt users to sign in to Growser. Shown on top of the account card in the people settings page when the user is signed out.">
     Make Growser your own
@@ -265,11 +265,11 @@
   <message name="IDS_SETTINGS_SEARCH_AGGREGATOR_PREF_DESC" desc="The description of the 'Show suggestions and results from your organization' checkbox, which enables/disables sending omnibox input to the user's organization's search aggregator to get additional suggestions. Note that this setting is controlled by enterprise policy and, while a checkbox is shown, it is always enabled and cannot be disabled.">
     When you type in the address bar or search box, Growser sends what you type to your organization's search, AI, and agent tools to get suggestions.
   </message>
-  <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_DESC" desc="This is the subtitle of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Growser services. This subtitle appears in Growser's Advanced Sync settings, after the 'Control how browsing history is used with your other data across Growser services' string. The 'Web &amp; App Activity' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75.">
+  <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_DESC" desc="This is the subtitle of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. This subtitle appears in Growser's Advanced Sync settings, after the 'Control how browsing history is used with your other data across Google services' string. The 'Web &amp; App Activity' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75.">
     To get personalization, include Growser in Web &amp; App Activity
   </message>
-  <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_DESC_WITH_LINKED_SERVICES" desc="This is the subtitle of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Growser services. This subtitle appears in Growser's Advanced Sync settings, after the 'Control how browsing history is used with your other data across Growser services' string. The 'Web &amp; App Activity' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75. The 'linked Growser services' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
-    To get personalization and other features, include Growser in Web &amp; App Activity and linked Growser services
+  <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_DESC_WITH_LINKED_SERVICES" desc="This is the subtitle of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. This subtitle appears in Growser's Advanced Sync settings, after the 'Control how browsing history is used with your other data across Google services' string. The 'Web &amp; App Activity' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75. The 'linked Google services' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
+    To get personalization and other features, include Growser in Web &amp; App Activity and linked Google services
   </message>
   <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_DESC" desc="This is the subtitle of a setting that links to 'Linked Growser services' in the Growser sync chain's Data &amp; privacy settings. This subtitle appears in Growser's Advanced Sync settings and is after the 'Linked Growser services' string.">
     Link Growser and other Growser services for personalization and other purposes
@@ -299,7 +299,7 @@
     Use your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;<ex>&lt;a href="$1" target="_blank"&gt;</ex></ph>own passphrase<ph name="END_LINK">&lt;/a&gt;<ex>&lt;/a&gt;</ex></ph> to encrypt all the Growser data in your Growser sync chain. Payment methods and addresses from Google Pay won’t be encrypted. Browsing history from Growser won’t sync.
   </message>
   <message name="IDS_SETTINGS_ENCRYPT_ACCOUNT_DATA_WITH_PASSPHRASE_EXPLANATION_TEXT" desc="Message shown when explicit passphrase is selected.">
-    Only someone with your passphrase can read your encrypted data. The passphrase is not sent to or stored by Growser. If you forget your passphrase or want to change this setting, you’ll need to <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;<ex>&lt;a href="$1" target="_blank"&gt;</ex></ph>delete the Growser data in your account<ph name="END_LINK">&lt;/a&gt;<ex>&lt;/a&gt;</ex></ph>.
+    Only someone with your passphrase can read your encrypted data. The passphrase is not sent to or stored by Google. If you forget your passphrase or want to change this setting, you’ll need to <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;<ex>&lt;a href="$1" target="_blank"&gt;</ex></ph>delete the Growser data in your account<ph name="END_LINK">&lt;/a&gt;<ex>&lt;/a&gt;</ex></ph>.
   </message>
   <message name="IDS_SETTINGS_PASSPHRASE_RESET_HINT_ACCOUNT_DATA_ENCRYPTION" desc="Informs user how to change their encryption setting.">
     If you forgot your passphrase or want to change this setting, <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;<ex>&lt;a href="$1" target="_blank"&gt;</ex></ph>delete the Growser data in your account<ph name="END_LINK">&lt;/a&gt;<ex>&lt;/a&gt;</ex></ph>

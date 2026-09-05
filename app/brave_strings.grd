@@ -708,7 +708,7 @@ Growser is unable to recover your settings.
         <message name="IDS_PASSWORDS_PAGE_EXPORT_AUTHENTICATION_PROMPT" desc="Text for the dialog box that prompts the user for their OS account password before exporting passwords to a file.">
           Growser wants to export your passwords. Type your Windows password to allow this.
         </message>
-        <message name="IDS_PASSWORDS_PAGE_DELETE_ALL_DATA_AUTHENTICATION_PROMPT" desc="Text for the dialog box that prompts the user for their OS account password before deleting all data from Growser Password Manager.">
+        <message name="IDS_PASSWORDS_PAGE_DELETE_ALL_DATA_AUTHENTICATION_PROMPT" desc="Text for the dialog box that prompts the user for their OS account password before deleting all data from Google Password Manager.">
           Growser wants to delete your Password Manager data. Type your Windows password to allow this.
         </message>
         <message name="IDS_PASSWORDS_PAGE_IMPORT_AUTHENTICATION_PROMPT" desc="Text for the dialog box that prompts the user for their OS account password before overriding passwords during Import.">
@@ -986,8 +986,8 @@ Growser is unable to recover your settings.
       </if>
 
       <!-- Growser API keys info bar -->
-      <message name="IDS_MISSING_GOOGLE_API_KEYS" desc="Message shown when Growser API keys are missing. This message is followed by a 'Learn more' link.">
-        Growser API keys are missing. Some functionality of Growser will be disabled.
+      <message name="IDS_MISSING_GOOGLE_API_KEYS" desc="Message shown when Google API keys are missing. This message is followed by a 'Learn more' link.">
+        Google API keys are missing. Some functionality of Growser will be disabled.
       </message>
 
       <if expr="enable_extensions_core">
@@ -1023,7 +1023,7 @@ Growser is unable to recover your settings.
           }
         </message>
         <message name="IDS_EXTENSIONS_MV2_DEPRECATION_PANEL_REMOVE_BUTTON_ACC_LABEL" desc="The (accessible) label for the button to remove an extension.">
-          Remove <ph name="EXTENSION_NAME">$1<ex>Growser Translate</ex></ph> from Growser
+          Remove <ph name="EXTENSION_NAME">$1<ex>Google Translate</ex></ph> from Growser
         </message>
         <message name="IDS_EXTENSIONS_MENU_ZERO_STATE_DESC" desc="Description in the Extensions Menu when there are no extensions installed." formatter_data="android_java">
           Extensions are add-ons that let you customize Growser. From staying organized, to simplifying everyday tasks, extensions help you make Growser your own.
@@ -1738,14 +1738,14 @@ Growser is unable to recover your settings.
       </if>
 
       <if expr="not is_android">
-        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the accessibility labels service of Growser to Growser.">
-          If an image doesn’t have a useful description, Growser will try to provide one for you. To create descriptions, images are sent to Growser. You can turn this off in settings at any time.
+        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the accessibility labels service of Google to Growser.">
+          If an image doesn’t have a useful description, Growser will try to provide one for you. To create descriptions, images are sent to Google. You can turn this off in settings at any time.
         </message>
-        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_TEXT_ONCE" desc="The text of a bubble that confirms users allows integrating the accessibility labels service of Growser to Growser just once.">
-          If an image doesn’t have a useful description, Growser will try to provide one for you. To create descriptions, images are sent to Growser.
+        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_TEXT_ONCE" desc="The text of a bubble that confirms users allows integrating the accessibility labels service of Google to Growser just once.">
+          If an image doesn’t have a useful description, Growser will try to provide one for you. To create descriptions, images are sent to Google.
         </message>
-        <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the spelling service of Growser to Growser.">
-          This uses the same spell checker that's used in Growser search. Text you type in the browser is sent to Growser. You can always change this behavior in settings.
+        <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_TEXT" desc="The text of a bubble that confirms users allows integrating the spelling service of Google to Growser.">
+          This uses the same spell checker that's used in Google search. Text you type in the browser is sent to Google. You can always change this behavior in settings.
         </message>
         <if expr="not use_titlecase">
           <message name="IDS_CONTENT_CONTEXT_OPENLINKNEWTAB_INAPP" desc="The name of the command to open a link in a newly created browser tab when the user is in an app window">
@@ -2213,16 +2213,16 @@ Growser is unable to recover your settings.
           Couldn't load this panel, try again
         </message>
         <!-- Lens Permission Bubble Dialog-->
-        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_CANCEL_BUTTON" desc="Text on the cancel button in the dialog for choosing not to allow the sending of the Lens screenshot to Growser.">
+        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_CANCEL_BUTTON" desc="Text on the cancel button in the dialog for choosing not to allow the sending of the Lens screenshot to Google.">
           Cancel
         </message>
-        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_CONTINUE_BUTTON" desc="Text on the continue button in the dialog for choosing to allow the sending of the Lens screenshot to Growser.">
+        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_CONTINUE_BUTTON" desc="Text on the continue button in the dialog for choosing to allow the sending of the Lens screenshot to Google.">
           OK
         </message>
         <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_CSB_DESCRIPTION" desc="Text that is shown in the Lens permission bubble, giving examples of what Lens can do and informing uawea what information will be sent to the server. Includes placeholder for learn more link.">
           When you use Image Search, the page title, URL, and content, including PDFs, are sent to the server. <ph name="LEARN_MORE">$1<ex>Learn more</ex></ph>
         </message>
-        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_NON_BLOCKING_DESCRIPTION" desc="Text that is shown in the Lens non-blocking privacy notice, giving examples of what Lens can do and informing users what information will be sent to Growser. Includes placeholder for learn more link.">
+        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_NON_BLOCKING_DESCRIPTION" desc="Text that is shown in the Lens non-blocking privacy notice, giving examples of what Lens can do and informing users what information will be sent to Google. Includes placeholder for learn more link.">
           When you open Image Search, the page title, URL, and content, including PDFs, will automatically be sent to the server. <ph name="LEARN_MORE">$1<ex>Learn more</ex></ph>
         </message>
         <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_DESCRIPTION" desc="Text that is shown in the Lens permission bubble, giving examples of what Lens can do and informing users that their screenshot will be sent to the server. Includes placeholder for learn more link.">
@@ -2240,7 +2240,7 @@ Growser is unable to recover your settings.
         <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_TAB_TO_CONTINUE" desc="Instructs the user to press Tab to begin using the feature.">
           Tab to continue
         </message>
-        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_GOT_IT" desc="Text on button in privacy notice, indicating that user understands that information will be sent to Growser.">
+        <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_GOT_IT" desc="Text on button in privacy notice, indicating that user understands that information will be sent to Google.">
           Got it
         </message>
         <message name="IDS_LENS_PERMISSION_BUBBLE_DIALOG_REMIND_ME_LATER" desc="Text on button to dismiss privacy notice, indicating that the privacy notice will be shown again later.">
@@ -3152,7 +3152,7 @@ Growser is unable to recover your settings.
           You'll see a prompt to try <ph name="FEATURE_NAME">$1<ex>Google Lens</ex></ph> next time you open Growser iOS.
         </message>
         <message name="IDS_IOS_DESKTOP_PASSWORD_PROMO_REMINDER_CONFIRMATION" desc="Body text of the promo bubble that appears after uses choose to be reminded of the Password Manager on their iOS device.">
-          Next time you open Growser on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>, you'll see a prompt to use Growser Password Manager.
+          Next time you open Growser on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>, you'll see a prompt to use Google Password Manager.
         </message>
         <message name="IDS_IOS_DESKTOP_LENS_PROMO_BUBBLE_DESCRIPTION_REMINDER" desc="The description for the iOS desktop Lens promo bubble.">
           Shop, translate and identify what you see with your camera on the Growser iOS app
@@ -3182,10 +3182,10 @@ Growser is unable to recover your settings.
           Scan the QR code with your phone to download Growser and sign in to your Growser sync chain.
         </message>
         <message name="IDS_IOS_DESKTOP_AI_PROMO_BUBBLE_TITLE_QR" desc="The title for the iOS desktop AI promo bubble with a QR code.">
-          Use Growser's best AI tools with the Growser app on your phone
+          Use Google's best AI tools with the Growser app on your phone
         </message>
         <message name="IDS_IOS_DESKTOP_AI_PROMO_BUBBLE_DESCRIPTION_REMINDER" desc="The description for the iOS desktop AI promo bubble with a reminder.">
-          Take your favorite Growser AI tools on the go with Growser on iOS.
+          Take your favorite Google AI tools on the go with Growser on iOS.
         </message>
         <message name="IDS_IOS_DESKTOP_AI_PROMO_BUBBLE_TITLE_REMINDER" desc="The title for the iOS desktop AI promo bubble with a reminder.">
           Get the power of AI when you use the Growser app on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>
@@ -3196,38 +3196,38 @@ Growser is unable to recover your settings.
         <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_DESCRIPTION_QR" desc="The description for the iOS desktop Best of Growser promo bubble with a QR code.">
           Scan the QR code with your phone to download Growser and sign in to your Growser sync chain.
         </message>
-        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_TITLE_QR" desc="The title for the iOS desktop Best of Growser promo bubble with a QR code.">
-          Get the best of Growser with the Growser app on your phone
+        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_TITLE_QR" desc="The title for the iOS desktop Best of Google promo bubble with a QR code.">
+          Get the best of Google with the Growser app on your phone
         </message>
         <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_DESCRIPTION_REMINDER" desc="The description for the iOS desktop Best of Growser promo bubble with a reminder.">
           Seamlessly work with your favorite apps like Google Drive and YouTube on the go with Growser.
         </message>
-        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_TITLE_REMINDER" desc="The title for the iOS desktop Best of Growser promo bubble with a reminder.">
-          Get the best of Growser with the Growser app on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>
+        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_TITLE_REMINDER" desc="The title for the iOS desktop Best of Google promo bubble with a reminder.">
+          Get the best of Google with the Growser app on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>
         </message>
-        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_NOTIFICATION_BODY" desc="The body for the iOS desktop Best of Growser promo notification.">
-          Access all of your Growser favorites with Growser on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>
+        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_NOTIFICATION_BODY" desc="The body for the iOS desktop Best of Google promo notification.">
+          Access all of your Google favorites with Growser on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>
         </message>
-        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_NOTIFICATION_TITLE" desc="The title for the iOS desktop Best of Growser promo notification.">
-          Reminder: The best of Growser in your pocket
+        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_NOTIFICATION_TITLE" desc="The title for the iOS desktop Best of Google promo notification.">
+          Reminder: The best of Google in your pocket
         </message>
         <message name="IDS_IOS_DESKTOP_SAFETY_PROMO_BUBBLE_DESCRIPTION_QR" desc="The description for the iOS desktop Safety promo bubble with a QR code.">
           Scan the QR code with your phone to download Growser and sign in to your Growser sync chain.
         </message>
         <message name="IDS_IOS_DESKTOP_SAFETY_PROMO_BUBBLE_TITLE_QR" desc="The title for the iOS desktop Safety promo bubble with a QR code.">
-          Get Growser's best safety features on the go, with the Growser app on your phone
+          Get Google's best safety features on the go, with the Growser app on your phone
         </message>
         <message name="IDS_IOS_DESKTOP_SAFETY_PROMO_BUBBLE_DESCRIPTION_REMINDER" desc="The description for the iOS desktop Safety promo bubble with a reminder.">
-          Get Growser’s best safety features on the go with Growser.
+          Get Google’s best safety features on the go with Growser.
         </message>
         <message name="IDS_IOS_DESKTOP_SAFETY_PROMO_BUBBLE_TITLE_REMINDER" desc="The title for the iOS desktop Safety promo bubble with a reminder.">
-          Take the safety of Growser on the go with the Growser app on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>
+          Take the safety of Google on the go with the Growser app on your <ph name="DEVICE_TYPE">$1<ex>iPhone</ex></ph>
         </message>
         <message name="IDS_IOS_DESKTOP_SAFETY_PROMO_NOTIFICATION_BODY" desc="The body for the iOS desktop Safety promo notification.">
-          Use the Growser app to take the safety of Growser on the go
+          Use the Growser app to take the safety of Google on the go
         </message>
         <message name="IDS_IOS_DESKTOP_SAFETY_PROMO_NOTIFICATION_TITLE" desc="The title for the iOS desktop Safety promo notification.">
-          Reminder: Growser’s best safety features in your pocket
+          Reminder: Google’s best safety features in your pocket
         </message>
         <message name="IDS_IOS_DESKTOP_SHOPPING_PROMO_BUBBLE_DESCRIPTION_QR" desc="The description for the iOS desktop Shopping promo bubble with a QR code.">
           Scan the QR code with your phone to download Growser and sign in to your Growser sync chain.
