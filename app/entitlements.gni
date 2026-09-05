@@ -3,11 +3,20 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
+# growser (#166/#172): NO restricted entitlements. Upstream adds Brave's and
+# Google's templates for an official build, and both are bound to THEIR
+# signing certificates - chrome/BUILD.gn says so in as many words: "these
+# entitlements are bound to the official Google Chrome signing certificate
+# and will not necessarily work in any other build".
+#
+# They carry com.apple.application-identifier, associated-domains and
+# networking.vpn.api, which Apple authorizes only through an embedded
+# provisioning profile. Signed with our Developer ID and no profile (we
+# have none - the ones in build/mac are Brave's), the app passes codesign
+# --verify, passes spctl, notarizes, staples - and the kernel SIGKILLs it
+# at launch, silently, rc=137. That shipped once, as 152.26.905.0.
+#
+# We use none of those capabilities: VPN is compiled out, and associated
+# domains and the public-key-credential entitlement need an App ID we do
+# not own. The plain app-entitlements.plist every build gets is enough.
 brave_entitlements_templates = []
-
-if (is_official_build) {
-  brave_entitlements_templates += [
-    "//brave/app/app-entitlements-brave.plist",
-    "//chrome/app/app-entitlements-chrome.plist",
-  ]
-}
