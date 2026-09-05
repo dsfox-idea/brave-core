@@ -6636,10 +6636,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_SAVE_PASSWORD_FOOTER" desc="The footer text of the bubble that offers user to save a password to Growser.">
         Passwords are saved in your Growser sync chain so you can use them on any device
       </message>
-      <message name="IDS_PASSWORD_BUBBLES_PASSWORD_MANAGER_LINK_TEXT_SYNCED_TO_ACCOUNT" desc="The text of the Google Password Manager links displayed on Password Manager bubbles footer when the credentials are synced to the Google account.">
+      <message name="IDS_PASSWORD_BUBBLES_PASSWORD_MANAGER_LINK_TEXT_SYNCED_TO_ACCOUNT" desc="The text of the Google Password Manager links displayed on Password Manager bubbles footer when the credentials are synced to the Growser account.">
         Google Password Manager
       </message>
-      <message name="IDS_PASSWORD_BUBBLES_FOOTER_SYNCED_TO_ACCOUNT" desc="The footer text of the bubbles that offers users to save, update or manage stored passwords in Growser and synced to their Google account.">
+      <message name="IDS_PASSWORD_BUBBLES_FOOTER_SYNCED_TO_ACCOUNT" desc="The footer text of the bubbles that offers users to save, update or manage stored passwords in Growser and synced to their Growser account.">
         You can use saved passwords on any device. They're saved to <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser Password Manager</ex></ph> for <ph name="EMAIL">$2<ex>user@gmail.com</ex></ph>.
       </message>
       <message name="IDS_PASSWORD_BUBBLES_FOOTER_TRUSTED_VAULT_ERROR" desc="The footer text of the bubbles when there is a trusted vault error, telling the user their passwords are saved to Google Password Manager.">
@@ -11235,7 +11235,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
           Use a passkey on a different device
         </message>
         <message name="IDS_PASSWORD_GENERATION_DIALOG_DESCRIPTION_BRANDED" desc="Text for password generation dialog, explaining that the password will be saved in Growser sync chain. Unified Password Manager branded variant.">
-          You won’t need to remember this password. It will be saved to Growser Password Manager for <ph name="ACCOUNT">$1<ex>user@gmail.com</ex></ph>.
+          You won’t need to remember this password. It will be saved to Google Password Manager for <ph name="ACCOUNT">$1<ex>user@gmail.com</ex></ph>.
         </message>
         <message name="IDS_CONFIRM_USERNAME_DIALOG_TITLE" desc="The title of the confirm username dialog." formatter_data="android_java">
           Confirm your username
@@ -11435,8 +11435,8 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
       <message name="IDS_CLEAR_BROWSING_DATA_TITLE" desc="Dialog title">
         Delete browsing data
       </message>
-      <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_NOTICE" desc="A dialog informing the user that their Growser browsing history was deleted, but other forms of history can still be found on Growser My Activity.">
-        The selected data has been removed from Growser and synced devices. Your Growser sync chain may have other forms of browsing history like searches and activity from other Growser services at <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/a&gt;</ph>.
+      <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_NOTICE" desc="A dialog informing the user that their Growser browsing history was deleted, but other forms of history can still be found on Google My Activity.">
+        The selected data has been removed from Growser and synced devices. Your Growser sync chain may have other forms of browsing history like searches and activity from other Google services at <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/a&gt;</ph>.
       </message>
       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_NOTICE_TITLE" desc="Title of a dialog that informs the user that the deletion of Growser's browsing data has been completed.">
         Deleted Growser data
@@ -13246,7 +13246,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
         <message name="IDS_FIRSTRUN_DLG_MAC_COMPLETE_INSTALLATION_LABEL" desc="Label at top of Dialog noting what's going to happen">
           <ph name="PRODUCT_NAME">$1<ex>Growser</ex></ph> is ready to complete your installation
         </message>
-        <message name="IDS_FIRSTRUN_DLG_MAC_OPTIONS_SEND_USAGE_STATS_LABEL" desc="Label for checkbox to ask whether to send usage stats to Growser">
+        <message name="IDS_FIRSTRUN_DLG_MAC_OPTIONS_SEND_USAGE_STATS_LABEL" desc="Label for checkbox to ask whether to send usage stats to Google">
           Help make <ph name="PRODUCT_NAME">$1<ex>Growser</ex></ph> better by automatically sending usage statistics and crash reports to Growser
         </message>
         <message name="IDS_FIRSTRUN_DLG_MAC_START_CHROME_BUTTON" desc="Button to Start Growser">
@@ -13573,7 +13573,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
         To send this tab to another device, sign in to Growser there
       </message>
       <message name="IDS_SEND_TAB_TO_SELF_SIGN_IN_PROMO_BODY" desc="Body label text of the send-tab-to-self sign-in promo bubble.">
-        To send links between devices, ensure both are signed in to the same Google account.
+        To send links between devices, ensure both are signed in to the same Growser account.
       </message>
       <message name="IDS_SEND_TAB_TO_SELF_VERIFY_ITS_YOU_PROMO_TITLE" desc="Title of the send-tab-to-self sign-in promo bubble when the user needs to verify their identity (reauthenticate).">
         Send a link to another device
@@ -14405,10 +14405,10 @@ This can include information about installed software, files, your browser, the 
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CANCEL_SWITCH_BUTTON_LABEL" desc="Label of the cancel button in the web signin interception bubble (profile switch variant)">
           Cancel
         </message>
-        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_CREATE_BUBBLE_DESC_SUPERVISED" desc="This string is the body of a dialog about signing in to Growser with the user's Growser sync chain. It appears when a kid tries to sign in to a Growser service (like Gmail) with their account while using someone else’s Growser profile. The message explains the overarching user benefit of signing in: Kids of a certain age are motivated to get their parents’ help staying safer online, so the tone should be motivating. The body text is after the 'Sign in to Growser in a new profile?' string. We want users to understand why signing in to their own profile is beneficial, and click 'Continue as name' to sign in to their Growser sync chain.">
+        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_CREATE_BUBBLE_DESC_SUPERVISED" desc="This string is the body of a dialog about signing in to Growser with the user's Growser sync chain. It appears when a kid tries to sign in to a Google service (like Gmail) with their account while using someone else’s Growser profile. The message explains the overarching user benefit of signing in: Kids of a certain age are motivated to get their parents’ help staying safer online, so the tone should be motivating. The body text is after the 'Sign in to Growser in a new profile?' string. We want users to understand why signing in to their own profile is beneficial, and click 'Continue as name' to sign in to their Growser sync chain.">
           To stay safer online with your parent’s choices, sign in to your own profile as <ph name="USER_EMAIL">$1<ex>john@gmail.com</ex></ph>
         </message>
-        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_SWITCH_BUBBLE_CONTINUE_BUTTON_LABEL" desc="This string is the button for a dialog that appears when the user is already signed in to Growser, but they just tried to sign in to a Growser service (like Gmail) with a different Growser sync chain that already has its own Growser profile on this device. The button is after the 'Switch to existing Growser profile?' string. When the user clicks this button, they will open a different existing Growser profile that is already signed in to the other Growser sync chain. The tone should be inviting and helpful.">
+        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_SWITCH_BUBBLE_CONTINUE_BUTTON_LABEL" desc="This string is the button for a dialog that appears when the user is already signed in to Growser, but they just tried to sign in to a Google service (like Gmail) with a different Growser sync chain that already has its own Growser profile on this device. The button is after the 'Switch to existing Growser profile?' string. When the user clicks this button, they will open a different existing Growser profile that is already signed in to the other Growser sync chain. The tone should be inviting and helpful.">
           Continue
         </message>
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_ACCEPT_TEXT" desc="Label of the Accept button of the Growser Signin Bubble intercept that is shown when a signed out user signs in on the web with it's first account. It also uses the given name of the user.">
@@ -14453,16 +14453,16 @@ This can include information about installed software, files, your browser, the 
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_MANAGED_BY_DISCLAIMER" desc="Enterprise disclaimer for a managed account in the signin interception bubble, with the manager domain name.">
           This new profile will be managed by <ph name="DOMAIN">$1<ex>example.com</ex></ph>. <ph name="BEGIN_LINK">&lt;a href="$2" target="_blank"&gt;<ex>https://help.google.com/articleLink</ex></ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
         </message>
-        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_TITLE_SIGNIN_REMINDER" desc="This string is the headline of a reminder message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Growser service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. After a period of time, this reminder message appears at the top right of Growser (pointing at the Profile Menu) to remind the user that they made this choice a while ago. This headline string comes before the 'You’re signed in to Growser. You’ve got your passwords and more from your Growser sync chain.' string. We are focusing on the benefit that user enjoys, now that they're signed in to Growser. The tone should be welcoming.">
+        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_TITLE_SIGNIN_REMINDER" desc="This string is the headline of a reminder message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Google service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. After a period of time, this reminder message appears at the top right of Growser (pointing at the Profile Menu) to remind the user that they made this choice a while ago. This headline string comes before the 'You’re signed in to Growser. You’ve got your passwords and more from your Growser sync chain.' string. We are focusing on the benefit that user enjoys, now that they're signed in to Growser. The tone should be welcoming.">
           Welcome back, <ph name="PROFILE_NAME">$1<ex>Elisa</ex></ph>
         </message>
         <if expr="use_titlecase">
-          <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_OK_BUTTON" desc="This button appears on a confirmation message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Growser service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. Now, this confirmation appears at the top right of Growser (pointing at the Profile Menu) to confirm that their choice was effective. This button string comes after the 'Welcome, Elisa' and 'When you sign in on this device, you get your passwords and more from your Growser sync chain' strings. Users click 'Got it' to convey that they saw the message and want to hide the message.">
+          <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_OK_BUTTON" desc="This button appears on a confirmation message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Google service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. Now, this confirmation appears at the top right of Growser (pointing at the Profile Menu) to confirm that their choice was effective. This button string comes after the 'Welcome, Elisa' and 'When you sign in on this device, you get your passwords and more from your Growser sync chain' strings. Users click 'Got it' to convey that they saw the message and want to hide the message.">
             Got It
           </message>
         </if>
         <if expr="not use_titlecase">
-          <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_OK_BUTTON" desc="This button appears on a confirmation message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Growser service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. Now, this confirmation appears at the top right of Growser (pointing at the Profile Menu) to confirm that their choice was effective. This button string comes after the 'Welcome, Elisa' and 'When you sign in on this device, you get your passwords and more from your Growser sync chain' strings. Users click 'Got it' to convey that they saw the message and want to hide the message.">
+          <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_OK_BUTTON" desc="This button appears on a confirmation message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Google service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. Now, this confirmation appears at the top right of Growser (pointing at the Profile Menu) to confirm that their choice was effective. This button string comes after the 'Welcome, Elisa' and 'When you sign in on this device, you get your passwords and more from your Growser sync chain' strings. Users click 'Got it' to convey that they saw the message and want to hide the message.">
             Got it
           </message>
         </if>
@@ -14847,10 +14847,10 @@ Please help our engineers fix this problem. Tell us what happened right before y
       </if>
 
       <if expr="is_chromeos">
-        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_TITLE" desc="Title in the notification shown when sync has been reset from the Google Dashboard.">
+        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_TITLE" desc="Title in the notification shown when sync has been reset from the Growser Dashboard.">
           ChromeOS data no longer synced
         </message>
-        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_MESSAGE" desc="Message in the notification shown when sync has been reset from the Google Dashboard.">
+        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_MESSAGE" desc="Message in the notification shown when sync has been reset from the Growser Dashboard.">
           To get your apps, settings, and Wi-Fi networks on all your devices, turn on sync in your ChromeOS settings
         </message>
         <message name="IDS_SYNC_PASSPHRASE_ERROR_BUBBLE_VIEW_MESSAGE" desc="Message in the sync error bubble view when the user needs to enter their sync passphrase.">
@@ -14891,7 +14891,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       </message>
       <if expr="is_chromeos">
         <message name="IDS_SIGNED_IN_WITH_SYNC_STOPPED_VIA_DASHBOARD" desc="The message that appears in the settings page indicating that user is signed in, but sync has been stopped via the Google dashboard.">
-          Sync has been stopped via the Google Dashboard.
+          Sync has been stopped via the Growser Dashboard.
         </message>
       </if>
       <message name="IDS_SYNC_SETTINGS_NOT_CONFIRMED" desc="The message that appears in the settings page indicating that user is signed in, but sync hasn't started because the sync settings haven't been confirmed.">
@@ -17753,7 +17753,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_WEBAUTHN_SIGN_IN_AGAIN_TITLE" desc="The first line in a button that is shown when Sync is 'paused' and the user is trying to sign in with or create a passkey. Sync 'paused' is a state where the user has opted in to Sync, but their sign-in status has expired and they need to sign in again to restore it. Tapping this button closes the passkey window and opens a new tab where the user can sign in to Google.">
         Sign in again
       </message>
-      <message name="IDS_WEBAUTHN_SIGN_IN_AGAIN_DESCRIPTION" desc="The second line in a button that is shown when Sync is 'paused' and the user is trying to sign in with or create a passkey. Sync 'paused' is a state where the user has opted in to Sync, but their sign-in status has expired and they need to sign in again to restore it. Tapping this button closes the passkey window and opens a new tab where the user can sign in to Growser. Note that the English string only just fits within the allocated space. Longer strings will be elided at the end.">
+      <message name="IDS_WEBAUTHN_SIGN_IN_AGAIN_DESCRIPTION" desc="The second line in a button that is shown when Sync is 'paused' and the user is trying to sign in with or create a passkey. Sync 'paused' is a state where the user has opted in to Sync, but their sign-in status has expired and they need to sign in again to restore it. Tapping this button closes the passkey window and opens a new tab where the user can sign in to Google. Note that the English string only just fits within the allocated space. Longer strings will be elided at the end.">
         To use passkeys saved in your Growser sync chain
       </message>
       <message name="IDS_WEBAUTHN_GPM_PIN_OPTION_NUMBERS" desc="A label on the pin options dropdown menu that allows to choose a Google Password Manager pin with digits only.">

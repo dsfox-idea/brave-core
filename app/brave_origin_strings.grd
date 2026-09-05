@@ -1395,10 +1395,10 @@ Growser is unable to recover your settings.
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_SWITCH_BUBBLE_TITLE" desc="Title for the profile switch interception bubble">
           Switch to existing Growser profile?
         </message>
-        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_SWITCH_BUBBLE_DESC_V2" desc="This string is the body text for a dialog that appears when the user is already signed in to Growser, but they just tried to sign in to a Growser service (like Gmail) with a different Growser sync chain that already has its own Growser profile on this device. The body text is after the 'Switch to existing Growser profile?' string. The tone should be inviting and helpful.">
+        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_SWITCH_BUBBLE_DESC_V2" desc="This string is the body text for a dialog that appears when the user is already signed in to Growser, but they just tried to sign in to a Google service (like Gmail) with a different Growser sync chain that already has its own Growser profile on this device. The body text is after the 'Switch to existing Growser profile?' string. The tone should be inviting and helpful.">
           You're already signed in as <ph name="USER_EMAIL_ADDRESS">$1<ex>foo@gmail.com</ex></ph> in another Growser profile
         </message>
-        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_SWITCH_BUBBLE_DESC_V2_SUPERVISED" desc="This string is the body text for a dialog that appears when the user is already signed in to Growser, but they just tried to sign in to a Growser service (like Gmail) with a different supervised Growser sync chain that already has its own Growser profile on this device. The body text is after the 'Switch to existing Growser profile?' string. The tone should be inviting and helpful.">
+        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_SWITCH_BUBBLE_DESC_V2_SUPERVISED" desc="This string is the body text for a dialog that appears when the user is already signed in to Growser, but they just tried to sign in to a Google service (like Gmail) with a different supervised Growser sync chain that already has its own Growser profile on this device. The body text is after the 'Switch to existing Growser profile?' string. The tone should be inviting and helpful.">
           To stay safer online with your parent’s choices, switch to your Growser profile where you’re already signed in as <ph name="USER_EMAIL_ADDRESS">$1<ex>foo@gmail.com</ex></ph>
         </message>
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_CONSUMER_BUBBLE_DESC" desc="Body of the web signin interception bubble">
@@ -1435,11 +1435,11 @@ Growser is unable to recover your settings.
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_SUBTITLE_SUPERVISED" desc="This string is the body of a promotion about signing in to Growser with the user's Growser sync chain. It explains the overarching user benefit of signing in: Kids of a certain age are motivated to get their parents’ help staying safer online, so the tone should be motivating. We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Growser sync chain.">
           To stay safer online with your parent’s choices, sign in to Growser
         </message>
-        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_TEXT_SIGNIN_REMINDER" desc="This string is the body text of a reminder message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Growser service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. After a period of time, this reminder message appears at the top right of Growser (pointing at the Profile Menu) to remind the user that they made this choice a while ago. This body text string comes after the 'Welcome back, USER_NAME' string. We are focusing on the benefit that user enjoys, now that they're signed in to Growser. The tone should be welcoming.">
+        <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_TEXT_SIGNIN_REMINDER" desc="This string is the body text of a reminder message, which is intended to help users understand that they have been signed in to Growser. The user previously signed in to a Google service (like Gmail or Maps), and saw the Growser Signin Bubble intercept; when asked whether the user wanted to sign in to Growser as well, the user selected yes. After a period of time, this reminder message appears at the top right of Growser (pointing at the Profile Menu) to remind the user that they made this choice a while ago. This body text string comes after the 'Welcome back, USER_NAME' string. We are focusing on the benefit that user enjoys, now that they're signed in to Growser. The tone should be welcoming.">
           While you're signed in, you can use your passwords and more from your Growser sync chain in Growser. To change this, go to “Your account in Growser”.
         </message>
         <message name="IDS_SIGNIN_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNIN_IPH_TEXT_SIGNIN_REMINDER_SCREENREADER" desc="This string is the accessibility text of a reminder message, which is intended to help users understand that they have been signed in to Growser.">
-          While you're signed in, you can use your passwords and more from your Growser sync chain in Growser. <ph name="SHORTCUT">$1<ex>CTRL+SHIFT+M</ex></ph> can change your Growser services settings.
+          While you're signed in, you can use your passwords and more from your Growser sync chain in Growser. <ph name="SHORTCUT">$1<ex>CTRL+SHIFT+M</ex></ph> can change your Google services settings.
         </message>
         <message name="IDS_CHROME_SIGNOUT_CONFIRMATION_PROMPT_NO_UNSYNCED_TITLE" desc="This is the title of a confirmation dialog and asks the user to confirm that they want to sign out of Growser. It appears when the user opens the Growser Profile Menu and chooses 'Sign out of Growser'. This title is before the 'Your passwords and other Growser data are saved to your Growser sync chain, and will be removed from this device. To use them in the future, sign back in to Growser.' string. The tone should be straightforward.">
           Sign out of Growser?
@@ -2537,10 +2537,10 @@ Growser is unable to recover your settings.
         </message>
 
         <!-- Web Signout Intercept IPH -->
-        <message name="IDS_SIGNOUT_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNOUT_IPH_TEXT" desc="This confirmation message is intended to help users to understand that signing out of a Growser service (like Gmail) will not sign them out of Growser. It appears in a blue in-product help bubble, which points to the Growser Profile Menu; it appears after the user signs out of a Growser service (like Gmail). The user can open the Profile Menu and sign out of Growser, if they wish to do so.">
+        <message name="IDS_SIGNOUT_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNOUT_IPH_TEXT" desc="This confirmation message is intended to help users to understand that signing out of a Google service (like Gmail) will not sign them out of Growser. It appears in a blue in-product help bubble, which points to the Growser Profile Menu; it appears after the user signs out of a Google service (like Gmail). The user can open the Profile Menu and sign out of Growser, if they wish to do so.">
           To remove your Growser sync chain from Growser, sign out
         </message>
-        <message name="IDS_SIGNOUT_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNOUT_IPH_TEXT_SCREENREADER" desc="Text announced by screenreaders related to the confirmation message is intended to help users to understand that signing out of a Growser service (like Gmail) will not sign them out of Growser. It appears in a blue in-product help bubble, which points to the Growser Profile Menu; it appears after the user signs out of a Growser service (like Gmail). The user can open the Profile Menu and sign out of Growser, if they wish to do so.">
+        <message name="IDS_SIGNOUT_DICE_WEB_INTERCEPT_BUBBLE_CHROME_SIGNOUT_IPH_TEXT_SCREENREADER" desc="Text announced by screenreaders related to the confirmation message is intended to help users to understand that signing out of a Google service (like Gmail) will not sign them out of Growser. It appears in a blue in-product help bubble, which points to the Growser Profile Menu; it appears after the user signs out of a Google service (like Gmail). The user can open the Profile Menu and sign out of Growser, if they wish to do so.">
           To remove your Growser sync chain from Growser, sign out of Growser in the Settings page
         </message>
 
@@ -3193,7 +3193,7 @@ Growser is unable to recover your settings.
         <message name="IDS_IOS_DESKTOP_AI_PROMO_NOTIFICATION_BODY" desc="The body for the iOS desktop AI promo notification.">
           Use the Growser app to take the best AI tools on the go
         </message>
-        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_DESCRIPTION_QR" desc="The description for the iOS desktop Best of Growser promo bubble with a QR code.">
+        <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_DESCRIPTION_QR" desc="The description for the iOS desktop Best of Google promo bubble with a QR code.">
           Scan the QR code with your phone to download Growser and sign in to your Growser sync chain.
         </message>
         <message name="IDS_IOS_DESKTOP_BEST_OF_GOOGLE_PROMO_BUBBLE_TITLE_QR" desc="The title for the iOS desktop Best of Google promo bubble with a QR code.">

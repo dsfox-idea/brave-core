@@ -71,7 +71,7 @@
      =2 {2 passwords (for <ph name="DOMAIN_LIST">$1<ex>google.com, chrome.com</ex></ph>, synced)}
      other {# passwords (for <ph name="DOMAIN_LIST">$1<ex>google.com, chrome.com, and 2 more</ex></ph>, synced)}}
   </message>
-    <message name="IDS_DEL_ACCOUNT_PASSWORDS_COUNTER" desc="A counter showing how many passwords the user has stored in their Google account. The list of example domains associated with the user's passwords is denoted by the placeholder DOMAIN_LIST.">
+    <message name="IDS_DEL_ACCOUNT_PASSWORDS_COUNTER" desc="A counter showing how many passwords the user has stored in their Growser account. The list of example domains associated with the user's passwords is denoted by the placeholder DOMAIN_LIST.">
     {COUNT, plural,
      =0 {None}
      =1 {1 password in your account (for <ph name="DOMAIN_LIST">$1<ex>google.com</ex></ph>)}
@@ -222,7 +222,7 @@
   <message name="IDS_SETTINGS_MANAGE_IN_GOOGLE_PASSWORD_MANAGER" desc="Description for the 'Passwords and Passkeys' linkout in the 'Other Google Data' subpage inside the 'Delete browsing data' dialog. This lets users know that passwords and passkeys can be managed and deleted in Google password manager.">
     Manage in Google Password Manager
   </message>
-  <message name="IDS_SETTINGS_MANAGE_IN_YOUR_GOOGLE_ACCOUNT" desc="Description for the MyActivity and Search History linkouts in the 'Other Growser Data' subpage inside the 'Delete browsing data' dialog. This lets users know that this data can be managed and deleted in their Growser account.">
+  <message name="IDS_SETTINGS_MANAGE_IN_YOUR_GOOGLE_ACCOUNT" desc="Description for the MyActivity and Search History linkouts in the 'Other Google Data' subpage inside the 'Delete browsing data' dialog. This lets users know that this data can be managed and deleted in their Growser account.">
     Manage in your Growser sync chain
   </message>
   <message name="IDS_SETTINGS_MANAGE_OTHER_DATA_LABEL" desc="Label for the 'Manage other data' subpage entry-point in the 'Delete Browsing Data' dialog where the user can find link-outs to manage their data outside of Growser. This is the label shown when the user does not have Google as their default search engine.">
@@ -231,7 +231,7 @@
   <message name="IDS_SETTINGS_MANAGE_OTHER_GOOGLE_DATA_LABEL" desc="Label for the 'Manage other Google data' subpage entry-point in the 'Delete Browsing Data' dialog where the user can find link-outs to manage their data outside of Growser. This is the label shown when the user has Google as their default search engine.">
     Manage other Google data
   </message>
-  <message name="IDS_SETTINGS_MY_ACTIVITY" desc="Label for the 'My Activity' linkout in the 'Other Google Data' subpage inside the 'Delete browsing data' dialog, where the user can see and manage data that is stored outside of Growser. This linkout is specifically for activity data stored in the user's Google account.">
+  <message name="IDS_SETTINGS_MY_ACTIVITY" desc="Label for the 'My Activity' linkout in the 'Other Google Data' subpage inside the 'Delete browsing data' dialog, where the user can see and manage data that is stored outside of Growser. This linkout is specifically for activity data stored in the user's Growser account.">
     My Activity
   </message>
   <message name="IDS_SETTINGS_OTHER_DATA_TITLE" desc="Title for the 'Other Data' subpage inside the 'Delete browsing data' dialog, where the user can see and manage data that is stored outside of Growser. This is the title shown when the user did not set Google as their default search engine, indicating that they may have data stored outside of Google.">

@@ -322,7 +322,7 @@
   </message>
   <if expr="reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Growser account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL_2" desc="Label describing the OS sync feature.">
       Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Growser sync chain. To manage what browser data is saved in your Growser sync chain, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
@@ -330,7 +330,7 @@
   </if>
   <if expr="not reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS devices where you are signed in with your Growser account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL_2" desc="Label describing the OS sync feature.">
       Your apps and settings will sync across all ChromeOS devices where you are signed in with your Growser sync chain. To manage what browser data is saved in your Growser sync chain, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
@@ -426,7 +426,7 @@
    Growser sync chain language
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_GOOGLE_ACCOUNT_LANGUAGE_DESCRIPTION" desc="Description for the section that informs users about the languages associated with their Growser sync chain and what they affect.">
-   Growser sites like Gmail, Drive, and YouTube use your Growser sync chain language unless you’ve changed the individual product language
+   Google sites like Gmail, Drive, and YouTube use your Growser sync chain language unless you’ve changed the individual product language
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_MANAGE_GOOGLE_ACCOUNT_LANGUAGE_LABEL" desc="Label for the button which links to the Growser sync chain language page, allowing users to modify their Growser sync chain languages.">
    Manage Growser sync chain language
