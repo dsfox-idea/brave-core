@@ -51,6 +51,23 @@ describe('icon_pack', () => {
     expect(icon!.drawing).toBe(lookupPackedIcon('https://github.com/')!.drawing)
   })
 
+  // growser#175: the fallback above is right for a section of a site and
+  // wrong for a separate product. Three services of one ecosystem were
+  // drawing the same red Yandex tile, which a person cannot tell apart
+  // without reading the url - the one thing a tile exists to save them.
+  // Nothing in the lookup had to change: a service with a mark of its own is
+  // an entry of its own, and an exact host already outranks its parent.
+  it('gives a service with its own mark a tile of its own', () => {
+    const parent = lookupPackedIcon('https://yandex.ru/')
+    for (const service of ['https://music.yandex.ru/',
+                           'https://mail.yandex.ru/']) {
+      const icon = lookupPackedIcon(service)
+      expect(icon).not.toBeNull()
+      expect(icon!.drawing).not.toBeNull()
+      expect(icon!.drawing).not.toBe(parent!.drawing)
+    }
+  })
+
   it('knows nothing about the rest of the web, and says so', () => {
     expect(lookupPackedIcon('https://an-intranet.local/')).toBeNull()
     expect(lookupPackedIcon('file:///c:/notes.txt')).toBeNull()

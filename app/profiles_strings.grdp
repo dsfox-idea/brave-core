@@ -1204,8 +1204,8 @@
         Sign In
       </message>
     </if>
-    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Growser is launched), informing users they can either sign in with an existing Google account or create a new one in the next step(s).">
-      Use your Google account or create a new one
+    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Growser is launched), informing users they can either sign in with an existing Growser account or create a new one in the next step(s).">
+      Use your Growser account or create a new one
     </message>
     <message name="IDS_FRE_SIGN_IN_CELEBRATION_WELCOME_TITLE" desc="Title for the sign in celebration screen (FRE).">
       Welcome, <ph name="USER_NAME">$1<ex>John</ex></ph>!

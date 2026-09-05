@@ -849,10 +849,10 @@
       Remove this info from Growser autofill?
     </message>
     <message name="IDS_SETTINGS_HOME_ADDRESS_REMOVE_CONFIRMATION_DIALOG_NOTICE" desc="Body for the dialog that asks for confirmation to remove the selected home address from Growser.">
-      Your home address can help you get things done across Growser services, like more relevant Search results and directions in Google Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
+      Your home address can help you get things done across Google services, like more relevant Search results and directions in Google Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
     </message>
     <message name="IDS_SETTINGS_WORK_ADDRESS_REMOVE_CONFIRMATION_DIALOG_NOTICE" desc="Body for the dialog that asks for confirmation to remove the selected work address from Growser.">
-      Your work address can help you get things done across Growser services, like more relevant Search results and directions in Google Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
+      Your work address can help you get things done across Google services, like more relevant Search results and directions in Google Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
     </message>
     <message name="IDS_SETTINGS_NAME_EMAIL_ADDRESS_REMOVE_CONFIRMATION_DIALOG_NOTICE" desc="Body for the dialog that asks for confirmation to remove the selected name and email address from Growser.">
       You can edit your name in your <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>Growser sync chain<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>
@@ -899,13 +899,13 @@
     <message name="IDS_SETTINGS_CLEAR_COOKIES_AND_SITE_DATA_SUMMARY_BASIC" desc="A summary for the 'Cookies and site data' option in the 'Clear Browsing Data' screen, explaining that deleting cookies and site data will sign the user out of most websites.">
       Signs you out of most sites
     </message>
-    <message name="IDS_SETTINGS_CLEAR_COOKIES_AND_SITE_DATA_SUMMARY_BASIC_WITH_EXCEPTION" desc="A summary for the 'Cookies and site data' option in the 'Delete Browsing Data' screen, explaining that deleting cookies and site data will sign the user out of most websites but your Growser sign in will stay.">
+    <message name="IDS_SETTINGS_CLEAR_COOKIES_AND_SITE_DATA_SUMMARY_BASIC_WITH_EXCEPTION" desc="A summary for the 'Cookies and site data' option in the 'Delete Browsing Data' screen, explaining that deleting cookies and site data will sign the user out of most websites but your Google sign in will stay.">
       Signs you out of most sites. You'll stay signed in to your Growser sync chain so your synced data can be deleted.
     </message>
     <message name="IDS_SETTINGS_CLEAR_COOKIES_AND_SITE_DATA_SUMMARY_BASIC_SUPERVISED_PROFILE" desc="A summary for the 'Cookies and site data' option in the 'Clear Browsing Data' screen, explaining that deleting cookies and site data will sign the the child user out of most websites but your Growser account and Family Link settings will stay .">
       Signs you out of most sites. You'll stay signed in to your Growser sync chain so your Family Link settings for Growser apply.
     </message>
-    <message name="IDS_SETTINGS_CLEAR_COOKIES_AND_SITE_DATA_SUMMARY_BASIC_SIGNED_IN_PROFILE" desc="A summary for the 'Cookies and site data' option in the 'Clear Browsing Data' screen, explaining that deleting cookies and site data will sign the user out of most websites but your Growser sign in will stay.">
+    <message name="IDS_SETTINGS_CLEAR_COOKIES_AND_SITE_DATA_SUMMARY_BASIC_SIGNED_IN_PROFILE" desc="A summary for the 'Cookies and site data' option in the 'Clear Browsing Data' screen, explaining that deleting cookies and site data will sign the user out of most websites but your Google sign in will stay.">
       Signs you out of most sites. You'll stay signed in to your Growser sync chain.
     </message>
     <message name="IDS_SETTINGS_CLEAR_BROWSING_HISTORY_SUMMARY" desc="A subtext for the basic tab explaining browsing history.">
@@ -1540,7 +1540,7 @@
       Also sends a small sample of pages, downloads, extension activity, and system information to help discover new threats
     </message>
     <message name="IDS_SETTINGS_PRIVACY_GUIDE_SAFE_BROWSING_CARD_ENHANCED_PROTECTION_PRIVACY_DESCRIPTION3" desc="A part of the privacy description of the enhanced protection section of the safe browsing card in the 'Privacy guide'.">
-      Temporarily links this data to your Growser sync chain when you're signed in, to protect you across Growser apps
+      Temporarily links this data to your Growser sync chain when you're signed in, to protect you across Google apps
     </message>
     <message name="IDS_SETTINGS_PRIVACY_GUIDE_SAFE_BROWSING_CARD_STANDARD_PROTECTION_FEATURE_DESCRIPTION1" desc="A part of the feature description of the standard protection section of the safe browsing card in the 'Privacy guide'.">
       Detects and warns you about dangerous events when they happen
@@ -1678,7 +1678,7 @@
       Warns you if passwords are exposed in a data breach
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_BULLET_FIVE" desc="Bullet point under the safe browsing enhanced protection mode">
-      Sends URLs to Safe Browsing to check them. Also sends a small sample of pages, downloads, extension activity, and system information to help discover new threats. Temporarily links this data to your Growser sync chain when you're signed in, to protect you across Growser apps.
+      Sends URLs to Safe Browsing to check them. Also sends a small sample of pages, downloads, extension activity, and system information to help discover new threats. Temporarily links this data to your Growser sync chain when you're signed in, to protect you across Google apps.
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_WHEN_ON_BULLET_TWO" desc="Bullet point under the Safe Browsing enhanced protection mode section titled 'When on'">
       In-depth scans for suspicious downloads.
@@ -1693,7 +1693,7 @@
       Sends the URLs of sites you visit and a small sample of page content, downloads, extension activity, and system information to Google Safe Browsing to check if they're harmful.
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_THINGS_TO_CONSIDER_BULLET_TWO" desc="Bullet point under the Safe Browsing enhanced protection mode section titled 'Things to consider'">
-      When you're signed in, this data is linked to your Growser sync chain to protect you across Growser services, for example increasing protection in Gmail after a security incident.
+      When you're signed in, this data is linked to your Growser sync chain to protect you across Google services, for example increasing protection in Gmail after a security incident.
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_THINGS_TO_CONSIDER_BULLET_THREE" desc="Bullet point under the Safe Browsing enhanced protection mode section titled 'Things to consider'">
       Doesn't noticeably slow down your browser or device.
@@ -3588,7 +3588,7 @@
       Google Profile photo
     </message>
 
-    <message name="IDS_SETTINGS_PEOPLE_VERIFY_ACCOUNT_BUTTON" desc="This button is shown in Growser's Settings, in the 'You and Growser' section. It appears when the user needs to sign back in to Growser in order to continue saving and using data (like bookmarks, passwords, or payment methods) in their Growser sync chain. When the user clicks this button, they will be prompted to enter their Growser sync chain credentials.">
+    <message name="IDS_SETTINGS_PEOPLE_VERIFY_ACCOUNT_BUTTON" desc="This button is shown in Growser's Settings, in the 'You and Google' section. It appears when the user needs to sign back in to Growser in order to continue saving and using data (like bookmarks, passwords, or payment methods) in their Growser sync chain. When the user clicks this button, they will be prompted to enter their Growser sync chain credentials.">
       Verify it's you
     </message>
     <message name="IDS_SETTINGS_TURN_OFF_SYNC_MANAGED_PROFILE_EXPLANATION" desc="The text to display in the 'Turn Sync off' dialog to stop syncing for managed profiles.">
@@ -3699,8 +3699,8 @@
     <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_WAA_TITLE" desc="This string is found on a link in Growser's Advanced Sync settings. When the user taps it, the link takes the user to 'Web &amp; App Activity' in the Growser sync chain's Activity Controls. This text should match the branded term 'Web &amp; App Activity' in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75.">
       Web &amp; App Activity
     </message>
-    <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_TITLE" desc="This string is found on a link in Growser's Advanced Sync settings. When the user taps it, the link takes the user to 'Linked Growser services' in the Growser sync chain's Data &amp; privacy settings. The link is on a setting that users see in Growser's Advanced Sync settings. This text should match the branded term 'linked Growser services' in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
-      Linked Growser services
+    <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_TITLE" desc="This string is found on a link in Growser's Advanced Sync settings. When the user taps it, the link takes the user to 'Linked Google services' in the Growser sync chain's Data &amp; privacy settings. The link is on a setting that users see in Growser's Advanced Sync settings. This text should match the branded term 'linked Google services' in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
+      Linked Google services
     </message>
     <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_PLACEHOLDER" desc="Placeholder for the dropdown list of options for the setting 'Sign in to Growser when you sign in to other Google services'. This choice is not selectable and only exist and shown if the user did not do any prior choice. It will be overriden by any choice made by the user.">
       Select an option
@@ -3714,7 +3714,7 @@
     <message name="IDS_SETTINGS_SIGNIN_CHROME_SIGNIN_OPTION_ALWAYS_ASK" desc="One of three options for the setting is called 'Sign in to Growser when you sign in to other Google services'. When the user chooses this option, the user will be asked whether they want to sign in to Growser after they sign in to a Google service (like Gmail) using Growser. The verb tense should be descriptive, not imperative.">
       Ask every time
     </message>
-    <message name="IDS_SETTINGS_GOOGLE_ACCOUNT" desc="Label for the section that takes the user to the Growser sync chain website from Related Growser services.">
+    <message name="IDS_SETTINGS_GOOGLE_ACCOUNT" desc="Label for the section that takes the user to the Growser sync chain website from Related Google services.">
       Growser sync chain
     </message>
     <if expr="not use_titlecase">

@@ -271,8 +271,8 @@
   <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_DESC_WITH_LINKED_SERVICES" desc="This is the subtitle of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. This subtitle appears in Growser's Advanced Sync settings, after the 'Control how browsing history is used with your other data across Google services' string. The 'Web &amp; App Activity' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75. The 'linked Google services' text should match the branded term in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
     To get personalization and other features, include Growser in Web &amp; App Activity and linked Google services
   </message>
-  <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_DESC" desc="This is the subtitle of a setting that links to 'Linked Growser services' in the Growser sync chain's Data &amp; privacy settings. This subtitle appears in Growser's Advanced Sync settings and is after the 'Linked Growser services' string.">
-    Link Growser and other Growser services for personalization and other purposes
+  <message name="IDS_SETTINGS_PERSONALIZE_GOOGLE_SERVICES_LINKED_SERVICES_DESC" desc="This is the subtitle of a setting that links to 'Linked Google services' in the Growser sync chain's Data &amp; privacy settings. This subtitle appears in Growser's Advanced Sync settings and is after the 'Linked Google services' string.">
+    Link Growser and other Google services for personalization and other purposes
   </message>
     <message name="IDS_SETTINGS_ERROR_PASSPHRASE_USER_ERROR_DESCRIPTION" desc="Subtitle of settings page that indicates user must re-enter their sync password.">
     To use and save Growser data in your Growser sync chain, enter your passphrase

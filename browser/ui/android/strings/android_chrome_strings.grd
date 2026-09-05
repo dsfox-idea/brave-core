@@ -317,7 +317,7 @@ CHAR_LIMIT guidelines:
       <message name="IDS_PREFS_SECTION_ACCOUNT_AND_GOOGLE_SERVICES" desc="Title for the group of account-related entries and google services in Settings. [CHAR_LIMIT=32]">
         You and Google
       </message>
-      <message name="IDS_SIGN_IN_TO_CHROME" meaning="Button" desc="Title for the button to sign in to Growser using one's Google account. [CHAR_LIMIT=27]">
+      <message name="IDS_SIGN_IN_TO_CHROME" meaning="Button" desc="Title for the button to sign in to Growser using one's Growser account. [CHAR_LIMIT=27]">
         Sign in to Growser
       </message>
       <message name="IDS_SIGN_IN_PERSONALIZE_GOOGLE_SERVICES_TITLE" desc="This is the title of a setting that directs users to other settings where they can control how Growser history can be used to personalize other Google services. It appears in Growser’s Advanced Sync settings and is before the “Control how browsing history is used with your other data across Google services” string. [CHAR_LIMIT=30]">
@@ -336,15 +336,15 @@ CHAR_LIMIT guidelines:
       <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_WAA_TITLE" desc="This string is found on a link in Growser’s Advanced Sync settings. When the user taps it, the link takes the user to “Web &amp; App Activity” in the Growser sync chain’s Activity Controls. This text should match the branded term “Web &amp; App Activity” in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=77d3b75.">
         Web &amp; App Activity
       </message>
-      <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_LINKED_SERVICES_TITLE" desc="This string is found on a subpage from Growser’s Advanced Sync settings. When the user taps it, the link takes the user to “Linked Growser services” in the Growser sync chain’s Data &amp; privacy settings. The link is on a setting that users see in Growser’s Advanced Sync settings. This text should match the branded term “linked Growser services” in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
-        Linked Growser services
+      <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_LINKED_SERVICES_TITLE" desc="This string is found on a subpage from Growser’s Advanced Sync settings. When the user taps it, the link takes the user to “Linked Google services” in the Growser sync chain’s Data &amp; privacy settings. The link is on a setting that users see in Growser’s Advanced Sync settings. This text should match the branded term “linked Google services” in Glossary Manager: https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=517bace2.">
+        Linked Google services
       </message>
-      <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_LINKED_SERVICES_SUMMARY" desc="This is the subtitle of a setting that links to “Linked Growser services” in the Growser sync chain’s Data &amp; privacy settings. This subtitle appears on a subpage from Growser’s Advanced Sync settings, and is after the “Linked Growser services” string.">
-        Link Growser and other Growser services for personalization and other purposes
+      <message name="IDS_PERSONALIZED_GOOGLE_SERVICES_LINKED_SERVICES_SUMMARY" desc="This is the subtitle of a setting that links to “Linked Google services” in the Growser sync chain’s Data &amp; privacy settings. This subtitle appears on a subpage from Growser’s Advanced Sync settings, and is after the “Linked Google services” string.">
+        Link Growser and other Google services for personalization and other purposes
       </message>
       <!-- Unified consent preferences -->
-      <message name="IDS_PREFS_GOOGLE_SERVICES" desc="Title for the group of preferences that control non-personalized Growser services. This group contains preferences for data that is not tied to user's Growser sync chain. [CHAR_LIMIT=40]">
-        Growser services
+      <message name="IDS_PREFS_GOOGLE_SERVICES" desc="Title for the group of preferences that control non-personalized Google services. This group contains preferences for data that is not tied to user's Growser sync chain. [CHAR_LIMIT=40]">
+        Google services
       </message>
       <message name="IDS_ALLOW_CHROME_SIGNIN_TITLE" desc="Title for a checkbox in Google services that controls sign-in and sync prompts.">
         Allow Growser sign-in
@@ -428,7 +428,7 @@ CHAR_LIMIT guidelines:
         When a site or app asks to privately preload links on their page, Growser encrypts and preloads pages through Google servers without cookies. This hides your identity from the preloaded site.
       </message>
       <message name="IDS_PRELOAD_PAGES_EXTENDED_PRELOADING_BULLET_FOUR" desc="Fourth bullet point under the Preload Pages extended preloading mode. Informs the user about what the extended preloading setting does.">
-        Because the preloaded pages are encrypted, Growser will not learn anything about the preloaded page content. Growser servers will learn which sites are privately preloaded. This information is only used to preload the pages, and is not linked to other information from your Growser sync chain.
+        Because the preloaded pages are encrypted, Google will not learn anything about the preloaded page content. Google servers will learn which sites are privately preloaded. This information is only used to preload the pages, and is not linked to other information from your Growser sync chain.
       </message>
       <message name="IDS_URL_KEYED_ANONYMIZED_DATA_TITLE" desc="Title for a checkbox in Settings that controls non-personalized URL collection and informs the user about the data shared by this feature.">
         Make searches and browsing better
@@ -439,10 +439,10 @@ CHAR_LIMIT guidelines:
       <message name="IDS_PRIVACY_SYNC_AND_SERVICES_LINK_LEGACY" desc="The text for Privacy preferences that is shown after all preference rows.">
         For more settings that relate to privacy, security, and data collection, see <ph name="BEGIN_LINK">&lt;link&gt;</ph>Sync and Google services<ph name="END_LINK">&lt;/link&gt;</ph>
       </message>
-      <message name="IDS_PRIVACY_CHROME_DATA_AND_GOOGLE_SERVICES_FOOTER" desc="Footer to invite the user to open the Account Settings and Growser Services settings.">
+      <message name="IDS_PRIVACY_CHROME_DATA_AND_GOOGLE_SERVICES_FOOTER" desc="Footer to invite the user to open the Account Settings and Google Services settings.">
         You can <ph name="BEGIN_LINK1">&lt;link1&gt;</ph>manage what Growser data is saved<ph name="END_LINK1">&lt;/link1&gt;</ph> in your Growser sync chain.
 
-For more settings that use data to improve your Growser experience, go to <ph name="BEGIN_LINK2">&lt;link2&gt;</ph>Growser Services<ph name="END_LINK2">&lt;/link2&gt;</ph>.
+For more settings that use data to improve your Growser experience, go to <ph name="BEGIN_LINK2">&lt;link2&gt;</ph>Google Services<ph name="END_LINK2">&lt;/link2&gt;</ph>.
       </message>
       <message name="IDS_PRIVACY_CHROME_DATA_AND_GOOGLE_SERVICES_SIGNED_OUT_FOOTER" desc="Footer to invite the signed out user to open the Google Services settings.">
         For more settings that use data to improve your Growser experience, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>Google Services<ph name="END_LINK">&lt;/link&gt;</ph>.
@@ -1099,10 +1099,10 @@ For example, some websites may respond to this request by showing you ads that a
       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_DIALOG_TITLE" desc="Title of a dialog that is shown after the deletion of browsing history finished.">
         Deleted Growser data
       </message>
-      <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_DIALOG_DATA_TEXT" desc="Text of the dialog that is shown after the deletion of browsing history items finished, indicating that the selected data has been removed, but there may be other forms of browsing history still present in user's Google account.">
+      <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_DIALOG_DATA_TEXT" desc="Text of the dialog that is shown after the deletion of browsing history items finished, indicating that the selected data has been removed, but there may be other forms of browsing history still present in user's Growser account.">
         The selected data has been removed from Growser and your synced devices.
 
-Your Google account may have other forms of browsing history like searches and activity from other Google services at <ph name="BEGIN_LINK">&lt;link&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
+Your Growser account may have other forms of browsing history like searches and activity from other Google services at <ph name="BEGIN_LINK">&lt;link&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_CLEAR_CACHE_TITLE" desc="Title for Clear Cache in Clear Browsing Data dialog">
         Cached images and files
@@ -1182,7 +1182,7 @@ Your Google account may have other forms of browsing history like searches and a
       <message name="IDS_MY_ACTIVITY_LINK_OUT_TITLE" desc="Title for the link out button in the Clear Browsing Data dialog that redirects to the Google My Activity page.">
         My Activity
       </message>
-      <message name="IDS_MY_ACTIVITY_LINK_OUT_DESCRIPTION" desc="Description for the link out button in the Clear Browsing Data dialog that redirects to the Growser My Activity page.">
+      <message name="IDS_MY_ACTIVITY_LINK_OUT_DESCRIPTION" desc="Description for the link out button in the Clear Browsing Data dialog that redirects to the Google My Activity page.">
         Manage in your Growser sync chain
       </message>
       <message name="IDS_IMPORTANT_SITES_TITLE" desc="Title of clear storage dialogs used in a couple different places to confirm clearing site storage data. [CHAR_LIMIT=24]">
@@ -1215,13 +1215,13 @@ Your Google account may have other forms of browsing history like searches and a
       <message name="IDS_ANDROID_APP_HISTORY_OPEN_FULL_OTHER_FORMS" desc="The informational message at the top of the history page letting users know that app-specific history may be missing some entries, followed by the info on the other forms of browing history.">
         Some of your history might not show up here. To see all your Growser history, open full Growser history. Also, your Growser sync chain may have other forms of browsing history at <ph name="BEGIN_LINK">&lt;link&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
-      <message name="IDS_ANDROID_HISTORY_OTHER_FORMS_OF_HISTORY" desc="The notification at the top of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Growser My Activity.">
+      <message name="IDS_ANDROID_HISTORY_OTHER_FORMS_OF_HISTORY" desc="The notification at the top of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Google My Activity.">
         Your Growser sync chain may have other forms of browsing history at <ph name="BEGIN_LINK">&lt;link&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_ANDROID_HISTORY_FROM_OTHER_APPS" desc="The notification at the top of the history page indicating that users will see the history from other apps that open links in Growser.">
         You may see the history from other apps that open links in Growser.
       </message>
-      <message name="IDS_ANDROID_HISTORY_FROM_OTHER_APPS_OTHER_FORMS_OF_HISTORY" desc="The notification at the top of the history page indicating that 1) users will see the history from other apps that open links in Growser 2) deleting Growser browsing history will not delete other forms of history stored at Growser My Activity.">
+      <message name="IDS_ANDROID_HISTORY_FROM_OTHER_APPS_OTHER_FORMS_OF_HISTORY" desc="The notification at the top of the history page indicating that 1) users will see the history from other apps that open links in Growser 2) deleting Growser browsing history will not delete other forms of history stored at Google My Activity.">
         You may see the history from other apps that open links in Growser. Your Growser sync chain may have other forms of browsing history at <ph name="BEGIN_LINK">&lt;link&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_ANDROID_HISTORY_BLOCKED_SITE" desc="The text displayed in the history page indicating that a visit to a web site was blocked due to an administrator policy.">
@@ -1386,7 +1386,7 @@ Your Google account may have other forms of browsing history like searches and a
         Growser can’t check your passwords
       </message>
       <message name="IDS_SAFETY_CHECK_PASSWORDS_ERROR_SIGNED_OUT" desc="Text to display when the password check is unable to run because the usere is signed out.">
-        Sign in to your Google account to check your passwords
+        Sign in to your Growser account to check your passwords
       </message>
       <message name="IDS_SAFETY_CHECK_UPDATES_UPDATED" desc="Text to display when the updates check confirms that the latest version is already installed.">
         Growser is up to date
@@ -1780,7 +1780,7 @@ Your Google account may have other forms of browsing history like searches and a
         Sends the URLs of sites you visit and a small sample of page content, downloads, extension activity, and system information to Google Safe Browsing to check if they’re harmful.
       </message>
       <message name="IDS_SAFE_BROWSING_ENHANCED_PROTECTION_BULLET_SEVEN" desc="Seventh bullet point that describes the details of the Safe Browsing control.">
-        When you’re signed in, this data is linked to your Growser sync chain to protect you across Growser services, for example increasing protection in Gmail after a security incident.
+        When you’re signed in, this data is linked to your Growser sync chain to protect you across Google services, for example increasing protection in Gmail after a security incident.
       </message>
       <message name="IDS_SAFE_BROWSING_ENHANCED_PROTECTION_BULLET_EIGHT" desc="Eighth bullet point that describes the details of the Safe Browsing control.">
         Doesn’t noticeably slow down your browser or device.
@@ -2356,7 +2356,7 @@ Your Google account may have other forms of browsing history like searches and a
         Save without encryption
       </message>
       <message name="IDS_SYNC_ADDRESSES_BODY" desc="Message of a dialog to enable saving addresses to the Growser sync chain. This is shown to users who have chosen to encrypt their data with a custom passphrase. The dialog informs users that newly saved addresses will not be encrypted with their passphrase.">
-        Addresses aren't encrypted with your passphrase. This lets you use them in other Growser services.
+        Addresses aren't encrypted with your passphrase. This lets you use them in other Google services.
       </message>
       <message name="IDS_SYNC_ADDRESSES_ACCEPT" desc="Button in a dialog to enable saving addresses to the Growser sync chain. This is shown to users who have chosen to encrypt their data with a custom passphrase. The dialog informs users that newly saved addresses will not be encrypted with their passphrase.">
         Continue
@@ -2445,8 +2445,8 @@ Your Google account may have other forms of browsing history like searches and a
       <message name="IDS_SYNC_PASSPHRASE_TYPE_TITLE" desc="Title of sync passphrase type dialog. [CHAR_LIMIT=24]">
         Encryption
       </message>
-      <message name="IDS_SYNC_PASSPHRASE_TYPE_KEYSTORE" desc="Option to encrypt only passwords, using your Growser credentials.">
-        Use Growser’s default encryption for the passwords in your Growser sync chain
+      <message name="IDS_SYNC_PASSPHRASE_TYPE_KEYSTORE" desc="Option to encrypt only passwords, using your Google credentials.">
+        Use Google’s default encryption for the passwords in your Growser sync chain
       </message>
       <message name="IDS_SYNC_PASSPHRASE_TYPE_CUSTOM" desc="Option to encrypt sync data with a custom passphrase.">
         Use your own passphrase to encrypt all the Growser data in your Growser sync chain
@@ -3566,8 +3566,8 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       <message name="IDS_SIGNIN_FRE_UMA_DIALOG_SECOND_SECTION_HEADER" desc="Header of the section with info about the data that users share with Google if they turn on the metric sharing option.">
         Things to consider
       </message>
-      <message name="IDS_SIGNIN_FRE_UMA_DIALOG_SECOND_SECTION_BODY_WITH_HISTORY_SYNC" desc="Text with info about the data that users share with Growser if they turn on the metric sharing option. This version is used when the metrics sharing option is linked to history syncing, as opposed to the whole sync feature in IDS_SIGNIN_FRE_UMA_DIALOG_SECOND_SECTION_BODY.">
-        Info is sent to Growser about your Growser usage, but it isn\u2019t tied to you\n\nIf Growser crashes, details about the crash may include some personal info\n\nIf you sync your history to your Growser sync chain, metrics may also include info about URLs you visit
+      <message name="IDS_SIGNIN_FRE_UMA_DIALOG_SECOND_SECTION_BODY_WITH_HISTORY_SYNC" desc="Text with info about the data that users share with Google if they turn on the metric sharing option. This version is used when the metrics sharing option is linked to history syncing, as opposed to the whole sync feature in IDS_SIGNIN_FRE_UMA_DIALOG_SECOND_SECTION_BODY.">
+        Info is sent to Google about your Growser usage, but it isn\u2019t tied to you\n\nIf Growser crashes, details about the crash may include some personal info\n\nIf you sync your history to your Growser sync chain, metrics may also include info about URLs you visit
       </message>
       <message name="IDS_SIGNIN_FRE_TITLE" desc="This string is the the title of a promotion about signing in to Growser with the user's Growser sync chain. It explains the overarching user benefit of signing in (access to bookmarks, passwords, history, settings, etc.). We want users to understand why signing in is beneficial, and click 'Continue as name' to sign in to their Growser sync chain. The tone should be informative and lightweight.">
         Make Growser your own
@@ -6152,7 +6152,7 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
         Find your recently closed tabs and windows here
       </message>
       <message name="IDS_IPH_IDENTITY_DISC_ACCESSIBILITY_TEXT" desc="The in-product-help accessibility text prompting the user that tapping identity disc will navigate to 'Sync and Google services' settings page.">
-        To manage your Google account, tap the "Manage account" button
+        To manage your Growser account, tap the "Manage account" button
       </message>
       <message name="IDS_IPH_TAB_SWITCHER_TEXT" desc="The in-product-help message to open the tab switcher.">
         Open tabs to visit different pages at the same time

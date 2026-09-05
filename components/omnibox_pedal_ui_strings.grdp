@@ -311,7 +311,7 @@
     <ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to change your Growser sync chain password
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CHANGE_GOOGLE_PASSWORD" desc="Announcement when pedal action button is focused, CHANGE_GOOGLE_PASSWORD">
-    Change Growser password button, activate to change your Growser sync chain password
+    Change Google password button, activate to change your Growser sync chain password
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CLOSE_INCOGNITO_WINDOWS_HINT" desc="The button text contents to suggest pedal action, CLOSE_INCOGNITO_WINDOWS">
@@ -357,13 +357,13 @@
     Manage Growser sync chain privacy settings
   </message>
   <message name="IDS_OMNIBOX_PEDAL_MANAGE_GOOGLE_PRIVACY_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, MANAGE_GOOGLE_PRIVACY">
-    Manage Growser privacy settings in your Growser sync chain
+    Manage Google privacy settings in your Growser sync chain
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_MANAGE_GOOGLE_PRIVACY_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to MANAGE_GOOGLE_PRIVACY.">
     <ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, Press Tab then Enter to manage your Growser sync chain privacy settings
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_MANAGE_GOOGLE_PRIVACY" desc="Announcement when pedal action button is focused, MANAGE_GOOGLE_PRIVACY">
-    Manage Growser Privacy settings button, activate to visit your Growser sync chain privacy settings
+    Manage Google Privacy settings button, activate to visit your Growser sync chain privacy settings
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_MANAGE_CHROME_SETTINGS_HINT" desc="The button text contents to suggest pedal action, MANAGE_CHROME_SETTINGS">

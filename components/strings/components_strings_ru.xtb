@@ -6101,7 +6101,7 @@
 <translation id="643051589346665201">Изменить пароль Google</translation>
 <translation id="7602868996817972616">Спросить Google об этой странице</translation>
 <translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Чтобы спросить Google об этой странице, нажмите Ввод.</translation>
-<translation id="5630981295558454585">Кнопка "Спросить Google об этой странице". Нажмите, чтобы задать Growser вопрос об этой странице.</translation>
+<translation id="5630981295558454585">Кнопка "Спросить Google об этой странице". Нажмите, чтобы задать Google вопрос об этой странице.</translation>
 <translation id="6019118530636932154">Google Apps Script</translation>
 <translation id="6437647869369934905">Google Рисунки</translation>
 <translation id="1875512691959384712">Google Формы</translation>
@@ -6131,10 +6131,10 @@
 <translation id="913846191326613072">Когда вы делитесь вкладками, их содержимое и URL отправляются в Google.</translation>
 <translation id="8077379079746630779">Чтобы удалить файлы cookie Google с этого устройства, <ph name="BEGIN_LINK"/>выйдите из аккаунта Google<ph name="END_LINK"/>.</translation>
 <translation id="1959001866257244765">Помогите сделать Интернет безопаснее для всех, разрешив Growser отправлять в Google <ph name="BEGIN_WHITEPAPER_LINK"/>URL и содержимое некоторых посещенных страниц, а также ограниченную информацию о системе<ph name="END_WHITEPAPER_LINK"/>. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Политика конфиденциальности<ph name="END_PRIVACY_PAGE_LINK"/></translation>
-<translation id="67310796271265436">Помогите Growser лучше понимать и заполнять сложные формы, безопасно обрабатывая данные на серверах Growser. Ваши данные остаются конфиденциальными, и никто их не просматривает.</translation>
-<translation id="3071317162243238125">Чтобы удалить файлы cookie Growser с этого устройства, <ph name="BEGIN_LINK"/>выйдите из Growser<ph name="END_LINK"/>.</translation>
+<translation id="67310796271265436">Помогите Growser лучше понимать и заполнять сложные формы, безопасно обрабатывая данные на серверах Google. Ваши данные остаются конфиденциальными, и никто их не просматривает.</translation>
+<translation id="3071317162243238125">Чтобы удалить файлы cookie Google с этого устройства, <ph name="BEGIN_LINK"/>выйдите из Growser<ph name="END_LINK"/>.</translation>
 <translation id="1362419187647259443">Вы только что ввели пароль на поддельном сайте. Чтобы изменить пароль и сообщить Growser о возможной угрозе безопасности, нажмите "Защитить аккаунт".</translation>
-<translation id="6722165747660324971">Growser предупреждает, если используемый вами пароль был опубликован в интернете. При этом имена пользователей и сами пароли зашифрованы и никому не видны, даже сотрудникам Growser.</translation>
+<translation id="6722165747660324971">Growser предупреждает, если используемый вами пароль был опубликован в интернете. При этом имена пользователей и сами пароли зашифрованы и никому не видны, даже сотрудникам Google.</translation>
 <translation id="4585120639592593231">Чтобы вы получали более персонализированные ответы, Growser будет автоматически отправлять в Google содержимое и URL открытых вкладок, которые могут быть связаны с вашим вопросом. Growser будет делиться только вкладками из окна, в котором вы работаете.</translation>
 <translation id="967369588715984092">Growser перестанет автоматически подтверждать этот адрес электронной почты на поддерживаемых сайтах.</translation>
 <translation id="4157273919218514718">Работает на Personal Intelligence с Gemini. <ph name="BEGIN_LINK"/>Управление настройками<ph name="END_LINK"/></translation>
@@ -6148,4 +6148,16 @@
 <translation id="2756090547781225493">Отправлено в Growser на устройстве <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
 <translation id="3665741528710985669">Отправлено в Growser на устройстве <ph name="DEVICE_NAME"/></translation>
 <translation id="2063929825539050431">Чтобы быстро отправить эту страницу на другое устройство, нажмите и удерживайте адресную строку</translation>
+<translation id="2109852493965717728">Код IBAN сохранен в аккаунте Growser и может использоваться в наших сервисах.</translation>
+<translation id="2722075775349871265">С домашним адресом сервисы Google становятся лучше: например, вы получаете более подходящие результаты в Поиске и маршруты в Картах. Настроить или удалить адрес можно <ph name="BEGIN_LINK"/>в вашем аккаунте Growser, <ph name="ACCOUNT"/><ph name="END_LINK"/>.</translation>
+<translation id="1193355282612097053">С рабочим адресом сервисы Google становятся лучше: например, вы получаете более подходящие результаты в Поиске и маршруты в Картах. Настроить или удалить адрес можно <ph name="BEGIN_LINK"/>в вашем аккаунте Growser, <ph name="ACCOUNT"/><ph name="END_LINK"/>.</translation>
+<translation id="361746409909709825">Сохраненные адреса можно использовать в разных продуктах Google. Этот адрес сохранен в вашем аккаунте Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="5318416911578989892">Сохраненные адреса можно использовать в разных продуктах Google. Этот адрес будет сохранен в вашем аккаунте Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="3995632180712217177">Сохраненные адреса можно использовать в разных продуктах Google. Ваш текущий домашний адрес не изменится. Он будет сохранен в вашем аккаунте Growser (<ph name="ACCOUNT"/>).</translation>
+<translation id="2432673835335968473">Сохраненные адреса можно использовать в разных продуктах Google. Ваш текущий рабочий адрес не изменится. Он будет сохранен в вашем аккаунте Growser (<ph name="ACCOUNT"/>).</translation>
+<translation id="5732084028114235391">Адрес добавлен в Growser. Сохраните его в аккаунте Growser (<ph name="ACCOUNT"/>), чтобы использовать в других продуктах Google.</translation>
+<translation id="756794566964707799">Адрес добавлен на это устройство. Сохраните его в аккаунте Growser (<ph name="ACCOUNT"/>), чтобы использовать в других продуктах Google.</translation>
+<translation id="3236176349246489091">Кнопка "Изменить пароль Google". Нажмите ее, чтобы изменить пароль аккаунта Growser.</translation>
+<translation id="3269729253658419180">Открыть настройки конфиденциальности в аккаунте Growser</translation>
+<translation id="970931323129831346">Кнопка "Открыть настройки конфиденциальности в аккаунте Growser". Нажмите ее, чтобы открыть настройки конфиденциальности в аккаунте Growser.</translation>
 </translationbundle>
