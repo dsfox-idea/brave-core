@@ -2545,9 +2545,37 @@ class SidebarPinnedTabsBrowserTest : public SidebarBrowserTest {
   }
 
   // The invariant the whole feature rests on: every pinned tab is on exactly
-  // one of the two surfaces.
+  // one of the two surfaces. Counted from the model rather than from
+  // kPinnedTabCount, because a test that needs an overflow pins more (see
+  // PinTabsUntilOverflow).
   void ExpectNoTabLostOrDoubled() {
-    EXPECT_EQ(kPinnedTabCount, HostedBySidebar() + DrawnByTabStrip());
+    EXPECT_EQ(tab_model()->IndexOfFirstNonPinnedTab(),
+              HostedBySidebar() + DrawnByTabStrip());
+  }
+
+  // Growser-145: pin tabs until the sidebar cannot host them all, and answer
+  // how many are pinned in the end.
+  //
+  // Shrinking the window is not enough to produce an overflow everywhere. The
+  // minimum window height is the platform's, not ours: macOS refuses to go
+  // below 405px, and at that height the sidebar is still 324px tall and holds
+  // all three of the fixture's pinned tabs comfortably (measured). A test that
+  // only shrinks therefore passes on Windows and can never fail on macOS -
+  // which is worse than a red test, because it reports on nothing. Adding
+  // entries works on any window that exists.
+  int PinTabsUntilOverflow() {
+    for (int i = 0; i < 40; i++) {
+      const int pinned = tab_model()->IndexOfFirstNonPinnedTab();
+      if (HostedBySidebar() < pinned) {
+        return pinned;
+      }
+      chrome::AddTabAt(browser(), GURL(url::kAboutBlankURL), -1, false);
+      tab_model()->SetTabPinned(tab_model()->count() - 1, true);
+      RunLayout();
+      ExpectNoTabLostOrDoubled();
+    }
+    ADD_FAILURE() << "40 pinned tabs and the sidebar still hosts them all";
+    return tab_model()->IndexOfFirstNonPinnedTab();
   }
 
   // Growser-165
@@ -2679,14 +2707,19 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, FollowsTheWindowHeight) {
     ExpectNoTabLostOrDoubled();
   }
 
-  EXPECT_LT(HostedBySidebar(), kPinnedTabCount)
-      << "a window this short must hand pinned tabs back to the strip";
+  // Growser-145: and if the window cannot go short enough, pin more. The
+  // minimum height belongs to the platform - macOS stops at 405px, where the
+  // sidebar is still 324px and holds all three - so on that platform the loop
+  // above shrinks nothing away and the assertion below would test nothing.
+  const int pinned = PinTabsUntilOverflow();
+  EXPECT_LT(HostedBySidebar(), pinned)
+      << "a sidebar this short must hand pinned tabs back to the strip";
 
   // And growing it takes them back.
   browser_view()->GetWidget()->SetBounds(original_bounds);
   RunLayout();
 
-  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  EXPECT_EQ(pinned, HostedBySidebar());
   ExpectNoTabLostOrDoubled();
 }
 
@@ -2717,14 +2750,19 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
         << ", which is the scrolling this test exists to prevent";
   }
 
-  EXPECT_LT(HostedBySidebar(), kPinnedTabCount)
-      << "the pinned tabs are what gives way on a short window, and did not";
+  // Growser-145: the window stops shrinking where the platform says it does
+  // (405px on macOS), so make the space run out from the other side.
+  const int pinned = PinTabsUntilOverflow();
+  EXPECT_LT(HostedBySidebar(), pinned)
+      << "the pinned tabs are what gives way when space runs short, and did not";
+  EXPECT_EQ(wanted, legacy->height())
+      << "the legacy block gave way instead, which is the whole defect";
   ExpectNoTabLostOrDoubled();
 
   browser_view()->GetWidget()->SetBounds(original_bounds);
   RunLayout();
   EXPECT_EQ(wanted, legacy->height());
-  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  EXPECT_EQ(pinned, HostedBySidebar());
 }
 
 // Vertical tabs already show pinned tabs in a column of their own, so the
@@ -2805,6 +2843,30 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, RightClickOpensAMenu) {
   views::View* entry = GetSidebarPinnedTabsView()->children()[1];
   ASSERT_TRUE(entry->GetVisible());
 
+#if BUILDFLAG(IS_MAC)
+  // Growser-145: on macOS this stops at delivery, and that is not a shortcut -
+  // the menu cannot be opened from a browser test here. A CONTEXT_MENU on mac
+  // is a NATIVE one: MenuRunnerImplInterface::Create returns MenuRunnerImplMac
+  // (ui/views/controls/menu/menu_runner_impl_mac.mm), so NSMenu takes over
+  // with a modal tracking loop, views::MenuController::GetActiveInstance() is
+  // null throughout, and the loop does not service Chromium's task runner - a
+  // posted task that would cancel it never runs, which cost this test its
+  // whole 45 second budget before it was killed. Chromium's own mac test for
+  // this breaks the loop with dispatch_async plus cancelTrackingWithoutAnimation
+  // (render_view_context_menu_mac_cocoa_browsertest.mm), which needs a handle
+  // on the NSMenu that nothing hands out here, and Objective-C this .cc file
+  // cannot hold.
+  //
+  // So the mac half asserts the part it can: a right click at that point is
+  // delivered to the entry rather than swallowed by something above it, which
+  // is what the test says it is really about. What the entry does with it is
+  // one call, shared with Windows, and green there.
+  views::View* handler =
+      EventHandlerAt(entry->GetBoundsInScreen().CenterPoint());
+  ASSERT_TRUE(handler);
+  EXPECT_TRUE(handler == entry || entry->Contains(handler))
+      << "a right click on the entry would land somewhere else";
+#else
   ui::test::EventGenerator generator(
       views::GetRootWindow(browser_view()->GetWidget()));
   generator.MoveMouseTo(entry->GetBoundsInScreen().CenterPoint());
@@ -2815,6 +2877,7 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, RightClickOpensAMenu) {
   if (menu) {
     menu->Cancel(views::MenuController::ExitType::kAll);
   }
+#endif
 }
 
 // Unpinning through the menu removes the entry the menu belongs to. Runs the
