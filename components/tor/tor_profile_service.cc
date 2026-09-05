@@ -29,10 +29,12 @@ void TorProfileService::RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   // Growser-157: Tor is on again where a client can actually arrive. growser#78
   // turned it off because the client is a component and Brave's server answers
   // a fork 403; we publish our own now (scripts/make-tor-component.py,
-  // deploy/growser-backend), but only for Windows. On the other platforms no
-  // package exists yet, and offering Tor there would be the same promise this
-  // pref was set to stop making.
-#if BUILDFLAG(IS_WIN)
+  // deploy/growser-backend). Growser-163: macOS has its package too - a client
+  // and a transports component with a key pair of their own, served from
+  // backend.growser.org and verified from this machine. On the platforms still
+  // missing one, offering Tor would be the same promise this pref was set to
+  // stop making, so they keep it.
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
   registry->RegisterBooleanPref(prefs::kTorDisabled, false);
 #else
   registry->RegisterBooleanPref(prefs::kTorDisabled, true);
