@@ -55,23 +55,19 @@ async def _customize_and_sign_chrome(original_function, paths, dist_config,
 
     try:
         result = await original_function(paths, dist_config, *args)
-        # growser (#167): strip AFTER signing, which is the only moment that
-        # works. The app is COPIED into paths.work inside original_function
-        # (pipeline.py: "Copy the app to sign into the work dir"), so a strip
-        # before it runs cleans a directory that does not exist yet - the
-        # mistake this replaces. The copy carries com.apple.FinderInfo along
-        # from the source tree, and codesign --verify --deep --strict then
-        # refuses the bundle: "resource fork, Finder information, or similar
-        # detritus not allowed". Nothing in the pipeline notices - the DMG
-        # signs, notarizes and staples - and the INSTALLED browser quits
-        # uncleanly forever after, spinner and exit_type=Crashed.
+        # growser (#167): NO xattr strip here. An earlier version of this
+        # override ran `xattr -rc` on the signed app, reasoning that the
+        # Finder info inherited from the source tree had to go. It does - but
+        # not this way: `-c` clears EVERY attribute, and code signatures for
+        # the non-Mach-O parts of a bundle live in com.apple.cs.* xattrs. The
+        # result verified under `codesign --verify` and was accepted by spctl,
+        # and then the kernel SIGKILLed it on launch (rc=137, no output). Both
+        # the DMG and the Sparkle zip shipped that way.
         #
-        # Removing the xattr does not harm the signature or the notarization
-        # (measured: spctl still accepted / Notarized Developer ID, stapler
-        # still worked); FinderInfo is precisely what codesign objects to.
-        app_path = os.path.join(paths.work, dist_config.app_dir)
-        if os.path.isdir(app_path):
-            subprocess.run(['xattr', '-rc', app_path], check=False)
+        # The Finder info is dealt with where it actually appears - in the
+        # archive packed out of the mounted DMG - and by name
+        # (com.apple.FinderInfo), never by clearing the lot. See
+        # scripts/publish-sparkle-update.sh.
         return result
     finally:
         base_config.is_in_sign_chrome = value_before
