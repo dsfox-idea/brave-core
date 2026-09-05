@@ -185,10 +185,13 @@ void SidebarControlView::AddChildViews() {
   // with the settings gear, behind a separator.
   sidebar_pinned_tabs_view_ =
       AddChildView(std::make_unique<SidebarPinnedTabsView>(browser_));
+  // Growser-182: served LAST, so a short window takes space from here first
+  // and pinned tabs move out to the tabstrip - which is what
+  // SidebarPinnedTabsView::Layout already does with the height it is given.
   sidebar_pinned_tabs_view_->SetProperty(
       views::kFlexBehaviorKey,
       views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
-          .WithOrder(2));
+          .WithOrder(3));
 
   // Pushes the bottom block down. Everything in that block is inflexible, so
   // it always keeps its space and the pinned tabs take whatever is left.
@@ -210,10 +213,16 @@ void SidebarControlView::AddChildViews() {
 
   sidebar_items_view_ =
       AddChildView(std::make_unique<SidebarItemsScrollView>(browser_));
+  // Growser-182: this block keeps its size, always. It was made shrinkable
+  // with the pinned block in #149, and a scroll view given less than it needs
+  // does not shrink visibly - it grows chevrons and slides its contents under
+  // them. So on a short window the bookmarks started scrolling while the
+  // pinned tabs, which have somewhere else to go, sat still. Served before
+  // them now, and at its preferred size.
   sidebar_items_view_->SetProperty(
       views::kFlexBehaviorKey,
-      views::FlexSpecification(views::MinimumFlexSizeRule::kScaleToZero)
-          .WithOrder(3));
+      views::FlexSpecification(views::MinimumFlexSizeRule::kPreferred)
+          .WithOrder(2));
 
   // Growser-149: the add button is gone. Nothing creates it any more, and
   // SidebarItemAddButton stays in the tree switched off rather than deleted -

@@ -73,6 +73,7 @@
 #include "brave/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/layout_constants.h"
 #include "chrome/browser/ui/side_panel/side_panel_entry.h"
 #include "chrome/browser/ui/side_panel/side_panel_registry.h"
@@ -105,6 +106,7 @@
 #include "ui/events/test/event_generator.h"
 #include "ui/gfx/animation/animation.h"
 #include "ui/gfx/animation/animation_test_api.h"
+#include "ui/gfx/color_utils.h"
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/rounded_corners_f.h"
 #include "ui/views/animation/ink_drop.h"
@@ -2688,6 +2690,74 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, FollowsTheWindowHeight) {
 
   EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
   ExpectNoTabLostOrDoubled();
+}
+
+// Growser-182: which block gives way when the window runs short. Both were
+// made shrinkable in #149 and the pinned block was served FIRST, so the legacy
+// block below took whatever was left - and a scroll view given less than it
+// needs does not shrink visibly, it grows chevrons and slides its contents
+// under them. So the bookmarks scrolled while the pinned tabs, which have
+// somewhere else to go, sat still.
+//
+// Asserted on the legacy block's HEIGHT rather than on its chevrons: the
+// height is what the layout decides, and the chevrons are only how a scroll
+// view reports the same fact.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, LegacyBlockNeverGivesWay) {
+  SetShowPinnedTabs(true);
+  auto* legacy = GetSidebarItemsScrollViewAsView();
+  ASSERT_TRUE(legacy);
+
+  const gfx::Rect original_bounds =
+      browser_view()->GetWidget()->GetWindowBoundsInScreen();
+  const int wanted = legacy->GetPreferredSize().height();
+  ASSERT_GT(wanted, 0) << "the legacy block must want some height to test";
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  gfx::Rect short_bounds = original_bounds;
+  for (int height = original_bounds.height(); height >= 200; height -= 50) {
+    short_bounds.set_height(height);
+    browser_view()->GetWidget()->SetBounds(short_bounds);
+    RunLayout();
+    EXPECT_EQ(wanted, legacy->height())
+        << "at window height " << height
+        << " the legacy block gave way instead of the pinned tabs";
+  }
+
+  EXPECT_LT(HostedBySidebar(), kPinnedTabCount)
+      << "a window this short must hand pinned tabs back to the strip";
+
+  browser_view()->GetWidget()->SetBounds(original_bounds);
+  RunLayout();
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  EXPECT_EQ(wanted, legacy->height());
+}
+
+// Growser-183: the active entry's glow is painted only on a dark toolbar, and
+// this pins the SIGNAL that decision rests on rather than the pixels. The
+// condition could be right and the surface wrong - that is the way this kind
+// of change fails - so what is asserted here is that the toolbar colour really
+// does follow the browser's colour scheme.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
+                       ToolbarColourFollowsTheColourScheme) {
+  SetShowPinnedTabs(true);
+  auto* theme_service =
+      ThemeServiceFactory::GetForProfile(browser()->GetProfile());
+  auto* view = GetSidebarPinnedTabsView();
+  ASSERT_TRUE(view);
+
+  theme_service->SetBrowserColorScheme(
+      ThemeService::BrowserColorScheme::kLight);
+  RunLayout();
+  ASSERT_TRUE(view->GetColorProvider());
+  EXPECT_FALSE(color_utils::IsDark(
+      view->GetColorProvider()->GetColor(kColorToolbar)))
+      << "a light scheme must give a light toolbar, or the glow stays on";
+
+  theme_service->SetBrowserColorScheme(ThemeService::BrowserColorScheme::kDark);
+  RunLayout();
+  EXPECT_TRUE(color_utils::IsDark(
+      view->GetColorProvider()->GetColor(kColorToolbar)))
+      << "a dark scheme must give a dark toolbar, or the glow is lost";
 }
 
 // Vertical tabs already show pinned tabs in a column of their own, so the
