@@ -36,20 +36,28 @@ class EdgeHoverDetectorTest : public views::test::WidgetTest {
       : views::test::WidgetTest(
             base::test::TaskEnvironment::TimeSource::MOCK_TIME) {}
 
+  // Growser-185: the widget is a HOST here, never a surface anyone looks at -
+  // every test drives the detector through DetectHoverState() or
+  // HandleEventForTesting(), and IsHoverPoint() answers from a member rather
+  // than from where the cursor is. It must therefore stay hidden, because
+  // EdgeHoverDetector's constructor puts a REAL views::EventMonitor on this
+  // window, and a shown window receives the real mouse.
+  //
+  // That is not a timing race - the clock here is mocked. It is one ambient
+  // kMouseExited reaching OnEvent, which calls ApplyWithDelay(false) and stops
+  // the pending enter timer, so MouseExitedEventStartsExitTimer failed its
+  // ASSERT_TRUE(hovering()) on a machine where somebody moved the mouse. A bot
+  // never does, which is why this survived until it ran on a desk.
+  //
+  // A window that was never shown gets no mouse messages on any of the three
+  // platforms, so not showing it is the whole fix.
   void SetUp() override {
     WidgetTest::SetUp();
     widget_.reset(CreateTopLevelNativeWidget(
         views::Widget::InitParams::CLIENT_OWNS_WIDGET));
     widget_->SetSize(gfx::Size(200, 200));
-    // Growser-185: NOT shown, deliberately. The detector puts a real
-    // EventMonitor on this widget's native window, so a window on screen also
-    // receives the machine's own mouse events - and one kMouseExited is all it
-    // takes to cancel a pending enter, which is how
-    // MouseExitedEventStartsExitTimer failed once in a release build and
-    // passed on the retry. Every test here drives the detector through
-    // HandleEventForTesting or DetectHoverState, and neither needs a visible
-    // window; leaving it hidden is what keeps the machine's cursor out of the
-    // test.
+    ASSERT_FALSE(widget_->IsVisible())
+        << "showing this widget hands the detector the real mouse";
     detector_ = std::make_unique<EdgeHoverDetector>(
         widget_.get(),
         base::BindRepeating(&EdgeHoverDetectorTest::IsHoverPoint,
