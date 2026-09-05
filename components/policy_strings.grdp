@@ -525,7 +525,7 @@ Additional details:
   </message>
  <if expr="is_win or is_macosx or is_linux">
   <message name="IDS_POLICY_STATUS_UPDATER" desc="Title for the updater policy status box on windows.">
-    Growser Update
+    Google Update
   </message>
  </if>
   <message name="IDS_POLICY_STATUS_ERROR_MANAGED_NO_POLICY" desc="Message to display when a managed device does not have a policy loaded.">
@@ -751,8 +751,8 @@ Additional details:
   <message name="IDS_POLICY_RISK_TAG_LOCAL_DATA_ACCESS" desc="Title of a group/tag whose policies might allow storage of user data to local drives where others might access them.">
     Local Data Access
   </message>
-  <message name="IDS_POLICY_RISK_TAG_GOOGLE_SHARING" desc="Title of a group/tag whose policies enable functionality that might share user data with trusted Growser services.">
-    Sharing with Growser
+  <message name="IDS_POLICY_RISK_TAG_GOOGLE_SHARING" desc="Title of a group/tag whose policies enable functionality that might share user data with trusted Google services.">
+    Sharing with Google
   </message>
   <message name="IDS_POLICY_SHOW_EXPANDED_STATUS" desc="Text for the link that shows the policy status. Used when the policy status is too long to be always visible.">
     Show status

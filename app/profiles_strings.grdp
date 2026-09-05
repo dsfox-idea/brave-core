@@ -54,71 +54,71 @@
 
   <!-- Identity error message for passkey unlock experiment -->
   <if expr="use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock Your Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_UNLOCK" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock your passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get Your Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_GET" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get your passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify It's You
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_AVATAR_BUTTON_PASSKEYS_ERROR_VERIFY" desc="A short label for the avatar button, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device. Tapping the button will open the profile menu. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify it's you
     </message>
   </if>
-  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_UNLOCK" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_UNLOCK" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
     Verify it’s you to save and use your passkeys on this device
   </message>
-  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_GET" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
-    Get your passkeys on this device with Growser Password Manager
+  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_GET" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    Get your passkeys on this device with Google Password Manager
   </message>
-  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_VERIFY" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+  <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_DESCRIPTION_VERIFY" desc="Subtitle in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
     Verify it’s you to get your passkeys on this device
   </message>
   <if expr="use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock Your Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_UNLOCK" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Unlock your passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get Passkeys
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_GET" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Get passkeys
     </message>
   </if>
   <if expr="use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify It's You
     </message>
   </if>
   <if expr="not use_titlecase">
-    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Growser Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
+    <message name="IDS_PROFILE_MENU_PASSKEYS_ERROR_BUTTON_VERIFY" desc="Button in the profile menu, shown when the user needs to verify their identity to unlock usage of their Google Password Manager passkeys on this device, e.g. by presenting a PIN. Tapping the button will open a tab asking the user to verify their identity with a PIN or other challenge. The word 'passkey' is distinct from 'password', consult the glossary for a translation.">
       Verify it's you
     </message>
   </if>
@@ -196,13 +196,13 @@
   <message name="IDS_PROFILE_MENU_PROFILE_IDENTIFIER_WITH_SEPARATOR" desc="The user name and profile name are separated by a symbol, in this case bullet •, with a white space before it and a white space after it. If the bullet • resembles another symbol in the language, please translate the bullet • as a symbol (A) that is not easily mistaken for a number or letter in the language and (B) that is typically used to separate elements.">
     <ph name="USER_NAME">$1<ex>John</ex></ph> • <ph name="PROFILE_NAME">$2<ex>Work</ex></ph>
   </message>
-  <message name="IDS_PROFILE_AVATAR_NAME_WITH_AI_MEMBERSHIP" desc="Label indicating that the profile has a Growser membership associated with the AI avatar ring, preceded by the profile name or details.">
-    <ph name="PROFILE_NAME">$1<ex>Alice</ex></ph>. Growser membership
+  <message name="IDS_PROFILE_AVATAR_NAME_WITH_AI_MEMBERSHIP" desc="Label indicating that the profile has a Google membership associated with the AI avatar ring, preceded by the profile name or details.">
+    <ph name="PROFILE_NAME">$1<ex>Alice</ex></ph>. Google membership
   </message>
-  <message name="IDS_PROFILE_AVATAR_AI_MEMBERSHIP" is_accessibility_with_no_ui="true" desc="Label indicating that the profile has a Growser membership associated with the AI avatar ring.">
-    Growser membership
+  <message name="IDS_PROFILE_AVATAR_AI_MEMBERSHIP" is_accessibility_with_no_ui="true" desc="Label indicating that the profile has a Google membership associated with the AI avatar ring.">
+    Google membership
   </message>
-  <message name="IDS_PROFILE_MENU_PROFILE_IDENTIFIER_WITH_TIER" is_accessibility_with_no_ui="true" desc="Label indicating that the profile has a Growser membership tier associated with the AI avatar ring, preceded by the profile name. The profile name and the tier name are separated by a symbol, in this case bullet •, with a white space before it and a white space after it. If the bullet • resembles another symbol in the language, please translate the bullet • as a symbol (A) that is not easily mistaken for a number or letter in the language and (B) that is typically used to separate elements.">
+  <message name="IDS_PROFILE_MENU_PROFILE_IDENTIFIER_WITH_TIER" is_accessibility_with_no_ui="true" desc="Label indicating that the profile has a Google membership tier associated with the AI avatar ring, preceded by the profile name. The profile name and the tier name are separated by a symbol, in this case bullet •, with a white space before it and a white space after it. If the bullet • resembles another symbol in the language, please translate the bullet • as a symbol (A) that is not easily mistaken for a number or letter in the language and (B) that is typically used to separate elements.">
     <ph name="PROFILE_NAME">$1<ex>Alice</ex></ph> • <ph name="TIER_NAME">$2<ex>Growser Subscription</ex></ph>
   </message>
   <message name="IDS_PROFILE_MENU_PROFILE_MANAGED_HEADER" desc="Disclaimer indicating that the profile is managed">
@@ -236,8 +236,8 @@
     <message name="IDS_PROFILE_MENU_CUSTOMIZE_PROFILE_BUTTON" desc="Button in the avatar menu bubble view for editing the current profile.">
       Customize profile
     </message>
-    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Growser account settings.">
-      Growser services settings
+    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Google account settings.">
+      Google services settings
     </message>
     <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Growser autofill settings.">
       Passwords and autofill
@@ -265,8 +265,8 @@
     <message name="IDS_PROFILE_MENU_CUSTOMIZE_PROFILE_BUTTON" desc="Button in the avatar menu bubble view for editing the current profile. ">
       Customize Profile
     </message>
-    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Growser account settings.">
-      Growser Services Settings
+    <message name="IDS_PROFILE_MENU_OPEN_ACCOUNT_SETTINGS" desc="Button in the avatar menu bubble view for opening Google account settings.">
+      Google Services Settings
     </message>
     <message name="IDS_PROFILE_MENU_AUTOFILL_SETTINGS_BUTTON" desc="Button in the avatar menu bubble view for opening Growser autofill settings.">
       Passwords and Autofill
@@ -1005,7 +1005,7 @@
     </message>
 
     <!-- Supervised user profile avatar badge -->
-    <message name="IDS_MANAGED_BY_PARENT_A11Y" desc="Accessibility label that describes the information conveyed by the Growser Family Link 'Kite' icon. When shown account profile photo or elsewhere in settings it indicates that the account is supervised.">
+    <message name="IDS_MANAGED_BY_PARENT_A11Y" desc="Accessibility label that describes the information conveyed by the Google Family Link 'Kite' icon. When shown account profile photo or elsewhere in settings it indicates that the account is supervised.">
       Managed by your parent
     </message>
 
@@ -1036,7 +1036,7 @@
     <message name="IDS_PROFILE_PICKER_PROFILE_CARD_NEEDS_SIGNIN_PROMPT" desc="Text on the profile card signaling that the user must sign-in in order to open a profile">
       Sign in
     </message>
-    <message name="IDS_PROFILE_PICKER_PROFILE_CARD_LABEL_SUPERVISED" desc="Accessibility label that is used on the profile card button that opens an existing profile. It includes information conveyed by the Growser Family Link 'Kite' icon, which indicates that the account is supervised.">
+    <message name="IDS_PROFILE_PICKER_PROFILE_CARD_LABEL_SUPERVISED" desc="Accessibility label that is used on the profile card button that opens an existing profile. It includes information conveyed by the Google Family Link 'Kite' icon, which indicates that the account is supervised.">
       Open <ph name="PROFILE_NAME">$1<ex>User</ex></ph> profile. This profile is managed by your parent.
     </message>
     <message name="IDS_PROFILE_PICKER_PROFILE_CARD_LABEL" desc="Label for a profile card button that opens a new profile">
@@ -1204,8 +1204,8 @@
         Sign In
       </message>
     </if>
-    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Growser is launched), informing users they can either sign in with an existing Growser account or create a new one in the next step(s).">
-      Use your Growser account or create a new one
+    <message name="IDS_FRE_CREATE_ACCOUNT_DESCRIPTION" desc="Text displayed on the sign-in screen (close to the sign-in button) in the first run experience (very first time Google is launched), informing users they can either sign in with an existing Google account or create a new one in the next step(s).">
+      Use your Google account or create a new one
     </message>
     <message name="IDS_FRE_SIGN_IN_CELEBRATION_WELCOME_TITLE" desc="Title for the sign in celebration screen (FRE).">
       Welcome, <ph name="USER_NAME">$1<ex>John</ex></ph>!
@@ -1272,23 +1272,23 @@
     <message name="IDS_FEATURE_SHOWCASE_GEMINI_SUBTITLE" desc="This is a subtitle explaining a specific feature of the AI assistant: using active page content to provide better context. (CHAR LIMIT = 60)">
       Get more relevant answers by sharing your tabs
     </message>
-    <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_1_ROW" desc="This is the body text of a consent dialog. It explains the technical data flow (content and URLs) to Growser for AI processing. The tone should be transparent and cautionary.">
-      Growser uses the content and URL of shared tabs. Your current tab is shared in new chats. You can change this setting anytime.
+    <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_1_ROW" desc="This is the body text of a consent dialog. It explains the technical data flow (content and URLs) to Google for AI processing. The tone should be transparent and cautionary.">
+      Google uses the content and URL of shared tabs. Your current tab is shared in new chats. You can change this setting anytime.
     </message>
     <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_2_ROW" desc="This is a disclosure regarding human review and data usage for model training. 'Learn more' links to privacy choices. It is a critical privacy notice. This string includes legal disclaimers and a quality warning about AI 'hallucinations.' The tone should be cautionary.">
-      Chats are reviewed and used to improve Growser AI. Gemini is AI and can make mistakes. You can <ph name="BEGIN_LINK_MANAGE_ACTIVITY">&lt;a href="$1" target="_blank"&gt;</ph>manage your activity<ph name="END_LINK_MANAGE_ACTIVITY">&lt;/a&gt;</ph>, including info about your location. <ph name="BEGIN_LINK_LEARN_MORE">&lt;a href="$2" target="_blank"&gt;</ph>Learn more about your choices<ph name="END_LINK_LEARN_MORE">&lt;/a&gt;</ph>
+      Chats are reviewed and used to improve Google AI. Gemini is AI and can make mistakes. You can <ph name="BEGIN_LINK_MANAGE_ACTIVITY">&lt;a href="$1" target="_blank"&gt;</ph>manage your activity<ph name="END_LINK_MANAGE_ACTIVITY">&lt;/a&gt;</ph>, including info about your location. <ph name="BEGIN_LINK_LEARN_MORE">&lt;a href="$2" target="_blank"&gt;</ph>Learn more about your choices<ph name="END_LINK_LEARN_MORE">&lt;/a&gt;</ph>
     </message>
     <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_2_US" desc="This is a disclosure regarding human review and data usage for model training. 'Learn more' links to privacy choices. It is a critical privacy notice. This string includes legal disclaimers and a quality warning about AI 'hallucinations.' The tone should be cautionary.">
-      Chats are reviewed and used to improve Growser AI. Gemini is AI and can make mistakes. Some content may not be suitable for everyone. You can <ph name="BEGIN_LINK_MANAGE_ACTIVITY">&lt;a href="$1" target="_blank"&gt;</ph>manage your activity<ph name="END_LINK_MANAGE_ACTIVITY">&lt;/a&gt;</ph>, including info about your location. <ph name="BEGIN_LINK_LEARN_MORE">&lt;a href="$2" target="_blank"&gt;</ph>Learn more about your choices<ph name="END_LINK_LEARN_MORE">&lt;/a&gt;</ph>
+      Chats are reviewed and used to improve Google AI. Gemini is AI and can make mistakes. Some content may not be suitable for everyone. You can <ph name="BEGIN_LINK_MANAGE_ACTIVITY">&lt;a href="$1" target="_blank"&gt;</ph>manage your activity<ph name="END_LINK_MANAGE_ACTIVITY">&lt;/a&gt;</ph>, including info about your location. <ph name="BEGIN_LINK_LEARN_MORE">&lt;a href="$2" target="_blank"&gt;</ph>Learn more about your choices<ph name="END_LINK_LEARN_MORE">&lt;/a&gt;</ph>
     </message>
     <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_2_ENTERPRISE_ROW" desc="This string includes legal disclaimers and a quality warning about AI 'hallucinations.' The tone should be cautionary.">
-      Neither your conversations with Gemini nor your Growser Workspace data will be reviewed or used to improve generative AI models. Gemini is AI and can make mistakes.
+      Neither your conversations with Gemini nor your Google Workspace data will be reviewed or used to improve generative AI models. Gemini is AI and can make mistakes.
     </message>
     <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_2_ENTERPRISE_US" desc="This string includes legal disclaimers and a quality warning about AI 'hallucinations.' The tone should be cautionary.">
-      Neither your conversations with Gemini nor your Growser Workspace data will be reviewed or used to improve generative AI models. Gemini is AI and can make mistakes. Some content may not be suitable for everyone.
+      Neither your conversations with Gemini nor your Google Workspace data will be reviewed or used to improve generative AI models. Gemini is AI and can make mistakes. Some content may not be suitable for everyone.
     </message>
     <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_3_ROW" desc="">
-      <ph name="BEGIN_LINK_TERMS">&lt;a href="$1" target="_blank"&gt;</ph>Growser Terms<ph name="END_LINK_TERMS">&lt;/a&gt;</ph> and the <ph name="BEGIN_LINK_PRIVACY">&lt;a href="$2" target="_blank"&gt;</ph>Gemini Apps Privacy Notice<ph name="END_LINK_PRIVACY">&lt;/a&gt;</ph> apply
+      <ph name="BEGIN_LINK_TERMS">&lt;a href="$1" target="_blank"&gt;</ph>Google Terms<ph name="END_LINK_TERMS">&lt;/a&gt;</ph> and the <ph name="BEGIN_LINK_PRIVACY">&lt;a href="$2" target="_blank"&gt;</ph>Gemini Apps Privacy Notice<ph name="END_LINK_PRIVACY">&lt;/a&gt;</ph> apply
     </message>
     <message name="IDS_FEATURE_SHOWCASE_GEMINI_DISCLOSURE_3_KR" desc="">
       Our <ph name="BEGIN_LINK_TERMS">&lt;a href="$1" target="_blank"&gt;</ph>Terms<ph name="END_LINK_TERMS">&lt;/a&gt;</ph>, <ph name="BEGIN_LINK_LOCATION_TERMS">&lt;a href="$2" target="_blank"&gt;</ph>Korean Location Terms<ph name="END_LINK_LOCATION_TERMS">&lt;/a&gt;</ph>, and <ph name="BEGIN_LINK_PRIVACY">&lt;a href="$3" target="_blank"&gt;</ph>Privacy Notice<ph name="END_LINK_PRIVACY">&lt;/a&gt;</ph> apply.
@@ -1341,7 +1341,7 @@
       To quickly get back to sites you’ve visited, sync your history and tabs
     </message>
     <message name="IDS_HISTORY_SYNC_OPT_IN_DESCRIPTION" desc="Description of the history sync opt in screen which offers the user to turn on the data types history, tabs, and saved tab groups.">
-      You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+      You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
     </message>
     <message name="IDS_HISTORY_SYNC_OPT_IN_ACCEPT_BUTTON" desc="Accept button of the history sync opt in screen which offers the user to turn on the data types history, tabs, and saved tab groups.">
       Yes, I’m in

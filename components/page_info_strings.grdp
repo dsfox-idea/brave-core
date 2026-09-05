@@ -504,8 +504,8 @@
       <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_SYNC" desc="A short paragraph explaining to a Growser sync user that they have reused their Growser password on the current website.">
         Growser can help you protect your Growser sync chain and change your password.
       </message>
-      <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_SIGNED_IN_NON_SYNC" desc="A short paragraph explaining to a non-sync user that they have reused their Growser password on the current website.">
-        You just entered your password on a deceptive site. Growser can help. To change your password and notify Growser that your account may be at risk, click Protect Account.
+      <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_SIGNED_IN_NON_SYNC" desc="A short paragraph explaining to a non-sync user that they have reused their Google password on the current website.">
+        You just entered your password on a deceptive site. Google can help. To change your password and notify Google that your account may be at risk, click Protect Account.
       </message>
       <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_ENTERPRISE" desc="A short paragraph explaining to the user that they have reused their password on the current website.">
         You could lose access to your organization's account or experience identity theft. Growser recommends changing your password now.
@@ -521,8 +521,8 @@
       <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_SYNC" desc="A short paragraph explaining to a Growser sync user that they have reused their Growser password on the current website.">
         Growser can help you protect your Growser sync chain and change your password.
       </message>
-      <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_SIGNED_IN_NON_SYNC" desc="A short paragraph explaining to a non-sync user that they have reused their Growser password on the current website.">
-        You just entered your password on a deceptive site. Growser can help. To change your password and notify Growser that your account may be at risk, click Protect Account.
+      <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_SIGNED_IN_NON_SYNC" desc="A short paragraph explaining to a non-sync user that they have reused their Google password on the current website.">
+        You just entered your password on a deceptive site. Google can help. To change your password and notify Google that your account may be at risk, click Protect Account.
       </message>
       <message name="IDS_PAGE_INFO_CHANGE_PASSWORD_DETAILS_ENTERPRISE" desc="A short paragraph explaining to the user that they have reused their password on the current website.">
         You could lose access to your organization's account or experience identity theft. Growser recommends changing your password now.
@@ -976,7 +976,7 @@
     Store reviews
   </message>
   <message name="IDS_PAGE_INFO_MERCHANT_TRUST_DESCRIPTION" desc="The description of the merchant trust feature in the page info.">
-    This info comes from independent review websites like Trustpilot, ScamAdviser, Growser, and more. Summaries are created with AI.
+    This info comes from independent review websites like Trustpilot, ScamAdviser, Google, and more. Summaries are created with AI.
   </message>
   <message name="IDS_PAGE_INFO_MERCHANT_TRUST_VIEW_ALL_REVIEWS" desc="The title of the button to view all reviews of a store, located in the page info merchant trust subpage. It has a placeholder for the number of reviews">
     {NUM_REVIEWS, plural,

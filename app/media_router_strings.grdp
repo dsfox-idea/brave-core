@@ -27,10 +27,10 @@
   </message>
 
   <!-- Contextual Menu -->
-  <message name="IDS_MEDIA_ROUTER_ABOUT" desc="Title of a menu item which, on click, opens a page with product information about Growser Cast.">
+  <message name="IDS_MEDIA_ROUTER_ABOUT" desc="Title of a menu item which, on click, opens a page with product information about Google Cast.">
     About
   </message>
-  <message name="IDS_MEDIA_ROUTER_HELP" desc="Title of a menu item which, on click, opens a page to the Growser Cast help center.">
+  <message name="IDS_MEDIA_ROUTER_HELP" desc="Title of a menu item which, on click, opens a page to the Google Cast help center.">
     Help
   </message>
   <message name="IDS_MEDIA_ROUTER_TOGGLE_MEDIA_REMOTING" desc="Title of a menu item which, on click, toggles (enables or disables) the feature to optimize casting fullscreen videos to a casting device. This menu item has a checkmark when the feature is enabled.">
@@ -190,19 +190,19 @@
 
   <!-- Cast feedback dialog (chrome://cast-feedback) -->
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_TITLE" desc="Title of the tab opened by selecting '''Report an issue' from the Cast menu.">
-    Growser Cast Feedback
+    Google Cast Feedback
   </message>
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_NA" desc="Label used for subjective quality ratings where the user expresses no opinion.">
     N/A
   </message>
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_FORM_DESCRIPTION" desc="Text to describe the feedback form.">
-    Your feedback helps us to improve Growser Cast and is appreciated.
+    Your feedback helps us to improve Google Cast and is appreciated.
     For help troubleshooting issues with cast, please refer to the
     <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>
     help center<ph name="END_LINK">&lt;/a&gt;</ph>.
   </message>
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_HEADER" desc="Header of the Media Router feedback page.">
-    Tell us what's happening with Growser Cast.
+    Tell us what's happening with Google Cast.
   </message>
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_YOUR_ANSWER" desc="Placeholder text for inputs in the feedback form.">
     Your answer
@@ -234,7 +234,7 @@
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_ADDITIONAL_COMMENTS" desc="Text for field in feedback form for other comments.">
     Additional comments:
   </message>
-  <message name="IDS_MEDIA_ROUTER_FEEDBACK_ALLOW_CONTACT_BY_EMAIL" desc="Label for a checkbox in a form indicating whether the user is permitting Growser to contact them by email.">
+  <message name="IDS_MEDIA_ROUTER_FEEDBACK_ALLOW_CONTACT_BY_EMAIL" desc="Label for a checkbox in a form indicating whether the user is permitting Google to contact them by email.">
     We may email you for more information or updates
   </message>
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_YOUR_EMAIL_ADDRESS" desc="Default text shown in a text input box for the user to enter their email address.">
@@ -347,22 +347,22 @@
     Send debug logs (recommended)
   </message>
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_PRIVACY_DATA_USAGE" desc="Text with details about data usage of details submitted in the feedback page.">
-    Your Growser version, operating system version, Cast settings,
+    Your Google version, operating system version, Cast settings,
     mirroring performance stats, and communication channel diagnostic
     logs will be submitted in addition to any information you choose
     to include above. This feedback is used to diagnose problems and
     help improve the feature. Any personal information you submit,
     whether explicitly or incidentally, will be protected in
     accordance with our privacy policies. By submitting this feedback,
-    you agree that Growser may use feedback that you provide to improve
-    any Growser product or service.
+    you agree that Google may use feedback that you provide to improve
+    any Google product or service.
   </message>
 
   <!-- Cast feedback dialog: discovery -->
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_SETUP_VISIBILITY_QUESTION" desc="Text for the question about device visibility through setup flow">
     Are you able to see your casting device in the
     <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>
-    Growser Home app<ph name="END_LINK">&lt;/a&gt;</ph>?
+    Google Home app<ph name="END_LINK">&lt;/a&gt;</ph>?
   </message>
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_YES" desc="Label for yes option.">
     Yes
@@ -383,10 +383,10 @@
   <message name="IDS_MEDIA_ROUTER_FEEDBACK_NETWORK_QUESTION" desc="Text for the question describing the network.">
     Which of the following best describes your network?
   </message>
-  <message name="IDS_MEDIA_ROUTER_FEEDBACK_NETWORK_SAME_WIFI" desc="Option for describing the network with PC and the Growser Cast device on the same Wi-Fi network.">
+  <message name="IDS_MEDIA_ROUTER_FEEDBACK_NETWORK_SAME_WIFI" desc="Option for describing the network with PC and the Google Cast device on the same Wi-Fi network.">
     PC and casting device on the same Wi-Fi network
   </message>
-  <message name="IDS_MEDIA_ROUTER_FEEDBACK_NETWORK_DIFFERENT_WIFI" desc="Option for describing the network with PC and the Growser Cast device on different Wi-Fi networks.">
+  <message name="IDS_MEDIA_ROUTER_FEEDBACK_NETWORK_DIFFERENT_WIFI" desc="Option for describing the network with PC and the Google Cast device on different Wi-Fi networks.">
     PC and casting device on different Wi-Fi networks (e.g. 2.4GHz
     vs. 5GHz)
   </message>

@@ -165,23 +165,23 @@
     See your history on other devices
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGNED_OUT" desc="The promo body text for signed out users.">
-    To get your history from your other devices, sign in and sync history. You’ll also get your passwords and more on all your devices. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+    To get your history from your other devices, sign in and sync history. You’ll also get your passwords and more on all your devices. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGN_IN_PENDING" desc="The promo body text for pending sign in users with sync history off.">
-    To get your history from your other devices, verify it’s you and sync your history and tabs. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+    To get your history from your other devices, verify it’s you and sync your history and tabs. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGN_IN_PENDING_SYNC_HISTORY_ON" desc="The promo body text for pending sign in users with sync history on.">
-    To get your history from your other devices, verify it’s you. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+    To get your history from your other devices, verify it’s you. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
   </message>
   <message name="IDS_HISTORY_SYNC_PROMO_BODY_SIGNED_IN" desc="The promo body text for signed in users with sync history off.">
-    To get your history from your other devices, sync your history and tabs to <ph name="ACCOUNT_EMAIL">$1<ex>john@google.com</ex></ph>. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+    To get your history from your other devices, sync your history and tabs to <ph name="ACCOUNT_EMAIL">$1<ex>john@google.com</ex></ph>. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
   </message>
 
-  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Growser for the history search feature.">
-    Your searches, best matches, and their page contents are sent to Growser and may be seen by human reviewers to improve this feature.
+  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Google for the history search feature.">
+    Your searches, best matches, and their page contents are sent to Google and may be seen by human reviewers to improve this feature.
   </message>
-  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER_LOGGING_OFF" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Growser for the history search feature when logging is disabled by policy.">
-    Your searches, best matches, and their page contents are sent to Growser. It will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
+  <message name="IDS_HISTORY_EMBEDDINGS_DISCLAIMER_LOGGING_OFF" desc="On the history page, the persistent disclaimer text shown below the search box indicating what content is sent to Google for the history search feature when logging is disabled by policy.">
+    Your searches, best matches, and their page contents are sent to Google. It will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
   </message>
   <message name="IDS_HISTORY_EMBEDDINGS_PROMO_LABEL" desc="On the history page, the accessiblility label for the promo for history search powered by AI." translateable="false">
     Promo

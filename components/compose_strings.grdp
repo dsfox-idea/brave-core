@@ -16,7 +16,7 @@
     </message>
   </if>
   <message name="IDS_COMPOSE_SUGGESTION_LABEL" desc="The label beneath the main text in the Autofill suggestion that a user sees after interacting with a supported text element.">
-    Powered by Growser
+    Powered by Google
   </message>
   <message name="IDS_COMPOSE_SUGGESTION_SAVED_TEXT" desc="Main text of a notification that the current text field has an open 'Help me write' session. Clicking the notification will re-open the 'Help me write' dialog.">
     Continue writing
@@ -48,10 +48,10 @@
     Just start with a few words or a first draft to get writing suggestions.
   </message>
   <message name="IDS_COMPOSE_FRE_MAIN_MID" desc="The middle main text of the Help me write disclaimer dialog.">
-    Your text and the content and URL of the page you're writing on will be sent to Growser, reviewed by humans, and used to improve this feature. Avoid entering personal information (like medical or financial details) or using this tool on sites that contain private or sensitive information.
+    Your text and the content and URL of the page you're writing on will be sent to Google, reviewed by humans, and used to improve this feature. Avoid entering personal information (like medical or financial details) or using this tool on sites that contain private or sensitive information.
   </message>
   <message name="IDS_COMPOSE_FRE_MAIN_MID_ENTERPRISE" desc="The middle main text of the Help me write disclaimer dialog for enterprise users with logging turned off.">
-    Your text and the content and URL of the page you're writing on will be sent to Growser. Your content will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
+    Your text and the content and URL of the page you're writing on will be sent to Google. Your content will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
   </message>
   <message name="IDS_COMPOSE_FRE_OK_BUTTON" desc="The button to acknowledge the Help me write disclaimer message.">
     OK
@@ -103,11 +103,11 @@
     "reply yes to this wedding invite with excitement"
   </message>
   <message name="IDS_COMPOSE_INPUT_FOOTER" desc="Privacy disclaimer in the input dialog.">
-    Your text and page content are sent to Growser and may be used to improve this feature.
+    Your text and page content are sent to Google and may be used to improve this feature.
   <ph name="BEGIN_LINK">&lt;a href=""&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_COMPOSE_INPUT_FOOTER_ENTERPRISE" desc="Privacy disclaimer in the input dialog for enterprise users with logging turned off.">
-    Your text and page content are sent to Growser, but will not be used to improve AI.
+    Your text and page content are sent to Google, but will not be used to improve AI.
     <ph name="BEGIN_LINK">&lt;a href="#" id="enterpriseLearnMore" role="button"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_COMPOSE_INPUT_MODE_POLISH" desc="The chip title used to select the Polish mode for a Help me write request." meaning="Describing a way to modify text">
@@ -246,7 +246,7 @@
     <ph name="BEGIN_LINK">&lt;a href="#"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_COMPOSE_REFINEMENTS_EXPERIMENTAL_DISCLAIMER_FOOTER" desc="Disclaimer privacy footer text for used in the result dialog when the UI refinements feature is enabled.">
-    This experimental AI tool won't always be right. To improve it, your content is sent to Growser.
+    This experimental AI tool won't always be right. To improve it, your content is sent to Google.
     <ph name="BEGIN_LINK">&lt;a href="#"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_COMPOSE_FOOTER_FISHFOOD_ON_DEVICE_USED" desc="A footer indicating that on-device evaluation was used." translateable="false">

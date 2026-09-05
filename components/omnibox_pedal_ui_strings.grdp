@@ -188,39 +188,39 @@
     Create doc
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_DOC_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CREATE_GOOGLE_DOC">
-    Create a new Growser Doc quickly
+    Create a new Google Doc quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_DOC_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to CREATE_GOOGLE_DOC.">
-    <ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new Growser Doc quickly
+    <ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new Google Doc quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_DOC" desc="Announcement when pedal action button is focused, CREATE_GOOGLE_DOC">
-    Create doc button, activate to create a new Growser Doc quickly
+    Create doc button, activate to create a new Google Doc quickly
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_SHEET_HINT" desc="The button text contents to suggest pedal action, CREATE_GOOGLE_SHEET">
     Create sheet
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_SHEET_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CREATE_GOOGLE_SHEET">
-    Create a new Growser Sheet quickly
+    Create a new Google Sheet quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_SHEET_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to CREATE_GOOGLE_SHEET.">
-    <ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new Growser Sheet quickly
+    <ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new Google Sheet quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_SHEET" desc="Announcement when pedal action button is focused, CREATE_GOOGLE_SHEET">
-    Create sheet button, activate to create a new Growser Sheet quickly
+    Create sheet button, activate to create a new Google Sheet quickly
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_SLIDE_HINT" desc="The button text contents to suggest pedal action, CREATE_GOOGLE_SLIDE">
     Create presentation
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_SLIDE_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CREATE_GOOGLE_SLIDE">
-    Create a new Growser presentation in Slides quickly
+    Create a new Google presentation in Slides quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_SLIDE_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to CREATE_GOOGLE_SLIDE.">
-    <ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new Growser presentation in Slides quickly
+    <ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new Google presentation in Slides quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_SLIDE" desc="Announcement when pedal action button is focused, CREATE_GOOGLE_SLIDE">
-    Create presentation button, activate to create a new Growser presentation in Slides quickly
+    Create presentation button, activate to create a new Google presentation in Slides quickly
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_CALENDAR_EVENT_HINT" desc="The button text contents to suggest pedal action, CREATE_GOOGLE_CALENDAR_EVENT">
@@ -240,39 +240,39 @@
     Create site
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_SITE_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CREATE_GOOGLE_SITE">
-    Create a new site in Growser Sites quickly
+    Create a new site in Google Sites quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_SITE_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to CREATE_GOOGLE_SITE.">
-    <ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new site in Growser Sites quickly
+    <ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new site in Google Sites quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_SITE" desc="Announcement when pedal action button is focused, CREATE_GOOGLE_SITE">
-    Create site button, activate to create a new site in Growser Sites quickly
+    Create site button, activate to create a new site in Google Sites quickly
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_KEEP_NOTE_HINT" desc="The button text contents to suggest pedal action, CREATE_GOOGLE_KEEP_NOTE">
     Create note
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_KEEP_NOTE_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CREATE_GOOGLE_KEEP_NOTE">
-    Create a new note in Growser Keep quickly
+    Create a new note in Google Keep quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_KEEP_NOTE_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to CREATE_GOOGLE_KEEP_NOTE.">
-    <ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new note in Growser Keep quickly
+    <ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new note in Google Keep quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_KEEP_NOTE" desc="Announcement when pedal action button is focused, CREATE_GOOGLE_KEEP_NOTE">
-    Create note button, activate to create a new note in Growser Keep quickly
+    Create note button, activate to create a new note in Google Keep quickly
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_FORM_HINT" desc="The button text contents to suggest pedal action, CREATE_GOOGLE_FORM">
     Create form
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CREATE_GOOGLE_FORM_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CREATE_GOOGLE_FORM">
-    Create a new form in Growser Forms quickly
+    Create a new form in Google Forms quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_FORM_SUFFIX" desc="Suffix for spoken suggestion description with pedal action button, to explain keystroke used to CREATE_GOOGLE_FORM.">
-    <ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new form in Growser Forms quickly
+    <ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Tab then Enter to create a new form in Google Forms quickly
   </message>
   <message name="IDS_ACC_OMNIBOX_PEDAL_CREATE_GOOGLE_FORM" desc="Announcement when pedal action button is focused, CREATE_GOOGLE_FORM">
-    Create form button, activate to create a new form in Growser Forms quickly
+    Create form button, activate to create a new form in Google Forms quickly
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_SEE_CHROME_TIPS_HINT" desc="The button text contents to suggest pedal action, SEE_CHROME_TIPS">
@@ -302,7 +302,7 @@
   </message>
 
   <message name="IDS_OMNIBOX_PEDAL_CHANGE_GOOGLE_PASSWORD_HINT" desc="The button text contents to suggest pedal action, CHANGE_GOOGLE_PASSWORD">
-    Change Growser password
+    Change Google password
   </message>
   <message name="IDS_OMNIBOX_PEDAL_CHANGE_GOOGLE_PASSWORD_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe pedal action, CHANGE_GOOGLE_PASSWORD">
     Change your Growser sync chain password

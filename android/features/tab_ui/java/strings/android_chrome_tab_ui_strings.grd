@@ -569,10 +569,10 @@
             =1 {(<ph name="REVIEWS_COUNT_ONE">%1$s<ex>1</ex></ph> review)}
             other {(<ph name="REVIEWS_COUNT_MANY">%1$s<ex>8</ex></ph> reviews)}}
       </message>
-      <message name="IDS_MERCHANT_VIEWER_MESSAGE_DESCRIPTION_REVIEWS_FROM_GOOGLE" desc="Alternative message description indicating that the reviews come from Growser.">
+      <message name="IDS_MERCHANT_VIEWER_MESSAGE_DESCRIPTION_REVIEWS_FROM_GOOGLE" desc="Alternative message description indicating that the reviews come from Google.">
          {REVIEWS, plural,
-            =1 {<ph name="REVIEWS_COUNT_ONE">%1$s<ex>1</ex></ph> review from Growser}
-            other {<ph name="REVIEWS_COUNT_MANY">%1$s<ex>8</ex></ph> reviews from Growser}}
+            =1 {<ph name="REVIEWS_COUNT_ONE">%1$s<ex>1</ex></ph> review from Google}
+            other {<ph name="REVIEWS_COUNT_MANY">%1$s<ex>8</ex></ph> reviews from Google}}
       </message>
       <message name="IDS_MERCHANT_VIEWER_MESSAGE_RATING_NUMERICAL" desc="The rating of the merchant in numerical form.">
         <ph name="CURRENT_RATING">%1$.1f<ex>4.5</ex></ph>/<ph name="RATING_BASELINE">%2$d<ex>5</ex></ph>
@@ -589,7 +589,7 @@
         View store info, option available near top of the screen
       </message>
       <message name="IDS_MERCHANT_VIEWER_PREVIEW_SHEET_TITLE" desc="Bottom sheet title for the merchant viewer experience.">
-        Growser | About this store
+        Google | About this store
       </message>
       <message name="IDS_MERCHANT_VIEWER_OMNIBOX_ICON_IPH" desc="IPH shown when merchant trust message is dismissed at the first time.">
         View store info

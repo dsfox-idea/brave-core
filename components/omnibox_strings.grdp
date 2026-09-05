@@ -23,7 +23,7 @@
   </message>
 
   <message name="IDS_CONTEXTUAL_SEARCH_OPEN_LENS_ACTION_LABEL" desc="Label text for the action match that opens lens.">
-    Ask Growser about this page
+    Ask Google about this page
   </message>
   <message name="IDS_CONTEXTUAL_SEARCH_OPEN_LENS_ACTION_LABEL_ALT" desc="Alternative label text for the action match that opens lens.">
     Ask Google Lens about this page
@@ -36,16 +36,16 @@
   </message>
 
   <message name="IDS_CONTEXTUAL_SEARCH_OPEN_LENS_ACTION_HINT" desc="The button text contents to suggest an omnibox action that opens lens">
-    Ask Growser about this page
+    Ask Google about this page
   </message>
   <message name="IDS_CONTEXTUAL_SEARCH_OPEN_LENS_ACTION_SUGGESTION_CONTENTS" desc="The button hover tooltip text to describe omnibox action that opens lens">
-    Ask Growser about this page
+    Ask Google about this page
   </message>
   <message name="IDS_ACC_CONTEXTUAL_SEARCH_OPEN_LENS_ACTION_SUFFIX" desc="Suffix for spoken suggestion description with omnibox action button, to explain keystroke used to open lens.">
-    <ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Enter to ask Growser about this page
+    <ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT">$1<ex>The Chromium Projects http://www.chromium.org bookmark</ex></ph>, press Enter to ask Google about this page
   </message>
   <message name="IDS_ACC_CONTEXTUAL_SEARCH_OPEN_LENS_ACTION" desc="Announcement when lens action button is focused">
-    Ask Growser about this page button, activate to ask Growser about this page
+    Ask Google about this page button, activate to ask Google about this page
   </message>
 
   <!-- AI Mode Entrypoint Strings -->
@@ -206,14 +206,14 @@
   <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_COMMA_SEPARATED_VALUES" desc="Comma-separated values file format name, for use in omnibox content suggestion descriptions.">
     Comma-Separated Values
   </message>
-  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_APPS_SCRIPT" desc="Growser Apps Script product name, for use in omnibox content suggestion descriptions.">
-    Growser Apps Script
+  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_APPS_SCRIPT" desc="Google Apps Script product name, for use in omnibox content suggestion descriptions.">
+    Google Apps Script
   </message>
   <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_DOCS" desc="Google Docs product name, for use in omnibox content suggestion descriptions.">
     Google Docs
   </message>
-  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_DRAWINGS" desc="Growser Drawings product name, for use in omnibox content suggestion descriptions.">
-    Growser Drawings
+  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_DRAWINGS" desc="Google Drawings product name, for use in omnibox content suggestion descriptions.">
+    Google Drawings
   </message>
   <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_DRIVE" desc="Google Drive product name shown when the file type is unknown, for use in omnibox content suggestion descriptions.">
     Google Drive
@@ -221,23 +221,23 @@
   <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_DRIVE_FOLDER" desc="Google Drive product name shown when the file is a folder, for use in omnibox content suggestion descriptions.">
     Google Drive Folder
   </message>
-  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_FORMS" desc="Growser Forms product name, for use in omnibox content suggestion descriptions.">
-    Growser Forms
+  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_FORMS" desc="Google Forms product name, for use in omnibox content suggestion descriptions.">
+    Google Forms
   </message>
-  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_JAMBOARD" desc="Growser Jamboard product name, for use in omnibox content suggestion descriptions.">
-    Growser Jamboard
+  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_JAMBOARD" desc="Google Jamboard product name, for use in omnibox content suggestion descriptions.">
+    Google Jamboard
   </message>
   <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_PHOTOS" desc="Google Photos product name, for use in omnibox content suggestion descriptions.">
     Google Photos
   </message>
-  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_SITES" desc="Growser Sites product name, for use in omnibox content suggestion descriptions.">
-    Growser Sites
+  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_SITES" desc="Google Sites product name, for use in omnibox content suggestion descriptions.">
+    Google Sites
   </message>
-  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_SHEETS" desc="Growser Sheets product name, for use in omnibox content suggestion descriptions.">
-    Growser Sheets
+  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_SHEETS" desc="Google Sheets product name, for use in omnibox content suggestion descriptions.">
+    Google Sheets
   </message>
-  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_SLIDES" desc="Growser Slides product name, for use in omnibox content suggestion descriptions.">
-    Growser Slides
+  <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_GOOGLE_SLIDES" desc="Google Slides product name, for use in omnibox content suggestion descriptions.">
+    Google Slides
   </message>
   <message name="IDS_CONTENT_SUGGESTION_DESCRIPTION_IMAGE_JPEG" desc="JPEG image file format name, for use in omnibox content suggestion descriptions.">
     JPEG Image
@@ -566,10 +566,10 @@
   <message name="IDS_SEARCH_ENGINES_STARTER_PACK_PAGE_KEYWORD" desc="The keyword required to trigger page context search in keyword mode. This will be prepended with an '@'." translateable="false">
     Page
   </message>
-  <message name="IDS_SEARCH_ENGINES_STARTER_PACK_AI_MODE_NAME" desc="The name of the Growser AI Mode search engine as it appears on chrome://settings/searchEngines.">
-    Growser AI Mode
+  <message name="IDS_SEARCH_ENGINES_STARTER_PACK_AI_MODE_NAME" desc="The name of the Google AI Mode search engine as it appears on chrome://settings/searchEngines.">
+    Google AI Mode
   </message>
-  <message name="IDS_SEARCH_ENGINES_STARTER_PACK_AI_MODE_KEYWORD" desc="The keyword required to trigger the Growser AI Mode search engine. This will be stripped of whitespace and prepended with an '@'.">
+  <message name="IDS_SEARCH_ENGINES_STARTER_PACK_AI_MODE_KEYWORD" desc="The keyword required to trigger the Google AI Mode search engine. This will be stripped of whitespace and prepended with an '@'.">
     AI Mode
   </message>
   <message name="IDS_STARTER_PACK_PAGE_KEYWORD_TEXT" desc="The text shown at the front of the Omnibox when a user has selected the starter pack page keyword mode." translateable="false">
@@ -612,10 +612,10 @@
     History search, powered by AI
   </message>
 
-  <message name="IDS_OMNIBOX_HISTORY_EMBEDDINGS_DISCLAIMER_IPH" desc="The string displayed as the last row in the Omnibox as IPH informing them their info is sent to Growser.">
-    Your searches, best matches, and their page contents are sent to Growser and may be seen by human reviewers to improve this feature. This is an experimental feature and won't always get it right.
+  <message name="IDS_OMNIBOX_HISTORY_EMBEDDINGS_DISCLAIMER_IPH" desc="The string displayed as the last row in the Omnibox as IPH informing them their info is sent to Google.">
+    Your searches, best matches, and their page contents are sent to Google and may be seen by human reviewers to improve this feature. This is an experimental feature and won't always get it right.
   </message>
-  <message name="IDS_OMNIBOX_HISTORY_EMBEDDINGS_DISCLAIMER_IPH_LINK_TEXT" desc="The link displayed on the last row in the Omnibox as IPH informing them their info is sent to Growser.">
+  <message name="IDS_OMNIBOX_HISTORY_EMBEDDINGS_DISCLAIMER_IPH_LINK_TEXT" desc="The link displayed on the last row in the Omnibox as IPH informing them their info is sent to Google.">
     Learn more
   </message>
   <message name="IDS_ACC_OMNIBOX_IPH_LINK_SELECTED" desc="Announcement when an IPH Growser Tip link is selected.">

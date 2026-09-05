@@ -366,7 +366,7 @@
     In your Growser sync chain, <ph name="ACCOUNT">$1<ex>alexpark@gmail.com</ex></ph>
   </message>
   <message name="IDS_AUTOFILL_SAVE_IN_ACCOUNT_MESSAGE_ADDRESS_MIGRATION_RECORD_TYPE_NOTICE" desc="The notice/warning message for the user that this address is going to be migrated in their account.">
-    You will be able to use it across Growser products
+    You will be able to use it across Google products
   </message>
   <message name="IDS_AUTOFILL_ADDRESS_ALREADY_SAVED_IN_ACCOUNT_RECORD_TYPE_NOTICE" desc="The footer message used to notify user that their address is stored in their account." formatter_data="android_java">
     You can use saved addresses across Growser products. This address is saved in your Growser sync chain, <ph name="ACCOUNT">$1<ex>alexpark@gmail.com</ex></ph>.
@@ -436,7 +436,7 @@
     Autofill verification codes sites use to improve your security. Growser can get these codes from your Gmail. <ph name="BEGIN_LINK">&lt;a href="$1" tabindex="0" aria-description="$2" target="_blank"&gt;</ph>Learn more about this feature<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_AUTOFILL_DISABLE_SETTINGS_EXPLANATION_TITLE" desc="Title of the card explaining why the settings page was disabled. Sentence-Cased." formatter_data="android_java">
-    Growser isn’t your autofill provider
+    Google isn’t your autofill provider
   </message>
   <message name="IDS_AUTOFILL_DISABLE_SETTINGS_EXPLANATION" desc="Explanation why the settings page was disabled. Sentence-Cased." formatter_data="android_java">
     To enable these settings and use payment info from your Growser sync chain, visit autofill services settings.
@@ -463,8 +463,8 @@
     <message name="IDS_AUTOFILL_EDIT_ADDRESS_REQUIRED_FIELD_ERROR" desc="Validation error message for missing required address field." formatter_data="android_java">
       Enter <ph name="FIELD">$1<ex>ZIP code</ex></ph>
     </message>
-    <message name="IDS_AUTOFILL_THIRD_PARTY_FILLING_DEFAULT" desc="Title of the option to use the default Growser autofill experience." formatter_data="android_java">
-      Autofill with Growser
+    <message name="IDS_AUTOFILL_THIRD_PARTY_FILLING_DEFAULT" desc="Title of the option to use the default Google autofill experience." formatter_data="android_java">
+      Autofill with Google
     </message>
     <message name="IDS_AUTOFILL_THIRD_PARTY_FILLING_OPT_IN" desc="Title of the option to use third-party autofill in Growser." formatter_data="android_java">
       Autofill using another service
@@ -535,7 +535,7 @@
   <message name="IDS_AUTOFILL_SAVE_ADDRESS_WITH_MORE_INFO_ADDRESS_PROMPT_TITLE" desc="Title shown at the top of prompt that offers the user to save a new address which is an extented version of an already existing home or work address.">
       Save address with more info
     </message>
-  <message name="IDS_AUTOFILL_SAVE_ADDRESS_PROMPT_MIGRATION_OK_BUTTON_LABEL" desc="Label of the OK button in the prompt that offers the user to migrate a new address to their Growser account.">
+  <message name="IDS_AUTOFILL_SAVE_ADDRESS_PROMPT_MIGRATION_OK_BUTTON_LABEL" desc="Label of the OK button in the prompt that offers the user to migrate a new address to their Google account.">
     Save in account
   </message>
   <message name="IDS_AUTOFILL_ACCOUNT_MIGRATE_ADDRESS_PROMPT_TITLE" desc="Title shown at the top of prompt that offers the user to save existing address into account.">
@@ -562,7 +562,7 @@
   <message name="IDS_AUTOFILL_UPDATE_ADDRESS_PROMPT_OLD_VALUES_SECTION_LABEL" meaning="In the address update prompt" desc="Label shown next to the section that displays the old address values in the prompt that offers the user to update an existing address." formatter_data="android_java">
     Old
   </message>
-  <message name="IDS_AUTOFILL_MIGRATE_ADDRESS_PROMPT_CANCEL_BUTTON_LABEL" desc="Label of the Cancel button in the prompt that offers the user to migrate an existing address profile in their Growser account." meaning="Don't migrate this address">
+  <message name="IDS_AUTOFILL_MIGRATE_ADDRESS_PROMPT_CANCEL_BUTTON_LABEL" desc="Label of the Cancel button in the prompt that offers the user to migrate an existing address profile in their Google account." meaning="Don't migrate this address">
     No thanks
   </message>
   <message name="IDS_AUTOFILL_SAVE_IN_ACCOUNT_PROMPT_ADDRESS_SOURCE_NOTICE" desc="The footer message in the 'Save address' prompt informing the user that this address will be stored in their account.">
@@ -694,7 +694,7 @@
 
   <!-- Autofill and passwords entry point summaries - mobile only -->
   <if expr="is_android or is_ios">
-    <message name="IDS_AUTOFILL_AND_PASSWORDS_PASSWORD_MANAGER_SUMMARY" desc="Summary for the Growser Password Manager entry in the Autofill and passwords settings." formatter_data="android_java">
+    <message name="IDS_AUTOFILL_AND_PASSWORDS_PASSWORD_MANAGER_SUMMARY" desc="Summary for the Google Password Manager entry in the Autofill and passwords settings." formatter_data="android_java">
       Passwords · Passkeys
     </message>
     <message name="IDS_AUTOFILL_AND_PASSWORDS_PAYMENTS_SUMMARY" desc="Summary for the Payments entry in the Autofill and passwords settings." formatter_data="android_java">
@@ -828,7 +828,7 @@
     Gemini is AI and can make mistakes. <ph name="LEARN_MORE">$1</ph>
   </message>
   <message name="IDS_AUTOFILL_AT_MEMORY_AI_DISCLOSURE_LINK" desc="Link text for the AI disclosure that points to a settings page." translateable="false">
-    More about relevant data sent to Growser
+    More about relevant data sent to Google
   </message>
   <message name="IDS_AUTOFILL_AT_MEMORY_NO_CONNECTION" desc="Message shown when @memory search fails to connect to the server." translateable="false">
     Couldn't connect
@@ -892,7 +892,7 @@
       OK
     </message>
     <message name="IDS_AT_MEMORY_AI_DISCLOSURE" desc="The text shown at the bottom of the @memory bottom sheet to set user expectations regarding potential incorrect suggestions." formatter_data="android_java" translateable="false">
-      Gemini is AI and can make mistakes. <ph name="BEGIN_LINK">&lt;link&gt;</ph>More about relevant data sent to Growser<ph name="END_LINK">&lt;/link&gt;</ph>
+      Gemini is AI and can make mistakes. <ph name="BEGIN_LINK">&lt;link&gt;</ph>More about relevant data sent to Google<ph name="END_LINK">&lt;/link&gt;</ph>
     </message>
   </if>
    <message name="IDS_AUTOFILL_AT_MEMORY_SUGGESTION_SOURCE_TEXT" desc="The label for a text in the At Memory flyout that shows the source of the autofill suggestion." formatter_data="android_java" translateable="false">
@@ -935,7 +935,7 @@
   </message>
   </if>
 
-  <message name="IDS_SETTINGS_AUTOFILL_AI_ENTERPRISE_LOGGING_MANAGED_DISABLED" desc="Text only seen by enterprise users (Growser services provided for a company). Users should understand that their content saved with autofill won't be used to improve AI, neither AI features specifically or AI models generally." formatter_data="android_java">
+  <message name="IDS_SETTINGS_AUTOFILL_AI_ENTERPRISE_LOGGING_MANAGED_DISABLED" desc="Text only seen by enterprise users (Google services provided for a company). Users should understand that their content saved with autofill won't be used to improve AI, neither AI features specifically or AI models generally." formatter_data="android_java">
     Your content will not be used to improve AI. Your organization may change these settings at any time.
   </message>
 
@@ -1312,8 +1312,8 @@
   <message name="IDS_AUTOFILL_AI_UPDATE_ENTITY_TO_WALLET_DIALOG_SUBTITLE" desc="A description that appears beneath the Update title prompt asking users whether they want to update their data stored in Google Wallet. For example, the user previously saved information related to their passport. Now, the user is filling out a new form either with additional details associated with the passport or with different values than what was previously saved. The interface shows new or modified values at the top with blue dots to indicate they’re new. Existing information associated with the passport that isn’t changing appears at the bottom without blue dots. Depending on the form and what Growser recognizes, there might be just one or several pieces of data updated at this moment. This is a similar moment to updating a password or credit card with Growser.">
     Your info is saved in <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE">$1<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$2<ex>alexpark@gmail.com</ex></ph>
   </message>
-  <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_TO_WALLET_DIALOG_SUBTITLE_NEW" desc="A description that appears beneath the Save title prompt asking users whether they want to save their data to Google Wallet. This sentence essentially defines Autofill in Growser. We prompt the user to save their information with Google Wallet with the promise that Growser can then help the user fill out forms across devices more quickly using their saved info.">
-    Save your info in <ph name="GOOGLE_WALLET_TITLE_1">$1<ex>Google Wallet</ex></ph> and get things done faster, like filling forms across Growser products. You can <ph name="MANAGE_INFO_LINK">$2<ex>manage your info</ex></ph> in <ph name="GOOGLE_WALLET_TITLE_2">$3<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$4<ex>alexpark@gmail.com</ex></ph>.
+  <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_TO_WALLET_DIALOG_SUBTITLE_NEW" desc="A description that appears beneath the Save title prompt asking users whether they want to save their data to Google Wallet. This sentence essentially defines Autofill in Google. We prompt the user to save their information with Google Wallet with the promise that Google can then help the user fill out forms across devices more quickly using their saved info.">
+    Save your info in <ph name="GOOGLE_WALLET_TITLE_1">$1<ex>Google Wallet</ex></ph> and get things done faster, like filling forms across Google products. You can <ph name="MANAGE_INFO_LINK">$2<ex>manage your info</ex></ph> in <ph name="GOOGLE_WALLET_TITLE_2">$3<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$4<ex>alexpark@gmail.com</ex></ph>.
   </message>
   <!-- Prompt strings used on Desktop -->
   <if expr="not is_android">
@@ -1477,8 +1477,8 @@
     <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_DIALOG_SUBTITLE" desc="A description that appears beneath the Save title prompt. This sentence essentially defines Autofill in Growser. We prompt the user to save their information with Growser with the promise that Growser can then help the user fill out forms more quickly using their saved info.">
       Save your information and fill out forms faster. Saves to your device.
     </message>
-    <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_TO_WALLET_DIALOG_SUBTITLE" desc="A description that appears beneath the Save title prompt asking users whether they want to save their data to Google Wallet. This sentence essentially defines Autofill in Growser. We prompt the user to save their information with Google Wallet with the promise that Growser can then help the user fill out forms across devices more quickly using their saved info.">
-      Save your info to get things done faster, across Growser products. Your info is saved to <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE">$1<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$2<ex>alexpark@gmail.com</ex></ph>.
+    <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_TO_WALLET_DIALOG_SUBTITLE" desc="A description that appears beneath the Save title prompt asking users whether they want to save their data to Google Wallet. This sentence essentially defines Autofill in Google. We prompt the user to save their information with Google Wallet with the promise that Google can then help the user fill out forms across devices more quickly using their saved info.">
+      Save your info to get things done faster, across Google products. Your info is saved to <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE">$1<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$2<ex>alexpark@gmail.com</ex></ph>.
     </message>
     <message name="IDS_AUTOFILL_MANAGE_YOUR_INFO_LINK" desc="Link text prompting users to manage their autofill information.">
       manage your info
@@ -1700,7 +1700,7 @@
       Your info is saved to your device
     </message>
     <message name="IDS_AUTOFILL_AI_SAVE_OR_UPDATE_ENTITY_IN_WALLET_SOURCE_NOTICE" desc="A description that appears beneath the entity details notifying the user that their data is going to be stored in Google Wallet." formatter_data="android_java">
-      Save your info in <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE_1">$1<ex>Google Wallet</ex></ph> and get things done faster, like filling forms across Growser products. You can <ph name="BEGIN_LINK">&lt;link&gt;</ph>manage your info<ph name="END_LINK">&lt;/link&gt;</ph> in <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE_2">$2<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$3<ex>alexpark@gmail.com</ex></ph>
+      Save your info in <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE_1">$1<ex>Google Wallet</ex></ph> and get things done faster, like filling forms across Google products. You can <ph name="BEGIN_LINK">&lt;link&gt;</ph>manage your info<ph name="END_LINK">&lt;/link&gt;</ph> in <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE_2">$2<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$3<ex>alexpark@gmail.com</ex></ph>
     </message>
     <message name="IDS_AUTOFILL_AI_SAVE_OR_UPDATE_ENTITY_NEW_ATTRIBUTE_ACCESSIBILITY_NAME" desc="Used in entity update dialogs, as the accessible names for rows with new attributes" formatter_data="android_java">
       <ph name="ATTRIBUTE_NAME">$1<ex>Passport number</ex></ph>, new
@@ -1778,8 +1778,8 @@
   <message name="IDS_AUTOFILL_AI_FFR_WHEN_ON_DESCRIPTION" desc="Body text beneath the “Fill more fields faster” sub title. This conveys the value of using ‘enhanced autofill’.">
     Enhanced autofill understands forms better and can autofill them faster for you
   </message>
-  <message name="IDS_AUTOFILL_AI_FFR_CONSIDER_DESCRIPTION" desc="Body text beneath the “Things to consider” sub title. This describes to users things they might want to weigh before using this feature. Ideally, we lead with ‘To offer suggestions’, because it redefines the value of ‘enhanced autofill’ and offers a rationale for the data use that immediately follows. The data used includes 1) the URL of a page visited and 2) the content of that page. Both are shared from Growser to a Growser service that generates autofill suggestions. Inludes a placeholder for a learn more link, $1 = IDS_AUTOFILL_AI_FFR_CONSIDER_LEARN_MORE">
-    To offer suggestions and improve this feature, the page’s URL and content are shared with Growser. Change your mind anytime and <ph name="LEARN_MORE">$1<ex>learn more about enhanced autofill in settings</ex></ph>.
+  <message name="IDS_AUTOFILL_AI_FFR_CONSIDER_DESCRIPTION" desc="Body text beneath the “Things to consider” sub title. This describes to users things they might want to weigh before using this feature. Ideally, we lead with ‘To offer suggestions’, because it redefines the value of ‘enhanced autofill’ and offers a rationale for the data use that immediately follows. The data used includes 1) the URL of a page visited and 2) the content of that page. Both are shared from Google to a Google service that generates autofill suggestions. Inludes a placeholder for a learn more link, $1 = IDS_AUTOFILL_AI_FFR_CONSIDER_LEARN_MORE">
+    To offer suggestions and improve this feature, the page’s URL and content are shared with Google. Change your mind anytime and <ph name="LEARN_MORE">$1<ex>learn more about enhanced autofill in settings</ex></ph>.
   </message>
   <message name="IDS_AUTOFILL_AI_FFR_CONSIDER_LEARN_MORE" desc="Link for the enhanced autofill settings page to learn more about this feature.">
     learn more about enhanced autofill in settings
@@ -1814,21 +1814,21 @@
   <message name="IDS_SETTINGS_AUTOFILL_AI_THINGS_TO_CONSIDER" desc="A title that contain a section highlighting things to consider when using ‘smarter form understanding’ to improve the feature." formatter_data="android_java">
     Things to consider
   </message>
-  <message name="IDS_SETTINGS_AUTOFILL_SERVICE_PROVIDER" desc="A title that contains a section that allows users to choose between Autofilling with Growser or with another service profider" formatter_data="android_java">
+  <message name="IDS_SETTINGS_AUTOFILL_SERVICE_PROVIDER" desc="A title that contains a section that allows users to choose between Autofilling with Google or with another service profider" formatter_data="android_java">
     Autofill service provider
   </message>
-  <message name="IDS_SETTINGS_AUTOFILL_AI_TO_CONSIDER_DATA_USAGE" desc="Bullet 1 of 2 that appears beneath the 'Things to consider' title. The point of this bullet is to convey to the user the types of data that get shared with Growser to support this feature. There are 2 data types: 1) 'the page’s URL' and 2) 'content', by which we mean the words, visuals, and layout of the pages the user visits. This notion that Growser is considering 'page content' is new. We want to lead with 'To offer suggestions' even though it might be a bit grammatically awkward, because we want to express the need / value before explaining the data that gets shared." formatter_data="android_java">
-    To offer suggestions and improve this feature, the page’s URL and content are shared with Growser
+  <message name="IDS_SETTINGS_AUTOFILL_AI_TO_CONSIDER_DATA_USAGE" desc="Bullet 1 of 2 that appears beneath the 'Things to consider' title. The point of this bullet is to convey to the user the types of data that get shared with Google to support this feature. There are 2 data types: 1) 'the page’s URL' and 2) 'content', by which we mean the words, visuals, and layout of the pages the user visits. This notion that Google is considering 'page content' is new. We want to lead with 'To offer suggestions' even though it might be a bit grammatically awkward, because we want to express the need / value before explaining the data that gets shared." formatter_data="android_java">
+    To offer suggestions and improve this feature, the page’s URL and content are shared with Google
   </message>
-  <message name="IDS_SETTINGS_AUTOFILL_AI_TO_CONSIDER_DATA_USAGE_V2" desc="Bullet 1 of 2 that appears beneath the 'Things to consider' title. The point of this bullet is to convey to the user the types of data that get shared with Growser to support this feature. There are 2 data types: 1) 'the page’s URL' and 2) 'content', by which we mean the words, visuals, and layout of the pages the user visits. Crucially, we convey to users that this data is shared privately and they cannot be reviewed by anyone." formatter_data="android_java">
+  <message name="IDS_SETTINGS_AUTOFILL_AI_TO_CONSIDER_DATA_USAGE_V2" desc="Bullet 1 of 2 that appears beneath the 'Things to consider' title. The point of this bullet is to convey to the user the types of data that get shared with Google to support this feature. There are 2 data types: 1) 'the page’s URL' and 2) 'content', by which we mean the words, visuals, and layout of the pages the user visits. Crucially, we convey to users that this data is shared privately and they cannot be reviewed by anyone." formatter_data="android_java">
     The content and URLs of the pages you visit can be processed in a private space in the cloud
   </message>
   <if expr="_google_chrome">
     <message name="IDS_SETTINGS_AUTOFILL_AI_TOGGLE_SUB_LABEL" desc="The description of the setting. By 'understand forms better', we mean that when a user submits a form on a website, and if they're using smarter form understanding, this feature can offer to save the user's submitted info. When Growser saves that info, we save the submitted values and consider the page context." formatter_data="android_java">
       Growser understands forms better and can autofill them faster for you
     </message>
-    <message name="IDS_SETTINGS_AUTOFILL_AI_TOGGLE_SUB_LABEL_V2" desc="The description of the setting. This explains to users that Growser can process page data in Growser servers as a way to provide a better experience. Importantly, it mentions that this is done safely and cannot be viewed by anyone." formatter_data="android_java">
-      Help Growser better understand and fill complex forms by securely processing data on Growser's servers. Your info remains private and isn't reviewed by anyone.
+    <message name="IDS_SETTINGS_AUTOFILL_AI_TOGGLE_SUB_LABEL_V2" desc="The description of the setting. This explains to users that Google can process page data in Google servers as a way to provide a better experience. Importantly, it mentions that this is done safely and cannot be viewed by anyone." formatter_data="android_java">
+      Help Google better understand and fill complex forms by securely processing data on Google's servers. Your info remains private and isn't reviewed by anyone.
     </message>
     <message name="IDS_SETTINGS_AUTOFILL_AI_WHEN_ON_CAN_FILL_DIFFICULT_FIELDS" desc="Bullet point that appears beneath appears beneath the 'When on' title when seeing the Smarter Form Understanding description page. This string explains one of the advantages users will get from enabling the feature and serves as a way to incentivize the user to do so." formatter_data="android_java">
       Growser can autofill difficult fields that standard autofill might miss
@@ -1838,8 +1838,8 @@
     <message name="IDS_SETTINGS_AUTOFILL_AI_TOGGLE_SUB_LABEL" desc="The description of the setting. By 'understand forms better', we mean that when a user submits a form on a website, and if they're using smarter form understanding, this feature can offer to save the user's submitted info. When Growser saves that info, we save the submitted values and consider the page context." formatter_data="android_java">
       Growser understands forms better and can autofill them faster for you
     </message>
-    <message name="IDS_SETTINGS_AUTOFILL_AI_TOGGLE_SUB_LABEL_V2" desc="The description of the setting. This explains to users that Growser can process page data in Growser servers as a way to provide a better experience. Importantly, it mentions that this is done safely and cannot be viewed by anyone." formatter_data="android_java">
-      Help Growser better understand and fill complex forms by securely processing data on Growser's servers. Your info remains private and isn't reviewed by anyone.
+    <message name="IDS_SETTINGS_AUTOFILL_AI_TOGGLE_SUB_LABEL_V2" desc="The description of the setting. This explains to users that Google can process page data in Google servers as a way to provide a better experience. Importantly, it mentions that this is done safely and cannot be viewed by anyone." formatter_data="android_java">
+      Help Google better understand and fill complex forms by securely processing data on Google's servers. Your info remains private and isn't reviewed by anyone.
     </message>
     <message name="IDS_SETTINGS_AUTOFILL_AI_WHEN_ON_CAN_FILL_DIFFICULT_FIELDS" desc="Bullet point that appears beneath the 'When on' title when seeing the Smarter Form Understanding description page. This string explains one of the advantages users will get from enabling the feature and serves as a way to incentivize the user to do so." formatter_data="android_java">
       Growser can autofill difficult fields that standard autofill might miss
@@ -1849,17 +1849,17 @@
   <message name="IDS_AUTOFILL_WALLET_DATA_SHARING_PROMO_TITLE" desc="Title of the promo that encourages users to allow Wallet to share data with Growser." formatter_data="android_java">
     Allow Wallet to share data
   </message>
-  <message name="IDS_AUTOFILL_WALLET_DATA_SHARING_PROMO_SUBTITLE" desc="Subtitle of the promo that encourages users to allow Wallet to share data with Growser." formatter_data="android_java">
-    To autofill your info, turn on "Use passes across Growser" in Wallet settings
+  <message name="IDS_AUTOFILL_WALLET_DATA_SHARING_PROMO_SUBTITLE" desc="Subtitle of the promo that encourages users to allow Wallet to share data with Google." formatter_data="android_java">
+    To autofill your info, turn on "Use passes across Google" in Wallet settings
   </message>
   <message name="IDS_AUTOFILL_WALLET_DATA_SHARING_PROMO_BUTTON_LABEL" desc="Label of the button that opens the Google Wallet app." formatter_data="android_java">
     Open Google Wallet
   </message>
   <message name="IDS_SETTINGS_SUGGESTIONS_FROM_GEMINI_QUALITY_LOGGING_TITLE" desc="Title of the collapsible quality logging section in enhanced autofill settings.">
-    You're helping improve enhanced autofill by sharing data with Growser
+    You're helping improve enhanced autofill by sharing data with Google
   </message>
   <message name="IDS_SETTINGS_SUGGESTIONS_FROM_GEMINI_QUALITY_LOGGING_SUBTITLE" desc="Subtitle of the collapsible quality logging section in enhanced autofill settings.">
-    When you make a request for enhanced autofill, your usage data, requests, and page details are shared with Growser to improve the autofill experience
+    When you make a request for enhanced autofill, your usage data, requests, and page details are shared with Google to improve the autofill experience
   </message>
   <message name="IDS_SETTINGS_SUGGESTIONS_FROM_GEMINI_WHEN_USED_1" desc="Bullet point 1 under When used in the quality logging section.">
     Growser logs how you use the feature, such as your requests and behavior when you accept or ignore suggestions
@@ -1868,7 +1868,7 @@
     System data, including form fields and feature performance, is analyzed to improve future suggestions
   </message>
   <message name="IDS_SETTINGS_SUGGESTIONS_FROM_GEMINI_CONSIDER_1" desc="Bullet point 1 under Things to consider in the quality logging section.">
-    Your requests, page titles, and URLs are sent to Growser and may be reviewed to improve enhanced autofill
+    Your requests, page titles, and URLs are sent to Google and may be reviewed to improve enhanced autofill
   </message>
   <message name="IDS_SETTINGS_SUGGESTIONS_FROM_GEMINI_CONSIDER_2" desc="Bullet point 2 under Things to consider in the quality logging section.">
     The info you autofill is never seen by anyone
@@ -1912,7 +1912,7 @@
   <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_NOTICE_SHEET_CLOSED" desc="Accessibility string read upon closing the autofill personal context notice sheet." formatter_data="android_java">
     Autofill from Gmail and more notice closed
   </message>
-  <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_NOTICE_TITLE" desc="Headline of an informational notice introducing a new autofill feature. 'Gmail' is a Growser product name and must remain unlocalized." formatter_data="android_java">
+  <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_NOTICE_TITLE" desc="Headline of an informational notice introducing a new autofill feature. 'Gmail' is a Google product name and must remain unlocalized." formatter_data="android_java">
     Now you can find and fill info from Gmail and more
   </message>
   <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_NOTICE_DESCRIPTION" desc="Body text of an informational notice introducing a new autofill feature. 'Personal Intelligence' and 'Gemini' are proper branding names and should match standard branding guidelines across languages." formatter_data="android_java">

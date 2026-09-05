@@ -134,7 +134,7 @@
   <message name="IDS_AUTOFILL_SAVE_CVC_PROMPT_EXPLANATION_LOCAL" desc="Explanation text for the Autofill save CVC prompt that offers to save CVC for existing local cards. This prompt is shown if a CVC is detected for an existing local card on form submission.">
     This card's CVC will be encrypted and saved to your device for faster checkout
   </message>
-  <message name="IDS_AUTOFILL_FIX_FLOW_PROMPT_SAVE_CARD_LABEL" desc="Text to show on the button to save the card to Growser when the fix flow dialog is shown after the Autofill save card prompt." formatter_data="android_java">
+  <message name="IDS_AUTOFILL_FIX_FLOW_PROMPT_SAVE_CARD_LABEL" desc="Text to show on the button to save the card to Google when the fix flow dialog is shown after the Autofill save card prompt." formatter_data="android_java">
     Save card
   </message>
   <if expr="is_linux">
@@ -1031,14 +1031,14 @@
   <message name="IDS_AUTOFILL_CARD_BNPL_PAY_LATER_PAYMENT_OPTION_CHECKOUT_AMOUNT_TOO_HIGH" desc="Text for the disabled payment option button in the BNPL Pay Later tab, explaining that the checkout amount is too high for the BNPL issuer to support.">
       Maximum purchase <ph name="CHECKOUT_AMOUNT_MAXIMUM">$1<ex>$10,000.00</ex></ph>
   </message>
-  <message name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_AI_FOOTNOTE" desc="A note explaining that Growser will collect data from the checkout page to determine the checkout amount.">
-      Content from the checkout page is shared with Growser to offer these options. To hide pay later options in autofill, go to <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT">$1<ex>payment settings</ex></ph>.
+  <message name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_AI_FOOTNOTE" desc="A note explaining that Google will collect data from the checkout page to determine the checkout amount.">
+      Content from the checkout page is shared with Google to offer these options. To hide pay later options in autofill, go to <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT">$1<ex>payment settings</ex></ph>.
   </message>
-  <message name="IDS_AUTOFILL_CARD_BNPL_PAY_LATER_OPTIONS_AI_FOOTNOTE" desc="A note explaining that Growser will collect data from the checkout page to determine the checkout amount and that payment plans are subject to eligibility.">
-      Content from the checkout page is shared with Growser to offer these options. Payment plans are subject to eligibility. To hide pay later options in autofill, go to <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT">$1<ex>payment settings</ex></ph>.
+  <message name="IDS_AUTOFILL_CARD_BNPL_PAY_LATER_OPTIONS_AI_FOOTNOTE" desc="A note explaining that Google will collect data from the checkout page to determine the checkout amount and that payment plans are subject to eligibility.">
+      Content from the checkout page is shared with Google to offer these options. Payment plans are subject to eligibility. To hide pay later options in autofill, go to <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT">$1<ex>payment settings</ex></ph>.
   </message>
-  <message name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_FOR_AI_AMOUNT_EXTRACTION_NOTE" desc="A note explaining that Growser will collect data from the checkout page to determine the checkout amount. This string is only part of what's shown on UI and is used for embolding text for first time users.">
-      Content from the checkout page is shared with Growser to offer these options.
+  <message name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_FOR_AI_AMOUNT_EXTRACTION_NOTE" desc="A note explaining that Google will collect data from the checkout page to determine the checkout amount. This string is only part of what's shown on UI and is used for embolding text for first time users.">
+      Content from the checkout page is shared with Google to offer these options.
   </message>
   <message name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION" desc="Text shown in the footnote of the BNPL select provider screen, instructing users how to hide the pay later options.">
   To hide pay later options, go to <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT">$1<ex>payment settings</ex></ph>
@@ -1052,7 +1052,7 @@
     <message name="IDS_AUTOFILL_BNPL_SELECT_PROVIDER_TITLE_DESCRIPTION" desc="Accessibility description for the title of the BNPL select provider screen containing the combined GPay logo image.">
     <ph name="SELECT_PROVIDER_TITLE">$1<ex>Choose a pay later provider</ex></ph>. <ph name="LOGO_DESCRIPTION">$2<ex>Google Pay logo</ex></ph>
   </message>
-  <message name="IDS_AUTOFILL_CARD_BNPL_LINKED_ISSUER_PILL_LABEL" desc="Label for the linked issuer pill view, which may be displayed on the BNPL select provider screen that prompts the user to choose a pay later provider. If this label is present, it indicates that the user has previously associated this BNPL provider with their Growser account." formatter_data="android_java">
+  <message name="IDS_AUTOFILL_CARD_BNPL_LINKED_ISSUER_PILL_LABEL" desc="Label for the linked issuer pill view, which may be displayed on the BNPL select provider screen that prompts the user to choose a pay later provider. If this label is present, it indicates that the user has previously associated this BNPL provider with their Google account." formatter_data="android_java">
     Linked
   </message>
   <message name="IDS_AUTOFILL_PAY_NOW" desc="Label for the tab in the autofill dropdown allowing the user to pay using a standard payment method, such as a credit card." formatter_data="android_java">
@@ -1076,10 +1076,10 @@
   <message name="IDS_AUTOFILL_DISABLED_VIRTUAL_CARD_SUGGESTION_IPH_BUBBLE_LABEL_DESKTOP_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screenreader text for the `In-Product Help(IPH)` bubble for grayed out virtual card suggestions on Growser Desktop.">
       Cards not accepted by this merchant are disabled such as virtual cards.
   </message>
-  <message name="IDS_AUTOFILL_DOWNSTREAM_CARD_AWARENESS_IPH_BUBBLE_LABEL" desc="Text shown in the `In-Product Help(IPH)` bubble for externally-saved card suggestions. This IPH is displayed when a user interacts with a payment form for the first time after adding a card through other Growser services outside of Growser.">
+  <message name="IDS_AUTOFILL_DOWNSTREAM_CARD_AWARENESS_IPH_BUBBLE_LABEL" desc="Text shown in the `In-Product Help(IPH)` bubble for externally-saved card suggestions. This IPH is displayed when a user interacts with a payment form for the first time after adding a card through other Google services outside of Google.">
       You can autofill cards that are saved in Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_DOWNSTREAM_CARD_AWARENESS_IPH_BUBBLE_LABEL_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screenreader text for the `In-Product Help(IPH)` bubble for downstream card awareness. This IPH is displayed when a user interacts with a payment form for the first time after adding a card through other Growser services outside of Growser.">
+  <message name="IDS_AUTOFILL_DOWNSTREAM_CARD_AWARENESS_IPH_BUBBLE_LABEL_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screenreader text for the `In-Product Help(IPH)` bubble for downstream card awareness. This IPH is displayed when a user interacts with a payment form for the first time after adding a card through other Google services outside of Google.">
       You can autofill cards that are saved in Google Wallet.
   </message>
   <!-- virtual cards related strings - end -->
@@ -1621,7 +1621,7 @@
 To hide pay later options, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>payment settings<ph name="END_LINK">&lt;/link&gt;</ph>
     </message>
     <message name="IDS_AUTOFILL_BNPL_ISSUER_BOTTOM_SHEET_AI_TERMS_LABEL" desc="Combined label for the BNPL issuer terms, the AI data sharing notice, and instructions on how to hide the pay later options. Appears in the BNPL select provider bottom sheet." formatter_data="android_java">
-      <ph name="BEGIN_BOLD">&lt;bold&gt;</ph>Content from the checkout page is shared with Growser to offer these options.<ph name="END_BOLD">&lt;/bold&gt;</ph> Payment plans are subject to eligibility. To hide pay later options, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>payment settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+      <ph name="BEGIN_BOLD">&lt;bold&gt;</ph>Content from the checkout page is shared with Google to offer these options.<ph name="END_BOLD">&lt;/bold&gt;</ph> Payment plans are subject to eligibility. To hide pay later options, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>payment settings<ph name="END_LINK">&lt;/link&gt;</ph>.
     </message>
   </if>
 
@@ -1656,13 +1656,13 @@ To hide pay later options, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>payment 
     <message name="IDS_AUTOFILL_SETTINGS_PAGE_ENABLE_CVC_STORAGE_WITH_DELETE_LINK_SUBLABEL" desc="Sublabel for the payments settings page that would bulk delete all the CVCs when clicked on it. that enables the user to store and use CVC for payments autofill. There is also a hyperlinked text which bulk deletes all the CVC data. This sublabel is used when we have CVC data present on the local DB.">
       Check out faster when your CVCs are saved. <ph name="LINK_BEGIN">&lt;a href="#"&gt;</ph>Delete saved security codes<ph name="LINK_END">&lt;/a&gt;</ph>
     </message>
-    <message name="IDS_AUTOFILL_SETTINGS_PAGE_BULK_REMOVE_CVC_TITLE" desc="Title for the modal dialog when the user is trying to bulk remove/delete all the CVCs stored locally and on Growser servers.">
+    <message name="IDS_AUTOFILL_SETTINGS_PAGE_BULK_REMOVE_CVC_TITLE" desc="Title for the modal dialog when the user is trying to bulk remove/delete all the CVCs stored locally and on Google servers.">
       Delete saved security codes?
     </message>
     <message name="IDS_AUTOFILL_SETTINGS_PAGE_BULK_REMOVE_CVC_DESCRIPTION" desc="Description for the modal dialog when the user is trying to bulk remove/delete all the CVCs stored locally and on Growser servers.">
       All security codes saved on your device and in Growser sync chain will be deleted
     </message>
-    <message name="IDS_AUTOFILL_SETTINGS_PAGE_BULK_REMOVE_CVC_FROM_WALLET_DESCRIPTION" desc="Description for the modal dialog when the user is trying to bulk remove/delete all the CVCs stored locally and on Growser servers.">
+    <message name="IDS_AUTOFILL_SETTINGS_PAGE_BULK_REMOVE_CVC_FROM_WALLET_DESCRIPTION" desc="Description for the modal dialog when the user is trying to bulk remove/delete all the CVCs stored locally and on Google servers.">
       All security codes saved on your device and in Google Wallet will be deleted
     </message>
     <message name="IDS_AUTOFILL_SETTINGS_PAGE_CVC_TAG_FOR_CREDIT_CARD_LIST_ENTRY" desc="Tag present on each entry in the credit card list on the payments settings page if that entry has a cvc saved to it.">
@@ -1670,12 +1670,12 @@ To hide pay later options, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>payment 
     </message>
   </if>
   <if expr="is_ios or is_android">
-    <message name="IDS_AUTOFILL_SETTINGS_PAGE_BULK_REMOVE_CVC_LABEL" desc="Label for the payments settings page button that allows the user to bulk delete all the CVCs stored locally and on Growser servers." formatter_data="android_java">
+    <message name="IDS_AUTOFILL_SETTINGS_PAGE_BULK_REMOVE_CVC_LABEL" desc="Label for the payments settings page button that allows the user to bulk delete all the CVCs stored locally and on Google servers." formatter_data="android_java">
       Delete saved security codes
     </message>
   </if>
   <if expr="is_ios">
-    <message name="IDS_AUTOFILL_SETTINGS_PAGE_DELETE_CVC_STORAGE_LABEL" desc="Description for the payments settings page button that allows the user to bulk delete all the CVCs stored locally and on Growser servers.">
+    <message name="IDS_AUTOFILL_SETTINGS_PAGE_DELETE_CVC_STORAGE_LABEL" desc="Description for the payments settings page button that allows the user to bulk delete all the CVCs stored locally and on Google servers.">
       Your payment methods will still be saved
     </message>
   </if>
@@ -1741,7 +1741,7 @@ To hide pay later options, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>payment 
     Your card is saved in Google Wallet so you can autofill it for future purchases
   </message>
   <message name="IDS_AUTOFILL_SAVE_CARD_TO_WALLET_CONFIRMATION_SUCCESS_DESCRIPTION_TEXT_V2" desc="Description text for confirmation shown after Google Wallet save card is successfully uploaded and saved to the server.">
-    This card is saved in Google Wallet so you can use it across Growser services
+    This card is saved in Google Wallet so you can use it across Google services
   </message>
   <message name="IDS_AUTOFILL_SAVE_CARD_CONFIRMATION_FAILURE_DESCRIPTION_TEXT" desc="Description text for confirmation shown after save card upload to the server was unsuccessful.">
     This card couldn't be saved in your Growser sync chain. It's saved to Growser on this device instead.
@@ -1753,7 +1753,7 @@ To hide pay later options, go to <ph name="BEGIN_LINK">&lt;link&gt;</ph>payment 
     This IBAN is saved in your Growser sync chain so you can use it across Growser services.
   </message>
   <message name="IDS_AUTOFILL_SAVE_IBAN_TO_WALLET_CONFIRMATION_SUCCESS_DESCRIPTION_TEXT" desc="Description text for confirmation shown after upload save IBAN attempt was successful and it was uploaded to the server. The wording specifically references Google Wallet.">
-    This IBAN is saved in Google Wallet so you can use it across Growser services.
+    This IBAN is saved in Google Wallet so you can use it across Google services.
   </message>
   <message name="IDS_AUTOFILL_SAVE_IBAN_CONFIRMATION_FAILURE_DESCRIPTION_TEXT" desc="Description text for confirmation shown after upload save IBAN attempt was failed and and it was not uploaded to the server.">
     This IBAN couldn't be saved in your Growser sync chain. It's saved to Growser on this device instead. Growser will ask you again the next time you use this IBAN.

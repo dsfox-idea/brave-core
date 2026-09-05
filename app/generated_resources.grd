@@ -547,16 +547,16 @@ are declared in tools/grit/grit_args.gni.
         Browse across devices
       </message>
       <message name="IDS_RECENT_TABS_SYNC_HISTORY_PROMO_BODY_SIGNED_OUT" desc="Body of the sync hystory promo for signed out users. Tells users to sign in and sync hystory to see synced tabs, passwords, and other data from other devices.">
-        To get your tabs from your other devices, sign in and sync history. You’ll also get your passwords and more on all your devices. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+        To get your tabs from your other devices, sign in and sync history. You’ll also get your passwords and more on all your devices. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
       </message>
       <message name="IDS_RECENT_TABS_SYNC_HISTORY_PROMO_BODY_PENDING_SIGN_IN" desc="Body of the sync hystory promo for users with pending sign in, who have history sync off.">
-        To get your tabs from your other devices, verify it’s you and sync your history and tabs. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+        To get your tabs from your other devices, verify it’s you and sync your history and tabs. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
       </message>
       <message name="IDS_RECENT_TABS_SYNC_HISTORY_PROMO_BODY_PENDING_SIGN_IN_SYNC_HISTORY_ON" desc="Body of the sync hystory promo for users with pending sign in, who have history sync on.">
-        To get your tabs from your other devices, verify it’s you. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+        To get your tabs from your other devices, verify it’s you. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
       </message>
       <message name="IDS_RECENT_TABS_SYNC_HISTORY_PROMO_BODY_SIGNED_IN_SYNC_OFF" desc="Body of the sync hystory promo for signed in users with sync turned off.">
-        To get your tabs from your other devices, sync your history and tabs to <ph name="ACCOUNT_EMAIL">$1<ex>john@google.com</ex></ph>. You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+        To get your tabs from your other devices, sync your history and tabs to <ph name="ACCOUNT_EMAIL">$1<ex>john@google.com</ex></ph>. You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
       </message>
       <message name="IDS_HISTORY_SYNC_HISTORY_BUTTON" desc="Label displayed on a button to let user turn on sync history or sign in to Growser to get synced tab history.">
         Sync history
@@ -643,13 +643,13 @@ are declared in tools/grit/grit_args.gni.
         <message name="IDS_CONTENT_CONTEXT_SAVE_TO_MEMORY_BANKS" desc="The name of the Save to Memory Banks command in the context menu">
           Save to Memory
         </message>
-        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_DIALOG_TITLE" desc="The title of a dialog that asks whether to integrate the accessibility image labeling service of Growser to Growser.">
-          Get image descriptions from Growser?
+        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_DIALOG_TITLE" desc="The title of a dialog that asks whether to integrate the accessibility image labeling service of Google to Google.">
+          Get image descriptions from Google?
         </message>
-        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_ENABLE" desc="The button text that allows integrating the accessibility labels service of Growser. This should use the same verb as IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND.">
+        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_ENABLE" desc="The button text that allows integrating the accessibility labels service of Google. This should use the same verb as IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND.">
           Yes, I'm in
         </message>
-        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_DISABLE" desc="The button text that disallows integrating the accessibility labels service of Growser.">
+        <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_BUBBLE_DISABLE" desc="The button text that disallows integrating the accessibility labels service of Google.">
           No thanks
         </message>
         <message name="IDS_CONTENT_CONTEXT_LIVE_CAPTION_ENABLE" desc="The name of the Live Caption command in the content area context menu to enable Live Caption">
@@ -913,35 +913,35 @@ are declared in tools/grit/grit_args.gni.
               &amp;Remove from dictionary
             </message>
           </if>
-          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_MENU_OPTION" desc="The context-menu item that asks whether to integrate the accessibility image labeling service of Growser to Growser.">
-            Get image descriptions from Growser
+          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_MENU_OPTION" desc="The context-menu item that asks whether to integrate the accessibility image labeling service of Google to Google.">
+            Get image descriptions from Google
           </message>
-          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Growser to Growser always.">
+          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Google to Google always.">
             Always
           </message>
-          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND_ONCE" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Growser to Growser, for a single use.">
+          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND_ONCE" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Google to Google, for a single use.">
             Just once
           </message>
           <message name="IDS_CONTENT_CONTEXT_RUN_LAYOUT_EXTRACTION" desc="The context-menu item that runs a local machine intelligence model to extract visual layout semantics.">
            Recognize visual layout semantics
           </message>
-          <message name="IDS_CONTENT_CONTEXT_SPELLING_ASK_GOOGLE" desc="The context-menu item that asks whether to integrate the spelling service of Growser to Growser.">
+          <message name="IDS_CONTENT_CONTEXT_SPELLING_ASK_GOOGLE" desc="The context-menu item that asks whether to integrate the spelling service of Google to Google.">
             Use enhanced spell check
           </message>
           <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_TITLE" desc="The title of the confirmation modal that pops up when the user turns on 'Use enhanced spell check'">
             Turn on enhanced spell check
           </message>
-          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_ENABLE" desc="The button text that allows integrating the spelling service of Growser.">
+          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_ENABLE" desc="The button text that allows integrating the spelling service of Google.">
             Turn on
           </message>
-          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_DISABLE" desc="The button text that disallows integrating the spelling service of Growser.">
+          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_DISABLE" desc="The button text that disallows integrating the spelling service of Google.">
             Cancel
           </message>
           <message name="IDS_CONTENT_CONTEXT_SPELLING_CHECKING" desc="The place-holder message shown while the Spelling service is checking text">
             Loading suggestion
           </message>
           <message name="IDS_CONTENT_CONTEXT_SPELLING_NO_SUGGESTIONS_FROM_GOOGLE" desc="The message shown when we cannot get any more suggestions from the Spelling service">
-            No more suggestions from Growser
+            No more suggestions from Google
           </message>
           <message name="IDS_CONTENT_CONTEXT_SELECTALL" desc="The name of the Select All command in the content area context menu">
             Select &amp;all
@@ -1278,13 +1278,13 @@ are declared in tools/grit/grit_args.gni.
               &amp;Remove from Dictionary
             </message>
           </if>
-          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_MENU_OPTION" desc="The context-menu item that asks whether to integrate the accessibility image labeling service of Growser to Growser.">
-            Get Image Descriptions from Growser
+          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_MENU_OPTION" desc="The context-menu item that asks whether to integrate the accessibility image labeling service of Google to Google.">
+            Get Image Descriptions from Google
           </message>
-          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Growser to Growser always.">
+          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Google to Google always.">
             Always
           </message>
-          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND_ONCE" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Growser to Growser, for a single use.">
+          <message name="IDS_CONTENT_CONTEXT_ACCESSIBILITY_LABELS_SEND_ONCE" desc="The context-menu sub-item that asks whether to integrate the accessibility image labeling service of Google to Google, for a single use.">
             Just Once
           </message>
           <message name="IDS_CONTENT_CONTEXT_PDF_OCR_MENU_OPTION" desc="The context-menu item that asks whether to use the PDF OCR service to convert image to text.">
@@ -1293,23 +1293,23 @@ are declared in tools/grit/grit_args.gni.
           <message name="IDS_CONTENT_CONTEXT_RUN_LAYOUT_EXTRACTION" desc="In Title Case: The context-menu item that runs a local machine intelligence model to extract visual layout semantics.">
            Recognize Visual Layout Semantics
           </message>
-          <message name="IDS_CONTENT_CONTEXT_SPELLING_ASK_GOOGLE" desc="In Title Case: The context-menu item that asks whether to integrate the spelling service of Growser to Growser.">
+          <message name="IDS_CONTENT_CONTEXT_SPELLING_ASK_GOOGLE" desc="In Title Case: The context-menu item that asks whether to integrate the spelling service of Google to Google.">
             Use Enhanced Spell Check
           </message>
           <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_TITLE" desc="The title of the confirmation modal that pops up when the user turns on 'Use enhanced spell check'">
             Turn On Enhanced Spell Check
           </message>
-          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_ENABLE" desc="In Title Case: The button text that allows integrating the spelling service of Growser.">
+          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_ENABLE" desc="In Title Case: The button text that allows integrating the spelling service of Google.">
             Turn On
           </message>
-          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_DISABLE" desc="In Title Case: The button text that disallows integrating the spelling service of Growser.">
+          <message name="IDS_CONTENT_CONTEXT_SPELLING_BUBBLE_DISABLE" desc="In Title Case: The button text that disallows integrating the spelling service of Google.">
             Cancel
           </message>
           <message name="IDS_CONTENT_CONTEXT_SPELLING_CHECKING" desc="The place-holder message shown while the Spelling service is checking text">
             Loading suggestion
           </message>
           <message name="IDS_CONTENT_CONTEXT_SPELLING_NO_SUGGESTIONS_FROM_GOOGLE" desc="The message shown when we cannot get any more suggestions from the Spelling service">
-            No more suggestions from Growser
+            No more suggestions from Google
           </message>
           <message name="IDS_CONTENT_CONTEXT_SELECTALL" desc="In Title Case: The name of the Select All command in the content area context menu">
             Select &amp;All
@@ -1414,7 +1414,7 @@ are declared in tools/grit/grit_args.gni.
         <message name="IDS_CONTENT_CONTEXT_SPELLCHECK_MULTI_LINGUAL" desc="The name of the menu item that enables spellcheck in all of the languages that the user has selected in settings">
           &amp;All your languages
         </message>
-        <message name="IDS_CONTENT_CONTEXT_CHECK_SPELLING_WHILE_TYPING" desc="The name of the menu item that toggles the local built-in spellcheck on or off and specifically disables using Growser's spelling service.">
+        <message name="IDS_CONTENT_CONTEXT_CHECK_SPELLING_WHILE_TYPING" desc="The name of the menu item that toggles the local built-in spellcheck on or off and specifically disables using Google's spelling service.">
           &amp;Use basic spell check
         </message>
       </if>
@@ -1943,8 +1943,8 @@ are declared in tools/grit/grit_args.gni.
         <message name="IDS_SHOW_PERFORMANCE" desc="The text label of the Performance menu item">
           Performance
         </message>
-        <message name="IDS_SHOW_SEARCH_COMPANION" desc="The text label of the Growser Search Companion menu item">
-          Sear&amp;ch this page with Growser...
+        <message name="IDS_SHOW_SEARCH_COMPANION" desc="The text label of the Google Search Companion menu item">
+          Sear&amp;ch this page with Google...
         </message>
         <message name="IDS_SHOW_TRANSLATE" desc="The text label of the Translate menu item">
           T&amp;ranslate...
@@ -2002,8 +2002,8 @@ are declared in tools/grit/grit_args.gni.
         <message name="IDS_SHOW_PERFORMANCE" desc="In Title Case: The text label of the Performance menu item">
           Performance
         </message>
-        <message name="IDS_SHOW_SEARCH_COMPANION" desc="In Title Case: The text label of the Growser Search Companion menu item">
-          Sear&amp;ch This Page with Growser...
+        <message name="IDS_SHOW_SEARCH_COMPANION" desc="In Title Case: The text label of the Google Search Companion menu item">
+          Sear&amp;ch This Page with Google...
         </message>
         <message name="IDS_SHOW_TRANSLATE" desc="In Title Case: The text label of the Translate menu item">
           T&amp;ranslate...
@@ -2348,17 +2348,17 @@ are declared in tools/grit/grit_args.gni.
       <message name="IDS_PROMPT_DOWNLOAD_INSECURE_BLOCKED" desc="Message shown in the download shelf when a download is insecure, and Growser has blocked it.">
         <ph name="FILE_NAME">$1<ex>bla.exe</ex></ph> can't be downloaded securely
       </message>
-      <message name="IDS_PROMPT_APP_DEEP_SCANNING" desc="Message shown in the download shelf when Growser recommends uploading the file for additional scanning">
-        <ph name="FILE_NAME">$1<ex>bla.exe</ex></ph> may be dangerous. Send to Growser Advanced Protection for scanning?
+      <message name="IDS_PROMPT_APP_DEEP_SCANNING" desc="Message shown in the download shelf when Google recommends uploading the file for additional scanning">
+        <ph name="FILE_NAME">$1<ex>bla.exe</ex></ph> may be dangerous. Send to Google Advanced Protection for scanning?
       </message>
-        <message name="IDS_PROMPT_DEEP_SCANNING" desc="Message shown in the download shelf for all Advanced Protection and Enhanced Safe Browsing users when Growser recommends uploading the file for additional scanning.">
-        <ph name="FILE_NAME">$1<ex>bla.exe</ex></ph> may be dangerous. Send to Growser for scanning?
+        <message name="IDS_PROMPT_DEEP_SCANNING" desc="Message shown in the download shelf for all Advanced Protection and Enhanced Safe Browsing users when Google recommends uploading the file for additional scanning.">
+        <ph name="FILE_NAME">$1<ex>bla.exe</ex></ph> may be dangerous. Send to Google for scanning?
       </message>
       <message name="IDS_BLOCK_REASON_UNCOMMON_DOWNLOAD_IN_ADVANCED_PROTECTION" desc="Message shown to the user on chrome://downloads page to explain that this download is blocked because it is uncommon. This variant is shown when the user is enrolled in the Advanced Protection program.">
         This file was blocked by Advanced Protection.
       </message>
       <message name="IDS_BLOCK_REASON_DEEP_SCANNING_UPDATED" desc="Message shown on chrome://downloads when a download is being scanned">
-        This file might be a virus or malware. You can send it to Growser to check if it's unsafe.
+        This file might be a virus or malware. You can send it to Google to check if it's unsafe.
       </message>
       <message name="IDS_BLOCK_REASON_DEEP_SCANNING_SECOND_UPDATED" desc="Second line of the message shown on chrome://downloads when a download is being scanned. Follows IDS_BLOCK_REASON_DEEP_SCANNING_UPDATED">
         Scanning for malware...
@@ -2630,10 +2630,10 @@ are declared in tools/grit/grit_args.gni.
       <message name="IDS_DOWNLOAD_PAUSED_ACCESSIBLE_ALERT" desc="The title of a download notification: the current download status is paused. This message is for screen reader users.">
                 Download paused: <ph name="FILE_NAME">$1<ex>somedocument.pdf</ex></ph>.
       </message>
-      <message name="IDS_PROMPT_DEEP_SCANNING_ACCESSIBLE_ALERT" desc="The title of a download notification indicating that the file may be malicious and Safe Browsing recommends sending the file to Growser. This message is for screen reader users">
-        <ph name="FILE_NAME">$1<ex>file.exe</ex></ph> may be dangerous. Send to Growser for scanning?
+      <message name="IDS_PROMPT_DEEP_SCANNING_ACCESSIBLE_ALERT" desc="The title of a download notification indicating that the file may be malicious and Safe Browsing recommends sending the file to Google. This message is for screen reader users">
+        <ph name="FILE_NAME">$1<ex>file.exe</ex></ph> may be dangerous. Send to Google for scanning?
       </message>
-      <message name="IDS_DEEP_SCANNING_ACCESSIBLE_ALERT" desc="The title of a download notification indicating that the file may be malicious, and the Advanced Protection Program recommends sending the file to Growser. This message is for screen reader users">
+      <message name="IDS_DEEP_SCANNING_ACCESSIBLE_ALERT" desc="The title of a download notification indicating that the file may be malicious, and the Advanced Protection Program recommends sending the file to Google. This message is for screen reader users">
         <ph name="FILE_NAME">$1<ex>file.exe</ex></ph> is being scanned.
       </message>
       <message name="IDS_PROMPT_DOWNLOAD_INSECURE_BLOCKED_ACCESSIBLE_ALERT" desc="The title of a download notification indicating that the download was delivered insecurely. This message is for screen reader users">
@@ -2760,13 +2760,13 @@ are declared in tools/grit/grit_args.gni.
           Customize Touch Bar
         </message>
 
-        <message name="IDS_TOUCH_BAR_GOOGLE_SEARCH" desc="Text for the search button in the touch bar when Growser is the default search provider. Pressing the button will bring focus to the omnibox.">
+        <message name="IDS_TOUCH_BAR_GOOGLE_SEARCH" desc="Text for the search button in the touch bar when Google is the default search provider. Pressing the button will bring focus to the omnibox.">
           Search or type URL
         </message>
         <message name="IDS_TOUCH_BAR_NO_DEFAULT_SEARCH" desc="Text for the search button in the touch bar when there is no default search provider. Pressing the button will bring focus to the omnibox.">
           Type URL
         </message>
-        <message name="IDS_TOUCH_BAR_SEARCH" desc="Text for the search button in the touch bar when Growser is not the default search provider. Pressing the button will bring focus to the omnibox. $1 is the name of the search provider)">
+        <message name="IDS_TOUCH_BAR_SEARCH" desc="Text for the search button in the touch bar when Google is not the default search provider. Pressing the button will bring focus to the omnibox. $1 is the name of the search provider)">
           Search <ph name="SEARCH_ENGINE">$1<ex>Bing</ex></ph>
         </message>
         <message name="IDS_TOUCH_BAR_BACK_FORWARD_CUSTOMIZATION_LABEL" desc="Customization label for the back and forward buttons in the touch bar.">
@@ -5949,8 +5949,8 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_EXTENSION_NTP_OVERRIDDEN_DIALOG_TITLE_GENERIC" desc="The title of the dialog informing the user that the new tab page has been overridden by an extension.">
         Did you mean to change this page?
       </message>
-      <message name="IDS_EXTENSION_NTP_OVERRIDDEN_DIALOG_TITLE_BACK_TO_GOOGLE" desc="The title of the dialog informing the user that the new tab page has been overridden by an extension, and asking if they want to change back to Growser.">
-        Change back to Growser?
+      <message name="IDS_EXTENSION_NTP_OVERRIDDEN_DIALOG_TITLE_BACK_TO_GOOGLE" desc="The title of the dialog informing the user that the new tab page has been overridden by an extension, and asking if they want to change back to Google.">
+        Change back to Google?
       </message>
       <message name="IDS_EXTENSION_NTP_OVERRIDDEN_DIALOG_BODY_GENERIC" desc="The body of the dialog informing the user that the new tab page has been overridden by an extension, indicating which extension now controls it.">
         This page was changed by the "<ph name="EXTENSION_NAME">$1<ex>Growser Arts and Culture</ex></ph>" extension
@@ -5958,7 +5958,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_EXTENSION_SEARCH_OVERRIDDEN_DIALOG_TITLE_GENERIC" desc="The title of the dialog informing the user that the default search engine has been overridden by an extension.">
         Did you mean to change your search provider?
       </message>
-      <message name="IDS_EXTENSION_SEARCH_OVERRIDDEN_DIALOG_TITLE_BACK_TO_GOOGLE" desc="The title of the dialog informing the user that the default search engine has been overridden by an extension, and asking if they want to change back to Growser.">
+      <message name="IDS_EXTENSION_SEARCH_OVERRIDDEN_DIALOG_TITLE_BACK_TO_GOOGLE" desc="The title of the dialog informing the user that the default search engine has been overridden by an extension, and asking if they want to change back to Google.">
         Change back to Google Search?
       </message>
       <message name="IDS_EXTENSION_SEARCH_OVERRIDDEN_DIALOG_TITLE_BACK_TO_OTHER" desc="The title of the dialog informing the user that the default search engine has been overridden by an extension, and asking if they want to change back to their old provider.">
@@ -6605,7 +6605,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Add Username
       </message>
       <message name="IDS_ADD_USERNAME_BODY" desc="Body text in the add username bubble.">
-        To help Growser Password Manager save your sign-in info, add your username for this site
+        To help Google Password Manager save your sign-in info, add your username for this site
       </message>
       <message name="IDS_UPDATE_PASSWORD" desc="The title of the save password bubble when a password can be updated.">
         Update password?
@@ -6636,13 +6636,13 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_SAVE_PASSWORD_FOOTER" desc="The footer text of the bubble that offers user to save a password to Growser.">
         Passwords are saved in your Growser sync chain so you can use them on any device
       </message>
-      <message name="IDS_PASSWORD_BUBBLES_PASSWORD_MANAGER_LINK_TEXT_SYNCED_TO_ACCOUNT" desc="The text of the Growser Password Manager links displayed on Password Manager bubbles footer when the credentials are synced to the Growser account.">
-        Growser Password Manager
+      <message name="IDS_PASSWORD_BUBBLES_PASSWORD_MANAGER_LINK_TEXT_SYNCED_TO_ACCOUNT" desc="The text of the Google Password Manager links displayed on Password Manager bubbles footer when the credentials are synced to the Google account.">
+        Google Password Manager
       </message>
-      <message name="IDS_PASSWORD_BUBBLES_FOOTER_SYNCED_TO_ACCOUNT" desc="The footer text of the bubbles that offers users to save, update or manage stored passwords in Growser and synced to their Growser account.">
+      <message name="IDS_PASSWORD_BUBBLES_FOOTER_SYNCED_TO_ACCOUNT" desc="The footer text of the bubbles that offers users to save, update or manage stored passwords in Google and synced to their Google account.">
         You can use saved passwords on any device. They're saved to <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser Password Manager</ex></ph> for <ph name="EMAIL">$2<ex>user@gmail.com</ex></ph>.
       </message>
-      <message name="IDS_PASSWORD_BUBBLES_FOOTER_TRUSTED_VAULT_ERROR" desc="The footer text of the bubbles when there is a trusted vault error, telling the user their passwords are saved to Growser Password Manager.">
+      <message name="IDS_PASSWORD_BUBBLES_FOOTER_TRUSTED_VAULT_ERROR" desc="The footer text of the bubbles when there is a trusted vault error, telling the user their passwords are saved to Google Password Manager.">
         Your passwords are saved to <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser Password Manager</ex></ph> for <ph name="EMAIL">$2<ex>user@gmail.com</ex></ph>.
       </message>
       <message name="IDS_PASSWORD_BUBBLES_SUBTITLE_TRUSTED_VAULT_ERROR" desc="The subtitle of the password bubble when saving is blocked by a trusted vault error, telling the user they need to verify their identity to get passwords on all devices.">
@@ -6660,14 +6660,14 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_PASSWORD_MANAGEMENT_BUBBLE_FOOTER_ACCOUNT_STORE_USERS" desc="The footer text of the managment bubble the lists saved password for this website. This is used only for account store users.">
         Passwords are saved to <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser Password Manager</ex></ph>.
       </message>
-      <message name="IDS_PASSWORD_SAVED_CONFIRMATION_MESSAGE_DESCRIPTION" desc="The description in the Growser Password Manager's message that appears after saving a password. This message might be shown after saving a generated password or after the user fixed an error that then allowed for the password to be saved.">
-        You can view and manage saved passwords in Growser Password Manager
+      <message name="IDS_PASSWORD_SAVED_CONFIRMATION_MESSAGE_DESCRIPTION" desc="The description in the Google Password Manager's message that appears after saving a password. This message might be shown after saving a generated password or after the user fixed an error that then allowed for the password to be saved.">
+        You can view and manage saved passwords in Google Password Manager
       </message>
-      <message name="IDS_PASSWORD_MANAGER_SAVE_PASSWORD_SIGNED_IN_MESSAGE_DESCRIPTION" desc="The description of the Growser Password Manager's save password message when the user is signed in.">
-        To Growser Password Manager for <ph name="ACCOUNT">$1<ex>user@gmail.com</ex></ph>
+      <message name="IDS_PASSWORD_MANAGER_SAVE_PASSWORD_SIGNED_IN_MESSAGE_DESCRIPTION" desc="The description of the Google Password Manager's save password message when the user is signed in.">
+        To Google Password Manager for <ph name="ACCOUNT">$1<ex>user@gmail.com</ex></ph>
       </message>
-      <message name="IDS_PASSWORD_MANAGER_UPDATE_PASSWORD_SIGNED_IN_MESSAGE_DESCRIPTION" desc="The description of the Growser Password Manager's update password message when the user is signed in.">
-        In Growser Password Manager for <ph name="ACCOUNT">$1<ex>user@gmail.com</ex></ph>
+      <message name="IDS_PASSWORD_MANAGER_UPDATE_PASSWORD_SIGNED_IN_MESSAGE_DESCRIPTION" desc="The description of the Google Password Manager's update password message when the user is signed in.">
+        In Google Password Manager for <ph name="ACCOUNT">$1<ex>user@gmail.com</ex></ph>
       </message>
       <message name="IDS_PASSWORD_CROSS_DOMAIN_FILLING_CONFIRMATION_TITLE" desc="The title of the cross domain filling confirmation popup.">
         Use your <ph name="PASSWORD_DOMAIN">$1<ex>example.com</ex> password?</ph>
@@ -7069,12 +7069,12 @@ Keep your key file in a safe place. You will need it to create new versions of y
         <message name="IDS_ABOUT_BOX_ERROR_DURING_UPDATE_CHECK" desc="The error label for errors that occurred while checking for updates in the About box.">
           An error occurred while checking for updates: <ph name="ERROR">$1<ex>Unable to contact Growser Update</ex></ph>
         </message>
-        <message name="IDS_ABOUT_BOX_GOOGLE_UPDATE_ERROR" desc="An error message from Growser Update with details.">
+        <message name="IDS_ABOUT_BOX_GOOGLE_UPDATE_ERROR" desc="An error message from Google Update with details.">
           <ph name="ERROR">$1<ex>An error message from Growser Update.</ex></ph> (error code <ph name="ERROR_CODE">$2<ex>7: 0x80000005</ex></ph>).
         </message>
       </if>
       <if expr="is_win">
-        <message name="IDS_ABOUT_BOX_ERROR_UPDATE_CHECK_FAILED" desc="The error message for the specific case when we cannot create the Growser Update component">
+        <message name="IDS_ABOUT_BOX_ERROR_UPDATE_CHECK_FAILED" desc="The error message for the specific case when we cannot create the Google Update component">
           Update check failed to start (error code <ph name="ERROR">$1<ex>0x80000005</ex></ph>).
         </message>
         <message name="IDS_ABOUT_BOX_EXTERNAL_UPDATE_IS_RUNNING" desc="The external updater is running independently.">
@@ -7173,10 +7173,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Ask <ph name="SEARCH_ENGINE_NAME">$1<ex>Growser</ex></ph> or type a URL
       </message>
       <message name="IDS_WEBUI_OMNIBOX_COMPOSE_ASK_ABOUT_THIS_PAGE" desc="Label for a button that allows the user to ask a question about the content of their current page.">
-        Ask Growser about this page
+        Ask Google about this page
       </message>
       <message name="IDS_WEBUI_OMNIBOX_COMPOSE_ASK_ABOUT_THIS_PAGE_ARIA_LABEL" desc="The aria-label for the button that allows the user to ask a question about the content of their current page. The $1 is a placeholder for the page title.">
-        Ask Growser about this page: <ph name="PAGE_TITLE">$1</ph>
+        Ask Google about this page: <ph name="PAGE_TITLE">$1</ph>
       </message>
       <message name="IDS_WEBUI_OMNIBOX_COMPOSE_ASK_ABOUT_YOUR_TABS" desc="Label for a button that guides the user to composebox's context menu using a suggestion like label.">
         Ask about your tabs
@@ -7206,7 +7206,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Allow Search to access Drive content?
       </message>
       <message name="IDS_NTP_DRIVE_DISCLAIMER_BODY" desc="Body text explaining how Drive data is handled in AIM.">
-        Your Google Drive content is accessed only to provide this file search feature. It is not used to improve Google Search. Growser will not access your Google Drive content unless you explicitly upload a file.
+        Your Google Drive content is accessed only to provide this file search feature. It is not used to improve Google Search. Google will not access your Google Drive content unless you explicitly upload a file.
       </message>
       <message name="IDS_NTP_DRIVE_DISCLAIMER_CANCEL" desc="Label on the button to cancel the Google Drive connection to AIM.">
         Cancel
@@ -7220,11 +7220,11 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_NTP_DRIVE_DISCLAIMER_TRY_AGAIN" desc="Label on the button to retry connecting to Google Drive.">
         Try again
       </message>
-      <message name="IDS_GOOGLE_SEARCH_BOX_EMPTY_HINT_MD" desc="The text displayed in the fakebox (on the New Tab page) when it is empty, Growser is the default search engine, and the Material Design UI is enabled.">
-        Search Growser or type a URL
+      <message name="IDS_GOOGLE_SEARCH_BOX_EMPTY_HINT_MD" desc="The text displayed in the fakebox (on the New Tab page) when it is empty, Google is the default search engine, and the Material Design UI is enabled.">
+        Search Google or type a URL
       </message>
-      <message name="IDS_GOOGLE_SEARCH_BOX_EMPTY_HINT_SHORT" desc="The text displayed in the fakebox (on the New Tab page) when it is empty, Growser is the default search engine, and short hint text is enabled.">
-        Search Growser
+      <message name="IDS_GOOGLE_SEARCH_BOX_EMPTY_HINT_SHORT" desc="The text displayed in the fakebox (on the New Tab page) when it is empty, Google is the default search engine, and short hint text is enabled.">
+        Search Google
       </message>
       <message name="IDS_GOOGLE_SEARCH_BOX_EMPTY_HINT_MULTIMODAL" desc="The text displayed in the multimodal searchbox when it is empty. It is meant to invite the user to add a text query to the existing image query in order to issue a 'multimodal' (image + text) query.">
         Add to your search
@@ -7260,10 +7260,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Search
       </message>
       <message name="IDS_NTP_SEARCH_BOX_PLACEHOLDER_ASK_OR_TYPE" desc="A steady state placeholder text for the NTP searchbox">
-        Ask Growser or type a URL
+        Ask Google or type a URL
       </message>
       <message name="IDS_NTP_SEARCH_BOX_DYNAMIC_PLACEHOLDER_ASK_GOOGLE" desc="One of the dynamically changing placeholder texts for the NTP searchbox">
-        Ask Growser
+        Ask Google
       </message>
       <message name="IDS_NTP_SEARCH_BOX_DYNAMIC_PLACEHOLDER_PLAN" desc="One of the dynamically changing placeholder texts for the NTP searchbox">
         Make a plan
@@ -8312,7 +8312,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Enhance your search with tabs, files, or an AI tool
       </message>
       <message name="IDS_NTP_COMPOSE_SUGGESTIONS_INFO" desc="The text underneath the composebox that explains to users how suggestions are generated.">
-        Suggestions based on your <ph name="BEGIN_LINK_GOOGLE_ACTIVITY">&lt;a target="_blank" href="$1"&gt;</ph>Growser activity<ph name="END_LINK_GOOGLE_ACTIVITY">&lt;/a&gt;</ph>
+        Suggestions based on your <ph name="BEGIN_LINK_GOOGLE_ACTIVITY">&lt;a target="_blank" href="$1"&gt;</ph>Google activity<ph name="END_LINK_GOOGLE_ACTIVITY">&lt;/a&gt;</ph>
       </message>
       <message name="IDS_NTP_COMPOSE_SMART_COMPOSE_A11Y_LABEL" translateable="false" desc="The accessibility label for the smart compose suggestion in the compose box.">
         Press Tab to accept this suggestion
@@ -8368,7 +8368,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
           other {Sharing # tabs}}
       </message>
       <message name="IDS_COMPOSE_SHARING_TABS_WITH_GOOGLE" desc="Text for the tooltip above the favicons that show a user is sharing tabs as context.">
-        Sharing tabs with Growser
+        Sharing tabs with Google
       </message>
       <message name="IDS_COMPOSE_ADD_OPEN_TABS_TO_ASK_ANYTHING" desc="Label for the action to add open tabs to ask anything in composebox.">
         Add open tabs to ask anything
@@ -8432,16 +8432,16 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Remove <ph name="TOOL_NAME">$1<ex>Deep Search</ex></ph>
       </message>
       <message name="IDS_COMPOSE_ASK_ABOUT_THIS_TAB" desc="Label for a button in the composebox that allows the user to ask a question about the content of their most recent tab.">
-        Ask Growser about previous tab
+        Ask Google about previous tab
       </message>
       <message name="IDS_COMPOSE_ASK_ABOUT_THIS_TAB_ARIA_LABEL" desc="The aria-label for the button that allows the user to ask a question about the content of their most recent tab. The $1 is a placeholder for the tab title.">
-        Ask Growser about previous tab: <ph name="TAB_TITLE">$1</ph>
+        Ask Google about previous tab: <ph name="TAB_TITLE">$1</ph>
       </message>
       <message name="IDS_COMPOSE_ASK_ABOUT_THIS_PAGE" desc="Label for a button in the composebox that allows the user to ask a question about the content of their most recent page.">
-        Ask Growser about previous page
+        Ask Google about previous page
       </message>
       <message name="IDS_COMPOSE_ASK_ABOUT_THIS_PAGE_ARIA_LABEL" desc="The aria-label for the button that allows the user to ask a question about the content of their most recent tab. The $1 is a placeholder for the page title.">
-        Ask Growser about previous page: <ph name="PAGE_TITLE">$1</ph>
+        Ask Google about previous page: <ph name="PAGE_TITLE">$1</ph>
       </message>
       <message name="IDS_NTP_ACTION_CHIP_BRAINSTORM_HEADING" desc="Heading of the brainstorm action chip on the NTP.">
         Brainstorm
@@ -8658,10 +8658,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
         About this card
       </message>
       <message name="IDS_NTP_MODULES_TASKS_INFO" desc="Text shown in the body of the info dialog of a task module.">
-        You're seeing this item based on your previous activity using Growser services. You can see your data, delete it, and change your settings at <ph name="BEGIN_LINK1">&lt;a href="https://myactivity.google.com/" target="_blank"&gt;</ph>myactivity.google.com<ph name="END_LINK1">&lt;/a&gt;</ph>.
+        You're seeing this item based on your previous activity using Google services. You can see your data, delete it, and change your settings at <ph name="BEGIN_LINK1">&lt;a href="https://myactivity.google.com/" target="_blank"&gt;</ph>myactivity.google.com<ph name="END_LINK1">&lt;/a&gt;</ph>.
         <ph name="BREAK">&lt;br&gt;</ph>
         <ph name="BREAK">&lt;br&gt;</ph>
-        Learn about the data Growser collects and why at <ph name="BEGIN_LINK2">&lt;a href="https://policies.google.com/" target="_blank"&gt;</ph>policies.google.com<ph name="END_LINK2">&lt;/a&gt;</ph>.
+        Learn about the data Google collects and why at <ph name="BEGIN_LINK2">&lt;a href="https://policies.google.com/" target="_blank"&gt;</ph>policies.google.com<ph name="END_LINK2">&lt;/a&gt;</ph>.
       </message>
       <message name="IDS_NTP_MODULES_SHOPPING_TASKS_INFO_CLOSE" desc="Text shown on close button of a task module.">
         Close
@@ -9020,7 +9020,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Get a page summary, related searches, and other useful info about this page
       </message>
       <message name="IDS_SIDE_PANEL_COMPANION_PROMO_PINNING" desc="Text shown on promotional UI appearing next to the pinned companion button, which encourages users to try the feature when Side Panel Pinning is enabled.">
-        You can search this page with Growser to get additional useful info
+        You can search this page with Google to get additional useful info
       </message>
       <message name="IDS_SIDE_PANEL_COMPANION_PROMO_SCREEN_READER" is_accessibility_with_no_ui="true" desc="Screen reader announcement on the promotional UI appearing next to the pinned companion button, which excourages users to try the feature.">
         To get a page summary, related searches, and other useful info about this page, select Google Search side panel button in the toolbar
@@ -9671,7 +9671,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Downloading <ph name="LANGUAGE">$1<ex>English</ex></ph> voices...
       </message>
       <message name="IDS_READING_MODE_LANGUAGE_MENU_VOICES_UNAVAILABLE" desc="Label for status text when a voice attempted to be downloaded from the Read Aloud language menu is unavailable.">
-        Some Growser voices may not be available right now
+        Some Google voices may not be available right now
       </message>
       <message name="IDS_READING_MODE_LANGUAGE_MENU_NO_INTERNET" desc="Label for status text when no internet prevents a voice from downloading from the Read Aloud language menu.">
         No internet
@@ -9768,8 +9768,8 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_LENS_COBROWSE_IPH_DESCRIPTION" desc="Informs user how Google Lens can be used in cobrowse.">
         Use Google Lens to learn more about specific images or text on a page.
       </message>
-      <message name="IDS_LENS_COBROWSE_CURRENT_TAB_IPH_DESCRIPTION" desc="Informs user that the content and URL of their current tab is shared with Growser to get more relevant answers.">
-        The content and the URL of your current tab is shared with Growser to give you more relevant answers. You can add or remove tabs as you browse.
+      <message name="IDS_LENS_COBROWSE_CURRENT_TAB_IPH_DESCRIPTION" desc="Informs user that the content and URL of their current tab is shared with Google to get more relevant answers.">
+        The content and the URL of your current tab is shared with Google to give you more relevant answers. You can add or remove tabs as you browse.
       </message>
 
       <!--Tooltip strings -->
@@ -10302,8 +10302,8 @@ Keep your key file in a safe place. You will need it to create new versions of y
               No thanks
             </message>
           </if>
-          <message name="IDS_IOS_PASSWORD_PROMO_BUBBLE_SUBTITLE" desc="The subtitle for the iOS promo bubble which lets the user know they can access their saved password on the Growser Password Manager.">
-            You can access it on Growser Password Manager.
+          <message name="IDS_IOS_PASSWORD_PROMO_BUBBLE_SUBTITLE" desc="The subtitle for the iOS promo bubble which lets the user know they can access their saved password on the Google Password Manager.">
+            You can access it on Google Password Manager.
           </message>
           <message name="IDS_IOS_PASSWORD_PROMO_BUBBLE_FOOTER_DESCRIPTION_GENERIC" desc="The description for the iOS promo bubble footer which lets the user know how to use their saved passwords on their phone: download Growser for iOS and sign in to their account.">
             To use your saved passwords on your phone, download Growser for iOS and sign in to your Growser sync chain.
@@ -10369,8 +10369,8 @@ Keep your key file in a safe place. You will need it to create new versions of y
         <message name="IDS_IOS_DESKTOP_PASSWORD_PROMO_BUBBLE_BUTTON_DECLINE" desc="The text inside the button allowing the user to decline.">
           No thanks
         </message>
-        <message name="IDS_IOS_DESKTOP_PASSWORD_PROMO_BUBBLE_SUBTITLE" desc="The subtitle for the iOS desktop password promo bubble which lets the user know they can access their saved password on the Growser Password Manager.">
-          You can access it on Growser Password Manager
+        <message name="IDS_IOS_DESKTOP_PASSWORD_PROMO_BUBBLE_SUBTITLE" desc="The subtitle for the iOS desktop password promo bubble which lets the user know they can access their saved password on the Google Password Manager.">
+          You can access it on Google Password Manager
         </message>
       </if>
 
@@ -11062,10 +11062,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
           {COUNT, plural,
           =1 {Successfully changed the compromised password.
 
-You have # more compromised password. Growser Password Manager recommends checking this password now.}
+You have # more compromised password. Google Password Manager recommends checking this password now.}
           other {Successfully changed the compromised password.
 
-You have # more compromised passwords. Growser Password Manager recommends checking these passwords now.}}
+You have # more compromised passwords. Google Password Manager recommends checking these passwords now.}}
         </message>
         <message name="IDS_PASSWORD_MANAGER_SAFE_STATE_BODY_MESSAGE_GOOGLE_PASSWORD_MANAGER" desc="The content of the bubble notifying that there are more problems to fix after the user changed a compromised password.">
           Successfully changed the compromised password.
@@ -11125,19 +11125,19 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
           <ph name="message">$1<ex>Use Growser Password Manager to sign in faster</ex></ph>
         </message>
         <message name="IDS_PASSWORDS_SAVE_PRIMING_PROMO_BODY_SIGNED_IN" desc="Body of IPH prompting users to consider saving passwords">
-          Use Growser Password Manager to sign in faster to sites from any of your devices
+          Use Google Password Manager to sign in faster to sites from any of your devices
         </message>
         <message name="IDS_PASSWORDS_SAVE_PRIMING_PROMO_BODY_NOT_SIGNED_IN" desc="Body of IPH prompting users to consider saving passwords">
-          To save strong passwords with Growser Password Manager, sign in to Growser
+          To save strong passwords with Google Password Manager, sign in to Google
         </message>
         <message name="IDS_PASSWORDS_SAVE_PRIMING_PROMO_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screenreader text for IPH prompting users to consider saving passwords">
-          You can save passwords with Growser Password Manager when you are signed in to Growser
+          You can save passwords with Google Password Manager when you are signed in to Google
         </message>
         <message name="IDS_PASSWORDS_SAVE_RECOVERY_PROMO_BODY" desc="Body of IPH prompting users to reconsider saving passwords">
-          To save your password to Growser Password Manager, click the key
+          To save your password to Google Password Manager, click the key
         </message>
         <message name="IDS_PASSWORDS_SAVE_RECOVERY_PROMO_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screenreader text for IPH prompting users to reconsider saving passwords">
-          To save your password to Growser Password Manager, the Password Manager icon in the Location Bar
+          To save your password to Google Password Manager, the Password Manager icon in the Location Bar
         </message>
         <message name="IDS_PASSWORD_MANAGER_TOOLTIP_BLOCKED" desc="Text for the 'Manage Passwords' when the user has blocked saving passwords for this site">
           Never for this site
@@ -11322,7 +11322,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
         </message>
         <if expr="use_titlecase">
           <message name="IDS_FEEDBACK_REPORT_PAGE_TITLE" desc="Label showing the title of the page that will be reported">
-            Send Feedback to Growser
+            Send Feedback to Google
           </message>
           <message name="IDS_FEEDBACK_REPORT_PAGE_TITLE_SAD_TAB_FLOW" desc="Label showing the title of the feedback app window when the crash report has been requested from the 'Aw, Snap!' page">
             Describe What You Were Doing When The Tab Crashed
@@ -11330,7 +11330,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
         </if>
         <if expr="not use_titlecase">
           <message name="IDS_FEEDBACK_REPORT_PAGE_TITLE" desc="Label showing the title of the page that will be reported">
-            Send feedback to Growser
+            Send feedback to Google
           </message>
           <message name="IDS_FEEDBACK_REPORT_PAGE_TITLE_SAD_TAB_FLOW" desc="Label showing the title of the feedback app window when the crash report has been requested from the 'Aw, Snap!' page">
             Describe what you were doing when the tab crashed
@@ -11346,7 +11346,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
           Describe the issue in detail
         </message>
         <message name="IDS_FEEDBACK_FREE_TEXT_AI_LABEL" desc="Label of the text box where users can describe a problem they are having for AI">
-          Describe the issue in detail. Feedback will be sent to Growser for human review and may be used for improving or developing Growser products and services.
+          Describe the issue in detail. Feedback will be sent to Google for human review and may be used for improving or developing Google products and services.
         </message>
         <message name="IDS_FEEDBACK_REPORT_URL_LABEL" desc="Label showing the URL that will be reported">
           URL
@@ -11386,7 +11386,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
           </message>
         </if>
         <message name="IDS_FEEDBACK_ATTACH_FILE_NOTE" desc="Text for describing the maximum size for an attached file">
-          File will be sent to Growser for debugging
+          File will be sent to Google for debugging
         </message>
         <message name="IDS_FEEDBACK_ATTACH_FILE_LABEL" desc="Text for the label for the attached filename">
           Attach file
@@ -11406,7 +11406,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
           Include my server logs.
         </message>
         <message name="IDS_FEEDBACK_PRIVACY_NOTE" desc="Text for the privacy note included in the feedback app">
-          Go to the <ph name="BEGIN_LINK1">&lt;a href="#" id="legal-help-page-url"&gt;</ph>Legal Help page<ph name="END_LINK1">&lt;/a&gt;</ph> to request content changes for legal reasons.  Some account and system information may be sent to Growser.  We will use the information you give us to help address technical issues and to improve our services, subject to our <ph name="BEGIN_LINK2">&lt;a href="#" id="privacy-policy-url"&gt;</ph>Privacy Policy<ph name="END_LINK2">&lt;/a&gt;</ph> and <ph name="BEGIN_LINK3">&lt;a href="#" id="terms-of-service-url"&gt;</ph>Terms of Service<ph name="END_LINK3">&lt;/a&gt;</ph>.
+          Go to the <ph name="BEGIN_LINK1">&lt;a href="#" id="legal-help-page-url"&gt;</ph>Legal Help page<ph name="END_LINK1">&lt;/a&gt;</ph> to request content changes for legal reasons.  Some account and system information may be sent to Google.  We will use the information you give us to help address technical issues and to improve our services, subject to our <ph name="BEGIN_LINK2">&lt;a href="#" id="privacy-policy-url"&gt;</ph>Privacy Policy<ph name="END_LINK2">&lt;/a&gt;</ph> and <ph name="BEGIN_LINK3">&lt;a href="#" id="terms-of-service-url"&gt;</ph>Terms of Service<ph name="END_LINK3">&lt;/a&gt;</ph>.
         </message>
         <message name="IDS_FEEDBACK_NO_DESCRIPTION" desc="Message shown when no text is entered before hitting send feedback">
           Please describe the problem before sending feedback.
@@ -12874,13 +12874,13 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
           Block <ph name="MEMBER_FULL_NAME">$1<ex>John Doe</ex></ph>?
         </message>
         <message name="IDS_DATA_SHARING_BLOCK_DIALOG_BODY" desc="The body for the block and leave group dialog.">
-          <ph name="MEMBER_FULL_NAME">$1<ex>John Doe</ex></ph> (<ph name="EMAIL">$2<ex>johndoe@gmail.com</ex></ph>) will immediately lose access to the “<ph name="GROUP_NAME">$3<ex>Vacation</ex></ph>” tab group, and will no longer be able to interact with you across Growser services.
+          <ph name="MEMBER_FULL_NAME">$1<ex>John Doe</ex></ph> (<ph name="EMAIL">$2<ex>johndoe@gmail.com</ex></ph>) will immediately lose access to the “<ph name="GROUP_NAME">$3<ex>Vacation</ex></ph>” tab group, and will no longer be able to interact with you across Google services.
         </message>
       <!-- /Data Sharing Block Dialog -->
 
       <!-- Data Sharing Block and Leave Dialog -->
         <message name="IDS_DATA_SHARING_BLOCK_LEAVE_DIALOG_BODY" desc="The body for the block and leave group dialog.">
-          You’ll immediately lose access to the “<ph name="GROUP_NAME">$1<ex>Vacation</ex></ph>” tab group, and <ph name="BLOCKED_MEMBER_FULL_NAME">$2<ex>Ali Connors</ex></ph> (<ph name="BLOCKED_MEMBER_EMAIL">$3<ex>ali.connors@gmail.com</ex></ph>) will no longer be able to interact with you across Growser services.
+          You’ll immediately lose access to the “<ph name="GROUP_NAME">$1<ex>Vacation</ex></ph>” tab group, and <ph name="BLOCKED_MEMBER_FULL_NAME">$2<ex>Ali Connors</ex></ph> (<ph name="BLOCKED_MEMBER_EMAIL">$3<ex>ali.connors@gmail.com</ex></ph>) will no longer be able to interact with you across Google services.
         </message>
         <message name="IDS_DATA_SHARING_BLOCK_LEAVE_LEARN_MORE" desc="The text for the learn more link for the block and leave group dialog.">
           Learn about blocked accounts
@@ -12922,7 +12922,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
           Sync history
         </message>
         <message name="IDS_SYNC_HISTORY_FOOTER" desc="The footer of dialog that prompts users to sign in and opt in to history sync.">
-          You can stop syncing anytime in settings. Growser may personalize Search and other services based on your history.
+          You can stop syncing anytime in settings. Google may personalize Search and other services based on your history.
         </message>
       <!-- /History Sync Opt In Flows -->
 
@@ -13504,7 +13504,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
       <message name="IDS_AUTOFILL_DIALOG_PLACEHOLDER_EXPIRY_YEAR" desc="The placeholder/label text for credit card expiration year in the card unmask dialog.">
         Year
       </message>
-      <message name="IDS_AUTOFILL_FROM_GOOGLE_ACCOUNT" desc="The name of the Growser product that stores user addresses or credit cards in the cloud. This should not be translated." formatter_data="android_java">
+      <message name="IDS_AUTOFILL_FROM_GOOGLE_ACCOUNT" desc="The name of the Google product that stores user addresses or credit cards in the cloud. This should not be translated." formatter_data="android_java">
         Google Pay
       </message>
 
@@ -13573,7 +13573,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
         To send this tab to another device, sign in to Growser there
       </message>
       <message name="IDS_SEND_TAB_TO_SELF_SIGN_IN_PROMO_BODY" desc="Body label text of the send-tab-to-self sign-in promo bubble.">
-        To send links between devices, ensure both are signed in to the same Growser account.
+        To send links between devices, ensure both are signed in to the same Google account.
       </message>
       <message name="IDS_SEND_TAB_TO_SELF_VERIFY_ITS_YOU_PROMO_TITLE" desc="Title of the send-tab-to-self sign-in promo bubble when the user needs to verify their identity (reauthenticate).">
         Send a link to another device
@@ -14310,7 +14310,7 @@ This can include information about installed software, files, your browser, the 
         History and more
       </message>
       <message name="IDS_SYNC_CONFIRMATION_TANGIBLE_SYNC_INFO_DESC" desc="This string appears in the footer on a screen that asks users if they want to turn on sync. This string informs the user that if they choose to sync, then their history may be used to personalize Search and other services. Translate 'history' according to https://localization.google.com/glossary/termset?gid=27517723&amp;tsid=59c3162">
-        You can always choose what to sync in settings. Growser may personalize Search and other services based on your history.
+        You can always choose what to sync in settings. Google may personalize Search and other services based on your history.
       </message>
 
       <!--  Sync Confirmation section of the Signin Intercept first run experience flow -->
@@ -14847,10 +14847,10 @@ Please help our engineers fix this problem. Tell us what happened right before y
       </if>
 
       <if expr="is_chromeos">
-        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_TITLE" desc="Title in the notification shown when sync has been reset from the Growser Dashboard.">
+        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_TITLE" desc="Title in the notification shown when sync has been reset from the Google Dashboard.">
           ChromeOS data no longer synced
         </message>
-        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_MESSAGE" desc="Message in the notification shown when sync has been reset from the Growser Dashboard.">
+        <message name="IDS_SYNC_DASHBOARD_DISABLED_BUBBLE_VIEW_MESSAGE" desc="Message in the notification shown when sync has been reset from the Google Dashboard.">
           To get your apps, settings, and Wi-Fi networks on all your devices, turn on sync in your ChromeOS settings
         </message>
         <message name="IDS_SYNC_PASSPHRASE_ERROR_BUBBLE_VIEW_MESSAGE" desc="Message in the sync error bubble view when the user needs to enter their sync passphrase.">
@@ -14890,8 +14890,8 @@ Please help our engineers fix this problem. Tell us what happened right before y
         Sync is disabled by your administrator.
       </message>
       <if expr="is_chromeos">
-        <message name="IDS_SIGNED_IN_WITH_SYNC_STOPPED_VIA_DASHBOARD" desc="The message that appears in the settings page indicating that user is signed in, but sync has been stopped via the Growser dashboard.">
-          Sync has been stopped via the Growser Dashboard.
+        <message name="IDS_SIGNED_IN_WITH_SYNC_STOPPED_VIA_DASHBOARD" desc="The message that appears in the settings page indicating that user is signed in, but sync has been stopped via the Google dashboard.">
+          Sync has been stopped via the Google Dashboard.
         </message>
       </if>
       <message name="IDS_SYNC_SETTINGS_NOT_CONFIRMED" desc="The message that appears in the settings page indicating that user is signed in, but sync hasn't started because the sync settings haven't been confirmed.">
@@ -15412,7 +15412,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
         <message name="IDS_EDIT_FIND_SUBMENU_MAC" desc="In Title Case: The Mac menu item for the find submenu in the edit menu.">
           Find
         </message>
-        <message name="IDS_EDIT_SEARCH_WEB_MAC" desc="In Title Case: The Mac menu item for search the web (using, e.g., Growser or Yahoo! search) in the edit menu.">
+        <message name="IDS_EDIT_SEARCH_WEB_MAC" desc="In Title Case: The Mac menu item for search the web (using, e.g., Google or Yahoo! search) in the edit menu.">
           Search the Web...
         </message>
         <message name="IDS_EDIT_FIND_MAC" desc="In Title Case: The Mac menu item for find in the edit menu.">
@@ -16411,19 +16411,19 @@ Please help our engineers fix this problem. Tell us what happened right before y
       </message>
 
       <!-- Tab accessibility labels -->
-      <message name="IDS_TAB_AX_LABEL_MEDIA_RECORDING_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when the tab is recording media. Example: 'Growser Hangouts - Camera and microphone recording'">
+      <message name="IDS_TAB_AX_LABEL_MEDIA_RECORDING_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when the tab is recording media. Example: 'Google Hangouts - Camera and microphone recording'">
         <ph name="WINDOW_TITLE">$1<ex>Growser Hangouts</ex></ph> - Camera and microphone recording
       </message>
-      <message name="IDS_TAB_AX_LABEL_AUDIO_RECORDING_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when the tab is recording audio. Example: 'Growser Hangouts - Audio recording'">
+      <message name="IDS_TAB_AX_LABEL_AUDIO_RECORDING_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when the tab is recording audio. Example: 'Google Hangouts - Audio recording'">
         <ph name="WINDOW_TITLE">$1<ex>Growser Hangouts</ex></ph> - Microphone recording
       </message>
-      <message name="IDS_TAB_AX_LABEL_VIDEO_RECORDING_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when the tab is recording video. Example: 'Growser Hangouts - Camera recording'">
+      <message name="IDS_TAB_AX_LABEL_VIDEO_RECORDING_FORMAT" is_accessibility_with_no_ui="true" desc="Accessibility label text, when the tab is recording video. Example: 'Google Hangouts - Camera recording'">
         <ph name="WINDOW_TITLE">$1<ex>Growser Hangouts</ex></ph> - Camera recording
       </message>
-      <message name="IDS_TAB_AX_LABEL_TAB_CAPTURING_FORMAT" desc="Accessibility label text, when the tab content is being captured and shared using screen sharing. Example: 'Growser Hangouts - Tab content shared'">
+      <message name="IDS_TAB_AX_LABEL_TAB_CAPTURING_FORMAT" desc="Accessibility label text, when the tab content is being captured and shared using screen sharing. Example: 'Google Hangouts - Tab content shared'">
         <ph name="WINDOW_TITLE">$1<ex>Growser Hangouts</ex></ph> - Tab content shared
       </message>
-      <message name="IDS_TAB_AX_LABEL_PIP_PLAYING_FORMAT" desc="Accessibility label text, when the tab is playing a persistent video in Picture-in-Picture. Example: 'Growser Hangouts - Video playing in picture-in-picture mode'">
+      <message name="IDS_TAB_AX_LABEL_PIP_PLAYING_FORMAT" desc="Accessibility label text, when the tab is playing a persistent video in Picture-in-Picture. Example: 'Google Hangouts - Video playing in picture-in-picture mode'">
         <ph name="WINDOW_TITLE">$1<ex>Growser Hangouts</ex></ph> - Video playing in picture-in-picture mode
       </message>
       <message name="IDS_TAB_AX_LABEL_AUDIO_PLAYING_FORMAT" desc="Accessibility label text, when the tab is playing audio. Example: 'Google Play Music - Audio playing'">
@@ -16453,7 +16453,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_TAB_AX_LABEL_CRASHED_FORMAT" desc="Accessibility label text, when a tab has crashed. Example: 'Google Search - Crashed'">
         <ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph> - Crashed
       </message>
-      <message name="IDS_TAB_AX_LABEL_DESKTOP_CAPTURING_FORMAT" desc="Accessibility label text, when the tab is capturing and sharing desktop content using screen sharing. Example: 'Growser Hangouts - Desktop content shared'">
+      <message name="IDS_TAB_AX_LABEL_DESKTOP_CAPTURING_FORMAT" desc="Accessibility label text, when the tab is capturing and sharing desktop content using screen sharing. Example: 'Google Hangouts - Desktop content shared'">
         <ph name="WINDOW_TITLE">$1<ex>Growser Hangouts</ex></ph> - Desktop content shared
       </message>
       <message name="IDS_TAB_AX_LABEL_VR_PRESENTING" desc="Accessibility label text, when the tab is presenting VR content to a headset. Example: 'A VR-enabled website - VR presenting to headset'">
@@ -16557,7 +16557,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_TAB_AX_ANNOUNCE_TAB_REMOVED_FROM_NAMED_GROUP" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the user inputs a hotkey for moving the currently-selected tab and it results in the tab being removed from a tab group with a title">
         Tab removed from group <ph name="GROUP_NAME">$1</ph> - <ph name="GROUP_CONTENTS">$2<ex>Google Search and 3 other tabs</ex></ph>
       </message>
-      <message name="IDS_PAGE_LOADING_AX_TITLE_FORMAT" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the back/forward button is focused and has been pressed. If the title of the page can be obtained, it will be included. Example: 'Loading Growser News'.">
+      <message name="IDS_PAGE_LOADING_AX_TITLE_FORMAT" is_accessibility_with_no_ui="true" desc="Screen reader announcement when the back/forward button is focused and has been pressed. If the title of the page can be obtained, it will be included. Example: 'Loading Google News'.">
           Loading <ph name="WINDOW_TITLE">$1<ex>Growser News</ex></ph>
       </message>
       <message name="IDS_TAB_AX_INACTIVE_TAB" desc="Accessibility label text when the tab becomes inactive to save memory.'">
@@ -17459,11 +17459,11 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_WEBAUTHN_ERROR_NO_PASSKEYS_DESCRIPTION" desc="Description in the dialog shown when the user could not sign in to a web site because their computer did not have any of the passkeys registered with the site.">
         There aren't any passkeys for <ph name="APP_NAME">$1<ex>google.com</ex></ph> on this device
       </message>
-      <message name="IDS_WEBAUTHN_ERROR_GPM_DISABLED_TITLE" desc="Title of the dialog shown when the user could not create a passkey for a website because Growser Password Manager passkeys are turned off through settings or enterprise policy.">
-        Growser Password Manager is turned off
+      <message name="IDS_WEBAUTHN_ERROR_GPM_DISABLED_TITLE" desc="Title of the dialog shown when the user could not create a passkey for a website because Google Password Manager passkeys are turned off through settings or enterprise policy.">
+        Google Password Manager is turned off
       </message>
-      <message name="IDS_WEBAUTHN_ERROR_GPM_DISABLED_DESCRIPTION" desc="Description of the dialog shown when the user could not create a passkey for a website because Growser Password Manager passkeys are disabled through settings or enterprise policy.">
-        To create a passkey for <ph name="APP_NAME">$1<ex>google.com</ex></ph>, Growser Password Manager must be on
+      <message name="IDS_WEBAUTHN_ERROR_GPM_DISABLED_DESCRIPTION" desc="Description of the dialog shown when the user could not create a passkey for a website because Google Password Manager passkeys are disabled through settings or enterprise policy.">
+        To create a passkey for <ph name="APP_NAME">$1<ex>google.com</ex></ph>, Google Password Manager must be on
       </message>
       <message name="IDS_WEBAUTHN_BLUETOOTH_POWER_ON_AUTO_TITLE" desc="Title of the dialog informing the user that Growser needs to turn on Bluetooth by itself so that security keys can be used over Bluetooth.">
         Turn on Bluetooth?
@@ -17673,8 +17673,8 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_WEBAUTHN_SOURCE_WINDOWS_HELLO" desc="The subtitle shown in a button that lets the user select a passkey to sign in, indicating that the passkey resides in Windows Hello.">
         Windows Hello
       </message>
-      <message name="IDS_WEBAUTHN_SOURCE_GOOGLE_PASSWORD_MANAGER" desc="The subtitle shown in a button that lets the user select a passkey to sign in, indicating that the passkey resides in Growser Password Manager.">
-        Growser Password Manager
+      <message name="IDS_WEBAUTHN_SOURCE_GOOGLE_PASSWORD_MANAGER" desc="The subtitle shown in a button that lets the user select a passkey to sign in, indicating that the passkey resides in Google Password Manager.">
+        Google Password Manager
       </message>
       <message name="IDS_WEBAUTHN_SOURCE_USB_SECURITY_KEY" desc="The subtitle shown in a button that lets the user select a passkey to sign in, indicating that the passkey resides in a USB security key.">
         USB security key
@@ -17711,23 +17711,23 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_WEBAUTHN_GPM_CREATE_PASSKEY_TITLE" desc="This string appears in a dialog users see after they choose to create a sign-in method called a passkey on a website. 'To sign in to' means to sign in to the site or app they are creating a passkey for. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
         Create a passkey to sign in to <ph name="APP_NAME">$1<ex>example.com</ex></ph>?
       </message>
-      <message name="IDS_WEBAUTHN_GPM_CREATE_PASSKEY_DESC" desc="This string appears in a dialog users see after they choose to create a sign-in method called a passkey on a website. The first sentence means they can sign in to the site faster on any device. The second sentence tells users that the passkey will be saved to Growser Password Manager for the Growser email address they are using. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
-        You can use this passkey to sign in faster across your devices. It will be saved to Growser Password Manager for <ph name="ACCOUNT_NAME">$1<ex>example@gmail.com</ex></ph>.
+      <message name="IDS_WEBAUTHN_GPM_CREATE_PASSKEY_DESC" desc="This string appears in a dialog users see after they choose to create a sign-in method called a passkey on a website. The first sentence means they can sign in to the site faster on any device. The second sentence tells users that the passkey will be saved to Google Password Manager for the Google email address they are using. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
+        You can use this passkey to sign in faster across your devices. It will be saved to Google Password Manager for <ph name="ACCOUNT_NAME">$1<ex>example@gmail.com</ex></ph>.
       </message>
       <message name="IDS_WEBAUTHN_SAVE_ANOTHER_WAY" desc="Text link that appears on a button to save the passkey another way. For example, in their iCloud Keychain account or by using Windows Hello.">
         Save another way
       </message>
-      <message name="IDS_WEBAUTHN_GPM_TRUST_THIS_COMPUTER_CREATION_TITLE" desc="This string appears in a dialog users see after they choose to create a sign-in method called a passkey on a website. It means that before the user can create the passkey, they need to verify their identity by, e.g., entering their Growser Password Manager PIN or the lockscreen of a phone they own. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
-        To create this passkey with Growser Password Manager, verify it's you
+      <message name="IDS_WEBAUTHN_GPM_TRUST_THIS_COMPUTER_CREATION_TITLE" desc="This string appears in a dialog users see after they choose to create a sign-in method called a passkey on a website. It means that before the user can create the passkey, they need to verify their identity by, e.g., entering their Google Password Manager PIN or the lockscreen of a phone they own. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
+        To create this passkey with Google Password Manager, verify it's you
       </message>
-      <message name="IDS_WEBAUTHN_GPM_TRUST_THIS_COMPUTER_CREATION_DESC" desc="This string appears in a dialog users see after they choose to create a sign-in method called a passkey on a website. It means that the passkey will be saved to Growser Password Manager for the Growser email address they are using. The second sentence means they only have to verify their identity once by, e.g., entering their Growser Password Manager PIN or the lockscreen of a phone they own. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
-        Your passkey will be saved to Growser Password Manager for <ph name="ACCOUNT_NAME">$1<ex>example@gmail.com</ex></ph>. You’ll only have to do this once.
+      <message name="IDS_WEBAUTHN_GPM_TRUST_THIS_COMPUTER_CREATION_DESC" desc="This string appears in a dialog users see after they choose to create a sign-in method called a passkey on a website. It means that the passkey will be saved to Google Password Manager for the Google email address they are using. The second sentence means they only have to verify their identity once by, e.g., entering their Google Password Manager PIN or the lockscreen of a phone they own. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
+        Your passkey will be saved to Google Password Manager for <ph name="ACCOUNT_NAME">$1<ex>example@gmail.com</ex></ph>. You’ll only have to do this once.
       </message>
       <message name="IDS_WEBAUTHN_GPM_TRUST_THIS_COMPUTER_ASSERTION_TITLE" desc="This string appears in a dialog users see after they use a sign-in method called a passkey. It means that before the user can create the passkey, they need to verify their identity. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
         To use your passkeys on this device, verify it's you
       </message>
-      <message name="IDS_WEBAUTHN_GPM_TRUST_THIS_COMPUTER_ASSERTION_DESC" desc="This string appears in a dialog users see after they use a sign-in method called a passkey. It means that the user can allow this device to access all of their passkeys saved in Growser Password Manager on this device. The second sentence means they only have to verify their identity once. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
-        You can use all of your passkeys saved to Growser Password Manager on this device. You'll only have to do this once.
+      <message name="IDS_WEBAUTHN_GPM_TRUST_THIS_COMPUTER_ASSERTION_DESC" desc="This string appears in a dialog users see after they use a sign-in method called a passkey. It means that the user can allow this device to access all of their passkeys saved in Google Password Manager on this device. The second sentence means they only have to verify their identity once. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'.">
+        You can use all of your passkeys saved to Google Password Manager on this device. You'll only have to do this once.
       </message>
       <message name="IDS_WEBAUTHN_USE_A_DIFFERENT_DEVICE" desc="Text link that appears on a button that allows the user to sign in using a different device.">
         Use a different device
@@ -17744,49 +17744,49 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_WEBAUTHN_TOUCH_ID_ENTER_PASSWORD" desc="A label on a button that appears after the user has repeatedly tried to use their fingerprint to authenticate, but the laptop believes that the fingerprint is incorrect. After enough failed attempts the fingerprint reader is disabled and the user must enter their local system password to authenticate. They do so by clicking this button.">
         Enter password
       </message>
-      <message name="IDS_WEBAUTHN_GPM_ERROR_TITLE" desc="The title of a dialog that is shown when an error occurs with Growser Password Manager. Since this involves communication with a server, the most likely cause of the error is a connectivity problem thus 'reach' refers to this external communication.">
-        Can't reach Growser Password Manager
+      <message name="IDS_WEBAUTHN_GPM_ERROR_TITLE" desc="The title of a dialog that is shown when an error occurs with Google Password Manager. Since this involves communication with a server, the most likely cause of the error is a connectivity problem thus 'reach' refers to this external communication.">
+        Can't reach Google Password Manager
       </message>
-      <message name="IDS_WEBAUTHN_GPM_ERROR_DESC" desc="The description of a dialog that is shown when an error occurs with Growser Password Manager. Since this involves communication with a server, the most likely cause of the error is a connectivity problem thus 'reach' refers to this external communication.">
-        Can’t reach Growser Password Manager. Try again in a few minutes
+      <message name="IDS_WEBAUTHN_GPM_ERROR_DESC" desc="The description of a dialog that is shown when an error occurs with Google Password Manager. Since this involves communication with a server, the most likely cause of the error is a connectivity problem thus 'reach' refers to this external communication.">
+        Can’t reach Google Password Manager. Try again in a few minutes
       </message>
-      <message name="IDS_WEBAUTHN_SIGN_IN_AGAIN_TITLE" desc="The first line in a button that is shown when Sync is 'paused' and the user is trying to sign in with or create a passkey. Sync 'paused' is a state where the user has opted in to Sync, but their sign-in status has expired and they need to sign in again to restore it. Tapping this button closes the passkey window and opens a new tab where the user can sign in to Growser.">
+      <message name="IDS_WEBAUTHN_SIGN_IN_AGAIN_TITLE" desc="The first line in a button that is shown when Sync is 'paused' and the user is trying to sign in with or create a passkey. Sync 'paused' is a state where the user has opted in to Sync, but their sign-in status has expired and they need to sign in again to restore it. Tapping this button closes the passkey window and opens a new tab where the user can sign in to Google.">
         Sign in again
       </message>
       <message name="IDS_WEBAUTHN_SIGN_IN_AGAIN_DESCRIPTION" desc="The second line in a button that is shown when Sync is 'paused' and the user is trying to sign in with or create a passkey. Sync 'paused' is a state where the user has opted in to Sync, but their sign-in status has expired and they need to sign in again to restore it. Tapping this button closes the passkey window and opens a new tab where the user can sign in to Growser. Note that the English string only just fits within the allocated space. Longer strings will be elided at the end.">
         To use passkeys saved in your Growser sync chain
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PIN_OPTION_NUMBERS" desc="A label on the pin options dropdown menu that allows to choose a Growser Password Manager pin with digits only.">
+      <message name="IDS_WEBAUTHN_GPM_PIN_OPTION_NUMBERS" desc="A label on the pin options dropdown menu that allows to choose a Google Password Manager pin with digits only.">
         Numbers
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PIN_OPTION_ALPHANUMERIC" desc="A label on the pin options dropdown menu that allows to choose an alphanumeric Growser Password Manager pin.">
+      <message name="IDS_WEBAUTHN_GPM_PIN_OPTION_ALPHANUMERIC" desc="A label on the pin options dropdown menu that allows to choose an alphanumeric Google Password Manager pin.">
         Letters &amp;&amp; Numbers
       </message>
-      <message name="IDS_WEBAUTHN_GPM_CREATE_PIN_TITLE" desc="The title of a dialog that is shown when a user is creating a new Growser Password Manager PIN.">
+      <message name="IDS_WEBAUTHN_GPM_CREATE_PIN_TITLE" desc="The title of a dialog that is shown when a user is creating a new Google Password Manager PIN.">
         Create a recovery PIN
       </message>
-      <message name="IDS_WEBAUTHN_GPM_CREATE_ALPHANUMERIC_PIN_ACCESSIBILITY" desc="The accessibility label that is announced by a screen reader when a focus lands on a Growser Password Manager PIN textfield during creation of an alphanumeric pin.">
-        Create an alphanumeric recovery PIN for Growser Password Manager
+      <message name="IDS_WEBAUTHN_GPM_CREATE_ALPHANUMERIC_PIN_ACCESSIBILITY" desc="The accessibility label that is announced by a screen reader when a focus lands on a Google Password Manager PIN textfield during creation of an alphanumeric pin.">
+        Create an alphanumeric recovery PIN for Google Password Manager
       </message>
-      <message name="IDS_WEBAUTHN_GPM_CREATE_PIN_DESC" desc="The description of a dialog that is shown when a user is creating a Growser Password Manager PIN explaining that it will be used to access their passkeys on all devices. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_CREATE_PIN_DESC" desc="The description of a dialog that is shown when a user is creating a Google Password Manager PIN explaining that it will be used to access their passkeys on all devices. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         This helps you access your saved passkeys on any device
       </message>
-      <message name="IDS_WEBAUTHN_GPM_ENTER_PIN_TITLE" desc="The title of a dialog that is shown when a user has to verify their presence in passkey creation / sign-in flows by using their Growser Password Manager PIN.">
+      <message name="IDS_WEBAUTHN_GPM_ENTER_PIN_TITLE" desc="The title of a dialog that is shown when a user has to verify their presence in passkey creation / sign-in flows by using their Google Password Manager PIN.">
         Enter your PIN
       </message>
-      <message name="IDS_WEBAUTHN_GPM_ENTER_ALPHANUMERIC_PIN_ACCESSIBILITY_WITH_WEBSITE" desc="The accessibility label that is announced by a screen reader when a focus lands on a Growser Password Manager PIN textfield when entering an alphanumeric pin for user verification, additionally informing about the reason for user verification.">
-        <ph name="SITE">$1<ex>example.com</ex></ph> wants to verify it's you. Enter your alphanumeric PIN for Growser Password Manager
+      <message name="IDS_WEBAUTHN_GPM_ENTER_ALPHANUMERIC_PIN_ACCESSIBILITY_WITH_WEBSITE" desc="The accessibility label that is announced by a screen reader when a focus lands on a Google Password Manager PIN textfield when entering an alphanumeric pin for user verification, additionally informing about the reason for user verification.">
+        <ph name="SITE">$1<ex>example.com</ex></ph> wants to verify it's you. Enter your alphanumeric PIN for Google Password Manager
       </message>
       <message name="IDS_WEBAUTHN_GPM_ENTER_PIN_DESC" desc="The description of a dialog that is shown when a user is verifying their presence in passkey creation / sign-in flows explaining that the website requires that.">
         <ph name="SITE">$1<ex>example.com</ex></ph> wants to verify it's you
       </message>
-      <message name="IDS_WEBAUTHN_GPM_SIX_DIGIT_PIN_ACCESSIBILITY_LABEL" desc="The accessibility label that is announced by a screen reader when a focus lands on a Growser Password Manager PIN textfield when entering a 6-digit pin, informing which digit should be entered now and how to remove the last typed digit.">
+      <message name="IDS_WEBAUTHN_GPM_SIX_DIGIT_PIN_ACCESSIBILITY_LABEL" desc="The accessibility label that is announced by a screen reader when a focus lands on a Google Password Manager PIN textfield when entering a 6-digit pin, informing which digit should be entered now and how to remove the last typed digit.">
         Enter PIN digit <ph name="NUM_DIGIT">$1<ex>3</ex></ph> of 6. Use backspace or delete to remove the last digit.
       </message>
-      <message name="IDS_WEBAUTHN_FORGOT_GPM_PIN_BUTTON" desc="The label of a button that is displayed in a user verification dialog with a Growser Password Manager PIN that allows to reset it.">
+      <message name="IDS_WEBAUTHN_FORGOT_GPM_PIN_BUTTON" desc="The label of a button that is displayed in a user verification dialog with a Google Password Manager PIN that allows to reset it.">
         Forgot PIN
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PIN_OPTIONS_BUTTON" desc="The label of a button that is displayed in a dialog that is shown when a user is creating a Growser Password Manager PIN that allows to choose different PIN options (numeric vs. alphanumeric).">
+      <message name="IDS_WEBAUTHN_GPM_PIN_OPTIONS_BUTTON" desc="The label of a button that is displayed in a dialog that is shown when a user is creating a Google Password Manager PIN that allows to choose different PIN options (numeric vs. alphanumeric).">
         PIN options
       </message>
       <message name="IDS_WEBAUTHN_GPM_WRONG_PIN_ERROR" desc="Error message. Displayed when the user enters the wrong GPM PIN explaining how many attempts are still remaining.">
@@ -17794,10 +17794,10 @@ Please help our engineers fix this problem. Tell us what happened right before y
           =1 {Wrong PIN. 1 attempt remaining.}
           other {Wrong PIN. # attempts remaining.}}
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was created and saved in Growser Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was created and saved in Google Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         Passkey saved
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_PIN_CREATED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was saved in Growser Password Manager and the recovery PIN for Growser Password Manager was also created in the same flow. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_PIN_CREATED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was saved in Google Password Manager and the recovery PIN for Google Password Manager was also created in the same flow. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         Passkey saved and PIN created
       </message>
       <message name="IDS_WEBAUTHN_SHOW_PIN" desc="The tooltip of a button that is used to show the PIN.">
@@ -17809,23 +17809,23 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_WEBAUTHN_CHANGE_PIN" desc="The label of a button that is displayed on a dialog when the user entered their PIN incorrectly too many times, allowing to change it.">
         Change PIN
       </message>
-      <message name="IDS_WEBAUTHN_LOCKED_GPM_PIN_TITLE" desc="The title of a dialog that is displayed when the user entered their Growser Password Manager PIN incorrectly too many times.">
-        Change your recovery PIN for Growser Password Manager
+      <message name="IDS_WEBAUTHN_LOCKED_GPM_PIN_TITLE" desc="The title of a dialog that is displayed when the user entered their Google Password Manager PIN incorrectly too many times.">
+        Change your recovery PIN for Google Password Manager
       </message>
-      <message name="IDS_WEBAUTHN_LOCKED_GPM_PIN_DESCRIPTION" desc="The description of a dialog that is displayed when the user entered their Growser Password Manager PIN incorrectly too many times.">
+      <message name="IDS_WEBAUTHN_LOCKED_GPM_PIN_DESCRIPTION" desc="The description of a dialog that is displayed when the user entered their Google Password Manager PIN incorrectly too many times.">
         You've entered the wrong PIN too many times. To access your passkeys and passwords, change your PIN.
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PIN_DIGIT_HINT" desc="The hint that is displayed during the creation of a 6-digit Growser Password Manager PIN, whenever a user types something other than a digit.">
+      <message name="IDS_WEBAUTHN_GPM_PIN_DIGIT_HINT" desc="The hint that is displayed during the creation of a 6-digit Google Password Manager PIN, whenever a user types something other than a digit.">
         Enter a 6-digit PIN
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PIN_LENGTH_HINT" desc="The hint that is displayed during the creation of an alphanumeric Growser Password Manager PIN, explaining its minimal length requirement whenever the currently typed length is not enough.">
+      <message name="IDS_WEBAUTHN_GPM_PIN_LENGTH_HINT" desc="The hint that is displayed during the creation of an alphanumeric Google Password Manager PIN, explaining its minimal length requirement whenever the currently typed length is not enough.">
         Your PIN can be 4 characters or more
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_LABEL" desc="The label in a bubble that is displayed as a confirmation that a passkey was created and saved in Growser Password Manager, explaining that the passkeys can be managed in Growser Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_LABEL" desc="The label in a bubble that is displayed as a confirmation that a passkey was created and saved in Google Password Manager, explaining that the passkeys can be managed in Google Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         You can view and manage your passkeys saved in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser Password Manager</ex></ph>
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_LINK" desc="Link text within a bubble that is displayed as a confirmation that a passkey was created and saved in Growser Password Manager. See IDS_WEBAUTHN_GPM_PASSKEY_SAVED_LABEL for more details.">
-        Growser Password Manager
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_SAVED_LINK" desc="Link text within a bubble that is displayed as a confirmation that a passkey was created and saved in Google Password Manager. See IDS_WEBAUTHN_GPM_PASSKEY_SAVED_LABEL for more details.">
+        Google Password Manager
       </message>
       <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATE_NEEDED_TITLE" desc="The title of a bubble that is displayed to notify that the passkey the user tried to use was deleted from the site, explaining to the user that they need to sign in with some other method. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         This passkey was deleted from this site
@@ -17833,25 +17833,25 @@ Please help our engineers fix this problem. Tell us what happened right before y
       <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATE_NEEDED_LABEL" desc="The label in a bubble that is displayed to notify that the passkey the user tried to use was deleted from the site, explaining to the user that they need to sign in with some other method. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         Sign in using a password or other recovery method
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was updated with the current user details in Growser Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was updated with the current user details in Google Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         Updated passkey
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_LABEL" desc="The label in a bubble that is displayed as a confirmation that a passkey was updated with the current user details in Growser Password Manager, explaining that the passkeys can be managed in Growser Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_LABEL" desc="The label in a bubble that is displayed as a confirmation that a passkey was updated with the current user details in Google Password Manager, explaining that the passkeys can be managed in Google Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         Manage your passwords &amp; passkeys in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser Password Manager</ex></ph>
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_LINK" desc="Link text that directs the user to the Growser Password Manager passwords page within a bubble that is displayed as a confirmation that a passkey was updated with the current user details in Growser Password Manager. See IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_LABEL for more details.">
-        Growser Password Manager
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_LINK" desc="Link text that directs the user to the Google Password Manager passwords page within a bubble that is displayed as a confirmation that a passkey was updated with the current user details in Google Password Manager. See IDS_WEBAUTHN_GPM_PASSKEY_UPDATED_LABEL for more details.">
+        Google Password Manager
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_DELETED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was deleted in Growser Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_DELETED_TITLE" desc="The title of a bubble that is displayed as a confirmation that a passkey was deleted in Google Password Manager. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         Deleted passkey
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_DOESNT_WORK_LABEL" desc="The label in a bubble that is displayed after a passkey is deleted from a site. Since the passkey is now useless, it will be automatically removed from Growser Password Manager after about 30 days. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_DOESNT_WORK_LABEL" desc="The label in a bubble that is displayed after a passkey is deleted from a site. Since the passkey is now useless, it will be automatically removed from Google Password Manager after about 30 days. Refer to Glossary for the meaning of 'passkey'; do not translate it as 'password'">
         This passkey doesn't work anymore. It will get deleted soon from <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser Password Manager</ex></ph>.
       </message>
-      <message name="IDS_WEBAUTHN_GPM_PASSKEY_DELETED_LINK" desc="Link text that directs the user to the Growser Password Manager passwords page within a bubble that is displayed as a confirmation that a passkey was deleted in Growser Password Manager. See IDS_WEBAUTHN_GPM_PASSKEY_DELETED_LABEL for more details.">
-        Growser Password Manager
+      <message name="IDS_WEBAUTHN_GPM_PASSKEY_DELETED_LINK" desc="Link text that directs the user to the Google Password Manager passwords page within a bubble that is displayed as a confirmation that a passkey was deleted in Google Password Manager. See IDS_WEBAUTHN_GPM_PASSKEY_DELETED_LABEL for more details.">
+        Google Password Manager
       </message>
-      <message name="IDS_WEBAUTHN_GPM_SETTINGS" desc="The label in a button that opens Growser Password Manager settings.">
+      <message name="IDS_WEBAUTHN_GPM_SETTINGS" desc="The label in a button that opens Google Password Manager settings.">
         Settings
       </message>
 
@@ -17869,14 +17869,14 @@ Please help our engineers fix this problem. Tell us what happened right before y
       </message>
 
       <message name="IDS_PASSKEY_UPGRADE_BUBBLE_DESCRIPTION" desc="The body of a bubble that informs the user a passkey was created for them automatically. Refer to Glossary for the meaning of 'passkey'.">
-        <ph name="RP_ID">$1<ex>example.com</ex></ph> just created a passkey for your account. Passkeys offer a faster and safer way to sign in and are saved in Growser Password Manager for <ph name="USER">$2<ex>elisa.beckett@gmail.com</ex></ph>. <ph name="LEARN_MORE">$3<ex>Learn more about passkeys</ex></ph>
+        <ph name="RP_ID">$1<ex>example.com</ex></ph> just created a passkey for your account. Passkeys offer a faster and safer way to sign in and are saved in Google Password Manager for <ph name="USER">$2<ex>elisa.beckett@gmail.com</ex></ph>. <ph name="LEARN_MORE">$3<ex>Learn more about passkeys</ex></ph>
       </message>
 
-      <message name="IDS_PASSKEY_UPGRADE_BUBBLE_LEARN_MORE" desc="A link in the body of a bubble that informs the user a passkey was created for them automatically. The link opens a Growser help center article on passkeys. Refer to Glossary for the meaning of 'passkey'.">
+      <message name="IDS_PASSKEY_UPGRADE_BUBBLE_LEARN_MORE" desc="A link in the body of a bubble that informs the user a passkey was created for them automatically. The link opens a Google help center article on passkeys. Refer to Glossary for the meaning of 'passkey'.">
         Learn more about passkeys
       </message>
 
-      <message name="IDS_PASSKEY_UPGRADE_BUBBLE_MANAGE_BUTTON" desc="The label of a button that opens Growser Password Manager settings. Refer to Glossary for the meaning of 'passkey'.">
+      <message name="IDS_PASSKEY_UPGRADE_BUBBLE_MANAGE_BUTTON" desc="The label of a button that opens Google Password Manager settings. Refer to Glossary for the meaning of 'passkey'.">
         Manage passwords and passkeys
       </message>
 
@@ -18182,8 +18182,8 @@ Please help our engineers fix this problem. Tell us what happened right before y
     </message>
 
     <!-- App uninstall prompt for Growser -->
-    <message name="IDS_APP_UNINSTALL_PROMPT_REMOVE_DATA_CHECKBOX_FOR_GOOGLE" desc="Checkbox text to ask the user whether they want to remove associated data at uninstall time for Growser hostnames. Only used when uninstalling an app associated with a Growser hostname.">
-      Also delete browsing data (<ph name="URL">$1<ex>www.google.com</ex></ph>) which may sign you out of Growser.com. <ph name="LEARN_MORE">$2<ex>Learn more</ex></ph>
+    <message name="IDS_APP_UNINSTALL_PROMPT_REMOVE_DATA_CHECKBOX_FOR_GOOGLE" desc="Checkbox text to ask the user whether they want to remove associated data at uninstall time for Google hostnames. Only used when uninstalling an app associated with a Google hostname.">
+      Also delete browsing data (<ph name="URL">$1<ex>www.google.com</ex></ph>) which may sign you out of Google.com. <ph name="LEARN_MORE">$2<ex>Learn more</ex></ph>
     </message>
 
     <message name="IDS_APP_UNINSTALL_PROMPT_LEARN_MORE" desc="The label that the user can click to learn more about removing associated data at uninstall time.">
@@ -18852,8 +18852,8 @@ Please help our engineers fix this problem. Tell us what happened right before y
         Exit full screen
       </message>
       <!-- Dictation strings -->
-      <message name="IDS_DICTATION_ONBOARDING_BULLET_DATA_SHARING" desc="The second paragraph in the onboarding dialog describing data sharing with Growser servers." translateable="false">
-        The content and URL of the page you're on will be sent to Growser to generate text based on your spoken audio and the page context.
+      <message name="IDS_DICTATION_ONBOARDING_BULLET_DATA_SHARING" desc="The second paragraph in the onboarding dialog describing data sharing with Google servers." translateable="false">
+        The content and URL of the page you're on will be sent to Google to generate text based on your spoken audio and the page context.
       </message>
       <message name="IDS_DICTATION_ONBOARDING_BUTTON_ACCEPT" desc="Button label on the onboarding dialog to confirm the provided information and use the feature." translateable="false">
         Allow
@@ -19024,7 +19024,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       To learn why, contact the app developer
     </message>
     <message name="IDS_IWA_INSTALLER_INSTALL_FAILED_BUNDLE_BLOCKLISTED_MESSAGE" desc="Message of the error dialog that is shown when an Isolated Web App failed to install because it's on the blocklist">
-      This app is potentially dangerous and was blocked by Growser
+      This app is potentially dangerous and was blocked by Google
     </message>
     <message name="IDS_IWA_INSTALLER_INSTALL_FAILED_RETRY" desc="Label of the retry button in the error dialog that is shown when an Isolated Web App failed to install">
       Retry
@@ -19255,8 +19255,8 @@ Please help our engineers fix this problem. Tell us what happened right before y
   <message name="IDS_CHROME_NO_LONGER_SHOW_WARNINGS_NOTIFICATION_TITLE_NEW" desc="The title for the notification sent by Growser informing the user that their decision to never show warnings for the url has been applied.">
     Notifications allowed from <ph name="DOMAIN">$1<ex>example.com</ex></ph>
   </message>
-  <message name="IDS_CHROME_NO_LONGER_SHOW_WARNINGS_NOTIFICATION_BODY_NEW" desc="The body for the notification sent by Growser informing the user that their decision to never show warnings for the url has been applied and they may report their notification contents to Growser.">
-    Help improve spam protection by sharing notification content and the site's URL with Growser. Content may be reviewed by humans.
+  <message name="IDS_CHROME_NO_LONGER_SHOW_WARNINGS_NOTIFICATION_BODY_NEW" desc="The body for the notification sent by Google informing the user that their decision to never show warnings for the url has been applied and they may report their notification contents to Google.">
+    Help improve spam protection by sharing notification content and the site's URL with Google. Content may be reviewed by humans.
   </message>
 
     <!-- Growser Apps Deprecation -->
@@ -19766,7 +19766,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       </message>
     </if>
     <!-- chrome://feedback/report-unsafe-site -->
-    <message name="IDS_REPORT_UNSAFE_SITE_DIALOG_INCLUDE_SCREENSHOT_CHECKBOX_LABEL" desc="Label for checkbox to include screenshot in report unsafe-site-report sent to Growser">
+    <message name="IDS_REPORT_UNSAFE_SITE_DIALOG_INCLUDE_SCREENSHOT_CHECKBOX_LABEL" desc="Label for checkbox to include screenshot in report unsafe-site-report sent to Google">
       Include screenshot
     </message>
     <message name="IDS_REPORT_UNSAFE_SITE_DIALOG_SEND_BUTTON_LABEL" desc="Dialog button label to send unsafe-site-report to Growser">
@@ -19775,13 +19775,13 @@ Please help our engineers fix this problem. Tell us what happened right before y
     <message name="IDS_REPORT_UNSAFE_SITE_DIALOG_URL_LABEL" desc="Label which denotes URL of the unsafe-site in report-unsafe-site dialog">
       URL
     </message>
-    <message name="IDS_REPORT_UNSAFE_SITE_DIALOG_SENDING_BUTTON_LABEL" desc="Dialog button label while unsafe-site-report is sending to Growser">
+    <message name="IDS_REPORT_UNSAFE_SITE_DIALOG_SENDING_BUTTON_LABEL" desc="Dialog button label while unsafe-site-report is sending to Google">
       Sending...
     </message>
-    <message name="IDS_REPORT_UNSAFE_SITE_CONFIRMATION_TOAST" desc="Message confirmation after unsafe-site-report sends to Growser">
+    <message name="IDS_REPORT_UNSAFE_SITE_CONFIRMATION_TOAST" desc="Message confirmation after unsafe-site-report sends to Google">
       Report sent
     </message>
-    <message name="IDS_REPORT_UNSAFE_SITE_A11Y_IMAGE_TEXT" desc="Aria label for the screenshot image of the site to be reported to Growser.">
+    <message name="IDS_REPORT_UNSAFE_SITE_A11Y_IMAGE_TEXT" desc="Aria label for the screenshot image of the site to be reported to Google.">
       Screenshot
     </message>
 

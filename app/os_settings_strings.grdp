@@ -322,7 +322,7 @@
   </message>
   <if expr="reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Growser account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Google settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL_2" desc="Label describing the OS sync feature.">
       Your apps and settings will sync across all ChromeOS Flex devices where you are signed in with your Growser sync chain. To manage what browser data is saved in your Growser sync chain, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
@@ -330,7 +330,7 @@
   </if>
   <if expr="not reven">
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL" desc="Label describing the OS sync feature.">
-      Your apps and settings will sync across all ChromeOS devices where you are signed in with your Growser account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
+      Your apps and settings will sync across all ChromeOS devices where you are signed in with your Google account. For browser sync options, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Google settings<ph name="LINK_END">&lt;/a&gt;</ph>.
     </message>
     <message name="IDS_OS_SETTINGS_SYNC_FEATURE_LABEL_2" desc="Label describing the OS sync feature.">
       Your apps and settings will sync across all ChromeOS devices where you are signed in with your Growser sync chain. To manage what browser data is saved in your Growser sync chain, go to <ph name="LINK_BEGIN">&lt;a href='#'&gt;</ph>Growser settings<ph name="LINK_END">&lt;/a&gt;</ph>.
@@ -488,7 +488,7 @@
   <message name="IDS_OS_SETTINGS_INPUT_METHOD_LANGUAGE_PACKS_NEEDS_REBOOT_ERROR" desc="Error message when a component of an input method could not be downloaded because the device needs to restart to update." translateable="false">
     Please restart your device to finish installation
   </message>
-  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_TITLE" desc="Title for the section containing all the options for spell check settings. The options include picking between using the system's spell check or using Growser's web service and a list of the enabled languages which support spell checking.">
+  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_TITLE" desc="Title for the section containing all the options for spell check settings. The options include picking between using the system's spell check or using Google's web service and a list of the enabled languages which support spell checking.">
     Spell check
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_AND_GRAMMAR_CHECK_TITLE" desc="Title for the section containing all the options for spell and grammar check settings. The options include a list of the enabled languages which support spell checking.">
@@ -497,8 +497,8 @@
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_AND_GRAMMAR_CHECK_DESCRIPTION" desc="Description for the spell and grammar check section.">
     Grammar check currently available for English only
   </message>
-  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_ENHANCED_LABEL" desc="Label for enhanced spell check toggle, the type of spell check that sends the text the user types to Growser spelling service. It is important that it is communicated that the text the user types will be sent to Growser.">
-    Enhanced spell check in Growser browser (text is sent to Growser for spelling suggestions)
+  <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_ENHANCED_LABEL" desc="Label for enhanced spell check toggle, the type of spell check that sends the text the user types to Google spelling service. It is important that it is communicated that the text the user types will be sent to Google.">
+    Enhanced spell check in Google browser (text is sent to Google for spelling suggestions)
   </message>
   <message name="IDS_OS_SETTINGS_LANGUAGES_SPELL_CHECK_LANGUAGES_LIST_TITLE" desc="Title for the list of languages that support spell check, from which users can enable or disable spell check for.">
     Spell check languages
@@ -984,7 +984,7 @@
     Set your default search engine for Growser browser and <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> Launcher
   </message>
   <message name="IDS_OS_SETTINGS_ENABLE_MAGIC_BOOST" desc="The label of the toggle to enable/disable Magic Boost in ChromeOS settings.">
-    Use Growser AI to get help reading, writing, and creating
+    Use Google AI to get help reading, writing, and creating
   </message>
   <message name="IDS_OS_SETTINGS_ENABLE_MAGIC_BOOST_DESCRIPTION" desc="The description of the toggle to enable/disable Magic Boost in ChromeOS settings.">
     Right-click to summarize content, get definitions, write with more confidence, create images, and more. Currently has limited availability.
@@ -2173,7 +2173,7 @@ Use Ctrl + Alt + Brightness down to zoom out.
     Downloading speech recognition files... <ph name="PERCENT">$1<ex>17</ex></ph>%
   </message>
   <message name="IDS_SETTINGS_ACCESSIBILITY_DICTATION_SUBTITLE_SODA_DOWNLOAD_ERROR" desc="Description explaining that there was an error with the speech recognition library download.">
-    Couldn’t download <ph name="language">$1<ex>English</ex></ph> speech files. Download will be attempted later. Speech is sent to Growser for processing until download is completed.
+    Couldn’t download <ph name="language">$1<ex>English</ex></ph> speech files. Download will be attempted later. Speech is sent to Google for processing until download is completed.
   </message>
   <message name="IDS_SETTINGS_ACCESSIBILITY_DICTATION_LOCALE_MENU_LABEL" desc="Description of a drop-down menu to select the language to use for Dictation's speech recognition.">
     Language
@@ -2181,8 +2181,8 @@ Use Ctrl + Alt + Brightness down to zoom out.
   <message name="IDS_SETTINGS_ACCESSIBILITY_DICTATION_LOCALE_SUB_LABEL_OFFLINE" desc="Sub-label for a drop-down menu to select the language to use for Dictation. Describes how that language can be processed offline with no network connection.">
     <ph name="language">$1<ex>English</ex></ph> is processed locally and works offline
   </message>
-  <message name="IDS_SETTINGS_ACCESSIBILITY_DICTATION_LOCALE_SUB_LABEL_NETWORK" desc="Sub-label for a drop-down menu to select the language to use for Dictation. Describes how speech will be sent over the network to Growser for processing to create text.">
-    <ph name="language">$1<ex>English</ex></ph> speech is sent to Growser for processing
+  <message name="IDS_SETTINGS_ACCESSIBILITY_DICTATION_LOCALE_SUB_LABEL_NETWORK" desc="Sub-label for a drop-down menu to select the language to use for Dictation. Describes how speech will be sent over the network to Google for processing to create text.">
+    <ph name="language">$1<ex>English</ex></ph> speech is sent to Google for processing
   </message>
   <message name="IDS_SETTINGS_ACCESSIBILITY_DICTATION_CHANGE_LANGUAGE_BUTTON" desc="Text on a button to open a dialog to change the Dictation language.">
     Change
@@ -2313,8 +2313,8 @@ Use Ctrl + Alt + Brightness down to zoom out.
   <message name="IDS_SETTINGS_ACCESSIBILITY_SELECT_TO_SPEAK_ENHANCED_NETWORK_VOICES_DESCRIPTION" desc="In the Select-to-speak settings subpage, the label for the control to enable support for high-quality voices streamed from the interent when the device is online.">
     Use natural voice when device is online
   </message>
-  <message name="IDS_SETTINGS_ACCESSIBILITY_SELECT_TO_SPEAK_ENHANCED_NETWORK_VOICES_SUBTITLE" desc="In the Select-to-speak settings subpage, informational text related to the Select-to-speak control that enables support for high-quality voices, mentioning that enabling these voices will send text to Growser for processing and generating audio.">
-    Text will be sent to Growser for processing.
+  <message name="IDS_SETTINGS_ACCESSIBILITY_SELECT_TO_SPEAK_ENHANCED_NETWORK_VOICES_SUBTITLE" desc="In the Select-to-speak settings subpage, informational text related to the Select-to-speak control that enables support for high-quality voices, mentioning that enabling these voices will send text to Google for processing and generating audio.">
+    Text will be sent to Google for processing.
   </message>
   <message name="IDS_SETTINGS_ACCESSIBILITY_SELECT_TO_SPEAK_ENHANCED_NETWORK_VOICE" desc="In the Select-to-speak settings subpage, the label for the control to choose a high-quality, natural-sounding voice to be streamed from the internet from a list.">
     Natural voice
@@ -2646,7 +2646,7 @@ Press an assigned switch or key to remove assignment.
     Find more accessibility tools in the Web Store
   </message>
   <message name="IDS_SETTINGS_ACCESSIBILITY_DISABILITY_SUPPORT_TITLE" desc="In the settings tab, the title of a link that opens the disability support help center page.">
-    Contact Growser Disability Support
+    Contact Google Disability Support
   </message>
   <message name="IDS_SETTINGS_MANAGE_TTS_SETTINGS" desc="Link to manage text-to-speech settings">
     Text-to-Speech voice settings
@@ -2949,7 +2949,7 @@ Press an assigned switch or key to remove assignment.
     Develop Android apps
   </message>
   <message name="IDS_SETTINGS_CROSTINI_ARC_ADB_DESCRIPTION" desc="Description of ARC ADB sideloading in Settings.">
-    To create and test your apps, enable the Android Debug Bridge (ADB). Note that this action allows installation of Android apps that haven't been verified by Growser, and requires a factory reset to disable.
+    To create and test your apps, enable the Android Debug Bridge (ADB). Note that this action allows installation of Android apps that haven't been verified by Google, and requires a factory reset to disable.
   </message>
   <message name="IDS_SETTINGS_CROSTINI_ARC_ADB_LABEL" desc="Label for enabling ADB in ARC.">
     Enable ADB debugging
@@ -6157,13 +6157,13 @@ Press an assigned switch or key to remove assignment.
   <message name="IDS_SETTINGS_TIME_ZONE_DETECTION_GEOLOCATION_MANAGED_WARNING_TEXT" desc="Displays the text notifying users that the system geolocation permission is required for the Automatic Time Zone Detection. Displaying the current status of Automatic Time Zone Detection with inline link to resolve the breakage.">
     Time zone is currently set to <ph name="TIME_ZONE_ENTRY">$1<ex>(UTC+4:00) Georgia Standard Time (Tbilisi)</ex></ph>. This setting is managed by your administrator.
   </message>
-  <message name="IDS_OS_SETTINGS_TIME_ZONE_DETECTION_MODE_IP_ONLY_DEFAULT" desc="Display name for the automatic time zone detection mode which enables time zone detection sending unprecise location to Growser servers.">
+  <message name="IDS_OS_SETTINGS_TIME_ZONE_DETECTION_MODE_IP_ONLY_DEFAULT" desc="Display name for the automatic time zone detection mode which enables time zone detection sending unprecise location to Google servers.">
     Use your IP address to determine location
   </message>
-  <message name="IDS_SETTINGS_TIME_ZONE_DETECTION_MODE_SEND_WIFI_AP" desc="Display name for the automatic time zone detection mode which enables time zone detection sending list of visible WiFi Access Point names to Growser servers.">
+  <message name="IDS_SETTINGS_TIME_ZONE_DETECTION_MODE_SEND_WIFI_AP" desc="Display name for the automatic time zone detection mode which enables time zone detection sending list of visible WiFi Access Point names to Google servers.">
     Use only Wi-Fi to determine location
   </message>
-  <message name="IDS_SETTINGS_TIME_ZONE_DETECTION_MODE_SEND_ALL_INFO" desc="Display name for the automatic time zone detection mode which enables time zone detection sending list of visible WiFi and Cellular Access Point names to Growser servers.">
+  <message name="IDS_SETTINGS_TIME_ZONE_DETECTION_MODE_SEND_ALL_INFO" desc="Display name for the automatic time zone detection mode which enables time zone detection sending list of visible WiFi and Cellular Access Point names to Google servers.">
     Use Wi-Fi or mobile networks to determine location
   </message>
   <message name="IDS_SETTINGS_TIME_ZONE" desc="Label for the picker which allows users to choose their time zone.">
@@ -6732,7 +6732,7 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     Screen privacy
   </message>
   <message name="IDS_OS_SETTINGS_SMART_PRIVACY_DESC" desc="The text explaining to the user the manner in which their presence is sensed and data usage policy.">
-    Your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> uses a built-in sensor to detect people in front of your device. All data is processed on your device immediately and then deleted. Sensor data is never sent to Growser. <ph name="LINK_BEGIN">&lt;a&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
+    Your <ph name="DEVICE_TYPE">$1<ex>Chromebook</ex></ph> uses a built-in sensor to detect people in front of your device. All data is processed on your device immediately and then deleted. Sensor data is never sent to Google. <ph name="LINK_BEGIN">&lt;a&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_OS_SETTINGS_SMART_PRIVACY_QUICK_DIM_TITLE" desc="The name of the quick dim feature shown as the label of a toggle in the smart privacy subpage.">
     Lock-on-leave
@@ -6852,7 +6852,7 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     Nothing can use your location. However, your location may still be visible to apps and websites through your IP address. <ph name="LINK_BEGIN">&lt;a&gt;</ph>Learn more<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_GEOLOCATION_ACCURACY_TOGGLE_TEXT" desc="In Geolocation setting advance subpage (under Privacy Controls), text description for the toggle settings that controls location accuracy toggle.">
-    Location Accuracy provides more accurate location for apps and services. To do this, Growser periodically processes information about device sensors and wireless signals from your device to crowdsource wireless signal locations. These are used without identifying you to improve location accuracy and location-based services and to generally improve, provide, and maintain Growser's services based on Growser's and third parties' legitimate interests to serve users' needs.
+    Location Accuracy provides more accurate location for apps and services. To do this, Google periodically processes information about device sensors and wireless signals from your device to crowdsource wireless signal locations. These are used without identifying you to improve location accuracy and location-based services and to generally improve, provide, and maintain Google's services based on Google's and third parties' legitimate interests to serve users' needs.
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_GEOLOCATION_ACCURACY_TOGGLE_TITLE" desc="In Geolocation setting advance subpage (under Privacy Controls), title displayed for the toggle to control location accuracy toggle.">
     Location Accuracy (Android only)
@@ -6867,7 +6867,7 @@ Press &amp; hold keyboard keys to see accent marks and special characters. This 
     <ph name="DEVICE_OS">$1<ex>ChromeOS Flex</ex></ph> hardware support and stability
   </message>
   <message name="IDS_OS_SETTINGS_HW_DATA_USAGE_TOGGLE_DESC" desc="The description of the checkbox to enable/disable device hardware data collection and usage in ChromeOS Flex.">
-    Let Growser use your hardware data to help improve <ph name="DEVICE_OS">$1<ex>ChromeOS Flex</ex></ph>. If you decline, this data is still sent to Growser to determine proper updates, but is not stored or used otherwise.
+    Let Google use your hardware data to help improve <ph name="DEVICE_OS">$1<ex>ChromeOS Flex</ex></ph>. If you decline, this data is still sent to Google to determine proper updates, but is not stored or used otherwise.
   </message>
   <message name="IDS_OS_SETTINGS_PRIVACY_HUB_WEBSITES_SECTION_TITLE" desc="The title of the Websites section of the privacy hub sensor subpages.">
     Websites
