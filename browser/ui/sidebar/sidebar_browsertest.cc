@@ -79,6 +79,7 @@
 #include "chrome/browser/ui/side_panel/side_panel_ui.h"
 #include "chrome/browser/ui/tabs/features.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "components/favicon/content/content_favicon_driver.h"
 #include "components/tabs/public/tab_interface.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "chrome/browser/ui/views/chrome_layout_provider.h"
@@ -94,6 +95,7 @@
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/test/browser_test.h"
+#include "skia/ext/image_operations.h"
 #include "testing/gmock/include/gmock/gmock-matchers.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "ui/base/ui_base_features.h"
@@ -107,7 +109,10 @@
 #include "ui/gfx/animation/animation_test_api.h"
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/rounded_corners_f.h"
+#include "ui/gfx/image/image_skia_operations.h"
+#include "ui/gfx/image/image_unittest_util.h"
 #include "ui/views/animation/ink_drop.h"
+#include "ui/views/controls/button/label_button.h"
 #include "ui/views/layout/layout_provider.h"
 #include "ui/views/test/views_test_utils.h"
 #include "ui/views/view_utils.h"
@@ -2793,6 +2798,50 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntriesPointAtTheirTabs) {
 
   // Past the end, and past the pinned tabs, there is no tab to ask about.
   EXPECT_FALSE(view->GetTabForEntryForTesting(kPinnedTabCount));
+}
+
+// Growser-186: the entry draws the icon the STRIP draws, not the one the page
+// declares. brave replaces the new tab page's favicon with the product logo in
+// ApplyBraveTabDataOverrides, so a pinned new tab page wore the page's own Leo
+// mark in the sidebar while the same tab showed our G in the strip.
+//
+// What is asserted is the SOURCE, not a picture: the entry's image is the
+// tab's favicon. And the precondition is asserted first - that the two sources
+// really do differ for this page - because a test that cannot tell them apart
+// would pass on the broken code just as loudly.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntryDrawsTheTabsIcon) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+
+  auto* view = GetSidebarPinnedTabsView();
+  tab_model()->ActivateTabAt(0);
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("chrome://newtab/")));
+  RunLayout();
+
+  Tab* tab = view->GetTabForEntryForTesting(0u);
+  ASSERT_TRUE(tab);
+  const ui::ImageModel& from_strip = tab->data().favicon;
+  ASSERT_FALSE(from_strip.IsEmpty())
+      << "the strip has no icon for the new tab page, so this test can compare "
+         "nothing";
+
+  auto* driver = favicon::ContentFaviconDriver::FromWebContents(
+      tab_model()->GetWebContentsAt(0));
+  const gfx::Image declared = driver ? driver->GetFavicon() : gfx::Image();
+  const gfx::ImageSkia wanted =
+      from_strip.Rasterize(view->GetColorProvider());
+  ASSERT_TRUE(declared.IsEmpty() ||
+              !gfx::test::AreImagesEqual(gfx::Image(wanted), declared))
+      << "the page declares the same icon the strip draws, so this test cannot "
+         "tell the two sources apart";
+
+  auto* entry = static_cast<views::LabelButton*>(EntryAt(0));
+  EXPECT_TRUE(gfx::test::AreImagesEqual(
+      gfx::Image(entry->GetImage(views::Button::STATE_NORMAL)),
+      gfx::Image(gfx::ImageSkiaOperations::CreateResizedImage(
+          wanted, skia::ImageOperations::RESIZE_BEST,
+          entry->GetImage(views::Button::STATE_NORMAL).size()))))
+      << "the sidebar entry is not drawing what the strip draws";
 }
 
 // A right click on an entry really opens a menu. The test above proves the
