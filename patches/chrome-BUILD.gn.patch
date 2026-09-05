@@ -1,5 +1,5 @@
 diff --git a/chrome/BUILD.gn b/chrome/BUILD.gn
-index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26f7710453 100644
+index c84f6d48986034c51b14cad7278025a9f4e57adb..8bf83a2929311c4021f879b32edc5905f7b0d05f 100644
 --- a/chrome/BUILD.gn
 +++ b/chrome/BUILD.gn
 @@ -197,6 +197,7 @@ if (!is_android && !is_mac) {
@@ -32,7 +32,33 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
  
      if (enable_updater) {
        deps += [ ":chromium_updater_privileged_helper" ]
-@@ -725,6 +728,7 @@ if (is_win) {
+@@ -682,8 +685,23 @@ if (is_win) {
+   }
+ 
+   bundle_data("chrome_app_icon") {
+-    sources = [ "app/theme/$branding_path_component/mac/app.icns" ]
+-    outputs = [ "{{bundle_resources_dir}}/{{source_file_part}}" ]
++    # Growser-162: the build people install keeps the release mark; every other
++    # build carries the same mark in RED, so two browsers in the Dock cannot be
++    # confused. The Windows half of this is #146. The output name stays
++    # app.icns either way - that is the name CFBundleIconFile carries.
++    import("//brave/build/growser.gni")
++    if (growser_public_release) {
++      sources = [ "app/theme/$branding_path_component/mac/app.icns" ]
++    } else {
++      # Read from //brave rather than from chrome/app/theme: branding.js
++      # copies only app.icns (and Assets.car) into the Chromium tree, so a
++      # second file there would be a hand-made duplicate going stale in
++      # silence. brand/make-raster-icons.py writes this one.
++      sources = [
++        "//brave/app/theme/$branding_path_component/mac/app_development.icns",
++      ]
++    }
++    outputs = [ "{{bundle_resources_dir}}/app.icns" ]
+   }
+ 
+   bundle_data("chrome_asset_catalog") {
+@@ -725,6 +743,7 @@ if (is_win) {
        # this dependency directly copies the file into the framework's
        # resources directory.
        public_deps += [ ":chrome_framework_widevine_signature" ]
@@ -40,7 +66,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
      }
    }
  
-@@ -768,9 +772,11 @@ if (is_win) {
+@@ -768,9 +787,11 @@ if (is_win) {
        "--scm=0",
      ]
    }
@@ -52,7 +78,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
      if (is_chrome_branded && include_branded_entitlements) {
        # These entitlements are bound to the official Google Chrome signing
        # certificate and will not necessarily work in any other build.
-@@ -795,6 +801,7 @@ if (is_win) {
+@@ -795,6 +816,7 @@ if (is_win) {
          info_plist_target = invoker.info_plist_target
        } else {
          info_plist_target = ":chrome_helper_plist"
@@ -60,7 +86,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
        }
  
        extra_substitutions = [
-@@ -1073,6 +1080,7 @@ if (is_win) {
+@@ -1073,6 +1095,7 @@ if (is_win) {
      if (enable_updater) {
        if (is_chrome_branded) {
          sources += [ "//third_party/updater/chrome_mac_universal_prod/cipd/${updater_product_full_name}.app" ]
@@ -68,7 +94,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
        } else {
          sources += [ "$root_out_dir/${updater_product_full_name}.app" ]
  
-@@ -1431,6 +1439,7 @@ if (is_win) {
+@@ -1431,6 +1454,7 @@ if (is_win) {
        "-current_version",
        chrome_dylib_version,
      ]
@@ -76,7 +102,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
  
      if (!is_component_build) {
        # Specify a sensible install_name for static builds. The library is
-@@ -1642,6 +1651,7 @@ if (is_win) {
+@@ -1642,6 +1666,7 @@ if (is_win) {
  
  group("dependencies") {
    public_deps = [
@@ -84,7 +110,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
      "//build:branding_buildflags",
      "//build:chromeos_buildflags",
      "//chrome/browser",
-@@ -1688,7 +1698,7 @@ group("dependencies") {
+@@ -1688,7 +1713,7 @@ group("dependencies") {
  
  if (is_win) {
    process_version_rc_template("chrome_exe_version") {
@@ -93,7 +119,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
      output = "$target_gen_dir/chrome_exe_version.rc"
    }
  
-@@ -1737,6 +1747,7 @@ group("resources") {
+@@ -1737,6 +1762,7 @@ group("resources") {
      "//chrome/browser:resources",
      "//chrome/common:resources",
      "//chrome/renderer:resources",
@@ -101,7 +127,7 @@ index c84f6d48986034c51b14cad7278025a9f4e57adb..3aa557bbf05683e746b5ee31aa25ea26
    ]
  }
  
-@@ -1762,6 +1773,7 @@ if (!is_android) {
+@@ -1762,6 +1788,7 @@ if (!is_android) {
      if (enable_resource_allowlist_generation) {
        repack_allowlist = _chrome_resource_allowlist
        deps = [ ":resource_allowlist" ]
