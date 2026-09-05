@@ -1739,7 +1739,7 @@ Your Google account may have other forms of browsing history like searches and a
         Enhanced protection
       </message>
       <message name="IDS_SAFE_BROWSING_ENHANCED_PROTECTION_SUMMARY_UPDATED" desc="Summary for Safe Browsing enhanced protection mode.">
-        Real-time, AI-powered protection against dangerous sites, downloads, and extensions that's based on your browsing data getting sent to Growser
+        Real-time, AI-powered protection against dangerous sites, downloads, and extensions that's based on your browsing data getting sent to Google
       </message>
       <message name="IDS_SAFE_BROWSING_STANDARD_PROTECTION_TITLE" desc="Title for Safe Browsing standard protection mode. [CHAR_LIMIT=32]">
         Standard protection
@@ -1748,13 +1748,13 @@ Your Google account may have other forms of browsing history like searches and a
         Protects against sites, downloads, and extensions that are known to be dangerous. If a page does something suspicious, URLs and bits of page content are sent to Google Safe Browsing.
       </message>
       <message name="IDS_SAFE_BROWSING_STANDARD_PROTECTION_SUMMARY_PROXY" desc="Summary for Safe Browsing standard protection mode with proxy.">
-        Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Growser sends an obfuscated portion of the URL to Growser through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent.
+        Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Growser sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent.
       </message>
       <message name="IDS_SAFE_BROWSING_NO_PROTECTION_TITLE" desc="Title for Safe Browsing no protection mode. [CHAR_LIMIT=32]">
         No protection (not recommended)
       </message>
       <message name="IDS_SAFE_BROWSING_NO_PROTECTION_SUMMARY" desc="Summary for Safe Browsing no protection mode.">
-        Does not protect you against dangerous websites, downloads, and extensions. Your Safe Browsing settings in other Growser products won't be affected.
+        Does not protect you against dangerous websites, downloads, and extensions. Your Safe Browsing settings in other Google products won't be affected.
       </message>
 
       <!-- Safe Browsing enhanced protection preferences -->
@@ -1762,13 +1762,13 @@ Your Google account may have other forms of browsing history like searches and a
         Enhanced protection
       </message>
       <message name="IDS_SAFE_BROWSING_ENHANCED_PROTECTION_BULLET_ONE" desc="First bullet point that describes the details of the Safe Browsing control.">
-        Warns you about dangerous sites, even ones Growser didn’t know about before, by analyzing more data from sites than standard protection. You can choose to skip Growser warnings.
+        Warns you about dangerous sites, even ones Google didn’t know about before, by analyzing more data from sites than standard protection. You can choose to skip Growser warnings.
       </message>
       <message name="IDS_SAFE_BROWSING_ENHANCED_PROTECTION_BULLET_TWO" desc="Second bullet point that describes the details of the Safe Browsing control.">
         In-depth scans for suspicious downloads.
       </message>
       <message name="IDS_SAFE_BROWSING_ENHANCED_PROTECTION_BULLET_THREE" desc="Third bullet point that describes the details of the Safe Browsing control.">
-        When you're signed in, protects you across Growser services.
+        When you're signed in, protects you across Google services.
       </message>
       <message name="IDS_SAFE_BROWSING_ENHANCED_PROTECTION_BULLET_FOUR" desc="Fourth bullet point that describes the details of the Safe Browsing control.">
         Improves security for you and everyone on the web.
@@ -1814,7 +1814,7 @@ Your Google account may have other forms of browsing history like searches and a
         Help improve security on the web for everyone
       </message>
       <message name="IDS_SAFE_BROWSING_STANDARD_PROTECTION_EXTENDED_REPORTING_SUMMARY" desc="Summary for Safe Browsing extended reporting.">
-        Sends URLs of some pages you visit, limited system information, and some page content to Growser, to help discover new threats and protect everyone on the web.
+        Sends URLs of some pages you visit, limited system information, and some page content to Google, to help discover new threats and protect everyone on the web.
       </message>
 
       <!-- Safe Browsing no protection confirmation dialog -->
@@ -3496,10 +3496,10 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
         Enhanced Safe Browsing
       </message>
       <message name="IDS_SAFETY_FRE_PROMO_ENHANCED_SAFE_BROWSING_SUBTITLE" desc="Subtitle of the Enhanced Safe Browsing card on the Safety Promo screen of the First Run Experience.">
-        Growser’s highest level of protection against online threats
+        Google’s highest level of protection against online threats
       </message>
       <message name="IDS_SAFETY_FRE_PROMO_ENHANCED_SAFE_BROWSING_CAROUSEL_TITLE" desc="Title of the Enhanced Safe Browsing slide on the Safety Promo Carousel screen of the First Run Experience.">
-        Growser’s most secure browsing experience
+        Google’s most secure browsing experience
       </message>
       <message name="IDS_SAFETY_FRE_PROMO_ENHANCED_SAFE_BROWSING_CAROUSEL_SUBTITLE" desc="Subtitle of the Enhanced Safe Browsing slide on the Safety Promo Carousel screen of the First Run Experience.">
         Enhanced Safe Browsing offers security from known and potential new dangers

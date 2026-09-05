@@ -1547,10 +1547,10 @@
     </message>
     <if expr="_google_chrome">
       <message name="IDS_SETTINGS_PRIVACY_GUIDE_SAFE_BROWSING_CARD_STANDARD_PROTECTION_FEATURE_DESCRIPTION2_PROXY" desc="A part of the feature description of the standard protection section of the safe browsing card in the 'Privacy guide'.">
-        Sends an obfuscated portion of the URL to Growser through a privacy server that hides your IP address
+        Sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address
       </message>
       <message name="IDS_SETTINGS_PRIVACY_GUIDE_SAFE_BROWSING_CARD_STANDARD_PROTECTION_PRIVACY_DESCRIPTION1_PROXY" desc="A part of the privacy description of the standard protection section of the safe browsing card in the 'Privacy Guide'.">
-        If a site tries to steal your password, or when you download a harmful file, Growser may also send URLs, including bits of page content, to Growser
+        If a site tries to steal your password, or when you download a harmful file, Growser may also send URLs, including bits of page content, to Google
       </message>
     </if>
 
@@ -1654,7 +1654,7 @@
       Sends URLs of some pages you visit to Google, when your security is at risk
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENABLE_REPORTING_DESC" desc="Description for extended safe browsing">
-      Sends URLs of some pages you visit, limited system information, and some page content to Growser, to help discover new threats and protect everyone on the web.
+      Sends URLs of some pages you visit, limited system information, and some page content to Google, to help discover new threats and protect everyone on the web.
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_SECTION_LABEL" desc="The section label of the safe browsing section grouping safe browsing settings">
       Safe Browsing
@@ -1663,7 +1663,7 @@
       Enhanced protection
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_DESC_UPDATED" desc="Description of safe browsing enhanced protection mode">
-      Real-time, AI-powered protection against dangerous sites, downloads, and extensions that's based on your browsing data getting sent to Growser
+      Real-time, AI-powered protection against dangerous sites, downloads, and extensions that's based on your browsing data getting sent to Google
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_EXPAND_ACCESSIBILITY_LABEL" desc="Label for the button that toggles showing the detailed description of safe browsing enhanced protection. Only visible by screen reader software.">
       Show enhanced protection details
@@ -1684,7 +1684,7 @@
       In-depth scans for suspicious downloads.
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_WHEN_ON_BULLET_THREE" desc="Bullet point under the Safe Browsing enhanced protection mode section titled 'When on'">
-      When you're signed in, protects you across Growser services.
+      When you're signed in, protects you across Google services.
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_ENHANCED_WHEN_ON_BULLET_FOUR" desc="Bullet point under the Safe Browsing enhanced protection mode section titled 'When on'">
       Improves security for you and everyone on the web.
@@ -1706,10 +1706,10 @@
     </message>
     <if expr="_google_chrome">
       <message name="IDS_SETTINGS_SAFEBROWSING_STANDARD_DESC_PROXY" desc="Description for safe browsing standard protection mode">
-        Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Growser sends an obfuscated portion of the URL to Growser through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent.
+        Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Growser sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent.
       </message>
       <message name="IDS_SETTINGS_SAFEBROWSING_STANDARD_BULLET_TWO_PROXY" desc="Bullet point under the safe browsing standard protection mode">
-        Sends an obfuscated portion of the URL to Growser through a privacy server that hides your IP address. If a site tries to steal your password, or when you download a harmful file, Growser may also send URLs, including bits of page content, to Growser.
+        Sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site tries to steal your password, or when you download a harmful file, Growser may also send URLs, including bits of page content, to Google.
       </message>
     </if>
     <message name="IDS_SETTINGS_SAFEBROWSING_STANDARD_EXPAND_ACCESSIBILITY_LABEL" desc="Label for the button that toggles showing the detailed description of safe browsing standard protection. Only visible by screen reader software.">
@@ -1725,7 +1725,7 @@
       No protection (not recommended)
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_NONE_DESC" desc="Description for safe browsing no protection mode">
-      Does not protect you against dangerous websites, downloads, and extensions. Your Safe Browsing settings in other Growser products won't be affected.
+      Does not protect you against dangerous websites, downloads, and extensions. Your Safe Browsing settings in other Google products won't be affected.
     </message>
     <message name="IDS_SETTINGS_SAFEBROWSING_DISABLE_DIALOG_TITLE" desc="Title for the confirmation dialog to turn off SafeBrowsing">
       Turn off Safe Browsing?
