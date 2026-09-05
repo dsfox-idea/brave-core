@@ -64,4 +64,14 @@ TEST(SidebarPinnedTabsLayoutTest, DegenerateEntryHeight) {
   EXPECT_EQ(0, CalculatePinnedTabsCapacity(1000, -1, kSpacing, kSeparator));
 }
 
+// Growser-183: the active tab's glow is a dark-theme decoration. The rule is
+// asked of the sidebar's own colour, so a dark custom theme under a light
+// system keeps the glow and a light one loses it whatever the system says.
+TEST(SidebarPinnedTabsLayoutTest, GlowBelongsToDarkSurfacesOnly) {
+  EXPECT_FALSE(ShouldPaintActiveTabGlow(SK_ColorWHITE));
+  EXPECT_FALSE(ShouldPaintActiveTabGlow(SkColorSetRGB(0xF3, 0xF3, 0xF5)));
+  EXPECT_TRUE(ShouldPaintActiveTabGlow(SK_ColorBLACK));
+  EXPECT_TRUE(ShouldPaintActiveTabGlow(SkColorSetRGB(0x1E, 0x20, 0x29)));
+}
+
 }  // namespace sidebar

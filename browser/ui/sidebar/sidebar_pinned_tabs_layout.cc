@@ -5,6 +5,8 @@
 
 #include "brave/browser/ui/sidebar/sidebar_pinned_tabs_layout.h"
 
+#include "ui/gfx/color_utils.h"
+
 namespace sidebar {
 
 int CalculatePinnedTabsCapacity(int available_height,
@@ -22,6 +24,10 @@ int CalculatePinnedTabsCapacity(int available_height,
   }
 
   return height_for_entries / (entry_height + spacing);
+}
+
+bool ShouldPaintActiveTabGlow(SkColor surface_color) {
+  return color_utils::IsDark(surface_color);
 }
 
 }  // namespace sidebar

@@ -6,6 +6,8 @@
 #ifndef BRAVE_BROWSER_UI_SIDEBAR_SIDEBAR_PINNED_TABS_LAYOUT_H_
 #define BRAVE_BROWSER_UI_SIDEBAR_SIDEBAR_PINNED_TABS_LAYOUT_H_
 
+#include "third_party/skia/include/core/SkColor.h"
+
 namespace sidebar {
 
 // How many pinned tabs the sidebar can host in |available_height|.
@@ -23,6 +25,13 @@ int CalculatePinnedTabsCapacity(int available_height,
                                 int entry_height,
                                 int spacing,
                                 int leading_height);
+
+// Growser-183: whether the active entry's glow belongs on a sidebar of this
+// colour. The glow reads as light coming off the edge on a dark surface; on a
+// light one the same shadow only tints the background around the bar, which
+// the bar alone says better. Asked of the surface's colour rather than of the
+// OS setting, so a dark custom theme under a light system still gets it.
+bool ShouldPaintActiveTabGlow(SkColor surface_color);
 
 }  // namespace sidebar
 
