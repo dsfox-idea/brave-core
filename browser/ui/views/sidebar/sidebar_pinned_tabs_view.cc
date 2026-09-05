@@ -330,41 +330,26 @@ void SidebarPinnedTabsView::UpdateEntry(size_t entry_index) {
   entry->SetAccessibleName(title);
   entry->SetTooltipText(title);
 
-  auto* tab_strip = GetBraveTabStrip();
-  Tab* tab = GetTabForEntry(entry_index);
-
-  // Growser-186: the icon the STRIP would draw, for the same reason the accent
-  // below is asked of the strip - two sources for one icon is how a pinned new
-  // tab page came to show the Leo mark here and our G there. brave overrides
-  // the new tab page's favicon in tabs::TabData
-  // (chromium_src/chrome/browser/ui/tabs/tab_data.cc), and the favicon driver
-  // never sees that: it answers what the PAGE declares, and the page still
-  // declares Leo.
-  gfx::ImageSkia icon;
-  if (tab && !tab->data().favicon.IsEmpty()) {
-    icon = tab->data().favicon.Rasterize(GetColorProvider());
-  }
-  if (icon.isNull()) {
-    // The strip has no view for this tab - during a rebuild, or in a window on
-    // its way out. The page is still there, and this is what it declares.
-    auto* favicon_driver =
-        favicon::ContentFaviconDriver::FromWebContents(contents);
-    if (favicon_driver) {
-      icon = favicon_driver->GetFavicon().AsImageSkia();
+  auto* favicon_driver =
+      favicon::ContentFaviconDriver::FromWebContents(contents);
+  if (favicon_driver) {
+    const gfx::Image favicon = favicon_driver->GetFavicon();
+    if (!favicon.IsEmpty()) {
+      entry->SetImageModel(
+          views::Button::STATE_NORMAL,
+          ui::ImageModel::FromImageSkia(
+              gfx::ImageSkiaOperations::CreateResizedImage(
+                  favicon.AsImageSkia(), skia::ImageOperations::RESIZE_BEST,
+                  kIconSize)));
     }
-  }
-  if (!icon.isNull()) {
-    entry->SetImageModel(views::Button::STATE_NORMAL,
-                         ui::ImageModel::FromImageSkia(
-                             gfx::ImageSkiaOperations::CreateResizedImage(
-                                 icon, skia::ImageOperations::RESIZE_BEST,
-                                 kIconSize)));
   }
 
   entry->SetActiveTab(model->active_index() == index);
 
   // Whatever the tab strip would draw for this tab, drawn here too. Asked of
   // the strip rather than worked out again, so the two cannot disagree.
+  auto* tab_strip = GetBraveTabStrip();
+  Tab* tab = GetTabForEntry(entry_index);
   if (tab_strip && tab && tab_strip->ShouldPaintTabAccent(tab)) {
     entry->SetContainerAccent(tab_strip->GetTabAccentColors(tab),
                               tab_strip->GetTabAccentIcon(tab));

@@ -92,9 +92,6 @@
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/search_test_utils.h"
 #include "chrome/test/base/ui_test_utils.h"
-#include "skia/ext/image_operations.h"
-#include "ui/gfx/image/image_skia_operations.h"
-#include "ui/gfx/image/image_skia_rep.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/test/browser_test.h"
 #include "testing/gmock/include/gmock/gmock-matchers.h"
@@ -2724,63 +2721,6 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, FollowsTheWindowHeight) {
 
   EXPECT_EQ(pinned, HostedBySidebar());
   ExpectNoTabLostOrDoubled();
-}
-
-// Growser-186: the entry draws the icon the STRIP draws. The two used to be
-// worked out separately - the strip through tabs::TabData, which brave
-// overrides for the new tab page, and the sidebar through the favicon driver,
-// which only ever answers what the page declares. A pinned new tab page
-// therefore showed the Leo mark in the sidebar and our G in the strip. This is
-// the kind of defect a machine catches and an eye does not: two sources for
-// one thing agree until the day they do not.
-IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntryDrawsTheStripsIcon) {
-  SetShowPinnedTabs(true);
-  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
-
-  // The new tab page is the case where the two answers differ. Activate a
-  // PINNED tab before navigating: the fixture leaves the original tab active
-  // and that one is not pinned, so the sidebar would have no entry for it.
-  const int index = 0;
-  tab_model()->ActivateTabAt(
-      index, TabStripUserGestureDetails(
-                 TabStripUserGestureDetails::GestureType::kOther));
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("chrome://newtab/")));
-  RunLayout();
-
-  auto* tab_strip = browser_view()->horizontal_tab_strip_for_testing();
-  Tab* tab = tab_strip->tab_at(index);
-  ASSERT_TRUE(tab);
-  ASSERT_FALSE(tab->data().favicon.IsEmpty())
-      << "the strip has no icon for the new tab page, so this tests nothing";
-
-  auto* entry = GetSidebarPinnedTabsView()->GetEntryForTesting(
-      static_cast<size_t>(index));
-  ASSERT_TRUE(entry);
-  const gfx::ImageSkia drawn = entry->GetImage(views::Button::STATE_NORMAL);
-  ASSERT_FALSE(drawn.isNull());
-
-  const gfx::ImageSkia wanted = gfx::ImageSkiaOperations::CreateResizedImage(
-      tab->data().favicon.Rasterize(entry->GetColorProvider()),
-      skia::ImageOperations::RESIZE_BEST, drawn.size());
-
-  const SkBitmap& a = drawn.GetRepresentation(1.0f).GetBitmap();
-  const SkBitmap& b = wanted.GetRepresentation(1.0f).GetBitmap();
-  ASSERT_EQ(a.width(), b.width());
-  ASSERT_EQ(a.height(), b.height());
-  // Pixel by pixel through getColor rather than memcmp over getPixels:
-  // Chromium forbids the libc call (-Wunsafe-buffer-usage-in-libc-call), and
-  // an icon is small enough that it does not matter.
-  int differing = 0;
-  for (int y = 0; y < a.height(); ++y) {
-    for (int x = 0; x < a.width(); ++x) {
-      if (a.getColor(x, y) != b.getColor(x, y)) {
-        ++differing;
-      }
-    }
-  }
-  EXPECT_EQ(0, differing)
-      << "the sidebar drew something other than the tab strip's icon ("
-      << differing << " of " << (a.width() * a.height()) << " pixels differ)";
 }
 
 // Growser-182: and the block below them does not move while that happens. It
