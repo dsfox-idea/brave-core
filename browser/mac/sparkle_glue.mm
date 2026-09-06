@@ -496,8 +496,19 @@ std::string GetDescriptionFromAppcastItem(id item) {
   std::string channel = GetUpdateChannel();
   if (channel.empty())
     channel = "stable";
-  return [NSString stringWithFormat:@"https://growser.org/sparkle/%s/appcast.xml",
-                                    channel.c_str()];
+  NSString* url =
+      [NSString stringWithFormat:@"https://growser.org/sparkle/%s/appcast.xml",
+                                 channel.c_str()];
+  // Growser-191: say it out loud. The channel comes from the build's own
+  // officialness (brave::GetChannelName returns "developer" for a
+  // non-official build and the bundle's channel - "stable" here - otherwise),
+  // so the feed moved the day macOS started building official and nobody
+  // could see it: every check failed with "an error occurred in retrieving
+  // update information" and the address it had tried appeared nowhere. It
+  // took three rounds of publishing candidate paths to find out which one the
+  // browser wanted. One line, and the next person reads it instead.
+  LOG(INFO) << "brave update: feed url is " << base::SysNSStringToUTF8(url);
+  return url;
 }
 @end
 
