@@ -103,11 +103,7 @@ SidebarPinnedTabsView::SidebarPinnedTabsView(BraveBrowser* browser)
 SidebarPinnedTabsView::~SidebarPinnedTabsView() = default;
 
 void SidebarPinnedTabsView::Layout(PassKey) {
-  const int capacity =
-      IsHostingEnabled() ? sidebar::CalculatePinnedTabsCapacity(
-                               height(), kEntryHeight, kSpacing, kLeadingHeight)
-                         : 0;
-  const int hosted = std::min(capacity, static_cast<int>(entries_.size()));
+  const int hosted = HostedCapacity();
 
   for (size_t i = 0; i < entries_.size(); ++i) {
     entries_[i]->SetVisible(static_cast<int>(i) < hosted);
@@ -116,6 +112,18 @@ void SidebarPinnedTabsView::Layout(PassKey) {
   LayoutSuperclass<views::View>(this);
 
   PublishHostedCount(hosted);
+}
+
+// Growser-195: how many entries this block can hold right now. Asked from
+// Layout and from VisibilityChanged, because those are the two moments the
+// answer can change without the other noticing.
+int SidebarPinnedTabsView::HostedCapacity() const {
+  if (!IsHostingEnabled()) {
+    return 0;
+  }
+  const int capacity = sidebar::CalculatePinnedTabsCapacity(
+      height(), kEntryHeight, kSpacing, kLeadingHeight);
+  return std::min(capacity, static_cast<int>(entries_.size()));
 }
 
 // Growser-150: the light for the tab the user is looking at - a 2px bar at the
@@ -465,7 +473,21 @@ void SidebarPinnedTabsView::VisibilityChanged(views::View* starting_from,
   // pinned tab belongs to the tab strip again.
   if (!is_visible) {
     PublishHostedCount(0);
+    return;
   }
+
+  // Growser-195: and it takes them back when it returns. Handing them over on
+  // the way out was only half a rule. The count is otherwise recomputed in
+  // Layout alone, and a window that is merely restored lays nothing out - its
+  // bounds never changed - so the count stayed at zero while these entries
+  // were visible again, and every pinned tab was drawn twice, once here and
+  // once in the strip. Minimize is only the way it was noticed: leaving
+  // fullscreen, the mouse-over sidebar and toggling the sidebar all come back
+  // through here.
+  //
+  // Published rather than left to InvalidateLayout for the reason written
+  // above OnSettingChanged: a layout that may not come is not a fix.
+  PublishHostedCount(HostedCapacity());
 }
 
 // Growser-165: the drag inside the sidebar.

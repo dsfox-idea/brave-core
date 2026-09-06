@@ -2770,6 +2770,47 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest,
   EXPECT_EQ(pinned, HostedBySidebar());
 }
 
+// Growser-195: the block hands the tabs back when it is hidden, and TAKES THEM
+// AGAIN when it returns. The second half was missing, and the owner found it by
+// minimizing the window: on restore every pinned tab was drawn twice, once in
+// the sidebar and once in the strip, because the count is otherwise recomputed
+// only in Layout and a restored window lays nothing out - its bounds never
+// changed.
+//
+// Driven at the view rather than through a real minimize: that would test the
+// platform's window server, and on macOS could not be reproduced in a test at
+// all. Every way in - minimize, leaving fullscreen, the mouse-over sidebar,
+// toggling the sidebar - arrives here, at VisibilityChanged.
+IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, HiddenAndBackAgain) {
+  SetShowPinnedTabs(true);
+  ASSERT_EQ(kPinnedTabCount, HostedBySidebar());
+  ExpectNoTabLostOrDoubled();
+
+  auto* pinned = GetSidebarPinnedTabsView();
+
+  // Away: the strip takes every pinned tab back. No layout is asked for -
+  // VisibilityChanged has to say so by itself, because a hidden block is not
+  // laid out again.
+  pinned->SetVisible(false);
+  EXPECT_EQ(0, HostedBySidebar())
+      << "a hidden block still claims to host tabs the strip is not drawing";
+
+  // And back. Deliberately WITHOUT a layout: that is the whole defect. A
+  // restored window lays nothing out - its bounds never changed - so if the
+  // count is only recomputed in Layout it stays at zero while these entries
+  // are visible, and every pinned tab is drawn twice. An earlier version of
+  // this test called RunLayout() here and passed on the broken code, which is
+  // worse than no test at all.
+  pinned->SetVisible(true);
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar())
+      << "the block came back and did not take its tabs with it";
+
+  // And once the window does lay out, the two surfaces still agree.
+  RunLayout();
+  EXPECT_EQ(kPinnedTabCount, HostedBySidebar());
+  ExpectNoTabLostOrDoubled();
+}
+
 // Vertical tabs already show pinned tabs in a column of their own, so the
 // sidebar hosts nothing while they are on - the setting is inert, not a way to
 // make pinned tabs disappear from both places.

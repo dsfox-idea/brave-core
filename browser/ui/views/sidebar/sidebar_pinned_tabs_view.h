@@ -114,6 +114,9 @@ class SidebarPinnedTabsView : public views::View,
   void OnSettingChanged();
 
   // Tells the tab strip how many leading pinned tabs it must not draw.
+  // Growser-195: how many entries fit right now, in one place - Layout and
+  // VisibilityChanged must not answer this differently.
+  int HostedCapacity() const;
   void PublishHostedCount(int count);
 
   // Growser-165: the drag, while the pointer is still in the sidebar.
