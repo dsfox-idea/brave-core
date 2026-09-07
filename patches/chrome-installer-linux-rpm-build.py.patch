@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/rpm/build.py b/chrome/installer/linux/rpm/build.py
-index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..bc5fe5452c567fd73028b168495f4feb8fef3a3e 100755
+index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..58a067fe911d71891bbaf4524c29b2c26a7e91f8 100755
 --- a/chrome/installer/linux/rpm/build.py
 +++ b/chrome/installer/linux/rpm/build.py
 @@ -30,10 +30,20 @@ def gen_spec(
@@ -33,12 +33,14 @@ index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..bc5fe5452c567fd73028b168495f4feb
  
      staging_dir = output_dir / f"rpm-staging-{channel}"
      tmp_file_dir = output_dir / f"rpm-tmp-{channel}"
-@@ -122,6 +133,8 @@ def main() -> None:
+@@ -121,6 +132,10 @@ def main() -> None:
+         rpm_common_deps_file = output_dir / "rpm_common.deps"
          with rpm_common_deps_file.open("r") as f:
              depends = f.read().replace("\n", ",")
++        # Growser-207: no keyring dependency - see the note in
++        # debian/build.py. Our key ships in this package, so it needs no
++        # keyring package from anyone else, least of all one that only exists
++        # in somebody else's repository.
          config.rpm_depends = depends
-+        # Ensure that our signing key is up-to-date (brave/brave-browser#4205).
-+        config.rpm_depends = f"brave-keyring >= 1.11-1, {depends}"
  
          if config.info_vars["PACKAGE"] != config.usr_bin_symlink_name:
-             symlink = config.usr_bin_symlink_name
