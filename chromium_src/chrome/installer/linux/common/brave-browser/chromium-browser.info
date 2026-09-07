@@ -4,31 +4,46 @@
 #
 # This file provides common configuration information for building
 # chromium-browser packages for various platforms.
+#
+# Growser-197: every field here was Brave's, and this is the file the Linux
+# package IS - the .deb's name, the directory it installs into, the launcher
+# script, the desktop menu entry and the application id a desktop environment
+# keys on are all generated from it. A package built from the previous version
+# installed as Brave, into /opt/brave.com/brave, with Brave's support address,
+# on machines that may already have Brave in that directory.
+#
+# It is a static file, so it cannot read brave_product_name from GN; these
+# values have to agree with it by hand. Today it is "growser"
+# (out/Release/args_generated.gni), and PACKAGE must equal it because GN names
+# the .deb from brave_linux_package_name while the installer scripts name
+# their contents from PACKAGE here.
 
 # Base name of the package.
-PACKAGE="brave-browser"
+PACKAGE="growser"
 
 # Filename of the main executable (for generating launcher scripts, etc.)
-PROGNAME=brave
+PROGNAME=growser
 
 # Base directory for package installation.
-INSTALLDIR=/opt/brave.com/brave
+INSTALLDIR=/opt/growser
 
 # Directory for device policy enrollments.
-ENROLLMENTDIR=/etc/brave/policies/enrollment
+ENROLLMENTDIR=/etc/growser/policies/enrollment
 
 # Display string for desktop menu/icon.
-MENUNAME="Brave Web Browser"
+MENUNAME="Growser Web Browser"
 
 # Brief package description.
-SHORTDESC="The web browser from Brave"
+SHORTDESC="Web browser that blocks ads and trackers"
 
 # Detailed package description.
-FULLDESC="Browse faster by blocking ads and trackers that violate your privacy and cost you time and money."
+FULLDESC="Growser is a Chromium-based browser that blocks advertising and tracking by default, and does not report what you browse to anyone."
 
 # Package maintainer information.
-MAINTNAME="Brave Software"
-MAINTMAIL="support@brave.com"
-PRODUCTURL="https://brave.com/"
+MAINTNAME="Growser"
+MAINTMAIL="support@growser.org"
+PRODUCTURL="https://growser.org/"
 
-RDN="com.brave.Browser"
+# Must match MAC_BUNDLE_ID in app/theme/brave/BRANDING - the same product
+# should not answer to two application ids across platforms.
+RDN="com.growser.Browser"
