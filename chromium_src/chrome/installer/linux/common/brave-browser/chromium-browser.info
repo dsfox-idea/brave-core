@@ -26,7 +26,23 @@
 # contents from PACKAGE here, and nothing enforces the agreement.
 
 # Base name of the package.
-PACKAGE="growser"
+#
+# It MUST differ from PROGNAME below, and that is not a style rule. installer.py
+# stages the browser as PROGNAME and the wrapper script as PACKAGE, into the
+# same directory:
+#
+#     <progname>.stripped        -> PROGNAME   the browser, ~200 MB
+#     installer/common/wrapper   -> PACKAGE    the launcher, 1 KB
+#
+# With both set to "growser" the wrapper overwrote the browser and the package
+# shipped a launcher that exec-ed itself: no executable in it at all, 42 MB
+# where it should have been nearly 100, and running it gave "shell level (1000)
+# too high". Chrome uses google-chrome/chrome and Brave brave-browser/brave for
+# exactly this reason.
+#
+# The dash earns its keep a second time: xdg-icon-resource refuses an icon name
+# with no vendor prefix, which is what failed the postinst.
+PACKAGE="growser-browser"
 
 # Filename of the main executable (for generating launcher scripts, etc.)
 PROGNAME=growser
