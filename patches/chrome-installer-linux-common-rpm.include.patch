@@ -1,0 +1,22 @@
+diff --git a/chrome/installer/linux/common/rpm.include b/chrome/installer/linux/common/rpm.include
+index 9965c8227052c263eb4fcf02cdd3764e6338ad46..640217c4c5ede2562603da1f9c907094be6259ad 100644
+--- a/chrome/installer/linux/common/rpm.include
++++ b/chrome/installer/linux/common/rpm.include
+@@ -119,7 +119,7 @@ name=@@PACKAGE
+ baseurl=$REPOCONFIG/$DEFAULT_ARCH
+ enabled=1
+ gpgcheck=1
+-gpgkey=https://dl.google.com/linux/linux_signing_key.pub
++gpgkey=https://growser.org/growser-signing-key.pub
+ REPOCONTENT
+   fi
+ }
+@@ -140,7 +140,7 @@ enabled=1
+ autorefresh=1
+ baseurl=$REPOCONFIG/$DEFAULT_ARCH
+ gpgcheck=1
+-gpgkey=https://dl.google.com/linux/linux_signing_key.pub
++gpgkey=https://growser.org/growser-signing-key.pub
+ type=rpm-md
+ keeppackages=0
+ REPOCONTENT

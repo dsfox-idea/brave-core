@@ -40,6 +40,44 @@ def _load_branding_and_version(original_method, output_dir, branding,
     data["versionfull"] = version
     return data
 
+# Growser-207: the repository the package points a machine at.
+#
+# Chromium hardcodes Google here, and brave-core overrides it nowhere, so a
+# package built from this tree tells apt and dnf to fetch OUR browser from
+# GOOGLE - and, through key.include, to trust Google to sign it. An apt source
+# is not a download, it is standing permission, so this is the half of the
+# packaging that matters most.
+#
+# The deb side reads a REPOCONFIG environment variable before falling back to
+# its default, but that is not enough on its own: the REGEX that finds an
+# existing entry to update or remove is built from the hardcoded Google base
+# either way, so a machine configured by an earlier install would never be
+# recognised. Both halves have to move together.
+GROWSER_APT = "growser.org/apt/ stable main"
+GROWSER_RPM = "https://growser.org/rpm/stable"
+
+
+# override_function, not override_method: both of these are staticmethods
+# called on the class, so nothing binds a self - override_method would
+# hand the first argument in as one and the two would swap places.
+@override_utils.override_function(InstallerConfig)
+def _compute_deb_repoconfig(original_function, arch: str,
+                            package: str) -> tuple[str, str]:
+    repoconfig = os.environ.get("REPOCONFIG",
+                                f"deb [arch={arch}] https://{GROWSER_APT}")
+    # The backslashes are doubled on purpose and it matters: in an f-string
+    # "\b" is a BACKSPACE byte, not a word boundary, and the first version of
+    # this line had exactly that - invisible in a diff and in every count.
+    regex = (f"deb (\\[arch=[^]]*\\b{arch}\\b[^]]*\\]"
+             f"[[:space:]]*) https?://{GROWSER_APT}")
+    return repoconfig, regex
+
+
+@override_utils.override_function(InstallerConfig)
+def _compute_rpm_repoconfig(original_function, package: str) -> tuple[str, str]:
+    return GROWSER_RPM, ""
+
+
 # This override stages Brave resources
 @override_utils.override_method(InstallerConfig)
 def get_resource_artifacts(self, original_method) -> list[Artifact]:
