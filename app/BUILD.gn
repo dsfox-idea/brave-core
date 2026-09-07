@@ -126,6 +126,11 @@ source_set("unit_tests") {
   if (!is_android) {
     sources += [ "command_utils_unittest.cc" ]
   }
+  if (is_mac) {
+    # growser (#206): the user data directory migration, which lives in
+    # brave_main_delegate.cc and is compiled into //chrome along with it.
+    sources += [ "growser_user_data_dir_unittest.cc" ]
+  }
   if (enable_brave_vpn_v2_apps) {
     sources += [ "vpn_apps_branding_unittest.cc" ]
   }

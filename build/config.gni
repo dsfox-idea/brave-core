@@ -182,8 +182,16 @@ if (is_win) {
     brave_product_dir_name_suffix = "-Development"
   }
 
-  brave_product_dir_name =
-      "BraveSoftware/Brave-$_product_brand$brave_product_dir_name_suffix"
+  # growser (#206): our own directory, not Brave's. This used to read
+  # "BraveSoftware/Brave-$_product_brand", which is the path a real Brave
+  # install uses - so a machine with both browsers had them reading and
+  # writing ONE profile, along with one set of crash dumps and extensions.
+  # No company component, matching Windows (#128): a "Growser" company over a
+  # "Growser" product would only produce Growser/Growser. The channel suffix
+  # stays, so a development build still keeps a profile of its own.
+  # Renaming this leaves the old data behind - see MigrateUserDataDir in
+  # brave/app/brave_main_delegate.cc, which carries it over on first start.
+  brave_product_dir_name = "Growser$brave_product_dir_name_suffix"
 
   if (base_sparkle_update_url == "") {
     base_sparkle_update_url =

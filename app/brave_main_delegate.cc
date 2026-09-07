@@ -8,9 +8,12 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <string_view>
 
 #include "base/base_switches.h"
+#include "base/files/file_util.h"
 #include "base/lazy_instance.h"
+#include "base/logging.h"
 #include "base/path_service.h"
 #include "base/strings/strcat.h"
 #include "base/time/time.h"
@@ -35,6 +38,7 @@
 #include "components/dom_distiller/core/dom_distiller_switches.h"
 #include "components/embedder_support/switches.h"
 #include "components/sync/base/command_line_switches.h"
+#include "content/public/common/content_switches.h"
 #include "google_apis/gaia/gaia_switches.h"
 #include "services/network/public/cpp/is_potentially_trustworthy.h"
 
@@ -143,7 +147,114 @@ std::optional<int> BraveMainDelegate::BasicStartupComplete() {
   return ChromeMainDelegate::BasicStartupComplete();
 }
 
+#if BUILDFLAG(IS_MAC)
+// growser (#206): our user data used to live in Brave's own directory,
+// ~/Library/Application Support/BraveSoftware/Brave-Browser. That was never a
+// branding blemish. Brave is a real product that reads exactly that path, so
+// on a machine with both installed the two browsers shared ONE profile - the
+// same cookies, extensions, passwords and crash dumps, belonging to whichever
+// ran last. #128 fixed the same thing on Windows, where nothing had to be
+// carried over because the development builds already wrote to Growser's own
+// path; on macOS every build so far wrote to Brave's, so renaming the
+// directory on its own would hand a user an empty browser on their next
+// update.
+//
+// The migration COPIES, and that is the shape of it rather than a precaution:
+// the old directory is not ours to take. Nothing in it records who wrote
+// what, so "move our data to its new home" is a question with no answer,
+// while copying never has to ask it. What stays behind stays Brave's.
+namespace growser {
+namespace {
+
+// The product component of brave_product_dir_name in brave/build/config.gni,
+// and the two halves of what that used to be. scripts/check-user-data-dir.py
+// holds the built app against this name, so a later rename in config.gni
+// cannot pass a build while this code goes on carrying data from a path
+// nothing writes to any more.
+constexpr std::string_view kProductDir = "Growser";
+constexpr std::string_view kLegacyCompanyDir = "BraveSoftware";
+constexpr std::string_view kLegacyProductDir = "Brave-Browser";
+
+// An interrupted copy must not be mistaken for a finished profile, so the
+// copy lands here and is renamed into place in a single step.
+constexpr std::string_view kStagingSuffix = ".migrating";
+
+}  // namespace
+
+base::FilePath LegacyUserDataDirFor(const base::FilePath& target) {
+  const std::string name = target.BaseName().value();
+  if (!name.starts_with(kProductDir)) {
+    return base::FilePath();
+  }
+  // Whatever config.gni appended for the channel ("-Development", "-Beta")
+  // was appended to the old name too, so the suffix carries straight across.
+  const std::string suffix = name.substr(kProductDir.size());
+  return target.DirName()
+      .Append(kLegacyCompanyDir)
+      .Append(std::string(kLegacyProductDir) + suffix);
+}
+
+bool MigrateUserDataDir(const base::FilePath& legacy,
+                        const base::FilePath& target) {
+  if (legacy.empty() || target.empty()) {
+    return false;
+  }
+  // Anything already at the target is a profile in use. Never write over it.
+  if (base::PathExists(target)) {
+    return false;
+  }
+  if (!base::DirectoryExists(legacy)) {
+    return false;
+  }
+
+  // Copy into a staging directory and rename it into place, so a migration
+  // killed halfway through leaves no half-profile that the next start would
+  // take for a finished one.
+  //
+  // CopyDirectory takes regular files and directories and skips the rest,
+  // deciding on the enumerator's lstat BEFORE it opens anything - so the
+  // entries a profile holds while a browser is running on it (SingletonLock,
+  // a symlink to a "hostname-pid" string that is not a path, and
+  // SingletonSocket) are stepped over rather than failing the copy. They
+  // belong to the running browser rather than to the profile and Chromium
+  // remakes them, so leaving them out is also the correct copy.
+  const base::FilePath staging(target.value() + std::string(kStagingSuffix));
+  base::DeletePathRecursively(staging);
+  if (!base::CopyDirectory(legacy, staging, /*recursive=*/true) ||
+      !base::Move(staging, target)) {
+    base::DeletePathRecursively(staging);
+    LOG(ERROR) << "growser: could not carry the user data directory over from "
+               << legacy << "; starting with an empty one at " << target;
+    return false;
+  }
+  LOG(WARNING) << "growser: carried the user data directory over from "
+               << legacy << " to " << target;
+  return true;
+}
+
+}  // namespace growser
+#endif  // BUILDFLAG(IS_MAC)
+
 void BraveMainDelegate::PreSandboxStartup() {
+#if BUILDFLAG(IS_MAC)
+  // growser (#206): before the base call, because that is what resolves and
+  // CREATES the user data directory (ChromeMainDelegate::PreSandboxStartup ->
+  // InitializeUserDataDir). Once it exists, the migration's own predicate -
+  // that the target is not there yet - is false for good. Browser process
+  // only, and never when the user named a directory themselves.
+  {
+    const base::CommandLine& command_line =
+        *base::CommandLine::ForCurrentProcess();
+    if (!command_line.HasSwitch(switches::kProcessType) &&
+        !command_line.HasSwitch(switches::kUserDataDir)) {
+      base::FilePath target;
+      if (chrome::GetDefaultUserDataDirectory(&target)) {
+        growser::MigrateUserDataDir(growser::LegacyUserDataDirFor(target),
+                                    target);
+      }
+    }
+  }
+#endif  // BUILDFLAG(IS_MAC)
   ChromeMainDelegate::PreSandboxStartup();
 #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
   // Setup NativeMessagingHosts to point to the default Chrome locations

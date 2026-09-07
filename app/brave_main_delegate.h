@@ -8,10 +8,32 @@
 
 #include <optional>
 
+#include "base/files/file_path.h"
 #include "base/gtest_prod_util.h"
+#include "build/build_config.h"
 #include "chrome/app/chrome_main_delegate.h"
 
 class BraveMainDelegateUnitTest;
+
+#if BUILDFLAG(IS_MAC)
+// growser (#206): our user data used to live inside Brave's own directory.
+// These two carry it across to ours on the first start after the rename; the
+// reasoning is in brave_main_delegate.cc.
+namespace growser {
+
+// The directory this build wrote to before #206, given the new-style |target|.
+// Empty when |target| is not one of ours, because a guess here would be a
+// guess about somebody else's data.
+base::FilePath LegacyUserDataDirFor(const base::FilePath& target);
+
+// Copies |legacy| to |target|, once, and only when |target| does not exist.
+// Never moves and never deletes: |legacy| is Brave's directory as much as it
+// is ours. Returns true only when this call created |target|.
+bool MigrateUserDataDir(const base::FilePath& legacy,
+                        const base::FilePath& target);
+
+}  // namespace growser
+#endif  // BUILDFLAG(IS_MAC)
 
 // Chrome implementation of ContentMainDelegate.
 class BraveMainDelegate : public ChromeMainDelegate {
