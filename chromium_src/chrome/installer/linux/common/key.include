@@ -76,3 +76,9 @@ KEYDATA
 PGP_KEY_CHECKSUM="=db/j"
 
 PGP_SUBKEYS="2ABE4D7939E6A138"
+
+# Growser-207: the name rpm gives the imported key, gpg-pubkey-<short id>-<hex
+# creation time>. rpm.include hardcoded GOOGLE's, and it does not merely test
+# for it - it ERASES the package it names before importing. On any machine
+# with Chrome installed, that would have removed Google's signing key.
+PGP_KEY_PACKAGE="gpg-pubkey-dd11eb0c-6a9eaf06"
