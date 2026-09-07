@@ -10,7 +10,6 @@
 #include "base/apple/scoped_cftyperef.h"
 #include "base/mac/mac_util.h"
 #include "base/strings/sys_string_conversions.h"
-#include "brave/components/brave_origin/buildflags/buildflags.h"
 #include "build/branding_buildflags.h"
 #include "chrome/common/channel_info.h"
 #include "components/version_info/version_info.h"
@@ -21,93 +20,29 @@
 #undef BUILDFLAG_INTERNAL_GOOGLE_CHROME_BRANDING
 #define BUILDFLAG_INTERNAL_GOOGLE_CHROME_BRANDING() (1)
 
+// Growser-208: GetDefaultBrowser and IsDefaultHandlerForUTType are no longer
+// replaced here. They were, only to swap upstream's IsAnotherChromeChannel for
+// a test that could tell Brave from Brave Origin - those two share the
+// three-component bundle id prefix "com.brave.Browser", so upstream's test
+// calls each one another channel of the other. We ship no Origin, so that
+// problem does not exist for us, and upstream's version is the better code
+// anyway: it lops OUR OWN bundle id to three components and compares,
+// hardcoding no identity at all. com.growser.Browser against
+// com.growser.Browser.beta matches; against com.brave.Browser it does not.
+//
+// The replacement had gone stale the way a hardcoded identity always does - it
+// tested for "com.brave.Browser", which our bundle id has never been, so
+// OTHER_MODE_IS_DEFAULT could never be reported. Deleting it is the fix.
+//
+// The define above stays: it is what compiles upstream's same-brand path,
+// which sits behind #if BUILDFLAG(GOOGLE_CHROME_BRANDING).
 #define GetPlatformSpecificDefaultWebClientSetPermission \
   GetPlatformSpecificDefaultWebClientSetPermission_Unused
-#define GetDefaultBrowser GetDefaultBrowser_ChromiumImpl
-#define IsDefaultHandlerForUTType IsDefaultHandlerForUTType_ChromiumImpl
 #include <chrome/browser/shell_integration_mac.mm>
-#undef IsDefaultHandlerForUTType
-#undef GetDefaultBrowser
 #undef GetPlatformSpecificDefaultWebClientSetPermission
 #undef BUILDFLAG_INTERNAL_GOOGLE_CHROME_BRANDING
 
 namespace shell_integration {
-
-namespace {
-
-// Returns true if |identifier| is a Brave Origin bundle ID
-// (com.brave.Browser.origin or com.brave.Browser.origin.<channel>).
-bool IsBraveOriginBundleId(NSString* identifier) {
-  return [identifier isEqualToString:@"com.brave.Browser.origin"] ||
-         [identifier hasPrefix:@"com.brave.Browser.origin."];
-}
-
-#if !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
-// Returns true if |identifier| is a regular (non-Origin) Brave bundle ID
-// (com.brave.Browser or com.brave.Browser.<channel>, excluding Origin).
-bool IsRegularBraveBundleId(NSString* identifier) {
-  return ([identifier isEqualToString:@"com.brave.Browser"] ||
-          [identifier hasPrefix:@"com.brave.Browser."]) &&
-         !IsBraveOriginBundleId(identifier);
-}
-#endif
-
-// Returns true if |other_identifier| is another channel of the same Brave
-// brand as |my_identifier|. Unlike upstream's IsAnotherChromeChannel() which
-// only compares the first 3 bundle ID components, this correctly distinguishes
-// between regular Brave and Brave Origin which share the "com.brave.Browser"
-// prefix.
-bool IsAnotherBraveChannel(NSString* my_identifier,
-                           NSString* other_identifier) {
-#if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
-  return IsBraveOriginBundleId(my_identifier) &&
-         IsBraveOriginBundleId(other_identifier);
-#else
-  return IsRegularBraveBundleId(my_identifier) &&
-         IsRegularBraveBundleId(other_identifier);
-#endif
-}
-
-}  // namespace
-
-DefaultWebClientState GetDefaultBrowser() {
-  NSString* my_identifier = base::apple::OuterBundle().bundleIdentifier;
-  if (!my_identifier) {
-    return UNKNOWN_DEFAULT;
-  }
-
-  NSString* default_browser = GetBundleIdForDefaultAppForScheme(@"http");
-  if ([default_browser isEqualToString:my_identifier]) {
-    return IS_DEFAULT;
-  }
-
-  if (IsAnotherBraveChannel(my_identifier, default_browser)) {
-    return OTHER_MODE_IS_DEFAULT;
-  }
-  return NOT_DEFAULT;
-}
-
-DefaultWebClientState IsDefaultHandlerForUTType(const std::string& type) {
-  if (type.empty()) {
-    return UNKNOWN_DEFAULT;
-  }
-  NSString* my_identifier = base::apple::OuterBundle().bundleIdentifier;
-  if (!my_identifier) {
-    return UNKNOWN_DEFAULT;
-  }
-  NSString* default_app =
-      GetBundleIdForDefaultAppForUTType(base::SysUTF8ToNSString(type));
-  if (!default_app) {
-    return UNKNOWN_DEFAULT;
-  }
-  if ([default_app isEqualToString:my_identifier]) {
-    return IS_DEFAULT;
-  }
-  if (IsAnotherBraveChannel(my_identifier, default_app)) {
-    return OTHER_MODE_IS_DEFAULT;
-  }
-  return NOT_DEFAULT;
-}
 
 namespace internal {
 
