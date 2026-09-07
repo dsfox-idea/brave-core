@@ -5,18 +5,25 @@
 # This file provides common configuration information for building
 # chromium-browser packages for various platforms.
 #
-# Growser-197: every field here was Brave's, and this is the file the Linux
-# package IS - the .deb's name, the directory it installs into, the launcher
-# script, the desktop menu entry and the application id a desktop environment
-# keys on are all generated from it. A package built from the previous version
-# installed as Brave, into /opt/brave.com/brave, with Brave's support address,
-# on machines that may already have Brave in that directory.
+# Growser-197: every field here was Brave. This file IS the Linux package -
+# the deb name, the directory it installs into, the launcher script, the
+# desktop menu entry and the application id a desktop environment keys on are
+# all generated from it. A package built from the previous version installed
+# as Brave, into /opt/brave.com/brave, quoting the Brave support address, onto
+# machines that may already have Brave in that directory.
 #
-# It is a static file, so it cannot read brave_product_name from GN; these
-# values have to agree with it by hand. Today it is "growser"
-# (out/Release/args_generated.gni), and PACKAGE must equal it because GN names
-# the .deb from brave_linux_package_name while the installer scripts name
-# their contents from PACKAGE here.
+# NO APOSTROPHES ANYWHERE IN THIS FILE, INCLUDING COMMENTS. It is read with
+# shlex.split (chrome/installer/linux/common/installer.py, parse_shell), which
+# does not skip comments and treats a single quote as an opening quote. One
+# apostrophe in a comment ends the build with "ValueError: No closing
+# quotation" pointing at shlex, several frames from anything that mentions
+# this file.
+#
+# It is also static, so it cannot read brave_product_name from GN and these
+# values have to agree with it by hand. Today that is growser
+# (out/Release/args_generated.gni). PACKAGE must equal it: GN names the deb
+# from brave_linux_package_name while the installer scripts name their
+# contents from PACKAGE here, and nothing enforces the agreement.
 
 # Base name of the package.
 PACKAGE="growser"
@@ -44,6 +51,6 @@ MAINTNAME="Growser"
 MAINTMAIL="support@growser.org"
 PRODUCTURL="https://growser.org/"
 
-# Must match MAC_BUNDLE_ID in app/theme/brave/BRANDING - the same product
-# should not answer to two application ids across platforms.
+# Must match MAC_BUNDLE_ID in app/theme/brave/BRANDING - one product should
+# not answer to two application ids across platforms.
 RDN="com.growser.Browser"
