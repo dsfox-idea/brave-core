@@ -3,6 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
+import("//brave/build/config.gni")  # Growser-197: for $brave_exe
 import("//brave/components/brave_origin/buildflags/buildflags.gni")
 
 if (is_brave_origin_branded) {
@@ -25,8 +26,9 @@ common_packaging_files_excluded_sources = [
 ]
 
 brave_packaging_files_executables = [
-  "$root_out_dir/brave",
-  "$root_out_dir/brave_sandbox",
+  # Growser-197: the names copy_exe/copy_sandbox actually produce.
+  "$root_out_dir/$brave_exe",
+  "$root_out_dir/${brave_exe}_sandbox",
 ]
 
 excluded_packaging_files_executables = [
