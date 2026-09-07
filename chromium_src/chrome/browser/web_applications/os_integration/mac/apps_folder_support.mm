@@ -10,6 +10,17 @@
  }  // namespace base
 
 namespace {
+// Growser-208: our own folder in the user's ~/Applications, not Brave's.
+// These named "Brave Browser Apps.localized" and friends, so installing a web
+// app created a Finder-visible folder in the user's Applications named after
+// another product - and shared it with a real Brave install, both browsers
+// writing shortcuts into one directory. "Growser Apps" is already the name on
+// every other platform (IDS_APP_SHORTCUTS_SUBDIR_NAME).
+//
+// Nothing is moved: shortcuts already sitting in the old folder stay there,
+// because that folder may be Brave's and is not ours to tidy. New ones are
+// written here, and Chromium rewrites a web app's shortcut when the app is
+// updated or reinstalled.
 base::FilePath GetLocalizableBraveAppShortcutsSubdirName();
 }
 
@@ -21,14 +32,14 @@ base::FilePath GetLocalizableBraveAppShortcutsSubdirName();
 
 namespace {
 constexpr char kBraveBrowserDevelopmentAppDirName[] =
-    "Brave Browser Development Apps.localized";
-constexpr char kBraveBrowserAppDirName[] = "Brave Browser Apps.localized";
+    "Growser Development Apps.localized";
+constexpr char kBraveBrowserAppDirName[] = "Growser Apps.localized";
 constexpr char kBraveBrowserBetaAppDirName[] =
-    "Brave Browser Beta Apps.localized";
+    "Growser Beta Apps.localized";
 constexpr char kBraveBrowserDevAppDirName[] =
-    "Brave Browser Dev Apps.localized";
+    "Growser Dev Apps.localized";
 constexpr char kBraveBrowserNightlyAppDirName[] =
-    "Brave Browser Nightly Apps.localized";
+    "Growser Nightly Apps.localized";
 
 base::FilePath GetLocalizableBraveAppShortcutsSubdirName() {
   switch (chrome::GetChannel()) {
