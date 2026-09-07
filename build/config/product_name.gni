@@ -1,0 +1,27 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+# Growser-197: the product name on its own, so that early build files can ask
+# for it.
+#
+# It used to live in //brave/build/config.gni, which is fine for everything
+# that runs late but not for //brave/installer/linux/sources.gni: that one is
+# imported by //brave/build/config/brave_build.gni, which //build/config/
+# chrome_build.gni imports, which is to say it is evaluated before almost
+# everything. Importing config.gni from there is an import loop, and gn says so:
+#
+#   ERROR //build/config/chrome_build.gni is part of an import loop.
+#
+# The list of executables the Linux installer packages lives in that early
+# file, and it has to be named after the product like every other reference to
+# the binary is. Hence this file, which imports nothing and can therefore be
+# imported from anywhere.
+
+declare_args() {
+  # The name of the product, and of the binary it installs. Everything that
+  # names the executable derives from this - $brave_exe, brave_dist_name,
+  # brave_linux_package_name.
+  brave_product_name = "brave"
+}

@@ -4,6 +4,7 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/build/brave_channel.gni")
+import("//brave/build/config/product_name.gni")  # Growser-197
 import("//brave/build/version.gni")
 import("//brave/components/brave_origin/buildflags/buildflags.gni")
 import("//build/config/apple/symbols.gni")
@@ -19,7 +20,6 @@ declare_args() {
   sparkle_eddsa_private_key = ""
   sparkle_eddsa_public_key = ""
 
-  brave_product_name = "brave"
   brave_exe = ""
   target_android_output_format = ""
   brave_android_keystore_path = "."
