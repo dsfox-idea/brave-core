@@ -7,7 +7,6 @@
 
 #include "base/time/time.h"
 #include "brave/components/tor/pref_names.h"
-#include "build/build_config.h"
 #include "components/prefs/pref_registry_simple.h"
 
 namespace tor {
@@ -31,14 +30,10 @@ void TorProfileService::RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   // a fork 403; we publish our own now (scripts/make-tor-component.py,
   // deploy/growser-backend). Growser-163: macOS has its package too - a client
   // and a transports component with a key pair of their own, served from
-  // backend.growser.org and verified from this machine. On the platforms still
-  // missing one, offering Tor would be the same promise this pref was set to
-  // stop making, so they keep it.
-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
+  // backend.growser.org and verified from this machine. Growser-202: and now
+  // Linux, the last one, so the condition is gone rather than lengthened -
+  // every platform we ship has a client of its own to install.
   registry->RegisterBooleanPref(prefs::kTorDisabled, false);
-#else
-  registry->RegisterBooleanPref(prefs::kTorDisabled, true);
-#endif
   registry->RegisterDictionaryPref(prefs::kBridgesConfig);
   registry->RegisterTimePref(prefs::kBuiltinBridgesRequestTime, base::Time());
 }

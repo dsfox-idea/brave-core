@@ -51,31 +51,31 @@ inline constexpr char kTorClientComponentBase64PublicKey[] =
     "SFvyl97MZmeBvYWXCiIkY3x5RUTp/4Uo84RBXkzP9hrigvhMpR+tfFStwvHKkvQ/"
     "TQIDAQAB";
 #elif BUILDFLAG(IS_LINUX)
-inline constexpr char kTorClientComponentName[] =
-    "Brave Tor Client Updater (Linux)";
-#if defined(ARCH_CPU_ARM64)
-inline constexpr char kTorClientComponentId[] =
-    "monolafkoghdlanndjfeebmdfkbklejg";
-inline constexpr char kTorClientComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzqb14fggDpbjZtv3HKmR"
-    "UTnvfDTcqVbVZo0DdCHQi6SwxDlRweGwsvsHuy9U37VBr41ha/neemQGf+5qkWgY"
-    "y+mzzAkb5ZtrHkBSOOsZdyO9WEj7GwXuAx9FvcxG2zPpA/CvagnC14VhMyUFLL8v"
-    "XdfHYPmQOtIVdW3eR0G/4JP/mTbnAEkipQfxrDMtDVpX+FDB+Zy5yEMGKWHRLcdH"
-    "bHUgb/VhB9ppt0LKRjM44KSpyPDlYquXNcn3WFmxHoVm7PZ3LTAn3eSNZrT4ptmo"
-    "KveT4LgWtObrHoZtrg+/LnHAi1GYf8PHrRc+o/FptobOWoUN5lt8NvhLjv85ERBt"
-    "rQIDAQAB";
-#else  // #if defined(ARCH_CPU_ARM64)
-inline constexpr char kTorClientComponentId[] =
-    "biahpgbdmdkfgndcmfiipgcebobojjkp";
-inline constexpr char kTorClientComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAseuq8dXKawkZC7RSE7xb"
-    "lRwh6DD+oPEGEjZWKh596/42IrWNQw60gRIR6s7x0YHh5geFnBRkx9bisEXOrFkq"
-    "oArVY7eD0gMkjpor9CneD5CnCxc9/2uIPajtXfAmmLAHtN6Wk7yW30SkRf/WvLWX"
-    "/H+PqskQBN7I5MO7sveYxSrRMSj7prrFHEiFmXTgG/DwjpzrA7KV6vmzz/ReD51o"
-    "+UuLHE7cxPhnsNd/52uY3Lod3GhxvDoXKYx9kWlzBjxB53A2eLBCDIwwCpqS4/Ib"
-    "RSJhvF33KQT8YM+7V1MitwB49klP4aEWPXwOlFHmn9Dkmlx2RbO7S0tRcH9UH4LK"
-    "2QIDAQAB";
+// Growser-202: ours, the third and last platform, for exactly the reason the
+// other two are. What stood here was Brave's id - a package we do not publish
+// and our Worker does not serve - so Tor on Linux could only ever have asked
+// about somebody else's component and downloaded nothing. Key:
+// ../growser-keys/tor_client_component_linux.pem.
+//
+// One pair, not two: we build and publish x86_64 only. An arm64 Linux would
+// need its own key, its own package and its own row in the Worker, and the id
+// below would be wrong for it - wrong here means fetching a binary built for
+// another machine, so it is a build error rather than a silent one.
+#if !defined(ARCH_CPU_X86_64)
+#error "Growser-202: the Linux Tor component is published for x86_64 only"
 #endif
+inline constexpr char kTorClientComponentName[] =
+    "Growser Tor Client Updater (Linux)";
+inline constexpr char kTorClientComponentId[] =
+    "cdibmjeojommggomhejkgbfdmnmjhpbp";
+inline constexpr char kTorClientComponentBase64PublicKey[] =
+    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzeiscTKx+yMJ9KbkPOud"
+    "DmYrxU1l8X4AoB5Eh0wXznS97+2afYQ+pOa5zvrLdZsyJoHV+gAt1X0aXwnGE+oA"
+    "JYyFn+y20pLT8PyL+MbL2bFuvqH3nlLdMCxlhwFppNng2jbh8LHZ02g9zfElP5+v"
+    "9Wh0vbjWjtnbHsT8f8oIbBjYzt8h4k5TsbGb3BjoNlGICZJFMUhznEOGGGE+8SW2"
+    "nST55uDl9NNbf5jWDZ+D3CMLBZvhAh93DXP4Wzkh9dYWJiGSQ4hhHnkOUNwjulXd"
+    "l1CAeeZVsi+LKWrijdXHqTFQcLbdk1ck9NfcpuJ/w+bMKb972YGirS42ODUfSHSY"
+    "0QIDAQAB";
 #endif
 
 // Returns the path for for where the Tor client binary is installed.
