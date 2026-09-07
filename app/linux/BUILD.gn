@@ -51,13 +51,16 @@ group("dist_resources") {
 }
 
 extract_symbols("brave_symbols") {
-  binary = "$brave_dist_dir/brave"
+  # Growser-197: the distributable is named after the product everywhere else
+  # (brave_dist_name, $brave_exe). Spelling it literally here asked gn for a
+  # //out/Release/dist/brave that nothing produces.
+  binary = "$brave_dist_dir/$brave_exe"
 
   if (current_cpu == "x86") {
     # Use "ia32" instead of "x86" for GYP compat.
-    symbol_file = "$root_out_dir/brave.breakpad.ia32"
+    symbol_file = "$root_out_dir/$brave_exe.breakpad.ia32"
   } else {
-    symbol_file = "$root_out_dir/brave.breakpad.$current_cpu"
+    symbol_file = "$root_out_dir/$brave_exe.breakpad.$current_cpu"
   }
 
   deps = [ "//brave:brave_dist_resources" ]

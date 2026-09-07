@@ -3,6 +3,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
+# Growser-197: the product name only. This file is imported by brave_build.gni
+# and so runs before almost everything - importing config.gni here is an import
+# loop, which is why the name has a file of its own.
+import("//brave/build/config/product_name.gni")
 import("//brave/components/brave_origin/buildflags/buildflags.gni")
 
 if (is_brave_origin_branded) {
@@ -25,8 +29,11 @@ common_packaging_files_excluded_sources = [
 ]
 
 brave_packaging_files_executables = [
-  "$root_out_dir/brave",
-  "$root_out_dir/brave_sandbox",
+  # Growser-197: the names copy_exe/copy_sandbox actually produce. On Linux
+  # $brave_exe is $brave_product_name (build/config.gni), and that is the one
+  # of the two this file can reach without an import loop.
+  "$root_out_dir/$brave_product_name",
+  "$root_out_dir/${brave_product_name}_sandbox",
 ]
 
 excluded_packaging_files_executables = [
