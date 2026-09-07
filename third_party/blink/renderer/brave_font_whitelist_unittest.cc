@@ -45,7 +45,14 @@ TEST(BraveFontWhitelistTest, Platforms) {
   } else if (distro.starts_with("Fedora")) {
     EXPECT_EQ(brave::GetFontWhitelistSizeForTesting(), 118UL);
   } else {
-    EXPECT_EQ(brave::GetFontWhitelistSizeForTesting(), 0UL);
+    // Growser-205: 44, not 0. Upstream leaves every other Linux with an EMPTY
+    // whitelist, and this line is where that decision was pinned - empty
+    // means AllowFontByFamilyName returns true for every font, so there is no
+    // protection at all outside the three distros above. The fallback is the
+    // intersection of those three lists, which is the part that does not
+    // depend on the distro; scripts/linux/make-font-fallback.py generates it
+    // and follows them if they change.
+    EXPECT_EQ(brave::GetFontWhitelistSizeForTesting(), 44UL);
   }
 #endif
 }
