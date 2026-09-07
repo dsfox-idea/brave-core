@@ -1,8 +1,16 @@
 diff --git a/chrome/installer/linux/rpm/chrome.spec.template b/chrome/installer/linux/rpm/chrome.spec.template
-index c76a259c77fa4f22432c986ab549ffb1f83cf32d..bdd7b1b128a313e539a11422fd173d280b6c68bb 100644
+index c76a259c77fa4f22432c986ab549ffb1f83cf32d..b98bfde9ed3c8fe34b1f4525dda3f5cf5f42e129 100644
 --- a/chrome/installer/linux/rpm/chrome.spec.template
 +++ b/chrome/installer/linux/rpm/chrome.spec.template
-@@ -129,7 +129,8 @@ if [ ! -e "$DEFAULTS_FILE" ]; then
+@@ -85,7 +85,6 @@ rm -rf "$RPM_BUILD_ROOT"
+ 
+ # Be explicit about the files we scatter throughout the system we don't
+ # accidentally "own" stuff that's not ours (crbug.com/40194046).
+-/etc/cron.daily/@@PACKAGE
+ %ghost %attr(755,root,root) /usr/bin/@@package_orig
+ /usr/bin/@@usr_bin_symlink_name
+ /usr/share/appdata/@@PACKAGE.appdata.xml
+@@ -129,7 +128,8 @@ if [ ! -e "$DEFAULTS_FILE" ]; then
    echo 'repo_add_once="true"' > "$DEFAULTS_FILE"
  fi
  

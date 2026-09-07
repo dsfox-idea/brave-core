@@ -1,8 +1,66 @@
 diff --git a/chrome/installer/linux/debian/build.py b/chrome/installer/linux/debian/build.py
-index d44d6e9081b0ac926778cef5462cc7954591565b..9d169331f18f8ac6221a8c6650216afa2ff16a33 100755
+index d44d6e9081b0ac926778cef5462cc7954591565b..da6da15de71da43752ff485860a7699fd42f7e8f 100755
 --- a/chrome/installer/linux/debian/build.py
 +++ b/chrome/installer/linux/debian/build.py
-@@ -174,6 +174,12 @@ def main() -> None:
+@@ -118,10 +118,6 @@ def main() -> None:
+         inst.prep_staging_common()
+         (staging_dir / "DEBIAN").mkdir(parents=True, exist_ok=True)
+         (staging_dir / "DEBIAN").chmod(installer.StandardPermissions.EXECUTABLE)
+-        (staging_dir / "etc/cron.daily").mkdir(parents=True, exist_ok=True)
+-        (staging_dir / "etc/cron.daily").chmod(
+-            installer.StandardPermissions.EXECUTABLE
+-        )
+         (staging_dir / f"usr/share/doc/{config.usr_bin_symlink_name}").mkdir(
+             parents=True, exist_ok=True
+         )
+@@ -132,32 +128,20 @@ def main() -> None:
+         inst.stage_install_common()
+ 
+         logging.info(f"Staging Debian install files in '{staging_dir}'...")
+-        install_dir = staging_dir / config.info_vars["INSTALLDIR"].lstrip("/")
+-        cron_dir = install_dir / "cron"
+-        cron_dir.mkdir(parents=True, exist_ok=True)
+-        cron_dir.chmod(installer.StandardPermissions.EXECUTABLE)
+-
+-        cron_file = cron_dir / config.info_vars["PACKAGE"]
+-        installer.process_template(
+-            output_dir / "installer/common/repo.cron",
+-            cron_file,
+-            config.get_template_context(),
+-        )
+-        cron_file.chmod(installer.StandardPermissions.EXECUTABLE)
+-
+-        cron_daily_link = (
+-            staging_dir / "etc/cron.daily" / config.info_vars["PACKAGE"]
+-        )
+-        if cron_daily_link.is_symlink() or cron_daily_link.exists():
+-            cron_daily_link.unlink()
+-        os.symlink(
+-            os.path.join(
+-                config.info_vars["INSTALLDIR"],
+-                "cron",
+-                config.info_vars["PACKAGE"],
+-            ),
+-            cron_daily_link,
+-        )
++        # Growser-207: no daily cron. Upstream installs one into
++        # /etc/cron.daily that re-adds the repository to sources.list if it has
++        # been removed, and re-enables it if a distro upgrade turned it off.
++        #
++        # The second half is a real service and the first is not ours to
++        # perform: a user who removed our apt source removed it on purpose, and
++        # a package that puts it back every night is deciding for them what
++        # their machine trusts. An apt source is standing permission, so
++        # restoring one silently is the same family as the profile that lived
++        # in another product's directory (#206) - correct-looking plumbing
++        # doing something the person did not ask for.
++        #
++        # Nothing is lost while the source IS present: apt updates from it
++        # normally. What goes is only the putting-back.
+ 
+         for script in ["postinst", "prerm", "postrm"]:
+             dest = staging_dir / "DEBIAN" / script
+@@ -174,6 +158,12 @@ def main() -> None:
          logging.info(f"Packaging {args.arch}...")
          config.deb_pre_depends = config.common_predeps
          config.deb_depends = config.common_deps
@@ -15,7 +73,7 @@ index d44d6e9081b0ac926778cef5462cc7954591565b..9d169331f18f8ac6221a8c6650216afa
          config.deb_provides = "www-browser"
  
          installer.gen_changelog(config, deb_changelog)
-@@ -185,6 +191,8 @@ def main() -> None:
+@@ -185,6 +175,8 @@ def main() -> None:
  
          os.environ["DEB_HOST_ARCH"] = args.arch
          pkg_name = f"{config.package_orig}-{config.channel}"

@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/rpm/build.py b/chrome/installer/linux/rpm/build.py
-index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..58a067fe911d71891bbaf4524c29b2c26a7e91f8 100755
+index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..8d4ae3e5772ea0984f1fe1726d1ae492aea11ca0 100755
 --- a/chrome/installer/linux/rpm/build.py
 +++ b/chrome/installer/linux/rpm/build.py
 @@ -30,10 +30,20 @@ def gen_spec(
@@ -33,7 +33,33 @@ index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..58a067fe911d71891bbaf4524c29b2c2
  
      staging_dir = output_dir / f"rpm-staging-{channel}"
      tmp_file_dir = output_dir / f"rpm-tmp-{channel}"
-@@ -121,6 +132,10 @@ def main() -> None:
+@@ -97,21 +108,14 @@ def main() -> None:
+         inst = installer.Installer(config)
+ 
+         inst.prep_staging_common()
+-        (staging_dir / "etc/cron.daily").mkdir(parents=True, exist_ok=True)
+-        (staging_dir / "etc/cron.daily").chmod(
+-            installer.StandardPermissions.EXECUTABLE
+-        )
+ 
+         inst.stage_install_common()
+ 
+         logging.info(f"Staging RPM install files in '{staging_dir}'...")
+-        cron_file = staging_dir / "etc/cron.daily" / config.info_vars["PACKAGE"]
+-        installer.process_template(
+-            output_dir / "installer/common/rpmrepo.cron",
+-            cron_file,
+-            config.get_template_context(),
+-        )
+-        cron_file.chmod(installer.StandardPermissions.EXECUTABLE)
++        # Growser-207: no daily cron - see the note in debian/build.py. A user
++        # who removed our repository removed it deliberately, and a package
++        # that restores it every night decides for them what their machine
++        # trusts.
+ 
+         # do_package logic
+         logging.info(f"Packaging {args.arch}...")
+@@ -121,6 +125,10 @@ def main() -> None:
          rpm_common_deps_file = output_dir / "rpm_common.deps"
          with rpm_common_deps_file.open("r") as f:
              depends = f.read().replace("\n", ",")
