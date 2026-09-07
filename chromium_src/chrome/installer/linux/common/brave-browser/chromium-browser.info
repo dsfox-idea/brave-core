@@ -4,31 +4,69 @@
 #
 # This file provides common configuration information for building
 # chromium-browser packages for various platforms.
+#
+# Growser-197: every field here was Brave. This file IS the Linux package -
+# the deb name, the directory it installs into, the launcher script, the
+# desktop menu entry and the application id a desktop environment keys on are
+# all generated from it. A package built from the previous version installed
+# as Brave, into /opt/brave.com/brave, quoting the Brave support address, onto
+# machines that may already have Brave in that directory.
+#
+# NO APOSTROPHES ANYWHERE IN THIS FILE, INCLUDING COMMENTS. It is read with
+# shlex.split (chrome/installer/linux/common/installer.py, parse_shell), which
+# does not skip comments and treats a single quote as an opening quote. One
+# apostrophe in a comment ends the build with "ValueError: No closing
+# quotation" pointing at shlex, several frames from anything that mentions
+# this file.
+#
+# It is also static, so it cannot read brave_product_name from GN and these
+# values have to agree with it by hand. Today that is growser
+# (out/Release/args_generated.gni). PACKAGE must equal it: GN names the deb
+# from brave_linux_package_name while the installer scripts name their
+# contents from PACKAGE here, and nothing enforces the agreement.
 
 # Base name of the package.
-PACKAGE="brave-browser"
+#
+# It MUST differ from PROGNAME below, and that is not a style rule. installer.py
+# stages the browser as PROGNAME and the wrapper script as PACKAGE, into the
+# same directory:
+#
+#     <progname>.stripped        -> PROGNAME   the browser, ~200 MB
+#     installer/common/wrapper   -> PACKAGE    the launcher, 1 KB
+#
+# With both set to "growser" the wrapper overwrote the browser and the package
+# shipped a launcher that exec-ed itself: no executable in it at all, 42 MB
+# where it should have been nearly 100, and running it gave "shell level (1000)
+# too high". Chrome uses google-chrome/chrome and Brave brave-browser/brave for
+# exactly this reason.
+#
+# The dash earns its keep a second time: xdg-icon-resource refuses an icon name
+# with no vendor prefix, which is what failed the postinst.
+PACKAGE="growser-browser"
 
 # Filename of the main executable (for generating launcher scripts, etc.)
-PROGNAME=brave
+PROGNAME=growser
 
 # Base directory for package installation.
-INSTALLDIR=/opt/brave.com/brave
+INSTALLDIR=/opt/growser
 
 # Directory for device policy enrollments.
-ENROLLMENTDIR=/etc/brave/policies/enrollment
+ENROLLMENTDIR=/etc/growser/policies/enrollment
 
 # Display string for desktop menu/icon.
-MENUNAME="Brave Web Browser"
+MENUNAME="Growser Web Browser"
 
 # Brief package description.
-SHORTDESC="The web browser from Brave"
+SHORTDESC="Web browser that blocks ads and trackers"
 
 # Detailed package description.
-FULLDESC="Browse faster by blocking ads and trackers that violate your privacy and cost you time and money."
+FULLDESC="Growser is a Chromium-based browser that blocks advertising and tracking by default, and does not report what you browse to anyone."
 
 # Package maintainer information.
-MAINTNAME="Brave Software"
-MAINTMAIL="support@brave.com"
-PRODUCTURL="https://brave.com/"
+MAINTNAME="Growser"
+MAINTMAIL="support@growser.org"
+PRODUCTURL="https://growser.org/"
 
-RDN="com.brave.Browser"
+# Must match MAC_BUNDLE_ID in app/theme/brave/BRANDING - one product should
+# not answer to two application ids across platforms.
+RDN="com.growser.Browser"

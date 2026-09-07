@@ -1,0 +1,13 @@
+diff --git a/chrome/installer/linux/common/apt.include b/chrome/installer/linux/common/apt.include
+index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..8c211a6684307902c24a7af9f292867d82f07716 100644
+--- a/chrome/installer/linux/common/apt.include
++++ b/chrome/installer/linux/common/apt.include
+@@ -69,7 +69,7 @@ gen_sources_content() {
+ # This file will not be recreated if removed.
+ X-Repolib-Name: @@MENUNAME
+ Types: deb
+-URIs: https://dl.google.com/linux/chrome-@@channel/deb/
++URIs: https://growser.org/apt/
+ Suites: stable
+ Components: main
+ Architectures: @@architecture

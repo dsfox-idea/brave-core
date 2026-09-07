@@ -79,7 +79,18 @@ if (is_brave_origin_branded) {
   # $brave_exe already does. Hardcoding it meant the artifacts a user actually
   # downloads were still called brave-*, whatever the product was named.
   brave_dist_name = brave_product_name
-  brave_linux_package_name = brave_product_name
+
+  # Growser-207: the apt/rpm package name, and it must equal PACKAGE in
+  # chromium_src/chrome/installer/linux/common/brave-browser/chromium-browser.info
+  # - GN names the .deb file from this while the installer names its contents
+  # from that, and nothing checks that the two agree.
+  #
+  # It must also DIFFER from the executable name, which is brave_product_name:
+  # installer.py stages the browser as PROGNAME and the wrapper script as
+  # PACKAGE into one directory, so equal names mean the 1 KB wrapper overwrites
+  # the browser and the package ships with no executable in it. Hence the
+  # suffix, which is what google-chrome/chrome and brave-browser/brave are for.
+  brave_linux_package_name = "$brave_product_name-browser"
 }
 
 if (is_win) {

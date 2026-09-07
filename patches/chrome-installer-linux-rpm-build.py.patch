@@ -1,16 +1,31 @@
 diff --git a/chrome/installer/linux/rpm/build.py b/chrome/installer/linux/rpm/build.py
-index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..85b8efa72ec37e9b526e6c4a12ed2f90cf985070 100755
+index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..58a067fe911d71891bbaf4524c29b2c26a7e91f8 100755
 --- a/chrome/installer/linux/rpm/build.py
 +++ b/chrome/installer/linux/rpm/build.py
-@@ -30,6 +30,7 @@ def gen_spec(
+@@ -30,10 +30,20 @@ def gen_spec(
          spec_file.unlink()
  
      config.rpm_package_filename = f"{config.package_orig}-{config.channel}"
 +    if config.channel == "stable": config.rpm_package_filename = config.package_orig
  
-     script_dir = pathlib.Path(__file__).parent.absolute()
+-    script_dir = pathlib.Path(__file__).parent.absolute()
++    # Growser-207: template from the STAGED tree, as debian/build.py does
++    # (output_dir / f"installer/debian/{script}") and as main() below already
++    # does for rpmrepo.cron - this one line was the odd one out in its own file.
++    #
++    # @@include@@ resolves relative to the file doing the including, so reading
++    # the template from the source directory made ../common/ mean the SOURCE
++    # common/, and every packaging file replaced by the gn staging swap was
++    # ignored on the rpm path alone. Measured rather than reasoned: one build
++    # produced a .deb carrying our repository signing key and an .rpm carrying
++    # Google's, from a single staged key.include.
      installer.process_template(
-@@ -79,6 +80,7 @@ def main() -> None:
+-        script_dir / "chrome.spec.template",
++        config.output_dir / "installer/rpm/chrome.spec.template",
+         spec_file,
+         config.get_template_context(),
+     )
+@@ -79,6 +89,7 @@ def main() -> None:
      script_dir = pathlib.Path(__file__).parent.absolute()
      output_dir = pathlib.Path(args.output_dir).absolute()
      channel = args.channel
@@ -18,12 +33,14 @@ index ec41903e6de422c0a8bbc598ce2f9805b7bedc90..85b8efa72ec37e9b526e6c4a12ed2f90
  
      staging_dir = output_dir / f"rpm-staging-{channel}"
      tmp_file_dir = output_dir / f"rpm-tmp-{channel}"
-@@ -122,6 +124,8 @@ def main() -> None:
+@@ -121,6 +132,10 @@ def main() -> None:
+         rpm_common_deps_file = output_dir / "rpm_common.deps"
          with rpm_common_deps_file.open("r") as f:
              depends = f.read().replace("\n", ",")
++        # Growser-207: no keyring dependency - see the note in
++        # debian/build.py. Our key ships in this package, so it needs no
++        # keyring package from anyone else, least of all one that only exists
++        # in somebody else's repository.
          config.rpm_depends = depends
-+        # Ensure that our signing key is up-to-date (brave/brave-browser#4205).
-+        config.rpm_depends = f"brave-keyring >= 1.11-1, {depends}"
  
          if config.info_vars["PACKAGE"] != config.usr_bin_symlink_name:
-             symlink = config.usr_bin_symlink_name

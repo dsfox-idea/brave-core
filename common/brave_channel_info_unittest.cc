@@ -35,19 +35,29 @@ TEST(BraveChannelInfoTest, ChannelByNameTest) {
 #endif  // OS_MAC
 
 #if BUILDFLAG(IS_LINUX)
-TEST(BraveChannelInfoTest, ParentDirectoryOfUserDataDirectoryTest) {
+// Growser-206: this used to assert the parent was "BraveSoftware", which is
+// where the whole defect was pinned - our profile, cache, extensions and
+// Crashpad database sat in the real Brave's directory, and on a machine with
+// Brave installed the two browsers shared one profile.
+//
+// It asserts the invariant that actually matters now: the directory is OURS,
+// and it is not anybody else's vendor directory. This is the only thing that
+// would have caught the original, so it is worth more than the name it
+// checks.
+TEST(BraveChannelInfoTest, UserDataDirectoryIsOursTest) {
   base::FilePath path;
   EXPECT_TRUE(chrome::GetDefaultUserDataDirectory(&path));
-  EXPECT_EQ("BraveSoftware", path.DirName().BaseName().AsUTF8Unsafe());
+  EXPECT_TRUE(path.BaseName().AsUTF8Unsafe().starts_with("growser"));
+  EXPECT_NE("BraveSoftware", path.DirName().BaseName().AsUTF8Unsafe());
 }
 
 TEST(BraveChannelInfoTest, DefaultUserDataDirectoryAndChannelTest) {
   base::FilePath path;
 
 #if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
-  constexpr char kProduct[] = "Brave-Origin";
+  constexpr char kProduct[] = "growser-origin";  // Growser-206
 #else
-  constexpr char kProduct[] = "Brave-Browser";
+  constexpr char kProduct[] = "growser";  // Growser-206
 #endif
 
 #if defined(OFFICIAL_BUILD)
