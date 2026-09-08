@@ -93,6 +93,15 @@ void TorLauncherImpl::Launch(mojom::TorConfigPtr config,
   base::LaunchOptions launchopts;
 #if BUILDFLAG(IS_LINUX)
   launchopts.kill_on_parent_death = true;
+  // Growser-202: the Tor Project's Linux client is linked against the OpenSSL
+  // and libevent it ships beside itself and carries no RPATH, so without this
+  // the loader takes whatever the distro has - a different OpenSSL, an older
+  // one, or none, and tor never starts. Our component installs those libraries
+  // next to the binary (scripts/make-tor-component.py); this is what makes
+  // them findable. current_directory below does not: ld.so does not search the
+  // working directory.
+  launchopts.environment["LD_LIBRARY_PATH"] =
+      args.GetProgram().DirName().value();
 #endif
 #if BUILDFLAG(IS_WIN)
   launchopts.start_hidden = true;
