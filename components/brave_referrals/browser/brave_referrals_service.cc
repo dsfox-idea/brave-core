@@ -36,10 +36,6 @@
 #include "services/network/public/cpp/simple_url_loader.h"
 #include "services/network/public/mojom/url_response_head.mojom.h"
 
-#if BUILDFLAG(IS_MAC)
-#include "base/apple/bundle_locations.h"
-#include "brave/components/brave_referrals/browser/file_extended_attribute.h"
-#endif  // BUILDFLAG(IS_MAC)
 
 // Perform finalization checks once a day.
 constexpr int kFinalizationChecksFrequency = 60 * 60 * 24;
@@ -84,45 +80,20 @@ void DeletePromoCodeFile(const base::FilePath& promo_code_file) {
   }
 }
 
-#if BUILDFLAG(IS_MAC)
-std::string ReadPromoCodeFromXattr() {
-  static constexpr char kRefCodeAttr[] = "com.brave.refcode";
-  base::FilePath bundle_path = base::apple::OuterBundlePath();
-  std::vector<char> value;
-  int result_errno =
-      brave::GetFileExtendedAttribute(bundle_path, kRefCodeAttr, &value);
-  if (result_errno == ENOATTR) {
-    VLOG(0) << "Could not get promo code from " << bundle_path
-            << ". The extended attribute " << kRefCodeAttr << " was not found.";
-  } else if (result_errno != 0) {
-    VLOG(0) << "Could not get promo code from " << bundle_path
-            << ". An error occurred getting value for attribute "
-            << kRefCodeAttr << ". Error code: " << result_errno << ".";
-  } else {
-    std::string promo_code(value.begin(), value.end());
-    base::TrimWhitespaceASCII(promo_code, base::TRIM_ALL, &promo_code);
-    if (promo_code.empty()) {
-      VLOG(0) << "Promo code value from " << bundle_path
-              << "'s extended attribute " << kRefCodeAttr << " is empty.";
-    } else {
-      DVLOG(1) << "Promo code from " << kRefCodeAttr << ": " << promo_code;
-      return promo_code;
-    }
-  }
-
-  return "";
-}
-#endif  // BUILDFLAG(IS_MAC)
+// Growser-208: the macOS promo code was read from the extended attribute
+// `com.brave.refcode` on our own bundle. Brave's installer stamps that
+// attribute as part of a referral programme that is Brave's business
+// arrangement and not ours; we ship a DMG, which stamps nothing, so the read
+// answered ENOATTR on every launch this browser has ever had and fell straight
+// through to the file below. Behaviour is unchanged by removing it - what goes
+// is a foreign identity in the shipped binary, which is the whole of this
+// issue: the system reading `com.brave.` off a Growser bundle.
+//
+// The file path stays. If a referral programme is ever ours to run, it gets an
+// attribute in our own namespace, added deliberately rather than inherited.
 
 std::string ReadPromoCode(const base::FilePath& promo_code_file) {
   std::string promo_code;
-
-#if BUILDFLAG(IS_MAC)
-  promo_code = ReadPromoCodeFromXattr();
-  if (!promo_code.empty()) {
-    return promo_code;
-  }
-#endif  // BUILDFLAG(IS_MAC)
 
   if (!base::PathExists(promo_code_file)) {
     return kDefaultPromoCode;
