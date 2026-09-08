@@ -34,6 +34,7 @@ source_set("component_loader") {
   deps = [
     "//base",
     "//brave/components/brave_extension:static_resources",
+    "//brave/components/webharvester:resources",  # Growser-212
     "//chrome/browser/extensions",
     "//chrome/browser/profiles:profile",
     "//components/prefs",
@@ -108,6 +109,7 @@ source_set("extensions") {
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_extension:static_resources",
+    "//brave/components/webharvester:resources",  # Growser-212
     "//brave/components/brave_news/common/buildflags",
     "//brave/components/brave_rewards/core",
     "//brave/components/brave_search/browser",
@@ -117,6 +119,7 @@ source_set("extensions") {
     "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/brave_wayback_machine/buildflags",
     "//brave/components/constants",
+    "//brave/components/webharvester",  # Growser-212
     "//brave/components/containers/buildflags",
     "//brave/components/de_amp/common",
     "//brave/components/debounce/core/common",
@@ -252,6 +255,7 @@ group("resources") {
   deps = [
     "//brave/components/brave_extension:generated_resources",
     "//brave/components/brave_extension:static_resources",
+    "//brave/components/webharvester:resources",  # Growser-212
   ]
 }
 

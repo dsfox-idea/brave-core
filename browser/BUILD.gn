@@ -122,6 +122,7 @@ source_set("unit_tests") {
   deps = [
     "//base",
     "//brave/components/constants",
+    "//brave/components/webharvester",  # Growser-212
     "//components/sync_preferences",
     "//testing/gtest",
   ]

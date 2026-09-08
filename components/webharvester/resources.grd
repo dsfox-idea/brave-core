@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+     This Source Code Form is subject to the terms of the Mozilla Public
+     License, v. 2.0. If a copy of the MPL was not distributed with this file,
+     You can obtain one at https://mozilla.org/MPL/2.0/. -->
+
+<!-- growser (#212): the webharvester extension, shipped inside the browser.
+
+     The files come from //brave/vendor/webharvester, a pinned git dependency
+     (see brave/DEPS), so what we ship is a recorded revision of a repository
+     developed elsewhere rather than a copy that drifts.
+
+     A pak is the delivery mechanism because it is in every build on every
+     platform by construction - no network, no signing key, no first-run
+     download - which is what "installs together with the browser, on every
+     platform" actually requires. resource_path is what the extension sees as
+     its own layout, so it must stay relative to the extension root and must
+     match the root directory BraveComponentLoader registers.
+
+     The extension is DISABLED by default and this file does not change that:
+     shipping the bytes and running them are separate decisions, and the
+     second one lives behind a pref. -->
+<grit base_dir="./" latest_public_release="0" current_release="1">
+  <outputs>
+    <output filename="grit/webharvester.h" type="rc_header">
+      <emit emit_type='prepend'></emit>
+    </output>
+    <output filename="webharvester_static.pak" type="data_package" />
+    <output filename="grit/webharvester_resources_map.cc"
+            type="resource_file_map_source" />
+    <output filename="grit/webharvester_resources_map.h"
+            type="resource_map_header" />
+  </outputs>
+  <release seq="1">
+    <includes>
+      <include name="IDR_WEBHARVESTER_MANIFEST"
+               file="../../vendor/webharvester/extension/manifest.json"
+               resource_path="webharvester/manifest.json"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_BACKGROUND_JS"
+               file="../../vendor/webharvester/extension/background.js"
+               resource_path="webharvester/background.js"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_CONTENT_JS"
+               file="../../vendor/webharvester/extension/content.js"
+               resource_path="webharvester/content.js"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_NON_WORKING_JSON"
+               file="../../vendor/webharvester/extension/non-working.json"
+               resource_path="webharvester/non-working.json"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_PROBE_HTML"
+               file="../../vendor/webharvester/extension/probe.html"
+               resource_path="webharvester/probe.html"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_PROBE_JS"
+               file="../../vendor/webharvester/extension/probe.js"
+               resource_path="webharvester/probe.js"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_PROBES_CHROME_CALL_JS"
+               file="../../vendor/webharvester/extension/probes/chrome-call.js"
+               resource_path="webharvester/probes/chrome-call.js"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_PROBES_PROBE_JS"
+               file="../../vendor/webharvester/extension/probes/probe.js"
+               resource_path="webharvester/probes/probe.js"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_PROBES_REGISTRY_JS"
+               file="../../vendor/webharvester/extension/probes/registry.js"
+               resource_path="webharvester/probes/registry.js"
+               type="BINDATA" />
+      <include name="IDR_WEBHARVESTER_PROBES_RUNNER_JS"
+               file="../../vendor/webharvester/extension/probes/runner.js"
+               resource_path="webharvester/probes/runner.js"
+               type="BINDATA" />
+    </includes>
+  </release>
+</grit>

@@ -11,3 +11,4 @@ substitutions:
       code: |-
         AddComponentResourceEntries(kBraveExtension);
         AddComponentResourceEntries(kBraveExtensionGenerated);
+        AddComponentResourceEntries(kWebharvester);

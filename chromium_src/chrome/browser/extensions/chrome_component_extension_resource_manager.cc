@@ -5,5 +5,7 @@
 
 #include "brave/components/brave_extension/grit/brave_extension_generated_map.h"
 #include "brave/components/brave_extension/grit/brave_extension_resources_map.h"
+// Growser-212: webharvester's files, served by path from the pak.
+#include "brave/components/webharvester/grit/webharvester_resources_map.h"
 
 #include <chrome/browser/extensions/chrome_component_extension_resource_manager.cc>

@@ -17,6 +17,10 @@
 #include "brave/components/brave_extension/grit/brave_extension.h"
 #include "brave/components/constants/brave_switches.h"
 #include "brave/components/constants/pref_names.h"
+// Growser-212
+#include "base/files/file_path.h"
+#include "brave/components/webharvester/grit/webharvester.h"
+#include "brave/components/webharvester/webharvester.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "chrome/browser/extensions/extension_service.h"
 #include "chrome/browser/profiles/profile.h"
@@ -44,6 +48,11 @@ BraveComponentLoader::BraveComponentLoader(Profile* profile)
       base::BindRepeating(&BraveComponentLoader::UpdateBraveExtension,
                           base::Unretained(this)));
 #endif
+  // Growser-212: webharvester is off by default and the pref is the switch.
+  pref_change_registrar_.Add(
+      webharvester::kEnabledPref,
+      base::BindRepeating(&BraveComponentLoader::UpdateWebharvesterExtension,
+                          base::Unretained(this)));
 }
 
 BraveComponentLoader::~BraveComponentLoader() = default;
@@ -52,6 +61,7 @@ void BraveComponentLoader::AddDefaultComponentExtensions(
     bool skip_session_components) {
   ComponentLoader::AddDefaultComponentExtensions(skip_session_components);
   UpdateBraveExtension();
+  UpdateWebharvesterExtension();
 }
 
 bool BraveComponentLoader::UseBraveExtensionBackgroundPage() {
@@ -105,6 +115,41 @@ void BraveComponentLoader::UpdateBraveExtension() {
 
   const auto id = Add(std::move(*manifest), brave_extension_path);
   CHECK_EQ(id, brave_extension_id);
+}
+
+// Growser-212: webharvester travels with the browser but does not run until
+// somebody says so. The pref is the durable answer; the switch is for an agent
+// that launches the browser itself and wants the grant to end with the session.
+bool BraveComponentLoader::WebharvesterEnabled() const {
+  return base::CommandLine::ForCurrentProcess()->HasSwitch(
+             webharvester::kEnableSwitch) ||
+         profile_prefs_->GetBoolean(webharvester::kEnabledPref);
+}
+
+void BraveComponentLoader::UpdateWebharvesterExtension() {
+  ExtensionRegistry* registry = ExtensionRegistry::Get(profile_);
+  const bool installed =
+      registry->GetInstalledExtension(webharvester::kExtensionId) != nullptr;
+  const bool wanted = WebharvesterEnabled();
+  if (installed == wanted) {
+    return;
+  }
+  if (!wanted) {
+    Remove(webharvester::kExtensionId);
+    return;
+  }
+
+  std::optional<base::DictValue> manifest = base::JSONReader::ReadDict(
+      ui::ResourceBundle::GetSharedInstance().LoadDataResourceString(
+          IDR_WEBHARVESTER_MANIFEST),
+      base::JSON_PARSE_CHROMIUM_EXTENSIONS);
+  CHECK(manifest) << "invalid webharvester manifest";
+
+  // The root must match the resource_path prefix in the extension's grd; the
+  // resource manager serves its files by that name.
+  const auto id = Add(std::move(*manifest),
+                      base::FilePath::FromASCII(webharvester::kExtensionRoot));
+  CHECK_EQ(id, webharvester::kExtensionId);
 }
 
 }  // namespace extensions

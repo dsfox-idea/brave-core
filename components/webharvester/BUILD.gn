@@ -1,0 +1,29 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+import("//brave/resources/brave_grit.gni")
+import("//extensions/buildflags/buildflags.gni")
+
+assert(enable_extensions)
+
+# growser (#212): the webharvester extension's files, packed for the browser.
+# Nothing is generated here - the extension is checked in at its own repository
+# and pinned in brave/DEPS - so a single static grit target is the whole build.
+brave_grit("resources") {
+  source = "resources.grd"
+
+  outputs = [
+    "grit/webharvester.h",
+    "grit/webharvester_resources_map.cc",
+    "grit/webharvester_resources_map.h",
+    "webharvester_static.pak",
+  ]
+}
+
+# The extension id, the pref name and the root directory, in one place so the
+# loader, the prefs and the gate cannot drift apart.
+source_set("webharvester") {
+  sources = [ "webharvester.h" ]
+}

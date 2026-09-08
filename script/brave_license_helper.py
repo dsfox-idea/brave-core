@@ -237,6 +237,16 @@ def AddBraveCredits(root, prune_paths, special_cases, prune_dirs,
             "URL": "https://github.com/brave/web-discovery-project",
             "License": "MPL-2.0",
         },
+        # growser (#212): the webharvester extension, bundled with the
+        # browser. MIT, read off the dependency's own LICENSE rather than
+        # assumed - the first version of this entry guessed MPL-2.0 because
+        # that is what Growser is, and the guess was wrong.
+        os.path.join('brave', 'vendor', 'webharvester'): {
+            "Name": "webharvester",
+            "URL": "https://github.com/dsfox-idea/webharvester",
+            "License": "MIT",
+            "License File": ["/brave/vendor/webharvester/LICENSE"],
+        },
         os.path.join('brave', 'vendor', 'omaha'): {
             "Name": "Omaha",
             "URL": "https://github.com/brave/omaha",

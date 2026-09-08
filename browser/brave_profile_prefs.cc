@@ -41,6 +41,7 @@
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
+#include "brave/components/webharvester/webharvester.h"  // Growser-212
 #include "brave/components/de_amp/common/pref_names.h"
 #include "brave/components/debounce/core/browser/debounce_service.h"
 #include "brave/components/email_aliases/buildflags/buildflags.h"
@@ -317,6 +318,12 @@ void RegisterProfilePrefsForMigration(
 
   // Restore "Other Bookmarks" migration
   registry->RegisterBooleanPref(kOtherBookmarksMigrated, false);
+
+  // growser (#212): webharvester ships with the browser and stays OFF until
+  // the user or Claude Code turns it on. The default is the security
+  // property - the extension declares 62 permissions and <all_urls>, and a
+  // component extension is granted all of it with no prompt.
+  registry->RegisterBooleanPref(webharvester::kEnabledPref, false);
 
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
   // Added 05/2021

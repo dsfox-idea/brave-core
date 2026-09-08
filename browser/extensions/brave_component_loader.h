@@ -32,6 +32,11 @@ class BraveComponentLoader : public ComponentLoader {
  private:
   void UpdateBraveExtension();
 
+  // Growser-212: adds webharvester when its pref is on and removes it when
+  // the pref goes off, so the switch takes effect without a restart.
+  void UpdateWebharvesterExtension();
+  bool WebharvesterEnabled() const;
+
   bool UseBraveExtensionBackgroundPage();
 
   raw_ptr<Profile> profile_ = nullptr;
