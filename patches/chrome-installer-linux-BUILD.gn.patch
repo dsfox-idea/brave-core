@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/BUILD.gn b/chrome/installer/linux/BUILD.gn
-index b3b233d16abe096b16ae7a26202b28e925a44f91..70d31d59fb20a63ca1488d74f3fdad16ee680660 100644
+index b3b233d16abe096b16ae7a26202b28e925a44f91..89318a6b24e2a621146696f2bcb7cdda0631e0e0 100644
 --- a/chrome/installer/linux/BUILD.gn
 +++ b/chrome/installer/linux/BUILD.gn
 @@ -18,6 +18,7 @@ import("//third_party/angle/gni/angle.gni")
@@ -42,7 +42,51 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..70d31d59fb20a63ca1488d74f3fdad16
  }
  
  copy("deb_packaging_files") {
-@@ -486,6 +491,7 @@ group("installer_deps") {
+@@ -397,15 +402,36 @@ copy("deb_packaging_files") {
+ 
+ copy("theme_files") {
+   visibility = [ ":*" ]
++
++  # Growser-146/162: the build people install keeps the release mark; every
++  # other build carries the same mark in RED, so two browsers in one launcher
++  # cannot be confused and a development build cannot be mistaken for the
++  # product. Windows does this in the .rc (#146) and macOS in bundle_data
++  # (#162); Linux had no red icon at all until this.
++  #
++  # A DIRECTORY is chosen rather than a file renamed, because this copy uses
++  # {{source_file_part}} and everything downstream - the postinstall's
++  # xdg-icon-resource loop, the .desktop Icon= line - expects the release
++  # names. Read from //brave, like the mac .icns: branding.js copies only some
++  # theme files into the Chromium tree, so a second copy there would go stale
++  # in silence. brand/make-logos.py writes them.
++  import("//brave/build/growser.gni")
++  _logo_dir = "$branding_dir/linux"
++  _logo_dir_100 = "$branding_dir_100/linux"
++  if (!growser_public_release && branding_path_component == "brave") {
++    _logo_dir = "//brave/app/theme/brave/linux/development"
++    _logo_dir_100 = _logo_dir
++  }
++
+   sources = [
+     "$branding_dir/BRANDING",
+-    "$branding_dir/linux/product_logo_128.png",
+-    "$branding_dir/linux/product_logo_24.png",
+-    "$branding_dir/linux/product_logo_256.png",
+-    "$branding_dir/linux/product_logo_48.png",
+-    "$branding_dir/linux/product_logo_64.png",
+-    "$branding_dir_100/linux/product_logo_16.png",
+-    "$branding_dir_100/linux/product_logo_32.png",
++    "$_logo_dir/product_logo_128.png",
++    "$_logo_dir/product_logo_24.png",
++    "$_logo_dir/product_logo_256.png",
++    "$_logo_dir/product_logo_48.png",
++    "$_logo_dir/product_logo_64.png",
++    "$_logo_dir_100/product_logo_16.png",
++    "$_logo_dir_100/product_logo_32.png",
+   ]
+   if (is_chrome_branded) {
+     sources += [
+@@ -486,6 +512,7 @@ group("installer_deps") {
      "//components/privacy_sandbox/privacy_sandbox_attestations/preload:component",
      "//sandbox/linux:chrome_sandbox",
    ]
@@ -50,7 +94,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..70d31d59fb20a63ca1488d74f3fdad16
    if (bundle_widevine_cdm) {
      public_deps += [ "//third_party/widevine/cdm" ]
    }
-@@ -553,11 +559,14 @@ group("installer_deps") {
+@@ -553,11 +580,14 @@ group("installer_deps") {
  template("linux_package") {
    assert(defined(invoker.channel))
    channel = invoker.channel
@@ -66,7 +110,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..70d31d59fb20a63ca1488d74f3fdad16
    }
  
    deb_target_name = "${target_name}_deb"
-@@ -566,7 +575,7 @@ template("linux_package") {
+@@ -566,7 +596,7 @@ template("linux_package") {
      script = "debian/build.py"
  
      inputs = packaging_files
@@ -75,7 +119,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..70d31d59fb20a63ca1488d74f3fdad16
  
      args = [
        "-a",
-@@ -603,7 +612,7 @@ template("linux_package") {
+@@ -603,7 +633,7 @@ template("linux_package") {
        script = "rpm/build.py"
  
        inputs = packaging_files
@@ -84,7 +128,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..70d31d59fb20a63ca1488d74f3fdad16
  
        args = [
          "-a",
-@@ -651,3 +660,6 @@ linux_package("unstable") {
+@@ -651,3 +681,6 @@ linux_package("unstable") {
  linux_package("canary") {
    channel = "canary"
  }
