@@ -54,6 +54,13 @@ inline constexpr char kUpdateFeedURL[] = "update-feed-url";
 inline constexpr char kDontShowSidebarOnNonStable[] =
     "dont-show-on-sidebar-non-stable";
 
+// Growser-190: read the new tab board's icon pack from this file instead of
+// the one the component updater installs. The page always has a pack compiled
+// into its bundle as the floor; this replaces what the browser hands it on
+// top of that, which is what makes a pack change testable without publishing
+// a component or building a browser.
+inline constexpr char kIconPackFile[] = "growser-icon-pack";
+
 }  // namespace switches
 
 #endif  // BRAVE_COMPONENTS_CONSTANTS_BRAVE_SWITCHES_H_

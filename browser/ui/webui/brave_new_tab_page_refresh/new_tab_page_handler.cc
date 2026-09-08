@@ -9,7 +9,12 @@
 #include <utility>
 
 #include "base/check.h"
+#include "base/command_line.h"
+#include "base/files/file_path.h"
+#include "base/files/file_util.h"
 #include "base/functional/callback_helpers.h"
+#include "base/logging.h"
+#include "base/task/thread_pool.h"
 #include "base/strings/escape.h"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
@@ -27,6 +32,7 @@
 #include "brave/components/brave_search/common/brave_search_utils.h"
 #include "brave/components/brave_search_conversion/pref_names.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
+#include "brave/components/constants/brave_switches.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/url_constants.h"
 #include "brave/components/misc_metrics/brave_search_metrics.h"
@@ -72,6 +78,13 @@
 namespace brave_new_tab_page_refresh {
 
 namespace {
+
+// Growser-190: a ceiling on the icon pack we will read. The bundled pack is
+// about 2 MB and the whole point of the component is that it can grow, so this
+// is generous rather than tight - it exists so a wrong path or a corrupt
+// install cannot make the browser read something enormous into memory, not to
+// police the pack's size.
+constexpr size_t kMaxIconPackBytes = 32 * 1024 * 1024;
 
 bool IsSponsoredAdsEnabled(const PrefService& pref_service) {
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
@@ -581,6 +594,54 @@ void NewTabPageHandler::FetchPackTailIcon(const std::string& domain,
       base::BindOnce(&NewTabPageHandler::OnPackTailIconFetched,
                      weak_factory_.GetWeakPtr(), held, std::move(callback)),
       64 * 1024);
+}
+
+// Growser-190: the icon pack the browser has, handed to the page.
+//
+// The page ships a pack in its own bundle and uses it as the floor, so an
+// empty answer here is not a failure - it is a browser that has nothing newer,
+// which is every fresh install and every machine that never reaches us.
+//
+// Read off disk rather than fetched: a WebUI page is a privileged context and
+// does not touch the network in this browser, and handing over the WHOLE pack
+// keeps the property bundling was chosen for - the request says nothing about
+// which sites are on anyone's board (growser#96).
+void NewTabPageHandler::GetIconPack(GetIconPackCallback callback) {
+  base::FilePath path;
+  const auto& command_line = *base::CommandLine::ForCurrentProcess();
+  if (command_line.HasSwitch(switches::kIconPackFile)) {
+    path = command_line.GetSwitchValuePath(switches::kIconPackFile);
+  }
+  if (path.empty()) {
+    // Growser-190: the component's copy goes here in the next slice. Until
+    // then only the switch names a pack, and no pack is the ordinary case.
+    std::move(callback).Run(std::string());
+    return;
+  }
+
+  base::ThreadPool::PostTaskAndReplyWithResult(
+      FROM_HERE, {base::MayBlock(), base::TaskPriority::USER_VISIBLE},
+      base::BindOnce(
+          [](const base::FilePath& path) {
+            std::string contents;
+            // A pack that cannot be read is an empty answer, not an error the
+            // page has to reason about: it falls back to the bundled one,
+            // which is the same path as having no component at all.
+            if (!base::ReadFileToStringWithMaxSize(path, &contents,
+                                                   kMaxIconPackBytes)) {
+              LOG(ERROR) << "icon pack unreadable or too large: " << path;
+              return std::string();
+            }
+            return contents;
+          },
+          path),
+      base::BindOnce(&NewTabPageHandler::OnIconPackRead,
+                     weak_factory_.GetWeakPtr(), std::move(callback)));
+}
+
+void NewTabPageHandler::OnIconPackRead(GetIconPackCallback callback,
+                                       std::string pack_json) {
+  std::move(callback).Run(std::move(pack_json));
 }
 
 void NewTabPageHandler::OnPackTailIconFetched(

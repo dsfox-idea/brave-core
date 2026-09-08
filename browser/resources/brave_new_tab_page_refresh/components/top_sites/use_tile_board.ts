@@ -10,7 +10,12 @@ import { CachedTile, readTileCache, writeTileCache } from '../../lib/tile_cache'
 import { tileIconURL } from '../../lib/favicon_url'
 import { tileColorFor } from '../../lib/tile_color'
 import { tileLabel } from '../../lib/tile_label'
-import { lookupPackedIcon, PackedIcon } from '../../lib/icon_pack'
+import {
+  loadPackFromBrowser,
+  lookupPackedIcon,
+  onPackChanged,
+  PackedIcon,
+} from '../../lib/icon_pack'
 import { lookupServerIcon } from '../../lib/server_icon'
 import { maxTileCount } from './tile_rows'
 
@@ -37,6 +42,16 @@ export function useTileBoard(
   const [cachedTiles, setCachedTiles] = React.useState<BoardTile[] | null>(null)
   const [cacheRead, setCacheRead] = React.useState(false)
   const [colorVersion, setColorVersion] = React.useState(0)
+  // growser#190: a pack newer than the bundled one arrives from the browser
+  // after the first paint, so the board redraws the same way it does when a
+  // favicon colour lands.
+  const [packVersion, setPackVersion] = React.useState(0)
+
+  React.useEffect(() => {
+    const stop = onPackChanged(() => setPackVersion((v) => v + 1))
+    loadPackFromBrowser()
+    return stop
+  }, [])
 
   React.useEffect(() => {
     let cancelled = false
@@ -99,8 +114,10 @@ export function useTileBoard(
     })
     // `colorVersion` is what makes a resolved colour reach the board; the
     // colours themselves live in a ref so that resolving one does not rebuild
-    // the map for all of them.
-  }, [sites, cachedTiles, colorVersion, initialized])
+    // the map for all of them. `packVersion` does the same for a pack newer
+    // than the bundled one (growser#190) - the tables it replaces are read by
+    // lookupPackedIcon during this very build, so nothing redraws without it.
+  }, [sites, cachedTiles, colorVersion, packVersion, initialized])
 
 
   React.useEffect(() => {

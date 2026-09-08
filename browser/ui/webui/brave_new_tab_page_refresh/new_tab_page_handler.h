@@ -167,6 +167,7 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
   void GetTopSites(GetTopSitesCallback callback) override;
   void FetchPackTailIcon(const std::string& domain,
                          FetchPackTailIconCallback callback) override;
+  void GetIconPack(GetIconPackCallback callback) override;
   void AddCustomTopSite(const std::string& url,
                         const std::string& title,
                         AddCustomTopSiteCallback callback) override;
@@ -222,6 +223,10 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
       std::list<std::unique_ptr<network::SimpleURLLoader>>::iterator held,
       FetchPackTailIconCallback callback,
       std::optional<std::string> body);
+
+  // Growser-190: the pack is read off disk, which blocks, so it happens on a
+  // thread that may and comes back here.
+  void OnIconPackRead(GetIconPackCallback callback, std::string pack_json);
 
   void OnGetSponsoredImageBackground(
       GetSponsoredImageBackgroundCallback callback,

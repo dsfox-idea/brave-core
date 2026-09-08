@@ -5,9 +5,11 @@
 
 import {
   drawingSource,
+  installPack,
   lookupPackedIcon,
   packKeyFor,
   packedDomainCount,
+  packedRevision,
 } from './icon_pack'
 
 describe('icon_pack', () => {
@@ -117,5 +119,43 @@ describe('icon_pack', () => {
         + 0.0722 * channel(value & 0xff)
       expect(1.05 / (luminance + 0.05)).toBeGreaterThanOrEqual(2.9)
     }
+  })
+
+  // growser#190: a pack the browser hands over replaces the bundled one. The
+  // bundled pack is the floor, so every way a payload can be wrong has to
+  // leave the board exactly as it was - a half-read pack draws blank tiles,
+  // which is worse than an older pack drawn correctly.
+  describe('a pack from the browser', () => {
+    const good = JSON.stringify({
+      format: 1,
+      domains: { 'example.com': 'brand' },
+      brands: { brand: { kind: 'full', colour: '#123456', name: 'Brand' } },
+      drawings: { brand: '<svg/>' },
+    })
+
+    it('replaces the bundled tables', () => {
+      expect(lookupPackedIcon('https://example.com/')).toBeNull()
+      expect(installPack(good)).toBe(true)
+      const icon = lookupPackedIcon('https://example.com/')
+      expect(icon).not.toBeNull()
+      expect(icon!.name).toBe('Brand')
+      expect(packedRevision()).toBeGreaterThan(0)
+    })
+
+    it('refuses anything it does not understand, and changes nothing', () => {
+      const before = packedRevision()
+      const refused = [
+        '',
+        'not json',
+        JSON.stringify({ format: 2, domains: {}, brands: {}, drawings: {} }),
+        JSON.stringify({ format: 1, domains: {}, brands: {} }),
+        JSON.stringify({ format: 1, domains: [], brands: {}, drawings: {} }),
+      ]
+      for (const payload of refused) {
+        expect(installPack(payload)).toBe(false)
+      }
+      // Not one of them moved the pack, which is the claim that matters.
+      expect(packedRevision()).toBe(before)
+    })
   })
 })

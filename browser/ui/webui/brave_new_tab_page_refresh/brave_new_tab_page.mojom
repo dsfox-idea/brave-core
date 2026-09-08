@@ -211,6 +211,18 @@ interface NewTabPageHandler {
   // for a confirmed miss worth caching) or 0 for a failure worth retrying.
   FetchPackTailIcon(string domain) => (int32 status, string entry_json);
 
+  // The icon pack this browser has, as JSON, or an empty string when it has
+  // none of its own (growser#190). The page ships a pack compiled into its
+  // bundle and uses that as the floor; this is how a NEWER pack reaches it
+  // without a browser release.
+  //
+  // Handed over by the browser process, never fetched by the page: a WebUI
+  // page is a privileged context and does not reach the network in this
+  // browser. It is also the whole pack rather than a lookup, so asking for it
+  // says nothing about which sites are on anyone's board - the property that
+  // bundling bought in the first place (growser#96).
+  GetIconPack() => (string pack_json);
+
   // Adds a site to the list of custom top sites.
   AddCustomTopSite(string url, string title) => ();
 
