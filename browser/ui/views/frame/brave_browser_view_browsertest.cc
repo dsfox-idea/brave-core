@@ -572,7 +572,23 @@ IN_PROC_BROWSER_TEST_P(
 
   auto* panel_ui = browser()->GetFeatures().side_panel_ui();
 
-  // --- Right-aligned panel (default: kSidePanelHorizontalAlignment = true) ---
+  // --- Right-aligned panel ---
+  // Growser-184: set it, do not inherit it. Chromium registers this pref as
+  // !IsRTL() - true, on the right - and this half was written against that;
+  // ours is false since growser#78, so the panel opened LEFT and the assertion
+  // below measured the mirror image of what it names. On macOS 26 that is
+  // visible (window corner 16, border 6): actual 6,6,6,16 against an expected
+  // 6,6,16,6.
+  //
+  // Off macOS it is invisible, and that is worth knowing before anyone
+  // "verifies" this elsewhere: kRoundedCornersBorderRadius and
+  // kRoundedCornersBorderRadiusAtWindowCorner are both 6 on Windows and Linux
+  // (chromium_src/ui/views/layout/layout_provider.cc), so the two halves below
+  // assert the same four numbers and pass whichever side the panel is on. The
+  // test is sensitive to alignment only on macOS 26 and up - where upstream
+  // currently skips it (brave-browser#55995), which is why this was measured
+  // with that skip lifted rather than by a green run.
+  prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, true);
   panel_ui->Toggle();
   RunScheduledLayouts();
 
