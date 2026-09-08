@@ -513,6 +513,18 @@ IN_PROC_BROWSER_TEST_P(SidebarBrowserWithSplitViewTest,
   // Check sidebar is not shown.
   EXPECT_FALSE(sidebar_container->IsSidebarVisible());
 
+  // Growser-184: this half is about the sidebar on the RIGHT, and it has to say
+  // so rather than inherit a default. Upstream leaned on Chromium's
+  // (kSidePanelHorizontalAlignment true = right); ours is false since
+  // growser#78 - the sidebar opens on the left - so the right-hand hot corner
+  // was never where this looked, and only this first probe failed, which reads
+  // like a macOS quirk and is nothing of the sort. The assertion below is the
+  // pin: if our default ever moves back, this says so, instead of a hot corner
+  // going quiet.
+  EXPECT_FALSE(prefs->GetBoolean(prefs::kSidePanelHorizontalAlignment))
+      << "growser#78: the sidebar opens on the left by default";
+  prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, true);
+
   // Set mouse position inside the mouse hover area to check sidebar UI is shown
   // with that mouse position when sidebar is on right side.
   gfx::Point mouse_position = contents_area_view_rect.top_right();
@@ -659,6 +671,15 @@ IN_PROC_BROWSER_TEST_P(SidebarBrowserWithWebPanelTest, WebPanelTest) {
         base::test::RunUntil([&]() { return !GetSidePanel()->GetVisible(); }));
     return;
   }
+
+  // Growser-184: the same inherited default as ShowSidebarOnMouseOverTest, one
+  // view over. web_panel_on_left_ follows kSidePanelHorizontalAlignment
+  // (BraveBrowserView::UpdateSideBarHorizontalAlignment), so with our left
+  // default the panel starts on the left and the checks below - which are
+  // about the panel on the RIGHT, before the test moves it left itself - were
+  // asserting against growser#78 rather than against the layout.
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      prefs::kSidePanelHorizontalAlignment, true);
 
   EXPECT_TRUE(contents_container_view_for_web_panel);
   EXPECT_FALSE(contents_container_view_for_web_panel->GetVisible());
