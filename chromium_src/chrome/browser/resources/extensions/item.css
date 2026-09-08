@@ -18,6 +18,30 @@
   height: calc(208px + 32px);
 }
 
+/* Growser-216: when the row runs out of room, the BUTTONS give way - not the
+   toggle, which was being pushed clean outside the card.
+   #button-strip is a flex row: a div.flex holding the buttons, then the toggle.
+   A flex item's default min-width is auto, so that div could not shrink below
+   its content, and everything after it was pushed past the card's fixed 400px
+   (--extensions-card-width). Measured on the Russian UI with an extension that
+   has a warning - "Сведения", "Удалить", "Предупреждения" - the toggle sat 28px
+   outside the card. The English labels fit with room to spare, which is why
+   this shows in some languages only and looked machine-specific when reported.
+   The shrink comes out of the buttons' own padding first, so the labels still
+   read in full at our widths. */
+#button-strip > .flex {
+  min-width: 0;
+}
+
+#button-strip cr-button {
+  min-width: 0;
+  overflow: hidden;
+}
+
+#enableToggle {
+  flex-shrink: 0;
+}
+
 .brave-hosted {
   padding-inline: var(--leo-spacing-s);
   padding-block: var(--leo-spacing-xs);
