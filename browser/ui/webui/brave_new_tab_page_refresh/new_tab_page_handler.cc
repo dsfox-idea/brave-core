@@ -32,6 +32,7 @@
 #include "brave/components/brave_search/common/brave_search_utils.h"
 #include "brave/components/brave_search_conversion/pref_names.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
+#include "brave/components/icon_pack/icon_pack_component_installer.h"
 #include "brave/components/constants/brave_switches.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/url_constants.h"
@@ -613,8 +614,12 @@ void NewTabPageHandler::GetIconPack(GetIconPackCallback callback) {
     path = command_line.GetSwitchValuePath(switches::kIconPackFile);
   }
   if (path.empty()) {
-    // Growser-190: the component's copy goes here in the next slice. Until
-    // then only the switch names a pack, and no pack is the ordinary case.
+    // The component the updater installed, when one has arrived. It usually
+    // has not on a fresh profile, and that is the ordinary case rather than a
+    // failure - the page has the pack it was built with.
+    path = icon_pack::InstalledIconPackPath();
+  }
+  if (path.empty()) {
     std::move(callback).Run(std::string());
     return;
   }

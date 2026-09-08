@@ -66,6 +66,7 @@
 #endif
 #include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/query_filter/browser/query_filter_component_installer.h"
+#include "brave/components/icon_pack/icon_pack_component_installer.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/component_updater/component_updater_utils.h"
 // Growser-174: included explicitly now. This flag used to arrive transitively
@@ -150,6 +151,11 @@ void RegisterBraveComponentsForUpdate() {
       cus, g_browser_process->local_state());
 #endif
   RegisterQueryFilterComponent(cus);
+
+  // Growser-190: the new tab board's icon pack. Registered here rather than
+  // when a board is drawn - the point of the component is that a pack newer
+  // than the built-in one is already on disk by the time somebody opens a tab.
+  icon_pack::RegisterIconPackComponent(cus);
 
 #if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION)
   // growser (#70): install the translation ENGINE, not only the language packs.

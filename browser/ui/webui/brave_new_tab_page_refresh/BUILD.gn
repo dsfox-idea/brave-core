@@ -61,6 +61,7 @@ source_set("brave_new_tab_page_refresh") {
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_rewards/core/buildflags",
+    "//brave/components/icon_pack",
     "//chrome/browser/new_tab_page",
     "//chrome/browser/ui/webui:plural_string_handler",
 

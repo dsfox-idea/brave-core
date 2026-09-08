@@ -1,0 +1,22 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+# growser#190: the new tab board's icon pack, delivered as a component so a
+# wrong mark or a new service does not wait for a browser release.
+
+static_library("icon_pack") {
+  sources = [
+    "icon_pack_component_installer.cc",
+    "icon_pack_component_installer.h",
+  ]
+
+  public_deps = [
+    "//base",
+    "//components/component_updater",
+    "//components/update_client",
+  ]
+
+  deps = [ "//brave/components/brave_component_updater/browser:public" ]
+}
