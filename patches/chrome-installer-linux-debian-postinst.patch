@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/debian/postinst b/chrome/installer/linux/debian/postinst
-index 43f2b1138d3fa598abd6a8c3244e66364b52f819..f61b7dd3134f37a00d0ee0e479a9c972186457b2 100755
+index 43f2b1138d3fa598abd6a8c3244e66364b52f819..fa1bea4667781b891009c6eb24f3094cee35ca68 100755
 --- a/chrome/installer/linux/debian/postinst
 +++ b/chrome/installer/linux/debian/postinst
 @@ -45,6 +45,7 @@ case $CHANNEL in
@@ -10,12 +10,16 @@ index 43f2b1138d3fa598abd6a8c3244e66364b52f819..f61b7dd3134f37a00d0ee0e479a9c972
  
  update-alternatives --install /usr/bin/x-www-browser x-www-browser \
    /usr/bin/@@usr_bin_symlink_name $PRIORITY
-@@ -60,6 +61,8 @@ update-alternatives --install /usr/bin/@@package_orig @@package_orig \
+@@ -60,6 +61,12 @@ update-alternatives --install /usr/bin/@@package_orig @@package_orig \
  
  remove_udev_symlinks
  
-+# Don't add the Chrome repo (brave/brave-browser#54299)
-+exit 0
++# Growser-221: upstream ends the script here. The exit was Brave's, and right
++# for them - everything below adds GOOGLE's repository to the machine, which a
++# Brave build has no business doing. #207 changed what the repository IS: our
++# address, our key, our Signed-By. The switch above it stayed off, so the work
++# landed behind a permanent early exit and no .deb has ever configured
++# anything. A person who installed one was never offered an update again.
  ## MAIN ##
  install_key
  install_deb822_sources
