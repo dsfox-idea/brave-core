@@ -45,10 +45,12 @@
 # usr_bin_symlink_name is derived from it (installer.py), so it is also
 # /usr/bin/growser. PROGNAME only ever appears inside /opt/growser, where
 # nobody reads it. The prefix still earns its keep the second way it always
-# did: xdg-icon-resource refuses an icon name with no vendor prefix and fails
-# the postinst, and the icon name follows PACKAGE - so "growser" alone would
-# have been refused if the vendor were not already in INSTALLDIR's path. That
-# is checked by installing, not by reading.
+# The prefix used to earn its keep a second way, and that debt has moved with
+# it: postinst.include registers the icon under PACKAGE, and xdg-icon-resource
+# refuses a name with no vendor prefix in the apps context - a prefix being
+# letters ending in a dash, which growser is not. So the postinst passes
+# --novendor now, which is the documented way to say the name is ours and no
+# conflict is possible. Verified by installing rather than by reading.
 PACKAGE="growser"
 
 # Filename of the main executable (for generating launcher scripts, etc.).
