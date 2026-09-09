@@ -1,10 +1,17 @@
 diff --git a/chrome/installer/linux/debian/postrm b/chrome/installer/linux/debian/postrm
-index 3e1cadc8296ca2971881ae26c1a9b7b17673d666..6b5a459f6d33bc68434c028681a2dfd4246dd11c 100755
+index 3e1cadc8296ca2971881ae26c1a9b7b17673d666..091149dfb8177543add5fd6d52ca3d27d14e700c 100755
 --- a/chrome/installer/linux/debian/postrm
 +++ b/chrome/installer/linux/debian/postrm
-@@ -32,5 +32,4 @@ if [ -s "$DEFAULTS_FILE" ]; then
+@@ -31,6 +31,11 @@ if [ -s "$DEFAULTS_FILE" ]; then
+   # In that case, future installs won't recreate it and won't get auto-updated.
    rm "$DEFAULTS_FILE" || exit 1
  fi
- # Remove any Google repository added by the package.
--clean_sources_lists
+-# Remove any Google repository added by the package.
++# Remove the repository the package added.
++#
++# Growser-221: this call is the mirror of the postinst's exit, and Brave
++# removed it for the same reason - a package that adds no repository has none
++# to clean up. Ours does again, so purge has to take it away, or the machine
++# keeps fetching an index for a browser it no longer has.
+ clean_sources_lists
  uninstall_key
