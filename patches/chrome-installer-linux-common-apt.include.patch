@@ -1,8 +1,19 @@
 diff --git a/chrome/installer/linux/common/apt.include b/chrome/installer/linux/common/apt.include
-index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..8c211a6684307902c24a7af9f292867d82f07716 100644
+index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..7b62577a778aa90f3e490e35542fc2d23c47f2b3 100644
 --- a/chrome/installer/linux/common/apt.include
 +++ b/chrome/installer/linux/common/apt.include
-@@ -69,7 +69,7 @@ gen_sources_content() {
+@@ -4,6 +4,10 @@
+ APT_CONFIG="$(command -v apt-config 2>/dev/null)"
+ 
+ GPG_FILE="/usr/share/keyrings/@@PACKAGE.gpg"
++# Growser-224. No extension is deliberate: apt ignores a file in
++# preferences.d whose name has any extension but .pref, and says so only
++# as a notice nobody reads.
++PREFERENCES_FILE="/etc/apt/preferences.d/@@PACKAGE"
+ 
+ # Set variables for the locations of the apt trusted keyrings.
+ find_apt_trusted() {
+@@ -69,7 +73,7 @@ gen_sources_content() {
  # This file will not be recreated if removed.
  X-Repolib-Name: @@MENUNAME
  Types: deb
@@ -11,3 +22,37 @@ index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..8c211a6684307902c24a7af9f292867d
  Suites: stable
  Components: main
  Architectures: @@architecture
+@@ -86,6 +90,23 @@ create_sources_lists() {
+   chmod 644 "$SOURCES_FILE.$$.tmp"
+   mv "$SOURCES_FILE.$$.tmp" "$SOURCES_FILE"
+ 
++  # Growser-224: and pin the name to this repository. @@PACKAGE is ours and no
++  # distribution ships one today - checked in Debian, Ubuntu, Fedora and the
++  # AUR - but if one ever appears, a machine carrying both would have two
++  # candidates and apt would pick by version: somebody else's browser
++  # installed under our name, silently. 990 puts this repository above an
++  # ordinary archive's 500 while still refusing a downgrade, which a priority
++  # of 1000 or more would allow.
++  cat >"$PREFERENCES_FILE.$$.tmp" <<EOF
++### THIS FILE IS AUTOMATICALLY CONFIGURED ###
++# Changes to this file will not be preserved.
++Package: @@PACKAGE
++Pin: origin "growser.org"
++Pin-Priority: 990
++EOF
++  chmod 644 "$PREFERENCES_FILE.$$.tmp"
++  mv "$PREFERENCES_FILE.$$.tmp" "$PREFERENCES_FILE"
++
+   if [ -r "$DEFAULTS_FILE" ]; then
+     if grep -q "^[[:space:]]*repo_add_once=" "$DEFAULTS_FILE"; then
+       sed -i -e \
+@@ -101,6 +122,9 @@ create_sources_lists() {
+ clean_sources_lists() {
+   find_apt_sources
+   rm -f "$SOURCES_FILE"
++  # Growser-224: the pin goes with the sources it pins. Left behind it would
++  # be a rule about a repository the machine no longer has.
++  rm -f "$PREFERENCES_FILE"
+ }
+ 
+ install_deb822_sources() {
