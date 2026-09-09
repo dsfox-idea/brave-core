@@ -1,8 +1,26 @@
 diff --git a/chrome/installer/linux/rpm/chrome.spec.template b/chrome/installer/linux/rpm/chrome.spec.template
-index c76a259c77fa4f22432c986ab549ffb1f83cf32d..8b63156c3c9e9f0ffdb3bdad7229e6145e5e341b 100644
+index c76a259c77fa4f22432c986ab549ffb1f83cf32d..86a751c9df5a323cfa0eb530390efb1b15fce030 100644
 --- a/chrome/installer/linux/rpm/chrome.spec.template
 +++ b/chrome/installer/linux/rpm/chrome.spec.template
-@@ -58,11 +58,14 @@ if [ -z "@@INSTALLDIR" -o ! -d "@@staging_dir/@@INSTALLDIR" ] ; then
+@@ -16,6 +16,17 @@ Url             : @@PRODUCTURL
+ Packager        : @@MAINTNAME <@@MAINTMAIL>
+ 
+ Provides        : @@rpm_provides = %{version}
++# Growser-222: the package was growser-browser. Without this an existing
++# install stays, owning the same /opt/growser as the new one - rpm then
++# refuses with a file conflict for every file in it.
++#
++# <= rather than <, and that was measured: with < the rule reads
++# "growser-browser < 26.909.0", which does not match an installed
++# growser-browser 26.909.0, so a rebuild at the same version cannot be
++# installed over its predecessor at all. Releases always differ in version and
++# would have hidden this; the deb side has the same guard unversioned.
++Provides        : growser-browser = %{version}
++Obsoletes       : growser-browser <= %{version}
+ Requires        : @@rpm_depends
+ Requires(post)  : %{_sbindir}/update-alternatives
+ Requires(preun) : %{_sbindir}/update-alternatives
+@@ -58,11 +69,14 @@ if [ -z "@@INSTALLDIR" -o ! -d "@@staging_dir/@@INSTALLDIR" ] ; then
  fi
  
  install -m 755 -d \
@@ -19,7 +37,7 @@ index c76a259c77fa4f22432c986ab549ffb1f83cf32d..8b63156c3c9e9f0ffdb3bdad7229e614
  cp -a "@@staging_dir/opt/" "$RPM_BUILD_ROOT/"
  cp -a "@@staging_dir/usr/" "$RPM_BUILD_ROOT/"
  
-@@ -85,7 +88,6 @@ rm -rf "$RPM_BUILD_ROOT"
+@@ -85,7 +99,6 @@ rm -rf "$RPM_BUILD_ROOT"
  
  # Be explicit about the files we scatter throughout the system we don't
  # accidentally "own" stuff that's not ours (crbug.com/40194046).
@@ -27,7 +45,7 @@ index c76a259c77fa4f22432c986ab549ffb1f83cf32d..8b63156c3c9e9f0ffdb3bdad7229e614
  %ghost %attr(755,root,root) /usr/bin/@@package_orig
  /usr/bin/@@usr_bin_symlink_name
  /usr/share/appdata/@@PACKAGE.appdata.xml
-@@ -129,6 +131,18 @@ if [ ! -e "$DEFAULTS_FILE" ]; then
+@@ -129,6 +142,18 @@ if [ ! -e "$DEFAULTS_FILE" ]; then
    echo 'repo_add_once="true"' > "$DEFAULTS_FILE"
  fi
  

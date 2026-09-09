@@ -1,0 +1,19 @@
+diff --git a/chrome/installer/linux/common/postinst.include b/chrome/installer/linux/common/postinst.include
+index d237a1affe90b120b76e28539f526f0e2645af09..d66e5c4bd0445297914b5c631ea999bd07743331 100644
+--- a/chrome/installer/linux/common/postinst.include
++++ b/chrome/installer/linux/common/postinst.include
+@@ -4,9 +4,13 @@ if [ ! -x "$XDG_ICON_RESOURCE" ]; then
+   echo "Error: Could not find xdg-icon-resource" >&2
+   exit 1
+ fi
++# Growser-222: --novendor. The icon name is PACKAGE, which is now growser
++# with no vendor prefix, and xdg-icon-resource refuses such a name in the
++# apps context - taking the postinst down with it, unconfigured, which is
++# the same failure a missing prefix caused before the rename.
+ for icon in @@logo_resources_png; do
+   size="$(echo ${icon} | sed 's/[^0-9]//g')"
+-  "$XDG_ICON_RESOURCE" install --size "${size}" "@@INSTALLDIR/${icon}" \
++  "$XDG_ICON_RESOURCE" install --novendor --size "${size}" "@@INSTALLDIR/${icon}" \
+     "@@PACKAGE"
+ done
+ 
