@@ -62,7 +62,13 @@ std::string GetDesktopName(base::Environment* env) {
   // that merely is not the default, and so went unnoticed.
   if (auto growser_snap = env->GetVar("GROWSER_SNAP");
       growser_snap && *growser_snap == "1") {
-    return "growser.desktop";
+    // snapd names the file it publishes <instance>_<app>.desktop, even when
+    // the two are the same word. Measured on an installed snap: the only file
+    // in /var/lib/snapd/desktop/applications is growser_growser.desktop, and
+    // growser.desktop is not there. Brave's value here was "brave.desktop",
+    // which by the same rule is a file their snap does not install either -
+    // this is not a translation of it.
+    return "growser_growser.desktop";
   }
 #if defined(OFFICIAL_BUILD)
   version_info::Channel product_channel(chrome::GetChannel());
