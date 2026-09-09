@@ -85,12 +85,13 @@ if (is_brave_origin_branded) {
   # - GN names the .deb file from this while the installer names its contents
   # from that, and nothing checks that the two agree.
   #
-  # It must also DIFFER from the executable name, which is brave_product_name:
-  # installer.py stages the browser as PROGNAME and the wrapper script as
-  # PACKAGE into one directory, so equal names mean the 1 KB wrapper overwrites
-  # the browser and the package ships with no executable in it. Hence the
-  # suffix, which is what google-chrome/chrome and brave-browser/brave are for.
-  brave_linux_package_name = "$brave_product_name-browser"
+  # It must DIFFER from PROGNAME in the .info file, which is the browser binary
+  # staged beside the wrapper: installer.py puts both in one directory, so
+  # equal names mean the 1 KB wrapper overwrites the browser and the package
+  # ships with no executable in it. Growser-222 gives the prefix to PROGNAME
+  # instead - dsfox-growser, a name nobody types - so that this one, the name
+  # apt and dnf take and the /usr/bin command, can be the product's own.
+  brave_linux_package_name = "$brave_product_name"
 }
 
 if (is_win) {

@@ -31,21 +31,31 @@
 # stages the browser as PROGNAME and the wrapper script as PACKAGE, into the
 # same directory:
 #
-#     <progname>.stripped        -> PROGNAME   the browser, ~200 MB
+#     <progname>.stripped        -> PROGNAME   the browser, ~300 MB
 #     installer/common/wrapper   -> PACKAGE    the launcher, 1 KB
 #
 # With both set to "growser" the wrapper overwrote the browser and the package
 # shipped a launcher that exec-ed itself: no executable in it at all, 42 MB
-# where it should have been nearly 100, and running it gave "shell level (1000)
+# where it should have been nearly 120, and running it gave "shell level (1000)
 # too high". Chrome uses google-chrome/chrome and Brave brave-browser/brave for
 # exactly this reason.
 #
-# The dash earns its keep a second time: xdg-icon-resource refuses an icon name
-# with no vendor prefix, which is what failed the postinst.
-PACKAGE="growser-browser"
+# Which of the two carries the prefix is free, and Growser-222 gives it to
+# PROGNAME. PACKAGE is the name a person types - apt and dnf take it, and
+# usr_bin_symlink_name is derived from it (installer.py), so it is also
+# /usr/bin/growser. PROGNAME only ever appears inside /opt/growser, where
+# nobody reads it. The prefix still earns its keep the second way it always
+# did: xdg-icon-resource refuses an icon name with no vendor prefix and fails
+# the postinst, and the icon name follows PACKAGE - so "growser" alone would
+# have been refused if the vendor were not already in INSTALLDIR's path. That
+# is checked by installing, not by reading.
+PACKAGE="growser"
 
-# Filename of the main executable (for generating launcher scripts, etc.)
-PROGNAME=growser
+# Filename of the main executable (for generating launcher scripts, etc.).
+# The build writes <PROGNAME>.stripped and <PROGNAME>_sandbox.stripped, so
+# chrome/installer/linux/BUILD.gn names those two outputs from this and the
+# two must be changed together.
+PROGNAME=dsfox-growser
 
 # Base directory for package installation.
 INSTALLDIR=/opt/growser
