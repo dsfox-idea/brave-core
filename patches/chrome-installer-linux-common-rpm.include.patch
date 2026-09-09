@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/common/rpm.include b/chrome/installer/linux/common/rpm.include
-index 9965c8227052c263eb4fcf02cdd3764e6338ad46..75dcf0c60f826a460e5e2ec3ee6aa177db0ef51b 100644
+index 9965c8227052c263eb4fcf02cdd3764e6338ad46..90dc86d5d80c1ab84895ec2d68f05f07699cce82 100644
 --- a/chrome/installer/linux/common/rpm.include
 +++ b/chrome/installer/linux/common/rpm.include
 @@ -4,7 +4,11 @@
@@ -15,7 +15,29 @@ index 9965c8227052c263eb4fcf02cdd3764e6338ad46..75dcf0c60f826a460e5e2ec3ee6aa177
    # Check to see if all keys already exists.
    # Make sure all the most recent signing subkeys are installed.
    NEED_KEYS=0
-@@ -119,7 +123,7 @@ name=@@PACKAGE
+@@ -106,7 +110,20 @@ YUM_REPO_FILE="/etc/yum.repos.d/@@PACKAGE.repo"
+ ZYPPER_REPO_FILE="/etc/zypp/repos.d/@@PACKAGE.repo"
+ 
+ install_yum() {
+-  install_rpm_key
++  # Growser-218: install_rpm_key is NOT called, and the function's own comment
++  # says why it cannot work: "if this is run during the package install, it
++  # will fail because rpm can't recursively run rpm, but it should work when
++  # run later as part of the installed cron job". We ship no cron job (#207),
++  # so that later run never happens and the import can only ever fail - which
++  # it did loudly, printing
++  #
++  #     error: /tmp/google.sig.XXXXXX: key 1 import failed.
++  #
++  # on every successful install. The key a person actually needs arrives
++  # through gpgkey= in the .repo file written below, and dnf fetches and uses
++  # it: that is what verified the package on Fedora 43. An error printed by a
++  # transaction that succeeded is worse than no message, because it teaches
++  # people to read past errors.
+ 
+   if [ ! "$REPOCONFIG" ]; then
+     return 0
+@@ -119,7 +136,7 @@ name=@@PACKAGE
  baseurl=$REPOCONFIG/$DEFAULT_ARCH
  enabled=1
  gpgcheck=1
@@ -24,7 +46,7 @@ index 9965c8227052c263eb4fcf02cdd3764e6338ad46..75dcf0c60f826a460e5e2ec3ee6aa177
  REPOCONTENT
    fi
  }
-@@ -140,7 +144,7 @@ enabled=1
+@@ -140,7 +157,7 @@ enabled=1
  autorefresh=1
  baseurl=$REPOCONFIG/$DEFAULT_ARCH
  gpgcheck=1
