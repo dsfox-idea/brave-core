@@ -55,9 +55,20 @@ std::string GetChannelSuffixForExtraFlagsEnvVarName() {
 
 #if BUILDFLAG(IS_LINUX)
 std::string GetDesktopName(base::Environment* env) {
-  if (auto brave_snap = env->GetVar("BRAVE_SNAP");
-      brave_snap && *brave_snap == "1") {
-    return "brave.desktop";
+  // Growser-225: the name here is handed to `xdg-settings set
+  // default-web-browser`, so it has to be a file that exists on the machine.
+  // It said brave.desktop under a snap and brave-browser.desktop otherwise,
+  // and neither is installed by anything we ship - which reads as a browser
+  // that merely is not the default, and so went unnoticed.
+  if (auto growser_snap = env->GetVar("GROWSER_SNAP");
+      growser_snap && *growser_snap == "1") {
+    // snapd names the file it publishes <instance>_<app>.desktop, even when
+    // the two are the same word. Measured on an installed snap: the only file
+    // in /var/lib/snapd/desktop/applications is growser_growser.desktop, and
+    // growser.desktop is not there. Brave's value here was "brave.desktop",
+    // which by the same rule is a file their snap does not install either -
+    // this is not a translation of it.
+    return "growser_growser.desktop";
   }
 #if defined(OFFICIAL_BUILD)
   version_info::Channel product_channel(chrome::GetChannel());
@@ -75,13 +86,13 @@ std::string GetDesktopName(base::Environment* env) {
 #else   // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
   switch (product_channel) {
     case version_info::Channel::DEV:
-      return "brave-browser-dev.desktop";
+      return "growser-dev.desktop";
     case version_info::Channel::BETA:
-      return "brave-browser-beta.desktop";
+      return "growser-beta.desktop";
     case version_info::Channel::CANARY:
-      return "brave-browser-nightly.desktop";
+      return "growser-nightly.desktop";
     default:
-      return "brave-browser.desktop";
+      return "growser.desktop";
   }
 #endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 #else   // defined(OFFICIAL_BUILD)
@@ -92,7 +103,7 @@ std::string GetDesktopName(base::Environment* env) {
       !name.empty()) {
     return name;
   }
-  return "brave-browser.desktop";
+  return "growser.desktop";
 #endif
 }
 #endif  // BUILDFLAG(IS_LINUX)

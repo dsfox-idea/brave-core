@@ -1,32 +1,42 @@
-name: brave
-version: 1.97.4
+# Growser as a snap (growser#226).
+#
+# Adapted from Brave's own snapcraft.yaml, which this file replaces: they
+# publish a snap of this same Chromium fork, verified, in STRICT confinement on
+# core22, and so do Opera and Vivaldi. Every browser snap in the store is
+# strict, which is why none of this needs the manual approval classic
+# confinement would.
+#
+# The version and the source URL are rewritten by scripts/linux/make-snap.sh
+# for each release. They are literal here on purpose: Brave's file builds the
+# URL out of $SNAPCRAFT_PROJECT_VERSION next to another variable, and where one
+# variable name ends and the next begins is not something to find out from a
+# broken download.
+name: growser
+version: 26.909.2
 grade: stable
 architectures:
   - build-on: amd64
-  - build-on: arm64
-summary: Browse faster and safer with Brave.
+summary: A Chromium browser for safe and comfy growsing.
 description: |
- The new Brave browser automatically blocks ads and trackers, making it
- faster and safer than your current browser. Start supporting publishers
- today with our new Brave Payments system.
+ Growser blocks advertising and tracking by default, reports nothing about
+ what you browse to anyone, and carries no telemetry: the metrics and
+ web-discovery services are compiled out rather than switched off.
 confinement: strict
 compression: lzo
 base: core22
 apps:
-  brave:
-    command: opt/brave.com/brave/brave-browser
-    desktop: usr/share/applications/brave.desktop
+  growser:
+    command: opt/growser/growser
+    desktop: usr/share/applications/growser.desktop
     extensions:
       - gnome
     environment:
       GTK_USE_PORTAL: 1
-      BRAVE_SNAP: 1
-      BRAVE_DESKTOP: brave.desktop
-      BRAVE_CONFIG_HOME: $SNAP_USER_COMMON
-      MAN_TEST_DISABLE_SYSTEM_CONFIG: 1
-      MANPATH: $SNAP/usr/share/man
-      GROFF_FONT_PATH: $SNAP/usr/share/groff/current/font
-      GROFF_TMAC_PATH: $SNAP/usr/share/groff/current/tmac
+      # Read by GetDesktopName() (growser#225), which hands the answer to
+      # xdg-settings. Brave's file also sets BRAVE_DESKTOP and
+      # BRAVE_CONFIG_HOME; neither is read anywhere in this tree or in
+      # Chromium's - checked - so they are not carried over.
+      GROWSER_SNAP: 1
     plugs:
       - audio-playback
       - audio-record
@@ -59,18 +69,23 @@ plugs:
 slots:
   mpris:
     interface: mpris
-    name: brave
+    name: growser
 parts:
-  brave:
+  growser:
     plugin: dump
-    source: https://github.com/brave/brave-browser/releases/download/v$SNAPCRAFT_PROJECT_VERSION/brave-browser_$SNAPCRAFT_PROJECT_VERSION_$SNAPCRAFT_TARGET_ARCH.deb
+    source: https://growser.org/apt/pool/main/g/growser/growser_26.909.2_amd64.deb
     override-pull: |
       set -eu
       craftctl default
-      chmod 4555 ./opt/brave.com/brave/chrome-sandbox
-      rm -rf etc/cron.daily/ usr/bin/brave-browser usr/bin/brave-browser-stable
-      sed -i 's|Icon=brave-browser|Icon=/opt/brave.com/brave/product_logo_128\.png|g' usr/share/applications/brave-browser.desktop
-      mv usr/share/applications/brave-browser.desktop usr/share/applications/brave.desktop
+      # The sandbox binary must keep its setuid bit or the browser refuses to
+      # start; the dump plugin does not preserve it.
+      chmod 4555 ./opt/growser/chrome-sandbox
+      # The launchers on PATH belong to the deb, not to a snap: snapd provides
+      # its own. Brave also removes etc/cron.daily here, which is a no-op for
+      # us - growser#207 took the cron out of the package.
+      rm -rf usr/bin/growser usr/bin/growser-stable
+      # The icon has to be a path inside the snap rather than a theme name.
+      sed -i 's|Icon=growser|Icon=/opt/growser/product_logo_128\.png|g' usr/share/applications/growser.desktop
     prime:
       - -etc/gss
       - -etc/init.d
@@ -89,6 +104,7 @@ parts:
       - -usr/share/GConf
       - -usr/share/icons
       - -usr/share/lintian
+      - -usr/share/man
       - -usr/share/pam-configs
       - -usr/share/pkgconfig
       - -usr/share/polkit-1
@@ -99,41 +115,19 @@ parts:
       - -usr/share/upstart
       - -usr/share/zsh
       - -var
-    organize:
-      usr/share/man/man1/brave-browser.1.gz: usr/share/man/man1/brave.1.gz
 
-  # Create a symlink xdg-email -> xdg-open, as the latter is perfectly able to
-  # handle mailto: URLs (see https://launchpad.net/bugs/1849774).
-  # xdg-open is a wrapper provided by the core snap.
+  # A symlink xdg-email -> xdg-open, because xdg-open handles mailto: perfectly
+  # well and the snap has no xdg-email (https://launchpad.net/bugs/1849774).
+  # Brave's file also ships man-db and groff so that `man growser` works inside
+  # the snap; that is a nicety with four stage-packages behind it and no
+  # bearing on the browser, so it is not carried over - usr/share/man is
+  # pruned above instead.
   xdg-email:
     plugin: nil
-    override-pull: "" 
+    override-pull: ""
     override-prime: |
       set -eux
       mkdir -p usr/bin
       cp /snap/core22/current/usr/bin/xdg-open usr/bin
       cd usr/bin
       ln -s xdg-open xdg-email
-
-  manpage:
-    plugin: nil
-    stage-packages:
-      - groff-base
-      - libgdbm6
-      - libpipeline1
-      - man-db
-    prime:
-      - -etc
-      - -usr/lib/tmpfiles.d
-      - -usr/lib/mime
-      - -usr/lib/groff
-      - -usr/share/bug
-      - -usr/share/calendar
-      - -usr/share/doc
-      - -usr/share/doc-base
-      - -usr/share/lintian
-      - -usr/share/man
-      - -usr/share/man-db
-      - -var
-    organize:
-      usr/lib/man-db: usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
