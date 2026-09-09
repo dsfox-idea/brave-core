@@ -12,7 +12,12 @@
 # variable name ends and the next begins is not something to find out from a
 # broken download.
 name: growser
-version: 26.909.2
+version: 26.909.3
+title: Growser
+license: MPL-2.0
+website: https://growser.org
+contact: https://growser.org
+source-code: https://github.com/dsfox-idea/brave-core
 grade: stable
 architectures:
   - build-on: amd64
@@ -67,13 +72,19 @@ plugs:
     interface: browser-support
     allow-sandbox: true
 slots:
+  # No "name:" attribute on purpose. The base declaration denies connection
+  # for any mpris slot that carries one, so it costs a human reviewer; with no
+  # attribute snapd allows org.mpris.MediaPlayer2.@{SNAP_INSTANCE_NAME}{,.*},
+  # which is exactly the name this snap should be binding (interfaces/builtin/
+  # mpris.go, getName). The browser still asks for ...MediaPlayer2.brave today
+  # (growser#227) - that is a defect in the binary, and a "name: growser"
+  # attribute would not have made it work either.
   mpris:
     interface: mpris
-    name: growser
 parts:
   growser:
     plugin: dump
-    source: https://growser.org/apt/pool/main/g/growser/growser_26.909.2_amd64.deb
+    source: https://growser.org/apt/pool/main/g/growser/growser_26.909.3_amd64.deb
     override-pull: |
       set -eu
       craftctl default
