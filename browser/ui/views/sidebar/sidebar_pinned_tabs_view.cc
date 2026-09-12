@@ -26,6 +26,7 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
+#include "chrome/browser/ui/tabs/tab_data.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/tabs/tab_strip_user_gesture_details.h"
 #include "chrome/browser/ui/view_ids.h"
@@ -351,9 +352,27 @@ void SidebarPinnedTabsView::UpdateEntry(size_t entry_index) {
   // rather than worked out again - and the icon had escaped it. The driver
   // stays as the fallback: a tab the strip has no view for still needs
   // something to draw.
+  // Growser-231: ask the MODEL for that data, not the strip's copy of it.
+  // The strip's Tab view keeps its own `data_`, refreshed from a per-tab
+  // tabs::TabDataObserver (tab.cc:436); this view hears about changes through
+  // the TabStripModel's OnTabChangedAt instead. Two independent notifications
+  // with no order between them, so reading `tab->data()` here read whatever
+  // the strip happened to hold at that instant - the previous icon, when we
+  // were told first, with nothing coming back to correct it. That is the
+  // flake in EntryDrawsTheTabsIcon, and on the same roll of the dice it is a
+  // stale icon for a person.
+  //
+  // TabData::FromTabInterface is where the strip's copy comes from as well,
+  // and our new-tab-page override lives inside it (ApplyBraveTabDataOverrides,
+  // chromium_src/chrome/browser/ui/tabs/tab_data.cc), so this keeps what
+  // Growser-186 fixed while dropping the dependency on someone else's timing.
   gfx::ImageSkia icon;
-  if (tab && !tab->data().favicon.IsEmpty()) {
-    icon = tab->data().favicon.Rasterize(GetColorProvider());
+  ui::ImageModel from_model;
+  if (auto* tab_interface = model->GetTabAtIndex(index)) {
+    from_model = tabs::TabData::FromTabInterface(tab_interface).favicon;
+  }
+  if (!from_model.IsEmpty()) {
+    icon = from_model.Rasterize(GetColorProvider());
   } else if (auto* favicon_driver =
                  favicon::ContentFaviconDriver::FromWebContents(contents)) {
     const gfx::Image favicon = favicon_driver->GetFavicon();
