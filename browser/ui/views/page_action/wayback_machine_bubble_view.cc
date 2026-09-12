@@ -6,7 +6,6 @@
 #include "brave/browser/ui/views/page_action/wayback_machine_bubble_view.h"
 
 #include <memory>
-#include <optional>
 #include <utility>
 
 #include "base/check.h"
@@ -30,7 +29,6 @@
 #include "ui/views/controls/image_view.h"
 #include "ui/views/controls/label.h"
 #include "ui/views/layout/box_layout.h"
-#include "ui/views/view_utils.h"
 #include "ui/views/widget/widget.h"
 
 namespace {
@@ -55,34 +53,11 @@ gfx::FontList GetFont(int font_size, gfx::Font::Weight weight) {
 
 }  // namespace
 
-// static
-void WaybackMachineBubbleView::Show(content::WebContents* web_contents,
-                                    views::View* anchor,
-                                    actions::ActionItem* item) {
-  auto* tab_helper = GetTabHelper(web_contents);
-  if (!tab_helper) {
-    return;
-  }
-
-  // Don't need to launch again if existed.
-  if (tab_helper->active_window().has_value()) {
-    return;
-  }
-
-  views::Widget* const widget = views::BubbleDialogDelegateView::CreateBubble(
-      std::make_unique<WaybackMachineBubbleView>(web_contents->GetWeakPtr(),
-                                                 anchor, item));
-  widget->Show();
-  tab_helper->set_active_window(widget->GetNativeWindow());
-}
-
 WaybackMachineBubbleView::WaybackMachineBubbleView(
-    base::WeakPtr<content::WebContents> web_contents,
-    views::View* anchor,
+    views::BubbleAnchor anchor,
+    content::WebContents* web_contents,
     actions::ActionItem* item)
-    : BubbleDialogDelegateView(anchor, views::BubbleBorder::TOP_RIGHT),
-      web_contents_(web_contents),
-      item_(item) {
+    : LocationBarBubbleDelegateView(anchor, web_contents), item_(item) {
   if (item_) {
     item_->SetIsShowingBubble(true);
   }
@@ -97,7 +72,7 @@ WaybackMachineBubbleView::WaybackMachineBubbleView(
       /*inside_border_insets*/ gfx::Insets(),
       /*between_child_spacing*/ kPadding));
 
-  auto* tab_helper = GetTabHelper(web_contents_.get());
+  auto* tab_helper = GetTabHelper(web_contents);
   CHECK(tab_helper);
   const bool need_checking =
       tab_helper->wayback_state() == WaybackState::kNeedToCheck;
@@ -154,24 +129,21 @@ WaybackMachineBubbleView::WaybackMachineBubbleView(
 }
 
 WaybackMachineBubbleView::~WaybackMachineBubbleView() {
-  if (auto* tab_helper = GetTabHelper(web_contents_.get())) {
-    tab_helper->set_active_window(std::nullopt);
-  }
   if (item_) {
     item_->SetIsShowingBubble(false);
   }
 }
 
 void WaybackMachineBubbleView::OnAccepted() {
-  if (auto* tab_helper = GetTabHelper(web_contents_.get())) {
+  if (auto* tab_helper = GetTabHelper(web_contents())) {
     tab_helper->FetchWaybackURL();
   }
 }
 
 void WaybackMachineBubbleView::OnDontAskAgain() {
-  if (web_contents_) {
+  if (web_contents()) {
     auto* profile =
-        Profile::FromBrowserContext(web_contents_->GetBrowserContext());
+        Profile::FromBrowserContext(web_contents()->GetBrowserContext());
     profile->GetPrefs()->SetBoolean(kBraveWaybackMachineEnabled, false);
   }
   if (views::Widget* widget = GetWidget()) {

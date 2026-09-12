@@ -58,6 +58,10 @@ AdsClientNotifier* AdsServiceImplIOS::GetAdsClientNotifier() {
   return ads_client_notifier_.get();
 }
 
+base::WeakPtr<AdsService> AdsServiceImplIOS::GetWeakPtr() {
+  return weak_ptr_factory_.GetWeakPtr();
+}
+
 bool AdsServiceImplIOS::IsIneligibleToStart() const {
   // iOS has no eligibility gate; the service is never ineligible to start.
   return false;
@@ -65,7 +69,7 @@ bool AdsServiceImplIOS::IsIneligibleToStart() const {
 
 bool AdsServiceImplIOS::CanStartBatAdsService() const {
   // Never start if Rewards is disabled by policy, feature flag, or
-  // unsupported region, regardless of which ad unit the user has opted into.
+  // unsupported region, regardless of which ad units are enabled.
   return brave_rewards::IsSupported(&*prefs_);
 }
 
@@ -197,6 +201,20 @@ void AdsServiceImplIOS::GetDiagnostics(GetDiagnosticsCallback callback) {
   }
 
   ads_->GetDiagnostics(std::move(callback));
+}
+
+void AdsServiceImplIOS::EvaluateConditionMatcher(
+    const std::string& pref_path,
+    const std::string& condition,
+    std::optional<std::string> test_value,
+    EvaluateConditionMatcherCallback callback) {
+  if (!IsInitialized()) {
+    return std::move(callback).Run(/*current_value=*/"Unknown",
+                                   /*matches=*/"N/A");
+  }
+
+  ads_->EvaluateConditionMatcher(pref_path, condition, std::move(test_value),
+                                 std::move(callback));
 }
 
 void AdsServiceImplIOS::GetStatementOfAccounts(

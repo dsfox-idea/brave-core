@@ -285,14 +285,14 @@ bool AdsServiceImpl::IsNotificationAdsEnabled() const {
 bool AdsServiceImpl::CanStartBatAdsService() const {
   if (!brave_rewards::IsSupported(&*prefs_)) {
     // Never start if Rewards is disabled by policy, feature flag, or
-    // unsupported region, regardless of which ad unit the user has opted into.
+    // unsupported region, regardless of which ad units are enabled.
     return false;
   }
 
   if (UserHasJoinedBraveRewards()) {
     // Always start the service to update brave://ads-internals,
     // brave://rewards, and brave://rewards-internals if the user has joined
-    // Brave Rewards, even if all ad units are opted out.
+    // Brave Rewards, even if all ad units are disabled.
     return true;
   }
 
@@ -485,6 +485,10 @@ void AdsServiceImpl::InitializeBatAdsCallback(bool success) {
   CheckIdleStateAfterDelay();
 
   NotifyDidInitializeAdsService();
+}
+
+base::WeakPtr<AdsService> AdsServiceImpl::GetWeakPtr() {
+  return weak_ptr_factory_.GetWeakPtr();
 }
 
 bool AdsServiceImpl::IsIneligibleToStart() const {
@@ -1205,6 +1209,28 @@ void AdsServiceImpl::GetDiagnostics(GetDiagnosticsCallback callback) {
       mojo::WrapCallbackWithDefaultInvokeIfNotRun(
           std::move(callback),
           /*diagnostics=*/std::nullopt));
+}
+
+void AdsServiceImpl::EvaluateConditionMatcher(
+    const std::string& pref_path,
+    const std::string& condition,
+    std::optional<std::string> test_value,
+    EvaluateConditionMatcherCallback callback) {
+  if (!bat_ads_associated_remote_.is_bound()) {
+    return std::move(callback).Run(/*current_value=*/"Unknown",
+                                   /*matches=*/"N/A");
+  }
+
+  bat_ads_associated_remote_->EvaluateConditionMatcher(
+      pref_path, condition, std::move(test_value),
+      mojo::WrapCallbackWithDefaultInvokeIfNotRun(
+          base::BindOnce(
+              [](EvaluateConditionMatcherCallback callback,
+                 const std::string& current_value, const std::string& matches) {
+                std::move(callback).Run(current_value, matches);
+              },
+              std::move(callback)),
+          /*current_value=*/"Unknown", /*matches=*/"N/A"));
 }
 
 void AdsServiceImpl::GetStatementOfAccounts(

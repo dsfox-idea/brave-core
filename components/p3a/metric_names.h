@@ -108,7 +108,7 @@ inline constexpr auto kCollectedTypicalHistograms =
     {"Brave.NTP.DefaultPage", {}},
     {"Brave.NTP.OpeningScreenSwitch", MetricConfig{.ephemeral = true}},
     {"Brave.NTP.SponsoredMediaType", {}},
-    {"Brave.NTP.ShowSponsoredSites", {}},
+    {"Brave.NTP.ShowSponsoredAds", {}},
     {"Brave.Omnibox.SearchCount.NonRewards", {}},
     {"Brave.Omnibox.SearchCount.Rewards", {}},
     {"Brave.Omnibox.SearchCount.RewardsWallet", {}},
@@ -241,6 +241,7 @@ inline constexpr auto kCollectedTypicalHistograms =
     {"Brave.VerticalTabs.GroupTabs", MetricConfig{.ephemeral = true}},
     {"Brave.VerticalTabs.OpenTabs", MetricConfig{.ephemeral = true}},
     {"Brave.VerticalTabs.PinnedTabs", MetricConfig{.ephemeral = true}},
+    {"Brave.Wallet.UsageWeekly", MetricConfig{.ephemeral = true}},
     {"Brave.Web3.DappVisited", MetricConfig{.ephemeral = true}},
     {"Brave.WebTorrent.UsageWeekly", MetricConfig{.ephemeral = true}},
 });
@@ -270,6 +271,7 @@ inline constexpr auto kCollectedSlowHistograms =
     {"Brave.Today.DirectFeedsTotal.3", MetricConfig{.ephemeral = true}},
     {"Brave.Today.PublisherCount.2", MetricConfig{.ephemeral = true}},
     {"Brave.Today.UsageMonthly", MetricConfig{.ephemeral = true}},
+    {"Brave.Wallet.UsageMonthly", MetricConfig{.ephemeral = true}},
 });
 
 inline constexpr auto kCollectedExpressHistograms =
@@ -280,6 +282,10 @@ inline constexpr auto kCollectedExpressHistograms =
       .attributes = MetricAttributes{MetricAttribute::kAnswerIndex, MetricAttribute::kDateOfActivation, MetricAttribute::kVersion, MetricAttribute::kYoi, MetricAttribute::kChannel, MetricAttribute::kPlatform, MetricAttribute::kCountryCode, MetricAttribute::kWoi},
       .record_activation_date = true,
     }},
+    {"Brave.CaptchaCount.Cloudflare", MetricConfig{.ephemeral = true}},
+    {"Brave.CaptchaCount.Google", MetricConfig{.ephemeral = true}},
+    {"Brave.CaptchaCount.Total", MetricConfig{.ephemeral = true}},
+    {"Brave.CaptchaCount.hCaptcha", MetricConfig{.ephemeral = true}},
     {"Brave.Core.IsDefaultDaily.2", MetricConfig{
       .attributes = MetricAttributes{MetricAttribute::kAnswerIndex, MetricAttribute::kChannel, MetricAttribute::kDateOfInstall, MetricAttribute::kDateOfActivation, MetricAttribute::kGeneralPlatform, MetricAttribute::kSubregion, MetricAttribute::kVersion},
       .record_activation_date = true,
@@ -404,6 +410,7 @@ inline constexpr auto kCollectedExpressHistograms =
       .record_activation_date = true
     }},
     {"Brave.Uptime.BrowserOpenTime.2", MetricConfig{.ephemeral = true}},
+    {"Brave.Wallet.UsageDaily", MetricConfig{.ephemeral = true}},
     {"Brave.Welcome.InteractionStatus.2", MetricConfig{
       .attributes = MetricAttributes{MetricAttribute::kAnswerIndex, MetricAttribute::kChannel, MetricAttribute::kPlatform, MetricAttribute::kDateOfInstall, MetricAttribute::kSubregion, MetricAttribute::kVersion},
     }},

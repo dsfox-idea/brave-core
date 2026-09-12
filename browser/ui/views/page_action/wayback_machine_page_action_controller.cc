@@ -8,20 +8,26 @@
 #include <memory>
 #include <utility>
 
+#include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/views/page_action/wayback_machine_bubble_view.h"
 #include "brave/components/brave_wayback_machine/brave_wayback_machine_tab_helper.h"
 #include "brave/components/brave_wayback_machine/brave_wayback_machine_utils.h"
+#include "brave/components/brave_wayback_machine/features.h"
 #include "brave/components/vector_icons/vector_icons.h"
 #include "chrome/browser/ui/actions/chrome_action_id.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
+#include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/frame/toolbar_button_provider.h"
 #include "components/user_prefs/user_prefs.h"
 #include "content/public/browser/browser_context.h"
 #include "content/public/browser/web_contents.h"
 #include "third_party/skia/include/core/SkColor.h"
+#include "ui/actions/actions.h"
 #include "ui/base/models/image_model.h"
 #include "ui/color/color_id.h"
 #include "ui/color/color_provider.h"
@@ -29,7 +35,10 @@
 #include "ui/gfx/image/canvas_image_source.h"
 #include "ui/gfx/paint_vector_icon.h"
 #include "ui/views/bubble/bubble_anchor.h"
+#include "ui/views/bubble/bubble_dialog_delegate_view.h"
 #include "ui/views/view.h"
+#include "ui/views/view_utils.h"
+#include "ui/views/widget/widget.h"
 
 namespace page_actions {
 
@@ -68,6 +77,23 @@ class WaybackIconImageSource : public gfx::CanvasImageSource {
   const gfx::IconDescription badge_description_;
 };
 
+views::BubbleAnchor GetAnchorForBubble(tabs::TabInterface& tab) {
+  auto* bwi = tab.GetBrowserWindowInterface();
+  if (!bwi) {
+    return {};
+  }
+  auto* browser_view = BrowserView::GetBrowserViewForBrowser(bwi);
+  if (!browser_view) {
+    return {};
+  }
+  auto* toolbar_button_provider = browser_view->toolbar_button_provider();
+  if (!toolbar_button_provider) {
+    return {};
+  }
+  return toolbar_button_provider->GetPageActionBubbleAnchor(
+      kActionShowWaybackMachine);
+}
+
 }  // namespace
 
 WaybackMachinePageActionController::WaybackMachinePageActionController(
@@ -79,6 +105,10 @@ WaybackMachinePageActionController::WaybackMachinePageActionController(
               page_action_controller)) {}
 
 WaybackMachinePageActionController::~WaybackMachinePageActionController() {
+  if (bubble_tracker_.view()) {
+    bubble_tracker_.view()->GetWidget()->CloseWithReason(
+        views::Widget::ClosedReason::kUnspecified);
+  }
   DetachFromTabHelper(tab_->GetContents());
 }
 
@@ -108,31 +138,77 @@ void WaybackMachinePageActionController::Init() {
 }
 
 void WaybackMachinePageActionController::ExecuteAction(
-    ToolbarButtonProvider* toolbar_button_provider,
     actions::ActionItem* item) {
-  content::WebContents* const contents = tab_->GetContents();
-  if (!contents) {
-    return;
-  }
-  auto* tab_helper = BraveWaybackMachineTabHelper::FromWebContents(contents);
-  if (!tab_helper || tab_helper->active_window().has_value()) {
-    return;
-  }
+  ShowBubble(item, /*user_gesture=*/true);
+}
 
-  views::View* const anchor_view =
-      toolbar_button_provider
-          ->GetPageActionBubbleAnchor(kActionShowWaybackMachine)
-          .GetIfView();
-  if (!anchor_view || !anchor_view->GetWidget()) {
-    return;
-  }
-
-  WaybackMachineBubbleView::Show(contents, anchor_view, item);
+WaybackMachineBubbleView*
+WaybackMachinePageActionController::GetBubbleViewForTesting() {
+  return views::AsViewClass<WaybackMachineBubbleView>(bubble_tracker_.view());
 }
 
 void WaybackMachinePageActionController::OnWaybackStateChanged(
     WaybackState state) {
   UpdatePageAction(tab_->GetContents());
+  if (state == WaybackState::kNeedToCheck) {
+    MaybeAutoShowBubble();
+  }
+}
+
+void WaybackMachinePageActionController::ShowBubble(actions::ActionItem* item,
+                                                    bool user_gesture) {
+  content::WebContents* contents = tab_->GetContents();
+  if (!contents) {
+    return;
+  }
+
+  if (bubble_tracker_.view()) {
+    return;
+  }
+
+  const views::BubbleAnchor anchor = GetAnchorForBubble(tab_.get());
+  const views::View* anchor_view = anchor.GetIfView();
+  if (!anchor_view || !anchor_view->GetWidget()) {
+    return;
+  }
+
+  auto bubble =
+      std::make_unique<WaybackMachineBubbleView>(anchor, contents, item);
+  WaybackMachineBubbleView* bubble_view = bubble.get();
+  bubble_tracker_.SetView(bubble_view);
+
+  views::BubbleDialogDelegateView::CreateBubble(std::move(bubble));
+  bubble_view->ShowForReason(user_gesture
+                                 ? LocationBarBubbleDelegateView::USER_GESTURE
+                                 : LocationBarBubbleDelegateView::AUTOMATIC);
+}
+
+void WaybackMachinePageActionController::MaybeAutoShowBubble() {
+  if (!base::FeatureList::IsEnabled(
+          brave_wayback_machine::features::kWaybackMachineAutoShowBubble)) {
+    return;
+  }
+  if (!tab_->IsActivated()) {
+    return;
+  }
+
+  auto* bwi = tab_->GetBrowserWindowInterface();
+  if (!bwi) {
+    return;
+  }
+
+  auto* root_item = bwi->GetFeatures().GetRootActionItem();
+  if (!root_item) {
+    return;
+  }
+
+  auto* item = actions::ActionManager::Get().FindAction(
+      kActionShowWaybackMachine, root_item);
+  if (!item) {
+    return;
+  }
+
+  ShowBubble(item, /*user_gesture=*/false);
 }
 
 void WaybackMachinePageActionController::AttachToTabHelper(

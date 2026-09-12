@@ -1,0 +1,96 @@
+## AUTO-GENERATED FILE -- DO NOT EDIT.
+##
+## Upstream browser_tests tests with a flake rate >= 1.0% on
+## linux-ubsan bots over the past 30 days per Chromium LUCI Analysis.
+## Regenerate with:
+##   python3 tools/chromium_tests_analysis/update-upstream-flake-filters.py
+
+# 1.4% flake rate over 30 days per LUCI Analysis (435 passed, 0 failed, 6 flaky).
+-ActorLoadAndExtractContentToolTimeoutBrowserTest.Timeout
+
+# 1.2% flake rate over 30 days per LUCI Analysis (162 passed, 0 failed, 2 flaky).
+-All/DictationSessionUiImplBrowserTest.OverlayWaveformReceivesAudioLevelUpdates/0
+
+# 1.7% flake rate over 30 days per LUCI Analysis (410 passed, 0 failed, 7 flaky).
+-All/ExtensionFetchHeadersTest.SetFetchHeadersFromExtensionResource/0
+
+# 6.5% flake rate over 30 days per LUCI Analysis (43 passed, 3 failed, 0 flaky).
+-All/PaymentHandlerWebFlowViewCameraTest.AppIconButton_OpensPaymentHandlerPageInfo/1
+
+# 6.4% flake rate over 30 days per LUCI Analysis (44 passed, 3 failed, 0 flaky).
+-All/PaymentHandlerWebFlowViewCameraTest.OpenURLFromTab_RejectsCurrentTabAndRoutesNewTabToParent/1
+
+# 6.4% flake rate over 30 days per LUCI Analysis (44 passed, 3 failed, 0 flaky).
+-All/PaymentHandlerWebFlowViewCameraTest.PermissionPromptBubble_AnchorsToAppIconInPaymentHandler/1
+
+# 6.4% flake rate over 30 days per LUCI Analysis (44 passed, 3 failed, 0 flaky).
+-All/PaymentHandlerWebFlowViewCameraTest.PermissionPrompt_ShowsInPaymentHandlerWithoutCrash/1
+
+# 1.1% flake rate over 30 days per LUCI Analysis (441 passed, 0 failed, 5 flaky).
+-BookmarksTest.Router
+
+# 6.1% flake rate over 30 days per LUCI Analysis (413 passed, 0 failed, 27 flaky).
+-BoundSessionOAuthMultiloginStandardTest.ReuseExistingSession
+
+# 3.3% flake rate over 30 days per LUCI Analysis (263 passed, 9 failed, 0 flaky).
+-BrowserFeaturePromoControllerTest.GetFocusHelpBubbleScreenReaderHint
+
+# 1.4% flake rate over 30 days per LUCI Analysis (438 passed, 0 failed, 6 flaky).
+-ContentCapabilitiesTest.AsyncClipboardWriteContentCapability
+
+# 1.6% flake rate over 30 days per LUCI Analysis (432 passed, 0 failed, 7 flaky).
+-ControlledFrameServiceWorkerAutoPreloadTest.WebRequestOnErrorOccurredNavigation/OptimizationDisabled
+
+# 1.1% flake rate over 30 days per LUCI Analysis (436 passed, 0 failed, 5 flaky).
+-DownloadProtectionServiceBrowserTest.MultipartRarInspection
+
+# 1.8% flake rate over 30 days per LUCI Analysis (430 passed, 0 failed, 8 flaky).
+-ExtensionApiTabTest.NoPermissions
+
+# 1.4% flake rate over 30 days per LUCI Analysis (438 passed, 0 failed, 6 flaky).
+-ExtensionApiTabTest.TabAudible
+
+# 4.7% flake rate over 30 days per LUCI Analysis (422 passed, 0 failed, 21 flaky).
+-FindInPageControllerTest.FindBarResetsSearchStateOnNavigationCommit
+
+# 6.1% flake rate over 30 days per LUCI Analysis (419 passed, 0 failed, 27 flaky).
+-InitialWebUINavigationTimelineBrowserTest.RecordNavigationTimelineUKM
+
+# 7.2% flake rate over 30 days per LUCI Analysis (413 passed, 1 failed, 31 flaky).
+-InitialWebUISurfaceSyncBrowserTest.FirstPaintGapIsZero
+
+# 1.1% flake rate over 30 days per LUCI Analysis (434 passed, 0 failed, 5 flaky).
+-OmniboxAimPopupBrowserTest.PermissionPromptCreationResetsLockIfPromptCreationFails
+
+# 20.9% flake rate over 30 days per LUCI Analysis (351 passed, 1 failed, 92 flaky).
+-PKIMetadataComponentChromeRootStoreMtcMetadataTest.Revocation/MtcsOffTestRootsOffUsePublicRealm
+
+# 1.4% flake rate over 30 days per LUCI Analysis (438 passed, 0 failed, 6 flaky).
+-PKIMetadataComponentChromeRootStoreMtcMetadataTest.Revocation/MtcsOnTestRootsOnUsePublicRealm
+
+# 1.8% flake rate over 30 days per LUCI Analysis (437 passed, 0 failed, 8 flaky).
+-PKIMetadataComponentChromeRootStoreMtcMetadataTest.Revocation/MtcsOnTestRootsOnUseTestRealm
+
+# 4.1% flake rate over 30 days per LUCI Analysis (426 passed, 0 failed, 18 flaky).
+-PrewarmedWebUINavigationTimelineBrowserTest.RecordNavigationTimelineUKMPrewarmedProcessReused
+
+# 1.1% flake rate over 30 days per LUCI Analysis (436 passed, 0 failed, 5 flaky).
+-SBNavigationObserverBrowserTest.IPListDedup
+
+# 1.4% flake rate over 30 days per LUCI Analysis (438 passed, 0 failed, 6 flaky).
+-SafetyTipPageInfoBubbleViewBrowserTest.TriggersOnWrongScopedAllowlist
+
+# 2.7% flake rate over 30 days per LUCI Analysis (433 passed, 0 failed, 12 flaky).
+-SaveCardBubbleViewsFullFormBrowserTest.StrikeDatabase_Local_AddStrikeIfBubbleDeclined/WalletBrandingV2Enabled
+
+# 1.1% flake rate over 30 days per LUCI Analysis (438 passed, 0 failed, 5 flaky).
+-SaveCardBubbleViewsFullFormBrowserTest.Upload_ClickingSave_ShowsLoadingView/WalletBrandingV2Enabled
+
+# 3.3% flake rate over 30 days per LUCI Analysis (414 passed, 0 failed, 14 flaky).
+-ServiceWorkerTest.UpdateWithoutSkipWaiting
+
+# 1.4% flake rate over 30 days per LUCI Analysis (435 passed, 0 failed, 6 flaky).
+-SubCaptureBrowserTargetElementTest.ApplyToElement/ElementCaptureForm
+
+# 6.4% flake rate over 30 days per LUCI Analysis (411 passed, 0 failed, 28 flaky).
+-TestStructuredMetricsService.CreateLogs

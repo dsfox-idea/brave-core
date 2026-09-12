@@ -133,6 +133,7 @@ class AdsServiceImpl : public AdsService,
   ~AdsServiceImpl() override;
 
   // AdsService:
+  base::WeakPtr<AdsService> GetWeakPtr() override;
   bool IsIneligibleToStart() const override;
   bool IsInitialized() const override;
 
@@ -264,6 +265,12 @@ class AdsServiceImpl : public AdsService,
   void GetInternals(GetInternalsCallback callback) override;
 
   void GetDiagnostics(GetDiagnosticsCallback callback) override;
+
+  void EvaluateConditionMatcher(
+      const std::string& pref_path,
+      const std::string& condition,
+      std::optional<std::string> test_value,
+      EvaluateConditionMatcherCallback callback) override;
 
   void GetStatementOfAccounts(GetStatementOfAccountsCallback callback) override;
 

@@ -27,6 +27,11 @@ enum BackgroundMediaType: Int, CaseIterable {
   }
 }
 
+public enum TopsitesMode: Int {
+  case mostVisited
+  case favourite
+}
+
 extension Preferences {
   public enum AutoCloseTabsOption: Int, CaseIterable {
     case manually
@@ -145,6 +150,11 @@ extension Preferences {
     public static let openLinkInQuickViewMode: Option<Bool> = .init(
       key: "general.open-link-in-quickview-mode",
       default: true
+    )
+    /// Whether or not brave has shown a prompt to users to confirm later continue opening links in QuickView
+    public static let openLinkInQuickViewModeConfirmationShown: Option<Bool> = .init(
+      key: "general.open-link-in-quickview-mode-confirmation-shown",
+      default: false
     )
     /// Whether or not the crash reporting alert has been shown at least once
     public static let crashReportingOptInShown: Option<Bool> = .init(
@@ -335,6 +345,12 @@ extension Preferences {
     /// Tells the app whether we should show Favourites in new tab page view controller
     public static let showNewTabFavourites =
       Option<Bool>(key: "newtabpage.show-newtab-favourites", default: true)
+
+    /// Mode to display NTP tiles in NTP
+    public static let topsitesMode = Option<TopsitesMode?>(
+      key: "newtabpage.topsites-mode",
+      default: nil
+    )
   }
 
   final public class AdblockDebug {

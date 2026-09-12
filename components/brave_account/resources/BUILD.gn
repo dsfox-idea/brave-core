@@ -39,6 +39,7 @@ build_webui("build") {
     "brave_account_password_reset_dialog.ts",
     "brave_account_password_strength_meter.html.ts",
     "brave_account_password_strength_meter.ts",
+    "brave_account_shared.ts",
     "brave_account_sign_in_dialog.html.ts",
     "brave_account_sign_in_dialog.ts",
   ]
@@ -70,6 +71,7 @@ build_webui("build") {
   mojo_files = [
     "$root_gen_dir/brave/components/brave_account/mojom/brave_account.mojom-webui.ts",
     "$root_gen_dir/brave/components/brave_account/mojom/change_password.mojom-webui.ts",
+    "$root_gen_dir/brave/components/brave_account/mojom/delete_account.mojom-webui.ts",
     "$root_gen_dir/brave/components/brave_account/mojom/get_service_token.mojom-webui.ts",
     "$root_gen_dir/brave/components/brave_account/mojom/login.mojom-webui.ts",
     "$root_gen_dir/brave/components/brave_account/mojom/register.mojom-webui.ts",

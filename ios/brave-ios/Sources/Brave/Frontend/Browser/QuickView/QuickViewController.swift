@@ -24,6 +24,7 @@ class QuickViewController: UIViewController {
   private let syncAPI: BraveSyncAPI
   private let sendTabAPI: BraveSendTabAPI
   private let historyAPI: BraveHistoryAPI
+  private let httpsUpgradeExceptionsService: HTTPSUpgradeExceptionsService
   private let toolbarViewModel: QuickViewToolbarModel
   private lazy var toolbarHostingController = UIHostingController(
     rootView: QuickViewToolbarView(viewModel: toolbarViewModel)
@@ -41,6 +42,7 @@ class QuickViewController: UIViewController {
   private let onOpenInNewTab: ((URLRequest, Bool) -> Void)?
   private let onOpenInNewWindow: ((URL, Bool) -> Void)?
   private let onAttachTab: ((any TabState) -> Void)?
+  private let onShowConfirmationAlert: (() -> Void)?
 
   private var preKeyboardToolbarState: ToolbarVisibilityViewModel.ToolbarState?
   private var toolbarHeightConstraint: Constraint?
@@ -62,15 +64,18 @@ class QuickViewController: UIViewController {
     syncAPI: BraveSyncAPI,
     sendTabAPI: BraveSendTabAPI,
     historyAPI: BraveHistoryAPI,
+    httpsUpgradeExceptionsService: HTTPSUpgradeExceptionsService,
     onOpenInNewTab: ((URLRequest, Bool) -> Void)?,
     onOpenInNewWindow: ((URL, Bool) -> Void)?,
-    onAttachTab: ((any TabState) -> Void)?
+    onAttachTab: ((any TabState) -> Void)?,
+    onShowConfirmationAlert: (() -> Void)?
   ) {
     self.url = url
     self.profile = profile
     self.syncAPI = syncAPI
     self.sendTabAPI = sendTabAPI
     self.historyAPI = historyAPI
+    self.httpsUpgradeExceptionsService = httpsUpgradeExceptionsService
     self.toolbarViewModel = QuickViewToolbarModel(
       url: url,
       isPrivate: profile.isOffTheRecord
@@ -78,12 +83,21 @@ class QuickViewController: UIViewController {
     self.onOpenInNewTab = onOpenInNewTab
     self.onOpenInNewWindow = onOpenInNewWindow
     self.onAttachTab = onAttachTab
+    self.onShowConfirmationAlert = onShowConfirmationAlert
     super.init(nibName: nil, bundle: nil)
     modalPresentationStyle = .pageSheet
   }
 
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) { fatalError() }
+
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    if !Preferences.General.openLinkInQuickViewModeConfirmationShown.value {
+      Preferences.General.openLinkInQuickViewModeConfirmationShown.value = true
+      onShowConfirmationAlert?()
+    }
+  }
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
@@ -128,7 +142,14 @@ class QuickViewController: UIViewController {
       tab.addPolicyDecider(braveShieldsHelper)
       tab.requestBlockingTabHelper = .init(tab: tab)
       tab.cosmeticFilteringTabHelper = .init(tab: tab)
+      tab.scriptletsTabHelper = .init(tab: tab)
       tab.blockedDomainTabHelper = .init(tab: tab)
+      if FeatureList.kBraveHttpsByDefault.enabled {
+        tab.httpsUpgradeHelper = .init(
+          tab: tab,
+          httpsUpgradeExceptionsService: httpsUpgradeExceptionsService
+        )
+      }
     }
     tab.protectionStats = .init(tab: tab)
     tab.readerMode = .init(tab: tab, readerModeCache: ReaderModeScriptHandler.cache(for: tab))
@@ -757,6 +778,12 @@ extension QuickViewController: TabObserver {
     {
       tab.detachedPrivacyHelper = detachedTabPrivacyHelper
       tab.blockedDomainTabHelper = .init(tab: tab)
+      if FeatureList.kBraveHttpsByDefault.enabled {
+        tab.httpsUpgradeHelper = .init(
+          tab: tab,
+          httpsUpgradeExceptionsService: httpsUpgradeExceptionsService
+        )
+      }
     }
   }
 

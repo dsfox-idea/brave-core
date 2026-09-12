@@ -28,6 +28,7 @@ import("//brave/components/skus/buildflags/buildflags.gni")
 import("//brave/components/request_otr/common/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//brave/components/tor/buildflags/buildflags.gni")
+import("//brave/components/traffic_control/buildflags/buildflags.gni")
 import("//brave/components/web_discovery/buildflags/buildflags.gni")
 import("//brave/test/testing.gni")
 import("//brave/updater/config.gni")
@@ -183,6 +184,8 @@ test("brave_unit_tests") {
     "//brave/browser/brave_stats:unit_tests",
     "//brave/browser/content_settings:unit_tests",
     "//brave/browser/ephemeral_storage:unit_tests",
+    "//brave/browser/external_protocol:unit_tests",
+    "//brave/browser/file_select:unit_tests",
     "//brave/browser/global_privacy_control:unit_tests",
     "//brave/browser/metrics:brave_metrics_unit_tests",
     "//brave/browser/misc_metrics:unit_tests",
@@ -1050,6 +1053,7 @@ test("brave_browser_tests") {
     "//brave/browser/serp_metrics:browser_tests",
     "//brave/browser/storage_access_api:browser_tests",
     "//brave/browser/test:browser_tests",
+    "//brave/browser/test:platform_browser_tests",
     "//brave/browser/themes",
     "//brave/browser/ui:browser_tests",
     "//brave/browser/ui/tabs:tabs_public",
@@ -1382,8 +1386,9 @@ test("brave_browser_tests") {
   }
 
   if (enable_brave_wayback_machine) {
-    sources += [ "//brave/components/brave_wayback_machine/brave_wayback_machine_browsertest.cc" ]
+    sources += [ "//brave/browser/ui/views/page_action/wayback_machine_page_action_browsertest.cc" ]
     deps += [
+      "//brave/browser/ui/views/page_action",
       "//brave/components/brave_wayback_machine",
       "//chrome/browser/ui/actions",
       "//chrome/browser/ui/views/page_action:page_action_test_support",
@@ -1429,6 +1434,10 @@ test("brave_browser_tests") {
 
   if (enable_containers) {
     deps += [ "//brave/browser/containers:browser_tests" ]
+  }
+
+  if (enable_traffic_control) {
+    deps += [ "//brave/browser/traffic_control:browser_tests" ]
   }
 
   defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
@@ -1506,6 +1515,7 @@ test("brave_browser_tests") {
       "//brave/app/theme:brave_unscaled_resources_grit",
       "//brave/browser/banners:browser_tests",
       "//brave/browser/brave_search:browser_tests",
+      "//brave/browser/file_select:browser_tests",
       "//brave/browser/password_manager:browser_tests",
       "//brave/browser/sharing_hub:browser_tests",
       "//brave/browser/sync:browser_tests",
@@ -1858,6 +1868,7 @@ if (is_android) {
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.messages",
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.native_page",
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.ntp",
+      "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.omnibox",
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.omnibox.geo",
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.preferences.website",
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.quick_search_engines",

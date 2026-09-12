@@ -111,8 +111,8 @@
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_QWEN" desc="AI Chat intro message for the qwen model" formatter_data="webui=AiChat">
     Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Qwen VL 30B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
-  <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_NEAR_GLM_5_1" desc="AI Chat intro message for the glm-5.1 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GLM-5.1, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5.1 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+  <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_NEAR_GLM_5_1" desc="AI Chat intro message for the glm-5.3 model" formatter_data="webui=AiChat">
+    Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by GLM-5.3, a model created by Zhipu AI to be performant and applicable to many use cases. GLM-5.3 is NEAR-hosted through their own verifiably private secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_INSTANT" desc="AI Chat intro message for the Claude Instant model" formatter_data="webui=AiChat">
     Hi, I'm Leo. I'm an AI assistant by Growser. I'm powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks. Claude Instant is Growser-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
@@ -696,8 +696,17 @@
   <message name="IDS_CHAT_UI_WEBSITE_TOOLS_TITLE" desc="Title of the dialog that lists the tools an attached website provides to Leo" formatter_data="webui=AiChat">
     Available website tools
   </message>
-  <message name="IDS_CHAT_UI_WEBSITE_TOOLS_LIST_LABEL" desc="Heading above the list of tools in the website tools dialog. The placeholder is the number of tools, e.g. 'Available tools (10)'" formatter_data="webui=AiChat">
+  <message name="IDS_CHAT_UI_WEBSITE_TOOLS_LIST_LABEL" desc="Heading above the list of tools in the website tools dialog, also used as the accessible label for the tool count on an attached page's tools pill. The placeholder is the number of tools, e.g. 'Available tools (10)'" formatter_data="webui=AiChat">
     Available tools (<ph name="TOOL_COUNT">$1<ex>10</ex></ph>)
+  </message>
+  <message name="IDS_CHAT_UI_WEBSITE_TOOL_PERMISSION_ALWAYS_ALLOW" desc="Dropdown option letting Leo use a website tool without asking each time" formatter_data="webui=AiChat">
+    Always allow
+  </message>
+  <message name="IDS_CHAT_UI_WEBSITE_TOOL_PERMISSION_ASK" desc="Dropdown option asking for approval each time Leo wants to use a website tool" formatter_data="webui=AiChat">
+    Ask every time
+  </message>
+  <message name="IDS_CHAT_UI_WEBSITE_TOOL_PERMISSION_NEVER_ALLOW" desc="Dropdown option preventing Leo from using a website tool at all" formatter_data="webui=AiChat">
+    Never allow
   </message>
   <message name="IDS_CHAT_UI_SUBSCRIPTION_POLICY_INFO" desc="An info text that is shown below various subcription prices" formatter_data="webui=AiChat">
     All subscriptions are auto-renewed but can be cancelled at any time before renewal.

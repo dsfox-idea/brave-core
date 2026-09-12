@@ -217,6 +217,12 @@
       initWithFeature:&brave_shields::features::kBraveIOSEnableFarblingPlugins];
 }
 
++ (Feature*)kTransitionToUpstreamHttpsUpgrades {
+  return
+      [[Feature alloc] initWithFeature:&brave_shields::features::
+                                           kTransitionToUpstreamHttpsUpgrades];
+}
+
 + (Feature*)kBraveShowStrictFingerprintingMode {
   return
       [[Feature alloc] initWithFeature:&brave_shields::features::
@@ -366,6 +372,11 @@
   return
       [[Feature alloc] initWithFeature:&brave_shields::features::
                                            kWebKitAdvancedPrivacyProtections];
+}
+
++ (Feature*)kWebKitGlobalPrivacyControl {
+  return [[Feature alloc]
+      initWithFeature:&brave_shields::features::kWebKitGlobalPrivacyControl];
 }
 
 + (Feature*)kBraveOrigin {

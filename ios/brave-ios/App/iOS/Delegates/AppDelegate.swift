@@ -26,7 +26,6 @@ import PrivateCDN
 import RuntimeWarnings
 import SDWebImage
 @_spi(AppLaunch) import Shared
-import Storage
 import StoreKit
 import UserAgent
 import UserNotifications
@@ -239,6 +238,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppState.shared.profile.searchEngines.updateDSEToYahooJPIfNeeded()
         Preferences.Search.yahooJPPhaseTwoCompleted.value = true
       }
+    }
+
+    if Preferences.NewTabPage.topsitesMode.value == nil {
+      Preferences.NewTabPage.topsitesMode.value =
+        Favorite.hasFavorites ? TopsitesMode.favourite : TopsitesMode.mostVisited
     }
 
     if isFirstLaunch {

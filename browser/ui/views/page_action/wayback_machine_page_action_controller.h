@@ -12,8 +12,9 @@
 #include "brave/components/brave_wayback_machine/wayback_state.h"
 #include "chrome/browser/ui/page_action/page_action_controller.h"
 #include "components/tabs/public/tab_interface.h"
+#include "ui/views/view_tracker.h"
 
-class ToolbarButtonProvider;
+class WaybackMachineBubbleView;
 
 namespace actions {
 class ActionItem;
@@ -28,7 +29,7 @@ namespace page_actions {
 // Drives the Wayback Machine page action: shows an icon (badged once a
 // snapshot lookup has completed) when the current page looks like it might be
 // available on the Wayback Machine, and shows the Wayback Machine bubble when
-// clicked.
+// clicked or, when enabled, automatically after a failed navigation.
 class WaybackMachinePageActionController {
  public:
   WaybackMachinePageActionController(
@@ -42,11 +43,19 @@ class WaybackMachinePageActionController {
 
   void Init();
 
-  void ExecuteAction(ToolbarButtonProvider* toolbar_button_provider,
-                     actions::ActionItem* item);
+  // Shows the bubble in response to a user activating the page action.
+  void ExecuteAction(actions::ActionItem* item);
+
+  WaybackMachineBubbleView* GetBubbleViewForTesting();
 
  private:
   void OnWaybackStateChanged(WaybackState state);
+
+  // Creates and shows the bubble, unless one is already showing. A bubble shown
+  // without a user gesture is shown inactive, so that it doesn't take focus
+  // away from the page.
+  void ShowBubble(actions::ActionItem* item, bool user_gesture);
+  void MaybeAutoShowBubble();
 
   // (Re-)registers for wayback-state updates on |contents|'
   // BraveWaybackMachineTabHelper, since the tab's contents can be swapped out
@@ -65,6 +74,8 @@ class WaybackMachinePageActionController {
 
   base::CallbackListSubscription did_activate_subscription_;
   base::CallbackListSubscription will_discard_contents_subscription_;
+
+  views::ViewTracker bubble_tracker_;
 
   base::WeakPtrFactory<WaybackMachinePageActionController> weak_factory_{this};
 };
