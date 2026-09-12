@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/browser_commands.cc b/chrome/browser/ui/browser_commands.cc
-index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..1569bb66ce962e516c426d4ca3cbaaca94f0a73d 100644
+index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0cbd92647 100644
 --- a/chrome/browser/ui/browser_commands.cc
 +++ b/chrome/browser/ui/browser_commands.cc
 @@ -464,7 +464,12 @@ void MoveTabsToWindowImpl(BrowserWindowInterface* source,
@@ -36,6 +36,15 @@ index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..1569bb66ce962e516c426d4ca3cbaaca
    base::RecordAction(UserMetricsAction("ReloadBypassingCache"));
    ReloadInternal(browser, disposition, true);
  }
+@@ -1333,7 +1344,7 @@ void OpenSizeWindow(BrowserWindowInterface* browser) {
+ }
+ #endif  // BUILDFLAG(IS_WIN)
+ 
+-content::WebContents& NewTab(BrowserWindowInterface* browser,
++content::WebContents& NewTab_ChromiumImpl(BrowserWindowInterface* browser,
+                              NewTabTypes context) {
+   if (context != NewTabTypes::kNoUserAction) {
+     base::RecordAction(base::UserMetricsAction("NewTab"));
 @@ -1427,7 +1438,9 @@ void CloseTab(BrowserWindowInterface* browser) {
        active_tab->IsSplit() &&
        browser->GetTabStripModel()->selection_model().size() == 2;
