@@ -82,6 +82,7 @@ brave_settings_ts_files = [
   "br/clear_browsing_data_dialog.ts",
   "br/clear_browsing_data_time_picker.ts",
   "br/config.ts",
+  "br/contact_info_page.ts",
   "br/cookies_page.ts",
   "br/edit_dictionary_page.ts",
   "br/import_data_dialog.ts",
@@ -216,12 +217,17 @@ brave_settings_mojo_files = [
   "$root_gen_dir/brave/components/brave_account/mojom/brave_account.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_account/mojom/brave_account_row.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_account/mojom/change_password.mojom-webui.ts",
+  "$root_gen_dir/brave/components/brave_account/mojom/delete_account.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_account/mojom/get_service_token.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_account/mojom/login.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_account/mojom/register.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_account/mojom/resend_verification_email.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_account/mojom/reset_password.mojom-webui.ts",
   "$root_gen_dir/brave/components/brave_origin/mojom/brave_origin_settings.mojom-webui.ts",
+
+  # Shared with the Brave Account UI; lands at preprocessed/
+  # brave_account_shared.ts.
+  "//brave/components/brave_account/resources/brave_account_shared.ts",
 
   # Add generated strings as mojo files. Currently, this is the only way to
   # include them in build_webui() target.

@@ -324,7 +324,12 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
               return
             }
-            UIApplication.shared.open(settingsUrl)
+            Task {
+              if let windowScene = viewIfLoaded?.window?.windowScene {
+                await DefaultBrowserPictureInPictureController.present(in: windowScene)
+              }
+              await UIApplication.shared.open(settingsUrl)
+            }
           },
           image: UIImage(braveSystemNamed: "leo.set.as-default"),
           cellClass: MultilineButtonCell.self
@@ -1533,9 +1538,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         Row(
           text: Strings.Autofill.managePasswordsTitle,
           selection: { [unowned self] in
-            if FeatureList.kUseChromiumWebViewsAutofill.enabled,
-              let autofillDataManager = braveCore.defaultWebViewConfiguration.autofillDataManager
-            {
+            if let autofillDataManager = braveCore.defaultWebViewConfiguration.autofillDataManager {
               let viewModel = ManagePasswordsViewModel(autofillDataManager: autofillDataManager)
               let controller = UIHostingController(
                 rootView:
@@ -2171,18 +2174,9 @@ private class AppIconCell: UITableViewCell, Cell {
     content.imageProperties.cornerRadius = 6
     let scaledValue = UIFontMetrics.default.scaledValue(for: 24)
     content.imageProperties.maximumSize = .init(width: scaledValue, height: scaledValue)
-    if #available(iOS 18, *) {
-      content.imageProperties.strokeColor = UIColor(white: 0, alpha: 0.1)
-      content.imageProperties.strokeWidth = 1
-    }
+    content.imageProperties.strokeColor = UIColor(white: 0, alpha: 0.1)
+    content.imageProperties.strokeWidth = 1
     contentConfiguration = content
-    if #unavailable(iOS 18) {
-      // Have to grab the image view from the UIListContentView as the standard `imageView` is nil
-      // when using the content configuration API
-      let imageView = contentView.subviews.compactMap({ $0 as? UIImageView }).first
-      imageView?.layer.borderColor = UIColor(white: 0, alpha: 0.1).cgColor
-      imageView?.layer.borderWidth = 1
-    }
     accessoryType = .disclosureIndicator
   }
 }

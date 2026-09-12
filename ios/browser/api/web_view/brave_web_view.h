@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol PrintHandler;
 @protocol RequestBlockingTabHelperBridge;
 @protocol CosmeticFilteringTabHelperBridge;
+@protocol ScriptletsTabHelperBridge;
 @protocol BraveWalletProviderDelegate;
 
 typedef void (^ResetConfigurationCallback)(id<ProfileBridge>,
@@ -117,6 +118,15 @@ CWV_EXPORT
 /// Called when the favicon driver updates the web views favicon status
 - (void)webView:(CWVWebView*)webView
     didUpdateFaviconStatus:(nullable CWVFaviconStatus*)faviconStatus;
+/// Called when a page or tab helper (such as a security interstitial) requests
+/// a URL be opened in a new tab, and returns the web view of the created tab
+/// which the URL will then be loaded into.
+///
+/// `CWVWebView` ignores the requested disposition and loads every URL in the
+/// current web view, so this is required to match Chrome's behaviour.
+- (nullable CWVWebView*)webView:(CWVWebView*)webView
+     createWebViewForOpeningURL:(NSURL*)url
+                   inBackground:(BOOL)inBackground;
 @end
 
 /// A CWVWebView with Chrome tab helpers attached and the ability to handle
@@ -280,6 +290,12 @@ CWV_EXPORT
 /// A bridge for Cosmetic Filtering javascript feature
 - (void)setCosmeticFilteringTabHelperBridge:
     (id<CosmeticFilteringTabHelperBridge>)bridge;
+@end
+
+CWV_EXPORT
+@interface BraveWebView (Scriptlets)
+/// A bridge for the Scriptlets javascript feature
+- (void)setScriptletsTabHelperBridge:(id<ScriptletsTabHelperBridge>)bridge;
 @end
 
 NS_ASSUME_NONNULL_END

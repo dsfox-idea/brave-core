@@ -107,8 +107,6 @@
       "--no-checkout",
       "--local",
       "--shared",
-      "--depth",
-      "1",
       "/b/cache/chromium.googlesource.com-chromium-src",
       "[WORKSPACE]/b/src"
     ],
@@ -320,7 +318,8 @@
       "1",
       "--clear",
       "--no-full-toolchain",
-      "--upload"
+      "--upload",
+      "--use-prebuilt-rustc"
     ],
     "name": "build rust toolchain"
   },

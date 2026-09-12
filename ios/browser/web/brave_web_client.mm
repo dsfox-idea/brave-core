@@ -19,7 +19,6 @@
 #include "brave/components/constants/url_constants.h"
 #include "brave/components/global_privacy_control/pref_names.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
-#include "brave/ios/browser/ai_chat/ai_chat_distiller_javascript_feature.h"
 #include "brave/ios/browser/api/profile/profile_bridge_impl.h"
 #include "brave/ios/browser/api/web_view/brave_web_view_internal.h"
 #include "brave/ios/browser/brave_ads/ads_media_reporting_javascript_feature.h"
@@ -30,6 +29,7 @@
 #include "brave/ios/browser/brave_shields/farbling_javascript_feature.h"
 #include "brave/ios/browser/brave_shields/protection_stats_javascript_feature.h"
 #include "brave/ios/browser/brave_shields/request_blocking/request_blocking_javascript_feature.h"
+#include "brave/ios/browser/brave_shields/scriptlets/scriptlets_javascript_feature.h"
 #include "brave/ios/browser/global_privacy_control/gpc_javascript_feature.h"
 #include "brave/ios/browser/playlist/playlist_compatibility_javascript_feature.h"
 #include "brave/ios/browser/playlist/playlist_javascript_feature.h"
@@ -46,6 +46,7 @@
 #include "brave/ios/browser/web/night_mode/night_mode_javascript_feature.h"
 #include "brave/ios/browser/web/page_metadata/page_metadata_javascript_feature.h"
 #include "brave/ios/browser/web/reader_mode/reader_mode_javascript_feature.h"
+#include "brave/ios/browser/web/text_content_distiller/text_content_distiller_javascript_feature.h"
 #include "brave/ios/browser/youtube/youtube_quality_javascript_feature.h"
 #include "brave/ios/web/js_messaging/safe_builtins_javascript_feature.h"
 #include "components/autofill/ios/browser/autofill_java_script_feature.h"
@@ -163,7 +164,7 @@ std::vector<web::JavaScriptFeature*> BraveWebClient::GetJavaScriptFeatures(
     // counterpart in //brave-ios
     features.push_back(
         brave_ads::AdsMediaReportingJavaScriptFeature::GetInstance());
-    features.push_back(AIChatDistillerJavaScriptFeature::GetInstance());
+    features.push_back(TextContentDistillerJavaScriptFeature::GetInstance());
     features.push_back(BraveNavigatorJavaScriptFeature::GetInstance());
     features.push_back(brave_shields::FarblingJavaScriptFeature::GetInstance());
     features.push_back(BraveSearchAdResultsJavaScriptFeature::GetInstance());
@@ -177,7 +178,15 @@ std::vector<web::JavaScriptFeature*> BraveWebClient::GetJavaScriptFeatures(
     features.push_back(DocumentFetchJavaScriptFeature::GetInstance());
     features.push_back(ForcePasteJavaScriptFeature::GetInstance());
     features.push_back(FullscreenHelperJavaScriptFeature::GetInstance());
-    features.push_back(GPCJavaScriptFeature::FromBrowserState(browser_state));
+    // On iOS 27+ WebKit handles GPC natively when the feature is enabled
+    bool gpc_handled_by_webkit = false;
+    if (@available(iOS 27.0, *)) {
+      gpc_handled_by_webkit = base::FeatureList::IsEnabled(
+          brave_shields::features::kWebKitGlobalPrivacyControl);
+    }
+    if (!gpc_handled_by_webkit) {
+      features.push_back(GPCJavaScriptFeature::FromBrowserState(browser_state));
+    }
     features.push_back(
         MediaBackgroundingJavaScriptFeature::FromBrowserState(browser_state));
     features.push_back(NightModeJavaScriptFeature::GetInstance());
@@ -194,6 +203,7 @@ std::vector<web::JavaScriptFeature*> BraveWebClient::GetJavaScriptFeatures(
         skus::SkusJavaScriptFeature::FromBrowserState(browser_state));
     features.push_back(youtube::YouTubeQualityJavaScriptFeature::GetInstance());
     features.push_back(CosmeticFilteringJavaScriptFeature::GetInstance());
+    features.push_back(ScriptletsJavaScriptFeature::GetInstance());
     if (!base::FeatureList::IsEnabled(
             brave::features::kUseChromiumWebViewsAutofill)) {
       features.push_back(LoginsJavaScriptFeature::GetInstance());

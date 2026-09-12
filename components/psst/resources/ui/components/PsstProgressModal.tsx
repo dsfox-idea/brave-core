@@ -14,6 +14,7 @@ import * as leo from '@brave/leo/tokens/css/variables'
 import Flex from '$web-common/Flex'
 import { getLocale } from '$web-common/locale'
 import SettingsCard from './SettingsCard'
+import { PsstReportModal } from './PsstReportModal'
 import { Container, PsstDlgButton, RightAlignedItem } from './basic/structure'
 import { usePsstDialogAPI } from '../api/psst_dialog_api_context'
 
@@ -82,6 +83,7 @@ export const PsstProgressModal = () => {
 
   const { performPrivacyTuning } = api.usePerformPrivacyTuning()
 
+  const siteUrl = siteData ? siteData.siteUrl : ''
   const siteName = siteData ? siteData.siteName : ''
 
   React.useEffect(() => {
@@ -141,17 +143,7 @@ export const PsstProgressModal = () => {
     })
   })
 
-  const [reportingAction, setReportingAction] = React.useState<boolean>(false)
-
-  const handlePsstErrorsReportSend = React.useCallback(() => {
-    api.reportFailedContent()
-    setReportingAction(true)
-  }, [api])
-
-  api.useOnPsstErrorsReportSent(() => {
-    setReportingAction(false)
-    api.closeDialog()
-  })
+  const [showReportModal, setShowReportModal] = React.useState(false)
 
   const handleSettingItemCheck = React.useCallback(
     (uid: string, checked: boolean) => {
@@ -204,6 +196,16 @@ export const PsstProgressModal = () => {
 
   const isInProgress = commonState === SettingState.Progress
 
+  if (showReportModal) {
+    return (
+      <PsstReportModal
+        siteName={siteName}
+        optionsStatuses={optionsStatuses}
+        onBack={() => setShowReportModal(false)}
+      />
+    )
+  }
+
   return (
     <Container>
       <Flex
@@ -225,7 +227,7 @@ export const PsstProgressModal = () => {
       </Flex>
       <ModalTitleBody>{getLocale(S.PSST_CONSENT_DIALOG_BODY)}</ModalTitleBody>
       <SettingsCard
-        title={siteName}
+        url={siteUrl}
         progressModelState={{
           siteName,
           optionsStatuses,
@@ -260,9 +262,8 @@ export const PsstProgressModal = () => {
             <PsstDlgButton
               kind='outline'
               size='medium'
-              isDisabled={reportingAction}
-              isLoading={reportingAction}
-              onClick={handlePsstErrorsReportSend}
+              isDisabled={isInProgress}
+              onClick={() => setShowReportModal(true)}
             >
               {getLocale(S.PSST_COMPLETE_CONSENT_DIALOG_REPORT_FAILED)}
             </PsstDlgButton>

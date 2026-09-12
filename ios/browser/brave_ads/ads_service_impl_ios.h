@@ -7,6 +7,7 @@
 #define BRAVE_IOS_BROWSER_BRAVE_ADS_ADS_SERVICE_IMPL_IOS_H_
 
 #include <memory>
+#include <optional>
 #include <string>
 #include <vector>
 
@@ -61,6 +62,7 @@ class AdsServiceImplIOS : public AdsService {
   void NotifyDidClearAdsServiceData() const;
 
   // AdsService:
+  base::WeakPtr<AdsService> GetWeakPtr() override;
   bool IsIneligibleToStart() const override;
   bool IsInitialized() const override;
 
@@ -81,6 +83,12 @@ class AdsServiceImplIOS : public AdsService {
   void GetInternals(GetInternalsCallback callback) override;
 
   void GetDiagnostics(GetDiagnosticsCallback callback) override;
+
+  void EvaluateConditionMatcher(
+      const std::string& pref_path,
+      const std::string& condition,
+      std::optional<std::string> test_value,
+      EvaluateConditionMatcherCallback callback) override;
 
   void GetStatementOfAccounts(GetStatementOfAccountsCallback callback) override;
 

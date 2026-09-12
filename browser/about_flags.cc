@@ -12,6 +12,7 @@
 #include "brave/browser/ui/brave_ui_features.h"
 #include "brave/browser/updater/buildflags.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/features.h"
 #include "brave/components/brave_education/buildflags.h"
 #include "brave/components/brave_news/common/buildflags/buildflags.h"
@@ -22,6 +23,7 @@
 #include "brave/components/brave_sync/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
+#include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/containers/buildflags/buildflags.h"
 #include "brave/components/de_amp/common/features.h"
 #include "brave/components/debounce/core/common/features.h"
@@ -60,6 +62,10 @@
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/components/ai_chat/core/common/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+#include "brave/components/brave_ads/core/public/ads_internals/ads_internals_verbose_mode_feature.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)
@@ -128,6 +134,10 @@
 
 #if BUILDFLAG(ENABLE_PSST)
 #include "brave/components/psst/core/common/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
+#include "brave/components/brave_wayback_machine/features.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
@@ -381,6 +391,31 @@ const char* const kBraveSyncImplLink[1] = {"https://github.com/brave/go-sync"};
                    FEATURE_VALUE_TYPE(psst::features::kEnablePsst),    \
                }))
 
+#define ADS_INTERNALS_VERBOSE_MODE_FEATURE_ENTRIES                        \
+  IF_BUILDFLAG(                                                           \
+      ENABLE_BRAVE_ADS,                                                   \
+      EXPAND_FEATURE_ENTRIES({                                            \
+          "ads-internals-verbose-mode",                                   \
+          "Enable brave://ads-internals verbose mode",                    \
+          "Shows extra debugging tabs and tools on brave://ads-"          \
+          "internals.",                                                   \
+          kOsDesktop | kOsAndroid,                                        \
+          FEATURE_VALUE_TYPE(brave_ads::kAdsInternalsVerboseModeFeature), \
+      }))
+
+#define WAYBACK_MACHINE_FEATURE_ENTRIES                                        \
+  IF_BUILDFLAG(                                                                \
+      ENABLE_BRAVE_WAYBACK_MACHINE,                                            \
+      EXPAND_FEATURE_ENTRIES({                                                 \
+          "brave-wayback-machine-auto-show-bubble",                            \
+          "Auto-show Wayback Machine bubble",                                  \
+          "Automatically show the Wayback Machine bubble when the current "    \
+          "page is missing (for example, a 404).",                             \
+          kOsWin | kOsMac | kOsLinux,                                          \
+          FEATURE_VALUE_TYPE(                                                  \
+              brave_wayback_machine::features::kWaybackMachineAutoShowBubble), \
+      }))
+
 #if !BUILDFLAG(IS_ANDROID)
 #define BRAVE_COMMANDS_FEATURE_ENTRIES                                      \
   EXPAND_FEATURE_ENTRIES(                                                   \
@@ -462,6 +497,16 @@ const char* const kBraveSyncImplLink[1] = {"https://github.com/brave/go-sync"};
       FEATURE_VALUE_TYPE(                                                      \
           preferences::features::kBraveBackgroundVideoPlayback),               \
   })
+#define BRAVE_YOUTUBE_FULLSCREEN_SETTINGS_WORKAROUND_ANDROID                 \
+  EXPAND_FEATURE_ENTRIES({                                                   \
+      "brave-youtube-fullscreen-settings-workaround",                        \
+      "Fix YouTube settings taps in fullscreen playback",                    \
+      "Work around a bug on m.youtube.com where taps of the video's gear "   \
+      "icon no-ops.",                                                        \
+      kOsAndroid,                                                            \
+      FEATURE_VALUE_TYPE(                                                    \
+          preferences::features::kBraveYoutubeFullscreenSettingsWorkaround), \
+  })
 #define BRAVE_SAFE_BROWSING_ANDROID                                           \
   EXPAND_FEATURE_ENTRIES({                                                    \
       "brave-safe-browsing",                                                  \
@@ -499,6 +544,7 @@ const char* const kBraveSyncImplLink[1] = {"https://github.com/brave/go-sync"};
   })
 #else
 #define BRAVE_BACKGROUND_VIDEO_PLAYBACK_ANDROID
+#define BRAVE_YOUTUBE_FULLSCREEN_SETTINGS_WORKAROUND_ANDROID
 #define BRAVE_SAFE_BROWSING_ANDROID
 #define BRAVE_ADAPTIVE_BUTTON_IN_TOOLBAR_ANDROID
 #define BRAVE_CUSTOM_SEARCH_ENGINES
@@ -1238,6 +1284,15 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
               brave_shields::features::kBraveShieldsElementPicker),            \
       },                                                                       \
       {                                                                        \
+          "transition-to-upstream-https-upgrades",                             \
+          "Transition to use upstream HTTPS upgrades",                         \
+          "Transition to upstream HTTPS upgrade implementation instead of "    \
+          "Brave's own.",                                                      \
+          kOsAll,                                                              \
+          FEATURE_VALUE_TYPE(                                                  \
+              brave_shields::features::kTransitionToUpstreamHttpsUpgrades),    \
+      },                                                                       \
+      {                                                                        \
           "brave-farbling",                                                    \
           "Enable Brave Farbling",                                             \
           "Enables randomization of fingerprinting-susceptible WebAPIs",       \
@@ -1554,12 +1609,14 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
   BRAVE_NEWS_FEATURE_ENTRIES                                                   \
   SPEEDREADER_FEATURE_ENTRIES                                                  \
   REQUEST_OTR_FEATURE_ENTRIES                                                  \
+  ADS_INTERNALS_VERBOSE_MODE_FEATURE_ENTRIES                                   \
   BRAVE_MODULE_FILENAME_PATCH                                                  \
   PLAYLIST_FEATURE_ENTRIES                                                     \
   BRAVE_COMMANDS_FEATURE_ENTRIES                                               \
   CONTAINERS_FEATURE_ENTRIES                                                   \
   TRAFFIC_CONTROL_FEATURE_ENTRIES                                              \
   BRAVE_BACKGROUND_VIDEO_PLAYBACK_ANDROID                                      \
+  BRAVE_YOUTUBE_FULLSCREEN_SETTINGS_WORKAROUND_ANDROID                         \
   BRAVE_SAFE_BROWSING_ANDROID                                                  \
   BRAVE_ADAPTIVE_BUTTON_IN_TOOLBAR_ANDROID                                     \
   BRAVE_ANDROID_TAB_GROUPS_SETTINGS                                            \
@@ -1585,6 +1642,7 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
   BRAVE_EDUCATION_FEATURE_ENTRIES                                              \
   BRAVE_UPDATER_FEATURE_ENTRIES                                                \
   PSST_FEATURE_ENTRIES                                                         \
+  WAYBACK_MACHINE_FEATURE_ENTRIES                                              \
   BRAVE_FORCE_POPUP_TO_BE_OPENED_IN_NEW_TAB_FEATURE_ENTRY                      \
   EMAIL_ALIASES_FEATURE_ENTRIES                                                \
   BRAVE_WORKSPACE_FEATURE_ENTRY                                                \

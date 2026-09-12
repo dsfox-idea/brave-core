@@ -2157,8 +2157,8 @@ extension Strings {
       "setDefaultBrowserCalloutTitle",
       tableName: "BraveShared",
       bundle: .module,
-      value: "Brave can now be set as your default browser in iOS. Tap here to open settings.",
-      comment: ""
+      value: "**Set Brave as your default browser and block ads on every site you visit.** Tap here to open Settings and set Brave as default.",
+      comment: "A callout that explains how to set Brave as the default browser. This is a markdown string, the ** is for bold."
     )
   public static let defaultBrowserCalloutCloseAccesabilityLabel =
     NSLocalizedString(
@@ -9263,6 +9263,38 @@ extension Strings {
     value: "Open in tab",
     comment:
       "Accessibility text for an icon button which will exit QuickView mode and open the current page in a regular tab."
+  )
+
+  public static let quickViewConfirmationAlertTitle = NSLocalizedString(
+    "quickview.confirmation.alert.title",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Keep opening conversation links in Quick View?",
+    comment:
+      "Title of the alert shown the first time a user closes QuickView, asking if they want to keep using it for future links."
+  )
+  public static let quickViewConfirmationAlertMessage = NSLocalizedString(
+    "quickview.confirmation.alert.message",
+    tableName: "BraveShared",
+    bundle: .module,
+    value:
+      "QuickView lets you preview links without leaving your page. You can turn this off anytime in Settings.",
+    comment:
+      "Message of the alert shown the first time a user closes QuickView, explaining the feature and where to change it."
+  )
+  public static let quickViewConfirmationAlertKeepButtonTitle = NSLocalizedString(
+    "quickview.confirmation.alert.keep.button.title",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Keep using QuickView",
+    comment: "Button title to keep opening links in QuickView after the confirmation alert."
+  )
+  public static let quickViewConfirmationAlertTurnOffButtonTitle = NSLocalizedString(
+    "quickview.confirmation.alert.turnOff.button.title",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Turn off",
+    comment: "Button title to stop opening links in QuickView after the confirmation alert."
   )
 }
 

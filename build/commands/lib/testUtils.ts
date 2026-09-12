@@ -60,14 +60,23 @@ export function getTestsToRun(config: Config, suite: string) {
 }
 
 // Returns a list of paths to files containing all the filters that would apply
-// to the current test suite, as long as such files exist in the filesystem.
+// to the current test suite. Include missing paths when detecting changes to
+// deleted filters.
 //
 // For instance, for Windows 64-bit and assuming all the filters files exist
 // in the filesystem, this method would return paths to the following files:
 //   - unit-tests.filter              -> Base filters
 //   - unit_tests-windows.filters:    -> Platform specific
 //   - unit_tests-windows-x86.filters -> Platform & Architecture specific
-export function getApplicableFilters(config: Config, suite: string) {
+//
+// Each filter is looked up both in test/filters/ (hand-written) and in
+// test/filters/generated/ (auto-generated upstream flake filters, see
+// tools/chromium_tests_analysis/update-upstream-flake-filters.py).
+export function getApplicableFilters(
+  config: Config,
+  suite: string,
+  { includeMissing = false } = {},
+) {
   let filterFilePaths: string[] = []
 
   let targetPlatform: string = process.platform
@@ -83,6 +92,8 @@ export function getApplicableFilters(config: Config, suite: string) {
     [suite, targetPlatform, config.targetArch].join('-'),
   ]
 
+  // If you make changes to the list of *san variants here, also update
+  // update-upstream-flake-filters.py.
   if (config.is_ubsan) {
     possibleFilters.push([suite, targetPlatform, 'ubsan'].join('-'))
   }
@@ -95,15 +106,16 @@ export function getApplicableFilters(config: Config, suite: string) {
     possibleFilters.push([suite, targetPlatform, 'msan'].join('-'))
   }
 
+  const filterDirs = [
+    path.join(config.braveCoreDir, 'test', 'filters'),
+    path.join(config.braveCoreDir, 'test', 'filters', 'generated'),
+  ]
   possibleFilters.forEach((filterName) => {
-    let filterFilePath = path.join(
-      config.braveCoreDir,
-      'test',
-      'filters',
-      `${filterName}.filter`,
-    )
-    if (fs.existsSync(filterFilePath)) {
-      filterFilePaths.push(filterFilePath)
+    for (const filterDir of filterDirs) {
+      let filterFilePath = path.join(filterDir, `${filterName}.filter`)
+      if (includeMissing || fs.existsSync(filterFilePath)) {
+        filterFilePaths.push(filterFilePath)
+      }
     }
   })
 
