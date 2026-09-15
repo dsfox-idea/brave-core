@@ -88,9 +88,21 @@ parts:
     override-pull: |
       set -eu
       craftctl default
-      # The sandbox binary must keep its setuid bit or the browser refuses to
-      # start; the dump plugin does not preserve it.
-      chmod 4555 ./opt/growser/chrome-sandbox
+      # Growser-226: the setuid sandbox helper is REMOVED rather than made
+      # setuid. Measured inside snap confinement on this machine, all four
+      # combinations:
+      #
+      #   helper setuid, plug unconnected  -> runs, renderers sandboxed
+      #   helper present but not setuid    -> Chromium aborts by design
+      #   no helper, plain browser-support -> "No usable sandbox", aborts
+      #   no helper, plug WITH allow-sandbox connected -> runs, sandboxed
+      #
+      # The last line is what this snap does: Chromium's namespace sandbox,
+      # the one modern Chromium prefers, with no setuid binary in the package
+      # for the store to have to bless. allow-sandbox is what makes it
+      # possible - without it the only way to start is --no-sandbox, which is
+      # the isolation this browser exists to keep.
+      rm -f ./opt/growser/chrome-sandbox
       # The launchers on PATH belong to the deb, not to a snap: snapd provides
       # its own. Brave also removes etc/cron.daily here, which is a no-op for
       # us - growser#207 took the cron out of the package.
