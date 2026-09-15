@@ -1,5 +1,5 @@
 diff --git a/chrome/common/chrome_features.cc b/chrome/common/chrome_features.cc
-index a67210a0392247edca3ab3f561275db8ea103c68..d0bec0244667ff9f14211897a5f5ec129f62044f 100644
+index a67210a0392247edca3ab3f561275db8ea103c68..1740519ea5e5a4fd626fed3b1229395423403706 100644
 --- a/chrome/common/chrome_features.cc
 +++ b/chrome/common/chrome_features.cc
 @@ -180,7 +180,7 @@ BASE_FEATURE(kPreinstalledWebAppAlwaysMigrateForTesting,
@@ -49,7 +49,7 @@ index a67210a0392247edca3ab3f561275db8ea103c68..d0bec0244667ff9f14211897a5f5ec12
 -             base::FEATURE_DISABLED_BY_DEFAULT
 -#endif
 -);
-+BASE_FEATURE(kGlic, base::FEATURE_DISABLED_BY_DEFAULT);
++BASE_OVERRIDDEN_FEATURE(kGlic, base::FEATURE_DISABLED_BY_DEFAULT);
  
  BASE_FEATURE(kGlicBackgroundActuation, base::FEATURE_DISABLED_BY_DEFAULT);
  

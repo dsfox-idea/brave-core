@@ -380,7 +380,12 @@ TEST(FeatureDefaultsTest, DisabledBlinkRuntimeEnabledFeatures) {
       &blink::features::kLanguageDetectionAPI,
       &blink::features::kParakeet,
       &blink::features::kPrerender2,
-      &blink::features::kTranslationAPI,
+      // Growser-70: kTranslationAPI is NOT in this list, and that is the
+      // decision rather than an omission. Brave ships it disabled as a
+      // fingerprinting surface; this fork leaves Chromium's default alone
+      // because it is the only page translation we have - Brave's endpoint
+      // refuses a fork and Google's wants a key we do not have. The recipe
+      // that keeps it out is rewrite/.../runtime_enabled_features.json5.yaml.
       &blink::features::kUserMediaElement,
   };
 
