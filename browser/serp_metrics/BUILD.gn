@@ -3,13 +3,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+# Growser-232: serp_metrics_p3a.cc calls into the P3A service, which is
+# compiled out here (growser#98/#21), so it would link against symbols that
+# do not exist. Upstream has no guard because upstream always has P3A.
+import("//brave/components/p3a/buildflags/buildflags.gni")
+
 static_library("serp_metrics") {
   public = [
     "profile_attributes_time_period_store.h",
     "profile_attributes_time_period_store_factory.h",
     "serp_metrics_all_profiles_aggregator.h",
     "serp_metrics_migration.h",
-    "serp_metrics_p3a.h",
     "serp_metrics_service_factory.h",
     "serp_metrics_tab_helper.h",
   ]
@@ -19,9 +23,13 @@ static_library("serp_metrics") {
     "profile_attributes_time_period_store_factory.cc",
     "serp_metrics_all_profiles_aggregator.cc",
     "serp_metrics_migration.cc",
-    "serp_metrics_p3a.cc",
     "serp_metrics_tab_helper.cc",
   ]
+
+  if (enable_p3a) {
+    public += [ "serp_metrics_p3a.h" ]
+    sources += [ "serp_metrics_p3a.cc" ]
+  }
 
   public_deps = [
     "//base",
@@ -110,8 +118,12 @@ source_set("unit_tests") {
     "profile_attributes_time_period_store_unittest.cc",
     "serp_metrics_all_profiles_aggregator_unittest.cc",
     "serp_metrics_migration_unittest.cc",
-    "serp_metrics_p3a_unittest.cc",
   ]
+
+  # Growser-232: the test follows the file it tests.
+  if (enable_p3a) {
+    sources += [ "serp_metrics_p3a_unittest.cc" ]
+  }
 
   deps = [
     ":serp_metrics",

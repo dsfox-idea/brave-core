@@ -334,8 +334,11 @@ ProfileManager* BraveBrowserProcessImpl::profile_manager() {
 void BraveBrowserProcessImpl::StartBraveServices() {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
 
+#if BUILDFLAG(ENABLE_P3A)
+  // Growser-232: the reporter exists only with P3A, and so does p3a_service().
   process_misc_metrics()->serp_metrics_p3a()->Init(
       p3a_service(), profile_manager()->GetProfileAttributesStorage());
+#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
   resource_component();
