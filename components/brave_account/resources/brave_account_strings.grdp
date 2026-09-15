@@ -181,11 +181,11 @@
   </message>
 
   <!-- 'Account deletion' dialog: -->
-  <message name="IDS_BRAVE_ACCOUNT_DELETION_DIALOG_TITLE" desc="Title for the dialog where the user can delete their Brave Account" formatter_data="webui=BraveAccount">
-    Delete your Brave account?
+  <message name="IDS_BRAVE_ACCOUNT_DELETION_DIALOG_TITLE" desc="Title for the dialog where the user can delete their Growser Account" formatter_data="webui=BraveAccount">
+    Delete your Growser account?
   </message>
-  <message name="IDS_BRAVE_ACCOUNT_DELETION_DIALOG_DESCRIPTION" desc="Description for the Brave Account deletion dialog, explaining that deleting the account also deletes its email aliases, may cost access to services the user signed up for with an alias, and cannot be undone" formatter_data="webui=BraveAccount">
-    Deleting a Brave account will also delete its email aliases. You may lose access to online services where you used an alias to sign up. This action cannot be undone.
+  <message name="IDS_BRAVE_ACCOUNT_DELETION_DIALOG_DESCRIPTION" desc="Description for the Growser Account deletion dialog, explaining that deleting the account also deletes its email aliases, may cost access to services the user signed up for with an alias, and cannot be undone" formatter_data="webui=BraveAccount">
+    Deleting a Growser account will also delete its email aliases. You may lose access to online services where you used an alias to sign up. This action cannot be undone.
   </message>
   <message name="IDS_BRAVE_ACCOUNT_DELETION_CONFIRMATION_KEYWORD" desc="Word the user must type to confirm account deletion" formatter_data="webui=BraveAccount">
     DELETE
@@ -194,7 +194,7 @@
     Type <ph name="KEYWORD">$1<ex>DELETE</ex></ph> to enable account deletion
   </message>
   <message name="IDS_BRAVE_ACCOUNT_DELETE_ACCOUNT_BUTTON_LABEL" desc="Label for the button that initiates account deletion" formatter_data="webui=BraveAccount">
-    Delete Brave account
+    Delete Growser account
   </message>
   <message name="IDS_BRAVE_ACCOUNT_CANCEL_BUTTON_LABEL" desc="Label for the button that cancels an action and closes the dialog" formatter_data="webui=BraveAccount">
     Cancel
