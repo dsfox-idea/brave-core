@@ -145,20 +145,19 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &autofill::features::debug::kAutofillServerCommunication,
       &blink::features::kAllowURNsInIframes,
       &blink::features::kBackgroundResourceFetch,
-      &blink::features::kControlledFrame,
       // Growser-174: two switches, and only both off keep <fencedframe> out
       // of the web surface. kFencedFrames is the browser-side support;
       // kFencedFramesRuntime is the base::Feature upstream generates to back
       // the Blink runtime flag, named apart from the first one on purpose so
       // the two cannot collide.
       &blink::features::kFencedFrames,
-      &blink::features::kFencedFramesRuntime,
-      &blink::features::kFledge,
-      &blink::features::kLanguageDetectionAPI,
-      &blink::features::kParakeet,
-      &blink::features::kPrerender2,
       &blink::features::kPreloadingEagerViewportHeuristics,
-      &blink::features::kUserMediaElement,
+      // Growser-232: the Blink runtime features are NOT here -
+      // kControlledFrame, kFencedFramesRuntime, kFledge,
+      // kLanguageDetectionAPI, kParakeet, kPrerender2, kUserMediaElement.
+      // Their state comes from runtime_enabled_features.json5, which is not
+      // a compile-time override, and this test now asserts that it is one.
+      // They are covered by DisabledBlinkRuntimeEnabledFeatures instead.
       &browser_actuator::kBrowserActuator,
       &browser_actuator::kBrowserActuatorProtoStreamTransport,
 #if BUILDFLAG(IS_ANDROID)
@@ -376,6 +375,9 @@ TEST(FeatureDefaultsTest, DisabledBlinkRuntimeEnabledFeatures) {
       &blink::features::kAISummarizationAPI,
       &blink::features::kAIWriterAPI,
       &blink::features::kControlledFrame,
+      // Growser-174: the generated twin of kFencedFrames - only both off keep
+      // <fencedframe> out of the web surface.
+      &blink::features::kFencedFramesRuntime,
       &blink::features::kFledge,
       &blink::features::kLanguageDetectionAPI,
       &blink::features::kParakeet,
