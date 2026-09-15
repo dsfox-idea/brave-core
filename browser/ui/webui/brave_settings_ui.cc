@@ -275,8 +275,10 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
 #endif
 
 #if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
-  // Survey Panelist is tied to Brave Rewards, which is compiled out of Brave
-  // Origin branded builds, so the setting is never available there.
+  // Sponsored Ads and Survey Panelist are tied to Brave Rewards, which is
+  // compiled out of Brave Origin branded builds, so neither setting is ever
+  // available there.
+  html_source->AddBoolean("isSponsoredAdsAllowed", false);
   html_source->AddBoolean("isSurveyPanelistAllowed", false);
 #else
   // growser (#78): never. The survey panel is Brave's research programme, it
@@ -285,6 +287,9 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
   // page, because two different surfaces read this value: the settings
   // section and the link row on the data-collection page.
   html_source->AddBoolean("isSurveyPanelistAllowed", false);
+  // Growser-21: and upstream's new sponsored-ads toggle is the same answer for
+  // the same reason - there are no sponsored ads in this build to enable.
+  html_source->AddBoolean("isSponsoredAdsAllowed", false);
 #endif
 #if BUILDFLAG(ENABLE_PLAYLIST)
   html_source->AddBoolean(

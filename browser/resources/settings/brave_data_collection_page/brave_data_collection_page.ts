@@ -63,6 +63,7 @@ extends SettingBraveDataCollectionPageElementBase
         },
       },
       showRestartForMetricsReporting_: Boolean,
+      showSponsoredAdsEnabledToggle_: Boolean,
       showSurveyPanelist_: Boolean,
       isStatsReportingEnabledManaged_: Boolean,
     }
@@ -71,6 +72,7 @@ extends SettingBraveDataCollectionPageElementBase
   private declare statsUsagePingEnabledPref_: Object
   private declare metricsReportingPref_: chrome.settingsPrivate.PrefObject<boolean>
   private declare showRestartForMetricsReporting_: boolean
+  private declare showSponsoredAdsEnabledToggle_: boolean
   private declare showSurveyPanelist_: boolean
   private declare isStatsReportingEnabledManaged_: boolean
 
@@ -97,6 +99,7 @@ extends SettingBraveDataCollectionPageElementBase
     this.browserProxy_.getStatsUsagePingEnabled().then(
       (enabled: boolean) => setStatsUsagePingEnabledPref(enabled, this.isStatsReportingEnabledManaged_))
 
+    this.showSponsoredAdsEnabledToggle_ = loadTimeData.getBoolean('isSponsoredAdsAllowed')
     this.showSurveyPanelist_ = loadTimeData.getBoolean('isSurveyPanelistAllowed')
   }
 

@@ -33,12 +33,15 @@
     </template>
   </settings-toggle-button>
 <if expr="enable_brave_ads">
-  <settings-toggle-button id="sponsoredAdsEnabled"
-      class="hr"
-      pref="{{prefs.brave.brave_ads.sponsored.enabled}}"
-      label="$i18n{sponsoredAdsEnabledTitle}"
-      sub-label="$i18n{sponsoredAdsEnabledDesc}">
-  </settings-toggle-button>
+  <template is="dom-if" if="[[showSponsoredAdsEnabledToggle_]]">
+    <settings-toggle-button id="sponsoredAdsEnabled"
+        class="hr"
+        pref="{{prefs.brave.brave_ads.sponsored.enabled}}"
+        label="$i18n{sponsoredAdsEnabledTitle}"
+        sub-label="$i18n{sponsoredAdsEnabledDesc}"
+        learn-more-url="$i18n{sponsoredAdsLearnMoreURL}">
+    </settings-toggle-button>
+  </template>
 </if>
   <template is="dom-if" if="[[showSurveyPanelist_]]">
     <cr-link-row id="surveyPanelistLinkRow"
