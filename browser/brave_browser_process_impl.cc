@@ -25,6 +25,7 @@
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
 #include "brave/browser/net/brave_system_request_handler.h"
 #include "brave/browser/profiles/brave_profile_manager.h"
+#include "brave/browser/serp_metrics/serp_metrics_p3a.h"
 #include "brave/common/brave_channel_info.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/brave_component_updater_delegate.h"
@@ -267,7 +268,13 @@ void BraveBrowserProcessImpl::StartTearDown() {
   if (ntp_background_images_service_) {
     ntp_background_images_service_->StartTearDown();
   }
+// Growser-21: P3A is compiled out here, and upstream's new SERP metrics
+// teardown is part of it - process_misc_metrics_->serp_metrics_p3a() does not
+// exist without the buildflag. Both live inside the guard.
 #if BUILDFLAG(ENABLE_P3A)
+  if (process_misc_metrics_) {
+    process_misc_metrics_->serp_metrics_p3a()->Shutdown();
+  }
   if (p3a_service_) {
     p3a_service_->StartTeardown();
   }
@@ -326,6 +333,12 @@ ProfileManager* BraveBrowserProcessImpl::profile_manager() {
 
 void BraveBrowserProcessImpl::StartBraveServices() {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
+
+#if BUILDFLAG(ENABLE_P3A)
+  // Growser-232: the reporter exists only with P3A, and so does p3a_service().
+  process_misc_metrics()->serp_metrics_p3a()->Init(
+      p3a_service(), profile_manager()->GetProfileAttributesStorage());
+#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
   resource_component();

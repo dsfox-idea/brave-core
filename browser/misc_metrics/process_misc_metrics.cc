@@ -14,9 +14,15 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/misc_metrics/default_browser_monitor.h"
 #include "brave/components/misc_metrics/features.h"
+#include "brave/components/p3a/buildflags/buildflags.h"  // Growser-232
 #include "components/prefs/pref_change_registrar.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
+
+// Growser-232: the reporter is compiled out with P3A itself.
+#if BUILDFLAG(ENABLE_P3A)
+#include "brave/browser/serp_metrics/serp_metrics_p3a.h"
+#endif
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/misc_metrics/default_browser_monitor_delegate_impl.h"
 #include "brave/browser/misc_metrics/vertical_tab_metrics.h"
@@ -58,6 +64,11 @@ ProcessMiscMetrics::ProcessMiscMetrics(PrefService* local_state)
   uptime_monitor_ = std::make_unique<UptimeMonitorImpl>(local_state);
   media_session_metrics_ = std::make_unique<MediaSessionMetricsImpl>(
       local_state, uptime_monitor_.get());
+#if BUILDFLAG(ENABLE_P3A)
+  // Growser-232: no P3A, no reporter to construct.
+  serp_metrics_p3a_ =
+      std::make_unique<serp_metrics::SerpMetricsP3A>(*local_state);
+#endif
 
   ReportSimpleMetrics();
 }
@@ -106,6 +117,12 @@ CaptchaMetrics* ProcessMiscMetrics::captcha_metrics() {
   return captcha_metrics_.get();
 }
 
+#if BUILDFLAG(ENABLE_P3A)
+serp_metrics::SerpMetricsP3A* ProcessMiscMetrics::serp_metrics_p3a() {
+  return serp_metrics_p3a_.get();
+}
+#endif
+
 Web3Metrics& ProcessMiscMetrics::web3_metrics() {
   return web3_metrics_;
 }
@@ -129,6 +146,11 @@ void ProcessMiscMetrics::RegisterPrefs(PrefRegistrySimple* registry) {
   DohMetrics::RegisterPrefs(registry);
   MediaSessionMetricsImpl::RegisterPrefs(registry);
   UptimeMonitorImpl::RegisterPrefs(registry);
+#if BUILDFLAG(ENABLE_P3A)
+  // Growser-232: the pref belongs to the reporter, and goes with it. It is
+  // only ever read by SerpMetricsP3A, so nothing else looks for it.
+  serp_metrics::SerpMetricsP3A::RegisterPrefs(registry);
+#endif
 }
 
 }  // namespace misc_metrics

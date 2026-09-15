@@ -10,11 +10,19 @@
 
 #include "base/memory/raw_ptr.h"
 #include "brave/components/misc_metrics/web3_metrics.h"
+#include "brave/components/p3a/buildflags/buildflags.h"  // Growser-232
 #include "build/build_config.h"
 #include "components/prefs/pref_change_registrar.h"
 
 class PrefRegistrySimple;
 class PrefService;
+
+// Growser-232: serp_metrics' P3A reporter is compiled out with P3A itself.
+#if BUILDFLAG(ENABLE_P3A)
+namespace serp_metrics {
+class SerpMetricsP3A;
+}  // namespace serp_metrics
+#endif
 
 namespace misc_metrics {
 
@@ -62,6 +70,10 @@ class ProcessMiscMetrics {
   MediaSessionMetricsImpl* media_session_metrics();
   CaptchaMetrics* captcha_metrics();
 
+#if BUILDFLAG(ENABLE_P3A)
+  serp_metrics::SerpMetricsP3A* serp_metrics_p3a();  // Growser-232
+#endif
+
  private:
   void ReportSimpleMetrics();
 
@@ -84,6 +96,9 @@ class ProcessMiscMetrics {
   std::unique_ptr<DohMetrics> doh_metrics_;
   std::unique_ptr<UptimeMonitorImpl> uptime_monitor_;
   std::unique_ptr<MediaSessionMetricsImpl> media_session_metrics_;
+#if BUILDFLAG(ENABLE_P3A)
+  std::unique_ptr<serp_metrics::SerpMetricsP3A> serp_metrics_p3a_;  // Growser-232
+#endif
 };
 
 }  // namespace misc_metrics

@@ -107,6 +107,33 @@
 #include "pdf/pdf_features.h"
 #endif
 
+namespace {
+
+void ExpectCompileOverriddenFeatureDefault(const base::Feature& feature,
+                                           bool enabled) {
+  SCOPED_TRACE(feature.name);
+  EXPECT_TRUE(base::internal::IsCompileOverriddenFeature(feature.name));
+  EXPECT_EQ(base::FeatureList::IsEnabled(feature), enabled);
+
+  auto* feature_list = base::FeatureList::GetInstance();
+  ASSERT_NE(feature_list, nullptr);
+  EXPECT_TRUE(feature_list->IsFeatureOverridden(feature.name));
+  EXPECT_EQ(base::FeatureList::GetStateIfOverridden(feature), enabled);
+}
+
+// Blink generates these from runtime_enabled_features.json5, where Brave's
+// value is the entry's own `base_feature_status`. Nothing overrides an
+// upstream default, so the feature is not, and must not be, reported as
+// overridden.
+void ExpectBlinkRuntimeEnabledFeatureDefault(const base::Feature& feature,
+                                             bool enabled) {
+  SCOPED_TRACE(feature.name);
+  EXPECT_FALSE(base::internal::IsCompileOverriddenFeature(feature.name));
+  EXPECT_EQ(base::FeatureList::IsEnabled(feature), enabled);
+}
+
+}  // namespace
+
 TEST(FeatureDefaultsTest, DisabledFeatures) {
   // Please, keep alphabetized
   const base::Feature* disabled_features[] = {
@@ -116,29 +143,21 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &autofill::features::kAutofillEnableAmountExtraction,
       &autofill::features::kAutofillEnableBuyNowPayLater,
       &autofill::features::debug::kAutofillServerCommunication,
-      &blink::features::kAdInterestGroupAPI,
-      &blink::features::kAIProofreadingAPI,
-      &blink::features::kAIPromptAPI,
-      &blink::features::kAIPromptAPIMultimodalInput,
-      &blink::features::kAIRewriterAPI,
-      &blink::features::kAISummarizationAPI,
-      &blink::features::kAIWriterAPI,
       &blink::features::kAllowURNsInIframes,
       &blink::features::kBackgroundResourceFetch,
-      &blink::features::kControlledFrame,
       // Growser-174: two switches, and only both off keep <fencedframe> out
       // of the web surface. kFencedFrames is the browser-side support;
       // kFencedFramesRuntime is the base::Feature upstream generates to back
       // the Blink runtime flag, named apart from the first one on purpose so
       // the two cannot collide.
       &blink::features::kFencedFrames,
-      &blink::features::kFencedFramesRuntime,
-      &blink::features::kFledge,
-      &blink::features::kLanguageDetectionAPI,
-      &blink::features::kParakeet,
-      &blink::features::kPrerender2,
       &blink::features::kPreloadingEagerViewportHeuristics,
-      &blink::features::kUserMediaElement,
+      // Growser-232: the Blink runtime features are NOT here -
+      // kControlledFrame, kFencedFramesRuntime, kFledge,
+      // kLanguageDetectionAPI, kParakeet, kPrerender2, kUserMediaElement.
+      // Their state comes from runtime_enabled_features.json5, which is not
+      // a compile-time override, and this test now asserts that it is one.
+      // They are covered by DisabledBlinkRuntimeEnabledFeatures instead.
       &browser_actuator::kBrowserActuator,
       &browser_actuator::kBrowserActuatorProtoStreamTransport,
 #if BUILDFLAG(IS_ANDROID)
@@ -199,7 +218,6 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &features::kGlic,
       &features::kGlicUserStatusCheck,
       &features::kHttpsFirstBalancedMode,
-      &features::kIdleDetection,
       &features::kIndigo,
 #if BUILDFLAG(IS_WIN)
       &features::kLaunchOnStartup,
@@ -279,9 +297,7 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &optimization_guide::features::kOptimizationHints,
       &passage_embeddings::kPassageEmbedder,
       &permissions::features::kCpssUseTfliteSignatureRunner,
-#if !BUILDFLAG(IS_ANDROID)
       &permissions::features::kPermissionsPromptSurvey,
-#endif
       &permissions::features::kPermissionPredictionsV2,
       &permissions::features::kShowRelatedWebsiteSetsPermissionGrants,
       &personal_context::features::kPersonalContext,
@@ -314,7 +330,7 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
   };
 
   for (const auto* feature : disabled_features) {
-    EXPECT_FALSE(base::FeatureList::IsEnabled(*feature)) << feature->name;
+    ExpectCompileOverriddenFeatureDefault(*feature, false);
   }
 }
 
@@ -323,7 +339,6 @@ TEST(FeatureDefaultsTest, EnabledFeatures) {
       &omnibox::kAblateSearchProviderWarmup,
       &blink::features::kMixedContentAutoupgrade,
       &blink::features::kReducedReferrerGranularity,
-      &blink::features::kReduceUserAgentMinorVersion,
       &blink::features::kUACHOverrideBlank,
       &features::kBookmarkTriggerForPrerender2KillSwitch,
       &features::kCertificateTransparencyAskBeforeEnabling,
@@ -332,7 +347,6 @@ TEST(FeatureDefaultsTest, EnabledFeatures) {
       &features::kLocationProviderManager,
       &features::kSensorsAllowAskBlockPermissionModel,
 #endif
-      &history::kHistoryMoreSearchResults,
       &media::kEnableTabMuting,
       &net::features::kPartitionConnectionsByNetworkIsolationKey,
 #if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -346,7 +360,50 @@ TEST(FeatureDefaultsTest, EnabledFeatures) {
   };
 
   for (const auto* feature : enabled_features) {
-    EXPECT_TRUE(base::FeatureList::IsEnabled(*feature)) << feature->name;
+    ExpectCompileOverriddenFeatureDefault(*feature, true);
+  }
+}
+
+TEST(FeatureDefaultsTest, DisabledBlinkRuntimeEnabledFeatures) {
+  // Please, keep alphabetized.
+  const base::Feature* disabled_features[] = {
+      &blink::features::kAdInterestGroupAPI,
+      &blink::features::kAIProofreadingAPI,
+      &blink::features::kAIPromptAPI,
+      &blink::features::kAIPromptAPIMultimodalInput,
+      &blink::features::kAIRewriterAPI,
+      &blink::features::kAISummarizationAPI,
+      &blink::features::kAIWriterAPI,
+      &blink::features::kControlledFrame,
+      // Growser-174: the generated twin of kFencedFrames - only both off keep
+      // <fencedframe> out of the web surface.
+      &blink::features::kFencedFramesRuntime,
+      &blink::features::kFledge,
+      &blink::features::kLanguageDetectionAPI,
+      &blink::features::kParakeet,
+      &blink::features::kPrerender2,
+      // Growser-70: kTranslationAPI is NOT in this list, and that is the
+      // decision rather than an omission. Brave ships it disabled as a
+      // fingerprinting surface; this fork leaves Chromium's default alone
+      // because it is the only page translation we have - Brave's endpoint
+      // refuses a fork and Google's wants a key we do not have. The recipe
+      // that keeps it out is rewrite/.../runtime_enabled_features.json5.yaml.
+      &blink::features::kUserMediaElement,
+  };
+
+  for (const auto* feature : disabled_features) {
+    ExpectBlinkRuntimeEnabledFeatureDefault(*feature, false);
+  }
+}
+
+TEST(FeatureDefaultsTest, EnabledBlinkRuntimeEnabledFeatures) {
+  // Please, keep alphabetized.
+  const base::Feature* enabled_features[] = {
+      &blink::features::kReduceUserAgentMinorVersion,
+  };
+
+  for (const auto* feature : enabled_features) {
+    ExpectBlinkRuntimeEnabledFeatureDefault(*feature, true);
   }
 }
 

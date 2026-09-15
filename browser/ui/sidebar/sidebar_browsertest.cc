@@ -80,6 +80,7 @@
 #include "chrome/browser/ui/tabs/features.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "components/favicon/content/content_favicon_driver.h"
+#include "chrome/browser/ui/tabs/tab_data.h"  // Growser-232
 #include "components/tabs/public/tab_interface.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "chrome/browser/ui/views/chrome_layout_provider.h"
@@ -2935,21 +2936,29 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntryDrawsTheTabsIcon) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("chrome://newtab/")));
   RunLayout();
 
-  Tab* tab = view->GetTabForEntryForTesting(0u);
-  ASSERT_TRUE(tab);
-  const ui::ImageModel& from_strip = tab->data().favicon;
-  ASSERT_FALSE(from_strip.IsEmpty())
-      << "the strip has no icon for the new tab page, so this test can compare "
+  // Growser-231/#232: ask the MODEL, which is what the entry reads since the
+  // #231 fix. Reading the strip's own copy here made the test flaky from the
+  // other side: under a parallel run that copy can lag the model by a
+  // notification, so the entry was right and the expectation was stale. What
+  // is being proved is unchanged - the entry draws the TAB's icon, not the
+  // page's declared one - and the precondition below is what keeps that
+  // meaningful.
+  tabs::TabInterface* tab_interface = tab_model()->GetTabAtIndex(0);
+  ASSERT_TRUE(tab_interface);
+  const ui::ImageModel from_model =
+      tabs::TabData::FromTabInterface(tab_interface).favicon;
+  ASSERT_FALSE(from_model.IsEmpty())
+      << "the model has no icon for the new tab page, so this test can compare "
          "nothing";
 
   auto* driver = favicon::ContentFaviconDriver::FromWebContents(
       tab_model()->GetWebContentsAt(0));
   const gfx::Image declared = driver ? driver->GetFavicon() : gfx::Image();
   const gfx::ImageSkia wanted =
-      from_strip.Rasterize(view->GetColorProvider());
+      from_model.Rasterize(view->GetColorProvider());
   ASSERT_TRUE(declared.IsEmpty() ||
               !gfx::test::AreImagesEqual(gfx::Image(wanted), declared))
-      << "the page declares the same icon the strip draws, so this test cannot "
+      << "the page declares the same icon the model holds, so this test cannot "
          "tell the two sources apart";
 
   auto* entry = static_cast<views::LabelButton*>(EntryAt(0));
@@ -2958,7 +2967,7 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntryDrawsTheTabsIcon) {
       gfx::Image(gfx::ImageSkiaOperations::CreateResizedImage(
           wanted, skia::ImageOperations::RESIZE_BEST,
           entry->GetImage(views::Button::STATE_NORMAL).size()))))
-      << "the sidebar entry is not drawing what the strip draws";
+      << "the sidebar entry is not drawing the tab's icon";
 }
 
 // A right click on an entry really opens a menu. The test above proves the

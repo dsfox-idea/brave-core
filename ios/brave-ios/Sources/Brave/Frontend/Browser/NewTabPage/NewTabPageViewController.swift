@@ -398,6 +398,13 @@ class NewTabPageViewController: UIViewController {
         }
       }
     }
+
+    registerForTraitChanges([UITraitVerticalSizeClass.self]) { (self: Self, _) in
+      self.calculateBackgroundCenterPoints()
+    }
+    registerForTraitChanges([UITraitHorizontalSizeClass.self]) { (self: Self, _) in
+      self.collectionView.reloadData()
+    }
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -471,20 +478,6 @@ class NewTabPageViewController: UIViewController {
     backgroundView.imageView.image = parent == nil ? nil : background.backgroundImage
 
     lastViewedSponsoredBackgroundId = nil
-  }
-
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    if previousTraitCollection?.verticalSizeClass
-      != traitCollection.verticalSizeClass
-    {
-      calculateBackgroundCenterPoints()
-    }
-
-    if previousTraitCollection?.horizontalSizeClass
-      != traitCollection.horizontalSizeClass
-    {
-      collectionView.reloadData()
-    }
   }
 
   // MARK: - Background
@@ -1324,14 +1317,11 @@ extension NewTabPageViewController: UICollectionViewDelegateFlowLayout {
     layout collectionViewLayout: UICollectionViewLayout,
     insetForSectionAt section: Int
   ) -> UIEdgeInsets {
-    let sectionProvider = sections[section]
-    var inset =
-      sectionProvider.collectionView?(
-        collectionView,
-        layout: collectionViewLayout,
-        insetForSectionAt: section
-      ) ?? .zero
-    return inset
+    sections[section].collectionView?(
+      collectionView,
+      layout: collectionViewLayout,
+      insetForSectionAt: section
+    ) ?? .zero
   }
   func collectionView(
     _ collectionView: UICollectionView,
