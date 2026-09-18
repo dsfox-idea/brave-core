@@ -254,9 +254,16 @@
     "META": {"sizes": {"includes": [5]}},
     "includes": [54165],
   },
+  "brave/browser/resources/tab_strip/tab_strip_resources.grd": {
+    "structures": [54170],
+  },
   # growser (#212): the webharvester extension, bundled and off by default.
+  # Growser-236: moved from 54170, which upstream claimed for tab_strip in the
+  # 154 merge. Two grd files on one id is not a merge conflict to split the
+  # difference on - grit hands out the same numbers twice and the loser's
+  # resources are simply not there.
   "brave/components/webharvester/resources.grd": {
-    "includes": [54170],
+    "includes": [54180],
   },
   # WARNING: The IDs range is 2^16-1. Check
   # out/<BUILD_TYPE>/gen/brave/resources/brave_resource_ids for how much the

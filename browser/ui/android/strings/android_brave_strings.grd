@@ -1006,9 +1006,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_CUSTOMIZE_PAGE_ACTIONS_SECTION_SUMMARY" desc="Description for page actions customization settings">
         The following items will only be visible on the menu when supported by the current open webpage.
       </message>
-        <message name="IDS_WEBAPP" desc="WebApp placeholder used in menu item customization preferences">
-        WebApp
-      </message>
       <message name="IDS_BRAVE_ADS_EXISTING_USER_OFFER_TITLE" desc="Title for Growser Ads offer.">
         Growser Ads are here!
       </message>
@@ -3332,6 +3329,27 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     </message>
     <message name="IDS_ORIGIN_RESET_DIALOG_BUTTON" desc="Button text for the reset confirmation dialog in Growser Origin settings">
       Reset
+    </message>
+    <message name="IDS_ORIGIN_ACTIVATION_LIMIT_TITLE" desc="Title of the message shown when a Growser Origin subscription has been set up on as many devices as it allows">
+      Activation limit reached
+    </message>
+    <message name="IDS_ORIGIN_ACTIVATION_LIMIT_MESSAGE" desc="Message shown when a Growser Origin subscription has been set up on as many devices as it allows. The placeholder is the text of a link to Growser support.">
+      To prevent fraud, Origin activations are rate limited. But you can always request more activations to use your Origin license on more devices. Just click the Request more activations option, or <ph name="CONTACT_SUPPORT">%1$s<ex>contact support</ex></ph> for help.
+    </message>
+    <message name="IDS_ORIGIN_CONTACT_SUPPORT" desc="Text of the link to Growser support, shown inside the Growser Origin activation limit message">
+      contact support
+    </message>
+    <message name="IDS_ORIGIN_REQUEST_MORE_ACTIVATIONS" desc="Action button text that asks Growser for more activations of a Growser Origin subscription">
+      Request more activations
+    </message>
+    <message name="IDS_ORIGIN_PROCESSING" desc="Shown next to a spinner while Growser is granting more activations for a Growser Origin subscription">
+      Processing…
+    </message>
+    <message name="IDS_ORIGIN_READY_TO_ACTIVATE_TITLE" desc="Title shown after Growser granted more device activations for a Growser Origin subscription and a restart is needed">
+      Ready to activate
+    </message>
+    <message name="IDS_ORIGIN_READY_TO_ACTIVATE_MESSAGE" desc="Message shown after Growser granted more device activations for a Growser Origin subscription, asking the user to restart">
+      Growser Origin is now active on this device. In order to start using the feature, you need to restart the browser. Would you like to restart now?
     </message>
     <message name="IDS_ORIGIN_PURCHASE_SECTION_TITLE" desc="Growser Origin purchase section title">
       Purchase

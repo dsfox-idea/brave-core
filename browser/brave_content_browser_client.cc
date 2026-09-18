@@ -122,7 +122,6 @@
 #include "components/content_settings/core/browser/host_content_settings_map.h"
 #include "components/embedder_support/switches.h"
 #include "components/prefs/pref_service.h"
-#include "components/services/heap_profiling/public/mojom/heap_profiling_client.mojom.h"
 #include "components/user_prefs/user_prefs.h"
 #include "components/version_info/version_info.h"
 #include "content/public/browser/browser_context.h"
@@ -149,8 +148,11 @@
 #include "mojo/public/cpp/bindings/remote.h"
 #include "mojo/public/cpp/bindings/self_owned_associated_receiver.h"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
+#include "net/base/net_errors.h"
 #include "net/base/registry_controlled_domains/registry_controlled_domain.h"
 #include "net/cookies/site_for_cookies.h"
+#include "services/network/public/mojom/websocket.mojom.h"
+#include "services/service_manager/public/cpp/binder_registry.h"
 #include "third_party/blink/public/common/associated_interfaces/associated_interface_registry.h"
 #include "third_party/blink/public/common/features.h"
 #include "third_party/blink/public/common/loader/url_loader_throttle.h"
@@ -158,6 +160,7 @@
 #include "third_party/blink/public/mojom/webpreferences/web_preferences.mojom.h"
 #include "third_party/widevine/cdm/buildflags.h"
 #include "ui/base/l10n/l10n_util.h"
+#include "url/origin.h"
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/hid/brave_hid_delegate.h"
@@ -177,6 +180,7 @@
 #endif  // !BUILDFLAG(IS_ANDROID)
 
 #if BUILDFLAG(ENABLE_LOCAL_AI)
+#include "brave/browser/speech/on_device_speech_recognition_controller.h"
 #include "brave/browser/ui/webui/local_ai/on_device_speech_recognition_worker_ui.h"
 #include "brave/components/local_ai/core/features.h"
 #include "brave/components/local_ai/core/on_device_speech_recognition.mojom.h"
@@ -286,9 +290,7 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 #include "brave/components/tor/onion_location_navigation_throttle.h"
 #include "brave/components/tor/pref_names.h"
 #include "brave/components/tor/tor_navigation_throttle.h"
-#include "net/base/net_errors.h"
 #include "net/base/url_util.h"
-#include "services/network/public/mojom/websocket.mojom.h"
 #endif
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
@@ -945,6 +947,19 @@ BraveContentBrowserClient::WorkerGetBraveShieldSettings(
       brave_user_agent::ShouldHideBraveBrand(url));
 }
 
+#if BUILDFLAG(ENABLE_LOCAL_AI)
+mojo::PendingRemote<local_ai::mojom::AsrSession>
+BraveContentBrowserClient::GetAsrSession() {
+  return speech::OnDeviceSpeechRecognitionController::Get()->GetAsrSession();
+}
+#endif
+
+std::unique_ptr<optimization_guide::ModelBrokerClient>
+BraveContentBrowserClient::CreateModelBrokerClient(content::BrowserContext*) {
+  // Brave does not use optimization guide models.
+  return nullptr;
+}
+
 bool BraveContentBrowserClient::CanCreateWindow(
     content::RenderFrameHost* opener,
     const GURL& opener_url,
@@ -1270,9 +1285,13 @@ void BraveContentBrowserClient::WillCreateURLLoaderFactory(
       is_for_network_service);
 }
 
+// Intercept frame and worker handshakes so they go through Brave's network
+// request handling (e.g. ad blocking). Shared and service workers have no
+// RenderFrameHost; see crbug.com/40195467.
 bool BraveContentBrowserClient::WillInterceptWebSocket(
-    content::RenderFrameHost* frame) {
-  return (frame != nullptr);
+    content::RenderFrameHost*) {
+  return base::FeatureList::IsEnabled(
+      features::kBraveEnableShieldsForWebSocketsFromWorkers);
 }
 
 template <template <typename> class T>
@@ -1293,7 +1312,7 @@ void BraveContentBrowserClient::CreateChromeWebSocket(
     proxy->Start(std::move(handshake_client), std::move(options.header_client));
   }
 }
-void BraveContentBrowserClient::CreateWebSocket(
+void BraveContentBrowserClient::CreateWebSocketWithFrameId(
     content::RenderFrameHost* frame,
     content::ContentBrowserClient::WebSocketFactory factory,
     const GURL& url,
@@ -1301,25 +1320,48 @@ void BraveContentBrowserClient::CreateWebSocket(
     const std::optional<std::string>& user_agent,
     mojo::PendingRemote<network::mojom::WebSocketHandshakeClient>
         handshake_client,
-    content::ContentBrowserClient::WebSocketOptions options) {
-#if BUILDFLAG(ENABLE_TOR)
+    content::ContentBrowserClient::WebSocketOptions options,
+    int process_id,
+    const url::Origin& initiator_origin) {
+  content::BrowserContext* browser_context = nullptr;
+  content::GlobalRenderFrameHostToken render_frame_token;
+  url::Origin request_initiator;
   if (frame) {
-    content::BrowserContext* browser_context = frame->GetBrowserContext();
-    Profile* profile = Profile::FromBrowserContext(browser_context);
-    if (!profile->IsTor() &&
-        profile->GetPrefs()->GetBoolean(tor::prefs::kOnionOnlyInTorWindows) &&
-        net::IsOnion(url)) {
+    browser_context = frame->GetBrowserContext();
+    render_frame_token = frame->GetGlobalFrameToken();
+    request_initiator = frame->GetLastCommittedOrigin();
+  } else {
+    // Frameless SharedWorker/ServiceWorker handshake (crbug.com/40195467): use
+    // the initiator renderer's process and origin instead of a RenderFrameHost.
+    auto* process = content::RenderProcessHost::FromID(process_id);
+    if (!process) {
+      // The initiating renderer is already gone; close the handshake rather
+      // than leaving the pipe hanging.
       mojo::Remote<network::mojom::WebSocketHandshakeClient> client(
           std::move(handshake_client));
-      client->OnFailure(std::string(), net::ERR_NAME_NOT_RESOLVED, 0);
+      client->OnFailure(std::string(), net::ERR_FAILED, 0);
       return;
     }
+    browser_context = process->GetBrowserContext();
+    request_initiator = initiator_origin;
+  }
+
+#if BUILDFLAG(ENABLE_TOR)
+  Profile* profile = Profile::FromBrowserContext(browser_context);
+  if (!profile->IsTor() &&
+      profile->GetPrefs()->GetBoolean(tor::prefs::kOnionOnlyInTorWindows) &&
+      net::IsOnion(url)) {
+    mojo::Remote<network::mojom::WebSocketHandshakeClient> client(
+        std::move(handshake_client));
+    client->OnFailure(std::string(), net::ERR_NAME_NOT_RESOLVED, 0);
+    return;
   }
 #endif
 
   if (base::FeatureList::IsEnabled(features::kBraveRequestInfoUniquePtr)) {
     auto* proxy = BraveProxyingWebSocket<base::WeakPtr>::ProxyWebSocket(
-        frame, std::move(factory), url, site_for_cookies, user_agent);
+        browser_context, render_frame_token, request_initiator,
+        std::move(factory), url, site_for_cookies, user_agent);
     CreateChromeWebSocket<base::WeakPtr>(
         frame, url, site_for_cookies, user_agent, std::move(handshake_client),
         std::move(options), proxy);
@@ -1328,7 +1370,8 @@ void BraveContentBrowserClient::CreateWebSocket(
     // convert to unique_ptr/WeakPtr
     auto* proxy =
         BraveProxyingWebSocket<std::shared_ptr>::ProxyWebSocket(  // nocheck
-            frame, std::move(factory), url, site_for_cookies, user_agent);
+            browser_context, render_frame_token, request_initiator,
+            std::move(factory), url, site_for_cookies, user_agent);
     CreateChromeWebSocket<std::shared_ptr>(  // nocheck
         frame, url, site_for_cookies,        // nocheck
         user_agent, std::move(handshake_client), std::move(options), proxy);

@@ -23,6 +23,7 @@ import {
 } from '$wallet/utils/pricing-utils'
 import { makeAccountRoute } from '$wallet/utils/routes-utils'
 import { getIsRewardsAccount } from '$wallet/utils/rewards_utils'
+import { getDoesTokenSupportDeposit } from '$wallet/utils/asset-utils'
 import {
   externalWalletProviderFromString, //
 } from '../../../../../../brave_rewards/resources/shared/lib/external_wallet'
@@ -31,13 +32,13 @@ import { getLocale } from '$web-common/locale'
 // Components
 import {
   WithHideBalancePlaceholder, //
-} from '$wallet/components/desktop/with-hide-balance-placeholder'
+} from '$wallet/page/components/with_hide_balance_placeholder/with_hide_balance_placeholder'
 import {
   PortfolioAccountMenu, //
-} from '$wallet/components/desktop/wallet-menus/portfolio-account-menu'
+} from '$wallet/page/components/wallet_menus/portfolio_account_menu'
 import {
   RewardsMenu, //
-} from '$wallet/components/desktop/wallet-menus/rewards_menu'
+} from '$wallet/page/components/wallet_menus/rewards_menu'
 import {
   PopupModal, //
 } from '$wallet/components/desktop/popup-modals/index'
@@ -151,6 +152,11 @@ export const PortfolioAccountItem = (props: Props) => {
   }, [assetBalance])
 
   const blockExplorerSupported = !!account.address
+  const isDepositSupported = getDoesTokenSupportDeposit(asset)
+  const showAccountMenu =
+    blockExplorerSupported
+    || (isSellSupported && !isAssetsBalanceZero)
+    || isDepositSupported
 
   // Methods
   const onSelectAccount = React.useCallback(() => {
@@ -239,19 +245,24 @@ export const PortfolioAccountItem = (props: Props) => {
             </WithHideBalancePlaceholder>
           </Column>
         </AccountButton>
-        {isRewardsAccount ? (
-          <RewardsMenu />
-        ) : (
+        {isRewardsAccount && <RewardsMenu />}
+        {!isRewardsAccount && showAccountMenu && (
           <PortfolioAccountMenu
             onClickViewOnExplorer={
-              blockExplorerSupported ? onViewAccountOnBlockExplorer : undefined
+              blockExplorerSupported
+                ? onViewAccountOnBlockExplorer
+                : undefined
             }
             onClickSell={
               isSellSupported && !isAssetsBalanceZero
                 ? showSellModal
                 : undefined
             }
-            onClickDeposit={() => setShowDepositModal(true)}
+            onClickDeposit={
+              isDepositSupported
+                ? () => setShowDepositModal(true)
+                : undefined
+            }
           />
         )}
       </StyledWrapper>

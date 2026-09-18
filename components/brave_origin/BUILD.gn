@@ -51,13 +51,6 @@ static_library("brave_origin") {
     "profile_id.h",
   ]
 
-  if (is_android) {
-    sources += [
-      "origin_iap_subscription.cc",
-      "origin_iap_subscription.h",
-    ]
-  }
-
   friend = [ ":unit_tests" ]
 
   public_deps = [
@@ -81,6 +74,20 @@ static_library("brave_origin") {
 
   if (enable_skus) {
     deps += [ "//brave/components/skus/browser" ]
+  }
+
+  if (is_android) {
+    sources += [
+      "origin_activation_limit_impl.cc",
+      "origin_activation_limit_impl.h",
+      "origin_iap_subscription.cc",
+      "origin_iap_subscription.h",
+    ]
+    deps += [
+      "//brave/components/api_request_helper",
+      "//services/network/public/cpp",
+      "//url",
+    ]
   }
 }
 
@@ -111,6 +118,16 @@ source_set("unit_tests") {
     deps += [
       "//brave/components/skus/browser",
       "//brave/components/skus/browser:test_support",
+    ]
+  }
+
+  if (is_android) {
+    sources += [ "origin_activation_limit_impl_unittest.cc" ]
+    deps += [
+      "//services/data_decoder/public/cpp:test_support",
+      "//services/network:test_support",
+      "//services/network/public/cpp",
+      "//url",
     ]
   }
 }

@@ -1,92 +1,17 @@
 diff --git a/chrome/installer/linux/debian/build.py b/chrome/installer/linux/debian/build.py
-index d44d6e9081b0ac926778cef5462cc7954591565b..64bd4a92aaca4900ac93e2e19f82a153736dae1e 100755
+index e9d12851e35b38b0cf409dc019b89eba3a7d5028..f2d5ecb2646e04ca6b8047358b385fe7ea7bc0bc 100755
 --- a/chrome/installer/linux/debian/build.py
 +++ b/chrome/installer/linux/debian/build.py
-@@ -118,10 +118,6 @@ def main() -> None:
-         inst.prep_staging_common()
-         (staging_dir / "DEBIAN").mkdir(parents=True, exist_ok=True)
-         (staging_dir / "DEBIAN").chmod(installer.StandardPermissions.EXECUTABLE)
--        (staging_dir / "etc/cron.daily").mkdir(parents=True, exist_ok=True)
--        (staging_dir / "etc/cron.daily").chmod(
--            installer.StandardPermissions.EXECUTABLE
--        )
-         (staging_dir / f"usr/share/doc/{config.usr_bin_symlink_name}").mkdir(
-             parents=True, exist_ok=True
-         )
-@@ -132,32 +128,25 @@ def main() -> None:
-         inst.stage_install_common()
- 
-         logging.info(f"Staging Debian install files in '{staging_dir}'...")
-+        # Growser-207: the cron block below used to define this, and the zip
-+        # further down still needs it - taking the cron out took the variable
-+        # with it, and the deb died on a NameError the first time it was built
-+        # afterwards.
-         install_dir = staging_dir / config.info_vars["INSTALLDIR"].lstrip("/")
--        cron_dir = install_dir / "cron"
--        cron_dir.mkdir(parents=True, exist_ok=True)
--        cron_dir.chmod(installer.StandardPermissions.EXECUTABLE)
--
--        cron_file = cron_dir / config.info_vars["PACKAGE"]
--        installer.process_template(
--            output_dir / "installer/common/repo.cron",
--            cron_file,
--            config.get_template_context(),
--        )
--        cron_file.chmod(installer.StandardPermissions.EXECUTABLE)
--
--        cron_daily_link = (
--            staging_dir / "etc/cron.daily" / config.info_vars["PACKAGE"]
--        )
--        if cron_daily_link.is_symlink() or cron_daily_link.exists():
--            cron_daily_link.unlink()
--        os.symlink(
--            os.path.join(
--                config.info_vars["INSTALLDIR"],
--                "cron",
--                config.info_vars["PACKAGE"],
--            ),
--            cron_daily_link,
--        )
-+        # Growser-207: no daily cron. Upstream installs one into
-+        # /etc/cron.daily that re-adds the repository to sources.list if it has
-+        # been removed, and re-enables it if a distro upgrade turned it off.
-+        #
-+        # The second half is a real service and the first is not ours to
-+        # perform: a user who removed our apt source removed it on purpose, and
-+        # a package that puts it back every night is deciding for them what
-+        # their machine trusts. An apt source is standing permission, so
-+        # restoring one silently is the same family as the profile that lived
-+        # in another product's directory (#206) - correct-looking plumbing
-+        # doing something the person did not ask for.
-+        #
-+        # Nothing is lost while the source IS present: apt updates from it
-+        # normally. What goes is only the putting-back.
- 
-         for script in ["postinst", "prerm", "postrm"]:
-             dest = staging_dir / "DEBIAN" / script
-@@ -174,7 +163,20 @@ def main() -> None:
+@@ -176,6 +176,8 @@ def main() -> None:
          logging.info(f"Packaging {args.arch}...")
          config.deb_pre_depends = config.common_predeps
          config.deb_depends = config.common_deps
--        config.deb_provides = "www-browser"
-+        # Growser-207: no keyring dependency. Brave depend on brave-keyring
-+        # to keep their signing key fresh, and that package comes from
-+        # BRAVE repository - so ours would not install at all without
-+        # adding theirs first. Our key is installed by the postinst in this
-+        # package, from key.include, so there is nothing to depend on.
-+        config.deb_depends = config.common_deps
-+        # Growser-222: the package was growser-browser until the two
-+        # names were swapped. apt treats the old and new names as
-+        # unrelated packages that both own /opt/growser, so say so:
-+        # Provides+Replaces+Conflicts is the rename idiom, and without
-+        # it an existing install is simply orphaned.
-+        config.deb_provides = "www-browser, growser-browser"
-+        config.deb_replaces = "growser-browser"
-+        config.deb_conflicts = "growser-browser"
++        # Ensure that our signing key is up-to-date (brave/brave-browser#4205).
++        config.deb_depends = f"brave-keyring, {config.common_deps}"
+         config.deb_provides = "www-browser"
  
          installer.gen_changelog(config, deb_changelog)
-         installer.process_template(
-@@ -185,6 +187,8 @@ def main() -> None:
+@@ -187,6 +189,8 @@ def main() -> None:
  
          os.environ["DEB_HOST_ARCH"] = args.arch
          pkg_name = f"{config.package_orig}-{config.channel}"

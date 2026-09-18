@@ -159,9 +159,8 @@ void WelcomeDOMHandler::OnGetDefaultBrowser(
 
 void WelcomeDOMHandler::HandleOpenSettingsPage(const base::ListValue& args) {
   CHECK(profile_);
-  auto* browser = ProfileBrowserCollection::GetForProfile(profile_)
-                      ->FindTabbedBrowser()
-                      ->GetBrowserForMigrationOnly();
+  auto* browser =
+      ProfileBrowserCollection::GetForProfile(profile_)->FindTabbedBrowser();
   if (browser) {
     content::OpenURLParams open_params(
         GURL("chrome://settings/privacy"), content::Referrer(),

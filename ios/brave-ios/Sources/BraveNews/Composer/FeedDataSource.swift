@@ -358,7 +358,7 @@ public class FeedDataSource: ObservableObject {
   ///
   /// Cache lifetime will be based on the modification date of the cached file. Data downloaded from the web
   /// will only be cached if it is successfully decoded into the given `DataType`.
-  private func loadResource<DataType>(
+  @concurrent private func loadResource<DataType>(
     _ resource: NewsResource,
     localeIdentifier: String? = nil,
     decodedTo: DataType.Type
@@ -1022,45 +1022,52 @@ public class FeedDataSource: ObservableObject {
     ]
 
     Task { @MainActor in
-      let generator = FeedCardGenerator(
-        scoredItems: items,
-        sequence: rules,
-        followedSources: followedSources,
-        hiddenSources: hiddenSources,
-        followedChannels: followedChannels.mapValues(Set.init)
-      )
-      // Move to OSSignposter when we're 15+
-      let log = OSLog(
-        subsystem: Bundle.main.bundleIdentifier ?? "com.brave.ios",
-        category: "Brave News"
-      )
-      let signpostID = OSSignpostID(log: log)
-      os_signpost(.begin, log: log, name: "Card Generation", signpostID: signpostID)
-      os_signpost(.begin, log: log, name: "Card Generation: Initial cards", signpostID: signpostID)
-      var generatedCards: [FeedCard] = []
-      for try await cards in generator {
-        generatedCards.append(contentsOf: cards)
-        if case .loading = self.state, generatedCards.count > 10 {
-          os_signpost(
-            .end,
-            log: log,
-            name: "Card Generation: Initial cards",
-            signpostID: signpostID
-          )
-          // Update state immediately with some cards, let the rest be generated after. This makes News
-          // accessible much faster
-          self.state = .success(generatedCards)
+      do {
+        let generator = FeedCardGenerator(
+          scoredItems: items,
+          sequence: rules,
+          followedSources: followedSources,
+          hiddenSources: hiddenSources,
+          followedChannels: followedChannels.mapValues(Set.init)
+        )
+        // Move to OSSignposter when we're 15+
+        let log = OSLog(
+          subsystem: Bundle.main.bundleIdentifier ?? "com.brave.ios",
+          category: "Brave News"
+        )
+        let signpostID = OSSignpostID(log: log)
+        os_signpost(.begin, log: log, name: "Card Generation", signpostID: signpostID)
+        os_signpost(
+          .begin,
+          log: log,
+          name: "Card Generation: Initial cards",
+          signpostID: signpostID
+        )
+        var generatedCards: [FeedCard] = []
+        for try await cards in generator {
+          generatedCards.append(contentsOf: cards)
+          if case .loading = self.state, generatedCards.count > 10 {
+            os_signpost(
+              .end,
+              log: log,
+              name: "Card Generation: Initial cards",
+              signpostID: signpostID
+            )
+            // Update state immediately with some cards, let the rest be generated after. This makes News
+            // accessible much faster
+            self.state = .success(generatedCards)
+          }
         }
-      }
-      os_signpost(
-        .end,
-        log: log,
-        name: "Brave News Card Generation",
-        signpostID: signpostID,
-        "%d cards",
-        generatedCards.count
-      )
-      completion(generatedCards)
+        os_signpost(
+          .end,
+          log: log,
+          name: "Brave News Card Generation",
+          signpostID: signpostID,
+          "%d cards",
+          generatedCards.count
+        )
+        completion(generatedCards)
+      } catch {}
     }
   }
 }

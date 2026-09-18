@@ -462,7 +462,7 @@ public class PlaylistManager: NSObject {
 
     // Delete items from the folder
     return await withCheckedContinuation { continuation in
-      PlaylistItem.removeItems(itemsToDelete) {
+      PlaylistItem.removeItems(itemsToDelete) { [self] in
         // Attempt to delete the folder if we can
         if success, folder.uuid != PlaylistFolder.savedFolderUUID {
           PlaylistFolder.removeFolder(folder.uuid ?? "") { [weak self] in
@@ -1137,46 +1137,5 @@ extension PlaylistManager {
         return nil
       }
     }.value
-  }
-}
-
-extension PlaylistManager {
-  @MainActor
-  public static func syncSharedFolder(sharedFolderUrl: String) async throws {
-    guard let folder = PlaylistFolder.getSharedFolder(sharedFolderUrl: sharedFolderUrl),
-      let folderId = folder.uuid
-    else {
-      return
-    }
-
-    let model = try await PlaylistSharedFolderNetwork.fetchPlaylist(folderUrl: sharedFolderUrl)
-    var oldItems = Set(folder.playlistItems?.map({ PlaylistInfo(item: $0) }) ?? [])
-    let deletedItems = oldItems.subtracting(model.mediaItems)
-    let newItems = Set(model.mediaItems).subtracting(oldItems)
-    oldItems = []
-
-    for deletedItem in deletedItems {
-      await PlaylistManager.shared.delete(item: deletedItem)
-    }
-
-    if !newItems.isEmpty {
-      await withCheckedContinuation { continuation in
-        PlaylistItem.updateItems(Array(newItems), folderUUID: folderId, newETag: model.eTag) {
-          continuation.resume()
-        }
-      }
-    }
-  }
-
-  @MainActor
-  public static func syncSharedFolders() async throws {
-    let folderURLs = PlaylistFolder.getSharedFolders().compactMap({ $0.sharedFolderUrl })
-    await withTaskGroup(of: Void.self) { group in
-      folderURLs.forEach { url in
-        group.addTask {
-          try? await syncSharedFolder(sharedFolderUrl: url)
-        }
-      }
-    }
   }
 }

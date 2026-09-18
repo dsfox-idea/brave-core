@@ -171,7 +171,7 @@ class BraveTorBrowserTest : public InProcessBrowserTest {
   }
 
   Profile* OpenTorWindow() {
-    Browser* tor_browser =
+    BrowserWindowInterface* tor_browser =
         TorProfileManager::SwitchToTorProfile(browser()->GetProfile());
     return tor_browser ? tor_browser->GetProfile() : nullptr;
   }
@@ -524,7 +524,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorBrowserTest, HttpAllowlistIsolation) {
       main_profile->GetSSLHostStateDelegate();
 
   // Incognito window
-  Browser* incognito_browser = CreateIncognitoBrowser(nullptr);
+  BrowserWindowInterface* incognito_browser = CreateIncognitoBrowser(nullptr);
   Profile* incognito_profile = incognito_browser->GetProfile();
   auto* incognito_storage_partition =
       incognito_profile->GetDefaultStoragePartition();

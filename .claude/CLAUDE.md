@@ -21,10 +21,10 @@ UI strings, test fixtures, or verification output being cited.
 ## Development Tasks
 
 When asked to explore a task, read only the docs that you need from docs/ using
-the list at @../docs/README.md
+the list at docs/README.md
 
 When working directly on code, consult with only relevant best practices listed
-at @../docs/best_practices.md
+at docs/best_practices.md
 
 ## Destructive Operations
 

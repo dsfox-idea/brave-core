@@ -25,6 +25,7 @@ import { makeNetworkAsset } from '../../../options/asset-options'
 import {
   dedupeAssetsByIdKey,
   getAssetIdKey,
+  isLegacyShieldedToken,
   sortNativeAndAndBatAssetsToTop,
   tokenNameToNftCollectionName,
 } from '../../../utils/asset-utils'
@@ -99,12 +100,12 @@ import SearchBar from '../../../components/shared/search-bar/index'
 import SelectAccountItem from '../../../components/shared/select-account-item/index'
 import SelectAccount from '../../../components/shared/select-account/index'
 import { BuyAssetOptionItem } from '../../../components/shared/buy-option/buy-asset-option'
-import { CopiedToClipboardConfirmation } from '../../../components/desktop/copied-to-clipboard-confirmation/copied-to-clipboard-confirmation'
+import { CopiedToClipboardConfirmation } from './components/copied_to_clipboard_confirmation/copied_to_clipboard_confirmation'
 import { CreateAccountTab } from '../composer_ui/create_account/create_account'
 import { SelectHeader } from './components/select_header/select_header'
 import {
   NetworkFilterSelector, //
-} from '../../../components/desktop/network-filter-selector'
+} from '$wallet/page/components/network_filter_selector/network_filter_selector'
 import {
   WalletPageWrapper, //
 } from '$wallet/page/components/wallet_page_wrapper/wallet_page_wrapper'
@@ -255,7 +256,9 @@ function AssetSelection() {
     )
   const { data: combinedTokensList } = useGetCombinedTokensListQuery()
   const selectedAsset = combinedTokensList.find(
-    (token) => getAssetIdKey(token) === selectedDepositAssetId,
+    (token) =>
+      getAssetIdKey(token) === selectedDepositAssetId
+      && !isLegacyShieldedToken(token),
   )
 
   const { data: visibleNetworks = [] } = useGetVisibleNetworksQuery()
@@ -355,7 +358,7 @@ function AssetSelection() {
         testnetAssetsList,
         nftCollectionAssets,
       ),
-    )
+    ).filter((token) => !isLegacyShieldedToken(token))
   }, [
     mainnetNetworkAssetsList,
     tokensList,
@@ -534,7 +537,9 @@ function DepositAccount() {
   const { accounts } = useAccountsQuery()
   const { data: combinedTokensList } = useGetCombinedTokensListQuery()
   const selectedAsset = combinedTokensList.find(
-    (token) => getAssetIdKey(token) === selectedDepositAssetId,
+    (token) =>
+      getAssetIdKey(token) === selectedDepositAssetId
+      && !isLegacyShieldedToken(token),
   )
   const { data: selectedAssetNetwork } = useGetNetworkQuery(
     selectedAsset ?? skipToken,
