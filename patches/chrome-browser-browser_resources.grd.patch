@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/browser_resources.grd b/chrome/browser/browser_resources.grd
-index 161313092c0e7c77a7b73e968dd0a5cf56cc45a8..9c86320f38197ffa5aaecd9c23c25ab95920d367 100644
+index 87ae613c0a25138cb89f88a75b025848ec47b5da..7d73797abc4c1d3c7ec1109e4332cb9353dcb030 100644
 --- a/chrome/browser/browser_resources.grd
 +++ b/chrome/browser/browser_resources.grd
-@@ -88,15 +88,6 @@
+@@ -89,15 +89,6 @@
        </if>
      </structures>
      <includes>
@@ -17,4 +17,4 @@ index 161313092c0e7c77a7b73e968dd0a5cf56cc45a8..9c86320f38197ffa5aaecd9c23c25ab9
 -      </if>
        <if expr="enable_src_internal">
          <include name="IDR_APC_PROMPTS_JSON" file="../../internal/password_manager/apc_prompts.json" type="BINDATA" />
-       </if>
+         <include name="IDR_SEARCH_ENGINE_HISTORICAL_SEARCH_URLS_JSON" file="../../third_party/search_engines_data/resources_internal/definitions/historical_search_urls.json" type="BINDATA" />

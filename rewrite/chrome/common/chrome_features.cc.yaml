@@ -67,8 +67,17 @@ substitutions:
       override (brave-core #39800), and app/feature_defaults_unittest.cc asserts
       exactly that - a plain BASE_FEATURE here disables Glic and says nothing
       about how, which is what the test caught.
+
+      Growser-236: the platform list is NOT spelled out any more. It used to be
+      matched literally, and Chromium 154 added IS_ANDROID to it with a line
+      continuation - so the pattern found nothing and `plaster apply` refused,
+      which is the whole merge stopped by a list of platforms we do not care
+      about. What this substitution is actually about is the block: whatever
+      the condition, kGlic ships disabled. The match runs to the first #endif
+      after the macro, so a nested #if would break it loudly rather than
+      quietly matching something else.
     regex:
-      re_pattern: 'BASE_FEATURE\(kGlic,\s*#if BUILDFLAG\(IS_MAC\) \|\| BUILDFLAG\(IS_WIN\) \|\| BUILDFLAG\(IS_CHROMEOS\)\s*base::FEATURE_ENABLED_BY_DEFAULT\s*#else\s*base::FEATURE_DISABLED_BY_DEFAULT\s*#endif\s*\);'
+      re_pattern: 'BASE_FEATURE\(kGlic,\s*#if[\s\S]*?#endif\s*\);'
       replace: 'BASE_OVERRIDDEN_FEATURE(kGlic, base::FEATURE_DISABLED_BY_DEFAULT);'
 
   - description: |-

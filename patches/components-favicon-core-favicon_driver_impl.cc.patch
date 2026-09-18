@@ -1,11 +1,11 @@
 diff --git a/components/favicon/core/favicon_driver_impl.cc b/components/favicon/core/favicon_driver_impl.cc
-index 2d92b8005a3d40572b0142d14566d3c4c5c71346..5bde5bc7ae990629c63e95bf061fe30581598dbb 100644
+index 54193474888034199b8b67963cf1e4cbb4864b25..732b47d44299e3b62170f6c179fb407fb88b19cc 100644
 --- a/components/favicon/core/favicon_driver_impl.cc
 +++ b/components/favicon/core/favicon_driver_impl.cc
-@@ -27,22 +27,55 @@ const bool kEnableTouchIcon = false;
+@@ -35,22 +35,55 @@ bool EnableTouchIcon() {
  FaviconDriverImpl::FaviconDriverImpl(CoreFaviconService* favicon_service)
      : favicon_service_(favicon_service) {
-   if (kEnableTouchIcon) {
+   if (EnableTouchIcon()) {
 -    handlers_.push_back(std::make_unique<FaviconHandler>(
 +    large_handlers_.push_back(std::make_unique<FaviconHandler>(
          favicon_service_, this, FaviconDriverObserver::NON_TOUCH_LARGEST));
@@ -59,7 +59,7 @@ index 2d92b8005a3d40572b0142d14566d3c4c5c71346..5bde5bc7ae990629c63e95bf061fe305
  }
  
  bool FaviconDriverImpl::HasPendingTasksForTest() {
-@@ -50,6 +83,10 @@ bool FaviconDriverImpl::HasPendingTasksForTest() {
+@@ -58,6 +91,10 @@ bool FaviconDriverImpl::HasPendingTasksForTest() {
      if (handler->HasPendingTasksForTest())
        return true;
    }
@@ -70,7 +70,7 @@ index 2d92b8005a3d40572b0142d14566d3c4c5c71346..5bde5bc7ae990629c63e95bf061fe305
    return false;
  }
  
-@@ -66,7 +103,15 @@ void FaviconDriverImpl::OnUpdateCandidates(
+@@ -74,7 +111,15 @@ void FaviconDriverImpl::OnUpdateCandidates(
      const GURL& page_url,
      const std::vector<FaviconURL>& candidates,
      const GURL& manifest_url) {

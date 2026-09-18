@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/extensions/chrome_component_extension_resource_manager.cc b/chrome/browser/extensions/chrome_component_extension_resource_manager.cc
-index 6f4212366baf9b35666158d548fd7e375c73266f..9692964d109bb37a57391e8701f57842ecfa8baa 100644
+index 6f4212366baf9b35666158d548fd7e375c73266f..44e3b5fed745a533c56e05dd57221a606a307b86 100644
 --- a/chrome/browser/extensions/chrome_component_extension_resource_manager.cc
 +++ b/chrome/browser/extensions/chrome_component_extension_resource_manager.cc
 @@ -105,6 +105,7 @@ class ChromeComponentExtensionResourceManager::Data {
@@ -10,13 +10,14 @@ index 6f4212366baf9b35666158d548fd7e375c73266f..9692964d109bb37a57391e8701f57842
    static const webui::ResourcePath kExtraComponentExtensionResources[] = {
  #if BUILDFLAG(IS_CHROMEOS)
      {"web_store/webstore_icon_128.png", IDR_WEBSTORE_APP_ICON_128},
-@@ -193,6 +194,9 @@ ChromeComponentExtensionResourceManager::Data::Data() {
+@@ -193,6 +194,10 @@ ChromeComponentExtensionResourceManager::Data::Data() {
          std::move(pdf_viewer_replacements);
    }
  #endif
 +  }();
 +  AddComponentResourceEntries(kBraveExtension);
 +  AddComponentResourceEntries(kBraveExtensionGenerated);
++  AddComponentResourceEntries(kWebharvester);
  }
  
  void ChromeComponentExtensionResourceManager::Data::AddComponentResourceEntries(

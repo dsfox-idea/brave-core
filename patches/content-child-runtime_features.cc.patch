@@ -1,14 +1,14 @@
 diff --git a/content/child/runtime_features.cc b/content/child/runtime_features.cc
-index 95b2766f0a8b02bd0beb52cd46f1be94698f3acb..869e514e6074a8482ac248ab70cb7282eba2d44b 100644
+index eb27b44d69b9dd45141a450a34fbebd49fd0e168..ac4c133800d65bf9545c7bb7c892088d089843e1 100644
 --- a/content/child/runtime_features.cc
 +++ b/content/child/runtime_features.cc
-@@ -515,8 +515,7 @@ void ResolveInvalidConfigurations() {
-         "FencedFramesLocalUnpartitionedDataAccess", false);
-   }
- 
--  if (!base::FeatureList::IsEnabled(
--          attribution_reporting::features::kConversionMeasurement)) {
-+  if (false /* growser #109: keep attributionSrc exposed like Chrome */) {
-     LOG_IF(WARNING, WebRuntimeFeatures::IsAttributionReportingEnabled())
-         << "AttributionReporting cannot be enabled in this "
-            "configuration. Use --"
+@@ -280,8 +280,7 @@ void SetRuntimeFeaturesFromChromiumFeatures() {
+            kSetOnlyIfOverridden},
+           {"AllowURNsInIframes",
+            raw_ref(features::kPrivacySandboxAdsAPIsM1Override)},
+-          {"AttributionReporting",
+-           raw_ref(attribution_reporting::features::kConversionMeasurement)},
++          // growser #109: no row here on purpose - AttributionReporting keeps its stable default so attributionSrc stays exposed as in Chrome.
+           {"ApproximateGeolocationPermission",
+            raw_ref(
+                content_settings::features::kApproximateGeolocationPermission)},
