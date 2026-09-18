@@ -710,8 +710,8 @@ are declared in tools/grit/grit_args.gni.
           {NUM_PROFILES, plural, =1 {&amp;Close this profile} other {&amp;Close this profile (# windows)}}
         </message>
 
-        <message name="IDS_MANAGE_GOOGLE_ACCOUNT" desc="The text label of the Manage Brave account item">
-          Manage your &amp;Brave sync chain
+        <message name="IDS_MANAGE_GOOGLE_ACCOUNT" desc="The text label of the Manage Growser account item">
+          Manage your &amp;Growser sync chain
         </message>
 
         <message name="IDS_OPEN_GUEST_PROFILE" desc="The text label of the open guest profile item">
@@ -7139,18 +7139,18 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Ask about your tabs
       </message>
       <if expr="is_macosx">
-        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="In Title Case: Label for customizing keyboard shortcut item in the Search in Brave status tray context menu.">
+        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="In Title Case: Label for customizing keyboard shortcut item in the Search in Growser status tray context menu.">
           Customize Keyboard Shortcut
         </message>
-        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_SETTINGS" desc="In Title Case: Label for settings item in the Search in Brave status tray context menu [With ellipsis].">
+        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_SETTINGS" desc="In Title Case: Label for settings item in the Search in Growser status tray context menu [With ellipsis].">
           Settings...
         </message>
       </if>
       <if expr="not is_macosx">
-        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Label for customizing keyboard shortcut item in the Search in Brave status tray context menu.">
+        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_CUSTOMIZE_KEYBOARD_SHORTCUT" desc="Label for customizing keyboard shortcut item in the Search in Growser status tray context menu.">
           Customize keyboard shortcut
         </message>
-        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_SETTINGS" desc="Label for settings item in the Search in Brave status tray context menu.">
+        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_SETTINGS" desc="Label for settings item in the Search in Growser status tray context menu.">
           Settings
         </message>
       </if>
@@ -7167,35 +7167,35 @@ Keep your key file in a safe place. You will need it to create new versions of y
           <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_WITH_GOOGLE_LENS" desc="In Title Case: The name of the Search with Google Lens contextual search command in the context menu">
             Search with Google Lens
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_PAGE_WITH_GOOGLE" desc="In Title Case: The name of the Search this page with Brave contextual search command in the context menu">
-            Search This Page with Brave
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_PAGE_WITH_GOOGLE" desc="In Title Case: The name of the Search this page with Google contextual search command in the context menu">
+            Search This Page with Google
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_WITH_GOOGLE" desc="In Title Case: The name of the Search with Brave contextual search command in the context menu">
-            Search with Brave
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_WITH_GOOGLE" desc="In Title Case: The name of the Search with Google contextual search command in the context menu">
+            Search with Google
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_IMAGE_WITH_GOOGLE" desc="In Title Case: The name of the Search this image with Brave contextual search command in the context menu">
-            Search This Image with Brave
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_IMAGE_WITH_GOOGLE" desc="In Title Case: The name of the Search this image with Google contextual search command in the context menu">
+            Search This Image with Google
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_GOOGLE_FOR" desc="In Title Case: The name of the Search Brave for “string” contextual search command in the context menu">
-            Search Brave for “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_GOOGLE_FOR" desc="In Title Case: The name of the Search Google for “string” contextual search command in the context menu">
+            Search Google for “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_FOR" desc="In Title Case: The name of the Search for “string” contextual search command in the context menu">
             Search for “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_PAGE" desc="In Title Case: The name of the Ask Brave about this page contextual search command in the context menu">
-            Ask Brave About This Page
+          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_PAGE" desc="In Title Case: The name of the Ask Google about this page contextual search command in the context menu">
+            Ask Google About This Page
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_ASK_ABOUT_THIS_PAGE" desc="In Title Case: The name of the Ask about this page contextual search command in the context menu">
             Ask About This Page
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_IMAGE" desc="In Title Case: The name of the Ask Brave about this image contextual search command in the context menu">
-            Ask Brave About This Image
+          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_IMAGE" desc="In Title Case: The name of the Ask Google about this image contextual search command in the context menu">
+            Ask Google About This Image
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_ASK_ABOUT_THIS_IMAGE" desc="In Title Case: The name of the Ask about this image contextual search command in the context menu">
             Ask About This Image
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT" desc="In Title Case: The name of the Ask Brave about “string” contextual search command in the context menu">
-            Ask Brave About “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
+          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT" desc="In Title Case: The name of the Ask Google about “string” contextual search command in the context menu">
+            Ask Google About “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_ASK_ABOUT" desc="In Title Case: The name of the Ask about “string” contextual search command in the context menu">
             Ask About “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
@@ -7205,35 +7205,35 @@ Keep your key file in a safe place. You will need it to create new versions of y
           <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_WITH_GOOGLE_LENS" desc="The name of the Search with Google Lens contextual search command in the context menu">
             Search with Google Lens
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_PAGE_WITH_GOOGLE" desc="The name of the Search this page with Brave contextual search command in the context menu">
-            Search this page with Brave
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_PAGE_WITH_GOOGLE" desc="The name of the Search this page with Google contextual search command in the context menu">
+            Search this page with Google
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_WITH_GOOGLE" desc="The name of the Search with Brave contextual search command in the context menu">
-            Search with Brave
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_WITH_GOOGLE" desc="The name of the Search with Google contextual search command in the context menu">
+            Search with Google
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_IMAGE_WITH_GOOGLE" desc="The name of the Search this image with Brave contextual search command in the context menu">
-            Search this image with Brave
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_THIS_IMAGE_WITH_GOOGLE" desc="The name of the Search this image with Google contextual search command in the context menu">
+            Search this image with Google
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_GOOGLE_FOR" desc="The name of the Search Brave for “string” contextual search command in the context menu">
-            Search Brave for “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
+          <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_GOOGLE_FOR" desc="The name of the Search Google for “string” contextual search command in the context menu">
+            Search Google for “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_SEARCH_FOR" desc="The name of the Search for “string” contextual search command in the context menu">
             Search for “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_PAGE" desc="The name of the Ask Brave about this page contextual search command in the context menu">
-            Ask Brave about this page
+          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_PAGE" desc="The name of the Ask Google about this page contextual search command in the context menu">
+            Ask Google about this page
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_ASK_ABOUT_THIS_PAGE" desc="The name of the Ask about this page contextual search command in the context menu">
             Ask about this page
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_IMAGE" desc="The name of the Ask Brave about this image contextual search command in the context menu">
-            Ask Brave about this image
+          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT_THIS_IMAGE" desc="The name of the Ask Google about this image contextual search command in the context menu">
+            Ask Google about this image
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_ASK_ABOUT_THIS_IMAGE" desc="The name of the Ask about this image contextual search command in the context menu">
             Ask about this image
           </message>
-          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT" desc="The name of the Ask Brave about “string” contextual search command in the context menu">
-            Ask Brave about “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
+          <message name="IDS_CONTEXTUAL_SEARCH_ASK_GOOGLE_ABOUT" desc="The name of the Ask Google about “string” contextual search command in the context menu">
+            Ask Google about “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
           </message>
           <message name="IDS_CONTEXTUAL_SEARCH_ASK_ABOUT" desc="The name of the Ask about “string” contextual search command in the context menu">
             Ask about “<ph name="SEARCH_TERMS">$1<ex>flowers</ex></ph>”
@@ -7301,7 +7301,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Search
       </message>
       <message name="IDS_LOOMNIBOX_FRE_TITLE" desc="Title of the First Run Experience (FRE) modal for Loomnibox.">
-        Ask Brave from anywhere
+        Ask Google from anywhere
       </message>
       <message name="IDS_LOOMNIBOX_FRE_LENS_PRIMARY" desc="Primary text explaining how to use Google Lens in the Loomnibox.">
         Use the lens button to share what’s on your screen
@@ -8292,7 +8292,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         AI Mode
       </message>
       <message name="IDS_NTP_COMPOSE_ENTRYPOINT_A11Y_LABEL" desc="The accessibility label for the compose entrypoint in the searchbox on the New Tab Page." formatter_data="android_java">
-        Ask AI Mode in Growser Search
+        Ask AI Mode in Google Search
       </message>
       <message name="IDS_NTP_COMPOSE_PLACEHOLDER_TEXT" desc="The placeholder for the input in the compose box.">
         Ask AI Mode
@@ -9828,8 +9828,8 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_LENS_DEFAULT_TITLE" desc="Default title of the Lens side panel">
         Image Search
       </message>
-      <message name="IDS_LENS_COBROWSE_CURRENT_TAB_IPH_DESCRIPTION" desc="Informs user that the content and URL of their current tab is shared with Growser to get more relevant answers.">
-        The content and the URL of your current tab is shared with Growser to give you more relevant answers. You can add or remove tabs as you browse.
+      <message name="IDS_LENS_COBROWSE_CURRENT_TAB_IPH_DESCRIPTION" desc="Informs user that the content and URL of their current tab is shared with Google to get more relevant answers.">
+        The content and the URL of your current tab is shared with Google to give you more relevant answers. You can add or remove tabs as you browse.
       </message>
 
       <!--Tooltip strings -->
@@ -13576,7 +13576,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Growser
         Sent!
       </message>
       <message name="IDS_TUTORIAL_SEND_TAB_TO_SELF_SUCCESS_BODY" desc="Success description educating about sign-in and cross-device sharing.">
-        When you’re signed in to Brave with the same account, you can quickly send links between any devices
+        When you’re signed in to Growser with the same account, you can quickly send links between any devices
       </message>
       <message name="IDS_SEND_TAB_TO_SELF_VERIFY_ITS_YOU_PROMO_TITLE" desc="Title of the send-tab-to-self sign-in promo bubble when the user needs to verify their identity (reauthenticate).">
         Send a link to another device
@@ -16237,7 +16237,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
         Share an application window
       </message>
       <message name="IDS_SEARCHBOX_PICKER_DESCRIPTION" desc="Text on the searchbox screen picker dialog explaining capture privacy.">
-        Brave will only see what's visible to you
+        Google will only see what's visible to you
       </message>
       <message name="IDS_DESKTOP_MEDIA_PICKER_TEXT" desc="Text for the window picker dialog shown when desktop capture is requested by an app to be used by the app itself.">
         <ph name="APP_NAME">$1<ex>Growser Hangouts</ex></ph> wants to share the contents of your screen.
@@ -18881,8 +18881,8 @@ Please help our engineers fix this problem. Tell us what happened right before y
         Exit full screen
       </message>
       <!-- Dictation strings -->
-      <message name="IDS_DICTATION_ONBOARDING_BULLET_DATA_SHARING" desc="The second paragraph in the onboarding dialog describing data sharing with Growser servers." translateable="false">
-        The content and URL of the page you're on and your spoken audio will be sent to Growser to generate text based on what you say and the page context
+      <message name="IDS_DICTATION_ONBOARDING_BULLET_DATA_SHARING" desc="The second paragraph in the onboarding dialog describing data sharing with Google servers." translateable="false">
+        The content and URL of the page you're on and your spoken audio will be sent to Google to generate text based on what you say and the page context
       </message>
       <message name="IDS_DICTATION_ONBOARDING_BUTTON_ACCEPT" desc="Button label on the onboarding dialog to confirm the provided information and use the feature." translateable="false">
         Allow
@@ -18933,7 +18933,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
       How screenshot sharing works
     </message>
     <message name="IDS_OMNIBOX_EVERYWHERE_SCREENSHOT_DISCLOSURE_BODY" desc="Body text explaining how screenshot sharing works in Omnibox Everywhere.">
-      You can share a screenshot with Brave to reference its content in your search. When you share a screenshot of your entire screen, Brave will only see what’s visible to you.
+      You can share a screenshot with Google to reference its content in your search. When you share a screenshot of your entire screen, Google will only see what’s visible to you.
     </message>
 
     <!-- Responsive Toolbar -->

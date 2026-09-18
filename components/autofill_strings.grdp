@@ -445,8 +445,8 @@
   <message name="IDS_AUTOFILL_GMAIL_OTP_REQUIRED_STEP_1" desc="First step in the Gmail OTP settings required dialog prompting the user to turn on smart features in Gmail settings.">
     Turn on “Smart features” in <ph name="BEGIN_LINK">&lt;a href="$1" tabindex="0" aria-description="$2" target="_blank"&gt;</ph>Gmail settings<ph name="LINK_END">&lt;/a&gt;</ph>
   </message>
-  <message name="IDS_AUTOFILL_GMAIL_OTP_REQUIRED_STEP_2" desc="Second step in the Gmail OTP settings required dialog prompting the user to turn on smart features in other Brave products.">
-    Turn on “<ph name="BEGIN_LINK">&lt;a href="$1" tabindex="0" aria-description="$2" target="_blank"&gt;</ph>Smart features in other Brave products<ph name="LINK_END">&lt;/a&gt;</ph>”
+  <message name="IDS_AUTOFILL_GMAIL_OTP_REQUIRED_STEP_2" desc="Second step in the Gmail OTP settings required dialog prompting the user to turn on smart features in other Google products.">
+    Turn on “<ph name="BEGIN_LINK">&lt;a href="$1" tabindex="0" aria-description="$2" target="_blank"&gt;</ph>Smart features in other Google products<ph name="LINK_END">&lt;/a&gt;</ph>”
   </message>
   <message name="IDS_AUTOFILL_DISABLE_SETTINGS_EXPLANATION_TITLE" desc="Title of the card explaining why the settings page was disabled. Sentence-Cased." formatter_data="android_java">
     Google isn’t your autofill provider
@@ -533,8 +533,8 @@
   </if>
 
   <!-- Wallet Reminder Notice strings -->
-  <message name="IDS_AUTOFILL_WALLET_REMINDER_NOTICE_TITLE" desc="Title for the Wallet Reminder Notice prompt explaining that Growser Wallet settings apply to info saved from Growser." formatter_data="android_java">
-    Your Growser Wallet settings apply to info saved from Growser
+  <message name="IDS_AUTOFILL_WALLET_REMINDER_NOTICE_TITLE" desc="Title for the Wallet Reminder Notice prompt explaining that Google Wallet settings apply to info saved from Growser." formatter_data="android_java">
+    Your Google Wallet settings apply to info saved from Growser
   </message>
   <message name="IDS_AUTOFILL_WALLET_REMINDER_NOTICE_CONFIRM_BUTTON_LABEL" desc="Button label to acknowledge and dismiss the Wallet Reminder Notice prompt." formatter_data="android_java">
     Got it
@@ -913,7 +913,7 @@
       OK
     </message>
     <message name="IDS_AT_MEMORY_AI_DISCLOSURE" desc="The text shown at the bottom of the AtMemory bottom sheet to set user expectations regarding potential incorrect suggestions." formatter_data="android_java" translateable="false">
-      Gemini is AI and can make mistakes. <ph name="BEGIN_LINK">&lt;link&gt;</ph>More about relevant data sent to Growser<ph name="END_LINK">&lt;/link&gt;</ph>
+      Gemini is AI and can make mistakes. <ph name="BEGIN_LINK">&lt;link&gt;</ph>More about relevant data sent to Google<ph name="END_LINK">&lt;/link&gt;</ph>
     </message>
   </if>
    <message name="IDS_AUTOFILL_AT_MEMORY_SUGGESTION_SOURCE_TEXT" desc="The label for a text in the At Memory flyout that shows the source of the autofill suggestion." formatter_data="android_java" translateable="false">
@@ -1070,58 +1070,58 @@
     Add redress number
   </message>
 
-  <message name="IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a driver's license, with Brave Wallet branding.">
-    Add driver's license to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a driver's license, with Google Wallet branding.">
+    Add driver's license to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a driver's license, with Brave Wallet branding.">
-    Add driver's license securely to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a driver's license, with Google Wallet branding.">
+    Add driver's license securely to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Brave settings that allows a user to explicitly create a driver's license.">
+  <message name="IDS_AUTOFILL_AI_ADD_DRIVERS_LICENSE_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Growser settings that allows a user to explicitly create a driver's license.">
     Add driver's license securely
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create an identity card, with Brave Wallet branding.">
-    Add ID card to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create an identity card, with Google Wallet branding.">
+    Add ID card to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create an identity card, with Brave Wallet branding.">
-    Add ID card securely to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create an identity card, with Google Wallet branding.">
+    Add ID card securely to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Brave settings that allows a user to explicitly create an identity card.">
+  <message name="IDS_AUTOFILL_AI_ADD_ID_CARD_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Growser settings that allows a user to explicitly create an identity card.">
     Add ID card securely
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a passport, with Brave Wallet branding.">
-    Add passport to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a passport, with Google Wallet branding.">
+    Add passport to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a passport, with Brave Wallet branding.">
-    Add passport securely to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a passport, with Google Wallet branding.">
+    Add passport securely to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Brave settings that allows a user to explicitly create a passport.">
+  <message name="IDS_AUTOFILL_AI_ADD_PASSPORT_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Growser settings that allows a user to explicitly create a passport.">
     Add passport securely
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a vehicle, with Brave Wallet branding.">
-    Add vehicle to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a vehicle, with Google Wallet branding.">
+    Add vehicle to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a vehicle, with Brave Wallet branding.">
-    Add vehicle securely to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a vehicle, with Google Wallet branding.">
+    Add vehicle securely to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Brave settings that allows a user to explicitly create a vehicle.">
+  <message name="IDS_AUTOFILL_AI_ADD_VEHICLE_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Growser settings that allows a user to explicitly create a vehicle.">
     Add vehicle securely
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a Known Traveler Number, with Brave Wallet branding.">
-    Add Known Traveler Number to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a Known Traveler Number, with Google Wallet branding.">
+    Add Known Traveler Number to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a Known Traveler Number, with Brave Wallet branding.">
-    Add Known Traveler Number securely to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a Known Traveler Number, with Google Wallet branding.">
+    Add Known Traveler Number securely to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Brave settings that allows a user to explicitly create a Known Traveler Number.">
+  <message name="IDS_AUTOFILL_AI_ADD_KNOWN_TRAVELER_NUMBER_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Growser settings that allows a user to explicitly create a Known Traveler Number.">
     Add Known Traveler Number securely
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a redress number, with Brave Wallet branding.">
-    Add redress number to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a redress number, with Google Wallet branding.">
+    Add redress number to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Brave settings that allows a user to explicitly create a redress number, with Brave Wallet branding.">
-    Add redress number securely to Brave Wallet
+  <message name="IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_VARIANT_1_BRANDED" desc="The title of a dialog within Growser settings that allows a user to explicitly create a redress number, with Google Wallet branding.">
+    Add redress number securely to Google Wallet
   </message>
-  <message name="IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Brave settings that allows a user to explicitly create a redress number.">
+  <message name="IDS_AUTOFILL_AI_ADD_REDRESS_NUMBER_ENTITY_VARIANT_2_SECURELY" desc="The title of a dialog within Growser settings that allows a user to explicitly create a redress number.">
     Add redress number securely
   </message>
 

@@ -360,16 +360,16 @@
   <message name="IDS_HISTORY_CRITICAL_ACTION_CREDENTIALS_OTP_TOOLTIP" desc="Tooltip for credentials OTP verification code critical action in history item." translateable="false">
     Verification codes
   </message>
-  <message name="IDS_HISTORY_CRITICAL_ACTION_APP_MENU_IPH_BODY" desc="Text shown in the IPH bubble attached to the Brave app menu teaching users where to view Gemini's auto browse actions." translateable="false">
-    In Brave history, you can see the key actions that Gemini completed while browsing for you
+  <message name="IDS_HISTORY_CRITICAL_ACTION_APP_MENU_IPH_BODY" desc="Text shown in the IPH bubble attached to the Growser app menu teaching users where to view Gemini's auto browse actions." translateable="false">
+    In Growser history, you can see the key actions that Gemini completed while browsing for you
   </message>
-  <message name="IDS_HISTORY_CRITICAL_ACTION_APP_MENU_IPH_ACTION" desc="Button label on the app menu IPH bubble to navigate to Brave history." translateable="false">
+  <message name="IDS_HISTORY_CRITICAL_ACTION_APP_MENU_IPH_ACTION" desc="Button label on the app menu IPH bubble to navigate to Growser history." translateable="false">
     Review key actions
   </message>
-  <message name="IDS_HISTORY_CRITICAL_ACTION_FILTER_CHIP_IPH_BODY" desc="Text shown in the IPH bubble attached to the Gemini filter chip on the Brave history page." translateable="false">
+  <message name="IDS_HISTORY_CRITICAL_ACTION_FILTER_CHIP_IPH_BODY" desc="Text shown in the IPH bubble attached to the Gemini filter chip on the Growser history page." translateable="false">
     See the key actions that Gemini completed while browsing for you
   </message>
-  <message name="IDS_HISTORY_CRITICAL_ACTION_FILTER_CHIP_IPH_SCREENREADER" is_accessibility_with_no_ui="true" desc="Accessible screen reader text for the IPH bubble attached to the Gemini filter chip on the Brave history page." translateable="false">
+  <message name="IDS_HISTORY_CRITICAL_ACTION_FILTER_CHIP_IPH_SCREENREADER" is_accessibility_with_no_ui="true" desc="Accessible screen reader text for the IPH bubble attached to the Gemini filter chip on the Growser history page." translateable="false">
     See the key actions that Gemini completed while browsing for you
   </message>
 

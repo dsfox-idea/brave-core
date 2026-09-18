@@ -1886,7 +1886,7 @@ Growser is unable to recover your settings.
 
       <!-- Desktop Capture -->
       <message name="IDS_SEARCHBOX_PICKER_HEADLINE" desc="Title of the searchbox screen or window picker dialog.">
-        Choose what to share with Brave
+        Choose what to share with Growser
       </message>
       <message name="IDS_DESKTOP_MEDIA_PICKER_SOURCE_TYPE_TAB" desc="Text for the button on the window picker dialog, clicking which takes one to tab sharing">
         Growser Tab
@@ -3034,39 +3034,39 @@ Growser is unable to recover your settings.
         </message>
       </if>
       <if expr="is_macosx">
-        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_TOGGLE" desc="In Title Case: Label for the toggle item in the Search in Brave status tray context menu.">
-          Open Search with Brave
+        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_TOGGLE" desc="In Title Case: Label for the toggle item in the Search in Growser status tray context menu.">
+          Open Search with Growser
         </message>
       </if>
       <if expr="not is_macosx">
-        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_TOGGLE" desc="Label for the toggle item in the Search in Brave status tray context menu.">
-          Open search with Brave
+        <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_MENU_TOGGLE" desc="Label for the toggle item in the Search in Growser status tray context menu.">
+          Open search with Growser
         </message>
       </if>
-      <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_TOOLTIP" desc="Tooltip text for the Search in Brave status tray icon.">
-        Search in Brave
+      <message name="IDS_OMNIBOX_EVERYWHERE_STATUS_ICON_TOOLTIP" desc="Tooltip text for the Search in Growser status tray icon.">
+        Search in Growser
       </message>
       <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_TITLE" desc="Title of the Omnibox Everywhere section on the search settings page.">
-        Search with Brave
+        Search with Growser
       </message>
       <if expr="is_macosx">
-        <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_TOGGLE" desc="Name of the toggle that controls whether Search with Brave is shown in the Mac menu bar (on Mac only).">
-          Show search with Brave in Mac menu bar and turn on keyboard shortcut
+        <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_TOGGLE" desc="Name of the toggle that controls whether Search with Growser is shown in the Mac menu bar (on Mac only).">
+          Show search with Growser in Mac menu bar and turn on keyboard shortcut
         </message>
       </if>
       <if expr="is_win or is_linux or is_chromeos">
-        <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_TOGGLE" desc="Name of the toggle that controls whether Search with Brave is shown in the system tray (on ChromeOS, Windows and Linux).">
-          Show search with Brave in system tray and turn on keyboard shortcut
+        <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_TOGGLE" desc="Name of the toggle that controls whether Search with Growser is shown in the system tray (on ChromeOS, Windows and Linux).">
+          Show search with Growser in system tray and turn on keyboard shortcut
         </message>
       </if>
-      <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_TOGGLE_SUBLABEL" desc="Sublabel of the toggle that controls whether Omnibox Everywhere is shown across the device even if Brave is minimized.">
-        Search and ask questions from anywhere, even if Brave is minimized
+      <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_TOGGLE_SUBLABEL" desc="Sublabel of the toggle that controls whether Omnibox Everywhere is shown across the device even if Growser is minimized.">
+        Search and ask questions from anywhere, even if Growser is minimized
       </message>
       <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_SHORTCUT_SUBLABEL" desc="Description for the global keyboard shortcut setting to invoke Omnibox Everywhere.">
         Search with a keyboard shortcut.
       </message>
       <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_SHOW_SHORTCUTS_TITLE" desc="Label for the toggle to show shortcuts in Omnibox Everywhere.">
-        Show Brave site shortcuts
+        Show Growser site shortcuts
       </message>
       <message name="IDS_SETTINGS_OMNIBOX_EVERYWHERE_SHOW_SHORTCUTS_SUBLABEL" desc="Description for the toggle to show shortcuts in Omnibox Everywhere.">
         Easy access to websites below the address bar
