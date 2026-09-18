@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 
+#include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/json/json_writer.h"
@@ -273,7 +274,8 @@ class ConversationAPIClientUnitTest : public testing::Test {
     credential_manager_ = std::make_unique<MockAIChatCredentialManager>(
         base::NullCallback(), &prefs_);
     model_service_ = std::make_unique<ModelService>(
-        &prefs_, os_crypt_async_.get(), network::NetworkContextGetter());
+        &prefs_, os_crypt_async_.get(), network::NetworkContextGetter(),
+        /*url_loader_factory=*/nullptr, base::FilePath());
 
     client_ = std::make_unique<TestConversationAPIClient>(
         credential_manager_.get(), model_service_.get());
@@ -1109,7 +1111,7 @@ TEST_F(ConversationAPIClientUnitTest, PerformRequest_PermissionChallenge) {
           std::nullopt, std::nullopt,
           mojom::PermissionChallenge::New(
               "Server determined this tool use is off", std::nullopt,
-              std::nullopt),
+              std::nullopt, /*supports_allow_session=*/false),
           false));
   {
     SCOPED_TRACE(
@@ -1142,7 +1144,8 @@ TEST_F(ConversationAPIClientUnitTest, PerformRequest_PermissionChallenge) {
           "read_file", "call_789", "{\"path\":\"/etc/passwd\"}", std::nullopt,
           std::nullopt,
           mojom::PermissionChallenge::New("This tool is also off-topic",
-                                          std::nullopt, std::nullopt),
+                                          std::nullopt, std::nullopt,
+                                          /*supports_allow_session=*/false),
           false));
   {
     SCOPED_TRACE(
@@ -1189,7 +1192,8 @@ TEST_F(ConversationAPIClientUnitTest, PerformRequest_PermissionChallenge) {
       mojom::ConversationEntryEvent::NewToolUseEvent(mojom::ToolUseEvent::New(
           "missing_reasoning", "call_303", "{}", std::nullopt, std::nullopt,
           mojom::PermissionChallenge::New(std::nullopt, std::nullopt,
-                                          std::nullopt),
+                                          std::nullopt,
+                                          /*supports_allow_session=*/false),
           false));
   {
     SCOPED_TRACE(

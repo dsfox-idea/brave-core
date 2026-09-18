@@ -284,7 +284,7 @@ struct AddAccountView: View {
         self.isLoadingFile = true
         DispatchQueue.global(qos: .userInitiated).async {
           do {
-            let data = try String(contentsOf: fileURL)
+            let data = try String(contentsOf: fileURL, encoding: .utf8)
             DispatchQueue.main.async {
               self.privateKey = data
               self.isLoadingFile = false
@@ -368,6 +368,7 @@ struct AddAccountView: View {
       }
       Group {
         TextEditor(text: $privateKey)
+          .keyboardType(.asciiCapable)
           .autocapitalization(.none)
           .font(.system(.body, design: .monospaced))
           .frame(height: privateKeyFieldHeight)
@@ -385,9 +386,6 @@ struct AddAccountView: View {
             .accessibilityHidden(true),
             alignment: .top
           )
-          .introspectTextView { textView in
-            textView.smartQuotesType = .no
-          }
           .accessibilityValue(
             privateKey.isEmpty ? Strings.Wallet.importAccountPlaceholder : privateKey
           )
