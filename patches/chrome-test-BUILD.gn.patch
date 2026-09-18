@@ -1,5 +1,5 @@
 diff --git a/chrome/test/BUILD.gn b/chrome/test/BUILD.gn
-index abc2dc97418a44f58f380fe423714eb2388f69ec..2ea51e7ce3b82b84220dea55fe2a38cb65998bcd 100644
+index abc2dc97418a44f58f380fe423714eb2388f69ec..d4a759cd21056a3db21639c10bffe0474ed11cd6 100644
 --- a/chrome/test/BUILD.gn
 +++ b/chrome/test/BUILD.gn
 @@ -507,6 +507,7 @@ static_library("test_support") {
@@ -10,7 +10,45 @@ index abc2dc97418a44f58f380fe423714eb2388f69ec..2ea51e7ce3b82b84220dea55fe2a38cb
    data = []
    data_deps = []
  
-@@ -5896,6 +5897,7 @@ test("unit_tests") {
+@@ -3904,9 +3905,21 @@ if (!is_android) {
+         "//chrome/browser/ui/find_bar:browser_tests",
+         "//chrome/browser/ui/global_error:browser_tests",
+         "//chrome/browser/ui/hats:test_support",
+-        "//chrome/browser/ui/lens",
+-        "//chrome/browser/ui/lens:browser_tests",
+-        "//chrome/browser/ui/lens:test_support",
++      ]
++      # Growser-236: Chromium 154 made these unconditional, and
++      # //chrome/browser/ui/lens asserts enable_lens_overlay_backend,
++      # which is false here - we ship without Lens (enable_lens_desktop=
++      # false), and the backend follows it. gn gen died on the assert
++      # before compiling anything. Guarded rather than deleted, so a
++      # build with Lens on is unchanged.
++      if (enable_lens_overlay_backend) {
++        deps += [
++          "//chrome/browser/ui/lens",
++          "//chrome/browser/ui/lens:browser_tests",
++          "//chrome/browser/ui/lens:test_support",
++        ]
++      }
++      deps += [
+         "//chrome/browser/ui/media_router",
+         "//chrome/browser/ui/media_router:browser_tests",
+         "//chrome/browser/ui/page_action:icon_type",
+@@ -3964,8 +3977,10 @@ if (!is_android) {
+         "//ui/views",
+         "//url",
+       ]
+-      allow_circular_includes_from +=
+-          [ "//chrome/browser/ui/lens:browser_tests" ]
++      if (enable_lens_overlay_backend) {  # Growser-236
++        allow_circular_includes_from +=
++            [ "//chrome/browser/ui/lens:browser_tests" ]
++      }
+     }
+ 
+     # TODO(crbug.com/353332589): Move this browsertest into
+@@ -5896,6 +5911,7 @@ test("unit_tests") {
      "//ui/webui",
      "//v8",
    ]
@@ -18,7 +56,7 @@ index abc2dc97418a44f58f380fe423714eb2388f69ec..2ea51e7ce3b82b84220dea55fe2a38cb
  
    if (enable_devtools_frontend) {
      deps += [ "//chrome/browser/ui/webui/devtools:unit_tests" ]
-@@ -8902,6 +8904,7 @@ if (!is_android && !is_chromeos_device) {
+@@ -8902,6 +8918,7 @@ if (!is_android && !is_chromeos_device) {
        "//ui/views",
        "//ui/web_dialogs:test_support",
      ]
