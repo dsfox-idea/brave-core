@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/mini_installer/chrome.release b/chrome/installer/mini_installer/chrome.release
-index b0008cc7bb75f1779680c5035ba0a053dd010dcc..59ddb44ea046f92b82bf8174bf009fd43d9abf63 100644
+index b0008cc7bb75f1779680c5035ba0a053dd010dcc..63f622b6f9226f2f40469171f8e904b726eec8e6 100644
 --- a/chrome/installer/mini_installer/chrome.release
 +++ b/chrome/installer/mini_installer/chrome.release
 @@ -6,7 +6,7 @@
@@ -7,15 +7,20 @@ index b0008cc7bb75f1779680c5035ba0a053dd010dcc..59ddb44ea046f92b82bf8174bf009fd4
  # Chrome Application dir entries, sorted alphabetically.
  #
 -chrome.exe: %(ChromeDir)s\
-+brave.exe: %(ChromeDir)s\
++growser.exe: %(ChromeDir)s\
  chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir assembly manifest.
-@@ -18,9 +18,19 @@ chrome_proxy.exe: %(ChromeDir)s\
+@@ -18,9 +18,24 @@ chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir entries, sorted alphabetically.
  #
-+brave.exe.sig: %(VersionDir)s\
++growser.exe.sig: %(VersionDir)s\
++# growser (#51/#76): nothing here lists the updater, because it is not
++# built - Windows ships through the Store and enable_updater=false. A file
++# list is not a build dependency, so a line here does not notice that its
++# target stopped being produced: that is how a 151.1.95.0 updater.exe went
++# out inside a 152 installer. The line comes back with #51, with the flag.
 +brave_vpn_helper.exe: %(VersionDir)s\
 +brave_vpn_wireguard_service.exe: %(VersionDir)s\BraveVpnWireguardService\
 +tunnel.dll: %(VersionDir)s\BraveVpnWireguardService\
@@ -31,7 +36,7 @@ index b0008cc7bb75f1779680c5035ba0a053dd010dcc..59ddb44ea046f92b82bf8174bf009fd4
  chrome_elf.dll: %(VersionDir)s\
  chrome_pwa_launcher.exe: %(VersionDir)s\
  chrome_renderer.dll: %(VersionDir)s\
-@@ -73,6 +83,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
+@@ -73,6 +88,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
  
  [HIDPI]
  chrome_200_percent.pak: %(VersionDir)s\

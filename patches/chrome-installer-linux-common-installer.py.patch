@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/common/installer.py b/chrome/installer/linux/common/installer.py
-index 3970d8ebf641edc415d019a628f5e6fbc08f8fcf..df4260032874b86130a0a0c796b96ad5df55c370 100644
+index 3970d8ebf641edc415d019a628f5e6fbc08f8fcf..4bc9c1795a440540486593b367c5fde6a9e71339 100644
 --- a/chrome/installer/linux/common/installer.py
 +++ b/chrome/installer/linux/common/installer.py
 @@ -218,6 +218,8 @@ def gen_changelog(
@@ -11,7 +11,16 @@ index 3970d8ebf641edc415d019a628f5e6fbc08f8fcf..df4260032874b86130a0a0c796b96ad5
      gzlog_dir.mkdir(parents=True, exist_ok=True)
      gzlog = gzlog_dir / "changelog.gz"
  
-@@ -379,6 +381,7 @@ class InstallerConfig:
+@@ -346,6 +348,8 @@ class InstallerConfig:
+     deb_pre_depends: str = ""
+     deb_depends: str = ""
+     deb_provides: str = ""
++    deb_replaces: str = ""      # Growser-222
++    deb_conflicts: str = ""     # Growser-222
+     deb_date_rfc5322: str = ""
+ 
+     # RPM
+@@ -379,6 +383,7 @@ class InstallerConfig:
      extra_desktop_entries: str = ""
      startup_wm_class: str = ""
      include_setuid_sandbox: bool = True
@@ -19,7 +28,7 @@ index 3970d8ebf641edc415d019a628f5e6fbc08f8fcf..df4260032874b86130a0a0c796b96ad5
  
      @classmethod
      def from_args(
-@@ -832,6 +835,7 @@ class InstallerConfig:
+@@ -832,6 +837,7 @@ class InstallerConfig:
                  icon_suffix = "_dev"
              elif self.channel == "canary":
                  icon_suffix = "_canary"
@@ -27,7 +36,7 @@ index 3970d8ebf641edc415d019a628f5e6fbc08f8fcf..df4260032874b86130a0a0c796b96ad5
  
          icon_sizes = [16, 24, 32, 48, 64, 128, 256]
          logo_resources_png = []
-@@ -1430,3 +1434,4 @@ def compute_repo_package_hash_for_presubmit(
+@@ -1430,3 +1436,4 @@ def compute_repo_package_hash_for_presubmit(
              return hashlib.sha256(f.read()).hexdigest()
      finally:
          os.umask(old_umask)
