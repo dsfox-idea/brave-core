@@ -439,11 +439,11 @@ inline constexpr char16_t kGmailOtpFillingLearnMoreURL[] =
     u"https://growser.org/";
 
 // URL for Gmail general settings.
-inline constexpr char16_t kGmailSettingsURL[] = u"https://support.brave.app";
+inline constexpr char16_t kGmailSettingsURL[] = u"https://growser.org/";
 
 // URL for Gmail smart features settings.
 inline constexpr char16_t kGmailSmartFeaturesURL[] =
-    u"https://support.brave.app";
+    u"https://growser.org/";
 
 // "Learn more" URL for the performance intervention notification setting.
 inline constexpr char16_t kPerformanceInterventionLearnMoreUrl[] =
