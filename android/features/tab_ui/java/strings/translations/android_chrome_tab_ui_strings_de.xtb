@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Ihre geschlossenen Tabs und Gruppen können in den Abschnitten „Zuletzt geöffnete Tabs“ oder „Tabgruppen“ wieder geöffnet werden. Dies gilt allerdings nicht für Ihren privaten Tab.}
         other {Ihre geschlossenen Tabs und Gruppen können in den Abschnitten „Zuletzt geöffnete Tabs“ oder „Tabgruppen“ wieder geöffnet werden. Dies gilt allerdings nicht für Ihre privaten Tabs.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> Link aus Growser}other{<ph name="TABS_COUNT_MANY"/> Links aus Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> Rezension von Growser}other{<ph name="REVIEWS_COUNT_MANY"/> Rezensionen von Growser}}</translation>
+<translation id="2928243913527329289">Growser | Informationen zu diesem Händler</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Inaktive Tabs und Tabgruppen in Growser werden nach <ph name="AUTO_DELETE_DELAY_ONE"/> Monat automatisch geschlossen. Du kannst das in den Einstellungen ändern.}other{Inaktive Tabs und Tabgruppen in Growser werden nach <ph name="AUTO_DELETE_DELAY_MANY"/> Monaten automatisch geschlossen. Du kannst das in den Einstellungen ändern.}}</translation>
 </translationbundle>

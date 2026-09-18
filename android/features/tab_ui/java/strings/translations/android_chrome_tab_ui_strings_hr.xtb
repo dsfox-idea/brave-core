@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Vaše zatvorene kartice i grupe mogu se ponovno otvoriti iz odjeljka Nedavne kartice i odjeljka Grupe kartica. Vaša kartica Privatno neće biti dostupna.}
         other {Vaše zatvorene kartice i grupe mogu se ponovno otvoriti iz odjeljka Nedavne kartice i odjeljka Grupe kartica. Vaše kartice Privatno, njih #, neće biti dostupne.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> veza iz Bravea}one{<ph name="TABS_COUNT_MANY"/> veza iz Bravea}few{<ph name="TABS_COUNT_MANY"/> veze iz Bravea}other{<ph name="TABS_COUNT_MANY"/> veza iz Bravea}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzija s Bravea}one{<ph name="REVIEWS_COUNT_MANY"/> recenzija s Bravea}few{<ph name="REVIEWS_COUNT_MANY"/> recenzije s Bravea}other{<ph name="REVIEWS_COUNT_MANY"/> recenzija s Bravea}}</translation>
+<translation id="2928243913527329289">Growser | O ovoj trgovini</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser automatski zatvara neaktivne kartice i grupe kartica nakon <ph name="AUTO_DELETE_DELAY_ONE"/> mjesec. To možete promijeniti u postavkama.}one{Growser automatski zatvara neaktivne kartice i grupe kartica nakon <ph name="AUTO_DELETE_DELAY_MANY"/> mjesec. To možete promijeniti u postavkama.}few{Growser automatski zatvara neaktivne kartice i grupe kartica nakon <ph name="AUTO_DELETE_DELAY_MANY"/> mjeseca. To možete promijeniti u postavkama.}other{Growser automatski zatvara neaktivne kartice i grupe kartica nakon <ph name="AUTO_DELETE_DELAY_MANY"/> mjeseci. To možete promijeniti u postavkama.}}</translation>
 </translationbundle>

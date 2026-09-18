@@ -801,4 +801,51 @@ A Speciális védelem a következő Growser-beállításokat vezérli:</translat
 <translation id="8186479265534291036">Nem működik a webhely? Harmadik féltől származó cookie-k letiltva</translation>
 <translation id="8874790741333031443">Próbálja meg átmenetileg engedélyezni a harmadik felektől származó cookie-kat, ami kisebb böngészési védelmet jelent, de a webhelyfunkciók nagyobb valószínűséggel működnek majd megfelelően.</translation>
 <translation id="915112772806845021">A webhelyek ezzel a funkcióval automatikusan elindíthatják a kép a képben módot. Így folytathatja a videónézést, miközben más feladatokra felszabadíthatja a képernyőt.</translation>
+<translation id="3281851196103181918">A felkeresett webhelyek menthetnek kis mennyiségű adatot a Growser-ban, elsősorban annak ellenőrzéséhez, hogy Ön nem robot.</translation>
+<translation id="7321946347180923218">Böngészési tevékenységei során a webhelyek egyeztethetnek a Growser-mal, és az előzőleg felkeresett webhely segítségével meggyőződhetnek arról, hogy Ön valószínűleg valódi felhasználó.</translation>
+<translation id="1416017798077335746">Ha be van kapcsolva, a Growser gyorsabban fut, a JavaScriptet használó funkcióknak pedig a tervezett módon kell működniük. Ha ki van kapcsolva, csökken a teljesítmény, de ellenállóbb lesz a V8 a támadásokkal szemben.</translation>
+<translation id="1161610156793601923">A Growser V8 motorjával felgyorsítja a webhelyeket, de kissé kevésbé ellenállóvá teszi a Growser-ot a támadásokkal szemben</translation>
+<translation id="4522008664732371170">A V8 a Growser JavaScript- és WebAssembly-motorja, amely a webhelyek teljesítményének javítására szolgál</translation>
+<translation id="8589838971217638472">Nem gyorsítja fel a webhelyeket a Growser V8 motorjával, de kissé ellenállóbbá teszi a Growser-ot a támadásokkal szemben</translation>
+<translation id="7640998335907138542">A sötét téma alkalmazása a webhelyekre (amikor lehetséges), ha a Growser-ban sötét téma van beállítva</translation>
+<translation id="2057998558085257831">Az <ph name="BEGIN_LINK1"/>Android-beállításokban<ph name="END_LINK1"/> kezelheti.
+
+A Speciális védelem a következő Growser-beállításokat vezérli:</translation>
+<translation id="423123022780548223">Ez a Growser által megjelenített tartalom a(z) <ph name="DOMAIN_NAME"/> domainről származik.</translation>
+<translation id="8347706830008915646">Az adatforgalom csökkentése érdekében a Growser optimalizálta az oldalon lévő képeket.</translation>
+<translation id="6934374371757268073">A Growser ma ismét letiltja a cookie-kat</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{A Growser holnap ismét letiltja a cookie-kat}other{# nap múlva ismét le lesznek tiltva a cookie-k}}</translation>
+<translation id="2695810323641466307">A Growser elindítása a cím- és keresősávra fókuszálva, ami csökkenti az indulási időt alsóbb kategóriás eszközökön.</translation>
+<translation id="5598609827458395422">A Growser mostantól megosztja az eszközével a nemrég megnyitott lapokat. Ezeket az eszköz alkalmazáslistájában és a keresési találatok között láthatja. Ezt bármikor kikapcsolhatja a Growser beállításai között.</translation>
+<translation id="8965088526414675625">A Growser mostantól megjeleníti a legutóbbi lapokat az eszköz alkalmazáslistáján és a keresési találatok között is. Ezt bármikor kikapcsolhatja a Growser beállításai között.</translation>
+<translation id="8761470294803693272">Engedélyezze a Growser-nak, hogy megossza eszközével a nemrég megnyitott lapokat, hogy azok megjelenjenek az eszköz alkalmazáslistáján és a keresési találatok között is. Ezt a Growser beállításai között kapcsolhatja be vagy ki.</translation>
+<translation id="8421385332619538087">Engedélyezze a Growser-nak, hogy megjeleníthesse a legutóbbi lapokat az eszköz alkalmazáslistáján és a keresési találatok között. Ezt bármikor kikapcsolhatja a Growser beállításai között.</translation>
+<translation id="4844745832306307836">Growser-tippek</translation>
+<translation id="8894933691616134953">Growser-tippek kártyájának elrejtése</translation>
+<translation id="3075680827782258330">A Growser használata alapértelmezettként</translation>
+<translation id="3330538708604362125">Bármikor használhatja a Growser-ot, amikor üzenetekben, dokumentumokban és más alkalmazásokban linkekre kattint</translation>
+<translation id="878212867049674537">Személyre szabhatja a Growser-ot egyéni színekkel és képekkel a kezdőlapon</translation>
+<translation id="906376138426795308">Mostantól mindig a Growser-ot használhatja, amikor üzenetekben, dokumentumokban és más alkalmazásokban linkekre kattint (illetve böngészik köztük).</translation>
+<translation id="1060555682994133119">Koppintson a Böngésző &gt; Growser lehetőségre</translation>
+<translation id="2039425904994800099">Koppintson a Böngésző alkalmazás, majd a Growser lehetőségre</translation>
+<translation id="3307078631581490570">Tegye személyessé a Growser-ot</translation>
+<translation id="1068559798624451989">Szerezze be a Growser legerősebb védelmét az online fenyegetésekkel szemben</translation>
+<translation id="3371556244314914639">Jelszavak mentése a Growser-ban</translation>
+<translation id="6096811239980093579">A Growser felkínálja a jelszó mentését.</translation>
+<translation id="3942445027194417950">A jelszavak Growser-ban való mentésére vonatkozó útmutató alsó lapja</translation>
+<translation id="4476554299666180378">Mostantól a legtöbbet hozhatja ki a Growser-ból az eszközén.</translation>
+<translation id="2762149874114516998">Hozza ki a legtöbbet a Growser-ból</translation>
+<translation id="4229054348764234344">Hajtsa végre az alábbi javasolt műveleteket, hogy a lehető legtöbbet ki tudja hozni a Growser-ból.</translation>
+<translation id="9005129040299651584">Személyre szabhatja a Growser-ot egyéni téma kiválasztásával.</translation>
+<translation id="6695051470627475273">A Growser-színek alsó lapja teljes magasságban megnyitva</translation>
+<translation id="8884873726356949960">A Growser-színek alsó lapja félmagasságban van megnyitva</translation>
+<translation id="8064824204802826269">Brave – Alapértelmezett</translation>
+<translation id="3625563631434033924">Brave-színek</translation>
+<translation id="4084889026632451864">A Growser-színek alsó lapja</translation>
+<translation id="6506349636755583652">Egyes Growser-beállítások módosultak</translation>
+<translation id="6972629891077993081">HID-eszközök</translation>
+<translation id="4748783296226936791">A webhelyek általában olyan funkciók miatt csatlakoznak HID-eszközökhöz, amelyek nem a szokásos billentyűzeteket, játékkontrollereket és egyéb eszközöket használják.</translation>
+<translation id="5719854774000914513">A webhelyek engedélyt kérhetnek a HID-eszközökhöz való csatlakozásra</translation>
+<translation id="8625916342247441948">A webhelyek nem csatlakozhatnak HID-eszközökhöz</translation>
+<translation id="1258491128795710625">Újdonságok</translation>
 </translationbundle>

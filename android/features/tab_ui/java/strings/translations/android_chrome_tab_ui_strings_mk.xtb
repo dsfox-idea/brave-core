@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Вашите затворени картички и групи може повторно да се отворат од делот Неодамнешни картички и делот Групи на картички. Вашата приватна картичка нема да биде достапна.}
         other {Вашите затворени картички и групи може повторно да се отворат од делот Неодамнешни картички и делот Групи на картички. Вашите # приватни картички нема да бидат достапни.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> линк од Growser}one{<ph name="TABS_COUNT_MANY"/> линк од Growser}other{<ph name="TABS_COUNT_MANY"/> линка од Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> рецензија од Growser}one{<ph name="REVIEWS_COUNT_MANY"/> рецензија од Growser}other{<ph name="REVIEWS_COUNT_MANY"/> рецензии од Growser}}</translation>
+<translation id="2928243913527329289">Growser | За продавницава</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser автоматски ги затвора неактивните картички и групи картички по <ph name="AUTO_DELETE_DELAY_ONE"/> месец. Ова може да го промените во поставките.}one{Growser автоматски ги затвора неактивните картички и групи картички по <ph name="AUTO_DELETE_DELAY_MANY"/> месец. Ова може да го промените во поставките.}other{Growser автоматски ги затвора неактивните картички и групи картички по <ph name="AUTO_DELETE_DELAY_MANY"/> месеци. Ова може да го промените во поставките.}}</translation>
 </translationbundle>

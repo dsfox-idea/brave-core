@@ -5536,4 +5536,429 @@
 <translation id="8198379961710069585">Дугме Историја претраге, активирајте га да бисте претражили историју</translation>
 <translation id="8495170825732897952">Унесите @@ у било који образац да бисте преузели и попунили информације без преласка на другу картицу</translation>
 <translation id="8874790741333031443">Пробајте привремено да дозволите колачиће треће стране, што значи слабију заштиту прегледања, али већу вероватноћу да ће функције сајта радити на очекивани начин.</translation>
+<translation id="6091115085465716987">Логотип Growser новчаника</translation>
+<translation id="4489288117933602961">Growser логотип</translation>
+<translation id="6604204560730066844">Да ли желите да сачувате ову картицу на Growser налогу и на овом уређају?</translation>
+<translation id="6253380015872250643">Сачувајте картицу у Growser новчанику</translation>
+<translation id="7062344833049251424">Да бисте следећи пут платили брже, сачувајте картицу и адресу за обрачун у Growser новчанику</translation>
+<translation id="4940620179254568429">CVC ове картице ће бити шифрован и сачуван на Growser налогу ради бржег плаћања</translation>
+<translation id="1413235258620101697">CVC ове картице ће бити шифрован и сачуван у Growser новчанику ради бржег плаћања</translation>
+<translation id="8296806261827627234">Плаћајте брже уз сачувану картицу. Детаљи о картици се шифрују на Growser налогу.</translation>
+<translation id="4954891067389874142">Плаћајте брже уз сачувану картицу. Детаљи о картици се шифрују у Growser новчанику.</translation>
+<translation id="4599572944836204718">Плаћајте брже помоћу Google Pay-а уз сачувану картицу. Детаљи о картици се шифрују у Growser новчанику.</translation>
+<translation id="3872719112670219447">То је име са вашег Growser налога</translation>
+<translation id="1511387429744666092">Growser вам нуди чување картица на Growser налогу зато што сте пријављени. То можете да промените у подешавањима.</translation>
+<translation id="4565400898718322011">Growser вам нуди чување картица на Growser налогу зато што сте пријављени. То можете да промените у подешавањима. Име власника картице смо узели са налога.</translation>
+<translation id="3594461335790641595">Аутоматски попуњавајте ову картицу за куповине у Growser-у када је сачувана на овом уређају</translation>
+<translation id="1242832199383246031">Аутоматски попуњавајте ову картицу за куповине у Growser-у када је сачувате да бисте је користили уз Google Pay</translation>
+<translation id="6186962377036474023">Аутоматски попуњавајте ову картицу за куповине у Growser-у када је сачувате у Growser новчанику</translation>
+<translation id="5765984179517659957">Growser покушава да провери да ли сте то ви да би могао да унесе информације о плаћању.</translation>
+<translation id="828282277746732142">Сачувајте IBAN у Growser новчанику</translation>
+<translation id="6084079099761498478">Да бисте следећи пут аутоматски попунили овај IBAN, сачувајте га на Growser налогу</translation>
+<translation id="5398461103557553443">Да бисте следећи пут аутоматски попунили овај IBAN, сачувајте га у Growser новчанику</translation>
+<translation id="7098302422586317090">Growser ће сада потврдити да сте то ви пре него што унесе начине плаћања. То можете да ажурирате у сваком тренутку у одељку <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>.</translation>
+<translation id="5053116470141135293">Број виртуелне картице ће бити попуњен приликом плаћања овом картицом ради заштите стварних података. Управљајте у Growser новчанику. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">Садржај са странице за плаћање се дели са Growser-ом да би Growser пружао ове опције. Да бисте сакрили опције за касније плаћање у аутоматском попуњавању, идите на <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="2840680829170913626">Садржај са странице за плаћање дели се са Growser-ом да би Growser пружао ове опције. Планови плаћања подлежу условима. Да бисте сакрили опције за касније плаћање у аутоматском попуњавању, идите на <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="7870207318911766769">Садржај са странице за плаћање се дели са Growser-ом да би Growser пружао ове опције.</translation>
+<translation id="1151858212483238980">Можете аутоматски да попуњавате картице које су сачуване у Growser новчанику</translation>
+<translation id="1205344127823614428">Можете аутоматски да попуњавате картице које су сачуване у Growser новчанику.</translation>
+<translation id="5848445080378515710">Када прегледате поруџбину, морате да се пријавите на <ph name="BNPL_ISSUER_NAME"/> налог или да га отворите. Тај налог ће се аутоматски повезати у Growser новчанику.</translation>
+<translation id="8163468049564974856">Укључите аутоматско попуњавање да бисте безбедно плаћали онлајн. Подаци о картици се шифрују у Brave новчанику.</translation>
+<translation id="5717281954932320486">Аутоматски попуњавајте податке о картици када плаћате онлајн. Картице се безбедно чувају у Brave новчанику.</translation>
+<translation id="7055814742378298611">Сада можете да сачувате начине плаћања за аутоматско попуњавање при плаћању у Brave-у. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Сви безбедносни кодови сачувани на уређају и Growser налогу ће бити избрисани</translation>
+<translation id="7170930892977483182">Сви безбедносни кодови сачувани на уређају и у Growser новчанику биће избрисани</translation>
+<translation id="755360750394433286">Картица се чува на Growser налогу да бисте могли аутоматски да попуњавате податке са ње за будуће куповине</translation>
+<translation id="7412081313067625215">Картица се чува у Growser новчанику да бисте могли аутоматски да попуњавате податке са ње за будуће куповине</translation>
+<translation id="2482920244925042987">Чување ове картице на Growser налогу није успело. Уместо тога, сачувана је у Growser-у на овом уређају.</translation>
+<translation id="4740434610174859636">Чување ове картице у Growser новчанику није успело. Уместо тога, сачувана је у Growser-у на овом уређају.</translation>
+<translation id="2109852493965717728">Овај IBAN се чува на Growser налогу да бисте могли да га користите у свим Growser услугама.</translation>
+<translation id="3837322271615501940">Овај IBAN није сачуван на Growser налогу. Уместо тога, сачуван је у Growser-у на овом уређају. Growser ће вас поново питати следећи пут када користите овај IBAN.</translation>
+<translation id="1583007191864786102">Чување овог IBAN-а у Growser новчанику није успело. Уместо тога, сачуван је у Growser-у на овом уређају. Growser ће вас поново питати следећи пут када користите овај IBAN.</translation>
+<translation id="6915664826242394941">Овај IBAN није сачуван на Growser налогу. Уместо тога, сачуван је у Growser-у на овом уређају.</translation>
+<translation id="376462579087900096">Чување овог IBAN-а у Growser новчанику није успело. Уместо тога, сачуван је у Growser-у на овом уређају.</translation>
+<translation id="2871837111996280385">Growser покушава да унесе осетљиве информације у апликацији <ph name="APP_NAME"/>.</translation>
+<translation id="3039045945489677870">Growser покушава да прикаже осетљиве информације</translation>
+<translation id="3253651554860831188">Growser жели да потврди да сте то ви пре него што промените подешавања</translation>
+<translation id="924075841960625832">Желите ли да уклоните предлог из Growser-а?</translation>
+<translation id="3016775357255717300">Желите ли да уклоните кредитну картицу из Growser-а?</translation>
+<translation id="1722474089104449082">Желите ли да уклоните адресу из Growser-а?</translation>
+<translation id="7077165718541055322">Желите да уклоните кућну адресу из Growser аутоматског попуњавања?</translation>
+<translation id="7756454115562251695">Желите да уклоните адресу на послу из Growser аутоматског попуњавања?</translation>
+<translation id="3068798232942246848">Желите да уклоните ове информације из Growser аутоматског попуњавања?</translation>
+<translation id="967369588715984092">Brave ће престати аутоматски да потврђује овај имејл на подржаним сајтовима.</translation>
+<translation id="7299769361777046949">Управљајте картицама лојалности у Growser новчанику</translation>
+<translation id="2903623845283894856">Сада можете да користите адресе са Growser налога</translation>
+<translation id="7058709760023777753">Аутоматски попуните кућну адресу и адресу на послу са Growser налога</translation>
+<translation id="2856388212909438134">Аутоматски попуните именом и имејл адресом са Growser налога</translation>
+<translation id="8581945850065780003">Ова адреса ће бити избрисана са Growser налога, <ph name="ACCOUNT"/></translation>
+<translation id="8652886653703834105">На Growser налогу, <ph name="ACCOUNT"/></translation>
+<translation id="4050392779074832022">Моћи ћете да је користите у свим Growser производима</translation>
+<translation id="361746409909709825">Можете да користите сачуване адресе у свим Growser производима. Ова адреса се чува на Growser налогу, <ph name="ACCOUNT"/>.</translation>
+<translation id="5318416911578989892">Можете да користите сачуване адресе у свим Growser производима. Ова адреса ће бити сачувана на Growser налогу <ph name="ACCOUNT"/>.</translation>
+<translation id="3995632180712217177">Можете да користите сачуване адресе у свим Growser производима. Тиме не мењате постојећу кућну адресу. Биће сачувана на Growser налогу, <ph name="ACCOUNT"/>.</translation>
+<translation id="2432673835335968473">Можете да користите сачуване адресе у свим Growser производима. Тиме не мењате постојећу адресу на послу. Биће сачувана на Growser налогу, <ph name="ACCOUNT"/>.</translation>
+<translation id="2024046927213376062">Информације са Growser налога <ph name="ACCOUNT"/> могу да вам помогну да брже попуњавате обрасце у Growser-у</translation>
+<translation id="8430499469896241016">Аутоматски попуњавај верификационе кодове које сајтови користе ради побољшања безбедности. Brave може да добија те кодове из Gmail-а. <ph name="BEGIN_LINK"/>Сазнајте више о овој функцији<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Growser није добављач аутоматског попуњавања</translation>
+<translation id="7450759832930378803">Да бисте омогућили ова подешавања и користили информације о плаћању са Growser налога, посетите подешавања услуга аутоматског попуњавања.</translation>
+<translation id="7049940136908665440">Да бисте омогућили ова подешавања и користили информације са Growser налога, идите у подешавања услуга аутоматског попуњавања.</translation>
+<translation id="2450019289047528273">Начини плаћања и друге информације из Growser новчаника</translation>
+<translation id="1125406338060147524">Подешавања Brave новчаника примењују се на информације сачуване из Brave-а</translation>
+<translation id="5732084028114235391">Ова адреса је тренутно сачувана у Growser-у. Да бисте је користили у свим Growser производима, сачувајте је на Growser налогу, <ph name="ACCOUNT"/>.</translation>
+<translation id="756794566964707799">Ова адреса је тренутно сачувана на овом уређају. Да бисте је користили у свим Growser производима, сачувајте је на Growser налогу, <ph name="ACCOUNT"/>.</translation>
+<translation id="6935077351544118151">Сада можете да аутоматски попуњавате картице лојалности из Growser новчаника</translation>
+<translation id="4169189393773057143">Управљајте картицама лојалности или искључите ове предлоге у Growser новчанику</translation>
+<translation id="4470759557257438892">Уместо тога упитајте Gemini у Growser-у</translation>
+<translation id="2326283484705860548">Сада можете да аутоматски попуњавате више информација из Growser новчаника</translation>
+<translation id="5831217499016131155">Growser новчаник</translation>
+<translation id="8421746712901926961">Сачувајте информације у услузи <ph name="GOOGLE_WALLET_TITLE_1"/> и брже обављајте ствари, попут попуњавања образаца у Growser производима. Можете да <ph name="MANAGE_INFO_LINK"/> у услузи <ph name="GOOGLE_WALLET_TITLE_2"/> за <ph name="ACCOUNT"/>.</translation>
+<translation id="4619669610757527494">Сачувајте возачку дозволу у Growser новчанику</translation>
+<translation id="4239215166147486528">Безбедно сачувајте возачку дозволу у Brave новчанику</translation>
+<translation id="1912750443952232242">Сачувајте личну карту у Growser новчанику</translation>
+<translation id="8300302621078931927">Безбедно сачувајте личну карту у Brave новчанику</translation>
+<translation id="5447103258548475868">Сачувајте пасош у Growser новчанику</translation>
+<translation id="8717177139469452440">Безбедно сачувајте пасош у Brave новчанику</translation>
+<translation id="760632772920590778">Сачувајте возило у Growser новчанику</translation>
+<translation id="4811696127853690432">Безбедно сачувајте возило у Brave новчанику</translation>
+<translation id="5914185423510719251">Сачувајте KTN у Growser новчанику</translation>
+<translation id="5034488401832901795">Безбедно сачувајте KTN у Brave новчанику</translation>
+<translation id="1449251255954293933">Сачувајте број обештећења у Growser новчанику</translation>
+<translation id="1330952240988133220">Безбедно сачувајте број обештећења у Brave новчанику</translation>
+<translation id="8393948304336153065">Ажурирајте возачку дозволу у Growser новчанику</translation>
+<translation id="8889525327610245418">Безбедно ажурирајте возачку дозволу у Brave новчанику</translation>
+<translation id="7570524564113479209">Ажурирајте личну карту у Growser новчанику</translation>
+<translation id="4410614037742891410">Безбедно ажурирајте личну карту у Brave новчанику</translation>
+<translation id="3426672782316020729">Ажурирајте пасош у Growser новчанику</translation>
+<translation id="3280440382387335343">Безбедно ажурирајте пасош у Brave новчанику</translation>
+<translation id="2124081665399116863">Ажурирајте возило у Growser новчанику</translation>
+<translation id="6422648598133086441">Безбедно ажурирајте возило у Brave новчанику</translation>
+<translation id="4770909831299304090">Ажурирајте KTN у Growser новчанику</translation>
+<translation id="5872115357279348603">Безбедно ажурирајте KTN у Brave новчанику</translation>
+<translation id="1732796940245838248">Ажурирајте број обештећења у Growser новчанику</translation>
+<translation id="7253051586755429279">Ажурирајте број обештећења у Brave новчанику</translation>
+<translation id="5628060911499153873">Сачувајте информације да бисте брже обављали ствари у Growser производима. Информације се чувају у <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/>-у за <ph name="ACCOUNT"/>.</translation>
+<translation id="8369722293913575142">Чување ових информација у Growser новчанику није успело. Уместо тога, сачуване су у Growser-у на овом уређају. Growser ће вам понудити да их сачувате у Новчанику следећи пут кад их будете користили.</translation>
+<translation id="3237427677128462778">Чување података у Growser Новчанику није успело</translation>
+<translation id="9078170656887151974">Да би вам се нудили предлози и побољшала ова функција, URL и садржај странице се деле са Growser-ом. У сваком тренутку можете да се предомислите и <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Да би вам се нудили предлози и побољшала ова функција, URL и садржај странице се деле са Growser-ом</translation>
+<translation id="2905902437192896563">Growser боље разуме обрасце и може брже аутоматски да их попуњава за вас</translation>
+<translation id="67310796271265436">Помозите Brave-у да боље разуме и попуњава сложене обрасце безбедном обрадом података на Brave серверима. Ваши подаци остају приватни и нико их не прегледа.</translation>
+<translation id="7422908041366284140">Growser може аутоматски да попуњава тешка поља која стандардно аутоматско попуњавање можда неће попунити</translation>
+<translation id="6329742260390895689">Да бисте аутоматски попуњавали информације, у подешавањима Новчаника укључите опцију Користи карте свуда на Growser-у</translation>
+<translation id="5912796581727968237">Отвори Growser новчаник</translation>
+<translation id="5160781056848005130">Дељењем података са Growser-ом помажете нам да унапредимо побољшано аутоматско попуњавање</translation>
+<translation id="8781233757384402598">Када пошаљете захтев за побољшано аутоматско попуњавање, подаци о коришћењу, захтеви и детаљи странице деле се са Brave-ом ради побољшања доживљаја аутоматског попуњавања</translation>
+<translation id="7044265724713929821">Brave евидентира како користите ту функцију, на пример, захтеве и понашање када прихватате или игноришете предлоге</translation>
+<translation id="3209071504641569648">Захтеви, наслови страница и URL-ови шаљу се Brave-у и могу да се прегледају ради побољшања побољшаног аутоматског попуњавања</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Ниједан}=1{Са 1 сајта (остаћете пријављени на Growser налог)}one{Са # сајта (остаћете пријављени на Growser налог)}few{Са # сајта (остаћете пријављени на Growser налог)}other{Са # сајтова (остаћете пријављени на Growser налог)}}</translation>
+<translation id="3410151451624226773">Управљајте у Growser менаџеру лозинки</translation>
+<translation id="5224107321793121921">Управљајте на Growser налогу</translation>
+<translation id="5105442806410269908">Управљајте другим Growser подацима</translation>
+<translation id="2477607419416067650">Други Growser подаци</translation>
+<translation id="472824688843296007">Пратите цене помоћу Growser-а</translation>
+<translation id="753556296624075801">Омогућава Growser</translation>
+<translation id="3745599309295009257">Ваш текст и садржај и URL странице на којој пишете биће послати Growser-у, прегледаће их људи и користиће се за побољшање ове функције. Избегавајте унос личних података (као што су медицински или финансијски подаци) или коришћење ове алатке на сајтовима који садрже приватне или осетљиве информације.</translation>
+<translation id="5543452229212526547">Ваш текст и садржај и URL странице на којој пишете биће послати Growser-у. Особе које прегледају неће користити ваш садржај за побољшање вештачке интелигенције. Организација може да промени ова подешавања у сваком тренутку.</translation>
+<translation id="1959445535228047762">Текст и садржај странице се шаљу Growser-у и могу да се користе за побољшање ове функције.
+  <ph name="BEGIN_LINK"/>Сазнајте више<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">Текст и садржај странице се шаљу Growser-у, али се неће користити за побољшање вештачке интелигенције.
+    <ph name="BEGIN_LINK"/>Сазнајте више<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">Ова експериментална алатка вештачке интелигенције неће увек бити тачна. Да бисмо је побољшали, садржај се шаље Growser-у.
+    <ph name="BEGIN_LINK"/>Сазнајте више<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">Због смерница организације није успело налепљивање садржаја ван контекста Brave-а којим се управља</translation>
+<translation id="1351458950091269256">Овај оглас је користио превише ресурса за уређај, па га је Growser уклонио.</translation>
+<translation id="4366714044424353289">Growser налог може да има друге облике историје прегледања на <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/>.</translation>
+<translation id="5626844006416355146">На Growser налогу можда имате <ph name="BEGIN_LINK_GAA"/>Активности у Gemini апликацијама<ph name="END_LINK_GAA"/></translation>
+<translation id="5747377793818752349">Growser налог може да има друге облике историје прегледања на <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/>, као што су <ph name="BEGIN_LINK_GAA"/>Активности у Gemini апликацијама<ph name="END_LINK_GAA"/></translation>
+<translation id="4267590181863312380">Да бисте преузели историју са других уређаја, пријавите се и синхронизујте историју. Моћи ћете да приступате и својим лозинкама и другом садржају на свим уређајима. Увек можете да зауставите синхронизацију у подешавањима. Growser може да персонализује Претрагу и друге услуге на основу историје.</translation>
+<translation id="5889251770650310375">Да бисте преузели историју са других уређаја, потврдите идентитет и синхронизујте историју и картице. Увек можете да зауставите синхронизацију у подешавањима. Growser може да персонализује Претрагу и друге услуге на основу историје.</translation>
+<translation id="2541474152868747095">Да бисте преузели историју са других уређаја, потврдите идентитет. Увек можете да зауставите синхронизацију у подешавањима. Growser може да персонализује Претрагу и друге услуге на основу историје.</translation>
+<translation id="4260407128682690669">Да бисте преузели историју са других уређаја, синхронизујте историју и картице са <ph name="ACCOUNT_EMAIL"/>. Увек можете да зауставите синхронизацију у подешавањима. Growser може да персонализује Претрагу и друге услуге на основу историје.</translation>
+<translation id="611018310643025551">Претраге, најбоља подударања и садржај страница шаљу се Growser-у и особе које прегледају могу да их виде ради побољшања ове функције.</translation>
+<translation id="1987486584747170374">Претраге, најбоља подударања и садржај страница са њима шаљу се Growser-у. Особе које прегледају неће то користити за побољшање вештачке интелигенције. Организација може да промени ова подешавања у сваком тренутку.</translation>
+<translation id="2461080251012814077">Картице које избришете из историје Growser-а и даље ће се приказивати у табелама за поређење</translation>
+<translation id="7395776876928503485">Администратор може даљински да уноси промене у профил и прегледач, да анализира информације о прегледачу помоћу извештавања и обавља друге неопходне задатке. Активностима на овом уређају може да се управља и ван Growser-а. <ph name="BEGIN_LINK"/>Сазнајте више<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Овим прегледачем не управља компанија нити друга организација. Активностима на овом уређају се можда управља ван Growser-а. <ph name="BEGIN_LINK"/>Сазнајте више<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">Корисничко име уређаја и корисничко име за Growser</translation>
+<translation id="9383261434423554">Више о Growser Enterprise Connectors-има</translation>
+<translation id="7998714759612158367">Када се додаци додају у Growser, релевантни подаци о тим додацима се шаљу трећим странама на анализу и могу да буду видљиви администратору. Подаци обухватају информације о додацима, попут назива, времена инсталирања, извора инсталирања, као и активности повезаних са овим додацима (попут промене картица, контакта са веб-сајтовима или приступања колачићима). Ови подаци се прикупљају за додатке инсталиране из Growser веб-продавнице, као и за додатке ван продавнице.</translation>
+<translation id="3521646565402740725">Прикључци за Growser за предузећа</translation>
+<translation id="7942345451754009257">Администратор је укључио Growser Enterprise Connectors у прегледачу. Ови прикључци имају приступ неким вашим подацима.</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/> је укључио Growser Enterprise Connectors у прегледачу. Ови прикључци имају приступ неким вашим подацима.</translation>
+<translation id="3864343340250325558">Када Growser обележи безбедносне догађаје, релевантни подаци о догађајима се шаљу администратору. То може да обухвата URL-ове страница које посећујете у Growser-у, URL-ове страница са којих сте копирали податке, називе или метаподатке фајлова, IP адресе, отказивања прегледача или картица и корисничко име које користите за пријављивање у апликације на вебу, на уређај и у Growser.</translation>
+<translation id="1979029506107883830">Growser Enterprise Core вам омогућава да управљате смерницама прегледача, апликацијама и додацима из клауда</translation>
+<translation id="84905717630920469">Пробај Growser Enterprise Core</translation>
+<translation id="1757745363789526465">Поново покрените Growser</translation>
+<translation id="2537931901612099523">Други који користе овај уређај неће видети ваше активности, па можете да прегледате приватније. Ово не мења начин на који податке прикупљају веб-сајтови које посећујете и услуге које они користе, укључујући Growser. Преузимања и обележивачи ће бити сачувани.</translation>
+<translation id="1410365862999780287">Други који користе овај уређај неће видети ваше активности, па можете да прегледате приватније. Ово не мења начин на који податке прикупљају веб-сајтови које посећујете и услуге које они користе, укључујући Growser. Сачуваће се преузимања, обележивачи и ставке на листи за читање.</translation>
+<translation id="7087257419919340685">Growser <ph name="BEGIN_EMPHASIS"/>не чува<ph name="END_EMPHASIS"/>:
+          <ph name="BEGIN_LIST"/>
+            <ph name="LIST_ITEM"/>историју прегледања
+            <ph name="LIST_ITEM"/>колачиће и податке о сајтовима
+            <ph name="LIST_ITEM"/>информације које сте унели у обрасце
+          <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Избришите историју прегледања, колачиће, кеш и друго у подешавањима Growser-а</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте избрисали историју прегледања, колачиће, кеш и друго у подешавањима Growser-а</translation>
+<translation id="8841351289024215412">Дугме за брисање податка прегледања, активирајте га да бисте избрисали историју прегледања, колачиће, кеш и друго у подешавањима Growser-а</translation>
+<translation id="5085944396348027753">Прегледајте лозинке и управљајте њима у подешавањима Growser-а</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте прегледали лозинке и управљали њима у подешавањима Growser-а</translation>
+<translation id="3071294016974329065">Дугме Управљај лозинкама, активирајте га да бисте прегледали лозинке и управљали њима у подешавањима Growser-а</translation>
+<translation id="3031527126657836806">Управљајте плаћањима и информацијама о кредитним картицама у подешавањима Growser-а</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали плаћањима и информацијама о кредитним картицама у подешавањима Growser-а</translation>
+<translation id="7338080394311291541">Дугме Управљај начинима плаћања, активирајте га да бисте управљали плаћањима и информацијама о кредитним картицама у подешавањима Growser-а</translation>
+<translation id="561165882404867731">Преведите ову страницу помоћу Growser преводиоца</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте превели ову страницу помоћу Growser преводиоца</translation>
+<translation id="8781278378794969337">Дугме Преведи страницу, активирајте га да бисте превели ову страницу помоћу Growser преводиоца</translation>
+<translation id="6560728661781075049">Ажурирај Growser</translation>
+<translation id="5749239053568461167">Ажурирајте Growser помоћу подешавања Growser-а</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте ажурирали Growser из подешавања Growser-а</translation>
+<translation id="1957844396300023214">Дугме Ажурирај Growser, активирајте га да бисте ажурирали Growser из подешавања Growser-а</translation>
+<translation id="6924344322157830957">Покрените проверу безбедности у Growser подешавањима</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте покренули проверу безбедности у Growser подешавањима</translation>
+<translation id="2217308317357494419">Дугме Покрени Growser проверу безбедности, активирајте га да бисте покренули проверу безбедности у подешавањима Growser-а</translation>
+<translation id="555731368593399620">Иди на Growser проверу безбедности</translation>
+<translation id="1022622918438880634">Иди на страницу Growser провера безбедности у подешавањима</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте отишли на страницу Growser провере безбедности у подешавањима</translation>
+<translation id="4573592640621800816">Идите на дугме Growser провера безбедности, активирајте га да бисте посетили страницу Growser провера безбедности у подешавањима</translation>
+<translation id="711408602663662681">Управљајте Безбедним прегледањем и другим садржајем у подешавањима Growser-а</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали Безбедним прегледањем и другим садржајем у подешавањима Growser-а</translation>
+<translation id="8147674953957429172">Дугме Управљај безбедносним подешавањима, активирајте га да бисте управљали Безбедним прегледањем и другим садржајем у подешавањима Growser-а</translation>
+<translation id="123941427300345384">Управљајте подешавањима колачића у подешавањима Growser-а</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали подешавањима колачића у подешавањима Growser-а</translation>
+<translation id="185317221836385090">Дугме Управљај колачићима, активирајте га да бисте управљали подешавањима колачића у подешавањима Growser-а</translation>
+<translation id="1824417970962955294">Додајте адресе и управљајте њима у подешавањима Growser-а</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте додали адресе и управљали њима у подешавањима Growser-а</translation>
+<translation id="2805189921443465815">Дугме Управљајте адресама, активирајте га да бисте додали адресе и управљали њима у подешавањима Growser-а</translation>
+<translation id="5592576649770969570">Управљајте тиме које информације синхронизујете у подешавањима Growser-а</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали тиме које информације синхронизујете у подешавањима Growser-а</translation>
+<translation id="4269937126213032056">Дугме Управљај синхронизацијом, активирајте га да бисте управљали тиме које информације синхронизујете у подешавањима Growser-а</translation>
+<translation id="8766514807385279339">Управљајте тиме које Growser информације чувате на Growser налогу</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали тиме које Growser информације чувате на Growser налогу</translation>
+<translation id="3256302414991866158">Дугме Управљај подацима на налогу, активирајте га да бисте управљали тиме које Growser информације чувате на Growser налогу</translation>
+<translation id="4365583497146730170">Управљајте дозволама и подацима сачуваним на различитим сајтовима у подешавањима Growser-а</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали дозволама и подацима сачуваним на различитим сајтовима у подешавањима Growser-а</translation>
+<translation id="1429889589220926820">Дугме Управљај подешавањима сајта, активирајте га да бисте управљали дозволама и подацима сачуваним на различитим сајтовима у подешавањима Growser-а</translation>
+<translation id="6881240511396774766">Брзо направите нов Growser документ</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте брзо направили нов Growser документ</translation>
+<translation id="2925454999967523701">Дугме Направи документ, активирајте га да бисте брзо направили нов Growser документ</translation>
+<translation id="8075736640322370409">Брзо направите нову Growser табелу</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте брзо направили нову Growser табелу</translation>
+<translation id="3150889484970506196">Дугме Направи табелу, активирајте га да бисте брзо направили нову Growser табелу</translation>
+<translation id="6971439137020188025">Брзо направите нову Growser презентацију у Презентацијама</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте брзо направили нову Growser презентацију у Презентацијама</translation>
+<translation id="8768225988514678921">Дугме Направи презентацију, активирајте га да бисте брзо направили нову Growser презентацију у Презентацијама</translation>
+<translation id="7582602800368606489">Брзо направите нов догађај у Growser календару</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте брзо направили нов догађај у Growser календару</translation>
+<translation id="2009942480257059311">Дугме Направи догађај, активирајте га да бисте брзо направили нов догађај у Growser календару</translation>
+<translation id="1269516672602708785">Брзо направите нов сајт у Growser сајтовима</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте брзо направили нов сајт у Growser сајтовима</translation>
+<translation id="3698629142018988477">Дугме Направи сајт, активирајте га да бисте брзо направили нов сајт у Growser сајтовима</translation>
+<translation id="4854853140771946034">Брзо направите нову белешку у Growser Keep-у</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте брзо направили нову белешку у Growser Keep-у</translation>
+<translation id="5488590678320979185">Дугме Направите белешку, активирајте га да бисте брзо направили нову белешку у Growser Keep-у</translation>
+<translation id="7734285854693414638">Брзо направите нов упитник у Growser упитницима</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте брзо направили нов упитник у Growser упитницима</translation>
+<translation id="573555826359077410">Дугме Направи упитник, активирајте га да бисте брзо направили нов упитник у Growser упитницима</translation>
+<translation id="7910437794853634516">Прикажи Growser савете</translation>
+<translation id="3521214483675189046">Сазнајте више о Growser функцијама</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте сазнали више о Growser функцијама</translation>
+<translation id="4260829339448158187">Дугме Прикажи Growser савете, активирајте га да бисте сазнали више о Growser функцијама</translation>
+<translation id="8694710517222056538">Управљајте Growser налогом</translation>
+<translation id="6587259514551810029">Управљајте информацијама, приватношћу и безбедношћу на Growser налогу</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали информацијама, приватношћу и безбедношћу на Growser налогу</translation>
+<translation id="7027078594246193839">Управљај Growser налогом, активирајте га да бисте управљали информацијама, приватношћу и безбедношћу на Growser налогу</translation>
+<translation id="643051589346665201">Промените Growser лозинку</translation>
+<translation id="7075427536109560520">Промените лозинку за Growser налог</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте променили лозинку за Growser налог</translation>
+<translation id="3236176349246489091">Дугме Промени Growser лозинку, активирајте га да бисте променили лозинку за Growser налог</translation>
+<translation id="4573751006789325585">Играјте игру Growser диносаурус</translation>
+<translation id="1461337831834704527">Играјте игру Диносаурус у Growser-у</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте играли игру Диносаурус у Growser-у</translation>
+<translation id="3493625910132223088">Дугме Играј игру Growser диносаурус, активирајте га да бисте играли игру Диносаурус у Growser-у</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте отворили опцију за тражење уређаја на Growser налогу</translation>
+<translation id="8109063930676038426">Дугме Пронађи мој уређај, активирајте га да бисте посетили опцију за тражење уређаја на Growser налогу</translation>
+<translation id="163710751542270335">Управљајте подешавањима приватности Growser налога</translation>
+<translation id="3269729253658419180">Управљајте Growser подешавањима приватности на Growser налогу</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали подешавањима приватности Growser налога</translation>
+<translation id="970931323129831346">Дугме Управљај Growser подешавањима приватности, активирајте га да бисте посетили подешавања приватности Growser налога</translation>
+<translation id="498856326289655361">Управљајте подешавањима Growser-а</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали подешавањима Growser-а</translation>
+<translation id="1592236556980370094">Дугме Управљај подешавањима Growser-а, активирајте га да бисте посетили подешавања Growser-а</translation>
+<translation id="2480781891721036554">Управљајте фајловима које сте преузели у Growser-у</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте управљали фајловима које сте преузели у Growser-у</translation>
+<translation id="8786654106588913377">Дугме Управљај преузимањима у Growser-у, активирајте га да бисте управљали фајловима које сте преузели у Growser-у</translation>
+<translation id="8320175841857324841">Прегледајте историју Growser-а</translation>
+<translation id="179012966915448796">Прегледајте историју прегледања и управљајте њом у подешавањима Growser-а</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте прегледали историју прегледања у Growser-у</translation>
+<translation id="7891862848641775440">Дугме Прикажи историју Growser-а, активирајте га да бисте прегледали историју прегледања и управљали њом у подешавањима Growser-а</translation>
+<translation id="1545741848376005386">Персонализујте алатке за приступачност у подешавањима Growser-а</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте персонализовали алатке за приступачност у подешавањима Growser-а</translation>
+<translation id="1350935235605927980">Дугме Прилагоди подешавања приступачности, активирајте га да бисте персонализовали алатке за приступачност у подешавањима Growser-а</translation>
+<translation id="1937771495497081508">Прилагодите величине и изглед фонтова у Growser-у</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте прилагодили величине и изглед фонтова у Growser-у</translation>
+<translation id="8183964669401154956">Дугме Прилагоди фонтове у Growser-у, активирајте га да бисте прилагодили величине и изглед фонтова у Growser-у</translation>
+<translation id="6868193750403948178">Прилагодите Growser</translation>
+<translation id="2746936074954064976">Дугме Прилагоди Growser, активирајте га да бисте прилагодили изглед прегледача</translation>
+<translation id="8223358973996562559">Подеси Growser као подразумевани прегледач</translation>
+<translation id="113548419005571036">Подесите Growser као подразумевани прегледач система</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте подесили Growser као подразумевани прегледач система</translation>
+<translation id="6783715802269207395">Дугме Подеси Growser као подразумевани прегледач, активирајте га да бисте подесили Growser као подразумевани прегледач система</translation>
+<translation id="8076157978023662935">Постави Growser као подразумевани прегледач</translation>
+<translation id="7026203586041411100">Подесите Growser као подразумевани прегледач система у подешавањима iOS-а</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните tab, па Enter да бисте подесили Growser као подразумевани прегледач система у подешавањима iOS-а</translation>
+<translation id="29533193241299316">Дугме Подеси Growser као подразумевани прегледач, притисните Enter да бисте подесили Growser као подразумевани прегледач система у подешавањима iOS-а</translation>
+<translation id="2461514655528532981">Покрените Growser безбедносну проверу</translation>
+<translation id="9113214967104134276">Прегледајте историју Growser-а</translation>
+<translation id="943522416815463637">Играјте игру Growser диносаурус</translation>
+<translation id="7602868996817972616">Упитајте Growser о овој страници</translation>
+<translation id="161612500287664753">Питајте Growser претрагу о овој страници</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Enter да бисте упитали Growser о овој страници</translation>
+<translation id="5630981295558454585">Дугме Упитајте Growser о овој страници, активирајте га да бисте упитали Growser о овој страници</translation>
+<translation id="6019118530636932154">Growser Apps скрипта</translation>
+<translation id="6437647869369934905">Growser цртежи</translation>
+<translation id="1875512691959384712">Growser упитници</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser сајтови</translation>
+<translation id="1521655867290435174">Growser табеле</translation>
+<translation id="467809019005607715">Growser презентације</translation>
+<translation id="7510585715716175915">Наставите пут да бисте видели релевантне активности у историји Growser-а</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, притисните Tab, па Enter да бисте наставили путањом и видели релевантне активности у историји Growser-а</translation>
+<translation id="3714978095030396658">Дугме Наставите пут, притисните Enter да бисте наставили пут и видели релевантне активности у историји Growser-а</translation>
+<translation id="9041241404793255081">Улога: савет за Growser. Ознака приступачности: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>, притисните Tab, па Enter да бисте одбацили савет за Growser.</translation>
+<translation id="7432463754469271865">Дугме Одбаци савет за Growser, притисните Enter да бисте одбацили, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Дугме Одбаци савет за Growser, притисните Enter да бисте одбацили</translation>
+<translation id="7571813784389228510">Growser AI режим</translation>
+<translation id="3415471717466570460">Претраге, најбоља подударања и садржај страница шаљу се Growser-у и особе које прегледају могу да их виде ради побољшања ове функције. Ово је експериментална функција и неће увек радити како треба.</translation>
+<translation id="9103366036378878818">Линк за савет за Growser, притисните Enter да бисте отворили <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/></translation>
+<translation id="2097698842685899280">Brave је открио детаље који су уобичајени на сајтовима повезаним са „пецањем“, малвером или преварама. <ph name="BEGIN_LINK"/>Сазнајте више<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Growser је поједноставио ову страницу ради лакшег читања. Growser је преузео оригиналну страницу преко безбедне везе.</translation>
+<translation id="542284143784575620">Growser је поједноставио ову страницу ради лакшег читања. Growser је преузео оригиналну страницу преко небезбедне везе.</translation>
+<translation id="5826875044227298275">Управо сте унели лозинку на обмањујућем сајту. Да бисте заштитили налоге, Growser препоручује да проверите сачуване лозинке.</translation>
+<translation id="4397030659892816613">Да бисте користили камеру, одобрите Growser-у приступ у: <ph name="LINK"/>.</translation>
+<translation id="8251369644700086563">Да бисте користили микрофон, одобрите Growser-у приступ у: <ph name="LINK"/>.</translation>
+<translation id="6520686276106691991">Да бисте користили микрофон, одобрите Growser-у приступ у: <ph name="LINK"/>.</translation>
+<translation id="1612024742222359811">Да бисте користили привремену меморију, одобрите Growser-у приступ у: <ph name="LINK"/>.</translation>
+<translation id="3620727327079734151">Могли бисте да изгубите приступ Growser налогу. Growser препоручује да одмах промените лозинку. Мораћете да се пријавите.</translation>
+<translation id="7891575721440765670">Growser може да вам помогне да заштитите Growser налог и промените лозинку.</translation>
+<translation id="1362419187647259443">Управо сте унели лозинку на обмањујућем сајту. Growser може да вам помогне. Да бисте променили лозинку и обавестили Growser да је налог можда угрожен, кликните на Заштити налог.</translation>
+<translation id="4067282726741467091">Могли бисте да изгубите приступ налогу за организацију или би могло да дође до крађе идентитета. Growser вам препоручује да одмах промените лозинку.</translation>
+<translation id="7872399623676350476">Можете да изгубите приступ налогу за <ph name="ORG_NAME"/> или би могло да дође до крађе идентитета. Growser вам препоручује да одмах промените лозинку.</translation>
+<translation id="5938866385061293322">Ове информације потичу са независних веб-сајтова за рецензије као што су Trustpilot, ScamAdviser, Growser и други. Резимее генерише вештачка интелигенција.</translation>
+<translation id="4452328064229197696">Лозинка коју сте управо користили је пронађена при повреди података. Да бисте заштитили налоге, Growser менаџер лозинки препоручује да проверите сачуване лозинке.</translation>
+<translation id="7646681339175747202">Лозинка коју сте управо користили је пронађена при повреди података. Growser менаџер лозинки препоручује да одмах промените лозинку.</translation>
+<translation id="5997247540087773573">Лозинка коју сте управо користили је пронађена при повреди података. Да бисте заштитили налоге, Growser менаџер лозинки препоручује да је одмах промените и проверите сачуване лозинке.</translation>
+<translation id="6722165747660324971">Када користите лозинку, Growser вас упозорава ако је она објављена онлајн. Док то ради, ваше лозинке и корисничка имена су шифровани, па нико не може да их прочита, укључујући Growser.</translation>
+<translation id="1485314135034164137">Лозинке за Growser</translation>
+<translation id="7558556509649858677">Приступни кључ • Growser профил</translation>
+<translation id="950926967802086924">Приступни кључ • Growser менаџер лозинки</translation>
+<translation id="6338645927051849741">Лозинка • Growser менаџер лозинки</translation>
+<translation id="131993612023623286">Growser покушава да унесе лозинку на <ph name="APP_NAME"/>.</translation>
+<translation id="1833199389909527220">Growser покушава да укључи Windows Hello за попуњавање лозинки.</translation>
+<translation id="643007953296382271">Growser покушава да искључи Windows Hello за попуњавање лозинки.</translation>
+<translation id="2739032725916431090">сачувајте је на Growser налогу</translation>
+<translation id="2920528063654705391">Да бисте користили лозинке и друго сачуване на Growser налогу, потврдите свој идентитет</translation>
+<translation id="3795624560191557077">Недавно сте променили лозинку која је пронађена у јавној повреди података. У случају проблема, Growser менаџер лозинки може да вам помогне да се пријавите.</translation>
+<translation id="5748742097310495951">Картице и адресе су из Growser-а и са вашег Growser налога (<ph name="ACCOUNT_EMAIL"/>). Њима можете да управљате у <ph name="BEGIN_LINK"/>подешавњима<ph name="END_LINK"/>.</translation>
+<translation id="6827399997598211909">Картице и адресе су из Growser-а. Њима можете да управљате у <ph name="BEGIN_LINK"/>подешавањима<ph name="END_LINK"/>.</translation>
+<translation id="7934414805353235750"><ph name="URL"/> жели да пусти заштићени садржај. Growser ће потврдити идентитет уређаја.</translation>
+<translation id="7142561893113115357">Откривено је да овим рачунаром не управља предузеће, па смернице могу аутоматски да инсталирају само додатке који се хостују у Growser веб-продавници. URL ажурирања у Growser веб-продавници је „<ph name="CWS_UPDATE_URL"/>“.</translation>
+<translation id="6272383483618007430">Growser ажурирање</translation>
+<translation id="885730110891505394">Дељење са Growser-ом</translation>
+<translation id="2867186026859663748">Ове смернице не могу да се подесе на нивоу Growser профила и биће занемарене.</translation>
+<translation id="277370491433906876">Ове смернице се игноришу зато што корисник није повезан. Да би се ове смернице примењивале, иста организација мора да управља Growser прегледачем и профилом преко Администраторске конзоле.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core вам пружа централизовану алатку за конфигурисање смерница прегледача из клауда</translation>
+<translation id="4553855485042734119">Ова инстанца Brave-а покреће се са ручно подешеним ознакама командне линије. Имајте на уму да ознаке командне линије могу да се промене у било ком тренутку и да нису подржане.</translation>
+<translation id="3858407183625528544">Организација не дозвољава поновно коришћење лозинки у Growser-у из безбедносних разлога. Лозинке у Growser-у се шифрују да би се заштитила приватност корисника.</translation>
+<translation id="6376948191860056592">Сазнајте више о томе како Growser штити лозинке</translation>
+<translation id="59755378055907482">Growser вам препоручује да ресетујете лозинку ако сте је користили на другим сајтовима.</translation>
+<translation id="2025231306371961337">Growser вам препоручује да ресетујете лозинку за <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> ако сте је користили на другим сајтовима.</translation>
+<translation id="3990414676738824170">Сазнајте више о претраживачу у Growser-у</translation>
+<translation id="8152737631160961249">Ваш претраживач у Growser-у</translation>
+<translation id="5178006823023208130">На основу закона у вашем региону Growser тражи да одаберете подразумевани претраживач. Ови претраживачи су популарни у вашем региону и приказују се насумичним редоследом.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Подразумевани претраживач вам омогућава да претражујете веб и омогућава Growser функције<ph name="END_BOLD"/> попут претраживања из траке за адресу и слика на веб-страницама. Функција можда није доступна ако је претраживач не подржава.</translation>
+<translation id="652920213589772275">Можете да промените претраживач у сваком тренутку у подешавањима Growser-а.</translation>
+<translation id="5113257522679527347">Можете да промените претраживач у сваком тренутку у подешавањима Brave-а. Ако не видите жељени претраживач, можете да обавите претрагу са његовог сајта. У подешавањима Brave-а биће наведен као недавно посећен претраживач и моћи ћете да га подесите као подразумевани.</translation>
+<translation id="2493969470983483123">Апликација онемогућава Growser-у да се безбедно повеже са овим сајтом</translation>
+<translation id="463534029029027294">Да бисте успоставили безбедну везу, сат на уређају мора да буде тачан. То је зато што сертификати које веб-сајтови користе за идентификацију важе само одређени временски период. Пошто сат на вашем уређају није тачан, Growser не може да верификује ове сертификате.</translation>
+<translation id="6824867187541740495"><ph name="SITE"/> обично користи шифровање да би заштитио информације. Када је Growser овог пута покушао да се повеже са <ph name="SITE"/>, веб-сајт је вратио необичне и нетачне акредитиве. Или нападач покушава да се представи као <ph name="SITE"/> или је екран за WiFi пријављивање прекинуо везу. Информације су и даље безбедне зато што је Growser прекинуо везу пре него што су размењени било какви подаци.</translation>
+<translation id="8465252529695749376">Тренутно не можете да посетите <ph name="SITE"/> зато што је веб-сајт послао шифроване акредитиве које Growser не може да обради. Грешке и напади на мрежи су обично привремени, па ће ова страница вероватно функционисати касније.</translation>
+<translation id="7320808063012439368">Нападачи на сајту који сте пробали да посетите могу да инсталирају штетан софтвер који краде или брише ствари попут лозинки, слика, порука или бројева кредитних картица. Growser топло препоручује да се вратите на безбедно место. <ph name="BEGIN_LEARN_MORE_LINK"/>Сазнајте више о овом упозорењу<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Growser има уграђене безбедносне функције које вас штите током прегледања – као што је Growser безбедно прегледање, које је <ph name="BEGIN_LINK"/>недавно пронашло малвер<ph name="END_LINK"/> на сајту који сте пробали да посетите.</translation>
+<translation id="1959001866257244765">Помозите да побољшамо безбедност на вебу за све тако што ћете слати <ph name="BEGIN_WHITEPAPER_LINK"/>URL-ове неких страница које посећујете, ограничене информације о систему и одређени садржај страница<ph name="END_WHITEPAPER_LINK"/> Growser-у <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Политика приватности<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Укључите Побољшану заштиту<ph name="END_ENHANCED_PROTECTION_LINK"/> да бисте добили највиши ниво безбедности у Growser-у</translation>
+<translation id="9158927344907916875">Нападачи на сајту који сте пробали да посетите могу да вас преваре да инсталирате штетан софтвер који утиче на начин на који прегледате – на пример, тако што ће променити почетну страницу или вам приказивати додатне огласе на сајтовима које посећујете. Growser искрено препоручује да се вратите на безбедно како не би било штете. <ph name="BEGIN_LEARN_MORE_LINK"/>Сазнајте више о овом упозорењу<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Growser има уграђене безбедносне функције које вас штите током прегледања – попут Growser безбедног прегледања, које је недавно <ph name="BEGIN_LINK"/>открило штетан софтвер<ph name="END_LINK"/> на сајту који сте пробали да посетите.</translation>
+<translation id="6123391640338102428">Нападачи на сајту који сте пробали да посетите могу да вас преваре да инсталирате софтвер или откријете ствари попут лозинки, телефона или бројева кредитних картица. Growser топло препоручује да се вратите на безбедно место. <ph name="BEGIN_LEARN_MORE_LINK"/>Сазнајте више о овом упозорењу<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Growser има уграђене безбедносне функције које вас штите током прегледања – као што је Growser безбедно прегледање, које је <ph name="BEGIN_LINK"/>недавно пронашло „пецање“<ph name="END_LINK"/> на сајту који сте пробали да посетите. Сајтови са „пецањем“ се претварају да су други сајтови да би вас преварили.<ph name="NEW_LINE"/>Нападачи понекад угрожавају чак и сајтове који су обично безбедни. <ph name="BEGIN_ERROR_LINK"/>Обавестите нас<ph name="END_ERROR_LINK"/> ако мислите да је дошло до грешке и да овај сајт не представља опасност.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;1. корак: Пријавите се на портал&lt;/h4&gt;
+    &lt;p&gt;На местима попут кафића или аеродрома морате да се пријавите на WiFi мреже. Да бисте видели страницу за пријављивање, посетите страницу која користи &lt;code&gt;http://&lt;/code&gt;.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;Идите на било који веб-сајт који почиње са &lt;code&gt;http://&lt;/code&gt;, попут &lt;a href="http://example.com" target="_blank"&gt;http://example.com&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Да бисте користили интернет, пријавите се на страници за пријављивање која се отвори.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;2. корак: Отворите страницу у режиму без архивирања (само за рачунаре)&lt;/h4&gt;
+    &lt;p&gt;Страницу коју сте посетили отворите у прозору без архивирања.&lt;/p&gt;
+    &lt;p&gt;Ако се страница отвори, додатак за Growser не ради како треба. Да бисте отклонили грешку, искључите додатак.&lt;/p&gt;
+    &lt;h4&gt;3. корак: Ажурирајте оперативни систем&lt;/h4&gt;
+    &lt;p&gt;Проверите да ли је уређај ажуриран.&lt;/p&gt;
+    &lt;h4&gt;4. корак: Привремено искључите антивирусни програм&lt;/h4&gt;
+    &lt;p&gt;Ова грешка ће вам се приказати ако имате антивирусни софтвер који пружа „HTTPS заштиту“ или „HTTPS скенирање“. Антивирус спречава Growser да пружа заштиту.&lt;/p&gt;
+    &lt;p&gt;Да бисте отклонили овај проблем, искључите антивирусни софтвер. Ако страница ради када искључите софтвер, искључите тај софтвер када користите безбедне сајтове.&lt;/p&gt;
+    &lt;p&gt;Не заборавите да поново укључите антивирусни програм када завршите.&lt;/p&gt;
+    &lt;h4&gt;5. корак: Потражите додатну помоћ&lt;/h4&gt;
+    &lt;p&gt;Ако вам се и даље приказује грешка, контактирајте власника веб-сајта.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">„Софтвер на вашем рачунару онемогућава Growser-у да се безбедно повеже на веб“ (само на Windows рачунарима)</translation>
+<translation id="5693013509590251567">Овај проблем се јавља због сертификата који сте ви или неко други инсталирали на уређају. Сертификат се користи за надгледање и пресретање мрежа и Growser га не сматра поузданим. Иако постоје поједини оправдани разлози за надгледање, на пример на школској или пословној мрежи, Growser жели да будете свесни да се то догађа, чак и ако то не можете да спречите. Надгледање је могуће у било ком прегледачу или апликацији која приступа вебу.</translation>
+<translation id="6319672966240656136">Овај сајт ће остати блокиран јер сте део Growser програма напредне заштите. <ph name="BEGIN_LEARN_MORE_LINK"/>Сазнајте више о овом упозорењу<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">Обично се безбедно повезујете с овим сајтом, али Growser овог пута не може да користи безбедну везу. Нападач можда покушава да шпијунира или измени мрежну везу. <ph name="BEGIN_LEARN_MORE_LINK"/>Сазнајте више о овом упозорењу<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">Обично се безбедно повезујете са сајтовима, али Growser овог пута не може да користи безбедну везу. Нападач можда покушава да шпијунира или измени мрежну везу. <ph name="BEGIN_LEARN_MORE_LINK"/>Сазнајте више о овом упозорењу<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">Обично се безбедно повезујете с овим сајтом, али Growser овог пута не може да користи безбедну везу. Нападач можда покушава да шпијунира или измени мрежну везу. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">Обично се безбедно повезујете са сајтовима, али Growser овог пута не може да користи безбедну везу. Нападач можда покушава да шпијунира или измени мрежну везу. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Ово упозорење вам се приказује јер овај сајт не подржава HTTPS и део је Growser програма напредне заштите. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave је управо означио веб-сајт који сте покушали да посетите. Помозите нам да побољшамо ова упозорења тако што ћете попунити једноминутну анкету.</translation>
+<translation id="3665741528710985669">Послато у Brave на уређају <ph name="DEVICE_NAME"/></translation>
+<translation id="2756090547781225493">Послато у Brave на <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463">Већ је послато у Growser на уређају <ph name="DEVICE_NAME"/></translation>
+<translation id="2665815858706570232">Када је ово подешавање укључено, Growser дели релевантне картице у овом прозору да би вам помогао да добијете релевантније одговоре.</translation>
+<translation id="4585120639592593231">Да бисте добијали персонализованије одговоре, Growser аутоматски шаље садржај странице и URL-ове отворених картица који могу да буду релевантни за питање које сте поставили Growser-у. Growser ће делити само картице из прозора у ком радите.</translation>
+<translation id="5000497292978544380">AI режим Growser претраге</translation>
+<translation id="4946528282746936957">Growser ће делити релевантне отворене картице у свакој новој конверзацији да бисте добијали боље одговоре. Сазнајте више о</translation>
+<translation id="8988391141035210442">Овај сервер не може да докаже да је <ph name="DOMAIN"/> јер користи безбедносни сертификат који Growser или конфигурација система за шифровање веб-саобраћаја не сматрају поузданим. Узрок томе је можда погрешна конфигурација или нападач који је прекинуо везу. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Прикажи сертификат<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">Да бисте користили YouTube, наставите са Growser налогом</translation>
+<translation id="2269854356696928455">Да бисте затражили да видите овај садржај, наставите са Growser налогом</translation>
+<translation id="5611620894475877872">Шифруј синхронизоване лозинке помоћу Growser налога</translation>
+<translation id="7297228218361240128">Сачувајте информације у Growser новчанику са страница које прегледате</translation>
+<translation id="1829026591231985685">чувању информација у Growser новчанику у подешавањима</translation>
+<translation id="7927046851848613453">Чувајте карте, догађаје и друге информације са страница које прегледате, а не само обрасце које попуњавате. Затим брзо приступајте картама, као што су карте за догађаје и картице лојалности. Сачуване информације могу да се приказују на уређајима и у свим Growser производима.</translation>
+<translation id="4080668349181235831">Да би вам се нудили предлози и побољшала ова функција, URL и садржај целе странице сајта који посећујете деле се са Growser-ом. Сазнајте више о: <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/>.</translation>
+<translation id="5038265118346577744">Пријавите се у Growser да бисте делили групе картица, придруживали им се и сарађивали на идејама</translation>
+<translation id="3109033858283726964">Пријавите се у Growser</translation>
+<translation id="1823139539047733938">Growser је застарео</translation>
+<translation id="4837402451637115574">Да бисте делили групе картица, ажурирајте Growser</translation>
+<translation id="3835090069800247534">Да бисте се придружили овој групи картица, ажурирајте Growser</translation>
+<translation id="5796903668018420114">Да бисте наставили да користите дељене групе картица, ажурирајте Growser</translation>
+<translation id="7224231921984484941">Да бисте делили групе картица, придруживали им се и сарађивали у њима, отворите подешавања и укључите Дозволи пријављивање у Growser</translation>
+<translation id="64301400193488735">Да бисте делили групе картица или им се придружили, неопходно је да имате могућност да се пријавите у Growser</translation>
+<translation id="6517371327636513767">Да бисте делили картице и сарађивали са другима, неопходно је да имате могућност да се пријавите у Growser</translation>
+<translation id="8040715633918382311">Када организација ограничи чување на Growser налогу, не можете да делите групе картица нити да им се придружите</translation>
+<translation id="5748088712770284646">Када организација ограничи чување на Growser налогу, не можете да делите картице нити да сарађујете са другима</translation>
+<translation id="1973662400109107505">Ажурирајте Growser да бисте наставили да користите дељене групе картица</translation>
+<translation id="540513565870577298">Ако изаберете или занемарите предлог, Growser ће се прилагодити тако да видите само оно што је релевантно за вас</translation>
+<translation id="6381429959346598968">Growser обрађује наслове страница и URL-ове у приватном простору у клауду</translation>
+<translation id="3475470536954895815">Growser обрађује наслове страница и URL-ове у клауду</translation>
+<translation id="583085621576779299">Ако искључите предлоге, наслов странице и URL-ови картица и даље могу да се обрађују за друге Growser функције. Приступом прегледача овим подацима можете да управљате у</translation>
+<translation id="913846191326613072">Када се деле картице, њихов садржај и URL-ови се шаљу Growser-у</translation>
+<translation id="4827675678516992122">Повезивање није успело</translation>
+<translation id="6749473226660745022">Слике</translation>
+<translation id="2366554533468315977">Историја цена широм веба за ову опцију</translation>
+<translation id="5199729219167945352">Експерименти</translation>
+<translation id="8413126021676339697">Прикажи сву историју</translation>
+<translation id="6302661287897119265">Филтрирај</translation>
+<translation id="4759238208242260848">Преузимања</translation>
+<translation id="7366909168761621528">Подаци прегледања</translation>
+<translation id="1898804291554630487">Поставите питање о овој страници</translation>
+<translation id="6231782223312638214">Предложено</translation>
 </translationbundle>

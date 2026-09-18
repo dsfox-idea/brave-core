@@ -801,4 +801,51 @@ Ochrona zaawansowana kontroluje te ustawienia Growser:</translation>
 <translation id="8186479265534291036">Strona nie działa? Pliki cookie innych firm zostały zablokowane</translation>
 <translation id="8874790741333031443">Spróbuj tymczasowo zezwolić na pliki cookie innych firm – oznacza to słabszą ochronę podczas przeglądania, ale jest większa szansa na to, że funkcje witryny będą działać zgodnie z oczekiwaniami.</translation>
 <translation id="915112772806845021">Strony używają tego ustawienia, aby automatycznie włączać obraz w obrazie. Dzięki temu możesz kontynuować oglądanie filmu, a jednocześnie zyskać miejsce na ekranie na inne zadania.</translation>
+<translation id="3281851196103181918">Witryna, którą odwiedzasz, może zapisywać w Growser niewielką ilość informacji, głównie po to, żeby potwierdzić, że nie jesteś botem.</translation>
+<translation id="7321946347180923218">Witryny, które przeglądasz, mogą sprawdzać te informacje w Growser i uzyskiwać potwierdzenie z wcześniej odwiedzonej witryny, że prawdopodobnie jesteś prawdziwą osobą.</translation>
+<translation id="1416017798077335746">Gdy ta opcja jest włączona, Growser działa szybciej, a funkcje używające JavaScriptu powinny działać zgodnie z założeniami. Po jej wyłączeniu wydajność spada, ale mechanizm V8 jest bardziej odporny na ataki.</translation>
+<translation id="1161610156793601923">Witryny będą działać szybciej dzięki mechanizmowi V8 w przeglądarce Growser, ale będzie ona trochę mniej odporna na ataki</translation>
+<translation id="4522008664732371170">V8 to mechanizm JavaScript i WebAssembly w Growser używany do zwiększania wydajności witryny</translation>
+<translation id="8589838971217638472">Działanie witryn nie będzie przyspieszane za pomocą mechanizmu V8 w przeglądarce Growser, ale będzie ona trochę bardziej odporna na ataki</translation>
+<translation id="7640998335907138542">Stosuj ciemny motyw witryn w przypadkach, w których stosuje go Growser, tam, gdzie to możliwe</translation>
+<translation id="2057998558085257831">Zarządzaj w <ph name="BEGIN_LINK1"/>ustawieniach Androida<ph name="END_LINK1"/>
+
+Ochrona zaawansowana kontroluje te ustawienia Growser:</translation>
+<translation id="423123022780548223">Treść z <ph name="DOMAIN_NAME"/> dostarczana przez Growser.</translation>
+<translation id="8347706830008915646">Aby zaoszczędzić dane, obrazy z tej strony zostały zoptymalizowane przez Growser.</translation>
+<translation id="6934374371757268073">Growser ponownie zablokuje pliki cookie dzisiaj</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{Growser ponownie zablokuje pliki cookie jutro}few{Do ponownego zablokowania plików cookie pozostały # dni}many{Do ponownego zablokowania plików cookie pozostało # dni}other{Do ponownego zablokowania plików cookie pozostało # dnia}}</translation>
+<translation id="2695810323641466307">Uruchamiaj Growser z zaznaczonym paskiem adresu, aby skrócić czas uruchamiania na mało wydajnych urządzeniach.</translation>
+<translation id="5598609827458395422">Growser udostępnia teraz ostatnie karty Twojemu urządzeniu. Zobaczysz je na liście aplikacji na urządzeniu i w wynikach wyszukiwania. Tę funkcję możesz w każdej chwili wyłączyć w ustawieniach Growser.</translation>
+<translation id="8965088526414675625">Growser wyświetla teraz ostatnie karty na liście aplikacji i w wynikach wyszukiwania na urządzeniu. Tę funkcję możesz w każdej chwili wyłączyć w ustawieniach Growser.</translation>
+<translation id="8761470294803693272">Pozwól Growser udostępniać ostatnie karty swojemu urządzeniu, aby były one widoczne na nim na liście aplikacji i w wynikach wyszukiwania. Tę funkcję możesz w każdej chwili włączyć lub wyłączyć w ustawieniach Growser.</translation>
+<translation id="8421385332619538087">Pozwól Growser wyświetlać ostatnie karty na liście aplikacji i w wynikach wyszukiwania na urządzeniu. Tę funkcję możesz w każdej chwili wyłączyć w ustawieniach Growser.</translation>
+<translation id="4844745832306307836">Wskazówki dotyczące Growser</translation>
+<translation id="8894933691616134953">Ukryj kartę ze wskazówkami dotyczącymi Growser</translation>
+<translation id="3075680827782258330">Używaj domyślnie Growser</translation>
+<translation id="3330538708604362125">Teraz możesz używać Growser za każdym razem, gdy klikniesz link w wiadomościach, dokumentach i w innych aplikacjach</translation>
+<translation id="878212867049674537">Dostosuj Growser za pomocą spersonalizowanych kolorów i obrazów na stronie głównej</translation>
+<translation id="906376138426795308">Teraz możesz używać Growser za każdym razem, gdy przeglądasz lub klikasz linki w wiadomościach, dokumentach i innych aplikacjach.</translation>
+<translation id="1060555682994133119">Kliknij Przeglądarka &gt; Growser.</translation>
+<translation id="2039425904994800099">Kliknij Przeglądarka, a potem Growser</translation>
+<translation id="3307078631581490570">Dostosuj Growser do swoich potrzeb</translation>
+<translation id="1068559798624451989">Uzyskaj w Growser najlepszą ochronę przed zagrożeniami online</translation>
+<translation id="3371556244314914639">Zapisuj hasła w Growser</translation>
+<translation id="6096811239980093579">Growser zaproponuje zapisanie hasła</translation>
+<translation id="3942445027194417950">Plansza dolna z instrukcjami dotyczącymi zapisywania haseł w Growser</translation>
+<translation id="4476554299666180378">Teraz możesz w pełni korzystać z możliwości Growser na swoim urządzeniu.</translation>
+<translation id="2762149874114516998">W pełni wykorzystuj potencjał Growser</translation>
+<translation id="4229054348764234344">Wykonaj te sugerowane działania, aby w pełni wykorzystać możliwości Growser</translation>
+<translation id="9005129040299651584">Dostosuj Growser, wybierając niestandardowy motyw</translation>
+<translation id="6695051470627475273">Plansza dolna Kolory Growser otwarta na całą wysokość</translation>
+<translation id="8884873726356949960">Plansza dolna Kolory Growser otwarta do połowy wysokości</translation>
+<translation id="8064824204802826269">Ustawienia domyślne Brave</translation>
+<translation id="3625563631434033924">Kolory Brave</translation>
+<translation id="4084889026632451864">Plansza dolna Kolory Growser</translation>
+<translation id="6506349636755583652">Zmieniono niektóre ustawienia Growser</translation>
+<translation id="6972629891077993081">Urządzenia HID</translation>
+<translation id="4748783296226936791">Witryny zwykle łączą się z urządzeniami HID w celu obsługi funkcji, które korzystają z niestandardowych klawiatur, kontrolerów gier i innych urządzeń</translation>
+<translation id="5719854774000914513">Witryny mogą prosić o zgodę na połączenie z urządzeniami HID</translation>
+<translation id="8625916342247441948">Nie zezwalaj witrynom na łączenie się z urządzeniami HID</translation>
+<translation id="1258491128795710625">Nowe funkcje</translation>
 </translationbundle>

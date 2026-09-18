@@ -11325,4 +11325,441 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="954749761428814584">Valoda un ievades metode</translation>
 <translation id="960987915827980018">Atlikusi apmēram 1 stunda</translation>
 <translation id="995420352808264005">Ierīces reģistrācijas veida izvēle</translation>
+<translation id="6681823034920334318">Lai varētu apraidīt saturu, izmantojot kodu, ieslēdziet pārlūka Growser sinhronizācijas iestatījumus</translation>
+<translation id="2515496577979954543">Atvērt Growser</translation>
+<translation id="5924575374764114159"><ph name="TASK_TITLE"/>: Gemini pabeidza jūsu uzdevuma izpildi. Varat to skatīt pārlūkā Growser</translation>
+<translation id="3721794228264322796">Aizvērt Gemini pārlūkā Growser</translation>
+<translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini pārlūkā Growser</translation>
+<translation id="1975450474853317621">Atvērt pārlūkā Growser</translation>
+<translation id="8516824290867275572">Jūsu kontam nav piekļuves Gemini pārlūkā Growser</translation>
+<translation id="1649234713894562345">Pārlūku Brave nodrošina Brave atklātā pirmkoda projekts un cita <ph name="BEGIN_HIGHLIGHT"/>atklātā pirmkoda<ph name="END_HIGHLIGHT"/> programmatūra.</translation>
+<translation id="870536819717176711">Kad izvēlaties kopīgot pašreizējo cilni ar Gemini, Growser serveriem tiek nosūtīts cilnes pilns saturs, multivide un URL.</translation>
+<translation id="1130866111814048607">Kad tiek kopīgotas cilnes, to lapu saturs, multivide un vietrāži URL tiek nosūtīti uz uzņēmumam Brave un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
+<translation id="7656790264713095385">Vispirms ieslēdziet Brave automātisko pārlūkošanu šajā ierīcē</translation>
+<translation id="8572003230388132401">Gemini Spark var izmantot Growser automātisko pārlūkošanu šajā ierīcē, lai mijiedarbotos ar vietnēm un veiktu uzdevumus jūsu vārdā. <ph name="LINK_BEGIN"/>Uzzināt vairāk<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">Gemini Spark var izmantot automātisko pārlūkošanu šajā ierīcē tikai tad, ja ierīce ir aktivizēta un darbojas pārlūks Growser.</translation>
+<translation id="1982892581799327835">Jūsu pārlūku Growser var kontrolēt ikviens, kam ir piekļuve jūsu Gemini Spark aģentam.</translation>
+<translation id="6689939585896001516">Ļaujiet pārlūkam Growser veikt pārlūkošanu jūsu vietā</translation>
+<translation id="640233545778658570">Gemini pārlūkā Growser izmanto automātisko pārlūkošanu, lai darbotos jūsu cilnēs un veiktu jūsu dotos uzdevumus. <ph name="LINK_BEGIN"/>Uzziniet vairāk<ph name="LINK_END"/>.</translation>
+<translation id="2740842679402949230">Uzzināt vairāk par Brave automātisko pārlūkošanu</translation>
+<translation id="3570112771874223231">Lapu saturs un vietrāži URL, ko Gemini izmantos uzdevuma veikšanas laikā, tiks kopīgoti ar uzņēmumu Brave un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
+<translation id="2314508080153323869">Gemini pārlūkā Growser</translation>
+<translation id="1910632359330857071">Pārlūkojot varat tērzēt, izmantojot Gemini pārlūkā Growser, lai iegūtu atbildes, galvenos secinājumus un citu informāciju.</translation>
+<translation id="2483218699324586641">Izmantojiet īsinājumtaustiņu <ph name="FOCUS_TOGGLE_HOTKEY"/>, lai atvērtu Gemini pārlūkā Growser</translation>
+<translation id="2353068771555482464">Iepazīstieties ar Gemini pārlūkā Growser</translation>
+<translation id="7545274281857327491">Iegūstiet labākās Growser MI iespējas. Piespraudiet Gemini rīkjoslai, lai varētu tam ērti piekļūt, vai jebkurā laikā atveriet to no Growser izvēlnes.</translation>
+<translation id="8335336878672278597">Gemini nav pieejams pārlūkā Growser</translation>
+<translation id="570859258083183845">Gemini pārlūkā Growser tiek ieviests dažādās atrašanās vietās, taču nav pieejams visur.</translation>
+<translation id="96535553604365597">Ziņot par problēmu ar Growser Cast</translation>
+<translation id="4415611489406290344">Lai varētu veikt apraidi, piešķiriet pārlūkam Growser piekļuvi šeit: <ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/> &gt; Vietējais tīkls &gt; Growser</translation>
+<translation id="8492960370534528742">Atsauksmes par Growser Cast</translation>
+<translation id="2263679799334060788">Mēs novērtējam jūsu atsauksmes — tās palīdz mums uzlabot pakalpojumu Growser Cast. Lai saņemtu palīdzību apraides problēmu novēršanā, apmeklējiet <ph name="BEGIN_LINK"/>palīdzības centru<ph name="END_LINK"/>.</translation>
+<translation id="8376137163494131156">Pastāstiet par problēmām ar Growser Cast.</translation>
+<translation id="7325065595154456783">Papildus informācijai, ko esat jau norādījis, tiks iesniegti arī dati par izmantoto pārlūka Growser versiju, operētājsistēmas versiju, Cast iestatījumiem, spoguļošanas veiktspējas statistika, kā arī saziņas kanālu diagnostikas žurnāli. Iesniegtās atsauksmes tiek izmantotas, lai diagnosticētu problēmas un uzlabotu funkcijas darbību. Jebkāda personas informācija, kas iesniegta tieši vai papildus, tiks aizsargāta saskaņā ar mūsu konfidencialitātes politikām. Iesniedzot atsauksmes, jūs piekrītat, ka Growser drīkst tās izmantot, lai uzlabotu jebkuru Growser produktu vai pakalpojumu.</translation>
+<translation id="3187556136478864255">Vai jūsu apraides ierīce ir redzama <ph name="BEGIN_LINK"/>lietotnē Growser Home<ph name="END_LINK"/>?</translation>
+<translation id="2984923316661218534">Iegūstiet piekļuves atslēgas šajā ierīcē, izmantojot Growser paroļu pārvaldnieku</translation>
+<translation id="2364302372598204515">Šis nav Growser konts. Pārlūkā Growser saglabātie vienumi nebūs pieejami citās ierīcēs.</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave abonements</translation>
+<translation id="850632091665381275">Brave abonements</translation>
+<translation id="6710172959248731469">Growser pakalpojumu iestatījumi</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{Viens vienums ir saglabāts tikai šajā ierīcē. Lai šo vienumu varētu izmantot citās ierīcēs, saglabājiet to savā Growser kontā. Tiks notīrīti arī visi dublikāti.}zero{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}one{{ITEM_COUNT} vienums ir saglabāts tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}other{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{Viena parole ir saglabāta tikai šajā ierīcē. Lai šo paroli varētu izmantot citās ierīcēs, saglabājiet to savā Growser kontā. Tiks notīrīti arī visi dublikāti.}zero{{PASSWORD_COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai šīs paroles varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}one{{PASSWORD_COUNT} parole ir saglabāta tikai šajā ierīcē. Lai šīs paroles varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}other{{PASSWORD_COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai šīs paroles varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{Viena parole un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}zero{{PASSWORD_COUNT} paroles un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}one{{PASSWORD_COUNT} parole un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}other{{PASSWORD_COUNT} paroles un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{Viena grāmatzīme ir saglabāta tikai šajā ierīcē. Lai šo grāmatzīmi varētu izmantot citās ierīcēs, saglabājiet to savā Growser kontā. Tiks notīrīti arī visi dublikāti.}zero{{BOOKMARK_COUNT} grāmatzīmes ir saglabātas tikai šajā ierīcē. Lai šīs grāmatzīmes varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}one{{BOOKMARK_COUNT} grāmatzīme ir saglabāta tikai šajā ierīcē. Lai šīs grāmatzīmes varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}other{{BOOKMARK_COUNT} grāmatzīmes ir saglabātas tikai šajā ierīcē. Lai šīs grāmatzīmes varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{Viena grāmatzīme un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}zero{{BOOKMARK_COUNT} grāmatzīmes un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}one{{BOOKMARK_COUNT} grāmatzīme un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}other{{BOOKMARK_COUNT} grāmatzīmes un citi vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{Viens vienums ir saglabāts tikai šajā ierīcē. Lai varētu izmantot šo vienumu citās ierīcēs, saglabājiet to savā Growser kontā.}zero{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}one{{ITEM_COUNT} vienums ir saglabāts tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}other{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{Viena parole ir saglabāta tikai šajā ierīcē. Lai varētu izmantot šo paroli citās ierīcēs, saglabājiet to savā Growser kontā.}zero{{PASSWORD_COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai varētu izmantot šīs paroles citās ierīcēs, saglabājiet tās savā Growser kontā.}one{{PASSWORD_COUNT} parole ir saglabāta tikai šajā ierīcē. Lai varētu izmantot šīs paroles citās ierīcēs, saglabājiet tās savā Growser kontā.}other{{PASSWORD_COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai varētu izmantot šīs paroles citās ierīcēs, saglabājiet tās savā Growser kontā.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{Viena parole un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}zero{{PASSWORD_COUNT} paroles un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}one{{PASSWORD_COUNT} parole un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}other{{PASSWORD_COUNT} paroles un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{Viena grāmatzīme ir saglabāta tikai šajā ierīcē. Lai varētu izmantot šo grāmatzīmi citās ierīcēs, saglabājiet to savā Growser kontā.}zero{{BOOKMARK_COUNT} grāmatzīmes ir saglabātas tikai šajā ierīcē. Lai varētu izmantot šīs grāmatzīmes citās ierīcēs, saglabājiet tās savā Growser kontā.}one{{BOOKMARK_COUNT} grāmatzīme ir saglabāta tikai šajā ierīcē. Lai varētu izmantot šīs grāmatzīmes citās ierīcēs, saglabājiet tās savā Growser kontā.}other{{BOOKMARK_COUNT} grāmatzīmes ir saglabātas tikai šajā ierīcē. Lai varētu izmantot šīs grāmatzīmes citās ierīcēs, saglabājiet tās savā Growser kontā.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{Viena grāmatzīme un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}zero{{BOOKMARK_COUNT} grāmatzīmes un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}one{{BOOKMARK_COUNT} grāmatzīme un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}other{{BOOKMARK_COUNT} grāmatzīmes un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 vienums ir saglabāts tikai šajā ierīcē. Lai varētu izmantot šo vienumu citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet to savā Growser kontā<ph name="END_LINK"/>.}zero{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tos savā Growser kontā<ph name="END_LINK"/>.}one{{ITEM_COUNT} vienums ir saglabāts tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tos savā Growser kontā<ph name="END_LINK"/>.}other{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tos savā Growser kontā<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">Izmantojiet savu Growser kontu vai izveidojiet jaunu kontu</translation>
+<translation id="1896353439080510710">Tērzēšanas sarunas tiek pārskatītas un izmantotas Brave MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="7398815534290329738">Tērzēšanas sarunas tiek pārskatītas un izmantotas Brave MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Noteikts saturs var nebūt piemērots visiem. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Šis paplašinājums ir saglabāts jūsu Growser kontā, taču var tikt dzēsti visi tā dati, kas ir saglabāti tikai šajā ierīcē.}zero{Šie paplašinājumi ir saglabāti jūsu Growser kontā, taču var tikt dzēsti visi to dati, kas ir saglabāti tikai šajā ierīcē.}one{Šie paplašinājumi ir saglabāti jūsu Growser kontā, taču var tikt dzēsti visi to dati, kas ir saglabāti tikai šajā ierīcē.}other{Šie paplašinājumi ir saglabāti jūsu Growser kontā, taču var tikt dzēsti visi to dati, kas ir saglabāti tikai šajā ierīcē.}}</translation>
+<translation id="3523789730715594198">Jebkurā brīdī iestatījumos varat pārtraukt sinhronizēšanu. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
+<translation id="8231595707224857577">Jūsu organizācija izslēdza ciļņu saglabāšanu jūsu Growser kontā.</translation>
+<translation id="1031540790849324993">Lai varētu piekļūt parolēm, grāmatzīmēm un citiem datiem visās savās ierīcēs, saglabājiet tos savā Growser kontā.</translation>
+<translation id="7044272971260038324">Lai notīrītu grāmatzīmju dublikātus, saglabājiet grāmatzīmes savā Growser kontā.</translation>
+<translation id="5106710135524113413">Kamēr ir aktīva pierakstīšanās, varat izmantot savā Growser kontā saglabātās grāmatzīmes, paplašinājumus un citu saturu visās savās ierīcēs.</translation>
+<translation id="458475640392126897">Kamēr ir aktīva pierakstīšanās, varat izmantot savā Growser kontā saglabātos motīvus, iestatījumus un citu saturu visās savās ierīcēs.</translation>
+<translation id="8780123805589053431">Iegūt attēlu aprakstus no Growser</translation>
+<translation id="8076549662907665888">Ja attēlam nav vērtīga apraksta, pārlūks Growser mēģinās jums tādu nodrošināt. Lai izveidotu aprakstus, attēli tiek nosūtīti uzņēmumam Growser.</translation>
+<translation id="5216674789212441076">Automātiski tiek tulkoti reāllaikā izveidotie subtitri. Subtitri tiek sūtīti uz Growser serveriem tulkošanai.</translation>
+<translation id="2955575198481587842">Growser krāsas</translation>
+<translation id="5000497292978544380">Growser meklēšanas MI režīms</translation>
+<translation id="377490226065453836">Growser paneļi</translation>
+<translation id="2955048943983973430">Saistītie Growser pakalpojumi</translation>
+<translation id="6214157047210274853">Rediģēt lietotnē Growser maks</translation>
+<translation id="5831217499016131155">Growser maks</translation>
+<translation id="5787582109651427233">Apmeklējiet lietotni Growser maks, lai pievienotu vai pārvaldītu <ph name="BEGIN_LINK_LOYALTY_CARDS"/>lojalitātes kartes<ph name="END_LINK_LOYALTY_CARDS"/> vai Growser Pay <ph name="BEGIN_LINK_PAYMENT_METHODS"/>maksājumu veidus<ph name="END_LINK_PAYMENT_METHODS"/></translation>
+<translation id="3040435070100611531">Jūsu kartes lietotnē Growser maks</translation>
+<translation id="5829544019044013776">Jūsu maksājumu veidi lietotnē Growser maks</translation>
+<translation id="4140668600752387693">Kad pierakstāties savā Growser kontā, šī funkcija ir ieslēgta.</translation>
+<translation id="7297228218361240128">Informācijas saglabāšana lietotnē Growser maks no skatītajām lapām</translation>
+<translation id="4182182457914031017">Lai sniegtu ieteikumus un uzlabotu šo funkciju, ar uzņēmumu Growser tiek kopīgots jūsu apmeklētās vietnes URL un viss lapas saturs.</translation>
+<translation id="808488435221187916">Jūsu informācija ir pieejama lietotnē Growser maks jebkurā ierīcē, kurā veikta pierakstīšanās.</translation>
+<translation id="7501338159181931945">Šīs piekļuves atslēgas ir saglabātas funkcijā Windows Hello šajā datorā. Tās nav saglabātas jūsu Growser kontā.</translation>
+<translation id="1921051356055149189">Rediģēt Growser kontā</translation>
+<translation id="4498223799912841817">Noņemt no pārlūka Growser</translation>
+<translation id="3346610836797971718">Vai noņemt mājas adresi no Growser automātiskās aizpildes?</translation>
+<translation id="6595367601483315266">Vai noņemt darbavietas adresi no Growser automātiskās aizpildes?</translation>
+<translation id="3068798232942246848">Vai noņemt šo informāciju no Growser automātiskās aizpildes?</translation>
+<translation id="4713283515261533452">Lai dzēstu pārlūkošanas datus tikai no šīs ierīces un paturētu tos savā Growser kontā, <ph name="BEGIN_LINK"/>izrakstieties<ph name="END_LINK"/>.</translation>
+<translation id="6641004568837764720">Lai dzēstu pārlūkošanas datus no visām savām sinhronizētajām ierīcēm un Growser konta, <ph name="BEGIN_LINK"/>pārejiet uz sinhronizācijas iestatījumiem<ph name="END_LINK"/>.</translation>
+<translation id="7711557916951320264">Lai dzēstu pārlūkošanas datus no visām savām sinhronizētajām ierīcēm un Growser konta, <ph name="BEGIN_LINK"/>ievadiet ieejas frāzi<ph name="END_LINK"/>.</translation>
+<translation id="5680951041809780964">Lai dzēstu pārlūkošanas datus no visām savām sinhronizētajām ierīcēm un Growser konta, <ph name="BEGIN_LINK"/>pierakstieties<ph name="END_LINK"/>.</translation>
+<translation id="908980466794178222">Kad esat pierakstījies, jūsu Growser kontā var saglabāt <ph name="BEGIN_LINK_SEARCH"/>meklēšanas vēsturi<ph name="END_LINK_SEARCH"/> un <ph name="BEGIN_LINK_GOOGLE"/>cita veida darbības<ph name="END_LINK_GOOGLE"/>. Jebkurā laikā varat tās izdzēst.</translation>
+<translation id="1024884937839269099">Kad esat pierakstījies, jūsu Growser kontā var saglabāt <ph name="BEGIN_LINK_GOOGLE"/>arī cita veida darbības<ph name="END_LINK_GOOGLE"/>. Jebkurā laikā varat tās izdzēst.</translation>
+<translation id="6533315466883598769">Izmantot Growser tulkotāju</translation>
+<translation id="6010651352520077187">Kad Growser tulkotājs būs ieslēgts, tas piedāvās tulkot vietnes jūsu vēlamajā valodā. Tas var arī automātiski tulkot vietnes.</translation>
+<translation id="6873499199714317035">Ja Brave tulkotājs ir ieslēgts, tas piedāvā tulkot vietnes un PDF failus jūsu vēlamajā valodā. Tas var arī automātiski tulkot vietnes.</translation>
+<translation id="5911030830365207728">Growser tulkotājs</translation>
+<translation id="7458168200501453431">Tiek izmantots tas pats pareizrakstības pārbaudītājs, kas tiek izmantots Growser meklēšanā. Pārlūkā ievadītais teksts tiek nosūtīts Growser serveriem.</translation>
+<translation id="8972513834460200407">Lūdzu, sazinieties ar savu tīkla administratoru, lai pārliecinātos, vai ugunsmūris nebloķē lejupielādes no Growser serveriem.</translation>
+<translation id="3407392651057365886">Iepriekš ielādēto lapu skaits ir lielāks. Lapas var ielādēt iepriekš, izmantojot Growser serverus, ja to ir pieprasījušas citas vietnes.</translation>
+<translation id="1965578266762387357">Ja izmantojat rakstīšanas palīdzību, lapas URL, saturs un jūsu teksts tiek nosūtīts Growser serveriem. Neievadiet personas informāciju (piemēram, medicīnisko vai finanšu informāciju).</translation>
+<translation id="3281851196103181918">Vietne, ko apmeklējat, pārlūkā Growser var saglabāt nelielu informācijas daudzumu, galvenokārt, lai apstiprinātu, ka neesat robots</translation>
+<translation id="7321946347180923218">Kad turpināsiet pārlūkošanu, vietnes var pieprasīt šo informāciju pārlūkam Growser un saņemt apstiprinājumu no iepriekš apmeklētās vietnes, ka, visticamāk, esat īsts cilvēks.</translation>
+<translation id="3510488868237982080">Uzziniet vairāk par MI ietekmi uz lietošanas iespējām un pārlūkā Growser nodrošinātajām vadīklām.</translation>
+<translation id="3003253259757197230">Uzņēmumam Growser tiek sūtīti jūsu apmeklētie vietrāži URL, lai prognozētu, kuras vietnes jūs varētu apmeklēt turpmāk, un rādītu jums papildinformāciju par apmeklēto lapu.</translation>
+<translation id="69739764870135975">Ja Growser ir arī jūsu noklusējuma meklētājprogramma, tiks rādīti labāki, kontekstuāli atbilstošāki ieteikumi.</translation>
+<translation id="8358717005361108959">Jūsu apmeklētie URL tiek saglabāti Growser kontā</translation>
+<translation id="4674867347456586454">Lai aizsargātu jūs dažādās Growser lietotnēs, šie dati tiek īslaicīgi saistīti ar jūsu Growser kontu, kad esat pierakstījies.</translation>
+<translation id="8898822736010347272">Tiek nosūtīti dažu apmeklēto lapu vietrāži URL, ierobežota sistēmas informācija un noteiktu lapu saturs Growser serveriem, lai palīdzētu atklāt jaunus apdraudējumus un aizsargāt visus tīmekļa lietotājus.</translation>
+<translation id="4255841059940367080">MI nodrošināta reāllaika aizsardzība pret bīstamām vietnēm, lejupielādēm un paplašinājumiem, kas tiek sniegta, sūtot jūsu pārlūkošanas datus uzņēmumam Growser.</translation>
+<translation id="6053586914913150093">Vietrāži URL tiek sūtīti uz funkciju Droša pārlūkošana, lai tos pārbaudītu. Lai palīdzētu atklāt jaunus draudus, tiek nosūtīti arī nelieli datu paraugi, kas ietver lapas, lejupielādes, paplašinājumu aktivitāti un sistēmas informāciju. Lai aizsargātu jūs dažādās Growser lietotnēs, šie dati tiek īslaicīgi saistīti ar jūsu Growser kontu, kamēr esat pierakstījies.</translation>
+<translation id="777637629667389858">Kad esat pierakstījies, šī funkcija aizsargā jūsu informāciju Growser pakalpojumos.</translation>
+<translation id="4492544972585416410">Kad esat pierakstījies, šie dati tiek saistīti ar jūsu Growser kontu, lai aizsargātu jūs dažādos Growser pakalpojumos, piemēram, palielinot aizsardzību pakalpojumā Gmail pēc drošības incidenta.</translation>
+<translation id="6550891580932862748">Netiek nodrošināta aizsardzība pret bīstamām vietnēm, lejupielādēm un paplašinājumiem. Citos Growser produktos izvēlētie drošās pārlūkošanas iestatījumi netiks ietekmēti.</translation>
+<translation id="1153636665119721804">Growser papildu aizsardzības programma</translation>
+<translation id="8678192320753081984">Sniedz Growser efektīvāko konta drošības risinājumu personām, kas ir pakļautas mērķtiecīgu uzbrukumu riskam</translation>
+<translation id="7803714812705886512">Growser izmanto mazāk datu (piemēram, vietrāžu URL daļas, informāciju par lejupielādi), lai noteiktu apdraudējumus.</translation>
+<translation id="8602867356511778172">Growser izmanto vairāk datu (piemēram, vietrāžus URL, lapas satura paraugus, sistēmas informāciju), lai ātrāk un precīzāk noteiktu apdraudējumus.</translation>
+<translation id="2547602044908040111">Ja esat aktīvists, žurnālists, sabiedrībā zināma persona, vēlēšanu darbinieks vai kāda cita persona, kam ir unikāli augsts riska līmenis, jūs varētu interesēt Growser <ph name="BEGIN_LINK"/>papildu aizsardzības programma<ph name="END_LINK"/>.</translation>
+<translation id="5864624288360677142">Izmantot noklusējumu, ja pieejams, un Growser DNS kā rezerves opciju</translation>
+<translation id="7137270216770481232">Pārlūkā Growser tika atiestatīti šie iestatījumi</translation>
+<translation id="8723105215342036961">Šie iestatījumi tika mainīti ārpus pārlūka Growser. Lai jūs aizsargātu, pārlūkā Growser tie tika atiestatīti.</translation>
+<translation id="3099985829883207242">Lai meklētu saturu konkrētā vietnē vai Growser sadaļā, adreses joslā ievadiet vietnes vai pārlūka sadaļas saīsni un pēc tam nospiediet izvēlēto īsinājumtaustiņu.</translation>
+<translation id="3172166850967951827">Daži paplašinājumi pārlūkprogrammai Growser var pievienot meklētājprogrammas</translation>
+<translation id="5433098395236481485">Lejupielādēt PDF failus, nevis automātiski atvērt tos pārlūkā Growser</translation>
+<translation id="4297918578409923363">Atļaut pārlūkam Growser izvēlēties, kad vietnēs var atskaņot skaņu (ieteicams)</translation>
+<translation id="3721119614952978349">Jūs un Growser</translation>
+<translation id="5900302528761731119">Growser profila fotoattēls</translation>
+<translation id="2928030851119977280">Izvēle ir saglabāta. Jūsu izvēlētais iestatījums tiks lietots, kad pierakstīsieties citos Growser pakalpojumos.</translation>
+<translation id="1818532843473612004">Growser kontā</translation>
+<translation id="8511856004631476285">Ja šis iestatījums ir ieslēgts, dati tiek saglabāti jūsu Growser kontā un tos var izmantot visās jūsu ierīcēs. Ja tas ir izslēgts, dati tiek saglabāti tikai šajā ierīcē.</translation>
+<translation id="7846296061357476882">Growser pakalpojumi</translation>
+<translation id="8032692752324456430">Tādējādi tiksiet izrakstīsiet no sava Growser konta. Jūsu grāmatzīmes, vēsture, paroles, kā arī cita informācija vairs netiks sinhronizēta.</translation>
+<translation id="3142647462186639376">Šifrējiet sinhronizētos datus, izmantojot savu <ph name="BEGIN_LINK"/>sinhronizācijas ieejas frāzi<ph name="END_LINK"/>. Maksājuma veidi un adreses no pakalpojuma Growser Pay netiks šifrētas. Pārlūkā Growser saglabātā pārlūkošanas vēsture netiks sinhronizēta.</translation>
+<translation id="63566973648609420">Jūsu šifrētos datus var lasīt tikai personas, kurām ir zināma jūsu ieejas frāze. Ieejas frāze netiek sūtīta Growser serveriem un netiek tajos glabāta. Ja aizmirsīsiet ieejas frāzi vai vēlēsieties mainīt šo iestatījumu, jums būs <ph name="BEGIN_LINK"/>jāatiestata sinhronizācija<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">Varat kontrolēt, kā Growser pakalpojumos tiek izmantota pārlūkošanas vēsture un citi jūsu dati</translation>
+<translation id="5728072125198221967">Saistītie Growser pakalpojumi</translation>
+<translation id="3848443004871354246">Growser konts</translation>
+<translation id="3293574207873361017">Growser konta pārvaldība</translation>
+<translation id="6901130673208235020">Kad veicat meklēšanu pārlūkošanas vēsturē, vēstures meklēšanas vaicājumi, precīzāko atbilstību lapu saturs un ģenerētie modeļa izvades dati tiek nosūtīti Growser serveriem.</translation>
+<translation id="3178434360326457238">Kad pārlūkojat vietnes, to lapu saturs tiek šifrēts un saglabāts jūsu ierīcē. Tas var ietekmēt pārlūka Growser veiktspēju.</translation>
+<translation id="8622145666696249878">Brave meklēšanas MI režīms un piesaistītās lietotnes</translation>
+<translation id="2760679829473121490">Rādīt sistēmas paziņojumus par Growser funkcijām un padomiem</translation>
+<translation id="6713316345564743478">Lai pārbaudītu, vai neviena parole nav uzlauzta, pierakstieties Growser kontā.</translation>
+<translation id="1342886103232377846">Lai pārbaudītu, vai neviena parole nav uzlauzta, pārejiet uz Growser paroļu pārvaldnieku.</translation>
+<translation id="6766488013065406604">Pāriet uz Growser paroļu pārvaldnieku</translation>
+<translation id="5408271390996168857">Jūs izmantojat Growser visaugstāko drošības līmeni</translation>
+<translation id="2888959493235069176">MI pārlūkā Growser</translation>
+<translation id="5058786435107472268">Growser serveriem nosūtītos datus var skatīt pārskatītāji, lai uzlabotu Growser MI tehnoloģijas.</translation>
+<translation id="4928488083257788101">Growser serveriem nosūtītos datus var skatīt pārskatītāji, lai uzlabotu šo funkciju.</translation>
+<translation id="6690687289858134062">Ja pārlūkā Growser tiek konstatēts, ka kāda no jūsu parolēm ir atklāta publiska datu aizsardzības pārkāpuma dēļ, un ja esat pierakstījies, Growser paroļu pārvaldnieks var piedāvāt nomainīt attiecīgo paroli.</translation>
+<translation id="1377438103060664754">Ja kāda no jūsu parolēm tiek atklāta datu aizsardzības pārkāpuma dēļ, Growser paroļu pārvaldnieks jautā, vai vēlaties to nomainīt pret drošu paroli.</translation>
+<translation id="1045487161760507186">Jums nav jāiegaumē parole, jo tā tiek saglabāta Growser paroļu pārvaldniekā.</translation>
+<translation id="2696675923413008404">Saturs no šīs vietnes, tostarp tās vietrādis URL, tiek nosūtīts uzņēmumam Growser, un to var skatīt pārskatītāji, lai uzlabotu šo funkciju.</translation>
+<translation id="4770046633685474652">Efektīvāka Growser lietošana, izmantojot MI iespējas</translation>
+<translation id="4682807230647698604">Kad izmantosiet šīs funkcijas, Growser serveriem tiks nosūtīti atbilstošie dati, lai izveidotu MI iespējas.</translation>
+<translation id="9130857050314385402">Kad izmantojat prasmi, ciļņu nosaukumi un vietrāži URL tiek nosūtīti uz Growser serveriem.</translation>
+<translation id="6889302653504319751">Prasmes tiek saglabātas jūsu Growser kontā.</translation>
+<translation id="7247922309426191342">Growser var veidot un tulkot subtitrus šajās valodās.</translation>
+<translation id="113229251350204705">Growser var veidot subtitrus šajās valodās.</translation>
+<translation id="2523184218357549926">Nosūta Growser serveriem apmeklēto lapu vietrāžus URL</translation>
+<translation id="2489769822799748314">Palīdzēt uzlabot Growser funkcijas un veiktspēju</translation>
+<translation id="1236327016477620515">Automātiski sūtīt lietojuma statistiku un avāriju pārskatus Growser serveriem</translation>
+<translation id="4847986390991794208">Growser viedās tehnoloģijas pārlūkā Growser</translation>
+<translation id="4849857027852929587">Lai izmantotu un saglabātu paroles savā Growser kontā, apstipriniet savu identitāti.</translation>
+<translation id="4571634846305359773">Lai vienmēr varētu izmantot Growser kontā saglabātās paroles, apstipriniet savu identitāti.</translation>
+<translation id="1067922213147265141">Citi Growser pakalpojumi</translation>
+<translation id="5611620894475877872">Šifrēt sinhronizētās paroles, izmantojot jūsu Growser konta datus</translation>
+<translation id="2934862573358659343">Izmantot Growser noklusējuma šifrēšanu parolēm jūsu Growser kontā</translation>
+<translation id="2234876718134438132">Sinhronizēšana un Growser pakalp.</translation>
+<translation id="90129144187791159">Šis konts nav saistīts ar Growser, tādēļ nav pieejamas tādas funkcijas kā Growser sinhronizācija.</translation>
+<translation id="8576758133946664895">Growser Root Store</translation>
+<translation id="465996245977626576">Krātuvē Growser Root Store ir sertifikāti no sertificēšanas iestādēm, kurām uzticas
+      programma Growser Root Program. Krātuve Growser Root Store tiek pastāvīgi pārskatīta.</translation>
+<translation id="6792337889847068504">Uzzināt vairāk par Growser Root Store jaunā cilnē</translation>
+<translation id="3691353018566626378">Ja izdzēsīsiet servera sertifikātu, pārlūkā Growser tas vairs netiks izmantots serveru identificēšanai.</translation>
+<translation id="1378122021175898739">Growser sistēmas informācija</translation>
+<translation id="1017340475205725100">ChromeOS Growser lietotāju žurnāli</translation>
+<translation id="7635904580734496104">Growser konta ID</translation>
+<translation id="5221420127618874650">Saglabāt Growser kontā</translation>
+<translation id="691102290537033604">Paplašinājums varēs izpildīt kodu, ko uzņēmums Growser nav pārskatījis. Tas var nebūt droši, tādēļ ieteicams to iespējot tikai tad, ja esat patiešām pārliecināts.</translation>
+<translation id="2375391460087228850">Growser lietotnes</translation>
+<translation id="7370738934099833954">Paplašinājumi ir Growser papildinājumi, kas var palīdzēt paveikt vairāk.</translation>
+<translation id="6629808816989244742">ir Growser papildinājumi, kas var palīdzēt paveikt vairāk.</translation>
+<translation id="7474944013493005173">Paplašinājumi ir Growser papildinājumi, kas var jums palīdzēt</translation>
+<translation id="5608497824592875805">Tikai jūsu kontaktpersonas, kurām ir Growser konts. <ph name="LINK_BEGIN"/>Skatīt kontaktpersonas<ph name="LINK_END"/></translation>
+<translation id="1958324393151249273">Lai izmantotu funkciju “Kopīgošana tuvumā” ar šīm kontaktpersonām, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.</translation>
+<translation id="4588215749100790315">Lai izmantotu funkciju <ph name="FEATURE_NAME"/> ar kontaktpersonām, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{# kontaktpersona nav pieejama. Lai ar šo kontaktpersonu izmantotu funkciju Kopīgošana tuvumā, pievienojiet kontaktpersonu sarakstam šīs personas e-pasta adresi, kas saistīta ar tās Growser kontu.}zero{# kontaktpersonas nav pieejamas. Lai ar šīm kontaktpersonām izmantotu funkciju Kopīgošana tuvumā, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.}one{# kontaktpersona nav pieejama. Lai ar šīm kontaktpersonām izmantotu funkciju Kopīgošana tuvumā, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.}other{# kontaktpersonas nav pieejamas. Lai ar šīm kontaktpersonām izmantotu funkciju Kopīgošana tuvumā, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{# kontaktpersona nav pieejama. Lai izmantotu funkciju “<ph name="FEATURE_NAME"/>” ar šo kontaktpersonu, pievienojiet kontaktpersonu sarakstam šīs personas e-pasta adresi, kas saistīta ar tās Growser kontu.}zero{# kontaktpersonas nav pieejamas. Lai izmantotu funkciju “<ph name="FEATURE_NAME"/>” ar šīm kontaktpersonām, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.}one{# kontaktpersona nav pieejama. Lai izmantotu funkciju “<ph name="FEATURE_NAME"/>” ar šīm kontaktpersonām, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.}other{# kontaktpersonas nav pieejamas. Lai izmantotu funkciju “<ph name="FEATURE_NAME"/>” ar šīm kontaktpersonām, pievienojiet kontaktpersonu sarakstam šo personu e-pasta adreses, kas saistītas ar viņu Growser kontiem.}}</translation>
+<translation id="3115470387083988713">Lai gādātu par papildu drošību, varat šifrēt paroles savā ierīcē, pirms tās tiek saglabātas jūsu Growser kontā.</translation>
+<translation id="8042331986490021244">Jūsu paroles tiek šifrētas jūsu ierīcē, pirms tās tiek saglabātas Growser paroļu pārvaldniekā.</translation>
+<translation id="1440474484372226561">Parole netika kopīgota. Pārbaudiet interneta savienojumu un noteikti pierakstieties pārlūkā Growser. Pēc tam mēģiniet vēlreiz.</translation>
+<translation id="6667187897999649121">Šobrīd paroles varat kopīgot tikai ar ģimenes locekļiem. <ph name="BEGIN_LINK"/>Izveidojiet ģimenes grupu<ph name="END_LINK"/> ar 6 dalībniekiem un izmantojiet Growser produktu un abonementu papildu priekšrocības.</translation>
+<translation id="3767835232661747729">Šobrīd paroles varat kopīgot tikai ar ģimenes locekļiem. <ph name="BEGIN_LINK"/>Uzaiciniet ģimenes locekļus<ph name="END_LINK"/> pievienoties savai grupai un pilnvērtīgāk izmantojiet Growser produktu un abonementu iespējas.</translation>
+<translation id="4509277363725254222">Ja kopīgosiet sava <ph name="BEGIN_BOLD_USERNAME"/>lietotājvārda<ph name="END_BOLD_USERNAME"/> un <ph name="BEGIN_BOLD_PASSWORD"/>paroles<ph name="END_BOLD_PASSWORD"/> kopiju, jūsu ģimenes loceklis varēs to aizpildīt, izmantojot Growser paroļu pārvaldnieku.</translation>
+<translation id="3618647122592024084">Ar Growser paroļu pārvaldnieka palīdzību <ph name="RECIPIENT_NAME"/> tagad var izmantot jūsu lietotājvārdu un paroli. Informējiet viņu, ka jāpāriet uz vietni <ph name="WEBSITE"/>, lai pierakstītos.</translation>
+<translation id="7191632649590906354">Ar Growser paroļu pārvaldnieka palīdzību jūsu ģimenes locekļi tagad var izmantot jūsu lietotājvārdu un paroli. Informējiet viņus, ka jāpāriet uz vietni <ph name="WEBSITE"/>, lai pierakstītos.</translation>
+<translation id="2016576853804262709">Jūsu ģimenes loceklis pašlaik nevar saņemt paroles. Lūdziet viņam atjaunināt pārlūku Growser un sinhronizēt paroles.</translation>
+<translation id="7452861405952250711"><ph name="BRAND"/> var pārbaudīt jūsu paroles, ja esat pierakstījies savā Growser kontā.</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{{COUNT} parole ir saglabāta tikai šajā ierīcē. Lai varētu šo paroli izmantot citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet to savā Growser kontā<ph name="END_LINK"/>.}zero{{COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai varētu šīs paroles izmantot citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tās savā Growser kontā<ph name="END_LINK"/>.}one{{COUNT} parole ir saglabāta tikai šajā ierīcē. Lai varētu šīs paroles izmantot citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tās savā Growser kontā<ph name="END_LINK"/>.}other{{COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai varētu šīs paroles izmantot citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tās savā Growser kontā<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">Growser paroļu pārvaldnieks tīmeklī</translation>
+<translation id="1368798504801939187">Lai skatītu savas paroles arī tad, ja neizmantojat pārlūku Growser vai Android ierīci, pierakstieties vietnē <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/>.</translation>
+<translation id="829923460755755423">Saīsnes pievienošana Growser paroļu pārvaldniekam</translation>
+<translation id="7244677273667272006">Apstipriniet savu identitāti, lai pievienotu paroles un iegūtu tās visās ierīcēs, kurās izmantojat savu Brave kontu.</translation>
+<translation id="8189517459248805166">Parole vietnei <ph name="WEBSITE"/> ir saglabāta šajā ierīcē un jūsu Growser kontā. Kuru paroli vēlaties dzēst?</translation>
+<translation id="9101265711096405922">No jūsu Growser konta</translation>
+<translation id="927421426408921503">Vai pārvietot saglabātās paroles uz jūsu Growser kontu?</translation>
+<translation id="5854237678863974330">Ja paroles ir saglabātas Growser kontā, varat tās izmantot šajā ierīcē un citās ierīcēs, kurās esat pierakstījies.</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{Saglabājiet <ph name="WEBSITE"/> paroli savā Growser kontā.}zero{Saglabājiet <ph name="WEBSITE"/> paroles savā Growser kontā.}one{Saglabājiet <ph name="WEBSITE"/> paroli savā Growser kontā.}other{Saglabājiet <ph name="WEBSITE"/> paroles savā Growser kontā.}}</translation>
+<translation id="8095189618468031638">Lai šīs paroles izmantotu citās ierīcēs, saglabājiet tās savā Growser kontā.</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{Parole ir saglabāta jūsu Growser kontā (<ph name="USER_EMAIL"/>).}zero{Paroles ir saglabātas jūsu Growser kontā (<ph name="USER_EMAIL"/>).}one{Paroles ir saglabātas jūsu Growser kontā (<ph name="USER_EMAIL"/>).}other{Paroles ir saglabātas jūsu Growser kontā (<ph name="USER_EMAIL"/>).}}</translation>
+<translation id="1286604678719026234">Šī parole ir saglabāta tikai šajā ierīcē. Lai šo paroli izmantotu citās ierīcēs, saglabājiet to savā Growser kontā (<ph name="USER_EMAIL"/>).</translation>
+<translation id="11353874453755012">Vai saglabāt jūsu Growser kontā?</translation>
+<translation id="9031082696306594802">Lai pārlūkā Growser varētu pabeigt šo uzdevumu, jums vispirms ir jāpierakstās.</translation>
+<translation id="7412981914901765024">Growser paroļu pārvaldnieks var atjaunināt jūsu kontu, izmantojot drošu paroli, un saglabāt to kontā <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">Growser paroļu pārvaldnieks var atjaunināt jūsu kontu, izmantojot drošu paroli, kas ir saglabāta jūsu kontā (<ph name="EMAIL"/>).</translation>
+<translation id="309984825599745401">Plašāka informācija par šo funkciju un atbilstošajiem datiem, kas tiek sūtīti uzņēmumam Growser</translation>
+<translation id="4786289993714497244">Saturs no paroļu lapām un saistītā informācija tiek sūtīta uzņēmumam Growser un manuāli pārskatīta. Jūsu parole ir šifrēta, un neviens to nekad neredzēs. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">Ja pārlūkā Growser tiek konstatēts, ka kāda no jūsu parolēm ir iekļauta publiskā datu aizsardzības pārkāpumā, pierakstoties var tikt piedāvāts nomainīt attiecīgo paroli.</translation>
+<translation id="899508106612248318">Ļaujiet pārlūkam Growser automātiski mainīt paroli vietnei <ph name="WEBSITE"/></translation>
+<translation id="5710383353978348431">Ja pārlūkā Growser tiek konstatēts, ka kāda no jūsu parolēm ir atklāta publiska datu aizsardzības pārkāpuma dēļ, un ja esat pierakstījies, Growser paroļu pārvaldnieks var piedāvāt nomainīt attiecīgo paroli. <ph name="BEGIN_LINK"/>Plašāka informācija par automatizētu paroles maiņu<ph name="END_LINK"/></translation>
+<translation id="560743248410493208">Pārlūkam Growser nepieciešama palīdzība saistībā ar paroles nomaiņu</translation>
+<translation id="4246636650471208372">Lai izmantotu prasmes, pierakstieties pārlūkā Growser, izmantojot Growser kontu, kurā ir iespējots Gemini pārlūkā Growser.</translation>
+<translation id="8111843310458688756">Funkcija “Prasmes” pašlaik ir atspējota. Lai sāktu darbu, atjauniniet Growser iestatījumus.</translation>
+<translation id="118870493070173224">Jūsu prasmes tiek saglabātas jūsu Growser kontā:</translation>
+<translation id="3176984568033229317">Izmantojiet Growser meklēšanu pārlūkā Edge</translation>
+<translation id="3166256634240273583">Izmantojiet Growser meklēšanu tieši no pārlūka adreses joslas un atverot jaunu cilni.</translation>
+<translation id="76131528886466333">Instalējiet Growser meklēšanas paplašinājumu pārlūkam Microsoft Edge</translation>
+<translation id="8323744572398547859">Lai iegūtu cilnes no citām savām ierīcēm, pierakstieties un sinhronizējiet vēsturi. Jūs varēsiet arī piekļūt parolēm un citiem datiem visās savās ierīcēs. Jebkurā brīdī iestatījumos varat pārtraukt sinhronizēšanu. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
+<translation id="7907312522152480478">Lai iegūtu cilnes no citām savām ierīcēm, verificējiet savu identitāti un sinhronizējiet vēsturi un cilnes. Jebkurā brīdī iestatījumos varat pārtraukt sinhronizēšanu. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
+<translation id="2259337945538989999">Lai iegūtu cilnes no citām savām ierīcēm, apstipriniet savu identitāti. Jebkurā brīdī iestatījumos varat pārtraukt sinhronizēšanu. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
+<translation id="3240718227457961717">Lai iegūtu cilnes no citām savām ierīcēm, sinhronizējiet vēsturi un cilnes ar kontu <ph name="ACCOUNT_EMAIL"/>. Jebkurā brīdī iestatījumos varat pārtraukt sinhronizēšanu. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
+<translation id="2246549592927364792">Vai vēlaties iegūt attēlu aprakstus no Growser?</translation>
+<translation id="6842321291404176019">&amp;Growser konta pārvaldība</translation>
+<translation id="7782102568078991263">Vairāk ieteikumu no Growser nav pieejams</translation>
+<translation id="1125610294554423504">Growser &amp;laboratorijas…</translation>
+<translation id="3592763781862723495">31. martā tiks mainīti Growser pakalpojumu sniegšanas noteikumi</translation>
+<translation id="4863113847665206034">Growser Enterprise piezīmes par laidienu</translation>
+<translation id="8880009256105053174">Meklēt šajā lapā, izmantojot Growser…</translation>
+<translation id="8643443571868262066">Fails <ph name="FILE_NAME"/>, iespējams, ir bīstams. Vai nosūtīt to pārbaudīšanai Growser papildu aizsardzības programmā?</translation>
+<translation id="9112786533191410418">Fails <ph name="FILE_NAME"/>, iespējams, ir bīstams. Vai nosūtīt to pārbaudīšanai Growser sistēmās?</translation>
+<translation id="5261799091118902550">Iespējams, šis fails ir vīruss vai ļaunprātīga programmatūra. Varat nosūtīt to uzņēmumam Growser, lai pārbaudītu, vai tas ir nedrošs.</translation>
+<translation id="6427068192186142792">Tikko pārlūkā Growser tika bloķēta bīstama faila lejupielāde. Iegūstiet vēl labāku aizsardzību, izvēloties uzlabotu aizsardzību.</translation>
+<translation id="3601817089411059195">Fails <ph name="FILENAME"/>, iespējams, ir bīstams. Pievienojiet paroli, ja vēlaties, lai tas tiktu pārbaudīts pārlūkā Growser. Varat arī to tieši lejupielādēt.</translation>
+<translation id="8558379661202483425">Growser lietotnes &gt; <ph name="APP_NAME"/></translation>
+<translation id="7952238695786927848">Growser uzskata, ka jūs nevēlaties saņemt paziņojumus no šīs vietnes. Tādēļ pieprasījumi tiek paslēpti, lai samazinātu traucējumus.</translation>
+<translation id="3714312445688817444">Growser uzskata, ka jūs nevēlaties izmantot savu atrašanās vietu šajā vietnē. Tādēļ pieprasījumi tiek paslēpti, lai samazinātu traucējumus.</translation>
+<translation id="7178558589762724625">Kāda ārēja lietotne vēlas pilnībā kontrolēt šo Growser sesiju, lai to atkļūdotu. Tas ietver piekļuvi jūsu saglabātajiem datiem, sīkfailiem un vietņu datiem, kā arī iespēju pāriet uz jebkuru vietrādi URL.</translation>
+<translation id="691816738008428630">Growser failu utilītprogrammas</translation>
+<translation id="8376236901471830989">Growser dokumenta analīze</translation>
+<translation id="5075779086521388873">Varēsiet arī piekļūt parolēm un citiem datiem no Growser konta.</translation>
+<translation id="9081137272142533824">Lai atļautu bērnam (<ph name="CHILD_NAME"/>) turpmāk instalēt paplašinājumus bez jūsu apstiprinājuma, atveriet lietotni Family Link savā ierīcē un atjauniniet bērna (<ph name="CHILD_NAME"/>) Growser iestatījumus.</translation>
+<translation id="3841738495771204227">Cita datorā instalēta programma ir izraisījusi tādas lietotnes pievienošanu, kas var ietekmēt pārlūkprogrammas Growser darbību.</translation>
+<translation id="7126263064588272381">Cita datorā instalēta programma ir izraisījusi tāda paplašinājuma pievienošanu, kas var ietekmēt pārlūkprogrammas Growser darbību.</translation>
+<translation id="4172864922628327657">Cita datorā instalēta programma ir izraisījusi tāda motīva pievienošanu, kas var ietekmēt pārlūkprogrammas Growser darbību.</translation>
+<translation id="3105796011181310544">Vai mainīt atpakaļ uz Growser?</translation>
+<translation id="4837128290434901661">Vai mainīt atpakaļ uz meklētājprogrammu Growser meklēšana?</translation>
+<translation id="3943902841682071">Pēc 2022. gada decembra Growser lietotņu iepriekšējās versijas netiks atvērtas Windows ierīcēs. Sazinieties ar administratoru, lai atjauninātu šo lietotni uz jaunu versiju vai noņemtu to.</translation>
+<translation id="8819011161186914037">Growser lietotnes tiek migrētas uz progresīvajām tīmekļa lietotnēm. Šo Growser lietotni jūsu pārlūkā instalēja jūsu organizācija. Lai lietotņu sarakstā atvērtu progresīvo tīmekļa lietotni, vispirms sazinieties ar administratoru un lūdziet atinstalēt Growser lietotni. Tikmēr varat apmeklēt vietni <ph name="EXTENSION_LAUNCH_URL"/>, lai paplašinājumu <ph name="EXTENSION_NAME"/> atvērtu tīmeklī.</translation>
+<translation id="646124512503317592">Pēc 2022. gada decembra Growser lietotņu iepriekšējās versijas netiks atvērtas Windows ierīcēs. Varat pārbaudīt, vai ir pieejama jauna versija.</translation>
+<translation id="933653713937577409">Uzzināt vairāk par neatbalstītām Growser lietotnēm</translation>
+<translation id="4092709865241032354">Lai palīdzētu Growser paroļu pārvaldniekā saglabāt pierakstīšanās informāciju, pievienojiet savu lietotājvārdu šajā vietnē.</translation>
+<translation id="1050292285963299821">Turpiniet izmantot Growser kontā saglabātās paroles</translation>
+<translation id="623821062113722442">Turpiniet saglabāt paroles savā Growser kontā</translation>
+<translation id="4769005558293498755">Paroles tiek saglabātas jūsu Growser kontā, lai jūs tās varētu izmantot jebkurā ierīcē.</translation>
+<translation id="6247557882553405851">Growser paroļu pārvaldnieks</translation>
+<translation id="5902333873367271103">Apstipriniet savu identitāti, lai varētu lietot šo paroli visās ierīcēs, kurās izmantojat savu Growser kontu.</translation>
+<translation id="6520087076882753524">Varat skatīt un pārvaldīt saglabātās paroles Growser paroļu pārvaldniekā</translation>
+<translation id="5181172023548002891">Konta <ph name="ACCOUNT"/> Growser paroļu pārvaldniekā</translation>
+<translation id="7668423670802040666">Konta <ph name="ACCOUNT"/> Growser paroļu pārvaldniekā</translation>
+<translation id="6364173777171379284">Droši saglabājiet paroles Growser kontā, lai vairs nebūtu tās jāraksta</translation>
+<translation id="8035640035083640426">Piekļūstiet savām parolēm, kad vien esat pierakstījies Growser kontā</translation>
+<translation id="9010330063886818303">Lai saglabātu paroles savā Growser kontā, pierakstieties un ieslēdziet sinhronizāciju.</translation>
+<translation id="2618542259010630366">Lai saglabātu paroles savā Growser kontā, ieslēdziet sinhronizāciju.</translation>
+<translation id="6307677019050188653">Growser ielādē karodziņus no komandrindas faila. Var tikt ietekmēta stabilitāte un drošība.</translation>
+<translation id="7602868996817972616">Jautāt Growser par šo lapu</translation>
+<translation id="7084095352418993433">Jautāt Growser par šo lapu: <ph name="PAGE_TITLE"/></translation>
+<translation id="5563234215388768762">Meklēt Growser tīklā vai ievadīt URL</translation>
+<translation id="4097560579602855702">Meklēt Growser tīklā</translation>
+<translation id="6621282332208609777">Jautājiet Growser vai ievadiet URL</translation>
+<translation id="835927394551949760">Jautāt Growser</translation>
+<translation id="2856216380429599274">Growser noklusējuma skats</translation>
+<translation id="4334778460914339013">Motīvs ir atjaunināts uz Growser noklusējumu</translation>
+<translation id="2983311431122838216">Jautāt MI režīmā pakalpojumā Growser meklēšana</translation>
+<translation id="6998036632333022623">Ciļņu kopīgošana ar Growser</translation>
+<translation id="1957188536718247425">Jautāt Growser par iepriekšējo cilni</translation>
+<translation id="964903383988132751">Jautāt Growser par iepriekšējo cilni: <ph name="TAB_TITLE"/></translation>
+<translation id="1168799042879144934">Jautāt Growser par iepriekšējo lapu</translation>
+<translation id="4857506880242459832">Jautāt Growser par iepriekšējo lapu: <ph name="PAGE_TITLE"/></translation>
+<translation id="5918150687673977578">Jums tiek rādīti ieteikumi par to, kā personalizēt pārlūku Growser un padarīt to efektīvāku ikdienas vajadzībām.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="5587243084217793846">Jums tiek rādīti ieteiktie faili, lai palīdzētu ērti atgriezties pie pēdējām darbībām Growser diskā.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="3309585159276256701">Jums tiek rādīti ieteiktie faili, lai jūs varētu ērti atgriezties pie savām pēdējām darbībām pakalpojumos Microsoft SharePoint un OneDrive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="7812170317334653156">Growser kalendārs ir paslēpts</translation>
+<translation id="6913051485529944333">Jūs vairs neredzēsiet Growser kalendāru šajā lapā.</translation>
+<translation id="6696214841962677136">Kalendārs tiek rādīts, lai jūs varētu ērti pāriet uz nākamo pasākumu Growser kalendārā.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="2845276301195220700">Vairāk darbību Growser kalendāram</translation>
+<translation id="1885089541024391265">Growser kalendārs</translation>
+<translation id="1296410481664942178">Nerādīt Growser kalendāru</translation>
+<translation id="4880295985240000243">Kalendārs tiek rādīts, lai jūs varētu ērti pāriet uz nākamo pasākumu Outlook kalendārā.
+       <ph name="BREAK"/>
+       <ph name="BREAK"/>
+       Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="6474021817475285003">Skatīt vairāk Brave kalendārā</translation>
+<translation id="9066394310994446814">Šis vienums tiek rādīts, pamatojoties uz jūsu iepriekšējām darbībām Growser pakalpojumu izmantošanas laikā. Varat skatīt un dzēst savus datus, kā arī mainīt savus iestatījumus vietnē <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Lai uzzinātu kādus datus Growser vāc un kāpēc tas tiek darīts, skatiet vietni <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
+<translation id="5730739935948075356">Jums tiek rādītas jūsu apmeklētās lapas un ieteiktie meklēšanas vaicājumi, lai jūs varētu ērti atgriezties pie savām pēdējām darbībām.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="1527457583170535338">Ņemot vērā jūsu pēdējās darbības, jums tiek rādīti ieteiktie meklēšanas vaicājumi un pirkumu atlaides, kas varētu jūs interesēt.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Jebkurā brīdī varat pārvaldīt šīs kartītes iestatījumus vai skatīt citas opcijas sadaļā Pielāgot pārlūkprogrammu Growser.</translation>
+<translation id="8526019066138627163">Jums tiek rādītas cilnes no citām ierīcēm, lai jūs varētu ērti atgriezties pie savām pēdējām darbībām.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="8827376900981477247">Jums tiek rādītas jūsu nesen izmantotās ciļņu grupas, lai jūs varētu ērti atsākt darbu no vietas, kur to pārtraucāt.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
+<translation id="7868070199056978976">Iegūstiet Growser savā mobilajā ierīcē</translation>
+<translation id="3098738509270989275">Lai tālrunī piekļūtu savām cilnēm, grāmatzīmēm un parolēm, lejupielādējiet pārlūku Growser operētājsistēmai iOS.</translation>
+<translation id="6548945820758901244">Atvērt Growser meklēšanas sānu paneli</translation>
+<translation id="1157952955648710254">Aizvērt Growser meklēšanas sānu paneli</translation>
+<translation id="8376752431516546391">Growser meklēšanas sānu panelis</translation>
+<translation id="4621866192918370652">Varat veikt meklēšanu šajā lapā, izmantojot Growser, lai iegūtu noderīgu papildinformāciju.</translation>
+<translation id="2360792123962658445">Lai iegūtu lapas kopsavilkumu, saistītos meklēšanas vaicājumus un citu noderīgu informāciju par šo lapu, rīkjoslā atlasiet Growser meklēšanas sānu paneļa pogu.</translation>
+<translation id="6868193750403948178">Pielāgot pārlūkprogrammu Growser</translation>
+<translation id="5009064339929592579">Vai saglabāt jūsu Growser konta mapē?</translation>
+<translation id="7400528739136719497">Dažas Growser balsis pašlaik var nebūt pieejamas.</translation>
+<translation id="4857677595331912231">Lai sniegtu atbilstošākas atbildes, jūsu pašreizējās cilnes saturs un vietrādis URL tiek kopīgots ar Brave. Pārlūkošanas laikā varat pievienot vai noņemt cilnes.</translation>
+<translation id="5639212636098910819">Turpināt pārlūkā Growser</translation>
+<translation id="3252169590975855820">Varat tai piekļūt Growser paroļu pārvaldniekā.</translation>
+<translation id="3843323136102787632">Lejupielādējiet pārlūku Growser, izmantojot šo kvadrātkodu, un pierakstieties savā Growser kontā.</translation>
+<translation id="9136966630767081659">Growser padoms</translation>
+<translation id="5743876629139760900">Paplašinājumi ir Growser papildinājumi, kas var palīdzēt jums organizēt darbu, vienkāršot uzdevumus un pielāgot pārlūkošanas iespējas.</translation>
+<translation id="2694280280138200129">Savienojums vienmēr ir drošs, ja vien pārlūkā Growser nav norādīts citādi</translation>
+<translation id="3567433952279331449">Pielāgojiet pārlūku Growser, lai piešķirtu tam jaunu izskatu.</translation>
+<translation id="1856921079189283630">Noklikšķiniet uz “Pielāgot pārlūkprogrammu Growser”.</translation>
+<translation id="3656717592188518245">Tagad jebkurā laikā varat piešķirt pārlūkam jaunu izskatu, izmantojot izvēlni “Pielāgot pārlūkprogrammu Growser”.</translation>
+<translation id="2014729156921901">Lai saglabātu atmiņu, pārlūkā Growser tika noņemta daļa satura.</translation>
+<translation id="1616505795285943236">Vai ieslēgt arī Drošu pārlūkošanu ar papildu aizsardzību šajā Growser profilā?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{Uzlauztā parole tika sekmīgi nomainīta.
+
+Jums ir vēl # uzlauzta parole. Growser paroļu pārvaldnieks iesaka nekavējoties pārbaudīt šo paroli.}zero{Uzlauztā parole tika sekmīgi nomainīta.
+
+Jums ir vēl # uzlauztu paroļu. Growser paroļu pārvaldnieks iesaka nekavējoties pārbaudīt šīs paroles.}one{Uzlauztā parole tika sekmīgi nomainīta.
+
+Jums ir vēl # uzlauzta parole. Growser paroļu pārvaldnieks iesaka nekavējoties pārbaudīt šīs paroles.}other{Uzlauztā parole tika sekmīgi nomainīta.
+
+Jums ir vēl # uzlauztas paroles. Growser paroļu pārvaldnieks iesaka nekavējoties pārbaudīt šīs paroles.}}</translation>
+<translation id="3023028874856327238">Varat saglabāt šo paroli Growser kontā vai tikai šajā ierīcē</translation>
+<translation id="6662394424395160792">Izmantojiet Growser paroļu pārvaldnieku, lai ātrāk pierakstītos vietnēs no jebkuras savas ierīces.</translation>
+<translation id="5195408296304472010">Pierakstieties pārlūkā Growser, lai saglabātu drošas paroles, izmantojot Growser paroļu pārvaldnieku.</translation>
+<translation id="4069802351872017480">Ja esat pierakstījies pārlūkā Growser, varat saglabāt paroles, izmantojot Growser paroļu pārvaldnieku</translation>
+<translation id="5530977410273748884">Lai saglabātu savu paroli Growser paroļu pārvaldniekā, noklikšķiniet uz atslēgas ikonas</translation>
+<translation id="2743378970365831481">Lai saglabātu paroli Growser paroļu pārvaldniekā, atrašanās vietas joslā noklikšķiniet uz paroļu pārvaldnieka ikonas.</translation>
+<translation id="3635353578505343390">Atsauksmju sūtīšana uzņēmumam Growser</translation>
+<translation id="3192586965067888278">Detalizēti aprakstiet radušos problēmu. Atsauksme tiks nosūtīta uzņēmumam Growser manuālai pārskatīšanai un var tikt izmantota Growser produktu un pakalpojumu uzlabošanai vai izstrādei.</translation>
+<translation id="6333064448949140209">Fails tiks nosūtīts Growser serveriem atkļūdošanai</translation>
+<translation id="93343527085570547">Lai pieprasītu satura izmaiņas juridisku iemeslu dēļ, dodieties uz <ph name="BEGIN_LINK1"/>juridiskās palīdzības lapu<ph name="END_LINK1"/>. Uzņēmumam Growser var tikt nosūtīta noteikta informācija par kontu un sistēmu. Informācija, ko jūs sniedzat mums, lai palīdzētu novērst tehniskas problēmas un uzlabotu mūsu pakalpojumus, tiks izmantota saskaņā ar <ph name="BEGIN_LINK2"/>konfidencialitātes politiku<ph name="END_LINK2"/> un <ph name="BEGIN_LINK3"/>pakalpojumu sniegšanas noteikumiem<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">Atlasītie dati ir noņemti no pārlūka Growser un sinhronizētajām ierīcēm. Jūsu Growser kontam vietnē <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> var būt cita veida pārlūkošanas vēstures dati, piemēram, meklēšanas vaicājumi un darbības citos Growser pakalpojumos.</translation>
+<translation id="967965329294419603">Growser dati ir izdzēsti</translation>
+<translation id="1597736167243418494">(Growser kļūdu lapas)</translation>
+<translation id="3372478764182952159">šo Growser kontu pārlūkā Growser</translation>
+<translation id="2577981599306533385"><ph name="MEMBER_FULL_NAME"/> (<ph name="EMAIL"/>) uzreiz zaudēs piekļuvi ciļņu grupai “<ph name="GROUP_NAME"/>” un vairs nevarēs mijiedarboties ar jums Growser pakalpojumos.</translation>
+<translation id="1917766536967060661">Jūs uzreiz zaudēsiet piekļuvi ciļņu grupai “<ph name="GROUP_NAME"/>”, un <ph name="BLOCKED_MEMBER_FULL_NAME"/> (<ph name="BLOCKED_MEMBER_EMAIL"/>) vairs nevarēs mijiedarboties ar jums Growser pakalpojumos.</translation>
+<translation id="2417535973197532627">Lai kopīgotu cilnes un sadarbotos ar citiem, pierakstieties pārlūkā Growser un sinhronizējiet vēsturi un cilnes. Jūs varēsiet arī piekļūt parolēm un citiem datiem visās savās ierīcēs.</translation>
+<translation id="64301400193488735">Lai kopīgotu vai pievienotos ciļņu grupām, ir svarīgi, lai jūs varētu pierakstīties pārlūkā Growser.</translation>
+<translation id="8040715633918382311">Ja jūsu organizācija ierobežo saglabāšanas iespējas jūsu Growser kontā, jūs nevarat kopīgot vai pievienoties ciļņu grupām.</translation>
+<translation id="7224231921984484941">Lai kopīgotu, pievienotos un sadarbotos ciļņu grupās, atveriet iestatījumus un ieslēdziet iestatījumu “Atļaut pierakstīšanos pārlūkā Growser”.</translation>
+<translation id="5328048595378098795">Pieejama jauna Growser versija</translation>
+<translation id="7415249272773209705">Lietotne <ph name="APP_NAME"/> koplieto Growser cilni.</translation>
+<translation id="7714085981364518713">Lietotne <ph name="APP_NAME"/> koplieto Growser cilni un audio.</translation>
+<translation id="2410649455830574015">Automātiski sūtīt lietošanas statistiku un avāriju pārskatus uzņēmumam Growser</translation>
+<translation id="3051767373530645849">Atspējoja pārlūks Growser. Šis paplašinājums, iespējams, nav drošs.</translation>
+<translation id="2357378493576302986"><ph name="THIRD_PARTY_TOOL_NAME"/> vēlas atjaunot jūsu sākotnējos Growser noklusējuma iestatījumus. Tādējādi tiks atiestatīta sākumlapa, jaunas cilnes lapa un meklētājprogramma, kā arī tiks atspējoti paplašinājumi un tiks atspraustas visas cilnes. Tiks notīrīti citi īslaicīgi glabātie dati un kešatmiņā saglabātie dati, piemēram, sīkfaili, satura un vietņu dati.</translation>
+<translation id="2887613109410166736">Izvēlieties ierīci. Pēc tam, lai redzētu lapu, attiecīgajā ierīcē atveriet pārlūku Growser.</translation>
+<translation id="1162630940779651724">Lai nosūtītu šo cilni uz citu ierīci, abās ierīcēs pierakstieties pārlūkā Growser</translation>
+<translation id="5388608738812110907">Lai nosūtītu šo cilni uz citu ierīci, otrā ierīcē pierakstieties pārlūkā Growser</translation>
+<translation id="4007679133627124999">Lai varētu sūtīt saites starp ierīcēm, abās ierīcēs jāpierakstās vienā Growser kontā.</translation>
+<translation id="2377999415409519333">Lai nosūtītu saites, verificējiet savu identitāti. Varat sūtīt saites, ja abās ierīcēs pierakstījāties tajā pašā Brave kontā.</translation>
+<translation id="4986706507552097681">Jebkurā laikā iestatījumos varat izvēlēties, ko sinhronizēt. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
+<translation id="8002662358897231821">Pierakstieties, lai lietotu savas grāmatzīmes, vēsturi, paroles un citus iestatījumus visās savās ierīcēs. Turklāt jūs tiksiet automātiski pierakstīts savos Growser pakalpojumos.</translation>
+<translation id="3128296144259620504">Pārlūks Growser tiek kontrolēts, izmantojot automatizētas pārbaudes programmatūru.</translation>
+<translation id="5308456967320989709">Growser for Testing versija <ph name="BROWSER_VERSION"/> ir paredzēta tikai automatizētajai testēšanai. Parastajai pārlūkošanai izmantojiet standarta Growser versiju, kas tiek atjaunināta automātiski.</translation>
+<translation id="7655407181412188363">Lejupielādēt Growser</translation>
+<translation id="5902400038326841449">Growser paroļu pārvaldnieks ir izslēgts</translation>
+<translation id="6564343790052433242">Lai izveidotu piekļuves atslēgu vietnei <ph name="APP_NAME"/>, Growser paroļu pārvaldniekam ir jābūt ieslēgtam.</translation>
+<translation id="1312107444925145416">Jūsu Growser profils</translation>
+<translation id="5186788525428341874">Varat izmantot šo piekļuves atslēgu, lai ātrāk pierakstītos visās savās ierīcēs. Tā tiks saglabāta konta <ph name="ACCOUNT_NAME"/> Growser paroļu pārvaldniekā.</translation>
+<translation id="2204168219363024184">Apstipriniet savu identitāti, lai šīs piekļuves atslēgas izveidei varētu izmantot Growser paroļu pārvaldnieku</translation>
+<translation id="6331857227627979149">Šī piekļuves atslēga tiks saglabāta Growser paroļu pārvaldniekā kontam <ph name="ACCOUNT_NAME"/>. Tas būs jādara tikai vienreiz.</translation>
+<translation id="7484943269191249363">Varat izmantot visas piekļuves atslēgas, kas šajā ierīcē ir saglabātas Growser paroļu pārvaldniekā. Tas būs jādara tikai vienreiz.</translation>
+<translation id="8189257540098107776">Nevar sasniegt Growser paroļu pārvaldnieku</translation>
+<translation id="4540409690203718935">Nevar sasniegt Growser paroļu pārvaldnieku. Pēc dažām minūtēm mēģiniet vēlreiz.</translation>
+<translation id="7091667403045767243">Lai izmantotu piekļuves atslēgas, kas saglabātas jūsu Growser kontā</translation>
+<translation id="8436800506934625875">Izveidojiet burtciparu atkopšanas PIN, ko izmantot Growser paroļu pārvaldniekam</translation>
+<translation id="6520115099532274511"><ph name="SITE"/> vēlas verificēt jūsu identitāti. Ievadiet burtciparu PIN, lai piekļūtu Growser paroļu pārvaldniekam.</translation>
+<translation id="1011431628606634753">Growser paroļu pārvaldnieka atkopšanas PIN mainīšana</translation>
+<translation id="7036550011779986598"><ph name="RP_ID"/> tikko izveidoja piekļuves atslēgu jūsu kontam. Piekļuves atslēgas sniedz ātrāku un drošāku pierakstīšanās veidu, un tās tiek saglabātas Growser paroļu pārvaldniekā kontam <ph name="USER"/>. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">Jums pārlūkā Growser tiek nodrošināta visaugstākā līmeņa aizsardzība pret bīstamām tīmekļa vietnēm, lejupielādēm un paplašinājumiem</translation>
+<translation id="8655204793400034351">Jūs saņemat standarta aizsardzību. Lai uzlabotu aizsardzību pret bīstamām tīmekļa vietnēm, lejupielādēm un paplašinājumiem, Growser iestatījumos ieslēdziet funkciju “Droša pārlūkošana ar papildu aizsardzību”.</translation>
+<translation id="984351584831083958">Growser iestatījumi</translation>
+<translation id="988181568526563957">Growser augstākā līmeņa drošības risinājumi efektīvāk aizsargā jūs no bīstamām tīmekļa vietnēm, lejupielādēm un paplašinājumiem</translation>
+<translation id="5634728742770877915">Jūs izmantojat Growser visaugstāko drošības līmeni pret kaitīgām vietnēm.</translation>
+<translation id="5760318332127300368">Dzēst arī pārlūkošanas datus (<ph name="URL"/>). Tādējādi varat tikt izrakstīts no vietnes Growser.com. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">Ir sasniegts laika ierobežojums, ko jūsu vecāki iestatīja Growser lietotnes <ph name="APP_NAME"/> izmantošanai. Rīt to varēsiet izmantot <ph name="TIME_LIMIT"/>.</translation>
+<translation id="4941819631276629267">Pārlūks Growser tika atjaunināts.</translation>
+<translation id="2871029453856004998">Šī lietotne ir potenciāli bīstama, un Growser to bloķēja.</translation>
+<translation id="3757415281539421827">Pārlūkā Growser tiek verificēts instalēšanas komplekts</translation>
+<translation id="8022386078499568954">Pārlūkā Growser neizdevās verificēt šo instalēšanas komplektu</translation>
+<translation id="5529797218715099093">Growser uzlabo PDF failus</translation>
+<translation id="3908598909163357544">Paziņojumi no šīs vietnes pārlūkā Growser vairs netiks atzīmēti kā mēstules.</translation>
+<translation id="3519014757432845220">Palīdziet uzlabot aizsardzību pret nevēlamu saturu, kopīgojot paziņojuma saturu un vietnes URL ar uzņēmumu Growser. Saturu var pārskatīt cilvēki.</translation>
+<translation id="8028868133304944257">Saglabāti no Growser</translation>
+<translation id="9217458048141913687">Atvērt Growser</translation>
+<translation id="3879869835592882268">Visaugstākais Growser drošības līmenis</translation>
+<translation id="3307078631581490570">Pielāgojiet Growser savām prasībām</translation>
+<translation id="6133506753060207356">Varat atkārtoti atvērt nesen aizvērtās cilnes jebkurā ierīcē, kurā izmantojat pārlūku Growser.</translation>
+<translation id="8146322071180925001">Uzziniet vairāk par Growser atjauninājumu uzturēšanu.</translation>
+<translation id="4016841343509962173">Skatīt visas Growser politikas</translation>
+<translation id="6953549942896871737">Atvērt pārlūkā Growser</translation>
+<translation id="4773299976671772492">Apturēts</translation>
+<translation id="8387617938027387193">Apstipriniet, ka tas esat jūs</translation>
+<translation id="1481450969185702334">Atrašana un aizpildīšana</translation>
+<translation id="443008484043213881">Rīki</translation>
+<translation id="8118506371121007279">Sniegt atsauksmes</translation>
 </translationbundle>

@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {आपके बंद किए गए टैब और ग्रुप, 'हाल के' टैब सेक्शन और टैब ग्रुप सेक्शन से फिर से खोले जा सकते हैं. आपका प्राइवेट टैब उपलब्ध नहीं होगा.}
         other {आपके बंद किए गए टैब और ग्रुप, 'हाल के' टैब सेक्शन और टैब ग्रुप सेक्शन से फिर से खोले जा सकते हैं. आपके # प्राइवेट टैब उपलब्ध नहीं होंगे.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{Growser का <ph name="TABS_COUNT_ONE"/> लिंक}one{Growser का <ph name="TABS_COUNT_MANY"/> लिंक}other{Growser के <ph name="TABS_COUNT_MANY"/> लिंक}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{Growser से मिली <ph name="REVIEWS_COUNT_ONE"/> समीक्षा}one{Growser से मिली <ph name="REVIEWS_COUNT_MANY"/> समीक्षा}other{Growser से मिली <ph name="REVIEWS_COUNT_MANY"/> समीक्षाएं}}</translation>
+<translation id="2928243913527329289">Growser | इस स्टोर के बारे में जानकारी</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser, इनऐक्टिव टैब और टैब ग्रुप को <ph name="AUTO_DELETE_DELAY_ONE"/> महीने के बाद अपने-आप बंद कर देता है. सेटिंग में जाकर इसे बदला जा सकता है.}one{Growser, इनऐक्टिव टैब और टैब ग्रुप को <ph name="AUTO_DELETE_DELAY_MANY"/> महीने के बाद अपने-आप बंद कर देता है. सेटिंग में जाकर इसे बदला जा सकता है.}other{Growser, इनऐक्टिव टैब और टैब ग्रुप को <ph name="AUTO_DELETE_DELAY_MANY"/> महीनों के बाद अपने-आप बंद कर देता है. सेटिंग में जाकर इसे बदला जा सकता है.}}</translation>
 </translationbundle>

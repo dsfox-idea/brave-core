@@ -11349,4 +11349,456 @@ Tai gali būti informacija apie įdiegtą programinę įrangą, failus, naršykl
 <translation id="954749761428814584">Kalba ir įvesties metodas</translation>
 <translation id="960987915827980018">Liko apie 1 val.</translation>
 <translation id="995420352808264005">Pasirinkite įrenginio registracijos tipą</translation>
+<translation id="6681823034920334318">Jei norite perduoti naudodami kodą, įjunkite „Growser“ naršyklės sinchronizavimo nustatymus.</translation>
+<translation id="2515496577979954543">Eiti į „Growser</translation>
+<translation id="5924575374764114159"><ph name="TASK_TITLE"/>: „Gemini“ atliko jūsų užduotį, galite ją peržiūrėti naršyklėje „Growser“</translation>
+<translation id="3721794228264322796">Uždaryti „Gemini“ naršyklėje „Growser“</translation>
+<translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, „Gemini“ naršyklėje „Growser“</translation>
+<translation id="1975450474853317621">Atidaryti naršyklėje „Growser“</translation>
+<translation id="8516824290867275572">Jūsų paskyra neturi prieigos prie „Gemini“ naršyklėje „Growser“</translation>
+<translation id="1649234713894562345">„Brave“ pasiekiama naudojant „Brave“ atvirojo šaltinio projektą ir kitą <ph name="BEGIN_HIGHLIGHT"/>atvirojo šaltinio<ph name="END_HIGHLIGHT"/> programinę įrangą.</translation>
+<translation id="870536819717176711">Kai pasirenkate bendrinti dabartinį skirtuką su „Gemini“, visas skirtuko turinys, medija ir URL siunčiami „Growser“.</translation>
+<translation id="1130866111814048607">Kai skirtukai bendrinami, jų puslapių turinys, medija ir URL siunčiami „Brave“ ir gali būti peržiūrėti siekiant užtikrinti saugą.</translation>
+<translation id="7656790264713095385">Pirmiausia įjunkite „Brave“ automatinį naršymą šiame įrenginyje</translation>
+<translation id="8572003230388132401">„Gemini Spark“ gali naudoti „Growser“ automatinio naršymo funkciją šiame įrenginyje, kad galėtų sąveikauti su svetainėmis ir atlikti užduotis jūsų vardu. <ph name="LINK_BEGIN"/>Sužinokite daugiau<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">„Gemini Spark“ gali naudoti automatinio naršymo funkciją šiame įrenginyje tik tada, kai įrenginys yra pažadintas ir veikia „Growser“.</translation>
+<translation id="1982892581799327835">Bet kas, turintis prieigą prie jūsų „Gemini Spark“ tarpininko, galėtų valdyti jūsų „Growser“ naršyklę.</translation>
+<translation id="6689939585896001516">Leiskite „Growser“ naršyti už jus</translation>
+<translation id="640233545778658570">„Gemini“ naršyklėje „Growser“ naudoja automatinį naršymą, kad veiktų jūsų skirtukuose ir atliktų jūsų pateiktas užduotis. <ph name="LINK_BEGIN"/>Sužinokite daugiau<ph name="LINK_END"/></translation>
+<translation id="2740842679402949230">Sužinokite daugiau apie „Brave“ automatinį naršymą</translation>
+<translation id="3570112771874223231">Puslapio turinys ir URL, kuriuos „Gemini“ naudoja užduočiai atlikti, bus bendrinami su „Brave“ ir gali būti peržiūrėti siekiant užtikrinti saugą.</translation>
+<translation id="2314508080153323869">„Gemini“ narš. „Growser“</translation>
+<translation id="1910632359330857071">Naršydami kalbėkite su „Gemini“ naršyklėje „Growser“, kad gautumėte atsakymus, pagrindines išvadas ir kt.</translation>
+<translation id="2483218699324586641">Naudokite <ph name="FOCUS_TOGGLE_HOTKEY"/>, kad atidarytumėte „Gemini“ naršyklėje „Growser“</translation>
+<translation id="2353068771555482464">Pristatome „Gemini“ naršyklėje „Growser“</translation>
+<translation id="7545274281857327491">Gaukite geriausias „Growser“ DI funkcijas. Prisekite „Gemini“ prie įrankių juostos, kad galėtumėte lengvai pasiekti, arba bet kada atidarykite iš „Growser“ meniu.</translation>
+<translation id="8335336878672278597">„Gemini“ naršyklėje „Growser“ nepasiekiamas</translation>
+<translation id="570859258083183845">„Gemini“ naršyklėje „Growser“ pasiekiamas vis daugiau vietovių, bet ne visur</translation>
+<translation id="96535553604365597">Pranešti apie „Growser Cast“ problemą</translation>
+<translation id="4415611489406290344">Jei norite perduoti, suteikite „Growser“ prieigą apsilankę šioje skiltyje: „<ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/>“ &gt; „Vietinis tinklas“ &gt; „Growser“</translation>
+<translation id="8492960370534528742">„Growser Cast“ atsiliepimai</translation>
+<translation id="2263679799334060788">Labai vertiname jūsų atsiliepimus, nes jie padeda tobulinti „Growser Cast“.
+    Jei reikia pagalbos šalinant su perdavimu susijusias problemas, apsilankykite
+    <ph name="BEGIN_LINK"/>
+    pagalbos centre<ph name="END_LINK"/>.</translation>
+<translation id="8376137163494131156">Nurodykite, kas nutiko naudojant „Growser Cast“.</translation>
+<translation id="7325065595154456783">„Growser“ versija, operacinės sistemos versija, plėtinio „Cast“ nustatymai,
+    ekrano vaizdo bendrinimo našumo statistika ir ryšio kanalo diagnostikos
+    žurnalai bus pateikti kartu su bet kokia informacija, kurią pasirinkote
+    įtraukti anksčiau. Šis atsiliepimas naudojamas nustatant problemas ir
+    patobulinant funkciją. Bet kokia asmeninė informacija, kurią pateiksite
+    sąmoningai arba netyčia, bus saugoma
+    pagal mūsų privatumo politiką. Pateikdami atsiliepimą
+    sutinkate, kad „Growser“ gali naudoti jį siekdama patobulinti
+    bet kurį „Growser“ produktą arba paslaugą.</translation>
+<translation id="3187556136478864255">Ar perdavimo įrenginį matote
+    <ph name="BEGIN_LINK"/>
+    programoje „Growser Home“<ph name="END_LINK"/>?</translation>
+<translation id="2984923316661218534">Gaukite prieigos raktus šiame įrenginyje naudodami „Growser“ slaptažodžių tvarkyklę</translation>
+<translation id="2364302372598204515">Tai nėra „Growser“ paskyra. „Growser“ išsaugoti elementai nebus pasiekiami kituose įrenginiuose.</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. „Brave“ narystė</translation>
+<translation id="850632091665381275">„Brave“ narystė</translation>
+<translation id="6710172959248731469">„Growser“ paslaugų nustatymai</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{Vienas elementas išsaugotas tik šiame įrenginyje. Jei norite jį naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}one{{ITEM_COUNT} elementas išsaugotas tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}few{{ITEM_COUNT} elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}many{{ITEM_COUNT} elemento išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}other{{ITEM_COUNT} elementų išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{Vienas slaptažodis išsaugotas tik šiame įrenginyje. Jei norite jį naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}one{{PASSWORD_COUNT} slaptažodis išsaugotas tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}few{{PASSWORD_COUNT} slaptažodžiai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}many{{PASSWORD_COUNT} slaptažodžio išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}other{{PASSWORD_COUNT} slaptažodžių išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{Vienas slaptažodis ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}one{{PASSWORD_COUNT} slaptažodis ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}few{{PASSWORD_COUNT} slaptažodžiai ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}many{{PASSWORD_COUNT} slaptažodžio ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}other{{PASSWORD_COUNT} slaptažodžių ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{Viena žymė išsaugota tik šiame įrenginyje. Jei norite jį naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}one{{BOOKMARK_COUNT} žymė išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}few{{BOOKMARK_COUNT} žymės išsaugotos tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}many{{BOOKMARK_COUNT} žymės išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}other{{BOOKMARK_COUNT} žymių išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{Viena žymė ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}one{{BOOKMARK_COUNT} žymė ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}few{{BOOKMARK_COUNT} žymės ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}many{{BOOKMARK_COUNT} žymės ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}other{{BOOKMARK_COUNT} žymių ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje. Taip pat bus išvalytos visos tikslios kopijos.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{Vienas elementas išsaugotas tik šiame įrenginyje. Jei norite jį naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}one{{ITEM_COUNT} elementas išsaugotas tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}few{{ITEM_COUNT} elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}many{{ITEM_COUNT} elemento išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}other{{ITEM_COUNT} elementų išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{Vienas slaptažodis išsaugotas tik šiame įrenginyje. Jei norite jį naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}one{{PASSWORD_COUNT} slaptažodis išsaugotas tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}few{{PASSWORD_COUNT} slaptažodžiai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}many{{PASSWORD_COUNT} slaptažodžio išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}other{{PASSWORD_COUNT} slaptažodžių išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{Vienas slaptažodis ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}one{{PASSWORD_COUNT} slaptažodis ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}few{{PASSWORD_COUNT} slaptažodžiai ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}many{{PASSWORD_COUNT} slaptažodžio ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}other{{PASSWORD_COUNT} slaptažodžių ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{Viena žymė išsaugota tik šiame įrenginyje. Jei norite ją naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}one{{BOOKMARK_COUNT} žymė išsaugota tik šiame įrenginyje. Jei norite jas naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}few{{BOOKMARK_COUNT} žymės išsaugotos tik šiame įrenginyje. Jei norite jas naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}many{{BOOKMARK_COUNT} žymės išsaugota tik šiame įrenginyje. Jei norite jas naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}other{{BOOKMARK_COUNT} žymių išsaugota tik šiame įrenginyje. Jei norite jas naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{Viena žymė ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}one{{BOOKMARK_COUNT} žymė ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}few{{BOOKMARK_COUNT} žymės ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}many{{BOOKMARK_COUNT} žymės ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}other{{BOOKMARK_COUNT} žymių ir kiti elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{Vienas elementas išsaugotas tik šiame įrenginyje. Jei norite jį naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}one{{ITEM_COUNT} elementas išsaugotas tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}few{{ITEM_COUNT} elementai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}many{{ITEM_COUNT} elemento išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}other{{ITEM_COUNT} elementų išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">Naudokite „Growser“ paskyrą arba sukurkite naują</translation>
+<translation id="1896353439080510710">Pokalbiai yra peržiūrimi ir naudojami siekiant tobulinti „Brave“ DI. „Gemini“ yra DI ir gali klysti. Galite <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>tvarkyti veiklą<ph name="END_LINK_MANAGE_ACTIVITY"/>, įskaitant informaciją apie vietovę. <ph name="BEGIN_LINK_LEARN_MORE"/>Sužinokite daugiau apie turimus variantus<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="7398815534290329738">Pokalbiai yra peržiūrimi ir naudojami siekiant tobulinti „Brave“ DI. „Gemini“ yra DI ir gali klysti. Tam tikras turinys gali būti tinkamas ne visiems. Galite <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>tvarkyti veiklą<ph name="END_LINK_MANAGE_ACTIVITY"/>, įskaitant informaciją apie vietovę. <ph name="BEGIN_LINK_LEARN_MORE"/>Sužinokite daugiau apie turimus variantus<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Šis plėtinys išsaugotas „Growser“ paskyroje, bet visi duomenys, išsaugoti tik šiame įrenginyje, gali būti ištrinti}one{Šie plėtiniai išsaugoti „Growser“ paskyroje, bet visi duomenys, išsaugoti tik šiame įrenginyje, gali būti ištrinti}few{Šie plėtiniai išsaugoti „Growser“ paskyroje, bet visi duomenys, išsaugoti tik šiame įrenginyje, gali būti ištrinti}many{Šie plėtiniai išsaugoti „Growser“ paskyroje, bet visi duomenys, išsaugoti tik šiame įrenginyje, gali būti ištrinti}other{Šie plėtiniai išsaugoti „Growser“ paskyroje, bet visi duomenys, išsaugoti tik šiame įrenginyje, gali būti ištrinti}}</translation>
+<translation id="3523789730715594198">Galite bet kada sustabdyti sinchronizavimą skiltyje „Nustatymai“. „Growser“ gali suasmeninti Paiešką ir kitas paslaugas pagal jūsų istoriją.</translation>
+<translation id="8231595707224857577">Organizacija išjungė skirtukų išsaugojimą „Growser“ paskyroje</translation>
+<translation id="1031540790849324993">Jei norite pasiekti slaptažodžius, žymes ir kitas funkcijas visuose įrenginiuose, išsaugokite juos „Growser“ paskyroje</translation>
+<translation id="7044272971260038324">Jei norite išvalyti pasikartojančias žymes, išsaugokite jas „Growser“ paskyroje</translation>
+<translation id="5106710135524113413">Kai esate prisijungę, galite naudoti žymes, plėtinius ir kitus duomenis, išsaugotus „Growser“ paskyroje, visuose savo įrenginiuose</translation>
+<translation id="458475640392126897">Kai esate prisijungę, galite naudoti temas, nustatymus ir kitus duomenis, išsaugotus „Growser“ paskyroje, visuose savo įrenginiuose</translation>
+<translation id="8780123805589053431">Gauti vaizdų aprašų iš „Growser“</translation>
+<translation id="8076549662907665888">Jei nebus naudingo vaizdo aprašo, „Growser“ bandys jums jį pateikti. Kad būtų galima kurti aprašus, vaizdai siunčiami į sistemą „Growser“.</translation>
+<translation id="5216674789212441076">Automatiškai verčiami subtitrai realiuoju laiku. Subtitrai siunčiami į sistemą „Growser“ išversti.</translation>
+<translation id="2955575198481587842">„Growser“ spalvos</translation>
+<translation id="5000497292978544380">„Growser“ paieškos DI režimas</translation>
+<translation id="377490226065453836">„Growser“ skydeliai</translation>
+<translation id="2955048943983973430">Susijusios „Growser“ paslaugos</translation>
+<translation id="6214157047210274853">Redaguoti „Google Wallet“</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="5787582109651427233">Apsilankykite „Google Wallet“, kad pridėtumėte arba tvarkytumėte <ph name="BEGIN_LINK_LOYALTY_CARDS"/>lojalumo korteles<ph name="END_LINK_LOYALTY_CARDS"/> arba „Google Pay“ <ph name="BEGIN_LINK_PAYMENT_METHODS"/>mokėjimo metodus<ph name="END_LINK_PAYMENT_METHODS"/></translation>
+<translation id="3040435070100611531">„Google Wallet“ kortelės</translation>
+<translation id="5829544019044013776">Mokėjimo metodai sistemoje „Google Wallet“</translation>
+<translation id="4140668600752387693">Prisijungus prie „Growser“ paskyros, ši funkcija yra įjungta.</translation>
+<translation id="7297228218361240128">Informacijos išsaugojimas „Google Wallet“ iš peržiūrimų puslapių</translation>
+<translation id="4182182457914031017">Kad būtų galima pateikti pasiūlymų ir patobulinti šią funkciją, svetainės, kurioje lankotės, URL ir visas puslapio turinys bendrinami su „Growser“</translation>
+<translation id="808488435221187916">Jūsų informacija pasiekiama „Google Wallet“ bet kuriame įrenginyje, kuriame esate prisijungę</translation>
+<translation id="7501338159181931945">Šie slaptažodžiai išsaugomi „Windows Hello“ šiame kompiuteryje. Jie neišsaugomi „Growser“ paskyroje.</translation>
+<translation id="1921051356055149189">Redaguoti „Growser“ paskyroje</translation>
+<translation id="4498223799912841817">Pašalinti iš „Growser“</translation>
+<translation id="3346610836797971718">Pašalinti namų adresą iš „Growser“ automatinio pildymo?</translation>
+<translation id="6595367601483315266">Pašalinti darbo adresą iš „Growser“ automatinio pildymo?</translation>
+<translation id="3068798232942246848">Pašalinti šią informaciją iš „Growser“ automatinio pildymo?</translation>
+<translation id="4713283515261533452">Norėdami ištrinti naršymo duomenis tik iš šio įrenginio ir palikti juos „Growser“ paskyroje, <ph name="BEGIN_LINK"/>atsijunkite<ph name="END_LINK"/>.</translation>
+<translation id="6641004568837764720">Norėdami ištrinti naršymo duomenis iš sinchronizuotų įrenginių ir „Growser“ paskyros, <ph name="BEGIN_LINK"/>apsilankykite sinchronizavimo nustatymuose<ph name="END_LINK"/>.</translation>
+<translation id="7711557916951320264">Norėdami ištrinti naršymo duomenis iš sinchronizuotų įrenginių ir „Growser“ paskyros, <ph name="BEGIN_LINK"/>įveskite slaptafrazę<ph name="END_LINK"/>.</translation>
+<translation id="5680951041809780964">Norėdami ištrinti naršymo duomenis iš sinchronizuotų įrenginių ir „Growser“ paskyros, <ph name="BEGIN_LINK"/>prisijunkite<ph name="END_LINK"/>.</translation>
+<translation id="908980466794178222"><ph name="BEGIN_LINK_SEARCH"/>Paieškos istorija<ph name="END_LINK_SEARCH"/> ir <ph name="BEGIN_LINK_GOOGLE"/>kitos veiklos formos<ph name="END_LINK_GOOGLE"/> gali būti išsaugotos jūsų „Growser“ paskyroje, kai esate prisijungę. Galite bet kada jas ištrinti.</translation>
+<translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>Kitos veiklos formos<ph name="END_LINK_GOOGLE"/> gali būti išsaugotos jūsų „Growser“ paskyroje, kai esate prisijungę. Galite bet kada jas ištrinti.</translation>
+<translation id="6533315466883598769">„Growser“ vertėjo naudojimas</translation>
+<translation id="6010651352520077187">Kai „Growser“ vertėjas bus įjungtas, jis siūlys versti svetaines į pageidaujamą kalbą. Be to, jis gali automatiškai versti svetaines.</translation>
+<translation id="6873499199714317035">Kai „Brave“ vertėjas bus įjungtas, jis siūlys versti svetaines ir PDF failus į pageidaujamą kalbą. Be to, jis gali automatiškai versti svetaines.</translation>
+<translation id="5911030830365207728">„Growser“ vertėjas</translation>
+<translation id="7458168200501453431">Naudojamas tas pats rašybos tikrinimas kaip ir „Growser“ paieškoje. Tekstas, kurį įvedate naršyklėje, nusiunčiamas „Growser“.</translation>
+<translation id="8972513834460200407">Paklauskite tinklo administratoriaus, kad įsitikintumėte, jog užkarda neblokuoja atsisiuntimų iš „Growser“ serverių.</translation>
+<translation id="3407392651057365886">Daugiau puslapių įkeliama iš anksto. Puslapiai gali būti iš anksto įkelti per „Growser“ serverius, gavus kitų svetainių užklausą.</translation>
+<translation id="1965578266762387357">Kai gaunate pagalbą rašant, puslapio URL, turinys ir tekstas siunčiami „Growser“. Neįveskite asmens informacijos (pvz., išsamios medicininės ar finansinės informacijos)</translation>
+<translation id="3281851196103181918">Svetainė, kurioje lankotės, gali išsaugoti nedidelį kiekį informacijos „Growser“, kad būtų galima patvirtinti, jog nesate robotas</translation>
+<translation id="7321946347180923218">Jums naršant toliau, svetainės gali tikrinti sistemoje „Growser“ ir iš ankstesnės svetainės, kurioje lankėtės, patvirtinti, kad tikriausiai esate realus asmuo</translation>
+<translation id="3510488868237982080">Sužinokite daugiau apie tai, kaip DI formuoja jūsų patirtį, ir apie „Growser“ teikiamus valdiklius</translation>
+<translation id="3003253259757197230">URL, kuriais lankotės, siunčiami „Growser“, kad numatytų, kokiose svetainėse galite vėliau apsilankyti, ir parodytų papildomos informacijos apie puslapį, kuriame lankotės</translation>
+<translation id="69739764870135975">Jei „Growser“ taip pat yra jūsų numatytasis paieškos variklis, matysite geresnius, kontekstą atitinkančius pasiūlymus</translation>
+<translation id="8358717005361108959">URL, kuriais lankotės, išsaugomi jūsų „Growser“ paskyroje</translation>
+<translation id="4674867347456586454">Laikinai susieja šiuos duomenis su „Growser“ paskyra, kai esate prisijungę, kad apsaugotų jus „Growser“ programose</translation>
+<translation id="8898822736010347272">„Growser“ siunčiami kai kurių lankomų puslapių URL, ribota sistemos informacija ir kai kurių puslapių turinys, kad būtų galima aptikti naujas grėsmes ir apsaugoti visus žiniatinklio naudotojus.</translation>
+<translation id="4255841059940367080">Realiuoju laiku teikiama DI pagrįsta apsauga nuo pavojingų svetainių, atsisiuntimų ir plėtinių, pagrįsta jūsų naršymo duomenimis, siunčiamais „Growser“</translation>
+<translation id="6053586914913150093">Siunčia URL Saugaus naršymo funkcijai, kad juos patikrintų. Taip pat siunčia nedaug puslapių, atsisiuntimų, plėtinių veiklos ir sistemos informacijos, kad padėtų aptikti naujas grėsmes. Laikinai susieja šiuos duomenis su „Growser“ paskyra, kai esate prisijungę, kad apsaugotų jus „Growser“ programose.</translation>
+<translation id="777637629667389858">Kai esate prisijungę, esate apsaugoti „Growser“ paslaugose.</translation>
+<translation id="4492544972585416410">Kai esate prisijungę, šie duomenys susiejami su jūsų „Growser“ paskyra, siekiant apsaugoti jus „Growser“ paslaugose, pvz., užtikrinant didesnę apsaugą sistemoje „Gmail“ po saugos incidento.</translation>
+<translation id="6550891580932862748">Neapsaugo jūsų nuo pavojingų svetainių, atsisiuntimų ir plėtinių. Tai neturės įtakos Saugaus naršymo nustatymams kituose „Growser“ produktuose.</translation>
+<translation id="1153636665119721804">„Growser“ papildomos apsaugos programa</translation>
+<translation id="8678192320753081984">Patikimiausia „Growser“ paskyros apsauga žmonėms, prieš kuriuos gali būti rengiamos tikslinės atakos</translation>
+<translation id="7803714812705886512">„Growser“ naudoja mažiau duomenų (pvz., URL dalis, atsisiuntimo informaciją), kad aptiktų grėsmes</translation>
+<translation id="8602867356511778172">„Growser“ naudoja daugiau duomenų (pvz., URL, puslapio turinio pavyzdžius, sistemos informaciją), kad galėtų greičiau ir tiksliau aptikti grėsmes</translation>
+<translation id="2547602044908040111">Jei esate aktyvistas, žurnalistas, viešas asmuo, rinkimų darbuotojas ar kitas asmuo, kurio pareigos susijusios su itin didele rizika, jus gali sudominti „Growser“ <ph name="BEGIN_LINK"/>Papildomos apsaugos programa<ph name="END_LINK"/>.</translation>
+<translation id="5864624288360677142">Naudoti numatytąją sistemą, jei yra, o „Growser“ DNS naudoti kaip atsarginį variantą</translation>
+<translation id="7137270216770481232">„Growser“ nustato šiuos nustatymus iš naujo</translation>
+<translation id="8723105215342036961">Šie nustatymai buvo pakeisti ne naršyklėje „Growser“. Kad jus apsaugotų, „Growser“ juos nustatė iš naujo.</translation>
+<translation id="3099985829883207242">Jei norite ieškoti konkrečioje svetainėje ar „Growser“ dalyje, įveskite šaukinį adreso juostoje ir paspauskite norimą spartųjį klavišą.</translation>
+<translation id="3172166850967951827">Naudojant kai kuriuos plėtinius galima pridėti paieškos variklius prie „Growser“</translation>
+<translation id="5433098395236481485">Atsisiųskite PDF failus, užuot automatiškai atidarę juos naršyklėje „Growser“</translation>
+<translation id="4297918578409923363">Leisti „Growser“ pasirinkti, kada svetainės gali leisti garsą (rekomenduojama)</translation>
+<translation id="3721119614952978349">Jūs ir „Growser“</translation>
+<translation id="5900302528761731119">„Growser“ profilio nuotrauka</translation>
+<translation id="2928030851119977280">Pasirinkimas išsaugotas. Jūsų pasirinkimas bus taikomas prisijungiant prie kitų „Growser“ paslaugų.</translation>
+<translation id="1818532843473612004">„Growser“ paskyroje</translation>
+<translation id="8511856004631476285">Įjungus duomenys išsaugomi „Growser“ paskyroje ir gali būti naudojami visuose jūsų įrenginiuose. Išjungus, duomenys išsaugomi tik šiame įrenginyje.</translation>
+<translation id="7846296061357476882">„Growser“ paslaugos</translation>
+<translation id="8032692752324456430">Atlikę šį veiksmą būsite atjungti nuo „Growser“ paskyrų. Žymės, istorija, slaptažodžiai ir kt. nebebus sinchronizuojama.</translation>
+<translation id="3142647462186639376">Šifruokite sinchronizuojamus duomenis taikydami savo <ph name="BEGIN_LINK"/>sinchronizavimo slaptafrazę<ph name="END_LINK"/>. „Google Pay“ mokėjimo metodai ir adresai nebus šifruojami. Naršymo istorija iš „Growser“ nebus sinchronizuojama.</translation>
+<translation id="63566973648609420">Tik jūsų slaptafrazę žinantis asmuo gali skaityti šifruotus duomenis. Slaptafrazė nesiunčiama į sistemą „Growser“ ir joje nesaugoma. Pamiršę slaptafrazę arba norėdami pakeisti šį nustatymą turėsite <ph name="BEGIN_LINK"/>iš naujo nustatyti sinchronizavimą<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">Valdykite, kaip naršymo istorija naudojama su kitais duomenimis „Growser“ paslaugose</translation>
+<translation id="5728072125198221967">Susietos „Growser“ paslaugos</translation>
+<translation id="3848443004871354246">„Growser“ paskyra</translation>
+<translation id="3293574207873361017">„Growser“ paskyros tvarkymas</translation>
+<translation id="6901130673208235020">Kai ieškote naršymo istorijoje, istorijos paieškos, geriausių atitikčių puslapio turinys ir sugeneruotos modelių išvestys siunčiami „Growser“</translation>
+<translation id="3178434360326457238">Kai naršote svetaines, jų puslapių turinys užkoduojamas ir išsaugomas jūsų įrenginyje. Tai gali turėti įtakos „Growser“ našumui</translation>
+<translation id="8622145666696249878">„Brave“ paieškos DI režimas ir susijusios programos</translation>
+<translation id="2760679829473121490">Rodyti sistemos pranešimus apie „Growser“ funkcijas ir patarimus</translation>
+<translation id="6713316345564743478">Jei norite patikrinti, ar nėra pažeistų slaptažodžių, prisijunkite prie „Growser“ paskyros</translation>
+<translation id="1342886103232377846">Jei norite patikrinti, ar nėra pažeistų slaptažodžių, eikite į „Growser“ slaptažodžių tvarkyklę</translation>
+<translation id="6766488013065406604">Eikite į „Growser“ slaptažodžių tvarkyklę</translation>
+<translation id="5408271390996168857">Turite patikimiausias „Growser“ saugos priemones</translation>
+<translation id="2888959493235069176">DI naršyklėje „Growser“</translation>
+<translation id="5058786435107472268">Duomenis, siunčiamus į „Growser“, gali peržiūrėti tikrinantys žmonės, siekiant tobulinti „Growser“ DI technologijas</translation>
+<translation id="4928488083257788101">Duomenis, siunčiamus „Growser“, gali peržiūrėti tikrinantys žmonės, siekiant patobulinti šią funkciją</translation>
+<translation id="6690687289858134062">Jei „Growser“ aptinka vieną iš jūsų slaptažodžių viešajame duomenų saugos pažeidime, „Growser“ slaptažodžių tvarkyklė gali pasiūlyti pakeisti slaptažodį, jei esate prisijungę.</translation>
+<translation id="1377438103060664754">Jei vienas iš jūsų slaptažodžių randamas duomenų saugos pažeidime, „Growser“ slaptažodžių tvarkyklė klausia, ar norite jį pakeisti į sudėtingą slaptažodį</translation>
+<translation id="1045487161760507186">Jums nereikia prisiminti slaptažodžio, nes jis išsaugomas „Growser“ slaptažodžių tvarkyklėje</translation>
+<translation id="2696675923413008404">Turinys iš šios svetainės, įskaitant jos URL, siunčiamas „Growser“ ir gali būti peržiūrimas tikrinančių žmonių, siekiant tobulinti šią funkciją</translation>
+<translation id="4770046633685474652">Perkurkite „Growser“, kurią papildėme DI</translation>
+<translation id="4682807230647698604">Kai naudojate šias funkcijas, atitinkami duomenys siunčiami „Growser“, kad būtų galima kurti DI funkcijas</translation>
+<translation id="9130857050314385402">Skirtukų pavadinimai ir URL siunčiami „Growser“, kai naudojate įgūdį</translation>
+<translation id="6889302653504319751">Įgūdžiai išsaugomi „Growser“ paskyroje</translation>
+<translation id="7247922309426191342">„Growser“ gali kurti ir versti subtitrus čia nurodytomis kalbomis</translation>
+<translation id="113229251350204705">„Growser“ gali kurti subtitrus čia nurodytomis kalbomis</translation>
+<translation id="2523184218357549926">Siunčiami „Growser“ puslapių, kuriuose lankotės, URL</translation>
+<translation id="2489769822799748314">Padėti tobulinti „Growser“ funkcijas ir našumą</translation>
+<translation id="1236327016477620515">Automatiškai siunčia naudojimo statistiką ir strigčių ataskaitas „Growser“</translation>
+<translation id="4847986390991794208">„Growser“ išm. funkc. „Growser“</translation>
+<translation id="4849857027852929587">Jei norite naudoti ir saugoti slaptažodžius „Growser“ paskyroje, patvirtinkite savo tapatybę</translation>
+<translation id="4571634846305359773">Kad užtikrintumėte, jog visada galėsite naudoti slaptažodžius „Growser“ paskyroje, patvirtinkite savo tapatybę</translation>
+<translation id="1067922213147265141">Kitos „Growser“ paslaugos</translation>
+<translation id="5611620894475877872">Šifruoti sinchronizuotus slaptažodžius naudojant „Growser“ paskyrą</translation>
+<translation id="2934862573358659343">Naudokite „Growser“ numatytąją slaptažodžių šifruotę „Growser“ paskyroje</translation>
+<translation id="2234876718134438132">Sinchron. ir „Growser“ paslaugos</translation>
+<translation id="90129144187791159">Ši paskyra nesusijusi su „Growser“, todėl tokios funkcijos kaip „Growser“ sinchronizavimas nepasiekiamos</translation>
+<translation id="8576758133946664895">Growser Root Store</translation>
+<translation id="465996245977626576">„Growser Root Store“ yra sertifikatų iš sertifikavimo institucijų, kuriomis pasitiki
+      „Chrome Root Program“, ir jie nuolat peržiūrimi.</translation>
+<translation id="6792337889847068504">Naujame skirtuke sužinokite daugiau apie „Growser Root Store“.</translation>
+<translation id="3691353018566626378">Jei ištrinsite serverio sertifikatą, „Growser“ nebenaudos jo serveriams identifikuoti.</translation>
+<translation id="1378122021175898739">„Growser“ sistemos informacija</translation>
+<translation id="1017340475205725100">„ChromeOS“ „Growser“ naudotojų žurnalai</translation>
+<translation id="7635904580734496104">„Growser“ paskyros ID</translation>
+<translation id="5221420127618874650">Išsaugoti „Growser“ paskyroje</translation>
+<translation id="691102290537033604">Plėtinys galės vykdyti kodą, kurio „Growser“ neperžiūrėjo. Tai gali būti nesaugu, todėl įgalinkite tik tada, jei žinote, ką darote.</translation>
+<translation id="2375391460087228850">„Growser“ programos</translation>
+<translation id="7370738934099833954">Plėtiniai yra „Growser“ priedai, kurie gali padėti atlikti daugiau veiksmų</translation>
+<translation id="6629808816989244742">yra „Growser“ priedai, kurie gali padėti atlikti daugiau veiksmų</translation>
+<translation id="7474944013493005173">Plėtiniai yra „Growser“ priedai, kurie gali būti naudingi</translation>
+<translation id="5608497824592875805">Tik jūsų kontaktai su „Growser“ paskyra. <ph name="LINK_BEGIN"/>Peržiūrėti kontaktus<ph name="LINK_END"/></translation>
+<translation id="1958324393151249273">Norėdami su šiais kontaktais naudoti Bendrinimo netoliese funkciją, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.</translation>
+<translation id="4588215749100790315">Norėdami naudoti „<ph name="FEATURE_NAME"/>“ su šiais kontaktais, prie savo kontaktų pridėkite el. pašto adresą, susietą su jų „Growser“ paskyra.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{# kontaktas nepasiekiamas. Jei norite kartu naudoti „Bendrinimo netoliese“ funkciją, prie savo kontaktų pridėkite el. pašto adresą, susietą su jo (jos) „Growser“ paskyra.}one{# kontaktas nepasiekiamas. Jei norite kartu naudoti „Bendrinimo netoliese“ funkciją, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}few{# kontaktai nepasiekiami. Jei norite kartu naudoti „Bendrinimo netoliese“ funkciją, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}many{# kontakto nepasiekiama. Jei norite kartu naudoti „Bendrinimo netoliese“ funkciją, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}other{# kontaktų nepasiekiama. Jei norite kartu naudoti „Bendrinimo netoliese“ funkciją, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{# kontaktas nepasiekiamas. Jei norite kartu naudoti funkciją „<ph name="FEATURE_NAME"/>“, prie savo kontaktų pridėkite el. pašto adresą, susietą su jo (jos) „Growser“ paskyra.}one{# kontaktas nepasiekiamas. Jei norite kartu naudoti funkciją „<ph name="FEATURE_NAME"/>“, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}few{# kontaktas nepasiekiamas. Jei norite kartu naudoti funkciją „<ph name="FEATURE_NAME"/>“, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}many{# kontaktas nepasiekiamas. Jei norite kartu naudoti funkciją „<ph name="FEATURE_NAME"/>“, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}other{# kontaktas nepasiekiamas. Jei norite kartu naudoti funkciją „<ph name="FEATURE_NAME"/>“, prie savo kontaktų pridėkite el. pašto adresus, susietus su jų „Growser“ paskyromis.}}</translation>
+<translation id="3115470387083988713">Kad užtikrintumėte geresnę saugą, galite šifruoti slaptažodžius įrenginyje prieš išsaugodami juos „Growser“ paskyroje</translation>
+<translation id="8042331986490021244">Jūsų slaptažodžiai šifruojami įrenginyje prieš išsaugant juos „Growser“ slaptažodžių tvarkytuvėje</translation>
+<translation id="1440474484372226561">Slaptažodis nebuvo bendrintas. Patikrinkite interneto ryšį ir įsitikinkite, kad esate prisijungę prie „Growser“. Tada bandykite dar kartą.</translation>
+<translation id="6667187897999649121">Kol kas slaptažodžius galite bendrinti tik su šeimos grupės nariais. <ph name="BEGIN_LINK"/>Sukurkite iki šešių asmenų šeimos grupę<ph name="END_LINK"/> ir išnaudokite daugiau savo produktų ir prenumeratų teikiamų galimybių sistemoje „Growser“.</translation>
+<translation id="3767835232661747729">Kol kas slaptažodžius galite bendrinti tik su šeimos grupės nariais. <ph name="BEGIN_LINK"/>Pakvieskite šeimos grupės narių<ph name="END_LINK"/> prisijungti prie grupės ir išnaudokite daugiau savo produktų ir prenumeratų teikiamų galimybių sistemoje „Growser“.</translation>
+<translation id="4509277363725254222">Kai bendrinate <ph name="BEGIN_BOLD_USERNAME"/>naudotojo vardo<ph name="END_BOLD_USERNAME"/> ir <ph name="BEGIN_BOLD_PASSWORD"/>slaptažodžio<ph name="END_BOLD_PASSWORD"/> kopiją, šeimos grupės narys gali juos užpildyti naudodamas „Growser“ slaptažodžių tvarkyklę</translation>
+<translation id="3618647122592024084"><ph name="RECIPIENT_NAME"/> dabar gali naudoti jūsų naudotojo vardą ir slaptažodį, kai naudoja „Growser“ slaptažodžių tvarkyklę. Nurodykite apsilankyti <ph name="WEBSITE"/> ir prisijungti.</translation>
+<translation id="7191632649590906354">Šeimos grupės nariai dabar gali naudoti jūsų naudotojo vardą ir slaptažodį, kai naudoja „Growser“ slaptažodžių tvarkyklę. Nurodykite apsilankyti <ph name="WEBSITE"/> ir prisijungti.</translation>
+<translation id="2016576853804262709">Šeimos grupės narys šiuo metu negali gauti slaptažodžių. Paprašykite atnaujinti „Growser“ ir sinchronizuoti slaptažodžius.</translation>
+<translation id="7452861405952250711"><ph name="BRAND"/> gali tikrinti jūsų slaptažodžius, kai prisijungiate naudodami „Growser“ paskyrą</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{{COUNT} slaptažodis išsaugotas tik šiame įrenginyje. Jei norite jį naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}one{{COUNT} slaptažodis išsaugotas tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}few{{COUNT} slaptažodžiai išsaugoti tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}many{{COUNT} slaptažodžio išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}other{{COUNT} slaptažodžių išsaugota tik šiame įrenginyje. Jei norite juos naudoti kituose įrenginiuose, <ph name="BEGIN_LINK"/>išsaugokite „Growser“ paskyroje<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">„Growser“ slaptažodžių tvarkyklė žiniatinklyje</translation>
+<translation id="1368798504801939187">Peržiūrėkite slaptažodžius, net kai nenaudojate „Growser“ arba „Android“, prisijungę prie <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
+<translation id="829923460755755423">Pridėkite šaukinį prie „Growser“ slaptažodžių tvarkyklės</translation>
+<translation id="7244677273667272006">Patvirtinkite tapatybę, kad galėtumėte pridėti slaptažodžių ir gauti juos visuose įrenginiuose, kuriuose esate prisijungę prie „Brave“ paskyros</translation>
+<translation id="8189517459248805166"><ph name="WEBSITE"/> slaptažodis išsaugotas šiame įrenginyje ir jūsų „Growser“ paskyroje. Kurį norite ištrinti?</translation>
+<translation id="9101265711096405922">Iš „Growser“ paskyros</translation>
+<translation id="927421426408921503">Perkelti išsaugotus slaptažodžius į „Growser“ paskyrą?</translation>
+<translation id="5854237678863974330">Kai išsaugote slaptažodžius „Growser“ paskyroje, galite juos naudoti šiame įrenginyje ir visuose kituose įrenginiuose, kuriuose esate prisijungę</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{Išsaugokite <ph name="WEBSITE"/> slaptažodį „Growser“ paskyroje}one{Išsaugokite <ph name="WEBSITE"/> slaptažodį „Growser“ paskyroje}few{Išsaugokite <ph name="WEBSITE"/> slaptažodžius „Growser“ paskyroje}many{Išsaugokite <ph name="WEBSITE"/> slaptažodžio „Growser“ paskyroje}other{Išsaugokite <ph name="WEBSITE"/> slaptažodžių „Growser“ paskyroje}}</translation>
+<translation id="8095189618468031638">Jei norite juos naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje.</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{Slaptažodis išsaugotas „Growser“ paskyroje (<ph name="USER_EMAIL"/>)}one{Slaptažodžiai išsaugoti „Growser“ paskyroje (<ph name="USER_EMAIL"/>)}few{Slaptažodžiai išsaugoti „Growser“ paskyroje (<ph name="USER_EMAIL"/>)}many{Slaptažodžiai išsaugoti „Growser“ paskyroje (<ph name="USER_EMAIL"/>)}other{Slaptažodžiai išsaugoti „Growser“ paskyroje (<ph name="USER_EMAIL"/>)}}</translation>
+<translation id="1286604678719026234">Šis slaptažodis saugomas tik šiame įrenginyje. Jei norite ją naudoti kituose įrenginiuose, išsaugokite „Growser“ paskyroje <ph name="USER_EMAIL"/>.</translation>
+<translation id="11353874453755012">Išsaugoti „Growser“ paskyroje?</translation>
+<translation id="9031082696306594802">Turite prisijungti, kad „Growser“ galėtų užbaigti šią užduotį</translation>
+<translation id="7412981914901765024">„Growser“ slaptažodžių tvarkyklė gali atnaujinti paskyrą taikydama sudėtingą slaptažodį ir išsaugoti jį adresu <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">„Growser“ slaptažodžių tvarkyklė gali atnaujinti paskyrą taikydama sudėtingą slaptažodį, kuris išsaugomas jūsų paskyroje <ph name="EMAIL"/>.</translation>
+<translation id="309984825599745401">Daugiau apie šią funkciją ir atitinkamus duomenis, siunčiamus „Growser“</translation>
+<translation id="4786289993714497244">Slaptažodžių puslapių turinys ir susijusi informacija siunčiami „Growser“ ir peržiūrimi žmonių. Slaptažodis šifruotas ir niekam nematomas. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">Jei „Growser“ aptinka vieną iš jūsų slaptažodžių viešajame duomenų saugos pažeidime, prisijungus gali būti siūloma pakeisti slaptažodį</translation>
+<translation id="899508106612248318">Leisti „Growser“ automatiškai pakeisti <ph name="WEBSITE"/> slaptažodį</translation>
+<translation id="5710383353978348431">Jei „Growser“ aptinka vieną iš jūsų slaptažodžių viešajame duomenų saugos pažeidime, „Growser“ slaptažodžių tvarkyklė gali pasiūlyti pakeisti slaptažodį, jei esate prisijungę. <ph name="BEGIN_LINK"/>Daugiau apie automatinį slaptažodžio keitimą<ph name="END_LINK"/></translation>
+<translation id="560743248410493208">„Growser“ reikia pagalbos keičiant slaptažodį</translation>
+<translation id="4246636650471208372">Jei norite naudoti „Skills“, prisijunkite prie „Growser“ naudodami „Growser“ paskyrą, kurioje įgalinta „Gemini“ naršyklėje „Growser“</translation>
+<translation id="8111843310458688756">Įgūdžių funkcija šiuo metu išjungta. Atnaujinkite „Growser“ nustatymus, kad galėtumėte pradėti.</translation>
+<translation id="118870493070173224">Įgūdžiai išsaugomi „Growser“ paskyroje</translation>
+<translation id="3176984568033229317">Naudokitės „Growser“ paieška naršyklėje „Edge“</translation>
+<translation id="3166256634240273583">Naudokite „Growser“ paiešką tiesiogiai naršyklės adreso juostoje ir atidarę naują skirtuką.</translation>
+<translation id="76131528886466333">Įdiekite „Microsoft Edge“ skirtą „Growser“ paieškos plėtinį</translation>
+<translation id="8323744572398547859">Jei norite gauti skirtukus iš kitų įrenginių, prisijunkite ir sinchronizuokite istoriją. Be to, slaptažodžius ir kitas funkcijas pasieksite visuose įrenginiuose. Galite bet kada sustabdyti sinchronizavimą skiltyje „Nustatymai“. „Growser“ gali suasmeninti Paiešką ir kitas paslaugas pagal jūsų istoriją.</translation>
+<translation id="7907312522152480478">Jei norite gauti skirtukus iš kitų įrenginių, patvirtinkite savo tapatybę ir sinchronizuokite istoriją bei skirtukus. Galite bet kada sustabdyti sinchronizavimą skiltyje „Nustatymai“. „Growser“ gali suasmeninti Paiešką ir kitas paslaugas pagal jūsų istoriją.</translation>
+<translation id="2259337945538989999">Jei norite gauti skirtukus iš kitų įrenginių, patvirtinkite savo tapatybę. Galite bet kada sustabdyti sinchronizavimą skiltyje „Nustatymai“. „Growser“ gali suasmeninti Paiešką ir kitas paslaugas pagal jūsų istoriją.</translation>
+<translation id="3240718227457961717">Jei norite gauti skirtukus iš kitų įrenginių, sinchronizuokite istoriją ir skirtukus su <ph name="ACCOUNT_EMAIL"/>. Galite bet kada sustabdyti sinchronizavimą skiltyje „Nustatymai“. „Growser“ gali suasmeninti Paiešką ir kitas paslaugas pagal jūsų istoriją.</translation>
+<translation id="2246549592927364792">Gauti vaizdų aprašų iš „Growser“?</translation>
+<translation id="6842321291404176019">&amp;„Growser“ paskyros tvarkymas</translation>
+<translation id="7782102568078991263">Daugiau „Growser“ pasiūlymų nėra</translation>
+<translation id="1125610294554423504">„Growser“ ir Laboratorijos...</translation>
+<translation id="3592763781862723495">Kovo 31 d. bus pakeistos „Growser“ paslaugų teikimo sąlygos</translation>
+<translation id="4863113847665206034">„Growser Enterprise“ leidimo informacija</translation>
+<translation id="8880009256105053174">Ieš&amp;koti šiame puslapyje naudojant „Growser“...</translation>
+<translation id="8643443571868262066">Failas „<ph name="FILE_NAME"/>“ gali būti pavojingas. Siųsti „Growser“ papildomos apsaugos programai, kad nuskaitytų?</translation>
+<translation id="9112786533191410418">Failas „<ph name="FILE_NAME"/>“ gali būti pavojingas. Siųsti „Growser“, kad nuskaitytų?</translation>
+<translation id="5261799091118902550">Šis failas gali būti virusas arba kenkėjiška programa. Galite išsiųsti jį „Growser“, kad patikrintumėte, ar jis nesaugus.</translation>
+<translation id="6427068192186142792">„Growser“ ką tik užblokavo pavojingo failo atsisiuntimą. Užtikrinkite dar patikimesnę apsaugą naudodami sustiprintą apsaugą.</translation>
+<translation id="3601817089411059195">Failas „<ph name="FILENAME"/>“ gali būti pavojingas. Pridėkite slaptažodį, jei norite, kad „Growser“ jį patvirtintų, arba galite atsisiųsti jį tiesiogiai.</translation>
+<translation id="8558379661202483425">„Growser“ programos &gt; „<ph name="APP_NAME"/>“</translation>
+<translation id="7952238695786927848">„Growser“ mano, kad nenorite gauti pranešimų iš šios svetainės. Taigi užklausos paslėptos, kad būtų mažiau pertraukimų.</translation>
+<translation id="3714312445688817444">„Growser“ mano, kad nenorite naudoti savo vietovės šioje svetainėje. Taigi užklausos paslėptos, kad būtų mažiau pertraukimų.</translation>
+<translation id="7178558589762724625">Išorinė programa nori visiškai valdyti šį „Growser“ seansą, kad galėtų jį derinti. Tai apima prieigą prie išsaugotų duomenų, slapukų ir svetainės duomenų bei galimybę pereiti prie bet kurio URL.</translation>
+<translation id="691816738008428630">„Growser“ failų paslaugų programos</translation>
+<translation id="8376236901471830989">„Growser“ dokumentų analizė</translation>
+<translation id="5075779086521388873">Be to, slaptažodžius ir kitas funkcijas pasieksite iš „Growser“ paskyros.</translation>
+<translation id="9081137272142533824">Jei leidžiate vaikui (<ph name="CHILD_NAME"/>) įdiegti būsimus plėtinius be jūsų patvirtinimo, atidarykite „Family Link“ programą įrenginyje ir atnaujinkite vaiko (<ph name="CHILD_NAME"/>) „Growser“ nustatymus.</translation>
+<translation id="3841738495771204227">Kita jūsų kompiuteryje esanti programa pridėjo programą, kuri gali pakeisti „Growser“ veikimo būdą.</translation>
+<translation id="7126263064588272381">Kita jūsų kompiuteryje esanti programa pridėjo plėtinį, kuris gali pakeisti „Growser“ veikimo būdą.</translation>
+<translation id="4172864922628327657">Kita jūsų kompiuteryje esanti programa pridėjo temą, kuri gali pakeisti „Growser“ veikimo būdą.</translation>
+<translation id="3105796011181310544">Pakeisti atgal į „Growser“?</translation>
+<translation id="4837128290434901661">Pakeisti atgal į „Growser“ paiešką?</translation>
+<translation id="3943902841682071">Senų versijų „Growser“ programos nebus atidaromos „Windows“ įrenginiuose po 2022 m. gruodžio mėn. Susisiekite su administratoriumi, kad atnaujintų į naują versiją, arba pašalinkite šią programą.</translation>
+<translation id="8819011161186914037">„Growser“ programos perkeliamos į laipsniškąsias žiniatinklio programas. Šią „Growser“ programą naršyklėje įdiegė jūsų organizacija. Jei norite atidaryti laipsniškąją žiniatinklio programą iš programų sąrašo, pirmiausia susisiekite su administratoriumi ir paprašykite pašalinti „Growser“ programą. Kol kas galite apsilankyti adresu <ph name="EXTENSION_LAUNCH_URL"/> ir atidaryti „<ph name="EXTENSION_NAME"/>“ žiniatinklyje.</translation>
+<translation id="646124512503317592">Senų versijų „Growser“ programos nebus atidaromos „Windows“ įrenginiuose po 2022 m. gruodžio mėn. Galite patikrinti, ar pasiekiama nauja versija.</translation>
+<translation id="933653713937577409">Sužinokite daugiau apie nepalaikomas „Growser“ programas</translation>
+<translation id="4092709865241032354">Kad padėtumėte „Growser“ slaptažodžių tvarkyklei išsaugoti prisijungimo informaciją, pridėkite šios svetainės naudotojo vardą</translation>
+<translation id="1050292285963299821">Toliau naudokite slaptažodžius „Growser“ paskyroje</translation>
+<translation id="623821062113722442">Slaptažodžių saugojimas „Growser“ paskyroje</translation>
+<translation id="4769005558293498755">Slaptažodžiai išsaugoti „Growser“ paskyroje, todėl galite juos naudoti bet kuriame įrenginyje</translation>
+<translation id="6247557882553405851">„Growser“ slaptažodžių tvarkytuvė</translation>
+<translation id="5902333873367271103">Patvirtinkite savo tapatybę, kad gautumėte jį visuose įrenginiuose, kuriuose esate prisijungę prie „Growser“ paskyros</translation>
+<translation id="6520087076882753524">Galite peržiūrėti ir tvarkyti išsaugotus slaptažodžius „Growser“ slaptažodžių tvarkytuvėje</translation>
+<translation id="5181172023548002891">„Growser“ slaptažodžių tvarkytuvė, naudotojas <ph name="ACCOUNT"/></translation>
+<translation id="7668423670802040666">„Growser“ slaptažodžių tvarkytuvė, naudotojas <ph name="ACCOUNT"/></translation>
+<translation id="6364173777171379284">Saugiai išsaugokite slaptažodžius „Growser“ paskyroje ir niekada nebereikės jų įvesti iš naujo</translation>
+<translation id="8035640035083640426">Pasiekite slaptažodžius, kai esate prisijungę prie „Growser“ paskyros</translation>
+<translation id="9010330063886818303">Kad slaptažodžiai būtų išsaugomi „Growser“ paskyroje, prisijunkite ir įjunkite sinchronizavimą.</translation>
+<translation id="2618542259010630366">Jei norite, kad slaptažodžiai būtų išsaugomi „Growser“ paskyroje, įjunkite sinchronizavimą.</translation>
+<translation id="6307677019050188653">„Growser“ įkelia žymas iš komandos eilutės failo. Gali būti paveiktas stabilumas ir sauga.</translation>
+<translation id="7602868996817972616">Paklauskite „Growser“ apie šį puslapį</translation>
+<translation id="7084095352418993433">Klausti „Growser“ apie šį puslapį: „<ph name="PAGE_TITLE"/>“</translation>
+<translation id="5563234215388768762">Ieškoti sistemoje „Growser“ arba įvesti URL</translation>
+<translation id="4097560579602855702">Ieškoti „Growser“</translation>
+<translation id="6621282332208609777">Paklauskite „Growser“ arba įveskite URL</translation>
+<translation id="835927394551949760">Klausimai „Growser“</translation>
+<translation id="2856216380429599274">Numatytoji „Growser“ tema</translation>
+<translation id="4334778460914339013">Tema atnaujinta į „Numatytoji „Growser“</translation>
+<translation id="2983311431122838216">Klausti DI režimu „Growser“ paieškoje</translation>
+<translation id="6998036632333022623">Skirtukai bendrinami su „Growser“</translation>
+<translation id="1957188536718247425">Klausti „Growser“ apie ankstesnį skirtuką</translation>
+<translation id="964903383988132751">Klausti „Growser“ apie ankstesnį skirtuką: „<ph name="TAB_TITLE"/>“</translation>
+<translation id="1168799042879144934">Klausti „Growser“ apie ankstesnį puslapį</translation>
+<translation id="4857506880242459832">Klausti „Growser“ apie ankstesnį puslapį: „<ph name="PAGE_TITLE"/>“</translation>
+<translation id="5918150687673977578">Matote pasiūlymus, kaip suasmeninti „Growser“ ir ją dar labiau pritaikyti, kad atitiktų jūsų kasdienius poreikius.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="5587243084217793846">Rodomi siūlomi failai, skirti padėti jums lengvai grįžti prie pastarosios veiklos „Growser“ diske.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="3309585159276256701">Rodomi siūlomi failai, skirti padėti jums lengvai grįžti prie pastarosios veiklos „Microsoft SharePoint“ ir „OneDrive“.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="7812170317334653156">„Growser“ kalendorius paslėptas</translation>
+<translation id="6913051485529944333">Daugiau nematysite „Growser“ kalendoriaus šiame puslapyje</translation>
+<translation id="6696214841962677136">Matote kalendorių, kad galėtumėte lengvai pereiti prie kito įvykio „Growser“ kalendoriuje.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="2845276301195220700">Daugiau veiksmų su „Growser“ kalendoriumi</translation>
+<translation id="1885089541024391265">„Growser“ kalendorius</translation>
+<translation id="1296410481664942178">Nerodyti „Growser“ kalendoriaus</translation>
+<translation id="4880295985240000243">Matote kalendorių, kad galėtumėte lengvai pereiti prie kito įvykio „Outlook“ kalendoriuje.
+       <ph name="BREAK"/>
+       <ph name="BREAK"/>
+       Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="6474021817475285003">Žr. daugiau „Brave“ kalendoriuje</translation>
+<translation id="9066394310994446814">Šis elementas rodomas atsižvelgiant į jūsų ankstesnę veiklą naudojant „Growser“ paslaugas. Galite peržiūrėti, ištrinti duomenis ir keisti nustatymus adresu <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Sužinokite, kokius duomenis „Growser“ renka ir kodėl, apsilankę adresu <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
+<translation id="5730739935948075356">Matote puslapius, kuriuose lankėtės, ir siūlomas paieškas, kad galėtumėte lengvai grįžti prie naujausios veiklos.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="1527457583170535338">Matote siūlomas paieškas ir apsipirkimo nuolaidas, kurios gali jus sudominti atsižvelgiant į naujausią veiklą.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite bet kada tvarkyti šios kortelės nustatymus arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="8526019066138627163">Matote skirtukus iš kitų įrenginių, kad galėtumėte lengvai grįžti prie pastarosios veiklos.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="8827376900981477247">Matote neseniai naudotas skirtukų grupes, kad galėtumėte lengvai tęsti ten, kur baigėte.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Galite tvarkyti nustatymus kortelės meniu arba peržiūrėti daugiau parinkčių skiltyje „Growser“ tinkinimas“.</translation>
+<translation id="7868070199056978976">Gaukite „Growser“ mobiliajame įrenginyje</translation>
+<translation id="3098738509270989275">Atsisiųskite „iOS“ skirtą „Growser“, kad telefone pasiektumėte skirtukus, žymes ir slaptažodžius.</translation>
+<translation id="6548945820758901244">Atidaryti „Growser“ paieškos šoninį skydelį</translation>
+<translation id="1157952955648710254">Uždaryti „Growser“ paieškos šoninį skydelį</translation>
+<translation id="8376752431516546391">„Growser“ paieškos šoninis skydelis</translation>
+<translation id="4621866192918370652">Galite ieškoti šiame puslapyje naudodami „Growser“, kad gautumėte papildomos naudingos informacijos</translation>
+<translation id="2360792123962658445">Jei norite gauti puslapio suvestinę, susijusias paieškas ir kitą naudingą informaciją apie šį puslapį, pasirinkite „Growser“ paieškos šoninio skydelio mygtuką įrankių juostoje</translation>
+<translation id="6868193750403948178">Tinkinti „Growser“</translation>
+<translation id="5009064339929592579">Išsaugoti aplanke „Growser“ paskyroje?</translation>
+<translation id="7400528739136719497">Kai kurie „Growser“ balsai šiuo metu gali būti nepasiekiami</translation>
+<translation id="4857677595331912231">Dabartinio skirtuko turinys ir URL bendrinami su „Brave“, kad gautumėte aktualesnius atsakymus. Naršydami galite pridėti arba pašalinti skirtukus.</translation>
+<translation id="5639212636098910819">Toliau naršyti „Growser“</translation>
+<translation id="3252169590975855820">Jį galite pasiekti „Growser“ slaptažodžių tvarkyklėje</translation>
+<translation id="3843323136102787632">Atsisiųskite „Growser“ naudodami šį QR kodą ir prisijunkite prie „Growser“ paskyros.</translation>
+<translation id="9136966630767081659">„Growser“ patarimas</translation>
+<translation id="5743876629139760900">Plėtiniai yra „Growser“ priedai, kurie gali padėti palaikyti tvarką, supaprastinti užduotis ir tinkinti naršymą</translation>
+<translation id="2694280280138200129">Jūsų ryšys visada saugus, nebent „Growser“ nurodo kitaip</translation>
+<translation id="3567433952279331449">Tinkinkite „Growser“ ir suteikite naršyklei naują išvaizdą</translation>
+<translation id="1856921079189283630">Spustelėkite „Tinkinti „Growser“</translation>
+<translation id="3656717592188518245">Dabar galite bet kuriuo metu pakeisti naršyklės išvaizdą iš tinkinimo meniu „Tinkinti „Growser“</translation>
+<translation id="2014729156921901">Kad sutaupytų atminties vietos, „Growser“ pašalino tam tikrą turinį</translation>
+<translation id="1616505795285943236">Taip pat įjungti Sustiprintą saugų naršymą šiam „Growser“ profiliui?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{Pažeistas slaptažodis sėkmingai pakeistas.
+
+Turite dar # pažeistą slaptažodį. „Growser“ slaptažodžių tvarkyklė rekomenduoja patikrinti šį slaptažodį dabar.}one{Pažeistas slaptažodis sėkmingai pakeistas.
+
+Turite dar # pažeistą slaptažodį. „Growser“ slaptažodžių tvarkyklė rekomenduoja patikrinti šiuos slaptažodžius dabar.}few{Pažeistas slaptažodis sėkmingai pakeistas.
+
+Turite dar # pažeistus slaptažodžius. „Growser“ slaptažodžių tvarkyklė rekomenduoja patikrinti šiuos slaptažodžius dabar.}many{Pažeistas slaptažodis sėkmingai pakeistas.
+
+Turite dar # pažeisto slaptažodžio. „Growser“ slaptažodžių tvarkyklė rekomenduoja patikrinti šiuos slaptažodžius dabar.}other{Pažeistas slaptažodis sėkmingai pakeistas.
+
+Turite dar # pažeistų slaptažodžių. „Growser“ slaptažodžių tvarkyklė rekomenduoja patikrinti šiuos slaptažodžius dabar.}}</translation>
+<translation id="3023028874856327238">Šį slaptažodį galite išsaugoti „Growser“ paskyroje arba tik šiame įrenginyje</translation>
+<translation id="6662394424395160792">Naudokite „Growser“ slaptažodžių tvarkyklę, kad galėtumėte sparčiau prisijungti prie svetainių iš bet kurio įrenginio</translation>
+<translation id="5195408296304472010">Jei norite išsaugoti sudėtingus slaptažodžius naudodami „Growser“ slaptažodžių tvarkyklę, prisijunkite prie „Growser“</translation>
+<translation id="4069802351872017480">Galite išsaugoti slaptažodžius naudodami „Growser“ slaptažodžių tvarkyklę, kai esate prisijungę prie „Growser“</translation>
+<translation id="5530977410273748884">Jei norite išsaugoti slaptažodį „Growser“ slaptažodžių tvarkyklėje, spustelėkite raktą</translation>
+<translation id="2743378970365831481">Jei norite išsaugoti slaptažodį „Growser“ slaptažodžių tvarkyklėje, spustelėkite slaptažodžių tvarkyklės piktogramą vietovės juostoje</translation>
+<translation id="3635353578505343390">Atsiliepimų siuntimas sistemai „Growser“</translation>
+<translation id="3192586965067888278">Išsamiai aprašykite problemą. Atsiliepimai bus siunčiami „Growser“, kad peržiūrėtų žmogus, ir jie gali būti naudojami „Growser“ produktams bei paslaugoms tobulinti ar kurti.</translation>
+<translation id="6333064448949140209">Failas bus išsiųstas į sistemą „Growser“ atlikti derinimą</translation>
+<translation id="93343527085570547">Eikite į <ph name="BEGIN_LINK1"/>teisinės pagalbos puslapį<ph name="END_LINK1"/> ir pateikite užklausą pakeisti turinį dėl teisinių priežasčių. Kai kuri paskyros ir sistemos informacija gali būti išsiųsta į sistemą „Growser“. Naudosime informaciją, kurią pateiksite mums, kad galėtume padėti išspręsti technines problemas ir tobulinti savo paslaugas, kurioms taikoma: <ph name="BEGIN_LINK2"/>privatumo politika<ph name="END_LINK2"/> ir <ph name="BEGIN_LINK3"/>paslaugų teikimo sąlygos<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">Pasirinkti duomenys pašalinti iš „Growser“ ir sinchronizuojamų įrenginių. „Growser“ paskyroje galite būti kitų formų naršymo istorijos, pvz., paieškų ir veiklos iš kitų „Growser“ paslaugų, kuri pasiekiama adresu <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="967965329294419603">Ištrinti „Growser“ duomenys</translation>
+<translation id="1597736167243418494">(„Growser“ klaidų puslapiai)</translation>
+<translation id="3372478764182952159">„Growser“ su šia „Growser“ paskyra</translation>
+<translation id="2577981599306533385"><ph name="MEMBER_FULL_NAME"/> (<ph name="EMAIL"/>) iškart neteks prieigos prie skirtukų grupės „<ph name="GROUP_NAME"/>“ ir nebegalės bendrauti su jumis „Growser“ paslaugose.</translation>
+<translation id="1917766536967060661">Iškart neteksite prieigos prie skirtukų grupės „<ph name="GROUP_NAME"/>“, o <ph name="BLOCKED_MEMBER_FULL_NAME"/> (<ph name="BLOCKED_MEMBER_EMAIL"/>) nebegalės bendrauti su jumis „Growser“ paslaugose.</translation>
+<translation id="2417535973197532627">Jei norite bendrinti skirtukus ir bendradarbiauti su kitais, prisijunkite prie „Growser“ ir sinchronizuokite istoriją bei skirtukus. Be to, slaptažodžius ir kitas funkcijas pasieksite visuose įrenginiuose.</translation>
+<translation id="64301400193488735">Kad galėtumėte bendrinti skirtukų grupes arba prisijungti prie jų, privalote galėti prisijungti prie „Growser“</translation>
+<translation id="8040715633918382311">Kai organizacija riboja išsaugojimą „Growser“ paskyroje, negalite bendrinti skirtukų grupių ar prie jų prisijungti</translation>
+<translation id="7224231921984484941">Jei norite bendrinti, prisijungti ir bendradarbiauti skirtukų grupėse, atidarykite nustatymų skiltį ir įjunkite parinktį „Leisti „Growser“ prisijungti“</translation>
+<translation id="5328048595378098795">Pasiekiama nauja „Growser“</translation>
+<translation id="7415249272773209705">„<ph name="APP_NAME"/>“ bendrina „Growser“ skirtuką.</translation>
+<translation id="7714085981364518713">„<ph name="APP_NAME"/>“ bendrina „Growser“ skirtuką ir garsą.</translation>
+<translation id="2410649455830574015">Automatiškai siųsti naudojimo statistiką ir strigčių ataskaitas „Growser“</translation>
+<translation id="3051767373530645849">„Growser“ neleidžia. Šis plėtinys gali būti nesaugus.</translation>
+<translation id="2357378493576302986">„<ph name="THIRD_PARTY_TOOL_NAME"/>“ nori atkurti „Growser “ nustatymus į pradinius numatytuosius nustatymus. Bus iš naujo nustatyti pagrindinis puslapis, naujo skirtuko puslapis ir paieškos variklis, išjungti plėtiniai ir atsegti visi skirtukai. Taip pat bus išvalyti kiti laikini ir talpykloje esantys duomenys, pvz., slapukai, turinio ir svetainių duomenys.</translation>
+<translation id="2887613109410166736">Pasirinkite įrenginį. Tada, norėdami peržiūrėti puslapį, įrenginyje atidarykite „Growser“.</translation>
+<translation id="1162630940779651724">Jei norite siųsti šį skirtuką į kitą įrenginį, prisijunkite prie „Growser“ abiejuose įrenginiuose</translation>
+<translation id="5388608738812110907">Jei norite siųsti šį skirtuką į kitą įrenginį, prisijunkite prie „Growser“ čia</translation>
+<translation id="4007679133627124999">Jei norite siųsti nuorodas iš vieno įrenginio į kitą, įsitikinkite, kad abiejuose įrenginiuose esate prisijungę prie tos pačios „Growser“ paskyros.</translation>
+<translation id="2377999415409519333">Jei norite siųsti nuorodas, patvirtinkite savo tapatybę. Galite siųsti nuorodas, kai esate prisijungę prie tos pačios „Brave“ paskyros abiejuose įrenginiuose.</translation>
+<translation id="4986706507552097681">Bet kada galite pasirinkti, ką norite sinchronizuoti, skiltyje „Nustatymai“. „Growser“ gali suasmeninti Paiešką ir kitas paslaugas pagal jūsų istoriją.</translation>
+<translation id="8002662358897231821">Prisijunkite, kad žymes, istoriją, slaptažodžius ir kitus nustatymus galėtumėte naudoti visuose įrenginiuose. Be to, būsite automatiškai prijungti prie „Growser“ paslaugų.</translation>
+<translation id="3128296144259620504">„Growser“ valdoma naudojant automatinę bandomąją programinę įrangą</translation>
+<translation id="5308456967320989709"><ph name="BROWSER_VERSION"/> versijos bandomoji „Growser“ skirta tik automatiniam bandymui vykdyti. Kad galėtumėte įprastai naršyti, naudokite standartinę „Growser“ versiją, kuri atnaujinama automatiškai.</translation>
+<translation id="7655407181412188363">Atsisiųsti „Growser“</translation>
+<translation id="5902400038326841449">„Growser“ slaptažodžių tvarkyklė išjungta</translation>
+<translation id="6564343790052433242">Kad galėtumėte sukurti „<ph name="APP_NAME"/>“ prieigos raktą, „Growser“ slaptažodžių tvarkyklė turi būti įjungta</translation>
+<translation id="1312107444925145416">Jūsų „Growser“ profilis</translation>
+<translation id="5186788525428341874">Galite naudoti šį prieigos raktą, kad sparčiau prisijungtumėte skirtinguose įrenginiuose. Jis bus išsaugotas „Growser“ slaptažodžių tvarkyklėje kaip priskirtas el. pašto adresui <ph name="ACCOUNT_NAME"/>.</translation>
+<translation id="2204168219363024184">Jei norite sukurti šį prieigos raktą naudodami „Growser“ slaptažodžių tvarkyklę, patvirtinkite savo tapatybę</translation>
+<translation id="6331857227627979149">Prieigos raktas bus išsaugotas „Growser“ slaptažodžių tvarkyklėje paskyroje <ph name="ACCOUNT_NAME"/>. Tai reikės atlikti tik vieną kartą.</translation>
+<translation id="7484943269191249363">Šiame įrenginyje galite naudoti visus „Growser“ slaptažodžių tvarkyklėje išsaugotus prieigos raktus. Tai reikės atlikti tik vieną kartą.</translation>
+<translation id="8189257540098107776">Nepavyksta pasiekti „Growser“ slaptažodžių tvarkyklės</translation>
+<translation id="4540409690203718935">Nepavyksta pasiekti „Growser“ slaptažodžių tvarkyklės. Po kelių minučių bandykite dar kartą</translation>
+<translation id="7091667403045767243">Jei norite naudoti „Growser“ paskyroje išsaugotus prieigos raktus</translation>
+<translation id="8436800506934625875">Sukurkite „Growser“ slaptažodžių tvarkyklės raidinį ir skaitinį atkūrimo PIN kodą</translation>
+<translation id="6520115099532274511"><ph name="SITE"/> nori patvirtinti jūsų tapatybę. Įveskite „Growser“ slaptažodžių tvarkyklės raidinį ir skaitinį PIN kodą</translation>
+<translation id="1011431628606634753">„Growser“ slaptažodžių tvarkyklės atkūrimo PIN kodo keitimas</translation>
+<translation id="7036550011779986598"><ph name="RP_ID"/> ką tik sukūrė prieigos raktą jūsų paskyrai. Prieigos raktai – tai spartesnis ir saugesnis būdas prisijungti. Jie išsaugomi <ph name="USER"/> „Growser“ slaptažodžių tvarkyklėje. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">Turite patikimiausią „Growser“ apsaugą nuo pavojingų svetainių, atsisiuntimų ir plėtinių</translation>
+<translation id="8655204793400034351">Naudojate įprastos apsaugos funkciją. Kad užtikrintumėte geresnę apsaugą nuo pavojingų svetainių, atsisiuntimų ir plėtinių, „Growser“ nustatymuose įjunkite „Sustiprinto saugaus naršymo“ funkciją.</translation>
+<translation id="984351584831083958">„Growser“ nustatymai</translation>
+<translation id="988181568526563957">Patikimiausios „Growser“ saugos priemonės geriau apsaugo jus nuo pavojingų svetainių, atsisiuntimų ir plėtinių</translation>
+<translation id="5634728742770877915">Turite patikimiausią „Growser“ apsaugą nuo žalingų svetainių</translation>
+<translation id="5760318332127300368">Taip pat ištrinti naršymo duomenis (<ph name="URL"/>). Tai padarius galite būti atjungti nuo Growser.com. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">Pasiekėte laiko apribojimą, kurį vienas iš tėvų nustatė „Growser“ programai „<ph name="APP_NAME"/>“. Rytoj galėsite ją naudoti <ph name="TIME_LIMIT"/>.</translation>
+<translation id="4941819631276629267">„Growser“ atnaujinta</translation>
+<translation id="2871029453856004998">Ši programa yra potencialiai pavojinga ir ją užblokavo „Growser“</translation>
+<translation id="3757415281539421827">„Growser“ tikrina diegimo rinkinį</translation>
+<translation id="8022386078499568954">„Growser“ nepavyko patvirtinti šio diegimo rinkinio</translation>
+<translation id="5529797218715099093">„Growser“ tobulina PDF failus</translation>
+<translation id="3908598909163357544">„Growser“ nebežymės šios svetainės pranešimų kaip šlamšto</translation>
+<translation id="3519014757432845220">Padėkite tobulinti apsaugą nuo šlamšto – bendrinkite pranešimo turinį ir svetainės URL su „Growser“. Turinį gali peržiūrėti žmonės.</translation>
+<translation id="8028868133304944257">Išsaugota iš „Growser“</translation>
+<translation id="9217458048141913687">Atidaryti „Growser“</translation>
+<translation id="3879869835592882268">Patikimiausios „Growser“ saugos užtikrinimas</translation>
+<translation id="3307078631581490570">Suasmeninkite „Growser“</translation>
+<translation id="6133506753060207356">Galite iš naujo atidaryti neseniai uždarytus skirtukus iš bet kurio įrenginio, kuriame naudojate „Growser“</translation>
+<translation id="8146322071180925001">Sužinokite daugiau apie „Growser“ naujinių palaikymą</translation>
+<translation id="4016841343509962173">Žr. visą „Growser“ politiką</translation>
+<translation id="6953549942896871737">Atidaryti naudojant „Growser“</translation>
+<translation id="4773299976671772492">Sustabdyta</translation>
+<translation id="8387617938027387193">Jūsų tapatybės patvirtinimas</translation>
+<translation id="1481450969185702334">Rasti ir užpildyti</translation>
+<translation id="443008484043213881">Įrankiai</translation>
+<translation id="8118506371121007279">Pateikti atsiliepimą</translation>
 </translationbundle>

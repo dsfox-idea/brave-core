@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {닫은 탭 및 그룹은 최근 탭 및 탭 그룹 섹션에서 다시 열 수 있습니다. 비공개 탭은 사용할 수 없습니다.}
         other {닫은 탭 및 그룹은 최근 탭 및 탭 그룹 섹션에서 다시 열 수 있습니다. 비공개 탭 #개는 사용할 수 없습니다.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{Growser 링크 <ph name="TABS_COUNT_ONE"/>개}other{Growser 링크 <ph name="TABS_COUNT_MANY"/>개}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{Brave에서 찾은 리뷰 <ph name="REVIEWS_COUNT_ONE"/>개}other{Brave에서 찾은 리뷰 <ph name="REVIEWS_COUNT_MANY"/>개}}</translation>
+<translation id="2928243913527329289">Growser | 매장 정보</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Brave에서는 <ph name="AUTO_DELETE_DELAY_ONE"/>개월이 지난 비활성 탭과 탭 그룹을 자동으로 닫습니다. 설정에서 변경할 수 있습니다.}other{Brave에서는 <ph name="AUTO_DELETE_DELAY_MANY"/>개월이 지난 비활성 탭과 탭 그룹을 자동으로 닫습니다. 설정에서 변경할 수 있습니다.}}</translation>
 </translationbundle>

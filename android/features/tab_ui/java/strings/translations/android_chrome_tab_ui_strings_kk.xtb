@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Жабылған беттеріңіз бен топтарыңыз Жақында жабылған беттер және бет топтары бөлімдерінде қайта ашылуы мүмкін. Сіздің Жеке бетіңіз қолжетімді болмайды.}
         other {Жабылған беттеріңіз бен топтарыңыз Жақында жабылған беттер және бет топтары бөлімдерінен қайта ашылуы мүмкін. Сіздің Жеке беттеріңіз қолжетімді болмайды.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{Growser-нан <ph name="TABS_COUNT_ONE"/> сілтеме}other{Growser-нан <ph name="TABS_COUNT_MANY"/> сілтеме}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{Growser-дан <ph name="REVIEWS_COUNT_ONE"/> пікір}other{Growser-дан <ph name="REVIEWS_COUNT_MANY"/> пікір}}</translation>
+<translation id="2928243913527329289">Growser | Дүкен туралы ақпарат</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser <ph name="AUTO_DELETE_DELAY_ONE"/> ай өткеннен кейін әрекетсіз қойындылар мен қойындылар топтарын автоматты түрде жабады. Мұны "Параметрлер" бөлімінен өзгертуіңізге болады.}other{Growser <ph name="AUTO_DELETE_DELAY_MANY"/> ай өткеннен кейін әрекетсіз қойындылар мен қойындылар топтарын автоматты түрде жабады. Мұны "Параметрлер" бөлімінен өзгертуіңізге болады.}}</translation>
 </translationbundle>

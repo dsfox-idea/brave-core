@@ -5532,4 +5532,430 @@ Batafsil axborot:
 <translation id="8198379961710069585">Tarixdan qidirish tugmasi, qidirish uchun faollashtiring</translation>
 <translation id="8495170825732897952">Varaqlarni almashtirmasdan axborotni eslash va kiritish uchun ixtiyoriy shaklda @@ deb yozing</translation>
 <translation id="8874790741333031443">Tashqi cookie fayllarga vaqtincha ruxsat bering, bunda himoya pasayadi, lekin sayt funksiyalari kutilganidek ishlaydi.</translation>
+<translation id="6091115085465716987">Google Wallet logotipi</translation>
+<translation id="4489288117933602961">Growser logotipi</translation>
+<translation id="6604204560730066844">Bu karta Growser hisobingiz va bu qurilmada saqlansinmi?</translation>
+<translation id="6253380015872250643">Kartani Growser Walletga saqlash</translation>
+<translation id="7062344833049251424">Keyingi safar tezroq toʻlash uchun karta va toʻlov manzilini Growser Walletga saqlang</translation>
+<translation id="4940620179254568429">Bu kartaning CVC kodi tezkor hisob-kitob uchun shifrlanadi va Growser hisobingizga saqlanadi</translation>
+<translation id="1413235258620101697">Bu kartaning CVC kodi tezkor hisob-kitob uchun shifrlanadi va Google Wallet hamyonida saqlanadi</translation>
+<translation id="8296806261827627234">Karta saqlanganda xaridlar uchun tezkor toʻlang. Karta maʼlumotlari Growser hisobingizda shifrlangan shaklda saqlanadi.</translation>
+<translation id="4954891067389874142">Saqlangan karta bilan xaridlarni tezroq amalga oshiring. Growser Walletda karta tafsilotlari shifrlanadi.</translation>
+<translation id="4599572944836204718">Karta saqlanganda Google Pay bilan tezroq toʻlang. Growser Walletda karta tafsilotlari shifrlanadi.</translation>
+<translation id="3872719112670219447">Bu nom Growser hisobingizga biriktirilgan</translation>
+<translation id="1511387429744666092">Hisobingizga kirganingiz uchun Growser kartalarni Growser hisobingizga saqlashni taklif qilmoqda. Buni sozlamalar orqali oʻzgartirish mumkin.</translation>
+<translation id="4565400898718322011">Hisobingizga kirganingiz uchun Growser kartalarni Growser hisobingizga saqlashni taklif qilmoqda. Buni sozlamalar orqali oʻzgartirish mumkin. Karta egasining ismi hisobingizdan olinadi.</translation>
+<translation id="3594461335790641595">Bu karta qurilmangizga saqlanganidan keyin uning maʼlumotlarini Growser xaridlarida avtomatik kiritish mumkin</translation>
+<translation id="1242832199383246031">Bu karta Google Play hisobiga saqlanganidan keyin uning maʼlumotlarini Growser xaridlarida avtomatik kiritish mumkin</translation>
+<translation id="6186962377036474023">Bu karta Google Wallet hamyoniga saqlanganidan keyin uning maʼlumotlarini Growser xaridlarida avtomatik kiritish mumkin</translation>
+<translation id="5765984179517659957">Tolov maʼlumotlarini avtomatik toʻldirish uchun Growser shaxsingizni tasdiqlamoqchi.</translation>
+<translation id="828282277746732142">IBAN raqamini Growser Walletga saqlash</translation>
+<translation id="6084079099761498478">Bu IBAN raqami keyingi safar avtomatik kiritilishi uchun uni Growser hisobiga saqlang</translation>
+<translation id="5398461103557553443">IBAN raqami kelgusida avtomatik kiritilishi uchun uni Growser Walletga saqlang</translation>
+<translation id="7098302422586317090">Growser toʻlov usulini kiritishdan oldin shaxsingizni tasdiqlaydi Buni istalgan vaqtda <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/> orqali yangilash mumkin.</translation>
+<translation id="5053116470141135293">Haqiqiy tafsilotlaringizni himoya qilish uchun bu karta bilan toʻlov qilganingizda virtual karta raqami kiritiladi. Google Wallet orqali boshqarish. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">Ushbu variantlarni taklif qilish uchun hisob-kitob sahifasidagi kontent Bravega yuboriladi. Avtomatik kiritishda keyinroq toʻlash usullarini berkitish uchun <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> sahifasini oching.</translation>
+<translation id="2840680829170913626">Ushbu variantlarni taklif qilish uchun hisob-kitob sahifasidagi kontent Bravega yuboriladi. Toʻlov tariflari muvofiqlik asosida taqdim etiladi. Avtomatik kiritishda keyinroq toʻlash usullarini berkitish uchun <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> sahifasini oching.</translation>
+<translation id="7870207318911766769">Ushbu variantlarni taklif qilish uchun hisob-kitob sahifasidagi kontent Bravega yuboriladi.</translation>
+<translation id="1151858212483238980">Growser Walletda saqlangan kartalarni avtomatik kiritish mumkin</translation>
+<translation id="1205344127823614428">Growser Walletda saqlangan kartalarni avtomatik kiritish mumkin.</translation>
+<translation id="5848445080378515710">Buyurtmani tekshirib, <ph name="BNPL_ISSUER_NAME"/> bilan hisobga kiring yoki yangi hisob yarating. Bu hisob Google Wallet ilovasida avtomatik ulanadi.</translation>
+<translation id="8163468049564974856">Onlayn toʻlovlarni xavfsiz amalga oshirish uchun avtomatik kiritishni yoqing. Karta tafsilotlari Brave Walletda shifrlanadi.</translation>
+<translation id="5717281954932320486">Onlayn toʻlovlarda karta tafsilotlarini avtomatik kiritish. Kartalar Brave Wallet hamyonida xavfsiz saqlanadi.</translation>
+<translation id="7055814742378298611">Endi Brave orqali toʻlov qilishda avtomatik kiritish uchun toʻlov usullarini saqlashingiz mumkin. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Qurilma va Growser hisobida saqlangan barcha xavfsizlik kodlari oʻchirib tashlanadi</translation>
+<translation id="7170930892977483182">Qurilma va Google Wallet ichida saqlangan barcha xavfsizlik kodlari oʻchirib tashlanadi</translation>
+<translation id="755360750394433286">Kartangiz Growser hisobingizda saqlanadi va kelgusi xaridlarda avtomatik kiritilishi mumkin</translation>
+<translation id="7412081313067625215">Kartangiz Growser Walletda saqlanadi va kelgusi xaridlarda avtomatik kiritilishi mumkin</translation>
+<translation id="2482920244925042987">Bu kartani Growser hisobingizga saqlash imkonsiz. Ammo u bu qurilmadagi Growser xotirasiga saqlandi.</translation>
+<translation id="4740434610174859636">Bu kartani Google Wallet hamyoniga saqlash imkonsiz. Ammo u bu qurilmadagi Growser xotirasiga saqlandi.</translation>
+<translation id="2109852493965717728">Bu IBAN raqami Growser hisobingizga saqlangan va undan Growser xizmatlarida foydalanish mumkin.</translation>
+<translation id="3837322271615501940">Bu IBAN raqamini Growser hisobingizga saqlash imkonsiz. Ammo u bu qurilmadagi Growser xotirasiga saqlandi. Growser keyingi safar bu IBAN raqamini ishlatish uchun qayta ruxsat soʻraydi.</translation>
+<translation id="1583007191864786102">Bu IBAN raqamini Google Wallet hamyoniga saqlash imkonsiz. Ammo u bu qurilmadagi Growser xotirasiga saqlandi. Growser keyingi safar bu IBAN raqamini ishlatish uchun qayta ruxsat soʻraydi.</translation>
+<translation id="6915664826242394941">Bu IBAN raqamini Growser hisobingizga saqlash imkonsiz. Ammo u bu qurilmadagi Growser xotirasiga saqlandi.</translation>
+<translation id="376462579087900096">Bu IBAN raqamini Google Wallet hamyoniga saqlash imkonsiz. Ammo u bu qurilmadagi Growser xotirasiga saqlandi.</translation>
+<translation id="2871837111996280385">Growser <ph name="APP_NAME"/> sahifasida maxfiy axborotni kiritishga urinmoqda.</translation>
+<translation id="3039045945489677870">Growser maxfiy axborotni chiqarishga urinmoqda</translation>
+<translation id="3253651554860831188">Sozlamalarni oʻzgartirish uchun shaxsingizni tasdiqlang</translation>
+<translation id="924075841960625832">Bu taklif Growser’dan o‘chirib tashlansinmi?</translation>
+<translation id="3016775357255717300">Bu kredit karta Growser’dan o‘chirib tashlansinmi?</translation>
+<translation id="1722474089104449082">Ushbu manzilni brauzer unutsinmi?</translation>
+<translation id="7077165718541055322">Uy manzili Growser avtomatik kiritish vositasidan olib tashlansinmi?</translation>
+<translation id="7756454115562251695">Ish manzili Growser avtomatik kiritish vositasidan olib tashlansinmi?</translation>
+<translation id="3068798232942246848">Bu axborot Growser avtomatik kiritish vositasidan olib tashlansinmi?</translation>
+<translation id="967369588715984092">Endi Brave dastaklanadigan saytlarda ushbu emailni avtomatik tasdiqlamaydi.</translation>
+<translation id="7299769361777046949">Sodiq mijoz kartalarini Google Wallet orqali boshqarish</translation>
+<translation id="2903623845283894856">Endi Growser hisobingizdagi manzillardan foydalanishingiz mumkin</translation>
+<translation id="7058709760023777753">Growser hisobingizdagi uy va ishxona manzillarini avtomatik kiriting</translation>
+<translation id="2856388212909438134">Growser hisobingizdagi ismingiz va email manzilingizni avtomatik kiritish</translation>
+<translation id="8581945850065780003">Bu manzil Growser hisobingizdan (<ph name="ACCOUNT"/>) oʻchirildi</translation>
+<translation id="8652886653703834105"><ph name="ACCOUNT"/> Growser hisobingizda</translation>
+<translation id="4050392779074832022">Undan boshqa Growser mahsulotlarida foydalanish mumkin</translation>
+<translation id="361746409909709825">Saqlangan manzillardan Growser xizmatlarida foydalanish mumkin. Bu manzil Growser hisobingizga (<ph name="ACCOUNT"/>) saqlandi.</translation>
+<translation id="5318416911578989892">Saqlangan manzillardan Growser xizmatlarida foydalanish mumkin. Bu manzil Growser hisobingizda (<ph name="ACCOUNT"/>) saqlanadi.</translation>
+<translation id="3995632180712217177">Saqlangan manzillardan Growser xizmatlarida foydalanish mumkin. Bunda mavjud uy manzilingiz oʻzgarmaydi. Bu axborot Growser hisobingizda (<ph name="ACCOUNT"/>) saqlanadi.</translation>
+<translation id="2432673835335968473">Saqlangan manzillardan Growser xizmatlarida foydalanish mumkin. Bunda mavjud ish manzilingiz oʻzgarmaydi. Bu axborot Growser hisobingizda (<ph name="ACCOUNT"/>) saqlanadi.</translation>
+<translation id="2024046927213376062">Growser hisobingizdagi (<ph name="ACCOUNT"/>) axborotlar Growser orqali shakllarda tezroq kiritilishi mumkin</translation>
+<translation id="8430499469896241016">Xavfsizligingizni taʼminlash uchun saytlar yuboradigan tasdiq kodlarini avtomatik kiritish. Brave bu kodlarni bevosita Gmail hisobingizdan olishi mumkin. <ph name="BEGIN_LINK"/>Bu funksiya haqida batafsil<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Avtomatik kiritish xizmatingiz Growser emas.</translation>
+<translation id="7450759832930378803">Bu sozlamalarni yoqib, Growser hisobingizdagi toʻlov axborotidan foydalanish uchun avtomatik kiritish xizmati sozlamalariga kiring.</translation>
+<translation id="7049940136908665440">Bu sozlamalarni yoqib, Growser hisobingizdagi axborotdan foydalanish uchun avtomatik kiritish xizmati sozlamalariga kiring.</translation>
+<translation id="2450019289047528273">Growser Walletda saqlangan toʻlov usullari va boshqa maʼlumotlar</translation>
+<translation id="1125406338060147524">Brave Wallet sozlamalari Brave orqali saqlangan maʼlumotlarga tatbiq etiladi</translation>
+<translation id="5732084028114235391">Hozir bu manzil Bravega saqlangan. Boshqa Growser xizmatlarida ishlatish uchun manzilni Growser hisobiga (<ph name="ACCOUNT"/>) saqlang.</translation>
+<translation id="756794566964707799">Hozir bu manzil mazkur qurilmada saqlangan. Boshqa Growser xizmatlarida ishlatish uchun manzilni Growser hisobiga (<ph name="ACCOUNT"/>) saqlang.</translation>
+<translation id="6935077351544118151">Endi Growser Walletdagi sodiq mijoz kartalarini avtomatik kiritish mumkin</translation>
+<translation id="4169189393773057143">Google Wallet orqali sodiq mijoz kartalarini boshqaring yoki bu tavsiyalarni faolsizlantiring</translation>
+<translation id="4470759557257438892">Oʻrniga Growser ichida Geminidan soʻrang</translation>
+<translation id="2326283484705860548">Endi koʻproq Google Wallet maʼlumotlarini avtomatik kiritish mumkin</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="8421746712901926961"><ph name="GOOGLE_WALLET_TITLE_1"/> orqali maʼlumotlaringizni saqlang va Growser mahsulotlarida shakllarni toʻldirish kabi vazifalarni tezroq bajaring. <ph name="GOOGLE_WALLET_TITLE_2"/> orqali <ph name="ACCOUNT"/> uchun <ph name="MANAGE_INFO_LINK"/> mumkin.</translation>
+<translation id="4619669610757527494">Haydovchilik guvohnomasini Growser Walletga saqlang</translation>
+<translation id="4239215166147486528">Haydovchilik guvohnomasini Brave Walletga xavfsiz saqlang</translation>
+<translation id="1912750443952232242">ID kartani Growser Walletga saqlang</translation>
+<translation id="8300302621078931927">ID kartani Brave Walletga xavfsiz saqlang</translation>
+<translation id="5447103258548475868">Pasportni Growser Walletga saqlang</translation>
+<translation id="8717177139469452440">Pasportni Brave Walletga xavfsiz saqlang</translation>
+<translation id="760632772920590778">Transportni Growser Walletga saqlang</translation>
+<translation id="4811696127853690432">Transportni Brave Walletga xavfsiz saqlang</translation>
+<translation id="5914185423510719251">KTN raqamini Growser Walletga saqlang</translation>
+<translation id="5034488401832901795">KTN raqamini Brave Walletga xavfsiz saqlang</translation>
+<translation id="1449251255954293933">Redress raqamini Growser Walletga saqlang</translation>
+<translation id="1330952240988133220">Redress raqamini Brave Walletga xavfsiz saqlang</translation>
+<translation id="8393948304336153065">Growser Walletda haydovchilik guvohnomasini yangilang</translation>
+<translation id="8889525327610245418">Brave Walletda haydovchilik guvohnomasini yangilang</translation>
+<translation id="7570524564113479209">Growser Walletda ID kartani yangilash</translation>
+<translation id="4410614037742891410">Brave Walletda ID kartani yangilash</translation>
+<translation id="3426672782316020729">Growser Walletda pasportni yangilang</translation>
+<translation id="3280440382387335343">Brave Walletda pasportni xavfsiz yangilang</translation>
+<translation id="2124081665399116863">Growser Walletda avtomobilni yangilang</translation>
+<translation id="6422648598133086441">Brave Walletda transportni xavfsiz yangilang</translation>
+<translation id="4770909831299304090">Growser Walletda KTN raqamini yangilang</translation>
+<translation id="5872115357279348603">KTN raqamini Brave Walletda xavfsiz yangilang</translation>
+<translation id="1732796940245838248">Growser Walletda redress raqamini yangilang</translation>
+<translation id="7253051586755429279">Brave Walletda redress raqamini xavfsiz yangilang</translation>
+<translation id="5628060911499153873">Growser mahsulotlarida vazifalarni tezroq bajarish uchun axborotingizni saqlang. <ph name="ACCOUNT"/> hisobingiz maʼlumotlari <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> xotirasida saqlanadi.</translation>
+<translation id="8369722293913575142">Bu axborotni Growser Walletga saqlash imkonsiz. Ammo bu qurilmadagi Growser xotirasiga saqlandi. Keyingi safar ishlatganingizda Growser uni Walletga saqlashni taklif qiladi.</translation>
+<translation id="3237427677128462778">Growser Walletda saqlanmadi</translation>
+<translation id="9078170656887151974">Tavsiyalar chiqarish va bu funksiyani yaxshilash maqsadida sahifaning URL manzili va kontenti Bravega yuboriladi. Istalgan vaqt oʻzgartirish va <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Tavsiyalar chiqarish va bu funksiyani yaxshilash maqsadida sahifaning URL manzili va kontenti Bravega yuboriladi</translation>
+<translation id="2905902437192896563">Growser shakllarni yaxshiroq tushunadi va ularni tezroq toʻldirishi mumkin</translation>
+<translation id="67310796271265436">Brave serverlarida maʼlumotlarni xavfsiz qayta ishlash orqali Brave murakkab shakllarni yaxshiroq tushunishi va toʻldirishiga yordam bering. Axborotingiz maxfiy qoladi va hech kim tomonidan tekshirilmaydi.</translation>
+<translation id="7422908041366284140">Growser standart avtomatik kiritish oʻtkazib yuborishi mumkin murakkab maydonlarni avtomatik kiritishi mumkin</translation>
+<translation id="6329742260390895689">Axborotni avtomatik kiritish uchun Wallet sozlamalarida “Growser xizmatlarida talonlardan foydalanish” funksiyasini yoqing</translation>
+<translation id="5912796581727968237">Growser Walletni ochish</translation>
+<translation id="5160781056848005130">Maʼlumotlarni Bravega ulashish orqali yaxshilangan avtomatik kiritish sifatini oshirishda yordam beryapsiz</translation>
+<translation id="8781233757384402598">Yaxshilangan avtomatik kiritish uchun soʻrov yuborganingizda, avtomatik kiritish sifatini oshirish maqsadida foydalanish maʼlumotlaringiz, soʻrovlaringiz va sahifa tafsilotlari Bravega yuboriladi</translation>
+<translation id="7044265724713929821">Brave ushbu funksiyadan qanday ishlatishingizni, jumladan, yuborgan soʻrovlaringiz va takliflarni qabul qilish yoki rad etishdagi harakatlaringizni qayd qilib boradi</translation>
+<translation id="3209071504641569648">Soʻrovlaringiz, sahifa sarlavhalari va URL manzillar Bravega yuboriladi hamda yaxshilangan avtomatik kiritish funksiyasini takomillashtirish maqsadida koʻrib chiqilishi mumkin</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Hech qanday}=1{1 ta saytdan (Growser hisobingizga kirgan holda qolasiz)}other{# ta saytdan (Growser hisobingizga kirgan holda qolasiz)}}</translation>
+<translation id="3410151451624226773">Growser Parollar menejeri orqali boshqarish</translation>
+<translation id="5224107321793121921">Growser hisobingizda boshqaring</translation>
+<translation id="5105442806410269908">Boshqa Growser maʼlumotlarini boshqarish</translation>
+<translation id="2477607419416067650">Boshqa Growser maʼlumotlari</translation>
+<translation id="472824688843296007">Growser bilan narxlarni kuzatish</translation>
+<translation id="753556296624075801">Growser texnologiyalarida ishlaydi</translation>
+<translation id="3745599309295009257">Matningiz, shuningdek, siz yozgan sahifaning mazmuni va URL manzili Bravega yuboriladi, ekspertlar koʻrib chiqadi va shu funksiyani yaxshilash uchun foydalaniladi. Tibbiy yoki moliyaviy maʼlumotlar kabi shaxsiy maʼlumotlarni kiritmang yoki shaxsiy yoki qaltis axborot bor saytlarda ushbu vositadan foydalanmang.</translation>
+<translation id="5543452229212526547">Matningiz va siz yozayotgan sahifaning kontenti va URL manzili Bravega yuboriladi. AI sifatini yaxshilashda odam muharrirlar kontentingizdan foydalanmaydi. Tashkilotingiz bu sozlamalarni istalgan vaqt oʻzgartirishi mumkin.</translation>
+<translation id="1959445535228047762">Matn va sahifa kontenti Bravega yuboriladi va bu funksiyani yaxshilash maqsadida ishlatilishi mumkin.
+  <ph name="BEGIN_LINK"/>Batafsil<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">Matn va sahifa kontenti Bravega yuboriladi, lekin AIni yaxshilash uchun ishlatilmaydi.
+    <ph name="BEGIN_LINK"/>Batafsil<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">Ushbu tajribaviy AI vosita xato natijalar chiqarishi mumkin. Uni yaxshilash maqsadida kontentingiz Bravega yuboriladi.
+    <ph name="BEGIN_LINK"/>Batafsil<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">Tashkilotingiz siyosatlari sababli kontentni boshqariladigan Brave muhitidan tashqariga joylash imkonsiz</translation>
+<translation id="1351458950091269256">Bu reklama qurilamangizdan koʻp tizim manbalarini ishlatdi, shuning uchun uni Growser olib tashladi.</translation>
+<translation id="4366714044424353289">Growser hisobingiz orqali bajarilgan boshqa shakldagi internet faoliyat tarixini <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> orqali kuzatish mumkin.</translation>
+<translation id="5626844006416355146">Growser hisobingizda <ph name="BEGIN_LINK_GAA"/>Gemini ilovalaridagi faoliyat<ph name="END_LINK_GAA"/> saqlanishi mumkin</translation>
+<translation id="5747377793818752349"><ph name="BEGIN_LINK_GAA"/>Gemini ilovalaridagi faoliyat<ph name="END_LINK_GAA"/> kabi Growser hisobingiz orqali bajargan boshqa shakldagi internet faoliyat tarixini <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> orqali kuzatish mumkin.</translation>
+<translation id="4267590181863312380">Boshqa qurilmalardagi tarix qaydlarini olish uchun hisobga kiring va tarixni sinxronlang. Shuningdek, parollar va boshqa maʼlumotlardan barcha qurilmalarda foydalana olasiz. Sinxronlashni istalgan vaqt sozlamalar orqali toʻxtatish mumkin. Brauzer tarixi asosida Growser Qidiruv va boshqa xizmatlarni moslashtirishi mumkin.</translation>
+<translation id="5889251770650310375">Boshqa qurilmalardagi tarix qaydlarini olish uchun shaxsingizni tasdiqlab, tarix va varaqlarni sinxronlang. Sinxronlashni istalgan vaqt sozlamalar orqali toʻxtatish mumkin. Brauzer tarixi asosida Growser Qidiruv va boshqa xizmatlarni moslashtirishi mumkin.</translation>
+<translation id="2541474152868747095">Tarix qaydlarini boshqa qurilmalarda olish uchun shaxsingizni tasdiqlang. Sinxronlashni istalgan vaqt sozlamalar orqali toʻxtatish mumkin. Brauzer tarixi asosida Growser Qidiruv va boshqa xizmatlarni moslashtirishi mumkin.</translation>
+<translation id="4260407128682690669">Boshqa qurilmalardagi tarix qaydlarini olish uchun tarix va varaqlarni <ph name="ACCOUNT_EMAIL"/> hisobiga sinxronlang. Sinxronlashni istalgan vaqt sozlamalar orqali toʻxtatish mumkin. Brauzer tarixi asosida Growser Qidiruv va boshqa xizmatlarni moslashtirishi mumkin.</translation>
+<translation id="611018310643025551">Soʻrovlar, eng mos natijalar hamda topilgan sahifalardagi kontent Bravega yuboriladi. Xodimlarimiz bu funksiyani yaxshilash maqsadida mazkur maʼlumotlarni koʻrishi mumkin.</translation>
+<translation id="1987486584747170374">Soʻrovlar, eng mos natijalar hamda topilgan sahifalardagi kontent Bravega yuboriladi. Bu maʼlumotlar AI sifatini yaxshilashda xodimlar tomonidan ishlatilmaydi. Tashkilotingiz bu sozlamalarni istalgan vaqt oʻzgartirishi mumkin.</translation>
+<translation id="2461080251012814077">Growser tarixidan oʻchirilgan varaqlar taqqoslash jadvallarida chiqishda davom etadi</translation>
+<translation id="7395776876928503485">Administrator profil va brauzer sozlamalarini masofadan oʻzgartirishi, brauzer maʼlumotlaridan iborat hisobotlarni tahlil qilishi hamda boshqa vazifalarni bajarishi mumkin. Bu qurilmadagi amallar Growser tashqarisidan boshqarilishi mumkin. <ph name="BEGIN_LINK"/>Batafsil<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Bu brauzer kompaniya yoki tashkilot boshqaruvida emas. Bu qurilmadagi amallar Bravedan tashqarida boshqarilishi mumkin. <ph name="BEGIN_LINK"/>Batafsil<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">Qurilmangiz va Growser foydalanuvchilari nomi</translation>
+<translation id="9383261434423554">Growser Enterprise Connectors haqida batafsil</translation>
+<translation id="7998714759612158367">Growser kengaytmalari oʻrnatilganida, ushbu kengaytmalar haqidagi maʼlumotlar tahlil uchun uchinchi tomonlarga yuboriladi va administratorga koʻrinishi mumkin. Bu maʼlumotlar kengaytmalar haqidagi axborotlarni, masalan, kengaytma nomi, oʻrnatilgan vaqti, oʻrnatish manbasi, shuningdek, ushbu kengaytmalarga aloqador xatti-harakatlarni (masalan, varaqlarni almashtirish, veb-saytlar bilan aloqalar yoki cookie-fayllarga kirish) oʻz ichiga oladi. Bu maʼlumotlar Internet doʻkondan, shuningdek, tashqi manbalardan oʻrnatilgan kengaytmalardan olinadi.</translation>
+<translation id="3521646565402740725">Growser korporativ konnektorlari</translation>
+<translation id="7942345451754009257">Brauzeringizda administrator tomonidan Growser korporativ konnektorlari yoqilgan. Bu konnektorlar ayrim axborotlaringizdan foydalana oladi.</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/> brauzeringizda Growser korporativ konnektorlarini faollashtirdi. Bu konnektorlar ayrim axborotlaringizdan foydalana oladi.</translation>
+<translation id="3864343340250325558">Xavfsizlikka oid hodisalarni Growser aniqlasa, bunga aloqador hodisalar haqidagi maʼlumotlar administratorga yuboriladi. Bu ochilgan sahifalar hamda axborot nusxalangan sahifalarning URL manzillari, fayl nomlari yoki meta-axborotlar, IP manzillar, brauzer yoki varaqlarning ishdan chiqishi hamda qurilma va Growser foydalanuvchilari nomlaridan iborat boʻlishi mumkin.</translation>
+<translation id="1979029506107883830">Growser Enterprise Core brauzer qoidalarini, ilova va kengaytmalarni bulut orqali boshqarish imkonini beradi</translation>
+<translation id="84905717630920469">Growser Enterprise Core sinang</translation>
+<translation id="1757745363789526465">Growser’ni qaytadan ishga tushiring</translation>
+<translation id="2537931901612099523">Faoliyatingiz bu qurilmaning boshqa foydalanuvchilariga koʻrinmaydi va saytlarni yanada maxfiy kezishingiz mumkin. Bunda ochilgan saytlar va Growser kabi xizmatlarning maʼlumotlarni qanday jamlashi oʻzgarmaydi. Yuklanmalar va bukmarklar saqlanib qoladi.</translation>
+<translation id="1410365862999780287">Faoliyatingiz bu qurilmaning boshqa foydalanuvchilariga koʻrinmaydi va saytlarni yanada maxfiy kezishingiz mumkin. Bunda ochilgan saytlar va Growser kabi xizmatlarning maʼlumotlarni qanday jamlashi oʻzgarmaydi. Yuklanmalar, bukmarklar va mutolaa roʻyxatlari saqlanib qoladi.</translation>
+<translation id="7087257419919340685">Growser quyidagi maʼlumotlarni <ph name="BEGIN_EMPHASIS"/>saqlamaydi<ph name="END_EMPHASIS"/>:
+        <ph name="BEGIN_LIST"/>
+          <ph name="LIST_ITEM"/>Brauzer tarixi
+          <ph name="LIST_ITEM"/>Cookie fayllar va sayt maʼlumotlari
+          <ph name="LIST_ITEM"/>Shakllarga kiritilgan maʼlumotlar
+        <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Growser sozlamalari orqali brauzer tarixi, cookie fayllari, kesh va boshqa maʼlumotlarni oʻchiring</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali brauzer tarixi, cookie fayllari, kesh va boshqa maʼlumotlarni oʻchirish uchun Enter tugmasini bosing</translation>
+<translation id="8841351289024215412">Brauzer maʼlumotlarini oʻchirish tugmasi, Growser sozlamalari orqali brauzer tarixi, cookie fayllari, kesh va boshqa maʼlumotlarni oʻchirish uchun faollashtiring</translation>
+<translation id="5085944396348027753">Parollaringizni Growser sozlamalari orqali koʻrish va boshqarish</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali parollaringizni boshqarish uchun avval Tab, keyin esa Enter tugmasini bosing</translation>
+<translation id="3071294016974329065">Parollarni boshqarish tugmasi, Growser sozlamalari orqali parollarni koʻrish va boshqarish uchun faollashtiring</translation>
+<translation id="3031527126657836806">Toʻlov va kredit karta axborotini Growser sozlamalari orqali boshqarish</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali toʻlov va kredit karta axborotini boshqarish uchun avval Tab, keyin esa Enter tugmasini bosing</translation>
+<translation id="7338080394311291541">Toʻlov usullarini boshqarish tugmasi, Growser sozlamalari orqali toʻlov va kredit karta axborotini boshqarish uchun faollashtiring</translation>
+<translation id="561165882404867731">Bu sahifani Growser Tarjima bilan tarjima qilish</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, bu sahifani Google Translate orqali tarjima qilish uchun avval Tab, keyin esa Enter tugmasini bosing</translation>
+<translation id="8781278378794969337">Sahifani tarjima qilish tugmasi, bu sahifani Growser Tarjima orqali tarjima qilish uchun faollashtiring</translation>
+<translation id="6560728661781075049">Growser‘ni yangilash</translation>
+<translation id="5749239053568461167">Growser brauzerini Growser sozlamalari orqali yangilash</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali Braveni yangilash uchun Enter tugmasini bosing</translation>
+<translation id="1957844396300023214">Braveni yangilash tugmasi, Growser sozlamalari orqali Braveni yangilash uchun faollashtiring</translation>
+<translation id="6924344322157830957">Growser sozlamalari orqali xavfsizlik tekshiruvini bajaring</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali xavfsizlik tekshiruvini bajarish uchun avval Tab, keyin Enter tugmalarini bosing</translation>
+<translation id="2217308317357494419">Growser sozlamalari orqali xavfsizlik tekshiruvini bajarish uchun faollashtiring</translation>
+<translation id="555731368593399620">Growser xavfsizlik tekshiruviga kirish</translation>
+<translation id="1022622918438880634">Sozlamalarda Growser xavfsizlik tekshiruvi sahifasiga kirish</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, sozlamalarda Growser xavfsizlik tekshiruvi sahifasiga kirish uchun Tab tugmasini, keyin Enter tugmasini bosing</translation>
+<translation id="4573592640621800816">Growser xavfsizlik tekshiruvi tugmasi sozlamalarda Growser xavfsizlik tekshiruviga kirish imkonini beradi</translation>
+<translation id="711408602663662681">Growser sozlamalari orqali Saytlarni xavfsiz kezish va boshqa parametrlarni boshqarish</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali saytlarni xavfsiz kezish rejimini boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="8147674953957429172">Xavfsizlik sozlamalarini boshqarish tugmasi, Growser sozlamalari orqali Saytlarni xavfsiz kezish va boshqa parametrlarni boshqarish uchun faollashtiring</translation>
+<translation id="123941427300345384">Growser sozlamalari orqali cookie parametrlarini boshqarish</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali cookie parametrlarini boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="185317221836385090">Cookie fayllarni boshqarish tugmasi, Growser sozlamalari orqali cookie parametrlarini boshqarish uchun faollashtiring</translation>
+<translation id="1824417970962955294">Growser sozlamalari orqali manzillarni kiritish va boshqarish</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali manzillarni kiritish va boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="2805189921443465815">Manzillarni boshqarish tugmasi, Growser sozlamalari orqali manzillarni kiritish va boshqarish uchun faollashtiring</translation>
+<translation id="5592576649770969570">Growser sozlamalari orqali sinxronlanadigan maʼlumotlarni boshqarish</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali sinxronlanadigan maʼlumotlarni boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="4269937126213032056">Sinxronizatsiyani boshqarish tugmasi, Growser sozlamalari orqali sinxronlanadigan maʼlumotlarni boshqarish uchun faollashtiring</translation>
+<translation id="8766514807385279339">Growser hisobingizda saqlangan Growser maʼlumotlarini boshqaring</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser hisobingizga saqlangan Growser maʼlumotlarini boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="3256302414991866158">Hisobingizdagi maʼlumotlarni boshqarish tugmasi, Growser hisobingizga saqlangan Growser maʼlumotlarini boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="4365583497146730170">Growser sozlamalari orqali ruxsatlar va saytlarda saqlanadigan maʼlumotlarni boshqarish</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali ruxsatlar va saytlarda saqlanadigan maʼlumotlarni boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="1429889589220926820">Sayt sozlamalarini boshqarish tugmasi, Growser sozlamalari orqali ruxsatlar va saytlarda saqlanadigan maʼlumotlarni boshqarish uchun faollashtiring</translation>
+<translation id="6881240511396774766">Yangi Growser Doc hujjatini tezda yaratish</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Docda yangi hujjatni tez yaratish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="2925454999967523701">Doc hujjatini yaratish tugmasi, yangi Growser Doc hujjatini tezda yaratish uchun faollashtiring</translation>
+<translation id="8075736640322370409">Growser Sheetda yangi jadvalni tez yaratish</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, yangi Growser Sheetda yangi jadvalni tez yaratish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="3150889484970506196">Jadval yaratish tugmasi, Growser Sheetʼda yangi jadvalni tez yaratish uchun faollashtiring</translation>
+<translation id="6971439137020188025">Growser Slidesda yangi taqdimotni tez yaratish</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, yangi Growser taqdimotini tez yaratish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="8768225988514678921">Taqdimot yaratish tugmasi, Growser Slidesʼda yangi taqdimotni tez yaratish uchun faollashtiring</translation>
+<translation id="7582602800368606489">Growser Taqvimda yangi tadbirni tez yaratish</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Taqvimda yangi tadbirni tez yaratish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="2009942480257059311">Tadbir yaratish tugmasi, Growser Taqvimda yangi tadbirni tez yaratish uchun faollashtiring</translation>
+<translation id="1269516672602708785">Growser Sitesda yangi saytni tez yaratish</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Slidesda yangi saytni tez yaratish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="3698629142018988477">Sayt yaratish tugmasi, Growser Sitesda yangi saytni tez yaratish uchun faollashtiring</translation>
+<translation id="4854853140771946034">Growser Keepda yangi qaydni tez yaratish</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Keepda yangi qaydni tez yaratish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="5488590678320979185">Qayd yaratish tugmasi, Growser Keep yangi qaydini tez ochish uchun faollashtiring</translation>
+<translation id="7734285854693414638">Growser Formsda yangi shaklni tez yaratish</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Formsda yangi shaklni tez yaratish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="573555826359077410">Shakl yaratish tugmasi, Growser Formsʼda yangi shaklni tez yaratish uchun faollashtiring</translation>
+<translation id="7910437794853634516">Growser maslahatlarini ochish</translation>
+<translation id="3521214483675189046">Growser funksiyalari bilan tanishuv</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser funksiyalari bilan tanishish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="4260829339448158187">Growser maslahatlari tugmasi, Growser funksiyalari bilan tanishish uchun faollashtiring</translation>
+<translation id="8694710517222056538">Growser hisobini boshqarish</translation>
+<translation id="6587259514551810029">Growser hisobingizdagi axborotingiz, maxfiylik va xavfsizlik sozlamalarini boshqarish</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser hisobingizdagi axborot, maxfiylik va xavfsizlik sozlamalarini boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="7027078594246193839">Growser hisobini boshqarish, Growser hisobingizdagi axborot, maxfiylik va xavfsizlik sozlamalarini boshqarish uchun faollashtiring</translation>
+<translation id="643051589346665201">Growser parolini oʻzgartirish</translation>
+<translation id="7075427536109560520">Growser hisobi parolini oʻzgartirish</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser hisobingiz parolini oʻzgartirish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="3236176349246489091">Growser parolini oʻzgartirish tugmasi, Growser hisobingiz parolini oʻzgartirish uchun faollashtiring</translation>
+<translation id="4573751006789325585">Growser Dino oʻyinini boshlash</translation>
+<translation id="1461337831834704527">Braveda Dino oʻyinini boshlash</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Braveda Dino oʻyinini boshlash uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="3493625910132223088">Growser Dino oʻyini tugmasi, Braveda Dino Run oʻyinini boshlash uchun faollashtiring</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser hisobidagi qurilmangizni topish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="8109063930676038426">Qurilmamni top tugmasi, Growser hisobidagi qurilmani topish xizmatini ochish uchun faollashtiring</translation>
+<translation id="163710751542270335">Growser hisobi maxfiylik sozlamalarini boshqarish</translation>
+<translation id="3269729253658419180">Growser hisobidagi maxfiylik sozlamalarini boshqarish</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser hisobi maxfiylik sozlamalarini boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="970931323129831346">Growser maxfiylik sozlamalarini boshqarish tugmasi, Growser hisobi maxfiylik sozlamalarini ochish uchun faollashtiring</translation>
+<translation id="498856326289655361">Growser sozlamalari orqali boshqarish</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="1592236556980370094">Growser sozlamalarini boshqarish tugmasi, Growser sozlamalarini ochish uchun faollashtiring</translation>
+<translation id="2480781891721036554">Braveda yuklab olingan fayllarni boshqarish</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Braveda yuklab olingan fayllarni boshqarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="8786654106588913377">Braveda yuklanmalarni boshqarish tugmasi, Braveda yuklab olingan fayllarni boshqarish uchun faollashtiring</translation>
+<translation id="8320175841857324841">Growser tarixini koʻrish</translation>
+<translation id="179012966915448796">Growser sozlamalari orqali brauzer tarixini koʻrish va boshqarish</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali brauzer tarixini koʻrish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="7891862848641775440">Growser tarixini koʻrish tugmasi, Growser sozlamalari orqali brauzer tarixini koʻrish va boshqarish uchun faollashtiring</translation>
+<translation id="1545741848376005386">Growser sozlamalari orqali qulayolik vositalarini moslashtirish</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser sozlamalari orqali qulaylik vositalarini moslashtirish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="1350935235605927980">Qulaylik sozlamalari boshqarish tugmasi, Growser sozlamalari orqali qulaylik vositalarini moslashtirish uchun faollashtiring</translation>
+<translation id="1937771495497081508">Braveda shrift oʻlchami va yozuvlarini moslash</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Braveda shrift oʻlchami va yozuvlarini moslash uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="8183964669401154956">Braveda shriftlarni moslash tugmasi, Braveda shrift oʻlchami va yozuvlarini moslash uchun faollashtiring</translation>
+<translation id="6868193750403948178">Braveni moslash</translation>
+<translation id="2746936074954064976">Braveni moslash tugmasi, brauzer koʻrinishini moslash uchun faollashtiring</translation>
+<translation id="8223358973996562559">Growser brauzerini standart etib tayinlash</translation>
+<translation id="113548419005571036">Growser brauzerini standart brauzer qilish</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser brauzerini standart brauzer qilish uchun Enter tugmasini bosing.</translation>
+<translation id="6783715802269207395">Growser brauzerini standart brauzer qilish tugmasi, Growser brauzerini standart brauzer qilish uchun faollashtiring</translation>
+<translation id="8076157978023662935">Growser‘ni standart brauzer etib tayinlash</translation>
+<translation id="7026203586041411100">iOS sozlamalari orqali Growser brauzerini tizimning asosiy qilib sozlang</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, iOS sozlamalari orqali Growser brauzerini tizimning asosiy brauzeri sifatida sozlash uchun avval Tab, keyin esa Enter tugmasini bosing.</translation>
+<translation id="29533193241299316">Growser brauzerini asosiy brauzer tugmasi sifatida sozlash, iOS sozlamalari orqali Growser brauzerini tizimning asosiy brauzeri sifatida sozlash uchun Enter tugmasini bosing.</translation>
+<translation id="2461514655528532981">Growser Xavfsizlik tekshiruvini bajarish</translation>
+<translation id="9113214967104134276">Growser tarixini koʻrish</translation>
+<translation id="943522416815463637">Growser Dino oʻyinini boshlash</translation>
+<translation id="7602868996817972616">Bu sahifa haqida Bravega savol bering</translation>
+<translation id="161612500287664753">Growser Qidiruvga bu sahifa haqida savol bering</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, bu sahifa haqida Bravega savol berish uchun Enter tugmasini bosing</translation>
+<translation id="5630981295558454585">Bu sahifa haqida Bravega savol berish tugmasi, savol berish uchun faollashtiring</translation>
+<translation id="6019118530636932154">Growser Apps Script</translation>
+<translation id="6437647869369934905">Growser Drawings</translation>
+<translation id="1875512691959384712">Growser Forms</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser Sites</translation>
+<translation id="1521655867290435174">Growser Sheets</translation>
+<translation id="467809019005607715">Growser Slides</translation>
+<translation id="7510585715716175915">Growser tarixidagi tegishli faollikni koʻrish uchun tarixni qaytaring</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser tarixidagi tegishli faollikni koʻrish uchun tarixni qaytarish uchun avval Tab, keyin Enter tugmasini bosing</translation>
+<translation id="3714978095030396658">Tarixni qaytarish tugmasi, Growser tarixidagi tegishli faollikni koʻrish uchun tarixni qaytarish uchun Enter tugmasini bosing</translation>
+<translation id="9041241404793255081">Vazifasi: Growser maslahati. Qulaylik nomi: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>, Growser maslahatini yopish uchun avval Tab, keyin Enter tugmasini bosing.</translation>
+<translation id="7432463754469271865">Growser maslahatini yopish tugmasi, yopish uchun Enter tugmasini bosing, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Growser maslahatini yopish tugmasi, yopish uchun Enter tugmasini bosing</translation>
+<translation id="7571813784389228510">Growser AI rejimi</translation>
+<translation id="3415471717466570460">Soʻrovlar, eng mos natijalar hamda topilgan sahifalardagi kontent Bravega yuboriladi. Xodimlarimiz bu funksiyani yaxshilash maqsadida mazkur maʼlumotlarni koʻrishi mumkin. Bu tajribaviy funksiya va ishlashida xatolar chiqishi mumkin.</translation>
+<translation id="9103366036378878818">Growser maslahati havolasi, <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/> sahifasini ochish uchun Enter tugmasini bosing</translation>
+<translation id="2097698842685899280">Brave fishing, zararli dasturlar yoki tovlamachilikka xos boʻlgan shubhali belgilarni aniqladi. <ph name="BEGIN_LINK"/>Batafsil<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Mutolaani osonlashtirish uchun bu sahifa Growser tomonidan soddalashtirildi. Growser asl sahifani xavfsiz ulanish orqali yuklab oldi.</translation>
+<translation id="542284143784575620">Mutolaani osonlashtirish uchun bu sahifa Growser tomonidan soddalashtirildi. Growser asl sahifani xavfli ulanish orqali yuklab oldi.</translation>
+<translation id="5826875044227298275">Hozirgina shubhali saytda parol kiritdingiz. Hisoblar himoyasi uchun Growser saqlangan parollaringizni tekshirishni tavsiya qiladi.</translation>
+<translation id="4397030659892816613">Kameradan foydalanishi uchun Growser brauzeringizga <ph name="LINK"/>ga kirishi ruxsat bering.</translation>
+<translation id="8251369644700086563">Mikrofondan foydalanishi uchun Growser brauzeringizga <ph name="LINK"/>ga kirishi ruxsat bering.</translation>
+<translation id="6520686276106691991">Joylashuvdan foydalanishi uchun <ph name="LINK"/>da Bravega ruxsat bering.</translation>
+<translation id="1612024742222359811">Vaqtinchalik xotiradan foydalanishi uchun <ph name="LINK"/>da Bravega ruxsat bering.</translation>
+<translation id="3620727327079734151">Growser hisobingiz xavf ostida. Parolingizni yangilashni tavsiya qilamiz. Hisobingizga qayta kirishingiz talab qilinadi.</translation>
+<translation id="7891575721440765670">Growser Growser hisobingizni himoyalash va parolni almashtirish uchun yordam beradi.</translation>
+<translation id="1362419187647259443">Hozirgina shubhali saytda parol kiritdingiz. Growser yordamga tayyor. Parolni almashtirish va Bravega bu hisob xavf ostida ekanini xabar qilish uchun Hisobni himoyalash ustiga bosing.</translation>
+<translation id="4067282726741467091">Tashkilot hisobingiz xavf ostida va o‘g‘irlanishi mumkin. Growser parolingizni hoziroq o‘zgartirishni tavsiya etadi.</translation>
+<translation id="7872399623676350476"><ph name="ORG_NAME"/> hisobingiz xavf ostida va shaxsiy ma’lumotlaringizni kimdir ko‘rishi mumkin. Parolingizni hoziroq o‘zgartirishni tavsiya etamiz.</translation>
+<translation id="5938866385061293322">Bu axborot mustaqil saytlardan olinadi (Trustpilot, ScamAdviser va Growser kabi). Xulosalar AI yordamida yaratilgan.</translation>
+<translation id="4452328064229197696">Hozirgina siz foydalangan parol oshkor qilingan. Hisoblaringizni himoyalash maqsadida Growser Parollar menejeri saqlangan parollaringizni tekshirishni tavsiya etadi.</translation>
+<translation id="7646681339175747202">Hozirgina siz foydalangan parol oshkor qilingan. Growser Parollar menejeri bu parolni hoziroq almashtirishni tavsiya etadi.</translation>
+<translation id="5997247540087773573">Hozirgina siz foydalangan parol oshkor qilingan. Hisoblaringizni himoyalash maqsadida Growser Parollar menejeri uni hoziroq almashtirib, saqlangan parollaringizni tekshirishni tavsiya etadi.</translation>
+<translation id="6722165747660324971">Paroldan foydalansangiz, u internetga chiqib ketgan boʻlsa, Growser sizni ogohlantiradi. Bunda parolingiz va foydalanuvchi nomingiz shifrlanadi, hatto Growser xodimlariga ham koʻrinmaydi.</translation>
+<translation id="1485314135034164137">Growser parollari</translation>
+<translation id="7558556509649858677">Kirish kaliti • Growser profilingiz</translation>
+<translation id="950926967802086924">Kirish kaliti • Growser Parollar menejeri</translation>
+<translation id="6338645927051849741">Parol • Growser Parollar menejeri</translation>
+<translation id="131993612023623286">Growser parollarni kiritishda <ph name="APP_NAME"/> himoyasini yoqishga urinmoqda.</translation>
+<translation id="1833199389909527220">Growser parollarni kiritishda Windows Hello himoyasini yoqishga urinmoqda.</translation>
+<translation id="643007953296382271">Growser parollarni kiritishda Windows Hello himoyasini faolsizlantirishga urinmoqda.</translation>
+<translation id="2739032725916431090">uni Growser hisobingizda saqlang</translation>
+<translation id="2920528063654705391">Growser hisobida saqlangan parol va boshqa maʼlumotlardan foydalanish uchun shaxsingizni tasdiqlang</translation>
+<translation id="3795624560191557077">Yaqinda oʻzgartirilgan parolingiz ommaviy oshkor qilinganligi aniqlandi. Muammo yuz bersa, hisobga Growser Paroller menejeri orqali kirishingiz mumkin.</translation>
+<translation id="5748742097310495951">Growser hisobi (<ph name="ACCOUNT_EMAIL"/>), Growser brauzerida saqlangan karta va manzillar. Siz ularni <ph name="BEGIN_LINK"/>Sozlamalar<ph name="END_LINK"/> orqali boshqarishingiz mumkin.</translation>
+<translation id="6827399997598211909">Growser brauzerida saqlangan karta va manzillar. Siz ularni <ph name="BEGIN_LINK"/>Sozlamalar<ph name="END_LINK"/> orqali boshqarishingiz mumkin.</translation>
+<translation id="7934414805353235750"><ph name="URL"/> sayti himoyalangan kontentni ijro etmoqchi. Growser qurilmangiz identifikatorini tekshiradi</translation>
+<translation id="7142561893113115357">Bu kompyuter korporativ boshqaruv ostida ekanligi aniqlanmadi, shuning uchun faqat Growser internet-do‘konidagi kengaytmalar avtomatik tarzda o‘rnatilishi mumkin. Yangilash uchun URL manzili: “<ph name="CWS_UPDATE_URL"/>”.</translation>
+<translation id="6272383483618007430">Growser Update</translation>
+<translation id="885730110891505394">Growser bilan baham ko‘rish</translation>
+<translation id="2867186026859663748">Bu qoidani Growser profili darajasida tatbiq etib boʻlmaydi va eʼtiborsiz qoldiriladi.</translation>
+<translation id="277370491433906876">Bu parametr foydalanuvchi begonaligi uchun inkor etildi. Bu parametr tatbiq qilinishi uchun Growser brauzeri va profili bir xil tashkilot tomonidan administrator konsoli orqali boshqarilishi lozim.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core brauzer qoidalarini bulut orqali sozlash uchun markazlashtirilgan vositasini taklif qiladi</translation>
+<translation id="4553855485042734119">Bravening ushbu nusxasi mustaqil sozlangan buyruqlar qatori bayroqlari bilan ishlamoqda. Buyruqlar qatori bayroqlari istalgan vaqtda oʻzgarishi va dastaklanmay qolishini yodda tuting.</translation>
+<translation id="3858407183625528544">Xavfsizlik maqsadlarida tashkilotingiz Braveda parollarni takroriy ishlatishni taqiqlagan. Foydalanuvchilar maxfiyligini himoyalash uchun parollarni shifrlaymiz.</translation>
+<translation id="6376948191860056592">Growser parollarni qanday himoya qilishi haqida batafsil</translation>
+<translation id="59755378055907482">Parolingizni tashkilot domenidan tashqaridagi saytda kiritgan bo‘lsangiz, uni zudlik bilan o‘zgartirishingizni tavsiya etamiz.</translation>
+<translation id="2025231306371961337">Parolingizni <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> domenidan tashqaridagi saytda kiritgan bo‘lsangiz, uni zudlik bilan almashtirishingizni tavsiya etamiz.</translation>
+<translation id="3990414676738824170">Bravedagi qidiruv tizimi haqida batafsil</translation>
+<translation id="8152737631160961249">Growser brauzerida qidiruv vositasi</translation>
+<translation id="5178006823023208130">Mintaqangizdagi qonunga asoslanib, Growser sizdan asosiy qidiruv tizimini tanlashingizni soʻraydi. Bu qidiruv tizimlari mintaqangizda mashhur va tasodifiy tartibda chiqariladi.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Asosiy qidiruv vositangiz internetda qidirish imkonini beradi<ph name="END_BOLD"/> hamda manzil qatoridan va veb-sahifalardagi rasmlardan qidirish kabi Growser funksiyalarini yoqadi. Qidiruv vositangiz dastaklamaydigan funksiyalar ishlamasligi mumkin.</translation>
+<translation id="652920213589772275">Qidiruv vositasini istalgan vaqt Growser sozlamalari orqali almashtirishingiz mumkin.</translation>
+<translation id="5113257522679527347">Qidiruv vositasini istalgan vaqt Brave sozlamalari orqali almashtirishingiz mumkin. Kerakli qidiruv tizimi chiqmasa, uning sayti orqali qidirish mumkin. U Brave sozlamalarida yaqinda ochilgan qidiruv tizimi sifatida chiqadi va uni birlamchi qilib belgilashingiz mumkin.</translation>
+<translation id="2493969470983483123">Ilova Bravening bu saytga xavfsiz ulanishiga xalaqit qilmoqda</translation>
+<translation id="463534029029027294">Tezkor havfsiz aloqa o‘rnatish uchun tizim soati to‘g‘ri sozlangan bo‘lishi kerak. Chunki sertifikatlar saytlarda haqiqiylik tekshiruvi uchun muddat cheklamalariga ega. Agar qurilmadagi vaqt noto‘g‘ri bo‘lsa, Growser sertifikatlardan hali ham foydalanish mumkinligini tekshira olmaydi.</translation>
+<translation id="6824867187541740495"><ph name="SITE"/> sayti ma’lumotlaringizni himoyalash uchun shifrlashdan foydalanadi, lekin hozir Growser <ph name="SITE"/> saytiga ulanish uchun uringanda, ushbu sayt shubhali va noto‘g‘ri tasdiqlash ma’lumotlarini qaytarmoqda. Bunday holat zararli sayt o‘zini <ph name="SITE"/> o‘rnida ko‘rsatayotganda yoki Wi-Fi ulanishi uzilib qolganda yuz berishi mumkin. Shaxsiy ma’lumotlaringizga hech qanday xavf tug‘ilgani yo‘q, chunki Growser aloqani ma’lumotlar almashinuvidan oldin uzib qo‘ydi.</translation>
+<translation id="8465252529695749376"><ph name="SITE"/> saytiga o‘tib bo‘lmadi, chunki veb-sayt shifrlangan hisob ma’lumotlarini yubordi, Growser ular bilan ishlay olmaydi. Tarmoq xatoligi yoki saytga hujumlar odatda vaqtinchalik bo‘ladi, shu sababli bu sahifa keyinroq ishga tushishi mumkin.</translation>
+<translation id="7320808063012439368">Siz ochayotgan saytda firibgarlar sizni aldab, suratlaringiz, xabarlaringiz yoki kredit karta raqamlaringizni oʻgʻirlashi yoki oʻchirishi mumkin zararli dasurni oʻrnatishi mumkin. Growser xavfsizlik maqsadida zudlik bilan joriy sahifadan ortga qaytishni tavsiya qiladi. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu ogohlantirish haqida batafsil<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Growser tarkibida Growser Saytlarni xavfsiz kezish kabi himoya funksiyalari mavjud va bu funksiya siz ochayotgan saytda yaqinda <ph name="BEGIN_LINK"/>zararli dasturni aniqlagan<ph name="END_LINK"/>.</translation>
+<translation id="1959001866257244765"><ph name="BEGIN_WHITEPAPER_LINK"/>Ochilgan sahifalar manzillari, tizim va sahifalar<ph name="END_WHITEPAPER_LINK"/> haqidagi ayrim maʼlumotlarni Growser serverlariga yuborish orqali internetdagi xavfsizlik tizimini hamma uchun yaxshilashga yordam berasiz. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Maxfiylik siyosati<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082">Braveda yuqori darajali himoyalanish uchun <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>kengaytirilgan himoyani yoqing<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
+<translation id="9158927344907916875">Siz ochayotgan saytda firibgarlar — bosh sahifani oʻzgartirish yoki saytlarda qoʻshimcha reklama chiqarish orqali sizni aldab, sahifalarni kezishingizga taʼsir qiluvchi xavfli dasturni oʻrnatishi mumkin. Growser xavfsizlik maqsadida zudlik bilan joriy sahifadan ortga qaytishni tavsiya qiladi. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu ogohlantirish haqida batafsil<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Growser tarkibida Growser Saytlarni xavfsiz kezish kabi himoya funksiyalari mavjud va bu funksiya siz ochayotgan saytda yaqinda <ph name="BEGIN_LINK"/>zararli dasturni aniqlagan<ph name="END_LINK"/>.</translation>
+<translation id="6123391640338102428">Siz ochayotgan saytda firibgarlar sizni aldab, parollaringiz, telefon yoki kredit karta raqamlaringizni oʻgʻirlashi yoki oʻchirishi mumkin zararli dasurni oʻrnatishi mumkin. Growser xavfsizlik maqsadida zudlik bilan joriy sahifadan ortga qaytishni tavsiya qiladi. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu ogohlantirish haqida batafsil<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Growser tarkibida Growser Saytlarni xavfsiz kezish kabi himoya funksiyalari mavjud va bu funksiya siz ochayotgan saytda yaqinda <ph name="BEGIN_LINK"/>fishing amaliyotini aniqlagan<ph name="END_LINK"/>. Fishing saytlar boshqa saytlar koʻrinishida sizni aldashga urinadi.<ph name="NEW_LINE"/>Hatto normal xavfsizlikdagi saytlar ham vaqti-vaqti bilan firibgarlar tomonidan boshqariladi. Agar buni xatolik va bu sayt xavfli emas deb hisoblasangiz, bu haqida <ph name="BEGIN_ERROR_LINK"/>bizga xabar qiling<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;1-qadam: Portalda hisobingizga kiring&lt;/h4&gt;
+    &lt;p&gt;Kafe yoki aeroport kabi joylardagi Wi-Fi tarmoqlar sizdan hisobingizga kirishni talab qilishi mumkin. Kirish sahifasini ochish uchun quyidagini ishlatadigan sahifaga kiring: &lt;code&gt;http://&lt;/code&gt;.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;Quyidagi bilan boshlanadigan istalgan veb-saytga kiring &lt;code&gt;http://&lt;/code&gt;, masalan, &lt;a href="http://example.com" target="_blank"&gt;http://example.com&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Internetdan foydalanish uchun ochilgan hisobga kiring.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;2-qadam: Sahifani Maxfiy rejimda oching (faqat kompyuter)&lt;/h4&gt;
+    &lt;p&gt;Kerakli sahifani Maxfiy oynada oching.&lt;/p&gt;
+    &lt;p&gt;Agar sahifa ochilsa, demak, Growser kengaytmasi toʻgʻri ishlamayapti. Bu xatolikni tuzatish uchun kengaytmani faolsizlantiring.&lt;/p&gt;
+    &lt;h4&gt;3-qadam: Operatsion tizimingizni yangilang&lt;/h4&gt;
+    &lt;p&gt;Qurilmangizning yangilanganini tekshiring.&lt;/p&gt;
+    &lt;h4&gt;4-qadam: Antivirusni vaqtincha faolsizlantiring&lt;/h4&gt;
+    &lt;p&gt;Agar “HTTPS himoyasi” yoki “HTTPS tekshiruvi” vositalarini taqdim etadigan antivirus dasturingiz boʻlsa, ushbu xatolikni koʻrasiz. Bu antivirus Growser brauzerining xavfsizlikni taʼminlashiga toʻsqinlik qilmoqda.&lt;/p&gt;
+    &lt;p&gt;Bu muammoni hal qilish uchun antivirus dasturini faolsizlantiring. Agar dastur faolsizlantirilganidan keyin sahifa ishlasa, himoyalangan saytlardan foydalanganda antivirusni faolsizlantiring.&lt;/p&gt;
+    &lt;p&gt;Keyin antivirus dasturingizni qayta yoqishni unutmang.&lt;/p&gt;
+    &lt;h4&gt;5-qadam: Qoʻshimcha yordam olish&lt;/h4&gt;
+    &lt;p&gt;Agar ushbu xatolik yuz berishda davom etsa, veb-sayt egasiga murojaat qiling.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">“Kompyuteringizdagi dastur Growser brauzerini internetga xavfsiz ulanishiga imkon bermayapti” (Faqat Windows o‘rnatilgan tizimlar uchun)</translation>
+<translation id="5693013509590251567">Bu muammo qurilmangizda oʻrnatilgan sertifikat sababli yuz berishi ham mumkin. Bunday sertifikat ishonchli hisoblanmaydi, chunki u odatda tarmoqdagi maʼlumotlarni kuzatish va olish uchun foydalaniladi. Bunday funksiyadan ish joylarida yoki taʼlim muassasalarida foydalanishadi. Nima boʻlganda ham biz ushbu sertifikat mavjudligi haqida sizni ogohlantirmoqchimiz. Har qanday internetga ulangan brauzer yoki ilovada faoliyatni kuzatish mumkin.</translation>
+<translation id="6319672966240656136">Growser Kuchaytirilgan himoya dasturiga yozilganingiz uchun bu sayt bloklangan holatda qoladi. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu ogohlantirish haqida batafsil<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">Odatda bu saytga xavfsiz ulanasiz, lekin bu safar Growser xavfsiz aloqa oʻrnata olmadi. Firibgar amallaringizni kuzatishga yoki tarmoq aloqasini oʻzgartirishga urinayotgan boʻlishi mumkin. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu ogohlantirish haqida batafsil<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">Odatda saytlarga xavfsiz ulanasiz, lekin bu safar Growser xavfsiz aloqa oʻrnata olmadi. Firibgar amallaringizni kuzatishga yoki tarmoq aloqasini oʻzgartirishga urinayotgan boʻlishi mumkin. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu ogohlantirish haqida batafsil<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">Odatda bu saytga xavfsiz ulanasiz, lekin bu safar Growser xavfsiz aloqa oʻrnata olmadi. Firibgar amallaringizni kuzatishga yoki tarmoq aloqasini oʻzgartirishga urinayotgan boʻlishi mumkin. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">Odatda saytlarga xavfsiz ulanasiz, lekin bu safar Growser xavfsiz aloqa oʻrnata olmadi. Firibgar amallaringizni kuzatishga yoki tarmoq aloqasini oʻzgartirishga urinayotgan boʻlishi mumkin. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Bu sayt HTTPS protokolda ishlamasligi va siz Growser Kuchaytirilgan himoya dasturida qayd qilinmagani sababli bu ogohlantiruv chiqarildi. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave siz ochishga uringan saytni shubhali deb belgiladi. Ushbu ogohlantirishlarni yanada yaxshilashimiz uchun 1 daqiqalik soʻrovnomada qatnashing.</translation>
+<translation id="3665741528710985669"><ph name="DEVICE_NAME"/> qurilmasidagi Brave brauzeriga yuborildi</translation>
+<translation id="2756090547781225493"><ph name="DEVICE_NAME"/> qurilmasidagi Brave brauzeriga yuborildi • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463"><ph name="DEVICE_NAME"/> qurilmasidagi Growser brauzeriga yuborilgan</translation>
+<translation id="2665815858706570232">Yoqilsa, Growser yanada mos javoblar olishingizga yordam berish uchun bu oynadagi tegishli varaqlarni ulashadi.</translation>
+<translation id="4585120639592593231">Growser yanada moslangan javoblar olish uchun savolingizga aloqador boʻlishi mumkin boʻlgan ochiq varaqlar sahifa kontenti va URL manzillarini Bravega avtomatik yuboradi. Growser faqat siz ishlayotgan oynadagi varaqlarni ulashadi.</translation>
+<translation id="5000497292978544380">AI rejimidagi Growser Qidiruv</translation>
+<translation id="4946528282746936957">Aniqroq javoblar olishingiz uchun Growser har bir yangi yozishmada tegishli ochiq varaqlarni ulashadi. Batafsil</translation>
+<translation id="8988391141035210442">Bu server <ph name="DOMAIN"/> veb-trafikni shifrlash uchun Growser yoki tizim konfiguratsiyasida ishonchli xavfsizlik sertifikatidan foydalanishini tasdiqlay olmadi. Bunda konfiguratsiya xato sozlangan yoki ulanishingizga buzgʻunchi kirishga urinayotgan boʻlishi mumkin. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Sertifikatni ochish<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">YouTubedan foydalanish uchun Growser hisobiga kiring</translation>
+<translation id="2269854356696928455">Bu kontentni koʻrishga ruxsat soʻrash uchun Growser hisobiga kiring</translation>
+<translation id="5611620894475877872">Sinxronlangan parollarni Growser hisob maʼlumotlari bilan shifrlang</translation>
+<translation id="7297228218361240128">Ochilgan sahifalardagi maʼlumotlarni Growser Walletga saqlang</translation>
+<translation id="1829026591231985685">sozlamalar orqali maʼlumotlarni Growser Walletga saqlash haqida</translation>
+<translation id="7927046851848613453">Chiptalar, tadbirlar haqidagi maʼlumotlar va boshqa maʼlumotlarni faqat siz toʻldirgan shakllardan emas, balki ochilgan sahifalardan saqlang. Tez orada tadbir chiptalari va sodiq mijoz kartalari kabi kartalarni tez ochish imkoni kiritiladi. Saqlangan maʼlumotlar qurilmalaringiz va Growser xizmatlarida chiqishi mumkin.</translation>
+<translation id="4080668349181235831">Takliflar berish va ushbu funksiyani yaxshilash uchun siz tashrif buyurgan saytning URL manzili va butun sahifa kontenti Bravega ulashiladi. <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/> haqida batafsil.</translation>
+<translation id="5038265118346577744">Varaqlar guruhini ulashish, ularga qoʻshilish va boshqalar bilan birga ishlash uchun Growser hisobingizga kiring</translation>
+<translation id="3109033858283726964">Growser hisobiga kirish</translation>
+<translation id="1823139539047733938">Growser versiyasi eskirdi</translation>
+<translation id="4837402451637115574">Varaq guruhlarini ulashish uchun Braveni yangilang</translation>
+<translation id="3835090069800247534">Bu varaqlar guruhiga qoʻshilish uchun Braveni yangilang</translation>
+<translation id="5796903668018420114">Umumiy varaqlar guruhidan foydalanishda davom etish uchun Braveni yangilang</translation>
+<translation id="7224231921984484941">Varaqlar guruhini ulashish, ularga qoʻshilish hamda boshqalar bilan birga ishlash uchun sozlamalarni oching va “Growser hisobiga kirishga ruxsat berish” bandini yoqing</translation>
+<translation id="64301400193488735">Varaqlar guruhini ulashish yoki ularga qoʻshilish uchun Growser hisobiga kiring</translation>
+<translation id="6517371327636513767">Varaqlarni ulashish va boshqalar bilan birga ishlash uchun Growser hisobiga kiring</translation>
+<translation id="8040715633918382311">Tashkilotingiz Growser hisobingizga maʼlumotlarni saqlashni cheklasa, varaqlar guruhini ulashish yoki ularga qoʻshilish imkonsiz boʻladi</translation>
+<translation id="5748088712770284646">Tashkilotingiz Growser hisobingizga maʼlumotlarni saqlashni cheklasa, varaqlarni ulashish yoki ularda boshqalar bilan ishlash imkonsiz</translation>
+<translation id="1973662400109107505">Umumiy varaqlar guruhidan foydalanishda davom etish uchun Braveni yangilang</translation>
+<translation id="540513565870577298">Takliflarni tanlashingiz yoki rad etishingiz asosida Growser faqat sizga mos va foydali maʼlumotlarni chiqarish uchun moslashib boradi</translation>
+<translation id="6381429959346598968">Growser sahifa nomlari va URL manzillarni bulutdagi maxfiy xotirada qayta ishlaydi</translation>
+<translation id="3475470536954895815">Growser sahifa nomlari va URL manzillarni bulutda qayta ishlaydi</translation>
+<translation id="583085621576779299">Takliflarni faolsizlantirsangiz, sahifa nomi va varaqlar URL manzillari boshqa Growser funksiyalari uchun qayta ishlanishi mumkin. Brauzerning bu maʼlumotlarga ruxsatini bu yerda boshqarish mumkin:</translation>
+<translation id="913846191326613072">Varaqlar ulashilganda ularning kontenti va URL manzillari Bravega yuboriladi.</translation>
+<translation id="4827675678516992122">Ulanmadi</translation>
+<translation id="6749473226660745022">Suratlar</translation>
+<translation id="2366554533468315977">Bu variant uchun internetdagi narxlar tarixi</translation>
+<translation id="5199729219167945352">Sinov jarayonidagi funksiyalar</translation>
+<translation id="8413126021676339697">Barcha tarixni ko‘rsatish</translation>
+<translation id="6302661287897119265">Filtr</translation>
+<translation id="2956070106555335453">Xulosa</translation>
+<translation id="4759238208242260848">Yuklanmalar</translation>
+<translation id="7366909168761621528">Brauzer tarixi</translation>
+<translation id="1898804291554630487">Bu sahifa haqida savol bering</translation>
+<translation id="6231782223312638214">Tavsiya etiladi</translation>
 </translationbundle>

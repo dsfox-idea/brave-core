@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Le tue schede e i tuoi gruppi chiusi possono essere riaperti dalla sezione Schede recenti e dalla sezione Gruppi di schede. La tua scheda privata non sarà disponibile.}
         other {Le tue schede e i tuoi gruppi chiusi possono essere riaperti dalla sezione Schede recenti e dalla sezione Gruppi di schede. Le tue # schede private non saranno disponibili.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link da Growser}other{<ph name="TABS_COUNT_MANY"/> link da Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recensione da Growser}other{<ph name="REVIEWS_COUNT_MANY"/> recensioni da Growser}}</translation>
+<translation id="2928243913527329289">Growser | Informazioni su questo negozio</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser chiude automaticamente le schede e i gruppi di schede inattivi dopo <ph name="AUTO_DELETE_DELAY_ONE"/> mese. Puoi modificare questa opzione nelle Impostazioni.}other{Growser chiude automaticamente le schede e i gruppi di schede inattivi dopo <ph name="AUTO_DELETE_DELAY_MANY"/> mesi. Puoi modificare questa opzione nelle Impostazioni.}}</translation>
 </translationbundle>

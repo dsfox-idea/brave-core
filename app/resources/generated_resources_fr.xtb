@@ -11323,4 +11323,438 @@ Cela peut inclure des informations sur les logiciels installés, les fichiers, v
 <translation id="954749761428814584">Langue et mode de saisie</translation>
 <translation id="960987915827980018">Environ 1 heure restante</translation>
 <translation id="995420352808264005">Choisissez le type d'enregistrement d'appareils</translation>
+<translation id="6681823034920334318">Pour caster avec un code, activez les paramètres de synchronisation du navigateur Growser</translation>
+<translation id="2515496577979954543">Accéder à Growser</translation>
+<translation id="5924575374764114159"><ph name="TASK_TITLE"/> : Gemini a terminé votre tâche, et vous pouvez la consulter dans Growser</translation>
+<translation id="3721794228264322796">Fermer Gemini dans Growser</translation>
+<translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini dans Growser</translation>
+<translation id="1975450474853317621">Ouvrir dans le navigateur Growser</translation>
+<translation id="8516824290867275572">Votre compte n'a pas accès à Gemini dans Growser</translation>
+<translation id="1649234713894562345">Brave fonctionne grâce au projet Open Source Brave et à d'autres logiciels <ph name="BEGIN_HIGHLIGHT"/>Open Source<ph name="END_HIGHLIGHT"/>.</translation>
+<translation id="870536819717176711">Lorsque vous choisissez de partager l'onglet actuel avec Gemini, son URL et tout son contenu, y compris le contenu multimédia, sont envoyés à Growser.</translation>
+<translation id="1130866111814048607">Lorsque des onglets sont partagés, le contenu de leurs pages, leurs contenus multimédias et leurs URL sont envoyés à Brave et peuvent être examinés pour des raisons de sécurité.</translation>
+<translation id="7656790264713095385">Activez d'abord la navigation automatique dans Brave pour cet appareil</translation>
+<translation id="8572003230388132401">Gemini Spark peut utiliser la navigation automatique dans Growser sur cet appareil pour interagir avec des sites et effectuer des tâches à votre place. <ph name="LINK_BEGIN"/>En savoir plus<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">Gemini Spark peut uniquement utiliser la navigation automatique sur cet appareil s'il est allumé et que Growser est en cours d'exécution.</translation>
+<translation id="1982892581799327835">Toute personne ayant accès à votre agent Gemini Spark pourrait contrôler votre navigateur Growser.</translation>
+<translation id="6689939585896001516">Laissez Growser naviguer pour vous</translation>
+<translation id="640233545778658570">Gemini dans Growser utilise la navigation automatique pour travailler dans vos onglets et effectuer les tâches que vous lui confiez. <ph name="LINK_BEGIN"/>En savoir plus<ph name="LINK_END"/></translation>
+<translation id="2740842679402949230">En savoir plus sur la navigation automatique dans Brave</translation>
+<translation id="3570112771874223231">Le contenu de la page et les URL que Gemini utilise pendant une tâche seront partagés avec Brave et pourront être examinés pour des raisons de sécurité.</translation>
+<translation id="2314508080153323869">Gemini dans Growser</translation>
+<translation id="1910632359330857071">Discutez avec Gemini dans Growser pour obtenir des réponses, identifier les points principaux et plus pendant que vous naviguez</translation>
+<translation id="2483218699324586641">Utilisez <ph name="FOCUS_TOGGLE_HOTKEY"/> pour ouvrir Gemini dans Growser</translation>
+<translation id="2353068771555482464">Découvrez Gemini dans Growser</translation>
+<translation id="7545274281857327491">Profitez du meilleur de l'IA de Growser. Épinglez Gemini à votre barre d'outils pour y accéder facilement, ou ouvrez-le à tout moment depuis le menu Growser.</translation>
+<translation id="8335336878672278597">Gemini dans Growser n'est pas disponible</translation>
+<translation id="570859258083183845">Gemini dans Growser est disponible dans de plus en plus de pays, mais pas partout</translation>
+<translation id="96535553604365597">Signaler un problème avec Growser Cast</translation>
+<translation id="4415611489406290344">Pour caster, autorisez l'accès à Growser dans <ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/> &gt; Réseau local &gt; Growser</translation>
+<translation id="8492960370534528742">Commentaires à propos de Growser Cast</translation>
+<translation id="2263679799334060788">Nous vous remercions de vos commentaires, qui vont nous aider à améliorer Growser Cast. Pour obtenir de l'aide concernant les problèmes liés à Cast, veuillez consulter le <ph name="BEGIN_LINK"/>Centre d'aide<ph name="END_LINK"/>.</translation>
+<translation id="8376137163494131156">Décrivez-nous le problème lié à Growser Cast.</translation>
+<translation id="7325065595154456783">Nous recevrons la version de Growser, la version de votre système d'exploitation, les paramètres Cast, les statistiques des performances de duplication d'écran et les journaux des diagnostics de votre canal de communication, ainsi que toute autre information que vous choisirez d'inclure ci-dessus. Vos commentaires nous servent à diagnostiquer les problèmes et à améliorer la fonctionnalité. Toute information personnelle que vous nous envoyez, de manière explicite ou tacite, est protégée conformément à nos règles de confidentialité. En nous envoyant ces informations, vous acceptez que nous les utilisions pour améliorer tout produit ou service Growser.</translation>
+<translation id="3187556136478864255">Votre appareil Cast est-il visible dans l’<ph name="BEGIN_LINK"/>application Growser Home<ph name="END_LINK"/> ?</translation>
+<translation id="2984923316661218534">Accédez à vos clés d'accès sur cet appareil avec le Gestionnaire de mots de passe de Growser</translation>
+<translation id="2364302372598204515">Il ne s'agit pas d'un compte Growser. Les éléments que vous enregistrez dans Growser ne seront pas disponibles sur d'autres appareils.</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Abonnement Brave</translation>
+<translation id="850632091665381275">Abonnement Brave</translation>
+<translation id="6710172959248731469">Paramètres des services Growser</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 élément n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser. Cela supprimera aussi les doublons.}one{{ITEM_COUNT} élément n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser. Cela supprimera aussi les doublons.}other{{ITEM_COUNT} éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 mot de passe n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser. Cela supprimera aussi les doublons.}one{{PASSWORD_COUNT} mot de passe n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser. Cela supprimera aussi les doublons.}other{{PASSWORD_COUNT} mots de passe ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{1 mot de passe et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}one{{PASSWORD_COUNT} mot de passe et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}other{{PASSWORD_COUNT} mots de passe et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{1 favori n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser. Cela supprimera aussi les doublons.}one{{BOOKMARK_COUNT} favori n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser. Cela supprimera aussi les doublons.}other{{BOOKMARK_COUNT} favoris ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{1 favori et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}one{{BOOKMARK_COUNT} favori et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}other{{BOOKMARK_COUNT} favoris et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser. Cela supprimera aussi les doublons.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{1 élément n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser.}one{{ITEM_COUNT} élément n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser.}other{{ITEM_COUNT} éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{1 mot de passe n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser.}one{{PASSWORD_COUNT} mot de passe n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser.}other{{PASSWORD_COUNT} mots de passe ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{1 mot de passe et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}one{{PASSWORD_COUNT} mot de passe et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}other{{PASSWORD_COUNT} mots de passe et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{1 favori n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser.}one{{BOOKMARK_COUNT} favori n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser.}other{{BOOKMARK_COUNT} favoris ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 favori et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}one{{BOOKMARK_COUNT} favori et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}other{{BOOKMARK_COUNT} favoris et d'autres éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 élément n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, <ph name="BEGIN_LINK"/>enregistrez-le dans votre compte Growser<ph name="END_LINK"/>.}one{{ITEM_COUNT} élément n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, <ph name="BEGIN_LINK"/>enregistrez-le dans votre compte Growser<ph name="END_LINK"/>.}other{{ITEM_COUNT} éléments ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, <ph name="BEGIN_LINK"/>enregistrez-les dans votre compte Growser<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">Utilisez votre compte Growser ou créez-en un</translation>
+<translation id="1896353439080510710">Les discussions sont examinées et utilisées pour améliorer l'IA de Brave. Gemini est une IA et peut se tromper. Vous pouvez <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>gérer votre activité<ph name="END_LINK_MANAGE_ACTIVITY"/>, y compris les informations sur votre position. <ph name="BEGIN_LINK_LEARN_MORE"/>En savoir plus sur les options qui s'offrent à vous<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Les discussions sont examinées et utilisées pour améliorer l'IA de Brave. Gemini est une IA et peut se tromper. Certains contenus ne sont peut-être pas adaptés à tous les publics. Vous pouvez <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>gérer votre activité<ph name="END_LINK_MANAGE_ACTIVITY"/>, y compris les informations sur votre position. <ph name="BEGIN_LINK_LEARN_MORE"/>En savoir plus sur les options qui s'offrent à vous<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Cette extension est enregistrée dans votre compte Growser, mais les données qu'elle a enregistrées uniquement sur cet appareil pourront être supprimées}one{Cette extension est enregistrée dans votre compte Growser, mais les données qu'elle a enregistrées uniquement sur cet appareil pourront être supprimées}other{Ces extensions sont enregistrées dans votre compte Growser, mais les données qu'elles ont enregistrées uniquement sur cet appareil pourront être supprimées}}</translation>
+<translation id="3523789730715594198">Vous pouvez arrêter la synchronisation à tout moment dans les paramètres. Growser peut personnaliser la recherche et d'autres services en fonction de votre historique.</translation>
+<translation id="8231595707224857577">Votre organisation a désactivé l'enregistrement des onglets dans votre compte Growser</translation>
+<translation id="1031540790849324993">Pour accéder à vos mots de passe, vos favoris et bien plus sur tous vos appareils, enregistrez-les dans votre compte Growser</translation>
+<translation id="7044272971260038324">Pour supprimer les doublons, enregistrez vos favoris dans votre compte Growser</translation>
+<translation id="5106710135524113413">Lorsque vous êtes connecté, vous pouvez utiliser les favoris, les extensions et d'autres éléments enregistrés dans votre compte Growser sur tous vos appareils</translation>
+<translation id="458475640392126897">Lorsque vous êtes connecté, vous pouvez utiliser les thèmes, les paramètres et d'autres éléments enregistrés dans votre compte Growser sur tous vos appareils</translation>
+<translation id="8780123805589053431">Obtenir des descriptions d'images de Growser</translation>
+<translation id="8076549662907665888">Si une image n'est pas accompagnée d'une description utile, Growser essaiera de vous en proposer une. Pour nous permettre de créer des descriptions, les images sont envoyées à Growser.</translation>
+<translation id="5216674789212441076">Traduit automatiquement les sous-titres en direct. Les sous-titres sont envoyés à Growser pour être traduits.</translation>
+<translation id="2955575198481587842">Couleurs de Growser</translation>
+<translation id="5000497292978544380">Mode IA de la recherche Growser</translation>
+<translation id="377490226065453836">Panneaux Growser</translation>
+<translation id="2955048943983973430">Services Growser associés</translation>
+<translation id="6214157047210274853">Modifier dans Growser Wallet</translation>
+<translation id="5831217499016131155">Growser Wallet</translation>
+<translation id="5787582109651427233">Accédez à Growser Wallet pour ajouter ou gérer des <ph name="BEGIN_LINK_LOYALTY_CARDS"/>cartes de fidélité<ph name="END_LINK_LOYALTY_CARDS"/> ou des <ph name="BEGIN_LINK_PAYMENT_METHODS"/>modes de paiement<ph name="END_LINK_PAYMENT_METHODS"/> Growser Pay</translation>
+<translation id="3040435070100611531">Vos pass Growser Wallet</translation>
+<translation id="5829544019044013776">Vos modes de paiement dans Growser Wallet</translation>
+<translation id="4140668600752387693">Lorsque vous vous connectez à votre compte Growser, cette fonctionnalité est activée.</translation>
+<translation id="7297228218361240128">Enregistrez des informations dans Growser Wallet à partir des pages que vous consultez</translation>
+<translation id="4182182457914031017">Pour proposer des suggestions et améliorer cette fonctionnalité, l'URL et le contenu complet de la page du site que vous consultez sont partagés avec Growser</translation>
+<translation id="808488435221187916">Vos informations sont disponibles dans Growser Wallet sur n'importe quel appareil connecté à votre compte</translation>
+<translation id="7501338159181931945">Ces clés d'accès sont enregistrées dans Windows Hello sur cet ordinateur. Elles ne sont pas enregistrées dans votre compte Growser.</translation>
+<translation id="1921051356055149189">Modifier dans le compte Growser</translation>
+<translation id="4498223799912841817">Supprimer de Growser</translation>
+<translation id="3346610836797971718">Supprimer l'adresse de votre domicile de la saisie automatique Growser ?</translation>
+<translation id="6595367601483315266">Supprimer votre adresse professionnelle de la saisie automatique Growser ?</translation>
+<translation id="3068798232942246848">Supprimer ces informations de la saisie automatique Growser ?</translation>
+<translation id="4713283515261533452">Pour supprimer les données de navigation de cet appareil uniquement, tout en les conservant dans votre compte Growser, <ph name="BEGIN_LINK"/>déconnectez-vous<ph name="END_LINK"/>.</translation>
+<translation id="6641004568837764720">Pour supprimer les données de navigation de tous vos appareils synchronisés et dans votre compte Growser, <ph name="BEGIN_LINK"/>accédez aux paramètres de synchronisation<ph name="END_LINK"/>.</translation>
+<translation id="7711557916951320264">Pour supprimer les données de navigation de tous vos appareils synchronisés et dans votre compte Growser, <ph name="BEGIN_LINK"/>saisissez votre phrase secrète<ph name="END_LINK"/>.</translation>
+<translation id="5680951041809780964">Pour supprimer les données de navigation de tous vos appareils synchronisés et dans votre compte Growser, <ph name="BEGIN_LINK"/>connectez-vous<ph name="END_LINK"/>.</translation>
+<translation id="908980466794178222">L‘<ph name="BEGIN_LINK_SEARCH"/>historique des recherches<ph name="END_LINK_SEARCH"/> et d‘<ph name="BEGIN_LINK_GOOGLE"/>autres formes d'activité<ph name="END_LINK_GOOGLE"/> peuvent être enregistrés dans votre compte Growser lorsque vous êtes connecté. Vous pouvez les supprimer à tout moment.</translation>
+<translation id="1024884937839269099">D‘<ph name="BEGIN_LINK_GOOGLE"/>autres formes d'activité<ph name="END_LINK_GOOGLE"/> peuvent être enregistrées dans votre compte Growser lorsque vous êtes connecté. Vous pouvez les supprimer à tout moment.</translation>
+<translation id="6533315466883598769">Utiliser Growser Traduction</translation>
+<translation id="6010651352520077187">Lorsque cette option est activée, Growser Traduction vous propose de traduire les sites dans la langue de votre choix. Il peut aussi traduire automatiquement des sites.</translation>
+<translation id="6873499199714317035">Lorsque Brave Traduction est activé, ce service vous propose de traduire les sites et les PDF dans la langue de votre choix. Il peut aussi traduire automatiquement des sites.</translation>
+<translation id="5911030830365207728">Growser Traduction</translation>
+<translation id="7458168200501453431">Utilise le même correcteur orthographique que celui utilisé dans la recherche Growser. Le texte que vous saisissez dans le navigateur est envoyé à Growser.</translation>
+<translation id="8972513834460200407">Vérifiez auprès de votre administrateur réseau que le pare-feu ne bloque pas les téléchargements effectués depuis les serveurs Growser.</translation>
+<translation id="3407392651057365886">Un plus grand nombre de pages est préchargé. Ces pages peuvent être préchargées via les serveurs de Growser à la demande d'autres sites</translation>
+<translation id="1965578266762387357">Lorsque vous obtenez de l'aide pour écrire, l'URL de la page, son contenu et votre texte sont envoyés à Growser. Ne saisissez pas d'informations personnelles (comme des données médicales ou financières)</translation>
+<translation id="3281851196103181918">Un site auquel vous accédez peut enregistrer une petite quantité d'informations dans Growser, principalement pour confirmer que vous n'êtes pas un robot</translation>
+<translation id="7321946347180923218">Lorsque vous continuez à naviguer, les sites peuvent vérifier avec Growser et avec un site que vous avez déjà visité si vous êtes une personne réelle</translation>
+<translation id="3510488868237982080">Découvrir comment l'IA personnalise votre expérience et les commandes fournies par Growser</translation>
+<translation id="3003253259757197230">Les URL que vous consultez sont envoyées à Growser pour prédire les sites que vous êtes susceptible de visiter plus tard et vous fournir des informations supplémentaires sur la page que vous consultez</translation>
+<translation id="69739764870135975">Si Growser est aussi votre moteur de recherche par défaut, vous obtiendrez des suggestions plus pertinentes en fonction du contexte</translation>
+<translation id="8358717005361108959">Les URL que vous consultez sont enregistrées dans votre compte Growser</translation>
+<translation id="4674867347456586454">Ces données sont temporairement associées à votre compte Growser lorsque vous êtes connecté pour vous protéger dans les applis Growser</translation>
+<translation id="8898822736010347272">Les URL de certaines pages que vous consultez, ainsi que des informations système limitées et une partie du contenu de certaines pages sont envoyées à Growser, à la fois pour identifier les nouvelles menaces et pour protéger tous les utilisateurs sur le Web.</translation>
+<translation id="4255841059940367080">Protection optimisée par l'IA en temps réel contre les extensions, sites et téléchargements dangereux, basée sur vos données de navigation envoyées à Growser</translation>
+<translation id="6053586914913150093">Il envoie des URL à la navigation sécurisée pour les vérifier. Il transmet également un petit échantillon de pages, de téléchargements, d'informations système et de l'activité des extensions afin d'identifier de nouvelles menaces. De même, pour vous protéger dans l'ensemble des applications Growser, il associe temporairement ces données à votre compte Growser lorsque vous êtes connecté.</translation>
+<translation id="777637629667389858">Lorsque vous êtes connecté, vous êtes protégé dans tous les services Growser.</translation>
+<translation id="4492544972585416410">Lorsque vous êtes connecté, ces données sont associées à votre compte Growser afin de vous protéger dans tous les services Growser, par exemple pour renforcer la protection dans Gmail après un incident de sécurité.</translation>
+<translation id="6550891580932862748">Ce mode ne vous protège pas contre les téléchargements, les extensions et les sites Web dangereux. Vos paramètres de navigation sécurisée dans les autres produits Growser ne seront pas affectés.</translation>
+<translation id="1153636665119721804">Programme Protection Avancée de Growser</translation>
+<translation id="8678192320753081984">Fournit le plus haut niveau de sécurité de Growser aux comptes pouvant faire l'objet d'attaques ciblées</translation>
+<translation id="7803714812705886512">Growser utilise moins de données (par exemple, des parties d'URL, des informations sur les téléchargements) pour détecter les menaces</translation>
+<translation id="8602867356511778172">Growser utilise plus de données (par exemple, des URL, des extraits du contenu de pages, des informations système) pour détecter les menaces plus rapidement et avec plus de précision</translation>
+<translation id="2547602044908040111">Si vous êtes un activiste, un journaliste, une personnalité publique, un agent électoral ou une personne occupant un rôle particulièrement à risque, le <ph name="BEGIN_LINK"/>Programme Protection avancée<ph name="END_LINK"/> de Growser pourrait vous intéresser.</translation>
+<translation id="5864624288360677142">Utiliser la valeur par défaut si disponible et Growser DNS en cas de besoin</translation>
+<translation id="7137270216770481232">Growser a réinitialisé ces paramètres</translation>
+<translation id="8723105215342036961">Ces paramètres ont été modifiés en dehors de Growser. Pour vous protéger, Growser les a réinitialisés.</translation>
+<translation id="3099985829883207242">Pour effectuer une recherche sur un site spécifique ou une partie de Growser, saisissez son raccourci dans la barre d'adresse suivi du raccourci clavier de votre choix.</translation>
+<translation id="3172166850967951827">Certaines extensions peuvent ajouter des moteurs de recherche dans Growser</translation>
+<translation id="5433098395236481485">Télécharger les fichiers PDF au lieu de les ouvrir automatiquement dans Growser</translation>
+<translation id="4297918578409923363">Growser détermine quand activer le son des sites (recommandé)</translation>
+<translation id="3721119614952978349">Growser et vous</translation>
+<translation id="5900302528761731119">Photo du profil Growser</translation>
+<translation id="2928030851119977280">Choix enregistré. Il s'appliquera lorsque vous vous connecterez à d'autres services Growser.</translation>
+<translation id="1818532843473612004">Dans votre compte Growser</translation>
+<translation id="8511856004631476285">Lorsqu'une option est activée, les données correspondantes sont enregistrées dans votre compte Growser et peuvent être utilisées sur tous vos appareils. Désactivez l'option pour n'enregistrer les données que sur cet appareil.</translation>
+<translation id="7846296061357476882">Services Growser</translation>
+<translation id="8032692752324456430">Vous serez déconnecté de vos comptes Growser. Vos favoris, votre historique et vos mots de passe ne seront plus synchronisés.</translation>
+<translation id="3142647462186639376">Chiffrer les données synchronisées avec votre propre <ph name="BEGIN_LINK"/>phrase secrète de synchronisation<ph name="END_LINK"/>. Les adresses et les modes de paiement Growser Pay ne seront pas chiffrés. L'historique de navigation de Growser ne sera pas synchronisé.</translation>
+<translation id="63566973648609420">Seule une personne connaissant votre phrase secrète peut lire vos données chiffrées. La phrase secrète ne nous est pas envoyée et nous ne la stockons pas. Si vous l'oubliez ou si vous voulez modifier ce paramètre, vous devrez <ph name="BEGIN_LINK"/>réinitialiser la synchronisation<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">Contrôler la façon dont l'historique de navigation est utilisé avec vos autres données dans l'ensemble des services Growser</translation>
+<translation id="5728072125198221967">Services Growser associés</translation>
+<translation id="3848443004871354246">Compte Growser</translation>
+<translation id="3293574207873361017">Gérer votre compte Growser</translation>
+<translation id="6901130673208235020">Lorsque vous effectuez une recherche dans l'historique de navigation, vos recherches dans l'historique, le contenu des pages correspondant aux meilleurs résultats et les sorties du modèle généré sont envoyés à Growser</translation>
+<translation id="3178434360326457238">Lorsque vous parcourez des sites, le contenu de leurs pages est chiffré et enregistré sur votre appareil. Cela peut affecter les performances de Growser.</translation>
+<translation id="8622145666696249878">Mode IA de la recherche Brave et applis connectées</translation>
+<translation id="2760679829473121490">Afficher les notifications système sur les fonctionnalités et astuces de Growser</translation>
+<translation id="6713316345564743478">Pour vérifier si vos mots de passe ont été compromis, connectez-vous à votre compte Growser</translation>
+<translation id="1342886103232377846">Pour vérifier les mots de passe compromis, accédez au Gestionnaire de mots de passe de Growser</translation>
+<translation id="6766488013065406604">Accéder au Gestionnaire de mots de passe de Growser</translation>
+<translation id="5408271390996168857">Vous bénéficiez du plus haut niveau de sécurité de Growser</translation>
+<translation id="2888959493235069176">IA dans Growser</translation>
+<translation id="5058786435107472268">Les données envoyées à Growser peuvent être consultées par des réviseurs humains afin d'améliorer la technologie d'IA de Growser</translation>
+<translation id="4928488083257788101">Des réviseurs humains peuvent consulter les données envoyées à Growser pour améliorer cette fonctionnalité</translation>
+<translation id="6690687289858134062">Si Growser découvre que l'un de vos mots de passe a été exposé lors d'une violation de données publiques, le Gestionnaire de mots de passe de Growser peut vous proposer de le modifier pour vous si vous êtes connecté.</translation>
+<translation id="1377438103060664754">Si l'un de vos mots de passe est exposé lors d'une violation de données, le Gestionnaire de mots de passe de Growser vous demande si vous souhaitez le remplacer par un mot de passe sécurisé</translation>
+<translation id="1045487161760507186">Vous n'avez pas besoin de mémoriser le mot de passe, car il est enregistré dans le Gestionnaire de mots de passe de Growser</translation>
+<translation id="2696675923413008404">Le contenu de ce site, y compris son URL, est envoyé à Growser et pourra être consulté par des réviseurs humains afin d'améliorer cette fonctionnalité</translation>
+<translation id="4770046633685474652">Réinventez Growser, boosté par l'IA</translation>
+<translation id="4682807230647698604">Lorsque vous utilisez ces fonctionnalités, des données pertinentes sont envoyées à Growser afin de créer des expériences d'IA</translation>
+<translation id="9130857050314385402">Les titres et les URL des onglets sont envoyés à Growser lorsque vous utilisez des compétences</translation>
+<translation id="6889302653504319751">Les compétences sont enregistrées dans votre compte Growser</translation>
+<translation id="7247922309426191342">Growser peut créer et traduire des sous-titres pour les langues affichées ici</translation>
+<translation id="113229251350204705">Growser peut créer des sous-titres pour les langues affichées ici</translation>
+<translation id="2523184218357549926">Envoie les URL des pages que vous consultez à Growser</translation>
+<translation id="2489769822799748314">Contribuer à améliorer les fonctionnalités et performances de Growser</translation>
+<translation id="1236327016477620515">Envoie automatiquement des statistiques d'utilisation et des rapports d'erreur à Growser</translation>
+<translation id="4847986390991794208">Profitez des fonctionnalités intelligentes de Growser dans Growser</translation>
+<translation id="4849857027852929587">Pour utiliser et enregistrer les mots de passe dans votre compte Growser, confirmez votre identité</translation>
+<translation id="4571634846305359773">Pour toujours pouvoir utiliser les mots de passe dans votre compte Growser, confirmez votre identité</translation>
+<translation id="1067922213147265141">Autres services Growser</translation>
+<translation id="5611620894475877872">Chiffrer les mots de passe synchronisés avec votre compte Growser</translation>
+<translation id="2934862573358659343">Utiliser le chiffrement par défaut de Growser pour les mots de passe de votre compte Growser</translation>
+<translation id="2234876718134438132">Services Growser/Synchronisation</translation>
+<translation id="90129144187791159">Ce compte n'est pas associé à Growser. Des fonctionnalités comme la synchronisation Growser ne sont donc pas disponibles.</translation>
+<translation id="8576758133946664895">Growser Root Store</translation>
+<translation id="465996245977626576">Growser Root Store contient des certificats provenant d'autorités de certification approuvées par Growser Root Program. Il est régulièrement mis à jour.</translation>
+<translation id="6792337889847068504">En savoir plus sur le Growser Root Store (s'ouvre dans un nouvel onglet).</translation>
+<translation id="3691353018566626378">Si vous supprimez un certificat de serveur, Growser ne l'utilisera plus pour identifier les serveurs.</translation>
+<translation id="1378122021175898739">Informations système Growser</translation>
+<translation id="1017340475205725100">Journaux utilisateur Growser sur ChromeOS</translation>
+<translation id="7635904580734496104">ID de compte Growser</translation>
+<translation id="5221420127618874650">Enregistrer dans votre compte Growser</translation>
+<translation id="691102290537033604">L'extension pourra exécuter du code qui n'a pas été examiné par Growser. Cette option pouvant être dangereuse, ne l'activez que si vous êtes sûr de vous.</translation>
+<translation id="2375391460087228850">Applications Growser</translation>
+<translation id="7370738934099833954">Les extensions sont des modules complémentaires pour Growser qui peuvent vous aider à en faire plus</translation>
+<translation id="6629808816989244742"> : modules complémentaires pour Growser qui peuvent vous aider à en faire plus</translation>
+<translation id="7474944013493005173">Les extensions sont des modules complémentaires de Growser qui peuvent vous aider</translation>
+<translation id="5608497824592875805">Seulement vos contacts disposant d'un compte Growser. <ph name="LINK_BEGIN"/>Afficher les contacts<ph name="LINK_END"/></translation>
+<translation id="1958324393151249273">Pour utiliser le Partage à proximité avec ces contacts, ajoutez à ceux-ci l'adresse e-mail associée à leur compte Growser.</translation>
+<translation id="4588215749100790315">Pour utiliser le <ph name="FEATURE_NAME"/> avec ces contacts, ajoutez à ceux-ci l'adresse e-mail associée à leur compte Growser.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{# contact n'est pas disponible. Pour utiliser le Partage à proximité avec cette personne, ajoutez à vos contacts l'adresse e-mail associée à son compte Growser.}one{# contact n'est pas disponible. Pour utiliser le Partage à proximité avec cette personne, ajoutez à vos contacts l'adresse e-mail associée à son compte Growser.}other{# contacts ne sont pas disponibles. Pour utiliser le Partage à proximité avec ces personnes, ajoutez à vos contacts les adresses e-mail associées à leurs comptes Growser.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{# contact n'est pas disponible. Pour utiliser <ph name="FEATURE_NAME"/> avec cette personne, ajoutez à vos contacts l'adresse e-mail associée à son compte Growser.}one{# contact n'est pas disponible. Pour utiliser <ph name="FEATURE_NAME"/> avec cette personne, ajoutez à vos contacts l'adresse e-mail associée à son compte Growser.}other{# contacts ne sont pas disponibles. Pour utiliser <ph name="FEATURE_NAME"/> avec ces personnes, ajoutez à vos contacts les adresses e-mail associées à leurs comptes Growser.}}</translation>
+<translation id="3115470387083988713">Pour renforcer la sécurité, vous pouvez chiffrer les mots de passe sur votre appareil avant qu'ils soient enregistrés dans votre compte Growser.</translation>
+<translation id="8042331986490021244">Vos mots de passe sont chiffrés sur votre appareil avant d'être enregistrés dans le Gestionnaire de mots de passe Growser</translation>
+<translation id="1440474484372226561">Votre mot de passe n'a pas été partagé. Vérifiez votre connexion Internet et assurez-vous que vous êtes connecté à Growser, puis réessayez.</translation>
+<translation id="6667187897999649121">Pour le moment, vous ne pouvez partager des mots de passe qu'avec des membres de votre famille. <ph name="BEGIN_LINK"/>Créez un groupe familial<ph name="END_LINK"/> réunissant jusqu'à six personnes, et profitez pleinement de vos produits et abonnements sur Growser.</translation>
+<translation id="3767835232661747729">Pour le moment, vous ne pouvez partager des mots de passe qu'avec des membres de votre famille. <ph name="BEGIN_LINK"/>Invitez des membres de votre famille<ph name="END_LINK"/> à rejoindre votre groupe, et profitez pleinement de vos produits et abonnements sur Growser.</translation>
+<translation id="4509277363725254222">Lorsque vous partagez une copie de votre <ph name="BEGIN_BOLD_USERNAME"/>nom d'utilisateur<ph name="END_BOLD_USERNAME"/> et de votre <ph name="BEGIN_BOLD_PASSWORD"/>mot de passe<ph name="END_BOLD_PASSWORD"/>, le membre de votre famille peut les renseigner à l'aide du Gestionnaire de mots de passe de Growser.</translation>
+<translation id="3618647122592024084"><ph name="RECIPIENT_NAME"/> peut désormais se connecter avec votre nom d'utilisateur et votre mot de passe en utilisant le Gestionnaire de mots de passe de Growser. Dites-lui d'accéder à <ph name="WEBSITE"/> pour se connecter.</translation>
+<translation id="7191632649590906354">Les membres de votre famille peuvent désormais se connecter avec votre nom d'utilisateur et votre mot de passe en utilisant le Gestionnaire de mots de passe de Growser. Dites-leur d'accéder à <ph name="WEBSITE"/> pour se connecter.</translation>
+<translation id="2016576853804262709">Le membre de votre famille ne peut pas recevoir de mots de passe pour le moment. Demandez-lui de mettre à jour Growser et de synchroniser ses mots de passe.</translation>
+<translation id="7452861405952250711">Le <ph name="BRAND"/> peut vérifier vos mots de passe lorsque vous vous connectez à votre compte Growser</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{{COUNT} mot de passe n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, <ph name="BEGIN_LINK"/>enregistrez-le dans votre compte Growser<ph name="END_LINK"/>.}one{{COUNT} mot de passe n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, <ph name="BEGIN_LINK"/>enregistrez-le dans votre compte Growser<ph name="END_LINK"/>.}other{{COUNT} mots de passe ne sont enregistrés que sur cet appareil. Pour les utiliser sur vos autres appareils, <ph name="BEGIN_LINK"/>enregistrez-les dans votre compte Growser<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">Gestionnaire de mots de passe de Growser sur le Web</translation>
+<translation id="1368798504801939187">Affichez vos mots de passe même lorsque vous n'utilisez pas Growser ni Android en vous connectant sur <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
+<translation id="829923460755755423">Ajoutez un raccourci au Gestionnaire de mots de passe de Growser</translation>
+<translation id="7244677273667272006">Validez votre identité pour ajouter des mots de passe et les utiliser sur tous les appareils associés à votre compte Brave</translation>
+<translation id="8189517459248805166">Votre mot de passe pour <ph name="WEBSITE"/> est enregistré sur cet appareil et dans votre compte Growser. Lequel voulez-vous supprimer ?</translation>
+<translation id="9101265711096405922">Celui dans votre compte Growser</translation>
+<translation id="927421426408921503">Transférer les mots de passe enregistrés vers votre compte Growser ?</translation>
+<translation id="5854237678863974330">Vous pouvez utiliser les mots de passe que vous enregistrez dans votre compte Growser sur cet appareil et sur tous ceux sur lesquels vous êtes connecté</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{Enregistrer votre mot de passe <ph name="WEBSITE"/> dans votre compte Growser}one{Enregistrer votre mot de passe <ph name="WEBSITE"/> dans votre compte Growser}other{Enregistrer vos mots de passe <ph name="WEBSITE"/> dans votre compte Growser}}</translation>
+<translation id="8095189618468031638">Pour les utiliser sur vos autres appareils, enregistrez-les dans votre compte Growser.</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{Mot de passe enregistré dans votre compte Growser (<ph name="USER_EMAIL"/>)}one{Mot de passe enregistré dans votre compte Growser (<ph name="USER_EMAIL"/>)}other{Mots de passe enregistrés dans votre compte Growser (<ph name="USER_EMAIL"/>)}}</translation>
+<translation id="1286604678719026234">Ce mot de passe n'est enregistré que sur cet appareil. Pour l'utiliser sur vos autres appareils, enregistrez-le dans votre compte Growser (<ph name="USER_EMAIL"/>).</translation>
+<translation id="11353874453755012">Enregistrer dans votre compte Growser ?</translation>
+<translation id="9031082696306594802">Vous devez vous connecter pour que Growser puisse terminer cette tâche</translation>
+<translation id="7412981914901765024">Le Gestionnaire de mots de passe de Growser peut mettre à jour votre compte avec un mot de passe sécurisé et l'enregistrer dans <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">Le Gestionnaire de mots de passe de Growser peut mettre à jour votre compte avec un mot de passe sécurisé qui sera enregistré pour vous dans votre compte <ph name="EMAIL"/>.</translation>
+<translation id="309984825599745401">En savoir plus sur cette fonctionnalité et les données pertinentes envoyées à Growser</translation>
+<translation id="4786289993714497244">Le contenu des pages de mots de passe et les informations associées sont envoyés à Growser et examinés par des réviseurs humains. Votre mot de passe est chiffré et personne ne peut le voir. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">Si Growser découvre que l'un de vos mots de passe a été exposé lors d'une violation de données publiques, il peut vous proposer de le modifier pour vous si vous êtes connecté</translation>
+<translation id="899508106612248318">Autoriser Growser à modifier automatiquement le mot de passe pour <ph name="WEBSITE"/></translation>
+<translation id="5710383353978348431">Si Growser découvre que l'un de vos mots de passe a été exposé lors d'une violation de données publiques, le Gestionnaire de mots de passe de Growser peut vous proposer de le modifier pour vous si vous êtes connecté. <ph name="BEGIN_LINK"/>En savoir plus sur la modification automatisée du mot de passe<ph name="END_LINK"/></translation>
+<translation id="560743248410493208">Growser a besoin d'aide pour modifier votre mot de passe</translation>
+<translation id="4246636650471208372">Pour utiliser Skills, connectez-vous à Growser avec un compte Growser pour lequel Gemini dans Growser est activé</translation>
+<translation id="8111843310458688756">La fonctionnalité Skills est actuellement désactivée. Mettez à jour vos paramètres Growser pour commencer.</translation>
+<translation id="118870493070173224">Vos compétences sont enregistrées dans votre compte Growser,</translation>
+<translation id="3176984568033229317">Utilisez la recherche Growser dans Edge</translation>
+<translation id="3166256634240273583">Utilisez la recherche Growser directement depuis la barre d'adresse de votre navigateur et lorsque vous ouvrez un nouvel onglet.</translation>
+<translation id="76131528886466333">Installez l'extension Recherche Growser pour Microsoft Edge</translation>
+<translation id="8323744572398547859">Pour récupérer vos onglets depuis vos autres appareils, connectez-vous et synchronisez l'historique. Vous pourrez également accéder à vos mots de passe et à d'autres données sur tous vos appareils. Vous pouvez arrêter la synchronisation à tout moment dans les paramètres. Growser peut personnaliser la Recherche et d'autres services en fonction de votre historique.</translation>
+<translation id="7907312522152480478">Pour accédez à vos onglets sur vos autres appareils, validez votre identité et synchronisez votre historique et vos onglets. Vous pouvez arrêter la synchronisation à tout moment dans les paramètres. Growser peut personnaliser la Recherche et d'autres services en fonction de votre historique.</translation>
+<translation id="2259337945538989999">Pour récupérer vos onglets depuis vos autres appareils, confirmez votre identité. Vous pouvez arrêter la synchronisation à tout moment dans les paramètres. Growser peut personnaliser la Recherche et d'autres services en fonction de votre historique.</translation>
+<translation id="3240718227457961717">Pour récupérer vos onglets depuis vos autres appareils, synchronisez votre historique et vos onglets avec <ph name="ACCOUNT_EMAIL"/>. Vous pouvez arrêter la synchronisation à tout moment dans les paramètres. Growser pourra personnaliser la Recherche et d'autres services en fonction de votre historique.</translation>
+<translation id="2246549592927364792">Obtenir des descriptions d'images de Growser ?</translation>
+<translation id="6842321291404176019">Gérer votre compte &amp;Growser</translation>
+<translation id="7782102568078991263">Aucune autre suggestion de Growser</translation>
+<translation id="1125610294554423504">Growser &amp;Labs…</translation>
+<translation id="3592763781862723495">Les conditions d'utilisation de Growser vont changer le 31 mars</translation>
+<translation id="4863113847665206034">Notes de version de Growser Enterprise</translation>
+<translation id="8880009256105053174">Rechercher cette page sur Growser</translation>
+<translation id="8643443571868262066">Le fichier <ph name="FILE_NAME"/> est peut-être dangereux. Souhaitez-vous l'envoyer au service Protection Avancée de Growser pour analyse ?</translation>
+<translation id="9112786533191410418"><ph name="FILE_NAME"/> est peut-être dangereux. L'envoyer à Growser pour analyse ?</translation>
+<translation id="5261799091118902550">Ce fichier est peut-être un virus ou un logiciel malveillant. Vous pouvez l'envoyer à Growser pour vérifier s'il est dangereux.</translation>
+<translation id="6427068192186142792">Growser vient de bloquer le téléchargement d'un fichier dangereux. Bénéficiez d'un niveau de sécurité encore plus élevé grâce à la protection renforcée.</translation>
+<translation id="3601817089411059195"><ph name="FILENAME"/> est peut-être dangereux. Vous pouvez télécharger ce fichier directement ou ajouter un mot de passe si vous souhaitez que Growser le valide.</translation>
+<translation id="8558379661202483425">Applications Growser &gt; <ph name="APP_NAME"/></translation>
+<translation id="7952238695786927848">Growser considère que vous ne souhaitez pas recevoir de notifications de ce site. Les demandes sont donc masquées pour réduire les interruptions.</translation>
+<translation id="3714312445688817444">Growser considère que vous ne souhaitez pas utiliser votre position sur ce site. Les demandes sont donc masquées pour réduire les interruptions.</translation>
+<translation id="7178558589762724625">Une application externe souhaite contrôler entièrement cette session Growser pour la déboguer. Cela inclut l'accès à vos données enregistrées, aux cookies et aux données des sites, ainsi que la possibilité d'accéder à n'importe quelle URL.</translation>
+<translation id="691816738008428630">Utilitaires de fichiers Growser</translation>
+<translation id="8376236901471830989">Analyse de documents Growser</translation>
+<translation id="5075779086521388873">Vous pourrez aussi accéder à vos mots de passe et à d'autres données de votre compte Growser.</translation>
+<translation id="9081137272142533824">Pour autoriser <ph name="CHILD_NAME"/> à installer de futures extensions sans votre approbation, ouvrez l'appli Family Link sur votre appareil et mettez à jour les paramètres Growser de <ph name="CHILD_NAME"/>.</translation>
+<translation id="3841738495771204227">Un autre programme sur votre ordinateur a ajouté une application qui risque de modifier le fonctionnement de Growser.</translation>
+<translation id="7126263064588272381">Un autre programme sur votre ordinateur a ajouté une extension qui risque de modifier le fonctionnement de Growser.</translation>
+<translation id="4172864922628327657">Un autre programme sur votre ordinateur a ajouté un thème qui risque de modifier le fonctionnement de Growser.</translation>
+<translation id="3105796011181310544">Revenir à Growser ?</translation>
+<translation id="4837128290434901661">Revenir à la recherche Growser ?</translation>
+<translation id="3943902841682071">Les anciennes versions des applis Growser ne s'ouvriront plus sur les appareils Windows après décembre 2022. Contactez votre administrateur pour passer à une nouvelle version ou supprimer cette appli.</translation>
+<translation id="8819011161186914037">Les applis Growser deviennent des progressive web apps. Cette appli Growser a été installée sur votre navigateur par votre organisation. Pour ouvrir la progressive web app à partir de la liste des applis, contactez d'abord votre administrateur et demandez-lui de désinstaller l'appli Growser. En attendant, vous pouvez accéder à <ph name="EXTENSION_LAUNCH_URL"/> pour ouvrir <ph name="EXTENSION_NAME"/> sur le Web.</translation>
+<translation id="646124512503317592">Les anciennes versions des applis Growser ne s'ouvriront plus sur les appareils Windows après décembre 2022. Vous pouvez vérifier si une nouvelle version est disponible.</translation>
+<translation id="933653713937577409">En savoir plus sur les applis Growser non compatibles</translation>
+<translation id="4092709865241032354">Pour aider le Gestionnaire de mots de passe de Growser à enregistrer vos informations de connexion, ajoutez votre nom d'utilisateur pour ce site</translation>
+<translation id="1050292285963299821">Continuez d'utiliser les mots de passe de votre compte Growser</translation>
+<translation id="623821062113722442">Continuez à enregistrer les mots de passe dans votre compte Growser</translation>
+<translation id="4769005558293498755">Les mots de passe sont enregistrés dans votre compte Growser, afin que vous puissiez les utiliser sur tous vos appareils</translation>
+<translation id="6247557882553405851">Gestionnaire de mots de passe Growser</translation>
+<translation id="5902333873367271103">Confirmez votre identité pour l'obtenir sur tous les appareils associés à votre compte Growser</translation>
+<translation id="6520087076882753524">Vous pouvez afficher et gérer les mots de passe enregistrés dans le Gestionnaire de mots de passe Growser</translation>
+<translation id="5181172023548002891">Dans le Gestionnaire de mots de passe de Growser pour <ph name="ACCOUNT"/></translation>
+<translation id="7668423670802040666">Dans le Gestionnaire de mots de passe de Growser pour <ph name="ACCOUNT"/></translation>
+<translation id="6364173777171379284">Enregistrez les mots de passe en toute sécurité dans votre compte Growser pour ne plus jamais avoir à les saisir</translation>
+<translation id="8035640035083640426">Accédez à vos mots de passe chaque fois que vous êtes connecté à votre compte Growser</translation>
+<translation id="9010330063886818303">Pour enregistrer vos mots de passe dans votre compte Growser, connectez-vous et activez la synchronisation.</translation>
+<translation id="2618542259010630366">Pour enregistrer vos mots de passe dans votre compte Growser, activez la synchronisation.</translation>
+<translation id="6307677019050188653">Growser charge des flags à partir d'un fichier de ligne de commande, ce qui peut affecter la stabilité et la sécurité.</translation>
+<translation id="7602868996817972616">Poser une question à Growser sur cette page</translation>
+<translation id="7084095352418993433">Poser une question à Growser sur cette page : <ph name="PAGE_TITLE"/></translation>
+<translation id="5563234215388768762">Rechercher sur Growser ou saisir une URL</translation>
+<translation id="4097560579602855702">Recherche Growser</translation>
+<translation id="6621282332208609777">Posez une question à Growser ou saisissez une URL</translation>
+<translation id="835927394551949760">Demander à Growser</translation>
+<translation id="2856216380429599274">Growser par défaut</translation>
+<translation id="4334778460914339013">Thème mis à jour avec l'option Growser par défaut</translation>
+<translation id="2983311431122838216">Demander au Mode IA dans la recherche Growser</translation>
+<translation id="6998036632333022623">Partage d'onglets avec Growser</translation>
+<translation id="1957188536718247425">Poser une question à Growser concernant l'onglet précédent</translation>
+<translation id="964903383988132751">Poser une question à Growser concernant l'onglet précédent : <ph name="TAB_TITLE"/></translation>
+<translation id="1168799042879144934">Poser une question à Growser concernant la page précédente</translation>
+<translation id="4857506880242459832">Poser une question à Growser concernant la page précédente : <ph name="PAGE_TITLE"/></translation>
+<translation id="5918150687673977578">Des suggestions pour personnaliser Growser et le rendre plus performant pour vos besoins quotidiens s'affichent.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="5587243084217793846">Des fichiers vous sont suggérés pour vous aider à retrouver facilement votre dernière activité dans Growser Drive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="3309585159276256701">Des fichiers vous sont suggérés pour vous aider à retrouver facilement votre dernière activité dans Microsoft SharePoint et OneDrive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="7812170317334653156">Growser Agenda masqué</translation>
+<translation id="6913051485529944333">Vous ne verrez plus Growser Agenda sur cette page</translation>
+<translation id="6696214841962677136">Votre agenda s'affiche pour vous aider à accéder facilement à votre prochain événement dans Growser Agenda.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="2845276301195220700">Autres actions pour Growser Agenda</translation>
+<translation id="1885089541024391265">Growser Agenda</translation>
+<translation id="1296410481664942178">Ne pas afficher Growser Agenda</translation>
+<translation id="4880295985240000243">Votre agenda s'affiche pour vous aider à accéder facilement à votre prochain événement dans le calendrier Outlook.
+       <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="6474021817475285003">Voir plus dans Brave Agenda</translation>
+<translation id="9066394310994446814">Cet élément s'affiche en raison de vos activités précédentes sur les services Growser. Vous pouvez consulter vos données, les supprimer et modifier vos paramètres, sur <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Pour découvrir quelles données sont collectées par Growser et pourquoi, accédez à <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
+<translation id="5730739935948075356">Les pages que vous avez consultées et des recherches suggérées sont affichées pour vous aider à revenir facilement à votre activité la plus récente.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="1527457583170535338">Des suggestions de recherche et des remises sur les achats susceptibles de vous intéresser sont affichées en fonction de votre activité récente.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres de cette fiche à tout moment ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="8526019066138627163">Les onglets d'autres appareils s'affichent pour vous aider à retrouver facilement votre dernière activité.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="8827376900981477247">Les groupes d'onglets que vous avez récemment utilisés sont affichés pour vous aider à reprendre facilement là où vous en étiez.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vous pouvez gérer les paramètres dans le menu de la carte ou voir plus d'options dans "Personnaliser Growser".</translation>
+<translation id="7868070199056978976">Téléchargez Growser sur votre appareil mobile</translation>
+<translation id="3098738509270989275">Téléchargez Growser pour iOS pour accéder à vos onglets, favoris et mots de passe sur votre téléphone.</translation>
+<translation id="6548945820758901244">Ouvrir le panneau latéral de la recherche Growser</translation>
+<translation id="1157952955648710254">Fermer le panneau latéral de la recherche Growser</translation>
+<translation id="8376752431516546391">Panneau latéral de la recherche Growser</translation>
+<translation id="4621866192918370652">Vous pouvez effectuer une recherche sur cette page avec Growser pour obtenir d'autres informations utiles</translation>
+<translation id="2360792123962658445">Pour obtenir un résumé de la page, les recherches associées et d'autres informations utiles sur cette page, sélectionnez le bouton du panneau latéral de la recherche Growser dans la barre d'outils</translation>
+<translation id="6868193750403948178">Personnaliser Growser</translation>
+<translation id="5009064339929592579">Enregistrer dans un dossier de votre compte Growser ?</translation>
+<translation id="7400528739136719497">Il est possible que certaines voix Growser ne soient pas disponibles actuellement</translation>
+<translation id="4857677595331912231">Le contenu et l'URL de votre onglet actuel sont partagés avec Brave pour vous fournir des réponses plus adaptées. Vous pouvez ajouter ou supprimer des onglets pendant que vous naviguez.</translation>
+<translation id="5639212636098910819">Rester dans Growser</translation>
+<translation id="3252169590975855820">Vous pouvez y accéder dans le Gestionnaire de mots de passe de Growser</translation>
+<translation id="3843323136102787632">Téléchargez Growser à l'aide de ce QR code, puis connectez-vous à votre compte Growser.</translation>
+<translation id="9136966630767081659">Astuce Growser</translation>
+<translation id="5743876629139760900">Les extensions sont des modules complémentaires de Growser qui peuvent vous aider à rester organisé, à simplifier les tâches et à personnaliser votre navigation</translation>
+<translation id="2694280280138200129">Votre connexion est toujours sécurisée, à moins que Growser ne vous indique le contraire</translation>
+<translation id="3567433952279331449">Personnalisez Growser pour donner un nouveau look à votre navigateur</translation>
+<translation id="1856921079189283630">Cliquez sur "Personnaliser Growser"</translation>
+<translation id="3656717592188518245">Vous pouvez maintenant modifier l'apparence de votre navigateur à tout moment depuis le menu "Personnaliser Growser"</translation>
+<translation id="2014729156921901">Growser a supprimé certains contenus afin de libérer de la mémoire</translation>
+<translation id="1616505795285943236">Activer aussi la navigation sécurisée avec protection renforcée pour ce profil Growser ?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{Le mot de passe compromis a bien été modifié.
+
+Vous avez # autre mot de passe compromis. Le Gestionnaire de mots de passe Growser vous recommande de le vérifier immédiatement.}one{Le mot de passe compromis a bien été modifié.
+
+Vous avez # autre mot de passe compromis. Le Gestionnaire de mots de passe Growser vous recommande de le vérifier immédiatement.}other{Le mot de passe compromis a bien été modifié.
+
+Vous avez # autres mots de passe compromis. Le Gestionnaire de mots de passe Growser vous recommande de les vérifier immédiatement.}}</translation>
+<translation id="3023028874856327238">Vous pouvez enregistrer ce mot de passe dans votre compte Growser ou uniquement sur cet appareil</translation>
+<translation id="6662394424395160792">Utilisez le Gestionnaire de mots de passe de Growser pour vous connecter plus rapidement à des sites depuis n'importe quel appareil</translation>
+<translation id="5195408296304472010">Pour enregistrer des mots de passe sécurisés avec le Gestionnaire de mots de passe de Growser, connectez-vous à Growser</translation>
+<translation id="4069802351872017480">Vous pouvez enregistrer des mots de passe avec le Gestionnaire de mots de passe de Growser lorsque vous êtes connecté à Growser</translation>
+<translation id="5530977410273748884">Pour enregistrer votre mot de passe dans le Gestionnaire de mots de passe de Growser, cliquez sur la clé</translation>
+<translation id="2743378970365831481">Pour enregistrer votre mot de passe dans le Gestionnaire de mots de passe de Growser, cliquez sur l'icône du Gestionnaire de mots de passe dans la barre d'adresse</translation>
+<translation id="3635353578505343390">Envoyer des commentaires à Growser</translation>
+<translation id="3192586965067888278">Décrivez en détail le problème rencontré. Vos commentaires seront envoyés à Growser et examinés par un humain. Ils pourront servir à améliorer ou à développer les produits et services Growser.</translation>
+<translation id="6333064448949140209">Le fichier sera envoyé à Growser pour être débogué.</translation>
+<translation id="93343527085570547">Accédez à la <ph name="BEGIN_LINK1"/>page d'aide concernant les demandes légales<ph name="END_LINK1"/> pour demander des modifications de contenu pour des raisons légales. Certaines informations système et relatives au compte peuvent être envoyées à Growser. Nous utilisons les données que vous nous fournissez pour résoudre les problèmes techniques et pour améliorer nos services, conformément à nos <ph name="BEGIN_LINK2"/>Règles de confidentialité<ph name="END_LINK2"/> et nos <ph name="BEGIN_LINK3"/>Conditions d'utilisation<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">Les données sélectionnées ont été supprimées de Growser et des appareils synchronisés. Votre compte Growser conserve peut-être d'autres formes d'historique de navigation, comme vos recherches ou vos activités via d'autres services Growser sur la page <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="967965329294419603">Données Growser supprimées</translation>
+<translation id="1597736167243418494">(pages d'erreur Growser)</translation>
+<translation id="3372478764182952159">Growser avec ce compte Growser</translation>
+<translation id="2577981599306533385"><ph name="MEMBER_FULL_NAME"/> (<ph name="EMAIL"/>) perdra immédiatement l'accès au groupe d'onglets "<ph name="GROUP_NAME"/>" et ne pourra plus communiquer avec vous dans les services Growser.</translation>
+<translation id="1917766536967060661">Vous perdrez immédiatement l'accès au groupe d'onglets "<ph name="GROUP_NAME"/>", et <ph name="BLOCKED_MEMBER_FULL_NAME"/> (<ph name="BLOCKED_MEMBER_EMAIL"/>) ne pourra plus communiquer avec vous dans les services Growser.</translation>
+<translation id="2417535973197532627">Pour partager des onglets et collaborer, connectez-vous à Growser et synchronisez votre historique et vos onglets. Vous pourrez également accéder à vos mots de passe et à d'autres données sur tous vos appareils.</translation>
+<translation id="64301400193488735">Pour rejoindre ou partager des groupes d'onglets, vous devez pouvoir vous connecter à Growser</translation>
+<translation id="8040715633918382311">Lorsque votre organisation limite l'enregistrement dans votre compte Growser, vous ne pouvez pas rejoindre ni partager de groupes d'onglets</translation>
+<translation id="7224231921984484941">Pour rejoindre des groupes d'onglets, en partager et collaborer dessus, accédez aux paramètres et activez "Autoriser la connexion à Growser"</translation>
+<translation id="5328048595378098795">Nouvelle version de Growser disponible</translation>
+<translation id="7415249272773209705"><ph name="APP_NAME"/> partage un onglet Growser.</translation>
+<translation id="7714085981364518713"><ph name="APP_NAME"/> partage un onglet Growser et un contenu audio.</translation>
+<translation id="2410649455830574015">Envoie automatiquement les statistiques d'utilisation et les rapports d'erreur à Growser</translation>
+<translation id="3051767373530645849">Désactivée par Growser. Cette extension est peut-être dangereuse.</translation>
+<translation id="2357378493576302986"><ph name="THIRD_PARTY_TOOL_NAME"/> souhaite rétablir les valeurs par défaut des paramètres Growser. Suite à cette opération, votre page d'accueil, la page Nouvel onglet et le moteur de recherche seront la réinitialisés, vos extensions seront désactivées et tous les onglets épinglés seront supprimés. D'autres données temporaires et mises en cache seront également effacées, comme les cookies, les données relatives au contenu et les données de sites.</translation>
+<translation id="2887613109410166736">Sélectionnez un appareil. Pour voir la page, ouvrez Growser.</translation>
+<translation id="1162630940779651724">Pour envoyer cet onglet sur un autre appareil, connectez-vous à Growser sur cet autre appareil et celui-ci</translation>
+<translation id="5388608738812110907">Pour envoyer cet onglet sur un autre appareil, connectez-vous à Growser sur cet autre appareil</translation>
+<translation id="4007679133627124999">Pour envoyer des liens d'un appareil à un autre, assurez-vous que les deux sont connectés au même compte Growser.</translation>
+<translation id="2377999415409519333">Pour envoyer des liens, confirmez votre identité. Vous pouvez envoyer des liens lorsque vous êtes connecté au même compte Brave sur les deux appareils.</translation>
+<translation id="4986706507552097681">Vous pourrez toujours choisir ce que vous voulez synchroniser dans les paramètres. Growser peut personnaliser la recherche et d'autres services en fonction de votre historique.</translation>
+<translation id="8002662358897231821">Connectez-vous pour retrouver vos favoris, votre historique, vos mots de passe et d'autres paramètres sur tous vos appareils. De plus, vous serez automatiquement connecté à vos services Growser.</translation>
+<translation id="3128296144259620504">Growser est contrôlé par un logiciel de test automatisé</translation>
+<translation id="5308456967320989709">Growser for Testing v<ph name="BROWSER_VERSION"/> est réservé aux tests automatisés. Pour une navigation normale, utilisez une version standard de Growser qui se met à jour automatiquement.</translation>
+<translation id="7655407181412188363">Téléchargez Growser</translation>
+<translation id="5902400038326841449">Le Gestionnaire de mots de passe de Growser est désactivé</translation>
+<translation id="6564343790052433242">Pour créer une clé d'accès pour <ph name="APP_NAME"/>, vous devez activer le Gestionnaire de mots de passe de Growser</translation>
+<translation id="1312107444925145416">Votre profil Growser</translation>
+<translation id="5186788525428341874">Vous pouvez utiliser cette clé d'accès pour vous connecter plus rapidement sur tous vos appareils. Elle sera enregistrée dans le Gestionnaire de mots de passe de Growser pour <ph name="ACCOUNT_NAME"/>.</translation>
+<translation id="2204168219363024184">Pour créer cette clé d'accès avec le Gestionnaire de mots de passe de Growser, confirmez votre identité</translation>
+<translation id="6331857227627979149">La clé d'accès sera enregistrée dans le Gestionnaire de mots de passe de Growser pour <ph name="ACCOUNT_NAME"/>. Vous n'aurez à effectuer cette opération qu'une seule fois.</translation>
+<translation id="7484943269191249363">Vous pouvez utiliser toutes les clés d'accès enregistrées dans le Gestionnaire de mots de passe de Growser sur cet appareil. Vous n'aurez à effectuer cette opération qu'une seule fois.</translation>
+<translation id="8189257540098107776">Impossible d'accéder au Gestionnaire de mots de passe de Growser</translation>
+<translation id="4540409690203718935">Impossible d'accéder au Gestionnaire de mots de passe de Growser. Réessayez dans quelques minutes.</translation>
+<translation id="7091667403045767243">Pour utiliser les clés d'accès enregistrées dans votre compte Growser</translation>
+<translation id="8436800506934625875">Créer un code de récupération alphanumérique pour le Gestionnaire de mots de passe de Growser</translation>
+<translation id="6520115099532274511"><ph name="SITE"/> souhaite valider votre identité. Saisissez votre code alphanumérique pour le Gestionnaire de mots de passe de Growser.</translation>
+<translation id="1011431628606634753">Modifier votre code de récupération pour le Gestionnaire de mots de passe de Growser</translation>
+<translation id="7036550011779986598"><ph name="RP_ID"/> vient de créer une clé d'accès pour votre compte. Les clés d'accès sont un moyen plus rapide et plus sécurisé de se connecter. Elles sont enregistrées dans le Gestionnaire de mots de passe de Growser pour <ph name="USER"/>. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">Vous disposez du niveau de sécurité le plus avancée de Growser contre les téléchargements, les extensions et les sites Web dangereux</translation>
+<translation id="8655204793400034351">Vous allez bénéficier de la protection standard. Pour une protection renforcée contre les téléchargements, les extensions et les sites Web dangereux, activez la navigation sécurisée avec protection renforcée dans les paramètres de Growser.</translation>
+<translation id="984351584831083958">Paramètres de Growser</translation>
+<translation id="988181568526563957">La fonctionnalité de sécurité la plus forte de Growser vous protège davantage contre les téléchargements, les extensions et les sites Web malveillants</translation>
+<translation id="5634728742770877915">Vous disposez du plus haut niveau de sécurité de Growser contre les sites dangereux</translation>
+<translation id="5760318332127300368">Supprimer aussi les données de navigation (<ph name="URL"/>), ce qui pourrait vous déconnecter de Growser.com. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">Tu as atteint la limite de temps fixée par un parent pour l'application Growser <ph name="APP_NAME"/>. Tu pourras l'utiliser demain pendant <ph name="TIME_LIMIT"/>.</translation>
+<translation id="4941819631276629267">Growser a été mis à jour</translation>
+<translation id="2871029453856004998">Cette appli est potentiellement dangereuse et a été bloquée par Growser</translation>
+<translation id="3757415281539421827">Growser valide le package d'installation</translation>
+<translation id="8022386078499568954">Échec de la validation de ce package d'installation par Growser</translation>
+<translation id="5529797218715099093">Growser améliore les PDF</translation>
+<translation id="3908598909163357544">Growser ne signalera plus les notifications de ce site comme spam</translation>
+<translation id="3519014757432845220">Contribuez à améliorer la protection contre le spam en partageant le contenu de la notification et l'URL du site avec Growser. Le contenu pourra être examiné manuellement.</translation>
+<translation id="8028868133304944257">Enregistré depuis Growser</translation>
+<translation id="9217458048141913687">Ouvrir Growser</translation>
+<translation id="3879869835592882268">Sécurité Growser renforcée</translation>
+<translation id="3307078631581490570">Personnalisez Growser</translation>
+<translation id="6133506753060207356">Vous pouvez rouvrir les onglets que vous avez récemment fermés, peu importe où vous utilisez Growser</translation>
+<translation id="8146322071180925001">En savoir plus sur la gestion des mises à jour de Growser</translation>
+<translation id="4016841343509962173">Afficher toutes les règles Growser</translation>
+<translation id="6953549942896871737">Ouvrir dans Growser</translation>
+<translation id="4773299976671772492">Arrêté</translation>
+<translation id="8387617938027387193">Confirmez votre identité</translation>
+<translation id="1481450969185702334">Rechercher et remplir</translation>
+<translation id="443008484043213881">Outils</translation>
+<translation id="8118506371121007279">Ajouter un commentaire</translation>
 </translationbundle>

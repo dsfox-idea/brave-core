@@ -11340,4 +11340,450 @@ Detta kan omfatta information om installerad mjukvara, filer, webbläsaren, enhe
 <translation id="954749761428814584">Språk och inmatningsmetod</translation>
 <translation id="960987915827980018">Ca 1 timme kvar</translation>
 <translation id="995420352808264005">Välj typ av enhetsregistrering</translation>
+<translation id="6681823034920334318">Om du vill casta med en kod aktiverar du synkroniseringsinställningarna i webbläsaren Growser</translation>
+<translation id="2515496577979954543">Öppna Growser</translation>
+<translation id="5924575374764114159"><ph name="TASK_TITLE"/>: Gemini har slutfört din uppgift. Du kan se den i Growser</translation>
+<translation id="3721794228264322796">Stäng Gemini i Growser</translation>
+<translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini i Growser</translation>
+<translation id="1975450474853317621">Öppna i Growser-webbläsaren</translation>
+<translation id="8516824290867275572">Ditt konto har inte åtkomst till Gemini i Growser</translation>
+<translation id="1649234713894562345">Brave finns tack vare det öppna källkodsprojektet Brave och annan mjukvara med <ph name="BEGIN_HIGHLIGHT"/>öppen källkod<ph name="END_HIGHLIGHT"/>.</translation>
+<translation id="870536819717176711">När du väljer att dela den aktuella fliken med Gemini skickas flikens fullständiga innehåll, media och webbadress till Growser.</translation>
+<translation id="1130866111814048607">När flikar delas skickas deras sidinnehåll, media och webbadresser till Brave och kan granskas i säkerhetssyfte.</translation>
+<translation id="7656790264713095385">Aktivera först automatisk webbsökning i Brave för den här enheten</translation>
+<translation id="8572003230388132401">Gemini Spark kan använda automatisk webbsökning i Growser på den här enheten för att interagera med webbplatser och utföra uppgifter åt dig. <ph name="LINK_BEGIN"/>Läs mer<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">Gemini Spark kan bara använda automatisk webbsökning på den här enheten om enheten är aktiv och Growser körs.</translation>
+<translation id="1982892581799327835">Alla som har åtkomst till din Gemini Spark-agent kan styra webbläsaren Growser.</translation>
+<translation id="6689939585896001516">Låt Growser surfa åt dig</translation>
+<translation id="640233545778658570">Gemini i Growser använder automatisk surfning för att arbeta i dina flikar och utföra uppgifter du ger den. <ph name="LINK_BEGIN"/>Läs mer<ph name="LINK_END"/></translation>
+<translation id="2740842679402949230">Läs mer om automatisk webbsökning i Brave</translation>
+<translation id="3570112771874223231">Sidinnehållet och webbadresserna som Gemini använder för uppgiften delas med Brave och kan granskas i säkerhetssyfte.</translation>
+<translation id="2314508080153323869">Gemini i Growser</translation>
+<translation id="1910632359330857071">Chatta med Gemini i Growser för att få svar, viktiga slutsatser med mera medan du surfar</translation>
+<translation id="2483218699324586641">Använd <ph name="FOCUS_TOGGLE_HOTKEY"/> för att öppna Gemini i Growser</translation>
+<translation id="2353068771555482464">Vi presenterar Gemini i Growser</translation>
+<translation id="7545274281857327491">Få det bästa av Growser AI. Fäst Gemini i verktygsfältet för enkel åtkomst eller öppna den när som helst från Growser-menyn.</translation>
+<translation id="8335336878672278597">Gemini i Growser är inte tillgänglig</translation>
+<translation id="570859258083183845">Gemini i Growser kommer till olika platser men är inte tillgänglig överallt</translation>
+<translation id="96535553604365597">Rapportera problem med Growser Cast</translation>
+<translation id="4415611489406290344">Ge Growser åtkomst i <ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/> &gt; Lokalt nätverk &gt; Growser om du vill casta</translation>
+<translation id="8492960370534528742">Feedback om Growser Cast</translation>
+<translation id="2263679799334060788">Vi uppskattar din feedback – den hjälper oss att förbättra Growser Cast.
+    Besök
+    <ph name="BEGIN_LINK"/>
+    hjälpcentret<ph name="END_LINK"/> om du vill felsöka problem med Cast.</translation>
+<translation id="8376137163494131156">Berätta vad som händer med Growser Cast.</translation>
+<translation id="7325065595154456783">Growser-versionen, operativsystemversionen, Cast-inställningar,
+    statistik över speglingsprestationer och diagnostiseringsloggar för kommunikationskanaler
+    skickas in tillsammans med den övriga informationen
+    som du anger ovan. Din feedback används för att diagnosticera och
+    förbättra funktionen. Alla personliga uppgifter du skickar in,
+    oavsett om det är avsiktligt eller oavsiktligt, skyddas i
+    enlighet med våra integritetspolicyer. Genom att skicka in din feedback
+    godkänner du att Growser använder den för att förbättra
+    Braves produkter och tjänster.</translation>
+<translation id="3187556136478864255">Visas Cast-enheten i
+    <ph name="BEGIN_LINK"/>
+    Growser Home-appen<ph name="END_LINK"/>?</translation>
+<translation id="2984923316661218534">Få åtkomst till dina nycklar på den här enheten med Growser Lösenordshantering</translation>
+<translation id="2364302372598204515">Detta är inte ett Growser-konto. Objekt som du sparar i Growser blir inte tillgängliga på andra enheter.</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave-medlemskap</translation>
+<translation id="850632091665381275">Brave-medlemskap</translation>
+<translation id="6710172959248731469">Inställningar för Braves tjänster</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 objekt sparas endast på den här enheten. Om du vill använda det på dina andra enheter sparar du det i Growser-kontot. Detta tar även bort eventuella dubbletter.}other{{ITEM_COUNT} objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot. Detta tar även bort eventuella dubbletter.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 lösenord sparas endast på den här enheten. Om du vill använda det på dina andra enheter sparar du det i Growser-kontot. Detta tar även bort eventuella dubbletter.}other{{PASSWORD_COUNT} lösenord sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot. Detta tar även bort eventuella dubbletter.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{1 lösenord och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot. Detta tar även bort eventuella dubbletter.}other{{PASSWORD_COUNT} lösenord och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot. Detta tar även bort eventuella dubbletter.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{1 bokmärke sparas endast på den här enheten. Om du vill använda det på dina andra enheter sparar du det i Growser-kontot. Detta tar även bort eventuella dubbletter.}other{{BOOKMARK_COUNT} bokmärken sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot. Detta tar även bort eventuella dubbletter.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{1 bokmärke och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot. Detta tar även bort eventuella dubbletter.}other{{BOOKMARK_COUNT} bokmärken och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot. Detta tar även bort eventuella dubbletter.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{1 objekt sparas endast på den här enheten. Om du vill använda det på dina andra enheter sparar du det i Growser-kontot.}other{{ITEM_COUNT} objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{1 lösenord sparas endast på den här enheten. Om du vill använda det på dina andra enheter sparar du det i Growser-kontot.}other{{PASSWORD_COUNT} lösenord sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{1 lösenord och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.}other{{PASSWORD_COUNT} lösenord och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{1 bokmärke sparas endast på den här enheten. Om du vill använda det på dina andra enheter sparar du det i Growser-kontot.}other{{BOOKMARK_COUNT} bokmärken sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 bokmärke och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.}other{{BOOKMARK_COUNT} bokmärken och andra objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 objekt sparas endast på den här enheten. Om du vill använda det på dina andra enheter <ph name="BEGIN_LINK"/>sparar du det i Growser-kontot<ph name="END_LINK"/>.}other{{ITEM_COUNT} objekt sparas endast på den här enheten. Om du vill använda dem på dina andra enheter <ph name="BEGIN_LINK"/>sparar du dem i Growser-kontot<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">Använd ditt Growser-konto eller skapa ett nytt</translation>
+<translation id="1896353439080510710">Chattar granskas och används för att förbättra Brave AI. Gemini är AI och den kan göra misstag. Du kan <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hantera din aktivitet<ph name="END_LINK_MANAGE_ACTIVITY"/>, inklusive information om din plats. <ph name="BEGIN_LINK_LEARN_MORE"/>Läs mer om dina val<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Chattar granskas och används för att förbättra Brave AI. Gemini är AI och den kan göra misstag. Visst innehåll kanske inte är lämpligt för alla. Du kan <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hantera din aktivitet<ph name="END_LINK_MANAGE_ACTIVITY"/>, inklusive information om din plats. <ph name="BEGIN_LINK_LEARN_MORE"/>Läs mer om dina val<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Det här tillägget har sparats i Growser-kontot, men tillhörande data som endast har sparats på den här enheten kan raderas}other{De här tilläggen har sparats i Growser-kontot, men tillhörande data som endast har sparats på den här enheten kan raderas}}</translation>
+<translation id="3523789730715594198">Du kan sluta synkronisera när som helst i inställningarna. Growser kan anpassa Sök och andra tjänster utifrån din historik.</translation>
+<translation id="8231595707224857577">Organisationen har inaktiverat möjligheten att spara flikar i Growser-kontot</translation>
+<translation id="1031540790849324993">Om du vill få tillgång till dina lösenord, bokmärken med mera på alla dina enheter kan du spara dem i Growser-kontot</translation>
+<translation id="7044272971260038324">Spara bokmärkena i Growser-kontot om du vill ta bort dubbletter</translation>
+<translation id="5106710135524113413">När du är inloggad kan du använda bokmärken, tillägg och annat som har sparats i ditt Growser-konto på alla dina enheter</translation>
+<translation id="458475640392126897">När du är inloggad kan du använda teman, inställningar med mera som har sparats i ditt Growser-konto på alla dina enheter</translation>
+<translation id="8780123805589053431">Hämta bildbeskrivningar från Growser</translation>
+<translation id="8076549662907665888">Om en bild inte har någon användbar beskrivning görs ett försök att beskriva den åt dig i Growser. Bilderna skickas till Growser så att beskrivningen kan genereras.</translation>
+<translation id="5216674789212441076">Översätter livetextning automatiskt. Textning skickas till Growser för översättning.</translation>
+<translation id="2955575198481587842">Färger i Growser</translation>
+<translation id="5000497292978544380">AI-läge i Growser Sök</translation>
+<translation id="377490226065453836">Growser-paneler</translation>
+<translation id="2955048943983973430">Relaterade Growser-tjänster</translation>
+<translation id="6214157047210274853">Redigera i Google Wallet</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="5787582109651427233">Öppna Google Wallet om du vill lägga till eller hantera <ph name="BEGIN_LINK_LOYALTY_CARDS"/>stamkundskort<ph name="END_LINK_LOYALTY_CARDS"/> eller <ph name="BEGIN_LINK_PAYMENT_METHODS"/>betalningsmetoder<ph name="END_LINK_PAYMENT_METHODS"/> i Google Pay</translation>
+<translation id="3040435070100611531">Dina värdekort i Google Wallet</translation>
+<translation id="5829544019044013776">Dina betalningsmetoder i Google Wallet</translation>
+<translation id="4140668600752387693">Den här funktionen är aktiverad när du loggar in på Growser-kontot.</translation>
+<translation id="7297228218361240128">Spara information i Google Wallet från sidor du besöker</translation>
+<translation id="4182182457914031017">För att kunna ge förslag och förbättra den här funktionen delas webbadressen och hela sidinnehållet på webbplatsen du besöker med Growser</translation>
+<translation id="808488435221187916">Din information är tillgänglig i Google Wallet på alla enheter där du är inloggad</translation>
+<translation id="7501338159181931945">De här nycklarna sparas i Windows Hello på den här datorn. De sparas inte i Growser-kontot.</translation>
+<translation id="1921051356055149189">Redigera i Growser-kontot</translation>
+<translation id="4498223799912841817">Ta bort från Growser</translation>
+<translation id="3346610836797971718">Vill du ta bort din hemadress från autofyll i Growser?</translation>
+<translation id="6595367601483315266">Vill du ta bort din jobbadress från autofyll i Growser?</translation>
+<translation id="3068798232942246848">Vill du ta bort den här informationen från Autofyll i Growser?</translation>
+<translation id="4713283515261533452"><ph name="BEGIN_LINK"/>Logga ut<ph name="END_LINK"/> om du vill radera webbinformation från enheten utan att ta bort den från Growser-kontot.</translation>
+<translation id="6641004568837764720"><ph name="BEGIN_LINK"/>Besök inställningarna för synkronisering<ph name="END_LINK"/> om du vill radera webbinformation från alla synkroniserade enheter och ditt Growser-konto.</translation>
+<translation id="7711557916951320264"><ph name="BEGIN_LINK"/>Ange din lösenfras<ph name="END_LINK"/> om du vill radera webbinformation från alla synkroniserade enheter och ditt Growser-konto.</translation>
+<translation id="5680951041809780964"><ph name="BEGIN_LINK"/>Logga in<ph name="END_LINK"/> om du vill radera webbinformation från alla synkroniserade enheter och ditt Growser-konto.</translation>
+<translation id="908980466794178222"><ph name="BEGIN_LINK_SEARCH"/>Sökhistorik<ph name="END_LINK_SEARCH"/> och <ph name="BEGIN_LINK_GOOGLE"/>annan aktivitet<ph name="END_LINK_GOOGLE"/> kan sparas i Growser-kontot när du är inloggad. Du kan radera den när du vill.</translation>
+<translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>Annan aktivitet<ph name="END_LINK_GOOGLE"/> kan sparas i Growser-kontot när du är inloggad. Du kan radera den när du vill.</translation>
+<translation id="6533315466883598769">Använda Growser Översätt</translation>
+<translation id="6010651352520077187">När detta är aktiverat blir du tillfrågad om du vill översätta webbplatser till språket du föredrar med Growser Översätt. Funktionen kan också översätta webbplatser automatiskt.</translation>
+<translation id="6873499199714317035">När detta är aktiverat blir du tillfrågad om du vill översätta webbplatser och PDF-filer till språket du föredrar med Brave Översätt. Funktionen kan också översätta webbplatser automatiskt.</translation>
+<translation id="5911030830365207728">Growser Översätt</translation>
+<translation id="7458168200501453431">Använder samma stavningskontroll som Growser Sök. Text som du anger i webbläsaren skickas till Growser.</translation>
+<translation id="8972513834460200407">Kontrollera med nätverksadministratören att brandväggen inte blockerar nedladdning från Braves servrar.</translation>
+<translation id="3407392651057365886">Fler sidor läses in i förväg. Sidor kan läsas in i förväg via Braves servrar när de begärs av andra webbplatser.</translation>
+<translation id="1965578266762387357">När du får skrivhjälp skickas sidans webbadress, innehåll och din text till Growser. Ange inte personliga uppgifter (t.ex. medicinska eller ekonomiska uppgifter)</translation>
+<translation id="3281851196103181918">En webbplats du besöker kan spara mycket information med Growser, främst för att kontrollera att du inte är en bot</translation>
+<translation id="7321946347180923218">När du fortsätter surfa kan webbplatser kontrollera informationen med Growser och verifiera med den föregående webbplatsen du besökte att du troligen är en riktig person.</translation>
+<translation id="3510488868237982080">Läs mer om hur AI påverkar din upplevelse och de kontroller som Growser tillhandahåller</translation>
+<translation id="3003253259757197230">Webbadresser som du besöker skickas till Growser för att förutse vilka webbplatser du kanske vill besöka härnäst och för att visa mer information om den sida du besöker</translation>
+<translation id="69739764870135975">Om du även använder Growser som standardsökmotor får du bättre förslag som är relevanta i sammanhanget</translation>
+<translation id="8358717005361108959">Webbadresserna du besöker sparas i Growser-kontot</translation>
+<translation id="4674867347456586454">Denna data länkas tillfälligt till Growser-kontot när du loggar in för att skydda dig i Braves appar</translation>
+<translation id="8898822736010347272">Skickar webbadresser till vissa sidor som du besöker, vissa systemuppgifter och visst sidinnehåll till Growser för att upptäcka och blockera nya hot och skydda alla användare på internet.</translation>
+<translation id="4255841059940367080">AI-baserat skydd i realtid mot farliga webbplatser, nedladdningar och tillägg baserat på webbinformation som skickas till Growser</translation>
+<translation id="6053586914913150093">Webbadresser skickas till Säker webbsökning för kontroll. Ett litet urval av sidor, nedladdning, tilläggsaktivitet och systeminformation skickas även för att upptäcka nya hot. Denna data länkas tillfälligt till Growser-kontot när du loggar in för att skydda dig i Braves appar.</translation>
+<translation id="777637629667389858">När du är inloggad skyddas du i alla Braves tjänster.</translation>
+<translation id="4492544972585416410">När du är inloggad kopplas denna data till ditt Growser-konto för att skydda dig i Braves tjänster, till exempel genom att öka skyddet i Gmail efter en säkerhetsincident.</translation>
+<translation id="6550891580932862748">Skyddar inte mot farliga webbplatser, nedladdningar och tillägg. Inställningarna för Säker webbsökning i andra produkter från Growser påverkas inte.</translation>
+<translation id="1153636665119721804">Avancerat skydd från Growser</translation>
+<translation id="8678192320753081984">Ger Braves starkaste kontoskydd för personer som löper risk att bli utsatta för riktade attacker</translation>
+<translation id="7803714812705886512">Growser använder mindre data (till exempel delar av webbadresser och nedladdningsinformation) för att upptäcka hot</translation>
+<translation id="8602867356511778172">Growser använder mer data (till exempel webbadresser, exempel på sidinnehåll och systeminformation) för att upptäcka hot snabbare och träffsäkrare</translation>
+<translation id="2547602044908040111">Om du är aktivist, journalist, offentlig person, valarbetare eller någon annan som har en särskilt utsatt roll kan du vara intresserad av Braves <ph name="BEGIN_LINK"/>program Avancerat skydd<ph name="END_LINK"/>.</translation>
+<translation id="5864624288360677142">Använd standardalternativet om det är tillgängligt och Braves DNS som reserv</translation>
+<translation id="7137270216770481232">Growser återställde dessa inställningar</translation>
+<translation id="8723105215342036961">Dessa inställningar har ändrats utanför Growser. Growser har återställt dem för att skydda dig.</translation>
+<translation id="3099985829883207242">Du kan söka på en viss webbplats eller i en viss avdelning i Growser genom att först skriva genvägen i adressfältet och därefter trycka på önskat kortkommando.</translation>
+<translation id="3172166850967951827">Vissa tillägg kan lägga till sökmotorer i Growser</translation>
+<translation id="5433098395236481485">Ladda ned PDF-filer i stället för att låta dem öppnas automatiskt i Growser</translation>
+<translation id="4297918578409923363">Låt Growser välja när webbplatser kan spela upp ljud (rekommenderas)</translation>
+<translation id="3721119614952978349">Du och Growser</translation>
+<translation id="5900302528761731119">Profilbild i Growser Profiler</translation>
+<translation id="2928030851119977280">Valet har sparats. Ditt val gäller när du loggar in i andra av Braves tjänster.</translation>
+<translation id="1818532843473612004">I Growser-kontot</translation>
+<translation id="8511856004631476285">När detta är aktiverat sparas data i ditt Growser-konto och kan användas på alla dina enheter. När inställningen är inaktiverad sparas data endast på den här enheten.</translation>
+<translation id="7846296061357476882">Braves tjänster</translation>
+<translation id="8032692752324456430">Du loggas ut från dina Growser-konton. Bokmärken, historik, lösenord och annan information synkroniseras inte längre.</translation>
+<translation id="3142647462186639376">Kryptera synkroniserad data med en egen <ph name="BEGIN_LINK"/>lösenfras för synkronisering<ph name="END_LINK"/>. Betalningsmetoder och adresser från Google Pay krypteras inte. Webbhistorik från Growser synkroniseras inte.</translation>
+<translation id="63566973648609420">Endast personer som har ditt lösenord kan läsa dina krypterade uppgifter. Lösenordet skickas inte till och sparas inte av Growser. Om du glömmer lösenordet måste du <ph name="BEGIN_LINK"/>återställa synkroniseringen<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">Styr hur webbhistoriken används tillsammans med din andra data i Braves tjänster</translation>
+<translation id="5728072125198221967">Länkade Growser-tjänster</translation>
+<translation id="3848443004871354246">Growser-konto</translation>
+<translation id="3293574207873361017">Hantera Growser-kontot</translation>
+<translation id="6901130673208235020">När du söker i webbhistoriken skickas dina historiska sökningar, sidinnehåll med de bästa matchningarna och genererad modellutdata till Growser</translation>
+<translation id="3178434360326457238">När du besöker webbplatser krypteras deras sidinnehåll och sparas på din enhet. Detta kan påverka Braves prestanda</translation>
+<translation id="8622145666696249878">AI-läget i Brave Sök och anslutna appar</translation>
+<translation id="2760679829473121490">Visa systemaviseringar om funktioner och tips i Growser</translation>
+<translation id="6713316345564743478">Logga in på Growser-kontot för att kontrollera om det finns utsatta lösenord</translation>
+<translation id="1342886103232377846">Öppna Growser Lösenordshantering för att kontrollera om det finns utsatta lösenord</translation>
+<translation id="6766488013065406604">Öppna Growser Lösenordshantering</translation>
+<translation id="5408271390996168857">Du har det bästa skyddet i Growser</translation>
+<translation id="2888959493235069176">AI i Growser</translation>
+<translation id="5058786435107472268">Data som skickas till Growser kan ses av mänskliga granskare för att förbättra Braves AI-teknik</translation>
+<translation id="4928488083257788101">Data som skickas till Growser kan ses av mänskliga granskare för att förbättra den här funktionen</translation>
+<translation id="6690687289858134062">Om Growser upptäcker att ett av dina lösenord har läckt ut i ett offentligt dataintrång kan Growser Lösenordshantering erbjuda att ändra lösenordet åt dig om du är inloggad.</translation>
+<translation id="1377438103060664754">Om ett av dina lösenord upptäcks i samband med ett dataintrång frågar Growser Lösenordshantering om du vill byta det till ett starkt lösenord</translation>
+<translation id="1045487161760507186">Du behöver inte komma ihåg lösenordet eftersom det sparas i Growser Lösenordshantering</translation>
+<translation id="2696675923413008404">Innehåll från den här webbplatsen, inklusive webbadressen, skickas till Growser och kan ses av mänskliga granskare för att förbättra den här funktionen</translation>
+<translation id="4770046633685474652">Upplev Growser på ett nytt sätt, superladdat med AI</translation>
+<translation id="4682807230647698604">När du använder dessa funktioner skickas relevant data till Growser för att skapa AI-upplevelser</translation>
+<translation id="9130857050314385402">Fliktitlar och webbadresser skickas till Growser när du använder färdigheten</translation>
+<translation id="6889302653504319751">Färdigheter sparas i Growser-kontot</translation>
+<translation id="7247922309426191342">Growser kan skapa och översätta textning för de språk som visas här</translation>
+<translation id="113229251350204705">Growser kan skapa textning för de språk som visas här</translation>
+<translation id="2523184218357549926">Skickar webbadresserna till sidor du besöker till Growser</translation>
+<translation id="2489769822799748314">Bidra till att förbättra Braves funktioner och prestanda</translation>
+<translation id="1236327016477620515">Skickar användningsstatistik och felrapporter till Growser automatiskt</translation>
+<translation id="4847986390991794208">Få Growser-teknik i Growser</translation>
+<translation id="4849857027852929587">Verifiera din identitet om du vill använda och spara lösenord i Growser-kontot</translation>
+<translation id="4571634846305359773">Verifiera din identitet för att se till att du alltid kan använda lösenorden i Growser-kontot</translation>
+<translation id="1067922213147265141">Andra Growser-tjänster</translation>
+<translation id="5611620894475877872">Kryptera synkroniserade lösenord med ditt Growser-konto</translation>
+<translation id="2934862573358659343">Använd Braves standardkryptering för lösenorden i Growser-kontot</translation>
+<translation id="2234876718134438132">Synk och Braves tjänster</translation>
+<translation id="90129144187791159">Det här kontot är inte kopplat till Growser, så funktioner som Growser Sync är inte tillgängliga</translation>
+<translation id="8576758133946664895">Growser Root Store</translation>
+<translation id="465996245977626576">Growser Root Store innehåller certifikat från certifikatutfärdare som är betrodda av
+      Braves rotprogram och som granskas kontinuerligt.</translation>
+<translation id="6792337889847068504">Läs mer om Growser Root Store på en ny flik.</translation>
+<translation id="3691353018566626378">Om du tar bort ett servercertifikat använder Growser det inte längre för att identifiera servrar.</translation>
+<translation id="1378122021175898739">Systeminformation för Growser</translation>
+<translation id="1017340475205725100">Growser-användarloggar på ChromeOS</translation>
+<translation id="7635904580734496104">Id för Growser-konto</translation>
+<translation id="5221420127618874650">Spara i Growser-kontot</translation>
+<translation id="691102290537033604">Tillägget kan köra kod som inte har granskats av Growser. Detta kan vara osäkert och du bör bara aktivera tillägget om du vet vad du gör.</translation>
+<translation id="2375391460087228850">Growser-appar</translation>
+<translation id="7370738934099833954">Med tillägg i Growser kan du göra mer</translation>
+<translation id="6629808816989244742">är tillägg i Growser som hjälper dig att göra mer</translation>
+<translation id="7474944013493005173">Tillägg i Growser kan hjälpa dig</translation>
+<translation id="5608497824592875805">Endast dina kontakter med ett Growser-konto. <ph name="LINK_BEGIN"/>Se kontakter<ph name="LINK_END"/></translation>
+<translation id="1958324393151249273">Om du vill använda Närdelning med de här kontakterna lägger du till de e-postadresser som är kopplade till personernas Growser-konton i dina kontakter.</translation>
+<translation id="4588215749100790315">Lägg till de e-postadresser som är kopplade till personernas Growser-konton i dina kontakter om du vill använda <ph name="FEATURE_NAME"/> med dem.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{# kontakt är inte tillgänglig. Lägg till den e-postadress som är kopplad till personens Growser-konto i dina kontakter om du vill använda Närdelning med honom eller henne.}other{# kontakter är inte tillgängliga. Lägg till de e-postadresser som är kopplade till personernas Growser-konton i dina kontakter om du vill använda Närdelning med dem.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{# kontakt är inte tillgänglig. Lägg till e-postadressen som är kopplad till personens Growser-konto i dina kontakter om du vill använda <ph name="FEATURE_NAME"/> med hen.}other{# kontakter är inte tillgängliga. Lägg till de e-postadresser som är kopplade till personernas Growser-konton i dina kontakter om du vill använda <ph name="FEATURE_NAME"/> med dem.}}</translation>
+<translation id="3115470387083988713">Du kan öka säkerheten genom att kryptera lösenord på enheten innan de sparas i Growser Lösenordshantering.</translation>
+<translation id="8042331986490021244">Dina lösenord krypteras på enheten innan de sparas i Growser Lösenordshantering</translation>
+<translation id="1440474484372226561">Ditt lösenord har inte delats. Kontrollera internetanslutningen och se till att du är inloggad i Growser. Försök sedan igen.</translation>
+<translation id="6667187897999649121">För närvarande kan du bara dela lösenord med familjemedlemmar. <ph name="BEGIN_LINK"/>Skapa en familjegrupp<ph name="END_LINK"/> med upp till sex medlemmar och få ut mer av dina produkter och prenumerationer från Growser.</translation>
+<translation id="3767835232661747729">För närvarande kan du bara dela lösenord med familjemedlemmar. <ph name="BEGIN_LINK"/>Bjud in familjemedlemmar<ph name="END_LINK"/> att gå med i gruppen så att du får ut mer av dina produkter och prenumerationer på Growser.</translation>
+<translation id="4509277363725254222">När du delar en kopia av ditt <ph name="BEGIN_BOLD_USERNAME"/>användarnamn<ph name="END_BOLD_USERNAME"/> och <ph name="BEGIN_BOLD_PASSWORD"/>lösenord<ph name="END_BOLD_PASSWORD"/> kan familjemedlemmen fylla i uppgifterna med Growser Lösenordshantering</translation>
+<translation id="3618647122592024084">Nu kan <ph name="RECIPIENT_NAME"/> använda ditt användarnamn och lösenord när de använder Growser Lösenordshantering. Be hen att öppna <ph name="WEBSITE"/> och logga in.</translation>
+<translation id="7191632649590906354">Dina familjemedlemmar kan nu använda ditt användarnamn och lösenord när de använder Growser Lösenordshantering. Be dem att öppna <ph name="WEBSITE"/> och logga in.</translation>
+<translation id="2016576853804262709">Dina familjemedlemmar kan inte ta emot lösenord just nu. Be dem att uppdatera Growser och synkronisera sina lösenord.</translation>
+<translation id="7452861405952250711"><ph name="BRAND"/> kan kontrollera dina lösenord när du loggar in med Growser-kontot</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{{COUNT} lösenord sparas endast på den här enheten. Om du vill använda det på dina andra enheter <ph name="BEGIN_LINK"/>sparar du det i Growser-kontot<ph name="END_LINK"/>.}other{{COUNT} lösenord sparas endast på den här enheten. Om du vill använda dem på dina andra enheter <ph name="BEGIN_LINK"/>sparar du dem i Growser-kontot<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">Growser Lösenordshantering på webben</translation>
+<translation id="1368798504801939187">Se dina lösenord även när du inte använder Growser eller Android genom att logga in på <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
+<translation id="829923460755755423">Lägg till en genväg till Growser Lösenordshantering</translation>
+<translation id="7244677273667272006">Verifiera din identitet för att lägga till lösenord och få tillgång till dem på alla enheter med ditt Brave-konto</translation>
+<translation id="8189517459248805166">Ditt lösenord på <ph name="WEBSITE"/> har sparats på den här enheten och i Growser-kontot. Vilket vill du radera?</translation>
+<translation id="9101265711096405922">Från Growser-kontot</translation>
+<translation id="927421426408921503">Vill du flytta sparade lösenord till Growser-kontot?</translation>
+<translation id="5854237678863974330">När du sparar lösenord i Growser-kontot kan du använda dem på den här enheten och andra enheter där du är inloggad</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{Spara <ph name="WEBSITE"/> lösenord i Growser-kontot}other{Spara <ph name="WEBSITE"/> lösenord i Growser-kontot}}</translation>
+<translation id="8095189618468031638">Om du vill använda dem på dina andra enheter sparar du dem i Growser-kontot.</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{Lösenordet har sparats i Growser-kontot <ph name="USER_EMAIL"/>}other{Lösenorden har sparats i Growser-kontot <ph name="USER_EMAIL"/>}}</translation>
+<translation id="1286604678719026234">Lösenordet sparas endast på den här enheten. Om du vill använda det på dina andra enheter kan du spara det i Growser-kontot <ph name="USER_EMAIL"/>.</translation>
+<translation id="11353874453755012">Vill du spara det i Growser-kontot?</translation>
+<translation id="9031082696306594802">Du måste vara inloggad om Growser ska kunna slutföra uppgiften</translation>
+<translation id="7412981914901765024">Growser Lösenordshantering kan uppdatera kontot med ett starkt lösenord och spara det i <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">Growser Lösenordshantering kan uppdatera kontot med ett starkt lösenord som sparas åt dig i kontot <ph name="EMAIL"/>.</translation>
+<translation id="309984825599745401">Mer om den här funktionen och relevant data som skickas till Growser</translation>
+<translation id="4786289993714497244">Innehåll från lösenordssidor och relaterad information skickas till Growser och granskas av människor. Lösenordet krypteras och visas aldrig för någon. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">Om Growser upptäcker att ett av dina lösenord har läckt ut vid ett offentligt dataintrång kan du erbjudas att ändra lösenordet om du är inloggad</translation>
+<translation id="899508106612248318">Låt Growser ändra lösenordet för <ph name="WEBSITE"/> automatiskt</translation>
+<translation id="5710383353978348431">Om Growser upptäcker att ett av dina lösenord har läckt ut i ett offentligt dataintrång kan Growser Lösenordshantering erbjuda att ändra lösenordet åt dig om du är inloggad. <ph name="BEGIN_LINK"/>Läs mer om automatisk lösenordsändring<ph name="END_LINK"/>.</translation>
+<translation id="560743248410493208">Growser behöver hjälp med att ändra lösenordet</translation>
+<translation id="4246636650471208372">Om du vill använda Färdigheter loggar du in i Growser med ett Growser-konto där Gemini i Growser är aktiverat</translation>
+<translation id="8111843310458688756">Funktionen Färdigheter är för närvarande inaktiverad. Uppdatera Growser-inställningarna för att komma igång.</translation>
+<translation id="118870493070173224">Dina färdigheter sparas i Growser-kontot.</translation>
+<translation id="3176984568033229317">Använd Growser Sök i Edge</translation>
+<translation id="3166256634240273583">Använd Growser Sök direkt från webbläsarens adressfält och när du öppnar en ny flik.</translation>
+<translation id="76131528886466333">Installera tillägget Growser Sök för Microsoft Edge</translation>
+<translation id="8323744572398547859">Logga in och synkronisera historiken om du vill ha samma flikar tillgängliga på alla enheter. Du får även dina lösenord med mera på alla dina enheter. Du kan sluta synkronisera när som helst i inställningarna. Growser kan anpassa Sök och andra tjänster utifrån din historik.</translation>
+<translation id="7907312522152480478">Om du vill få tillgång till flikar från dina andra enheter måste du verifiera din identitet och synkronisera din historik och dina flikar. Du kan sluta synkronisera när som helst i inställningarna. Growser kan anpassa Sök och andra tjänster utifrån din historik.</translation>
+<translation id="2259337945538989999">Verifiera din identitet för att få samma flikar tillgängliga på alla enheter. Du kan sluta synkronisera när som helst i inställningarna. Growser kan anpassa Sök och andra tjänster utifrån din historik.</translation>
+<translation id="3240718227457961717">Synkronisera flikar och historik med <ph name="ACCOUNT_EMAIL"/> om du vill få samma flikar tillgängliga på alla enheter. Du kan sluta synkronisera när som helst i inställningarna. Growser kan anpassa Sök och andra tjänster utifrån din historik.</translation>
+<translation id="2246549592927364792">Vill du hämta bildbeskrivningar från Growser?</translation>
+<translation id="6842321291404176019">Hantera ditt Growser-konto</translation>
+<translation id="7782102568078991263">Inga fler förslag från Growser</translation>
+<translation id="1125610294554423504">Growser &amp;Labs …</translation>
+<translation id="3592763781862723495">Braves användarvillkor ändras den 31 mars</translation>
+<translation id="4863113847665206034">Viktig information om Growser Enterprise</translation>
+<translation id="8880009256105053174">Sö&amp;k på den här sidan med Growser …</translation>
+<translation id="8643443571868262066"><ph name="FILE_NAME"/> kan vara farlig. Vill du skicka den till Avancerat skydd från Growser för skanning?</translation>
+<translation id="9112786533191410418"><ph name="FILE_NAME"/> kan vara farlig. Vill du skicka den till Growser för genomsökning?</translation>
+<translation id="5261799091118902550">Den här filen kan innehålla ett virus eller skadlig kod. Du kan skicka den till Growser för att kontrollera om den är säker.</translation>
+<translation id="6427068192186142792">Nedladdningen av en farlig fil har precis blockerats i Growser. Få ännu starkare säkerhet med Utökat skydd.</translation>
+<translation id="3601817089411059195"><ph name="FILENAME"/> kan vara farlig. Lägg till ett lösenord om du vill att Growser ska verifiera filen. Du kan även ladda ned den direkt.</translation>
+<translation id="8558379661202483425">Growser-appar &gt; <ph name="APP_NAME"/></translation>
+<translation id="7952238695786927848">Growser tror att du inte vill få aviseringar från den här webbplatsen. Därför döljs begäranden för att minska störningar.</translation>
+<translation id="3714312445688817444">Growser tror att du inte vill använda din plats på den här webbplatsen. Därför döljs begäranden för att minska störningar.</translation>
+<translation id="7178558589762724625">En extern app vill ha fullständig kontroll över den här Growser-sessionen för att felsöka den. Detta omfattar åtkomst till din sparade data, dina cookies och din webbplatsdata samt förmågan att navigera till valfri webbadress.</translation>
+<translation id="691816738008428630">Braves filverktyg</translation>
+<translation id="8376236901471830989">Dokumentanalys i Growser</translation>
+<translation id="5075779086521388873">Du får även dina lösenord med mera från Growser-kontot.</translation>
+<translation id="9081137272142533824">Om du vill tillåta att <ph name="CHILD_NAME"/> installerar framtida tillägg utan ditt godkännande ska du öppna Family Link-appen på din enhet och uppdatera Growser-inställningarna för <ph name="CHILD_NAME"/>.</translation>
+<translation id="3841738495771204227">Ett annat program i datorn har lagt till en app som kan ändra hur Growser fungerar.</translation>
+<translation id="7126263064588272381">Ett annat program i datorn har lagt till ett tillägg som kan ändra hur Growser fungerar.</translation>
+<translation id="4172864922628327657">Ett annat program i datorn har lagt till ett tema som kan ändra hur Growser fungerar.</translation>
+<translation id="3105796011181310544">Vill du byta tillbaka till Growser?</translation>
+<translation id="4837128290434901661">Vill du byta tillbaka till Growser Sök?</translation>
+<translation id="3943902841682071">Äldre versioner av Growser-appar öppnas inte på Windows-enheter efter december 2022. Kontakta administratören om att uppdatera till en ny version eller ta bort appen.</translation>
+<translation id="8819011161186914037">Growser-appar migreras till progressiva webbappar. Den här Growser-appen har installerats i webbläsaren av din organisation. Om du vill öppna den progressiva webbappen från applistan måste du först kontakta administratören och be hen avinstallera Growser-appen. Under tiden kan du besöka <ph name="EXTENSION_LAUNCH_URL"/> för att öppna <ph name="EXTENSION_NAME"/> på webben.</translation>
+<translation id="646124512503317592">Äldre versioner av Growser-appar öppnas inte på Windows-enheter efter december 2022. Du kan kolla om det finns en ny version tillgänglig.</translation>
+<translation id="933653713937577409">Läs mer om Growser-appar som inte stöds</translation>
+<translation id="4092709865241032354">Hjälp Growser Lösenordshantering att spara dina inloggningsuppgifter genom att lägga till ditt användarnamn för den här webbplatsen</translation>
+<translation id="1050292285963299821">Fortsätt använda lösenorden i Growser-kontot</translation>
+<translation id="623821062113722442">Fortsätt spara lösenord i Growser-kontot</translation>
+<translation id="4769005558293498755">Lösenorden sparas i Growser-kontot så att du kan använda dem på vilken enhet som helst</translation>
+<translation id="6247557882553405851">Growser Lösenordshantering</translation>
+<translation id="5902333873367271103">Verifiera din identitet för att få tillgång på alla enheter med ditt Growser-konto</translation>
+<translation id="6520087076882753524">Du kan se och hantera sparade lösenord i Growser Lösenordshantering</translation>
+<translation id="5181172023548002891">I Growser Lösenordshantering för <ph name="ACCOUNT"/></translation>
+<translation id="7668423670802040666">I Growser Lösenordshantering för <ph name="ACCOUNT"/></translation>
+<translation id="6364173777171379284">Spara lösenord säkert i Growser-kontot så att du aldrig mer behöver skriva dem</translation>
+<translation id="8035640035083640426">Få tillgång till dina lösenord när du är inloggad på Growser-kontot</translation>
+<translation id="9010330063886818303">Logga in och aktivera synkronisering om du vill spara lösenord i Growser-kontot.</translation>
+<translation id="2618542259010630366">Aktivera synkronisering om du vill spara lösenord i Growser-kontot.</translation>
+<translation id="6307677019050188653">Growser läser in flaggor från en kommandoradsfil. Stabilitet och säkerhet kan påverkas.</translation>
+<translation id="7602868996817972616">Fråga Growser om den här sidan</translation>
+<translation id="7084095352418993433">Fråga Growser om den här sidan: <ph name="PAGE_TITLE"/></translation>
+<translation id="5563234215388768762">Sök på Growser eller skriv en webbadress</translation>
+<translation id="4097560579602855702">Sök på Growser</translation>
+<translation id="6621282332208609777">Fråga Growser eller ange en webbadress</translation>
+<translation id="835927394551949760">Fråga Growser</translation>
+<translation id="2856216380429599274">Standardinställningar för Growser</translation>
+<translation id="4334778460914339013">Temat har uppdaterats till Growser som standard</translation>
+<translation id="2983311431122838216">Fråga AI-läget i Growser Sök</translation>
+<translation id="6998036632333022623">Delar flikar med Growser</translation>
+<translation id="1957188536718247425">Fråga Growser om föregående flik</translation>
+<translation id="964903383988132751">Fråga Growser om föregående flik: <ph name="TAB_TITLE"/></translation>
+<translation id="1168799042879144934">Fråga Growser om föregående sida</translation>
+<translation id="4857506880242459832">Fråga Growser om föregående sida: <ph name="PAGE_TITLE"/></translation>
+<translation id="5918150687673977578">Du ser förslag på hur du kan anpassa Growser och göra den mer användbar för dina dagliga behov.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna i kortmenyn. Det finns även fler alternativ i Anpassa Growser.</translation>
+<translation id="5587243084217793846">Förslag på filer visas så att du enkelt ska kunna fortsätta med det du gjorde senast på Google Drive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna i kortmenyn. Det finns även fler alternativ i Anpassa Growser.</translation>
+<translation id="3309585159276256701">Förslag på filer visas så att du enkelt ska kan fortsätta där du slutade i Microsoft SharePoint och OneDrive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna i kortmenyn. Det finns även fler alternativ i Anpassa Growser.</translation>
+<translation id="7812170317334653156">Growser Kalender har dolts</translation>
+<translation id="6913051485529944333">Du kommer inte att se Growser Kalender på den här sidan igen</translation>
+<translation id="6696214841962677136">Din kalender visas så att du enkelt kan navigera till din nästa händelse i Growser Kalender.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna i kortmenyn eller hitta fler alternativ i Anpassa Growser.</translation>
+<translation id="2845276301195220700">Fler åtgärder för Growser Kalender</translation>
+<translation id="1885089541024391265">Growser Kalender</translation>
+<translation id="1296410481664942178">Visa inte Growser Kalender</translation>
+<translation id="4880295985240000243">Din kalender visas så att du enkelt kan navigera till din nästa händelse i kalendern i Outlook.
+       <ph name="BREAK"/>
+       <ph name="BREAK"/>
+       Du kan hantera inställningarna i kortmenyn eller hitta fler alternativ i Anpassa Growser.</translation>
+<translation id="6474021817475285003">Se mer i Brave Kalender</translation>
+<translation id="9066394310994446814">Det här objektet visas för dig utifrån din tidigare aktivitet i Braves tjänster. Du kan se och radera din data och ändra dina inställningar på <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Läs mer om vilken data Growser samlar in och varför på <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
+<translation id="5730739935948075356">Du kan se sidor som du har besökt och föreslagna sökningar så att du enkelt kan fortsätta där du slutade.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna i kortmenyn. Det finns även fler alternativ i Anpassa Growser.</translation>
+<translation id="1527457583170535338">Förslag på sökningar och shoppingrabatter som kan intressera dig (baserat på din senaste aktivitet) visas.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna från det här kortet när som helst eller visa fler alternativ i Anpassa Growser.</translation>
+<translation id="8526019066138627163">Flikar från andra enheter visas så att du enkelt kan fortsätta där du slutade.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna i kortmenyn. Det finns även fler alternativ i Anpassa Growser.</translation>
+<translation id="8827376900981477247">Du ser dina nyligen använda flikgrupper så att du enkelt kan fortsätta där du slutade.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Du kan hantera inställningarna i kortmenyn eller hitta fler alternativ i Anpassa Growser.</translation>
+<translation id="7868070199056978976">Skaffa Growser på din mobila enhet</translation>
+<translation id="3098738509270989275">Ladda ned Growser för iOS för att få åtkomst till dina flikar, bokmärken och lösenord på telefonen.</translation>
+<translation id="6548945820758901244">Öppna sidopanelen i Growser Sök</translation>
+<translation id="1157952955648710254">Stäng sidopanelen för Growser Sök</translation>
+<translation id="8376752431516546391">Sidopanel med Growser Sök</translation>
+<translation id="4621866192918370652">Du kan söka på den här sidan med Growser för att få mer användbar information</translation>
+<translation id="2360792123962658445">Om du vill få en sammanfattning av sidan, relaterade sökningar och annan användbar information om den här sidan väljer du sidopanelsknappen för Growser Sök i verktygsfältet</translation>
+<translation id="6868193750403948178">Anpassa Growser</translation>
+<translation id="5009064339929592579">Vill du spara i en mapp i Growser-kontot?</translation>
+<translation id="7400528739136719497">Vissa av Braves röster kanske inte är tillgängliga just nu</translation>
+<translation id="4857677595331912231">Innehållet och webbadressen på din nuvarande flik delas med Brave för att ge dig mer relevanta svar. Du kan lägga till eller ta bort flikar medan du surfar.</translation>
+<translation id="5639212636098910819">Fortsätt i Growser</translation>
+<translation id="3252169590975855820">Du kan komma åt det i Growser Lösenordshantering</translation>
+<translation id="3843323136102787632">Ladda ned Growser med den här QR-koden och logga in på Growser-kontot.</translation>
+<translation id="9136966630767081659">Tips för Growser</translation>
+<translation id="5743876629139760900">Du kan använda tillägg i Growser för att hålla ordning, förenkla uppgifter och anpassa din surfning</translation>
+<translation id="2694280280138200129">Din anslutning är alltid säker, så länge det inte visas en varning i Growser</translation>
+<translation id="3567433952279331449">Anpassa Growser så att webbläsaren får ett nytt utseende</translation>
+<translation id="1856921079189283630">Klicka på Anpassa Growser</translation>
+<translation id="3656717592188518245">Nu kan du ge webbläsaren ett nytt utseende när som helst från menyn Anpassa Growser</translation>
+<translation id="2014729156921901">För att spara minne har en del innehåll i Growser tagits bort</translation>
+<translation id="1616505795285943236">Vill du även aktivera Förbättrad säker webbsökning för den här Growser-profilen?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{Det utsatta lösenordet har ändrats.
+
+Det finns # utsatt lösenord till. Du rekommenderas av Growser Lösenordshantering att kontrollera detta lösenord nu.}other{Det utsatta lösenordet har ändrats.
+
+Det finns # utsatta lösenord till. Du rekommenderas av Growser Lösenordshantering att kontrollera dessa lösenord nu.}}</translation>
+<translation id="3023028874856327238">Du kan spara det här lösenordet i Growser-kontot eller endast på den här enheten</translation>
+<translation id="6662394424395160792">Använd Growser Lösenordshantering för att logga in snabbare på webbplatser från alla dina enheter</translation>
+<translation id="5195408296304472010">Logga in i Growser för att spara starka lösenord med Growser Lösenordshantering</translation>
+<translation id="4069802351872017480">Du kan spara lösenord med Growser Lösenordshantering när du är inloggad på Growser</translation>
+<translation id="5530977410273748884">Spara lösenordet i Growser Lösenordshantering genom att klicka på nyckeln</translation>
+<translation id="2743378970365831481">Om du vill spara lösenordet i Growser Lösenordshantering måste du välja ikonen för Lösenordshantering i adressfältet</translation>
+<translation id="3635353578505343390">Skicka feedback till Growser</translation>
+<translation id="3192586965067888278">Beskriv problemet utförligt. Din feedback skickas till Growser för mänsklig granskning och kan användas för att förbättra eller utveckla Braves produkter och tjänster.</translation>
+<translation id="6333064448949140209">Filen skickas till Growser för felsökning</translation>
+<translation id="93343527085570547">Besök <ph name="BEGIN_LINK1"/>sidan med juridisk hjälp<ph name="END_LINK1"/> om du vill begära innehållsändringar av juridiska skäl. Viss konto- och systeminformation kan skickas till Growser. Med hjälp av dessa uppgifter kan vi åtgärda tekniska problem och förbättra våra tjänster. Informationen används i enlighet med Braves <ph name="BEGIN_LINK2"/>integritetspolicy<ph name="END_LINK2"/> och våra <ph name="BEGIN_LINK3"/>användarvillkor<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">Den data som markerades har tagits bort från Growser och från synkroniserade enheter. Det kan finnas webbhistorik av annat slag i Growser-kontot på <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>, t.ex. sökningar och aktivitet på andra tjänster från Growser.</translation>
+<translation id="967965329294419603">Data i Growser har raderats</translation>
+<translation id="1597736167243418494">(Felsidor i Growser)</translation>
+<translation id="3372478764182952159">Growser med detta Growser-konto</translation>
+<translation id="2577981599306533385"><ph name="MEMBER_FULL_NAME"/> (<ph name="EMAIL"/>) förlorar omedelbart åtkomst till flikgruppen <ph name="GROUP_NAME"/> och kan inte längre interagera med dig i Braves tjänster.</translation>
+<translation id="1917766536967060661">Du förlorar omedelbart åtkomsten till flikgruppen <ph name="GROUP_NAME"/> och <ph name="BLOCKED_MEMBER_FULL_NAME"/> (<ph name="BLOCKED_MEMBER_EMAIL"/>) kan inte längre interagera med dig i Braves tjänster.</translation>
+<translation id="2417535973197532627">Om du vill dela flikar och samarbeta med andra måste du logga in i Growser och synkronisera din historik och dina flikar. Du får även dina lösenord med mera på alla dina enheter.</translation>
+<translation id="64301400193488735">Om du vill dela eller gå med i flikgrupper måste du kunna logga in i Growser</translation>
+<translation id="8040715633918382311">När organisationen begränsar sparandet i Growser-kontot kan du inte dela eller gå med i flikgrupper</translation>
+<translation id="7224231921984484941">Om du vill dela, gå med i och samarbeta i flikgrupper öppnar du inställningarna och aktiverar Tillåt inloggning i Growser</translation>
+<translation id="5328048595378098795">Nya Growser är tillgängligt</translation>
+<translation id="7415249272773209705"><ph name="APP_NAME"/> delar en Growser-flik.</translation>
+<translation id="7714085981364518713"><ph name="APP_NAME"/> delar ljud och en flik från Growser.</translation>
+<translation id="2410649455830574015">Skicka användningsstatistik och kraschrapporter till Growser automatiskt</translation>
+<translation id="3051767373530645849">Tillägget har inaktiverats. Det kan vara osäkert.</translation>
+<translation id="2357378493576302986"><ph name="THIRD_PARTY_TOOL_NAME"/> önskar återställa inställningarna för Growser till de ursprungliga standardinställningarna. Detta innebär att din startsida tillsammans med sidan ny flik och sökmotorn återställs liksom att tillägg inaktiveras och alla flikar lossas. Dessutom rensas alla tillfälliga och cachelagrade data, såsom cookies, innehåll och webbplatsdata</translation>
+<translation id="2887613109410166736">Välj en enhet. Öppna sedan Growser på den för att se sidan.</translation>
+<translation id="1162630940779651724">Om du vill skicka den här fliken till en annan enhet loggar du in i Growser på båda enheterna</translation>
+<translation id="5388608738812110907">Om du vill skicka den här fliken till en annan enhet loggar du in i Growser på den enheten</translation>
+<translation id="4007679133627124999">Om du vill skicka länkar mellan enheter måste du se till att båda är inloggade på samma Growser-konto.</translation>
+<translation id="2377999415409519333">Verifiera din identitet för att skicka länkar. Du kan skicka länkar när du är inloggad på samma Brave-konto på båda enheterna.</translation>
+<translation id="4986706507552097681">Du kan alltid välja vad som ska synkroniseras i inställningarna. Growser kan anpassa Sök och andra tjänster utifrån din historik.</translation>
+<translation id="8002662358897231821">Logga in om du vill få tillgång till samma bokmärken, historik, lösenord och andra inställningar på alla dina enheter. Dessutom blir du automatiskt inloggad på Braves tjänster.</translation>
+<translation id="3128296144259620504">Growser kontrolleras av automatisk testmjukvara</translation>
+<translation id="5308456967320989709">Testning av Growser v<ph name="BROWSER_VERSION"/> är endast till för automatisk testning. För vanligt surfande använder du en standardversion av Growser som uppdateras automatiskt.</translation>
+<translation id="7655407181412188363">Ladda ned Growser</translation>
+<translation id="5902400038326841449">Growser Lösenordshantering är inaktiverad</translation>
+<translation id="6564343790052433242">Growser Lösenordshantering måste vara aktiverad om du vill skapa en nyckel för <ph name="APP_NAME"/></translation>
+<translation id="1312107444925145416">Din Growser-profil</translation>
+<translation id="5186788525428341874">Du kan logga in snabbare på dina enheter med den här nyckeln. Den sparas med Growser Lösenordshantering för <ph name="ACCOUNT_NAME"/>.</translation>
+<translation id="2204168219363024184">Verifiera din identitet om du vill skapa den här nyckeln med Growser Lösenordshantering</translation>
+<translation id="6331857227627979149">Nyckeln sparas i Growser Lösenordshantering för <ph name="ACCOUNT_NAME"/>. Du behöver bara göra detta en gång.</translation>
+<translation id="7484943269191249363">Du kan använda alla dina nycklar som har sparats i Growser Lösenordshantering på den här enheten. Du behöver bara göra detta en gång.</translation>
+<translation id="8189257540098107776">Det går inte att nå Growser Lösenordshantering</translation>
+<translation id="4540409690203718935">Det går inte att nå Growser Lösenordshantering. Försök igen om några minuter</translation>
+<translation id="7091667403045767243">för att använda nycklar i ditt Growser-konto</translation>
+<translation id="8436800506934625875">Skapa en alfanumerisk pinkod för återställning för Growser Lösenordshantering</translation>
+<translation id="6520115099532274511"><ph name="SITE"/> vill verifiera din identitet. Ange din alfanumeriska pinkod för Growser Lösenordshantering</translation>
+<translation id="1011431628606634753">Ändra återställningspinkoden för Growser Lösenordshantering</translation>
+<translation id="7036550011779986598"><ph name="RP_ID"/> har precis skapat en nyckel för ditt konto. Nycklar är ett snabbare och säkrare sätt att logga in och sparas i Growser Lösenordshantering för <ph name="USER"/>. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">Du har Braves starkaste skydd mot farliga webbplatser, nedladdningar och tillägg</translation>
+<translation id="8655204793400034351">Du har nu standardsäkerhetsskydd. Aktivera Förbättrad säker webbsökning i Growser-inställningarna om du vill få ett bättre skydd mot farliga webbplatser, nedladdningar och tillägg.</translation>
+<translation id="984351584831083958">Inställningar för Growser</translation>
+<translation id="988181568526563957">Braves starkaste skydd gör mer för att skydda dig mot farliga webbplatser, nedladdningar och tillägg</translation>
+<translation id="5634728742770877915">Du har den starkaste säkerheten i Growser mot skadliga webbplatser</translation>
+<translation id="5760318332127300368">Radera även webbinformation (<ph name="URL"/>), vilket kan innebära att du loggas ut från Growser.com. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">Du har nått gränsen som din förälder har ställt in för Growser-appen <ph name="APP_NAME"/>. Du kan använda den i <ph name="TIME_LIMIT"/> i morgon.</translation>
+<translation id="4941819631276629267">Growser har uppdaterats</translation>
+<translation id="2871029453856004998">Den här appen är potentiellt farlig och har blockerats av Growser</translation>
+<translation id="3757415281539421827">Growser verifierar installationspaketet</translation>
+<translation id="8022386078499568954">Growser kunde inte verifiera detta installationspaket</translation>
+<translation id="5529797218715099093">Growser gör PDF-filer bättre</translation>
+<translation id="3908598909163357544">Growser slutar flagga aviseringar från den här webbplatsen som spam</translation>
+<translation id="3519014757432845220">Hjälp oss att förbättra skyddet mot spam genom att dela meddelandeinnehåll och webbplatsens webbadress med Growser. Innehållet kan granskas av människor.</translation>
+<translation id="8028868133304944257">Sparat från Growser</translation>
+<translation id="9217458048141913687">Öppna Growser</translation>
+<translation id="3879869835592882268">Få det bästa skyddet i Growser</translation>
+<translation id="3307078631581490570">Anpassa Growser</translation>
+<translation id="6133506753060207356">Du kan öppna nyligen stängda flikar igen var du än använder Growser</translation>
+<translation id="8146322071180925001">Läs mer om hur du underhåller Growser-uppdateringar</translation>
+<translation id="4016841343509962173">Se alla Growser-principer</translation>
+<translation id="6953549942896871737">Öppna i Growser</translation>
+<translation id="4773299976671772492">Stoppad</translation>
+<translation id="8387617938027387193">Verifiera din identitet</translation>
+<translation id="1481450969185702334">Hitta och fyll i</translation>
+<translation id="443008484043213881">Verktyg</translation>
+<translation id="8118506371121007279">Ge feedback</translation>
 </translationbundle>

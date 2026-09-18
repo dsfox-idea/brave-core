@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Dritaret dhe grupet e tua të mbyllura mund të rihapen nga seksioni Dritaret e fundit dhe seksioni i Grupeve të skedave. Dritarja jote Private nuk do të jetë e disponueshme.}
         other {Dritaret dhe grupet e tua të mbyllura mund të rihapen nga seksioni Skedat e fundit dhe seksioni i Grupeve të skedave. Dritaret e tua # Private nuk do të jenë të disponueshme.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> lidhje nga Growser}other{<ph name="TABS_COUNT_MANY"/> lidhje nga Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> shqyrtim nga Growser}other{<ph name="REVIEWS_COUNT_MANY"/> shqyrtime nga Growser}}</translation>
+<translation id="2928243913527329289">Growser | Rreth këtij dyqani</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser mbyll automatikisht skedat dhe grupet e skedave joaktive pas <ph name="AUTO_DELETE_DELAY_ONE"/> muaji. Mund ta ndryshosh këtë te cilësimet.}other{Growser mbyll automatikisht skedat dhe grupet e skedave joaktive pas <ph name="AUTO_DELETE_DELAY_MANY"/> muajsh. Mund ta ndryshosh këtë te cilësimet.}}</translation>
 </translationbundle>

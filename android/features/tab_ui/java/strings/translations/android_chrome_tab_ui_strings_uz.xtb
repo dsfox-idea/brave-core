@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Yopilgan varaqlar va guruhlarni Oxirgi varaqlar hamda Varaq guruhlari boʻlimlarida qayta ochish mumkin. Maxfiy varaq qayta ochilmaydi.}
         other {Yopilgan varaqlar va guruhlarni Oxirgi varaqlar hamda Varaq guruhlari boʻlimlarida qayta ochish mumkin. Maxfiy varaqlar (#) qayta ochilmaydi.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{Growser brauzeridan <ph name="TABS_COUNT_ONE"/> ta havola}other{Growser brauzeridan <ph name="TABS_COUNT_MANY"/> ta havola}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ta sharh Bravedan}other{<ph name="REVIEWS_COUNT_MANY"/> ta sharh Bravedan}}</translation>
+<translation id="2928243913527329289">Growser | Bu doʻkon haqida</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser nofaol varaqlar va varaqlar guruhini <ph name="AUTO_DELETE_DELAY_ONE"/> oydan keyin avtomatik yopadi. Buni sozlamalardan oʻzgartirish mumkin.}other{Growser nofaol varaqlar va varaqlar guruhini <ph name="AUTO_DELETE_DELAY_MANY"/> oydan keyin avtomatik yopadi. Buni sozlamalardan oʻzgartirish mumkin.}}</translation>
 </translationbundle>

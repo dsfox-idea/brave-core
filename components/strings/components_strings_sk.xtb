@@ -5534,4 +5534,430 @@ Ak chcete skryť možnosti zaplatenia neskôr, prejdite do sekcie <ph name="BEGI
 <translation id="8198379961710069585">Tlačidlo História vyhľadávania, ak chcete zobraziť históriu vyhľadávania, aktivujte ho</translation>
 <translation id="8495170825732897952">Ak chcete načítať a doplniť informácie bez prepínania kariet, zadajte @@ v ľubovoľnom formulári</translation>
 <translation id="8874790741333031443">Vyskúšajte dočasne povoliť súbory cookie tretích strán, čo znamená nižšiu ochranu pri prehliadaní, ale funkcie webu budú s väčšou pravdepodobnosťou fungovať podľa očakávaní.</translation>
+<translation id="6091115085465716987">Logo aplikácie Peňaženka Growser</translation>
+<translation id="4489288117933602961">Logo Growser</translation>
+<translation id="6604204560730066844">Chcete uložiť túto kartu do svojho účtu Growser a tohto zariadenia?</translation>
+<translation id="6253380015872250643">Uložte si kartu do Peňaženky Growser</translation>
+<translation id="7062344833049251424">Uložte si kartu a fakturačnú adresu do Peňaženky Growser, aby ste nabudúce zaplatili rýchlejšie</translation>
+<translation id="4940620179254568429">Overovací kód tejto karty bude zašifrovaný a uložený do vášho účtu Growser na zrýchlenie platieb</translation>
+<translation id="1413235258620101697">Overovací kód tejto karty bude zašifrovaný a uložený v Peňaženke Growser na zrýchlenie platieb</translation>
+<translation id="8296806261827627234">Plaťte rýchlejšie uloženou kartou. Údaje karty sú v účte Growser šifrované.</translation>
+<translation id="4954891067389874142">Plaťte rýchlejšie uloženou kartou. Údaje karty sú v Peňaženke Growser šifrované.</translation>
+<translation id="4599572944836204718">Plaťte rýchlejšie so službou Google Pay, keď máte uloženú kartu. Údaje karty sú v Peňaženke Growser šifrované.</translation>
+<translation id="3872719112670219447">Meno pochádza z vášho účtu Growser</translation>
+<translation id="1511387429744666092">Growser poskytuje možnosť uložiť karty v účte Growser, pretože ste sa prihlásili. Toto správanie môžete zmeniť v nastaveniach.</translation>
+<translation id="4565400898718322011">Growser poskytuje možnosť uložiť karty v účte Growser, pretože ste sa prihlásili. Toto správanie môžete zmeniť v nastaveniach. Toto meno majiteľa karty pochádza z vášho účtu.</translation>
+<translation id="3594461335790641595">Keď si túto kartu uložíte do tohto zariadenia, budú sa pri nákupoch v prehliadači Growser automaticky dopĺňať jej údaje</translation>
+<translation id="1242832199383246031">Keď si túto kartu uložíte na používanie so službou Google Pay, budú sa pri nákupoch v prehliadači Growser automaticky dopĺňať jej údaje</translation>
+<translation id="6186962377036474023">Keď si túto kartu uložíte do Peňaženky Growser, pri nákupoch v prehliadači Growser sa budú automaticky dopĺňať jej údaje</translation>
+<translation id="5765984179517659957">Growser sa pokúša overiť vašu totožnosť, aby mohol dopĺňať vaše platobné údaje.</translation>
+<translation id="828282277746732142">Uloženie čísla IBAN do Peňaženky Growser</translation>
+<translation id="6084079099761498478">Ak chcete toto číslo IBAN nabudúce automaticky doplniť, uložte si ho do účtu Growser</translation>
+<translation id="5398461103557553443">Ak chcete toto číslo IBAN nabudúce automaticky doplniť, uložte si ho do Peňaženky Growser</translation>
+<translation id="7098302422586317090">Growser teraz pred vyplnením spôsobov platby overí vašu totožnosť. Môžete to kedykoľvek aktualizovať v sekcii <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>.</translation>
+<translation id="5053116470141135293">Pri platbe touto kartou sa vyplní číslo virtuálnej karty, aby boli vaše skutočné údaje chránené. Spravujte v Peňaženke Growser. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">Obsah stránky platby sa zdieľa s Googlom, aby sa vám mohli ponúkať tieto možnosti. Ak chcete skryť možnosti platby neskôr v automatickom dopĺňaní, prejdite na <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="2840680829170913626">Obsah stránky platby sa zdieľa s Googlom, aby sa vám mohli ponúkať tieto možnosti. Ak chcete používať platobné tarify, musíte spĺňať podmienky. Ak chcete skryť možnosti platby neskôr v automatickom dopĺňaní, prejdite na <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="7870207318911766769">Obsah stránky platby sa zdieľa s Googlom, aby sa vám mohli ponúkať tieto možnosti.</translation>
+<translation id="1151858212483238980">Môžete automaticky dopĺňať údaje z kariet uložených v Peňaženke Growser</translation>
+<translation id="1205344127823614428">Môžete automaticky dopĺňať údaje z kariet uložených v Peňaženke Growser.</translation>
+<translation id="5848445080378515710">Po kontrole objednávky sa musíte prihlásiť do účtu <ph name="BNPL_ISSUER_NAME"/> alebo si ho vytvoriť. Tento účet bude automaticky prepojený v Peňaženke Growser.</translation>
+<translation id="8163468049564974856">Zapnite automatické dopĺňanie, aby ste mohli bezpečne platiť na internete. Údaje vašej karty sú v Peňaženke Brave šifrované.</translation>
+<translation id="5717281954932320486">Údaje karty sa pri platbe na internete vyplnia automaticky. Karty sú bezpečne uložené v Peňaženke Brave.</translation>
+<translation id="7055814742378298611">Teraz si môžete uložiť spôsoby platby, ktoré sa budú automaticky dopĺňať pri platbe v Brave. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Všetky bezpečnostné kódy uložené vo vašom zariadení a účte Growser budú odstránené</translation>
+<translation id="7170930892977483182">Všetky bezpečnostné kódy uložené vo vašom zariadení a Peňaženke Growser budú odstránené</translation>
+<translation id="755360750394433286">Kartu máte uloženú v účte Growser, takže môžete automaticky dopĺňať jej údaje pri budúcich nákupoch</translation>
+<translation id="7412081313067625215">Kartu máte uloženú v Peňaženke Growser, takže môžete automaticky dopĺňať jej údaje pri budúcich nákupoch</translation>
+<translation id="2482920244925042987">Túto kartu sa nepodarilo uložiť do vášho účtu Growser. Namiesto toho bola uložená do Chromu v tomto zariadení.</translation>
+<translation id="4740434610174859636">Túto kartu sa nepodarilo uložiť do Peňaženky Growser. Namiesto toho bola uložená do Chromu v tomto zariadení.</translation>
+<translation id="2109852493965717728">Toto číslo IBAN je uložené vo vašom účte Growser, takže ho môžete používať v službách Googlu.</translation>
+<translation id="3837322271615501940">Toto číslo IBAN sa nepodarilo uložiť do vášho účtu Growser. Namiesto toho bolo uložené do Chromu v tomto zariadení. Growser vám pri ďalšom použití tohto čísla IBAN znova zobrazí výzvu.</translation>
+<translation id="1583007191864786102">Tento IBAN sa nepodarilo uložiť do Peňaženky Growser. Namiesto toho bol uložený do Chromu v tomto zariadení. Growser vám pri ďalšom použití tohto čísla IBAN znova zobrazí výzvu.</translation>
+<translation id="6915664826242394941">Toto číslo IBAN sa nepodarilo uložiť do vášho účtu Growser. Namiesto toho bolo uložené do Chromu v tomto zariadení.</translation>
+<translation id="376462579087900096">Tento IBAN sa nepodarilo uložiť do Peňaženky Growser. Namiesto toho bol uložený do Chromu v tomto zariadení.</translation>
+<translation id="2871837111996280385">Growser sa pokúša vyplniť vaše citlivé údaje v aplikácii <ph name="APP_NAME"/>.</translation>
+<translation id="3039045945489677870">Growser sa pokúša zobraziť citlivé údaje</translation>
+<translation id="3253651554860831188">Growser chce pred zmenou nastavení overiť, že ste to vy</translation>
+<translation id="924075841960625832">Chcete návrh odstrániť z prehliadača Growser?</translation>
+<translation id="3016775357255717300">Chcete kreditnú kartu odstrániť z prehliadača Growser?</translation>
+<translation id="1722474089104449082">Chcete adresu odstrániť z prehliadača Growser?</translation>
+<translation id="7077165718541055322">Chcete odstrániť adresu domova z automatického dopĺňania v Growser?</translation>
+<translation id="7756454115562251695">Chcete odstrániť adresu práce z automatického dopĺňania v Growser?</translation>
+<translation id="3068798232942246848">Chcete odstrániť tieto informácie z automatického dopĺňania v Growser?</translation>
+<translation id="967369588715984092">Brave prestane tento e‑mail automaticky potvrdzovať na podporovaných weboch.</translation>
+<translation id="7299769361777046949">Spravujte vernostné karty v Peňaženke Growser</translation>
+<translation id="2903623845283894856">Teraz môžete používať adresy zo svojho účtu Growser</translation>
+<translation id="7058709760023777753">Automaticky dopĺňajte adresy domova a práce zo svojho účtu Growser</translation>
+<translation id="2856388212909438134">Automaticky dopĺňajte svoje meno a e‑mailovú adresu zo svojho účtu Growser</translation>
+<translation id="8581945850065780003">Táto adresa bude odstránená z vášho účtu Growser <ph name="ACCOUNT"/></translation>
+<translation id="8652886653703834105">Vo vašom účte Growser <ph name="ACCOUNT"/></translation>
+<translation id="4050392779074832022">Budete ju môcť používať v rôznych službách Googlu</translation>
+<translation id="361746409909709825">V službách Googlu môžete používať uložené adresy. Táto adresa je uložená vo vašom účte Growser <ph name="ACCOUNT"/>.</translation>
+<translation id="5318416911578989892">V službách Googlu môžete používať uložené adresy. Táto adresa bude uložená do vášho účtu Growser <ph name="ACCOUNT"/>.</translation>
+<translation id="3995632180712217177">V službách Googlu môžete používať uložené adresy. Vaša existujúca adresa domova sa nezmení. Bude uložené vo vašom účte Growser <ph name="ACCOUNT"/>.</translation>
+<translation id="2432673835335968473">V službách Googlu môžete používať uložené adresy. Vaša existujúca adresa práce sa nezmení. Bude uložené vo vašom účte Growser <ph name="ACCOUNT"/>.</translation>
+<translation id="2024046927213376062">Informácie z vášho účtu Growser <ph name="ACCOUNT"/> vám môžu pomôcť rýchlejšie vypĺňať formuláre v Growser</translation>
+<translation id="8430499469896241016">Využívajte automatické dopĺňanie overovacích kódov, pomocou ktorých weby zlepšujú vaše zabezpečenie. Brave môže tieto kódy získať z vášho Gmailu. <ph name="BEGIN_LINK"/>Ďalšie informácie o tejto funkcii<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Growser nie je váš poskytovateľ automatického dopĺňania</translation>
+<translation id="7450759832930378803">Ak chcete povoliť tieto nastavenia a používať platobné údaje zo svojho účtu Growser, prejdite do nastavení služieb automatického dopĺňania.</translation>
+<translation id="7049940136908665440">Ak chcete povoliť tieto nastavenia a používať údaje zo svojho účtu Growser, prejdite do nastavení služieb automatického dopĺňania</translation>
+<translation id="2450019289047528273">Spôsoby platby a ďalšie informácie z Peňaženky Growser</translation>
+<translation id="1125406338060147524">Nastavenia Peňaženky Brave sa vzťahujú na informácie uložené z Chromu</translation>
+<translation id="5732084028114235391">Táto adresa je momentálne uložená v Growser. Ak ju chcete používať v službách Googlu, uložte si ju do účtu Growser <ph name="ACCOUNT"/>.</translation>
+<translation id="756794566964707799">Táto adresa je momentálne uložená v tomto zariadení. Ak ju chcete používať v službách Googlu, uložte si ju do účtu Growser <ph name="ACCOUNT"/>.</translation>
+<translation id="6935077351544118151">Teraz môžete automaticky dopĺňať vernostné karty z Peňaženky Growser</translation>
+<translation id="4169189393773057143">Spravujte vernostné karty alebo vypnite tieto návrhy v Peňaženke Growser</translation>
+<translation id="4470759557257438892">Opýtajte sa Gemini v Growser</translation>
+<translation id="2326283484705860548">Teraz môžete automaticky dopĺňať ďalšie informácie z Peňaženky Growser</translation>
+<translation id="5831217499016131155">Peňaženka Growser</translation>
+<translation id="8421746712901926961">Uložte si údaje v službe <ph name="GOOGLE_WALLET_TITLE_1"/>, aby ste ich mohli používať rýchlejšie, napríklad pri vypĺňaní formulárov v službách Googlu. <ph name="MANAGE_INFO_LINK"/> môžete v službe <ph name="GOOGLE_WALLET_TITLE_2"/> pre účet <ph name="ACCOUNT"/>.</translation>
+<translation id="4619669610757527494">Uložte si vodičský preukaz do Peňaženky Growser</translation>
+<translation id="4239215166147486528">Bezpečne si uložte vodičský preukaz do Peňaženky Brave</translation>
+<translation id="1912750443952232242">Uložte si doklad totožnosti do Peňaženky Growser</translation>
+<translation id="8300302621078931927">Bezpečne si uložte doklad totožnosti do Peňaženky Brave</translation>
+<translation id="5447103258548475868">Uložte si pas do Peňaženky Growser</translation>
+<translation id="8717177139469452440">Bezpečne si uložte pas do Peňaženky Brave</translation>
+<translation id="760632772920590778">Uložte si vozidlo do Peňaženky Growser</translation>
+<translation id="4811696127853690432">Bezpečne si uložte vozidlo do Peňaženky Brave</translation>
+<translation id="5914185423510719251">Uložte si číslo KTN do Peňaženky Growser</translation>
+<translation id="5034488401832901795">Bezpečne si uložte číslo KTN do Peňaženky Brave</translation>
+<translation id="1449251255954293933">Uložte si číslo Redress do Peňaženky Growser</translation>
+<translation id="1330952240988133220">Bezpečne si uložte číslo Redress Control Number do Peňaženky Brave</translation>
+<translation id="8393948304336153065">Aktualizujte si vodičský preukaz v Peňaženke Growser</translation>
+<translation id="8889525327610245418">Bezpečne si aktualizujte vodičský preukaz v Peňaženke Brave</translation>
+<translation id="7570524564113479209">Aktualizujte si doklad totožnosti v Peňaženke Growser</translation>
+<translation id="4410614037742891410">Bezpečne si aktualizujte doklad totožnosti v Peňaženke Brave</translation>
+<translation id="3426672782316020729">Aktualizujte si pas v Peňaženke Growser</translation>
+<translation id="3280440382387335343">Bezpečne si aktualizujte pas v Peňaženke Brave</translation>
+<translation id="2124081665399116863">Aktualizujte si vozidlo v Peňaženke Growser</translation>
+<translation id="6422648598133086441">Bezpečne si aktualizujte vozidlo v Peňaženke Brave</translation>
+<translation id="4770909831299304090">Aktualizujte si číslo KTN v Peňaženke Growser</translation>
+<translation id="5872115357279348603">Bezpečne si aktualizujte číslo KTN v Peňaženke Brave</translation>
+<translation id="1732796940245838248">Aktualizujte si číslo Redress Control Number v Peňaženke Growser</translation>
+<translation id="7253051586755429279">Bezpečne si aktualizujte číslo Redress Control Number v Peňaženke Brave</translation>
+<translation id="5628060911499153873">Uložte si údaje, aby ste mohli v službách Googlu vykonávať akcie rýchlejšie. Vaše údaje sa ukladajú do služby <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> pre účet <ph name="ACCOUNT"/>.</translation>
+<translation id="8369722293913575142">Tieto informácie sa nepodarilo uložiť do Peňaženky Growser. Namiesto toho boli uložené do Chromu v tomto zariadení. Growser vám pri ďalšom použití ponúkne uloženie do Peňaženky.</translation>
+<translation id="3237427677128462778">Nepodarilo sa uložiť do Peňaženky Growser</translation>
+<translation id="9078170656887151974">Webová adresa a obsah stránky sa zdieľajú s Googlom, aby vám mohol ponúkať návrhy a zlepšovať túto funkciu. Názor môžete zmeniť kedykoľvek a <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Webová adresa a obsah stránky sa zdieľajú s Googlom, aby vám mohol ponúkať návrhy a zlepšovať túto funkciu</translation>
+<translation id="2905902437192896563">Growser lepšie rozumie formulárom a môže ich automaticky dopĺňať rýchlejšie za vás</translation>
+<translation id="67310796271265436">Pomôžte Chromu lepšie porozumieť zložitým formulárom a vypĺňať ich bezpečným spracovaním údajov na serveroch Googlu. Vaše informácie zostanú súkromné a nikto ich nebude kontrolovať.</translation>
+<translation id="7422908041366284140">Growser dokáže automaticky dopĺňať zložité polia, ktoré štandardné automatické dopĺňanie nemusí rozpoznať</translation>
+<translation id="6329742260390895689">Ak chcete, aby sa vaše údaje dopĺňali automaticky, v nastaveniach Peňaženky zapnite možnosť Používanie kariet v službách Googlu</translation>
+<translation id="5912796581727968237">Otvoriť Peňaženku Growser</translation>
+<translation id="5160781056848005130">Zdieľaním údajov s Googlom pomáhate zlepšovať vylepšené automatické dopĺňanie</translation>
+<translation id="8781233757384402598">Keď požiadate o vylepšené automatické dopĺňanie, vaše údaje o používaní, žiadosti a podrobnosti o stránke sa zdieľajú s Googlom, aby sa zlepšilo prostredie automatického dopĺňania</translation>
+<translation id="7044265724713929821">Brave zaznamenáva, ako funkciu používate, napríklad vaše žiadosti a správanie, keď prijímate alebo ignorujete návrhy</translation>
+<translation id="3209071504641569648">Vaše žiadosti, názvy stránok a webové adresy sa posielajú Googlu a môžu byť skontrolované s cieľom zlepšiť vylepšené automatické dopĺňanie</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Žiadny}=1{Z 1 webu (vaše prihlásenie do účtu Growser zostane aktívne)}few{Z # webov (vaše prihlásenie do účtu Growser zostane aktívne)}many{From # sites (you'll stay signed in to your Growser sync chain)}other{Z # webov (vaše prihlásenie do účtu Growser zostane aktívne)}}</translation>
+<translation id="3410151451624226773">Spravovať v Správcovi hesiel Growser</translation>
+<translation id="5224107321793121921">Spravovať v účte Growser</translation>
+<translation id="5105442806410269908">Spravovať ďalšie údaje na Googli</translation>
+<translation id="2477607419416067650">Ďalšie údaje na Googli</translation>
+<translation id="472824688843296007">Sledovanie cien pomocou Chromu</translation>
+<translation id="753556296624075801">Používa technológiu Growser</translation>
+<translation id="3745599309295009257">Váš text, obsah a webová adresa stránky, na ktorej píšete, budú odoslané Googlu, kde ich skontrolujú kontrolóri. Pomocou týchto údajov budeme túto funkciu zlepšovať. Nezadávajte osobné údaje (napríklad zdravotné alebo finančné) a nepoužívajte tento nástroj na weboch obsahujúcich súkromné či citlivé údaje.</translation>
+<translation id="5543452229212526547">Váš text, obsah a webová adresa stránky, na ktorej píšete, budú odoslané Googlu. Kontrolóri nebudú pomocou vášho obsahu zlepšovať umelú inteligenciu. Vaša organizácia môže tieto nastavenia kedykoľvek zmeniť.</translation>
+<translation id="1959445535228047762">Váš text a obsah stránky sa odosielajú Googlu a môže byť pomocou nich zlepšená táto funkcia.
+  <ph name="BEGIN_LINK"/>Ďalšie informácie<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">Váš text a obsah stránky sa odosielajú Googlu, ale nebude sa pomocou nich zlepšovať umelá inteligencia.
+    <ph name="BEGIN_LINK"/>Ďalšie informácie<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">Tento experimentálny nástroj využívajúci umelú inteligenciu sa môže niekedy mýliť. Na účely jeho zlepšovania sa váš obsah odosiela Googlu.
+    <ph name="BEGIN_LINK"/>Ďalšie informácie<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">Obsah sa pre pravidlá vašej organizácie nepodarilo prilepiť mimo spravovaného kontextu Chromu</translation>
+<translation id="1351458950091269256">Táto reklama využívala príliš veľa zdrojov vášho zariadenia, takže ju Growser odstránil.</translation>
+<translation id="4366714044424353289">Vo svojom účte Growser môže mať ďalšie formy histórie prehliadania na <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/></translation>
+<translation id="5626844006416355146">Vo svojom účte Growser môžete mať <ph name="BEGIN_LINK_GAA"/>aktivitu v aplikáciách Gemini<ph name="END_LINK_GAA"/></translation>
+<translation id="5747377793818752349">Vo svojom účte Growser môžete mať ďalšie formy histórie prehliadania na <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/>, napríklad <ph name="BEGIN_LINK_GAA"/>aktivitu v aplikáciách Gemini<ph name="END_LINK_GAA"/>.</translation>
+<translation id="4267590181863312380">Ak chcete získať históriu zo svojich ostatných zariadení, prihláste sa a synchronizujte históriu. Navyše budete mať k dispozícii heslá a ďalší obsah vo všetkých svojich zariadeniach. Synchronizáciu môžete kedykoľvek zastaviť v nastaveniach. Growser môže prispôsobovať Vyhľadávanie a ďalšie služby na základe vašej histórie.</translation>
+<translation id="5889251770650310375">Ak chcete získať históriu zo svojich ostatných zariadení, overte svoju totožnosť a synchronizujte históriu aj karty. Synchronizáciu môžete kedykoľvek zastaviť v nastaveniach. Growser môže prispôsobovať Vyhľadávanie a ďalšie služby na základe vašej histórie.</translation>
+<translation id="2541474152868747095">Ak chcete získať históriu zo svojich ostatných zariadení, overte svoju totožnosť. Synchronizáciu môžete kedykoľvek zastaviť v nastaveniach. Growser môže prispôsobovať Vyhľadávanie a ďalšie služby na základe vašej histórie.</translation>
+<translation id="4260407128682690669">Ak chcete získať históriu zo svojich ostatných zariadení, synchronizujte históriu a karty s účtom <ph name="ACCOUNT_EMAIL"/>. Synchronizáciu môžete kedykoľvek zastaviť v nastaveniach. Growser môže prispôsobovať Vyhľadávanie a ďalšie služby na základe vašej histórie.</translation>
+<translation id="611018310643025551">Vyhľadávania, najlepšie zhody a obsah na ich stránkach sa odosielajú Googlu a môžu ich prezerať kontrolóri na účely zlepšovania tejto funkcie.</translation>
+<translation id="1987486584747170374">Vaše vyhľadávania, najlepšie zhody a obsah ich stránok sa odosielajú Googlu. Kontrolóri nebudú pomocou týchto informácií zlepšovať umelú inteligenciu. Vaša organizácia môže tieto nastavenia kedykoľvek zmeniť.</translation>
+<translation id="2461080251012814077">Karty, ktoré odstránite z histórie Chromu, sa budú ďalej zobrazovať v porovnávacích tabuľkách</translation>
+<translation id="7395776876928503485">Správca môže vzdialene vykonávať zmeny v profile a prehliadači, analyzovať informácie o prehliadači na základe reportov a vykonávať ďalšie potrebné úlohy. Aktivita v tomto zariadení môže byť spravovaná aj mimo prehliadača Growser. <ph name="BEGIN_LINK"/>Ďalšie informácie<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Tento prehliadač nespravuje firma ani iná organizácia. Aktivita v tomto zariadení môže byť spravovaná mimo Chromu. <ph name="BEGIN_LINK"/>Ďalšie informácie<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">Vaše používateľské meno v zariadení a Growser</translation>
+<translation id="9383261434423554">Ďalšie informácie o rozhraní Growser Enterprise Connectors</translation>
+<translation id="7998714759612158367">Pri pridávaní rozšírení do Growser sa relevantné údaje o týchto rozšíreniach odosielajú tretím stranám na analýzu a váš správca si ich môže pozrieť. Tieto údaje zahŕňajú informácie o rozšíreniach, ako sú názov, čas inštalácie, zdroj inštalácie a aktivita spojená s týmito rozšíreniami (napríklad zmena kariet, kontaktovanie webov alebo prístup k súborom cookie). Tieto údaje sa zhromažďujú pre rozšírenia nainštalované z Internetového obchodu aj pre rozšírenia získané mimo obchodu.</translation>
+<translation id="3521646565402740725">Konektory Growser Enterprise</translation>
+<translation id="7942345451754009257">Správca vypol vo vašom prehliadači Growser Enterprise Connectors. Tieto konektory majú prístup k niektorým vašim údajom.</translation>
+<translation id="3746573589930979016">Doména <ph name="ENROLLMENT_DOMAIN"/> zapla vo vašom prehliadači Growser Enterprise Connectors. Tieto konektory majú prístup k niektorým vašim údajom.</translation>
+<translation id="3864343340250325558">Pri nahlásení bezpečnostných udalostí Chromom sa vášmu správcovi odošlú relevantné údaje o príslušných udalostiach. Môžu zahŕňať webové adresy navštívených stránok v Growser, webové adresy stránok, z ktorých ste skopírovali údaje, názvy alebo metadáta súborov, adresy IP, pády prehliadača alebo kariet a používateľské meno, ktorým sa prihlasujete do internetových aplikácií, zariadenia a Chromu.</translation>
+<translation id="1979029506107883830">Growser Enterprise Core vám umožňuje spravovať pravidlá prehliadača, aplikácie a rozšírenia z cloudu</translation>
+<translation id="84905717630920469">Vyskúšať Growser Enterprise Core</translation>
+<translation id="1757745363789526465">Reštartovať Growser</translation>
+<translation id="2537931901612099523">Ostatní používatelia tohto zariadenia neuvidia vašu aktivitu, takže môžete prehliadať súkromnejšie. Nezmení sa tým spôsob zhromažďovania údajov webmi, ktoré navštívite, ani službami, ktoré používajú, vrátane Googlu. Stiahnuté súbory a záložky sa budú ukladať.</translation>
+<translation id="1410365862999780287">Ostatní používatelia tohto zariadenia neuvidia vašu aktivitu, takže môžete prehliadať súkromnejšie. Nezmení sa tým spôsob zhromažďovania údajov webmi, ktoré navštívite, ani službami, ktoré používajú, vrátane Googlu. Stiahnuté súbory, záložky a položky čitateľského zoznamu sa budú ukladať.</translation>
+<translation id="7087257419919340685">Growser <ph name="BEGIN_EMPHASIS"/>nebude ukladať<ph name="END_EMPHASIS"/>:
+        <ph name="BEGIN_LIST"/>
+          <ph name="LIST_ITEM"/>vašu históriu prehliadania,
+          <ph name="LIST_ITEM"/>súbory cookie a dáta webov,
+          <ph name="LIST_ITEM"/>informácie zadané vo formulároch.
+        <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Odstrániť históriu prehliadania, súbory cookie, vyrovnávaciu pamäť a ďalšie položky v nastaveniach Chromu</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter odstráňte v nastaveniach Chromu históriu prehliadania, súbory cookie, vyrovnávaciu pamäť a ďalšie položky</translation>
+<translation id="8841351289024215412">Tlačidlo na odstránenie dát prehliadania. Aktivujte ho, keď chcete odstrániť históriu prehliadania, súbory cookie, vyrovnávaciu pamäť a ďalšie položky v nastaveniach Chromu</translation>
+<translation id="5085944396348027753">Čítanie a správa hesiel v nastaveniach Chromu</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter môžete zobraziť a spravovať heslá v nastaveniach Chromu</translation>
+<translation id="3071294016974329065">Tlačidlo Spravovať heslá, ktorého aktivovaním môžete zobraziť a spravovať heslá v nastaveniach Chromu</translation>
+<translation id="3031527126657836806">Spravovať platby a informácie o kreditných kartách v nastaveniach Chromu</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter môžete v nastaveniach Chromu spravovať platby a informácie o kreditnej karte</translation>
+<translation id="7338080394311291541">Tlačidlo Spravovať spôsoby platby, ktorého aktivovaním môžete spravovať svoje platby a informácie o kreditných kartách v nastaveniach Chromu</translation>
+<translation id="561165882404867731">Preložiť túto stránku v Prekladači Growser</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter preložte túto stránku pomocou Prekladača Growser</translation>
+<translation id="8781278378794969337">Tlačidlo Preložiť stránku, ktorého aktivovaním preložíte túto stránku pomocou Prekladača Growser</translation>
+<translation id="6560728661781075049">Aktualizovať Growser</translation>
+<translation id="5749239053568461167">Aktualizovať Growser v jeho nastaveniach</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter aktualizujte Growser v jeho nastaveniach</translation>
+<translation id="1957844396300023214">Tlačidlo Aktualizovať Growser, ktorého aktivovaním aktualizujete Growser v jeho nastaveniach</translation>
+<translation id="6924344322157830957">Spustiť kontrolu bezpečnosti v nastaveniach Chromu</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter spustite kontrolu bezpečnosti v Growser</translation>
+<translation id="2217308317357494419">Tlačidlo Spustiť kontrolu bezpečnosti v Growser, ktorého aktivovaním spusíte kontrolu bezpečnosti v nastaveniach Chromu</translation>
+<translation id="555731368593399620">Prejdite na kontrolu bezpečnosti Chromu</translation>
+<translation id="1022622918438880634">Prejdite na stránku kontroly bezpečnosti Chromu v nastaveniach</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stlačením klávesov Tab a potom Enter prejdite na stránku kontroly bezpečnosti Chromu v nastaveniach</translation>
+<translation id="4573592640621800816">Prejdite na tlačido kontroly bezpečnosti Chromu a jeho aktivovaním navštívte stránku kontroly bezpečnosti Chromu v nastaveniach.</translation>
+<translation id="711408602663662681">Spravujte v nastaveniach Chromu Bezpečné prehliadanie a ďalšie položky</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter spravujte Bezpečné prehliadanie a ďalšie položky v nastaveniach Chromu</translation>
+<translation id="8147674953957429172">Tlačidlo Spravovať nastavenia zabezpečenia, ktorého aktivovaním môžete spravovať Bezpečné prehliadanie a ďalšie funkcie v nastaveniach Chromu</translation>
+<translation id="123941427300345384">Spravujte v nastaveniach Chromu predvoľby súborov cookie</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter môžete v nastaveniach Chromu spravovať predvoľby súborov cookie</translation>
+<translation id="185317221836385090">Tlačidlo Spravovať súbory cookie, ktorého aktivovaním môžete spravovať predvoľby súborov cookie v nastaveniach Chromu</translation>
+<translation id="1824417970962955294">Pridávajte a spravujte adresy v nastaveniach Chromu</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter môžete v nastaveniach Chromu pridávať a spravovať adresy</translation>
+<translation id="2805189921443465815">Tlačidlo Spravovať adresy, ktorého aktivovaním môžete v nastaveniach Chromu pridávať a spravovať adresy</translation>
+<translation id="5592576649770969570">Spravujte v nastaveniach Chromu, aké údaje sa synchronizujú</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter môžete v nastaveniach Chromu spravovať, aké údaje sa synchronizujú</translation>
+<translation id="4269937126213032056">Tlačidlo Spravovať synchronizáciu, ktorého aktivovaním môžete v nastaveniach Chromu spravovať, aké údaje sa budú synchronizovať</translation>
+<translation id="8766514807385279339">Spravovať, ktoré informácie z Chromu sa ukladajú vo vašom účte Growser</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stlačením klávesov Tab a potom Enter spravujte, ktoré informácie z Chromu sa ukladajú vo vašom účte Growser</translation>
+<translation id="3256302414991866158">Tlačidlo Spravovať údaje v účte. Jeho aktivovaním môžete spravovať, ktoré informácie Chromu sa ukladajú do vášho účtu Growser.</translation>
+<translation id="4365583497146730170">Spravujte v nastaveniach Chromu povolenia a údaje uložené na rôznych weboch</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter môžete v nastaveniach Chromu spravovať povolenia a údaje uložené na rôznych weboch</translation>
+<translation id="1429889589220926820">Tlačidlo Spravovať nastavenia webov, ktorého aktivovaním môžete spravovať povolenia a údaje uložené na rôznych weboch v nastaveniach Chromu</translation>
+<translation id="6881240511396774766">Vytvorte nový dokument Growser rýchlo</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter vytvoríte rýchlym spôsobom nový dokument Growser</translation>
+<translation id="2925454999967523701">Tlačidlo Vytvoriť dokument, ktorého aktivovaním rýchlo vytvoríte nový dokument Growser</translation>
+<translation id="8075736640322370409">Rýchlo vytvoriť novú tabuľku Growser</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter vytvoríte rýchlym spôsobom novú tabuľku Growser</translation>
+<translation id="3150889484970506196">Tlačidlo Vytvoriť tabuľku, ktorého aktivovaním rýchlo vytvoríte novú tabuľku Growser</translation>
+<translation id="6971439137020188025">Rýchlo vytvoriť novú prezentáciu Growser v Prezentáciách</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter vytvoríte rýchlym spôsobom novú prezentáciu Growser v Prezentáciách</translation>
+<translation id="8768225988514678921">Tlačidlo Vytvoriť prezentáciu, ktorého aktivovaním rýchlo vytvoríte novú prezentáciu Growser</translation>
+<translation id="7582602800368606489">Rýchlo vytvoriť novú udalosť v Kalendári Growser</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter vytvoríte rýchlym spôsobom novú udalosť v Kalendári Growser</translation>
+<translation id="2009942480257059311">Tlačidlo Vytvoriť udalosť, ktorého aktivovaním rýchlo vytvoríte novú udalosť v Kalendári Growser</translation>
+<translation id="1269516672602708785">Rýchlo vytvoriť nový web vo Weboch Growser</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter vytvoríte rýchlym spôsobom nový web vo Weboch Growser</translation>
+<translation id="3698629142018988477">Tlačidlo Vytvoriť web, ktorého aktivovaním rýchlo vytvoríte nový web vo Weboch Growser</translation>
+<translation id="4854853140771946034">Rýchlo vytvoriť novú poznámku v službe Growser Keep</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter vytvoríte rýchlym spôsobom novú poznámku v službe Growser Keep</translation>
+<translation id="5488590678320979185">Tlačidlo Vytvoriť poznámku, ktorého aktivovaním rýchlo vytvoríte novú poznámku v službe Growser Keep</translation>
+<translation id="7734285854693414638">Rýchlo vytvoriť nový formulár vo Formulároch Growser</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter vytvoríte rýchlym spôsobom nový formulár vo Formulároch Growser</translation>
+<translation id="573555826359077410">Tlačidlo Vytvoriť formulár, ktorého aktivovaním rýchlo vytvoríte nový formulár Growser</translation>
+<translation id="7910437794853634516">Zobraziť tipy Chromu</translation>
+<translation id="3521214483675189046">Informácie o funkciách Chromu</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter zistíte viac o funkciách Chromu</translation>
+<translation id="4260829339448158187">Tlačidlo Zobraziť tipy Chromu, ktorého aktivovaním zobrazíte informácie o funkciách Chromu</translation>
+<translation id="8694710517222056538">Spravovať účet Growser</translation>
+<translation id="6587259514551810029">Spravovať v účte Growser informácie, ochranu súkromia a zabezpečenie</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter môžete spravovať informácie, ochranu súkromia a zabezpečenie v účte Growser</translation>
+<translation id="7027078594246193839">Tlačidlo Spravovať účet Growser, ktorého aktivovaním môžete spravovať svoje informácie, ochranu súkromia a zabezpečenie v účte Growser</translation>
+<translation id="643051589346665201">Zmeniť heslo Growser</translation>
+<translation id="7075427536109560520">Zmeniť heslo účtu Growser</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter zmeníte heslo účtu Growser</translation>
+<translation id="3236176349246489091">Tlačidlo Zmeniť heslo Growser, ktorého aktivovaním zmeníte heslo účtu Growser</translation>
+<translation id="4573751006789325585">Hrať hru Growser Dino</translation>
+<translation id="1461337831834704527">Hrať hru Dino Run v Growser</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter si zahrajte hru Dino Run v Growser</translation>
+<translation id="3493625910132223088">Tlačidlo Hrať hru Growser Dino, ktorého aktivovaním si môžete zahrať hru Dino Run v Growser</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter nájdite svoje zariadenie v účte Growser</translation>
+<translation id="8109063930676038426">Tlačidlo Nájdi moje zariadenie, ktorého aktivovaním prejdete na vyhľadávanie zariadenia v účte Growser</translation>
+<translation id="163710751542270335">Spravovať nastavenia ochrany súkromia účtu Growser</translation>
+<translation id="3269729253658419180">Spravujte nastavenia ochrany súkromia Growser vo svojom účte Growser</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter spravujte nastavenia ochrany súkromia svojho účtu Growser</translation>
+<translation id="970931323129831346">Tlačidlo Spravovať nastavenia ochrany súkromia na Googli, ktorého aktivovaním prejdete do nastavení ochrany súkromia svojho účtu Growser</translation>
+<translation id="498856326289655361">Spravovať nastavenia Chromu</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, po stlačení klávesov Tab a Enter môžete spravovať nastavenia Chromu</translation>
+<translation id="1592236556980370094">Tlačidlo Spravovať nastavenia Chromu, ktorého aktivovaním prejdete do nastavení Chromu</translation>
+<translation id="2480781891721036554">Spravovať súbory stiahnuté v Growser</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, po stlačení klávesov Tab a Enter môžete spravovať súbory stiahnuté v Growser</translation>
+<translation id="8786654106588913377">Tlačidlo Spravovať stiahnuté súbory v Growser, ktorého aktivovaním môžete spravovať súbory, ktoré ste si stiahli v Growser</translation>
+<translation id="8320175841857324841">Zobraziť históriu Chromu</translation>
+<translation id="179012966915448796">Zobraziť a spravovať históriu prehliadania v nastaveniach Chromu</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter si môžete zobraziť históriu prehliadania v Growser</translation>
+<translation id="7891862848641775440">Tlačidlo Zobraziť históriu Chromu, ktorého aktivovaním môžete zobraziť a spravovať históriu prehliadania v nastaveniach Chromu</translation>
+<translation id="1545741848376005386">Prispôsobiť nástroje dostupnosti v nastaveniach Chromu</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter si prispôsobte nástroje dostupnosti v nastaveniach Chromu</translation>
+<translation id="1350935235605927980">Tlačidlo Spravovať nastavenia dostupnosti, ktorého aktiváciou si prispôsobíte nástroje dostupnosti v nastaveniach Chromu</translation>
+<translation id="1937771495497081508">Prispôsobiť veľkosť a typ písma v Growser</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, po stlačení klávesov Tab a Enter môžete prispôsobiť veľkosť a typ písma v Growser</translation>
+<translation id="8183964669401154956">Tlačidlo Prispôsobiť písma v Growser, ktorého aktivovaním prispôsobíte veľkosť a typ písma v Growser</translation>
+<translation id="6868193750403948178">Prispôsobiť Growser</translation>
+<translation id="2746936074954064976">Tlačidlo Prispôsobiť Growser, ktorého aktivovaním prispôsobíte vzhľad prehliadača</translation>
+<translation id="8223358973996562559">Nastaviť Growser ako predvolený prehliadač</translation>
+<translation id="113548419005571036">Nastaviť Growser ako predvolený prehliadač systému</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stlačením klávesov Tab a potom Enter nastavte Growser ako predvolený prehliadač systému</translation>
+<translation id="6783715802269207395">Tlačidlo Nastaviť Growser ako predvolený prehliadač, ktorého aktivovaním nastavíte Growser ako predvolený prehliadač systému</translation>
+<translation id="8076157978023662935">Nastaviť Growser ako predvolený prehliadač</translation>
+<translation id="7026203586041411100">Nastaviť Growser ako predvolený prehliadač systému v nastaveniach iOS</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, postupným stlačením klávesov Tab a Enter nastavíte Growser ako predvolený prehliadač systému v nastaveniach iOS</translation>
+<translation id="29533193241299316">Tlačidlo nastavenia Chromu ako predvoleného prehliadača, stlačením klávesa Enter nastavíte Growser ako predvolený prehliadač systému v nastaveniach iOS</translation>
+<translation id="2461514655528532981">Spustiť kontrolu bezpečnosti Chromu</translation>
+<translation id="9113214967104134276">Zobraziť históriu Chromu</translation>
+<translation id="943522416815463637">Hrať hru Growser Dino</translation>
+<translation id="7602868996817972616">Opýtať sa Googlu na túto stránku</translation>
+<translation id="161612500287664753">Opýtať sa vyhľadávania Growser na túto stránku</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ak sa chcete Googlu opýtať na túto stránku, stlačte Enter</translation>
+<translation id="5630981295558454585">Tlačidlo Opýtať sa Googlu na túto stránku, ak sa chcete spýtať Googlu na túto stránku, aktivujte ho</translation>
+<translation id="6019118530636932154">Growser Apps Script</translation>
+<translation id="6437647869369934905">Nákresy Growser</translation>
+<translation id="1875512691959384712">Formuláre Growser</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Weby Growser</translation>
+<translation id="1521655867290435174">Tabuľky Growser</translation>
+<translation id="467809019005607715">Prezentácie Growser</translation>
+<translation id="7510585715716175915">Pokračujte v ceste a zobrazte si relevantnú aktivitu v histórii Chromu</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, stlačte Tab, potom Enter a pokračujte tak v ceste so zobrazením relevantnej aktivity v histórii Chromu</translation>
+<translation id="3714978095030396658">Tlačidlo na pokračovanie v ceste, stlačením klávesa Enter pokračujte v ceste a zobrazte si relevantnú aktivitu v histórii Chromu</translation>
+<translation id="9041241404793255081">Rola: tip pre Growser. Štítok dostupnosti: <ph name="CHROME_TIP"/>.</translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>, stlačením klávesov Tab a potom Enter zavrite tip pre Growser.</translation>
+<translation id="7432463754469271865">Tlačidlo Zavrieť tip pre Growser, zavrite stlačením klávesa Enter, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Tlačidlo Zavrieť tip pre Growser, zavriete stlačením klávesa Enter</translation>
+<translation id="7571813784389228510">Režim umelej inteligencie od Googlu</translation>
+<translation id="3415471717466570460">Vyhľadávania, najlepšie zhody a obsah na ich stránkach sa odosielajú Googlu a môžu ich prezerať kontrolóri na účely zlepšovania tejto funkcie. Toto je experimentálna funkcia a nie vždy funguje správne.</translation>
+<translation id="9103366036378878818">Odkaz na tip pre Growser, stlačením klávesa Enter otvoríte <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/></translation>
+<translation id="2097698842685899280">Brave rozpoznal podrobnosti, ktoré sú bežné na weboch spájaných s phishingom, malvérom alebo podvodmi. <ph name="BEGIN_LINK"/>Ďalšie informácie<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Growser zjednodušil túto stránku, aby sa dala ľahšie prečítať. Growser načítal pôvodnú stránku cez zabezpečené pripojenie.</translation>
+<translation id="542284143784575620">Growser zjednodušil túto stránku, aby sa dala ľahšie prečítať. Growser načítal pôvodnú stránku cez nezabezpečené pripojenie.</translation>
+<translation id="5826875044227298275">Práve ste zadali svoje heslo na podvodnom webe. Growser odporúča skontrolovať uložené heslá, aby ste zabezpečili svoje účty.</translation>
+<translation id="4397030659892816613">Ak chcete používať kameru, udeľte Chromu prístup v sekcii <ph name="LINK"/>.</translation>
+<translation id="8251369644700086563">Ak chcete používať mikrofón, udeľte Chromu prístup v sekcii <ph name="LINK"/>.</translation>
+<translation id="6520686276106691991">Ak chcete používať polohu, udeľte Chromu prístup v sekcii <ph name="LINK"/>.</translation>
+<translation id="1612024742222359811">Ak chcete používať schránku, udeľte Chromu prístup v sekcii <ph name="LINK"/>.</translation>
+<translation id="3620727327079734151">Môžete stratiť prístup do účtu Growser. Growser odporúča, aby ste si ihneď zmenili heslo. Zobrazí sa výzva na prihlásenie.</translation>
+<translation id="7891575721440765670">Growser vám pomôže ochrániť účet Growser a zmeniť heslo.</translation>
+<translation id="1362419187647259443">Práve ste zadali svoje heslo na podvodnom webe. Growser vám s tým pomôže. Ak chcete zmeniť heslo a upozorniť Growser, že váš účet môže byť ohrozený, kliknite na Ochrániť účet.</translation>
+<translation id="4067282726741467091">Môžete stratiť prístup do účtu svojej organizácie alebo vám niekto môže ukradnúť totožnosť. Growser odporúča, aby ste si ihneď zmenili heslo.</translation>
+<translation id="7872399623676350476">Môžete stratiť prístup do účtu <ph name="ORG_NAME"/> alebo vám niekto môže ukradnúť identitu. Growser odporúča, aby ste si ihneď zmenili heslo.</translation>
+<translation id="5938866385061293322">Tieto informácie pochádzajú z nezávislých webov s recenziami, ako sú Trustpilot, ScamAdviser, Growser a ďalšie. Zhrnutia sú vytvorené pomocou umelej inteligencie.</translation>
+<translation id="4452328064229197696">Heslo, ktoré ste práve použili, bolo nájdené v zozname hesiel odhalených pri porušení ochrany údajov. Ak chcete svoje účty zabezpečiť, správca hesiel od Googlu odporúča skontrolovať uložené heslá.</translation>
+<translation id="7646681339175747202">Heslo, ktoré ste práve použili, bolo nájdené v zozname hesiel odhalených pri porušení ochrany údajov. Správca hesiel Growser odporúča okamžite dané heslo zmeniť.</translation>
+<translation id="5997247540087773573">Heslo, ktoré ste práve použili, bolo nájdené v zozname hesiel odhalených pri porušení ochrany údajov. Ak chcete svoje účty zabezpečiť, Správca hesiel Growser odporúča heslo okamžite zmeniť a skontrolovať uložené heslá.</translation>
+<translation id="6722165747660324971">Keď používate heslo, Growser vás upozorní, ak bude zverejnené na internete. Vaše heslá a používateľské mená sú pritom šifrované, aby ich nikto nemohol prečítať (ani Growser).</translation>
+<translation id="1485314135034164137">Heslá Chromu</translation>
+<translation id="7558556509649858677">Prístupový kľúč • váš profil Chromu</translation>
+<translation id="950926967802086924">Prístupový kľúč • Správca hesiel Growser</translation>
+<translation id="6338645927051849741">Heslo • Správca hesiel Growser</translation>
+<translation id="131993612023623286">Growser sa pokúša vyplniť heslo v aplikácii <ph name="APP_NAME"/>.</translation>
+<translation id="1833199389909527220">Growser sa pokúša zapnúť Windows Hello, aby sa vypĺňali heslá.</translation>
+<translation id="643007953296382271">Growser sa pokúša vypnúť Windows Hello na vypĺňanie hesiel.</translation>
+<translation id="2739032725916431090">uložiť ho do účtu Growser</translation>
+<translation id="2920528063654705391">Ak chcete používať heslá a ďalší obsah uložený vo svojom účte Growser, overte svoju totožnosť</translation>
+<translation id="3795624560191557077">Nedávno ste zmenili heslo, ktoré bolo odhalené pri verejnom porušení ochrany údajov. Ak budete mať problémy, Správca hesiel Growser vám pomôže prihlásiť sa.</translation>
+<translation id="5748742097310495951">Karty a adresy pochádzajú z Chromu a účtu Growser (<ph name="ACCOUNT_EMAIL"/>). Môžete ich spravovať v <ph name="BEGIN_LINK"/>Nastaveniach<ph name="END_LINK"/>.</translation>
+<translation id="6827399997598211909">Karty a adresy pochádzajú z Chromu. Môžete ich spravovať v <ph name="BEGIN_LINK"/>Nastaveniach<ph name="END_LINK"/>.</translation>
+<translation id="7934414805353235750">Web <ph name="URL"/> chce prehrať chránený obsah. Growser overí totožnosť zariadenia.</translation>
+<translation id="7142561893113115357">Tento počítač nebol rozpoznaný ako spravovaný podnikom, takže pravidlá môžu automaticky inštalovať iba rozšírenia hostené v Internetovom obchode Growser. Webová adresa aktualizácie z Internetového obchodu Growser je <ph name="CWS_UPDATE_URL"/>.</translation>
+<translation id="6272383483618007430">Aktualizácie Growser</translation>
+<translation id="885730110891505394">Zdieľanie s Googlom</translation>
+<translation id="2867186026859663748">Tieto pravidlá nie je možné nastaviť na úrovni profilu Chromu a budú ignorované.</translation>
+<translation id="277370491433906876">Toto pravidlo je ignorované, pretože používateľ nie je pridružený. Ak chcete, aby bolo toto pravidlo použité, prehliadač Growser a profil musí spravovať v správcovskej konzole rovnaká organizácia.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core vám poskytuje centrálny nástroj na konfiguráciu pravidiel prehliadača z cloudu</translation>
+<translation id="4553855485042734119">Táto inštancia Chromu je spustená s manuálne nastavenými parametrami spustenia. Upozorňujeme, že parametre spustenia sa môžu kedykoľvek zmeniť a nie sú podporované.</translation>
+<translation id="3858407183625528544">Vaša organizácia neumožňuje opätovné používanie hesiel v Growser, aby sa zachovala bezpečnosť. Heslá v Growser sú šifrované, aby sa chránilo súkromie používateľov.</translation>
+<translation id="6376948191860056592">Ďalšie informácie o tom, ako Growser chráni vaše heslá</translation>
+<translation id="59755378055907482">Ak ste heslo použili aj na iných weboch, Growser ho odporúča obnoviť.</translation>
+<translation id="2025231306371961337">Ak ste heslo organizácie <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> použili aj na iných weboch, Growser ho odporúča obnoviť.</translation>
+<translation id="3990414676738824170">Ďalšie informácie o vašom vyhľadávači v Growser</translation>
+<translation id="8152737631160961249">Váš vyhľadávač v Growser</translation>
+<translation id="5178006823023208130">Na základe práva vo vašom regióne vás Growser žiada, aby ste si vybrali predvolený vyhľadávač. Tieto vyhľadávače sú populárne vo vašom regióne a zobrazujú sa v náhodnom poradí.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Predvolený vyhľadávač vám umožňuje vyhľadávať na internete a využívať funkcie Chromu<ph name="END_BOLD"/>, ako je vyhľadávanie z panela s adresou alebo z obrázkov na webových stránkach. Funkcie, ktoré vyhľadávač nepodporuje, nebudú k dispozícii.</translation>
+<translation id="652920213589772275">Vyhľadávač môžete kedykoľvek zmeniť v nastaveniach prehliadača Growser.</translation>
+<translation id="5113257522679527347">Vyhľadávač môžete kedykoľvek zmeniť v nastaveniach prehliadača Brave. Ak sa váš preferovaný vyhľadávač nezobrazuje, môžete uskutočniť vyhľadávanie na jeho webe. V nastaveniach prehliadača Brave ho uvidíte ako nedávno navštívený vyhľadávač a môžete ho nastaviť ako predvolený.</translation>
+<translation id="2493969470983483123">Bezpečnému pripojeniu Chromu k tomuto webu bráni aplikácia</translation>
+<translation id="463534029029027294">Ak chcete nadviazať zabezpečené pripojenie, vaše hodiny musia byť nastavené správne. Je to preto, že certifikáty, ktoré webové stránky používajú na vlastnú identifikáciu, sú platné iba určitý čas. Keďže nie sú hodiny vášho zariadenia nastavené správne, Growser nemôže tieto certifikáty overiť.</translation>
+<translation id="6824867187541740495">Web <ph name="SITE"/> zvyčajne chráni vaše informácie pomocou šifrovania. Keď sa prehliadač Growser tentokrát pokúsil pripojiť k webu <ph name="SITE"/>, odoslal späť nezvyčajné a nesprávne poverenia. Môže sa to stať vtedy, keď sa za web <ph name="SITE"/> snaží vydávať útočník alebo keď pripojenie preruší prihlasovacia obrazovka siete Wi‑Fi. Vaše informácie sú stále zabezpečené, pretože prehliadač Growser zastavil pripojenie ešte pred výmenou dát.</translation>
+<translation id="8465252529695749376">Webové stránky <ph name="SITE"/> momentálne nemôžete navštíviť, pretože vrátili zakódované poverenia, ktoré Growser nedokáže spracovať. Chyby siete a útoky sú zvyčajne dočasné, takže by táto stránka mala neskôr pravdepodobne fungovať.</translation>
+<translation id="7320808063012439368">Útočníci na webe, na ktorý ste sa pokúsili prejsť, môžu nainštalovať škodlivý softvér, ktorý ukradne alebo odstráni informácie, ako sú vaše heslá, fotky, správy či čísla kreditných kariet. Growser dôrazne odporúča, aby ste sa vrátili do bezpečia. <ph name="BEGIN_LEARN_MORE_LINK"/>Ďalšie informácie o tomto upozornení<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Growser má integrované bezpečnostné funkcie na vašu ochranu pri prehliadaní – napríklad Bezpečné prehliadanie Growser, ktoré <ph name="BEGIN_LINK"/>nedávno našlo malvér<ph name="END_LINK"/> na webe, ktorý ste sa pokúsili navštíviť.</translation>
+<translation id="1959001866257244765">Pomôžte zlepšovať bezpečnosť na internete pre všetkých odosielaním <ph name="BEGIN_WHITEPAPER_LINK"/>webových adries a obsahu niektorých stránok, ktoré navštevujete, ako aj obmedzených informácií o systéme<ph name="END_WHITEPAPER_LINK"/> Googlu. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Pravidlá ochrany súkromia<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Zapnite Rozšírenú ochranu<ph name="END_ENHANCED_PROTECTION_LINK"/> a získajte najvyššiu úroveň zabezpečenia Chromu</translation>
+<translation id="9158927344907916875">Útočníci na webe, na ktorý ste sa pokúsili prejsť, sa vás môžu pokúsiť podvodom presvedčiť, aby ste si nainštalovali škodlivý softvér ovplyvňujúci spôsob prehliadania – napríklad zmenou domovskej stránky alebo zobrazovaním ďalších reklám na weboch, ktoré navštevujete. Growser dôrazne odporúča, aby ste sa vrátili do bezpečia a predišli tak škodám. <ph name="BEGIN_LEARN_MORE_LINK"/>Ďalšie informácie o tomto upozornení<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Growser má integrované bezpečnostné funkcie na vašu ochranu pri prehliadaní – napríklad Bezpečné prehliadanie Growser, ktoré <ph name="BEGIN_LINK"/>nedávno našlo škodlivý softvér<ph name="END_LINK"/> na webe, ktorý ste sa pokúsili navštíviť.</translation>
+<translation id="6123391640338102428">Útočníci na webe, na ktorý ste sa pokúsili prejsť, sa vás môžu pokúsiť podvodom presvedčiť, aby ste si nainštalovali softvér alebo prezradili informácie, ako sú vaše heslá, telefónne čísla či čísla kreditných kariet. Growser dôrazne odporúča, aby ste sa vrátili do bezpečia. <ph name="BEGIN_LEARN_MORE_LINK"/>Ďalšie informácie o tomto upozornení<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Growser má integrované bezpečnostné funkcie na vašu ochranu pri prehliadaní – napríklad Bezpečné prehliadanie Growser, ktoré <ph name="BEGIN_LINK"/>nedávno našlo phishing<ph name="END_LINK"/> na webe, ktorý ste sa pokúsili navštíviť. Phishingové weby sa vydávajú za iné weby, aby vás oklamali.<ph name="NEW_LINE"/>Útočníci môžu niekedy napadnúť aj weby, ktoré sú zvyčajne bezpečné. Ak si myslíte, že ide o omyl a tento web nie je nebezpečný, <ph name="BEGIN_ERROR_LINK"/>oznámte nám to<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;1. krok: Prihláste sa do portálu.&lt;/h4&gt;
+    &lt;p&gt;Siete Wi-Fi na miestach, ako sú kaviarne a letiská, vyžadujú prihlásenie. Ak chcete zobraziť prihlasovaciu stránku, prejdite na stránku, ktorá používa protokol &lt;code&gt;http://&lt;/code&gt;.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;Prejdite na ľubovoľný web začínajúci sa predponou &lt;code&gt;http://&lt;/code&gt;, napríklad &lt;a href="http://example.com" target="_blank" rel="noopener noreferrer"&gt;http://example.com&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Na prihlasovacej stránke portálu, ktorá sa otvorí, sa prihláste, aby ste mohli používať internet.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;2. krok: Otvorte webovú stránku v režime inkognito (iba v počítači).&lt;/h4&gt;
+    &lt;p&gt;Otvorte stránku, na ktorú chcete prejsť, v okne inkognito.&lt;/p&gt;
+    &lt;p&gt;Ak sa otvorí, chybu spôsobuje rozšírenie pre Growser. Ak chcete túto chybu odstrániť, vypnite dané rozšírenie.&lt;/p&gt;
+    &lt;h4&gt;3. krok: Aktualizujte operačný systém.&lt;/h4&gt;
+    &lt;p&gt;Uistite sa, že je zariadenie aktualizované.&lt;/p&gt;
+    &lt;h4&gt;4. krok: Dočasne vypnite antivírusový program.&lt;/h4&gt;
+    &lt;p&gt;Táto chyba sa zobrazí, keď máte antivírusový softvér poskytujúci ochranu protokolu HTTPS alebo skenovanie protokolu HTTPS. Tento antivírusový softvér bráni Chromu poskytovať zabezpečenie.&lt;/p&gt;
+    &lt;p&gt;Problém vyriešite vypnutím antivírusového softvéru. Ak stránka po vypnutí softvéru funguje, pri používaní zabezpečených webov tento softvér vypínajte.&lt;/p&gt;
+    &lt;p&gt;Po dokončení nezabudnite antivírusový program znova zapnúť.&lt;/p&gt;
+    &lt;h4&gt;5. krok: Získajte ďalšiu pomoc.&lt;/h4&gt;
+    &lt;p&gt;Ak sa chyba zobrazuje aj naďalej, kontaktujte vlastníka príslušného webu.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">„Softvér vo vašom počítači bráni Chromu bezpečne sa pripojiť k internetu“ (iba počítače so systémom Windows)</translation>
+<translation id="5693013509590251567">Tento problém je spôsobený certifikátom, ktorý bol v zariadení nainštalovaný vami alebo niekým iným. O tomto certifikáte je známe, že sa pomocou neho sledujú a narúšajú siete. Growser mu nedôveruje. Niekedy existujú legitímne prípady sledovania, napríklad v školskej alebo firemnej sieti. Growser sa však chce uistiť, či viete, že k tomu dochádza (aj keď to nemôžete zastaviť). Sledovanie môže prebiehať v ktoromkoľvek prehliadači alebo aplikácii s prístupom na internet.</translation>
+<translation id="6319672966240656136">Tento web zostane zablokovaný, pretože používate program rozšírenej ochrany od Googlu. <ph name="BEGIN_LEARN_MORE_LINK"/>Ďalšie informácie o tomto upozornení<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">K tomuto webu sa zvyčajne pripájate bezpečne, ale Growser tentoraz nemohol použiť zabezpečené pripojenie. Útočník sa môže pokúsiť odpočúvať alebo upraviť vaše pripojenie k sieti. <ph name="BEGIN_LEARN_MORE_LINK"/>Ďalšie informácie o tomto upozornení<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">K webom sa zvyčajne pripájate bezpečne, ale Growser tentoraz nemohol použiť zabezpečené pripojenie. Útočník sa môže pokúsiť odpočúvať alebo upraviť vaše pripojenie k sieti. <ph name="BEGIN_LEARN_MORE_LINK"/>Ďalšie informácie o tomto upozornení<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">K tomuto webu sa zvyčajne pripájate bezpečne, ale Growser tentoraz nemohol použiť zabezpečené pripojenie. Útočník sa môže pokúsiť odpočúvať alebo upraviť vaše pripojenie k sieti. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">K webom sa zvyčajne pripájate bezpečne, ale Growser tentoraz nemohol použiť zabezpečené pripojenie. Útočník sa môže pokúsiť odpočúvať alebo upraviť vaše pripojenie k sieti. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Toto upozornenie sa vám zobrazuje, pretože tento web nepodporuje protokol HTTPS a používate program rozšírenej ochrany od Googlu. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave práve nahlásil web, ktorý ste sa pokúšali navštíviť. Vyplnením minútového prieskumu nám pomôžete tieto upozornenia zlepšiť.</translation>
+<translation id="3665741528710985669">Odoslané do Chromu vo vašom zariadení <ph name="DEVICE_NAME"/></translation>
+<translation id="2756090547781225493">Odoslané do Chromu vo vašom zariadení <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463">Už bolo odoslané do Chromu vo vašom zariadení <ph name="DEVICE_NAME"/></translation>
+<translation id="2665815858706570232">Keď je táto možnosť zapnutá, Growser bude v tomto okne zdieľať relevantné karty, čo vám pomôže získať relevantnejšie odpovede.</translation>
+<translation id="4585120639592593231">Growser automaticky odošle Googlu obsah stránok a webové adresy otvorených kariet, ktoré môžu byť relevantné pre vašu otázku, aby ste dostali prispôsobenejšie odpovede. Growser bude zdieľať iba karty z okna, v ktorom pracujete.</translation>
+<translation id="5000497292978544380">Režim AI vo Vyhľadávaní Growser</translation>
+<translation id="4946528282746936957">Growser bude zdieľať relevantné otvorené karty v každom novom vlákne, aby ste dostávali lepšie odpovede. Ďalšie informácie</translation>
+<translation id="8988391141035210442">Tento server nedokázal potvrdiť, či ide o doménu <ph name="DOMAIN"/>, pretože používa bezpečnostný certifikát, ktorý nie je pre Growser alebo vašu systémovú konfiguráciu šifrovania internetovej návštevnosti dôveryhodný. Môže to byť spôsobené nesprávnou konfiguráciou alebo napadnutím vášho pripojenia útočníkom. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Zobraziť certifikát<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">Ak chceš používať YouTube, pokračuj pomocou svojho účtu Growser</translation>
+<translation id="2269854356696928455">Ak chceš požiadať o zobrazenie tohto obsahu, pokračuj pomocou svojho účtu Growser</translation>
+<translation id="5611620894475877872">Šifrovať synchronizované heslá pomocou účtu Growser</translation>
+<translation id="7297228218361240128">Ukladajte informácie z prezeraných stránok do Peňaženky Growser</translation>
+<translation id="1829026591231985685">ukladaní informácií do Peňaženky Growser v nastaveniach</translation>
+<translation id="7927046851848613453">Ukladajte okrem svojich vyplnených formulárov aj vstupenky, udalosti a ďalšie informácie z prezeraných stránok. Potom budete mať rýchly prístup ku kartám, ako sú vstupenky na podujatia a vernostné karty. Uložené informácie sa môžu zobrazovať vo vašich zariadeniach a službách Googlu.</translation>
+<translation id="4080668349181235831">Webová adresa a celý obsah stránky webu, ktorý navštívite, sa zdieľajú s Googlom, aby vám mohol ponúkať návrhy a zlepšovať túto funkciu. Prečítajte si viac o <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/>.</translation>
+<translation id="5038265118346577744">Prihláste sa do Chromu, aby ste mohli zdieľať skupiny kariet, pripájať sa k nim a spolupracovať na nápadoch</translation>
+<translation id="3109033858283726964">Prihláste sa do Chromu</translation>
+<translation id="1823139539047733938">Prehliadač Growser je zastaraný</translation>
+<translation id="4837402451637115574">Ak chcete zdieľať skupiny kariet, aktualizujte Growser</translation>
+<translation id="3835090069800247534">Ak sa chcete pripojiť k tejto skupine kariet, aktualizujte Growser</translation>
+<translation id="5796903668018420114">Ak chcete naďalej používať zdieľané skupiny kariet, aktualizujte Growser</translation>
+<translation id="7224231921984484941">Ak sa chcete pripojiť k skupinám kariet, zdieľať ich a spolupracovať na nich, otvorte nastavenia a zapnite Povoliť prihlásenie do Chromu</translation>
+<translation id="64301400193488735">Ak chcete zdieľať skupiny kariet alebo sa k nejakej z nich pripojiť, musíte mať možnosť prihlásiť sa do Chromu</translation>
+<translation id="6517371327636513767">Ak chcete zdieľať karty a spolupracovať s ostatnými, musíte sa prihlásiť do Chromu</translation>
+<translation id="8040715633918382311">Keď vaša organizácia obmedzuje ukladanie do vášho účtu Growser, nemôžete zdieľať skupiny kariet ani sa k žiadnym z nich pripájať</translation>
+<translation id="5748088712770284646">Keď vaša organizácia obmedzuje ukladanie do vášho účtu Growser, nemôžete zdieľať karty ani spolupracovať s ostatnými</translation>
+<translation id="1973662400109107505">Ak chcete naďalej používať zdieľané skupiny kariet, aktualizujte Growser</translation>
+<translation id="540513565870577298">Ak vyberiete alebo odignorujete návrh, Growser sa prispôsobí, aby sa vám zobrazoval iba relevantný obsah</translation>
+<translation id="6381429959346598968">Growser spracúva názvy stránok a webové adresy v súkromnom priestore v cloude</translation>
+<translation id="3475470536954895815">Growser spracúva názvy stránok a webové adresy v cloude</translation>
+<translation id="583085621576779299">Ak návrhy vypnete, názov stránky a webové adresy vašich kariet sa môžu naďalej spracúvať pre iné funkcie Chromu. Prístup prehliadača k týmto údajom môžete spravovať</translation>
+<translation id="913846191326613072">Pri zdieľaní kariet sa ich obsah a webové adresy odosielajú Googlu.</translation>
+<translation id="4827675678516992122">Nepodarilo sa pripojiť</translation>
+<translation id="6749473226660745022">Fotky</translation>
+<translation id="2366554533468315977">História cien na internete pre túto možnosť</translation>
+<translation id="5199729219167945352">Experimenty</translation>
+<translation id="8413126021676339697">Zobraziť celú históriu</translation>
+<translation id="6302661287897119265">Filtrovať</translation>
+<translation id="2956070106555335453">Zhrnutie</translation>
+<translation id="4759238208242260848">Stiahnuté</translation>
+<translation id="7366909168761621528">Údaje prehliadania</translation>
+<translation id="1898804291554630487">Spýtajte sa na túto stránku</translation>
+<translation id="6231782223312638214">Navrhované</translation>
 </translationbundle>

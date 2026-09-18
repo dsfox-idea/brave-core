@@ -5539,4 +5539,430 @@ Ek ayrıntılar:
 <translation id="8198379961710069585">Arama Geçmişi düğmesi, geçmişte arama yapmak için etkinleştirin</translation>
 <translation id="8495170825732897952">Sekme değiştirmeden bilgileri getirip doldurmak için herhangi bir formda @@ yazın</translation>
 <translation id="8874790741333031443">Üçüncü taraf çerezlerine geçici olarak izin vermeyi deneyin. Bu durumda, internette gezinirken daha az korunursunuz ancak site özelliklerinin beklendiği gibi çalışma olasılığı daha yüksektir.</translation>
+<translation id="6091115085465716987">Growser Cüzdan logosu</translation>
+<translation id="4489288117933602961">Growser logosu</translation>
+<translation id="6604204560730066844">Bu kartı Growser Hesabınıza ve bu cihaza kaydetmek İstiyor musunuz?</translation>
+<translation id="6253380015872250643">Kartı Growser Cüzdan'a kaydedin</translation>
+<translation id="7062344833049251424">Bir dahaki sefere daha hızlı ödeme yapmak için kartınızı ve fatura adresinizi Growser Cüzdan'a kaydedin</translation>
+<translation id="4940620179254568429">Daha hızlı ödeme için bu kartın CVC'si şifrelenip Growser Hesabınıza kaydedilir</translation>
+<translation id="1413235258620101697">Daha hızlı ödeme için bu kartın CVC'si şifrelenerek Growser Cüzdan'a kaydedilecek</translation>
+<translation id="8296806261827627234">Kartınızı kaydederek daha hızlı ödeme yapabilirsiniz. Kart bilgileri, Growser Hesabınızda şifrelenir.</translation>
+<translation id="4954891067389874142">Kartınızı kaydederek daha hızlı ödeme yapabilirsiniz. Kart bilgileri Growser Cüzdan'da şifrelenir.</translation>
+<translation id="4599572944836204718">Kartınızı kaydederek Google Pay ile daha hızlı ödeme yapabilirsiniz. Kart bilgileri Growser Cüzdan'da şifrelenir.</translation>
+<translation id="3872719112670219447">Bu ad Growser Hesabınızdan gelmektedir</translation>
+<translation id="1511387429744666092">Growser, oturumunuz açık olduğu için kartlarınızı Growser Hesabınıza kaydetmeyi öneriyor. Bu davranışı ayarlardan değiştirebilirsiniz.</translation>
+<translation id="4565400898718322011">Growser, oturumunuz açık olduğu için kartlarınızı Growser Hesabınıza kaydetmeyi öneriyor. Bu davranışı ayarlardan değiştirebilirsiniz. Kart sahibinin adı hesabınızdan gelir.</translation>
+<translation id="3594461335790641595">Bu kart bu cihaza kaydedildiğinde Growser'da yapılan satın alma işlemleri için otomatik olarak doldurulur</translation>
+<translation id="1242832199383246031">Bu kart Google Pay ile kullanılmak üzere kaydedildiğinde Growser'da yapılan satın alma işlemleri için otomatik olarak doldurulur</translation>
+<translation id="6186962377036474023">Bu kart, Growser Cüzdan'a kaydedildiğinde Growser'da yapılan satın alma işlemleri için otomatik doldurulur</translation>
+<translation id="5765984179517659957">Growser ödeme bilgilerinizi girebilmek için kimliğinizi doğrulamaya çalışıyor.</translation>
+<translation id="828282277746732142">IBAN'ı Growser Cüzdan'a kaydedin</translation>
+<translation id="6084079099761498478">Bir dahaki sefere bu IBAN'ı otomatik doldurmak için Growser Hesabınıza kaydedin</translation>
+<translation id="5398461103557553443">Bir dahaki sefere bu IBAN'ı otomatik doldurmak için Growser Cüzdan'a kaydedin</translation>
+<translation id="7098302422586317090">Growser artık ödeme yöntemlerini doldurmadan önce kimliğinizi doğrulayacak. Bu ayarı istediğiniz zaman <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/> bölümünden güncelleyebilirsiniz.</translation>
+<translation id="5053116470141135293">Bu kartla ödeme yaptığınızda gerçek bilgilerinizin korunması için sanal kart numarası girilir. Growser Cüzdan'da yönetin. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">Bu seçenekleri sunmak için ödeme sayfasındaki sayfa içeriği Growser ile paylaşılır. Otomatik doldurma özelliğinde sonra ödeme seçeneklerini gizlemek için <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> bölümüne gidin.</translation>
+<translation id="2840680829170913626">Bu seçenekleri sunmak için ödeme sayfasındaki sayfa içeriği Growser ile paylaşılır. Ödeme planları, uygunluk durumuna bağlıdır. Otomatik doldurma özelliğinde sonra ödeme seçeneklerini gizlemek için <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> bölümüne gidin.</translation>
+<translation id="7870207318911766769">Bu seçenekleri sunmak için ödeme sayfasındaki sayfa içeriği Growser ile paylaşılır.</translation>
+<translation id="1151858212483238980">Growser Cüzdan'da kayıtlı kartları otomatik doldurabilirsiniz</translation>
+<translation id="1205344127823614428">Growser Cüzdan'da kayıtlı kartları otomatik doldurabilirsiniz.</translation>
+<translation id="5848445080378515710">Siparişinizi inceledikten sonra bir <ph name="BNPL_ISSUER_NAME"/> hesabında oturum açmanız veya hesap oluşturmanız gerekir. Bu hesap, Growser Cüzdan'a otomatik olarak bağlanacaktır.</translation>
+<translation id="8163468049564974856">İnternette güvenli bir şekilde ödeme yapmak için otomatik doldurmayı etkinleştirin. Kart bilgileriniz Brave Cüzdan'da şifrelenir.</translation>
+<translation id="5717281954932320486">Online ödeme yaparken kart ayrıntılarını otomatik olarak doldurun. Kartlar, Brave Cüzdan'a güvenli bir şekilde kaydedilir.</translation>
+<translation id="7055814742378298611">Artık Brave'da ödeme yöntemlerini kaydederek ödeme sırasında otomatik doldurma özelliğini kullanabilirsiniz. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Cihazınızda ve Growser Hesabınızda kayıtlı tüm güvenlik kodları silinecek</translation>
+<translation id="7170930892977483182">Cihazınızda ve Growser Cüzdan'da kayıtlı tüm güvenlik kodları silinecek</translation>
+<translation id="755360750394433286">Kartınız, gelecekteki satın alma işlemlerinde otomatik olarak doldurabilmeniz için Growser Hesabınıza kaydedildi</translation>
+<translation id="7412081313067625215">Kartınız, gelecekteki satın alma işlemlerinde otomatik doldurma özelliğini kullanabilmeniz için Growser Cüzdan'a kaydedildi</translation>
+<translation id="2482920244925042987">Bu kart, Growser Hesabınıza kaydedilemedi. Bunun yerine bu cihazdaki Growser'a kaydedildi.</translation>
+<translation id="4740434610174859636">Bu kart, Growser Cüzdan'a kaydedilemedi. Bunun yerine bu cihazdaki Growser'a kaydedildi.</translation>
+<translation id="2109852493965717728">Bu IBAN, diğer Growser hizmetlerinde kullanabilmeniz için Growser Hesabınıza kaydedildi.</translation>
+<translation id="3837322271615501940">Bu IBAN, Growser Hesabınıza kaydedilemedi. Bunun yerine bu cihazdaki Growser'a kaydedildi. Growser, bir dahaki sefer bu IBAN'ı kullandığınızda tekrar soracak.</translation>
+<translation id="1583007191864786102">Bu IBAN, Growser Cüzdan'a kaydedilemedi. Bunun yerine bu cihazdaki Growser'a kaydedildi. Growser, bir dahaki sefer bu IBAN'ı kullandığınızda tekrar soracak.</translation>
+<translation id="6915664826242394941">Bu IBAN, Growser Hesabınıza kaydedilemedi. Bunun yerine bu cihazdaki Growser'a kaydedildi.</translation>
+<translation id="376462579087900096">Bu IBAN, Growser Cüzdan'a kaydedilemedi. Bunun yerine bu cihazdaki Growser'a kaydedildi.</translation>
+<translation id="2871837111996280385">Growser, <ph name="APP_NAME"/> adresinde hassas bilgilerinizi doldurmaya çalışıyor.</translation>
+<translation id="3039045945489677870">Growser, hassas bilgileri göstermeye çalışıyor</translation>
+<translation id="3253651554860831188">Growser, ayarları değiştirmeden önce kimliğinizi doğrulamak istiyor</translation>
+<translation id="924075841960625832">Form önerisi Growser'dan kaldırılsın mı?</translation>
+<translation id="3016775357255717300">Kredi kartı Growser'dan kaldırılsın mı?</translation>
+<translation id="1722474089104449082">Adres Growser'dan kaldırılsın mı?</translation>
+<translation id="7077165718541055322">Ev adresi, Growser otomatik doldurma özelliğinden kaldırılsın mı?</translation>
+<translation id="7756454115562251695">İş adresi, Growser otomatik doldurma özelliğinden kaldırılsın mı?</translation>
+<translation id="3068798232942246848">Bu bilgiler, Growser otomatik doldurma özelliğinden kaldırılsın mı?</translation>
+<translation id="967369588715984092">Brave, desteklenen sitelerde bu e-posta adresini otomatik olarak onaylamayı durduracak.</translation>
+<translation id="7299769361777046949">Growser Cüzdan'da bağlılık kartlarını yönetin</translation>
+<translation id="2903623845283894856">Artık Growser Hesabınızdaki adresleri kullanabilirsiniz</translation>
+<translation id="7058709760023777753">Growser Hesabınızdaki ev ve iş adreslerinizi otomatik olarak doldurun</translation>
+<translation id="2856388212909438134">Growser Hesabınızdaki adınızı ve e-posta adresinizi otomatik olarak doldurun</translation>
+<translation id="8581945850065780003">Bu adres, Growser Hesabınızdan (<ph name="ACCOUNT"/>) silinecek</translation>
+<translation id="8652886653703834105">Growser Hesabınıza (<ph name="ACCOUNT"/>)</translation>
+<translation id="4050392779074832022">Bu adresi Growser ürünlerinde kullanabilirsiniz</translation>
+<translation id="361746409909709825">Kayıtlı adresleri tüm Growser ürünlerinde kullanabilirsiniz. Bu adres Growser Hesabınıza (<ph name="ACCOUNT"/>) kaydedilir.</translation>
+<translation id="5318416911578989892">Kayıtlı adresleri tüm Growser ürünlerinde kullanabilirsiniz. Bu adres Growser Hesabınıza (<ph name="ACCOUNT"/>) kaydedilir.</translation>
+<translation id="3995632180712217177">Kayıtlı adresleri tüm Growser ürünlerinde kullanabilirsiniz. Bu işlem, mevcut ev adresinizi değiştirmez. Adres, Growser Hesabınıza (<ph name="ACCOUNT"/>) kaydedilir.</translation>
+<translation id="2432673835335968473">Kayıtlı adresleri tüm Growser ürünlerinde kullanabilirsiniz. Bu işlem, mevcut iş adresinizi değiştirmez. Adres, Growser Hesabınıza (<ph name="ACCOUNT"/>) kaydedilir.</translation>
+<translation id="2024046927213376062">Growser Hesabınızdaki (<ph name="ACCOUNT"/>) bilgiler, Growser'daki formları daha hızlı doldurmanıza yardımcı olabilir</translation>
+<translation id="8430499469896241016">Sitelerin güvenliğinizi artırmak için kullandığı doğrulama kodlarını otomatik doldurur. Brave, bu kodları Gmail'inizden alabilir. <ph name="BEGIN_LINK"/>Bu özellik hakkında daha fazla bilgi edinin<ph name="LINK_END"/>.</translation>
+<translation id="9221566509053798696">Growser, otomatik doldurma sağlayıcınız değil</translation>
+<translation id="7450759832930378803">Bu ayarları etkinleştirmek ve Growser Hesabınızdaki ödeme bilgilerini kullanmak için otomatik doldurma hizmetleriyle ilgili ayarlar bölümünü ziyaret edin.</translation>
+<translation id="7049940136908665440">Bu ayarları etkinleştirmek ve Growser Hesabınızdaki bilgileri kullanmak için otomatik doldurma hizmetleriyle ilgili ayarlar bölümünü ziyaret edin</translation>
+<translation id="2450019289047528273">Growser Cüzdan'daki ödeme yöntemleri ve diğer bilgiler</translation>
+<translation id="1125406338060147524">Brave Cüzdan ayarlarınız, Brave'dan kaydedilen bilgiler için geçerlidir</translation>
+<translation id="5732084028114235391">Bu adres şu anda Growser'da kayıtlı. Adresi diğer Growser ürünlerinde kullanmak için Growser Hesabınıza (<ph name="ACCOUNT"/>) kaydedin.</translation>
+<translation id="756794566964707799">Bu adres şu anda bu cihazda kayıtlı. Adresi diğer Growser ürünlerinde kullanmak için Growser Hesabınıza (<ph name="ACCOUNT"/>) kaydedin.</translation>
+<translation id="6935077351544118151">Artık Growser Cüzdan'daki bağlılık kartlarını otomatik doldurabilirsiniz</translation>
+<translation id="4169189393773057143">Growser Cüzdan'da bağlılık kartlarını yönetin veya bu önerileri devre dışı bırakın</translation>
+<translation id="4470759557257438892">Bunun yerine Growser'da Gemini'a sorun</translation>
+<translation id="2326283484705860548">Artık Growser Cüzdan üzerinden daha fazla bilgiyi otomatik doldurabilirsiniz</translation>
+<translation id="5831217499016131155">Growser Cüzdan</translation>
+<translation id="8421746712901926961">Growser ürünlerinde form doldurma gibi işlemleri daha hızlı yapmak için bilgilerinizi <ph name="GOOGLE_WALLET_TITLE_1"/>'a kaydedin. <ph name="GOOGLE_WALLET_TITLE_2"/>'da <ph name="ACCOUNT"/> ile ilgili <ph name="MANAGE_INFO_LINK"/>.</translation>
+<translation id="4619669610757527494">Sürücü belgesini Growser Cüzdan'a kaydedin</translation>
+<translation id="4239215166147486528">Sürücü belgesini Brave Cüzdan'a güvenli bir şekilde kaydedin</translation>
+<translation id="1912750443952232242">Kimlik kartını Growser Cüzdan'a kaydedin</translation>
+<translation id="8300302621078931927">Kimlik kartını Brave Cüzdan'a güvenli bir şekilde kaydedin</translation>
+<translation id="5447103258548475868">Pasaportu Growser Cüzdan'a kaydedin</translation>
+<translation id="8717177139469452440">Pasaportu Brave Cüzdan'a güvenli bir şekilde kaydedin</translation>
+<translation id="760632772920590778">Aracı Growser Cüzdan'a kaydedin</translation>
+<translation id="4811696127853690432">Aracı Brave Cüzdan'a güvenli bir şekilde kaydedin</translation>
+<translation id="5914185423510719251">KTN'yi Growser Cüzdan'a kaydedin</translation>
+<translation id="5034488401832901795">KTN'yi Brave Cüzdan'a güvenli bir şekilde kaydedin</translation>
+<translation id="1449251255954293933">Redress numarasını Growser Cüzdan'a kaydedin</translation>
+<translation id="1330952240988133220">Redress numarasını Brave Cüzdan'a kaydedin</translation>
+<translation id="8393948304336153065">Sürücü belgesini Growser Cüzdan'a kaydedin</translation>
+<translation id="8889525327610245418">Sürücü belgesini Brave Cüzdan'da güvenli bir şekilde güncelleyin</translation>
+<translation id="7570524564113479209">Growser Cüzdan'daki kimlik kartını güncelleyin</translation>
+<translation id="4410614037742891410">Brave Cüzdan'da kimlik kartını güvenli bir şekilde güncelleyin</translation>
+<translation id="3426672782316020729">Growser Cüzdan'daki pasaportu güncelleyin</translation>
+<translation id="3280440382387335343">Brave Cüzdan'daki pasaportu güvenli bir şekilde güncelleyin</translation>
+<translation id="2124081665399116863">Growser Cüzdan'daki aracı güncelleyin</translation>
+<translation id="6422648598133086441">Brave Cüzdan'daki aracı güvenli bir şekilde güncelleyin</translation>
+<translation id="4770909831299304090">Growser Cüzdan'daki KTN'yi güncelleyin</translation>
+<translation id="5872115357279348603">Brave Cüzdan'daki KTN'yi güvenli bir şekilde güncelleyin</translation>
+<translation id="1732796940245838248">Growser Cüzdan'daki redress numarasını güncelleyin</translation>
+<translation id="7253051586755429279">Brave Cüzdan'daki redress numarasını güvenli bir şekilde güncelleyin</translation>
+<translation id="5628060911499153873">Growser ürünlerinde işlerinizi daha hızlı halletmek için bilgilerinizi kaydedin. <ph name="ACCOUNT"/> hesabı için bilgileriniz <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> uygulamasına kaydedilir.</translation>
+<translation id="8369722293913575142">Bu bilgiler Growser Cüzdan'ınıza kaydedilemedi. Bunun yerine bu cihazdaki Growser'a kaydedildi. Growser, bir sonraki kullanımınızda bu bilgileri Cüzdan'a kaydetmeyi önerir.</translation>
+<translation id="3237427677128462778">Growser Cüzdan'a kaydedilemedi</translation>
+<translation id="9078170656887151974">Sayfanın URL'si ve içerikleri, size öneri göstermek ve bu özelliği geliştirmek için Growser ile paylaşılır. İstediğiniz zaman fikrinizi değiştirebilirsiniz. <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Sayfanın URL'si ve içerikleri, size öneri göstermek ve bu özelliği geliştirmek için Growser ile paylaşılır.</translation>
+<translation id="2905902437192896563">Growser, formları daha iyi anlar ve sizin için daha hızlı bir şekilde otomatik olarak doldurabilir.</translation>
+<translation id="67310796271265436">Brave'ın sunucularındaki verileri güvenli bir şekilde işleyerek Brave'un karmaşık formları daha iyi anlamasına ve doldurmasına yardımcı olun. Bilgileriniz gizli kalır ve kimse tarafından incelenmez.</translation>
+<translation id="7422908041366284140">Growser, standart otomatik doldurma özelliğinin atlayabileceği zor alanları otomatik olarak doldurabilir.</translation>
+<translation id="6329742260390895689">Bilgilerinizi otomatik doldurmak için Cüzdan ayarlarında "Kartlarınızı Growser'da kullanın" ayarını etkinleştirin</translation>
+<translation id="5912796581727968237">Growser Cüzdan'ı aç</translation>
+<translation id="5160781056848005130">Growser ile veri paylaşarak gelişmiş otomatik doldurma özelliğinin iyileştirilmesine yardımcı oluyorsunuz</translation>
+<translation id="8781233757384402598">Gelişmiş otomatik doldurma isteğinde bulunduğunuzda otomatik doldurma deneyimini iyileştirmek için kullanım verileriniz, istekleriniz ve sayfa ayrıntılarınız Brave ile paylaşılır</translation>
+<translation id="7044265724713929821">Brave, özelliği nasıl kullandığınızı (ör. istekleriniz ve davranışı kabul ettiğiniz veya yoksaydığınızdaki davranışınız) günlüğe kaydeder.</translation>
+<translation id="3209071504641569648">İstekleriniz, sayfa başlıklarınız ve URL'leriniz Brave'a gönderilerek gelişmiş otomatik doldurma özelliğini daha iyi hale getirmek için incelenebilir.</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Yok}=1{1 siteden (Growser Hesabınızın oturumu açık kalır)}other{# siteden (Growser Hesabınızın oturumu açık kalır)}}</translation>
+<translation id="3410151451624226773">Growser Şifre Yöneticisi'nde yönetin</translation>
+<translation id="5224107321793121921">Growser Hesabınızda yönetin</translation>
+<translation id="5105442806410269908">Diğer Growser verilerini yönetin</translation>
+<translation id="2477607419416067650">Diğer Growser verileri</translation>
+<translation id="472824688843296007">Growser ile fiyatları takip edin</translation>
+<translation id="753556296624075801">Growser Destekli</translation>
+<translation id="3745599309295009257">Metniniz ile yazdığınız sayfanın içeriği ve URL'si Growser'a gönderilecek, gerçek kişiler tarafından incelenecek ve bu özelliği iyileştirmek için kullanılacaktır. Kişisel bilgiler (ör. tıbbi veya finansal bilgiler) girmeyin veya bu aracı özel ya da hassas bilgiler içeren sitelerde kullanmayın.</translation>
+<translation id="5543452229212526547">Metniniz, üzerinde yazdığınız sayfanın URL'si ve içeriği Growser'a gönderilir. İçeriğiniz, yapay zekayı iyileştirmek için inceleme uzmanları tarafından kullanılmaz. Kuruluşunuz istediği zaman bu ayarları değiştirebilir.</translation>
+<translation id="1959445535228047762">Metniniz ve sayfa içeriğiniz Growser'a gönderilerek bu özelliği iyileştirmek için kullanılabilir.
+  <ph name="BEGIN_LINK"/>Daha fazla bilgi<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">Metniniz ve sayfa içeriğiniz Growser'a gönderilir ancak yapay zekayı daha iyi hale getirmek için kullanılmaz.
+    <ph name="BEGIN_LINK"/>Daha fazla bilgi edinin<ph name="END_LINK"/>.</translation>
+<translation id="5164928537947209380">Bu deneysel yapay zeka aracı her zaman doğru sonuç vermeyebilir. İçeriğiniz, aracı iyileştirmek için Growser'a gönderilir.
+    <ph name="BEGIN_LINK"/>Daha fazla bilgi<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">İçerik, kuruluşunuzun politikaları nedeniyle yönetilen Brave bağlamının dışına yapıştırılamadı</translation>
+<translation id="1351458950091269256">Bu reklam, cihazınız için çok fazla kaynak kullandığından Growser tarafından kaldırıldı.</translation>
+<translation id="4366714044424353289">Growser Hesabınızın <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> adresinde başka biçimlerde tarama geçmişi olabilir</translation>
+<translation id="5626844006416355146">Growser Hesabınızda <ph name="BEGIN_LINK_GAA"/>Gemini Uygulamaları Etkinliğiniz<ph name="END_LINK_GAA"/> olabilir</translation>
+<translation id="5747377793818752349"><ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> adresinde Growser Hesabınızın başka biçimlerde tarama geçmişi olabilir. Örneğin, <ph name="BEGIN_LINK_GAA"/>Gemini Uygulamaları Etkinliğiniz<ph name="END_LINK_GAA"/></translation>
+<translation id="4267590181863312380">Diğer cihazlarınızdaki geçmişinizi görmek için oturum açın ve geçmişi senkronize edin. Ayrıca, şifrelerinize ve diğer öğelerinize tüm cihazlarınızdan erişebilirsiniz. Senkronizasyonu istediğiniz zaman ayarlardan durdurabilirsiniz. Growser, geçmişinize dayalı olarak Arama'yı ve diğer hizmetleri kişiselleştirebilir.</translation>
+<translation id="5889251770650310375">Diğer cihazlarınızdaki geçmişinizi görmek için kimliğinizi doğrulayıp geçmişinizi ve sekmelerinizi senkronize edin. Senkronizasyonu istediğiniz zaman ayarlardan durdurabilirsiniz. Growser, geçmişinize dayalı olarak Arama'yı ve diğer hizmetleri kişiselleştirebilir.</translation>
+<translation id="2541474152868747095">Diğer cihazlarınızdaki geçmişe ulaşmak için kimliğinizi doğrulayın. Senkronizasyonu istediğiniz zaman ayarlardan durdurabilirsiniz. Growser, geçmişinize dayalı olarak Arama'yı ve diğer hizmetleri kişiselleştirebilir.</translation>
+<translation id="4260407128682690669">Diğer cihazlarınızdaki geçmişinize ulaşmak için geçmişinizi ve sekmelerinizi <ph name="ACCOUNT_EMAIL"/> ile senkronize edin. Senkronizasyonu istediğiniz zaman ayarlardan durdurabilirsiniz. Growser, geçmişinize dayalı olarak Arama'yı ve diğer hizmetleri kişiselleştirebilir.</translation>
+<translation id="611018310643025551">Aramalarınız, en iyi eşleşmeler ve sayfa içerikleri Growser'a gönderilerek bu özelliğin geliştirilmesi için inceleme uzmanları tarafından görüntülenebilir.</translation>
+<translation id="1987486584747170374">Aramalarınız, en iyi eşleşmeler ve sayfa içerikleri Growser'a gönderilir. Veriler, yapay zekanın geliştirilmesi için inceleme uzmanları tarafından kullanılmaz. Kuruluşunuz istediği zaman bu ayarları değiştirebilir.</translation>
+<translation id="2461080251012814077">Growser geçmişinizden sildiğiniz sekmeler karşılaştırma tablolarınızda görünmeye devam eder</translation>
+<translation id="7395776876928503485">Yöneticiniz profilinizde ve tarayıcınızda uzaktan değişiklik yapabilir, raporlama aracılığıyla tarayıcı hakkındaki bilgileri analiz edebilir ve diğer gerekli görevleri yerine getirebilir. Bu cihazdaki etkinlikler Growser dışında da yönetilebilir. <ph name="BEGIN_LINK"/>Daha fazla bilgi<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Bu tarayıcı bir şirket veya başka bir kuruluş tarafından yönetilmemektedir. Bu cihazdaki etkinlikler Growser dışında yönetilebilir. <ph name="BEGIN_LINK"/>Daha fazla bilgi<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">Cihaz kullanıcı adınız ve Growser kullanıcı adınız</translation>
+<translation id="9383261434423554">Growser Enterprise Connectors hakkında daha fazla bilgi</translation>
+<translation id="7998714759612158367">Growser'a eklenen uzantılarla ilgili veriler analiz edilmek üzere üçüncü taraflara gönderilir ve yöneticiniz tarafından görülebilir. Ad, yükleme zamanı, yükleme kaynağı gibi uzantılarla ilgili bilgilerin yanı sıra uzantılarla ilişkili etkinlikler (ör. sekme değiştirme, web siteleriyle iletişime geçme veya çerezlere erişme) bu veriler arasında yer alır. Bu veriler hem Web Mağazası'ndan hem de mağaza dışından yüklenen uzantılar için toplanır.</translation>
+<translation id="3521646565402740725">Growser Enterprise Connectors</translation>
+<translation id="7942345451754009257">Yöneticiniz, tarayıcınızda Growser Enterprise Connectors özelliğini etkinleştirdi. Bu bağlayıcıların verilerinizin bir kısmına erişimi vardır.</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/>, tarayıcınızda Growser Enterprise Connectors'ı etkinleştirdi. Bu bağlayıcıların verilerinizin bir kısmına erişimi vardır.</translation>
+<translation id="3864343340250325558">Güvenlik işlemleri Growser tarafından işaretlendiğinde bu işlemlerle ilgili veriler yöneticinize gönderilir. Bu veriler; Growser'da ziyaret ettiğiniz sayfaların URL'si, veri kopyaladığınız sayfaların URL'si, dosya adları veya meta veriler, IP adresleri, tarayıcı ya da sekme kilitlenmelerinin yanı sıra web tabanlı uygulamalarda, cihazınızda ve Growser'da oturum açmak için kullandığınız kullanıcı adını içerir.</translation>
+<translation id="1979029506107883830">Growser Enterprise Core ile tarayıcı politikaları, uygulamalar ve uzantıları buluttan yönetebilirsiniz</translation>
+<translation id="84905717630920469">Growser Enterprise Core'u deneyin</translation>
+<translation id="1757745363789526465">Growser'u yeniden başlatın</translation>
+<translation id="2537931901612099523">Etkinliğiniz bu cihazı kullanan diğer kullanıcılar tarafından görülmediğinden daha gizli bir şekilde göz atabilirsiniz. Bu durum, Growser da dahil olmak üzere ziyaret ettiğiniz web siteleri ve kullandıkları hizmetler tarafından verilerin toplanma şeklini değiştirmez. İndirilenler ve yer işaretleri kaydedilir.</translation>
+<translation id="1410365862999780287">Etkinliğiniz bu cihazı kullanan diğer kullanıcılar tarafından görülmediğinden daha gizli bir şekilde göz atabilirsiniz. Bu durum, Growser da dahil olmak üzere ziyaret ettiğiniz web siteleri ve kullandıkları hizmetler tarafından verilerin toplanma şeklini değiştirmez. Yine de indirdikleriniz, yer işaretleri ve okuma listesi öğeleri kaydedilir.</translation>
+<translation id="7087257419919340685">Growser aşağıdaki bilgileri <ph name="BEGIN_EMPHASIS"/>kaydetmez<ph name="END_EMPHASIS"/>:
+          <ph name="BEGIN_LIST"/>
+            <ph name="LIST_ITEM"/>Tarama geçmişiniz
+            <ph name="LIST_ITEM"/>Çerezler ve site verileri
+            <ph name="LIST_ITEM"/>Formlara girilen bilgiler
+          <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Growser ayarlarında tarama geçmişinizi, çerezleri, önbelleği ve başka öğeleri silin</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında tarama geçmişinizi, çerezleri, önbelleği ve başka öğeleri silmek için Sekme'ye, sonra Enter'a basın</translation>
+<translation id="8841351289024215412">"Tarama verilerini sil" düğmesi, Growser ayarlarında tarama geçmişinizi, çerezleri, önbelleği ve başka öğeleri silmek için etkinleştirin</translation>
+<translation id="5085944396348027753">Growser ayarlarında şifrelerinizi görüntüleyin ve yönetin</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında şifrelerinizi görüntüleyip yönetmek için Sekme'ye, sonra Enter'a basın</translation>
+<translation id="3071294016974329065">Şifreleri yönet düğmesi, Growser ayarlarında şifrelerinizi görüp yönetmek için etkinleştirin</translation>
+<translation id="3031527126657836806">Growser ayarlarından ödemelerinizi ve kredi kartı bilgilerini yönetin</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında ödemelerinizi ve kredi kartı bilgilerinizi yönetmek için Sekme'ye, sonra Enter'a basın</translation>
+<translation id="7338080394311291541">Ödeme yöntemlerini yönet düğmesi, Growser ayarlarında ödemelerinizi ve kredi kartı bilgilerinizi yönetmek için etkinleştirin</translation>
+<translation id="561165882404867731">Bu sayfayı Growser Çeviri'yle çevirin</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, bu sayfayı Growser Çeviri'yle çevirmek için Sekme'ye, sonra Enter'a basın</translation>
+<translation id="8781278378794969337">Sayfayı çevir düğmesi, bu sayfayı Growser Çeviri'yle çevirmek için etkinleştirin</translation>
+<translation id="6560728661781075049">Growser'u güncelle</translation>
+<translation id="5749239053568461167">Growser ayarlarınızdan Growser'u güncelleyin</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarınızdan Growser'u güncellemek için Sekme'ye, sonra Enter'a basın</translation>
+<translation id="1957844396300023214">Growser'u güncelle düğmesi, Growser ayarlarınızdan Growser'u güncellemek için etkinleştirin</translation>
+<translation id="6924344322157830957">Growser ayarlarında güvenlik kontrolü yürütün</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında güvenlik kontrolü yürütmek için Sekme'ye, sonra Enter'a basın</translation>
+<translation id="2217308317357494419">Growser güvenlik kontrolü yürüt düğmesi, Growser ayarlarında güvenlik kontrolü yürütmek için etkinleştirin</translation>
+<translation id="555731368593399620">Growser güvenlik kontrolüne git</translation>
+<translation id="1022622918438880634">Ayarlarda Growser güvenlik kontrolü sayfasına gidin</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ayarlarda Growser güvenlik kontrolü sayfasına gitmek için Sekme tuşuna, sonra Enter'a basın</translation>
+<translation id="4573592640621800816">Growser güvenlik kontrolüne git düğmesi, ayarlarda Growser güvenlik kontrolü sayfasını ziyaret etmek için etkinleştirin</translation>
+<translation id="711408602663662681">Growser ayarlarında Güvenli Tarama ve diğer özellikleri yönetin</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında Güvenli Tarama ve diğer özellikleri yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="8147674953957429172">Güvenlik ayarlarını yönet düğmesi, Growser ayarlarında Güvenli Tarama ve diğer özellikleri yönetmek için etkinleştirin</translation>
+<translation id="123941427300345384">Growser ayarlarında çerez tercihlerinizi yönetin</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında çerez tercihlerinizi yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="185317221836385090">Çerezleri yönet düğmesi, Growser ayarlarında çerez tercihlerinizi yönetmek için etkinleştirin</translation>
+<translation id="1824417970962955294">Growser ayarlarında adres ekleyip yönetin</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında adres ekleyip yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="2805189921443465815">Adresleri yönet düğmesi, Growser ayarlarında adres ekleyip yönetmek için etkinleştirin</translation>
+<translation id="5592576649770969570">Growser ayarlarında hangi bilgileri senkronize ettiğinizi yönetin</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında hangi bilgileri senkronize ettiğinizi yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="4269937126213032056">Senkronizasyonu yönet düğmesi, Growser ayarlarında hangi bilgileri senkronize ettiğinizi yönetmek için etkinleştirin</translation>
+<translation id="8766514807385279339">Growser Hesabınıza hangi Growser bilgilerini kaydettiğinizi yönetin</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Hesabınıza hangi Growser bilgilerini kaydettiğinizi yönetmek için Sekme'ye, ardından Enter tuşuna basın</translation>
+<translation id="3256302414991866158">Hesabınızdaki verileri yönetin düğmesi, Growser Hesabınıza hangi Growser bilgilerini kaydettiğinizi yönetmek için etkinleştirin</translation>
+<translation id="4365583497146730170">Growser ayarlarında izinleri ve sitelerde depolanan verileri yönetin</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında izinleri ve sitelerde depolanan verileri yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="1429889589220926820">Site ayarlarını yönet düğmesi, Growser ayarlarında izinleri ve sitelerde depolanan verileri yönetmek için etkinleştirin</translation>
+<translation id="6881240511396774766">Hızlıca yeni bir Growser Dokümanı oluşturun</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, hızlıca yeni bir Growser Dokümanı oluşturmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="2925454999967523701">Doküman oluştur düğmesi, hızlıca yeni bir Growser Dokümanı oluşturmak için etkinleştirin</translation>
+<translation id="8075736640322370409">Hızlıca yeni bir Growser E-Tablosu oluşturun</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, hızlıca yeni bir Growser E-Tablosu oluşturmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="3150889484970506196">E-tablo oluştur düğmesi, hızlıca yeni bir Growser E-Tablosu oluşturmak için etkinleştirin</translation>
+<translation id="6971439137020188025">Slaytlar'da hızlıca yeni bir Growser sunusu oluşturun</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Slaytlar'da hızlıca yeni bir Growser sunusu oluşturmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="8768225988514678921">Sunu oluştur düğmesi, Slaytlar'da hızlıca yeni bir Growser sunusu oluşturmak için etkinleştirin</translation>
+<translation id="7582602800368606489">Growser Takvim'de hızlıca yeni bir etkinlik oluşturun</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Takvim'de hızlıca yeni bir etkinlik oluşturmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="2009942480257059311">Etkinlik oluştur düğmesi, Growser Takvim'de hızlıca yeni bir etkinlik oluşturmak için etkinleştirin</translation>
+<translation id="1269516672602708785">Growser Sites'ta hızlıca yeni bir site oluşturun</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Sites'ta hızlıca yeni bir site oluşturmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="3698629142018988477">Site oluştur düğmesi, Growser Sites'ta hızlıca yeni bir site oluşturmak için etkinleştirin</translation>
+<translation id="4854853140771946034">Growser Keep'te hızlıca yeni bir not oluşturun</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Keep'te hızlıca yeni bir not oluşturmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="5488590678320979185">Not oluştur düğmesi, Growser Keep'te hızlıca yeni bir not oluşturmak için etkinleştirin</translation>
+<translation id="7734285854693414638">Growser Formlar'da hızlıca yeni bir form oluşturun</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Formlar'da hızlıca yeni bir form oluşturmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="573555826359077410">Form oluştur düğmesi, Growser Formlar'da hızlıca yeni bir form oluşturmak için etkinleştirin</translation>
+<translation id="7910437794853634516">Growser ipuçlarını göster</translation>
+<translation id="3521214483675189046">Growser özellikleri hakkında bilgi edinin</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser özellikleri hakkında bilgi edinmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="4260829339448158187">Growser ipuçlarını göster düğmesi, Growser özellikleri hakkında bilgi edinmek için etkinleştirin</translation>
+<translation id="8694710517222056538">Growser Hesabı'nı yönet</translation>
+<translation id="6587259514551810029">Growser Hesabınızda bilgilerinizi, gizliliğinizi ve güvenliğinizi yönetin</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Hesabınızda bilgilerinizi, gizliliğinizi ve güvenliğinizi yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="7027078594246193839">Growser Hesabı'nı yönet düğmesi, Growser Hesabınızda bilgilerinizi, gizliliğinizi ve güvenliğinizi yönetmek için etkinleştirin</translation>
+<translation id="643051589346665201">Growser şifresini değiştir</translation>
+<translation id="7075427536109560520">Growser Hesabınızın şifresini değiştirin</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Hesabınızın şifresini değiştirmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="3236176349246489091">Growser şifresini değiştir düğmesi, Growser Hesabınızın şifresini değiştirmek için etkinleştirin</translation>
+<translation id="4573751006789325585">Growser Dinozor oyununu oyna</translation>
+<translation id="1461337831834704527">Growser'da Dinazor oyununu oynayın</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser'da Dinazor oyununu oynamak için sekmeye, ardından Enter'a basın</translation>
+<translation id="3493625910132223088">Growser Dinozor oyununu oyna düğmesi, Growser'da Dinozor oyununu oynamak için etkinleştirin</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Hesabı'nda cihazınızı bulmak için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="8109063930676038426">Cihazımı bul düğmesi, Growser Hesabı'nda cihazınızı bulmak için etkinleştirin</translation>
+<translation id="163710751542270335">Growser Hesabı gizlilik ayarlarını yönet</translation>
+<translation id="3269729253658419180">Growser Hesabınızda Growser gizlilik ayarlarını yönetin</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Hesabınızın gizlilik ayarlarını yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="970931323129831346">Growser gizlilik ayarlarını yönet düğmesi, Growser Hesabınızın gizlilik ayarlarına gitmek için etkinleştirin</translation>
+<translation id="498856326289655361">Growser ayarlarınızı yönetin</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarınızı yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="1592236556980370094">Growser ayarlarını yönet düğmesi, Growser ayarlarınıza gitmek için etkinleştirin</translation>
+<translation id="2480781891721036554">Growser'da indirdiğiniz dosyaları yönetin</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser'da indirdiğiniz dosyaları yönetmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="8786654106588913377">Growser'da indirilenleri yönet düğmesi, Growser'da indirdiğiniz dosyaları yönetmek için etkinleştirin</translation>
+<translation id="8320175841857324841">Growser geçmişimi göster</translation>
+<translation id="179012966915448796">Growser ayarlarında tarama geçmişinizi görüntüleyin ve yönetin</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser'daki tarama geçmişinizi görmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="7891862848641775440">Growser geçmişinizi görüntüleyin düğmesi, Growser ayarlarında tarama geçmişinizi görüp yönetmek için etkinleştirin</translation>
+<translation id="1545741848376005386">Growser ayarlarında erişilebilirlik araçlarınızı kişiselleştirin</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser ayarlarında erişilebilirlik araçlarınızı kişiselleştirmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="1350935235605927980">Erişilebilirlik ayarlarını yönetin düğmesi, Growser ayarlarında erişilebilirlik araçlarınızı kişiselleştirmek için etkinleştirin.</translation>
+<translation id="1937771495497081508">Growser'daki yazı tipi boyutlarını ve yazı tiplerini özelleştirin</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser'daki yazı tipi boyutlarını ve yazı tiplerini özelleştirmek için Sekme'ye, ardından Enter'a basın</translation>
+<translation id="8183964669401154956">Growser'daki yazı tiplerini özelleştirin düğmesi, Growser'daki yazı tipi boyutlarını ve yazı tiplerini özelleştirmek için etkinleştirin</translation>
+<translation id="6868193750403948178">Growser'u özelleştir</translation>
+<translation id="2746936074954064976">Growser'u özelleştir düğmesi, tarayıcınızın görünümünü özelleştirmek için etkinleştirin</translation>
+<translation id="8223358973996562559">Growser'u varsayılan tarayıcı olarak ayarla</translation>
+<translation id="113548419005571036">Growser'u sistemin varsayılan tarayıcısı olarak ayarlayın</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser'u sistemin varsayılan tarayıcısı olarak ayarlamak için Sekme tuşuna, ardından Enter'a basın</translation>
+<translation id="6783715802269207395">Growser'u varsayılan tarayıcı olarak ayarla düğmesi, Growser'u sistemin varsayılan tarayıcısı olarak ayarlamak için etkinleştirin</translation>
+<translation id="8076157978023662935">Growser'u Varsayılan Tarayıcı olarak ayarla</translation>
+<translation id="7026203586041411100">Growser'u iOS ayarlarından sistemin varsayılan tarayıcısı olarak ayarlayın.</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser'u iOS ayarlarından sistemin varsayılan tarayıcısı olarak ayarlamak için sekmeye, ardından Enter'a basın</translation>
+<translation id="29533193241299316">Growser'u varsayılan tarayıcı olarak ayarlama düğmesi, Growser'u iOS ayarlarından sistemin varsayılan tarayıcısı olarak ayarlamak için Enter'a basın</translation>
+<translation id="2461514655528532981">Growser Güvenlik Kontrolü Yürüt</translation>
+<translation id="9113214967104134276">Growser Geçmişimi Göster</translation>
+<translation id="943522416815463637">Growser Dinozor Oyununu Oyna</translation>
+<translation id="7602868996817972616">Growser'a bu sayfa hakkında soru sor</translation>
+<translation id="161612500287664753">Growser Arama'ya bu sayfa hakkında soru sorun</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser'a bu sayfa hakkında soru sormak için Enter tuşuna basın</translation>
+<translation id="5630981295558454585">Growser'a bu sayfa hakkında soru sorun düğmesi, Growser'a bu sayfa hakkında soru sormak için etkinleştirin</translation>
+<translation id="6019118530636932154">Growser Apps Komut Dosyası</translation>
+<translation id="6437647869369934905">Growser Çizimler</translation>
+<translation id="1875512691959384712">Growser Formlar</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser Sites</translation>
+<translation id="1521655867290435174">Growser E-Tablolar</translation>
+<translation id="467809019005607715">Growser Slaytlar</translation>
+<translation id="7510585715716175915">Growser geçmişinizde alakalı etkinlikleri görmek için arama yolculuğunuzu devam ettirin.</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Sekme'ye basın, ardından yolculuğunuzu devam ettirmek ve Growser geçmişinizdeki alakalı etkinlikleri görmek için Enter'a basın</translation>
+<translation id="3714978095030396658">Arama yolculuğunuzu devam ettirin düğmesi, arama yolculuğunuzu devam ettirerek Growser geçmişinizdeki alakalı etkinlikleri görmek için Enter'a basın</translation>
+<translation id="9041241404793255081">Rol: Growser ipucu. Erişilebilirlik etiketi: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>, Growser ipucunu kapatmak için Sekme tuşuna, ardından Enter'a basın.</translation>
+<translation id="7432463754469271865">Growser İpucunu Kapat düğmesi, kapatmak için Enter'a basın, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Growser İpucunu Kapat düğmesi, kapatmak için Enter'a basın</translation>
+<translation id="7571813784389228510">Growser AI Modu</translation>
+<translation id="3415471717466570460">Aramalarınız, en iyi eşleşmeler ve sayfa içerikleri Growser'a gönderilerek bu özelliğin geliştirilmesi için inceleme uzmanları tarafından görüntülenebilir. Bu, deneysel bir özellik olduğundan her zaman doğru sonuç vermeyebilir.</translation>
+<translation id="9103366036378878818">Growser İpucu bağlantısı, açmak için Enter tuşuna basın <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/></translation>
+<translation id="2097698842685899280">Brave, kimlik avı, kötü amaçlı yazılım veya dolandırıcılıkla ilişkili sitelerde yaygın olan ayrıntılar tespit etti. <ph name="BEGIN_LINK"/>Daha fazla bilgi edinin<ph name="END_LINK"/>.</translation>
+<translation id="319854178761292593">Growser, okumayı kolaylaştırmak için bu sayfayı basitleştirdi. Growser, orijinal sayfayı güvenli bir bağlantı üzerinden aldı.</translation>
+<translation id="542284143784575620">Growser, okumayı kolaylaştırmak için bu sayfayı basitleştirdi. Growser, orijinal sayfayı güvenli olmayan bir bağlantı üzerinden aldı.</translation>
+<translation id="5826875044227298275">Az önce şifrenizi yanıltıcı bir sitede girdiniz. Growser, hesaplarınızın güvenliğini sağlamak için kayıtlı şifrelerinizi kontrol etmenizi öneriyor.</translation>
+<translation id="4397030659892816613">Kameranızı kullanması için Growser'a <ph name="LINK"/> üzerinden erişim izni verin.</translation>
+<translation id="8251369644700086563">Mikrofonunuzu kullanması için Growser'a <ph name="LINK"/> üzerinden erişim izni verin.</translation>
+<translation id="6520686276106691991">Konumunuzu kullanması için Growser'a <ph name="LINK"/> üzerinden erişim izni verin.</translation>
+<translation id="1612024742222359811">Konumunuzu kullanması için Growser'a <ph name="LINK"/> üzerinden erişim izni verin.</translation>
+<translation id="3620727327079734151">Growser Hesabınıza erişimi kaybedebilirsiniz. Growser, şifrenizi hemen değiştirmenizi önerir. Oturum açmanız istenecektir.</translation>
+<translation id="7891575721440765670">Growser, Growser Hesabınızı korumanıza ve şifrenizi değiştirmenize yardımcı olabilir.</translation>
+<translation id="1362419187647259443">Az önce şifrenizi yanıltıcı bir sitede girdiniz. Growser yardım edebilir. Şifrenizi değiştirmek ve hesabınızın risk altında olabileceğini Growser'a bildirmek için Hesabı Koru'yu tıklayın.</translation>
+<translation id="4067282726741467091">Kuruluşunuzun hesabına erişimi kaybedebilir veya kimlik hırsızlığına maruz kalabilirsiniz. Growser, şifrenizi hemen değiştirmenizi önerir.</translation>
+<translation id="7872399623676350476"><ph name="ORG_NAME"/> hesabınıza erişimi kaybedebilir veya kimlik hırsızlığına maruz kalabilirsiniz. Growser, şifrenizi hemen değiştirmenizi önerir.</translation>
+<translation id="5938866385061293322">Bu bilgiler Trustpilot, ScamAdviser, Growser ve diğer bağımsız yorum web sitelerinden alınır. Özetler yapay zeka ile oluşturulur.</translation>
+<translation id="4452328064229197696">Az önce kullandığınız şifrenin bir veri ihlali sonucunda açığa çıktığı anlaşıldı. Growser Şifre Yöneticisi, hesaplarınızın güvenliğini sağlamak için kayıtlı şifrelerinizi kontrol etmenizi öneriyor.</translation>
+<translation id="7646681339175747202">Az önce kullandığınız şifrenin bir veri ihlali sonucunda açığa çıktığı anlaşıldı. Growser Şifre Yöneticisi şifrenizi hemen değiştirmenizi öneriyor.</translation>
+<translation id="5997247540087773573">Az önce kullandığınız şifrenin bir veri ihlali sonucunda açığa çıktığı anlaşıldı. Growser Şifre Yöneticisi, hesaplarınızın güvenliğini sağlamak için bu şifreyi hemen değiştirmenizi ve kayıtlı şifrelerinizi kontrol etmenizi öneriyor.</translation>
+<translation id="6722165747660324971">Kullandığınız bir şifre internette yayınlanmışsa Growser sizi uyarır. Bu işlem sırasında şifreleriniz ve kullanıcı adlarınız şifrelendiğinden, Growser dahil olmak üzere hiç kimse tarafından okunamaz.</translation>
+<translation id="1485314135034164137">Growser Şifreleri</translation>
+<translation id="7558556509649858677">Geçiş anahtarı • Growser profiliniz</translation>
+<translation id="950926967802086924">Geçiş anahtarı • Growser Şifre Yöneticisi</translation>
+<translation id="6338645927051849741">Şifre • Growser Şifre Yöneticisi</translation>
+<translation id="131993612023623286">Growser, <ph name="APP_NAME"/> adresinde şifrenizi doldurmaya çalışıyor.</translation>
+<translation id="1833199389909527220">Growser, şifreleri doldurmak için Windows Hello'yu etkinleştirmeye çalışıyor.</translation>
+<translation id="643007953296382271">Growser, şifreleri doldurmak için Windows Hello'yu devre dışı bırakmaya çalışıyor.</translation>
+<translation id="2739032725916431090">Growser Hesabınıza kaydedin</translation>
+<translation id="2920528063654705391">Growser Hesabınızda kayıtlı şifreleri ve diğer bilgileri kullanmak için kimliğinizi doğrulayın</translation>
+<translation id="3795624560191557077">Yakın zamanda, herkese açık bir veri ihlalinde tespit edilen bir şifreyi değiştirdiniz. Sorun yaşamanız durumunda Growser Şifre Yöneticisi oturum açmanıza yardımcı olabilir.</translation>
+<translation id="5748742097310495951">Kart ve adres bilgileri Growser'dan ve Growser Hesabınızdan (<ph name="ACCOUNT_EMAIL"/>) alınmaktadır. Bunları <ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/>'dan yönetebilirsiniz.</translation>
+<translation id="6827399997598211909">Kartlar ve adresler Growser'dan alınmaktadır. Bu bilgileri <ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/>'dan yönetebilirsiniz.</translation>
+<translation id="7934414805353235750"><ph name="URL"/>, korumalı içeriği oynatmak istiyor. Cihazınızın kimliği Growser tarafından doğrulanacak.</translation>
+<translation id="7142561893113115357">Bu bilgisayarın kurumsal olarak yönetilmediği algılandığı için politika yalnızca Growser Web Mağazası'nda barındırılan uzantıları otomatik olarak yükleyebilir. Growser Web Mağazası'nın güncelleme URL'si "<ph name="CWS_UPDATE_URL"/>" şeklindedir.</translation>
+<translation id="6272383483618007430">Growser Güncelleme</translation>
+<translation id="885730110891505394">Growser ile Paylaşma</translation>
+<translation id="2867186026859663748">Bu politika, Growser profili düzeyinde ayarlanamaz ve yoksayılır.</translation>
+<translation id="277370491433906876">Kullanıcı bağlı olmadığından bu politika yoksayılır. Bu politikanın uygulanması için Growser tarayıcıyı ve profilini, Yönetici Konsolu üzerinden aynı kuruluş yönetmelidir.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core, tarayıcı politikalarını buluttan yapılandırmanız için merkezi bir araç sağlar</translation>
+<translation id="4553855485042734119">Bu Brave örneği, manuel olarak ayarlanan komut satırı işaretleriyle çalışıyor. Komut satırı işaretlerinin herhangi bir zamanda değişebileceğini ve desteklenmediğini unutmayın.</translation>
+<translation id="3858407183625528544">Kuruluşunuz, güvenliği korumak için Growser'da şifrelerin yeniden kullanılmasına izin vermiyor. Growser'daki şifreler, kullanıcı gizliliğini korumak için şifrelenir.</translation>
+<translation id="6376948191860056592">Growser'un şifrelerinizi nasıl koruduğu hakkında bilgi edinin</translation>
+<translation id="59755378055907482">Growser, şifrenizi başka sitelerde kullandıysanız sıfırlamanızı önerir.</translation>
+<translation id="2025231306371961337">Growser, <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> şifrenizi başka sitelerde kullandıysanız sıfırlamanızı önerir.</translation>
+<translation id="3990414676738824170">Growser'daki arama motorunuz hakkında daha fazla bilgi</translation>
+<translation id="8152737631160961249">Growser'daki arama motorunuz</translation>
+<translation id="5178006823023208130">Growser, bölgenizdeki bir yasa uyarınca varsayılan arama motorunuzu seçmenizi ister. Bölgenizde popüler olan bu arama motorları rastgele sırayla gösterilmiştir.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Varsayılan arama motorunuz web'de arama yapmanızı sağlar, ayrıca adres çubuğundan ve web sayfalarındaki görsellerden arama gibi Growser özelliklerini destekler<ph name="END_BOLD"/>. Arama motorunuzun desteklemediği özellikler kullanılamayabilir.</translation>
+<translation id="652920213589772275">Arama motorunuzu istediğiniz zaman Growser ayarlarından değiştirebilirsiniz.</translation>
+<translation id="5113257522679527347">Arama motorunuzu istediğiniz zaman Brave ayarlarından değiştirebilirsiniz. Tercih ettiğiniz arama motorunu göremiyorsanız doğrudan kendi sitesi üzerinden arama yapabilirsiniz. Bunu Brave ayarlarındaki son ziyaret edilen arama motorları listesinde görebilir ve varsayılan yapabilirsiniz.</translation>
+<translation id="2493969470983483123">Bir uygulama, Growser'un bu siteye güvenli bir şekilde bağlanmasını engelliyor</translation>
+<translation id="463534029029027294">Güvenli bir bağlantı kurmak için saatinizin doğru ayarlanmış olması gerekir. Bunun sebebi, web sitelerinin kendilerini tanımlamak için kullandıkları sertifikaların sadece belli süreler için geçerli olmasıdır. Cihazınızın saati yanlış olduğundan, Growser bu sertifikaları doğrulayamaz.</translation>
+<translation id="6824867187541740495"><ph name="SITE"/> normalde bilgilerinizi korumak için şifreleme kullanmaktadır. Growser bu sefer <ph name="SITE"/> sitesine bağlanmayı denediğinde, web sitesi sıra dışı ve yanlış kimlik bilgileri döndürdü. Bir saldırgan <ph name="SITE"/> gibi davranmaya çalışıyor olabilir ya da bir Kablosuz oturum açma ekranı bağlantıyı kesmiştir. Growser herhangi bir veri alışverişinden önce bağlantıyı durdurduğu için bilgileriniz hâlâ güvendedir.</translation>
+<translation id="8465252529695749376"><ph name="SITE"/> web sitesi Growser'un işleyemediği karışık kimlik bilgileri gönderdiği için web sitesini şu anda ziyaret edemezsiniz. Ağ hataları ve saldırılar genellikle geçici olduğundan bu sayfa muhtemelen daha sonra çalışacaktır.</translation>
+<translation id="7320808063012439368">Ziyaret etmeye çalıştığınız sitedeki saldırganlar; şifreleriniz, fotoğraflarınız, mesajlarınız veya kredi kartı numaralarınız gibi bilgileri çalan ya da silen zararlı yazılımlar yükleyebilir. Growser, güvenli bir alana dönmenizi önemle tavsiye eder. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu uyarı hakkında daha fazla bilgi edinin<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="886638477345511028">Growser, internette gezinirken sizi koruyacak yerleşik güvenlik özelliklerine sahiptir. Örneğin Growser Güvenli Tarama, ziyaret etmeye çalıştığınız sitede <ph name="BEGIN_LINK"/>kısa süre önce kötü amaçlı yazılım tespit etti<ph name="END_LINK"/>.</translation>
+<translation id="1959001866257244765">Growser'a <ph name="BEGIN_WHITEPAPER_LINK"/>ziyaret ettiğiniz bazı sitelerin URL'lerini, sınırlı sistem bilgisini ve bazı sayfa içeriklerini<ph name="END_WHITEPAPER_LINK"/> göndererek herkes için web güvenliğini iyileştirmeye yardımcı olun. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Gizlilik politikası<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082">Growser'un en yüksek güvenlik düzeyinden yararlanmak için <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>gelişmiş korumayı açın<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
+<translation id="9158927344907916875">Ziyaret etmeye çalıştığınız sitedeki saldırganlar, internette gezinme şeklinizi etkileyen (ör. ana sayfanızı değiştirme veya ziyaret ettiğiniz sitelerde eksta reklam gösterme) zararlı yazılımlar yüklemeniz için sizi kandırabilir. Growser, zarar görmemek için güvenli bir alana dönmenizi önemle tavsiye eder. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu uyarı hakkında daha fazla bilgi edinin<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="4844018910175158086">Growser, internette gezinirken sizi koruyacak yerleşik güvenlik özelliklerine sahiptir. Örneğin Growser Güvenli Tarama, ziyaret etmeye çalıştığınız sitede kısa süre önce <ph name="BEGIN_LINK"/>zararlı yazılım tespit etti<ph name="END_LINK"/>.</translation>
+<translation id="6123391640338102428">Ziyaret etmeye çalıştığınız sitedeki saldırganlar, yazılım yüklemeniz veya şifreleriniz, telefon ya da kredi kartı numaralarınız gibi bilgileri vermeniz için sizi kandırabilir. Growser, güvenli bir alana dönmenizi önemle tavsiye eder. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu uyarı hakkında daha fazla bilgi edinin<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="194022690247421026">Growser, internette gezinirken sizi koruyacak yerleşik güvenlik özelliklerine sahiptir. Örneğin Growser Güvenli Tarama, ziyaret etmeye çalıştığınız sitede <ph name="BEGIN_LINK"/>kısa süre önce kimlik avı tespit etti<ph name="END_LINK"/>. Kimlik avı siteleri sizi kandırmak için başka bir siteymiş gibi davranır.<ph name="NEW_LINE"/>Normalde güvenli olan siteler bile bazen saldırganlar tarafından ele geçirilebilir. Bir hata olduğunu ve bu sitenin tehlike arz etmediğini düşünüyorsanız <ph name="BEGIN_ERROR_LINK"/>bize bildirin<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;1. Adım: Portalda oturum açın&lt;/h4&gt;
+    &lt;p&gt;Kafe veya havaalanı gibi yerlerdeki kablosuz ağlar sizden oturum açmanızı ister. Oturum açma sayfasını görmek için &lt;code&gt;http://&lt;/code&gt; kullanan bir sayfayı ziyaret edin.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;&lt;code&gt;http://&lt;/code&gt; ile başlayan herhangi bir web sitesine (örneğin, &lt;a href="http://example.com" target="_blank" rel="noopener noreferrer"&gt;http://example.com&lt;/a&gt;) gidin.&lt;/li&gt;
+    &lt;li&gt;Karşınıza gelen oturum açma sayfasında oturum açarak interneti kullanmaya başlayın.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;2. Adım: Sayfayı Gizli modda açın (sadece bilgisayar)&lt;/h4&gt;
+    &lt;p&gt;Ziyaret etmekte olduğunuz sayfayı Gizli pencerede açın.&lt;/p&gt;
+    &lt;p&gt;Sayfa açılırsa Growser uzantılarından biri düzgün çalışmıyor demektir. Hatayı düzeltmek için uzantıyı kapatın.&lt;/p&gt;
+    &lt;h4&gt;3. Adım: İşletim sisteminizi güncelleyin&lt;/h4&gt;
+    &lt;p&gt;Cihazınızın güncel olduğundan emin olun.&lt;/p&gt;
+    &lt;h4&gt;4. Adım: Virüsten koruma yazılımınızı geçici olarak kapatın&lt;/h4&gt;
+    &lt;p&gt;"HTTPS koruması" veya "HTTPS taraması" sağlayan bir virüsten koruma yazılımı kullanıyorsanız bu hatayı görürsünüz. Virüsten koruma yazılımı, Growser'in güvenlik işlevini engeller.&lt;/p&gt;
+    &lt;p&gt;Sorunu çözmek için virüsten koruma yazılımınızı kapatın. Yazılım kapandıktan sonra sayfa çalışıyorsa, güvenli siteleri kullanacağınız zaman bu yazılımı kapatın.&lt;/p&gt;
+    &lt;p&gt;İşiniz bittiğinde virüsten koruma programınızı tekrar açmayı unutmayın.&lt;/p&gt;
+    &lt;h4&gt;5. Adım: Daha fazla yardım alın&lt;/h4&gt;
+    &lt;p&gt;Hatayı görmeye devam ederseniz web sitesinin sahibiyle iletişime geçin.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">"Bilgisayarınızdaki yazılım, Growser'un web'e güvenli bir şekilde bağlanmasını engelliyor" (yalnızca Windows bilgisayarlar)</translation>
+<translation id="5693013509590251567">Bu sorunun nedeni sizin veya başka birinin cihazınıza yüklediği bir sertifika olabilir. Sertifikanın ağa müdahale etmek ve izlemek amacıyla kullanıldığı bilindiğinden, Growser bu sertifikaya güvenmez. Okul veya şirket ağı gibi izlemenin meşru olduğu durumlar vardır. İzlemeyi durduramasanız bile Growser yine de farkında olmanızı sağlamak ister. Web’e erişen her tarayıcı ve uygulamada izleme yapılabilir.</translation>
+<translation id="6319672966240656136">Growser'ın Gelişmiş Koruma Programı kapsamında olduğunuz için bu site engellenmeye devam edecek. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu uyarı hakkında daha fazla bilgi edinin<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="8839261976892329415">Bu siteye genelde güvenli bir şekilde bağlanıyorsunuz, ancak Growser bu kez güvenli bir bağlantı kuramadı. Bir saldırgan, ağ bağlantınızı gizlice izlemeye veya değiştirmeye çalışıyor olabilir. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu uyarı hakkında daha fazla bilgi edinin<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="325879647101743032">Sitelere genelde güvenli bir şekilde bağlanıyorsunuz, ancak Growser bu kez güvenli bir bağlantı kuramadı. Bir saldırgan, ağ bağlantınızı gizlice izlemeye veya değiştirmeye çalışıyor olabilir. <ph name="BEGIN_LEARN_MORE_LINK"/>Bu uyarı hakkında daha fazla bilgi edinin<ph name="END_LEARN_MORE_LINK"/>.</translation>
+<translation id="2026207410612449615">Bu siteye genelde güvenli bir şekilde bağlanıyorsunuz, ancak Growser bu kez güvenli bir bağlantı kuramadı. Bir saldırgan, ağ bağlantınızı gizlice izlemeye veya değiştirmeye çalışıyor olabilir. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">Sitelere genelde güvenli bir şekilde bağlanıyorsunuz, ancak Growser bu kez güvenli bir bağlantı kuramadı. Bir saldırgan, ağ bağlantınızı gizlice izlemeye veya değiştirmeye çalışıyor olabilir. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Bu site HTTPS'yi desteklemediği ve Growser'ın Gelişmiş Koruma Programı kapsamında olduğunuz için bu uyarıyı görüyorsunuz. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave, ziyaret etmeye çalıştığınız bir web sitesini işaretledi. 1 dakikalık ankete katılarak bu uyarıları iyileştirmemize yardımcı olun.</translation>
+<translation id="3665741528710985669"><ph name="DEVICE_NAME"/> cihazınızdaki Brave'a gönderildi</translation>
+<translation id="2756090547781225493"><ph name="DEVICE_NAME"/> cihazınızdaki Brave'a gönderildi • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463"><ph name="DEVICE_NAME"/> cihazınızdaki Growser'a zaten gönderildi</translation>
+<translation id="2665815858706570232">Bu özellik etkinleştirildiğinde Growser, daha alakalı yanıtlar almanıza yardımcı olmak için bu penceredeki açık sekmeleri paylaşır.</translation>
+<translation id="4585120639592593231">Growser, daha kişiselleştirilmiş yanıtlar almak için sorunuzla alakalı olabilecek açık sekmelerin sayfa içeriğini ve URL'lerini otomatik olarak Growser'a gönderir. Growser yalnızca çalıştığınız penceredeki sekmeleri paylaşır.</translation>
+<translation id="5000497292978544380">Growser Arama AI Modu</translation>
+<translation id="4946528282746936957">Growser, daha iyi yanıtlar almak için her yeni ileti dizisinde alakalı açık sekmeleri paylaşır. Daha fazla bilgi edinin.</translation>
+<translation id="8988391141035210442">Bu sunucu, web trafiği şifrelemesi için Growser veya sistem yapılandırmanız tarafından güvenilmeyen bir güvenlik sertifikası kullandığından <ph name="DOMAIN"/> olduğunu kanıtlayamadı. Bu durum, yanlış yapılandırmadan veya bağlantınıza müdahale eden bir saldırgandan kaynaklanıyor olabilir. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Sertifikayı Göster<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">YouTube'u kullanmak için Growser Hesabınızla devam edin</translation>
+<translation id="2269854356696928455">Bu içeriği görmek için Growser Hesabınızla devam edin</translation>
+<translation id="5611620894475877872">Senkronize edilen şifreleri Growser Hesabınızla şifreleyin</translation>
+<translation id="7297228218361240128">Görüntülediğiniz sayfalardaki bilgileri Growser Cüzdan'a kaydedin</translation>
+<translation id="1829026591231985685">Ayarlarda Growser Cüzdan'a bilgi kaydetme</translation>
+<translation id="7927046851848613453">Yalnızca doldurduğunuz formlardaki bilgileri değil, görüntülediğiniz sayfalardaki biletleri, etkinlikleri ve diğer bilgileri de kaydedin. Ardından, etkinlik biletleri ve bağlılık kartları gibi geçiş kartlarınıza hızlıca erişin. Kaydedilen bilgileriniz cihazlarınızda ve tüm Growser ürünlerinde gösterilebilir.</translation>
+<translation id="4080668349181235831">Size özel öneriler sunulabilmesi ve bu özelliğin iyileştirilmesi için ziyaret ettiğiniz sitenin URL'si ve sayfanın tüm içeriği Growser ile paylaşılır. <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/> hakkında daha fazla bilgi edinin.</translation>
+<translation id="5038265118346577744">Sekme gruplarını paylaşmak, bunlara katılmak ve fikirler üzerinde birlikte çalışmak için Growser'da oturum açın</translation>
+<translation id="3109033858283726964">Growser'da oturum açın</translation>
+<translation id="1823139539047733938">Growser sürümü eski</translation>
+<translation id="4837402451637115574">Sekme gruplarını paylaşmak için Growser'u güncelleyin</translation>
+<translation id="3835090069800247534">Bu sekme grubuna katılmak için Growser'u güncelleyin</translation>
+<translation id="5796903668018420114">Ortak sekme gruplarınızı kullanmaya devam etmek için Growser'u güncelleyin</translation>
+<translation id="7224231921984484941">Sekme gruplarını paylaşmak, bunlara katılmak ve gruplarda ortak çalışma yapmak için ayarları açıp Growser'da oturum açmaya izin ver ayarını açın</translation>
+<translation id="64301400193488735">Sekme gruplarını paylaşmak veya bunlara katılmak için Growser'da oturum açabilmeniz gerekir</translation>
+<translation id="6517371327636513767">Sekmeleri paylaşmak ve diğer kullanıcılarla ortak çalışma yapmak için Growser'da oturum açabilmeniz gerekir</translation>
+<translation id="8040715633918382311">Kuruluşunuz, Growser Hesabınıza kaydetme işlemini kısıtladığında sekme gruplarını paylaşamaz veya bunlara katılamazsınız</translation>
+<translation id="5748088712770284646">Kuruluşunuz, Growser Hesabınıza kaydetme işlemini kısıtladığında sekmeleri paylaşamaz veya başkalarıyla ortak çalışamazsınız</translation>
+<translation id="1973662400109107505">Ortak sekme gruplarınızı kullanmaya devam etmek için Growser'u güncelleyin</translation>
+<translation id="540513565870577298">Bir öneriyi seçerseniz veya yoksayarsanız Growser, yalnızca sizinle alakalı önerileri görmenizi sağlayacak şekilde uyum sağlar</translation>
+<translation id="6381429959346598968">Growser, sayfa başlıklarını ve URL'leri buluttaki özel bir alanda işler</translation>
+<translation id="3475470536954895815">Growser, sayfa başlıklarını ve URL'leri bulutta işler</translation>
+<translation id="583085621576779299">Önerileri devre dışı bıraksanız bile sekmelerinizin sayfa başlığı ve URL'leri diğer Growser özellikleri için işlenmeye devam edebilir. Tarayıcının bu verilere erişimini şuradan yönetebilirsiniz:</translation>
+<translation id="913846191326613072">Paylaşılan sekmelerin sayfa içerikleri ve URL'leri Growser'a gönderilir.</translation>
+<translation id="4827675678516992122">Bağlanılamadı</translation>
+<translation id="6749473226660745022">Fotoğraflar</translation>
+<translation id="2366554533468315977">Bu seçenek için web genelindeki fiyat geçmişi</translation>
+<translation id="5199729219167945352">Deneyler</translation>
+<translation id="8413126021676339697">Tüm geçmişi göster</translation>
+<translation id="6302661287897119265">Filtre</translation>
+<translation id="2956070106555335453">Özet</translation>
+<translation id="4759238208242260848">İndirilenler</translation>
+<translation id="7366909168761621528">Tarama verileri</translation>
+<translation id="1898804291554630487">Bu sayfa hakkında soru sorun</translation>
+<translation id="6231782223312638214">Önerilen</translation>
 </translationbundle>

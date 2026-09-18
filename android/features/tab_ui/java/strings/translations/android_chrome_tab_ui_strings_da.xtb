@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
 =1 {Dine lukkede faner og grupper kan genåbnes fra fanesektionen Seneste og sektionen Fanegrupper. Din Private fane vil ikke være tilgængelig.}
 other {Dine lukkede faner og grupper kan genåbnes fra fanesektionen Seneste og sektionen Fanegrupper. Dine # Private faner vil ikke være tilgængelig.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link fra Growser}one{<ph name="TABS_COUNT_MANY"/> link fra Growser}other{<ph name="TABS_COUNT_MANY"/> links fra Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> anmeldelse fra Growser}one{<ph name="REVIEWS_COUNT_MANY"/> anmeldelse fra Growser}other{<ph name="REVIEWS_COUNT_MANY"/> anmeldelser fra Growser}}</translation>
+<translation id="2928243913527329289">Growser | Om denne butik</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser lukker automatisk inaktive faner og fanegrupper efter <ph name="AUTO_DELETE_DELAY_ONE"/> måned. Du kan ændre dette under indstillingerne.}one{Growser lukker automatisk inaktive faner og fanegrupper efter <ph name="AUTO_DELETE_DELAY_MANY"/> måned. Du kan ændre dette under indstillingerne.}other{Growser lukker automatisk inaktive faner og fanegrupper efter <ph name="AUTO_DELETE_DELAY_MANY"/> måneder. Du kan ændre dette under indstillingerne.}}</translation>
 </translationbundle>

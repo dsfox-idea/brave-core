@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Вашите затворени раздели и групи могат да бъдат повторно отворени от раздела Скорошни раздели и раздела Групи раздели. Вашият поверителен раздел няма да бъде достъпен.}
         other {Вашите затворени раздели и групи могат да бъдат повторно отворени от раздела Скорошни раздели и от раздела Групи раздели. Вашите # поверителни раздела няма да бъдат достъпни.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> връзка от Growser}other{<ph name="TABS_COUNT_MANY"/> връзки от Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> отзив от Growser}other{<ph name="REVIEWS_COUNT_MANY"/> отзива от Growser}}</translation>
+<translation id="2928243913527329289">Growser | Всичко за този магазин</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser автоматично затваря неактивните раздели и групи раздели след <ph name="AUTO_DELETE_DELAY_ONE"/> месец. Можете да промените това от настройките.}other{Growser автоматично затваря неактивните раздели и групи раздели след <ph name="AUTO_DELETE_DELAY_MANY"/> месеца. Можете да промените това от настройките.}}</translation>
 </translationbundle>
