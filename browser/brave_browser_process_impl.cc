@@ -157,12 +157,17 @@ void InitSystemRequestHandlerCallback() {
 using content::BrowserThread;
 
 BraveBrowserProcessImpl::~BraveBrowserProcessImpl() {
+  // Growser-236: the member only exists with P3A, which is compiled out here
+  // (growser#98/#21). Upstream added this destructor in 154 and has no reason
+  // to guard it - they always have P3A.
+#if BUILDFLAG(ENABLE_P3A)
   // StartTearDown is skipped on early startup exits, leaving P3AService
   // observing process_misc_metrics_, which is destroyed first. Members are
   // still alive here, so tear down while the observed object is valid.
   if (p3a_service_) {
     p3a_service_->StartTeardown();
   }
+#endif
 }
 
 BraveBrowserProcessImpl::BraveBrowserProcessImpl(StartupData* startup_data)
