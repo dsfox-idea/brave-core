@@ -35,12 +35,13 @@ constexpr char kNavigatorPdfViewerEnabledCrashTest[] =
     "navigator.pdfViewerEnabled == navigator.pdfViewerEnabled";
 constexpr char kGetPluginsAsStringScript[] =
     "Array.from(navigator.plugins).map(p => p.name).join(',');";
-constexpr char kExpectedPluginsNamesOff[] =
+// Growser-82: the five plugins every Chrome reports, in the order the HTML
+// spec fixes. Not a farbling baseline - this is what a page must see at every
+// fingerprinting level, measured in a running browser.
+constexpr char kChromePluginNames[] =
     "PDF Viewer,Chrome PDF Viewer,Chromium PDF Viewer,Microsoft Edge PDF "
     "Viewer,WebKit built-in PDF";
-constexpr char kExpectedPluginsNamesBalanced[] =
-    "4cOuf2jw,Microsoft Edge PDF Viewer,Chromium PDF Viewer,PDF "
-    "Viewer,HqVxgvf,Online PDF Viewer,WebKit built-in PDF";
+constexpr int kChromePluginCount = 5;
 
 }  // namespace
 
@@ -110,104 +111,45 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
   EXPECT_EQ(true, EvalJs(contents(), kNavigatorPdfViewerEnabledCrashTest));
 }
 
-// Tests results of farbling known values
-// https://github.com/brave/brave-browser/issues/9435
+// Growser-82: navigator.plugins is NOT farbled here, and this is the gate on
+// that decision.
+//
+// Brave renames the built-in PDF plugins per origin, appends two invented ones
+// and shuffles the order; we removed all of it - the reasoning lives beside the
+// override, in
+// chromium_src/third_party/blink/renderer/modules/plugins/dom_plugin_array.cc.
+// In short: every Chrome on every machine reports the same five plugins with
+// the same names, so noise there hides nobody. It marks them. A site that sees
+// seven plugins with names no Chrome has ever produced learns more in one
+// property read than the real list would ever have told it.
+//
+// The three tests this replaces asserted the farbled lists (brave-browser
+// #9435, #10597 and #11278) and can only pass on a browser that farbles.
 IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
-                       FarbleNavigatorPlugins) {
-  // Farbling level: off
-  // get real length of navigator.plugins
+                       NavigatorPluginsAreNeverFarbled) {
+  auto expect_chrome_plugins = [&](const char* level) {
+    SCOPED_TRACE(level);
+    ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
+    EXPECT_EQ(content::EvalJs(contents(), kPluginsLengthScript),
+              kChromePluginCount);
+    EXPECT_EQ(content::EvalJs(contents(), kGetPluginsAsStringScript),
+              kChromePluginNames);
+  };
+
   AllowFingerprinting();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  int off_length =
-      content::EvalJs(contents(), kPluginsLengthScript).ExtractInt();
+  expect_chrome_plugins("fingerprinting allowed");
 
-  // Farbling level: balanced (default)
-  // navigator.plugins should contain all real plugins + 2 fake ones
   SetFingerprintingDefault();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  int balanced_length =
-      content::EvalJs(contents(), kPluginsLengthScript).ExtractInt();
-  EXPECT_EQ(balanced_length, off_length + 2);
+  expect_chrome_plugins("fingerprinting balanced (the default)");
 
-  // Farbling level: maximum
-  // navigator.plugins should contain no real plugins, only 2 fake ones
   BlockFingerprinting();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  int maximum_length =
-      content::EvalJs(contents(), kPluginsLengthScript).ExtractInt();
-  EXPECT_EQ(maximum_length, 2);
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[0].name;"),
-            "HqVxgvf");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[0].filename;"),
-            "tiRnTJjZMGi47lS");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[0].description;"),
-            "8Hi47dt9e2bVSJr89HqdWTw3bVKs1Dg");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[0].length;"), 2);
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[0][0].type;"), "");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[0][0].description;"),
-            "78e2j47laVKs9eu268e2bVSJr0iZUp7G");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[0][1].type;"), "");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[1].name;"),
-            "4cOuf2jw");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[1].filename;"),
-            "p78mTJjZUpzZrVp7");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[1].description;"),
-            "x3bNteXq8Hi4FCgYrdOm6dt1DgYz4cWT");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[1].length;"), 2);
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[1][0].type;"), "");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[1][0].description;"),
-            "jwgvf2bNl5kxBIjRvAfPHLkaNteXq899");
-  EXPECT_EQ(content::EvalJs(contents(), "navigator.plugins[1][1].type;"), "");
+  expect_chrome_plugins("fingerprinting blocked (strict)");
 
-  // Farbling level: default, but webcompat exception enabled
-  // get real length of navigator.plugins
+  // And with the webcompat exception a site can be granted: there is nothing
+  // left for it to turn off, so the list must not move for that either.
   SetFingerprintingDefault();
   brave_shields::SetWebcompatEnabled(
       content_settings(), ContentSettingsType::BRAVE_WEBCOMPAT_PLUGINS, true,
       farbling_url(), nullptr);
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  int off_length2 =
-      content::EvalJs(contents(), kPluginsLengthScript).ExtractInt();
-  EXPECT_EQ(off_length, off_length2);
-}
-
-// Tests that names of built-in plugins get farbled by default
-// https://github.com/brave/brave-browser/issues/10597
-IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
-                       FarbleNavigatorPluginsBuiltin) {
-  // Farbling level: off
-  AllowFingerprinting();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  int off_length =
-      content::EvalJs(contents(), kPluginsLengthScript).ExtractInt();
-  EXPECT_EQ(off_length, 5);
-  EXPECT_EQ(content::EvalJs(contents(), kGetPluginsAsStringScript),
-            kExpectedPluginsNamesOff);
-
-  // Farbling level: balanced (default)
-  SetFingerprintingDefault();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  EXPECT_EQ(content::EvalJs(contents(), kGetPluginsAsStringScript),
-            kExpectedPluginsNamesBalanced);
-}
-
-// Tests that names of built-in plugins that get farbled will reset to their
-// original names when fingerprinting is turned off
-// https://github.com/brave/brave-browser/issues/11278
-IN_PROC_BROWSER_TEST_F(BraveNavigatorPluginsFarblingBrowserTest,
-                       FarbleNavigatorPluginsReset) {
-  // Farbling level: balanced (default)
-  SetFingerprintingDefault();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  EXPECT_EQ(content::EvalJs(contents(), kGetPluginsAsStringScript),
-            kExpectedPluginsNamesBalanced);
-
-  // Farbling level: off
-  AllowFingerprinting();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  int off_length =
-      content::EvalJs(contents(), kPluginsLengthScript).ExtractInt();
-  EXPECT_EQ(off_length, 5);
-  EXPECT_EQ(content::EvalJs(contents(), kGetPluginsAsStringScript),
-            kExpectedPluginsNamesOff);
+  expect_chrome_plugins("webcompat exception enabled");
 }

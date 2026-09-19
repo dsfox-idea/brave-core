@@ -112,8 +112,21 @@ namespace {
 
 constexpr char kTestContainerId[] = "test-container-id";
 
-constexpr char kFarblingPluginsStringScript[] =
-    "Array.from(navigator.plugins).map(p => p.name).join(',');";
+// Growser-82: a farbled surface to read the container's farbling token
+// through. navigator.plugins used to be that surface and is no longer farbled
+// at all here - see chromium_src/.../plugins/dom_plugin_array.cc. Canvas
+// readback carries the token instead: PerturbPixels keys its bit flips on
+// HMAC(farbling_token, pixels). No text is drawn, so font rasterization cannot
+// enter the comparison.
+constexpr char kFarblingCanvasScript[] =
+    "(() => {"
+    "  const canvas = document.createElement('canvas');"
+    "  canvas.width = 64; canvas.height = 16;"
+    "  const ctx = canvas.getContext('2d');"
+    "  ctx.fillStyle = '#f60'; ctx.fillRect(0, 0, 64, 16);"
+    "  ctx.fillStyle = '#069'; ctx.fillRect(8, 4, 48, 8);"
+    "  return canvas.toDataURL();"
+    "})();";
 
 // Name of the container seeded by tests that exercise the --container switch.
 constexpr char kNamedContainerName[] = "Command Line Named Container";
@@ -2430,35 +2443,34 @@ IN_PROC_BROWSER_TEST_F(ContainersBrowserTest,
   const GURL url("https://a.test/simple.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
 
-  auto get_farbled_navigator_plugins = [](content::WebContents* web_contents) {
-    return content::EvalJs(web_contents, kFarblingPluginsStringScript)
-        .ExtractString();
+  auto get_farbled_canvas = [](content::WebContents* web_contents) {
+    return content::EvalJs(web_contents, kFarblingCanvasScript).ExtractString();
   };
 
-  const std::string plugins_default = get_farbled_navigator_plugins(
-      browser()->tab_strip_model()->GetActiveWebContents());
+  const std::string canvas_default =
+      get_farbled_canvas(browser()->tab_strip_model()->GetActiveWebContents());
 
-  const std::string plugins_container_a_tab1 =
-      get_farbled_navigator_plugins(OpenUrlInContainerTab(url, "farbling-a"));
-  const std::string plugins_container_b =
-      get_farbled_navigator_plugins(OpenUrlInContainerTab(url, "farbling-b"));
-  const std::string plugins_container_a_tab2 =
-      get_farbled_navigator_plugins(OpenUrlInContainerTab(url, "farbling-a"));
+  const std::string canvas_container_a_tab1 =
+      get_farbled_canvas(OpenUrlInContainerTab(url, "farbling-a"));
+  const std::string canvas_container_b =
+      get_farbled_canvas(OpenUrlInContainerTab(url, "farbling-b"));
+  const std::string canvas_container_a_tab2 =
+      get_farbled_canvas(OpenUrlInContainerTab(url, "farbling-a"));
 
-  EXPECT_FALSE(plugins_default.empty());
-  EXPECT_FALSE(plugins_container_a_tab1.empty());
-  EXPECT_FALSE(plugins_container_b.empty());
-  EXPECT_FALSE(plugins_container_a_tab2.empty());
+  EXPECT_FALSE(canvas_default.empty());
+  EXPECT_FALSE(canvas_container_a_tab1.empty());
+  EXPECT_FALSE(canvas_container_b.empty());
+  EXPECT_FALSE(canvas_container_a_tab2.empty());
 
   // Default partition vs container partitions.
-  EXPECT_NE(plugins_default, plugins_container_a_tab1);
-  EXPECT_NE(plugins_default, plugins_container_b);
+  EXPECT_NE(canvas_default, canvas_container_a_tab1);
+  EXPECT_NE(canvas_default, canvas_container_b);
 
   // Different container ids.
-  EXPECT_NE(plugins_container_a_tab1, plugins_container_b);
+  EXPECT_NE(canvas_container_a_tab1, canvas_container_b);
 
   // Same container id across separate tabs.
-  EXPECT_EQ(plugins_container_a_tab1, plugins_container_a_tab2);
+  EXPECT_EQ(canvas_container_a_tab1, canvas_container_a_tab2);
 }
 
 // Test suite to verify behavior when containers feature is disabled after

@@ -72,18 +72,22 @@ void CheckUserAgentMetadataVersionsList(
     const base::ListValue& versions_list,
     const std::string& expected_version,
     base::FunctionRef<void(const std::string&)> check_greased_version) {
-  // Expect 3 items in the list: Brave, Chromium, and greased.
+  // Growser-82: the list is byte for byte Chrome's - the greased entry,
+  // "Google Chrome" and "Chromium". Brave announces itself here instead, and
+  // we cannot: a site that can tell we are not Chrome is free to stop loading,
+  // and no privacy property survives a page that will not open.
   EXPECT_EQ(3UL, versions_list.size());
 
-  bool has_brave_brand = false;
+  bool has_google_chrome_brand = false;
   bool has_chromium_brand = false;
   for (auto& brand_version : versions_list) {
     const std::string* brand = brand_version.GetDict().FindString("brand");
     ASSERT_NE(nullptr, brand);
     const std::string* version = brand_version.GetDict().FindString("version");
     ASSERT_NE(nullptr, version);
-    if (*brand == "Brave") {
-      has_brave_brand = true;
+    EXPECT_NE("Brave", *brand);
+    if (*brand == "Google Chrome") {
+      has_google_chrome_brand = true;
       EXPECT_EQ(expected_version, *version);
     } else if (*brand == "Chromium") {
       has_chromium_brand = true;
@@ -92,7 +96,7 @@ void CheckUserAgentMetadataVersionsList(
       check_greased_version(*version);
     }
   }
-  EXPECT_TRUE(has_brave_brand);
+  EXPECT_TRUE(has_google_chrome_brand);
   EXPECT_TRUE(has_chromium_brand);
 }
 
@@ -463,14 +467,18 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorUserAgentFarblingBrowserTest,
   EXPECT_EQ(expected_title, watcher.WaitAndGetTitle());
 }
 
-// Tests results of user agent metadata brands
+// Growser-82: the brand a site reads is Chrome's, and never ours. The
+// reasoning lives beside the override, in
+// chromium_src/components/embedder_support/user_agent_utils.cc.
 IN_PROC_BROWSER_TEST_F(BraveNavigatorUserAgentFarblingBrowserTest,
-                       BraveIsInNavigatorUserAgentBrandList) {
+                       ChromeIsInNavigatorUserAgentBrandList) {
   GURL url = https_server()->GetURL("a.com", "/simple.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
   std::string brands = EvalJs(contents(), kBrandScript).ExtractString();
-  EXPECT_NE(std::string::npos, brands.find("Brave"));
+  EXPECT_NE(std::string::npos, brands.find("Google Chrome"));
   EXPECT_NE(std::string::npos, brands.find("Chromium"));
+  EXPECT_EQ(std::string::npos, brands.find("Brave"));
+  EXPECT_EQ(std::string::npos, brands.find("Growser"));
 }
 
 // Tests that user agent metadata versions are as expected.

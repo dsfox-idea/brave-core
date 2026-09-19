@@ -137,9 +137,15 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorHardwareConcurrencyFarblingBrowserTest,
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
   int completely_fake_value =
       content::EvalJs(contents(), kHardwareConcurrencyScript).ExtractInt();
-  // For this domain (a.com) + the random seed (constant for browser tests),
-  // the value will always be the same.
-  EXPECT_EQ(completely_fake_value, 7);
+  // Growser-82: the value is one a real machine could report. Brave drew any
+  // integer in [2, 8] here, and this test pinned the 7 that came out for
+  // a.com - a core count no CPU has, which announces that the property is
+  // rewritten rather than hiding the visitor. Ours draws from the plausible
+  // counts, and at maximum farbling the ceiling is 8, leaving {4, 6, 8}.
+  EXPECT_TRUE(completely_fake_value == 4 || completely_fake_value == 6 ||
+              completely_fake_value == 8)
+      << "hardwareConcurrency at maximum farbling was "
+      << completely_fake_value;
 
   // Farbling level: default, but with webcompat exception enabled
   SetFingerprintingDefault();
@@ -196,9 +202,15 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorHardwareConcurrencyFarblingBrowserTest,
   int completely_fake_value;
   base::StringToInt(content::EvalJs(contents(), kTitleScript).ExtractString(),
                     &completely_fake_value);
-  // For this domain (a.com) + the random seed (constant for browser tests),
-  // the value will always be the same.
-  EXPECT_EQ(completely_fake_value, 7);
+  // Growser-82: the value is one a real machine could report. Brave drew any
+  // integer in [2, 8] here, and this test pinned the 7 that came out for
+  // a.com - a core count no CPU has, which announces that the property is
+  // rewritten rather than hiding the visitor. Ours draws from the plausible
+  // counts, and at maximum farbling the ceiling is 8, leaving {4, 6, 8}.
+  EXPECT_TRUE(completely_fake_value == 4 || completely_fake_value == 6 ||
+              completely_fake_value == 8)
+      << "hardwareConcurrency at maximum farbling was "
+      << completely_fake_value;
 
   // Farbling level: default, but with webcompat exception enabled
   // get real navigator.hardwareConcurrency

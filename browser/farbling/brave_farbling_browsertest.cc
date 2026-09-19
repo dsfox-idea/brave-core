@@ -27,9 +27,30 @@
 
 namespace {
 
-inline constexpr char kGetPluginsAsStringScript[] =
-    "Array.from(navigator.plugins).map(p => p.name).join(',');";
-inline constexpr char kNavigatorPluginsFilename[] = "navigator_plugins.txt";
+// Growser-82: these tests are about the farbling TOKEN - that it is stable,
+// that it survives a restart or not, that clearing site data replaces it. The
+// token has to be observed through some farbled surface, and Brave's choice
+// was navigator.plugins, which we no longer farble at all (the reasoning is
+// beside the override, chromium_src/.../plugins/dom_plugin_array.cc). Canvas
+// readback is the surface that carries the token here: PerturbPixels keys the
+// flipped bits on HMAC(farbling_token, pixels), so the same token gives the
+// same data URL and a different token gives a different one. Measured in a
+// running browser before it was written down - identical across two reads of
+// one origin, different across two origins.
+//
+// No text is drawn on purpose: PRE_FarblingTokenBehaviourAfterRestart compares
+// across a browser restart, and font rasterization is one more thing that could
+// differ there. Flat rectangles leave the farbling as the only variable.
+inline constexpr char kFarblingCanvasScript[] =
+    "(() => {"
+    "  const canvas = document.createElement('canvas');"
+    "  canvas.width = 64; canvas.height = 16;"
+    "  const ctx = canvas.getContext('2d');"
+    "  ctx.fillStyle = '#f60'; ctx.fillRect(0, 0, 64, 16);"
+    "  ctx.fillStyle = '#069'; ctx.fillRect(8, 4, 48, 8);"
+    "  return canvas.toDataURL();"
+    "})();";
+inline constexpr char kFarblingProbeFilename[] = "farbling_canvas.txt";
 
 }  // namespace
 
@@ -100,68 +121,49 @@ INSTANTIATE_TEST_SUITE_P(
                         : "BraveFarblingBrowserTest_FarblingTokenResetDisabled";
     });
 
-IN_PROC_BROWSER_TEST_P(BraveFarblingBrowserTest, NavigatorPluginsAreFarbled) {
-  // This removes the random noise added from the global seed.
-  brave_shields::ScopedStableFarblingTokensForTesting
-      scoped_stable_farbling_tokens{1, base::Token(0, 1)};
-
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  auto plugins_str = content::EvalJs(contents(), kGetPluginsAsStringScript);
-  if (IsFarblingTokenResetEnabled()) {
-    EXPECT_EQ(
-        plugins_str,
-        "Microsoft Edge PDF Viewer,yhQIMlx3,Online com.adobe.pdf "
-        "plug-in,Chromium PDF Viewer,WebKit built-in PDF,PDF Viewer,FKNGi47");
-  } else {
-    EXPECT_EQ(plugins_str,
-              "4cOuf2jw,Microsoft Edge PDF Viewer,Chromium PDF Viewer,PDF "
-              "Viewer,HqVxgvf,Online PDF Viewer,WebKit built-in PDF");
-  }
-}
-
 IN_PROC_BROWSER_TEST_P(BraveFarblingBrowserTest,
                        PRE_FarblingTokenBehaviourAfterRestart) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  auto plugins_str = content::EvalJs(contents(), kGetPluginsAsStringScript);
-  EXPECT_NE(plugins_str, "");
-  // Write the current plugins list to a file in the profile directory.
+  auto canvas_str = content::EvalJs(contents(), kFarblingCanvasScript);
+  EXPECT_NE(canvas_str, "");
+  // Write the current canvas readback to a file in the profile directory.
   base::ScopedAllowBlockingForTesting allow_blocking;
   base::FilePath temp_dir = browser()->GetProfile()->GetPath();
-  base::FilePath output_file = temp_dir.AppendASCII(kNavigatorPluginsFilename);
-  std::string result = plugins_str.ExtractString();
+  base::FilePath output_file = temp_dir.AppendASCII(kFarblingProbeFilename);
+  std::string result = canvas_str.ExtractString();
   base::WriteFile(output_file, result);
 }
 
 IN_PROC_BROWSER_TEST_P(BraveFarblingBrowserTest,
                        FarblingTokenBehaviourAfterRestart) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  auto plugins_str = content::EvalJs(contents(), kGetPluginsAsStringScript);
-  EXPECT_NE(plugins_str, "");
-  // Read the plugins list from a file in the profile directory.
+  auto canvas_str = content::EvalJs(contents(), kFarblingCanvasScript);
+  EXPECT_NE(canvas_str, "");
+  // Read the canvas readback from a file in the profile directory.
   base::ScopedAllowBlockingForTesting allow_blocking;
   base::FilePath temp_dir = browser()->GetProfile()->GetPath();
-  base::FilePath input_file = temp_dir.AppendASCII(kNavigatorPluginsFilename);
+  base::FilePath input_file = temp_dir.AppendASCII(kFarblingProbeFilename);
   std::string previous_value;
   EXPECT_TRUE(base::ReadFileToString(input_file, &previous_value));
-  // Compare the plugins list from the previous launch.
+  // Compare against the readback from the previous launch.
   if (IsFarblingTokenResetEnabled()) {
-    EXPECT_NE(plugins_str, previous_value);
+    EXPECT_NE(canvas_str, previous_value);
   } else {
-    EXPECT_EQ(plugins_str, previous_value);
+    EXPECT_EQ(canvas_str, previous_value);
   }
 }
 
 IN_PROC_BROWSER_TEST_P(BraveFarblingBrowserTest,
                        FarblingTokenIsClearedAfterWebsiteClear) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  const std::string plugins_before_cleanup =
-      content::EvalJs(contents(), kGetPluginsAsStringScript).ExtractString();
+  const std::string canvas_before_cleanup =
+      content::EvalJs(contents(), kFarblingCanvasScript).ExtractString();
 
   // Ensure that the farbling token is stable while the website data is not
   // cleared.
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  EXPECT_EQ(content::EvalJs(contents(), kGetPluginsAsStringScript),
-            plugins_before_cleanup);
+  EXPECT_EQ(content::EvalJs(contents(), kFarblingCanvasScript),
+            canvas_before_cleanup);
 
   // Clear the website data.
   content_settings()->ClearSettingsForOneType(
@@ -169,8 +171,8 @@ IN_PROC_BROWSER_TEST_P(BraveFarblingBrowserTest,
 
   // A new token should be generated.
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), farbling_url()));
-  EXPECT_NE(content::EvalJs(contents(), kGetPluginsAsStringScript),
-            plugins_before_cleanup);
+  EXPECT_NE(content::EvalJs(contents(), kFarblingCanvasScript),
+            canvas_before_cleanup);
 }
 
 IN_PROC_BROWSER_TEST_P(BraveFarblingBrowserTest,

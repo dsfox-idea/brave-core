@@ -611,13 +611,26 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorage1pBrowserTest,
                        FarblingTokenIsEphemeral) {
   SetCookieSetting(a_site_ephemeral_storage_url_, CONTENT_SETTING_SESSION_ONLY);
 
+  // Growser-82: read the farbling token through canvas. navigator.plugins was
+  // this probe and is no longer farbled at all here - the reasoning is beside
+  // the override, chromium_src/.../plugins/dom_plugin_array.cc. PerturbPixels
+  // keys its bit flips on HMAC(farbling_token, pixels), so a replaced token
+  // gives a different data URL. Nothing is drawn with text, so font
+  // rasterization cannot enter the comparison.
+  constexpr char kFarblingCanvasScript[] =
+      "(() => {"
+      "  const canvas = document.createElement('canvas');"
+      "  canvas.width = 64; canvas.height = 16;"
+      "  const ctx = canvas.getContext('2d');"
+      "  ctx.fillStyle = '#f60'; ctx.fillRect(0, 0, 64, 16);"
+      "  ctx.fillStyle = '#069'; ctx.fillRect(8, 4, 48, 8);"
+      "  return canvas.toDataURL();"
+      "})();";
+
   WebContents* first_party_tab = LoadURLInNewTab(a_site_ephemeral_storage_url_);
 
-  const std::string plugins_before_cleanup =
-      content::EvalJs(
-          first_party_tab,
-          "Array.from(navigator.plugins).map(p => p.name).join(', ');")
-          .ExtractString();
+  const std::string canvas_before_cleanup =
+      content::EvalJs(first_party_tab, kFarblingCanvasScript).ExtractString();
 
   // After keepalive the farbling token should be cleared.
   ASSERT_TRUE(
@@ -626,13 +639,10 @@ IN_PROC_BROWSER_TEST_F(EphemeralStorage1pBrowserTest,
   ASSERT_TRUE(
       ui_test_utils::NavigateToURL(browser(), a_site_ephemeral_storage_url_));
 
-  const std::string plugins_after_cleanup =
-      content::EvalJs(
-          first_party_tab,
-          "Array.from(navigator.plugins).map(p => p.name).join(', ');")
-          .ExtractString();
+  const std::string canvas_after_cleanup =
+      content::EvalJs(first_party_tab, kFarblingCanvasScript).ExtractString();
 
-  EXPECT_NE(plugins_before_cleanup, plugins_after_cleanup);
+  EXPECT_NE(canvas_before_cleanup, canvas_after_cleanup);
 }
 
 class EphemeralStorage1pDisabledBrowserTest
