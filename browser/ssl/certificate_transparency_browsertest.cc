@@ -71,7 +71,20 @@ IN_PROC_BROWSER_TEST_F(CertificateTransparencyBrowserTest, EnforcedByDefault) {
       ssl_test_util::AuthState::SHOWING_INTERSTITIAL);
 }
 
-IN_PROC_BROWSER_TEST_F(CertificateTransparencyBrowserTest, ExemptedHost) {
+// Growser-38: nobody is exempt, the vendor's own hosts included.
+//
+// Brave grant themselves an exemption from the SCT requirement, and this test
+// asserted it. The reasoning for dropping it is beside the override, in
+// chromium_src/chrome/browser/net/profile_network_context_service.cc: the
+// exemption only ever removes a check, we never call those hosts, and our own
+// backend has an ordinary publicly logged certificate. Carrying a weakened
+// certificate check for another product's benefit is the whole of the bug.
+//
+// So the host Brave exempt is treated exactly like any other, which is what
+// this now measures - and it is a different claim from EnforcedByDefault,
+// because a list that quietly came back would pass that one.
+IN_PROC_BROWSER_TEST_F(CertificateTransparencyBrowserTest,
+                       VendorHostsAreNotExempt) {
   SystemNetworkContextManager::GetInstance()->SetCTLogListTimelyForTesting();
 
   // Make the test root be interpreted as a known root so that CT will be
@@ -81,13 +94,14 @@ IN_PROC_BROWSER_TEST_F(CertificateTransparencyBrowserTest, ExemptedHost) {
   ASSERT_TRUE(root_cert);
   net::ScopedTestKnownRoot scoped_known_root(root_cert.get());
 
-  // URL exempted from SCT requirements
+  // The host Brave exempt from SCT requirements.
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
       browser(), embedded_https_test_server().GetURL(
                      "sct-exempted.bravesoftware.com", "/ssl/google.html")));
 
   ssl_test_util::CheckSecurityState(
       browser()->tab_strip_model()->GetActiveWebContents(),
-      ssl_test_util::CertError::NONE, security_state::SECURE,
-      ssl_test_util::AuthState::NONE);
+      net::CERT_STATUS_CERTIFICATE_TRANSPARENCY_REQUIRED,
+      security_state::DANGEROUS,
+      ssl_test_util::AuthState::SHOWING_INTERSTITIAL);
 }
