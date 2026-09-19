@@ -88,8 +88,10 @@ std::string GetBraveSearchProviderSyncGUID(Profile* profile) {
       regional_capabilities::RegionalCapabilitiesServiceFactory::GetForProfile(
           profile)
           ->GetRegionalPrepopulatedEngines(),
-      // growser: the private-window search default is Yandex (#26).
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX);
+      // Growser-18: DuckDuckGo is the default search everywhere, private
+      // windows included. This said Yandex until now - our own #26 choice,
+      // which #18 superseded in the product and nobody carried into the test.
+      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO);
   DCHECK(data);
   return data->sync_guid;
 }
@@ -158,9 +160,9 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderServiceTest,
       service->GetDefaultSearchProvider()->prepopulate_id();
   const int initial_private_provider_id =
       incognito_service->GetDefaultSearchProvider()->prepopulate_id();
-  // growser: Yandex is the default search for private windows (#26).
+  // Growser-18: DuckDuckGo, the same engine normal windows get.
   EXPECT_EQ(static_cast<int>(
-                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX),
+                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO),
             initial_private_provider_id);
 
   // Check changing normal provider doesn't affect private provider.
@@ -461,10 +463,11 @@ IN_PROC_BROWSER_TEST_F(ExtensionBrowserTest,
   UnloadExtension(extension->id());
   EXPECT_EQ(default_provider, url_service->GetDefaultSearchProvider());
 
-  // growser: Yandex is the private-window default again once the extension is unloaded (#26).
+  // Growser-18: the private-window default comes back once the extension is
+  // unloaded, and it is DuckDuckGo.
   current_incognito_dse = incognito_url_service->GetDefaultSearchProvider();
   EXPECT_EQ(static_cast<int>(
-                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YANDEX),
+                TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO),
             current_incognito_dse->prepopulate_id());
   EXPECT_EQ(TemplateURL::NORMAL, current_incognito_dse->type());
 }
