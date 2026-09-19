@@ -5,6 +5,7 @@
 
 #include <algorithm>
 #include <memory>
+#include <string>
 
 #include "base/check.h"
 #include "base/check_deref.h"
@@ -15,6 +16,7 @@
 #include "base/test/scoped_feature_list.h"
 #include "brave/components/constants/brave_paths.h"
 #include "brave/components/constants/brave_services_key.h"
+#include "brave/components/translate/core/common/brave_translate_constants.h"
 #include "brave/components/translate/core/common/brave_translate_features.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/translate/chrome_translate_client.h"
@@ -46,6 +48,7 @@
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/abseil-cpp/absl/strings/str_format.h"
 #include "ui/base/l10n/l10n_util.h"
+#include "url/gurl.h"
 
 using ::testing::_;
 using ::testing::MockFunction;
@@ -54,6 +57,14 @@ using ::testing::Return;
 namespace translate {
 
 namespace {
+
+// Growser-45: the host our translate backend lives on, read from the constant
+// the browser uses rather than spelled out here - see
+// brave/components/translate/core/common/brave_translate_constants.h.
+std::string TranslateBackendHost() {
+  return std::string(GURL(kBraveTranslateOrigin).host());
+}
+
 constexpr char kTestScript[] = R"(
 var api_key = undefined;
 var google = {};
@@ -131,12 +142,14 @@ class BraveTranslateBrowserTest : public InProcessBrowserTest {
     InProcessBrowserTest::SetUpCommandLine(command_line);
     mock_cert_verifier_.SetUpCommandLine(command_line);
 
-    // Remap translate.brave.com requests to the https test server.
+    // Growser-45: remap OUR translate backend to the https test server. The
+    // host comes from the constant the browser itself uses, so moving the
+    // endpoint cannot leave this test pointing at the old one.
     const std::string host_port = https_server_.host_port_pair().ToString();
-    command_line->AppendSwitchASCII(network::switches::kHostResolverRules,
-                                    "MAP translate.brave.com:443 " + host_port +
-                                        ", MAP translate.google.com:443 " +
-                                        host_port);
+    command_line->AppendSwitchASCII(
+        network::switches::kHostResolverRules,
+        "MAP " + TranslateBackendHost() + ":443 " + host_port +
+            ", MAP translate.google.com:443 " + host_port);
   }
 
   void SetUpInProcessBrowserTestFixture() override {
@@ -195,17 +208,26 @@ class BraveTranslateBrowserTest : public InProcessBrowserTest {
   }
 
   // Set up expectations for the secondary test scripts and for the test css.
+  //
+  // Growser-45: the paths come from kBraveTranslateStaticPath, which our
+  // backend serves under /translate/static/v1/ rather than Brave's
+  // /static/v1/. Spelled out here, the mock answered nothing, the element
+  // script never loaded and the failure surfaced as a translation that never
+  // finished - three assertions away from the path that caused it.
   void SetupTestScriptExpectations() {
-    EXPECT_CALL(backend_request_, Call("/static/v1/element.js"))
+    const std::string static_path(kBraveTranslateStaticPath);
+
+    EXPECT_CALL(backend_request_, Call(static_path + "element.js"))
         .WillOnce(Return(std::make_tuple(net::HttpStatusCode::HTTP_OK,
                                          "text/javascript", kTestScript)));
 
-    EXPECT_CALL(backend_request_, Call("/static/v1/css/translateelement.css"))
+    EXPECT_CALL(backend_request_,
+                Call(static_path + "css/translateelement.css"))
         .WillRepeatedly(
             Return(std::make_tuple(net::HttpStatusCode::HTTP_OK, "text/css",
                                    "body{background-color:#AAA}")));
 
-    EXPECT_CALL(backend_request_, Call("/static/v1/js/element/main.js"))
+    EXPECT_CALL(backend_request_, Call(static_path + "js/element/main.js"))
         .WillOnce(Return(
             std::make_tuple(net::HttpStatusCode::HTTP_OK, "text/javascript",
                             "cr.googleTranslate.onTranslateElementLoad()")));
@@ -308,11 +330,11 @@ IN_PROC_BROWSER_TEST_F(BraveTranslateBrowserTest, InternalTranslation) {
   language_list->RequestLanguageList();
   EXPECT_FALSE(language_list->HasOngoingLanguageListLoadingForTesting());
 
-  // Check used urls.
+  // Check used urls. Growser-45: our backend, not Brave's.
   EXPECT_EQ(language_list->LanguageFetchURLForTesting().host(),
-            "translate.brave.com");
+            TranslateBackendHost());
   EXPECT_EQ(TranslateScript::GetTranslateScriptURL().host(),
-            "translate.brave.com");
+            TranslateBackendHost());
 
   // Check no bad flags infobar is shown (about the different translate
   // script/origin).
@@ -349,10 +371,10 @@ class BraveTranslateBrowserGoogleRedirectTest
     BraveTranslateBrowserTest::SetUpCommandLine(command_line);
     const std::string host_port = https_server_.host_port_pair().ToString();
     // Add translate.google.com redirection to the https test server.
-    command_line->AppendSwitchASCII(network::switches::kHostResolverRules,
-                                    "MAP translate.brave.com:443 " + host_port +
-                                        ", MAP translate.google.com:443 " +
-                                        host_port);
+    command_line->AppendSwitchASCII(
+        network::switches::kHostResolverRules,
+        "MAP " + TranslateBackendHost() + ":443 " + host_port +
+            ", MAP translate.google.com:443 " + host_port);
   }
 };
 
@@ -385,7 +407,7 @@ IN_PROC_BROWSER_TEST_F(BraveTranslateBrowserGoogleRedirectTest,
                           do_xhr_and_get_final_url));
 
   // Check that the same page request from translate world will be redirected.
-  EXPECT_EQ("https://translate.brave.com/something.svg",
+  EXPECT_EQ("https://" + TranslateBackendHost() + "/something.svg",
             EvalTranslateJs(do_xhr_and_get_final_url));
 
   static constexpr char kLoadImageTemplate[] = R"(
