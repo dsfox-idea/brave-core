@@ -18,8 +18,10 @@ namespace {
 BASE_FEATURE(kVariationsTestFeature,
              base::FEATURE_DISABLED_BY_DEFAULT);
 
-// The seed is signed with the private key of the Brave variations server.
-SignedSeedData GetBraveSignedSeedData() {
+// The seed is signed with the private key of the growser variations server.
+// The payload is Brave's sample - one study, one feature - kept as it is so
+// the version string below still describes it; only the signature is ours.
+SignedSeedData GetGrowserSignedSeedData() {
   static const char* study_names[] = {"VariationsTestStudy"};
 
   static constexpr char kBase64UncompressedData[] =
@@ -33,10 +35,14 @@ SignedSeedData GetBraveSignedSeedData() {
       "lNqbRg9FLhYnfNS0zKSU0RSEkS5xJFVeWWmlhSWpTqxc3F7pKalliaUyLAkMCoJOVUlFiWql"
       "AGV6tQAlSsUJyamgIARXSxvIwAAAA=";
 
+  // Growser-56: the same payload, signed with OUR seed key. The browser bakes
+  // our public key rather than Brave's (chromium_src/components/variations/
+  // variations_seed_store.cc), so Brave's signature is correctly refused here
+  // and this test asserted a trust relationship we replaced on purpose. It now
+  // asserts ours: restore Brave's key and this goes red.
   static constexpr char kBase64Signature[] =
-      "MEUCIQDfayOr/"
-      "xmQaBThr1i8ARQ1rKEinHluXeR7ve5fqy7L4AIgNym2PbtlL+9142+"
-      "T8gUjjEsoT28J3HqE4IEa1eFvKLw=";
+      "MEUCIQDKtuehWVmjPBOF/gB4rDVSY60F2UbykVmffyqoWW20jQIgf3ItElY7"
+      "kUvqmH0Wp9BSj7mhbRWRULOg+qX0bIrTJVk=";
 
   return {study_names, kBase64UncompressedData, kBase64CompressedData,
           kBase64Signature};
@@ -58,20 +64,20 @@ class VariationsBrowserTest : public PlatformBrowserTest {
   base::HistogramTester histogram_tester_;
 };
 
-IN_PROC_BROWSER_TEST_F(VariationsBrowserTest, PRE_BraveSeedApplied) {
+IN_PROC_BROWSER_TEST_F(VariationsBrowserTest, PRE_SignedSeedApplied) {
   PrefService* local_state = g_browser_process->local_state();
-  WriteSignedSeedData(local_state, GetBraveSignedSeedData(),
+  WriteSignedSeedData(local_state, GetGrowserSignedSeedData(),
                       kRegularSeedPrefKeys);
 
   EXPECT_FALSE(base::FeatureList::IsEnabled(kVariationsTestFeature));
   EXPECT_EQ(variations::GetSeedVersion(), "");
 }
 
-IN_PROC_BROWSER_TEST_F(VariationsBrowserTest, BraveSeedApplied) {
+IN_PROC_BROWSER_TEST_F(VariationsBrowserTest, SignedSeedApplied) {
   histogram_tester_.ExpectUniqueSample("Variations.SeedUsage",
                                        SeedUsage::kRegularSeedUsed, 1);
 
-  EXPECT_TRUE(FieldTrialListHasAllStudiesFrom(GetBraveSignedSeedData()));
+  EXPECT_TRUE(FieldTrialListHasAllStudiesFrom(GetGrowserSignedSeedData()));
 
   EXPECT_TRUE(base::FeatureList::IsEnabled(kVariationsTestFeature));
   EXPECT_EQ(variations::GetSeedVersion(), "Brave variations test seed");
