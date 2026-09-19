@@ -39,7 +39,10 @@ CreateBrowsingHistoryCleanerForProfile(Profile* profile) {
       profile, ServiceAccessType::EXPLICIT_ACCESS);
   auto* sync_service = SyncServiceFactory::GetForProfile(profile);
 
-  if (!history_service || !sync_service) {
+  // Growser-248: a null sync service is not a reason to skip the cleaner. Our
+  // builds never have one (growser#78/#43), and without the cleaner the
+  // "Shred browsing history" setting silently deletes nothing.
+  if (!history_service) {
     return nullptr;
   }
 

@@ -24,7 +24,13 @@ BrowsingHistoryCleaner::BrowsingHistoryCleaner(
     syncer::SyncService* sync_service)
     : profile_(profile) {
   CHECK(history_service);
-  CHECK(sync_service);
+  // Growser-248: the sync service may be null, and here it always is.
+  // growser#78/#43 leave brave_sync::features::kBraveSync off, so
+  // PreProfileInit appends --disable-sync and SyncServiceFactory answers
+  // nullptr. Chromium's BrowsingHistoryService is written for exactly that -
+  // it skips its sync observation when the pointer is null, and the notice
+  // helper returns false - so requiring one here only meant that Shred never
+  // deleted any history at all.
   browsing_history_service_ = std::make_unique<history::BrowsingHistoryService>(
       this, history_service, sync_service);
 }
