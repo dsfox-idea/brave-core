@@ -121,6 +121,12 @@ inline constexpr char16_t kIsolatedAppSchemeUtf16[] = u"isolated-app";
 // widgets instead of using HTML.
 inline constexpr char kChromeNativeScheme[] = "chrome-native";
 
+// The chrome-experimental-site-token-provider: scheme is used to retrieve
+// site-specific tokens.
+inline constexpr char kChromeExperimentalSiteTokenProviderScheme[] =
+    "chrome-experimental-site-token-provider";
+inline constexpr char kChromeExperimentalSiteTokenHost[] = "token";
+
 // The URL of safe section in Chrome page.
 inline constexpr char16_t kChromeSafePageURL[] = u"https://growser.org/";
 
@@ -430,6 +436,13 @@ inline constexpr char16_t kCardBenefitsLearnMoreURL[] =
 
 // "Learn more" URL for the Gmail OTP filling setting.
 inline constexpr char16_t kGmailOtpFillingLearnMoreURL[] =
+    u"https://growser.org/";
+
+// URL for Gmail general settings.
+inline constexpr char16_t kGmailSettingsURL[] = u"https://growser.org/";
+
+// URL for Gmail smart features settings.
+inline constexpr char16_t kGmailSmartFeaturesURL[] =
     u"https://growser.org/";
 
 // "Learn more" URL for the performance intervention notification setting.

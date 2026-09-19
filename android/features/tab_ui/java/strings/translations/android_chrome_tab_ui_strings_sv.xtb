@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Dina stängda flikar och grupper kan öppnas igen från avsnittet Senaste flikar och avsnittet Flikgrupper. Din privat flik kommer inte att vara tillgänglig.}
         other {Dina stängda flikar och grupper kan öppnas igen från avsnittet Senaste flikar och avsnittet Flikgrupper. Dina # privat flikar kommer inte att vara tillgängliga.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> länk från Growser}other{<ph name="TABS_COUNT_MANY"/> länkar från Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recension från Growser}other{<ph name="REVIEWS_COUNT_MANY"/> recensioner från Growser}}</translation>
+<translation id="2928243913527329289">Growser | Om den här butiken</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser stänger automatiskt inaktiva flikar och flikgrupper efter <ph name="AUTO_DELETE_DELAY_ONE"/> månad. Du kan ändra det här i inställningarna.}other{Growser stänger automatiskt inaktiva flikar och flikgrupper efter <ph name="AUTO_DELETE_DELAY_MANY"/> månader. Du kan ändra det här i inställningarna.}}</translation>
 </translationbundle>

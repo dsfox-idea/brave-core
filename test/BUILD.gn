@@ -125,6 +125,7 @@ test("brave_unit_tests") {
     "//brave/chromium_src/chrome/browser/favicon/favicon_utils_unittest.cc",
     "//brave/chromium_src/chrome/browser/lookalikes/lookalike_url_navigation_throttle_unittest.cc",
     "//brave/chromium_src/chrome/browser/signin/account_consistency_disabled_unittest.cc",
+    "//brave/chromium_src/components/autofill/core/browser/autofill_browser_util_unittest.cc",
     "//brave/chromium_src/components/autofill/core/browser/studies/autofill_experiments_unittest.cc",
     "//brave/chromium_src/components/variations/service/field_trial_unittest.cc",
     "//brave/chromium_src/content/browser/renderer_host/navigation_entry_impl_unittest.cc",
@@ -196,6 +197,7 @@ test("brave_unit_tests") {
     "//brave/browser/ntp_background:unit_tests",
     "//brave/browser/permissions:unit_tests",
     "//brave/browser/policy/handlers:unit_tests",
+    "//brave/browser/predictors:unit_tests",
     "//brave/browser/profiles:unit_tests",
     "//brave/browser/profiles:util",
     "//brave/browser/serp_metrics:unit_tests",
@@ -418,6 +420,7 @@ test("brave_unit_tests") {
       "//brave/browser/history_embeddings:unit_tests",
       "//brave/browser/local_ai:unit_tests",
       "//brave/browser/speech:unit_tests",
+      "//brave/content/browser/speech:unit_tests",
       "//brave/services/passage_embeddings:unit_tests",
     ]
   }
@@ -1078,6 +1081,10 @@ test("brave_browser_tests") {
     "//chrome/browser/ui/views/translate",
   ]
 
+  if (toolkit_views) {
+    deps += [ "//chrome/browser/ui/views/tabs/hovercard:test_support" ]
+  }
+
   if (enable_session_service) {
     deps += [ "//brave/browser/sessions:browser_tests" ]
   }
@@ -1520,6 +1527,7 @@ test("brave_browser_tests") {
       "//brave/browser/file_select:browser_tests",
       "//brave/browser/password_manager:browser_tests",
       "//brave/browser/sharing_hub:browser_tests",
+      "//brave/browser/speech:on_device_speech_browser_tests",
       "//brave/browser/sync:browser_tests",
       "//brave/browser/ui/geolocation:browser_tests",
       "//brave/browser/ui/page_info",

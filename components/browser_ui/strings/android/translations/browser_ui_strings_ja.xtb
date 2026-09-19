@@ -801,4 +801,51 @@
 <translation id="8186479265534291036">サイトが動作していない場合 サードパーティ Cookie がブロックされています</translation>
 <translation id="8874790741333031443">サードパーティ Cookie を一時的に許可してみてください。ブラウジング保護の強度は低下しますが、サイトの機能が想定どおりに動作する可能性が高くなります。</translation>
 <translation id="915112772806845021">サイトがピクチャー イン ピクチャーを自動的に開始する機能です。この機能を使用すると、動画の視聴を続行しながら、画面で他のタスクを行うことができます。</translation>
+<translation id="3281851196103181918">アクセス先のサイトは、主にあなたが bot でないことを確認する少量の情報を Growser に保存できます。</translation>
+<translation id="7321946347180923218">それ以降にアクセスしたサイトは、あなたが実在のユーザーであることを、前にアクセスしたサイトから Growser を介して確認できます。</translation>
+<translation id="1416017798077335746">オンにすると、Growser の動作が速くなり、JavaScript を使用する機能が設計どおりに動作します。オフにすると、パフォーマンスは低下しますが、攻撃に対する V8 の耐性が強化されます。</translation>
+<translation id="1161610156793601923">Growser の V8 エンジンでサイトを高速化する（攻撃に対する Growser の耐性は若干低下します）</translation>
+<translation id="4522008664732371170">V8 は、サイトのパフォーマンスを向上させるために使用される Growser の JavaScript エンジンおよび WebAssembly エンジンです</translation>
+<translation id="8589838971217638472">Growser の V8 エンジンでサイトを高速化しない（攻撃に対する Growser の耐性は若干強化されます）</translation>
+<translation id="7640998335907138542">可能であれば、Growser がダークモードを使用している場合にダークモードをサイトに適用します</translation>
+<translation id="2057998558085257831"><ph name="BEGIN_LINK1"/>Android の設定<ph name="END_LINK1"/>で管理します
+
+高度な保護機能では、次の Growser の設定を制御します。</translation>
+<translation id="423123022780548223"><ph name="DOMAIN_NAME"/> のコンテンツを Growser から配信しています。</translation>
+<translation id="8347706830008915646">データを節約するため、このページの画像は Growser によって最適化されています。</translation>
+<translation id="6934374371757268073">今日、Growser で Cookie を再びブロックします</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{明日、Growser で Cookie を再びブロックします}other{# 日後に、Growser で Cookie を再びブロックします}}</translation>
+<translation id="2695810323641466307">アドレスバーにフォーカスを置いた状態で Growser を起動し、ローエンド デバイスの起動時間を短縮します。</translation>
+<translation id="5598609827458395422">Growser で最近使ったタブがデバイスと共有され、デバイスのアプリリストと検索結果に表示されるようになりました。この機能は Growser の設定でいつでもオフにできます。</translation>
+<translation id="8965088526414675625">Growser で最近使ったタブがデバイスのアプリリストと検索結果に表示されるようになりました。この機能は Growser の設定でいつでもオフにできます。</translation>
+<translation id="8761470294803693272">Growser で最近使ったタブをデバイスと共有して、デバイスのアプリリストと検索結果に表示できます。この機能は Growser の設定でオンまたはオフにできます。</translation>
+<translation id="8421385332619538087">Growser で最近使ったタブをデバイスのアプリリストと検索結果に表示できます。この機能は Growser の設定でいつでもオフにできます。</translation>
+<translation id="4844745832306307836">Growser を使いこなすヒント</translation>
+<translation id="8894933691616134953">Growser のヒントカードを非表示にする</translation>
+<translation id="3075680827782258330">Growser をデフォルトに設定する</translation>
+<translation id="3330538708604362125">メッセージ、ドキュメント、他のアプリでタップしたリンクを常に Growser で開くよう設定できます</translation>
+<translation id="878212867049674537">ホームページの色や画像をカスタマイズして Growser を自分仕様にすることができます</translation>
+<translation id="906376138426795308">ブラウジングするときや、メッセージ、ドキュメント、他のアプリのリンクをタップしたときに、常に Growser が使えるようになります。</translation>
+<translation id="1060555682994133119">[ブラウザアプリ] &gt; [Growser] をタップします</translation>
+<translation id="2039425904994800099">[ブラウザアプリ]、[Growser] をタップします</translation>
+<translation id="3307078631581490570">Growser を自分用にカスタマイズ</translation>
+<translation id="1068559798624451989">Growser の最高水準のセキュリティでオンラインの脅威から保護</translation>
+<translation id="3371556244314914639">Growser でパスワードを保存</translation>
+<translation id="6096811239980093579">Growser でパスワードの保存を確認するメッセージが表示されます</translation>
+<translation id="3942445027194417950">Growser でのパスワードの保存方法を説明するボトムシート</translation>
+<translation id="4476554299666180378">お使いのデバイスで Growser を最大限に活用できるようになりました。</translation>
+<translation id="2762149874114516998">Growser を最大限に活用</translation>
+<translation id="4229054348764234344">Growser を最大限に活用するには、下記のおすすめの設定を行ってください</translation>
+<translation id="9005129040299651584">カスタムのテーマを選択して Growser を自分仕様にすることができます</translation>
+<translation id="6695051470627475273">Growser の色のボトムシートが画面全体に表示されています</translation>
+<translation id="8884873726356949960">Growser の色のボトムシートが画面の下半分に表示されています</translation>
+<translation id="8064824204802826269">Brave のデフォルト</translation>
+<translation id="3625563631434033924">Brave の色</translation>
+<translation id="4084889026632451864">Growser の色のボトムシート</translation>
+<translation id="6506349636755583652">Growser の一部の設定が変更されました</translation>
+<translation id="6972629891077993081">HID デバイス</translation>
+<translation id="4748783296226936791">一般的ではないキーボードや、ゲーム コントローラなどのデバイスを使用する機能に対応するために、多くのサイトは HID デバイスに接続します</translation>
+<translation id="5719854774000914513">サイトが HID デバイスへの接続を要求できるようにする</translation>
+<translation id="8625916342247441948">サイトに HID デバイスへの接続を許可しない</translation>
+<translation id="1258491128795710625">最新情報</translation>
 </translationbundle>

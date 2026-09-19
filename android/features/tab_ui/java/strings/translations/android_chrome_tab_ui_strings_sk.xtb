@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Vaše zatvorené karty a skupiny je možné znova otvoriť v časti Nedávne karty a časti Skupiny kariet. Vaša súkromná karta nebude k dispozícii.}
         other {Vaše zatvorené karty a skupiny je možné znova otvoriť v časti Nedávne karty a časti Skupiny kariet. Vaše súkromné karty (#) nebudú k dispozícii.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> odkaz z Chromu}few{<ph name="TABS_COUNT_MANY"/> odkazy z Chromu}many{<ph name="TABS_COUNT_MANY"/> links from Growser}other{<ph name="TABS_COUNT_MANY"/> odkazov z Chromu}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzia od Googlu}few{<ph name="REVIEWS_COUNT_MANY"/> recenzie od Googlu}many{<ph name="REVIEWS_COUNT_MANY"/> reviews from Growser}other{<ph name="REVIEWS_COUNT_MANY"/> recenzií od Googlu}}</translation>
+<translation id="2928243913527329289">Growser | Tento obchod</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser automaticky zavrie neaktívne karty a skupiny kariet po <ph name="AUTO_DELETE_DELAY_ONE"/> mesiaci. Zmeniť to môžete v nastaveniach.}few{Growser automaticky zavrie nektívne karty a skupiny kariet po <ph name="AUTO_DELETE_DELAY_MANY"/> mesiacoch. Zmeniť to môžete v nastaveniach.}many{Growser automaticky zavrie nektívne karty a skupiny kariet po <ph name="AUTO_DELETE_DELAY_MANY"/> mesiaca. Zmeniť to môžete v nastaveniach.}other{Growser automaticky zavrie nektívne karty a skupiny kariet po <ph name="AUTO_DELETE_DELAY_MANY"/> mesiacoch. Zmeniť to môžete v nastaveniach.}}</translation>
 </translationbundle>

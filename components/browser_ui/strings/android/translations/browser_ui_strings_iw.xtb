@@ -802,4 +802,51 @@
 <translation id="8186479265534291036">‏האתר לא פועל? קובצי cookie של צד שלישי חסומים</translation>
 <translation id="8874790741333031443">‏אפשר להפעיל קובצי cookie של צד שלישי באופן זמני. במצב כזה יש פחות הגנה במהלך הגלישה, אבל סביר יותר שהתכונות באתר יפעלו כצפוי.</translation>
 <translation id="915112772806845021">התכונה הזו מעבירה אתרים באופן אוטומטי לתצוגה של תמונה בתוך תמונה. כך אפשר להמשיך לצפות בסרטון ולפנות מקום במסך למשימות אחרות.</translation>
+<translation id="3281851196103181918">‏אתר כלשהו שמבקרים בו יכול לשמור כמות נתונים קטנה ב-Growser, בעיקר כדי לאמת שלא מדובר בבוט.</translation>
+<translation id="7321946347180923218">‏במהלך הגלישה, אתרים אחרים יכולים לבדוק ב-Growser ולאמת שסביר להניח שמדובר באדם אמיתי, לפי פרטים שנשמרו בביקור באתר קודם.</translation>
+<translation id="1416017798077335746">‏כשהאפשרות הזו מופעלת, דפדפן Growser פועל מהר יותר ותכונות שמתבססות על JavaScript אמורות לפעול כמו שצריך. כשהאפשרות הזו מושבתת, יש ירידה ברמת הביצועים בתמורה להגברת העמידות של V8 בפני מתקפות.</translation>
+<translation id="1161610156793601923">‏אפשר להאיץ ביצועים של אתרים באמצעות מנוע V8 של Growser, אבל Growser יהיה קצת פחות עמיד בפני מתקפות</translation>
+<translation id="4522008664732371170">‏‫V8 הוא מנוע WebAssembly ו-JavaScript של Growser שמשמש לשיפור ביצועי האתרים</translation>
+<translation id="8589838971217638472">‏אתרים לא יכולים להשתמש במנוע V8 של Growser כדי להאיץ את הביצועים, אבל Growser יהיה עמיד יותר בפני מתקפות</translation>
+<translation id="7640998335907138542">‏העיצוב הכהה יוחל על אתרים כש-Growser ישתמש בעיצוב הכהה, כשהפעולה תתאפשר</translation>
+<translation id="2057998558085257831">‏ניהול ב<ph name="BEGIN_LINK1"/>הגדרות Android<ph name="END_LINK1"/>
+
+ההגנה המתקדמת שולטת בהגדרות האלה של Growser:</translation>
+<translation id="423123022780548223">‏התוכן הזה הוא מ-<ph name="DOMAIN_NAME"/>, ומוגש על-ידי Growser.</translation>
+<translation id="8347706830008915646">‏כדי לחסוך לך נתונים, התמונות בדף הזה עברו אופטימיזציה על ידי Growser.</translation>
+<translation id="6934374371757268073">‏קובצי cookie יחסמו היום שוב ב-Growser</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{‏קובצי Cookie ייחסמו מחר שוב ב-Growser}one{‏יש עוד # ימים עד שקובצי Cookie ייחסמו שוב}two{‏יש עוד יומיים עד שקובצי Cookie ייחסמו שוב}other{‏יש עוד # ימים עד שקובצי Cookie ייחסמו שוב}}</translation>
+<translation id="2695810323641466307">‏הפעלה של Growser עם התמקדות בסרגל הכתובות, כדי לקצר את זמן ההפעלה במכשירים בסיסיים.</translation>
+<translation id="5598609827458395422">‏עכשיו, Growser משתף את הכרטיסיות האחרונות עם המכשיר שלך. אפשר לראות אותן ברשימת האפליקציות במכשיר ובתוצאות החיפוש. אפשר להשבית את האפשרות הזו בכל שלב בהגדרות Growser.</translation>
+<translation id="8965088526414675625">‏‫Growser מציג עכשיו את הכרטיסיות האחרונות ברשימת האפליקציות במכשיר ובתוצאות החיפוש. אפשר להשבית את האפשרות הזו בכל שלב בהגדרות Growser.</translation>
+<translation id="8761470294803693272">‏‫Growser יכול לשתף את הכרטיסיות האחרונות עם המכשיר שלך כדי שתהיה לך אפשרות לראות אותן ברשימת האפליקציות במכשיר ובתוצאות החיפוש. ניתן להפעיל או להשבית את האפשרות הזו בהגדרות Growser.</translation>
+<translation id="8421385332619538087">‏‫Growser יכול להציג את הכרטיסיות האחרונות ברשימת האפליקציות במכשיר ובתוצאות החיפוש. אפשר להשבית את האפשרות הזו בכל שלב בהגדרות Growser.</translation>
+<translation id="4844745832306307836">‏טיפים של Growser</translation>
+<translation id="8894933691616134953">‏הסתרת כרטיס הטיפים של Growser</translation>
+<translation id="3075680827782258330">‏שימוש ב-Growser כברירת מחדל</translation>
+<translation id="3330538708604362125">‏אפשר להשתמש ב-Growser בכל פעם שלוחצים על קישורים בהודעות, במסמכים ובאפליקציות אחרות.</translation>
+<translation id="878212867049674537">‏אפשר לעצב את Growser לפי הטעם עם צבעים ותמונות בהתאמה אישית לדף הבית</translation>
+<translation id="906376138426795308">‏אפשר עכשיו להשתמש ב-Growser בכל פעם שגולשים או לוחצים על קישורים בהודעות, במסמכים ובאפליקציות אחרות.</translation>
+<translation id="1060555682994133119">‏לוחצים על אפליקציית הדפדפן &gt; Growser</translation>
+<translation id="2039425904994800099">‏לוחצים על אפליקציית הדפדפן ואז על Growser</translation>
+<translation id="3307078631581490570">‏אפשר להתאים אישית את Growser בדרך שנוחה לך</translation>
+<translation id="1068559798624451989">‏רוצה לקבל את ההגנה הכי מתקדמת של Growser מפני איומים באינטרנט?</translation>
+<translation id="3371556244314914639">‏שמירת סיסמאות ב-Growser</translation>
+<translation id="6096811239980093579">‏‫Growser יציע לשמור את הסיסמה</translation>
+<translation id="3942445027194417950">‏גיליון תחתון עם הוראות לשמירת סיסמאות ב-Growser</translation>
+<translation id="4476554299666180378">‏עכשיו אפשר ליהנות מהמיטב של Growser במכשיר.</translation>
+<translation id="2762149874114516998">‏נהנים מהמיטב של Growser</translation>
+<translation id="4229054348764234344">‏כדי להפיק את המרב מ- Growser כדאי להשלים את הפעולות המוצעות</translation>
+<translation id="9005129040299651584">‏עכשיו אפשר לעצב את Growser לפי הטעם שלך עם רקע מותאם אישית</translation>
+<translation id="6695051470627475273">‏הגיליון התחתון של צבעי Growser פתוח בגובה מלא</translation>
+<translation id="8884873726356949960">‏הגיליון התחתון של צבעי Growser נפתח בחצי מגובה המסך</translation>
+<translation id="8064824204802826269">‏ברירת המחדל של Brave</translation>
+<translation id="3625563631434033924">‏צבעי Brave</translation>
+<translation id="4084889026632451864">‏הגיליון התחתון של צבעי Growser</translation>
+<translation id="6506349636755583652">‏חלק מההגדרות של Growser השתנו</translation>
+<translation id="6972629891077993081">‏מכשירי ממשק אנושי (HID)</translation>
+<translation id="4748783296226936791">‏בדרך כלל, אתרים מתחברים למכשירי HID כדי לתמוך בתכונות שמשתמשות במקלדות, בשלטים רחוקים למשחקים ובמכשירים אחרים שאינם נפוצים</translation>
+<translation id="5719854774000914513">‏אתרים יכולים לבקש הרשאה להתחבר למכשירי HID</translation>
+<translation id="8625916342247441948">‏לא לאפשר לאתרים להתחבר למכשירי HID</translation>
+<translation id="1258491128795710625">מה חדש</translation>
 </translationbundle>

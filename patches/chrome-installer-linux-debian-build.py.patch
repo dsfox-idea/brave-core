@@ -1,8 +1,8 @@
 diff --git a/chrome/installer/linux/debian/build.py b/chrome/installer/linux/debian/build.py
-index d44d6e9081b0ac926778cef5462cc7954591565b..64bd4a92aaca4900ac93e2e19f82a153736dae1e 100755
+index e9d12851e35b38b0cf409dc019b89eba3a7d5028..a4f429089098fc54e8d52e0ac7a6469ee3b0b04d 100755
 --- a/chrome/installer/linux/debian/build.py
 +++ b/chrome/installer/linux/debian/build.py
-@@ -118,10 +118,6 @@ def main() -> None:
+@@ -120,10 +120,6 @@ def main() -> None:
          inst.prep_staging_common()
          (staging_dir / "DEBIAN").mkdir(parents=True, exist_ok=True)
          (staging_dir / "DEBIAN").chmod(installer.StandardPermissions.EXECUTABLE)
@@ -13,7 +13,7 @@ index d44d6e9081b0ac926778cef5462cc7954591565b..64bd4a92aaca4900ac93e2e19f82a153
          (staging_dir / f"usr/share/doc/{config.usr_bin_symlink_name}").mkdir(
              parents=True, exist_ok=True
          )
-@@ -132,32 +128,25 @@ def main() -> None:
+@@ -134,32 +130,26 @@ def main() -> None:
          inst.stage_install_common()
  
          logging.info(f"Staging Debian install files in '{staging_dir}'...")
@@ -25,7 +25,7 @@ index d44d6e9081b0ac926778cef5462cc7954591565b..64bd4a92aaca4900ac93e2e19f82a153
 -        cron_dir = install_dir / "cron"
 -        cron_dir.mkdir(parents=True, exist_ok=True)
 -        cron_dir.chmod(installer.StandardPermissions.EXECUTABLE)
--
+ 
 -        cron_file = cron_dir / config.info_vars["PACKAGE"]
 -        installer.process_template(
 -            output_dir / "installer/common/repo.cron",
@@ -64,17 +64,17 @@ index d44d6e9081b0ac926778cef5462cc7954591565b..64bd4a92aaca4900ac93e2e19f82a153
  
          for script in ["postinst", "prerm", "postrm"]:
              dest = staging_dir / "DEBIAN" / script
-@@ -174,7 +163,20 @@ def main() -> None:
+@@ -175,8 +165,20 @@ def main() -> None:
+ 
          logging.info(f"Packaging {args.arch}...")
          config.deb_pre_depends = config.common_predeps
-         config.deb_depends = config.common_deps
--        config.deb_provides = "www-browser"
 +        # Growser-207: no keyring dependency. Brave depend on brave-keyring
 +        # to keep their signing key fresh, and that package comes from
 +        # BRAVE repository - so ours would not install at all without
 +        # adding theirs first. Our key is installed by the postinst in this
 +        # package, from key.include, so there is nothing to depend on.
-+        config.deb_depends = config.common_deps
+         config.deb_depends = config.common_deps
+-        config.deb_provides = "www-browser"
 +        # Growser-222: the package was growser-browser until the two
 +        # names were swapped. apt treats the old and new names as
 +        # unrelated packages that both own /opt/growser, so say so:
@@ -86,7 +86,7 @@ index d44d6e9081b0ac926778cef5462cc7954591565b..64bd4a92aaca4900ac93e2e19f82a153
  
          installer.gen_changelog(config, deb_changelog)
          installer.process_template(
-@@ -185,6 +187,8 @@ def main() -> None:
+@@ -187,6 +189,8 @@ def main() -> None:
  
          os.environ["DEB_HOST_ARCH"] = args.arch
          pkg_name = f"{config.package_orig}-{config.channel}"

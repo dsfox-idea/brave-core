@@ -11316,4 +11316,435 @@ Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je mee
 <translation id="954749761428814584">Taal en invoermethode</translation>
 <translation id="960987915827980018">Ongeveer 1 uur resterend</translation>
 <translation id="995420352808264005">Type apparaatinschrijving kiezen</translation>
+<translation id="6681823034920334318">Als je wilt casten met een code, zet je de synchronisatie-instellingen van de Growser-browser aan</translation>
+<translation id="2515496577979954543">Ga naar Growser</translation>
+<translation id="5924575374764114159"><ph name="TASK_TITLE"/>: Gemini heeft je taak afgerond. Je kunt deze bekijken in Growser.</translation>
+<translation id="3721794228264322796">Gemini in Growser sluiten</translation>
+<translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini in Growser</translation>
+<translation id="1975450474853317621">Openen in de Growser-browser</translation>
+<translation id="8516824290867275572">Je account heeft geen toegang tot Gemini in Growser</translation>
+<translation id="1649234713894562345">Brave wordt mogelijk gemaakt door het opensource-project Brave en andere <ph name="BEGIN_HIGHLIGHT"/>opensource<ph name="END_HIGHLIGHT"/>-software.</translation>
+<translation id="870536819717176711">Als je ervoor kiest om het huidige tabblad met Gemini te delen, worden de volledige content, media en de URL van het tabblad naar Growser gestuurd.</translation>
+<translation id="1130866111814048607">Als tabbladen worden gedeeld, worden de bijbehorende paginacontent, media en URL's naar Brave gestuurd en kunnen ze worden beoordeeld op veiligheid.</translation>
+<translation id="7656790264713095385">Zet eerst automatisch browsen in Brave aan voor dit apparaat</translation>
+<translation id="8572003230388132401">Gemini Spark kan automatisch browsen in Growser op dit apparaat gebruiken om namens jou te communiceren met sites en taken uit te voeren. <ph name="LINK_BEGIN"/>Meer informatie<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">Gemini Spark kan automatisch browsen alleen gebruiken op dit apparaat als het apparaat aanstaat en Growser actief is.</translation>
+<translation id="1982892581799327835">Iedereen met toegang tot je Gemini Spark-agent kan je Growser-browser bedienen.</translation>
+<translation id="6689939585896001516">Laat Growser voor je browsen</translation>
+<translation id="640233545778658570">Gemini in Growser gebruikt automatisch browsen om in je tabbladen te werken en taken uit te voeren die je Gemini geeft. <ph name="LINK_BEGIN"/>Meer informatie<ph name="LINK_END"/></translation>
+<translation id="2740842679402949230">Meer informatie over automatisch browsen in Brave</translation>
+<translation id="3570112771874223231">De paginacontent en URL's die Gemini tijdens een taak gebruikt, worden gedeeld met Brave en kunnen worden beoordeeld op veiligheid.</translation>
+<translation id="2314508080153323869">Gemini in Growser</translation>
+<translation id="1910632359330857071">Praat met Gemini in Growser om onder meer antwoorden en belangrijke conclusies te krijgen terwijl je browst</translation>
+<translation id="2483218699324586641">Gebruik <ph name="FOCUS_TOGGLE_HOTKEY"/> om Gemini in Growser te openen</translation>
+<translation id="2353068771555482464">Maak kennis met Gemini in Growser</translation>
+<translation id="7545274281857327491">Gebruik het beste van de AI van Growser. Zet Gemini vast op je werkbalk voor snelle toegang of open het op elk moment via het Growser-menu.</translation>
+<translation id="8335336878672278597">Gemini in Growser is niet beschikbaar</translation>
+<translation id="570859258083183845">Gemini in Growser wordt uitgebreid naar verschillende locaties, maar is niet overal beschikbaar</translation>
+<translation id="96535553604365597">Een probleem met Growser Cast melden</translation>
+<translation id="4415611489406290344">Als je wilt casten, geef je Growser toegang via <ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/> &gt; Lokaal netwerk &gt; Growser</translation>
+<translation id="8492960370534528742">Feedback voor Growser Cast</translation>
+<translation id="2263679799334060788">We ontvangen graag feedback, zodat we Growser Cast kunnen verbeteren. Als je hulp nodig hebt bij het oplossen van castproblemen, ga je naar het <ph name="BEGIN_LINK"/>Helpcentrum<ph name="END_LINK"/>.</translation>
+<translation id="8376137163494131156">Vertel ons hoe goed Growser Cast werkt.</translation>
+<translation id="7325065595154456783">De volgende gegevens worden gestuurd: je Growser-versie, versie van het besturingssysteem, Cast-instellingen, prestatiestatistieken voor mirroring, logboeken met diagnostische gegevens van communicatiekanalen en eventuele informatie die je hierboven opgeeft. Deze feedback wordt gebruikt om een diagnose van problemen te stellen en de functie te verbeteren. Persoonlijke informatie die je stuurt, ongeacht of dit expliciet of per ongeluk gebeurt, wordt beschermd in overeenstemming met ons Privacybeleid. Door deze feedback in te dienen, ga je ermee akkoord dat Growser je feedback kan gebruiken om producten of services van Growser te verbeteren.</translation>
+<translation id="3187556136478864255">Zie je je cast-apparaat in de <ph name="BEGIN_LINK"/>Growser Home-app<ph name="END_LINK"/>?</translation>
+<translation id="2984923316661218534">Haal je toegangssleutels op dit apparaat op met Growser Wachtwoordmanager</translation>
+<translation id="2364302372598204515">Dit is geen Growser-account. Items die je in Growser opslaat, zijn niet beschikbaar op andere apparaten.</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave-lidmaatschap</translation>
+<translation id="850632091665381275">Brave-lidmaatschap</translation>
+<translation id="6710172959248731469">Instellingen voor Growser-services</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 item wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}other{{ITEM_COUNT} items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 wachtwoord wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}other{{PASSWORD_COUNT} wachtwoorden worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{1 wachtwoord en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}other{{PASSWORD_COUNT} wachtwoorden en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{1 bookmark wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}other{{BOOKMARK_COUNT} bookmarks worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{1 bookmark en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}other{{BOOKMARK_COUNT} bookmarks en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{1 item wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account.}other{{ITEM_COUNT} items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{1 wachtwoord wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account.}other{{PASSWORD_COUNT} wachtwoorden worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{1 wachtwoord en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}other{{PASSWORD_COUNT} wachtwoorden en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{1 bookmark wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account.}other{{BOOKMARK_COUNT} bookmarks worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 bookmark en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}other{{BOOKMARK_COUNT} bookmarks en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 item wordt alleen op dit apparaat opgeslagen. Als je het op je andere apparaten wilt gebruiken, <ph name="BEGIN_LINK"/>sla je het op in je Growser-account<ph name="END_LINK"/>.}other{{ITEM_COUNT} items worden alleen op dit apparaat opgeslagen. Als je ze op je andere apparaten wilt gebruiken, <ph name="BEGIN_LINK"/>sla je ze op in je Growser-account<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">Gebruik je Growser-account of maak een nieuw account</translation>
+<translation id="1896353439080510710">Chats worden beoordeeld en gebruikt om AI van Brave te verbeteren. Gemini is AI en kan fouten maken. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Chats worden beoordeeld en gebruikt om AI van Brave te verbeteren. Gemini is AI en kan fouten maken. Bepaalde content is misschien niet geschikt voor iedereen. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Deze extensie is opgeslagen in je Growser-account, maar gegevens die de extensie alleen op dit apparaat heeft opgeslagen, kunnen worden verwijderd}other{Deze extensies zijn opgeslagen in je Growser-account, maar gegevens die de extensies alleen op dit apparaat hebben opgeslagen, kunnen worden verwijderd}}</translation>
+<translation id="3523789730715594198">Je kunt de synchronisatie op elk moment stopzetten via de instellingen. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
+<translation id="8231595707224857577">Je organisatie heeft tabbladen opslaan uitgezet in je Growser-account</translation>
+<translation id="1031540790849324993">Sla je wachtwoorden, bookmarks en andere items op in je Growser-account om ze op al je apparaten te gebruiken</translation>
+<translation id="7044272971260038324">Sla bookmarks op in je Growser-account om dubbele bookmarks op te schonen</translation>
+<translation id="5106710135524113413">Als je bent ingelogd, kun je onder andere de bookmarks en extensies die zijn opgeslagen in je Growser-account gebruiken op al je apparaten</translation>
+<translation id="458475640392126897">Als je bent ingelogd, kun je onder andere de thema's en instellingen die zijn opgeslagen in je Growser-account gebruiken op al je apparaten</translation>
+<translation id="8780123805589053431">Afbeeldingsbeschrijvingen ophalen van Growser</translation>
+<translation id="8076549662907665888">Als een afbeelding geen nuttige beschrijving bevat, probeert Growser je er een te geven. Afbeeldingen worden naar Growser verzonden om beschrijvingen te maken.</translation>
+<translation id="5216674789212441076">Vertaalt automatisch live ondertiteling. Ondertiteling wordt naar Growser gestuurd voor vertaling.</translation>
+<translation id="2955575198481587842">Kleuren van Growser</translation>
+<translation id="5000497292978544380">AI-modus in Growser Zoeken</translation>
+<translation id="377490226065453836">Growser-deelvensters</translation>
+<translation id="2955048943983973430">Gerelateerde Growser-services</translation>
+<translation id="6214157047210274853">Bewerken in Google Wallet</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="5787582109651427233">Ga naar Google Wallet om <ph name="BEGIN_LINK_LOYALTY_CARDS"/>klantenkaarten<ph name="END_LINK_LOYALTY_CARDS"/> of Google Pay-<ph name="BEGIN_LINK_PAYMENT_METHODS"/>betaalmethoden<ph name="END_LINK_PAYMENT_METHODS"/> toe te voegen of te beheren</translation>
+<translation id="3040435070100611531">Je Google Wallet-kaarten</translation>
+<translation id="5829544019044013776">Je betaalmethoden in Google Wallet</translation>
+<translation id="4140668600752387693">Als je inlogt op je Growser-account, wordt deze functie aangezet.</translation>
+<translation id="7297228218361240128">Informatie opslaan in Google Wallet vanaf pagina's die je bekijkt</translation>
+<translation id="4182182457914031017">De URL en volledige paginacontent van de site die je bezoekt, worden gedeeld met Growser om suggesties te bieden en deze functie te verbeteren</translation>
+<translation id="808488435221187916">Je informatie is beschikbaar in Google Wallet op elk ingelogd apparaat</translation>
+<translation id="7501338159181931945">Deze toegangssleutels worden opgeslagen in Windows Hello op deze computer. Ze worden niet opgeslagen in je Growser-account.</translation>
+<translation id="1921051356055149189">Bewerken in Growser-account</translation>
+<translation id="4498223799912841817">Verwijderen uit Growser</translation>
+<translation id="3346610836797971718">Je woonadres verwijderen uit automatisch invullen in Growser?</translation>
+<translation id="6595367601483315266">Je werkadres verwijderen uit automatisch invullen in Growser?</translation>
+<translation id="3068798232942246848">Deze informatie verwijderen uit automatisch invullen in Growser?</translation>
+<translation id="4713283515261533452">Als je browsegegevens alleen van dit apparaat wilt verwijderen, maar ze wilt behouden in je Growser-account, <ph name="BEGIN_LINK"/>log je uit<ph name="END_LINK"/>.</translation>
+<translation id="6641004568837764720">Als je browsegegevens wilt verwijderen van al je gesynchroniseerde apparaten en je Growser-account, <ph name="BEGIN_LINK"/>ga je naar synchronisatie-instellingen<ph name="END_LINK"/>.</translation>
+<translation id="7711557916951320264">Als je browsegegevens wilt verwijderen van al je gesynchroniseerde apparaten en je Growser-account, <ph name="BEGIN_LINK"/>voer je je wachtwoordzin in<ph name="END_LINK"/>.</translation>
+<translation id="5680951041809780964">Als je browsegegevens wilt verwijderen van al je gesynchroniseerde apparaten en je Growser-account, <ph name="BEGIN_LINK"/>log je in<ph name="END_LINK"/>.</translation>
+<translation id="908980466794178222">Je <ph name="BEGIN_LINK_SEARCH"/>zoekgeschiedenis<ph name="END_LINK_SEARCH"/> en <ph name="BEGIN_LINK_GOOGLE"/>andere vormen van activiteit<ph name="END_LINK_GOOGLE"/> kunnen worden opgeslagen in je Growser-account als je bent ingelogd. Je kunt ze altijd verwijderen.</translation>
+<translation id="1024884937839269099">Er kunnen <ph name="BEGIN_LINK_GOOGLE"/>andere vormen van activiteit<ph name="END_LINK_GOOGLE"/> worden opgeslagen op je Growser-account als je bent ingelogd. Je kunt ze wanneer je wilt verwijderen.</translation>
+<translation id="6533315466883598769">Google Translate gebruiken</translation>
+<translation id="6010651352520077187">Als dit aanstaat, biedt Google Translate aan om sites te vertalen naar je voorkeurstaal. De functie kan ook automatisch sites vertalen.</translation>
+<translation id="6873499199714317035">Als dit aanstaat, biedt Brave Translate aan om sites en pdf's te vertalen naar je voorkeurstaal. De functie kan ook automatisch sites vertalen.</translation>
+<translation id="5911030830365207728">Google Translate</translation>
+<translation id="7458168200501453431">Gebruikt dezelfde spellingcontrole als voor Growser Zoeken. In de browser ingevoerde tekst wordt naar Growser gestuurd.</translation>
+<translation id="8972513834460200407">Neem contact op met je netwerkbeheerder om ervoor te zorgen dat downloads van Growser-servers niet door de firewall worden geblokkeerd.</translation>
+<translation id="3407392651057365886">Er worden meer pagina's vooraf geladen. Pagina's kunnen op verzoek van andere sites vooraf worden geladen via de servers van Growser.</translation>
+<translation id="1965578266762387357">Als je hulp krijgt bij het schrijven, worden de URL en content van de pagina en je tekst naar Growser gestuurd. Voer geen persoonlijke informatie in (zoals medische of financiële gegevens)</translation>
+<translation id="3281851196103181918">Een site die je bezoekt, kan een kleine hoeveelheid informatie opslaan in Growser, voornamelijk om te bevestigen dat je geen bot bent</translation>
+<translation id="7321946347180923218">Terwijl je browst, kunnen sites via Growser checken en met een eerder bezochte site verifiëren dat je waarschijnlijk een echte persoon bent</translation>
+<translation id="3510488868237982080">Meer informatie over hoe AI van invloed is op de functionaliteit en de bedieningselementen die Growser biedt</translation>
+<translation id="3003253259757197230">URL's die je bezoekt, worden naar Growser gestuurd om te voorspellen naar welke sites je misschien daarna gaat en extra informatie te tonen over de pagina die je bezoekt</translation>
+<translation id="69739764870135975">Als Growser ook je standaard zoekmachine is, krijg je betere, contextueel relevante suggesties te zien</translation>
+<translation id="8358717005361108959">De URL's die je bezoekt, worden opgeslagen in je Growser-account</translation>
+<translation id="4674867347456586454">Koppelt deze gegevens tijdelijk aan je Growser-account als je bent ingelogd om je te beschermen binnen de Growser-apps</translation>
+<translation id="8898822736010347272">Stuurt URL's van sommige pagina's die je bezoekt, beperkte systeeminformatie en bepaalde paginacontent naar Growser om nieuwe dreigingen te ontdekken en iedereen op internet te beschermen.</translation>
+<translation id="4255841059940367080">Realtime, AI-gestuurde bescherming tegen gevaarlijke sites, downloads en extensies op basis van je browsegegevens die naar Growser worden gestuurd.</translation>
+<translation id="6053586914913150093">Stuurt URL's naar Safe Browsing om deze te controleren. Stuurt ook een klein gedeelte pagina's, downloads, extensie-activiteit en systeeminformatie om nieuwe dreigingen te kunnen detecteren. Koppelt deze gegevens tijdelijk aan je Growser-account als je bent ingelogd om je te beschermen binnen de Growser-apps.</translation>
+<translation id="777637629667389858">Als je bent ingelogd, word je beschermd in Growser-services.</translation>
+<translation id="4492544972585416410">Als je bent ingelogd, worden deze gegevens gekoppeld aan je Growser-account om je te beschermen in Growser-services, bijvoorbeeld om de beveiliging in Gmail te verbeteren na een beveiligingsincident.</translation>
+<translation id="6550891580932862748">Beschermt je niet tegen gevaarlijke websites, downloads en extensies. Dit heeft geen invloed op je Safe Browsing-instellingen in andere Growser-producten.</translation>
+<translation id="1153636665119721804">Geavanceerde beveiliging van Growser</translation>
+<translation id="8678192320753081984">Biedt de krachtigste accountbeveiliging van Growser voor mensen die risico lopen op gerichte aanvallen</translation>
+<translation id="7803714812705886512">Growser gebruikt minder gegevens (bijvoorbeeld delen van URL's, downloadinformatie) om bedreigingen te detecteren</translation>
+<translation id="8602867356511778172">Growser gebruikt meer gegevens (bijvoorbeeld URL's, voorbeelden van paginacontent, systeeminformatie) om bedreigingen sneller en nauwkeuriger op te sporen</translation>
+<translation id="2547602044908040111">Als je activist, journalist, bekend persoon, verkiezingsmedewerker of iemand anders bent met een uniek hoogrisicofunctie, ben je misschien geïnteresseerd in het <ph name="BEGIN_LINK"/>programma Geavanceerde beveiliging<ph name="END_LINK"/> van Growser.</translation>
+<translation id="5864624288360677142">Standaard gebruiken indien beschikbaar en Growser DNS als back-up</translation>
+<translation id="7137270216770481232">Growser heeft deze instellingen gereset</translation>
+<translation id="8723105215342036961">Deze instellingen zijn gewijzigd buiten Growser om. Growser heeft ze gereset om je te beschermen.</translation>
+<translation id="3099985829883207242">Als je een specifieke site of een deel van Growser wilt doorzoeken, typ je de bijbehorende snelkoppeling in de adresbalk gevolgd door de gewenste sneltoets.</translation>
+<translation id="3172166850967951827">Met sommige extensies kun je zoekmachines aan Growser toevoegen</translation>
+<translation id="5433098395236481485">Download pdf-bestanden in plaats van ze automatisch te openen in Growser</translation>
+<translation id="4297918578409923363">Growser laten kiezen wanneer sites geluid mogen afspelen (aanbevolen)</translation>
+<translation id="3721119614952978349">Jij en Growser</translation>
+<translation id="5900302528761731119">Growser-profielfoto</translation>
+<translation id="2928030851119977280">Keuze opgeslagen. Je keuze is van toepassing als je inlogt bij andere Growser-services.</translation>
+<translation id="1818532843473612004">In je Growser-account</translation>
+<translation id="8511856004631476285">Als dit aanstaat, worden gegevens opgeslagen in je Growser-account en kun je ze op al je apparaten gebruiken. Staat dit uit, dan worden gegevens alleen opgeslagen op dit apparaat.</translation>
+<translation id="7846296061357476882">Growser-services</translation>
+<translation id="8032692752324456430">Hiermee word je uitgelogd van je Growser-accounts. Onder meer je bookmarks, geschiedenis en wachtwoorden worden niet meer gesynchroniseerd.</translation>
+<translation id="3142647462186639376">Versleutel gesynchroniseerde gegevens met je eigen <ph name="BEGIN_LINK"/>wachtwoordzin voor synchronisatie<ph name="END_LINK"/>. Betaalmethoden en adressen van Growser Pay worden niet versleuteld. De browsegeschiedenis in Growser wordt niet gesynchroniseerd.</translation>
+<translation id="63566973648609420">Alleen iemand met je wachtwoordzin kan je versleutelde gegevens lezen. De wachtwoordzin wordt niet verzonden naar of opgeslagen door Growser. Als je je wachtwoordzin vergeet of deze instelling wilt wijzigen, moet je de <ph name="BEGIN_LINK"/>synchronisatie resetten<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">Bepaal hoe de browsegeschiedenis wordt gebruikt met je andere gegevens in Growser-services</translation>
+<translation id="5728072125198221967">Gekoppelde Growser-services</translation>
+<translation id="3848443004871354246">Growser-account</translation>
+<translation id="3293574207873361017">Je Growser-account beheren</translation>
+<translation id="6901130673208235020">Als je zoekt in je browsegeschiedenis, worden de zoekopdrachten voor je geschiedenis, de paginacontent van de beste overeenkomsten en de gegenereerde modeluitvoer naar Growser gestuurd.</translation>
+<translation id="3178434360326457238">Als je op sites browst, wordt de content van de pagina's versleuteld en opgeslagen op je apparaat. Dit kan van invloed zijn op de prestaties van Growser.</translation>
+<translation id="8622145666696249878">AI-modus van Brave Zoeken en gekoppelde apps</translation>
+<translation id="2760679829473121490">Systeemmeldingen over Growser-functies en -tips tonen</translation>
+<translation id="6713316345564743478">Log in op je Growser-account om te checken op gehackte wachtwoorden</translation>
+<translation id="1342886103232377846">Ga naar Growser Wachtwoordmanager om te checken op gehackte wachtwoorden</translation>
+<translation id="6766488013065406604">Naar Growser Wachtwoordmanager</translation>
+<translation id="5408271390996168857">Je hebt de krachtigste beveiliging van Growser</translation>
+<translation id="2888959493235069176">AI in Growser</translation>
+<translation id="5058786435107472268">Gegevens die naar Growser worden gestuurd, kunnen door menselijke reviewers worden bekeken om de AI-technologie van Growser te verbeteren</translation>
+<translation id="4928488083257788101">Gegevens die naar Growser worden gestuurd, kunnen door menselijke reviewers worden bekeken om deze functie te verbeteren</translation>
+<translation id="6690687289858134062">Als Growser een van je wachtwoorden vindt bij een openbaar gegevenslek, kan Growser Wachtwoordmanager aanbieden om je wachtwoord te wijzigen als je bent ingelogd.</translation>
+<translation id="1377438103060664754">Als een van je wachtwoorden wordt gevonden bij een gegevenslek, vraagt Growser Wachtwoordmanager of je het wilt wijzigen in een sterk wachtwoord</translation>
+<translation id="1045487161760507186">Je hoeft het wachtwoord niet te onthouden, want het wordt voor je opgeslagen in Growser Wachtwoordmanager</translation>
+<translation id="2696675923413008404">Content van deze site, waaronder de URL, wordt naar Growser gestuurd en kan door menselijke reviewers worden bekeken om deze functie te verbeteren</translation>
+<translation id="4770046633685474652">Growser opnieuw vormgeven, aangedreven door AI</translation>
+<translation id="4682807230647698604">Als je deze functies gebruikt, worden relevante gegevens naar Growser gestuurd om AI-functionaliteit te maken</translation>
+<translation id="9130857050314385402">Tabbladtitels en URL's worden naar Growser gestuurd als je de vaardigheid gebruikt</translation>
+<translation id="6889302653504319751">Vaardigheden worden opgeslagen in je Growser-account</translation>
+<translation id="7247922309426191342">Growser kan ondertiteling maken en vertalen voor de hier getoonde talen</translation>
+<translation id="113229251350204705">Growser kan ondertiteling maken voor de hier getoonde talen</translation>
+<translation id="2523184218357549926">Hiermee worden de URL's van pagina's die je bezoekt, verzonden naar Growser</translation>
+<translation id="2489769822799748314">Help de functies en prestaties van Growser verbeteren</translation>
+<translation id="1236327016477620515">Hiermee worden automatisch gebruiksstatistieken en crashrapporten naar Growser verzonden</translation>
+<translation id="4847986390991794208">Growser-functies in Growser</translation>
+<translation id="4849857027852929587">Laat verifiëren dat jij het bent om wachtwoorden te gebruiken en op te slaan in je Growser-account</translation>
+<translation id="4571634846305359773">Laat verifiëren dat jij het bent zodat je de wachtwoorden in je Growser-account altijd kunt gebruiken</translation>
+<translation id="1067922213147265141">Andere Growser-services</translation>
+<translation id="5611620894475877872">Gesynchroniseerde wachtwoorden versleutelen met je Growser-account</translation>
+<translation id="2934862573358659343">De standaardversleuteling van Growser gebruiken voor de wachtwoorden in je Growser-account</translation>
+<translation id="2234876718134438132">Synchronisatie en Growser-services</translation>
+<translation id="90129144187791159">Dit account is niet gekoppeld aan Growser, dus functies zoals Growser-synchronisatie zijn niet beschikbaar</translation>
+<translation id="8576758133946664895">Growser Root Store</translation>
+<translation id="465996245977626576">De Growser Root Store bevat certificaten van certificeringsinstanties die worden vertrouwd door het Growser-rootprogramma. Deze worden voortdurend gecontroleerd.</translation>
+<translation id="6792337889847068504">Krijg meer informatie over de Growser Root Store in een nieuw tabblad.</translation>
+<translation id="3691353018566626378">Als je een servercertificaat verwijdert, gebruikt Growser het niet meer om servers te identificeren.</translation>
+<translation id="1378122021175898739">Growser-systeeminformatie</translation>
+<translation id="1017340475205725100">ChromeOS-logboeken van Growser-gebruikers</translation>
+<translation id="7635904580734496104">Growser-account-ID</translation>
+<translation id="5221420127618874650">Opslaan in je Growser-account</translation>
+<translation id="691102290537033604">De extensie kan code uitvoeren die niet is beoordeeld door Growser. Dit kan onveilig zijn en je moet dit alleen aanzetten als je weet wat je doet.</translation>
+<translation id="2375391460087228850">Growser-apps</translation>
+<translation id="7370738934099833954">Extensies zijn add-ons voor Growser waarmee je meer kunt doen</translation>
+<translation id="6629808816989244742">zijn add-ons voor Growser waarmee je meer kunt doen</translation>
+<translation id="7474944013493005173">Extensies zijn add-ons voor Growser die je kunnen helpen</translation>
+<translation id="5608497824592875805">Alleen je contacten met een Growser-account. <ph name="LINK_BEGIN"/>Contacten bekijken<ph name="LINK_END"/></translation>
+<translation id="1958324393151249273">Als je Dichtbij delen met deze contacten wilt gebruiken, voeg je het e-mailadres dat bij hun Growser-account hoort aan je contacten toe.</translation>
+<translation id="4588215749100790315">Als je <ph name="FEATURE_NAME"/> met deze contacten wilt gebruiken, voeg je het e-mailadres dat bij hun Growser-account hoort aan je contacten toe.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{# contact is niet beschikbaar. Als je Dichtbij delen met deze persoon wilt gebruiken, voeg je het e-mailadres dat bij dit Growser-account hoort aan je contacten toe.}other{# contacten zijn niet beschikbaar Als je Dichtbij delen met ze wilt gebruiken, voeg je de e-mailadressen die bij hun Growser-accounts horen aan je contacten toe.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{# contact is niet beschikbaar. Als je <ph name="FEATURE_NAME"/> met deze persoon wilt gebruiken, voeg je het e-mailadres dat bij hun Growser-account hoort aan je contacten toe.}other{# contacten zijn niet beschikbaar. Als je <ph name="FEATURE_NAME"/> met deze personen wilt gebruiken, voeg je de e-mailadressen die bij hun Growser-accounts horen aan je contacten toe.}}</translation>
+<translation id="3115470387083988713">Voor extra beveiliging kun je wachtwoorden op je apparaat versleutelen voordat ze worden opgeslagen in je Growser-account.</translation>
+<translation id="8042331986490021244">Je wachtwoorden worden versleuteld op je apparaat voordat ze worden opgeslagen in Growser Wachtwoordmanager</translation>
+<translation id="1440474484372226561">Je wachtwoord is niet gedeeld. Check je internetverbinding en zorg dat je bent ingelogd bij Growser. Probeer het daarna opnieuw.</translation>
+<translation id="6667187897999649121">Voorlopig kun je alleen wachtwoorden delen met gezinsleden. <ph name="BEGIN_LINK"/>Maak een gezinsgroep<ph name="END_LINK"/> met maximaal 6 leden en haal meer uit je producten en abonnementen op Growser.</translation>
+<translation id="3767835232661747729">Voorlopig kun je alleen wachtwoorden delen met gezinsleden. <ph name="BEGIN_LINK"/>Nodig gezinsleden uit<ph name="END_LINK"/> om lid te worden van je groep en haal meer uit je producten en abonnementen op Growser.</translation>
+<translation id="4509277363725254222">Als je je <ph name="BEGIN_BOLD_USERNAME"/>gebruikersnaam<ph name="END_BOLD_USERNAME"/> en <ph name="BEGIN_BOLD_PASSWORD"/>wachtwoord<ph name="END_BOLD_PASSWORD"/> deelt, kan je gezinslid deze gegevens invullen via Growser Wachtwoordmanager</translation>
+<translation id="3618647122592024084"><ph name="RECIPIENT_NAME"/> kan nu je gebruikersnaam en wachtwoord gebruiken als die Growser Wachtwoordmanager gebruikt. Vraag die naar <ph name="WEBSITE"/> te gaan om in te loggen.</translation>
+<translation id="7191632649590906354">Je gezinsleden kunnen nu je gebruikersnaam en wachtwoord gebruiken als ze Growser Wachtwoordmanager gebruiken. Vraag ze naar <ph name="WEBSITE"/> te gaan om in te loggen.</translation>
+<translation id="2016576853804262709">Je gezinslid kan op dit moment geen wachtwoorden krijgen. Vraag ze Growser te updaten en hun wachtwoorden te synchroniseren.</translation>
+<translation id="7452861405952250711"><ph name="BRAND"/> kan je wachtwoorden checken als je inlogt met je Growser-account</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{{COUNT} wachtwoord wordt alleen op dit apparaat opgeslagen. Als je het op je andere apparaten wilt gebruiken, <ph name="BEGIN_LINK"/>sla je het op in je Growser-account<ph name="END_LINK"/>.}other{{COUNT} wachtwoorden worden alleen op dit apparaat opgeslagen. Als je ze op je andere apparaten wilt gebruiken, <ph name="BEGIN_LINK"/>sla je ze op in je Growser-account<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">Growser Wachtwoordmanager op internet</translation>
+<translation id="1368798504801939187">Check je wachtwoorden ook als je Growser of Android niet gebruikt door in te loggen op <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
+<translation id="829923460755755423">Voeg een snelkoppeling toe naar Growser Wachtwoordmanager</translation>
+<translation id="7244677273667272006">Laat verifiëren dat jij het bent om wachtwoorden toe te voegen en ze op alle apparaten met je Brave-account te krijgen</translation>
+<translation id="8189517459248805166">Je wachtwoord voor <ph name="WEBSITE"/> is opgeslagen op dit apparaat en in je Growser-account. Welke versie wil je verwijderen?</translation>
+<translation id="9101265711096405922">Uit je Growser-account.</translation>
+<translation id="927421426408921503">Opgeslagen wachtwoorden verplaatsen naar je Growser-account?</translation>
+<translation id="5854237678863974330">Als je wachtwoorden opslaat in je Growser-account, kun je ze gebruiken op dit apparaat en andere apparaten waarop je bent ingelogd</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{<ph name="WEBSITE"/> wachtwoord opslaan in je Growser-account}other{<ph name="WEBSITE"/> wachtwoorden opslaan in je Growser-account}}</translation>
+<translation id="8095189618468031638">Als je ze op je andere apparaten wilt gebruiken, sla je ze op in je Growser-account</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{Wachtwoord opgeslagen in je Growser-account, <ph name="USER_EMAIL"/>}other{Wachtwoorden opgeslagen in je Growser-account, <ph name="USER_EMAIL"/>}}</translation>
+<translation id="1286604678719026234">Dit wachtwoord wordt alleen opgeslagen op dit apparaat. Als je het wachtwoord wilt gebruiken op je andere apparaten, sla je het op in je Growser-account <ph name="USER_EMAIL"/>.</translation>
+<translation id="11353874453755012">Opslaan in je Growser-account?</translation>
+<translation id="9031082696306594802">Je moet inloggen voordat Growser deze taak kan afronden</translation>
+<translation id="7412981914901765024">Growser Wachtwoordmanager kan je account updaten met een sterk wachtwoord en dit opslaan in <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">Growser Wachtwoordmanager kan je account updaten met een sterk wachtwoord dat voor je wordt opgeslagen in je account <ph name="EMAIL"/>.</translation>
+<translation id="309984825599745401">Meer informatie over deze functie en relevante gegevens die naar Growser worden gestuurd</translation>
+<translation id="4786289993714497244">Content van wachtwoordpagina's en gerelateerde informatie worden naar Growser gestuurd en door mensen beoordeeld. Je wachtwoord is versleuteld en wordt nooit door iemand gezien. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">Als Growser een van je wachtwoorden bij een openbaar gegevenslek vindt, kan Growser aanbieden om je wachtwoord te wijzigen als je bent ingelogd</translation>
+<translation id="899508106612248318">Sta toe dat Growser het wachtwoord voor <ph name="WEBSITE"/> automatisch wijzigt</translation>
+<translation id="5710383353978348431">Als Growser een van je wachtwoorden vindt bij een openbaar gegevenslek, kan Growser Wachtwoordmanager aanbieden om je wachtwoord te wijzigen als je bent ingelogd. <ph name="BEGIN_LINK"/>Meer informatie over geautomatiseerde wachtwoordwijziging<ph name="END_LINK"/></translation>
+<translation id="560743248410493208">Growser heeft hulp nodig om je wachtwoord te wijzigen</translation>
+<translation id="4246636650471208372">Als je Vaardigheden wilt gebruiken, log je in bij Growser met een Growser-account waarvoor Gemini in Growser aanstaat</translation>
+<translation id="8111843310458688756">De functie Vaardigheden staat op dit moment uit. Update je Growser-instellingen om aan de slag te gaan.</translation>
+<translation id="118870493070173224">Je vaardigheden worden opgeslagen in je Growser-account,</translation>
+<translation id="3176984568033229317">Growser Zoeken naar Edge brengen</translation>
+<translation id="3166256634240273583">Gebruik Growser Zoeken rechtstreeks vanuit de adresbalk van je browser en als je een nieuw tabblad opent.</translation>
+<translation id="76131528886466333">De Growser Zoeken-extensie voor Microsoft Edge installeren</translation>
+<translation id="8323744572398547859">Log in en synchroniseer je geschiedenis om de tabbladen van je andere apparaten te krijgen. Je kunt ook onder andere je wachtwoorden op al je apparaten gebruiken. Je kunt de synchronisatie op elk moment stopzetten via de instellingen. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
+<translation id="7907312522152480478">Als je de tabbladen van je andere apparaten wilt krijgen, laat je verifiëren dat jij het bent en synchroniseer je je geschiedenis en tabbladen. Je kunt de synchronisatie op elk moment stopzetten via de instellingen. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
+<translation id="2259337945538989999">Bevestig dat jij het bent om de tabbladen van je andere apparaten te krijgen. Je kunt de synchronisatie op elk moment stopzetten via de instellingen. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
+<translation id="3240718227457961717">Synchroniseer je geschiedenis en tabbladen met <ph name="ACCOUNT_EMAIL"/> om de tabbladen van je andere apparaten te krijgen. Je kunt de synchronisatie op elk moment stopzetten via de instellingen. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
+<translation id="2246549592927364792">Afbeeldingsbeschrijvingen ophalen van Growser?</translation>
+<translation id="6842321291404176019">Je &amp;Growser-account beheren</translation>
+<translation id="7782102568078991263">Geen verdere suggesties van Growser</translation>
+<translation id="1125610294554423504">Growser &amp;Labs…</translation>
+<translation id="3592763781862723495">De Servicevoorwaarden van Growser veranderen op 31 maart</translation>
+<translation id="4863113847665206034">Release-opmerkingen voor Growser Enterprise</translation>
+<translation id="8880009256105053174">Zoe&amp;ken op deze pagina met Growser...</translation>
+<translation id="8643443571868262066"><ph name="FILE_NAME"/> is misschien gevaarlijk. Wil je het bestand naar 'Geavanceerde beveiliging' van Growser sturen zodat het kan worden gescand?</translation>
+<translation id="9112786533191410418"><ph name="FILE_NAME"/> is misschien gevaarlijk. Wil je het bestand naar Growser sturen om het te laten scannen?</translation>
+<translation id="5261799091118902550">Dit bestand is misschien een virus of malware. Je kunt het bestand naar Growser sturen om te laten checken of het onveilig is.</translation>
+<translation id="6427068192186142792">Growser heeft zojuist het downloaden van een gevaarlijk bestand geblokkeerd. Krijg nog betere bescherming met Geoptimaliseerde beveiliging.</translation>
+<translation id="3601817089411059195"><ph name="FILENAME"/> is misschien gevaarlijk. Voeg een wachtwoord toe als je wilt dat Growser het verifieert. Je kunt het bestand ook rechtstreeks downloaden.</translation>
+<translation id="8558379661202483425">Growser-apps &gt; <ph name="APP_NAME"/></translation>
+<translation id="7952238695786927848">Growser denkt dat je geen meldingen van deze site wilt. Daarom worden verzoeken verborgen om onderbrekingen te verminderen.</translation>
+<translation id="3714312445688817444">Growser denkt dat je je locatie niet wilt gebruiken op deze site. Daarom worden verzoeken verborgen om onderbrekingen te verminderen.</translation>
+<translation id="7178558589762724625">Een externe app wil volledige controle over deze Growser-sessie om hiervoor foutopsporing uit te voeren. Dit omvat toegang tot je opgeslagen gegevens, cookies en sitegegevens en de mogelijkheid om naar elke URL te navigeren.</translation>
+<translation id="691816738008428630">Growser-bestandshulpprogramma's</translation>
+<translation id="8376236901471830989">Documentanalyse van Growser</translation>
+<translation id="5075779086521388873">Je kunt ook onder andere je wachtwoorden uit je Growser-account gebruiken.</translation>
+<translation id="9081137272142533824">Als je wilt toestaan dat <ph name="CHILD_NAME"/> toekomstige extensies zonder jouw goedkeuring installeert, open je de Family Link-app op je apparaat en update je de Growser-instellingen van <ph name="CHILD_NAME"/>.</translation>
+<translation id="3841738495771204227">Een ander programma op je computer heeft een app toegevoegd die de manier waarop Growser werkt kan wijzigen.</translation>
+<translation id="7126263064588272381">Een ander programma op je computer heeft een extensie toegevoegd die de manier waarop Growser werkt kan wijzigen.</translation>
+<translation id="4172864922628327657">Een ander programma op je computer heeft een thema toegevoegd dat de manier waarop Growser werkt kan wijzigen.</translation>
+<translation id="3105796011181310544">Teruggaan naar Growser?</translation>
+<translation id="4837128290434901661">Teruggaan naar Growser Zoeken?</translation>
+<translation id="3943902841682071">Oude versies van Growser-apps kunnen na december 2022 niet meer worden geopend op Windows-apparaten. Neem contact op met je beheerder als je wilt updaten naar een nieuwe versie of verwijder deze app.</translation>
+<translation id="8819011161186914037">Growser-apps worden overgezet naar progressive web-apps. Je organisatie heeft deze Growser-app in je browser geïnstalleerd. Als je de progressive web-app wilt openen vanuit de lijst met apps, neem je eerst contact op met je beheerder en vraag je deze de Growser-app te verwijderen. In de tussentijd kun je naar <ph name="EXTENSION_LAUNCH_URL"/> gaan om <ph name="EXTENSION_NAME"/> op het web te openen.</translation>
+<translation id="646124512503317592">Oude versies van Growser-apps kunnen na december 2022 niet meer worden geopend op Windows-apparaten. Je kunt checken of er een nieuwe versie beschikbaar is.</translation>
+<translation id="933653713937577409">Meer informatie over niet-ondersteunde Growser-apps</translation>
+<translation id="4092709865241032354">Voeg je gebruikersnaam voor deze site toe, zodat Growser Wachtwoordmanager je inloggegevens kan opslaan</translation>
+<translation id="1050292285963299821">Blijf de wachtwoorden in je Growser-account gebruiken</translation>
+<translation id="623821062113722442">Blijf wachtwoorden opslaan in je Growser-account</translation>
+<translation id="4769005558293498755">Wachtwoorden worden in je Growser-account opgeslagen, zodat je deze op elk apparaat kunt gebruiken</translation>
+<translation id="6247557882553405851">Growser Wachtwoordmanager</translation>
+<translation id="5902333873367271103">Laat verifiëren dat jij het bent om het op alle apparaten met je Growser-account te krijgen</translation>
+<translation id="6520087076882753524">Je kunt opgeslagen wachtwoorden bekijken en beheren in Growser Wachtwoordmanager</translation>
+<translation id="5181172023548002891">In Growser Wachtwoordmanager voor <ph name="ACCOUNT"/></translation>
+<translation id="7668423670802040666">In Growser Wachtwoordmanager voor <ph name="ACCOUNT"/></translation>
+<translation id="6364173777171379284">Sla wachtwoorden veilig op in je Growser-account, zodat je ze nooit meer hoeft in te voeren.</translation>
+<translation id="8035640035083640426">Toegang tot je wachtwoorden telkens wanneer je bent ingelogd op je Growser-account</translation>
+<translation id="9010330063886818303">Log in en zet de synchronisatie aan om wachtwoorden op te slaan in je Growser-account.</translation>
+<translation id="2618542259010630366">Zet de synchronisatie aan om wachtwoorden op te slaan op je Growser-account.</translation>
+<translation id="6307677019050188653">Growser laadt markeringen uit een opdrachtregelbestand. Dit kan gevolgen hebben voor de stabiliteit en beveiliging.</translation>
+<translation id="7602868996817972616">Vraag Growser iets over deze pagina</translation>
+<translation id="7084095352418993433">Vraag Growser iets over deze pagina: <ph name="PAGE_TITLE"/></translation>
+<translation id="5563234215388768762">Zoek met Growser of voer een URL in</translation>
+<translation id="4097560579602855702">Zoeken op Growser</translation>
+<translation id="6621282332208609777">Vraag het aan Growser of typ een URL</translation>
+<translation id="835927394551949760">Vragen stellen aan Growser</translation>
+<translation id="2856216380429599274">Growser-standaard</translation>
+<translation id="4334778460914339013">Thema geüpdatet naar Growser-standaard</translation>
+<translation id="2983311431122838216">Stel vragen aan de AI-modus in Growser Zoeken</translation>
+<translation id="6998036632333022623">Tabbladen delen met Growser</translation>
+<translation id="1957188536718247425">Growser vragen stellen over vorig tabblad</translation>
+<translation id="964903383988132751">Growser vragen stellen over vorig tabblad: <ph name="TAB_TITLE"/></translation>
+<translation id="1168799042879144934">Growser vragen stellen over vorige pagina</translation>
+<translation id="4857506880242459832">Growser vragen stellen over vorige pagina: <ph name="PAGE_TITLE"/></translation>
+<translation id="5918150687673977578">Je ziet suggesties om Growser te personaliseren en het nog beter te maken voor je dagelijkse behoeften.
+        <ph name="BREAK"/>
+<ph name="BREAK"/>
+Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="5587243084217793846">Je ziet voorgestelde bestanden om makkelijk terug te gaan naar je meest recente activiteit in Google Drive.
+        <ph name="BREAK"/><ph name="BREAK"/>
+Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="3309585159276256701">Je ziet voorgestelde bestanden zodat je makkelijk terug kunt gaan naar je meest recente activiteit in Microsoft SharePoint en OneDrive.
+        <ph name="BREAK"/>
+<ph name="BREAK"/>
+Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="7812170317334653156">Growser Agenda verborgen</translation>
+<translation id="6913051485529944333">Je ziet Growser Agenda niet meer op deze pagina</translation>
+<translation id="6696214841962677136">Je ziet je agenda zodat je makkelijk naar je volgende afspraak in Growser Agenda kunt gaan.
+        <ph name="BREAK"/>
+<ph name="BREAK"/>
+Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="2845276301195220700">Meer acties voor Growser Agenda</translation>
+<translation id="1885089541024391265">Growser Agenda</translation>
+<translation id="1296410481664942178">Growser Agenda niet tonen</translation>
+<translation id="4880295985240000243">Je ziet je agenda zodat je makkelijk naar je volgende afspraak in Outlook-agenda kunt gaan.
+       <ph name="BREAK"/>
+<ph name="BREAK"/>
+Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="6474021817475285003">Meer tonen in Brave Agenda</translation>
+<translation id="9066394310994446814">Je krijgt dit item te zien op basis van je eerdere activiteit bij het gebruik van Growser-services. Je kunt je gegevens bekijken of verwijderen en je instellingen wijzigen op <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
+<ph name="BREAK"/>
+<ph name="BREAK"/>
+Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je meer informatie over de gegevens die Growser verzamelt en waarom.</translation>
+<translation id="5730739935948075356">Je ziet pagina's die je hebt bezocht en voorgestelde zoekopdrachten zodat je makkelijk terug kunt gaan naar je meest recente activiteit.
+        <ph name="BREAK"/>
+<ph name="BREAK"/>
+Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="1527457583170535338">Je ziet voorgestelde zoekopdrachten en kortingen op aankopen die je misschien interessant vindt op basis van je recente activiteit.
+        <ph name="BREAK"/>
+<ph name="BREAK"/>
+Je kunt instellingen op deze kaart altijd beheren of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="8526019066138627163">Je ziet tabbladen van andere apparaten zodat je makkelijk terug kunt gaan naar je meest recente activiteit.
+        <ph name="BREAK"/>
+<ph name="BREAK"/>
+Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="8827376900981477247">Je ziet je recent gebruikte tabbladgroepen, zodat je makkelijk verder kunt gaan waar je gebleven was.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
+<translation id="7868070199056978976">Download Growser op je mobiele apparaat</translation>
+<translation id="3098738509270989275">Download Growser voor iOS om toegang te krijgen tot je tabbladen, bookmarks en wachtwoorden op je telefoon.</translation>
+<translation id="6548945820758901244">Zijvenster van Growser Zoeken openen</translation>
+<translation id="1157952955648710254">Zijvenster van Growser Zoeken sluiten</translation>
+<translation id="8376752431516546391">Zijvenster van Growser Zoeken</translation>
+<translation id="4621866192918370652">Je kunt op deze pagina zoeken met Growser om aanvullende nuttige informatie te krijgen</translation>
+<translation id="2360792123962658445">Als je een paginaoverzicht, gerelateerde zoekopdrachten en andere nuttige informatie over deze pagina wilt, selecteer je in de werkbalk de knop voor het zijvenster van Growser Zoeken</translation>
+<translation id="6868193750403948178">Growser aanpassen</translation>
+<translation id="5009064339929592579">Opslaan in een map in je Growser-account?</translation>
+<translation id="7400528739136719497">Sommige Growser-stemmen zijn nu misschien niet beschikbaar</translation>
+<translation id="4857677595331912231">De content en de URL van je huidige tabblad worden gedeeld met Brave om je relevantere antwoorden te geven. Je kunt tabbladen toevoegen of verwijderen terwijl je browst.</translation>
+<translation id="5639212636098910819">In Growser blijven</translation>
+<translation id="3252169590975855820">Je kunt het openen via Growser Wachtwoordmanager</translation>
+<translation id="3843323136102787632">Download Growser met deze QR-code en log in op je Growser-account.</translation>
+<translation id="9136966630767081659">Growser-tip</translation>
+<translation id="5743876629139760900">Extensies zijn add-ons voor Growser waarmee je georganiseerd blijft, taken vereenvoudigt en je browsen kunt aanpassen</translation>
+<translation id="2694280280138200129">Je verbinding is altijd beveiligd, tenzij Growser iets anders aangeeft</translation>
+<translation id="3567433952279331449">Pas Growser aan om je browser een nieuwe look te geven</translation>
+<translation id="1856921079189283630">Klik op Growser aanpassen</translation>
+<translation id="3656717592188518245">Je kunt je browser nu op elk moment een nieuwe look geven via het menu Growser aanpassen</translation>
+<translation id="2014729156921901">Growser heeft wat content verwijderd om geheugen te besparen</translation>
+<translation id="1616505795285943236">De uitgebreide versie van Safe Browsing ook aanzetten voor dit Growser-profiel?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{Het gehackte wachtwoord is gewijzigd.
+
+Je hebt nog # gehackt wachtwoord. Growser Wachtwoordmanager raadt je aan dit wachtwoord nu te checken.}other{Het gehackte wachtwoord is gewijzigd.
+
+Je hebt nog # gehackte wachtwoorden. Growser Wachtwoordmanager raadt je aan deze wachtwoorden nu te checken.}}</translation>
+<translation id="3023028874856327238">Je kunt dit wachtwoord opslaan in je Growser-account of alleen op dit apparaat</translation>
+<translation id="6662394424395160792">Gebruik Growser Wachtwoordmanager om sneller in te loggen op sites vanaf al je apparaten</translation>
+<translation id="5195408296304472010">Log in bij Growser om sterke wachtwoorden op te slaan met Growser Wachtwoordmanager</translation>
+<translation id="4069802351872017480">Je kunt wachtwoorden opslaan met Growser Wachtwoordmanager als je bent ingelogd bij Growser</translation>
+<translation id="5530977410273748884">Klik op de sleutel om je wachtwoord op te slaan in Growser Wachtwoordmanager</translation>
+<translation id="2743378970365831481">Als je je wachtwoord wilt opslaan in Growser Wachtwoordmanager, klik je op het icoon van Wachtwoordmanager in de locatiebalk</translation>
+<translation id="3635353578505343390">Feedback sturen naar Growser</translation>
+<translation id="3192586965067888278">Geef een gedetailleerde beschrijving van het probleem. Feedback wordt voor beoordeling door een medewerker naar Growser gestuurd en kan worden gebruikt om producten en services van Growser te verbeteren of te ontwikkelen.</translation>
+<translation id="6333064448949140209">Bestanden worden naar Growser gestuurd voor foutopsporing</translation>
+<translation id="93343527085570547">Ga naar de <ph name="BEGIN_LINK1"/>pagina voor juridische hulp<ph name="END_LINK1"/> om contentwijzigingen uit juridische overwegingen aan te vragen. Bepaalde account- en systeemgegevens kunnen naar Growser worden verzonden. We gebruiken de door jou verstrekte informatie om technische problemen op te lossen en onze services te verbeteren, in overeenstemming met het <ph name="BEGIN_LINK2"/>Privacybeleid<ph name="END_LINK2"/> en de <ph name="BEGIN_LINK3"/>Servicevoorwaarden<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">De geselecteerde gegevens zijn verwijderd uit Growser en van gesynchroniseerde apparaten. Voor je Growser-account kunnen andere vormen van browsegeschiedenis (zoals zoekopdrachten en activiteit uit andere Growser-services) beschikbaar zijn via <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="967965329294419603">Verwijderde Growser-gegevens</translation>
+<translation id="1597736167243418494">(Growser-foutpagina's)</translation>
+<translation id="3372478764182952159">Growser met dit Growser-account</translation>
+<translation id="2577981599306533385"><ph name="MEMBER_FULL_NAME"/> (<ph name="EMAIL"/>) raakt meteen de toegang tot de tabbladgroep <ph name="GROUP_NAME"/> kwijt en kan niet meer met jou communiceren via Growser-services.</translation>
+<translation id="1917766536967060661">Je raakt meteen de toegang tot de tabbladgroep <ph name="GROUP_NAME"/> kwijt en <ph name="BLOCKED_MEMBER_FULL_NAME"/> (<ph name="BLOCKED_MEMBER_EMAIL"/>) kan niet meer met jou communiceren via Growser-services.</translation>
+<translation id="2417535973197532627">Als je tabbladen wilt delen en met anderen wilt samenwerken, log je in bij Growser en synchroniseer je je geschiedenis en tabbladen. Je kunt ook onder andere je wachtwoorden op al je apparaten gebruiken.</translation>
+<translation id="64301400193488735">Als je tabbladgroepen wilt delen of eraan wilt deelnemen, moet je kunnen inloggen bij Growser</translation>
+<translation id="8040715633918382311">Als je organisatie opslaan in je Growser-account beperkt, kun je geen tabbladgroepen delen of eraan deelnemen</translation>
+<translation id="7224231921984484941">Als je tabbladgroepen wilt delen, eraan deelnemen en eraan wilt samenwerken in tabbladgroepen, open je de instellingen en zet je Inloggen bij Growser toestaan aan</translation>
+<translation id="5328048595378098795">Nieuwe versie van Growser beschikbaar</translation>
+<translation id="7415249272773209705"><ph name="APP_NAME"/> deelt een Growser-tabblad.</translation>
+<translation id="7714085981364518713"><ph name="APP_NAME"/> deelt een Growser-tabblad en audio.</translation>
+<translation id="2410649455830574015">Automatisch gebruiksstatistieken en crashrapporten naar Growser verzenden</translation>
+<translation id="3051767373530645849">Uitgezet door Growser. Deze extensie kan onveilig zijn.</translation>
+<translation id="2357378493576302986"><ph name="THIRD_PARTY_TOOL_NAME"/> wil de standaardwaarden van je Growser-instellingen herstellen. Als je dit doet, worden je homepage, nieuwe tabbladpagina en zoekmachine opnieuw ingesteld, je extensies uitgezet en alle tabbladen losgemaakt. Ook worden alle andere tijdelijke en gecachte gegevens gewist, zoals cookies, content en sitegegevens.</translation>
+<translation id="2887613109410166736">Kies een apparaat. Open daarna Growser op dat apparaat om de pagina te bekijken.</translation>
+<translation id="1162630940779651724">Als je dit tabblad naar een ander apparaat wilt sturen, log je op beide apparaten in bij Growser</translation>
+<translation id="5388608738812110907">Als je dit tabblad naar een ander apparaat wilt sturen, log je hier in bij Growser</translation>
+<translation id="4007679133627124999">Als je links tussen apparaten wilt sturen, zorg je dat beide apparaten zijn ingelogd op hetzelfde Growser-account.</translation>
+<translation id="2377999415409519333">Laat verifiëren dat jij het bent om links te sturen. Je kunt links sturen als je op beide apparaten bent ingelogd op hetzelfde Brave-account.</translation>
+<translation id="4986706507552097681">Je kunt altijd in de instellingen bepalen wat je wilt synchroniseren. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
+<translation id="8002662358897231821">Log in om je bookmarks, geschiedenis, wachtwoorden en andere instellingen op te halen op al je apparaten. Je wordt ook automatisch ingelogd bij je Growser-services.</translation>
+<translation id="3128296144259620504">Growser wordt beheerd door geautomatiseerde testsoftware.</translation>
+<translation id="5308456967320989709">Growser for Testing v<ph name="BROWSER_VERSION"/> is alleen voor geautomatiseerde tests. Gebruik de standaardversie van Growser die automatisch wordt geüpdatet voor normaal browsen.</translation>
+<translation id="7655407181412188363">Growser downloaden</translation>
+<translation id="5902400038326841449">Growser Wachtwoordmanager staat uit</translation>
+<translation id="6564343790052433242">Growser Wachtwoordmanager moet aanstaan om een toegangssleutel voor <ph name="APP_NAME"/> te maken</translation>
+<translation id="1312107444925145416">Je Growser-profiel</translation>
+<translation id="5186788525428341874">Je kunt deze toegangssleutel gebruiken om sneller in te loggen op al je apparaten. Deze wordt opgeslagen in Growser Wachtwoordmanager voor <ph name="ACCOUNT_NAME"/>.</translation>
+<translation id="2204168219363024184">Laat verifiëren dat jij het bent om deze toegangssleutel te maken met Growser Wachtwoordmanager</translation>
+<translation id="6331857227627979149">Je toegangssleutel wordt opgeslagen in Growser Wachtwoordmanager voor <ph name="ACCOUNT_NAME"/>. Je hoeft dit slechts één keer te doen.</translation>
+<translation id="7484943269191249363">Je kunt al je toegangssleutels gebruiken die zijn opgeslagen in Growser Wachtwoordmanager op dit apparaat. Je hoeft dit slechts één keer te doen.</translation>
+<translation id="8189257540098107776">Kan Growser Wachtwoordmanager niet bereiken</translation>
+<translation id="4540409690203718935">Kan Growser Wachtwoordmanager niet bereiken. Probeer het over enkele minuten opnieuw.</translation>
+<translation id="7091667403045767243">Om toegangssleutels te gebruiken die zijn opgeslagen in je Growser-account</translation>
+<translation id="8436800506934625875">Stel een alfanumerieke herstelpincode in voor Growser Wachtwoordmanager</translation>
+<translation id="6520115099532274511"><ph name="SITE"/> wil verifiëren dat jij het bent. Voer je alfanumerieke pincode in voor Growser Wachtwoordmanager.</translation>
+<translation id="1011431628606634753">Je herstelpincode voor Growser Wachtwoordmanager wijzigen</translation>
+<translation id="7036550011779986598"><ph name="RP_ID"/> heeft net een toegangssleutel voor je account gemaakt. Toegangssleutels bieden een snellere en veiligere manier om in te loggen en worden opgeslagen in Growser Wachtwoordmanager voor <ph name="USER"/>. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">Je hebt de krachtigste beveiliging van Growser tegen gevaarlijke websites, downloads en extensies</translation>
+<translation id="8655204793400034351">Je krijgt standaardbescherming. Zet de uitgebreide versie van Safe Browsing aan in de Growser-instellingen voor meer bescherming tegen gevaarlijke websites, downloads en extensies.</translation>
+<translation id="984351584831083958">Growser-instellingen</translation>
+<translation id="988181568526563957">De krachtigste beveiliging van Growser doet meer om je te beschermen tegen gevaarlijke websites, downloads en extensies</translation>
+<translation id="5634728742770877915">Je hebt de krachtigste beveiliging van Growser tegen schadelijke websites</translation>
+<translation id="5760318332127300368">Ook browsegegevens verwijderen (<ph name="URL"/>). Als je dit doet, kun je worden uitgelogd bij Growser.com. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">Je hebt de tijdslimiet bereikt die je ouder heeft ingesteld voor de <ph name="APP_NAME"/>-app voor Growser. Je kunt de app morgen <ph name="TIME_LIMIT"/> gebruiken.</translation>
+<translation id="4941819631276629267">Growser-update voltooid</translation>
+<translation id="2871029453856004998">Deze app is mogelijk gevaarlijk en is geblokkeerd door Growser</translation>
+<translation id="3757415281539421827">Growser verifieert de installatiebundel</translation>
+<translation id="8022386078499568954">Growser kan deze installatiebundel niet verifiëren</translation>
+<translation id="5529797218715099093">Growser maakt pdf's beter</translation>
+<translation id="3908598909163357544">Growser markeert meldingen van deze site niet meer als spam</translation>
+<translation id="3519014757432845220">Help de beveiliging tegen spam te verbeteren door content van meldingen en de URL van de site met Growser te delen. Content kan door mensen worden beoordeeld.</translation>
+<translation id="8028868133304944257">Opgeslagen vanuit Growser</translation>
+<translation id="9217458048141913687">Growser openen</translation>
+<translation id="3879869835592882268">Gebruik het hoogste beveiligingsniveau van Growser</translation>
+<translation id="3307078631581490570">Personaliseer Growser voor jou</translation>
+<translation id="6133506753060207356">Je kunt tabbladen die je onlangs hebt gesloten opnieuw openen vanaf elk apparaat waarop je Growser gebruikt</translation>
+<translation id="8146322071180925001">Meer informatie over hoe je Growser-updates onderhoudt</translation>
+<translation id="4016841343509962173">Alle Growser-beleidsregels bekijken</translation>
+<translation id="6953549942896871737">Openen in Growser</translation>
+<translation id="4773299976671772492">Gestopt</translation>
+<translation id="8387617938027387193">Verifiëren dat jij het bent</translation>
+<translation id="1481450969185702334">Zoeken en invullen</translation>
+<translation id="443008484043213881">Tools</translation>
+<translation id="8118506371121007279">Feedback geven</translation>
 </translationbundle>

@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Oma suletud vahelehti ja rühmi saate uuesti avada jaotistes „Hiljutised vahelehed“ ja „Menüürühmad“. Teie privaatne vaheleht ei ole saadaval.}
         other {Oma suletud vahelehti ja rühmi saate uuesti avada jaotistes „Hiljutised vahelehed“ ja „Menüürühmad“. Teie # privaatset vahelehte ei ole saadaval.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link Growser'ist}other{<ph name="TABS_COUNT_MANY"/> linki Growser'ist}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> arvustus Growser'ist}other{<ph name="REVIEWS_COUNT_MANY"/> arvustust Growser'ist}}</translation>
+<translation id="2928243913527329289">Growser | Teave selle poe kohta</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser sulgeb inaktiivsed vahelehed ja vahelehegrupid <ph name="AUTO_DELETE_DELAY_ONE"/> kuu pärast automaatselt. Saate seda seadetes muuta.}other{Growser sulgeb inaktiivsed vahelehed ja vahelehegrupid <ph name="AUTO_DELETE_DELAY_MANY"/> kuu pärast automaatselt. Saate seda seadetes muuta.}}</translation>
 </translationbundle>

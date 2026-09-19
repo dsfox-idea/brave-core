@@ -796,4 +796,51 @@ Napredna zaštita kontrolira sljedeće postavke Bravea:</translation>
 <translation id="8186479265534291036">Web-lokacija ne funkcionira? Blokirani su kolačići treće strane</translation>
 <translation id="8874790741333031443">Pokušajte privremeno dopustiti kolačiće trećih strana, što znači da će biti manje zaštite pregledavanja, ali će značajke web-lokacije vjerojatnije funkcionirati prema očekivanjima.</translation>
 <translation id="915112772806845021">Web-lokacije upotrebljavaju tu značajku za automatski pristup slici u slici. To će vam omogućiti da nastavite gledati videozapis, a istovremeno oslobodite zaslon za druge zadatke.</translation>
+<translation id="3281851196103181918">Web-lokacija koju posjetite može spremiti male količine podataka pomoću Bravea, uglavnom kako bi potvrdila da niste bot</translation>
+<translation id="7321946347180923218">Tijekom vašeg daljnjeg pregledavanja web-lokacije mogu provjeriti u Braveu i od prethodne web-lokacije koju ste posjetili dobiti potvrdu da ste vjerojatno stvarna osoba</translation>
+<translation id="1416017798077335746">Kad je ta opcija uključena, Growser se pokreće brže, a značajke koje upotrebljavaju JavaScript trebale bi funkcionirati kako je predviđeno. Kad je ta opcija isključena, to slabi izvedbu, ali V8 čini otpornijim na napade.</translation>
+<translation id="1161610156793601923">Ubrzava web-lokacije zahvaljujući Braveovom programu V8, ali Growser čini malo manje otpornim na napade</translation>
+<translation id="4522008664732371170">V8 je Braveov alat za JavaScript i WebAssembly koji se upotrebljava za poboljšanje izvedbe web-lokacija</translation>
+<translation id="8589838971217638472">Nemoj ubrzavati web-lokacije pomoću Braveovog programa V8, ali učini Growser malo otpornijim na napade</translation>
+<translation id="7640998335907138542">Primijeni tamnu temu na web-lokacije kad Growser koristi tamnu temu, kad je moguće</translation>
+<translation id="2057998558085257831">Upravljajte u <ph name="BEGIN_LINK1"/>postavkama Androida<ph name="END_LINK1"/>
+
+Napredna zaštita kontrolira sljedeće postavke Bravea:</translation>
+<translation id="423123022780548223">Sadržaj potječe s domene <ph name="DOMAIN_NAME"/>, a omogućuje ga Growser.</translation>
+<translation id="8347706830008915646">Growser je optimizirao slike na ovoj stranici radi uštede vaših podataka.</translation>
+<translation id="6934374371757268073">Growser će danas ponovno blokirati kolačiće</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{Growser će sutra ponovno blokirati kolačiće}one{Kolačići će se ponovo blokirati za # dan}few{Kolačići će se ponovo blokirati za # dana}other{Kolačići će se ponovo blokirati za # dana}}</translation>
+<translation id="2695810323641466307">Pokrenite Growser s aktivnim višenamjenskim okvirom, čime se smanjuje vrijeme pokretanja na uređajima nižeg cjenovnog ranga.</translation>
+<translation id="5598609827458395422">Growser sada nedavne kartice dijeli s vašim uređajem. Prikazat će se na popisu aplikacija na uređaju i u rezultatima pretraživanja. To uvijek možete isključiti u postavkama Bravea.</translation>
+<translation id="8965088526414675625">Growser sada prikazuje vaše nedavne kartice na popisu aplikacija i u rezultatima pretraživanja na uređaju. To uvijek možete isključiti u postavkama Bravea.</translation>
+<translation id="8761470294803693272">Dopustite Braveu da dijeli vaše nedavne kartice s uređajem kako biste ih vidjeli na popisu aplikacija i u rezultatima pretraživanja na uređaju. Tu značajku možete uključiti ili isključiti u postavkama Bravea.</translation>
+<translation id="8421385332619538087">Dopustite Braveu da prikazuje vaše nedavne kartice na popisu aplikacija i u rezultatima pretraživanja na uređaju. To uvijek možete isključiti u postavkama Bravea.</translation>
+<translation id="4844745832306307836">Savjeti za Growser</translation>
+<translation id="8894933691616134953">Sakrij karticu sa savjetima za Growser</translation>
+<translation id="3075680827782258330">Koristite Growser prema zadanim postavkama</translation>
+<translation id="3330538708604362125">Možete koristiti Growser svaki put kad dodirnete veze u porukama, dokumentima i drugim aplikacijama.</translation>
+<translation id="878212867049674537">Prilagodite Growser pomoću personaliziranih boja i slika za početnu stranicu</translation>
+<translation id="906376138426795308">Sad možete koristiti Growser svaki put kad pregledavate ili dodirnete veze u porukama, dokumentima i drugim aplikacijama.</translation>
+<translation id="1060555682994133119">Dodirnite Aplikacija preglednika &gt; Growser</translation>
+<translation id="2039425904994800099">Dodirnite stavku Aplikacija preglednika, a zatim Growser</translation>
+<translation id="3307078631581490570">Prilagodite Growser sebi</translation>
+<translation id="1068559798624451989">Uključite najnapredniju Braveovu zaštitu od online prijetnji</translation>
+<translation id="3371556244314914639">Spremite zaporke u Braveu</translation>
+<translation id="6096811239980093579">Growser će ponuditi spremanje zaporke</translation>
+<translation id="3942445027194417950">Donja tablica s uputama za spremanje zaporki u Braveu</translation>
+<translation id="4476554299666180378">Sada možete iskoristiti sve prednosti Bravea na svom uređaju.</translation>
+<translation id="2762149874114516998">Iskoristite sve prednosti preglednika Growser</translation>
+<translation id="4229054348764234344">Dovršite predložene radnje u nastavku da biste iskoristili sve prednosti Bravea</translation>
+<translation id="9005129040299651584">Prilagodite Growser tako da odaberete prilagođenu temu</translation>
+<translation id="6695051470627475273">Donja tablica boja u Braveu otvorena je u punoj visini</translation>
+<translation id="8884873726356949960">Donja tablica boja u Braveu otvorena je na pola visine</translation>
+<translation id="8064824204802826269">Brave – zadano</translation>
+<translation id="3625563631434033924">Boje u Braveu</translation>
+<translation id="4084889026632451864">Donja tablica boja u Braveu</translation>
+<translation id="6506349636755583652">Promijenjene su neke postavke Bravea</translation>
+<translation id="6972629891077993081">HID uređaji</translation>
+<translation id="4748783296226936791">Web-lokacije se obično povezuju s HID uređajima radi značajki koje koriste neuobičajene tipkovnice, upravljače za igre i druge uređaje</translation>
+<translation id="5719854774000914513">Web-lokacije mogu tražiti dopuštenje za povezivanje s HID uređajima</translation>
+<translation id="8625916342247441948">Ne dopuštaj web-lokacijama povezivanje s HID uređajima</translation>
+<translation id="1258491128795710625">Što je novo</translation>
 </translationbundle>

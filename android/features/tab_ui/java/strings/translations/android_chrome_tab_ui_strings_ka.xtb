@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {თქვენი დახურული ჩანართების და ჯგუფების აღდგენა ''დამახსოვრებული ჩანართების'' და ''ჩანართების ჯგუფების'' სექციიდან არის შესაძლებელი. თქვენი პირადი ჩანართი არ იქნება ხელმისაწვდომი.}
         other {თქვენი დახურული ჩანართების და ჯგუფების აღდგენა ''დამახსოვრებული ჩანართების'' და ''ჩანართების ჯგუფების'' სექციიდან არის შესაძლებელი. თქვენი # პირადი ჩანართი არ იქნება ხელმისაწვდომი.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> ბმული Growser-იდან}other{<ph name="TABS_COUNT_MANY"/> ბმული Growser-იდან}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> მიმოხილვა Growser-იდან}other{<ph name="REVIEWS_COUNT_MANY"/> მიმოხილვა Growser-იდან}}</translation>
+<translation id="2928243913527329289">Growser | ამ მაღაზიის შესახებ</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser ავტომატურად ხურავს არააქტიურ ჩანართებსა და ჩანართების ჯგუფებს <ph name="AUTO_DELETE_DELAY_ONE"/> თვის შემდეგ. ამის შეცვლა პარამეტრებში შეგიძლიათ.}other{Growser ავტომატურად ხურავს არააქტიურ ჩანართებს და ჩანართების ჯგუფებს <ph name="AUTO_DELETE_DELAY_MANY"/> თვის შემდეგ. ამის შეცვლა პარამეტრებში შეგიძლიათ.}}</translation>
 </translationbundle>

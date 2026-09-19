@@ -1,6 +1,6 @@
 {
   "name": "brave-core",
-  "version": "1.97.34",
+  "version": "1.98.11",
   "description": "Brave browser for Android, iOS, Linux, macOS, and Windows",
   "main": "index.js",
   "type": "module",
@@ -79,7 +79,7 @@
     "projects": {
       "chrome": {
         "dir": "src",
-        "tag": "153.0.8010.37",
+        "tag": "154.0.8037.49",
         "repository": {
           "url": "https://chromium.googlesource.com/chromium/src.git"
         },
@@ -89,8 +89,7 @@
         },
         "custom_vars": {
           "checkout_clang_coverage_tools": true,
-          "checkout_clangd": true,
-          "gn_version": "git_revision:c7ffaf80713afbe5a4f4d95a605c0a98084374de"
+          "checkout_clangd": true
         }
       },
       "depot_tools": {
@@ -209,8 +208,8 @@
   },
   "dependencies": {
     "@brave/brave-ui": "0.40.6",
-    "@brave/leo": "github:brave/leo#53850d6d6b12ea0e675dba71c8460f51b22bf90a",
-    "@brave/leo-sf-symbols": "github:brave/leo-sf-symbols#d6c826a443dd10bc02e2349812fe3f9727460e0d",
+    "@brave/leo": "github:brave/leo#ff620e4e53b70dc9868c2215c5cb56e8145e92df",
+    "@brave/leo-sf-symbols": "github:brave/leo-sf-symbols#b5a6139df7ebd3f7d55aa8d6af60a524edab87b0",
     "@brave/wallet-standard-brave": "0.0.16",
     "@dnd-kit/core": "6.3.1",
     "@dnd-kit/sortable": "7.0.1",

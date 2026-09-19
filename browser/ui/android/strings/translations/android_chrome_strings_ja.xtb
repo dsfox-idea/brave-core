@@ -2170,4 +2170,319 @@ Growser を使いやすくするためにデータを使用するその他の設
 <translation id="9104217018994036254">タブを共有するデバイスのリストです。</translation>
 <translation id="9209888181064652401">通話ができません</translation>
 <translation id="3377025655491224618">プライベートタブ</translation>
+<translation id="2314508080153323869">Gemini in Growser</translation>
+<translation id="3513303341915295985">Growser のおすすめの使い方</translation>
+<translation id="1501084690039969703">Growser Finds</translation>
+<translation id="3721119614952978349">Growser の設定</translation>
+<translation id="8886382435167457658">Growser にログイン</translation>
+<translation id="7186568385131859684">Growser サービス全体で閲覧履歴を他のデータと関連付けて使用する方法を管理する</translation>
+<translation id="2932428250099541992">よりパーソナライズされたサービスを利用するには、[ウェブとアプリのアクティビティ] と [リンクされている Growser サービス] に Growser を追加してください</translation>
+<translation id="5728072125198221967">リンクされている Growser サービス</translation>
+<translation id="8047912236350375816">パーソナライズなどの目的で、Growser と他の Growser サービスをリンクします</translation>
+<translation id="7846296061357476882">Growser のサービス</translation>
+<translation id="4460646088962270578">Growser へのログインを許可する</translation>
+<translation id="6063118066268728021">Growser へのログインを促すメッセージが表示されます</translation>
+<translation id="9169221857116438752">アドレスバーや検索ボックスに文字を入力すると、Braveは入力した文字をデフォルトの検索エンジンに送信し、より良い候補を取得します。これはプライベートではオフになっています。</translation>
+<translation id="4631092039524239178">Braveを離れるときにプライベートタブをロックする</translation>
+<translation id="2465406784546521298">Braveを離れるときにプライベートウィンドウをロック</translation>
+<translation id="6503511812958802240">アクセスが想定されるページを Growser がプリロードすると、より高速に閲覧と検索を行えます</translation>
+<translation id="5144385790872094440">アクセスしたページの一部はプリロードされます。ページが Growser サイトまたはアプリからリンクされている場合、Growser サーバーを介してプリロードされる可能性があります。</translation>
+<translation id="4624782251954324048">Growser によってアクセスする可能性があると判断されたページをプリロードします。</translation>
+<translation id="3327522179173932311">Cookie を許可すると、Growser がプリロードの際に Cookie を使用します。</translation>
+<translation id="5987048313543177540">ページのリンクを非公開でプリロードするように求めるメッセージが Growser サイトまたはアプリに表示された場合、Growser は Cookie を使用せずに Growser サーバーを経由してページを暗号化し、プリロードします。その結果、プリロードされたサイトでユーザーの ID が非表示になります。</translation>
+<translation id="3549537543136628349">プリロードされたページが暗号化されており、ページへリンクしているサイトまたはアプリが Growser のサイトまたはアプリであるため、これらのページを非公開でプリロードする際に Growser サーバーは新しい情報を受信しません。</translation>
+<translation id="2363734411417672757">プリロードされるページ数が増加します。ページが他のサイトまたはアプリからリクエストされた場合は、Growser サーバーを経由してプリロードされる可能性があります。</translation>
+<translation id="8523726546261929493">Growser によってアクセスする可能性があると判断されたページが、より頻繁にプリロードされます。この設定によりデータの使用量が増える可能性があります。</translation>
+<translation id="6124897263692604238">ページのリンクを非公開でプリロードするように求めるメッセージがサイトまたはアプリに表示された場合、Growser は Cookie を使用せずに Growser サーバーを経由してページを暗号化し、プリロードします。その結果、プリロードされたサイトでユーザーの ID が非表示になります。</translation>
+<translation id="7513274489704609091">プリロードされたページは暗号化されているため、Growser はプリロードされたページのコンテンツを一切把握できません。Growser サーバーは、どのサイトが非公開でプリロードされたかを把握します。この情報はページをプリロードするためにのみ使用され、Growser アカウントから他の情報にリンクされることはありません。</translation>
+<translation id="2523184218357549926">アクセスしたページの URL を Growser に送信します</translation>
+<translation id="2513403576141822879">プライバシー、セキュリティ、データ収集に関連するその他の設定については、<ph name="BEGIN_LINK"/>同期と Growser サービス<ph name="END_LINK"/>をご覧ください</translation>
+<translation id="8064305750364026954">Growser の機能と動作の改善に協力する</translation>
+<translation id="1236327016477620515">使用統計情報や障害レポートを Growser に自動送信します</translation>
+<translation id="3099985829883207242">特定のサイトや Growser のセクションを検索するには、アドレスバーにそれらのショートカットを入力して、設定したキーボード ショートカットを押します。</translation>
+<translation id="7388570651585127334">拡張機能によって Growser に検索エンジンが追加される場合があります。</translation>
+<translation id="3763110477555836428">このカードでご購入手続きを行う際に仮想カード番号が入力され、実際のカード情報が保護されます。管理は Growser ウォレットで行います。<ph name="BEGIN_LINK1"/>仮想カードの詳細<ph name="END_LINK1"/></translation>
+<translation id="1757745363789526465">Growser を再起動する</translation>
+<translation id="2778719255224230895">Growser を再起動すると、新しいプロバイダで保存した情報がパスワード、パスキー、住所、お支払い方法などの自動入力に使用されます。</translation>
+<translation id="1933036306745035861">この変更を完了するには、Growser を再起動してください。再起動するとタブが自動的に再度開きます。</translation>
+<translation id="1866664254841335177">デバイスと Growser アカウントに保存されているセキュリティ コードがすべて削除されます</translation>
+<translation id="7170930892977483182">デバイスと Growser ウォレットに保存されているセキュリティ コードがすべて削除されます</translation>
+<translation id="6247557882553405851">Growser パスワード マネージャー</translation>
+<translation id="6722165747660324971">ウェブ上に公開されたことがあるパスワードを使用すると警告が表示されます。その際、パスワードとユーザー名は Growser を含め誰も読み取ることができないよう暗号化されます。</translation>
+<translation id="3274662284093530999">プライバシー保護のため、Growser ではこの欄のパスワードの自動入力は行われません。</translation>
+<translation id="4105527135143631701">Growser パスワード マネージャーの更新メッセージが表示されました</translation>
+<translation id="6820942662346226299">Growser パスワード マネージャーの更新メッセージを閉じました</translation>
+<translation id="7237724030342645845">Growser パスワード マネージャーが動作を停止しました</translation>
+<translation id="1154555449933432029">パスワードは Growser パスワード マネージャーに保存されていません。</translation>
+<translation id="4890099635390544492">エクスポートしたファイルは、他のユーザー（アプリを含む）がアクセスできる可能性があります。エクスポートすると、パスワードは Growser から削除されます。</translation>
+<translation id="9144994708427912726">Growser のホームページ</translation>
+<translation id="200114059308480249">Growser 検索に周辺のテキストを含めますか？</translation>
+<translation id="2984978667043170458">Growser 検索に周辺のテキストを含める</translation>
+<translation id="967965329294419603">Growser データを削除しました</translation>
+<translation id="7825734902504073137">選択したデータが Growser から削除され、同期デバイスからも削除されました。
+
+他の Growser サービスでの検索や操作など、Growser アカウントの他の形式の閲覧履歴が <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> に残ることがあります。</translation>
+<translation id="5105442806410269908">その他の Brave データを管理する</translation>
+<translation id="3410151451624226773">Brave パスワード マネージャーで管理する</translation>
+<translation id="5224107321793121921">Brave アカウントで管理する</translation>
+<translation id="7494463409439554205">Growser の全履歴を開く</translation>
+<translation id="4793864227076242107">一部の履歴はここに表示されない場合があります。すべての Growser 履歴を表示するには、全体の Growser 履歴を開いてください。</translation>
+<translation id="1133540958407542175">一部の履歴はここに表示されない場合があります。すべての Growser 履歴を表示するには、全体の Growser 履歴を開いてください。また、お使いの Growser アカウントの <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> には、他の形式の閲覧履歴が記録されている場合があります。</translation>
+<translation id="6636198462736029800">お使いの Growser アカウントの <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> に、他の形式の閲覧履歴が記録されている場合があります。</translation>
+<translation id="1178029542004107601">Growser でリンクを開く他のアプリの履歴が表示されることがあります。</translation>
+<translation id="616933110159387040">Growser でリンクを開く他のアプリの履歴が表示されることがあります。お使いの Growser アカウントの <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> に、他の形式の閲覧履歴が記録されている場合があります。</translation>
+<translation id="6647441008198474441">アクセスした URL が Growser に送信され、次にアクセスするサイトの予測が行われます</translation>
+<translation id="5506213471123571520">Growser の使用状況レポートを送信する場合は、アクセスした URL がこのレポートに含められます</translation>
+<translation id="6095578583683628124">既定の検索エンジンが Growser の場合は、コンテンツとより関連性の高い候補が表示されます</translation>
+<translation id="8358717005361108959">アクセスした URL は Growser アカウントに保存されます</translation>
+<translation id="3851725041229117316">Growser の履歴などを Growser サービスのパーソナライズに使用するかどうかを選択します</translation>
+<translation id="2334744837393083237">Growser でデータ侵害や安全でないウェブサイトなどの脅威から保護されているか確認します</translation>
+<translation id="4150898071579005639">Growser でパスワードを確認できません</translation>
+<translation id="3154120161961631502">パスワードを確認するには、Growser アカウントにログインしてください</translation>
+<translation id="2650508013505165205">Growser は最新の状態です</translation>
+<translation id="1823139539047733938">Growser は古いバージョンです</translation>
+<translation id="2235533667549230034">オフラインです。Growser でアップデートを確認できません。</translation>
+<translation id="5681891517310225280">Growser がアップデートを確認できません</translation>
+<translation id="4953704839431887057">Growser のユーザー保護の仕組みについて</translation>
+<translation id="2279843010449936682">Growser では、ブラウザが安全な設定になっているかどうかを定期的に確認しています。注意が必要な項目がありましたらお知らせします。</translation>
+<translation id="1479549640445995107"><ph name="PERMISSION"/> <ph name="SEPARATOR"/> 最近アクセスしていないため、サイトから権限を削除しました</translation>
+<translation id="4459712224867823015"><ph name="PERMISSION_1"/>、<ph name="PERMISSION_2"/> <ph name="SEPARATOR"/> 最近アクセスしていないため、サイトから権限を削除しました</translation>
+<translation id="1764843361694312837"><ph name="PERMISSION_1"/>、<ph name="PERMISSION_2"/>、<ph name="PERMISSION_3"/> <ph name="SEPARATOR"/> 最近アクセスしていないため、サイトから権限を削除しました</translation>
+<translation id="7313313251393092680"><ph name="PERMISSION_1"/>、<ph name="PERMISSION_2"/>など <ph name="SEPARATOR"/> 最近アクセスしていないため、サイトから権限を削除しました</translation>
+<translation id="1078331087606733839">通知 <ph name="SEPARATOR"/> このサイトは危険なため、権限を削除しました</translation>
+<translation id="962756635770639572">通知 <ph name="SEPARATOR"/> スパムまたは虚偽のコンテンツのため、権限を削除しました</translation>
+<translation id="5408271390996168857">Growser の最高強度のセキュリティで保護されています</translation>
+<translation id="4832398179519927768">{NUM_PASSWORDS,plural, =1{Growser アカウントに 1 件の不正使用されたパスワードがあります}other{Growser アカウントに # 件の不正使用されたパスワードがあります}}</translation>
+<translation id="4144275318109338219">データ保護のため、最近アクセスしていないサイトから権限を自動的に削除します</translation>
+<translation id="7809646640854872843">Growser の安全性ツール</translation>
+<translation id="7803777024668140566">Growser のツールを使って、自分で管理しながら安全にブラウジングできます</translation>
+<translation id="5106845103941223465">Braveプライベートモード</translation>
+<translation id="8832733406993535983">安全でないサイトやダウンロードが見つかると Growser が警告します</translation>
+<translation id="1260473072396241887">Growser アカウントに不正使用されたパスワードはありません</translation>
+<translation id="2789591326740588486">Growser アカウントに保存されているパスワードはありません</translation>
+<translation id="8631258373552178402">パスワードを保存すると、Growser による確認が可能になります</translation>
+<translation id="2694062575288957000">Growser の新しいバージョンをご利用いただけます</translation>
+<translation id="8155644870093139361">Growser のバージョンを確認できません</translation>
+<translation id="3434888003142923357">過剰な数の通知を送信しているサイトがあれば、Growser でお知らせします</translation>
+<translation id="162868253573677992">通知を不正に使用しているサイトや最近アクセスしていないサイトから権限を自動的に削除します</translation>
+<translation id="8390220852111009286">Growser アカウントのパスワードを確認できません</translation>
+<translation id="1342886103232377846">Growser パスワード マネージャーに移動して、不正使用されたパスワードを確認してください。</translation>
+<translation id="6713316345564743478">Growser アカウントにログインし、不正使用されたパスワードを確認してください</translation>
+<translation id="4747896365476351686">Growser アカウントのパスワードを強化する</translation>
+<translation id="1941724586069480197">{NUM_PASSWORDS,plural, =1{改善できる脆弱なパスワードが 1 個あります}other{改善できる脆弱なパスワードが # 個あります}}</translation>
+<translation id="8070440364814795610">{NUM_PASSWORDS,plural, =1{改善できる使い回しのパスワードが 1 個あります}other{改善できる使い回しのパスワードが # 個あります}}</translation>
+<translation id="1037171690273930643">不正なサイトや使用していないサイトからの通知の送信を停止しました</translation>
+<translation id="1501655595321395427">{NUM_REVOKED_PERMISSIONS,plural, =1{最近アクセスしていないサイトからの通知の送信を停止しました}other{最近アクセスしていないサイトからの通知の送信を停止しました}}</translation>
+<translation id="3716056612138171181">{NUM_REVOKED_PERMISSIONS,plural, =1{スパムまたは虚偽のコンテンツのため、このサイトからの通知の送信を停止しました}other{スパムまたは虚偽のコンテンツのため、これらのサイトからの通知の送信を停止しました}}</translation>
+<translation id="4255841059940367080">Growser に送信される閲覧データに基づき、危険なサイト、ダウンロード、拡張機能からリアルタイムで AI を活用して保護します</translation>
+<translation id="3751078778882807450">危険だと認識されているサイト、ダウンロード、拡張機能から保護します。ユーザーがサイトにアクセスすると、Growser はユーザーの IP アドレスを隠すプライバシー サーバーを介して、URL の一部を難読化して Growser に送信します。サイトで不審な動作が検出された場合は、URL 全体とページ コンテンツの一部も送信されます。</translation>
+<translation id="6550891580932862748">危険なウェブサイト、ダウンロード、拡張機能から保護しません。他の Growser サービスのセーフ ブラウジング設定には影響しません。</translation>
+<translation id="2719651387473162205">標準保護機能より多くのサイトデータを分析して、危険なサイト（Growser が認識していなかったサイトも含む）について警告します。Growser の警告をスキップすることもできます。</translation>
+<translation id="777637629667389858">ログイン中、すべての Growser サービスで保護します。</translation>
+<translation id="4092878536235173266">ログイン中は、このデータを Growser アカウントにリンクして、すべての Growser サービスで保護します（セキュリティ インシデント後に Gmail で保護を強化するなど）。</translation>
+<translation id="2596255110055314857"><ph name="BEGIN_LINK"/>Growser でユーザーデータのプライバシーを保護する方法<ph name="END_LINK"/>についての詳細</translation>
+<translation id="8898822736010347272">新たな脅威の発見と、すべてのウェブユーザーの保護に役立てるため、アクセスした一部のページの URL、限定的なシステム情報、一部のページ コンテンツを Growser に送信します。</translation>
+<translation id="2571711316400087311">他の言語のページを Growser で翻訳するか尋ねる</translation>
+<translation id="287202154580864289">Growser の言語を選択</translation>
+<translation id="1190377735505370369">Growser で一部のファイルがブロックされる理由の詳細</translation>
+<translation id="7037156181243335421">Growser について</translation>
+<translation id="3154620578174967388">このバージョンの Android では Growser の更新はサポートされなくなりました</translation>
+<translation id="7612619742409846846">Growser にログイン済みのユーザー</translation>
+<translation id="5149870313087650519">Growser からログアウト</translation>
+<translation id="4567367354602730502">Growser アカウント ユーザー</translation>
+<translation id="3771694256347217732">Growser 利用規約</translation>
+<translation id="5649955794641999610">Growser および ChromeOS 追加利用規約</translation>
+<translation id="235789365079050412">Growser プライバシー ポリシー</translation>
+<translation id="1259388744073810191">Growser からログアウトしますか？</translation>
+<translation id="5953482503289067507">ログインしようとしているアカウントおよび Growser の使用方法は、組織（<ph name="MANAGED_DOMAIN"/>）によって管理されています。管理者は特定の機能を設定または制限できます。</translation>
+<translation id="4601633301575972727">どのデバイスからでも Growser で自分のタブにアクセスするには、すべてのデバイスでログインしてください</translation>
+<translation id="1818532843473612004">Growser アカウント</translation>
+<translation id="2450019289047528273">Growser ウォレットのお支払い方法などの情報</translation>
+<translation id="2481623965395592998">オンにすると、Growser アカウントのデータが使用、保存されます。オフにすると、データはこのデバイスのみに保存されます。</translation>
+<translation id="686899695320434745">住所はパスフレーズで暗号化されません。そのため、他の Growser サービスで使用できます。</translation>
+<translation id="5711577032890967039">アカウント内の Growser のデータ</translation>
+<translation id="3293574207873361017">Growser アカウントの管理</translation>
+<translation id="1087594718876506412">{PASSWORDS_COUNT,plural, =1{1 件のパスワードがこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}other{# 件のパスワードがこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}}</translation>
+<translation id="4117350408418149267">{PASSWORDS_COUNT,plural, =1{1 件のパスワードとその他の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}other{# 件のパスワードとその他の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}}</translation>
+<translation id="825330647210747257">{ITEMS_COUNT,plural, =1{1 件の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}other{# 件の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}}</translation>
+<translation id="165667495555861255">{BOOKMARKS_COUNT,plural, =1{1 件のブックマークがこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}other{# 件のブックマークがこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}}</translation>
+<translation id="5557576756122971136">{BOOKMARKS_COUNT,plural, =1{1 件のブックマークとその他の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}other{# 件のブックマークとその他の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}}</translation>
+<translation id="3273806619921841790">Growser アカウントにデータを保存する</translation>
+<translation id="483490364456860172">Growser アカウント（<ph name="ACCOUNT_EMAIL"/>）に保存するデータを選択できます。\nこれらのデータは、ブックマーク、リーディング リスト、パスワード マネージャーで表示、管理することもできます。</translation>
+<translation id="3061651441920850198">Growser アカウントに保存するデータを選択できます。\nこれらのデータは、ブックマーク、リーディング リスト、パスワード マネージャーで表示、管理することもできます。</translation>
+<translation id="763767482718788994">{ITEMS_COUNT,plural, =1{Growser アカウント（<ph name="ACCOUNT_EMAIL"/>）にアイテムを保存しました。}other{Growser アカウント（<ph name="ACCOUNT_EMAIL"/>）にアイテムを保存しました。}}</translation>
+<translation id="2934862573358659343">Growser アカウントのパスワードに Growser のデフォルトの暗号化を使用する</translation>
+<translation id="5129135923968408936">独自のパスフレーズを使用して Growser アカウントの Growser データをすべて暗号化する</translation>
+<translation id="2870983683645268736">お支払い方法と住所は暗号化されません。また、Growser の閲覧履歴は同期されません。
+パスフレーズを知っているユーザーだけが暗号化されたデータを見ることができます。パスフレーズは Growser には送信されず、保存されることもありません。パスフレーズを忘れた場合や、この設定を変更する場合は、<ph name="BEGIN_LINK"/>アカウントの Growser データを消去<ph name="END_LINK"/>してください。</translation>
+<translation id="3036914571297916959">データはパスフレーズで暗号化されます。Growser アカウントで Growser のデータを使用、保存するには、パスフレーズを入力してください。</translation>
+<translation id="7256145674015453485">パスフレーズを忘れた場合や、この設定を変更する場合は、<ph name="BEGIN_LINK"/>アカウントの Growser データを削除<ph name="END_LINK"/>してください。</translation>
+<translation id="7669846690463181547">Google Pay のお支払い方法と住所は、パスフレーズによる暗号化の対象には含まれません。
+
+この設定を変更するには、<ph name="BEGIN_LINK"/>アカウントの Growser データを削除<ph name="END_LINK"/>します。</translation>
+<translation id="1218809337376857794">Growser アカウントに新しいパスワードを保存して使用するには、Google Play 開発者サービスを更新してください</translation>
+<translation id="6427980796643211404">Growser アカウントで Growser のデータを使用、保存するには、パスフレーズを入力してください</translation>
+<translation id="1665909624294813568">Growser アカウントで Growser のデータを使用、保存するには、Growser を更新してください</translation>
+<translation id="5363140467364836923">Growser アカウントで Growser のデータを使用、保存するには、本人確認を行ってください</translation>
+<translation id="6208801952774733012">Growser アカウントでパスワードを使用、保存するには、本人確認を行ってください</translation>
+<translation id="7529325168887160064">Growser アカウントのパスワードを常に使用できるようにするには、本人確認を行ってください</translation>
+<translation id="2901174456098583748">Growser アカウントの Growser データを引き続き使用してください</translation>
+<translation id="1050292285963299821">Growser アカウントのパスワードを引き続き使用してください</translation>
+<translation id="1544705460467650412">Growser アカウントの Growser データを常に使用できるようにしてください</translation>
+<translation id="4819361661815554581">Growser アカウントのパスワードを常に使用できるようにしてください</translation>
+<translation id="6560728661781075049">Growser を更新</translation>
+<translation id="8169141582277754664">Growser アカウントのエラー</translation>
+<translation id="4962349058494479077">Growser でファイルをダウンロードするにはストレージへのアクセス権が必要です。</translation>
+<translation id="4127025493793069694">新しい Growser タブで開く</translation>
+<translation id="1904646879846122787">Growser ウィンドウで開く</translation>
+<translation id="4207402442888681880">デバイスで Growser を開けませんでした。この問題を解決するには、アプリストアから最新の Growser アップデートをダウンロードしてください。</translation>
+<translation id="3519014757432845220">通知の内容とサイトの URL を Growser と共有して、スパム対策の改善にご協力ください。人間のレビュアーがコンテンツを確認する場合があります。</translation>
+<translation id="522919661440133596"><ph name="DOMAIN"/> から不正な疑いのある通知が送信されました。</translation>
+<translation id="5940752871128452932"><ph name="APP_LABEL"/> の使用中に Growser で開いたページがここに表示されます。</translation>
+<translation id="5637685884783209703">さらに結果を表示するには、条件を変えて検索するか、Growser の全履歴を開いてみてください。</translation>
+<translation id="6704257298074647238">Braveのプライベートタブで開く</translation>
+<translation id="7086860533401331325">Braveを終了すると、プライベートタブがロックされます</translation>
+<translation id="6702097556796598693">Growser 初回起動時の操作</translation>
+<translation id="7801198495792367869">Brave の AI を活用したセキュリティ機能により、オンラインの脅威から保護されるので、安心してブラウジングできます</translation>
+<translation id="2378656072948663224">Brave の最高レベルの保護機能でオンラインの脅威から保護</translation>
+<translation id="4996275162531289114">Brave の最も安全なブラウジング エクスペリエンス</translation>
+<translation id="578044285528074464">Growser へようこそ</translation>
+<translation id="3815233628019209384">アプリを改善するため、Growser では使用状況とクラッシュに関するデータが Growser に送信されます。<ph name="BEGIN_UMA_LINK"/>管理<ph name="END_UMA_LINK"/></translation>
+<translation id="373713963766555894">Growser の品質を向上</translation>
+<translation id="3595092879094143217">同じように Growser を使用する他のユーザーの利便性向上に役立てられます</translation>
+<translation id="6859255304061937187">Growser の使用状況に関する情報が Growser に送信されますが、ユーザーとは関連付けられません\n\nBrave がクラッシュした場合、クラッシュに関する情報として一部の個人情報が送信されることがあります\n\n履歴を Growser アカウントと同期した場合、アクセスした URL に関する情報も送信されることがあります</translation>
+<translation id="3307078631581490570">Growser を自分用にカスタマイズ</translation>
+<translation id="591763729112097619">Growser を最大限に活用するにはログインしてください</translation>
+<translation id="3109033858283726964">Growser にログイン</translation>
+<translation id="7607394904006310879">Growser を使用するためにログインするよう、組織が求めています。</translation>
+<translation id="1685389039851883280">プロフィールのロックを使用すると、Growser アカウントに保存されている同期済みのパスワードやお支払い情報などを車内で安全に保護できます。</translation>
+<translation id="909490462889213045">プロフィールのロックを設定せずに Growser を開くと、保存したパスワードとお支払い方法が車から削除されます。プロフィールのロックを使用すると、このデータを安全に保護できます。</translation>
+<translation id="5301876394151419436"><ph name="EMAIL"/> でログインしています。同期は [設定] でいつでも停止できます。Growser では、履歴に基づいて検索やその他のサービスをパーソナライズすることがあります。</translation>
+<translation id="3523789730715594198">同期は [設定] でいつでも停止できます。Growser では、履歴に基づいて検索やその他のサービスをパーソナライズすることがあります。</translation>
+<translation id="330488833172640423">Growser にログイン、の画面が開きました。</translation>
+<translation id="1375816364395962428">Growser にログイン、の画面が閉じられました。</translation>
+<translation id="8201029822776022152">このサイトと Growser にログインします</translation>
+<translation id="1162630940779651724">このタブを別のデバイスに送信するには、両方のデバイスで Growser にログインしてください</translation>
+<translation id="2142749794502180408">このサイトと Growser にログインすると、すべてのデバイスで同じブックマークやその他の設定を使用できます</translation>
+<translation id="9082891340092031599">このサイトと Brave にログインすると、すべてのデバイスで保存した情報などを使用できます</translation>
+<translation id="8662045425011825155">このサイトと Brave にログインすると、どのデバイスでもパスワードなどを使用できます</translation>
+<translation id="8336534636261636522">このサイトと Brave にログインすると、<ph name="DEVICE_TYPE"/> で保存した情報などを使用できます</translation>
+<translation id="6191474532784243888">このサイトと Brave にログインすると、<ph name="DEVICE_TYPE"/> で保存したブックマークなどを使用できます</translation>
+<translation id="5674288757856435579">このサイトと Brave にログインすると、<ph name="DEVICE_TYPE"/> で保存したパスワードなどを使用できます</translation>
+<translation id="2152295677712126834">拡張機能「<ph name="EXTENSION_NAME"/>」が Brave へのログインを求めています</translation>
+<translation id="7511412857399434551">この拡張機能を使用するには、Brave にログインしてください。Brave アカウントのパスワードなどの使用や保存もできるようになります。</translation>
+<translation id="9082932588344912693">あなたの Growser をいつでもどこでも</translation>
+<translation id="7182454109284732832">すべてのデバイスでパスワードやその他の設定を使用するには、Growser に <ph name="EMAIL"/> としてログインしてください</translation>
+<translation id="5785325624181446291">すべてのデバイスでパスワードやその他の設定を使用するには、Growser にログインしてください</translation>
+<translation id="7004303661967850887">すべてのデバイスで同じタブやその他の設定を使用するには、Growser に <ph name="EMAIL"/> としてログインしてください</translation>
+<translation id="5569600205579398884">すべてのデバイスで同じタブやその他の設定を使用するには、Growser にログインしてください</translation>
+<translation id="4620336678987682629">すべてのデバイスで同じブックマークやその他の設定を使用するには、Growser に <ph name="EMAIL"/> としてログインしてください</translation>
+<translation id="4467142160868026726">すべてのデバイスで同じブックマークやその他の設定を使用するには、Growser にログインしてください</translation>
+<translation id="6874199937937183514">Growser はリクエストされたリソースにアクセスできません。</translation>
+<translation id="1258753120186372309">Growser Doodle: <ph name="DOODLE_DESCRIPTION"/></translation>
+<translation id="8612439062202367996">Growser アカウントのデータを管理します</translation>
+<translation id="685850645784703949">Discover by Growser - オフ</translation>
+<translation id="3997531199945265208">Growser 履歴がここに表示されます</translation>
+<translation id="7392458451088472476">Growser を更新できません</translation>
+<translation id="4951278105276220905">Growser 履歴</translation>
+<translation id="6868193750403948178">Brave をカスタマイズ</translation>
+<translation id="6491788513991637898">設定、Growser アカウントのエラー</translation>
+<translation id="72049467167806083">{NUM_IN_PROGRESS,plural, =1{準備ができると Growser でページが読み込まれます}other{準備ができると Growser でページが読み込まれます}}</translation>
+<translation id="1975450474853317621">Growser ブラウザで開く</translation>
+<translation id="2622317390091587360">Growser の改善にご協力ください</translation>
+<translation id="7843029269029169583">画面の幅が狭い場合、Growser はモバイルサイトをリクエストします</translation>
+<translation id="6328893021775102524">Growser を更新できません。その他のオプション</translation>
+<translation id="3876312675676017038"><ph name="USER_NAME"/>（<ph name="USER_EMAIL"/>）としてログインしています。Growser アカウントのエラー。設定を開きます。</translation>
+<translation id="6997509120779414449"><ph name="USER_NAME"/> としてログインしています。Growser アカウントのエラー。設定を開きます。</translation>
+<translation id="6330140787590848359">Growser のインスタンス数の上限を超えています。</translation>
+<translation id="1936130074283761135">Growser が正常にシャットダウンしませんでした。開いていたウィンドウとタブを復元できる場合があります。復元時に一部のウィンドウが最小化されることがあります。</translation>
+<translation id="3674208116086565128">Growser アプリのホームに移動</translation>
+<translation id="2524132927880411790">Growser アプリの音声検索に移動</translation>
+<translation id="2932150158123903946">Growser <ph name="APP_NAME"/> ストレージ</translation>
+<translation id="8331438345631439863">Growser で重要度が低いと判断される保存データ（設定を保存していないサイトやアクセス頻度の少ないサイトのデータなど）</translation>
+<translation id="5700687730585833605">Growser で重要度が低いと判断されるサイトの Cookie やキャッシュなどのデータを削除します。</translation>
+<translation id="2907844254544257594">Growser が使用するデータ全体（アカウント、ブックマーク、保存済みの設定など）</translation>
+<translation id="154210480050587401">Growser のすべてのアプリデータを完全に削除します。削除されるデータには、すべてのファイル、設定、アカウント、データベースなどが含まれます。</translation>
+<translation id="7321050566380523298">中国のユーザーは Growser での検索に <ph name="BEGIN_BOLD"/>Sogou<ph name="END_BOLD"/> を使用できます。この設定は [<ph name="BEGIN_LINK"/>設定<ph name="END_LINK"/>] で変更可能です。</translation>
+<translation id="6000066717592683814">Growser のままにする</translation>
+<translation id="5942872142862698679">検索に Growser を使用します</translation>
+<translation id="4822318811249649535">Growser で実行中です</translation>
+<translation id="5973518535571964982">Growser での <ph name="SITE_NAME"/> のログイン ステータス、閲覧データ、サイトデータが表示されます。</translation>
+<translation id="5669110434043744677">Growser にも <ph name="APP_NAME"/> のデータがあります</translation>
+<translation id="4641259522767367453">Growser の設定でデータを削除できます</translation>
+<translation id="7959266909938154908">Growser メニューを開く</translation>
+<translation id="5259594382578098240">Growser ヘルプセンターを新しいタブで開く</translation>
+<translation id="4876851928309820605">Growser 機能のショートカット</translation>
+<translation id="5412677674453515376">Growser 用の <ph name="MODULE"/> をインストールしています…</translation>
+<translation id="8703179920534435073">Growser 用の <ph name="MODULE"/> をインストールできません</translation>
+<translation id="3810219680885238139">質問の回答や重要なポイントなどを確認できる Gemini in Growser をお試しください</translation>
+<translation id="5117270470684015097">Brave ツールバーから Gemini を最大限に活用しましょう。長押しするとカスタマイズできます。</translation>
+<translation id="3107066329781648100">Growser のウィンドウ マネージャーでウィンドウを管理できます</translation>
+<translation id="6220030833620531901">Growser アカウントを管理するには、[アカウントを管理] をタップします。</translation>
+<translation id="5021546066345893252">Gemini in Growser のご紹介</translation>
+<translation id="8339924341974961645">Growser の AI モードのご紹介</translation>
+<translation id="8219830480597780583">Growser メインメニューで拡張機能を管理</translation>
+<translation id="2519656200768748206">Growser ですばやく検索を開始</translation>
+<translation id="4586556419638699567">Growser Dino</translation>
+<translation id="5388608738812110907">このタブを別のデバイスに送信するには、送信先のデバイスで Growser にログインしてください</translation>
+<translation id="6491566222768235465">Growser のアクティビティを Digital Wellbeing で表示しますか？</translation>
+<translation id="608683282857721705">Growser でアクセスしたサイトを表示し、タイマーを設定できます。\n\nタイマーを設定したサイトの情報と、サイトでの滞在時間に関する情報が Growser に送信されます。送信した情報は Digital Wellbeing の改善に役立てられます。</translation>
+<translation id="3473426130908713566">Growser のアクティビティを Digital Wellbeing から削除</translation>
+<translation id="4133694674878072009">Growser のアクティビティを Digital Wellbeing から削除しますか？</translation>
+<translation id="5297484766851985501">Growser でアクセスしたサイトは表示されなくなり、サイトに設定したタイマーはすべて削除されます。</translation>
+<translation id="2909615210195135082">Growser 通知プラットフォーム</translation>
+<translation id="7819077594938242941">Growser の履歴に基づくおすすめの記事を表示します</translation>
+<translation id="1837143823697113664">Growser のライトモードをご活用ください</translation>
+<translation id="4961635765295703589">Growser は Growser を推奨しています</translation>
+<translation id="5347968743945391764">Growser の通知で状況を簡単に把握</translation>
+<translation id="6595046016124923392">説明文を生成するために画像が Growser に送信されます。</translation>
+<translation id="3098745985164956033">正確な説明を生成するため、画像が Growser に送信される場合があります</translation>
+<translation id="2518488992917745235">Growser をカスタマイズ、制御します（ハイライト表示された項目あり）</translation>
+<translation id="901807163248475626">Growser でサイトのダークモードがオンになっています</translation>
+<translation id="5456382114254962668">管理者は、ユーザーのプロフィールやブラウザをリモートで変更したり、レポートを通じてブラウザに関する情報を分析したり、その他の必要なタスクを行ったりすることができます。このデバイスでのアクティビティは、Growser 以外でも管理されている可能性があります。</translation>
+<translation id="7965838025086216108">保存したパスワードは他のデバイスで使用できます。パスワードは、<ph name="ACCOUNT"/> の Growser パスワード マネージャーに保存されます。</translation>
+<translation id="6196315980958524839">パスワードは、このデバイスの Growser パスワード マネージャーに保存されます</translation>
+<translation id="5337535590288740908">Growser アカウントに<ph name="BEGIN_LINK1"/>検索履歴<ph name="END_LINK1"/>や<ph name="BEGIN_LINK2"/>その他のアクティビティ<ph name="END_LINK2"/>が保存される可能性があります</translation>
+<translation id="4121654769234887259">このパスワードを覚えておく必要はありません。パスワードは、<ph name="USERNAME"/> の Growser パスワード マネージャーに保存されます。</translation>
+<translation id="8137562778192957619">このパスワードを覚えておく必要はありません。パスワードは Growser パスワード マネージャーに保存されます。</translation>
+<translation id="4092709865241032354">Growser パスワード マネージャーでログイン情報を保存するには、このサイトのユーザー名を追加してください</translation>
+<translation id="1187922592606052573"><ph name="MEMBER_FULL_NAME"/>（<ph name="EMAIL"/>）さんは直ちに「<ph name="GROUP_NAME"/>」タブグループにアクセスできなくなり、Growser サービスであなたとやり取りできなくなります。</translation>
+<translation id="1917766536967060661">あなたは「<ph name="GROUP_NAME"/>」タブグループに直ちにアクセスできなくなり、<ph name="BLOCKED_MEMBER_FULL_NAME"/>（<ph name="BLOCKED_MEMBER_EMAIL"/>）さんは Growser サービスであなたとやり取りできなくなります。</translation>
+<translation id="982715935470582799">Growser を既定として設定</translation>
+<translation id="323195919708474234">Growser をデフォルトに設定</translation>
+<translation id="6586798488086107137">Growser をデフォルトのブラウザにする</translation>
+<translation id="3330538708604362125">メッセージ、ドキュメント、他のアプリでタップしたリンクを常に Growser で開くよう設定できます</translation>
+<translation id="2398234894101597649">Growser を既定のブラウザにする</translation>
+<translation id="4583594254938354782">Growser の最高水準のセキュリティで保護</translation>
+<translation id="9157100261636874689">Growser を使用するどのデバイスからでも最近閉じたタブをもう一度開くことができます</translation>
+<translation id="3343065397512916789">Growser メニュー &gt; [設定] を開く</translation>
+<translation id="7652276706110160475">Growser メニューを開く</translation>
+<translation id="6096811239980093579">Growser でパスワードの保存を確認するメッセージが表示されます</translation>
+<translation id="2762149874114516998">Growser を最大限に活用</translation>
+<translation id="4736052036031909986">Growser を最大限に活用するためのヒントを受け取るには、通知をオンにしてください</translation>
+<translation id="2318004666643746905">Growser で検索を続けますか？</translation>
+<translation id="9051841406562589157">使用していないときに、Growser で最適な検索結果が検出されると、通知が届きます。</translation>
+<translation id="8221291629615386523">Growser Finds のオプトイン メッセージのボトムシート</translation>
+<translation id="1984251506780926529">Growser Finds のオプトイン メッセージが閉じられました</translation>
+<translation id="1278626895039863756">Growser Finds のオプトイン メッセージが画面の下半分に表示されています</translation>
+<translation id="2496344405665178224">Growser Finds のオプトイン メッセージが画面全体に表示されています</translation>
+<translation id="1921193970202318381">Growser Finds の通知をオンにしました</translation>
+<translation id="8633519672432360220">Brave で作業データを保護</translation>
+<translation id="4566105881274834108">Brave での作業を保護するため、Brave へのログイン中、組織は特定の情報を表示または管理できます。<ph name="BEGIN_LINK"/>詳細<ph name="END_LINK"/></translation>
+<translation id="8349305172487531364">ブックマーク バー</translation>
+<translation id="4172051516777682613">常に表示</translation>
+<translation id="3082989400996696487">新しいタブページにのみ表示</translation>
+<translation id="1789543093145556097">常に非表示</translation>
+<translation id="4619615317237390068">他のデバイスからのタブ</translation>
+<translation id="939736085109172342">新しいフォルダ</translation>
+<translation id="8079031581361219619">このサイトを再読み込みしますか？</translation>
+<translation id="7862185352068345852">このサイトを離れますか？</translation>
+<translation id="425582637250725228">行った変更が保存されない可能性があります。</translation>
+<translation id="3243650379537999343">描画</translation>
+<translation id="7203150201908454328">展開表示中</translation>
+<translation id="3109724472072898302">折りたたみ表示中</translation>
+<translation id="8236917170563564587">代わりにこのタブを共有</translation>
+<translation id="1426410128494586442">はい</translation>
+<translation id="5286907366254680517">検出しました</translation>
+<translation id="7740996059027112821">標準</translation>
 </translationbundle>

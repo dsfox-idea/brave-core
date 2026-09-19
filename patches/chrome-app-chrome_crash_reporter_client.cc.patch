@@ -1,8 +1,8 @@
 diff --git a/chrome/app/chrome_crash_reporter_client.cc b/chrome/app/chrome_crash_reporter_client.cc
-index f0c0ff0871ee92a9ae7f4c634372cf0a550321d0..7c31155e296ef69df4091f61c18c1aaca66723a6 100644
+index 64912e538f3b0b4acfbb21e0cd94a27b4329c7a2..1cb9a31a0e908e309afd54f1901088f9d8f969fa 100644
 --- a/chrome/app/chrome_crash_reporter_client.cc
 +++ b/chrome/app/chrome_crash_reporter_client.cc
-@@ -169,10 +169,10 @@ bool ChromeCrashReporterClient::IsRunningUnattended() {
+@@ -172,10 +172,10 @@ bool ChromeCrashReporterClient::IsRunningUnattended() {
  }
  
  bool ChromeCrashReporterClient::GetCollectStatsConsent() {
@@ -16,7 +16,7 @@ index f0c0ff0871ee92a9ae7f4c634372cf0a550321d0..7c31155e296ef69df4091f61c18c1aac
  #endif
  
  #if BUILDFLAG(IS_CHROMEOS)
-@@ -195,11 +195,11 @@ bool ChromeCrashReporterClient::GetCollectStatsConsent() {
+@@ -198,11 +198,11 @@ bool ChromeCrashReporterClient::GetCollectStatsConsent() {
    // do not upload them.
    return is_official_chrome_build;
  #else   // !BUILDFLAG(IS_ANDROID)

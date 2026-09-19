@@ -256,4 +256,8 @@
 few {Zamknięte karty i grupy można znaleźć i ponownie otworzyć w sekcji Ostatnie karty i Grupy kart. # karty prywatne nie będą dostępne.}
 many {Zamknięte karty i grupy można znaleźć i ponownie otworzyć w sekcji Ostatnie karty i Grupy kart. # kart prywatne nie będzie dostępnych.}
 other {Zamknięte karty i grupy można znaleźć i ponownie otworzyć w sekcji Ostatnie karty i Grupy kart. # karty prywatne nie będą dostępne.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link z Growser}few{<ph name="TABS_COUNT_MANY"/> linki z Growser}many{<ph name="TABS_COUNT_MANY"/> linków z Growser}other{<ph name="TABS_COUNT_MANY"/> linku z Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> opinia z Growser}few{<ph name="REVIEWS_COUNT_MANY"/> opinie z Growser}many{<ph name="REVIEWS_COUNT_MANY"/> opinii z Growser}other{<ph name="REVIEWS_COUNT_MANY"/> opinii z Growser}}</translation>
+<translation id="2928243913527329289">Growser | Informacje o tym sklepie</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser automatycznie zamyka nieaktywne karty i grupy kart po <ph name="AUTO_DELETE_DELAY_ONE"/> miesiącu. Możesz to zmienić w ustawieniach.}few{Growser automatycznie zamyka nieaktywne karty i grupy kart po <ph name="AUTO_DELETE_DELAY_MANY"/> miesiącach. Możesz to zmienić w ustawieniach.}many{Growser automatycznie zamyka nieaktywne karty i grupy kart po <ph name="AUTO_DELETE_DELAY_MANY"/> miesiącach. Możesz to zmienić w ustawieniach.}other{Growser automatycznie zamyka nieaktywne karty i grupy kart po <ph name="AUTO_DELETE_DELAY_MANY"/> miesiąca. Możesz to zmienić w ustawieniach.}}</translation>
 </translationbundle>

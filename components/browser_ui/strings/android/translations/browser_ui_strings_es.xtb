@@ -801,4 +801,51 @@ Protección Avanzada controla estos ajustes de Growser:</translation>
 <translation id="8186479265534291036">¿El sitio no funciona? Cookies de terceros bloqueadas.</translation>
 <translation id="8874790741333031443">Prueba a permitir temporalmente las cookies de terceros, lo que disminuirá la protección al navegar, pero aumentará la probabilidad de que las opciones de los sitios funcionen como se espera.</translation>
 <translation id="915112772806845021">Los sitios usan esta función para activar Imagen en imagen automáticamente. De esta forma, puedes seguir viendo un vídeo y liberar espacio en la pantalla para hacer otras tareas.</translation>
+<translation id="3281851196103181918">Los sitios que visitas pueden guardar una pequeña cantidad de información con Growser, principalmente para verificar que no eres un bot</translation>
+<translation id="7321946347180923218">A medida que sigas navegando, los sitios podrán realizar comprobaciones con Growser y verificar, con un sitio que hayas visitado anteriormente, que es probable que seas una persona real</translation>
+<translation id="1416017798077335746">Cuando está activado, Growser se ejecuta más rápido y las funciones que usan JavaScript deberían funcionar según lo previsto. Si está desactivado, reduce el rendimiento, pero hace que V8 sea más resistente a los ataques.</translation>
+<translation id="1161610156793601923">Acelerar los sitios con el motor V8 de Growser, pero hacer que Growser sea un poco menos resistente a los ataques</translation>
+<translation id="4522008664732371170">V8 es el motor de Growser para JavaScript y WebAssembly que se usa para mejorar el rendimiento de los sitios</translation>
+<translation id="8589838971217638472">No acelerar los sitios con el motor V8 de Growser, pero hacer que Growser sea un poco más resistente a los ataques</translation>
+<translation id="7640998335907138542">El tema oscuro se aplica a los sitios si Growser lo usa y es posible</translation>
+<translation id="2057998558085257831">Gestionar en los <ph name="BEGIN_LINK1"/>ajustes de Android<ph name="END_LINK1"/>
+
+Protección Avanzada controla estos ajustes de Growser:</translation>
+<translation id="423123022780548223">Este contenido procede de <ph name="DOMAIN_NAME"/>, publicado por Growser.</translation>
+<translation id="8347706830008915646">Para ahorrar datos, Growser ha optimizado las imágenes de esta página.</translation>
+<translation id="6934374371757268073">Growser volverá a bloquear las cookies hoy</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{Growser volverá a bloquear las cookies mañana}other{Las cookies se volverán a bloquear dentro de # días}}</translation>
+<translation id="2695810323641466307">Inicia Growser con omnibox activado, lo que reduce el tiempo de arranque en dispositivos de gama baja.</translation>
+<translation id="5598609827458395422">Ahora Growser comparte tus pestañas recientes con tu dispositivo. Las verás en la lista de aplicaciones y en los resultados de búsqueda de tu dispositivo. Desactiva esta opción en cualquier momento en la configuración de Growser.</translation>
+<translation id="8965088526414675625">Ahora Growser muestra tus pestañas recientes en la lista de aplicaciones y en los resultados de búsqueda de tu dispositivo. Desactiva esta opción en cualquier momento en la configuración de Growser.</translation>
+<translation id="8761470294803693272">Permite que Growser comparta tus pestañas recientes con tu dispositivo para que aparezcan en la lista de aplicaciones y en los resultados de búsqueda de tu dispositivo. Puedes activar o desactivar esta opción en la configuración de Growser.</translation>
+<translation id="8421385332619538087">Permite que Growser muestre tus pestañas recientes en la lista de aplicaciones y en los resultados de búsqueda de tu dispositivo. Desactiva esta opción en cualquier momento en la configuración de Growser.</translation>
+<translation id="4844745832306307836">Consejos de Growser</translation>
+<translation id="8894933691616134953">Ocultar tarjeta de consejos de Growser</translation>
+<translation id="3075680827782258330">Usar Growser por defecto</translation>
+<translation id="3330538708604362125">Puedes usar Growser cada vez que toques enlaces en mensajes, documentos y otras aplicaciones</translation>
+<translation id="878212867049674537">Personaliza Growser con colores e imágenes personalizados para tu página principal</translation>
+<translation id="906376138426795308">Ahora puedes usar Growser cada vez que navegues o toques enlaces de mensajes, documentos y otras aplicaciones.</translation>
+<translation id="1060555682994133119">Toca Aplicación de navegador &gt; Growser</translation>
+<translation id="2039425904994800099">Toca Aplicación de navegador y, a continuación, Growser</translation>
+<translation id="3307078631581490570">Personaliza Growser</translation>
+<translation id="1068559798624451989">Consigue la mejor protección de Growser frente a amenazas online</translation>
+<translation id="3371556244314914639">Guardar contraseñas en Growser</translation>
+<translation id="6096811239980093579">Growser te ofrecerá guardar tu contraseña</translation>
+<translation id="3942445027194417950">Hoja inferior de instrucciones para guardar contraseñas en Growser</translation>
+<translation id="4476554299666180378">Ahora podrás sacar el máximo partido a Growser en tu dispositivo.</translation>
+<translation id="2762149874114516998">Aprovecha Growser al máximo</translation>
+<translation id="4229054348764234344">Completa las siguientes acciones sugeridas para sacar el máximo partido a Growser</translation>
+<translation id="9005129040299651584">Personaliza Growser eligiendo un tema personalizado</translation>
+<translation id="6695051470627475273">Hoja inferior de colores de Growser abierta a altura completa</translation>
+<translation id="8884873726356949960">Hoja inferior de colores de Growser abierta a media altura</translation>
+<translation id="8064824204802826269">Predeterminado en Brave</translation>
+<translation id="3625563631434033924">Colores de Brave</translation>
+<translation id="4084889026632451864">Hoja inferior de colores de Growser</translation>
+<translation id="6506349636755583652">Algunos ajustes de Growser han cambiado</translation>
+<translation id="6972629891077993081">Dispositivos HID</translation>
+<translation id="4748783296226936791">Los sitios se suelen conectar a dispositivos HID para usarlos en funciones que utilizan teclados poco habituales, mandos de juegos y otros dispositivos</translation>
+<translation id="5719854774000914513">Los sitios pueden solicitar permiso para conectarse a dispositivos HID</translation>
+<translation id="8625916342247441948">No permitir que los sitios se conecten a dispositivos HID</translation>
+<translation id="1258491128795710625">Novedades</translation>
 </translationbundle>

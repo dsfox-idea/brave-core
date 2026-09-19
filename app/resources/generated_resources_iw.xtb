@@ -11335,4 +11335,454 @@
 <translation id="954749761428814584">השפה ושיטת הקלט</translation>
 <translation id="960987915827980018">נותרה בערך שעה אחת</translation>
 <translation id="995420352808264005">בחירת סוג שיוך המכשיר לארגון</translation>
+<translation id="6681823034920334318">‏כדי להתשמש בקוד לצורך הפעלת Cast, צריך להפעיל את הגדרות הסנכרון של דפדפן Growser</translation>
+<translation id="2515496577979954543">‏אל Growser</translation>
+<translation id="5924575374764114159">‏‫<ph name="TASK_TITLE"/>: ‏Gemini השלים את המשימה ואפשר לראות אותה ב-Growser</translation>
+<translation id="3721794228264322796">‏סגירת Gemini ב-Growser</translation>
+<translation id="2412463899388924412">‏‫<ph name="DISPLAYED_TEXT"/>, Gemini ב-Growser</translation>
+<translation id="1975450474853317621">‏פתיחה בדפדפן Growser</translation>
+<translation id="8516824290867275572">‏לחשבון שלך אין גישה ל-Gemini ב-Growser</translation>
+<translation id="1649234713894562345">‏מערכת Brave פותחה באמצעות פרויקט הקוד הפתוח של Brave ותוכנות <ph name="BEGIN_HIGHLIGHT"/>קוד פתוח<ph name="END_HIGHLIGHT"/> אחרות.</translation>
+<translation id="870536819717176711">‏אם משתפים את הכרטיסייה הנוכחית עם Gemini, התוכן המלא של הכרטיסייה, המדיה וכתובת ה-URL שלה נשלחים אל Growser.</translation>
+<translation id="1130866111814048607">‏כשהכרטיסיות משותפות, התוכן של הדפים, המדיה וכתובות ה-URL שלהן נשלחים אל Brave ועשויים להיבדק לצורכי אבטחה.</translation>
+<translation id="7656790264713095385">‏קודם צריך להפעיל את התכונה "פעולות אוטומטיות בדפדפן" ב-Brave במכשיר הזה</translation>
+<translation id="8572003230388132401">‏‫Gemini Spark יכול להשתמש בפעולות אוטומטיות בדפדפן Growser במכשיר הזה כדי להיכנס לאתרים ולבצע בשבילך משימות. <ph name="LINK_BEGIN"/>מידע נוסף<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">‏‫Gemini Spark יכול להשתמש בפעולות אוטומטיות בדפדפן רק אם המכשיר לא במצב שינה ו-Growser מופעל.</translation>
+<translation id="1982892581799327835">‏כל מי שיש לו גישה לסוכן Gemini Spark שלך יכול לשלוט בדפדפן Growser.</translation>
+<translation id="6689939585896001516">‏רוצה ש-Growser יחפש בשבילך?</translation>
+<translation id="640233545778658570">‏‫Gemini ב-Growser משתמש בגלישה אוטומטית כדי לפעול בכרטיסיות שלך ולהשלים משימות שהוא מקבל ממך. <ph name="LINK_BEGIN"/>מידע נוסף<ph name="LINK_END"/></translation>
+<translation id="2740842679402949230">‏מידע נוסף על פעולות אוטומטיות בדפדפן Brave</translation>
+<translation id="3570112771874223231">‏כתובות ה-URL ותוכן הדף ש-Gemini משתמש בהם במהלך משימה ישותפו עם Brave ועשויים להיבדק לצורכי אבטחה.</translation>
+<translation id="2314508080153323869">‏‫Gemini ב-Growser</translation>
+<translation id="1910632359330857071">‏אפשר לשוחח עם Gemini ב-Growser כדי לקבל תשובות, מסקנות עיקריות ועוד בזמן הגלישה</translation>
+<translation id="2483218699324586641">‏כדי לפתוח את Gemini ב-Growser, אפשר ללחוץ על <ph name="FOCUS_TOGGLE_HOTKEY"/></translation>
+<translation id="2353068771555482464">‏נעים להכיר: Gemini ב-Growser</translation>
+<translation id="7545274281857327491">‏נהנים מהמיטב של Growser AI. כדי לגשת ל-Gemini בצורה נוחה, אפשר להצמיד אותו לסרגל הכלים או לפתוח אותו בכל שלב מתפריט Growser.</translation>
+<translation id="8335336878672278597">‏‫Gemini ב-Gemini לא זמין</translation>
+<translation id="570859258083183845">‏‫Gemini ב-Growser מתרחב למיקומים נוספים, אבל עדיין לא זמין בכל מקום</translation>
+<translation id="96535553604365597">‏דיווח על בעיה ב-Growser Cast</translation>
+<translation id="4415611489406290344">‏כדי להפעיל Cast, צריך לתת ל-Growser גישה דרך: <ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/> &gt; רשת מקומית &gt; Growser</translation>
+<translation id="8492960370534528742">‏משוב על Growser Cast</translation>
+<translation id="2263679799334060788">‏תודה על המשוב שלך, שעוזר לנו לשפר את Growser Cast.
+    לקבלת עזרה בפתרון של בעיות העברה, ניתן לעיין
+    <ph name="BEGIN_LINK"/>
+    במרכז העזרה<ph name="END_LINK"/>.</translation>
+<translation id="8376137163494131156">‏מהי הבעיה שבה נתקלת ב-Growser Cast?</translation>
+<translation id="7325065595154456783">‏נתונים על גרסת Growser, גרסת מערכת ההפעלה, הגדרות להפעלת Cast,
+    נתונים סטטיסטיים של ביצועי שיקוף מסך ויומני אבחון של ערוץ
+    התקשורת שלך, יישלחו יחד עם כל מידע אחר שבחרת
+    להוסיף למעלה. המשוב הזה משמש לאבחון בעיות
+    וכדי לעזור בשיפור התכונה. כל המידע האישי שיישלח
+    במפורש או באופן מקרי יהיה מוגן בהתאם
+    למדיניות הפרטיות שלנו. שליחת המשוב הזה
+    מבטאת את הסכמתך לכך ש-Growser תהיה רשאית להשתמש במשוב
+    ממך כדי לשפר כל מוצר או שירות של Growser.</translation>
+<translation id="3187556136478864255">‏האם מכשיר ה-Cast מופיע
+    <ph name="BEGIN_LINK"/>
+    באפליקציית Growser Home<ph name="END_LINK"/>?</translation>
+<translation id="2984923316661218534">‏אפשר להגיע למפתחות הגישה במכשיר הזה דרך מנהל הסיסמאות של Growser</translation>
+<translation id="2364302372598204515">‏כתובת האימייל הזו לא שייכת לחשבון Growser. פריטים ששמרת ב-Growser לא יהיו זמינים במכשירים אחרים.</translation>
+<translation id="7105387152460258846">‏‫<ph name="PROFILE_NAME"/>. מינוי לשירות של Brave</translation>
+<translation id="850632091665381275">‏מינוי לשירות של Brave</translation>
+<translation id="6710172959248731469">‏ההגדרות של שירותי Growser</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{‏פריט אחד שמור רק במכשיר הזה. כדי להשתמש בו במכשירים אחרים, צריך לשמור אותו בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}one{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}two{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}other{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{‏סיסמה אחת שמורה רק במכשיר הזה. כדי להשתמש בה במכשירים אחרים, צריך לשמור אותה בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}one{‏‫{PASSWORD_COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}two{‏‫{PASSWORD_COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}other{‏‫{PASSWORD_COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{‏סיסמה אחת ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}one{‏‫{PASSWORD_COUNT} סיסמאות ופריטים אחרים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}two{‏‫{PASSWORD_COUNT} סיסמאות ופריטים אחרים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}other{‏‫{PASSWORD_COUNT} סיסמאות ופריטים אחרים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{‏סימנייה אחת שמורה רק במכשיר הזה. כדי להשתמש בה במכשירים אחרים, צריך לשמור אותה בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}one{‏‫{BOOKMARK_COUNT} סימניות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}two{‏‫{BOOKMARK_COUNT} סימניות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}other{‏‫{BOOKMARK_COUNT} סימניות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{‏סימנייה אחת ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}one{‏‫{BOOKMARK_COUNT} סימניות ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}two{‏‫{BOOKMARK_COUNT} סימניות ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}other{‏‫{BOOKMARK_COUNT} סימניות ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser. הפעולה הזו תמחק גם את כל הכפילויות.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{‏פריט אחד שמור רק במכשיר הזה. כדי להשתמש בו במכשירים אחרים, צריך לשמור אותו בחשבון Growser.}one{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}two{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}other{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{‏סיסמה אחת שמורה רק במכשיר הזה. כדי להשתמש בה במכשירים אחרים, צריך לשמור אותה בחשבון Growser.}one{‏‫{PASSWORD_COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser.}two{‏‫{PASSWORD_COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser.}other{‏‫{PASSWORD_COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{‏סיסמה אחת ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}one{‏‫{PASSWORD_COUNT} סיסמאות ופריטים אחרים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}two{‏‫{PASSWORD_COUNT} סיסמאות ופריטים אחרים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}other{‏‫{PASSWORD_COUNT} סיסמאות ופריטים אחרים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{‏סימנייה אחת שמורה רק במכשיר הזה. כדי להשתמש בה במכשירים אחרים, צריך לשמור אותה בחשבון Growser.}one{‏‫{BOOKMARK_COUNT} סימניות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser.}two{‏‫{BOOKMARK_COUNT} סימניות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser.}other{‏‫{BOOKMARK_COUNT} סימניות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{‏סימנייה אחת ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}one{‏‫{BOOKMARK_COUNT} סימניות ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}two{‏‫{BOOKMARK_COUNT} סימניות ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}other{‏‫{BOOKMARK_COUNT} סימניות ופריטים נוספים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, צריך לשמור אותם בחשבון Growser.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{‏פריט אחד שמור רק במכשיר הזה. כדי להשתמש בו במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותו בחשבון Growser<ph name="END_LINK"/>.}one{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותם בחשבון Growser<ph name="END_LINK"/>.}two{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותם בחשבון Growser<ph name="END_LINK"/>.}other{‏‫{ITEM_COUNT} פריטים שמורים רק במכשיר הזה. כדי להשתמש בהם במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותם בחשבון Growser<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">‏אפשר להשתמש בחשבון Growser או ליצור חשבון חדש</translation>
+<translation id="1896353439080510710">‏השיחות ייבדקו וישמשו כדי לשפר את Brave AI. ‫Gemini מבוסס על AI ויכול לטעות. יש לך אפשרות <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>לשנות את הגדרות הפעילות<ph name="END_LINK_MANAGE_ACTIVITY"/>, כולל מידע על המיקום שלך. <ph name="BEGIN_LINK_LEARN_MORE"/>מידע נוסף על האפשרויות שלך<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">‏השיחות ייבדקו וישמשו כדי לשפר את Brave AI. ‫Gemini מבוסס על AI ויכול לטעות. יכול להיות שחלק מהתוכן לא מתאים לכולם. יש לך אפשרות <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>לשנות את הגדרות הפעילות<ph name="END_LINK_MANAGE_ACTIVITY"/>, כולל מידע על המיקום שלך. <ph name="BEGIN_LINK_LEARN_MORE"/>מידע נוסף על האפשרויות שלך<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{‏התוסף הזה נשמר בחשבון Growser, אבל יכול להיות שיימחקו נתונים מהתוסף שנשמרו רק במכשיר הזה}one{‏התוספים האלה נשמרים בחשבון Growser, אבל יכול להיות שיימחקו נתונים מהתוספים שנשמרו רק במכשיר הזה}two{‏התוספים האלה נשמרים בחשבון Growser, אבל יכול להיות שיימחקו נתונים מהתוספים שנשמרו רק במכשיר הזה}other{‏התוספים האלה נשמרים בחשבון Growser, אבל יכול להיות שיימחקו נתונים מהתוספים שנשמרו רק במכשיר הזה}}</translation>
+<translation id="3523789730715594198">‏אפשר לעדכן את ההגדרות, בכל רגע, כדי להפסיק את הסנכרון. Growser עשויה להתאים אישית את החיפוש ושירותים נוספים על סמך ההיסטוריה שלך.</translation>
+<translation id="8231595707224857577">‏הארגון שלך השבית את האפשרות לשמור כרטיסיות בחשבון Growser</translation>
+<translation id="1031540790849324993">‏כדי לקבל גישה לסיסמאות, לסימניות ולנתונים נוספים בכל המכשירים, צריך לשמור אותם בחשבון Growser</translation>
+<translation id="7044272971260038324">‏כדי למחוק סימניות כפולות, צריך לשמור אותן בחשבון Growser</translation>
+<translation id="5106710135524113413">‏אם התחברת לחשבון, יש לך אפשרות להשתמש בסימניות, בתוספים ובנתונים נוספים ששמורים בחשבון Growser בכל המכשירים</translation>
+<translation id="458475640392126897">‏אחרי הכניסה לחשבון, אפשר להשתמש בעיצובים, בהגדרות ובנתונים נוספים ששמורים בחשבון Growser בכל המכשירים</translation>
+<translation id="8780123805589053431">‏קבלת תיאורי תמונות מ-Growser</translation>
+<translation id="8076549662907665888">‏אם אין לתמונה תיאור מועיל, Growser ינסה לספק לך תיאור. כדי ליצור תיאורים, התמונות נשלחות אל Growser.</translation>
+<translation id="5216674789212441076">‏התכונה מתרגמת באופן אוטומטי כתוביות מיידיות. הכתוביות נשלחות אל Growser לתרגום.</translation>
+<translation id="2955575198481587842">‏צבעי Growser</translation>
+<translation id="5000497292978544380">‏מצב AI בחיפוש Growser</translation>
+<translation id="377490226065453836">‏חלוניות ב-Growser</translation>
+<translation id="2955048943983973430">‏שירותי Growser קשורים</translation>
+<translation id="6214157047210274853">‏עריכה ב-Google Wallet</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="5787582109651427233">‏כדי להוסיף או לנהל <ph name="BEGIN_LINK_LOYALTY_CARDS"/>כרטיסי מועדון לקוחות<ph name="END_LINK_LOYALTY_CARDS"/> או <ph name="BEGIN_LINK_PAYMENT_METHODS"/>אמצעי תשלום<ph name="END_LINK_PAYMENT_METHODS"/> ב-Google Pay, צריך לעבור אל Google Wallet</translation>
+<translation id="3040435070100611531">‏הכרטיסים שלך ב-Google Wallet</translation>
+<translation id="5829544019044013776">‏אמצעי התשלום שלך ב-Google Wallet</translation>
+<translation id="4140668600752387693">‏התכונה הזו מופעלת בעת הכניסה לחשבון Growser.</translation>
+<translation id="7297228218361240128">‏שמירת מידע ב-Google Wallet מדפים שצפית בהם</translation>
+<translation id="4182182457914031017">‏כדי לתת לך הצעות ולשפר את התכונה הזו, כתובת ה-URL ותוכן הדף המלא של האתר שבו ביקרת יישלחו אל Growser</translation>
+<translation id="808488435221187916">‏המידע שלך זמין ב-Google Wallet בכל מכשיר שמחובר לחשבון</translation>
+<translation id="7501338159181931945">‏מפתחות הגישה האלה נשמרים ב-Windows Hello במחשב הזה. הם לא נשמרים בחשבון Growser.</translation>
+<translation id="1921051356055149189">‏עריכה בחשבון Growser</translation>
+<translation id="4498223799912841817">‏הסרה מ-Growser</translation>
+<translation id="3346610836797971718">‏להסיר את כתובת המגורים מהמילוי האוטומטי של Growser?</translation>
+<translation id="6595367601483315266">‏להסיר את הכתובת בעבודה שלך מהמילוי האוטומטי של Growser?</translation>
+<translation id="3068798232942246848">‏להסיר את הפרטים האלה מהמילוי האוטומטי של Growser?</translation>
+<translation id="4713283515261533452">‏כדי למחוק את נתוני הגלישה מהמכשיר הזה בלבד ועדיין לשמור אותם בחשבון שלך ב-Growser, <ph name="BEGIN_LINK"/>עליך לצאת מהחשבון<ph name="END_LINK"/>.</translation>
+<translation id="6641004568837764720">‏כדי למחוק את נתוני הגלישה מכל המכשירים המסונכרנים ומהחשבון שלך ב-Growser, <ph name="BEGIN_LINK"/>עליך להיכנס להגדרות של הסנכרון<ph name="END_LINK"/>.</translation>
+<translation id="7711557916951320264">‏כדי למחוק את נתוני הגלישה מכל המכשירים המסונכרנים ומהחשבון שלך ב-Growser, <ph name="BEGIN_LINK"/>עליך להזין את ביטוי הסיסמה<ph name="END_LINK"/>.</translation>
+<translation id="5680951041809780964">‏כדי למחוק את נתוני הגלישה מכל המכשירים המסונכרנים ומהחשבון שלך ב-Growser, <ph name="BEGIN_LINK"/>עליך להיכנס לחשבון<ph name="END_LINK"/>.</translation>
+<translation id="908980466794178222">‏<ph name="BEGIN_LINK_SEARCH"/>היסטוריית החיפושים<ph name="END_LINK_SEARCH"/> ו<ph name="BEGIN_LINK_GOOGLE"/>סוגי פעילות אחרים<ph name="END_LINK_GOOGLE"/> יכולים להישמר בחשבון Growser אחרי שנכנסים. אפשר למחוק אותם בכל שלב.</translation>
+<translation id="1024884937839269099">‏<ph name="BEGIN_LINK_GOOGLE"/>סוגי פעילות אחרים<ph name="END_LINK_GOOGLE"/> יכולים להישמר בחשבון Growser אחרי שנכנסים. אפשר למחוק אותם בכל שלב.</translation>
+<translation id="6533315466883598769">‏שימוש ב-Google Translate</translation>
+<translation id="6010651352520077187">‏כשההגדרה מופעלת, Google Translate יציע לתרגם אתרים לשפה המועדפת עליכם. אפשר גם לתרגם אתרים באופן אוטומטי באמצעות השירות.</translation>
+<translation id="6873499199714317035">‏כשהאפשרות מופעלת,‏ Brave Translate יציע לתרגם אתרים וקובצי PDF לשפה המועדפת עליך. הוא יכול גם לתרגם אתרים באופן אוטומטי.</translation>
+<translation id="5911030830365207728">Google Translate</translation>
+<translation id="7458168200501453431">‏נעשה שימוש בבדיקת האיות של חיפוש Growser. הטקסט המוקלד בדפדפן נשלח אל Growser.</translation>
+<translation id="8972513834460200407">‏יש לפנות אל מנהל המערכת של הרשת שלך כדי לוודא שחומת האש אינה חוסמת הורדות משרתי Growser.</translation>
+<translation id="3407392651057365886">‏יותר דפים נטענים מראש. דפים יכולים להיטען מראש באמצעות השרתים של Growser כשמתקבלת בקשה מאתרים אחרים.</translation>
+<translation id="1965578266762387357">‏כשמקבלים עזרה בכתיבה, כתובת ה-URL של הדף, התוכן והטקסט נשלחים אל Growser. אין להזין מידע אישי (כמו פרטים רפואיים או פיננסיים)</translation>
+<translation id="3281851196103181918">‏אתר כלשהו שמבקרים בו יכול לשמור כמות נתונים קטנה ב-Growser, בעיקר כדי לאמת שלא מדובר בבוט.</translation>
+<translation id="7321946347180923218">‏במהלך הגלישה, אתרים אחרים יכולים לבדוק ב-Growser ולאמת שסביר להניח שמדובר באדם אמיתי, לפי פרטים שנשמרו בביקור באתר קודם.</translation>
+<translation id="3510488868237982080">‏מידע נוסף על האופן שבו בינה מלאכותית משפיעה על החוויה שלך ועל אמצעי הבקרה שמסופקים על ידי Growser</translation>
+<translation id="3003253259757197230">‏במהלך הגלישה, כתובת ה-URL שמבקרים בהן יישלחו אל Growser כדי לחזות את האתרים הבאים שעשויים להיפתח וכדי להציג לך מידע נוסף על הדף הנוכחי</translation>
+<translation id="69739764870135975">‏אם Growser הוא גם מנוע החיפוש המוגדר אצלך כברירת מחדל, יוצגו לך הצעות משופרות ורלוונטיות מבחינת הקשר.</translation>
+<translation id="8358717005361108959">‏כתובות ה-URL שנכנסת אליהן נשמרות בחשבון Growser</translation>
+<translation id="4674867347456586454">‏כדי להגן עליך בכל האפליקציות של Growser, במהלך הכניסה לחשבון, מתבצע קישור זמני של הנתונים האלה לחשבון Growser.</translation>
+<translation id="8898822736010347272">‏שולח ל-Growser כתובות URL של חלק מהדפים שאליהם נכנסת, פרטים מוגבלים לגבי המערכת וחלק מתוכן הדפים. פעולה זו עוזרת לזהות איומים חדשים ולהגן על כל המשתמשים באינטרנט.</translation>
+<translation id="4255841059940367080">‏הגנה מבוססת-AI בזמן אמת מפני אתרים, הורדות ותוספים מסוכנים, המבוססת על נתוני הגלישה שלך שנשלחים אל Growser</translation>
+<translation id="6053586914913150093">‏כשההגדרה 'גלישה בטוחה' מופעלת, כתובות URL נשלחות לבדיקה. בנוסף, נשלחת דוגמית קטנה הכוללת דפים, הורדות, פעילות של תוספים ופרטי מערכת במטרה לאתר איומים חדשים. כדי להגן עליך בכל האפליקציות של Growser, הנתונים האלה מקושרים באופן זמני לחשבון Growser שלך. ההגנה הזו פעילה רק אם נכנסים לחשבון.</translation>
+<translation id="777637629667389858">‏אחרי שנכנסת לחשבון, המערכת מגינה עליך בשירותי Growser.</translation>
+<translation id="4492544972585416410">‏אחרי שנכנסת לחשבון, הנתונים האלה מקושרים לחשבון Growser כדי להגן עליך בשירותי Growser. לדוגמה, במקרה של אירוע אבטחה, ההגנה ב-Gmail מוגברת.</translation>
+<translation id="6550891580932862748">‏במצב הזה המערכת לא מגינה עליך מפני אתרים, הורדות ותוספים מסוכנים. ההגדרות שקבעת לגלישה הבטוחה במוצרים אחרים של Growser לא יושפעו.</translation>
+<translation id="1153636665119721804">‏תוכנית ההגנה המתקדמת של Growser</translation>
+<translation id="8678192320753081984">‏התוכנית מספקת את רמת האבטחה הגבוהה ביותר של Growser לחשבונות של אנשים שנמצאים בסיכון למתקפות ממוקדות</translation>
+<translation id="7803714812705886512">‏‫Growser משתמשת בפחות נתונים (לדוגמה, חלקים מכתובות URL, פרטי הורדה) כדי לזהות איומים</translation>
+<translation id="8602867356511778172">‏‫Growser משתמשת בנתונים נוספים (לדוגמה, כתובות URL, דגימות של תוכן הדפים, פרטי מערכת) כדי לזהות איומים מהר יותר ובצורה מדויקת יותר</translation>
+<translation id="2547602044908040111">‏אם את/ה פעיל/ה חברתי/ת, עיתונאי/ת, דמות ציבורית, עובד/ת בחירות או בתפקיד אחר שיש בו סיכון גבוה במיוחד, כדאי לך להירשם ל<ph name="BEGIN_LINK"/>תוכנית ההגנה המתקדמת<ph name="END_LINK"/> של Growser.</translation>
+<translation id="5864624288360677142">‏שימוש בברירת המחדל אם היא זמינה וב-DNS של Growser כגיבוי</translation>
+<translation id="7137270216770481232">‏‫Growser איפס את ההגדרות האלה</translation>
+<translation id="8723105215342036961">‏ההגדרות האלה שונו מחוץ ל-Growser. כדי להגן עליך, Growser איפס אותן.</translation>
+<translation id="3099985829883207242">‏כדי לחפש באתר ספציפי או בחלק כלשהו של Growser, מקלידים את קיצור הדרך שלהם בסרגל הכתובות ולאחר מכן מקישים על מקש הקיצור המועדף.</translation>
+<translation id="3172166850967951827">‏חלק מהתוספים יכולים להוסיף מנועי חיפוש ל-Growser</translation>
+<translation id="5433098395236481485">‏הורדת קובצי PDF במקום פתיחה אוטומטית שלהם ב-Growser</translation>
+<translation id="4297918578409923363">‏Growser יקבע מתי אתרים יכולים להפעיל צלילים (מומלץ)</translation>
+<translation id="3721119614952978349">‏ההגדרות שלך ב-Growser</translation>
+<translation id="5900302528761731119">‏תמונת פרופיל Growser</translation>
+<translation id="2928030851119977280">‏הבחירה נשמרה. הבחירה שלך תחול בכניסה לשירותי Growser אחרים.</translation>
+<translation id="1818532843473612004">‏בחשבון Growser שלך</translation>
+<translation id="8511856004631476285">‏כשההגדרה מופעלת, הנתונים נשמרים בחשבון שלך ב-Growser ויש לך אפשרות להשתמש בהם בכל המכשירים. כשההגדרה מושבתת, הנתונים נשמרים רק במכשיר הזה.</translation>
+<translation id="7846296061357476882">‏שירותי Growser</translation>
+<translation id="8032692752324456430">‏הפעולה הזאת תוציא אותך מחשבונות Growser שלך. הסימניות, ההיסטוריה, הסיסמאות ופרטים אחרים יפסיקו לעבור סנכרון.</translation>
+<translation id="3142647462186639376">‏הצפנת נתונים מסונכרנים בעזרת <ph name="BEGIN_LINK"/>ביטוי סיסמה אישי לסנכרון<ph name="END_LINK"/>. אמצעי תשלום וכתובות שנשמרו ב-Google Pay לא יוצפנו. היסטוריית הגלישה ב-Growser לא תסונכרן.</translation>
+<translation id="63566973648609420">‏רק מי שיודע את ביטוי הסיסמה יכול לקרוא את הנתונים המוצפנים. ביטוי הסיסמה לא נשלח אל Growser והיא אינה מאחסנת אותו. אם לא זוכרים את ביטוי הסיסמה או אם רוצים לשנות את ההגדרה הזו, יש <ph name="BEGIN_LINK"/>לאפס את הסנכרון<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">‏יש לך אפשרות לשלוט בדרכים שבהן נשתמש בהיסטוריית הגלישה ביחד עם שאר הנתונים שלך בשירותי Growser</translation>
+<translation id="5728072125198221967">‏שירותי Growser מקושרים</translation>
+<translation id="3848443004871354246">‏חשבון Growser</translation>
+<translation id="3293574207873361017">‏לניהול החשבון שלך ב-Growser</translation>
+<translation id="6901130673208235020">‏כשמחפשים בהיסטוריית הגלישה, היסטוריית החיפוש תוכן הדפים של ההתאמות הטובות ביותר והפלטים מהמודלים שנוצרו נשלחים אל Growser</translation>
+<translation id="3178434360326457238">‏כשגולשים באתרים, תוכן הדפים שלהם מוצפן ונשמר במכשיר. יכול להיות שהביצועים של Growser יושפעו מכך</translation>
+<translation id="8622145666696249878">‏מצב AI בחיפוש Brave ואפליקציות מחוברות</translation>
+<translation id="2760679829473121490">‏הצגת התראות מערכת לגבי תכונות וטיפים של Growser</translation>
+<translation id="6713316345564743478">‏כדי לבדוק אם יש סיסמאות שנחשפו, צריך להיכנס לחשבון Growser</translation>
+<translation id="1342886103232377846">‏כדי לבדוק אם יש סיסמאות שנחשפו, צריך לעבור למנהל הסיסמאות של Growser</translation>
+<translation id="6766488013065406604">‏ל'מנהל הסיסמאות של Growser'</translation>
+<translation id="5408271390996168857">‏במכשיר שלך פועלים אמצעי האבטחה הכי חזקים של Growser</translation>
+<translation id="2888959493235069176">‏‫AI ב-Growser</translation>
+<translation id="5058786435107472268">‏יכול להיות שבודקים אנושיים יראו את הנתונים שנשלחים אל Growser כדי לשפר את טכנולוגיית ה-AI של Growser</translation>
+<translation id="4928488083257788101">‏יכול להיות שבודקים אנושיים יראו את הנתונים שנשלחים אל Growser כדי לשפר את התכונה הזו.</translation>
+<translation id="6690687289858134062">‏אם Growser מוצא שאחת מהסיסמאות שלך נכללת במידע שדלף בפרצה באבטחת מידע, מנהל הסיסמאות של Growser יכול להציע לשנות אותה בשבילך אם החשבון מחובר.</translation>
+<translation id="1377438103060664754">‏אם אחת מהסיסמאות נחשפת בפרצה באבטחת המידע, מנהל הסיסמאות של Growser שואל אם רוצים לשנות אותה לסיסמה חזקה</translation>
+<translation id="1045487161760507186">‏אין צורך לזכור את הסיסמה כי היא נשמרת בשבילך במנהל הסיסמאות של Growser</translation>
+<translation id="2696675923413008404">‏התוכן מהאתר הזה, כולל כתובת ה-URL שלו, נשלח אל Growser ויכול להיות שבודקים אנושיים יראו אותו כדי לשפר את התכונה הזו</translation>
+<translation id="4770046633685474652">‏אפשר לשדרג את Growser באמצעות AI</translation>
+<translation id="4682807230647698604">‏בזמן השימוש בתכונות האלה, נתונים רלוונטיים נשלחים אל Growser כדי ליצור חוויות מבוססות-AI</translation>
+<translation id="9130857050314385402">‏כשמשתמשים במיומנות מסוימת, השמות וכתובות ה-URL של הכרטיסיות נשלחים אל Growser</translation>
+<translation id="6889302653504319751">‏המיומנויות נשמרות בחשבון שלך ב-Growser</translation>
+<translation id="7247922309426191342">‏‫Growser יכול ליצור ולתרגם כתוביות בשפות שמוצגות כאן</translation>
+<translation id="113229251350204705">‏‫Growser יכול ליצור כתוביות בשפות שמוצגות כאן</translation>
+<translation id="2523184218357549926">‏שליחת כתובות אתרים של דפים שבהם ביקרת ל-Growser</translation>
+<translation id="2489769822799748314">‏עזרה בשיפור התכונות והביצועים של Growser</translation>
+<translation id="1236327016477620515">‏שליחת דוחות קריסה וסטטיסטיקת שימוש אל Growser באופן אוטומטי</translation>
+<translation id="4847986390991794208">‏תכונות חכמות של Growser</translation>
+<translation id="4849857027852929587">‏כדי להשתמש בסיסמאות ולשמור אותן בחשבון Growser, עליך לאמת את הזהות שלך</translation>
+<translation id="4571634846305359773">‏כדי שתמיד תהיה לך אפשרות להשתמש בסיסמאות בחשבון שלך ב-Growser, עליך לאמת את הזהות שלך</translation>
+<translation id="1067922213147265141">‏שירותי Growser אחרים</translation>
+<translation id="5611620894475877872">‏הצפנת סיסמאות מסונכרנות באמצעות חשבון Growser</translation>
+<translation id="2934862573358659343">‏שימוש בברירת המחדל של Growser להצפנת הסיסמאות בחשבון Growser</translation>
+<translation id="2234876718134438132">‏סנכרון ושירותי Growser</translation>
+<translation id="90129144187791159">‏החשבון הזה לא משויך ל-Growser, ולכן תכונות כמו סנכרון Growser לא זמינות</translation>
+<translation id="8576758133946664895">Growser Root Store</translation>
+<translation id="465996245977626576">‏‫Growser Root Store מכילה אישורים מרשויות האישורים שנחשבות מהימנות על ידי
+      Chrome Root Program, והיא נבדקת באופן קבוע.</translation>
+<translation id="6792337889847068504">‏מידע נוסף על Growser Root Store שייפתח בכרטיסייה חדשה.</translation>
+<translation id="3691353018566626378">‏אם מוחקים אישור שרת, Growser לא ישתמש בו יותר כדי לזהות שרתים.</translation>
+<translation id="1378122021175898739">‏פרטי מערכת של Growser</translation>
+<translation id="1017340475205725100">‏היומנים של משתמשי Growser ב-ChromeOS</translation>
+<translation id="7635904580734496104">‏מספר חשבון Growser</translation>
+<translation id="5221420127618874650">‏שמירה בחשבון Growser שלך</translation>
+<translation id="691102290537033604">‏התוסף יוכל להריץ קוד שלא נבדק על ידי Growser. יכול להיות שזה לא בטוח. מומלץ להפעיל את האפשרות הזו רק אם ברור לך במה מדובר.</translation>
+<translation id="2375391460087228850">‏אפליקציות Growser</translation>
+<translation id="7370738934099833954">‏תוספים הם רכיבים נוספים ל-Growser שיכולים לעזור לך לעשות יותר</translation>
+<translation id="6629808816989244742">‏תוספים הם רכיבים נוספים ל-Growser שיכולים לעזור לך לעשות יותר</translation>
+<translation id="7474944013493005173">‏תוספים הם רכיבים נוספים ל-Growser שיכולים לעזור לך</translation>
+<translation id="5608497824592875805">‏רק אנשי קשר עם חשבון Growser. <ph name="LINK_BEGIN"/>אל אנשי הקשר<ph name="LINK_END"/></translation>
+<translation id="1958324393151249273">‏כדי להשתמש ב'שיתוף בקרבת מקום' עם אנשי הקשר האלה, יש להוסיף להם את כתובת האימייל שמשויכת לחשבון Growser שלהם.</translation>
+<translation id="4588215749100790315">‏כדי להשתמש ב<ph name="FEATURE_NAME"/> עם אנשי הקשר האלה, עליך להוסיף להם את כתובת האימייל שמשויכת לחשבון Growser שלהם.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{‏איש קשר אחד לא זמין. כדי להשתמש ב'שיתוף בקרבת מקום' עם אנשי הקשר שלך, יש להוסיף להם את כתובת האימייל שמשויכת לחשבון Growser שלהם.}one{‏# אנשי קשר אינם זמינים. כדי להשתמש ב'שיתוף בקרבת מקום' עם אנשי הקשר שלך, יש להוסיף להם את כתובות האימייל שמשויכות לחשבונות Growser שלהם.}two{‏# אנשי קשר אינם זמינים. כדי להשתמש ב'שיתוף בקרבת מקום' עם אנשי הקשר שלך, יש להוסיף להם את כתובות האימייל שמשויכות לחשבונות Growser שלהם.}other{‏# אנשי קשר אינם זמינים. כדי להשתמש ב'שיתוף בקרבת מקום' עם אנשי הקשר שלך, יש להוסיף להם את כתובות האימייל שמשויכות לחשבונות Growser שלהם.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{‏איש קשר אחד לא זמין. כדי להשתמש ב‘<ph name="FEATURE_NAME"/>' עם איש הקשר הזה, צריך להוסיף לאנשי הקשר שלך את כתובת האימייל שמשויכת לחשבון Growser שלו.}one{‏# אנשי קשר לא זמינים. כדי להשתמש ב‘<ph name="FEATURE_NAME"/>' עם אנשי הקשר האלה, צריך להוסיף לאנשי הקשר שלך את כתובות האימייל שמשויכות לחשבונות Growser שלהם.}two{‏# אנשי קשר לא זמינים. כדי להשתמש ב‘<ph name="FEATURE_NAME"/>' עם אנשי הקשר האלה, צריך להוסיף לאנשי הקשר שלך את כתובות האימייל שמשויכות לחשבונות Growser שלהם.}other{‏# אנשי קשר לא זמינים. כדי להשתמש ב‘<ph name="FEATURE_NAME"/>' עם אנשי הקשר האלה, צריך להוסיף לאנשי הקשר שלך את כתובות האימייל שמשויכות לחשבונות Growser שלהם.}}</translation>
+<translation id="3115470387083988713">‏כדי לשפר את הבטיחות, אפשר להצפין את הסיסמאות במכשיר שלך לפני שהן נשמרות בחשבון Growser</translation>
+<translation id="8042331986490021244">‏הסיסמאות שלך מוצפנות במכשיר לפני שהן נשמרות במנהל הסיסמאות של Growser</translation>
+<translation id="1440474484372226561">‏הסיסמה שלך לא שותפה. רצוי לבדוק את החיבור לאינטרנט ולוודא שנכנסת לחשבון ב-Growser. אחר כך אפשר לנסות שוב.</translation>
+<translation id="6667187897999649121">‏בשלב הזה אפשר לשתף סיסמאות רק עם חברים בקבוצה המשפחתית. ניתן <ph name="BEGIN_LINK"/>ליצור קבוצה משפחתית<ph name="END_LINK"/> של עד 6 אנשים ולהפיק יותר ממוצרי Growser ומהמינויים לשירותי Growser.</translation>
+<translation id="3767835232661747729">‏בשלב הזה אפשר לשתף סיסמאות רק עם חברים בקבוצה המשפחתית. עליך <ph name="BEGIN_LINK"/>להזמין בני משפחה<ph name="END_LINK"/> להצטרף לקבוצה, וכך ניתן יהיה להפיק יותר ממוצרי Growser ומהמינויים לשירותי Growser.</translation>
+<translation id="4509277363725254222">‏כשמשתפים עותק של <ph name="BEGIN_BOLD_USERNAME"/>שם המשתמש<ph name="END_BOLD_USERNAME"/> ו<ph name="BEGIN_BOLD_PASSWORD"/>הסיסמה<ph name="END_BOLD_PASSWORD"/>, החברים בקבוצה המשפחתית יכולים למלא את הפרטים האלה באמצעות מנהל הסיסמאות של Growser.</translation>
+<translation id="3618647122592024084">‏עכשיו <ph name="RECIPIENT_NAME"/> יכול/ה להשתמש בשם המשתמש ובסיסמה שלך במנהל הסיסמאות של Growser. יהיה צורך לעבור אל <ph name="WEBSITE"/> כדי להיכנס.</translation>
+<translation id="7191632649590906354">‏עכשיו החברים בקבוצה המשפחתית יכולים להשתמש בשם המשתמש ובסיסמה שלך כשהם משתמשים במנהל הסיסמאות של Growser. צריך לבקש מהם לעבור אל <ph name="WEBSITE"/> כדי להיכנס.</translation>
+<translation id="2016576853804262709">‏בן המשפחה שלך לא יכול לקבל סיסמאות כרגע. צריך לבקש ממנו לעדכן את Growser ולסנכרן את הסיסמאות.</translation>
+<translation id="7452861405952250711">‏ל<ph name="BRAND"/> יש אפשרות לבדוק את הסיסמאות כשנכנסים באמצעות חשבון Growser</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{‏סיסמה אחת ({COUNT}) שמורה רק במכשיר הזה. כדי להשתמש בה במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותה בחשבון Growser<ph name="END_LINK"/>.}one{‏{COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותן בחשבון Growser<ph name="END_LINK"/>.}two{‏{COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותן בחשבון Growser<ph name="END_LINK"/>.}other{‏{COUNT} סיסמאות שמורות רק במכשיר הזה. כדי להשתמש בהן במכשירים אחרים, <ph name="BEGIN_LINK"/>צריך לשמור אותן בחשבון Growser<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">‏מנהל הסיסמאות של Growser באינטרנט</translation>
+<translation id="1368798504801939187">‏כדי לראות את הסיסמאות גם כשלא משתמשים ב-Growser או ב-Android, נכנסים לחשבון בכתובת <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
+<translation id="829923460755755423">‏ניתן להוסיף קיצור דרך למנהל הסיסמאות של Growser</translation>
+<translation id="7244677273667272006">‏כדי להוסיף סיסמאות ולהשתמש בהן בכל המכשירים שמחוברים לחשבון Brave, עליך לאמת את הזהות שלך</translation>
+<translation id="8189517459248805166">‏הסיסמה שלך לאתר <ph name="WEBSITE"/> שמורה במכשיר הזה ובחשבון Growser. מאיפה למחוק את הסיסמה?</translation>
+<translation id="9101265711096405922">‏מחשבון Growser שלך</translation>
+<translation id="927421426408921503">‏להעביר את הסיסמאות השמורות לחשבון Growser שלך?</translation>
+<translation id="5854237678863974330">‏כששומרים סיסמאות בחשבון Growser, אפשר להשתמש בהן במכשיר הזה ובכל מכשיר אחר שבו נכנסים לחשבון</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{‏שמירת הסיסמה של <ph name="WEBSITE"/> בחשבון שלך ב-Growser}one{‏שמירת הסיסמאות של <ph name="WEBSITE"/> בחשבון שלך ב-Growser}two{‏שמירת הסיסמאות של <ph name="WEBSITE"/> בחשבון שלך ב-Growser}other{‏שמירת הסיסמאות של <ph name="WEBSITE"/> בחשבון שלך ב-Growser}}</translation>
+<translation id="8095189618468031638">‏כדי להשתמש בהן במכשירים אחרים, צריך לשמור אותן בחשבון Growser</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{‏הסיסמה נשמרה בחשבון Growser שלך, <ph name="USER_EMAIL"/>}one{‏הסיסמאות נשמרו בחשבון Growser שלך, <ph name="USER_EMAIL"/>}two{‏הסיסמאות נשמרו בחשבון Growser שלך, <ph name="USER_EMAIL"/>}other{‏הסיסמאות נשמרו בחשבון Growser שלך, <ph name="USER_EMAIL"/>}}</translation>
+<translation id="1286604678719026234">‏הסיסמה הזו שמורה רק במכשיר הזה. כדי להשתמש בה במכשירים אחרים, עליך לשמור אותה בחשבון Growser עם הכתובת <ph name="USER_EMAIL"/>.</translation>
+<translation id="11353874453755012">‏לשמור בחשבון Growser?</translation>
+<translation id="9031082696306594802">‏כדי לאפשר ל-Growser להשלים את המשימה הזו, צריך להיכנס לחשבון</translation>
+<translation id="7412981914901765024">‏מנהל הסיסמאות של Growser יכול להגדיר לך סיסמה חזקה חדשה ולשמור אותה בחשבון <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">‏מנהל הסיסמאות של Growser יכול להגדיר לך סיסמה חזקה חדשה ולשמור אותה בחשבון <ph name="EMAIL"/>.</translation>
+<translation id="309984825599745401">‏מידע נוסף על התכונה הזו ועל נתונים רלוונטיים שנשלחים אל Growser</translation>
+<translation id="4786289993714497244">‏תוכן מדפי סיסמאות ומידע קשור נשלחים אל Growser ועוברים בדיקה אנושית. הסיסמה שלך מוצפנת ואף אחד לא יכול לראות אותה <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">‏אם Growser מוצא אחת מהסיסמאות בפרצה באבטחת המידע שפורסמה לציבור, תופיע הצעה לשנות את הסיסמה אם החשבון מחובר</translation>
+<translation id="899508106612248318">‏שינוי אוטומטי של הסיסמה של <ph name="WEBSITE"/> באמצעות Growser</translation>
+<translation id="5710383353978348431">‏אם Growser מוצא שאחת מהסיסמאות שלך נכללת במידע שדלף בפרצה באבטחת מידע, מנהל הסיסמאות של Growser יכול להציע לשנות אותה בשבילך אם החשבון מחובר. <ph name="BEGIN_LINK"/>מידע נוסף על התהליך האוטומטי לשינוי סיסמאות<ph name="END_LINK"/></translation>
+<translation id="560743248410493208">‏‫Growser צריך עזרה כדי לשנות את הסיסמה</translation>
+<translation id="4246636650471208372">‏כדי להשתמש במיומנויות, צריך להיכנס ל-Growser באמצעות חשבון Growser שבו מופעל Gemini ב-Growser</translation>
+<translation id="8111843310458688756">‏התכונה "מיומנויות" מושבתת עכשיו. כדי להתחיל, צריך לעדכן את ההגדרות של Growser.</translation>
+<translation id="118870493070173224">‏המיומנויות נשמרות בחשבון Growser,‏</translation>
+<translation id="3176984568033229317">‏הוספת חיפוש Growser ל-Edge</translation>
+<translation id="3166256634240273583">‏אפשר להשתמש בחיפוש Growser ישירות מסרגל הכתובות של הדפדפן וכשפותחים כרטיסייה חדשה.</translation>
+<translation id="76131528886466333">‏התקנת התוסף "חיפוש Growser ל-Microsoft Edge"</translation>
+<translation id="8323744572398547859">‏כדי לקבל את הכרטיסיות מהמכשירים האחרים שלך, צריך להיכנס לחשבון ולסנכרן את ההיסטוריה. סיסמאות ונתונים נוספים יופיעו בכל המכשירים שלך. בהגדרות אפשר תמיד להפסיק את הסנכרון. ‫Growser עשויה להתאים אישית את החיפוש ושירותים נוספים על סמך ההיסטוריה שלך.</translation>
+<translation id="7907312522152480478">‏כדי לקבל את הכרטיסיות מהמכשירים האחרים שלך, עליך לאמת את הזהות ולסנכרן את ההיסטוריה ואת הכרטיסיות. בהגדרות אפשר תמיד להפסיק את הסנכרון. ‫Growser עשויה להתאים אישית את החיפוש ושירותים נוספים על סמך ההיסטוריה שלך.</translation>
+<translation id="2259337945538989999">‏כדי להעביר כרטיסיות מהמכשירים האחרים שלך, עליך לאמת את הזהות שלך. תמיד אפשר להיכנס להגדרות ולהפסיק את הסנכרון. ‫Growser עשויה להתבסס על ההיסטוריה שלך כדי להתאים בשבילך את החיפוש ושירותים נוספים.</translation>
+<translation id="3240718227457961717">‏כדי לראות כרטיסיות מהמכשירים האחרים שלך, צריך לסנכרן את ההיסטוריה ואת הכרטיסיות עם <ph name="ACCOUNT_EMAIL"/>. בהגדרות אפשר תמיד להפסיק את הסנכרון. ‫Growser עשויה להתאים אישית את החיפוש ושירותים נוספים על סמך ההיסטוריה שלך.</translation>
+<translation id="2246549592927364792">‏רוצה לקבל תיאורי תמונות מ-Growser?</translation>
+<translation id="6842321291404176019">‏ניהול חשבון ‎&amp;Growser שלך</translation>
+<translation id="7782102568078991263">‏אין יותר הצעות מ-Growser</translation>
+<translation id="1125610294554423504">Growser &amp;Labs…</translation>
+<translation id="3592763781862723495">‏התנאים וההגבלות של Growser ישתנו ב-31 במרץ</translation>
+<translation id="4863113847665206034">‏נתוני הגרסה של Growser Enterprise</translation>
+<translation id="8880009256105053174">‏חיפוש בדף הזה באמצעות Growser…</translation>
+<translation id="8643443571868262066">‏הקובץ <ph name="FILE_NAME"/> עשוי להיות מסוכן. האם לשלוח אותו לסריקה באמצעות ההגנה המתקדמת של Growser?</translation>
+<translation id="9112786533191410418">‏הקובץ <ph name="FILE_NAME"/> עלול להיות מסוכן. לשלוח אל Growser לצורך סריקה?</translation>
+<translation id="5261799091118902550">‏הקובץ עשוי להיות וירוס או תוכנה זדונית. ניתן לשלוח אותו ל-Growser כדי לבדוק אם הוא לא בטוח.</translation>
+<translation id="6427068192186142792">‏Growser חסם עכשיו הורדה של קובץ מסוכן. עם הגנה משופרת, נהנים מאבטחה ברמה עוד יותר חזקה.</translation>
+<translation id="3601817089411059195">‏הקובץ <ph name="FILENAME"/> עלול להיות מסוכן. כדאי להוסיף סיסמה אם רוצים ש-Growser יאמת את הקובץ, או שאפשר להוריד אותו ישירות.</translation>
+<translation id="8558379661202483425">‏אפליקציות Growser &gt; ‏<ph name="APP_NAME"/></translation>
+<translation id="7952238695786927848">‏דפדפן Growser הסיק שלא מתאים לך לקבל התראות מהאתר הזה. הבקשות הוסתרו כדי לצמצם את ההפרעות.</translation>
+<translation id="3714312445688817444">‏דפדפן Growser הסיק שלא מתאים לך להשתמש במיקום באתר הזה. הבקשות הוסתרו כדי לצמצם את ההפרעות.</translation>
+<translation id="7178558589762724625">‏אפליקציה של צד שלישי רוצה לקבל שליטה מלאה בסשן הזה של Growser כדי לבצע בו ניפוי באגים. ההרשאות האלה כוללות גישה לנתונים השמורים, לקובצי Cookie ולנתונים מאתרים, וגם את היכולת לנווט לכל כתובת URL.</translation>
+<translation id="691816738008428630">‏תוכניות שירות של Growser לקבצים</translation>
+<translation id="8376236901471830989">‏ניתוח מסמכים ב-Growser</translation>
+<translation id="5075779086521388873">‏בנוסף, יתקבלו סיסמאות ונתונים נוספים מהחשבון שלך ב-Growser.</translation>
+<translation id="9081137272142533824">‏כדי לאשר ל<ph name="CHILD_NAME"/> להתקין תוספים בעתיד בלי אישור ממך, עליך לפתוח את אפליקציית Family Link במכשיר שלך ולעדכן את הגדרות Growser של <ph name="CHILD_NAME"/>.</translation>
+<translation id="3841738495771204227">‏תוכנית אחרת במחשב שלך הוסיפה אפליקציה שעשויה לשנות את אופן הפעולה של Growser.</translation>
+<translation id="7126263064588272381">‏תוכנה אחרת במחשב שלך הוסיפה תוסף שעשוי לשנות את אופן הפעולה של Growser.</translation>
+<translation id="4172864922628327657">‏תוכנית אחרת במחשב שלך הוסיפה עיצוב שעשוי לשנות את אופן הפעולה של Growser.</translation>
+<translation id="3105796011181310544">‏להחזיר אל Growser?</translation>
+<translation id="4837128290434901661">‏לשנות חזרה אל Google Search?</translation>
+<translation id="3943902841682071">‏גרסאות ישנות של אפליקציות Growser לא ייפתחו במכשירי Windows אחרי דצמבר 2022. עליך לפנות לאדמין כדי לעדכן לגרסה חדשה או להסיר את האפליקציה הזו.</translation>
+<translation id="8819011161186914037">‏אפליקציות Growser עוברות לאפליקציות מסוג Progressive Web App. אפליקציית Growser הזו הותקנה בדפדפן על ידי הארגון שלך. כדי לפתוח Progressive Web App מרשימת האפליקציות, קודם צריך לפנות לאדמין ולבקש להסיר את אפליקציית Growser. בינתיים אפשר להיכנס אל <ph name="EXTENSION_LAUNCH_URL"/> כדי לפתוח את <ph name="EXTENSION_NAME"/> באינטרנט.</translation>
+<translation id="646124512503317592">‏גרסאות ישנות של אפליקציות Growser לא ייפתחו במכשירי Windows אחרי דצמבר 2022. ניתן לבדוק אם יש גרסה חדשה להורדה.</translation>
+<translation id="933653713937577409">‏מידע נוסף על אפליקציות Growser שלא נתמכות</translation>
+<translation id="4092709865241032354">‏כדי לעזור למנהל הסיסמאות של Growser לשמור את פרטי הכניסה, עליך להוסיף את שם המשתמש שלך באתר הזה</translation>
+<translation id="1050292285963299821">‏המשך השימוש בסיסמאות בחשבון Growser שלך</translation>
+<translation id="623821062113722442">‏סיסמאות ימשיכו להישמר בחשבון Growser</translation>
+<translation id="4769005558293498755">‏סיסמאות נשמרות בחשבון Growser כדי לאפשר לך להשתמש בהן בכל המכשירים</translation>
+<translation id="6247557882553405851">‏מנהל הסיסמאות של Growser</translation>
+<translation id="5902333873367271103">‏כדי שהסיסמה תהיה זמינה בכל המכשירים שמחוברים לחשבון Growser, עליך לאמת את הזהות שלך</translation>
+<translation id="6520087076882753524">‏יש לך אפשרות להציג את הסיסמאות השמורות ולנהל אותן במנהל הסיסמאות של Growser</translation>
+<translation id="5181172023548002891">‏נשמרה במנהל הסיסמאות של Growser בחשבון <ph name="ACCOUNT"/></translation>
+<translation id="7668423670802040666">‏שמורה במנהל הסיסמאות של Growser בחשבון <ph name="ACCOUNT"/></translation>
+<translation id="6364173777171379284">‏אפשר לשמור סיסמאות בצורה בטוחה בחשבון Growser, כך שלאחר מכן לא יהיה יותר צורך להקליד אותן ידנית</translation>
+<translation id="8035640035083640426">‏לאחר שנכנסת לחשבון Growser, הסיסמאות שלך תמיד זמינות</translation>
+<translation id="9010330063886818303">‏כדי לשמור סיסמאות בחשבון Growser, יש להיכנס ולהפעיל את הסנכרון.</translation>
+<translation id="2618542259010630366">‏כדי לשמור סיסמאות בחשבון Growser, יש להפעיל את הסנכרון.</translation>
+<translation id="6307677019050188653">‏‫Growser טוען תכונות ניסיוניות מקובץ של שורת פקודה. זה עשוי להשפיע על היציבות והאבטחה.</translation>
+<translation id="7602868996817972616">‏שאלה ל-Growser לגבי הדף הזה</translation>
+<translation id="7084095352418993433">‏אפשר לשאול את Growser לגבי הדף הזה: <ph name="PAGE_TITLE"/></translation>
+<translation id="5563234215388768762">‏אפשר לחפש ב-Growser או להקליד כתובת אתר</translation>
+<translation id="4097560579602855702">‏חיפוש ב-Growser</translation>
+<translation id="6621282332208609777">‏אפשר לשאול את Growser או להקליד כתובת URL</translation>
+<translation id="835927394551949760">‏שאלות ל-Growser</translation>
+<translation id="2856216380429599274">‏ברירת המחדל של Growser</translation>
+<translation id="4334778460914339013">‏העיצוב עודכן לברירת המחדל של Growser</translation>
+<translation id="2983311431122838216">‏איך משתמשים במצב AI בחיפוש Growser</translation>
+<translation id="6998036632333022623">‏שיתוף הכרטיסיות עם Growser</translation>
+<translation id="1957188536718247425">‏אפשר לשאול את Growser לגבי הכרטיסייה הקודמת</translation>
+<translation id="964903383988132751">‏אפשר לשאול את Growser לגבי הכרטיסייה הקודמת: <ph name="TAB_TITLE"/></translation>
+<translation id="1168799042879144934">‏אפשר לשאול את Growser לגבי הדף הקודם</translation>
+<translation id="4857506880242459832">‏אפשר לשאול את Growser לגבי הדף הקודם: <ph name="PAGE_TITLE"/></translation>
+<translation id="5918150687673977578">‏מוצגות לך הצעות להתאמה אישית של Growser כדי שיהיה לך קל יותר להשתמש בו לצרכים היומיומיים.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        ניתן לנהל את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות ב"התאמה אישית של Growser".</translation>
+<translation id="5587243084217793846">‏מוצגות לך הצעות לקבצים כדי לעזור לך לחזור לפעילות האחרונה שלך ב-Google Drive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        ניתן לנהל את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות ב'התאמה אישית של Growser'.</translation>
+<translation id="3309585159276256701">‏מוצגות לך הצעות לקבצים כדי שיהיה לך קל לחזור לפעילות האחרונה שלך ב-Microsoft SharePoint וב-OneDrive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        אפשר לנהל את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות בקטע "התאמה אישית של Growser".</translation>
+<translation id="7812170317334653156">‏יומן Growser מוסתר</translation>
+<translation id="6913051485529944333">‏יומן Growser לא יוצג יותר בדף הזה</translation>
+<translation id="6696214841962677136">‏היומן שלך מוצג כרגע כדי לעזור לך לעבור בקלות לאירוע הבא ביומן Growser.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        אפשר לשנות את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות ב'התאמה אישית של Growser'.</translation>
+<translation id="2845276301195220700">‏פעולות נוספות ביומן Growser</translation>
+<translation id="1885089541024391265">‏יומן Growser</translation>
+<translation id="1296410481664942178">‏לא להציג את יומן Growser</translation>
+<translation id="4880295985240000243">‏היומן שלך מוצג כרגע כדי לעזור לך לעבור בקלות לאירוע הבא ביומן Outlook.
+       <ph name="BREAK"/>
+       <ph name="BREAK"/>
+       אפשר לנהל את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות בקטע "התאמה אישית של Growser".</translation>
+<translation id="6474021817475285003">‏הצגת פרטים נוספים ביומן Brave</translation>
+<translation id="9066394310994446814">‏הפריט הזה מוצג לך על סמך הפעילות הקודמת שלך בשירותי Growser. בכתובת <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> מוצגים הנתונים שלך, ואפשר למחוק אותם או לשנות את ההגדרות.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        ניתן למצוא מידע על הנתונים שנאספים על ידי Growser והסיבות לכך בכתובת <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
+<translation id="5730739935948075356">‏מוצגים דפים שביקרת בהם והצעות לחיפושים כדי שיהיה קל לחזור לפעילות האחרונה שלך.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        ניתן לנהל את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות ב'התאמה אישית של Growser'.</translation>
+<translation id="1527457583170535338">‏מוצגות לך הצעות לחיפושים והנחות לקניות שעשויות לעניין אותך על סמך הפעילות שלך מהזמן האחרון.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        תמיד אפשר לנהל את ההגדרות בכרטיס הזה, או לראות עוד אפשרויות ב'התאמה אישית של Growser'.</translation>
+<translation id="8526019066138627163">‏מוצגות לך כרטיסיות ממכשירים אחרים כדי שיהיה לך קל לחזור לפעילות האחרונה.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        ניתן לנהל את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות ב'התאמה אישית של Growser'.</translation>
+<translation id="8827376900981477247">‏כדי להקל עליך להמשיך מהמקום שבו הפסקת, קבוצות הכרטיסיות שהשתמשת בהן לאחרונה מופיעות כאן.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        אפשר לנהל את ההגדרות דרך התפריט בכרטיס או לראות עוד אפשרויות בקטע "התאמה אישית של Growser".</translation>
+<translation id="7868070199056978976">‏הורדת Growser למכשיר הנייד</translation>
+<translation id="3098738509270989275">‏כדאי להוריד את Growser ל-iOS כדי לגשת לכרטיסיות, לסימניות ולסיסמאות בטלפון.</translation>
+<translation id="6548945820758901244">‏פתיחת החלונית הצדדית של חיפוש Growser</translation>
+<translation id="1157952955648710254">‏סגירת החלונית הצדדית של חיפוש Growser</translation>
+<translation id="8376752431516546391">‏החלונית הצדדית של חיפוש Growser</translation>
+<translation id="4621866192918370652">‏אפשר לחפש את הדף הזה ב-Growser כדי לקבל עוד מידע שימושי</translation>
+<translation id="2360792123962658445">‏כדי לקבל סיכום של הדף, חיפושים קשורים ומידע שימושי נוסף על הדף הזה, צריך ללחוץ על כפתור החלונית הצדדית של חיפוש Growser בסרגל הכלים</translation>
+<translation id="6868193750403948178">‏התאמה אישית של Growser</translation>
+<translation id="5009064339929592579">‏לשמור בתיקייה בחשבון Growser שלך?</translation>
+<translation id="7400528739136719497">‏יכול להיות שחלק מהקולות של Growser לא זמינים כרגע</translation>
+<translation id="4857677595331912231">‏כדי להציג לך תשובות רלוונטיות יותר, התוכן וכתובת ה-URL של הכרטיסייה הנוכחית משותפים עם Brave. אפשר להוסיף או להסיר כרטיסיות במהלך הגלישה.</translation>
+<translation id="5639212636098910819">‏להישאר ב-Growser</translation>
+<translation id="3252169590975855820">‏אפשר לראות את הסיסמה במנהל הסיסמאות של Growser</translation>
+<translation id="3843323136102787632">‏צריך להוריד את דפדפן Growser עם קוד ה-QR הזה ולהיכנס לחשבון Growser.</translation>
+<translation id="9136966630767081659">‏טיפ ל-Growser</translation>
+<translation id="5743876629139760900">‏תוספים הם רכיבים נוספים ל-Growser שיכולים לעזור לך לשמור על סדר וארגון, לפשט משימות ולהתאים אישית את הגלישה</translation>
+<translation id="2694280280138200129">‏החיבור שלך תמיד מאובטח, אלא אם תתקבל הודעה שונה מ-Growser</translation>
+<translation id="3567433952279331449">‏מתאימים אישית את Growser כדי לשנות את מראה הדפדפן</translation>
+<translation id="1856921079189283630">‏לוחצים על "התאמה אישית של Growser"</translation>
+<translation id="3656717592188518245">‏עכשיו אפשר לשנות את המראה של הדפדפן בכל שלב דרך התפריט "התאמה אישית של Growser"</translation>
+<translation id="2014729156921901">‏כדי לחסוך בזיכרון, Growser הסיר חלק מהתוכן</translation>
+<translation id="1616505795285943236">‏להפעיל גם גרסה משופרת של גלישה בטוחה לפרופיל Growser הזה?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{‏הסיסמה שנחשפה הוחלפה בהצלחה.
+
+נותרה עוד סיסמה אחת שנחשפה. לפי מנהל הסיסמאות של Growser, מומלץ לשנות את הסיסמה הזו עכשיו.}one{‏הסיסמה שנחשפה הוחלפה בהצלחה.
+
+נותרו עוד # סיסמאות שנחשפו. לפי מנהל הסיסמאות של Growser, מומלץ לשנות את הסיסמאות האלו עכשיו.}two{‏הסיסמה שנחשפה הוחלפה בהצלחה.
+
+נותרו עוד # סיסמאות שנחשפו. לפי מנהל הסיסמאות של Growser, מומלץ לשנות את הסיסמאות האלו עכשיו.}other{‏הסיסמה שנחשפה הוחלפה בהצלחה.
+
+נותרו עוד # סיסמאות שנחשפו. לפי מנהל הסיסמאות של Growser, מומלץ לשנות את הסיסמאות האלו עכשיו.}}</translation>
+<translation id="3023028874856327238">‏אפשר לשמור את הסיסמה הזו בחשבון Growser או רק במכשיר</translation>
+<translation id="6662394424395160792">‏אפשר להשתמש במנהל הסיסמאות של Growser כדי להיכנס לאתרים מהר יותר מכל המכשירים</translation>
+<translation id="5195408296304472010">‏כדי לשמור סיסמאות חזקות באמצעות מנהל הסיסמאות של Growser, צריך להיכנס ל-Growser</translation>
+<translation id="4069802351872017480">‏אפשר לשמור סיסמאות באמצעות "מנהל הסיסמאות של Growser" כשמחוברים ל-Growser</translation>
+<translation id="5530977410273748884">‏כדי לשמור את הסיסמה במנהל הסיסמאות של Growser, צריך ללחוץ על המפתח</translation>
+<translation id="2743378970365831481">‏כדי לשמור את הסיסמה במנהל הסיסמאות של Growser, צריך להוסיף את סמל מנהל הסיסמאות לסרגל המיקום</translation>
+<translation id="3635353578505343390">‏שליחת משוב ל-Growser</translation>
+<translation id="3192586965067888278">‏יש לתאר בפירוט את הבעיה. המשוב יישלח אל Growser לבדיקה אנושית, ויכול להיות שנשתמש בו כדי לשפר או לפתח מוצרים ושירותים של Growser.</translation>
+<translation id="6333064448949140209">‏הקובץ יישלח אל Growser לניפוי באגים</translation>
+<translation id="93343527085570547">‏כדי לבקש שינויי תוכן מסיבות משפטיות, צריך לעבור ל<ph name="BEGIN_LINK1"/>דף העזרה המשפטית<ph name="END_LINK1"/>. חלק מפרטי המערכת ופרטים מסוימים לגבי החשבון עשויים להישלח אל Growser. אנחנו נשתמש במידע שמתקבל ממך כדי לטפל בבעיות טכניות ולשפר את השירותים שלנו, בכפוף ל<ph name="BEGIN_LINK2"/>מדיניות הפרטיות<ph name="END_LINK2"/> ול<ph name="BEGIN_LINK3"/>תנאים ולהגבלות<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">‏הנתונים שבחרת הוסרו מ-Growser ומהמכשירים המסונכרנים. ייתכן שבכתובת <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> עדיין יתאפשר לך לגשת לסוגים אחרים של היסטוריית גלישה בחשבון Growser, כמו חיפושים ופעילות משירותים אחרים של Growser.</translation>
+<translation id="967965329294419603">‏הנתונים של Growser נמחקו</translation>
+<translation id="1597736167243418494">‏(דפי שגיאה ב-Growser)</translation>
+<translation id="3372478764182952159">‏דפדפן Growser עם החשבון הזה ב-Growser</translation>
+<translation id="2577981599306533385">‏הגישה של <ph name="MEMBER_FULL_NAME"/> ‏(<ph name="EMAIL"/>) לקבוצת הכרטיסיות "<ph name="GROUP_NAME"/>", וגם האפשרות ליצור איתך אינטראקציה בשירותי Growser, יאבדו באופן מיידי.</translation>
+<translation id="1917766536967060661">‏הגישה שלך לקבוצת הכרטיסיות '<ph name="GROUP_NAME"/>', וגם האפשרות של <ph name="BLOCKED_MEMBER_FULL_NAME"/> ‏(<ph name="BLOCKED_MEMBER_EMAIL"/>) ליצור איתך אינטראקציה בשירותי Growser, יאבדו באופן מיידי.</translation>
+<translation id="2417535973197532627">‏כדי לשתף כרטיסיות ולעבוד ביחד עם אנשים אחרים, צריך להיכנס ל-Growser ולסנכרן את ההיסטוריה ואת הכרטיסיות. סיסמאות ונתונים נוספים יופיעו בכל המכשירים שלך.</translation>
+<translation id="64301400193488735">‏כדי לשתף קבוצות של כרטיסיות או להצטרף אליהן, צריכה להיות לך אפשרות להיכנס ל-Growser</translation>
+<translation id="8040715633918382311">‏כשהארגון מגביל את האפשרות לשמור בחשבון Growser, לא ניתן לשתף קבוצות של כרטיסיות או להצטרף אליהן</translation>
+<translation id="7224231921984484941">‏כדי לשתף, להצטרף ולשתף פעולה בקבוצות של כרטיסיות, צריך לפתוח את ההגדרות ולהפעיל את האפשרות 'התרת כניסה אל Growser'</translation>
+<translation id="5328048595378098795">‏יש גרסה חדשה זמינה של Growser</translation>
+<translation id="7415249272773209705">‏<ph name="APP_NAME"/> משתף כרטיסיית Growser.</translation>
+<translation id="7714085981364518713">‏<ph name="APP_NAME"/> משתף כרטיסייה ואודיו של Growser.</translation>
+<translation id="2410649455830574015">‏שליחה אוטומטית של דוחות קריסה וסטטיסטיקות שימוש ל-Growser</translation>
+<translation id="3051767373530645849">‏הושבת על-ידי Growser. ייתכן שהתוסף הזה לא בטוח.</translation>
+<translation id="2357378493576302986">‏<ph name="THIRD_PARTY_TOOL_NAME"/> רוצה לשחזר את הגדרות Growser לברירת המחדל המקורית שלהן. הפעולה הזו תגרום לאיפוס דף הבית, דף הכרטיסייה החדשה ומנוע החיפוש, תשבית את התוספים, ותבטל את ההצמדה של כל הכרטיסיות. כתוצאה מכך יימחקו גם נתונים אחרים מאחסון זמני ומהקובץ השמור, כמו נתונים של קובצי cookie, תוכן ואתרים.</translation>
+<translation id="2887613109410166736">‏יש לבחור מכשיר. לאחר מכן, כדי לראות את הדף, עליך לפתוח בו את דפדפן Growser.</translation>
+<translation id="1162630940779651724">‏כדי לשלוח את הכרטיסייה הזו למכשיר אחר, צריך להיכנס ל-Growser בשני המכשירים</translation>
+<translation id="5388608738812110907">‏כדי לשלוח את הכרטיסייה הזו למכשיר אחר, צריך להיכנס ל-Growser במכשיר האחר</translation>
+<translation id="4007679133627124999">‏כדי לשלוח קישורים בין מכשירים, צריך לוודא ששניהם מחוברים לאותו חשבון Growser.</translation>
+<translation id="2377999415409519333">‏כדי לשלוח קישורים, צריך לאמת את הזהות. יש לך אפשרות לשלוח קישורים אם התחברת לאותו חשבון Brave בשני המכשירים.</translation>
+<translation id="4986706507552097681">‏אפשר לבחור מה לסנכרן בכל שלב דרך ההגדרות. Growser עשויה להתאים אישית את החיפוש ושירותים נוספים על סמך ההיסטוריה שלך.</translation>
+<translation id="8002662358897231821">‏יש להיכנס כדי לקבל גישה אל הסימניות, ההיסטוריה, הסיסמאות והגדרות נוספות בכל המכשירים שברשותך. בנוסף, תחובר אוטומטית אל שירותי Growser.</translation>
+<translation id="3128296144259620504">‏תוכנת בדיקה אוטומטית מבצעת בקרה על Growser.</translation>
+<translation id="5308456967320989709">‏גרסה <ph name="BROWSER_VERSION"/> של Growser for Testing מיועדת רק לבדיקות אוטומטיות. לגלישה רגילה, יש להשתמש בגרסה רגילה של Growser שמתעדכנת באופן אוטומטי.</translation>
+<translation id="7655407181412188363">‏להורדת Growser</translation>
+<translation id="5902400038326841449">‏מנהל הסיסמאות של Growser מושבת</translation>
+<translation id="6564343790052433242">‏כדי ליצור מפתח גישה ל-<ph name="APP_NAME"/>, צריך להפעיל את מנהל הסיסמאות של Growser</translation>
+<translation id="1312107444925145416">‏הפרופיל שלך ב-Growser</translation>
+<translation id="5186788525428341874">‏אפשר להשתמש במפתח הגישה הזה כדי להיכנס לחשבון מהר יותר בכל המכשירים שלך. הוא יישמר במנהל הסיסמאות של Growser בחשבון <ph name="ACCOUNT_NAME"/>.</translation>
+<translation id="2204168219363024184">‏כדי ליצור את מפתח הגישה הזה באמצעות מנהל הסיסמאות של Growser, עליך לאמת את הזהות שלך</translation>
+<translation id="6331857227627979149">‏מפתח הגישה יישמר במנהל הסיסמאות של Growser בחשבון <ph name="ACCOUNT_NAME"/>. צריך לאמת את הזהות רק פעם אחת.</translation>
+<translation id="7484943269191249363">‏אפשר להשתמש בכל מפתחות הגישה ששמורים במנהל הסיסמאות של Growser במכשיר הזה. צריך לאמת את הזהות רק פעם אחת.</translation>
+<translation id="8189257540098107776">‏לא ניתן להתחבר למנהל הסיסמאות של Growser</translation>
+<translation id="4540409690203718935">‏לא ניתן להתחבר למנהל הסיסמאות של Growser. אפשר לנסות שוב בעוד כמה דקות</translation>
+<translation id="7091667403045767243">‏כדי להשתמש במפתחות הגישה ששמורים בחשבון שלך ב-Growser</translation>
+<translation id="8436800506934625875">‏יצירת קוד אימות אלפאנומרי לשחזור למנהל הסיסמאות של Growser</translation>
+<translation id="6520115099532274511">‏עליך לאמת את הזהות שלך בשביל האתר <ph name="SITE"/>. צריך להזין את קוד האימות האלפאנומרי של מנהל הסיסמאות של Growser</translation>
+<translation id="1011431628606634753">‏עליך לשנות את קוד האימות לשחזור של מנהל הסיסמאות של Growser</translation>
+<translation id="7036550011779986598">‏האתר <ph name="RP_ID"/> יצר מפתח גישה לחשבון שלך. מפתחות גישה הם דרך מהירה ובטוחה יותר להיכנס לחשבון, והם נשמרים במנהל הסיסמאות של Growser בחשבון <ph name="USER"/>. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">‏בחשבון פועלת האבטחה החזקה ביותר של Growser מפני אתרים, הורדות ותוספים מסוכנים</translation>
+<translation id="8655204793400034351">‏בחשבון פועלת אבטחה ברמה רגילה. כדי לקבל הגנה נוספת מפני אתרים, הורדות ותוספים מסוכנים, יש להפעיל את הגרסה המשופרת של הגלישה הבטוחה בהגדרות של Growser.</translation>
+<translation id="984351584831083958">‏ההגדרות של Growser</translation>
+<translation id="988181568526563957">‏האבטחה הכי יעילה של Growser מגינה עליך טוב יותר מפני תוספים, הורדות ואתרים מסוכנים</translation>
+<translation id="5634728742770877915">‏האבטחה הכי יעילה של Growser מגינה עליך מפני אתרים מזיקים</translation>
+<translation id="5760318332127300368">‏גם נתוני הגלישה (<ph name="URL"/>) יימחקו. הפעולה הזו עשויה לנתק אותך מ-Growser.com. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">‏הגעת למגבלת הזמן שהוגדרה על ידי ההורה שלך לאפליקציה <ph name="APP_NAME"/> ב-Growser. מחר אפשר יהיה להשתמש בה למשך <ph name="TIME_LIMIT"/>.</translation>
+<translation id="4941819631276629267">‏‫Growser עודכן</translation>
+<translation id="2871029453856004998">‏האפליקציה הזו עלולה להיות מסוכנת והיא נחסמה על ידי Growser</translation>
+<translation id="3757415281539421827">‏Growser מאמת את חבילת ההתקנה</translation>
+<translation id="8022386078499568954">‏Growser לא הצליח לאמת את חבילת ההתקנה הזו</translation>
+<translation id="5529797218715099093">‏‫Growser מקל על העבודה עם קובצי PDF</translation>
+<translation id="3908598909163357544">‏‫Growser יפסיק לסמן את ההתראות מהאתר הזה כספאם</translation>
+<translation id="3519014757432845220">‏כדי לעזור לנו לשפר את ההגנה מפני ספאם, אפשר לשתף עם Growser את תוכן ההודעה ואת כתובת ה-URL של האתר. יכול להיות שבודקים אנושיים יבדקו את התוכן.</translation>
+<translation id="8028868133304944257">‏נשמרו דרך Growser</translation>
+<translation id="9217458048141913687">‏פתיחת Growser</translation>
+<translation id="3879869835592882268">‏רוצה להשיג את רמת האבטחה הגבוהה ביותר של Growser?</translation>
+<translation id="3307078631581490570">‏אפשר להתאים אישית את Growser בדרך שנוחה לך</translation>
+<translation id="6133506753060207356">‏אפשר לפתוח מחדש כרטיסיות שנסגרו לאחרונה מכל מקום שבו משתמשים ב-Growser</translation>
+<translation id="8146322071180925001">‏מידע נוסף לגבי שמירה על עדכוני Growser</translation>
+<translation id="4016841343509962173">‏צפייה בכל כללי המדיניות של Growser</translation>
+<translation id="6953549942896871737">‏פתיחה ב-Growser</translation>
+<translation id="4773299976671772492">נעצר</translation>
+<translation id="8387617938027387193">אימות הזהות שלך</translation>
+<translation id="1481450969185702334">חיפוש ומילוי</translation>
+<translation id="443008484043213881">כלים</translation>
+<translation id="8118506371121007279">שליחת משוב</translation>
 </translationbundle>

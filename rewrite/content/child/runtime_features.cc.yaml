@@ -18,6 +18,16 @@ substitutions:
       register through it: kConversionMeasurement stays disabled browser-side
       and its implementation was deleted upstream in 152, so this is pure
       surface parity, not a data flow.
+
+      Growser-236: Chromium 154 moved this. The guard in
+      ResolveInvalidConfigurations() is gone; the Blink feature is now driven
+      from a table, `runtimeFeatureNameToChromiumFeatureMapping`, and the row
+      `{"AttributionReporting", raw_ref(...kConversionMeasurement)}` does what
+      the guard used to do - our browser-side disable takes the Blink feature
+      with it, and attributionSrc disappears from the IDL again. So the
+      substitution is now the row rather than the condition: with no row,
+      nothing drives the feature and it keeps its status:stable default, which
+      is the state Chrome ships. Same outcome, one layer up.
     regex:
-      re_pattern: '!base::FeatureList::IsEnabled\(\s*attribution_reporting::features::kConversionMeasurement\)'
-      replace: 'false /* growser #109: keep attributionSrc exposed like Chrome */'
+      re_pattern: '\{"AttributionReporting",\s*raw_ref\(attribution_reporting::features::kConversionMeasurement\)\},'
+      replace: '// growser #109: no row here on purpose - AttributionReporting keeps its stable default so attributionSrc stays exposed as in Chrome.'

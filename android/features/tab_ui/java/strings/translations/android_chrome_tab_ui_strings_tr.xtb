@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Kapalı sekmeleriniz ve gruplarınız, Son sekmeler kısmından ve Sekme grupları kısmından yeniden açılabilir. Gizli sekmeniz açılmayacaktır.}
         other {Kapalı sekmeleriniz ve gruplarınız, Son sekmeler kısmından ve Sekme grupları kısmından yeniden açılabilir. # Gizli sekmeniz açılmayacaktır.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{Growser'dan <ph name="TABS_COUNT_ONE"/> bağlantı}other{Growser'dan <ph name="TABS_COUNT_MANY"/> bağlantı}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{Growser'dan <ph name="REVIEWS_COUNT_ONE"/> yorum}other{Growser'dan <ph name="REVIEWS_COUNT_MANY"/> yorum}}</translation>
+<translation id="2928243913527329289">Growser | Bu mağaza hakkında</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser, etkin olmayan sekmeleri ve sekme gruplarını <ph name="AUTO_DELETE_DELAY_ONE"/> ay sonra otomatik olarak kapatır. Bu özelliği Ayarlar'dan değiştirebilirsiniz.}other{Growser, etkin olmayan sekmeleri ve sekme gruplarını <ph name="AUTO_DELETE_DELAY_MANY"/> ay sonra otomatik olarak kapatır. Bu özelliği Ayarlar'dan değiştirebilirsiniz.}}</translation>
 </translationbundle>

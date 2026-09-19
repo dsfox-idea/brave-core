@@ -164,6 +164,11 @@ void ZCashWalletService::StartShieldSync(mojom::AccountIdPtr account_id,
     return;
   }
 
+  if (!IsZCashIronwoodEnabled() &&
+      keyring_service_->GetZCashIronwoodSyncStateReset(account_id)) {
+    keyring_service_->SetZCashIronwoodSyncStateReset(account_id, false);
+  }
+
   if (IsZCashIronwoodEnabled() &&
       !keyring_service_->GetZCashIronwoodSyncStateReset(account_id)) {
     if (!pending_sync_callback_.is_null()) {
@@ -677,8 +682,13 @@ void ZCashWalletService::OnGetUtxos(
   DCHECK(context->addresses.contains(address));
   DCHECK(!context->utxos.contains(address));
 
-  if (!result.has_value() || !result.value()) {
+  if (!result.has_value()) {
     context->SetError(result.error());
+    WorkOnGetUtxos(std::move(context));
+    return;
+  }
+  if (!result.value()) {
+    context->SetError(WalletParsingErrorMessage());
     WorkOnGetUtxos(std::move(context));
     return;
   }

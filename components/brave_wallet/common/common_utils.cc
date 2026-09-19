@@ -25,6 +25,10 @@
 
 namespace brave_wallet {
 
+bool IsFilecoinLedgerEnabled() {
+  return base::FeatureList::IsEnabled(features::kBraveWalletFilecoinLedger);
+}
+
 bool IsBitcoinEnabled() {
   return base::FeatureList::IsEnabled(features::kBraveWalletBitcoinFeature);
 }
@@ -75,9 +79,9 @@ bool IsWalletDebugEnabled() {
 #endif
 }
 
-bool IsMojoForHardwareWalletEnabled() {
+bool IsMojoForLedgerEnabled() {
   return base::FeatureList::IsEnabled(
-      features::kBraveWalletMojoForHardwareWalletFeature);
+      features::kBraveWalletMojoForLedgerFeature);
 }
 
 bool IsAnkrBalancesEnabled() {

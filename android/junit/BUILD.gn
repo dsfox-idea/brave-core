@@ -183,6 +183,7 @@ if (is_android) {
     sources = [
       "src/org/chromium/chrome/browser/ntp/BraveNewTabPageUtilUnitTest.java",
       "src/org/chromium/chrome/browser/ntp/BraveNewTabTakeoverInfobarTest.java",
+      "src/org/chromium/chrome/browser/ntp/BraveRecentTabsCoordinatorTest.java",
       "src/org/chromium/chrome/browser/ntp/NewTabTakeoverSafeAreaReporterTest.java",
     ]
 
@@ -293,6 +294,7 @@ if (is_android) {
   robolectric_library("brave_junit_tests_org.chromium.chrome.browser.shields") {
     sources = [
       "src/org/chromium/chrome/browser/shields/BraveUnifiedPanelFaviconPriorityTest.java",
+      "src/org/chromium/chrome/browser/shields/BraveUnifiedPanelHandlerLifecycleTest.java",
       "src/org/chromium/chrome/browser/shields/BraveUnifiedPanelHandlerStatTest.java",
       "src/org/chromium/chrome/browser/shields/UrlSanitizerServiceFactoryUnitTest.java",
     ]
@@ -424,6 +426,7 @@ if (is_android) {
       "src/org/chromium/chrome/browser/tasks/tab_management/BraveTabGridContextMenuCoordinatorTest.java",
       "src/org/chromium/chrome/browser/tasks/tab_management/BraveTabGridItemTouchHelperCallbackTest.java",
       "src/org/chromium/chrome/browser/tasks/tab_management/BraveTabGroupsPaneTest.java",
+      "src/org/chromium/chrome/browser/tasks/tab_management/BraveTabListEditorManagerTest.java",
       "src/org/chromium/chrome/browser/tasks/tab_management/BraveTabUiFeatureUtilitiesUnitTest.java",
       "src/org/chromium/chrome/browser/tasks/tab_management/pinned_tabs_strip/BravePinnedTabStripItemContextMenuCoordinatorTest.java",
     ]

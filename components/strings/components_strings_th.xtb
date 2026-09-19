@@ -5538,4 +5538,430 @@
 <translation id="8198379961710069585">เปิดใช้งาน "ปุ่มประวัติการค้นหา" เพื่อดูประวัติการค้นหา</translation>
 <translation id="8495170825732897952">พิมพ์ @@ ในแบบฟอร์มใดก็ได้เพื่อเรียกคืนและป้อนข้อมูลโดยไม่ต้องสลับแท็บ</translation>
 <translation id="8874790741333031443">ลองอนุญาตคุกกี้ของบุคคลที่สามชั่วคราว ซึ่งหมายความว่าการปกป้องขณะท่องเว็บจะลดลง แต่ฟีเจอร์ของเว็บไซต์มีแนวโน้มที่จะทํางานตามที่คาดได้มากกว่า</translation>
+<translation id="6091115085465716987">โลโก้ Google Wallet</translation>
+<translation id="4489288117933602961">โลโก้ Growser</translation>
+<translation id="6604204560730066844">ต้องการบันทึกบัตรนี้ไว้ในบัญชี Growser และในอุปกรณ์นี้ไหม</translation>
+<translation id="6253380015872250643">บันทึกบัตรใน Google Wallet</translation>
+<translation id="7062344833049251424">บันทึกบัตรและที่อยู่สำหรับการเรียกเก็บเงินไว้ใน Google Wallet เพื่อให้ชำระเงินได้เร็วขึ้นในครั้งถัดไป</translation>
+<translation id="4940620179254568429">ระบบจะเข้ารหัส CVC ของบัตรนี้และบันทึกไว้ในบัญชี Growser ของคุณเพื่อการชำระเงินที่เร็วขึ้น</translation>
+<translation id="1413235258620101697">ระบบจะเข้ารหัส CVC ของบัตรนี้และบันทึกไว้ใน Google Wallet เพื่อการชำระเงินที่เร็วขึ้น</translation>
+<translation id="8296806261827627234">ชำระเงินได้เร็วขึ้นเมื่อบันทึกบัตร รายละเอียดบัตรจะได้รับการเข้ารหัสในบัญชี Growser ของคุณ</translation>
+<translation id="4954891067389874142">ชำระเงินได้เร็วขึ้นเมื่อบันทึกบัตร รายละเอียดบัตรจะได้รับการเข้ารหัสใน Google Wallet</translation>
+<translation id="4599572944836204718">ชำระเงินได้เร็วขึ้นด้วย Google Pay เมื่อบันทึกบัตรไว้ รายละเอียดบัตรจะได้รับการเข้ารหัสใน Google Wallet</translation>
+<translation id="3872719112670219447">ชื่อนี้มาจากบัญชี Growser ของคุณ</translation>
+<translation id="1511387429744666092">Growser เสนอที่จะบันทึกบัตรลงในบัญชี Growser ของคุณเพราะคุณลงชื่อเข้าใช้อยู่ คุณปรับเปลี่ยนลักษณะการทำงานนี้ได้ในการตั้งค่า</translation>
+<translation id="4565400898718322011">Growser เสนอที่จะบันทึกบัตรลงในบัญชี Growser ของคุณเพราะคุณลงชื่อเข้าใช้อยู่ คุณปรับเปลี่ยนลักษณะการทำงานนี้ได้ในการตั้งค่า ชื่อผู้ถือบัตรมาจากบัญชีของคุณ</translation>
+<translation id="3594461335790641595">ป้อนข้อมูลบัตรนี้โดยอัตโนมัติสำหรับการซื้อใน Growser เมื่อบันทึกบัตรไว้ในอุปกรณ์เครื่องนี้</translation>
+<translation id="1242832199383246031">ป้อนข้อมูลบัตรนี้โดยอัตโนมัติสำหรับการซื้อใน Growser เมื่อบันทึกบัตรไว้ใช้กับ Google Pay</translation>
+<translation id="6186962377036474023">ป้อนข้อมูลบัตรนี้โดยอัตโนมัติสำหรับการซื้อใน Growser เมื่อบันทึกบัตรไว้ใน Google Wallet</translation>
+<translation id="5765984179517659957">Growser กำลังพยายามยืนยันว่าเป็นคุณเพื่อให้ระบบกรอกข้อมูลการชำระเงินของคุณได้</translation>
+<translation id="828282277746732142">บันทึก IBAN ใน Google Wallet</translation>
+<translation id="6084079099761498478">หากต้องการป้อน IBAN นี้โดยอัตโนมัติในครั้งถัดไป ให้บันทึกไว้ในบัญชี Growser</translation>
+<translation id="5398461103557553443">หากต้องการป้อน IBAN นี้โดยอัตโนมัติในครั้งถัดไป ให้บันทึกไว้ใน Google Wallet</translation>
+<translation id="7098302422586317090">ตอนนี้ Growser จะยืนยันตัวตนของคุณก่อนกรอกวิธีการชําระเงิน คุณอัปเดตข้อมูลนี้ได้ทุกเมื่อใน<ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/></translation>
+<translation id="5053116470141135293">ระบบจะกรอกหมายเลขบัตรเสมือนเมื่อคุณชำระเงินด้วยบัตรนี้เพื่อปกป้องรายละเอียดบัตรจริงของคุณ จัดการใน Google Wallet <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">ระบบจะแชร์เนื้อหาจากหน้าชำระเงินกับ Growser เพื่อเสนอตัวเลือกเหล่านี้ หากต้องการซ่อนตัวเลือกการชำระเงินภายหลังในการป้อนข้อความอัตโนมัติ ให้ไปที่<ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/></translation>
+<translation id="2840680829170913626">ระบบจะแชร์เนื้อหาจากหน้าชำระเงินกับ Growser เพื่อเสนอตัวเลือกเหล่านี้ แพ็กเกจการชำระเงินขึ้นอยู่กับสิทธิ์ หากต้องการซ่อนตัวเลือกการชำระเงินภายหลังในการป้อนข้อความอัตโนมัติ ให้ไปที่<ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/></translation>
+<translation id="7870207318911766769">ระบบจะแชร์เนื้อหาจากหน้าชำระเงินกับ Growser เพื่อเสนอตัวเลือกเหล่านี้</translation>
+<translation id="1151858212483238980">คุณสามารถป้อนข้อมูลบัตรที่บันทึกไว้ใน Google Wallet โดยอัตโนมัติได้</translation>
+<translation id="1205344127823614428">คุณสามารถป้อนข้อมูลบัตรที่บันทึกไว้ใน Google Wallet โดยอัตโนมัติได้</translation>
+<translation id="5848445080378515710">หลังจากที่ตรวจสอบคำสั่งซื้อแล้ว คุณต้องลงชื่อเข้าใช้หรือสร้างบัญชีกับ <ph name="BNPL_ISSUER_NAME"/> ระบบจะลิงก์บัญชีนี้ใน Google Wallet โดยอัตโนมัติ</translation>
+<translation id="8163468049564974856">เปิดการป้อนข้อความอัตโนมัติเพื่อชำระเงินออนไลน์อย่างปลอดภัย รายละเอียดบัตรจะได้รับการเข้ารหัสใน Brave Wallet</translation>
+<translation id="5717281954932320486">กรอกรายละเอียดบัตรโดยอัตโนมัติเมื่อคุณชำระเงินออนไลน์ ระบบจะบันทึกบัตรไว้ใน Brave Wallet อย่างปลอดภัย</translation>
+<translation id="7055814742378298611">ตอนนี้คุณสามารถบันทึกวิธีการชำระเงินเพื่อป้อนข้อความอัตโนมัติที่จุดชำระเงินใน Brave ได้แล้ว <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">จะมีการลบรหัสความปลอดภัยทั้งหมดที่บันทึกไว้ในอุปกรณ์และในบัญชี Growser</translation>
+<translation id="7170930892977483182">ระบบจะลบรหัสความปลอดภัยทั้งหมดที่บันทึกไว้ในอุปกรณ์และใน Google Wallet ของคุณ</translation>
+<translation id="755360750394433286">ระบบบันทึกบัตรของคุณไว้ในบัญชี Growser เพื่อให้คุณป้อนข้อมูลอัตโนมัติสำหรับการซื้อในอนาคตได้</translation>
+<translation id="7412081313067625215">ระบบบันทึกบัตรของคุณไว้ใน Google Wallet เพื่อให้คุณป้อนข้อมูลอัตโนมัติสำหรับการซื้อในอนาคตได้</translation>
+<translation id="2482920244925042987">บันทึกบัตรนี้ในบัญชี Growser ไม่ได้ แต่บันทึกลงใน Growser บนอุปกรณ์นี้แทน</translation>
+<translation id="4740434610174859636">บันทึกบัตรนี้ใน Google Wallet ไม่ได้ แต่บันทึกลงใน Growser บนอุปกรณ์นี้แทน</translation>
+<translation id="2109852493965717728">ระบบบันทึก IBAN นี้ไว้ในบัญชี Growser เพื่อให้คุณใช้ในบริการต่างๆ ของ Growser ได้</translation>
+<translation id="3837322271615501940">บันทึก IBAN นี้ในบัญชี Growser ไม่ได้ แต่บันทึกลงใน Growser บนอุปกรณ์นี้แทน Growser จะถามคุณอีกครั้งในครั้งถัดไปที่คุณใช้ IBAN นี้</translation>
+<translation id="1583007191864786102">บันทึก IBAN นี้ใน Google Wallet ไม่ได้ แต่บันทึกลงใน Growser บนอุปกรณ์นี้แทน Growser จะถามคุณอีกครั้งในครั้งถัดไปที่คุณใช้ IBAN นี้</translation>
+<translation id="6915664826242394941">บันทึก IBAN นี้ในบัญชี Growser ไม่ได้ แต่บันทึกลงใน Growser บนอุปกรณ์นี้แทน</translation>
+<translation id="376462579087900096">บันทึก IBAN นี้ใน Google Wallet ไม่ได้ แต่บันทึกลงใน Growser บนอุปกรณ์นี้แทน</translation>
+<translation id="2871837111996280385">Growser กำลังพยายามป้อนข้อมูลที่ละเอียดอ่อนของคุณใน <ph name="APP_NAME"/></translation>
+<translation id="3039045945489677870">Growser กำลังพยายามแสดงข้อมูลที่ละเอียดอ่อน</translation>
+<translation id="3253651554860831188">Growser ต้องการยืนยันว่าเป็นคุณก่อนที่คุณจะเปลี่ยนการตั้งค่า</translation>
+<translation id="924075841960625832">นำคำแนะนำสำหรับแบบฟอร์มออกจาก Growser ไหม</translation>
+<translation id="3016775357255717300">ต้องการนำบัตรเครดิตออกจาก Growser ใช่ไหม</translation>
+<translation id="1722474089104449082">ต้องการนำที่อยู่ออกจาก Growser ใช่ไหม</translation>
+<translation id="7077165718541055322">นำที่อยู่บ้านออกจากฟีเจอร์ป้อนข้อความอัตโนมัติของ Growser ใช่ไหม</translation>
+<translation id="7756454115562251695">นำที่อยู่ที่ทำงานออกจากฟีเจอร์ป้อนข้อความอัตโนมัติของ Growser ใช่ไหม</translation>
+<translation id="3068798232942246848">นำข้อมูลนี้ออกจากฟีเจอร์ป้อนข้อความอัตโนมัติของ Growser ใช่ไหม</translation>
+<translation id="967369588715984092">Brave จะหยุดยืนยันอีเมลนี้โดยอัตโนมัติในเว็บไซต์ที่รองรับ</translation>
+<translation id="7299769361777046949">จัดการบัตรสะสมคะแนนใน Google Wallet</translation>
+<translation id="2903623845283894856">ตอนนี้คุณใช้ที่อยู่จากบัญชี Growser ได้แล้ว</translation>
+<translation id="7058709760023777753">ป้อนที่อยู่บ้านและที่ทำงานจากบัญชี Growser โดยอัตโนมัติ</translation>
+<translation id="2856388212909438134">ป้อนชื่อและอีเมลจากบัญชี Growser โดยอัตโนมัติ</translation>
+<translation id="8581945850065780003">ระบบจะลบที่อยู่นี้ออกจากบัญชี Growser <ph name="ACCOUNT"/></translation>
+<translation id="8652886653703834105">ในบัญชี Growser <ph name="ACCOUNT"/></translation>
+<translation id="4050392779074832022">คุณจะใช้ที่อยู่นี้ในผลิตภัณฑ์ต่างๆ ของ Growser ได้</translation>
+<translation id="361746409909709825">คุณใช้ที่อยู่ที่บันทึกไว้ในผลิตภัณฑ์ต่างๆ ของ Growser ได้ ระบบจะบันทึกที่อยู่นี้ไว้ในบัญชี Growser <ph name="ACCOUNT"/></translation>
+<translation id="5318416911578989892">คุณใช้ที่อยู่ที่บันทึกไว้ในผลิตภัณฑ์ต่างๆ ของ Growser ได้ ระบบจะบันทึกที่อยู่นี้ไว้ในบัญชี Growser ของคุณ (<ph name="ACCOUNT"/>)</translation>
+<translation id="3995632180712217177">คุณใช้ที่อยู่ที่บันทึกไว้ในผลิตภัณฑ์ต่างๆ ของ Growser ได้ การดำเนินการนี้จะไม่เปลี่ยนที่อยู่บ้านที่มีอยู่ ระบบจะบันทึกไว้ในบัญชี Growser ของคุณ (<ph name="ACCOUNT"/>)</translation>
+<translation id="2432673835335968473">คุณใช้ที่อยู่ที่บันทึกไว้ในผลิตภัณฑ์ต่างๆ ของ Growser ได้ การดำเนินการนี้จะไม่เปลี่ยนที่อยู่ที่ทำงานที่มีอยู่ ระบบจะบันทึกไว้ในบัญชี Growser ของคุณ (<ph name="ACCOUNT"/>)</translation>
+<translation id="2024046927213376062">ข้อมูลจากบัญชี Growser <ph name="ACCOUNT"/> จะช่วยให้คุณกรอกแบบฟอร์มใน Growser ได้เร็วขึ้น</translation>
+<translation id="8430499469896241016">ป้อนรหัสยืนยันที่เว็บไซต์ใช้โดยอัตโนมัติเพื่อเพิ่มความปลอดภัย Brave รับรหัสเหล่านี้ได้จาก Gmail ของคุณ <ph name="BEGIN_LINK"/>ดูข้อมูลเพิ่มเติมเกี่ยวกับฟีเจอร์นี้<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Growser ไม่ใช่ผู้ให้บริการป้อนข้อความอัตโนมัติ</translation>
+<translation id="7450759832930378803">หากต้องการเปิดใช้การตั้งค่าเหล่านี้และใช้ข้อมูลการชำระเงินจากบัญชี Growser ของคุณ ให้ไปที่การตั้งค่าบริการป้อนข้อความอัตโนมัติ</translation>
+<translation id="7049940136908665440">หากต้องการเปิดใช้การตั้งค่าเหล่านี้และใช้ข้อมูลจากบัญชี Growser ของคุณ ให้ไปที่การตั้งค่าบริการป้อนข้อความอัตโนมัติ</translation>
+<translation id="2450019289047528273">วิธีการชำระเงินและข้อมูลอื่นๆ จาก Google Wallet</translation>
+<translation id="1125406338060147524">การตั้งค่า Brave Wallet จะมีผลกับข้อมูลที่บันทึกจาก Brave</translation>
+<translation id="5732084028114235391">บันทึกที่อยู่นี้ไว้ใน Growser แล้ว หากต้องการใช้ในผลิตภัณฑ์ต่างๆ ของ Growser ให้บันทึกไว้ในบัญชี Growser <ph name="ACCOUNT"/></translation>
+<translation id="756794566964707799">บันทึกที่อยู่นี้ไว้ในอุปกรณ์นี้แล้ว หากต้องการใช้ในผลิตภัณฑ์ต่างๆ ของ Growser ให้บันทึกไว้ในบัญชี Growser ของคุณ <ph name="ACCOUNT"/></translation>
+<translation id="6935077351544118151">ตอนนี้คุณสามารถป้อนข้อมูลบัตรสะสมคะแนนจาก Google Wallet โดยอัตโนมัติได้แล้ว</translation>
+<translation id="4169189393773057143">จัดการบัตรสะสมคะแนนหรือปิดคำแนะนำเหล่านี้ใน Google Wallet</translation>
+<translation id="4470759557257438892">ขอความช่วยเหลือจาก Gemini ใน Growser แทน</translation>
+<translation id="2326283484705860548">ตอนนี้คุณสามารถป้อนข้อมูลเพิ่มเติมจาก Google Wallet โดยอัตโนมัติได้แล้ว</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="8421746712901926961">บันทึกข้อมูลใน <ph name="GOOGLE_WALLET_TITLE_1"/> เพื่อทำสิ่งต่างๆ ให้เสร็จเร็วขึ้น เช่น การกรอกแบบฟอร์มในผลิตภัณฑ์ต่างๆ ของ Growser คุณสามารถ <ph name="MANAGE_INFO_LINK"/> ใน <ph name="GOOGLE_WALLET_TITLE_2"/> สำหรับ <ph name="ACCOUNT"/> ได้</translation>
+<translation id="4619669610757527494">บันทึกใบขับขี่ไว้ใน Google Wallet</translation>
+<translation id="4239215166147486528">บันทึกใบขับขี่ไว้ใน Brave Wallet อย่างปลอดภัย</translation>
+<translation id="1912750443952232242">บันทึกบัตรประชาชนใน Google Wallet</translation>
+<translation id="8300302621078931927">บันทึกบัตรประชาชนใน Brave Wallet อย่างปลอดภัย</translation>
+<translation id="5447103258548475868">บันทึกหนังสือเดินทางไว้ใน Google Wallet</translation>
+<translation id="8717177139469452440">บันทึกหนังสือเดินทางอย่างปลอดภัยใน Brave Wallet</translation>
+<translation id="760632772920590778">บันทึกยานพาหนะไว้ใน Google Wallet</translation>
+<translation id="4811696127853690432">บันทึกยานพาหนะอย่างปลอดภัยใน Brave Wallet</translation>
+<translation id="5914185423510719251">บันทึก KTN ใน Google Wallet</translation>
+<translation id="5034488401832901795">บันทึก KTN อย่างปลอดภัยใน Brave Wallet</translation>
+<translation id="1449251255954293933">บันทึกเลขประจำตัวผู้ที่อยู่ในกลุ่มเสี่ยงไว้ใน Google Wallet</translation>
+<translation id="1330952240988133220">บันทึกเลขประจำตัวผู้ที่อยู่ในกลุ่มเสี่ยงไว้ใน Brave Wallet อย่างปลอดภัย</translation>
+<translation id="8393948304336153065">อัปเดตใบขับขี่ไว้ใน Google Wallet</translation>
+<translation id="8889525327610245418">อัปเดตใบขับขี่ไว้ใน Brave Wallet อย่างปลอดภัย</translation>
+<translation id="7570524564113479209">อัปเดตบัตรประจำตัวใน Google Wallet</translation>
+<translation id="4410614037742891410">อัปเดตบัตรประจำตัวใน Brave Wallet อย่างปลอดภัย</translation>
+<translation id="3426672782316020729">อัปเดตข้อมูลหนังสือเดินทางใน Google Wallet</translation>
+<translation id="3280440382387335343">อัปเดตหนังสือเดินทางอย่างปลอดภัยใน Brave Wallet</translation>
+<translation id="2124081665399116863">อัปเดตรถใน Google Wallet</translation>
+<translation id="6422648598133086441">อัปเดตรถอย่างปลอดภัยใน Brave Wallet</translation>
+<translation id="4770909831299304090">อัปเดต KTN ใน Google Wallet</translation>
+<translation id="5872115357279348603">อัปเดต KTN อย่างปลอดภัยใน Brave Wallet</translation>
+<translation id="1732796940245838248">อัปเดต Redress ใน Google Wallet</translation>
+<translation id="7253051586755429279">อัปเดต Redress ใน Brave Wallet อย่างปลอดภัย</translation>
+<translation id="5628060911499153873">บันทึกข้อมูลเพื่อทำสิ่งต่างๆ ให้เสร็จเร็วขึ้นในผลิตภัณฑ์ต่างๆ ของ Growser ระบบจะบันทึกข้อมูลของคุณลงใน <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> สำหรับ <ph name="ACCOUNT"/></translation>
+<translation id="8369722293913575142">บันทึกข้อมูลนี้ลงใน Google Wallet ไม่ได้ แต่บันทึกลงใน Growser บนอุปกรณ์นี้แทน Growser จะเสนอให้บันทึกลงใน Wallet เมื่อคุณใช้งานในครั้งถัดไป</translation>
+<translation id="3237427677128462778">บันทึกลงใน Google Wallet ไม่ได้</translation>
+<translation id="9078170656887151974">ระบบจะแชร์ URL และเนื้อหาของหน้าเว็บกับ Growser เพื่อแสดงคำแนะนำและปรับปรุงฟีเจอร์นี้ คุณสามารถเปลี่ยนใจได้ทุกเมื่อและ<ph name="LEARN_MORE"/></translation>
+<translation id="4954505713046251871">ระบบจะแชร์ URL และเนื้อหาของหน้าเว็บกับ Growser เพื่อแสดงคำแนะนำและปรับปรุงฟีเจอร์นี้</translation>
+<translation id="2905902437192896563">Growser เข้าใจแบบฟอร์มได้ดีขึ้นและสามารถป้อนข้อมูลอัตโนมัติให้คุณได้เร็วขึ้น</translation>
+<translation id="67310796271265436">ช่วยให้ Brave เข้าใจและกรอกแบบฟอร์มที่ซับซ้อนได้ดียิ่งขึ้นโดยการประมวลผลข้อมูลอย่างปลอดภัยในเซิร์ฟเวอร์ของ Brave ข้อมูลของคุณจะยังคงเป็นส่วนตัวและไม่มีใครตรวจสอบ</translation>
+<translation id="7422908041366284140">Growser สามารถป้อนข้อมูลในช่องที่ป้อนยากซึ่งการป้อนข้อความอัตโนมัติมาตรฐานอาจพลาดไป</translation>
+<translation id="6329742260390895689">เปิด "ใช้บัตรในบริการต่างๆ ของ Growser" ในการตั้งค่า Wallet เพื่อป้อนข้อความอัตโนมัติ</translation>
+<translation id="5912796581727968237">เปิด Google Wallet</translation>
+<translation id="5160781056848005130">คุณกำลังช่วยปรับปรุงการป้อนข้อความอัตโนมัติที่ดียิ่งขึ้นด้วยการแชร์ข้อมูลกับ Growser</translation>
+<translation id="8781233757384402598">เมื่อคุณขอใช้การป้อนข้อความอัตโนมัติที่ดียิ่งขึ้น ระบบจะแชร์ข้อมูลการใช้งาน คำขอ และรายละเอียดหน้าเว็บกับ Brave เพื่อปรับปรุงประสบการณ์การใช้งานการป้อนข้อความอัตโนมัติ</translation>
+<translation id="7044265724713929821">Brave จะบันทึกวิธีที่คุณใช้ฟีเจอร์นี้ เช่น คำขอและพฤติกรรมของคุณเมื่อยอมรับหรือเพิกเฉยต่อคำแนะนำ</translation>
+<translation id="3209071504641569648">ระบบจะส่งคำขอ ชื่อหน้า และ URL ไปยัง Brave และอาจมีการตรวจสอบเพื่อปรับปรุงการป้อนข้อความอัตโนมัติที่ดียิ่งขึ้น</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{ไม่มี}=1{จาก 1 เว็บไซต์ (แต่คุณจะยังลงชื่อเข้าใช้บัญชี Growser อยู่)}other{จาก # เว็บไซต์ (คุณจะยังลงชื่อเข้าใช้บัญชี Growser อยู่)}}</translation>
+<translation id="3410151451624226773">จัดการในเครื่องมือจัดการรหัสผ่านบน Growser</translation>
+<translation id="5224107321793121921">จัดการในบัญชี Growser</translation>
+<translation id="5105442806410269908">จัดการข้อมูลอื่นๆ ใน Growser</translation>
+<translation id="2477607419416067650">ข้อมูลอื่นๆ ใน Growser</translation>
+<translation id="472824688843296007">ติดตามราคาด้วย Growser</translation>
+<translation id="753556296624075801">ขับเคลื่อนโดย Growser</translation>
+<translation id="3745599309295009257">ระบบจะส่งข้อความ เนื้อหา และ URL ของหน้าที่คุณเขียนไปยัง Growser เพื่อตรวจสอบจากเจ้าหน้าที่ และใช้เพื่อปรับปรุงฟีเจอร์นี้ หลีกเลี่ยงการป้อนข้อมูลส่วนบุคคล (เช่น รายละเอียดทางการแพทย์หรือการเงิน) หรือใช้เครื่องมือนี้กับเว็บไซต์ที่มีข้อมูลส่วนตัวหรือข้อมูลที่ละเอียดอ่อน</translation>
+<translation id="5543452229212526547">ระบบจะส่งข้อความ เนื้อหา และ URL ของหน้าที่คุณเขียนไปยัง Growser เจ้าหน้าที่ตรวจสอบจะไม่ใช้เนื้อหาของคุณเพื่อปรับปรุง AI องค์กรของคุณอาจเปลี่ยนการตั้งค่าเหล่านี้ได้ทุกเมื่อ</translation>
+<translation id="1959445535228047762">ระบบจะส่งข้อความและเนื้อหาหน้าเว็บของคุณไปยัง Growser และอาจนำไปใช้เพื่อปรับปรุงฟีเจอร์นี้
+  <ph name="BEGIN_LINK"/>ดูข้อมูลเพิ่มเติม<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">ระบบจะส่งข้อความและเนื้อหาหน้าเว็บของคุณไปยัง Growser แต่จะไม่นำไปใช้เพื่อปรับปรุง AI
+    <ph name="BEGIN_LINK"/>ดูข้อมูลเพิ่มเติม<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">เครื่องมือ AI เวอร์ชันทดลองนี้อาจไม่ถูกต้องเสมอไป ระบบจะส่งเนื้อหาของคุณไปยัง Growser เพื่อปรับปรุงประสิทธิภาพ
+    <ph name="BEGIN_LINK"/>ดูข้อมูลเพิ่มเติม<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">วางเนื้อหานอกบริบทของ Brave ที่มีการจัดการไม่ได้เนื่องจากนโยบายขององค์กร</translation>
+<translation id="1351458950091269256">โฆษณานี้ใช้ทรัพยากรมากเกินไปสำหรับอุปกรณ์ของคุณ Growser จึงนำโฆษณานี้ออก</translation>
+<translation id="4366714044424353289">บัญชี Growser อาจมีประวัติการท่องเว็บรูปแบบอื่นๆ ที่ <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/></translation>
+<translation id="5626844006416355146">บัญชี Growser ของคุณอาจมี<ph name="BEGIN_LINK_GAA"/>กิจกรรมบนแอป Gemini<ph name="END_LINK_GAA"/></translation>
+<translation id="5747377793818752349">บัญชี Growser อาจมีประวัติการท่องเว็บรูปแบบอื่นๆ ที่ <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> เช่น <ph name="BEGIN_LINK_GAA"/>กิจกรรมบนแอป Gemini<ph name="END_LINK_GAA"/></translation>
+<translation id="4267590181863312380">ลงชื่อเข้าใช้และซิงค์ประวัติการเข้าชมเพื่อรับประวัติการเข้าชมจากอุปกรณ์อื่นๆ นอกจากนี้ คุณยังรับรหัสผ่านและข้อมูลอื่นๆ ในอุปกรณ์ทุกเครื่องได้ด้วย คุณหยุดการซิงค์ได้ทุกเมื่อในการตั้งค่า Growser อาจปรับเปลี่ยน Search และบริการอื่นๆ ให้เหมาะกับคุณโดยอิงจากประวัติการเข้าชม</translation>
+<translation id="5889251770650310375">หากต้องการดูประวัติการเข้าชมจากอุปกรณ์อื่นๆ ให้ยืนยันตัวตน รวมถึงซิงค์ประวัติการเข้าชมและแท็บ คุณหยุดการซิงค์ได้ทุกเมื่อในการตั้งค่า Growser อาจปรับเปลี่ยน Search และบริการอื่นๆ ในแบบของคุณโดยอิงจากประวัติการเข้าชม</translation>
+<translation id="2541474152868747095">หากต้องการดูประวัติการเข้าชมจากอุปกรณ์อื่นๆ โปรดยืนยันว่าเป็นคุณ คุณหยุดการซิงค์ได้ทุกเมื่อในการตั้งค่า Growser อาจปรับเปลี่ยน Search และบริการอื่นๆ ในแบบของคุณโดยอิงจากประวัติการเข้าชม</translation>
+<translation id="4260407128682690669">ซิงค์ประวัติการเข้าชมและแท็บกับ <ph name="ACCOUNT_EMAIL"/> เพื่อดูประวัติการเข้าชมจากอุปกรณ์อื่นๆ คุณหยุดการซิงค์ได้ทุกเมื่อในการตั้งค่า Growser อาจปรับเปลี่ยน Search และบริการอื่นๆ ในแบบของคุณโดยอิงจากประวัติการเข้าชม</translation>
+<translation id="611018310643025551">ระบบจะส่งการค้นหาของคุณ ผลลัพธ์ที่ตรงที่สุด และเนื้อหาในหน้าไปยัง Growser และเจ้าหน้าที่ตรวจสอบอาจเห็นข้อมูลดังกล่าวเพื่อนำไปใช้ปรับปรุงฟีเจอร์นี้</translation>
+<translation id="1987486584747170374">ระบบจะส่งการค้นหาของคุณ ผลลัพธ์ที่ตรงที่สุด และเนื้อหาในหน้าไปยัง Growser เจ้าหน้าที่ตรวจสอบจะไม่ใช้ข้อมูลดังกล่าวเพื่อปรับปรุง AI องค์กรของคุณอาจเปลี่ยนการตั้งค่าเหล่านี้ได้ทุกเมื่อ</translation>
+<translation id="2461080251012814077">แท็บที่คุณลบออกจากประวัติการเข้าชมใน Growser จะยังคงแสดงในตารางเปรียบเทียบ</translation>
+<translation id="7395776876928503485">ผู้ดูแลระบบสามารถเปลี่ยนแปลงโปรไฟล์และเบราว์เซอร์จากระยะไกล วิเคราะห์ข้อมูลเกี่ยวกับเบราว์เซอร์ผ่านการรายงาน รวมถึงดำเนินการอื่นๆ ที่จำเป็นได้ กิจกรรมในอุปกรณ์นี้อาจมีการจัดการภายนอก Growser ได้ด้วย <ph name="BEGIN_LINK"/>ดูข้อมูลเพิ่มเติม<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">เบราว์เซอร์นี้ไม่ได้จัดการโดยบริษัทหรือองค์กรอื่นๆ กิจกรรมในอุปกรณ์นี้อาจมีการจัดการภายนอก Growser <ph name="BEGIN_LINK"/>ดูข้อมูลเพิ่มเติม<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">ชื่อผู้ใช้ของคุณในอุปกรณ์และใน Growser</translation>
+<translation id="9383261434423554">ข้อมูลเพิ่มเติมเกี่ยวกับเครื่องมือเชื่อมต่อ Growser Enterprise</translation>
+<translation id="7998714759612158367">เมื่อเพิ่มส่วนขยายลงใน Growser ระบบจะส่งขยวข้องซึ่งเกี่ยวกับส่วนขยายเหล่านี้ไปยังบุคคลที่สามเพื่อทำการวิเคราะห์ และข้อมูลเหล่านี้อาจปรากฏให้ผู้ดูแลระบบเห็น ข้อมูลดังกล่าชื่อ เวลาติดตั้ง แหล่งที่มาของการติดตั้ง รวมถึงกิจกรรมที่เกี่ยวข้องกับส่วนขยายเหล่านี้ (เช่น การเปลี่ยนแท็บ การติดต่อเว็บไซต์ หรไว้สำหรับส่วนขยายที่ติดตั้งจาก เว็บสโตร์ ตลอดจนส่วนขยายจากนอกสโตร์</translation>
+<translation id="3521646565402740725">เครื่องมือเชื่อมต่อ Growser Enterprise</translation>
+<translation id="7942345451754009257">ผู้ดูแลระบบได้เปิดใช้เครื่องมือเชื่อมต่อ Growser Enterprise ในเบราว์เซอร์ เครื่องมือเชื่อมต่อเหล่านี้เข้าถึงข้อมูลบางอย่างของคุณได้</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/> ได้เปิดใช้เครื่องมือเชื่อมต่อ Growser Enterprise ในเบราว์เซอร์ เครื่องมือเชื่อมต่อเหล่านี้เข้าถึงข้อมูลบางอย่างของคุณได้</translation>
+<translation id="3864343340250325558">เมื่อ Growser แจ้งว่ามีการดำเนินการด้านความปลอดภัย ระบบจะส่งข้อมูลที่เกี่ยวข้องกับการดำเนินการนั้นไปให้ผู้ดูแลระบบ ข้อมูลนี้อาจมี URL ของหน้าเว็บที่คุณเข้าชมใน Growser, URL ของหน้าเว็บที่คัดลอกข้อมูลมา, ชื่อหรือข้อมูลเมตาของไฟล์, ที่อยู่ IP, ข้อขัดข้องของเบราว์เซอร์หรือแท็บ และชื่อผู้ใช้ที่คุณลงชื่อเข้าใช้แอปพลิเคชันบนเว็บ อุปกรณ์ของคุณ และ Growser</translation>
+<translation id="1979029506107883830">Growser Enterprise Core ช่วยให้คุณจัดการนโยบายเบราว์เซอร์ แอป และส่วนขยายจากระบบคลาวด์ได้</translation>
+<translation id="84905717630920469">ทดลองใช้ Growser Enterprise Core</translation>
+<translation id="1757745363789526465">รีสตาร์ท Growser</translation>
+<translation id="2537931901612099523">คนอื่นๆ ที่ใช้อุปกรณ์นี้จะไม่เห็นกิจกรรมของคุณ คุณจึงท่องเว็บได้แบบส่วนตัวมากขึ้น โหมดนี้จะไม่เปลี่ยนแปลงวิธีเก็บรวบรวมข้อมูลโดยเว็บไซต์ที่คุณเข้าชมและบริการที่เว็บไซต์เหล่านั้นใช้ รวมถึง Growser ด้วย ระบบจะบันทึกรายการที่ดาวน์โหลดและบุ๊กมาร์กไว้</translation>
+<translation id="1410365862999780287">คนอื่นๆ ที่ใช้อุปกรณ์นี้จะไม่เห็นกิจกรรมของคุณ คุณจึงท่องเว็บได้แบบส่วนตัวมากขึ้น โหมดนี้จะไม่เปลี่ยนแปลงวิธีเก็บรวบรวมข้อมูลโดยเว็บไซต์ที่คุณเข้าชมและบริการที่เว็บไซต์เหล่านั้นใช้ รวมถึง Growser ด้วย ระบบจะบันทึกรายการที่ดาวน์โหลด บุ๊กมาร์ก และเรื่องรออ่านไว้</translation>
+<translation id="7087257419919340685">Growser <ph name="BEGIN_EMPHASIS"/>จะไม่บันทึก<ph name="END_EMPHASIS"/>ข้อมูลต่อไปนี้
+          <ph name="BEGIN_LIST"/>
+            <ph name="LIST_ITEM"/>ประวัติการท่องเว็บ
+            <ph name="LIST_ITEM"/>คุกกี้และข้อมูลเว็บไซต์
+            <ph name="LIST_ITEM"/>ข้อมูลที่ป้อนในแบบฟอร์ม
+          <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">ลบประวัติการท่องเว็บ คุกกี้ แคช และอื่นๆ ในการตั้งค่า Growser</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อลบประวัติการท่องเว็บ คุกกี้ แคช และอื่นๆ ในการตั้งค่า Growser</translation>
+<translation id="8841351289024215412">ปุ่มลบข้อมูลการท่องเว็บ เปิดใช้งานเพื่อลบประวัติการท่องเว็บ คุกกี้ แคช และอื่นๆ ในการตั้งค่า Growser</translation>
+<translation id="5085944396348027753">ดูและจัดการรหัสผ่านในการตั้งค่า Growser</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อดูและจัดการรหัสผ่านในการตั้งค่า Growser</translation>
+<translation id="3071294016974329065">ปุ่มจัดการรหัสผ่าน เปิดใช้งานเพื่อดูและจัดการรหัสผ่านในการตั้งค่า Growser</translation>
+<translation id="3031527126657836806">จัดการการชำระเงินและข้อมูลบัตรเครดิตในการตั้งค่า Growser</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการการชำระเงินและข้อมูลบัตรเครดิตในการตั้งค่า Growser</translation>
+<translation id="7338080394311291541">ปุ่มจัดการวิธีการชําระเงิน เปิดใช้งานเพื่อจัดการการชำระเงินและข้อมูลบัตรเครดิตในการตั้งค่า Growser</translation>
+<translation id="561165882404867731">แปลหน้านี้โดยใช้ Growser แปลภาษา</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อแปลหน้านี้ด้วย Growser แปลภาษา</translation>
+<translation id="8781278378794969337">ปุ่มแปลหน้าเว็บ เปิดใช้งานเพื่อแปลหน้านี้ด้วย Growser แปลภาษา</translation>
+<translation id="6560728661781075049">อัปเดต Growser</translation>
+<translation id="5749239053568461167">อัปเดต Growser จากการตั้งค่า Growser</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่ออัปเดต Growser จากการตั้งค่า Growser</translation>
+<translation id="1957844396300023214">ปุ่มอัปเดต Growser เปิดใช้งานเพื่ออัปเดต Growser จากการตั้งค่า Growser</translation>
+<translation id="6924344322157830957">เรียกใช้การตรวจสอบความปลอดภัยในการตั้งค่า Growser</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อเรียกใช้การตรวจสอบความปลอดภัยในการตั้งค่า Growser</translation>
+<translation id="2217308317357494419">ปุ่มเรียกใช้การตรวจสอบความปลอดภัยของ Growser เปิดใช้งานเพื่อเรียกใช้การตรวจสอบความปลอดภัยในการตั้งค่า Growser</translation>
+<translation id="555731368593399620">ไปที่การตรวจสอบความปลอดภัยของ Growser</translation>
+<translation id="1022622918438880634">ไปที่หน้าการตรวจสอบความปลอดภัยของ Growser ในการตั้งค่า</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อไปที่หน้าการตรวจสอบความปลอดภัยของ Growser ในการตั้งค่า</translation>
+<translation id="4573592640621800816">ปุ่มไปที่การตรวจสอบความปลอดภัยของ Growser เปิดใช้งานเพื่อไปที่หน้าการตรวจสอบความปลอดภัยของ Growser ในการตั้งค่า</translation>
+<translation id="711408602663662681">จัดการ Google Safe Browsing และอื่นๆ ในการตั้งค่า Growser</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการ Google Safe Browsing และอื่นๆ ในการตั้งค่า Growser</translation>
+<translation id="8147674953957429172">ปุ่มจัดการการตั้งค่าความปลอดภัย เปิดใช้งานเพื่อจัดการ Google Safe Browsing และอื่นๆ ในการตั้งค่า Growser</translation>
+<translation id="123941427300345384">จัดการค่ากำหนดเกี่ยวกับคุกกี้ในการตั้งค่า Growser</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการค่ากำหนดของคุกกี้ในการตั้งค่า Growser</translation>
+<translation id="185317221836385090">ปุ่มจัดการคุกกี้ เปิดใช้งานเพื่อจัดการค่ากำหนดของคุกกี้ในการตั้งค่า Growser</translation>
+<translation id="1824417970962955294">เพิ่มและจัดการที่อยู่ในการตั้งค่า Growser</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อเพิ่มและจัดการที่อยู่ในการตั้งค่า Growser</translation>
+<translation id="2805189921443465815">ปุ่มจัดการที่อยู่ เปิดใช้งานเพื่อเพิ่มและจัดการที่อยู่ในการตั้งค่า Growser</translation>
+<translation id="5592576649770969570">จัดการข้อมูลที่คุณซิงค์ในการตั้งค่า Growser</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการข้อมูลที่คุณซิงค์ในการตั้งค่า Growser</translation>
+<translation id="4269937126213032056">ปุ่มจัดการการซิงค์ เปิดใช้งานเพื่อจัดการข้อมูลที่คุณซิงค์ในการตั้งค่า Growser</translation>
+<translation id="8766514807385279339">จัดการข้อมูล Growser ที่บันทึกไว้ในบัญชี Growser</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการข้อมูล Growser ที่คุณบันทึกไว้ในบัญชี Growser</translation>
+<translation id="3256302414991866158">ปุ่มจัดการข้อมูลในบัญชี เปิดใช้งานเพื่อจัดการข้อมูล Growser ที่คุณบันทึกไว้ในบัญชี Growser</translation>
+<translation id="4365583497146730170">จัดการสิทธิ์และข้อมูลที่จัดเก็บในเว็บไซต์ต่างๆ ในการตั้งค่า Growser</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการสิทธิ์และข้อมูลที่จัดเก็บในเว็บไซต์ต่างๆ ในการตั้งค่า Growser</translation>
+<translation id="1429889589220926820">ปุ่มจัดการการตั้งค่าเว็บไซต์ เปิดใช้งานเพื่อจัดการสิทธิ์และข้อมูลที่จัดเก็บในเว็บไซต์ต่างๆ ในการตั้งค่า Growser</translation>
+<translation id="6881240511396774766">สร้างเอกสารใหม่ใน Growser เอกสารอย่างรวดเร็ว</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อสร้างเอกสารใหม่ใน Growser เอกสารอย่างรวดเร็ว</translation>
+<translation id="2925454999967523701">ปุ่มสร้างเอกสาร เปิดใช้งานเพื่อสร้างเอกสารใหม่ใน Growser เอกสารอย่างรวดเร็ว</translation>
+<translation id="8075736640322370409">สร้างชีตใหม่ใน Growser ชีตอย่างรวดเร็ว</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อสร้างชีตใหม่ใน Growser ชีตอย่างรวดเร็ว</translation>
+<translation id="3150889484970506196">ปุ่มสร้างชีต เปิดใช้งานเพื่อสร้างสเปรดชีตใหม่ใน Growser ชีตอย่างรวดเร็ว</translation>
+<translation id="6971439137020188025">สร้างงานนำเสนอใหม่ใน Growser สไลด์อย่างรวดเร็ว</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อสร้างงานนำเสนอใหม่ใน Growser สไลด์อย่างรวดเร็ว</translation>
+<translation id="8768225988514678921">ปุ่มสร้างงานนําเสนอ เปิดใช้งานเพื่อสร้างงานนําเสนอใหม่ใน Growser สไลด์อย่างรวดเร็ว</translation>
+<translation id="7582602800368606489">สร้างกิจกรรมใหม่ใน Growser ปฏิทินอย่างรวดเร็ว</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อสร้างกิจกรรมใหม่ใน Growser ปฏิทินอย่างรวดเร็ว</translation>
+<translation id="2009942480257059311">ปุ่มสร้างกิจกรรม เปิดใช้งานเพื่อสร้างกิจกรรมใหม่ใน Growser ปฏิทินอย่างรวดเร็ว</translation>
+<translation id="1269516672602708785">สร้างเว็บไซต์แบบใหม่ใน Growser Sites อย่างรวดเร็ว</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อสร้างเว็บไซต์แบบใหม่ใน Growser Sites อย่างรวดเร็ว</translation>
+<translation id="3698629142018988477">ปุ่มสร้างเว็บไซต์ เปิดใช้งานเพื่อสร้างเว็บไซต์ใหม่ใน Growser Sites อย่างรวดเร็ว</translation>
+<translation id="4854853140771946034">สร้างโน้ตใหม่ใน Growser Keep อย่างรวดเร็ว</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อสร้างโน้ตใหม่ใน Growser Keep อย่างรวดเร็ว</translation>
+<translation id="5488590678320979185">ปุ่มสร้างโน้ต เปิดใช้งานเพื่อสร้างโน้ตใหม่ใน Growser Keep อย่างรวดเร็ว</translation>
+<translation id="7734285854693414638">สร้างแบบฟอร์มใหม่ใน Growser ฟอร์มอย่างรวดเร็ว</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อสร้างแบบฟอร์มใหม่ใน Growser ฟอร์มอย่างรวดเร็ว</translation>
+<translation id="573555826359077410">ปุ่มสร้างแบบฟอร์ม เปิดใช้งานเพื่อสร้างแบบฟอร์มใหม่ใน Growser ฟอร์มอย่างรวดเร็ว</translation>
+<translation id="7910437794853634516">ดูเคล็ดลับในการใช้ Growser</translation>
+<translation id="3521214483675189046">ดูข้อมูลเกี่ยวกับฟีเจอร์ของ Growser</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อดูข้อมูลเกี่ยวกับฟีเจอร์ของ Growser</translation>
+<translation id="4260829339448158187">ปุ่มดูเคล็ดลับในการใช้ Growser เปิดใช้งานเพื่อดูข้อมูลเกี่ยวกับฟีเจอร์ต่างๆ ของ Growser</translation>
+<translation id="8694710517222056538">จัดการบัญชี Growser</translation>
+<translation id="6587259514551810029">จัดการข้อมูล ความเป็นส่วนตัว และการรักษาความปลอดภัยในบัญชี Growser ของคุณ</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการข้อมูล ความเป็นส่วนตัว และการรักษาความปลอดภัยในบัญชี Growser ของคุณ</translation>
+<translation id="7027078594246193839">จัดการบัญชี Growser เปิดใช้งานเพื่อจัดการข้อมูล ความเป็นส่วนตัว และการรักษาความปลอดภัยในบัญชี Growser ของคุณ</translation>
+<translation id="643051589346665201">เปลี่ยนรหัสผ่าน Growser</translation>
+<translation id="7075427536109560520">เปลี่ยนรหัสผ่านของบัญชี Growser</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อเปลี่ยนรหัสผ่านของบัญชี Growser</translation>
+<translation id="3236176349246489091">ปุ่มเปลี่ยนรหัสผ่าน Growser เปิดใช้งานเพื่อเปลี่ยนรหัสผ่านของบัญชี Growser</translation>
+<translation id="4573751006789325585">เล่นเกมไดโนเสาร์ Growser</translation>
+<translation id="1461337831834704527">เล่นเกมไดโนเสาร์วิ่งใน Growser</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อเล่นเกมไดโนเสาร์วิ่งใน Growser</translation>
+<translation id="3493625910132223088">ปุ่มเล่นเกมไดโนเสาร์ Growser เปิดใช้งานเพื่อเล่นเกมไดโนเสาร์วิ่งใน Growser</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อหาอุปกรณ์ในบัญชี Growser</translation>
+<translation id="8109063930676038426">ปุ่มหาอุปกรณ์ของฉัน เปิดใช้งานเพื่อหาอุปกรณ์ในบัญชี Growser</translation>
+<translation id="163710751542270335">จัดการการตั้งค่าความเป็นส่วนตัวของบัญชี Growser</translation>
+<translation id="3269729253658419180">จัดการการตั้งค่าความเป็นส่วนตัวของ Growser ในบัญชี Growser</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการการตั้งค่าความเป็นส่วนตัวของบัญชี Growser</translation>
+<translation id="970931323129831346">ปุ่มจัดการการตั้งค่าความเป็นส่วนตัวของ Growser เปิดใช้งานเพื่อไปที่การตั้งค่าความเป็นส่วนตัวของบัญชี Growser</translation>
+<translation id="498856326289655361">จัดการการตั้งค่า Growser</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการการตั้งค่า Growser</translation>
+<translation id="1592236556980370094">ปุ่มจัดการการตั้งค่า Growser เปิดใช้งานเพื่อไปที่การตั้งค่า Growser</translation>
+<translation id="2480781891721036554">จัดการไฟล์ที่คุณดาวน์โหลดใน Growser</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อจัดการไฟล์ที่คุณดาวน์โหลดใน Growser</translation>
+<translation id="8786654106588913377">ปุ่มจัดการการดาวน์โหลดใน Growser เปิดใช้งานเพื่อจัดการไฟล์ที่คุณดาวน์โหลดใน Growser</translation>
+<translation id="8320175841857324841">ดูประวัติการเข้าชมใน Growser</translation>
+<translation id="179012966915448796">ดูและจัดการประวัติการท่องเว็บในการตั้งค่า Growser</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อดูประวัติการท่องเว็บใน Growser</translation>
+<translation id="7891862848641775440">ปุ่มดูประวัติการเข้าชมใน Growser เปิดใช้งานเพื่อดูและจัดการประวัติการท่องเว็บในการตั้งค่า Growser</translation>
+<translation id="1545741848376005386">ปรับเปลี่ยนเครื่องมือการช่วยเหลือพิเศษในแบบของคุณในการตั้งค่า Growser</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อปรับเปลี่ยนเครื่องมือช่วยเหลือพิเศษในแบบของคุณที่การตั้งค่า Growser</translation>
+<translation id="1350935235605927980">ปุ่มจัดการการตั้งค่าการช่วยเหลือพิเศษ เปิดใช้งานเพื่อปรับเปลี่ยนเครื่องมือช่วยเหลือพิเศษในแบบของคุณที่การตั้งค่า Growser</translation>
+<translation id="1937771495497081508">ปรับแต่งขนาดแบบอักษรและลักษณะแบบอักษรใน Growser</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อปรับแต่งขนาดแบบอักษรและลักษณะแบบอักษรใน Growser</translation>
+<translation id="8183964669401154956">ปุ่มปรับแต่งแบบอักษรใน Growser เปิดใช้งานเพื่อปรับแต่งขนาดแบบอักษรและลักษณะแบบอักษรใน Growser</translation>
+<translation id="6868193750403948178">ปรับแต่ง Growser</translation>
+<translation id="2746936074954064976">ปุ่มปรับแต่ง Growser เปิดใช้งานเพื่อปรับแต่งรูปลักษณ์ของเบราว์เซอร์</translation>
+<translation id="8223358973996562559">ตั้ง Growser เป็นเบราว์เซอร์เริ่มต้น</translation>
+<translation id="113548419005571036">ตั้ง Growser เป็นเบราว์เซอร์เริ่มต้นของระบบ</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อตั้ง Growser เป็นเบราว์เซอร์เริ่มต้นของระบบ</translation>
+<translation id="6783715802269207395">ปุ่มตั้ง Growser เป็นเบราว์เซอร์เริ่มต้น เปิดใช้งานเพื่อตั้ง Growser เป็นเบราว์เซอร์เริ่มต้นของระบบ</translation>
+<translation id="8076157978023662935">ตั้งค่า Growser เป็นเบราว์เซอร์เริ่มต้น</translation>
+<translation id="7026203586041411100">ตั้ง Growser เป็นเบราว์เซอร์เริ่มต้นของระบบในการตั้งค่า iOS</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab แล้วกด Enter เพื่อตั้ง Growser เป็นเบราว์เซอร์เริ่มต้นของระบบในการตั้งค่า iOS</translation>
+<translation id="29533193241299316">ปุ่มตั้ง Growser เป็นเบราว์เซอร์เริ่มต้น กด Enter เพื่อตั้ง Growser เป็นเบราว์เซอร์เริ่มต้นของระบบในการตั้งค่า iOS</translation>
+<translation id="2461514655528532981">เรียกใช้การตรวจสอบความปลอดภัยของ Growser</translation>
+<translation id="9113214967104134276">ดูประวัติการเข้าชมใน Growser</translation>
+<translation id="943522416815463637">เล่นเกมไดโนเสาร์ Growser</translation>
+<translation id="7602868996817972616">ถาม Growser เกี่ยวกับหน้านี้</translation>
+<translation id="161612500287664753">ถาม Google Search เกี่ยวกับหน้านี้</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Enter เพื่อถาม Growser เกี่ยวกับหน้านี้</translation>
+<translation id="5630981295558454585">เปิดใช้งานปุ่ม "ถาม Growser เกี่ยวกับหน้านี้" เพื่อถาม Growser เกี่ยวกับหน้านี้</translation>
+<translation id="6019118530636932154">Growser Apps Script</translation>
+<translation id="6437647869369934905">Growser วาดเขียน</translation>
+<translation id="1875512691959384712">Growser ฟอร์ม</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser Sites</translation>
+<translation id="1521655867290435174">Growser ชีต</translation>
+<translation id="467809019005607715">Growser สไลด์</translation>
+<translation id="7510585715716175915">สำรวจต่อเพื่อดูกิจกรรมที่เกี่ยวข้องในประวัติการเข้าชมใน Growser</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/> กด Tab ตามด้วย Enter เพื่อดำเนินการสำรวจต่อและดูกิจกรรมที่เกี่ยวข้องในประวัติการเข้าชมใน Growser</translation>
+<translation id="3714978095030396658">ปุ่มสำรวจต่อ กด Enter เพื่อสำรวจต่อและดูกิจกรรมที่เกี่ยวข้องในประวัติการเข้าชมใน Growser</translation>
+<translation id="9041241404793255081">บทบาท: เคล็ดลับสำหรับ Growser ป้ายกำกับการเข้าถึง: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/> กด Tab ตามด้วย Enter เพื่อปิดเคล็ดลับสำหรับ Growser</translation>
+<translation id="7432463754469271865">ปุ่ม "ปิดเคล็ดลับสำหรับ Growser" กด Enter เพื่อปิด <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">ปุ่ม "ปิดเคล็ดลับสำหรับ Growser" กด Enter เพื่อปิด</translation>
+<translation id="7571813784389228510">โหมด Growser AI</translation>
+<translation id="3415471717466570460">ระบบจะส่งการค้นหาของคุณ ผลลัพธ์ที่ตรงที่สุด และเนื้อหาในหน้าไปยัง Growser และเจ้าหน้าที่ตรวจสอบอาจเห็นข้อมูลดังกล่าวเพื่อนำไปใช้ปรับปรุงฟีเจอร์นี้ ฟีเจอร์นี้อยู่ในขั้นทดลองและอาจไม่ได้ทำงานถูกต้องเสมอไป</translation>
+<translation id="9103366036378878818">ลิงก์เคล็ดลับสำหรับ Growser กด Enter เพื่อเปิด <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/></translation>
+<translation id="2097698842685899280">Brave ตรวจพบรายละเอียดที่พบได้ทั่วไปในเว็บไซต์ที่เกี่ยวข้องกับฟิชชิง มัลแวร์ หรือสแกม <ph name="BEGIN_LINK"/>ดูข้อมูลเพิ่มเติม<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Growser ทำให้หน้านี้อ่านง่ายขึ้น Growser ดึงข้อมูลหน้าต้นฉบับผ่านการเชื่อมต่อที่ปลอดภัย</translation>
+<translation id="542284143784575620">Growser ทำให้หน้านี้อ่านง่ายขึ้น Growser ดึงข้อมูลหน้าต้นฉบับผ่านการเชื่อมต่อที่ไม่ปลอดภัย</translation>
+<translation id="5826875044227298275">คุณเพิ่งใส่รหัสผ่านในเว็บไซต์ที่มีการหลอกลวง Growser ขอแนะนำให้ตรวจสอบรหัสผ่านที่บันทึกไว้เพื่อรักษาความปลอดภัยของบัญชี</translation>
+<translation id="4397030659892816613">หากต้องการใช้กล้อง โปรดให้สิทธิ์เข้าถึงแก่ Growser ใน<ph name="LINK"/></translation>
+<translation id="8251369644700086563">หากต้องการใช้ไมโครโฟน โปรดให้สิทธิ์เข้าถึงแก่ Growser ใน<ph name="LINK"/></translation>
+<translation id="6520686276106691991">หากต้องการใช้ตำแหน่ง โปรดให้สิทธิ์เข้าถึงแก่ Growser ใน<ph name="LINK"/></translation>
+<translation id="1612024742222359811">หากต้องการใช้คลิปบอร์ด โปรดให้สิทธิ์เข้าถึงแก่ Growser ใน<ph name="LINK"/></translation>
+<translation id="3620727327079734151">คุณอาจสูญเสียสิทธิ์เข้าถึงบัญชี Growser ของคุณ Growser ขอแนะนำให้เปลี่ยนรหัสผ่านทันที ระบบจะขอให้คุณลงชื่อเข้าใช้</translation>
+<translation id="7891575721440765670">Growser ช่วยคุณปกป้องบัญชี Growser และเปลี่ยนรหัสผ่านได้</translation>
+<translation id="1362419187647259443">คุณเพิ่งใส่รหัสผ่านในเว็บไซต์ที่มีการหลอกลวง Growser ช่วยคุณได้ หากต้องการเปลี่ยนรหัสผ่านและแจ้งให้ Growser ทราบว่าบัญชีของคุณอาจมีความเสี่ยง ให้คลิก "ปกป้องบัญชี"</translation>
+<translation id="4067282726741467091">คุณอาจเข้าถึงบัญชีขององค์กรไม่ได้หรือถูกโจรกรรมข้อมูลประจำตัว Growser ขอแนะนำให้เปลี่ยนรหัสผ่านตอนนี้เลย</translation>
+<translation id="7872399623676350476">คุณอาจเข้าถึงบัญชี <ph name="ORG_NAME"/> ไม่ได้หรือถูกโจรกรรมข้อมูลประจำตัว Growser ขอแนะนำให้เปลี่ยนรหัสผ่านตอนนี้เลย</translation>
+<translation id="5938866385061293322">ข้อมูลนี้มาจากเว็บไซต์รีวิวอิสระ เช่น Trustpilot, ScamAdviser, Growser และอื่นๆ ข้อมูลสรุปสร้างขึ้นด้วย AI</translation>
+<translation id="4452328064229197696">ระบบพบว่ารหัสผ่านที่คุณเพิ่งใช้มีการรั่วไหลในการละเมิดข้อมูลครั้งหนึ่ง เพื่อรักษาความปลอดภัยของบัญชี เครื่องมือจัดการรหัสผ่านบน Growser แนะนำให้ตรวจสอบรหัสผ่านที่บันทึกไว้</translation>
+<translation id="7646681339175747202">ระบบพบว่ารหัสผ่านที่คุณเพิ่งใช้มีการรั่วไหลจากการละเมิดข้อมูล เครื่องมือจัดการรหัสผ่านบน Growser แนะนำให้เปลี่ยนรหัสผ่านทันที</translation>
+<translation id="5997247540087773573">ระบบพบว่ารหัสผ่านที่คุณเพิ่งใช้มีการรั่วไหลในการละเมิดข้อมูลครั้งหนึ่ง เพื่อรักษาความปลอดภัยของบัญชี เครื่องมือจัดการรหัสผ่านบน Growser แนะนำให้เปลี่ยนรหัสผ่านทันทีและตรวจสอบรหัสผ่านที่บันทึกไว้</translation>
+<translation id="6722165747660324971">เมื่อใช้รหัสผ่าน Growser จะเตือนคุณหากมีการเผยแพร่รหัสผ่านออนไลน์ เราเข้ารหัสชื่อผู้ใช้และรหัสผ่านเมื่อทำการตรวจสอบเพื่อไม่ให้ผู้ใดอ่านข้อมูลดังกล่าวได้ รวมถึง Growser</translation>
+<translation id="1485314135034164137">รหัสผ่าน Growser</translation>
+<translation id="7558556509649858677">พาสคีย์ • โปรไฟล์ Growser ของคุณ</translation>
+<translation id="950926967802086924">พาสคีย์ • เครื่องมือจัดการรหัสผ่านบน Growser</translation>
+<translation id="6338645927051849741">รหัสผ่าน • เครื่องมือจัดการรหัสผ่านบน Growser</translation>
+<translation id="131993612023623286">Growser กำลังพยายามป้อนรหัสผ่านของคุณใน "<ph name="APP_NAME"/>"</translation>
+<translation id="1833199389909527220">Growser กำลังพยายามเปิด Windows Hello เพื่อป้อนรหัสผ่าน</translation>
+<translation id="643007953296382271">Growser กำลังพยายามปิด Windows Hello เพื่อป้อนรหัสผ่าน</translation>
+<translation id="2739032725916431090">บันทึกไว้ในบัญชี Growser ของคุณ</translation>
+<translation id="2920528063654705391">โปรดยืนยันว่าเป็นคุณเพื่อใช้รหัสผ่านและข้อมูลอื่นๆ ที่บันทึกไว้ในบัญชี Growser</translation>
+<translation id="3795624560191557077">คุณเพิ่งเปลี่ยนรหัสผ่านที่พบในการละเมิดข้อมูลสาธารณะ ในกรณีที่เกิดปัญหา เครื่องมือจัดการรหัสผ่านบน Growser จะช่วยให้คุณลงชื่อเข้าใช้ได้</translation>
+<translation id="5748742097310495951">ข้อมูลบัตรและที่อยู่มาจาก Growser และบัญชี Growser (<ph name="ACCOUNT_EMAIL"/>) คุณสามารถจัดการข้อมูลเหล่านี้ใน<ph name="BEGIN_LINK"/>การตั้งค่า<ph name="END_LINK"/></translation>
+<translation id="6827399997598211909">ข้อมูลบัตรและที่อยู่มาจาก Growser คุณสามารถจัดการข้อมูลเหล่านี้ใน<ph name="BEGIN_LINK"/>การตั้งค่า<ph name="END_LINK"/></translation>
+<translation id="7934414805353235750"><ph name="URL"/> ต้องการเปิดเนื้อหาที่ได้รับความคุ้มครอง Growser จะตรวจสอบข้อมูลประจำตัวของอุปกรณ์</translation>
+<translation id="7142561893113115357">ไม่มีการตรวจพบว่าคอมพิวเตอร์เครื่องนี้ได้รับการจัดการโดยองค์กร ดังนั้นนโยบายจะติดตั้งเฉพาะส่วนขยายที่โฮสต์ใน Growser เว็บสโตร์โดยอัตโนมัติ URL การอัปเดตของ Growser เว็บสโตร์คือ "<ph name="CWS_UPDATE_URL"/>"</translation>
+<translation id="6272383483618007430">Growser อัปเดต</translation>
+<translation id="885730110891505394">การแชร์กับ Growser</translation>
+<translation id="2867186026859663748">ตั้งค่านโยบายนี้ในระดับโปรไฟล์ Growser ไม่ได้ และระบบจะไม่สนใจ</translation>
+<translation id="277370491433906876">ระบบจะไม่สนใจนโยบายนี้เนื่องจากเป็นผู้ใช้ที่ไม่ได้เชื่อมโยง เบราว์เซอร์และโปรไฟล์ Growser ต้องมีการจัดการผ่านคอนโซลผู้ดูแลระบบโดยองค์กรเดียวกันจึงจะใช้นโยบายนี้ได้</translation>
+<translation id="1963194198237607890">Growser Enterprise Core มีเครื่องมือส่วนกลางสำหรับกำหนดค่านโยบายเบราว์เซอร์จากระบบคลาวด์</translation>
+<translation id="4553855485042734119">อินสแตนซ์ของ Brave นี้กำลังทำงานโดยมีการตั้งค่า Flag บรรทัดคำสั่งด้วยตนเอง โปรดทราบว่า Flag บรรทัดคำสั่งอาจเปลี่ยนแปลงได้ทุกเมื่อและไม่ได้รับการรองรับ</translation>
+<translation id="3858407183625528544">เพื่อรักษาความปลอดภัย องค์กรของคุณไม่อนุญาตให้นำรหัสผ่านกลับมาใช้ใหม่ใน Growser รหัสผ่านใน Growser ได้รับการเข้ารหัสเพื่อปกป้องความเป็นส่วนตัวของผู้ใช้</translation>
+<translation id="6376948191860056592">ดูข้อมูลเพิ่มเติมเกี่ยวกับวิธีที่ Growser ปกป้องรหัสผ่านของคุณ</translation>
+<translation id="59755378055907482">Growser ขอแนะนำให้รีเซ็ตรหัสผ่านหากคุณใช้รหัสผ่านนี้ซ้ำในเว็บไซต์อื่น</translation>
+<translation id="2025231306371961337">Growser ขอแนะนำให้รีเซ็ตรหัสผ่าน <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> หากคุณใช้รหัสผ่านนี้ซ้ำในเว็บไซต์อื่น</translation>
+<translation id="3990414676738824170">ดูข้อมูลเพิ่มเติมเกี่ยวกับเครื่องมือค้นหาใน Growser</translation>
+<translation id="8152737631160961249">เครื่องมือค้นหาใน Growser</translation>
+<translation id="5178006823023208130">Growser จะขอให้คุณเลือกเครื่องมือค้นหาเริ่มต้นตามกฎหมายในภูมิภาคของคุณ เครื่องมือค้นหาเหล่านี้ได้รับความนิยมในภูมิภาคดังกล่าว และแสดงแบบสุ่มลำดับ</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>เครื่องมือค้นหาเริ่มต้นจะให้คุณค้นหาเว็บและใช้งานฟีเจอร์ต่างๆ ของ Growser<ph name="END_BOLD"/> เช่น การค้นหาจากแถบที่อยู่และภาพบนหน้าเว็บ ฟีเจอร์อาจไม่พร้อมใช้งาน หากเครื่องมือค้นหาของคุณไม่รองรับ</translation>
+<translation id="652920213589772275">คุณเปลี่ยนเครื่องมือค้นหาได้ตลอดเวลาในการตั้งค่าของ Growser</translation>
+<translation id="5113257522679527347">คุณเปลี่ยนเครื่องมือค้นหาได้ตลอดเวลาในการตั้งค่าของ Brave หากไม่เห็นเครื่องมือค้นหาที่ต้องการ คุณสามารถค้นหาจากเว็บไซต์ของเครื่องมือค้นหานั้นได้ คุณจะเห็นเครื่องมือค้นหานี้แสดงเป็นเครื่องมือค้นหาที่เข้าชมล่าสุดในการตั้งค่า Brave และคุณสามารถตั้งค่าให้เป็นค่าเริ่มต้นได้</translation>
+<translation id="2493969470983483123">มีแอปพลิเคชันที่ห้ามไม่ให้ Growser เชื่อมต่อกับไซต์นี้อย่างปลอดภัย</translation>
+<translation id="463534029029027294">หากต้องเริ่มการเชื่อมต่อที่ปลอดภัย นาฬิกาจะต้องตั้งค่าไว้อย่างถูกต้อง เนื่องจากใบรับรองที่เว็บไซต์ใช้เพื่อระบุตนเองจะใช้ได้เฉพาะช่วงเวลาหนึ่งเท่านั้น นาฬิกาของอุปกรณ์ไม่ถูกต้อง Growser จึงไม่สามารถยืนยันใบรับรองเหล่านี้ได้</translation>
+<translation id="6824867187541740495">โดยทั่วไป <ph name="SITE"/> จะใช้การเข้ารหัสเพื่อปกป้องข้อมูลของคุณ เมื่อ Growser พยายามเชื่อมต่อกับ <ph name="SITE"/> ในครั้งนี้ เว็บไซต์ดังกล่าวส่งข้อมูลรับรองที่ผิดปกติและไม่ถูกต้องกลับมา เหตุการณ์นี้อาจเกิดขึ้นเมื่อผู้บุกรุกพยายามปลอมเป็น <ph name="SITE"/> หรือหน้าจอการลงชื่อเข้าใช้ Wi-Fi รบกวนการเชื่อมต่อ ข้อมูลของคุณยังปลอดภัยอยู่เนื่องจาก Growser หยุดการเชื่อมต่อก่อนมีการแลกเปลี่ยนข้อมูล</translation>
+<translation id="8465252529695749376">คุณไม่สามารถไปที่ <ph name="SITE"/> ได้ในขณะนี้ เนื่องจากเว็บไซต์ดังกล่าวส่งข้อมูลรับรองที่สลับกัน ซึ่ง Growser ไม่สามารถเข้าถึงได้ โดยปกติข้อผิดพลาดของเครือข่ายและการบุกรุกจะเกิดขึ้นเพียงชั่วคราว หน้านี้จึงน่าจะใช้งานได้ในภายหลัง</translation>
+<translation id="7320808063012439368">ผู้โจมตีเว็บไซต์ที่คุณพยายามเข้าชมอาจติดตั้งซอฟต์แวร์ที่เป็นอันตรายซึ่งจะขโมยหรือลบข้อมูล เช่น รหัสผ่าน รูปภาพ ข้อความ หรือหมายเลขบัตรเครดิต Growser ขอแนะนำเป็นอย่างยิ่งให้กลับสู่ความปลอดภัย <ph name="BEGIN_LEARN_MORE_LINK"/>ดูข้อมูลเพิ่มเติมเกี่ยวกับคำเตือนนี้<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Growser มีฟีเจอร์ความปลอดภัยในตัวเพื่อปกป้องคุณขณะท่องเว็บ เช่น Google Safe Browsing ที่<ph name="BEGIN_LINK"/>พบมัลแวร์<ph name="END_LINK"/>ในเว็บไซต์ที่คุณพยายามเข้าชมเมื่อเร็วๆ นี้</translation>
+<translation id="1959001866257244765">ช่วยปรับปรุงความปลอดภัยในอินเทอร์เน็ตสำหรับทุกคนโดยการส่ง <ph name="BEGIN_WHITEPAPER_LINK"/>URL ของหน้าเว็บบางหน้าที่คุณเข้าชม ข้อมูลระบบที่จำกัด และเนื้อหาบางส่วนของหน้า<ph name="END_WHITEPAPER_LINK"/>ให้ Growser <ph name="BEGIN_PRIVACY_PAGE_LINK"/>นโยบายความเป็นส่วนตัว<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>เปิดใช้การปกป้องที่ดียิ่งขึ้น<ph name="END_ENHANCED_PROTECTION_LINK"/>เพื่อรับการรักษาความปลอดภัยระดับสูงสุดของ Growser</translation>
+<translation id="9158927344907916875">ผู้โจมตีเว็บไซต์ที่คุณพยายามเข้าชมอาจหลอกล่อให้คุณติดตั้งซอฟต์แวร์ที่เป็นอันตรายซึ่งส่งผลต่อการท่องเว็บ เช่น เปลี่ยนหน้าแรกหรือแสดงโฆษณาเพิ่มเติมในเว็บไซต์ที่เข้าชม Growser ขอแนะนำเป็นอย่างยิ่งให้กลับสู่ความปลอดภัยเพื่อหลีกเลี่ยงอันตราย <ph name="BEGIN_LEARN_MORE_LINK"/>ดูข้อมูลเพิ่มเติมเกี่ยวกับคำเตือนนี้<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Growser มีฟีเจอร์ความปลอดภัยในตัวเพื่อปกป้องคุณขณะท่องเว็บ เช่น Google Safe Browsing ที่<ph name="BEGIN_LINK"/>พบซอฟต์แวร์ที่เป็นอันตราย<ph name="END_LINK"/>ในเว็บไซต์ที่คุณพยายามเข้าชมเมื่อเร็วๆ นี้</translation>
+<translation id="6123391640338102428">ผู้โจมตีเว็บไซต์ที่คุณพยายามเข้าชมอาจหลอกล่อให้คุณติดตั้งซอฟต์แวร์หรือเปิดเผยข้อมูล เช่น รหัสผ่าน หมายเลขบัตรเครดิต หรือหมายเลขโทรศัพท์ Growser ขอแนะนำเป็นอย่างยิ่งให้กลับสู่ความปลอดภัย <ph name="BEGIN_LEARN_MORE_LINK"/>ดูข้อมูลเพิ่มเติมเกี่ยวกับคำเตือนนี้<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Growser มีฟีเจอร์ความปลอดภัยในตัวเพื่อปกป้องคุณขณะท่องเว็บ เช่น Google Safe Browsing ที่<ph name="BEGIN_LINK"/>พบฟิชชิง<ph name="END_LINK"/>ในเว็บไซต์ที่คุณพยายามเข้าชมเมื่อเร็วๆ นี้ เว็บไซต์ฟิชชิงปลอมเป็นเว็บไซต์อื่นๆ เพื่อหลอกคุณ<ph name="NEW_LINE"/>บางครั้งเว็บไซต์ที่โดยปกติจะปลอดภัยก็อาจถูกบุกรุกจากผู้โจมตีได้ โปรด<ph name="BEGIN_ERROR_LINK"/>แจ้งให้เราทราบ<ph name="END_ERROR_LINK"/>หากคุณคิดว่ามีข้อผิดพลาดเกิดขึ้นและเว็บไซต์นี้ไม่ก่อให้เกิดอันตราย</translation>
+<translation id="1963212335151184769">&lt;h4&gt;ขั้นตอนที่ 1: ลงชื่อเข้าใช้พอร์ทัล&lt;/h4&gt;
+    &lt;p&gt;เครือข่าย Wi-Fi ในสถานที่หลายแห่งอย่างร้านกาแฟหรือสนามบินจำเป็นต้องให้คุณลงชื่อเข้าใช้ หากต้องการดูหน้าลงชื่อเข้าใช้ โปรดไปที่หน้าเว็บที่ใช้ &lt;code&gt;http://&lt;/code&gt;&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;ไปยังเว็บไซต์ที่ขึ้นต้นด้วย &lt;code&gt;http://&lt;/code&gt; เช่น &lt;a href="http://example.com" target="_blank" rel="noopener noreferrer"&gt;http://example.com&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;ในหน้าลงชื่อเข้าใช้ที่เปิดขึ้นมา ให้ลงชื่อเข้าใช้เพื่อใช้อินเทอร์เน็ต&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;ขั้นตอนที่ 2: เปิดหน้าเว็บในโหมดไม่ระบุตัวตน (เฉพาะคอมพิวเตอร์)&lt;/h4&gt;
+    &lt;p&gt;เปิดหน้าเว็บที่คุณได้เข้าชมในหน้าต่างที่ไม่ระบุตัวตน&lt;/p&gt;
+    &lt;p&gt;หากหน้านั้นเปิดขึ้น แสดงว่าส่วนขยาย Growser ทำงานไม่ถูกต้อง โปรดปิดส่วนขยายเพื่อแก้ไขข้อผิดพลาด&lt;/p&gt;
+    &lt;h4&gt;ขั้นตอนที่ 3: อัปเดตระบบปฏิบัติการ&lt;/h4&gt;
+    &lt;p&gt;ตรวจสอบว่าอุปกรณ์ใช้เวอร์ชันล่าสุด&lt;/p&gt;
+    &lt;h4&gt;ขั้นตอนที่ 4: ปิดโปรแกรมป้องกันไวรัสชั่วคราว&lt;/h4&gt;
+    &lt;p&gt;คุณจะเห็นข้อผิดพลาดนี้ หากคุณมีซอฟต์แวร์ป้องกันไวรัสที่มอบ "การป้องกัน HTTPS" หรือ "การสแกน HTTPS" ซึ่งกำลังขัดขวางการรักษาความปลอดภัยของ Growser&lt;/p&gt;
+    &lt;p&gt;ในการแก้ไขปัญหานี้ ให้ปิดซอฟต์แวร์ป้องกันไวรัส หากหน้าเว็บทำงานเป็นปกติหลังจากปิดซอฟต์แวร์แล้ว ให้ปิดซอฟต์แวร์นี้เมื่อคุณใช้งานเว็บไซต์ที่มีความปลอดภัย&lt;/p&gt;
+    &lt;p&gt;อย่าลืมเปิดโปรแกรมป้องกันไวรัสอีกครั้ง เมื่อคุณใช้งานเสร็จแล้ว&lt;/p&gt;
+    &lt;h4&gt;ขั้นตอนที่ 5: รับความช่วยเหลือเพิ่มเติม&lt;/h4&gt;
+    &lt;p&gt;หากคุณยังคงเห็นข้อผิดพลาด โปรดติดต่อเจ้าของเว็บไซต์&lt;/p&gt;</translation>
+<translation id="5918920501730384878">"ซอฟต์แวร์ในคอมพิวเตอร์ของคุณทำให้ Growser เชื่อมต่อกับเว็บอย่างปลอดภัยไม่ได้" (คอมพิวเตอร์ที่ใช้ระบบปฏิบัติการ Windows เท่านั้น)</translation>
+<translation id="5693013509590251567">ปัญหานี้เกิดจากใบรับรองที่คุณหรือคนอื่นติดตั้งไว้ในอุปกรณ์ เป็นที่ทราบกันว่า ใบรับรองนี้ใช้สำหรับการตรวจสอบและสกัดกั้นเครือข่าย และ Growser ไม่เชื่อถือใบรับรองนี้ แม้ว่าจะมีบางกรณีที่การตรวจสอบชอบด้วยกฎหมาย เช่น เครือข่ายของบริษัทหรือโรงเรียน แต่ Growser ก็ยังอยากจะแน่ใจว่าคุณรับรู้ว่ามีการตรวจสอบถึงแม้จะหยุดการตรวจสอบนั้นไม่ได้ก็ตาม การตรวจสอบอาจเกิดขึ้นได้ในทุกเบราว์เซอร์หรือแอปพลิเคชันที่เข้าถึงเว็บ</translation>
+<translation id="6319672966240656136">เว็บไซต์นี้จะยังคงถูกบล็อกเนื่องจากคุณอยู่ในโปรแกรมการปกป้องขั้นสูงของ Growser <ph name="BEGIN_LEARN_MORE_LINK"/>ดูข้อมูลเพิ่มเติมเกี่ยวกับคำเตือนนี้<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">โดยปกติคุณจะเชื่อมต่อกับเว็บไซต์นี้อย่างปลอดภัย แต่ Growser ไม่สามารถใช้การเชื่อมต่อที่ปลอดภัยได้ในขณะนี้ ผู้โจมตีอาจกำลังพยายามดักฟังหรือแก้ไขการเชื่อมต่อเครือข่ายของคุณ <ph name="BEGIN_LEARN_MORE_LINK"/>ดูข้อมูลเพิ่มเติมเกี่ยวกับคำเตือนนี้<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">โดยปกติคุณจะเชื่อมต่อกับเว็บไซต์ต่างๆ อย่างปลอดภัย แต่ Growser ไม่สามารถใช้การเชื่อมต่อที่ปลอดภัยได้ในขณะนี้ ผู้โจมตีอาจกำลังพยายามดักฟังหรือแก้ไขการเชื่อมต่อเครือข่ายของคุณ <ph name="BEGIN_LEARN_MORE_LINK"/>ดูข้อมูลเพิ่มเติมเกี่ยวกับคำเตือนนี้<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">โดยปกติคุณจะเชื่อมต่อกับเว็บไซต์นี้อย่างปลอดภัย แต่ Growser ไม่สามารถใช้การเชื่อมต่อที่ปลอดภัยได้ในขณะนี้ ผู้โจมตีอาจกำลังพยายามดักฟังหรือแก้ไขการเชื่อมต่อเครือข่ายของคุณ <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">โดยปกติคุณจะเชื่อมต่อกับเว็บไซต์ต่างๆ อย่างปลอดภัย แต่ Growser ไม่สามารถใช้การเชื่อมต่อที่ปลอดภัยได้ในขณะนี้ ผู้โจมตีอาจกำลังพยายามดักฟังหรือแก้ไขการเชื่อมต่อเครือข่ายของคุณ <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">คุณเห็นคำเตือนนี้เนื่องจากเว็บไซต์นี้ไม่รองรับ HTTPS และคุณอยู่ในโปรแกรมการปกป้องขั้นสูงของ Growser <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave เพิ่งแจ้งเตือนเกี่ยวกับเว็บไซต์ที่คุณพยายามเข้าชม ช่วยเราปรับปรุงคำเตือนเหล่านี้โดยตอบแบบสำรวจซึ่งใช้เวลาเพียง 1 นาที</translation>
+<translation id="3665741528710985669">ส่งไปยัง Brave ใน <ph name="DEVICE_NAME"/> แล้ว</translation>
+<translation id="2756090547781225493">ส่งไปยัง Brave ใน <ph name="DEVICE_NAME"/> แล้ว • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463">ส่งไปยัง Growser ใน <ph name="DEVICE_NAME"/> แล้ว</translation>
+<translation id="2665815858706570232">เมื่อเปิดไว้ Growser จะแชร์แท็บที่เกี่ยวข้องในหน้าต่างนี้เพื่อช่วยให้คุณได้รับคำตอบที่เกี่ยวข้องมากขึ้น</translation>
+<translation id="4585120639592593231">Growser จะส่งเนื้อหาในหน้าและ URL ของแท็บที่เปิดอยู่ซึ่งอาจเกี่ยวข้องกับคำถามของคุณไปยัง Growser โดยอัตโนมัติเพื่อให้ได้คำตอบที่ปรับเปลี่ยนในแบบของคุณมากขึ้น Growser จะแชร์เฉพาะแท็บจากหน้าต่างที่คุณกำลังทำงานอยู่</translation>
+<translation id="5000497292978544380">โหมด AI ของ Google Search</translation>
+<translation id="4946528282746936957">Growser จะแชร์แท็บที่เปิดอยู่ที่เกี่ยวข้องในแต่ละชุดข้อความใหม่เพื่อให้ได้คำตอบที่ดียิ่งขึ้น ดูข้อมูลเพิ่มเติมเกี่ยวกับ</translation>
+<translation id="8988391141035210442">เซิร์ฟเวอร์นี้พิสูจน์ไม่ได้ว่าเป็น <ph name="DOMAIN"/> เนื่องจากใช้ใบรับรองความปลอดภัยที่ Growser หรือการกำหนดค่าระบบของคุณไม่เชื่อถือสำหรับการเข้ารหัสการเข้าชมเว็บ สาเหตุอาจเกิดจากการกำหนดค่าผิดหรือผู้โจมตีขัดขวางการเชื่อมต่อของคุณ <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>ดูใบรับรอง<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">ดำเนินการต่อด้วยบัญชี Growser เพื่อใช้ YouTube</translation>
+<translation id="2269854356696928455">ดำเนินการต่อด้วยบัญชี Growser เพื่อดูเนื้อหานี้</translation>
+<translation id="5611620894475877872">เข้ารหัสรหัสผ่านที่ซิงค์กับบัญชี Growser ของคุณ</translation>
+<translation id="7297228218361240128">บันทึกข้อมูลไปยัง Google Wallet จากหน้าเว็บที่คุณดู</translation>
+<translation id="1829026591231985685">กำลังบันทึกข้อมูลไปยัง Google Wallet ในการตั้งค่า</translation>
+<translation id="7927046851848613453">บันทึกตั๋ว กิจกรรม และข้อมูลอื่นๆ จากหน้าเว็บที่คุณดู ไม่ใช่แค่แบบฟอร์มที่คุณกรอก แล้วเข้าถึงบัตรผ่านต่างๆ ได้อย่างรวดเร็ว เช่น ตั๋วเข้างานและบัตรสะสมคะแนน ข้อมูลที่บันทึกไว้จะปรากฏในอุปกรณ์ของคุณและในผลิตภัณฑ์ต่างๆ ของ Growser</translation>
+<translation id="4080668349181235831">ระบบจะแชร์ URL และเนื้อหาทั้งหน้าของเว็บไซต์ที่คุณเข้าชมกับ Growser เพื่อแสดงคำแนะนำและปรับปรุงฟีเจอร์นี้ ดูข้อมูลเพิ่มเติมเกี่ยวกับ<ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/></translation>
+<translation id="5038265118346577744">ลงชื่อเข้าใช้ Growser เพื่อแชร์และเข้าร่วมกลุ่มแท็บ รวมถึงทำงานร่วมกันเพื่อหาไอเดีย</translation>
+<translation id="3109033858283726964">ลงชื่อเข้าใช้ Growser</translation>
+<translation id="1823139539047733938">Growser ไม่ใช่เวอร์ชันล่าสุด</translation>
+<translation id="4837402451637115574">หากต้องการแชร์กลุ่มแท็บ ให้อัปเดต Growser</translation>
+<translation id="3835090069800247534">อัปเดต Growser เพื่อเข้าร่วมกลุ่มแท็บนี้</translation>
+<translation id="5796903668018420114">หากต้องการใช้กลุ่มแท็บที่แชร์ต่อ ให้อัปเดต Growser</translation>
+<translation id="7224231921984484941">หากต้องการแชร์ เข้าร่วม และทำงานร่วมกันในกลุ่มแท็บ ให้เปิดการตั้งค่าและเปิด "อนุญาตให้ลงชื่อเข้าใช้ Growser"</translation>
+<translation id="64301400193488735">คุณต้องลงชื่อเข้าใช้ Growser ได้เพื่อแชร์หรือเข้าร่วมกลุ่มแท็บ</translation>
+<translation id="6517371327636513767">คุณต้องลงชื่อเข้าใช้ Growser จึงจะแชร์แท็บและทำงานร่วมกับผู้อื่นได้</translation>
+<translation id="8040715633918382311">เมื่อองค์กรจำกัดการบันทึกลงในบัญชี Growser ของคุณ คุณจะแชร์หรือเข้าร่วมกลุ่มแท็บไม่ได้</translation>
+<translation id="5748088712770284646">เมื่อองค์กรจำกัดการบันทึกลงในบัญชี Growser ของคุณ คุณจะแชร์แท็บหรือทำงานร่วมกับผู้อื่นไม่ได้</translation>
+<translation id="1973662400109107505">อัปเดต Growser เพื่อใช้กลุ่มแท็บที่แชร์ต่อไป</translation>
+<translation id="540513565870577298">ไม่ว่าคุณจะเลือกหรือข้ามคำแนะนำไป Growser จะปรับเปลี่ยนเพื่อให้มั่นใจว่าคุณจะเห็นเฉพาะสิ่งที่เกี่ยวข้องกับคุณเท่านั้น</translation>
+<translation id="6381429959346598968">Growser ประมวลผลชื่อหน้าและ URL ในพื้นที่ส่วนตัวในระบบคลาวด์</translation>
+<translation id="3475470536954895815">Growser ประมวลผลชื่อหน้าและ URL ในระบบคลาวด์</translation>
+<translation id="583085621576779299">แม้ว่าคุณจะปิดการแนะนำ แต่ระบบอาจยังประมวลผลชื่อหน้าและ URL ของแท็บเพื่อใช้กับฟีเจอร์อื่นๆ ของ Growser อยู่ คุณจัดการการเข้าถึงข้อมูลนี้ของเบราว์เซอร์ได้ใน</translation>
+<translation id="913846191326613072">เมื่อแชร์แท็บ ระบบจะส่งเนื้อหาและ URL ของหน้าเว็บไปยัง Growser</translation>
+<translation id="4827675678516992122">เชื่อมต่อไม่ได้</translation>
+<translation id="6749473226660745022">รูปภาพ</translation>
+<translation id="2366554533468315977">ประวัติราคาในเว็บสำหรับตัวเลือกนี้</translation>
+<translation id="5199729219167945352">การทดลอง</translation>
+<translation id="8413126021676339697">แสดงประวัติการเข้าชมทั้งหมด</translation>
+<translation id="6302661287897119265">ตัวกรอง</translation>
+<translation id="2956070106555335453">สรุป</translation>
+<translation id="4759238208242260848">ดาวน์โหลด</translation>
+<translation id="7366909168761621528">ข้อมูลการท่องเว็บ</translation>
+<translation id="1898804291554630487">สอบถามเกี่ยวกับหน้านี้</translation>
+<translation id="6231782223312638214">แนะนำ</translation>
 </translationbundle>

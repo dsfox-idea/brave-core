@@ -26,6 +26,7 @@ extension BrowserViewController: TabDelegate {
     tabManager.removeTab(tab)
   }
 
+  @MainActor
   public func tab(
     _ tab: some TabState,
     contextMenuConfigurationForLinkURL linkURL: URL?
@@ -36,7 +37,7 @@ extension BrowserViewController: TabDelegate {
       return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: nil)
     }
 
-    let actionProvider: UIContextMenuActionProvider = { _ -> UIMenu? in
+    let actionProvider: UIContextMenuActionProvider = { [self] _ -> UIMenu? in
       var actions = [UIAction]()
 
       if let currentTab = self.tabManager.selectedTab {
@@ -57,7 +58,7 @@ extension BrowserViewController: TabDelegate {
         let openNewPrivateTabAction = UIAction(
           title: Strings.openNewPrivateTabButtonTitle,
           image: UIImage(braveSystemNamed: "leo.product.private-window")
-        ) { _ in
+        ) { [unowned self] _ in
           if !isPrivate, Preferences.Privacy.privateBrowsingLock.value {
             self.askForLocalAuthentication { [weak self] success, error in
               if success {
@@ -207,6 +208,7 @@ extension BrowserViewController: TabDelegate {
     tab.loadRequest(URLRequest(url: linkURL))
   }
 
+  @MainActor
   public func tab(
     _ tab: some TabState,
     requestMediaCapturePermissionsFor type: WebMediaCaptureType
@@ -275,6 +277,7 @@ extension BrowserViewController: TabDelegate {
     }
   }
 
+  @MainActor
   public func tab(
     _ tab: some TabState,
     runJavaScriptAlertPanelWithMessage message: String,
@@ -299,6 +302,7 @@ extension BrowserViewController: TabDelegate {
     }
   }
 
+  @MainActor
   public func tab(
     _ tab: some TabState,
     runJavaScriptConfirmPanelWithMessage message: String,
@@ -323,6 +327,7 @@ extension BrowserViewController: TabDelegate {
     }
   }
 
+  @MainActor
   public func tab(
     _ tab: some TabState,
     runJavaScriptConfirmPanelWithPrompt prompt: String,

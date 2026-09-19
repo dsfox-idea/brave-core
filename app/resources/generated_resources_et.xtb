@@ -11331,4 +11331,442 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
 <translation id="954749761428814584">Keel ja sisestusmeetod</translation>
 <translation id="960987915827980018">Jäänud on umbes 1 tund</translation>
 <translation id="995420352808264005">Valige seadme registreerimise tüüp</translation>
+<translation id="6681823034920334318">Ülekandmiseks koodi abil lülitage sisse Growser'i brauseri sünkroonimisseaded</translation>
+<translation id="2515496577979954543">Ava Growser</translation>
+<translation id="5924575374764114159"><ph name="TASK_TITLE"/>: Gemini täitis teie ülesande. Saate seda vaadata Growser'is.</translation>
+<translation id="3721794228264322796">Sulgege Gemini Growser'is</translation>
+<translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini Growser'is</translation>
+<translation id="1975450474853317621">Ava Growser'i brauseris</translation>
+<translation id="8516824290867275572">Teie kontol pole Growser'i Geminile juurdepääsu</translation>
+<translation id="1649234713894562345">Brave'i aluseks on avatud lähtekoodiga projekt Brave ja muu <ph name="BEGIN_HIGHLIGHT"/>avatud lähtekoodiga<ph name="END_HIGHLIGHT"/> tarkvara.</translation>
+<translation id="870536819717176711">Kui otsustate praegust vahelehte Geminiga jagada, saadetakse Growser'ile vahelehe kogu sisu, meedia ja URL.</translation>
+<translation id="1130866111814048607">Vahelehtede jagamisel saadetakse nende lehtede sisu, meedia ja URL-id Brave'ile ning need võidakse turvalisuse huvides üle vaadata.</translation>
+<translation id="7656790264713095385">Esmalt lülitage selles seadmes sisse Brave'i automaatne sirvimine</translation>
+<translation id="8572003230388132401">Gemini Spark saab kasutada selles seadmes Growser'i automaatset sirvimist, et teie nimel saitidega suhelda ja ülesandeid täita. <ph name="LINK_BEGIN"/>Lisateave<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">Gemini Spark saab automaatset sirvimist selles seadmes kasutada ainult siis, kui seade on ärkvel ja Growser töötab.</translation>
+<translation id="1982892581799327835">Igaüks, kellel on juurdepääs teie Gemini Sparki agendile, saab teie Growser'i brauserit juhtida.</translation>
+<translation id="6689939585896001516">Laske Growser'il teie eest sirvida</translation>
+<translation id="640233545778658570">Gemini Growser'is kasutab teie vahelehtedel töötamiseks ja antud ülesannete täitmiseks automaatset sirvimist. <ph name="LINK_BEGIN"/>Lisateave<ph name="LINK_END"/></translation>
+<translation id="2740842679402949230">Lugege lisateavet Brave'i automaatse sirvimise kohta.</translation>
+<translation id="3570112771874223231">Brave'iga jagatakse lehe sisu ja URL-e, mida Gemini ülesande täitmisel kasutab, ning need võidakse turvalisuse huvides üle vaadata.</translation>
+<translation id="2314508080153323869">Gemini Growser'is</translation>
+<translation id="1910632359330857071">Vestelge Geminiga Growser'is, et saada sirvimise ajal vastuseid, olulisi teadmisi ja muud.</translation>
+<translation id="2483218699324586641">Kasutage Gemini Growser’is avamiseks klahvikombinatsiooni <ph name="FOCUS_TOGGLE_HOTKEY"/>.</translation>
+<translation id="2353068771555482464">Tutvuge Geminiga Growser'is</translation>
+<translation id="7545274281857327491">Kasutage Growser'i AI parimaid funktsioone. Võite Gemini lihtsaks juurdepääsuks tööriistaribale kinnitada või selle igal ajal Growser'i menüüst avada.</translation>
+<translation id="8335336878672278597">Gemini Growser'is pole saadaval</translation>
+<translation id="570859258083183845">Gemini Growser'is laieneb eri asukohtadesse, kuid pole kõikjal saadaval</translation>
+<translation id="96535553604365597">Growser Casti probleemist teavitamine</translation>
+<translation id="4415611489406290344">Ülekandmiseks andke Growser'ile juurdepääs jaotises <ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/> &gt; Kohalik võrk &gt; Growser</translation>
+<translation id="8492960370534528742">Growser Casti tagasiside</translation>
+<translation id="2263679799334060788">Teie tagasiside aitab meil Growser Casti täiustada ja oleme selle eest tänulikud.
+    Kui vajate ülekandeprobleemide veaotsingul abi, külastage
+    <ph name="BEGIN_LINK"/>
+    abikeskust<ph name="END_LINK"/>.</translation>
+<translation id="8376137163494131156">Andke meile teada, mis Growser Castiga toimub.</translation>
+<translation id="7325065595154456783">Lisaks ülal märgitud teabele, mille soovisite esitada, esitatakse ka teie Growser'i versioon, operatsioonisüsteemi versioon, Casti seaded, peegeldamise toimivusstatistika ja sidekanali diagnostikalogid. Seda tagasisidet kasutatakse probleemide diagnoosimiseks ja funktsiooni täiustamiseks. Kõiki (juhuslikult või teadlikult) esitatud isikuandmeid kaitstakse meie privaatsuseeskirjade järgi. Tagasiside esitamisel nõustute, et Growser võib teie esitatud tagasisidet kasutada kõigi Growser'i toodete ja teenuste täiustamiseks.</translation>
+<translation id="3187556136478864255">Kas näete oma ülekandeseadet
+    <ph name="BEGIN_LINK"/>
+    rakenduses Growser Home<ph name="END_LINK"/>?</translation>
+<translation id="2984923316661218534">Hankige selles seadmes oma pääsuvõtmed Growser'i paroolihalduri abil</translation>
+<translation id="2364302372598204515">See ei ole Growser'i konto. Teie Growser'i salvestatavad üksused ei ole teistes seadmetes saadaval.</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave'i liikmesus</translation>
+<translation id="850632091665381275">Brave'i liikmesus</translation>
+<translation id="6710172959248731469">Growser'i teenuste seaded</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 üksus on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}other{{ITEM_COUNT} üksust on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 parool on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}other{{PASSWORD_COUNT} parooli on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{1 parool ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}other{{PASSWORD_COUNT} parooli ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{1 järjehoidja on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}other{{BOOKMARK_COUNT} järjehoidjat on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{1 järjehoidja ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}other{{BOOKMARK_COUNT} järjehoidjat ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{1 üksus on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole.}other{{ITEM_COUNT} üksust on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{1 parool on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole.}other{{PASSWORD_COUNT} parooli on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{1 parool ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}other{{PASSWORD_COUNT} parooli ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{1 järjehoidja on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole.}other{{BOOKMARK_COUNT} järjehoidjat on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 järjehoidja ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}other{{BOOKMARK_COUNT} järjehoidjat ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{Üks üksus on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes <ph name="BEGIN_LINK"/>salvestage see oma Growser’i kontole<ph name="END_LINK"/>.}other{{ITEM_COUNT} üksust on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes <ph name="BEGIN_LINK"/>salvestage need oma Growser’i kontole<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">Kasutage oma Growser'i kontot või looge uus.</translation>
+<translation id="1896353439080510710">Vestlused vaadatakse üle ja neid kasutatakse Brave’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Vestlused vaadatakse üle ja neid kasutatakse Brave’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Osa sisust ei pruugi kõigile sobida. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{See laiendus on teie Growser'i kontole salvestatud, aga andmed, mille laiendus on salvestanud ainult selles seadmes, võidakse kustutada}other{Need laiendused on teie Growser'i kontole salvestatud, aga andmed, mille laiendused on salvestanud ainult selles seadmes, võidakse kustutada}}</translation>
+<translation id="3523789730715594198">Sünkroonimise võite seadetes igal ajal lõpetada. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
+<translation id="8231595707224857577">Teie organisatsioon on vahelehtede Growser'i kontole salvestamise välja lülitanud.</translation>
+<translation id="1031540790849324993">Selleks et pääseda järjehoidjatele, paroolidele ja muule sisule juurde kõigis oma seadmetes, salvestage need oma Growser'i kontole.</translation>
+<translation id="7044272971260038324">Järjehoidjate duplikaatide eemaldamiseks salvestage need oma Growser'i kontole.</translation>
+<translation id="5106710135524113413">Kui olete sisse logitud, saate kasutada oma Growser'i kontole salvestatud järjehoidjaid, laiendusi ja muid üksusi kõikides oma seadmetes.</translation>
+<translation id="458475640392126897">Kui olete sisse logitud, saate kasutada oma Growser’i kontole salvestatud teemasid, seadeid ja muid üksusi kõikides oma seadmetes.</translation>
+<translation id="8780123805589053431">Growser'ist piltide kirjelduste hankimine</translation>
+<translation id="8076549662907665888">Kui pildil puudub kasulik kirjeldus, üritab Growser selle ise luua. Kirjelduste loomiseks saadetakse pildid Growser'ile.</translation>
+<translation id="5216674789212441076">Tõlgib reaalajas subtiitrid automaatselt. Subtiitrid saadetakse tõlkimiseks Growser’ile.</translation>
+<translation id="2955575198481587842">Growser'i värvid</translation>
+<translation id="5000497292978544380">Growser'i otsingu AI-režiim</translation>
+<translation id="377490226065453836">Growser'i paneelid</translation>
+<translation id="2955048943983973430">Seotud Growser'i teenused</translation>
+<translation id="6214157047210274853">Muuda Growser Walletis</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="5787582109651427233">Külastage Growser Walletit, et lisada või hallata <ph name="BEGIN_LINK_LOYALTY_CARDS"/>kliendikaarte<ph name="END_LINK_LOYALTY_CARDS"/> või Google Pay <ph name="BEGIN_LINK_PAYMENT_METHODS"/>makseviise<ph name="END_LINK_PAYMENT_METHODS"/></translation>
+<translation id="3040435070100611531">Teie Growser Walleti pääsmed</translation>
+<translation id="5829544019044013776">Teie makseviisid Growser Walletis</translation>
+<translation id="4140668600752387693">Kui logite oma Growser'i kontole sisse, lülitatakse see funktsioon sisse.</translation>
+<translation id="7297228218361240128">Vaadatavatelt lehtedelt teabe salvestamine Growser Walletisse</translation>
+<translation id="4182182457914031017">Soovituste pakkumiseks ja selle funktsiooni täiustamiseks jagatakse Growser'iga teie külastatud saidi URL-i ja kogu lehe sisu.</translation>
+<translation id="808488435221187916">Teie teave on Growser Walletis saadaval igas sisselogitud seadmes.</translation>
+<translation id="7501338159181931945">Need pääsukoodid salvestatakse selles arvutis rakendusse Windows Hello. Neid ei salvestata teie Growser'i kontole.</translation>
+<translation id="1921051356055149189">Growser'i kontol muutmine</translation>
+<translation id="4498223799912841817">Eemalda Growser'ist</translation>
+<translation id="3346610836797971718">Kas soovite koduse aadressi Growser'i automaattäitest eemaldada?</translation>
+<translation id="6595367601483315266">Kas soovite töökoha aadressi Growser'i automaattäitest eemaldada?</translation>
+<translation id="3068798232942246848">Kas eemaldada see teave Growser’i automaattäitefunktsioonist?</translation>
+<translation id="4713283515261533452">Sirvimisandmete kustutamiseks ainult sellest seadmest ja nende säilitamiseks teie Growser'i kontol <ph name="BEGIN_LINK"/>logige välja<ph name="END_LINK"/>.</translation>
+<translation id="6641004568837764720">Sirvimisandmete kustutamiseks kõigist sünkroonitud seadmetest ja oma Growser'i kontolt <ph name="BEGIN_LINK"/>avage sünkroonimisseaded<ph name="END_LINK"/>.</translation>
+<translation id="7711557916951320264">Sirvimisandmete kustutamiseks kõigist sünkroonitud seadmetest ja oma Growser'i kontolt <ph name="BEGIN_LINK"/>sisestage oma parool<ph name="END_LINK"/>.</translation>
+<translation id="5680951041809780964">Sirvimisandmete kustutamiseks kõigist sünkroonitud seadmetest ja oma Growser'i kontolt <ph name="BEGIN_LINK"/>logige sisse<ph name="END_LINK"/>.</translation>
+<translation id="908980466794178222">Kui olete sisse logitud, võidakse teie <ph name="BEGIN_LINK_SEARCH"/>otsinguajalugu<ph name="END_LINK_SEARCH"/> ja <ph name="BEGIN_LINK_GOOGLE"/>muud tegevused<ph name="END_LINK_GOOGLE"/> teie Growser'i kontole salvestada. Saate need alati kustutada.</translation>
+<translation id="1024884937839269099">Kui olete sisse logitud, võidakse teie <ph name="BEGIN_LINK_GOOGLE"/>muud tegevused<ph name="END_LINK_GOOGLE"/> teie Growser'i kontole salvestada. Saate need alati kustutada.</translation>
+<translation id="6533315466883598769">Kasuta Growser'i tõlget</translation>
+<translation id="6010651352520077187">Kui see on sisse lülitatud, pakub Growser'i tõlge saitide tõlkimist teie eelistatud keelde. See saab saite ka automaatselt tõlkida.</translation>
+<translation id="6873499199714317035">Kui see on sisse lülitatud, pakub Brave'i tõlge saitide ja PDF-ide tõlkimist teie eelistatud keelde. See saab saite ka automaatselt tõlkida.</translation>
+<translation id="5911030830365207728">Growser'i tõlge</translation>
+<translation id="7458168200501453431">Kasutab sama õigekirjakontrolli, mida kasutatakse Growser'i otsingus. Brauseris sisestatav tekst saadetakse Growser'ile.</translation>
+<translation id="8972513834460200407">Paluge oma võrguadministraatoril tagada, et tulemüür ei blokeeriks allalaaditavaid faile Growser'i serveritest.</translation>
+<translation id="3407392651057365886">Rohkem lehti eellaaditakse. Lehed võidakse eellaadida Growser'i serverite kaudu, kui muud saidid seda taotlevad.</translation>
+<translation id="1965578266762387357">Kui vajate kirjutamisel abi, saadetakse lehe URL, sisu ja teie tekst Growser'ile. Ärge sisestage isikuandmeid (nt meditsiinilist ega finantsteavet)</translation>
+<translation id="3281851196103181918">Külastatav sait võib Growser’iga salvestada väikese hulga teavet, peamiselt kinnitamaks, et te pole robot.</translation>
+<translation id="7321946347180923218">Kui jätkate sirvimist, saavad saidid Growser’iga kontrollida ja teie eelmisel külastatud saidil kinnitada, et olete tõenäoliselt päris inimene</translation>
+<translation id="3510488868237982080">Lisateave selle kohta, kuidas AI teie kogemust ja Growser'i pakutavaid juhtelemente kujundab</translation>
+<translation id="3003253259757197230">Teie külastatavad URL-id saadetakse Growser'ile, et prognoosida, milliseid saite võiksite järgmisena külastada, ja pakkuda lisateavet lehe kohta, mida külastate</translation>
+<translation id="69739764870135975">Kui Growser on ka teie vaikeotsingumootor, näete paremaid, konteksti suhtes asjakohaseid soovitusi</translation>
+<translation id="8358717005361108959">Teie külastatavad URL-id salvestatakse teie Growser'i kontole</translation>
+<translation id="4674867347456586454">Kui olete sisse logitud, lingitakse andmed ajutiselt teie Growser'i kontoga, et kaitsta teid kõigis Growser'i rakendustes.</translation>
+<translation id="8898822736010347272">Saadab mõne teie külastatud lehe URL-i, piiratud süsteemiteabe ja mõne lehe sisu Growser'ile, et aidata avastada uusi ohte ja veebis kõiki kaitsta.</translation>
+<translation id="4255841059940367080">Reaalajas ja AI-põhine kaitse ohtlike saitide, allalaadimiste ja laienduste eest, mis põhineb teie sirvimisandmetel, mis saadetakse Growser'ile</translation>
+<translation id="6053586914913150093">Saadab URL-id kontrollimiseks teenusesse Growser'i ohutu sirvimine. Saadab ka lehtede, allalaadimiste, laienduste tegevuse ja süsteemi teabe näidiseid, et aidata uusi ohte tuvastada. Kui olete sisse logitud, lingitakse andmed ajutiselt teie Growser'i kontoga, et kaitsta teid kõigis Growser'i rakendustes.</translation>
+<translation id="777637629667389858">Kui olete sisse logitud, kaitseb see teid Growser'i teenustes.</translation>
+<translation id="4492544972585416410">Kui olete sisse logitud, lingitakse need andmed teie Growser'i kontoga, et teid Growser'i teenustest kaitsta. Näiteks suurendades pärast turvaintsidenti Gmailis kaitset.</translation>
+<translation id="6550891580932862748">Ei kaitse teid ohtlike veebisaitide, allalaadimiste ega laienduste eest. See ei mõjuta teie Growser'i ohutu sirvimise seadeid teistes Growser'i teenustes.</translation>
+<translation id="1153636665119721804">Growser'i täiustatud kaitse programm</translation>
+<translation id="8678192320753081984">Pakub sihitud rünnakute ohus olevatele inimestele Growser'i konto tugevaimat turvafunktsiooni</translation>
+<translation id="7803714812705886512">Growser kasutab ohtude tuvastamiseks vähem andmeid (nt URL-ide osad, allalaadimisteave).</translation>
+<translation id="8602867356511778172">Growser kasutab ohtude kiiremaks ja täpsemaks tuvastamiseks rohkem andmeid (nt URL-id, lehe sisu näidised, süsteemiteave).</translation>
+<translation id="2547602044908040111">Kui olete aktivist, ajakirjanik, avaliku elu tegelane, valimistöötaja või keegi teine, kelle rolliga kaasnevad suuremad riskid, võib teid huvitada Growser'i <ph name="BEGIN_LINK"/>täiustatud kaitse programm<ph name="END_LINK"/>.</translation>
+<translation id="5864624288360677142">Kasuta vaikeseadet, kui see on saadaval, ja varuvariandina Growser'i DNS-i</translation>
+<translation id="7137270216770481232">Growser lähtestas need seaded</translation>
+<translation id="8723105215342036961">Neid seadeid muudeti väljaspool Growser'i. Growser lähtestas need teie kaitsmiseks.</translation>
+<translation id="3099985829883207242">Konkreetsel saidil või Growser'i osas otsimiseks sisestage selle otsetee aadressiribale ja lisage oma eelistatud klaviatuuriotsetee.</translation>
+<translation id="3172166850967951827">Mõned laiendused võivad Growser'ile otsingumootoreid lisada</translation>
+<translation id="5433098395236481485">Laadige PDF-failid alla selle asemel, et need Growser'is automaatselt avada</translation>
+<translation id="4297918578409923363">Luba Growser'il valida, millal saidid võivad heli esitada (soovitatav)</translation>
+<translation id="3721119614952978349">Teie ja Growser</translation>
+<translation id="5900302528761731119">Growser'i profiilifoto</translation>
+<translation id="2928030851119977280">Valik salvestati. Teie valik rakendub teistesse Growser'i teenustesse sisselogimisel.</translation>
+<translation id="1818532843473612004">Teie Growser’i kontol</translation>
+<translation id="8511856004631476285">Kui see on sisse lülitatud, salvestatakse andmed teie Growser'i kontole ja neid saab kasutada kõigis teie seadmetes. Kui see on välja lülitatud, salvestatakse andmed ainult sellesse seadmesse.</translation>
+<translation id="7846296061357476882">Growser'i teenused</translation>
+<translation id="8032692752324456430">See logib teid teie Growser'i kontodelt välja. Teie järjehoidjaid, ajalugu, paroole ja muud ei sünkroonita enam.</translation>
+<translation id="3142647462186639376">Krüpteerige sünkroonitud andmed oma <ph name="BEGIN_LINK"/>sünkroonimisparooliga<ph name="END_LINK"/>. Google Payst pärinevaid makseviise ja aadresse ei krüpteerita. Sirvimisajalugu Growser'ist ei sünkroonita.</translation>
+<translation id="63566973648609420">Teie krüpteeritud andmeid saavad lugeda vaid need, kes teavad teie parooli – seda ei saadeta Growser'ile ja Growser ei talleta seda. Kui unustate parooli või soovite seda seadet muuta, tuleb teil <ph name="BEGIN_LINK"/>sünkroonimine lähtestada<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">Hallake, kuidas kasutatakse sirvimisajalugu teie muude andmetega Growser'i teenustes</translation>
+<translation id="5728072125198221967">Lingitud Growser’i teenused</translation>
+<translation id="3848443004871354246">Growser'i konto</translation>
+<translation id="3293574207873361017">Growser'i konto haldamine</translation>
+<translation id="6901130673208235020">Sirvimisajalugu otsides saadetakse teie ajaloo-otsingud, parimate vastete lehesisu ja genereeritud mudeliväljundid Growser'ile</translation>
+<translation id="3178434360326457238">Saitide sirvimisel krüpteeritakse nende lehtede sisu ja salvestatakse teie seadmesse. See võib mõjutada Growser'i toimivust</translation>
+<translation id="8622145666696249878">Brave'i otsingu AI-režiim ja ühendatud rakendused</translation>
+<translation id="2760679829473121490">Kuva süsteemi märguanded Growser'i funktsioonide ja nõuannete kohta</translation>
+<translation id="6713316345564743478">Ohustatud paroolide kontrollimiseks logige sisse oma Growser'i kontole</translation>
+<translation id="1342886103232377846">Ohustatud paroolide kontrollimiseks avage Growser'i paroolihaldur</translation>
+<translation id="6766488013065406604">Growser'i paroolihalduri avamine</translation>
+<translation id="5408271390996168857">Teil on Growser'i tugevaim kaitse</translation>
+<translation id="2888959493235069176">AI Growser'is</translation>
+<translation id="5058786435107472268">Growser'i AI-tehnoloogia täiustamiseks võivad ülevaatajad näha Growser'ile saadetavaid andmeid</translation>
+<translation id="4928488083257788101">Selle funktsiooni täiustamiseks võivad ülevaatajad näha Growser'ile saadetavaid andmeid</translation>
+<translation id="6690687289858134062">Kui Growser leiab avalikust andmetega seotud rikkumisest mõne teie parooli, võib Growser’i paroolihaldur pakkuda teile võimalust parool ära muuta, kui sisse logite.</translation>
+<translation id="1377438103060664754">Kui mõni teie paroolidest leitakse andmetega seotud rikkumisest, küsib Growser'i paroolihaldur, kas soovite selle tugevaks parooliks muutmist.</translation>
+<translation id="1045487161760507186">Te ei pea parooli meeles pidama, kuna see salvestatakse teie eest Growser'i paroolihaldurisse</translation>
+<translation id="2696675923413008404">Selle saidi sisu, sh selle URL, saadetakse Growser'ile. Funktsiooni täiustamise eesmärgil võivad sellega tutvuda ülevaatajad.</translation>
+<translation id="4770046633685474652">Täiustatud Growser, tänu AI-le võimsam</translation>
+<translation id="4682807230647698604">Kui kasutate neid funktsioone, saadetakse asjakohased andmed tehisintellektipõhiste kasutuskogemuste loomiseks Growser'ile</translation>
+<translation id="9130857050314385402">Vahelehtede pealkirjad ja URL-id saadetakse Growser'ile, kui kasutate oskust</translation>
+<translation id="6889302653504319751">Oskused salvestatakse teie Growser'i kontole</translation>
+<translation id="7247922309426191342">Growser saab luua ja tõlkida siin kuvatavates keeltes subtiitreid</translation>
+<translation id="113229251350204705">Growser saab luua subtiitreid siin kuvatavates keeltes</translation>
+<translation id="2523184218357549926">Saadab Growser'ile teie külastatud lehtede URL-id</translation>
+<translation id="2489769822799748314">Aidake täiustada Growser'i funktsioone ja toimivust</translation>
+<translation id="1236327016477620515">Growser'ile saadetakse automaatselt kasutusstatistikat ja krahhiaruandeid</translation>
+<translation id="4847986390991794208">Growser'i nutikus Growser'is</translation>
+<translation id="4849857027852929587">Selleks et saaksite oma Growser’i kontol paroole kasutada ja salvestada, kinnitage oma isik</translation>
+<translation id="4571634846305359773">Selleks et saaksite oma Growser'i kontol alati kasutada paroole, kinnitage oma isik</translation>
+<translation id="1067922213147265141">Muud Growser'i teenused</translation>
+<translation id="5611620894475877872">Krüpteerige sünkroonitud paroolid oma Growser'i kontoga</translation>
+<translation id="2934862573358659343">Kasuta Growser'i konto paroolide jaoks Growser'i vaikekrüpteerimist</translation>
+<translation id="2234876718134438132">Sünkroonimine ja Growser'i teen.</translation>
+<translation id="90129144187791159">See konto ei ole Growser'iga seotud, seega pole sellised funktsioonid nagu Growser'i sünkroonimine saadaval</translation>
+<translation id="8576758133946664895">Growser Root Store</translation>
+<translation id="465996245977626576">Growser Root Store sisaldab
+      Chrome Root Programi poolt usaldusväärsete sertifitseerimisasutuste sertifikaate ja seda vaadatakse pidevalt üle.</translation>
+<translation id="6792337889847068504">Lisateavet Growser Root Store'i kohta leiate uuelt vahelehelt.</translation>
+<translation id="3691353018566626378">Serveri sertifikaadi kustutamisel ei kasuta Growser seda enam serverite tuvastamiseks.</translation>
+<translation id="1378122021175898739">Growser’i süsteemiteave</translation>
+<translation id="1017340475205725100">ChromeOS-i Growser’i kasutajalogid</translation>
+<translation id="7635904580734496104">Growser’i konto ID</translation>
+<translation id="5221420127618874650">Salvesta minu Growser'i kontole</translation>
+<translation id="691102290537033604">Rakendus saab käitada koodi, mida Growser ei ole kontrollinud. See ei pruugi olla turvaline. Lubage see vaid juhul, kui teate, mida teete.</translation>
+<translation id="2375391460087228850">Growser'i rakendused</translation>
+<translation id="7370738934099833954">Laiendused on Growser'i pistikprogrammid, mis aitavad teil rohkem teha</translation>
+<translation id="6629808816989244742">on Growser'i pistikprogrammid, mis aitavad teil rohkem teha.</translation>
+<translation id="7474944013493005173">Laiendused on Growser'i pistikprogrammid, mis võivad teid aidata</translation>
+<translation id="5608497824592875805">Ainult teie kontaktid, kellel on Growser'i konto. <ph name="LINK_BEGIN"/>Vaadake kontakte<ph name="LINK_END"/>.</translation>
+<translation id="1958324393151249273">Funktsiooni Läheduses jagamine kasutamiseks koos nende kontaktidega lisage nende Growser'i kontodega lingitud e-posti aadressid oma kontaktide hulka.</translation>
+<translation id="4588215749100790315">Funktsiooni <ph name="FEATURE_NAME"/> kasutamiseks koos nende kontaktidega lisage nende Growser'i kontodega lingitud e-posti aadressid oma kontaktide hulka.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{# kontakt pole saadaval. Funktsiooni Läheduses jagamine kasutamiseks koos temaga lisage tema Growser'i kontoga seotud e-posti aadress oma kontaktide hulka.}other{# kontakti pole saadaval. Funktsiooni Läheduses jagamine kasutamiseks koos nendega lisage nende Growser'i kontodega seotud e-posti aadressid oma kontaktide hulka.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{# kontakt pole saadaval. Funktsiooni <ph name="FEATURE_NAME"/> kasutamiseks koos temaga lisage tema Growser'i kontoga seotud e-posti aadress oma kontaktide hulka.}other{# kontakti pole saadaval. Funktsiooni <ph name="FEATURE_NAME"/> kasutamiseks koos nendega lisage nende Growser'i kontodega seotud e-posti aadressid oma kontaktide hulka.}}</translation>
+<translation id="3115470387083988713">Turvalisuse suurendamiseks võite oma seadmes paroolid krüpteerida enne, kui need teie Growser'i kontole salvestatakse</translation>
+<translation id="8042331986490021244">Paroolid krüpteeritakse teie seadmes enne, kui need salvestatakse Growser'i paroolihaldurisse</translation>
+<translation id="1440474484372226561">Teie parooli ei jagatud. Kontrollige internetiühendust ja veenduge, et oleksite Growser'i sisse logitud. Seejärel proovige uuesti.</translation>
+<translation id="6667187897999649121">Praegu saate paroole jagada ainult pereliikmetega. <ph name="BEGIN_LINK"/>Looge peregrupp<ph name="END_LINK"/> kuni kuue liikmega, et kasutada oma Growser'i teenuseid ja tellimusi paremal moel.</translation>
+<translation id="3767835232661747729">Praegu saate paroole jagada ainult pereliikmetega. <ph name="BEGIN_LINK"/>Kutsuge pereliikmeid<ph name="END_LINK"/> oma grupiga liituma ja saate oma toodetest ja tellimustest Growser'is maksimumi võtta.</translation>
+<translation id="4509277363725254222">Kui jagate oma <ph name="BEGIN_BOLD_USERNAME"/>kasutajanime<ph name="END_BOLD_USERNAME"/> ja <ph name="BEGIN_BOLD_PASSWORD"/>parooli<ph name="END_BOLD_PASSWORD"/>, saab teie pereliige need väljad täita Growser’i paroolihalduri abil.</translation>
+<translation id="3618647122592024084"><ph name="RECIPIENT_NAME"/> saab nüüd kasutada teie kasutajanime ja parooli, kui ta kasutab Growser'i paroolihaldurit. Paluge tal sisselogimiseks minna veebisaidile <ph name="WEBSITE"/>.</translation>
+<translation id="7191632649590906354">Teie pereliikmed saavad nüüd kasutada teie kasutajanime ja parooli, kui nad kasutavad Growser'i paroolihaldurit. Paluge neil sisselogimiseks minna veebisaidile <ph name="WEBSITE"/>.</translation>
+<translation id="2016576853804262709">Teie pereliige ei saa praegu paroole vastu võtta. Paluge tal Growser’i värskendada ja oma paroolid sünkroonida.</translation>
+<translation id="7452861405952250711"><ph name="BRAND"/> saab teie paroole kontrollida siis, kui logite sisse oma Growser'i kontoga</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{{COUNT} parool on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes <ph name="BEGIN_LINK"/>salvestage see oma Growser’i kontole<ph name="END_LINK"/>.}other{{COUNT} parooli on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes <ph name="BEGIN_LINK"/>salvestage need oma Growser’i kontole<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">Growser'i paroolihaldur veebis</translation>
+<translation id="1368798504801939187">Isegi siis, kui te ei kasuta Growser’i või Androidi, saate veebilehele <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> sisse logides vaadata oma paroole.</translation>
+<translation id="829923460755755423">Lisage otsetee Growser'i paroolihaldurisse</translation>
+<translation id="7244677273667272006">Kinnitage oma isik, et lisada paroole ja kasutada neid kõigis oma Brave'i kontoga seotud seadmetes</translation>
+<translation id="8189517459248805166">Teie veebisaidi <ph name="WEBSITE"/> parool on salvestatud sellesse seadmesse ja teie Growser'i kontole. Millise soovite kustutada?</translation>
+<translation id="9101265711096405922">Teie Growser'i kontolt</translation>
+<translation id="927421426408921503">Kas teisaldada salvestatud paroolid teie Growser'i kontole?</translation>
+<translation id="5854237678863974330">Kui salvestate paroolid oma Growser'i kontole, saate neid kasutada selles seadmes ja teistes, kuhu olete sisse logitud</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{Saidi <ph name="WEBSITE"/> parooli salvestamine Growser'i kontole}other{Saidi <ph name="WEBSITE"/> paroolide salvestamine Growser'i kontole}}</translation>
+<translation id="8095189618468031638">Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{Parool salvestati teie Growser’i kontole <ph name="USER_EMAIL"/>}other{Paroolid salvestati teie Growser’i kontole <ph name="USER_EMAIL"/>}}</translation>
+<translation id="1286604678719026234">See parool on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole <ph name="USER_EMAIL"/>.</translation>
+<translation id="11353874453755012">Kas soovite salvestada oma Growser'i kontole?</translation>
+<translation id="9031082696306594802">Peate sisse logima, enne kui Growser saab selle toimingu lõpule viia.</translation>
+<translation id="7412981914901765024">Growser'i paroolihaldur saab teie konto parooli asendada tugeva parooliga ja salvestada selle aadressile <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">Growser'i paroolihaldur võib asendada teie konto parooli tugeva parooliga, mis salvestatakse teie kontole <ph name="EMAIL"/>.</translation>
+<translation id="309984825599745401">Lisateave selle funktsiooni ja sellega seoses Growser'ile saadetavate andmete kohta</translation>
+<translation id="4786289993714497244">Paroolilehtede sisu ja sellega seotud teave saadetakse Growser'ile ning seda näevad inimülevaatajad. Teie parool krüpteeritakse ja seda ei näe keegi. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">Kui Growser leiab avalikust andmetega seotud rikkumisest mõne teie parooli, võib Growser pakkuda teile võimalust parool ära muuta, kui sisse logite.</translation>
+<translation id="899508106612248318">Luba Braveil saidi <ph name="WEBSITE"/> parooli automaatselt muuta</translation>
+<translation id="5710383353978348431">Kui Growser leiab avalikust andmetega seotud rikkumisest mõne teie parooli, võib Growser’i paroolihaldur pakkuda teile võimalust parool ära muuta, kui sisse logite. <ph name="BEGIN_LINK"/>Lisateave parooli automaatse muutmise kohta<ph name="END_LINK"/></translation>
+<translation id="560743248410493208">Growser vajab teie parooli muutmiseks abi</translation>
+<translation id="4246636650471208372">Oskuste kasutamiseks logige Growser'i sisse Growser'i kontoga, millel on Gemini Growser'is lubatud.</translation>
+<translation id="8111843310458688756">Oskuste funktsioon on praegu keelatud. Alustamiseks värskendage oma Growser'i seadeid.</translation>
+<translation id="118870493070173224">Teie oskused salvestatakse teie Growser'i kontole,</translation>
+<translation id="3176984568033229317">Growser'i otsingu toomine Edge'i</translation>
+<translation id="3166256634240273583">Kasutage Growser'i otsingut otse oma brauseri aadressiribalt ja uue vahelehe avamisel.</translation>
+<translation id="76131528886466333">Microsoft Edge'i laienduse Growser'i otsing installimine</translation>
+<translation id="8323744572398547859">Oma vahelehtede hankimiseks teistest seadmetest logige sisse ja sünkroonige ajalugu. Lisaks saate kõigis seadmetes oma paroole ja muud kasutada. Sünkroonimise võite seadetes igal ajal lõpetada. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
+<translation id="7907312522152480478">Vahelehtede hankimiseks teistest seadmetest kinnitage oma isik ning sünkroonige oma ajalugu ja vahelehed. Sünkroonimise võite seadetes igal ajal lõpetada. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
+<translation id="2259337945538989999">Teistest seadmetest vahelehtede hankimiseks kinnitage oma isik. Sünkroonimise võite seadetes igal ajal lõpetada. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
+<translation id="3240718227457961717">Selleks et saaksite kasutada oma muudest seadmetest pärit vahelehti, sünkroonige ajalugu ja vahelehed kontoga <ph name="ACCOUNT_EMAIL"/>. Sünkroonimise saate seadetes igal ajal lõpetada. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
+<translation id="2246549592927364792">Kas hankida Growser'ist piltide kirjeldused?</translation>
+<translation id="6842321291404176019">Hallake oma &amp;Growser'i kontot</translation>
+<translation id="7782102568078991263">Growser'ilt ei ole rohkem soovitusi</translation>
+<translation id="1125610294554423504">Growser'i &amp;laborid …</translation>
+<translation id="3592763781862723495">Growser'i teenusetingimused muutuvad 31. märtsil</translation>
+<translation id="4863113847665206034">Growser Enterprise'i väljalaskemärkmed</translation>
+<translation id="8880009256105053174">Sellelt lehelt otsimine Growser'iga …</translation>
+<translation id="8643443571868262066"><ph name="FILE_NAME"/> võib olla ohtlik. Kas saata skannimiseks Growser'i täiustatud kaitse programmile?</translation>
+<translation id="9112786533191410418"><ph name="FILE_NAME"/> võib olla ohtlik. Kas saata see skannimiseks Growser'ile?</translation>
+<translation id="5261799091118902550">See fail võib olla viirus või pahavara. Võite selle saata Growser’ile, et kontrollida, kas see on ohtlik.</translation>
+<translation id="6427068192186142792">Growser blokeeris äsja ohtliku faili allalaadimise. Tagage täiustatud kaitse abil veelgi suurem turvalisus.</translation>
+<translation id="3601817089411059195"><ph name="FILENAME"/> võib olla ohtlik. Lisage parool, kui soovite, et Growser selle kinnitaks või võite selle otse alla laadida.</translation>
+<translation id="8558379661202483425">Growser'i rakendused &gt; <ph name="APP_NAME"/></translation>
+<translation id="7952238695786927848">Growser arvab, et te ei soovi sellelt saidilt märguandeid. Taotlused peidetakse, et need ei häiriks.</translation>
+<translation id="3714312445688817444">Growser arvab, et te ei soovi sellel saidil asukohta kasutada. Taotlused peidetakse, et need ei häiriks.</translation>
+<translation id="7178558589762724625">Väline rakendus soovib selle Growser'i seansi silumiseks täielikku juurdepääsu. See hõlmab juurdepääsu teie salvestatud andmetele, küpsisefailidele ja saidiandmetele ning võimalust navigeerida mis tahes URL-ile.</translation>
+<translation id="691816738008428630">Growser'i failide utiliidid</translation>
+<translation id="8376236901471830989">Growser'i dokumendi analüüs</translation>
+<translation id="5075779086521388873">Saate ka kasutada oma paroole ja oma Growser'i konto teisi võimalusi.</translation>
+<translation id="9081137272142533824">Kui soovite lubada lapsel <ph name="CHILD_NAME"/> tulevasi laiendusi ilma teie nõusolekuta installida, avage oma seadmes rakendus Family Link ja värskendage lapse <ph name="CHILD_NAME"/> Growser'i seadeid.</translation>
+<translation id="3841738495771204227">Teine programm teie arvutis lisas rakenduse, mis võib muuta Growser'i toimimist.</translation>
+<translation id="7126263064588272381">Teine programm teie arvutis lisas laienduse, mis võib muuta Growser'i toimimist.</translation>
+<translation id="4172864922628327657">Teine programm teie arvutis lisas teema, mis võib muuta Growser'i toimimist.</translation>
+<translation id="3105796011181310544">Kas muuta tagasi Growser'ile?</translation>
+<translation id="4837128290434901661">Kas muuta tagasi Growser'i otsingule?</translation>
+<translation id="3943902841682071">Growser'i rakenduste vanad versioonid ei avane Windowsi seadmetes enam pärast 2022. aasta detsembrit. Uuele versioonile värskendamiseks võtke ühendust administraatoriga või eemaldage see rakendus.</translation>
+<translation id="8819011161186914037">Growser'i rakendustest saavad progressiivsed veebirakendused. Selle Growser'i rakenduse installis teie brauserisse teie organisatsioon. Rakenduste loendist progressiivse veebirakenduse avamiseks võtke esmalt ühendust administraatoriga ja paluge tal Growser'i rakendus desinstallida. Seni võite külastada saiti <ph name="EXTENSION_LAUNCH_URL"/>, et laiendus <ph name="EXTENSION_NAME"/> veebis avada.</translation>
+<translation id="646124512503317592">Growser'i rakenduste vanad versioonid ei avane Windowsi seadmetes enam pärast 2022. aasta detsembrit. Võite kontrollida, kas saadaval on uus versioon.</translation>
+<translation id="933653713937577409">Lisateave toetamata Growser'i rakenduste kohta</translation>
+<translation id="4092709865241032354">Selleks et aidata Growser'i paroolihalduril teie sisselogimisteavet salvestada, lisage sellele saidile oma kasutajanimi</translation>
+<translation id="1050292285963299821">Jätkake paroolide kasutamist Growser'i kontol</translation>
+<translation id="623821062113722442">Jätkake paroolide salvestamist oma Growser'i kontole</translation>
+<translation id="4769005558293498755">Paroolid salvestatakse teie Growser'i kontole, et saaksite neid kasutada mis tahes seadmes</translation>
+<translation id="6247557882553405851">Growser'i paroolihaldur</translation>
+<translation id="5902333873367271103">Kinnitage oma isik, et lisada see kõigisse oma Growser'i kontoga seadmetesse.</translation>
+<translation id="6520087076882753524">Salvestatud paroole saate vaadata ja hallata rakenduses Growser'i paroolihaldur</translation>
+<translation id="5181172023548002891">Konto <ph name="ACCOUNT"/> Growser'i paroolihaldurile</translation>
+<translation id="7668423670802040666">Konto <ph name="ACCOUNT"/> Growser'i paroolihalduris</translation>
+<translation id="6364173777171379284">Salvestage paroolid turvaliselt oma Growser'i kontole ja te ei pea neid enam kunagi sisestama</translation>
+<translation id="8035640035083640426">Pääsete oma paroolidele juurde alati, kui olete oma Growser'i kontole sisse logitud</translation>
+<translation id="9010330063886818303">Paroolide salvestamiseks oma Growser'i kontole logige sisse ja lülitage sünkroonimine sisse.</translation>
+<translation id="2618542259010630366">Paroolide salvestamiseks oma Growser'i kontole lülitage sisse sünkroonimine.</translation>
+<translation id="6307677019050188653">Growser laadib käsureafailist lippe. See võib mõjutada stabiilsust ja turvalisust.</translation>
+<translation id="7602868996817972616">Küsige Growser'ilt selle lehe kohta</translation>
+<translation id="7084095352418993433">Küsige Growser'ilt selle lehe kohta: <ph name="PAGE_TITLE"/></translation>
+<translation id="5563234215388768762">Otsige Growser'ist või sisestage URL</translation>
+<translation id="4097560579602855702">Otsige Growser'ist</translation>
+<translation id="6621282332208609777">Küsige Growser'ilt või sisestage URL.</translation>
+<translation id="835927394551949760">Growser'ilt küsimine</translation>
+<translation id="2856216380429599274">Growser’i vaikekujundus</translation>
+<translation id="4334778460914339013">Uueks teemaks määrati Growser'i vaiketeema</translation>
+<translation id="2983311431122838216">Küsi Growser'i otsingu AI-režiimis</translation>
+<translation id="6998036632333022623">Jagate vahelehti Growser'iga.</translation>
+<translation id="1957188536718247425">Küsige Growser'ilt eelmise vahelehe kohta</translation>
+<translation id="964903383988132751">Küsige Growser'ilt eelmise vahelehe kohta: <ph name="TAB_TITLE"/></translation>
+<translation id="1168799042879144934">Küsige Growser'ilt eelmise lehe kohta</translation>
+<translation id="4857506880242459832">Küsige Growser'ilt eelmise lehe kohta: <ph name="PAGE_TITLE"/></translation>
+<translation id="5918150687673977578">Näete soovitusi, mis aitavad teil Growser’i isikupärastada ja muuta see teie igapäevaste vajaduste täitmisel paremaks.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate hallata seadeid kaardimenüüs või vaadata rohkem valikuid jaotises Growser’i kohandamine.</translation>
+<translation id="5587243084217793846">Näete soovitatud faile, mis aitavad teil Google Drive'is hõlpsalt naasta hiljutiste tegevuste juurde.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate seadeid kohandada kaardimenüüs või näha rohkem valikuid jaotises Growser'i kohandamine.</translation>
+<translation id="3309585159276256701">Näete soovitatud faile, mis aitavad teil Microsoft SharePointis ja OneDrive'is hõlpsalt oma hiljutiste toimingute juurde naasta.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate seadeid hallata kaardimenüüs või vaadata rohkem valikuid jaotises Growser'i kohandamine.</translation>
+<translation id="7812170317334653156">Growser'i kalender on peidetud</translation>
+<translation id="6913051485529944333">Te ei näe enam sellel lehel Growser'i kalendrit</translation>
+<translation id="6696214841962677136">Näete oma kalendrit, et saaksite Growser'i kalendris hõlpsalt oma järgmise sündmuse juurde liikuda.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate seadeid kohandada kaardimenüüs või näha rohkem valikuid jaotises Growser'i kohandamine.</translation>
+<translation id="2845276301195220700">Rohkem Growser'i kalendri toiminguid</translation>
+<translation id="1885089541024391265">Growser'i kalender</translation>
+<translation id="1296410481664942178">Ära näita Growser'i kalendrit</translation>
+<translation id="4880295985240000243">Näete oma kalendrit, et saaksite teenuses Outlook Calendar hõlpsalt oma järgmise sündmuse juurde liikuda.
+       <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate seadeid hallata kaardimenüüs või vaadata rohkem valikuid jaotises Growser'i kohandamine.</translation>
+<translation id="6474021817475285003">Vaadake lisateavet Brave'i kalendris.</translation>
+<translation id="9066394310994446814">Näete seda üksust oma varasemate tegevuste põhjal Growser'i teenustes. Saate oma andmeid vaadata ja kustutada ning oma seadeid muuta saidil <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Vaadake lisateavet selle kohta, milliseid andmeid Growser kogub ja miks seda tehakse: <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/>.</translation>
+<translation id="5730739935948075356">Näete külastatud lehti ja soovitatud otsinguid, mis aitavad teil hõlpsalt oma viimaste tegevuste juurde naasta.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate seadeid kohandada kaardimenüüs või näha rohkem valikuid jaotises Growser'i kohandamine.</translation>
+<translation id="1527457583170535338">Teie hiljutise tegevuse põhjal kuvatakse teile soovitatud otsinguid ja ostuallahindlusi, mis võivad teile huvi pakkuda.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Võite sellel kaardil igal ajal seadeid hallata või kasutada jaotises Growser’i kohandamine saadaolevaid lisavalikuid.</translation>
+<translation id="8526019066138627163">Näete teiste seadmete vahekaarte, mis aitavad teil hõlpsalt oma hiljutiste toimingute juurde naasta.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate seadeid kohandada kaardimenüüs või näha rohkem valikuid jaotises Growser'i kohandamine.</translation>
+<translation id="8827376900981477247">Näete hiljuti kasutatud vahelehegruppe, mis aitavad teil hõlpsalt pooleli jäänud kohast jätkata.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Saate seadeid hallata kaardimenüüst või vaadata jaotises Growser'i kohandamine saadaolevaid lisavalikuid.</translation>
+<translation id="7868070199056978976">Hankige Growser oma mobiilseadmesse</translation>
+<translation id="3098738509270989275">Laadige alla Growser iOS-ile, et pääseda vahekaartidele, järjehoidjatele ja paroolidele juurde oma telefonis.</translation>
+<translation id="6548945820758901244">Growser'i otsingu külgpaneeli avamine</translation>
+<translation id="1157952955648710254">Growser'i otsingu külgpaneeli sulgemine</translation>
+<translation id="8376752431516546391">Growser’i otsingu külgpaneel</translation>
+<translation id="4621866192918370652">Täiendava kasuliku teabe saamiseks võite sellelt lehelt Growser'i abiga otsida</translation>
+<translation id="2360792123962658445">Lehe kokkuvõtte, seotud otsingute ja muu kasuliku teabe saamiseks selle lehe kohta valige tööriistaribal Growser'i otsingu külgpaneeli nupp</translation>
+<translation id="6868193750403948178">Growser'i kohandamine</translation>
+<translation id="5009064339929592579">Kas salvestada teie Growser'i konto kausta?</translation>
+<translation id="7400528739136719497">Teatud Growser'i hääled ei pruugi praegu saadaval olla</translation>
+<translation id="4857677595331912231">Asjakohasemate vastuste saamiseks jagatakse Brave'iga teie praeguse vahelehe sisu ja URL-i. Saate sirvimise ajal vahelehti lisada või eemaldada.</translation>
+<translation id="5639212636098910819">Jää Growser'i</translation>
+<translation id="3252169590975855820">Pääsete sellele juurde Growser’i paroolihalduris.</translation>
+<translation id="3843323136102787632">Laadige Growser selle QR-koodiga alla ja logige oma Growser'i kontole sisse.</translation>
+<translation id="9136966630767081659">Growser'i nõuanne</translation>
+<translation id="5743876629139760900">Laiendused on Growser'i pistikprogrammid, mis aitavad teil sisu korrastada, toiminguid lihtsustada ja oma sirvimiskogemust kohandada</translation>
+<translation id="2694280280138200129">Teie ühendus on alati turvaline, kui Growser teisiti ei teavita</translation>
+<translation id="3567433952279331449">Oma brauserile uue ilme andmiseks saate Growser'i kohandada</translation>
+<translation id="1856921079189283630">Klõpsake valikul „Growser'i kohandamine“</translation>
+<translation id="3656717592188518245">Nüüd saate igal ajal brauseri kujundust muuta, kasutades Growser'i kohandamise menüüd.</translation>
+<translation id="2014729156921901">Growser eemaldas mäluruumi säästmiseks osa sisust</translation>
+<translation id="1616505795285943236">Kas lülitada selle Growser'i profiili jaoks sisse ka täiustatud ohutu sirvimine?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{Ohustatud parooli muutmine õnnestus.
+
+Teil on veel # ohustatud parool. Growser'i paroolihaldur soovitab kohe seda parooli kontrollida.}other{Ohustatud parooli muutmine õnnestus.
+
+Teil on veel # ohustatud parooli. Growser'i paroolihaldur soovitab kohe neid paroole kontrollida.}}</translation>
+<translation id="3023028874856327238">Saate selle parooli salvestada oma Growser'i kontole või ainult sellesse seadmesse</translation>
+<translation id="6662394424395160792">Growser'i paroolihalduriga saate kõigis oma seadmetes kiiremini saitidel sisse logida</translation>
+<translation id="5195408296304472010">Logige Growser'is sisse, et Growser'i paroolihalduriga tugevaid paroole salvestada</translation>
+<translation id="4069802351872017480">Growser'is sisselogituna saate paroole Growser'i paroolihaldurisse salvestada</translation>
+<translation id="5530977410273748884">Parooli salvestamiseks Growser’i paroolihaldurisse klõpsake klahvi</translation>
+<translation id="2743378970365831481">Parooli salvestamiseks Growser’i paroolihaldurisse klõpsake asukoharibal paroolihalduri ikooni</translation>
+<translation id="3635353578505343390">Growser’ile tagasiside saatmine</translation>
+<translation id="3192586965067888278">Kirjeldage probleemi üksikasjalikult. Tagasiside saadetakse Growser'ile inimülevaatuseks ning seda võidakse Growser'i toodete ja teenuste täiustamiseks kasutada.</translation>
+<translation id="6333064448949140209">Fail saadetakse silumiseks Growser'ile</translation>
+<translation id="93343527085570547">Sisu muutmiseks juriidilistel põhjustel minge <ph name="BEGIN_LINK1"/>juriidilise abi lehele<ph name="END_LINK1"/>. Growser'ile võidakse saata teatud konto- ja süsteemiteavet. Kasutame teie antud teavet tehniliste probleemide lahendamiseks ja oma teenuste parandamiseks. Teabe kasutamisel kehtivad meie <ph name="BEGIN_LINK2"/>privaatsuseeskirjad<ph name="END_LINK2"/> ja <ph name="BEGIN_LINK3"/>teenusetingimused<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">Valitud andmed eemaldati Growser'ist ja sünkroonitud seadmetest. Aadressil <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> võib teie Growser'i kontol olla muus vormis sirvimisajalugu, nt otsingud ja muudes Growser'i teenustes toimunud tegevused.</translation>
+<translation id="967965329294419603">Growser'i andmed on kustutatud</translation>
+<translation id="1597736167243418494">(Growser'i vealehed)</translation>
+<translation id="3372478764182952159">Growser selle Growser'i kontoga</translation>
+<translation id="2577981599306533385"><ph name="MEMBER_FULL_NAME"/> (<ph name="EMAIL"/>) kaotab kohe juurdepääsu vahelehegrupile „<ph name="GROUP_NAME"/>“ ega saa enam teiega Growser’i teenustes suhelda.</translation>
+<translation id="1917766536967060661">Kaotate vahelehegrupile „<ph name="GROUP_NAME"/>“ kohe juurdepääsu ja kasutaja <ph name="BLOCKED_MEMBER_FULL_NAME"/> (<ph name="BLOCKED_MEMBER_EMAIL"/>) ei saa teiega enam Growser’i teenustes suhelda.</translation>
+<translation id="2417535973197532627">Vahelehtede jagamiseks ja koostööfunktsioonide kasutamiseks logige Growser'is sisse ning sünkroonige ajalugu ja vahelehed. Lisaks saate kõigis seadmetes oma paroole ja muud kasutada.</translation>
+<translation id="64301400193488735">Vahelehegruppide jagamiseks või nendega liitumiseks peab teil olema võimalik Growser'i sisse logida</translation>
+<translation id="8040715633918382311">Kui teie organisatsiooni piirab Growser'i kontole salvestamist, ei saa te vahelehegruppe jagada ega nendega liituda</translation>
+<translation id="7224231921984484941">Vahelehegruppide jagamiseks, nendega liitumiseks ja nendes koos töötamiseks avage seaded ja lülitage sisse valik Luba Growser'i sisselogimine</translation>
+<translation id="5328048595378098795">Saadaval on uus Growser</translation>
+<translation id="7415249272773209705">Rakendus <ph name="APP_NAME"/> jagab Growser'i vahelehte.</translation>
+<translation id="7714085981364518713">Rakendus <ph name="APP_NAME"/> jagab Growser'i vahelehte ja heli.</translation>
+<translation id="2410649455830574015">Saada kasutusstatistika ja krahhiaruanded automaatselt Growser'ile</translation>
+<translation id="3051767373530645849">Growser on selle keelanud. See laiendus võib olla ebaturvaline.</translation>
+<translation id="2357378493576302986">Tööriist <ph name="THIRD_PARTY_TOOL_NAME"/> soovib teie Growser'i seaded lähtestada algsetele vaikevalikutele. See lähtestab teie avalehe, uue vahelehe ja otsingumootori, keelab laiendused ning vabastab kõik vahelehed. Peale selle kustutatakse kõik muud ajutised ja vahemällu salvestatud andmed, nagu küpsisefailid ning sisu- ja saidiandmed.</translation>
+<translation id="2887613109410166736">Valige seade. Seejärel avage lehe nägemiseks seadmes Growser.</translation>
+<translation id="1162630940779651724">Selle vahelehe saatmiseks teise seadmesse logige mõlemas seadmes Growser'i sisse</translation>
+<translation id="5388608738812110907">Selle vahelehe saatmiseks teise seadmesse logige selles Growser'i sisse</translation>
+<translation id="4007679133627124999">Seadmete vahel linkide saatmiseks veenduge, et oleksite mõlemas sisse logitud sama Growser'i kontoga.</translation>
+<translation id="2377999415409519333">Linkide saatmiseks kinnitage oma isik. Linke saate saata, kui olete mõlemas seadmes sisse logitud samale Brave'i kontole.</translation>
+<translation id="4986706507552097681">Jaotises Seaded saate igal ajal valida, mida sünkroonida. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
+<translation id="8002662358897231821">Logige sisse, et teie järjehoidjad, ajalugu, paroolid ja muud seaded oleksid kõikides seadmetes saadaval. Teid logitakse ka automaatselt sisse Growser'i teenustesse.</translation>
+<translation id="3128296144259620504">Growser'i juhib automatiseeritud testtarkvara.</translation>
+<translation id="5308456967320989709">Growser for Testing v<ph name="BROWSER_VERSION"/> on mõeldud vaid automatiseeritud testimise jaoks. Kasutage tavalise sirvimise jaoks Growser'i standardversiooni, mida värskendatakse automaatselt.</translation>
+<translation id="7655407181412188363">Laadige Growser alla</translation>
+<translation id="5902400038326841449">Growser'i paroolihaldur on välja lülitatud</translation>
+<translation id="6564343790052433242">Rakenduse <ph name="APP_NAME"/> jaoks pääsuvõtme loomiseks peab Growser'i paroolihaldur olema sisse lülitatud.</translation>
+<translation id="1312107444925145416">Teie Growser'i profiil</translation>
+<translation id="5186788525428341874">Selle pääsuvõtme abil saate eri seadmetes kiiremini sisse logida. See salvestatakse konto <ph name="ACCOUNT_NAME"/> Growser’i paroolihaldurisse.</translation>
+<translation id="2204168219363024184">Growser’i paroolihalduriga selle pääsuvõtme loomiseks kinnitage oma isik</translation>
+<translation id="6331857227627979149">Teie pääsuvõti salvestatakse konto <ph name="ACCOUNT_NAME"/> Growser’i paroolihaldurisse. Peate seda tegema ainult ühe korra.</translation>
+<translation id="7484943269191249363">Saate selles seadmes kasutada kõiki Growser’i paroolihaldurisse salvestatud pääsuvõtmeid. Peate seda tegema ainult ühe korra.</translation>
+<translation id="8189257540098107776">Ei saa Growser'i paroolihalduriga ühendust</translation>
+<translation id="4540409690203718935">Ei saa Growser'i paroolihalduriga ühendust. Proovige mõne minuti pärast uuesti</translation>
+<translation id="7091667403045767243">Teie Growser'i kontole salvestatud pääsuvõtmete kasutamiseks</translation>
+<translation id="8436800506934625875">Looge Growser'i paroolihalduri jaoks tähtnumbriline taastekood</translation>
+<translation id="6520115099532274511"><ph name="SITE"/> soovib teie isiku kinnitada. Sisestage Growser'i paroolihalduri tähtnumbriline PIN-kood</translation>
+<translation id="1011431628606634753">Muutke oma Growser'i paroolihalduri taaste PIN-koodi</translation>
+<translation id="7036550011779986598"><ph name="RP_ID"/> lõi just teie konto jaoks pääsuvõtme. Pääsuvõtmed pakuvad kiiremat ja turvalisemat viisi sisselogimiseks ning need salvestatakse konto <ph name="USER"/> Growser'i paroolihaldurisse. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">Teil on Growser'i tugevaim kaitse ohtlike veebisaitide, allalaadimiste ja laienduste vastu</translation>
+<translation id="8655204793400034351">Teil on standardne turvakaitse. Parema kaitse saamiseks ohtlike veebisaitide, allalaadimiste ja laienduste vastu lülitage Growser'i seadetes sisse funktsioon Täiustatud ohutu sirvimine.</translation>
+<translation id="984351584831083958">Growser'i seaded</translation>
+<translation id="988181568526563957">Growser'i tugevaima turvalisuse seade kaitseb teid paremini ohtlike veebisaitide, allalaadimiste ja laienduste eest</translation>
+<translation id="5634728742770877915">Teil on Growser'i tugevaim kaitse ohtlike veebisaitide vastu</translation>
+<translation id="5760318332127300368">Kustutage ka sirvimisandmed (<ph name="URL"/>). See võib teid saidilt Growser.com välja logida. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">Jõudsid piiranguni, mille sinu vanem Growser'i rakenduses <ph name="APP_NAME"/> määras. Homme saad seda kasutada <ph name="TIME_LIMIT"/>.</translation>
+<translation id="4941819631276629267">Growser'i värskendati</translation>
+<translation id="2871029453856004998">See rakendus on potentsiaalselt ohtlik ja Growser blokeeris selle.</translation>
+<translation id="3757415281539421827">Growser kinnitab installipaketti</translation>
+<translation id="8022386078499568954">Growser'il ei õnnestunud seda installipaketti kinnitada</translation>
+<translation id="5529797218715099093">Growser muudab PDF-id paremaks</translation>
+<translation id="3908598909163357544">Growser lõpetab sellelt saidilt pärinevate märguannete märgistamise rämpspostiks</translation>
+<translation id="3519014757432845220">Aidake täiustada rämpspostivastast kaitset, jagades Growser'iga märguande sisu ja saidi URL-i. Inimesed võivad sisu üle vaadata.</translation>
+<translation id="8028868133304944257">Salvestatud Growser'ist</translation>
+<translation id="9217458048141913687">Ava Growser</translation>
+<translation id="3879869835592882268">Hankige Growser'i parimad turbefunktsioonid</translation>
+<translation id="3307078631581490570">Isikupärastage Growser'i</translation>
+<translation id="6133506753060207356">Saate hiljuti suletud vahelehed uuesti avada kõikjal, kus Growser'i kasutate.</translation>
+<translation id="8146322071180925001">Lugege lisateavet Growser'i värskenduste haldamise kohta.</translation>
+<translation id="4016841343509962173">Kuva kõik Growser'i eeskirjad</translation>
+<translation id="6953549942896871737">Ava Growser'is</translation>
+<translation id="4773299976671772492">Peatatud</translation>
+<translation id="8387617938027387193">Kinnitage oma isik</translation>
+<translation id="1481450969185702334">Leidmine ja täitmine</translation>
+<translation id="443008484043213881">Tööriistad</translation>
+<translation id="8118506371121007279">Tagasiside andmine</translation>
 </translationbundle>

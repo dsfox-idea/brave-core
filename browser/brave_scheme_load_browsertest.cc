@@ -81,7 +81,7 @@ class BraveSchemeLoadBrowserTest : public InProcessBrowserTest,
 
   // Check loading |url| in guest window is not allowed for an url.
   void TestURLIsNotLoadedInGuestWindow(const GURL& url) {
-    Browser* guest_browser = CreateGuestBrowser();
+    BrowserWindowInterface* guest_browser = CreateGuestBrowser();
     TabStripModel* guest_model = guest_browser->tab_strip_model();
 
     // Check guest window has one blank tab.
@@ -107,7 +107,7 @@ class BraveSchemeLoadBrowserTest : public InProcessBrowserTest,
   // Check loading |url| in private window is redirected to normal
   // window.
   void TestURLIsNotLoadedInPrivateWindow(const std::string& url) {
-    Browser* private_browser = CreateIncognitoBrowser(nullptr);
+    BrowserWindowInterface* private_browser = CreateIncognitoBrowser(nullptr);
     TabStripModel* private_model = private_browser->tab_strip_model();
 
     // Check normal & private window have one blank tab.
@@ -144,7 +144,7 @@ class BraveSchemeLoadBrowserTest : public InProcessBrowserTest,
 
   // Check loading |url| wallet URL in private window results in a load failure
   void TestURLIsNotLoadedInPrivateWindowOrRedirected(const std::string& url) {
-    Browser* private_browser = CreateIncognitoBrowser(nullptr);
+    BrowserWindowInterface* private_browser = CreateIncognitoBrowser(nullptr);
     TabStripModel* private_model = private_browser->tab_strip_model();
 
     // Check normal & private window have one blank tab.
@@ -169,7 +169,7 @@ class BraveSchemeLoadBrowserTest : public InProcessBrowserTest,
   }
 
   void TestURLIsLoadedInPrivateWindow(const std::string& url) {
-    Browser* private_browser = CreateIncognitoBrowser();
+    BrowserWindowInterface* private_browser = CreateIncognitoBrowser();
     TabStripModel* private_model = private_browser->tab_strip_model();
     EXPECT_EQ("about:blank",
               private_model->GetActiveWebContents()->GetVisibleURL().spec());

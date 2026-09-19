@@ -5536,4 +5536,430 @@
 <translation id="8198379961710069585">"Тарихтан іздеу" түймесі. Тарихтан іздеу үшін іске қосыңыз</translation>
 <translation id="8495170825732897952">Кез келген үлгіде @@ деп теріп, қойындыларды ауыстырмай-ақ ақпаратты еске түсіріп, толтырады.</translation>
 <translation id="8874790741333031443">Үшінші тарап cookie файлдарына уақытша рұқсат беріп көріңіз. Бұл жағдайда қорғаныс дәрежесі төмен болады, бірақ сайт функцияларының ойдағыдай жұмыс істеу ықтималдығы артады.</translation>
+<translation id="6091115085465716987">Google Wallet логотипі</translation>
+<translation id="4489288117933602961">Growser логотипі</translation>
+<translation id="6604204560730066844">Бұл картаны Growser аккаунтына және осы құрылғыға сақтағыңыз келе ме?</translation>
+<translation id="6253380015872250643">Картаны Google Wallet-ке сақтау</translation>
+<translation id="7062344833049251424">Келесі жолы жылдамырақ төлеу үшін картаңызды және төлем мекенжайын Google Wallet-ке сақтаңыз.</translation>
+<translation id="4940620179254568429">Жылдам төлеу үшін бұл картаның CVC коды шифрланады және Growser аккаунтыңызға сақталады.</translation>
+<translation id="1413235258620101697">Жылдам төлеу үшін бұл картаның CVC коды шифрланады және Google Wallet-ке сақталады.</translation>
+<translation id="8296806261827627234">Карта сақталса, жылдам төлеуге болады. Карта мәліметтері Growser аккаунтында шифрланады.</translation>
+<translation id="4954891067389874142">Карта сақталса, жылдам төлеуге болады. Карта мәліметтері Google Wallet-те шифрланады.</translation>
+<translation id="4599572944836204718">Карта сақталса, Google Pay арқылы жылдам төлеуге болады. Карта мәліметтері Google Wallet-те шифрланады.</translation>
+<translation id="3872719112670219447">Бұл атау Growser аккаунтыңызда бар.</translation>
+<translation id="1511387429744666092">Сіз аккаунтқа кіргендіктен, Growser браузері карталарыңызды Growser аккаунтына сақтауды ұсынып отыр. Мұны параметрлерге кіріп өзгертуіңізге болады.</translation>
+<translation id="4565400898718322011">Сіз аккаунтқа кіргендіктен, Growser браузері карталарыңызды Growser аккаунтына сақтауды ұсынып отыр. Мұны "Параметрлер" бөлімінен өзгертуіңізге болады. Карта иесінің аты-жөнін аккаунтыңыздан алынады.</translation>
+<translation id="3594461335790641595">Бұл карта осы құрылғыда сақталған кезде, оны Growser-мен орындалатын сатып алу транзакцияларында автоматты түрде толтырыңыз</translation>
+<translation id="1242832199383246031">Бұл карта Google Pay-де пайдалану үшін сақталған кезде, оны Growser-мен орындалатын сатып алу транзакцияларында автоматты түрде толтырыңыз</translation>
+<translation id="6186962377036474023">Бұл карта Google Wallet-ке сақталса, Growser-дегі сатып алу транзакцияларында автоматты түрде толтырылады.</translation>
+<translation id="5765984179517659957">Growser төлем туралы ақпаратыңызды толтыру үшін сіз екеніңізді растағысы келеді.</translation>
+<translation id="828282277746732142">IBAN нөмірін Google Wallet-ке сақтау</translation>
+<translation id="6084079099761498478">Келесі жолы бұл IBAN нөмірін автоматты түрде толтыру үшін оны Growser аккаунтыңызға сақтаңыз.</translation>
+<translation id="5398461103557553443">Келесі жолы бұл IBAN нөмірін автоматты түрде толтыру үшін оны Google Wallet-ке сақтаңыз.</translation>
+<translation id="7098302422586317090">Growser енді төлеу әдістерін толтырмас бұрын жеке басыңызды растайды. Мұны <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/> ішінде кез келген уақытта жаңартуға болады.</translation>
+<translation id="5053116470141135293">Нақты мәліметтеріңізді қорғау үшін осы картамен төлеу кезінде виртуалдық карта нөмірі толтырылады. Google Wallet-те реттеңіз. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">Бұл опцияларды ұсыну үшін төлеу бетіндегі контент Growser-ға жіберіледі. Автотолтыруда кейін төлеу опцияларын жасыру үшін <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> бөліміне өтіңіз.</translation>
+<translation id="2840680829170913626">Бұл опцияларды ұсыну үшін төлеу бетіндегі контент Growser-ға жіберіледі. Төлем жоспарлары талаптарға сай болуы керек. Автотолтыруда кейін төлеу опцияларын жасыру үшін <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> бөліміне өтіңіз.</translation>
+<translation id="7870207318911766769">Бұл опцияларды ұсыну үшін төлеу бетіндегі контент Growser-ға жіберіледі.</translation>
+<translation id="1151858212483238980">Google Wallet-ке сақталған карталарды автоматты түрде толтыруға болады.</translation>
+<translation id="1205344127823614428">Google Wallet-ке сақталған карталарды автоматты түрде толтыруға болады.</translation>
+<translation id="5848445080378515710">Тапсырысыңызды тексергеннен кейін, <ph name="BNPL_ISSUER_NAME"/> аккаунтына кіруіңіз немесе жаңасын жасауыңыз керек. Бұл аккаунт Google Wallet-те автоматты түрде байланыстырылады.</translation>
+<translation id="8163468049564974856">Интернетте қауіпсіз төлеу үшін автотолтыру функциясын қосыңыз. Карта мәліметтері Brave Wallet-те шифрланады.</translation>
+<translation id="5717281954932320486">Интернетте төлеген кезде, карта мәліметтерін автоматты түрде толтырыңыз. Карталар Brave Wallet-те қауіпсіз сақталады.</translation>
+<translation id="7055814742378298611">Енді Brave-да төлеу кезінде автоматты түрде толтыру үшін төлеу әдістерін сақтай аласыз. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Құрылғы мен Growser аккаунтында сақталған барлық қауіпсіздік коды жойылады.</translation>
+<translation id="7170930892977483182">Құрылғы мен Google Wallet-те сақталған барлық қауіпсіздік коды жойылады.</translation>
+<translation id="755360750394433286">Болашақта сатып алған кезде автоматты түрде толтырылуы үшін, карта Growser аккаунтыңызға сақталды</translation>
+<translation id="7412081313067625215">Болашақта сатып алған кезде автоматты түрде толтырылуы үшін, карта Google Wallet-ке сақталды.</translation>
+<translation id="2482920244925042987">Бұл картаны Growser аккаунтыңызға сақтау мүмкін болмады. Ол осы құрылғыдағы Growser-ға сақталды.</translation>
+<translation id="4740434610174859636">Бұл картаны Google Wallet-ке сақтау мүмкін болмады. Ол осы құрылғыдағы Growser-ға сақталды.</translation>
+<translation id="2109852493965717728">Бұл IBAN нөмірі Growser аккаунтыңызға сақталды. Оны Growser қызметтерінде пайдалануға болады.</translation>
+<translation id="3837322271615501940">Бұл IBAN нөмірін Growser аккаунтыңызға сақтау мүмкін болмады. Ол осы құрылғыдағы Growser-ға сақталды. Келесі жолы осы IBAN нөмірін қолданған кезде, Growser сізден қайтадан рұқсат сұрайды.</translation>
+<translation id="1583007191864786102">Бұл IBAN нөмірін Google Wallet-ке сақтау мүмкін болмады. Ол осы құрылғыдағы Growser-ға сақталды. Келесі жолы осы IBAN нөмірін қолданған кезде, Growser сізден қайтадан рұқсат сұрайды.</translation>
+<translation id="6915664826242394941">Бұл IBAN нөмірін Growser аккаунтыңызға сақтау мүмкін болмады. Ол осы құрылғыдағы Growser-ға сақталды.</translation>
+<translation id="376462579087900096">Бұл IBAN нөмірін Google Wallet-ке сақтау мүмкін болмады. Ол осы құрылғыдағы Growser-ға сақталды.</translation>
+<translation id="2871837111996280385">Growser <ph name="APP_NAME"/> сайтында құпия ақпаратыңызды толтырғалы жатыр.</translation>
+<translation id="3039045945489677870">Growser құпия ақпаратты көрсеткелі жатыр.</translation>
+<translation id="3253651554860831188">Параметрлерді өзгертпей тұрып, Growser жеке басыңызды растағысы келеді.</translation>
+<translation id="924075841960625832">Growser браузерінен форма ұсынысын өшіру қажет пе?</translation>
+<translation id="3016775357255717300">Несие картасын Growser жүйесінен алып тастау керек пе?</translation>
+<translation id="1722474089104449082">Мекенжайды Growser жүйесінен алып тастау керек пе?</translation>
+<translation id="7077165718541055322">Үй мекенжайын Growser-ның автотолтыру функциясынан өшіру қажет пе?</translation>
+<translation id="7756454115562251695">Жұмыс мекенжайын Growser-ның автотолтыру функциясынан өшіру қажет пе?</translation>
+<translation id="3068798232942246848">Бұл ақпаратты Growser-ның автотолтыру функциясынан өшіру қажет пе?</translation>
+<translation id="967369588715984092">Brave қолдау көрсетілетін сайттарда осы электрондық мекенжайды автоматты түрде растамайтын болады.</translation>
+<translation id="7299769361777046949">Google Wallet-тегі тұрақты клиент карталарын басқару</translation>
+<translation id="2903623845283894856">Енді Growser аккаунтыңыздағы мекенжайларды пайдалана аласыз</translation>
+<translation id="7058709760023777753">Үй және жұмыс мекенжайларын Growser аккаунтынан автоматты түрде толтырыңыз</translation>
+<translation id="2856388212909438134">Аты-жөніңіз бен электрондық мекенжайыңызды Growser аккаунтыңыздан автоматты түрде толтырыңыз</translation>
+<translation id="8581945850065780003">Бұл мекенжай Growser аккаунтыңыздан (<ph name="ACCOUNT"/>) жойылады.</translation>
+<translation id="8652886653703834105">Growser аккаунтыңызда (<ph name="ACCOUNT"/>)</translation>
+<translation id="4050392779074832022">Оны Growser өнімдерінде пайдалана аласыз.</translation>
+<translation id="361746409909709825">Growser өнімдерінде сақталған мекенжайларды пайдалана аласыз. Бұл мекенжай Growser аккаунтыңызда (<ph name="ACCOUNT"/>) сақталады.</translation>
+<translation id="5318416911578989892">Growser өнімдерінде сақталған мекенжайларды пайдалана аласыз. Бұл мекенжай Growser аккаунтыңызда (<ph name="ACCOUNT"/>) сақталады.</translation>
+<translation id="3995632180712217177">Growser өнімдерінде сақталған мекенжайларды пайдалана аласыз. Бұрыннан бар үй мекенжайы өзгермейді. Ол Growser аккаунтыңызға (<ph name="ACCOUNT"/>) сақталады.</translation>
+<translation id="2432673835335968473">Growser өнімдерінде сақталған мекенжайларды пайдалана аласыз. Бұрыннан бар жұмыс мекенжайы өзгермейді. Ол Growser аккаунтыңызға (<ph name="ACCOUNT"/>) сақталады.</translation>
+<translation id="2024046927213376062">Growser аккаунтындағы (<ph name="ACCOUNT"/>) ақпарат Growser-да үлгілерді жылдам толтыруға мүмкіндік береді.</translation>
+<translation id="8430499469896241016">Сайттар қауіпсіздікті арттыру үшін пайдаланатын растау кодтарын автоматты түрде толтырыңыз. Brave бұл кодтарды Gmail-ден ала алады. <ph name="BEGIN_LINK"/>Осы функция туралы толық ақпарат<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Growser сіздегі автотолтыру провайдері емес</translation>
+<translation id="7450759832930378803">Бұл параметрлерді қосу және Growser аккаунтының төлем туралы ақпаратын пайдалану үшін автотолтыру қызметтерінің параметрлеріне өтіңіз.</translation>
+<translation id="7049940136908665440">Бұл параметрлерді қосу және Growser аккаунтының ақпаратын пайдалану үшін автотолтыру қызметтерінің параметрлеріне өтіңіз.</translation>
+<translation id="2450019289047528273">Google Wallet-тегі төлеу әдістері және басқа ақпарат</translation>
+<translation id="1125406338060147524">Brave Wallet параметрлері Brave-нан сақталған ақпаратқа қолданылады</translation>
+<translation id="5732084028114235391">Қазіргі уақытта бұл мекенжай Growser браузерінде сақталған. Оны Growser өнімдерінде пайдалану үшін оны Growser аккаунтыңызда (<ph name="ACCOUNT"/>) сақтаңыз.</translation>
+<translation id="756794566964707799">Қазіргі уақытта бұл мекенжай осы құрылғыда сақталған. Оны Growser өнімдерінде пайдалану үшін оны Growser аккаунтыңызда (<ph name="ACCOUNT"/>) сақтаңыз.</translation>
+<translation id="6935077351544118151">Енді тұрақты клиент карталарын Google Wallet-тен автоматты түрде толтыруға болады</translation>
+<translation id="4169189393773057143">Тұрақты клиент карталарын реттеңіз немесе бұл ұсыныстарды Google Wallet-те өшіріңіз</translation>
+<translation id="4470759557257438892">Оның орнына Growser-дағы Gemini-дан сұраңыз.</translation>
+<translation id="2326283484705860548">Енді Google Wallet-тен көбірек ақпаратты автоматты түрде толтыруға болады.</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="8421746712901926961">Ақпаратыңызды <ph name="GOOGLE_WALLET_TITLE_1"/> қызметіне сақтау арқылы үлгілерді толтыру секілді Growser өнімдеріндегі әрекеттерді жылдам орындай аласыз. <ph name="ACCOUNT"/> аккаунтына арналған <ph name="GOOGLE_WALLET_TITLE_2"/> қызметінде келесі әрекетті орындай аласыз: <ph name="MANAGE_INFO_LINK"/>.</translation>
+<translation id="4619669610757527494">Жүргізуші куәлігін Google Wallet-ке сақтаңыз</translation>
+<translation id="4239215166147486528">Жүргізуші куәлігін Brave Wallet-ке қауіпсіз сақтаңыз</translation>
+<translation id="1912750443952232242">Жеке куәлікті Google Wallet-ке сақтаңыз</translation>
+<translation id="8300302621078931927">Жеке куәлікті Brave Wallet-ке қауіпсіз сақтаңыз</translation>
+<translation id="5447103258548475868">Паспортты Google Wallet-ке сақтаңыз</translation>
+<translation id="8717177139469452440">Паспортты Brave Wallet-ке қауіпсіз сақтаңыз</translation>
+<translation id="760632772920590778">Көлікті Google Wallet-ке сақтаңыз</translation>
+<translation id="4811696127853690432">Көлік құралы туралы деректерді Brave Wallet-ке қауіпсіз сақтаңыз</translation>
+<translation id="5914185423510719251">KTN нөмірін Google Wallet-ке сақтаңыз</translation>
+<translation id="5034488401832901795">KTN нөмірін Brave Wallet-ке қауіпсіз сақтаңыз</translation>
+<translation id="1449251255954293933">Redress Control Number нөмірін Google Wallet-ке сақтаңыз</translation>
+<translation id="1330952240988133220">Redress Control Number нөмірін Brave Wallet-ке қауіпсіз сақтаңыз</translation>
+<translation id="8393948304336153065">Жүргізуші куәлігін Google Wallet-те жаңартыңыз</translation>
+<translation id="8889525327610245418">Жүргізуші куәлігін Brave Wallet-те қауіпсіз жаңартыңыз</translation>
+<translation id="7570524564113479209">Жеке куәлікті Google Wallet-те жаңартыңыз</translation>
+<translation id="4410614037742891410">Жеке куәлікті Brave Wallet-те қауіпсіз жаңартыңыз</translation>
+<translation id="3426672782316020729">Паспортты Google Wallet-те жаңартыңыз</translation>
+<translation id="3280440382387335343">Паспортты Brave Wallet-те қауіпсіз жаңартыңыз</translation>
+<translation id="2124081665399116863">Көлікті Google Wallet-те жаңартыңыз</translation>
+<translation id="6422648598133086441">Көлік құралы туралы деректерді Brave Wallet-те қауіпсіз жаңартыңыз</translation>
+<translation id="4770909831299304090">KTN нөмірін Google Wallet-те жаңартыңыз</translation>
+<translation id="5872115357279348603">KTN нөмірін Brave Wallet-те қауіпсіз жаңартыңыз</translation>
+<translation id="1732796940245838248">Redress Control Number нөмірін Google Wallet-те жаңартыңыз</translation>
+<translation id="7253051586755429279">Redress Control Number нөмірін Brave Wallet-те қауіпсіз жаңартыңыз</translation>
+<translation id="5628060911499153873">Growser өнімдерінде жұмыстарды жылдам орындау үшін ақпаратыңызды сақтаңыз. Ақпаратыңыз <ph name="ACCOUNT"/> аккаунтына арналған <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> қызметіне сақталады.</translation>
+<translation id="8369722293913575142">Бұл ақпаратты Google Wallet-ке сақтау мүмкін болмады. Ол осы құрылғыдағы Growser-ға сақталды. Келесі жолы пайдаланған кезде, Growser оны Wallet-ке сақтауды ұсынады.</translation>
+<translation id="3237427677128462778">Growser Wallet-ке сақталмады.</translation>
+<translation id="9078170656887151974">Ұсыныстарды қалыптастыру және бұл функцияны жақсарту үшін беттің URL мекенжайы мен контенті Growser-ға жіберіледі. Шешіміңізді кез келген уақытта өзгерте аласыз. <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Ұсыныстарды қалыптастыру және бұл функцияны жақсарту үшін беттің URL мекенжайы мен контенті Growser-ға жіберіледі.</translation>
+<translation id="2905902437192896563">Growser үлгілерді жақсы түсінеді және сізден де жылдам толтыра алады.</translation>
+<translation id="67310796271265436">Brave серверлерінде деректерді қауіпсіз өңдеу арқылы Brave-ға күрделі үлгілерді жақсырақ түсінуге және толтыруға көмектесіңіз. Ақпаратыңыз құпия болып қалады және оны ешкім тексермейді.</translation>
+<translation id="7422908041366284140">Growser стандартты автотолтыру функциясы толтыра алмайтын қиын өрістерді автоматты түрде толтыра алады.</translation>
+<translation id="6329742260390895689">Ақпаратты автоматты түрде толтыру үшін Wallet параметрлерінде "Билеттерді Growser-да пайдалану" параметрін қосыңыз.</translation>
+<translation id="5912796581727968237">Google Wallet-ті ашу</translation>
+<translation id="5160781056848005130">Деректерді Growser-ға жіберу арқылы дұрысталған автотолтыру функциясын жақсартуға көмектесіп жатырсыз</translation>
+<translation id="8781233757384402598">Дұрысталған автотолтыру функциясына сұрау жіберген кезде, пайдалану туралы дерек, сұраулар және бет мәліметтері автотолтыру функциясын жақсарту үшін Brave-ға жіберіледі.</translation>
+<translation id="7044265724713929821">Brave бұл функцияны қалай пайдаланатыныңызды (мысалы, сұрауларыңызды және ұсыныстарды қабылдаған немесе елемеген кездегі әрекеттеріңізді) тіркеп отырады.</translation>
+<translation id="3209071504641569648">Сұрауларыңыз, бет атаулары және URL мекенжайлары Brave-ға жіберіледі және дұрысталған автотолтыру функциясын жақсарту үшін тексерілуі мүмкін.</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Жоқ}=1{1 сайтта (Growser аккаунтыңыздан шығарылмайсыз)}other{# сайтта (Growser аккаунтыңыздан шығарылмайсыз)}}</translation>
+<translation id="3410151451624226773">Growser Password Manager-де басқару</translation>
+<translation id="5224107321793121921">Growser аккаунтында басқару</translation>
+<translation id="5105442806410269908">Басқа Growser деректерін басқару</translation>
+<translation id="2477607419416067650">Басқа Growser деректері</translation>
+<translation id="472824688843296007">Growser браузерімен бағаларды қадағалау</translation>
+<translation id="753556296624075801">Growser ұсынған</translation>
+<translation id="3745599309295009257">Мәтініңіз және сіз жазып отырған беттің контенті мен URL мекенжайы Growser-ға жіберіледі және оларды тексерушілер тексереді. Бұл ақпарат осы функцияны жақсарту үшін қолданылады. Жеке ақпарат (мысалы, денсаулық туралы не қаржылық мәліметтер) қоспаңыз немесе бұл құралды құпия ақпараты бар сайттарда қолданбаңыз.</translation>
+<translation id="5543452229212526547">Мәтініңіз және сіз жазып отырған беттің контенті мен URL мекенжайы Growser-ға жіберіледі. Контентіңізді жасанды интеллектіні жақсарту үшін тексерушілер қолданбайды. Ұйымыңыз бұл параметрлерді кез келген уақытта өзгерте алады.</translation>
+<translation id="1959445535228047762">Мәтін мен бет контенті Growser-ға жіберіледі. Ол бұл функцияны жақсарту үшін қолданылады.
+  <ph name="BEGIN_LINK"/>Толық ақпарат<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">Мәтін мен бет контенті Growser-ға жіберіледі, бірақ олар жасанды интеллектіні жақсарту үшін қолданылмайды.
+    <ph name="BEGIN_LINK"/>Толық ақпарат<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">Бұл эксперименттік AI құралы кейде қателесуі мүмкін. Оны жақсарту үшін контентіңіз Growser-ға жіберіледі.
+    <ph name="BEGIN_LINK"/>Толық ақпарат<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">Ұйымыңыздың саясаттарына сәйкес, контентті басқарылатын Brave контексінен тыс жерге қою мүмкін емес.</translation>
+<translation id="1351458950091269256">Бұл жарнама құрылғыңыздың тым көп ресурсын пайдаланғандықтан, Growser оны өшірді.</translation>
+<translation id="4366714044424353289"><ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> мекенжайында Growser аккаунтымен браузерді қолдану тарихының басқа түрлері болуы мүмкін.</translation>
+<translation id="5626844006416355146">Growser аккаунтыңызда <ph name="BEGIN_LINK_GAA"/>Gemini қолданбаларын пайдалану тарихы<ph name="END_LINK_GAA"/> болуы мүмкін</translation>
+<translation id="5747377793818752349"><ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> мекенжайында Growser аккаунтымен <ph name="BEGIN_LINK_GAA"/>Gemini қолданбаларын пайдалану тарихы<ph name="END_LINK_GAA"/> сияқты браузерді қолдану тарихының басқа да түрлері болуы мүмкін.</translation>
+<translation id="4267590181863312380">Басқа құрылғылардағы тарихты алу үшін аккаунтқа кіріп, тарихты синхрондаңыз. Құпия сөздер мен басқа да деректеріңіз барлық құрылғыңызда қолжетімді болады. Синхрондауды кез келген уақытта параметрлерде тоқтатуға болады. Growser жүйесі Search пен басқа да қызметтерді тарихыңызға негіздеп жекелендіре алады.</translation>
+<translation id="5889251770650310375">Басқа құрылғылардағы тарихты алу үшін жеке басыңызды растаңыз және тарих пен қойындыларды синхрондаңыз. Синхрондауды кез келген уақытта параметрлерде тоқтатуға болады. Growser жүйесі Search пен басқа қызметтерді тарихыңызға негіздеп жекелендіре алады.</translation>
+<translation id="2541474152868747095">Басқа құрылғылардағы тарихты алу үшін жеке басыңызды растаңыз. Синхрондауды кез келген уақытта параметрлерде тоқтатуға болады. Growser жүйесі Search пен басқа қызметтерді тарихыңызға негіздеп жекелендіре алады.</translation>
+<translation id="4260407128682690669">Басқа құрылғылардағы тарихты алу үшін тарих пен қойындыларды <ph name="ACCOUNT_EMAIL"/> электрондық поштасымен синхрондаңыз. Синхрондауды кез келген уақытта параметрлерде тоқтатуға болады. Growser жүйесі Search пен басқа қызметтерді тарихыңызға негіздеп жекелендіре алады.</translation>
+<translation id="611018310643025551">Іздеу сұрауларыңыз, ең қолайлы сәйкестіктер және олардың бет контенттері Growser-ға жіберіліп, оларды тексерушілер осы функцияны жақсарту үшін көруі мүмкін.</translation>
+<translation id="1987486584747170374">Іздеу сұрауларыңыз, ең қолайлы сәйкестіктер және олардың бет контенттері Growser-ға жіберіледі. Оларды тексерушілер осы функцияны жақсарту үшін пайдаланбайды. Ұйымыңыз бұл параметрлерді кез келген уақытта өзгерте алады.</translation>
+<translation id="2461080251012814077">Growser тарихынан өшірілетін қойындылар салыстыру кестелерінде көрсетіле береді.</translation>
+<translation id="7395776876928503485">Әкімші профиль мен браузерге қашықтан өзгеріс енгізе алады, есеп беру арқылы браузер туралы ақпаратты талдай алады және басқа қажетті тапсырмаларды орындай алады. Бұл құрылғыдағы әрекеттерді Growser браузерінен тыс та басқаруға болады. <ph name="BEGIN_LINK"/>Толық ақпарат<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Бұл браузер компания немесе басқа ұйым арқылы басқарылмайды. Құрылғыдағы әрекет Growser браузерінен тыс басқарылуы мүмкін. <ph name="BEGIN_LINK"/>Толығырақ<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">Құрылғыңыздың пайдаланушы аты және Growser браузеріңіздің пайдаланушы аты</translation>
+<translation id="9383261434423554">Growser Enterprise Connectors туралы толық ақпарат</translation>
+<translation id="7998714759612158367">Growser-ке кеңейтімдерді қосқанда, осы кеңейтімдерге қатысты тиісті мәліметтер талдау үшін үшінші тұлғаларға жіберіледі және әкімшіге көрінуі мүмкін. Мәліметтерге кеңейтімдер туралы ақпарат (атауы, орнатылу уақыты, орнату көзі, сондай-ақ осы кеңейтімдерге байланысты қызметі және т.б. кіреді) жатады. Бұл мәліметтер тек Веб-дүкеннен орнатылған кеңейтімдер үшін ғана емес, сондай-ақ дүкеннен тыс кеңейтімдер үшін де жиналады.</translation>
+<translation id="3521646565402740725">Growser Enterprise Connectors</translation>
+<translation id="7942345451754009257">Әкімші браузердегі Growser Enterprise Connectors қызметін қосты. Бұл коннекторлар кейбір деректеріңізді пайдалануы мүмкін.</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/> сіздің браузеріңізде Growser Enterprise Connectors функциясын қосып қойды. Бұл коннекторлар кейбір деректеріңізді пайдалануы мүмкін.</translation>
+<translation id="3864343340250325558">Growser браузерінде қауіпсіздік оқиғалары белгіленген кезде, оқиғаларға қатысты деректер әкімшіңізге жіберіледі. Олар Growser-да сіз кірген беттердің URL мекенжайларын, деректері көшірілген беттердің URL мекенжайларын, файл атауларын не метадеректерін, IP мекенжайларын, браузердің не қойындының бұзылу оқиғаларын және веб-технологияға негізделген қолданбаларға, құрылғыңыз бен Growser-ға кіру үшін қолданылатын пайдаланушы атын қамтуы мүмкін.</translation>
+<translation id="1979029506107883830">Growser Enterprise Core браузер саясаттарын, қолданбалар мен кеңейтімдерді бұлттан басқаруға мүмкіндік береді.</translation>
+<translation id="84905717630920469">Growser Enterprise Core нұсқасын пайдаланып көру</translation>
+<translation id="1757745363789526465">Growser браузерін қайта іске қосу</translation>
+<translation id="2537931901612099523">Бұл құрылғыны пайдаланатын басқа адамдар әрекеттеріңізді көрмейді, сол себепті браузерді құпия пайдалана аласыз. Сіз кіретін веб-сайттардың және олар қолданатын қызметтердің (соның ішінде Growser қызметтерінің) деректерді қалай жинайтыны өзгермейді. Жүктеп алынған материалдар және бетбелгілер сақталады.</translation>
+<translation id="1410365862999780287">Бұл құрылғыны пайдаланатын басқа адамдар әрекеттеріңізді көрмейді, сол себепті браузерді құпия пайдалана аласыз. Сіз кіретін веб-сайттардың және олар қолданатын қызметтердің (соның ішінде Growser қызметтерінің) деректерді қалай жинайтыны өзгермейді. Жүктеп алынған материалдар, бетбелгілер және оқу тізіміндегі элементтер сақталады.</translation>
+<translation id="7087257419919340685">Growser келесі ақпаратты <ph name="BEGIN_EMPHASIS"/>сақтамайды<ph name="END_EMPHASIS"/>:
+        <ph name="BEGIN_LIST"/>
+          <ph name="LIST_ITEM"/>браузерді қолдану тарихы;
+          <ph name="LIST_ITEM"/>cookie файлдары және сайт деректері;
+          <ph name="LIST_ITEM"/>үлгілерге енгізілген ақпарат.
+        <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Growser параметрлерінен браузерді қолдану тарихын, cookie файлдарын, кэшті және т.б. деректерді жою</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлерінде браузерді қолдану тарихын, cookie файлдарын, кэшті және т.б. жою үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="8841351289024215412">"Браузерді пайдалану деректерін жою" түймесі, Growser параметрлерінде браузерді қолдану тарихын, cookie файлдарын, кэшті және т.б. жою үшін түймені басыңыз</translation>
+<translation id="5085944396348027753">Growser параметрлерінде құпия сөздерді көріңіз және басқарыңыз.</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлерінде құпия сөздеріңізді көру және басқару үшін Tab, одан кейін Enter пернесін басыңыз.</translation>
+<translation id="3071294016974329065">"Құпия сөздерді басқару" түймесі, Growser параметрлерінде құпия сөздеріңізді көру және басқару үшін белсендіріңіз</translation>
+<translation id="3031527126657836806">Төлемдер мен несиелік карта туралы ақпаратты Growser параметрлерінен басқарыңыз.</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлерінде төлемдеріңіз және несиелік картаңыз туралы ақпаратты басқару үшін Tab, одан кейін Enter пернесін басыңыз.</translation>
+<translation id="7338080394311291541">"Төлеу әдістерін басқару" түймесі, Growser параметрлерінде төлемдеріңіз және несиелік картаңыз туралы ақпаратты басқару үшін белсендіріңіз</translation>
+<translation id="561165882404867731">Осы бетті Google Translate арқылы аударыңыз.</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Бұл бетті Google Translate арқылы аудару үшін Tab, одан кейін Enter пернесін басыңыз.</translation>
+<translation id="8781278378794969337">"Бетті аудару" түймесі, осы бетті Google Translate арқылы аудару үшін белсендіріңіз</translation>
+<translation id="6560728661781075049">Growser жаңарту</translation>
+<translation id="5749239053568461167">Growser браузерін Growser параметрлерінен жаңартыңыз.</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлерінде Growser-ды жаңарту үшін Tab, одан кейін Enter пернесін басыңыз.</translation>
+<translation id="1957844396300023214">"Growser-ды жаңарту" түймесі, Growser параметрлерінен Growser-ды жаңарту үшін белсендіріңіз</translation>
+<translation id="6924344322157830957">Growser параметрлерінен қауіпсіздік тексерісін іске қосу</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлерінен қауіпсіздік тексерісін іске қосу үшін Tab, сосын Enter пернесін басыңыз.</translation>
+<translation id="2217308317357494419">"Growser қауіпсіздік тексерісін іске қосу" түймесі, Growser параметрлерінде қауіпсіздік тексерісін іске қосу үшін белсендіріңіз</translation>
+<translation id="555731368593399620">Growser қауіпсіздік тексерісіне өту</translation>
+<translation id="1022622918438880634">Параметрлердегі Growser қауіпсіздік тексерісі бетіне өту</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, параметрлердегі Growser қауіпсіздік тексерісі бетіне өту үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="4573592640621800816">Growser қауіпсіздік тексерісі түймесіне өтіңіз, параметрлердегі Growser қауіпсіздік тексерісі бетіне кіру үшін іске қосыңыз.</translation>
+<translation id="711408602663662681">Growser параметрлері арқылы Safe Browsing қорғанысын және т.б. басқару</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлерінен Safe Browsing және т.б. басқару үшін Tab, сосын Enter пернесін басыңыз.</translation>
+<translation id="8147674953957429172">"Қауіпсіздік параметрлерін басқару" түймесі, Growser параметрлерінен Safe Browsing және т.б. басқару үшін белсендіріңіз</translation>
+<translation id="123941427300345384">Growser параметрлері арқылы cookie файлдарын басқару</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлеріне кіріп, cookie файлдарын басқару үшін Tab, сосын Enter пернелерін басыңыз.</translation>
+<translation id="185317221836385090">"Cookie файлдарын басқару" түймесі, Growser параметрлерінде cookie файлдарын басқару үшін белсендіріңіз</translation>
+<translation id="1824417970962955294">Growser параметрлері арқылы мекенжайларды қосу және басқару</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлеріне кіріп, мекенжайларды қосу және басқару үшін Tab, сосын Enter пернелерін басыңыз.</translation>
+<translation id="2805189921443465815">"Мекенжайларды басқару" түймесі, Growser параметрлерінде мекенжайларды қосу және басқару үшін белсендіріңіз</translation>
+<translation id="5592576649770969570">Синхрондалатын ақпаратты Growser параметрлері арқылы басқару</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser параметрлеріне кіріп, синхрондалатын ақпаратты басқару үшін Tab, сосын Enter пернелерін басыңыз.</translation>
+<translation id="4269937126213032056">"Синхрондауды басқару" түймесі, Growser параметрлерінде синхрондалатын ақпаратты басқару үшін белсендіріңіз</translation>
+<translation id="8766514807385279339">Growser аккаунтында сақталатын Growser ақпаратын басқару</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser аккаунтыңызда сақталатын Growser ақпаратын басқару үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="3256302414991866158">Аккаунтыңыздағы деректерді басқару түймесі. Growser аккаунтында сақталатын Growser ақпаратын басқару үшін іске қосыңыз.</translation>
+<translation id="4365583497146730170">Growser параметрлері арқылы сайттарға қатысты сақталған рұқсаттар мен деректерді басқару</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлеріне кіріп, сайттарға қатысты сақталған рұқсаттар мен деректерді басқару үшін Tab, сосын Enter пернелерін басыңыз.</translation>
+<translation id="1429889589220926820">"Сайт параметрлерін басқару" түймесі, Growser параметрлерінде сайттарға қатысты сақталған рұқсаттар мен деректерді басқару үшін белсендіріңіз</translation>
+<translation id="6881240511396774766">Жаңа Growser құжатын жылдам жасаңыз.</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, жаңа Growser құжатын жылдам жасау үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="2925454999967523701">"Құжат жасау" түймесі, жаңа Growser құжатын жылдам жасау үшін белсендіріңіз</translation>
+<translation id="8075736640322370409">Жаңа Growser парағын жылдам жасау</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, жаңа Growser парағын жылдам жасау үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="3150889484970506196">"Парақ жасау" түймесі, жаңа Growser парағын жылдам жасау үшін белсендіріңіз</translation>
+<translation id="6971439137020188025">Slides-да жаңа Growser презентациясын жылдам жасау</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Slides-да жаңа Growser презентациясын жылдам жасау үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="8768225988514678921">"Презентация жасау" түймесі, Slides-да жаңа Growser презентациясын жылдам жасау үшін белсендіріңіз</translation>
+<translation id="7582602800368606489">Google Calendar-да жылдам жаңа іс-шара жасау</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Google Calendar-да жылдам жаңа іс-шара жасау үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="2009942480257059311">"Іс-шара жасау" түймесі, Google Calendar-да жылдам жаңа іс-шара жасау үшін белсендіріңіз</translation>
+<translation id="1269516672602708785">Growser Sites-та жылдам жаңа сайт жасау</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Sites-та жылдам жаңа сайт жасау үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="3698629142018988477">"Сайт жасау" түймесі, Growser Sites-та жылдам жаңа сайт жасау үшін белсендіріңіз</translation>
+<translation id="4854853140771946034">Growser Keep-те жылдам жаңа ескертпе жасау</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Keep-те жылдам жаңа ескертпе жасау үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="5488590678320979185">"Ескертпе жасау" түймесі, Growser Keep-те жылдам жаңа ескертпе жасау үшін белсендіріңіз</translation>
+<translation id="7734285854693414638">Growser Forms-да жылдам жаңа үлгі жасау</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Forms-да жылдам жаңа үлгі жасау үшін Tab, cодан кейін Enter пернесін басыңыз.</translation>
+<translation id="573555826359077410">"Үлгі жасау" түймесі, Growser Forms-да жылдам жаңа үлгі жасау үшін белсендіріңіз</translation>
+<translation id="7910437794853634516">Growser кеңестерін көру</translation>
+<translation id="3521214483675189046">Growser функциялары туралы білу</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser функциялары туралы білу үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="4260829339448158187">"Growser кеңестерін көру" түймесі, Growser функциялары туралы білу үшін белсендіріңіз</translation>
+<translation id="8694710517222056538">Growser аккаунтын басқару</translation>
+<translation id="6587259514551810029">Growser аккаунтыңыздағы ақпаратты, құпиялықты және қауіпсіздікті басқару</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser аккаунтыңыздағы ақпаратты, құпиялықты және қауіпсіздікті басқару үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="7027078594246193839">Growser аккаунтын басқару, Growser аккаунтыңыздағы ақпаратты, құпиялықты және қауіпсіздікті басқару үшін белсендіріңіз</translation>
+<translation id="643051589346665201">Growser құпия сөзін өзгерту</translation>
+<translation id="7075427536109560520">Growser аккаунтыңыздың құпия сөзін ауыстыру</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser аккаунтыңыздың құпия сөзін өзгерту үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="3236176349246489091">"Growser құпия сөзін өзгерту" түймесі, Growser аккаунтыңыздың құпия сөзін өзгерту үшін белсендіріңіз</translation>
+<translation id="4573751006789325585">Growser Dino ойынын ойнау</translation>
+<translation id="1461337831834704527">Growser-да Dino Run ойынын ойнау</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser-да Dino Run ойынын ойнау үшін Tab, сосын Enter пернесін басыңыз.</translation>
+<translation id="3493625910132223088">"Growser Dino ойынын ойнау" түймесі, Growser-да Dino Run ойынын ойнау үшін белсендіріңіз</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser аккаунтында құрылғыңызды табу үшін Tab, сосын Enter пернесін басыңыз.</translation>
+<translation id="8109063930676038426">"Find My Device" түймесі, Growser аккаунтында құрылғыны табу бөліміне кіру үшін белсендіріңіз</translation>
+<translation id="163710751542270335">Growser аккаунтының құпиялық параметрлерін басқару</translation>
+<translation id="3269729253658419180">Growser аккаунтынан Growser құпиялық параметрлерін басқару</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser аккаунтының құпиялық параметрлерін басқару үшін Tab, сосын Enter пернесін басыңыз.</translation>
+<translation id="970931323129831346">"Growser құпиялық параметрлерін басқару" түймесі, Growser аккаунтының құпиялық параметрлеріне кіру үшін белсендіріңіз</translation>
+<translation id="498856326289655361">Growser параметрлерін басқару</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser параметрлерін басқару үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="1592236556980370094">"Growser параметрлерін басқару" түймесі, Growser параметрлеріне кіру үшін белсендіріңіз</translation>
+<translation id="2480781891721036554">Growser браузерінде жүктеп алған файлдарды басқару</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser браузеріндегі жүктеп алған файлдарыңызды басқару үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="8786654106588913377">"Growser браузерінде жүктеп алынған файлдарды басқару" түймесі, Growser браузерінде жүктеп алған файлдарды басқару үшін белсендіріңіз</translation>
+<translation id="8320175841857324841">Growser тарихын көру</translation>
+<translation id="179012966915448796">Growser параметрлерінен браузерді қолдану тарихын көру және басқару</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser браузерін қолдану тарихын көру үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="7891862848641775440">"Growser тарихын көру" түймесі, Growser параметрлерінде браузерді қолдану тарихын көру және басқару үшін белсендіріңіз</translation>
+<translation id="1545741848376005386">Growser параметрлерінен арнайы мүмкіндіктер құралдарын жекелендіру</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser параметрлерінен арнайы мүмкіндіктер құралдарын жекелендіру үшін Tab, сосын Enter пернесін басыңыз.</translation>
+<translation id="1350935235605927980">"Арнайы мүмкіндіктердің параметрлерін басқару" түймесі, Growser параметрлерінде арнайы мүмкіндіктер құралдарын жекелендіру үшін белсендіріңіз</translation>
+<translation id="1937771495497081508">Growser браузеріндегі қаріп өлшемдері мен түрлерін реттеу</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser браузеріндегі қаріп өлшемдері мен түрлерін реттеу үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="8183964669401154956">"Growser-дағы қаріптерді реттеу" түймесі, Growser браузеріндегі қаріп өлшемдері мен түрлерін реттеу үшін белсендіріңіз</translation>
+<translation id="6868193750403948178">Growser-ды реттеу</translation>
+<translation id="2746936074954064976">"Growser-ды реттеу" түймесі, браузер көрінісін реттеу үшін белсендіріңіз</translation>
+<translation id="8223358973996562559">Growser-ды әдепкі браузер етіп орнату</translation>
+<translation id="113548419005571036">Growser-ды жүйенің әдепкі браузері етіп орнату</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-ды жүйенің әдепкі браузері етіп орнату үшін қойындыны басып, Enter пернесін басыңыз</translation>
+<translation id="6783715802269207395">"Growser-ды әдепкі браузер етіп орнату" түймесі, Growser-ды жүйенің әдепкі браузері етіп орнату үшін белсендіріңіз</translation>
+<translation id="8076157978023662935">Growser браузерін әдепкі ретінде орнату</translation>
+<translation id="7026203586041411100">Growser-ды iOS параметрлерінде жүйенің әдепкі браузері етіп орнату</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>. iOS параметрлерінде Growser-ды жүйенің әдепкі браузері етіп орнату үшін Tab, кейін Enter пернесін басыңыз.</translation>
+<translation id="29533193241299316">Growser-ды әдепкі браузер түймесі етіп орнату: Growser-ды iOS параметрлерінде жүйенің әдепкі браузері етіп орнату үшін Enter пернесін басыңыз.</translation>
+<translation id="2461514655528532981">Growser қауіпсіздік шарасын іске қосу</translation>
+<translation id="9113214967104134276">Growser тарихын көру</translation>
+<translation id="943522416815463637">Growser Dino ойынын ойнау</translation>
+<translation id="7602868996817972616">Growser-дан осы бет туралы сұрау</translation>
+<translation id="161612500287664753">Google Search-тен осы бет жайында сұрау</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser-дан осы бет туралы сұрау үшін Enter пернесін басыңыз</translation>
+<translation id="5630981295558454585">"Growser-дан осы бет туралы сұрау" түймесі. Growser-дан осы бет туралы сұрау үшін іске қосыңыз</translation>
+<translation id="6019118530636932154">Growser Apps Script</translation>
+<translation id="6437647869369934905">Growser Drawings</translation>
+<translation id="1875512691959384712">Growser Forms</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser Sites</translation>
+<translation id="1521655867290435174">Growser Sheets</translation>
+<translation id="467809019005607715">Growser Slides</translation>
+<translation id="7510585715716175915">Growser тарихынан сәйкес сұрауларды көру үшін шарлауды жалғастыру</translation>
+<translation id="2895764667636768344">"<ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>". Іздеуді жалғастырып, Growser тарихынан сәйкес сұрауларды көру үшін Tab, сосын Enter пернесін басыңыз.</translation>
+<translation id="3714978095030396658">"Шарлауды жалғастыру" түймесі. Шарлауды жалғастырып, Growser тарихынан сәйкес сұрауларды көру үшін Enter пернесін басыңыз.</translation>
+<translation id="9041241404793255081">Рөл: Growser кеңесі. Арнайы мүмкіндіктер белгішесі: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>. Growser кеңесін жабу үшін Tab, содан кейін Enter пернесін басыңыз.</translation>
+<translation id="7432463754469271865">Growser кеңесін жабу түймесі. Жабу үшін Enter пернесін басыңыз. <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Growser кеңесін жабу түймесі. Жабу үшін Enter пернесін басыңыз.</translation>
+<translation id="7571813784389228510">Growser AI режимі</translation>
+<translation id="3415471717466570460">Іздеу сұрауларыңыз, ең дұрыс сәйкестіктер және олардың бет контенті Growser-ға жіберіледі. Оларды тексерушілер осы функцияны жақсарту үшін көруі мүмкін. Бұл — эксперименттік функция және кейде қате жіберуі мүмкін.</translation>
+<translation id="9103366036378878818">Growser кеңесінің сілтемесі. <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/> сілтемесін ашу үшін Enter пернесін басыңыз</translation>
+<translation id="2097698842685899280">Brave сайттарда жиі кездесетін фишинг, зиянды бағдарлама немесе алаяқтықпен байланысты мәліметтерді анықтады. <ph name="BEGIN_LINK"/>Толық ақпарат<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Growser бұл режимде беттің оқылуын жеңілдетті. Growser бастапқы бетті қауіпсіз байланыс арқылы алды.</translation>
+<translation id="542284143784575620">Growser бұл режимде беттің оқылуын жеңілдетті. Growser браузерінде бастапқы бет қорғалмаған байланыс арқылы алынды.</translation>
+<translation id="5826875044227298275">Жаңа ғана құпия сөзіңізді жалған сайтқа енгіздіңіз. Аккаунттарыңызды қорғау үшін Growser сақталған құпия сөздеріңізді тексеруді ұсынады.</translation>
+<translation id="4397030659892816613">Камераны пайдалану үшін <ph name="LINK"/> бөлімінде Growser-ға рұқсат беріңіз.</translation>
+<translation id="8251369644700086563">Микрофонды пайдалану үшін <ph name="LINK"/> бөлімінде Growser-ға рұқсат беріңіз.</translation>
+<translation id="6520686276106691991">Локацияны пайдалану үшін <ph name="LINK"/> бөлімінде Growser-ға рұқсат беріңіз.</translation>
+<translation id="1612024742222359811">Буферді пайдалану үшін <ph name="LINK"/> бөлімінде Growser-ға рұқсат беріңіз.</translation>
+<translation id="3620727327079734151">Growser аккаунтыңызға кіре алмай қалуыңыз мүмкін. Growser құпия сөзді қазір өзгертуге кеңес береді. Сонан соң аккаунтқа кіру сұралады.</translation>
+<translation id="7891575721440765670">Growser браузері Growser аккаунтыңызды қорғауға және құпия сөзіңізді өзгертуге көмектеседі.</translation>
+<translation id="1362419187647259443">Жаңа ғана құпия сөзіңізді алаяқтық сайтқа енгіздіңіз. Growser көмектесе алады. Құпия сөзді өзгертіп, Growser-ға аккаунтқа төніп тұрған қауіп туралы хабарлау үшін "Аккаунтты қорғау" түймесін басыңыз.</translation>
+<translation id="4067282726741467091">Ұйымның аккаунтына кіре алмай қалуыңыз мүмкін немесе жеке деректеріңіз ұрлануы ықтимал. Growser құпия сөзіңізді қазір өзгертуге кеңес береді.</translation>
+<translation id="7872399623676350476"><ph name="ORG_NAME"/> аккаунтыңызға кіру мүмкіндігін жоғалтып алуыңыз немесе жеке мәліметтеріңізді беріп қоюыңыз мүмкін. Growser құпия сөзіңізді дереу өзгертуге кеңес береді.</translation>
+<translation id="5938866385061293322">Бұл ақпарат Trustpilot, ScamAdviser, Growser және т.б. сияқты тәуелсіз пікірлер веб-сайттарынан алынған. Қорытындылар AI арқылы жасалған.</translation>
+<translation id="4452328064229197696">Сіз жаңа ғана қолданған құпия сөз деректердің қолды болуы салдарынан жария етілді. Аккаунттарыңызды қорғау үшін Growser Құпия сөздер реттегіші сақталған құпия сөздеріңізді тексеруді ұсынады.</translation>
+<translation id="7646681339175747202">Сіз жаңа ғана қолданған құпия сөз деректердің қолды болуы салдарынан жария етілді. Growser Password Manager құпия сөзіңізді дереу өзгертуді ұсынады.</translation>
+<translation id="5997247540087773573">Сіз жаңа ғана қолданған құпия сөз деректердің қолды болуы салдарынан жария етілді. Аккаунттарыңызды қорғау үшін Growser Password Manager оны дереу өзгертуді және сақталған құпия сөздеріңізді тексеруді ұсынады.</translation>
+<translation id="6722165747660324971">Құпия сөзді пайдаланған кезде, ол онлайн жарияланған болса, Growser сізге ескертеді. Тексеру кезінде құпия сөздер мен пайдаланушылар аты шифрланады. Сондықтан оларды ешкім, тіпті Growser да оқи алмайды.</translation>
+<translation id="1485314135034164137">Growser құпия сөздері</translation>
+<translation id="7558556509649858677">Кіру кілті • Growser профиліңіз</translation>
+<translation id="950926967802086924">Кіру кілті • Growser Password Manager</translation>
+<translation id="6338645927051849741">Құпия сөз • Growser Password Manager</translation>
+<translation id="131993612023623286">Growser <ph name="APP_NAME"/> қолданбасында құпия сөзіңізді толтырғысы келеді.</translation>
+<translation id="1833199389909527220">Growser құпия сөздерді толтыру үшін Windows Hello технологиясын қосқысы келеді.</translation>
+<translation id="643007953296382271">Growser құпия сөздерді толтыру үшін Windows Hello технологиясын өшіргісі келеді.</translation>
+<translation id="2739032725916431090">Growser аккаунтыңызға сақтаңыз</translation>
+<translation id="2920528063654705391">Growser аккаунтыңызда сақталған құпия сөздер мен басқа да деректерді пайдалану үшін жеке басыңызды растаңыз.</translation>
+<translation id="3795624560191557077">Баршаға ашық қолды болған деректерден табылған құпия сөзіңізді жақында өзгерттіңіз. Қиындық туындаса, Growser Password Manager аккаунтқа кіруге көмектесе алады.</translation>
+<translation id="5748742097310495951">Growser браузеріндегі және Growser аккаунтындағы (<ph name="ACCOUNT_EMAIL"/>) карталар мен мекенжайлар. Оларды <ph name="BEGIN_LINK"/>Параметрлер<ph name="END_LINK"/> ішінде басқаруыңызға болады.</translation>
+<translation id="6827399997598211909">Карталар мен мекенжайлар Growser браузерінен алынған. Оларды <ph name="BEGIN_LINK"/>Параметрлер<ph name="END_LINK"/> бөлімінде басқара аласыз.</translation>
+<translation id="7934414805353235750"><ph name="URL"/> қорғалған контентті ойнатуға рұқсат сұрады. Growser құрылғыңыздың идентификаторын тексереді.</translation>
+<translation id="7142561893113115357">Бұл компьютерді кәсіпорын басқармайтындықтан, саясат тек Growser Webstore дүкенінде орналасқан кеңейтімдерді автоматты түрде орната алады. Growser Webstore жаңартылған нұсқасының URL мекенжайы: "<ph name="CWS_UPDATE_URL"/>".</translation>
+<translation id="6272383483618007430">Growser Update</translation>
+<translation id="885730110891505394">Growser-мен бөлісу</translation>
+<translation id="2867186026859663748">Бұл саясатты Growser профилі деңгейінде орнатуға болмайды және ол еленбейді.</translation>
+<translation id="277370491433906876">Пайдаланушы үлестес тұлға болмағандықтан, бұл саясат еленбейді. Бұл саясат қолданылуы үшін, Growser браузері мен профилі сол ұйымдағы әкімші консолі арқылы басқарылуы қажет.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core браузер саясаттарын бұлттан конфигурациялауға арналған орталықтандырылған құралды ұсынады.</translation>
+<translation id="4553855485042734119">Brave-ның бұл данасы қолмен орнатылған пәрмен жолы жалаушаларымен орындалып жатыр. Пәрмен жолының жалаушалары кез келген уақытта өзгеруі мүмкін екенін және оларға қолдау көрсетілмейтінін ескеріңіз.</translation>
+<translation id="3858407183625528544">Қауіпсіздікті сақтау мақсатында ұйымыңыз Growser-да құпия сөздерді қайта пайдалануға рұқсат бермейді. Growser-дағы құпия сөздер пайдаланушының құпиялығын қорғау үшін шифрланған.</translation>
+<translation id="6376948191860056592">Growser-ның құпия сөздерді қорғау жолы туралы ақпарат</translation>
+<translation id="59755378055907482">Growser басқа сайттарда пайдаланылған құпия сөзіңізді қайта орнатуды ұсынады.</translation>
+<translation id="2025231306371961337">Growser басқа сайттарда пайдаланылған <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> құпия сөзін қайта орнатуды ұсынады.</translation>
+<translation id="3990414676738824170">Growser-дағы іздеу жүйесі туралы толық ақпарат</translation>
+<translation id="8152737631160961249">Growser-дағы іздеу жүйеңіз</translation>
+<translation id="5178006823023208130">Аймағыңыздағы заңға байланысты Growser сізден әдепкі іздеу жүйесін таңдауды сұрайды. Бұл іздеу жүйелері аймағыңызда танымал және кездейсоқ ретпен көрсетілген.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Әдепкі іздеу жүйесі интернеттен іздеуге мүмкіндік береді және Growser функцияларының (мысалы, мекенжай жолағынан және веб-беттердегі кескіндерден іздеу) жұмысын қамтамасыз етеді.<ph name="END_BOLD"/> Іздеу жүйесі қолдау көрсетпесе, функция қолжетімді болмауы мүмкін.</translation>
+<translation id="652920213589772275">Іздеу жүйесін Growser параметрлерінен кез келген уақытта өзгерте аласыз.</translation>
+<translation id="5113257522679527347">Іздеу жүйесін Brave параметрлерінен кез келген уақытта өзгерте аласыз. Қажетті іздеу жүйесін көрмесеңіз, іздеуді оның сайтынан орындауға болады. Оны Brave параметрлерінде соңғы кірген іздеу жүйесі ретінде көресіз. Оны әдепкі іздеу жүйесі етіп орнатуға болады.</translation>
+<translation id="2493969470983483123">Қолданба Growser браузерінің осы сайтқа қауіпсіз қосылуын тоқтатады</translation>
+<translation id="463534029029027294">Қауіпсіз байланыс орнату үшін сағатыңыз дұрыс орнатылуы қажет. Себебі веб-сайттар өзін анықтау үшін пайдаланатын сертификаттар көрсетілген уақыт мерзімінде ғана жарамды. Құрылғыңыздың сағаты дұрыс емес болғандықтан, Growser бұл сертификаттарды растай алмайды.</translation>
+<translation id="6824867187541740495"><ph name="SITE"/> әдетте ақпаратыңызды қорғау үшін шифрлауды қолданады. Осы жолы Growser <ph name="SITE"/> сайтына қосылуға әрекет еткенде, веб-сайт әдеттен тыс және қате тіркелгі деректерін жіберді. Бұл жағдай қаскүнем <ph name="SITE"/> болып көрінгісі келгенде немесе Wi-Fi кіру экраны байланысқа кедергі болғанда пайда болуы мүмкін. Ақпаратыңыз қауіпсіз күйде, себебі Growser ешқандай дерек алмасу болмай тұрып байланысты үзді.</translation>
+<translation id="8465252529695749376">Қазір <ph name="SITE"/> сайтына кіру мүмкін емес, себебі веб-сайт Growser өңдей алмайтын шифрланған есептік деректерді жіберді. Желі қателері мен шабуылдары әдетте уақытша болғандықтан, бұл бет кейінірек жұмыс істеуі мүмкін.</translation>
+<translation id="7320808063012439368">Сіз кіргіңіз келген сайттағы шабуылдаушылар құпия сөздер, фотосуреттер, хабарлар немесе несиелік карта нөмірлері сияқты нәрселерді ұрлайтын не жоятын зиянды бағдарламалық құралды орнатуы мүмкін. Growser міндетті түрде қауіпсіздікке оралуды ұсынады. <ph name="BEGIN_LEARN_MORE_LINK"/>Бұл ескерту туралы толық ақпарат<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Growser-ның браузерді пайдалану кезінде қорғайтын ендірілген қауіпсіздік мүмкіндіктері бар. Солардың бірі — Google Safe Browsing. Ол сіз кіргіңіз келген сайтта <ph name="BEGIN_LINK"/>жақында бір зиянды бағдарламаны анықтады<ph name="END_LINK"/>.</translation>
+<translation id="1959001866257244765">Growser-ға <ph name="BEGIN_WHITEPAPER_LINK"/>кірген беттердің URL мекенжайларын, шектеулі жүйе ақпаратын және кейбір бет контентін<ph name="END_WHITEPAPER_LINK"/> жіберу арқылы барлық пайдаланушы үшін интернет қауіпсіздігін жақсартуға көмектесіңіз. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Құпиялық саясаты<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082">Growser-ның ең жоғары деңгейлі қауіпсіздігіне ие болу үшін <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>күшейтілген қорғанысты қосыңыз<ph name="END_ENHANCED_PROTECTION_LINK"/>.</translation>
+<translation id="9158927344907916875">Сіз кіргіңіз келген сайттағы шабуылдаушылар браузерді пайдалануға теріс әсер ететін зиянды бағдарламалық құралды алдап орнатқызуы (мысалы, негізгі бетті өзгерту немесе сіз кірген сайттарда қосымша жарнамалар көрсету арқылы) мүмкін. Growser зиянды әрекеттерден аулақ болу үшін міндетті түрде қауіпсіздікке оралуды ұсынады. <ph name="BEGIN_LEARN_MORE_LINK"/>Бұл ескерту туралы толық ақпарат<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Growser-ның браузерді пайдалану кезінде қорғайтын ендірілген қауіпсіздік мүмкіндіктері бар. Солардың бірі — Google Safe Browsing. Ол сіз кіргіңіз келген сайтта <ph name="BEGIN_LINK"/>жақында бір зиянды бағдарламалық құралды анықтады<ph name="END_LINK"/>.</translation>
+<translation id="6123391640338102428">Сіз кіргелі жатқан сайттағы шабуылдаушылар бағдарламалық құралды алдап орнатқызуы мүмкін немесе құпия сөздер, телефон не несиелік карта нөмірлері сияқты ақпаратты алдап алуы мүмкін. Growser міндетті түрде қауіпсіздікке оралуды ұсынады. <ph name="BEGIN_LEARN_MORE_LINK"/>Бұл ескерту туралы толық ақпарат<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Growser-ның браузерді пайдалану кезінде қорғайтын ендірілген қауіпсіздік мүмкіндіктері бар. Солардың бірі — Google Safe Browsing. Ол сіз кіргіңіз келген сайтта <ph name="BEGIN_LINK"/>жақында бір фишинг әрекетін анықтады<ph name="END_LINK"/>. Фишинг сайттары сізді басқа сайтпыз деп алдайды.<ph name="NEW_LINE"/>Әдетте қауіпсіз болатын сайттардың өзінде кейде шабуылдаушылар болуы мүмкін. Бұл қате болса және осы сайт қауіпті болмаса, <ph name="BEGIN_ERROR_LINK"/>бізге хабарлаңыз<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;1-қадам: порталға кіру&lt;/h4&gt;
+    &lt;p&gt;Кафе немесе әуежайдағы Wi-Fi желілеріне кіру үшін алдымен порталға кіруіңіз керек. Кіру парағын көру үшін &lt;code&gt;http://&lt;/code&gt; пайдаланатын бетке өтіңіз.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;&lt;code&gt;http://&lt;/code&gt; деп басталатын кез келген сайтқа өтіңіз, мысалы &lt;a href="http://example.com" target="_blank"&gt;http://example.com&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Ашылған кіру парағында интернетті пайдалану үшін кіріңіз.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;2-қадам: Бетті Жеке режимде ашу (тек компьютер)&lt;/h4&gt;
+    &lt;p&gt;Кірген бетіңізді Жеке терезеде ашыңыз.&lt;/p&gt;
+    &lt;p&gt;Егер бет ашылса, Growser кеңейтімі дұрыс жұмыс істемей жатыр. Қатені түзету үшін кеңейтімді өшіріңіз.&lt;/p&gt;
+    &lt;h4&gt;3-қадам: Операциялық жүйеңізді жаңартыңыз&lt;/h4&gt;
+    &lt;p&gt;Құрылғыңыздың жаңартылғанына көз жеткізіңіз.&lt;/p&gt;
+    &lt;h4&gt;4-қадам: Антивирусты уақытша өшіріңіз&lt;/h4&gt;
+    &lt;p&gt;Егер антивирус бағдарламалық құралы «HTTPS қорғау» немесе «HTTPS сканерлеу» мүмкіндіктерін қамтамасыз етсе, бұл қате пайда болуы мүмкін. Growser қауіпсіздігін қамтамасыз етуге антивирус кедергі келтіріп тұр.&lt;/p&gt;
+    &lt;p&gt;Мәселені шешу үшін антивирусты уақытша өшіріңіз. Егер бағдарламаны өшірген соң бет жұмыс істесе, қауіпсіз сайттарды қолданғанда осы бағдарламаны өшіріп қойыңыз.&lt;/p&gt;
+    &lt;p&gt;Ісіңіз аяқталған соң антивирус бағдарламасын қайта қосқаныңызға көз жеткізіңіз.&lt;/p&gt;
+    &lt;h4&gt;5-қадам: Қосымша көмек алыңыз&lt;/h4&gt;
+    &lt;p&gt;Егер әлі де қате көрініп тұрса, веб-сайт иесіне хабарласыңыз.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">"Компьютердегі бағдарламалық құрал Growser жүйесінің интернетке қауіпсіз қосылуына жол бермей тұр" (тек Windows компьютерлерінде)</translation>
+<translation id="5693013509590251567">Құрылғыңызға сіз немесе әлдекім орнатқан сертификатқа байланысты осы қате шығып тұрған болуы мүмкін. Бұл сертификат сенімді болып саналмайды, әдетте ол желідегі деректерді қадағалауға және ұстап қалуға пайдаланылады. Мұндай әрекеттерге құрылғы оқу орнында немесе жұмыста болған кезде рұқсат етіледі. Қалай болғанда да Growser мұндай сертификаттың болатынын ескертеді. Әрекетті қадағалау интернетке кіретін кез келген браузерде немесе қолданбада жүреді.</translation>
+<translation id="6319672966240656136">Бұл сайт блокталған күйі қалады, себебі Growser-дың күшейтілген қорғаныс бағдарламасы жұмыс істеп жатыр. <ph name="BEGIN_LEARN_MORE_LINK"/>Бұл ескерту туралы толық ақпарат<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">Әдетте бұл сайтқа қауіпсіз қосыласыз, бірақ Growser бұл жолы қауіпсіз байланысты пайдалана алмады. Шабуылдаушы желі байланысыңызды ұстап қалуға немесе өзгертуге әрекет жасауы мүмкін. <ph name="BEGIN_LEARN_MORE_LINK"/>Бұл ескерту туралы толық ақпарат<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">Әдетте сайттарға қауіпсіз қосыласыз, бірақ Growser бұл жолы қауіпсіз байланысты пайдалана алмады. Шабуылдаушы желі байланысыңызды ұстап қалуға немесе өзгертуге әрекет жасауы мүмкін. <ph name="BEGIN_LEARN_MORE_LINK"/>Бұл ескерту туралы толық ақпарат<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">Әдетте бұл сайтқа қауіпсіз қосыласыз, бірақ Growser бұл жолы қауіпсіз байланысты пайдалана алмады. Шабуылдаушы желі байланысыңызды ұстап қалуға немесе өзгертуге әрекет жасауы мүмкін. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">Әдетте сайттарға қауіпсіз қосыласыз, бірақ Growser бұл жолы қауіпсіз байланысты пайдалана алмады. Шабуылдаушы желі байланысыңызды ұстап қалуға немесе өзгертуге әрекет жасауы мүмкін. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Бұл сайт HTTPS протоколын қолдамайды, сондықтан осы ескертуді көріп тұрсыз және сіз Growser күшейтілген қорғаныс бағдарламасындасыз. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave сіз кіргіңіз келген веб-сайтты белгіледі. 1 минуттық сауалнамаға жауап беру арқылы бізге осы ескертулерді жақсартуға көмектесіңіз.</translation>
+<translation id="3665741528710985669"><ph name="DEVICE_NAME"/> құрылғысындағы Brave-ға жіберілді.</translation>
+<translation id="2756090547781225493"><ph name="DEVICE_NAME"/> құрылғысындағы Brave-ға жіберілді • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463"><ph name="DEVICE_NAME"/> құрылғысындағы Growser-ға жіберіліп қойған.</translation>
+<translation id="2665815858706570232">Қосылған кезде, Growser сәйкестігі жоғары жауаптар алуға көмектесу үшін осы терезедегі сәйкес қойындыларды бөліседі.</translation>
+<translation id="4585120639592593231">Growser жекелендірілген жауаптар алу үшін сұрағыңызға қатысты болуы мүмкін ашық қойындылардың бет контенті мен URL мекенжайларын Growser-ға автоматты түрде жібереді. Growser сіз жұмыс істеп жатқан терезедегі қойындыларды ғана бөліседі.</translation>
+<translation id="5000497292978544380">Google Search AI режимі</translation>
+<translation id="4946528282746936957">Growser жақсырақ жауаптар алу үшін әрбір жаңа тізбекте сәйкес ашық қойындыларды бөліседі. Толық ақпарат:</translation>
+<translation id="8988391141035210442">Бұл сервер өзінің <ph name="DOMAIN"/> екенін дәлелдей алмады, себебі ол интернет трафигін шифрлау үшін Growser сенімді деп санамайтын қауіпсіздік сертификатын немесе жүйе конфигурациясын пайдаланып жатыр. Мұның себебі конфигурацияның қате болуынан не шабуылдаушының қосылымға тосқауыл жасауынан болуы мүмкін. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Сертификатты көру<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">YouTube-ті әрі қарай пайдалану үшін Growser аккаунтыңызға кіріңіз.</translation>
+<translation id="2269854356696928455">Бұл контентті көруге рұқсат сұрау үшін Growser аккаунтыңызды әрі қарай пайдалана беріңіз.</translation>
+<translation id="5611620894475877872">Синхрондалған құпия сөздерді Growser аккаунтыңызбен шифрлау</translation>
+<translation id="7297228218361240128">Көріп отырған беттердегі ақпаратты Google Wallet-ке сақтаңыз</translation>
+<translation id="1829026591231985685">ақпаратты параметрлердегі Google Wallet-ке сақтау</translation>
+<translation id="7927046851848613453">Толтыратын үлгілерді ғана емес, сіз көрген беттердегі билеттерді, іс-шараларды және басқа ақпаратты сақтаңыз. Содан кейін іс-шара билеттері мен тұрақты клиент карталары сияқты билеттерге жылдам қол жеткізіңіз. Сақталған ақпарат құрылғыларыңызда және Growser өнімдерінде көрсетілуі мүмкін.</translation>
+<translation id="4080668349181235831">Ұсыныстарды қалыптастыру және бұл функцияны жақсарту үшін сіз кірген сайттың URL мекенжайы мен толық бет контенті Growser-ға жіберіледі. <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/> туралы толық ақпарат алыңыз.</translation>
+<translation id="5038265118346577744">Қойындылар топтарын бөлісу, оларға қосылу және идеялар төңірегінде бірлесіп жұмыс істеу үшін Growser-ға кіріңіз.</translation>
+<translation id="3109033858283726964">Growser аккаунтына кіріңіз</translation>
+<translation id="1823139539047733938">Growser ескірген</translation>
+<translation id="4837402451637115574">Қойындылар топтарын бөлісу үшін Growser-ды жаңартыңыз.</translation>
+<translation id="3835090069800247534">Бұл қойындылар тобына қосылу үшін Growser-ды жаңартыңыз.</translation>
+<translation id="5796903668018420114">Ортақ қойындылар топтарын пайдалануды жалғастыру үшін Growser-ды жаңартыңыз.</translation>
+<translation id="7224231921984484941">Қойындылар топтарын бөлісу, қосылу және бірлесіп жұмыс істеу үшін параметрлерді ашып, "Growser-ға кіруге рұқсат ету" параметрін қосыңыз.</translation>
+<translation id="64301400193488735">Қойындылар топтарын бөлісу немесе оларға қосылу үшін Growser-ға кіруге рұқсатыңыз болуы керек.</translation>
+<translation id="6517371327636513767">Қойындыларды бөлісіп, басқалармен бірлесіп жұмыс істеу үшін Growser-ға кіре алатын болуыңыз қажет.</translation>
+<translation id="8040715633918382311">Ұйымыңыз Growser аккаунтына сақтауға шектеу қойса, қойындылар топтарын бөлісу не оларға қосылу мүмкін болмайды.</translation>
+<translation id="5748088712770284646">Ұйымыңыз Growser аккаунтына сақтауға шектеу қойса, қойындыларды бөлісу не басқалармен бірлесіп жұмыс істеу мүмкін болмайды.</translation>
+<translation id="1973662400109107505">Ортақ қойындылар топтарын пайдалануды жалғастыру үшін Growser-ды жаңартыңыз</translation>
+<translation id="540513565870577298">Ұсынысты таңдасаңыз немесе елемесеңіз, Growser сізге тек қатысты контент көрсету үшін бейімделеді.</translation>
+<translation id="6381429959346598968">Growser бет атаулары мен URL мекенжайларын бұлттағы құпия кеңістікте өңдейді.</translation>
+<translation id="3475470536954895815">Growser бет атаулары мен URL мекенжайларын бұлтта өңдейді.</translation>
+<translation id="583085621576779299">Ұсыныстарды өшірсеңіз де, қойындыларыңыздың бет атауы мен URL мекенжайлары басқа Growser функциялары үшін өңделуі мүмкін. Браузердің осы деректерді пайдалану рұқсатын келесі бөлімде реттеуге болады:</translation>
+<translation id="913846191326613072">Қойындыларды бөліскен кезде, олардың контенті мен URL мекенжайлары Growser-ға жіберіледі.</translation>
+<translation id="4827675678516992122">Жалғанбады</translation>
+<translation id="6749473226660745022">Фотосуреттер</translation>
+<translation id="2366554533468315977">Бұл опцияға арналған интернеттегі баға тарихы</translation>
+<translation id="5199729219167945352">Эксперименттер</translation>
+<translation id="8413126021676339697">Толық журналды көрсету</translation>
+<translation id="6302661287897119265">Сүзгі</translation>
+<translation id="2956070106555335453">Қысқаша мазмұндама</translation>
+<translation id="4759238208242260848">Жүктелімдер</translation>
+<translation id="7366909168761621528">Шолу деректері</translation>
+<translation id="1898804291554630487">Осы бет жайында сұрақ қойыңыз</translation>
+<translation id="6231782223312638214">Ұсынылған</translation>
 </translationbundle>

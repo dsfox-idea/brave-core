@@ -828,4 +828,500 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="2034072705932785495">Growser skal have tilladelse til at bruge dit kamera på dette website</translation>
 <translation id="7877212753140190672">Stil spørgsmål om dette billede</translation>
 <translation id="4831743161813926460">Growser skal have tilladelse til at bruge dit kamera og din mikrofon på dette website</translation>
+<translation id="8205521782011095964">Vil du genstarte Growser?</translation>
+<translation id="7037156181243335421">Om Growser</translation>
+<translation id="7515599367379971106">Få hjælp til Growser</translation>
+<translation id="8416991531338761401">Growser opdateres</translation>
+<translation id="8770857967909676107">Opdaterer Growser (<ph name="PROGRESS_PERCENT"/>)</translation>
+<translation id="346757664779831044">Næsten opdateret. Genstart Growser for at afslutte opdateringen.</translation>
+<translation id="2650508013505165205">Growser er opdateret</translation>
+<translation id="3200946347371759843">Senere kan Growser spørge, om du vil bruge gemte oplysninger til automatisk at udfylde formularer</translation>
+<translation id="7243338164717709748">Growser er din standardbrowser</translation>
+<translation id="7277679420564469675">Tak, fordi du har valgt Growser som din standardbrowser.</translation>
+<translation id="35923942544154783">Gør Growser til din standardbrowser</translation>
+<translation id="994633498366956162">Du kan bruge Growser, hver gang du klikker på links i beskeder, dokumenter og andre apps</translation>
+<translation id="7288435464896223584">Gør Growser til standardbrowser, og fastgør den til proceslinjen</translation>
+<translation id="7461989139354277116">Du kan bruge Growser, hver gang du klikker på links i beskeder, dokumenter og andre apps. Den fastgøres også til proceslinjen.</translation>
+<translation id="6431627979142927047">Growser kan ikke fastlægge eller angive standardbrowseren</translation>
+<translation id="7308866255223104829">Dette er en sekundær installation af Growser, og den kan ikke gøres til din standardbrowser.</translation>
+<translation id="4504082803766914072">Growser forudindlæser sider, du sandsynligvis vil besøge, så disse sider indlæses hurtigere, når du besøger dem</translation>
+<translation id="3401428775806957501">Growser forudindlæser endnu flere sider, som du sandsynligvis vil besøge, så de indlæses hurtigere, når du besøger dem</translation>
+<translation id="8141887178647215353">Når et website anmoder om at forudindlæse links privat på websitets side, anvender Growser Braves servere. På denne måde skjules din identitet fra det forudindlæste website, men Growser registrerer, hvilke websites der forudindlæses.</translation>
+<translation id="1271058958147950277">Hvis du tillader cookies, kan Growser bruge dem under forudindlæsning</translation>
+<translation id="5234814558013903655">Growser sender den tekst, du skriver i tekstfelter, til Growser for at rette stavefejl</translation>
+<translation id="8726113584675530379">Åbn Growser igen for at anvende ændringerne</translation>
+<translation id="4460646088962270578">Tillad login via Growser</translation>
+<translation id="8580164386690167203">Når du deaktiverer denne indstilling, kan du logge ind på Growser-websites som f.eks. Gmail uden at logge ind i Growser</translation>
+<translation id="6063118066268728021">Viser meddelelser om at logge ind i Growser</translation>
+<translation id="8515482144762238082">Åbn PDF-filer i Growser</translation>
+<translation id="7829076036652026699">Giv Growser adgang i <ph name="BEGIN_LINK"/>systemindstillingerne<ph name="END_LINK"/> for at bruge dit kamera</translation>
+<translation id="3655976315179790904">Giv Growser adgang i <ph name="BEGIN_LINK"/>systemindstillingerne<ph name="END_LINK"/> for at bruge din mikrofon</translation>
+<translation id="253855664515325912">Giv Growser adgang i <ph name="BEGIN_LINK"/>systemindstillingerne<ph name="END_LINK"/> for at bruge din lokation</translation>
+<translation id="4271865901183602712">Websites fungerer sandsynligvis som forventet. Du logges ud af de fleste websites, når du lukker alle Growser-vinduer, med undtagelse af din Growser-konto, hvis du er logget ind i Growser.</translation>
+<translation id="5557082829776963235">Slet altid websitedata fra din enhed, når du lukker Growser</translation>
+<translation id="9207580816899273196">Gennemgå vigtige privatlivs- og sikkerhedsindstillinger i Growser</translation>
+<translation id="379655406321095090">Webadresser tjekkes i forhold til en liste over usikre websites, der er gemt i Growser</translation>
+<translation id="8275128723495316330">Hvis et website forsøger at stjæle din adgangskode, eller hvis du downloader en skadelig fil, sender Growser muligvis også webadresser, bl.a. mindre mængder sideindhold, til Beskyttet browsing</translation>
+<translation id="3851725041229117316">Vælg, om du vil inkludere Growser-historikken for at få mere personligt tilpassede oplevelser i Braves tjenester</translation>
+<translation id="2532521073042432089">Hvis du også gemmer dine bogmærker på din Growser-konto, kan du holde øje med produktpriser i Growser og få besked, når prisen falder</translation>
+<translation id="5506213471123571520">Hvis du også deler Growser-brugsrapporter, omfatter de pågældende rapporter de webadresser, du besøger</translation>
+<translation id="8667163300845015983">Du kan beskytte dine data ved at lade Growser fjerne tilladelser fra websites, du ikke har besøgt for nylig. Dette forhindrer ikke notifikationer.</translation>
+<translation id="3741049178292606172">Du kan beskytte dine data ved at lade Growser fjerne tilladelser fra websites, du ikke har besøgt for nylig.</translation>
+<translation id="7897676437903604219">Beskytter dig i Growser og kan bruges til at forbedre din sikkerhed i andre Growser-apps, når du er logget ind.</translation>
+<translation id="1436737925236366970">Tjekker webadresser ift. en liste over usikre websites, der er gemt i Growser. Hvis et website forsøger at stjæle din adgangskode, eller hvis du downloader en skadelig fil, sender Growser muligvis også webadresser og bl.a. mindre mængder sideindhold til Beskyttet browsing.</translation>
+<translation id="26820592415134595">Advarer dig om skadelige websites – også websites, som Growser ikke tidligere har kendt til – ved at analysere flere data fra websites end Standardbeskyttelse. Du kan vælge at springe Growser-advarsler over.</translation>
+<translation id="2596255110055314857">Se, <ph name="BEGIN_LINK"/>hvordan Growser beskytter dine data<ph name="END_LINK"/></translation>
+<translation id="1424526236256834880">Gør det sværere for brugere med adgang til din internettrafik at se, hvilke websites du besøger. Growser anvender en sikker forbindelse til at slå et websites IP-adresse op i domænenavnesystemet (DNS, Domain Name System).</translation>
+<translation id="5642661650787602526">Denne handling sletter ét element på denne enhed. Hvis du senere vil hente dine data igen, skal du logge ind på Growser som <ph name="USER_EMAIL"/>.</translation>
+<translation id="3768734606957734727">Denne handling sletter <ph name="ITEMS_COUNT"/> elementer på denne enhed. Hvis du senere vil hente dine data igen, skal du logge ind på Growser som <ph name="USER_EMAIL"/>.</translation>
+<translation id="6299784287136192533">Denne handling sletter dine browserdata på denne enhed. Hvis du senere vil hente dine data igen, skal du logge ind på Growser som <ph name="USER_EMAIL"/>.</translation>
+<translation id="2755385414880971807">Tilpas din Growser-profil</translation>
+<translation id="944044386485012271">Giv din Growser-profil et navn</translation>
+<translation id="7600637573105809724">Synkroniser og personligt tilpas Growser på alle dine enheder</translation>
+<translation id="5785325624181446291">For at kunne se dine adgangskoder m.m. på alle dine enheder skal du logge ind på Growser</translation>
+<translation id="1565826711257446701">For at kunne se dine adgangskoder m.m. på alle dine enheder skal du logge ind i Growser</translation>
+<translation id="532235697976793028">Dit Growser</translation>
+<translation id="5558883390084503315">Log ind i Growser, når du logger ind i andre Growser-tjenester</translation>
+<translation id="1251633817912319480">Når du logger ind i Growser-tjenester som f.eks. Gmail eller YouTube med <ph name="USER_EMAIL"/>, kan du automatisk logge ind i Growser med den samme konto</translation>
+<translation id="3307078631581490570">Tilpas Growser</translation>
+<translation id="2351593629310703051">Som et ekstra sikkerhedsniveau krypterer Growser dine data.</translation>
+<translation id="1259388744073810191">Vil du logge ud af Growser?</translation>
+<translation id="9169221857116438752">Når du skriver noget i adresselinjen eller søgefeltet, sender Growser de indtastede værdier til din primære søgemaskine for at få bedre forslag. Dette er slået fra i Privat-tilstand.</translation>
+<translation id="4957232603755077331">Når du skriver i adresselinjen eller søgefeltet, sender Growser det, du skriver, til din organisations søge-, AI- og agentværktøjer for at få forslag.</translation>
+<translation id="8036772746721690521">Medtag Growser i Web- og appaktivitet for at få personlig tilpasning</translation>
+<translation id="3451707486972433991">For at få personlig tilpasning og andre funktioner skal du medtage Growser i Web- og appaktivitet og tilknyttede Growser-tjenester</translation>
+<translation id="8047912236350375816">Tilknyt Growser og andre Growser-tjenester med henblik på personlig tilpasning og andre formål</translation>
+<translation id="6427980796643211404">Angiv din adgangssætning for at bruge og gemme Growser-data på din Growser-konto</translation>
+<translation id="3428609694125857206">Verificer din identitet for at bruge og gemme Growser-data på din Growser-konto</translation>
+<translation id="1665909624294813568">For at bruge og gemme Growser-data på din Growser-konto skal du opdatere Growser</translation>
+<translation id="2387112365181977568">Verificer din identitet for at bruge og gemme Growser-data på din konto, <ph name="ACCOUNT_EMAIL"/></translation>
+<translation id="7683515834168183549">Angiv din adgangssætning for at bruge og gemme Growser-data på din konto, <ph name="USER_EMAIL"/></translation>
+<translation id="5149870313087650519">Log ud af Growser</translation>
+<translation id="5711577032890967039">Growser-data på din konto</translation>
+<translation id="8654124943375331353">Brug din <ph name="BEGIN_LINK"/>egen adgangssætning<ph name="END_LINK"/> til at kryptere alle Growser-data på din Growser-konto. Betalingsmetoder og adresser fra Google Pay krypteres ikke. Browserhistorik fra Growser synkroniseres ikke.</translation>
+<translation id="7780172332158033724">Kun personer med din adgangssætning kan læse dine krypterede data. Adgangssætningen bliver ikke sendt til eller gemt af Growser. Hvis du glemmer din adgangssætning eller vil ændre denne indstilling, skal du <ph name="BEGIN_LINK"/>slette Growser-dataene på din konto<ph name="END_LINK"/>.</translation>
+<translation id="2686650186700338357">Hvis du glemmer din adgangssætning eller vil ændre denne indstilling, skal du <ph name="BEGIN_LINK"/>slette Growser-dataene på din konto<ph name="END_LINK"/></translation>
+<translation id="1809277674049831383">Growser frigør hukommelse fra inaktive faner. Dette tildeler aktive faner og andre apps flere computerressourcer og gør Growser hurtig. Dine inaktive faner bliver automatisk aktive igen, når du vender tilbage til dem. <ph name="BEGIN_LINK"/>Få flere oplysninger om Hukommelsessparefunktion<ph name="END_LINK"/></translation>
+<translation id="2291585760853183200">Growser sparer på batteriet ved at begrænse aktivitet i baggrunden og visuelle effekter, f.eks. smooth scrolling og videobilledfrekvenser. <ph name="BEGIN_LINK"/>Få flere oplysninger om Energisparefunktion<ph name="END_LINK"/></translation>
+<translation id="1682800916777749580">Growser forudindlæser sider, hvilket gør det hurtigere at browse og søge. <ph name="BEGIN_LINK"/>Få flere oplysninger om forudindlæsning af sider<ph name="END_LINK"/></translation>
+<translation id="402162951774350647">Dette sprog bruges i menuer, indstillinger, underretninger og anden tekst i Growser</translation>
+<translation id="8805133586567519017">Vis Growser på dette sprog</translation>
+<translation id="8591647532181583895">Fortsæt med at køre baggrundsapps, når Growser er lukket</translation>
+<translation id="874444355953071561">Hjælp med at gøre Growser bedre ved at rapportere de <ph name="BEGIN_LINK"/>aktuelle indstillinger<ph name="END_LINK"/>.</translation>
+<translation id="3679843915482636388">Growser tjekker regelmæssigt, om din browser har de sikreste indstillinger. Vi giver dig besked, hvis der er noget, du skal gennemgå.</translation>
+<translation id="871327634046506456">Growser har fundet nogle sikkerhedsanbefalinger, du kan gennemgå</translation>
+<translation id="5870462911436512809">Growser giver dig besked, hvis der er noget, du skal gennemgå</translation>
+<translation id="6778041046588219956">Growser-opdatering</translation>
+<translation id="8631258373552178402">Growser kan tjekke dine adgangskoder, når du gemmer dem</translation>
+<translation id="4953704839431887057">Se, hvordan Growser beskytter dig</translation>
+<translation id="2098538061544589012">Braves sikkerhedsværktøjer</translation>
+<translation id="5106845103941223465">Growser Private</translation>
+<translation id="1823139539047733938">Growser er forældet</translation>
+<translation id="3889510386895645466">Gå til siden Om Growser</translation>
+<translation id="5355906654071803286">Genstart Growser</translation>
+<translation id="1845386291973952879">Du har ikke besøgt websitet for nylig. Growser har fjernet <ph name="PERMISSION"/>.</translation>
+<translation id="2862776496369054243">Du har ikke besøgt websitet for nylig. Growser har fjernet <ph name="PERMISSION_1"/> og <ph name="PERMISSION_2"/>.</translation>
+<translation id="1716896251043080937">Du har ikke besøgt websitet for nylig. Growser har fjernet <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/> og <ph name="PERMISSION_3"/>.</translation>
+<translation id="6004231461565424151">Du har ikke besøgt websitet for nylig. Growser har fjernet <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/> og <ph name="COUNT"/> andre.</translation>
+<translation id="7004957294549886182">Farligt website. Growser har fjernet notifikationer.</translation>
+<translation id="6471042403370247137">Få en advarsel, hvis Growser registrerer, at én af dine adgangskoder er blevet offentligt tilgængelig i forbindelse med et brud på datasikkerheden</translation>
+<translation id="7428539203382021688">Når du besøger et website, sender Growser en sløret del af webadressen til <ph name="BEGIN_LINK"/>Growser Beskyttet browsing<ph name="END_LINK"/> via en privatlivsbeskyttende server, der skjuler din IP-adresse. Hvis et website foretager sig noget mistænkeligt, sendes hele webadresser og uddrag af sideindhold også.</translation>
+<translation id="884461539799798691">Forbedret beskyttelse deaktiverer JavaScript-optimering for websites, som Growser ikke genkender</translation>
+<translation id="4988080734949099436">Aktiverer yderligere funktioner for at levere Braves stærkeste beskyttelse</translation>
+<translation id="1067311274732729769">Growser opgraderer automatisk usikre forbindelser til HTTPS, når det er muligt</translation>
+<translation id="670179099341597407">Growser vil forsøge at opgradere navigationen til HTTPS</translation>
+<translation id="4425557811257826479">Growser advarer dig, inden et website indlæses via en usikker forbindelse</translation>
+<translation id="5645629562949365020">Når du browser i Privat tilstand, vil Growser advare dig, før du indlæser et websted ved hjælp af en usikker forbindelse</translation>
+<translation id="4580029190698428074">Når HTTPS er utilgængelig, anvender Growser en usikker forbindelse uden at advare dig</translation>
+<translation id="3663107808518609955">Færdigheder i Growser</translation>
+<translation id="2633082168331745826">Aktivér Færdigheder i Growser</translation>
+<translation id="1250270158726651995">AI-innovationer som f.eks. færdigheder gemmes på din Growser-konto og administreres separat via Growser-synkronisering</translation>
+<translation id="2538647080660844366">Brug dem sammen med andre Gemini-funktioner i Growser</translation>
+<translation id="533266489027134219">Growser Origin er en webbrowser, der kører websider og apps med lynets hast. Den er hurtig, stabil og brugervenlig. Beskyttelse mod malware og phishing er indbygget i Growser Origin, så du kan søge mere sikkert på internettet.</translation>
+<translation id="673036578543849083">Velkommen til Growser Origin – Et nyt browservindue er åbnet</translation>
+<translation id="1965498718920182710">Growser Enterprise-logo</translation>
+<translation id="4386526138370156983">Jobliste – Growser</translation>
+<translation id="8453989966828373461">Hjælp med at gøre Growser bedre ved at sende fejlrapporter og <ph name="UMA_LINK"/> til Growser</translation>
+<translation id="8206181081400544446">Du har nået Braves grænse på <ph name="BOOKMARK_LIMIT"/> bogmærker, så nogle af dine bogmærker er endnu ikke gemt på din Growser-konto.
+
+Nye bogmærker kan ikke gemmes på din konto, før du sletter nogle. Hvis du logger ud nu, slettes bogmærker, der ikke er gemt.</translation>
+<translation id="1017204948504403705">Denne handling gør følgende:
+          <ph name="LINE_BREAKS"/>
+            • Nulstiller din opstartsside, siden Ny fane, din søgemaskine og dine fastgjorte faner
+            <ph name="LINE_BREAK"/>
+            • Deaktiverer udvidelser
+            <ph name="LINE_BREAK"/>
+            • Sletter cookies og andre midlertidige websitedata
+            <ph name="LINE_BREAK"/>
+            • Nulstiller Growser-genveje
+            <ph name="LINE_BREAKS"/>
+            Bogmærker, historik og gemte adgangskoder påvirkes ikke.</translation>
+<translation id="4568984170127239210"><ph name="PAGE_TITLE"/> – Growser Origin</translation>
+<translation id="6459239167457312120"><ph name="PAGE_TITLE"/> – Login på netværk – Growser Origin</translation>
+<translation id="6745075221093696000"><ph name="PAGE_TITLE"/> – Growser Origin beta</translation>
+<translation id="6074833775480425395"><ph name="PAGE_TITLE"/> – Growser Origin for udviklere</translation>
+<translation id="4323067727951356041"><ph name="PAGE_TITLE"/> – Growser Origin Canary</translation>
+<translation id="991626836426968088">Growser fungerer muligvis ikke korrekt på grund af manglende understøttelse i Windows XP og Windows Vista</translation>
+<translation id="4457833723877519566">Hvis du vil have fremtidige Growser-opdateringer, skal du have Windows 10 eller nyere. Denne computer anvender Windows 7.</translation>
+<translation id="9149493049588690437">Hvis du vil have fremtidige Growser-opdateringer, skal du have Windows 10 eller nyere. Denne computer har Windows 8.</translation>
+<translation id="2563731540262721385">Hvis du vil have fremtidige Growser-opdateringer, skal du have Windows 10 eller nyere. Denne computer anvender Windows 8.1.</translation>
+<translation id="7206064056082910371">Growser svarer ikke. Vil du genstarte nu?</translation>
+<translation id="7023812228648650687">Growser kan ikke startes, da der gik noget galt ved åbningen af din profil. Prøv at genstarte Growser.</translation>
+<translation id="5663443051888305985">Sørg for, at du er logget ind på Growser på din <ph name="TARGET_DEVICE_NAME"/>, og prøv derefter at sende igen.</translation>
+<translation id="6369294759786885485">Luk alle Growser-vinduer, og prøv igen.</translation>
+<translation id="5284106950707887274">Er du sikker på, at du vil afinstallere Growser?</translation>
+<translation id="2901628274067661379">Afinstaller Growser</translation>
+<translation id="4255250495838298167">Growser er ikke længere din standardbrowser. Vil du gøre Growser til din standardbrowser?</translation>
+<translation id="4701159144509985041">Angiv Growser som din standardbrowser</translation>
+<translation id="6674282510961658141">Hold dine adgangskoder, dine bogmærker og din historik perfekt synkroniseret på alle enheder ved at angive Brave som din standardbrowser.</translation>
+<translation id="3496230475498196433">Klik på <ph name="BEGIN_BOLD"/>Ja<ph name="END_BOLD"/> i Windows-notifikationen for at fastgøre Growser til proceslinjen og få hurtig adgang.</translation>
+<translation id="6464100105052674345">Lad Growser køre i baggrunden</translation>
+<translation id="2352438365274458200">Deaktiver, at Growser-apps kører i baggrunden</translation>
+<translation id="3603873186590845064">Growser kan ikke læse og skrive til sin datamappe:
+
+<ph name="USER_DATA_DIRECTORY"/></translation>
+<translation id="7115504355633983767">Din profil kan ikke bruges, da den stammer fra en nyere version af Growser.
+
+Visse funktioner kan være utilgængelige. Angiv en anden profilmappe, eller brug en nyere version af Growser.</translation>
+<translation id="7177756814169573929">Din præferencefil er beskadiget eller ugyldig.
+
+Growser kan ikke gendanne dine præferencer.</translation>
+<translation id="5275543333441987572">Growser giver dig besked, hvis dine adgangskoder kompromitteres</translation>
+<translation id="1035991880709407996">Growser forsøger at vise adgangskoder. Angiv din Windows-adgangskode for at tillade dette.</translation>
+<translation id="2664084576825991761">Growser forsøger at kopiere adgangskoder. Angiv din Windows-adgangskode for at tillade dette.</translation>
+<translation id="710677211601200975">Growser forsøger at redigere adgangskoder. Angiv din Windows-adgangskode for at tillade dette.</translation>
+<translation id="3885229565492284399">Growser anmoder om at eksportere dine adgangskoder. Angiv din Windows-adgangskode for at tillade dette.</translation>
+<translation id="5936702863757232592">Growser anmoder om tilladelse til at slette dine data i Adgangskodeadministrator. Angiv din Windows-adgangskode for at tillade dette.</translation>
+<translation id="611478306146432511">Growser forsøger at erstatte eksisterende adgangskoder. Angiv din Windows-adgangskode for at tillade dette.</translation>
+<translation id="1376071392587482621">Computeren har allerede en nyere version af Growser. Hvis softwaren ikke virker, skal du afinstallere Growser og prøve igen.</translation>
+<translation id="1050525229259104976">Installationen mislykkedes på grund af en ikke-specificeret fejl. Hvis Growser kører, skal du lukke programmet og prøve igen.</translation>
+<translation id="1546359662928074286">Kan ikke installere den samme version af Growser som den, der kører i øjeblikket. Luk Growser, og prøv igen.</translation>
+<translation id="3833584860377545037">Growser kræver Windows 10 eller nyere.</translation>
+<translation id="4781953614981114721">Der opstod en fejl i operativsystemet under installationen. Download Growser igen.</translation>
+<translation id="2600782055031781597">En anden handling i Growser er i gang. Prøv igen senere.</translation>
+<translation id="1604254854986540549">Installationsprogrammet kunne ikke pakke arkivet ud. Download Growser igen.</translation>
+<translation id="2537082917266688552">Installationsarkivet er beskadiget eller ugyldigt. Download Growser igen.</translation>
+<translation id="8195217592446260650">Growser er allerede installeret for alle brugere på computeren.</translation>
+<translation id="1910107682631098314">Importér adgangskoder til Growser</translation>
+<translation id="4667068515417581301">Eksportér adgangskoder fra Growser</translation>
+<translation id="2101485830489784531">Fastgør Growser til proceslinjen, så du hurtigt kan få adgang til den</translation>
+<translation id="7869602180589455024">Fastgør Growser</translation>
+<translation id="835779925169785097">Growser er ikke din standardbrowser</translation>
+<translation id="490167989515294785">Angiv Growser som din standardbrowser, og fastgør den til din proceslinje</translation>
+<translation id="6061362658834310773">Hold dine adgangskoder, bogmærker og din historik perfekt synkroniseret på alle enheder. Få nem adgang til de funktioner, du kender og elsker, ved at opdatere din standardbrowser til Growser.</translation>
+<translation id="6718288934577794159">Hold dine adgangskoder, bogmærker og din historik perfekt synkroniseret på alle enheder. Få nem adgang til de funktioner, du kender og elsker, ved at opdatere din standardbrowser til Growser. Growser fastgøres til proceslinjen, så du hurtigt kan tilgå den.</translation>
+<translation id="3269099019844253754">Få nem adgang til de funktioner, du kender, elsker og har tillid til, ved at angive Growser som din standardbrowser.</translation>
+<translation id="7771912457179667546">Growser er nu din standardbrowser</translation>
+<translation id="2573722769951653092">1. Klik på <ph name="BUTTON_LABEL"/> nedenfor
+2. Klik på <ph name="BUTTON_2"/> i dine Windows-indstillinger
+3. Klik på <ph name="BUTTON_3"/> i Windows-notifikationen for at fastgøre Growser til proceslinjen, så du hurtigt kan tilgå browseren</translation>
+<translation id="5811554469028257346">Angiv Growser som din standard PDF-fremviser</translation>
+<translation id="8293526299624183342">Få en hurtig oversigt over dette dokument, og stil spørgsmål med Gemini i Growser</translation>
+<translation id="2186818126392784824">Del dette dokument med Gemini i Growser for at få en hurtig oversigt og stille opfølgende spørgsmål</translation>
+<translation id="7396783440261871557">Klik på knappen Opsummer for at dele dette dokument med Gemini i Growser for at få en hurtig oversigt og stille opfølgende spørgsmål</translation>
+<translation id="5798781567599261116">Udvidelser, apps og temaer fra ukendte kilder kan skade din enhed. Growser anbefaler kun at installere dem fra <ph name="IDS_EXTENSION_WEB_STORE_TITLE"/></translation>
+<translation id="865184523435673529">Få flere oplysninger om, hvorfor Growser blokerer visse downloads</translation>
+<translation id="3351202378639482227">Føjer til Growser...</translation>
+<translation id="3937559951479784717"><ph name="FILE_NAME"/> kan være skadelig, så Growser har blokeret den.</translation>
+<translation id="5605446327850749599">Denne fil er farlig, så Growser har blokeret den.</translation>
+<translation id="2429964733523607630"><ph name="FILE_NAME"/> er skadelig, så Growser har blokeret den.</translation>
+<translation id="1697170583693084369">Growser anbefaler, at du scanner denne fil, da den kan være skadelig.</translation>
+<translation id="678869972624164693">Growser har blokeret denne download, fordi filtypen normalt ikke downloades og kan være skadelig</translation>
+<translation id="66329522109859812">Growser har blokeret denne download, fordi filen er skadelig</translation>
+<translation id="4139585934875332203">Growser har blokeret denne download, fordi filen kan skade dine personlige konti og dine konti på sociale netværk</translation>
+<translation id="4565356641434588554">Growser har blokeret denne download, fordi filen normalt ikke downloades og kan være skadelig</translation>
+<translation id="5240054142173352667">Growser har blokeret denne download, fordi arkivfilen indeholder andre filer, der muligvis skjuler malware</translation>
+<translation id="5105701610060488629">Growser har blokeret denne download, fordi filen er vildledende og kan foretage uventede ændringer på din enhed</translation>
+<translation id="1097259831896030507">Growser har blokeret denne download, fordi websitet ikke anvender en sikker forbindelse, og der kan være blevet manipuleret med filen</translation>
+<translation id="5850866806592808363">Growser har blokeret denne download, fordi du har deaktiveret Beskyttet browsing, og filen ikke kan verificeres</translation>
+<translation id="2428874045337441912">Se, hvorfor Growser blokerer visse filer</translation>
+<translation id="4809275852638676593">Se, hvorfor Growser blokerer visse filer (åbnes på en ny fane)</translation>
+<translation id="298316392131030974">Vil du afslutte Growser alligevel?</translation>
+<translation id="8789969163606798208">Der mangler Growser API-nøgler. Nogle funktioner i Growser deaktiveres.</translation>
+<translation id="4439116282575412593"><ph name="EXTENSION_NAME"/> er føjet til Growser</translation>
+<translation id="7107774338871938246">Slet også data fra Growser (<ph name="URL"/>)</translation>
+<translation id="8681923442156080194">Growser har registreret malware i "<ph name="EXTENSION_NAME"/>"</translation>
+<translation id="7909554267169146203">Growser har registreret malware i disse elementer:</translation>
+<translation id="9036207213609798450">Growser anbefaler, at du fjerner den. <ph name="BEGIN_LINK"/>Få flere oplysninger om understøttede udvidelser<ph name="END_LINK"/></translation>
+<translation id="4531215791397816557">{NUM_EXTENSIONS,plural, =1{Growser anbefaler, at du fjerner den. <ph name="BEGIN_LINK"/>Få flere oplysninger om understøttede udvidelser<ph name="END_LINK"/>}one{Growser anbefaler, at du fjerner den. <ph name="BEGIN_LINK"/>Få flere oplysninger om understøttede udvidelser<ph name="END_LINK"/>}other{Growser anbefaler, at du fjerner dem. <ph name="BEGIN_LINK"/>Få flere oplysninger om understøttede udvidelser<ph name="END_LINK"/>}}</translation>
+<translation id="7649195130965340504">Fjern <ph name="EXTENSION_NAME"/> fra Growser</translation>
+<translation id="6063341597504985882">Udvidelser er tilføjelser, der giver dig mulighed for at tilpasse Growser. Udvidelser hjælper dig med at organisere og forenkle hverdagens opgaver ved at tilpasse Growser efter dine behov.</translation>
+<translation id="992371788707480262">Denne udvidelse indeholder malware og er ikke sikker. Fjern den fra Growser, så den ikke længere kan se og ændre dine data på de websites, du besøger, bl.a. dine personlige oplysninger.</translation>
+<translation id="2067832607013415103">Denne udvidelse bryder politikken for webshoppen og kan være usikker. Fjern den fra Growser, så den ikke længere kan se og ændre dine data på sider, du besøger, heriblandt dine personlige informationer.</translation>
+<translation id="4087978185310570098">Udgivelsen af denne udvidelse blev fjernet af dens udvikler og er muligvis ikke sikker. Fjern den fra Growser, så den ikke længere kan se og ændre dine data på de websites, du besøger, bl.a. dine personlige oplysninger.</translation>
+<translation id="7679253003086815797">Growser anbefaler, at du gennemgår denne udvidelse</translation>
+<translation id="1265858790092343669">Growser kan ikke verificere, hvor denne udvidelse kommer fra, og den kan derfor være skadelig. Du bør fjerne udvidelsen fra Growser, så den ikke længere kan se og ændre dine data på de websites, du besøger, bl.a. dine personlige oplysninger.</translation>
+<translation id="2056744103082155431">Til • Growser kan ikke verificere, hvor denne udvidelse kommer fra</translation>
+<translation id="961997018599108270">Fra • Growser kan ikke verificere, hvor denne udvidelse kommer fra</translation>
+<translation id="3369174930406579134">Denne udvidelse har ikke offentliggjort privatlivsprocedurer, f.eks. hvordan den indsamler og bruger data. Growser anbefaler, at du fjerner den.</translation>
+<translation id="979422849829153593">{NUM_EXTENSIONS,plural, =1{Growser anbefaler, at du fjerner den}one{Growser anbefaler, at du fjerner den}other{Growser anbefaler, at du fjerner dem}}</translation>
+<translation id="5658559420185486900">Tillad, at udvidelsen viser adgangsanmodninger på Growser-værktøjslinjen</translation>
+<translation id="6712113911906650320">Advarsel! Growser kan ikke forhindre udvidelser i at registrere din browserhistorik. Fjern markeringen i afkrydsningsfeltet for at deaktivere denne udvidelse i privat tilstand.</translation>
+<translation id="4498223799912841817">Fjern fra Growser</translation>
+<translation id="7796731196254627036">I Growser</translation>
+<translation id="5543269213556225156">Ændringerne af denne indstilling anvendes, når Growser genstartes.</translation>
+<translation id="8347277579804870421">For at gøre Growser sikrere har vi slået nogle udvidelser fra, som ikke er anført i <ph name="IDS_EXTENSION_WEB_STORE_TITLE"/> og muligvis er blevet tilføjet, uden at du vidste det.</translation>
+<translation id="200860377832188522">For at gøre Growser mere sikker har vi deaktiveret følgende udvidelser, som ikke er anført i <ph name="IDS_EXTENSION_WEB_STORE_TITLE"/> og muligvis er blevet tilføjet, uden at du vidste det.</translation>
+<translation id="7222463235177542287">Tilpas og kontrollér Growser</translation>
+<translation id="5917910893193436830">Tilpas og administrer Growser. Der er en tilgængelig opdatering.</translation>
+<translation id="4868069852456700682">Tilpas og administrer Growser. Noget kræver din opmærksomhed – klik for at få oplysninger.</translation>
+<translation id="8280755857245979104">Åbn i Chr&amp;omium</translation>
+<translation id="7325947590026326087">Om &amp;Growser</translation>
+<translation id="8976026755762050029">Genstart og opdater &amp;Growser</translation>
+<translation id="8960392361082788520">Tilpas Growser</translation>
+<translation id="6259076805350049778">Andre Growser-profiler</translation>
+<translation id="1010305914532246247">&amp;Administrer Growser-profiler</translation>
+<translation id="8203764833458154734">Du loggede ind på Growser som <ph name="USER_EMAIL_ADDRESS"/>. Brug den samme konto til at logge ind igen.</translation>
+<translation id="2446003269146099857">Nogen har tidligere logget ind på Growser på denne computer som <ph name="ACCOUNT_EMAIL_LAST"/>. Opret en ny Growser-bruger for at holde dine oplysninger adskilt.</translation>
+<translation id="9125589141018116978">Fortsæt, hvor du slap: Growser har gendannet dine faner fra din seneste session. Du kan deaktivere dette i</translation>
+<translation id="2230025109234282630">Fortsæt, hvor du slap: Growser gendanner dine faner, hver gang du genstarter. For at deaktivere dette skal du gå til</translation>
+<translation id="5091609952921728083">Fortsæt, hvor du slap: Growser kan gendanne dine faner, hver gang du genstarter. For at aktivere dette skal du gå til</translation>
+<translation id="6981289061161925147">Din organisation kræver, at du logger ind i Growser</translation>
+<translation id="7683929270400648323">Du kan fortsætte med at chatte med AI-tilstand uden at skifte faner. Log ind i Growser for at komme i gang. Du kan også se dine adgangskoder m.m. på alle dine enheder.</translation>
+<translation id="4848148717409470937">Vil du linke dine Growser-data til denne konto?</translation>
+<translation id="725420540356336095">Du er ved at logge ind med en managerstyret konto og giver dens administrator kontrol over din profil i Growser. Dine Growser-data, f.eks. dine apps, bogmærker, historikdata, adgangskoder og andre indstillinger, knyttes permanent til <ph name="USER_NAME"/>. Du kan slette disse data via kontrolpanelet for Growser Konti, men du kan ikke knytte disse data til en anden konto. <ph name="LEARN_MORE"/></translation>
+<translation id="4812467331272188817">Du er ved at logge ind med en managerstyret konto og give dens administrator kontrol over din profil i Growser. Dine Growser-data, f.eks. dine apps, bogmærker, historikdata, adgangskoder og andre indstillinger, knyttes permanent til <ph name="USER_NAME"/>. Du kan slette disse data via kontrolpanelet for Growser Konti, men du kan ikke knytte disse data til en anden konto. Du kan eventuelt oprette en ny profil for at holde dine Growser-data adskilt. <ph name="LEARN_MORE"/></translation>
+<translation id="7983659884458865927">Din organisation, <ph name="MANAGER"/>, kræver, at du logger ind i Growser</translation>
+<translation id="721653618740784654">Vil du logge ind i Growser?</translation>
+<translation id="8507996842912472741">Din organisation administrerer Growser</translation>
+<translation id="358564474092167395"><ph name="MANAGER"/> administrerer Growser</translation>
+<translation id="6951536873223673192">Flere organisationer administrerer Growser</translation>
+<translation id="8798183420443630372">Log ind i Growser som <ph name="EMAIL"/> for at fortsætte. Dette sikrer, at du har din organisations politikker.</translation>
+<translation id="2152295677712126834">Udvidelsen "<ph name="EXTENSION_NAME"/>" vil have dig til at logge ind i Growser</translation>
+<translation id="8372687623821354675">Log ind i Growser for at bruge denne udvidelse som <ph name="USER_EMAIL_ADDRESS"/>.</translation>
+<translation id="5712065245433424708">En udvidelse vil have dig til at logge ind i Growser</translation>
+<translation id="3564601079476815667">Din systemadministrator har konfigureret Growser til at åbne en anden browser for at få adgang til <ph name="TARGET_URL_HOSTNAME"/>.</translation>
+<translation id="4196436705957683122">Din systemadministrator har konfigureret Growser til at åbne <ph name="ALTERNATIVE_BROWSER_NAME"/> for at få adgang til <ph name="TARGET_URL_HOSTNAME"/>.</translation>
+<translation id="6868193750403948178">Tilpas Growser</translation>
+<translation id="7639726495501398295">Sæt dit personlige præg på Growser</translation>
+<translation id="2750070264345787533">Nulstil til standardversionen af Growser</translation>
+<translation id="3567433952279331449">Tilpas Growser for at give din browser et nyt udseende</translation>
+<translation id="3824156531292282468">Hent Growser på din telefon</translation>
+<translation id="533320084486051444">Hent Growser-appen for at gemme adgangskoder på farten</translation>
+<translation id="3480945185701684503">Tilpas Growser for at give browseren et nyt udseende</translation>
+<translation id="5994594536097299968">Klik på knappen Tilpas Growser på siden Ny fane for at give Growser et nyt udseende</translation>
+<translation id="8965689322246910580"><ph name="USER_EMAIL_ADDRESS"/> brugte tidligere Growser</translation>
+<translation id="2091195305139378373">Brug Growser uden en konto</translation>
+<translation id="6364383883668105509">Vil du logge ind i Growser med en ny profil?</translation>
+<translation id="4703768442253680671">Vil du skifte til den eksisterende Growser-profil?</translation>
+<translation id="8789001990221708313">Du er allerede logget ind som <ph name="USER_EMAIL_ADDRESS"/> på en anden Growser-profil</translation>
+<translation id="8301131823005186282">Du kan skifte til din Growser-profil, hvor du allerede er logget ind som <ph name="USER_EMAIL_ADDRESS"/>, for at beskytte dig selv bedre på nettet med dine forældres valg</translation>
+<translation id="5123925581213723416"><ph name="EXISTING_USER"/> er allerede logget ind på denne Growser-profil. Hvis du vil holde din browsing adskilt, kan Growser oprette en ny profil til dig.</translation>
+<translation id="5245337343687738049"><ph name="EXISTING_USER"/> er allerede logget ind.  Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>.</translation>
+<translation id="6515876849360167659"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="6426933876042535118"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="6873553785695129772"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="1882791237209046433"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere på alle dine enheder.</translation>
+<translation id="3931250744648698087"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere på alle dine enheder.</translation>
+<translation id="1150972610527825536"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere på alle dine enheder.</translation>
+<translation id="3505846189507037800">Log ind i Growser for at blive beskyttet på nettet med dine forældres valg</translation>
+<translation id="4245415605080139322">Mens du er logget ind, kan du bruge dine adgangskoder m.m. fra din Growser-konto i Growser. Du kan ændre dette ved at gå til "Din konto i Growser".</translation>
+<translation id="4193690350845293524">Mens du er logget ind, kan du bruge dine adgangskoder m.m. fra din Growser-konto i Growser. <ph name="SHORTCUT"/> kan ændre dine indstillinger for Growser-tjenester.</translation>
+<translation id="5706634855830381675">De adgangskoder, betalingsmetoder og adresser, du har gemt på din Growser-konto, fjernes fra denne enhed. Hvis du vil bruge dem igen i Growser, skal du logge ind igen.</translation>
+<translation id="7732285442926914510">Dine adgangskoder og andre Growser-data, som du har gemt på din Growser-konto, fjernes fra denne enhed. Hvis du vil bruge dem igen i Growser, skal du logge ind igen.</translation>
+<translation id="6329013037771952423">Growser skal verificere din identitet, før visse data kan gemmes på din Growser-konto og bruges på alle dine enheder. Hvis du logger ud nu, slettes disse data.</translation>
+<translation id="3868792775078424070">{count,plural, =1{Growser skal verificere din identitet, før visse data kan gemmes på din Growser-konto og bruges på alle dine enheder. Hvis du logger ud nu, slettes disse data (1 element).}one{Growser skal verificere din identitet, før visse data kan gemmes på din Growser-konto og bruges på alle dine enheder. Hvis du logger ud nu, slettes disse data ({count} element).}other{Growser skal verificere din identitet, før visse data kan gemmes på din Growser-konto og bruges på alle dine enheder. Hvis du logger ud nu, slettes disse data ({count} elementer).}}</translation>
+<translation id="1996684507882597880">Nogle af dine Growser-data er endnu ikke gemt på din Growser-konto. Prøv at vente et par minutter, før du logger ud. Hvis du logger ud nu, slettes disse data.</translation>
+<translation id="5454014972880493315">{count,plural, =1{Nogle af dine Growser-data er endnu ikke gemt på din Growser-konto. Prøv at vente et par minutter, før du logger ud. Hvis du logger ud nu, slettes disse data (1 element).}one{Nogle af dine Growser-data er endnu ikke gemt på din Growser-konto. Prøv at vente et par minutter, før du logger ud. Hvis du logger ud nu, slettes disse data ({count} element).}other{Nogle af dine Growser-data er endnu ikke gemt på din Growser-konto. Prøv at vente et par minutter, før du logger ud. Hvis du logger ud nu, slettes disse data ({count} elementer).}}</translation>
+<translation id="8809645441864753749">Du logges ud af de fleste websites, når du lukker alle Growser-vinduer, med undtagelse af din Growser-konto, hvis du er logget ind i Growser. <ph name="SETTINGS_LINK"/> for at give websites tilladelse til at huske dig.</translation>
+<translation id="1341243441016287837">Klik for at lukke dialogboksen til login i Growser</translation>
+<translation id="6533707658235722780">Growser-kontoen kræver fornyet godkendelse</translation>
+<translation id="3621973672138363787">For at kunne se dine adgangskoder m.m. på alle dine enheder skal du logge ind på Growser. Denne adgangskode gemmes på din Growser-konto, når du er logget ind.</translation>
+<translation id="8776917651555598219">For at kunne se dine adresser m.m. på alle dine enheder skal du logge ind i Growser. Denne adresse gemmes på din Growser-konto, når du er logget ind.</translation>
+<translation id="2049149594032125973">Hvis du glemmer din adgangssætning eller vil ændre denne indstilling, skal du <ph name="SETTINGS_LINK"/> Growser-dataene på din konto.</translation>
+<translation id="281969887027206923">Ryd Growser-dataene på din konto</translation>
+<translation id="3036914571297916959">Dine data krypteres med din adgangssætning. Angiv adgangssætningen for at bruge og gemme Growser-data på din Growser-konto.</translation>
+<translation id="2846495268487848913">Tilpas din nye Growser-profil</translation>
+<translation id="8886382435167457658">Log ind i Growser</translation>
+<translation id="3251892005336702042">Fjern kontoen fra Growser</translation>
+<translation id="3269077286059832796">Administrer Growser-profiler</translation>
+<translation id="2196448886818266718">Tilføj Growser-profil</translation>
+<translation id="3639562449300546186">Log ind i Growser på din telefon</translation>
+<translation id="3104294450494567786">QR-kode til at logge ind i Brave som <ph name="USER_NAME"/></translation>
+<translation id="7206238340597832726">Fjern denne apps data fra Growser</translation>
+<translation id="7293870171608700967">Growser Origin-apps</translation>
+<translation id="7006775661509770321">Growser bruger dit kamera og din mikrofon.</translation>
+<translation id="7486895119563497312">Growser bruger din mikrofon.</translation>
+<translation id="7217169501546612735">Growser bruger dit kamera.</translation>
+<translation id="2862054712093958084">{NUM_DEVICES,plural, =0{En eller flere Growser-udvidelser havde adgang til 1 HID-enhed}=1{En eller flere Growser-udvidelser har adgang til 1 HID-enhed}one{En eller flere Growser-udvidelser har adgang til # HID-enhed}other{En eller flere Growser-udvidelser har adgang til # HID-enheder}}</translation>
+<translation id="4900468470970697620">{NUM_DEVICES,plural, =0{En eller flere Growser-udvidelser havde adgang til 1 USB-enhed}=1{En eller flere Growser-udvidelser har adgang til 1 USB-enhed}one{En eller flere Growser-udvidelser har adgang til # USB-enhed}other{En eller flere Growser-udvidelser har adgang til # USB-enheder}}</translation>
+<translation id="2408132906637962509">Brugerens browserdata slettes fra denne enhed. Log ind på Growser som <ph name="USER_EMAIL"/> for at gendanne dataene.</translation>
+<translation id="8644436666850606965">Growser er blevet bedre</translation>
+<translation id="1922416787694103058">Det er nu blevet nemmere at bruge Growser med din Growser-konto og på delte computere.</translation>
+<translation id="1313706874534089954">Dette er din Growser-browser</translation>
+<translation id="3664328838662453022">Dit webindhold, dine bogmærker og andre Growser-ting kan findes her.</translation>
+<translation id="1352463651587972742">Gæster kan bruge Growser uden at efterlade noget.</translation>
+<translation id="5373192533257204771">Hvis du deler en computer, kan venner og familie browse individuelt og konfigurere Growser, som de ønsker hver især.</translation>
+<translation id="2703664622551952828">Klik på dit navn for at åbne Growser og gå i gang med at browse.</translation>
+<translation id="4721530170808832000">Tilføj dig selv i Growser</translation>
+<translation id="1167105492426667502">Klik på Growser-menuen</translation>
+<translation id="8841802346141697094">Den styrer også, hvilken side der vises, når du åbner Growser.</translation>
+<translation id="8595898309743593721">Den styrer også, hvilken side der vises, når du åbner Growser eller søger via omnifeltet.</translation>
+<translation id="4972491789724320305">Hvis du vil søge efter en bestemt Growser-funktion eller -udvidelse, skal du angive genvejen til den i adresselinjen efterfulgt af din valgte tastaturtast</translation>
+<translation id="635937903974893482">Nogle Growser-funktioner og -udvidelser har genveje. Du kan vælge at aktivere dem igen.</translation>
+<translation id="1044931877878380188">Find fantastiske apps, spil, udvidelser og temaer til Growser.</translation>
+<translation id="7912473483251131078">Growser Origin (mDNS-In)</translation>
+<translation id="5752926014208072629">Indgående regel for Growser Origin om at tillade mDNS-trafik.</translation>
+<translation id="5850632525405222774">Hvis et billede ikke har en brugbar beskrivelse, forsøger Growser at angive en for dig. Billederne sendes til Growser, så der kan oprettes beskrivelser. Du kan til enhver tid deaktivere denne funktion i indstillingerne.</translation>
+<translation id="8076549662907665888">Hvis et billede ikke har en brugbar beskrivelse, forsøger Growser at angive en for dig. Billederne sendes til Growser, så der kan oprettes beskrivelser.</translation>
+<translation id="479167709087336770">Dette anvender den samme stavekontrol, som anvendes i Growser Søgning. Tekst, som du angiver i browseren, sendes til Growser. Du kan altid ændre denne adfærd i indstillingerne.</translation>
+<translation id="8427574149019275290">Åbn linket på en ny Growser-&amp;fane</translation>
+<translation id="595588262476414049">Åbn linket i et Growser-inko&amp;gnitovindue</translation>
+<translation id="2181537491813999211">Åbn linket i Growser &amp;i et privat vindue</translation>
+<translation id="2067566126130974290">Tilpasser Growser…</translation>
+<translation id="8080616114300165633">{COUNT,plural, =0{Der er en ny Growser-opdatering, som anvendes, så snart du genstarter.}=1{Der er en ny Growser-opdatering, som anvendes, så snart du genstarter. Dit private vindue åbnes ikke igen.}one{Der er en ny Growser-opdatering, som anvendes, så snart du genstarter. # privat vindue åbnes ikke igen.}other{Der er en ny Growser-opdatering, som anvendes, så snart du genstarter. Dine # private vinduer åbner ikke igen.}}</translation>
+<translation id="1895016014993159555">Geninstaller Growser</translation>
+<translation id="5882995408983292483">Growser kunne ikke opdateres</translation>
+<translation id="7464495236419160803">Growser kunne ikke opdatere til den nyeste version, så du går glip af nye funktioner og sikkerhedsrettelser.</translation>
+<translation id="6560728661781075049">Opdater Growser</translation>
+<translation id="5590207435958825988">Angiv din adgangssætning for at bruge og gemme Growser-data på din konto, <ph name="ACCOUNT_EMAIL"/></translation>
+<translation id="3972229311347141416">Opdater Growser for at fortsætte med at bruge Growser-dataene på din Growser-konto, <ph name="ACCOUNT_EMAIL"/></translation>
+<translation id="1736682310984251274">Opdater Growser for at starte synkronisering</translation>
+<translation id="2752277240592513256">Growser genstarter om <ph name="REMAINING_TIME"/></translation>
+<translation id="5400854089653049720">Genstart Growser nu</translation>
+<translation id="816220834424790470">En særlig sikkerhedsopdatering til Growser blev netop anvendt. Genstart nu, hvorefter vi gendanner dine faner.</translation>
+<translation id="1919911732281489663">Fanen Growser</translation>
+<translation id="7409041475941023206">Tillad skærmoptagelse for Growser under Systemindstillinger for at dele din skærm.</translation>
+<translation id="441969162224012576">Tillad skærmoptagelse for Growser under Systemindstillinger for at dele din skærm.</translation>
+<translation id="394268994831024181">Tillad skærmoptagelse for Growser under Systemindstillinger for at dele dit vindue.</translation>
+<translation id="2582654120037508629">Tillad skærmoptagelse for Growser under Systemindstillinger for at dele dit vindue.</translation>
+<translation id="6116099631091261014">Du skal derefter genstarte Growser.</translation>
+<translation id="6021184685703509695">Hvis du vil dele systemlyd, skal du åbne Systemindstillinger og tillade "Kun optagelse af systemlyd" for Growser. Genstart derefter Growser.</translation>
+<translation id="4951278105276220905">Growser-historik</translation>
+<translation id="1377013856314636263">Få flere oplysninger om at bruge billedsøgning i Growser</translation>
+<translation id="8167292520237678091">Gå til indstillinger for Growser-notifikationer</translation>
+<translation id="5059006473359604360">{0,plural, =0{Der er en tilgængelig Growser-opdatering}=1{Der er en tilgængelig Growser-opdatering}one{En Growser-opdatering har været tilgængelig i # dag}other{En Growser-opdatering har været tilgængelig i # dage}}</translation>
+<translation id="3845814901430915361">{COUNT,plural, =0{Din administrator anmoder om, at du genstarter Growser for at anvende denne opdatering}=1{Din administrator anmoder om, at du genstarter Growser for at anvende denne opdatering. Dit privat vindue åbnes ikke igen.}one{Din administrator anmoder om, at du genstarter Growser for at anvende denne opdatering. # privat vindue åbnes ikke igen.}other{Din administrator anmoder om, at du genstarter Growser for at anvende denne opdatering. Dine # private vinduer åbnes ikke igen.}}</translation>
+<translation id="1737138554912368806">{0,plural, =1{Genstart Growser inden for en dag}one{Genstart Growser inden for # dag}other{Genstart Growser inden for # dag}}</translation>
+<translation id="2491249190431914147">{0,plural, =1{Growser genstarter om en time}one{Growser genstarter om # time}other{Growser genstarter om # timer}}</translation>
+<translation id="3793354223050135117">{0,plural, =1{Growser genstarter om 1 minut}one{Growser genstarter om # minut}other{Growser genstarter om # minutter}}</translation>
+<translation id="613909147715352806">{0,plural, =0{Growser genstarter nu}=1{Growser genstarter om 1 sekund}one{Growser genstarter om # sekund}other{Growser genstarter om # sekunder}}</translation>
+<translation id="965250208426515456">{COUNT,plural, =0{Din administrator kræver, at du genstarter Growser for at anvende en opdatering}=1{Din administrator kræver, at du genstarter Growser for at anvende en opdatering. Dit privat vindue åbnes ikke igen.}one{Din administrator kræver, at du genstarter Growser for at anvende en opdatering. # privat vindue åbnes ikke igen.}other{Din administrator kræver, at du genstarter Growser for at anvende en opdatering. Dine # private vinduer åbnes ikke igen.}}</translation>
+<translation id="2931180980997688910">{COUNT, plural, =0{Avanceret beskyttelse kræver, at du genstarter Growser for at anvende en opdatering}=1{Avanceret beskyttelse kræver, at du genstarter Growser for at anvende en opdatering. Dit privat vindue åbnes ikke igen.}one{Avanceret beskyttelse kræver, at du genstarter Growser for at anvende en opdatering. # privat vindue åbnes ikke igen.}other{Avanceret beskyttelse kræver, at du genstarter Growser for at anvende en opdatering. Dine # private vinduer åbnes ikke igen.}}</translation>
+<translation id="7647966250244920458">Starter Growser...</translation>
+<translation id="1703246464233448026">Growser kunne ikke startes. Prøv igen.</translation>
+<translation id="4579792724359199960">Del en Growser-fane</translation>
+<translation id="7852626102884722088">Growser blev automatisk lukket</translation>
+<translation id="437858582924654858">Din organisation lukker Growser, når browseren ikke har været i brug i <ph name="TIMEOUT_DURATION"/>. Browserdataene blev slettet. Disse data kan omfatte historik, Autofyld og downloads.</translation>
+<translation id="5167454534917906339">Din organisation sletter Growser-data, når de ikke har været i brug i <ph name="TIMEOUT_DURATION"/>. Disse data kan omfatte historik, Autofyld og downloads.</translation>
+<translation id="6366172032470723642">Din organisation lukker Growser, når browseren ikke har været i brug i <ph name="TIMEOUT_DURATION"/>.</translation>
+<translation id="6054526434774152867">Growser lukkes snart</translation>
+<translation id="3627058067394924065">Growser sletter snart browserdataene</translation>
+<translation id="5362825177670454785">Growser lukkes snart, og dataene slettes</translation>
+<translation id="6890068496140419087">{COUNT,plural, =1{Din organisation lukker automatisk Growser, når den ikke bruges i 1 minut.}one{Din organisation lukker automatisk Growser, når den ikke bruges i # minut.}other{Din organisation lukker automatisk Growser, når den ikke bruges i # minutter.}}</translation>
+<translation id="880802755497979140">{COUNT,plural, =1{Din organisation sletter automatisk browserdata, når Growser ikke bruges i 1 minut. Disse kan omfatte historik, autofyld og downloads. Dine faner forbliver åbne.}one{Din organisation sletter automatisk browserdata, når Growser ikke bruges i # minut. Disse kan omfatte historik, autofyld og downloads. Dine faner forbliver åbne.}other{Din organisation sletter automatisk browserdata, når Growser ikke bruges i # minutter. Disse kan omfatte historik, autofyld og downloads. Dine faner forbliver åbne.}}</translation>
+<translation id="5869235325726258967">{COUNT,plural, =1{Din organisation lukker automatisk Growser, når den ikke bruges i 1 minut. Browserdataene slettes. Disse kan omfatte historik, autofyld og downloads.}one{Din organisation lukker automatisk Growser, når den ikke bruges i # minut. Browserdataene slettes. Disse kan omfatte historik, autofyld og downloads.}other{Din organisation lukker automatisk Growser, når den ikke bruges i # minutter. Browserdataene slettes. Disse kan omfatte historik, autofyld og downloads.}}</translation>
+<translation id="8111900445721786828">Fortsæt med at bruge Growser</translation>
+<translation id="8542920192059400312">Din forælder har deaktiveret "Tilladelser for websites, apps og udvidelser" for Growser</translation>
+<translation id="8715818129986086186">Din organisation kan se og administrere browserdata, f.eks. bogmærker, historik og adgangskoder. Den kan ikke se browserdata på dine andre Growser-profiler</translation>
+<translation id="7643432817438780110">Velkommen til Growser-profiler</translation>
+<translation id="5226489290885369540">Hvem bruger Growser?</translation>
+<translation id="6837913888298763198">Du kan organisere alle dine ting i Growser ved hjælp af Growser-profiler. Opret profiler til venner og familie, eller brug dem til at holde arbejde og fornøjelse adskilt.</translation>
+<translation id="8262880716247261976">Konfigurer din nye Growser-profil</translation>
+<translation id="6539809395143501177">Hver profil har sine egne Growser-oplysninger som f.eks. bogmærker, historik, adgangskoder m.m.</translation>
+<translation id="6359748718028735107">Hvis du deler en enhed, kan venner og familie browse individuelt og konfigurere Growser hver især</translation>
+<translation id="5254830036533869365">Der findes allerede en Growser-profil med denne konto på enheden</translation>
+<translation id="7671828190113127067">Start Brave</translation>
+<translation id="3109033858283726964">Log ind i Growser</translation>
+<translation id="3194774009976956730">Lad os konfigurere Growser</translation>
+<translation id="3040770245079391216">Brug Growser som standard, og fastgør den</translation>
+<translation id="9209134737432231581">Brug Growser, hver gang du klikker på links i beskeder, dokumenter og andre apps</translation>
+<translation id="1402212206440388621">Åbn links i Growser fra en hvilken som helst app. Den fastgøres også til proceslinjen, så du nemt kan tilgå den.</translation>
+<translation id="7559168009716862834">Growser-logo på en computerskærm.</translation>
+<translation id="1935622100168295198">Tilpas og styr Growser. Angiv Growser som din standardbrowser.</translation>
+<translation id="982715935470582799">Angiv Growser som standardbrowser</translation>
+<translation id="5550473017271508801">Angiv Growser som standard, og fastgør den til proceslinjen</translation>
+<translation id="7562201679288302002">Åbn links i Growser fra en hvilken som helst app, og sørg for, at browseren altid er tilgængelig på proceslinjen</translation>
+<translation id="455043483084727114">Her kan du skifte mellem Growser-profiler</translation>
+<translation id="2577604806976743079"><ph name="SHORTCUT"/> kan skifte mellem Growser-profiler</translation>
+<translation id="8615520477965823239">Du kan skifte for at se adgangskoder fra en anden Growser-profil</translation>
+<translation id="842256045450098075">Log ud for at fjerne din Growser-konto fra Growser</translation>
+<translation id="6677784415412949473">Hvis du vil fjerne din Growser-konto fra Growser, skal du logge ud af Growser på siden Indstillinger</translation>
+<translation id="8235635284210221172">Indbygget i Growser for at hjælpe dig med at oprette, gemme og automatisk udfylde stærke adgangskoder. Tilføj genvejen for at få nem adgang.</translation>
+<translation id="4166648098896027129">Spørg om alt, lige der hvor du er, med Gemini i Brave</translation>
+<translation id="6168558359146786659">Tilpas Growser</translation>
+<translation id="2789075374752545467">Dine ændringer træder i kraft, næste gang du genstarter Growser.</translation>
+<translation id="519862482935410613">Growser skal have adgang til Bluetooth for at finde 
+ Bluetooth-enheder. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"/></translation>
+<translation id="3879869835592882268">Få Braves stærkeste beskyttelse</translation>
+<translation id="2018156653799562033">Åbn Growser, når Windows starter</translation>
+<translation id="6194017441174235829">Åbn Growser automatisk for at begynde at browse med det samme.</translation>
+<translation id="3927803834677784549">Begynd at browse med det samme: Growser kan nu åbnes, når Windows starter.</translation>
+<translation id="6362404093595382654">Growser åbnes nu, når Windows starter, så du kan begynde at browse med det samme. Du kan deaktivere dette i indstillingerne.</translation>
+<translation id="1459201843502305963">Gør websites hurtigere ved hjælp af Braves V8-maskine, men gør Growser en smule mindre modstandsdygtig over for angreb. Denne indstilling er aktiveret.</translation>
+<translation id="8148152948885197973">Gør websites hurtigere ved hjælp af Braves V8-maskine, men gør Growser en smule mindre modstandsdygtig over for angreb. Denne indstilling er deaktiveret.</translation>
+<translation id="3256611564871760291">Gør websites hurtigere ved hjælp af Braves V8-maskine, men gør Growser en smule mindre modstandsdygtig over for angreb</translation>
+<translation id="8218123929138221080">Growser kører hurtigere, og funktioner, der bruger JavaScript, bør fungere som forventet</translation>
+<translation id="3531624950074038621">Reducerer ydeevnen, men gør Growser mere modstandsdygtig over for angreb</translation>
+<translation id="299509295551938426">Growser Updater Service</translation>
+<translation id="4068751299154562321">Growser Updater Internal Service</translation>
+<translation id="6016191786267407731">Holder din Growser-software opdateret. Hvis denne tjeneste deaktiveres eller stoppes, bliver din Growser-software ikke opdateret. Dette betyder, at eventuelle sikkerhedsbrister ikke kan rettes, og at funktioner muligvis ikke fungerer. Denne tjeneste afinstallerer sig selv, når den ikke bruges af nogen Growser-software.</translation>
+<translation id="638207715601170321">Mens denne fane var inaktiv, blev der frigjort hukommelse for at sikre, at Growser kører hurtigt. Du kan vælge, at dette website altid skal være inaktivt.</translation>
+<translation id="1309483419808224148">Gør Growser hurtigere</translation>
+<translation id="5153670453251236235">Disse faner bruger ekstra ressourcer. Du kan forbedre ydeevnen ved at give Growser tilladelse til at gøre dem inaktive.</translation>
+<translation id="2829313098211569787">Denne fane bruger ekstra ressourcer. Du kan forbedre ydeevnen ved at give Growser tilladelse til at gøre den inaktiv.</translation>
+<translation id="1891457457620013910">{NUM_TABS,plural, =1{Growser anbefaler, at du sætter den fane, der gør din browser langsom, på pause}one{Growser anbefaler, at du sætter den fane, der gør din browser langsom, på pause}other{Growser anbefaler, at du sætter de faner, der gør din browser langsom, på pause}}</translation>
+<translation id="2066016210194753134">Genveje åbnes i Growser</translation>
+<translation id="343431853267837448">Growser-data blev ryddet</translation>
+<translation id="2016973756696213156">Prøv med Gemini i Growser</translation>
+<translation id="3446744630960564006">Åbn hurtigt Gemini i Growser, når du har brug for det</translation>
+<translation id="1985505085856398819">Vis Gemini i Growser i systembakken, og aktivér tastaturgenvejen</translation>
+<translation id="7843414100742664106">Vis Gemini i Brave i systembakken</translation>
+<translation id="5912735934441585874">Nem adgang til Gemini i Growser overalt på din enhed, selvom Growser er minimeret.</translation>
+<translation id="635775285804478675">Åbn Gemini i Growser med en tastaturgenvej.</translation>
+<translation id="6403063362298585665">Hvis Gemini i Growser er åben, forbliver sidepanelet åbent, når der oprettes nye faner</translation>
+<translation id="3816137493832455715">Brug tastaturgenvejen til at markere en del af skærmen i Gemini i Growser.</translation>
+<translation id="4869198816388260769">Log ind i Growser for at få denne udvidelse m.m. på alle dine computere</translation>
+<translation id="3143930395666972687">For at få dette bogmærke og meget mere på alle dine enheder skal du logge ind på Growser</translation>
+<translation id="4626379744082113715">Hvis du vil have dine bogmærker m.m. på alle dine enheder, skal du logge ind i Growser. Denne adgangskode gemmes på din Growser-konto, når du er logget ind.</translation>
+<translation id="5399404694319519684">Du har nu flere tilgængelige funktioner i Growser</translation>
+<translation id="6243750565468992770">Din konto i Growser</translation>
+<translation id="285864776837103618">Øg sikkerheden på farten med Udvidet beskyttet browsing i Growser til iOS</translation>
+<translation id="7183287313310808593">Udvid anvendelsen af Udvidet beskyttet browsing med Growser på din telefon</translation>
+<translation id="6665383679021314581">Log hurtigere ind på websites ved hjælp af gemte adgangskoder til Growser i iOS</translation>
+<translation id="7909057381664913954">Brug dine adgangskoder med Growser på din telefon</translation>
+<translation id="1262698330790070522">Hent Growser-appen</translation>
+<translation id="1369136842285731495">QR-kode til at downloade Growser-browseren til mobilenheder</translation>
+<translation id="1839309260370506060">Du får en meddelelse om at prøve <ph name="FEATURE_NAME"/>, næste gang du åbner Growser til iOS.</translation>
+<translation id="3957046550690757228">Næste gang du åbner Growser på din <ph name="DEVICE_TYPE"/>, får du en meddelelse om at bruge Growser Adgangskodeadministrator.</translation>
+<translation id="4913468027546625856">Køb, oversæt og identificer det, du ser gennem dit kamera, i Growser-appen til iOS</translation>
+<translation id="5334429916836219509">Prøv Google Lens med Growser på din telefon</translation>
+<translation id="2393075722810632447">Hvis du vil bruge dine gemte adgangskoder, skal du følge QR-koden, downloade Growser til iOS og logge ind på din Growser-konto</translation>
+<translation id="4853439800347640587">Download Growser på din telefon for at overvåge priser og få underretninger, når prisen falder på et website</translation>
+<translation id="5026029776800944167">Få underretninger om prissporing med Growser på din telefon</translation>
+<translation id="1827860507749134214">Næste gang du åbner Growser på din <ph name="DEVICE_TYPE"/>, får du en meddelelse om at aktivere underretninger om prissporing.</translation>
+<translation id="7260886862936286198">Download Growser på din telefon for at åbne eller oprette nye fanegrupper på farten.</translation>
+<translation id="3179906250938065566">Næste gang du åbner Growser på din <ph name="DEVICE_TYPE"/>, får du en meddelelse om at bruge fanegrupper.</translation>
+<translation id="3670946997425275779">Scan QR-koden med din telefon for at downloade Growser og logge ind på din Growser-konto.</translation>
+<translation id="8016699923481728837">Brug Braves bedste AI-værktøjer med Growser-appen på din telefon</translation>
+<translation id="6085139155476935700">Tag dine foretrukne Growser AI-værktøjer med på farten med Growser i iOS.</translation>
+<translation id="85912115868085406">Få nyttige AI-funktioner, når du bruger Growser-appen på din <ph name="DEVICE_TYPE"/></translation>
+<translation id="7502110432835833029">Brug Growser-appen til at få de bedste AI-værktøjer med på farten</translation>
+<translation id="4872784071286727545">Få det bedste fra Growser med Growser-appen på din telefon</translation>
+<translation id="1665059346664283754">Brug nemt dine foretrukne apps som f.eks. Growser Drev og YouTube på farten med Growser.</translation>
+<translation id="5910135615577427412">Få det bedste fra Growser med Growser-appen på din <ph name="DEVICE_TYPE"/></translation>
+<translation id="6333239663501390375">Få adgang til alle dine Growser-favoritter med Growser på din <ph name="DEVICE_TYPE"/></translation>
+<translation id="7510190804000607802">Påmindelse: Få det bedste fra Growser med i lommen</translation>
+<translation id="8546612205554583655">Få Braves bedste sikkerhedsfunktioner på farten med Growser-appen på din telefon</translation>
+<translation id="6240129247678023389">Få Braves bedste sikkerhedsfunktioner på farten med Growser.</translation>
+<translation id="5102419700069897472">Tag Braves sikkerhedsfunktioner med på farten med Growser-appen på din <ph name="DEVICE_TYPE"/></translation>
+<translation id="8211080268209414722">Brug Growser-appen til at få Braves sikkerhedsfunktioner med på farten</translation>
+<translation id="354621070532799440">Påmindelse: Få Braves bedste sikkerhedsfunktioner med i lommen</translation>
+<translation id="6395357110827382630">Få underretninger om prisfald på de varer, du er interesseret i, med Growser-appen på din telefon</translation>
+<translation id="2888272008248198017">Find produkter med dit kamera, hold øje med prisfald m.m. på farten med Growser i iOS.</translation>
+<translation id="8988632212716006521">Få mere ud af onlineshopping, når du bruger Growser-appen på din <ph name="DEVICE_TYPE"/></translation>
+<translation id="5919080786404908840">Brug Growser-appen til at tage de bedste shoppingværktøjer med på farten</translation>
+<translation id="1777651200954348103">Tag dine adgangskoder, faner m.m. med på farten med Growser-appen på din telefon</translation>
+<translation id="5424525786912503458">Fortsæt, hvor du slap, med Growser i iOS.</translation>
+<translation id="1207412468280310003">Tag dine adgangskoder, faner m.m. med på farten med Growser-appen på din <ph name="DEVICE_TYPE"/></translation>
+<translation id="8718912430754999757">Brug Growser-appen til at browse videre på farten</translation>
+<translation id="8909343812503299574">Din søgemaskine blev ændret uden for Growser. Growser har nulstillet den til den oprindelige standard for at beskytte dig. <ph name="LEARN_MORE_LINK"/></translation>
+<translation id="785283387498656820">Af sikkerhedsmæssige årsager deaktiverer Growser JavaScript-optimering, når du besøger et website for første gang.
+
+Hvis denne side ikke fungerer som forventet, kan du prøve at tillade optimering.</translation>
+<translation id="4165169774507632897">Log ind på Growser</translation>
+<translation id="8633519672432360220">Dit arbejde beskyttes i Growser</translation>
+<translation id="2298918301821382774">For at beskytte dit arbejde i Brave kan din organisation se eller administrere visse oplysninger, når du er logget ind i Brave.</translation>
+<translation id="5670438198445413111">Installationen mislykkedes på grund af en uspecificeret fejl. Download Growser igen.</translation>
+<translation id="4217571870635786043">Diktering</translation>
 </translationbundle>

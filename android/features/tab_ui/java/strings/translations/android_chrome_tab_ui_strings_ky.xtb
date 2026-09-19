@@ -252,4 +252,8 @@
 <translation id="927441551066996669">{NUMBER_OF_TABS,plural, =1{<ph name="TABS_COUNT_ONE"/> өтмөктөн турган өтмөктөр тобун жайып көрсөтүү, түсү: <ph name="COLOR_NAME"/>.}other{<ph name="TABS_COUNT_MANY"/> өтмөктөн турган өтмөктөр тобун жайып көрсөтүү, түсү: <ph name="COLOR_NAME"/>.}}</translation>
 <translation id="945522503751344254">Пикириңизди билдириңиз</translation>
 <translation id="994514002078791059">{TAB_COUNT,plural, =1{1 жигерсиз өтмөк жабылсынбы?}other{<ph name="TAB_COUNT_MANY"/> жигерсиз өтмөк жабылсынбы?}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{Growser'дон <ph name="TABS_COUNT_ONE"/> шилтеме}other{Growser'дон <ph name="TABS_COUNT_MANY"/> шилтеме}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{Growser'да жазылган <ph name="REVIEWS_COUNT_ONE"/> сын-пикир}other{Growser'да жазылган <ph name="REVIEWS_COUNT_MANY"/> сын-пикир}}</translation>
+<translation id="2928243913527329289">Growser | Бул дүкөн тууралуу</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser <ph name="AUTO_DELETE_DELAY_ONE"/> ай өткөндөн кийин иштебей калган өтмөктөр менен өтмөктөрдүн топторун автоматтык түрдө жабат. Муну параметрлерден өзгөртсөңүз болот.}other{Growser <ph name="AUTO_DELETE_DELAY_MANY"/> ай өткөндөн кийин иштебей калган өтмөктөр менен өтмөктөрдүн топторун автоматтык түрдө жабат. Муну параметрлерден өзгөртсөңүз болот.}}</translation>
 </translationbundle>

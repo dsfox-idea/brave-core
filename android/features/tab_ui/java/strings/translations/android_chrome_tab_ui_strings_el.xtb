@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Οι κλεισμένες καρτέλες και οι ομάδες σας μπορούν να ανοίξουν ξανά από την ενότητα «Πρόσφατες καρτέλες» και την ενότητα «Ομάδες καρτελών». Η Ιδιωτική καρτέλα σας δεν θα είναι διαθέσιμη.}
         other {Οι κλεισμένες καρτέλες και οι ομάδες σας μπορούν να ανοίξουν ξανά από την ενότητα «Πρόσφατες καρτέλες» και την ενότητα «Ομάδες καρτελών». Οι # Ιδιωτικές καρτέλες σας δεν θα είναι διαθέσιμες.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> σύνδεσμος από το Growser}other{<ph name="TABS_COUNT_MANY"/> σύνδεσμοι από το Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> έλεγχος από την Growser}other{<ph name="REVIEWS_COUNT_MANY"/> έλεγχοι από την Growser}}</translation>
+<translation id="2928243913527329289">Growser | Σχετικά με αυτό το κατάστημα</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Το Growser κλείνει αυτόματα τις ανενεργές καρτέλες και τις ομάδες καρτελών μετά από <ph name="AUTO_DELETE_DELAY_ONE"/> μήνα. Μπορείτε να αλλάξετε αυτή την επιλογή στις ρυθμίσεις.}other{Το Growser κλείνει αυτόματα τις ανενεργές καρτέλες και τις ομάδες καρτελών μετά από <ph name="AUTO_DELETE_DELAY_MANY"/> μήνες. Μπορείτε να αλλάξετε αυτή την επιλογή στις ρυθμίσεις.}}</translation>
 </translationbundle>

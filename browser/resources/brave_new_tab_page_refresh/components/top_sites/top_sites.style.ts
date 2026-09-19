@@ -209,6 +209,11 @@ export const style = scoped.css`
     text-overflow: ellipsis;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 
+    /* Growser-236: upstream restyled this label in 154 - 10px, a lighter
+       shadow, margin-top -6px, and no opacity at all. Ours stays: the label
+       is hover-only here, which is what the opacity and the transition below
+       do, and the rule that reveals it sits directly underneath. Taking
+       upstream's block would have left the address showing on every tile. */
     opacity: 0;
     transition: opacity var(--self-transition-duration) ease-out;
   }

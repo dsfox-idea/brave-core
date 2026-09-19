@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/BUILD.gn b/chrome/installer/linux/BUILD.gn
-index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae31597cdfd88 100644
+index 5ddd3e4cd5a0e611ee179f59cc971c59431f234a..92dd4538bc033e5398b1b8fe5bc6f662e5316627 100644
 --- a/chrome/installer/linux/BUILD.gn
 +++ b/chrome/installer/linux/BUILD.gn
 @@ -18,6 +18,7 @@ import("//third_party/angle/gni/angle.gni")
@@ -10,7 +10,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
  
  if (bundle_widevine_cdm) {
    import("//media/cdm/library_cdm/cdm_paths.gni")
-@@ -103,6 +104,7 @@ if (build_with_internal_optimization_guide) {
+@@ -105,6 +106,7 @@ if (build_with_internal_optimization_guide) {
    }
  }
  
@@ -18,7 +18,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
  packaging_files_binaries = packaging_files_executables + packaging_files_shlibs
  
  # TODO(mmoss) Any convenient way to get all the relevant build files?
-@@ -210,6 +212,7 @@ action("merge_rpm_dependencies") {
+@@ -212,6 +214,7 @@ action("merge_rpm_dependencies") {
  strip_binary("strip_chrome_binary") {
    binary_input = "$root_out_dir/chrome"
    deps = [ "//chrome" ]
@@ -26,7 +26,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
  }
  
  strip_binary("strip_chrome_crashpad_handler") {
-@@ -225,6 +228,7 @@ strip_binary("strip_chrome_management_service") {
+@@ -227,6 +230,7 @@ strip_binary("strip_chrome_management_service") {
  strip_binary("strip_chrome_sandbox") {
    binary_input = "$root_out_dir/chrome_sandbox"
    deps = [ "//sandbox/linux:chrome_sandbox" ]
@@ -34,7 +34,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
  }
  
  # On ChromeOS, system services depend on real ANGLE libraries rather than dummy
-@@ -378,6 +382,7 @@ copy("common_packaging_files") {
+@@ -380,6 +384,7 @@ copy("common_packaging_files") {
    }
  
    outputs = [ "$root_out_dir/installer/common/{{source_file_part}}" ]
@@ -42,7 +42,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
  }
  
  copy("deb_packaging_files") {
-@@ -397,15 +402,36 @@ copy("deb_packaging_files") {
+@@ -399,15 +404,36 @@ copy("deb_packaging_files") {
  
  copy("theme_files") {
    visibility = [ ":*" ]
@@ -86,7 +86,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
    ]
    if (is_chrome_branded) {
      sources += [
-@@ -486,6 +512,7 @@ group("installer_deps") {
+@@ -494,6 +520,7 @@ group("installer_deps") {
      "//components/privacy_sandbox/privacy_sandbox_attestations/preload:component",
      "//sandbox/linux:chrome_sandbox",
    ]
@@ -94,7 +94,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
    if (bundle_widevine_cdm) {
      public_deps += [ "//third_party/widevine/cdm" ]
    }
-@@ -553,11 +580,14 @@ group("installer_deps") {
+@@ -564,11 +591,14 @@ group("installer_deps") {
  template("linux_package") {
    assert(defined(invoker.channel))
    channel = invoker.channel
@@ -110,7 +110,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
    }
  
    deb_target_name = "${target_name}_deb"
-@@ -566,7 +596,7 @@ template("linux_package") {
+@@ -577,7 +607,7 @@ template("linux_package") {
      script = "debian/build.py"
  
      inputs = packaging_files
@@ -119,7 +119,7 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
  
      args = [
        "-a",
-@@ -603,7 +633,7 @@ template("linux_package") {
+@@ -614,7 +644,7 @@ template("linux_package") {
        script = "rpm/build.py"
  
        inputs = packaging_files
@@ -128,10 +128,13 @@ index b3b233d16abe096b16ae7a26202b28e925a44f91..33eec1c5f5d7d1f9e517999c4fdae315
  
        args = [
          "-a",
-@@ -651,3 +681,6 @@ linux_package("unstable") {
+@@ -696,6 +726,9 @@ linux_package("unstable") {
  linux_package("canary") {
    channel = "canary"
  }
 +linux_package("nightly") {
 +  channel = "nightly"
 +}
+ 
+ # For convenience, alias 'dev' to 'unstable'.
+ group("dev") {

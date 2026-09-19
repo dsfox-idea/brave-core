@@ -5538,4 +5538,430 @@ Detalls addicionals:
 <translation id="8198379961710069585">Botó Cerca a l'historial. Activa'l per cercar a l'historial.</translation>
 <translation id="8495170825732897952">Escriu @@ en qualsevol formulari per recuperar i emplenar informació sense canviar de pestanya</translation>
 <translation id="8874790741333031443">Prova de permetre temporalment les galetes de tercers. Això implica menys protecció de navegació, però és més probable que les funcions del lloc web funcionin de la manera prevista.</translation>
+<translation id="6091115085465716987">Logotip de Google Wallet</translation>
+<translation id="4489288117933602961">Logotip de Growser</translation>
+<translation id="6604204560730066844">Vols desar aquesta targeta al teu compte de Growser i en aquest dispositiu?</translation>
+<translation id="6253380015872250643">Desa la targeta a Google Wallet</translation>
+<translation id="7062344833049251424">Perquè la propera vegada puguis pagar més ràpidament, desa la targeta i l'adreça de facturació a Google Wallet</translation>
+<translation id="4940620179254568429">El CVC d'aquesta targeta s'encriptarà i es desarà al teu Compte de Growser per tramitar les compres més ràpidament</translation>
+<translation id="1413235258620101697">El CVC d'aquesta targeta s'encriptarà i es desarà a Google Wallet per tramitar les compres més ràpidament</translation>
+<translation id="8296806261827627234">Paga més ràpidament quan es desi la targeta. Els detalls de la targeta s'encripten al teu Compte de Growser.</translation>
+<translation id="4954891067389874142">Pagaràs més ràpidament quan es desi la targeta. Les dades de la targeta s'encripten a Google Wallet.</translation>
+<translation id="4599572944836204718">Paga més ràpid amb Google Pay un cop desis la targeta. Les dades de la targeta s'encripten a Google Wallet.</translation>
+<translation id="3872719112670219447">Aquest nom prové del teu Compte de Growser</translation>
+<translation id="1511387429744666092">Growser t'està oferint desar les targetes al Compte de Growser perquè tens la sessió iniciada. Pots canviar aquest comportament a la configuració.</translation>
+<translation id="4565400898718322011">Growser t'està oferint desar les targetes al Compte de Growser perquè tens la sessió iniciada. Pots canviar aquest comportament a la configuració. El nom del titular de la targeta s'obté del teu compte.</translation>
+<translation id="3594461335790641595">Emplena automàticament aquesta targeta per a les compres fetes a Growser quan s'hagi desat en aquest dispositiu</translation>
+<translation id="1242832199383246031">Emplena automàticament aquesta targeta per a les compres fetes a Growser quan s'hagi desat per utilitzar-se amb Google Pay</translation>
+<translation id="6186962377036474023">Emplena automàticament aquesta targeta per a les compres fetes a Growser quan s'hagi desat a Google Wallet</translation>
+<translation id="5765984179517659957">Growser està provant de verificar la teva identitat per poder emplenar la informació de pagament.</translation>
+<translation id="828282277746732142">Desa l'IBAN a Google Wallet</translation>
+<translation id="6084079099761498478">Perquè aquest IBAN s'empleni automàticament la propera vegada, desa'l al teu Compte de Growser</translation>
+<translation id="5398461103557553443">Perquè aquest IBAN s'empleni automàticament la propera vegada, desa'l a Google Wallet</translation>
+<translation id="7098302422586317090">Growser verificarà la teva identitat abans d'emplenar les formes de pagament. Pots actualitzar aquesta informació en qualsevol moment a <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>.</translation>
+<translation id="5053116470141135293">S'utilitzarà un número de targeta virtual per a l'emplenament quan tramitis una compra amb aquesta targeta a fi de protegir les teves dades reals. Gestiona-ho a Google Wallet. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">El contingut de la pàgina de tramitació de la compra es comparteix amb Growser per oferir aquestes opcions. Per amagar les opcions que permeten pagar més tard a Emplenament automàtic, ves a <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="2840680829170913626">El contingut de la pàgina de tramitació de la compra es comparteix amb Growser per oferir aquestes opcions. Els plans de pagament estan subjectes a la idoneïtat. Per amagar les opcions que permeten pagar més tard a Emplenament automàtic, ves a <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="7870207318911766769">El contingut de la pàgina de tramitació de la compra es comparteix amb Growser per oferir aquestes opcions.</translation>
+<translation id="1151858212483238980">Pots emplenar automàticament les targetes que estiguin desades a Google Wallet</translation>
+<translation id="1205344127823614428">Pots emplenar automàticament les targetes que estiguin desades a Google Wallet.</translation>
+<translation id="5848445080378515710">Després de revisar la comanda, has d'iniciar la sessió al compte de <ph name="BNPL_ISSUER_NAME"/> o crear-ne un. Aquest compte s'enllaçarà automàticament a Google Wallet.</translation>
+<translation id="8163468049564974856">Activa l'emplenament automàtic per tramitar compres en línia de manera segura. Els detalls de la targeta s'encripten a Brave Wallet.</translation>
+<translation id="5717281954932320486">Emplena automàticament els detalls de la targeta quan tramitis una compra en línia. Les targetes es desen de manera segura a Brave Wallet.</translation>
+<translation id="7055814742378298611">Ara pots desar formes de pagament per emplenar-les automàticament en tramitar la compra a Brave. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Se suprimiran tots els codis de seguretat desats al teu dispositiu i al Compte de Growser</translation>
+<translation id="7170930892977483182">Se suprimiran tots els codis de seguretat desats al teu dispositiu i a Google Wallet</translation>
+<translation id="755360750394433286">La targeta es desa al teu Compte de Growser perquè puguis emplenar-la automàticament en compres futures</translation>
+<translation id="7412081313067625215">La targeta es desa a Google Wallet perquè puguis utilitzar-la per a l'emplenament automàtic en compres futures</translation>
+<translation id="2482920244925042987">Aquesta targeta no s'ha pogut desar al teu Compte de Growser. S'ha desat a Growser en aquest dispositiu.</translation>
+<translation id="4740434610174859636">Aquesta targeta no s'ha pogut desar a Google Wallet. S'ha desat a Growser en aquest dispositiu.</translation>
+<translation id="2109852493965717728">Aquest IBAN s'ha desat al teu Compte de Growser perquè el puguis utilitzar en tots els serveis de Growser.</translation>
+<translation id="3837322271615501940">Aquest IBAN no s'ha pogut desar al teu Compte de Growser. S'ha desat a Growser en aquest dispositiu. Growser t'ho tornarà a preguntar la propera vegada que utilitzis aquest IBAN.</translation>
+<translation id="1583007191864786102">Aquest IBAN no s'ha pogut desar a Google Wallet, però està desat a Growser en aquest dispositiu. Growser t'ho tornarà a preguntar la propera vegada que utilitzis aquest IBAN.</translation>
+<translation id="6915664826242394941">Aquest IBAN no s'ha pogut desar al teu Compte de Growser. S'ha desat a Growser en aquest dispositiu.</translation>
+<translation id="376462579087900096">Aquest IBAN no s'ha pogut desar a Google Wallet, però està desat a Growser en aquest dispositiu.</translation>
+<translation id="2871837111996280385">Growser està intentant emplenar la teva informació sensible a <ph name="APP_NAME"/>.</translation>
+<translation id="3039045945489677870">Growser està intentant mostrar informació sensible</translation>
+<translation id="3253651554860831188">Growser vol verificar la teva identitat abans que canviïs la configuració</translation>
+<translation id="924075841960625832">Voleu suprimir el suggeriment de formulari de Growser?</translation>
+<translation id="3016775357255717300">Voleu suprimir la targeta de crèdit de Growser?</translation>
+<translation id="1722474089104449082">Voleu suprimir l'adreça de Growser?</translation>
+<translation id="7077165718541055322">Vols suprimir l'adreça de casa de l'emplenament automàtic de Growser?</translation>
+<translation id="7756454115562251695">Vols suprimir l'adreça de la feina de l'emplenament automàtic de Growser?</translation>
+<translation id="3068798232942246848">Vols suprimir aquesta informació de l'emplenament automàtic de Growser?</translation>
+<translation id="967369588715984092">Brave deixarà de confirmar automàticament aquesta adreça electrònica en llocs web compatibles.</translation>
+<translation id="7299769361777046949">Gestiona les targetes de fidelització a Google Wallet</translation>
+<translation id="2903623845283894856">Ara pots utilitzar les adreces del teu Compte de Growser</translation>
+<translation id="7058709760023777753">Emplena automàticament amb les adreces de casa i de la feina del teu Compte de Growser</translation>
+<translation id="2856388212909438134">Emplena automàticament el nom i l'adreça electrònica a partir del teu Compte de Growser</translation>
+<translation id="8581945850065780003">Aquesta adreça se suprimirà del teu Compte de Growser, <ph name="ACCOUNT"/></translation>
+<translation id="8652886653703834105">Al teu Compte de Growser, <ph name="ACCOUNT"/></translation>
+<translation id="4050392779074832022">Podràs utilitzar-la en tots els productes de Growser</translation>
+<translation id="361746409909709825">Pots utilitzar les adreces desades en tots els productes de Growser. Aquesta adreça s'ha desat al teu Compte de Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="5318416911578989892">Pots utilitzar les adreces desades en tots els productes de Growser. Aquesta adreça es desarà al teu Compte de Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="3995632180712217177">Pots utilitzar les adreces desades en tots els productes de Growser. Això no canviarà l'adreça de casa existent. Es desarà al teu Compte de Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="2432673835335968473">Pots utilitzar les adreces desades en tots els productes de Growser. Això no canviarà l'adreça de la feina existent. Es desarà al teu Compte de Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="2024046927213376062">La informació del teu Compte de Growser <ph name="ACCOUNT"/> et pot ajudar a emplenar formularis més ràpidament a Growser</translation>
+<translation id="8430499469896241016">Emplena automàticament els codis de verificació que els llocs web utilitzen per millorar la teva seguretat. Brave pot obtenir aquests codis a partir del teu compte de Gmail. <ph name="BEGIN_LINK"/>Més informació sobre aquesta funció<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Growser no és el teu proveïdor d'emplenament automàtic</translation>
+<translation id="7450759832930378803">Per activar aquestes opcions de configuració i utilitzar la informació de pagament del teu Compte de Growser, ves a la configuració dels serveis d'emplenament automàtic.</translation>
+<translation id="7049940136908665440">Per activar aquestes opcions i utilitzar la informació del teu Compte de Growser, ves a la configuració dels serveis d'emplenament automàtic</translation>
+<translation id="2450019289047528273">Formes de pagament i altres dades de Google Wallet</translation>
+<translation id="1125406338060147524">La configuració de Brave Wallet s'aplica a la informació desada des de Brave</translation>
+<translation id="5732084028114235391">Actualment aquesta adreça està desada a Growser. Per utilitzar-la en tots els productes de Growser, desa-la al teu Compte de Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="756794566964707799">Actualment aquesta adreça està desada en aquest dispositiu. Per utilitzar-la en tots els productes de Growser, desa-la al teu Compte de Growser, <ph name="ACCOUNT"/>.</translation>
+<translation id="6935077351544118151">Ara pots emplenar automàticament les targetes de fidelització de Google Wallet</translation>
+<translation id="4169189393773057143">Gestiona les targetes de fidelització o desactiva aquests suggeriments a Google Wallet</translation>
+<translation id="4470759557257438892">Demana a Gemini a Growser</translation>
+<translation id="2326283484705860548">Ara pots emplenar automàticament més informació de Google Wallet</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="8421746712901926961">Desa la informació a <ph name="GOOGLE_WALLET_TITLE_1"/> i enllesteix més ràpidament les tasques, com ara emplenar formularis en tots els productes de Growser. Pots <ph name="MANAGE_INFO_LINK"/> a <ph name="GOOGLE_WALLET_TITLE_2"/> per a <ph name="ACCOUNT"/>.</translation>
+<translation id="4619669610757527494">Desa el permís de conduir a Google Wallet</translation>
+<translation id="4239215166147486528">Desa el permís de conduir de manera segura a Brave Wallet</translation>
+<translation id="1912750443952232242">Desa el document d'identitat a Google Wallet</translation>
+<translation id="8300302621078931927">Desa el document d'identitat de manera segura a Brave Wallet</translation>
+<translation id="5447103258548475868">Desa el passaport a Google Wallet</translation>
+<translation id="8717177139469452440">Desa el passaport de manera segura a Brave Wallet</translation>
+<translation id="760632772920590778">Desa el vehicle a Google Wallet</translation>
+<translation id="4811696127853690432">Desa el vehicle de manera segura a Brave Wallet</translation>
+<translation id="5914185423510719251">Desa el KTN a Google Wallet</translation>
+<translation id="5034488401832901795">Desa el KTN de manera segura a Brave Wallet</translation>
+<translation id="1449251255954293933">Desa el número Redress a Google Wallet</translation>
+<translation id="1330952240988133220">Desa el número de rectificació de manera segura a Brave Wallet</translation>
+<translation id="8393948304336153065">Actualitza el permís de conduir a Google Wallet</translation>
+<translation id="8889525327610245418">Actualitza el permís de conduir de manera segura a Brave Wallet</translation>
+<translation id="7570524564113479209">Actualitza el document d'identitat a Google Wallet</translation>
+<translation id="4410614037742891410">Actualitza el document d'identitat de manera segura a Brave Wallet</translation>
+<translation id="3426672782316020729">Actualitza el passaport a Google Wallet</translation>
+<translation id="3280440382387335343">Actualitza el passaport de manera segura a Brave Wallet</translation>
+<translation id="2124081665399116863">Actualitza el vehicle a Google Wallet</translation>
+<translation id="6422648598133086441">Actualitza el vehicle de manera segura a Brave Wallet</translation>
+<translation id="4770909831299304090">Actualitza el número de viatger conegut a Google Wallet</translation>
+<translation id="5872115357279348603">Actualitza el KTN de manera segura a Brave Wallet</translation>
+<translation id="1732796940245838248">Actualitza el número de rectificació a Google Wallet</translation>
+<translation id="7253051586755429279">Actualitza el número de rectificació de manera segura a Brave Wallet</translation>
+<translation id="5628060911499153873">Desa la informació per enllestir tasques més ràpidament en tots els productes de Growser. La teva informació es desa a <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> per a <ph name="ACCOUNT"/>.</translation>
+<translation id="8369722293913575142">No s'ha pogut desar aquesta informació a Google Wallet. S'ha desat a Growser en aquest dispositiu. Growser t'oferirà desar-la a Wallet la propera vegada que l'utilitzis.</translation>
+<translation id="3237427677128462778">No s'ha pogut desar a Google Wallet</translation>
+<translation id="9078170656887151974">Per oferir suggeriments i millorar aquesta funció, l'URL i el contingut de la pàgina es comparteixen amb Growser. Pots canviar d'opinió en qualsevol moment i <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Per oferir suggeriments i millorar aquesta funció, l'URL i el contingut de la pàgina es comparteixen amb Growser</translation>
+<translation id="2905902437192896563">Growser entén millor els formularis i pot emplenar-los automàticament més ràpid</translation>
+<translation id="67310796271265436">Ajuda Brave a entendre i emplenar millor els formularis complexos processant les dades de manera segura als servidors de Brave. La teva informació continua sent privada i ningú no la revisa.</translation>
+<translation id="7422908041366284140">Growser pot emplenar automàticament els camps difícils que l'emplenament automàtic estàndard podria ometre</translation>
+<translation id="6329742260390895689">Per emplenar automàticament la teva informació, activa l'opció "Utilitza passis en tot Growser" a la configuració de Wallet</translation>
+<translation id="5912796581727968237">Obre Google Wallet</translation>
+<translation id="5160781056848005130">Estàs ajudant a perfeccionar l'emplenament automàtic millorat compartint dades amb Growser</translation>
+<translation id="8781233757384402598">Quan fas una sol·licitud per a l'emplenament automàtic millorat, les teves dades d'ús, les teves sol·licituds i els detalls de la pàgina es comparteixen amb Brave per millorar l'experiència de l'emplenament automàtic</translation>
+<translation id="7044265724713929821">Brave registra com utilitzes la funció, com ara les teves sol·licituds i el teu comportament quan acceptes o ignores els suggeriments</translation>
+<translation id="3209071504641569648">Les teves sol·licituds, els títols de les pàgines i els URL s'envien a Brave i és possible que es revisin per perfeccionar l'emplenament automàtic millorat</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Cap}=1{D'1 lloc web (continuaràs tenint la sessió iniciada al teu Compte de Growser)}other{De # llocs web (continuaràs tenint la sessió iniciada al teu Compte de Growser)}}</translation>
+<translation id="3410151451624226773">Gestiona al gestor de contrasenyes de Growser</translation>
+<translation id="5224107321793121921">Gestiona al meu Compte de Growser</translation>
+<translation id="5105442806410269908">Gestiona altres dades de Growser</translation>
+<translation id="2477607419416067650">Altres dades de Growser</translation>
+<translation id="472824688843296007">Fes un seguiment dels preus amb Growser</translation>
+<translation id="753556296624075801">Amb la tecnologia de Growser</translation>
+<translation id="3745599309295009257">El teu text i el contingut i l'URL de la pàgina en què escrius s'enviaran a Growser, un equip de persones els revisarà i s'utilitzaran per millorar aquesta funció. No introdueixis informació personal, com ara dades mèdiques o financeres, ni utilitzis aquesta eina en llocs web que continguin informació privada o sensible.</translation>
+<translation id="5543452229212526547">El text, així com el contingut i l'URL de la pàgina en què escrius, s'enviaran a Growser. Els revisors humans no utilitzaran el teu contingut per millorar la IA. La teva organització pot canviar aquestes opcions de configuració en qualsevol moment.</translation>
+<translation id="1959445535228047762">El text i el contingut de la pàgina s'envien a Growser i es poden utilitzar per millorar aquesta funció.
+  <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">El text i el contingut de la pàgina s'envien a Growser, però no s'utilitzaran per millorar la IA.
+    <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">Aquesta eina experimental d'IA no sempre ho fa bé. Per millorar-la, el teu contingut s'envia a Growser.
+    <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">El contingut no s'ha pogut enganxar fora del context de Brave gestionat a causa de les polítiques de la teva organització</translation>
+<translation id="1351458950091269256">Com que aquest anunci feia servir massa recursos per al dispositiu, Growser l'ha suprimit.</translation>
+<translation id="4366714044424353289">A <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> trobaràs altres maneres d'explorar l'historial de navegació del teu Compte de Growser</translation>
+<translation id="5626844006416355146">És possible que el teu Compte de Growser tingui l'opció <ph name="BEGIN_LINK_GAA"/>Activitat en aplicacions de Gemini<ph name="END_LINK_GAA"/></translation>
+<translation id="5747377793818752349">A <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> trobaràs altres maneres d'explorar l'historial de navegació del teu Compte de Growser, com ara <ph name="BEGIN_LINK_GAA"/>Activitat en aplicacions de Gemini<ph name="END_LINK_GAA"/></translation>
+<translation id="4267590181863312380">Per accedir a l'historial dels teus altres dispositius, inicia la sessió i sincronitza l'historial. També obtindràs les contrasenyes i altres dades en tots els teus dispositius. Pots aturar la sincronització en qualsevol moment a la configuració. És possible que Growser personalitzi la Cerca i altres serveis en funció del teu historial.</translation>
+<translation id="5889251770650310375">Per accedir a l'historial dels teus altres dispositius, verifica la teva identitat i sincronitza l'historial i les pestanyes. Pots aturar la sincronització en qualsevol moment a la configuració. És possible que Growser personalitzi la Cerca i altres serveis en funció del teu historial.</translation>
+<translation id="2541474152868747095">Per accedir a l'historial dels teus altres dispositius, verifica la teva identitat. Pots aturar la sincronització en qualsevol moment a la configuració. És possible que Growser personalitzi la Cerca i altres serveis en funció del teu historial.</translation>
+<translation id="4260407128682690669">Per accedir a l'historial dels teus altres dispositius, sincronitza l'historial i les pestanyes amb <ph name="ACCOUNT_EMAIL"/>. Pots aturar la sincronització en qualsevol moment a la configuració. És possible que Growser personalitzi la Cerca i altres serveis en funció del teu historial.</translation>
+<translation id="611018310643025551">Les teves cerques, les millors coincidències i el contingut de les seves pàgines s'envien a Growser i és possible que els revisors humans els vegin per millorar aquesta funció.</translation>
+<translation id="1987486584747170374">Les teves cerques, les millors coincidències i el contingut de les pàgines associades s'envien a Growser. Els revisors humans no utilitzaran aquestes dades per millorar la IA. La teva organització pot canviar aquestes opcions de configuració en qualsevol moment.</translation>
+<translation id="2461080251012814077">Les pestanyes que suprimeixis de l'historial de Growser es continuaran mostrant a les taules de comparació</translation>
+<translation id="7395776876928503485">L'administrador pot fer canvis al perfil i al navegador de manera remota, analitzar informació sobre el navegador mitjançant informes i dur a terme altres tasques necessàries. És possible que l'activitat d'aquest dispositiu també es gestioni fora de Growser. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Cap empresa ni cap altra organització no gestiona aquest navegador. És possible que l'activitat d'aquest dispositiu es gestioni fora de Growser. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">El nom d'usuari del dispositiu i el nom d'usuari de Growser</translation>
+<translation id="9383261434423554">Més informació sobre Growser Enterprise Connectors</translation>
+<translation id="7998714759612158367">Quan s'afegeixen extensions a Growser, les dades rellevants sobre aquestes extensions s'envien a tercers perquè les analitzin i és possible que el teu administrador les vegi. Les dades inclouen informació sobre les extensions, com ara el nom, l'hora d'instal·lació i la font d'instal·lació, així com l'activitat associada a aquestes extensions (per exemple, canviar de pestanya, contactar amb llocs web o accedir a les galetes). Aquestes dades es recullen per a les extensions instal·lades des de Web Store i fora de la botiga.</translation>
+<translation id="3521646565402740725">Connectors de Growser Enterprise</translation>
+<translation id="7942345451754009257">L'administrador ha activat Growser Enterprise Connectors al navegador. Aquests connectors tenen accés a algunes de les teves dades.</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/> ha activat Growser Enterprise Connectors al navegador. Aquests connectors tenen accés a algunes de les teves dades.</translation>
+<translation id="3864343340250325558">Quan Growser marca esdeveniments de seguretat, se n'envien les dades rellevants a l'administrador. Per exemple, URL de pàgines que visites a Growser, URL de pàgines de les quals has copiat dades, noms o metadades de fitxers, adreces IP, bloquejos de navegadors o de pestanyes, i el nom d'usuari que fas servir per iniciar la sessió en aplicacions web, al dispositiu i a Growser.</translation>
+<translation id="1979029506107883830">Growser Enterprise Core et permet gestionar les polítiques, les aplicacions i les extensions del navegador des del núvol</translation>
+<translation id="84905717630920469">Prova Growser Enterprise Core</translation>
+<translation id="1757745363789526465">Reinicia Growser</translation>
+<translation id="2537931901612099523">La resta de persones que utilitzin aquest dispositiu no veuran la teva activitat, de manera que pots navegar de manera més privada. Això no afectarà la manera com recullen les dades els llocs web que visites ni els serveis que utilitzen, incloent-hi Growser. Les baixades i les adreces d'interès sí que es desaran.</translation>
+<translation id="1410365862999780287">La resta de persones que utilitzin aquest dispositiu no veuran la teva activitat, de manera que pots navegar de manera més privada. Això no afectarà la manera com recullen les dades els llocs web que visites ni els serveis que utilitzen, incloent-hi Growser. Les baixades, les adreces d'interès i els elements de la llista de lectura sí que es desaran.</translation>
+<translation id="7087257419919340685">Growser <ph name="BEGIN_EMPHASIS"/>no desarà<ph name="END_EMPHASIS"/>:
+          <ph name="BEGIN_LIST"/>
+            <ph name="LIST_ITEM"/>El teu historial de navegació
+            <ph name="LIST_ITEM"/>Les galetes i les dades de llocs web
+            <ph name="LIST_ITEM"/>La informació introduïda en formularis
+          <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Suprimeix l'historial de navegació, les galetes, la memòria cau i altres dades a la configuració de Growser</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>; prem Tab i després Retorn per suprimir l'historial de navegació, les galetes, la memòria cau i altres dades a la configuració de Growser</translation>
+<translation id="8841351289024215412">Botó Suprimeix les dades de navegació: activa'l per suprimir l'historial de navegació, les galetes, la memòria cau i altres dades a la configuració de Growser</translation>
+<translation id="5085944396348027753">Consulta i gestiona les teves contrasenyes a la configuració de Growser</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>; prem Tab i després Retorn per veure i gestionar les contrasenyes a la configuració de Growser</translation>
+<translation id="3071294016974329065">Botó Gestiona les contrasenyes: activa'l per veure i gestionar les teves contrasenyes a la configuració de Growser</translation>
+<translation id="3031527126657836806">Gestiona la informació dels pagaments i de les targetes de crèdit a la configuració de Growser</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>; prem Tab i després Retorn per gestionar la informació dels pagaments i de les targetes de crèdit a la configuració de Growser</translation>
+<translation id="7338080394311291541">Botó Gestiona les formes de pagament: activa'l per gestionar la informació dels pagaments i de les targetes de crèdit a la configuració de Growser</translation>
+<translation id="561165882404867731">Tradueix aquesta pàgina amb el Traductor de Growser</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>; prem Tab i després Retorn per traduir aquesta pàgina amb el Traductor de Growser</translation>
+<translation id="8781278378794969337">Botó Tradueix la pàgina: activa'l per traduir aquesta pàgina amb el Traductor de Growser</translation>
+<translation id="6560728661781075049">Actualitza Growser</translation>
+<translation id="5749239053568461167">Actualitza Growser des de la configuració de Growser</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>; prem Tab i després Retorn per actualitzar Growser des de la configuració de Growser</translation>
+<translation id="1957844396300023214">Botó Actualitza Growser: activa'l per actualitzar Growser des de la configuració de Growser</translation>
+<translation id="6924344322157830957">Executa una comprovació de seguretat a la configuració de Growser</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per executar la comprovació de seguretat a la configuració de Growser</translation>
+<translation id="2217308317357494419">Botó Executa la comprovació de seguretat de Growser: activa'l per executar la comprovació de seguretat a la configuració de Growser</translation>
+<translation id="555731368593399620">Ves a la comprovació de seguretat de Growser</translation>
+<translation id="1022622918438880634">Ves a la pàgina de comprovació de seguretat de Growser a la configuració</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Prem Tab i després Retorn per anar a la pàgina de comprovació de seguretat de Growser a la configuració.</translation>
+<translation id="4573592640621800816">Botó Ves a la comprovació de seguretat de Growser. Activa'l per visitar la pàgina de comprovació de seguretat de Growser a la configuració.</translation>
+<translation id="711408602663662681">Gestiona Navegació segura i altres opcions de la configuració de Growser</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per gestionar Navegació segura i altres opcions de la configuració de Growser</translation>
+<translation id="8147674953957429172">Botó Gestiona la configuració de seguretat: activa'l per gestionar Navegació segura i altres opcions de la configuració de Growser</translation>
+<translation id="123941427300345384">Gestiona les preferències de galetes a la configuració de Growser</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prem Tab i després Retorn per gestionar les preferències de galetes a la configuració de Growser</translation>
+<translation id="185317221836385090">Botó Gestiona les galetes: activa'l per gestionar les preferències de galetes a la configuració de Growser</translation>
+<translation id="1824417970962955294">Afegeix i gestiona adreces a la configuració de Growser</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prem Tab i després Retorn per afegir i gestionar adreces a la configuració de Growser</translation>
+<translation id="2805189921443465815">Botó Gestiona les adreces: activa'l per afegir i gestionar adreces a la configuració de Growser</translation>
+<translation id="5592576649770969570">Gestiona la informació que sincronitzes a la configuració de Growser</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per gestionar la informació que sincronitzes a la configuració de Growser</translation>
+<translation id="4269937126213032056">Botó Gestiona la sincronització: activa'l per gestionar quina informació sincronitzes a la configuració de Growser</translation>
+<translation id="8766514807385279339">Gestiona quina informació de Growser deses al teu Compte de Growser</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>; prem Tab i després Retorn per gestionar la informació de Growser que deses al teu Compte de Growser.</translation>
+<translation id="3256302414991866158">Botó Gestiona les dades del teu compte; activa'l per gestionar quina informació de Growser deses al teu Compte de Growser.</translation>
+<translation id="4365583497146730170">Gestiona els permisos i les dades emmagatzemades als llocs web des de la configuració de Growser</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, prem Tab i després Retorn per gestionar els permisos i les dades emmagatzemades als llocs web des de la configuració de Growser</translation>
+<translation id="1429889589220926820">Botó Gestiona la configuració del lloc web: activa'l per gestionar els permisos i les dades emmagatzemades als llocs web des de la configuració de Growser</translation>
+<translation id="6881240511396774766">Crea un document de Growser ràpidament</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per crear un document de Growser ràpidament</translation>
+<translation id="2925454999967523701">Botó Crea un document: activa'l per crear ràpidament un document nou de Growser</translation>
+<translation id="8075736640322370409">Crea un full de càlcul de Growser ràpidament</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per crear un full de càlcul de Growser ràpidament</translation>
+<translation id="3150889484970506196">Botó Crea un full de càlcul: activa'l per crear ràpidament un full de càlcul nou de Growser</translation>
+<translation id="6971439137020188025">Crea una presentació ràpidament a Presentacions de Growser</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per crear una presentació ràpidament a Presentacions de Growser</translation>
+<translation id="8768225988514678921">Botó Crea una presentació: activa'l per crear ràpidament una presentació nova de Growser a Presentacions</translation>
+<translation id="7582602800368606489">Crea un esdeveniment a Google Calendar ràpidament</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per crear un esdeveniment ràpidament a Google Calendar</translation>
+<translation id="2009942480257059311">Botó Crea un esdeveniment: activa'l per crear ràpidament un esdeveniment nou a Google Calendar</translation>
+<translation id="1269516672602708785">Crea un lloc web a Growser Sites ràpidament</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per crear un lloc web a Growser Sites ràpidament</translation>
+<translation id="3698629142018988477">Botó Crea un lloc web: activa'l per crear un lloc web ràpidament a Growser Sites</translation>
+<translation id="4854853140771946034">Crea una nota nova a Growser Keep ràpidament</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per crear una nota ràpidament a Growser Keep</translation>
+<translation id="5488590678320979185">Botó Crea una nota: activa'l per crear una nota nova ràpidament a Growser Keep</translation>
+<translation id="7734285854693414638">Crea un formulari a Formularis de Growser ràpidament</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per crear un formulari ràpidament a Formularis de Growser</translation>
+<translation id="573555826359077410">Botó Crea un formulari: activa'l per crear ràpidament un formulari nou a Formularis de Growser</translation>
+<translation id="7910437794853634516">Mostra consells per a Growser</translation>
+<translation id="3521214483675189046">Més informació sobre les funcions de Growser</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per obtenir informació sobre les funcions de Growser</translation>
+<translation id="4260829339448158187">Botó Mostra consells per a Growser: activa'l per obtenir informació sobre les funcions de Growser</translation>
+<translation id="8694710517222056538">Gestiona el compte de Growser</translation>
+<translation id="6587259514551810029">Gestiona la teva informació, privadesa i seguretat al Compte de Growser</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per gestionar la teva informació, privadesa i seguretat al teu Compte de Growser</translation>
+<translation id="7027078594246193839">Botó Gestiona el Compte de Growser: activa'l per gestionar la teva informació, la privadesa i la seguretat al teu Compte de Growser</translation>
+<translation id="643051589346665201">Canvia la contrasenya de Growser</translation>
+<translation id="7075427536109560520">Canvia la contrasenya del teu Compte de Growser.</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per canviar la contrasenya del teu Compte de Growser</translation>
+<translation id="3236176349246489091">Botó Canvia la contrasenya de Growser: activa'l per canviar la contrasenya del teu Compte de Growser</translation>
+<translation id="4573751006789325585">Juga al joc del dinosaure de Growser</translation>
+<translation id="1461337831834704527">Juga al joc del dinosaure de Growser</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per jugar al joc del dinosaure de Growser</translation>
+<translation id="3493625910132223088">Botó Juga al joc El dinosaure de Growser: activa'l per jugar al joc del dinosaure de Growser</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per cercar el teu dispositiu al Compte de Growser</translation>
+<translation id="8109063930676038426">Botó Troba el meu dispositiu: activa'l per anar a Troba el meu dispositiu al Compte de Growser</translation>
+<translation id="163710751542270335">Gestiona la configuració de privadesa del Compte de Growser</translation>
+<translation id="3269729253658419180">Gestiona la configuració de privadesa de Growser al teu Compte de Growser</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per gestionar la configuració de privadesa del teu Compte de Growser</translation>
+<translation id="970931323129831346">Botó Gestiona la configuració de privadesa de Growser: activa'l per visitar la configuració de privadesa del teu Compte de Growser</translation>
+<translation id="498856326289655361">Gestiona la configuració de Growser</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per gestionar la configuració de Growser</translation>
+<translation id="1592236556980370094">Botó Gestiona la configuració de Growser: activa'l per visitar la configuració de Growser</translation>
+<translation id="2480781891721036554">Gestiona els fitxers que has baixat a Growser</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per gestionar els fitxers que has baixat a Growser</translation>
+<translation id="8786654106588913377">Botó Gestiona les baixades a Growser: activa'l per gestionar els fitxers que has baixat a Growser</translation>
+<translation id="8320175841857324841">Mostra l'historial de Growser</translation>
+<translation id="179012966915448796">Consulta i gestiona l'historial de navegació a la configuració de Growser</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per veure l'historial de navegació a Growser</translation>
+<translation id="7891862848641775440">Botó Mostra l'historial de Growser: activa'l per veure i gestionar l'historial de navegació a la configuració de Growser</translation>
+<translation id="1545741848376005386">Personalitza les eines d'accessibilitat a la configuració de Growser</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per personalitzar les eines d'accessibilitat a la configuració de Growser</translation>
+<translation id="1350935235605927980">Botó Gestiona la configuració d'accessibilitat: activa'l per personalitzar les eines d'accessibilitat a la configuració de Growser</translation>
+<translation id="1937771495497081508">Personalitza la mida i els tipus de lletra a Growser</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per personalitzar la mida i els tipus de lletra a Growser</translation>
+<translation id="8183964669401154956">Botó Personalitza els tipus de lletra a Growser: activa'l per personalitzar les fonts i els cossos de les fonts a Growser</translation>
+<translation id="6868193750403948178">Personalitza Growser</translation>
+<translation id="2746936074954064976">Botó Personalitza Growser: activa'l per personalitzar l'aspecte del navegador</translation>
+<translation id="8223358973996562559">Estableix Growser com a navegador predeterminat</translation>
+<translation id="113548419005571036">Estableix Growser com a navegador predeterminat del sistema</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Prem Tab i, després, Retorn per establir Growser com a navegador predeterminat del sistema.</translation>
+<translation id="6783715802269207395">Botó Estableix Growser com a navegador predeterminat: activa'l per establir Growser com a navegador predeterminat del sistema</translation>
+<translation id="8076157978023662935">Estableix Growser com a navegador predeterminat</translation>
+<translation id="7026203586041411100">Estableix Growser com a navegador predeterminat del sistema a la configuració d'iOS</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i, a continuació, Retorn per establir Growser com a navegador predeterminat del sistema a la configuració d'iOS.</translation>
+<translation id="29533193241299316">Botó per establir Growser com a navegador predeterminat: prem Retorn per establir Growser com a navegador predeterminat del sistema a la configuració d'iOS</translation>
+<translation id="2461514655528532981">Executa la comprovació de seguretat de Growser</translation>
+<translation id="9113214967104134276">Mostra l'historial de Growser</translation>
+<translation id="943522416815463637">Juga al joc El dinosaure de Growser</translation>
+<translation id="7602868996817972616">Pregunta a Growser sobre aquesta pàgina</translation>
+<translation id="161612500287664753">Pregunta a la Cerca de Growser sobre aquesta pàgina</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Prem Retorn per preguntar a Growser sobre aquesta pàgina.</translation>
+<translation id="5630981295558454585">Botó Pregunta a Growser sobre aquesta pàgina. Activa'l per preguntar a Growser sobre aquesta pàgina.</translation>
+<translation id="6019118530636932154">Growser Apps Script</translation>
+<translation id="6437647869369934905">Dibuixos de Growser</translation>
+<translation id="1875512691959384712">Formularis de Growser</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser Sites</translation>
+<translation id="1521655867290435174">Fulls de càlcul de Growser</translation>
+<translation id="467809019005607715">Presentacions de Growser</translation>
+<translation id="7510585715716175915">Reprèn el recorregut per veure activitat rellevant a l'historial de Growser</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>: prem Tab i després Retorn per reprendre el recorregut i veure activitat rellevant a l'historial de Growser</translation>
+<translation id="3714978095030396658">Botó Reprèn el recorregut: prem Retorn per reprendre el recorregut i veure activitat rellevant a l'historial de Growser</translation>
+<translation id="9041241404793255081">Funció: consell de Growser. Etiqueta d'accessibilitat: <ph name="CHROME_TIP"/>.</translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>: prem Tab i després Retorn per ignorar el consell de Growser.</translation>
+<translation id="7432463754469271865">Botó per ignorar el consell de Growser, prem Retorn per ignorar-lo, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Botó per ignorar el consell de Growser, prem Retorn per ignorar-lo</translation>
+<translation id="7571813784389228510">Mode IA de Growser</translation>
+<translation id="3415471717466570460">Les teves cerques, les millors coincidències i el contingut de les pàgines associades s'envien a Growser i és possible que els revisors humans els vegin per millorar aquesta funció. Aquesta funció és experimental i no sempre l'encertarà.</translation>
+<translation id="9103366036378878818">Enllaç Consell de Growser. Prem Retorn per obrir <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/>.</translation>
+<translation id="2097698842685899280">Brave ha detectat detalls que són habituals en llocs web associats a la pesca de credencials, al programari maliciós o a les estafes. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Growser ha simplificat aquesta pàgina perquè sigui més fàcil de llegir. A més, ha recuperat la pàgina original amb una connexió segura.</translation>
+<translation id="542284143784575620">Growser ha simplificat aquesta pàgina perquè sigui més fàcil de llegir. A més, ha recuperat la pàgina original amb una connexió no segura.</translation>
+<translation id="5826875044227298275">Acabes d'introduir la contrasenya en un lloc web enganyós. Per protegir els teus comptes, Growser et recomana que comprovis les contrasenyes desades.</translation>
+<translation id="4397030659892816613">Per poder utilitzar la càmera, dona accés a Growser a la <ph name="LINK"/>.</translation>
+<translation id="8251369644700086563">Per poder utilitzar el micròfon, dona accés a Growser a la <ph name="LINK"/>.</translation>
+<translation id="6520686276106691991">Per poder utilitzar la teva ubicació, dona accés a Growser a la <ph name="LINK"/>.</translation>
+<translation id="1612024742222359811">Per poder utilitzar el teu porta-retalls, dona accés a Growser a la <ph name="LINK"/>.</translation>
+<translation id="3620727327079734151">Podries perdre l'accés al Compte de Growser. Growser et recomana que canviïs la contrasenya ara. Se't demanarà que iniciïs la sessió.</translation>
+<translation id="7891575721440765670">Growser et pot ajudar a protegir el Compte de Growser i a canviar la contrasenya.</translation>
+<translation id="1362419187647259443">Acabes d'introduir la contrasenya en un lloc web enganyós. Growser pot ajudar-te. Per canviar la contrasenya i notificar a Growser que el compte pot estar en perill, fes clic a Protegeix el compte.</translation>
+<translation id="4067282726741467091">Podries perdre l'accés al compte de la teva organització o ser víctima d'un robatori d'identitat. Growser et recomana que canviïs la contrasenya ara.</translation>
+<translation id="7872399623676350476">Podries perdre l'accés al compte de <ph name="ORG_NAME"/> o tenir problemes de suplantació d'identitat. Growser et recomana que canviïs la contrasenya ara.</translation>
+<translation id="5938866385061293322">Aquesta informació prové de llocs web independents de ressenyes, com ara Trustpilot, ScamAdviser, Growser i d'altres. Els resums es creen amb IA.</translation>
+<translation id="4452328064229197696">La contrasenya que acabes d'utilitzar s'ha trobat en una violació de les dades. Per protegir els teus comptes, el gestor de contrasenyes de Growser recomana que comprovis les contrasenyes desades.</translation>
+<translation id="7646681339175747202">La contrasenya que acabes d'utilitzar s'ha trobat en una violació de les dades. El gestor de contrasenyes de Growser et recomana que la canviïs ara.</translation>
+<translation id="5997247540087773573">La contrasenya que acabes d'utilitzar s'ha trobat en una violació de les dades. Per protegir els teus comptes, el gestor de contrasenyes de Growser recomana que la canviïs ara i que comprovis les contrasenyes desades.</translation>
+<translation id="6722165747660324971">Quan utilitzes una contrasenya, Growser t'avisa si s'ha publicat en línia. Quan ho fa, les teves contrasenyes i els teus noms d'usuari s'encripten perquè ningú no els pugui llegir (ni tan sols Growser).</translation>
+<translation id="1485314135034164137">Contrasenyes de Growser</translation>
+<translation id="7558556509649858677">Clau d'accés • El teu perfil de Growser</translation>
+<translation id="950926967802086924">Clau d'accés • Gestor de contrasenyes de Growser</translation>
+<translation id="6338645927051849741">Contrasenya • Gestor de contrasenyes de Growser</translation>
+<translation id="131993612023623286">Growser està provant d'emplenar la teva contrasenya a <ph name="APP_NAME"/>.</translation>
+<translation id="1833199389909527220">Growser està provant d'activar Windows Hello per emplenar contrasenyes.</translation>
+<translation id="643007953296382271">Growser està provant de desactivar Windows Hello per emplenar contrasenyes.</translation>
+<translation id="2739032725916431090">desa-la al teu Compte de Growser</translation>
+<translation id="2920528063654705391">Per utilitzar les contrasenyes i altres elements desats al teu Compte de Growser, verifica la teva identitat</translation>
+<translation id="3795624560191557077">Fa poc vas canviar una contrasenya que es va fer pública a causa d'una violació de les dades. Si tens problemes, el gestor de contrasenyes de Growser et pot ajudar a iniciar la sessió.</translation>
+<translation id="5748742097310495951">Les targetes i les adreces s'obtenen de Growser i del teu Compte de Growser (<ph name="ACCOUNT_EMAIL"/>). Pots gestionar-les des de <ph name="BEGIN_LINK"/>Configuració<ph name="END_LINK"/>.</translation>
+<translation id="6827399997598211909">Les targetes i les adreces s'obtenen de Growser. Pots gestionar-les des de <ph name="BEGIN_LINK"/>Configuració<ph name="END_LINK"/>.</translation>
+<translation id="7934414805353235750"><ph name="URL"/> vol reproduir contingut protegit. Growser verificarà la identitat del teu dispositiu.</translation>
+<translation id="7142561893113115357">No ens consta que aquest ordinador estigui gestionat per una empresa. Per tant, la política només pot instal·lar automàticament extensions allotjades a Growser Web Store. L'URL d'actualització de Growser Web Store és <ph name="CWS_UPDATE_URL"/>.</translation>
+<translation id="6272383483618007430">Growser Update</translation>
+<translation id="885730110891505394">Comparteix informació amb Growser</translation>
+<translation id="2867186026859663748">Aquesta política no es pot establir a nivell del perfil de Growser i s'ignorarà.</translation>
+<translation id="277370491433906876">Aquesta política s'ignora perquè l'usuari no està afiliat. Perquè s'apliqui aquesta política, el navegador i el perfil de Growser han d'estar gestionats per la mateixa organització a través de la consola d'administració.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core et proporciona una eina centralitzada per configurar polítiques del navegador des del núvol</translation>
+<translation id="4553855485042734119">Aquesta instància de Brave s'està executant amb marques de línia d'ordres definides manualment. Tingues en compte que les marques de línia d'ordres poden canviar en qualsevol moment i no tenen assistència tècnica.</translation>
+<translation id="3858407183625528544">Per motius de seguretat, la teva organització no permet reutilitzar contrasenyes a Growser. Les contrasenyes a Growser estan encriptades per protegir la privadesa de l'usuari.</translation>
+<translation id="6376948191860056592">Informació sobre com protegeix Growser les contrasenyes</translation>
+<translation id="59755378055907482">Growser et recomana que restableixis la contrasenya si l'has fet servir en altres llocs web.</translation>
+<translation id="2025231306371961337">Growser et recomana que restableixis la contrasenya per a <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> si l'has fet servir en altres llocs web.</translation>
+<translation id="3990414676738824170">Més informació sobre el teu motor de cerca a Growser</translation>
+<translation id="8152737631160961249">El teu motor de cerca a Growser</translation>
+<translation id="5178006823023208130">D'acord amb una llei de la teva regió, Growser et demana que triïs un motor de cerca predeterminat. Aquests motors de cerca són populars a la teva regió i es mostren en ordre aleatori.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>El motor de cerca predeterminat et permet fer cerques al web i proporciona les funcions de Growser<ph name="END_BOLD"/>, com ara la cerca des de la barra d'adreces i des d'imatges de pàgines web. Si el teu motor de cerca no admet una funció, és possible que no estigui disponible.</translation>
+<translation id="652920213589772275">Pots canviar el motor de cerca en qualsevol moment a la configuració de Growser.</translation>
+<translation id="5113257522679527347">Pots canviar el motor de cerca en qualsevol moment a la configuració de Brave. Si no veus el teu motor de cerca preferit, pots fer una cerca des del seu lloc web. Veuràs que apareix com a motor de cerca visitat recentment a la configuració de Brave i podràs establir-lo com a motor de cerca predeterminat.</translation>
+<translation id="2493969470983483123">Una aplicació impedeix que Growser es connecti de manera segura a aquest lloc web</translation>
+<translation id="463534029029027294">Per establir una connexió segura, el rellotge ha d'estar ben ajustat, perquè els certificats que els llocs web fan servir per identificar-se només són vàlids per a períodes de temps concrets. Com que el rellotge del dispositiu no està ben ajustat, Growser no pot verificar aquests certificats.</translation>
+<translation id="6824867187541740495"><ph name="SITE"/> utilitza normalment l'encriptació per protegir la vostra informació. En aquesta ocasió, quan Growser ha provat de connectar-se a <ph name="SITE"/>, el lloc web ha enviat credencials poc comunes i incorrectes. Pot ser que un atacant estigui provant de fer-se passar per <ph name="SITE"/> o que una pantalla d'inici de sessió a la xarxa Wi-Fi hagi interromput la connexió. En qualsevol cas, la vostra informació continua estant segura, perquè Growser ha aturat la connexió abans no s'intercanviés cap dada.</translation>
+<translation id="8465252529695749376">En aquest moment no podeu visitar <ph name="SITE"/> perquè el lloc web ha enviat credencials barrejades que Growser no pot processar. Els errors i els atacs de xarxa solen ser temporals, de manera que és probable que aquesta pàgina torni a funcionar més tard.</translation>
+<translation id="7320808063012439368">Els atacants del lloc web que has provat de visitar poden instal·lar programari nociu que et robi o suprimeixi dades com ara la contrasenya, fotos, missatges o números de targeta de crèdit. Growser et recomana que tornis a un lloc web segur. <ph name="BEGIN_LEARN_MORE_LINK"/>Més informació sobre aquest advertiment<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Per protegir-te mentre navegues, Growser té funcions de seguretat integrades, com ara Navegació segura de Growser, que <ph name="BEGIN_LINK"/>recentment ha detectat programari maliciós<ph name="END_LINK"/> al lloc web que has provat de visitar.</translation>
+<translation id="1959001866257244765">Per ajudar a millorar la seguretat al web per a tothom, envia a Growser <ph name="BEGIN_WHITEPAPER_LINK"/>URL d'algunes pàgines que visites, informació limitada del sistema i part del contingut de les pàgines<ph name="END_WHITEPAPER_LINK"/>. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Política de privadesa<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Activa la protecció millorada<ph name="END_ENHANCED_PROTECTION_LINK"/> per obtenir el màxim nivell de seguretat de Growser</translation>
+<translation id="9158927344907916875">Els atacants del lloc web que has provat de visitar poden enganyar-te perquè instal·lis programari nociu que afecti la manera com navegues. Per exemple, poden canviar-te la pàgina d'inici o mostrar-te anuncis addicionals als llocs web que visites. Growser et recomana que tornis a un lloc web segur per evitar danys. <ph name="BEGIN_LEARN_MORE_LINK"/>Més informació sobre aquest advertiment<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Per protegir-te mentre navegues, Growser té funcions de seguretat integrades, com ara Navegació segura de Growser, que <ph name="BEGIN_LINK"/>ha detectat programari nociu<ph name="END_LINK"/> al lloc web que has provat de visitar.</translation>
+<translation id="6123391640338102428">Els atacants del lloc web que has provat de visitar poden enganyar-te perquè instal·lis programari o perquè revelis dades com ara la contrasenya, el telèfon o números de targeta de crèdit. Growser et recomana que tornis a un lloc web segur. <ph name="BEGIN_LEARN_MORE_LINK"/>Més informació sobre aquest advertiment<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Per protegir-te mentre navegues, Growser té funcions de seguretat integrades, com ara Navegació segura de Growser, que <ph name="BEGIN_LINK"/>recentment ha detectat pesca de credencials<ph name="END_LINK"/> al lloc web que has provat de visitar. Els llocs web de pesca de credencials es fan passar per altres llocs web per enganyar-te.<ph name="NEW_LINE"/>De vegades, alguns atacants poden posar en perill llocs web que acostumen a ser segurs. Si creus que hi ha hagut un error i que aquest lloc web no suposa cap perill, <ph name="BEGIN_ERROR_LINK"/>fes-nos-ho saber<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;Pas 1: inicia la sessió al portal&lt;/h4&gt;
+    &lt;p&gt;Les xarxes Wi-Fi de llocs com ara cafeteries o aeroports requereixen que iniciïs la sessió. Per veure la pàgina d'inici de sessió, ves a una pàgina que faci servir &lt;code&gt;http://&lt;/code&gt;.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;Ves a qualsevol lloc web que comenci per &lt;code&gt;http://&lt;/code&gt;, com ara &lt;a href="http://example.com" target="_blank" rel="noopener noreferrer"&gt;http://example.com&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;A la pàgina d'inici de sessió que s'obrirà, inicia la sessió per utilitzar Internet.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;Pas 2: obre la pàgina en mode d'incògnit (només a l'ordinador)&lt;/h4&gt;
+    &lt;p&gt;Obre la pàgina que estaves visitant en una finestra d'incògnit.&lt;/p&gt;
+    &lt;p&gt;Si la pàgina s'obre, significa que alguna extensió de Growser no funciona bé. Per solucionar l'error, desactiva l'extensió.&lt;/p&gt;
+    &lt;h4&gt;Pas 3: actualitza el sistema operatiu&lt;/h4&gt;
+    &lt;p&gt;Comproveu que el dispositiu estigui actualitzat.&lt;/p&gt;
+    &lt;h4&gt;Pas 4: desactiva l'antivirus temporalment&lt;/h4&gt;
+    &lt;p&gt;Aquest error es mostra si tens un programari antivirus amb "protecció d'HTTPS" o "anàlisi d'HTTPS" que interfereix amb les funcions de seguretat de Growser.&lt;/p&gt;
+    &lt;p&gt;Per solucionar el problema, desactiva el programari antivirus. Si la pàgina funciona en desactivar aquest programari, desactiva'l per consultar llocs web segurs.&lt;/p&gt;
+    &lt;p&gt;Recorda que has de tornar a activar el programari antivirus quan hagis acabat.&lt;/p&gt;
+    &lt;h4&gt;Pas 5: obté més ajuda&lt;/h4&gt;
+    &lt;p&gt;Si encara veus l'error, contacta amb el propietari del lloc web.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">"L'ordinador conté programari que impedeix que Growser es connecti de manera segura al web" (només en ordinadors Windows)</translation>
+<translation id="5693013509590251567">Aquest problema es produeix a causa d'un certificat que tu o una altra persona heu instal·lat al dispositiu. Se sap que aquest certificat s'utilitza per supervisar i interceptar xarxes, i Growser no hi confia. Tot i que hi ha casos en què és legítim dur a terme una supervisió, per exemple, en el cas d'una empresa o d'un centre educatiu, Growser vol assegurar-se que estiguis al cas d'aquesta situació, encara que no la puguis evitar. La supervisió es pot produir en qualsevol navegador o aplicació que accedeixi al web.</translation>
+<translation id="6319672966240656136">Aquest lloc web es mantindrà bloquejat perquè ets en el programa Protecció avançada de Growser. <ph name="BEGIN_LEARN_MORE_LINK"/>Més informació sobre aquest advertiment<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">Normalment et connectes a aquest lloc web de manera segura, però aquesta vegada Growser no ha pogut utilitzar una connexió segura. És possible que un atacant estigui provant d'escoltar clandestinament o de modificar la connexió de xarxa. <ph name="BEGIN_LEARN_MORE_LINK"/>Més informació sobre aquest advertiment<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">Normalment et connectes a llocs web de manera segura, però aquesta vegada Growser no ha pogut utilitzar una connexió segura. És possible que un atacant estigui provant d'escoltar clandestinament o de modificar la connexió de xarxa. <ph name="BEGIN_LEARN_MORE_LINK"/>Més informació sobre aquest advertiment<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">Normalment et connectes a aquest lloc web de manera segura, però aquesta vegada Growser no ha pogut utilitzar una connexió segura. És possible que un atacant estigui provant d'espiar o de modificar la connexió a la xarxa. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">Normalment et connectes a llocs web de manera segura, però aquesta vegada Growser no ha pogut utilitzar una connexió segura. És possible que un atacant estigui provant d'espiar o de modificar la connexió a la xarxa. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Estàs veient aquest advertiment perquè aquest lloc web no admet HTTPS i estàs subjecte al programa Protecció avançada de Growser. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave acaba de marcar un lloc web que estaves provant de visitar. Completa una enquesta d'un minut per ajudar-nos a millorar aquests advertiments</translation>
+<translation id="3665741528710985669">S'ha enviat a Brave al teu <ph name="DEVICE_NAME"/></translation>
+<translation id="2756090547781225493">S'ha enviat a Brave al teu <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/>.</translation>
+<translation id="3087912139479831463">Ja s'ha enviat a Growser al teu <ph name="DEVICE_NAME"/></translation>
+<translation id="2665815858706570232">Quan l'opció estigui activada, Growser compartirà les pestanyes rellevants d'aquesta finestra per ajudar-te a obtenir respostes més pertinents.</translation>
+<translation id="4585120639592593231">Growser enviarà automàticament a Growser el contingut de la pàgina i els URL de les pestanyes obertes que puguin ser rellevants per a la teva pregunta a fi d'obtenir respostes més personalitzades. Growser només compartirà les pestanyes de la finestra en què estàs treballant.</translation>
+<translation id="5000497292978544380">Mode IA de la Cerca de Growser</translation>
+<translation id="4946528282746936957">Growser compartirà les pestanyes obertes rellevants de cada fil de discussió nou per obtenir millors respostes. Obtén més informació sobre</translation>
+<translation id="8988391141035210442">Aquest servidor no ha pogut comprovar que sigui <ph name="DOMAIN"/> perquè utilitza un certificat de seguretat que Growser o la configuració del sistema per a l'encriptació del trànsit web no consideren de confiança. Això pot ser a causa d'una configuració incorrecta o d'un atacant que ha interceptat la teva connexió. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Mostra el certificat<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">Per utilitzar YouTube, continua al teu Compte de Growser</translation>
+<translation id="2269854356696928455">Per demanar veure aquest contingut, continua al teu Compte de Growser</translation>
+<translation id="5611620894475877872">Encripta contrasenyes sincronitzades amb el teu Compte de Growser</translation>
+<translation id="7297228218361240128">Desa informació de les pàgines que consultes a Google Wallet</translation>
+<translation id="1829026591231985685">com pots desar informació a Google Wallet a la configuració</translation>
+<translation id="7927046851848613453">Desa entrades, esdeveniments i altra informació de les pàgines que consultes, no només dels formularis que emplenes. Després, accedeix ràpidament als teus passis, com ara entrades per a esdeveniments i targetes de fidelització. La informació desada es pot mostrar als teus dispositius i en tots els productes de Growser.</translation>
+<translation id="4080668349181235831">Per oferir suggeriments i millorar aquesta funció, l'URL i el contingut complet de la pàgina del lloc web que visites es comparteixen amb Growser. Obtén més informació sobre <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/>.</translation>
+<translation id="5038265118346577744">Inicia la sessió a Growser per compartir grups de pestanyes, unir-t'hi i col·laborar en idees</translation>
+<translation id="3109033858283726964">Inicia la sessió a Growser</translation>
+<translation id="1823139539047733938">Growser no està actualitzat</translation>
+<translation id="4837402451637115574">Per compartir grups de pestanyes, actualitza Growser</translation>
+<translation id="3835090069800247534">Per unir-te a aquest grup de pestanyes, actualitza Growser</translation>
+<translation id="5796903668018420114">Per continuar utilitzant els grups de pestanyes compartits, actualitza Growser</translation>
+<translation id="7224231921984484941">Per compartir grups de pestanyes, unir-t'hi i col·laborar-hi, obre la configuració i activa l'opció Permet l'inici de sessió a Growser</translation>
+<translation id="64301400193488735">Per compartir grups de pestanyes o unir-t'hi, has de poder iniciar la sessió a Growser</translation>
+<translation id="6517371327636513767">Per compartir pestanyes i col·laborar amb altres persones, has de poder iniciar la sessió a Growser</translation>
+<translation id="8040715633918382311">Si la teva organització limita el que pots desar al teu Compte de Growser, no podràs compartir grups de pestanyes ni unir-t'hi</translation>
+<translation id="5748088712770284646">Si la teva organització limita el que pots desar al teu Compte de Growser, no podràs compartir pestanyes ni col·laborar amb altres persones</translation>
+<translation id="1973662400109107505">Actualitza Growser per continuar utilitzant els teus grups de pestanyes compartits</translation>
+<translation id="540513565870577298">Si selecciones o ignores un suggeriment, Growser s'adaptarà per assegurar-se que només vegis el que és rellevant per a tu</translation>
+<translation id="6381429959346598968">Growser processa els títols i els URL de les pàgines en un espai privat al núvol</translation>
+<translation id="3475470536954895815">Growser processa els títols i els URL de les pàgines al núvol</translation>
+<translation id="583085621576779299">Si desactives els suggeriments, és possible que els títols i els URL de les pestanyes es continuïn processant per a altres funcions de Growser. Pots gestionar l'accés del navegador a aquestes dades a la</translation>
+<translation id="913846191326613072">Quan es comparteixen pestanyes, el contingut i els URL s'envien a Growser.</translation>
+<translation id="4827675678516992122">No s'ha pogut connectar</translation>
+<translation id="6749473226660745022">Fotos</translation>
+<translation id="2366554533468315977">Historial de preus al web per a aquesta opció</translation>
+<translation id="5199729219167945352">Experiments</translation>
+<translation id="8413126021676339697">Mostra l'historial complet</translation>
+<translation id="6302661287897119265">Filtre</translation>
+<translation id="2956070106555335453">Resum</translation>
+<translation id="4759238208242260848">Descàrregues</translation>
+<translation id="7366909168761621528">Dades de navegació</translation>
+<translation id="1898804291554630487">Pregunta sobre aquesta pàgina</translation>
+<translation id="6231782223312638214">Suggerida</translation>
 </translationbundle>

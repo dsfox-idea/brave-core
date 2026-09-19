@@ -11346,4 +11346,456 @@ To lahko vključuje podatke o nameščeni programski opremi, datotekah, brskalni
 <translation id="954749761428814584">Jezik in način vnosa</translation>
 <translation id="960987915827980018">Še približno ena ura</translation>
 <translation id="995420352808264005">Izbira vrste včlanitve naprave</translation>
+<translation id="6681823034920334318">Če želite predvajati s kodo, vklopite nastavitve sinhronizacije v brskalniku Growser.</translation>
+<translation id="2515496577979954543">Odprite Growser</translation>
+<translation id="5924575374764114159"><ph name="TASK_TITLE"/>: Gemini je dokončal vaše opravilo. Ogledate si ga lahko v Chromu</translation>
+<translation id="3721794228264322796">Zapri Geminija v Chromu</translation>
+<translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini v Chromu</translation>
+<translation id="1975450474853317621">Odpri v brskalniku Growser</translation>
+<translation id="8516824290867275572">Vaš račun nima dostopa do Geminija v Chromu</translation>
+<translation id="1649234713894562345">Brave omogočajo odprtokodni projekt Brave in druga <ph name="BEGIN_HIGHLIGHT"/>odprtokodna<ph name="END_HIGHLIGHT"/> programska oprema.</translation>
+<translation id="870536819717176711">Ko se odločite, da boste trenutni zavihek delili z Geminijem, se vsebina, predstavnost in URL zavihka v celoti pošljejo Googlu.</translation>
+<translation id="1130866111814048607">Ko se zavihki delijo, se njihova vsebina strani, predstavnost in URL-ji pošljejo Googlu in se lahko pregledajo zaradi varnosti.</translation>
+<translation id="7656790264713095385">Najprej vklopite samodejno brskanje v Chromu za to napravo</translation>
+<translation id="8572003230388132401">Gemini Spark lahko samodejno brskanje v Chromu v tej napravi uporablja za interakcijo s spletnimi mesti in dokončanje opravil v vašem imenu. <ph name="LINK_BEGIN"/>Več o tem<ph name="LINK_END"/></translation>
+<translation id="2732482226802306268">Gemini Spark lahko samodejno brskanje v tej napravi uporablja samo, če je naprava aktivna in se Growser izvaja.</translation>
+<translation id="1982892581799327835">Kdor koli z dostopom do vašega agenta Gemini Spark lahko upravlja vaš brskalnik Growser.</translation>
+<translation id="6689939585896001516">Naj Growser brska za vas</translation>
+<translation id="640233545778658570">Gemini v Chromu uporablja samodejno brskanje za delo na vaših zavihkih in dokončanje opravil, ki mu jih dodelite. <ph name="LINK_BEGIN"/>Več o tem<ph name="LINK_END"/></translation>
+<translation id="2740842679402949230">Preberite več o samodejnem brskanju v Chromu</translation>
+<translation id="3570112771874223231">Vsebina strani in URL-ji, ki jih Gemini uporablja med opravilom, se delijo z Googlom in se lahko pregledajo zaradi varnosti.</translation>
+<translation id="2314508080153323869">Gemini v Chromu</translation>
+<translation id="1910632359330857071">Klepetajte z Geminijem v Chromu in med brskanjem prejmite odgovore, ključne poudarke in drugo</translation>
+<translation id="2483218699324586641">Uporabite <ph name="FOCUS_TOGGLE_HOTKEY"/> za odpiranje Geminija v Chromu</translation>
+<translation id="2353068771555482464">Spoznajte Geminija v Chromu</translation>
+<translation id="7545274281857327491">Izkoristite najboljše funkcije Googlove umetne inteligence. Za preprost dostop Geminija pripnite v orodno vrstico ali ga kadar koli odprite v Chromovem meniju.</translation>
+<translation id="8335336878672278597">Gemini v Chromu ni na voljo</translation>
+<translation id="570859258083183845">Gemini v Chromu se širi na različne lokacije, vendar ni na voljo povsod</translation>
+<translation id="96535553604365597">Prijava težave z Googlom Cast</translation>
+<translation id="4415611489406290344">Če želite predvajati, omogočite Chromu dostop v: <ph name="IDS_MEDIA_ROUTER_LOCAL_DISCOVERY_PERMISSION_REJECTED_LINK"/> &gt; Lokalno omrežje &gt; Growser.</translation>
+<translation id="8492960370534528742">Povratne informacije za Growser Cast</translation>
+<translation id="2263679799334060788">Hvala za povratne informacije, saj lahko z njimi izboljšamo Growser Cast.
+    Če želite pomoč pri odpravljanju težav s predvajanjem, se obrnite na
+    <ph name="BEGIN_LINK"/>
+    center za pomoč<ph name="END_LINK"/>.</translation>
+<translation id="8376137163494131156">Povejte nam, kaj se dogaja z Googlom Cast.</translation>
+<translation id="7325065595154456783">Poleg podatkov, ki jih izberete zgoraj, so poslani tudi različica Chroma,
+    različica operacijskega sistema, nastavitve za Growser Cast, statistični podatki
+    o izvajanju zrcaljenja in diagnostični dnevniki komunikacijskih kanalov.
+    Te povratne informacije uporabljamo za diagnosticiranje težav in izboljšanje funkcije.
+    Če namerno ali nenamerno pošljete katere koli osebne podatke,
+    jih varujemo v skladu z našimi pravilniki o zasebnosti.
+    Če pošljete te povratne informacije, se strinjate,
+    da lahko Growser poslane informacije uporabi za izboljšanje katerega koli
+    svojega izdelka ali storitve.</translation>
+<translation id="3187556136478864255">Ali je napravo za predvajanje mogoče videti v
+    <ph name="BEGIN_LINK"/>
+    aplikaciji Growser Home<ph name="END_LINK"/>?</translation>
+<translation id="2984923316661218534">Prejmite ključe za dostop v tej napravi z Googlovim upraviteljem gesel</translation>
+<translation id="2364302372598204515">To ni račun Growser. Elementi, ki jih shranite v Growser, ne bodo na voljo v drugih napravah.</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Naročnina Brave</translation>
+<translation id="850632091665381275">Googlova naročnina</translation>
+<translation id="6710172959248731469">Nastavitve Googlovih storitev</translation>
+<translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 element je shranjen samo v tej napravi. Če ga želite uporabiti v drugih napravah, ga shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}one{{ITEM_COUNT} element je shranjen samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}two{{ITEM_COUNT} elementa sta shranjena samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}few{{ITEM_COUNT} elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}other{{ITEM_COUNT} elementov je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}}</translation>
+<translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 geslo je shranjeno samo v tej napravi. Če ga želite uporabiti v drugih napravah, ga shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}one{{PASSWORD_COUNT} geslo je shranjeno samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}two{{PASSWORD_COUNT} gesli sta shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}few{{PASSWORD_COUNT} gesla so shranjena samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}other{{PASSWORD_COUNT} gesel je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}}</translation>
+<translation id="3935056408011619616">{PASSWORD_COUNT,plural, =1{1 geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}one{{PASSWORD_COUNT} geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}two{{PASSWORD_COUNT} gesli in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}few{{PASSWORD_COUNT} gesla in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}other{{PASSWORD_COUNT} gesel in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}}</translation>
+<translation id="6848657745187836087">{BOOKMARK_COUNT,plural, =1{1 zaznamek je shranjen samo v tej napravi. Če ga želite uporabiti v drugih napravah, ga shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}one{{BOOKMARK_COUNT} zaznamek je shranjen samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}two{{BOOKMARK_COUNT} zaznamka sta shranjena samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}few{{BOOKMARK_COUNT} zaznamki so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}other{{BOOKMARK_COUNT} zaznamkov je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}}</translation>
+<translation id="3881919956473985635">{BOOKMARK_COUNT,plural, =1{1 geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}one{{BOOKMARK_COUNT} geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}two{{BOOKMARK_COUNT} gesli in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}few{{BOOKMARK_COUNT} gesla in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}other{{BOOKMARK_COUNT} gesel in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser. S tem boste počistili tudi vse dvojnike.}}</translation>
+<translation id="3539356398986380727">{ITEM_COUNT,plural, =1{1 element je shranjen samo v tej napravi. Če ga želite uporabiti v drugih napravah, ga shranite v računu Growser.}one{{ITEM_COUNT} element je shranjen samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}two{{ITEM_COUNT} elementa sta shranjena samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}few{{ITEM_COUNT} elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}other{{ITEM_COUNT} elementov je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}}</translation>
+<translation id="4445669475142869984">{PASSWORD_COUNT,plural, =1{1 geslo je shranjeno samo v tej napravi. Če ga želite uporabiti v drugih napravah, ga shranite v računu Growser.}one{{PASSWORD_COUNT} geslo je shranjeno samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}two{{PASSWORD_COUNT} gesli sta shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}few{{PASSWORD_COUNT} gesla so shranjena samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}other{{PASSWORD_COUNT} gesel je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}}</translation>
+<translation id="9033093025502840880">{PASSWORD_COUNT,plural, =1{1 geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}one{{PASSWORD_COUNT} geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}two{{PASSWORD_COUNT} gesli in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}few{{PASSWORD_COUNT} gesla in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}other{{PASSWORD_COUNT} gesel in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}}</translation>
+<translation id="5447840722445885686">{BOOKMARK_COUNT,plural, =1{1 zaznamek je shranjen samo v tej napravi. Če ga želite uporabiti v drugih napravah, ga shranite v računu Growser.}one{{BOOKMARK_COUNT} zaznamek je shranjen samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}two{{BOOKMARK_COUNT} zaznamka sta shranjena samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}few{{BOOKMARK_COUNT} zaznamki so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}other{{BOOKMARK_COUNT} zaznamkov je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}}</translation>
+<translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}one{{BOOKMARK_COUNT} geslo in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}two{{BOOKMARK_COUNT} gesli in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}few{{BOOKMARK_COUNT} gesla in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}other{{BOOKMARK_COUNT} gesel in drugi elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser.}}</translation>
+<translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 element je shranjen samo v tej napravi. Če ga želite uporabiti v drugih napravah, <ph name="BEGIN_LINK"/>ga shranite v računu Growser<ph name="END_LINK"/>.}one{{ITEM_COUNT} element je shranjen samo v tej napravi. Če jih želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>jih shranite v računu Growser<ph name="END_LINK"/>.}two{{ITEM_COUNT} elementa sta shranjena samo v tej napravi. Če ju želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>ju shranite v računu Growser<ph name="END_LINK"/>.}few{{ITEM_COUNT} elementi so shranjeni samo v tej napravi. Če jih želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>jih shranite v računu Growser<ph name="END_LINK"/>.}other{{ITEM_COUNT} elementov je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>jih shranite v računu Growser<ph name="END_LINK"/>.}}</translation>
+<translation id="8993421601514768334">Uporabite račun Growser ali ustvarite novega</translation>
+<translation id="1896353439080510710">Klepeti se pregledujejo in uporabljajo za izboljšanje Googlove umetne inteligence. Gemini je umetna inteligenca in se lahko zmoti. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Upravljate lahko dejavnost<ph name="END_LINK_MANAGE_ACTIVITY"/>, vključno s podatki o lokaciji. <ph name="BEGIN_LINK_LEARN_MORE"/>Preberite več o izbirah<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Klepeti se pregledujejo in uporabljajo za izboljšanje Googlove umetne inteligence. Gemini je umetna inteligenca in se lahko zmoti. Nekatera vsebina morda ni primerna za vse. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Upravljate lahko dejavnost<ph name="END_LINK_MANAGE_ACTIVITY"/>, vključno s podatki o lokaciji. <ph name="BEGIN_LINK_LEARN_MORE"/>Preberite več o izbirah<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Ta razširitev je shranjena v računu Growser, vendar se lahko izbrišejo vsi podatki, ki jih je shranila samo v tej napravi}one{Te razširitve so shranjene v računu Growser, vendar se lahko izbrišejo vsi podatki, ki so jih shranile samo v tej napravi}two{Te razširitve so shranjene v računu Growser, vendar se lahko izbrišejo vsi podatki, ki so jih shranile samo v tej napravi}few{Te razširitve so shranjene v računu Growser, vendar se lahko izbrišejo vsi podatki, ki so jih shranile samo v tej napravi}other{Te razširitve so shranjene v računu Growser, vendar se lahko izbrišejo vsi podatki, ki so jih shranile samo v tej napravi}}</translation>
+<translation id="3523789730715594198">Sinhronizacijo lahko kadar koli ustavite v nastavitvah. Growser lahko prilagodi Iskanje Growser in druge storitve glede na vašo zgodovino.</translation>
+<translation id="8231595707224857577">Vaša organizacija je izklopila shranjevanje zavihkov v računu Growser</translation>
+<translation id="1031540790849324993">Če želite uporabljati shranjena gesla, zaznamke in drugo v vseh svojih napravah, jih shranit v račun Growser</translation>
+<translation id="7044272971260038324">Če želite počistiti podvojene zaznamke, jih shranite v račun Growser</translation>
+<translation id="5106710135524113413">Ko ste prijavljeni, lahko v vseh napravah uporabljate zaznamke, razširitve in drugo, shranjeno v računu Growser</translation>
+<translation id="458475640392126897">Ko ste prijavljeni, lahko v vseh napravah uporabljate teme, nastavitve in drugo, shranjeno v računu Growser</translation>
+<translation id="8780123805589053431">Pridobivanje opisov slik iz Googla</translation>
+<translation id="8076549662907665888">Če slika nima koristnega opisa, ga bo Growser poskušal zagotoviti. Opisi se ustvarijo tako, da se slike pošljejo Googlu.</translation>
+<translation id="5216674789212441076">Samodejno prevaja samodejne podnapise. Podnapisi so poslani Googlu v prevod.</translation>
+<translation id="2955575198481587842">Barve za Growser</translation>
+<translation id="5000497292978544380">Način umetne inteligence v Iskanju Growser</translation>
+<translation id="377490226065453836">Podokna v Chromu</translation>
+<translation id="2955048943983973430">Povezane Googlove storitve</translation>
+<translation id="6214157047210274853">Uredi v Growser Denarnici</translation>
+<translation id="5831217499016131155">Growser Denarnica</translation>
+<translation id="5787582109651427233">Obiščite Growser Denarnico, če želite dodati ali upravljati <ph name="BEGIN_LINK_LOYALTY_CARDS"/>kartice zvestobe<ph name="END_LINK_LOYALTY_CARDS"/> ali <ph name="BEGIN_LINK_PAYMENT_METHODS"/>plačilna sredstva<ph name="END_LINK_PAYMENT_METHODS"/> v Googlu Pay.</translation>
+<translation id="3040435070100611531">Vaše kartice v Growser Denarnici</translation>
+<translation id="5829544019044013776">Vaša plačilna sredstva v Growser Denarnici</translation>
+<translation id="4140668600752387693">Ko se prijavite v račun Growser, se ta funkcija vklopi.</translation>
+<translation id="7297228218361240128">Shranjevanje podatkov v Growser Denarnico s strani, ki si jih ogledujete</translation>
+<translation id="4182182457914031017">Zaradi zagotavljanja predlogov in izboljšanja te funkcije se URL in celotna vsebina strani spletnega mesta, ki ga obiščete, delita z Googlom</translation>
+<translation id="808488435221187916">Vaši podatki so na voljo v Growser Denarnici v kateri koli napravi, v kateri ste prijavljeni</translation>
+<translation id="7501338159181931945">Ti ključi za dostop so v tem računalniku shranjeni v funkciji Windows Hello. Niso shranjeni v vašem računu Growser.</translation>
+<translation id="1921051356055149189">Urejanje v računu Growser</translation>
+<translation id="4498223799912841817">Odstrani iz Chroma</translation>
+<translation id="3346610836797971718">Želite domači naslov odstraniti iz samodejnega izpolnjevanja v Chromu?</translation>
+<translation id="6595367601483315266">Želite službeni naslov odstraniti iz samodejnega izpolnjevanja v Chromu?</translation>
+<translation id="3068798232942246848">Želite te podatke odstraniti iz samodejnega izpolnjevanja v Chromu?</translation>
+<translation id="4713283515261533452">Če želite izbrisati podatke brskanja samo iz te naprave, v računu Growser pa jih želite ohraniti, <ph name="BEGIN_LINK"/>se odjavite<ph name="END_LINK"/>.</translation>
+<translation id="6641004568837764720">Če želite izbrisati podatke brskanja iz vseh sinhroniziranih naprav in računa Growser, <ph name="BEGIN_LINK"/>odprite nastavitve sinhronizacije<ph name="END_LINK"/>.</translation>
+<translation id="7711557916951320264">Če želite izbrisati podatke brskanja iz vseh sinhroniziranih naprav in računa Growser, <ph name="BEGIN_LINK"/>vnesite geslo<ph name="END_LINK"/>.</translation>
+<translation id="5680951041809780964">Če želite izbrisati podatke brskanja iz vseh sinhroniziranih naprav in računa Growser, <ph name="BEGIN_LINK"/>se prijavite<ph name="END_LINK"/>.</translation>
+<translation id="908980466794178222"><ph name="BEGIN_LINK_SEARCH"/>Zgodovina iskanja<ph name="END_LINK_SEARCH"/> in <ph name="BEGIN_LINK_GOOGLE"/>druge oblike dejavnosti<ph name="END_LINK_GOOGLE"/> se morda shranjujejo v računu Growser, ko ste prijavljeni. Izbrišete jih lahko kadar koli.</translation>
+<translation id="1024884937839269099">Ko ste prijavljeni, se v računu Growser morda shranjujejo <ph name="BEGIN_LINK_GOOGLE"/>druge oblike dejavnosti<ph name="END_LINK_GOOGLE"/>. Izbrišete jih lahko kadar koli.</translation>
+<translation id="6533315466883598769">Uporaba Growser Prevajalnika</translation>
+<translation id="6010651352520077187">Če je ta možnost vklopljena, bo Growser Prevajalnik ponudil prevajanje spletnih mest v želeni jezik. Samodejno lahko prevaja tudi spletna mesta.</translation>
+<translation id="6873499199714317035">Če je ta možnost vklopljena, bo Brave Prevajalnik ponudil prevajanje spletnih mest in datotek PDF v želeni jezik. Samodejno lahko prevaja tudi spletna mesta.</translation>
+<translation id="5911030830365207728">Growser Prevajalnik</translation>
+<translation id="7458168200501453431">Uporablja isto preverjanje črkovanja, kot se uporablja v Iskanju Growser. Besedilo, ki ga vnesete v brskalniku, je poslano Googlu.</translation>
+<translation id="8972513834460200407">Pri skrbniku omrežja se prepričajte, da požarni zid ne blokira prenosov iz Googlovih strežnikov.</translation>
+<translation id="3407392651057365886">Več strani je vnaprej naloženih. Strani so morda vnaprej naložene prek Googlovih strežnikov, ko tako zahtevajo druga spletna mesta.</translation>
+<translation id="1965578266762387357">Ko prejmete pomoč za pisanje, se URL strani, vsebina in besedilo pošljejo Googlu. Ne vnašajte osebnih podatkov (kot so zdravstveni ali finančni podatki)</translation>
+<translation id="3281851196103181918">Spletno mesto, ki ga obiščete, lahko v Chromu shrani majhno količino podatkov, predvsem za potrditev, da niste bot.</translation>
+<translation id="7321946347180923218">Med brskanjem se lahko spletna mesta obrnejo na Growser in pri prejšnjem spletnem mestu, ki ste ga obiskali, potrdijo, da ste verjetno resnična oseba.</translation>
+<translation id="3510488868237982080">Preberite več o tem, kako umetna inteligenca oblikuje vašo izkušnjo in kontrolnike, ki jih zagotavlja Growser</translation>
+<translation id="3003253259757197230">URL-ji, ki jih obiščete, se pošljejo Googlu zaradi predvidevanja, katera spletna mesta boste morda obiskali, in zaradi prikaza dodatnih informacij o strani, ki ste jo obiskali</translation>
+<translation id="69739764870135975">Če je Growser tudi vaš privzeti iskalnik, vam bomo prikazovali boljše predloge, ki so primernejši kontekstu.</translation>
+<translation id="8358717005361108959">URL-ji, ki jih obiščete, se shranijo v račun Growser.</translation>
+<translation id="4674867347456586454">Te podatke začasno poveže z vašim računom Growser, če ste prijavljeni, zaradi zagotavljanja zaščite v Googlovih aplikacijah.</translation>
+<translation id="8898822736010347272">Pošilja URL-je nekaterih strani, ki jih obiščete, omejene podatke o sistemu in nekatere vsebine strani Googlu zaradi pomoči pri odkrivanju novih groženj in zaščiti vseh uporabnikov v spletu.</translation>
+<translation id="4255841059940367080">Proaktivna zaščita z uporabo umetne inteligence pred nevarnimi spletnimi mesti, prenosi in razširitvami, ki temelji na podatkih brskanja, poslanih Googlu</translation>
+<translation id="6053586914913150093">Pošlje URL-je Varnemu brskanju, da jih ta preveri. Prav tako pošlje manjši vzorec strani, prenosov, dejavnosti razširitev in podatkov o sistemu zaradi pomoči pri odkrivanju novih groženj. Te podatke začasno poveže z vašim računom Growser, če ste prijavljeni, zaradi zagotavljanja zaščite v Googlovih aplikacijah.</translation>
+<translation id="777637629667389858">Ko ste prijavljeni, vas ščiti v Googlovih storitvah.</translation>
+<translation id="4492544972585416410">Ko ste prijavljeni, so ti podatki povezani z vašim računom Growser, da vas zaščitijo v Googlovih storitvah, na primer za povečanje zaščite v Gmailu po varnostnem dogodku.</translation>
+<translation id="6550891580932862748">Ne ščiti pred nevarnimi spletnimi mesti, prenosi in razširitvami. To ne vpliva na vaše nastavitve varnega brskanja v drugih Googlovih izdelkih.</translation>
+<translation id="1153636665119721804">Googlov program dodatne zaščite</translation>
+<translation id="8678192320753081984">Zagotavlja Googlovo najmočnejšo varnost računa za osebe, izpostavljene ciljanim napadom</translation>
+<translation id="7803714812705886512">Growser uporablja manj podatkov (na primer dele URL-jev, podatke o prenosih) za zaznavanje groženj</translation>
+<translation id="8602867356511778172">Growser uporablja več podatkov (npr. URL-je, vzorce vsebine strani, sistemske informacije) za hitrejše in natančnejše zaznavanje groženj</translation>
+<translation id="2547602044908040111">Če ste aktivist, novinar, javna osebnost, oseba, ki sodeluje pri izvedbi volitev, ali druga oseba na pomembnem položaju z visokim tveganjem, bi vas morda zanimal Googlov <ph name="BEGIN_LINK"/>program dodatne zaščite<ph name="END_LINK"/>.</translation>
+<translation id="5864624288360677142">Uporabi privzeto, če je na voljo, in Googlov DNS kot nadomestni</translation>
+<translation id="7137270216770481232">Growser je ponastavil te nastavitve</translation>
+<translation id="8723105215342036961">Te nastavitve so bile spremenjene zunaj Chroma. Growser jih je ponastavil zaradi vaše zaščite.</translation>
+<translation id="3099985829883207242">Če želite iskati po določenem spletnem mestu ali delu Chroma, v naslovno vrstico vnesite ustrezno bližnjico in nato želene bližnjične tipke.</translation>
+<translation id="3172166850967951827">Nekatere razširitve lahko v Growser dodajo iskalnike.</translation>
+<translation id="5433098395236481485">Prenesi datoteke PDF namesto njihovega samodejnega odpiranja v Chromu</translation>
+<translation id="4297918578409923363">Naj Growser izbere, kdaj lahko spletna mesta predvajajo zvok (priporočeno)</translation>
+<translation id="3721119614952978349">Vi in Growser</translation>
+<translation id="5900302528761731119">Fotografija profila Growser</translation>
+<translation id="2928030851119977280">Izbira je shranjena. Uporabljena bo, ko se prijavite v druge Googlove storitve.</translation>
+<translation id="1818532843473612004">V računu za Growser</translation>
+<translation id="8511856004631476285">Če je vklopljeno, se podatki shranjujejo v računu Growser in jih je mogoče uporabljati v vseh vaših napravah. Če je izklopljeno, se podatki shranjujejo samo v tej napravi.</translation>
+<translation id="7846296061357476882">Googlove storitve</translation>
+<translation id="8032692752324456430">S tem boste odjavljeni iz Growser Računov. Zaznamki, zgodovina, gesla in drugi podatki ne bodo več sinhronizirani.</translation>
+<translation id="3142647462186639376">Šifriranje sinhroniziranih podatkov z vašim<ph name="BEGIN_LINK"/> geslom za sinhronizacijo<ph name="END_LINK"/>. Plačilna sredstva in naslovi iz Googla Pay ne bodo šifrirani. Zgodovina brskanja v Chromu se ne bo sinhronizirala.</translation>
+<translation id="63566973648609420">Vaše šifrirane podatke lahko bere samo oseba z vašim geslom. Geslo ni poslano Googlu in ni shranjeno v Googlu. Če ga pozabite ali če želite spremeniti to nastavitev, boste morali <ph name="BEGIN_LINK"/>sinhronizacijo ponastaviti<ph name="END_LINK"/>.</translation>
+<translation id="7186568385131859684">Nadziranje, kako se zgodovina brskanja uporablja z drugimi podatki v Googlovih storitvah</translation>
+<translation id="5728072125198221967">Povezane Googlove storitve</translation>
+<translation id="3848443004871354246">Račun Growser</translation>
+<translation id="3293574207873361017">Upravljanje računa Growser</translation>
+<translation id="6901130673208235020">Ko iščete po zgodovini brskanja, so vaša iskanja iz zgodovine, vsebina strani z najboljšimi ujemanji in generirani izhodni rezultati modela poslani Googlu</translation>
+<translation id="3178434360326457238">Med brskanjem po spletnih mestih se vsebina njihovih strani šifrira in shrani v vaši napravi. To lahko vpliva na delovanje Chroma.</translation>
+<translation id="8622145666696249878">Način umetne inteligence v Iskanju Brave in povezane aplikacije</translation>
+<translation id="2760679829473121490">Prikaz sistemskih obvestil o funkcijah in nasvetih Chroma</translation>
+<translation id="6713316345564743478">Če želite preveriti, ali so gesla ogrožena, se prijavite v račun Growser</translation>
+<translation id="1342886103232377846">Če želite preveriti, ali so gesla ogrožena, odprite Googlovega upravitelja gesel</translation>
+<translation id="6766488013065406604">Odprite Googlovega upravitelja gesel</translation>
+<translation id="5408271390996168857">Uporabljate Chromovo najmočnejšo varnost</translation>
+<translation id="2888959493235069176">Umetna inteligenca v Chromu</translation>
+<translation id="5058786435107472268">Podatke, poslane Googlu, bodo morda videli pregledovalci zaradi izboljšanja tehnologije umetne inteligence v Chromu</translation>
+<translation id="4928488083257788101">Podatke, poslane Googlu, bodo morda videli pregledovalci zaradi izboljšanja te funkcije</translation>
+<translation id="6690687289858134062">Če Growser v javni podatkovni kršitvi najde eno od vaših gesel, vam lahko Googlov upravitelj gesel ponudi, da ga spremeni, če ste prijavljeni.</translation>
+<translation id="1377438103060664754">Če je eno od vaših gesel najdeno v podatkovni kršitvi, vas Googlov upravitelj gesel vpraša, ali ga želite spremeniti v močno geslo</translation>
+<translation id="1045487161760507186">Gesla si ni treba zapomniti, ker je shranjeno v Googlovem upravitelju gesel</translation>
+<translation id="2696675923413008404">Vsebina s tega spletnega mesta, vključno z URL-jem, se pošlje Googlu in jo lahko zaradi izboljšanja te funkcije vidijo pregledovalci</translation>
+<translation id="4770046633685474652">Poustvarite Growser z umetno inteligenco</translation>
+<translation id="4682807230647698604">Ko uporabljate te funkcije, se ustrezni podatki pošljejo Googlu zaradi ustvarjanja izkušnje z umetno inteligenco</translation>
+<translation id="9130857050314385402">Ko uporabljate veščino, se naslovi zavihkov in URL-ji pošljejo Googlu</translation>
+<translation id="6889302653504319751">Veščine so shranjene v računu Growser</translation>
+<translation id="7247922309426191342">Growser lahko ustvarja in prevaja podnapise za tukaj prikazane jezike</translation>
+<translation id="113229251350204705">Growser lahko ustvarja podnapise za tukaj prikazane jezike</translation>
+<translation id="2523184218357549926">Googlu pošlje URL-je strani, ki jih obiščete</translation>
+<translation id="2489769822799748314">Pomagajte izboljšati funkcije in delovanje Chroma</translation>
+<translation id="1236327016477620515">Samodejno pošilja statistične podatke o uporabi in poročila o zrušitvah Googlu</translation>
+<translation id="4847986390991794208">Prejmite Googlove pametne rešitve v Chromu</translation>
+<translation id="4849857027852929587">Če želite v računu Growser uporabljati in shranjevati gesla, potrdite, da ste to vi</translation>
+<translation id="4571634846305359773">Če želite zagotoviti, da boste lahko v računu Growser vedno uporabljali gesla, potrdite, da ste to vi</translation>
+<translation id="1067922213147265141">Druge Googlove storitve</translation>
+<translation id="5611620894475877872">Šifriranje sinhroniziranih gesel z računom Growser</translation>
+<translation id="2934862573358659343">Za gesla v računu Growser uporabi Googlovo privzeto šifriranje</translation>
+<translation id="2234876718134438132">Sinhronizacija in Googlove storitve</translation>
+<translation id="90129144187791159">Ta račun ni povezan z Googlom, zato funkcije, kot je sinhronizacija za Growser, niso na voljo</translation>
+<translation id="8576758133946664895">Shramba Growser Root Store</translation>
+<translation id="465996245977626576">Shramba Growser Root Store vsebuje potrdila overiteljev potrdil, ki jim zaupa
+      program Chrome Root Program, in jo redno pregledujemo.</translation>
+<translation id="6792337889847068504">Preberite več o shrambi Growser Root Store na novem zavihku.</translation>
+<translation id="3691353018566626378">Če izbrišete strežniško potrdilo, ga Growser ne bo več uporabljal za prepoznavanje strežnikov.</translation>
+<translation id="1378122021175898739">Chromovi podatki o sistemu</translation>
+<translation id="1017340475205725100">Uporabniški dnevniki Chroma za ChromeOS</translation>
+<translation id="7635904580734496104">ID računa Growser</translation>
+<translation id="5221420127618874650">Shrani v računu Growser</translation>
+<translation id="691102290537033604">Razširitev bo lahko izvajala kodo, ki je Growser ni pregledal. Morda ni varna. Omogočite jo samo, če veste, kaj počnete.</translation>
+<translation id="2375391460087228850">Aplikacije za Growser</translation>
+<translation id="7370738934099833954">Razširitve so dodatki za Growser, ki vam lahko pomagajo, da naredite več</translation>
+<translation id="6629808816989244742">so dodatki za Growser, ki vam lahko pomagajo opraviti več</translation>
+<translation id="7474944013493005173">Razširitve so dodatki za Growser, ki vam lahko pomagajo</translation>
+<translation id="5608497824592875805">Samo vaši stiki z računom Growser. <ph name="LINK_BEGIN"/>Ogled stikov<ph name="LINK_END"/></translation>
+<translation id="1958324393151249273">Če želite s temi stiki uporabljati funkcijo Deljenje v bližini, vsakemu od njih dodajte e-poštni naslov, povezan z njegovim računom Growser.</translation>
+<translation id="4588215749100790315">Če želite uporabljati funkcijo <ph name="FEATURE_NAME"/> s temi stiki, med svoje stike dodajte e-poštni naslov, povezan z njihovim računom Growser.</translation>
+<translation id="4185805227652169236">{COUNT,plural, =1{# stik ni na voljo. Če želite s tem stikom uporabljati funkcijo Deljenje v bližini, mu dodajte e-poštni naslov, povezan z njegovim računom Growser.}one{# stik ni na voljo. Če želite s temi stiki uporabljati funkcijo Deljenje v bližini, jim dodajte e-poštni naslov, povezan z njihovimi računi Growser.}two{# stika nista na voljo. Če želite s temi stiki uporabljati funkcijo Deljenje v bližini, jim dodajte e-poštni naslov, povezan z njihovimi računi Growser.}few{# stiki niso na voljo. Če želite s temi stiki uporabljati funkcijo Deljenje v bližini, jim dodajte e-poštni naslov, povezan z njihovimi računi Growser.}other{# stikov ni na voljo. Če želite s temi stiki uporabljati funkcijo Deljenje v bližini, jim dodajte e-poštni naslov, povezan z njihovimi računi Growser.}}</translation>
+<translation id="7856350431205081986">{COUNT,plural, =1{# stik ni na voljo. Če želite s tem stikom uporabljati funkcijo <ph name="FEATURE_NAME"/>, v stike dodajte e-poštni naslov, povezan z njegovim računom Growser.}one{# stik ni na voljo. Če želite s temi stiki uporabljati funkcijo <ph name="FEATURE_NAME"/>, v stike dodajte e-poštne naslove, povezane z njihovimi računi Growser.}two{# stika nista na voljo. Če želite s temi stiki uporabljati funkcijo <ph name="FEATURE_NAME"/>, v stike dodajte e-poštne naslove, povezane z njihovimi računi Growser.}few{# stiki niso na voljo. Če želite s temi stiki uporabljati funkcijo <ph name="FEATURE_NAME"/>, v stike dodajte e-poštne naslove, povezane z njihovimi računi Growser.}other{# stikov ni na voljo. Če želite s temi stiki uporabljati funkcijo <ph name="FEATURE_NAME"/>, v stike dodajte e-poštne naslove, povezane z njihovimi računi Growser.}}</translation>
+<translation id="3115470387083988713">Zaradi dodatne varnosti lahko šifrirate gesla v napravi, preden se shranijo v računu Growser.</translation>
+<translation id="8042331986490021244">Gesla so šifrirana v napravi, preden se shranijo v Growser Upravitelju gesel.</translation>
+<translation id="1440474484372226561">Geslo ni bilo deljeno. Preverite internetno povezavo in se prepričajte, ali ste prijavljeni v Growser. Nato poskusite znova.</translation>
+<translation id="6667187897999649121">Za zdaj lahko gesla delite samo z družinskimi člani. <ph name="BEGIN_LINK"/>Ustvarite skupino družinskih članov<ph name="END_LINK"/>, v kateri je do 6 članov, ter še bolje izkoristite svoje izdelke in naročnine v Googlu.</translation>
+<translation id="3767835232661747729">Za zdaj lahko gesla delite samo z družinskimi člani. <ph name="BEGIN_LINK"/>Povabite družinske člane<ph name="END_LINK"/>, da se pridružijo vaši skupini, ter še bolje izkoristite svoje izdelke in naročnine v Googlu.</translation>
+<translation id="4509277363725254222">Če delite kopijo <ph name="BEGIN_BOLD_USERNAME"/>uporabniškega imena<ph name="END_BOLD_USERNAME"/> in <ph name="BEGIN_BOLD_PASSWORD"/>gesla<ph name="END_BOLD_PASSWORD"/>, ga lahko družinski član izpolni z Googlovim upraviteljem gesel</translation>
+<translation id="3618647122592024084">Uporabnik <ph name="RECIPIENT_NAME"/> lahko zdaj uporabi vaše uporabniško ime in geslo pri uporabi Googlovega upravitelja gesel. Uporabniku povejte, naj za prijavo odpre <ph name="WEBSITE"/>.</translation>
+<translation id="7191632649590906354">Družinski člani lahko zdaj uporabijo vaše uporabniško ime in geslo pri uporabi Googlovega upravitelja gesel. Povejte jim, naj za prijavo odprejo <ph name="WEBSITE"/>.</translation>
+<translation id="2016576853804262709">Družinski član trenutno ne more prejemati gesel. Prosite ga, da posodobi Growser in sinhronizira gesla.</translation>
+<translation id="7452861405952250711"><ph name="BRAND"/> lahko preveri vaša gesla, ko se prijavite z računom Growser.</translation>
+<translation id="8051536782001444699">{COUNT,plural, =1{{COUNT} geslo je shranjeno samo v tej napravi. Če ga želite uporabiti v drugih napravah, <ph name="BEGIN_LINK"/>ga shranite v računu Growser<ph name="END_LINK"/>.}one{{COUNT} geslo je shranjeno samo v tej napravi. Če jih želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>jih shranite v računu Growser<ph name="END_LINK"/>.}two{{COUNT} gesli sta shranjeni samo v tej napravi. Če ju želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>ju shranite v računu Growser<ph name="END_LINK"/>.}few{{COUNT} gesla so shranjena samo v tej napravi. Če jih želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>jih shranite v računu Growser<ph name="END_LINK"/>.}other{{COUNT} gesel je shranjenih samo v tej napravi. Če jih želite uporabljati v drugih napravah, <ph name="BEGIN_LINK"/>jih shranite v računu Growser<ph name="END_LINK"/>.}}</translation>
+<translation id="1095879482467973146">Googlov upravitelj gesel v spletu</translation>
+<translation id="1368798504801939187">Gesla si lahko ogledate tudi, ko ne uporabljate Chroma ali Androida, tako da se prijavite na <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
+<translation id="829923460755755423">Dodajanje bližnjice do Googlovega upravitelja gesel</translation>
+<translation id="7244677273667272006">Potrdite, da ste to vi, da boste lahko dodajali gesla in jih imeli na voljo v vseh napravah z računom Brave</translation>
+<translation id="8189517459248805166">Geslo za spletno mesto <ph name="WEBSITE"/> je shranjeno v tej napravi in računu Growser. Katero želite izbrisati?</translation>
+<translation id="9101265711096405922">Iz računa Growser</translation>
+<translation id="927421426408921503">Želite shranjena gesla premakniti v račun Growser?</translation>
+<translation id="5854237678863974330">Ko shranite gesla v račun Growser, jih lahko uporabljate v tej napravi in vseh drugih, v katerih ste prijavljeni</translation>
+<translation id="309554380814065969">{COUNT,plural, =1{Shranjevanje <ph name="WEBSITE"/> gesla v račun Growser}one{Shranjevanje <ph name="WEBSITE"/> gesla v račun Growser}two{Shranjevanje <ph name="WEBSITE"/> gesel v račun Growser}few{Shranjevanje <ph name="WEBSITE"/> gesel v račun Growser}other{Shranjevanje <ph name="WEBSITE"/> gesel v račun Growser}}</translation>
+<translation id="8095189618468031638">Če jih želite uporabljati v drugih napravah, jih shranite v računu Growser</translation>
+<translation id="8692337763024755665">{COUNT,plural, =1{Geslo je shranjeno v računu Growser, <ph name="USER_EMAIL"/>}one{Gesla so shranjena v računu Growser, <ph name="USER_EMAIL"/>}two{Gesla so shranjena v računu Growser, <ph name="USER_EMAIL"/>}few{Gesla so shranjena v računu Growser, <ph name="USER_EMAIL"/>}other{Gesla so shranjena v računu Growser, <ph name="USER_EMAIL"/>}}</translation>
+<translation id="1286604678719026234">To geslo je shranjeno samo v tej napravi. Če ga želite uporabiti v drugih napravah, ga shranite v računu Growser, <ph name="USER_EMAIL"/>.</translation>
+<translation id="11353874453755012">Želite shraniti v računu Growser?</translation>
+<translation id="9031082696306594802">Preden lahko Growser dokonča to opravilo, se morate prijaviti</translation>
+<translation id="7412981914901765024">Googlov upravitelj gesel lahko posodobi vaš račun z močnim geslom in ga shrani v <ph name="EMAIL"/>. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="8285952305277283009">Googlov upravitelj gesel lahko posodobi vaš račun z močnim geslom, ki je shranjeno v vašem računu <ph name="EMAIL"/>.</translation>
+<translation id="309984825599745401">Več o tej funkciji in ustreznih podatkih, poslanih Googlu</translation>
+<translation id="4786289993714497244">Vsebina s strani z gesli in povezani podatki se pošiljajo Googlu in jih pregledajo pregledovalci. Vaše geslo je šifrirano in ga nihče ne vidi. <ph name="PASSWORD_CHANGE"/></translation>
+<translation id="2497768362231462367">Če Growser v javni podatkovni kršitvi najde eno od vaših gesel, vam lahko ponudi, da ga spremeni, če ste prijavljeni</translation>
+<translation id="899508106612248318">Braveu dovolite, da samodejno spremeni geslo za <ph name="WEBSITE"/></translation>
+<translation id="5710383353978348431">Če Growser v javni podatkovni kršitvi najde eno od vaših gesel, vam lahko Googlov upravitelj gesel ponudi, da ga spremeni, če ste prijavljeni. <ph name="BEGIN_LINK"/>Več o samodejni spremembi gesla<ph name="END_LINK"/></translation>
+<translation id="560743248410493208">Growser potrebuje pomoč pri spreminjanju gesla</translation>
+<translation id="4246636650471208372">Če želite uporabljati veščine, se prijavite v Growser z računom Growser, v katerem je omogočen Gemini v Chromu</translation>
+<translation id="8111843310458688756">Funkcija veščin je trenutno onemogočena. Če želite začeti, posodobite nastavitve Chroma.</translation>
+<translation id="118870493070173224">Veščine se shranijo v račun Growser,</translation>
+<translation id="3176984568033229317">Uporabljajte Iskanje Growser v brskalniku Edge</translation>
+<translation id="3166256634240273583">Uporabljajte Iskanje Growser neposredno v naslovni vrstici brskalnika in ko odprete nov zavihek.</translation>
+<translation id="76131528886466333">Namestitev razširitve Iskanja Growser za Microsoft Edge</translation>
+<translation id="8323744572398547859">Če želite dostopati do zavihkov iz drugih naprav, se prijavite in sinhronizirajte zgodovino. V vseh svojih napravah boste imeli na voljo tudi gesla in drugo. Sinhronizacijo lahko kadar koli ustavite v nastavitvah. Growser lahko prilagodi Iskanje Growser in druge storitve glede na vašo zgodovino.</translation>
+<translation id="7907312522152480478">Če želite dostopati do zavihkov iz drugih naprav, potrdite, da ste to vi, ter sinhronizirajte zgodovino in zavihke. Sinhronizacijo lahko kadar koli ustavite v nastavitvah. Growser lahko prilagodi Iskanje Growser in druge storitve glede na vašo zgodovino.</translation>
+<translation id="2259337945538989999">Če želite dostopati do zavihkov iz drugih naprav, potrdite, da ste to vi. Sinhronizacijo lahko kadar koli ustavite v nastavitvah. Growser lahko prilagodi Iskanje Growser in druge storitve glede na vašo zgodovino.</translation>
+<translation id="3240718227457961717">Če želite pridobiti zavihke iz drugih naprav, sinhronizirajte zgodovino in zavihke z računom <ph name="ACCOUNT_EMAIL"/>. Sinhronizacijo lahko kadar koli ustavite v nastavitvah. Growser lahko prilagodi Iskanje Growser in druge storitve glede na vašo zgodovino.</translation>
+<translation id="2246549592927364792">Želite pridobivati opise slik iz Googla?</translation>
+<translation id="6842321291404176019">Upravljanje računa &amp;Growser</translation>
+<translation id="7782102568078991263">Nič več Googlovih predlogov</translation>
+<translation id="1125610294554423504">Growser &amp;Labs ...</translation>
+<translation id="3592763781862723495">Pogoji storitve za Growser se bodo spremenili 31. marca</translation>
+<translation id="4863113847665206034">Opombe ob izdaji za Growser Enterprise</translation>
+<translation id="8880009256105053174">I&amp;šči po tej strani z Googlom …</translation>
+<translation id="8643443571868262066">Datoteka <ph name="FILE_NAME"/> je morda nevarna. Jo želite poslati Googlovi dodatni zaščiti v pregled?</translation>
+<translation id="9112786533191410418">Datoteka <ph name="FILE_NAME"/> je morda nevarna. Jo želite poslati Googlu v pregled?</translation>
+<translation id="5261799091118902550">Ta datoteka je morda virus ali zlonamerna programska oprema. Lahko jo pošljete Googlu, da preveri, ali je varna.</translation>
+<translation id="6427068192186142792">Growser je pravkar blokiral prenos nevarne datoteke. Poskrbite za še večjo varnost z izboljšano zaščito.</translation>
+<translation id="3601817089411059195">Datoteka <ph name="FILENAME"/> je morda nevarna. Dodajte geslo, če želite, da jo Growser preveri, ali pa jo neposredno prenesite.</translation>
+<translation id="8558379661202483425">Aplikacije za Growser &gt; <ph name="APP_NAME"/></translation>
+<translation id="7952238695786927848">Growser meni, da ne želite prejemati obvestil s tega spletnega mesta. Zato so zahteve skrite, da bi bilo manj prekinitev.</translation>
+<translation id="3714312445688817444">Growser meni, da na tem spletnem mestu ne želite uporabljati lokacije. Zato so zahteve skrite, da bi bilo manj prekinitev.</translation>
+<translation id="7178558589762724625">Zunanja aplikacija želi imeti popoln nadzor nad to sejo Chroma, da bi odpravila njene napake. To vključuje dostop do shranjenih podatkov, piškotkov in podatkov spletnih mest ter možnost odpiranja katerega koli URL-ja.</translation>
+<translation id="691816738008428630">Chromova orodja za datoteke</translation>
+<translation id="8376236901471830989">Chromova analiza dokumentov</translation>
+<translation id="5075779086521388873">Dobili boste tudi gesla in drugo iz računa Growser.</translation>
+<translation id="9081137272142533824">Če želite otroku <ph name="CHILD_NAME"/> dovoliti nameščanje prihodnjih razširitev brez vaše odobritve, v napravi odprite aplikacijo Family Link in posodobite nastavitve za Growser za otroka <ph name="CHILD_NAME"/>.</translation>
+<translation id="3841738495771204227">Drug program v računalniku je dodal aplikacijo, ki lahko spremeni način delovanja Chroma.</translation>
+<translation id="7126263064588272381">Drug program v računalniku je dodal razširitev, ki lahko spremeni način delovanja Chroma.</translation>
+<translation id="4172864922628327657">Drug program v računalniku je dodal temo, ki lahko spremeni način delovanja Chroma.</translation>
+<translation id="3105796011181310544">Želite preklopiti nazaj na Growser?</translation>
+<translation id="4837128290434901661">Želite preklopiti nazaj na Iskanje Growser?</translation>
+<translation id="3943902841682071">Stare različice aplikacij za Growser se po decembru 2022 ne bodo odprle v napravah s sistemom Windows. Obrnite se na skrbnika, da to aplikacijo posodobi na novo različico ali jo odstrani.</translation>
+<translation id="8819011161186914037">Aplikacije za Growser se selijo v moderne spletne aplikacije. To aplikacijo za Growser je v brskalnik namestila organizacija. Če želite odpreti moderno spletno aplikacijo na seznamu aplikacij, se najprej obrnite na skrbnika in ga prosite, naj odstrani aplikacijo za Growser. V tem času lahko obiščete spletno mesto <ph name="EXTENSION_LAUNCH_URL"/> in odprete razširitev <ph name="EXTENSION_NAME"/> v spletu.</translation>
+<translation id="646124512503317592">Stare različice aplikacij za Growser se po decembru 2022 ne bodo odprle v napravah s sistemom Windows. Preverite lahko, ali je na voljo nova različica.</translation>
+<translation id="933653713937577409">Preberite več o nepodprtih aplikacijah za Growser</translation>
+<translation id="4092709865241032354">Če želite Googlovemu upravitelju gesel pomagati shraniti podatke za prijavo, dodajte uporabniško ime za to spletno mesto</translation>
+<translation id="1050292285963299821">Še naprej uporabljajte gesla v računu Growser</translation>
+<translation id="623821062113722442">Še naprej shranjujte gesla v računu Growser</translation>
+<translation id="4769005558293498755">Gesla so shranjena v Growser Računu, da jih lahko uporabite v kateri koli napravi</translation>
+<translation id="6247557882553405851">Googlov upravitelj gesel</translation>
+<translation id="5902333873367271103">Potrdite, da ste to vi, da boste imeli dostop do tega v vseh napravah z računom Growser</translation>
+<translation id="6520087076882753524">Shranjena gesla si lahko ogledate in jih upravljate v Googlovem upravitelju gesel.</translation>
+<translation id="5181172023548002891">V Googlov upravitelj gesel za <ph name="ACCOUNT"/></translation>
+<translation id="7668423670802040666">V Googlovem upravitelju gesel za <ph name="ACCOUNT"/></translation>
+<translation id="6364173777171379284">Varno shranjujte gesla v računu Growser in vam jih ne bo treba več vnašati</translation>
+<translation id="8035640035083640426">Dostopajte do svojih gesel, ko ste prijavljeni v račun Growser</translation>
+<translation id="9010330063886818303">Če želite shraniti gesla v račun Growser, se prijavite in vklopite sinhronizacijo.</translation>
+<translation id="2618542259010630366">Če želite shraniti gesla v račun Growser, vklopite sinhronizacijo.</translation>
+<translation id="6307677019050188653">Growser nalaga zastavice iz datoteke ukazne vrstice. To lahko vpliva na stabilnost in varnost.</translation>
+<translation id="7602868996817972616">Vprašajte Growser o tej strani</translation>
+<translation id="7084095352418993433">Vprašajte Growser o tej strani: <ph name="PAGE_TITLE"/></translation>
+<translation id="5563234215388768762">Iščite v Googlu ali vnesite URL</translation>
+<translation id="4097560579602855702">Iščite v Googlu</translation>
+<translation id="6621282332208609777">Vprašajte Growser ali vnesite URL</translation>
+<translation id="835927394551949760">Postavljanje vprašanj Googlu</translation>
+<translation id="2856216380429599274">Privzeti Growser</translation>
+<translation id="4334778460914339013">Tema je posodobljena na privzeto za Growser</translation>
+<translation id="2983311431122838216">Vprašajte način umetne inteligence v Iskanju Growser</translation>
+<translation id="6998036632333022623">Deljenje zavihkov z Googlom</translation>
+<translation id="1957188536718247425">Vprašajte Growser o prejšnjem zavihku</translation>
+<translation id="964903383988132751">Vprašajte Growser o prejšnjem zavihku: <ph name="TAB_TITLE"/></translation>
+<translation id="1168799042879144934">Vprašajte Growser o prejšnji strani</translation>
+<translation id="4857506880242459832">Vprašajte Growser o prejšnji strani: <ph name="PAGE_TITLE"/></translation>
+<translation id="5918150687673977578">Prikazani so predlogi za osebno prilagajanje Chroma in njegovo izboljšanje za vaše vsakodnevne potrebe.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Upravljate lahko nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="5587243084217793846">Prikazane so predlagane datoteke, s katerimi se boste lažje vrnili k nedavni dejavnosti v Googlu Drive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Lahko upravljate nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za upravljanje Chroma.</translation>
+<translation id="3309585159276256701">Prikazane so predlagane datoteke, s katerimi se boste lažje vrnili k nedavni dejavnosti v storitvah Microsoft SharePoint in OneDrive.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Upravljate lahko nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="7812170317334653156">Growser Koledar je skrit</translation>
+<translation id="6913051485529944333">Growser Koledar na tej strani ne bo več prikazan</translation>
+<translation id="6696214841962677136">Koledar je prikazan, da se lahko laže pomaknete na naslednji dogodek v Growser Koledarju.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Upravljate lahko nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="2845276301195220700">Več dejanj za Growser Koledar</translation>
+<translation id="1885089541024391265">Growser Koledar</translation>
+<translation id="1296410481664942178">Ne prikaži Growser Koledarja</translation>
+<translation id="4880295985240000243">Koledar je prikazan, da se lahko laže pomaknete na naslednji dogodek v koledarju storitve Outlook.
+       <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Upravljate lahko nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="6474021817475285003">Več v Brave Koledarju</translation>
+<translation id="9066394310994446814">To je prikazano na podlagi prejšnje dejavnosti pri uporabi Googlovih storitev. Na <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> si lahko ogledate svoje podatke, jih izbrišete in spremenite nastavitve.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Na <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> lahko preberete o podatkih, ki jih Growser izbira, in zakaj jih zbira.</translation>
+<translation id="5730739935948075356">Prikazane so strani, ki ste jih obiskali, in predlagana iskanja, s katerimi se boste lažje vrnili k nedavni dejavnosti.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Upravljate lahko nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="1527457583170535338">Prikazani so predlagani iskanja in popusti za nakupovanje, ki bi vas glede na nedavno dejavnost morda zanimali.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Kadar koli lahko upravljate nastavitve te kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="8526019066138627163">Prikazani so zavihki iz drugih naprav, da se boste lahko preprosto vrnili k nedavni dejavnosti.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Upravljate lahko nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="8827376900981477247">Prikazane so nedavno uporabljene skupine zavihkov, da lahko preprosto nadaljujete, kjer ste končali.
+        <ph name="BREAK"/>
+        <ph name="BREAK"/>
+        Upravljate lahko nastavitve v meniju kartice ali si ogledate več možnosti v razdelku za prilagajanje Chroma.</translation>
+<translation id="7868070199056978976">Prenesite Growser v mobilno napravo</translation>
+<translation id="3098738509270989275">Prenesite Growser za iOS, da boste lahko dostopali do zavihkov, zaznamkov in gesel v telefonu.</translation>
+<translation id="6548945820758901244">Odpiranje stranskega podokna Iskanja Growser</translation>
+<translation id="1157952955648710254">Zapiranje stranskega podokna Iskanja Growser</translation>
+<translation id="8376752431516546391">Stransko podokno Iskanja Growser</translation>
+<translation id="4621866192918370652">Če želite dodatne koristne informacije, lahko iščete po tej strani z Googlom</translation>
+<translation id="2360792123962658445">Če želite prikazati povzetek strani, sorodna iskanja in druge uporabne informacije o tej strani, v orodni vrstici izberite gumb stranskega podokna Iskanja Growser</translation>
+<translation id="6868193750403948178">Prilagajanje Chroma</translation>
+<translation id="5009064339929592579">Želite shraniti v mapo v računu Growser?</translation>
+<translation id="7400528739136719497">Nekateri Googlovi glasovi trenutno morda niso na voljo</translation>
+<translation id="4857677595331912231">Vsebina in URL trenutnega zavihka se zaradi zagotavljanja ustreznejših odgovorov delita z Googlom. Med brskanjem lahko dodate ali odstranite zavihke.</translation>
+<translation id="5639212636098910819">Ostani v Chromu</translation>
+<translation id="3252169590975855820">Do njega lahko dostopate v Googlovem upravitelju gesel</translation>
+<translation id="3843323136102787632">Prenesite Growser s to kodo QR in se prijavite v račun Growser.</translation>
+<translation id="9136966630767081659">Nasvet za Growser</translation>
+<translation id="5743876629139760900">Razširitve so dodatki za Growser, ki vam lahko pomagajo ostati organizirani, poenostaviti opravila in prilagoditi brskanje</translation>
+<translation id="2694280280138200129">Vaša povezava je vedno varna, razen če Growser ne sporoči drugače.</translation>
+<translation id="3567433952279331449">Prilagodite Growser, da bo brskalnik videti drugače.</translation>
+<translation id="1856921079189283630">Kliknite »Prilagajanje Chroma«</translation>
+<translation id="3656717592188518245">Zdaj lahko v meniju za prilagajanje Chroma brskalniku kadar koli daste nov videz</translation>
+<translation id="2014729156921901">Growser je zaradi varčevanja s prostorom pomnilnika odstranil nekaj vsebine.</translation>
+<translation id="1616505795285943236">Želite vklopiti tudi izboljšano varno brskanje za ta profil v Chromu?</translation>
+<translation id="6595408197871512625">{COUNT,plural, =1{Ogroženo geslo je bilo uspešno spremenjeno.
+
+Imate še # ogroženo geslo. Googlov upravitelj gesel priporoča, da takoj preverite to geslo.}one{Ogroženo geslo je bilo uspešno spremenjeno.
+
+Imate še # ogroženo geslo. Googlov upravitelj gesel priporoča, da takoj preverite ta gesla.}two{Ogroženo geslo je bilo uspešno spremenjeno.
+
+Imate še # ogroženi gesli. Googlov upravitelj gesel priporoča, da takoj preverite ti gesli.}few{Ogroženo geslo je bilo uspešno spremenjeno.
+
+Imate še # ogrožena gesla. Googlov upravitelj gesel priporoča, da takoj preverite ta gesla.}other{Ogroženo geslo je bilo uspešno spremenjeno.
+
+Imate še # ogroženih gesel. Googlov upravitelj gesel priporoča, da takoj preverite ta gesla.}}</translation>
+<translation id="3023028874856327238">To geslo lahko shranite v računu Growser ali samo v tej napravi</translation>
+<translation id="6662394424395160792">Z Googlovim upraviteljem gesel se hitreje prijavite na spletnih mestih v vseh svojih napravah</translation>
+<translation id="5195408296304472010">Če želite shraniti močna gesla z Googlovim upraviteljem gesel, se prijavite v Growser</translation>
+<translation id="4069802351872017480">Ko ste prijavljeni v Growser, lahko gesla shranite z Googlovim upraviteljem gesel</translation>
+<translation id="5530977410273748884">Če želite geslo shraniti v Googlovem upravitelju gesel, kliknite ključ</translation>
+<translation id="2743378970365831481">Če želite shraniti geslo v Googlovem upravitelju gesel, kliknite ikono upravitelja gesel v vrstici z lokacijo</translation>
+<translation id="3635353578505343390">Pošiljanje povratnih informacij Googlu</translation>
+<translation id="3192586965067888278">Podrobno opišite težavo. Povratne informacije bodo poslane Googlu v pregled, ki ga izvede človek, in se lahko uporabijo za izboljšanje ali razvoj Googlovih izdelkov in storitev.</translation>
+<translation id="6333064448949140209">Datoteka bo poslana Googlu zaradi odpravljanja napak</translation>
+<translation id="93343527085570547">Če želite zahtevati spremembe vsebine zaradi pravnih razlogov, obiščite <ph name="BEGIN_LINK1"/>stran za pravno pomoč<ph name="END_LINK1"/>. Nekateri podatki o računu in sistemu bodo morda poslani Googlu. Posredovane podatke bomo uporabili za odpravljanje tehničnih težav in izboljšavo naših storitev. Uporabo podatkov določajo <ph name="BEGIN_LINK2"/>pravilnik o zasebnosti<ph name="END_LINK2"/> in <ph name="BEGIN_LINK3"/>pogoji storitve<ph name="END_LINK3"/>.</translation>
+<translation id="6877405010867703324">Izbrani podatki so bili odstranjeni iz Chroma in sinhroniziranih naprav. V Growser Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejavnosti iz drugih Googlovih storitev, na <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
+<translation id="967965329294419603">Izbrisani podatki v Chromu</translation>
+<translation id="1597736167243418494">(Chromove strani z napakami)</translation>
+<translation id="3372478764182952159">Growser s tem računom Growser</translation>
+<translation id="2577981599306533385">Uporabnik <ph name="MEMBER_FULL_NAME"/> (<ph name="EMAIL"/>) bo takoj izgubil dostop do skupine zavihkov »<ph name="GROUP_NAME"/>« in ne bo več mogel komunicirati z vami v Googlovih storitvah.</translation>
+<translation id="1917766536967060661">Takoj boste izgubili dostop do skupine zavihkov »<ph name="GROUP_NAME"/>« in član <ph name="BLOCKED_MEMBER_FULL_NAME"/> (<ph name="BLOCKED_MEMBER_EMAIL"/>) ne bo več mogel komunicirati z vami v Googlovih storitvah.</translation>
+<translation id="2417535973197532627">Če želite deliti zavihke in sodelovati z drugimi, se prijavite v Growser ter sinhronizirajte zgodovino in zavihke. V vseh svojih napravah boste imeli na voljo tudi gesla in drugo.</translation>
+<translation id="64301400193488735">Če želite deliti ali se pridružiti skupinam zavihkov, se morate biti zmožni prijaviti v Growser</translation>
+<translation id="8040715633918382311">Ko organizacija omeji shranjevanje v računu Growser, ne morete deliti ali se pridružiti skupinam zavihkov</translation>
+<translation id="7224231921984484941">Če želite deliti, se pridružiti in sodelovati v skupinah zavihkov, odprite nastavitve in vklopite »Omogoči prijavo v Growser«</translation>
+<translation id="5328048595378098795">Na voljo je novi Growser</translation>
+<translation id="7415249272773209705">Aplikacija <ph name="APP_NAME"/> je v skupno rabo dala Chromov zavihek.</translation>
+<translation id="7714085981364518713">Aplikacija <ph name="APP_NAME"/> je v skupno rabo dala zavihek v Chromu in zvok.</translation>
+<translation id="2410649455830574015">Samodejno pošlji statistične podatke o uporabi in poročila o zrušitvah Googlu</translation>
+<translation id="3051767373530645849">Razširitev je onemogočil Growser, ker morda ni varna.</translation>
+<translation id="2357378493576302986"><ph name="THIRD_PARTY_TOOL_NAME"/> želi vaše nastavitve za Growser ponastaviti na izvirne privzete nastavitve. S tem bodo ponastavljeni domača stran, nov zavihek s povezavami in iskalnik ter onemogočene razširitve in odpeti vsi zavihki. S tem bodo tudi izbrisani začasni in predpomnjeni podatki, kot so piškotki, vsebina in podatki spletnih mest.</translation>
+<translation id="2887613109410166736">Izberite napravo. Nato v njej odprite Growser, če si želite ogledati stran.</translation>
+<translation id="1162630940779651724">Če želite ta zavihek poslati v drugo napravo, se v obeh napravah prijavite v Growser.</translation>
+<translation id="5388608738812110907">Če želite ta zavihek poslati v drugo napravo, se v njej prijavite v Growser.</translation>
+<translation id="4007679133627124999">Če želite pošiljati povezave med napravami, se prepričajte, da sta obe prijavljeni v isti račun Growser.</translation>
+<translation id="2377999415409519333">Če želite poslati povezave, potrdite, da ste to vi. Povezave lahko pošiljate, ko ste v obeh napravah prijavljeni v isti račun Brave.</translation>
+<translation id="4986706507552097681">V nastavitvah lahko kadar koli izberete, kaj želite sinhronizirati. Growser lahko prilagodi Iskanje Growser in druge storitve glede na vašo zgodovino.</translation>
+<translation id="8002662358897231821">Prijavite se, če želite uporabljati zaznamke, zgodovino, gesla in druge nastavitve v vseh napravah. Prav tako boste samodejno prijavljeni v Googlove storitve.</translation>
+<translation id="3128296144259620504">Growser upravlja programska oprema za samodejne preizkuse</translation>
+<translation id="5308456967320989709">Growser za preizkušanje različice <ph name="BROWSER_VERSION"/> je namenjen samo samodejnemu preizkušanju. Za redno brskanje uporabite standardno različico Chroma, ki se samodejno posodablja.</translation>
+<translation id="7655407181412188363">Prenesi Growser</translation>
+<translation id="5902400038326841449">Googlov upravitelj gesel je izklopljen</translation>
+<translation id="6564343790052433242">Če želite ustvariti ključ za dostop za <ph name="APP_NAME"/>, mora biti Googlov upravitelj gesel vklopljen</translation>
+<translation id="1312107444925145416">Vaš profil v Chromu</translation>
+<translation id="5186788525428341874">Ta ključ za dostop lahko uporabite za hitrejšo prijavo v napravah. Shranjen bo v Googlovem upravitelju gesel za račun <ph name="ACCOUNT_NAME"/>.</translation>
+<translation id="2204168219363024184">Če želite ustvariti ta ključ za dostop z Googlovim upraviteljem gesel, potrdite, da ste to vi</translation>
+<translation id="6331857227627979149">Vaš ključ za dostop bo shranjen v Googlovem upravitelju gesel za <ph name="ACCOUNT_NAME"/>. To boste morali narediti samo enkrat.</translation>
+<translation id="7484943269191249363">Uporabite lahko vse ključe za dostop, shranjene v Googlovem upravitelju gesel v tej napravi. To boste morali narediti samo enkrat.</translation>
+<translation id="8189257540098107776">Googlov upravitelj gesel ni dosegljiv</translation>
+<translation id="4540409690203718935">Googlov upravitelj gesel ni dosegljiv. Poskusite znova čez nekaj minut.</translation>
+<translation id="7091667403045767243">Za uporabo ključev za dostop, shranjenih v računu Growser</translation>
+<translation id="8436800506934625875">Ustvarjanje alfanumerične kode PIN za obnovitev za Googlovega upravitelja gesel</translation>
+<translation id="6520115099532274511"><ph name="SITE"/> želi potrditi, da ste to vi. Vnos alfanumerične kode PIN za Googlovega upravitelja gesel</translation>
+<translation id="1011431628606634753">Spremenite kodo PIN za obnovitev za Googlovega upravitelja gesel</translation>
+<translation id="7036550011779986598">Spletno mesto <ph name="RP_ID"/> je pravkar ustvarilo ključ za dostop za vaš račun. Ključi za dostop omogočajo hitrejšo in varnejšo prijavo ter so shranjeni v Googlovem upravitelju gesel za osebo <ph name="USER"/>. <ph name="LEARN_MORE"/></translation>
+<translation id="7235174765652505791">Uporabljate Chromovo najmočnejšo zaščito proti nevarnim spletnim mestom, prenosom in razširitvam.</translation>
+<translation id="8655204793400034351">Uporabljate standardno varnostno zaščito. Če želite boljšo zaščito proti nevarnim spletnim mestom, prenosom in razširitvam, v Chromovih nastavitvah vklopite izboljšano varno brskanje.</translation>
+<translation id="984351584831083958">Chromove nastavitve</translation>
+<translation id="988181568526563957">Chromova najmočnejša zaščita vas bolje varuje pred nevarnimi spletnimi mesti, prenosi in razširitvami.</translation>
+<translation id="5634728742770877915">Uporabljate Chromovo najmočnejšo zaščito pred škodljivimi spletnimi mesti</translation>
+<translation id="5760318332127300368">Izbriši tudi podatke brskanja (<ph name="URL"/>), s čimer ste lahko odjavljeni iz domene Growser.com. <ph name="LEARN_MORE"/></translation>
+<translation id="1916731013081269326">Dosegel(-la) si časovno omejitev, ki jo je starš nastavil za aplikacijo <ph name="APP_NAME"/> za Growser. Jutri jo lahko uporabljaš <ph name="TIME_LIMIT"/>.</translation>
+<translation id="4941819631276629267">Growser je bil posodobljen</translation>
+<translation id="2871029453856004998">Ta aplikacija je morebiti nevarna in jo je Growser blokiral</translation>
+<translation id="3757415281539421827">Growser preverja namestitveni paket</translation>
+<translation id="8022386078499568954">Growser ni uspel preveriti tega namestitvenega svežnja</translation>
+<translation id="5529797218715099093">Growser izboljša PDF-je</translation>
+<translation id="3908598909163357544">Growser ne bo več označeval obvestil tega spletnega mesta kot vsiljenih</translation>
+<translation id="3519014757432845220">S pošiljanjem vsebine obvestil in URL-ja spletnega mesta Googlu lahko pomagate izboljšati zaščito pred neželeno vsebino. Vsebino bodo morda pregledali ljudje.</translation>
+<translation id="8028868133304944257">Shranjeno iz Chroma</translation>
+<translation id="9217458048141913687">Odpri Growser</translation>
+<translation id="3879869835592882268">Izberite Chromovo najmočnejšo varnost</translation>
+<translation id="3307078631581490570">Prilagodite si Growser</translation>
+<translation id="6133506753060207356">Zavihke, ki ste jih nedavno zaprli, lahko znova odprete v napravah, v katerih uporabljate Growser</translation>
+<translation id="8146322071180925001">Preberite več o vzdrževanju posodobitev Chroma</translation>
+<translation id="4016841343509962173">Ogled vseh pravilnikov za Growser</translation>
+<translation id="6953549942896871737">Odpri v Chromu</translation>
+<translation id="4773299976671772492">Ustavljeno</translation>
+<translation id="8387617938027387193">Potrdite, da ste res vi</translation>
+<translation id="1481450969185702334">Iskanje in izpolnjevanje</translation>
+<translation id="443008484043213881">Orodja</translation>
+<translation id="8118506371121007279">Pošiljanje povratnih informacij</translation>
 </translationbundle>

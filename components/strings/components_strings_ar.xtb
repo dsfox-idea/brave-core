@@ -5542,4 +5542,430 @@
 <translation id="8198379961710069585">زر "سجلّ البحث": يمكنك تفعيله للبحث في السجلّ</translation>
 <translation id="8495170825732897952">كتابة @@ في أي نموذج لاسترجاع المعلومات وملئها بدون تبديل علامات التبويب</translation>
 <translation id="8874790741333031443">جرِّب السماح مؤقتًا باستخدام ملفات تعريف الارتباط التابعة لجهات خارجية. هذا يعني أنّك ستحظى بمستوى حماية أقل أثناء التصفّح، غير أنّ ميزات الموقع الإلكتروني ستعمل غالبًا على النحو المتوقَّع.</translation>
+<translation id="6091115085465716987">‏شعار "محفظة Growser"</translation>
+<translation id="4489288117933602961">‏شعار Growser</translation>
+<translation id="6604204560730066844">‏هل تريد حفظ هذه البطاقة في حسابك على Growser وعلى هذا الجهاز؟</translation>
+<translation id="6253380015872250643">‏حفظ بيانات البطاقة في "محفظة Growser"</translation>
+<translation id="7062344833049251424">‏يمكنك حفظ بيانات البطاقة وعنوان إرسال الفواتير في "محفظة Growser" للدفع بشكلٍ أسرع في المرة القادمة</translation>
+<translation id="4940620179254568429">‏سيتم تشفير رمز التحقق من هذه البطاقة (CVC) وحفظه في حسابك على Growser للدفع بشكل أسرع.</translation>
+<translation id="1413235258620101697">‏سيتم تشفير رمز التحقق من هذه البطاقة (CVC) وحفظه في "محفظة Growser" للدفع بشكل أسرع.</translation>
+<translation id="8296806261827627234">‏يمكنك الدفع بسرعة أكبر بعد حفظ بطاقتك. يتم تشفير تفاصيل البطاقة في حسابك على Growser.</translation>
+<translation id="4954891067389874142">‏يمكنك الدفع بسرعة أكبر بعد حفظ بطاقتك. وللعلم، يتم تشفير تفاصيل البطاقة في "محفظة Growser".</translation>
+<translation id="4599572944836204718">‏يمكنك الدفع بسرعة أكبر باستخدام Google Pay بعد حفظ بيانات بطاقتك. وللعلم، يتم تشفير معلومات بطاقة الدفع في "محفظة Growser".</translation>
+<translation id="3872719112670219447">‏هذا الاسم من حسابك على Growser</translation>
+<translation id="1511387429744666092">‏يتيح لك Growser حفظ بطاقاتك في حسابك على Growser لأنك سجَّلت الدخول. يمكنك تغيير هذا السلوك في الإعدادات.</translation>
+<translation id="4565400898718322011">‏يتيح لك Growser حفظ بطاقاتك في حسابك على Growser لأنك سجَّلت الدخول. يمكنك تغيير هذا السلوك في الإعدادات. ويتم الحصول على اسم حامل البطاقة من حسابك.</translation>
+<translation id="3594461335790641595">‏في حال حفظ هذه البطاقة على هذا الجهاز، سيتم ملء بياناتها تلقائيًا لإجراء عمليات الشراء من خلال Growser</translation>
+<translation id="1242832199383246031">‏في حال حفظ هذه البطاقة لاستخدامها مع Google Pay، سيتم ملء بياناتها تلقائيًا لإجراء عمليات الشراء من خلال Growser</translation>
+<translation id="6186962377036474023">‏في حال حفظ هذه البطاقة في "محفظة Growser"، سيتم ملء بياناتها تلقائيًا لإجراء عمليات الشراء من خلال Growser</translation>
+<translation id="5765984179517659957">‏يحاول Growser إثبات هويتك لملء معلومات الدفع.</translation>
+<translation id="828282277746732142">‏حفظ رقم الحساب بصيغة IBAN في "محفظة Growser"</translation>
+<translation id="6084079099761498478">‏لملء رقم الحساب هذا بصيغة IBAN في المرة القادمة تلقائيًا، يجب حفظه في حسابك على Growser</translation>
+<translation id="5398461103557553443">‏لملء رقم الحساب بصيغة IBAN في المرة القادمة تلقائيًا، يجب حفظه في "محفظة Growser"</translation>
+<translation id="7098302422586317090">‏سيبدأ Growser الآن في إثبات هويتك قبل إدخال طرق الدفع. يمكنك متى شئت تعديل ذلك من خلال <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>.</translation>
+<translation id="5053116470141135293">‏سيتم ملء رقم بطاقة افتراضية عند إتمام الدفع باستخدام هذه البطاقة لحماية تفاصيل بطاقتك الفعلية. ويمكنك إدارة البطاقة في "محفظة Growser". <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">‏تتم مشاركة محتوى صفحة الدفع مع Growser لتقديم هذه الخيارات. ولإخفاء خيارات "الدفع لاحقًا" ضِمن ميزة "الملء التلقائي"، يُرجى الانتقال إلى "<ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>".</translation>
+<translation id="2840680829170913626">‏تتم مشاركة محتوى صفحة الدفع مع Growser لتقديم هذه الخيارات. تخضع خطط الدفع لمتطلبات الأهلية. لإخفاء خيارات "الدفع لاحقًا" ضِمن ميزة "الملء التلقائي"، يُرجى الانتقال إلى "<ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>".</translation>
+<translation id="7870207318911766769">‏تتم مشاركة محتوى صفحة الدفع مع Growser لتقديم هذه الخيارات.</translation>
+<translation id="1151858212483238980">‏يمكنك تلقائيًا ملء بيانات البطاقات المحفوظة في "محفظة Growser"</translation>
+<translation id="1205344127823614428">‏يمكنك تلقائيًا ملء بيانات البطاقات المحفوظة في "محفظة Growser".</translation>
+<translation id="5848445080378515710">‏بعد مراجعة طلبك، عليك تسجيل الدخول أو إنشاء حساب باستخدام "<ph name="BNPL_ISSUER_NAME"/>". وسيتم ربط هذا الحساب تلقائيًا في "محفظة Growser".</translation>
+<translation id="8163468049564974856">‏يمكنك تفعيل ميزة "الملء التلقائي" لإكمال عمليات الدفع على الإنترنت بأمان. وللعلم، يتم تشفير معلومات بطاقة الدفع في "محفظة Brave".</translation>
+<translation id="5717281954932320486">‏يمكنك ملء معلومات بطاقة الدفع تلقائيًا عند إتمام الدفع على الإنترنت. وللعلم، يتم حفظ البطاقات في "محفظة Brave" بشكل آمن.</translation>
+<translation id="7055814742378298611">‏يمكنك الآن حفظ طُرق الدفع لملء بيانات البطاقة تلقائيًا عند الدفع في Brave. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">‏سيتم حذف كل رموز الأمان المحفوظة على جهازك وفي حسابك على Growser.</translation>
+<translation id="7170930892977483182">‏سيتم حذف كل رموز الأمان المحفوظة على جهازك وفي "محفظة Growser"</translation>
+<translation id="755360750394433286">‏تم حفظ بطاقتك في حسابك على Growser، ما يسمح لك بملء بياناتها تلقائيًا عند إجراء عمليات شراء مستقبلية</translation>
+<translation id="7412081313067625215">‏تم حفظ بطاقتك في "محفظة Growser"، ما يسمح لك بملء بياناتها تلقائيًا عند إجراء عمليات شراء مستقبلية</translation>
+<translation id="2482920244925042987">‏تعذَّر حفظ هذه البطاقة في حسابك على Growser، وتم حفظها في Growser على هذا الجهاز بدلاً من ذلك.</translation>
+<translation id="4740434610174859636">‏تعذَّر حفظ هذه البطاقة في "محفظة Growser"، وتم حفظها في Growser على هذا الجهاز بدلاً من ذلك.</translation>
+<translation id="2109852493965717728">‏تم حفظ رقم الحساب بصيغة IBAN هذا في حسابك على Growser لتتمكّن من استخدامه على مختلف خدمات Growser.</translation>
+<translation id="3837322271615501940">‏تعذَّر حفظ رقم الحساب بصيغة IBAN هذا في حسابك على Growser. بدلاً من ذلك، تم حفظه في Growser على هذا الجهاز. سيطلب منك Growser الإذن مجددًا في المرة التالية التي تستخدم فيها رقم الحساب بصيغة IBAN هذا.</translation>
+<translation id="1583007191864786102">‏تعذَّر حفظ رقم الحساب بصيغة IBAN هذا في "محفظة Growser". بدلاً من ذلك، تم حفظه في Growser على هذا الجهاز. سيطلب منك Growser الإذن مجددًا في المرة المقبلة التي يتم فيها استخدام هذا الرقم.</translation>
+<translation id="6915664826242394941">‏تعذَّر حفظ رقم الحساب بصيغة IBAN هذا في حسابك على Growser، وتم حفظه في Growser على هذا الجهاز بدلاً من ذلك.</translation>
+<translation id="376462579087900096">‏تعذَّر حفظ رقم الحساب بصيغة IBAN هذا في "محفظة Growser"، وتم حفظه في Growser على هذا الجهاز بدلاً من ذلك.</translation>
+<translation id="2871837111996280385">‏يحاول Growser تعبئة معلوماتك الحساسة على "<ph name="APP_NAME"/>".</translation>
+<translation id="3039045945489677870">‏يحاول Growser عرض المعلومات الحساسة</translation>
+<translation id="3253651554860831188">‏يريد Growser التأكّد من هويتك قبل السماح لك بتغيير الإعدادات</translation>
+<translation id="924075841960625832">‏هل تريد إزالة اقتراح النموذج من Growser؟</translation>
+<translation id="3016775357255717300">‏هل تريد إزالة بطاقة الائتمان من Growser؟</translation>
+<translation id="1722474089104449082">‏هل تريد إزالة العنوان من Growser؟</translation>
+<translation id="7077165718541055322">‏إزالة عنوان المنزل من ميزة "الملء التلقائي" في Growser؟</translation>
+<translation id="7756454115562251695">‏إزالة عنوان العمل من ميزة "الملء التلقائي" في Growser؟</translation>
+<translation id="3068798232942246848">‏هل أردت إزالة هذه المعلومات من ميزة "الملء التلقائي" في Growser؟</translation>
+<translation id="967369588715984092">‏سيتوقف Brave عن تأكيد هذا البريد الإلكتروني تلقائيًا على المواقع الإلكترونية المتوافقة.</translation>
+<translation id="7299769361777046949">‏إدارة بطاقات الولاء في "محفظة Growser"</translation>
+<translation id="2903623845283894856">‏يمكنك الآن استخدام العناوين المحفوظة في حسابك على Growser.</translation>
+<translation id="7058709760023777753">‏يمكنك ملء عنوانَي المنزل والعمل تلقائيًا من حسابك على Growser</translation>
+<translation id="2856388212909438134">‏يمكنك ملء اسمك وعنوان بريدك الإلكتروني تلقائيًا من حسابك على Growser</translation>
+<translation id="8581945850065780003">‏سيتم حذف هذا العنوان من حسابك على Growser‏، <ph name="ACCOUNT"/>.</translation>
+<translation id="8652886653703834105">‏سيتم حفظ التعديل في حسابك على Growser،‏ <ph name="ACCOUNT"/>.</translation>
+<translation id="4050392779074832022">‏سيكون بإمكانك استخدامه في جميع منتجات Growser.</translation>
+<translation id="361746409909709825">‏يمكنك استخدام العناوين المحفوظة مع جميع منتجات Growser. تم حفظ هذا العنوان في حسابك على Growser‏، <ph name="ACCOUNT"/>.</translation>
+<translation id="5318416911578989892">‏يمكنك استخدام العناوين المحفوظة مع جميع منتجات Growser. سيتم حفظ هذا العنوان في حسابك على Growser‏، <ph name="ACCOUNT"/>.</translation>
+<translation id="3995632180712217177">‏يمكنك استخدام العناوين المحفوظة مع جميع منتجات Growser. لن يؤدي هذا الإجراء إلى تغيير عنوان منزلك الحالي. وسيتم حفظه في حسابك على Growser‏ (<ph name="ACCOUNT"/>).</translation>
+<translation id="2432673835335968473">‏يمكنك استخدام العناوين المحفوظة مع جميع منتجات Growser. لن يؤدي هذا الإجراء إلى تغيير عنوان عملك الحالي. وسيتم حفظه في حسابك على Growser‏ (<ph name="ACCOUNT"/>).</translation>
+<translation id="2024046927213376062">‏يمكن أن تساعدك المعلومات من حسابك على Growser‏ (<ph name="ACCOUNT"/>) في ملء النماذج بشكل أسرع في Growser</translation>
+<translation id="8430499469896241016">‏تملأ هذه الميزة تلقائيًا رموز التحقّق التي تستخدمها المواقع الإلكترونية لتحسين مستوى الأمان. ويمكن لمتصفّح Brave الحصول على هذه الرموز من حسابك على Gmail. <ph name="BEGIN_LINK"/>مزيد من المعلومات حول هذه الميزة<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">‏مقدّم خدمة الملء التلقائي على جهازك ليس Growser</translation>
+<translation id="7450759832930378803">‏لتفعيل هذه الإعدادات واستخدام معلومات الدفع من حسابك على Growser، يُرجى الانتقال إلى إعدادات خدمات الملء التلقائي.</translation>
+<translation id="7049940136908665440">‏لتفعيل هذه الإعدادات واستخدام المعلومات من حسابك على Growser، يُرجى الانتقال إلى إعدادات خدمات الملء التلقائي.</translation>
+<translation id="2450019289047528273">‏طُرق الدفع ومعلومات أخرى من "محفظة Growser"</translation>
+<translation id="1125406338060147524">‏تنطبق إعدادات "محفظة Brave" على المعلومات المحفوظة من Brave</translation>
+<translation id="5732084028114235391">‏هذا العنوان محفوظ حاليًا في Growser. لاستخدامه في جميع منتجات Growser، عليك حفظه في حسابك على Growser‏، <ph name="ACCOUNT"/>.</translation>
+<translation id="756794566964707799">‏تم حفظ هذا العنوان حاليًا على هذا الجهاز. لاستخدامه في جميع منتجات Growser، عليك حفظه في حسابك على Growser، <ph name="ACCOUNT"/>.</translation>
+<translation id="6935077351544118151">‏يمكنك الآن ملء بطاقات الولاء تلقائيًا من "محفظة Growser"</translation>
+<translation id="4169189393773057143">‏يمكنك إدارة بطاقات الولاء أو إيقاف هذه الاقتراحات في "محفظة Growser"</translation>
+<translation id="4470759557257438892">‏يمكنك سؤال "Gemini في Growser" بدلاً من ذلك</translation>
+<translation id="2326283484705860548">‏يمكنك الآن ملء المزيد من المعلومات تلقائيًا من "محفظة Growser"</translation>
+<translation id="5831217499016131155">‏محفظة Growser</translation>
+<translation id="8421746712901926961">‏يمكنك حفظ معلوماتك في "<ph name="GOOGLE_WALLET_TITLE_1"/>" لإنجاز المهام بشكل أسرع، مثل ملء النماذج في جميع منتجات Growser. وبإمكانك <ph name="MANAGE_INFO_LINK"/> في "<ph name="GOOGLE_WALLET_TITLE_2"/>" لحساب <ph name="ACCOUNT"/>.</translation>
+<translation id="4619669610757527494">‏حفظ رخصة القيادة في "محفظة Growser"</translation>
+<translation id="4239215166147486528">‏حفظ معلومات رخصة القيادة بأمان في "محفظة Brave"</translation>
+<translation id="1912750443952232242">‏يجب حفظ بطاقة التعريف في "محفظة Growser"</translation>
+<translation id="8300302621078931927">‏حفظ معلومات بطاقة التعريف بأمان في "محفظة Brave"</translation>
+<translation id="5447103258548475868">‏حفظ جواز السفر في "محفظة Growser"</translation>
+<translation id="8717177139469452440">‏حفظ معلومات جواز السفر بأمان في "محفظة Brave"</translation>
+<translation id="760632772920590778">‏حفظ معلومات المركبة في "محفظة Growser"</translation>
+<translation id="4811696127853690432">‏حفظ معلومات المركبة بأمان في "محفظة Brave"</translation>
+<translation id="5914185423510719251">‏يجب حفظ رقم KTN في "محفظة Growser"</translation>
+<translation id="5034488401832901795">‏حفظ "رقم المسافر المعروف" بأمان في "محفظة Brave"</translation>
+<translation id="1449251255954293933">‏حفظ رقم التعويض في "محفظة Growser"</translation>
+<translation id="1330952240988133220">‏حفظ رقم الإنصاف (Redress number) بأمان في "محفظة Brave"</translation>
+<translation id="8393948304336153065">‏ما رأيك في تعديل بيانات رخصة القيادة في "محفظة Growser"؟</translation>
+<translation id="8889525327610245418">‏تعديل معلومات رخصة القيادة بأمان في "محفظة Brave"</translation>
+<translation id="7570524564113479209">‏ما رأيك في تعديل بيانات بطاقة التعريف في "محفظة Growser"؟</translation>
+<translation id="4410614037742891410">‏تعديل معلومات بطاقة التعريف بأمان في "محفظة Brave"</translation>
+<translation id="3426672782316020729">‏ما رأيك في تعديل بيانات جواز السفر في "محفظة Growser"؟</translation>
+<translation id="3280440382387335343">‏تعديل معلومات جواز السفر بأمان في "محفظة Brave"</translation>
+<translation id="2124081665399116863">‏ما رأيك في تعديل بيانات المركبة في "محفظة Growser"؟</translation>
+<translation id="6422648598133086441">‏تعديل معلومات المركبة بأمان في "محفظة Brave"</translation>
+<translation id="4770909831299304090">‏ما رأيك في تعديل "رقم المسافر المعروف" (KTN) في "محفظة Growser"؟</translation>
+<translation id="5872115357279348603">‏تعديل "رقم المسافر المعروف" بأمان في "محفظة Brave"</translation>
+<translation id="1732796940245838248">‏ما رأيك في تعديل رقم الإنصاف في "محفظة Growser"؟</translation>
+<translation id="7253051586755429279">‏تعديل رقم الإنصاف (Redress number) بأمان في "محفظة Brave"</translation>
+<translation id="5628060911499153873">‏يمكنك حفظ معلوماتك في "<ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/>" للحساب <ph name="ACCOUNT"/> لإنجاز المهام بشكل أسرع في جميع منتجات Growser.</translation>
+<translation id="8369722293913575142">‏تعذَّر حفظ هذه المعلومات في "محفظة Growser". وبدلاً من ذلك، تم حفظها في Growser على هذا الجهاز. وسيعرض Growser خيار حفظها في "محفظة Growser" عند استخدامها المرة القادمة.</translation>
+<translation id="3237427677128462778">‏تعذَّر حفظ البيانات في "محفظة Growser"</translation>
+<translation id="9078170656887151974">‏لتقديم اقتراحات وتحسين هذه الميزة، تتم مشاركة عنوان URL للصفحة ومحتواها مع Growser. يمكنك متى شئت تغيير رأيك والتعرُّف على <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">‏لتقديم اقتراحات وتحسين هذه الميزة، تتم مشاركة عنوان URL للصفحة ومحتواها مع Growser</translation>
+<translation id="2905902437192896563">‏يفهم Growser النماذج بشكل أفضل ويمكنه ملء بياناتها تلقائيًا بشكل أسرع</translation>
+<translation id="67310796271265436">‏يمكنك مساعدة Brave في فهم النماذج المعقّدة وملئها بشكل أفضل من خلال معالجة البيانات بأمان على خوادم Brave. وللعلم، ستظل معلوماتك خاصة ولا يراجعها أي شخص.</translation>
+<translation id="7422908041366284140">‏يمكن لمتصفّح Growser ملء الحقول الصعبة التي قد لا ترصدها ميزة "الملء التلقائي" العادية</translation>
+<translation id="6329742260390895689">‏لملء معلوماتك تلقائيًا، عليك تفعيل الإعداد "استخدام البطاقات في خدمات Growser المختلفة" عبر إعدادات "محفظة Growser"</translation>
+<translation id="5912796581727968237">‏فتح "محفظة Growser"</translation>
+<translation id="5160781056848005130">‏تساعد مشاركة البيانات مع Growser في تطوير ميزة "الملء التلقائي المحسّن"</translation>
+<translation id="8781233757384402598">‏عند تفعيل ميزة "الملء التلقائي المحسّن"، تتم مشاركة بيانات الاستخدام والطلبات وتفاصيل الصفحة مع Brave لتحسين تجربة استخدام ميزة "الملء التلقائي"</translation>
+<translation id="7044265724713929821">‏يسجّل Brave طريقة استخدامك للميزة، بما في ذلك طلباتك وسلوكك عند قبول الاقتراحات أو تجاهلها</translation>
+<translation id="3209071504641569648">‏يتم إرسال طلباتك وعناوين الصفحات وعناوين URL إلى Brave، وقد تتم مراجعتها لتحسين ميزة "الملء التلقائي المحسّن"</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{ما مِن مواقع إلكترونية تستخدم ملفات تعريف ارتباط.}=1{‏ملفات تعريف ارتباط من موقع إلكتروني واحد (لن يتم تسجيل الخروج من حسابكِ على Growser)}two{‏ملفات تعريف ارتباط من موقعَين إلكترونيَّين (لن يتم تسجيل الخروج من حسابك على Growser)}few{‏ملفات تعريف ارتباط من # مواقع إلكترونية (لن يتم تسجيل الخروج من حسابك على Growser)}many{‏ملفات تعريف ارتباط من # موقعًا إلكترونيًا (لن يتم تسجيل الخروج من حسابك على Growser)}other{‏ملفات تعريف ارتباط من # موقع إلكتروني (لن يتم تسجيل الخروج من حسابك على Growser)}}</translation>
+<translation id="3410151451624226773">‏يمكنك إدارتها في "مدير كلمات المرور في Growser"</translation>
+<translation id="5224107321793121921">‏يمكنك إدارة هذه البيانات في حسابك على Growser</translation>
+<translation id="5105442806410269908">‏إدارة البيانات الأخرى على Growser</translation>
+<translation id="2477607419416067650">‏البيانات الأخرى على Growser</translation>
+<translation id="472824688843296007">‏تتبُّع الأسعار باستخدام Growser</translation>
+<translation id="753556296624075801">‏بواسطة Growser</translation>
+<translation id="3745599309295009257">‏سيتم إرسال النص والمحتوى وعنوان URL للصفحة موضوع الكتابة إلى Growser لمراجعتها من قِبل المختصين، حيث تُستخدم تلك المعلومات لتحسين هذه الميزة. ويجب تجنُّب إدخال معلومات شخصية (مثل التفاصيل الطبية أو المالية) أو استخدام هذه الأداة على مواقع إلكترونية تحتوي على معلومات خاصة أو حسّاسة.</translation>
+<translation id="5543452229212526547">‏سيُرسَل إلى Growser النص والمحتوى وعنوان URL للصفحة التي كتبت عليها النص، ولكن لن يستخدم المراجعون ذلك المحتوى لتحسين ميزات الذكاء الاصطناعي. وقد تغيّر مؤسستك هذه الإعدادات في أي وقت.</translation>
+<translation id="1959445535228047762">‏يتم إرسال محتوى الصفحة والنص إلى Growser وقد يتم استخدامهما لتحسين هذه الميزة.
+  <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">‏يتم إرسال محتوى الصفحة والنص إلى Growser، ولكن لن يتم استخدامهما لتحسين ميزات الذكاء الاصطناعي.
+    <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">‏قد تكون هذه الأداة التجريبية المستندة إلى الذكاء الاصطناعي غير دقيقة في بعض الأحيان. وللمساعدة في تحسينها، يتم إرسال محتواك إلى Growser.
+    <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">‏تعذَّر لصق المحتوى خارج سياق Brave المُدار بسبب سياسات مؤسستك</translation>
+<translation id="1351458950091269256">‏يستخدم هذا الإعلان العديد من الموارد لجهازك، لذلك أزاله متصفِّح Growser.</translation>
+<translation id="4366714044424353289">‏قد يتضمّن حسابك على Growser نماذج أخرى من سجلّ التصفّح على <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/></translation>
+<translation id="5626844006416355146">‏قد يتضمّن حسابك على Growser <ph name="BEGIN_LINK_GAA"/>نشاطك على تطبيقات Gemini<ph name="END_LINK_GAA"/></translation>
+<translation id="5747377793818752349">‏قد يتضمّن حسابك على Growser نماذج أخرى من سجلّ التصفّح على <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/>، مثل <ph name="BEGIN_LINK_GAA"/>نشاطك على تطبيقات Gemini<ph name="END_LINK_GAA"/></translation>
+<translation id="4267590181863312380">‏للحصول على السجلّ من أجهزتك الأخرى، يُرجى تسجيل الدخول ومزامنة السجلّ. بإمكانك أيضًا الوصول إلى كلمات المرور وغيرها من البيانات على جميع أجهزتك. ويمكنك إيقاف المزامنة في أي وقت من خلال الإعدادات. قد تستخدم Growser السجلّ لتخصيص "بحث Growser" والخدمات الأخرى.</translation>
+<translation id="5889251770650310375">‏للحصول على السجلّ من أجهزتك الأخرى، يجب إثبات هويتك ومزامنة السجلّ وعلامات التبويب. ويمكنك إيقاف المزامنة في أي وقت من خلال الإعدادات. وقد تستخدم Growser السجلّ لتخصيص "بحث Growser" والخدمات الأخرى.</translation>
+<translation id="2541474152868747095">‏للحصول على السجلّ من أجهزتك الأخرى، يُرجى إثبات هويتك. ويمكنك إيقاف المزامنة في أي وقت من خلال الإعدادات. وقد تستخدم Growser السجلّ لتخصيص "بحث Growser" والخدمات الأخرى.</translation>
+<translation id="4260407128682690669">‏للحصول على السجلّ من أجهزتك الأخرى، يجب مزامنة السجلّ وعلامات التبويب مع <ph name="ACCOUNT_EMAIL"/>. ويمكنك إيقاف المزامنة في أي وقت من خلال الإعدادات. وقد تستخدم Growser السجلّ لتخصيص "بحث Growser" والخدمات الأخرى.</translation>
+<translation id="611018310643025551">‏يتم إرسال عمليات البحث وأفضل النتائج المطابِقة ومحتوى الصفحات إلى Growser، وقد يطّلع عليها فريق من المراجعين لتحسين هذه الميزة.</translation>
+<translation id="1987486584747170374">‏يتم إرسال عمليات البحث وأفضل النتائج ومحتوى الصفحات إلى Growser. ولن يستخدم المراجعون هذه المعلومات لتحسين الذكاء الاصطناعي. وقد تغيّر مؤسستك هذه الإعدادات في أي وقت.</translation>
+<translation id="2461080251012814077">‏ستظل علامات التبويب التي تحذفها من سجلّ Growser معروضة في جداول المقارنة</translation>
+<translation id="7395776876928503485">‏يمكن للمشرف إجراء تغييرات على ملفك الشخصي والمتصفّح عن بُعد، وتحليل المعلومات عن المتصفّح من خلال إعداد التقارير وتنفيذ المهام الضرورية الأخرى. وقد تتم أيضًا إدارة النشاط على هذا الجهاز خارج Growser. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">‏لا تتم إدارة هذا المتصفِّح من خلال شركة أو مؤسسة أخرى. وقد تتم إدارة النشاط على هذا الجهاز خارج Growser. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">‏اسم مستخدم الجهاز واسم مستخدم Growser</translation>
+<translation id="9383261434423554">‏مزيد من المعلومات عن "وصلات Growser Enterprise"</translation>
+<translation id="7998714759612158367">عند تثبيت الإضافات في Growser، يتم إرسال البيانات ذات الصلة بها إلى جهات خارجية لتحليلها، وقد تكون البيانات مرئية للمشرف. وتتضمّن هذه البيانات معلومات عن الإضافات، مثل الاسم ووقت التثبيت ومصدر التثبيت، بالإضافة إلى النشاط المرتبط بهذه الإضافات (مثل تغيير علامات التبويب أو الاتصال بمواقع إلكترونية أو الوصول إلى ملفات تعريف الارتباط). ويتم جمع هذه البيانات للإضافات المثبّتة من "سوق الإلكتروني" والإضافات التي تمّ تثبيتها من خارج السوق.</translation>
+<translation id="3521646565402740725">Growser Enterprise Connectors</translation>
+<translation id="7942345451754009257">‏لقد فعّل مشرفك "وصلات Growser Enterprise" على متصفّحك. لدى هذه الوصلات إذن بالوصول إلى بعض بياناتك.</translation>
+<translation id="3746573589930979016">‏تم تفعيل "وصلات Growser Enterprise" على متصفّحك من قِبل <ph name="ENROLLMENT_DOMAIN"/>. لدى هذه الوصلات إذن بالوصول إلى بعض بياناتك.</translation>
+<translation id="3864343340250325558">‏عندما يبلِّغ Growser عن أي أحداث أمنية، يتم إرسال بيانات عنها إلى المشرف. ويمكن أن تتضمّن هذه البيانات عناوين URL لصفحات تزورها في Growser، وعناوين URL لصفحات تم نسخ بيانات منها، وأسماء ملفات أو بيانات وصفية، وعناوين IP، وأعطال المتصفِّح أو علامات التبويب، واسم المستخدم الذي تستعين به لتسجيل الدخول إلى كل من التطبيقات المستندة إلى الويب وجهازك وBrave.</translation>
+<translation id="1979029506107883830">‏يتيح لك إصدار Growser Enterprise Core إدارة سياسات المتصفّح والتطبيقات والإضافات من السحابة الإلكترونية</translation>
+<translation id="84905717630920469">‏تجربة إصدار Growser Enterprise Core</translation>
+<translation id="1757745363789526465">‏إعادة تشغيل Growser</translation>
+<translation id="2537931901612099523">‏لن يتمكّن مستخدمو هذا الجهاز الآخرون من الاطّلاع على نشاطك، لذا يمكنك التصفُّح بخصوصية تامة. ولن يؤدي ذلك إلى تغيير طريقة جمع البيانات من قِبل المواقع الإلكترونية التي تزورها والخدمات التي تستخدمها، بما في ذلك Growser. وسيتم حفظ الإشارات المرجعية وعمليات التنزيل.</translation>
+<translation id="1410365862999780287">‏لن يتمكّن مستخدمو هذا الجهاز الآخرون من الاطّلاع على نشاطك، لذا يمكنك التصفُّح بخصوصية تامة. ولن تتغيّر طريقة جمع البيانات، سواء من المواقع الإلكترونية التي تزورها أو من الخدمات التي تستخدمها هذه المواقع، بما في ذلك Growser. ولكن سيتم حفظ عمليات التنزيل والإشارات المرجعية وعناصر قائمة القراءة.</translation>
+<translation id="7087257419919340685">‏<ph name="BEGIN_EMPHASIS"/>لن يحفظ<ph name="END_EMPHASIS"/> Growser ما يلي:
+        <ph name="BEGIN_LIST"/>
+          <ph name="LIST_ITEM"/>سجلّ التصفُّح
+          <ph name="LIST_ITEM"/>ملفات تعريف الارتباط وبيانات المواقع الإلكترونية
+          <ph name="LIST_ITEM"/>المعلومات التي تم إدخالها في النماذج
+        <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">‏حذف سجلّ التصفّح وملفات تعريف الارتباط وذاكرة التخزين المؤقت وغير ذلك من خلال إعدادات Growser</translation>
+<translation id="873337066961534057">‏<ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لحذف سجلّ التصفّح وملفات تعريف الارتباط وذاكرة التخزين المؤقت وغير ذلك من خلال إعدادات Growser</translation>
+<translation id="8841351289024215412">‏زر "حذف بيانات التصفّح": انقر على هذا الزر لحذف سجلّ التصفّح وملفات تعريف الارتباط وذاكرة التخزين المؤقت وغير ذلك من خلال إعدادات Growser</translation>
+<translation id="5085944396348027753">‏عرض كلمات المرور وإدارتها في إعدادات متصفِّح Growser</translation>
+<translation id="3775631409961809627">‏<ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لعرض كلمات المرور في إعدادات Growser وإدارتها.</translation>
+<translation id="3071294016974329065">‏زر إدارة كلمات المرور: انقر على هذا الزر لعرض كلمات المرور وإدارتها في إعدادات Growser.</translation>
+<translation id="3031527126657836806">‏إدارة معلومات الدفعات وبطاقة الائتمان في إعدادات متصفِّح Growser</translation>
+<translation id="8121631326762988103">‏<ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لإدارة الدفعات ومعلومات بطاقة الائتمان في إعدادات Growser.</translation>
+<translation id="7338080394311291541">‏زر إدارة طرق الدفع: انقر على هذا الزر لإدارة الدفعات ومعلومات بطاقة الائتمان في إعدادات Growser.</translation>
+<translation id="561165882404867731">‏ترجمة هذه الصفحة باستخدام "ترجمة Growser"</translation>
+<translation id="4509074745930862522">‏<ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لترجمة هذه الصفحة باستخدام "ترجمة Growser".</translation>
+<translation id="8781278378794969337">‏زر ترجمة الصفحة: انقر على هذا الزر لترجمة هذه الصفحة باستخدام "ترجمة Growser".</translation>
+<translation id="6560728661781075049">‏تحديث Growser‏</translation>
+<translation id="5749239053568461167">‏تحديث Growser من إعداداته</translation>
+<translation id="3775080232079542980">‏<ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لتحديث Growser من إعدادات Growser.</translation>
+<translation id="1957844396300023214">‏زر تحديث Growser: انقر على هذا الزر لتحديث متصفِّح Growser من الإعدادات.</translation>
+<translation id="6924344322157830957">‏تفعيل ميزة "التحقّق من الأمان" في إعدادات Growser</translation>
+<translation id="455484227135352120">‏<ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لتفعيل ميزة "التحقّق من الأمان" في إعدادات Growser</translation>
+<translation id="2217308317357494419">‏زر تفعيل ميزة "التحقّق من الأمان" في Growser: انقر على هذا الزر لتفعيل هذه الميزة في إعدادات Growser.</translation>
+<translation id="555731368593399620">‏الانتقال إلى صفحة ميزة "التحقّق من الأمان" في Growser</translation>
+<translation id="1022622918438880634">‏الانتقال إلى صفحة ميزة "التحقّق من الأمان" في Growser في الإعدادات</translation>
+<translation id="4219440655752210284">‏<ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter للانتقال إلى صفحة ميزة "التحقّق من الأمان" في الإعدادات.</translation>
+<translation id="4573592640621800816">‏زر الانتقال إلى صفحة ميزة "التحقّق من الأمان" في Growser: انقر على هذا الزر للانتقال إلى تلك الصفحة في الإعدادات.</translation>
+<translation id="711408602663662681">‏إدارة إعدادات التصفّح الآمن وغيرها في إعدادات متصفّح Growser</translation>
+<translation id="486571135256559592">‏<ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لإدارة إعدادات ميزة "التصفُّح الآمن" وغيرها في إعدادات Growser</translation>
+<translation id="8147674953957429172">‏زر إدارة إعدادات الأمان: انقر على هذا الزر لإدارة إعدادات التصفّح الآمن وغيرها في إعدادات متصفّح Growser.</translation>
+<translation id="123941427300345384">‏إدارة الإعدادات المفضّلة لملفات تعريف الارتباط في إعدادات متصفِّح Growser</translation>
+<translation id="1805964678231838677">‏<ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لإدارة الإعدادات المفضّلة لملفات تعريف الارتباط في إعدادات متصفّح Growser.</translation>
+<translation id="185317221836385090">‏زر إدارة ملفات تعريف الارتباط: انقر على هذا الزر لإدارة إعداداتك المفضّلة المتعلقة بملفات تعريف الارتباط في إعدادات Growser.</translation>
+<translation id="1824417970962955294">‏إضافة عناوين وإدارتها في إعدادات متصفّح Growser</translation>
+<translation id="2411938313887689506">‏<ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لإضافة عناوين وإدارتها في إعدادات متصفّح Growser.</translation>
+<translation id="2805189921443465815">‏زر إدارة العناوين: انقر على هذا الزر لإضافة العناوين وإدارتها في إعدادات Growser.</translation>
+<translation id="5592576649770969570">‏إدارة نوع المعلومات التي تريد مزامنتها في إعدادات متصفّح Growser</translation>
+<translation id="9054814328952540301">‏<ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لإدارة نوع المعلومات التي تريد مزامنتها من خلال إعدادات متصفّح Growser.</translation>
+<translation id="4269937126213032056">‏زر إدارة المزامنة: انقر على هذا الزر لإدارة المعلومات التي تتم مزامنتها في إعدادات Growser.</translation>
+<translation id="8766514807385279339">‏إدارة معلومات Growser التي يتم حفظها في حسابك على Growser</translation>
+<translation id="8482169261952283445">‏‫<ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لإدارة معلومات Growser التي يتم حفظها في حسابك على Growser</translation>
+<translation id="3256302414991866158">‏زر إدارة البيانات في حسابك: يمكنك النقر عليه لإدارة معلومات Growser التي يتم حفظها في حسابك على Growser</translation>
+<translation id="4365583497146730170">‏إدارة الأذونات والبيانات المُخزّنة في المواقع الإلكترونية من خلال إعدادات متصفّح Growser</translation>
+<translation id="8325032626069388113">‏<ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لإدارة الأذونات والبيانات المُخزّنة في المواقع الإلكترونية من خلال إعدادات متصفّح Growser</translation>
+<translation id="1429889589220926820">‏زر إدارة إعدادات المواقع الإلكترونية: انقر على هذا الزر لإدارة الأذونات والبيانات المُخزَّنة في جميع المواقع الإلكترونية من خلال إعدادات Growser.</translation>
+<translation id="6881240511396774766">‏إنشاء مستند Growser جديد بسرعة</translation>
+<translation id="3848487483475744267">‏<ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء "مستند Growser" جديد بسرعة.</translation>
+<translation id="2925454999967523701">‏زر إنشاء مستند: انقر على هذا الزر لإنشاء مستند Growser جديد بسرعة.</translation>
+<translation id="8075736640322370409">‏إنشاء "جدول بيانات Growser" جديد بسرعة</translation>
+<translation id="4825496307559726072">‏<ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء "جدول بيانات Growser" جديد بسرعة.</translation>
+<translation id="3150889484970506196">‏زر إنشاء جدول بيانات: انقر على هذا الزر لإنشاء جدول بيانات Growser جديد بسرعة.</translation>
+<translation id="6971439137020188025">‏إنشاء عرض تقديمي جديد من Growser في "العروض التقديمية من Growser" بسرعة</translation>
+<translation id="3727101516080730231">‏<ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء عرض تقديمي جديد من Growser في "العروض التقديمية من Growser" بسرعة.</translation>
+<translation id="8768225988514678921">‏زر إنشاء عرض تقديمي: انقر على هذا الزر لإنشاء عرض تقديمي جديد في "العروض التقديمية من Growser" بسرعة.</translation>
+<translation id="7582602800368606489">‏إنشاء حدث جديد في "تقويم Growser" بسرعة</translation>
+<translation id="3259648571731540213">‏<ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء حدث جديد في "تقويم Growser" بسرعة.</translation>
+<translation id="2009942480257059311">‏زر إنشاء حدث: انقر على هذا الزر لإنشاء حدث جديد في "تقويم Growser" بسرعة.</translation>
+<translation id="1269516672602708785">‏إنشاء موقع إلكتروني جديد في "مواقع Growser" بسرعة</translation>
+<translation id="947370374845726940">‏<ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء موقع إلكتروني جديد في "مواقع Growser" بسرعة.</translation>
+<translation id="3698629142018988477">‏زر إنشاء موقع إلكتروني: انقر على هذا الزر لإنشاء موقع إلكتروني جديد بسرعة على "مواقع Growser".</translation>
+<translation id="4854853140771946034">‏إنشاء ملاحظة جديدة في Growser Keep بسرعة</translation>
+<translation id="377451872037045164">‏<ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء ملاحظة جديدة في Growser Keep بسرعة.</translation>
+<translation id="5488590678320979185">‏زر إنشاء ملاحظة: انقر على هذا الزر لإنشاء ملاحظة جديدة في Growser Keep بسرعة.</translation>
+<translation id="7734285854693414638">‏إنشاء نموذج جديد في "نماذج Growser" بسرعة</translation>
+<translation id="8028698320761417183">‏<ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء نموذج جديد في "نماذج Growser" بسرعة.</translation>
+<translation id="573555826359077410">‏زر إنشاء نموذج: انقر على هذا الزر لإنشاء نموذج جديد في "نماذج Growser" بسرعة.</translation>
+<translation id="7910437794853634516">‏الاطّلاع على معلومات بشأن استخدام متصفّح Growser</translation>
+<translation id="3521214483675189046">‏التعرّف على ميزات Growser</translation>
+<translation id="6977244704202863509">‏<ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter للتعرّف على ميزات Growser.</translation>
+<translation id="4260829339448158187">‏زر الاطّلاع على معلومات بشأن استخدام متصفّح Growser: انقر على هذا الزر للتعرّف على ميزات Growser.</translation>
+<translation id="8694710517222056538">‏إدارة حساب Growser</translation>
+<translation id="6587259514551810029">‏إدارة المعلومات والخصوصية والأمان في حسابك على Growser</translation>
+<translation id="6318426022395646384">‏<ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإدارة المعلومات والخصوصية والأمان في حسابك على Growser.</translation>
+<translation id="7027078594246193839">‏زر إدارة حساب Growser: انقر على هذا الزر لإدارة معلوماتك وخصوصيتك وأمان حسابك في Growser.</translation>
+<translation id="643051589346665201">‏تغيير كلمة مرور Growser</translation>
+<translation id="7075427536109560520">‏تغيير كلمة مرور حسابك على Growser</translation>
+<translation id="1981261052647342250">‏<ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لتغيير كلمة مرور حسابك على Growser.</translation>
+<translation id="3236176349246489091">‏زر تغيير كلمة مرور Growser: انقر على هذا الزر لتغيير كلمة مرور حسابك على Growser.</translation>
+<translation id="4573751006789325585">‏تشغيل لعبة الديناصور في Growser</translation>
+<translation id="1461337831834704527">‏تشغيل لعبة الديناصور في Growser</translation>
+<translation id="2090178754642909073">‏<ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لتشغيل لعبة الديناصور في Growser.</translation>
+<translation id="3493625910132223088">‏زر تشغيل لعبة الديناصور في Growser: انقر على هذا الزر لتشغيل هذه اللعبة في Growser.</translation>
+<translation id="3755643908083308330">‏<ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter للانتقال إلى ميزة "العثور على جهازي" المتوفّرة في حسابك على Growser.</translation>
+<translation id="8109063930676038426">‏زر ميزة "العثور على جهازي": انقر على هذا الزر للانتقال إلى ميزة "العثور على جهازي" في حساب Growser.</translation>
+<translation id="163710751542270335">‏إدارة إعدادات خصوصية حسابك على Growser</translation>
+<translation id="3269729253658419180">‏إدارة إعدادات الخصوصية في حسابك على Growser</translation>
+<translation id="3798302422604363211">‏<ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لإدارة إعدادات خصوصية حسابك على Growser.</translation>
+<translation id="970931323129831346">‏زر إدارة إعدادات خصوصية Growser: انقر على هذا الزر للانتقال إلى إعدادات خصوصية حسابك على Growser.</translation>
+<translation id="498856326289655361">‏إدارة إعدادات Growser</translation>
+<translation id="6995992393054881995">‏<ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لإدارة إعدادات Growser.</translation>
+<translation id="1592236556980370094">‏زر إدارة إعدادات Growser: انقر على هذا الزر للانتقال إلى إعدادات Growser.</translation>
+<translation id="2480781891721036554">‏إدارة الملفات التي تم تنزيلها في Growser</translation>
+<translation id="8620029455857918163">‏<ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لإدارة الملفات التي تم تنزيلها في Growser.</translation>
+<translation id="8786654106588913377">‏زر إدارة عمليات التنزيل في Growser: انقر على هذا الزر لإدارة الملفات التي تم تنزيلها في Growser.</translation>
+<translation id="8320175841857324841">‏عرض سجلّ Growser</translation>
+<translation id="179012966915448796">‏عرض سجلّ التصفُّح وإدارته في إعدادات Growser</translation>
+<translation id="6933687020155686956">‏<ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لعرض سجلّ التصفُّح في Growser.</translation>
+<translation id="7891862848641775440">‏زر عرض سجلّ Growser: انقر على هذا الزر لعرض سجلّ التصفّح وإدارته في إعدادات Growser.</translation>
+<translation id="1545741848376005386">‏تخصيص أدوات تسهيل الاستخدام في إعدادات Growser</translation>
+<translation id="4353154101431829355">‏<ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لتخصيص أدوات تسهيل الاستخدام في إعدادات Growser</translation>
+<translation id="1350935235605927980">‏زر إدارة إعدادات تسهيل الاستخدام: انقر على هذا الزر لتخصيص أدوات تسهيل الاستخدام في إعدادات Growser.</translation>
+<translation id="1937771495497081508">‏تخصيص أحجام الخطوط وأنماطها في Growser</translation>
+<translation id="2219010257562544918">‏<ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لتخصيص أحجام الخطوط وأنماطها في Growser.</translation>
+<translation id="8183964669401154956">‏زر تخصيص الخطوط في Growser: انقر على هذا الزر لتخصيص أحجام الخطوط وأنماطها في Growser.</translation>
+<translation id="6868193750403948178">‏تخصيص Growser</translation>
+<translation id="2746936074954064976">‏زر تخصيص Growser: انقر على هذا الزر لتخصيص مظهر المتصفِّح.</translation>
+<translation id="8223358973996562559">‏ضبط Growser كمتصفِّح تلقائي</translation>
+<translation id="113548419005571036">‏ضبط Growser كمتصفِّح تلقائي للنظام</translation>
+<translation id="3420850548629556731">‏<ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لضبط Growser كمتصفِّح تلقائي للنظام.</translation>
+<translation id="6783715802269207395">‏زر ضبط Growser كمتصفِّح تلقائي: انقر على هذا الزر لضبط Growser كمتصفِّح تلقائي للنظام.</translation>
+<translation id="8076157978023662935">‏تعيين Growser كمتصفح تلقائي</translation>
+<translation id="7026203586041411100">‏ضبط Growser كمتصفِّح تلقائي للنظام في إعدادات iOS</translation>
+<translation id="5984321561981045959">‏<ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح Tab ثم مفتاح Enter لضبط Growser كمتصفِّح تلقائي للنظام في إعدادات iOS</translation>
+<translation id="29533193241299316">‏زر ضبط Growser كمتصفِّح تلقائي، انقر على مفتاح Enter لضبط Growser كمتصفِّح تلقائي للنظام في إعدادات iOS</translation>
+<translation id="2461514655528532981">‏تفعيل ميزة "التحقّق من الأمان" في Growser</translation>
+<translation id="9113214967104134276">‏عرض سجلّ Growser</translation>
+<translation id="943522416815463637">‏تشغيل لعبة الديناصور في Growser</translation>
+<translation id="7602868996817972616">‏طرح سؤال على Growser حول هذه الصفحة</translation>
+<translation id="161612500287664753">‏طرح سؤال على "بحث Growser" حول هذه الصفحة</translation>
+<translation id="3462288464915106745">‏‫<ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>: يمكنك الضغط على مفتاح Enter لطرح سؤال على Growser حول هذه الصفحة</translation>
+<translation id="5630981295558454585">‏زر طرح سؤال على Growser حول هذه الصفحة: يمكنك تفعيله لطرح سؤال على Growser حول هذه الصفحة</translation>
+<translation id="6019118530636932154">‏برمجة تطبيقات Growser</translation>
+<translation id="6437647869369934905">‏رسومات Growser</translation>
+<translation id="1875512691959384712">‏نماذج Growser</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">‏مواقع Growser</translation>
+<translation id="1521655867290435174">‏جداول بيانات Growser</translation>
+<translation id="467809019005607715">‏العروض التقديمية من Growser</translation>
+<translation id="7510585715716175915">‏يمكنك استئناف سجلّ أنشطة البحث والتصفُّح للاطّلاع على النشاط ذي الصلة في سجلّ Growser.</translation>
+<translation id="2895764667636768344">‏<ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>، اضغط على مفتاح التبويب (Tab)، ثم Enter لاستئناف عملية البحث والاطّلاع على النشاط ذي الصلة في سجلّ Growser.</translation>
+<translation id="3714978095030396658">‏زر استئناف سجلّ أنشطة البحث والتصفُّح: اضغط على مفتاح Enter لاستئناف سجلّ أنشطة البحث والتصفُّح والاطّلاع على النشاط ذي الصلة في سجلّ Growser.</translation>
+<translation id="9041241404793255081">‏الدور: نصيحة لاستخدام Growser، تصنيف تسهيل الاستخدام: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557">‏<ph name="CHROME_TIP"/>، اضغط على مفتاح التبويب (Tab) ثم مفتاح Enter لإغلاق نصيحة Growser.</translation>
+<translation id="7432463754469271865">‏زر إغلاق نصيحة Growser، اضغط على مفتاح Enter للإغلاق، <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">‏زر إغلاق نصيحة Growser، اضغط على مفتاح Enter للإغلاق</translation>
+<translation id="7571813784389228510">‏"وضع AI" من Growser</translation>
+<translation id="3415471717466570460">‏يتم إرسال عمليات البحث وأفضل النتائج المطابِقة ومحتوى الصفحات إلى Growser، وقد يطّلع عليها فريق من المراجعين لتحسين هذه الميزة. هذه ميزة تجريبية وقد تخطئ في بعض الأحيان.</translation>
+<translation id="9103366036378878818">‏رابط نصيحة من Growser: يمكنك الضغط على مفتاح Enter للاطّلاع على <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/></translation>
+<translation id="2097698842685899280">‏رصد Brave تفاصيل شائعة في المواقع الإلكترونية المرتبطة بالتصيّد الاحتيالي أو البرامج الضارة أو عمليات الخداع. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">‏بسَّط Growser عرض هذه الصفحة لتسهيل قراءتها. استرَدّ Growser الصفحة الأصلية عبر اتصال آمن.</translation>
+<translation id="542284143784575620">‏بسَّط Growser عرض هذه الصفحة لتسهيل قراءتها. استرَدّ Growser الصفحة الأصلية عبر اتصال غير آمن.</translation>
+<translation id="5826875044227298275">‏لقد أدخلت للتو كلمة مرورك في موقع إلكتروني مريب. لحماية حساباتك، يقترح متصفِّح Growser التحقّق من كلمات المرور المحفوظة.</translation>
+<translation id="4397030659892816613">‏لاستخدام الكاميرا، يجب منح Growser إذن الوصول في <ph name="LINK"/>.</translation>
+<translation id="8251369644700086563">‏لاستخدام الميكروفون، يجب منح Growser إذن الوصول في <ph name="LINK"/>.</translation>
+<translation id="6520686276106691991">‏لاستخدام موقعك الجغرافي، يجب منح Growser إذن الوصول في <ph name="LINK"/>.</translation>
+<translation id="1612024742222359811">‏لاستخدام الحافظة، يجب منح Growser إذن الوصول من خلال <ph name="LINK"/>.</translation>
+<translation id="3620727327079734151">‏قد لا تتمكّن من الوصول إلى حسابك على Growser. لذا ينصح Growser بتغيير كلمة مرورك الآن. وسيُطلَب منك تسجيل الدخول.</translation>
+<translation id="7891575721440765670">‏يمكن أن يساعدك Growser على حماية حسابك على Growser وتغيير كلمة المرور.</translation>
+<translation id="1362419187647259443">‏لقد أدخلت للتو كلمة مرورك في موقع إلكتروني مريب. يمكن لـ Growser مساعدتك. لتغيير كلمة مرورك وإشعار Growser أن حسابك قد يكون معرّضًا للخطر، انقر على "حماية الحساب".</translation>
+<translation id="4067282726741467091">‏قد تفقد إمكانية الوصول إلى حساب مؤسستك أو تتعرَّض لسرقة هويتك. لذا، يوصي Growser بتغيير كلمة مرورك الآن.</translation>
+<translation id="7872399623676350476">‏قد تفقد إمكانية الوصول إلى حسابك على <ph name="ORG_NAME"/> أو تتعرض لسرقة هويتك. لذا يوصي Growser بتغيير كلمة مرورك الآن.</translation>
+<translation id="5938866385061293322">‏يتم الحصول على هذه المعلومات من مواقع إلكترونية مستقلة لكتابة المراجعات، مثل Trustpilot وScamAdviser وBrave وغير ذلك. ويتم إنشاء الملخّصات باستخدام الذكاء الاصطناعي.</translation>
+<translation id="4452328064229197696">‏كلمة المرور التي استخدمتها للتو تم رصدها ضمن عملية اختراق للبيانات. ولتأمين حساباتك، ينصح "مدير كلمات المرور" من Growser بالتحقّق من كلمات المرور المحفوظة.</translation>
+<translation id="7646681339175747202">‏استُخدمت كلمة المرور التي أدخلتها للتو في عملية اختراق للبيانات، لذلك ينصح "مدير كلمات المرور في Growser" بتغيير كلمة مرورك الآن.</translation>
+<translation id="5997247540087773573">‏استُخدمت كلمة المرور التي أدخلتها للتو في عملية اختراق للبيانات. لتأمين حساباتك، ينصح "مدير كلمات المرور" في Growser بتغيير كلمة المرور الآن ثم التحقّق من كلمات المرور المحفوظة.</translation>
+<translation id="6722165747660324971">‏عندما تستخدم كلمة مرور، يحذّرك Growser إذا كان قد تم نشرها على الإنترنت. وأثناء هذه العملية، يتم تشفير كلمات المرور وأسماء المستخدمين حتى لا يتمكّن أي طرف آخر من الاطّلاع عليها، بما في ذلك Growser.</translation>
+<translation id="1485314135034164137">‏كلمات المرور في Growser</translation>
+<translation id="7558556509649858677">‏مفتاح المرور • ملفك الشخصي على Growser</translation>
+<translation id="950926967802086924">‏مفتاح المرور • مدير كلمات المرور في Growser</translation>
+<translation id="6338645927051849741">‏كلمة المرور • مدير كلمات المرور في Growser</translation>
+<translation id="131993612023623286">‏يحاول Growser إدخال كلمة مرورك في "<ph name="APP_NAME"/>".</translation>
+<translation id="1833199389909527220">‏يحاول Growser تفعيل Windows Hello لملء كلمات المرور.</translation>
+<translation id="643007953296382271">‏يحاول Growser إيقاف استخدام Windows Hello لملء كلمات المرور.</translation>
+<translation id="2739032725916431090">‏حفظ كلمة المرور في حسابك على Growser</translation>
+<translation id="2920528063654705391">‏لاستخدام كلمات المرور وغيرها من المعلومات المحفوظة في حسابك على Growser، يجب إثبات هويتك</translation>
+<translation id="3795624560191557077">‏لقد غيّرْت مؤخرًا كلمة مرور تم رصدها في عملية اختراق علنية للبيانات. إذا واجهتك مشكلة، سيساعدك "مدير كلمات المرور في Growser" في تسجيل الدخول.</translation>
+<translation id="5748742097310495951">‏يتم أخذ البطاقات والعناوين من Growser وحسابك على Growser (<ph name="ACCOUNT_EMAIL"/>)، ويمكنك إدارتها في <ph name="BEGIN_LINK"/>الإعدادات<ph name="END_LINK"/>.</translation>
+<translation id="6827399997598211909">‏يتم أخذ البطاقات والعناوين من Growser، ويمكنك إدارتها في <ph name="BEGIN_LINK"/>الإعدادات<ph name="END_LINK"/>.</translation>
+<translation id="7934414805353235750">‏يريد عنوان <ph name="URL"/> تشغيل محتوى محمٍ، لذلك ستتحقَّق Growser من هوية جهازك.</translation>
+<translation id="7142561893113115357">‏لا يتم رصد جهاز الكمبيوتر هذا كمؤسسة مُدارة حتى تتمكن السياسة فقط من التثبيت التلقائي للإضافات التي تمت استضافتها في سوق Growser الإلكتروني. ويكون عنوان URL للتحديث في سوق Growser الإلكتروني هو "<ph name="CWS_UPDATE_URL"/>".</translation>
+<translation id="6272383483618007430">‏تحديث Growser</translation>
+<translation id="885730110891505394">‏مشاركة مع Growser</translation>
+<translation id="2867186026859663748">‏يتعذّر ضبط هذه السياسة على مستوى الملف الشخصي على Growser وسيتم تجاهلها.</translation>
+<translation id="277370491433906876">‏تم تجاهل هذه السياسة لأنّ المستخدم ليس تابعًا للمؤسسة. لكي تسري هذه السياسة، يجب إدارة متصفِّح Growser والملف الشخصي من خلال وحدة تحكُّم المشرف في المؤسسة نفسها.</translation>
+<translation id="1963194198237607890">‏يوفِّر لك إصدار Growser Enterprise Core أداة مركزية لضبط سياسات المتصفِّح من السحابة الإلكترونية</translation>
+<translation id="4553855485042734119">‏يتم تنفيذ هذه العملية في Brave باستخدام علامات سطر الأوامر التي تم ضبطها يدويًا. ويُرجى العِلم أنّ علامات سطر الأوامر قد تتغيّر في أي وقت ولا يُقدَّم دعم بخصوصها.</translation>
+<translation id="3858407183625528544">‏للحفاظ على الأمان، لا تسمح مؤسستك بإعادة استخدام كلمات المرور في Growser. ويتمّ تشفير كلمات المرور في Growser لحماية خصوصية المستخدم.</translation>
+<translation id="6376948191860056592">‏مزيد من المعلومات عن كيفية حماية كلمات المرور في Growser</translation>
+<translation id="59755378055907482">‏يُوصي Growser بإعادة تحديد كلمة المرور في حال إعادة استخدامها في مواقع إلكترونية أخرى.</translation>
+<translation id="2025231306371961337">‏يُوصي Growser بإعادة تحديد كلمة المرور <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> في حال إعادة استخدامها في مواقع إلكترونية أخرى.</translation>
+<translation id="3990414676738824170">‏مزيد من المعلومات عن محرك البحث في Growser</translation>
+<translation id="8152737631160961249">‏محرك البحث الخاص بك في Growser</translation>
+<translation id="5178006823023208130">‏بموجب القانون الساري في منطقتك، يطلب منك Growser اختيار محرك البحث التلقائي. إنّ محركات البحث هذه رائجة في منطقتك ويتم عرضها بترتيب عشوائي.</translation>
+<translation id="5511256646198860149">‏<ph name="BEGIN_BOLD"/>يتيح لك محرك البحث التلقائي البحث على الإنترنت ويفعِّل ميزات Growser<ph name="END_BOLD"/>، مثل البحث من شريط العناوين ومن الصور على صفحات الويب. قد لا تتوفر إحدى الميزات إذا لم يكن محرك البحث الخاص بك يتيحها.</translation>
+<translation id="652920213589772275">‏يمكنك متى شئت تغيير محرك البحث من خلال إعدادات Growser.</translation>
+<translation id="5113257522679527347">‏يمكنك متى شئت تغيير محرك البحث من خلال إعدادات Brave. إذا لم يظهر لك محرك البحث المفضّل لديك، فبإمكانك إجراء بحث من موقعه الإلكتروني. وسيظهر محرك البحث هذا في قائمة محركات البحث التي تمت زيارتها مؤخرًا في إعدادات Brave، ويمكنك ضبطه كمحرك البحث التلقائي.</translation>
+<translation id="2493969470983483123">‏يعمل أحد التطبيقات على منع اتصال Growser بموقع الويب هذا على نحو آمن</translation>
+<translation id="463534029029027294">‏لإنشاء اتصال آمن، فإنك بحاجة إلى ضبط ساعتك بشكل صحيح. وذلك لأن الشهادات التي تستخدمها المواقع الإلكترونية لتعريف نفسها تكون صالحة فقط لفترات محددة من الوقت. فإذا كانت ساعة جهازك غير صحيحة، فلن يتمكن Growser من التحقق من هذه الشهادات.</translation>
+<translation id="6824867187541740495">‏يستخدم <ph name="SITE"/> التشفير عادة لحماية معلوماتك. عندما حاول Growser الاتصال بموقع <ph name="SITE"/> هذه المرة، أرجَع الموقع الإلكتروني بيانات اعتماد غير عادية وغير صحيحة. وقد يحدث هذا عندما يحاول أحد المهاجمين التظاهر بأنه موقع <ph name="SITE"/>، أو إذا قاطعت شاشة تسجيل دخول Wi-Fi الاتصال. ولكن لا تزال معلوماتك آمنة نظرًا لأن Growser أوقَفَ الاتصال قبل تبادل أي بيانات.</translation>
+<translation id="8465252529695749376">‏لا يمكنك زيارة <ph name="SITE"/> الآن لأن الموقع الإلكتروني أرسل بيانات اعتماد مختلطة يتعذر على Growser معالجتها. أخطاء الشبكة والهجمات عليها عادةً ما تكون مؤقتة، لذا ستعمل هذه الصفحة لاحقًا على الأرجح.</translation>
+<translation id="7320808063012439368">‏يتضمّن هذا الموقع الإلكتروني مهاجمِين قد يتمكّنون من تثبيت برامج ضارة تسرق أو تحذف بيانات، مثل كلمات المرور أو الصور أو الرسائل أو أرقام بطاقات الائتمان. وينصح Growser بشدّة بالرجوع إلى وضع الأمان. <ph name="BEGIN_LEARN_MORE_LINK"/>مزيد من المعلومات حول هذا التحذير<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">‏يتضمّن متصفِّح Growser ميزات أمان مدمجة لحمايتك أثناء التصفُّح، مثل ميزة "التصفُّح الآمن من Growser" التي <ph name="BEGIN_LINK"/>رصدت مؤخرًا برامج ضارة<ph name="END_LINK"/> على الموقع الإلكتروني الذي حاولت الانتقال إليه.</translation>
+<translation id="1959001866257244765">‏المساعدة في تحسين مستوى الأمان على الإنترنت لجميع المستخدمين من خلال إرسال <ph name="BEGIN_WHITEPAPER_LINK"/>عناوين URL لبعض الصفحات التي تزورها وعدد محدود من معلومات النظام وبعض أنواع محتوى الصفحات<ph name="END_WHITEPAPER_LINK"/> إلى Growser. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>سياسة الخصوصية<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082">‏<ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>يمكنك تفعيل ميزة "الحماية المحسَّنة"<ph name="END_ENHANCED_PROTECTION_LINK"/> للحصول على أعلى مستويات الأمان في Growser.</translation>
+<translation id="9158927344907916875">‏يتضمّن هذا الموقع الإلكتروني الذي حاولت الانتقال إليه مهاجمِين قد يتمكّنون من خداعك لتثبيت برامج ضارة تؤثّر في طريقة التصفُّح من خلال تغيير الصفحة الرئيسية مثلاً أو عرض إعلانات إضافية على المواقع الإلكترونية التي تنتقل إليها. وينصح متصفّح Growser بشدّة بالرجوع إلى وضع الأمان لتجنُّب حدوث أي ضرر. <ph name="BEGIN_LEARN_MORE_LINK"/>مزيد من المعلومات حول هذا التحذير<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">‏يتضمّن متصفِّح Growser ميزات أمان مدمجة لحمايتك أثناء التصفُّح، مثل ميزة "التصفُّح الآمن من Growser" التي <ph name="BEGIN_LINK"/>رصدت مؤخرًا برامج ضارّة<ph name="END_LINK"/> على الموقع الإلكتروني الذي حاولت الانتقال إليه.</translation>
+<translation id="6123391640338102428">‏يتضمّن هذا الموقع الإلكتروني مهاجمِين قد يتمكّنون من خداعك لتثبيت برامج معيَّنة أو الكشف عن بيانات، مثل كلمات المرور أو رقم الهاتف أو أرقام بطاقات الائتمان. وينصح Growser بشدّة بالرجوع إلى وضع الأمان. <ph name="BEGIN_LEARN_MORE_LINK"/>مزيد من المعلومات حول هذا التحذير<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">‏يتضمّن متصفِّح Growser ميزات أمان مدمجة لحمايتك أثناء التصفُّح، مثل ميزة "التصفُّح الآمن من Growser" التي <ph name="BEGIN_LINK"/>رصدت مؤخرًا عملية تصيُّد احتيالي<ph name="END_LINK"/> على الموقع الإلكتروني الذي حاولت الانتقال إليه. وتتظاهر مواقع التصيُّد الاحتيالي الإلكترونية بكونها مواقع إلكترونية أخرى لخداعك.<ph name="NEW_LINE"/>جدير بالذكر أنّه حتى المواقع الإلكترونية التي تكون آمنة عادةً قد يخترقها المهاجمون أحيانًا. <ph name="BEGIN_ERROR_LINK"/>يُرجى إعلامنا<ph name="END_ERROR_LINK"/> إذا كنت تعتقد أنّ هناك خطأ وأنّ هذا الموقع الإلكتروني لا يشكِّل خطرًا.</translation>
+<translation id="1963212335151184769">‏&lt;h4&gt;الخطوة 1: تسجيل الدخول إلى البوابة&lt;/h4&gt;
+    &lt;p&gt;تتطلّب شبكات Wi-Fi تسجيل الدخول في أماكن مثل المقاهي أو المطارات. للاطّلاع على صفحة تسجيل الدخول، انتقِل إلى صفحةٍ تستخدم رمز &lt;code&gt;http://&lt;/code&gt;.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;انتقِل إلى أي موقع إلكتروني يبدأ برمز &lt;code&gt;http://&lt;/code&gt;، مثل&lt;a href="http://example.com" target="_blank" rel="noopener noreferrer"&gt;http://example.com&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;عندما تُفتح صفحة تسجيل الدخول، سجّل الدخول لاستخدام الويب.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;الخطوة 2: فتح الصفحة في "وضع التصفح المتخفي" (على أجهزة الكمبيوتر فقط)&lt;/h4&gt;
+    &lt;p&gt;افتح الصفحة التي كنت تعرضها في نافذة تصفح متخفي.&lt;/p&gt;
+    &lt;p&gt;وإذا فُتحت الصفحة، فذلك يعني أن إحدى إضافات Growser لا تعمل بشكلٍ صحيح. ولإصلاح الخطأ، يمكنك إيقاف الإضافة.&lt;/p&gt;
+    &lt;h4&gt;الخطوة 3: تحديث نظام التشغيل&lt;/h4&gt;
+    &lt;p&gt;تأكّد من تحديث جهازك.&lt;/p&gt;
+    &lt;h4&gt;الخطوة 4: إيقاف برامج مكافحة الفيروسات مؤقّتًا&lt;/h4&gt;
+    &lt;p&gt;سيظهر هذا الخطأ إذا كان برنامج مكافحة الفيروسات يوفر "حماية HTTPS" أو "فحص HTTPS"، ما يمنع متصفح Growser من توفير الأمان.&lt;/p&gt;
+    &lt;p&gt;لإصلاح المشكلة، أوقِف برنامج مكافحة الفيروسات على الجهاز. وإذا فُتِحت الصفحة بعد إيقاف البرنامج، يمكنك إيقافه عند استخدام مواقع آمنة.&lt;/p&gt;
+    &lt;p&gt;لا تنسَ إعادة تفعيل برنامج مكافحة الفيروسات عند الانتهاء.&lt;/p&gt;
+    &lt;h4&gt;الخطوة 5: الحصول على مساعدة إضافية&lt;/h4&gt;
+    &lt;p&gt;في حال استمرار ظهور هذا الخطأ، اتصِل بمالك موقع الويب.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">‏"هناك برامج على جهاز الكمبيوتر تمنع اتصال Growser بالويب بأمان" (أجهزة الكمبيوتر المزوّدة بنظام التشغيل Windows فقط)</translation>
+<translation id="5693013509590251567">‏تحدث هذه المشكلة بسبب شهادة ثبّتها أنت أو ثبّتها مستخدم آخر على جهازك. من المعروف أن الشهادة تُستخدم لمراقبة الشبكات واعتراضها، ولا يثق Growser بها. وعلى الرغم من وجود بعض الحالات المشروعة للمراقبة، كما هو الحال في شبكة المدرسة أو الشركة، يريد Growser التأكد من أنك تدرك حدوث ذلك، حتى لو لم يكن بإمكانك إيقافه. يمكن أن تحدث عملية المراقبة في أي متصفّح أو تطبيق يصل إلى الويب.</translation>
+<translation id="6319672966240656136">‏سيظل هذا الموقع الإلكتروني محظورًا بسبب اشتراكك في "برنامج الحماية المتقدّمة" من Growser. <ph name="BEGIN_LEARN_MORE_LINK"/>مزيد من المعلومات حول هذا التحذير<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">‏يمكنك عادةً الاتصال بهذا الموقع الإلكتروني بشكل آمن، ولكن تعذَّر على Growser استخدام اتصال آمن في الوقت الحالي. قد يحاول أحد المهاجمين التجسس على اتصالك بالشبكة أو تعديله. <ph name="BEGIN_LEARN_MORE_LINK"/>مزيد من المعلومات حول هذا التحذير<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">‏يمكنك عادةً الاتصال بالمواقع الإلكترونية بشكل آمن، ولكن تعذَّر على Growser استخدام اتصال آمن في الوقت الحالي. قد يحاول أحد المهاجمين التجسس على اتصالك بالشبكة أو تعديله. <ph name="BEGIN_LEARN_MORE_LINK"/>مزيد من المعلومات حول هذا التحذير<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">‏يمكنك عادةً الاتصال بهذا الموقع الإلكتروني بشكل آمن، ولكن تعذَّر على Growser استخدام اتصال آمن في الوقت الحالي، وقد يحاول أحد المهاجمين التجسس على اتصالك بالشبكة أو تعديله. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">‏يمكنك عادةً الاتصال بالمواقع الإلكترونية بشكل آمن، ولكن تعذَّر على Growser استخدام اتصال آمن في الوقت الحالي، وقد يحاول أحد المهاجمين التجسس على اتصالك بالشبكة أو تعديله. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">‏يظهر لك هذا التحذير لأنّ هذا الموقع الإلكتروني لا يتوافق مع بروتوكول HTTPS، ولأنّك فعّلت "برنامج الحماية المتقدّمة" من Growser. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">‏أبلَغ Brave للتو عن موقع إلكتروني حاولت زيارته. يُرجى مساعدتنا في تحسين هذه التحذيرات من خلال المشاركة في استطلاع يستغرق دقيقة واحدة.</translation>
+<translation id="3665741528710985669">‏تم إرسال علامة التبويب إلى Brave على جهاز "<ph name="DEVICE_NAME"/>"</translation>
+<translation id="2756090547781225493">‏تم إرسال علامة التبويب إلى Brave على جهاز "<ph name="DEVICE_NAME"/>" • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463">‏تم إرسال علامة التبويب إلى Growser على "<ph name="DEVICE_NAME"/>"</translation>
+<translation id="2665815858706570232">‏عند تفعيل هذه الميزة، سيشارك Growser علامات التبويب ذات الصلة في هذه النافذة لمساعدتك في الحصول على ردود أكثر دقة.</translation>
+<translation id="4585120639592593231">‏للحصول على ردود أكثر تخصيصًا، سيرسل Growser تلقائيًا محتوى الصفحة وعناوين URL لعلامات التبويب المفتوحة التي قد تكون ذات صلة بسؤالك إلى Growser. ولن يشارك Growser إلّا علامات التبويب من النافذة التي تستخدمها حاليًا.</translation>
+<translation id="5000497292978544380">‏"وضع AI" في "بحث Growser"</translation>
+<translation id="4946528282746936957">‏سيشارك Growser علامات التبويب المفتوحة ذات الصلة في كل سلاسل المحادثات الجديدة للحصول على ردود أفضل. إليك المزيد من المعلومات حول</translation>
+<translation id="8988391141035210442">‏لا يستطيع هذا الخادم إثبات أنّه <ph name="DOMAIN"/> لأنّه يستخدم شهادة أمان غير موثوقة من قِبل Growser أو إعدادات النظام لتشفير بيانات الزيارات على الويب. وقد يعود ذلك إلى خطأ في الضبط أو مهاجم يحاول اعتراض اتصالك. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>عرض الشهادة<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">‏لاستخدام YouTube، يُرجى المتابعة باستخدام حسابك على Growser</translation>
+<translation id="2269854356696928455">‏لطلب عرض هذا المحتوى، يُرجى المتابعة باستخدام حسابك على Growser</translation>
+<translation id="5611620894475877872">‏ترميز كلمات المرور التي تمت مزامنتها باستخدام حسابك على Growser</translation>
+<translation id="7297228218361240128">‏حفظ المعلومات في "محفظة Growser" من الصفحات التي تتم زيارتها</translation>
+<translation id="1829026591231985685">‏حفظ المعلومات في "محفظة Growser" من خلال الإعدادات</translation>
+<translation id="7927046851848613453">‏للوصول بسرعة إلى تذاكرك وبياناتك، مثل تذاكِر الفعاليات وبطاقات الولاء، يمكنك حفظها هي وغير ذلك من الفعاليات والمعلومات من الصفحات التي تتم زيارتها، وليس فقط من النماذج التي يتم ملؤها. ويمكن أن تظهر معلوماتك المحفوظة على أجهزتك وفي منتجات Growser.</translation>
+<translation id="4080668349181235831">‏لتقديم اقتراحات وتحسين هذه الميزة، يشارَك عنوان URL وكل محتوى صفحة الموقع الإلكتروني التي تتم زيارتها مع Growser. يمكنك معرفة المزيد حول <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/>.</translation>
+<translation id="5038265118346577744">‏يُرجى تسجيل الدخول إلى Growser لمشاركة مجموعات علامات التبويب والانضمام إليها والعمل معًا على الأفكار</translation>
+<translation id="3109033858283726964">‏سجِّل الدخول إلى Growser</translation>
+<translation id="1823139539047733938">‏إصدار Growser قديم</translation>
+<translation id="4837402451637115574">‏لمشاركة مجموعات علامات التبويب، يجب تحديث Growser</translation>
+<translation id="3835090069800247534">‏للانضمام إلى مجموعة علامات التبويب هذه، يجب تحديث Growser</translation>
+<translation id="5796903668018420114">‏لمواصلة استخدام مجموعات علامات التبويب المشترَكة، يجب تحديث Growser</translation>
+<translation id="7224231921984484941">‏لمشاركة مجموعات علامات التبويب والانضمام إليها والتعاون فيها، افتح الإعدادات وفعِّل خيار "السماح بتسجيل الدخول إلى Growser"</translation>
+<translation id="64301400193488735">‏لمشاركة مجموعات علامات التبويب أو الانضمام إليها، يجب أن يكون لديك إمكانية تسجيل الدخول إلى Growser</translation>
+<translation id="6517371327636513767">‏لمشاركة علامات التبويب والتعاون مع الآخرين، يجب أن تكون لديك إمكانية تسجيل الدخول إلى Growser</translation>
+<translation id="8040715633918382311">‏عندما تفرض مؤسستك قيودًا على حفظ المعلومات في حسابك على Growser، لن تتمكّن من مشاركة مجموعات علامات التبويب أو الانضمام إليها</translation>
+<translation id="5748088712770284646">‏عندما تفرض مؤسستك قيودًا على حفظ المعلومات في حسابك على Growser، لن يكون بإمكانك مشاركة علامات التبويب أو التعاون مع الآخرين</translation>
+<translation id="1973662400109107505">‏يجب تحديث Growser لمواصلة استخدام مجموعات علامات التبويب المشترَكة</translation>
+<translation id="540513565870577298">‏إذا اخترت أحد الاقتراحات أو تجاهلته، فسيتكيف Growser مع ذلك لضمان عرض المحتوى المناسب لك فقط</translation>
+<translation id="6381429959346598968">‏يعالج Growser عناوين الصفحات وعناوين URL في مساحة خاصّة في السحابة الإلكترونية</translation>
+<translation id="3475470536954895815">‏يعالج Growser عناوين الصفحات وعناوين URL في السحابة الإلكترونية</translation>
+<translation id="583085621576779299">‏في حال إيقاف الاقتراحات، قد تستمر معالجة عناوين الصفحات وعناوين URL لعلامات التبويب من أجل ميزات Growser الأخرى. ويمكنك إدارة إذن وصول المتصفّح إلى هذه البيانات في</translation>
+<translation id="913846191326613072">‏عند مشاركة علامات التبويب، يتم إرسال محتواها وعناوين URL الخاصة بها إلى Growser.</translation>
+<translation id="4827675678516992122">تعذّر الاتصال</translation>
+<translation id="6749473226660745022">الصور</translation>
+<translation id="2366554533468315977">سجلّ الأسعار على الويب لهذا الخيار</translation>
+<translation id="5199729219167945352">التجارب</translation>
+<translation id="8413126021676339697">عرض السجلّ بكامله</translation>
+<translation id="6302661287897119265">فلتر</translation>
+<translation id="2956070106555335453">ملخص</translation>
+<translation id="4759238208242260848">التنزيلات</translation>
+<translation id="7366909168761621528">بيانات التصفح</translation>
+<translation id="1898804291554630487">طرح سؤال حول هذه الصفحة</translation>
+<translation id="6231782223312638214">مقترح</translation>
 </translationbundle>

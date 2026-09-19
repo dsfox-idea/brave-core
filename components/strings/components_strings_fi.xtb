@@ -5542,4 +5542,430 @@ Lisätietoja:
 <translation id="8198379961710069585">Hakuhistorian painike, aktivoi tehdäksesi hakuja historiasta</translation>
 <translation id="8495170825732897952">Kirjoita mihin tahansa lomakkeeseen @@, niin voit lisätä tietoa muistiin ja täyttää sitä vaihtamatta välilehtiä</translation>
 <translation id="8874790741333031443">Kokeile sallia kolmannen osapuolen evästeet väliaikaisesti. Selauksen suojaus ei tällöin ole niin vahva, mutta sivuston ominaisuudet toimivat todennäköisemmin oikein.</translation>
+<translation id="6091115085465716987">Google Wallet -logo</translation>
+<translation id="4489288117933602961">Growser-logo</translation>
+<translation id="6604204560730066844">Haluatko tallentaa tämän kortin Growser-tilillesi ja tälle laitteelle?</translation>
+<translation id="6253380015872250643">Kortin tallentaminen Growser Walletiin</translation>
+<translation id="7062344833049251424">Jos haluat maksaa nopeammin ensi kerralla, tallenna kortti ja laskutusosoite Growser Walletiin</translation>
+<translation id="4940620179254568429">Kortin CVC-koodi salataan ja tallennetaan Growser-tilillesi nopeampaa maksamista varten</translation>
+<translation id="1413235258620101697">Kortin CVC-koodi salataan ja tallennetaan Growser Walletiin nopeampaa maksamista varten</translation>
+<translation id="8296806261827627234">Maksa nopeammin, kun kortti on tallennettu. Kortin tiedot salataan Growser-tililläsi.</translation>
+<translation id="4954891067389874142">Maksa nopeammin, kun kortti on tallennettu. Kortin tiedot salataan Growser Walletissa.</translation>
+<translation id="4599572944836204718">Maksa nopeammin Google Paylla, kun kortti on tallennettu. Kortin tiedot salataan Growser Walletissa.</translation>
+<translation id="3872719112670219447">Tämä nimi on peräisin Growser-tililtäsi</translation>
+<translation id="1511387429744666092">Growser tarjoaa korttien tallentamista Growser-tilillesi, koska olet kirjautuneena sisään. Voit muuttaa tätä koska tahansa asetuksista.</translation>
+<translation id="4565400898718322011">Growser tarjoaa korttien tallentamista Growser-tilillesi, koska olet kirjautuneena sisään. Voit muuttaa tätä koska tahansa asetuksista. Kortinhaltijan nimi on peräisin tililtäsi.</translation>
+<translation id="3594461335790641595">Täytä kortti automaattisesti Braveissa tehtäviä ostoksia varten, kun se on tallennettu tälle laitteelle</translation>
+<translation id="1242832199383246031">Täytä kortin tiedot automaattisesti Braveissa tehtäviä ostoksia varten, kun se on tallennettu Google Payhin</translation>
+<translation id="6186962377036474023">Täytä kortti automaattisesti Braveissa tehtäviä ostoksia varten, kun se on tallennettu Growser Walletiin</translation>
+<translation id="5765984179517659957">Growser yrittää vahvistaa henkilöllisyytesi, jotta se voi täyttää maksutietosi.</translation>
+<translation id="828282277746732142">Tallenna IBAN Growser Walletiin</translation>
+<translation id="6084079099761498478">Jos haluat täyttää IBAN-numeron automaattisesti seuraavalla kerralla, tallenna se Growser-tilillesi</translation>
+<translation id="5398461103557553443">Jos haluat täyttää IBAN-numeron automaattisesti seuraavalla kerralla, tallenna se Growser Walletiin</translation>
+<translation id="7098302422586317090">Growser vahvistaa nyt henkilöllisyytesi ennen maksutapojen täyttämistä. Voit muuttaa asetusta milloin tahansa täällä: <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>.</translation>
+<translation id="5053116470141135293">Virtuaalikortin numero täytetään, kun maksat tällä kortilla, jotta todelliset tietosi pysyvät turvassa. Muokkaa Growser Walletissa. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">Kassasivun sisältö jaetaan Bravelle näiden vaihtoehtojen tarjoamiseksi. Jos haluat piilottaa maksa myöhemmin ‑vaihtoehdot automaattisessa täytössä, avaa <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="2840680829170913626">Kassasivun sisältö jaetaan Bravelle näiden vaihtoehtojen tarjoamiseksi. Maksusopimukset edellyttävät kelpoisuutta. Jos haluat piilottaa maksa myöhemmin ‑vaihtoehdot automaattisessa täytössä, avaa <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/>.</translation>
+<translation id="7870207318911766769">Kassasivun sisältö jaetaan Bravelle näiden vaihtoehtojen tarjoamiseksi.</translation>
+<translation id="1151858212483238980">Voit täyttää Growser Walletiin tallennetut kortit automaattisesti</translation>
+<translation id="1205344127823614428">Voit täyttää Growser Walletiin tallennetut kortit automaattisesti.</translation>
+<translation id="5848445080378515710">Kun olet tarkistanut tilauksen, sinun on kirjauduttava palvelun <ph name="BNPL_ISSUER_NAME"/> tilille tai luotava sellainen. Tili linkitetään automaattisesti Growser Walletiin.</translation>
+<translation id="8163468049564974856">Laita automaattinen täyttö päälle, niin voit maksaa turvallisesti verkossa. Korttisi tiedot salataan Brave Walletissa.</translation>
+<translation id="5717281954932320486">Täytä kortin tiedot automaattisesti, kun siirryt kassalle verkossa. Kortit tallennetaan turvallisesti Brave Walletiin.</translation>
+<translation id="7055814742378298611">Voit nyt tallentaa maksutapoja, jotka täytetään automaattisesti Braven kassalla. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Kaikki laitteelle ja Growser-tilille tallennetut turvakoodit poistetaan</translation>
+<translation id="7170930892977483182">Kaikki laitteelle ja Growser Walletiin tallennetut turvakoodit poistetaan</translation>
+<translation id="755360750394433286">Kortti on tallennettu Growser-tilillesi, joten voit täyttää sen automaattisesti tulevia ostoksia varten</translation>
+<translation id="7412081313067625215">Kortti on tallennettu Growser Walletiin, joten voit täyttää sen automaattisesti tulevia ostoksia varten</translation>
+<translation id="2482920244925042987">Tätä korttia ei voitu tallentaa Growser-tilillesi. Se on sen sijaan tallennettu Braveen tällä laitteella.</translation>
+<translation id="4740434610174859636">Korttia ei voitu tallentaa Growser Walletiin. Se on sen sijaan tallennettu Braveen tällä laitteella.</translation>
+<translation id="2109852493965717728">Tämä IBAN on tallennettu Growser-tilillesi, jotta voit käyttää sitä Braven palveluissa.</translation>
+<translation id="3837322271615501940">Tätä IBAN-numeroa ei voitu tallentaa Growser-tilillesi. Se on sen sijaan tallennettu Braveen tällä laitteella. Growser kysyy tätä seuraavan kerran, kun käytät tätä IBAN-numeroa.</translation>
+<translation id="1583007191864786102">IABN-numeroa ei voitu tallentaa Growser Walletiin. Se on sen sijaan tallennettu Braveen tällä laitteella. Growser kysyy tätä seuraavan kerran, kun käytät tätä IBAN-numeroa.</translation>
+<translation id="6915664826242394941">Tätä IBAN-numeroa ei voitu tallentaa Growser-tilillesi. Se on sen sijaan tallennettu Braveen tällä laitteella.</translation>
+<translation id="376462579087900096">IABN-numeroa ei voitu tallentaa Growser Walletiin. Se on sen sijaan tallennettu Braveen tällä laitteella.</translation>
+<translation id="2871837111996280385">Growser yrittää täyttää arkaluontoisia tietoja: <ph name="APP_NAME"/>.</translation>
+<translation id="3039045945489677870">Growser yrittää näyttää arkaluontoisia tietoja</translation>
+<translation id="3253651554860831188">Growser haluaa vahvistaa henkilöllisyytesi ennen asetusten muuttamista</translation>
+<translation id="924075841960625832">Poistetaanko lomake-ehdotus Braven tiedoista?</translation>
+<translation id="3016775357255717300">Poistetaanko luottokortti Braveista?</translation>
+<translation id="1722474089104449082">Poistetaanko osoite Braveista?</translation>
+<translation id="7077165718541055322">Poistetaanko kotiosoite Braven automaattisesta täytöstä?</translation>
+<translation id="7756454115562251695">Poistetaanko työosoite Braven automaattisesta täytöstä?</translation>
+<translation id="3068798232942246848">Poistetaanko nämä tiedot Braven automaattisesta täytöstä?</translation>
+<translation id="967369588715984092">Brave ei enää vahvista tätä sähköpostiosoitetta automaattisesti tuetuilla sivustoilla.</translation>
+<translation id="7299769361777046949">Hallinnoi kanta-asiakaskortteja Growser Walletissa</translation>
+<translation id="2903623845283894856">Voit nyt käyttää Growser-tililläsi olevia osoitteita</translation>
+<translation id="7058709760023777753">Täytä koti- ja työosoitteet automaattisesti Growser-tililtä</translation>
+<translation id="2856388212909438134">Täytä nimi ja sähköpostiosoite automaattisesti Growser-tililtä</translation>
+<translation id="8581945850065780003">Osoite poistetaan Growser-tililtäsi (<ph name="ACCOUNT"/>)</translation>
+<translation id="8652886653703834105">Growser-tililläsi, <ph name="ACCOUNT"/></translation>
+<translation id="4050392779074832022">Voit käyttää sitä Braven tuotteissa</translation>
+<translation id="361746409909709825">Voit käyttää tallennettuja osoitteita kaikissa Braven tuotteissa. Osoite on tallennettu Growser-tilillesi, <ph name="ACCOUNT"/>.</translation>
+<translation id="5318416911578989892">Voit käyttää tallennettuja osoitteita kaikissa Braven tuotteissa. Osoite tallennetaan Growser-tilillesi (<ph name="ACCOUNT"/>).</translation>
+<translation id="3995632180712217177">Voit käyttää tallennettuja osoitteita kaikissa Braven tuotteissa. Tämä ei muuta nykyistä kotiosoitettasi. Se tallennetaan Growser-tilillesi (<ph name="ACCOUNT"/>).</translation>
+<translation id="2432673835335968473">Voit käyttää tallennettuja osoitteita kaikissa Braven tuotteissa. Tämä ei muuta nykyistä työosoitettasi. Se tallennetaan Growser-tilillesi (<ph name="ACCOUNT"/>).</translation>
+<translation id="2024046927213376062">Growser-tilisi (<ph name="ACCOUNT"/>) tiedot voivat auttaa sinua täyttämään lomakkeita nopeammin Bravessa</translation>
+<translation id="8430499469896241016">Täytä automaattisesti vahvistuskoodit, joita sivustot käyttävät turvallisuuden parantamiseen. Brave voi saada koodit Gmailista. <ph name="BEGIN_LINK"/>Tutustu ominaisuuteen tarkemmin<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Growser ei ole automaattisen täytön palveluntarjoajasi</translation>
+<translation id="7450759832930378803">Jos haluat ottaa nämä asetukset käyttöön ja käyttää Growser-tilisi maksutietoja, siirry automaattisen täytön palveluiden asetuksiin.</translation>
+<translation id="7049940136908665440">Jos haluat ottaa nämä asetukset käyttöön ja käyttää Growser-tilisi tietoja, siirry automaattisen täytön asetuksiin</translation>
+<translation id="2450019289047528273">Maksutavat ja muut tiedot Growser Walletista</translation>
+<translation id="1125406338060147524">Brave Walletin asetukset koskevat Bravesta tallennettuja tietoja</translation>
+<translation id="5732084028114235391">Tämä osoite on tällä hetkellä tallennettu Braveen. Jos haluat käyttää sitä Braven tuotteissa, tallenna se Growser-tilillesi (<ph name="ACCOUNT"/>).</translation>
+<translation id="756794566964707799">Osoite on tallennettu tälle laitteelle. Jos haluat käyttää sitä Braven tuotteissa, tallenna se Growser-tilillesi (<ph name="ACCOUNT"/>).</translation>
+<translation id="6935077351544118151">Voit nyt täyttää kanta-asiakaskortit automaattisesti Growser Walletista</translation>
+<translation id="4169189393773057143">Hallinnoi kanta-asiakaskortteja tai laita ehdotukset pois päältä Growser Walletissa</translation>
+<translation id="4470759557257438892">Kysy sen sijaan Gemini in Bravelta</translation>
+<translation id="2326283484705860548">Voit nyt täyttää enemmän tietoja automaattisesti Growser Walletista</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="8421746712901926961">Tallenna tietosi <ph name="GOOGLE_WALLET_TITLE_1"/> -palveluun, niin voit hoitaa asioita nopeammin, esimerkiksi täyttää lomakkeita Braven tuotteissa. Voit <ph name="MANAGE_INFO_LINK"/> täällä: <ph name="GOOGLE_WALLET_TITLE_2"/> (<ph name="ACCOUNT"/>).</translation>
+<translation id="4619669610757527494">Tallenna ajokortti Growser Walletiin</translation>
+<translation id="4239215166147486528">Tallenna ajokortti turvallisesti Brave Walletiin</translation>
+<translation id="1912750443952232242">Henkilötodistuksen tallentaminen Growser Walletiin</translation>
+<translation id="8300302621078931927">Tallenna henkilötodistus turvallisesti Brave Walletiin</translation>
+<translation id="5447103258548475868">Tallenna passi Growser Walletiin</translation>
+<translation id="8717177139469452440">Tallenna passi turvallisesti Brave Walletiin</translation>
+<translation id="760632772920590778">Tallenna ajoneuvo Growser Walletiin</translation>
+<translation id="4811696127853690432">Tallenna ajoneuvo turvallisesti Brave Walletiin</translation>
+<translation id="5914185423510719251">KTN:n tallentaminen Growser Walletiin</translation>
+<translation id="5034488401832901795">Tallenna tunnetun matkustajan numero turvallisesti Brave Walletiin</translation>
+<translation id="1449251255954293933">Tallenna oikaisunumero Growser Walletiin</translation>
+<translation id="1330952240988133220">Tallenna korjausnumero turvallisesti Brave Walletiin</translation>
+<translation id="8393948304336153065">Päivitä ajokortti Growser Walletissa</translation>
+<translation id="8889525327610245418">Päivitä ajokortti turvallisesti Brave Walletissa</translation>
+<translation id="7570524564113479209">Päivitä henkilötodistus Growser Walletissa</translation>
+<translation id="4410614037742891410">Päivitä henkilötodistus turvallisesti Brave Walletissa</translation>
+<translation id="3426672782316020729">Päivitä passi Growser Walletissa</translation>
+<translation id="3280440382387335343">Päivitä passi turvallisesti Brave Walletissa</translation>
+<translation id="2124081665399116863">Päivitä ajoneuvo Growser Walletissa</translation>
+<translation id="6422648598133086441">Päivitä ajoneuvo turvallisesti Brave Walletissa</translation>
+<translation id="4770909831299304090">Päivitä KTN Growser Walletissa</translation>
+<translation id="5872115357279348603">Päivitä tunnetun matkustajan numero turvallisesti Brave Walletissa</translation>
+<translation id="1732796940245838248">Päivitä korjausnumero Growser Walletissa</translation>
+<translation id="7253051586755429279">Päivitä korjausnumero turvallisesti Brave Walletissa</translation>
+<translation id="5628060911499153873">Tallenna tietosi, niin voit hoitaa asioita nopeammin Braven tuotteissa. Tietosi tallennetaan tänne: <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> (<ph name="ACCOUNT"/>).</translation>
+<translation id="8369722293913575142">Tietoja ei voitu tallentaa Growser Walletiin. Ne on sen sijaan tallennettu Braveen tällä laitteella. Growser tarjoutuu tallentamaan tiedot Walletiin seuraavan kerran, kun käytät sitä.</translation>
+<translation id="3237427677128462778">Growser Walletiin tallentaminen ei onnistunut</translation>
+<translation id="9078170656887151974">Sivun URL-osoite ja sisältö jaetaan Bravelle ehdotusten tarjoamiseksi ja ominaisuuden parantamiseksi. Voit muuttaa mieltäsi milloin tahansa: <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Sivun URL-osoite ja sisältö jaetaan Bravelle ehdotusten tarjoamiseksi ja ominaisuuden parantamiseksi</translation>
+<translation id="2905902437192896563">Growser tulkitsee lomakkeita paremmin ja voi täyttää ne automaattisesti nopeammin</translation>
+<translation id="67310796271265436">Auta Bravea ymmärtämään ja täyttämään monimutkaisia lomakkeita paremmin käsittelemällä dataa turvallisesti Braven palvelimilla. Tietosi pysyvät yksityisinä, eikä niitä tarkasteta.</translation>
+<translation id="7422908041366284140">Growser voi täyttää automaattisesti vaikeita kenttiä, jotka tavallinen automaattinen täyttö ei välttämättä havaitse</translation>
+<translation id="6329742260390895689">Jos haluat täyttää tiedot automaattisesti, laita "Käytä kortteja Braven palveluissa" ‑asetus päälle Walletin asetuksista</translation>
+<translation id="5912796581727968237">Avaa Google Wallet</translation>
+<translation id="5160781056848005130">Autat parantamaan parannettua automaattista täyttöä jakamalla dataa Bravelle</translation>
+<translation id="8781233757384402598">Kun teet parannettua automaattista täyttöä koskevan pyynnön, käyttödata, pyynnöt ja sivun tiedot jaetaan Bravelle automaattisen täytön käyttökokemuksen parantamiseksi</translation>
+<translation id="7044265724713929821">Brave kirjaa ominaisuuden käyttötavan, esimerkiksi pyyntösi ja toimintasi, kun hyväksyt tai ohitat ehdotuksia</translation>
+<translation id="3209071504641569648">Pyynnöt, sivujen otsikot ja URL-osoitteet lähetetään Bravelle, ja ne voidaan tarkastaa parannetun automaattisen täytön parantamiseksi</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Ei yhtään}=1{1 sivustolta (pysyt kirjautuneena Growser-tilillesi)}other{# sivustolta (pysyt kirjautuneena Growser-tilillesi)}}</translation>
+<translation id="3410151451624226773">Hallinnoi Growser Salasanoissa</translation>
+<translation id="5224107321793121921">Ylläpidä Growser-tilillä</translation>
+<translation id="5105442806410269908">Muun Growser-datan ylläpito</translation>
+<translation id="2477607419416067650">Muu Growser-data</translation>
+<translation id="472824688843296007">Seuraa hintoja Braven avulla</translation>
+<translation id="753556296624075801">Palvelun tarjoaa Growser</translation>
+<translation id="3745599309295009257">Kun kirjoitat sivulle, teksti, sisältö ja URL-osoite lähetetään Bravelle ihmisten tarkistettavaksi ja niitä käytetään ominaisuuden parantamiseen. Vältä henkilökohtaisten tietojen (esimerkiksi terveys- tai taloustietojen) antamista tai tämän työkalun käyttämistä yksityisiä tai arkaluontoisia tietoja sisältävillä sivustoilla.</translation>
+<translation id="5543452229212526547">Tekstisi sekä sen sivun sisältö ja URL-osoite, jolle kirjoitat, lähetetään Bravelle. Tarkastajat eivät käytä sisältöäsi tekoälyn parantamiseen. Organisaatio voi muuttaa näitä asetuksia milloin tahansa.</translation>
+<translation id="1959445535228047762">Tekstisi ja sivun sisältö lähetetään Bravelle, ja niitä voidaan käyttää tämän ominaisuuden kehittämiseen.
+  <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">Tekstisi ja sivun sisältö lähetetään Bravelle, mutta niitä ei käytetä tekoälyn parantamiseen.
+    <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">Tämä kokeellinen tekoälytyökalu ei aina osu oikeaan. Sisältösi lähetetään Bravelle työkalun kehittämiseksi.
+    <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">Sisällön liittäminen epäonnistuihallinnoidun Braven ulkopuolelle organisaation käytäntöjen vuoksi</translation>
+<translation id="1351458950091269256">Growser poisti tämän mainoksen, koska se käytti liian paljon laitteen resursseja.</translation>
+<translation id="4366714044424353289">Growser-tililläsi voi olla muita selaushistoriatietoja osoitteessa <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/></translation>
+<translation id="5626844006416355146">Growser-tililläsi voi olla <ph name="BEGIN_LINK_GAA"/>Gemini-sovellustoimintaa<ph name="END_LINK_GAA"/></translation>
+<translation id="5747377793818752349">Growser-tililläsi voi olla muita selaushistoriatietoja osoitteessa <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/>, esimerkiksi <ph name="BEGIN_LINK_GAA"/>Gemini-sovellustoiminta<ph name="END_LINK_GAA"/></translation>
+<translation id="4267590181863312380">Jos haluat käyttää historiaa muilta laitteilta, kirjaudu sisään ja synkronoi historia. Voit myös käyttää salasanojasi ja muita tietoja kaikilla laitteillasi. Voit lopettaa synkronoinnin milloin tahansa asetuksista. Growser voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
+<translation id="5889251770650310375">Vahvista henkilöllisyytesi ja synkronoi historia ja välilehdet, jotta voit käyttää välilehtiä muilta laitteilta. Voit lopettaa synkronoinnin milloin tahansa asetuksista. Growser voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
+<translation id="2541474152868747095">Vahvista henkilöllisyytesi, niin voit käyttää historiaa muilta laitteiltasi. Voit lopettaa synkronoinnin milloin tahansa asetuksista. Growser voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
+<translation id="4260407128682690669">Jos haluat nähdä historian muilta laitteilta, synkronoi historia ja välilehdet tilille <ph name="ACCOUNT_EMAIL"/>. Voit lopettaa synkronoinnin milloin tahansa asetuksista. Growser voi personoida Hakua ja muita palveluita historiasi perusteella.</translation>
+<translation id="611018310643025551">Haut, parhaat osumat ja niiden sivujen sisältö lähetetään Bravelle. Tarkastajat voivat nähdä ne tämän ominaisuuden parantamiseksi.</translation>
+<translation id="1987486584747170374">Haut, parhaat osumat ja niiden sivujen sisältö lähetetään Bravelle. Tarkastajat eivät käytä niitä tekoälyn parantamiseen. Organisaatio voi muuttaa asetuksia milloin tahansa.</translation>
+<translation id="2461080251012814077">Growser-historiasta poistamasi välilehdet näkyvät edelleen vertailutaulukoissa</translation>
+<translation id="7395776876928503485">Järjestelmänvalvoja voi tehdä muutoksia profiiliin ja selaimeen etänä, analysoida selaimen tietoja raporttien avulla ja tehdä muita tarvittavia tehtäviä. Toimintaa tällä laitteella saatetaan ylläpitää myös Bravein ulkopuolelta. <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Yritys tai muu organisaatio ei ylläpidä selainta. Laitteen toimintaa saatetaan ylläpitää Braven ulkopuolelta. <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">Käyttäjänimi laitteella ja käyttäjänimi Bravessa</translation>
+<translation id="9383261434423554">Lue lisää Growser Enterprise Connectorsista</translation>
+<translation id="7998714759612158367">Kun laajennuksia lisätään Braveen, olennaisia tietoja näistä laajennuksista lähetetään kolmansille osapuolille analysoitavaksi, ja ne voivat näkyä järjestelmänvalvojalle. Data sisältää laajennuksia koskevia tietoja, kuten nimen, asennusajan ja asennuslähteen sekä laajennuksiin liittyvän toiminnan (kuten välilehtien vaihtamisen, verkkosivustojen kontaktoinnin tai evästeiden käytön). Dataa kerätään sekä Web Storesta että sen ulkopuolelta asennetuista laajennuksista.</translation>
+<translation id="3521646565402740725">Growser Enterprise Connectors</translation>
+<translation id="7942345451754009257">Järjestelmänvalvoja on ottanut Growser Enterprise Connectorsin käyttöön selaimellesi. Nämä liittimet pääsevät osaan datastasi.</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/> on laittanut Growser Enterprise Connectorsin päälle selaimessasi. Nämä liittimet pääsevät osaan datastasi.</translation>
+<translation id="3864343340250325558">Kun Growser merkitsee tietoturvatapahtuman, tapahtumasta lähetetään olennaista dataa järjestelmänvalvojallesi. Data voi sisältää Bravessa avaamiesi sivujen URL-osoitteita, niiden sivustojen URL-osoitteet, joista kopioit dataa, tiedostonimiä, metadataa, IP-osoitteita selaimen tai välilehden kaatumisia ja käyttäjätunnuksen, jolla kirjaudut sisään verkkopohjaisiin sovelluksiin, laitteellesi ja Braveen.</translation>
+<translation id="1979029506107883830">Growser Enterprise Corella voit hallinnoida selainkäytäntöjä, sovelluksia ja laajennuksia pilvestä</translation>
+<translation id="84905717630920469">Kokeile Growser Enterprise Corea</translation>
+<translation id="1757745363789526465">Käynnistä Growser uudelleen.</translation>
+<translation id="2537931901612099523">Muut laitteen käyttäjät eivät näe toimintaasi, joten voit selata yksityisesti. Tämä ei vaikuta siihen, miten avaamasi sivustot ja niiden käyttämät palvelut, mukaan lukien Growser, keräävät dataa. Lataukset ja kirjanmerkit tallennetaan.</translation>
+<translation id="1410365862999780287">Muut laitteen käyttäjät eivät näe toimintaasi, joten voit selata yksityisesti. Tämä ei vaikuta siihen, miten avaamasi sivustot ja niiden käyttämät palvelut, mukaan lukien Growser, keräävät dataa. Lataukset, kirjanmerkit ja lukulistan kohteet tallennetaan.</translation>
+<translation id="7087257419919340685">Growser <ph name="BEGIN_EMPHASIS"/>ei tallenna<ph name="END_EMPHASIS"/> näitä tietoja:
+          <ph name="BEGIN_LIST"/>
+            <ph name="LIST_ITEM"/>Selaushistoriasi
+            <ph name="LIST_ITEM"/>Evästeet ja sivustodata
+            <ph name="LIST_ITEM"/>Lomakkeisiin syötetyt tiedot
+          <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Tyhjennä selaushistoria, evästeet, välimuisti ja muita tietoja Braven asetuksista</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, tyhjennä selaushistoria, evästeet, välimuisti ja muita tietoja Braven asetuksista painamalla sarkainta ja sitten Enter</translation>
+<translation id="8841351289024215412">"Poista selausdata" ‐painike, aktivoi tyhjentääksesi selaushistorian, evästeet, välimuistin ja muita tietoja Braven asetuksista</translation>
+<translation id="5085944396348027753">Katso ja hallinnoi salasanojasi Braven asetuksissa</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, katso ja ylläpidä salasanojasi Braven asetuksissa painamalla sarkainta ja sitten Enter</translation>
+<translation id="3071294016974329065">Ylläpidä salasanoja ‑painike, aktivoi katsoaksesi ja ylläpitääksesi salasanoja Braven asetuksista</translation>
+<translation id="3031527126657836806">Muuta maksu- ja credit-korttitietojasi Braven asetuksissa</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina ensin sarkainta ja sitten Enter ylläpitääksesi maksu- ja credit-korttitietoja Braven asetuksissa</translation>
+<translation id="7338080394311291541">Ylläpidä maksutapoja ‑painike, aktivoi ylläpitääksesi maksu- ja credit-korttitietoja Braven asetuksissa</translation>
+<translation id="561165882404867731">Käännä tämä sivu Growser Kääntäjällä</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, käännä tämä sivu Growser Kääntäjällä painamalla sarkainta ja sitten Enter</translation>
+<translation id="8781278378794969337">Käännä sivu ‑painike, aktivoi kääntääksesi tämä sivu Growser Kääntäjällä</translation>
+<translation id="6560728661781075049">Päivitä Growser</translation>
+<translation id="5749239053568461167">Päivitä Growser sen asetuksista</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, päivitä Growser sen asetuksista painamalla sarkainta ja sitten Enter</translation>
+<translation id="1957844396300023214">Päivitä Growser ‑painike, aktivoi päivittääksesi Growser sen asetuksista</translation>
+<translation id="6924344322157830957">Tee turvatarkistus Braven asetuksissa</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, tee turvatarkistus Braven asetuksissa painamalla sarkainta ja sitten Enter</translation>
+<translation id="2217308317357494419">Tee Braven turvatarkistus ‑painike, aktivoi tehdäksesi turvatarkistus Braven asetuksista</translation>
+<translation id="555731368593399620">Siirry Braven turvatarkistukseen</translation>
+<translation id="1022622918438880634">Siirry Braven turvatarkistussivulle asetuksissa</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, siirry Braven turvatarkistussivulle asetuksista painamalla sarkainta ja sitten Enter</translation>
+<translation id="4573592640621800816">Siirry kohtaan Braven turvatarkistus ‐painike, aktivoi siirtyäksesi Braven turvatarkistussivulle asetuksissa</translation>
+<translation id="711408602663662681">Ylläpidä selaussuojaa ja muita ominaisuuksia Braven asetuksista</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ylläpidä selaussuojaa ja muita ominaisuuksia Braven asetuksista painamalla sarkainta ja sitten Enter</translation>
+<translation id="8147674953957429172">Muuta tietoturva-asetuksia ‑painike, aktivoi ylläpitääksesi selaussuojaa ja muita ominaisuuksia Braven asetuksista</translation>
+<translation id="123941427300345384">Muuta evästevalintojasi Braven asetuksista</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja Enter, niin voit muuttaa evästevalintoja Braven asetuksista</translation>
+<translation id="185317221836385090">Ylläpidä evästeitä ‑painike, aktivoi muuttaaksesi evästevalintojasi Braven asetuksista</translation>
+<translation id="1824417970962955294">Lisää ja muuta osoitteita Braven asetuksista</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja Enter, niin voit lisätä ja muuttaa osoitteita Braven asetuksista</translation>
+<translation id="2805189921443465815">Ylläpidä osoitteita ‑painike, aktivoi lisätäksesi ja muuttaaksesi osoitteita Braven asetuksista</translation>
+<translation id="5592576649770969570">Valitse synkronoitavat tiedot Braven asetuksista</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja Enter, niin voit valita synkronoitavat tiedot Braven asetuksista</translation>
+<translation id="4269937126213032056">Muuta synkronointivalintoja ‑painike, aktivoi valitaksesi synkronoitavat tiedot Braven asetuksista</translation>
+<translation id="8766514807385279339">Valitse, mitä Growser-tietoja tallennat Growser-tilillesi</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja sitten Enteriä, niin voit valita, mitä Braven tietoja tallennetaan Growser-tilillesi</translation>
+<translation id="3256302414991866158">Hallinnoi tilin dataa ‐painike, aktivoi valitaksesi, mitä Growser-tietoja tallennetaan Growser-tilillesi</translation>
+<translation id="4365583497146730170">Ylläpidä sivustoille tallennettuja lupia ja dataa Braven asetuksista</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja Enter, niin voit ylläpitää sivustoille tallennettuja lupia ja dataa Braven asetuksista</translation>
+<translation id="1429889589220926820">Muuta sivustoasetuksia ‑painike, aktivoi ylläpitääksesi sivustoille tallennettuja lupia ja dataa Braven asetuksista</translation>
+<translation id="6881240511396774766">Luo uusi Growser-dokumentti nopeasti</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, luo uusi Growser-dokumentti nopeasti painamalla sarkainta ja sitten Enter</translation>
+<translation id="2925454999967523701">Luo dokumentti ‑painike, aktivoi luodaksesi uusi Growser-dokumentti nopeasti</translation>
+<translation id="8075736640322370409">Luo uusi Growser Sheets -taulukko nopeasti</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, luo uusi Growser Sheets -taulukko nopeasti painamalla sarkainta ja sitten Enter</translation>
+<translation id="3150889484970506196">Luo taulukko ‑painike, aktivoi luodaksesi uusi Growser Sheets -taulukko nopeasti</translation>
+<translation id="6971439137020188025">Luo uusi Growser-esitys nopeasti Slidesissa</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, luo uusi Growser-esitys nopeasti Slidesissa painamalla sarkainta ja sitten Enter</translation>
+<translation id="8768225988514678921">Luo esitys ‑painike, aktivoi luodaksesi uusi Growser-esitys nopeasti Slidesissa</translation>
+<translation id="7582602800368606489">Luo uusi tapahtuma nopeasti Growser Kalenterissa</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, luo uusi tapahtuma nopeasti Growser Kalenterissa painamalla sarkainta ja sitten Enter</translation>
+<translation id="2009942480257059311">Luo tapahtuma ‑painike, aktivoi luodaksesi uusi tapahtuma nopeasti Growser Kalenterissa</translation>
+<translation id="1269516672602708785">Luo uusi Growser Sites ‑sivusto nopeasti</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, luo sivusto nopeasti Growser Sitesissa painamalla sarkainta ja sitten Enter</translation>
+<translation id="3698629142018988477">Luo sivusto ‑painike, aktivoi luodaksesi uusi sivusto nopeasti Growser Sitesissa</translation>
+<translation id="4854853140771946034">Luo uusi muistiinpano nopeasti Growser Keepissa</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, luo uusi muistiinpano nopeasti Growser Keepissa painamalla sarkainta ja sitten Enter</translation>
+<translation id="5488590678320979185">Luo muistiinpano ‑painike, aktivoi luodaksesi uusi muistiinpano nopeasti Growser Keepissa</translation>
+<translation id="7734285854693414638">Luo uusi lomake nopeasti Growser Formsissa</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, luo uusi lomake nopeasti Growser Formsissa painamalla sarkainta ja sitten Enter</translation>
+<translation id="573555826359077410">Luo lomake ‑painike, aktivoi luodaksesi uusi lomake nopeasti Growser Formsissa</translation>
+<translation id="7910437794853634516">Katso Braven vinkkejä</translation>
+<translation id="3521214483675189046">Lue lisää Braven ominaisuuksista</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, katso lisätietoja Braven ominaisuuksista painamalla sarkainta ja sitten Enter</translation>
+<translation id="4260829339448158187">Katso Braven vinkkejä ‑painike, aktivoi katsoaksesi lisätietoa Braven ominaisuuksista</translation>
+<translation id="8694710517222056538">Ylläpidä Growser-tiliä</translation>
+<translation id="6587259514551810029">Ylläpidä tietojasi, yksityisyyttäsi ja tietoturvaasi Growser-tilillä</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ylläpidä tietojasi, yksityisyyttäsi ja tietoturvaasi Growser-tilillä painamalla sarkainta ja sitten Enter</translation>
+<translation id="7027078594246193839">Ylläpidä Growser-tiliä, aktivoi ylläpitääksesi tietojasi, yksityisyyttäsi ja tietoturvaasi Growser-tilillä</translation>
+<translation id="643051589346665201">Vaihda Growser-salasana</translation>
+<translation id="7075427536109560520">Vaihda Growser-tilin salasana</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, vaihda Growser-tilin salasana painamalla sarkainta ja sitten Enter</translation>
+<translation id="3236176349246489091">Vaihda Growser-salasana ‑painike, aktivoi vaihtaaksesi Growser-tilin salasanan</translation>
+<translation id="4573751006789325585">Pelaa Braven Dino-peliä</translation>
+<translation id="1461337831834704527">Pelaa Dino Run ‑peliä Bravessa</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina ensin sarkainta ja sitten Enter, niin voit pelata Dino Run ‑peliä Bravessa</translation>
+<translation id="3493625910132223088">Pelaa Braven Dino peliä ‑painike, aktivoi pelataksesi Dino Run ‑peliä Bravessa</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja sitten Enter, niin voit käyttää laitteen paikannusta Growser-tililläsi</translation>
+<translation id="8109063930676038426">Paikanna laite ‑painike, aktivoi siirtyäksesi Growser-tilille käyttämään laitteen paikannusta</translation>
+<translation id="163710751542270335">Tarkista Growser-tilin yksityisyysasetukset</translation>
+<translation id="3269729253658419180">Tarkista Braven yksityisyysasetukset Growser-tililläsi</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina ensin sarkainta ja sitten Enter, niin voit tarkistaa Growser-tilisi yksityisyysasetukset</translation>
+<translation id="970931323129831346">Tarkista Braven yksityisyysasetukset ‑painike, aktivoi siirtyäksesi Growser-tilisi yksityisyysasetuksiin</translation>
+<translation id="498856326289655361">Muuta Braven asetuksia</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, muuta Braven asetuksia painamalla sarkainta ja sitten Enter</translation>
+<translation id="1592236556980370094">Muuta Braven asetuksia ‑painike, aktivoi avataksesi Braven asetukset</translation>
+<translation id="2480781891721036554">Ylläpidä Bravessa lataamiasi tiedostoja</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, ylläpidä Bravessa lataamiasi tiedostoja painamalla sarkainta ja sitten Enter</translation>
+<translation id="8786654106588913377">Ylläpidä latauksia Bravessa ‑painike, aktivoi ylläpitääksesi Bravessa lataamiasi tiedostoja</translation>
+<translation id="8320175841857324841">Tarkista Growser-historiasi</translation>
+<translation id="179012966915448796">Katso ja ylläpidä selaushistoriaasi Braven asetuksista</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, katso selaushistoriaasi Bravessa painamalla sarkainta ja sitten Enter</translation>
+<translation id="7891862848641775440">Katso Growser-historiasi ‑painike, aktivoi katsoaksesi ja ylläpitääksesi selaushistoriaasi Braven asetuksista</translation>
+<translation id="1545741848376005386">Personoi esteettömyystyökaluja Braven asetuksista</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, personoi esteettömyystyökalusi Braven asetuksista painamalla sarkainta ja sitten Enter</translation>
+<translation id="1350935235605927980">Muuta esteettömyysasetuksia ‑painike, aktivoi personoidaksesi esteettömyystyökaluja Braven asetuksista</translation>
+<translation id="1937771495497081508">Muokkaa fonttien kokoja ja kirjasimia Bravessa</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, muokkaa fonttien kokoja ja kirjasimia Bravessa painamalla sarkainta ja sitten Enter</translation>
+<translation id="8183964669401154956">Muokkaa fontteja Bravessa ‑painike, aktivoi muokataksesi fonttien kokoja ja kirjasimia Bravessa</translation>
+<translation id="6868193750403948178">Yksilöi Bravea</translation>
+<translation id="2746936074954064976">Muokkaa Bravea ‑painike, aktivoi muokataksesi selaimen ulkoasua</translation>
+<translation id="8223358973996562559">Valitse Growser oletusselaimeksi</translation>
+<translation id="113548419005571036">Valitse Growser järjestelmän oletusselaimeksi</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja sitten Enter, niin voit valita Braven järjestelmän oletusselaimeksi</translation>
+<translation id="6783715802269207395">Valitse Growser oletusselaimeksi ‑painike, aktivoi valitaksesi Growser järjestelmän oletusselaimeksi</translation>
+<translation id="8076157978023662935">Aseta Growser oletusselaimeksi</translation>
+<translation id="7026203586041411100">Valitse Growser järjestelmän oletusselaimeksi iOS-asetuksista</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina ensin sarkainta ja sitten Enter, niin voit valita Braven järjestelmän oletusselaimeksi iOS-asetuksista</translation>
+<translation id="29533193241299316">Valitse Growser oletusselaimeksi ‑painike, painamalla Enter voit valita Braven järjestelmän oletusselaimeksi iOS-asetuksista</translation>
+<translation id="2461514655528532981">Tee Braven turvatarkistus</translation>
+<translation id="9113214967104134276">Tarkista Growser-historiasi</translation>
+<translation id="943522416815463637">Pelaa Braven Dino-peliä</translation>
+<translation id="7602868996817972616">Kysy Bravelta tästä sivusta</translation>
+<translation id="161612500287664753">Kysy Growser-haulta tästä sivusta</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, kysy Bravelta tästä sivusta painamalla Enter</translation>
+<translation id="5630981295558454585">Kysy Bravelta tästä sivusta ‑painike, aktivoi kysyäksesi Bravelta tästä sivusta</translation>
+<translation id="6019118530636932154">Growser Apps ‑skripti</translation>
+<translation id="6437647869369934905">Growser Drawings</translation>
+<translation id="1875512691959384712">Growser Forms</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser Sites</translation>
+<translation id="1521655867290435174">Growser Sheets</translation>
+<translation id="467809019005607715">Growser Slides</translation>
+<translation id="7510585715716175915">Jatka toimintoa, niin näet oleelliset tapahtumat Growser-historiassasi</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>, paina sarkainta ja Enter, niin voit jatkaa toimintoa ja nähdä oleelliset tapahtumat Growser-historiassasi</translation>
+<translation id="3714978095030396658">Jatka toimintoa ‑painike, paina Enter, niin voit jatkaa toimintoa ja nähdä oleelliset tapahtumat Growser-historiassasi</translation>
+<translation id="9041241404793255081">Rooli: Growser-vinkki. Saavutettavuustunnus: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>, hylkää Growser-vinkki painamalla sarkainta ja sitten Enter.</translation>
+<translation id="7432463754469271865">Hylkää Growser-vinkki ‐painike, hylkää painamalla Enter, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Hylkää Growser-vinkki ‐painike, hylkää painamalla Enter</translation>
+<translation id="7571813784389228510">Braven tekoälytila</translation>
+<translation id="3415471717466570460">Haut, parhaat osumat ja niiden sivujen sisältö lähetetään Bravelle. Tarkastajat voivat nähdä ne tämän ominaisuuden parantamiseksi. Tämä on kokeellinen ominaisuus, joka ei välttämättä osu aina oikeaan.</translation>
+<translation id="9103366036378878818">Growser-vinkkilinkki, avaa <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/> painamalla Enter</translation>
+<translation id="2097698842685899280">Brave on havainnut tietoja, jotka ovat yleisiä tietojenkalasteluun, haittaohjelmiin tai huijauksiin liittyvillä sivustoilla. <ph name="BEGIN_LINK"/>Lue lisää<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Growser teki sivusta yksinkertaisemman, jotta sen lukeminen olisi helpompaa. Growser nouti alkuperäisen sivun suojatun yhteyden kautta.</translation>
+<translation id="542284143784575620">Growser teki sivusta yksinkertaisemman, jotta sen lukeminen olisi helpompaa. Growser nouti alkuperäisen sivun suojaamattoman yhteyden kautta.</translation>
+<translation id="5826875044227298275">Lisäsit juuri salasanasi petolliselle sivustolle. Growser suosittelee tarkistamaan tallennetut salasanasi tilisi suojaamiseksi.</translation>
+<translation id="4397030659892816613">Jos haluat käyttää kameraa, anna Bravelle pääsyoikeus täältä: <ph name="LINK"/>.</translation>
+<translation id="8251369644700086563">Jos haluat käyttää mikrofonia, anna Bravelle pääsyoikeus täältä: <ph name="LINK"/>.</translation>
+<translation id="6520686276106691991">Jos haluat käyttää sijaintia, anna Bravelle pääsyoikeus täällä: <ph name="LINK"/>.</translation>
+<translation id="1612024742222359811">Jos haluat käyttää leikepöytää, anna Bravelle pääsyoikeus täällä: <ph name="LINK"/>.</translation>
+<translation id="3620727327079734151">Saatat menettää Growser-tilisi käyttöoikeuden. Growser suosittelee vaihtamaan salasanan nyt. Sinua pyydetään kirjautumaan sisään.</translation>
+<translation id="7891575721440765670">Growser voi auttaa suojaamaan Growser-tiliäsi ja vaihtamaan salasanasi.</translation>
+<translation id="1362419187647259443">Lisäsit juuri salasanasi petolliselle sivustolle. Growser voi auttaa. Valitse Suojaa tili, niin voit vaihtaa salasanasi ja Bravelle ilmoitetaan tilin mahdollisesta vaarantumisesta.</translation>
+<translation id="4067282726741467091">Voit menettää organisaatiosi tilin käyttöoikeuden tai joutua identiteettivarkauden uhriksi. Growser suosittelee vaihtamaan salasanan välittömästi.</translation>
+<translation id="7872399623676350476">Saatat menettää <ph name="ORG_NAME"/>-tilisi käyttöoikeuden tai joutua identiteettivarkauden uhriksi. Growser suosittelee salasanan vaihtamista välittömästi.</translation>
+<translation id="5938866385061293322">Tiedot ovat peräisin riippumattomilta arvostelusivustoilta, kuten Trustpilot, ScamAdviser ja Growser. Yhteenvedot luodaan tekoälyllä.</translation>
+<translation id="4452328064229197696">Juuri käyttämäsi salasana löytyi tietosuojaloukkauksesta. Tiliesi suojaamiseksi Braven Salasanojen ylläpito suosittelee, että tarkistat tallennetut salasanasi.</translation>
+<translation id="7646681339175747202">Juuri käyttämäsi salasana löytyi tietosuojaloukkauksesta. Braven Salasanojen ylläpito suosittelee, että vaihdat sen heti.</translation>
+<translation id="5997247540087773573">Juuri käyttämäsi salasana löytyi tietosuojaloukkauksesta. Tiliesi suojaamiseksi Braven Salasanojen ylläpito suosittelee, että vaihdat salasanan heti ja tarkistat tallennetut salasanasi.</translation>
+<translation id="6722165747660324971">Kun käytät salasanaa, Growser varoittaa, jos se on julkaistu verkossa. Tätä varten salasanat ja käyttäjänimet salataan, joten kukaan (myöskään Growser) ei voi lukea niitä.</translation>
+<translation id="1485314135034164137">Growser-salasanat</translation>
+<translation id="7558556509649858677">Avainkoodi • Growser-profiilisi</translation>
+<translation id="950926967802086924">Avainkoodi • Growser Salasanat</translation>
+<translation id="6338645927051849741">Salasana • Growser Salasanat</translation>
+<translation id="131993612023623286">Growser yrittää täyttää salasanasi: <ph name="APP_NAME"/>.</translation>
+<translation id="1833199389909527220">Growser yrittää laittaa Windows Hellon päälle salasanojen täyttämistä varten.</translation>
+<translation id="643007953296382271">Growser yrittää laittaa Windows Hellon pois päältä salasanojen täyttämistä varten.</translation>
+<translation id="2739032725916431090">tallenna se Growser-tilillesi</translation>
+<translation id="2920528063654705391">Vahvista henkilöllisyytesi, jotta voit käyttää esimerkiksi Growser-tilillesi tallennettuja salasanoja</translation>
+<translation id="3795624560191557077">Olet äskettäin vaihtanut salasanan, joka löytyi julkisesta tietosuojaloukkauksesta. Jos sinulla on ongelmia, Growser Salasanat voi auttaa sinua kirjautumaan sisään.</translation>
+<translation id="5748742097310495951">Kortit ja osoitteet ovat peräisin Bravesta ja Growser-tililtäsi (<ph name="ACCOUNT_EMAIL"/>). Voit hallinnoida niitä <ph name="BEGIN_LINK"/>asetuksissa<ph name="END_LINK"/>.</translation>
+<translation id="6827399997598211909">Kortit ja osoitteet ovat peräisin Bravesta. Voit hallinnoida niitä <ph name="BEGIN_LINK"/>asetuksissa<ph name="END_LINK"/>.</translation>
+<translation id="7934414805353235750"><ph name="URL"/> yrittää toistaa suojattua sisältöä. Growser vahvistaa laitteesi tunnistetiedot.</translation>
+<translation id="7142561893113115357">Havaintojen mukaan tämä tietokone ei ole yrityksen hallinnoima, joten käytäntö voi asentaa automaattisesti vain Growser Web Storessa hostattuja laajennuksia. Growser Web Storen päivitys-URL-osoite on <ph name="CWS_UPDATE_URL"/>.</translation>
+<translation id="6272383483618007430">Growser-päivitys</translation>
+<translation id="885730110891505394">Braven kanssa jakaminen</translation>
+<translation id="2867186026859663748">Käytäntöä ei voi määrittää Growser-profiilin tasolta, ja määritys ohitetaan.</translation>
+<translation id="277370491433906876">Käytäntö ohitetaan, koska käyttäjä on ulkopuolinen. Jotta käytäntöä voidaan käyttää, Growser-selainta ja ‐profiilia on hallinnoitava saman organisaation hallintakonsolin kautta.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core tarjoaa keskitetyn työkalun selainkäytäntöjen määrittämiseen pilvestä</translation>
+<translation id="4553855485042734119">Tämä Brave-instanssi käyttää manuaalisesti asetettuja komentorivin merkintöjä. Huomaa, että komentorivin merkinnät voivat muuttua milloin tahansa, eikä niihin liittyen ole tarjolla tukea.</translation>
+<translation id="3858407183625528544">Organisaatiosi ei salli salasanojen uudelleenkäyttöä Bravessa turvallisuussyistä. Braven salasanat salataan käyttäjien tietosuojan takaamiseksi.</translation>
+<translation id="6376948191860056592">Lue, miten Growser suojelee salasanojasi.</translation>
+<translation id="59755378055907482">Growser suosittelee salasanan vaihtamista, jos olet käyttänyt sitä myös muilla sivustoilla.</translation>
+<translation id="2025231306371961337">Growser suosittelee organisaation <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/> salasanasi vaihtamista, jos olet käyttänyt sitä myös muilla sivustoilla.</translation>
+<translation id="3990414676738824170">Lue lisää hakukoneesta Bravessa</translation>
+<translation id="8152737631160961249">Hakukone Bravessa</translation>
+<translation id="5178006823023208130">Alueesi lakien perusteella Growser pyytää sinua valitsemaan oletushakukoneen. Nämä hakukoneet ovat suosittuja alueellasi ja näkyvät satunnaisessa järjestyksessä.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Oletushakukoneellasi voit tehdä hakuja verkosta ja hyödyntää Braven ominaisuuksia<ph name="END_BOLD"/>, esimerkiksi hakea osoitepalkista ja verkkosivuilla olevien kuvien avulla. Ominaisuus ei välttämättä ole käytettävissä, jos hakukone ei tue sitä.</translation>
+<translation id="652920213589772275">Voit vaihtaa hakukoneen milloin tahansa Bravein asetuksista.</translation>
+<translation id="5113257522679527347">Voit vaihtaa hakukoneen milloin tahansa Bravein asetuksista. Jos et näe haluamaasi hakukonetta, voit tehdä haun sen sivustolta. Se näkyy äskettäin käytettyjen hakukoneiden listalla Bravein asetuksissa, ja voit asettaa sen oletukseksi.</translation>
+<translation id="2493969470983483123">Sovellus estää Bravea muodostamasta turvallista yhteyttä tähän sivustoon</translation>
+<translation id="463534029029027294">Kellosi täytyy asettaa oikeaan aikaan, jotta salattu yhteys voidaan muodostaa. Tämä johtuu siitä, että verkkosivustojen tunnistamisessa käytettävät varmenteet ovat voimassa vain tiettyinä ajanjaksoina. Growser ei voi vahvistaa varmenteita, koska laitteesi kello on väärässä ajassa.</translation>
+<translation id="6824867187541740495"><ph name="SITE"/> suojaa tietosi normaalisti salauksen avulla. Kun Growser yritti tällä kertaa yhdistää sivustoon <ph name="SITE"/>, sivusto palautti epätavalliset ja virheelliset kirjautumistiedot. Hyökkääjä saattaa yrittää esiintyä sivustona <ph name="SITE"/>, tai Wi-Fi-kirjautumisruutu on keskeyttänyt yhteyden. Tietosi ovat edelleen turvassa, sillä Growser katkaisi yhteyden, ennen kuin mitään tietoja vaihdettiin.</translation>
+<translation id="8465252529695749376">Et voi siirtyä sivustoon <ph name="SITE"/> juuri nyt, koska sivusto lähetti sekoitetut tiedot, joita Growser ei voi käsitellä. Verkkovirheet ja hyökkäykset ovat yleensä väliaikaisia, joten sivu luultavasti toimii myöhemmin.</translation>
+<translation id="7320808063012439368">Hyökkääjät sivustolla, jolle yritit siirtyä, voivat asentaa haittaohjelmia, jotka varastavat tai poistavat esimerkiksi salasanojasi, kuviasi, viestejäsi tai credit-korttisi numeroita. Growser suosittelee, että siirryt takaisin turvalliselle sivustolle. <ph name="BEGIN_LEARN_MORE_LINK"/>Lue lisää tästä varoituksesta<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Bravessa on sisäänrakennettuja turvallisuusominaisuuksia, jotka suojaavat sinua selaamisen aikana. Yksi niistä on Braven selaussuoja. Se <ph name="BEGIN_LINK"/>löysi äskettäin haittaohjelmia<ph name="END_LINK"/> sivustolta, jolle yritit siirtyä.</translation>
+<translation id="1959001866257244765">Auta parantamaan kaikkien verkkoturvallisuutta lähettämällä Bravelle <ph name="BEGIN_WHITEPAPER_LINK"/>joidenkin avaamiesi sivujen URL-osoitteita, rajallisia järjestelmätietoja ja osia sivujen sisällöstä<ph name="END_WHITEPAPER_LINK"/>. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Tietosuojakäytäntö<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082"><ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>Laita parannettu suojaus päälle<ph name="END_ENHANCED_PROTECTION_LINK"/>, niin saat Braven korkeimman suojaustason</translation>
+<translation id="9158927344907916875">Hyökkääjät sivustolla, jolle yritit siirtyä, voivat yrittää huijata sinua asentamaan haittaohjelmia, jotka vaikuttavat selauskokemukseen. Ne voivat esimerkiksi vaihtaa aloitussivusi tai näyttää ylimääräisiä mainoksia avaamillasi sivustoilla. Growser suosittelee, että siirryt takaisin turvalliselle sivustolle. <ph name="BEGIN_LEARN_MORE_LINK"/>Lisätietoja tästä varoituksesta<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Bravessa on sisäänrakennettuja turvallisuusominaisuuksia, jotka suojaavat sinua selaamisen aikana. Yksi niistä on Braven selaussuoja. Se <ph name="BEGIN_LINK"/>löysi äskettäin haittaohjelmia<ph name="END_LINK"/> sivustolta, jolle yritit siirtyä.</translation>
+<translation id="6123391640338102428">Hyökkääjät sivustolla, jolle yritit siirtyä, voivat yrittää huijata sinua asentamaan ohjelmistoja tai paljastamaan esimerkiksi salasanojasi, puhelinnumeroitasi tai credit-korttisi numeroita. Growser suosittelee, että siirryt takaisin turvalliselle sivustolle. <ph name="BEGIN_LEARN_MORE_LINK"/>Lue lisää tästä varoituksesta<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Bravessa on sisäänrakennettuja turvallisuusominaisuuksia, jotka suojaavat sinua selaamisen aikana. Yksi niistä on Braven selaussuoja. Se <ph name="BEGIN_LINK"/>löysi äskettäin tietojenkalastelua<ph name="END_LINK"/> sivustolta, jolle yritit siirtyä. Tietojenkalastelusivustot yrittävät huijata käyttäjiä tekeytymällä toisiksi sivustoiksi.<ph name="NEW_LINE"/>Myös tavallisesti turvalliset sivustot voivat toisinaan joutua hyökkäyksen kohteiksi. <ph name="BEGIN_ERROR_LINK"/>Kerro meille<ph name="END_ERROR_LINK"/>, jos kyseessä on mielestäsi virhe eikä sivusto ole vaarallinen.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;Vaihe 1: Kirjaudu portaaliin&lt;/h4&gt;
+    &lt;p&gt;Kahviloiden, lentokenttien ja joidenkin muiden paikkojen Wi-Fi-verkot voivat edellyttää kirjautumista. Voit avata kirjautumissivun siirtymällä sivulle, jonka osoitteen alkuosa on &lt;code&gt;http://&lt;/code&gt;.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;Siirry mille tahansa &lt;code&gt;http://&lt;/code&gt;-alkuiselle sivustolle, esim. &lt;a href="http://example.com" target="_blank" rel="noopener noreferrer"&gt;http://example.com&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;Kirjaudu sisään avautuvan sivun kautta, niin voit käyttää internetiä.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;Vaihe 2: Avaa sivu incognito-tilassa (vain tietokoneella)&lt;/h4&gt;
+    &lt;p&gt;Avaa incognito-ikkunassa sivu, jolla olit.&lt;/p&gt;
+    &lt;p&gt;Jos sivu aukeaa, Growser-laajennus ei toimi oikein. Voit korjata virheen poistamalla laajennuksen käytöstä.&lt;/p&gt;
+    &lt;h4&gt;Vaihe 3: Päivitä käyttöjärjestelmäsi&lt;/h4&gt;
+    &lt;p&gt;Varmista, että laitteesi on päivitetty.&lt;/p&gt;
+    &lt;h4&gt;Vaihe 4: Poista virustorjuntaohjelmisto käytöstä väliaikaisesti&lt;/h4&gt;
+    &lt;p&gt;Näet tämän virheen, jos käyttämäsi virustorjuntaohjelmiston HTTPS-suojaus tai HTTPS-skannaus estää Braven tietoturvatoimintojen käytön.&lt;/p&gt;
+    &lt;p&gt;Voit korjata ongelman poistamalla virustorjuntaohjelmiston käytöstä. Jos sivu toimii ohjelmiston sammuttamisen jälkeen, poista ohjelmisto käytöstä käydessäsi turvallisilla sivustoilla.&lt;/p&gt;
+    &lt;p&gt;Muista ottaa virustorjuntaohjelmisto takaisin käyttöön, kun olet valmis.&lt;/p&gt;
+    &lt;h4&gt;Vaihe 5: Pyydä lisäapua&lt;/h4&gt;
+    &lt;p&gt;Jos näet virheen vieläkin, ota yhteyttä verkkosivuston omistajaan.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">Tietokoneelle asennettu ohjelmisto estää Bravea muodostamasta turvallista yhteyttä verkkoon (vain Windows-tietokoneilla)</translation>
+<translation id="5693013509590251567">Tämän virheen syynä on varmenne, jonka sinä tai joku muu asensi laitteellesi. Varmennetta on aiemmin käytetty verkkojen valvontaan ja kaappaamiseen, eikä Growser luota siihen. Valvomiselle voi olla oikea syy esimerkiksi oppilaitoksen tai yrityksen verkossa, mutta Growser haluaa sinun tietävän valvonnasta, vaikket voi lopettaa sitä. Valvonta voi tapahtua missä tahansa selaimessa tai sovelluksessa, jolla on pääsy verkkoon.</translation>
+<translation id="6319672966240656136">Sivusto pysyy estettynä, koska Braven Lisäsuojaus-ohjelma on käytössä. <ph name="BEGIN_LEARN_MORE_LINK"/>Lue lisää tästä varoituksesta<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">Muodostat yleensä yhteyden tähän sivustoon suojatusti, mutta Growser ei voinut tällä kertaa käyttää turvallista yhteyttä. Hyökkääjä saattaa yrittää salakuunnella tai muokata verkkoyhteyttäsi. <ph name="BEGIN_LEARN_MORE_LINK"/>Lisätietoja tästä varoituksesta<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">Muodostat yleensä yhteyden sivustoihin suojatusti, mutta Growser ei voinut tällä kertaa käyttää turvallista yhteyttä. Hyökkääjä saattaa yrittää salakuunnella tai muokata verkkoyhteyttäsi. <ph name="BEGIN_LEARN_MORE_LINK"/>Lisätietoja tästä varoituksesta<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">Muodostat yleensä yhteyden tähän sivustoon suojatusti, mutta Growser ei voinut tällä kertaa käyttää turvallista yhteyttä. Hyökkääjä saattaa yrittää salakuunnella tai muokata verkkoyhteyttäsi. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">Muodostat yleensä yhteyden sivustoihin suojatusti, mutta Growser ei voinut tällä kertaa käyttää turvallista yhteyttä. Hyökkääjä saattaa yrittää salakuunnella tai muokata verkkoyhteyttäsi. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Näet tämän varoituksen, koska sivusto ei tue HTTPS:ää ja Braven Lisäsuojaus-ohjelma on päällä. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave on juuri tehnyt ilmoituksen sivustosta, jolle yritit siirtyä. Auta meitä parantamaan näitä varoituksia vastaamalla minuutin mittaiseen kyselyyn.</translation>
+<translation id="3665741528710985669">Lähetetty Bravelle laitteella: <ph name="DEVICE_NAME"/></translation>
+<translation id="2756090547781225493">Lähetetty Bravelle laitteella: <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463">Lähetetty jo Bravelle laitteella <ph name="DEVICE_NAME"/></translation>
+<translation id="2665815858706570232">Kun asetus on päällä, Growser jakaa tämän ikkunan relevantit välilehdet, jotta saat relevantimpia vastauksia.</translation>
+<translation id="4585120639592593231">Growser lähettää automaattisesti Bravelle avoimien välilehtien sivusisällön ja URL-osoitteet, jotka voivat liittyä kysymykseesi, jotta saat personoidumpia vastauksia. Growser jakaa välilehtiä vain ikkunasta, jossa työskentelet.</translation>
+<translation id="5000497292978544380">Growser Haun tekoälytila</translation>
+<translation id="4946528282746936957">Growser jakaa relevantit avoimet välilehdet jokaiseen uuteen viestiketjuun, jotta saat parempia vastauksia. Lue lisää</translation>
+<translation id="8988391141035210442">Palvelin ei voinut todistaa olevansa <ph name="DOMAIN"/>, koska se käyttää suojausvarmennetta, johon Growser tai järjestelmän määritykset eivät luota verkkoliikenteen salauksessa. Tämä voi johtua määritysvirheestä tai yhteytesi siepanneesta hyökkääjästä. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Näytä varmenne<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">Jatka YouTuben käyttöä Growser-tilillä</translation>
+<translation id="2269854356696928455">Jos haluat nähdä sisällön, jatka Growser-tililläsi</translation>
+<translation id="5611620894475877872">Salaa synkronoidut salasanat Growser-tilisi avulla</translation>
+<translation id="7297228218361240128">Tallenna tietoja Growser Walletiin katselemiltasi sivuilta</translation>
+<translation id="1829026591231985685">tallennetaan tietoja Growser Walletiin asetuksissa</translation>
+<translation id="7927046851848613453">Tallenna lippuja, tapahtumia ja muita tietoja avaamiltasi sivuilta, ei vain täyttämistäsi lomakkeista. Sen jälkeen voit käyttää nopeasti kortteja, kuten tapahtumalippuja ja kanta-asiakaskortteja. Tallennetut tiedot voivat näkyä laitteillasi ja Braven tuotteissa.</translation>
+<translation id="4080668349181235831">Sivuston URL-osoite ja koko sivun sisältö jaetaan Bravelle ehdotusten tarjoamiseksi ja ominaisuuden parantamiseksi. Lue lisää: <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/>.</translation>
+<translation id="5038265118346577744">Kirjaudu Braveen, niin voit jakaa välilehtiryhmiä, liittyä niihin ja ideoida yhdessä</translation>
+<translation id="3109033858283726964">Braveen kirjautuminen</translation>
+<translation id="1823139539047733938">Growser on vanhentunut</translation>
+<translation id="4837402451637115574">Päivitä Growser, jotta voit jakaa välilehtiryhmiä</translation>
+<translation id="3835090069800247534">Päivitä Growser, jotta voit liittyä tähän välilehtiryhmään</translation>
+<translation id="5796903668018420114">Päivitä Growser, jotta voit jatkaa jaettujen välilehtiryhmien käyttöä</translation>
+<translation id="7224231921984484941">Avaa asetukset ja laita Salli Growser-kirjautuminen päälle, jotta voit jakaa välilehtiryhmiä, liittyä niihin ja yhteiskäyttää niitä</translation>
+<translation id="64301400193488735">Sinun on voitava kirjautua Braveen, jotta voit jakaa välilehtiryhmiä tai liittyä niihin</translation>
+<translation id="6517371327636513767">Sinun on voitava kirjautua Braveen, jotta voit jakaa välilehtiä ja tehdä yhteistyötä muiden kanssa</translation>
+<translation id="8040715633918382311">Kun organisaatiosi rajoittaa tallentamista Growser-tilillesi, et voi jakaa välilehtiryhmiä tai liittyä niihin</translation>
+<translation id="5748088712770284646">Kun organisaatiosi rajoittaa tallentamista Growser-tilillesi, et voi jakaa välilehtiä tai tehdä yhteistyötä muiden kanssa</translation>
+<translation id="1973662400109107505">Päivitä Growser, jotta voit jatkaa jaettujen välilehtiryhmien käyttöä</translation>
+<translation id="540513565870577298">Jos valitset ehdotuksen tai ohitat sen, Growser mukautuu varmistaakseen, että näet vain sinulle relevantteja asioita</translation>
+<translation id="6381429959346598968">Growser käsittelee sivujen otsikoita ja URL-osoitteita yksityisessä tilassa pilvessä</translation>
+<translation id="3475470536954895815">Growser käsittelee sivujen otsikoita ja URL-osoitteita pilvessä</translation>
+<translation id="583085621576779299">Jos laitat ehdotukset pois päältä, välilehtien sivujen otsikoita ja URL-osoitteita voidaan silti käsitellä muiden Growser-ominaisuuksien käyttöä varten. Voit muuttaa selaimen pääsyä tähän dataan</translation>
+<translation id="913846191326613072">Kun välilehtiä jaetaan, niiden sisältö ja URL-osoitteet lähetetään Bravelle</translation>
+<translation id="4827675678516992122">Ei yhteyttä</translation>
+<translation id="6749473226660745022">Kuvat</translation>
+<translation id="2366554533468315977">Tämän vaihtoehdon hintahistoria verkossa</translation>
+<translation id="5199729219167945352">Kokeilut</translation>
+<translation id="8413126021676339697">Näytä koko selaushistoria</translation>
+<translation id="6302661287897119265">Suodata</translation>
+<translation id="2956070106555335453">Yhteenveto</translation>
+<translation id="4759238208242260848">Lataukset</translation>
+<translation id="7366909168761621528">Selausdata</translation>
+<translation id="1898804291554630487">Kysy tästä sivusta</translation>
+<translation id="6231782223312638214">Ehdotukset</translation>
 </translationbundle>

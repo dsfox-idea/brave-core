@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Tab tertutup dan kumpulan anda boleh dibuka semula daripada bahagian tab Terkini dan bahagian kumpulan Tab. Tab Peribadi anda tidak akan tersedia.}
         other {Tab tertutup dan kumpulan anda boleh dibuka semula daripada bahagian tab Terkini dan bahagian kumpulan Tab. # Tab Peribadi anda tidak akan tersedia.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> pautan daripada Growser}other{<ph name="TABS_COUNT_MANY"/> pautan daripada Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ulasan daripada Growser}other{<ph name="REVIEWS_COUNT_MANY"/> ulasan daripada Growser}}</translation>
+<translation id="2928243913527329289">Growser | Perihal kedai ini</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser akan menutup tab dan kumpulan tab yang tidak aktif secara automatik selepas <ph name="AUTO_DELETE_DELAY_ONE"/> bulan. Pilihan ini boleh ditukar dalam tetapan.}other{Growser akan menutup tab dan kumpulan tab yang tidak aktif secara automatik selepas <ph name="AUTO_DELETE_DELAY_MANY"/> bulan. Pilihan ini boleh ditukar dalam tetapan.}}</translation>
 </translationbundle>

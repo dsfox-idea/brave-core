@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
         =1 {Filele și grupurile închise pot fi redeschise din secțiunea file Recente și de secțiunea de grupuri de File. Fila confidențială nu va fi disponibilă}
         other {Filele și grupurile închise pot fi redeschise din secțiunea file Recente și din secțiunea grupuri de File. # Filele confidențiale nu vor fi disponibile.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> link din Growser}few{<ph name="TABS_COUNT_MANY"/> linkuri din Growser}other{<ph name="TABS_COUNT_MANY"/> de linkuri din Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> recenzie de pe Growser}few{<ph name="REVIEWS_COUNT_MANY"/> recenzii de pe Growser}other{<ph name="REVIEWS_COUNT_MANY"/> de recenzii de pe Growser}}</translation>
+<translation id="2928243913527329289">Growser | Despre acest magazin</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_ONE"/> lună. Poți modifica această opțiune din setări.}few{Growser închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_MANY"/> luni. Poți modifica această opțiune din setări.}other{Growser închide automat filele și grupurile de file inactive după <ph name="AUTO_DELETE_DELAY_MANY"/> de luni. Poți modifica această opțiune din setări.}}</translation>
 </translationbundle>

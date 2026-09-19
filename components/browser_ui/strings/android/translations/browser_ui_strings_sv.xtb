@@ -801,4 +801,51 @@ Avancerat skydd styr följande Growser-inställningar:</translation>
 <translation id="8186479265534291036">Fungerar inte webbplatsen? Cookies från tredje part har blockerats</translation>
 <translation id="8874790741333031443">Testa att tillfälligt tillåta tredjepartscookies, vilket innebär mindre skydd när du surfar men större sannolikhet att webbplatsfunktionerna fungerar som förväntat.</translation>
 <translation id="915112772806845021">Webbplatser använder den här funktionen för att öppna bild-i-bild automatiskt. På så sätt kan du fortsätta titta på en video samtidigt som du frigör skärmen för andra uppgifter.</translation>
+<translation id="3281851196103181918">En webbplats du besöker kan spara mycket information med Growser, främst för att kontrollera att du inte är en bot</translation>
+<translation id="7321946347180923218">När du fortsätter surfa kan webbplatser kontrollera informationen med Growser och verifiera med den föregående webbplatsen du besökte att du troligen är en riktig person.</translation>
+<translation id="1416017798077335746">När den är aktiverad körs Growser snabbare och funktioner som använder JavaScript bör fungera som de ska. När den är inaktiverad sänks prestandan men V8 blir mer motståndskraftig mot attacker.</translation>
+<translation id="1161610156793601923">Gör webbplatser snabbare med Braves V8-motor men gör Growser något mindre motståndskraftigt mot attacker</translation>
+<translation id="4522008664732371170">V8 är Braves JavaScript- och WebAssembly-motor som används för att förbättra webbplatsens prestanda</translation>
+<translation id="8589838971217638472">Öka inte webbplatsernas hastighet med Braves V8-motor men gör Growser något mer motståndskraftigt mot attacker</translation>
+<translation id="7640998335907138542">Använd mörkt tema på webbplatser om Growser använder mörkt tema, när det är möjligt</translation>
+<translation id="2057998558085257831">Hantera i <ph name="BEGIN_LINK1"/>Android-inställningarna<ph name="END_LINK1"/>
+
+Avancerat skydd styr följande Growser-inställningar:</translation>
+<translation id="423123022780548223">Innehållet kommer från <ph name="DOMAIN_NAME"/> via Growser.</translation>
+<translation id="8347706830008915646">Bilderna på den här sidan har optimerats av Growser så att du sparar data.</translation>
+<translation id="6934374371757268073">Cookies blockeras i Growser igen i dag</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{Cookies blockeras i Growser igen i morgon}other{# dagar tills cookies blockeras igen}}</translation>
+<translation id="2695810323641466307">Starta Growser med adressfältet i fokus för att minska starttiden på mindre avancerade enheter.</translation>
+<translation id="5598609827458395422">Growser delar nu dina senaste flikar med enheten. Du ser dem i enhetens applista och sökresultat. Du kan inaktivera detta när som helst i Growser-inställningarna.</translation>
+<translation id="8965088526414675625">Growser visar nu dina senaste flikar i enhetens applista och sökresultat. Du kan inaktivera detta när som helst i Growser-inställningarna.</translation>
+<translation id="8761470294803693272">Tillåt att Growser delar dina senaste flikar med enheten så att du kan se dem i enhetens applista och sökresultat. Du kan aktivera eller inaktivera detta i Growser-inställningarna.</translation>
+<translation id="8421385332619538087">Tillåt att Growser visar dina senaste flikar i enhetens applista och sökresultat. Du kan inaktivera detta när som helst i Growser-inställningarna.</translation>
+<translation id="4844745832306307836">Growser-tips</translation>
+<translation id="8894933691616134953">Dölj kortet med tips om Growser</translation>
+<translation id="3075680827782258330">Använd Growser som standard</translation>
+<translation id="3330538708604362125">Du kan använda Growser varje gång du trycker på länkar i meddelanden, dokument och andra appar</translation>
+<translation id="878212867049674537">Anpassa Growser med egna färger och bilder på startsidan</translation>
+<translation id="906376138426795308">Nu kan du använda Growser varje gång du surfar eller trycker på länkar i meddelanden, dokument och andra appar.</translation>
+<translation id="1060555682994133119">Tryck på Webbläsarapp &gt; Growser</translation>
+<translation id="2039425904994800099">Tryck på webbläsarappen och sedan på Growser</translation>
+<translation id="3307078631581490570">Anpassa Growser</translation>
+<translation id="1068559798624451989">Få det bästa skyddet i Growser mot onlinehot</translation>
+<translation id="3371556244314914639">Spara lösenord i Growser</translation>
+<translation id="6096811239980093579">Growser frågar om du vill spara lösenordet</translation>
+<translation id="3942445027194417950">Ark på nedre delen av skärmen med anvisningar om att spara lösenord i Growser</translation>
+<translation id="4476554299666180378">Nu får du ut mesta möjliga av Growser på din enhet.</translation>
+<translation id="2762149874114516998">Få ut mesta möjliga av Growser</translation>
+<translation id="4229054348764234344">Slutför de rekommenderade åtgärderna nedan så att du får ut mesta möjliga av Growser</translation>
+<translation id="9005129040299651584">Anpassa Growser genom att välja ett anpassat tema</translation>
+<translation id="6695051470627475273">Ark på nedre delen av skärmen för Growser-färger har öppnats över hela skärmen</translation>
+<translation id="8884873726356949960">Ark på nedre delen av skärmen för Growser-färger har öppnats över halva skärmen</translation>
+<translation id="8064824204802826269">Standard i Brave</translation>
+<translation id="3625563631434033924">Brave-färger</translation>
+<translation id="4084889026632451864">Ark på nedre delen av skärmen för Growser-färger</translation>
+<translation id="6506349636755583652">Vissa Growser-inställningar har ändrats</translation>
+<translation id="6972629891077993081">HID-enheter</translation>
+<translation id="4748783296226936791">Åtkomst till HID-enheter brukar kunna behövas för funktioner som använder ovanliga tangentbord, handkontroller och andra enheter</translation>
+<translation id="5719854774000914513">Webbplatser får begära tillstånd att ansluta till HID-enheter</translation>
+<translation id="8625916342247441948">Tillåt inte att webbplatser ansluter till HID-enheter</translation>
+<translation id="1258491128795710625">Nyheter</translation>
 </translationbundle>

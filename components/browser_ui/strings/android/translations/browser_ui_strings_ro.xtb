@@ -801,4 +801,51 @@ Protecția avansată gestionează următoarele setări Growser:</translation>
 <translation id="8186479265534291036">Site-ul nu funcționează? Cookie-urile terță parte au fost blocate</translation>
 <translation id="8874790741333031443">Încearcă să permiți temporar cookie-urile terță parte, ceea ce înseamnă mai puțină protecție pentru navigare, dar există șanse mai mari ca funcțiile site-urilor să funcționeze conform așteptărilor.</translation>
 <translation id="915112772806845021">Site-urile folosesc această funcție pentru a intra automat în modul picture-in-picture. Astfel, poți să continui vizionarea unui videoclip și să eliberezi spațiu pe ecran pentru alte activități.</translation>
+<translation id="3281851196103181918">Un site pe care îl accesezi poate salva un mic volum de informații în Growser, în principal pentru a valida că nu ești o aplicație bot</translation>
+<translation id="7321946347180923218">În timp ce navighezi, site-urile pot să solicite informații de la Growser și să confirme cu ajutorul unui site pe care l-ai accesat anterior că ești o persoană reală</translation>
+<translation id="1416017798077335746">Când opțiunea este activată, Growser rulează mai rapid și funcțiile care folosesc JavaScript ar trebui să ruleze corespunzător. Când este dezactivată, performanța scade, dar motorul V8 devine mai rezistent la atacuri.</translation>
+<translation id="1161610156793601923">Accelerează site-urile cu motorul V8 din Growser, dar redu ușor rezistența Growser la atacuri</translation>
+<translation id="4522008664732371170">V8 este motorul JavaScript și WebAssembly din Growser, folosit pentru a îmbunătăți performanța site-ului</translation>
+<translation id="8589838971217638472">Nu accelera site-urile cu motorul V8 din Growser, dar fă Growser mai rezistent la atacuri</translation>
+<translation id="7640998335907138542">Aplică tema întunecată pe site-uri când Growser folosește tema întunecată, dacă este posibil</translation>
+<translation id="2057998558085257831">Gestionează în <ph name="BEGIN_LINK1"/>setările Android<ph name="END_LINK1"/>
+
+Protecția avansată gestionează următoarele setări Growser:</translation>
+<translation id="423123022780548223">Acest conținut provine de pe <ph name="DOMAIN_NAME"/>, oferit de Growser.</translation>
+<translation id="8347706830008915646">Pentru a-ți salva datele, Growser a optimizat imaginile din această pagină.</translation>
+<translation id="6934374371757268073">Growser va bloca din nou cookie-urile astăzi</translation>
+<translation id="6030875689491466103">{DAYS,plural, =1{Growser va bloca din nou cookie-urile mâine}few{# zile până când cookie-urile vor fi blocate din nou}other{# de zile până când cookie-urile vor fi blocate din nou}}</translation>
+<translation id="2695810323641466307">Lansează Growser cu caseta polivalentă focalizată, reducând timpul de pornire pe dispozitivele de nivel inferior.</translation>
+<translation id="5598609827458395422">Growser îți trimite acum filele recente pe dispozitiv. Le vei vedea în lista de aplicații a dispozitivului și în rezultatele căutării. Poți dezactiva oricând această opțiune din setările Growser.</translation>
+<translation id="8965088526414675625">Growser afișează acum filele recente în lista de aplicații și în rezultatele căutării de pe dispozitiv. Poți dezactiva oricând această opțiune din setările Growser.</translation>
+<translation id="8761470294803693272">Permite ca Growser să-ți trimită filele recente pe dispozitiv ca să le vezi în lista de aplicații și în rezultatele căutării pe dispozitiv. Poți să activezi sau să dezactivezi opțiunea din setările Growser.</translation>
+<translation id="8421385332619538087">Permite ca Growser să-ți afișeze filele recente în lista de aplicații și în rezultatele căutării de pe dispozitiv. Poți dezactiva oricând această opțiune din setările Growser.</translation>
+<translation id="4844745832306307836">Sfaturi pentru Growser</translation>
+<translation id="8894933691616134953">Ascunde cardul cu sfaturi Growser</translation>
+<translation id="3075680827782258330">Folosește Growser în mod prestabilit</translation>
+<translation id="3330538708604362125">Acum poți folosi Growser oricând atingi linkuri în mesaje, documente și alte aplicații</translation>
+<translation id="878212867049674537">Personalizează Growser cu culori și imagini personalizate pentru pagina de pornire</translation>
+<translation id="906376138426795308">Acum poți folosi Growser oricând navighezi sau atingi linkuri în mesaje, documente și alte aplicații.</translation>
+<translation id="1060555682994133119">Atinge Aplicația browser &gt; Growser</translation>
+<translation id="2039425904994800099">Atinge aplicația Browser, apoi atinge Growser</translation>
+<translation id="3307078631581490570">Personalizează Growser</translation>
+<translation id="1068559798624451989">Beneficiază de cea mai puternică protecție Growser împotriva amenințărilor online.</translation>
+<translation id="3371556244314914639">Salvează parolele în Growser</translation>
+<translation id="6096811239980093579">Growser îți va oferi salvarea parolei</translation>
+<translation id="3942445027194417950">Foaia din partea de jos cu instrucțiuni privind salvarea parolelor în Growser</translation>
+<translation id="4476554299666180378">Acum vei profita la maximum de Growser pe dispozitiv.</translation>
+<translation id="2762149874114516998">Profită la maximum de Growser</translation>
+<translation id="4229054348764234344">Finalizează mai jos aceste acțiuni sugerate, pentru a profita din plin de Growser</translation>
+<translation id="9005129040299651584">Adaptează Growser alegând o temă personalizată</translation>
+<translation id="6695051470627475273">Foaia din partea de jos cu culorile Growser este deschisă la înălțime completă</translation>
+<translation id="8884873726356949960">Foaia din partea de jos cu culorile Growser deschisă la jumătate din înălțime</translation>
+<translation id="8064824204802826269">Prestabilită pentru Brave</translation>
+<translation id="3625563631434033924">Culori Brave</translation>
+<translation id="4084889026632451864">Foaia din partea de jos Culori Growser</translation>
+<translation id="6506349636755583652">Unele setări Growser s-au schimbat</translation>
+<translation id="6972629891077993081">Dispozitive HID</translation>
+<translation id="4748783296226936791">Site-urile se conectează de obicei la dispozitive HID pentru funcții care folosesc tastaturi, controlere de joc și alte dispozitive care nu sunt utilizate frecvent</translation>
+<translation id="5719854774000914513">Site-urile pot solicita permisiunea de a se conecta la dispozitive HID</translation>
+<translation id="8625916342247441948">Nu permite site-urilor să se conecteze la dispozitive HID</translation>
+<translation id="1258491128795710625">Noutăți</translation>
 </translationbundle>

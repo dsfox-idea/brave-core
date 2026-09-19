@@ -254,4 +254,8 @@
 <translation id="6086127758480584723">{INCOGNITO_TABS_COUNT, plural,
 =1 {Les pestanyes i grups tancats es poden tornar a obrir des de la secció de Pestanyes recents i la secció de Grups de pestanyes. La teva pestanya d'incògnit no estarà disponible.}
 other {Les pestanyes i grups tancats es poden tornar a obrir des de la secció de Pestanyes recents i la secció de Grups de pestanyes. Les teves # pestanyes d'incògnit no estaran disponibles.}}</translation>
+<translation id="7776127134201283675">{TABS_COUNT,plural, =1{<ph name="TABS_COUNT_ONE"/> enllaç de Growser}other{<ph name="TABS_COUNT_MANY"/> enllaços de Growser}}</translation>
+<translation id="7545727119051420814">{REVIEWS,plural, =1{<ph name="REVIEWS_COUNT_ONE"/> ressenya de Growser}other{<ph name="REVIEWS_COUNT_MANY"/> ressenyes de Growser}}</translation>
+<translation id="2928243913527329289">Growser | Sobre aquesta botiga</translation>
+<translation id="5561819230302123612">{AUTO_DELETE_DELAY,plural, =1{Growser tanca automàticament les pestanyes i els grups de pestanyes inactius al cap d’<ph name="AUTO_DELETE_DELAY_ONE"/> mes. Pots canviar-ho a Configuració.}other{Growser tanca automàticament les pestanyes i els grups de pestanyes inactius al cap de <ph name="AUTO_DELETE_DELAY_MANY"/> mesos. Pots canviar-ho a Configuració.}}</translation>
 </translationbundle>

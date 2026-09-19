@@ -1,0 +1,37 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |
+      Construct a stub `SodaInstaller` as the global one, because Brave ships
+      no SODA. Upstream's reports SODA's languages as downloadable and then
+      parks an install() reply on a download that never arrives.
+
+      `CreateBraveSodaInstaller` is defined in the chromium_src override of
+      this source.
+    regex:
+      pattern: 'std::make_unique<speech::SodaInstallerImpl>()'
+      replace: 'speech::CreateBraveSodaInstaller()'
+
+  - description: |-
+      Growser-236: do not initialise the OSCrypt key providers eagerly on
+      macOS.
+
+      The only registered provider there reads the login keychain, so an eager
+      init makes EVERY startup touch it - and for a binary whose code signature
+      is not in the item's ACL that is a password prompt on every fresh build,
+      before any feature that needs encryption has run, and before the
+      cookie-encryption opt-in promo gets to explain it. Lazily instead: the
+      first real consumer (a saved-password decryption, the opt-in cookie
+      store) pays the one-time cost, when the user has context for it.
+
+      This lived in patches/chrome-browser-browser_process_impl.cc.patch until
+      the 154 re-cut dropped it, and the patch stayed VALID while our change
+      was gone - the same shape as the two hook macros in
+      profile_network_context_service.cc. It belongs in the recipe, which is
+      where a plaster-managed file's changes survive a re-cut.
+    regex:
+      re_pattern: '(  // Trigger async initialization of OSCrypt key providers\.\s*os_crypt_async_->GetInstance\(base::BindOnce\([\s\S]*?base::TimeTicks::Now\(\)\)\);)'
+      replace: "#if !BUILDFLAG(IS_MAC)\n\\1\n#endif  // Growser-236: lazy on macOS, see the recipe"

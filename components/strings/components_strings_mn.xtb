@@ -5537,4 +5537,429 @@
 <translation id="8198379961710069585">Түүхээс хайх товч, түүхээс хайхын тулд идэвхжүүлнэ үү</translation>
 <translation id="8495170825732897952">Таб сэлгэхгүйгээр мэдээллийг эргэн санах, бөглөхийн тулд дурын маягтад @@ гэж бичнэ үү</translation>
 <translation id="8874790741333031443">Гуравдагч талын күүкинүүдийг түр зуур зөвшөөрч үзнэ үү. Энэ нь үзэх хамгаалалт багасах хэдий ч сайтын онцлогууд тооцоолсны дагуу ажиллах магадлал өндөр байна гэсэн үг юм.</translation>
+<translation id="6091115085465716987">Google Wallet-н лого</translation>
+<translation id="4489288117933602961">Growser лого</translation>
+<translation id="6604204560730066844">Та энэ картыг Growser Бүртгэлдээ болон энэ төхөөрөмжид хадгалахыг хүсэж байна уу?</translation>
+<translation id="6253380015872250643">Google Wallet-д карт хадгалах</translation>
+<translation id="7062344833049251424">Дараагийн удаа илүү хурдан төлөхийн тулд карт, төлбөр тооцооны хаягаа Google Wallet-д хадгална уу</translation>
+<translation id="4940620179254568429">Энэ картын Карт баталгаажуулалтын кодыг шифрлэх бөгөөд илүү хурдан тооцоо хийхэд зориулж таны Growser Бүртгэлд хадгална</translation>
+<translation id="1413235258620101697">Энэ картын баталгаажуулалтын кодыг (CVC) шифрлэх бөгөөд илүү хурдан тооцоо хийхэд зориулж таны Google Wallet-д хадгална</translation>
+<translation id="8296806261827627234">Картаа хадгалсан үед илүү хурдан төлөөрэй. Картын дэлгэрэнгүйг таны Growser Бүртгэлд шифрлэдэг.</translation>
+<translation id="4954891067389874142">Картаа хадгалсан үед илүү хурдан төлөөрэй. Картын дэлгэрэнгүй мэдээллийг Google Wallet-д шифрлэдэг.</translation>
+<translation id="4599572944836204718">Картаа хадгалсан үед Google Pay-р илүү хурдан төлбөр төлөөрэй. Картын дэлгэрэнгүй мэдээллийг Google Wallet-д шифрлэдэг.</translation>
+<translation id="3872719112670219447">Энэ нэрийг таны Growser Бүртгэлээс гаргасан байна</translation>
+<translation id="1511387429744666092">Та нэвтэрсэн тул Growser таны картыг таны Growser Бүртгэлд хадгалахыг санал болгож байна. Та энэ ажиллах төлөвийг тохиргоонд өөрчилж болно.</translation>
+<translation id="4565400898718322011">Та нэвтэрсэн тул Growser таны картыг таны Growser бүртгэлд хадгалахыг санал болгож байна. Та энэ ажиллах төлөвийг тохиргоонд өөрчилж болно. Карт эзэмшигчийн нэр таны бүртгэлээс гаралтай.</translation>
+<translation id="3594461335790641595">Энэ картыг уг төхөөрөмж дээр хадгалсан үед Growser-д хийсэн худалдан авалтад зориулж автоматаар бөглөнө үү</translation>
+<translation id="1242832199383246031">Энэ картыг Google Pay-д ашиглахаар хадгалсан үед Growser-д хийсэн худалдан авалтад зориулж автоматаар бөглөнө үү</translation>
+<translation id="6186962377036474023">Энэ картыг Google Wallet-д хадгалсан үед Growser-д хийсэн худалдан авалтад зориулж автоматаар бөглөнө үү</translation>
+<translation id="5765984179517659957">Growser таны төлбөрийн мэдээллийг бөглөх боломжтой болохын тулд таныг мөн болохыг баталгаажуулахаар оролдож байна.</translation>
+<translation id="828282277746732142">IBAN-г Google Wallet-д хадгалах</translation>
+<translation id="6084079099761498478">Энэ IBAN-г дараагийн удаа автоматаар бөглөхийн тулд Growser Бүртгэлдээ хадгална уу</translation>
+<translation id="5398461103557553443">Энэ IBAN-г дараагийн удаа автоматаар бөглөхийн тулд Google Wallet-д хадгална уу</translation>
+<translation id="7098302422586317090">Growser одоо төлбөрийн хэрэгслийг бөглөхөөс өмнө таныг мөн болохыг баталгаажуулна. Та үүнийг хүссэн үедээ <ph name="IDS_AUTOFILL_MANDATORY_REAUTH_CONFIRMATION_SETTINGS_LINK"/>-д шинэчлэх боломжтой.</translation>
+<translation id="5053116470141135293">Таныг энэ картаар тооцоо хийхэд таны бодит дэлгэрэнгүй мэдээллийг хамгаалахын тулд виртуал картын дугаарыг бөглөнө. Google Wallet-с удирдана уу. <ph name="IDS_AUTOFILL_VIRTUAL_CARD_ENROLLMENT_LEARN_MORE_LINK_LABEL"/></translation>
+<translation id="7714943438925794410">Эдгээр сонголтыг санал болгохын тулд тооцоо хийх хуудасны агуулгыг Growser-тэй хуваалцдаг. Автоматаар бөглөх хэсэгт дараа төлөх сонголтуудыг нуухын тулд <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> руу очно уу.</translation>
+<translation id="2840680829170913626">Эдгээр сонголтыг санал болгохын тулд тооцоо хийх хуудасны агуулгыг Growser-тэй хуваалцдаг. Төлбөрийн төлөвлөгөө нь зохих эрхтэй эсэхээс хамаарна. Автоматаар бөглөх хэсэг дэх дараа төлөх сонголтуудыг нуухын тулд <ph name="IDS_AUTOFILL_CARD_BNPL_SELECT_PROVIDER_FOOTNOTE_HIDE_OPTION_PAYMENT_SETTINGS_LINK_TEXT"/> руу очно уу.</translation>
+<translation id="7870207318911766769">Эдгээр сонголтыг санал болгохын тулд тооцоо хийх хуудасны агуулгыг Growser-тэй хуваалцдаг.</translation>
+<translation id="1151858212483238980">Та Google Wallet-д хадгалсан картуудыг автоматаар бөглөх боломжтой</translation>
+<translation id="1205344127823614428">Та Google Wallet-д хадгалсан картуудыг автоматаар бөглөх боломжтой.</translation>
+<translation id="5848445080378515710">Та захиалгаа хянасны дараа <ph name="BNPL_ISSUER_NAME"/> бүртгэлд нэвтрэх эсвэл тухайн бүртгэлийг үүсгэх ёстой. Энэ бүртгэлийг Google Wallet-д автоматаар холбоно.</translation>
+<translation id="8163468049564974856">Онлайнаар аюулгүй тооцоо хийхийн тулд автоматаар бөглөхийг асаана уу. Таны картын дэлгэрэнгүй мэдээллийг Brave Wallet-д шифрлэдэг.</translation>
+<translation id="5717281954932320486">Таныг онлайнаар тооцоо хийхэд картын дэлгэрэнгүй мэдээллийг автоматаар бөглөнө. Картуудыг Brave Wallet-д аюулгүй хадгалдаг.</translation>
+<translation id="7055814742378298611">Одоо та Brave дээр тооцоо хийхэд автоматаар бөглөх төлбөрийн хэрэгслүүдийг хадгалах боломжтой. <ph name="LINK_TEXT"/></translation>
+<translation id="5977205943292389390">Таны төхөөрөмж болон Growser Бүртгэлд хадгалсан аюулгүй байдлын бүх кодыг устгана</translation>
+<translation id="7170930892977483182">Таны төхөөрөмж, Google Wallet-д хадгалсан хамгаалалтын бүх кодыг устгана</translation>
+<translation id="755360750394433286">Таны карт таны Growser Бүртгэлд хадгалагдсан тул цаашид худалдан авалт хийхдээ үүнийг автоматаар бөглөх боломжтой</translation>
+<translation id="7412081313067625215">Таны картыг Google Wallet-д хадгалсан тул та цаашид худалдан авалт хийхдээ үүнийг автоматаар бөглөх боломжтой</translation>
+<translation id="2482920244925042987">Энэ картыг таны Growser Бүртгэлд хадгалж чадсангүй. Оронд нь тус картыг энэ төхөөрөмж дээр Growser-д хадгалсан.</translation>
+<translation id="4740434610174859636">Энэ картыг Google Wallet-д хадгалж чадсангүй. Оронд нь үүнийг энэ төхөөрөмж дээрх Growser-д хадгалсан.</translation>
+<translation id="2109852493965717728">Энэ IBAN дугаарыг таны Growser Бүртгэлд хадгалсан бөгөөд ингэснээр та тус дугаарыг Growser-н үйлчилгээнд ашиглах боломжтой.</translation>
+<translation id="3837322271615501940">Энэ IBAN дугаарыг таны Growser Бүртгэлд хадгалж чадсангүй. Оронд нь тус дугаарыг энэ төхөөрөмж дээр Growser-д хадгалсан. Growser таныг дараагийн удаа энэ IBAN дугаарыг ашиглахад дахин асууна.</translation>
+<translation id="1583007191864786102">Энэ IBAN-г Google Wallet-д хадгалж чадсангүй. Оронд нь үүнийг энэ төхөөрөмж дээрх Growser-д хадгалсан. Growser таныг дараагийн удаа энэ IBAN дугаарыг ашиглахад дахин асууна.</translation>
+<translation id="6915664826242394941">Энэ IBAN дугаарыг таны Growser Бүртгэлд хадгалж чадсангүй. Оронд нь тус дугаарыг энэ төхөөрөмж дээр Growser-д хадгалсан.</translation>
+<translation id="376462579087900096">Энэ IBAN-г Google Wallet-д хадгалж чадсангүй. Оронд нь үүнийг энэ төхөөрөмж дээрх Growser-д хадгалсан.</translation>
+<translation id="2871837111996280385">Growser <ph name="APP_NAME"/> дээр таны эмзэг мэдээллийг бөглөхөөр оролдож байна.</translation>
+<translation id="3039045945489677870">Growser эмзэг мэдээлэл харуулахаар оролдож байна</translation>
+<translation id="3253651554860831188">Growser таныг тохиргоог өөрчлөхөөс өмнө таныг мөн болохыг баталгаажуулахыг хүсэж байна</translation>
+<translation id="924075841960625832">Growser-оос санал болгож буй зүйлийг устгах уу?</translation>
+<translation id="3016775357255717300">Кредит картыг Growser-с устгах уу?</translation>
+<translation id="1722474089104449082">Хаягийг Growser-с устгах уу?</translation>
+<translation id="7077165718541055322">Гэрийн хаягийг Growser-н автоматаар бөглөх онцлогоос хасах уу?</translation>
+<translation id="7756454115562251695">Ажлын хаягийг Growser-н автоматаар бөглөх онцлогоос хасах уу?</translation>
+<translation id="3068798232942246848">Энэ мэдээллийг Growser-н автоматаар бөглөх хэсгээс хасах уу?</translation>
+<translation id="967369588715984092">Brave дэмжигдсэн сайтууд дээр энэ имэйлийг автоматаар баталгаажуулахаа болино.</translation>
+<translation id="7299769361777046949">Google Wallet дахь лояалти картыг удирдана уу</translation>
+<translation id="2903623845283894856">Та одоо Growser Бүртгэлээсээ хаягууд ашиглах боломжтой</translation>
+<translation id="7058709760023777753">Growser Бүртгэлээсээ гэр, ажлын хаягаа автоматаар бөглөнө үү</translation>
+<translation id="2856388212909438134">Өөрийн Growser Бүртгэлийн нэр, имэйл хаягаа автоматаар бөглөнө үү</translation>
+<translation id="8581945850065780003">Энэ хаягийг таны Growser Бүртгэл болох <ph name="ACCOUNT"/>-с устгана</translation>
+<translation id="8652886653703834105">Таны <ph name="ACCOUNT"/> Growser Бүртгэлд</translation>
+<translation id="4050392779074832022">Та үүнийг Growser-н бүтээгдэхүүнүүдэд ашиглах боломжтой болно</translation>
+<translation id="361746409909709825">Та Growser-н бүтээгдэхүүнүүдэд хадгалсан хаягуудыг ашиглах боломжтой. Энэ хаягийг таны <ph name="ACCOUNT"/> Growser Бүртгэлд хадгалсан.</translation>
+<translation id="5318416911578989892">Та Growser-н бүтээгдэхүүнүүдэд хадгалсан хаягуудыг ашиглах боломжтой. Энэ хаягийг таны <ph name="ACCOUNT"/> Growser Бүртгэлд хадгална.</translation>
+<translation id="3995632180712217177">Та хадгалсан хаягаа Growser-н бүтээгдэхүүн даяар ашиглаж болно. Энэ нь таны одоо байгаа гэрийн хаягийг өөрчлөхгүй. Үүнийг таны <ph name="ACCOUNT"/> Growser Бүртгэлд хадгална.</translation>
+<translation id="2432673835335968473">Та хадгалсан хаягаа Growser-н бүтээгдэхүүн даяар ашиглаж болно. Энэ нь таны одоо байгаа ажлын хаягийг өөрчлөхгүй. Үүнийг таны <ph name="ACCOUNT"/> Growser Бүртгэлд хадгална.</translation>
+<translation id="2024046927213376062">Таны <ph name="ACCOUNT"/> Growser Бүртгэлийн мэдээлэл Growser-д маягтыг илүү хурдан бөглөхөд туслах боломжтой</translation>
+<translation id="8430499469896241016">Таны аюулгүй байдлыг сайжруулахын тулд сайтуудын ашигладаг баталгаажуулах кодыг автоматаар бөглөнө. Brave эдгээр кодыг таны Gmail-с авах боломжтой. <ph name="BEGIN_LINK"/>Энэ онцлогийн талаар нэмэлт мэдээлэл авах<ph name="LINK_END"/></translation>
+<translation id="9221566509053798696">Growser таны автоматаар бөглөх хэсгийн үйлчилгээ үзүүлэгч биш байна</translation>
+<translation id="7450759832930378803">Эдгээр тохиргоог идэвхжүүлж, Growser Бүртгэлийнхээ төлбөрийн мэдээллийг ашиглахын тулд автоматаар бөглөх хэсгийн үйлчилгээний тохиргоонд зочилно уу.</translation>
+<translation id="7049940136908665440">Эдгээр тохиргоог идэвхжүүлж, Growser Бүртгэлийнхээ мэдээллийг ашиглахын тулд автоматаар бөглөх хэсгийн үйлчилгээний тохиргоонд зочилно уу</translation>
+<translation id="2450019289047528273">Google Wallet-н төлбөрийн хэрэгсэл болон бусад мэдээлэл</translation>
+<translation id="1125406338060147524">Таны Brave Wallet-н тохиргоо Brave-с хадгалсан мэдээлэлд хэрэгжинэ</translation>
+<translation id="5732084028114235391">Энэ хаягийг одоогоор Growser-д хадгалсан. Үүнийг Growser-н бүтээгдэхүүнүүдэд ашиглахын тулд <ph name="ACCOUNT"/> Growser Бүртгэлдээ хадгална уу.</translation>
+<translation id="756794566964707799">Энэ хаягийг одоогоор энэ төхөөрөмжид хадгалсан. Үүнийг Growser-н бүтээгдэхүүнүүдэд ашиглахын тулд <ph name="ACCOUNT"/> Growser Бүртгэлдээ хадгална уу.</translation>
+<translation id="6935077351544118151">Одоо та Google Wallet-с лояалти картыг автоматаар бөглөх боломжтой</translation>
+<translation id="4169189393773057143">Google Wallet-д лояалти карт удирдах эсвэл эдгээр зөвлөмжийг унтраана уу</translation>
+<translation id="4470759557257438892">Оронд нь Growser дахь Gemini-с асуугаарай</translation>
+<translation id="2326283484705860548">Одоо та Google Wallet-н илүү их мэдээллийг автоматаар бөглөх боломжтой</translation>
+<translation id="5831217499016131155">Google Wallet</translation>
+<translation id="8421746712901926961">Мэдээллээ <ph name="GOOGLE_WALLET_TITLE_1"/>-д хадгалаад, Growser-н бүтээгдэхүүнүүд дээрх маягтыг бөглөх зэрэг зүйлсийг илүү хурдан хийгээрэй. Та <ph name="ACCOUNT"/>-н <ph name="GOOGLE_WALLET_TITLE_2"/>-д <ph name="MANAGE_INFO_LINK"/> боломжтой.</translation>
+<translation id="4619669610757527494">Google Wallet-д жолооны үнэмлэх хадгална уу</translation>
+<translation id="4239215166147486528">Жолооны үнэмлэхийг Brave Wallet-д аюулгүй хадгалаарай</translation>
+<translation id="1912750443952232242">Google Wallet-д биеийн байцаалт хадгална уу</translation>
+<translation id="8300302621078931927">Brave Wallet-д иргэний үнэмлэхийг аюулгүй хадгалаарай</translation>
+<translation id="5447103258548475868">Google Wallet-д паспорт хадгална уу</translation>
+<translation id="8717177139469452440">Brave Wallet-д паспортыг аюулгүй хадгалах</translation>
+<translation id="760632772920590778">Google Wallet-д тээврийн хэрэгсэл хадгална уу</translation>
+<translation id="4811696127853690432">Brave Wallet-д тээврийн хэрэгслийг аюулгүй хадгалаарай</translation>
+<translation id="5914185423510719251">KTN-г Google Wallet-д хадгална уу</translation>
+<translation id="5034488401832901795">Brave Wallet-д KTN-г аюулгүй хадгалаарай</translation>
+<translation id="1449251255954293933">Google Wallet-д гомдол барагдуулах дугаар хадгална уу</translation>
+<translation id="1330952240988133220">Brave Wallet-д залруулгын хяналтын дугаарыг (redress number) аюулгүй хадгалах</translation>
+<translation id="8393948304336153065">Google Wallet-д жолооны үнэмлэхийг шинэчилнэ үү</translation>
+<translation id="8889525327610245418">Brave Wallet-д жолооны үнэмлэхийг аюулгүй шинэчлээрэй</translation>
+<translation id="7570524564113479209">Google Wallet-д иргэний үнэмлэхийг шинэчилнэ үү</translation>
+<translation id="4410614037742891410">Brave Wallet-д иргэний үнэмлэхийг аюулгүй шинэчлэх</translation>
+<translation id="3426672782316020729">Google Wallet-д паспортыг шинэчилнэ үү</translation>
+<translation id="3280440382387335343">Brave Wallet-д паспортыг аюулгүй шинэчлээрэй</translation>
+<translation id="2124081665399116863">Google Wallet-д тээврийн хэрэгслийг шинэчилнэ үү</translation>
+<translation id="6422648598133086441">Brave Wallet-д тээврийн хэрэгслийг аюулгүй шинэчлээрэй</translation>
+<translation id="4770909831299304090">Google Wallet-д KTN-г шинэчилнэ үү</translation>
+<translation id="5872115357279348603">Brave Wallet-д KTN-г аюулгүй шинэчлээрэй</translation>
+<translation id="1732796940245838248">Google Wallet-д залруулгын хяналтын дугаарыг (redress number) шинэчилнэ үү</translation>
+<translation id="7253051586755429279">Brave Wallet-д залруулгын хяналтын дугаарыг (redress number) аюулгүй шинэчлээрэй</translation>
+<translation id="5628060911499153873">Growser-н бүтээгдэхүүнүүд дээр юмсыг илүү хурдан хийхийн тулд мэдээллээ хадгална уу. Таны мэдээллийг <ph name="ACCOUNT"/>-д зориулж <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/>-д хадгалдаг.</translation>
+<translation id="8369722293913575142">Энэ мэдээллийг таны Google Wallet-д хадгалж чадсангүй. Оронд нь энэ төхөөрөмж дээр Growser-д хадгалсан. Таныг дараагийн удаа үүнийг ашиглахад Google Wallet-д хадгалахыг санал болгоно.</translation>
+<translation id="3237427677128462778">Google Wallet-д хадгалж чадсангүй</translation>
+<translation id="9078170656887151974">Зөвлөмж санал болгож, энэ онцлогийг сайжруулахын тулд хуудасны URL, агуулгыг Growser-тэй хуваалцдаг. Хүссэн үедээ бодлоо өөрчилж, <ph name="LEARN_MORE"/>.</translation>
+<translation id="4954505713046251871">Зөвлөмж санал болгож, энэ онцлогийг сайжруулахын тулд хуудасны URL, контентыг Growser-тэй хуваалцдаг</translation>
+<translation id="2905902437192896563">Growser маягтыг илүү сайн ойлгодог ба танд илүү хурдан автоматаар бөглөж өгөх боломжтой</translation>
+<translation id="67310796271265436">Brave-н серверүүд дээрх өгөгдлийг аюулгүй боловсруулж Brave-д нарийн төвөгтэй маягтуудыг илүү сайн ойлгож, бөглөхөд нь туслаарай. Таны мэдээлэл хувийн хэвээр байх бөгөөд хэн ч хянахгүй.</translation>
+<translation id="7422908041366284140">Growser стандарт автоматаар бөглөх хэсгийн орхиж болзошгүй хүндрэлтэй талбаруудыг автоматаар бөглөх боломжтой</translation>
+<translation id="6329742260390895689">Мэдээллээ автоматаар бөглөхийн тулд Wallet-н тохиргооноос "Growser дээр карт ашиглах" гэснийг асаана уу</translation>
+<translation id="5912796581727968237">Google Wallet-г нээх</translation>
+<translation id="5160781056848005130">Та Growser-тэй өгөгдөл хуваалцсанаар сайжруулсан автоматаар бөглөх хэсгийг сайжруулахад тусалж байна</translation>
+<translation id="8781233757384402598">Таныг сайжруулсан автомат бөглөлтийн хүсэлт гаргахад автомат бөглөлтийн хэрэглээг сайжруулахын тулд таны ашиглалтын өгөгдөл, хүсэлт, хуудасны дэлгэрэнгүй мэдээллийг Brave-тэй хуваалцдаг</translation>
+<translation id="7044265724713929821">Brave таны хүсэлт болон зөвлөмж зөвшөөрөх, үл хэрэгсэх үеийн таны зан үйл зэрэг онцлогийг хэрхэн ашиглаж байгааг бүртгэдэг</translation>
+<translation id="3209071504641569648">Таны хүсэлт, хуудасны гарчиг, URL-г Brave рүү илгээдэг бөгөөд сайжруулсан автомат бөглөлтийг сайжруулахын тулд хянаж магадгүй</translation>
+<translation id="2410385419742253857">{COUNT,plural, =0{Байхгүй}=1{1 сайтаас (та Growser Бүртгэлдээ нэвтэрсэн хэвээр үлдэнэ)}other{# сайтаас (та Growser Бүртгэлдээ нэвтэрсэн хэвээр үлдэнэ)}}</translation>
+<translation id="3410151451624226773">Growser Нууц үгний менежерт удирдах</translation>
+<translation id="5224107321793121921">Growser Бүртгэл дээрээсээ удирдах</translation>
+<translation id="5105442806410269908">Growser-н бусад өгөгдлийг удирдах</translation>
+<translation id="2477607419416067650">Growser-н бусад өгөгдөл</translation>
+<translation id="472824688843296007">Growser-р үнэ хянах</translation>
+<translation id="753556296624075801">Growser-с дэмжсэн</translation>
+<translation id="3745599309295009257">Таны текст ба таны бичиж буй хуудасны контент болон URL-г Growser-д илгээж, хүмүүс хянах бөгөөд энэ онцлогийг сайжруулахад ашиглана. Хувийн мэдээлэл (эрүүл мэндийн болон санхүүгийн мэдээлэл гэх мэт) оруулах, хувийн эсвэл эмзэг мэдээлэл агуулсан сайтуудад энэ хэрэгслийг ашиглахаас зайлсхийгээрэй.</translation>
+<translation id="5543452229212526547">Таны текст, контент, дээр нь бичиж буй хуудасны URL-г Growser-д илгээдэг. Таны контентыг ХОУ-ыг сайжруулахын тулд хянагч хүмүүс ашиглахгүй. Танай байгууллага хүссэн үедээ эдгээр тохиргоог өөрчилж болзошгүй.</translation>
+<translation id="1959445535228047762">Таны текст болон хуудасны контентыг Growser-д илгээсэн бөгөөд энэ онцлогийг сайжруулахад ашиглаж магадгүй.
+  <ph name="BEGIN_LINK"/>Нэмэлт мэдээлэл авах<ph name="END_LINK"/></translation>
+<translation id="6189351761800074311">Таны текст, хуудасны контентыг Growser-д илгээдэг ч ХОУ-ыг сайжруулахад ашиглахгүй.
+    <ph name="BEGIN_LINK"/>Нэмэлт мэдээлэл авах<ph name="END_LINK"/></translation>
+<translation id="5164928537947209380">Энэ ХОУ-ы туршилтын хэрэгсэл нь үргэлж зөв хийхгүй. Үүнийг сайжруулахын тулд таны контентыг Growser-д илгээдэг.
+    <ph name="BEGIN_LINK"/>Нэмэлт мэдээлэл авах<ph name="END_LINK"/></translation>
+<translation id="3419981648784795212">Байгууллагын тань бодлогын улмаас контентыг удирдлагатай Brave-н хам сэдвээс гадуур буулгах боломжгүй байна</translation>
+<translation id="1351458950091269256">Энэ зар таны төхөөрөмжийн хэт их нөөцийг ашигласан тул Growser үүнийг хассан.</translation>
+<translation id="4366714044424353289">Таны Growser Бүртгэл <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> дээр хөтчийн түүхийн өөр хэлбэртэй байж болзошгүй</translation>
+<translation id="5626844006416355146">Таны Growser Бүртгэлд таны <ph name="BEGIN_LINK_GAA"/>Gemini-тай харилцдаг аппын үйл ажиллагаа<ph name="END_LINK_GAA"/> орсон байж магадгүй</translation>
+<translation id="5747377793818752349">Таны Growser Бүртгэл <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> дээр таны <ph name="BEGIN_LINK_GAA"/>Gemini-тай харилцдаг аппын үйл ажиллагаа<ph name="END_LINK_GAA"/> зэрэг хөтчийн түүхийн өөр хэлбэртэй байж болзошгүй.</translation>
+<translation id="4267590181863312380">Бусад төхөөрөмжөөсөө түүхээ авахын тулд нэвтэрч, түүх синк хийнэ үү. Та мөн бүх төхөөрөмж дээрээ нууц үг болон бусад зүйлээ авна. Та хүссэн үедээ тохиргооноос синк хийхийг зогсоох боломжтой. Growser таны түүхэд тулгуурлан Хайлт болон бусад үйлчилгээг хувийн болгож магадгүй.</translation>
+<translation id="5889251770650310375">Бусад төхөөрөмжөөсөө түүхээ авахын тулд өөрийгөө мөн болохыг баталгаажуулж, түүх, табаа синк хийнэ үү. Та хүссэн үедээ тохиргооноос синк хийхийг зогсоох боломжтой. Growser таны түүхэд тулгуурлан Хайлт болон бусад үйлчилгээг хувийн болгож магадгүй.</translation>
+<translation id="2541474152868747095">Бусад төхөөрөмжөөсөө түүхээ авахын тулд өөрийгөө мөн болохыг баталгаажуулна уу. Та хүссэн үедээ тохиргооноос синк хийхийг зогсоох боломжтой. Growser таны түүхэд тулгуурлан Хайлт болон бусад үйлчилгээг хувийн болгож магадгүй.</translation>
+<translation id="4260407128682690669">Бусад төхөөрөмжөөсөө түүхээ авахын тулд түүх, табаа <ph name="ACCOUNT_EMAIL"/>-д синк хийнэ үү. Та хүссэн үедээ тохиргооноос синк хийхийг зогсоох боломжтой. Growser таны түүхэд тулгуурлан Хайлт болон бусад үйлчилгээг хувийн болгож магадгүй.</translation>
+<translation id="611018310643025551">Таны хайлт, хамгийн сайн таарах илэрц болон тэдгээрийн хуудасны контентыг Growser рүү илгээдэг бөгөөд энэ онцлогийг сайжруулахын тулд тухайн өгөгдлийг хянагч хүмүүс харж магадгүй.</translation>
+<translation id="1987486584747170374">Таны хайлт, хамгийн сайн таарах илэрц, хуудасных нь агуулгыг Growser-д илгээдэг. Үүнийг ХОУ-ыг сайжруулахын тулд хянагч хүн ашиглахгүй. Танай байгууллага хүссэн үедээ эдгээр тохиргоог өөрчилж болзошгүй.</translation>
+<translation id="2461080251012814077">Таны Growser-н түүхээс устгасан табууд харьцуулалтын хүснэгтэд тань харагдсан хэвээр байх болно</translation>
+<translation id="7395776876928503485">Танай администратор профайл, хөтчид тань зайнаас өөрчлөлт хийх, тайлангаар дамжуулан хөтчийн талаарх мэдээллийг задлан шинжлэх, бусад шаардлагатай ажлыг гүйцэтгэх боломжтой. Энэ төхөөрөмж дээрх үйл ажиллагааг мөн Growser-с гадуур удирдаж болно. <ph name="BEGIN_LINK"/>Нэмэлт мэдээлэл авах<ph name="END_LINK"/></translation>
+<translation id="8093064659938114648">Энэ хөтчийг компани эсвэл бусад байгууллагаас удирддаггүй. Энэ төхөөрөмж дээрх үйл ажиллагааг Growser-с гадуур удирддаг байж болзошгүй. <ph name="BEGIN_LINK"/>Нэмэлт мэдээлэл авах<ph name="END_LINK"/></translation>
+<translation id="3180685094108491512">Таны төхөөрөмжийн хэрэглэгчийн нэр болон Growser хэрэглэгчийн нэр</translation>
+<translation id="9383261434423554">Growser Enterprise Connectors-н талаарх нэмэлт мэдээлэл</translation>
+<translation id="7998714759612158367">Growser дээр өргөтгөлүүд нэмэгдэх үед эдгээр өргөтгөлүүдийн холбогдох мэдээлэл гуравдагч талд дүн шинжилгээ хийх зорилгоор илгээгдэж болох бөгөөд таны админууд харах боломжтой. Мэдээлэлд нэр, суулгасан цаг, суулгасан эх сурвалж, эдгээр өргөтгөлүүдтэй холбоотой үйл ажиллагаа (таб өөрчлөх, вэбсайтуудтай холбогдох, эсвэл күүкид хандах гэх мэт) орно. Энэ мэдээллийг Web Store болон дэлгүүрээс бус суулгасан өргөтгөлүүдэд адилхан цуглуулдаг.</translation>
+<translation id="3521646565402740725">Growser байгууллагын холбогч</translation>
+<translation id="7942345451754009257">Таны администратор таны хөтөч дээр Growser Enterprise Connectors-г асаасан байна. Эдгээр холбогч нь таны зарим өгөгдөлд хандах эрхтэй.</translation>
+<translation id="3746573589930979016"><ph name="ENROLLMENT_DOMAIN"/> нь Growser Enterprise Connectors-г таны хөтөч дээр асаасан. Эдгээр холбогч нь таны зарим өгөгдөлд хандах эрхтэй.</translation>
+<translation id="3864343340250325558">Аюулгүй байдлын үйлдлийг Growser-с дарцагласан үед тухайн үйлдлийн талаарх хамааралтай өгөгдлийг танай администраторт илгээдэг. Үүнд таны Growser-д зочилсон хуудасны URL, таны өгөгдөл хуулсан хуудасны URL, файлын нэр, мета өгөгдөл, IP хаяг, хөтөч, табын гэмтэл, таны вебд суурилсан аппликейшн, өөрийн төхөөрөмж, Growser-д нэвтрэхдээ ашигладаг хэрэглэгчийн нэр багтаж болно.</translation>
+<translation id="1979029506107883830">Growser Enterprise Core танд хөтчийн бодлого, апп, өргөтгөлийг үүлнээс удирдах боломжийг олгодог</translation>
+<translation id="84905717630920469">Growser Enterprise Core-г туршиж үзэх</translation>
+<translation id="1757745363789526465">Growser-г дахин эхлүүлэх</translation>
+<translation id="2537931901612099523">Энэ төхөөрөмжийг ашигладаг бусад хүн таны үйл ажиллагааг харахгүй тул та илүү нууцлалтайгаар үзэх боломжтой. Энэ нь таны зочилдог вебсайтууд болон тэдгээрийн ашигладаг үйлчилгээ өгөгдлийг хэрхэн цуглуулдаг болохыг өөрчлөхгүй бөгөөд үүнд Growser багтана. Татаж авсан файл болон хавчуургыг хадгална.</translation>
+<translation id="1410365862999780287">Энэ төхөөрөмжийг ашигладаг бусад хүн таны үйл ажиллагааг харахгүй тул та илүү нууцлалтайгаар үзэх боломжтой. Энэ нь таны зочилдог вебсайтууд болон тэдгээрийн ашигладаг үйлчилгээ өгөгдлийг хэрхэн цуглуулдаг болохыг өөрчлөхгүй бөгөөд үүнд Growser багтана. Татаж авсан файл, хавчуурга болон унших жагсаалтын зүйлсийг хадгална.</translation>
+<translation id="7087257419919340685">Growser дараахыг <ph name="BEGIN_EMPHASIS"/>хадгалахгүй<ph name="END_EMPHASIS"/>:
+          <ph name="BEGIN_LIST"/>
+            <ph name="LIST_ITEM"/>Таны хөтчийн түүх
+            <ph name="LIST_ITEM"/>Күүкинүүд болон сайтын өгөгдөл
+            <ph name="LIST_ITEM"/>Маягтуудад оруулсан мэдээлэл
+          <ph name="END_LIST"/></translation>
+<translation id="6877824129761283043">Growser тохиргооноос өөрийн хөтчийн түүх, күүки, завсрын санах ой ба бусдыг устгах</translation>
+<translation id="873337066961534057"><ph name="CLEAR_BROWSING_DATA_FOCUSED_FRIENDLY_MATCH_TEXT"/>, хөтчийн түүх, күүки, завсрын санах ой болон бусдыг Growser-н тохиргооноос устгахын тулд эхлээд Tab, дараа нь Enter дараарай</translation>
+<translation id="8841351289024215412">Интернэтээр үзсэн өгөгдлийг устгах товчлуур, хөтчийн түүх, күүки, завсрын санах ой болон бусдыг Growser-н тохиргооноос устгахын тулд идэвхжүүлэх</translation>
+<translation id="5085944396348027753">Growser-н тохиргоо дээрээс нууц үгсээ харах, удирдах</translation>
+<translation id="3775631409961809627"><ph name="MANAGE_PASSWORDS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-н тохиргоонд нууц үгээ харах болон удирдахын тулд эхлээд Таб дээр, дараа нь Enter дарна уу</translation>
+<translation id="3071294016974329065">Нууц үгнүүд удирдах товчлуур, Growser-н тохиргоонд нууц үгнүүдээ харах болон удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="3031527126657836806">Growser-н тохиргоон дээрээс төлбөр, зээлийн картын мэдээллээ удирдах</translation>
+<translation id="8121631326762988103"><ph name="UPDATE_CREDIT_CARD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-н тохиргоон дээр төлбөр болон кредит картынхаа мэдээллийг удирдахын тулд эхлээд Таб дээр, дараа нь Enter дарна уу</translation>
+<translation id="7338080394311291541">Төлбөрийн хэрэгсэл удирдах товчлуур, төлбөр болон кредит картаа Growser-н тохиргоонд удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="561165882404867731">Энэ хуудсыг Growser Орчуулагчаар орчуулах</translation>
+<translation id="4509074745930862522"><ph name="TRANSLATE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, энэ хуудсыг Growser Орчуулагчаар орчуулахын тулд эхлээд Таб дээр, дараа нь Enter дарна уу</translation>
+<translation id="8781278378794969337">Хуудсыг орчуулах товчлуур, энэ хуудсыг Growser Орчуулагчаар орчуулахын тулд идэвхжүүлнэ үү</translation>
+<translation id="6560728661781075049">Growser-г шинэчлэх</translation>
+<translation id="5749239053568461167">Growser-н тохиргоон дээрээс Growser-г шинэчлэх</translation>
+<translation id="3775080232079542980"><ph name="UPDATE_CHROME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-н тохиргооноосоо Growser-г шинэчлэхийн тулд эхлээд Таб дээр, дараа нь Enter дарна уу</translation>
+<translation id="1957844396300023214">Growser-г шинэчлэх товчлуур, Growser-н тохиргоонд Growser-г шинэчлэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="6924344322157830957">Growser-н тохиргоонд аюулгүй байдлын шалгалтыг ажиллуулна уу</translation>
+<translation id="455484227135352120"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-н тохиргоонд аюулгүй байдлын шалгалтыг ажиллуулахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="2217308317357494419">Growser-н аюулгүй байдлын шалгалтыг ажиллуулах товчлуур, Growser-н тохиргоонд аюулгүй байдлын шалгалтыг ажиллуулахын тулд идэвхжүүлнэ үү</translation>
+<translation id="555731368593399620">Growser-н аюулгүй байдлын шалгалт руу очих</translation>
+<translation id="1022622918438880634">Тохиргооны Growser-н аюулгүй байдлын шалгалтын хуудас руу очих</translation>
+<translation id="4219440655752210284"><ph name="RUN_CHROME_SAFETY_CHECK_FOCUSED_FRIENDLY_MATCH_TEXT"/>, тохиргооны Growser-н аюулгүй байдлын шалгалтын хуудас руу очихын тулд Tab, дараа нь Enter-г дарна уу</translation>
+<translation id="4573592640621800816">Growser-н аюулгүй байдлын шалгалт руу очих товчлуур, тохиргооны Growser-н аюулгүй байдлын шалгалтын хуудсанд зочлохын тулд идэвхжүүлнэ үү</translation>
+<translation id="711408602663662681">Growser-н тохиргоонд Аюулгүй үзэх болон бусад тохиргоогоо удирдана уу</translation>
+<translation id="486571135256559592"><ph name="MANAGE_SECURITY_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser-н тохиргоонд Аюулгүй үзэх болон бусад тохиргоогоо удирдахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="8147674953957429172">Аюулгүй байдлын тохиргоог удирдах товчлуур, Growser-н тохиргоонд Аюулгүй үзэх болон бусад тохиргоогоо удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="123941427300345384">Growser-н тохиргоонд күүкиний сонголтоо удирдана уу</translation>
+<translation id="1805964678231838677"><ph name="MANAGE_COOKIES_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser-н тохиргоонд күүкиний сонголтоо удирдахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="185317221836385090">Күүки удирдах товчлуур, Growser-н тохиргоонд күүкиний сонголтоо удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="1824417970962955294">Growser-н тохиргоонд хаяг нэмж мөн удирдана уу</translation>
+<translation id="2411938313887689506"><ph name="MANAGE_ADDRESSES_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser-н тохиргоонд хаяг нэмэх болон удирдахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="2805189921443465815">Хаягууд удирдах товчлуур, Growser-н тохиргоонд хаягууд нэмэх болон удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="5592576649770969570">Growser-н тохиргоонд ямар мэдээлэл синк хийхээ удирдана уу</translation>
+<translation id="9054814328952540301"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser-н тохиргоонд ямар мэдээлэл синк хийхээ удирдахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="4269937126213032056">Синк хийхийг удирдах товчлуур, Growser-н тохиргоонд ямар мэдээлэл синк хийхээ удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="8766514807385279339">Growser Бүртгэлдээ Growser-н ямар мэдээлэл хадгалахаа удирдах</translation>
+<translation id="8482169261952283445"><ph name="MANAGE_SYNC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Бүртгэлдээ Growser-н ямар мэдээллийг хадгалахаа удирдахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="3256302414991866158">Бүртгэлийнхээ өгөгдлийг удирдах товч, Growser Бүртгэлдээ Growser-н ямар мэдээллийг хадгалахыг удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="4365583497146730170">Growser-н тохиргоонд сайтууд дээр хадгалсан зөвшөөрөл болон өгөгдлийг удирдана уу</translation>
+<translation id="8325032626069388113"><ph name="MANAGE_SITE_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Growser-н тохиргоонд сайтууд дээр хадгалсан зөвшөөрөл болон өгөгдлийг удирдахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="1429889589220926820">Сайтын тохиргоог удирдах товчлуур, Growser-н тохиргоонд зөвшөөрөл болон сайтуудад хадгалсан өгөгдлийг удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="6881240511396774766">Шинэ Growser Док шуурхай үүсгээрэй</translation>
+<translation id="3848487483475744267"><ph name="CREATE_GOOGLE_DOC_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Шинэ Growser Док шуурхай үүсгэхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="2925454999967523701">Документ үүсгэх товчлуур, шинэ Growser Док шуурхай үүсгэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="8075736640322370409">Шинэ Growser Хүснэгт шуурхай үүсгээрэй</translation>
+<translation id="4825496307559726072"><ph name="CREATE_GOOGLE_SHEET_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Шинэ Growser Хүснэгт шуурхай үүсгэхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="3150889484970506196">Хүснэгт үүсгэх товчлуур, шинэ Growser Хүснэгтийг шуурхай үүсгэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="6971439137020188025">Үзүүлэнд шинэ Growser үзүүлэн шуурхай үүсгээрэй</translation>
+<translation id="3727101516080730231"><ph name="CREATE_GOOGLE_SLIDE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Үзүүлэнд шинэ Growser үзүүлэн шуурхай үүсгэхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="8768225988514678921">Үзүүлэн үүсгэх товчлуур, Үзүүлэнд шинэ Growser үзүүлэн шуурхай үүсгэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="7582602800368606489">Growser Календарьт шинэ үйл явдал шуурхай үүсгээрэй</translation>
+<translation id="3259648571731540213"><ph name="CREATE_GOOGLE_CALENDAR_EVENT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Календарьт шинэ үйл явдал шуурхай үүсгэхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="2009942480257059311">Үйл явдал үүсгэх товчлуур, Growser Календарьт шинэ үйл явдал шуурхай үүсгэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="1269516672602708785">Growser Сайтуудад шинэ сайт шуурхай үүсгээрэй</translation>
+<translation id="947370374845726940"><ph name="CREATE_GOOGLE_SITE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Сайтад шинэ сайт шуурхай үүсгэхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="3698629142018988477">Сайт үүсгэх товчлуур, Growser Sites-д шинэ сайт шуурхай үүсгэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="4854853140771946034">Growser Keep-д шинэ тэмдэглэл шуурхай үүсгээрэй</translation>
+<translation id="377451872037045164"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Keep-д шинэ тэмдэглэл шуурхай үүсгэхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="5488590678320979185">Тэмдэглэл үүсгэх товчлуур, Growser Keep-д шинэ тэмдэглэл шуурхай үүсгэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="7734285854693414638">Growser Маягтад шинэ маягт шуурхай үүсгээрэй</translation>
+<translation id="8028698320761417183"><ph name="CREATE_GOOGLE_FORM_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Маягтад шинэ маягт шуурхай үүсгэхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="573555826359077410">Маягт үүсгэх товчлуур, Growser Маягтад шинэ маягт шуурхай үүсгэхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="7910437794853634516">Growser-н зөвлөгөөг харах</translation>
+<translation id="3521214483675189046">Growser-н онцлогуудын талаар мэдэж аваарай</translation>
+<translation id="6977244704202863509"><ph name="SEE_CHROME_TIPS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-н онцлогуудын талаар мэдэж авахын тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="4260829339448158187">Growser-н зөвлөгөө харах товчлуур, Growser-н онцлогуудын талаар мэдэж авахын тулд идэвхжүүлнэ үү</translation>
+<translation id="8694710517222056538">Growser Бүртгэлийг удирдах</translation>
+<translation id="6587259514551810029">Growser Бүртгэлийнхээ мэдээлэл, нууцлал болон аюулгүй байдлыг удирдаарай</translation>
+<translation id="6318426022395646384"><ph name="MANAGE_GOOGLE_ACCOUNT_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Бүртгэлийнхээ мэдээлэл, нууцлал болон аюулгүй байдлыг удирдахын тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="7027078594246193839">Growser Бүртгэл удирдах товчлуур, Growser Бүртгэлийнхээ мэдээлэл, нууцлал болон аюулгүй байдлыг удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="643051589346665201">Growser-н нууц үгийг өөрчлөх</translation>
+<translation id="7075427536109560520">Growser Бүртгэлийнхээ нууц үгийг өөрчлөөрэй</translation>
+<translation id="1981261052647342250"><ph name="CHANGE_GOOGLE_PASSWORD_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Бүртгэлийнхээ нууц үгийг өөрчлөхийн тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="3236176349246489091">Growser-н нууц үгийг өөрчлөх товчлуур, Growser Бүртгэлийн нууц үгээ өөрчлөхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="4573751006789325585">Growser Dino тоглоомыг тоглох</translation>
+<translation id="1461337831834704527">Growser-д Dino Run тоглоомыг тоглох</translation>
+<translation id="2090178754642909073"><ph name="PLAY_CHROME_DINO_GAME_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-д Dino Run тоглоомыг тоглохын тулд tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="3493625910132223088">Growser Dino тоглоомыг тоглох товчлуур, Growser-д Dino Run тоглоомыг тоглохын тулд идэвхжүүлнэ үү</translation>
+<translation id="3755643908083308330"><ph name="FIND_MY_PHONE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Бүртгэлээс төхөөрөмжөө олохын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="8109063930676038426">Миний төхөөрөмжийг олох товчлуур, Growser Бүртгэлийн төхөөрөмжөө олоход зочлохын тулд идэвхжүүлнэ үү</translation>
+<translation id="163710751542270335">Growser Бүртгэлийн нууцлалын тохиргоог удирдах</translation>
+<translation id="3269729253658419180">Growser Бүртгэлдээ Growser-н нууцлалын тохиргоог удирдах</translation>
+<translation id="3798302422604363211"><ph name="MANAGE_GOOGLE_PRIVACY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser Бүртгэлийнхээ нууцлалын тохиргоог удирдахын тулд Tab, дараа нь Enter дээр дарна уу.</translation>
+<translation id="970931323129831346">Growser-н нууцлалын тохиргоог удирдах товчлуур, Growser Бүртгэлийнхээ нууцлалын тохиргоонд зочлохын тулд идэвхжүүлнэ үү</translation>
+<translation id="498856326289655361">Growser-н тохиргоогоо удирдана уу</translation>
+<translation id="6995992393054881995"><ph name="MANAGE_CHROME_SETTINGS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-н тохиргоогоо удирдахын тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="1592236556980370094">Growser-н тохиргоог удирдах товчлуур, Growser-н тохиргоондоо зочлохын тулд идэвхжүүлнэ үү</translation>
+<translation id="2480781891721036554">Growser-д татсан файлуудаа удирдана уу</translation>
+<translation id="8620029455857918163"><ph name="MANAGE_CHROME_DOWNLOADS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-д татсан файлуудаа удирдахын тулд эхлээд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="8786654106588913377">Growser-д татаж авсан файлуудыг удирдах товчлуур, Growser-д татаж авсан файлуудаа удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="8320175841857324841">Growser-н түүхээ үзэх</translation>
+<translation id="179012966915448796">Growser-н тохиргоонд хөтчийн түүхээ үзэх болон удирдана уу</translation>
+<translation id="6933687020155686956"><ph name="VIEW_CHROME_HISTORY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-д хөтчийн түүхээ үзэхийн тулд эхлээд tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="7891862848641775440">Growser-н түүхээ үзэх товчлуур, Growser-н тохиргоонд хөтчийн түүхээ үзэх болон удирдахын тулд идэвхжүүлнэ үү</translation>
+<translation id="1545741848376005386">Growser-н тохиргоонд хүртээмжтэй хэрэгслээ хувийн болгоно уу</translation>
+<translation id="4353154101431829355"><ph name="MANAGE_CHROME_ACCESSIBILITY_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-н тохиргоонд хүртээмжтэй хэрэгслээ хувийн болгохын тулд эхлээд tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="1350935235605927980">Хүртээмжтэй тохиргоог удирдах товчлуур, Growser-н тохиргоонд хүртээмжтэй хэрэгслээ хувийн болгохын тулд идэвхжүүлнэ үү</translation>
+<translation id="1937771495497081508">Growser-д фонтын хэмжээ болон үсгийн хэлбэрийг өөрчилнө үү</translation>
+<translation id="2219010257562544918"><ph name="CUSTOMIZE_CHROME_FONTS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-д фонтын хэмжээ болон үсгийн хэлбэр өөрчлөхийн тулд эхлээд tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="8183964669401154956">Growser-д фонт өөрчлөх товчлуур, Growser-д фонтын хэмжээ болон үсгийн хэлбэрийг өөрчлөхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="6868193750403948178">Growser-г өөрчлөх</translation>
+<translation id="2746936074954064976">Growser-г өөрчлөх товчлуур, хөтчийнхөө харагдах байдлыг өөрчлөхийн тулд идэвхжүүлнэ үү</translation>
+<translation id="8223358973996562559">Growser-г өгөгдмөл хөтөч болгон тохируулах</translation>
+<translation id="113548419005571036">Growser-г системийн өгөгдмөл хөтөч болгон тохируулах</translation>
+<translation id="3420850548629556731"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-г системийн өгөгдмөл хөтөч болгон тохируулахын тулд tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="6783715802269207395">Growser-г өгөгдмөл хөтөч болгон тохируулах товчлуур, Growser-г системийн өгөгдмөл хөтөч болгон тохируулахын тулд идэвхжүүлнэ үү</translation>
+<translation id="8076157978023662935">Growser-ийг стандарт веб хөтөч болго</translation>
+<translation id="7026203586041411100">iOS-н тохиргоонд Growser-г системийн өгөгдмөл хөтөч болгон тохируулна уу</translation>
+<translation id="5984321561981045959"><ph name="SET_CHROME_AS_DEFAULT_BROWSER_FOCUSED_FRIENDLY_MATCH_TEXT"/>, iOS-н тохиргоонд Growser-г системийн өгөгдмөл хөтөч болгон тохируулахын тулд эхлээд tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="29533193241299316">Growser-г өгөгдмөл хөтчийн товчлуур болгон тохируулах, iOS-н тохиргоонд Growser-г системийн өгөгдмөл хөтөч болгон тохируулахын тулд Enter дээр дарна уу</translation>
+<translation id="2461514655528532981">Growser-н Аюулгүй байдлын шалгалтыг ажиллуулах</translation>
+<translation id="9113214967104134276">Growser-н түүхээ үзэх</translation>
+<translation id="943522416815463637">Growser Dino тоглоомыг тоглох</translation>
+<translation id="7602868996817972616">Энэ хуудасны тухай Growser-с асуух</translation>
+<translation id="161612500287664753">Энэ хуудасны талаар Growser Хайлтаас асуух</translation>
+<translation id="3462288464915106745"><ph name="CONTEXTUAL_SEARCH_OPEN_LENS_FOCUSED_FRIENDLY_MATCH_TEXT"/>, Growser-с энэ хуудасны тухай асуухын тулд Enter дээр дарна уу</translation>
+<translation id="5630981295558454585">Growser-с энэ хуудасны тухай асуух товч, Growser-с энэ хуудасны тухай асуухын тулд идэвхжүүлнэ үү</translation>
+<translation id="6019118530636932154">Growser Apps Script</translation>
+<translation id="6437647869369934905">Growser Зураглал</translation>
+<translation id="1875512691959384712">Growser Маягт</translation>
+<translation id="2072011841331007013">Growser Jamboard</translation>
+<translation id="9026253329950610248">Growser Sites</translation>
+<translation id="1521655867290435174">Growser Хүснэгт</translation>
+<translation id="467809019005607715">Growser Слайд</translation>
+<translation id="7510585715716175915">Growser-н түүхдээ хамааралтай үйл ажиллагааг харахын тулд аяллаа үргэлжлүүлнэ үү</translation>
+<translation id="2895764667636768344"><ph name="HISTORY_CLUSTERS_SEARCH_FOCUSED_FRIENDLY_MATCH_TEXT"/>. Аяллаа үргэлжлүүлэх болон Growser-н түүхдээ хамааралтай үйл ажиллагааг харахын тулд Tab, дараа нь Enter дээр дарна уу</translation>
+<translation id="3714978095030396658">Аяллаа үргэлжлүүлэх товчлуур, аяллаа үргэлжлүүлэх болон Growser-н түүхдээ хамааралтай үйл ажиллагааг харахын тулд Enter дээр дарна уу</translation>
+<translation id="9041241404793255081">Үүрэг: Growser-н зөвлөгөө. Хүртээмжийн шошго: <ph name="CHROME_TIP"/></translation>
+<translation id="5032759584108641557"><ph name="CHROME_TIP"/>, Growser-н зөвлөгөөг хаахын тулд Tab, дараа нь Enter дарна уу.</translation>
+<translation id="7432463754469271865">Growser-н зөвлөгөөг хаах товчлуур, хаахын тулд Enter дарна уу, <ph name="REMOVE_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
+<translation id="2085897608075089519">Growser-н зөвлөгөөг хаах товч, хаахын тулд Enter дарна уу</translation>
+<translation id="7571813784389228510">Growser-н ХОУ-ы горим</translation>
+<translation id="3415471717466570460">Таны хайлт, хамгийн сайн таарах илэрц болон тэдгээрийн хуудасны контентыг Growser рүү илгээдэг бөгөөд энэ онцлогийг сайжруулахын тулд тухайн өгөгдлийг хянагч хүмүүс харж магадгүй. Энэ нь туршилтын онцлог бөгөөд заримдаа алдаа гаргаж болно.</translation>
+<translation id="9103366036378878818">Growser-н зөвлөгөөний холбоос, <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/>-г нээхийн тулд Enter дээр дарна уу</translation>
+<translation id="2097698842685899280">Brave фишинг, хортой программ, заль мэхтэй холбоотой сайтууд дээр нийтлэг байдаг дэлгэрэнгүй мэдээллийг илрүүлсэн. <ph name="BEGIN_LINK"/>Нэмэлт мэдээлэл авах<ph name="END_LINK"/></translation>
+<translation id="319854178761292593">Growser нь энэ хуудсыг уншихад илүү амар болгож хялбаршуулсан. Growser нь аюулгүй холболтоор эх хуудсыг сэргээсэн.</translation>
+<translation id="542284143784575620">Growser нь энэ хуудсыг уншихад илүү амар болгож хялбаршуулсан. Growser нь аюултай холболтоор эх хуудсыг сэргээсэн.</translation>
+<translation id="5826875044227298275">Та дөнгөж сая сэжигтэй сайтад нууц үгээ орууллаа. Бүртгэлүүдээ хамгаалахын тулд Growser хадгалсан нууц үгнүүдээ шалгахыг зөвлөж байна.</translation>
+<translation id="4397030659892816613">Камераа ашиглахын тулд <ph name="LINK"/>-д Growser-д хандах эрх өгнө үү.</translation>
+<translation id="8251369644700086563">Микрофоноо ашиглахын тулд <ph name="LINK"/>-д Growser-д хандах эрх өгнө үү.</translation>
+<translation id="6520686276106691991">Байршлаа ашиглахын тулд <ph name="LINK"/>-д Growser-д хандах эрх өгнө үү.</translation>
+<translation id="1612024742222359811">Түр санах ойгоо ашиглахын тулд <ph name="LINK"/>-д Growser-д хандах эрх өгнө үү.</translation>
+<translation id="3620727327079734151">Та Growser Бүртгэлийнхээ хандалтыг алдаж болзошгүй. Growser таныг нууц үгээ одоо солихыг зөвлөж байна. Танаас нэвтрэхийг шаардана.</translation>
+<translation id="7891575721440765670">Growser танд Growser Бүртгэлээ хамгаалах болон нууц үгээ солиход туслах боломжтой.</translation>
+<translation id="1362419187647259443">Та дөнгөж сая сэжигтэй сайтад нууц үгээ орууллаа. Growser туслах боломжтой. Нууц үгээ өөрчилж, таны бүртгэл эрсдэлд oрсон байж болзошгүй тухай Growser-д мэдэгдэхийн тулд Бүртгэлийг хамгаалах гэснийг товшино уу.</translation>
+<translation id="4067282726741467091">Та байгууллагынхаа бүртгэлд хандах эрх эсвэл нууц үгээ бусдад алдаж болзошгүй. Growser-с таныг нууц үгээ өөрчлөхийг зөвлөж байна.</translation>
+<translation id="7872399623676350476">Та <ph name="ORG_NAME"/> бүртгэлийнхээ хандах эрх эсвэл нууц үгээ алдаж болзошгүй. Growser одоо таны нууц үгийг өөрчлөхийг зөвлөж байна.</translation>
+<translation id="5938866385061293322">Энэ мэдээлэл Trustpilot, ScamAdviser, Growser болон шүүмжийн бусад бие даасан вебсайтаас ирсэн. Хураангуйг ХОУ-аар үүсгэдэг.</translation>
+<translation id="4452328064229197696">Таны дөнгөж сая ашигласан нууц үгийг өгөгдлийн зөрчлөөс оллоо. Таны бүртгэлүүдийг хамгаалахын тулд Growser-н Нууц үгний менежер нь хадгалсан нууц үгнүүдээ шалгахыг зөвлөж байна.</translation>
+<translation id="7646681339175747202">Таны дөнгөж сая ашигласан нууц үгийг өгөгдлийн зөрчлөөс оллоо. Growser Password Manager нууц үгээ одоо өөрчлөхийг зөвлөж байна.</translation>
+<translation id="5997247540087773573">Таны дөнгөж сая ашигласан нууц үгийг өгөгдлийн зөрчлөөс оллоо. Таны бүртгэлүүдийг хамгаалахын тулд Growser Password Manager үүнийг одоо өөрчлөх болон хадгалсан нууц үгнүүдээ шалгахыг зөвлөж байна.</translation>
+<translation id="6722165747660324971">Таныг нууц үг ашиглах үед үүнийг онлайнд нийтэлсэн тохиолдолд Growser танд сануулна. Үүнийг хийх үед таны нууц үг болон хэрэглэгчийн нэрийг шифрлэх бөгөөд ингэснээр Growser-г оруулаад хэн ч тэдгээрийг унших боломжгүй.</translation>
+<translation id="1485314135034164137">Growser-н нууц үг</translation>
+<translation id="7558556509649858677">Нэвтрэх түлхүүр • таны Growser профайл</translation>
+<translation id="950926967802086924">Нэвтрэх түлхүүр • Growser Нууц үгний менежер</translation>
+<translation id="6338645927051849741">Нууц үг • Growser Нууц үгний менежер</translation>
+<translation id="131993612023623286">Growser <ph name="APP_NAME"/> дээр таны нууц үгийг бөглөхөөр оролдож байна.</translation>
+<translation id="1833199389909527220">Growser нууц үгийг бөглөхөд Windows Hello-г асаахаар оролдож байна.</translation>
+<translation id="643007953296382271">Growser нууц үгийг бөглөхөд Windows Hello-г унтраахаар оролдож байна.</translation>
+<translation id="2739032725916431090">үүнийг Growser Бүртгэлдээ хадгалах</translation>
+<translation id="2920528063654705391">Growser Бүртгэлдээ хадгалсан нууц үг болон бусад зүйлийг ашиглахын тулд өөрийгөө мөн болохыг баталгаажуулна уу</translation>
+<translation id="3795624560191557077">Та олон нийтийн өгөгдлийн зөрчлөөс олдсон нууц үгийг саяхан өөрчилсөн. Асуудал гарсан тохиолдолд Growser Нууц үгний менежер танд нэвтрэхэд туслах боломжтой.</translation>
+<translation id="5748742097310495951">Карт, хаягийг Growser болон Growser Бүртгэлээсээ (<ph name="ACCOUNT_EMAIL"/>) харах боломжтой. Та тэдгээрийг <ph name="BEGIN_LINK"/>Тохиргоо<ph name="END_LINK"/> хэсэгт хянах боломжтой.</translation>
+<translation id="6827399997598211909">Карт, хаягийг Growser-с харж болно. Та тэдгээрийг <ph name="BEGIN_LINK"/>Тохиргоо<ph name="END_LINK"/> хэсэгт хянах боломжтой.</translation>
+<translation id="7934414805353235750"><ph name="URL"/> хамгаалсан агуулгыг тоглуулах хүсэлтэй байна. Таны төхөөрөмжийн таниулбарыг Growser-с баталгаажуулна.</translation>
+<translation id="7142561893113115357">Энэ компьютерийг байгууллагаас удирддаг гэж илрүүлээгүй тул удирдамж нь зөвхөн Growser Webstore-т хост хийсэн өргөтгөлийг автоматаар суулгах боломжтой. Growser Webstore шинэчлэлтийн URL нь "<ph name="CWS_UPDATE_URL"/>" юм.</translation>
+<translation id="6272383483618007430">Growser Шинэчлэл</translation>
+<translation id="885730110891505394">Growser-тэй хуваалцаж байна</translation>
+<translation id="2867186026859663748">Энэ бодлогыг Growser-н профайлын түвшинд тохируулах боломжгүй бөгөөд үл хэрэгсэнэ.</translation>
+<translation id="277370491433906876">Хэрэглэгч харьяалалгүй тул энэ бодлогыг үл хэрэгссэн. Энэ бодлогыг хэрэгжүүлэхийн тулд Growser хөтөч болон профайлыг ижил байгууллагын Админ консолоор дамжуулан удирдах ёстой.</translation>
+<translation id="1963194198237607890">Growser Enterprise Core танд үүлнээс хөтчийн бодлогыг тохируулах төвлөрсөн хэрэгслийг өгдөг</translation>
+<translation id="4553855485042734119">Brave-н энэ инстансыг гар аргаар тохируулсан тушаалын мөрийн дарцгуудаар ажиллуулж байна. Тушаалын мөрийн дарцгууд хэзээ ч өөрчлөгдөж болох бөгөөд дэмжигддэггүй болохыг анхаарна уу.</translation>
+<translation id="3858407183625528544">Танай байгууллага аюулгүй байдлыг хадгалахын тулд нууц үгийг Growser-д дахин ашиглахыг зөвшөөрдөггүй. Growser дахь нууц үгийг хэрэглэгчийн нууцлалыг хамгаалахын тулд шифрлэдэг.</translation>
+<translation id="6376948191860056592">Growser таны нууц үгийг хэрхэн хамгаалдаг талаар мэдэж авах</translation>
+<translation id="59755378055907482">Хэрэв та нууц үгээ бусад сайтад дахин ашигласан бол Growser-с үүнийг шинэчлэхийг зөвлөж байна.</translation>
+<translation id="2025231306371961337">Хэрэв та <ph name="BEGIN_BOLD"/><ph name="ORG_NAME"/><ph name="END_BOLD"/>-н нууц үгийг бусад сайтад дахин ашигласан бол Growser-с үүнийг шинэчлэхийг зөвлөж байна.</translation>
+<translation id="3990414676738824170">Growser-н хайлтын системийнхээ талаар нэмэлт мэдээлэл авах</translation>
+<translation id="8152737631160961249">Таны Growser-н хайлтын систем</translation>
+<translation id="5178006823023208130">Танай бүс нутгийн хуулийн дагуу Growser танаас өгөгдмөл хайлтын системээ сонгохыг хүсэж байна. Эдгээр хайлтын систем нь танай бүс нутагт эрэлттэй бөгөөд эдгээрийг санамсаргүй дарааллаар харуулсан.</translation>
+<translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Таны өгөгдмөл хайлтын систем нь танд вебээс хайх боломжийг олгодог бөгөөд Growser-н онцлогуудыг дэмждэг<ph name="END_BOLD"/>. Үүнд хаяг оруулах хэсэг болон веб хуудаснуудын зургуудаас хайх зэрэг орно. Хэрэв таны хайлтын систем онцлогийг дэмждэггүй бол энэ нь боломжгүй байж магадгүй.</translation>
+<translation id="652920213589772275">Та хүссэн үедээ Growser-н тохиргоонд хайлтын системээ өөрчлөх боломжтой.</translation>
+<translation id="5113257522679527347">Та Brave-н тохиргооноос хайлтын системээ хүссэн үедээ өөрчлөх боломжтой. Хэрэв таны сонгосон хайлтын систем харагдахгүй байвал сайтаас нь хайх боломжтой. Танд энэ нь Brave-н тохиргоонд саяхан зочилсон хайлтын систем байдлаар жагсааснаар харагдах бөгөөд та өгөгдмөл болгох боломжтой.</translation>
+<translation id="2493969470983483123">Апп нь Growser-г энэ сайтад аюулгүй холбогдохыг зогсоож байна</translation>
+<translation id="463534029029027294">Найдвартай аюулгүй холболт бий болгохын тулд та цагаа зөв тохируулах хэрэгтэй. Учир нь  веб хуудсуудын өөрсдийгөө таниулахад ашигладаг гэрчилгээ нь тодорхой хугацаанд л хүчинтэй байдаг юм. Таны төхөөрөмжийн цаг буруу байгаа тохиолдолд Growser нь эдгээр гэрчилгээнүүдийг баталгаажуулж чадахгүй.</translation>
+<translation id="6824867187541740495"><ph name="SITE"/> ихэвчлэн таны мэдээллийг хамгаалах зорилгоор шифр ашигладаг. Энэ удаад Growser <ph name="SITE"/>-тай холбогдохыг оролдоход тус веб сайтаас хэвийн бус, буруу өгөгдөл илгээлээ. Халдагч <ph name="SITE"/> юм шиг дүр үзүүлж байгаа, эсвэл Wi-Fi-д нэвтрэх дэлгэц холболтод саад учруулсан байж болзошгүй. Growser ямар нэгэн өгөгдөл солилцохоос өмнө холболтыг зогсоосон тул таны мэдээлэл аюулгүй.</translation>
+<translation id="8465252529695749376">Та энэхүү <ph name="SITE"/>-д хандах боломжгүй байна. Учир нь вебсайт эмх замбараагүй мэдээлэл илгээсэн тул Growser энэ мэдээллийг боловсруулах боломжгүй байна. Сүлжээний алдаа болон халдлага нь ихэвчлэн түр зуурынх байдаг бөгөөд энэ хуудас хэсэг хугацааны дараа ажиллаж болох юм.</translation>
+<translation id="7320808063012439368">Таны зочлохоор оролдсон сайт дээрх халдагчид таны нууц үг, зураг, мессеж, кредит картын дугаар зэрэг зүйлсийг хулгайлдаг эсвэл устгадаг аюултай программ хангамжийг суулгаж магадгүй. Growser аюулгүй байдал руу буцаж очихыг нухацтай зөвлөж байна. <ph name="BEGIN_LEARN_MORE_LINK"/>Энэ сануулгын талаар нэмэлт мэдээлэл авах<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="886638477345511028">Growser-д Growser-н аюулгүй хөтөч зэрэг таныг үзэж байхад хамгаалах аюулгүй байдлын бүрэлдэхүүн онцлогууд байдаг бөгөөд эдгээр онцлог таны зочлохоор оролдсон сайт дээрээс <ph name="BEGIN_LINK"/>саяхан хортой программ олсон<ph name="END_LINK"/>.</translation>
+<translation id="1959001866257244765"><ph name="BEGIN_WHITEPAPER_LINK"/>Зарим зочилдог хуудасныхаа URL, системийн хязгаарлагдмал мэдээлэл болон зарим хуудасны контент<ph name="END_WHITEPAPER_LINK"/>-ыг Growser-д илгээж, хүн бүрд вебийн аюулгүй байдлыг сайжруулахад тусална уу. <ph name="BEGIN_PRIVACY_PAGE_LINK"/>Нууцлалын бодлого<ph name="END_PRIVACY_PAGE_LINK"/></translation>
+<translation id="8492941296276124082">Growser-н хамгийн өндөр түвшний аюулгүй байдлыг авахын тулд <ph name="BEGIN_ENHANCED_PROTECTION_LINK"/>сайжруулсан хамгаалалтыг асаана уу<ph name="END_ENHANCED_PROTECTION_LINK"/></translation>
+<translation id="9158927344907916875">Таны зочлохоор оролдсон сайт дээрх халдагчид танаар үзэх аргад тань нөлөөлөх аюултай программ хангамж суулгуулахаар таны нүүр хуудсыг өөрчлөх эсвэл таны зочилдог сайт дээр нэмэлт зар харуулах замаар таныг хуурч магадгүй. Growser хор хөнөөлөөс зайлсхийхийн тулд аюулгүй байдал руу буцаж очихыг нухацтай зөвлөж байна. <ph name="BEGIN_LEARN_MORE_LINK"/>Энэ сануулгын талаар нэмэлт мэдээлэл авах<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="4844018910175158086">Growser-д Growser-н аюулгүй хөтөч зэрэг таныг үзэж байхад хамгаалах аюулгүй байдлын бүрэлдэхүүн онцлогууд байдаг бөгөөд эдгээр онцлог таны зочлохоор оролдсон сайт дээрээс саяхан <ph name="BEGIN_LINK"/>аюултай программ хангамж олсон<ph name="END_LINK"/>.</translation>
+<translation id="6123391640338102428">Таны зочлохоор оролдсон сайт дээрх халдагчид танаар программ хангамж суулгуулах эсвэл нууц үг, утасны дугаар, кредит картын дугаар зэрэг зүйлсээ илчлэх үйлдэл хийлгэхээр таныг хуурч магадгүй. Growser аюулгүй байдал руу буцаж очихыг нухацтай зөвлөж байна. <ph name="BEGIN_LEARN_MORE_LINK"/>Энэ сануулгын талаар нэмэлт мэдээлэл авах<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="194022690247421026">Growser-д Growser-н аюулгүй хөтөч зэрэг таныг үзэж байхад хамгаалах аюулгүй байдлын бүрэлдэхүүн онцлогууд байдаг бөгөөд эдгээр онцлог таны зочлохоор оролдсон сайт дээрээс <ph name="BEGIN_LINK"/>саяхан фишинг олсон<ph name="END_LINK"/>. Фишингийн сайтууд таныг хуурахын тулд өөр сайт болж дүр эсгэдэг.<ph name="NEW_LINE"/>Ихэвчлэн аюулгүй байдаг сайт хүртэл зарим тохиолдолд халдагчдын халдлагад өртдөг. Хэрэв та алдаа гарсан бөгөөд энэ сайт аюулгүй гэж үзэж байвал <ph name="BEGIN_ERROR_LINK"/>бидэнд мэдэгдэнэ үү<ph name="END_ERROR_LINK"/>.</translation>
+<translation id="1963212335151184769">&lt;h4&gt;Алхам 1: Портал руу нэвтрэх&lt;/h4&gt;
+    &lt;p&gt;Кафе болон нисэх онгоцны буудал гэх мэт газруудад Wi-Fi сүлжээнд нэвтрэх шаардлагатай. Нэвтрэх хуудсыг харахын тулд &lt;code&gt;http://&lt;/code&gt; ашиглаж буй хуудсыг очиж шалгана уу.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;&lt;code&gt;http://&lt;/code&gt; эхэлсэн вэб хуудас, жишээлбэл &lt;a href="http://example.com" target="_blank"&gt;http://example.com&lt;/a&gt; очиж үзнэ үү.&lt;/li&gt;
+    &lt;li&gt;Нээгдсэн нэвтрэх хуудсанд нэвтэрч, интернетээ ашиглана уу.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h4&gt;Алхам 2: Хуудсыг Нууцлалтай таб горимд нээх (зөвхөн компьютер дээр)&lt;/h4&gt;
+    &lt;p&gt;Очсон хуудсыг нууцлалтай цонхонд нээнэ үү.&lt;/p&gt;
+    &lt;p&gt;Хэрвээ хуудас нээгдэж байгаа бол, Growser өргөтгөл зөв ажиллахгүй байна. Алдааг засахын тулд өргөтгөлийг унтраана уу.&lt;/p&gt;
+    &lt;h4&gt;Алхам 3: Таны үйлдлийн системээ шинэчлэх&lt;/h4&gt;
+    &lt;p&gt;Төхөөрөмжөө шинэчлэгдсэн эсэхийг шалгана уу.&lt;/p&gt;
+    &lt;h4&gt;Алхам 4: Түр зуурт вирусын эсрэг програмаа унтраах&lt;/h4&gt;
+    &lt;p&gt;“HTTPS хамгаалалт” эсвэл “HTTPS скан” үйлчилгээтэй вирусын эсрэг програмтай бол энэ алдаа гарч болно. Вирусын эсрэг програм Growser-г хамгаалж байгаа үйлчилгээг зогсоож байна.&lt;/p&gt;
+    &lt;p&gt;Асуудлыг засахын тулд вирусын эсрэг програмаа унтраана уу. Хэрвээ програмыг унтраасны дараа хуудас мөн ажиллаж байвал хамгаалалттай сайтуудыг ашиглахдаа энэ програмаа унтрааж байх хэрэгтэй.&lt;/p&gt;
+    &lt;p&gt;Дууссаны дараа вирусын эсрэг программаа дахин асу&amp;ч;нараараа.&lt;/p&gt;&amp;#n    &lt;h4&gt;Алхам 5: Нэмэлт тусламж авах&lt;/h4&gt;
+    &lt;p&gt;Хэрвээ асуудал үргэлжлэсээр байвал, вэбсайтын эзэмшигчтэй холбоо бариарай.&lt;/p&gt;</translation>
+<translation id="5918920501730384878">"Таны компьютер дээрх программ хангамж Growser-г вебэд аюулгүй холбогдохыг зогсоож байна" (зөвхөн Windows компьютерт боломжтой)</translation>
+<translation id="5693013509590251567">Та эсвэл өөр хэн нэгэн таны төхөөрөмж дээр суулгасан сертификатын улмаас ийм асуудал гардаг. Сертификатыг сүлжээнд хяналт хийх болон дундаас нь өгөгдөл цуглуулахад ашигладаг гэж мэдэгдсэн бөгөөд Growser түүнд итгэхгүй байна. Сургууль эсвэл компанийн сүлжээнд хяналт хийх зэрэг хууль ёсны зарим тохиолдол байдаг бөгөөд Growser нь та хяналтыг зогсоож чадахгүй байсан ч хяналт хийгдэж байгаа тухай таныг мэдэж байгаа эсэхийг шалгах хүсэлтэй байна. Вэбэд ханддаг аливаа хөтөч эсвэл аппликэйшн дээр хяналт хийж болзошгүй.</translation>
+<translation id="6319672966240656136">Та Growser-н Дэвшилтэт хамгаалалтын хөтөлбөрт байгаа тул энэ сайтыг блоклосон хэвээр үлдэнэ. <ph name="BEGIN_LEARN_MORE_LINK"/>Энэ сануулгын талаар нэмэлт мэдээлэл авах<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="8839261976892329415">Та энэ сайтад ихэвчлэн аюулгүй холбогддог ч Growser энэ удаад аюулгүй холболт ашиглаж чадсангүй. Халдагч таны сүлжээний холболтыг чагнах эсвэл өөрчлөхөөр оролдож байж магадгүй. <ph name="BEGIN_LEARN_MORE_LINK"/>Энэ сануулгын талаар нэмэлт мэдээлэл авах<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="325879647101743032">Та сайтуудад ихэвчлэн аюулгүй холбогддог ч Growser энэ удаад аюулгүй холболт ашиглаж чадсангүй. Халдагч таны сүлжээний холболтыг чагнах эсвэл өөрчлөхөөр оролдож байж магадгүй. <ph name="BEGIN_LEARN_MORE_LINK"/>Энэ сануулгын талаар нэмэлт мэдээлэл авах<ph name="END_LEARN_MORE_LINK"/></translation>
+<translation id="2026207410612449615">Та энэ сайтад ихэвчлэн аюулгүй холбогддог ч Growser энэ удаад аюулгүй холболт ашиглаж чадсангүй. Халдагч таны сүлжээний холболтыг чагнах, өөрчлөхөөр оролдож байж болзошгүй. <ph name="LEARN_MORE"/></translation>
+<translation id="1050989234936720259">Та сайтад ихэвчлэн аюулгүй холбогддог ч Growser энэ удаад аюулгүй холболт ашиглаж чадсангүй. Халдагч таны сүлжээний холболтыг чагнах, өөрчлөхөөр оролдож байж болзошгүй. <ph name="LEARN_MORE"/></translation>
+<translation id="6692006953064648573">Энэ сайт HTTPS-г дэмждэггүй бөгөөд та Growser-н Дэвшилтэт хамгаалалтын хөтөлбөрт байгаа тул энэ сануулга танд харагдаж байна. <ph name="LEARN_MORE"/></translation>
+<translation id="4899042284040818676">Brave таны зочлохоор оролдож байсан вебсайтыг дөнгөж сая дарцагласан. Энэ 1 минутын судалгааг бөглөж бидэнд эдгээр сануулгыг сайжруулахад тусална уу.</translation>
+<translation id="3665741528710985669">Таны <ph name="DEVICE_NAME"/> дээрх Brave руу илгээсэн</translation>
+<translation id="2756090547781225493">Таны <ph name="DEVICE_NAME"/> дээрх Brave руу илгээсэн • <ph name="USER_EMAIL"/></translation>
+<translation id="3087912139479831463">Таны <ph name="DEVICE_NAME"/> дээрх Growser-д аль хэдийн илгээсэн</translation>
+<translation id="2665815858706570232">Асаалттай үед Growser танд илүү хамааралтай хариулт авахад туслахын тулд энэ цонхны хамааралтай табуудыг хуваалцана.</translation>
+<translation id="4585120639592593231">Growser илүү хувийн болгосон хариулт авахын тулд таны асуулттай хамааралтай байж магадгүй нээлттэй табуудын хуудасны контент, URL-г Growser рүү автоматаар илгээнэ. Growser зөвхөн таны ажиллаж буй цонхны табуудыг хуваалцана.</translation>
+<translation id="5000497292978544380">Growser Хайлтын ХОУ-ы горим</translation>
+<translation id="4946528282746936957">Growser илүү сайн хариулт авахын тулд шинэ уялдаа бүрд хамааралтай нээлттэй табуудыг хуваалцана. Дараахын талаар нэмэлт мэдээлэл авах</translation>
+<translation id="8988391141035210442">Энэ сервер веб урсгалын шифрлэлтэд Growser, таны системийн тохируулгын итгэмжлээгүй аюулгүй байдлын сертификат ашиглаж байгаа тул <ph name="DOMAIN"/> домэйн болохоо баталж чадсангүй. Энэ нь буруу тохируулга, халдагч таны холболтыг саатуулж байгаагаас үүдсэн байж болзошгүй. <ph name="BEGIN_VIEW_CERTIFICATE_LINK"/>Сертификатыг үзэх<ph name="END_VIEW_CERTIFICATE_LINK"/></translation>
+<translation id="4247609850715295749">YouTube-г ашиглахын тулд Growser Бүртгэлээрээ үргэлжлүүлнэ үү</translation>
+<translation id="2269854356696928455">Энэ контентыг харахыг хүсэхийн тулд Growser Бүртгэлээрээ үргэлжлүүлнэ үү</translation>
+<translation id="5611620894475877872">Growser Бүртгэлээрээ синк хийсэн нууц үгнүүдийг шифрлэх</translation>
+<translation id="7297228218361240128">Үзсэн хуудаснуудаасаа Google Wallet-д мэдээлэл хадгалах</translation>
+<translation id="1829026591231985685">тохиргоонд Google Wallet-д мэдээлэл хадгалж байна</translation>
+<translation id="7927046851848613453">Тасалбар, арга хэмжээ болон бусад мэдээллийг зөвхөн бөглөсөн маягтаасаа бус үзсэн хуудаснуудаасаа хадгалаарай. Дараа нь арга хэмжээний тасалбар, лояалти карт зэрэг картууддаа шуурхай хандаарай. Таны хадгалсан мэдээлэл таны төхөөрөмж, Growser-н бүтээгдэхүүн дээр харагдах боломжтой.</translation>
+<translation id="4080668349181235831">Зөвлөмж санал болгож, энэ онцлогийг сайжруулахын тулд таны зочилсон сайтын URL, хуудасны бүтэн контентыг Growser-тэй хуваалцдаг. <ph name="IDS_WALLET_WALLETABLE_PASS_CONSENT_DIALOG_LEARN_MORE"/>-н талаар нэмэлт мэдээлэл авна уу.</translation>
+<translation id="5038265118346577744">Табын бүлэг хуваалцах, нэгдэхийн тулд Growser-д нэвтэрч, санаан дээр хамтран ажиллаарай</translation>
+<translation id="3109033858283726964">Growser-д нэвтрэх</translation>
+<translation id="1823139539047733938">Growser хуучирсан байна.</translation>
+<translation id="4837402451637115574">Табын бүлэг хуваалцахын тулд Growser-г шинэчилнэ үү</translation>
+<translation id="3835090069800247534">Энэ табын бүлэгт нэгдэхийн тулд Growser-г шинэчилнэ үү</translation>
+<translation id="5796903668018420114">Дундын табын бүлгээ үргэлжлүүлэн ашиглахын тулд Growser-г шинэчилнэ үү</translation>
+<translation id="7224231921984484941">Табын бүлэг хуваалцах, нэгдэх, хамтран ажиллахын тулд тохиргоог нээж, Growser-д нэвтрэхийг зөвшөөрөхийг асаана уу</translation>
+<translation id="64301400193488735">Табын бүлэг хуваалцах эсвэл нэгдэхийн тулд та Growser-д нэгдэх боломжтой байх ёстой</translation>
+<translation id="6517371327636513767">Та бусад хүнтэй таб хуваалцах, хамтран ажиллахын тулд Growser-д нэвтрэх боломжтой байх ёстой</translation>
+<translation id="8040715633918382311">Танай байгууллага таны Growser Бүртгэлд хадгалахыг хязгаарлахад та табын бүлэг хуваалцах, нэгдэх боломжгүй</translation>
+<translation id="5748088712770284646">Танай байгууллага Growser Бүртгэлдээ хадгалахыг хязгаарладаг тохиолдолд та таб хуваалцах, бусад хүнтэй хамтран ажиллах боломжгүй</translation>
+<translation id="1973662400109107505">Дундын табын бүлгээ үргэлжлүүлэн ашиглахын тулд Growser-г шинэчилнэ үү</translation>
+<translation id="540513565870577298">Хэрэв та зөвлөмж сонгох эсвэл үл хэрэгсвэл Growser танд зөвхөн хамааралтай зүйлсийг харуулахаар дасан зохицно</translation>
+<translation id="6381429959346598968">Growser хуудасны гарчиг, URL-г үүлэн дэх хаалттай орон зайд боловсруулдаг</translation>
+<translation id="3475470536954895815">Growser хуудасны гарчиг, URL-г үүлэнд боловсруулдаг</translation>
+<translation id="583085621576779299">Хэрэв та зөвлөмжийг унтраавал таны табын хуудасны гарчиг, URL-г Growser-н бусад онцлогт зориулж боловсруулсан хэвээр байж магадгүй. Та хөтчид энэ өгөгдөлд хандах эрхийг дараахад удирдах боломжтой</translation>
+<translation id="913846191326613072">Табуудыг хуваалцсан үед тэдгээрийн контент, URL-г Growser-д илгээдэг.</translation>
+<translation id="4827675678516992122">Холбогдож чадсангүй</translation>
+<translation id="6749473226660745022">Зураг</translation>
+<translation id="2366554533468315977">Энэ сонголтод зориулсан веб дээрх үнийн түүх</translation>
+<translation id="5199729219167945352">Туршилтууд</translation>
+<translation id="8413126021676339697">Бүрэн түүхийг харуулах</translation>
+<translation id="6302661287897119265">Шүүлтүүр</translation>
+<translation id="2956070106555335453">Хураангуй</translation>
+<translation id="4759238208242260848">Татаж авсан зүйлс</translation>
+<translation id="7366909168761621528">Хайх өгөгдөл</translation>
+<translation id="1898804291554630487">Энэ хуудасны талаар асуух</translation>
+<translation id="6231782223312638214">Зөвлөсөн</translation>
 </translationbundle>

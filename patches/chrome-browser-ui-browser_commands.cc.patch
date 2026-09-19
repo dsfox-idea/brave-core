@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/ui/browser_commands.cc b/chrome/browser/ui/browser_commands.cc
-index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0cbd92647 100644
+index 54e747d468a5fb2c7441641e03f85e11acd0eaeb..bc12c1d97a5b6d934cbbbb14ed97de96ef224b25 100644
 --- a/chrome/browser/ui/browser_commands.cc
 +++ b/chrome/browser/ui/browser_commands.cc
-@@ -464,7 +464,12 @@ void MoveTabsToWindowImpl(BrowserWindowInterface* source,
+@@ -496,7 +496,12 @@ void MoveTabsToWindowImpl(BrowserWindowInterface* source,
      } else if (auto collection =
                     std::get_if<std::unique_ptr<DetachedTabCollection>>(
                         &tab_or_collection)) {
@@ -16,7 +16,7 @@ index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0
                collection->get()->collection_)) {
          target_model->InsertDetachedTabGroupAt(std::move(*collection),
                                                 target_model->count());
-@@ -697,6 +702,11 @@ void ReloadInternal(BrowserWindowInterface* browser,
+@@ -732,6 +737,11 @@ void ReloadInternal(BrowserWindowInterface* browser,
    bool multiple_ui_tabs_selected =
        active_tab && tab_strip_model->selection_model().size() >
                          (active_tab->IsSplit() ? 2 : 1);
@@ -28,7 +28,7 @@ index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0
  
    if (multiple_ui_tabs_selected) {
      // Reloading a tab may change the selection (see crbug.com/339061099), so
-@@ -1132,6 +1142,7 @@ void Reload(BrowserWindowInterface* browser,
+@@ -1171,6 +1181,7 @@ void Reload(BrowserWindowInterface* browser,
  
  void ReloadBypassingCache(BrowserWindowInterface* browser,
                            WindowOpenDisposition disposition) {
@@ -36,7 +36,7 @@ index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0
    base::RecordAction(UserMetricsAction("ReloadBypassingCache"));
    ReloadInternal(browser, disposition, true);
  }
-@@ -1333,7 +1344,7 @@ void OpenSizeWindow(BrowserWindowInterface* browser) {
+@@ -1370,7 +1381,7 @@ void OpenSizeWindow(BrowserWindowInterface* browser) {
  }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -45,7 +45,7 @@ index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0
                               NewTabTypes context) {
    if (context != NewTabTypes::kNoUserAction) {
      base::RecordAction(base::UserMetricsAction("NewTab"));
-@@ -1427,7 +1438,9 @@ void CloseTab(BrowserWindowInterface* browser) {
+@@ -1472,7 +1483,9 @@ void CloseTab(BrowserWindowInterface* browser) {
        active_tab->IsSplit() &&
        browser->GetTabStripModel()->selection_model().size() == 2;
  
@@ -56,7 +56,7 @@ index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0
      RecordTabCloseCount(1);
      active_tab->GetContents()->Close();
      return;
-@@ -1447,6 +1460,7 @@ void CloseTab(BrowserWindowInterface* browser) {
+@@ -1492,6 +1505,7 @@ void CloseTab(BrowserWindowInterface* browser) {
  #endif
  
    ToastController* toast_controller = browser->GetFeatures().toast_controller();
@@ -64,7 +64,7 @@ index b1cbee4f63c62db99f9ce608657ab71fe98c6efd..73baef9978b051945b67eee5a76452f0
    if (!toast_controller) {
      CloseSelectedTabAndRecordTabCountMetric(browser);
      return;
-@@ -1775,7 +1789,7 @@ void NewSplitTab(BrowserWindowInterface* browser,
+@@ -1815,7 +1829,7 @@ void NewSplitTab(BrowserWindowInterface* browser,
    // the regular NTP which renders special content when in Incognito.
    const GURL new_tab_url = !browser->GetProfile()->IsIncognitoProfile() &&
                                     tab_strip_model->count() > 1

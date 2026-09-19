@@ -22,6 +22,7 @@ static_assert(BUILDFLAG(ENABLE_BRAVE_WALLET));
 
 namespace brave_wallet {
 
+bool IsFilecoinLedgerEnabled();
 bool IsBitcoinEnabled();
 bool IsBitcoinImportEnabled();
 bool IsBitcoinLedgerEnabled();
@@ -36,7 +37,7 @@ bool IsAnkrBalancesEnabled();
 bool IsTransactionSimulationsEnabled();
 bool IsAccountHidingEnabled();
 bool IsWalletDebugEnabled();
-bool IsMojoForHardwareWalletEnabled();
+bool IsMojoForLedgerEnabled();
 bool IsSnapsFeatureEnabled();
 
 bool IsEthereumKeyring(mojom::KeyringId keyring_id);
