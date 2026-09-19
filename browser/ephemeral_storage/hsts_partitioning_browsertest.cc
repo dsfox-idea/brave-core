@@ -9,6 +9,7 @@
 #include "base/test/bind.h"
 #include "brave/components/brave_shields/core/browser/brave_shields_utils.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/common/chrome_paths.h"
@@ -86,6 +87,17 @@ class HSTSPartitioningBrowserTestBase : public InProcessBrowserTest {
     InProcessBrowserTest::SetUpOnMainThread();
     host_resolver()->AddRule("*", "127.0.0.1");
     mock_cert_verifier_.mock_cert_verifier()->set_default_result(net::OK);
+
+    // Growser-87: these tests read a request's SCHEME to tell whether HSTS was
+    // applied, so anything else that upgrades http to https destroys the
+    // measurement. Brave's bots are safe by accident - ShouldUpgradeToHttps
+    // returns false with no exceptions service, and on their bots the
+    // component that provides it is never installed. We BUNDLE that data with
+    // the browser (Brave's component server answers a fork 403), so the
+    // service is there and every http navigation here came back https.
+    brave_shields::SetHttpsUpgradeControlType(
+        HostContentSettingsMapFactory::GetForProfile(browser()->GetProfile()),
+        brave_shields::ControlType::ALLOW, GURL());
   }
 
   void SetUpInProcessBrowserTestFixture() override {
