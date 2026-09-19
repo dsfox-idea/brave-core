@@ -56,10 +56,21 @@ int OnBeforeStartTransaction_BraveServiceKey(
 
   if (url.SchemeIs(url::kHttpsScheme)) {
     const bool is_search_domain = kSearchDomains.contains(url.host());
-    if (is_search_domain ||
-        std::any_of(
-            allowed_domains->begin(), allowed_domains->end(),
-            [&url](const auto& domain) { return url.DomainIs(domain); })) {
+    // Growser-245: an empty key authenticates nothing, and sending it is not
+    // free. The domains above come from the updater endpoints, and ours share
+    // a host with our translate backend - so this put a BraveServicesKey
+    // header on translate requests made by the PAGE. A custom header makes a
+    // cross-origin request a CORS preflight, which the backend then has to
+    // answer. Brave never meet this: their translate host is not one of their
+    // updater hosts. Our key is "" (lesson 30) and our own backend does not
+    // read it.
+    const bool has_services_key =
+        !std::string_view(BUILDFLAG(BRAVE_SERVICES_KEY)).empty();
+    if (has_services_key &&
+        (is_search_domain ||
+         std::any_of(
+             allowed_domains->begin(), allowed_domains->end(),
+             [&url](const auto& domain) { return url.DomainIs(domain); }))) {
       headers->SetHeader(kBraveServicesKeyHeader,
                          BUILDFLAG(BRAVE_SERVICES_KEY));
     }
