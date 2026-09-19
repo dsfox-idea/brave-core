@@ -5,22 +5,12 @@
 
 #include "brave/browser/search_engines/normal_window_search_engine_provider_service.h"
 
-#include <string>
-
 #include "base/functional/bind.h"
-#include "brave/browser/search_engines/pref_names.h"
 #include "brave/browser/search_engines/search_engine_provider_util.h"
-#include "brave/components/l10n/common/locale_util.h"
-#include "brave/components/search_engines/brave_prepopulated_engines.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/browser/search_engines/template_url_prepopulate_data_resolver_factory.h"
 #include "chrome/browser/search_engines/template_url_service_factory.h"
-#include "chrome/common/pref_names.h"
-#include "components/country_codes/country_codes.h"
 #include "components/search_engines/search_engines_pref_names.h"
-#include "components/search_engines/template_url_prepopulate_data.h"
-#include "components/search_engines/template_url_prepopulate_data_resolver.h"
 #include "components/search_engines/template_url_service.h"
 
 NormalWindowSearchEngineProviderService::
@@ -58,7 +48,6 @@ void NormalWindowSearchEngineProviderService::Shutdown() {
 void NormalWindowSearchEngineProviderService::OnTemplateURLServiceLoaded() {
   template_url_service_subscription_ = {};
   PrepareInitialPrivateSearchProvider();
-  MigrateSearchEnginePrefsInJP();
 }
 
 void NormalWindowSearchEngineProviderService::
@@ -68,49 +57,4 @@ void NormalWindowSearchEngineProviderService::
 
 void NormalWindowSearchEngineProviderService::OnPreferenceChanged() {
   brave::UpdateDefaultPrivateSearchProviderData(*profile_);
-}
-
-void NormalWindowSearchEngineProviderService::MigrateSearchEnginePrefsInJP() {
-  auto* prefs = profile_->GetPrefs();
-  if (prefs->GetBoolean(kMigratedSearchDefaultInJP)) {
-    return;
-  }
-
-  prefs->SetBoolean(kMigratedSearchDefaultInJP, true);
-
-  const std::string country_string =
-      brave_l10n::GetDefaultISOCountryCodeString();
-  if (country_string != "JP") {
-    return;
-  }
-
-  auto* preference = prefs->FindPreference(prefs::kDefaultSearchProviderGUID);
-  if (preference->HasUserSetting()) {
-    return;
-  }
-
-  auto* service = TemplateURLServiceFactory::GetForProfile(profile_);
-  if (!service->loaded()) {
-    return;
-  }
-
-  if (service->GetDefaultSearchProvider()->prepopulate_id() ==
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YAHOO_JP) {
-    return;
-  }
-
-  auto* prepopulate_data_resolver =
-      TemplateURLPrepopulateData::ResolverFactory::GetForProfile(profile_);
-  const auto data = prepopulate_data_resolver->GetPrepopulatedEngine(
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_YAHOO_JP);
-  if (!data) {
-    return;
-  }
-
-  TemplateURL url(*data);
-  service->SetUserSelectedDefaultSearchProvider(&url);
-
-  if (prefs->GetBoolean(prefs::kSearchSuggestEnabled)) {
-    prefs->SetBoolean(prefs::kSearchSuggestEnabled, false);
-  }
 }

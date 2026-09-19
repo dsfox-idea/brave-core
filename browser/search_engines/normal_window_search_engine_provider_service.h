@@ -38,7 +38,6 @@ class NormalWindowSearchEngineProviderService : public KeyedService {
   void OnTemplateURLServiceLoaded();
   void PrepareInitialPrivateSearchProvider();
   void OnPreferenceChanged();
-  void MigrateSearchEnginePrefsInJP();
 
   raw_ptr<Profile> profile_ = nullptr;
   StringPrefMember private_search_provider_guid_;

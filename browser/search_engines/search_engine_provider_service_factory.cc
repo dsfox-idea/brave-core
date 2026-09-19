@@ -100,7 +100,6 @@ void SearchEngineProviderServiceFactory::RegisterProfilePrefs(
 #if !BUILDFLAG(IS_ANDROID)
   registry->RegisterBooleanPref(prefs::kDefaultSearchProviderByExtension,
                                 false);
-  registry->RegisterBooleanPref(kMigratedSearchDefaultInJP, false);
   registry->RegisterStringPref(prefs::kSyncedDefaultPrivateSearchProviderGUID,
                                std::string(),
                                user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
