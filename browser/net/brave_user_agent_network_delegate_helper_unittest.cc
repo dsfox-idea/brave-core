@@ -7,6 +7,7 @@
 
 #include <optional>
 #include <string>
+#include <vector>
 
 #include "base/test/scoped_feature_list.h"
 #include "brave/browser/net/features.h"
@@ -59,18 +60,31 @@ template <typename PtrStrategy>
 class BraveUserAgentNetworkDelegateHelperTest : public ::testing::Test {
  protected:
   void SetUp() override {
-    auto* exceptions =
-        brave_user_agent::BraveUserAgentExceptions::GetInstance();
-    exceptions->AddToExceptedDomainsForTesting("excepted.com");
-    exceptions->SetIsReadyForTesting();
-
+    // Growser-244: the features come first now. kUseBraveUserAgent is off by
+    // default here, and BraveUserAgentExceptions::GetInstance() answers
+    // nullptr when it is - so asking for the singleton before enabling the
+    // feature dereferenced null and crashed all ten of these. The tests
+    // themselves still exercise both sides of that flag, through their own
+    // ScopedFeatureList in RunUserAgentTest; this only makes the exceptions
+    // object exist at all.
+    //
     // Enable feature flag if using WeakPtrStrategy, disable if
     // SharedPtrStrategy
     bool enable_flag =
         std::is_same_v<typename PtrStrategy::template Ptr<BraveRequestInfo>,
                        base::WeakPtr<BraveRequestInfo>>;
-    scoped_feature_list_.InitWithFeatureState(
-        features::kBraveRequestInfoUniquePtr, enable_flag);
+    std::vector<base::test::FeatureRef> enabled = {
+        brave_user_agent::features::kUseBraveUserAgent};
+    std::vector<base::test::FeatureRef> disabled;
+    (enable_flag ? enabled : disabled)
+        .push_back(features::kBraveRequestInfoUniquePtr);
+    scoped_feature_list_.InitWithFeatures(enabled, disabled);
+
+    auto* exceptions =
+        brave_user_agent::BraveUserAgentExceptions::GetInstance();
+    ASSERT_TRUE(exceptions);
+    exceptions->AddToExceptedDomainsForTesting("excepted.com");
+    exceptions->SetIsReadyForTesting();
   }
 
   UserAgentTestResult RunUserAgentTest(bool feature_enabled,
