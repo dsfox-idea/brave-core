@@ -1,7 +1,16 @@
 diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
-index d05ae95afce359b9edd607aec4cba95f94fde6dc..356d000a2303f3140274274400c4aaa33470fa6e 100644
+index d05ae95afce359b9edd607aec4cba95f94fde6dc..d5528ccad4aaec38df9c006893e5028ae888acc3 100644
 --- a/chrome/browser/net/profile_network_context_service.cc
 +++ b/chrome/browser/net/profile_network_context_service.cc
+@@ -659,7 +659,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
+                                 false);
+   registry->RegisterListPref(prefs::kHSTSPolicyBypassList);
+   registry->RegisterListPref(prefs::kCACertificates);
+-  registry->RegisterListPref(prefs::kCACertificatesWithConstraints);
++  BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
+   registry->RegisterListPref(prefs::kCADistrustedCertificates);
+   registry->RegisterListPref(prefs::kCAHintCertificates);
+   // For information about whether to reset the HTTP Cache or not, defaults
 @@ -750,6 +750,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
    std::vector<std::string> excluded_spkis(
        TranslateStringArray(ct_excluded_spkis));
@@ -10,3 +19,15 @@ index d05ae95afce359b9edd607aec4cba95f94fde6dc..356d000a2303f3140274274400c4aaa3
    return network::mojom::CTPolicy::New(std::move(excluded),
                                         std::move(excluded_spkis));
  }
+@@ -1422,9 +1423,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
+     network_context_params->file_paths->cookie_database_name =
+         base::FilePath(chrome::kCookieFilename);
+ 
+-    g_browser_process->system_network_context_manager()
+-        ->AddCookieEncryptionManagerToNetworkContextParams(
+-            network_context_params);
++    BRAVE_ADD_COOKIE_ENCRYPTION_MANAGER_TO_NETWORK_CONTEXT_PARAMS(
++        network_context_params);
+ 
+ #if BUILDFLAG(ENTERPRISE_CACHE_ENCRYPTION)
+     if (enterprise_encryption::ShouldEncryptHttpCache(profile_->GetPrefs())) {
