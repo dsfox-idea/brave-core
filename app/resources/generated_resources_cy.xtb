@@ -1177,7 +1177,7 @@ Gwiriwch eich cyfrineiriau unrhyw bryd yn y <ph name="GOOGLE_PASSWORD_MANAGER"/>
 <translation id="1901213235765457754">Gofynnwch i'ch gweinyddwr ddiweddaru'r ap hwn</translation>
 <translation id="1901303067676059328">Dewis &amp;popeth</translation>
 <translation id="1901760057081700494">Mae'r gylchfa amser wedi'i gosod ar hyn o bryd i <ph name="TIME_ZONE_ENTRY"/>. I ddiweddaru'r parth amser yn awtomatig, <ph name="BEGIN_LINK"/>trowch fynediad lleoliad system ymlaen<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Gall eich cyfeiriad cartref eich helpu i gyflawni pethau ar draws gwasanaethau Growser, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Growser Maps. Gallwch olygu neu ddileu eich cyfeiriad <ph name="BEGIN_LINK"/>yn eich Cyfrif Growser <ph name="END_LINK"/><ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">Gall eich cyfeiriad cartref eich helpu i gyflawni pethau ar draws gwasanaethau Growser, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Google Maps. Gallwch olygu neu ddileu eich cyfeiriad <ph name="BEGIN_LINK"/>yn eich Cyfrif Growser <ph name="END_LINK"/><ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">Mae'r cyfeiriadau URL rydych yn ymweld â nhw wedi'u cadw i'ch Cyfrif Growser</translation>
 <translation id="190530012637606145">Yn eich rhybuddio am bob cysylltiad anniogel, gan gynnwys mewnrwydi preifat</translation>
 <translation id="1906181697255754968">Mae gwefannau fel arfer yn cyrchu ffeiliau a ffolderi ar eich dyfais ar gyfer nodweddion megis cadw eich gwaith yn awtomatig</translation>
@@ -1633,7 +1633,7 @@ Gallwch reoli gosodiadau'r cyfrif hwn drwy osod yr ap Family Link ar eich dyfais
 <translation id="225716114209817872">Uchafswm</translation>
 <translation id="5642482119439119644">I gael eich tabiau o'ch dyfeisiau eraill, cadarnhewch mai chi sydd yno. Gallwch stopio cysoni unrhyw bryd yn y gosodiadau. Gall Growser bersonoleiddio Search a gwasanaethau eraill yn seiliedig ar eich hanes.</translation>
 <translation id="22614517036276112">Nid yw'r ddogfen hon neu eich dyfais yn bodloni rhai o bolisïau diogelwch eich sefydliad. Gwiriwch gyda'ch gweinyddwr beth sydd angen ei drwsio.</translation>
-<translation id="1829264724820495616">Gall eich cyfeiriad gwaith eich helpu i gyflawni pethau ar draws gwasanaethau Growser, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Growser Maps. Gallwch olygu neu ddileu eich cyfeiriad yn eich <ph name="BEGIN_LINK"/>Cyfrif Growser<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">Gall eich cyfeiriad gwaith eich helpu i gyflawni pethau ar draws gwasanaethau Growser, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Google Maps. Gallwch olygu neu ddileu eich cyfeiriad yn eich <ph name="BEGIN_LINK"/>Cyfrif Growser<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Oedi cyn ailadrodd</translation>
 <translation id="2263371730707937087">Cyfradd adnewyddu'r sgrîn</translation>
 <translation id="7829329302663082098">Mae eich adborth yn ein helpu i wella Growser Cast ac yn cael ei werthfawrogi.
@@ -7076,7 +7076,7 @@ Gallwch aseinio sawl switsh i'r weithred hon.</translation>
 <translation id="6470823736074966819">Distewi Hysbysiadau</translation>
 <translation id="6472893788822429178">Dangos y Botwm Hafan</translation>
 <translation id="6473315466413288899">Dewiswch opsiwn</translation>
-<translation id="6199773995438617867">Gweld rhagor yn Growser Calendar</translation>
+<translation id="6199773995438617867">Gweld rhagor yn Google Calendar</translation>
 <translation id="6474401088838630457">Gofyn rhagor i Gemini am hyn</translation>
 <translation id="6474498546677193336">Methu â dadrannu oherwydd bod ap yn defnyddio'r ffolder hon. Bydd y ffolder yn cael ei dadrannu pan fydd Linux yn cael ei gau nesaf.</translation>
 <translation id="6474884162850599008">Datgysylltu cyfrif Google Drive</translation>
@@ -7266,7 +7266,7 @@ Mae gennych # cyfrinair arall sydd wedi'u darganfod. Mae Rheolwr Cyfrineiriau Gr
 <translation id="6613231539539868591">Data Parhaus</translation>
 <translation id="6613267708691765962">Sganio am ddrwgwedd...</translation>
 <translation id="6615455863669487791">Dangos i fi</translation>
-<translation id="5146630705831894319">Cynnig Growser Translate ar gyfer gwefannau a ffeiliau PDF mewn ieithoedd eraill</translation>
+<translation id="5146630705831894319">Cynnig Google Translate ar gyfer gwefannau a ffeiliau PDF mewn ieithoedd eraill</translation>
 <translation id="6618013221808317456">Peidiwch â chaniatáu i wefannau ddefnyddio optimeiddio JavaScript</translation>
 <translation id="6618154741503063152">Methu ag uwchlwytho. Ni chaniateir atodiadau.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7623,7 +7623,7 @@ Mae gennych # cyfrinair arall sydd wedi'u darganfod. Mae Rheolwr Cyfrineiriau Gr
 <translation id="6871644448911473373">Ymatebydd OCSP: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Ieithoedd...</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Pan fydd ymlaen, bydd Growser Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
+<translation id="5189979109199910058">Pan fydd ymlaen, bydd Google Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
 <translation id="6873571253135628430">Newid caniatadau gwefan</translation>
 <translation id="6874986444867497677">Nid oedd modd cwblhau'r gosodiad. Rhowch gynnig arall arni neu caewch y ffenestr hon.</translation>
 <translation id="6876155724392614295">Beic</translation>
@@ -9864,7 +9864,7 @@ Cadwch eich ffeil allwedd mewn man diogel. Bydd ei hangen arnoch i greu fersiyna
 <translation id="8619803522055190423">Gollwng cysgod</translation>
 <translation id="8620206585293032550">Gwedd tabiau anweithredol</translation>
 <translation id="8621979332865976405">Rhannu eich sgrîn gyfan</translation>
-<translation id="6089523089512126744">Dull AI Growser Search ac apiau cysylltiedig</translation>
+<translation id="6089523089512126744">Dull AI Google Search ac apiau cysylltiedig</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Darllen rhifau cyfresol cydran a dyfais ChromeOS</translation>
 <translation id="862542460444371744">&amp;Estyniadau</translation>
@@ -11419,7 +11419,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="1024884937839269099">Gall <ph name="BEGIN_LINK_GOOGLE"/>mathau eraill o weithgarwch<ph name="END_LINK_GOOGLE"/> gael eu cadw i'ch Cyfrif Growser pan fyddwch wedi mewngofnodi. Gallwch eu dileu ar unrhyw adeg.</translation>
 <translation id="6533315466883598769">Defnyddio Google Translate</translation>
 <translation id="6010651352520077187">Pan fydd ymlaen, bydd Google Translate yn cynnig cyfieithu gwefannau i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
-<translation id="6873499199714317035">Pan fydd ymlaen, bydd Growser Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
+<translation id="6873499199714317035">Pan fydd ymlaen, bydd Google Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
 <translation id="5911030830365207728">Google Translate</translation>
 <translation id="7458168200501453431">Yn defnyddio'r un gwiriwr sillafu ag a ddefnyddir yn Google Search. Anfonir testun rydych yn ei deipio yn y porwr at Growser.</translation>
 <translation id="8972513834460200407">Gwiriwch â'ch gweinyddwr rhwydwaith i sicrhau nad yw'r wal dân yn rhwystro lawrlwythiadau o weinyddion Growser.</translation>
@@ -11465,7 +11465,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="3293574207873361017">Rheoli'ch Cyfrif Growser</translation>
 <translation id="6901130673208235020">Pan fyddwch yn chwilio hanes pori, bydd eich chwiliadau hanes, cynnwys tudalennau'r gemau gorau, ac allbynnau model a gynhyrchir yn cael eu hanfon at Growser</translation>
 <translation id="3178434360326457238">Wrth i chi bori gwefannau, mae cynnwys eu tudalen yn cael ei amgryptio a'i gadw i'ch dyfais. Gall hyn effeithio ar berfformiad Growser</translation>
-<translation id="8622145666696249878">Dull AI Growser Search ac apiau cysylltiedig</translation>
+<translation id="8622145666696249878">Dull AI Google Search ac apiau cysylltiedig</translation>
 <translation id="2760679829473121490">Dangos hysbysiadau system am nodweddion ac awgrymiadau Growser</translation>
 <translation id="6713316345564743478">I wirio am gyfrineiriau sydd wedi'u darganfod, mewngofnodwch i'ch Cyfrif Growser</translation>
 <translation id="1342886103232377846">I wirio am gyfrineiriau sydd wedi'u darganfod, ewch i Reolwr Cyfrineiriau Growser</translation>
@@ -11639,7 +11639,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         Gallwch reoli gosodiadau o'r ddewislen cardiau neu weld rhagor o ddewisiadau yn Customize Growser.</translation>
-<translation id="6474021817475285003">Gweld rhagor yn Growser Calendar</translation>
+<translation id="6474021817475285003">Gweld rhagor yn Google Calendar</translation>
 <translation id="9066394310994446814">Rydych yn gweld yr eitem hon yn seiliedig ar eich gweithgarwch blaenorol gan ddefnyddio gwasanaethau Growser. Gallwch weld eich data, eu dileu, a newid gosodiadau eich cyfrif yn <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
