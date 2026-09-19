@@ -4,6 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include <memory>
+#include <string>
 
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
@@ -27,6 +28,7 @@
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
 #include "net/dns/mock_host_resolver.h"
+#include "testing/gmock/include/gmock/gmock.h"
 #include "third_party/blink/public/mojom/context_menu/context_menu.mojom.h"
 #include "ui/views/controls/label.h"
 #include "ui/views/controls/scroll_view.h"
@@ -56,7 +58,13 @@ class TextRecognitionBrowserTest : public InProcessBrowserTest {
       const std::pair<bool, std::vector<std::string>>& supported_strs) {
     // Test image has "brave" text.
     EXPECT_TRUE(supported_strs.first);
-    EXPECT_EQ("brave", supported_strs.second[0]);
+    // Growser-241: contains, not equals. The recognizer is the OPERATING
+    // SYSTEM's, and on a Russian Windows it reads the same image as
+    // "\xD1\x84 brave" - a stray Cyrillic glyph in front. That is the OCR
+    // language pack, not the browser: what this test can honestly assert is
+    // that the word in the image came back. Chromium's bots run an English
+    // Windows and never see it (lesson 25).
+    EXPECT_THAT(supported_strs.second[0], ::testing::HasSubstr("brave"));
     run_loop_->Quit();
   }
 
@@ -152,7 +160,11 @@ IN_PROC_BROWSER_TEST_F(TextRecognitionBrowserTest, TextRecognitionTest) {
     const auto text = static_cast<views::Label*>(
                           text_recognition_dialog->scroll_view_->contents())
                           ->GetText();
-    if (text == u"brave") {
+    // Growser-241: the same reason as in OnGetTextFromImage - a localized
+    // OCR adds a glyph of its own, and this early exit must recognize that
+    // case too, or it falls through and waits for a callback that has
+    // already fired.
+    if (text.find(u"brave") != std::u16string::npos) {
       return;
     }
   }
