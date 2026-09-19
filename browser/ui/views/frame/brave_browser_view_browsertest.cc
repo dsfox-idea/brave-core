@@ -24,6 +24,7 @@
 #include "brave/browser/ui/views/toolbar/screenshot_button.h"
 #include "brave/common/pref_names.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "build/build_config.h"
@@ -158,8 +159,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest, LayoutWithVerticalTabTest) {
 
   auto* prefs = browser()->GetProfile()->GetPrefs();
 
-  // Check bookmark only on the NTP is default.
-  EXPECT_EQ(brave::BookmarkBarState::kNtp, brave::GetBookmarkBarState(prefs));
+  // Growser-28: the bookmark bar is hidden everywhere by default, the NTP
+  // included - that is what buys the single toolbar row. Brave's default is
+  // kNtp, and this assertion was left saying so.
+  EXPECT_EQ(brave::BookmarkBarState::kNever, brave::GetBookmarkBarState(prefs));
 
   // BookmarkBar not visible as current active tab is not NTP.
   EXPECT_FALSE(bookmark_bar()->GetVisible());
@@ -182,7 +185,10 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest, LayoutWithVerticalTabTest) {
         browser_view()->contents_container()->bounds().origin().y());
   };
 
-#if !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+// Growser-241: and not on ours either - the infobar this waits for is the
+// P3A notice, and P3A is compiled out here (ENABLE_P3A is 0). Without
+// this the wait simply burns the test's whole budget.
+#if !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && BUILDFLAG(ENABLE_P3A)
   // Infobar is visible at first run (P3A notice).
   // Not shown on Origin builds where P3A is disabled by default.
   // Wait till infobar's positioning is finished.
@@ -201,9 +207,14 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest, LayoutWithVerticalTabTest) {
     return infobar_container()->bounds().bottom_left() ==
            contents_area_origin();
   }));
-#endif  // !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+#endif  // !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && BUILDFLAG(ENABLE_P3A)
 
   // Bookmark bar should be visible with NTP.
+  // Growser-28: our default is kNever, so the state this section is about has
+  // to be asked for. What the test covers - the layout with a vertical tab
+  // strip - is unchanged; only the starting point is.
+  brave::SetBookmarkState(brave::BookmarkBarState::kNtp, prefs);
+  ASSERT_EQ(brave::BookmarkBarState::kNtp, brave::GetBookmarkBarState(prefs));
   chrome::AddTabAt(browser(), GURL(), -1, true);
   EXPECT_TRUE(bookmark_bar()->GetVisible());
   EXPECT_FALSE(infobar_container()->GetVisible());
@@ -234,11 +245,14 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest, LayoutWithVerticalTabTest) {
   // Activate non-NTP tab and check contents container is positioned below the
   // infobar.
   browser()->tab_strip_model()->ActivateTabAt(0);
-#if !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+// Growser-241: and not on ours either - the infobar this waits for is the
+// P3A notice, and P3A is compiled out here (ENABLE_P3A is 0). Without
+// this the wait simply burns the test's whole budget.
+#if !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && BUILDFLAG(ENABLE_P3A)
   EXPECT_TRUE(infobar_container()->GetVisible());
   EXPECT_EQ(infobar_container()->bounds().bottom_left(),
             contents_area_origin());
-#endif  // !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+#endif  // !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && BUILDFLAG(ENABLE_P3A)
 
   // Show bookmark bar always.
   // Check vertical tab is positioned below the bookmark bar.
@@ -254,11 +268,14 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest, LayoutWithVerticalTabTest) {
   EXPECT_EQ(vertical_tab_strip_host_view()->bounds().origin(),
             bookmark_bar()->bounds().bottom_left() +
                 gfx::Vector2d(0, top_contents_separator_height));
-#if !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+// Growser-241: and not on ours either - the infobar this waits for is the
+// P3A notice, and P3A is compiled out here (ENABLE_P3A is 0). Without
+// this the wait simply burns the test's whole budget.
+#if !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && BUILDFLAG(ENABLE_P3A)
   EXPECT_TRUE(infobar_container()->GetVisible());
   EXPECT_EQ(infobar_container()->bounds().bottom_left(),
             contents_area_origin());
-#endif  // !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
+#endif  // !BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED) && BUILDFLAG(ENABLE_P3A)
 
   // Activate NTP tab.
   // Check vertical tab is positioned below the bookmark bar.

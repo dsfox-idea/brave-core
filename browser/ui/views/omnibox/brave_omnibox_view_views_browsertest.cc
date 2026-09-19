@@ -300,10 +300,14 @@ IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsEnabledFeatureTest,
   std::string text_from_clipboard = ui::clipboard_test_util::ReadAsciiText(
       clipboard, ui::ClipboardBuffer::kCopyPaste,
       /* data_dst = */ nullptr);
+  // Growser-87: brave_testing1 and brave_testing2 go too. SetSanitizerRules is
+  // not the only source of rules here - Brave's component server answers a
+  // fork 403, so the clean-urls payload is BUNDLED with the browser, and it
+  // carries a rule for this very host. On Brave's bots the component is absent
+  // and the test's own rules are all there is.
   EXPECT_EQ(text_from_clipboard,
             "https://dev-pages.bravesoftware.com/clean-urls/"
-            "?brave_testing1=foo&brave_testing2=bar&brave_testing3=keep&&;b&d&"
-            "e=&f=g&=end");
+            "?brave_testing3=keep&&;b&d&e=&f=g&=end");
 }
 
 IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsTest, DoNotSanitizeInternalURLS) {

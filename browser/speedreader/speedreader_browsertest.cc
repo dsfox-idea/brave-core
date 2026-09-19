@@ -56,6 +56,7 @@
 #include "chrome/common/pref_names.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
+#include "components/grit/brave_components_strings.h"
 #include "components/language/core/browser/language_prefs.h"
 #include "components/network_session_configurator/common/network_switches.h"
 #include "content/public/browser/reload_type.h"
@@ -66,6 +67,7 @@
 #include "content/public/test/test_navigation_observer.h"
 #include "content/public/test/test_utils.h"
 #include "net/dns/mock_host_resolver.h"
+#include "ui/base/l10n/l10n_util.h"
 #include "net/test/embedded_test_server/embedded_test_server.h"
 #include "net/test/embedded_test_server/http_request.h"
 #include "net/test/embedded_test_server/http_response.h"
@@ -673,7 +675,10 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, ShowOriginalPage) {
     })();
   )js";
 
-  EXPECT_EQ("View original",
+  // Growser-241: the link is localized, and our UI ships in Russian - the
+  // literal read "Посмотреть оригинал" here, which is the browser being right.
+  // Ask the same resource the reader itself draws from.
+  EXPECT_EQ(l10n_util::GetStringUTF8(IDS_READER_MODE_SHOW_ORIGINAL_PAGE_LINK),
             content::EvalJs(web_contents, kClickLinkAndGetTitle,
                             content::EXECUTE_SCRIPT_DEFAULT_OPTIONS,
                             ISOLATED_WORLD_ID_BRAVE_INTERNAL)
