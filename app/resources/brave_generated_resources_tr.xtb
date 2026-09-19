@@ -59,7 +59,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="3218385319396786393">Bu sayfada otomatik oynatma engellenmiş</translation>
 <translation id="4988333904713528597"><ph name="HOST"/> her zaman otomatik oynatmaya izin ver</translation>
 <translation id="4150684676757176434">Oto-Oynatmayı engellemeye devam et</translation>
-<translation id="2201935460386712655">Brave, uzantıları güvenlik ve emniyet bakımından gözden geçirmez. "<ph name="EXTENSION_NAME"/>" uzantısını yalnızca geliştiricisine güveniyorsanız yükleyin.</translation>
+<translation id="2201935460386712655">Growser, uzantıları güvenlik ve emniyet bakımından gözden geçirmez. "<ph name="EXTENSION_NAME"/>" uzantısını yalnızca geliştiricisine güveniyorsanız yükleyin.</translation>
 <translation id="2928844661231356557">Bir Bluetooth cihazına erişim sağlamak, sitenin hakkınızdaki tanımlayıcı ve potansiyel olarak hassas bilgileri okumasına izin verir. Sadece güvendiğiniz sitelerin Bluetooth cihazlarına erişmesine izin verin. <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">Tor pencereleri</translation>
 <translation id="7965178729203412357">Yeni Tor Kimliği</translation>
@@ -607,15 +607,15 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="8868426106596092089">Growser Tarayıcı çöktüğünde veya donduğunda tanı raporlarını otomatik olarak göndererek, Growser'in ürün stabilitesini iyileştirmeye yardımcı olun</translation>
 <translation id="4891600875049212418">Hassas siteleri ziyaret ederken Kayıt Dışına çık</translation>
 <translation id="1022603984240541480">Uyumlu sitelerde Gizlilik ayarları ince ayar bildirimini göster</translation>
-<translation id="3528176629974273019">Brave'in siteye özel gizlilik ayarlarını otomatik olarak önermesine (ve ayarlamasına) izin verir.</translation>
+<translation id="3528176629974273019">Growser'in siteye özel gizlilik ayarlarını otomatik olarak önermesine (ve ayarlamasına) izin verir.</translation>
 <translation id="2740687181110647855">Gizlilik Ayarları İnce Ayar Aracı</translation>
 <translation id="509873765238158442">Microsoft Recall'u Engelle</translation>
 <translation id="4763421121695677716">Microsoft Windows bilgisayarlardaki Recall özelliğinin açık Growser sekmelerinin ekran görüntülerini otomatik olarak almasını engelleyin.</translation>
 <translation id="1968895725257436430">Veri toplama</translation>
 <translation id="1700052872056357670">Çıkışta verileri temizle</translation>
 <translation id="216468847346280584">Growser Reklamları verilerini temizle...</translation>
-<translation id="96212973142796240">Brave Reklamlar verileri temizlendi</translation>
-<translation id="6665923829462527507">Brave Reklamlar verileri temizlenemedi. Tekrar deneyin.</translation>
+<translation id="96212973142796240">Growser Reklamlar verileri temizlendi</translation>
+<translation id="6665923829462527507">Growser Reklamlar verileri temizlenemedi. Tekrar deneyin.</translation>
 <translation id="2808630562319398131">Growser Rewards verilerini yeniden ayarlayın...</translation>
 <translation id="6438096877646138757">Kapattığınız zaman çerezleri temizleyen siteler</translation>
 <translation id="2988792685798128092">Site kapandığında temizlenir</translation>
@@ -1017,11 +1017,11 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="8854326268817889200">Growser Ödülleri butonunu göster</translation>
 <translation id="7687538894778993146">Yalnızca Reklam Engelleme modu, Growser Kalkanlar'ın temel reklam engelleme kurallarını korur. Uyarı: tüm gizlilik korumalarını kaldırır. Growser’in gizlilik korumalarının bozduğu belirli web siteleri için, Kalkanlar'ı aşağı konuma ayarlayabileceğinizi unutmayın. Bu deneysel bir moddur. <ph name="BEGIN_LINK"/>Daha fazla bilgi al<ph name="END_LINK"/></translation>
 <translation id="9023173279866800345">Growser'in tarama geçmişinizi yerel olarak ne kadar süre sakladığı</translation>
-<translation id="4082996406923131054">Brave'in siteye özel gizlilik ayarlarını otomatik olarak önermesine (ve ayarlamasına) izin verir.</translation>
+<translation id="4082996406923131054">Growser'in siteye özel gizlilik ayarlarını otomatik olarak önermesine (ve ayarlamasına) izin verir.</translation>
 <translation id="6673459101269837427">Microsoft Windows bilgisayarlardaki Recall özelliğinin açık Growser sekmelerinin ekran görüntülerini otomatik olarak almasını engelleyin.</translation>
 <translation id="5636467576514473532">Growser Reklamları verilerini temizle...</translation>
-<translation id="420057953503713346">Brave Reklamlar verileri temizlendi</translation>
-<translation id="3399998090446159274">Brave Reklamlar verileri temizlenemedi. Tekrar deneyin.</translation>
+<translation id="420057953503713346">Growser Reklamlar verileri temizlendi</translation>
+<translation id="3399998090446159274">Growser Reklamlar verileri temizlenemedi. Tekrar deneyin.</translation>
 <translation id="1332284067513374815">Growser Rewards verilerini yeniden ayarlayın...</translation>
 <translation id="6645428976896583185">URL'leri Growser'de kayıtlı güvenli olmayan sitelerin listesine göre kontrol eder.</translation>
 <translation id="2338646464484947274">Başlamak için, Growser'i eş zamanlanmak istediğiniz tüm cihazlarda kurmuş olmanız gerekir. Sonra, bir eş zamanlama koduyla onları birbirine güvenli bir şekilde bağlayabilirsiniz.</translation>
@@ -1060,7 +1060,7 @@ Veya şu adresten daha sonra değiştirin: <ph name="SETTINGS_EXTENIONS_LINK"/>.
 <translation id="1709339105818930637">Avatar Oval Growser</translation>
 <translation id="790677324469754498">Avatar Bonbon Growser</translation>
 <translation id="4677850801710355225">Bir web sayfasındaki medyaların oynatılması için bazen Widevine gerekir. Bu, Google sunucularından yüklenen bir Google eklentisidir ve Growser tarafından incelenemez. Yükleyerek, Google'ın kullanım koşullarını kabul etmiş sayılırsınız.</translation>
-<translation id="3513162204962925590">Brave, uzantıları güvenlik ve emniyet bakımından gözden geçirmez. "<ph name="EXTENSION_NAME"/>" uzantısını yalnızca geliştiricisine güveniyorsanız yükleyin.</translation>
+<translation id="3513162204962925590">Growser, uzantıları güvenlik ve emniyet bakımından gözden geçirmez. "<ph name="EXTENSION_NAME"/>" uzantısını yalnızca geliştiricisine güveniyorsanız yükleyin.</translation>
 <translation id="8652975004530325693">Bu Growser Sync hesabı, başka bir cihazdan silindi. Senkronizasyonu devre dışı bırakmak istemediyseniz <ph name="LINK_TEXT"/></translation>
 <translation id="6015737849159950360">Senkronizasyon hizmeti başlatılamadı, Growser Senkronizasyon çalışmıyor</translation>
 <translation id="3097761516937648160">Bağlantıyı Growser’in Tor ile birlikte gizli penceresinde aç</translation>

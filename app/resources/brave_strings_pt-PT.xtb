@@ -20,7 +20,7 @@
 <translation id="1203500561924088507">Agradecemos a instalação. Tem de reiniciar o navegador antes de utilizar o <ph name="BUNDLE_NAME"/>.</translation>
 <translation id="1232234696885483911">Quando abre a pesquisa de imagens, o título, o URL e o conteúdo da página, incluindo PDFs, são enviados automaticamente para o servidor. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Enquanto tiver sessão iniciada, pode usar as palavras-passe e muito mais da sua Conta Growser no Growser. Para alterar esta opção, aceda a "A sua conta no Growser".</translation>
-<translation id="583633806828413086">Mostrar o Gemini no Brave na barra de menu do Mac</translation>
+<translation id="583633806828413086">Mostrar o Gemini no Growser na barra de menu do Mac</translation>
 <translation id="1631493536097460865">Para selecionar parte do ecrã no Gemini no Growser, use o atalho de teclado.</translation>
 <translation id="8799570501820813406">Enquanto este separador estava inativo, foi libertada memória para manter o Growser rápido. Pode optar por evitar sempre que este site fique inativo.</translation>
 <translation id="8767381092474532098">O Growser bloqueou esta transferência porque o ficheiro é perigoso</translation>
@@ -71,7 +71,7 @@
 <translation id="5679816001365584346">Transfira o Growser para o seu telemóvel para abrir ou criar novos grupos de separadores em qualquer lugar.</translation>
 <translation id="4559627161887338743">Pode gerir as suas Contas Growser com sessão iniciada. As suas Contas Growser são utilizadas para o navegador Growser, a Play Store, o Gmail e muito mais. Se pretender adicionar uma conta para outra pessoa, como um membro da família, adicione uma nova pessoa ao seu <ph name="DEVICE_TYPE"/>. <ph name="LINK_BEGIN"/>Saiba mais<ph name="LINK_END"/></translation>
 <translation id="1862852878885210965">Usar a pesquisa de imagens</translation>
-<translation id="2963742289915075304"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Brave no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso aos seus marcadores e muito mais do <ph name="DEVICE"/>.</translation>
+<translation id="2963742289915075304"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Growser no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso aos seus marcadores e muito mais do <ph name="DEVICE"/>.</translation>
 <translation id="1880677175115548835">Selecionar texto</translation>
 <translation id="4528406859989804913">Está a iniciar sessão com uma conta gerida e a permitir que o gestor controle o seu perfil do Growser. Os seus dados do Growser, como aplicações, marcadores, histórico, palavras-passe e outras definições, ficarão associados definitivamente a <ph name="USER_NAME"/>. Poderá eliminar estes dados através do painel de controlo das Contas Growser, mas não poderá associá-los a outra conta. Opcionalmente, pode criar um perfil novo para manter os seus dados atuais do Growser em separado. <ph name="LEARN_MORE"/></translation>
 <translation id="2207454583030080759">O Growser poupa a energia da bateria limitando a atividade em segundo plano e os efeitos visuais, como o deslocamento suave e as velocidades de frames do vídeo. <ph name="BEGIN_LINK"/>Saiba mais sobre a Poupança de energia<ph name="END_LINK"/></translation>
@@ -130,7 +130,7 @@
 <translation id="5298352791080868905">Abra links no Growser a partir de qualquer app e mantenha o navegador acessível na barra de tarefas</translation>
 <translation id="2600233721598267627">Clique no botão Resumir para partilhar este documento com o Gemini no Growser, obter uma vista geral rápida e fazer perguntas de seguimento</translation>
 <translation id="2118275934191847461">Com as <ph name="BEGIN_LINK"/>ferramentas do Growser<ph name="END_LINK"/>, pode navegar em segurança e manter o controlo</translation>
-<translation id="7508460698788470991"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Brave no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas palavras-passe e muito mais em todos os seus dispositivos.</translation>
+<translation id="7508460698788470991"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Growser no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas palavras-passe e muito mais em todos os seus dispositivos.</translation>
 <translation id="2451727308784734061">Use o atalho para aceder rapidamente ao Gestor de Palavras-passe. Pode mover o atalho para o Launcher de apps ou o ecrã principal do computador.</translation>
 <translation id="6381750314821942592">O Growser vai ser fechado em breve</translation>
 <translation id="6078442581074612226">No Growser</translation>
@@ -149,7 +149,7 @@
 <translation id="7931230852267968641">A sua organização pode ver e gerir os dados de navegação, como os marcadores, o histórico e as palavras-passe. Não consegue ver dados de navegação noutros perfis do Growser</translation>
 <translation id="2257221826278123061">Valide a sua identidade para usar e guardar dados do Growser na sua conta, <ph name="ACCOUNT_EMAIL"/></translation>
 <translation id="7048234400304379082">Para sair ou regressar ao Gemini no Growser, use o atalho de teclado.</translation>
-<translation id="5655607968417451974">Iniciar o Brave</translation>
+<translation id="5655607968417451974">Iniciar o Growser</translation>
 <translation id="7387051847644272380">Ocorreu um erro no sistema operativo durante a instalação. Descarregue novamente o Growser.</translation>
 <translation id="2648689842065142443">Se partilhar um dispositivo, os amigos e os familiares podem navegar separadamente e configurar o Growser da forma que quiserem.</translation>
 <translation id="1001521084148238686">Acesso fácil para usar o Gemini no Growser no seu dispositivo, mesmo que o Growser esteja minimizado.</translation>
@@ -252,7 +252,7 @@
 
           **Sugere perguntas:** gera uma lista com marcas de 3 a 5 perguntas que estimulem o pensamento e que um utilizador possa fazer para compreender melhor a captura de ecrã. Estas perguntas devem incluir, pelo menos, uma que seja especificamente sobre um objeto visual, o respetivo design ou o respetivo posicionamento.</translation>
 <translation id="5381622442243174305"><ph name="PAGE_TITLE"/> - Growser</translation>
-<translation id="1118754729376002185">O Brave precisa da autorização de acesso à rede local para este site</translation>
+<translation id="1118754729376002185">O Growser precisa da autorização de acesso à rede local para este site</translation>
 <translation id="3885770153807205175">Selecionador de idiomas</translation>
 <translation id="6315734375101223238">Personalize e controle o Growser. É necessária a sua atenção – clique para obter detalhes.</translation>
 <translation id="7130675370997202556">Clique no seu nome para abrir o Growser e começar a navegar.</translation>
@@ -394,7 +394,7 @@
 
 Se esta página não estiver a funcionar conforme esperado, experimente permitir a otimização.</translation>
 <translation id="7074160267408082133">Mostrar o Gemini no Growser na barra de menu do Mac e ativar o atalho de teclado</translation>
-<translation id="2938507901464407819"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Brave no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas informações guardadas e muito mais do <ph name="DEVICE"/>.</translation>
+<translation id="2938507901464407819"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Growser no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas informações guardadas e muito mais do <ph name="DEVICE"/>.</translation>
 <translation id="5579324208890605088">Erro de arranque: execute o instalador como um utilizador normal, não como administrador.</translation>
 <translation id="3588973534877826647">Use o Growser por predefinição e afixe-o</translation>
 <translation id="5596627076506792578">Mais opções</translation>
@@ -409,7 +409,7 @@ Se esta página não estiver a funcionar conforme esperado, experimente permitir
 <translation id="1834213228893578875">O Growser liberta memória dos separadores inativos. Isto permite que os separadores ativos e outras apps tenham mais recursos do computador e mantém o Growser rápido. Os seus separadores inativos ficam novamente ativos de forma automática quando regressa a eles. <ph name="BEGIN_LINK"/>Saiba mais sobre a Poupança de memória<ph name="END_LINK"/></translation>
 <translation id="899523323751802352">Se se esqueceu da frase de acesso ou quiser alterar esta definição, <ph name="SETTINGS_LINK"/> os dados do Growser na sua conta</translation>
 <translation id="82926023981336111">Personalize e controle o Growser. Defina o Growser como o navegador predefinido.</translation>
-<translation id="5660546041996455312">Mantenha as suas palavras-passe, marcadores e histórico perfeitamente sincronizados entre dispositivos definindo o Brave como o navegador predefinido.</translation>
+<translation id="5660546041996455312">Mantenha as suas palavras-passe, marcadores e histórico perfeitamente sincronizados entre dispositivos definindo o Growser como o navegador predefinido.</translation>
 <translation id="5809516625706423866">Não é possível ligar à Internet. HTTP 401 não autorizado. Verifique a sua configuração de proxy.</translation>
 <translation id="95980832839683236">Acelera os sites com o motor V8 do Growser, mas torna o Growser ligeiramente menos resistente a ataques. Esta definição está desativada.</translation>
 <translation id="1224606669200461217">Para usar e guardar dados do Growser na sua Conta Growser, atualize o Growser</translation>
@@ -563,12 +563,12 @@ Não é possível guardar novos marcadores na sua conta até eliminar alguns. Se
 <translation id="2332301637111071062">A sua organização elimina os dados do Growser quando este não é usado durante <ph name="TIMEOUT_DURATION"/>. Estes dados podem incluir o histórico, o preenchimento automático e as transferências.</translation>
 <translation id="1008530050039597147">O Growser necessita da autorização da câmara para este site</translation>
 <translation id="1197672524850678392">Não foi possível iniciar o Growser. Tente novamente.</translation>
-<translation id="5020151688261063547">Pergunte o que quiser, em qualquer lugar, com o Gemini no Brave</translation>
+<translation id="5020151688261063547">Pergunte o que quiser, em qualquer lugar, com o Gemini no Growser</translation>
 <translation id="3625983487600668413">Mantenha o Growser na Dock para aceder rapidamente ao mesmo em qualquer altura</translation>
 <translation id="5755581833598928580">Use o Growser sempre que clicar em links de mensagens, documentos e outras apps</translation>
 <translation id="7216228761061470870">Quando usa a pesquisa de imagens no computador, o título, o URL e o conteúdo da página, incluindo PDFs, são enviados para o servidor</translation>
 <translation id="5516268345616100622">Gestor de Tarefas - Growser</translation>
-<translation id="2416155625082200759"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Brave no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas informações guardadas e muito mais em todos os seus dispositivos.</translation>
+<translation id="2416155625082200759"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Growser no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas informações guardadas e muito mais em todos os seus dispositivos.</translation>
 <translation id="1871621397473741084">Comece a navegar instantaneamente: agora pode iniciar o Growser quando o Windows arranca.</translation>
 <translation id="7274695763216404502">Fixado! Use novamente a pesquisa de imagens a partir da barra de ferramentas</translation>
 <translation id="7288567540154601580">Separadores e extensões</translation>
@@ -584,7 +584,7 @@ O Growser não consegue recuperar as suas definições.</translation>
 <translation id="7352651011704765696">Algo correu mal</translation>
 <translation id="6085660187823915017">Para receber atualizações futuras do Growser, precisa do macOS 13 ou posterior. Este computador está a usar o macOS 12.</translation>
 <translation id="2865744782251083875">Não visitou o site recentemente. O Growser removeu <ph name="PERMISSION_1"/> e <ph name="PERMISSION_2"/>.</translation>
-<translation id="3871306442916198768">Mostrar o Gemini no Brave no tabuleiro do sistema</translation>
+<translation id="3871306442916198768">Mostrar o Gemini no Growser no tabuleiro do sistema</translation>
 <translation id="4104934885375476361">O Growser é agora o seu navegador predefinido</translation>
 <translation id="7951152294775418909">Continue a partir de onde ficou: o Growser restaura os seus separadores sempre que reinicia. Para desativar esta opção, aceda às</translation>
 <translation id="3191314862567596053">Importe palavras-passe para o Growser</translation>
@@ -619,7 +619,7 @@ O Growser não consegue recuperar as suas definições.</translation>
 <translation id="4784414698887946907">Esta ação elimina os dados de navegação deste dispositivo. Para recuperar os dados mais tarde, inicie sessão no Growser como <ph name="USER_EMAIL"/>.</translation>
 <translation id="7747138024166251722">O programa de instalação não conseguiu criar um directório temporário. Verifique se há espaço livre no disco e permissão para a instalação do software.</translation>
 <translation id="8543787950557226450">Repor Growser predefinido</translation>
-<translation id="4859382825808018797">Para proteger o seu trabalho no Brave, a sua organização vai poder ver ou gerir determinadas informações quando tiver sessão iniciada no Brave.</translation>
+<translation id="4859382825808018797">Para proteger o seu trabalho no Growser, a sua organização vai poder ver ou gerir determinadas informações quando tiver sessão iniciada no Growser.</translation>
 <translation id="4976450819672499783">Defina o Growser como navegador predefinido e afixe-o à barra de tarefas</translation>
 <translation id="1978509466033734608">Torne o Growser mais rápido</translation>
 <translation id="6236814935154483927"><ph name="PAGE_TITLE"/> – Growser Canary</translation>
@@ -636,7 +636,7 @@ O Growser não consegue recuperar as suas definições.</translation>
 <translation id="5687542525349822727">Defina o Growser como o navegador predefinido</translation>
 <translation id="6396151137840491551">Sempre que possível, o Growser atualiza automaticamente as ligações inseguras para HTTPS</translation>
 <translation id="2925193881330501265">Iniciou sessão no Growser com a conta <ph name="USER_EMAIL_ADDRESS"/>. Use a mesma conta para iniciar sessão novamente.</translation>
-<translation id="3744141798014187630"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Brave no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso aos seus marcadores e muito mais em todos os seus dispositivos.</translation>
+<translation id="3744141798014187630"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Growser no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso aos seus marcadores e muito mais em todos os seus dispositivos.</translation>
 <translation id="6915252145142862992">Esta é uma instalação secundária do Growser, pelo que não pode tornar-se o navegador predefinido.</translation>
 <translation id="7766756101194440006">Obtenha o melhor da Growser com a app Growser no <ph name="DEVICE_TYPE"/></translation>
 <translation id="8004582292198964060">Navegador</translation>
@@ -667,12 +667,12 @@ O Growser não consegue recuperar as suas definições.</translation>
 <translation id="1755067029031059271">O Growser não consegue validar a origem desta extensão, e pode não ser segura. Remova-a do Growser para que deixe de poder ver e alterar os seus dados nos sites que visita, incluindo informações pessoais.</translation>
 <translation id="8207657266087451193">Se uma imagem não tiver uma descrição útil, o Growser tenta fornecer uma. Para criar as descrições, são enviadas imagens para a Growser. Pode desativar esta opção nas definições em qualquer altura.</translation>
 <translation id="7792526144795244436">Iniciar sessão no Growser num novo perfil?</translation>
-<translation id="784788600549915416"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Brave no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas palavras-passe e muito mais do <ph name="DEVICE"/>.</translation>
+<translation id="784788600549915416"><ph name="EXISTING_USER"/> já tem sessão iniciada. Para manter a sua navegação separada, inicie sessão no Growser no seu perfil como <ph name="USER_EMAIL_ADDRESS"/>. Também tem acesso às suas palavras-passe e muito mais do <ph name="DEVICE"/>.</translation>
 <translation id="183102473074922918">Mostrar o Gemini no Growser no tabuleiro do sistema e ativar o atalho de teclado</translation>
 <translation id="976541154724186511">O <ph name="BEGIN_LINK"/>Growser avisa<ph name="END_LINK"/> sobre transferências e sites inseguros</translation>
 <translation id="8060549744348950090">Não visitou o site recentemente. O Growser removeu <ph name="PERMISSION"/>.</translation>
 <translation id="7402663241490331652">Compre, traduza e identifique o que vê com a câmara na app Growser para iOS</translation>
-<translation id="4470171586042711152">Código QR para iniciar sessão no Brave como <ph name="USER_NAME"/></translation>
+<translation id="4470171586042711152">Código QR para iniciar sessão no Growser como <ph name="USER_NAME"/></translation>
 <translation id="8313851650939857356">Erro de arranque: <ph name="STARTUP_ERROR"/>.</translation>
 <translation id="6098476632210317894">A sua organização fecha o Growser quando este não é usado durante <ph name="TIMEOUT_DURATION"/>.</translation>
 <translation id="8321888067342493336">Guardar como imagem</translation>

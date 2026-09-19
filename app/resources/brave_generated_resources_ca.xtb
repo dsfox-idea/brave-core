@@ -58,7 +58,7 @@ O canvia més tard a <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="3218385319396786393">Reproducció automàtica bloquejada en aquesta pàgina</translation>
 <translation id="4988333904713528597">Permet sempre la reproducció automàtica a <ph name="HOST"/></translation>
 <translation id="4150684676757176434">Continua bloquejant la reproducció automàtica</translation>
-<translation id="2201935460386712655">Brave no revisa la seguretat de les extensions. Instal·la "<ph name="EXTENSION_NAME"/>" només si confies en el desenvolupador.</translation>
+<translation id="2201935460386712655">Growser no revisa la seguretat de les extensions. Instal·la "<ph name="EXTENSION_NAME"/>" només si confies en el desenvolupador.</translation>
 <translation id="2928844661231356557">Concedir l'accés a un dispositiu Bluetooth permetrà al lloc llegir la vostra informació identificadora i potencialment confidencial. Permet només l'accés a dispositius Bluetooth a llocs en els quals confies. <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">finestres Tor</translation>
 <translation id="7965178729203412357">Identitat nova de Tor</translation>
@@ -606,15 +606,15 @@ Pots llegir <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>instruccions de com descar
 <translation id="8868426106596092089">Ajuda a millorar l'estabilitat del producte de Growser enviant automàticament informes de diagnòstic quan el navegador de Growser falla o es congela</translation>
 <translation id="4891600875049212418">Navega en mode Off-The-Record quan visitis llocs de naturalesa confidencial</translation>
 <translation id="1022603984240541480">Mostra la notificació d'ajust de la configuració de privadesa en llocs compatibles</translation>
-<translation id="3528176629974273019">Permet que Brave suggereixi (i ajusti) automàticament la configuració de privadesa específica de cada lloc.</translation>
+<translation id="3528176629974273019">Permet que Growser suggereixi (i ajusti) automàticament la configuració de privadesa específica de cada lloc.</translation>
 <translation id="2740687181110647855">Eina d'ajust de la configuració de privadesa</translation>
 <translation id="509873765238158442">Bloquejar Microsoft Recall</translation>
 <translation id="4763421121695677716">Bloqueja la funció de recuperació als ordinadors amb Microsoft Windows perquè no es facin captures de pantalla automàtiques de cap de les pestanyes obertes de Growser.</translation>
 <translation id="1968895725257436430">Recopilació de dades</translation>
 <translation id="1700052872056357670">Esborra les dades en sortir</translation>
 <translation id="216468847346280584">Esborra les dades d'anuncis de Growser...</translation>
-<translation id="96212973142796240">S'han esborrat les dades dels anuncis de Brave</translation>
-<translation id="6665923829462527507">No s'han pogut esborrar les dades dels anuncis de Brave. Torneu-ho a provar.</translation>
+<translation id="96212973142796240">S'han esborrat les dades dels anuncis de Growser</translation>
+<translation id="6665923829462527507">No s'han pogut esborrar les dades dels anuncis de Growser. Torneu-ho a provar.</translation>
 <translation id="2808630562319398131">Restableix les dades de Recompenses de Growser...</translation>
 <translation id="6438096877646138757">Llocs que esborren les galetes quan les tanques</translation>
 <translation id="2988792685798128092">Esborra en tancar el lloc</translation>
@@ -1016,11 +1016,11 @@ Segur que vols continuar?</translation>
 <translation id="8854326268817889200">Mostra el botó de Recompenses de Growser</translation>
 <translation id="7687538894778993146">El mode Només Bloc d'Anuncis conserva les regles bàsiques de bloqueig d’anuncis dels Escuts de Growser. Advertiment: elimina totes les proteccions de privadesa. Tingues en compte que, per a llocs web individuals afectats per les proteccions de privadesa de Growser, pots posar els Escuts en BAIX. Aquest és un mode experimental. <ph name="BEGIN_LINK"/>Més informació<ph name="END_LINK"/></translation>
 <translation id="9023173279866800345">Durant quant de temps Growser emmagatzema el teu historial de navegació localment</translation>
-<translation id="4082996406923131054">Permet que Brave suggereixi (i ajusti) automàticament la configuració de privadesa específica de cada lloc.</translation>
+<translation id="4082996406923131054">Permet que Growser suggereixi (i ajusti) automàticament la configuració de privadesa específica de cada lloc.</translation>
 <translation id="6673459101269837427">Bloqueja la funció de recuperació als ordinadors amb Microsoft Windows perquè no es facin captures de pantalla automàtiques de cap de les pestanyes obertes de Growser.</translation>
 <translation id="5636467576514473532">Esborra les dades d'anuncis de Growser...</translation>
-<translation id="420057953503713346">S'han esborrat les dades dels anuncis de Brave</translation>
-<translation id="3399998090446159274">No s'han pogut esborrar les dades dels anuncis de Brave. Torneu-ho a provar.</translation>
+<translation id="420057953503713346">S'han esborrat les dades dels anuncis de Growser</translation>
+<translation id="3399998090446159274">No s'han pogut esborrar les dades dels anuncis de Growser. Torneu-ho a provar.</translation>
 <translation id="1332284067513374815">Restableix les dades de Recompenses de Growser...</translation>
 <translation id="6645428976896583185">Comprova els enllaços amb una llista de llocs no segurs emmagatzemats a Growser.</translation>
 <translation id="2338646464484947274">Per començar, necessitaràs instal·lar Growser a tots els dispositius que planegis sincronitzar. Després, enllaceu-los de manera segura amb un codi de sincronització.</translation>
@@ -1059,7 +1059,7 @@ Segur que vols continuar?</translation>
 <translation id="1709339105818930637">Avatar Oval Growser</translation>
 <translation id="790677324469754498">Avatar Bombó Growser</translation>
 <translation id="4677850801710355225">De vegades es necessita Widevine per reproduir els arxius multimèdia en una pàgina web. És una extensió de Google carregada des dels servidors de Google, que Growser no pot inspeccionar. En instal·lar-la, acceptes els termes d'ús de Google.</translation>
-<translation id="3513162204962925590">Brave no revisa la seguretat de les extensions. Instal·la "<ph name="EXTENSION_NAME"/>" només si confies en el desenvolupador.</translation>
+<translation id="3513162204962925590">Growser no revisa la seguretat de les extensions. Instal·la "<ph name="EXTENSION_NAME"/>" només si confies en el desenvolupador.</translation>
 <translation id="8652975004530325693">Aquest compte de Sincronització de Growser s'ha suprimit d'un altre dispositiu. Si no vols desactivar Sincronització,<ph name="LINK_TEXT"/></translation>
 <translation id="6015737849159950360">El servei de sincronització no s'ha pogut iniciar, la Sincronització de Growser no s'està executant</translation>
 <translation id="3097761516937648160">Obre l'enllaç a una finestra d'incògnit de Growser amb Tor</translation>

@@ -186,7 +186,7 @@
 <translation id="1130116586186908674">স্প্লিট ভিউ তৈরি করুন</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - <ph name="GROUP_NAME"/> গ্রুপের অংশ</translation>
 <translation id="1130676589211693127">ডানদিকের ব্যাটারি লেভেল <ph name="PERCENTAGE"/>%।</translation>
-<translation id="1412403201555978627">ট্যাব শেয়ার করা হলে, তার পৃষ্ঠার কন্টেন্ট, মিডিয়া ও URL Brave-কে পাঠানো হয় এবং নিরাপত্তা সংক্রান্ত কারণে পর্যালোচনা করা হতে পারে।</translation>
+<translation id="1412403201555978627">ট্যাব শেয়ার করা হলে, তার পৃষ্ঠার কন্টেন্ট, মিডিয়া ও URL Growser-কে পাঠানো হয় এবং নিরাপত্তা সংক্রান্ত কারণে পর্যালোচনা করা হতে পারে।</translation>
 <translation id="1133418583142946603">বর্তমান ট্যাব যোগ করুন</translation>
 <translation id="1133751489735776037">মাউস দিয়ে ট্রিপল-ক্লিক করুন</translation>
 <translation id="1136712381129578788">অনেক বার ভুল পিন দেওয়ার জন্য নিরাপত্তা কী লক হয়ে গেছে। আনলক করতে এটিকে খুলে নিয়ে আবার লাগান।</translation>
@@ -376,7 +376,7 @@
 <translation id="126768002343224824">১৬x</translation>
 <translation id="1272079795634619415">বন্ধ</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>কাজ করে এমন লিঙ্ক<ph name="END_LINK"/> খোলা হচ্ছে</translation>
-<translation id="7823526956728613125">Search পরিষেবা ও Google Drive-এর মতো Brave Workspace অ্যাপের মধ্যে কানেকশন ম্যানেজ করুন</translation>
+<translation id="7823526956728613125">Search পরিষেবা ও Google Drive-এর মতো Growser Workspace অ্যাপের মধ্যে কানেকশন ম্যানেজ করুন</translation>
 <translation id="1274997165432133392">কুকিজ এবং অন্য সাইট ডেটা</translation>
 <translation id="1275936815032730048">launcher + right arrow</translation>
 <translation id="1275963833368139883">আপনার ব্রাউজিং ইতিহাস সার্চ করার সময়, উত্তর ও সার্চ ফলাফল কোনও পৃষ্ঠার কন্টেন্টের উপর নির্ভর করে। এটি আপনাকে উন্নত ফলাফল দেয়</translation>
@@ -654,7 +654,7 @@
 <translation id="1508931164824684991">সাইট জাভাস্ক্রিপ্ট ব্যবহার করতে পারে</translation>
 <translation id="1509163368529404530">&amp;গ্রুপ আবার আগের অবস্থায় ফিরিয়ে আনুন</translation>
 <translation id="1509281256533087115">USB এর মাধ্যমে যেকোনো <ph name="DEVICE_NAME_AND_VENDOR"/> অ্যাক্সেস করুন</translation>
-<translation id="2825615584808054779">Gemini-র সাথে আপনার কথোপকথন বা আপনার Brave Workspace ডেটা পর্যালোচনা করা অথবা জেনারেটিভ AI মডেল উন্নত করতেও তা ব্যবহার করা হবে না। Gemini হল AI এবং এটি ভুল করতে পারে।</translation>
+<translation id="2825615584808054779">Gemini-র সাথে আপনার কথোপকথন বা আপনার Growser Workspace ডেটা পর্যালোচনা করা অথবা জেনারেটিভ AI মডেল উন্নত করতেও তা ব্যবহার করা হবে না। Gemini হল AI এবং এটি ভুল করতে পারে।</translation>
 <translation id="1510238584712386396">লঞ্চার</translation>
 <translation id="1510341833810331442">কোনও সাইটকে আপনার ডিভাইসে ডেটা সেভ করার অনুমতি দিন</translation>
 <translation id="1510882959204224895">উইন্ডোতে খুলুন</translation>
@@ -748,7 +748,7 @@
 <translation id="1581962803218266616">ফাইন্ডারে দেখান</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>] মুছে ফেলুন</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> ডিভাইসেই প্রসেস করা হয় এবং অফলাইনে কাজ করে</translation>
-<translation id="491276955533054201">প্রথমে, এই ডিভাইসের জন্য Brave অটো ব্রাউজ চালু করুন</translation>
+<translation id="491276955533054201">প্রথমে, এই ডিভাইসের জন্য Growser অটো ব্রাউজ চালু করুন</translation>
 <translation id="1587275751631642843">&amp;JavaScript কনসোল</translation>
 <translation id="1588438908519853928">সাধারণ</translation>
 <translation id="1588772269240419305">লোগো এবং নামের আপডেট পর্যালোচনা করুন</translation>
@@ -1159,7 +1159,7 @@
 <translation id="1892453608039100484">১. নিচে <ph name="BUTTON_LABEL"/> বোতামে ক্লিক করুন
 ২. আপনার Windows সেটিংসে <ph name="BUTTON_2"/> বোতামে ক্লিক করুন</translation>
 <translation id="1895658205118569222">বন্ধ করুন</translation>
-<translation id="1189523243806849236">Brave AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
+<translation id="1189523243806849236">Growser AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
 <translation id="1897120393475391208">শক্তিশালী পাসওয়ার্ড ব্যবহার করুন</translation>
 <translation id="1897860317037652061">স্ক্যান করা যায়নি</translation>
 <translation id="1898804291554630487">এই পৃষ্ঠা সম্পর্কে জিজ্ঞেস করুন</translation>
@@ -1168,7 +1168,7 @@
 <translation id="1901213235765457754">আপনার অ্যাডমিনকে এই অ্যাপটি আপডেট করতে বলুন</translation>
 <translation id="1901303067676059328">&amp;সকল বেছে নিন</translation>
 <translation id="1901760057081700494">টাইম জোন বর্তমানে <ph name="TIME_ZONE_ENTRY"/>-এ সেট করা আছে। টাইম জোন অটোমেটিক আপডেট করতে, <ph name="BEGIN_LINK"/>সিস্টেমের লোকেশন অ্যাক্সেস করার সুবিধা চালু করুন<ph name="END_LINK"/>।</translation>
-<translation id="3930197956137872864">আপনার বাড়ির ঠিকানা যোগ করা থাকলে Brave পরিষেবা জুড়ে বিভিন্ন কাজের ক্ষেত্রে আপনি সাহায্য পেতে পারেন, যেমন, আরও প্রাসঙ্গিক সার্চ ফলাফল এবং Brave Maps-এ দিকনির্দেশ পাওয়া। আপনি নিজের <ph name="BEGIN_LINK"/>Brave অ্যাকাউন্ট<ph name="END_LINK"/><ph name="USERNAME"/> থেকে ঠিকানা এডিট করতে বা মুছে ফেলতে পারবেন।</translation>
+<translation id="3930197956137872864">আপনার বাড়ির ঠিকানা যোগ করা থাকলে Growser পরিষেবা জুড়ে বিভিন্ন কাজের ক্ষেত্রে আপনি সাহায্য পেতে পারেন, যেমন, আরও প্রাসঙ্গিক সার্চ ফলাফল এবং Growser Maps-এ দিকনির্দেশ পাওয়া। আপনি নিজের <ph name="BEGIN_LINK"/>Growser অ্যাকাউন্ট<ph name="END_LINK"/><ph name="USERNAME"/> থেকে ঠিকানা এডিট করতে বা মুছে ফেলতে পারবেন।</translation>
 <translation id="6893464351226208429">আপনার ভিজিট করা URL আপনার Growser অ্যাকাউন্টে সেভ করা হয়</translation>
 <translation id="190530012637606145">ব্যক্তিগত ইন্ট্রানেট-সহ সব অসুরক্ষিত কানেকশন সম্পর্কে আপনাকে সতর্ক করে</translation>
 <translation id="1906181697255754968">আপনার কাজ অটোমেটিক সেভ করার মতো ফিচারের জন্য সাইট সাধারণত আপনার ডিভাইসের ফাইল ও ফোল্ডারগুলি অ্যাক্সেস করে</translation>
@@ -1541,7 +1541,7 @@
 <translation id="2198625180564913276">প্রোফাইল যোগ করা হচ্ছে। এর জন্য কয়েক মিনিট সময় লাগতে পারে।</translation>
 <translation id="2198712775285959645">এডিট করুন</translation>
 <translation id="2199298570273670671">সমস্যা</translation>
-<translation id="2798272130984183944">Brave আপনার ডিভাইসে সরাসরি রান করে এমন AI মডেল ব্যবহার করবে কিনা তা বেছে নিন</translation>
+<translation id="2798272130984183944">Growser আপনার ডিভাইসে সরাসরি রান করে এমন AI মডেল ব্যবহার করবে কিনা তা বেছে নিন</translation>
 <translation id="2200094388063410062">ইমেল</translation>
 <translation id="2200781749203116929">ChromeOS সিস্টেম লগ</translation>
 <translation id="2202391868799679245">কীবোর্ড শর্টকাট চালু করুন</translation>
@@ -1621,7 +1621,7 @@
 <translation id="225716114209817872">সর্বাধিক</translation>
 <translation id="5642482119439119644">অন্যান্য ডিভাইসে ব্যবহৃত ট্যাব এখানে পেতে, নিজের পরিচয় যাচাই করুন। আপনি যেকোনও সময় সেটিংসে গিয়ে সিঙ্ক করা বন্ধ করতে পারেন। Growser আপনার ইতিহাসের ভিত্তিতে Search ও অন্যান্য পরিষেবা পছন্দমতো সাজিয়ে দিতে পারে।</translation>
 <translation id="22614517036276112">এই ডকুমেন্ট বা আপনার ডিভাইস, সংস্থার কিছু নিরাপত্তা সংক্রান্ত নীতি পূরণ করেনি। সমাধানের জন্য কী করতে হবে তা জানতে আপনার অ্যাডমিনের সাথে যোগাযোগ করুন।</translation>
-<translation id="1829264724820495616">আপনার অফিসের ঠিকানা যোগ করা থাকলে Brave পরিষেবা জুড়ে বিভিন্ন কাজের ক্ষেত্রে আপনি সাহায্য পেতে পারেন, যেমন, আরও প্রাসঙ্গিক সার্চ ফলাফল এবং Brave Maps-এ দিকনির্দেশ পাওয়া। আপনি নিজের <ph name="BEGIN_LINK"/>Brave অ্যাকাউন্ট<ph name="END_LINK"/><ph name="USERNAME"/> থেকে ঠিকানা এডিট করতে বা মুছে ফেলতে পারবেন।</translation>
+<translation id="1829264724820495616">আপনার অফিসের ঠিকানা যোগ করা থাকলে Growser পরিষেবা জুড়ে বিভিন্ন কাজের ক্ষেত্রে আপনি সাহায্য পেতে পারেন, যেমন, আরও প্রাসঙ্গিক সার্চ ফলাফল এবং Growser Maps-এ দিকনির্দেশ পাওয়া। আপনি নিজের <ph name="BEGIN_LINK"/>Growser অ্যাকাউন্ট<ph name="END_LINK"/><ph name="USERNAME"/> থেকে ঠিকানা এডিট করতে বা মুছে ফেলতে পারবেন।</translation>
 <translation id="2262477216570151239">পুনরাবৃত্তির আগের বিলম্ব</translation>
 <translation id="2263371730707937087">স্ক্রিন রিফ্রেশ রেট</translation>
 <translation id="7829329302663082098">আপনার মতামত Growser Cast-এর উন্নতি করতে আমাদের সাহায্য করে এবং আমরা এর জন্য কৃতজ্ঞ।
@@ -1767,7 +1767,7 @@
 <translation id="2373499590298659902">মাউসের কোনও বোতাম প্রেস করে ধরে রাখতে “0” ব্যবহার করুন</translation>
 <translation id="2373666622366160481">কাগজে ফিট করো</translation>
 <translation id="2375406435414127095">আপনার ফোন কানেক্ট করুন</translation>
-<translation id="6612559367203670996">Brave শেয়ার করা ট্যাবের কন্টেন্ট ও URL ব্যবহার করে। নতুন চ্যাটে আপনার বর্তমান ট্যাব শেয়ার করা হয়। আপনি যেকোনও সময় এই সেটিং পরিবর্তন করতে পারবেন।</translation>
+<translation id="6612559367203670996">Growser শেয়ার করা ট্যাবের কন্টেন্ট ও URL ব্যবহার করে। নতুন চ্যাটে আপনার বর্তমান ট্যাব শেয়ার করা হয়। আপনি যেকোনও সময় এই সেটিং পরিবর্তন করতে পারবেন।</translation>
 <translation id="2376056713414548745">জোরে পড়ুন</translation>
 <translation id="2376122016044804363">ক্লিপবোর্ডে কপি করা সম্পর্কিত কনফার্মেশন</translation>
 <translation id="2377667304966270281">হার্ড ফল্ট</translation>
@@ -3334,7 +3334,7 @@
 <translation id="3569614820047645079">'আমার ড্রাইভ'-এ থাকা আপনার ফাইল অটোমেটিক আপনার Chromebook-এ সিঙ্ক করে, তাই ইন্টারনেট কানেকশন ছাড়াই আপনি সেগুলি অ্যাক্সেস করতে পারবেন।</translation>
 <translation id="3569617221227793022">টাইম জোন বর্তমানে <ph name="TIME_ZONE_ENTRY"/>-এ সেট করা আছে। আপনার অ্যাডমিনিস্ট্রেটর এই সেটিং ম্যানেজ করে।</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> নিচে উল্লেখ করা ফাইল এবং ফোল্ডারগুলি দেখতে পারবে</translation>
-<translation id="4062501938325597704">কোনও টাস্ক চলাকালীন Gemini যেসব পেজের কন্টেন্ট ও URL ব্যবহার করে, তা Brave-এর সাথে শেয়ার করা হবে এবং নিরাপত্তার জন্য পর্যালোচনা করা হতে পারে।</translation>
+<translation id="4062501938325597704">কোনও টাস্ক চলাকালীন Gemini যেসব পেজের কন্টেন্ট ও URL ব্যবহার করে, তা Growser-এর সাথে শেয়ার করা হবে এবং নিরাপত্তার জন্য পর্যালোচনা করা হতে পারে।</translation>
 <translation id="3571734092741541777">সেট-আপ করুন</translation>
 <translation id="3575121482199441727">এই সাইটের জন্য অনুমতি দিন</translation>
 <translation id="3575224072358507281">গোপনীয়তা নীতি (measurementlab.net/privacy) অনুযায়ী Measurement Lab-এর জন্য IP অ্যাড্রেস ও নেটওয়ার্ক পরিমাপ করার ফলাফল সংগ্রহ করে</translation>
@@ -5013,7 +5013,7 @@
 <translation id="485480310608090163">আরও সেটিংস এবং অনুমতি</translation>
 <translation id="4857304314344645169">কোনও সমস্যা সম্পর্কে ধাপে ধাপে করা ব্যাখ্যা দেখুন</translation>
 <translation id="1913048435257025864">আগের পৃষ্ঠা সম্পর্কে Growser-কে জিজ্ঞাসা করুন: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">আপনাকে আরও প্রাসঙ্গিক উত্তর দিতে, Brave-এর সাথে আপনার বর্তমান ট্যাবের কন্টেন্ট ও URL শেয়ার করা হয়। আপনি ব্রাউজ করার সময় ট্যাব যোগ করতে বা সরাতে পারবেন।</translation>
+<translation id="228735844055480091">আপনাকে আরও প্রাসঙ্গিক উত্তর দিতে, Growser-এর সাথে আপনার বর্তমান ট্যাবের কন্টেন্ট ও URL শেয়ার করা হয়। আপনি ব্রাউজ করার সময় ট্যাব যোগ করতে বা সরাতে পারবেন।</translation>
 <translation id="485806788160414322">মিডিয়া চালান অথবা পজ করুন</translation>
 <translation id="4858913220355269194">ফ্রিটজ</translation>
 <translation id="4860012864737017059">সাম্প্রতিক ট্যাব</translation>
@@ -5348,7 +5348,7 @@
 <translation id="5112577000029535889">&amp;ডেভেলপার টুল</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{১টি ফাইল সরানো হয়েছে}one{{NUM_OF_FILES}টি ফাইল সরানো হয়েছে}other{{NUM_OF_FILES}টি ফাইল সরানো হয়েছে}}</translation>
 <translation id="511313294362309725">'দ্রুত পেয়ার' ফিচার চালু করুন</translation>
-<translation id="6409962091529734959">Brave অটো ব্রাউজ সম্পর্কে আরও জানুন</translation>
+<translation id="6409962091529734959">Growser অটো ব্রাউজ সম্পর্কে আরও জানুন</translation>
 <translation id="51143538739122961">আপনার নিরাপত্তা কী লিখে সেটিকে স্পর্শ করুন</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">এইরূপে অডিও সংর&amp;ক্ষণ করুন...</translation>
@@ -5391,7 +5391,7 @@
 <translation id="5146235736676876345">নিজের ইচ্ছামতো বেছে নিন</translation>
 <translation id="5146896637028965135">সিস্টেম ভয়েস</translation>
 <translation id="5147113439721488265">সাজেশন</translation>
-<translation id="5897101208018277582">লিঙ্ক পাঠাতে, নিজের পরিচয় যাচাই করান। আপনি দু'টি ডিভাইস থেকে একই Brave অ্যাকাউন্টে সাইন-ইন করে থাকলে লিঙ্ক পাঠাতে পারবেন।</translation>
+<translation id="5897101208018277582">লিঙ্ক পাঠাতে, নিজের পরিচয় যাচাই করান। আপনি দু'টি ডিভাইস থেকে একই Growser অ্যাকাউন্টে সাইন-ইন করে থাকলে লিঙ্ক পাঠাতে পারবেন।</translation>
 <translation id="5148285448107770349">পাসওয়ার্ড অন্তত ৮টি অক্ষরের হতে হবে</translation>
 <translation id="5149602533174716626">ভিডিও ফ্রেম কপি করুন</translation>
 <translation id="5150254825601720210">Netscape সার্টিফিকেট SSL সার্ভার নাম</translation>
@@ -6080,7 +6080,7 @@
 <translation id="5713158217420111469"><ph name="DEVICE"/>-এর সাথে কানেক্ট করা রয়েছে</translation>
 <translation id="5713988532993992900">ইনভার্ট করা</translation>
 <translation id="5714100381896040477">স্ক্রিনের উপরে অ্যানিমেশন সীমিত করুন</translation>
-<translation id="8277434106940718633">Gemini-র সাথে আপনার কথোপকথন বা আপনার Brave Workspace ডেটা পর্যালোচনা করা অথবা জেনারেটিভ AI মডেল উন্নত করতেও তা ব্যবহার করা হবে না। Gemini হল AI এবং এটি ভুল করতে পারে। কিছু কন্টেন্ট সকলের জন্য উপযুক্ত নাও হতে পারে।</translation>
+<translation id="8277434106940718633">Gemini-র সাথে আপনার কথোপকথন বা আপনার Growser Workspace ডেটা পর্যালোচনা করা অথবা জেনারেটিভ AI মডেল উন্নত করতেও তা ব্যবহার করা হবে না। Gemini হল AI এবং এটি ভুল করতে পারে। কিছু কন্টেন্ট সকলের জন্য উপযুক্ত নাও হতে পারে।</translation>
 <translation id="5719854774000914513">সাইটগুলি HID ডিভাইসের সাথে কানেক্ট করার অনুমতি চাইতে পারে</translation>
 <translation id="5720729194423017301">সাইট ও সার্চ ইঞ্জিনের শর্টকাট</translation>
 <translation id="572155275267014074">Android সেটিংস</translation>
@@ -7015,7 +7015,7 @@
 <translation id="6464825623202322042">এই ডিভাইসটি</translation>
 <translation id="6465841119675156448">ইন্টারনেট কানেকশন ছাড়াই</translation>
 <translation id="6466258437571594570">সাইটগুলি যাতে আপনাকে বারবার বিজ্ঞপ্তি পাঠানোর অনুমতি চেয়ে বিরক্ত করতে না পারে সেজন্য তাদের ব্লক করা হয়েছে</translation>
-<translation id="1673835407889847350">পাসওয়ার্ড যোগ করতে এবং আপনার Brave অ্যাকাউন্টের মাধ্যমে সব ডিভাইসে সেগুলি ব্যবহার করতে, নিজের পরিচয় যাচাই করুন</translation>
+<translation id="1673835407889847350">পাসওয়ার্ড যোগ করতে এবং আপনার Growser অ্যাকাউন্টের মাধ্যমে সব ডিভাইসে সেগুলি ব্যবহার করতে, নিজের পরিচয় যাচাই করুন</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> স্ক্যান করুন</translation>
 <translation id="6467304607960172345">ফুলস্ক্রিন ভিডিও অপ্টিমাইজ করুন</translation>
 <translation id="6467377768028664108">তারপরে আপনার <ph name="DEVICE_TYPE"/>:</translation>
@@ -7028,7 +7028,7 @@
 <translation id="6470823736074966819">বিজ্ঞপ্তি মিউট করুন</translation>
 <translation id="6472893788822429178">হোম বোতাম দেখান</translation>
 <translation id="6473315466413288899">কোনও একটি বিকল্প বেছে নিন</translation>
-<translation id="6199773995438617867">Brave Calendar-এ আরও দেখুন</translation>
+<translation id="6199773995438617867">Growser Calendar-এ আরও দেখুন</translation>
 <translation id="6474401088838630457">Gemini-কে এই বিষয়ে আরও জিজ্ঞাসা করুন</translation>
 <translation id="6474498546677193336">ফোল্ডারটির শেয়ারিং বন্ধ করা যাচ্ছে না, কারণ এখন একটি অ্যাপ্লিকেশন এটিকে ব্যবহার করছে। পরবর্তী সময়ে Linux-কে যখন বন্ধ করা হবে, তখনই ফোল্ডারটির শেয়ারিং বন্ধ করা যাবে।</translation>
 <translation id="6474884162850599008">Growser ড্রাইভ অ্যাকাউন্ট ডিসকানেক্ট করুন</translation>
@@ -7211,7 +7211,7 @@
 <translation id="6613231539539868591">অপরিবর্তিত ডেটা</translation>
 <translation id="6613267708691765962">ম্যালওয়্যারের জন্য স্ক্যান করা হচ্ছে...</translation>
 <translation id="6615455863669487791">আমাকে দেখান</translation>
-<translation id="5146630705831894319">অন্যান্য ভাষার ওয়েবসাইট ও PDF-এর জন্য Brave Translate অফার করুন</translation>
+<translation id="5146630705831894319">অন্যান্য ভাষার ওয়েবসাইট ও PDF-এর জন্য Growser Translate অফার করুন</translation>
 <translation id="6618013221808317456">সাইটকে জাভাস্ক্রিপ্ট অপ্টিমাইজেশন ব্যবহার করার অনুমতি দেবেন না</translation>
 <translation id="6618154741503063152">আপলোড করা যাবে না। অ্যাটাচমেন্টের অনুমতি নেই।</translation>
 <translation id="6619058681307408113">লাইন প্রিন্টার ডেমন (LPD)</translation>
@@ -7565,7 +7565,7 @@
 <translation id="6871644448911473373">OCSP প্রতিক্রিয়াকারী: <ph name="LOCATION"/> </translation>
 <translation id="6871860225073478239">ভাষা...</translation>
 <translation id="6873156759937047811">পিন:</translation>
-<translation id="5189979109199910058">এটি চালু করা থাকলে, Brave Translate আপনার পছন্দের ভাষায় সাইট ও PDF অনুবাদ করার সুবিধা অফার করবে। এছাড়াও, এটি অটোমেটিকভাবে সাইট অনুবাদ করতে পারবে।</translation>
+<translation id="5189979109199910058">এটি চালু করা থাকলে, Growser Translate আপনার পছন্দের ভাষায় সাইট ও PDF অনুবাদ করার সুবিধা অফার করবে। এছাড়াও, এটি অটোমেটিকভাবে সাইট অনুবাদ করতে পারবে।</translation>
 <translation id="6873571253135628430">সাইট সংক্রান্ত অনুমতি পরিবর্তন করুন</translation>
 <translation id="6874986444867497677">ইনস্টলেশন করা যায়নি। আবার চেষ্টা করুন অথবা এই উইন্ডো বন্ধ করুন।</translation>
 <translation id="6876155724392614295">সাইকেল</translation>
@@ -7853,7 +7853,7 @@
 <translation id="710224247908684995">কোনও এক্সটেনশন Safe Browsing বন্ধ করে দিয়েছে</translation>
 <translation id="7102832101143475489">অনুরোধের সময় শেষ হয়ে গেছে</translation>
 <translation id="7103944802169726298">পিসি (PC) ও কাস্ট ডিভাইস একই ওয়াই-ফাই নেটওয়ার্কে আছে</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave মেম্বারশিপ</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser মেম্বারশিপ</translation>
 <translation id="7107609441453408294">সব স্পিকারে একই অডিও প্লে করুন</translation>
 <translation id="7108338896283013870">লুকান</translation>
 <translation id="7108419148561505648">সেভ করার আগে কমপক্ষে একটি ফিল্ড পূরণ করুন</translation>
@@ -8224,7 +8224,7 @@
 <translation id="7395774987022469191">সম্পূর্ণ স্ক্রিন</translation>
 <translation id="7396017167185131589">শেয়ার করা ফোল্ডারগুলি এখানে দেখা যাবে</translation>
 <translation id="7396845648024431313">সিস্টেমের প্রারম্ভে <ph name="APP_NAME"/> শুরু হবে এবং এমনকি আপনি অন্য সব <ph name="PRODUCT_NAME"/> উইন্ডো বন্ধ করার পরেও ব্যাকগ্রাউন্ডে চলতে থাকবে৷</translation>
-<translation id="8572914900293297191">Brave AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। কিছু কন্টেন্ট সকলের জন্য উপযুক্ত নাও হতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
+<translation id="8572914900293297191">Growser AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। কিছু কন্টেন্ট সকলের জন্য উপযুক্ত নাও হতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
 <translation id="7399045143794278225">সিঙ্ক করার বিকল্প কাস্টমাইজ করুন</translation>
 <translation id="7399616692258236448">শুধুমাত্র আপনি অনুমতি দেওয়া সাইট ছাড়া সব সাইটের জন্য লোকেশনের অনুরোধ অটোমেটিক ব্লক করা হয়</translation>
 <translation id="7399802613464275309">নিরাপত্তা পরীক্ষা</translation>
@@ -8758,7 +8758,7 @@
 <translation id="7807711621188256451"><ph name="HOST"/> কে সর্বদা আপনার ক্যামেরা অ্যাক্সেস করতে অনুমতি দিন</translation>
 <translation id="7810202088502699111">এই পৃষ্ঠাতে পপ-আপগুলি ব্লক করা হয়েছে৷</translation>
 <translation id="7810367892333449285">আপনার এন্ট্রির ফর্ম্যাট হতে হবে <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ ঠিকানা<ph name="LPA_2"/>$<ph name="LPA_3"/>ঐচ্ছিক মিল থাকা আইডি<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave ওপেন সোর্স প্রোজেক্ট এবং অন্যান্য <ph name="BEGIN_HIGHLIGHT"/>ওপেন সোর্স<ph name="END_HIGHLIGHT"/> সফ্টওয়্যার ব্যবহার করে Brave তৈরি করা সম্ভব হয়েছে।</translation>
+<translation id="5014491767627896944">Growser ওপেন সোর্স প্রোজেক্ট এবং অন্যান্য <ph name="BEGIN_HIGHLIGHT"/>ওপেন সোর্স<ph name="END_HIGHLIGHT"/> সফ্টওয়্যার ব্যবহার করে Growser তৈরি করা সম্ভব হয়েছে।</translation>
 <translation id="7811263553491007091">আবার চেষ্টা করুন অথবা নিচে উপলভ্য আগে তৈরি করা থিমগুলির মধ্যে থেকে বেছে নিন।</translation>
 <translation id="7811926937048662341">এখানে ডানদিকের বোতামে ক্লিক করে “ট্যাবগুলি উল্লম্বভাবে দেখান” বিকল্প বেছে নিন</translation>
 <translation id="7811986034759500329">সিস্টেম সেটিংসে সেট করুন</translation>
@@ -8781,7 +8781,7 @@
 <translation id="7826039927887234077"><ph name="MOOD"/> মুড সহ <ph name="SUBJECT"/>-এর <ph name="INDEX"/>টি সাম্প্রতিক AI থিম।</translation>
 <translation id="7826174860695147464">পুরনো ব্রাউজার সমর্থন (LBS) - ইন্টার্নাল</translation>
 <translation id="7826838152281937785">নিচের ভিউ বন্ধ করুন</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Brave-এর শর্তাবলী<ph name="END_LINK_TERMS"/> এবং <ph name="BEGIN_LINK_PRIVACY"/>Gemini অ্যাপ গোপনীয়তা বিজ্ঞপ্তি<ph name="END_LINK_PRIVACY"/> প্রযোজ্য।</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Growser-এর শর্তাবলী<ph name="END_LINK_TERMS"/> এবং <ph name="BEGIN_LINK_PRIVACY"/>Gemini অ্যাপ গোপনীয়তা বিজ্ঞপ্তি<ph name="END_LINK_PRIVACY"/> প্রযোজ্য।</translation>
 <translation id="7828642077514646543">সমস্যা: সার্টিফিকেট ডিকোড করা যায়নি</translation>
 <translation id="7830276128493844263">সিস্টেম সেটিংস থেকে লোকেশন বন্ধ করে দেওয়া হয়েছে</translation>
 <translation id="7830833461614351956">খোলার জন্য <ph name="CLOUD_PROVIDER"/>-এ <ph name="NUM_OF_FILES"/>টি ফাইল কপি করবেন?</translation>
@@ -9652,7 +9652,7 @@
 <translation id="850399339579925930">অভিধান</translation>
 <translation id="850561044295157831">'আমাকে লিখতে সাহায্য করো' সম্পর্কে আরও জানুন</translation>
 <translation id="8505669004895429027">কম পরিমাণে সেভ করা</translation>
-<translation id="869548515244800202">Brave মেম্বারশিপ</translation>
+<translation id="869548515244800202">Growser মেম্বারশিপ</translation>
 <translation id="8507052544157927817">আন্ডারলাইনের স্টাইল</translation>
 <translation id="8507227974644337342">স্ক্রিনের রেজোলিউশন</translation>
 <translation id="8507443886219296894">এই সাইটের জন্য লুকান</translation>
@@ -9792,7 +9792,7 @@
 <translation id="8619803522055190423">ড্রপ শ্যাডো</translation>
 <translation id="8620206585293032550">বন্ধ ট্যাব দেখা যাবে</translation>
 <translation id="8621979332865976405">আপনার পুরো স্ক্রিন শেয়ার করুন</translation>
-<translation id="6089523089512126744">Brave Search AI মোড ও কানেক্ট করা অ্যাপ</translation>
+<translation id="6089523089512126744">Growser Search AI মোড ও কানেক্ট করা অ্যাপ</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ChromeOS ডিভাইস ও কম্পোনেন্ট সিরিয়াল নম্বর পড়ুন</translation>
 <translation id="862542460444371744">&amp;এক্সটেনশনস</translation>
@@ -11350,17 +11350,17 @@
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Growser-এ Gemini</translation>
 <translation id="1975450474853317621">Growser ব্রাউজারে খুলুন</translation>
 <translation id="8516824290867275572">আপনার অ্যাকাউন্টের কাছে Growser-এ Gemini অ্যাক্সেস করার সুবিধা নেই</translation>
-<translation id="1649234713894562345">Brave ওপেন সোর্স প্রোজেক্ট এবং অন্যান্য <ph name="BEGIN_HIGHLIGHT"/>ওপেন সোর্স<ph name="END_HIGHLIGHT"/> সফ্টওয়্যার ব্যবহার করে Brave তৈরি করা সম্ভব হয়েছে।</translation>
+<translation id="1649234713894562345">Growser ওপেন সোর্স প্রোজেক্ট এবং অন্যান্য <ph name="BEGIN_HIGHLIGHT"/>ওপেন সোর্স<ph name="END_HIGHLIGHT"/> সফ্টওয়্যার ব্যবহার করে Growser তৈরি করা সম্ভব হয়েছে।</translation>
 <translation id="870536819717176711">আপনি Gemini-র সাথে বর্তমান ট্যাব শেয়ার করার বিকল্প বেছে নিলে Growser-এর সাথে ট্যাবের সব কন্টেন্ট, মিডিয়া ও URL শেয়ার করা হয়।</translation>
-<translation id="1130866111814048607">ট্যাব শেয়ার করা হলে, তার পৃষ্ঠার কন্টেন্ট, মিডিয়া ও URL Brave-কে পাঠানো হয় এবং নিরাপত্তা সংক্রান্ত কারণে পর্যালোচনা করা হতে পারে।</translation>
-<translation id="7656790264713095385">প্রথমে, এই ডিভাইসের জন্য Brave অটো ব্রাউজ চালু করুন</translation>
+<translation id="1130866111814048607">ট্যাব শেয়ার করা হলে, তার পৃষ্ঠার কন্টেন্ট, মিডিয়া ও URL Growser-কে পাঠানো হয় এবং নিরাপত্তা সংক্রান্ত কারণে পর্যালোচনা করা হতে পারে।</translation>
+<translation id="7656790264713095385">প্রথমে, এই ডিভাইসের জন্য Growser অটো ব্রাউজ চালু করুন</translation>
 <translation id="8572003230388132401">Gemini Spark এই ডিভাইসে Growser অটোমেটিক ব্রাউজ ব্যবহার করে সাইটের সাথে ইন্টার‍্যাক্ট করতে এবং আপনার হয়ে টাস্ক সম্পূর্ণ করতে পারবে। <ph name="LINK_BEGIN"/>আরও জানুন<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">ডিভাইস চালু থাকলে এবং Growser রান করলে, তবেই Gemini Spark এই ডিভাইসে অটো ব্রাউজ ব্যবহার করতে পারবে।</translation>
 <translation id="1982892581799327835">আপনার Gemini Spark এজেন্টে অ্যাক্সেস আছে এমন যেকোনও ব্যক্তি আপনার Growser ব্রাউজার কন্ট্রোল করতে পারবেন।</translation>
 <translation id="6689939585896001516">Growser-কে আপনার হয়ে ব্রাউজ করতে দিন</translation>
 <translation id="640233545778658570">Gemini in Growser আপনার ট্যাবে কাজ করতে ও আপনি যে টাস্ক দেন সেটি সম্পূর্ণ করতে অটোমেটিক ব্রাউজ ব্যবহার করে। <ph name="LINK_BEGIN"/>আরও জানুন<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Brave অটো ব্রাউজ সম্পর্কে আরও জানুন</translation>
-<translation id="3570112771874223231">কোনও টাস্ক চলাকালীন Gemini যেসব পেজের কন্টেন্ট ও URL ব্যবহার করে, তা Brave-এর সাথে শেয়ার করা হবে এবং নিরাপত্তার জন্য পর্যালোচনা করা হতে পারে।</translation>
+<translation id="2740842679402949230">Growser অটো ব্রাউজ সম্পর্কে আরও জানুন</translation>
+<translation id="3570112771874223231">কোনও টাস্ক চলাকালীন Gemini যেসব পেজের কন্টেন্ট ও URL ব্যবহার করে, তা Growser-এর সাথে শেয়ার করা হবে এবং নিরাপত্তার জন্য পর্যালোচনা করা হতে পারে।</translation>
 <translation id="2314508080153323869">Growser-এ Gemini</translation>
 <translation id="1910632359330857071">ব্রাউজ করার সময় উত্তর, গুরুত্বপূর্ণ তথ্য ও আরও অনেক কিছু পেতে Growser-এ Gemini-র সাহায্যে চ্যাট করুন</translation>
 <translation id="2483218699324586641">Growser-এ Gemini খুলতে <ph name="FOCUS_TOGGLE_HOTKEY"/> ব্যবহার করুন</translation>
@@ -11390,8 +11390,8 @@
     Growser Home অ্যাপ<ph name="END_LINK"/>-এ দেখতে পাচ্ছেন?</translation>
 <translation id="2984923316661218534">Growser Password Manager-এর মাধ্যমে এই ডিভাইসে আপনার পাসকী পান</translation>
 <translation id="2364302372598204515">এটি Growser অ্যাকাউন্ট নয়। Growser-এ আপনার সেভ করা আইটেম অন্য ডিভাইসে উপলভ্য হবে না।</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave মেম্বারশিপ</translation>
-<translation id="850632091665381275">Brave মেম্বারশিপ</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser মেম্বারশিপ</translation>
+<translation id="850632091665381275">Growser মেম্বারশিপ</translation>
 <translation id="6710172959248731469">Growser পরিষেবা সংক্রান্ত সেটিংস</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{১টি আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্য ডিভাইসে ব্যবহার করার জন্য আপনার Growser অ্যাকাউন্টে তা সেভ করুন। এর ফলে, ডুপ্লিকেট কিছু থাকলে তাও মুছে যাবে।}one{{ITEM_COUNT}টি আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্য ডিভাইসে ব্যবহার করার জন্য আপনার Growser অ্যাকাউন্টে তা সেভ করুন। এর ফলে, ডুপ্লিকেট কিছু থাকলে তাও মুছে যাবে।}other{{ITEM_COUNT}টি আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্য ডিভাইসে ব্যবহার করার জন্য আপনার Growser অ্যাকাউন্টে তা সেভ করুন। এর ফলে, ডুপ্লিকেট কিছু থাকলে তাও মুছে যাবে।}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{১টি পাসওয়ার্ড শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্য ডিভাইসে ব্যবহার করার জন্য আপনার Growser অ্যাকাউন্টে তা সেভ করুন। এর ফলে, ডুপ্লিকেট কিছু থাকলে তাও মুছে যাবে।}one{{PASSWORD_COUNT}টি পাসওয়ার্ড শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্য ডিভাইসে ব্যবহার করার জন্য আপনার Growser অ্যাকাউন্টে তা সেভ করুন। এর ফলে, ডুপ্লিকেট কিছু থাকলে তাও মুছে যাবে।}other{{PASSWORD_COUNT}টি পাসওয়ার্ড শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্য ডিভাইসে ব্যবহার করার জন্য আপনার Growser অ্যাকাউন্টে তা সেভ করুন। এর ফলে, ডুপ্লিকেট কিছু থাকলে তাও মুছে যাবে।}}</translation>
@@ -11405,8 +11405,8 @@
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{শুধু ১টি বুকমার্ক ও অন্যান্য আইটেম এই ডিভাইসে সেভ করা হয়েছে। অন্যান্য ডিভাইসে ব্যবহার করতে, আপনার Growser অ্যাকাউন্টে সেগুলিকে সেভ করুন।}one{শুধু {BOOKMARK_COUNT}টি বুকমার্ক ও অন্যান্য আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্যান্য ডিভাইসে ব্যবহার করতে, আপনার Growser অ্যাকাউন্টে সেগুলিকে সেভ করুন।}other{শুধু {BOOKMARK_COUNT}টি বুকমার্ক ও অন্যান্য আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্যান্য ডিভাইসে ব্যবহার করতে, আপনার Growser অ্যাকাউন্টে সেগুলিকে সেভ করুন।}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{১টি আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। অন্য ডিভাইসে এটি ব্যবহার করার জন্য, <ph name="BEGIN_LINK"/>আপনার Growser অ্যাকাউন্টে তা সেভ করুন<ph name="END_LINK"/>।}one{{ITEM_COUNT}টি আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। আপনার অন্যান্য ডিভাইসে সেটি ব্যবহার করতে, <ph name="BEGIN_LINK"/>আপনার Growser অ্যাকাউন্টে তা সেভ করুন<ph name="END_LINK"/>।}other{{ITEM_COUNT}টি আইটেম শুধু এই ডিভাইসে সেভ করা হয়েছে। আপনার অন্যান্য ডিভাইসে সেটি ব্যবহার করতে, <ph name="BEGIN_LINK"/>আপনার Growser অ্যাকাউন্টে তা সেভ করুন<ph name="END_LINK"/>।}}</translation>
 <translation id="8993421601514768334">আপনার Growser অ্যাকাউন্ট ব্যবহার করুন অথবা নতুন একটি তৈরি করুন</translation>
-<translation id="1896353439080510710">Brave AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
-<translation id="7398815534290329738">Brave AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। কিছু কন্টেন্ট সকলের জন্য উপযুক্ত নাও হতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
+<translation id="1896353439080510710">Growser AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
+<translation id="7398815534290329738">Growser AI উন্নত করতে চ্যাট পর্যালোচনা ও ব্যবহার করা হয়। Gemini হল AI এবং এটি ভুল করতে পারে। কিছু কন্টেন্ট সকলের জন্য উপযুক্ত নাও হতে পারে। আপনি <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>নিজের অ্যাক্টিভিটি ম্যানেজ<ph name="END_LINK_MANAGE_ACTIVITY"/> করতে পারবেন, এর মধ্যে আপনার লোকেশনের তথ্যও রয়েছে। <ph name="BEGIN_LINK_LEARN_MORE"/>আপনার পছন্দ সম্পর্কে আরও জানুন<ph name="END_LINK_LEARN_MORE"/>।</translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{আপনার Growser অ্যাকাউন্টে এই এক্সটেনশন সেভ করা আছে এবং এই এক্সটেনশনের সাহায্য শুধু এই ডিভাইসে সেভ করা ডেটা মুছে ফেলা যেতে পারে}one{আপনার Growser অ্যাকাউন্টে এইসব এক্সটেনশন সেভ করা আছে এবং এইসব এক্সটেনশনের সাহায্য শুধু এই ডিভাইসে সেভ করা ডেটা মুছে ফেলা যেতে পারে}other{আপনার Growser অ্যাকাউন্টে এইসব এক্সটেনশন সেভ করা আছে এবং এইসব এক্সটেনশনের সাহায্য শুধু এই ডিভাইসে সেভ করা ডেটা মুছে ফেলা যেতে পারে}}</translation>
 <translation id="3523789730715594198">সেটিংস থেকে আপনি যেকোনও সময় সিঙ্ক করা বন্ধ করতে পারবেন। আপনার ইতিহাসের ভিত্তিতে, সার্চ ও অন্যান্য পরিষেবা পছন্দমতো করে তুলতে Growser এই ডেটা ব্যবহার করতে পারে।</translation>
 <translation id="8231595707224857577">আপনার সংস্থা Growser অ্যাকাউন্টে ট্যাব সেভ করার সুবিধা বন্ধ করে দিয়েছে</translation>
@@ -11444,7 +11444,7 @@
 <translation id="1024884937839269099">আপনি সাইন-ইন করে থাকলে <ph name="BEGIN_LINK_GOOGLE"/>অন্যান্য অ্যাক্টিভিটি<ph name="END_LINK_GOOGLE"/> আপনার Growser অ্যাকাউন্টে হয়ত সেভ হয়ে যাবে। আপনি যেকোনও সময় সেগুলি মুছে দিতে পারেন।</translation>
 <translation id="6533315466883598769">Google Translate ব্যবহার করুন</translation>
 <translation id="6010651352520077187">চালু করা থাকলে, Google Translate আপনার পছন্দের ভাষায় সাইট অনুবাদ করার সুবিধা প্রদান করবে। এছাড়াও, অটোমেটিক এটি সাইট অনুবাদ করতে পারে।</translation>
-<translation id="6873499199714317035">এটি চালু করা থাকলে, Brave Translate আপনার পছন্দের ভাষায় সাইট ও PDF অনুবাদ করার সুবিধা অফার করবে। এছাড়াও, এটি অটোমেটিকভাবে সাইট অনুবাদ করতে পারবে।</translation>
+<translation id="6873499199714317035">এটি চালু করা থাকলে, Growser Translate আপনার পছন্দের ভাষায় সাইট ও PDF অনুবাদ করার সুবিধা অফার করবে। এছাড়াও, এটি অটোমেটিকভাবে সাইট অনুবাদ করতে পারবে।</translation>
 <translation id="5911030830365207728">Google Translate</translation>
 <translation id="7458168200501453431">Growser সার্চ-এ যে বানান পরীক্ষা করার টুল ব্যবহার করা হয় সেটিই ব্যবহার করে। আপনি ব্রাউজারে যে টেক্সট লেখেন, সেটি Growser-এ পাঠানো হয়।</translation>
 <translation id="8972513834460200407">Growser সার্ভারগুলি থেকে ডাউনলোডগুলিকে ফায়ারওয়াল ব্লক করছে না তা নিশ্চিত করতে অনুগ্রহ করে আপনার নেটওয়ার্ক অ্যাডমিনিস্ট্রেটরের মাধ্যমে পরীক্ষা করুন৷</translation>
@@ -11490,7 +11490,7 @@
 <translation id="3293574207873361017">আপনার Growser অ্যাকাউন্ট ম্যানেজ করুন</translation>
 <translation id="6901130673208235020">আপনি ব্রাউজিং ইতিহাস সার্চ করলে আপনার সার্চ কোয়েরি, মিলে যাওয়া সেরা ফলাফলের পৃষ্ঠার কন্টেন্ট এবং তৈরি হওয়া মডেল আউটপুট Growser-এ পাঠানো হয়</translation>
 <translation id="3178434360326457238">সাইট ব্রাউজ করার সময় সেটির পৃষ্ঠার কন্টেন্ট এনক্রিপ্ট করে আপনার ডিভাইসে সেভ করা হয়। এটি Growser-এর পারফর্ম্যান্সের উপর প্রভাব ফেলতে পারে</translation>
-<translation id="8622145666696249878">Brave Search AI মোড ও কানেক্ট করা অ্যাপ</translation>
+<translation id="8622145666696249878">Growser Search AI মোড ও কানেক্ট করা অ্যাপ</translation>
 <translation id="2760679829473121490">Growser-এর ফিচার ও পরামর্শ সম্পর্কে সিস্টেম বিজ্ঞপ্তি দেখুন</translation>
 <translation id="6713316345564743478">চুরি হয়ে যাওয়া পাসওয়ার্ড চেক করতে, নিজের Growser অ্যাকাউন্টে সাইন-ইন করুন</translation>
 <translation id="1342886103232377846">চুরি হয়ে যাওয়া পাসওয়ার্ড চেক করতে, Growser Password Manager-এ যান</translation>
@@ -11553,7 +11553,7 @@
 <translation id="1095879482467973146">ওয়েবে Growser Password Manager</translation>
 <translation id="1368798504801939187"><ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/>-এ সাইন-ইন করে আপনার পাসওয়ার্ড দেখুন। এমনকি Growser বা Android ব্যবহার না করলেও</translation>
 <translation id="829923460755755423">Growser Password Manager-এ শর্টকাট যোগ করুন</translation>
-<translation id="7244677273667272006">পাসওয়ার্ড যোগ করতে এবং আপনার Brave অ্যাকাউন্টের মাধ্যমে সব ডিভাইসে সেগুলি ব্যবহার করতে, নিজের পরিচয় যাচাই করুন</translation>
+<translation id="7244677273667272006">পাসওয়ার্ড যোগ করতে এবং আপনার Growser অ্যাকাউন্টের মাধ্যমে সব ডিভাইসে সেগুলি ব্যবহার করতে, নিজের পরিচয় যাচাই করুন</translation>
 <translation id="8189517459248805166">এই ডিভাইসে এবং আপনার Growser অ্যাকাউন্টে <ph name="WEBSITE"/>-এর পাসওয়ার্ড সেভ করা আছে। আপনি কোনটা মুছে দিতে চান?</translation>
 <translation id="9101265711096405922">আপনার Growser অ্যাকাউন্ট থেকে</translation>
 <translation id="927421426408921503">আপনার Growser অ্যাকাউন্টে সেভ করা পাসওয়ার্ডগুলি সরাবেন?</translation>
@@ -11665,7 +11665,7 @@
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         আপনি কার্ড মেনু থেকে সেটিংস ম্যানেজ করতে বা 'Growser কাস্টমাইজ করুন' থেকে আরও বিকল্প দেখতে পারবেন।</translation>
-<translation id="6474021817475285003">Brave Calendar-এ আরও দেখুন</translation>
+<translation id="6474021817475285003">Growser Calendar-এ আরও দেখুন</translation>
 <translation id="9066394310994446814">এর আগে Growser-এর বিভিন্ন পরিষেবা ব্যবহার করার সময় আপনার অ্যাক্টিভিটির উপর ভিত্তি করে এই আইটেমটি দেখানো হচ্ছে। <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> থেকে আপনি ডেটা দেখতে, মুছে দিতে ও আপনার সেটিংস পরিবর্তন করতে পারেন।
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11696,7 +11696,7 @@
 <translation id="6868193750403948178">Growser কাস্টমাইজ করুন</translation>
 <translation id="5009064339929592579">আপনার Growser অ্যাকাউন্টের কোনও ফোল্ডারে সেভ করবেন?</translation>
 <translation id="7400528739136719497">কিছু Growser Voice এই মুহূর্তে উপলভ্য নাও হতে পারে</translation>
-<translation id="4857677595331912231">আপনাকে আরও প্রাসঙ্গিক উত্তর দিতে, Brave-এর সাথে আপনার বর্তমান ট্যাবের কন্টেন্ট ও URL শেয়ার করা হয়। আপনি ব্রাউজ করার সময় ট্যাব যোগ করতে বা সরাতে পারবেন।</translation>
+<translation id="4857677595331912231">আপনাকে আরও প্রাসঙ্গিক উত্তর দিতে, Growser-এর সাথে আপনার বর্তমান ট্যাবের কন্টেন্ট ও URL শেয়ার করা হয়। আপনি ব্রাউজ করার সময় ট্যাব যোগ করতে বা সরাতে পারবেন।</translation>
 <translation id="5639212636098910819">Growser থেকে যান</translation>
 <translation id="3252169590975855820">আপনি Growser Password Manager-এ এটি অ্যাক্সেস করতে পারবেন</translation>
 <translation id="3843323136102787632">এই QR কোডের সাহায্যে Growser ডাউনলোড করুন এবং আপনর Growser অ্যাকাউন্টে সাইন-ইন করুন।</translation>
@@ -11745,7 +11745,7 @@
 <translation id="1162630940779651724">এই ট্যাবটিকে অন্য ডিভাইসে পাঠাতে, উভয় ডিভাইসেই Growser-এ সাইন-ইন করুন</translation>
 <translation id="5388608738812110907">এই ট্যাবটিকে অন্য ডিভাইসে পাঠাতে, সেখানে Growser-এ সাইন-ইন করুন</translation>
 <translation id="4007679133627124999">ডিভাইসদুটির মধ্যে লিঙ্ক পাঠাতে, দুটি ডিভাইস একই Growser অ্যাকাউন্টে সাইন-ইন করা আছে কিনা তা ভালোভাবে দেখে নিন।</translation>
-<translation id="2377999415409519333">লিঙ্ক পাঠাতে, নিজের পরিচয় যাচাই করান। আপনি দু'টি ডিভাইস থেকে একই Brave অ্যাকাউন্টে সাইন-ইন করে থাকলে লিঙ্ক পাঠাতে পারবেন।</translation>
+<translation id="2377999415409519333">লিঙ্ক পাঠাতে, নিজের পরিচয় যাচাই করান। আপনি দু'টি ডিভাইস থেকে একই Growser অ্যাকাউন্টে সাইন-ইন করে থাকলে লিঙ্ক পাঠাতে পারবেন।</translation>
 <translation id="4986706507552097681">সেটিংসে কী সিঙ্ক করা হবে তা আপনি সবসময় বেছে নিতে পারেন। আপনার ইতিহাসের উপরে ভিত্তি করে, সার্চ ও অন্যান্য পরিষেবা পছন্দমতো করে তুলতে Growser এই ডেটা ব্যবহার করতে পারে।</translation>
 <translation id="8002662358897231821">আপনার সব ডিভাইসে আপনার বুকমার্ক, ইতিহাস এবং অন্যান্য সেটিংস পেতে সাইন-ইন করুন। এছাড়াও আপনি অটোমেটিক আপনার Growser পরিষেবায় সাইন-ইন করবেন।</translation>
 <translation id="3128296144259620504">Growser, অটোমেটিক টেস্ট সফ্টওয়্যার দ্বারা নিয়ন্ত্রিত হচ্ছে</translation>

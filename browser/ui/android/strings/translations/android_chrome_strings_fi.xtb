@@ -562,7 +562,7 @@ Salattua dataa voi lukea vain tunnuslauseen avulla. Tunnuslausetta ei lähetetä
 <translation id="3384347053049321195">Jaa kuva</translation>
 <translation id="3387650086002190359">Tiedoston <ph name="FILE_NAME"/> lataus epäonnistui tiedostojärjestelmävirheen vuoksi.</translation>
 <translation id="5654361895804243820">Voit ylläpitää ikkunoita Braven ikkunoiden hallinnassa</translation>
-<translation id="4302350545547675750">Hallinnoi Brave Salasanoissa</translation>
+<translation id="4302350545547675750">Hallinnoi Growser Salasanoissa</translation>
 <translation id="3417835166382867856">Hae välilehtiä</translation>
 <translation id="3430670036890315772">Jos laitat profiilin lukituksen pois päältä, tallennetut tiedot poistetaan</translation>
 <translation id="4114256890962999877">Jos haluat säilyttää pääsyn salasanoihin, vie ne nyt, päivitä Google Play Palvelut, ja siirrä ne sitten takaisin Growser Salasanoihin. <ph name="BEGIN_LINK"/>Tutustu tarkkoihin ohjeisiin<ph name="END_LINK"/>.</translation>
@@ -970,7 +970,7 @@ Growser-tililläsi voi olla muita selaushistoriatietoja, kuten hakuja ja toimint
 <translation id="509429900233858213">Tapahtui virhe.</translation>
 <translation id="5096775069898886423">Saat varoituksen ennen sivuston avaamista, jos se ei tue turvallista yhteyttä</translation>
 <translation id="510275257476243843">1 tunti jäljellä</translation>
-<translation id="1006701764546698765">Muun Brave-datan ylläpito</translation>
+<translation id="1006701764546698765">Muun Growser-datan ylläpito</translation>
 <translation id="5114895953710637392">Sovellussuodatintaulukko on suljettu.</translation>
 <translation id="5115811374190515607">kohde: <ph name="PRODUCT_NAME"/></translation>
 <translation id="7143053178237996319">Voit käyttää Bravea aina, kun napautat linkkejä viesteissä, dokumenteissa tai muissa sovelluksissa</translation>
@@ -1020,7 +1020,7 @@ Growser-tililläsi voi olla muita selaushistoriatietoja, kuten hakuja ja toimint
 <translation id="5316947901395241499">Järjestelmänvalvoja on laittanut salasanojen tallennuksen pois päältä</translation>
 <translation id="5317780077021120954">Tallenna</translation>
 <translation id="989239400026154074">Growser suosittelee Bravea</translation>
-<translation id="2334093076041322971">Ylläpidä Brave-tilillä</translation>
+<translation id="2334093076041322971">Ylläpidä Growser-tilillä</translation>
 <translation id="5326246328175179736">Et voi kirjautua sisään tällä tilillä</translation>
 <translation id="5327248766486351172">Nimi</translation>
 <translation id="5328542107300944283">Käytä tämän kanssa: <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1410,7 +1410,7 @@ Jotkin verkkosivustot voivat vastata tähän pyyntöön esimerkiksi näyttämäl
 <translation id="6885933993535178919">{NUM_SITES,plural, =1{1 sivuston tilaus peruttu}other{# sivuston tilaus peruttu}}</translation>
 <translation id="6886500155621657325">{ITEMS_COUNT,plural, =1{1 salasana}other{# salasanaa}}</translation>
 <translation id="667636428974305054">Kun olet kirjautunut ulos, Growser-tilisi kirjanmerkit, salasanat ja muut tiedot poistetaan tältä laitteelta.</translation>
-<translation id="5241784838196645561">Jos haluat käyttää tätä laajennusta käyttäjänä , kirjaudu sisään Braveen. Voit myös käyttää ja tallentaa esimerkiksi salasanoja Brave-tililläsi.</translation>
+<translation id="5241784838196645561">Jos haluat käyttää tätä laajennusta käyttäjänä , kirjaudu sisään Braveen. Voit myös käyttää ja tallentaa esimerkiksi salasanoja Growser-tililläsi.</translation>
 <translation id="6896758677409633944">Kopioi</translation>
 <translation id="3677019108032076044">Salaa kaikki Growser-tilisi Growser-data omalla tunnuslauseella</translation>
 <translation id="6900532703269623216">Parannettu suojaus</translation>
@@ -2224,9 +2224,9 @@ Jos haluat muuttaa tätä asetusta, <ph name="BEGIN_LINK"/>poista tilin Growser-
 <translation id="7825734902504073137">Valitut tiedot on poistettu Bravesta ja synkronoiduilta laitteilta.
 
 Growser-tililläsi voi olla muita selaushistoriatietoja, kuten hakuja ja toimintaa muista Growser-palveluista. Voit katsella tietoja osoitteessa <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
-<translation id="5105442806410269908">Muun Brave-datan ylläpito</translation>
-<translation id="3410151451624226773">Hallinnoi Brave Salasanoissa</translation>
-<translation id="5224107321793121921">Ylläpidä Brave-tilillä</translation>
+<translation id="5105442806410269908">Muun Growser-datan ylläpito</translation>
+<translation id="3410151451624226773">Hallinnoi Growser Salasanoissa</translation>
+<translation id="5224107321793121921">Ylläpidä Growser-tilillä</translation>
 <translation id="7494463409439554205">Avaa koko Growser-historia</translation>
 <translation id="4793864227076242107">Osa historiastasi ei ehkä näy täällä. Avaa koko Growser-historia, jos haluat nähdä sen kokonaan.</translation>
 <translation id="1133540958407542175">Osa historiastasi ei ehkä näy täällä. Avaa koko Growser-historia, jos haluat nähdä sen kokonaan. Growser-tililläsi voi myös olla muita selaushistoriatietoja osoitteessa <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
@@ -2372,7 +2372,7 @@ Jos haluat muuttaa tätä asetusta, <ph name="BEGIN_LINK"/>poista tilin Growser-
 <translation id="6191474532784243888">Kirjaudu tälle sivustolle ja Braveen, niin voit käyttää esimerkiksi kirjanmerkkejä laitteelta (<ph name="DEVICE_TYPE"/>)</translation>
 <translation id="5674288757856435579">Kirjaudu tälle sivustolle ja Braveen, niin voit käyttää esimerkiksi salasanoja laitteelta (<ph name="DEVICE_TYPE"/>)</translation>
 <translation id="2152295677712126834">Laajennus "<ph name="EXTENSION_NAME"/>" haluaa, että kirjaudut Braveen</translation>
-<translation id="7511412857399434551">Jos haluat käyttää tätä laajennusta käyttäjänä , kirjaudu sisään Braveen. Voit myös käyttää ja tallentaa esimerkiksi salasanoja Brave-tililläsi.</translation>
+<translation id="7511412857399434551">Jos haluat käyttää tätä laajennusta käyttäjänä , kirjaudu sisään Braveen. Voit myös käyttää ja tallentaa esimerkiksi salasanoja Growser-tililläsi.</translation>
 <translation id="9082932588344912693">Oma Growser kaikkialla</translation>
 <translation id="7182454109284732832">Kirjaudu sisään Bravee tilillä <ph name="EMAIL"/>, niin voit käyttää salasanojasi ja muita tietoja kaikilla laitteillasi</translation>
 <translation id="5785325624181446291">Kirjaudu sisään Braveen, niin voit käyttää salasanojasi ja muita tietoja kaikilla laitteillasi</translation>

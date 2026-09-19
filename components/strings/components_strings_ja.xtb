@@ -194,7 +194,7 @@
 <translation id="132301787627749051">クリップボードにある画像を検索します</translation>
 <translation id="1323433172918577554">もっと見る</translation>
 <translation id="1330449323196174374">左観音折り</translation>
-<translation id="2753620827734134329">Brave ウォレットに Redress 番号を安全に保存</translation>
+<translation id="2753620827734134329">Growser ウォレットに Redress 番号を安全に保存</translation>
 <translation id="133173645041092770">ウェブサイトを閉じる</translation>
 <translation id="4274264486214599895">Growser Dino ゲームをプレイ</translation>
 <translation id="1333989956347591814">ただし、次の相手に<ph name="BEGIN_EMPHASIS"/>あなたのアクティビティが知られる<ph name="END_EMPHASIS"/>可能性はあります。
@@ -518,7 +518,7 @@
 <translation id="1871284979644508959">必須フィールド</translation>
 <translation id="1871739799120352748">高価格</translation>
 <translation id="1874224422119691492">パスワード入力で画面ロックを使用するかどうかは、<ph name="SETTINGS"/> で変更できます</translation>
-<translation id="8768609471898592384"><ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/> の Brave に送信しました</translation>
+<translation id="8768609471898592384"><ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/> の Growser に送信しました</translation>
 <translation id="1875025161375567525">フォトトレイ</translation>
 <translation id="85321348617848915">Growser フォーム</translation>
 <translation id="1876399092304384674">日付別</translation>
@@ -542,7 +542,7 @@
 <translation id="192020519938775529">{COUNT,plural, =0{なし}=1{1 件のサイト}other{# 件のサイト}}</translation>
 <translation id="192095259937375524">[このタブを共有] ボタンです。実行すると、リンクの共有、QR コードの作成、キャストなどを行ってこのタブを共有できます</translation>
 <translation id="1924727005275031552">新</translation>
-<translation id="4527827173940627753">Brave は、リクエストの内容や、候補を採用または無視したときの動作など、この機能の利用状況を記録します</translation>
+<translation id="4527827173940627753">Growser は、リクエストの内容や、候補を採用または無視したときの動作など、この機能の利用状況を記録します</translation>
 <translation id="1932098463447129402">開始時刻</translation>
 <translation id="1935353813610900265">AI を活用した履歴検索に関するフィードバックを送信</translation>
 <translation id="1935995810530254458">このままコピー</translation>
@@ -596,7 +596,7 @@
 <translation id="2027465737841872819">プラスチック</translation>
 <translation id="2027707238798802149">使用できないカード</translation>
 <translation id="2032962459168915086"><ph name="BEGIN_LINK"/>プロキシとファイアウォールを確認する<ph name="END_LINK"/></translation>
-<translation id="1211671941710012208">この Brave インスタンスは、手動で設定されたコマンドライン フラグを使用して実行されています。コマンドライン フラグは随時変更される可能性があり、サポート対象外であることに注意してください。</translation>
+<translation id="1211671941710012208">この Growser インスタンスは、手動で設定されたコマンドライン フラグを使用して実行されています。コマンドライン フラグは随時変更される可能性があり、サポート対象外であることに注意してください。</translation>
 <translation id="2033900728810589426"><ph name="DEFAULT_SEARCH_PROVIDER_KEYWORD_POLICY_NAME"/> で定義されたデフォルトの検索プロバイダのキーワードと同じショートカットを指定することはできません: <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2034971124472263449">このまま保存</translation>
 <translation id="2036514476578229158">このサイトを開いてもよいかの問い合わせを送信しました。保護者の方は、ファミリー リンクで返信できます。</translation>
@@ -862,7 +862,7 @@
 <translation id="2469153820345007638">1～N の順</translation>
 <translation id="24699311393038040">紙（コーティング）</translation>
 <translation id="2471632709106952369">比較表</translation>
-<translation id="768574016157037999">Brave ウォレットに Known Traveler 番号を安全に保存</translation>
+<translation id="768574016157037999">Growser ウォレットに Known Traveler 番号を安全に保存</translation>
 <translation id="50589553892093838">その他の Growser データ</translation>
 <translation id="247903268499247848">モーション センサーと光センサーの使用を許可しませんでした</translation>
 <translation id="2479148705183875116">設定に移動</translation>
@@ -1087,7 +1087,7 @@
 <translation id="2905107382358353958">新しいお支払い設定に関するアラート</translation>
 <translation id="2909946352844186028">ネットワークの変更が検出されました。</translation>
 <translation id="2910062169995917863">セッションがタイムアウトしました</translation>
-<translation id="7085506453142803285">Brave で保存した情報には Brave ウォレットの設定が適用されます</translation>
+<translation id="7085506453142803285">Growser で保存した情報には Growser ウォレットの設定が適用されます</translation>
 <translation id="2911973620368911614">ジョブ管理ユーザー ID</translation>
 <translation id="2915068235268646559"><ph name="CRASH_TIME"/> のクラッシュ</translation>
 <translation id="2916038427272391327">他のプログラムを終了する</translation>
@@ -1262,7 +1262,7 @@
 <translation id="3207830513221832868"><ph name="BLOCKED_URL"/> には成人向けコンテンツが含まれている可能性があります</translation>
 <translation id="3207960819495026254">ブックマークしました</translation>
 <translation id="3209034400446768650">このページでは料金が請求される可能性があります</translation>
-<translation id="809694630565139611">リクエスト、ページのタイトル、URL は Brave に送信され、高精度の自動入力の改善に向けて確認される場合があります</translation>
+<translation id="809694630565139611">リクエスト、ページのタイトル、URL は Growser に送信され、高精度の自動入力の改善に向けて確認される場合があります</translation>
 <translation id="3212468046572043669">ダウンロードを開始しました。表示するには、上部からドラッグして [戻る] ボタンをタップします</translation>
 <translation id="3212581601480735796"><ph name="HOSTNAME"/> でのアクティビティは監視されています</translation>
 <translation id="3215092763954878852">WebAuthn を使用できませんでした</translation>
@@ -1309,7 +1309,7 @@
 <translation id="7460223968433527020">管理者は、ユーザーのプロフィールやブラウザをリモートで変更したり、レポートを通じてブラウザに関する情報を分析したり、その他の必要なタスクを行ったりすることができます。このデバイス上のアクティビティは、Growser の外部でも管理されている可能性があります。<ph name="BEGIN_LINK"/>詳細<ph name="END_LINK"/></translation>
 <translation id="3273757719652748628">[IBAN を保存] が画面全体に表示されています。</translation>
 <translation id="327455571215090823">プライバシーを保護してスマートに自動入力</translation>
-<translation id="5506816339792547413">Brave ウォレットでパスポートを安全に更新</translation>
+<translation id="5506816339792547413">Growser ウォレットでパスポートを安全に更新</translation>
 <translation id="3281350579597955952">{0,plural, =1{管理者のポリシー設定では、このファイルを <ph name="DESTINATION_NAME"/> で開くことは推奨されていません}other{管理者のポリシー設定では、これらのファイルを <ph name="DESTINATION_NAME"/> で開くことは推奨されていません}}</translation>
 <translation id="3282085321714087552">あなたの組織（<ph name="ENROLLMENT_DOMAIN"/>）は次のウェブサイトに設定やポリシーなどの情報を送信するよう設定しています。</translation>
 <translation id="3286372614333682499">縦向き</translation>
@@ -1318,7 +1318,7 @@
 <translation id="3293642807462928945"><ph name="POLICY_NAME"/> ポリシーの詳細</translation>
 <translation id="5894665462526421022">Growser の設定でパスワードを表示、管理します</translation>
 <translation id="3299098170013242198">パスワード入力で Windows Hello が有効になっています</translation>
-<translation id="3183696044082232280">組織のポリシーにより、管理対象の Brave コンテキスト外にコンテンツを貼り付けられませんでした</translation>
+<translation id="3183696044082232280">組織のポリシーにより、管理対象の Growser コンテキスト外にコンテンツを貼り付けられませんでした</translation>
 <translation id="3299720788264079132"><ph name="FEATURE_NAME"/> の使用中にエラーが発生しました</translation>
 <translation id="3303176609391916566">30x42 インチ</translation>
 <translation id="3303855915957856445">一致する結果は見つかりませんでした</translation>
@@ -1584,7 +1584,7 @@
 <translation id="3769584711865378220"><ph name="URL"/> が位置情報へのアクセスを「おおよそ」から「正確」に変更しようとしています</translation>
 <translation id="3772211998634047851">紙（ボンド）</translation>
 <translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/> です。Tab キー、Enter キーの順に押すと、Growser Keep で新しいメモをすばやく作成します</translation>
-<translation id="5647245195700278791">Pix アカウントは <ph name="ACCOUNT_EMAIL"/> にリンクされます。Pix コードの検出をオフにするには、<ph name="BEGIN_LINK1"/>Brave の設定<ph name="END_LINK1"/>に移動してください</translation>
+<translation id="5647245195700278791">Pix アカウントは <ph name="ACCOUNT_EMAIL"/> にリンクされます。Pix コードの検出をオフにするには、<ph name="BEGIN_LINK1"/>Growser の設定<ph name="END_LINK1"/>に移動してください</translation>
 <translation id="3780694243617746492">排紙トレイ</translation>
 <translation id="3783418713923659662">Mastercard</translation>
 <translation id="3784372983762739446">Bluetoothデバイス</translation>
@@ -1850,7 +1850,7 @@
 <translation id="4231448684371260244">8x13 インチ</translation>
 <translation id="279016548542240532">Growser でアプリを切り替えずに Pix でお支払い</translation>
 <translation id="4238607350028440048">面接の練習がしたいので、採用担当者になったつもりで質問して</translation>
-<translation id="3325641703531153643">Brave ウォレットに運転免許証を安全に保存</translation>
+<translation id="3325641703531153643">Growser ウォレットに運転免許証を安全に保存</translation>
 <translation id="4239799716689808527">ラベル</translation>
 <translation id="424063167283213501">Known Traveler 番号を保存</translation>
 <translation id="4241830393007970744">アクセスしようとしたサイトでは、攻撃者がユーザーを騙してソフトウェアをインストールさせたり、パスワード、電話番号、クレジット カード番号などを開示させたりする可能性があります。</translation>
@@ -1961,7 +1961,7 @@
 <translation id="5221858344642681996">セキュリティを維持するため、Growser でのパスワードの再利用は組織で禁止されています。Growser のパスワードは、ユーザーのプライバシーを保護するために暗号化されています。</translation>
 <translation id="4409271659088619928">検索エンジンは <ph name="DSE"/> に設定されています。検索履歴を削除する場合は、検索エンジンの手順をご確認ください（該当する場合）。</translation>
 <translation id="4409556632583862731">新しいスレッド</translation>
-<translation id="4235960211211581927">Brave ウォレットで ID カードを安全に更新</translation>
+<translation id="4235960211211581927">Growser ウォレットで ID カードを安全に更新</translation>
 <translation id="4412074349188076601">この構成はインストール可能と指定されていますが、このアーキテクチャのイメージが提供されていないため、インストールできません。</translation>
 <translation id="4412377069090572315">レビュー</translation>
 <translation id="4414515549596849729">Cookie とサイトデータ</translation>
@@ -2173,7 +2173,7 @@
 <translation id="4807098396393229769">カード名義人（半角英文字）</translation>
 <translation id="4809079943450490359">デバイス管理者からの指示:</translation>
 <translation id="4811450222531576619">ソースとトピックの詳細</translation>
-<translation id="1177020771645812087">Brave ウォレットに車両情報を安全に保存</translation>
+<translation id="1177020771645812087">Growser ウォレットに車両情報を安全に保存</translation>
 <translation id="4811918461974803225">Google Pay、Affirm のロゴ</translation>
 <translation id="4813512666221746211">ネットワーク エラー</translation>
 <translation id="4814114628197290459">IBAN の削除</translation>
@@ -2310,7 +2310,7 @@
 <translation id="5026121202864677765">カバーレターを作成して</translation>
 <translation id="5030338702439866405">発行元</translation>
 <translation id="503069730517007720">「<ph name="SOFTWARE_NAME"/>」のルート証明書が必要ですが、インストールされていません。IT 管理者に、「<ph name="SOFTWARE_NAME"/>」の設定手順を確認したうえでこの問題を修正するよう依頼してください。<ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="7106879493637631619">Brave ウォレットに KTN を安全に保存</translation>
+<translation id="7106879493637631619">Growser ウォレットに KTN を安全に保存</translation>
 <translation id="503498442187459473"><ph name="HOST"/> から、カメラとマイクの使用許可を求められています</translation>
 <translation id="503574301575803523">SRA3</translation>
 <translation id="5039762155821394373">フォントサイズ</translation>
@@ -2674,7 +2674,7 @@
 <translation id="5635478143789726479">販売者の利用規約</translation>
 <translation id="5640474731385449758">拡張機能「<ph name="EXTENSION_NAME"/>」が <ph name="HANDLER_HOSTNAME"/> 経由で <ph name="ORIGIN"/> の <ph name="PROTOCOL"/> リンクを開くことを求めています</translation>
 <translation id="5642508497713047">CRL の署名者</translation>
-<translation id="1058971715947037197"><ph name="DEVICE_NAME"/> の Brave に送信しました</translation>
+<translation id="1058971715947037197"><ph name="DEVICE_NAME"/> の Growser に送信しました</translation>
 <translation id="5644090287519800334">1 面の画像の X 軸移動</translation>
 <translation id="5644128326840674462">プロモーション バナー</translation>
 <translation id="5645132789250840550">プラスチック（半光沢）</translation>
@@ -2682,7 +2682,7 @@
 <translation id="5648166631817621825">過去 7 日間</translation>
 <translation id="5649053991847567735">自動ダウンロード</translation>
 <translation id="5651323159439184939">トラクター フィード</translation>
-<translation id="5987316528511737389">Brave ウォレットで ID カードを安全に更新</translation>
+<translation id="5987316528511737389">Growser ウォレットで ID カードを安全に更新</translation>
 <translation id="5654927323611874862">アップロード済みのクラッシュ レポート ID:</translation>
 <translation id="5654965123204121933">URL に必須の置換文字列 <ph name="SEARCH_TERMS_REPLACEMENT"/> が含まれていません: <ph name="SEARCH_URL"/></translation>
 <translation id="5659593005791499971">メール</translation>
@@ -2710,7 +2710,7 @@
 <translation id="5715150588940290235">保存済みのセキュリティ コードを削除しますか？</translation>
 <translation id="5715918316982363436">このデバイスの <ph name="WINDOW_COUNT"/> 個のウィンドウの <ph name="TAB_COUNT"/> 個のタブ</translation>
 <translation id="5716325061445053985">スマートフォンでタブを開くにはタップしてください</translation>
-<translation id="5576354004856163244">オンライン決済の際、カード情報が自動的に入力されます。カード情報は Brave ウォレットに安全に保存されます。</translation>
+<translation id="5576354004856163244">オンライン決済の際、カード情報が自動的に入力されます。カード情報は Growser ウォレットに安全に保存されます。</translation>
 <translation id="5718326209176373202">テキスト アノテーションを追加</translation>
 <translation id="5718601519531438273">パスポートや運転免許証などの情報が含まれます</translation>
 <translation id="5720705177508910913">現在のユーザー</translation>
@@ -2795,7 +2795,7 @@
 <translation id="5866898949289125849">デベロッパー ツール ページを表示しています</translation>
 <translation id="5869405914158311789">このサイトにアクセスできません</translation>
 <translation id="5869522115854928033">保存したパスワード</translation>
-<translation id="1025941152813277982">Brave ウォレットで KTN を安全に更新</translation>
+<translation id="1025941152813277982">Growser ウォレットで KTN を安全に更新</translation>
 <translation id="5872215789867188990">「<ph name="GROUP_TITLE"/>」タブグループはご利用いただけなくなりました</translation>
 <translation id="5872692522325383488">IBAN を保存しました</translation>
 <translation id="5879989559903563723">ゲストモードで許可しないサイト</translation>
@@ -3124,7 +3124,7 @@
 <translation id="6412543105195503444">保護者の承認ダイアログ</translation>
 <translation id="6416877227920300343">EDP</translation>
 <translation id="6418199314628742460">ビジネスや個人の重要なデータは外部に保存してください。</translation>
-<translation id="4561848316196784217">Brave ウォレットで車両情報を安全に更新</translation>
+<translation id="4561848316196784217">Growser ウォレットで車両情報を安全に更新</translation>
 <translation id="6425092077175753609">マテリアル</translation>
 <translation id="6427730057873428458">観音折り</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
@@ -3448,7 +3448,7 @@
 <translation id="7011763495818914549">ID カード</translation>
 <translation id="7012363358306927923">中国銀聯</translation>
 <translation id="7013835112918108252">マウスのロックと使用を要求できます</translation>
-<translation id="2871736177221289934">Brave は、リクエストの内容や、候補を採用または無視したときの動作など、この機能の利用状況を記録します</translation>
+<translation id="2871736177221289934">Growser は、リクエストの内容や、候補を採用または無視したときの動作など、この機能の利用状況を記録します</translation>
 <translation id="7014741021609395734">ズームレベル</translation>
 <translation id="7016992613359344582">料金の請求は 1 回限りの場合も繰り返し行われる場合もあり、課金されたかどうかわからないこともあります。</translation>
 <translation id="7020464868401003526">ショートカットの URL が指定可能な最大文字数（<ph name="MAX_LENGTH"/> 文字）を超えています。</translation>
@@ -3479,7 +3479,7 @@
 <translation id="7064851114919012435">連絡先情報</translation>
 <translation id="7070144569727915108">システム設定</translation>
 <translation id="70705239631109039">接続は完全には保護されていません</translation>
-<translation id="1544480702884197290">Brave での購入手続き時にお支払い方法を保存して自動入力できるようになりました。<ph name="LINK_TEXT"/></translation>
+<translation id="1544480702884197290">Growser での購入手続き時にお支払い方法を保存して自動入力できるようになりました。<ph name="LINK_TEXT"/></translation>
 <translation id="7075452647191940183">リクエストが大きすぎます</translation>
 <translation id="7075513071073410194">PKCS #1 MD5 with RSA 暗号化</translation>
 <translation id="7075896597860500885">このサイトからのコピーは推奨されていません</translation>
@@ -3578,7 +3578,7 @@
 詳細:
 <ph name="DEBUG_INFO"/></translation>
 <translation id="7252424535852086046">このデータを削除するには、管理設定に移動してください</translation>
-<translation id="4241646169865720085">Brave ウォレットで Redress 番号を安全に更新</translation>
+<translation id="4241646169865720085">Growser ウォレットで Redress 番号を安全に更新</translation>
 <translation id="7255540419660272073">低評価ボタンです。Enter キーを押すとフィードバック フォームが開き、<ph name="THUMBS_DOWN_SUGGESTION_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/> を気に入らない理由を記入して送信できます</translation>
 <translation id="7256634549594854023">背面トレイ</translation>
 <translation id="725866823122871198">パソコンの日時（<ph name="DATE_AND_TIME"/>）が正しくないため、<ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/> へのプライベート接続を確立できません。</translation>
@@ -3999,7 +3999,7 @@
 <translation id="7956713633345437162">モバイルのブックマーク</translation>
 <translation id="7961015016161918242">使用しない</translation>
 <translation id="7962467575542381659">プラットフォーム マシン</translation>
-<translation id="5335890850142030688">サポートされているサイトで、Brave によるこのメールアドレスの自動確認を停止します。</translation>
+<translation id="5335890850142030688">サポートされているサイトで、Growser によるこのメールアドレスの自動確認を停止します。</translation>
 <translation id="7966803981046576691">ジョブ管理タイプ</translation>
 <translation id="7967973398323409409">自動入力された情報は誰にも閲覧されません</translation>
 <translation id="79682505114836835">値「<ph name="VALUE"/>」は無効な 16 進数色コードです。</translation>
@@ -4102,7 +4102,7 @@
 <translation id="8155253549374198915">最後に開いたタブ</translation>
 <translation id="7904243652775639741">Growser には、ブラウジング中のユーザーを保護する安全機能が組み込まれています。その一部である Growser セーフ ブラウジングにより、アクセスしようとしたサイトで<ph name="BEGIN_LINK"/>最近マルウェアが検出<ph name="END_LINK"/>されました。</translation>
 <translation id="8161095570253161196">ブラウジングを再開</translation>
-<translation id="4900205713719197017">自動入力をオンにすると、オンラインで安全に決済できます。カード情報は Brave ウォレットで暗号化されます。</translation>
+<translation id="4900205713719197017">自動入力をオンにすると、オンラインで安全に決済できます。カード情報は Growser ウォレットで暗号化されます。</translation>
 <translation id="8163866351304776260">4 穴パンチ（左）</translation>
 <translation id="8164078261547504572">値下げがあったときにメールで通知を受け取りますか？</translation>
 <translation id="8169175551046720804">キー「<ph name="DATA_CONTROLS_KEYS"/>」は同じ辞書に設定できません</translation>
@@ -4112,7 +4112,7 @@
 <translation id="4351627595884993315">ログインしている場合は、その Growser アカウントにカードを保存できます。この動作は設定で変更できます。</translation>
 <translation id="8176440868214972690">このデバイスの管理者は、次のウェブサイトに設定やポリシーなどの情報を送信するよう設定しています。</translation>
 <translation id="818254048113802060">{0,plural, =1{コンテンツが原因で <ph name="FILE_NAME"/> がブロックされました}other{コンテンツが原因で <ph name="FILE_COUNT"/> 個のファイルがブロックされました}}</translation>
-<translation id="4272901805803707638">検索エンジンは Brave の設定でいつでも変更できます。ご希望の検索エンジンが表示されない場合は、その検索エンジンのサイトで検索してください。Brave の設定に最近アクセスした検索エンジンとして表示され、デフォルトに設定できます。</translation>
+<translation id="4272901805803707638">検索エンジンは Growser の設定でいつでも変更できます。ご希望の検索エンジンが表示されない場合は、その検索エンジンのサイトで検索してください。Growser の設定に最近アクセスした検索エンジンとして表示され、デフォルトに設定できます。</translation>
 <translation id="8188830160449823068">IBAN はデバイスのみに保存されました</translation>
 <translation id="8189557652711717875">選択した検索エンジンは、アドレスバーからの検索やウェブページの画像からの検索などの機能に使用されます。</translation>
 <translation id="8190193880870196235">拡張機能によって管理されています</translation>
@@ -4185,7 +4185,7 @@
 <translation id="8297545700510100061">Cookie と他のサイトデータは、ログインや広告のパーソナライズなどでユーザーを覚えておくために使用されます。すべてのサイトの Cookie を管理するには、<ph name="SETTINGS"/>をご覧ください。</translation>
 <translation id="8298115750975731693">ご利用の Wi-Fi（<ph name="WIFI_NAME"/>）では、<ph name="BEGIN_BOLD"/><ph name="LOGIN_URL"/><ph name="END_BOLD"/> へのアクセスが必要な可能性があります。</translation>
 <translation id="8298399736867690281">カードはデバイスのみに保存されました</translation>
-<translation id="7150057276888666361">Brave ウォレットに ID カードを安全に保存</translation>
+<translation id="7150057276888666361">Growser ウォレットに ID カードを安全に保存</translation>
 <translation id="8301894345671534559">コードの入力</translation>
 <translation id="830498451218851433">2 つ折り</translation>
 <translation id="830868413617744215">Beta</translation>
@@ -4332,7 +4332,7 @@
 <translation id="8559762987265718583">デバイスの日時（<ph name="DATE_AND_TIME"/>）が正しくないため、<ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/> へのプライベート接続を確立できません。</translation>
 <translation id="8564182942834072828">個別のドキュメント（丁合いなし）</translation>
 <translation id="8564466070529550495">仮想カードは現在ご利用いただけません。しばらくしてからもう一度お試しください。</translation>
-<translation id="6357650538613458024">Brave のサーバーでデータを安全に処理することで、Brave が複雑なフォームをより的確に理解して入力できるようにします。お客様の情報は非公開に保たれ、人の目に触れることはありません。</translation>
+<translation id="6357650538613458024">Growser のサーバーでデータを安全に処理することで、Growser が複雑なフォームをより的確に理解して入力できるようにします。お客様の情報は非公開に保たれ、人の目に触れることはありません。</translation>
 <translation id="8574570240981266561">アイテムを削除しました</translation>
 <translation id="8577192028579836704">すべてのオプションでの一般的な価格: <ph name="TYPICAL_PRICE"/></translation>
 <translation id="8577348305244205642">仮想カードを使用できません</translation>
@@ -4396,9 +4396,9 @@
 <translation id="8708134712139312373">Bluetooth デバイスへの接続を要求できる</translation>
 <translation id="8710842507289500830">フォント スタイル</translation>
 <translation id="8712637175834984815">理解しました</translation>
-<translation id="4328387382326136101">Brave で、アクセスしようとしたウェブサイトが危険と判断されました。これらの警告を改善するため、1 分間のアンケートにご協力ください。</translation>
+<translation id="4328387382326136101">Growser で、アクセスしようとしたウェブサイトが危険と判断されました。これらの警告を改善するため、1 分間のアンケートにご協力ください。</translation>
 <translation id="8716983145825913456">車両情報を安全に保存</translation>
-<translation id="3201352891862147498">パスポートを Brave ウォレットに安全に保存</translation>
+<translation id="3201352891862147498">パスポートを Growser ウォレットに安全に保存</translation>
 <translation id="8718314106902482036">支払い処理を完了できませんでした</translation>
 <translation id="8719263113926255150"><ph name="ENTITY"/>、<ph name="DESCRIPTION"/>、検索候補</translation>
 <translation id="8719528812645237045">多穴パンチ（上）</translation>
@@ -4437,7 +4437,7 @@
 <translation id="8775863327608679820">分割払いを利用できる後払い決済のカード発行会社が画面の下半分に表示されています。</translation>
 <translation id="8776789089819232268">すべての注文</translation>
 <translation id="877985182522063539">A4</translation>
-<translation id="5756777435786575965">高精度の自動入力をリクエストすると、自動入力機能の改善のため、使用状況データ、リクエスト、ページの詳細が Brave に送信されます</translation>
+<translation id="5756777435786575965">高精度の自動入力をリクエストすると、自動入力機能の改善のため、使用状況データ、リクエスト、ページの詳細が Growser に送信されます</translation>
 <translation id="514805123051954646">[ページを翻訳] ボタンです。実行すると、Growser 翻訳を使用してこのページを翻訳できます</translation>
 <translation id="8790007591277257123">削除のやり直し（&amp;R）</translation>
 <translation id="8790668801880409584">旅行情報を保存して自動入力する</translation>
@@ -4496,7 +4496,7 @@
 <translation id="888169490072887292">キッズメニューのある家族向けのレストランを探して</translation>
 <translation id="8883863364960302898">Growser ドライブ フォルダ</translation>
 <translation id="8884537526797090108">機密コンテンツは録画できません</translation>
-<translation id="4135437686782002023">Brave ウォレットで運転免許証を安全に更新</translation>
+<translation id="4135437686782002023">Growser ウォレットで運転免許証を安全に更新</translation>
 <translation id="8891031436559779793">値下げしたサイトがある場合に通知されます。</translation>
 <translation id="8891727572606052622">プロキシ モードが無効です。</translation>
 <translation id="8894794286471754040">長辺から</translation>
@@ -4732,7 +4732,7 @@
 <translation id="3666543487519182654">このカードを Growser ウォレットに保存すると、Growser で購入する際に自動入力されます</translation>
 <translation id="979107176848483472">お使いのブラウザとプロフィールは <ph name="DOMAIN"/> によって管理されています</translation>
 <translation id="981121421437150478">オフライン</translation>
-<translation id="5456048065008297112">Brave ウォレットに ID カードを安全に保存</translation>
+<translation id="5456048065008297112">Growser ウォレットに ID カードを安全に保存</translation>
 <translation id="983587187183716432"><ph name="AI_ENGINE_NAME"/> ボタン。Enter キーを押すと <ph name="AI_ENGINE_NAME"/> に質問できます</translation>
 <translation id="984275831282074731">お支払い方法</translation>
 <translation id="985199708454569384">&lt;p&gt;このエラーは、パソコンまたはモバイル デバイスの日付と時刻が正確でない場合に表示されます。&lt;/p&gt;
@@ -5571,9 +5571,9 @@
 <translation id="1151858212483238980">Growser ウォレットに保存されているカードの情報を自動入力できます</translation>
 <translation id="1205344127823614428">Growser ウォレットに保存されているカードの情報を自動入力できます。</translation>
 <translation id="5848445080378515710">注文の確認が完了したら、<ph name="BNPL_ISSUER_NAME"/> のアカウントにログインするか、アカウントを作成する必要があります。このアカウントは Growser ウォレットに自動的にリンクされます。</translation>
-<translation id="8163468049564974856">自動入力をオンにすると、オンラインで安全に決済できます。カード情報は Brave ウォレットで暗号化されます。</translation>
-<translation id="5717281954932320486">オンライン決済の際、カード情報が自動的に入力されます。カード情報は Brave ウォレットに安全に保存されます。</translation>
-<translation id="7055814742378298611">Brave での購入手続き時にお支払い方法を保存して自動入力できるようになりました。<ph name="LINK_TEXT"/></translation>
+<translation id="8163468049564974856">自動入力をオンにすると、オンラインで安全に決済できます。カード情報は Growser ウォレットで暗号化されます。</translation>
+<translation id="5717281954932320486">オンライン決済の際、カード情報が自動的に入力されます。カード情報は Growser ウォレットに安全に保存されます。</translation>
+<translation id="7055814742378298611">Growser での購入手続き時にお支払い方法を保存して自動入力できるようになりました。<ph name="LINK_TEXT"/></translation>
 <translation id="5977205943292389390">デバイスと Growser アカウントに保存されているセキュリティ コードがすべて削除されます</translation>
 <translation id="7170930892977483182">デバイスと Growser ウォレットに保存されているセキュリティ コードがすべて削除されます</translation>
 <translation id="755360750394433286">カードは今後の購入時に自動入力できるように Growser アカウントに保存されます</translation>
@@ -5594,7 +5594,7 @@
 <translation id="7077165718541055322">Growser の自動入力から自宅の住所を削除しますか？</translation>
 <translation id="7756454115562251695">Growser の自動入力から職場の住所を削除しますか？</translation>
 <translation id="3068798232942246848">Growser の自動入力からこの情報を削除しますか？</translation>
-<translation id="967369588715984092">サポートされているサイトで、Brave によるこのメールアドレスの自動確認を停止します。</translation>
+<translation id="967369588715984092">サポートされているサイトで、Growser によるこのメールアドレスの自動確認を停止します。</translation>
 <translation id="7299769361777046949">Growser ウォレットでポイントカードを管理</translation>
 <translation id="2903623845283894856">Growser アカウントに保存した住所を使用できるようになりました</translation>
 <translation id="7058709760023777753">Growser アカウントから自宅と職場の住所を自動入力します</translation>
@@ -5612,7 +5612,7 @@
 <translation id="7450759832930378803">これらの設定を有効にして Growser アカウントのお支払い情報を使用するには、自動入力サービスの設定にアクセスしてください。</translation>
 <translation id="7049940136908665440">これらの設定を有効にして Growser アカウントの情報を使用するには、自動入力サービスの設定にアクセスしてください。</translation>
 <translation id="2450019289047528273">Growser ウォレットのお支払い方法などの情報</translation>
-<translation id="1125406338060147524">Brave で保存した情報には Brave ウォレットの設定が適用されます</translation>
+<translation id="1125406338060147524">Growser で保存した情報には Growser ウォレットの設定が適用されます</translation>
 <translation id="5732084028114235391">この住所は現在、Growser に保存されています。Growser サービス全体で使用するには、Growser アカウント（<ph name="ACCOUNT"/>）に保存してください。</translation>
 <translation id="756794566964707799">この住所は現在、このデバイスに保存されています。Growser サービス全体で使用するには、Growser アカウント（<ph name="ACCOUNT"/>）に保存してください。</translation>
 <translation id="6935077351544118151">Growser ウォレットからポイントカードを自動入力できるようになりました</translation>
@@ -5622,43 +5622,43 @@
 <translation id="5831217499016131155">Growser ウォレット</translation>
 <translation id="8421746712901926961"><ph name="GOOGLE_WALLET_TITLE_1"/> に情報を保存すると、Growser サービス全体でフォームの入力などをすばやく行えるようになります。<ph name="ACCOUNT"/> の <ph name="GOOGLE_WALLET_TITLE_2"/> で<ph name="MANAGE_INFO_LINK"/>できます。</translation>
 <translation id="4619669610757527494">Growser ウォレットに運転免許証を保存</translation>
-<translation id="4239215166147486528">Brave ウォレットに運転免許証を安全に保存</translation>
+<translation id="4239215166147486528">Growser ウォレットに運転免許証を安全に保存</translation>
 <translation id="1912750443952232242">ID カードを Growser ウォレットに保存</translation>
-<translation id="8300302621078931927">Brave ウォレットに ID カードを安全に保存</translation>
+<translation id="8300302621078931927">Growser ウォレットに ID カードを安全に保存</translation>
 <translation id="5447103258548475868">Growser ウォレットにパスポートを保存</translation>
-<translation id="8717177139469452440">パスポートを Brave ウォレットに安全に保存</translation>
+<translation id="8717177139469452440">パスポートを Growser ウォレットに安全に保存</translation>
 <translation id="760632772920590778">Growser ウォレットに車両情報を保存</translation>
-<translation id="4811696127853690432">Brave ウォレットに車両情報を安全に保存</translation>
+<translation id="4811696127853690432">Growser ウォレットに車両情報を安全に保存</translation>
 <translation id="5914185423510719251">KTN を Growser ウォレットに保存</translation>
-<translation id="5034488401832901795">Brave ウォレットに KTN を安全に保存</translation>
+<translation id="5034488401832901795">Growser ウォレットに KTN を安全に保存</translation>
 <translation id="1449251255954293933">Growser ウォレットに Redress 番号を保存</translation>
-<translation id="1330952240988133220">Brave ウォレットに Redress 番号を安全に保存</translation>
+<translation id="1330952240988133220">Growser ウォレットに Redress 番号を安全に保存</translation>
 <translation id="8393948304336153065">Growser ウォレットの運転免許証情報を更新</translation>
-<translation id="8889525327610245418">Brave ウォレットで運転免許証を安全に更新</translation>
+<translation id="8889525327610245418">Growser ウォレットで運転免許証を安全に更新</translation>
 <translation id="7570524564113479209">Growser ウォレットの ID カード情報を更新</translation>
-<translation id="4410614037742891410">Brave ウォレットで ID カードを安全に更新</translation>
+<translation id="4410614037742891410">Growser ウォレットで ID カードを安全に更新</translation>
 <translation id="3426672782316020729">Growser ウォレットのパスポート情報を更新</translation>
-<translation id="3280440382387335343">Brave ウォレットでパスポートを安全に更新</translation>
+<translation id="3280440382387335343">Growser ウォレットでパスポートを安全に更新</translation>
 <translation id="2124081665399116863">Growser ウォレットの車両情報を更新</translation>
-<translation id="6422648598133086441">Brave ウォレットで車両情報を安全に更新</translation>
+<translation id="6422648598133086441">Growser ウォレットで車両情報を安全に更新</translation>
 <translation id="4770909831299304090">Growser ウォレットの KTN を更新</translation>
-<translation id="5872115357279348603">Brave ウォレットで KTN を安全に更新</translation>
+<translation id="5872115357279348603">Growser ウォレットで KTN を安全に更新</translation>
 <translation id="1732796940245838248">Growser ウォレットの Redress 番号を更新</translation>
-<translation id="7253051586755429279">Brave ウォレットで Redress 番号を安全に更新</translation>
+<translation id="7253051586755429279">Growser ウォレットで Redress 番号を安全に更新</translation>
 <translation id="5628060911499153873">情報を保存すると、各種の Growser サービスで簡単に入力できるようになります。情報は <ph name="ACCOUNT"/> の <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> に保存されます。</translation>
 <translation id="8369722293913575142">この情報を Growser ウォレットに保存できませんでした。代わりにこのデバイスの Growser に保存されました。次回この情報を使用するときに、ウォレットに保存するかどうかを確認するメッセージが表示されます。</translation>
 <translation id="3237427677128462778">Growser ウォレットに保存できませんでした</translation>
 <translation id="9078170656887151974">候補を表示して、この機能を改善するため、ページの URL とコンテンツを Growser と共有します。この機能はいつでもオフにできます。<ph name="LEARN_MORE"/>。</translation>
 <translation id="4954505713046251871">候補を表示して、この機能を改善するため、ページの URL とコンテンツを Growser と共有します</translation>
 <translation id="2905902437192896563">Growser でフォームの内容を正確に把握して、すばやく自動入力できます</translation>
-<translation id="67310796271265436">Brave のサーバーでデータを安全に処理することで、Brave が複雑なフォームをより的確に理解して入力できるようにします。お客様の情報は非公開に保たれ、人の目に触れることはありません。</translation>
+<translation id="67310796271265436">Growser のサーバーでデータを安全に処理することで、Growser が複雑なフォームをより的確に理解して入力できるようにします。お客様の情報は非公開に保たれ、人の目に触れることはありません。</translation>
 <translation id="7422908041366284140">標準の自動入力が難しい項目に自動入力できます</translation>
 <translation id="6329742260390895689">情報を自動入力するには、ウォレットの設定で [Growser の各種サービスでパスを使用する] をオンにしてください</translation>
 <translation id="5912796581727968237">Growser ウォレットを開く</translation>
 <translation id="5160781056848005130">高精度の自動入力機能の改善のため、Growser とデータを共有しています</translation>
-<translation id="8781233757384402598">高精度の自動入力をリクエストすると、自動入力機能の改善のため、使用状況データ、リクエスト、ページの詳細が Brave に送信されます</translation>
-<translation id="7044265724713929821">Brave は、リクエストの内容や、候補を採用または無視したときの動作など、この機能の利用状況を記録します</translation>
-<translation id="3209071504641569648">リクエスト、ページのタイトル、URL は Brave に送信され、高精度の自動入力の改善に向けて確認される場合があります</translation>
+<translation id="8781233757384402598">高精度の自動入力をリクエストすると、自動入力機能の改善のため、使用状況データ、リクエスト、ページの詳細が Growser に送信されます</translation>
+<translation id="7044265724713929821">Growser は、リクエストの内容や、候補を採用または無視したときの動作など、この機能の利用状況を記録します</translation>
+<translation id="3209071504641569648">リクエスト、ページのタイトル、URL は Growser に送信され、高精度の自動入力の改善に向けて確認される場合があります</translation>
 <translation id="2410385419742253857">{COUNT,plural, =0{なし}=1{1 件のサイトから（Growser アカウントへのログイン状態は維持されます）}other{# 件のサイトから（Growser アカウントへのログイン状態は維持されます）}}</translation>
 <translation id="3410151451624226773">Growser パスワード マネージャーで管理する</translation>
 <translation id="5224107321793121921">Growser アカウントで管理する</translation>
@@ -5674,7 +5674,7 @@
     <ph name="BEGIN_LINK"/>詳細<ph name="END_LINK"/></translation>
 <translation id="5164928537947209380">この試験運用中の AI ツールは、常に正しく動作するとは限りません。改善のため、お客様のコンテンツは Growser に送信されます。
     <ph name="BEGIN_LINK"/>詳細<ph name="END_LINK"/></translation>
-<translation id="3419981648784795212">組織のポリシーにより、管理対象の Brave コンテキスト外にコンテンツを貼り付けられませんでした</translation>
+<translation id="3419981648784795212">組織のポリシーにより、管理対象の Growser コンテキスト外にコンテンツを貼り付けられませんでした</translation>
 <translation id="1351458950091269256">この広告は、デバイスのリソース消費が多すぎるため、Growser によって削除されました。</translation>
 <translation id="4366714044424353289">お使いの Growser アカウントの <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> に、他の形式の閲覧履歴が記録されている場合があります</translation>
 <translation id="5626844006416355146">お使いの Growser アカウントに <ph name="BEGIN_LINK_GAA"/>Gemini アプリ アクティビティ<ph name="END_LINK_GAA"/>が記録されている場合があります</translation>
@@ -5881,7 +5881,7 @@
 <translation id="2867186026859663748">このポリシーは、Growser プロフィール単位では設定できないため、無視されます。</translation>
 <translation id="277370491433906876">ユーザーが関連付けられていないため、このポリシーは無視されます。このポリシーを適用するには、Growser ブラウザとプロフィールが管理コンソールを介して同じ組織によって管理されている必要があります。</translation>
 <translation id="1963194198237607890">Growser Enterprise Core では、クラウドからブラウザ ポリシーを一元的に管理できます</translation>
-<translation id="4553855485042734119">この Brave インスタンスは、手動で設定されたコマンドライン フラグを使用して実行されています。コマンドライン フラグは随時変更される可能性があり、サポート対象外であることに注意してください。</translation>
+<translation id="4553855485042734119">この Growser インスタンスは、手動で設定されたコマンドライン フラグを使用して実行されています。コマンドライン フラグは随時変更される可能性があり、サポート対象外であることに注意してください。</translation>
 <translation id="3858407183625528544">セキュリティを維持するため、Growser でのパスワードの再利用は組織で禁止されています。Growser のパスワードは、ユーザーのプライバシーを保護するために暗号化されています。</translation>
 <translation id="6376948191860056592">Growser のパスワード保護の仕組みについて</translation>
 <translation id="59755378055907482">パスワードを他のサイトで再使用した場合、Growser ではパスワードの再設定を促すメッセージが表示されます。</translation>
@@ -5891,7 +5891,7 @@
 <translation id="5178006823023208130">お住まいの地域の法律に基づき、Growser ではデフォルトの検索エンジンの選択を求めるメッセージが表示されます。これらの検索エンジンはお住まいの地域で一般的に使用されているもので、順不同です。</translation>
 <translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>デフォルトの検索サービスではウェブ検索ができるだけでなく、Growser の機能を活用<ph name="END_BOLD"/>してアドレスバーからの検索、ウェブページの画像からの検索なども行うことができます。ただし検索サービスでサポートされていない機能は利用できない場合があります。</translation>
 <translation id="652920213589772275">検索エンジンは Growser の設定でいつでも変更できます。</translation>
-<translation id="5113257522679527347">検索エンジンは Brave の設定でいつでも変更できます。ご希望の検索エンジンが表示されない場合は、その検索エンジンのサイトで検索してください。Brave の設定に最近アクセスした検索エンジンとして表示され、デフォルトに設定できます。</translation>
+<translation id="5113257522679527347">検索エンジンは Growser の設定でいつでも変更できます。ご希望の検索エンジンが表示されない場合は、その検索エンジンのサイトで検索してください。Growser の設定に最近アクセスした検索エンジンとして表示され、デフォルトに設定できます。</translation>
 <translation id="2493969470983483123">アプリケーションが原因で、Growser からこのサイトに安全に接続することができません</translation>
 <translation id="463534029029027294">安全な接続を確立するには時計が正しく設定されている必要があります。この理由は、本物のウェブサイトであることを示すためにウェブサイトで使用される証明書には、有効期間（発効日時と失効日時）が設定されているためです。デバイスの時計が正しくないため、Growser ではこれらの証明書を確認できません。</translation>
 <translation id="6824867187541740495"><ph name="SITE"/> では通常、暗号化して情報を保護しています。今回、Growser から <ph name="SITE"/> への接続試行時に、このウェブサイトからいつもとは異なる誤った認証情報が返されました。悪意のあるユーザーが <ph name="SITE"/> になりすまそうとしているか、Wi-Fi ログイン画面で接続が中断された可能性があります。データのやり取りが行われる前に Growser によって接続が停止されたため、情報は引き続き保護されています。</translation>
@@ -5929,9 +5929,9 @@
 <translation id="2026207410612449615">通常はこのサイトに安全に接続できますが、今回は安全な接続を使用できませんでした。攻撃者がネットワーク接続を傍受するか変更しようとしている可能性があります。<ph name="LEARN_MORE"/></translation>
 <translation id="1050989234936720259">通常はサイトに安全に接続できますが、今回は安全な接続を使用できませんでした。攻撃者がネットワーク接続を傍受するか変更しようとしている可能性があります。<ph name="LEARN_MORE"/></translation>
 <translation id="6692006953064648573">この警告は、このサイトが HTTPS に対応していないことを示すもので、Growser の高度な保護機能プログラムを使用している場合に表示されます。<ph name="LEARN_MORE"/></translation>
-<translation id="4899042284040818676">Brave で、アクセスしようとしたウェブサイトが危険と判断されました。これらの警告を改善するため、1 分間のアンケートにご協力ください。</translation>
-<translation id="3665741528710985669"><ph name="DEVICE_NAME"/> の Brave に送信しました</translation>
-<translation id="2756090547781225493"><ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/> の Brave に送信しました</translation>
+<translation id="4899042284040818676">Growser で、アクセスしようとしたウェブサイトが危険と判断されました。これらの警告を改善するため、1 分間のアンケートにご協力ください。</translation>
+<translation id="3665741528710985669"><ph name="DEVICE_NAME"/> の Growser に送信しました</translation>
+<translation id="2756090547781225493"><ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/> の Growser に送信しました</translation>
 <translation id="3087912139479831463"><ph name="DEVICE_NAME"/> の Growser にすでに送信されています</translation>
 <translation id="2665815858706570232">オンにすると、より関連性の高い回答が得られるよう、このウィンドウの関連タブを共有します。</translation>
 <translation id="4585120639592593231">よりパーソナライズされた回答を得るため、質問に関連する可能性のある開いているタブのページ コンテンツと URL が Growser に自動的に送信されます。Growser で共有されるのは、作業中のウィンドウのタブのみです。</translation>

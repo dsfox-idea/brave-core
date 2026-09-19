@@ -58,7 +58,7 @@ lub zmień później w <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="3218385319396786393">Zablokowano automatyczne odtwarzanie na tej stronie</translation>
 <translation id="4988333904713528597">Zawsze zezwalaj na automatyczne odtwarzanie na <ph name="HOST"/></translation>
 <translation id="4150684676757176434">Kontynuuj blokowanie automatycznego odtwarzania</translation>
-<translation id="2201935460386712655">Brave nie dokonuje przeglądu rozszerzeń pod kątem bezpieczeństwa. Zainstaluj „<ph name="EXTENSION_NAME"/>” tylko wtedy, gdy ufasz jego twórcy.</translation>
+<translation id="2201935460386712655">Growser nie dokonuje przeglądu rozszerzeń pod kątem bezpieczeństwa. Zainstaluj „<ph name="EXTENSION_NAME"/>” tylko wtedy, gdy ufasz jego twórcy.</translation>
 <translation id="2928844661231356557">Przyznanie dostępu urządzeniu Bluetooth pozwoli stronie odczytywać informacje umożliwiające identyfikacje i potencjalnie wrażliwe dane na Twój temat. Zezwalaj na dostęp do urządzeń Bluetooth tylko stronom, którym ufasz. <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">Okna w Tor</translation>
 <translation id="7965178729203412357">Nowa tożsamość Tor</translation>
@@ -605,15 +605,15 @@ lub zmień później w <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="8868426106596092089">Pomóż poprawić stabilność produktu Growser, automatycznie przesyłając raporty diagnostyczne po awarii lub zacięciu przeglądarki Growser</translation>
 <translation id="4891600875049212418">Odwiedzaj strony z wrażliwymi danymi bez zapisywania danych</translation>
 <translation id="1022603984240541480">Pokazuj powiadomienie o dostrajaniu ustawień prywatności na zgodnych witrynach</translation>
-<translation id="3528176629974273019">Umożliwia Brave automatyczne sugerowanie (i dostosowywanie) ustawień prywatności specyficznych dla witryny.</translation>
+<translation id="3528176629974273019">Umożliwia Growser automatyczne sugerowanie (i dostosowywanie) ustawień prywatności specyficznych dla witryny.</translation>
 <translation id="2740687181110647855">Narzędzie do dostrajania ustawień prywatności</translation>
 <translation id="509873765238158442">Blokuj Przypomnienie Microsoft</translation>
 <translation id="4763421121695677716">Uniemożliw funkcji Przypomnienie (Recall) na komputerach z systemem Microsoft Windows automatyczne wykonywanie zrzutów ekranu otwartych kart Growser.</translation>
 <translation id="1968895725257436430">Gromadzenie danych</translation>
 <translation id="1700052872056357670">Wyczyść dane przy wyjściu</translation>
 <translation id="216468847346280584">Wyczyść dane platformy Growser Ads...</translation>
-<translation id="96212973142796240">Dane Brave Ads wyczyszczone</translation>
-<translation id="6665923829462527507">Nie można wyczyścić danych Brave Ads. Spróbuj ponownie.</translation>
+<translation id="96212973142796240">Dane Growser Ads wyczyszczone</translation>
+<translation id="6665923829462527507">Nie można wyczyścić danych Growser Ads. Spróbuj ponownie.</translation>
 <translation id="2808630562319398131">Zresetuj dane nagród przeglądarki Growser...</translation>
 <translation id="6438096877646138757">Strony, które po zamknięciu czyszczą pliki cookie</translation>
 <translation id="2988792685798128092">Wyczyść przy zamknięciu strony</translation>
@@ -1015,11 +1015,11 @@ lub zmień później w <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="8854326268817889200">Pokaż przycisk nagród Growser</translation>
 <translation id="7687538894778993146">Tryb tylko blokowania reklam zachowuje podstawowe zasady blokowania reklam Tarczy Growser. Ostrzeżenie: usuwa wszystkie zabezpieczenia prywatności. Proszę pamiętać, że w przypadku poszczególnych witryn, które są łamane przez ochronę prywatności Growser, można ustawić Tarcze na DOWN. Jest to tryb eksperymentalny. <ph name="BEGIN_LINK"/>Dowiedz się więcej<ph name="END_LINK"/></translation>
 <translation id="9023173279866800345">Jak długo Growser przechowuje lokalnie Twoją historię przeglądania</translation>
-<translation id="4082996406923131054">Umożliwia Brave automatyczne sugerowanie (i dostosowywanie) ustawień prywatności specyficznych dla witryny.</translation>
+<translation id="4082996406923131054">Umożliwia Growser automatyczne sugerowanie (i dostosowywanie) ustawień prywatności specyficznych dla witryny.</translation>
 <translation id="6673459101269837427">Uniemożliw funkcji Przypomnienie (Recall) na komputerach z systemem Microsoft Windows automatyczne wykonywanie zrzutów ekranu otwartych kart Growser.</translation>
 <translation id="5636467576514473532">Wyczyść dane platformy Growser Ads...</translation>
-<translation id="420057953503713346">Dane Brave Ads wyczyszczone</translation>
-<translation id="3399998090446159274">Nie można wyczyścić danych Brave Ads. Spróbuj ponownie.</translation>
+<translation id="420057953503713346">Dane Growser Ads wyczyszczone</translation>
+<translation id="3399998090446159274">Nie można wyczyścić danych Growser Ads. Spróbuj ponownie.</translation>
 <translation id="1332284067513374815">Zresetuj dane nagród przeglądarki Growser...</translation>
 <translation id="6645428976896583185">Porównuje adresy URL z listą niebezpiecznych witryn przechowywaną w Growser.</translation>
 <translation id="2338646464484947274">Aby rozpocząć, musisz zainstalować Growser na wszystkich urządzeniach, które chcesz zsynchronizować. Następnie bezpiecznie połącz je ze sobą za pomocą kodu synchronizacji.</translation>
@@ -1058,7 +1058,7 @@ lub zmień później w <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="1709339105818930637">Awatar owalne Growser</translation>
 <translation id="790677324469754498">Awatar cukierkowe Growser</translation>
 <translation id="4677850801710355225">Widevine jest czasami potrzebne, aby odtworzyć multimedia na stronie internetowej. To rozszerzenie Google do pobrania z serwerów Google, których Growser nie może sprawdzić. Instalując je, wyrażasz zgodę na warunki korzystania firmy Google.</translation>
-<translation id="3513162204962925590">Brave nie dokonuje przeglądu rozszerzeń pod kątem bezpieczeństwa. Zainstaluj „<ph name="EXTENSION_NAME"/>” tylko wtedy, gdy ufasz jego twórcy.</translation>
+<translation id="3513162204962925590">Growser nie dokonuje przeglądu rozszerzeń pod kątem bezpieczeństwa. Zainstaluj „<ph name="EXTENSION_NAME"/>” tylko wtedy, gdy ufasz jego twórcy.</translation>
 <translation id="8652975004530325693">Konto synchronizacji Growser zostało usunięte z poziomu innego urządzenia. Jeśli wyłączenie synchronizacji było przypadkowe, <ph name="LINK_TEXT"/></translation>
 <translation id="6015737849159950360">Nie można uruchomić usługi synchronizacji, Synchronizacja Growser nie działa</translation>
 <translation id="3097761516937648160">Otwórz link w oknie prywatnym z obsługą sieci Tor</translation>

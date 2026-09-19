@@ -186,7 +186,7 @@ Comproba os teus contrasinais cando queiras no <ph name="GOOGLE_PASSWORD_MANAGER
 <translation id="1130116586186908674">Crear vista dividida</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> (forma parte do grupo <ph name="GROUP_NAME"/>)</translation>
 <translation id="1130676589211693127">Nivel de batería do dispositivo dereito: <ph name="PERCENTAGE"/> %.</translation>
-<translation id="1412403201555978627">Cando se comparten pestanas, envíanse a Brave o contido das páxinas, o contido multimedia e os URL, que poden someterse a un proceso de revisión por motivos de seguranza.</translation>
+<translation id="1412403201555978627">Cando se comparten pestanas, envíanse a Growser o contido das páxinas, o contido multimedia e os URL, que poden someterse a un proceso de revisión por motivos de seguranza.</translation>
 <translation id="1133418583142946603">Engadir pestana actual</translation>
 <translation id="1133751489735776037">Facer clic tres veces co rato</translation>
 <translation id="1136712381129578788">A chave de seguranza bloqueouse porque se introduciu o PIN demasiadas veces. Para desbloqueala, quítaa e introdúcea de novo.</translation>
@@ -376,7 +376,7 @@ Comproba os teus contrasinais cando queiras no <ph name="GOOGLE_PASSWORD_MANAGER
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Deter</translation>
 <translation id="1272508081857842302">Apertura de <ph name="BEGIN_LINK"/>ligazóns compatibles<ph name="END_LINK"/></translation>
-<translation id="7823526956728613125">Xestiona a conexión entre os servizos de busca e as aplicacións de Brave Workspace, como Google Drive</translation>
+<translation id="7823526956728613125">Xestiona a conexión entre os servizos de busca e as aplicacións de Growser Workspace, como Google Drive</translation>
 <translation id="1274997165432133392">Cookies e outros datos dos sitios</translation>
 <translation id="1275936815032730048">menú de aplicacións + frecha dereita</translation>
 <translation id="1275963833368139883">Cando fas buscas no teu historial de navegación, as respostas e os resultados de busca baséanse no contigo dunha páxina. Isto permite obter mellores resultados</translation>
@@ -653,7 +653,7 @@ Comproba os teus contrasinais cando queiras no <ph name="GOOGLE_PASSWORD_MANAGER
 <translation id="1508931164824684991">Os sitios poden usar JavaScript</translation>
 <translation id="1509163368529404530">&amp;Restaurar grupo</translation>
 <translation id="1509281256533087115">Acceder a calquera <ph name="DEVICE_NAME_AND_VENDOR"/> por USB</translation>
-<translation id="2825615584808054779">O equipo de revisión non analizará nin as túas conversas con Gemini nin os teus datos de Brave Workspace. Ningunha desas dúas cousas se usará para mellorar os modelos de IA xenerativa. Gemini é unha IA e pode cometer erros.</translation>
+<translation id="2825615584808054779">O equipo de revisión non analizará nin as túas conversas con Gemini nin os teus datos de Growser Workspace. Ningunha desas dúas cousas se usará para mellorar os modelos de IA xenerativa. Gemini é unha IA e pode cometer erros.</translation>
 <translation id="1510238584712386396">Menú de aplicacións</translation>
 <translation id="1510341833810331442">Os sitios non teñen permiso para gardar datos no teu dispositivo</translation>
 <translation id="1510882959204224895">Abrir nunha ventá</translation>
@@ -747,7 +747,7 @@ Comproba os teus contrasinais cando queiras no <ph name="GOOGLE_PASSWORD_MANAGER
 <translation id="1581962803218266616">Mostrar en Finder</translation>
 <translation id="1582955169539260415">eliminar [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276">O idioma (<ph name="LANGUAGE"/>) procésase de xeito local e funciona sen conexión</translation>
-<translation id="491276955533054201">Primeiro, activa a navegación automática de Brave neste dispositivo</translation>
+<translation id="491276955533054201">Primeiro, activa a navegación automática de Growser neste dispositivo</translation>
 <translation id="1587275751631642843">Consola de &amp;JavaScript</translation>
 <translation id="1588438908519853928">Normal</translation>
 <translation id="1588772269240419305">Revisa as actualizacións de logotipo e nome</translation>
@@ -1149,7 +1149,7 @@ Comproba os teus contrasinais cando queiras no <ph name="GOOGLE_PASSWORD_MANAGER
 <translation id="1892453608039100484">1. Fai clic na opción <ph name="BUTTON_LABEL"/> que aparece máis abaixo
 2. Fai clic en <ph name="BUTTON_2"/> dentro da configuración de Windows</translation>
 <translation id="1895658205118569222">Apagar</translation>
-<translation id="1189523243806849236">Os chats revísanse e úsanse para mellorar a IA de Brave. Gemini é unha IA e pode cometer erros. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Os chats revísanse e úsanse para mellorar a IA de Growser. Gemini é unha IA e pode cometer erros. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Usa este contrasinal seguro</translation>
 <translation id="1897860317037652061">Produciuse un erro durante a análise</translation>
 <translation id="1898804291554630487">Fai unha pregunta sobre esta páxina</translation>
@@ -1158,7 +1158,7 @@ Comproba os teus contrasinais cando queiras no <ph name="GOOGLE_PASSWORD_MANAGER
 <translation id="1901213235765457754">Pídelle ao teu administrador que actualice esta aplicación</translation>
 <translation id="1901303067676059328">Seleccion&amp;ar todo</translation>
 <translation id="1901760057081700494">O fuso horario actualmente está definido como <ph name="TIME_ZONE_ENTRY"/>. Para actualizar automaticamente o fuso horario, <ph name="BEGIN_LINK"/>activa o acceso á localización do sistema<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">O teu enderezo particular pode axudarche a facer cousas nos servizos de Brave, como obter resultados de busca máis relevantes e indicacións en Brave Maps. Podes editalo ou eliminalo na túa <ph name="BEGIN_LINK"/>Conta de Brave<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">O teu enderezo particular pode axudarche a facer cousas nos servizos de Growser, como obter resultados de busca máis relevantes e indicacións en Growser Maps. Podes editalo ou eliminalo na túa <ph name="BEGIN_LINK"/>Conta de Growser<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">Os URL que visitas gárdanse na túa Conta de Growser</translation>
 <translation id="190530012637606145">Avisarate sobre todas as conexións pouco seguras, como as intranets privadas</translation>
 <translation id="1906181697255754968">Os sitios adoitan acceder aos ficheiros e aos cartafoles do dispositivo para ofrecerche determinadas funcións (por exemplo, gardar automaticamente o teu traballo)</translation>
@@ -1531,7 +1531,7 @@ Instala a aplicación Family Link no teu dispositivo e poderás xestionar a conf
 <translation id="2198625180564913276">Engadindo perfil. Esta acción pode tardar uns minutos.</translation>
 <translation id="2198712775285959645">Editar</translation>
 <translation id="2199298570273670671">Erro</translation>
-<translation id="2798272130984183944">Escolle se queres que Brave use modelos de IA que se executan directamente no teu dispositivo</translation>
+<translation id="2798272130984183944">Escolle se queres que Growser use modelos de IA que se executan directamente no teu dispositivo</translation>
 <translation id="2200094388063410062">Correo electrónico</translation>
 <translation id="2200781749203116929">Rexistros do sistema de ChromeOS</translation>
 <translation id="2202391868799679245">Activar atallo de teclado</translation>
@@ -1611,7 +1611,7 @@ Instala a aplicación Family Link no teu dispositivo e poderás xestionar a conf
 <translation id="225716114209817872">Máximo</translation>
 <translation id="5642482119439119644">Para obter as pestanas dos teus outros dispositivos, verifica a túa identidade. Podes deter a sincronización cando queiras na configuración. Growser pode personalizar a Busca e outros servizos en función do teu historial.</translation>
 <translation id="22614517036276112">Este documento ou o teu dispositivo non cumpre algunhas das políticas de seguranza da túa organización. Consulta o administrador para saber o que debes corrixir.</translation>
-<translation id="1829264724820495616">O teu enderezo do traballo pode axudarche a facer cousas nos servizos de Brave, como obter resultados de busca máis relevantes e indicacións en Brave Maps. Podes editalo ou eliminalo na túa <ph name="BEGIN_LINK"/>Conta de Brave<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">O teu enderezo do traballo pode axudarche a facer cousas nos servizos de Growser, como obter resultados de busca máis relevantes e indicacións en Growser Maps. Podes editalo ou eliminalo na túa <ph name="BEGIN_LINK"/>Conta de Growser<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Tempo antes da repetición</translation>
 <translation id="2263371730707937087">Frecuencia de actualización da pantalla</translation>
 <translation id="7829329302663082098">Valoramos moito os teus comentarios, que nos axudan a mellorar Growser Cast. Se queres axuda para solucionar problemas relacionados coa emisión, consulta o <ph name="BEGIN_LINK"/>Centro de axuda<ph name="END_LINK"/>.</translation>
@@ -1754,7 +1754,7 @@ Instala a aplicación Family Link no teu dispositivo e poderás xestionar a conf
 <translation id="2373499590298659902">Usa a tecla 0 para manter premido un botón do rato</translation>
 <translation id="2373666622366160481">Axustar ao papel</translation>
 <translation id="2375406435414127095">Conectarse ao teléfono</translation>
-<translation id="6612559367203670996">Brave usa o contido e o URL das pestanas compartidas. A pestana actual compártese nos novos chats. Podes cambiar esta opción en calquera momento.</translation>
+<translation id="6612559367203670996">Growser usa o contido e o URL das pestanas compartidas. A pestana actual compártese nos novos chats. Podes cambiar esta opción en calquera momento.</translation>
 <translation id="2376056713414548745">Ler en voz alta</translation>
 <translation id="2376122016044804363">Confirmacións de copia no portapapeis</translation>
 <translation id="2377667304966270281">Errores graves</translation>
@@ -3321,7 +3321,7 @@ Podes xestionar a configuración desde o menú da tarxeta ou ver máis opcións 
 <translation id="3569614820047645079">Os ficheiros de A miña unidade sincronízanse co teu Chromebook automaticamente para que poidas acceder a eles sen conexión a Internet.</translation>
 <translation id="3569617221227793022">O fuso horario actualmente está definido como <ph name="TIME_ZONE_ENTRY"/>. A persoa administradora xestiona esta opción de configuración.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> pode ver os seguintes ficheiros e cartafoles</translation>
-<translation id="4062501938325597704">O contido da páxina e os URL que use Gemini durante unha tarefa compartiranse con Brave e poden revisarse por motivos de seguranza.</translation>
+<translation id="4062501938325597704">O contido da páxina e os URL que use Gemini durante unha tarefa compartiranse con Growser e poden revisarse por motivos de seguranza.</translation>
 <translation id="3571734092741541777">Configurar</translation>
 <translation id="3575121482199441727">Permitir para este sitio</translation>
 <translation id="3575224072358507281">Recompilar resultados de medición de redes e enderezos IP para Measurement Lab, segundo a súa política de privacidade (measurementlab.net/privacy)</translation>
@@ -5003,7 +5003,7 @@ Se queres afastala, usa Control + Alt + Reducir brillo.</translation>
 <translation id="485480310608090163">Máis opcións de configuración e permisos</translation>
 <translation id="4857304314344645169">Consulta unha explicación paso a paso de calquera problema</translation>
 <translation id="1913048435257025864">Preguntarlle a Growser sobre a páxina anterior: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">O contido e o URL da pestana actual compártense con Brave para ofrecerche respostas máis relevantes. Podes engadir ou quitar pestanas mentres navegas.</translation>
+<translation id="228735844055480091">O contido e o URL da pestana actual compártense con Growser para ofrecerche respostas máis relevantes. Podes engadir ou quitar pestanas mentres navegas.</translation>
 <translation id="485806788160414322">Reproducir ou pór en pausa o contido multimedia</translation>
 <translation id="4858913220355269194">Balón de fútbol</translation>
 <translation id="4860012864737017059">Pestana recente</translation>
@@ -5338,7 +5338,7 @@ Se queres afastala, usa Control + Alt + Reducir brillo.</translation>
 <translation id="5112577000029535889">&amp;Ferramentas para programadores</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{Moveuse 1 ficheiro}other{Movéronse {NUM_OF_FILES} ficheiros}}</translation>
 <translation id="511313294362309725">Activar Vinculación rápida</translation>
-<translation id="6409962091529734959">Máis información sobre a navegación automática de Brave</translation>
+<translation id="6409962091529734959">Máis información sobre a navegación automática de Growser</translation>
 <translation id="51143538739122961">Introduce a túa chave de seguranza e tócaa</translation>
 <translation id="5115338116365931134">Inicio de sesión único</translation>
 <translation id="5116628073786783676">G&amp;ardar audio como...</translation>
@@ -5381,7 +5381,7 @@ Se queres afastala, usa Control + Alt + Reducir brillo.</translation>
 <translation id="5146235736676876345">Escoller o teu propio contrasinal</translation>
 <translation id="5146896637028965135">Voz do sistema</translation>
 <translation id="5147113439721488265">Recomendación</translation>
-<translation id="5897101208018277582">Para enviar ligazóns, verifica a túa identidade. Podes enviar ligazóns cando tes a sesión iniciada na mesma Conta de Brave en ambos os dispositivos.</translation>
+<translation id="5897101208018277582">Para enviar ligazóns, verifica a túa identidade. Podes enviar ligazóns cando tes a sesión iniciada na mesma Conta de Growser en ambos os dispositivos.</translation>
 <translation id="5148285448107770349">O contrasinal debe ter, como mínimo, 8 caracteres</translation>
 <translation id="5149602533174716626">Copia&amp;r fotograma de vídeo</translation>
 <translation id="5150254825601720210">Nome do servidor SSL de certificados Netscape</translation>
@@ -6067,7 +6067,7 @@ Podes asignarlles esta acción a varios interruptores.</translation>
 <translation id="5713158217420111469">Conectado con: <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Invertido</translation>
 <translation id="5714100381896040477">Limita o movemento na pantalla</translation>
-<translation id="8277434106940718633">O equipo de revisión non analizará nin as túas conversas con Gemini nin os teus datos de Brave Workspace. Ningunha desas dúas cousas se usará para mellorar os modelos de IA xenerativa. Gemini é unha IA e pode cometer erros. É posible que algúns contidos non sexan adecuados para todo o mundo.</translation>
+<translation id="8277434106940718633">O equipo de revisión non analizará nin as túas conversas con Gemini nin os teus datos de Growser Workspace. Ningunha desas dúas cousas se usará para mellorar os modelos de IA xenerativa. Gemini é unha IA e pode cometer erros. É posible que algúns contidos non sexan adecuados para todo o mundo.</translation>
 <translation id="5719854774000914513">Os sitios poden pedirche permiso para conectarse a dispositivos de interface humana</translation>
 <translation id="5720729194423017301">Atallos a sitios e buscadores</translation>
 <translation id="572155275267014074">Configuración de Android</translation>
@@ -7001,7 +7001,7 @@ Podes asignarlles esta acción a varios interruptores.</translation>
 <translation id="6464825623202322042">Este dispositivo</translation>
 <translation id="6465841119675156448">Sen Internet</translation>
 <translation id="6466258437571594570">Impídese que os sitios te interrompan cando soliciten enviar notificacións</translation>
-<translation id="1673835407889847350">Verifica a túa identidade para engadir contrasinais e acceder a eles en todos os dispositivos coa túa Conta de Brave</translation>
+<translation id="1673835407889847350">Verifica a túa identidade para engadir contrasinais e acceder a eles en todos os dispositivos coa túa Conta de Growser</translation>
 <translation id="6467230443178397264">Analizar <ph name="FILE_NAME"/></translation>
 <translation id="6467304607960172345">Optimizar vídeos a pantalla completa</translation>
 <translation id="6467377768028664108">O teu dispositivo (<ph name="DEVICE_TYPE"/>) poderá:</translation>
@@ -7014,7 +7014,7 @@ Podes asignarlles esta acción a varios interruptores.</translation>
 <translation id="6470823736074966819">Silenciar notificacións</translation>
 <translation id="6472893788822429178">Mostrar botón de inicio</translation>
 <translation id="6473315466413288899">Selecciona unha opción</translation>
-<translation id="6199773995438617867">Ver máis en Brave Calendar</translation>
+<translation id="6199773995438617867">Ver máis en Growser Calendar</translation>
 <translation id="6474401088838630457">Pregúntalle a Gemini máis sobre isto</translation>
 <translation id="6474498546677193336">Non se puido deixar de compartir este cartafol porque había unha aplicación usándoo. O cartafol deixará de compartirse cando Linux se apague.</translation>
 <translation id="6474884162850599008">Desconectar a conta de Google Drive</translation>
@@ -7195,7 +7195,7 @@ Quédanche # máis. O xestor de contrasinais de Growser recomenda que comprobes 
 <translation id="6613231539539868591">Datos persistentes</translation>
 <translation id="6613267708691765962">Analizando en busca de software malicioso...</translation>
 <translation id="6615455863669487791">Mostrar</translation>
-<translation id="5146630705831894319">Ofrecer o Tradutor de Brave para sitios web e PDF noutros idiomas</translation>
+<translation id="5146630705831894319">Ofrecer o Tradutor de Growser para sitios web e PDF noutros idiomas</translation>
 <translation id="6618013221808317456">Non permitir que os sitios usen a optimización de JavaScript</translation>
 <translation id="6618154741503063152">Produciuse un erro na carga. Non se permiten os anexos.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7549,7 +7549,7 @@ Quédanche # máis. O xestor de contrasinais de Growser recomenda que comprobes 
 <translation id="6871644448911473373">Dispositivo de resposta OCSP: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Idiomas…</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Cando esta opción estea activada, o Tradutor de Brave ofrecerase a traducir os distintos sitios e PDF ao teu idioma preferido. Tamén pode traducir sitios de forma automática.</translation>
+<translation id="5189979109199910058">Cando esta opción estea activada, o Tradutor de Growser ofrecerase a traducir os distintos sitios e PDF ao teu idioma preferido. Tamén pode traducir sitios de forma automática.</translation>
 <translation id="6873571253135628430">Cambiar os permisos do sitio</translation>
 <translation id="6874986444867497677">Non se puido completar a instalación. Téntao de novo ou pecha esta ventá.</translation>
 <translation id="6876155724392614295">Ciclismo</translation>
@@ -7836,7 +7836,7 @@ Quédanche # máis. O xestor de contrasinais de Growser recomenda que comprobes 
 <translation id="710224247908684995">Unha extensión desactivou Navegación segura</translation>
 <translation id="7102832101143475489">Esgotouse o tempo de espera da solicitude</translation>
 <translation id="7103944802169726298">PC e dispositivo de emisión na mesma rede wifi</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Subscrición a Brave</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Subscrición a Growser</translation>
 <translation id="7107609441453408294">Reproduce o mesmo audio por todos os altofalantes</translation>
 <translation id="7108338896283013870">Ocultar</translation>
 <translation id="7108419148561505648">Corrixe polo menos un campo antes de gardar a información</translation>
@@ -8207,7 +8207,7 @@ Quédanche # máis. O xestor de contrasinais de Growser recomenda que comprobes 
 <translation id="7395774987022469191">Pantalla completa</translation>
 <translation id="7396017167185131589">Os cartafoles compartidos aparecerán aquí</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> empezará a executarse cando se inicie o sistema e seguirá executándose en segundo plano aínda que peches todas as demais ventás de <ph name="PRODUCT_NAME"/>.</translation>
-<translation id="8572914900293297191">Os chats revísanse e úsanse para mellorar a IA de Brave. Gemini é unha IA e pode cometer erros. É posible que algúns contidos non sexan adecuados para todo o mundo. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Os chats revísanse e úsanse para mellorar a IA de Growser. Gemini é unha IA e pode cometer erros. É posible que algúns contidos non sexan adecuados para todo o mundo. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Personalizar sincronización</translation>
 <translation id="7399616692258236448">Bloquéanse automaticamente as solicitudes de localización para todos os sitios, excepto para os que permitas</translation>
 <translation id="7399802613464275309">Revisión de seguranza</translation>
@@ -8741,7 +8741,7 @@ Para quitar unha asignación, preme un interruptor ou unha tecla que teñan unha
 <translation id="7807711621188256451">Permitir sempre a <ph name="HOST"/> acceder á túa cámara</translation>
 <translation id="7810202088502699111">Bloqueáronse as ventás emerxentes nesta páxina.</translation>
 <translation id="7810367892333449285">Os datos introducidos deberían ter o formato <ph name="LPA_0"/>$<ph name="LPA_1"/>enderezo de SM-DP+<ph name="LPA_2"/>$<ph name="LPA_3"/>código de coincidencia opcional<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave creouse grazas ao proxecto de código aberto Brave e a outro software de <ph name="BEGIN_HIGHLIGHT"/>código aberto<ph name="END_HIGHLIGHT"/>.</translation>
+<translation id="5014491767627896944">Growser creouse grazas ao proxecto de código aberto Growser e a outro software de <ph name="BEGIN_HIGHLIGHT"/>código aberto<ph name="END_HIGHLIGHT"/>.</translation>
 <translation id="7811263553491007091">Téntao de novo ou selecciona máis abaixo un dos temas xerados anteriormente.</translation>
 <translation id="7811926937048662341">Fai clic co botón dereito aquí e selecciona Mostrar pestanas en vertical</translation>
 <translation id="7811986034759500329">Definir na configuración do sistema</translation>
@@ -8764,7 +8764,7 @@ Para quitar unha asignación, preme un interruptor ou unha tecla que teñan unha
 <translation id="7826039927887234077">Tema de IA recente <ph name="INDEX"/> de <ph name="SUBJECT"/>: Estado de ánimo: <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Compatibilidade con navegadores antigos: elementos internos</translation>
 <translation id="7826838152281937785">Pechar vista inferior</translation>
-<translation id="45690163731419633">Aplícanse as <ph name="BEGIN_LINK_TERMS"/>Condicións de Brave<ph name="END_LINK_TERMS"/> e o <ph name="BEGIN_LINK_PRIVACY"/>Aviso de privacidade das aplicacións Gemini<ph name="END_LINK_PRIVACY"/></translation>
+<translation id="45690163731419633">Aplícanse as <ph name="BEGIN_LINK_TERMS"/>Condicións de Growser<ph name="END_LINK_TERMS"/> e o <ph name="BEGIN_LINK_PRIVACY"/>Aviso de privacidade das aplicacións Gemini<ph name="END_LINK_PRIVACY"/></translation>
 <translation id="7828642077514646543">Produciuse un erro: non se puido descodificar o certificado</translation>
 <translation id="7830276128493844263">A localización está desactivada na configuración do sistema</translation>
 <translation id="7830833461614351956">Queres copiar <ph name="NUM_OF_FILES"/> ficheiros en <ph name="CLOUD_PROVIDER"/> para abrilos?</translation>
@@ -9635,7 +9635,7 @@ Mantén o ficheiro de clave nun lugar seguro, xa que o precisarás para crear no
 <translation id="850399339579925930">Dicionarios</translation>
 <translation id="850561044295157831">Máis información sobre Axúdame a escribir</translation>
 <translation id="8505669004895429027">Aforro reducido</translation>
-<translation id="869548515244800202">Subscrición a Brave</translation>
+<translation id="869548515244800202">Subscrición a Growser</translation>
 <translation id="8507052544157927817">Estilo Subliñado</translation>
 <translation id="8507227974644337342">Resolución da pantalla</translation>
 <translation id="8507443886219296894">Ocultar para este sitio</translation>
@@ -9775,7 +9775,7 @@ Mantén o ficheiro de clave nun lugar seguro, xa que o precisarás para crear no
 <translation id="8619803522055190423">Sombra paralela</translation>
 <translation id="8620206585293032550">Aspecto das pestanas inactivas</translation>
 <translation id="8621979332865976405">Compartir a pantalla completa</translation>
-<translation id="6089523089512126744">Modo IA da Busca de Brave e aplicacións conectadas</translation>
+<translation id="6089523089512126744">Modo IA da Busca de Growser e aplicacións conectadas</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Ler números de serie dos compoñentes e dispositivos ChromeOS</translation>
 <translation id="862542460444371744">&amp;Extensións</translation>
@@ -11330,17 +11330,17 @@ Consulta máis información sobre os datos que recompila Growser e por que o fai
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini en Growser</translation>
 <translation id="1975450474853317621">Abrir no navegador Growser</translation>
 <translation id="8516824290867275572">A túa conta non ten acceso a Gemini en Growser</translation>
-<translation id="1649234713894562345">Brave creouse grazas ao proxecto de código aberto Brave e a outro software de <ph name="BEGIN_HIGHLIGHT"/>código aberto<ph name="END_HIGHLIGHT"/>.</translation>
+<translation id="1649234713894562345">Growser creouse grazas ao proxecto de código aberto Growser e a outro software de <ph name="BEGIN_HIGHLIGHT"/>código aberto<ph name="END_HIGHLIGHT"/>.</translation>
 <translation id="870536819717176711">Cando decides compartir a pestana actual con Gemini, todo o contido, os elementos multimedia e o URL da pestana envíanse a Growser.</translation>
-<translation id="1130866111814048607">Cando se comparten pestanas, envíanse a Brave o contido das páxinas, o contido multimedia e os URL, que poden someterse a un proceso de revisión por motivos de seguranza.</translation>
-<translation id="7656790264713095385">Primeiro, activa a navegación automática de Brave neste dispositivo</translation>
+<translation id="1130866111814048607">Cando se comparten pestanas, envíanse a Growser o contido das páxinas, o contido multimedia e os URL, que poden someterse a un proceso de revisión por motivos de seguranza.</translation>
+<translation id="7656790264713095385">Primeiro, activa a navegación automática de Growser neste dispositivo</translation>
 <translation id="8572003230388132401">Chispa de Gemini pode usar a navegación automática de Growser no dispositivo para interactuar cos sitios e completar tarefas no teu nome. <ph name="LINK_BEGIN"/>Máis información<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Chispa de Gemini só pode usar a navegación automática no dispositivo se está activo e Growser está en execución.</translation>
 <translation id="1982892581799327835">Calquera persoa que teña acceso ao teu axente Chispa de Gemini podería controlar o teu navegador Growser.</translation>
 <translation id="6689939585896001516">Permitir que Growser navegue por ti</translation>
 <translation id="640233545778658570">Gemini en Growser usa a navegación automática para traballar nas túas pestanas e completar as tarefas que lle encomendes. <ph name="LINK_BEGIN"/>Máis información<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Máis información sobre a navegación automática de Brave</translation>
-<translation id="3570112771874223231">O contido da páxina e os URL que use Gemini durante unha tarefa compartiranse con Brave e poden revisarse por motivos de seguranza.</translation>
+<translation id="2740842679402949230">Máis información sobre a navegación automática de Growser</translation>
+<translation id="3570112771874223231">O contido da páxina e os URL que use Gemini durante unha tarefa compartiranse con Growser e poden revisarse por motivos de seguranza.</translation>
 <translation id="2314508080153323869">Gemini en Growser</translation>
 <translation id="1910632359330857071">Chatea con Gemini en Growser para obter respostas, extraer puntos clave e moito máis mentres navegas</translation>
 <translation id="2483218699324586641">Usa <ph name="FOCUS_TOGGLE_HOTKEY"/> para abrir Gemini en Growser</translation>
@@ -11359,8 +11359,8 @@ Consulta máis información sobre os datos que recompila Growser e por que o fai
     aplicación Growser Home<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Accede ás túas claves de acceso neste dispositivo co xestor de contrasinais de Growser</translation>
 <translation id="2364302372598204515">Non estás usando unha Conta de Growser. Os elementos que gardases en Growser non estarán dispoñibles noutros dispositivos.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Subscrición a Brave</translation>
-<translation id="850632091665381275">Subscrición a Brave</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Subscrición a Growser</translation>
+<translation id="850632091665381275">Subscrición a Growser</translation>
 <translation id="6710172959248731469">Configuración dos servizos de Growser</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{Hai 1 elemento gardado só neste dispositivo. Para usalo noutros, gárdao na túa Conta de Growser. Esta acción tamén eliminará todos os duplicados do almacenamento.}other{Hai {ITEM_COUNT} elementos gardados só neste dispositivo. Para usalos noutros, gárdaos na túa Conta de Growser. Esta acción tamén eliminará todos os duplicados do almacenamento.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{Hai 1 contrasinal gardado só neste dispositivo. Para usalo noutros, gárdao na túa Conta de Growser. Esta acción tamén eliminará todos os duplicados do almacenamento.}other{Hai {PASSWORD_COUNT} contrasinais gardados só neste dispositivo. Para usalos noutros, gárdaos na túa Conta de Growser. Esta acción tamén eliminará todos os duplicados do almacenamento.}}</translation>
@@ -11374,8 +11374,8 @@ Consulta máis información sobre os datos que recompila Growser e por que o fai
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{Hai 1 marcador e outros elementos gardados só neste dispositivo. Para usalos noutros dispositivos, gárdaos na túa Conta de Growser.}other{Hai {BOOKMARK_COUNT} marcadores e outros elementos gardados só neste dispositivo. Para usalos noutros dispositivos, gárdaos na túa Conta de Growser.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{Hai 1 elemento gardado só neste dispositivo. Para usalo noutros, <ph name="BEGIN_LINK"/>gárdao na túa Conta de Growser<ph name="END_LINK"/>.}other{Hai {ITEM_COUNT} elementos gardados só neste dispositivo. Para usalos noutros aparellos, <ph name="BEGIN_LINK"/>gárdaos na túa Conta de Growser<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Usa a túa conta de Growser ou crea unha nova</translation>
-<translation id="1896353439080510710">Os chats revísanse e úsanse para mellorar a IA de Brave. Gemini é unha IA e pode cometer erros. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Os chats revísanse e úsanse para mellorar a IA de Brave. Gemini é unha IA e pode cometer erros. É posible que algúns contidos non sexan adecuados para todo o mundo. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Os chats revísanse e úsanse para mellorar a IA de Growser. Gemini é unha IA e pode cometer erros. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Os chats revísanse e úsanse para mellorar a IA de Growser. Gemini é unha IA e pode cometer erros. É posible que algúns contidos non sexan adecuados para todo o mundo. Podes <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>xestionar a túa actividade<ph name="END_LINK_MANAGE_ACTIVITY"/>, incluída a información sobre a túa localización. <ph name="BEGIN_LINK_LEARN_MORE"/>Máis información acerca das túas escollas<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Esta extensión está gardada na túa Conta de Growser, pero poden eliminarse os datos que estean gardados só neste dispositivo}other{Estas extensións están gardadas na túa Conta de Growser, pero poden eliminarse os datos que estean gardados só neste dispositivo}}</translation>
 <translation id="3523789730715594198">Podes deter a sincronización cando queiras na configuración. Growser pode personalizar a Busca e outros servizos en función do teu historial.</translation>
 <translation id="8231595707224857577">A túa organización desactivou a opción de gardar pestanas na túa Conta de Growser</translation>
@@ -11413,7 +11413,7 @@ Consulta máis información sobre os datos que recompila Growser e por que o fai
 <translation id="1024884937839269099">Cando teñas a sesión iniciada, é posible que se garden na túa Conta de Growser <ph name="BEGIN_LINK_GOOGLE"/>outros datos da túa actividade<ph name="END_LINK_GOOGLE"/>. Podes eliminalos en calquera momento.</translation>
 <translation id="6533315466883598769">Usar Tradutor de Growser</translation>
 <translation id="6010651352520077187">Cando esta opción estea activada, o Tradutor de Growser ofrecerase a traducir os distintos sitios ao teu idioma preferido. Tamén pode traducir sitios de forma automática.</translation>
-<translation id="6873499199714317035">Cando esta opción estea activada, o Tradutor de Brave ofrecerase a traducir os distintos sitios e PDF ao teu idioma preferido. Tamén pode traducir sitios de forma automática.</translation>
+<translation id="6873499199714317035">Cando esta opción estea activada, o Tradutor de Growser ofrecerase a traducir os distintos sitios e PDF ao teu idioma preferido. Tamén pode traducir sitios de forma automática.</translation>
 <translation id="5911030830365207728">Tradutor de Growser</translation>
 <translation id="7458168200501453431">Utiliza o mesmo corrector ortográfico que na Busca de Growser. O texto que escribas no navegador enviarase a Growser.</translation>
 <translation id="8972513834460200407">Consulta ao administrador da rede para asegurarte de que o firewall non estea bloqueando as descargas dos servidores de Growser.</translation>
@@ -11459,7 +11459,7 @@ Consulta máis información sobre os datos que recompila Growser e por que o fai
 <translation id="3293574207873361017">Xestionar a túa Conta de Growser</translation>
 <translation id="6901130673208235020">As buscas que fagas no historial de navegación enviaranse a Growser xunto co contido das páxinas con mellores resultados e os resultados dos modelos xerados</translation>
 <translation id="3178434360326457238">Cando navegas polos sitios, o contido das súas páxinas está encriptado e gárdase no teu dispositivo. Isto pode afectar ao rendemento de Growser</translation>
-<translation id="8622145666696249878">Modo IA da Busca de Brave e aplicacións conectadas</translation>
+<translation id="8622145666696249878">Modo IA da Busca de Growser e aplicacións conectadas</translation>
 <translation id="2760679829473121490">Mostrar notificacións do sistema sobre consellos e funcións de Growser</translation>
 <translation id="6713316345564743478">Para comprobar os contrasinais vulnerados, inicia sesión na túa Conta de Growser</translation>
 <translation id="1342886103232377846">Para comprobar os contrasinais vulnerados, vai ao xestor de contrasinais de Growser</translation>
@@ -11522,7 +11522,7 @@ Consulta máis información sobre os datos que recompila Growser e por que o fai
 <translation id="1095879482467973146">Xestor de contrasinais de Growser na Web</translation>
 <translation id="1368798504801939187">Se queres consultar os teus contrasinais mesmo cando non uses Growser ou Android, podes facelo iniciando sesión en <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
 <translation id="829923460755755423">Engade un atallo ao xestor de contrasinais de Growser</translation>
-<translation id="7244677273667272006">Verifica a túa identidade para engadir contrasinais e acceder a eles en todos os dispositivos coa túa Conta de Brave</translation>
+<translation id="7244677273667272006">Verifica a túa identidade para engadir contrasinais e acceder a eles en todos os dispositivos coa túa Conta de Growser</translation>
 <translation id="8189517459248805166">O contrasinal de <ph name="WEBSITE"/> está gardado neste dispositivo e na túa Conta de Growser. De onde queres eliminalo?</translation>
 <translation id="9101265711096405922">Da túa Conta de Growser</translation>
 <translation id="927421426408921503">Queres transferir os contrasinais gardados á túa Conta de Growser?</translation>
@@ -11633,7 +11633,7 @@ Podes xestionar a configuración desde o menú da tarxeta ou ver máis opcións 
        <ph name="BREAK"/>
        <ph name="BREAK"/>
        Podes xestionar a configuración desde o menú da tarxeta ou ver máis opcións en Personalizar Growser.</translation>
-<translation id="6474021817475285003">Ver máis en Brave Calendar</translation>
+<translation id="6474021817475285003">Ver máis en Growser Calendar</translation>
 <translation id="9066394310994446814">Estás vendo este elemento debido á túa actividade anterior nos servizos de Growser. Podes ver os teus datos, eliminalos e cambiar a configuración en <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
 <ph name="BREAK"/>
 <ph name="BREAK"/>
@@ -11664,7 +11664,7 @@ Podes xestionar a configuración desde o menú da tarxeta ou ver máis opcións 
 <translation id="6868193750403948178">Personalizar Growser</translation>
 <translation id="5009064339929592579">Queres gardar este marcador nun cartafol da túa Conta de Growser?</translation>
 <translation id="7400528739136719497">Pode que algunhas voces de Growser non estean dispoñibles agora mesmo</translation>
-<translation id="4857677595331912231">O contido e o URL da pestana actual compártense con Brave para ofrecerche respostas máis relevantes. Podes engadir ou quitar pestanas mentres navegas.</translation>
+<translation id="4857677595331912231">O contido e o URL da pestana actual compártense con Growser para ofrecerche respostas máis relevantes. Podes engadir ou quitar pestanas mentres navegas.</translation>
 <translation id="5639212636098910819">Permanecer en Growser</translation>
 <translation id="3252169590975855820">Podes acceder a el no xestor de contrasinais de Growser</translation>
 <translation id="3843323136102787632">Descarga Growser con este código QR e inicia sesión na túa Conta de Growser.</translation>
@@ -11711,7 +11711,7 @@ Quédanche # máis. O xestor de contrasinais de Growser recomenda que comprobes 
 <translation id="1162630940779651724">Para enviar esta pestana a outro dispositivo, inicia sesión en Growser nos dous dispositivos</translation>
 <translation id="5388608738812110907">Para enviar esta pestana a outro dispositivo, inicia sesión en Growser nel</translation>
 <translation id="4007679133627124999">Para enviar ligazóns entre dispositivos, comproba que ambos teñan a sesión iniciada na mesma conta de Growser.</translation>
-<translation id="2377999415409519333">Para enviar ligazóns, verifica a túa identidade. Podes enviar ligazóns cando tes a sesión iniciada na mesma Conta de Brave en ambos os dispositivos.</translation>
+<translation id="2377999415409519333">Para enviar ligazóns, verifica a túa identidade. Podes enviar ligazóns cando tes a sesión iniciada na mesma Conta de Growser en ambos os dispositivos.</translation>
 <translation id="4986706507552097681">Sempre podes escoller na configuración o contido que queres sincronizar. Growser pode personalizar a Busca e outros servizos en función do teu historial.</translation>
 <translation id="8002662358897231821">Inicia sesión para  ter os marcadores, o historial, os contrasinais e o resto da túa configuración en todos os teus dispositivos. Tamén se iniciará sesión automaticamente nos teus servizos de Growser.</translation>
 <translation id="3128296144259620504">Un software de probas automatizadas está controlando Growser</translation>

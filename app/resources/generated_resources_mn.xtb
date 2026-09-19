@@ -186,7 +186,7 @@
 <translation id="1130116586186908674">Хуваасан харагдах байдал үүсгэх</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - <ph name="GROUP_NAME"/> бүлгийн хэсэг</translation>
 <translation id="1130676589211693127">Баруун талын батарейн түвшин <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">Табуудыг хуваалцахад тэдгээрийн хуудасны контент, медиа, URL-г Brave рүү илгээдэг бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
+<translation id="1412403201555978627">Табуудыг хуваалцахад тэдгээрийн хуудасны контент, медиа, URL-г Growser рүү илгээдэг бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
 <translation id="1133418583142946603">Одоогийн таб нэмэх</translation>
 <translation id="1133751489735776037">Хулганыг гурав товшино уу</translation>
 <translation id="1136712381129578788">ПИН-г хэт олон удаа буруу оруулсан тул энэ аюулгүй байдлын түлхүүрийг түгжлээ. Үүний түгжээг тайлахын тулд салгаад дахин залгана уу.</translation>
@@ -376,7 +376,7 @@
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Зогс</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>Дэмжсэн холбооснууд<ph name="END_LINK"/>-ыг нээж байна</translation>
-<translation id="7823526956728613125">Хайлтын үйлчилгээ болон Brave Драйв зэрэг Brave Workspace-н аппуудын хоорондох холболтыг удирдаарай</translation>
+<translation id="7823526956728613125">Хайлтын үйлчилгээ болон Growser Драйв зэрэг Growser Workspace-н аппуудын хоорондох холболтыг удирдаарай</translation>
 <translation id="1274997165432133392">Cookies болон бусад цахим хуудсын мэдээлэл</translation>
 <translation id="1275936815032730048">эхлүүлэгч + баруун сум</translation>
 <translation id="1275963833368139883">Таныг хөтчийн түүхээсээ хайхад хариулт, хайлтын илэрцүүдийг хуудасны контентод тулгуурладаг. Энэ нь танд сайжруулсан илэрцийг өгнө</translation>
@@ -654,7 +654,7 @@
 <translation id="1508931164824684991">Сайтууд JavaScript ашиглах боломжтой</translation>
 <translation id="1509163368529404530">&amp;Бүлгийг сэргээх</translation>
 <translation id="1509281256533087115">Дурын <ph name="DEVICE_NAME_AND_VENDOR"/>-д USB ашиглан нэвтрэх</translation>
-<translation id="2825615584808054779">Таны Gemini-тай хийсэн харилцан яриа, Brave Workspace-н өгөгдлийн аль алиныг нь хянахгүй бөгөөд үүсгэгч ХОУ-ы загваруудыг сайжруулахад ашиглахгүй. Gemini бол ХОУ бөгөөд алдаа гаргаж болно.</translation>
+<translation id="2825615584808054779">Таны Gemini-тай хийсэн харилцан яриа, Growser Workspace-н өгөгдлийн аль алиныг нь хянахгүй бөгөөд үүсгэгч ХОУ-ы загваруудыг сайжруулахад ашиглахгүй. Gemini бол ХОУ бөгөөд алдаа гаргаж болно.</translation>
 <translation id="1510238584712386396">Launcher</translation>
 <translation id="1510341833810331442">Сайтуудад таны төхөөрөмжид өгөгдөл хадгалахыг зөвшөөрөөгүй</translation>
 <translation id="1510882959204224895">Цонхонд нээх</translation>
@@ -748,7 +748,7 @@
 <translation id="1581962803218266616">Хайгч дотор харуулах</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>]-г устгах</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/>-г дотоодод боловсруулдаг бөгөөд энэ нь офлайнаар ажилладаг</translation>
-<translation id="491276955533054201">Эхлээд энэ төхөөрөмжид Brave-н автомат хөтчийг асаана уу</translation>
+<translation id="491276955533054201">Эхлээд энэ төхөөрөмжид Growser-н автомат хөтчийг асаана уу</translation>
 <translation id="1587275751631642843">&amp;JavaScript системийн удирдлагын мессеж</translation>
 <translation id="1588438908519853928">Хэвийн</translation>
 <translation id="1588772269240419305">Лого, нэрийн шинэчлэлтийг хянах</translation>
@@ -1158,7 +1158,7 @@
 <translation id="1892341345406963517">Сайн байна уу <ph name="PARENT_NAME"/></translation>
 <translation id="1892453608039100484">1. Доорх <ph name="BUTTON_LABEL"/> дээр товшино уу Windows-н тохиргоондоо <ph name="BUTTON_2"/> дээр товшино уу</translation>
 <translation id="1895658205118569222">Унтраах</translation>
-<translation id="1189523243806849236">Чатыг Brave-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Чатыг Growser-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Сайн нууц үг ашиглана уу</translation>
 <translation id="1897860317037652061">Скан амжилтгүй боллоо</translation>
 <translation id="1898804291554630487">Энэ хуудасны талаар асуух</translation>
@@ -1167,7 +1167,7 @@
 <translation id="1901213235765457754">Админаасаа энэ аппыг шинэчлэхийг хүснэ үү</translation>
 <translation id="1901303067676059328">Бүгдийг сонго &amp;</translation>
 <translation id="1901760057081700494">Цагийн бүсийг одоогоор <ph name="TIME_ZONE_ENTRY"/> болгож тохируулсан. Цагийн бүсийг автоматаар шинэчлэхийн тулд <ph name="BEGIN_LINK"/>системийн байршлын хандалтыг асаана уу<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Танай гэрийн хаяг танд илүү хамааралтай Хайлтын илэрц харах, Brave Газрын зураг дахь илүү нарийвчилсан чиглэл авах зэрэг Brave-н үйлчилгээн дээр зүйлсийг хийж гүйцэтгэхэд туслах боломжтой. Та өөрийн <ph name="USERNAME"/> <ph name="BEGIN_LINK"/>Brave Бүртгэл<ph name="END_LINK"/> дэх хаягаа засах, устгах боломжтой.</translation>
+<translation id="3930197956137872864">Танай гэрийн хаяг танд илүү хамааралтай Хайлтын илэрц харах, Growser Газрын зураг дахь илүү нарийвчилсан чиглэл авах зэрэг Growser-н үйлчилгээн дээр зүйлсийг хийж гүйцэтгэхэд туслах боломжтой. Та өөрийн <ph name="USERNAME"/> <ph name="BEGIN_LINK"/>Growser Бүртгэл<ph name="END_LINK"/> дэх хаягаа засах, устгах боломжтой.</translation>
 <translation id="6893464351226208429">Таны зочилсон URL-уудыг Growser Бүртгэлд тань хадгалсан.</translation>
 <translation id="190530012637606145">Танд хувийн дотоод сүлжээ зэрэг бүх аюултай холболтын талаар сануулна</translation>
 <translation id="1906181697255754968">Сайтууд ихэвчлэн таны ажлыг автоматаар хадгалах зэрэг онцлогуудад зориулж таны төхөөрөмж дээрх файл болон фолдерт ханддаг</translation>
@@ -1540,7 +1540,7 @@
 <translation id="2198625180564913276">Профайл нэмж байна. Үүнд хэдэн минут шаардлагатай байж магадгүй.</translation>
 <translation id="2198712775285959645">Засах</translation>
 <translation id="2199298570273670671">Алдаа</translation>
-<translation id="2798272130984183944">Brave таны төхөөрөмж дээр шууд ажилладаг ХОУ-ы загваруудыг ашиглах эсэхийг сонгоно уу</translation>
+<translation id="2798272130984183944">Growser таны төхөөрөмж дээр шууд ажилладаг ХОУ-ы загваруудыг ашиглах эсэхийг сонгоно уу</translation>
 <translation id="2200094388063410062">Имэйл</translation>
 <translation id="2200781749203116929">ChromeOS системийн лог</translation>
 <translation id="2202391868799679245">Гарын товчлолыг асаах</translation>
@@ -1620,7 +1620,7 @@
 <translation id="225716114209817872">Дээд зэрэг</translation>
 <translation id="5642482119439119644">Бусад төхөөрөмжөөсөө табуудаа авахын тулд өөрийгөө мөн болохыг баталгаажуулна уу. Та хүссэн үедээ тохиргооноос синк хийхийг зогсоох боломжтой. Growser таны түүхэд тулгуурлан Хайлт болон бусад үйлчилгээг хувийн болгож магадгүй.</translation>
 <translation id="22614517036276112">Энэ документ эсвэл таны төхөөрөмж байгууллагын тань аюулгүй байдлын зарим бодлогод нийцэхгүй байна. Юуг засах шаардлагатай талаар админаасаа тодруулна уу.</translation>
-<translation id="1829264724820495616">Танай ажлын хаяг танд илүү хамааралтай Хайлтын илэрц харах, Brave Газрын зураг дахь илүү нарийвчилсан чиглэл авах зэрэг Brave-н үйлчилгээн дээр зүйлсийг хийж гүйцэтгэхэд туслах боломжтой. Та өөрийн <ph name="USERNAME"/> <ph name="BEGIN_LINK"/>Brave Бүртгэл<ph name="END_LINK"/> дэх хаягаа засах, устгах боломжтой.</translation>
+<translation id="1829264724820495616">Танай ажлын хаяг танд илүү хамааралтай Хайлтын илэрц харах, Growser Газрын зураг дахь илүү нарийвчилсан чиглэл авах зэрэг Growser-н үйлчилгээн дээр зүйлсийг хийж гүйцэтгэхэд туслах боломжтой. Та өөрийн <ph name="USERNAME"/> <ph name="BEGIN_LINK"/>Growser Бүртгэл<ph name="END_LINK"/> дэх хаягаа засах, устгах боломжтой.</translation>
 <translation id="2262477216570151239">Давтахаас өмнөх хоцролт</translation>
 <translation id="2263371730707937087">Дэлгэцийг сэргээх хурд</translation>
 <translation id="7829329302663082098">Таны санал хүсэлт бидэнд Growser Cast-г сайжруулахад тусалдаг бөгөөд үнэ цэнэтэй.
@@ -1766,7 +1766,7 @@
 <translation id="2373499590298659902">Хулганын товчийг удаан дарахын тулд “0”-г ашиглана уу</translation>
 <translation id="2373666622366160481">Цаасанд багтаах</translation>
 <translation id="2375406435414127095">Утсандаа холбогдох</translation>
-<translation id="6612559367203670996">Brave хуваалцсан табуудын контент, URL-г ашигладаг. Таны одоогийн табыг шинэ чатуудад хуваалцдаг. Та энэ тохиргоог хүссэн үедээ өөрчлөх боломжтой.</translation>
+<translation id="6612559367203670996">Growser хуваалцсан табуудын контент, URL-г ашигладаг. Таны одоогийн табыг шинэ чатуудад хуваалцдаг. Та энэ тохиргоог хүссэн үедээ өөрчлөх боломжтой.</translation>
 <translation id="2376056713414548745">Чангаар унших</translation>
 <translation id="2376122016044804363">Түр санах ойд хуулсан талаарх баталгаажуулалт</translation>
 <translation id="2377667304966270281">Hard Faults</translation>
@@ -3333,7 +3333,7 @@
 <translation id="3569614820047645079">Таны Миний драйвын файлуудыг Chromebook-тэй тань автоматаар синк хийх бөгөөд ингэснээр та тэдгээрт интернэт холболтгүйгээр хандах боломжтой.</translation>
 <translation id="3569617221227793022">Цагийн бүсийг одоогоор <ph name="TIME_ZONE_ENTRY"/> болгож тохируулсан. Энэ тохиргоог танай администратор удирддаг.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> дараах файл болон фолдерыг үзэх боломжтой</translation>
-<translation id="4062501938325597704">Gemini-н даалгаврын үеэр ашигладаг хуудасны контент, URL-г Brave-тэй хуваалцах бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
+<translation id="4062501938325597704">Gemini-н даалгаврын үеэр ашигладаг хуудасны контент, URL-г Growser-тэй хуваалцах бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
 <translation id="3571734092741541777">Тохиргоо хийх.</translation>
 <translation id="3575121482199441727">Энэ сайтад зориулж зөвшөөрөх</translation>
 <translation id="3575224072358507281">Measurement Lab-н нууцлалын бодлогын (measurementlab.net/privacy) дагуу түүнд зориулж IP хаяг, сүлжээний хэмжилтийн үр дүнг цуглуулах</translation>
@@ -3521,7 +3521,7 @@
 <translation id="3708295717182051206">Хаалттай тайлбарууд</translation>
 <translation id="3708684582558000260">Хаасан сайтуудад өгөгдөл илгээж эсвэл хүлээн авч дуусгахыг бүү зөвшөөр</translation>
 <translation id="3709244229496787112">Файлыг татаж дуусахаас өмнө веб хөтөч хаагдсан.</translation>
-<translation id="3710438437470197252">Brave Драйвд илүү ихийг харах</translation>
+<translation id="3710438437470197252">Growser Драйвд илүү ихийг харах</translation>
 <translation id="3710501561113687889">Үргэлжлүүлэхийн тулд <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> таны <ph name="FIELDS_STRING"/>-г энэ сайттай хуваалцана.</translation>
 <translation id="3711931198657368127"><ph name="URL"/>-г буулгаад, очих</translation>
 <translation id="3711945201266135623">Хэвлэх серверээс <ph name="NUM_PRINTERS"/> хэвлэгч олдлоо</translation>
@@ -5011,7 +5011,7 @@
 <translation id="485480310608090163">Бусад тохиргоо болон зөвшөөрөл</translation>
 <translation id="4857304314344645169">Аливаа асуудлын дэлгэрэнгүй тайлбарыг харна уу</translation>
 <translation id="1913048435257025864">Өмнөх хуудасны талаар Growser-с асуух: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Танд илүү хамааралтай хариулт өгөхийн тулд таны одоогийн табын контент, URL-г Brave-тэй хуваалцдаг. Та үзэх явцдаа таб нэмэх, хасах боломжтой.</translation>
+<translation id="228735844055480091">Танд илүү хамааралтай хариулт өгөхийн тулд таны одоогийн табын контент, URL-г Growser-тэй хуваалцдаг. Та үзэх явцдаа таб нэмэх, хасах боломжтой.</translation>
 <translation id="485806788160414322">Медиаг тоглуулах эсвэл түр зогсоох</translation>
 <translation id="4858913220355269194">Fritz</translation>
 <translation id="4860012864737017059">Саяхны таб</translation>
@@ -5077,7 +5077,7 @@
 <translation id="4895799941222633551">&amp;Товчлол үүсгэх...</translation>
 <translation id="4898913189644355814">Сайт таны илүүд үзсэн хэл эсвэл худалдан авахыг хүссэн зүйлсийг хадгалж магадгүй. Энэ мэдээлэл сайт болон түүний дэд домэйнүүдэд боломжтой.</translation>
 <translation id="4899052647152077033">Урвуу өнгө</translation>
-<translation id="4899813415889597597">Таны Brave Драйвын бүртгэлтэй холбогдож чадсангүй</translation>
+<translation id="4899813415889597597">Таны Growser Драйвын бүртгэлтэй холбогдож чадсангүй</translation>
 <translation id="490031510406860025">Энэ сайтад зөвшөөрөөгүй</translation>
 <translation id="490051679772058907"><ph name="REFRESH_RATE"/> Гц - сүлжилдсэн</translation>
 <translation id="4900652253009739885">“Сонгох” үйлдэлд оноосон цорын ганц сэлгүүрийг хасах боломжгүй. <ph name="RESPONSE"/>-н тулд дурын товч дээр дарна уу.</translation>
@@ -5346,7 +5346,7 @@
 <translation id="5112577000029535889">&amp; Хөгжүүлэгч хэрэгслүүд</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 файлыг зөөсөн}other{{NUM_OF_FILES} файлыг зөөсөн}}</translation>
 <translation id="511313294362309725">Хурдан холбохыг асаах</translation>
-<translation id="6409962091529734959">Brave-н автомат хөтчийн талаар нэмэлт мэдээлэл авах</translation>
+<translation id="6409962091529734959">Growser-н автомат хөтчийн талаар нэмэлт мэдээлэл авах</translation>
 <translation id="51143538739122961">Аюулгүй байдлын түлхүүрээ залгаад дээр нь хүрнэ үү</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Аудиог ... хэлбэрээр хадгалах</translation>
@@ -5389,7 +5389,7 @@
 <translation id="5146235736676876345">Өөрийнхийгөө сонгоно уу</translation>
 <translation id="5146896637028965135">Системийн дуу хоолой</translation>
 <translation id="5147113439721488265">Зөвлөмж</translation>
-<translation id="5897101208018277582">Холбоос илгээхийн тулд өөрийгөө мөн болохыг баталгаажуулна уу. Хоёр төхөөрөмж дээрээ ижил Brave Бүртгэлээр нэвтэрснээр та холбоос илгээх боломжтой.</translation>
+<translation id="5897101208018277582">Холбоос илгээхийн тулд өөрийгөө мөн болохыг баталгаажуулна уу. Хоёр төхөөрөмж дээрээ ижил Growser Бүртгэлээр нэвтэрснээр та холбоос илгээх боломжтой.</translation>
 <translation id="5148285448107770349">Нууц үг багадаа 8 тэмдэгттэй байх ёстой</translation>
 <translation id="5149602533174716626">Видеоны фреймийг хуулах</translation>
 <translation id="5150254825601720210">Netscape Certificate SSL Серверийн нэр</translation>
@@ -6078,7 +6078,7 @@
 <translation id="5713158217420111469"><ph name="DEVICE"/>-д холбогдсон</translation>
 <translation id="5713988532993992900">Урвуулсан</translation>
 <translation id="5714100381896040477">Дэлгэц дээрх хөдөлгөөнийг хязгаарлах</translation>
-<translation id="8277434106940718633">Таны Gemini-тай хийсэн харилцан яриа, Brave Workspace-н өгөгдлийн аль алиныг нь хянахгүй бөгөөд үүсгэгч ХОУ-ы загваруудыг сайжруулахад ашиглахгүй. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Зарим контент зарим хүнд тохиромжгүй байж болно.</translation>
+<translation id="8277434106940718633">Таны Gemini-тай хийсэн харилцан яриа, Growser Workspace-н өгөгдлийн аль алиныг нь хянахгүй бөгөөд үүсгэгч ХОУ-ы загваруудыг сайжруулахад ашиглахгүй. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Зарим контент зарим хүнд тохиромжгүй байж болно.</translation>
 <translation id="5719854774000914513">Сайтууд HID төхөөрөмжүүдэд холбогдохыг хүсэх боломжтой</translation>
 <translation id="5720729194423017301">Сайт, хайлтын системүүдийн товчлол</translation>
 <translation id="572155275267014074">Андройдын тохиргоо</translation>
@@ -7012,7 +7012,7 @@
 <translation id="6464825623202322042">Энэ төхөөрөмж</translation>
 <translation id="6465841119675156448">Интернэтгүйгээр</translation>
 <translation id="6466258437571594570">Таныг мэдэгдэл илгээхийг хүсэх үед сайтуудыг танд саад болохыг блоклоно</translation>
-<translation id="1673835407889847350">Нууц үгнүүд нэмж, тэдгээрийг Brave Бүртгэлээрээ нэвтэрсэн бүх төхөөрөмж дээр авахын тулд өөрийгөө мөн болохыг баталгаажуулна уу</translation>
+<translation id="1673835407889847350">Нууц үгнүүд нэмж, тэдгээрийг Growser Бүртгэлээрээ нэвтэрсэн бүх төхөөрөмж дээр авахын тулд өөрийгөө мөн болохыг баталгаажуулна уу</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/>-г скан хийх</translation>
 <translation id="6467304607960172345">Бүтэн дэлгэцийн видеонуудыг оновчлох</translation>
 <translation id="6467377768028664108">Таны <ph name="DEVICE_TYPE"/> дараа нь дараахыг хийх боломжтой:</translation>
@@ -7025,7 +7025,7 @@
 <translation id="6470823736074966819">Мэдэгдлийн дууг хаах</translation>
 <translation id="6472893788822429178">"Нүүр хуудас" хэсгийн товчийг харуулна уу</translation>
 <translation id="6473315466413288899">Шалтгааныг сонгох</translation>
-<translation id="6199773995438617867">Brave Календарьд илүү ихийг харах</translation>
+<translation id="6199773995438617867">Growser Календарьд илүү ихийг харах</translation>
 <translation id="6474401088838630457">Үүний талаар Gemini-с илүү ихийг асуух</translation>
 <translation id="6474498546677193336">Энэ фолдерыг апп ашиглаж байгаа тул хуваалцсаныг болиулж чадсангүй. Linux-г дараа нь унтраах үед фолдерын хуваалцсаныг болиулна.</translation>
 <translation id="6474884162850599008">Google Drive хаягийг үл холбох</translation>
@@ -7206,7 +7206,7 @@
 <translation id="6613231539539868591">Хадгалсан өгөгдөл</translation>
 <translation id="6613267708691765962">Хортой программыг скан хийж байна...</translation>
 <translation id="6615455863669487791">Надад үзүүлнэ үү</translation>
-<translation id="5146630705831894319">Бусад хэлээрх вебсайт, PDF-д Brave Орчуулагчийг санал болгох</translation>
+<translation id="5146630705831894319">Бусад хэлээрх вебсайт, PDF-д Growser Орчуулагчийг санал болгох</translation>
 <translation id="6618013221808317456">Сайтад JavaScript-н оновчлолыг ашиглахыг бүү зөвшөөр</translation>
 <translation id="6618154741503063152">Байршуулах боломжгүй. Хавсралтыг зөвшөөрдөггүй.</translation>
 <translation id="6619058681307408113">Шугам хэвлэгчийн Дэмон (LPD)</translation>
@@ -7560,7 +7560,7 @@
 <translation id="6871644448911473373">OCSP Хариу өгөгч: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Хэлнүүд...</translation>
 <translation id="6873156759937047811">ПИН:</translation>
-<translation id="5189979109199910058">Асаахад Brave Орчуулагч сайт, PDF-г таны сонгосон хэл рүү орчуулахыг санал болгоно. Мөн сайтуудыг автоматаар орчуулах боломжтой.</translation>
+<translation id="5189979109199910058">Асаахад Growser Орчуулагч сайт, PDF-г таны сонгосон хэл рүү орчуулахыг санал болгоно. Мөн сайтуудыг автоматаар орчуулах боломжтой.</translation>
 <translation id="6873571253135628430">Сайтын зөвшөөрлийг өөрчлөх</translation>
 <translation id="6874986444867497677">Суулгах явцыг гүйцээж чадсангүй. Дахин оролдох эсвэл энэ цонхыг хаана уу.</translation>
 <translation id="6876155724392614295">Дугуй</translation>
@@ -7847,7 +7847,7 @@
 <translation id="710224247908684995">Өргөтгөл Safe Browsing-г унтраасан</translation>
 <translation id="7102832101143475489">Хүсэлтийн хугацаа хэтэрлээ</translation>
 <translation id="7103944802169726298">PC болон дамжуулагч төхөөрөмж ижил Wi-Fi сүлжээнд холбогдсон</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave-н гишүүнчлэл</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser-н гишүүнчлэл</translation>
 <translation id="7107609441453408294">Бүх чанга яригчаар ижил аудио тоглуулах</translation>
 <translation id="7108338896283013870">Нуух</translation>
 <translation id="7108419148561505648">Хадгалахаасаа өмнө дор хаяж нэг талбар бөглөнө үү</translation>
@@ -8218,7 +8218,7 @@
 <translation id="7395774987022469191">Бүтэн дэлгэц</translation>
 <translation id="7396017167185131589">Хуваалцсан фолдерууд энд харагдана</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> программыг систем эхлэхэд эхлүүлээд бусад <ph name="PRODUCT_NAME"/> цонхууд хаагдсан байсан ч программыг үргэлжлүүл.</translation>
-<translation id="8572914900293297191">Чатыг Brave-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Зарим контент зарим хүнд тохиромжгүй байж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Чатыг Growser-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Зарим контент зарим хүнд тохиромжгүй байж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Синк хийхийг өөрчлөх</translation>
 <translation id="7399616692258236448">Байршлын хүсэлтүүдийг таны зөвшөөрснөөс бусад бүх сайтад автоматаар блоклодог</translation>
 <translation id="7399802613464275309">Аюулгүй байдлын шалгалт</translation>
@@ -8752,7 +8752,7 @@
 <translation id="7807711621188256451"><ph name="HOST"/>-д таны камерт нэвтрэх зөвшөөрөл олгох</translation>
 <translation id="7810202088502699111">Зар сурталчилгааг энэ хуудсанд хориглосон байна.</translation>
 <translation id="7810367892333449285">Таны оролт <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ хаяг<ph name="LPA_2"/>$<ph name="LPA_3"/>нэмэлт таарах ID<ph name="LPA_4"/> гэсэн форматтай байх ёстой</translation>
-<translation id="5014491767627896944">Brave-г Brave нээлттэй эх кодын төсөл болон бусад <ph name="BEGIN_HIGHLIGHT"/>нээлттэй эх кодын<ph name="END_HIGHLIGHT"/> программ хангамжаар бүтээсэн.</translation>
+<translation id="5014491767627896944">Growser-г Growser нээлттэй эх кодын төсөл болон бусад <ph name="BEGIN_HIGHLIGHT"/>нээлттэй эх кодын<ph name="END_HIGHLIGHT"/> программ хангамжаар бүтээсэн.</translation>
 <translation id="7811263553491007091">Дахин оролдох эсвэл өмнө нь доор үүсгэсэн загваруудаас нэгийг сонгоно уу.</translation>
 <translation id="7811926937048662341">Энд хулганын баруун талыг товшоод, “Табыг босоогоор харуулах” гэснийг сонгоно уу</translation>
 <translation id="7811986034759500329">Системийн тохиргоонд тохируулах</translation>
@@ -8775,7 +8775,7 @@
 <translation id="7826039927887234077"><ph name="MOOD"/> сэтгэл санааны байдалтай, <ph name="SUBJECT"/>-н сэдэвтэй саяхны ХОУ-ы <ph name="INDEX"/>-р загвар.</translation>
 <translation id="7826174860695147464">Одоогийн хөтчийн дэмжлэг (LBS) - Дотоод</translation>
 <translation id="7826838152281937785">Доод талын харагдах байдлыг хаах</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Brave-н Үйлчилгээний нөхцөл<ph name="END_LINK_TERMS"/>, <ph name="BEGIN_LINK_PRIVACY"/>Gemini-тай харилцдаг аппын нууцлалын сануулга<ph name="END_LINK_PRIVACY"/> хэрэгжинэ</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Growser-н Үйлчилгээний нөхцөл<ph name="END_LINK_TERMS"/>, <ph name="BEGIN_LINK_PRIVACY"/>Gemini-тай харилцдаг аппын нууцлалын сануулга<ph name="END_LINK_PRIVACY"/> хэрэгжинэ</translation>
 <translation id="7828642077514646543">Алдаа: Гэрчилгээний кодыг тайлах боломжгүй</translation>
 <translation id="7830276128493844263">Байршлыг системийн тохиргоонд унтраасан</translation>
 <translation id="7830833461614351956">Нээхийн тулд <ph name="NUM_OF_FILES"/> файлыг <ph name="CLOUD_PROVIDER"/> руу хуулах уу?</translation>
@@ -9645,7 +9645,7 @@
 <translation id="850399339579925930">Толь бичиг</translation>
 <translation id="850561044295157831">Надад бичихэд тусал онцлогийн талаар нэмэлт мэдээлэл авах</translation>
 <translation id="8505669004895429027">Жижиг хэмнэлт</translation>
-<translation id="869548515244800202">Brave-н гишүүнчлэл</translation>
+<translation id="869548515244800202">Growser-н гишүүнчлэл</translation>
 <translation id="8507052544157927817">Доогуур зураасны загвар</translation>
 <translation id="8507227974644337342">Дэлгэцийн нягтрал</translation>
 <translation id="8507443886219296894">Энэ сайтад нуух</translation>
@@ -9785,7 +9785,7 @@
 <translation id="8619803522055190423">Сүүдэр буулгах</translation>
 <translation id="8620206585293032550">Идэвхгүй табуудын харагдах байдал</translation>
 <translation id="8621979332865976405">Дэлгэцийг бүхлээр нь хуваалцах</translation>
-<translation id="6089523089512126744">Brave Хайлтын ХОУ-ы горим болон холбоотой аппууд</translation>
+<translation id="6089523089512126744">Growser Хайлтын ХОУ-ы горим болон холбоотой аппууд</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ChromeOS төхөөрөмж болон бүрэлдэхүүн хэсгийн серийн дугаарыг унших</translation>
 <translation id="862542460444371744">&amp; Өргөтгөлүүд</translation>
@@ -11340,17 +11340,17 @@
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Growser дахь Gemini</translation>
 <translation id="1975450474853317621">Growser хөтөч дээр нээх</translation>
 <translation id="8516824290867275572">Таны бүртгэл Growser дахь Gemini-д хандах эрхгүй байна</translation>
-<translation id="1649234713894562345">Brave-г Brave нээлттэй эх кодын төсөл болон бусад <ph name="BEGIN_HIGHLIGHT"/>нээлттэй эх кодын<ph name="END_HIGHLIGHT"/> программ хангамжаар бүтээсэн.</translation>
+<translation id="1649234713894562345">Growser-г Growser нээлттэй эх кодын төсөл болон бусад <ph name="BEGIN_HIGHLIGHT"/>нээлттэй эх кодын<ph name="END_HIGHLIGHT"/> программ хангамжаар бүтээсэн.</translation>
 <translation id="870536819717176711">Таныг одоогийн табыг Gemini-тай хуваалцахаар сонгох үед тухайн табын бүрэн агуулга, медиа, URL-г Growser-д илгээнэ.</translation>
-<translation id="1130866111814048607">Табуудыг хуваалцахад тэдгээрийн хуудасны контент, медиа, URL-г Brave рүү илгээдэг бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
-<translation id="7656790264713095385">Эхлээд энэ төхөөрөмжид Brave-н автомат хөтчийг асаана уу</translation>
+<translation id="1130866111814048607">Табуудыг хуваалцахад тэдгээрийн хуудасны контент, медиа, URL-г Growser рүү илгээдэг бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
+<translation id="7656790264713095385">Эхлээд энэ төхөөрөмжид Growser-н автомат хөтчийг асаана уу</translation>
 <translation id="8572003230388132401">Gemini Spark сайттай харилцан үйлдэл хийж, таны өмнөөс даалгаврыг гүйцэтгэхийн тулд энэ төхөөрөмж дээр Growser-н автомат хөтчийг ашиглах боломжтой. <ph name="LINK_BEGIN"/>Нэмэлт мэдээлэл авах<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark төхөөрөмж идэвхтэй, Growser ажиллаж байгаа тохиолдолд л энэ төхөөрөмж дээр автомат хөтчийг ашиглах боломжтой.</translation>
 <translation id="1982892581799327835">Таны Gemini Spark-н агентад хандах эрхтэй хэн бүхэн таны Growser хөтчийг хянах боломжтой.</translation>
 <translation id="6689939585896001516">Growser-д танд зориулж үзэхийг зөвшөөрөх</translation>
 <translation id="640233545778658570">Growser дахь Gemini таны табд ажиллаж, таны өгсөн даалгаврыг гүйцэтгэхийн тулд автоматаар үзэх онцлогийг ашигладаг. <ph name="LINK_BEGIN"/>Нэмэлт мэдээлэл авах<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Brave-н автомат хөтчийн талаар нэмэлт мэдээлэл авах</translation>
-<translation id="3570112771874223231">Gemini-н даалгаврын үеэр ашигладаг хуудасны контент, URL-г Brave-тэй хуваалцах бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
+<translation id="2740842679402949230">Growser-н автомат хөтчийн талаар нэмэлт мэдээлэл авах</translation>
+<translation id="3570112771874223231">Gemini-н даалгаврын үеэр ашигладаг хуудасны контент, URL-г Growser-тэй хуваалцах бөгөөд аюулгүй байдлыг нь хянаж магадгүй.</translation>
 <translation id="2314508080153323869">Growser дахь Gemini</translation>
 <translation id="1910632359330857071">Үзэх явцдаа хариулт, гол санаа болон бусад зүйлийг авахын тулд Growser дахь Gemini-тай чатлаарай</translation>
 <translation id="2483218699324586641">Growser дахь Gemini-г нээхийн тулд <ph name="FOCUS_TOGGLE_HOTKEY"/>-г ашиглана уу</translation>
@@ -11380,8 +11380,8 @@
     Growser Home аппад<ph name="END_LINK"/> харах боломжтой байна уу?</translation>
 <translation id="2984923316661218534">Growser Нууц үгний менежерээр энэ төхөөрөмж дээр нэвтрэх түлхүүрээ аваарай</translation>
 <translation id="2364302372598204515">Энэ нь Growser Бүртгэл биш юм. Таны Growser-д хадгалах зүйлс бусад төхөөрөмж дээр ашиглах боломжгүй байх болно.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave-н гишүүнчлэл</translation>
-<translation id="850632091665381275">Brave-н гишүүнчлэл</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser-н гишүүнчлэл</translation>
+<translation id="850632091665381275">Growser-н гишүүнчлэл</translation>
 <translation id="6710172959248731469">Growser-н үйлчилгээний тохиргоо</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 зүйлийг зөвхөн энэ төхөөрөмжид хадгалсан. Үүнийг бусад төхөөрөмж дээрээ ашиглахын тулд Growser Бүртгэлдээ хадгална уу. Энэ нь мөн аливаа хуулбарыг цэвэрлэнэ.}other{{ITEM_COUNT} зүйлийг зөвхөн энэ төхөөрөмжид хадгалсан. Эдгээрийг бусад төхөөрөмж дээрээ ашиглахын тулд Growser Бүртгэлдээ хадгална уу. Энэ нь мөн аливаа хуулбарыг цэвэрлэнэ.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 нууц үгийг зөвхөн энэ төхөөрөмжид хадгалсан. Үүнийг бусад төхөөрөмж дээрээ ашиглахын тулд Growser Бүртгэлдээ хадгална уу. Энэ нь мөн аливаа хуулбарыг цэвэрлэнэ.}other{{PASSWORD_COUNT} нууц үгийг зөвхөн энэ төхөөрөмжид хадгалсан. Эдгээрийг бусад төхөөрөмж дээрээ ашиглахын тулд Growser Бүртгэлдээ хадгална уу. Энэ нь мөн аливаа хуулбарыг цэвэрлэнэ.}}</translation>
@@ -11395,8 +11395,8 @@
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 хавчуурга болон бусад зүйлийг зөвхөн энэ төхөөрөмжид хадгалсан. Эдгээрийг бусад төхөөрөмж дээрээ ашиглахын тулд Growser Бүртгэлдээ хадгална уу.}other{{BOOKMARK_COUNT} хавчуурга болон бусад зүйлийг зөвхөн энэ төхөөрөмжид хадгалсан. Эдгээрийг бусад төхөөрөмж дээрээ ашиглахын тулд Growser Бүртгэлдээ хадгална уу.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 зүйлийг зөвхөн энэ төхөөрөмжид хадгалсан. Үүнийг бусад төхөөрөмж дээрээ ашиглахын тулд <ph name="BEGIN_LINK"/>Growser Бүртгэлдээ хадгална уу<ph name="END_LINK"/>.}other{{ITEM_COUNT} зүйлийг зөвхөн энэ төхөөрөмжид хадгалсан. Эдгээрийг бусад төхөөрөмж дээрээ ашиглахын тулд <ph name="BEGIN_LINK"/>Growser Бүртгэлдээ хадгална уу<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Growser бүртгэлээ ашиглах эсвэл шинэ бүртгэл үүсгэнэ үү</translation>
-<translation id="1896353439080510710">Чатыг Brave-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Чатыг Brave-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Зарим контент зарим хүнд тохиромжгүй байж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Чатыг Growser-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Чатыг Growser-н ХОУ-ыг сайжруулах зорилгоор хянаж, ашиглана. Gemini бол ХОУ бөгөөд алдаа гаргаж болно. Зарим контент зарим хүнд тохиромжгүй байж болно. Та байршлынхаа талаарх мэдээлэл зэрэг <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>үйл ажиллагаагаа удирдах<ph name="END_LINK_MANAGE_ACTIVITY"/> боломжтой. <ph name="BEGIN_LINK_LEARN_MORE"/>Сонголтуудынхаа талаар нэмэлт мэдээлэл авах<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Энэ өргөтгөлийг таны Growser Бүртгэлд хадгалсан ч тухайн өргөтгөлийн зөвхөн энэ төхөөрөмж дээр хадгалсан аливаа өгөгдлийг устгаж болзошгүй}other{Эдгээр өргөтгөлийг таны Growser Бүртгэлд хадгалсан ч эдгээр өргөтгөлийн зөвхөн энэ төхөөрөмж дээр хадгалсан аливаа өгөгдлийг устгаж болзошгүй}}</translation>
 <translation id="3523789730715594198">Та тохиргоонд хүссэн үедээ синк хийхийг зогсоох боломжтой. Growser таны түүхэд тулгуурлан Хайлт болон бусад үйлчилгээг хувийн болгож магадгүй.</translation>
 <translation id="8231595707224857577">Танай байгууллага таны Growser Бүртгэлд таб хадгалахыг унтраасан</translation>
@@ -11434,7 +11434,7 @@
 <translation id="1024884937839269099">Таныг нэвтэрсэн үед <ph name="BEGIN_LINK_GOOGLE"/>бусад төрлийн үйл ажиллагааг<ph name="END_LINK_GOOGLE"/> Growser Бүртгэлд тань хадгалж магадгүй. Та тэдгээрийг хүссэн үедээ устгах боломжтой.</translation>
 <translation id="6533315466883598769">Growser Орчуулагч ашиглах</translation>
 <translation id="6010651352520077187">Асаалттай үед Growser Орчуулагч сайтуудыг таны сонгосон хэл рүү орчуулахыг санал болгоно. Мөн сайтуудыг автоматаар орчуулах боломжтой.</translation>
-<translation id="6873499199714317035">Асаахад Brave Орчуулагч сайт, PDF-г таны сонгосон хэл рүү орчуулахыг санал болгоно. Мөн сайтуудыг автоматаар орчуулах боломжтой.</translation>
+<translation id="6873499199714317035">Асаахад Growser Орчуулагч сайт, PDF-г таны сонгосон хэл рүү орчуулахыг санал болгоно. Мөн сайтуудыг автоматаар орчуулах боломжтой.</translation>
 <translation id="5911030830365207728">Google Translate</translation>
 <translation id="7458168200501453431">Growser хайлтад ашигладаг зөв бичгийн ижил алдаа шалгагчийг ашигладаг. Таны хөтчид бичсэн текстийг Growser-д илгээдэг.</translation>
 <translation id="8972513834460200407">Growser серверээс юм татаж авахыг firewall блоклосон байж болох тул сүлжээний администратортойгоо шалгана уу.</translation>
@@ -11480,7 +11480,7 @@
 <translation id="3293574207873361017">Growser Бүртгэлээ удирдах</translation>
 <translation id="6901130673208235020">Таныг хөтчийн түүхээсээ хайх үед таны түүхийн хайлт, хамгийн сайн таарах илэрцийн хуудасны контент, хайх үед үүсгэсэн загварын гаралтыг Growser рүү илгээдэг</translation>
 <translation id="3178434360326457238">Таныг сайт үзэх явцад хуудасных нь контентыг шифрлэж, таны төхөөрөмжид хадгалдаг. Энэ нь Growser-н гүйцэтгэлд нөлөөлж магадгүй</translation>
-<translation id="8622145666696249878">Brave Хайлтын ХОУ-ы горим болон холбоотой аппууд</translation>
+<translation id="8622145666696249878">Growser Хайлтын ХОУ-ы горим болон холбоотой аппууд</translation>
 <translation id="2760679829473121490">Growser-н онцлог болон зөвлөгөөний талаарх системийн мэдэгдлийг харуулах</translation>
 <translation id="6713316345564743478">Алдагдсан нууц үгнүүд байгаа эсэхийг шалгахын тулд Growser Бүртгэлдээ нэвтэрнэ үү</translation>
 <translation id="1342886103232377846">Алдагдсан нууц үгнүүд байгаа эсэхийг шалгахын тулд Growser Password Manager лүү очно уу</translation>
@@ -11543,7 +11543,7 @@
 <translation id="1095879482467973146">Веб дээрх Growser Password Manager</translation>
 <translation id="1368798504801939187">Та Growser, Android-г ашиглаагүй үедээ ч <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/>-д нэвтэрч нууц үгээ хараарай</translation>
 <translation id="829923460755755423">Growser Password Manager-т товчлол нэмэх</translation>
-<translation id="7244677273667272006">Нууц үгнүүд нэмж, тэдгээрийг Brave Бүртгэлээрээ нэвтэрсэн бүх төхөөрөмж дээр авахын тулд өөрийгөө мөн болохыг баталгаажуулна уу</translation>
+<translation id="7244677273667272006">Нууц үгнүүд нэмж, тэдгээрийг Growser Бүртгэлээрээ нэвтэрсэн бүх төхөөрөмж дээр авахын тулд өөрийгөө мөн болохыг баталгаажуулна уу</translation>
 <translation id="8189517459248805166">Таны <ph name="WEBSITE"/>-н нууц үгийг энэ төхөөрөмж болон Growser Бүртгэлд тань хадгалсан. Та алийг нь устгахыг хүсэж байна вэ?</translation>
 <translation id="9101265711096405922">Таны Growser Бүртгэлээс</translation>
 <translation id="927421426408921503">Хадгалсан нууц үгнүүдийг Growser Бүртгэл рүүгээ зөөх үү?</translation>
@@ -11654,7 +11654,7 @@
        <ph name="BREAK"/>
        <ph name="BREAK"/>
        Та картын цэсээс тохиргоог удирдах эсвэл Growser-г өөрчлөх хэсгээс бусад сонголтыг харах боломжтой.</translation>
-<translation id="6474021817475285003">Brave Календарьд илүү ихийг харах</translation>
+<translation id="6474021817475285003">Growser Календарьд илүү ихийг харах</translation>
 <translation id="9066394310994446814">Та энэ зүйлийг Growser-н үйлчилгээнүүдийг ашиглан хийсэн өмнөх үйл ажиллагаандаа тулгуурлан харж байна. Та <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> дээрээс өгөгдлөө харах, устгах болон тохиргоогоо өөрчлөх боломжтой.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11685,7 +11685,7 @@
 <translation id="6868193750403948178">Growser-г өөрчлөх</translation>
 <translation id="5009064339929592579">Growser Бүртгэлийнхээ фолдерт хадгалах уу?</translation>
 <translation id="7400528739136719497">Growser-н зарим дуу хоолой яг одоо боломжгүй байж магадгүй</translation>
-<translation id="4857677595331912231">Танд илүү хамааралтай хариулт өгөхийн тулд таны одоогийн табын контент, URL-г Brave-тэй хуваалцдаг. Та үзэх явцдаа таб нэмэх, хасах боломжтой.</translation>
+<translation id="4857677595331912231">Танд илүү хамааралтай хариулт өгөхийн тулд таны одоогийн табын контент, URL-г Growser-тэй хуваалцдаг. Та үзэх явцдаа таб нэмэх, хасах боломжтой.</translation>
 <translation id="5639212636098910819">Growser-д үлдэх</translation>
 <translation id="3252169590975855820">Та үүнд Growser Нууц үгний менежерээс хандах боломжтой</translation>
 <translation id="3843323136102787632">Энэ QR кодоор Growser-г татаад, Growser Бүртгэлдээ нэвтэрнэ үү.</translation>
@@ -11732,7 +11732,7 @@
 <translation id="1162630940779651724">Энэ табыг өөр төхөөрөмж рүү илгээхийн тулд аль аль төхөөрөмж дээр Growser-д нэвтэрнэ үү</translation>
 <translation id="5388608738812110907">Энэ табыг өөр төхөөрөмж рүү илгээхийн тулд тэндээс Growser-д нэвтэрнэ үү</translation>
 <translation id="4007679133627124999">Төхөөрөмжүүдийн хооронд холбоос илгээхийн тулд аль аль нь нэг Growser бүртгэлд нэвтэрсэн эсэхийг шалгана уу.</translation>
-<translation id="2377999415409519333">Холбоос илгээхийн тулд өөрийгөө мөн болохыг баталгаажуулна уу. Хоёр төхөөрөмж дээрээ ижил Brave Бүртгэлээр нэвтэрснээр та холбоос илгээх боломжтой.</translation>
+<translation id="2377999415409519333">Холбоос илгээхийн тулд өөрийгөө мөн болохыг баталгаажуулна уу. Хоёр төхөөрөмж дээрээ ижил Growser Бүртгэлээр нэвтэрснээр та холбоос илгээх боломжтой.</translation>
 <translation id="4986706507552097681">Та синк хийх зүйлээ тохиргооноос хүссэн үедээ сонгох боломжтой. Growser таны түүхэд тулгуурлан Хайлт болон бусад үйлчилгээг хувийн болгож магадгүй.</translation>
 <translation id="8002662358897231821">Та бүх төхөөрөмжийнхөө хавчуурга, түүх, бусад тохиргоог авахын тулд нэвтрээрэй. Та Growser үйлчилгээнд мөн автоматаар нэвтрэх болно.</translation>
 <translation id="3128296144259620504">Growser-г автоматжуулсан туршилтын программ хангамж удирдаж байна</translation>

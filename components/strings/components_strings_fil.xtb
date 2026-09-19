@@ -194,7 +194,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="132301787627749051">Maghanap ng larawan sa clipboard</translation>
 <translation id="1323433172918577554">Magpakita Nang Higit Pa</translation>
 <translation id="1330449323196174374">Left gate fold</translation>
-<translation id="2753620827734134329">Secure na i-save ang redress number sa Brave Wallet</translation>
+<translation id="2753620827734134329">Secure na i-save ang redress number sa Growser Wallet</translation>
 <translation id="133173645041092770">Isara ang website</translation>
 <translation id="4274264486214599895">Laruin ang Growser Dino</translation>
 <translation id="1333989956347591814">Ang iyong aktibidad <ph name="BEGIN_EMPHASIS"/>ay maaari pa ring makita<ph name="END_EMPHASIS"/> ng:
@@ -461,7 +461,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="1756555787993603971">Puwede ka nang gumamit ng virtual card para mas secure na mag-check out gamit ang autofill.</translation>
 <translation id="1757773103848038814">Monospace Font</translation>
 <translation id="3727704638090640904">Button na Palitan ang password sa Growser, i-activate para mapalitan ang password ng Growser sync chain mo</translation>
-<translation id="593191007871547182">I-autofill ang mga code sa pag-verify na ginagamit ng mga site para pahusayin ang iyong seguridad. Makukuha ng Brave ang mga code na ito mula sa iyong Gmail. <ph name="BEGIN_LINK"/>Matuto pa tungkol sa feature na ito<ph name="LINK_END"/></translation>
+<translation id="593191007871547182">I-autofill ang mga code sa pag-verify na ginagamit ng mga site para pahusayin ang iyong seguridad. Makukuha ng Growser ang mga code na ito mula sa iyong Gmail. <ph name="BEGIN_LINK"/>Matuto pa tungkol sa feature na ito<ph name="LINK_END"/></translation>
 <translation id="1763864636252898013">Hindi mapatunayan ng server na ito na ito ay <ph name="DOMAIN"/>; hindi pinagkakatiwalaan ng operating system ng iyong device ang certificate ng seguridad nito. Maaaring dulot ito ng maling configuration o isang umaatake na hinahadlangan ang iyong koneksyon.</translation>
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>Subukang patakbuhin ang Windows Network Diagnostics<ph name="END_LINK"/>.</translation>
 <translation id="1777422078676229054">Photo (Archival)</translation>
@@ -518,7 +518,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="1871284979644508959">Kinakailangang field</translation>
 <translation id="1871739799120352748">Mataas ang presyo</translation>
 <translation id="1874224422119691492">Puwede mong baguhin kung gagamitin mo ang iyong lock ng screen para sa paglalagay ng mga password sa <ph name="SETTINGS"/></translation>
-<translation id="8768609471898592384">Ipinadala sa Brave sa iyong <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
+<translation id="8768609471898592384">Ipinadala sa Growser sa iyong <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
 <translation id="1875025161375567525">Tray para sa Larawan</translation>
 <translation id="85321348617848915">Growser Forms</translation>
 <translation id="1876399092304384674">Ayon sa petsa</translation>
@@ -542,7 +542,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="192020519938775529">{COUNT,plural, =0{Wala}=1{1 site}one{# site}other{# na site}}</translation>
 <translation id="192095259937375524">Button na I-share ang tab na ito, i-activate para ma-share ang tab na ito sa pamamagitan ng pag-share sa link, paggawa ng QR code, pag-cast, at higit pa</translation>
 <translation id="1924727005275031552">Bago</translation>
-<translation id="4527827173940627753">Ila-log ng Brave kung paano mo ginagamit ang feature, gaya ng iyong mga request at gawi kapag tinanggap o binalewala mo ang mga suhestyon</translation>
+<translation id="4527827173940627753">Ila-log ng Growser kung paano mo ginagamit ang feature, gaya ng iyong mga request at gawi kapag tinanggap o binalewala mo ang mga suhestyon</translation>
 <translation id="1932098463447129402">Hindi Bago</translation>
 <translation id="1935353813610900265">Magpadala ng feedback para sa paghahanap sa history na pinapagana ng AI</translation>
 <translation id="1935995810530254458">Kopyahin pa rin</translation>
@@ -596,7 +596,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="2027465737841872819">Plastic</translation>
 <translation id="2027707238798802149">Hindi available ang card</translation>
 <translation id="2032962459168915086"><ph name="BEGIN_LINK"/>Suriin ang proxy at ang firewall<ph name="END_LINK"/></translation>
-<translation id="1211671941710012208">Tumatakbo ang instance na ito ng Brave nang may mga manual na itinakdang command line flag. Tandaang posibleng magbago ang mga command line flag anumang oras at hindi sinusuportahan ang mga ito.</translation>
+<translation id="1211671941710012208">Tumatakbo ang instance na ito ng Growser nang may mga manual na itinakdang command line flag. Tandaang posibleng magbago ang mga command line flag anumang oras at hindi sinusuportahan ang mga ito.</translation>
 <translation id="2033900728810589426">Hindi puwedeng pareho ang shortcut at ang default na keyword ng provider ng paghahanap na tinukoy ng <ph name="DEFAULT_SEARCH_PROVIDER_KEYWORD_POLICY_NAME"/>: <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2034971124472263449">I-save pa rin</translation>
 <translation id="2036514476578229158">Hiniling mong bisitahin ang site na ito. Puwedeng sumagot ang iyong mga magulang sa Family Link.</translation>
@@ -862,7 +862,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="2469153820345007638">1-to-N na pagkakasunod-sunod</translation>
 <translation id="24699311393038040">Papel (Coated)</translation>
 <translation id="2471632709106952369">Mga talahanayan sa paghahambing</translation>
-<translation id="768574016157037999">Secure na i-save ang Known Traveler Number sa Brave Wallet</translation>
+<translation id="768574016157037999">Secure na i-save ang Known Traveler Number sa Growser Wallet</translation>
 <translation id="50589553892093838">Iba pang data sa Growser</translation>
 <translation id="247903268499247848">Hindi pinapayagan ang mga sensor ng paggalaw at liwanag</translation>
 <translation id="2479148705183875116">Pumunta sa Mga Setting</translation>
@@ -1087,7 +1087,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="2905107382358353958">Alerto tungkol sa bagong setting ng pagbabayad</translation>
 <translation id="2909946352844186028">May nakitang pagbabago sa network.</translation>
 <translation id="2910062169995917863">Nag-time out ang session</translation>
-<translation id="7085506453142803285">Nalalapat ang iyong mga setting ng Brave Wallet sa impormasyong na-save mula sa Brave</translation>
+<translation id="7085506453142803285">Nalalapat ang iyong mga setting ng Growser Wallet sa impormasyong na-save mula sa Growser</translation>
 <translation id="2911973620368911614">User ID ng accounting ng trabaho</translation>
 <translation id="2915068235268646559">Pag-crash mula noong <ph name="CRASH_TIME"/></translation>
 <translation id="2916038427272391327">Isara ang iba pang program</translation>
@@ -1153,7 +1153,7 @@ Kung ayaw mo, iba-block ito ng iyong mga setting ng privacy. Papayagan nito ang 
 <translation id="3019738915977809060">I-save ang boarding pass sa Wallet</translation>
 <translation id="3022959067768579802">Magpatuloy sa pagsusulat</translation>
 <translation id="3024663005179499861">Maling uri ng patakaran</translation>
-<translation id="4839141088909071432">May na-detect ang Brave na mga detalyeng karaniwan sa mga site na nauugnay sa phishing, malware, o mga scam. <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
+<translation id="4839141088909071432">May na-detect ang Growser na mga detalyeng karaniwan sa mga site na nauugnay sa phishing, malware, o mga scam. <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
 <translation id="3027915437837548462">Larawang SVG</translation>
 <translation id="3030331669969285614">Pinipigilan o nire-revert ng mga pag-flag na ito ang isang breaking change at magiging available lang ang mga ito sa limitadong panahon.</translation>
 <translation id="5877261609750575671">Makakatulong sa iyo ang address ng tahanan mo sa pagtapos ng mga gawain sa mga serbisyo ng Growser, tulad ng mga mas nauugnay na resulta sa Search at direksyon sa Google Maps. Puwede mong i-edit o i-delete ang iyong address <ph name="BEGIN_LINK"/>sa Growser sync chain mo na <ph name="ACCOUNT"/><ph name="END_LINK"/>.</translation>
@@ -1262,7 +1262,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="3207830513221832868">Posibleng may pang-mature na content ang <ph name="BLOCKED_URL"/></translation>
 <translation id="3207960819495026254">Naka-bookmark</translation>
 <translation id="3209034400446768650">Puwedeng maningil ang page</translation>
-<translation id="809694630565139611">Ipinapadala sa Brave ang iyong mga request, pamagat ng page, at URL at posibleng suriin ang mga ito para mapaganda ang pinahusay na autofill</translation>
+<translation id="809694630565139611">Ipinapadala sa Growser ang iyong mga request, pamagat ng page, at URL at posibleng suriin ang mga ito para mapaganda ang pinahusay na autofill</translation>
 <translation id="3212468046572043669">Nagsimula na ang pag-download. Para makita ito, mag-drag mula sa itaas at pindutin ang button na bumalik</translation>
 <translation id="3212581601480735796">Sinusubaybayan ang iyong aktibidad sa <ph name="HOSTNAME"/></translation>
 <translation id="3215092763954878852">Hindi magamit ang WebAuthn</translation>
@@ -1309,7 +1309,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="7460223968433527020">Puwedeng remote na gumawa ng mga pagbabago sa profile at browser mo, magsuri ng impormasyon tungkol sa browser sa pamamagitan ng pag-uulat, at gumawa ng iba pang kinakailangang gawain ang iyong administrator. Puwede ring pamahalaan sa labas ng Growser ang aktibidad sa device na ito. <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
 <translation id="3273757719652748628">Binuksan ang I-save ang IBAN nang buo.</translation>
 <translation id="327455571215090823">Mas smart na autofill, pinapanatiling pribado</translation>
-<translation id="5506816339792547413">Secure na i-update ang passport sa Brave Wallet</translation>
+<translation id="5506816339792547413">Secure na i-update ang passport sa Growser Wallet</translation>
 <translation id="3281350579597955952">{0,plural, =1{Hindi inirerekomenda ng patakaran ng administrator na buksan ang file na ito sa <ph name="DESTINATION_NAME"/>}one{Hindi inirerekomenda ng patakaran ng administrator na buksan ang mga file na ito sa <ph name="DESTINATION_NAME"/>}other{Hindi inirerekomenda ng patakaran ng administrator na buksan ang mga file na ito sa <ph name="DESTINATION_NAME"/>}}</translation>
 <translation id="3282085321714087552">Nagpadala ang iyong organisasyon, ang <ph name="ENROLLMENT_DOMAIN"/>, ng ilang impormasyon sa mga sumusunod na website, tulad ng mga setting o patakaran.</translation>
 <translation id="3286372614333682499">portrait</translation>
@@ -1318,7 +1318,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="3293642807462928945">Matuto pa tungkol sa patakarang <ph name="POLICY_NAME"/></translation>
 <translation id="5894665462526421022">Tingnan at pamahalaan ang iyong mga password sa mga setting ng Growser</translation>
 <translation id="3299098170013242198">Naka-on ang Windows Hello para sa paglalagay ng mga password</translation>
-<translation id="3183696044082232280">Hindi ma-paste ang content sa labas ng pinapamahalaang konteksto ng Brave dahil sa mga patakaran ng iyong organisasyon</translation>
+<translation id="3183696044082232280">Hindi ma-paste ang content sa labas ng pinapamahalaang konteksto ng Growser dahil sa mga patakaran ng iyong organisasyon</translation>
 <translation id="3299720788264079132">Nagkaproblema habang ginagamit ang <ph name="FEATURE_NAME"/></translation>
 <translation id="3303176609391916566">30 x 42 in</translation>
 <translation id="3303855915957856445">Walang nakitang resulta ng paghahanap</translation>
@@ -1584,7 +1584,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="3769584711865378220">Gustong gawing eksakto ng <ph name="URL"/> ang access sa lokasyon mula sa dating tinatantya</translation>
 <translation id="3772211998634047851">Papel (Bond)</translation>
 <translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>, pindutin ang Tab at pagkatapos ay ang Enter para gumawa ng bagong tala sa Growser Keep nang mabilis</translation>
-<translation id="5647245195700278791">Ili-link sa <ph name="ACCOUNT_EMAIL"/> ang Pix account. Para ma-off ang pag-detect ng Pix code, pumunta sa <ph name="BEGIN_LINK1"/>mga setting ng Brave<ph name="END_LINK1"/></translation>
+<translation id="5647245195700278791">Ili-link sa <ph name="ACCOUNT_EMAIL"/> ang Pix account. Para ma-off ang pag-detect ng Pix code, pumunta sa <ph name="BEGIN_LINK1"/>mga setting ng Growser<ph name="END_LINK1"/></translation>
 <translation id="3780694243617746492">Output bin</translation>
 <translation id="3783418713923659662">Mastercard</translation>
 <translation id="3784372983762739446">Mga device ng bluetooth</translation>
@@ -1850,7 +1850,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="4231448684371260244">8 x 13 in</translation>
 <translation id="279016548542240532">Magbayad gamit ang Pix nang hindi lumilipat ng app sa Growser</translation>
 <translation id="4238607350028440048">Tulungan akong magsanay para sa aking interview sa pamamagitan ng pagtatanong sa akin na para bang isa kang hiring manager</translation>
-<translation id="3325641703531153643">Secure na i-save ang lisensya sa pagmamaneho sa Brave Wallet</translation>
+<translation id="3325641703531153643">Secure na i-save ang lisensya sa pagmamaneho sa Growser Wallet</translation>
 <translation id="4239799716689808527">Mga Label</translation>
 <translation id="424063167283213501">I-save ang Known Traveler Number</translation>
 <translation id="4241830393007970744">Posibleng linlangin ka ng mga attacker sa site na sinubukan mong bisitahin na mag-install ng software o magbunyag ng mga bagay na tulad ng iyong mga password, numero ng telepono, o numero ng credit card.</translation>
@@ -1961,7 +1961,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="5221858344642681996">Para mapanatili ang seguridad, hindi pinapayagan ng iyong organisasyon na magamit ulit ang mga password sa Growser. Naka-encrypt ang mga password sa Growser para protektahan ang privacy ng user.</translation>
 <translation id="4409271659088619928"><ph name="DSE"/> ang iyong search engine. Tingnan ang mga tagubilin nito para sa pag-delete sa iyong history ng paghahanap, kung naaangkop.</translation>
 <translation id="4409556632583862731">Bagong thread</translation>
-<translation id="4235960211211581927">Secure na i-update ang ID card sa Brave Wallet</translation>
+<translation id="4235960211211581927">Secure na i-update ang ID card sa Growser Wallet</translation>
 <translation id="4412074349188076601">Minarkahan ang configuration na ito bilang nai-install, pero walang larawang ibinigay para sa arkitekturang ito, kaya hindi ito ma-install.</translation>
 <translation id="4412377069090572315">Ang sinasabi ng mga tao</translation>
 <translation id="4414515549596849729">cookies at data ng site</translation>
@@ -2173,7 +2173,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="4807098396393229769">Pangalang makikita sa card</translation>
 <translation id="4809079943450490359">Mga tagubilin mula sa administrator ng iyong device:</translation>
 <translation id="4811450222531576619">Alamin ang tungkol sa source at paksa nito</translation>
-<translation id="1177020771645812087">Secure na i-save ang sasakyan sa Brave Wallet</translation>
+<translation id="1177020771645812087">Secure na i-save ang sasakyan sa Growser Wallet</translation>
 <translation id="4811918461974803225">Google Pay, logo ng Affirm</translation>
 <translation id="4813512666221746211">Error sa network</translation>
 <translation id="4814114628197290459">I-delete ang IBAN</translation>
@@ -2310,7 +2310,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="5026121202864677765">Isulat ang aking cover letter</translation>
 <translation id="5030338702439866405">Ibinigay Ni</translation>
 <translation id="503069730517007720">Kinakailangan ang root certificate para sa "<ph name="SOFTWARE_NAME"/>" ngunit hindi ito naka-install. Dapat tingnan ng IT administrator ang mga tagubilin sa pag-configure para sa "<ph name="SOFTWARE_NAME"/>" upang maayos ang problemang ito. <ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="7106879493637631619">Secure na i-save ang KTN sa Brave Wallet</translation>
+<translation id="7106879493637631619">Secure na i-save ang KTN sa Growser Wallet</translation>
 <translation id="503498442187459473">Gustong gamitin ng <ph name="HOST"/> ang iyong camera at mikropono</translation>
 <translation id="503574301575803523">SRA3</translation>
 <translation id="5039762155821394373">Laki ng Font</translation>
@@ -2674,7 +2674,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="5635478143789726479">Mga tuntunin at kundisyon ng nagbebenta</translation>
 <translation id="5640474731385449758">Gustong magbukas ng extension na "<ph name="EXTENSION_NAME"/>" ng mga link sa <ph name="PROTOCOL"/> sa <ph name="ORIGIN"/> sa pamamagitan ng <ph name="HANDLER_HOSTNAME"/></translation>
 <translation id="5642508497713047">Tagapaglagda ng CRL</translation>
-<translation id="1058971715947037197">Ipinadala sa Brave sa iyong <ph name="DEVICE_NAME"/></translation>
+<translation id="1058971715947037197">Ipinadala sa Growser sa iyong <ph name="DEVICE_NAME"/></translation>
 <translation id="5644090287519800334">Pag-shift ng gilid 1 larawan X</translation>
 <translation id="5644128326840674462">Banner ng promosyon</translation>
 <translation id="5645132789250840550">Plastic (Semi-Gloss)</translation>
@@ -2682,7 +2682,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="5648166631817621825">Nakalipas na 7 araw</translation>
 <translation id="5649053991847567735">Mga awtomatikong pag-download</translation>
 <translation id="5651323159439184939">Tractor Feed</translation>
-<translation id="5987316528511737389">Secure na i-update ang identity card sa Brave Wallet</translation>
+<translation id="5987316528511737389">Secure na i-update ang identity card sa Growser Wallet</translation>
 <translation id="5654927323611874862">ID ng Na-upload na Ulat ng Pag-crash:</translation>
 <translation id="5654965123204121933">Hindi naglalaman ang URL ng nire-require na pamalit na string na <ph name="SEARCH_TERMS_REPLACEMENT"/>: <ph name="SEARCH_URL"/></translation>
 <translation id="5659593005791499971">Email</translation>
@@ -2710,7 +2710,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="5715150588940290235">I-delete ang mga naka-save na panseguridad na code?</translation>
 <translation id="5715918316982363436"><ph name="TAB_COUNT"/> mula sa <ph name="WINDOW_COUNT"/> sa device na ito</translation>
 <translation id="5716325061445053985">I-tap para buksan ang tab sa iyong telepono</translation>
-<translation id="5576354004856163244">Awtomatikong punan ang mga detalye ng card kapag nag-check out ka online. Secure na sine-save ang mga card sa Brave Wallet.</translation>
+<translation id="5576354004856163244">Awtomatikong punan ang mga detalye ng card kapag nag-check out ka online. Secure na sine-save ang mga card sa Growser Wallet.</translation>
 <translation id="5718326209176373202">Magdagdag ng mga anotasyon ng text</translation>
 <translation id="5718601519531438273">May kasamang impormasyon gaya ng mga passport at lisensya sa pagmamaneho</translation>
 <translation id="5720705177508910913">Kasalukuyang user</translation>
@@ -2795,7 +2795,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="5866898949289125849">Isang page ng mga tool ng developer ang tinitingnan mo</translation>
 <translation id="5869405914158311789">Hindi makakonekta sa site na ito</translation>
 <translation id="5869522115854928033">Mga naka-save na password</translation>
-<translation id="1025941152813277982">Secure na i-update ang KTN sa Brave Wallet</translation>
+<translation id="1025941152813277982">Secure na i-update ang KTN sa Growser Wallet</translation>
 <translation id="5872215789867188990">Hindi na available ang grupo ng tab na "<ph name="GROUP_TITLE"/>"</translation>
 <translation id="5872692522325383488">Na-save ang IBAN</translation>
 <translation id="5879989559903563723">Hindi pinapayagan sa Guest mode</translation>
@@ -3124,7 +3124,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="6412543105195503444">Dialog ng pag-apruba ng magulang</translation>
 <translation id="6416877227920300343">EDP</translation>
 <translation id="6418199314628742460">Tiyaking external na sino-store ang mahahalagang data ng negosyo o personal na data.</translation>
-<translation id="4561848316196784217">Secure na i-update ang sasakyan sa Brave Wallet</translation>
+<translation id="4561848316196784217">Secure na i-update ang sasakyan sa Growser Wallet</translation>
 <translation id="6425092077175753609">Material</translation>
 <translation id="6427730057873428458">Gate fold</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
@@ -3448,7 +3448,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="7011763495818914549">Identity card</translation>
 <translation id="7012363358306927923">China UnionPay</translation>
 <translation id="7013835112918108252">Puwedeng hilinging i-lock at gamitin ang iyong mouse</translation>
-<translation id="2871736177221289934">Ila-log ng Brave kung paano mo ginagamit ang feature, gaya ng iyong mga request at gawi mo kapag tinanggap o binalewala mo ang mga suhestyon</translation>
+<translation id="2871736177221289934">Ila-log ng Growser kung paano mo ginagamit ang feature, gaya ng iyong mga request at gawi mo kapag tinanggap o binalewala mo ang mga suhestyon</translation>
 <translation id="7014741021609395734">Antas ng pag-zoom</translation>
 <translation id="7016992613359344582">Ang mga singil na ito ay maaaring isang beses lang o umuulit at maaaring hindi mo mapansin.</translation>
 <translation id="7020464868401003526">Lumampas ang URL ng shortcut sa maximum na pinapayagang haba na <ph name="MAX_LENGTH"/> (na) character.</translation>
@@ -3479,7 +3479,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 <translation id="7064851114919012435">Impormasyon sa pakikipag-ugnayan</translation>
 <translation id="7070144569727915108">mga setting ng system</translation>
 <translation id="70705239631109039">Hindi ganap na ligtas ang iyong koneksyon</translation>
-<translation id="1544480702884197290">Puwede ka na ngayong mag-save ng mga paraan ng pagbabayad para i-autofill sa pag-checkout sa Brave. <ph name="LINK_TEXT"/></translation>
+<translation id="1544480702884197290">Puwede ka na ngayong mag-save ng mga paraan ng pagbabayad para i-autofill sa pag-checkout sa Growser. <ph name="LINK_TEXT"/></translation>
 <translation id="7075452647191940183">Masyadong malaki ang kahilingan</translation>
 <translation id="7075513071073410194">PKCS #1 MD5 na May RSA Encryption</translation>
 <translation id="7075896597860500885">Hindi inirerekomenda ang pagkopya mula sa site na ito</translation>
@@ -3578,7 +3578,7 @@ Para i-hide ang mga opsyon sa pay later, pumunta sa <ph name="BEGIN_LINK"/>mga s
 Mga karagdagang detalye:
 <ph name="DEBUG_INFO"/></translation>
 <translation id="7252424535852086046">Para i-delete ang data na ito, pumunta sa mga setting ng pamamahala nito</translation>
-<translation id="4241646169865720085">Secure na i-update ang redress number sa Brave Wallet</translation>
+<translation id="4241646169865720085">Secure na i-update ang redress number sa Growser Wallet</translation>
 <translation id="7255540419660272073">Button na thumbs down, pindutin ang Enter para magbukas ng form para sa pagsusumite ng detalyadong feedback kung bakit mo na-dislike ang <ph name="THUMBS_DOWN_SUGGESTION_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
 <translation id="7256634549594854023">Likod na Tray</translation>
 <translation id="725866823122871198">Hindi makapagtatag ng pribadong koneksyon sa <ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/> dahil mali ang petsa at oras ng iyong computer (<ph name="DATE_AND_TIME"/>).</translation>
@@ -3999,7 +3999,7 @@ Mga karagdagang detalye:
 <translation id="7956713633345437162">Mga bookmark sa mobile</translation>
 <translation id="7961015016161918242">Hindi Kailanman</translation>
 <translation id="7962467575542381659">Machine ng platform</translation>
-<translation id="5335890850142030688">Ihihinto ng Brave ang awtomatikong pagkumpirma sa email na ito sa mga sinusuportahang site.</translation>
+<translation id="5335890850142030688">Ihihinto ng Growser ang awtomatikong pagkumpirma sa email na ito sa mga sinusuportahang site.</translation>
 <translation id="7966803981046576691">Uri ng account ng trabaho</translation>
 <translation id="7967973398323409409">Hindi kailanman makikita ng sinuman ang impormasyong ino-autofill mo</translation>
 <translation id="79682505114836835">Invalid na hex color ang value na "<ph name="VALUE"/>."</translation>
@@ -4102,7 +4102,7 @@ Mga karagdagang detalye:
 <translation id="8155253549374198915">Mga huling nakabukas na tab</translation>
 <translation id="7904243652775639741">May mga built-in na pangkaligtasang feature ang Growser para maprotektahan ka habang nagba-browse ka — tulad ng Ligtas na Pag-browse sa Growser, na <ph name="BEGIN_LINK"/>nakakita kamakailan ng malware<ph name="END_LINK"/> sa site na sinubukan mong bisitahin.</translation>
 <translation id="8161095570253161196">Ipagpatuloy ang pag-browse</translation>
-<translation id="4900205713719197017">I-on ang autofill para ligtas na mag-check out online. Naka-encrypt sa Brave Wallet ang mga detalye ng iyong card.</translation>
+<translation id="4900205713719197017">I-on ang autofill para ligtas na mag-check out online. Naka-encrypt sa Growser Wallet ang mga detalye ng iyong card.</translation>
 <translation id="8163866351304776260">Quad punch left</translation>
 <translation id="8164078261547504572">Gusto mo bang makatanggap ng mga email kapag bumaba ang mga presyo?</translation>
 <translation id="8169175551046720804">Hindi puwedeng itakda sa iisang dictionary ang mga key na "<ph name="DATA_CONTROLS_KEYS"/>"</translation>
@@ -4112,7 +4112,7 @@ Mga karagdagang detalye:
 <translation id="4351627595884993315">Nag-aalok ang Growser na i-save ang iyong mga card sa Growser sync chain mo dahil naka-sign in ka. Maaari mong baguhin ang gawing ito sa mga setting.</translation>
 <translation id="8176440868214972690">Nagpadala ang administrator ng device na ito ng ilang impormasyon sa mga sumusunod na website, tulad ng mga setting o patakaran.</translation>
 <translation id="818254048113802060">{0,plural, =1{Na-block ang <ph name="FILE_NAME"/> dahil sa content}one{<ph name="FILE_COUNT"/> file ang na-block dahil sa content}other{<ph name="FILE_COUNT"/> na file ang na-block dahil sa content}}</translation>
-<translation id="4272901805803707638">Puwede mong palitan ang iyong search engine anumang oras sa mga setting ng Brave. Kung hindi mo nakikita ang gusto mong search engine, puwede kang maghanap mula sa site nito. Makikita mo itong nakalista bilang kamakailang binisitang search engine sa mga setting ng Brave, at puwede mo itong gawing iyong default.</translation>
+<translation id="4272901805803707638">Puwede mong palitan ang iyong search engine anumang oras sa mga setting ng Growser. Kung hindi mo nakikita ang gusto mong search engine, puwede kang maghanap mula sa site nito. Makikita mo itong nakalista bilang kamakailang binisitang search engine sa mga setting ng Growser, at puwede mo itong gawing iyong default.</translation>
 <translation id="8188830160449823068">Sa device lang na-save ang IBAN</translation>
 <translation id="8189557652711717875">Gagamitin ang search engine na pipiliin mo para sa mga feature na tulad ng paghahanap mula sa address bar at mula sa mga larawan sa mga web page.</translation>
 <translation id="8190193880870196235">Pinamamahalaan ng isang extension</translation>
@@ -4185,7 +4185,7 @@ Mga karagdagang detalye:
 <translation id="8297545700510100061">Ginagamit ang cookies at iba pang data ng site para tandaan ka, halimbawa para i-sign in ka o i-personalize ang mga ad. Para mapamahalaan ang cookies para sa lahat ng site, tingnan ang <ph name="SETTINGS"/>.</translation>
 <translation id="8298115750975731693">Maaaring hilingin ng Wi-Fi na ginagamit mo (<ph name="WIFI_NAME"/>) na bisitahin mo ang <ph name="BEGIN_BOLD"/><ph name="LOGIN_URL"/><ph name="END_BOLD"/>.</translation>
 <translation id="8298399736867690281">Naka-save ang card sa device lang</translation>
-<translation id="7150057276888666361">Secure na i-save ang ID card sa Brave Wallet</translation>
+<translation id="7150057276888666361">Secure na i-save ang ID card sa Growser Wallet</translation>
 <translation id="8301894345671534559">Ilagay ang code</translation>
 <translation id="830498451218851433">Fold half</translation>
 <translation id="830868413617744215">Beta</translation>
@@ -4332,7 +4332,7 @@ Mga karagdagang detalye:
 <translation id="8559762987265718583">Hindi makapagtatag ng pribadong koneksyon sa <ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/> dahil mali ang petsa at oras ng iyong device (<ph name="DATE_AND_TIME"/>).</translation>
 <translation id="8564182942834072828">Mga hiwalay na dokumento/Mga hindi naka-collate na kopya</translation>
 <translation id="8564466070529550495">Hindi available sa ngayon ang virtual card, pakisubukan ulit sa ibang pagkakataon.</translation>
-<translation id="6357650538613458024">Tulungan ang Brave na mas maunawaan at punan ang mga kumplikadong form sa pamamagitan ng secure na pagpoproseso ng data sa mga server ng Brave. Mananatiling pribado ang iyong impormasyon at hindi ito susuriin ng kahit sino.</translation>
+<translation id="6357650538613458024">Tulungan ang Growser na mas maunawaan at punan ang mga kumplikadong form sa pamamagitan ng secure na pagpoproseso ng data sa mga server ng Growser. Mananatiling pribado ang iyong impormasyon at hindi ito susuriin ng kahit sino.</translation>
 <translation id="8574570240981266561">Na-delete ang item</translation>
 <translation id="8577192028579836704">Karaniwang <ph name="TYPICAL_PRICE"/> ang lahat ng opsyon</translation>
 <translation id="8577348305244205642">Hindi available ang virtual card</translation>
@@ -4395,9 +4395,9 @@ Mga karagdagang detalye:
 <translation id="8708134712139312373">Puwedeng hilinging kumonekta sa mga Bluetooth device</translation>
 <translation id="8710842507289500830">Istilo ng font</translation>
 <translation id="8712637175834984815">Nakuha ko</translation>
-<translation id="4328387382326136101">Na-flag lang ng Brave ang isang website na sinusubukan mong bisitahin. Tulungan kaming pahusayin ang mga babalang ito sa pamamagitan ng pagsagot sa 1 minutong survey.</translation>
+<translation id="4328387382326136101">Na-flag lang ng Growser ang isang website na sinusubukan mong bisitahin. Tulungan kaming pahusayin ang mga babalang ito sa pamamagitan ng pagsagot sa 1 minutong survey.</translation>
 <translation id="8716983145825913456">Secure na i-save ang sasakyan</translation>
-<translation id="3201352891862147498">Secure na i-save ang passport sa Brave Wallet</translation>
+<translation id="3201352891862147498">Secure na i-save ang passport sa Growser Wallet</translation>
 <translation id="8718314106902482036">Hindi nakumpleto ang pagbabayad</translation>
 <translation id="8719263113926255150"><ph name="ENTITY"/>, <ph name="DESCRIPTION"/>, suhestyon sa paghahanap</translation>
 <translation id="8719528812645237045">Multiple punch top</translation>
@@ -4436,7 +4436,7 @@ Mga karagdagang detalye:
 <translation id="8775863327608679820">Binuksan nang kalahati ang bottom sheet ng mga available na Buy-Now-Pay-Later na issuer para magbayad sa paglipas ng panahon.</translation>
 <translation id="8776789089819232268">Lahat ng iyong order</translation>
 <translation id="877985182522063539">A4</translation>
-<translation id="5756777435786575965">Kapag gumawa ka ng request para sa pinahusay na autofill, sine-share sa Brave ang iyong data ng paggamit, mga request, at mga detalye ng page para mapahusay ang experience sa autofill</translation>
+<translation id="5756777435786575965">Kapag gumawa ka ng request para sa pinahusay na autofill, sine-share sa Growser ang iyong data ng paggamit, mga request, at mga detalye ng page para mapahusay ang experience sa autofill</translation>
 <translation id="514805123051954646">Button na Isalin ang page, i-activate para maisalin ang page na ito gamit ang Google Translate</translation>
 <translation id="8790007591277257123">&amp;Gawing muli ang pagtanggal</translation>
 <translation id="8790668801880409584">I-save at ilagay ang impormasyon sa paglalakbay</translation>
@@ -4495,7 +4495,7 @@ Mga karagdagang detalye:
 <translation id="888169490072887292">Maghanap ng mga pampamilyang restaurant na may mga menu para sa mga bata</translation>
 <translation id="8883863364960302898">Folder ng Google Drive</translation>
 <translation id="8884537526797090108">Hindi puwedeng mag-record ng kumpidensyal na content</translation>
-<translation id="4135437686782002023">Secure na i-update ang lisensya sa pagmamaneho sa Brave Wallet</translation>
+<translation id="4135437686782002023">Secure na i-update ang lisensya sa pagmamaneho sa Growser Wallet</translation>
 <translation id="8891031436559779793">Maaabisuhan ka kung bababa ang presyo sa anumang site.</translation>
 <translation id="8891727572606052622">Di-wastong mode ng proxy.</translation>
 <translation id="8894794286471754040">Long edge muna</translation>
@@ -4732,7 +4732,7 @@ Mga karagdagang detalye:
 <translation id="3666543487519182654">I-autofill ang card na ito para sa mga pagbiling ginawa sa Growser kapag na-save ito sa Google Wallet</translation>
 <translation id="979107176848483472">Pinapamahalaan ng <ph name="DOMAIN"/> ang iyong browser at profile</translation>
 <translation id="981121421437150478">Offline</translation>
-<translation id="5456048065008297112">Secure na i-save ang identity card sa Brave Wallet</translation>
+<translation id="5456048065008297112">Secure na i-save ang identity card sa Growser Wallet</translation>
 <translation id="983587187183716432">Button na <ph name="AI_ENGINE_NAME"/>, pindutin ang Enter para magtanong sa <ph name="AI_ENGINE_NAME"/></translation>
 <translation id="984275831282074731">Mga paraan ng pagbabayad</translation>
 <translation id="985199708454569384">&lt;p&gt;Makikita mo ang error na ito kung hindi tumpak ang petsa at oras ng iyong computer o mobile device.&lt;/p&gt;
@@ -5567,9 +5567,9 @@ Mga karagdagang detalye:
 <translation id="1151858212483238980">Puwede mong i-autofill ang mga card na naka-save sa Google Wallet</translation>
 <translation id="1205344127823614428">Puwede mong i-autofill ang mga card na naka-save sa Google Wallet.</translation>
 <translation id="5848445080378515710">Kapag nasuri mo na ang iyong order, dapat kang mag-sign in o gumawa ng account sa <ph name="BNPL_ISSUER_NAME"/>. Awtomatikong ili-link ang account na ito sa Google Wallet.</translation>
-<translation id="8163468049564974856">I-on ang autofill para ligtas na mag-check out online. Naka-encrypt sa Brave Wallet ang mga detalye ng iyong card.</translation>
-<translation id="5717281954932320486">Awtomatikong punan ang mga detalye ng card kapag nag-check out ka online. Secure na sine-save ang mga card sa Brave Wallet.</translation>
-<translation id="7055814742378298611">Puwede ka na ngayong mag-save ng mga paraan ng pagbabayad para i-autofill sa pag-checkout sa Brave. <ph name="LINK_TEXT"/></translation>
+<translation id="8163468049564974856">I-on ang autofill para ligtas na mag-check out online. Naka-encrypt sa Growser Wallet ang mga detalye ng iyong card.</translation>
+<translation id="5717281954932320486">Awtomatikong punan ang mga detalye ng card kapag nag-check out ka online. Secure na sine-save ang mga card sa Growser Wallet.</translation>
+<translation id="7055814742378298611">Puwede ka na ngayong mag-save ng mga paraan ng pagbabayad para i-autofill sa pag-checkout sa Growser. <ph name="LINK_TEXT"/></translation>
 <translation id="5977205943292389390">Made-delete ang lahat ng panseguridad na code na naka-save sa iyong device at sa Growser sync chain</translation>
 <translation id="7170930892977483182">Made-delete ang lahat ng security code na naka-save sa iyong device at sa Google Wallet</translation>
 <translation id="755360750394433286">Naka-save ang iyong card sa Growser sync chain mo para ma-autofill mo ito para sa mga pagbili sa hinaharap</translation>
@@ -5590,7 +5590,7 @@ Mga karagdagang detalye:
 <translation id="7077165718541055322">Alisin ang address ng tahanan sa autofill sa Growser?</translation>
 <translation id="7756454115562251695">Alisin ang address ng trabaho sa autofill sa Growser?</translation>
 <translation id="3068798232942246848">Alisin ang impormasyong ito sa autofill sa Growser?</translation>
-<translation id="967369588715984092">Ihihinto ng Brave ang awtomatikong pagkumpirma sa email na ito sa mga sinusuportahang site.</translation>
+<translation id="967369588715984092">Ihihinto ng Growser ang awtomatikong pagkumpirma sa email na ito sa mga sinusuportahang site.</translation>
 <translation id="7299769361777046949">Pamahalaan ang mga loyalty card sa Google Wallet</translation>
 <translation id="2903623845283894856">Puwede ka na ngayong gumamit ng mga address mula sa iyong Growser sync chain</translation>
 <translation id="7058709760023777753">I-autofill ang address ng tahanan at trabaho mo mula sa iyong Growser sync chain</translation>
@@ -5603,12 +5603,12 @@ Mga karagdagang detalye:
 <translation id="3995632180712217177">Puwede kang gumamit ng mga naka-save na address sa lahat ng produkto ng Growser. Hindi nito babaguhin ang iyong kasalukuyang address ng tahanan. Ise-save ito sa iyong Growser sync chain, na <ph name="ACCOUNT"/>.</translation>
 <translation id="2432673835335968473">Puwede kang gumamit ng mga naka-save na address sa lahat ng produkto ng Growser. Hindi nito babaguhin ang iyong kasalukuyang address ng trabaho. Ise-save ito sa iyong Growser sync chain, na <ph name="ACCOUNT"/>.</translation>
 <translation id="2024046927213376062">Ang impormasyong mula sa Growser sync chain mong <ph name="ACCOUNT"/> ay makakatulong sa iyong mas mabilis na punan ang mga form sa Growser</translation>
-<translation id="8430499469896241016">I-autofill ang mga code sa pag-verify na ginagamit ng mga site para pahusayin ang iyong seguridad. Makukuha ng Brave ang mga code na ito mula sa iyong Gmail. <ph name="BEGIN_LINK"/>Matuto pa tungkol sa feature na ito<ph name="LINK_END"/></translation>
+<translation id="8430499469896241016">I-autofill ang mga code sa pag-verify na ginagamit ng mga site para pahusayin ang iyong seguridad. Makukuha ng Growser ang mga code na ito mula sa iyong Gmail. <ph name="BEGIN_LINK"/>Matuto pa tungkol sa feature na ito<ph name="LINK_END"/></translation>
 <translation id="9221566509053798696">Hindi Growser ang iyong provider ng autofill</translation>
 <translation id="7450759832930378803">Para ma-enable ang mga setting na ito at magamit ang impormasyon sa pagbabayad mula sa iyong Growser sync chain, bumisita sa mga setting ng mga serbisyo ng autofill.</translation>
 <translation id="7049940136908665440">Para ma-enable ang mga setting na ito at magamit ang impormasyon mula sa iyong Growser sync chain, bumisita sa mga setting ng mga serbisyo ng autofill.</translation>
 <translation id="2450019289047528273">Mga paraan ng pagbabayad at iba pang impormasyon mula sa Google Wallet</translation>
-<translation id="1125406338060147524">Nalalapat ang iyong mga setting ng Brave Wallet sa impormasyong na-save mula sa Brave</translation>
+<translation id="1125406338060147524">Nalalapat ang iyong mga setting ng Growser Wallet sa impormasyong na-save mula sa Growser</translation>
 <translation id="5732084028114235391">Kasalukuyang naka-save ang address na ito sa Growser. Para gamitin ito sa mga produkto ng Growser, i-save ito sa iyong Growser sync chain na <ph name="ACCOUNT"/>.</translation>
 <translation id="756794566964707799">Kasalukuyang naka-save ang address na ito sa device na ito. Para gamitin ito sa mga produkto ng Growser, i-save ito sa iyong Growser sync chain na <ph name="ACCOUNT"/>.</translation>
 <translation id="6935077351544118151">Puwede mo nang i-autofill ang mga loyalty card mula sa Google Wallet</translation>
@@ -5618,43 +5618,43 @@ Mga karagdagang detalye:
 <translation id="5831217499016131155">Google Wallet</translation>
 <translation id="8421746712901926961">I-save ang iyong impormasyon sa <ph name="GOOGLE_WALLET_TITLE_1"/> at mas mabilis na tapusin ang mga bagay, tulad ng pagsagot ng mga form sa mga produkto ng Growser. Puwede mong <ph name="MANAGE_INFO_LINK"/> sa <ph name="GOOGLE_WALLET_TITLE_2"/> para sa <ph name="ACCOUNT"/>.</translation>
 <translation id="4619669610757527494">I-save ang lisensya sa pagmamaneho sa Google Wallet</translation>
-<translation id="4239215166147486528">Secure na i-save ang lisensya sa pagmamaneho sa Brave Wallet</translation>
+<translation id="4239215166147486528">Secure na i-save ang lisensya sa pagmamaneho sa Growser Wallet</translation>
 <translation id="1912750443952232242">I-save ang ID card sa Google Wallet</translation>
-<translation id="8300302621078931927">Secure na i-save ang ID card sa Brave Wallet</translation>
+<translation id="8300302621078931927">Secure na i-save ang ID card sa Growser Wallet</translation>
 <translation id="5447103258548475868">I-save ang passport sa Google Wallet</translation>
-<translation id="8717177139469452440">Secure na i-save ang passport sa Brave Wallet</translation>
+<translation id="8717177139469452440">Secure na i-save ang passport sa Growser Wallet</translation>
 <translation id="760632772920590778">I-save ang sasakyan sa Google Wallet</translation>
-<translation id="4811696127853690432">Secure na i-save ang sasakyan sa Brave Wallet</translation>
+<translation id="4811696127853690432">Secure na i-save ang sasakyan sa Growser Wallet</translation>
 <translation id="5914185423510719251">I-save ang KTN sa Google Wallet</translation>
-<translation id="5034488401832901795">Secure na i-save ang KTN sa Brave Wallet</translation>
+<translation id="5034488401832901795">Secure na i-save ang KTN sa Growser Wallet</translation>
 <translation id="1449251255954293933">I-save ang redress number sa Google Wallet</translation>
-<translation id="1330952240988133220">Secure na i-save ang redress number sa Brave Wallet</translation>
+<translation id="1330952240988133220">Secure na i-save ang redress number sa Growser Wallet</translation>
 <translation id="8393948304336153065">I-update ang lisensya sa pagmamaneho sa Google Wallet</translation>
-<translation id="8889525327610245418">Secure na i-update ang lisensya sa pagmamaneho sa Brave Wallet</translation>
+<translation id="8889525327610245418">Secure na i-update ang lisensya sa pagmamaneho sa Growser Wallet</translation>
 <translation id="7570524564113479209">I-update ang ID card sa Google Wallet</translation>
-<translation id="4410614037742891410">Secure na i-update ang ID card sa Brave Wallet</translation>
+<translation id="4410614037742891410">Secure na i-update ang ID card sa Growser Wallet</translation>
 <translation id="3426672782316020729">I-update ang pasaporte sa Google Wallet</translation>
-<translation id="3280440382387335343">Secure na i-update ang passport sa Brave Wallet</translation>
+<translation id="3280440382387335343">Secure na i-update ang passport sa Growser Wallet</translation>
 <translation id="2124081665399116863">I-update ang sasakyan sa Google Wallet</translation>
-<translation id="6422648598133086441">Secure na i-update ang sasakyan sa Brave Wallet</translation>
+<translation id="6422648598133086441">Secure na i-update ang sasakyan sa Growser Wallet</translation>
 <translation id="4770909831299304090">I-update ang KTN sa Google Wallet</translation>
-<translation id="5872115357279348603">Secure na i-update ang KTN sa Brave Wallet</translation>
+<translation id="5872115357279348603">Secure na i-update ang KTN sa Growser Wallet</translation>
 <translation id="1732796940245838248">I-update ang redress number sa Google Wallet</translation>
-<translation id="7253051586755429279">Secure na i-update ang redress number sa Brave Wallet</translation>
+<translation id="7253051586755429279">Secure na i-update ang redress number sa Growser Wallet</translation>
 <translation id="5628060911499153873">I-save ang iyong impormasyon para mas mabilis na tapusin ang mga bagay, sa lahat ng produkto ng Growser. Naka-save ang iyong impormasyon sa <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/> para sa <ph name="ACCOUNT"/>.</translation>
 <translation id="8369722293913575142">Hindi ma-save ang impormasyong ito sa iyong Google Wallet. Na-save lang ito sa Growser sa device na ito. Mag-aalok ang Growser na i-save ito sa Wallet sa susunod na pagkakataong gamitin mo ito.</translation>
 <translation id="3237427677128462778">Hindi ma-save sa Google Wallet</translation>
 <translation id="9078170656887151974">Para makapag-alok ng mga suhestyon at mapahusay ang feature na ito, shine-share sa Growser ang URL at content ng page. Magbago ng iyong isip anumang oras at <ph name="LEARN_MORE"/>.</translation>
 <translation id="4954505713046251871">Para makapag-alok ng mga suhestyon at mapahusay ang feature na ito, shine-share sa Growser ang URL at content ng page</translation>
 <translation id="2905902437192896563">Mas naiintindihan ng Growser ang mga form at mas mabilis nitong mao-autofill ang mga ito para sa iyo</translation>
-<translation id="67310796271265436">Tulungan ang Brave na mas maunawaan at punan ang mga kumplikadong form sa pamamagitan ng secure na pagpoproseso ng data sa mga server ng Brave. Mananatiling pribado ang iyong impormasyon at hindi ito susuriin ng kahit sino.</translation>
+<translation id="67310796271265436">Tulungan ang Growser na mas maunawaan at punan ang mga kumplikadong form sa pamamagitan ng secure na pagpoproseso ng data sa mga server ng Growser. Mananatiling pribado ang iyong impormasyon at hindi ito susuriin ng kahit sino.</translation>
 <translation id="7422908041366284140">Mao-autofill ng Growser ang mahihirap na field na posibleng mapalampas ng karaniwang autofill</translation>
 <translation id="6329742260390895689">Para i-autofill ang iyong impormasyon, i-on ang "Gumamit ng mga pass sa buong Growser" sa mga setting ng Wallet</translation>
 <translation id="5912796581727968237">Buksan ang Google Wallet</translation>
 <translation id="5160781056848005130">Tumutulong kang pahusayin pa ang pinahusay na autofill sa pamamagitan ng pag-share ng data sa Growser</translation>
-<translation id="8781233757384402598">Kapag gumawa ka ng request para sa pinahusay na autofill, sine-share sa Brave ang iyong data ng paggamit, mga request, at mga detalye ng page para mapahusay ang experience sa autofill</translation>
-<translation id="7044265724713929821">Ila-log ng Brave kung paano mo ginagamit ang feature, gaya ng iyong mga request at gawi kapag tinanggap o binalewala mo ang mga suhestyon</translation>
-<translation id="3209071504641569648">Ipinapadala sa Brave ang iyong mga request, pamagat ng page, at URL at posibleng suriin ang mga ito para mapaganda ang pinahusay na autofill</translation>
+<translation id="8781233757384402598">Kapag gumawa ka ng request para sa pinahusay na autofill, sine-share sa Growser ang iyong data ng paggamit, mga request, at mga detalye ng page para mapahusay ang experience sa autofill</translation>
+<translation id="7044265724713929821">Ila-log ng Growser kung paano mo ginagamit ang feature, gaya ng iyong mga request at gawi kapag tinanggap o binalewala mo ang mga suhestyon</translation>
+<translation id="3209071504641569648">Ipinapadala sa Growser ang iyong mga request, pamagat ng page, at URL at posibleng suriin ang mga ito para mapaganda ang pinahusay na autofill</translation>
 <translation id="2410385419742253857">{COUNT,plural, =0{Wala}=1{Mula sa 1 site (mananatili kang naka-sign in sa iyong Growser sync chain)}one{Mula sa # site (mananatili kang naka-sign in sa iyong Growser sync chain)}other{Mula sa # na site (mananatili kang naka-sign in sa iyong Growser sync chain)}}</translation>
 <translation id="3410151451624226773">Pamahalaan sa Growser Password Manager</translation>
 <translation id="5224107321793121921">Pamahalaan sa iyong Growser sync chain</translation>
@@ -5670,7 +5670,7 @@ Mga karagdagang detalye:
     <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
 <translation id="5164928537947209380">Hindi palaging magiging tama ang pang-eksperimentong AI tool na ito. Para pahusayin ito, ipapadala ang iyong content sa Growser.
     <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
-<translation id="3419981648784795212">Hindi ma-paste ang content sa labas ng pinapamahalaang konteksto ng Brave dahil sa mga patakaran ng iyong organisasyon</translation>
+<translation id="3419981648784795212">Hindi ma-paste ang content sa labas ng pinapamahalaang konteksto ng Growser dahil sa mga patakaran ng iyong organisasyon</translation>
 <translation id="1351458950091269256">Gumamit ang ad na ito ng masyadong maraming resource para sa iyong device kaya inalis ito ng Growser.</translation>
 <translation id="4366714044424353289">Posibleng may iba pang uri ng history ng pag-browse ang Growser sync chain mo sa <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/></translation>
 <translation id="5626844006416355146">Posibleng nasa Growser sync chain mo ang iyong <ph name="BEGIN_LINK_GAA"/>Aktibidad sa Mga Gemini App<ph name="END_LINK_GAA"/></translation>
@@ -5836,7 +5836,7 @@ Mga karagdagang detalye:
 <translation id="7571813784389228510">Growser AI Mode</translation>
 <translation id="3415471717466570460">Ipinapadala sa Growser ang iyong mga paghahanap, pinakamahusay na tugma, at ang mga content ng page ng mga ito, at puwedeng makita ang mga ito ng mga taong tagasuri para mapahusay ang feature na ito. Isa itong pang-eksperimentong feature at hindi ito palaging tama.</translation>
 <translation id="9103366036378878818">Link ng Tip sa Growser, pindutin ang Enter para buksan ang <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/></translation>
-<translation id="2097698842685899280">May na-detect ang Brave na mga detalyeng karaniwan sa mga site na nauugnay sa phishing, malware, o mga scam. <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
+<translation id="2097698842685899280">May na-detect ang Growser na mga detalyeng karaniwan sa mga site na nauugnay sa phishing, malware, o mga scam. <ph name="BEGIN_LINK"/>Matuto pa<ph name="END_LINK"/></translation>
 <translation id="319854178761292593">Pinasimple ng Growser ang page na ito para mas madali itong mabasa. Nakuha ng Growser ang orihinal na page sa pamamagitan ng secure na koneksyon.</translation>
 <translation id="542284143784575620">Pinasimple ng Growser ang page na ito para mas madali itong mabasa. Nakuha ng Growser ang orihinal na page sa pamamagitan ng hindi secure na koneksyon.</translation>
 <translation id="5826875044227298275">Kakalagay mo lang ng iyong password sa isang mapanlinang na site. Para ma-secure ang iyong mga account, inirerekomenda ng Growser na suriin mo ang iyong mga na-save na password.</translation>
@@ -5873,7 +5873,7 @@ Mga karagdagang detalye:
 <translation id="2867186026859663748">Hindi maitatakda ang patakarang ito sa antas ng profile ng Growser at babalewalain ito.</translation>
 <translation id="277370491433906876">Binalewala ang patakarang ito dahil hindi affiliated ang user. Para malapat ang patakarang ito, dapat pamahalaan ng iisang organisasyon ang Growser browser at profile sa pamamagitan ng Admin console.</translation>
 <translation id="1963194198237607890">Nagbibigay sa iyo ang Growser Enterprise Core ng sentralisadong tool para sa pag-configure ng mga patakaran ng browser mula sa cloud</translation>
-<translation id="4553855485042734119">Tumatakbo ang instance na ito ng Brave nang may mga manual na itinakdang command line flag. Tandaang posibleng magbago ang mga command line flag anumang oras at hindi sinusuportahan ang mga ito.</translation>
+<translation id="4553855485042734119">Tumatakbo ang instance na ito ng Growser nang may mga manual na itinakdang command line flag. Tandaang posibleng magbago ang mga command line flag anumang oras at hindi sinusuportahan ang mga ito.</translation>
 <translation id="3858407183625528544">Para mapanatili ang seguridad, hindi pinapayagan ng iyong organisasyon na magamit ulit ang mga password sa Growser. Naka-encrypt ang mga password sa Growser para protektahan ang privacy ng user.</translation>
 <translation id="6376948191860056592">Alamin kung paano pinoprotektahan ng Growser ang iyong mga password</translation>
 <translation id="59755378055907482">Inirerekomenda ng Growser na i-reset ang iyong password kung ginamit mo ito sa iba pang site.</translation>
@@ -5883,7 +5883,7 @@ Mga karagdagang detalye:
 <translation id="5178006823023208130">Batay sa isang batas sa rehiyon mo, hinihiling sa iyo ng Growser na piliin ang default mong search engine. Sikat ang mga search engine na ito sa iyong rehiyon at ipapakita ang mga ito sa random na pagkakasunod-sunod.</translation>
 <translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Magbibigay-daan ang iyong default na search engine para makapaghanap ka sa web at pagaganahin nito ang mga feature ng Growser<ph name="END_BOLD"/> gaya ng paghahanap mula sa address bar at mula sa mga larawan sa mga web page. Posibleng hindi maging available ang isang feature kung hindi ito sinusuportahan ng iyong search engine.</translation>
 <translation id="652920213589772275">Puwede mong palitan ang iyong search engine anumang oras sa mga setting ng Growser.</translation>
-<translation id="5113257522679527347">Puwede mong palitan ang iyong search engine anumang oras sa mga setting ng Brave. Kung hindi mo nakikita ang gusto mong search engine, puwede kang maghanap mula sa site nito. Makikita mo itong nakalista bilang kamakailang binisitang search engine sa mga setting ng Brave, at puwede mo itong gawing iyong default.</translation>
+<translation id="5113257522679527347">Puwede mong palitan ang iyong search engine anumang oras sa mga setting ng Growser. Kung hindi mo nakikita ang gusto mong search engine, puwede kang maghanap mula sa site nito. Makikita mo itong nakalista bilang kamakailang binisitang search engine sa mga setting ng Growser, at puwede mo itong gawing iyong default.</translation>
 <translation id="2493969470983483123">Pinipigilan ng isang application na makakonekta nang ligtas ang Growser sa site na ito</translation>
 <translation id="463534029029027294">Upang makapagtatag ng secure na koneksyon, kailangang itakda nang tama ang iyong orasan. Ito ay dahil sa may-bisa lang ang mga certificate na ginagamit ng mga website upang tukuyin ang mga sarili ng mga ito sa loob ng mga partikular na tagal ng panahon. Dahil mali ang orasan ng iyong device, hindi ma-verify ng Growser ang mga certificate na ito.</translation>
 <translation id="6824867187541740495">Karaniwang gumagamit ang <ph name="SITE"/> ng pag-encrypt upang protektahan ang iyong impormasyon. Noong sinubukang kumonekta ng Growser sa <ph name="SITE"/> sa pagkakataong ito, nagbalik ang website ng mga hindi pangkaraniwan at maling kredensyal. Maaari itong mangyari kapag sinusubukan ng isang attacker na magpanggap bilang <ph name="SITE"/>, o naputol ang koneksyon dahil sa isang screen ng pag-sign in sa Wi-Fi. Secure pa rin ang iyong impormasyon dahil inihinto ng Growser ang koneksyon bago magkaroon ng palitan ng anumang data.</translation>
@@ -5921,9 +5921,9 @@ Mga karagdagang detalye:
 <translation id="2026207410612449615">Kadalasang secure kang nakakakonekta sa site na ito, pero hindi makagamit ng secure na koneksyon ang Growser sa ngayon. Posibleng may attacker na sumusubok na alamin o baguhin ang iyong koneksyon ng network. <ph name="LEARN_MORE"/></translation>
 <translation id="1050989234936720259">Kadalasang secure kang nakakakonekta sa mga site, pero hindi makagamit ng secure na koneksyon ang Growser sa ngayon. Posibleng may attacker na sumusubok na alamin o baguhin ang iyong koneksyon ng network. <ph name="LEARN_MORE"/></translation>
 <translation id="6692006953064648573">Nakikita mo ang babalang ito dahil hindi sinusuportahan ng site na ito ang HTTPS at nasa ilalim ka ng Programang Advanced na Proteksyon ng Growser. <ph name="LEARN_MORE"/></translation>
-<translation id="4899042284040818676">Na-flag lang ng Brave ang isang website na sinusubukan mong bisitahin. Tulungan kaming pahusayin ang mga babalang ito sa pamamagitan ng pagsagot sa 1 minutong survey.</translation>
-<translation id="3665741528710985669">Ipinadala sa Brave sa iyong <ph name="DEVICE_NAME"/></translation>
-<translation id="2756090547781225493">Ipinadala sa Brave sa iyong <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
+<translation id="4899042284040818676">Na-flag lang ng Growser ang isang website na sinusubukan mong bisitahin. Tulungan kaming pahusayin ang mga babalang ito sa pamamagitan ng pagsagot sa 1 minutong survey.</translation>
+<translation id="3665741528710985669">Ipinadala sa Growser sa iyong <ph name="DEVICE_NAME"/></translation>
+<translation id="2756090547781225493">Ipinadala sa Growser sa iyong <ph name="DEVICE_NAME"/> • <ph name="USER_EMAIL"/></translation>
 <translation id="3087912139479831463">Naipadala na sa Growser sa iyong <ph name="DEVICE_NAME"/></translation>
 <translation id="2665815858706570232">Kapag naka-on, ise-share ng Growser ang mga nauugnay na tab sa window na ito para tulungan kang makakuha ng mga mas nauugnay na sagot.</translation>
 <translation id="4585120639592593231">Awtomatikong ipapadala ng Growser sa Growser ang content ng page at mga URL ng mga nakabukas na tab na posibleng nauugnay sa iyong tanong para makakuha ng mga mas naka-personalize na sagot. Magse-share lang ang Growser ng mga tab mula sa window kung saan ka nagtatrabaho.</translation>

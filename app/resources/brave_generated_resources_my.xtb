@@ -58,7 +58,7 @@
 <translation id="3218385319396786393">ဤစာမျက်နှာတွင် Autoplay ပိတ်ထားသည်</translation>
 <translation id="4988333904713528597"><ph name="HOST"/> တွင် Autoplay ခွင့်ပြုသည်</translation>
 <translation id="4150684676757176434">Autoplay ပိတ်၍ ထိန်းသိမ်းထားသည်ကို ဆက်လက်ပြုလုပ်မည်</translation>
-<translation id="2201935460386712655">Brave သည် extension များကို security နှင့် ဘေးကင်းမှုအတွက် စစ်ဆေးခြင်း မရှိပါ။ "<ph name="EXTENSION_NAME"/>" ကို developer ကို ယုံကြည်မှသာ ထည့်သွင်းပါ။</translation>
+<translation id="2201935460386712655">Growser သည် extension များကို security နှင့် ဘေးကင်းမှုအတွက် စစ်ဆေးခြင်း မရှိပါ။ "<ph name="EXTENSION_NAME"/>" ကို developer ကို ယုံကြည်မှသာ ထည့်သွင်းပါ။</translation>
 <translation id="2928844661231356557">Bluetooth device များသို့ ခွင့်ပြု လုပ်ရင် သင်သည် အပလီကေးရှင်းနှင့် ပေါင်းသက်နှိပ်စာဖြင့် သက်သေသာဝင်များနေ့စဉ်တိုင်းနှင့် အဓိကသရုပ်ဖေါ်မည်။ ယုံကြည်သော site များထဲတွင်သာ  Bluetooth device များ ခွင့်ပြုပါမည်။ <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">Tor windows</translation>
 <translation id="7965178729203412357">Tor Identity အသစ်</translation>
@@ -606,15 +606,15 @@
 <translation id="8868426106596092089">Growser Browser がクラッシュしたり凍結したときに診断レポートを自動送信することで、Growser の製品の安定性の向上にご協力ください。</translation>
 <translation id="4891600875049212418">သွေးတိုးနေသာဆိုက်များကို သွေးထွက်သောအချိန်တွင်ပင်တိုင်ပါ</translation>
 <translation id="1022603984240541480">တွဲဖက်နိုင်သည့် site များတွင် ကိုယ်ရေးကိုယ်တာ ဆက်တင် ချိန်ညှိမှု အသိပေးချက် ပြပါ</translation>
-<translation id="3528176629974273019">Brave အား site-specific ကိုယ်ရေးကိုယ်တာ ဆက်တင်များကို အလိုအလျောက် အကြံပြု (နှင့် ချိန်ညှိ) ခွင့်ပြုသည်။</translation>
+<translation id="3528176629974273019">Growser အား site-specific ကိုယ်ရေးကိုယ်တာ ဆက်တင်များကို အလိုအလျောက် အကြံပြု (နှင့် ချိန်ညှိ) ခွင့်ပြုသည်။</translation>
 <translation id="2740687181110647855">ကိုယ်ရေးကိုယ်တာ ဆက်တင်များ ညှိနှိုင်းသည့် ကိရိယာ</translation>
 <translation id="509873765238158442">Microsoft Recall ကိုပိတ်ရန်</translation>
 <translation id="4763421121695677716">Microsoft Windows ကွန်ပျူတာများတွင်ထားရှိထားသော Growser tab များ၏ screenshot များကို အလိုအလျောက်ယူမှီ မည်ဆိုသော Recall လုပ်ဆောင်ချက်ကိုပိတ်ရန်။</translation>
 <translation id="1968895725257436430">အချက်အလက် စုဆောင်းခြင်း</translation>
 <translation id="1700052872056357670">ပိတ်ပြီးနောက်ဒေတာအားလုံးရှင်းပစ်ရန်</translation>
 <translation id="216468847346280584">Growser ကြော်ငြာများ အချက်အလက်ကို ရှင်းပစ်ပါ...</translation>
-<translation id="96212973142796240">Brave ကြော်ငြာ ဒေတာ ရှင်းလင်းပြီးပြီ</translation>
-<translation id="6665923829462527507">Brave ကြော်ငြာ ဒေတာကို မရှင်းလင်းနိုင်ပါ။ ထပ်မံ ကြိုးစားပါ။</translation>
+<translation id="96212973142796240">Growser ကြော်ငြာ ဒေတာ ရှင်းလင်းပြီးပြီ</translation>
+<translation id="6665923829462527507">Growser ကြော်ငြာ ဒေတာကို မရှင်းလင်းနိုင်ပါ။ ထပ်မံ ကြိုးစားပါ။</translation>
 <translation id="2808630562319398131">Growser ဆုလက်ဆောင်များ အချက်အလက်ကို ပြန်စပါ...</translation>
 <translation id="6438096877646138757">အက်ပြေးဆcookies များနှင့် အခြားအမျိုးမျိုး</translation>
 <translation id="2988792685798128092">ဆိုက်ပိတ်ထားချိန်တွင် ရှင်းပစ်ပါ</translation>
@@ -1011,11 +1011,11 @@
 <translation id="8854326268817889200">Growser ဆုလက်ဆောင်များ ခလုတ်ကို ပြရန်</translation>
 <translation id="7687538894778993146">ကြော်ငြာပိတ်ခြင်းသာ အသုံးပြုမှုအဆင့်တွင် Growser ဒိုင်းကာ၏ အဓိကကြော်ငြာပိတ်ခြင်းစည်းမျဉ်းများကို ထိန်းသိမ်းထားပေးသည်။ သတိပေးချက် - ကိုယ်ရေးကိုယ်တာကာကွယ်မှုအားလုံးကို ဖယ်ရှားထားသည်။ Growser ၏ ကိုယ်ရေးကိုယ်တာကာကွယ်မှုကြောင့် တစ်ဦးချင်းစီ website များအပိုင်းအသုတ်ပျက်သွားပါက ဒိုင်းကာကို အောက်သို့ (DOWN) သတ်မှတ်နိုင်သည်။ ဤသည်မှာ စမ်းသပ်မှုအဆင့်ဖြစ်သည်။ <ph name="BEGIN_LINK"/>အသေးစိတ်ကြည့်ရန်<ph name="END_LINK"/></translation>
 <translation id="9023173279866800345">Growser သည် သင့်လည်ပတ်မှုမှတ်တမ်းကို စက်တွင်း မည်မျှကြာအောင် သိမ်းဆည်းမည်နည်း</translation>
-<translation id="4082996406923131054">Brave အား site-specific ကိုယ်ရေးကိုယ်တာ ဆက်တင်များကို အလိုအလျောက် အကြံပြု (နှင့် ချိန်ညှိ) ခွင့်ပြုသည်။</translation>
+<translation id="4082996406923131054">Growser အား site-specific ကိုယ်ရေးကိုယ်တာ ဆက်တင်များကို အလိုအလျောက် အကြံပြု (နှင့် ချိန်ညှိ) ခွင့်ပြုသည်။</translation>
 <translation id="6673459101269837427">Microsoft Windows ကွန်ပျူတာများတွင်ထားရှိထားသော Growser tab များ၏ screenshot များကို အလိုအလျောက်ယူမှီ မည်ဆိုသော Recall လုပ်ဆောင်ချက်ကိုပိတ်ရန်။</translation>
 <translation id="5636467576514473532">Growser ကြော်ငြာများ အချက်အလက်ကို ရှင်းပစ်ပါ...</translation>
-<translation id="420057953503713346">Brave ကြော်ငြာ ဒေတာ ရှင်းလင်းပြီးပြီ</translation>
-<translation id="3399998090446159274">Brave ကြော်ငြာ ဒေတာကို မရှင်းလင်းနိုင်ပါ။ ထပ်မံ ကြိုးစားပါ။</translation>
+<translation id="420057953503713346">Growser ကြော်ငြာ ဒေတာ ရှင်းလင်းပြီးပြီ</translation>
+<translation id="3399998090446159274">Growser ကြော်ငြာ ဒေတာကို မရှင်းလင်းနိုင်ပါ။ ထပ်မံ ကြိုးစားပါ။</translation>
 <translation id="1332284067513374815">Growser ဆုလက်ဆောင်များ အချက်အလက်ကို ပြန်စပါ...</translation>
 <translation id="6645428976896583185">ဤနေရာမှာ Growser တွင် မျှော့်ရှုရသော ဘေးနက်သော ဝဘ်ဆိုက်များ စာရင်းနှီး စစ်ဆေးသည်။</translation>
 <translation id="2338646464484947274">စတင်ဖို့၊ သင်သည် sync လုပ်ရန် စိတ်ကူးကို ဆောင်ယူထားသော သင်၏ hardware မှာ Growser ကို တပ်ဆင်ရန် ကောင်းလိုသည်။ ပြီးလျှင်၊ sync code နဲ့ လုံခြုံစွာ ဆက်တပ်ပါ။</translation>
@@ -1050,7 +1050,7 @@
 <translation id="1709339105818930637">Avatar Oval Growser</translation>
 <translation id="790677324469754498">Avatar Bonbon Growser</translation>
 <translation id="4677850801710355225">Widevine သည်မကြာခဏ ဝက်ဘ် စာမျက်နှာတွင် မီဒီယာ ပြချင်ရောင်းကြသည်။ ၎င်းသည် Google စနစ်ထည့်သွင်းထားသော ကွန်ပျူတာ ကြေးနန်း ဖြစ်ပြီး Growser သည်စိစစ်စမ်းသပ်ခြင်း မပြုနိင်ပါ။ ထည့်သွင်းမည်ဆိုပါက Google ၏အသုံးပြုမှု သဘောတူညီချက်များကို သင်သဘောတူပြီးဖြစ်မည်။</translation>
-<translation id="3513162204962925590">Brave သည် extension များကို security နှင့် ဘေးကင်းမှုအတွက် စစ်ဆေးခြင်း မရှိပါ။ "<ph name="EXTENSION_NAME"/>" ကို developer ကို ယုံကြည်မှသာ ထည့်သွင်းပါ။</translation>
+<translation id="3513162204962925590">Growser သည် extension များကို security နှင့် ဘေးကင်းမှုအတွက် စစ်ဆေးခြင်း မရှိပါ။ "<ph name="EXTENSION_NAME"/>" ကို developer ကို ယုံကြည်မှသာ ထည့်သွင်းပါ။</translation>
 <translation id="8652975004530325693">ဤ Growser Sync အကောင့်ကို အခြားစက်တစ်ခုကနေ ဖျက်ထားသည်။ သင် Sync ပိတ်လိုခြင်းမဟုတ်ခဲ့ပါက<ph name="LINK_TEXT"/></translation>
 <translation id="6015737849159950360">Sync service ကို စတင်မျှသည်မရပါ၊ Growser ဆက်ကြသည့် ခြိိန်းကိန်းပလွန်းမလုပ်နိုင်ပါ။</translation>
 <translation id="3097761516937648160">Growser တရားဝင် ဖွင့်သည့် ပြိုင်ဘက် တံပိုး ပြည်ထောင်စုသို့ မဖွင့်ခံရမှု Tor</translation>

@@ -20,7 +20,7 @@
 <translation id="1203500561924088507">Mulțumim pentru instalare. Înainte să folosești <ph name="BUNDLE_NAME"/> trebuie să repornești browserul.</translation>
 <translation id="1232234696885483911">Când deschizi Căutarea de imagini, titlul paginii, adresa URL și conținutul, inclusiv PDF-urile, vor fi trimise automat la server. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">După ce te conectezi, poți folosi parolele și alte date din Contul Growser în Growser. Pentru a modifica această setare, accesează Contul tău în Growser.</translation>
-<translation id="583633806828413086">Afișează Gemini în Brave în bara de meniu Mac</translation>
+<translation id="583633806828413086">Afișează Gemini în Growser în bara de meniu Mac</translation>
 <translation id="1631493536097460865">Pentru a selecta o parte a ecranului în Gemini în Growser, folosește comanda rapidă de la tastatură.</translation>
 <translation id="8799570501820813406">Cât timp fila a fost inactivă, memoria a fost eliberată pentru a menține viteza ridicată a browserului Growser. Poți alege ca acest site să nu fie mereu inactiv.</translation>
 <translation id="8767381092474532098">Growser a blocat descărcarea, deoarece fișierul este periculos</translation>
@@ -71,7 +71,7 @@
 <translation id="5679816001365584346">Descarcă Growser pe telefon pentru a deschide sau a crea grupuri de file noi din mers.</translation>
 <translation id="4559627161887338743">Îți poți gestiona Conturile Growser la care te-ai conectat. Conturile tale Growser sunt folosite pentru browserul Growser, pentru Magazinul Play, pentru Gmail și pentru multe altele. Dacă vrei să adaugi un cont pentru altcineva, de exemplu, pentru un membru al familiei, adaugă noua persoană pe <ph name="DEVICE_TYPE"/>. <ph name="LINK_BEGIN"/>Află mai multe<ph name="LINK_END"/></translation>
 <translation id="1862852878885210965">Caută folosind Căutarea de imagini</translation>
-<translation id="2963742289915075304"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date de pe <ph name="DEVICE"/>.</translation>
+<translation id="2963742289915075304"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date de pe <ph name="DEVICE"/>.</translation>
 <translation id="1880677175115548835">Selectează text</translation>
 <translation id="4528406859989804913">Vă conectați cu un cont gestionat și îi permiteți administratorului acestuia controlul asupra profilului dvs. Growser. Datele Growser, cum ar fi aplicațiile, marcajele, istoricul, parolele și alte setări vor fi asociate definitiv cu <ph name="USER_NAME"/>. Veți putea să ștergeți aceste date prin intermediul Tabloului de bord pentru Conturi Growser, însă nu veți putea să asociați aceste date cu alt cont. Aveți opțiunea de a crea un profil nou, pentru a păstra separat datele Growser existente. <ph name="LEARN_MORE"/></translation>
 <translation id="2207454583030080759">Growser economisește energia bateriei limitând activitatea de fundal și efectele vizuale, cum ar fi derularea lină și ratele de cadre video. <ph name="BEGIN_LINK"/>Află mai multe despre Economisirea energiei<ph name="END_LINK"/></translation>
@@ -130,7 +130,7 @@
 <translation id="5298352791080868905">Deschide linkuri în Growser din orice aplicație și menține browserul accesibil în bara de activități</translation>
 <translation id="2600233721598267627">Dă clic pe butonul Rezumă pentru a trimite acest document la Gemini în Growser pentru a obține o prezentare generală rapidă și a pune întrebări suplimentare</translation>
 <translation id="2118275934191847461">Cu <ph name="BEGIN_LINK"/>instrumentele din Growser<ph name="END_LINK"/>, navighezi în siguranță și deții controlul</translation>
-<translation id="7508460698788470991"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date pe toate dispozitivele.</translation>
+<translation id="7508460698788470991"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date pe toate dispozitivele.</translation>
 <translation id="2451727308784734061">Folosește comanda rapidă pentru a accesa rapid Managerul de parole. Poți muta comanda rapidă pe ecranul de pornire sau în lansatorul de aplicații al computerului.</translation>
 <translation id="6381750314821942592">Growser se va închide în curând</translation>
 <translation id="6078442581074612226">În Growser</translation>
@@ -149,7 +149,7 @@
 <translation id="7931230852267968641">Organizația ta poate să vadă și să gestioneze datele de navigare, cum ar fi marcajele, istoricul și parolele. Nu poate să vadă datele de navigare din alte profiluri Growser</translation>
 <translation id="2257221826278123061">Confirmă-ți identitatea pentru a folosi și a salva datele Growser în contul <ph name="ACCOUNT_EMAIL"/></translation>
 <translation id="7048234400304379082">Pentru a ieși din Gemini sau a reveni la Gemini în Growser, folosește comanda rapidă de la tastatură.</translation>
-<translation id="5655607968417451974">Porniți Brave</translation>
+<translation id="5655607968417451974">Porniți Growser</translation>
 <translation id="7387051847644272380">S-a produs o eroare de sistem de operare în timpul instalării. Descărcați din nou Growser.</translation>
 <translation id="2648689842065142443">Dacă permiți accesul la un dispozitiv, familia și prietenii pot să navigheze separat și să configureze Growser cum doresc</translation>
 <translation id="1001521084148238686">Acces ușor pentru a folosi Gemini în Growser pe dispozitiv, chiar dacă Growser este minimizat.</translation>
@@ -252,7 +252,7 @@
 
           **Sugerează întrebări:** generează o listă cu marcatori cu 3 – 5 întrebări care dau de gândit pe care un utilizator le-ar putea pune pentru a înțelege mai bine captura de ecran. Aceste întrebări trebuie să includă cel puțin una care să se refere în mod specific la un obiect vizual, la designul sau plasarea acestuia.</translation>
 <translation id="5381622442243174305"><ph name="PAGE_TITLE"/> - Growser</translation>
-<translation id="1118754729376002185">Brave are nevoie de permisiune pentru rețeaua locală pentru acest site</translation>
+<translation id="1118754729376002185">Growser are nevoie de permisiune pentru rețeaua locală pentru acest site</translation>
 <translation id="3885770153807205175">Selector de limbă</translation>
 <translation id="6315734375101223238">Personalizează și controlează Growser. Ceva are nevoie de atenția ta – dă clic pentru detalii.</translation>
 <translation id="7130675370997202556">Dați clic pe numele dvs. pentru a deschide Growser și a începe să navigați.</translation>
@@ -394,7 +394,7 @@
 
 Dacă această pagină nu funcționează conform așteptărilor, încearcă să permiți optimizarea.</translation>
 <translation id="7074160267408082133">Afișează Gemini în Growser în bara de meniu Mac și activează comanda rapidă de la tastatură</translation>
-<translation id="2938507901464407819"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date de pe <ph name="DEVICE"/>.</translation>
+<translation id="2938507901464407819"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date de pe <ph name="DEVICE"/>.</translation>
 <translation id="5579324208890605088">Eroare la pornire: rulează programul de instalare ca utilizator obișnuit, nu ca administrator.</translation>
 <translation id="3588973534877826647">Folosește Growser în mod prestabilit și fixează-l</translation>
 <translation id="5596627076506792578">Mai multe opțiuni</translation>
@@ -409,7 +409,7 @@ Dacă această pagină nu funcționează conform așteptărilor, încearcă să 
 <translation id="1834213228893578875">Growser eliberează memoria din filele inactive. Astfel, filele active și alte aplicații beneficiază de mai multe resurse ale computerului și Growser funcționează rapid. Filele inactive se reactivează automat când revii la ele. <ph name="BEGIN_LINK"/>Află mai multe despre Economisirea memoriei<ph name="END_LINK"/></translation>
 <translation id="899523323751802352">Dacă uiți expresia de acces sau dorești să modifici această setare, <ph name="SETTINGS_LINK"/> datele Growser din cont</translation>
 <translation id="82926023981336111">Personalizează și controlează Growser. Setează Growser ca prestabilit.</translation>
-<translation id="5660546041996455312">Păstrează parolele, marcajele și istoricul perfect sincronizate pe toate dispozitivele setând Brave ca browser prestabilit.</translation>
+<translation id="5660546041996455312">Păstrează parolele, marcajele și istoricul perfect sincronizate pe toate dispozitivele setând Growser ca browser prestabilit.</translation>
 <translation id="5809516625706423866">Nu se poate realiza conexiunea la internet. HTTP Eroare 401 – Acces neautorizat. Verifică-ți configurația de proxy.</translation>
 <translation id="95980832839683236">Accelerează site-urile cu motorul V8 din Growser, dar reduce ușor rezistența Growser la atacuri. Setarea este dezactivată.</translation>
 <translation id="1224606669200461217">Pentru a folosi și a salva datele Growser în Contul Growser, actualizează Growser</translation>
@@ -563,12 +563,12 @@ Nu poți salva marcaje noi în cont până când nu ștergi câteva. Dacă te de
 <translation id="2332301637111071062">Organizația ta șterge datele Growser dacă nu sunt folosite timp de <ph name="TIMEOUT_DURATION"/>. Aici pot fi incluse istoricul, completările automate și descărcările.</translation>
 <translation id="1008530050039597147">Growser are nevoie de acces la cameră pentru acest site</translation>
 <translation id="1197672524850678392">Growser nu a putut fi lansat. Încearcă din nou.</translation>
-<translation id="5020151688261063547">Întreabă orice în locul în care te afli, cu Gemini în Brave</translation>
+<translation id="5020151688261063547">Întreabă orice în locul în care te afli, cu Gemini în Growser</translation>
 <translation id="3625983487600668413">Păstrează Growser în bara de andocare pentru a-l accesa rapid oricând</translation>
 <translation id="5755581833598928580">Folosește Growser când dai clic pe linkuri în mesaje, documente și alte aplicații</translation>
 <translation id="7216228761061470870">Când folosești Căutarea de imagini pe computer, titlul paginii, adresa URL și conținutul, inclusiv PDF-urile, sunt trimise la server</translation>
 <translation id="5516268345616100622">Manager de activități - Growser</translation>
-<translation id="2416155625082200759"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date pe toate dispozitivele.</translation>
+<translation id="2416155625082200759"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date pe toate dispozitivele.</translation>
 <translation id="1871621397473741084">Începe să navighezi instantaneu: Growser se poate lansa acum când pornește Windows.</translation>
 <translation id="7274695763216404502">S-a fixat! Folosește din nou Căutarea de imagini din bara de instrumente</translation>
 <translation id="7288567540154601580">File și extensii</translation>
@@ -584,7 +584,7 @@ Growser nu poate recupera setările.</translation>
 <translation id="7352651011704765696">A apărut o eroare</translation>
 <translation id="6085660187823915017">Pentru a primi actualizările Growser viitoare, vei avea nevoie de macOS 13 sau o versiune ulterioară. Acest computer folosește macOS 12.</translation>
 <translation id="2865744782251083875">Nu ai accesat recent site-ul. Growser a eliminat <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>.</translation>
-<translation id="3871306442916198768">Afișează Gemini în Brave în bara de sistem</translation>
+<translation id="3871306442916198768">Afișează Gemini în Growser în bara de sistem</translation>
 <translation id="4104934885375476361">Growser este acum browserul tău prestabilit</translation>
 <translation id="7951152294775418909">Continuă de unde ai rămas: Growser restabilește filele de fiecare dată când repornești. Pentru a dezactiva opțiunea, accesează</translation>
 <translation id="3191314862567596053">Importă parolele în Growser</translation>
@@ -619,7 +619,7 @@ Growser nu poate recupera setările.</translation>
 <translation id="4784414698887946907">Astfel, se vor șterge datele de navigare de pe acest dispozitiv. Pentru a recupera datele mai târziu, conectează-te la Growser ca <ph name="USER_EMAIL"/>.</translation>
 <translation id="7747138024166251722">Programul de instalare nu a putut crea un director temporar. Verifică dacă există suficient spațiu liber și dacă ai drepturile necesare pentru a instala software-ul.</translation>
 <translation id="8543787950557226450">Revino la tema Growser prestabilită</translation>
-<translation id="4859382825808018797">Pentru a-ți proteja activitatea în Brave, organizația ta va putea să vadă sau să gestioneze anumite informații când te conectezi la Brave.</translation>
+<translation id="4859382825808018797">Pentru a-ți proteja activitatea în Growser, organizația ta va putea să vadă sau să gestioneze anumite informații când te conectezi la Growser.</translation>
 <translation id="4976450819672499783">Setează Growser ca browser prestabilit și fixează-l în bara de activități</translation>
 <translation id="1978509466033734608">Crește eficiența în Growser</translation>
 <translation id="6236814935154483927"><ph name="PAGE_TITLE"/> – Growser Canary</translation>
@@ -636,7 +636,7 @@ Growser nu poate recupera setările.</translation>
 <translation id="5687542525349822727">Setează Growser ca browser prestabilit</translation>
 <translation id="6396151137840491551">Growser face automat upgrade conexiunilor nesecurizate la HTTPS, dacă este posibil</translation>
 <translation id="2925193881330501265">Ai fost conectat(ă) la Growser ca <ph name="USER_EMAIL_ADDRESS"/>. Folosește același cont pentru a te conecta din nou.</translation>
-<translation id="3744141798014187630"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date pe toate dispozitivele.</translation>
+<translation id="3744141798014187630"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date pe toate dispozitivele.</translation>
 <translation id="6915252145142862992">Aceasta este o instalare secundară a browserului Growser și nu poate fi setat ca browser prestabilit.</translation>
 <translation id="7766756101194440006">Beneficiază de tot ce este mai bun la Growser cu aplicația Growser pe <ph name="DEVICE_TYPE"/></translation>
 <translation id="8004582292198964060">Browser</translation>
@@ -667,12 +667,12 @@ Growser nu poate recupera setările.</translation>
 <translation id="1755067029031059271">Growser nu poate verifica de unde provine această extensie. Ar putea fi nesigură. Elimin-o din Growser ca să nu mai poată vedea și modifica datele tale de pe site-urile pe care le accesezi, inclusiv informațiile cu caracter personal.</translation>
 <translation id="8207657266087451193">Dacă o imagine nu are o descriere utilă, Growser va încerca să o completeze. Pentru a crea descrieri, imaginile sunt trimise la Growser. Poți dezactiva această opțiune oricând din setări.</translation>
 <translation id="7792526144795244436">Te conectezi la Growser cu un profil nou?</translation>
-<translation id="784788600549915416"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date de pe <ph name="DEVICE"/>.</translation>
+<translation id="784788600549915416"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date de pe <ph name="DEVICE"/>.</translation>
 <translation id="183102473074922918">Afișează Gemini în Growser în bara de sistem și activează comanda rapidă de la tastatură</translation>
 <translation id="976541154724186511"><ph name="BEGIN_LINK"/>Growser te avertizează<ph name="END_LINK"/> cu privire la site-urile și descărcările nesigure</translation>
 <translation id="8060549744348950090">Nu ai accesat recent site-ul. Growser a eliminat <ph name="PERMISSION"/>.</translation>
 <translation id="7402663241490331652">Cumpără, tradu și identifică ceea ce vezi cu camera foto în Growser pentru iOS</translation>
-<translation id="4470171586042711152">Cod QR pentru conectarea la Brave ca <ph name="USER_NAME"/></translation>
+<translation id="4470171586042711152">Cod QR pentru conectarea la Growser ca <ph name="USER_NAME"/></translation>
 <translation id="8313851650939857356">Eroare la pornire: <ph name="STARTUP_ERROR"/>.</translation>
 <translation id="6098476632210317894">Organizația ta închide Growser dacă nu este folosit timp de <ph name="TIMEOUT_DURATION"/>.</translation>
 <translation id="8321888067342493336">Salvează ca imagine</translation>
@@ -976,7 +976,7 @@ Nu poți salva marcaje noi în cont până când nu ștergi câteva. Dacă te de
 <translation id="2901628274067661379">Dezinstalați Growser</translation>
 <translation id="4255250495838298167">Growser nu mai este browserul prestabilit. Setezi Growser ca browser prestabilit?</translation>
 <translation id="4701159144509985041">Setați Growser ca browser prestabilit</translation>
-<translation id="6674282510961658141">Păstrează parolele, marcajele și istoricul perfect sincronizate pe toate dispozitivele setând Brave ca browser prestabilit.</translation>
+<translation id="6674282510961658141">Păstrează parolele, marcajele și istoricul perfect sincronizate pe toate dispozitivele setând Growser ca browser prestabilit.</translation>
 <translation id="3496230475498196433">Dă clic pe <ph name="BEGIN_BOLD"/>Da<ph name="END_BOLD"/> în notificarea Windows ca să fixezi Growser în bara de activități pentru acces rapid.</translation>
 <translation id="6464100105052674345">Permiteți Growser să ruleze în fundal</translation>
 <translation id="2352438365274458200">Dezactivează rularea Growser în fundal pentru aplicații</translation>
@@ -1111,12 +1111,12 @@ Growser nu poate recupera setările.</translation>
 <translation id="8301131823005186282">Pentru a fi mai în siguranță online cu alegerile părintelui tău, treci la profilul Growser în care te-ai conectat deja ca <ph name="USER_EMAIL_ADDRESS"/></translation>
 <translation id="5123925581213723416"><ph name="EXISTING_USER"/> s-a conectat deja la acest profil Growser. Ca să separi navigarea, poți crea propriul profil în Growser.</translation>
 <translation id="5245337343687738049"><ph name="EXISTING_USER"/> s-a conectat deja.  Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="6515876849360167659"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date de pe <ph name="DEVICE"/>.</translation>
-<translation id="6426933876042535118"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date de pe <ph name="DEVICE"/>.</translation>
-<translation id="6873553785695129772"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date de pe <ph name="DEVICE"/>.</translation>
-<translation id="1882791237209046433"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date pe toate dispozitivele.</translation>
-<translation id="3931250744648698087"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date pe toate dispozitivele.</translation>
-<translation id="1150972610527825536"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Brave în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date pe toate dispozitivele.</translation>
+<translation id="6515876849360167659"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date de pe <ph name="DEVICE"/>.</translation>
+<translation id="6426933876042535118"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date de pe <ph name="DEVICE"/>.</translation>
+<translation id="6873553785695129772"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date de pe <ph name="DEVICE"/>.</translation>
+<translation id="1882791237209046433"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa parolele și alte date pe toate dispozitivele.</translation>
+<translation id="3931250744648698087"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa marcajele și alte date pe toate dispozitivele.</translation>
+<translation id="1150972610527825536"><ph name="EXISTING_USER"/> s-a conectat deja. Pentru a separa navigarea, conectează-te la Growser în propriul profil ca <ph name="USER_EMAIL_ADDRESS"/>. În plus, vei putea accesa informațiile salvate și alte date pe toate dispozitivele.</translation>
 <translation id="3505846189507037800">Pentru a fi mai în siguranță online cu alegerile părintelui, conectează-te la Growser</translation>
 <translation id="4245415605080139322">După ce te conectezi, poți folosi parolele și alte date din Contul Growser în Growser. Pentru a modifica această setare, accesează Contul tău în Growser.</translation>
 <translation id="4193690350845293524">După ce te conectezi, poți folosi parolele și alte date din Contul Growser în Growser. <ph name="SHORTCUT"/> îți poate modifica setările pentru serviciile Growser.</translation>
@@ -1140,7 +1140,7 @@ Growser nu poate recupera setările.</translation>
 <translation id="3269077286059832796">Gestionează profilurile Growser</translation>
 <translation id="2196448886818266718">Adaugă un profil Growser</translation>
 <translation id="3639562449300546186">Conectează-te la Growser pe telefon</translation>
-<translation id="3104294450494567786">Cod QR pentru conectarea la Brave ca <ph name="USER_NAME"/></translation>
+<translation id="3104294450494567786">Cod QR pentru conectarea la Growser ca <ph name="USER_NAME"/></translation>
 <translation id="7206238340597832726">Elimină datele aplicației din Growser</translation>
 <translation id="3436740634999437477">Aplicații Growser</translation>
 <translation id="7006775661509770321">Growser utilizează camera foto și microfonul.</translation>
@@ -1227,7 +1227,7 @@ Growser nu poate recupera setările.</translation>
 <translation id="6539809395143501177">Fiecare profil conține propriile informații Growser, cum ar fi marcaje, istoric, parole și altele</translation>
 <translation id="6359748718028735107">Dacă permiți accesul la un dispozitiv, familia și prietenii pot să navigheze separat și să configureze Growser cum doresc</translation>
 <translation id="5254830036533869365">Există deja un profil Growser asociat acestui cont pe dispozitiv</translation>
-<translation id="7671828190113127067">Porniți Brave</translation>
+<translation id="7671828190113127067">Porniți Growser</translation>
 <translation id="3109033858283726964">Conectează-te la Growser</translation>
 <translation id="3194774009976956730">Să pregătim browserul Growser</translation>
 <translation id="3040770245079391216">Folosește Growser în mod prestabilit și fixează-l</translation>
@@ -1244,7 +1244,7 @@ Growser nu poate recupera setările.</translation>
 <translation id="842256045450098075">Pentru a elimina Contul Growser din Growser, deconectează-te</translation>
 <translation id="6677784415412949473">Pentru a elimina Contul Growser din Growser, deconectează-te de la Growser din pagina Setări</translation>
 <translation id="8235635284210221172">Încorporat în Growser pentru a te ajuta să creezi, să salvezi și să completezi automat parole puternice. Adaugă comanda rapidă pentru acces ușor.</translation>
-<translation id="4166648098896027129">Întreabă orice în locul în care te afli, cu Gemini în Brave</translation>
+<translation id="4166648098896027129">Întreabă orice în locul în care te afli, cu Gemini în Growser</translation>
 <translation id="6168558359146786659">Personalizează Growser</translation>
 <translation id="2789075374752545467">Modificările dvs. vor intra în vigoare următoarea dată când reporniți Growser.</translation>
 <translation id="519862482935410613">Growser are nevoie de acces la Bluetooth pentru a explora 
@@ -1272,7 +1272,7 @@ Growser nu poate recupera setările.</translation>
 <translation id="2016973756696213156">Încearcă cu Gemini în Growser</translation>
 <translation id="3446744630960564006">Deschide rapid Gemini în Growser oricând ai nevoie</translation>
 <translation id="1985505085856398819">Afișează Gemini în Growser în bara de sistem și activează comanda rapidă de la tastatură</translation>
-<translation id="7843414100742664106">Afișează Gemini în Brave în bara de sistem</translation>
+<translation id="7843414100742664106">Afișează Gemini în Growser în bara de sistem</translation>
 <translation id="5912735934441585874">Acces ușor pentru a folosi Gemini în Growser pe dispozitiv, chiar dacă Growser este minimizat.</translation>
 <translation id="635775285804478675">Deschide Gemini în Growser cu o comandă rapidă de la tastatură.</translation>
 <translation id="6403063362298585665">Dacă Gemini în Growser este deschis, panoul lateral rămâne deschis când creezi file noi</translation>
@@ -1327,7 +1327,7 @@ Growser nu poate recupera setările.</translation>
 Dacă această pagină nu funcționează conform așteptărilor, încearcă să permiți optimizarea.</translation>
 <translation id="4165169774507632897">Conectați-vă la Growser</translation>
 <translation id="8633519672432360220">Lucrul tău este în siguranță în Growser</translation>
-<translation id="2298918301821382774">Pentru a-ți proteja activitatea în Brave, organizația ta va putea să vadă sau să gestioneze anumite informații când te conectezi la Brave.</translation>
+<translation id="2298918301821382774">Pentru a-ți proteja activitatea în Growser, organizația ta va putea să vadă sau să gestioneze anumite informații când te conectezi la Growser.</translation>
 <translation id="5670438198445413111">Instalarea nu a reușit din cauza unei erori neprecizate. Descărcați Growser din nou.</translation>
 <translation id="4217571870635786043">Dictare</translation>
 </translationbundle>

@@ -1020,7 +1020,7 @@ V Growser Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dej
 <translation id="5316947901395241499">Skrbnik je izklopil shranjevanje gesel</translation>
 <translation id="5317780077021120954">Shrani</translation>
 <translation id="989239400026154074">Growser priporoča Growser</translation>
-<translation id="2334093076041322971">Upravljanje v računu Brave</translation>
+<translation id="2334093076041322971">Upravljanje v računu Growser</translation>
 <translation id="5326246328175179736">S tem računom se ni mogoče prijaviti</translation>
 <translation id="5327248766486351172">Ime</translation>
 <translation id="5328542107300944283">Uporabi z računom <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1249,7 +1249,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="6312687380483398334">Spletni programi (tiho)</translation>
 <translation id="6315386555979018699">Izbriši in nadaljuj</translation>
 <translation id="6316139424528454185">Različica Androida ni podprta</translation>
-<translation id="6485997157403727556">Razširitev »<ph name="EXTENSION_NAME"/>« želi, da se prijavite v Brave</translation>
+<translation id="6485997157403727556">Razširitev »<ph name="EXTENSION_NAME"/>« želi, da se prijavite v Growser</translation>
 <translation id="6324916366299863871">Urejanje bližnjice</translation>
 <translation id="6324977638108296054">Povezave do označitve ni mogoče ustvariti.</translation>
 <translation id="6331836477476466332">Varnejši in zmogljivejši brskalnik za vas</translation>
@@ -1410,7 +1410,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="6885933993535178919">{NUM_SITES,plural, =1{Odjavili ste se z 1 spletnega mesta}one{Odjavili ste se s/z # spletnega mesta}two{Odjavili ste se s/z # spletnih mest}few{Odjavili ste se s/z # spletnih mest}other{Odjavili ste se s/z # spletnih mest}}</translation>
 <translation id="6886500155621657325">{ITEMS_COUNT,plural, =1{1 geslo}one{# geslo}two{# gesli}few{# gesla}other{# gesel}}</translation>
 <translation id="667636428974305054">Po odjavi bodo zaznamki, gesla in drugo v računu Growser odstranjeni iz te naprave.</translation>
-<translation id="5241784838196645561">Če želite uporabljati to razširitev, se prijavite v Brave. Prav tako boste lahko uporabljali in shranjevali gesla ter drugo v računu Brave.</translation>
+<translation id="5241784838196645561">Če želite uporabljati to razširitev, se prijavite v Growser. Prav tako boste lahko uporabljali in shranjevali gesla ter drugo v računu Growser.</translation>
 <translation id="6896758677409633944">Kopiraj</translation>
 <translation id="3677019108032076044">Za šifriranje vseh podatkov v Chromu v računu Growser uporabi moje geslo</translation>
 <translation id="6900532703269623216">Izboljšana zaščita</translation>
@@ -1786,7 +1786,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 <translation id="8387617938027387193">Potrdite, da ste res vi</translation>
 <translation id="8393700583063109961">Pošlji sporočilo</translation>
 <translation id="8396098434728053815">Deli tudi zvok zavihka</translation>
-<translation id="3629742817163747481">Zaradi zaščite vašega dela v Chromu si bo organizacija lahko ogledala nekatere podatke ali jih upravljala, ko boste prijavljeni v Brave. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
+<translation id="3629742817163747481">Zaradi zaščite vašega dela v Chromu si bo organizacija lahko ogledala nekatere podatke ali jih upravljala, ko boste prijavljeni v Growser. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
 <translation id="8413126021676339697">Prikaži celotno zgodovino</translation>
 <translation id="5348884013239264115">Ščiti pred spletnimi mesti, prenosi in razširitvami, za katere vemo, da so nevarni. Ko obiščete spletno mesto, Growser Googlu pošlje zakriti del URL-ja prek strežnika za zasebnost, ki skrije vaš naslov IP. Če spletno mesto naredi kaj sumljivega, se pošljejo tudi celotni URL-ji in delčki vsebine strani.</translation>
 <translation id="8414396119627470038">Prijavite se v storitev <ph name="SITE_ETLD_PLUS_ONE"/> s podatki za <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -2226,7 +2226,7 @@ Nekatera spletna mesta se lahko na primer na zahtevo odzovejo tako, da prikažej
 V Growser Računu so morda druge vrste zgodovine brskanja, kot so iskanja in dejavnosti iz drugih Googlovih storitev, na <ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/>.</translation>
 <translation id="5105442806410269908">Upravljanje drugih Googlovih podatkov</translation>
 <translation id="3410151451624226773">Upravljanje v Googlovem upravitelju gesel</translation>
-<translation id="5224107321793121921">Upravljanje v računu Brave</translation>
+<translation id="5224107321793121921">Upravljanje v računu Growser</translation>
 <translation id="7494463409439554205">Odpiranje celotne zgodovine v Chromu</translation>
 <translation id="4793864227076242107">Del vaše zgodovine morda ne bo prikazan tukaj. Če si želite ogledati vso zgodovino uporabe Chroma, odprite celotno zgodovino uporabe Chroma.</translation>
 <translation id="1133540958407542175">Del vaše zgodovine morda ne bo prikazan tukaj. Če si želite ogledati vso zgodovino uporabe Chroma, odprite celotno zgodovino uporabe Chroma. V računu Growser so morda druge vrste zgodovine brskanja na <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
@@ -2371,8 +2371,8 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="8336534636261636522">Prijavite se na tem spletnem mestu in v Chromu, če želite dostopati do shranjenih informacij in drugega v <ph name="DEVICE_TYPE"/></translation>
 <translation id="6191474532784243888">Prijavite se na tem spletnem mestu in v Chromu, če želite dostopati do zaznamkov in drugega v <ph name="DEVICE_TYPE"/></translation>
 <translation id="5674288757856435579">Prijavite se na tem spletnem mestu in v Chromu, če želite dostopati do gesel in drugega v <ph name="DEVICE_TYPE"/></translation>
-<translation id="2152295677712126834">Razširitev »<ph name="EXTENSION_NAME"/>« želi, da se prijavite v Brave</translation>
-<translation id="7511412857399434551">Če želite uporabljati to razširitev, se prijavite v Brave. Prav tako boste lahko uporabljali in shranjevali gesla ter drugo v računu Brave.</translation>
+<translation id="2152295677712126834">Razširitev »<ph name="EXTENSION_NAME"/>« želi, da se prijavite v Growser</translation>
+<translation id="7511412857399434551">Če želite uporabljati to razširitev, se prijavite v Growser. Prav tako boste lahko uporabljali in shranjevali gesla ter drugo v računu Growser.</translation>
 <translation id="9082932588344912693">Vaš Growser povsod</translation>
 <translation id="7182454109284732832">Če želite dostopati do gesel in drugega v vseh napravah, se v Growser prijavite kot <ph name="EMAIL"/></translation>
 <translation id="5785325624181446291">Če želite dostopati do gesel in drugega v vseh napravah, se prijavite v Growser</translation>
@@ -2470,7 +2470,7 @@ Vaše šifrirane podatke lahko bere samo oseba, ki ima vaše geslo. Geslo ni pos
 <translation id="2496344405665178224">Možnost omogočanja funkcije Growser Finds je odprta pri polni višini</translation>
 <translation id="1921193970202318381">Obvestila za stvari, ki jih najde Growser, so vklopljena</translation>
 <translation id="8633519672432360220">Vaše delo je varno v Chromu</translation>
-<translation id="4566105881274834108">Zaradi zaščite vašega dela v Chromu si bo organizacija lahko ogledala nekatere podatke ali jih upravljala, ko boste prijavljeni v Brave. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
+<translation id="4566105881274834108">Zaradi zaščite vašega dela v Chromu si bo organizacija lahko ogledala nekatere podatke ali jih upravljala, ko boste prijavljeni v Growser. <ph name="BEGIN_LINK"/>Več o tem<ph name="END_LINK"/></translation>
 <translation id="8349305172487531364">Vrstica z zaznamki</translation>
 <translation id="4172051516777682613">Vedno pokaži</translation>
 <translation id="3082989400996696487">Pokaži samo na strani Nov zavihek</translation>

@@ -58,7 +58,7 @@ Később is módosíthatja a következő helyen: <ph name="SETTINGS_EXTENIONS_LI
 <translation id="3218385319396786393">Ezen az oldalon blokkolták az automatikus lejátszást.</translation>
 <translation id="4988333904713528597">Automatikus lejátszás általános engedélyezése itt: <ph name="HOST"/></translation>
 <translation id="4150684676757176434">Automatikus lejátszás további blokkolása</translation>
-<translation id="2201935460386712655">A Brave nem vizsgálja felül a biztonsági kiterjesztéseket. Csak akkor telepítse a következőt: "<ph name="EXTENSION_NAME"/>", ha megbízik a fejlesztőben.</translation>
+<translation id="2201935460386712655">A Growser nem vizsgálja felül a biztonsági kiterjesztéseket. Csak akkor telepítse a következőt: "<ph name="EXTENSION_NAME"/>", ha megbízik a fejlesztőben.</translation>
 <translation id="2928844661231356557">Ha hozzáférést ad egy Bluetooth-eszköznek, lehetővé teszi, hogy a webhely adott esetben Önre vonatkozó, azonosításra alkalmas és esetlegesen érzékeny jellegű információkat olvasson be. Csak olyan webhelyek számára engedélyezze a Bluetooth-hozzáférést, amelyekben megbízik. <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">Tor-ablakok</translation>
 <translation id="7965178729203412357">Új Tor azonosító</translation>
@@ -606,15 +606,15 @@ Később is módosíthatja a következő helyen: <ph name="SETTINGS_EXTENIONS_LI
 <translation id="8868426106596092089">Segítsen fejleszteni a Growser termékstabilitását azáltal, hogy engedélyezi a diagnosztikai jelentések automatikus elküldését a Growser böngésző összeomlása vagy lefagyása esetén</translation>
 <translation id="4891600875049212418">Böngésszen rejtett módban a bizalmas oldalak felkeresésekor</translation>
 <translation id="1022603984240541480">Adatvédelmi beállítások finomhangolási értesítésének megjelenítése kompatibilis oldalakon</translation>
-<translation id="3528176629974273019">Lehetővé teszi, hogy a Brave automatikusan javasoljon (és beállítson) oldalspecifikus adatvédelmi beállításokat.</translation>
+<translation id="3528176629974273019">Lehetővé teszi, hogy a Growser automatikusan javasoljon (és beállítson) oldalspecifikus adatvédelmi beállításokat.</translation>
 <translation id="2740687181110647855">Adatvédelmi beállítások hangolása eszköz</translation>
 <translation id="509873765238158442">A Microsoft Recall blokkolása</translation>
 <translation id="4763421121695677716">Megakadályozza, hogy a Microsoft Windows Recall funkció automatikusan képernyőképeket készítsen a megnyitott Growser lapokról.</translation>
 <translation id="1968895725257436430">Adatgyűjtés</translation>
 <translation id="1700052872056357670">Adatok törlése kilépéskor</translation>
 <translation id="216468847346280584">A Growser hirdetési adatok törlése...</translation>
-<translation id="96212973142796240">Brave hirdetések adatai törölve</translation>
-<translation id="6665923829462527507">Nem sikerült törölni a Brave hirdetések adatait. Próbálja újra.</translation>
+<translation id="96212973142796240">Growser hirdetések adatai törölve</translation>
+<translation id="6665923829462527507">Nem sikerült törölni a Growser hirdetések adatait. Próbálja újra.</translation>
 <translation id="2808630562319398131">Growser Rewards adatok újraállítása...</translation>
 <translation id="6438096877646138757">Olyan oldalak, amelyek a bezárásukkor törlik a sütiket</translation>
 <translation id="2988792685798128092">Törlés az oldal bezárásakor</translation>
@@ -1018,11 +1018,11 @@ Valamennyi kérés egy anonim proxy szerveren keresztül kerül továbbításra,
 <translation id="8854326268817889200">A Growser jutalmak gomb megjelenítése</translation>
 <translation id="7687538894778993146">A Csak reklámblokkolás mód megtartja a Brave Shields alapvető hirdetésblokkolási szabályait. Figyelem: minden adatvédelmi védelem eltávolításra kerül. Ha egyes weboldalak működését a Growser adatvédelmi védelmei akadályozzák, a Shields DOWN állapotra állítható. Ez egy kísérleti mód. <ph name="BEGIN_LINK"/>További információ<ph name="END_LINK"/></translation>
 <translation id="9023173279866800345">Mennyi ideig tárolja a Growser a böngészési előzményeit helyben</translation>
-<translation id="4082996406923131054">Lehetővé teszi, hogy a Brave automatikusan javasoljon (és beállítson) oldalspecifikus adatvédelmi beállításokat.</translation>
+<translation id="4082996406923131054">Lehetővé teszi, hogy a Growser automatikusan javasoljon (és beállítson) oldalspecifikus adatvédelmi beállításokat.</translation>
 <translation id="6673459101269837427">Megakadályozza, hogy a Microsoft Windows Recall funkció automatikusan képernyőképeket készítsen a megnyitott Growser lapokról.</translation>
 <translation id="5636467576514473532">A Growser hirdetési adatok törlése...</translation>
-<translation id="420057953503713346">Brave hirdetések adatai törölve</translation>
-<translation id="3399998090446159274">Nem sikerült törölni a Brave hirdetések adatait. Próbálja újra.</translation>
+<translation id="420057953503713346">Growser hirdetések adatai törölve</translation>
+<translation id="3399998090446159274">Nem sikerült törölni a Growser hirdetések adatait. Próbálja újra.</translation>
 <translation id="1332284067513374815">Growser Rewards adatok újraállítása...</translation>
 <translation id="6645428976896583185">Ellenőrizze az URL-eket a Growser-ben tárolt nem biztonságos webhelyek listájával.</translation>
 <translation id="2338646464484947274">A kezdéshez minden szinkronizálni kívánt eszközön telepítve kell legyen a Growser. Ha ez megvan, biztonságosan csatolja össze őket egy szinkronizálási kóddal.</translation>
@@ -1062,7 +1062,7 @@ Valamennyi kérés egy anonim proxy szerveren keresztül kerül továbbításra,
 <translation id="1709339105818930637">Oval Growser avatár</translation>
 <translation id="790677324469754498">Bonbon Growser avatár</translation>
 <translation id="4677850801710355225">A Widevine esetenként szükséges egy weblapon található médiatartalmak lejátszásához. A Widevine egy, a Google kiszolgálóiról betöltött Google-bővítmény, amelyet a Growser nem képes megvizsgálni. A telepítéssel beleegyezik a Google használati feltételeibe.</translation>
-<translation id="3513162204962925590">A Brave nem vizsgálja felül a biztonsági kiterjesztéseket. Csak akkor telepítse a következőt: "<ph name="EXTENSION_NAME"/>", ha megbízik a fejlesztőben.</translation>
+<translation id="3513162204962925590">A Growser nem vizsgálja felül a biztonsági kiterjesztéseket. Csak akkor telepítse a következőt: "<ph name="EXTENSION_NAME"/>", ha megbízik a fejlesztőben.</translation>
 <translation id="8652975004530325693">Ez a Growser szinkronizációs fiók törölve lett egy másik eszközről. Ha nem akarta letiltani a Szinkronizálást, <ph name="LINK_TEXT"/></translation>
 <translation id="6015737849159950360">A szinkronizálási szolgáltatás nem indítható el, mert a Growser-szinkronizálás nem fut</translation>
 <translation id="3097761516937648160">Hivatkozás megnyitása Growser privát ablakban a Tor böngészővel</translation>

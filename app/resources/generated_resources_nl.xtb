@@ -186,7 +186,7 @@ Je kunt je wachtwoorden altijd checken in <ph name="GOOGLE_PASSWORD_MANAGER"/>.<
 <translation id="1130116586186908674">Gesplitste weergave maken</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - onderdeel van groep <ph name="GROUP_NAME"/></translation>
 <translation id="1130676589211693127">Batterijniveau rechts: <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">Als tabbladen worden gedeeld, worden de bijbehorende paginacontent, media en URL's naar Brave gestuurd en kunnen ze worden beoordeeld op veiligheid.</translation>
+<translation id="1412403201555978627">Als tabbladen worden gedeeld, worden de bijbehorende paginacontent, media en URL's naar Growser gestuurd en kunnen ze worden beoordeeld op veiligheid.</translation>
 <translation id="1133418583142946603">Huidig tabblad toevoegen</translation>
 <translation id="1133751489735776037">3 keer klikken met de muis</translation>
 <translation id="1136712381129578788">De beveiligingssleutel is vergrendeld omdat je te vaak een onjuiste pincode hebt ingevoerd. Ontgrendel de sleutel door deze te verwijderen en opnieuw te plaatsen.</translation>
@@ -376,7 +376,7 @@ Je kunt je wachtwoorden altijd checken in <ph name="GOOGLE_PASSWORD_MANAGER"/>.<
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Stop</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>Ondersteunde links<ph name="END_LINK"/> openen</translation>
-<translation id="7823526956728613125">De koppeling tussen Zoeken-services en Brave Workspace-apps, zoals Google Drive, beheren</translation>
+<translation id="7823526956728613125">De koppeling tussen Zoeken-services en Growser Workspace-apps, zoals Google Drive, beheren</translation>
 <translation id="1274997165432133392">Cookies en andere sitegegevens</translation>
 <translation id="1275936815032730048">Launcher + pijl-rechts</translation>
 <translation id="1275963833368139883">Als je in je browsegeschiedenis zoekt, zijn antwoorden en zoekresultaten gebaseerd op de content van een pagina. Hierdoor krijg je betere resultaten.</translation>
@@ -653,7 +653,7 @@ Je kunt je wachtwoorden altijd checken in <ph name="GOOGLE_PASSWORD_MANAGER"/>.<
 <translation id="1508931164824684991">Sites kunnen JavaScript gebruiken</translation>
 <translation id="1509163368529404530">G&amp;roep herstellen</translation>
 <translation id="1509281256533087115">Toegang tot <ph name="DEVICE_NAME_AND_VENDOR"/> via USB</translation>
-<translation id="2825615584808054779">Je gesprekken met Gemini en ook je Brave Workspace-gegevens worden niet beoordeeld of gebruikt om generatieve AI-modellen te verbeteren. Gemini is AI en kan fouten maken.</translation>
+<translation id="2825615584808054779">Je gesprekken met Gemini en ook je Growser Workspace-gegevens worden niet beoordeeld of gebruikt om generatieve AI-modellen te verbeteren. Gemini is AI en kan fouten maken.</translation>
 <translation id="1510238584712386396">Launcher</translation>
 <translation id="1510341833810331442">Sites mogen geen gegevens opslaan op je apparaat</translation>
 <translation id="1510882959204224895">Openen in venster</translation>
@@ -747,7 +747,7 @@ Je kunt je wachtwoorden altijd checken in <ph name="GOOGLE_PASSWORD_MANAGER"/>.<
 <translation id="1581962803218266616">Toon in Finder</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>] verwijderen</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> wordt lokaal verwerkt en werkt offline</translation>
-<translation id="491276955533054201">Zet eerst automatisch browsen in Brave aan voor dit apparaat</translation>
+<translation id="491276955533054201">Zet eerst automatisch browsen in Growser aan voor dit apparaat</translation>
 <translation id="1587275751631642843">&amp;JavaScript-console</translation>
 <translation id="1588438908519853928">Normaal</translation>
 <translation id="1588772269240419305">Updates voor logo en naam controleren</translation>
@@ -1149,7 +1149,7 @@ Je kunt je wachtwoorden altijd checken in <ph name="GOOGLE_PASSWORD_MANAGER"/>.<
 <translation id="1892453608039100484">1. Klik op <ph name="BUTTON_LABEL"/> hieronder
 2. Klik op <ph name="BUTTON_2"/> in je Windows-instellingen</translation>
 <translation id="1895658205118569222">Uitschakeling</translation>
-<translation id="1189523243806849236">Chats worden beoordeeld en gebruikt om AI van Brave te verbeteren. Gemini is AI en kan fouten maken. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Chats worden beoordeeld en gebruikt om AI van Growser te verbeteren. Gemini is AI en kan fouten maken. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Sterk wachtwoord gebruiken</translation>
 <translation id="1897860317037652061">Scannen mislukt</translation>
 <translation id="1898804291554630487">Vraag stellen over deze pagina</translation>
@@ -1158,7 +1158,7 @@ Je kunt je wachtwoorden altijd checken in <ph name="GOOGLE_PASSWORD_MANAGER"/>.<
 <translation id="1901213235765457754">Vraag je beheerder om deze app te updaten</translation>
 <translation id="1901303067676059328">&amp;Alles selecteren</translation>
 <translation id="1901760057081700494">De tijdzone is op dit moment ingesteld op <ph name="TIME_ZONE_ENTRY"/>. Als je de tijdzone automatisch wilt updaten, <ph name="BEGIN_LINK"/>zet je locatietoegang voor het systeem aan<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Met je woonadres kun je meer gedaan krijgen in Brave-services, zoals relevantere zoekresultaten en routes in Brave Maps. Je kunt je adres bewerken of verwijderen in je <ph name="BEGIN_LINK"/>Brave-account<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">Met je woonadres kun je meer gedaan krijgen in Growser-services, zoals relevantere zoekresultaten en routes in Growser Maps. Je kunt je adres bewerken of verwijderen in je <ph name="BEGIN_LINK"/>Growser-account<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">De URL's die je bezoekt, worden opgeslagen in je Growser-account</translation>
 <translation id="190530012637606145">Waarschuwt je voor alle niet-beveiligde verbindingen, waaronder privé-intranetten</translation>
 <translation id="1906181697255754968">Sites vragen meestal toegang tot bestanden en mappen op je apparaat voor functies zoals het automatisch opslaan van je werk</translation>
@@ -1531,7 +1531,7 @@ Je kunt de instellingen van dit account beheren door de Family Link-app op je ap
 <translation id="2198625180564913276">Profiel toevoegen. Dit kan een paar minuten duren.</translation>
 <translation id="2198712775285959645">Bewerken</translation>
 <translation id="2199298570273670671">Fout</translation>
-<translation id="2798272130984183944">Kies of Brave AI-modellen gebruikt die rechtstreeks op je apparaat worden uitgevoerd</translation>
+<translation id="2798272130984183944">Kies of Growser AI-modellen gebruikt die rechtstreeks op je apparaat worden uitgevoerd</translation>
 <translation id="2200094388063410062">E-mail</translation>
 <translation id="2200781749203116929">ChromeOS-systeemlogboeken</translation>
 <translation id="2202391868799679245">Sneltoets aanzetten</translation>
@@ -1611,7 +1611,7 @@ Je kunt de instellingen van dit account beheren door de Family Link-app op je ap
 <translation id="225716114209817872">Maximum</translation>
 <translation id="5642482119439119644">Bevestig dat jij het bent om de tabbladen van je andere apparaten te krijgen. Je kunt de synchronisatie op elk moment stopzetten via de instellingen. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
 <translation id="22614517036276112">Dit document of je apparaat voldoet niet aan het beveiligingsbeleid van je organisatie. Neem contact op met je beheerder over wat moet worden opgelost.</translation>
-<translation id="1829264724820495616">Met je werkadres kun je meer gedaan krijgen in Brave-services, zoals relevantere zoekresultaten en routes in Brave Maps. Je kunt je adres bewerken of verwijderen <ph name="BEGIN_LINK"/>in je Brave-account <ph name="END_LINK"/><ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">Met je werkadres kun je meer gedaan krijgen in Growser-services, zoals relevantere zoekresultaten en routes in Growser Maps. Je kunt je adres bewerken of verwijderen <ph name="BEGIN_LINK"/>in je Growser-account <ph name="END_LINK"/><ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Vertraging vóór herhaling</translation>
 <translation id="2263371730707937087">Vernieuwingssnelheid van het scherm</translation>
 <translation id="7829329302663082098">We ontvangen graag feedback, zodat we Growser Cast kunnen verbeteren. Als je hulp nodig hebt bij het oplossen van castproblemen, ga je naar het <ph name="BEGIN_LINK"/>Helpcentrum<ph name="END_LINK"/>.</translation>
@@ -1754,7 +1754,7 @@ Je kunt de instellingen van dit account beheren door de Family Link-app op je ap
 <translation id="2373499590298659902">Gebruik 0 om een muisknop ingedrukt te houden</translation>
 <translation id="2373666622366160481">Aanpassen aan papierformaat</translation>
 <translation id="2375406435414127095">Verbinding maken met je telefoon</translation>
-<translation id="6612559367203670996">Brave gebruikt de content en URL van gedeelde tabbladen. Je huidige tabblad wordt gedeeld in nieuwe gesprekken. Je kunt deze instelling op elk moment aanpassen.</translation>
+<translation id="6612559367203670996">Growser gebruikt de content en URL van gedeelde tabbladen. Je huidige tabblad wordt gedeeld in nieuwe gesprekken. Je kunt deze instelling op elk moment aanpassen.</translation>
 <translation id="2376056713414548745">Voorlezen</translation>
 <translation id="2376122016044804363">Bevestigingen voor gekopieerd naar klembord</translation>
 <translation id="2377667304966270281">Harde fouten</translation>
@@ -3319,7 +3319,7 @@ Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het ge
 <translation id="3569614820047645079">Je bestanden in Mijn Drive worden automatisch gesynchroniseerd met je Chromebook, zodat je ze zonder internetverbinding kunt openen.</translation>
 <translation id="3569617221227793022">De tijdzone is op dit moment ingesteld op <ph name="TIME_ZONE_ENTRY"/>. Deze instelling wordt beheerd door je beheerder.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> kan de volgende bestanden en mappen bekijken</translation>
-<translation id="4062501938325597704">De paginacontent en URL's die Gemini tijdens een taak gebruikt, worden gedeeld met Brave en kunnen worden beoordeeld op veiligheid.</translation>
+<translation id="4062501938325597704">De paginacontent en URL's die Gemini tijdens een taak gebruikt, worden gedeeld met Growser en kunnen worden beoordeeld op veiligheid.</translation>
 <translation id="3571734092741541777">Instellen</translation>
 <translation id="3575121482199441727">Toestaan voor deze site</translation>
 <translation id="3575224072358507281">IP-adressen en netwerkmeetresultaten verzamelen voor Measurement Lab in overeenstemming met hun privacybeleid (measurementlab.net/privacy)</translation>
@@ -4996,7 +4996,7 @@ Gebruik Ctrl + Alt + Helderheid omlaag om uit te zoomen.</translation>
 <translation id="485480310608090163">Meer instellingen en rechten</translation>
 <translation id="4857304314344645169">Bekijk een stapsgewijze uitleg van elk probleem</translation>
 <translation id="1913048435257025864">Growser vragen stellen over vorige pagina: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">De content en de URL van je huidige tabblad worden gedeeld met Brave om je relevantere antwoorden te geven. Je kunt tabbladen toevoegen of verwijderen terwijl je browst.</translation>
+<translation id="228735844055480091">De content en de URL van je huidige tabblad worden gedeeld met Growser om je relevantere antwoorden te geven. Je kunt tabbladen toevoegen of verwijderen terwijl je browst.</translation>
 <translation id="485806788160414322">Media afspelen of pauzeren</translation>
 <translation id="4858913220355269194">Fritz</translation>
 <translation id="4860012864737017059">Tabblad Recent</translation>
@@ -5331,7 +5331,7 @@ Gebruik Ctrl + Alt + Helderheid omlaag om uit te zoomen.</translation>
 <translation id="5112577000029535889">&amp;Hulpprogramma's voor ontwikkelaars</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 bestand verplaatst}other{{NUM_OF_FILES} bestanden verplaatst}}</translation>
 <translation id="511313294362309725">Snel koppelen aanzetten</translation>
-<translation id="6409962091529734959">Meer informatie over automatisch browsen in Brave</translation>
+<translation id="6409962091529734959">Meer informatie over automatisch browsen in Growser</translation>
 <translation id="51143538739122961">Plaats je beveiligingssleutel en tik erop</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Audio op&amp;slaan als...</translation>
@@ -5374,7 +5374,7 @@ Gebruik Ctrl + Alt + Helderheid omlaag om uit te zoomen.</translation>
 <translation id="5146235736676876345">Zelf een wachtwoord kiezen</translation>
 <translation id="5146896637028965135">Systeemstem</translation>
 <translation id="5147113439721488265">Aanbeveling</translation>
-<translation id="5897101208018277582">Laat verifiëren dat jij het bent om links te sturen. Je kunt links sturen als je op beide apparaten bent ingelogd op hetzelfde Brave-account.</translation>
+<translation id="5897101208018277582">Laat verifiëren dat jij het bent om links te sturen. Je kunt links sturen als je op beide apparaten bent ingelogd op hetzelfde Growser-account.</translation>
 <translation id="5148285448107770349">Wachtwoord moet minstens 8 tekens lang zijn</translation>
 <translation id="5149602533174716626">Videoframe kop&amp;iëren</translation>
 <translation id="5150254825601720210">SSL-servernaam van Netscape-certificaat</translation>
@@ -6059,7 +6059,7 @@ Je kunt meerdere schakelaars toewijzen aan deze actie.</translation>
 <translation id="5713158217420111469">Verbonden met <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Omgekeerd</translation>
 <translation id="5714100381896040477">Beweging op het scherm beperken</translation>
-<translation id="8277434106940718633">Je gesprekken met Gemini en ook je Brave Workspace-gegevens worden niet beoordeeld of gebruikt om generatieve AI-modellen te verbeteren. Gemini is AI en kan fouten maken. Bepaalde content is misschien niet geschikt voor iedereen.</translation>
+<translation id="8277434106940718633">Je gesprekken met Gemini en ook je Growser Workspace-gegevens worden niet beoordeeld of gebruikt om generatieve AI-modellen te verbeteren. Gemini is AI en kan fouten maken. Bepaalde content is misschien niet geschikt voor iedereen.</translation>
 <translation id="5719854774000914513">Sites kunnen vragen of ze verbinding mogen maken met HID-apparaten</translation>
 <translation id="5720729194423017301">Snelkoppelingen voor sites en zoekmachines</translation>
 <translation id="572155275267014074">Android-instellingen</translation>
@@ -6993,7 +6993,7 @@ Je kunt meerdere schakelaars toewijzen aan deze actie.</translation>
 <translation id="6464825623202322042">Dit apparaat</translation>
 <translation id="6465841119675156448">Zonder internet</translation>
 <translation id="6466258437571594570">Sites mogen je niet storen met de vraag of ze je meldingen mogen sturen</translation>
-<translation id="1673835407889847350">Laat verifiëren dat jij het bent om wachtwoorden toe te voegen en ze op alle apparaten met je Brave-account te krijgen</translation>
+<translation id="1673835407889847350">Laat verifiëren dat jij het bent om wachtwoorden toe te voegen en ze op alle apparaten met je Growser-account te krijgen</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> scannen</translation>
 <translation id="6467304607960172345">Video's op volledig scherm optimaliseren</translation>
 <translation id="6467377768028664108">Je <ph name="DEVICE_TYPE"/> kan dan het volgende doen:</translation>
@@ -7006,7 +7006,7 @@ Je kunt meerdere schakelaars toewijzen aan deze actie.</translation>
 <translation id="6470823736074966819">Meldingen negeren</translation>
 <translation id="6472893788822429178">Homepage-knop tonen</translation>
 <translation id="6473315466413288899">Selecteer een optie</translation>
-<translation id="6199773995438617867">Meer tonen in Brave Agenda</translation>
+<translation id="6199773995438617867">Meer tonen in Growser Agenda</translation>
 <translation id="6474401088838630457">Vraag Gemini hier meer over</translation>
 <translation id="6474498546677193336">Kan het delen niet opheffen omdat een app deze map gebruikt. Het delen van de map wordt opgeheven als Linux weer wordt uitgezet.</translation>
 <translation id="6474884162850599008">Google Drive-account ontkoppelen</translation>
@@ -7187,7 +7187,7 @@ Je hebt nog # gehackte wachtwoorden. Growser Wachtwoordmanager raadt je aan deze
 <translation id="6613231539539868591">Persistente gegevens</translation>
 <translation id="6613267708691765962">Scannen op malware...</translation>
 <translation id="6615455863669487791">Tonen</translation>
-<translation id="5146630705831894319">Brave Translate aanbieden voor websites en pdf's in andere talen</translation>
+<translation id="5146630705831894319">Growser Translate aanbieden voor websites en pdf's in andere talen</translation>
 <translation id="6618013221808317456">Niet toestaan dat sites JavaScript-optimalisatie gebruiken</translation>
 <translation id="6618154741503063152">Kan niet uploaden. Bijlagen zijn niet toegestaan.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7541,7 +7541,7 @@ Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het ge
 <translation id="6871644448911473373">OCSP-beantwoorder: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Talen...</translation>
 <translation id="6873156759937047811">Pincode:</translation>
-<translation id="5189979109199910058">Als dit aanstaat, biedt Brave Translate aan om sites en pdf's te vertalen naar je voorkeurstaal. De functie kan ook automatisch sites vertalen.</translation>
+<translation id="5189979109199910058">Als dit aanstaat, biedt Growser Translate aan om sites en pdf's te vertalen naar je voorkeurstaal. De functie kan ook automatisch sites vertalen.</translation>
 <translation id="6873571253135628430">Siterechten wijzigen</translation>
 <translation id="6874986444867497677">De installatie kan niet worden afgerond. Probeer het opnieuw of sluit dit venster.</translation>
 <translation id="6876155724392614295">Fiets</translation>
@@ -7829,7 +7829,7 @@ Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het ge
 <translation id="710224247908684995">Een extensie heeft Safe Browsing uitgezet</translation>
 <translation id="7102832101143475489">Er is een time-out voor het verzoek opgetreden</translation>
 <translation id="7103944802169726298">Pc en cast-apparaat in hetzelfde wifi-netwerk</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave-lidmaatschap</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser-lidmaatschap</translation>
 <translation id="7107609441453408294">Dezelfde audio afspelen via alle speakers</translation>
 <translation id="7108338896283013870">Verbergen</translation>
 <translation id="7108419148561505648">Vul minimaal één veld in voordat je opslaat</translation>
@@ -8200,7 +8200,7 @@ Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het ge
 <translation id="7395774987022469191">Volledig scherm</translation>
 <translation id="7396017167185131589">Gedeelde mappen zie je hier</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> wordt gestart zodra je het systeem opstart en blijft zelfs op de achtergrond actief als je alle andere vensters van <ph name="PRODUCT_NAME"/> sluit.</translation>
-<translation id="8572914900293297191">Chats worden beoordeeld en gebruikt om AI van Brave te verbeteren. Gemini is AI en kan fouten maken. Bepaalde content is misschien niet geschikt voor iedereen. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Chats worden beoordeeld en gebruikt om AI van Growser te verbeteren. Gemini is AI en kan fouten maken. Bepaalde content is misschien niet geschikt voor iedereen. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Synchronisatie aanpassen</translation>
 <translation id="7399616692258236448">Locatieverzoeken worden automatisch geblokkeerd voor alle sites, behalve de sites die je toestaat</translation>
 <translation id="7399802613464275309">Veiligheidscheck</translation>
@@ -8733,7 +8733,7 @@ Druk op een toegewezen schakelaar of toets om de toewijzing te verwijderen.</tra
 <translation id="7807711621188256451"><ph name="HOST"/> altijd toegang tot je camera geven</translation>
 <translation id="7810202088502699111">Er zijn pop-ups op deze pagina geblokkeerd</translation>
 <translation id="7810367892333449285">Je invoer moet deze indeling hebben: <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ adres<ph name="LPA_2"/>$<ph name="LPA_3"/>optionele overeenkomende ID<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave wordt mogelijk gemaakt door het opensource-project Brave en andere <ph name="BEGIN_HIGHLIGHT"/>opensource<ph name="END_HIGHLIGHT"/>-software.</translation>
+<translation id="5014491767627896944">Growser wordt mogelijk gemaakt door het opensource-project Growser en andere <ph name="BEGIN_HIGHLIGHT"/>opensource<ph name="END_HIGHLIGHT"/>-software.</translation>
 <translation id="7811263553491007091">Probeer het opnieuw of maak een keuze uit een van de eerder gegenereerde thema's hieronder.</translation>
 <translation id="7811926937048662341">Klik hier met de rechtermuisknop en selecteer Tabbladen verticaal tonen</translation>
 <translation id="7811986034759500329">Instellen in systeeminstellingen</translation>
@@ -8756,7 +8756,7 @@ Druk op een toegewezen schakelaar of toets om de toewijzing te verwijderen.</tra
 <translation id="7826039927887234077">Recent AI-thema <ph name="INDEX"/> van <ph name="SUBJECT"/>, met de stemming <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Ondersteuning voor oudere browsers (LBS): intern</translation>
 <translation id="7826838152281937785">Weergave onderaan sluiten</translation>
-<translation id="45690163731419633">De <ph name="BEGIN_LINK_TERMS"/>Servicevoorwaarden van Brave<ph name="END_LINK_TERMS"/> en de <ph name="BEGIN_LINK_PRIVACY"/>Privacyverklaring van Gemini Apps<ph name="END_LINK_PRIVACY"/> zijn van toepassing.</translation>
+<translation id="45690163731419633">De <ph name="BEGIN_LINK_TERMS"/>Servicevoorwaarden van Growser<ph name="END_LINK_TERMS"/> en de <ph name="BEGIN_LINK_PRIVACY"/>Privacyverklaring van Gemini Apps<ph name="END_LINK_PRIVACY"/> zijn van toepassing.</translation>
 <translation id="7828642077514646543">Fout: Kan certificaat niet decoderen</translation>
 <translation id="7830276128493844263">Locatie staat uit in de systeeminstellingen</translation>
 <translation id="7830833461614351956"><ph name="NUM_OF_FILES"/> bestanden naar <ph name="CLOUD_PROVIDER"/> kopiëren om te openen?</translation>
@@ -9627,7 +9627,7 @@ Bewaar je sleutelbestand op een veilige plaats. Je hebt het bestand nodig om nie
 <translation id="850399339579925930">Woordenboeken</translation>
 <translation id="850561044295157831">Meer informatie over Help me met schrijven</translation>
 <translation id="8505669004895429027">Kleine besparingen</translation>
-<translation id="869548515244800202">Brave-lidmaatschap</translation>
+<translation id="869548515244800202">Growser-lidmaatschap</translation>
 <translation id="8507052544157927817">Stijl voor onderstreping</translation>
 <translation id="8507227974644337342">Schermresolutie</translation>
 <translation id="8507443886219296894">Verbergen voor deze site</translation>
@@ -9767,7 +9767,7 @@ Bewaar je sleutelbestand op een veilige plaats. Je hebt het bestand nodig om nie
 <translation id="8619803522055190423">Slagschaduw</translation>
 <translation id="8620206585293032550">Uiterlijk van inactieve tabbladen</translation>
 <translation id="8621979332865976405">Je volledige scherm delen</translation>
-<translation id="6089523089512126744">AI-modus van Brave Zoeken en gekoppelde apps</translation>
+<translation id="6089523089512126744">AI-modus van Growser Zoeken en gekoppelde apps</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Serienummers van ChromeOS-apparaat en component lezen</translation>
 <translation id="862542460444371744">&amp;Extensies</translation>
@@ -11323,17 +11323,17 @@ Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je mee
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini in Growser</translation>
 <translation id="1975450474853317621">Openen in de Growser-browser</translation>
 <translation id="8516824290867275572">Je account heeft geen toegang tot Gemini in Growser</translation>
-<translation id="1649234713894562345">Brave wordt mogelijk gemaakt door het opensource-project Brave en andere <ph name="BEGIN_HIGHLIGHT"/>opensource<ph name="END_HIGHLIGHT"/>-software.</translation>
+<translation id="1649234713894562345">Growser wordt mogelijk gemaakt door het opensource-project Growser en andere <ph name="BEGIN_HIGHLIGHT"/>opensource<ph name="END_HIGHLIGHT"/>-software.</translation>
 <translation id="870536819717176711">Als je ervoor kiest om het huidige tabblad met Gemini te delen, worden de volledige content, media en de URL van het tabblad naar Growser gestuurd.</translation>
-<translation id="1130866111814048607">Als tabbladen worden gedeeld, worden de bijbehorende paginacontent, media en URL's naar Brave gestuurd en kunnen ze worden beoordeeld op veiligheid.</translation>
-<translation id="7656790264713095385">Zet eerst automatisch browsen in Brave aan voor dit apparaat</translation>
+<translation id="1130866111814048607">Als tabbladen worden gedeeld, worden de bijbehorende paginacontent, media en URL's naar Growser gestuurd en kunnen ze worden beoordeeld op veiligheid.</translation>
+<translation id="7656790264713095385">Zet eerst automatisch browsen in Growser aan voor dit apparaat</translation>
 <translation id="8572003230388132401">Gemini Spark kan automatisch browsen in Growser op dit apparaat gebruiken om namens jou te communiceren met sites en taken uit te voeren. <ph name="LINK_BEGIN"/>Meer informatie<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark kan automatisch browsen alleen gebruiken op dit apparaat als het apparaat aanstaat en Growser actief is.</translation>
 <translation id="1982892581799327835">Iedereen met toegang tot je Gemini Spark-agent kan je Growser-browser bedienen.</translation>
 <translation id="6689939585896001516">Laat Growser voor je browsen</translation>
 <translation id="640233545778658570">Gemini in Growser gebruikt automatisch browsen om in je tabbladen te werken en taken uit te voeren die je Gemini geeft. <ph name="LINK_BEGIN"/>Meer informatie<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Meer informatie over automatisch browsen in Brave</translation>
-<translation id="3570112771874223231">De paginacontent en URL's die Gemini tijdens een taak gebruikt, worden gedeeld met Brave en kunnen worden beoordeeld op veiligheid.</translation>
+<translation id="2740842679402949230">Meer informatie over automatisch browsen in Growser</translation>
+<translation id="3570112771874223231">De paginacontent en URL's die Gemini tijdens een taak gebruikt, worden gedeeld met Growser en kunnen worden beoordeeld op veiligheid.</translation>
 <translation id="2314508080153323869">Gemini in Growser</translation>
 <translation id="1910632359330857071">Praat met Gemini in Growser om onder meer antwoorden en belangrijke conclusies te krijgen terwijl je browst</translation>
 <translation id="2483218699324586641">Gebruik <ph name="FOCUS_TOGGLE_HOTKEY"/> om Gemini in Growser te openen</translation>
@@ -11350,8 +11350,8 @@ Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je mee
 <translation id="3187556136478864255">Zie je je cast-apparaat in de <ph name="BEGIN_LINK"/>Growser Home-app<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Haal je toegangssleutels op dit apparaat op met Growser Wachtwoordmanager</translation>
 <translation id="2364302372598204515">Dit is geen Growser-account. Items die je in Growser opslaat, zijn niet beschikbaar op andere apparaten.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave-lidmaatschap</translation>
-<translation id="850632091665381275">Brave-lidmaatschap</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser-lidmaatschap</translation>
+<translation id="850632091665381275">Growser-lidmaatschap</translation>
 <translation id="6710172959248731469">Instellingen voor Growser-services</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 item wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}other{{ITEM_COUNT} items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 wachtwoord wordt alleen op dit apparaat opgeslagen. Als je het wilt gebruiken op je andere apparaten, sla je het op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}other{{PASSWORD_COUNT} wachtwoorden worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account. Hiermee worden ook eventuele duplicaten opgeschoond.}}</translation>
@@ -11365,8 +11365,8 @@ Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je mee
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 bookmark en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}other{{BOOKMARK_COUNT} bookmarks en andere items worden alleen op dit apparaat opgeslagen. Als je ze wilt gebruiken op je andere apparaten, sla je ze op in je Growser-account.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 item wordt alleen op dit apparaat opgeslagen. Als je het op je andere apparaten wilt gebruiken, <ph name="BEGIN_LINK"/>sla je het op in je Growser-account<ph name="END_LINK"/>.}other{{ITEM_COUNT} items worden alleen op dit apparaat opgeslagen. Als je ze op je andere apparaten wilt gebruiken, <ph name="BEGIN_LINK"/>sla je ze op in je Growser-account<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Gebruik je Growser-account of maak een nieuw account</translation>
-<translation id="1896353439080510710">Chats worden beoordeeld en gebruikt om AI van Brave te verbeteren. Gemini is AI en kan fouten maken. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Chats worden beoordeeld en gebruikt om AI van Brave te verbeteren. Gemini is AI en kan fouten maken. Bepaalde content is misschien niet geschikt voor iedereen. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Chats worden beoordeeld en gebruikt om AI van Growser te verbeteren. Gemini is AI en kan fouten maken. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Chats worden beoordeeld en gebruikt om AI van Growser te verbeteren. Gemini is AI en kan fouten maken. Bepaalde content is misschien niet geschikt voor iedereen. Je kunt <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>je activiteit beheren<ph name="END_LINK_MANAGE_ACTIVITY"/>, waaronder informatie over je locatie. <ph name="BEGIN_LINK_LEARN_MORE"/>Meer informatie over je keuzes<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Deze extensie is opgeslagen in je Growser-account, maar gegevens die de extensie alleen op dit apparaat heeft opgeslagen, kunnen worden verwijderd}other{Deze extensies zijn opgeslagen in je Growser-account, maar gegevens die de extensies alleen op dit apparaat hebben opgeslagen, kunnen worden verwijderd}}</translation>
 <translation id="3523789730715594198">Je kunt de synchronisatie op elk moment stopzetten via de instellingen. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
 <translation id="8231595707224857577">Je organisatie heeft tabbladen opslaan uitgezet in je Growser-account</translation>
@@ -11404,7 +11404,7 @@ Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je mee
 <translation id="1024884937839269099">Er kunnen <ph name="BEGIN_LINK_GOOGLE"/>andere vormen van activiteit<ph name="END_LINK_GOOGLE"/> worden opgeslagen op je Growser-account als je bent ingelogd. Je kunt ze wanneer je wilt verwijderen.</translation>
 <translation id="6533315466883598769">Google Translate gebruiken</translation>
 <translation id="6010651352520077187">Als dit aanstaat, biedt Google Translate aan om sites te vertalen naar je voorkeurstaal. De functie kan ook automatisch sites vertalen.</translation>
-<translation id="6873499199714317035">Als dit aanstaat, biedt Brave Translate aan om sites en pdf's te vertalen naar je voorkeurstaal. De functie kan ook automatisch sites vertalen.</translation>
+<translation id="6873499199714317035">Als dit aanstaat, biedt Growser Translate aan om sites en pdf's te vertalen naar je voorkeurstaal. De functie kan ook automatisch sites vertalen.</translation>
 <translation id="5911030830365207728">Google Translate</translation>
 <translation id="7458168200501453431">Gebruikt dezelfde spellingcontrole als voor Growser Zoeken. In de browser ingevoerde tekst wordt naar Growser gestuurd.</translation>
 <translation id="8972513834460200407">Neem contact op met je netwerkbeheerder om ervoor te zorgen dat downloads van Growser-servers niet door de firewall worden geblokkeerd.</translation>
@@ -11450,7 +11450,7 @@ Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je mee
 <translation id="3293574207873361017">Je Growser-account beheren</translation>
 <translation id="6901130673208235020">Als je zoekt in je browsegeschiedenis, worden de zoekopdrachten voor je geschiedenis, de paginacontent van de beste overeenkomsten en de gegenereerde modeluitvoer naar Growser gestuurd.</translation>
 <translation id="3178434360326457238">Als je op sites browst, wordt de content van de pagina's versleuteld en opgeslagen op je apparaat. Dit kan van invloed zijn op de prestaties van Growser.</translation>
-<translation id="8622145666696249878">AI-modus van Brave Zoeken en gekoppelde apps</translation>
+<translation id="8622145666696249878">AI-modus van Growser Zoeken en gekoppelde apps</translation>
 <translation id="2760679829473121490">Systeemmeldingen over Growser-functies en -tips tonen</translation>
 <translation id="6713316345564743478">Log in op je Growser-account om te checken op gehackte wachtwoorden</translation>
 <translation id="1342886103232377846">Ga naar Growser Wachtwoordmanager om te checken op gehackte wachtwoorden</translation>
@@ -11512,7 +11512,7 @@ Op <ph name="BEGIN_LINK2"/>policies.google.com<ph name="END_LINK2"/> vind je mee
 <translation id="1095879482467973146">Growser Wachtwoordmanager op internet</translation>
 <translation id="1368798504801939187">Check je wachtwoorden ook als je Growser of Android niet gebruikt door in te loggen op <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
 <translation id="829923460755755423">Voeg een snelkoppeling toe naar Growser Wachtwoordmanager</translation>
-<translation id="7244677273667272006">Laat verifiëren dat jij het bent om wachtwoorden toe te voegen en ze op alle apparaten met je Brave-account te krijgen</translation>
+<translation id="7244677273667272006">Laat verifiëren dat jij het bent om wachtwoorden toe te voegen en ze op alle apparaten met je Growser-account te krijgen</translation>
 <translation id="8189517459248805166">Je wachtwoord voor <ph name="WEBSITE"/> is opgeslagen op dit apparaat en in je Growser-account. Welke versie wil je verwijderen?</translation>
 <translation id="9101265711096405922">Uit je Growser-account.</translation>
 <translation id="927421426408921503">Opgeslagen wachtwoorden verplaatsen naar je Growser-account?</translation>
@@ -11622,7 +11622,7 @@ Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het ge
        <ph name="BREAK"/>
 <ph name="BREAK"/>
 Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het gedeelte Growser aanpassen.</translation>
-<translation id="6474021817475285003">Meer tonen in Brave Agenda</translation>
+<translation id="6474021817475285003">Meer tonen in Growser Agenda</translation>
 <translation id="9066394310994446814">Je krijgt dit item te zien op basis van je eerdere activiteit bij het gebruik van Growser-services. Je kunt je gegevens bekijken of verwijderen en je instellingen wijzigen op <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
 <ph name="BREAK"/>
 <ph name="BREAK"/>
@@ -11653,7 +11653,7 @@ Je kunt instellingen beheren via het kaartmenu of meer opties bekijken in het ge
 <translation id="6868193750403948178">Growser aanpassen</translation>
 <translation id="5009064339929592579">Opslaan in een map in je Growser-account?</translation>
 <translation id="7400528739136719497">Sommige Growser-stemmen zijn nu misschien niet beschikbaar</translation>
-<translation id="4857677595331912231">De content en de URL van je huidige tabblad worden gedeeld met Brave om je relevantere antwoorden te geven. Je kunt tabbladen toevoegen of verwijderen terwijl je browst.</translation>
+<translation id="4857677595331912231">De content en de URL van je huidige tabblad worden gedeeld met Growser om je relevantere antwoorden te geven. Je kunt tabbladen toevoegen of verwijderen terwijl je browst.</translation>
 <translation id="5639212636098910819">In Growser blijven</translation>
 <translation id="3252169590975855820">Je kunt het openen via Growser Wachtwoordmanager</translation>
 <translation id="3843323136102787632">Download Growser met deze QR-code en log in op je Growser-account.</translation>
@@ -11700,7 +11700,7 @@ Je hebt nog # gehackte wachtwoorden. Growser Wachtwoordmanager raadt je aan deze
 <translation id="1162630940779651724">Als je dit tabblad naar een ander apparaat wilt sturen, log je op beide apparaten in bij Growser</translation>
 <translation id="5388608738812110907">Als je dit tabblad naar een ander apparaat wilt sturen, log je hier in bij Growser</translation>
 <translation id="4007679133627124999">Als je links tussen apparaten wilt sturen, zorg je dat beide apparaten zijn ingelogd op hetzelfde Growser-account.</translation>
-<translation id="2377999415409519333">Laat verifiëren dat jij het bent om links te sturen. Je kunt links sturen als je op beide apparaten bent ingelogd op hetzelfde Brave-account.</translation>
+<translation id="2377999415409519333">Laat verifiëren dat jij het bent om links te sturen. Je kunt links sturen als je op beide apparaten bent ingelogd op hetzelfde Growser-account.</translation>
 <translation id="4986706507552097681">Je kunt altijd in de instellingen bepalen wat je wilt synchroniseren. Growser kan Zoeken en andere services personaliseren op basis van je geschiedenis.</translation>
 <translation id="8002662358897231821">Log in om je bookmarks, geschiedenis, wachtwoorden en andere instellingen op te halen op al je apparaten. Je wordt ook automatisch ingelogd bij je Growser-services.</translation>
 <translation id="3128296144259620504">Growser wordt beheerd door geautomatiseerde testsoftware.</translation>

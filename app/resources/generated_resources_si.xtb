@@ -186,7 +186,7 @@
 <translation id="1130116586186908674">බෙදීම් දසුනක් තනන්න</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - <ph name="GROUP_NAME"/> කණ්ඩායමේ කොටසකි</translation>
 <translation id="1130676589211693127">දකුණු බැටරි මට්ටම <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">පටිති බෙදා ගත් විට, ඒවායේ පිටු අන්තර්ගතය, මාධ්‍ය සහ URL Brave වෙත යවනු ලබන අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
+<translation id="1412403201555978627">පටිති බෙදා ගත් විට, ඒවායේ පිටු අන්තර්ගතය, මාධ්‍ය සහ URL Growser වෙත යවනු ලබන අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
 <translation id="1133418583142946603">වත්මන් ටැබය එක් කරන්න</translation>
 <translation id="1133751489735776037">මූසිකය තුන් වරක් ක්ලික් කරන්න</translation>
 <translation id="1136712381129578788">ඉතා වැඩි අවස්ථාවක් වැරදි රහස් අංකය ඇතුළත් කළ බැවින් ආරක්‍ෂක යතුරට අඟුලු දමා ඇත. එය අඟුලු ඇරීමට, එය ඉවත් කර යළි ඇතුළත් කරන්න.</translation>
@@ -376,7 +376,7 @@
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">නවතන්න</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>සහාය දක්වන සබැඳි<ph name="END_LINK"/> විවෘත කිරීම</translation>
-<translation id="7823526956728613125">Google Drive වැනි සෙවීම් සේවා සහ Brave Workspace යෙදුම් අතර සම්බන්ධතාවය කළමනාකරණය කරන්න</translation>
+<translation id="7823526956728613125">Google Drive වැනි සෙවීම් සේවා සහ Growser Workspace යෙදුම් අතර සම්බන්ධතාවය කළමනාකරණය කරන්න</translation>
 <translation id="1274997165432133392">කුකී සහ වෙනත් අඩවි දත්ත</translation>
 <translation id="1275936815032730048">දියත්කරණය + දකුණු ඊතලය</translation>
 <translation id="1275963833368139883">ඔබ ඔබේ බ්‍රවුස් කිරීමේ ඉතිහාසය සෙවූ විට, පිළිතුරු සහ සෙවීම් ප්‍රතිඵල පිටුවක අන්තර්ගතය මත පදනම් වේ. මෙය ඔබට වැඩි දියුණු කළ ප්‍රතිඵල ලබා දෙයි</translation>
@@ -653,7 +653,7 @@
 <translation id="1508931164824684991">අඩවිවලට ජාවාස්ක්‍රිප්ට් භාවිත කළ හැක</translation>
 <translation id="1509163368529404530">&amp;සමූහය ප්‍රතිසාධනය කරන්න</translation>
 <translation id="1509281256533087115">USB හරහා ඕනෑම <ph name="DEVICE_NAME_AND_VENDOR"/> වෙත ප්‍රවේශ වන්න</translation>
-<translation id="2825615584808054779">Gemini සමග ඔබ පවත්වන සංවාද හෝ ඔබේ Brave Workspace දත්ත කිසිසේත්ම සමාලෝචනයට ලක් නොවන අතර, ඒවා ජනන AI ආකෘති වැඩිදියුණු කිරීම සඳහා ද භාවිත නොකෙරේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත.</translation>
+<translation id="2825615584808054779">Gemini සමග ඔබ පවත්වන සංවාද හෝ ඔබේ Growser Workspace දත්ත කිසිසේත්ම සමාලෝචනයට ලක් නොවන අතර, ඒවා ජනන AI ආකෘති වැඩිදියුණු කිරීම සඳහා ද භාවිත නොකෙරේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත.</translation>
 <translation id="1510238584712386396">දියත්කරණය</translation>
 <translation id="1510341833810331442">ඔබේ උපාංගයෙහි දත්ත සුරැකීමට අඩවිවලට ඉඩ නොදෙයි</translation>
 <translation id="1510882959204224895">කවුළුව තුළ විවෘත කරන්න</translation>
@@ -747,7 +747,7 @@
 <translation id="1581962803218266616">ෆෝල්ඩරයේ පෙන්වන්න</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>] මකන්න</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> ස්ථානීයව සකසන අතර නොබැඳිව ක්‍රියා කරයි</translation>
-<translation id="491276955533054201">පළමුව, මෙම උපාංගය සඳහා Brave ස්වයංක්‍රීයව පිරික්සන්න ක්‍රියාත්මක කරන්න</translation>
+<translation id="491276955533054201">පළමුව, මෙම උපාංගය සඳහා Growser ස්වයංක්‍රීයව පිරික්සන්න ක්‍රියාත්මක කරන්න</translation>
 <translation id="1587275751631642843">&amp;JavaScript කොන්සෝලය</translation>
 <translation id="1588438908519853928">සාමාන්‍ය</translation>
 <translation id="1588772269240419305">ලාංඡනය සහ නම් යාවත්කාලීන කිරීම් සමාලෝචනය කරන්න</translation>
@@ -1149,7 +1149,7 @@
 <translation id="1892341345406963517">ආයුබෝවන් <ph name="PARENT_NAME"/></translation>
 <translation id="1892453608039100484">1. පහත <ph name="BUTTON_LABEL"/> ක්ලික් කරන්න ඔබේ Windows සැකසීම් තුළ <ph name="BUTTON_2"/> ක්ලික් කරන්න</translation>
 <translation id="1895658205118569222">වසා දමන්න</translation>
-<translation id="1189523243806849236">Brave AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1189523243806849236">Growser AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="1897120393475391208">ප්‍රබල මුරපදයක් භාවිත කරන්න</translation>
 <translation id="1897860317037652061">ස්කෑන් අසමත් විය</translation>
 <translation id="1898804291554630487">මෙම පිටුව ගැන විමසන්න</translation>
@@ -1158,7 +1158,7 @@
 <translation id="1901213235765457754">මෙම යෙදුම යාවත්කාලීන කිරීමට ඔබේ පරිපාලකගෙන් විමසන්න</translation>
 <translation id="1901303067676059328">සියල්ල තෝරන්න</translation>
 <translation id="1901760057081700494">වේලා කලාපය දැනට <ph name="TIME_ZONE_ENTRY"/> ලෙස සැකසේ. වේලා කලාපය ස්වයංක්‍රීයව යාවත්කාලීන කිරීමට, <ph name="BEGIN_LINK"/>පද්ධති ස්ථාන ප්‍රවේශය සක්‍රීය කරන්න<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">ඔබේ නිවසේ ලිපිනය මඟින් Brave සේවාවන් හරහා දේවල් සිදු කිරීමට ඔබට උදවු වේ, උදාහරණයක් ලෙස Brave සිතියම්වල වඩාත් අදාළ සෙවීම් ප්‍රතිඵල සහ දිශාවන්. ඔබට ඔබේ <ph name="BEGIN_LINK"/>Brave ගිණුම<ph name="END_LINK"/><ph name="USERNAME"/> තුළ ඔබේ ලිපිනය සංස්කරණය කිරීමට හෝ මකා දැමීමට හැක.</translation>
+<translation id="3930197956137872864">ඔබේ නිවසේ ලිපිනය මඟින් Growser සේවාවන් හරහා දේවල් සිදු කිරීමට ඔබට උදවු වේ, උදාහරණයක් ලෙස Growser සිතියම්වල වඩාත් අදාළ සෙවීම් ප්‍රතිඵල සහ දිශාවන්. ඔබට ඔබේ <ph name="BEGIN_LINK"/>Growser ගිණුම<ph name="END_LINK"/><ph name="USERNAME"/> තුළ ඔබේ ලිපිනය සංස්කරණය කිරීමට හෝ මකා දැමීමට හැක.</translation>
 <translation id="6893464351226208429">ඔබ පිවිසෙන URL ඔබගේ Growser ගිණුමට සුරැකේ</translation>
 <translation id="190530012637606145">පෞද්ගලික අන්තර්ජාල ඇතුළුව සියලු අනාරක්ෂිත සම්බන්ධතා ගැන ඔබට අනතුරු අඟවයි</translation>
 <translation id="1906181697255754968">අඩවි සාමාන්‍යයෙන් ඔබේ වැඩ ස්වයංක්‍රියව සුරැකීම වැනි විශේෂාංග සඳහා ඔබගේ උපාංගයේ ගොනු සහ ෆෝල්ඩරවලට ප්‍රවේශ වේ</translation>
@@ -1531,7 +1531,7 @@
 <translation id="2198625180564913276">පැතිකඩ එක් කිරීම මෙයට මිනිත්තු කිහිපයක් ගත විය හැකිය.</translation>
 <translation id="2198712775285959645">සංස්කරණය</translation>
 <translation id="2199298570273670671">දෝෂය</translation>
-<translation id="2798272130984183944">Brave ඔබේ උපාංගයේ සෘජුවම ක්‍රියාත්මක වන AI ආකෘති භාවිත කරන්නේ ද යන්න තෝරන්න</translation>
+<translation id="2798272130984183944">Growser ඔබේ උපාංගයේ සෘජුවම ක්‍රියාත්මක වන AI ආකෘති භාවිත කරන්නේ ද යන්න තෝරන්න</translation>
 <translation id="2200094388063410062">ඉ-තැපෑල</translation>
 <translation id="2200781749203116929">ChromeOS පද්ධති ලොග</translation>
 <translation id="2202391868799679245">යතුරු පුවරු කෙටිමඟ ක්‍රියාත්මක කරන්න</translation>
@@ -1611,7 +1611,7 @@
 <translation id="225716114209817872">උපරිමය</translation>
 <translation id="5642482119439119644">ඔබේ අනෙකුත් උපාංගවලින් ඔබේ පටිති ලබා ගැනීමට, ඒ ඔබ බව සත්‍යාපනය කරන්න. ඔබට සැකසීම් තුළ ඕනෑම වේලාවකට සමමුහූර්ත කිරීම නැවැත්විය හැක. Growser ඔබේ ඉතිහාසය මත පදනම්ව සෙවීම් සහ අනෙකුත් සේවාවන් පෞද්ගලීකරණය කිරීමට ඉඩ ඇත.</translation>
 <translation id="22614517036276112">මෙම ලේඛනය හෝ ඔබේ උපාංගය ඔබේ සංවිධානයේ සමහර ආරක්ෂක ප්‍රතිපත්ති සපුරාලන්නේ නැත. නිරාකරණයට අවශ්‍ය දේ පිළිබඳව ඔබේ පරිපාලක සමග පරීක්ෂා කරන්න.</translation>
-<translation id="1829264724820495616">ඔබේ කාර්යාල ලිපිනය මඟින් Brave සේවාවන් හරහා දේවල් සිදු කිරීමට ඔබට උදවු වේ, උදාහරණයක් ලෙස Brave සිතියම්වල වඩාත් අදාළ සෙවීම් ප්‍රතිඵල සහ දිශාවන්. ඔබට ඔබේ <ph name="BEGIN_LINK"/>Brave ගිණුම<ph name="END_LINK"/><ph name="USERNAME"/> තුළ ඔබේ ලිපිනය සංස්කරණය කිරීමට හෝ මකා දැමීමට හැක.</translation>
+<translation id="1829264724820495616">ඔබේ කාර්යාල ලිපිනය මඟින් Growser සේවාවන් හරහා දේවල් සිදු කිරීමට ඔබට උදවු වේ, උදාහරණයක් ලෙස Growser සිතියම්වල වඩාත් අදාළ සෙවීම් ප්‍රතිඵල සහ දිශාවන්. ඔබට ඔබේ <ph name="BEGIN_LINK"/>Growser ගිණුම<ph name="END_LINK"/><ph name="USERNAME"/> තුළ ඔබේ ලිපිනය සංස්කරණය කිරීමට හෝ මකා දැමීමට හැක.</translation>
 <translation id="2262477216570151239">පුනරාවර්තනයට පෙර ප්‍රමාදය</translation>
 <translation id="2263371730707937087">තිරය නැවුම් කිරීමේ අනුපාතය</translation>
 <translation id="7829329302663082098">ඔබගේ ප්‍රතිපෝෂණය අපට Growser Cast වැඩි දියුණු කිරීමට උපකාර වන අතර අගය කරමු.
@@ -1757,7 +1757,7 @@
 <translation id="2373499590298659902">මූසික බොත්තමක් ඔබා අල්ලාගෙන සිටීමට "0" භාවිත කරන්න.</translation>
 <translation id="2373666622366160481">කඩදාසියට ගළපන්න</translation>
 <translation id="2375406435414127095">ඔබේ දුරකථනයට සම්බන්ධ කරන්න</translation>
-<translation id="6612559367203670996">Brave බෙදා ගත් පටිතිවල අන්තර්ගතය සහ URL භාවිතා කරයි. ඔබේ වත්මන් පටිත්ත නව කතාබස්වල බෙදා ගනු ලැබේ. ඔබට මෙම සැකසීම ඕනෑම වේලාවක වෙනස් කළ හැක.</translation>
+<translation id="6612559367203670996">Growser බෙදා ගත් පටිතිවල අන්තර්ගතය සහ URL භාවිතා කරයි. ඔබේ වත්මන් පටිත්ත නව කතාබස්වල බෙදා ගනු ලැබේ. ඔබට මෙම සැකසීම ඕනෑම වේලාවක වෙනස් කළ හැක.</translation>
 <translation id="2376056713414548745">ශබ්ද නඟා කියවන්න</translation>
 <translation id="2376122016044804363">පසුරු පුවරුවේ තහවුරු කිරීම් වෙත පිටපත් කරන ලදි</translation>
 <translation id="2377667304966270281">දෘඪ දෝෂ</translation>
@@ -3322,7 +3322,7 @@
 <translation id="3569614820047645079">මගේ Drive තුළ ඇති ඔබේ ගොනු ඔබේ Chromebook වෙත ස්වයංක්‍රීයව සමමුහුර්ත වන බැවින් ඔබට අන්තර්ජාල සම්බන්ධතාවකින් තොරව ඒවාට ප්‍රවේශ විය හැක.</translation>
 <translation id="3569617221227793022">වේලා කලාපය දැනට <ph name="TIME_ZONE_ENTRY"/> ලෙස සැකසේ. මෙම සැකසුම ඔබේ පරිපාලකයා විසින් කළමනා කෙරේ.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> හට පහත ගොනු සහ ෆෝල්ඩර බැලිය හැක</translation>
-<translation id="4062501938325597704">කාර්යයක් අතරතුර Gemini භාවිත කරන පිටු අන්තර්ගතය සහ URL Brave සමග බෙදා ගනු ඇති අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
+<translation id="4062501938325597704">කාර්යයක් අතරතුර Gemini භාවිත කරන පිටු අන්තර්ගතය සහ URL Growser සමග බෙදා ගනු ඇති අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
 <translation id="3571734092741541777">පිහිටුවන්න</translation>
 <translation id="3575121482199441727">මෙම වෙබ් අඩවිය සඳහා අවසර දෙන්න</translation>
 <translation id="3575224072358507281">ඔවුන්ගේ රහස්‍යතා ප්‍රතිපත්තියට අනුව (measurementlab.net/privacy) මිනුම් විද්‍යාගාරය සඳහා IP ලිපිනය සහ ජාල මිනුම් ප්‍රතිඵල එකතු කරන්න.</translation>
@@ -5001,7 +5001,7 @@
 <translation id="485480310608090163">තවත් සැකසීම් සහ අවසර</translation>
 <translation id="4857304314344645169">ඕනෑම ගැටලුවක් සඳහා පියවරෙන් පියවර පැහැදිලි කිරීමක් බලන්න</translation>
 <translation id="1913048435257025864">පෙර පිටුව ගැන Growser වෙතින් විමසන්න: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">ඔබට වඩාත් අදාළ පිළිතුරු ලබා දීමට ඔබේ වත්මන් පටිත්තෙහි අන්තර්ගතය සහ URL Brave සමග බෙදා ගනු ලැබේ. ඔබ බ්‍රවුස් කරන විට ඔබට පටිති එක් කිරීමට හෝ ඉවත් කිරීමට හැක.</translation>
+<translation id="228735844055480091">ඔබට වඩාත් අදාළ පිළිතුරු ලබා දීමට ඔබේ වත්මන් පටිත්තෙහි අන්තර්ගතය සහ URL Growser සමග බෙදා ගනු ලැබේ. ඔබ බ්‍රවුස් කරන විට ඔබට පටිති එක් කිරීමට හෝ ඉවත් කිරීමට හැක.</translation>
 <translation id="485806788160414322">මාධ්‍ය වාදනය හෝ විරාම කරන්න</translation>
 <translation id="4858913220355269194">ෆ්‍රිට්ස්</translation>
 <translation id="4860012864737017059">මෑත පටිත්ත</translation>
@@ -5336,7 +5336,7 @@
 <translation id="5112577000029535889">නිර්මාණ උපකරණ</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 ගොනුවක් ගෙන යන ලදි}one{ගොනු {NUM_OF_FILES}ක් ගෙන යන ලදි}other{ගොනු {NUM_OF_FILES}ක් ගෙන යන ලදි}}</translation>
 <translation id="511313294362309725">Fast Pair ක්‍රියාත්මක කරන්න</translation>
-<translation id="6409962091529734959">Brave ස්වයංක්‍රීයව පිරික්සන්න විශේෂාංගය ගැන තව දැන ගන්න</translation>
+<translation id="6409962091529734959">Growser ස්වයංක්‍රීයව පිරික්සන්න විශේෂාංගය ගැන තව දැන ගන්න</translation>
 <translation id="51143538739122961">ඔබේ ආරක්‍ෂක යතුර ඇතුළත් කර එය ස්පර්ශ කරන්න</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">ගීතය ලෙස සුරකින්න... (&amp;v)</translation>
@@ -5379,7 +5379,7 @@
 <translation id="5146235736676876345">ඔබේම එකක් තෝරා ගන්න</translation>
 <translation id="5146896637028965135">පද්ධති හඬ</translation>
 <translation id="5147113439721488265">නිර්දේශය</translation>
-<translation id="5897101208018277582">සබැඳි යැවීමට, ඒ ඔබ බව සත්‍යාපනය කරන්න. ඔබ උපාංග දෙකෙහිම එකම Brave ගිණුමට පුරනය වී ඇති විට ඔබට සබැඳි යැවිය හැක.</translation>
+<translation id="5897101208018277582">සබැඳි යැවීමට, ඒ ඔබ බව සත්‍යාපනය කරන්න. ඔබ උපාංග දෙකෙහිම එකම Growser ගිණුමට පුරනය වී ඇති විට ඔබට සබැඳි යැවිය හැක.</translation>
 <translation id="5148285448107770349">මුරපදය අඩු තරමේ අනුලකුණු 8ක් විය යුතු යි</translation>
 <translation id="5149602533174716626">වීඩියෝ රාමුව පිටපත් කරන්න</translation>
 <translation id="5150254825601720210">නෙට්ස්කේප් සහතික SSL සේවාදායක නම</translation>
@@ -6067,7 +6067,7 @@
 <translation id="5713158217420111469"><ph name="DEVICE"/> වෙත සම්බන්ධ විය</translation>
 <translation id="5713988532993992900">අපවර්තිත</translation>
 <translation id="5714100381896040477">තිරය මත චලනය සීමා කරන්න</translation>
-<translation id="8277434106940718633">Gemini සමග ඔබ පවත්වන සංවාද හෝ ඔබේ Brave Workspace දත්ත කිසිසේත්ම සමාලෝචනයට ලක් නොවන අතර, ඒවා ජනන AI ආකෘති වැඩිදියුණු කිරීම සඳහා ද භාවිත නොකෙරේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. සමහර අන්තර්ගතයන් සියලු දෙනාටම සුදුසු නොවිය හැක.</translation>
+<translation id="8277434106940718633">Gemini සමග ඔබ පවත්වන සංවාද හෝ ඔබේ Growser Workspace දත්ත කිසිසේත්ම සමාලෝචනයට ලක් නොවන අතර, ඒවා ජනන AI ආකෘති වැඩිදියුණු කිරීම සඳහා ද භාවිත නොකෙරේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. සමහර අන්තර්ගතයන් සියලු දෙනාටම සුදුසු නොවිය හැක.</translation>
 <translation id="5719854774000914513">අඩවි HID උපාංග වෙත සම්බන්ධ වීමට ඉල්ලිය හැකිය</translation>
 <translation id="5720729194423017301">වෙබ් අඩවි සහ සෙවුම් යන්ත්‍ර සඳහා කෙටිමං</translation>
 <translation id="572155275267014074">Android සැකසීම්</translation>
@@ -7003,7 +7003,7 @@
 <translation id="6464825623202322042">මෙම උපාංගය</translation>
 <translation id="6465841119675156448">අන්තර්ජාලය නොමැතිව</translation>
 <translation id="6466258437571594570">දැනුම්දීම් යැවීමට ඉල්ලා සිටින විට අඩවි ඔබට බාධා කිරීමෙන් වළක්වනු ලැබේ</translation>
-<translation id="1673835407889847350">ඔබේ Brave ගිණුම සමග සියලු උපාංගවල මුරපද එක් කර ඒවා ලබා ගැනීමට ඒ ඔබ බව සත්‍යාපනය කරන්න</translation>
+<translation id="1673835407889847350">ඔබේ Growser ගිණුම සමග සියලු උපාංගවල මුරපද එක් කර ඒවා ලබා ගැනීමට ඒ ඔබ බව සත්‍යාපනය කරන්න</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> ස්කෑන් කරන්න</translation>
 <translation id="6467304607960172345">පූර්ණ තිර වීඩියෝ ප්‍රශස්තකරණය කරන්න</translation>
 <translation id="6467377768028664108">එවිට ඔබගේ <ph name="DEVICE_TYPE"/>ට මේවා සිදු කළ හැකිය:</translation>
@@ -7016,7 +7016,7 @@
 <translation id="6470823736074966819">දැනුම්දීම් නිහඬ කරන්න</translation>
 <translation id="6472893788822429178">මුල්පිටු බොත්තම පෙන්වන්න</translation>
 <translation id="6473315466413288899">විකල්පයක් තෝරන්න</translation>
-<translation id="6199773995438617867">Brave දින දර්ශනය තුළ තවත් බලන්න</translation>
+<translation id="6199773995438617867">Growser දින දර්ශනය තුළ තවත් බලන්න</translation>
 <translation id="6474401088838630457">මෙය ගැන Gemini ගෙන් තව අසන්න</translation>
 <translation id="6474498546677193336">යෙදුමක් මෙම ෆෝල්ඩරය භාවිත කරන බැවින් බෙදා නොගත නොහැකි විය. ලිනක්ස් මීළඟ වරට වසා දැමෙන විට ෆෝල්ඩරය බෙදා නොගැනේ.</translation>
 <translation id="6474884162850599008">Google Drive ගිණුම විසන්ධි කරන්න</translation>
@@ -7197,7 +7197,7 @@
 <translation id="6613231539539868591">පැවති දත්ත</translation>
 <translation id="6613267708691765962">අනිෂ්ට මෘදුකාංග සඳහා ස්කෑන් කරමින්...</translation>
 <translation id="6615455863669487791">මට පෙන්වන්න</translation>
-<translation id="5146630705831894319">වෙනත් භාෂාවලින් තිබෙන වෙබ් අඩවි සහ PDF සඳහා Brave පරිවර්තනය පිරිනමන්න</translation>
+<translation id="5146630705831894319">වෙනත් භාෂාවලින් තිබෙන වෙබ් අඩවි සහ PDF සඳහා Growser පරිවර්තනය පිරිනමන්න</translation>
 <translation id="6618013221808317456">වෙබ් අඩවි වලට JavaScript ප්‍රශස්තිකරණය භාවිත කිරීමට ඉඩ නොදෙන්න</translation>
 <translation id="6618154741503063152">උඩුගත කළ නොහැක. ඇමුණුම්වලට ඉඩ නැත.</translation>
 <translation id="6619058681307408113">පේළි මුද්‍රක විබුද්ධයා (LPD)</translation>
@@ -7551,7 +7551,7 @@
 <translation id="6871644448911473373">OCSP ප්‍රතිචාරකරු: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">භාෂා...</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">ක්‍රියාත්මක වූ විට, Brave පරිවර්තනය ඔබේ කැමති භාෂාවට වෙබ් අඩවි සහ PDF පරිවර්තනය කිරීමට ඉදිරිපත් වෙයි. එයට ස්වයංක්‍රීයව වෙබ් අඩවි පරිවර්තනය කළ හැක.</translation>
+<translation id="5189979109199910058">ක්‍රියාත්මක වූ විට, Growser පරිවර්තනය ඔබේ කැමති භාෂාවට වෙබ් අඩවි සහ PDF පරිවර්තනය කිරීමට ඉදිරිපත් වෙයි. එයට ස්වයංක්‍රීයව වෙබ් අඩවි පරිවර්තනය කළ හැක.</translation>
 <translation id="6873571253135628430">අඩවි අවසර වෙනස් කරන්න</translation>
 <translation id="6874986444867497677">ස්ථාපනය සම්පූර්ණ කළ නොහැකි විය. කරුණාකර නැවත උත්සාහ කරන්න හෝ මෙම කවුළුව වසන්න.</translation>
 <translation id="6876155724392614295">පාපැදිය</translation>
@@ -7838,7 +7838,7 @@
 <translation id="710224247908684995">දිගුවක් සුරක්ෂිත බ්‍රවුස් කිරීම ක්‍රියා විරහිත කර ඇත</translation>
 <translation id="7102832101143475489">ඉල්ලීම් කාලය නිමා විය</translation>
 <translation id="7103944802169726298">PC සහ විකාශ උපාංගය එකම Wi-Fi ජාලයේ</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave සාමාජිකත්වය</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser සාමාජිකත්වය</translation>
 <translation id="7107609441453408294">සියලු ස්පීකර හරහා එකම ශබ්දය වාදනය කරන්න</translation>
 <translation id="7108338896283013870">සඟවන්න</translation>
 <translation id="7108419148561505648">සුරැකීමට පෙර අවම වශයෙන් එක් ක්ෂේත්‍රයක්වත් පුරවන්න</translation>
@@ -8209,7 +8209,7 @@
 <translation id="7395774987022469191">සම්පූර්ණ තිරය</translation>
 <translation id="7396017167185131589">බෙදා ගත් ෆෝල්ඩර මෙහි දිස් වේ</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> පද්ධති ඇරඹුමෙහිදී දියත්ව ඔබ අනෙකුත් සියලු <ph name="PRODUCT_NAME"/> කවුළු වැසූ පසුව පවා පසුබිමින් දිගටම ධාවනය වනු ඇත.</translation>
-<translation id="8572914900293297191">Brave AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. සමහර අන්තර්ගතයන් සියලු දෙනාටම සුදුසු නොවිය හැක. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="8572914900293297191">Growser AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. සමහර අන්තර්ගතයන් සියලු දෙනාටම සුදුසු නොවිය හැක. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="7399045143794278225">සමමුහූර්තය අභිරුචි කරන්න</translation>
 <translation id="7399616692258236448">ඔබ ඉඩ දෙන ඒවා හැර අනෙකුත් සියලු ම අඩවි සඳහා ස්ථාන ඉල්ලීම් ස්වයංක්‍රීයව අවහිර වේ</translation>
 <translation id="7399802613464275309">ආරක්ෂක පරීක්ෂාව</translation>
@@ -8743,7 +8743,7 @@
 <translation id="7807711621188256451">ඔබේ කැමරාව වෙත පිවිසීමට <ph name="HOST"/> හට ඉඩ දෙන්න</translation>
 <translation id="7810202088502699111">මෙම පිටුව මත පොප්-අප් බාධාවිය.</translation>
 <translation id="7810367892333449285">ඔබේ ප්‍රවේශයට <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ address<ph name="LPA_2"/>$<ph name="LPA_3"/>optional matching id<ph name="LPA_4"/> ආකෘතිය තිබිය යුතු ය</translation>
-<translation id="5014491767627896944">Brave සෑදීමට හැකි වූයේ Brave විවෘත මූලාශ්‍ර ව්‍යාපෘතිය සහ වෙනත් <ph name="BEGIN_HIGHLIGHT"/>විවෘත මූලාශ්‍ර<ph name="END_HIGHLIGHT"/> මෘදුකාංග මගිනි.</translation>
+<translation id="5014491767627896944">Growser සෑදීමට හැකි වූයේ Growser විවෘත මූලාශ්‍ර ව්‍යාපෘතිය සහ වෙනත් <ph name="BEGIN_HIGHLIGHT"/>විවෘත මූලාශ්‍ර<ph name="END_HIGHLIGHT"/> මෘදුකාංග මගිනි.</translation>
 <translation id="7811263553491007091">නැවත උත්සාහ කරන්න හෝ පහතින් කලින් ජනිත තේමාවලින් එකක් තෝරන්න.</translation>
 <translation id="7811926937048662341">මෙහි දකුණු-ක්ලික් කර “පටිති සිරස් අතට පෙන්වන්න” තෝරන්න</translation>
 <translation id="7811986034759500329">පද්ධති සැකසීම් තුළ සකසන්න</translation>
@@ -8766,7 +8766,7 @@
 <translation id="7826039927887234077"><ph name="MOOD"/> මනෝභවය සමග <ph name="SUBJECT"/> න් <ph name="INDEX"/> මෑත AI තේමාව.</translation>
 <translation id="7826174860695147464">පැරණි බ්‍රවුසර සහාය (LBS) - අභ්‍යන්තර</translation>
 <translation id="7826838152281937785">පහළ දසුන වසන්න</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Brave නියම<ph name="END_LINK_TERMS"/> සහ <ph name="BEGIN_LINK_PRIVACY"/>Gemini යෙදුම් රහස්‍යතා නිවේදනය<ph name="END_LINK_PRIVACY"/> අදාළ වේ</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Growser නියම<ph name="END_LINK_TERMS"/> සහ <ph name="BEGIN_LINK_PRIVACY"/>Gemini යෙදුම් රහස්‍යතා නිවේදනය<ph name="END_LINK_PRIVACY"/> අදාළ වේ</translation>
 <translation id="7828642077514646543">දෝෂය: සහතිකය විකේතනය කළ නොහැකිය</translation>
 <translation id="7830276128493844263">පද්ධති සැකසීම් තුළ ස්ථානය ක්‍රියාවිරහිත කර ඇත</translation>
 <translation id="7830833461614351956">විවෘත කිරීමට <ph name="CLOUD_PROVIDER"/> වෙත ගොනු <ph name="NUM_OF_FILES"/> පිටපත් කරන්න ද?</translation>
@@ -9637,7 +9637,7 @@
 <translation id="850399339579925930">ශබ්දකෝෂ</translation>
 <translation id="850561044295157831">මට ලියන්න උදවු කරන්න ගැන තව දැන ගන්න</translation>
 <translation id="8505669004895429027">කුඩා ඉතුරුම්</translation>
-<translation id="869548515244800202">Brave සාමාජිකත්වය</translation>
+<translation id="869548515244800202">Growser සාමාජිකත්වය</translation>
 <translation id="8507052544157927817">යටින් ඉරි ඇඳීමේ විලාසය</translation>
 <translation id="8507227974644337342">තිර විභේදනය</translation>
 <translation id="8507443886219296894">මෙම වෙබ් අඩවිය සඳහා සඟවන්න</translation>
@@ -9777,7 +9777,7 @@
 <translation id="8619803522055190423">පතිත ඡායාව</translation>
 <translation id="8620206585293032550">අකර්මණ්‍ය පටිති දිස් වීම</translation>
 <translation id="8621979332865976405">ඔබේ මුළු තිරයම බෙදා ගන්න</translation>
-<translation id="6089523089512126744">Brave සෙවීම AI මාදිලිය සහ සම්බන්ධිත යෙදුම්</translation>
+<translation id="6089523089512126744">Growser සෙවීම AI මාදිලිය සහ සම්බන්ධිත යෙදුම්</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ChromeOS උපාංග සහ සංරචක අනුක්‍රමික අංක කියවන්න</translation>
 <translation id="862542460444371744">දිගු (&amp;E)</translation>
@@ -11334,17 +11334,17 @@
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Growser හි Gemini</translation>
 <translation id="1975450474853317621">Growser බ්‍රව්සරය තුළ විවෘත කරන්න</translation>
 <translation id="8516824290867275572">ඔබේ ගිණුමට Growser තුළ Gemini වෙත ප්‍රවේශය නැත</translation>
-<translation id="1649234713894562345">Brave සෑදීමට හැකි වූයේ Brave විවෘත මූලාශ්‍ර ව්‍යාපෘතිය සහ වෙනත් <ph name="BEGIN_HIGHLIGHT"/>විවෘත මූලාශ්‍ර<ph name="END_HIGHLIGHT"/> මෘදුකාංග මගිනි.</translation>
+<translation id="1649234713894562345">Growser සෑදීමට හැකි වූයේ Growser විවෘත මූලාශ්‍ර ව්‍යාපෘතිය සහ වෙනත් <ph name="BEGIN_HIGHLIGHT"/>විවෘත මූලාශ්‍ර<ph name="END_HIGHLIGHT"/> මෘදුකාංග මගිනි.</translation>
 <translation id="870536819717176711">ඔබ වත්මන් පටිත්ත Gemini සමග බෙදා ගැනීමට තෝරා ගත් විට, පටිත්තේ සම්පූර්ණ අන්තර්ගතය, මාධ්‍ය සහ URL එක Growser වෙත යවනු ලැබේ.</translation>
-<translation id="1130866111814048607">පටිති බෙදා ගත් විට, ඒවායේ පිටු අන්තර්ගතය, මාධ්‍ය සහ URL Brave වෙත යවනු ලබන අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
-<translation id="7656790264713095385">පළමුව, මෙම උපාංගය සඳහා Brave ස්වයංක්‍රීයව පිරික්සන්න ක්‍රියාත්මක කරන්න</translation>
+<translation id="1130866111814048607">පටිති බෙදා ගත් විට, ඒවායේ පිටු අන්තර්ගතය, මාධ්‍ය සහ URL Growser වෙත යවනු ලබන අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
+<translation id="7656790264713095385">පළමුව, මෙම උපාංගය සඳහා Growser ස්වයංක්‍රීයව පිරික්සන්න ක්‍රියාත්මක කරන්න</translation>
 <translation id="8572003230388132401">Gemini Spark හට වෙබ් අඩවි සමග අන්තර් ක්‍රියා කිරීමට සහ ඔබ වෙනුවෙන් කාර්යයන් සම්පූර්ණ කිරීමට මෙම උපාංගයේ Growser ස්වයංක්‍රියව බ්‍රවුස් කිරීම භාවිත කළ හැකි ය. <ph name="LINK_BEGIN"/>තව දැන ගන්න<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">උපාංගය සක්‍රියව ඇත්නම් සහ Growser ධාවනය වන්නේ නම් පමණක් Gemini Spark හට මෙම උපාංගයේ ස්වයංක්‍රියව බ්‍රවුස් කිරීම භාවිත කළ හැකි ය.</translation>
 <translation id="1982892581799327835">ඔබේ Gemini Spark නියෝජිතයා වෙත ප්‍රවේශය ඇති ඕනෑම කෙනෙකුට ඔබේ Growser බ්‍රවුසරය පාලනය කළ හැකි ය.</translation>
 <translation id="6689939585896001516">Growser හට ඔබ වෙනුවෙන් බ්‍රවුස් කිරීමට ඉඩ දෙන්න</translation>
 <translation id="640233545778658570">Growser හි Gemini ඔබේ පටිතිවල වැඩ කිරීමට සහ ඔබ එයට දෙන කාර්යයන් සම්පූර්ණ කිරීමට ස්වයං බ්‍රවුස් භාවිත කරයි. <ph name="LINK_BEGIN"/>තව දැන ගන්න<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Brave ස්වයංක්‍රීයව පිරික්සන්න විශේෂාංගය ගැන තව දැන ගන්න</translation>
-<translation id="3570112771874223231">කාර්යයක් අතරතුර Gemini භාවිත කරන පිටු අන්තර්ගතය සහ URL Brave සමග බෙදා ගනු ඇති අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
+<translation id="2740842679402949230">Growser ස්වයංක්‍රීයව පිරික්සන්න විශේෂාංගය ගැන තව දැන ගන්න</translation>
+<translation id="3570112771874223231">කාර්යයක් අතරතුර Gemini භාවිත කරන පිටු අන්තර්ගතය සහ URL Growser සමග බෙදා ගනු ඇති අතර ආරක්ෂාව සඳහා සමාලෝචනය කළ හැක.</translation>
 <translation id="2314508080153323869">Growser හි Gemini</translation>
 <translation id="1910632359330857071">ඔබ බ්‍රවුස් කරන විට පිළිතුරු, ප්‍රධාන කරුණු සහ තවත් දේ ලබා ගැනීමට Growser හි Gemini සමග කතාබස් කරන්න</translation>
 <translation id="2483218699324586641">Growser හි Gemini විවෘත කිරීමට <ph name="FOCUS_TOGGLE_HOTKEY"/> භාවිතා කරන්න</translation>
@@ -11364,8 +11364,8 @@
 <translation id="3187556136478864255">ඔබට <ph name="BEGIN_LINK"/>Growser Home යෙදුම<ph name="END_LINK"/> තුළ ඔබේ විකාශ උපාංගය දැකිය හැකිද?</translation>
 <translation id="2984923316661218534">Growser මුරපද කළමනාකරු සමග මෙම උපාංගයෙහි ඔබේ මුරයතුරු ලබා ගන්න</translation>
 <translation id="2364302372598204515">මෙය Growser ගිණුමක් නොවේ. ඔබ Growser වෙත සුරකින අයිතම වෙනත් උපාංගවල ලබා ගත නොහැකි වනු ඇත.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave සාමාජිකත්වය</translation>
-<translation id="850632091665381275">Brave සාමාජිකත්වය</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser සාමාජිකත්වය</translation>
+<translation id="850632091665381275">Growser සාමාජිකත්වය</translation>
 <translation id="6710172959248731469">Growser සේවා සැකසීම්</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 අයිතමයක් මෙම උපාංගයට පමණක් සුරකින ලදි. එය ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, එය ඔබේ Growser ගිණුමේ සුරකින්න. මෙමගින් ඕනෑම අනුපතක් ද පිරිසිදු කරනු ඇත.}one{අයිතම {ITEM_COUNT}ක් සුරැකෙන්නේ මෙම උපාංගයට පමණි. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, ඒවා ඔබේ Growser ගිණුමේ සුරකින්න. මෙමගින් ඕනෑම අනුපතක් ද පිරිසිදු කරනු ඇත.}other{අයිතම {ITEM_COUNT}ක් සුරැකෙන්නේ මෙම උපාංගයට පමණි. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, ඒවා ඔබේ Growser ගිණුමේ සුරකින්න. මෙමගින් ඕනෑම අනුපතක් ද පිරිසිදු කරනු ඇත.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 මුරපදයක් සුරැකෙන්නේ මෙම උපාංගයට පමණි. එය ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, එය ඔබේ Growser ගිණුමේ සුරකින්න. මෙමගින් ඕනෑම අනුපතක් ද පිරිසිදු කරනු ඇත.}one{මුරපද {PASSWORD_COUNT}ක් සුරැකෙන්නේ මෙම උපාංගයට පමණි. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, ඒවා ඔබේ Growser ගිණුමේ සුරකින්න. මෙමගින් ඕනෑම අනුපතක් ද පිරිසිදු කරනු ඇත.}other{මුරපද {PASSWORD_COUNT}ක් සුරැකෙන්නේ මෙම උපාංගයට පමණි. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, ඒවා ඔබේ Growser ගිණුමේ සුරකින්න. මෙමගින් ඕනෑම අනුපතක් ද පිරිසිදු කරනු ඇත.}}</translation>
@@ -11379,8 +11379,8 @@
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 පිටුසනක් සහ අනෙකුත් අයිතම මෙම උපාංගයට පමණක් සුරැකේ. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, ඒවා ඔබේ Growser ගිණුමේ සුරකින්න.}one{පිටුසන් {BOOKMARK_COUNT}ක් සහ අනෙකුත් අයිතම මෙම උපාංගයට පමණක් සුරැකේ. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, ඒවා ඔබේ Growser ගිණුමේ සුරකින්න.}other{පිටුසන් {BOOKMARK_COUNT}ක් සහ අනෙකුත් අයිතම මෙම උපාංගයට පමණක් සුරැකේ. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, ඒවා ඔබේ Growser ගිණුමේ සුරකින්න.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 අයිතමයක් මෙම උපාංගයට පමණක් සුරකින ලදි. එය ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, <ph name="BEGIN_LINK"/>එය ඔබේ Growser ගිණුමේ සුරකින්න<ph name="END_LINK"/>.}one{අයිතම {ITEM_COUNT}ක් සුරැකෙන්නේ මෙම උපාංගයට පමණි. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, <ph name="BEGIN_LINK"/>ඒවා ඔබේ Growser ගිණුමේ සුරකින්න<ph name="END_LINK"/>.}other{අයිතම {ITEM_COUNT}ක් සුරැකෙන්නේ මෙම උපාංගයට පමණි. ඒවා ඔබේ අනෙකුත් උපාංගවල භාවිතා කිරීම සඳහා, <ph name="BEGIN_LINK"/>ඒවා ඔබේ Growser ගිණුමේ සුරකින්න<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">ඔබේ Growser ගිණුම භාවිතා කරන්න හෝ අලුත් එකක් තනන්න</translation>
-<translation id="1896353439080510710">Brave AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
-<translation id="7398815534290329738">Brave AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. සමහර අන්තර්ගතයන් සියලු දෙනාටම සුදුසු නොවිය හැක. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1896353439080510710">Growser AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="7398815534290329738">Growser AI තාක්ෂණය වැඩිදියුණු කිරීම සඳහා කතාබස් සමාලෝචනය කර භාවිත කරනු ලැබේ. Gemini යනු AI තාක්ෂණයක් වන බැවින් වැරදි සිදු වීමට ඉඩ ඇත. සමහර අන්තර්ගතයන් සියලු දෙනාටම සුදුසු නොවිය හැක. ඔබට ඔබේ ස්ථානය පිළිබඳ තතු ඇතුළුව <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ඔබේ ක්‍රියාකාරකම් කළමනාකරණය කළ<ph name="END_LINK_MANAGE_ACTIVITY"/> හැක. <ph name="BEGIN_LINK_LEARN_MORE"/>ඔබේ තේරීම් පිළිබඳව තව දැන ගන්න<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{මෙම දිගුව ඔබේ Growser ගිණුමේ සුරකින ලද නමුත්, මෙම උපාංගයේ පමණක් සුරකින ලද ඕනෑම දත්තයක් මකා දැමිය හැක}one{මෙම දිගු ඔබේ Growser ගිණුමේ සුරකින නමුත්, මෙම උපාංගයේ පමණක් සුරකින ලද ඕනෑම දත්තයක් මකා දැමිය හැක}other{මෙම දිගු ඔබේ Growser ගිණුමේ සුරකින නමුත්, මෙම උපාංගයේ පමණක් සුරකින ලද ඕනෑම දත්තයක් මකා දැමිය හැක}}</translation>
 <translation id="3523789730715594198">ඔබට සැකසීම් තුළ ඕනෑම වේලාවකට සමමුහූර්ත කිරීම නැවැත්විය හැක. Growser ඔබේ ඉතිහාසය මත පදනම්ව සෙවීම සහ අනෙකුත් සේවා පුද්ගලායන කරාවි.</translation>
 <translation id="8231595707224857577">ඔබේ සංවිධානය ඔබේ Growser ගිණුමේ පටිති සුරැකීම ක්‍රියාවිරහිත කර ඇත</translation>
@@ -11418,7 +11418,7 @@
 <translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>ක්‍රියාකාරකම්වල වෙනත් ආකාර<ph name="END_LINK_GOOGLE"/> ඔබ පුරන විට ඔබගේ Growser ගිණුමේ සුරැකිය හැකිය. ඔබට ඕනෑම වේලාවක ඒවා මැකිය හැකිය.</translation>
 <translation id="6533315466883598769">Growser පරිවර්තනය භාවිත කරන්න</translation>
 <translation id="6010651352520077187">සක්‍රීය වූ විට, Growser පරිවර්තනය ඔබේ කැමති භාෂාවට වෙබ් අඩවි පරිවර්තනය කිරීමට ඉදිරිපත් වෙයි. එයට ස්වයංක්‍රීයව වෙබ් අඩවි පරිවර්තනය කළ හැක.</translation>
-<translation id="6873499199714317035">ක්‍රියාත්මක වූ විට, Brave පරිවර්තනය ඔබේ කැමති භාෂාවට වෙබ් අඩවි සහ PDF පරිවර්තනය කිරීමට ඉදිරිපත් වෙයි. එයට ස්වයංක්‍රීයව වෙබ් අඩවි පරිවර්තනය කළ හැක.</translation>
+<translation id="6873499199714317035">ක්‍රියාත්මක වූ විට, Growser පරිවර්තනය ඔබේ කැමති භාෂාවට වෙබ් අඩවි සහ PDF පරිවර්තනය කිරීමට ඉදිරිපත් වෙයි. එයට ස්වයංක්‍රීයව වෙබ් අඩවි පරිවර්තනය කළ හැක.</translation>
 <translation id="5911030830365207728">Growser පරිවර්තනය</translation>
 <translation id="7458168200501453431">Growser සෙවුමේ භාවිත නොවන අක්‍ෂර පරීක්‍ෂකයම භාවිත කරයි. ඔබ බ්‍රවුසරය තුළ ටයිප් කර පාඨය Growser වෙත යවනු ලැබේ.</translation>
 <translation id="8972513834460200407">ඔබේ ගිණිපවුර විසින් Growser සේවාදායක වෙතින් බාගැනීම බාධා කර නොමැතිදැයි ජාල පරිපාලකගෙන් විමසන්න.</translation>
@@ -11464,7 +11464,7 @@
 <translation id="3293574207873361017">ඔබේ Growser ගිණුම කළමනාකරණය</translation>
 <translation id="6901130673208235020">ඔබ බ්‍රවුස් කිරීමේ ඉතිහාසය සොයන විට, ඔබේ ඉතිහාස සෙවුම්, හොඳම ගැළපීම්වල පිටු අන්තර්ගතය, සහ ජනනය කරන ලද ආකෘති ප්‍රතිදානය Growser වෙත යවනු ලැබේ</translation>
 <translation id="3178434360326457238">ඔබ අඩවි බ්‍රවුස් කරන විට, ඒවායේ පිටු අන්තර්ගතය සංකේතනය කර ඔබේ උපාංගයට සුරැකෙයි. මෙය Growser හි ක්‍රියාකාරිත්වයට බලපෑ හැක</translation>
-<translation id="8622145666696249878">Brave සෙවීම AI මාදිලිය සහ සම්බන්ධිත යෙදුම්</translation>
+<translation id="8622145666696249878">Growser සෙවීම AI මාදිලිය සහ සම්බන්ධිත යෙදුම්</translation>
 <translation id="2760679829473121490">Growser විශේෂාංග සහ ඉඟි පිළිබඳ පද්ධති දැනුම්දීම් පෙන්වන්න</translation>
 <translation id="6713316345564743478">සමථයට පත් වූ මුරපද පරීක්‍ෂා කිරීමට, ඔබේ Growser ගිණුමට පුරන්න</translation>
 <translation id="1342886103232377846">සමථයට පත් වූ මුරපද පරීක්ෂා කිරීමට, Growser මුරපද කළමනාකරු වෙත යන්න</translation>
@@ -11527,7 +11527,7 @@
 <translation id="1095879482467973146">වෙබයෙහි Growser මුරපද කළමනාකරු</translation>
 <translation id="1368798504801939187"><ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> වෙත පුරනය වීමෙන් ඔබ Growser හෝ Android භාවිතා නොකරන විට පවා ඔබේ මුරපද බලන්න</translation>
 <translation id="829923460755755423">Growser මුරපද කළමනාකරු වෙත කෙටිමඟක් එක් කරන්න</translation>
-<translation id="7244677273667272006">ඔබේ Brave ගිණුම සමග සියලු උපාංගවල මුරපද එක් කර ඒවා ලබා ගැනීමට ඒ ඔබ බව සත්‍යාපනය කරන්න</translation>
+<translation id="7244677273667272006">ඔබේ Growser ගිණුම සමග සියලු උපාංගවල මුරපද එක් කර ඒවා ලබා ගැනීමට ඒ ඔබ බව සත්‍යාපනය කරන්න</translation>
 <translation id="8189517459248805166"><ph name="WEBSITE"/> සඳහා ඔබේ මුරපදය මෙම උපාංගයෙහි සහ ඔබේ Growser ගිණුමේ සුරකියි. ඔබට මැකීමට අවශ්‍ය කුමක් ද?</translation>
 <translation id="9101265711096405922">ඔබේ Growser ගිණුමෙන්</translation>
 <translation id="927421426408921503">සුරකින ලද මුරපද ඔබේ Growser ගිණුමට ගෙන යන්න ද?</translation>
@@ -11638,7 +11638,7 @@
        <ph name="BREAK"/>
        <ph name="BREAK"/>
        ඔබට කාඩ්පත් මෙනුවෙන් සැකසීම් කළමනාකරණය කිරීමට හෝ Growser අභිරුචිකරණය තුළ තවත් විකල්ප බැලීමට හැක.</translation>
-<translation id="6474021817475285003">Brave දින දර්ශනය තුළ තවත් බලන්න</translation>
+<translation id="6474021817475285003">Growser දින දර්ශනය තුළ තවත් බලන්න</translation>
 <translation id="9066394310994446814">Growser සේවා භාවිත කරමින් සිදු කළ ඔබගේ පෙර ක්‍රියාකාරකමට අනුව ඔබ මෙම අයිතමය දකියි. ඔබට <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> හිදී ඔබගේ දත්ත බැලීමට, මැකීමට සහ ඔබගේ සැකසීම් වෙනස් කිරීමට හැකිය.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11669,7 +11669,7 @@
 <translation id="6868193750403948178">Growser අභිරුචිකරණය කරන්න</translation>
 <translation id="5009064339929592579">ඔබේ Growser ගිණුමේ ඇති ෆෝල්ඩරයකට සුරකින්න ද?</translation>
 <translation id="7400528739136719497">සමහර Growser Voices මේ මොහොතේ නොතිබිය හැක</translation>
-<translation id="4857677595331912231">ඔබට වඩාත් අදාළ පිළිතුරු ලබා දීමට ඔබේ වත්මන් පටිත්තෙහි අන්තර්ගතය සහ URL Brave සමග බෙදා ගනු ලැබේ. ඔබ බ්‍රවුස් කරන විට ඔබට පටිති එක් කිරීමට හෝ ඉවත් කිරීමට හැක.</translation>
+<translation id="4857677595331912231">ඔබට වඩාත් අදාළ පිළිතුරු ලබා දීමට ඔබේ වත්මන් පටිත්තෙහි අන්තර්ගතය සහ URL Growser සමග බෙදා ගනු ලැබේ. ඔබ බ්‍රවුස් කරන විට ඔබට පටිති එක් කිරීමට හෝ ඉවත් කිරීමට හැක.</translation>
 <translation id="5639212636098910819">Growser තුළ සිටින්න</translation>
 <translation id="3252169590975855820">ඔබට එයට Growser මුරපද කළමනාකරු මත ප්‍රවේශ විය හැක</translation>
 <translation id="3843323136102787632">මෙම QR කේතය මගින් Growser බා ගෙන ඔබේ Growser ගිණුමට පුරන්න.</translation>
@@ -11718,7 +11718,7 @@
 <translation id="1162630940779651724">මෙම පටිත්ත වෙනත් උපාංගයකට යැවීමට, උපාංග දෙකම මත Growser වෙත පුරන්න</translation>
 <translation id="5388608738812110907">මෙම පටිත්ත වෙනත් උපාංගයකට යැවීමට, එයින් Growser වෙත පුරන්න</translation>
 <translation id="4007679133627124999">උපාංග අතර සබැඳි යැවීමට, දෙකම එකම Growser ගිණුමට පුරනය වී ඇති බව සහතික කර ගන්න.</translation>
-<translation id="2377999415409519333">සබැඳි යැවීමට, ඒ ඔබ බව සත්‍යාපනය කරන්න. ඔබ උපාංග දෙකෙහිම එකම Brave ගිණුමට පුරනය වී ඇති විට ඔබට සබැඳි යැවිය හැක.</translation>
+<translation id="2377999415409519333">සබැඳි යැවීමට, ඒ ඔබ බව සත්‍යාපනය කරන්න. ඔබ උපාංග දෙකෙහිම එකම Growser ගිණුමට පුරනය වී ඇති විට ඔබට සබැඳි යැවිය හැක.</translation>
 <translation id="4986706507552097681">ඔබට සැමවිටම සැකසීම් තුළ සමමුහු කළ යුතු දෙය තෝරා ගත හැක. Growser ඔබේ ඉතිහාසය මත පදනම්ව සෙවීම් සහ අනෙකුත් සේවාවන් පෞද්ගලීකරණය කිරීමට ඉඩ ඇත.</translation>
 <translation id="8002662358897231821">ඔබගේ සියලු උපාංග මත පිටු සලකුණු, ඉතිහාසය, සහ වෙනත් සැකසීම් ලබා ගැනීමට පුරන්න. ඔබව ස්වයංක්‍රීයව ඔබගේ Growser සේවාවලට පිරීමද කරනු ඇත.</translation>
 <translation id="3128296144259620504">Growser ස්වයංකෘත පරීක්ෂණ මෘදුකාංගයකින් පාලනය කරමින් පවතී</translation>

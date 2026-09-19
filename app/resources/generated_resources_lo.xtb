@@ -186,7 +186,7 @@
 <translation id="1130116586186908674">ສ້າງມຸມມອງແບບແຍກ</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - ສ່ວນໜຶ່ງຂອງກຸ່ມ <ph name="GROUP_NAME"/></translation>
 <translation id="1130676589211693127">ລະດັບແບັດເຕີຣີຂ້າງຂວາ <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">ເມື່ອແບ່ງປັນແຖບ, ລະບົບຈະສົ່ງເນື້ອຫາ, ສື່ ແລະ URL ຂອງໜ້າເວັບໄປຫາ Brave ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
+<translation id="1412403201555978627">ເມື່ອແບ່ງປັນແຖບ, ລະບົບຈະສົ່ງເນື້ອຫາ, ສື່ ແລະ URL ຂອງໜ້າເວັບໄປຫາ Growser ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
 <translation id="1133418583142946603">ເພີ່ມແຖບປັດຈຸບັນ</translation>
 <translation id="1133751489735776037">ຄລິກເມົ້າ 3 ເທື່ອ</translation>
 <translation id="1136712381129578788">ກະແຈຄວາມປອດໄພຖືກລັອກໄວ້ ເພາະວ່າມີການປ້ອນ PIN ບໍ່ຖືກຕ້ອງຫຼາຍຄັ້ງເກີນໄປ. ເພື່ອປົດລັອກມັນ, ກະລຸນາຖອດມັນອອກ ແລ້ວສຽບເຂົ້າໃໝ່.</translation>
@@ -376,7 +376,7 @@
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">ຢຸດ</translation>
 <translation id="1272508081857842302">ກຳລັງເປີດ <ph name="BEGIN_LINK"/>ລິ້ງຊ່ວຍເຫຼືອ<ph name="END_LINK"/></translation>
-<translation id="7823526956728613125">ຈັດການການເຊື່ອມຕໍ່ລະຫວ່າງບໍລິການຊອກຫາ ແລະ ແອັບ Brave Workspace ເຊັ່ນ: Google Drive</translation>
+<translation id="7823526956728613125">ຈັດການການເຊື່ອມຕໍ່ລະຫວ່າງບໍລິການຊອກຫາ ແລະ ແອັບ Growser Workspace ເຊັ່ນ: Google Drive</translation>
 <translation id="1274997165432133392">ສະແດງຄຸກກີ້ ແລະຂໍ້ມູນເວັບໄຊທ໌ອື່ນ...</translation>
 <translation id="1275936815032730048">ຕົວເປີດໃຊ້ + ລູກສອນຂວາ</translation>
 <translation id="1275963833368139883">ເມື່ອທ່ານຊອກຫາປະຫວັດການທ່ອງເວັບຂອງທ່ານ, ຄໍາຕອບ ແລະ ຜົນການຊອກຫາແມ່ນອີງໃສ່ເນື້ອຫາຂອງໜ້າໃດໜຶ່ງ. ສິ່ງນີ້ເຮັດໃຫ້ທ່ານໄດ້ຮັບຜົນຮັບທີ່ປັບປຸງແລ້ວ</translation>
@@ -654,7 +654,7 @@
 <translation id="1508931164824684991">ເວັບໄຊສາມາດໃຊ້ JavaScript ໄດ້</translation>
 <translation id="1509163368529404530">&amp;ກູ້ກຸ່ມຄືນມາ</translation>
 <translation id="1509281256533087115">ເຂົ້າ​ຫາ <ph name="DEVICE_NAME_AND_VENDOR"/> ໃດ​ໜຶ່ງ​ຜ່ານ USB</translation>
-<translation id="2825615584808054779">ທັງການສົນທະນາຂອງທ່ານກັບ Gemini ແລະ ຂໍ້ມູນ Brave Workspace ຂອງທ່ານ ຈະບໍ່ຖືກກວດສອບ ຫຼື ນຳໃຊ້ເພື່ອປັບປຸງໂມເດວ AI ສ້າງເນື້ອຫາ. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້.</translation>
+<translation id="2825615584808054779">ທັງການສົນທະນາຂອງທ່ານກັບ Gemini ແລະ ຂໍ້ມູນ Growser Workspace ຂອງທ່ານ ຈະບໍ່ຖືກກວດສອບ ຫຼື ນຳໃຊ້ເພື່ອປັບປຸງໂມເດວ AI ສ້າງເນື້ອຫາ. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້.</translation>
 <translation id="1510238584712386396">ຕົວ​ເປີດ​ໃຊ້</translation>
 <translation id="1510341833810331442">ບໍ່ອະນຸຍາດໃຫ້ເວັບໄຊບັນທຶກຂໍ້ມູນຢູ່ໃນອຸປະກອນຂອງທ່ານ</translation>
 <translation id="1510882959204224895">ເປີດໃນໜ້າຈໍ</translation>
@@ -748,7 +748,7 @@
 <translation id="1581962803218266616">ສະແດງຢູ່ໃນຕົວຊອກ​ຫາ</translation>
 <translation id="1582955169539260415">ລຶບ [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> ແມ່ນປະມວນຜົນໃນເຄື່ອງ ແລະ ເຮັດວຽກແບບອອບລາຍ</translation>
-<translation id="491276955533054201">ທຳອິດ, ໃຫ້ເປີດການທ່ອງເວັບອັດຕະໂນມັດຂອງ Brave ສຳລັບອຸປະກອນນີ້</translation>
+<translation id="491276955533054201">ທຳອິດ, ໃຫ້ເປີດການທ່ອງເວັບອັດຕະໂນມັດຂອງ Growser ສຳລັບອຸປະກອນນີ້</translation>
 <translation id="1587275751631642843">JavaScript console</translation>
 <translation id="1588438908519853928">ປົກ​ກະ​ຕິ</translation>
 <translation id="1588772269240419305">ກວດສອບການອັບເດດໂລໂກ້ ແລະ ຊື່</translation>
@@ -1158,7 +1158,7 @@
 <translation id="1892453608039100484">1. ຄລິກ <ph name="BUTTON_LABEL"/> ທາງລຸ່ມ
 2. ຄລິກ <ph name="BUTTON_2"/> ໃນການຕັ້ງຄ່າ Windows ຂອງທ່ານ</translation>
 <translation id="1895658205118569222">ມອດ</translation>
-<translation id="1189523243806849236">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Brave AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Growser AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">ໃຊ້ລະຫັດຜ່ານຍາກ</translation>
 <translation id="1897860317037652061">ສະແກນບໍ່ສຳເລັດ</translation>
 <translation id="1898804291554630487">ສອບຖາມກ່ຽວກັບໜ້ານີ້</translation>
@@ -1167,7 +1167,7 @@
 <translation id="1901213235765457754">ຂໍໃຫ້ຜູ້ເບິ່ງແຍງຂອງທ່ານອັບເດດແອັບນີ້</translation>
 <translation id="1901303067676059328">ເລືອກ​ທັງ​ຫມົດ</translation>
 <translation id="1901760057081700494">ປັດຈຸບັນເຂດເວລາຖືກຕັ້ງຄ່າໄວ້ເປັນ <ph name="TIME_ZONE_ENTRY"/>. ເພື່ອອັບເດດເຂດເວລາໂດຍອັດຕະໂນມັດ, ໃຫ້ <ph name="BEGIN_LINK"/>ເປີດສິດເຂົ້າເຖິງສະຖານທີ່ຂອງລະບົບ<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">ທີ່ຢູ່ເຮືອນຂອງທ່ານສາມາດຊ່ວຍໃຫ້ທ່ານເຮັດສິ່ງຕ່າງໆໃຫ້ສຳເລັດດ້ວຍບໍລິການ Brave ໄດ້ ເຊັ່ນ: ຜົນການຊອກຫາທີ່ກ່ຽວຂ້ອງຫຼາຍຂຶ້ນ ແລະ ເສັ້ນທາງໃນ Brave ແຜນທີ່. ທ່ານສາມາດແກ້ໄຂ ຫຼື ລຶບທີ່ຢູ່ຂອງທ່ານໃນ <ph name="BEGIN_LINK"/>ບັນຊີ Brave<ph name="END_LINK"/> <ph name="USERNAME"/> ຂອງທ່ານໄດ້.</translation>
+<translation id="3930197956137872864">ທີ່ຢູ່ເຮືອນຂອງທ່ານສາມາດຊ່ວຍໃຫ້ທ່ານເຮັດສິ່ງຕ່າງໆໃຫ້ສຳເລັດດ້ວຍບໍລິການ Growser ໄດ້ ເຊັ່ນ: ຜົນການຊອກຫາທີ່ກ່ຽວຂ້ອງຫຼາຍຂຶ້ນ ແລະ ເສັ້ນທາງໃນ Growser ແຜນທີ່. ທ່ານສາມາດແກ້ໄຂ ຫຼື ລຶບທີ່ຢູ່ຂອງທ່ານໃນ <ph name="BEGIN_LINK"/>ບັນຊີ Growser<ph name="END_LINK"/> <ph name="USERNAME"/> ຂອງທ່ານໄດ້.</translation>
 <translation id="6893464351226208429">URL ທີ່ທ່ານເຂົ້ານັ້ນຖືກບັນທຶກໄປໃສ່ບັນຊີ Growser ທ່ານແລ້ວ</translation>
 <translation id="190530012637606145">ເຕືອນທ່ານກ່ຽວກັບການເຊື່ອມຕໍ່ທີ່ບໍ່ປອດໄພທັງໝົດ, ຮວມທັງອິນທຣາເນັດສ່ວນຕົວ</translation>
 <translation id="1906181697255754968">ໂດຍປົກກະຕິແລ້ວ ເວັບໄຊຈະເຂົ້າເຖິງໄຟລ໌ ແລະ ໂຟນເດີໃນອຸປະກອນຂອງທ່ານສຳລັບຄຸນສົມບັດ ເຊັ່ນ: ການບັນທຶກວຽກຂອງທ່ານໄວ້ໂດຍອັດຕະໂນມັດ</translation>
@@ -1540,7 +1540,7 @@
 <translation id="2198625180564913276">ກຳລັງເພີ່ມໂປຣໄຟລ໌. ຂັ້ນຕອນນີ້ອາດໃຊ້ເວລາສອງສາມນາທີ.</translation>
 <translation id="2198712775285959645">ແກ້ໄຂ</translation>
 <translation id="2199298570273670671">ຜິດພາດ</translation>
-<translation id="2798272130984183944">ເລືອກວ່າຈະໃຫ້ Brave ໃຊ້ໂມເດວ AI ທີ່ເຮັດວຽກໂດຍກົງຢູ່ອຸປະກອນຂອງທ່ານຫຼືບໍ່</translation>
+<translation id="2798272130984183944">ເລືອກວ່າຈະໃຫ້ Growser ໃຊ້ໂມເດວ AI ທີ່ເຮັດວຽກໂດຍກົງຢູ່ອຸປະກອນຂອງທ່ານຫຼືບໍ່</translation>
 <translation id="2200094388063410062">ອີເມວ</translation>
 <translation id="2200781749203116929">ບັນທຶກລະບົບ ChromeOS</translation>
 <translation id="2202391868799679245">ເປີດໃຊ້ຄີລັດ</translation>
@@ -1620,7 +1620,7 @@
 <translation id="225716114209817872">ສູງສຸດ</translation>
 <translation id="5642482119439119644">ເພື່ອຮັບແຖບຂອງທ່ານຈາກອຸປະກອນອື່ນໆ, ກະລຸນາຢັ້ງຢືນວ່າແມ່ນທ່ານ. ທ່ານສາມາດຢຸດການຊິ້ງໄດ້ທຸກເວລາໃນການຕັ້ງຄ່າ. Growser ອາດປັບແຕ່ງການຊອກຫາ ແລະ ບໍລິການອື່ນໆໃຫ້ເປັນແບບສ່ວນຕົວໂດຍອີງຕາມປະຫວັດຂອງທ່ານ.</translation>
 <translation id="22614517036276112">ເອກະສານນີ້ ຫຼື ອຸປະກອນຂອງທ່ານບໍ່ເປັນໄປຕາມນະໂຍບາຍຄວາມປອດໄພບາງຢ່າງຂອງອົງການທ່ານ. ກະລຸນາກວດສອບກັບຜູ້ເບິ່ງແຍງຂອງທ່ານວ່າຕ້ອງແກ້ໄຂຫຍັງ.</translation>
-<translation id="1829264724820495616">ທີ່ຢູ່ບ່ອນເຮັດວຽກຂອງທ່ານສາມາດຊ່ວຍໃຫ້ທ່ານເຮັດສິ່ງຕ່າງໆໃຫ້ສຳເລັດດ້ວຍບໍລິການ Brave ໄດ້ ເຊັ່ນ: ຜົນການຊອກຫາທີ່ກ່ຽວຂ້ອງຫຼາຍຂຶ້ນ ແລະ ເສັ້ນທາງໃນ Brave ແຜນທີ່. ທ່ານສາມາດແກ້ໄຂ ຫຼື ລຶບທີ່ຢູ່ຂອງທ່ານໃນ <ph name="BEGIN_LINK"/>ບັນຊີ Brave<ph name="END_LINK"/> <ph name="USERNAME"/> ຂອງທ່ານໄດ້.</translation>
+<translation id="1829264724820495616">ທີ່ຢູ່ບ່ອນເຮັດວຽກຂອງທ່ານສາມາດຊ່ວຍໃຫ້ທ່ານເຮັດສິ່ງຕ່າງໆໃຫ້ສຳເລັດດ້ວຍບໍລິການ Growser ໄດ້ ເຊັ່ນ: ຜົນການຊອກຫາທີ່ກ່ຽວຂ້ອງຫຼາຍຂຶ້ນ ແລະ ເສັ້ນທາງໃນ Growser ແຜນທີ່. ທ່ານສາມາດແກ້ໄຂ ຫຼື ລຶບທີ່ຢູ່ຂອງທ່ານໃນ <ph name="BEGIN_LINK"/>ບັນຊີ Growser<ph name="END_LINK"/> <ph name="USERNAME"/> ຂອງທ່ານໄດ້.</translation>
 <translation id="2262477216570151239">ຄວາມຊັກຊ້າກ່ອນການຊໍ້າຄືນ</translation>
 <translation id="2263371730707937087">ອັດຕາໂຫຼດຂໍ້ມູນຄືນໃໝ່ຂອງໜ້າຈໍ</translation>
 <translation id="7829329302663082098">ຄຳຕິຊົມຂອງທ່ານຈະຊ່ວຍພວກເຮົາປັບປຸງ Growser Cast ໄດ້.
@@ -1766,7 +1766,7 @@
 <translation id="2373499590298659902">ໃຊ້ປຸ່ມ “0” ເພື່ອກົດປຸ່ມເມົ້າຄ້າງໄວ້</translation>
 <translation id="2373666622366160481">ພໍດີກັບເຈ້ຍ</translation>
 <translation id="2375406435414127095">ເຊື່ອມຕໍ່ກັບໂທລະສັບຂອງທ່ານ</translation>
-<translation id="6612559367203670996">Brave ຈະໃຊ້ເນື້ອຫາ ແລະ URL ຂອງແຖບທີ່ແບ່ງປັນ. ລະບົບຈະແບ່ງປັນແຖບປັດຈຸບັນຂອງທ່ານໃນການສົນທະນາໃໝ່. ທ່ານສາມາດປ່ຽນແປງການຕັ້ງຄ່ານີ້ໄດ້ທຸກເວລາ.</translation>
+<translation id="6612559367203670996">Growser ຈະໃຊ້ເນື້ອຫາ ແລະ URL ຂອງແຖບທີ່ແບ່ງປັນ. ລະບົບຈະແບ່ງປັນແຖບປັດຈຸບັນຂອງທ່ານໃນການສົນທະນາໃໝ່. ທ່ານສາມາດປ່ຽນແປງການຕັ້ງຄ່ານີ້ໄດ້ທຸກເວລາ.</translation>
 <translation id="2376056713414548745">ອ່ານອອກສຽງ</translation>
 <translation id="2376122016044804363">ການຢືນຢັນສຳເນົາໄປໃສ່ຄລິບບອດແລ້ວ</translation>
 <translation id="2377667304966270281">ການຂັດຂ້ອງຮ້າຍແຮງ</translation>
@@ -3333,7 +3333,7 @@
 <translation id="3569614820047645079">ໄຟລ໌ຂອງທ່ານໃນໄດຣຟ໌ຂອງຂ້ອຍຈະຊິ້ງກັບ Chromebook ຂອງທ່ານໂດຍອັດຕະໂນມັດ ເພື່ອໃຫ້ທ່ານສາມາດເຂົ້າເຖິງໄດ້ໂດຍບໍ່ຕ້ອງມີການເຊື່ອມຕໍ່ອິນເຕີເນັດ.</translation>
 <translation id="3569617221227793022">ປັດຈຸບັນເຂດເວລາຖືກຕັ້ງຄ່າໄວ້ເປັນ <ph name="TIME_ZONE_ENTRY"/>. ການຕັ້ງຄ່ານີ້ໄດ້ຮັບການຈັດການໂດຍຜູ້ເບິ່ງແຍງລະບົບຂອງທ່ານ.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> ສາມາດເບິ່ງໄຟລ໌ ແລະ ໂຟນເດີຕໍ່ໄປນີ້ໄດ້</translation>
-<translation id="4062501938325597704">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງໜ້າເວັບທີ່ Gemini ໃຊ້ໃນລະຫວ່າງທີ່ເຮັດໜ້າວຽກກັບ Brave ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
+<translation id="4062501938325597704">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງໜ້າເວັບທີ່ Gemini ໃຊ້ໃນລະຫວ່າງທີ່ເຮັດໜ້າວຽກກັບ Growser ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
 <translation id="3571734092741541777">ຕັ້ງຄ່າ</translation>
 <translation id="3575121482199441727">ອະນຸຍາດສຳລັບເວັບໄຊນີ້</translation>
 <translation id="3575224072358507281">ຮວບຮວມທີ່ຢູ່ IP ແລະ ຜົນໄດ້ຮັບການວັດແທກເຄືອຂ່າຍສໍາລັບ Measurement Lab, ອີງຕາມນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງເຂົາເຈົ້າ (measurementlab.net/privacy)</translation>
@@ -5012,7 +5012,7 @@
 <translation id="485480310608090163">ການຕັ້ງຄ່າ ແລະ ການອະນຸຍາດເພີ່ມເຕີມ</translation>
 <translation id="4857304314344645169">ເບິ່ງຄຳອະທິບາຍຂອງບັນຫາໃດກໍຕາມແບບເທື່ອລະຂັ້ນຕອນ</translation>
 <translation id="1913048435257025864">ຖາມ Growser ກ່ຽວກັບໜ້າກ່ອນໜ້າ: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງແຖບປັດຈຸບັນຂອງທ່ານກັບ Brave ເພື່ອໃຫ້ຄຳຕອບທີ່ກ່ຽວຂ້ອງແກ່ທ່ານຫຼາຍຂຶ້ນ. ທ່ານສາມາດເພີ່ມ ຫຼື ລຶບແຖບອອກໄດ້ໃນລະຫວ່າງທີ່ທ່ານເລືອກເບິ່ງ.</translation>
+<translation id="228735844055480091">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງແຖບປັດຈຸບັນຂອງທ່ານກັບ Growser ເພື່ອໃຫ້ຄຳຕອບທີ່ກ່ຽວຂ້ອງແກ່ທ່ານຫຼາຍຂຶ້ນ. ທ່ານສາມາດເພີ່ມ ຫຼື ລຶບແຖບອອກໄດ້ໃນລະຫວ່າງທີ່ທ່ານເລືອກເບິ່ງ.</translation>
 <translation id="485806788160414322">ຫຼິ້ນ ຫຼື ຢຸດມີເດຍຊົ່ວຄາວ</translation>
 <translation id="4858913220355269194">ຖືກທໍາລາຍ</translation>
 <translation id="4860012864737017059">ແຖບຫຼ້າສຸດ</translation>
@@ -5347,7 +5347,7 @@
 <translation id="5112577000029535889">ເຄື່ອງ​ມື​ຜູ້ພັດ​ທະ​ນາ</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{ຍ້າຍ 1 ໄຟລ໌ແລ້ວ}other{ຍ້າຍ {NUM_OF_FILES} ໄຟລ໌ແລ້ວ}}</translation>
 <translation id="511313294362309725">ເປີດໃຊ້ການຈັບຄູ່ດ່ວນ</translation>
-<translation id="6409962091529734959">ສຶກສາເພີ່ມເຕີມກ່ຽວກັບການທ່ອງເວັບອັດຕະໂນມັດຂອງ Brave</translation>
+<translation id="6409962091529734959">ສຶກສາເພີ່ມເຕີມກ່ຽວກັບການທ່ອງເວັບອັດຕະໂນມັດຂອງ Growser</translation>
 <translation id="51143538739122961">ສຽບກະແຈຄວາມປອດໄພຂອງທ່ານ ແລ້ວແຕະມັນ</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">ບັນທຶກສຽງເປັນ...</translation>
@@ -5390,7 +5390,7 @@
 <translation id="5146235736676876345">ເລືອກເອງ</translation>
 <translation id="5146896637028965135">ສຽງຂອງລະບົບ</translation>
 <translation id="5147113439721488265">ການແນະນຳໃຫ້</translation>
-<translation id="5897101208018277582">ເພື່ອສົ່ງລິ້ງ, ກະລຸນາຢັ້ງຢືນວ່າແມ່ນທ່ານ. ທ່ານສາມາດສົ່ງລິ້ງໄດ້ເມື່ອທ່ານເຂົ້າສູ່ລະບົບບັນຊີ Brave ດຽວກັນຢູ່ອຸປະກອນທັງສອງເຄື່ອງ.</translation>
+<translation id="5897101208018277582">ເພື່ອສົ່ງລິ້ງ, ກະລຸນາຢັ້ງຢືນວ່າແມ່ນທ່ານ. ທ່ານສາມາດສົ່ງລິ້ງໄດ້ເມື່ອທ່ານເຂົ້າສູ່ລະບົບບັນຊີ Growser ດຽວກັນຢູ່ອຸປະກອນທັງສອງເຄື່ອງ.</translation>
 <translation id="5148285448107770349">ລະຫັດຜ່ານຕ້ອງມີຢ່າງໜ້ອຍ 8 ຕົວອັກສອນ</translation>
 <translation id="5149602533174716626">ສຳເນົາເຟຣມວິດີໂອ</translation>
 <translation id="5150254825601720210">ຊື່ເຊີບເວີ SSL ໃບຢັ້ງຢືນ Netscape</translation>
@@ -6077,7 +6077,7 @@
 <translation id="5713158217420111469">ເຊື່ອມຕໍ່ຫາ <ph name="DEVICE"/> ແລ້ວ</translation>
 <translation id="5713988532993992900">ປີ້ນສີ</translation>
 <translation id="5714100381896040477">ຈໍາກັດການເຄື່ອນໄຫວຢູ່ໜ້າຈໍ</translation>
-<translation id="8277434106940718633">ທັງການສົນທະນາຂອງທ່ານກັບ Gemini ແລະ ຂໍ້ມູນ Brave Workspace ຂອງທ່ານ ຈະບໍ່ຖືກກວດສອບ ຫຼື ນຳໃຊ້ເພື່ອປັບປຸງໂມເດວ AI ສ້າງເນື້ອຫາ. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ເນື້ອຫາບາງຢ່າງອາດບໍ່ເໝາະສົມສຳລັບທຸກຄົນ.</translation>
+<translation id="8277434106940718633">ທັງການສົນທະນາຂອງທ່ານກັບ Gemini ແລະ ຂໍ້ມູນ Growser Workspace ຂອງທ່ານ ຈະບໍ່ຖືກກວດສອບ ຫຼື ນຳໃຊ້ເພື່ອປັບປຸງໂມເດວ AI ສ້າງເນື້ອຫາ. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ເນື້ອຫາບາງຢ່າງອາດບໍ່ເໝາະສົມສຳລັບທຸກຄົນ.</translation>
 <translation id="5719854774000914513">ເວັບໄຊສາມາດຂໍເຊື່ອມຕໍ່ກັບອຸປະກອນ HID ໄດ້</translation>
 <translation id="5720729194423017301">ທາງລັດສຳລັບເວັບໄຊ ແລະ ໂປຣແກຣມຊອກຫາ</translation>
 <translation id="572155275267014074">ການຕັ້ງຄ່າ Android</translation>
@@ -7013,7 +7013,7 @@
 <translation id="6464825623202322042">ອຸ​ປະ​ກອນ​ນີ້</translation>
 <translation id="6465841119675156448">ບໍ່ໃຊ້ອິນເຕີເນັດເລີຍ</translation>
 <translation id="6466258437571594570">ເວັບໄຊຖືກບລັອກບໍ່ໃຫ້ລົບກວນທ່ານເມື່ອພວກມັນຂໍສົ່ງການແຈ້ງເຕືອນ</translation>
-<translation id="1673835407889847350">ຢັ້ງຢືນວ່າແມ່ນທ່ານເພື່ອເພີ່ມລະຫັດຜ່ານ ແລະ ຮັບລະຫັດຜ່ານຢູ່ອຸປະກອນທຸກເຄື່ອງດ້ວຍບັນຊີ Brave ຂອງທ່ານ</translation>
+<translation id="1673835407889847350">ຢັ້ງຢືນວ່າແມ່ນທ່ານເພື່ອເພີ່ມລະຫັດຜ່ານ ແລະ ຮັບລະຫັດຜ່ານຢູ່ອຸປະກອນທຸກເຄື່ອງດ້ວຍບັນຊີ Growser ຂອງທ່ານ</translation>
 <translation id="6467230443178397264">ສະແກນ <ph name="FILE_NAME"/></translation>
 <translation id="6467304607960172345">ປັບແຕ່ງວິດີໂອເຕັມຈໍ</translation>
 <translation id="6467377768028664108">ຈາກນັ້ນ <ph name="DEVICE_TYPE"/> ຂອງທ່ານຈະສາມາດ:</translation>
@@ -7026,7 +7026,7 @@
 <translation id="6470823736074966819">ປິດສຽງການແຈ້ງເຕືອນ</translation>
 <translation id="6472893788822429178">ສະແດງປຸ່ມໜ້າ​ຫຼັກ</translation>
 <translation id="6473315466413288899">ເລືອກຕົວເລືອກ</translation>
-<translation id="6199773995438617867">ເບິ່ງເພີ່ມເຕີມໃນ Brave ປະຕິທິນ</translation>
+<translation id="6199773995438617867">ເບິ່ງເພີ່ມເຕີມໃນ Growser ປະຕິທິນ</translation>
 <translation id="6474401088838630457">ຖາມ Gemini ເພີ່ມເຕີມກ່ຽວກັບສິ່ງນີ້</translation>
 <translation id="6474498546677193336">ບໍ່ສາມາດເຊົາແບ່ງປັນໄດ້ເພາະວ່າແອັບພລິເຄຊັນກຳລັງໃຊ້ໂຟນເດີນີ້ຢູ່. ລະບົບຈະເຊົາແບ່ງປັນໂຟນເດີເມື່ອປິດ Linux ໃນຄັ້ງຕໍ່ໄປ.</translation>
 <translation id="6474884162850599008">ຕັດ​ເຊື່ອມ​ຕໍ່​ບັນ​ຊີ Google Drive</translation>
@@ -7207,7 +7207,7 @@
 <translation id="6613231539539868591">ຂໍ້ມູນທີ່ຄົງຢູ່</translation>
 <translation id="6613267708691765962">ກຳລັງສະແກນຫາເມົາແວ...</translation>
 <translation id="6615455863669487791">ສະ​ແດງຂ້ອຍ</translation>
-<translation id="5146630705831894319">ສະເໜີ Brave ແປພາສາສຳລັບເວັບໄຊ ແລະ PDF ໃນພາສາອື່ນໆ</translation>
+<translation id="5146630705831894319">ສະເໜີ Growser ແປພາສາສຳລັບເວັບໄຊ ແລະ PDF ໃນພາສາອື່ນໆ</translation>
 <translation id="6618013221808317456">ບໍ່ອະນຸຍາດໃຫ້ເວັບໄຊໃຊ້ການເພີ່ມປະສິດທິພາບ JavaScript</translation>
 <translation id="6618154741503063152">ບໍ່ສາມາດອັບໂຫຼດໄດ້. ບໍ່ອະນຸຍາດໃຫ້ໃຊ້ໄຟລ໌ແນບ.</translation>
 <translation id="6619058681307408113">ເຄື່ອງພິມແດມອນແບບໃຊ້ສາຍ (LPD)</translation>
@@ -7561,7 +7561,7 @@
 <translation id="6871644448911473373">ເຄື່ອງຕອບຮັບ OCSP: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">ພາສາ...</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">ເມື່ອເປີດໄວ້, Brave ແປພາສາຈະສະເໜີການແປເວັບໄຊ ແລະ PDF ເປັນພາສາທີ່ທ່ານຕ້ອງການ. ນອກຈາກນີ້, ຍັງສາມາດແປເວັບໄຊໂດຍອັດຕະໂນມັດໄດ້ນຳ.</translation>
+<translation id="5189979109199910058">ເມື່ອເປີດໄວ້, Growser ແປພາສາຈະສະເໜີການແປເວັບໄຊ ແລະ PDF ເປັນພາສາທີ່ທ່ານຕ້ອງການ. ນອກຈາກນີ້, ຍັງສາມາດແປເວັບໄຊໂດຍອັດຕະໂນມັດໄດ້ນຳ.</translation>
 <translation id="6873571253135628430">ປ່ຽນສິດທິຂອງເວັບໄຊ</translation>
 <translation id="6874986444867497677">ຕິດຕັ້ງບໍ່ສຳເລັດ. ກະລຸນາລອງໃໝ່ ຫຼື ປິດໜ້າຈໍນີ້.</translation>
 <translation id="6876155724392614295">ຖີບລົດ</translation>
@@ -7848,7 +7848,7 @@
 <translation id="710224247908684995">ສ່ວນຂະຫຍາຍໜຶ່ງໄດ້ປິດ Safe Browsing</translation>
 <translation id="7102832101143475489">ຄຳຂໍໝົດເວລາແລ້ວ</translation>
 <translation id="7103944802169726298">PC ແລະ ອຸປະກອນ Chromecast ໃຊ້ເຄືອຂ່າຍ Wi-Fi ດຽວກັນ</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. ການເປັນສະມາຊິກ Brave</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. ການເປັນສະມາຊິກ Growser</translation>
 <translation id="7107609441453408294">ຫຼິ້ນສຽງດຽວກັນຜ່ານທຸກລຳໂພງ</translation>
 <translation id="7108338896283013870">ເຊື່ອງ</translation>
 <translation id="7108419148561505648">ກະລຸນາຕື່ມຂໍ້ມູນຢ່າງໜ້ອຍ 1 ຊ່ອງກ່ອນບັນທຶກ</translation>
@@ -8219,7 +8219,7 @@
 <translation id="7395774987022469191">ທັງໜ້າຈໍ</translation>
 <translation id="7396017167185131589">ໂຟນເດີທີ່ໃຊ້ຮ່ວມກັນຈະປາກົດຢູ່ບ່ອນນີ້</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> ຈະເລີ່ມເປີດໃຊ້ຢູ່ທີ່ການເລີ່ມຕົ້ນລະບົບ ແລະສືບຕໍ່ແລ່ນຢູ່ໃນພື້ນຫຼັງ ແມ້ກະທັ້ງ​ໃນ​ເວລາ​ທີ່​ທ່ານປິດທຸກໜ້າ​ຕ່າງ​ <ph name="PRODUCT_NAME"/> ອື່ນແລ້ວກໍ່ຕາມ.</translation>
-<translation id="8572914900293297191">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Brave AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ເນື້ອຫາບາງຢ່າງອາດບໍ່ເໝາະສົມສຳລັບທຸກຄົນ. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Growser AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ເນື້ອຫາບາງຢ່າງອາດບໍ່ເໝາະສົມສຳລັບທຸກຄົນ. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">ປັບແຕ່ງການຊິ້ງຂໍ້ມູນ</translation>
 <translation id="7399616692258236448">ຄຳຮ້ອງຂໍສະຖານທີ່ຖືກບລັອກໄວ້ໂດຍອັດຕະໂນມັດສຳລັບທຸກເວັບໄຊ ຍົກເວັ້ນເວັບໄຊທີ່ທ່ານອະນຸຍາດ</translation>
 <translation id="7399802613464275309">ກວດສອບຄວາມປອດໄພ</translation>
@@ -8752,7 +8752,7 @@
 <translation id="7807711621188256451">​ອະ​ນຸ​ຍາດ​ໃຫ້ <ph name="HOST"/> ເຂົ້າຫາກ້ອງ​ຖ່າຍ​ຮູບ​ຂອງ​ທ່ານທຸກຄັ້ງ</translation>
 <translation id="7810202088502699111">ປັອບອັບຖືກບລັອກຢູ່​ເທິງ​ຫນ້າ​ນີ້.</translation>
 <translation id="7810367892333449285">ລະຫັດທີ່ທ່ານລະບຸຄວນຢູ່ໃນທີ່ຢູ່ <ph name="LPA_0"/>$<ph name="LPA_1"/>ທີ່ຢູ່ SM-DP+<ph name="LPA_2"/>$<ph name="LPA_3"/>ລະຫັດທີ່ກົງກັນ (ບໍ່ບັງຄັບ)<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave ເກີດຂຶ້ນໄດ້ໂດຍໂຄງການໂອເພນຊອດ <ph name="BEGIN_HIGHLIGHT"/>Brave<ph name="END_HIGHLIGHT"/> ແລະ ຊອບແວໂອເພນຊອດ ອື່ນໆ.</translation>
+<translation id="5014491767627896944">Growser ເກີດຂຶ້ນໄດ້ໂດຍໂຄງການໂອເພນຊອດ <ph name="BEGIN_HIGHLIGHT"/>Growser<ph name="END_HIGHLIGHT"/> ແລະ ຊອບແວໂອເພນຊອດ ອື່ນໆ.</translation>
 <translation id="7811263553491007091">ລອງໃໝ່ ຫຼື ເລືອກຈາກໜຶ່ງໃນຮູບແບບສີສັນທີ່ສ້າງຂຶ້ນກ່ອນໜ້ານີ້ຢູ່ທາງລຸ່ມ.</translation>
 <translation id="7811926937048662341">ຄລິກຂວາບ່ອນນີ້ແລ້ວເລືອກ “ສະແດງແຖບໃນແນວຕັ້ງ”</translation>
 <translation id="7811986034759500329">ຕັ້ງໃນການຕັ້ງຄ່າລະບົບ</translation>
@@ -8775,7 +8775,7 @@
 <translation id="7826039927887234077">ຮູບແບບສີສັນ AI ຫຼ້າສຸດທີ <ph name="INDEX"/> ຂອງ <ph name="SUBJECT"/>, ດ້ວຍອາລົມ <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">ການຮອງຮັບໂປຣແກຣມທ່ອງເວັບຮຸ່ນເກົ່າ (LBS) - ພາຍໃນ</translation>
 <translation id="7826838152281937785">ປິດມຸມມອງທາງລຸ່ມ</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>ຂໍ້ກຳນົດ Brave<ph name="END_LINK_TERMS"/> ແລະ <ph name="BEGIN_LINK_PRIVACY"/>ປະກາດຄວາມເປັນສ່ວນຕົວແອັບ Gemini<ph name="END_LINK_PRIVACY"/> ແມ່ນມີຜົນນຳໃຊ້</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>ຂໍ້ກຳນົດ Growser<ph name="END_LINK_TERMS"/> ແລະ <ph name="BEGIN_LINK_PRIVACY"/>ປະກາດຄວາມເປັນສ່ວນຕົວແອັບ Gemini<ph name="END_LINK_PRIVACY"/> ແມ່ນມີຜົນນຳໃຊ້</translation>
 <translation id="7828642077514646543">ຜິດພາດ: ບໍ່ສາມາດຖອດລະຫັດໃບຮັບຮອງໄດ້</translation>
 <translation id="7830276128493844263">ສະຖານທີ່ປິດຢູ່ໃນການຕັ້ງຄ່າລະບົບ</translation>
 <translation id="7830833461614351956">ສຳເນົາ <ph name="NUM_OF_FILES"/> ໄຟລ໌ໄປໃສ່ <ph name="CLOUD_PROVIDER"/> ເພື່ອເປີດບໍ?</translation>
@@ -9646,7 +9646,7 @@
 <translation id="850399339579925930">ວັດຈະນານຸກົມ</translation>
 <translation id="850561044295157831">ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຄຸນສົມບັດຊ່ວຍຂ້ອຍຂຽນ</translation>
 <translation id="8505669004895429027">ປະຢັດໜ່ວຍຄວາມຈຳໄດ້ໜ້ອຍ</translation>
-<translation id="869548515244800202">ການເປັນສະມາຊິກ Brave</translation>
+<translation id="869548515244800202">ການເປັນສະມາຊິກ Growser</translation>
 <translation id="8507052544157927817">ຮູບແບບຂີດກ້ອງ</translation>
 <translation id="8507227974644337342">ຄວາມລະອຽດໜ້າຈໍ</translation>
 <translation id="8507443886219296894">ເຊື່ອງສຳລັບເວັບໄຊນີ້</translation>
@@ -9786,7 +9786,7 @@
 <translation id="8619803522055190423">ເງົາ</translation>
 <translation id="8620206585293032550">ລັກສະນະຂອງແຖບທີ່ບໍ່ໄດ້ນຳໃຊ້</translation>
 <translation id="8621979332865976405">ແບ່ງປັນທັງໝົດໜ້າຈໍຂອງທ່ານ</translation>
-<translation id="6089523089512126744">ໂໝດ AI ຂອງ Brave ຊອກຫາ ແລະ ແອັບທີ່ເຊື່ອມຕໍ່</translation>
+<translation id="6089523089512126744">ໂໝດ AI ຂອງ Growser ຊອກຫາ ແລະ ແອັບທີ່ເຊື່ອມຕໍ່</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ອ່ານອຸປະກອນ ChromeOS ແລະ ໝາຍເລກຊີຣຽວສ່ວນປະກອບ</translation>
 <translation id="862542460444371744">ສ່ວນຂະຫຍາຍ</translation>
@@ -11327,17 +11327,17 @@
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini ໃນ Growser</translation>
 <translation id="1975450474853317621">ເປີດໃນໂປຣແກຣມທ່ອງເວັບ Growser</translation>
 <translation id="8516824290867275572">ບັນຊີຂອງທ່ານບໍ່ມີສິດເຂົ້າເຖິງ Gemini ໃນ Growser</translation>
-<translation id="1649234713894562345">Brave ເກີດຂຶ້ນໄດ້ໂດຍໂຄງການໂອເພນຊອດ <ph name="BEGIN_HIGHLIGHT"/>Brave<ph name="END_HIGHLIGHT"/> ແລະ ຊອບແວໂອເພນຊອດ ອື່ນໆ.</translation>
+<translation id="1649234713894562345">Growser ເກີດຂຶ້ນໄດ້ໂດຍໂຄງການໂອເພນຊອດ <ph name="BEGIN_HIGHLIGHT"/>Growser<ph name="END_HIGHLIGHT"/> ແລະ ຊອບແວໂອເພນຊອດ ອື່ນໆ.</translation>
 <translation id="870536819717176711">ເມື່ອທ່ານເລືອກແບ່ງປັນແຖບປັດຈຸບັນກັບ Gemini, ລະບົບຈະສົ່ງເນື້ອຫາ, ມີເດຍ ແລະ URL ເຕັມຂອງແຖບໄປຫາ Growser.</translation>
-<translation id="1130866111814048607">ເມື່ອແບ່ງປັນແຖບ, ລະບົບຈະສົ່ງເນື້ອຫາ, ສື່ ແລະ URL ຂອງໜ້າເວັບໄປຫາ Brave ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
-<translation id="7656790264713095385">ທຳອິດ, ໃຫ້ເປີດການທ່ອງເວັບອັດຕະໂນມັດຂອງ Brave ສຳລັບອຸປະກອນນີ້</translation>
+<translation id="1130866111814048607">ເມື່ອແບ່ງປັນແຖບ, ລະບົບຈະສົ່ງເນື້ອຫາ, ສື່ ແລະ URL ຂອງໜ້າເວັບໄປຫາ Growser ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
+<translation id="7656790264713095385">ທຳອິດ, ໃຫ້ເປີດການທ່ອງເວັບອັດຕະໂນມັດຂອງ Growser ສຳລັບອຸປະກອນນີ້</translation>
 <translation id="8572003230388132401">Gemini Spark ສາມາດໃຊ້ການທ່ອງເວັບອັດຕະໂນມັດຂອງ Growser ຢູ່ອຸປະກອນນີ້ເພື່ອໂຕ້ຕອບກັບເວັບໄຊ ແລະ ເຮັດໜ້າວຽກຕ່າງໆໃຫ້ສຳເລັດໃນນາມຂອງທ່ານໄດ້. <ph name="LINK_BEGIN"/>ສຶກສາເພີ່ມເຕີມ<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark ສາມາດໃຊ້ການທ່ອງເວັບອັດຕະໂນມັດຢູ່ອຸປະກອນນີ້ໄດ້ກໍຕໍ່ເມື່ອອຸປະກອນເປີດຢູ່ ແລະ Growser ກຳລັງເຮັດວຽກຢູ່ເທົ່ານັ້ນ.</translation>
 <translation id="1982892581799327835">ທຸກຄົນທີ່ມີສິດເຂົ້າເຖິງເອເຈນ Gemini Spark ຂອງທ່ານສາມາດຄວບຄຸມໂປຣແກຣມທ່ອງເວັບ Growser ຂອງທ່ານໄດ້.</translation>
 <translation id="6689939585896001516">ໃຫ້ Growser ທ່ອງເວັບແທນທ່ານ</translation>
 <translation id="640233545778658570">Gemini ໃນ Growser ໃຊ້ການທ່ອງເວັບອັດຕະໂນມັດເພື່ອເຮັດວຽກໃນແຖບຂອງທ່ານ ແລະ ເຮັດໜ້າວຽກທີ່ທ່ານກຳນົດໃຫ້ສຳເລັດ. <ph name="LINK_BEGIN"/>ສຶກສາເພີ່ມເຕີມ<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">ສຶກສາເພີ່ມເຕີມກ່ຽວກັບການທ່ອງເວັບອັດຕະໂນມັດຂອງ Brave</translation>
-<translation id="3570112771874223231">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງໜ້າເວັບທີ່ Gemini ໃຊ້ໃນລະຫວ່າງທີ່ເຮັດໜ້າວຽກກັບ Brave ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
+<translation id="2740842679402949230">ສຶກສາເພີ່ມເຕີມກ່ຽວກັບການທ່ອງເວັບອັດຕະໂນມັດຂອງ Growser</translation>
+<translation id="3570112771874223231">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງໜ້າເວັບທີ່ Gemini ໃຊ້ໃນລະຫວ່າງທີ່ເຮັດໜ້າວຽກກັບ Growser ແລະ ອາດມີການກວດສອບເພື່ອຄວາມປອດໄພ.</translation>
 <translation id="2314508080153323869">Gemini ໃນ Growser</translation>
 <translation id="1910632359330857071">ສົນທະນາກັບ Gemini ໃນ Growser ເພື່ອຮັບຄຳຕອບ, ປະເດັນສຳຄັນ ແລະ ອື່ນໆໃນຂະນະທີ່ທ່ານເລືອກເບິ່ງ</translation>
 <translation id="2483218699324586641">ໃຊ້ <ph name="FOCUS_TOGGLE_HOTKEY"/> ເພື່ອເປີດ Gemini ໃນ Growser</translation>
@@ -11367,8 +11367,8 @@
     ແອັບ Growser Home ຫຼືບໍ່<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">ຮັບກະແຈຜ່ານຂອງທ່ານໃນອຸປະກອນນີ້ດ້ວຍຕົວຈັດການລະຫັດຜ່ານ Growser</translation>
 <translation id="2364302372598204515">ນີ້ບໍ່ແມ່ນບັນຊີ Growser. ລາຍການທີ່ທ່ານບັນທຶກໄປໃສ່ Growser ຈະບໍ່ສາມາດໃຊ້ໄດ້ຢູ່ອຸປະກອນອື່ນ.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. ການເປັນສະມາຊິກ Brave</translation>
-<translation id="850632091665381275">ການເປັນສະມາຊິກ Brave</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. ການເປັນສະມາຊິກ Growser</translation>
+<translation id="850632091665381275">ການເປັນສະມາຊິກ Growser</translation>
 <translation id="6710172959248731469">ການຕັ້ງຄ່າບໍລິການ Growser</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{ລະບົບຈະບັນທຶກຂໍ້ມູນ 1 ລາຍການໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອໃຊ້ມັນຢູ່ອຸປະກອນອື່ນຂອງທ່ານ, ໃຫ້ບັນທຶກມັນໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ. ສິ່ງນີ້ຍັງຈະອະນາໄມຂໍ້ມູນຕ່າງໆທີ່ຊ້ຳກັນນຳ.}other{ລະບົບຈະບັນທຶກຂໍ້ມູນ {ITEM_COUNT} ລາຍການໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອນຳໃຊ້ຢູ່ອຸປະກອນເຄື່ອງອື່ນຂອງທ່ານ, ໃຫ້ບັນທຶກໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ. ສິ່ງນີ້ຍັງຈະອະນາໄມຂໍ້ມູນຕ່າງໆທີ່ຊ້ຳກັນນຳ.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{ລະບົບຈະບັນທຶກລະຫັດຜ່ານ 1 ລາຍການໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອໃຊ້ມັນຢູ່ອຸປະກອນອື່ນຂອງທ່ານ, ໃຫ້ບັນທຶກມັນໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ. ສິ່ງນີ້ຍັງຈະອະນາໄມຂໍ້ມູນຕ່າງໆທີ່ຊ້ຳກັນນຳ.}other{ລະຫັດຜ່ານ {PASSWORD_COUNT} ລາຍການຈະຖືກບັນທຶກໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອນຳໃຊ້ຢູ່ອຸປະກອນເຄື່ອງອື່ນຂອງທ່ານ, ໃຫ້ບັນທຶກໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ. ສິ່ງນີ້ຍັງຈະອະນາໄມຂໍ້ມູນຕ່າງໆທີ່ຊ້ຳກັນນຳ.}}</translation>
@@ -11382,8 +11382,8 @@
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{ບຸກມາກ 1 ລາຍການ ແລະ ລາຍການອື່ນໆຈະຖືກບັນທຶກໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອໃຊ້ພວກມັນຢູ່ອຸປະກອນເຄື່ອງອື່ນຂອງທ່ານ, ໃຫ້ ບັນທຶກພວກມັນໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ.}other{{BOOKMARK_COUNT} ບຸກມາກ ແລະ ລາຍການອື່ນໆຈະຖືກບັນທຶກໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອໃຊ້ພວກມັນຢູ່ອຸປະກອນເຄື່ອງອື່ນຂອງທ່ານ, ໃຫ້ ບັນທຶກພວກມັນໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{ລະບົບຈະບັນທຶກຂໍ້ມູນ 1 ລາຍການໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອນຳໃຊ້ຢູ່ອຸປະກອນເຄື່ອງອື່ນຂອງທ່ານ, ໃຫ້ <ph name="BEGIN_LINK"/>ບັນທຶກໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ<ph name="END_LINK"/>.}other{ລະບົບຈະບັນທຶກຂໍ້ມູນ {ITEM_COUNT} ລາຍການໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນ. ເພື່ອນຳໃຊ້ຢູ່ອຸປະກອນເຄື່ອງອື່ນຂອງທ່ານ, ໃຫ້ <ph name="BEGIN_LINK"/>ບັນທຶກໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">ໃຊ້ບັນຊີ Growser ຂອງທ່ານ ຫຼື ສ້າງບັນຊີໃໝ່</translation>
-<translation id="1896353439080510710">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Brave AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Brave AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ເນື້ອຫາບາງຢ່າງອາດບໍ່ເໝາະສົມສຳລັບທຸກຄົນ. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Growser AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">ການສົນທະນາຈະໄດ້ຮັບການກວດສອບ ແລະ ນຳໄປໃຊ້ເພື່ອປັບປຸງ Growser AI. Gemini ເປັນ AI ແລະ ອາດເຮັດຜິດພາດໄດ້. ເນື້ອຫາບາງຢ່າງອາດບໍ່ເໝາະສົມສຳລັບທຸກຄົນ. ທ່ານສາມາດ <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>ຈັດການການເຄື່ອນໄຫວຂອງທ່ານ<ph name="END_LINK_MANAGE_ACTIVITY"/>, ເຊິ່ງຮວມທັງຂໍ້ມູນກ່ຽວກັບສະຖານທີ່ຂອງທ່ານໄດ້. <ph name="BEGIN_LINK_LEARN_MORE"/>ສຶກສາເພີ່ມເຕີມກ່ຽວກັບຕົວເລືອກຂອງທ່ານ<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{ສ່ວນຂະຫຍາຍນີ້ບັນທຶກໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ, ແຕ່ຂໍ້ມູນໃດກໍຕາມທີ່ສ່ວນຂະຫຍາຍບັນທຶກໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນອາດຖືກລຶບ}other{ສ່ວນຂະຫຍາຍເຫຼົ່ານີ້ບັນທຶກໄວ້ໃນບັນຊີ Growser ຂອງທ່ານ, ແຕ່ຂໍ້ມູນໃດກໍຕາມທີ່ສ່ວນຂະຫຍາຍບັນທຶກໄວ້ໃນອຸປະກອນນີ້ເທົ່ານັ້ນອາດຖືກລຶບ}}</translation>
 <translation id="3523789730715594198">ທ່ານສາມາດຢຸດຊິ້ງຂໍ້ມູນຕອນໃດກໍໄດ້ໃນການຕັ້ງຄ່າ. Growser ອາດປັບແຕ່ງການຊອກຫາ ແລະ ບໍລິການອື່ນໆໃຫ້ເປັນແບບສ່ວນຕົວໂດຍອ້າງອີງໃສ່ປະຫວັດຂອງທ່ານ.</translation>
 <translation id="8231595707224857577">ອົງກອນຂອງທ່ານໄດ້ປິດການບັນທຶກແຖບໃນບັນຊີ Growser ຂອງທ່ານແລ້ວ</translation>
@@ -11421,7 +11421,7 @@
 <translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>ການເຄື່ອນໄຫວຮູບແບບອື່ນ<ph name="END_LINK_GOOGLE"/> ອາດຖືກບັນທຶກໄວ້ໃນບັນຊີ Growser ຂອງທ່ານເມື່ອທ່ານເຂົ້າສູ່ລະບົບ. ທ່ານສາມາດລຶບພວກມັນຕອນໃດກໍໄດ້.</translation>
 <translation id="6533315466883598769">ໃຊ້ Growser ແປພາສາ</translation>
 <translation id="6010651352520077187">ເມື່ອເປີດຢູ່, Growser ແປພາສາຈະສະເໜີການແປພາສາເວັບໄຊເປັນພາສາທີ່ທ່ານຕ້ອງການ. ມັນສາມາດແປພາສາເວັບໄຊໂດຍອັດຕະໂນມັດໄດ້ນຳ.</translation>
-<translation id="6873499199714317035">ເມື່ອເປີດໄວ້, Brave ແປພາສາຈະສະເໜີການແປເວັບໄຊ ແລະ PDF ເປັນພາສາທີ່ທ່ານຕ້ອງການ. ນອກຈາກນີ້, ຍັງສາມາດແປເວັບໄຊໂດຍອັດຕະໂນມັດໄດ້ນຳ.</translation>
+<translation id="6873499199714317035">ເມື່ອເປີດໄວ້, Growser ແປພາສາຈະສະເໜີການແປເວັບໄຊ ແລະ PDF ເປັນພາສາທີ່ທ່ານຕ້ອງການ. ນອກຈາກນີ້, ຍັງສາມາດແປເວັບໄຊໂດຍອັດຕະໂນມັດໄດ້ນຳ.</translation>
 <translation id="5911030830365207728">Growser ແປພາສາ</translation>
 <translation id="7458168200501453431">ໃຊ້ຕົວກວດການສະກົດຄໍາດຽວກັນກັບທີ່ໃຊ້ໃນ Growser ຊອກຫາ. ລະບົບຈະສົ່ງຂໍ້ຄວາມທີ່ທ່ານພິມໃນໂປຣແກຣມທ່ອງເວັບໄປໃຫ້ Growser.</translation>
 <translation id="8972513834460200407">ກະລຸນາກວດເບິ່ງກັບຜູ້ຄຸ້ມຄອງເຄືອຂ່າຍຂອງທ່ານ ເພື່ອເບິ່ງໃຫ້ແນ່ໃຈວ່າ ບໍ່ມີໄຟວອລບລັອກການດາວໂຫຼດຈາກເຊີບເວີ Growser ແລ້ວ.</translation>
@@ -11467,7 +11467,7 @@
 <translation id="3293574207873361017">ຈັດການບັນຊີ Growser ຂອງທ່ານ</translation>
 <translation id="6901130673208235020">ເມື່ອທ່ານຊອກຫາປະຫວັດການທ່ອງເວັບ, ປະຫວັດການຊອກຫາ, ເນື້ອຫາໜ້າທີ່ກົງກັນທີ່ສຸດ ແລະ ເອົ້າພຸດໂມເດວທີ່ສ້າງຂຶ້ນຂອງທ່ານຈະຖືກສົ່ງໃຫ້ Growser</translation>
 <translation id="3178434360326457238">ໃນຂະນະທີ່ທ່ານເລືອກເບິ່ງເວັບໄຊ, ເນື້ອຫາໜ້າຂອງພວກມັນແມ່ນໄດ້ຖືກເຂົ້າລະຫັດ ແລະ ໄດ້ບັນທຶກໃສ່ອຸປະກອນຂອງທ່ານ. ນີ້ອາດຈະສົ່ງຜົນກະທົບຕໍ່ປະສິດທິພາບຂອງ Growser</translation>
-<translation id="8622145666696249878">ໂໝດ AI ຂອງ Brave ຊອກຫາ ແລະ ແອັບທີ່ເຊື່ອມຕໍ່</translation>
+<translation id="8622145666696249878">ໂໝດ AI ຂອງ Growser ຊອກຫາ ແລະ ແອັບທີ່ເຊື່ອມຕໍ່</translation>
 <translation id="2760679829473121490">ສະແດງການແຈ້ງເຕືອນຂອງລະບົບກ່ຽວກັບຄຸນສົມບັດ ແລະ ເຄັດລັບຂອງ Growser</translation>
 <translation id="6713316345564743478">ເພື່ອກວດເບິ່ງລະຫັດຜ່ານທີ່ຖືກລະເມີດ, ໃຫ້ເຂົ້າສູ່ລະບົບບັນຊີ Growser ຂອງທ່ານ</translation>
 <translation id="1342886103232377846">ເພື່ອກວດເບິ່ງລະຫັດຜ່ານທີ່ຖືກລະເມີດ, ໃຫ້ໄປທີ່ຕົວຈັດການລະຫັດຜ່ານ Growser</translation>
@@ -11530,7 +11530,7 @@
 <translation id="1095879482467973146">ຕົວຈັດການລະຫັດຜ່ານ Growser ຢູ່ເວັບ</translation>
 <translation id="1368798504801939187">ເບິ່ງລະຫັດຜ່ານຂອງທ່ານໄດ້ເຖິງແມ່ນວ່າທ່ານຈະບໍ່ໄດ້ໃຊ້ Growser ຫຼື Android ໂດຍເຂົ້າສູ່ລະບົບຢູ່ <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
 <translation id="829923460755755423">ເພີ່ມທາງລັດໃນຕົວຈັດການລະຫັດຜ່ານ Growser</translation>
-<translation id="7244677273667272006">ຢັ້ງຢືນວ່າແມ່ນທ່ານເພື່ອເພີ່ມລະຫັດຜ່ານ ແລະ ຮັບລະຫັດຜ່ານຢູ່ອຸປະກອນທຸກເຄື່ອງດ້ວຍບັນຊີ Brave ຂອງທ່ານ</translation>
+<translation id="7244677273667272006">ຢັ້ງຢືນວ່າແມ່ນທ່ານເພື່ອເພີ່ມລະຫັດຜ່ານ ແລະ ຮັບລະຫັດຜ່ານຢູ່ອຸປະກອນທຸກເຄື່ອງດ້ວຍບັນຊີ Growser ຂອງທ່ານ</translation>
 <translation id="8189517459248805166">ລະຫັດຜ່ານຂອງທ່ານສຳລັບ <ph name="WEBSITE"/> ແມ່ນຖືກບັນທຶກໄວ້ຢູ່ອຸປະກອນນີ້ ແລະ ບັນທຶກໄປໃສ່ບັນຊີ Growser ຂອງທ່ານ. ທ່ານຕ້ອງການລຶບອັນໃດອອກ?</translation>
 <translation id="9101265711096405922">ຈາກບັນຊີ Growser ຂອງທ່ານ</translation>
 <translation id="927421426408921503">ຍ້າຍລະຫັດຜ່ານທີ່ບັນທຶກໄວ້ໄປໃສ່ບັນຊີ Growser ຂອງທ່ານບໍ?</translation>
@@ -11641,7 +11641,7 @@
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         ທ່ານສາມາດຈັດການການຕັ້ງຄ່າຈາກເມນູບັດ ຫຼື ເບິ່ງຕົວເລືອກເພີ່ມເຕີມໄດ້ໃນປັບແຕ່ງ Growser.</translation>
-<translation id="6474021817475285003">ເບິ່ງເພີ່ມເຕີມໃນ Brave ປະຕິທິນ</translation>
+<translation id="6474021817475285003">ເບິ່ງເພີ່ມເຕີມໃນ Growser ປະຕິທິນ</translation>
 <translation id="9066394310994446814">ທ່ານເຫັນລາຍການນີ້ໂດຍອ້າງອີງຕາມການເຄື່ອນໄຫວທີ່ຜ່ານມາຂອງທ່ານໃນການໃຊ້ການບໍລິການ Growser. ທ່ານສາມາດເຫັນຂໍ້ມູນຂອງທ່ານ, ລຶບມັນ ແລະ ປ່ຽນແປງການຕັ້ງຄ່າຂອງທ່ານໄດ້ຢູ່ <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11672,7 +11672,7 @@
 <translation id="6868193750403948178">ປັບແຕ່ງ Growser</translation>
 <translation id="5009064339929592579">ບັນທຶກໃສ່ໂຟນເດີໃນບັນຊີ Growser ຂອງທ່ານບໍ?</translation>
 <translation id="7400528739136719497">ສຽງ Growser ບາງອັນອາດບໍ່ສາມາດໃຊ້ໄດ້ໃນຕອນນີ້</translation>
-<translation id="4857677595331912231">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງແຖບປັດຈຸບັນຂອງທ່ານກັບ Brave ເພື່ອໃຫ້ຄຳຕອບທີ່ກ່ຽວຂ້ອງແກ່ທ່ານຫຼາຍຂຶ້ນ. ທ່ານສາມາດເພີ່ມ ຫຼື ລຶບແຖບອອກໄດ້ໃນລະຫວ່າງທີ່ທ່ານເລືອກເບິ່ງ.</translation>
+<translation id="4857677595331912231">ລະບົບຈະແບ່ງປັນເນື້ອຫາ ແລະ URL ຂອງແຖບປັດຈຸບັນຂອງທ່ານກັບ Growser ເພື່ອໃຫ້ຄຳຕອບທີ່ກ່ຽວຂ້ອງແກ່ທ່ານຫຼາຍຂຶ້ນ. ທ່ານສາມາດເພີ່ມ ຫຼື ລຶບແຖບອອກໄດ້ໃນລະຫວ່າງທີ່ທ່ານເລືອກເບິ່ງ.</translation>
 <translation id="5639212636098910819">ສືບຕໍ່ຢູ່ໃນ Growser</translation>
 <translation id="3252169590975855820">ທ່ານສາມາດເຂົ້າເຖິງລະຫັດຜ່ານໄດ້ໃນຕົວຈັດການລະຫັດຜ່ານ Growser</translation>
 <translation id="3843323136102787632">ດາວໂຫຼດ Growser ດ້ວຍລະຫັດ QR ນີ້ແລ້ວເຂົ້າສູ່ລະບົບຫາບັນຊີ Growser ຂອງທ່ານ.</translation>
@@ -11719,7 +11719,7 @@
 <translation id="1162630940779651724">ເພື່ອສົ່ງແຖບນີ້ໄປຫາອຸປະກອນອື່ນ, ໃຫ້ເຂົ້າສູ່ລະບົບຫາ Growser ຢູ່ທັງສອງອຸປະກອນ</translation>
 <translation id="5388608738812110907">ເພື່ອສົ່ງແຖບນີ້ໄປຫາອຸປະກອນອື່ນ, ໃຫ້ເຂົ້າສູ່ລະບົບຫາ Growser ຢູ່ບ່ອນນັ້ນ</translation>
 <translation id="4007679133627124999">ເພື່ອສົ່ງລິ້ງລະຫວ່າງອຸປະກອນ, ໃຫ້ກວດສອບວ່າອຸປະກອນທັງສອງເຂົ້າສູ່ລະບົບບັນຊີ Growser ດຽວກັນ.</translation>
-<translation id="2377999415409519333">ເພື່ອສົ່ງລິ້ງ, ກະລຸນາຢັ້ງຢືນວ່າແມ່ນທ່ານ. ທ່ານສາມາດສົ່ງລິ້ງໄດ້ເມື່ອທ່ານເຂົ້າສູ່ລະບົບບັນຊີ Brave ດຽວກັນຢູ່ອຸປະກອນທັງສອງເຄື່ອງ.</translation>
+<translation id="2377999415409519333">ເພື່ອສົ່ງລິ້ງ, ກະລຸນາຢັ້ງຢືນວ່າແມ່ນທ່ານ. ທ່ານສາມາດສົ່ງລິ້ງໄດ້ເມື່ອທ່ານເຂົ້າສູ່ລະບົບບັນຊີ Growser ດຽວກັນຢູ່ອຸປະກອນທັງສອງເຄື່ອງ.</translation>
 <translation id="4986706507552097681">ທ່ານສາມາດເລືອກສິ່ງທີ່ຕ້ອງການຊິ້ງໄດ້ສະເໝີໃນການຕັ້ງຄ່າ. Growser ອາດປັບແຕ່ງການຊອກຫາ ແລະ ບໍລິການອື່ນໆໃຫ້ເປັນແບບສ່ວນຕົວໂດຍອ້າງອີງໃສ່ປະຫວັດຂອງທ່ານ.</translation>
 <translation id="8002662358897231821">ລົງຊື່ເຂົ້າໃຊ້ເພື່ອ​ເອົາບຸກມາກ໌ສ, ປະຫວັດ, ລະ​ຫັດ​ຜ່ານ ແລະ ການຕັ້ງຄ່າອື່ນຂອງທ່ານ ຢູ່ໃນອຸປະກອນຂອງທ່ານທັງໝົດ. ທ່ານ​ຍັງ​ຈະ​ຖືກລົງຊື່ເຂົ້າ​ຫາ​ການ​ບໍ​ລິ​ການ Growser ຂອງ​ທ່ານ​ໂດຍ​ອັດ​ຕະ​ໂນ​ມັດ.</translation>
 <translation id="3128296144259620504">ຊອບແວທົດສອບອັດຕະໂນມັດກຳລັງຄວບຄຸມ Growser ຢູ່</translation>

@@ -186,7 +186,7 @@
 <translation id="1130116586186908674">分割ビューを作成</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - <ph name="GROUP_NAME"/> グループの一部</translation>
 <translation id="1130676589211693127">右のバッテリー残量は <ph name="PERCENTAGE"/>% です。</translation>
-<translation id="1412403201555978627">タブを共有すると、そのページのコンテンツ、メディア、URL が Brave に送信され、安全性の確認が行われることがあります。</translation>
+<translation id="1412403201555978627">タブを共有すると、そのページのコンテンツ、メディア、URL が Growser に送信され、安全性の確認が行われることがあります。</translation>
 <translation id="1133418583142946603">現在のタブを追加</translation>
 <translation id="1133751489735776037">マウスをトリプル クリックする</translation>
 <translation id="1136712381129578788">PIN の入力間違いが許容回数を超えたため、セキュリティ キーがロックされています。ロックを解除するには、セキュリティ キーをいったん取り外し、もう一度挿入してください。</translation>
@@ -376,7 +376,7 @@
 <translation id="126768002343224824">16 倍</translation>
 <translation id="1272079795634619415">停止</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>対応リンク<ph name="END_LINK"/>を開く</translation>
-<translation id="7823526956728613125">検索サービスと Brave Workspace アプリ（Brave ドライブなど）の接続を管理します</translation>
+<translation id="7823526956728613125">検索サービスと Growser Workspace アプリ（Growser ドライブなど）の接続を管理します</translation>
 <translation id="1274997165432133392">Cookie と他のサイトデータ</translation>
 <translation id="1275936815032730048">ランチャー+右矢印</translation>
 <translation id="1275963833368139883">閲覧履歴を検索すると、ページのコンテンツに基づく回答と検索結果が表示され、探している情報を簡単に見つけられます</translation>
@@ -653,7 +653,7 @@
 <translation id="1508931164824684991">サイトが JavaScript を使用できるようにする</translation>
 <translation id="1509163368529404530">グループを復元(&amp;R)</translation>
 <translation id="1509281256533087115">あらゆる <ph name="DEVICE_NAME_AND_VENDOR"/> からの USB 経由のアクセス</translation>
-<translation id="2825615584808054779">Gemini との会話や Brave Workspace のデータが確認されたり、生成 AI モデルの改善に使用されたりすることはありません。Gemini は AI であり、不正確な情報を表示することがあります。</translation>
+<translation id="2825615584808054779">Gemini との会話や Growser Workspace のデータが確認されたり、生成 AI モデルの改善に使用されたりすることはありません。Gemini は AI であり、不正確な情報を表示することがあります。</translation>
 <translation id="1510238584712386396">ランチャー</translation>
 <translation id="1510341833810331442">サイトはデバイスにデータを保存できません</translation>
 <translation id="1510882959204224895">ウィンドウで開く</translation>
@@ -747,7 +747,7 @@
 <translation id="1581962803218266616">Finder で表示</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>] を削除</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> はローカルで処理され、オフラインで使用できます</translation>
-<translation id="491276955533054201">最初にこのデバイスで Brave の自動ブラウジングをオンにしてください</translation>
+<translation id="491276955533054201">最初にこのデバイスで Growser の自動ブラウジングをオンにしてください</translation>
 <translation id="1587275751631642843">JavaScript コンソール(&amp;J)</translation>
 <translation id="1588438908519853928">ノーマル</translation>
 <translation id="1588772269240419305">ロゴと名前の更新内容を確認</translation>
@@ -1148,7 +1148,7 @@
 <translation id="1892341345406963517"><ph name="PARENT_NAME"/> さん</translation>
 <translation id="1892453608039100484">1. 下の <ph name="BUTTON_LABEL"/> をクリックしますWindows の設定で [<ph name="BUTTON_2"/>] をクリックします</translation>
 <translation id="1895658205118569222">シャットダウン</translation>
-<translation id="1189523243806849236">チャットはレビューされ、Brave AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">チャットはレビューされ、Growser AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">安全なパスワードを使用</translation>
 <translation id="1897860317037652061">スキャン失敗</translation>
 <translation id="1898804291554630487">このページについて質問する</translation>
@@ -1157,7 +1157,7 @@
 <translation id="1901213235765457754">このアプリを更新するよう管理者に依頼してください</translation>
 <translation id="1901303067676059328">すべて選択(&amp;A)</translation>
 <translation id="1901760057081700494">タイムゾーンは現在 <ph name="TIME_ZONE_ENTRY"/> に設定されています。タイムゾーンを自動的に更新するには、<ph name="BEGIN_LINK"/>システムの位置情報へのアクセスをオンにしてください<ph name="END_LINK"/>。</translation>
-<translation id="3930197956137872864">自宅の住所は、関連性の高い検索結果や Brave マップの経路の表示など、Brave サービス全体の利便性の向上に役立ちます。住所は <ph name="BEGIN_LINK"/>Brave アカウント<ph name="END_LINK"/>（<ph name="USERNAME"/>）で編集、削除できます。</translation>
+<translation id="3930197956137872864">自宅の住所は、関連性の高い検索結果や Growser マップの経路の表示など、Growser サービス全体の利便性の向上に役立ちます。住所は <ph name="BEGIN_LINK"/>Growser アカウント<ph name="END_LINK"/>（<ph name="USERNAME"/>）で編集、削除できます。</translation>
 <translation id="6893464351226208429">アクセスした URL は Growser アカウントに保存されます</translation>
 <translation id="190530012637606145">非公開のイントラネットを含む、すべての安全でない接続について警告します</translation>
 <translation id="1906181697255754968">通常、作業内容を自動的に保存したりするため、サイトがデバイスのファイルやフォルダにアクセスする場合があります</translation>
@@ -1530,7 +1530,7 @@
 <translation id="2198625180564913276">プロファイルを追加しています。この処理には数分かかることがあります。</translation>
 <translation id="2198712775285959645">編集</translation>
 <translation id="2199298570273670671">エラー</translation>
-<translation id="2798272130984183944">デバイス上で直接稼働する AI モデルを Brave で使用するかどうかを選択します</translation>
+<translation id="2798272130984183944">デバイス上で直接稼働する AI モデルを Growser で使用するかどうかを選択します</translation>
 <translation id="2200094388063410062">メール</translation>
 <translation id="2200781749203116929">ChromeOS のシステムログ</translation>
 <translation id="2202391868799679245">キーボード ショートカットをオンにする</translation>
@@ -1610,7 +1610,7 @@
 <translation id="225716114209817872">最大</translation>
 <translation id="5642482119439119644">他のデバイスと同じタブを使用するには、本人確認を行ってください。同期は [設定] でいつでも停止できます。Growser では、履歴に基づいて検索やその他のサービスをカスタマイズすることがあります。</translation>
 <translation id="22614517036276112">このドキュメントまたはお使いのデバイスは、組織のセキュリティ ポリシーの一部に違反しています。修正が必要な箇所を管理者にご確認ください。</translation>
-<translation id="1829264724820495616">職場の住所は、関連性の高い検索結果や Brave マップの経路の表示など、Brave サービス全体の利便性の向上に役立ちます。住所は <ph name="BEGIN_LINK"/>Brave アカウント<ph name="END_LINK"/>（<ph name="USERNAME"/>）で編集、削除できます。</translation>
+<translation id="1829264724820495616">職場の住所は、関連性の高い検索結果や Growser マップの経路の表示など、Growser サービス全体の利便性の向上に役立ちます。住所は <ph name="BEGIN_LINK"/>Growser アカウント<ph name="END_LINK"/>（<ph name="USERNAME"/>）で編集、削除できます。</translation>
 <translation id="2262477216570151239">リピートまでの時間</translation>
 <translation id="2263371730707937087">画面のリフレッシュ レート</translation>
 <translation id="7829329302663082098">お送りいただいたフィードバックは、Growser Cast の改善に役立てさせていただきます。Growser Cast に関する問題のトラブルシューティングについては、<ph name="BEGIN_LINK"/>ヘルプセンター<ph name="END_LINK"/>をご覧ください。</translation>
@@ -1753,7 +1753,7 @@
 <translation id="2373499590298659902">0　キーを使用してマウスボタンを長押しする</translation>
 <translation id="2373666622366160481">用紙に合わせる</translation>
 <translation id="2375406435414127095">スマートフォンに接続</translation>
-<translation id="6612559367203670996">Brave は、共有されたタブのコンテンツと URL を使用します。現在のタブが新しいチャットで共有されます。この設定はいつでも変更できます。</translation>
+<translation id="6612559367203670996">Growser は、共有されたタブのコンテンツと URL を使用します。現在のタブが新しいチャットで共有されます。この設定はいつでも変更できます。</translation>
 <translation id="2376056713414548745">読み上げ</translation>
 <translation id="2376122016044804363">クリップボードへのコピーの確認</translation>
 <translation id="2377667304966270281">ハードの障害数</translation>
@@ -3318,7 +3318,7 @@
 <translation id="3569614820047645079">マイドライブ内のファイルは Chromebook と自動的に同期されるので、インターネット接続がなくてもアクセスできます。</translation>
 <translation id="3569617221227793022">タイムゾーンは現在 <ph name="TIME_ZONE_ENTRY"/> に設定されています。この設定は管理者によって管理されています。</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> は次のファイルとフォルダを表示できます</translation>
-<translation id="4062501938325597704">タスクの実行中に Gemini が使用するページのコンテンツと URL は、Brave と共有され、安全性の確認が行われることがあります。</translation>
+<translation id="4062501938325597704">タスクの実行中に Gemini が使用するページのコンテンツと URL は、Growser と共有され、安全性の確認が行われることがあります。</translation>
 <translation id="3571734092741541777">設定</translation>
 <translation id="3575121482199441727">このサイトを許可</translation>
 <translation id="3575224072358507281">Measurement Lab のプライバシー ポリシー（measurementlab.net/privacy）に沿って、Measurement Lab の IP アドレスとネットワークの測定結果を収集する</translation>
@@ -3506,7 +3506,7 @@
 <translation id="3708295717182051206">字幕</translation>
 <translation id="3708684582558000260">閉じたサイトにデータの送受信の完了を許可しない</translation>
 <translation id="3709244229496787112">ダウンロードの完了前に、ブラウザがシャットダウンされました。</translation>
-<translation id="3710438437470197252">Brave ドライブで詳細を見る</translation>
+<translation id="3710438437470197252">Growser ドライブで詳細を見る</translation>
 <translation id="3710501561113687889">続行すると、<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> からこのサイトに <ph name="FIELDS_STRING"/> が共有されます。</translation>
 <translation id="3711931198657368127">貼り付けて <ph name="URL"/> に移動</translation>
 <translation id="3711945201266135623">プリント サーバーで <ph name="NUM_PRINTERS"/> 個のプリンタが見つかりました</translation>
@@ -4996,7 +4996,7 @@
 <translation id="485480310608090163">その他の設定と権限</translation>
 <translation id="4857304314344645169">問題がある場合は詳しい説明を確認できます</translation>
 <translation id="1913048435257025864">前のページについて Growser に質問する: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">より関連性の高い回答を提供するため、現在のタブのコンテンツと URL が Brave と共有されます。閲覧中にタブを追加または削除できます。</translation>
+<translation id="228735844055480091">より関連性の高い回答を提供するため、現在のタブのコンテンツと URL が Growser と共有されます。閲覧中にタブを追加または削除できます。</translation>
 <translation id="485806788160414322">メディアを再生または一時停止する</translation>
 <translation id="4858913220355269194">フリッツ</translation>
 <translation id="4860012864737017059">最近使用したタブ</translation>
@@ -5062,7 +5062,7 @@
 <translation id="4895799941222633551">ショートカットを作成(&amp;S)...</translation>
 <translation id="4898913189644355814">サイトが、あなたの使用言語や購入しようとしている商品を保存する場合があります。この情報は、該当のサイトとそのサブドメインで使用されます。</translation>
 <translation id="4899052647152077033">色を反転</translation>
-<translation id="4899813415889597597">Brave ドライブ アカウントに接続できませんでした</translation>
+<translation id="4899813415889597597">Growser ドライブ アカウントに接続できませんでした</translation>
 <translation id="490031510406860025">このサイトでは許可されていません</translation>
 <translation id="490051679772058907"><ph name="REFRESH_RATE"/> Hz - インターレース</translation>
 <translation id="4900652253009739885">「選択」に割り当てられているスイッチが 1 つしかないため、削除できません。<ph name="RESPONSE"/>には、いずれかのキーを押してください。</translation>
@@ -5331,7 +5331,7 @@
 <translation id="5112577000029535889">デベロッパー ツール(&amp;D)</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 個のファイルを移動しました}other{{NUM_OF_FILES} 個のファイルを移動しました}}</translation>
 <translation id="511313294362309725">ファスト ペアリングをオンにする</translation>
-<translation id="6409962091529734959">Brave の自動ブラウジングの詳細</translation>
+<translation id="6409962091529734959">Growser の自動ブラウジングの詳細</translation>
 <translation id="51143538739122961">セキュリティ キーを挿入し、タップしてください</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">名前を付けてオーディオを保存(&amp;V)...</translation>
@@ -5374,7 +5374,7 @@
 <translation id="5146235736676876345">自分で設定</translation>
 <translation id="5146896637028965135">システム音声</translation>
 <translation id="5147113439721488265">おすすめ</translation>
-<translation id="5897101208018277582">リンクを送信するには、本人確認を行ってください。両方のデバイスで同じ Brave アカウントにログインしていれば、リンクを送信できます。</translation>
+<translation id="5897101208018277582">リンクを送信するには、本人確認を行ってください。両方のデバイスで同じ Growser アカウントにログインしていれば、リンクを送信できます。</translation>
 <translation id="5148285448107770349">パスワードは 8 文字以上で指定してください</translation>
 <translation id="5149602533174716626">動画フレームをコピー(&amp;Y)</translation>
 <translation id="5150254825601720210">Netscape 証明書 SSL サーバー名</translation>
@@ -6059,7 +6059,7 @@
 <translation id="5713158217420111469"><ph name="DEVICE"/> に接続しました</translation>
 <translation id="5713988532993992900">反転</translation>
 <translation id="5714100381896040477">画面上の動きを制限する</translation>
-<translation id="8277434106940718633">Gemini との会話や Brave Workspace のデータが確認されたり、生成 AI モデルの改善に使用されたりすることはありません。Gemini は AI であり、不正確な情報を表示することがあります。一部のユーザーに適していないコンテンツがあります。</translation>
+<translation id="8277434106940718633">Gemini との会話や Growser Workspace のデータが確認されたり、生成 AI モデルの改善に使用されたりすることはありません。Gemini は AI であり、不正確な情報を表示することがあります。一部のユーザーに適していないコンテンツがあります。</translation>
 <translation id="5719854774000914513">サイトが HID デバイスへの接続を要求できるようにする</translation>
 <translation id="5720729194423017301">サイトと検索エンジンのショートカット</translation>
 <translation id="572155275267014074">Android 設定</translation>
@@ -6994,7 +6994,7 @@
 <translation id="6464825623202322042">このデバイス</translation>
 <translation id="6465841119675156448">インターネットを使用しない</translation>
 <translation id="6466258437571594570">通知を送信するかどうかをサイトが確認できないようにします</translation>
-<translation id="1673835407889847350">パスワードを追加し、Brave アカウントを使用するすべてのデバイスで利用できるようにするには、本人確認を行ってください</translation>
+<translation id="1673835407889847350">パスワードを追加し、Growser アカウントを使用するすべてのデバイスで利用できるようにするには、本人確認を行ってください</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> をスキャン</translation>
 <translation id="6467304607960172345">動画の全画面表示を最適化</translation>
 <translation id="6467377768028664108"><ph name="DEVICE_TYPE"/> で次の操作を実行できます。</translation>
@@ -7007,7 +7007,7 @@
 <translation id="6470823736074966819">通知をミュートする</translation>
 <translation id="6472893788822429178">ホーム ボタンを表示する</translation>
 <translation id="6473315466413288899">オプションを選択</translation>
-<translation id="6199773995438617867">Brave カレンダーで詳細を見る</translation>
+<translation id="6199773995438617867">Growser カレンダーで詳細を見る</translation>
 <translation id="6474401088838630457">Gemini にさらに質問する</translation>
 <translation id="6474498546677193336">このフォルダを使用しているアプリケーションがあるため、共有を停止できませんでした。次回 Linux をシャットダウンするときに、フォルダの共有を停止します。</translation>
 <translation id="6474884162850599008">Growser ドライブ アカウントを切断する</translation>
@@ -7188,7 +7188,7 @@
 <translation id="6613231539539868591">永続データ</translation>
 <translation id="6613267708691765962">マルウェアをスキャンしています...</translation>
 <translation id="6615455863669487791">表示</translation>
-<translation id="5146630705831894319">他の言語のウェブサイトや PDF で Brave 翻訳を使用するか尋ねる</translation>
+<translation id="5146630705831894319">他の言語のウェブサイトや PDF で Growser 翻訳を使用するか尋ねる</translation>
 <translation id="6618013221808317456">サイトで JavaScript 最適化の使用を許可しない</translation>
 <translation id="6618154741503063152">アップロードできません。添付ファイルは許可されていません。</translation>
 <translation id="6619058681307408113">ラインプリンタ デーモン（LPD）</translation>
@@ -7542,7 +7542,7 @@
 <translation id="6871644448911473373">OCSP レスポンダ: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">言語...</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Brave 翻訳をオンにすると、指定した言語でサイトや PDF を翻訳するかを確認するメッセージが表示されます。また、サイトを自動的に翻訳することもできます。</translation>
+<translation id="5189979109199910058">Growser 翻訳をオンにすると、指定した言語でサイトや PDF を翻訳するかを確認するメッセージが表示されます。また、サイトを自動的に翻訳することもできます。</translation>
 <translation id="6873571253135628430">サイトの権限を変更する</translation>
 <translation id="6874986444867497677">インストールを完了できませんでした。もう一度お試しいただくか、このウィンドウを閉じてください。</translation>
 <translation id="6876155724392614295">自転車</translation>
@@ -7830,7 +7830,7 @@
 <translation id="710224247908684995">セーフ ブラウジングは拡張機能によってオフにされています</translation>
 <translation id="7102832101143475489">リクエストがタイムアウトになりました</translation>
 <translation id="7103944802169726298">PC とキャスト デバイスが同じ Wi-Fi ネットワークに接続されている</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>。Brave メンバーシップ</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>。Growser メンバーシップ</translation>
 <translation id="7107609441453408294">すべてのスピーカーで同じオーディオを再生する</translation>
 <translation id="7108338896283013870">非表示</translation>
 <translation id="7108419148561505648">保存する前に 1 つ以上の項目に入力してください</translation>
@@ -8201,7 +8201,7 @@
 <translation id="7395774987022469191">画面全体</translation>
 <translation id="7396017167185131589">共有フォルダがここに表示されます</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> はシステム起動時に開始され、他の <ph name="PRODUCT_NAME"/> ウィンドウをすべて閉じてもバックグラウンドで動作し続けます。</translation>
-<translation id="8572914900293297191">チャットはレビューされ、Brave AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。一部のユーザーには適していない可能性のあるコンテンツを提供することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">チャットはレビューされ、Growser AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。一部のユーザーには適していない可能性のあるコンテンツを提供することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">同期をカスタマイズする</translation>
 <translation id="7399616692258236448">許可したサイト以外の位置情報リクエストが自動的にブロックされます</translation>
 <translation id="7399802613464275309">安全チェック</translation>
@@ -8734,7 +8734,7 @@
 <translation id="7807711621188256451"><ph name="HOST"/> によるカメラへのアクセスを常に許可する</translation>
 <translation id="7810202088502699111">このページのポップアップはブロックされました。</translation>
 <translation id="7810367892333449285">エントリは「<ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ address<ph name="LPA_2"/>$<ph name="LPA_3"/>optional matching id<ph name="LPA_4"/>」という形式にする必要があります</translation>
-<translation id="5014491767627896944">Brave は、Brave オープンソース プロジェクトやその他の<ph name="BEGIN_HIGHLIGHT"/>オープンソース<ph name="END_HIGHLIGHT"/> ソフトウェアによって実現しました。</translation>
+<translation id="5014491767627896944">Growser は、Growser オープンソース プロジェクトやその他の<ph name="BEGIN_HIGHLIGHT"/>オープンソース<ph name="END_HIGHLIGHT"/> ソフトウェアによって実現しました。</translation>
 <translation id="7811263553491007091">もう一度お試しいただくか、以前に生成された下のテーマから選択してください。</translation>
 <translation id="7811926937048662341">ここを右クリックすると [タブを縦方向に表示] を選択できます</translation>
 <translation id="7811986034759500329">システム設定で設定</translation>
@@ -8757,7 +8757,7 @@
 <translation id="7826039927887234077">最近の AI テーマ <ph name="INDEX"/>/<ph name="SUBJECT"/>、ムード: <ph name="MOOD"/>。</translation>
 <translation id="7826174860695147464">従来のブラウザのサポート（LBS） - 内部</translation>
 <translation id="7826838152281937785">下のビューを閉じる</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Brave 利用規約<ph name="END_LINK_TERMS"/>と <ph name="BEGIN_LINK_PRIVACY"/>Gemini アプリのプライバシーに関するお知らせ<ph name="END_LINK_PRIVACY"/>が適用されます。</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Growser 利用規約<ph name="END_LINK_TERMS"/>と <ph name="BEGIN_LINK_PRIVACY"/>Gemini アプリのプライバシーに関するお知らせ<ph name="END_LINK_PRIVACY"/>が適用されます。</translation>
 <translation id="7828642077514646543">エラー: 証明書をデコードできません</translation>
 <translation id="7830276128493844263">システム設定で位置情報がオフになっています</translation>
 <translation id="7830833461614351956"><ph name="NUM_OF_FILES"/> 個のファイルを <ph name="CLOUD_PROVIDER"/> にコピーして開きますか？</translation>
@@ -9628,7 +9628,7 @@
 <translation id="850399339579925930">辞書</translation>
 <translation id="850561044295157831">文書作成サポートの詳細</translation>
 <translation id="8505669004895429027">少量の節約</translation>
-<translation id="869548515244800202">Brave メンバーシップ</translation>
+<translation id="869548515244800202">Growser メンバーシップ</translation>
 <translation id="8507052544157927817">下線のスタイル</translation>
 <translation id="8507227974644337342">画面の解像度</translation>
 <translation id="8507443886219296894">このサイトでは非表示にする</translation>
@@ -9768,7 +9768,7 @@
 <translation id="8619803522055190423">ドロップ シャドウ</translation>
 <translation id="8620206585293032550">アクティブでないタブのデザイン</translation>
 <translation id="8621979332865976405">画面全体の共有</translation>
-<translation id="6089523089512126744">Brave 検索の AI モードと接続されたアプリ</translation>
+<translation id="6089523089512126744">Growser 検索の AI モードと接続されたアプリ</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ChromeOS デバイスとコンポーネントのシリアル番号を読み取る</translation>
 <translation id="862542460444371744">拡張機能(&amp;E)</translation>
@@ -11318,17 +11318,17 @@
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>、Gemini in Growser</translation>
 <translation id="1975450474853317621">Growser ブラウザで開く</translation>
 <translation id="8516824290867275572">お使いのアカウントでは Gemini in Growser にアクセスできません</translation>
-<translation id="1649234713894562345">Brave は、Brave オープンソース プロジェクトやその他の<ph name="BEGIN_HIGHLIGHT"/>オープンソース<ph name="END_HIGHLIGHT"/> ソフトウェアによって実現しました。</translation>
+<translation id="1649234713894562345">Growser は、Growser オープンソース プロジェクトやその他の<ph name="BEGIN_HIGHLIGHT"/>オープンソース<ph name="END_HIGHLIGHT"/> ソフトウェアによって実現しました。</translation>
 <translation id="870536819717176711">現在のタブを Gemini と共有すると、タブのコンテンツ全体、メディア、URL が Growser に送信されます。</translation>
-<translation id="1130866111814048607">タブを共有すると、そのページのコンテンツ、メディア、URL が Brave に送信され、安全性の確認が行われることがあります。</translation>
-<translation id="7656790264713095385">最初にこのデバイスで Brave の自動ブラウジングをオンにしてください</translation>
+<translation id="1130866111814048607">タブを共有すると、そのページのコンテンツ、メディア、URL が Growser に送信され、安全性の確認が行われることがあります。</translation>
+<translation id="7656790264713095385">最初にこのデバイスで Growser の自動ブラウジングをオンにしてください</translation>
 <translation id="8572003230388132401">Gemini Spark は、このデバイスで Growser の自動ブラウジングを使用してサイトを操作し、ユーザーに代わってタスクを完了できます。<ph name="LINK_BEGIN"/>詳細<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark は、デバイスが起動していて Growser が実行されている場合にのみ、このデバイスで自動ブラウジングを使用できます。</translation>
 <translation id="1982892581799327835">Gemini Spark エージェントにアクセスできるすべてのユーザーが Growser ブラウザを操作できます。</translation>
 <translation id="6689939585896001516">Growser のブラウジング サポート</translation>
 <translation id="640233545778658570">Gemini in Growser が自動でブラウジングして、タブ上の作業や指定されたタスクを行います。<ph name="LINK_BEGIN"/>詳細<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Brave の自動ブラウジングの詳細</translation>
-<translation id="3570112771874223231">タスクの実行中に Gemini が使用するページのコンテンツと URL は、Brave と共有され、安全性の確認が行われることがあります。</translation>
+<translation id="2740842679402949230">Growser の自動ブラウジングの詳細</translation>
+<translation id="3570112771874223231">タスクの実行中に Gemini が使用するページのコンテンツと URL は、Growser と共有され、安全性の確認が行われることがあります。</translation>
 <translation id="2314508080153323869">Gemini in Growser</translation>
 <translation id="1910632359330857071">ブラウジング中に Gemini in Growser と話して、質問の回答や重要なポイントなどを確認できます</translation>
 <translation id="2483218699324586641"><ph name="FOCUS_TOGGLE_HOTKEY"/> キーで Gemini in Growser を開く</translation>
@@ -11345,8 +11345,8 @@
 <translation id="3187556136478864255"><ph name="BEGIN_LINK"/>Growser Home アプリ<ph name="END_LINK"/>にキャスト デバイスは表示されましたか？</translation>
 <translation id="2984923316661218534">Growser パスワード マネージャーを使用して、このデバイスでパスキーを設定できます</translation>
 <translation id="2364302372598204515">これは Growser アカウントではありません。Growser に保存したアイテムを他のデバイスで使用することはできません。</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>。Brave メンバーシップ</translation>
-<translation id="850632091665381275">Brave メンバーシップ</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>。Growser メンバーシップ</translation>
+<translation id="850632091665381275">Growser メンバーシップ</translation>
 <translation id="6710172959248731469">Growser サービスの設定</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 件の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。保存時に重複する項目は整理されます。}other{{ITEM_COUNT} 件の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。保存時に重複する項目は整理されます。}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 件のパスワードがこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。保存時に重複する項目は整理されます。}other{{PASSWORD_COUNT} 件のパスワードがこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。保存時に重複する項目は整理されます。}}</translation>
@@ -11360,8 +11360,8 @@
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 件のブックマークとその他の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}other{{BOOKMARK_COUNT} 件のブックマークとその他の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、Growser アカウントに保存してください。}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 件の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、<ph name="BEGIN_LINK"/>Growser アカウントに保存<ph name="END_LINK"/>してください。}other{{ITEM_COUNT} 件の項目がこのデバイスのみに保存されています。他のデバイスで使用するには、<ph name="BEGIN_LINK"/>Growser アカウントに保存<ph name="END_LINK"/>してください。}}</translation>
 <translation id="8993421601514768334">Growser アカウントを使用するか、新しいアカウントを作成します</translation>
-<translation id="1896353439080510710">チャットはレビューされ、Brave AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">チャットはレビューされ、Brave AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。一部のユーザーには適していない可能性のあるコンテンツを提供することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">チャットはレビューされ、Growser AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">チャットはレビューされ、Growser AI の改善に使用されます。Gemini は AI であり、不正確な情報を表示することがあります。一部のユーザーには適していない可能性のあるコンテンツを提供することがあります。ユーザーは、位置情報などの<ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>アクティビティを管理<ph name="END_LINK_MANAGE_ACTIVITY"/>できます。<ph name="BEGIN_LINK_LEARN_MORE"/>ユーザーが選択できる設定の詳細<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{この拡張機能は Growser アカウントに保存されていますが、このデバイスにのみ保存されているデータは削除される可能性があります}other{これらの拡張機能は Growser アカウントに保存されていますが、このデバイスにのみ保存されているデータは削除される可能性があります}}</translation>
 <translation id="3523789730715594198">同期は [設定] でいつでも停止できます。Growser では、履歴に基づいて検索やその他のサービスをパーソナライズすることがあります。</translation>
 <translation id="8231595707224857577">Growser アカウントでのタブの保存は組織によって無効にされています</translation>
@@ -11399,7 +11399,7 @@
 <translation id="1024884937839269099">ログイン中は Growser アカウントに<ph name="BEGIN_LINK_GOOGLE"/>その他のアクティビティ<ph name="END_LINK_GOOGLE"/>が保存される可能性があります。これらのデータはいつでも削除できます。</translation>
 <translation id="6533315466883598769">Growser 翻訳を使用する</translation>
 <translation id="6010651352520077187">Growser 翻訳をオンにすると、指定した言語でサイトを翻訳するかを確認するメッセージが表示されます。また、サイトを自動的に翻訳することもできます。</translation>
-<translation id="6873499199714317035">Brave 翻訳をオンにすると、指定した言語でサイトや PDF を翻訳するかを確認するメッセージが表示されます。また、サイトを自動的に翻訳することもできます。</translation>
+<translation id="6873499199714317035">Growser 翻訳をオンにすると、指定した言語でサイトや PDF を翻訳するかを確認するメッセージが表示されます。また、サイトを自動的に翻訳することもできます。</translation>
 <translation id="5911030830365207728">Growser 翻訳</translation>
 <translation id="7458168200501453431">Growser 検索と同じスペルチェックを使用します。ブラウザに入力したテキストは Growser に送信されます。</translation>
 <translation id="8972513834460200407">ファイアウォールが Growser のサーバーからのダウンロードをブロックしていないかどうかをネットワーク管理者に確認してください。</translation>
@@ -11445,7 +11445,7 @@
 <translation id="3293574207873361017">Growser アカウントの管理</translation>
 <translation id="6901130673208235020">閲覧履歴を検索すると、過去の検索、最も一致したページのコンテンツ、生成モデルによる出力が Growser に送信されます</translation>
 <translation id="3178434360326457238">サイトを閲覧すると、そのページのコンテンツが暗号化されてデバイスに保存されます（この処理は Growser のパフォーマンスに影響する可能性があります）</translation>
-<translation id="8622145666696249878">Brave 検索の AI モードと接続されたアプリ</translation>
+<translation id="8622145666696249878">Growser 検索の AI モードと接続されたアプリ</translation>
 <translation id="2760679829473121490">Growser の機能やヒントに関するシステム通知を表示する</translation>
 <translation id="6713316345564743478">Growser アカウントにログインし、不正使用されたパスワードを確認してください</translation>
 <translation id="1342886103232377846">Growser パスワード マネージャーに移動して、不正使用されたパスワードを確認してください。</translation>
@@ -11507,7 +11507,7 @@
 <translation id="1095879482467973146">ウェブ上の Growser パスワード マネージャー</translation>
 <translation id="1368798504801939187">Growser や Android を使用していないときでも、<ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> にログインしてパスワードを確認できます</translation>
 <translation id="829923460755755423">Growser パスワード マネージャーへのショートカットを追加できます</translation>
-<translation id="7244677273667272006">パスワードを追加し、Brave アカウントを使用するすべてのデバイスで利用できるようにするには、本人確認を行ってください</translation>
+<translation id="7244677273667272006">パスワードを追加し、Growser アカウントを使用するすべてのデバイスで利用できるようにするには、本人確認を行ってください</translation>
 <translation id="8189517459248805166"><ph name="WEBSITE"/> のパスワードはこのデバイスと Growser アカウントに保存されています。どちらのパスワードを削除しますか？</translation>
 <translation id="9101265711096405922">Growser アカウントから削除</translation>
 <translation id="927421426408921503">保存したパスワードを Growser アカウントに移動しますか？</translation>
@@ -11618,7 +11618,7 @@
         <ph name="BREAK"/>
         <ph name="BREAK"/>
         カードメニューから設定を管理することや、[Growser をカスタマイズ] でその他のオプションを見ることができます。</translation>
-<translation id="6474021817475285003">Brave カレンダーで詳細を見る</translation>
+<translation id="6474021817475285003">Growser カレンダーで詳細を見る</translation>
 <translation id="9066394310994446814">このアイテムは、Growser サービスでの過去のアクティビティに基づいて表示されています。自分のデータの確認や削除、設定の変更は <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> で行うことができます。
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11649,7 +11649,7 @@
 <translation id="6868193750403948178">Growser をカスタマイズ</translation>
 <translation id="5009064339929592579">Growser アカウントのフォルダに保存しますか？</translation>
 <translation id="7400528739136719497">現在、一部の Growser 音声が利用できない可能性があります</translation>
-<translation id="4857677595331912231">より関連性の高い回答を提供するため、現在のタブのコンテンツと URL が Brave と共有されます。閲覧中にタブを追加または削除できます。</translation>
+<translation id="4857677595331912231">より関連性の高い回答を提供するため、現在のタブのコンテンツと URL が Growser と共有されます。閲覧中にタブを追加または削除できます。</translation>
 <translation id="5639212636098910819">Growser に留まる</translation>
 <translation id="3252169590975855820">Growser パスワード マネージャーからアクセスできます</translation>
 <translation id="3843323136102787632">この QR コードを使用して Growser をダウンロードし、Growser アカウントにログインしてください。</translation>
@@ -11696,7 +11696,7 @@
 <translation id="1162630940779651724">このタブを別のデバイスに送信するには、両方のデバイスで Growser にログインしてください</translation>
 <translation id="5388608738812110907">このタブを別のデバイスに送信するには、送信先のデバイスで Growser にログインしてください</translation>
 <translation id="4007679133627124999">デバイス間でリンクを送信するには、両方のデバイスで同じ Growser アカウントにログインしてください。</translation>
-<translation id="2377999415409519333">リンクを送信するには、本人確認を行ってください。両方のデバイスで同じ Brave アカウントにログインしていれば、リンクを送信できます。</translation>
+<translation id="2377999415409519333">リンクを送信するには、本人確認を行ってください。両方のデバイスで同じ Growser アカウントにログインしていれば、リンクを送信できます。</translation>
 <translation id="4986706507552097681">同期する項目はいつでも [設定] で選択できます。Growser では、履歴に基づいて検索やその他のサービスをカスタマイズすることがあります。</translation>
 <translation id="8002662358897231821">ブックマーク、履歴、パスワードなどの設定をすべてのデバイスで使用するにはログインしてください。ログインすると、利用している Growser サービスにも自動的にログインすることになります。</translation>
 <translation id="3128296144259620504">Growser は自動テスト ソフトウェアによって制御されています</translation>

@@ -186,7 +186,7 @@
 <translation id="1130116586186908674">Бөлінген көрініс жасау</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/>: <ph name="GROUP_NAME"/> тобына кіреді</translation>
 <translation id="1130676589211693127">Оқ құлақаспап батареясының деңгейі: <ph name="PERCENTAGE"/>%</translation>
-<translation id="1412403201555978627">Қойындыларды бөліскен кезде, олардың бет контенті, мультимедиасы мен URL мекенжайлары Brave-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
+<translation id="1412403201555978627">Қойындыларды бөліскен кезде, олардың бет контенті, мультимедиасы мен URL мекенжайлары Growser-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
 <translation id="1133418583142946603">Ағымдағы қойындыны қосу</translation>
 <translation id="1133751489735776037">Тінтуірді үш рет басыңыз.</translation>
 <translation id="1136712381129578788">PIN коды бірнеше рет қате енгізілгендіктен, қауіпсіздік кілті құлыпталған. Құлпын ашу үшін оны өшіріңіз де, қайта енгізіңіз.</translation>
@@ -376,7 +376,7 @@
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Тоқтату</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>Қолдау көрсету сілтемелерін<ph name="END_LINK"/> ашу</translation>
-<translation id="7823526956728613125">Search қызметтері мен Google Drive сияқты Brave Workspace қолданбалары арасындағы байланысты басқару</translation>
+<translation id="7823526956728613125">Search қызметтері мен Google Drive сияқты Growser Workspace қолданбалары арасындағы байланысты басқару</translation>
 <translation id="1274997165432133392">Cookie файлдары және басқа сайт деректері</translation>
 <translation id="1275936815032730048">іске қосу тақтасы пернесі + оң бағыт пернесі</translation>
 <translation id="1275963833368139883">Браузерді қолдану тарихынан іздесеңіз, жауаптар мен іздеу нәтижелері бет контентіне негізделеді. Осылайша жақсартылған нәтижелер көрсетіледі.</translation>
@@ -653,7 +653,7 @@
 <translation id="1508931164824684991">Сайттар JavaScript-ті пайдалана алады</translation>
 <translation id="1509163368529404530">&amp;Топты қалпына келтіру</translation>
 <translation id="1509281256533087115">USB арқылы <ph name="DEVICE_NAME_AND_VENDOR"/> кез келгеніне өту</translation>
-<translation id="2825615584808054779">Gemini-мен арадағы әңгімелеріңіз де, Brave Workspace-тегі деректеріңіз де тексерілмейді немесе жасампаз жасанды интеллект модельдерін жақсарту үшін пайдаланылмайды. Gemini – жасанды интеллект және ол қателесуі мүмкін.</translation>
+<translation id="2825615584808054779">Gemini-мен арадағы әңгімелеріңіз де, Growser Workspace-тегі деректеріңіз де тексерілмейді немесе жасампаз жасанды интеллект модельдерін жақсарту үшін пайдаланылмайды. Gemini – жасанды интеллект және ол қателесуі мүмкін.</translation>
 <translation id="1510238584712386396">Іске қосу құрылғысы</translation>
 <translation id="1510341833810331442">Сайттарға деректерді құрылғыда сақтауға рұқсат етілмейді.</translation>
 <translation id="1510882959204224895">Терезеде ашу</translation>
@@ -747,7 +747,7 @@
 <translation id="1581962803218266616">Іздеу құралында көрсету</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>] жою</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> тілі жергілікті түрде өңделеді және офлайн режимде жұмыс істейді.</translation>
-<translation id="491276955533054201">Алдымен осы құрылғыда Brave-ның автоматты түрде шолу функциясын қосыңыз</translation>
+<translation id="491276955533054201">Алдымен осы құрылғыда Growser-ның автоматты түрде шолу функциясын қосыңыз</translation>
 <translation id="1587275751631642843">&amp;JavaScript консолі</translation>
 <translation id="1588438908519853928">Қалыпты</translation>
 <translation id="1588772269240419305">Логотип пен атау өзгерістерін тексеру</translation>
@@ -1149,7 +1149,7 @@
 <translation id="1892453608039100484">1. Төмендегі <ph name="BUTTON_LABEL"/> түймесін басыңыз.
 2. Windows параметрлерінде <ph name="BUTTON_2"/> түймесін басыңыз.</translation>
 <translation id="1895658205118569222">Өшіру</translation>
-<translation id="1189523243806849236">Чаттар тексеріліп, Brave AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Чаттар тексеріліп, Growser AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Күрделі құпия сөз пайдалану керек пе?</translation>
 <translation id="1897860317037652061">Сканерлеу сәтсіз аяқталды</translation>
 <translation id="1898804291554630487">Осы бет жайында сұрақ қойыңыз</translation>
@@ -1158,7 +1158,7 @@
 <translation id="1901213235765457754">Әкімшіден осы қолданбаны жаңартуын сұраңыз</translation>
 <translation id="1901303067676059328">Барлығын &amp;таңдау</translation>
 <translation id="1901760057081700494">Уақыт белдеуі <ph name="TIME_ZONE_ENTRY"/> деп орнатылған. Уақыт белдеуі автоматты түрде жаңартылуы үшін, <ph name="BEGIN_LINK"/>жүйенің локация пайдалану рұқсатын қосыңыз<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Үй мекенжайы сәйкес іздеу нәтижелері және Brave Maps-тегі бағыттар сияқты Brave қызметтерінде көп тапсырма орындауға мүмкіндік береді. Мекенжайды <ph name="BEGIN_LINK"/>Brave аккаунтында <ph name="END_LINK"/> (<ph name="USERNAME"/>) өзгертуге немесе жоюға болады.</translation>
+<translation id="3930197956137872864">Үй мекенжайы сәйкес іздеу нәтижелері және Growser Maps-тегі бағыттар сияқты Growser қызметтерінде көп тапсырма орындауға мүмкіндік береді. Мекенжайды <ph name="BEGIN_LINK"/>Growser аккаунтында <ph name="END_LINK"/> (<ph name="USERNAME"/>) өзгертуге немесе жоюға болады.</translation>
 <translation id="6893464351226208429">Кірген URL мекенжайларыңыз Growser аккаунтыңызға сақталады.</translation>
 <translation id="190530012637606145">Жеке интранеттерді қоса алғанда, сізге барлық қауіпті байланыс туралы ескертеді.</translation>
 <translation id="1906181697255754968">Жұмысыңызды автоматты түрде сақтау сияқты функциялар үшін сайттар құрылғыңыздағы файлдар мен қалталарға кіреді.</translation>
@@ -1531,7 +1531,7 @@
 <translation id="2198625180564913276">Профиль қосылуда. Бұл бірнеше минутқа созылуы мүмкін.</translation>
 <translation id="2198712775285959645">Өзгерту</translation>
 <translation id="2199298570273670671">Қате</translation>
-<translation id="2798272130984183944">Brave браузері құрылғыңызда тікелей іске қосылатын жасанды интеллект модельдерін пайдаланатын-пайдаланбайтынын таңдаңыз.</translation>
+<translation id="2798272130984183944">Growser браузері құрылғыңызда тікелей іске қосылатын жасанды интеллект модельдерін пайдаланатын-пайдаланбайтынын таңдаңыз.</translation>
 <translation id="2200094388063410062">Электрондық пошта</translation>
 <translation id="2200781749203116929">ChromeOS жүйесінің журналдары</translation>
 <translation id="2202391868799679245">Пернелер тіркесімін қосу</translation>
@@ -1611,7 +1611,7 @@
 <translation id="225716114209817872">Максимум</translation>
 <translation id="5642482119439119644">Басқа құрылғылардағы қойындыларды алу үшін жеке басыңызды растаңыз. Синхрондауды кез келген уақытта параметрлерде тоқтатуға болады. Growser жүйесі Search пен басқа да қызметтерді тарихыңызға негіздеп жекелендіре алады.</translation>
 <translation id="22614517036276112">Бұл құжат немесе құрылғыңыз ұйымыңыздың кейбір қауіпсіздік саясаттарына сәйкес келмейді. Нені түзету керек екенін әкімшіңізден біліңіз.</translation>
-<translation id="1829264724820495616">Жұмыс мекенжайы сәйкес іздеу нәтижелері және Brave Maps-тегі бағыттар сияқты Brave қызметтерінде көп тапсырма орындауға мүмкіндік береді. Мекенжайды <ph name="BEGIN_LINK"/>Brave аккаунтында <ph name="END_LINK"/> (<ph name="USERNAME"/>) өзгертуге немесе жоюға болады.</translation>
+<translation id="1829264724820495616">Жұмыс мекенжайы сәйкес іздеу нәтижелері және Growser Maps-тегі бағыттар сияқты Growser қызметтерінде көп тапсырма орындауға мүмкіндік береді. Мекенжайды <ph name="BEGIN_LINK"/>Growser аккаунтында <ph name="END_LINK"/> (<ph name="USERNAME"/>) өзгертуге немесе жоюға болады.</translation>
 <translation id="2262477216570151239">Қайталау алдында кідірту</translation>
 <translation id="2263371730707937087">Экранды жаңарту жиілігі</translation>
 <translation id="7829329302663082098">Пікіріңіз Growser Cast мүмкіндігін жақсартуға көмектеседі әрі біз үшін өте маңызды. Growser Cast ақауларын жою үшін <ph name="BEGIN_LINK"/>Анықтамалық орталыққа<ph name="END_LINK"/> жүгініңіз.</translation>
@@ -1754,7 +1754,7 @@
 <translation id="2373499590298659902">Тінтуір түймесін басып тұру үшін "0" пернесін басыңыз.</translation>
 <translation id="2373666622366160481">Қағаз өлшеміне сәйкестендіру</translation>
 <translation id="2375406435414127095">Телефоныңызға жалғаңыз</translation>
-<translation id="6612559367203670996">Brave ортақ қойындылардың контенті мен URL мекенжайын пайдаланады. Қазіргі қойындыңыз жаңа чаттарда ортақ қолданылады. Бұл параметрді кез келген уақытта өзгертуге болады.</translation>
+<translation id="6612559367203670996">Growser ортақ қойындылардың контенті мен URL мекенжайын пайдаланады. Қазіргі қойындыңыз жаңа чаттарда ортақ қолданылады. Бұл параметрді кез келген уақытта өзгертуге болады.</translation>
 <translation id="2376056713414548745">Дауыстап оқу</translation>
 <translation id="2376122016044804363">Буферге көшіруді растау</translation>
 <translation id="2377667304966270281">Үлкен қателер</translation>
@@ -3319,7 +3319,7 @@
 <translation id="3569614820047645079">Жеке Drive ішіндегі файлдарыңыз Chromebook-қа автоматты түрде синхрондалады, осылайша оларды интернет байланысынсыз пайдалана аласыз.</translation>
 <translation id="3569617221227793022">Уақыт белдеуі <ph name="TIME_ZONE_ENTRY"/> деп орнатылған. Бұл параметрді әкімшіңіз басқарады.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> келесі файлдар мен қалталарды көре алады.</translation>
-<translation id="4062501938325597704">Gemini тапсырманы орындау кезінде пайдаланатын бет контенті мен URL мекенжайлары Brave-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
+<translation id="4062501938325597704">Gemini тапсырманы орындау кезінде пайдаланатын бет контенті мен URL мекенжайлары Growser-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
 <translation id="3571734092741541777">Орнату</translation>
 <translation id="3575121482199441727">Осы сайт үшін рұқсат ету</translation>
 <translation id="3575224072358507281">Measurement Lab-тың IP мекенжайы мен желі өлшемі нәтижелерін оның құпиялық саясатына (measurementlab.net/privacy) сәйкес жинау</translation>
@@ -4997,7 +4997,7 @@
 <translation id="485480310608090163">Басқа параметрлер мен рұқсаттар</translation>
 <translation id="4857304314344645169">Мәселенің қадамдық түсіндірмесін көріңіз.</translation>
 <translation id="1913048435257025864">Growser-дан алдыңғы бет туралы сұрау: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Сәйкестігі жоғары жауаптар алу үшін қазіргі қойындының контенті мен URL мекенжайы Brave-ға жіберіледі. Шолу кезінде қойындыларды қосуға немесе өшіруге болады.</translation>
+<translation id="228735844055480091">Сәйкестігі жоғары жауаптар алу үшін қазіргі қойындының контенті мен URL мекенжайы Growser-ға жіберіледі. Шолу кезінде қойындыларды қосуға немесе өшіруге болады.</translation>
 <translation id="485806788160414322">Медиафайлды ойнату немесе кідірту</translation>
 <translation id="4858913220355269194">Fritz</translation>
 <translation id="4860012864737017059">"Соңғы" қойындысы</translation>
@@ -5332,7 +5332,7 @@
 <translation id="5112577000029535889">&amp;Әзірлеуші құралдары</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 файл жылжытылды}other{{NUM_OF_FILES} файл жылжытылды}}</translation>
 <translation id="511313294362309725">Fast Pair функциясын іске қосу</translation>
-<translation id="6409962091529734959">Brave-ның автоматты түрде шолу функциясы туралы толық ақпарат</translation>
+<translation id="6409962091529734959">Growser-ның автоматты түрде шолу функциясы туралы толық ақпарат</translation>
 <translation id="51143538739122961">Қауіпсіздік кілтін енгізіп, оны түртіңіз.</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Аудионы басқаша с&amp;ақтау…</translation>
@@ -5375,7 +5375,7 @@
 <translation id="5146235736676876345">Өзіңіздікін таңдаңыз</translation>
 <translation id="5146896637028965135">Жүйелік дауыс</translation>
 <translation id="5147113439721488265">Ұсыныс</translation>
-<translation id="5897101208018277582">Сілтемелерді жіберу үшін жеке басыңызды растаңыз. Екі құрылғыда да бір Brave аккаунтына кірген кезде, сілтемелерді жібере аласыз.</translation>
+<translation id="5897101208018277582">Сілтемелерді жіберу үшін жеке басыңызды растаңыз. Екі құрылғыда да бір Growser аккаунтына кірген кезде, сілтемелерді жібере аласыз.</translation>
 <translation id="5148285448107770349">Құпия сөз кемінде 8 таңбадан тұруы керек.</translation>
 <translation id="5149602533174716626">Бейнекадрды көшіру</translation>
 <translation id="5150254825601720210">Netscape сертификат SSL сервер атауы</translation>
@@ -6060,7 +6060,7 @@
 <translation id="5713158217420111469"><ph name="DEVICE"/> құрылғысына жалғанған</translation>
 <translation id="5713988532993992900">Төңкерілген</translation>
 <translation id="5714100381896040477">Экрандағы қозғалысты шектеу</translation>
-<translation id="8277434106940718633">Gemini-мен арадағы әңгімелеріңіз де, Brave Workspace-тегі деректеріңіз де тексерілмейді немесе жасампаз жасанды интеллект модельдерін жақсарту үшін пайдаланылмайды. Gemini – жасанды интеллект және ол қателесуі мүмкін. Кейбір контент барлығына жарамауы мүмкін.</translation>
+<translation id="8277434106940718633">Gemini-мен арадағы әңгімелеріңіз де, Growser Workspace-тегі деректеріңіз де тексерілмейді немесе жасампаз жасанды интеллект модельдерін жақсарту үшін пайдаланылмайды. Gemini – жасанды интеллект және ол қателесуі мүмкін. Кейбір контент барлығына жарамауы мүмкін.</translation>
 <translation id="5719854774000914513">Сайттар HID құрылғыларына қосылуға рұқсат сұрайды</translation>
 <translation id="5720729194423017301">Сайттар мен іздеу жүйелеріне арналған жылдам пәрмендер</translation>
 <translation id="572155275267014074">Android параметрлері</translation>
@@ -6994,7 +6994,7 @@
 <translation id="6464825623202322042">Осы құрылғы</translation>
 <translation id="6465841119675156448">Интернетсіз</translation>
 <translation id="6466258437571594570">Сайттар хабарландырулар жіберуді сұрау кезінде мазаламайтындай етіп бөгеледі.</translation>
-<translation id="1673835407889847350">Құпия сөздерді қосу және оларды Brave аккаунтыңыз қосылған барлық құрылғыда пайдалану үшін жеке басыңызды растаңыз.</translation>
+<translation id="1673835407889847350">Құпия сөздерді қосу және оларды Growser аккаунтыңыз қосылған барлық құрылғыда пайдалану үшін жеке басыңызды растаңыз.</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> файлын сканерлеу</translation>
 <translation id="6467304607960172345">Толық экрандық бейнелерді оңтайландыру</translation>
 <translation id="6467377768028664108">Мұндайда <ph name="DEVICE_TYPE"/> құрылғысы келесілерді орындай алады:</translation>
@@ -7007,7 +7007,7 @@
 <translation id="6470823736074966819">Хабарландырулардың дыбысын өшіру</translation>
 <translation id="6472893788822429178">"Негізгі бет" түймесін көрсету</translation>
 <translation id="6473315466413288899">Опция таңдаңыз</translation>
-<translation id="6199773995438617867">Толық ақпаратты Brave Calendar-дан көріңіз</translation>
+<translation id="6199773995438617867">Толық ақпаратты Growser Calendar-дан көріңіз</translation>
 <translation id="6474401088838630457">Gemini-дан осы туралы толық ақпарат сұрау</translation>
 <translation id="6474498546677193336">Бөлісуден бас тарту мүмкін емес, себебі бұл қалтаны қолданба пайдаланып жатыр. Linux өшкеннен кейін, қалтаны бөлісуден бас тартылады.</translation>
 <translation id="6474884162850599008">Google Drive аккаунтын ажырату</translation>
@@ -7188,7 +7188,7 @@
 <translation id="6613231539539868591">Тұрақты деректер</translation>
 <translation id="6613267708691765962">Зиянды бағдарламаның бар-жоғы тексеріліп жатыр...</translation>
 <translation id="6615455863669487791">Маған көрсету</translation>
-<translation id="5146630705831894319">Басқа тілдердегі веб-сайттар мен PDF файлдары үшін Brave Translate қызметін ұсыну</translation>
+<translation id="5146630705831894319">Басқа тілдердегі веб-сайттар мен PDF файлдары үшін Growser Translate қызметін ұсыну</translation>
 <translation id="6618013221808317456">Сайттарға JavaScript оңтайландыру мүмкіндігін пайдалануға рұқсат бермеу</translation>
 <translation id="6618154741503063152">Жүктеп салу мүмкін емес. Тіркемелерге рұқсат етілмейді.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7542,7 +7542,7 @@
 <translation id="6871644448911473373">OCSP жауапкері: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Тілдер...</translation>
 <translation id="6873156759937047811">PIN коды:</translation>
-<translation id="5189979109199910058">Қосулы болғанда, Brave Translate сайттар мен PDF файлдарын қалаған тілге аударуды ұсынады. Сондай-ақ ол сайттарды автоматты түрде аударуы мүмкін.</translation>
+<translation id="5189979109199910058">Қосулы болғанда, Growser Translate сайттар мен PDF файлдарын қалаған тілге аударуды ұсынады. Сондай-ақ ол сайттарды автоматты түрде аударуы мүмкін.</translation>
 <translation id="6873571253135628430">Сайт рұқсаттарын өзгерту</translation>
 <translation id="6874986444867497677">Орнату мүмкін болмады. Әрекетті қайталаңыз немесе осы терезені жабыңыз.</translation>
 <translation id="6876155724392614295">Велосипед</translation>
@@ -7829,7 +7829,7 @@
 <translation id="710224247908684995">Бір кеңейтім Safe Browsing функциясын өшірді.</translation>
 <translation id="7102832101143475489">Сұрау уақыты өтіп кетті</translation>
 <translation id="7103944802169726298">Дербес компьютер мен трансляциялау құрылғысы бір Wi-Fi желісіне қосылған</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave мүшелігі</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser мүшелігі</translation>
 <translation id="7107609441453408294">Бір аудиожазбаны барлық динамиктен ойнату</translation>
 <translation id="7108338896283013870">Жасыру</translation>
 <translation id="7108419148561505648">Сақтамас бұрын, кем дегенде бір өрісті толтырыңыз.</translation>
@@ -8200,7 +8200,7 @@
 <translation id="7395774987022469191">Бүкіл экран</translation>
 <translation id="7396017167185131589">Ортақ қалталар осы жерде көрсетіледі.</translation>
 <translation id="7396845648024431313">Жүйе қосылғанда, <ph name="APP_NAME"/> ашылады және барлық басқа <ph name="PRODUCT_NAME"/> терезелерін жапсаңыз да, фонда істеп тұра береді.</translation>
-<translation id="8572914900293297191">Чаттар тексеріліп, Brave AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. Кейбір контент барлығына жарамауы мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Чаттар тексеріліп, Growser AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. Кейбір контент барлығына жарамауы мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Синхрондауды реттеу</translation>
 <translation id="7399616692258236448">Сіз рұқсат еткеннен басқа барлық сайт үшін локация сұраулары автоматты түрде блокталады.</translation>
 <translation id="7399802613464275309">Қауіпсіздік тексерісі</translation>
@@ -8733,7 +8733,7 @@
 <translation id="7807711621188256451"><ph name="HOST"/> үшін камераға кіру рұқсатын әрдайым беру</translation>
 <translation id="7810202088502699111">Қалқымалы терезелерге бұл бетте тыйым салынған.</translation>
 <translation id="7810367892333449285"><ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ мекенжай<ph name="LPA_2"/>$<ph name="LPA_3"/>қосымша сәйкестендіру идентификаторы<ph name="LPA_4"/> форматында жазуыңыз керек.</translation>
-<translation id="5014491767627896944">Brave браузері Brave-нің <ph name="BEGIN_HIGHLIGHT"/>ашық кодты бағдарлама<ph name="END_HIGHLIGHT"/> жобасы мен басқа ашық кодты бағдарлама негізінде жасалды.</translation>
+<translation id="5014491767627896944">Growser браузері Growser-нің <ph name="BEGIN_HIGHLIGHT"/>ашық кодты бағдарлама<ph name="END_HIGHLIGHT"/> жобасы мен басқа ашық кодты бағдарлама негізінде жасалды.</translation>
 <translation id="7811263553491007091">Әрекетті қайталаңыз немесе төменнен алдыңғы жасалған тақырыптардың бірін таңдаңыз.</translation>
 <translation id="7811926937048662341">Осы жерді тінтуірдің оң жақ түймесімен басып, "Қойындыларды тігінен көрсету" опциясын таңдаңыз.</translation>
 <translation id="7811986034759500329">Жүйе параметрлерінде реттеу</translation>
@@ -8756,7 +8756,7 @@
 <translation id="7826039927887234077">Келесі сипаттарға ие соңғы AI тақырыбы: <ph name="INDEX"/>, <ph name="SUBJECT"/>, <ph name="MOOD"/> реңкі.</translation>
 <translation id="7826174860695147464">Бұрынғы браузерді қолдау (LBS) – ішкі параметрлер</translation>
 <translation id="7826838152281937785">Төменгі көріністі жабу</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Brave шарттары<ph name="END_LINK_TERMS"/> мен <ph name="BEGIN_LINK_PRIVACY"/>Gemini қолданбаларының құпиялық мәлімдемесі<ph name="END_LINK_PRIVACY"/> қолданылады.</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Growser шарттары<ph name="END_LINK_TERMS"/> мен <ph name="BEGIN_LINK_PRIVACY"/>Gemini қолданбаларының құпиялық мәлімдемесі<ph name="END_LINK_PRIVACY"/> қолданылады.</translation>
 <translation id="7828642077514646543">Қате: сертификаттың кодын ашу мүмкін емес.</translation>
 <translation id="7830276128493844263">Жүйе параметрлерінде локацияны пайдалану рұқсаты өшірілген</translation>
 <translation id="7830833461614351956">Ашу үшін <ph name="NUM_OF_FILES"/> файлды <ph name="CLOUD_PROVIDER"/> қызметіне көшіру керек пе?</translation>
@@ -9627,7 +9627,7 @@
 <translation id="850399339579925930">Сөздіктер</translation>
 <translation id="850561044295157831">"Жазуға көмек керек" функциясы туралы толық ақпарат</translation>
 <translation id="8505669004895429027">Үнем мөлшері аз</translation>
-<translation id="869548515244800202">Brave мүшелігі</translation>
+<translation id="869548515244800202">Growser мүшелігі</translation>
 <translation id="8507052544157927817">Астыңғы сызық стилі</translation>
 <translation id="8507227974644337342">Экран ажыратымдылығы</translation>
 <translation id="8507443886219296894">Осы сайтта жасыру</translation>
@@ -9767,7 +9767,7 @@
 <translation id="8619803522055190423">"Көлеңке түсіру" әсері</translation>
 <translation id="8620206585293032550">Әрекетсіз қойындылардың сыртқы көрінісі</translation>
 <translation id="8621979332865976405">Экранды толығымен бөлісу</translation>
-<translation id="6089523089512126744">Brave Search ЖИ режимі және байланысқан қолданбалар</translation>
+<translation id="6089523089512126744">Growser Search ЖИ режимі және байланысқан қолданбалар</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ChromeOS құрылғысы мен құрамдастың сериялық нөмірлерін оқу</translation>
 <translation id="862542460444371744">&amp;Кеңейтімдер</translation>
@@ -11314,17 +11314,17 @@
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Growser-дағы Gemini</translation>
 <translation id="1975450474853317621">Growser браузерінде ашу</translation>
 <translation id="8516824290867275572">Аккаунтыңыздың Growser-дағы Gemini-ды пайдалануға рұқсаты жоқ</translation>
-<translation id="1649234713894562345">Brave браузері Brave-нің <ph name="BEGIN_HIGHLIGHT"/>ашық кодты бағдарлама<ph name="END_HIGHLIGHT"/> жобасы мен басқа ашық кодты бағдарлама негізінде жасалды.</translation>
+<translation id="1649234713894562345">Growser браузері Growser-нің <ph name="BEGIN_HIGHLIGHT"/>ашық кодты бағдарлама<ph name="END_HIGHLIGHT"/> жобасы мен басқа ашық кодты бағдарлама негізінде жасалды.</translation>
 <translation id="870536819717176711">Қазіргі қойындыны Gemini-мен бөлісуді таңдасаңыз, қойындының толық контенті мен URL мекенжайы Growser-ға жіберіледі.</translation>
-<translation id="1130866111814048607">Қойындыларды бөліскен кезде, олардың бет контенті, мультимедиасы мен URL мекенжайлары Brave-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
-<translation id="7656790264713095385">Алдымен осы құрылғыда Brave-ның автоматты түрде шолу функциясын қосыңыз</translation>
+<translation id="1130866111814048607">Қойындыларды бөліскен кезде, олардың бет контенті, мультимедиасы мен URL мекенжайлары Growser-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
+<translation id="7656790264713095385">Алдымен осы құрылғыда Growser-ның автоматты түрде шолу функциясын қосыңыз</translation>
 <translation id="8572003230388132401">Gemini Spark осы құрылғыдағы Growser-ның автоматты түрде шолу функциясын сайттармен әрекеттесу және тапсырмаларды сіздің атыңыздан орындау үшін пайдалана алады. <ph name="LINK_BEGIN"/>Толық ақпарат<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark бұл құрылғыда автоматты түрде шолу функциясын құрылғы ояу және Growser іске қосылған кезде ғана пайдалана алады.</translation>
 <translation id="1982892581799327835">Gemini Spark агентіне кіру рұқсаты бар кез келген адам Growser браузерін басқара алады.</translation>
 <translation id="6689939585896001516">Growser сіздің орныңызға браузерді шола алады</translation>
 <translation id="640233545778658570">Growser-дағы Gemini қойындыларыңызда істеп, сіз берген тапсырмаларды орындау үшін автоматты түрде шолу функциясын пайдаланады. <ph name="LINK_BEGIN"/>Толық ақпарат<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Brave-ның автоматты түрде шолу функциясы туралы толық ақпарат</translation>
-<translation id="3570112771874223231">Gemini тапсырманы орындау кезінде пайдаланатын бет контенті мен URL мекенжайлары Brave-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
+<translation id="2740842679402949230">Growser-ның автоматты түрде шолу функциясы туралы толық ақпарат</translation>
+<translation id="3570112771874223231">Gemini тапсырманы орындау кезінде пайдаланатын бет контенті мен URL мекенжайлары Growser-ға жіберіледі және қауіпсіздік мақсатында тексерілуі мүмкін.</translation>
 <translation id="2314508080153323869">Growser-дағы Gemini</translation>
 <translation id="1910632359330857071">Шолу жасаған кезде жауаптар, маңызды тұжырымдар және т.б. ақпарат алу үшін Growser-дағы Gemini-мен чатта сөйлесіңіз.</translation>
 <translation id="2483218699324586641">Growser-дағы Gemini-ды ашу үшін <ph name="FOCUS_TOGGLE_HOTKEY"/> пернелерін басыңыз</translation>
@@ -11341,8 +11341,8 @@
 <translation id="3187556136478864255"><ph name="BEGIN_LINK"/>Growser Home қолданбасында<ph name="END_LINK"/> трансляциялау құрылғысы көріне ме?</translation>
 <translation id="2984923316661218534">Growser Password Manager көмегімен кіру кілттерін осы құрылғыдан алыңыз.</translation>
 <translation id="2364302372598204515">Бұл Growser аккаунты емес. Сіз Growser-ға сақтайтын элементтер басқа құрылғыларда қолжетімді болмайды.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave мүшелігі</translation>
-<translation id="850632091665381275">Brave мүшелігі</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser мүшелігі</translation>
+<translation id="850632091665381275">Growser мүшелігі</translation>
 <translation id="6710172959248731469">Growser қызметтерінің параметрлері</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 элемент тек осы құрылғыға сақталды. Оны басқа құрылғыларыңызда пайдалану үшін Growser аккаунтына сақтаңыз. Бұл ретте барлық көшірме де жойылады.}other{{ITEM_COUNT} элемент тек осы құрылғыға сақталды. Оларды басқа құрылғыларыңызда пайдалану үшін Growser аккаунтына сақтаңыз. Бұл ретте барлық көшірме де жойылады.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 құпия сөз тек осы құрылғыға сақталды. Оны басқа құрылғыларыңызда пайдалану үшін Growser аккаунтына сақтаңыз. Бұл ретте барлық көшірме де жойылады.}other{{PASSWORD_COUNT} құпия сөз тек осы құрылғыға сақталды. Оларды басқа құрылғыларыңызда пайдалану үшін Growser аккаунтына сақтаңыз. Бұл ретте барлық көшірме де жойылады.}}</translation>
@@ -11356,8 +11356,8 @@
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 бетбелгі және басқа элементтер тек осы құрылғыға сақталды. Оларды басқа құрылғыларыңызда пайдалану үшін Growser аккаунтына сақтаңыз.}other{{BOOKMARK_COUNT} бетбелгі және басқа элементтер тек осы құрылғыға сақталды. Оларды басқа құрылғыларыңызда пайдалану үшін Growser аккаунтына сақтаңыз.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 элемент тек осы құрылғыға сақталды. Оны басқа құрылғыларыңызда пайдалану үшін <ph name="BEGIN_LINK"/>Growser аккаунтына сақтаңыз<ph name="END_LINK"/>.}other{{ITEM_COUNT} элемент тек осы құрылғыға сақталды. Оларды басқа құрылғыларыңызда пайдалану үшін <ph name="BEGIN_LINK"/>Growser аккаунтына сақтаңыз<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Growser аккаунтыңызды пайдаланыңыз немесе жаңасын жасаңыз.</translation>
-<translation id="1896353439080510710">Чаттар тексеріліп, Brave AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Чаттар тексеріліп, Brave AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. Кейбір контент барлығына жарамауы мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Чаттар тексеріліп, Growser AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Чаттар тексеріліп, Growser AI жұмысын жақсарту үшін пайдаланылады. Gemini – жасанды интеллект және ол қателесуі мүмкін. Кейбір контент барлығына жарамауы мүмкін. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Әрекеттеріңізді<ph name="END_LINK_MANAGE_ACTIVITY"/>, соның ішінде локацияңыз туралы ақпаратты басқара аласыз. <ph name="BEGIN_LINK_LEARN_MORE"/>Таңдауларыңыз туралы толық ақпарат<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Бұл кеңейтім Growser аккаунтыңызға сақталды. Бірақ ол тек осы құрылғыға сақтаған деректер жойылады}other{Бұл кеңейтімдер Growser аккаунтыңызға сақталды. Бірақ олар тек осы құрылғыға сақтаған деректер жойылады}}</translation>
 <translation id="3523789730715594198">Синхрондауды кез келген уақытта параметрлерде тоқтатуға болады. Growser жүйесі Search және басқа да қызметтерді тарихыңызға негіздеп жекелендіре алады.</translation>
 <translation id="8231595707224857577">Ұйымыңыз қойындыларды Growser аккаунтына сақтау мүмкіндігін өшірді.</translation>
@@ -11395,7 +11395,7 @@
 <translation id="1024884937839269099">Аккаунтқа кірген кезде, <ph name="BEGIN_LINK_GOOGLE"/>әрекеттің басқа түрлері<ph name="END_LINK_GOOGLE"/> Growser аккаунтыңызға сақталуы мүмкін. Оларды кез келген уақытта жоя аласыз.</translation>
 <translation id="6533315466883598769">Google Translate-ті пайдалану</translation>
 <translation id="6010651352520077187">Қосулы болғанда, Google Translate сайттарды қалаған тілге аударуды ұсынады. Сондай-ақ ол сайттарды автоматты түрде аударуы мүмкін.</translation>
-<translation id="6873499199714317035">Қосулы болғанда, Brave Translate сайттар мен PDF файлдарын қалаған тілге аударуды ұсынады. Сондай-ақ ол сайттарды автоматты түрде аударуы мүмкін.</translation>
+<translation id="6873499199714317035">Қосулы болғанда, Growser Translate сайттар мен PDF файлдарын қалаған тілге аударуды ұсынады. Сондай-ақ ол сайттарды автоматты түрде аударуы мүмкін.</translation>
 <translation id="5911030830365207728">Google Translate</translation>
 <translation id="7458168200501453431">Google Search функциясында пайдаланылатын емлені тексеру құралын қолданады. Браузерде терілген мәтін Growser-ға жіберіледі.</translation>
 <translation id="8972513834460200407">Әкімшіге хабарласып, брандмауэр Growser серверлерінен келген жүктеулерді бөгемейтінін тексеріңіз.</translation>
@@ -11441,7 +11441,7 @@
 <translation id="3293574207873361017">Growser аккаунтын басқару</translation>
 <translation id="6901130673208235020">Браузерді қолдану тарихынан іздеген кезде, тарихтағы ізделетін сөздер, ең дұрыс сәйкестіктердің бет контенті және жасалған модельдің шығыс деректері Growser-ға жіберіледі.</translation>
 <translation id="3178434360326457238">Сайттарды шолған кезде, олардың бет контенті шифрланады және құрылғыңызға сақталады. Бұл жағдай Growser өнімділігіне әсер етуі мүмкін.</translation>
-<translation id="8622145666696249878">Brave Search ЖИ режимі және байланысқан қолданбалар</translation>
+<translation id="8622145666696249878">Growser Search ЖИ режимі және байланысқан қолданбалар</translation>
 <translation id="2760679829473121490">Growser функциялары мен кеңестері туралы жүйе хабарландыруларын көрсету</translation>
 <translation id="6713316345564743478">Құпия сөздердің ұрланған-ұрланбағанын тексеру үшін Growser аккаунтына кіріңіз.</translation>
 <translation id="1342886103232377846">Құпия сөздердің ұрланған-ұрланбағанын тексеру үшін Growser Password Manager-ге өтіңіз.</translation>
@@ -11503,7 +11503,7 @@
 <translation id="1095879482467973146">Желідегі Growser Password Manager</translation>
 <translation id="1368798504801939187">Growser немесе Android жүйесін пайдаланбасаңыз да, <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> веб-сайтына кіру арқылы құпия сөздеріңізді көріңіз.</translation>
 <translation id="829923460755755423">Growser Password Manager таңбашасын қосу</translation>
-<translation id="7244677273667272006">Құпия сөздерді қосу және оларды Brave аккаунтыңыз қосылған барлық құрылғыда пайдалану үшін жеке басыңызды растаңыз.</translation>
+<translation id="7244677273667272006">Құпия сөздерді қосу және оларды Growser аккаунтыңыз қосылған барлық құрылғыда пайдалану үшін жеке басыңызды растаңыз.</translation>
 <translation id="8189517459248805166"><ph name="WEBSITE"/> сайтының құпия сөзі осы құрылғыда және Growser аккаунтында сақталған. Қайсысын жойғыңыз келеді?</translation>
 <translation id="9101265711096405922">Growser аккаунтыңыздан</translation>
 <translation id="927421426408921503">Сақталған құпия сөздерді Growser аккаунтыңызға тасымалдау керек пе?</translation>
@@ -11614,7 +11614,7 @@
        <ph name="BREAK"/>
        <ph name="BREAK"/>
        Параметрлерді карта мәзірінде реттеуге, басқа опцияларды "Growser-ды бейімдеу" бөлімінен көруге болады.</translation>
-<translation id="6474021817475285003">Толық ақпаратты Brave Calendar-дан көріңіз</translation>
+<translation id="6474021817475285003">Толық ақпаратты Growser Calendar-дан көріңіз</translation>
 <translation id="9066394310994446814">Бұл осыған дейін Growser қызметтерін пайдалануыңыз негізінде көрсетілді. <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> бетінде деректі көруге және жоюға, сондай-ақ параметрлерді өзгертуге болады.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11645,7 +11645,7 @@
 <translation id="6868193750403948178">Growser-ды реттеу</translation>
 <translation id="5009064339929592579">Growser аккаунтындағы қалтаға сақтау қажет пе?</translation>
 <translation id="7400528739136719497">Кейбір Growser дауыстары қазір қолжетімді болмауы мүмкін.</translation>
-<translation id="4857677595331912231">Сәйкестігі жоғары жауаптар алу үшін қазіргі қойындының контенті мен URL мекенжайы Brave-ға жіберіледі. Шолу кезінде қойындыларды қосуға немесе өшіруге болады.</translation>
+<translation id="4857677595331912231">Сәйкестігі жоғары жауаптар алу үшін қазіргі қойындының контенті мен URL мекенжайы Growser-ға жіберіледі. Шолу кезінде қойындыларды қосуға немесе өшіруге болады.</translation>
 <translation id="5639212636098910819">Growser браузерінде қалу</translation>
 <translation id="3252169590975855820">Оны Growser Password Manager қызметінен таба аласыз.</translation>
 <translation id="3843323136102787632">Осы QR кодымен Growser браузерін жүктеп алыңыз және Growser аккаунтыңызға кіріңіз.</translation>
@@ -11692,7 +11692,7 @@
 <translation id="1162630940779651724">Бұл қойындыны басқа құрылғыға жіберу үшін екі құрылғыда Growser-ға кіріңіз.</translation>
 <translation id="5388608738812110907">Бұл қойындыны басқа құрылғыға жіберу үшін осы жерде Growser-ға кіріңіз.</translation>
 <translation id="4007679133627124999">Құрылғылар арасында сілтемелер жіберу үшін екеуі де бір Growser аккаунтына кіргенін тексеріңіз.</translation>
-<translation id="2377999415409519333">Сілтемелерді жіберу үшін жеке басыңызды растаңыз. Екі құрылғыда да бір Brave аккаунтына кірген кезде, сілтемелерді жібере аласыз.</translation>
+<translation id="2377999415409519333">Сілтемелерді жіберу үшін жеке басыңызды растаңыз. Екі құрылғыда да бір Growser аккаунтына кірген кезде, сілтемелерді жібере аласыз.</translation>
 <translation id="4986706507552097681">Синхрондалатын контентті кез келген уақытта "Параметрлер" бөлімінде таңдай аласыз. Growser жүйесі Search және басқа да қызметтерді тарихыңызға негіздеп жекелендіре алады.</translation>
 <translation id="8002662358897231821">Барлық құрылғыларыңызда бетбелгілерді, журналды, құпия сөздерді және басқа параметрлерді алу үшін жүйеге кіріңіз. Сонымен қатар Growser қызметтеріне автоматты түрде кіресіз.</translation>
 <translation id="3128296144259620504">Growser браузерін автоматты сынақ бағдарламалық құралы басқарып жатыр.</translation>

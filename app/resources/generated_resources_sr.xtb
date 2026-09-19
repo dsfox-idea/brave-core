@@ -189,7 +189,7 @@
 <translation id="5749925632993910318">{0,plural, =1{Затвори прозор без архивирања}one{Затвори прозоре без архивирања (# прозор)}few{Затвори прозоре без архивирања (# прозора)}other{Затвори прозоре без архивирања (# прозора)}}</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> – део групе <ph name="GROUP_NAME"/></translation>
 <translation id="1130676589211693127">Ниво напуњености батерије за десну <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">Када се деле картице, њихов садржај страница, медијски садржаји и URL-ови се шаљу Brave-у и могу да се прегледају ради безбедности.</translation>
+<translation id="1412403201555978627">Када се деле картице, њихов садржај страница, медијски садржаји и URL-ови се шаљу Growser-у и могу да се прегледају ради безбедности.</translation>
 <translation id="1133418583142946603">Додај актуелну картицу</translation>
 <translation id="1133751489735776037">Трипут кликните мишем</translation>
 <translation id="1136712381129578788">Безбедносни кључ је закључан јер сте превише пута унели погрешан PIN. Да бисте га откључали, уклоните га, па га поново уметните.</translation>
@@ -379,7 +379,7 @@
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Заустави</translation>
 <translation id="1272508081857842302">Отварање <ph name="BEGIN_LINK"/>подржаних линкова<ph name="END_LINK"/></translation>
-<translation id="7823526956728613125">Управљајте везом између услуга Претраге и Brave Workspace апликација, као што је Brave диск</translation>
+<translation id="7823526956728613125">Управљајте везом између услуга Претраге и Growser Workspace апликација, као што је Growser диск</translation>
 <translation id="1274997165432133392">Колачићи и други подаци о сајтовима</translation>
 <translation id="1275936815032730048">тастер покретача + стрелица надесно</translation>
 <translation id="1275963833368139883">Када претражујете историју прегледања, одговори и резултати претраге се заснивају на садржају странице. Овим побољшавате резултате</translation>
@@ -656,7 +656,7 @@
 <translation id="1508931164824684991">Сајтови могу да користе JavaScript</translation>
 <translation id="1509163368529404530">&amp;Врати групу</translation>
 <translation id="1509281256533087115">Приступај било ком уређају <ph name="DEVICE_NAME_AND_VENDOR"/> преко USB-а</translation>
-<translation id="2825615584808054779">Нећемо прегледати ваше конверзације са Gemini-јем ни Brave Workspace податке нити ћемо их користити за побољшавање модела генеративне вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши.</translation>
+<translation id="2825615584808054779">Нећемо прегледати ваше конверзације са Gemini-јем ни Growser Workspace податке нити ћемо их користити за побољшавање модела генеративне вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши.</translation>
 <translation id="1510238584712386396">Покретач</translation>
 <translation id="1510341833810331442">Сајтовима није дозвољено да чувају податке на уређају</translation>
 <translation id="1510882959204224895">Отвори у прозору</translation>
@@ -751,7 +751,7 @@
 <translation id="1581962803218266616">Прикажи у Finder-у</translation>
 <translation id="1582955169539260415">избришите [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> се обрађује локално и ради офлајн</translation>
-<translation id="491276955533054201">Прво укључите Brave аутоматско прегледање за овај уређај</translation>
+<translation id="491276955533054201">Прво укључите Growser аутоматско прегледање за овај уређај</translation>
 <translation id="1587275751631642843">&amp;JavaScript конзола</translation>
 <translation id="1588438908519853928">Нормалан</translation>
 <translation id="1588772269240419305">Прегледајте ажурирања логотипа и назива</translation>
@@ -1158,7 +1158,7 @@
 <translation id="1892453608039100484">1. Кликните на <ph name="BUTTON_LABEL"/> у наставку
 2. Кликните на <ph name="BUTTON_2"/> у подешавањима Windows-а</translation>
 <translation id="1895658205118569222">Затварање</translation>
-<translation id="1189523243806849236">Четови се прегледају и користе за побољшавање Brave вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Четови се прегледају и користе за побољшавање Growser вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Користите јаку лозинку</translation>
 <translation id="1897860317037652061">Скенирање није успело</translation>
 <translation id="1898804291554630487">Поставите питање о овој страници</translation>
@@ -1167,7 +1167,7 @@
 <translation id="1901213235765457754">Затражите од администратора да ажурира ову апликацију</translation>
 <translation id="1901303067676059328">Изабери &amp;све</translation>
 <translation id="1901760057081700494">Временска зона је тренутно подешена на <ph name="TIME_ZONE_ENTRY"/>. Да бисте аутоматски ажурирали временску зону, <ph name="BEGIN_LINK"/>укључите приступ локацији система<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Кућна адреса може да вам помогне да обављате ствари у Brave услугама, попут релевантнијих резултата Претраге и путање у Brave мапама. Можете да измените или избришете адресу на <ph name="BEGIN_LINK"/>Brave налогу<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">Кућна адреса може да вам помогне да обављате ствари у Growser услугама, попут релевантнијих резултата Претраге и путање у Growser мапама. Можете да измените или избришете адресу на <ph name="BEGIN_LINK"/>Growser налогу<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">URL-ови које посећујете се чувају на Growser налогу</translation>
 <translation id="190530012637606145">Упозорава вас на све небезбедне везе, укључујући приватне интранете</translation>
 <translation id="1906181697255754968">Сајтови обично приступају фајловима и фолдерима на уређају да би вам биле доступне функције попут аутоматског чувања ставки на којима радите</translation>
@@ -1542,7 +1542,7 @@
 <translation id="2198625180564913276">Додаје се профил. То може да потраје неколико минута.</translation>
 <translation id="2198712775285959645">Измени</translation>
 <translation id="2199298570273670671">Грешка</translation>
-<translation id="2798272130984183944">Изаберите да ли Brave користи моделе вештачке интелигенције који се покрећу директно на уређају</translation>
+<translation id="2798272130984183944">Изаберите да ли Growser користи моделе вештачке интелигенције који се покрећу директно на уређају</translation>
 <translation id="2200094388063410062">Пошаљи имејлом</translation>
 <translation id="2200781749203116929">ChromeOS системске евиденције</translation>
 <translation id="2202391868799679245">Укључи тастерску пречицу</translation>
@@ -1622,7 +1622,7 @@
 <translation id="225716114209817872">Максимално</translation>
 <translation id="5642482119439119644">Да бисте преузели картице са других уређаја, потврдите идентитет. Увек можете да зауставите синхронизацију у подешавањима. Growser може да персонализује Претрагу и друге услуге на основу историје.</translation>
 <translation id="22614517036276112">Овај документ или уређај није у складу са неким безбедносним смерницама организације. Проверите са администратором шта треба да поправите.</translation>
-<translation id="1829264724820495616">Адреса на послу може да вам помогне да обављате ствари у Brave услугама, попут релевантнијих резултата Претраге и путање у Brave мапама. Можете да измените или избришете адресу на <ph name="BEGIN_LINK"/>Brave налогу<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">Адреса на послу може да вам помогне да обављате ствари у Growser услугама, попут релевантнијих резултата Претраге и путање у Growser мапама. Можете да измените или избришете адресу на <ph name="BEGIN_LINK"/>Growser налогу<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Одлагање пре понављања</translation>
 <translation id="2263371730707937087">Учесталост освежавања екрана</translation>
 <translation id="7829329302663082098">Повратне информације нам помажу да побољшамо Growser Cast и захвални смо вам на њима. Да бисте решили проблеме са пребацивањем, посетите <ph name="BEGIN_LINK"/>центар за помоћ<ph name="END_LINK"/>.</translation>
@@ -1765,7 +1765,7 @@
 <translation id="2373499590298659902">Користите „0“ да бисте притиснули и задржали тастер миша</translation>
 <translation id="2373666622366160481">Прилагоди папиру</translation>
 <translation id="2375406435414127095">Повежите се са телефоном</translation>
-<translation id="6612559367203670996">Brave користи садржај и URL дељених картица. Актуелна картица се дели у новим четовима. То подешавање можете да промените у било ком тренутку.</translation>
+<translation id="6612559367203670996">Growser користи садржај и URL дељених картица. Актуелна картица се дели у новим четовима. То подешавање можете да промените у било ком тренутку.</translation>
 <translation id="2376056713414548745">Прочитај наглас</translation>
 <translation id="2376122016044804363">Потврде о копирању у привремену меморију</translation>
 <translation id="2377667304966270281">Грешке у вези са хард-диском</translation>
@@ -3342,7 +3342,7 @@
 <translation id="3569614820047645079">Фајлови на Мом диску се аутоматски синхронизују са Chromebook-ом, па можете да им приступате без интернет везе.</translation>
 <translation id="3569617221227793022">Временска зона је тренутно подешена на <ph name="TIME_ZONE_ENTRY"/>. Овим подешавањем управља администратор.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> може да прегледа датотеке и директоријуме у наставку</translation>
-<translation id="4062501938325597704">Садржај странице и URL-ови које Gemini користи током задатка делиће се са Brave-ом и могу да се прегледају ради безбедности.</translation>
+<translation id="4062501938325597704">Садржај странице и URL-ови које Gemini користи током задатка делиће се са Growser-ом и могу да се прегледају ради безбедности.</translation>
 <translation id="3571734092741541777">Подеси</translation>
 <translation id="3575121482199441727">Дозволи за овај сајт</translation>
 <translation id="3575224072358507281">Прикупљајте резултате мерења IP адреса и мрежa за Measurement Lab у складу са политиком приватности (measurementlab.net/privacy)</translation>
@@ -3531,7 +3531,7 @@
 <translation id="3708295717182051206">Титл</translation>
 <translation id="3708684582558000260">Не дозвољавај затвореним сајтовима да доврше слање или пријем података</translation>
 <translation id="3709244229496787112">Прегледач је затворен пре него што је преузимање завршено.</translation>
-<translation id="3710438437470197252">Прикажи више на Brave диску</translation>
+<translation id="3710438437470197252">Прикажи више на Growser диску</translation>
 <translation id="3710501561113687889">Да бисте наставили, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> ће делити <ph name="FIELDS_STRING"/> са овим сајтом.</translation>
 <translation id="3711931198657368127">Налепи и иди на <ph name="URL"/></translation>
 <translation id="3711945201266135623">Пронађени штампачи са сервера за штампање: <ph name="NUM_PRINTERS"/></translation>
@@ -5031,7 +5031,7 @@
 <translation id="485480310608090163">Још подешавања и дозвола</translation>
 <translation id="4857304314344645169">Погледајте детаљно објашњење било ког проблема</translation>
 <translation id="1913048435257025864">Упитај Growser о претходној страници: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Садржај и URL тренутне картице деле се са Brave-ом да бисте добијали релевантније одговоре. Можете да додајете или уклањате картице док прегледате.</translation>
+<translation id="228735844055480091">Садржај и URL тренутне картице деле се са Growser-ом да бисте добијали релевантније одговоре. Можете да додајете или уклањате картице док прегледате.</translation>
 <translation id="485806788160414322">Пусти или паузирај медије</translation>
 <translation id="4858913220355269194">Фриц</translation>
 <translation id="4860012864737017059">Картица Недавно</translation>
@@ -5098,7 +5098,7 @@
 <translation id="4895799941222633551">Направи пречицу…</translation>
 <translation id="4898913189644355814">Сајт може да сачува жељени језик или ставке које желите да купите. Ове информације су доступне на сајту и његовим поддоменима.</translation>
 <translation id="4899052647152077033">Обрни боје</translation>
-<translation id="4899813415889597597">Повезивање са налогом Brave диска није успело</translation>
+<translation id="4899813415889597597">Повезивање са налогом Growser диска није успело</translation>
 <translation id="490031510406860025">Није дозвољено на овом сајту</translation>
 <translation id="490051679772058907"><ph name="REFRESH_RATE"/> Hz – преплетено</translation>
 <translation id="4900652253009739885">Уклањање јединог прекидача додељеног радњи Изабери није могуће. Притисните било који тастер за <ph name="RESPONSE"/>.</translation>
@@ -5370,7 +5370,7 @@
 <translation id="5112577000029535889">&amp;Алатке за програмере</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{Премештен је 1 фајл}one{Премештен је {NUM_OF_FILES} фајл}few{Премештена су {NUM_OF_FILES} фајла}other{Премештено је {NUM_OF_FILES} фајлова}}</translation>
 <translation id="511313294362309725">Укључи Брзо упаривање</translation>
-<translation id="6409962091529734959">Сазнајте више о Brave аутоматском прегледању</translation>
+<translation id="6409962091529734959">Сазнајте више о Growser аутоматском прегледању</translation>
 <translation id="51143538739122961">Уметните безбедносни кључ и додирните га</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Са&amp;чувај аудио снимак као...</translation>
@@ -5413,7 +5413,7 @@
 <translation id="5146235736676876345">Одаберите своју лозинку</translation>
 <translation id="5146896637028965135">Системски глас</translation>
 <translation id="5147113439721488265">Препорука</translation>
-<translation id="5897101208018277582">Да бисте слали линкове, потврдите идентитет. Можете да шаљете линкове кад сте пријављени на исти Brave налог на оба уређаја.</translation>
+<translation id="5897101208018277582">Да бисте слали линкове, потврдите идентитет. Можете да шаљете линкове кад сте пријављени на исти Growser налог на оба уређаја.</translation>
 <translation id="5148285448107770349">Лозинка мора да садржи најмање 8 знакова</translation>
 <translation id="5149602533174716626">Копирај&amp; кадар видеа</translation>
 <translation id="5150254825601720210">Назив SSL сервера Netscape сертификата</translation>
@@ -6106,7 +6106,7 @@
 <translation id="5713158217420111469">Успостављена је веза са: <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Окренуто</translation>
 <translation id="5714100381896040477">Ограничите кретање по екрану</translation>
-<translation id="8277434106940718633">Нећемо прегледати ваше конверзације са Gemini-јем ни Brave Workspace податке нити ћемо их користити за побољшавање модела генеративне вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Неки садржај можда није прикладан за свакога.</translation>
+<translation id="8277434106940718633">Нећемо прегледати ваше конверзације са Gemini-јем ни Growser Workspace податке нити ћемо их користити за побољшавање модела генеративне вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Неки садржај можда није прикладан за свакога.</translation>
 <translation id="5719854774000914513">Сајтови могу да траже да се повезују са HID уређајима</translation>
 <translation id="5720729194423017301">Пречице за сајтове и претраживаче</translation>
 <translation id="572155275267014074">Android подешавања</translation>
@@ -7048,7 +7048,7 @@
 <translation id="6464825623202322042">Овај уређај</translation>
 <translation id="6465841119675156448">Без интернета</translation>
 <translation id="6466258437571594570">Сајтовима је онемогућено да вас ометају упитима о слању обавештења</translation>
-<translation id="1673835407889847350">Потврдите идентитет да бисте додавали лозинке и користили их на свим уређајима помоћу Brave налога</translation>
+<translation id="1673835407889847350">Потврдите идентитет да бисте додавали лозинке и користили их на свим уређајима помоћу Growser налога</translation>
 <translation id="6467230443178397264">Скенирајте <ph name="FILE_NAME"/></translation>
 <translation id="6467304607960172345">Оптимизујте видео снимке преко целог екрана</translation>
 <translation id="6467377768028664108"><ph name="DEVICE_TYPE"/> онда може:</translation>
@@ -7061,7 +7061,7 @@
 <translation id="6470823736074966819">Искључите звук обавештења</translation>
 <translation id="6472893788822429178">Прикажи дугме Почетак</translation>
 <translation id="6473315466413288899">Изаберите опцију</translation>
-<translation id="6199773995438617867">Прикажи више у Brave календару</translation>
+<translation id="6199773995438617867">Прикажи више у Growser календару</translation>
 <translation id="6474401088838630457">Упитајте Gemini више о овоме</translation>
 <translation id="6474498546677193336">Опозивање дељења није успело јер једна апликација користи овај фолдер. Дељење фолдера ће бити опозвано када се Linux следећи пут затвори.</translation>
 <translation id="6474884162850599008">Прекини везу са налогом Growser диска</translation>
@@ -7247,7 +7247,7 @@
 <translation id="6613231539539868591">Сачувани подаци</translation>
 <translation id="6613267708691765962">Тражи се малвер...</translation>
 <translation id="6615455863669487791">Покажи ми</translation>
-<translation id="5146630705831894319">Понуди Brave преводилац за веб-сајтове и PDF-ове на другим језицима</translation>
+<translation id="5146630705831894319">Понуди Growser преводилац за веб-сајтове и PDF-ове на другим језицима</translation>
 <translation id="6618013221808317456">Не дозвољавај сајтовима да користе оптимизацију JavaScript-а</translation>
 <translation id="6618154741503063152">Отпремање није успело. Прилози нису дозвољени.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7604,7 +7604,7 @@
 <translation id="6871644448911473373">OCSP одзивник: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Језици…</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Када је укључено, Brave преводилац ће нудити да преведе сајтове и PDF-ове на жељени језик. Може и аутоматски да преводи сајтове.</translation>
+<translation id="5189979109199910058">Када је укључено, Growser преводилац ће нудити да преведе сајтове и PDF-ове на жељени језик. Може и аутоматски да преводи сајтове.</translation>
 <translation id="6873571253135628430">Промените дозволе за сајт</translation>
 <translation id="6874986444867497677">Инсталација није успела. Пробајте поново или затворите овај прозор.</translation>
 <translation id="6876155724392614295">Бицикл</translation>
@@ -7895,7 +7895,7 @@
 <translation id="710224247908684995">Додатак је искључио Безбедно прегледање</translation>
 <translation id="7102832101143475489">Захтев је истекао</translation>
 <translation id="7103944802169726298">Рачунар и уређај за пребацивање на истој WiFi мрежи</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave претплата</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser претплата</translation>
 <translation id="7107609441453408294">Пушта исти звук на свим звучницима</translation>
 <translation id="7108338896283013870">Сакриј</translation>
 <translation id="7108419148561505648">Попуните бар једно поље пре чувања</translation>
@@ -8267,7 +8267,7 @@
 <translation id="7395774987022469191">Цео екран</translation>
 <translation id="7396017167185131589">Овде се приказују дељени директоријуми</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> ће се покренути приликом покретања система и наставити да ради у позадини чак и када затворите све остале <ph name="PRODUCT_NAME"/> прозоре.</translation>
-<translation id="8572914900293297191">Четови се прегледају и користе за побољшавање Brave вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Неки садржај можда није прикладан за свакога. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Четови се прегледају и користе за побољшавање Growser вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Неки садржај можда није прикладан за свакога. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Прилагоди синхронизацију</translation>
 <translation id="7399616692258236448">Захтеви за локацију се аутоматски блокирају за све сајтове осим за оне које омогућите</translation>
 <translation id="7399802613464275309">Безбедносна провера</translation>
@@ -8803,7 +8803,7 @@
 <translation id="7807711621188256451">Увек дозволи да <ph name="HOST"/> приступа камери</translation>
 <translation id="7810202088502699111">Искачући прозори су блокирани на овој страници.</translation>
 <translation id="7810367892333449285">Унос треба да буде у формату <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ адреса<ph name="LPA_2"/>$<ph name="LPA_3"/>опционално подударање ИД-а<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave омогућавају Brave пројекат отвореног кода и други софтвер <ph name="BEGIN_HIGHLIGHT"/>отвореног кода<ph name="END_HIGHLIGHT"/>.</translation>
+<translation id="5014491767627896944">Growser омогућавају Growser пројекат отвореног кода и други софтвер <ph name="BEGIN_HIGHLIGHT"/>отвореног кода<ph name="END_HIGHLIGHT"/>.</translation>
 <translation id="7811263553491007091">Пробајте поново или изаберите неку од претходно генерисаних тема у наставку.</translation>
 <translation id="7811926937048662341">Кликните десним тастером овде и изаберите Прикажи картице вертикално</translation>
 <translation id="7811986034759500329">Подесите у системским подешавањима</translation>
@@ -8826,7 +8826,7 @@
 <translation id="7826039927887234077"><ph name="INDEX"/>. недавна AI тема од <ph name="SUBJECT"/>, са расположењем <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Подршка за застареле прегледаче (LBS) – Интерна подешавања</translation>
 <translation id="7826838152281937785">Затвори доњи приказ</translation>
-<translation id="45690163731419633">Важе <ph name="BEGIN_LINK_TERMS"/>Brave услови<ph name="END_LINK_TERMS"/> и <ph name="BEGIN_LINK_PRIVACY"/>Обавештење о приватности Gemini апликација<ph name="END_LINK_PRIVACY"/></translation>
+<translation id="45690163731419633">Важе <ph name="BEGIN_LINK_TERMS"/>Growser услови<ph name="END_LINK_TERMS"/> и <ph name="BEGIN_LINK_PRIVACY"/>Обавештење о приватности Gemini апликација<ph name="END_LINK_PRIVACY"/></translation>
 <translation id="7828642077514646543">Грешка: Дешифровање сертификата није успело</translation>
 <translation id="7830276128493844263">Локација је искључена у системским подешавањима</translation>
 <translation id="7830833461614351956">Желите да копирате <ph name="NUM_OF_FILES"/> фајл(ов)а у <ph name="CLOUD_PROVIDER"/> да бисте их отворили?</translation>
@@ -9705,7 +9705,7 @@
 <translation id="850399339579925930">Речници</translation>
 <translation id="850561044295157831">Сазнајте више о функцији Помоћ при писању</translation>
 <translation id="8505669004895429027">Мале уштеде</translation>
-<translation id="869548515244800202">Brave претплата</translation>
+<translation id="869548515244800202">Growser претплата</translation>
 <translation id="8507052544157927817">Стил подвлачења</translation>
 <translation id="8507227974644337342">Резолуција екрана</translation>
 <translation id="8507443886219296894">Сакриј за овај сајт</translation>
@@ -9846,7 +9846,7 @@
 <translation id="8619803522055190423">Избаци сенку</translation>
 <translation id="8620206585293032550">Изглед неактивних картица</translation>
 <translation id="8621979332865976405">Делите цео екран</translation>
-<translation id="6089523089512126744">AI режим Brave претраге и повезане апликације</translation>
+<translation id="6089523089512126744">AI режим Growser претраге и повезане апликације</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Читање серијских бројева ChromeOS уређаја и компоненти</translation>
 <translation id="862542460444371744">&amp;Додаци</translation>
@@ -11307,17 +11307,17 @@
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini у Growser-у</translation>
 <translation id="1975450474853317621">Отвори у прегледачу Growser</translation>
 <translation id="8516824290867275572">Ваш налог нема приступ Gemini-ју у Growser-у</translation>
-<translation id="1649234713894562345">Brave омогућавају Brave пројекат отвореног кода и други софтвер <ph name="BEGIN_HIGHLIGHT"/>отвореног кода<ph name="END_HIGHLIGHT"/>.</translation>
+<translation id="1649234713894562345">Growser омогућавају Growser пројекат отвореног кода и други софтвер <ph name="BEGIN_HIGHLIGHT"/>отвореног кода<ph name="END_HIGHLIGHT"/>.</translation>
 <translation id="870536819717176711">Када одаберете да делите актуелну картицу са Gemini-јем, комплетан садржај, медији и URL картице се шаљу Growser-у.</translation>
-<translation id="1130866111814048607">Када се деле картице, њихов садржај страница, медијски садржаји и URL-ови се шаљу Brave-у и могу да се прегледају ради безбедности.</translation>
-<translation id="7656790264713095385">Прво укључите Brave аутоматско прегледање за овај уређај</translation>
+<translation id="1130866111814048607">Када се деле картице, њихов садржај страница, медијски садржаји и URL-ови се шаљу Growser-у и могу да се прегледају ради безбедности.</translation>
+<translation id="7656790264713095385">Прво укључите Growser аутоматско прегледање за овај уређај</translation>
 <translation id="8572003230388132401">Gemini Spark може да користи Growser аутоматско прегледање на овом уређају да би ступао у интеракцију са сајтовима и обављао задатке у ваше име. <ph name="LINK_BEGIN"/>Сазнајте више<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark може да користи аутоматско прегледање на овом уређају само ако је уређај активан и Growser је покренут.</translation>
 <translation id="1982892581799327835">Свако ко има приступ Gemini Spark агенту може да контролише Growser прегледач.</translation>
 <translation id="6689939585896001516">Дозволите Growser-у да прегледа за вас</translation>
 <translation id="640233545778658570">Gemini у Growser-у користи аутоматско прегледање за рад на картицама и обављање задатака које му доделите. <ph name="LINK_BEGIN"/>Сазнајте више<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Сазнајте више о Brave аутоматском прегледању</translation>
-<translation id="3570112771874223231">Садржај странице и URL-ови које Gemini користи током задатка делиће се са Brave-ом и могу да се прегледају ради безбедности.</translation>
+<translation id="2740842679402949230">Сазнајте више о Growser аутоматском прегледању</translation>
+<translation id="3570112771874223231">Садржај странице и URL-ови које Gemini користи током задатка делиће се са Growser-ом и могу да се прегледају ради безбедности.</translation>
 <translation id="2314508080153323869">Gemini у Growser-у</translation>
 <translation id="1910632359330857071">Разговарајте са Gemini-јем у Growser-у да бисте добили одговоре, кључне закључке и друго док прегледате</translation>
 <translation id="2483218699324586641">Користите пречицу <ph name="FOCUS_TOGGLE_HOTKEY"/> да бисте отворили Gemini у Growser-у</translation>
@@ -11336,8 +11336,8 @@
     апликацији Growser Home<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Преузмите приступне кључеве на овом уређају помоћу Growser менаџера лозинки</translation>
 <translation id="2364302372598204515">Ово није Growser налог. Ставке које сачувате у Growser-у неће бити доступне на другим уређајима.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave претплата</translation>
-<translation id="850632091665381275">Brave претплата</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser претплата</translation>
+<translation id="850632091665381275">Growser претплата</translation>
 <translation id="6710172959248731469">Подешавања Growser услуга</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 ставка је сачувана само на овом уређају. Да бисте је користили на другим уређајима, сачувајте је на Growser налогу. Тиме ћете уклонити и дупликате.}one{{ITEM_COUNT} ставка је сачувана само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу. Тиме ћете уклонити и дупликате.}few{{ITEM_COUNT} ставке су сачуване само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу. Тиме ћете уклонити и дупликате.}other{{ITEM_COUNT} ставки је сачувано само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу. Тиме ћете уклонити и дупликате.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 лозинка је сачувана само на овом уређају. Да бисте је користили на другим уређајима, сачувајте је на Growser налогу. Тиме ћете уклонити и дупликате.}one{{PASSWORD_COUNT} лозинка је сачувана само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу. Тиме ћете уклонити и дупликате.}few{{PASSWORD_COUNT} лозинке су сачуване само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу. Тиме ћете уклонити и дупликате.}other{{PASSWORD_COUNT} лозинки је сачувано само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу. Тиме ћете уклонити и дупликате.}}</translation>
@@ -11351,8 +11351,8 @@
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 обележивач и друге ставке су сачувани само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу.}one{{BOOKMARK_COUNT} обележивач и друге ставке су сачувани само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу.}few{{BOOKMARK_COUNT} обележивача и друге ставке су сачувани само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу.}other{{BOOKMARK_COUNT} обележивача и друге ставке су сачувани само на овом уређају. Да бисте их користили на другим уређајима, сачувајте их на Growser налогу.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 ставка је сачувана само на овом уређају. Да бисте је користили на другим уређајима, <ph name="BEGIN_LINK"/>сачувајте је на Growser налогу<ph name="END_LINK"/>.}one{{ITEM_COUNT} ставка је сачувана само на овом уређају. Да бисте је користили на другим уређајима, <ph name="BEGIN_LINK"/>сачувајте је на Growser налогу<ph name="END_LINK"/>.}few{{ITEM_COUNT} ставке су сачуване само на овом уређају. Да бисте их користили на другим уређајима, <ph name="BEGIN_LINK"/>сачувајте их на Growser налогу<ph name="END_LINK"/>.}other{{ITEM_COUNT} ставки је сачувано само на овом уређају. Да бисте их користили на другим уређајима, <ph name="BEGIN_LINK"/>сачувајте их на Growser налогу<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Користите Growser налог или отворите нов</translation>
-<translation id="1896353439080510710">Четови се прегледају и користе за побољшавање Brave вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Четови се прегледају и користе за побољшавање Brave вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Неки садржај можда није прикладан за свакога. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Четови се прегледају и користе за побољшавање Growser вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Четови се прегледају и користе за побољшавање Growser вештачке интелигенције. Gemini је вештачка интелигенција и може да погреши. Неки садржај можда није прикладан за свакога. Можете да <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>управљате активностима<ph name="END_LINK_MANAGE_ACTIVITY"/>, укључујући информације о локацији. <ph name="BEGIN_LINK_LEARN_MORE"/>Сазнајте више о изборима<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Овај додатак је сачуван на Growser налогу, али сви подаци које је сачувао само на овом уређају могу да се избришу}one{Ови додаци су сачувани на Growser налогу, али сви подаци које су сачували само на овом уређају могу да се избришу}few{Ови додаци су сачувани на Growser налогу, али сви подаци које су сачували само на овом уређају могу да се избришу}other{Ови додаци су сачувани на Growser налогу, али сви подаци које су сачували само на овом уређају могу да се избришу}}</translation>
 <translation id="3523789730715594198">Увек можете да зауставите синхронизацију у подешавањима. Growser може да персонализује Претрагу и друге услуге на основу историје.</translation>
 <translation id="8231595707224857577">Организација је искључила чување картица на Growser налогу</translation>
@@ -11390,7 +11390,7 @@
 <translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>Други облици активности<ph name="END_LINK_GOOGLE"/> могу да се сачувају на Growser налогу када сте пријављени. Можете да их избришете у било ком тренутку.</translation>
 <translation id="6533315466883598769">Користи Growser преводилац</translation>
 <translation id="6010651352520077187">Када је укључено, Growser преводилац ће нудити да преведе сајтове на жељени језик. Може и аутоматски да преводи сајтове.</translation>
-<translation id="6873499199714317035">Када је укључено, Brave преводилац ће нудити да преведе сајтове и PDF-ове на жељени језик. Може и аутоматски да преводи сајтове.</translation>
+<translation id="6873499199714317035">Када је укључено, Growser преводилац ће нудити да преведе сајтове и PDF-ове на жељени језик. Може и аутоматски да преводи сајтове.</translation>
 <translation id="5911030830365207728">Growser преводилац</translation>
 <translation id="7458168200501453431">Користи исту проверу правописа као Growser претрага. Текст који унесете у прегледач се шаље Growser-у.</translation>
 <translation id="8972513834460200407">Проверите са администратором мреже да бисте се уверили да заштитни зид не блокира преузимања са Growser сервера.</translation>
@@ -11436,7 +11436,7 @@
 <translation id="3293574207873361017">Управљајте Growser налогом</translation>
 <translation id="6901130673208235020">Када претражујете историју прегледања, претраге историје, садржај странице са најбољим подударањима и генерисани излазни подаци модела се шаљу Growser-у</translation>
 <translation id="3178434360326457238">Док прегледате сајтове, садржај њихових страница се шифрује и чува на уређају. То може да утиче на перформансе Growser-а</translation>
-<translation id="8622145666696249878">AI режим Brave претраге и повезане апликације</translation>
+<translation id="8622145666696249878">AI режим Growser претраге и повезане апликације</translation>
 <translation id="2760679829473121490">Приказуј системска обавештења о функцијама и саветима за Growser</translation>
 <translation id="6713316345564743478">Да бисте проверили да ли има угрожених лозинки, пријавите се на Growser налог</translation>
 <translation id="1342886103232377846">Да бисте проверили да ли има угрожених лозинки, идите у Growser менаџер лозинки</translation>
@@ -11499,7 +11499,7 @@
 <translation id="1095879482467973146">Growser менаџер лозинки на вебу</translation>
 <translation id="1368798504801939187">Прегледајте лозинке чак и када не користите Growser или Android тако што ћете се пријавити на <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
 <translation id="829923460755755423">Додајте пречицу у Growser менаџер лозинки</translation>
-<translation id="7244677273667272006">Потврдите идентитет да бисте додавали лозинке и користили их на свим уређајима помоћу Brave налога</translation>
+<translation id="7244677273667272006">Потврдите идентитет да бисте додавали лозинке и користили их на свим уређајима помоћу Growser налога</translation>
 <translation id="8189517459248805166">Лозинка за <ph name="WEBSITE"/> се чува на овом уређају и на вашем Growser налогу. Где желите да је избришете?</translation>
 <translation id="9101265711096405922">Са Growser налога</translation>
 <translation id="927421426408921503">Желите да преместите сачуване лозинке на Growser налог?</translation>
@@ -11610,7 +11610,7 @@
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         Можете да управљате подешавањима из менија картице или да видите још опција у менију Прилагодите Growser.</translation>
-<translation id="6474021817475285003">Прикажи више у Brave календару</translation>
+<translation id="6474021817475285003">Прикажи више у Growser календару</translation>
 <translation id="9066394310994446814">Ова ставка се приказује на основу претходних активности у Growser услугама. Податке можете да прегледате, избришете их и промените подешавања на <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11641,7 +11641,7 @@
 <translation id="6868193750403948178">Прилагодите Growser</translation>
 <translation id="5009064339929592579">Желите да сачувате у фолдеру на Growser налогу?</translation>
 <translation id="7400528739136719497">Неки Growser гласови можда тренутно нису доступни</translation>
-<translation id="4857677595331912231">Садржај и URL тренутне картице деле се са Brave-ом да бисте добијали релевантније одговоре. Можете да додајете или уклањате картице док прегледате.</translation>
+<translation id="4857677595331912231">Садржај и URL тренутне картице деле се са Growser-ом да бисте добијали релевантније одговоре. Можете да додајете или уклањате картице док прегледате.</translation>
 <translation id="5639212636098910819">Остани у Growser-у</translation>
 <translation id="3252169590975855820">Можете да јој приступите у Growser менаџеру лозинки</translation>
 <translation id="3843323136102787632">Преузмите Growser помоћу овог QR кода и пријавите се на Growser налог.</translation>
@@ -11692,7 +11692,7 @@
 <translation id="1162630940779651724">Да бисте послали ову картицу на други уређај, пријавите се у Growser на оба уређаја</translation>
 <translation id="5388608738812110907">Да бисте послали ову картицу на други уређај, пријавите се у Growser на том уређају</translation>
 <translation id="4007679133627124999">Да бисте слали линкове између уређаја, уверите се да су оба уређаја пријављена на исти Growser налог.</translation>
-<translation id="2377999415409519333">Да бисте слали линкове, потврдите идентитет. Можете да шаљете линкове кад сте пријављени на исти Brave налог на оба уређаја.</translation>
+<translation id="2377999415409519333">Да бисте слали линкове, потврдите идентитет. Можете да шаљете линкове кад сте пријављени на исти Growser налог на оба уређаја.</translation>
 <translation id="4986706507552097681">Увек можете да одаберете шта ћете синхронизовати у подешавањима. Growser може да персонализује Претрагу и друге услуге на основу историје.</translation>
 <translation id="8002662358897231821">Пријавите се да би вам обележивачи, историја, лозинке и друга подешавања били доступни на свим уређајима. Аутоматски ћете бити пријављени и на Growser услуге.</translation>
 <translation id="3128296144259620504">Софтвер за аутоматизовано тестирање контролише Growser</translation>

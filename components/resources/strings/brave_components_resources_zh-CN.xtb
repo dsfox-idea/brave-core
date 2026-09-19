@@ -1810,7 +1810,7 @@
 <translation id="3212749868469431851">NFT 符号指用于区分 NFT 合集或项目的唯一标识符。</translation>
 <translation id="8198838794018761504">仅供观看</translation>
 <translation id="4522570452068850558">详细信息</translation>
-<translation id="7417602392941345608">Brave 目前正在迁移到 Zcash NU6.3。在此迁移期间，Zcash 功能将仅限于取消屏蔽以及透明到透明的发送。</translation>
+<translation id="7417602392941345608">Growser 目前正在迁移到 Zcash NU6.3。在此迁移期间，Zcash 功能将仅限于取消屏蔽以及透明到透明的发送。</translation>
 <translation id="8713438253026855351">切换到护盾账户</translation>
 <translation id="3526789880090101085">护盾账户</translation>
 <translation id="3155166394760577549">启用盾牌以增强交易的私密性。</translation>
@@ -1882,7 +1882,7 @@
 <translation id="7758665172236842395">在单个提要中跟踪您最喜欢的来源。在 Growser 中打开一个标签，向下滚动，然后……就可以了！</translation>
 <translation id="1765217911817124376">开启 Growser 新闻</translation>
 <translation id="1772301834467143364">Growser 新闻</translation>
-<translation id="1717242776111689224">启用 Brave 新闻</translation>
+<translation id="1717242776111689224">启用 Growser 新闻</translation>
 <translation id="3169472444629675720">发现</translation>
 <translation id="8981973962043893066">搜索网站、主题或 RSS 源</translation>
 <translation id="1498364270401875204">频道</translation>
@@ -2082,7 +2082,7 @@ other {# 个来源}
 <translation id="6330741325040551950">切换书签侧边栏</translation>
 <translation id="1973174482432326058">切换阅读列表侧边栏</translation>
 <translation id="14910687022901840">切换播放列表侧边栏</translation>
-<translation id="3195191401552731345">切换 Brave 新闻侧边栏</translation>
+<translation id="3195191401552731345">切换 Growser 新闻侧边栏</translation>
 <translation id="3488252265135539275">切换垂直标签页</translation>
 <translation id="7134064542341959603">切换垂直标签页窗口标题</translation>
 <translation id="3067105725259639716">配置 Growser 新闻</translation>
@@ -2213,15 +2213,15 @@ other {# 个来源}
 <translation id="8932568551552504373">您好，我是 Leo。是 Growser 提供的 AI 助手，由 Anthropic 创建的 Claude Instant 模型驱动⸺该模型可处理对话及文本任务。Claude Instant 由 Growser 自有安全基础架构托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="3789772321824682783">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Claude Haiku 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Haiku 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="1778885220602472158">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Claude Sonnet 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Sonnet 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
-<translation id="3399141352144059821">嗨，我是 Leo。我是由 Brave 完全托管的 AI 助手。我由 Grok 4.3 提供支持，这是一个由 xAI 创建的模型，性能卓越，适用于多种用例。Grok 4.3 通过我们自己的安全基础设施由 Brave 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
-<translation id="8868813509973985458">嗨，我是 Leo。我是由 Brave 完全托管的 AI 助手。我由 GPT 5.4 提供支持，这是一个由 OpenAI 创建的模型，性能卓越，适用于多种用例。GPT 5.4 通过我们自己的安全基础设施由 Brave 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
+<translation id="3399141352144059821">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Grok 4.3 提供支持，这是一个由 xAI 创建的模型，性能卓越，适用于多种用例。Grok 4.3 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
+<translation id="8868813509973985458">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 GPT 5.4 提供支持，这是一个由 OpenAI 创建的模型，性能卓越，适用于多种用例。GPT 5.4 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="5037359072717016032">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Mistral Large 提供支持，这是一个由 Mistral 创建的模型，性能卓越，适用于多种用例。Mistral Large 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="4026902371301997261">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Qwen 3 235B 提供支持，这是一个由阿里巴巴云创建的模型，性能卓越，适用于多种用例。Qwen 3 235B 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="8720758690351028307">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Deepseek V3.2 提供支持，这是一个由 Deepseek 创建的模型，性能卓越，适用于多种用例。Deepseek V3.2 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="3369866806475938617">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Claude Opus 提供支持，这是一个由 Anthropic 创建的模型，用于支持对话和文本处理任务。Claude Opus 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="7238858567393403597">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 GLM-4-7-Flash 提供支持，这是一个由 Zhipu AI 创建的模型，性能卓越，适用于多种用例。GLM-4-7-Flash 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="6983410749026920122">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Kimi K2.5 提供支持，这是一个由 Moonshot AI 创建的模型，性能卓越，适用于多种用例。Kimi K2.5 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
-<translation id="3484076625906498634">嗨，我是 Leo。我是由 Brave 完全托管的 AI 助手。我由 Nemotron Nano 3 30B 提供支持，这是一个由 NVIDIA 创建的模型，性能卓越，适用于多种用例。Nemotron Nano 3 30B 通过我们自己的安全基础设施由 Brave 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
+<translation id="3484076625906498634">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Nemotron Nano 3 30B 提供支持，这是一个由 NVIDIA 创建的模型，性能卓越，适用于多种用例。Nemotron Nano 3 30B 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="2965634373697869601">嗨，我是 Leo。我是由 Growser 完全托管的 AI 助手。我由 Growser Ocelot 提供支持，这是一个由 Growser 创建的模型，用于总结网页。Growser Ocelot 通过我们自己的安全基础设施由 Growser 托管。<ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="963346402440669081">高级</translation>
 <translation id="5807427080183870259">本地</translation>
@@ -2300,7 +2300,7 @@ other {# 个来源}
 <translation id="6495402307502950726">清除对话</translation>
 <translation id="903201991022343217">开始新对话</translation>
 <translation id="8742207701089910775">分享此会话</translation>
-<translation id="4014016095804982975">您的会话将以加密方式上传，只能使用生成的链接解密。Brave 将无法查看您的会话。只有您和您分享此链接的人才能解密您分享的会话。所有分享的会话将在 7 天后过期。</translation>
+<translation id="4014016095804982975">您的会话将以加密方式上传，只能使用生成的链接解密。Growser 将无法查看您的会话。只有您和您分享此链接的人才能解密您分享的会话。所有分享的会话将在 7 天后过期。</translation>
 <translation id="2796028253343262770">您可以随时<ph name="LINK_BEFORE"/>管理您的分享<ph name="LINK_AFTER"/>以查找或删除它们。</translation>
 <translation id="1390174375123434798">生成链接</translation>
 <translation id="8904787158537906492">链接已复制到剪贴板</translation>
@@ -2537,8 +2537,8 @@ other {# 个来源}
 <translation id="7203490731644771170">电子邮件别名服务错误： <ph name="ERROR"/></translation>
 <translation id="8767862600155091621">错误：别名不可用</translation>
 <translation id="1706715315466634757">电子邮件别名</translation>
-<translation id="7087933122203937032">创建唯一的随机地址，这些地址会转发到您的 Brave 账户邮箱，并可随时删除。防止您的真实电子邮件地址被泄露或被广告商使用。</translation>
-<translation id="8057865981284642090">要使用电子邮件别名，您需要登录您的 Brave 账户。点击下面的按钮即可开始。</translation>
+<translation id="7087933122203937032">创建唯一的随机地址，这些地址会转发到您的 Growser 账户邮箱，并可随时删除。防止您的真实电子邮件地址被泄露或被广告商使用。</translation>
+<translation id="8057865981284642090">要使用电子邮件别名，您需要登录您的 Growser 账户。点击下面的按钮即可开始。</translation>
 <translation id="4472575034687746823">开始使用</translation>
 <translation id="3000160751117721864">什么是赞助站点？</translation>
 <translation id="8370801182970639038">自动 (<ph name="LOCALE"/>)</translation>
@@ -2566,13 +2566,13 @@ other {# 个来源}
 <translation id="3500134717967948757">在新标签页中显示 Leo AI 小部件</translation>
 <translation id="6851426306697017546">显示时钟</translation>
 <translation id="4844370919312937270">在新标签页中显示搜索小部件</translation>
-<translation id="5088374130885640159">通过 <ph name="REWARDS_LINK_BEGIN"/>Brave 奖励<ph name="REWARDS_LINK_END"/>，您可以通过查看新标签页广告来赚取收益。<ph name="LEARN_MORE_LINK_BEGIN"/>了解更多<ph name="LEARN_MORE_LINK_END"/>。</translation>
+<translation id="5088374130885640159">通过 <ph name="REWARDS_LINK_BEGIN"/>Growser 奖励<ph name="REWARDS_LINK_END"/>，您可以通过查看新标签页广告来赚取收益。<ph name="LEARN_MORE_LINK_BEGIN"/>了解更多<ph name="LEARN_MORE_LINK_END"/>。</translation>
 <translation id="4100520468072294616">显示新标签页广告</translation>
-<translation id="4983925687993168579">Brave 统计数据</translation>
+<translation id="4983925687993168579">Growser 统计数据</translation>
 <translation id="5009354496127441090">显示常用网站</translation>
 <translation id="7705524343798198388">VPN</translation>
-<translation id="2910653812138226931">赞助站点有助于保持 Brave 免费。如果您使用 <ph name="SITE_NAME"/>，您就是在支持 Brave 的使命。您可以随时禁用它们。<ph name="LINK_BEGIN"/>了解更多<ph name="LINK_END"/>。</translation>
-<translation id="5810241219736298115">赞助站点有助于保持 Brave 免费。如果您使用它们，您就是在支持 Brave 的使命。<ph name="LINK_BEGIN"/>了解更多<ph name="LINK_END"/>。</translation>
+<translation id="2910653812138226931">赞助站点有助于保持 Growser 免费。如果您使用 <ph name="SITE_NAME"/>，您就是在支持 Growser 的使命。您可以随时禁用它们。<ph name="LINK_BEGIN"/>了解更多<ph name="LINK_END"/>。</translation>
+<translation id="5810241219736298115">赞助站点有助于保持 Growser 免费。如果您使用它们，您就是在支持 Growser 的使命。<ph name="LINK_BEGIN"/>了解更多<ph name="LINK_END"/>。</translation>
 <translation id="4784802981241664605">统计</translation>
 <translation id="5236080651083907980">使用 Growser 视频通话可进行加密视频通话</translation>
 <translation id="2671474274417808910">隐私优先通话</translation>
@@ -2724,13 +2724,13 @@ other {# 个来源}
 <translation id="7818938154803162778">没问题，我愿意协助</translation>
 <translation id="7207456302801184289">歡迎使用 Growser</translation>
 <translation id="5341040774109629148">准备好获得最佳浏览体验</translation>
-<translation id="6124979241984215095">体验不被监视的网络。Brave 自动保护您免受跟踪器、广告和指纹识别的侵害。</translation>
-<translation id="8722651357687610395">将 Brave 设置为默认</translation>
+<translation id="6124979241984215095">体验不被监视的网络。Growser 自动保护您免受跟踪器、广告和指纹识别的侵害。</translation>
+<translation id="8722651357687610395">将 Growser 设置为默认</translation>
 <translation id="6385063238068436833">从头开始</translation>
 <translation id="2601678491007820794">从旧浏览器导入所有内容，实现无缝过渡。</translation>
-<translation id="5291297136536006359">您也可以稍后在 Brave 设置中执行此操作。</translation>
+<translation id="5291297136536006359">您也可以稍后在 Growser 设置中执行此操作。</translation>
 <translation id="701087249209337256">带上您的旧浏览器内容</translation>
-<translation id="142389341645668510">自定义 Brave</translation>
+<translation id="142389341645668510">自定义 Growser</translation>
 <translation id="112005628409144325">使用您喜欢的标签页布局和颜色模式来个性化您的浏览体验。</translation>
 <translation id="7376367936988732808">标签页布局</translation>
 <translation id="4734965478015604180">水平</translation>
@@ -2752,17 +2752,17 @@ other {# 个来源}
 <translation id="3723975047960999626">内置于浏览器中的智能 AI 助手。提问、总结页面、创作新内容等等。</translation>
 <translation id="108658397513441308">Web3 钱包</translation>
 <translation id="277626258870089521">安全的内置加密钱包，为您的浏览器提供强大的 Web3 支持。</translation>
-<translation id="9019025288391074918">支持内容创作者，并通过您在 Brave 中看到的广告赚取代币。</translation>
+<translation id="9019025288391074918">支持内容创作者，并通过您在 Growser 中看到的广告赚取代币。</translation>
 <translation id="3163354572023395604">隐藏您的 IP 地址、掩盖您的位置，并随时随地访问您喜爱的内容。</translation>
 <translation id="5561552922279152819">与我们一起构建更好的网络</translation>
-<translation id="2888496576732880897">帮助 Brave 搜索不断进步</translation>
+<translation id="2888496576732880897">帮助 Growser 搜索不断进步</translation>
 <translation id="3929158593488526786">加入 Web Discovery Project，帮助扩大索引并改善搜索结果。</translation>
 <translation id="3772776117136934611">帮助我们改进浏览器</translation>
-<translation id="9171227192121024771">分享与 Brave 用户正在使用哪些功能有关的私密、匿名的产品见解</translation>
+<translation id="9171227192121024771">分享与 Growser 用户正在使用哪些功能有关的私密、匿名的产品见解</translation>
 <translation id="5298784657468199167">发送崩溃报告</translation>
 <translation id="6718362830686703942">如果遇到系统崩溃或冻结，请发送诊断报告。</translation>
-<translation id="8012286900922253352">通过启用这些私密指标，帮助 Brave 变得更好并创造更好的产品。</translation>
-<translation id="6058364846991826201">您可以随时在 Brave 中通过 <ph name="SETTINGS_LINK"/> 更改这些选择。请阅读我们完整的<ph name="PRIVACY_POLICY_LINK_BEGIN"/>隐私政策<ph name="PRIVACY_POLICY_LINK_END"/>。</translation>
+<translation id="8012286900922253352">通过启用这些私密指标，帮助 Growser 变得更好并创造更好的产品。</translation>
+<translation id="6058364846991826201">您可以随时在 Growser 中通过 <ph name="SETTINGS_LINK"/> 更改这些选择。请阅读我们完整的<ph name="PRIVACY_POLICY_LINK_BEGIN"/>隐私政策<ph name="PRIVACY_POLICY_LINK_END"/>。</translation>
 <translation id="6871397658902960384">开始浏览</translation>
 <translation id="4988030440045495002">超深色主题</translation>
 <translation id="2422927186524098759">侧边栏</translation>
@@ -2939,7 +2939,7 @@ Growser 有一个帮助服务，通过过滤在 VPN 连接上进行 DNS 查询�
 <translation id="9033485352495162741">确认成功。现在输入您想要的新密码：</translation>
 <translation id="1293857704520741614">登录到您的账户</translation>
 <translation id="118617366439356381">忘记密码？</translation>
-<translation id="5636406393070713097">确认您的 Brave 账户电子邮件，您将收到一个重置密码的验证码。该验证码仅在 15 分钟内有效。</translation>
+<translation id="5636406393070713097">确认您的 Growser 账户电子邮件，您将收到一个重置密码的验证码。该验证码仅在 15 分钟内有效。</translation>
 <translation id="3674472551471103443">重置您的密码</translation>
 <translation id="2755539422340788311">验证您的电子邮件</translation>
 <translation id="6641436078676327508">您应该已收到一封包含短验证码的电子邮件。请在此输入以继续。</translation>
@@ -2961,8 +2961,8 @@ Growser 有一个帮助服务，通过过滤在 VPN 连接上进行 DNS 查询�
 <translation id="4776810543245166572">未找到此电子邮件地址对应的账户。</translation>
 <translation id="1542836798393843657">此电子邮件地址的验证尝试次数过多。请在 24 小时后重试。</translation>
 <translation id="7572012011062736429">内部错误。关闭对话框，取消验证，然后重试。</translation>
-<translation id="7502408214945538786">Brave 账户可让您创建和管理电子邮件别名。</translation>
-<translation id="237081360011331787">Brave 账户可让您创建和管理电子邮件别名。<ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
+<translation id="7502408214945538786">Growser 账户可让您创建和管理电子邮件别名。</translation>
+<translation id="237081360011331787">Growser 账户可让您创建和管理电子邮件别名。<ph name="BEGIN_LINK"/>了解更多<ph name="END_LINK"/></translation>
 <translation id="4178004989875422946">Growser 账户将让您轻松访问 Growser 服务。</translation>
 <translation id="4902897635127068510">您是否想输入 <ph name="SUGGESTION"/>？</translation>
 <translation id="8314772463905284467">大写锁定已开启</translation>

@@ -236,7 +236,7 @@
 <translation id="1986685561493779662">這個名稱已有人使用</translation>
 <translation id="6968892567705775281">要在使用 Growser 搜尋時納入前後文嗎？</translation>
 <translation id="2021896219286479412">全螢幕網站控制</translation>
-<translation id="6412450189646164330">直接從 Brave 工具列體驗最優異的 Gemini 功能。長按即可自訂工具列。</translation>
+<translation id="6412450189646164330">直接從 Growser 工具列體驗最優異的 Gemini 功能。長按即可自訂工具列。</translation>
 <translation id="2024195579772565064">刪除搜尋引擎</translation>
 <translation id="2029669011553795746">提示通知啟用畫面顯示在畫面下半部</translation>
 <translation id="2038563949887743358">開啟「要求電腦版網站」</translation>
@@ -315,7 +315,7 @@
 <translation id="2330243730505117832">「選擇裝置」已關閉。</translation>
 <translation id="2332515770639153015">已啟用安全瀏覽強化防護功能</translation>
 <translation id="233375395665273385">刪除並登出</translation>
-<translation id="1241732115914452718">Brave 的 AI 輔助安全機制可防範線上威脅，上網更安心</translation>
+<translation id="1241732115914452718">Growser 的 AI 輔助安全機制可防範線上威脅，上網更安心</translation>
 <translation id="2341410551640223969">無法安裝「<ph name="WEBAPK_NAME"/>」。</translation>
 <translation id="3587672679800759167">Growser 使用的資料總量，包括帳戶、書籤和儲存的設定</translation>
 <translation id="2354001756790975382">其他書籤</translation>
@@ -326,7 +326,7 @@
 <translation id="2366554533468315977">這項商品的網路價格記錄</translation>
 <translation id="2367818124433749493">開發人員捷徑</translation>
 <translation id="2369058545741334020">以閱讀模式開啟</translation>
-<translation id="2235826960717515993">Brave 最高層級的防護機制，可抵禦線上威脅</translation>
+<translation id="2235826960717515993">Growser 最高層級的防護機制，可抵禦線上威脅</translation>
 <translation id="2385605401818128172">你可以查看傳送大量通知的網站，並禁止這些網站再傳送通知</translation>
 <translation id="2386938421315164605">隱藏和取消隱藏主題</translation>
 <translation id="2390510615457643724">要再次下載「<ph name="FILE_NAME"/>」(<ph name="FILE_SIZE"/>) 嗎？</translation>
@@ -360,7 +360,7 @@
 <translation id="7222718784508482526">如需更多隱私權、安全性和資料收集的相關設定，請參閱<ph name="BEGIN_LINK"/>同步處理和 Growser 服務<ph name="END_LINK"/></translation>
 <translation id="2517113738956581680">完整大小功能表</translation>
 <translation id="284843628681142937">將你造訪的網頁網址傳送給 Growser</translation>
-<translation id="4870714623113535320">Brave 可確保工作安全無虞</translation>
+<translation id="4870714623113535320">Growser 可確保工作安全無虞</translation>
 <translation id="8808315979415031229">在 Growser 應用程式中開啟語音搜尋</translation>
 <translation id="2527209463677295330">納入較多網頁文字，也許能搜尋到更相關的結果</translation>
 <translation id="2527779675047087889">隱藏剪貼簿內容</translation>
@@ -562,7 +562,7 @@
 <translation id="3384347053049321195">分享圖片</translation>
 <translation id="3387650086002190359">檔案系統發生錯誤，因此無法下載 <ph name="FILE_NAME"/>。</translation>
 <translation id="5654361895804243820">如要控管視窗，可以使用 Growser 的視窗管理工具</translation>
-<translation id="4302350545547675750">在 Brave 密碼管理工具中控管</translation>
+<translation id="4302350545547675750">在 Growser 密碼管理工具中控管</translation>
 <translation id="3417835166382867856">搜尋分頁</translation>
 <translation id="3430670036890315772">如果關閉設定檔鎖定功能，系統將移除已儲存的資訊</translation>
 <translation id="4114256890962999877">如要繼續存取密碼，請立即匯出密碼、更新 Google Play 服務，再將密碼匯入回 Growser 密碼管理工具。<ph name="BEGIN_LINK"/>查看完整操作說明<ph name="END_LINK"/>。</translation>
@@ -778,7 +778,7 @@
 <translation id="4307992518367153382">基本選項</translation>
 <translation id="4311652497846705514">要開啟 PDF 嗎？</translation>
 <translation id="4313895677475587452">{NUM_SUSPICIOUS_NOTIFICATIONS,plural, =1{疑似垃圾內容}other{疑似垃圾內容 (#)}}</translation>
-<translation id="1471080727375670503">登入這個網站和 Brave，即可存取<ph name="DEVICE_TYPE"/>中的資訊和其他內容</translation>
+<translation id="1471080727375670503">登入這個網站和 Growser，即可存取<ph name="DEVICE_TYPE"/>中的資訊和其他內容</translation>
 <translation id="4320177379694898372">沒有網際網路連線</translation>
 <translation id="6329878711227695496">如要將 Growser 資料儲存到 Growser 帳戶，或使用帳戶中的 Growser 資料，請驗證身分</translation>
 <translation id="4335835283689002019">安全瀏覽功能已關閉</translation>
@@ -903,7 +903,7 @@
 <translation id="4194619960643453552">瞭解 Growser 如何保護資料安全</translation>
 <translation id="4794291718671962615">(<ph name="MEGABYTES"/>) <ph name="URL"/></translation>
 <translation id="4807098396393229769">持卡人姓名</translation>
-<translation id="2417506209221736982">登入這個網站和 Brave，即可在所有裝置上存取儲存的資訊和其他內容</translation>
+<translation id="2417506209221736982">登入這個網站和 Growser，即可在所有裝置上存取儲存的資訊和其他內容</translation>
 <translation id="480990236307250886">開啟首頁</translation>
 <translation id="4816492930507672669">依頁面大小自動調整</translation>
 <translation id="4822710610088666676">已關閉並儲存「<ph name="TAB_GROUP_TITLE"/>」分頁群組</translation>
@@ -949,7 +949,7 @@
 <translation id="4991110219272367918">審核網站瀏覽要求的選項功能表已關閉</translation>
 <translation id="4996042648402406470">取得</translation>
 <translation id="4996095658297597226">要使用建議的密碼嗎？</translation>
-<translation id="2692140893683628176">享有 Brave 最安全的瀏覽體驗</translation>
+<translation id="2692140893683628176">享有 Growser 最安全的瀏覽體驗</translation>
 <translation id="5007392906805964215">查看</translation>
 <translation id="5010886807652684893">視覺化檢視</translation>
 <translation id="5011311129201317034"><ph name="SITE"/> 要求連線</translation>
@@ -970,7 +970,7 @@
 <translation id="509429900233858213">發生錯誤。</translation>
 <translation id="5096775069898886423">如果網站不支援安全連線，系統會在造訪前發出警告</translation>
 <translation id="510275257476243843">還剩 1 小時</translation>
-<translation id="1006701764546698765">管理其他 Brave 資料</translation>
+<translation id="1006701764546698765">管理其他 Growser 資料</translation>
 <translation id="5114895953710637392">應用程式篩選功能表已關閉。</translation>
 <translation id="5115811374190515607">移至<ph name="PRODUCT_NAME"/></translation>
 <translation id="7143053178237996319">你隨時可以輕觸訊息、文件或其他應用程式中的連結，使用 Growser 開啟</translation>
@@ -1020,7 +1020,7 @@
 <translation id="5316947901395241499">系統管理員已關閉密碼儲存功能</translation>
 <translation id="5317780077021120954">儲存</translation>
 <translation id="989239400026154074">Growser 推薦使用 Growser</translation>
-<translation id="2334093076041322971">在 Brave 帳戶中管理</translation>
+<translation id="2334093076041322971">在 Growser 帳戶中管理</translation>
 <translation id="5326246328175179736">無法使用此帳戶登入</translation>
 <translation id="5327248766486351172">名稱</translation>
 <translation id="5328542107300944283">使用 <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 的帳戶操作</translation>
@@ -1046,7 +1046,7 @@
 <translation id="5438292632479953702">再次下載</translation>
 <translation id="2766925507720001104">這項防護機制分析的網站資料比標準防護來得多，因此即使是 Growser 不知道的網站，這項防護機制也能提供危險網站警告。你可以選擇略過 Growser 的警告。</translation>
 <translation id="5441466871879044658">翻譯成這種語言</translation>
-<translation id="4174952142323379142">登入這個網站和 Brave，即可存取<ph name="DEVICE_TYPE"/>的書籤和其他內容</translation>
+<translation id="4174952142323379142">登入這個網站和 Growser，即可存取<ph name="DEVICE_TYPE"/>的書籤和其他內容</translation>
 <translation id="5444999712122199445">返回網站</translation>
 <translation id="544776284582297024">如果想開啟分頁並同時造訪不同的網頁，請輕觸「開啟的分頁」按鈕</translation>
 <translation id="5456381639095306749">下載網頁</translation>
@@ -1249,7 +1249,7 @@
 <translation id="6312687380483398334">網頁應用程式 (安靜模式)</translation>
 <translation id="6315386555979018699">刪除並繼續</translation>
 <translation id="6316139424528454185">系統不支援目前的 Android 版本</translation>
-<translation id="6485997157403727556">擴充功能「<ph name="EXTENSION_NAME"/>」要求你登入 Brave</translation>
+<translation id="6485997157403727556">擴充功能「<ph name="EXTENSION_NAME"/>」要求你登入 Growser</translation>
 <translation id="6324916366299863871">編輯捷徑</translation>
 <translation id="6324977638108296054">無法建立醒目顯示文字的連結</translation>
 <translation id="6331836477476466332">更安全、更強大的瀏覽器</translation>
@@ -1410,7 +1410,7 @@
 <translation id="6885933993535178919">{NUM_SITES,plural, =1{已取消訂閱 1 個網站}other{已取消訂閱 # 個網站}}</translation>
 <translation id="6886500155621657325">{ITEMS_COUNT,plural, =1{1 組密碼}other{# 組密碼}}</translation>
 <translation id="667636428974305054">登出後，你 Growser 帳戶中的書籤、密碼和其他資訊就會從這部裝置移除。</translation>
-<translation id="5241784838196645561">如要使用這個擴充功能，請登入 Brave。你還可以使用 Brave 帳戶中的密碼和其他內容，並資料儲存到帳戶。</translation>
+<translation id="5241784838196645561">如要使用這個擴充功能，請登入 Growser。你還可以使用 Growser 帳戶中的密碼和其他內容，並資料儲存到帳戶。</translation>
 <translation id="6896758677409633944">複製</translation>
 <translation id="3677019108032076044">使用通關密語加密 Growser 帳戶中的所有 Growser 資料</translation>
 <translation id="6900532703269623216">強化防護</translation>
@@ -1510,7 +1510,7 @@
 <translation id="724510009481365878">無法列印這個網頁</translation>
 <translation id="7248671827512403053">應用程式</translation>
 <translation id="7253951228444156601">正在檢查密碼…</translation>
-<translation id="7265857422443387781">使用 Brave 智慧鏡頭搜尋分頁 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
+<translation id="7265857422443387781">使用 Growser 智慧鏡頭搜尋分頁 <ph name="BEGIN_NEW"/>新功能<ph name="END_NEW"/></translation>
 <translation id="727288900855680735">要將 <ph name="ONE_TIME_CODE"/> 提交至 <ph name="ORIGIN"/> 嗎？</translation>
 <translation id="7274013316676448362">已封鎖網站</translation>
 <translation id="7276868533747677875">如果先前曾匯出密碼，請在裝置上找出 CSV 檔案，並將檔案匯入你想使用的密碼管理工具。</translation>
@@ -1611,7 +1611,7 @@
 <translation id="7663320421139257046">如要繼續，<ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 會將你的<ph name="FIELDS_STRING"/>提供給這個網站。詳情查看這個網站的《<ph name="BEGIN_LINK1"/>隱私權政策<ph name="END_LINK1"/>》。</translation>
 <translation id="766587987807204883">文章會顯示在這裡，並可供離線閱讀</translation>
 <translation id="7666185984446444960">已關閉 <ph name="TAB_GROUPS_AND_TABS_PART"/></translation>
-<translation id="4561249691379785743">登入這個網站和 Brave，即可在所有裝置上存取密碼和其他內容</translation>
+<translation id="4561249691379785743">登入這個網站和 Growser，即可在所有裝置上存取密碼和其他內容</translation>
 <translation id="7682724950699840886">請嘗試按照下列提示操作：確認你的裝置上有足夠空間，然後嘗試重新匯出。</translation>
 <translation id="7795837497684113327">你的裝置無法開啟 Growser。如要修正問題，請前往應用程式商店下載 Growser 更新。</translation>
 <translation id="7692761875510935111">在瀏覽器中快速開啟。按住這裡即可編輯這個捷徑。</translation>
@@ -1786,7 +1786,7 @@
 <translation id="8387617938027387193">驗證你的身分</translation>
 <translation id="8393700583063109961">傳送訊息</translation>
 <translation id="8396098434728053815">一併分享分頁音訊</translation>
-<translation id="3629742817163747481">為確保你在 Brave 上的工作資料安全無虞，當你登入 Brave 時，貴機構將可查看或管理特定資訊。<ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/></translation>
+<translation id="3629742817163747481">為確保你在 Growser 上的工作資料安全無虞，當你登入 Growser 時，貴機構將可查看或管理特定資訊。<ph name="BEGIN_LINK"/>瞭解詳情<ph name="END_LINK"/></translation>
 <translation id="8413126021676339697">顯示完整記錄</translation>
 <translation id="5348884013239264115">防範已知的危險網站、下載內容和擴充功能。Growser 會在你造訪網站時，透過隱私權伺服器隱藏你的 IP 位址，再傳送經模糊處理的部分網址給 Growser。如果網站有可疑行為，系統也會傳送整個網址和部分網頁內容。</translation>
 <translation id="8414396119627470038">使用 <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> 登入 <ph name="SITE_ETLD_PLUS_ONE"/></translation>
@@ -1985,7 +1985,7 @@
 <translation id="9190276265094487094">所有已同步的裝置上都會有你的歷史記錄，方便你繼續執行先前的工作</translation>
 <translation id="9190355771000652811">在網址列中，將此鍵盤快速鍵與搜尋引擎和搜尋捷徑搭配使用。</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{已在 1 分鐘前檢查}other{已在 # 分鐘前檢查}}</translation>
-<translation id="8903757655587058652">登入這個網站和 Brave，即可存取<ph name="DEVICE_TYPE"/>儲存的資訊和其他內容</translation>
+<translation id="8903757655587058652">登入這個網站和 Growser，即可存取<ph name="DEVICE_TYPE"/>儲存的資訊和其他內容</translation>
 <translation id="9202894533863490414">要從這個網站下載內容嗎？</translation>
 <translation id="9204836675896933765">還剩 1 個檔案</translation>
 <translation id="9205933215779845960">找不到該頁面。請檢查錯別字或嘗試使用 <ph name="SEARCH_ENGINE"/> 搜尋。</translation>
@@ -1993,7 +1993,7 @@
 <translation id="9212845824145208577">無法再向下捲動。請嘗試從下一頁開始。</translation>
 <translation id="9218430445555521422">設為預設</translation>
 <translation id="9219103736887031265">圖片</translation>
-<translation id="142389341645668510">自訂 Brave</translation>
+<translation id="142389341645668510">自訂 Growser</translation>
 <translation id="9222198206152536936">以「<ph name="EMAIL"/>」身分登入，就能在所有裝置上存取分頁和其他資料</translation>
 <translation id="7625138338483121345">將 Growser 設為預設瀏覽器</translation>
 <translation id="4596514158372210596">將你的 Growser 活動記錄從數位健康中移除</translation>

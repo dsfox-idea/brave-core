@@ -186,7 +186,7 @@ Jebkurā laikā varat pārbaudīt paroles pakalpojumā <ph name="GOOGLE_PASSWORD
 <translation id="1130116586186908674">Izveidot dalīto skatu</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> — grupas “<ph name="GROUP_NAME"/>” elements</translation>
 <translation id="1130676589211693127">Labās austiņas akumulatora uzlādes līmenis ir <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">Kad tiek kopīgotas cilnes, to lapu saturs, multivide un vietrāži URL tiek nosūtīti uz uzņēmumam Brave un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
+<translation id="1412403201555978627">Kad tiek kopīgotas cilnes, to lapu saturs, multivide un vietrāži URL tiek nosūtīti uz uzņēmumam Growser un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
 <translation id="1133418583142946603">Pievienot pašreizējo cilni</translation>
 <translation id="1133751489735776037">Trīsreiz noklikšķināt ar peles kreiso pogu</translation>
 <translation id="1136712381129578788">Šī drošības atslēga ir bloķēta, jo pārāk daudz reižu ievadīts nepareizs PIN. Lai atbloķētu atslēgu, noņemiet to un ievietojiet atkārtoti.</translation>
@@ -376,7 +376,7 @@ Jebkurā laikā varat pārbaudīt paroles pakalpojumā <ph name="GOOGLE_PASSWORD
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Apturēt</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>Atbalstīto saišu<ph name="END_LINK"/> atvēršana</translation>
-<translation id="7823526956728613125">Pārvaldiet saistījumu starp Meklēšanas pakalpojumiem un Brave Workspace lietotnēm, piemēram, Brave disku.</translation>
+<translation id="7823526956728613125">Pārvaldiet saistījumu starp Meklēšanas pakalpojumiem un Growser Workspace lietotnēm, piemēram, Growser disku.</translation>
 <translation id="1274997165432133392">Sīkfaili un citi vietņu dati</translation>
 <translation id="1275936815032730048">palaidēja taustiņš + labā bultiņa</translation>
 <translation id="1275963833368139883">Veicot meklēšanu pārlūkošanas vēsturē, atbildes un meklēšanas rezultāti tiek rādīti, pamatojoties uz lapas saturu. Tādējādi tiek iegūti labāki rezultāti.</translation>
@@ -653,7 +653,7 @@ Jebkurā laikā varat pārbaudīt paroles pakalpojumā <ph name="GOOGLE_PASSWORD
 <translation id="1508931164824684991">Atļaut vietnēm izmantot JavaScript</translation>
 <translation id="1509163368529404530">&amp;Atjaunot grupu</translation>
 <translation id="1509281256533087115">Piekļūt jebkurai ierīcei <ph name="DEVICE_NAME_AND_VENDOR"/>, izmantojot USB savienojumu</translation>
-<translation id="2825615584808054779">Netiks pārskatītas ne jūsu sarunas ar Gemini, ne jūsu Brave Workspace dati, un šīs sarunas un dati netiks izmantoti ģeneratīvā MI modeļu uzlabošanai. Gemini ir MI un var pieļaut kļūdas.</translation>
+<translation id="2825615584808054779">Netiks pārskatītas ne jūsu sarunas ar Gemini, ne jūsu Growser Workspace dati, un šīs sarunas un dati netiks izmantoti ģeneratīvā MI modeļu uzlabošanai. Gemini ir MI un var pieļaut kļūdas.</translation>
 <translation id="1510238584712386396">Lietojumprogrammu palaidējs</translation>
 <translation id="1510341833810331442">Vietnēm nav atļauts saglabāt datus jūsu ierīcē</translation>
 <translation id="1510882959204224895">Atvērt logā</translation>
@@ -747,7 +747,7 @@ Jebkurā laikā varat pārbaudīt paroles pakalpojumā <ph name="GOOGLE_PASSWORD
 <translation id="1581962803218266616">Rādīt lietojumprogrammā Finder</translation>
 <translation id="1582955169539260415">dzēst [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276">Valoda (<ph name="LANGUAGE"/>) tiek apstrādāta lokāli un darbojas bezsaistē.</translation>
-<translation id="491276955533054201">Vispirms ieslēdziet Brave automātisko pārlūkošanu šajā ierīcē</translation>
+<translation id="491276955533054201">Vispirms ieslēdziet Growser automātisko pārlūkošanu šajā ierīcē</translation>
 <translation id="1587275751631642843">JavaScript pults</translation>
 <translation id="1588438908519853928">Parasts</translation>
 <translation id="1588772269240419305">Pārskatiet logotipa un nosaukuma atjauninājumus</translation>
@@ -1149,7 +1149,7 @@ Jebkurā laikā varat pārbaudīt paroles pakalpojumā <ph name="GOOGLE_PASSWORD
 <translation id="1892453608039100484">1. Noklikšķiniet uz tālāk redzamās pogas <ph name="BUTTON_LABEL"/>.
 2. Windows iestatījumos noklikšķiniet uz <ph name="BUTTON_2"/>.</translation>
 <translation id="1895658205118569222">Izslēgšana</translation>
-<translation id="1189523243806849236">Tērzēšanas sarunas tiek pārskatītas un izmantotas Brave MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1189523243806849236">Tērzēšanas sarunas tiek pārskatītas un izmantotas Growser MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="1897120393475391208">Izmantojiet drošu paroli</translation>
 <translation id="1897860317037652061">Pārbaude neizdevās</translation>
 <translation id="1898804291554630487">Jautājiet par šo lapu</translation>
@@ -1158,7 +1158,7 @@ Jebkurā laikā varat pārbaudīt paroles pakalpojumā <ph name="GOOGLE_PASSWORD
 <translation id="1901213235765457754">Lūdziet, lai administrators atjaunina šo lietotni</translation>
 <translation id="1901303067676059328">Izvēlēties visus</translation>
 <translation id="1901760057081700494">Pašlaik iestatītā laika josla: <ph name="TIME_ZONE_ENTRY"/>. Lai automātiski atjauninātu laika joslu, <ph name="BEGIN_LINK"/>ieslēdziet sistēmas piekļuvi atrašanās vietai<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Jūsu mājas adrese var palīdzēt jums paveikt vairāk dažādos Brave pakalpojumos, piemēram, iegūt atbilstošākus meklēšanas rezultātus un norādes pakalpojumā Brave Maps. Varat rediģēt vai dzēst adresi savā <ph name="BEGIN_LINK"/>Brave kontā<ph name="END_LINK"/> (<ph name="USERNAME"/>).</translation>
+<translation id="3930197956137872864">Jūsu mājas adrese var palīdzēt jums paveikt vairāk dažādos Growser pakalpojumos, piemēram, iegūt atbilstošākus meklēšanas rezultātus un norādes pakalpojumā Growser Maps. Varat rediģēt vai dzēst adresi savā <ph name="BEGIN_LINK"/>Growser kontā<ph name="END_LINK"/> (<ph name="USERNAME"/>).</translation>
 <translation id="6893464351226208429">Jūsu apmeklētie URL tiek saglabāti Growser kontā</translation>
 <translation id="190530012637606145">Tiek rādīti brīdinājumi par visiem nedrošajiem savienojumiem, tostarp privātiem iekštīkliem.</translation>
 <translation id="1906181697255754968">Parasti piekļuve failiem un mapēm ierīcē vietnēm ir nepieciešama, lai nodrošinātu noteiktas funkcijas, piemēram, automātisku darba saglabāšanu.</translation>
@@ -1531,7 +1531,7 @@ Varat pārvaldīt šī konta iestatījumus, savā ierīcē instalējot lietotni 
 <translation id="2198625180564913276">Notiek profila pievienošana. Tas var ilgt dažas minūtes.</translation>
 <translation id="2198712775285959645">Rediģēt</translation>
 <translation id="2199298570273670671">Kļūda</translation>
-<translation id="2798272130984183944">Izvēlieties, vai pārlūkā Brave izmantot MI modeļus, kas darbojas tieši jūsu ierīcē.</translation>
+<translation id="2798272130984183944">Izvēlieties, vai pārlūkā Growser izmantot MI modeļus, kas darbojas tieši jūsu ierīcē.</translation>
 <translation id="2200094388063410062">Nosūtīt e-pastā</translation>
 <translation id="2200781749203116929">ChromeOS sistēmas žurnāli</translation>
 <translation id="2202391868799679245">Ieslēgt īsinājumtaustiņu</translation>
@@ -1611,7 +1611,7 @@ Varat pārvaldīt šī konta iestatījumus, savā ierīcē instalējot lietotni 
 <translation id="225716114209817872">Maksimāli</translation>
 <translation id="5642482119439119644">Lai iegūtu cilnes no citām savām ierīcēm, apstipriniet savu identitāti. Jebkurā brīdī iestatījumos varat pārtraukt sinhronizēšanu. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
 <translation id="22614517036276112">Šis dokuments vai jūsu ierīce neatbilst dažām jūsu organizācijas drošības politikām. Sazinieties ar administratoru, lai noskaidrotu, kādas problēmas jānovērš.</translation>
-<translation id="1829264724820495616">Jūsu darbavietas adrese var palīdzēt jums paveikt vairāk dažādos Brave pakalpojumos, piemēram, iegūt atbilstošākus meklēšanas rezultātus un norādes pakalpojumā Brave Maps. Varat rediģēt vai dzēst adresi savā <ph name="BEGIN_LINK"/>Brave kontā<ph name="END_LINK"/> (<ph name="USERNAME"/>).</translation>
+<translation id="1829264724820495616">Jūsu darbavietas adrese var palīdzēt jums paveikt vairāk dažādos Growser pakalpojumos, piemēram, iegūt atbilstošākus meklēšanas rezultātus un norādes pakalpojumā Growser Maps. Varat rediģēt vai dzēst adresi savā <ph name="BEGIN_LINK"/>Growser kontā<ph name="END_LINK"/> (<ph name="USERNAME"/>).</translation>
 <translation id="2262477216570151239">Aizkave pirms atkārtošanas</translation>
 <translation id="2263371730707937087">Ekrāna atsvaidzināšanas biežums</translation>
 <translation id="7829329302663082098">Mēs novērtējam jūsu atsauksmes — tās palīdz mums uzlabot pakalpojumu Growser Cast. Lai saņemtu palīdzību apraides problēmu novēršanā, apmeklējiet <ph name="BEGIN_LINK"/>palīdzības centru<ph name="END_LINK"/>.</translation>
@@ -1754,7 +1754,7 @@ Varat pārvaldīt šī konta iestatījumus, savā ierīcē instalējot lietotni 
 <translation id="2373499590298659902">Lai nospiestu un turētu peles pogu, izmantojiet taustiņu “0”</translation>
 <translation id="2373666622366160481">Ietilpināt lapā</translation>
 <translation id="2375406435414127095">Savienošana ar tālruni</translation>
-<translation id="6612559367203670996">Brave izmanto kopīgoto ciļņu saturu un vietrādi URL. Pašreizējā cilne tiek kopīgota jaunās tērzēšanas sarunās. Jebkurā laikā varat mainīt šo iestatījumu.</translation>
+<translation id="6612559367203670996">Growser izmanto kopīgoto ciļņu saturu un vietrādi URL. Pašreizējā cilne tiek kopīgota jaunās tērzēšanas sarunās. Jebkurā laikā varat mainīt šo iestatījumu.</translation>
 <translation id="2376056713414548745">Lasīšana skaļi</translation>
 <translation id="2376122016044804363">Apstiprinājumi par kopēšanu starpliktuvē</translation>
 <translation id="2377667304966270281">Nopietnas kļūdas</translation>
@@ -3319,7 +3319,7 @@ Servera ziņojums: <ph name="SERVER_MSG"/></translation>
 <translation id="3569614820047645079">Jūsu faili, kas atrodas mapē “Mans disks”, tiek automātiski sinhronizēti ar jūsu Chromebook datoru, lai jūs varētu tiem piekļūt bez interneta savienojuma.</translation>
 <translation id="3569617221227793022">Pašlaik iestatītā laika josla: <ph name="TIME_ZONE_ENTRY"/>. Šo iestatījumu pārvalda jūsu administrators.</translation>
 <translation id="3569682580018832495">Vietne <ph name="ORIGIN"/> var skatīt šos failus un mapes:</translation>
-<translation id="4062501938325597704">Lapu saturs un vietrāži URL, ko Gemini izmantos uzdevuma veikšanas laikā, tiks kopīgoti ar uzņēmumu Brave un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
+<translation id="4062501938325597704">Lapu saturs un vietrāži URL, ko Gemini izmantos uzdevuma veikšanas laikā, tiks kopīgoti ar uzņēmumu Growser un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
 <translation id="3571734092741541777">Iestatīt</translation>
 <translation id="3575121482199441727">Atļaut šajā vietnē</translation>
 <translation id="3575224072358507281">vākt IP adresi un tīkla novērtēšanas rezultātus platformai Measurement Lab saskaņā ar tās konfidencialitātes politiku (measurementlab.net/privacy).</translation>
@@ -3507,7 +3507,7 @@ Servera ziņojums: <ph name="SERVER_MSG"/></translation>
 <translation id="3708295717182051206">Subtitri</translation>
 <translation id="3708684582558000260">Neļaut aizvērtajām vietnēm pabeigt datu sūtīšanu vai saņemšanu</translation>
 <translation id="3709244229496787112">Pārlūks tika izslēgts, pirms lejupielāde bija pabeigta.</translation>
-<translation id="3710438437470197252">Skatīt vairāk Brave diskā</translation>
+<translation id="3710438437470197252">Skatīt vairāk Growser diskā</translation>
 <translation id="3710501561113687889">Lai turpinātu, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> kopīgos ar šo vietni šādus jūsu datus: <ph name="FIELDS_STRING"/>.</translation>
 <translation id="3711931198657368127">Ielīmēt un doties uz <ph name="URL"/></translation>
 <translation id="3711945201266135623">Atrasti <ph name="NUM_PRINTERS"/> printeri no drukas servera.</translation>
@@ -4998,7 +4998,7 @@ Lai tālinātu, nospiediet Ctrl + Alt + spilgtuma samazināšanas taustiņu.
 <translation id="485480310608090163">Citi iestatījumi un atļaujas</translation>
 <translation id="4857304314344645169">Varat skatīt jebkura uzdevuma risinājuma detalizētu skaidrojumu</translation>
 <translation id="1913048435257025864">Jautāt Growser par iepriekšējo lapu: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Lai sniegtu atbilstošākas atbildes, jūsu pašreizējās cilnes saturs un vietrādis URL tiek kopīgots ar Brave. Pārlūkošanas laikā varat pievienot vai noņemt cilnes.</translation>
+<translation id="228735844055480091">Lai sniegtu atbilstošākas atbildes, jūsu pašreizējās cilnes saturs un vietrādis URL tiek kopīgots ar Growser. Pārlūkošanas laikā varat pievienot vai noņemt cilnes.</translation>
 <translation id="485806788160414322">Atskaņot multivides saturu vai apturēt tā atskaņošanu</translation>
 <translation id="4858913220355269194">Futbolbumba</translation>
 <translation id="4860012864737017059">Pēdējā cilne</translation>
@@ -5064,7 +5064,7 @@ Lai tālinātu, nospiediet Ctrl + Alt + spilgtuma samazināšanas taustiņu.
 <translation id="4895799941222633551">Izveidot &amp;saīsni…</translation>
 <translation id="4898913189644355814">Vietnē var tikt saglabāta jūsu vēlamā valoda vai vienumi, ko vēlaties iegādāties. Šī informācija ir pieejama attiecīgajai vietnei un tās apakšdomēniem.</translation>
 <translation id="4899052647152077033">Krāsu invertēšana</translation>
-<translation id="4899813415889597597">Nevarēja izveidot savienojumu ar jūsu Brave diska kontu</translation>
+<translation id="4899813415889597597">Nevarēja izveidot savienojumu ar jūsu Growser diska kontu</translation>
 <translation id="490031510406860025">Nav atļauts šajā vietnē</translation>
 <translation id="490051679772058907"><ph name="REFRESH_RATE"/> Hz — rindpārlēces izvērse</translation>
 <translation id="4900652253009739885">Nevar noņemt vienīgo slēdzi, kas ir piešķirts darbībai “Atlasīt”. Nospiediet jebkuru taustiņu, lai veiktu darbību <ph name="RESPONSE"/>.</translation>
@@ -5333,7 +5333,7 @@ Lai tālinātu, nospiediet Ctrl + Alt + spilgtuma samazināšanas taustiņu.
 <translation id="5112577000029535889">Izstrā&amp;dātāja rīki</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{Tika pārvietots 1 fails}zero{Tika pārvietoti {NUM_OF_FILES} faili}one{Tika pārvietots {NUM_OF_FILES} fails}other{Tika pārvietoti {NUM_OF_FILES} faili}}</translation>
 <translation id="511313294362309725">Ieslēgt ātro savienošanu pārī</translation>
-<translation id="6409962091529734959">Uzzināt vairāk par Brave automātisko pārlūkošanu</translation>
+<translation id="6409962091529734959">Uzzināt vairāk par Growser automātisko pārlūkošanu</translation>
 <translation id="51143538739122961">Ievietojiet drošības atslēgu un pieskarieties tai</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Sag&amp;labāt audio kā...</translation>
@@ -5376,7 +5376,7 @@ Lai tālinātu, nospiediet Ctrl + Alt + spilgtuma samazināšanas taustiņu.
 <translation id="5146235736676876345">Izvēlēties savu paroli</translation>
 <translation id="5146896637028965135">Sistēmas balss</translation>
 <translation id="5147113439721488265">Ieteikums</translation>
-<translation id="5897101208018277582">Lai nosūtītu saites, verificējiet savu identitāti. Varat sūtīt saites, ja abās ierīcēs pierakstījāties tajā pašā Brave kontā.</translation>
+<translation id="5897101208018277582">Lai nosūtītu saites, verificējiet savu identitāti. Varat sūtīt saites, ja abās ierīcēs pierakstījāties tajā pašā Growser kontā.</translation>
 <translation id="5148285448107770349">Parolē jābūt vismaz 8 rakstzīmēm</translation>
 <translation id="5149602533174716626">Kop&amp;ēt video kadru</translation>
 <translation id="5150254825601720210">Netscape sertifikāta SSL servera nosaukums</translation>
@@ -6061,7 +6061,7 @@ Lai tālinātu, nospiediet Ctrl + Alt + spilgtuma samazināšanas taustiņu.
 <translation id="5713158217420111469">Izveidots savienojums ar ierīci <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Invertēta</translation>
 <translation id="5714100381896040477">Ierobežot kustību ekrānā</translation>
-<translation id="8277434106940718633">Netiks pārskatītas ne jūsu sarunas ar Gemini, ne jūsu Brave Workspace dati, un šīs sarunas un dati netiks izmantoti ģeneratīvā MI modeļu uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Noteikts saturs var nebūt piemērots visiem.</translation>
+<translation id="8277434106940718633">Netiks pārskatītas ne jūsu sarunas ar Gemini, ne jūsu Growser Workspace dati, un šīs sarunas un dati netiks izmantoti ģeneratīvā MI modeļu uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Noteikts saturs var nebūt piemērots visiem.</translation>
 <translation id="5719854774000914513">Atļaut vietnēm pieprasīt atļauju veidot savienojumu ar HID ierīcēm</translation>
 <translation id="5720729194423017301">Saīsnes vietnēm un meklētājprogrammām</translation>
 <translation id="572155275267014074">Android iestatījumi</translation>
@@ -6995,7 +6995,7 @@ Lai tālinātu, nospiediet Ctrl + Alt + spilgtuma samazināšanas taustiņu.
 <translation id="6464825623202322042">Šī ierīce</translation>
 <translation id="6465841119675156448">Bez interneta savienojuma</translation>
 <translation id="6466258437571594570">Vietnes nevar jūs traucēt, lai lūgtu atļauju sūtīt paziņojumus</translation>
-<translation id="1673835407889847350">Apstipriniet savu identitāti, lai pievienotu paroles un iegūtu tās visās ierīcēs, kurās izmantojat savu Brave kontu.</translation>
+<translation id="1673835407889847350">Apstipriniet savu identitāti, lai pievienotu paroles un iegūtu tās visās ierīcēs, kurās izmantojat savu Growser kontu.</translation>
 <translation id="6467230443178397264">Pārbaudīt failu “<ph name="FILE_NAME"/>”</translation>
 <translation id="6467304607960172345">Pilnekrāna videoklipu optimizēšana</translation>
 <translation id="6467377768028664108">Pēc tam <ph name="DEVICE_TYPE"/> datorā varēsiet veikt tālāk norādītās darbības.</translation>
@@ -7008,7 +7008,7 @@ Lai tālinātu, nospiediet Ctrl + Alt + spilgtuma samazināšanas taustiņu.
 <translation id="6470823736074966819">Izslēgt paziņojumus</translation>
 <translation id="6472893788822429178">Rādīt pogu Sākums</translation>
 <translation id="6473315466413288899">Atlasiet kādu no tālāk norādītajām iespējām.</translation>
-<translation id="6199773995438617867">Skatīt vairāk Brave kalendārā</translation>
+<translation id="6199773995438617867">Skatīt vairāk Growser kalendārā</translation>
 <translation id="6474401088838630457">Jautāt Gemini vairāk par šo</translation>
 <translation id="6474498546677193336">Nevarēja atsaukt kopīgošanu, jo šo mapi izmanto lietojumprogramma. Mapes kopīgošana tiks atsaukta, kad nākamreiz tiks beidzēta operētājsistēma Linux.</translation>
 <translation id="6474884162850599008">Atspējot Growser diska kontu</translation>
@@ -7193,7 +7193,7 @@ Jums ir vēl # uzlauztas paroles. Growser paroļu pārvaldnieks iesaka nekavējo
 <translation id="6613231539539868591">Saglabātie dati</translation>
 <translation id="6613267708691765962">Notiek ļaunprātīgas programmatūras meklēšana…</translation>
 <translation id="6615455863669487791">Rādīt man</translation>
-<translation id="5146630705831894319">Piedāvāt Brave tulkotāju tīmekļa vietnēm un PDF failiem citās valodās</translation>
+<translation id="5146630705831894319">Piedāvāt Growser tulkotāju tīmekļa vietnēm un PDF failiem citās valodās</translation>
 <translation id="6618013221808317456">Neļaut vietnēm izmantot JavaScript optimizāciju</translation>
 <translation id="6618154741503063152">Nevar augšupielādēt. Pielikumi nav atļauti.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7547,7 +7547,7 @@ Jums ir vēl # uzlauztas paroles. Growser paroļu pārvaldnieks iesaka nekavējo
 <translation id="6871644448911473373">OCSP atbildētājs: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Valodas…</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Ja Brave tulkotājs ir ieslēgts, tas piedāvā tulkot vietnes un PDF failus jūsu vēlamajā valodā. Tas var arī automātiski tulkot vietnes.</translation>
+<translation id="5189979109199910058">Ja Growser tulkotājs ir ieslēgts, tas piedāvā tulkot vietnes un PDF failus jūsu vēlamajā valodā. Tas var arī automātiski tulkot vietnes.</translation>
 <translation id="6873571253135628430">Mainīt vietņu atļaujas</translation>
 <translation id="6874986444867497677">Instalēšanu nevarēja pabeigt. Lūdzu, mēģiniet vēlreiz vai aizveriet šo logu.</translation>
 <translation id="6876155724392614295">Velosipēds</translation>
@@ -7835,7 +7835,7 @@ Jums ir vēl # uzlauztas paroles. Growser paroļu pārvaldnieks iesaka nekavējo
 <translation id="710224247908684995">Paplašinājums izslēdza funkciju Droša pārlūkošana.</translation>
 <translation id="7102832101143475489">Iestājās pieprasījuma noildze.</translation>
 <translation id="7103944802169726298">Dators un apraides ierīce ir vienā Wi-Fi tīklā</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave abonements</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser abonements</translation>
 <translation id="7107609441453408294">Atskaņot to pašu audio saturu visos skaļruņos</translation>
 <translation id="7108338896283013870">Slēpt</translation>
 <translation id="7108419148561505648">Pirms saglabāšanas aizpildiet vismaz vienu lauku</translation>
@@ -8206,7 +8206,7 @@ Jums ir vēl # uzlauztas paroles. Growser paroļu pārvaldnieks iesaka nekavējo
 <translation id="7395774987022469191">Viss ekrāns</translation>
 <translation id="7396017167185131589">Šeit būs redzamas kopīgotās mapes.</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> tiks startēta pie sistēmas startēšanas un turpinās darboties fonā arī tad, ja aizvērsiet visus citus <ph name="PRODUCT_NAME"/> logus.</translation>
-<translation id="8572914900293297191">Tērzēšanas sarunas tiek pārskatītas un izmantotas Brave MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Noteikts saturs var nebūt piemērots visiem. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="8572914900293297191">Tērzēšanas sarunas tiek pārskatītas un izmantotas Growser MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Noteikts saturs var nebūt piemērots visiem. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="7399045143794278225">Pielāgot sinhronizāciju</translation>
 <translation id="7399616692258236448">Atrašanās vietu pieprasījumi tiek automātiski bloķēti visās vietnēs, izņemot tās, kurās atļāvāt to rādīšanu.</translation>
 <translation id="7399802613464275309">Drošības pārbaude</translation>
@@ -8740,7 +8740,7 @@ Lai noņemtu piešķīrumu, nospiediet piešķirto slēdzi vai taustiņu.</trans
 <translation id="7807711621188256451">Vienmēr ļaut vietnei <ph name="HOST"/> piekļūt kamerai</translation>
 <translation id="7810202088502699111">Uznirstošie logi šajā lapā tika bloķēti.</translation>
 <translation id="7810367892333449285">Ierakstam ir jābūt šādā formātā: <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ adrese<ph name="LPA_2"/>$<ph name="LPA_3"/>neobligāts atbilstības ID<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Pārlūku Brave nodrošina Brave atklātā pirmkoda projekts un cita <ph name="BEGIN_HIGHLIGHT"/>atklātā pirmkoda<ph name="END_HIGHLIGHT"/> programmatūra.</translation>
+<translation id="5014491767627896944">Pārlūku Growser nodrošina Growser atklātā pirmkoda projekts un cita <ph name="BEGIN_HIGHLIGHT"/>atklātā pirmkoda<ph name="END_HIGHLIGHT"/> programmatūra.</translation>
 <translation id="7811263553491007091">Mēģiniet vēlreiz vai atlasiet kādu no tālāk norādītajiem iepriekš ģenerētajiem motīviem.</translation>
 <translation id="7811926937048662341">Ar peles labo pogu noklikšķiniet šeit un atlasiet vienumu “Rādīt cilnes vertikāli”</translation>
 <translation id="7811986034759500329">Iestatīt sistēmas iestatījumos</translation>
@@ -8763,7 +8763,7 @@ Lai noņemtu piešķīrumu, nospiediet piešķirto slēdzi vai taustiņu.</trans
 <translation id="7826039927887234077"><ph name="INDEX"/>. MI nesen ģenerētais motīvs ar šādu objektu: <ph name="SUBJECT"/>; noskaņojums: <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Mantoto pārlūku atbalsts — iekšējie iestatījumi</translation>
 <translation id="7826838152281937785">Aizvērt apakšdaļas skatu</translation>
-<translation id="45690163731419633">Ir spēkā <ph name="BEGIN_LINK_TERMS"/>Brave noteikumi<ph name="END_LINK_TERMS"/> un <ph name="BEGIN_LINK_PRIVACY"/>Gemini Apps konfidencialitātes paziņojums<ph name="END_LINK_PRIVACY"/>.</translation>
+<translation id="45690163731419633">Ir spēkā <ph name="BEGIN_LINK_TERMS"/>Growser noteikumi<ph name="END_LINK_TERMS"/> un <ph name="BEGIN_LINK_PRIVACY"/>Gemini Apps konfidencialitātes paziņojums<ph name="END_LINK_PRIVACY"/>.</translation>
 <translation id="7828642077514646543">Kļūda: nevar dekodēt sertifikātu</translation>
 <translation id="7830276128493844263">Sistēmas iestatījumos ir izslēgta piekļuve atrašanās vietai</translation>
 <translation id="7830833461614351956">Vai kopēt <ph name="NUM_OF_FILES"/> failu(-us) uz pakalpojumu <ph name="CLOUD_PROVIDER"/>, lai tos atvērtu?</translation>
@@ -9634,7 +9634,7 @@ Glabājiet atslēgas failu drošā vietā. Tas būs vajadzīgs, lai izveidotu ja
 <translation id="850399339579925930">Vārdnīcas</translation>
 <translation id="850561044295157831">Uzzināt vairāk par funkciju “Palīdziet man uzrakstīt”</translation>
 <translation id="8505669004895429027">Mazs ietaupījums</translation>
-<translation id="869548515244800202">Brave abonements</translation>
+<translation id="869548515244800202">Growser abonements</translation>
 <translation id="8507052544157927817">Pasvītrojuma stils</translation>
 <translation id="8507227974644337342">Ekrāna izšķirtspēja</translation>
 <translation id="8507443886219296894">Paslēpt šai vietnei</translation>
@@ -9774,7 +9774,7 @@ Glabājiet atslēgas failu drošā vietā. Tas būs vajadzīgs, lai izveidotu ja
 <translation id="8619803522055190423">Krītoša ēna</translation>
 <translation id="8620206585293032550">Neaktīvo ciļņu izskats</translation>
 <translation id="8621979332865976405">Visa ekrāna kopīgošana</translation>
-<translation id="6089523089512126744">Brave meklēšanas MI režīms un piesaistītās lietotnes</translation>
+<translation id="6089523089512126744">Growser meklēšanas MI režīms un piesaistītās lietotnes</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Lasīt ChromeOS ierīces un komponentu sērijas numurus.</translation>
 <translation id="862542460444371744">Paplašināju&amp;mi</translation>
@@ -11332,17 +11332,17 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini pārlūkā Growser</translation>
 <translation id="1975450474853317621">Atvērt pārlūkā Growser</translation>
 <translation id="8516824290867275572">Jūsu kontam nav piekļuves Gemini pārlūkā Growser</translation>
-<translation id="1649234713894562345">Pārlūku Brave nodrošina Brave atklātā pirmkoda projekts un cita <ph name="BEGIN_HIGHLIGHT"/>atklātā pirmkoda<ph name="END_HIGHLIGHT"/> programmatūra.</translation>
+<translation id="1649234713894562345">Pārlūku Growser nodrošina Growser atklātā pirmkoda projekts un cita <ph name="BEGIN_HIGHLIGHT"/>atklātā pirmkoda<ph name="END_HIGHLIGHT"/> programmatūra.</translation>
 <translation id="870536819717176711">Kad izvēlaties kopīgot pašreizējo cilni ar Gemini, Growser serveriem tiek nosūtīts cilnes pilns saturs, multivide un URL.</translation>
-<translation id="1130866111814048607">Kad tiek kopīgotas cilnes, to lapu saturs, multivide un vietrāži URL tiek nosūtīti uz uzņēmumam Brave un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
-<translation id="7656790264713095385">Vispirms ieslēdziet Brave automātisko pārlūkošanu šajā ierīcē</translation>
+<translation id="1130866111814048607">Kad tiek kopīgotas cilnes, to lapu saturs, multivide un vietrāži URL tiek nosūtīti uz uzņēmumam Growser un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
+<translation id="7656790264713095385">Vispirms ieslēdziet Growser automātisko pārlūkošanu šajā ierīcē</translation>
 <translation id="8572003230388132401">Gemini Spark var izmantot Growser automātisko pārlūkošanu šajā ierīcē, lai mijiedarbotos ar vietnēm un veiktu uzdevumus jūsu vārdā. <ph name="LINK_BEGIN"/>Uzzināt vairāk<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark var izmantot automātisko pārlūkošanu šajā ierīcē tikai tad, ja ierīce ir aktivizēta un darbojas pārlūks Growser.</translation>
 <translation id="1982892581799327835">Jūsu pārlūku Growser var kontrolēt ikviens, kam ir piekļuve jūsu Gemini Spark aģentam.</translation>
 <translation id="6689939585896001516">Ļaujiet pārlūkam Growser veikt pārlūkošanu jūsu vietā</translation>
 <translation id="640233545778658570">Gemini pārlūkā Growser izmanto automātisko pārlūkošanu, lai darbotos jūsu cilnēs un veiktu jūsu dotos uzdevumus. <ph name="LINK_BEGIN"/>Uzziniet vairāk<ph name="LINK_END"/>.</translation>
-<translation id="2740842679402949230">Uzzināt vairāk par Brave automātisko pārlūkošanu</translation>
-<translation id="3570112771874223231">Lapu saturs un vietrāži URL, ko Gemini izmantos uzdevuma veikšanas laikā, tiks kopīgoti ar uzņēmumu Brave un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
+<translation id="2740842679402949230">Uzzināt vairāk par Growser automātisko pārlūkošanu</translation>
+<translation id="3570112771874223231">Lapu saturs un vietrāži URL, ko Gemini izmantos uzdevuma veikšanas laikā, tiks kopīgoti ar uzņēmumu Growser un var tikt pārskatīti, lai noteiktu, vai tie ir droši.</translation>
 <translation id="2314508080153323869">Gemini pārlūkā Growser</translation>
 <translation id="1910632359330857071">Pārlūkojot varat tērzēt, izmantojot Gemini pārlūkā Growser, lai iegūtu atbildes, galvenos secinājumus un citu informāciju.</translation>
 <translation id="2483218699324586641">Izmantojiet īsinājumtaustiņu <ph name="FOCUS_TOGGLE_HOTKEY"/>, lai atvērtu Gemini pārlūkā Growser</translation>
@@ -11359,8 +11359,8 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="3187556136478864255">Vai jūsu apraides ierīce ir redzama <ph name="BEGIN_LINK"/>lietotnē Growser Home<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Iegūstiet piekļuves atslēgas šajā ierīcē, izmantojot Growser paroļu pārvaldnieku</translation>
 <translation id="2364302372598204515">Šis nav Growser konts. Pārlūkā Growser saglabātie vienumi nebūs pieejami citās ierīcēs.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave abonements</translation>
-<translation id="850632091665381275">Brave abonements</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser abonements</translation>
+<translation id="850632091665381275">Growser abonements</translation>
 <translation id="6710172959248731469">Growser pakalpojumu iestatījumi</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{Viens vienums ir saglabāts tikai šajā ierīcē. Lai šo vienumu varētu izmantot citās ierīcēs, saglabājiet to savā Growser kontā. Tiks notīrīti arī visi dublikāti.}zero{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}one{{ITEM_COUNT} vienums ir saglabāts tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}other{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai šos vienumus varētu izmantot citās ierīcēs, saglabājiet tos savā Growser kontā. Tiks notīrīti arī visi dublikāti.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{Viena parole ir saglabāta tikai šajā ierīcē. Lai šo paroli varētu izmantot citās ierīcēs, saglabājiet to savā Growser kontā. Tiks notīrīti arī visi dublikāti.}zero{{PASSWORD_COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai šīs paroles varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}one{{PASSWORD_COUNT} parole ir saglabāta tikai šajā ierīcē. Lai šīs paroles varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}other{{PASSWORD_COUNT} paroles ir saglabātas tikai šajā ierīcē. Lai šīs paroles varētu izmantot citās ierīcēs, saglabājiet tās savā Growser kontā. Tiks notīrīti arī visi dublikāti.}}</translation>
@@ -11374,8 +11374,8 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{Viena grāmatzīme un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}zero{{BOOKMARK_COUNT} grāmatzīmes un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}one{{BOOKMARK_COUNT} grāmatzīme un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}other{{BOOKMARK_COUNT} grāmatzīmes un citi vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, saglabājiet tos savā Growser kontā.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 vienums ir saglabāts tikai šajā ierīcē. Lai varētu izmantot šo vienumu citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet to savā Growser kontā<ph name="END_LINK"/>.}zero{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tos savā Growser kontā<ph name="END_LINK"/>.}one{{ITEM_COUNT} vienums ir saglabāts tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tos savā Growser kontā<ph name="END_LINK"/>.}other{{ITEM_COUNT} vienumi ir saglabāti tikai šajā ierīcē. Lai varētu izmantot šos vienumus citās ierīcēs, <ph name="BEGIN_LINK"/>saglabājiet tos savā Growser kontā<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Izmantojiet savu Growser kontu vai izveidojiet jaunu kontu</translation>
-<translation id="1896353439080510710">Tērzēšanas sarunas tiek pārskatītas un izmantotas Brave MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
-<translation id="7398815534290329738">Tērzēšanas sarunas tiek pārskatītas un izmantotas Brave MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Noteikts saturs var nebūt piemērots visiem. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1896353439080510710">Tērzēšanas sarunas tiek pārskatītas un izmantotas Growser MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="7398815534290329738">Tērzēšanas sarunas tiek pārskatītas un izmantotas Growser MI uzlabošanai. Gemini ir MI un var pieļaut kļūdas. Noteikts saturs var nebūt piemērots visiem. Varat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>pārvaldīt savas darbības<ph name="END_LINK_MANAGE_ACTIVITY"/>, tostarp informāciju par savu atrašanās vietu. <ph name="BEGIN_LINK_LEARN_MORE"/>Uzziniet vairāk par savām iespējām<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Šis paplašinājums ir saglabāts jūsu Growser kontā, taču var tikt dzēsti visi tā dati, kas ir saglabāti tikai šajā ierīcē.}zero{Šie paplašinājumi ir saglabāti jūsu Growser kontā, taču var tikt dzēsti visi to dati, kas ir saglabāti tikai šajā ierīcē.}one{Šie paplašinājumi ir saglabāti jūsu Growser kontā, taču var tikt dzēsti visi to dati, kas ir saglabāti tikai šajā ierīcē.}other{Šie paplašinājumi ir saglabāti jūsu Growser kontā, taču var tikt dzēsti visi to dati, kas ir saglabāti tikai šajā ierīcē.}}</translation>
 <translation id="3523789730715594198">Jebkurā brīdī iestatījumos varat pārtraukt sinhronizēšanu. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
 <translation id="8231595707224857577">Jūsu organizācija izslēdza ciļņu saglabāšanu jūsu Growser kontā.</translation>
@@ -11413,7 +11413,7 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="1024884937839269099">Kad esat pierakstījies, jūsu Growser kontā var saglabāt <ph name="BEGIN_LINK_GOOGLE"/>arī cita veida darbības<ph name="END_LINK_GOOGLE"/>. Jebkurā laikā varat tās izdzēst.</translation>
 <translation id="6533315466883598769">Izmantot Growser tulkotāju</translation>
 <translation id="6010651352520077187">Kad Growser tulkotājs būs ieslēgts, tas piedāvās tulkot vietnes jūsu vēlamajā valodā. Tas var arī automātiski tulkot vietnes.</translation>
-<translation id="6873499199714317035">Ja Brave tulkotājs ir ieslēgts, tas piedāvā tulkot vietnes un PDF failus jūsu vēlamajā valodā. Tas var arī automātiski tulkot vietnes.</translation>
+<translation id="6873499199714317035">Ja Growser tulkotājs ir ieslēgts, tas piedāvā tulkot vietnes un PDF failus jūsu vēlamajā valodā. Tas var arī automātiski tulkot vietnes.</translation>
 <translation id="5911030830365207728">Growser tulkotājs</translation>
 <translation id="7458168200501453431">Tiek izmantots tas pats pareizrakstības pārbaudītājs, kas tiek izmantots Growser meklēšanā. Pārlūkā ievadītais teksts tiek nosūtīts Growser serveriem.</translation>
 <translation id="8972513834460200407">Lūdzu, sazinieties ar savu tīkla administratoru, lai pārliecinātos, vai ugunsmūris nebloķē lejupielādes no Growser serveriem.</translation>
@@ -11459,7 +11459,7 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="3293574207873361017">Growser konta pārvaldība</translation>
 <translation id="6901130673208235020">Kad veicat meklēšanu pārlūkošanas vēsturē, vēstures meklēšanas vaicājumi, precīzāko atbilstību lapu saturs un ģenerētie modeļa izvades dati tiek nosūtīti Growser serveriem.</translation>
 <translation id="3178434360326457238">Kad pārlūkojat vietnes, to lapu saturs tiek šifrēts un saglabāts jūsu ierīcē. Tas var ietekmēt pārlūka Growser veiktspēju.</translation>
-<translation id="8622145666696249878">Brave meklēšanas MI režīms un piesaistītās lietotnes</translation>
+<translation id="8622145666696249878">Growser meklēšanas MI režīms un piesaistītās lietotnes</translation>
 <translation id="2760679829473121490">Rādīt sistēmas paziņojumus par Growser funkcijām un padomiem</translation>
 <translation id="6713316345564743478">Lai pārbaudītu, vai neviena parole nav uzlauzta, pierakstieties Growser kontā.</translation>
 <translation id="1342886103232377846">Lai pārbaudītu, vai neviena parole nav uzlauzta, pārejiet uz Growser paroļu pārvaldnieku.</translation>
@@ -11522,7 +11522,7 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="1095879482467973146">Growser paroļu pārvaldnieks tīmeklī</translation>
 <translation id="1368798504801939187">Lai skatītu savas paroles arī tad, ja neizmantojat pārlūku Growser vai Android ierīci, pierakstieties vietnē <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/>.</translation>
 <translation id="829923460755755423">Saīsnes pievienošana Growser paroļu pārvaldniekam</translation>
-<translation id="7244677273667272006">Apstipriniet savu identitāti, lai pievienotu paroles un iegūtu tās visās ierīcēs, kurās izmantojat savu Brave kontu.</translation>
+<translation id="7244677273667272006">Apstipriniet savu identitāti, lai pievienotu paroles un iegūtu tās visās ierīcēs, kurās izmantojat savu Growser kontu.</translation>
 <translation id="8189517459248805166">Parole vietnei <ph name="WEBSITE"/> ir saglabāta šajā ierīcē un jūsu Growser kontā. Kuru paroli vēlaties dzēst?</translation>
 <translation id="9101265711096405922">No jūsu Growser konta</translation>
 <translation id="927421426408921503">Vai pārvietot saglabātās paroles uz jūsu Growser kontu?</translation>
@@ -11633,7 +11633,7 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
        <ph name="BREAK"/>
        <ph name="BREAK"/>
        Varat pārvaldīt iestatījumus, izmantojot kartītes izvēlni, vai skatīt citas opcijas sadaļā “Growser pielāgošana”.</translation>
-<translation id="6474021817475285003">Skatīt vairāk Brave kalendārā</translation>
+<translation id="6474021817475285003">Skatīt vairāk Growser kalendārā</translation>
 <translation id="9066394310994446814">Šis vienums tiek rādīts, pamatojoties uz jūsu iepriekšējām darbībām Growser pakalpojumu izmantošanas laikā. Varat skatīt un dzēst savus datus, kā arī mainīt savus iestatījumus vietnē <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11664,7 +11664,7 @@ Tā var ietvert informāciju par ierīcē instalēto programmatūru, failiem, p�
 <translation id="6868193750403948178">Pielāgot pārlūkprogrammu Growser</translation>
 <translation id="5009064339929592579">Vai saglabāt jūsu Growser konta mapē?</translation>
 <translation id="7400528739136719497">Dažas Growser balsis pašlaik var nebūt pieejamas.</translation>
-<translation id="4857677595331912231">Lai sniegtu atbilstošākas atbildes, jūsu pašreizējās cilnes saturs un vietrādis URL tiek kopīgots ar Brave. Pārlūkošanas laikā varat pievienot vai noņemt cilnes.</translation>
+<translation id="4857677595331912231">Lai sniegtu atbilstošākas atbildes, jūsu pašreizējās cilnes saturs un vietrādis URL tiek kopīgots ar Growser. Pārlūkošanas laikā varat pievienot vai noņemt cilnes.</translation>
 <translation id="5639212636098910819">Turpināt pārlūkā Growser</translation>
 <translation id="3252169590975855820">Varat tai piekļūt Growser paroļu pārvaldniekā.</translation>
 <translation id="3843323136102787632">Lejupielādējiet pārlūku Growser, izmantojot šo kvadrātkodu, un pierakstieties savā Growser kontā.</translation>
@@ -11715,7 +11715,7 @@ Jums ir vēl # uzlauztas paroles. Growser paroļu pārvaldnieks iesaka nekavējo
 <translation id="1162630940779651724">Lai nosūtītu šo cilni uz citu ierīci, abās ierīcēs pierakstieties pārlūkā Growser</translation>
 <translation id="5388608738812110907">Lai nosūtītu šo cilni uz citu ierīci, otrā ierīcē pierakstieties pārlūkā Growser</translation>
 <translation id="4007679133627124999">Lai varētu sūtīt saites starp ierīcēm, abās ierīcēs jāpierakstās vienā Growser kontā.</translation>
-<translation id="2377999415409519333">Lai nosūtītu saites, verificējiet savu identitāti. Varat sūtīt saites, ja abās ierīcēs pierakstījāties tajā pašā Brave kontā.</translation>
+<translation id="2377999415409519333">Lai nosūtītu saites, verificējiet savu identitāti. Varat sūtīt saites, ja abās ierīcēs pierakstījāties tajā pašā Growser kontā.</translation>
 <translation id="4986706507552097681">Jebkurā laikā iestatījumos varat izvēlēties, ko sinhronizēt. Growser var personalizēt pakalpojumu Meklēšana un citus pakalpojumus, ņemot vērā jūsu vēsturi.</translation>
 <translation id="8002662358897231821">Pierakstieties, lai lietotu savas grāmatzīmes, vēsturi, paroles un citus iestatījumus visās savās ierīcēs. Turklāt jūs tiksiet automātiski pierakstīts savos Growser pakalpojumos.</translation>
 <translation id="3128296144259620504">Pārlūks Growser tiek kontrolēts, izmantojot automatizētas pārbaudes programmatūru.</translation>

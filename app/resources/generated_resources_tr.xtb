@@ -186,7 +186,7 @@
 <translation id="1130116586186908674">Bölünmüş görünüm oluştur</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - <ph name="GROUP_NAME"/> grubunun parçası</translation>
 <translation id="1130676589211693127">Sağ tarafın pil seviyesi %<ph name="PERCENTAGE"/>.</translation>
-<translation id="1412403201555978627">Paylaşılan sekmelerin sayfa içerikleri, medya ve URL'leri Brave'a gönderilir ve güvenlik açısından incelenebilir.</translation>
+<translation id="1412403201555978627">Paylaşılan sekmelerin sayfa içerikleri, medya ve URL'leri Growser'a gönderilir ve güvenlik açısından incelenebilir.</translation>
 <translation id="1133418583142946603">Mevcut sekmeyi ekle</translation>
 <translation id="1133751489735776037">Fareyi üç kez tıklayın</translation>
 <translation id="1136712381129578788">Çok sayıda yanlış PIN girildiği için güvenlik anahtarı kilitlendi. Kilidi açmak için anahtarı çıkarıp tekrar takın.</translation>
@@ -376,7 +376,7 @@
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Durdur</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>Desteklenen bağlantıların<ph name="END_LINK"/> açılması</translation>
-<translation id="7823526956728613125">Arama hizmetleri ile Google Drive gibi Brave Workspace uygulamaları arasındaki bağlantıyı yönetin</translation>
+<translation id="7823526956728613125">Arama hizmetleri ile Google Drive gibi Growser Workspace uygulamaları arasındaki bağlantıyı yönetin</translation>
 <translation id="1274997165432133392">Çerezler ve diğer site verileri</translation>
 <translation id="1275936815032730048">başlatıcı  + sağ ok</translation>
 <translation id="1275963833368139883">Tarama geçmişinizde arama yaptığınızda yanıtlar ve arama sonuçları, sayfanın içeriğine göre belirlenir. Bu sayede daha iyi sonuçlar görürsünüz</translation>
@@ -653,7 +653,7 @@
 <translation id="1508931164824684991">Siteler JavaScript kullanabilir</translation>
 <translation id="1509163368529404530">&amp;Grubu geri yükle</translation>
 <translation id="1509281256533087115">USB üzerinden herhangi bir <ph name="DEVICE_NAME_AND_VENDOR"/> cihazına erişme</translation>
-<translation id="2825615584808054779">Gemini ile sohbetleriniz ya da Brave Workspace verileriniz incelenmez veya üretken yapay zeka modellerini daha iyi hale getirmek için kullanılmaz. Gemini bir yapay zeka modeli olduğu için hata yapabilir.</translation>
+<translation id="2825615584808054779">Gemini ile sohbetleriniz ya da Growser Workspace verileriniz incelenmez veya üretken yapay zeka modellerini daha iyi hale getirmek için kullanılmaz. Gemini bir yapay zeka modeli olduğu için hata yapabilir.</translation>
 <translation id="1510238584712386396">Başlatıcı</translation>
 <translation id="1510341833810331442">Sitelerin cihazınıza veri kaydetmesine izin verilmiyor</translation>
 <translation id="1510882959204224895">Pencerede aç</translation>
@@ -747,7 +747,7 @@
 <translation id="1581962803218266616">Finder'da Göster</translation>
 <translation id="1582955169539260415">sil: [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/>, yerel olarak işlenir ve çevrimdışı olarak çalışır</translation>
-<translation id="491276955533054201">Öncelikle bu cihazda Brave otomatik gezinme özelliğini açın</translation>
+<translation id="491276955533054201">Öncelikle bu cihazda Growser otomatik gezinme özelliğini açın</translation>
 <translation id="1587275751631642843">&amp;JavaScript konsolu</translation>
 <translation id="1588438908519853928">Normal</translation>
 <translation id="1588772269240419305">Logo ve ad güncellemelerini inceleyin</translation>
@@ -1149,7 +1149,7 @@
 <translation id="1892453608039100484">1. Aşağıdaki <ph name="BUTTON_LABEL"/> düğmesini tıklayın.
 2. Windows ayarlarınızda <ph name="BUTTON_2"/> düğmesini tıklayın.</translation>
 <translation id="1895658205118569222">Kapat</translation>
-<translation id="1189523243806849236">Sohbetler incelenir ve Brave AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1189523243806849236">Sohbetler incelenir ve Growser AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="1897120393475391208">Güçlü şifre kullan</translation>
 <translation id="1897860317037652061">Tarama başarısız oldu</translation>
 <translation id="1898804291554630487">Bu sayfa hakkında soru sorun</translation>
@@ -1158,7 +1158,7 @@
 <translation id="1901213235765457754">Yöneticinizden bu uygulamayı güncellemesini isteyin</translation>
 <translation id="1901303067676059328">Tümünü &amp;seç</translation>
 <translation id="1901760057081700494">Saat dilimi şu anda <ph name="TIME_ZONE_ENTRY"/> olarak ayarlı. Saat dilimini otomatik olarak güncellemek için <ph name="BEGIN_LINK"/>sistem konum erişimini açın<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Ev adresiniz, Brave hizmetlerinde işlerinizi halletmenize yardımcı olabilir. Örneğin, Brave Haritalar'da daha alakalı arama sonuçları ve yol tarifleri alabilirsiniz. Adresinizi <ph name="BEGIN_LINK"/>Brave Hesabınızda<ph name="END_LINK"/> (<ph name="USERNAME"/>) düzenleyebilir veya silebilirsiniz.</translation>
+<translation id="3930197956137872864">Ev adresiniz, Growser hizmetlerinde işlerinizi halletmenize yardımcı olabilir. Örneğin, Growser Haritalar'da daha alakalı arama sonuçları ve yol tarifleri alabilirsiniz. Adresinizi <ph name="BEGIN_LINK"/>Growser Hesabınızda<ph name="END_LINK"/> (<ph name="USERNAME"/>) düzenleyebilir veya silebilirsiniz.</translation>
 <translation id="6893464351226208429">Ziyaret ettiğiniz URL'ler Growser Hesabınıza kaydedilir</translation>
 <translation id="190530012637606145">Gizli intranet'ler de dahil olmak üzere tüm güvensiz bağlantılarla ilgili sizi uyarır</translation>
 <translation id="1906181697255754968">Çalışmanızı otomatik olarak kaydetme gibi özelliklerin kullanılması için siteler genellikle cihazınızdaki dosyalar ile klasörlere erişir</translation>
@@ -1531,7 +1531,7 @@ Cihazınızda Family Link uygulamasını yükleyerek bu hesabın ayarlarını y�
 <translation id="2198625180564913276">Profil ekleniyor. Bu işlem birkaç dakika sürebilir.</translation>
 <translation id="2198712775285959645">Düzenle</translation>
 <translation id="2199298570273670671">Hata</translation>
-<translation id="2798272130984183944">Brave'un doğrudan cihazınızda çalışan yapay zeka modellerini kullanıp kullanmayacağını seçin</translation>
+<translation id="2798272130984183944">Growser'un doğrudan cihazınızda çalışan yapay zeka modellerini kullanıp kullanmayacağını seçin</translation>
 <translation id="2200094388063410062">E-posta</translation>
 <translation id="2200781749203116929">ChromeOS Sistem Günlükleri</translation>
 <translation id="2202391868799679245">Klavye kısayolunu aç</translation>
@@ -1611,7 +1611,7 @@ Cihazınızda Family Link uygulamasını yükleyerek bu hesabın ayarlarını y�
 <translation id="225716114209817872">Maksimum</translation>
 <translation id="5642482119439119644">Diğer cihazlarınızdaki sekmelerinize ulaşmak için kimliğinizi doğrulayın. Senkronizasyonu istediğiniz zaman ayarlardan durdurabilirsiniz. Growser, geçmişinize dayalı olarak Arama'yı ve diğer hizmetleri kişiselleştirebilir.</translation>
 <translation id="22614517036276112">Bu doküman veya cihazınız, kuruluşunuzun güvenlik politikalarından bazılarına uymuyor. Neyin düzeltilmesi gerektiğini öğrenmek için yöneticinize danışın.</translation>
-<translation id="1829264724820495616">İş adresiniz, Brave hizmetlerinde işlerinizi halletmenize yardımcı olabilir. Örneğin, Brave Haritalar'da daha alakalı arama sonuçları ve yol tarifleri alabilirsiniz. Adresinizi <ph name="BEGIN_LINK"/>Brave Hesabınızda<ph name="END_LINK"/> (<ph name="USERNAME"/>) düzenleyebilir veya silebilirsiniz.</translation>
+<translation id="1829264724820495616">İş adresiniz, Growser hizmetlerinde işlerinizi halletmenize yardımcı olabilir. Örneğin, Growser Haritalar'da daha alakalı arama sonuçları ve yol tarifleri alabilirsiniz. Adresinizi <ph name="BEGIN_LINK"/>Growser Hesabınızda<ph name="END_LINK"/> (<ph name="USERNAME"/>) düzenleyebilir veya silebilirsiniz.</translation>
 <translation id="2262477216570151239">Tekrardan önce gecikme</translation>
 <translation id="2263371730707937087">Ekran yenileme hızı</translation>
 <translation id="7829329302663082098">Geri bildirimleriniz Growser Cast'i iyileştirmemize yardımcı olacağından bizim için çok önemlidir. Yayınlamayla ilgili sorunların giderilmesinde yardım almak için lütfen <ph name="BEGIN_LINK"/>yardım merkezine<ph name="END_LINK"/> bakın.</translation>
@@ -1754,7 +1754,7 @@ Cihazınızda Family Link uygulamasını yükleyerek bu hesabın ayarlarını y�
 <translation id="2373499590298659902">Bir fare düğmesini basılı tutmak için "0" tuşunu kullanın</translation>
 <translation id="2373666622366160481">Kağıda sığdır</translation>
 <translation id="2375406435414127095">Telefonunuza bağlama</translation>
-<translation id="6612559367203670996">Brave, paylaşılan sekmelerin içeriğini ve URL'sini kullanır. Mevcut sekmeniz yeni sohbetlerde paylaşılır. Bu ayarı dilediğiniz zaman değiştirebilirsiniz.</translation>
+<translation id="6612559367203670996">Growser, paylaşılan sekmelerin içeriğini ve URL'sini kullanır. Mevcut sekmeniz yeni sohbetlerde paylaşılır. Bu ayarı dilediğiniz zaman değiştirebilirsiniz.</translation>
 <translation id="2376056713414548745">Sesli oku</translation>
 <translation id="2376122016044804363">Panoya kopyalanma onayları</translation>
 <translation id="2377667304966270281">Donanım Hataları</translation>
@@ -3319,7 +3319,7 @@ Sunucunun mesajı: <ph name="SERVER_MSG"/></translation>
 <translation id="3569614820047645079">Drive'ım bölümündeki dosyalarınız Chromebook'unuzla otomatik olarak senkronize edildiği için bu dosyalara internet bağlantısı olmadan erişebilirsiniz.</translation>
 <translation id="3569617221227793022">Saat dilimi şu anda <ph name="TIME_ZONE_ENTRY"/> olarak ayarlı. Bu ayar, yöneticiniz tarafından yönetilir.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> şu dosya ve klasörleri görüntüleyebilir:</translation>
-<translation id="4062501938325597704">Gemini'ın bir görev sırasında kullandığı sayfa içeriği ve URL'ler Brave ile paylaşılır ve güvenlik açısından incelenebilir.</translation>
+<translation id="4062501938325597704">Gemini'ın bir görev sırasında kullandığı sayfa içeriği ve URL'ler Growser ile paylaşılır ve güvenlik açısından incelenebilir.</translation>
 <translation id="3571734092741541777">Kur</translation>
 <translation id="3575121482199441727">Bu site için izin ver</translation>
 <translation id="3575224072358507281">Measurement Lab için IP adresini ve ağ ölçümü sonuçlarını kendi gizlilik politikası (measurementlab.net/privacy) uyarınca toplama</translation>
@@ -4998,7 +4998,7 @@ Uzaklaştırmak için Ctrl + Alt + Parlaklığı Azalt tuşlarını kullanın.</
 <translation id="485480310608090163">Diğer ayarlar ve izinler</translation>
 <translation id="4857304314344645169">Herhangi bir sorunun adım adım çözümünü inceleyin</translation>
 <translation id="1913048435257025864">Growser'a önceki sayfa hakkında soru sor: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Geçerli sekmenizin içeriği ve URL'si, size daha alakalı yanıtlar vermek için Brave ile paylaşılır. Göz atarken sekme ekleyebilir veya kaldırabilirsiniz.</translation>
+<translation id="228735844055480091">Geçerli sekmenizin içeriği ve URL'si, size daha alakalı yanıtlar vermek için Growser ile paylaşılır. Göz atarken sekme ekleyebilir veya kaldırabilirsiniz.</translation>
 <translation id="485806788160414322">Medyayı oynatın veya duraklatın</translation>
 <translation id="4858913220355269194">Futbolcu</translation>
 <translation id="4860012864737017059">Son Kullanılanlar sekmesi</translation>
@@ -5333,7 +5333,7 @@ Uzaklaştırmak için Ctrl + Alt + Parlaklığı Azalt tuşlarını kullanın.</
 <translation id="5112577000029535889">&amp;Geliştirici Araçları</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 dosya taşındı}other{{NUM_OF_FILES} dosya taşındı}}</translation>
 <translation id="511313294362309725">Hızlı Eşleme özelliğini aç</translation>
-<translation id="6409962091529734959">Brave otomatik gezinme hakkında daha fazla bilgi</translation>
+<translation id="6409962091529734959">Growser otomatik gezinme hakkında daha fazla bilgi</translation>
 <translation id="51143538739122961">Güvenlik anahtarınızı takın ve anahtara dokunun</translation>
 <translation id="5115338116365931134">TOA</translation>
 <translation id="5116628073786783676">Sesi Farklı Kay&amp;det...</translation>
@@ -5376,7 +5376,7 @@ Uzaklaştırmak için Ctrl + Alt + Parlaklığı Azalt tuşlarını kullanın.</
 <translation id="5146235736676876345">Kendinizinkini seçin</translation>
 <translation id="5146896637028965135">Sistem sesi</translation>
 <translation id="5147113439721488265">Öneri</translation>
-<translation id="5897101208018277582">Bağlantı göndermek için kimliğinizi doğrulayın. Her iki cihazda da aynı Brave Hesabı'nda oturum açtığınızda bağlantı gönderebilirsiniz.</translation>
+<translation id="5897101208018277582">Bağlantı göndermek için kimliğinizi doğrulayın. Her iki cihazda da aynı Growser Hesabı'nda oturum açtığınızda bağlantı gönderebilirsiniz.</translation>
 <translation id="5148285448107770349">Şifre en az 8 karakter olmalıdır</translation>
 <translation id="5149602533174716626">Video Karesini Kop&amp;yala</translation>
 <translation id="5150254825601720210">Netscape Sertifikası SSL Sunucu Adı</translation>
@@ -6064,7 +6064,7 @@ Hassas bilgileri vermediğinizden emin olun.</translation>
 <translation id="5713158217420111469"><ph name="DEVICE"/> ağına bağlandı</translation>
 <translation id="5713988532993992900">Ters çevrilmiş</translation>
 <translation id="5714100381896040477">Ekrandaki hareketi sınırlayın</translation>
-<translation id="8277434106940718633">Gemini ile sohbetleriniz ya da Brave Workspace verileriniz incelenmez veya üretken yapay zeka modellerini daha iyi hale getirmek için kullanılmaz. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Bazı içerikler herkese uygun olmayabilir.</translation>
+<translation id="8277434106940718633">Gemini ile sohbetleriniz ya da Growser Workspace verileriniz incelenmez veya üretken yapay zeka modellerini daha iyi hale getirmek için kullanılmaz. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Bazı içerikler herkese uygun olmayabilir.</translation>
 <translation id="5719854774000914513">Siteler, HID cihazlarına bağlanmak isteyebilir</translation>
 <translation id="5720729194423017301">Siteler ve arama motorları için kısayollar</translation>
 <translation id="572155275267014074">Android ayarları</translation>
@@ -6999,7 +6999,7 @@ Hassas bilgileri vermediğinizden emin olun.</translation>
 <translation id="6464825623202322042">Bu cihazda</translation>
 <translation id="6465841119675156448">İnternet olmadan</translation>
 <translation id="6466258437571594570">Sitelerin bildirim gönderme isteğinde bulunarak işinizi bölmesi engellenir</translation>
-<translation id="1673835407889847350">Brave Hesabınızla şifre eklemek ve bu şifrelere tüm cihazlarınızdan erişmek için kimliğinizi doğrulayın</translation>
+<translation id="1673835407889847350">Growser Hesabınızla şifre eklemek ve bu şifrelere tüm cihazlarınızdan erişmek için kimliğinizi doğrulayın</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> dosyasını tara</translation>
 <translation id="6467304607960172345">Tam ekran videoları optimize et</translation>
 <translation id="6467377768028664108">Bağlantı kurduğunuzda <ph name="DEVICE_TYPE"/> cihazınızla şunları yapabilirsiniz:</translation>
@@ -7012,7 +7012,7 @@ Hassas bilgileri vermediğinizden emin olun.</translation>
 <translation id="6470823736074966819">Bildirimleri yoksay</translation>
 <translation id="6472893788822429178">Ana Sayfa düğmesini göster</translation>
 <translation id="6473315466413288899">Bir seçenek belirleyin</translation>
-<translation id="6199773995438617867">Brave Takvim'de daha fazlasını görün</translation>
+<translation id="6199773995438617867">Growser Takvim'de daha fazlasını görün</translation>
 <translation id="6474401088838630457">Gemini'a bu konu hakkında daha fazla soru sorun</translation>
 <translation id="6474498546677193336">Bir uygulama bu klasörü kullandığından paylaşım kaldırılamadı. Linux kapatıldığında klasörün paylaşımı kaldırılacak.</translation>
 <translation id="6474884162850599008">Google Drive hesabının bağlantısını kes</translation>
@@ -7193,7 +7193,7 @@ Sızdırılmış # şifreniz daha var. Growser Şifre Yöneticisi bu şifreleri 
 <translation id="6613231539539868591">Kalıcı Veriler</translation>
 <translation id="6613267708691765962">Kötü amaçlı yazılım taranıyor...</translation>
 <translation id="6615455863669487791">Göster</translation>
-<translation id="5146630705831894319">Diğer dillerdeki web siteleri ve PDF'ler için Brave Çeviri'yi teklif et</translation>
+<translation id="5146630705831894319">Diğer dillerdeki web siteleri ve PDF'ler için Growser Çeviri'yi teklif et</translation>
 <translation id="6618013221808317456">Sitelerin JavaScript optimizasyonunu kullanmasına izin verme</translation>
 <translation id="6618154741503063152">Yüklenemiyor. Eklere izin verilmiyor.</translation>
 <translation id="6619058681307408113">Satır Yazıcı Arka Plan Programı (LPD)</translation>
@@ -7547,7 +7547,7 @@ Sızdırılmış # şifreniz daha var. Growser Şifre Yöneticisi bu şifreleri 
 <translation id="6871644448911473373">OCSP Yanıtlayanı: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Diller</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Bu ayar açıkken Brave Çeviri, siteleri ve PDF'leri tercih ettiğiniz dile çevirmeyi önerir. Ayrıca, siteleri otomatik olarak da çevirebilir.</translation>
+<translation id="5189979109199910058">Bu ayar açıkken Growser Çeviri, siteleri ve PDF'leri tercih ettiğiniz dile çevirmeyi önerir. Ayrıca, siteleri otomatik olarak da çevirebilir.</translation>
 <translation id="6873571253135628430">Site izinlerini değiştir</translation>
 <translation id="6874986444867497677">Yükleme işlemi tamamlanamadı. Lütfen tekrar deneyin veya bu pencereyi kapatın.</translation>
 <translation id="6876155724392614295">Bisiklet</translation>
@@ -7835,7 +7835,7 @@ Sızdırılmış # şifreniz daha var. Growser Şifre Yöneticisi bu şifreleri 
 <translation id="710224247908684995">Bir uzantı, Güvenli Tarama'yı devre dışı bıraktı</translation>
 <translation id="7102832101143475489">İstek zaman aşımına uğradı</translation>
 <translation id="7103944802169726298">PC ve yayın cihazı aynı kablosuz ağa bağlı</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave üyeliği</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser üyeliği</translation>
 <translation id="7107609441453408294">Tüm hoparlörlerde aynı sesi çal</translation>
 <translation id="7108338896283013870">Gizle</translation>
 <translation id="7108419148561505648">Kaydetmeden önce en az bir alanı doldurun</translation>
@@ -8206,7 +8206,7 @@ Sızdırılmış # şifreniz daha var. Growser Şifre Yöneticisi bu şifreleri 
 <translation id="7395774987022469191">Tüm ekran</translation>
 <translation id="7396017167185131589">Paylaşılan klasörler burada görünür</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/>, sistem açıldığında başlayacak ve diğer tüm <ph name="PRODUCT_NAME"/> pencerelerini kapatsanız da arka planda çalışmaya devam edecektir.</translation>
-<translation id="8572914900293297191">Sohbetler incelenir ve Brave AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Bazı içerikler herkese uygun olmayabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="8572914900293297191">Sohbetler incelenir ve Growser AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Bazı içerikler herkese uygun olmayabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="7399045143794278225">Senkronizasyonu özelleştir</translation>
 <translation id="7399616692258236448">Konum istekleri, izin verdikleriniz dışındaki tüm siteler için otomatik olarak engellenir</translation>
 <translation id="7399802613464275309">Güvenlik Kontrolü</translation>
@@ -8739,7 +8739,7 @@ Atamayı kaldırmak için atanmış bir anahtara veya tuşa basın.</translation
 <translation id="7807711621188256451">Kameranıza <ph name="HOST"/> tarafından erişilmesine her zaman izin verin</translation>
 <translation id="7810202088502699111">Bu sayfadaki pop-up'lar engellendi.</translation>
 <translation id="7810367892333449285">Girişiniz, <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ adresi<ph name="LPA_2"/>$<ph name="LPA_3"/>isteğe bağlı eşleşme kimliği<ph name="LPA_4"/> biçiminde olmalıdır</translation>
-<translation id="5014491767627896944">Brave, Brave açık kaynak projesi ve diğer <ph name="BEGIN_HIGHLIGHT"/>açık kaynak <ph name="END_HIGHLIGHT"/>yazılımlar ile oluşturulmuştur.</translation>
+<translation id="5014491767627896944">Growser, Growser açık kaynak projesi ve diğer <ph name="BEGIN_HIGHLIGHT"/>açık kaynak <ph name="END_HIGHLIGHT"/>yazılımlar ile oluşturulmuştur.</translation>
 <translation id="7811263553491007091">Tekrar deneyin veya aşağıdaki önceden oluşturulmuş temalardan birini seçin.</translation>
 <translation id="7811926937048662341">Burayı sağ tıklayıp "Sekmeleri Dikey Olarak Göster"i seçin</translation>
 <translation id="7811986034759500329">Sistem ayarlarından düzenleyin</translation>
@@ -8762,7 +8762,7 @@ Atamayı kaldırmak için atanmış bir anahtara veya tuşa basın.</translation
 <translation id="7826039927887234077"><ph name="MOOD"/> ruh halini içeren son <ph name="SUBJECT"/> yapay zeka temasından <ph name="INDEX"/>.</translation>
 <translation id="7826174860695147464">Eski Tarayıcı Desteği (LBS) - Internals</translation>
 <translation id="7826838152281937785">Alt görünümü kapat</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Brave Şartları<ph name="END_LINK_TERMS"/> ve <ph name="BEGIN_LINK_PRIVACY"/>Gemini Uygulamaları Gizlilik Uyarısı<ph name="END_LINK_PRIVACY"/> geçerlidir.</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Growser Şartları<ph name="END_LINK_TERMS"/> ve <ph name="BEGIN_LINK_PRIVACY"/>Gemini Uygulamaları Gizlilik Uyarısı<ph name="END_LINK_PRIVACY"/> geçerlidir.</translation>
 <translation id="7828642077514646543">Hata: Sertifikanın kodu çözülemedi</translation>
 <translation id="7830276128493844263">Konum erişimi, sistem ayarlarında kapatıldı</translation>
 <translation id="7830833461614351956"><ph name="NUM_OF_FILES"/> dosya, <ph name="CLOUD_PROVIDER"/> hedefine kopyalanıp açılsın mı?</translation>
@@ -9633,7 +9633,7 @@ Anahtar dosyanızı güvenli bir yerde saklayın. Uzantınızın yeni sürümler
 <translation id="850399339579925930">Sözlükler</translation>
 <translation id="850561044295157831">Yazmama yardım et özelliği hakkında daha fazla bilgi</translation>
 <translation id="8505669004895429027">Küçük Tasarruf</translation>
-<translation id="869548515244800202">Brave üyeliği</translation>
+<translation id="869548515244800202">Growser üyeliği</translation>
 <translation id="8507052544157927817">Altı çizili stil</translation>
 <translation id="8507227974644337342">Ekran çözünürlüğü</translation>
 <translation id="8507443886219296894">Bu site için gizle</translation>
@@ -9773,7 +9773,7 @@ Anahtar dosyanızı güvenli bir yerde saklayın. Uzantınızın yeni sürümler
 <translation id="8619803522055190423">Gölge</translation>
 <translation id="8620206585293032550">Etkin olmayan sekmelerin görünümü</translation>
 <translation id="8621979332865976405">Tüm ekranınızı paylaşın</translation>
-<translation id="6089523089512126744">Brave Arama AI Modu ve bağlı uygulamalar</translation>
+<translation id="6089523089512126744">Growser Arama AI Modu ve bağlı uygulamalar</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ChromeOS cihaz ve bileşen seri numaralarını okuma</translation>
 <translation id="862542460444371744">&amp;Uzantılar</translation>
@@ -10530,7 +10530,7 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="9188142767272053574">İşlem yalıtımını etkinleştir</translation>
 <translation id="9192019773545828776">Cihazınızı ekrana bakmadan kullanabilmek için sözlü geri bildirimleri dinleyin. Braille geri bildirimi, bağlı bir cihazla kullanılabilir. ChromeVox'u açmak ve kapatmak için Ctrl + Alt + Z tuşlarını kullanın. Gezinmek için Arama + Sol ok veya Sağ ok tuşlarını kullanın. Seçmek (etkinleştirmek) için Arama + Boşluk tuşlarını kullanın.</translation>
 <translation id="6436745840109002184">Kuruluşunuz, Growser Hesabınıza kaydetme işlemini kısıtladığında sekme gruplarını paylaşamaz veya bunlara katılamazsınız</translation>
-<translation id="9197456336762295195">Brave.com için geçiş anahtarınızın bulunduğu cihazın kamerasıyla bu QR kodunu tarayın</translation>
+<translation id="9197456336762295195">Growser.com için geçiş anahtarınızın bulunduğu cihazın kamerasıyla bu QR kodunu tarayın</translation>
 <translation id="919840898042157087">Statik hareket</translation>
 <translation id="9199503643457729322">Gizlilik Rehberi'nden ayrılmak için tıklayın.</translation>
 <translation id="9199695835892108985">Tüm seri bağlantı noktası izinleri sıfırlansın mı?</translation>
@@ -11331,17 +11331,17 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Growser'da Gemini</translation>
 <translation id="1975450474853317621">Growser tarayıcıda aç</translation>
 <translation id="8516824290867275572">Hesabınızın Growser'da Gemini'a erişimi yok</translation>
-<translation id="1649234713894562345">Brave, Brave açık kaynak projesi ve diğer <ph name="BEGIN_HIGHLIGHT"/>açık kaynak <ph name="END_HIGHLIGHT"/>yazılımlar ile oluşturulmuştur.</translation>
+<translation id="1649234713894562345">Growser, Growser açık kaynak projesi ve diğer <ph name="BEGIN_HIGHLIGHT"/>açık kaynak <ph name="END_HIGHLIGHT"/>yazılımlar ile oluşturulmuştur.</translation>
 <translation id="870536819717176711">Geçerli sekmeyi Gemini ile paylaşmayı seçtiğinizde sekmenin tüm içeriği, medyası ve URL'si Growser'a gönderilir.</translation>
-<translation id="1130866111814048607">Paylaşılan sekmelerin sayfa içerikleri, medya ve URL'leri Brave'a gönderilir ve güvenlik açısından incelenebilir.</translation>
-<translation id="7656790264713095385">Öncelikle bu cihazda Brave otomatik gezinme özelliğini açın</translation>
+<translation id="1130866111814048607">Paylaşılan sekmelerin sayfa içerikleri, medya ve URL'leri Growser'a gönderilir ve güvenlik açısından incelenebilir.</translation>
+<translation id="7656790264713095385">Öncelikle bu cihazda Growser otomatik gezinme özelliğini açın</translation>
 <translation id="8572003230388132401">Gemini Spark, sitelerle etkileşimde bulunmak ve sizin adınıza görevleri tamamlamak için bu cihazda Growser otomatik gezinme özelliğini kullanabilir. <ph name="LINK_BEGIN"/>Daha fazla bilgi edinin<ph name="LINK_END"/>.</translation>
 <translation id="2732482226802306268">Gemini Spark, bu cihazda otomatik gezinme özelliğini yalnızca cihaz uyanıkken ve Growser çalışırken kullanabilir.</translation>
 <translation id="1982892581799327835">Gemini Spark ajanınıza erişimi olan herkes Growser tarayıcınızı kontrol edebilir.</translation>
 <translation id="6689939585896001516">Growser'un sizin için göz atmasına izin verin</translation>
 <translation id="640233545778658570">Growser'da Gemini, sekmelerinizde çalışmak ve verdiğiniz görevleri tamamlamak için otomatik göz atma özelliğini kullanır. <ph name="LINK_BEGIN"/>Daha fazla bilgi edinin<ph name="LINK_END"/>.</translation>
-<translation id="2740842679402949230">Brave otomatik gezinme hakkında daha fazla bilgi</translation>
-<translation id="3570112771874223231">Gemini'ın bir görev sırasında kullandığı sayfa içeriği ve URL'ler Brave ile paylaşılır ve güvenlik açısından incelenebilir.</translation>
+<translation id="2740842679402949230">Growser otomatik gezinme hakkında daha fazla bilgi</translation>
+<translation id="3570112771874223231">Gemini'ın bir görev sırasında kullandığı sayfa içeriği ve URL'ler Growser ile paylaşılır ve güvenlik açısından incelenebilir.</translation>
 <translation id="2314508080153323869">Growser'da Gemini</translation>
 <translation id="1910632359330857071">İnternette gezinirken yanıtlar, önemli noktalar ve daha fazlasını almak için Growser'da Gemini ile sohbet edin</translation>
 <translation id="2483218699324586641">Growser'da Gemini'ı açmak için <ph name="FOCUS_TOGGLE_HOTKEY"/> tuşlarını kullanın</translation>
@@ -11358,8 +11358,8 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="3187556136478864255">Yayın cihazınızı <ph name="BEGIN_LINK"/>Growser Home uygulamasında<ph name="END_LINK"/> görebiliyor musunuz?</translation>
 <translation id="2984923316661218534">Growser Şifre Yöneticisi ile geçiş anahtarlarınızı bu cihazda kullanın</translation>
 <translation id="2364302372598204515">Bu bir Growser Hesabı değil. Growser'a kaydettiğiniz öğeler diğer cihazlarda kullanılamaz.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave üyeliği</translation>
-<translation id="850632091665381275">Brave üyeliği</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser üyeliği</translation>
+<translation id="850632091665381275">Growser üyeliği</translation>
 <translation id="6710172959248731469">Growser hizmetleri ayarları</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 öğe yalnızca bu cihaza kaydedilir. Diğer cihazlarınızda kullanmak için Growser Hesabınıza kaydedin. Bu işlem, kopya öğeleri de temizler.}other{{ITEM_COUNT} öğe yalnızca bu cihaza kaydedilir. Diğer cihazlarınızda kullanmak için Growser Hesabınıza kaydedin. Bu işlem, kopya öğeleri de temizler.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 şifre yalnızca bu cihaza kaydedilir. Diğer cihazlarınızda kullanmak için Growser Hesabınıza kaydedin. Bu işlem, kopya öğeleri de temizler.}other{{PASSWORD_COUNT} şifre yalnızca bu cihaza kaydedilir. Diğer cihazlarınızda kullanmak için Growser Hesabınıza kaydedin. Bu işlem, kopya öğeleri de temizler.}}</translation>
@@ -11373,8 +11373,8 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 yer işareti ve diğer öğeler yalnızca bu cihazda kayıtlı. Diğer cihazlarınızda kullanmak için Growser Hesabınıza kaydedin.}other{{BOOKMARK_COUNT} yer işareti ve diğer öğeler yalnızca bu cihazda kayıtlı. Diğer cihazlarınızda kullanmak için Growser Hesabınıza kaydedin.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 öğe yalnızca bu cihaza kaydedilir. Diğer cihazlarınızda kullanmak için <ph name="BEGIN_LINK"/>Growser Hesabınıza kaydedin<ph name="END_LINK"/>.}other{{ITEM_COUNT} öğe yalnızca bu cihaza kaydedilir. Diğer cihazlarınızda kullanabilmek için <ph name="BEGIN_LINK"/>Growser Hesabınıza<ph name="END_LINK"/> kaydedin.}}</translation>
 <translation id="8993421601514768334">Growser Hesabınızı kullanın veya yeni bir hesap oluşturun</translation>
-<translation id="1896353439080510710">Sohbetler incelenir ve Brave AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
-<translation id="7398815534290329738">Sohbetler incelenir ve Brave AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Bazı içerikler herkese uygun olmayabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1896353439080510710">Sohbetler incelenir ve Growser AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="7398815534290329738">Sohbetler incelenir ve Growser AI'ı daha iyi hale getirmek için kullanılır. Gemini bir yapay zeka modeli olduğu için hata yapabilir. Bazı içerikler herkese uygun olmayabilir. Konumunuzla ilgili bilgiler de dahil olmak üzere <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>etkinliğinizi yönetebilirsiniz<ph name="END_LINK_MANAGE_ACTIVITY"/>. <ph name="BEGIN_LINK_LEARN_MORE"/>Seçenekleriniz hakkında daha fazla bilgi edinin<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Bu uzantı Growser Hesabınıza kaydedilir, ancak yalnızca bu cihaza kaydettiği veriler silinebilir}other{Bu uzantılar Growser Hesabınıza kaydedilir, ancak yalnızca bu cihaza kaydettikleri veriler silinebilir}}</translation>
 <translation id="3523789730715594198">Senkronizasyonu istediğiniz zaman ayarlardan durdurabilirsiniz. Growser, geçmişinize dayalı olarak Arama'yı ve diğer hizmetleri kişiselleştirebilir.</translation>
 <translation id="8231595707224857577">Kuruluşunuz, sekmeleri Growser Hesabınıza kaydetmeyi devre dışı bıraktı</translation>
@@ -11412,7 +11412,7 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>Diğer etkinlik biçimleri<ph name="END_LINK_GOOGLE"/>, oturum açtığınızda Growser Hesabı'nıza kaydedilebilir. Bunları istediğiniz zaman silebilirsiniz.</translation>
 <translation id="6533315466883598769">Growser Çeviri'yi kullan</translation>
 <translation id="6010651352520077187">Bu ayar açıkken Growser Çeviri, siteleri tercih ettiğiniz dile çevirmeyi önerir. Ayrıca, siteleri otomatik olarak da çevirebilir.</translation>
-<translation id="6873499199714317035">Bu ayar açıkken Brave Çeviri, siteleri ve PDF'leri tercih ettiğiniz dile çevirmeyi önerir. Ayrıca, siteleri otomatik olarak da çevirebilir.</translation>
+<translation id="6873499199714317035">Bu ayar açıkken Growser Çeviri, siteleri ve PDF'leri tercih ettiğiniz dile çevirmeyi önerir. Ayrıca, siteleri otomatik olarak da çevirebilir.</translation>
 <translation id="5911030830365207728">Growser Çeviri</translation>
 <translation id="7458168200501453431">Growser Arama'da kullanılan yazım denetleyiciyi kullanır. Tarayıcıda yazdığınız metin Growser'a gönderilir.</translation>
 <translation id="8972513834460200407">Güvenlik duvarının, Growser sunucularından yapılan indirme işlemlerini engellemediğinden emin olmak için lütfen ağ yöneticinizle görüşün.</translation>
@@ -11458,7 +11458,7 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="3293574207873361017">Growser Hesabınızı yönetin</translation>
 <translation id="6901130673208235020">Tarama geçmişinde arama yaptığınızda geçmiş aramalarınız, en iyi eşleşmelerin sayfa içeriği ve üretilen model çıktıları Growser'a gönderilir</translation>
 <translation id="3178434360326457238">Göz attığınız sitelerin sayfa içerikleri şifrelenerek cihazınıza kaydedilir. Bu durum Growser'un performansını etkileyebilir</translation>
-<translation id="8622145666696249878">Brave Arama AI Modu ve bağlı uygulamalar</translation>
+<translation id="8622145666696249878">Growser Arama AI Modu ve bağlı uygulamalar</translation>
 <translation id="2760679829473121490">Growser özellikleri ve ipuçları hakkında sistem bildirimlerini göster</translation>
 <translation id="6713316345564743478">Sızdırılmış şifre olup olmadığını kontrol etmek için Growser Hesabınızda oturum açın</translation>
 <translation id="1342886103232377846">Sızdırılmış şifre olup olmadığını kontrol etmek için Growser Şifre Yöneticisi'ne gidin</translation>
@@ -11521,7 +11521,7 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="1095879482467973146">Web'de Growser Şifre Yöneticisi</translation>
 <translation id="1368798504801939187">Growser veya Android kullanmıyorken bile <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> adresinde oturum açarak şifrelerinizi görüntüleyebilirsiniz.</translation>
 <translation id="829923460755755423">Growser Şifre Yöneticisi için kısayol ekleyin</translation>
-<translation id="7244677273667272006">Brave Hesabınızla şifre eklemek ve bu şifrelere tüm cihazlarınızdan erişmek için kimliğinizi doğrulayın</translation>
+<translation id="7244677273667272006">Growser Hesabınızla şifre eklemek ve bu şifrelere tüm cihazlarınızdan erişmek için kimliğinizi doğrulayın</translation>
 <translation id="8189517459248805166"><ph name="WEBSITE"/> şifreniz hem bu cihazda hem de Growser Hesabınızda kayıtlı. Hangisini silmek istiyorsunuz?</translation>
 <translation id="9101265711096405922">Growser Hesabınızdan</translation>
 <translation id="927421426408921503">Kayıtlı şifreler Growser Hesabınıza taşınsın mı?</translation>
@@ -11632,7 +11632,7 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         Ayarları kart menüsünden yönetebilir veya Growser'u Özelleştir bölümünden daha fazla seçeneğe erişebilirsiniz.</translation>
-<translation id="6474021817475285003">Brave Takvim'de daha fazlasını görün</translation>
+<translation id="6474021817475285003">Growser Takvim'de daha fazlasını görün</translation>
 <translation id="9066394310994446814">Bunu, daha önce Growser hizmetlerini kullandığınız için görüyorsunuz. Verilerinizi <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> adresinde görebilir, silebilir ve değiştirebilirsiniz.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11663,7 +11663,7 @@ Yüklü yazılımlar, dosyalar, tarayıcınız, cihazın işletim sistemi ve IP 
 <translation id="6868193750403948178">Growser'u özelleştir</translation>
 <translation id="5009064339929592579">Growser Hesabınızdaki bir klasöre kaydedilsin mi?</translation>
 <translation id="7400528739136719497">Bazı Growser sesleri şu anda kullanılamayabilir</translation>
-<translation id="4857677595331912231">Geçerli sekmenizin içeriği ve URL'si, size daha alakalı yanıtlar vermek için Brave ile paylaşılır. Göz atarken sekme ekleyebilir veya kaldırabilirsiniz.</translation>
+<translation id="4857677595331912231">Geçerli sekmenizin içeriği ve URL'si, size daha alakalı yanıtlar vermek için Growser ile paylaşılır. Göz atarken sekme ekleyebilir veya kaldırabilirsiniz.</translation>
 <translation id="5639212636098910819">Growser'da Kal</translation>
 <translation id="3252169590975855820">Growser Şifre Yöneticisi'nden erişebilirsiniz</translation>
 <translation id="3843323136102787632">Bu QR koduyla Growser'u indirin ve Growser Hesabınızda oturum açın.</translation>
@@ -11710,7 +11710,7 @@ Sızdırılmış # şifreniz daha var. Growser Şifre Yöneticisi bu şifreleri 
 <translation id="1162630940779651724">Bu sekmeyi başka bir cihaza göndermek için her iki cihazda da Growser'da oturum açın.</translation>
 <translation id="5388608738812110907">Bu sekmeyi başka bir cihaza göndermek için ilgili cihazda Growser'da oturum açın.</translation>
 <translation id="4007679133627124999">Cihazlar arasında bağlantı göndermek için her iki cihazda da aynı Growser Hesabı'nda oturum açıldığından emin olun.</translation>
-<translation id="2377999415409519333">Bağlantı göndermek için kimliğinizi doğrulayın. Her iki cihazda da aynı Brave Hesabı'nda oturum açtığınızda bağlantı gönderebilirsiniz.</translation>
+<translation id="2377999415409519333">Bağlantı göndermek için kimliğinizi doğrulayın. Her iki cihazda da aynı Growser Hesabı'nda oturum açtığınızda bağlantı gönderebilirsiniz.</translation>
 <translation id="4986706507552097681">Neyin senkronize edileceğini istediğiniz zaman ayarlardan seçebilirsiniz. Growser, geçmişinize dayalı olarak Arama'yı ve diğer hizmetleri kişiselleştirebilir.</translation>
 <translation id="8002662358897231821">Tüm cihazlarınızdaki sekmeleri, geçmişi ve diğer ayarları almak için oturum açın. Growser hizmetlerinizde de otomatik olarak oturum açarsınız.</translation>
 <translation id="3128296144259620504">Growser otomatik test yazılımı tarafından kontrol ediliyor</translation>

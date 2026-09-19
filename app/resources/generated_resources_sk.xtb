@@ -376,7 +376,7 @@ Heslá si môžete kedykoľvek skontrolovať v službe <ph name="GOOGLE_PASSWOR
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Zastaviť</translation>
 <translation id="1272508081857842302">Otvárajú sa <ph name="BEGIN_LINK"/>podporované odkazy<ph name="END_LINK"/></translation>
-<translation id="7823526956728613125">Spravujte pripojenie medzi vyhľadávacími službami a aplikáciami Brave Workspace, ako je Disk Brave</translation>
+<translation id="7823526956728613125">Spravujte pripojenie medzi vyhľadávacími službami a aplikáciami Growser Workspace, ako je Disk Growser</translation>
 <translation id="1274997165432133392">Súbory cookie a ďalšie dáta webov</translation>
 <translation id="1275936815032730048">kláves spúšťača + šípka doprava</translation>
 <translation id="1275963833368139883">Keď vyhľadávate v histórii prehliadania, odpovede a výsledky vyhľadávania sú založené na obsahu príslušnej stránky. Vďaka tomu máte k dispozícii lepšie výsledky.</translation>
@@ -653,7 +653,7 @@ Heslá si môžete kedykoľvek skontrolovať v službe <ph name="GOOGLE_PASSWOR
 <translation id="1508931164824684991">Weby môžu používať JavaScript</translation>
 <translation id="1509163368529404530">&amp;Obnoviť skupinu</translation>
 <translation id="1509281256533087115">Pristupovať k ľubovoľnému zariadeniu <ph name="DEVICE_NAME_AND_VENDOR"/> prostredníctvom rozhrania USB</translation>
-<translation id="2825615584808054779">Vaše konverzácie so službou Gemini a údaje v službe Brave Workspace nebudú kontrolované ani používané na zlepšovanie modelov generatívnej umelej inteligencie. Gemini je umelá inteligencia a môže robiť chyby.</translation>
+<translation id="2825615584808054779">Vaše konverzácie so službou Gemini a údaje v službe Growser Workspace nebudú kontrolované ani používané na zlepšovanie modelov generatívnej umelej inteligencie. Gemini je umelá inteligencia a môže robiť chyby.</translation>
 <translation id="1510238584712386396">Spúšťač</translation>
 <translation id="1510341833810331442">Weby nemôžu ukladať údaje vo vašom zariadení</translation>
 <translation id="1510882959204224895">Otvárať v okne</translation>
@@ -747,7 +747,7 @@ Heslá si môžete kedykoľvek skontrolovať v službe <ph name="GOOGLE_PASSWOR
 <translation id="1581962803218266616">Zobraziť v aplikácii Finder</translation>
 <translation id="1582955169539260415">odstrániť [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> sa spracúva miestne a funguje offline</translation>
-<translation id="491276955533054201">Najprv pre toto zariadenie zapnite automatickú navigáciu v Brave</translation>
+<translation id="491276955533054201">Najprv pre toto zariadenie zapnite automatickú navigáciu v Growser</translation>
 <translation id="1587275751631642843">&amp;Konzola jazyka JavaScript</translation>
 <translation id="1588438908519853928">Normálny</translation>
 <translation id="1588772269240419305">Kontrola aktualizácií loga a názvu</translation>
@@ -1158,7 +1158,7 @@ Heslá si môžete kedykoľvek skontrolovať v službe <ph name="GOOGLE_PASSWOR
 <translation id="1901213235765457754">Požiadajte správcu o aktualizáciu tejto aplikácie</translation>
 <translation id="1901303067676059328">Vybrať &amp;všetko</translation>
 <translation id="1901760057081700494">Časové pásmo je momentálne nastavené na <ph name="TIME_ZONE_ENTRY"/>. Ak chcete automaticky aktualizovať časové pásmo, <ph name="BEGIN_LINK"/>zapnite prístup k polohe systému<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Adresa domova vám pomôže vykonávať akcie v službách Googlu, napríklad získať relevantnejšie výsledky vyhľadávania a trasy v Mapách Brave. Môžete ju upraviť alebo odstrániť v <ph name="BEGIN_LINK"/>účte Brave<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">Adresa domova vám pomôže vykonávať akcie v službách Googlu, napríklad získať relevantnejšie výsledky vyhľadávania a trasy v Mapách Growser. Môžete ju upraviť alebo odstrániť v <ph name="BEGIN_LINK"/>účte Growser<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">Webové adresy, ktoré navštívite, sa uložia do vášho účtu Growser</translation>
 <translation id="190530012637606145">Upozorní vás na všetky nezabezpečené pripojenia vrátane súkromných intranetov</translation>
 <translation id="1906181697255754968">Weby zvyčajne získavajú prístup k súborom a priečinkom vo vašom zariadení, aby mohli poskytovať funkcie, ako je automatické ukladanie vašej práce</translation>
@@ -1531,7 +1531,7 @@ Ak chcete spravovať nastavenia tohto účtu, nainštalujte si do zariadenia apl
 <translation id="2198625180564913276">Pridáva sa profil. Môže to trvať niekoľko minút.</translation>
 <translation id="2198712775285959645">Upraviť</translation>
 <translation id="2199298570273670671">Chyba</translation>
-<translation id="2798272130984183944">Vyberte, či má Brave používať modely umelej inteligencie, ktoré sa spúšťajú priamo vo vašom zariadení</translation>
+<translation id="2798272130984183944">Vyberte, či má Growser používať modely umelej inteligencie, ktoré sa spúšťajú priamo vo vašom zariadení</translation>
 <translation id="2200094388063410062">E‑mail</translation>
 <translation id="2200781749203116929">Denníky systému ChromeOS</translation>
 <translation id="2202391868799679245">Zapnúť klávesovú skratku</translation>
@@ -1611,7 +1611,7 @@ Ak chcete spravovať nastavenia tohto účtu, nainštalujte si do zariadenia apl
 <translation id="225716114209817872">Maximálne</translation>
 <translation id="5642482119439119644">Ak chcete získať karty zo svojich ostatných zariadení, overte svoju totožnosť. Synchronizáciu môžete kedykoľvek zastaviť v nastaveniach. Growser môže prispôsobovať Vyhľadávanie a ďalšie služby na základe vašej histórie.</translation>
 <translation id="22614517036276112">Tento dokument alebo vaše zariadenie nespĺňa niektoré pravidlá zabezpečenia vašej organizácie. Zistite od správcu, čo je treba opraviť.</translation>
-<translation id="1829264724820495616">Adresa práce vám pomôže vykonávať akcie v službách Googlu, napríklad získať relevantnejšie výsledky vyhľadávania a trasy v Mapách Brave. Môžete ju upraviť alebo odstrániť v <ph name="BEGIN_LINK"/>účte Brave<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">Adresa práce vám pomôže vykonávať akcie v službách Googlu, napríklad získať relevantnejšie výsledky vyhľadávania a trasy v Mapách Growser. Môžete ju upraviť alebo odstrániť v <ph name="BEGIN_LINK"/>účte Growser<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Oneskorenie pred opakovaním</translation>
 <translation id="2263371730707937087">Frekvencia obnovenia obrazovky</translation>
 <translation id="7829329302663082098">Vaša spätná väzba nám pomáha zlepšovať Growser Cast, a preto si ju ceníme. Pomoc s riešením problémov s prenosom nájdete v <ph name="BEGIN_LINK"/>centre pomoci<ph name="END_LINK"/>.</translation>
@@ -1754,7 +1754,7 @@ Ak chcete spravovať nastavenia tohto účtu, nainštalujte si do zariadenia apl
 <translation id="2373499590298659902">Tlačidlo myši stlačíte a pridržíte klávesom 0</translation>
 <translation id="2373666622366160481">Prispôsobiť papieru</translation>
 <translation id="2375406435414127095">Pripojenie k telefónu</translation>
-<translation id="6612559367203670996">Brave používa obsah a webovú adresu zdieľaných kariet. Vaša aktuálna karta sa zdieľa v nových četoch. Toto nastavenie môžete kedykoľvek zmeniť</translation>
+<translation id="6612559367203670996">Growser používa obsah a webovú adresu zdieľaných kariet. Vaša aktuálna karta sa zdieľa v nových četoch. Toto nastavenie môžete kedykoľvek zmeniť</translation>
 <translation id="2376056713414548745">Čítať nahlas</translation>
 <translation id="2376122016044804363">Potvrdenia o skopírovaní do schránky</translation>
 <translation id="2377667304966270281">Závažné chyby</translation>
@@ -3509,7 +3509,7 @@ Ak chcete spravovať nastavenia tohto účtu, nainštalujte si do zariadenia apl
 <translation id="3708295717182051206">Skryté titulky</translation>
 <translation id="3708684582558000260">Nepovoliť zavretým webom dokončovať odosielanie alebo prijímanie údajov</translation>
 <translation id="3709244229496787112">Prehliadač bol zatvorený pred dokončením sťahovania.</translation>
-<translation id="3710438437470197252">Zobraziť viac na Disku Brave</translation>
+<translation id="3710438437470197252">Zobraziť viac na Disku Growser</translation>
 <translation id="3710501561113687889">Ak chcete pokračovať, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> bude s týmto webom zdieľať vaše <ph name="FIELDS_STRING"/>.</translation>
 <translation id="3711931198657368127">Prilepiť a prejsť na <ph name="URL"/></translation>
 <translation id="3711945201266135623">Na tlačovom serveri boli nájdené tlačiarne (<ph name="NUM_PRINTERS"/>)</translation>
@@ -5065,7 +5065,7 @@ Ak chcete zobrazenie oddialiť, stlačte Ctrl + Alt + zníženie jasu.</translat
 <translation id="4895799941222633551">Vytvoriť odkaz…</translation>
 <translation id="4898913189644355814">Web môže uložiť váš preferovaný jazyk alebo položky, ktoré si chcete kúpiť. Tieto informácie má k dispozícii tento web aj jeho subdomény.</translation>
 <translation id="4899052647152077033">Invertovať farby</translation>
-<translation id="4899813415889597597">K vášmu účtu Disk Brave sa nepodarilo pripojiť</translation>
+<translation id="4899813415889597597">K vášmu účtu Disk Growser sa nepodarilo pripojiť</translation>
 <translation id="490031510406860025">Nepovolené na tomto webe</translation>
 <translation id="490051679772058907"><ph name="REFRESH_RATE"/> Hz –prekladané</translation>
 <translation id="4900652253009739885">Jediný prepínač pridelený k akcii Vybrať sa nedá odstrániť. Ak chcete <ph name="RESPONSE"/>, stlačte ľubovoľný kláves.</translation>
@@ -5334,7 +5334,7 @@ Ak chcete zobrazenie oddialiť, stlačte Ctrl + Alt + zníženie jasu.</translat
 <translation id="5112577000029535889">&amp;Nástroje pre vývojárov</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{Bol presunutý 1 súbor}few{Boli presunuté {NUM_OF_FILES} súbory}many{Moved {NUM_OF_FILES} files}other{Bolo presunutých {NUM_OF_FILES} súborov}}</translation>
 <translation id="511313294362309725">Zapnúť rýchle párovanie</translation>
-<translation id="6409962091529734959">Ďalšie informácie o automatickej navigácii v Brave</translation>
+<translation id="6409962091529734959">Ďalšie informácie o automatickej navigácii v Growser</translation>
 <translation id="51143538739122961">Vložte bezpečnostný kľúč a stlačte jeho tlačidlo</translation>
 <translation id="5115338116365931134">Jediné prihlásenie</translation>
 <translation id="5116628073786783676">Uložiť &amp;zvuk ako...</translation>
@@ -5377,7 +5377,7 @@ Ak chcete zobrazenie oddialiť, stlačte Ctrl + Alt + zníženie jasu.</translat
 <translation id="5146235736676876345">Vybrať vlastné</translation>
 <translation id="5146896637028965135">Hlas systému</translation>
 <translation id="5147113439721488265">Odporúčanie</translation>
-<translation id="5897101208018277582">Ak chcete posielať odkazy, overte svoju totožnosť. Odkazy môžete posielať, keď sa v oboch zariadeniach prihlásite do rovnakého účtu Brave.</translation>
+<translation id="5897101208018277582">Ak chcete posielať odkazy, overte svoju totožnosť. Odkazy môžete posielať, keď sa v oboch zariadeniach prihlásite do rovnakého účtu Growser.</translation>
 <translation id="5148285448107770349">Heslo musí obsahovať aspoň osem znakov</translation>
 <translation id="5149602533174716626">Kopírovať snímku videa</translation>
 <translation id="5150254825601720210">Netscape – názov servera SSL certifikátu</translation>
@@ -6064,7 +6064,7 @@ Tejto akcii môžete prideliť viacero prepínačov.</translation>
 <translation id="5713158217420111469">Pripojené k zariadeniu <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Inverzné</translation>
 <translation id="5714100381896040477">Obmedzovať pohyb na obrazovke</translation>
-<translation id="8277434106940718633">Vaše konverzácie so službou Gemini a údaje v službe Brave Workspace nebudú kontrolované ani používané na zlepšovanie modelov generatívnej umelej inteligencie. Gemini je umelá inteligencia a môže robiť chyby. Určitý obsah nemusí byť vhodný pre všetkých.</translation>
+<translation id="8277434106940718633">Vaše konverzácie so službou Gemini a údaje v službe Growser Workspace nebudú kontrolované ani používané na zlepšovanie modelov generatívnej umelej inteligencie. Gemini je umelá inteligencia a môže robiť chyby. Určitý obsah nemusí byť vhodný pre všetkých.</translation>
 <translation id="5719854774000914513">Weby môžu žiadať o pripojenie k zariadeniam HID</translation>
 <translation id="5720729194423017301">Odkazy na weby a vyhľadávače</translation>
 <translation id="572155275267014074">Nastavenia Androidu</translation>
@@ -6999,7 +6999,7 @@ Tejto akcii môžete prideliť viacero prepínačov.</translation>
 <translation id="6464825623202322042">Toto zariadenie</translation>
 <translation id="6465841119675156448">Bez internetu</translation>
 <translation id="6466258437571594570">Weby vás nemôžu vyrušovať žiadosťami o odosielanie upozornení</translation>
-<translation id="1673835407889847350">Overte svoju totožnosť, aby ste mohli pridávať heslá a mať ich k dispozícii vo všetkých zariadeniach so svojím účtom Brave</translation>
+<translation id="1673835407889847350">Overte svoju totožnosť, aby ste mohli pridávať heslá a mať ich k dispozícii vo všetkých zariadeniach so svojím účtom Growser</translation>
 <translation id="6467230443178397264">Vyhľadať v súbore <ph name="FILE_NAME"/></translation>
 <translation id="6467304607960172345">Optimalizovať videá na celú obrazovku</translation>
 <translation id="6467377768028664108"><ph name="DEVICE_TYPE"/> potom bude môcť:</translation>
@@ -7012,7 +7012,7 @@ Tejto akcii môžete prideliť viacero prepínačov.</translation>
 <translation id="6470823736074966819">Vypnúť zvuk upozornení</translation>
 <translation id="6472893788822429178">Zobraziť tlačidlo Domovskej stránky</translation>
 <translation id="6473315466413288899">Vyberte možnosť</translation>
-<translation id="6199773995438617867">Zobraziť viac v Kalendári Brave</translation>
+<translation id="6199773995438617867">Zobraziť viac v Kalendári Growser</translation>
 <translation id="6474401088838630457">Spýtať sa Gemini na toto viac</translation>
 <translation id="6474498546677193336">Zdieľanie sa nepodarilo zrušiť, pretože tento priečinok používa nejaká aplikácia. Jeho zdieľanie bude zrušené po ďalšom vypnutí systému Linux.</translation>
 <translation id="6474884162850599008">Odpojiť účet služby Disk Growser</translation>
@@ -7197,7 +7197,7 @@ Máte ešte # ďalších. Správca hesiel Growser odporúča okamžite dané he
 <translation id="6613231539539868591">Trvalé údaje</translation>
 <translation id="6613267708691765962">Kontroluje sa prítomnosť malvéru…</translation>
 <translation id="6615455863669487791">Ukázať</translation>
-<translation id="5146630705831894319">Ponúkať Prekladač Brave v prípade webov a súborov PDF v iných jazykoch</translation>
+<translation id="5146630705831894319">Ponúkať Prekladač Growser v prípade webov a súborov PDF v iných jazykoch</translation>
 <translation id="6618013221808317456">Nepovoliť webom používať optimalizáciu JavaScriptu</translation>
 <translation id="6618154741503063152">Nedá sa nahrať. Prílohy nie sú povolené.</translation>
 <translation id="6619058681307408113">Protokol LPD (Line Printer Daemon)</translation>
@@ -7551,7 +7551,7 @@ Máte ešte # ďalších. Správca hesiel Growser odporúča okamžite dané he
 <translation id="6871644448911473373">Odpovedajúce zariadenie OCSP: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Jazyky…</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Keď je táto možnosť zapnutá, Prekladač Brave bude ponúkať preklad webov a súborov PDF do vášho preferovaného jazyka. Dokáže aj automaticky prekladať weby.</translation>
+<translation id="5189979109199910058">Keď je táto možnosť zapnutá, Prekladač Growser bude ponúkať preklad webov a súborov PDF do vášho preferovaného jazyka. Dokáže aj automaticky prekladať weby.</translation>
 <translation id="6873571253135628430">Zmeniť povolenia webov</translation>
 <translation id="6874986444867497677">Inštaláciu sa nepodarilo dokončiť. Skúste to znova alebo toto okno zavrite.</translation>
 <translation id="6876155724392614295">Bicykel</translation>
@@ -8743,7 +8743,7 @@ Odstráňte ju stlačením prideleného prepínača alebo klávesa.</translation
 <translation id="7807711621188256451">Vždy povoliť stránkam <ph name="HOST"/> prístup ku kamere</translation>
 <translation id="7810202088502699111">Na tejto stránke boli zablokované kontextové okná.</translation>
 <translation id="7810367892333449285">Formát vstupu by mal byť <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ adresa<ph name="LPA_2"/>$<ph name="LPA_3"/>nepovinný priraďovací identifikátor<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave je založený na open source projekte Brave a ďalšom <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> softvéri.</translation>
+<translation id="5014491767627896944">Growser je založený na open source projekte Growser a ďalšom <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> softvéri.</translation>
 <translation id="7811263553491007091">Skúste to znova alebo vyberte jeden z motívov vygenerovaných v minulosti.</translation>
 <translation id="7811926937048662341">Kliknite tu pravým tlačidlom a vyberte Zobrazovať karty zvisle</translation>
 <translation id="7811986034759500329">Nakonfigurované v nastaveniach systému</translation>
@@ -8766,7 +8766,7 @@ Odstráňte ju stlačením prideleného prepínača alebo klávesa.</translation
 <translation id="7826039927887234077"><ph name="INDEX"/>. nedávny motív vytvorený umelou inteligenciou z <ph name="SUBJECT"/> vyjadrujúci náladu <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Podpora starších prehliadačov (PSP) – interné</translation>
 <translation id="7826838152281937785">Zavrieť dolné zobrazenie</translation>
-<translation id="45690163731419633">Platia <ph name="BEGIN_LINK_TERMS"/>zmluvné podmienky spoločnosti Brave<ph name="END_LINK_TERMS"/> a <ph name="BEGIN_LINK_PRIVACY"/>oznámenie o ochrane súkromia v aplikáciách Gemini<ph name="END_LINK_PRIVACY"/>.</translation>
+<translation id="45690163731419633">Platia <ph name="BEGIN_LINK_TERMS"/>zmluvné podmienky spoločnosti Growser<ph name="END_LINK_TERMS"/> a <ph name="BEGIN_LINK_PRIVACY"/>oznámenie o ochrane súkromia v aplikáciách Gemini<ph name="END_LINK_PRIVACY"/>.</translation>
 <translation id="7828642077514646543">Chyba: Certifikát sa nedá dekódovať</translation>
 <translation id="7830276128493844263">Poloha je vypnutá v nastaveniach systému</translation>
 <translation id="7830833461614351956">Chcete skopírovať niekoľko súborov (<ph name="NUM_OF_FILES"/>) do služby <ph name="CLOUD_PROVIDER"/> a otvoriť?</translation>
@@ -9637,7 +9637,7 @@ Súbor kľúča uložte na bezpečné miesto. Budete ho potrebovať na vytvoreni
 <translation id="850399339579925930">Slovníky</translation>
 <translation id="850561044295157831">Ďalšie informácie o asistentovi pri písaní</translation>
 <translation id="8505669004895429027">Malé úspory</translation>
-<translation id="869548515244800202">Členstvo Brave</translation>
+<translation id="869548515244800202">Členstvo Growser</translation>
 <translation id="8507052544157927817">Štýl – podčiarknutie</translation>
 <translation id="8507227974644337342">Rozlíšenie obrazovky</translation>
 <translation id="8507443886219296894">Skryť pre tento web</translation>
@@ -9777,7 +9777,7 @@ Súbor kľúča uložte na bezpečné miesto. Budete ho potrebovať na vytvoreni
 <translation id="8619803522055190423">Vrhnutý tieň</translation>
 <translation id="8620206585293032550">Vzhľad neaktívnych kariet</translation>
 <translation id="8621979332865976405">Zdieľanie celej obrazovky</translation>
-<translation id="6089523089512126744">Režim AI vo Vyhľadávaní Brave a pripojené aplikácie</translation>
+<translation id="6089523089512126744">Režim AI vo Vyhľadávaní Growser a pripojené aplikácie</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Čítať sériové čísla zariadení ChromeOS a komponentov</translation>
 <translation id="862542460444371744">&amp;Rozšírenia</translation>
@@ -11338,16 +11338,16 @@ Môže to zahŕňať informácie o nainštalovanom softvéri, súboroch, prehli
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini v Growser</translation>
 <translation id="1975450474853317621">Otvárať v prehliadači Growser</translation>
 <translation id="8516824290867275572">Váš účet nemá prístup ku Gemini v Growser</translation>
-<translation id="1649234713894562345">Brave je založený na open source projekte Brave a ďalšom <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> softvéri.</translation>
+<translation id="1649234713894562345">Growser je založený na open source projekte Growser a ďalšom <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> softvéri.</translation>
 <translation id="870536819717176711">Keď sa rozhodnete zdieľať aktuálnu kartu s Gemini, celý jej obsah, médiá a webová adresa sa odošlú Googlu.</translation>
 <translation id="1130866111814048607">Pri zdieľaní kariet sa obsah ich stránok, médiá a webové adresy odosielajú Googlu a môžu byť skontrolované z hľadiska bezpečnosti.</translation>
-<translation id="7656790264713095385">Najprv pre toto zariadenie zapnite automatickú navigáciu v Brave</translation>
+<translation id="7656790264713095385">Najprv pre toto zariadenie zapnite automatickú navigáciu v Growser</translation>
 <translation id="8572003230388132401">Gemini Spark môže pomocou automatickej navigácie v Growser v tomto zariadení interagovať s webmi a dokončovať úlohy za vás. <ph name="LINK_BEGIN"/>Ďalšie informácie<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark môže používať automatickú navigáciu v tomto zariadení, iba keď je zariadenie aktívne a Growser je spustený.</translation>
 <translation id="1982892581799327835">Váš Growser môže ovládať ktokoľvek, kto má prístup k vášmu agentovi Gemini Spark.</translation>
 <translation id="6689939585896001516">Nechajte Growser prehliadať za vás</translation>
 <translation id="640233545778658570">Gemini v Growser používa automatické prehliadanie, aby mohol pracovať vo vašich kartách a dokončovať úlohy, ktoré mu zadáte. <ph name="LINK_BEGIN"/>Ďalšie informácie<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Ďalšie informácie o automatickej navigácii v Brave</translation>
+<translation id="2740842679402949230">Ďalšie informácie o automatickej navigácii v Growser</translation>
 <translation id="3570112771874223231">Obsah stránky a webové adresy, ktoré bude Gemini používať počas vykonávania úlohy, sa budú zdieľať s Googlom a môžu byť skontrolované z hľadiska bezpečnosti.</translation>
 <translation id="2314508080153323869">Gemini v Growser</translation>
 <translation id="1910632359330857071">Četujte s Gemini v Growser a získavajte odpovede, kľúčové poznatky a ďalší obsah počas prehliadania</translation>
@@ -11368,7 +11368,7 @@ Môže to zahŕňať informácie o nainštalovanom softvéri, súboroch, prehli
 <translation id="2984923316661218534">Získajte prístupové kľúče v tomto zariadení pomocou Správcu hesiel Growser</translation>
 <translation id="2364302372598204515">Toto nie je účet Growser. Položky, ktoré uložíte do Chromu, nebudú k dispozícii v iných zariadeniach.</translation>
 <translation id="7105387152460258846"><ph name="PROFILE_NAME"/>, členstvo na Googli</translation>
-<translation id="850632091665381275">Členstvo Brave</translation>
+<translation id="850632091665381275">Členstvo Growser</translation>
 <translation id="6710172959248731469">Nastavenia služieb Googlu</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 položka je uložená iba v tomto zariadení. Ak ju chcete používať v ďalších zariadeniach, uložte si ju v účte Growser. Vymažete tým aj všetky duplikáty.}few{{ITEM_COUNT} položky sú uložené iba v tomto zariadení. Ak ich chcete používať v ďalších zariadeniach, uložte si ich v účte Growser. Vymažete tým aj všetky duplikáty.}many{{ITEM_COUNT} items are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}other{{ITEM_COUNT} položiek je uložených iba v tomto zariadení. Ak ich chcete používať v ďalších zariadeniach, uložte si ich v účte Growser. Vymažete tým aj všetky duplikáty.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 heslo je uložené iba v tomto zariadení. Ak ho chcete používať v ďalších zariadeniach, uložte si ho v účte Growser. Vymažete tým aj všetky duplikáty.}few{{PASSWORD_COUNT} heslá sú uložené iba v tomto zariadení. Ak ich chcete používať v ďalších zariadeniach, uložte si ich v účte Growser. Vymažete tým aj všetky duplikáty.}many{{PASSWORD_COUNT} passwords are saved only to this device. To use them on your other devices, save them in your Growser sync chain. This will also clean up any duplicates.}other{{PASSWORD_COUNT} hesiel je uložených iba v tomto zariadení. Ak ich chcete používať v ďalších zariadeniach, uložte si ich v účte Growser. Vymažete tým aj všetky duplikáty.}}</translation>
@@ -11421,7 +11421,7 @@ Môže to zahŕňať informácie o nainštalovanom softvéri, súboroch, prehli
 <translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>Iné formy aktivity<ph name="END_LINK_GOOGLE"/> sa môžu ukladať do vášho účtu Growser, keď sa doň prihlásite. Môžete ich kedykoľvek odstrániť.</translation>
 <translation id="6533315466883598769">Používať Prekladač Growser</translation>
 <translation id="6010651352520077187">Keď je táto možnosť zapnutá, Prekladač Growser bude ponúkať preklad webov do vášho preferovaného jazyka. Dokáže aj automaticky prekladať weby.</translation>
-<translation id="6873499199714317035">Keď je táto možnosť zapnutá, Prekladač Brave bude ponúkať preklad webov a súborov PDF do vášho preferovaného jazyka. Dokáže aj automaticky prekladať weby.</translation>
+<translation id="6873499199714317035">Keď je táto možnosť zapnutá, Prekladač Growser bude ponúkať preklad webov a súborov PDF do vášho preferovaného jazyka. Dokáže aj automaticky prekladať weby.</translation>
 <translation id="5911030830365207728">Prekladač Growser</translation>
 <translation id="7458168200501453431">Používa rovnakú kontrolu pravopisu ako Vyhľadávanie Growser. Text zadaný do prehliadača sa odošle Googlu.</translation>
 <translation id="8972513834460200407">Kontaktujte správcu siete a uistite sa, že brána firewall neblokuje sťahovanie súborov zo serverov Growser.</translation>
@@ -11467,7 +11467,7 @@ Môže to zahŕňať informácie o nainštalovanom softvéri, súboroch, prehli
 <translation id="3293574207873361017">Spravovať účet Growser</translation>
 <translation id="6901130673208235020">Keď vyhľadávate v histórii prehliadania, vaše historické vyhľadávacie dopyty, obsah stránok najlepších zhôd a vygenerované výstupy modelov sa odosielajú Googlu</translation>
 <translation id="3178434360326457238">Keď prehliadate weby, obsah ich stránok sa šifruje a ukladá vo vašom zariadení. Môže to ovplyvniť výkon Chromu.</translation>
-<translation id="8622145666696249878">Režim AI vo Vyhľadávaní Brave a pripojené aplikácie</translation>
+<translation id="8622145666696249878">Režim AI vo Vyhľadávaní Growser a pripojené aplikácie</translation>
 <translation id="2760679829473121490">Zobrazovať systémové upozornenia týkajúce sa funkcií a tipov Chromu</translation>
 <translation id="6713316345564743478">Ak chcete skontrolovať odhalené heslá, prihláste sa do účtu Growser</translation>
 <translation id="1342886103232377846">Ak chcete skontrolovať odhalené heslá, prejdite do Správcu hesiel Growser</translation>
@@ -11529,7 +11529,7 @@ Môže to zahŕňať informácie o nainštalovanom softvéri, súboroch, prehli
 <translation id="1095879482467973146">Správca hesiel Growser na internete</translation>
 <translation id="1368798504801939187">Prihláste sa na <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> a zobrazte si tak heslá dokonca aj vtedy, keď nepoužívate Growser ani Android</translation>
 <translation id="829923460755755423">Pridajte odkaz na Správcu hesiel Growser</translation>
-<translation id="7244677273667272006">Overte svoju totožnosť, aby ste mohli pridávať heslá a mať ich k dispozícii vo všetkých zariadeniach so svojím účtom Brave</translation>
+<translation id="7244677273667272006">Overte svoju totožnosť, aby ste mohli pridávať heslá a mať ich k dispozícii vo všetkých zariadeniach so svojím účtom Growser</translation>
 <translation id="8189517459248805166">Vaše heslo webu <ph name="WEBSITE"/> je uložené v tomto zariadení a vašom účte Growser. Ktoré chcete odstrániť?</translation>
 <translation id="9101265711096405922">Z vášho účtu Growser</translation>
 <translation id="927421426408921503">Chcete uložené heslá presunúť do účtu Growser?</translation>
@@ -11640,7 +11640,7 @@ Môže to zahŕňať informácie o nainštalovanom softvéri, súboroch, prehli
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         Môžete spravovať nastavenia v ponuke karty alebo si zobraziť ďalšie možnosti v sekcii Prispôsobenie Chromu.</translation>
-<translation id="6474021817475285003">Zobraziť viac v Kalendári Brave</translation>
+<translation id="6474021817475285003">Zobraziť viac v Kalendári Growser</translation>
 <translation id="9066394310994446814">Táto položka sa zobrazuje na základe vašej predchádzajúcej aktivity pri používaní služieb Googlu. Údaje si môžete zobraziť a odstrániť na <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>, prípadne tam môžete zmeniť nastavenia.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11722,7 +11722,7 @@ Máte ešte # ďalších. Správca hesiel Growser odporúča okamžite dané he
 <translation id="1162630940779651724">Ak chcete túto kartu odoslať do iného zariadenia, prihláste v oboch zariadeniach do Chromu</translation>
 <translation id="5388608738812110907">Ak chcete túto kartu odoslať do iného zariadenia, prihláste sa v ňom do Chromu</translation>
 <translation id="4007679133627124999">Ak chcete odosielať odkazy medzi zariadeniami, uistite sa, že sú obe prihlásené do rovnakého účtu Growser.</translation>
-<translation id="2377999415409519333">Ak chcete posielať odkazy, overte svoju totožnosť. Odkazy môžete posielať, keď sa v oboch zariadeniach prihlásite do rovnakého účtu Brave.</translation>
+<translation id="2377999415409519333">Ak chcete posielať odkazy, overte svoju totožnosť. Odkazy môžete posielať, keď sa v oboch zariadeniach prihlásite do rovnakého účtu Growser.</translation>
 <translation id="4986706507552097681">Obsah, ktorý chcete synchronizovať, môžete kedykoľvek vybrať v nastaveniach. Growser môže prispôsobiť Vyhľadávanie a ďalšie služby na základe vašej histórie.</translation>
 <translation id="8002662358897231821">Prihláste sa a používajte svoje záložky, históriu, heslá a ďalšie nastavenia vo všetkých svojich zariadeniach. Navyše sa tak automaticky prihlásite do služieb Googlu.</translation>
 <translation id="3128296144259620504">Growser je ovládaný automatizovaným testovacím softvérom</translation>

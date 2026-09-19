@@ -186,7 +186,7 @@ Paroole saate alati kontrollida menüüs <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1130116586186908674">Loo poolitatud vaade</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> – osa grupist <ph name="GROUP_NAME"/></translation>
 <translation id="1130676589211693127">Parempoolse akutase <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">Vahelehtede jagamisel saadetakse nende lehtede sisu, meedia ja URL-id Brave'ile ning need võidakse turvalisuse huvides üle vaadata.</translation>
+<translation id="1412403201555978627">Vahelehtede jagamisel saadetakse nende lehtede sisu, meedia ja URL-id Growser'ile ning need võidakse turvalisuse huvides üle vaadata.</translation>
 <translation id="1133418583142946603">Lisa praegune vaheleht</translation>
 <translation id="1133751489735776037">Tehke hiirega kolmekordne klikk</translation>
 <translation id="1136712381129578788">Turvavõti lukustati, kuna vale PIN-kood sisestati liiga palju kordi. Selle avamiseks eemaldage turvavõti ja sisestage see uuesti.</translation>
@@ -376,7 +376,7 @@ Paroole saate alati kontrollida menüüs <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="126768002343224824">16-kordne</translation>
 <translation id="1272079795634619415">Peata</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>Toetatud linkide<ph name="END_LINK"/> avamine</translation>
-<translation id="7823526956728613125">Otsinguteenuste ja Brave Workspace'i rakenduste (nt Google Drive) ühenduse haldamine</translation>
+<translation id="7823526956728613125">Otsinguteenuste ja Growser Workspace'i rakenduste (nt Google Drive) ühenduse haldamine</translation>
 <translation id="1274997165432133392">Küpsised ja muud saidi andmed</translation>
 <translation id="1275936815032730048">käivitaja + paremnool</translation>
 <translation id="1275963833368139883">Sirvimisajalugu otsides põhinevad vastused ja otsingutulemused lehe sisul. See tagab paremad tulemused</translation>
@@ -654,7 +654,7 @@ Paroole saate alati kontrollida menüüs <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1508931164824684991">Saidid saavad kasutada JavaScripti</translation>
 <translation id="1509163368529404530">&amp;Taasta grupp</translation>
 <translation id="1509281256533087115">Juurdepääs seadmele <ph name="DEVICE_NAME_AND_VENDOR"/> USB kaudu</translation>
-<translation id="2825615584808054779">Teie Gemini vestlusi ega Brave Workspace’i andmeid ei vaadata üle ega kasutata generatiivse AI mudelite täiustamiseks. Gemini on tehisintellekt ja võib teha vigu.</translation>
+<translation id="2825615584808054779">Teie Gemini vestlusi ega Growser Workspace’i andmeid ei vaadata üle ega kasutata generatiivse AI mudelite täiustamiseks. Gemini on tehisintellekt ja võib teha vigu.</translation>
 <translation id="1510238584712386396">Käivitaja</translation>
 <translation id="1510341833810331442">Saitidel ei ole lubatud teie seadmesse andmeid salvestada</translation>
 <translation id="1510882959204224895">Ava aknas</translation>
@@ -748,7 +748,7 @@ Paroole saate alati kontrollida menüüs <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1581962803218266616">Näita otsijas</translation>
 <translation id="1582955169539260415">kustuta [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/>, töödeldakse kohalikult ja see töötab võrguühenduseta</translation>
-<translation id="491276955533054201">Esmalt lülitage selles seadmes sisse Brave'i automaatne sirvimine</translation>
+<translation id="491276955533054201">Esmalt lülitage selles seadmes sisse Growser'i automaatne sirvimine</translation>
 <translation id="1587275751631642843">&amp;JavaScript i konsool</translation>
 <translation id="1588438908519853928">Tavaline</translation>
 <translation id="1588772269240419305">Logo ja nime värskenduste ülevaatamine</translation>
@@ -1150,7 +1150,7 @@ Paroole saate alati kontrollida menüüs <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1892453608039100484">1. Klõpsake alloleval nupul <ph name="BUTTON_LABEL"/>
 2. Klõpsake Windowsi seadetes nupul <ph name="BUTTON_2"/></translation>
 <translation id="1895658205118569222">Sulgemine</translation>
-<translation id="1189523243806849236">Vestlused vaadatakse üle ja neid kasutatakse Brave’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Vestlused vaadatakse üle ja neid kasutatakse Growser’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Kasutage tugevat parooli</translation>
 <translation id="1897860317037652061">Skannimine nurjus</translation>
 <translation id="1898804291554630487">Esitage selle lehe kohta küsimus</translation>
@@ -1159,7 +1159,7 @@ Paroole saate alati kontrollida menüüs <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1901213235765457754">Paluge administraatoril rakendust värskendada</translation>
 <translation id="1901303067676059328">Vali &amp;kõik</translation>
 <translation id="1901760057081700494">Ajavööndiks on praegu määratud <ph name="TIME_ZONE_ENTRY"/>. Ajavööndi automaatseks värskendamiseks <ph name="BEGIN_LINK"/>lülitage sisse süsteemi asukohajuurdepääs<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Teie kodune aadress aitab teil Brave’i teenustes asju ajada, näiteks saada Brave Mapsis asjakohasemaid otsingutulemusi ja juhiseid. Saate oma aadressi muuta või selle kustutada oma <ph name="BEGIN_LINK"/>Brave'i kontol<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">Teie kodune aadress aitab teil Growser’i teenustes asju ajada, näiteks saada Growser Mapsis asjakohasemaid otsingutulemusi ja juhiseid. Saate oma aadressi muuta või selle kustutada oma <ph name="BEGIN_LINK"/>Growser'i kontol<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">Teie külastatavad URL-id salvestatakse teie Growser'i kontole</translation>
 <translation id="190530012637606145">Hoiatab teid kõigi ebaturvaliste ühenduste (sh privaatsed sisevõrgud) eest.</translation>
 <translation id="1906181697255754968">Saidid pääsevad teie seadmes olevatele failidele ja kaustadele tavaliselt juurde teatud funktsioonide jaoks, näiteks teie töö automaatseks salvestamiseks</translation>
@@ -1532,7 +1532,7 @@ Selle konto seadete haldamiseks installige oma seadmesse Family Link.  Saatsime 
 <translation id="2198625180564913276">Profiili lisamine. See võib võtta mõne minuti.</translation>
 <translation id="2198712775285959645">Muutmine</translation>
 <translation id="2199298570273670671">Viga</translation>
-<translation id="2798272130984183944">Valige, kas Brave kasutab AI-mudeleid, mis töötavad otse teie seadmes.</translation>
+<translation id="2798272130984183944">Valige, kas Growser kasutab AI-mudeleid, mis töötavad otse teie seadmes.</translation>
 <translation id="2200094388063410062">E-post</translation>
 <translation id="2200781749203116929">ChromeOS-i süsteemilogid</translation>
 <translation id="2202391868799679245">Lülita klaviatuuri otsetee sisse</translation>
@@ -1612,7 +1612,7 @@ Selle konto seadete haldamiseks installige oma seadmesse Family Link.  Saatsime 
 <translation id="225716114209817872">Maksimaalne</translation>
 <translation id="5642482119439119644">Teistest seadmetest vahelehtede hankimiseks kinnitage oma isik. Sünkroonimise võite seadetes igal ajal lõpetada. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
 <translation id="22614517036276112">See dokument või teie seade ei vasta teie organisatsiooni teatud turvareeglitele. Pöörduge administraatori poole, et teada saada, mida on vaja parandada.</translation>
-<translation id="1829264724820495616">Teie töökoha aadress aitab teil Brave’i teenustes asju ajada, näiteks saada Brave Mapsis asjakohasemaid otsingutulemusi ja juhiseid. Saate oma aadressi muuta või selle kustutada oma <ph name="BEGIN_LINK"/>Brave'i kontol<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">Teie töökoha aadress aitab teil Growser’i teenustes asju ajada, näiteks saada Growser Mapsis asjakohasemaid otsingutulemusi ja juhiseid. Saate oma aadressi muuta või selle kustutada oma <ph name="BEGIN_LINK"/>Growser'i kontol<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Viivitus enne kordamist</translation>
 <translation id="2263371730707937087">Ekraani värskendamissagedus</translation>
 <translation id="7829329302663082098">Teie tagasiside aitab meil Growser Casti täiustada ja oleme selle eest tänulikud.
@@ -1758,7 +1758,7 @@ Selle konto seadete haldamiseks installige oma seadmesse Family Link.  Saatsime 
 <translation id="2373499590298659902">Kasutage hiirenupu pikalt vajutamiseks klahvi „0“</translation>
 <translation id="2373666622366160481">Sobita paberilehele</translation>
 <translation id="2375406435414127095">Looge ühendus telefoniga</translation>
-<translation id="6612559367203670996">Brave kasutab jagatud vahelehtede sisu ja URL-e. Teie praegust vahelehte jagatakse uutes vestlustes. Seda seadet saab igal ajal muuta.</translation>
+<translation id="6612559367203670996">Growser kasutab jagatud vahelehtede sisu ja URL-e. Teie praegust vahelehte jagatakse uutes vestlustes. Seda seadet saab igal ajal muuta.</translation>
 <translation id="2376056713414548745">Ettelugemine</translation>
 <translation id="2376122016044804363">Lõikelauale kopeerimise kinnitused</translation>
 <translation id="2377667304966270281">Tõsised vead</translation>
@@ -3325,7 +3325,7 @@ Selle konto seadete haldamiseks installige oma seadmesse Family Link.  Saatsime 
 <translation id="3569614820047645079">Teie failid jaotises Minu ketas sünkroonitakse automaatselt teie Chromebookiga, nii et pääsete neile juurde ilma internetiühenduseta.</translation>
 <translation id="3569617221227793022">Ajavööndiks on praegu määratud <ph name="TIME_ZONE_ENTRY"/>. Seda seadet haldab administraator.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> saab vaadata järgmisi faile ja kaustu</translation>
-<translation id="4062501938325597704">Brave'iga jagatakse lehe sisu ja URL-e, mida Gemini ülesande täitmisel kasutab, ning need võidakse turvalisuse huvides üle vaadata.</translation>
+<translation id="4062501938325597704">Growser'iga jagatakse lehe sisu ja URL-e, mida Gemini ülesande täitmisel kasutab, ning need võidakse turvalisuse huvides üle vaadata.</translation>
 <translation id="3571734092741541777">Seadista</translation>
 <translation id="3575121482199441727">Luba selle saidi puhul</translation>
 <translation id="3575224072358507281">Koguda Measurement Labi jaoks IP-aadressi ja võrgu mõõtmistulemusi vastavalt platvormi privaatsuseeskirjadele (measurementlab.net/privacy)</translation>
@@ -5004,7 +5004,7 @@ Väljasuumimiseks kasutage klahvikombinatsiooni Ctrl + Alt + Ereduse vähendamin
 <translation id="485480310608090163">Rohkem seadeid ja lube</translation>
 <translation id="4857304314344645169">Vaadake mis tahes probleemi üksikasjalikku selgitust</translation>
 <translation id="1913048435257025864">Küsige Growser'ilt eelmise lehe kohta: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Asjakohasemate vastuste saamiseks jagatakse Brave'iga teie praeguse vahelehe sisu ja URL-i. Saate sirvimise ajal vahelehti lisada või eemaldada.</translation>
+<translation id="228735844055480091">Asjakohasemate vastuste saamiseks jagatakse Growser'iga teie praeguse vahelehe sisu ja URL-i. Saate sirvimise ajal vahelehti lisada või eemaldada.</translation>
 <translation id="485806788160414322">Esita või peata meediasisu</translation>
 <translation id="4858913220355269194">Fritz</translation>
 <translation id="4860012864737017059">Hiljutine vaheleht</translation>
@@ -5339,7 +5339,7 @@ Väljasuumimiseks kasutage klahvikombinatsiooni Ctrl + Alt + Ereduse vähendamin
 <translation id="5112577000029535889">Arenda&amp;ja tööriistad</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{Üks fail on teisaldatud}other{{NUM_OF_FILES} faili on teisaldatud}}</translation>
 <translation id="511313294362309725">Lülita kiirsidumine sisse</translation>
-<translation id="6409962091529734959">Lugege lisateavet Brave'i automaatse sirvimise kohta.</translation>
+<translation id="6409962091529734959">Lugege lisateavet Growser'i automaatse sirvimise kohta.</translation>
 <translation id="51143538739122961">Sisestage oma turvavõti ja puudutage seda</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Sa&amp;lvesta heli nimega...</translation>
@@ -5382,7 +5382,7 @@ Väljasuumimiseks kasutage klahvikombinatsiooni Ctrl + Alt + Ereduse vähendamin
 <translation id="5146235736676876345">Valige ise</translation>
 <translation id="5146896637028965135">Süsteemi hääl</translation>
 <translation id="5147113439721488265">Soovitus</translation>
-<translation id="5897101208018277582">Linkide saatmiseks kinnitage oma isik. Linke saate saata, kui olete mõlemas seadmes sisse logitud samale Brave'i kontole.</translation>
+<translation id="5897101208018277582">Linkide saatmiseks kinnitage oma isik. Linke saate saata, kui olete mõlemas seadmes sisse logitud samale Growser'i kontole.</translation>
 <translation id="5148285448107770349">Parool peab koosnema vähemalt 8 tähemärgist</translation>
 <translation id="5149602533174716626">K&amp;opeeri videokaader</translation>
 <translation id="5150254825601720210">Netscape'i sertifikaadi SSL-serveri nimi</translation>
@@ -6070,7 +6070,7 @@ Saate sellele toimingule määrata mitu lülitit.</translation>
 <translation id="5713158217420111469">Ühendatud seadmega <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Ümberpööratud</translation>
 <translation id="5714100381896040477">Ekraanikuval liikumise piiramine</translation>
-<translation id="8277434106940718633">Teie Gemini vestlusi ega Brave Workspace’i andmeid ei vaadata üle ega kasutata generatiivse AI mudelite täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Osa sisust ei pruugi kõigile sobida.</translation>
+<translation id="8277434106940718633">Teie Gemini vestlusi ega Growser Workspace’i andmeid ei vaadata üle ega kasutata generatiivse AI mudelite täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Osa sisust ei pruugi kõigile sobida.</translation>
 <translation id="5719854774000914513">Saidid saavad küsida luba HID-seadmetega ühenduse loomiseks</translation>
 <translation id="5720729194423017301">Saitide ja otsingumootorite otseteed</translation>
 <translation id="572155275267014074">Androidi seaded</translation>
@@ -7005,7 +7005,7 @@ Saate sellele toimingule määrata mitu lülitit.</translation>
 <translation id="6464825623202322042">See seade</translation>
 <translation id="6465841119675156448">Interneti-ühenduseta</translation>
 <translation id="6466258437571594570">Saitide jaoks on teie häirimine blokeeritud, kui need soovivad teile märguandeid saata</translation>
-<translation id="1673835407889847350">Kinnitage oma isik, et lisada paroole ja kasutada neid kõigis oma Brave'i kontoga seotud seadmetes</translation>
+<translation id="1673835407889847350">Kinnitage oma isik, et lisada paroole ja kasutada neid kõigis oma Growser'i kontoga seotud seadmetes</translation>
 <translation id="6467230443178397264">Faili <ph name="FILE_NAME"/> skannimine</translation>
 <translation id="6467304607960172345">Optimeeri täisekraanrežiimis videoid</translation>
 <translation id="6467377768028664108">Seade <ph name="DEVICE_TYPE"/> saab seejärel teha järgmist.</translation>
@@ -7018,7 +7018,7 @@ Saate sellele toimingule määrata mitu lülitit.</translation>
 <translation id="6470823736074966819">Summuta märguanded</translation>
 <translation id="6472893788822429178">Kuva nupp Avaleht</translation>
 <translation id="6473315466413288899">Tehke valik</translation>
-<translation id="6199773995438617867">Vaadake lisateavet Brave'i kalendris.</translation>
+<translation id="6199773995438617867">Vaadake lisateavet Growser'i kalendris.</translation>
 <translation id="6474401088838630457">Küsi Geminilt selle kohta lisateavet</translation>
 <translation id="6474498546677193336">Jagamist ei saanud lõpetada, kuna rakendus kasutab seda kausta. Kausta jagamine lõpetatakse Linuxi väljalülitamisel.</translation>
 <translation id="6474884162850599008">Google Drive'i konto ühenduse katkestamine</translation>
@@ -7199,7 +7199,7 @@ Teil on veel # ohustatud parooli. Growser'i paroolihaldur soovitab kohe neid par
 <translation id="6613231539539868591">Püsivad andmed</translation>
 <translation id="6613267708691765962">Pahavara otsimine …</translation>
 <translation id="6615455863669487791">Kuva mulle</translation>
-<translation id="5146630705831894319">Paku Brave'i tõlget muudes keeltes olevate veebisaitide ja PDF-ide puhul</translation>
+<translation id="5146630705831894319">Paku Growser'i tõlget muudes keeltes olevate veebisaitide ja PDF-ide puhul</translation>
 <translation id="6618013221808317456">Ära luba saitidel JavaScripti optimeerimist kasutada</translation>
 <translation id="6618154741503063152">Seda faili ei saa üles laadida. Manused pole lubatud.</translation>
 <translation id="6619058681307408113">Reaprinteriprotokoll (LPD)</translation>
@@ -7553,7 +7553,7 @@ Teil on veel # ohustatud parooli. Growser'i paroolihaldur soovitab kohe neid par
 <translation id="6871644448911473373">OCSP vastaja: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Keeled …</translation>
 <translation id="6873156759937047811">PIN-kood:</translation>
-<translation id="5189979109199910058">Kui see on sisse lülitatud, pakub Brave'i tõlge saitide ja PDF-ide tõlkimist teie eelistatud keelde. See saab saite ka automaatselt tõlkida.</translation>
+<translation id="5189979109199910058">Kui see on sisse lülitatud, pakub Growser'i tõlge saitide ja PDF-ide tõlkimist teie eelistatud keelde. See saab saite ka automaatselt tõlkida.</translation>
 <translation id="6873571253135628430">Saidi lubade muutmine</translation>
 <translation id="6874986444867497677">Installimist ei saanud lõpule viia. Proovige uuesti või sulgege see aken.</translation>
 <translation id="6876155724392614295">Jalgratas</translation>
@@ -7841,7 +7841,7 @@ Teil on veel # ohustatud parooli. Growser'i paroolihaldur soovitab kohe neid par
 <translation id="710224247908684995">Laiendus lülitas Growser'i ohutu sirvimise välja</translation>
 <translation id="7102832101143475489">Taotlus aegus</translation>
 <translation id="7103944802169726298">Arvuti ja ülekandeseade on samas WiFi-võrgus</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave'i liikmesus</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser'i liikmesus</translation>
 <translation id="7107609441453408294">Esita sama heli kõigist kõlaritest</translation>
 <translation id="7108338896283013870">Peida</translation>
 <translation id="7108419148561505648">Enne salvestamist täitke vähemalt üks väli</translation>
@@ -8212,7 +8212,7 @@ Teil on veel # ohustatud parooli. Growser'i paroolihaldur soovitab kohe neid par
 <translation id="7395774987022469191">Kogu ekraan</translation>
 <translation id="7396017167185131589">Jagatud kaustad kuvatakse siin</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> käivitub süsteemi käivitamisel ja jätkab tööd taustal ka siis, kui sulgete kõik muud rakenduse <ph name="PRODUCT_NAME"/> aknad.</translation>
-<translation id="8572914900293297191">Vestlused vaadatakse üle ja neid kasutatakse Brave’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Osa sisust ei pruugi kõigile sobida. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Vestlused vaadatakse üle ja neid kasutatakse Growser’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Osa sisust ei pruugi kõigile sobida. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Kohanda sünkroonimist</translation>
 <translation id="7399616692258236448">Asukohapäringud blokeeritakse automaatselt kõigi saitide, välja arvatud lubatud saitide puhul</translation>
 <translation id="7399802613464275309">Ohutuskontroll</translation>
@@ -8746,7 +8746,7 @@ Määrangu eemaldamiseks vajutage määratud lülitit või klahvi.</translation>
 <translation id="7807711621188256451">Luba saidil <ph name="HOST"/> alati kaamera juurde pääseda</translation>
 <translation id="7810202088502699111">Hüpikaknad blokeeriti sellel lehel.</translation>
 <translation id="7810367892333449285">Sisestus peab olema järgmises vormingus: <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ address<ph name="LPA_2"/>$<ph name="LPA_3"/>optional matching id<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave'i aluseks on avatud lähtekoodiga projekt Brave ja muu <ph name="BEGIN_HIGHLIGHT"/>avatud lähtekoodiga<ph name="END_HIGHLIGHT"/> tarkvara.</translation>
+<translation id="5014491767627896944">Growser'i aluseks on avatud lähtekoodiga projekt Growser ja muu <ph name="BEGIN_HIGHLIGHT"/>avatud lähtekoodiga<ph name="END_HIGHLIGHT"/> tarkvara.</translation>
 <translation id="7811263553491007091">Proovige uuesti või valige mõni allolevatest varem loodud teemadest.</translation>
 <translation id="7811926937048662341">Paremklõpsake siin ja valige „Kuva vahelehed vertikaalselt“.</translation>
 <translation id="7811986034759500329">Määrake süsteemiseadetes</translation>
@@ -8769,7 +8769,7 @@ Määrangu eemaldamiseks vajutage määratud lülitit või klahvi.</translation>
 <translation id="7826039927887234077">Hiljutine AI loodud teema <ph name="INDEX"/> otsingu <ph name="SUBJECT"/> kohta; meeleolu: <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Pärandbrauserite tugi (LBS) – sisemised</translation>
 <translation id="7826838152281937785">Sule alumine vaade</translation>
-<translation id="45690163731419633">Kehtivad <ph name="BEGIN_LINK_TERMS"/>Brave'i tingimused<ph name="END_LINK_TERMS"/> ja <ph name="BEGIN_LINK_PRIVACY"/>Gemini rakenduste privaatsusteatis<ph name="END_LINK_PRIVACY"/></translation>
+<translation id="45690163731419633">Kehtivad <ph name="BEGIN_LINK_TERMS"/>Growser'i tingimused<ph name="END_LINK_TERMS"/> ja <ph name="BEGIN_LINK_PRIVACY"/>Gemini rakenduste privaatsusteatis<ph name="END_LINK_PRIVACY"/></translation>
 <translation id="7828642077514646543">Viga: sertifikaati ei õnnestu dekodeerida</translation>
 <translation id="7830276128493844263">Asukoht on süsteemiseadetes välja lülitatud</translation>
 <translation id="7830833461614351956">Kas kopeerida avamiseks <ph name="NUM_OF_FILES"/> faili teenusesse <ph name="CLOUD_PROVIDER"/>?</translation>
@@ -9640,7 +9640,7 @@ Hoidke oma võtmefail kindlas kohas. Teil läheb seda oma laiendi uute versiooni
 <translation id="850399339579925930">Sõnastikud</translation>
 <translation id="850561044295157831">Lisateave funktsiooni „Aita mul kirjutada“ kohta</translation>
 <translation id="8505669004895429027">Vähene sääst</translation>
-<translation id="869548515244800202">Brave'i liikmesus</translation>
+<translation id="869548515244800202">Growser'i liikmesus</translation>
 <translation id="8507052544157927817">Allakriipsutuse stiil</translation>
 <translation id="8507227974644337342">Ekraani eraldusvõime</translation>
 <translation id="8507443886219296894">Peida selle saidi puhul</translation>
@@ -9780,7 +9780,7 @@ Hoidke oma võtmefail kindlas kohas. Teil läheb seda oma laiendi uute versiooni
 <translation id="8619803522055190423">Langev vari</translation>
 <translation id="8620206585293032550">Inaktiivsete vahelehtede välimus</translation>
 <translation id="8621979332865976405">Terve ekraanikuva jagamine</translation>
-<translation id="6089523089512126744">Brave'i otsingu AI-režiim ja ühendatud rakendused</translation>
+<translation id="6089523089512126744">Growser'i otsingu AI-režiim ja ühendatud rakendused</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">ChromeOS-i seadme ja komponentide seerianumbrite lugemine</translation>
 <translation id="862542460444371744">&amp;Laiendused</translation>
@@ -11338,17 +11338,17 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini Growser'is</translation>
 <translation id="1975450474853317621">Ava Growser'i brauseris</translation>
 <translation id="8516824290867275572">Teie kontol pole Growser'i Geminile juurdepääsu</translation>
-<translation id="1649234713894562345">Brave'i aluseks on avatud lähtekoodiga projekt Brave ja muu <ph name="BEGIN_HIGHLIGHT"/>avatud lähtekoodiga<ph name="END_HIGHLIGHT"/> tarkvara.</translation>
+<translation id="1649234713894562345">Growser'i aluseks on avatud lähtekoodiga projekt Growser ja muu <ph name="BEGIN_HIGHLIGHT"/>avatud lähtekoodiga<ph name="END_HIGHLIGHT"/> tarkvara.</translation>
 <translation id="870536819717176711">Kui otsustate praegust vahelehte Geminiga jagada, saadetakse Growser'ile vahelehe kogu sisu, meedia ja URL.</translation>
-<translation id="1130866111814048607">Vahelehtede jagamisel saadetakse nende lehtede sisu, meedia ja URL-id Brave'ile ning need võidakse turvalisuse huvides üle vaadata.</translation>
-<translation id="7656790264713095385">Esmalt lülitage selles seadmes sisse Brave'i automaatne sirvimine</translation>
+<translation id="1130866111814048607">Vahelehtede jagamisel saadetakse nende lehtede sisu, meedia ja URL-id Growser'ile ning need võidakse turvalisuse huvides üle vaadata.</translation>
+<translation id="7656790264713095385">Esmalt lülitage selles seadmes sisse Growser'i automaatne sirvimine</translation>
 <translation id="8572003230388132401">Gemini Spark saab kasutada selles seadmes Growser'i automaatset sirvimist, et teie nimel saitidega suhelda ja ülesandeid täita. <ph name="LINK_BEGIN"/>Lisateave<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark saab automaatset sirvimist selles seadmes kasutada ainult siis, kui seade on ärkvel ja Growser töötab.</translation>
 <translation id="1982892581799327835">Igaüks, kellel on juurdepääs teie Gemini Sparki agendile, saab teie Growser'i brauserit juhtida.</translation>
 <translation id="6689939585896001516">Laske Growser'il teie eest sirvida</translation>
 <translation id="640233545778658570">Gemini Growser'is kasutab teie vahelehtedel töötamiseks ja antud ülesannete täitmiseks automaatset sirvimist. <ph name="LINK_BEGIN"/>Lisateave<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Lugege lisateavet Brave'i automaatse sirvimise kohta.</translation>
-<translation id="3570112771874223231">Brave'iga jagatakse lehe sisu ja URL-e, mida Gemini ülesande täitmisel kasutab, ning need võidakse turvalisuse huvides üle vaadata.</translation>
+<translation id="2740842679402949230">Lugege lisateavet Growser'i automaatse sirvimise kohta.</translation>
+<translation id="3570112771874223231">Growser'iga jagatakse lehe sisu ja URL-e, mida Gemini ülesande täitmisel kasutab, ning need võidakse turvalisuse huvides üle vaadata.</translation>
 <translation id="2314508080153323869">Gemini Growser'is</translation>
 <translation id="1910632359330857071">Vestelge Geminiga Growser'is, et saada sirvimise ajal vastuseid, olulisi teadmisi ja muud.</translation>
 <translation id="2483218699324586641">Kasutage Gemini Growser’is avamiseks klahvikombinatsiooni <ph name="FOCUS_TOGGLE_HOTKEY"/>.</translation>
@@ -11370,8 +11370,8 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
     rakenduses Growser Home<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Hankige selles seadmes oma pääsuvõtmed Growser'i paroolihalduri abil</translation>
 <translation id="2364302372598204515">See ei ole Growser'i konto. Teie Growser'i salvestatavad üksused ei ole teistes seadmetes saadaval.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave'i liikmesus</translation>
-<translation id="850632091665381275">Brave'i liikmesus</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser'i liikmesus</translation>
+<translation id="850632091665381275">Growser'i liikmesus</translation>
 <translation id="6710172959248731469">Growser'i teenuste seaded</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 üksus on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}other{{ITEM_COUNT} üksust on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 parool on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes salvestage see oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}other{{PASSWORD_COUNT} parooli on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser’i kontole. Selle toimingu käigus eemaldatakse ka duplikaadid.}}</translation>
@@ -11385,8 +11385,8 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 järjehoidja ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}other{{BOOKMARK_COUNT} järjehoidjat ja muud üksused on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes salvestage need oma Growser'i kontole.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{Üks üksus on salvestatud ainult sellesse seadmesse. Selle kasutamiseks muudes seadmetes <ph name="BEGIN_LINK"/>salvestage see oma Growser’i kontole<ph name="END_LINK"/>.}other{{ITEM_COUNT} üksust on salvestatud ainult sellesse seadmesse. Nende kasutamiseks muudes seadmetes <ph name="BEGIN_LINK"/>salvestage need oma Growser’i kontole<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Kasutage oma Growser'i kontot või looge uus.</translation>
-<translation id="1896353439080510710">Vestlused vaadatakse üle ja neid kasutatakse Brave’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Vestlused vaadatakse üle ja neid kasutatakse Brave’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Osa sisust ei pruugi kõigile sobida. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Vestlused vaadatakse üle ja neid kasutatakse Growser’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Vestlused vaadatakse üle ja neid kasutatakse Growser’i AI täiustamiseks. Gemini on tehisintellekt ja võib teha vigu. Osa sisust ei pruugi kõigile sobida. Saate <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>hallata oma tegevusi<ph name="END_LINK_MANAGE_ACTIVITY"/>, sh teavet oma asukoha kohta. <ph name="BEGIN_LINK_LEARN_MORE"/>Lisateave valikute kohta<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{See laiendus on teie Growser'i kontole salvestatud, aga andmed, mille laiendus on salvestanud ainult selles seadmes, võidakse kustutada}other{Need laiendused on teie Growser'i kontole salvestatud, aga andmed, mille laiendused on salvestanud ainult selles seadmes, võidakse kustutada}}</translation>
 <translation id="3523789730715594198">Sünkroonimise võite seadetes igal ajal lõpetada. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
 <translation id="8231595707224857577">Teie organisatsioon on vahelehtede Growser'i kontole salvestamise välja lülitanud.</translation>
@@ -11424,7 +11424,7 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
 <translation id="1024884937839269099">Kui olete sisse logitud, võidakse teie <ph name="BEGIN_LINK_GOOGLE"/>muud tegevused<ph name="END_LINK_GOOGLE"/> teie Growser'i kontole salvestada. Saate need alati kustutada.</translation>
 <translation id="6533315466883598769">Kasuta Growser'i tõlget</translation>
 <translation id="6010651352520077187">Kui see on sisse lülitatud, pakub Growser'i tõlge saitide tõlkimist teie eelistatud keelde. See saab saite ka automaatselt tõlkida.</translation>
-<translation id="6873499199714317035">Kui see on sisse lülitatud, pakub Brave'i tõlge saitide ja PDF-ide tõlkimist teie eelistatud keelde. See saab saite ka automaatselt tõlkida.</translation>
+<translation id="6873499199714317035">Kui see on sisse lülitatud, pakub Growser'i tõlge saitide ja PDF-ide tõlkimist teie eelistatud keelde. See saab saite ka automaatselt tõlkida.</translation>
 <translation id="5911030830365207728">Growser'i tõlge</translation>
 <translation id="7458168200501453431">Kasutab sama õigekirjakontrolli, mida kasutatakse Growser'i otsingus. Brauseris sisestatav tekst saadetakse Growser'ile.</translation>
 <translation id="8972513834460200407">Paluge oma võrguadministraatoril tagada, et tulemüür ei blokeeriks allalaaditavaid faile Growser'i serveritest.</translation>
@@ -11470,7 +11470,7 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
 <translation id="3293574207873361017">Growser'i konto haldamine</translation>
 <translation id="6901130673208235020">Sirvimisajalugu otsides saadetakse teie ajaloo-otsingud, parimate vastete lehesisu ja genereeritud mudeliväljundid Growser'ile</translation>
 <translation id="3178434360326457238">Saitide sirvimisel krüpteeritakse nende lehtede sisu ja salvestatakse teie seadmesse. See võib mõjutada Growser'i toimivust</translation>
-<translation id="8622145666696249878">Brave'i otsingu AI-režiim ja ühendatud rakendused</translation>
+<translation id="8622145666696249878">Growser'i otsingu AI-režiim ja ühendatud rakendused</translation>
 <translation id="2760679829473121490">Kuva süsteemi märguanded Growser'i funktsioonide ja nõuannete kohta</translation>
 <translation id="6713316345564743478">Ohustatud paroolide kontrollimiseks logige sisse oma Growser'i kontole</translation>
 <translation id="1342886103232377846">Ohustatud paroolide kontrollimiseks avage Growser'i paroolihaldur</translation>
@@ -11533,7 +11533,7 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
 <translation id="1095879482467973146">Growser'i paroolihaldur veebis</translation>
 <translation id="1368798504801939187">Isegi siis, kui te ei kasuta Growser’i või Androidi, saate veebilehele <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> sisse logides vaadata oma paroole.</translation>
 <translation id="829923460755755423">Lisage otsetee Growser'i paroolihaldurisse</translation>
-<translation id="7244677273667272006">Kinnitage oma isik, et lisada paroole ja kasutada neid kõigis oma Brave'i kontoga seotud seadmetes</translation>
+<translation id="7244677273667272006">Kinnitage oma isik, et lisada paroole ja kasutada neid kõigis oma Growser'i kontoga seotud seadmetes</translation>
 <translation id="8189517459248805166">Teie veebisaidi <ph name="WEBSITE"/> parool on salvestatud sellesse seadmesse ja teie Growser'i kontole. Millise soovite kustutada?</translation>
 <translation id="9101265711096405922">Teie Growser'i kontolt</translation>
 <translation id="927421426408921503">Kas teisaldada salvestatud paroolid teie Growser'i kontole?</translation>
@@ -11644,7 +11644,7 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         Saate seadeid hallata kaardimenüüs või vaadata rohkem valikuid jaotises Growser'i kohandamine.</translation>
-<translation id="6474021817475285003">Vaadake lisateavet Brave'i kalendris.</translation>
+<translation id="6474021817475285003">Vaadake lisateavet Growser'i kalendris.</translation>
 <translation id="9066394310994446814">Näete seda üksust oma varasemate tegevuste põhjal Growser'i teenustes. Saate oma andmeid vaadata ja kustutada ning oma seadeid muuta saidil <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11675,7 +11675,7 @@ See võib hõlmata teavet installitud tarkvara, failide, teie brauseri, seadme o
 <translation id="6868193750403948178">Growser'i kohandamine</translation>
 <translation id="5009064339929592579">Kas salvestada teie Growser'i konto kausta?</translation>
 <translation id="7400528739136719497">Teatud Growser'i hääled ei pruugi praegu saadaval olla</translation>
-<translation id="4857677595331912231">Asjakohasemate vastuste saamiseks jagatakse Brave'iga teie praeguse vahelehe sisu ja URL-i. Saate sirvimise ajal vahelehti lisada või eemaldada.</translation>
+<translation id="4857677595331912231">Asjakohasemate vastuste saamiseks jagatakse Growser'iga teie praeguse vahelehe sisu ja URL-i. Saate sirvimise ajal vahelehti lisada või eemaldada.</translation>
 <translation id="5639212636098910819">Jää Growser'i</translation>
 <translation id="3252169590975855820">Pääsete sellele juurde Growser’i paroolihalduris.</translation>
 <translation id="3843323136102787632">Laadige Growser selle QR-koodiga alla ja logige oma Growser'i kontole sisse.</translation>
@@ -11722,7 +11722,7 @@ Teil on veel # ohustatud parooli. Growser'i paroolihaldur soovitab kohe neid par
 <translation id="1162630940779651724">Selle vahelehe saatmiseks teise seadmesse logige mõlemas seadmes Growser'i sisse</translation>
 <translation id="5388608738812110907">Selle vahelehe saatmiseks teise seadmesse logige selles Growser'i sisse</translation>
 <translation id="4007679133627124999">Seadmete vahel linkide saatmiseks veenduge, et oleksite mõlemas sisse logitud sama Growser'i kontoga.</translation>
-<translation id="2377999415409519333">Linkide saatmiseks kinnitage oma isik. Linke saate saata, kui olete mõlemas seadmes sisse logitud samale Brave'i kontole.</translation>
+<translation id="2377999415409519333">Linkide saatmiseks kinnitage oma isik. Linke saate saata, kui olete mõlemas seadmes sisse logitud samale Growser'i kontole.</translation>
 <translation id="4986706507552097681">Jaotises Seaded saate igal ajal valida, mida sünkroonida. Growser võib Otsingut ja muid teenuseid teie ajaloo alusel isikupärastada.</translation>
 <translation id="8002662358897231821">Logige sisse, et teie järjehoidjad, ajalugu, paroolid ja muud seaded oleksid kõikides seadmetes saadaval. Teid logitakse ka automaatselt sisse Growser'i teenustesse.</translation>
 <translation id="3128296144259620504">Growser'i juhib automatiseeritud testtarkvara.</translation>

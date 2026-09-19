@@ -194,7 +194,7 @@
 <translation id="132301787627749051">Սեղմատախտակին պահված պատկերի որոնում</translation>
 <translation id="1323433172918577554">Ցույց տալ ավելին</translation>
 <translation id="1330449323196174374">Ձախ քառորդի ծալում</translation>
-<translation id="2753620827734134329">Ապահով կերպով պահեք Redress Number-ը Brave Wallet-ում</translation>
+<translation id="2753620827734134329">Ապահով կերպով պահեք Redress Number-ը Growser Wallet-ում</translation>
 <translation id="133173645041092770">Փակել կայքը</translation>
 <translation id="4274264486214599895">Խաղալ Growser Dino խաղը</translation>
 <translation id="1333989956347591814">Ձեր գործողությունները <ph name="BEGIN_EMPHASIS"/>տեսանելի կլինեն<ph name="END_EMPHASIS"/>`
@@ -462,7 +462,7 @@
 <translation id="1756555787993603971">Այժմ դուք կարող եք վիրտուալ քարտով ինքնալրացմամբ ավելի ապահով վճարումներ կատարել։</translation>
 <translation id="1757773103848038814">Monospace տառատեսակ</translation>
 <translation id="3727704638090640904">«Փոխել Growser-ի գաղտնաբառը» կոճակ․ ակտիվացրեք՝ Growser հաշվի գաղտնաբառը փոխելու համար</translation>
-<translation id="593191007871547182">Ավտոմատ լրացնել հաստատման կոդերը, որոնք կայքերն օգտագործում են՝ ձեր անվտանգությունը բարելավելու համար։ Brave-ը կարող է վերցնել այս կոդերը ձեր Gmail-ից։ <ph name="BEGIN_LINK"/>Իմանալ ավելին այս գործառույթի մասին<ph name="LINK_END"/></translation>
+<translation id="593191007871547182">Ավտոմատ լրացնել հաստատման կոդերը, որոնք կայքերն օգտագործում են՝ ձեր անվտանգությունը բարելավելու համար։ Growser-ը կարող է վերցնել այս կոդերը ձեր Gmail-ից։ <ph name="BEGIN_LINK"/>Իմանալ ավելին այս գործառույթի մասին<ph name="LINK_END"/></translation>
 <translation id="1763864636252898013">Այս սերվերը չի կարող ապացուցել, որ <ph name="DOMAIN"/> է: Ձեր սարքի օպերացիոն համակարգը չի վստահում դրա անվտանգության վկայականին: Պատճառը կարող է լինել սխալ կազմաձևումը կամ կապակցման խափանումը հարձակվողի կողմից:</translation>
 <translation id="1768211456781949159"><ph name="BEGIN_LINK"/>Գործարկեք Windows-ի ցանցի ախտորոշումը<ph name="END_LINK"/>:</translation>
 <translation id="1777422078676229054">Ֆոտոթուղթ (արխիվային)</translation>
@@ -519,7 +519,7 @@
 <translation id="1871284979644508959">Պարտադիր դաշտ</translation>
 <translation id="1871739799120352748">Գինը բարձր է</translation>
 <translation id="1874224422119691492">Անցեք <ph name="SETTINGS"/>՝ ընտրելու, թե արդյոք ուզում եք օգտագործել էկրանի կողպումը գաղտնաբառերի լրացման համար</translation>
-<translation id="8768609471898592384">Ուղարկվել է Brave-ին ձեր <ph name="DEVICE_NAME"/> սարքում • <ph name="USER_EMAIL"/></translation>
+<translation id="8768609471898592384">Ուղարկվել է Growser-ին ձեր <ph name="DEVICE_NAME"/> սարքում • <ph name="USER_EMAIL"/></translation>
 <translation id="1875025161375567525">Լուսանկարների դարակ</translation>
 <translation id="85321348617848915">Growser Ձևաթղթեր</translation>
 <translation id="1876399092304384674">Ըստ ամսաթվի</translation>
@@ -543,7 +543,7 @@
 <translation id="192020519938775529">{COUNT,plural, =0{Ոչինչ չկա}=1{1 կայք}one{# կայք}other{# կայք}}</translation>
 <translation id="192095259937375524">«Կիսվել այս ներդիրով» կոճակ․ ակտիվացրեք, որպեսզի կիսվեք այս ներդիրով՝ ուղարկելով հղում կամ ստեղծելով QR կոդ, հեռարձակում և այլն</translation>
 <translation id="1924727005275031552">Նոր</translation>
-<translation id="4527827173940627753">Brave-ը գրանցում է, թե ինչպես եք օգտագործում գործառույթը, օրինակ՝ ձեր հարցումները և գործողությունները, երբ ընդունում կամ անտեսում եք առաջարկները</translation>
+<translation id="4527827173940627753">Growser-ը գրանցում է, թե ինչպես եք օգտագործում գործառույթը, օրինակ՝ ձեր հարցումները և գործողությունները, երբ ընդունում կամ անտեսում եք առաջարկները</translation>
 <translation id="1932098463447129402">Ոչ շուտ</translation>
 <translation id="1935353813610900265">Կարծիք հայտնեք ԱԲ-ի միջոցով այցելությունների պատմությունում որոնման մասին</translation>
 <translation id="1935995810530254458">Պատճենել</translation>
@@ -597,7 +597,7 @@
 <translation id="2027465737841872819">Պլաստիկ</translation>
 <translation id="2027707238798802149">Քարտն անհասանելի է</translation>
 <translation id="2032962459168915086"><ph name="BEGIN_LINK"/>Ստուգել պրոքսի-սերվերի և հրապատի կազմաձևումը<ph name="END_LINK"/></translation>
-<translation id="1211671941710012208">Brave-ի այս օրինակն աշխատում է հրամանատողի պարամետրերով, որոնք ձեռքով են սահմանվել։ Նկատի ունեցեք, որ հրամանատողի պարամետրերը կարող են ցանկացած պահի փոխվել և չեն աջակցվում։</translation>
+<translation id="1211671941710012208">Growser-ի այս օրինակն աշխատում է հրամանատողի պարամետրերով, որոնք ձեռքով են սահմանվել։ Նկատի ունեցեք, որ հրամանատողի պարամետրերը կարող են ցանկացած պահի փոխվել և չեն աջակցվում։</translation>
 <translation id="2033900728810589426">Դյուրանցումը չի կարող լինել նույնը, ինչ կանխադրված որոնման մատակարարի հիմնաբառը՝ սահմանված <ph name="DEFAULT_SEARCH_PROVIDER_KEYWORD_POLICY_NAME"/>-ի կողմից՝ <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2034971124472263449">Պահել</translation>
 <translation id="2036514476578229158">Դուք այս կայքն այցելելու թույլտվություն եք խնդրել։ Ձեր ծնողները կարող են պատասխանել Family Link-ում։</translation>
@@ -865,7 +865,7 @@
 <translation id="2469153820345007638">1-ից N հերթականությամբ</translation>
 <translation id="24699311393038040">Թուղթ (կավճապատ)</translation>
 <translation id="2471632709106952369">Համեմատման աղյուսակներ</translation>
-<translation id="768574016157037999">Ապահով կերպով պահեք Known Traveler Number-ը Brave Wallet-ում</translation>
+<translation id="768574016157037999">Ապահով կերպով պահեք Known Traveler Number-ը Growser Wallet-ում</translation>
 <translation id="50589553892093838">Այլ Growser տվյալներ</translation>
 <translation id="247903268499247848">Շարժման և լուսավորության սենսորների օգտագործումն արգելված է</translation>
 <translation id="2479148705183875116">Անցնել կարգավորումներ</translation>
@@ -1093,7 +1093,7 @@
 <translation id="2905107382358353958">Վճարումների նոր կարգավորման մասին ծանուցում</translation>
 <translation id="2909946352844186028">Ցանցը փոփվել է:</translation>
 <translation id="2910062169995917863">Աշխատաշրջանը սպառվեց</translation>
-<translation id="7085506453142803285">Brave Wallet-ի ձեր կարգավորումները կիրառվում են Brave-ից պահված տեղեկությունների նկատմամբ</translation>
+<translation id="7085506453142803285">Growser Wallet-ի ձեր կարգավորումները կիրառվում են Growser-ից պահված տեղեկությունների նկատմամբ</translation>
 <translation id="2911973620368911614">Աշխատանքային հաշվի օգտատիրոջ ID</translation>
 <translation id="2915068235268646559">Խափանման օրը և ժամը՝ <ph name="CRASH_TIME"/></translation>
 <translation id="2916038427272391327">Փակեք մյուս ծրագրերը</translation>
@@ -1161,7 +1161,7 @@
 <translation id="3019738915977809060">Պահեք նստեցման կտրոնը Wallet-ում</translation>
 <translation id="3022959067768579802">Շարունակեք գրել</translation>
 <translation id="3024663005179499861">Կանոնի տեսակը սխալ է</translation>
-<translation id="4839141088909071432">Brave-ը հայտնաբերել է մանրամասներ, որոնք սովորաբար հանդիպում են ֆիշինգի, վնասագրերի կամ խարդախությունների հետ կապված կայքերում։ <ph name="BEGIN_LINK"/>Իմանալ ավելին<ph name="END_LINK"/></translation>
+<translation id="4839141088909071432">Growser-ը հայտնաբերել է մանրամասներ, որոնք սովորաբար հանդիպում են ֆիշինգի, վնասագրերի կամ խարդախությունների հետ կապված կայքերում։ <ph name="BEGIN_LINK"/>Իմանալ ավելին<ph name="END_LINK"/></translation>
 <translation id="3027915437837548462">SVG պատկեր</translation>
 <translation id="3030331669969285614">Այս դրոշակները կանխում են կամ չեղարկում են վտանգավոր փոփոխությունները և հասանելի կլինեն միայն սահմանափակ ժամանակով։</translation>
 <translation id="5877261609750575671">Երբ ձեր տան հասցեն նշված է, Growser-ի ծառայություններից օգտվելն ավելի հեշտ է․ դուք ստանում եք ավելի ճշգրիտ երթուղիներ Growser Քարտեզներում, որոնման ավելի համապատասխան արդյունքներ և այլն։ Դուք կարող եք փոփոխել կամ ջնջել ձեր հասցեն <ph name="BEGIN_LINK"/><ph name="ACCOUNT"/> Growser հաշվում<ph name="END_LINK"/>։</translation>
@@ -1270,7 +1270,7 @@
 <translation id="3207830513221832868"><ph name="BLOCKED_URL"/> կայքում կարող է մեծահասակների համար նախատեսված բովանդակություն լինել</translation>
 <translation id="3207960819495026254">Էջանշված է</translation>
 <translation id="3209034400446768650">Այս էջը կարող է գումար գանձել ձեզնից</translation>
-<translation id="809694630565139611">Ձեր հարցումները, էջերի վերնագրերը և URL-ներն ուղարկվում են Brave-ին և կարող են ստուգվել՝ բարելավված ինքնալրացումը ավելի լավը դարձնելու համար</translation>
+<translation id="809694630565139611">Ձեր հարցումները, էջերի վերնագրերը և URL-ներն ուղարկվում են Growser-ին և կարող են ստուգվել՝ բարելավված ինքնալրացումը ավելի լավը դարձնելու համար</translation>
 <translation id="3212468046572043669">Ներբեռնումը սկսվել է։ Այն տեսնելու համար քաշեք էկրանի վերևից և հպեք «Հետ» կոճակին</translation>
 <translation id="3212581601480735796">Ձեր գործողությունները <ph name="HOSTNAME"/> կայքում հետագծվում են</translation>
 <translation id="3215092763954878852">Չհաջողվեց օգտագործել WebAuthn-ը</translation>
@@ -1318,7 +1318,7 @@
 <translation id="7460223968433527020">Ձեր ադմինիստրատորը կարող է հեռակա կարգով փոխել ձեր պրոֆիլի և դիտարկիչի կարգավորումները, վերլուծել դիտարկիչի մասին տեղեկությունները հաշվետվությունների միջոցով և կատարել այլ անհրաժեշտ առաջադրանքներ։ Սարքում արվող գործողությունները նույնպես կարող են կառավարվել Growser-ից դուրս։ <ph name="BEGIN_LINK"/>Իմանալ ավելին<ph name="END_LINK"/></translation>
 <translation id="3273757719652748628">IBAN-ը պահել ամբողջությամբ բացված պատուհանում։</translation>
 <translation id="327455571215090823">Ավելի խելացի ինքնալրացում՝ անձնական տվյալների պաշտպանությամբ</translation>
-<translation id="5506816339792547413">Ապահով կերպով թարմացրեք անձնագիրը Brave Wallet-ում</translation>
+<translation id="5506816339792547413">Ապահով կերպով թարմացրեք անձնագիրը Growser Wallet-ում</translation>
 <translation id="3281350579597955952">{0,plural, =1{Ադմինիստրատորը խորհուրդ չի տալիս այս ֆայլը բացել այստեղ՝ <ph name="DESTINATION_NAME"/>}one{Ադմինիստրատորը խորհուրդ չի տալիս այս ֆայլը բացել այստեղ՝ <ph name="DESTINATION_NAME"/>}other{Ադմինիստրատորը խորհուրդ չի տալիս այս ֆայլերը բացել այստեղ՝ <ph name="DESTINATION_NAME"/>}}</translation>
 <translation id="3282085321714087552">Ձեր կազմակերպությունը (<ph name="ENROLLMENT_DOMAIN"/>) հետևյալ կայքերին ուղարկել է որոշ տեղեկություններ, օրինակ՝ կարգավորումներ և կանոններ։</translation>
 <translation id="3286372614333682499">ուղղաձիգ</translation>
@@ -1327,7 +1327,7 @@
 <translation id="3293642807462928945">Իմանալ ավելին <ph name="POLICY_NAME"/> կանոնի մասին</translation>
 <translation id="5894665462526421022">Դիտեք և կառավարեք ձեր գաղտնաբառերը Growser-ի կարգավորումներում</translation>
 <translation id="3299098170013242198">Windows Hello-ն միացված է գաղտնաբառեր լրացնելու համար</translation>
-<translation id="3183696044082232280">Ձեր կազմակերպության կանոնների պատճառով բովանդակությունը չհաջողվեց տեղադրել Brave-ի կառավարվող համատեքստից դուրս</translation>
+<translation id="3183696044082232280">Ձեր կազմակերպության կանոնների պատճառով բովանդակությունը չհաջողվեց տեղադրել Growser-ի կառավարվող համատեքստից դուրս</translation>
 <translation id="3299720788264079132">«<ph name="FEATURE_NAME"/>» գործառույթն օգտագործելիս սխալ առաջացավ</translation>
 <translation id="3303176609391916566">30 x 42 դյույմ</translation>
 <translation id="3303855915957856445">Որոնման արդյունքներ չկան</translation>
@@ -1595,7 +1595,7 @@
 <translation id="3769584711865378220"><ph name="URL"/> կայքն ուզում է տեղորոշման թույլտվությունը մոտավորից փոխել ճշգրիտի</translation>
 <translation id="3772211998634047851">Թուղթ (բոնդ)</translation>
 <translation id="8247912309816231326"><ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>։ Growser Keep-ում արագ նշում ստեղծելու համար սեղմեք Tab, ապա՝ Enter։</translation>
-<translation id="5647245195700278791">Pix հաշիվը կկապվի <ph name="ACCOUNT_EMAIL"/> հաշվի հետ։ Pix կոդի հայտնաբերումն անջատելու համար անցեք <ph name="BEGIN_LINK1"/>Brave-ի կարգավորումներ<ph name="END_LINK1"/></translation>
+<translation id="5647245195700278791">Pix հաշիվը կկապվի <ph name="ACCOUNT_EMAIL"/> հաշվի հետ։ Pix կոդի հայտնաբերումն անջատելու համար անցեք <ph name="BEGIN_LINK1"/>Growser-ի կարգավորումներ<ph name="END_LINK1"/></translation>
 <translation id="3780694243617746492">Արտածման արկղ</translation>
 <translation id="3783418713923659662">Mastercard</translation>
 <translation id="3784372983762739446">Bluetooth սարքեր</translation>
@@ -1876,7 +1876,7 @@
 <translation id="4231448684371260244">8 x 13 դյմ</translation>
 <translation id="279016548542240532">Վճարեք Pix-ով՝ առանց անցնելու մեկ հավելվածից մյուսը Growser-ում</translation>
 <translation id="4238607350028440048">Օգնիր ինձ պատրաստվել հարցազրույցին՝ հարցեր տալով, ինչպես որ դա կաներ աշխատանքի ընդունող մենեջերը</translation>
-<translation id="3325641703531153643">Ապահով կերպով պահեք վարորդական վկայականը Brave Wallet-ում</translation>
+<translation id="3325641703531153643">Ապահով կերպով պահեք վարորդական վկայականը Growser Wallet-ում</translation>
 <translation id="4239799716689808527">Պիտակներ</translation>
 <translation id="424063167283213501">Պահել ուղևորի անձնական համարը</translation>
 <translation id="4241830393007970744">Կայքում, որը փորձում էիք այցելել, հաքերները կարող են վնասաբեր ծրագրեր տեղադրել կամ բացահայտել ձեր տեղեկությունները, այդ թվում՝ գաղտնաբառերը, հեռախոսահամարը կամ վարկային քարտերի համարները։</translation>
@@ -1988,7 +1988,7 @@
 <translation id="5221858344642681996">Անվտանգության նկատառումներից ելնելով՝ ձեր կազմակերպությունը թույլ չի տալիս գաղտնաբառերի կրկնօգտագործումը Growser-ում։ Growser-ում գաղտնաբառերը գաղտնագրվում են՝ օգտատերերի գաղտնիությունը պաշտպանելու նպատակով։</translation>
 <translation id="4409271659088619928">Դուք օգտագործում եք <ph name="DSE"/> որոնողական համակարգը։ Որոնումների պատմությունը ջնջելու համար կարդացեք համապատասխան ցուցումները։</translation>
 <translation id="4409556632583862731">Նոր նամակագրություն</translation>
-<translation id="4235960211211581927">Ապահով կերպով թարմացրեք ID քարտը Brave Wallet-ում</translation>
+<translation id="4235960211211581927">Ապահով կերպով թարմացրեք ID քարտը Growser Wallet-ում</translation>
 <translation id="4412074349188076601">Այս կազմաձևը նշված է որպես տեղադրման համար հասանելի, բայց քանի որ այս կառուցվածքի համար պատկեր տրամադրված չէ, այն հնարավոր չէ տեղադրել։</translation>
 <translation id="4412377069090572315">Օգտատերերի կարծիքները</translation>
 <translation id="4414515549596849729">քուքիներ և կայքի տվյալներ</translation>
@@ -2202,7 +2202,7 @@
 <translation id="4807098396393229769">Քարտապանի անունը</translation>
 <translation id="4809079943450490359">Հրահանգներ ձեր սարքի ադմինիստրատորի կողմից՝</translation>
 <translation id="4811450222531576619">Իմացեք ավելին աղբյուրի և թեմայի մասին</translation>
-<translation id="1177020771645812087">Ապահով կերպով պահեք փոխադրամիջոցի տվյալները Brave Wallet-ում</translation>
+<translation id="1177020771645812087">Ապահով կերպով պահեք փոխադրամիջոցի տվյալները Growser Wallet-ում</translation>
 <translation id="4811918461974803225">Google Pay-ի և Affirm-ի լոգոներ</translation>
 <translation id="4813512666221746211">Ցանցի սխալ</translation>
 <translation id="4814114628197290459">IBAN-ի ջնջում</translation>
@@ -2340,7 +2340,7 @@
 <translation id="5026121202864677765">Գրիր ուղեկցող նամակ ինձ համար</translation>
 <translation id="5030338702439866405">Թողարկող`</translation>
 <translation id="503069730517007720">Անհրաժեշտ է «<ph name="SOFTWARE_NAME"/>» ծրագրի արմատային հավաստագիրը, որը տեղադրված չէ: Խնդիրը լուծելու համար ՏՏ ադմինիստրատորը պետք է հետևի «<ph name="SOFTWARE_NAME"/>» ծրագրի կազմաձևման ցուցումներին։ <ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="7106879493637631619">Ապահով կերպով պահեք KTN-ը Brave Wallet-ում</translation>
+<translation id="7106879493637631619">Ապահով կերպով պահեք KTN-ը Growser Wallet-ում</translation>
 <translation id="503498442187459473"><ph name="HOST"/> կայքն ուզում է օգտագործել տեսախցիկն ու խոսափողը</translation>
 <translation id="503574301575803523">SRA3</translation>
 <translation id="5039762155821394373">Տառաչափ</translation>
@@ -2707,7 +2707,7 @@
 <translation id="5635478143789726479">Վաճառողի օգտագործման պայմաններ</translation>
 <translation id="5640474731385449758">«<ph name="EXTENSION_NAME"/>» ընդլայնումն ուզում է <ph name="HANDLER_HOSTNAME"/>-ի միջոցով «<ph name="PROTOCOL"/>» տեսակի հղումներ բացել <ph name="ORIGIN"/>-ից</translation>
 <translation id="5642508497713047">CRL-ի ստորագրող</translation>
-<translation id="1058971715947037197">Ուղարկվել է Brave-ին ձեր <ph name="DEVICE_NAME"/> սարքում</translation>
+<translation id="1058971715947037197">Ուղարկվել է Growser-ին ձեր <ph name="DEVICE_NAME"/> սարքում</translation>
 <translation id="5644090287519800334">Պատկերների տեղաշարժ երեսի կողմից՝ X առանցքով</translation>
 <translation id="5644128326840674462">Գովազդային ազդերիզ</translation>
 <translation id="5645132789250840550">Պլաստիկ (կիսափայլուն)</translation>
@@ -2715,7 +2715,7 @@
 <translation id="5648166631817621825">Վերջին 7 օրվա</translation>
 <translation id="5649053991847567735">Ավտոմատ ներբեռնումներ</translation>
 <translation id="5651323159439184939">Պերֆորացված թուղթ</translation>
-<translation id="5987316528511737389">Ապահով կերպով թարմացրեք նույնականացման քարտը Brave Wallet-ում</translation>
+<translation id="5987316528511737389">Ապահով կերպով թարմացրեք նույնականացման քարտը Growser Wallet-ում</translation>
 <translation id="5654927323611874862">Խափանման մասին թարմացված հաշվետվության ID՝</translation>
 <translation id="5654965123204121933">URL-ը չի ներառում <ph name="SEARCH_TERMS_REPLACEMENT"/> պահանջվող փոխարինման տողը՝ <ph name="SEARCH_URL"/></translation>
 <translation id="5659593005791499971">Էլփոստ</translation>
@@ -2743,7 +2743,7 @@
 <translation id="5715150588940290235">Ջնջե՞լ անվտանգության պահված կոդերը</translation>
 <translation id="5715918316982363436"><ph name="WINDOW_COUNT"/>ի <ph name="TAB_COUNT"/> այս սարքում</translation>
 <translation id="5716325061445053985">Հպեք՝ ներդիրը ձեր հեռախոսում բացելու համար</translation>
-<translation id="5576354004856163244">Ավտոմատ լրացրեք քարտի տվյալները, երբ վճարում եք առցանց։ Քարտերը ապահով կերպով պահվում են Brave Wallet-ում։</translation>
+<translation id="5576354004856163244">Ավտոմատ լրացրեք քարտի տվյալները, երբ վճարում եք առցանց։ Քարտերը ապահով կերպով պահվում են Growser Wallet-ում։</translation>
 <translation id="5718326209176373202">Ավելացնել տեքստային ծանոթագրություններ</translation>
 <translation id="5718601519531438273">Ներառում է այնպիսի տեղեկություններ, ինչպիսիք են անձնագրերը և վարորդական վկայականները</translation>
 <translation id="5720705177508910913">ընթացիկ օգտատիրոջը</translation>
@@ -2828,7 +2828,7 @@
 <translation id="5866898949289125849">Դուք դիտում եք ծրագրավորողի գործիքների էջը</translation>
 <translation id="5869405914158311789">Կայքն անհասանելի է</translation>
 <translation id="5869522115854928033">Պահված գաղտնաբառեր</translation>
-<translation id="1025941152813277982">Ապահով կերպով թարմացրեք KTN-ը Brave Wallet-ում</translation>
+<translation id="1025941152813277982">Ապահով կերպով թարմացրեք KTN-ը Growser Wallet-ում</translation>
 <translation id="5872215789867188990">«<ph name="GROUP_TITLE"/>» ներդիրների խումբն այլևս հասանելի չէ</translation>
 <translation id="5872692522325383488">IBAN-ը պահվել է</translation>
 <translation id="5879989559903563723">Թույլատրված չէ հյուրի ռեժիմում</translation>
@@ -3158,7 +3158,7 @@
 <translation id="6412543105195503444">Ծնողի հաստատման պատուհան</translation>
 <translation id="6416877227920300343">EDP</translation>
 <translation id="6418199314628742460">Համոզվեք, որ ցանկացած կարևոր բիզնես կամ անձնական տվյալներ պահվում են դրսում։</translation>
-<translation id="4561848316196784217">Ապահով կերպով թարմացրեք փոխադրամիջոցի տվյալները Brave Wallet-ում</translation>
+<translation id="4561848316196784217">Ապահով կերպով թարմացրեք փոխադրամիջոցի տվյալները Growser Wallet-ում</translation>
 <translation id="6425092077175753609">Material</translation>
 <translation id="6427730057873428458">Երկփեղկ ծալում</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
@@ -3482,7 +3482,7 @@
 <translation id="7011763495818914549">Նույնականացման քարտ</translation>
 <translation id="7012363358306927923">China UnionPay</translation>
 <translation id="7013835112918108252">Կարող է խնդրել ձեր մկնիկը կողպելու և օգտագործելու թույլտվություն</translation>
-<translation id="2871736177221289934">Brave-ը գրանցում է, թե ինչպես եք օգտագործում գործառույթը, օրինակ՝ ձեր հարցումները և ձեր գործողությունները, երբ ընդունում կամ անտեսում եք առաջարկները</translation>
+<translation id="2871736177221289934">Growser-ը գրանցում է, թե ինչպես եք օգտագործում գործառույթը, օրինակ՝ ձեր հարցումները և ձեր գործողությունները, երբ ընդունում կամ անտեսում եք առաջարկները</translation>
 <translation id="7014741021609395734">Մասշտաբ</translation>
 <translation id="7016992613359344582">Այս գանձումները կարող են մեկանգամյա կամ պարբերական լինել և հնարավոր է ակնհայտ չերևան:</translation>
 <translation id="7020464868401003526">Դյուրանցման URL-ը գերազանցում է նիշերի առավելագույն թույլատրելի քանակը (<ph name="MAX_LENGTH"/>)։</translation>
@@ -3513,7 +3513,7 @@
 <translation id="7064851114919012435">Կոնտակտային տվյալներ</translation>
 <translation id="7070144569727915108">համակարգային կարգավորումներ</translation>
 <translation id="70705239631109039">Ձեր կապը լիարժեք պաշտպանված չէ</translation>
-<translation id="1544480702884197290">Այժմ կարող եք վճարման եղանակներ պահել՝ Brave-ում գնման ձևակերպման ժամանակ ինքնալրացնելու համար։ <ph name="LINK_TEXT"/></translation>
+<translation id="1544480702884197290">Այժմ կարող եք վճարման եղանակներ պահել՝ Growser-ում գնման ձևակերպման ժամանակ ինքնալրացնելու համար։ <ph name="LINK_TEXT"/></translation>
 <translation id="7075452647191940183">Հարցումը չափազանց մեծ է</translation>
 <translation id="7075513071073410194">PKCS #1 MD5` RSA գաղտնագրումով</translation>
 <translation id="7075896597860500885">Խորհուրդ չի տրվում պատճենել այս կայքից</translation>
@@ -3615,7 +3615,7 @@
 Լրացուցիչ տեղեկություններ՝
 <ph name="DEBUG_INFO"/></translation>
 <translation id="7252424535852086046">Դուք կարող եք ջնջել այս տվյալները կարգավորումների համապատասխան բաժնում</translation>
-<translation id="4241646169865720085">Ապահով կերպով թարմացրեք Redress Number-ը Brave Wallet-ում</translation>
+<translation id="4241646169865720085">Ապահով կերպով թարմացրեք Redress Number-ը Growser Wallet-ում</translation>
 <translation id="7255540419660272073">«Վատն է» կոճակ․ սեղմեք Enter՝ բացելու մի ձև, որտեղ կարող եք մանրամասնել, թե ինչու չեք հավանել, <ph name="THUMBS_DOWN_SUGGESTION_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
 <translation id="7256634549594854023">Հետևի դարակ</translation>
 <translation id="725866823122871198">Չհաջողվեց մասնավոր կապակցում հաստատել <ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/> տիրույթի հետ, քանի որ ձեր համակարգչի ամսաթիվը և ժամը (<ph name="DATE_AND_TIME"/>) սխալ են:</translation>
@@ -4039,7 +4039,7 @@
 <translation id="7956713633345437162">Բջջային էջանիշներ</translation>
 <translation id="7961015016161918242">Երբեք</translation>
 <translation id="7962467575542381659">Հարթակի սարք</translation>
-<translation id="5335890850142030688">Brave-ը այլևս ավտոմատ կերպով չի հաստատի այս էլ․ հասցեն աջակցվող կայքերում։</translation>
+<translation id="5335890850142030688">Growser-ը այլևս ավտոմատ կերպով չի հաստատի այս էլ․ հասցեն աջակցվող կայքերում։</translation>
 <translation id="7966803981046576691">Առաջադրանքի հաշվի տեսակը</translation>
 <translation id="7967973398323409409">Ձեր ինքնալրացվող տեղեկությունները երբեք տեսանելի չեն որևէ մեկի</translation>
 <translation id="79682505114836835">«<ph name="VALUE"/>» արժեքը անվավեր HEX գույն է։</translation>
@@ -4142,7 +4142,7 @@
 <translation id="8155253549374198915">Վերջին բացված ներդիրները</translation>
 <translation id="7904243652775639741">Growser-ն ունի անվտանգության ներկառուցված գործառույթներ, որոնք պաշտպանում են ձեզ դիտարկման ժամանակ, օրինակ՝ Growser Ապահով դիտարկումը, որը <ph name="BEGIN_LINK"/>վերջերս վնասագիր է հայտնաբերել<ph name="END_LINK"/> կայքում, որը փորձում էիք այցելել։</translation>
 <translation id="8161095570253161196">Շարունակել դիտարկումը</translation>
-<translation id="4900205713719197017">Միացրեք ինքնալրացումը՝ առցանց վճարումներն անվտանգ կատարելու համար։ Քարտի տվյալները գաղտնագրվում են Brave Wallet-ում։</translation>
+<translation id="4900205713719197017">Միացրեք ինքնալրացումը՝ առցանց վճարումներն անվտանգ կատարելու համար։ Քարտի տվյալները գաղտնագրվում են Growser Wallet-ում։</translation>
 <translation id="8163866351304776260">Չորս անցք ձախ կողմում</translation>
 <translation id="8164078261547504572">Ուզո՞ւմ եք գնիջեցումների մասին նամակներ ստանալ</translation>
 <translation id="8169175551046720804">«<ph name="DATA_CONTROLS_KEYS"/>» բանալիները հնարավոր չէ ավելացնել նույն բառարանում</translation>
@@ -4152,7 +4152,7 @@
 <translation id="4351627595884993315">Growser-ն առաջարկում է պահել քարտերը ձեր Growser հաշվում, քանի որ դուք մտել եք հաշիվ: Սա կարող եք փոխել կարգավորումներում։</translation>
 <translation id="8176440868214972690">Սարքի ադմինիստրատորը հետևյալ կայքերին ուղարկել է որոշ տեղեկություններ, օրինակ՝ կարգավորումներ և կանոններ։</translation>
 <translation id="818254048113802060">{0,plural, =1{<ph name="FILE_NAME"/> ֆայլն արգելափակվել է բովանդակության պատճառով}one{<ph name="FILE_COUNT"/> ֆայլ արգելափակվել է բովանդակության պատճառով}other{<ph name="FILE_COUNT"/> ֆայլ արգելափակվել է բովանդակության պատճառով}}</translation>
-<translation id="4272901805803707638">Դուք ցանկացած ժամանակ կարող եք փոխել ձեր որոնողական համակարգը Brave-ի կարգավորումներում։ Եթե չեք տեսնում ձեր նախընտրած որոնողական համակարգը, կարող եք որոնել դրա կայքից։ Brave-ի կարգավորումներում այն կցուցադրվի որպես վերջերս այցելած որոնողական համակարգ, և դուք կարող եք այն դարձնել ձեր կանխադրված որոնողական համակարգը։</translation>
+<translation id="4272901805803707638">Դուք ցանկացած ժամանակ կարող եք փոխել ձեր որոնողական համակարգը Growser-ի կարգավորումներում։ Եթե չեք տեսնում ձեր նախընտրած որոնողական համակարգը, կարող եք որոնել դրա կայքից։ Growser-ի կարգավորումներում այն կցուցադրվի որպես վերջերս այցելած որոնողական համակարգ, և դուք կարող եք այն դարձնել ձեր կանխադրված որոնողական համակարգը։</translation>
 <translation id="8188830160449823068">IBAN համարը պահվեց միայն սարքում</translation>
 <translation id="8189557652711717875">Ձեր ընտրած որոնողական համակարգը կօգտագործվի, օրինակ, երբ դուք որոնում կատարեք հասցեագոտուց կամ վեբ էջերի պատկերների միջոցով։</translation>
 <translation id="8190193880870196235">Կառավարվում է ընդլայնման կողմից</translation>
@@ -4226,7 +4226,7 @@
 <translation id="8297545700510100061">Քուքիները և կայքերի այլ տվյալները օգտագործվում են ձեր մասին տեղեկությունները պահելու համար, այդ թվում՝ հաշիվ մտնելու և գովազդը ձեզ համար անհատականացնելու համար։ Բոլոր կայքերի քուքիների կառավարման համար անցեք <ph name="SETTINGS"/>։</translation>
 <translation id="8298115750975731693">Անլար կապը (<ph name="WIFI_NAME"/>), որից օգտվում եք, կարող է պահանջել, որպեսզի դուք այցելեք <ph name="BEGIN_BOLD"/><ph name="LOGIN_URL"/><ph name="END_BOLD"/>-ը:</translation>
 <translation id="8298399736867690281">Քարտը պահվում է միայն սարքում</translation>
-<translation id="7150057276888666361">Ապահով կերպով պահեք ID քարտը Brave Wallet-ում</translation>
+<translation id="7150057276888666361">Ապահով կերպով պահեք ID քարտը Growser Wallet-ում</translation>
 <translation id="8301894345671534559">Մուտքագրել կոդը</translation>
 <translation id="830498451218851433">Ծալում կիսով չափ</translation>
 <translation id="830868413617744215">Բետա</translation>
@@ -4373,7 +4373,7 @@
 <translation id="8559762987265718583"><ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/>-ի հետ կապակցում չի կարող հաստատվել, քանի որ ձեր սարքի ամսաթիվը և ժամը (<ph name="DATE_AND_TIME"/>) սխալ է:</translation>
 <translation id="8564182942834072828">Մի քանի փաստաթուղթ/չառանձնացված պատճեններ</translation>
 <translation id="8564466070529550495">Վիրտուալ քարտն այս պահին հասանելի չէ։ Փորձեք ավելի ուշ։</translation>
-<translation id="6357650538613458024">Օգնեք Brave-ին ավելի լավ հասկանալ և լրացնել բարդ ձևերը՝ թույլատրելով տվյալների ապահով մշակումը Brave-ի սերվերներում։ Ձեր տվյալները կմնան կոնֆիդենցիալ և չեն ստուգվի որևէ մեկի կողմից։</translation>
+<translation id="6357650538613458024">Օգնեք Growser-ին ավելի լավ հասկանալ և լրացնել բարդ ձևերը՝ թույլատրելով տվյալների ապահով մշակումը Growser-ի սերվերներում։ Ձեր տվյալները կմնան կոնֆիդենցիալ և չեն ստուգվի որևէ մեկի կողմից։</translation>
 <translation id="8574570240981266561">Տարրը ջնջվեց</translation>
 <translation id="8577192028579836704">Բոլոր տարբերակները սովորաբար <ph name="TYPICAL_PRICE"/></translation>
 <translation id="8577348305244205642">Վիրտուալ քարտն անհասանելի է</translation>
@@ -4436,9 +4436,9 @@
 <translation id="8708134712139312373">Կարող է հայցել Bluetooth սարքերին միանալու թույլտվություն</translation>
 <translation id="8710842507289500830">Տառատեսակի ոճ</translation>
 <translation id="8712637175834984815">Պատրաստ է</translation>
-<translation id="4328387382326136101">Brave-ը դրոշանշել է կայքը, որը փորձում էիք այցելել։ Օգնեք մեզ բարելավել այս նախազգուշացումները՝ մասնակցելով 1 րոպեանոց հարցմանը։</translation>
+<translation id="4328387382326136101">Growser-ը դրոշանշել է կայքը, որը փորձում էիք այցելել։ Օգնեք մեզ բարելավել այս նախազգուշացումները՝ մասնակցելով 1 րոպեանոց հարցմանը։</translation>
 <translation id="8716983145825913456">Ապահով կերպով պահեք փոխադրամիջոցի տվյալները</translation>
-<translation id="3201352891862147498">Անձնագիրը ապահով կերպով պահեք Brave Wallet-ում</translation>
+<translation id="3201352891862147498">Անձնագիրը ապահով կերպով պահեք Growser Wallet-ում</translation>
 <translation id="8718314106902482036">Չհաջողվեց մշակել վճարումը</translation>
 <translation id="8719263113926255150"><ph name="ENTITY"/>, <ph name="DESCRIPTION"/>, որոնման հուշում</translation>
 <translation id="8719528812645237045">Մի քանի անցք վերևում</translation>
@@ -4479,7 +4479,7 @@
 <translation id="8775863327608679820">Հասանելի են ապառիկ գնման ծառայություններ էկրանը բացված է կիսով չափ։</translation>
 <translation id="8776789089819232268">Ձեր բոլոր պատվերները</translation>
 <translation id="877985182522063539">A4</translation>
-<translation id="5756777435786575965">Երբ դուք բարելավված ինքնալրացման հարցում եք կատարում, ձեր օգտագործման տվյալները, հարցումները և էջի մանրամասները փոխանցվում են Brave-ին՝ ինքնալրացման գործառույթը բարելավելու համար</translation>
+<translation id="5756777435786575965">Երբ դուք բարելավված ինքնալրացման հարցում եք կատարում, ձեր օգտագործման տվյալները, հարցումները և էջի մանրամասները փոխանցվում են Growser-ին՝ ինքնալրացման գործառույթը բարելավելու համար</translation>
 <translation id="514805123051954646">«Թարգմանել էջը» կոճակ․ ակտիվացրեք՝ այս էջը Google Translate-ով թարգմանելու համար</translation>
 <translation id="8790007591277257123">&amp;Վերարկել ջնջումը</translation>
 <translation id="8790668801880409584">Պահել և ավտոմատ լրացնել ճամփորդությունների մասին տեղեկությունները</translation>
@@ -4540,7 +4540,7 @@
 <translation id="888169490072887292">Գտիր մանկական ճաշացանկով ընտանեկան ռեստորաններ</translation>
 <translation id="8883863364960302898">Google Drive-ի պանակ</translation>
 <translation id="8884537526797090108">Հնարավոր չէ տեսագրել գաղտնի բովանդակությունը</translation>
-<translation id="4135437686782002023">Ապահով կերպով թարմացրեք վարորդական վկայականը Brave Wallet-ում</translation>
+<translation id="4135437686782002023">Ապահով կերպով թարմացրեք վարորդական վկայականը Growser Wallet-ում</translation>
 <translation id="8891031436559779793">Մենք կտեղեկացնենք ձեզ, երբ որևէ կայքում գները նվազեն։</translation>
 <translation id="8891727572606052622">Պրոքսի-սերվերի ռեժիմն անվավեր է:</translation>
 <translation id="8894794286471754040">Երկար եզրից սկսած</translation>
@@ -4776,7 +4776,7 @@
 <translation id="3666543487519182654">Այս քարտը Google Wallet-ում պահելու դեպքում քարտի տվյալներն ավտոմատ կլրացվեն, երբ գնումներ կատարեք Growser-ում</translation>
 <translation id="979107176848483472">Ձեր դիտարկիչն ու պրոֆիլը կառավարվում են <ph name="DOMAIN"/> տիրույթի կողմից</translation>
 <translation id="981121421437150478">Անցանց</translation>
-<translation id="5456048065008297112">Ապահով կերպով պահեք նույնականացման քարտը Brave Wallet-ում</translation>
+<translation id="5456048065008297112">Ապահով կերպով պահեք նույնականացման քարտը Growser Wallet-ում</translation>
 <translation id="983587187183716432">«<ph name="AI_ENGINE_NAME"/>» կոճակ։ Սեղմեք Enter՝ <ph name="AI_ENGINE_NAME"/>ին հարց տալու համար</translation>
 <translation id="984275831282074731">Վճարման եղանակներ</translation>
 <translation id="985199708454569384">&lt;p&gt;Այս սխալը ցուցադրվում է, երբ ձեր համակարգչի/շարժական սարքի ամսաթիվը և ժամը ճիշտ չեն։&lt;/p&gt;
@@ -5571,9 +5571,9 @@
 <translation id="1151858212483238980">Google Wallet-ում պահված քարտերի տվյալները կարելի է ավտոմատ լրացնել</translation>
 <translation id="1205344127823614428">Google Wallet-ում պահված քարտերի տվյալները կարելի է ավտոմատ լրացնել։</translation>
 <translation id="5848445080378515710">Ձեր պատվերը ստուգելուց հետո դուք պետք է մուտք գործեք <ph name="BNPL_ISSUER_NAME"/> հաշիվ կամ ստեղծեք նորը։ Այս հաշիվն ավտոմատ կկապվի Google Wallet-ում։</translation>
-<translation id="8163468049564974856">Միացրեք ինքնալրացումը՝ առցանց վճարումներն անվտանգ կատարելու համար։ Քարտի տվյալները գաղտնագրվում են Brave Wallet-ում։</translation>
-<translation id="5717281954932320486">Ավտոմատ լրացրեք քարտի տվյալները, երբ վճարում եք առցանց։ Քարտերը ապահով կերպով պահվում են Brave Wallet-ում։</translation>
-<translation id="7055814742378298611">Այժմ կարող եք վճարման եղանակներ պահել՝ Brave-ում գնման ձևակերպման ժամանակ ինքնալրացնելու համար։ <ph name="LINK_TEXT"/></translation>
+<translation id="8163468049564974856">Միացրեք ինքնալրացումը՝ առցանց վճարումներն անվտանգ կատարելու համար։ Քարտի տվյալները գաղտնագրվում են Growser Wallet-ում։</translation>
+<translation id="5717281954932320486">Ավտոմատ լրացրեք քարտի տվյալները, երբ վճարում եք առցանց։ Քարտերը ապահով կերպով պահվում են Growser Wallet-ում։</translation>
+<translation id="7055814742378298611">Այժմ կարող եք վճարման եղանակներ պահել՝ Growser-ում գնման ձևակերպման ժամանակ ինքնալրացնելու համար։ <ph name="LINK_TEXT"/></translation>
 <translation id="5977205943292389390">Անվտանգության բոլոր կոդերը, որոնք պահված են ձեր սարքում և Growser հաշվում, կջնջվեն</translation>
 <translation id="7170930892977483182">Անվտանգության բոլոր կոդերը, որոնք պահված են ձեր սարքում և Google Wallet-ում, կջնջվեն</translation>
 <translation id="755360750394433286">Քարտը պահված է ձեր Growser հաշվում։ Դրա տվյալներն ավտոմատ կլրացվեն հետագա գնումների ժամանակ</translation>
@@ -5594,7 +5594,7 @@
 <translation id="7077165718541055322">Հեռացնե՞լ ձեր տան հասցեն Growser-ի ինքնալրացման տվյալներից</translation>
 <translation id="7756454115562251695">Հեռացնե՞լ աշխատանքային հասցեն Growser-ի ինքնալրացման տվյալներից</translation>
 <translation id="3068798232942246848">Հեռացնե՞լ այս տեղեկությունները Growser-ի ինքնալրացումից</translation>
-<translation id="967369588715984092">Brave-ը այլևս ավտոմատ կերպով չի հաստատի այս էլ․ հասցեն աջակցվող կայքերում։</translation>
+<translation id="967369588715984092">Growser-ը այլևս ավտոմատ կերպով չի հաստատի այս էլ․ հասցեն աջակցվող կայքերում։</translation>
 <translation id="7299769361777046949">Կառավարել մշտական հաճախորդի քարտերը Google Wallet-ում</translation>
 <translation id="2903623845283894856">Այժմ դուք կարող եք օգտագործել հասցեներ ձեր Growser հաշվից</translation>
 <translation id="7058709760023777753">Ավտոմատ լրացրեք ձեր տան և աշխատավայրի հասցեները Growser հաշվում պահված տվյալների միջոցով</translation>
@@ -5607,12 +5607,12 @@
 <translation id="3995632180712217177">Դուք կարող եք օգտագործել պահված հասցեները Growser-ի պրոդուկտներում։ Ձեր ներկայիս տան հասցեն չի փոխվի։ Այն կպահվի ձեր <ph name="ACCOUNT"/> Growser հաշվում։</translation>
 <translation id="2432673835335968473">Դուք կարող եք օգտագործել պահված հասցեները Growser-ի պրոդուկտներում։ Ձեր ներկայիս աշխատավայրի հասցեն չի փոխվի։ Այն կպահվի ձեր <ph name="ACCOUNT"/> Growser հաշվում։</translation>
 <translation id="2024046927213376062">Ձեր <ph name="ACCOUNT"/> Growser հաշվի տեղեկությունները կարող են օգնել ձեզ ավելի արագ լրացնել ձևերը Growser-ում</translation>
-<translation id="8430499469896241016">Ավտոմատ լրացնել հաստատման կոդերը, որոնք կայքերն օգտագործում են՝ ձեր անվտանգությունը բարելավելու համար։ Brave-ը կարող է վերցնել այս կոդերը ձեր Gmail-ից։ <ph name="BEGIN_LINK"/>Իմանալ ավելին այս գործառույթի մասին<ph name="LINK_END"/></translation>
+<translation id="8430499469896241016">Ավտոմատ լրացնել հաստատման կոդերը, որոնք կայքերն օգտագործում են՝ ձեր անվտանգությունը բարելավելու համար։ Growser-ը կարող է վերցնել այս կոդերը ձեր Gmail-ից։ <ph name="BEGIN_LINK"/>Իմանալ ավելին այս գործառույթի մասին<ph name="LINK_END"/></translation>
 <translation id="9221566509053798696">Growser-ը ընտրված չէ որպես ինքնալրացման ծառայություն</translation>
 <translation id="7450759832930378803">Այս կարգավորումները միացնելու և ձեր Growser հաշվի վճարային տեղեկություններն օգտագործելու համար անցեք Ինքնալրացման ծառայությունների կարգավորումներ։</translation>
 <translation id="7049940136908665440">Այս կարգավորումները միացնելու և ձեր Growser հաշվի տեղեկություններն օգտագործելու համար անցեք Ինքնալրացման ծառայությունների կարգավորումներ</translation>
 <translation id="2450019289047528273">Վճարման եղանակներ և այլ տեղեկութուններ Google Wallet-ից</translation>
-<translation id="1125406338060147524">Brave Wallet-ի ձեր կարգավորումները կիրառվում են Brave-ից պահված տեղեկությունների նկատմամբ</translation>
+<translation id="1125406338060147524">Growser Wallet-ի ձեր կարգավորումները կիրառվում են Growser-ից պահված տեղեկությունների նկատմամբ</translation>
 <translation id="5732084028114235391">Այս հասցեն ներկայումս պահված է Growser-ում։ Պահեք հասցեն ձեր Growser հաշվում (<ph name="ACCOUNT"/>), որպեսզի այն օգտագործեք Growser-ի տարբեր արտադրանքներում։</translation>
 <translation id="756794566964707799">Այս հասցեն ներկայումս պահված է այս սարքում։ Պահեք հասցեն ձեր Growser հաշվում (<ph name="ACCOUNT"/>), որպեսզի այն օգտագործեք Growser-ի տարբեր արտադրանքներում։</translation>
 <translation id="6935077351544118151">Այժմ կարող եք ավտոմատ լրացնել մշտական հաճախորդի քարտերի տվյալները Google Wallet-ից</translation>
@@ -5622,43 +5622,43 @@
 <translation id="5831217499016131155">Google Wallet</translation>
 <translation id="8421746712901926961">Պահեք ձեր տեղեկությունները <ph name="GOOGLE_WALLET_TITLE_1"/>-ում, որպեսզի ավելի արագ կատարեք տարբեր գործողություններ, օրինակ՝ ձևեր լրացնեք Growser-ի պրոդուկտներում։ Դուք կարող եք <ph name="MANAGE_INFO_LINK"/> <ph name="ACCOUNT"/> հաշվի համար՝ <ph name="GOOGLE_WALLET_TITLE_2"/>-ում։</translation>
 <translation id="4619669610757527494">Պահեք վարորդական վկայականը Google Wallet-ում</translation>
-<translation id="4239215166147486528">Ապահով կերպով պահեք վարորդական վկայականը Brave Wallet-ում</translation>
+<translation id="4239215166147486528">Ապահով կերպով պահեք վարորդական վկայականը Growser Wallet-ում</translation>
 <translation id="1912750443952232242">Պահեք նույնականացման քարտը Google Wallet-ում</translation>
-<translation id="8300302621078931927">Ապահով կերպով պահեք ID քարտը Brave Wallet-ում</translation>
+<translation id="8300302621078931927">Ապահով կերպով պահեք ID քարտը Growser Wallet-ում</translation>
 <translation id="5447103258548475868">Պահեք անձնագիրը Google Wallet-ում</translation>
-<translation id="8717177139469452440">Անձնագիրը ապահով կերպով պահեք Brave Wallet-ում</translation>
+<translation id="8717177139469452440">Անձնագիրը ապահով կերպով պահեք Growser Wallet-ում</translation>
 <translation id="760632772920590778">Պահեք մեքենան Google Wallet-ում</translation>
-<translation id="4811696127853690432">Ապահով կերպով պահեք փոխադրամիջոցի տվյալները Brave Wallet-ում</translation>
+<translation id="4811696127853690432">Ապահով կերպով պահեք փոխադրամիջոցի տվյալները Growser Wallet-ում</translation>
 <translation id="5914185423510719251">Պահեք KTN համարը Google Wallet-ում</translation>
-<translation id="5034488401832901795">Ապահով կերպով պահեք KTN-ը Brave Wallet-ում</translation>
+<translation id="5034488401832901795">Ապահով կերպով պահեք KTN-ը Growser Wallet-ում</translation>
 <translation id="1449251255954293933">Պահեք Redress Number-ը Google Wallet-ում</translation>
-<translation id="1330952240988133220">Ապահով կերպով պահեք Redress Number-ը Brave Wallet-ում</translation>
+<translation id="1330952240988133220">Ապահով կերպով պահեք Redress Number-ը Growser Wallet-ում</translation>
 <translation id="8393948304336153065">Թարմացրեք վարորդական վկայականը Google Wallet-ում</translation>
-<translation id="8889525327610245418">Ապահով կերպով թարմացրեք վարորդական վկայականը Brave Wallet-ում</translation>
+<translation id="8889525327610245418">Ապահով կերպով թարմացրեք վարորդական վկայականը Growser Wallet-ում</translation>
 <translation id="7570524564113479209">Թարմացրեք նույնականացման քարտը Google Wallet-ում</translation>
-<translation id="4410614037742891410">Ապահով կերպով թարմացրեք ID քարտը Brave Wallet-ում</translation>
+<translation id="4410614037742891410">Ապահով կերպով թարմացրեք ID քարտը Growser Wallet-ում</translation>
 <translation id="3426672782316020729">Թարմացրեք անձնագիրը Google Wallet-ում</translation>
-<translation id="3280440382387335343">Ապահով կերպով թարմացրեք անձնագիրը Brave Wallet-ում</translation>
+<translation id="3280440382387335343">Ապահով կերպով թարմացրեք անձնագիրը Growser Wallet-ում</translation>
 <translation id="2124081665399116863">Թարմացրեք մեքենայի տվյալները Google Wallet-ում</translation>
-<translation id="6422648598133086441">Ապահով կերպով թարմացրեք փոխադրամիջոցի տվյալները Brave Wallet-ում</translation>
+<translation id="6422648598133086441">Ապահով կերպով թարմացրեք փոխադրամիջոցի տվյալները Growser Wallet-ում</translation>
 <translation id="4770909831299304090">Թարմացրեք KTN-ը Google Wallet-ում</translation>
-<translation id="5872115357279348603">Ապահով կերպով թարմացրեք KTN-ը Brave Wallet-ում</translation>
+<translation id="5872115357279348603">Ապահով կերպով թարմացրեք KTN-ը Growser Wallet-ում</translation>
 <translation id="1732796940245838248">Թարմացրեք Redress Number-ը Google Wallet-ում</translation>
-<translation id="7253051586755429279">Ապահով կերպով թարմացրեք Redress Number-ը Brave Wallet-ում</translation>
+<translation id="7253051586755429279">Ապահով կերպով թարմացրեք Redress Number-ը Growser Wallet-ում</translation>
 <translation id="5628060911499153873">Պահեք ձեր տեղեկությունները, որպեսզի ավելի արագ կատարեք տարբեր գործողություններ Growser-ի պրոդուկտներում։ Տեղեկությունները պահվում են <ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/>-ում <ph name="ACCOUNT"/> հաշվի համար</translation>
 <translation id="8369722293913575142">Չհաջողվեց պահել այս տեղեկությունները ձեր Google Wallet-ում։ Փոխարենը դրանք պահվեցին Growser-ում՝ այս սարքում։ Հաջորդ անգամ, երբ օգտագործեք դրանք, Growser-ը կառաջարկի պահել Wallet-ում։</translation>
 <translation id="3237427677128462778">Չհաջողվեց պահել ուղեքարտը Growser Wallet-ում</translation>
 <translation id="9078170656887151974">Առաջարկներ տրամադրելու և այս գործառույթը բարելավելու նպատակով էջի URL-ն ու բովանդակությունը տրամադրվում են Growser-ին։ Ցանկացած ժամանակ կարգավորումներում կարող եք փոխել սա և <ph name="LEARN_MORE"/>։</translation>
 <translation id="4954505713046251871">Առաջարկներ տրամադրելու և այս գործառույթը բարելավելու նպատակով էջի URL-ն ու բովանդակությունը տրամադրվում են Growser-ին</translation>
 <translation id="2905902437192896563">Growser-ը ավելի լավ է որոշում ձևերը և ավելի արագ ավտոմատ լրացնում դրանք</translation>
-<translation id="67310796271265436">Օգնեք Brave-ին ավելի լավ հասկանալ և լրացնել բարդ ձևերը՝ թույլատրելով տվյալների ապահով մշակումը Brave-ի սերվերներում։ Ձեր տվյալները կմնան կոնֆիդենցիալ և չեն ստուգվի որևէ մեկի կողմից։</translation>
+<translation id="67310796271265436">Օգնեք Growser-ին ավելի լավ հասկանալ և լրացնել բարդ ձևերը՝ թույլատրելով տվյալների ապահով մշակումը Growser-ի սերվերներում։ Ձեր տվյալները կմնան կոնֆիդենցիալ և չեն ստուգվի որևէ մեկի կողմից։</translation>
 <translation id="7422908041366284140">Growser-ը կարող է ավտոմատ լրացնել դժվար դաշտերը, որոնք ստանդարտ ինքնալրացումը կարող է բաց թողնել</translation>
 <translation id="6329742260390895689">Ձեր տեղեկություններն ավտոմատ լրացնելու համար Wallet-ի կարգավորումներում միացրեք «Օգտագործել անցաքարտերը Growser-ում» կարգավորումը</translation>
 <translation id="5912796581727968237">Բացել Google Wallet-ը</translation>
 <translation id="5160781056848005130">Տվյալներ փոխանցելով Growser-ին՝ դուք օգնում եք ավելի լավը դարձնել բարելավված ինքնալրացումը</translation>
-<translation id="8781233757384402598">Երբ դուք բարելավված ինքնալրացման հարցում եք կատարում, ձեր օգտագործման տվյալները, հարցումները և էջի մանրամասները փոխանցվում են Brave-ին՝ ինքնալրացման գործառույթը բարելավելու համար</translation>
-<translation id="7044265724713929821">Brave-ը գրանցում է, թե ինչպես եք օգտագործում գործառույթը, օրինակ՝ ձեր հարցումները և գործողությունները, երբ ընդունում կամ անտեսում եք առաջարկները</translation>
-<translation id="3209071504641569648">Ձեր հարցումները, էջերի վերնագրերը և URL-ներն ուղարկվում են Brave-ին և կարող են ստուգվել՝ բարելավված ինքնալրացումը ավելի լավը դարձնելու համար</translation>
+<translation id="8781233757384402598">Երբ դուք բարելավված ինքնալրացման հարցում եք կատարում, ձեր օգտագործման տվյալները, հարցումները և էջի մանրամասները փոխանցվում են Growser-ին՝ ինքնալրացման գործառույթը բարելավելու համար</translation>
+<translation id="7044265724713929821">Growser-ը գրանցում է, թե ինչպես եք օգտագործում գործառույթը, օրինակ՝ ձեր հարցումները և գործողությունները, երբ ընդունում կամ անտեսում եք առաջարկները</translation>
+<translation id="3209071504641569648">Ձեր հարցումները, էջերի վերնագրերը և URL-ներն ուղարկվում են Growser-ին և կարող են ստուգվել՝ բարելավված ինքնալրացումը ավելի լավը դարձնելու համար</translation>
 <translation id="2410385419742253857">{COUNT,plural, =0{Ոչ մի}=1{1 կայքից (դուք կմնաք ձեր Growser հաշվում)}one{# կայքից (դուք կմնաք ձեր Growser հաշվում)}other{# կայքից (դուք կմնաք ձեր Growser հաշվում)}}</translation>
 <translation id="3410151451624226773">Կառավարել Growser գաղտնաբառերի կառավարչում</translation>
 <translation id="5224107321793121921">Կառավարել ձեր Growser հաշվում</translation>
@@ -5674,7 +5674,7 @@
     <ph name="BEGIN_LINK"/>Իմանալ ավելին<ph name="END_LINK"/></translation>
 <translation id="5164928537947209380">Այս փորձարարական ԱԲ գործիքը միշտ չէ, որ կարող է ճիշտ արդյունքներ տրամադրել։ Այն բարելավելու համար ձեր բովանդակությունն ուղարկվում է Growser-ին։
     <ph name="BEGIN_LINK"/>Իմանալ ավելին<ph name="END_LINK"/></translation>
-<translation id="3419981648784795212">Ձեր կազմակերպության կանոնների պատճառով բովանդակությունը չհաջողվեց տեղադրել Brave-ի կառավարվող համատեքստից դուրս</translation>
+<translation id="3419981648784795212">Ձեր կազմակերպության կանոնների պատճառով բովանդակությունը չհաջողվեց տեղադրել Growser-ի կառավարվող համատեքստից դուրս</translation>
 <translation id="1351458950091269256">Այս գովազդը չափազանց շատ ռեսուրս է օգտագործել ձեր սարքում, այդ պատճառով Growser-ը հեռացրել է այն։</translation>
 <translation id="4366714044424353289">Ձեր Growser հաշվում կարող են լինել այցելությունների պատմության այլ ձևեր ևս։ Դրանք կգտնեք <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/> էջում։</translation>
 <translation id="5626844006416355146">Ձեր Growser հաշվում կարող է նաև պահվել <ph name="BEGIN_LINK_GAA"/>Gemini հավելվածներում ձեր գործողությունների պատմությունը<ph name="END_LINK_GAA"/></translation>
@@ -5840,7 +5840,7 @@
 <translation id="7571813784389228510">Growser-ի ԱԲ ռեժիմ</translation>
 <translation id="3415471717466570460">Ձեր որոնման հարցումները, լավագույն համընկնումները և գտնված էջերի բովանդակությունը կուղարկվեն Growser-ին և կարող են դիտվել մասնագետների կողմից՝ գործառույթը բարելավելու համար։ Սա փորձնական գործառույթ է, և երբեմն կարող է սխալներով աշխատել։</translation>
 <translation id="9103366036378878818">Growser-ի խորհրդի հղում, սեղմեք Enter՝ <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/> հղումը բացելու համար</translation>
-<translation id="2097698842685899280">Brave-ը հայտնաբերել է մանրամասներ, որոնք սովորաբար հանդիպում են ֆիշինգի, վնասագրերի կամ խարդախությունների հետ կապված կայքերում։ <ph name="BEGIN_LINK"/>Իմանալ ավելին<ph name="END_LINK"/></translation>
+<translation id="2097698842685899280">Growser-ը հայտնաբերել է մանրամասներ, որոնք սովորաբար հանդիպում են ֆիշինգի, վնասագրերի կամ խարդախությունների հետ կապված կայքերում։ <ph name="BEGIN_LINK"/>Իմանալ ավելին<ph name="END_LINK"/></translation>
 <translation id="319854178761292593">Growser-ը պարզեցրել է այս էջը՝ այն ավելի ընթեռնելի դարձնելու համար։ Growser-ը բեռնել է սկզբնական էջը ապահով կապի միջոցով։</translation>
 <translation id="542284143784575620">Growser-ը պարզեցրել է այս էջը՝ այն ավելի ընթեռնելի դարձնելու համար։ Growser-ը բեռնել է սկզբնական էջը ոչ ապահով կապի միջոցով։</translation>
 <translation id="5826875044227298275">Դուք հենց նոր մուտքագրեցիք ձեր գաղտնաբառը կասկածելի կայքում։ Ձեր հաշիվների պաշտպանության նկատառումներով՝ Growser-ը խորհուրդ է տալիս անհապաղ ստուգել պահված գաղտնաբառերի անվտանգությունը։</translation>
@@ -5877,7 +5877,7 @@
 <translation id="2867186026859663748">Այս կանոնը չի կարող սահմանվել Growser-ի պրոֆիլի մակարդակում, և այն կանտեսվի։</translation>
 <translation id="277370491433906876">Այս կանոնն անտեսվում է, քանի որ օգտատերը փոխկապակցված անձ չէ։ Որպեսզի այս կանոնը կիրառվի, Growser դիտարկիչը և պրոֆիլը պետք է կառավարվեն ադմինիստրատորի վահանակի միջոցով նույն կազմակերպության կողմից։</translation>
 <translation id="1963194198237607890">Growser Enterprise Core-ը ձեզ տրամադրում է կենտրոնացված գործիք՝ ամպային սերվերից դիտարկիչի վերաբերյալ կանոնները կազմաձևելու համար</translation>
-<translation id="4553855485042734119">Brave-ի այս օրինակն աշխատում է հրամանատողի պարամետրերով, որոնք ձեռքով են սահմանվել։ Նկատի ունեցեք, որ հրամանատողի պարամետրերը կարող են ցանկացած պահի փոխվել և չեն աջակցվում։</translation>
+<translation id="4553855485042734119">Growser-ի այս օրինակն աշխատում է հրամանատողի պարամետրերով, որոնք ձեռքով են սահմանվել։ Նկատի ունեցեք, որ հրամանատողի պարամետրերը կարող են ցանկացած պահի փոխվել և չեն աջակցվում։</translation>
 <translation id="3858407183625528544">Անվտանգության նկատառումներից ելնելով՝ ձեր կազմակերպությունը թույլ չի տալիս գաղտնաբառերի կրկնօգտագործումը Growser-ում։ Growser-ում գաղտնաբառերը գաղտնագրվում են՝ օգտատերերի գաղտնիությունը պաշտպանելու նպատակով։</translation>
 <translation id="6376948191860056592">Ինչպես է Growser-ը պաշտպանում ձեր գաղտնաբառերը</translation>
 <translation id="59755378055907482">Խորհուրդ ենք տալիս վերակայել ձեր գաղտնաբառը, եթե այն օգտագործել եք այլ կայքերում:</translation>
@@ -5887,7 +5887,7 @@
 <translation id="5178006823023208130">Ձեր տարածաշրջանում գործող օրենքների համաձայն՝ Growser-ը խնդրում է ձեզ ընտրել կանխադրված որոնողական համակարգ։ Այս որոնողական համակարգերը տարածված են ձեր տարածաշրջանում և ցուցադրվում են պատահական հերթականությամբ։</translation>
 <translation id="5511256646198860149"><ph name="BEGIN_BOLD"/>Կանխադրված որոնողական համակարգը թույլ է տալիս որոնել համացանցում և աջակցում է Growser-ի այնպիսի գործառույթներ<ph name="END_BOLD"/>, ինչպիսիք են որոնումը հասցեագոտուց և պատկերների միջոցով վեբ էջերում։ Գործառույթը կարող է հասանելի չլինել, եթե ձեր որոնողական համակարգը չի աջակցում այն։</translation>
 <translation id="652920213589772275">Դուք ցանկացած ժամանակ կարող եք փոխել ձեր որոնողական համակարգը Growser-ի կարգավորումներում։</translation>
-<translation id="5113257522679527347">Դուք ցանկացած ժամանակ կարող եք փոխել ձեր որոնողական համակարգը Brave-ի կարգավորումներում։ Եթե չեք տեսնում ձեր նախընտրած որոնողական համակարգը, կարող եք որոնել դրա կայքից։ Brave-ի կարգավորումներում այն կցուցադրվի որպես վերջերս այցելած որոնողական համակարգ, և դուք կարող եք այն դարձնել ձեր կանխադրված որոնողական համակարգը։</translation>
+<translation id="5113257522679527347">Դուք ցանկացած ժամանակ կարող եք փոխել ձեր որոնողական համակարգը Growser-ի կարգավորումներում։ Եթե չեք տեսնում ձեր նախընտրած որոնողական համակարգը, կարող եք որոնել դրա կայքից։ Growser-ի կարգավորումներում այն կցուցադրվի որպես վերջերս այցելած որոնողական համակարգ, և դուք կարող եք այն դարձնել ձեր կանխադրված որոնողական համակարգը։</translation>
 <translation id="2493969470983483123">Ծրագրերից մեկը Growser-ին թույլ չի տալիս անվտանգ միանալ այս կայքին</translation>
 <translation id="463534029029027294">Անվտանգ կապակցում հաստատելու համար ձեր ժամացույցը պետք է ճիշտ կարգավորված լինի: Պատճառն այն է, որ վկայագրերը, որոնք կայքերն օգտագործում են իրենց նույնականացնելու համար, վավեր են լինում միայն որոշակի ժամանակահատվածի ընթացքում: Քանի որ ձեր սարքի ժամացույցը սխալ է, Growser-ը չի կարող ստուգել այս վկայագրերը:</translation>
 <translation id="6824867187541740495">Ձեր տվյալները պաշտպանելու համար <ph name="SITE"/> կայքը սովորաբար գաղտնագրում է օգտագործում: Growser-ի՝ <ph name="SITE"/> կայքին կապակցվելու փորձի ժամանակ կայքը վերադարձրեց արտասովոր և սխալ մուտքային տվյալներ: Հնարավոր է, որ <ph name="SITE"/> կայքի անվան տակ նենգորդ է հանդես գալիս, կամ Wi-Fi մուտքի էկրանի կապն ընդհատվել է: Ձեր տվյալները, այնուամենայնիվ, ապահով են, քանի որ Growser-ն ընդհատել էր կապը՝ նախքան տեղի կունենար տվյալների փոխանակում:</translation>
@@ -5925,9 +5925,9 @@
 <translation id="2026207410612449615">Սովորաբար դուք անվտանգ եղանակով եք միանում այս կայքին, սակայն այս անգամ Growser-ին չհաջողվեց ապահով միացում օգտագործել։ Հաքերները կարող են փորձել լրտեսել ձեր կապը կամ փոփոխել այն։ <ph name="LEARN_MORE"/></translation>
 <translation id="1050989234936720259">Սովորաբար դուք անվտանգ եղանակով եք միանում այս կայքերին, սակայն այս անգամ Growser-ին չհաջողվեց ապահով միացում օգտագործել։ Հաքերները կարող են փորձել լրտեսել ձեր կապը կամ փոփոխել այն։ <ph name="LEARN_MORE"/></translation>
 <translation id="6692006953064648573">Դուք տեսնում եք այս նախազգուշացումը, քանի որ այս կայքը չի աջակցում HTTPS հաղորդակարգը, իսկ ձեզ մոտ միացված է Growser-ի Լրացուցիչ պաշտպանության ծրագիրը։ <ph name="LEARN_MORE"/></translation>
-<translation id="4899042284040818676">Brave-ը դրոշանշել է կայքը, որը փորձում էիք այցելել։ Օգնեք մեզ բարելավել այս նախազգուշացումները՝ մասնակցելով 1 րոպեանոց հարցմանը։</translation>
-<translation id="3665741528710985669">Ուղարկվել է Brave-ին ձեր <ph name="DEVICE_NAME"/> սարքում</translation>
-<translation id="2756090547781225493">Ուղարկվել է Brave-ին ձեր <ph name="DEVICE_NAME"/> սարքում • <ph name="USER_EMAIL"/></translation>
+<translation id="4899042284040818676">Growser-ը դրոշանշել է կայքը, որը փորձում էիք այցելել։ Օգնեք մեզ բարելավել այս նախազգուշացումները՝ մասնակցելով 1 րոպեանոց հարցմանը։</translation>
+<translation id="3665741528710985669">Ուղարկվել է Growser-ին ձեր <ph name="DEVICE_NAME"/> սարքում</translation>
+<translation id="2756090547781225493">Ուղարկվել է Growser-ին ձեր <ph name="DEVICE_NAME"/> սարքում • <ph name="USER_EMAIL"/></translation>
 <translation id="3087912139479831463">Արդեն ուղարկվել է Growser-ին ձեր <ph name="DEVICE_NAME"/> սարքում</translation>
 <translation id="2665815858706570232">Եթե այս գործառույթը միացված է, Growser-ը կկիսվի այս պատուհանի համապատասխան ներդիրներով, որպեսզի դուք ավելի ճշգրիտ պատասխաններ ստանաք։</translation>
 <translation id="4585120639592593231">Growser-ն ավտոմատ կուղարկի էջի բովանդակությունը և ձեր հարցմանը հավանական առնչություն ունեցող բաց ներդիրների URL-ները Growser-ին՝ ավելի անհատականացված պատասխաններ ստանալու համար։ Growser-ը կփոխանցի միայն այն պատուհանի ներդիրները, որում աշխատում եք։</translation>

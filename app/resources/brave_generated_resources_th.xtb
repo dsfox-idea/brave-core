@@ -58,7 +58,7 @@
 <translation id="3218385319396786393">การเล่นอัตโนมัติถูกบล็อกในหน้านี้</translation>
 <translation id="4988333904713528597">ยินยอมให้ทำการเล่นแบบอัตโนมัติบน <ph name="HOST"/> เสมอ</translation>
 <translation id="4150684676757176434">ทำการบล็อกการเล่นอัตโนมัติต่อ</translation>
-<translation id="2201935460386712655">Brave จะไม่ตรวจสอบความมั่นคงและความปลอดภัยของส่วนขยาย โปรดติดตั้ง "<ph name="EXTENSION_NAME"/>" ในกรณีที่คุณเชื่อมั่นในผู้พัฒนาเท่านั้น</translation>
+<translation id="2201935460386712655">Growser จะไม่ตรวจสอบความมั่นคงและความปลอดภัยของส่วนขยาย โปรดติดตั้ง "<ph name="EXTENSION_NAME"/>" ในกรณีที่คุณเชื่อมั่นในผู้พัฒนาเท่านั้น</translation>
 <translation id="2928844661231356557">การให้สิทธิ์การเข้าถึงอุปกรณ์บลูทูธจะทำให้เว็บไซต์สามารถอ่านข้อมูลที่ระบุตัวตนและอาจมีความละเอียดอ่อนเกี่ยวกับคุณได้ อนุญาตเฉพาะเว็บไซต์ที่คุณเชื่อถือให้เข้าถึงอุปกรณ์บลูทูธเท่านั้น <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">ทอร์วินโดว์</translation>
 <translation id="7965178729203412357">ตัวตน Tor ใหม่</translation>
@@ -606,15 +606,15 @@
 <translation id="8868426106596092089">ช่วยปรับปรุงความเสถียรของผลิตภัณฑ์ Growser โดยส่งรายงานการวินิจฉัยโดยอัตโนมัติเมื่อเบราว์เซอร์ Growser ขัดข้องหรือค้าง</translation>
 <translation id="4891600875049212418">ไปที่ Off-The-Record เมื่อเยี่ยมชมเว็บไซต์ที่สำคัญ</translation>
 <translation id="1022603984240541480">แสดงการแจ้งเตือนการปรับแต่งการตั้งค่าความเป็นส่วนตัวบนไซต์ที่รองรับ</translation>
-<translation id="3528176629974273019">อนุญาตให้ Brave แนะนำ (และปรับ) การตั้งค่าความเป็นส่วนตัวเฉพาะไซต์โดยอัตโนมัติ</translation>
+<translation id="3528176629974273019">อนุญาตให้ Growser แนะนำ (และปรับ) การตั้งค่าความเป็นส่วนตัวเฉพาะไซต์โดยอัตโนมัติ</translation>
 <translation id="2740687181110647855">เครื่องมือปรับการตั้งค่าความเป็นส่วนตัว</translation>
 <translation id="509873765238158442">บล็อก Microsoft Recall</translation>
 <translation id="4763421121695677716">บล็อกฟีเจอร์ Recall บนคอมพิวเตอร์ Microsoft Windows ไม่ให้จับภาพหน้าจอของแท็บ Growser ที่เปิดอยู่โดยอัตโนมัติ</translation>
 <translation id="1968895725257436430">การรวบรวมข้อมูล</translation>
 <translation id="1700052872056357670">ล้างข้อมูลเมื่อออก</translation>
 <translation id="216468847346280584">ล้างข้อมูล Growser Ads...</translation>
-<translation id="96212973142796240">ล้างข้อมูล Brave Ads แล้ว</translation>
-<translation id="6665923829462527507">ไม่สามารถล้างข้อมูล Brave Ads ได้ ลองอีกครั้ง</translation>
+<translation id="96212973142796240">ล้างข้อมูล Growser Ads แล้ว</translation>
+<translation id="6665923829462527507">ไม่สามารถล้างข้อมูล Growser Ads ได้ ลองอีกครั้ง</translation>
 <translation id="2808630562319398131">รีเซ็ตข้อมูล Growser Rewards...</translation>
 <translation id="6438096877646138757">เว็บไซต์ที่จะล้างคุกกี้เมื่อคุณปิด</translation>
 <translation id="2988792685798128092">ล้างเมื่อปิดเว็บไซต์</translation>
@@ -1019,11 +1019,11 @@
 <translation id="8854326268817889200">แสดงปุ่ม Growser รีวอร์ด</translation>
 <translation id="7687538894778993146">โหมดบล็อกโฆษณาเท่านั้นจะรักษากฎการบล็อกโฆษณาหลักของ Brave Shields เอาไว้ หมายเหตุ: โหมดนี้จะตัดการป้องกันความเป็นส่วนตัวทั้งหมด โดยสำหรับเว็บไซต์ที่การป้องกันความเป็นส่วนตัวของ Growser ทำให้เกิดปัญหา คุณสามารถตั้งค่า Shields เป็น DOWN ได้ โหมดนี้ยังอยู่ในระยะทดลอง <ph name="BEGIN_LINK"/>เรียนรู้เพิ่มเติม<ph name="END_LINK"/></translation>
 <translation id="9023173279866800345">ระยะเวลาที่ Growser จัดเก็บประวัติการเยี่ยมชมของคุณในเครื่อง</translation>
-<translation id="4082996406923131054">อนุญาตให้ Brave แนะนำ (และปรับ) การตั้งค่าความเป็นส่วนตัวเฉพาะไซต์โดยอัตโนมัติ</translation>
+<translation id="4082996406923131054">อนุญาตให้ Growser แนะนำ (และปรับ) การตั้งค่าความเป็นส่วนตัวเฉพาะไซต์โดยอัตโนมัติ</translation>
 <translation id="6673459101269837427">บล็อกฟีเจอร์ Recall บนคอมพิวเตอร์ Microsoft Windows ไม่ให้จับภาพหน้าจอของแท็บ Growser ที่เปิดอยู่โดยอัตโนมัติ</translation>
 <translation id="5636467576514473532">ล้างข้อมูล Growser Ads...</translation>
-<translation id="420057953503713346">ล้างข้อมูล Brave Ads แล้ว</translation>
-<translation id="3399998090446159274">ไม่สามารถล้างข้อมูล Brave Ads ได้ ลองอีกครั้ง</translation>
+<translation id="420057953503713346">ล้างข้อมูล Growser Ads แล้ว</translation>
+<translation id="3399998090446159274">ไม่สามารถล้างข้อมูล Growser Ads ได้ ลองอีกครั้ง</translation>
 <translation id="1332284067513374815">รีเซ็ตข้อมูล Growser Rewards...</translation>
 <translation id="6645428976896583185">ตรวจสอบ URL ที่มีรายชื่อเว็บไซต์ที่ไม่ปลอดภัยเก็บไว้ใน Growser</translation>
 <translation id="2338646464484947274">เพื่อเริ่มต้น คุณจำเป็นต้องติดตั้ง Growser บนทุกอุปกรณ์ที่คุณต้องการจะซิงค์ จากนั้นเชื่อมอุปกรณ์เข้าด้วยกันอย่างปลอดภัยด้วยรหัสซิงค์</translation>
@@ -1065,7 +1065,7 @@
 <translation id="1709339105818930637">อวทาร์ Oval Growser</translation>
 <translation id="790677324469754498">อวทาร์ Bonbon Growser</translation>
 <translation id="4677850801710355225">บางครั้งจำเป็นต้องใช้ Widevine เพื่อเล่นสื่อบนเว็บเพจ โดย Widevine เป็นส่วนขยายบน Google ที่โหลดได้จากเซิร์ฟเวอร์ของ Google ซึ่ง Growser ไม่สามารถตรวจสอบได้ และเมื่อคุณติดตั้งส่วนขยายดังกล่าว จะถือว่าคุณยอมรับข้อกำหนดในการให้บริการของ Google</translation>
-<translation id="3513162204962925590">Brave จะไม่ตรวจสอบความมั่นคงและความปลอดภัยของส่วนขยาย โปรดติดตั้ง "<ph name="EXTENSION_NAME"/>" ในกรณีที่คุณเชื่อมั่นในผู้พัฒนาเท่านั้น</translation>
+<translation id="3513162204962925590">Growser จะไม่ตรวจสอบความมั่นคงและความปลอดภัยของส่วนขยาย โปรดติดตั้ง "<ph name="EXTENSION_NAME"/>" ในกรณีที่คุณเชื่อมั่นในผู้พัฒนาเท่านั้น</translation>
 <translation id="8652975004530325693">บัญชี Growser Sync นี้ถูกลบจากอุปกรณ์อื่น ถ้าคุณไม่ตั้งใจที่จะปิดการซิงค์ ให้<ph name="LINK_TEXT"/></translation>
 <translation id="6015737849159950360">ไม่สามารถเริ่มบริการซิงค์ได้ เนื่องจาก Growser Sync ไม่ทำงาน</translation>
 <translation id="3097761516937648160">เปิดลิงก์ในหน้าต่างส่วนตัวของ Growser ด้วย Tor</translation>

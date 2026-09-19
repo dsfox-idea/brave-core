@@ -186,7 +186,7 @@ Periksa sandi Anda kapan saja di <ph name="GOOGLE_PASSWORD_MANAGER"/>.</translat
 <translation id="1130116586186908674">Buat tampilan terpisah</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - Bagian dari grup <ph name="GROUP_NAME"/></translation>
 <translation id="1130676589211693127">Tingkat daya baterai kanan <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">Saat tab dibagikan, konten halaman, media, serta URL di dalamnya akan dikirim ke Brave dan mungkin ditinjau demi keamanan.</translation>
+<translation id="1412403201555978627">Saat tab dibagikan, konten halaman, media, serta URL di dalamnya akan dikirim ke Growser dan mungkin ditinjau demi keamanan.</translation>
 <translation id="1133418583142946603">Tambahkan tab saat ini</translation>
 <translation id="1133751489735776037">Klik tiga kali mouse</translation>
 <translation id="1136712381129578788">Kunci keamanan dikunci karena Anda terlalu sering memasukkan PIN yang salah. Untuk membukanya, lepaskan kunci keamanan dan pasang kembali.</translation>
@@ -376,7 +376,7 @@ Periksa sandi Anda kapan saja di <ph name="GOOGLE_PASSWORD_MANAGER"/>.</translat
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Berhenti</translation>
 <translation id="1272508081857842302">Membuka <ph name="BEGIN_LINK"/>link yang didukung<ph name="END_LINK"/></translation>
-<translation id="7823526956728613125">Kelola hubungan antara layanan Penelusuran dan aplikasi Brave Workspace, seperti Google Drive</translation>
+<translation id="7823526956728613125">Kelola hubungan antara layanan Penelusuran dan aplikasi Growser Workspace, seperti Google Drive</translation>
 <translation id="1274997165432133392">Cookie dan data situs lainnya</translation>
 <translation id="1275936815032730048">Peluncur + panah kanan</translation>
 <translation id="1275963833368139883">Saat Anda menelusuri histori penjelajahan, jawaban dan hasil penelusuran didasarkan pada konten halaman. Tindakan ini akan memberikan hasil yang ditingkatkan</translation>
@@ -654,7 +654,7 @@ Periksa sandi Anda kapan saja di <ph name="GOOGLE_PASSWORD_MANAGER"/>.</translat
 <translation id="1508931164824684991">Situs dapat menggunakan JavaScript</translation>
 <translation id="1509163368529404530">&amp;Pulihkan grup</translation>
 <translation id="1509281256533087115">Akses <ph name="DEVICE_NAME_AND_VENDOR"/> apa pun via USB</translation>
-<translation id="2825615584808054779">Percakapan Anda dengan Gemini serta data Brave Workspace tidak akan ditinjau atau digunakan untuk meningkatkan kualitas model AI generatif. Gemini adalah AI dan dapat melakukan kesalahan.</translation>
+<translation id="2825615584808054779">Percakapan Anda dengan Gemini serta data Growser Workspace tidak akan ditinjau atau digunakan untuk meningkatkan kualitas model AI generatif. Gemini adalah AI dan dapat melakukan kesalahan.</translation>
 <translation id="1510238584712386396">Peluncur</translation>
 <translation id="1510341833810331442">Situs tidak diizinkan menyimpan data di perangkat Anda</translation>
 <translation id="1510882959204224895">Buka di jendela</translation>
@@ -748,7 +748,7 @@ Periksa sandi Anda kapan saja di <ph name="GOOGLE_PASSWORD_MANAGER"/>.</translat
 <translation id="1581962803218266616">Tampilkan di Penemu</translation>
 <translation id="1582955169539260415">hapus [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> diproses secara lokal dan berfungsi secara offline</translation>
-<translation id="491276955533054201">Pertama, aktifkan fitur penjelajahan otomatis Brave untuk perangkat ini</translation>
+<translation id="491276955533054201">Pertama, aktifkan fitur penjelajahan otomatis Growser untuk perangkat ini</translation>
 <translation id="1587275751631642843">Konsol &amp;JavaScript</translation>
 <translation id="1588438908519853928">Normal</translation>
 <translation id="1588772269240419305">Tinjau pembaruan logo dan nama</translation>
@@ -1158,7 +1158,7 @@ Periksa sandi Anda kapan saja di <ph name="GOOGLE_PASSWORD_MANAGER"/>.</translat
 <translation id="1892341345406963517">Halo <ph name="PARENT_NAME"/></translation>
 <translation id="1892453608039100484">1. Klik <ph name="BUTTON_LABEL"/> di bawah Klik <ph name="BUTTON_2"/> di setelan Windows Anda</translation>
 <translation id="1895658205118569222">Mati</translation>
-<translation id="1189523243806849236">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Brave. Gemini adalah AI dan dapat melakukan kesalahan. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Growser. Gemini adalah AI dan dapat melakukan kesalahan. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Gunakan sandi kuat</translation>
 <translation id="1897860317037652061">Pemindaian gagal</translation>
 <translation id="1898804291554630487">Tanyakan info tentang halaman ini</translation>
@@ -1167,7 +1167,7 @@ Periksa sandi Anda kapan saja di <ph name="GOOGLE_PASSWORD_MANAGER"/>.</translat
 <translation id="1901213235765457754">Minta admin mengupdate aplikasi ini</translation>
 <translation id="1901303067676059328">Pilih semu&amp;a</translation>
 <translation id="1901760057081700494">Zona waktu saat ini disetel ke <ph name="TIME_ZONE_ENTRY"/>. Untuk memperbarui zona waktu secara otomatis, <ph name="BEGIN_LINK"/>aktifkan akses lokasi sistem<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Alamat rumah dapat membantu Anda menyelesaikan banyak hal di berbagai layanan Brave, seperti hasil Penelusuran yang lebih relevan dan rute di Brave Maps. Anda dapat mengedit atau menghapus alamat di <ph name="BEGIN_LINK"/>Akun Brave Anda <ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">Alamat rumah dapat membantu Anda menyelesaikan banyak hal di berbagai layanan Growser, seperti hasil Penelusuran yang lebih relevan dan rute di Growser Maps. Anda dapat mengedit atau menghapus alamat di <ph name="BEGIN_LINK"/>Akun Growser Anda <ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">URL yang Anda buka disimpan ke Akun Growser Anda</translation>
 <translation id="190530012637606145">Memberi peringatan tentang semua koneksi yang tidak aman, termasuk intranet pribadi</translation>
 <translation id="1906181697255754968">Situs biasanya mengakses file dan folder di perangkat Anda untuk fitur seperti penyimpanan tugas otomatis</translation>
@@ -1540,7 +1540,7 @@ Anda dapat mengelola setelan akun ini dengan menginstal aplikasi Family Link di 
 <translation id="2198625180564913276">Menambahkan profil. Proses ini mungkin perlu waktu beberapa menit.</translation>
 <translation id="2198712775285959645">Edit</translation>
 <translation id="2199298570273670671">Error</translation>
-<translation id="2798272130984183944">Pilih apakah Brave akan menggunakan model AI yang berjalan langsung di perangkat Anda</translation>
+<translation id="2798272130984183944">Pilih apakah Growser akan menggunakan model AI yang berjalan langsung di perangkat Anda</translation>
 <translation id="2200094388063410062">Email</translation>
 <translation id="2200781749203116929">Log Sistem ChromeOS</translation>
 <translation id="2202391868799679245">Aktifkan pintasan keyboard</translation>
@@ -1620,7 +1620,7 @@ Anda dapat mengelola setelan akun ini dengan menginstal aplikasi Family Link di 
 <translation id="225716114209817872">Maksimum</translation>
 <translation id="5642482119439119644">Untuk mengakses tab Anda dari perangkat lain, verifikasi diri Anda. Anda dapat berhenti menyinkronkan kapan saja di setelan. Growser dapat mempersonalisasi Penelusuran dan layanan lainnya berdasarkan histori Anda.</translation>
 <translation id="22614517036276112">Dokumen ini atau perangkat Anda tidak memenuhi beberapa kebijakan keamanan organisasi Anda. Hubungi admin Anda untuk mengetahui hal yang perlu diperbaiki.</translation>
-<translation id="1829264724820495616">Alamat kantor dapat membantu Anda menyelesaikan banyak hal di berbagai layanan Brave, seperti hasil Penelusuran yang lebih relevan dan rute di Brave Maps. Anda dapat mengedit atau menghapus alamat di <ph name="BEGIN_LINK"/>Akun Brave Anda <ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">Alamat kantor dapat membantu Anda menyelesaikan banyak hal di berbagai layanan Growser, seperti hasil Penelusuran yang lebih relevan dan rute di Growser Maps. Anda dapat mengedit atau menghapus alamat di <ph name="BEGIN_LINK"/>Akun Growser Anda <ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Penundaan sebelum pengulangan</translation>
 <translation id="2263371730707937087">Rasio refresh layar</translation>
 <translation id="7829329302663082098">Masukan Anda membantu kami meningkatkan Growser Cast dan kami menghargainya.
@@ -1766,7 +1766,7 @@ Anda dapat mengelola setelan akun ini dengan menginstal aplikasi Family Link di 
 <translation id="2373499590298659902">Gunakan “0” untuk menekan lama tombol mouse</translation>
 <translation id="2373666622366160481">Paskan dengan kertas</translation>
 <translation id="2375406435414127095">Hubungkan ke ponsel Anda</translation>
-<translation id="6612559367203670996">Brave menggunakan konten dan URL tab yang dibagikan. Tab Anda saat ini dibagikan di percakapan baru. Anda dapat mengubah setelan ini kapan saja.</translation>
+<translation id="6612559367203670996">Growser menggunakan konten dan URL tab yang dibagikan. Tab Anda saat ini dibagikan di percakapan baru. Anda dapat mengubah setelan ini kapan saja.</translation>
 <translation id="2376056713414548745">Bacakan lisan</translation>
 <translation id="2376122016044804363">Konfirmasi disalin ke papan klip</translation>
 <translation id="2377667304966270281">Hard Fault</translation>
@@ -3333,7 +3333,7 @@ Anda dapat mengelola setelan akun ini dengan menginstal aplikasi Family Link di 
 <translation id="3569614820047645079">File Anda di Drive Saya otomatis disinkronkan ke Chromebook sehingga Anda dapat mengaksesnya tanpa koneksi internet.</translation>
 <translation id="3569617221227793022">Zona waktu saat ini disetel ke <ph name="TIME_ZONE_ENTRY"/>. Setelan ini dikelola oleh administrator Anda.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> dapat melihat file dan folder berikut ini</translation>
-<translation id="4062501938325597704">Konten halaman dan URL yang digunakan Gemini saat melakukan tugas akan dibagikan ke Brave dan mungkin ditinjau demi keamanan.</translation>
+<translation id="4062501938325597704">Konten halaman dan URL yang digunakan Gemini saat melakukan tugas akan dibagikan ke Growser dan mungkin ditinjau demi keamanan.</translation>
 <translation id="3571734092741541777">Siapkan</translation>
 <translation id="3575121482199441727">Izinkan untuk situs ini</translation>
 <translation id="3575224072358507281">Mengumpulkan hasil pengukuran jaringan dan alamat IP untuk Measurement Lab, sesuai dengan kebijakan privasinya (measurementlab.net/privacy)</translation>
@@ -5012,7 +5012,7 @@ Gunakan Ctrl + Alt + Kurangi kecerahan untuk memperkecil.</translation>
 <translation id="485480310608090163">Setelan dan izin lainnya</translation>
 <translation id="4857304314344645169">Lihat penjelasan langkah demi langkah tentang soal apa pun</translation>
 <translation id="1913048435257025864">Tanya Growser tentang halaman sebelumnya: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Konten dan URL tab Anda saat ini dibagikan kepada Brave untuk memberikan jawaban yang lebih relevan. Anda dapat menambahkan atau menghapus tab saat menjelajah.</translation>
+<translation id="228735844055480091">Konten dan URL tab Anda saat ini dibagikan kepada Growser untuk memberikan jawaban yang lebih relevan. Anda dapat menambahkan atau menghapus tab saat menjelajah.</translation>
 <translation id="485806788160414322">Putar atau jeda media</translation>
 <translation id="4858913220355269194">Ronaldo</translation>
 <translation id="4860012864737017059">Tab terbaru</translation>
@@ -5347,7 +5347,7 @@ Gunakan Ctrl + Alt + Kurangi kecerahan untuk memperkecil.</translation>
 <translation id="5112577000029535889">Alat &amp;Pengembang</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 file dipindahkan}other{{NUM_OF_FILES} file dipindahkan}}</translation>
 <translation id="511313294362309725">Nyalakan Sambungan Cepat</translation>
-<translation id="6409962091529734959">Pelajari lebih lanjut penjelajahan otomatis Brave</translation>
+<translation id="6409962091529734959">Pelajari lebih lanjut penjelajahan otomatis Growser</translation>
 <translation id="51143538739122961">Masukkan kunci keamanan Anda, lalu sentuh</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Sim&amp;pan Audio Sebagai...</translation>
@@ -5390,7 +5390,7 @@ Gunakan Ctrl + Alt + Kurangi kecerahan untuk memperkecil.</translation>
 <translation id="5146235736676876345">Pilih sandi Anda sendiri</translation>
 <translation id="5146896637028965135">Suara sistem</translation>
 <translation id="5147113439721488265">Rekomendasi</translation>
-<translation id="5897101208018277582">Untuk mengirim link, verifikasi diri Anda. Anda dapat mengirim link saat login ke Akun Brave yang sama di kedua perangkat.</translation>
+<translation id="5897101208018277582">Untuk mengirim link, verifikasi diri Anda. Anda dapat mengirim link saat login ke Akun Growser yang sama di kedua perangkat.</translation>
 <translation id="5148285448107770349">Sandi harus berisi minimal 8 karakter</translation>
 <translation id="5149602533174716626">Salin Frame Video</translation>
 <translation id="5150254825601720210">Netscape Certificate SSL Server Name</translation>
@@ -6078,7 +6078,7 @@ Anda dapat menetapkan beberapa tombol akses untuk tindakan ini.</translation>
 <translation id="5713158217420111469">Terhubung ke <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Inversi</translation>
 <translation id="5714100381896040477">Batasi gerakan di layar</translation>
-<translation id="8277434106940718633">Percakapan Anda dengan Gemini serta data Brave Workspace tidak akan ditinjau atau digunakan untuk meningkatkan kualitas model AI generatif. Gemini adalah AI dan dapat melakukan kesalahan. Beberapa konten mungkin tidak sesuai untuk sebagian orang.</translation>
+<translation id="8277434106940718633">Percakapan Anda dengan Gemini serta data Growser Workspace tidak akan ditinjau atau digunakan untuk meningkatkan kualitas model AI generatif. Gemini adalah AI dan dapat melakukan kesalahan. Beberapa konten mungkin tidak sesuai untuk sebagian orang.</translation>
 <translation id="5719854774000914513">Situs dapat meminta untuk terhubung ke perangkat HID</translation>
 <translation id="5720729194423017301">Pintasan untuk situs dan mesin telusur</translation>
 <translation id="572155275267014074">Setelan Android</translation>
@@ -7013,7 +7013,7 @@ Anda dapat menetapkan beberapa tombol akses untuk tindakan ini.</translation>
 <translation id="6464825623202322042">Perangkat ini</translation>
 <translation id="6465841119675156448">Tanpa internet</translation>
 <translation id="6466258437571594570">Situs diblokir agar tidak mengganggu Anda saat situs meminta untuk mengirim notifikasi</translation>
-<translation id="1673835407889847350">Verifikasi diri Anda untuk menambahkan sandi dan mengaksesnya di semua perangkat dengan Akun Brave Anda</translation>
+<translation id="1673835407889847350">Verifikasi diri Anda untuk menambahkan sandi dan mengaksesnya di semua perangkat dengan Akun Growser Anda</translation>
 <translation id="6467230443178397264">Pindai <ph name="FILE_NAME"/></translation>
 <translation id="6467304607960172345">Optimalkan video layar penuh</translation>
 <translation id="6467377768028664108">Setelah terhubung, <ph name="DEVICE_TYPE"/> akan memiliki izin berikut:</translation>
@@ -7026,7 +7026,7 @@ Anda dapat menetapkan beberapa tombol akses untuk tindakan ini.</translation>
 <translation id="6470823736074966819">Bisukan Notifikasi</translation>
 <translation id="6472893788822429178">Tampilkan tombol Beranda</translation>
 <translation id="6473315466413288899">Pilih opsi</translation>
-<translation id="6199773995438617867">Lihat selengkapnya di Brave Kalender</translation>
+<translation id="6199773995438617867">Lihat selengkapnya di Growser Kalender</translation>
 <translation id="6474401088838630457">Tanya Gemini lebih lanjut tentang hal ini</translation>
 <translation id="6474498546677193336">Tidak dapat mengurungkan berbagi karena ada aplikasi yang menggunakan folder ini. Berbagi folder akan diurungkan saat berikutnya Linux dimatikan.</translation>
 <translation id="6474884162850599008">Memutuskan hubungan akun Google Drive</translation>
@@ -7207,7 +7207,7 @@ Anda memiliki # sandi lainnya yang telah dibobol. Pengelola Sandi Growser mereko
 <translation id="6613231539539868591">Data Persisten</translation>
 <translation id="6613267708691765962">Memindai malware...</translation>
 <translation id="6615455863669487791">Tunjukkan</translation>
-<translation id="5146630705831894319">Tawarkan Brave Terjemahan untuk situs dan PDF dalam bahasa lain</translation>
+<translation id="5146630705831894319">Tawarkan Growser Terjemahan untuk situs dan PDF dalam bahasa lain</translation>
 <translation id="6618013221808317456">Jangan izinkan situs menggunakan pengoptimalan JavaScript</translation>
 <translation id="6618154741503063152">Tidak dapat mengupload. Lampiran tidak diizinkan.</translation>
 <translation id="6619058681307408113">Daemon Printer Baris (LPD)</translation>
@@ -7561,7 +7561,7 @@ Anda memiliki # sandi lainnya yang telah dibobol. Pengelola Sandi Growser mereko
 <translation id="6871644448911473373">Penanggap OCSP: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Bahasa...</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Saat diaktifkan, Brave Terjemahan akan menawarkan untuk menerjemahkan situs dan PDF ke dalam bahasa pilihan Anda. Fitur ini juga dapat menerjemahkan situs secara otomatis.</translation>
+<translation id="5189979109199910058">Saat diaktifkan, Growser Terjemahan akan menawarkan untuk menerjemahkan situs dan PDF ke dalam bahasa pilihan Anda. Fitur ini juga dapat menerjemahkan situs secara otomatis.</translation>
 <translation id="6873571253135628430">Ubah izin situs</translation>
 <translation id="6874986444867497677">Penginstalan tidak dapat diselesaikan. Coba lagi atau tutup jendela ini.</translation>
 <translation id="6876155724392614295">Sepeda</translation>
@@ -7849,7 +7849,7 @@ Anda memiliki # sandi lainnya yang telah dibobol. Pengelola Sandi Growser mereko
 <translation id="710224247908684995">Sebuah ekstensi menonaktifkan Safe Browsing</translation>
 <translation id="7102832101143475489">Waktu permintaan habis</translation>
 <translation id="7103944802169726298">PC dan perangkat transmisi di jaringan Wi-Fi yang sama</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Langganan Brave</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Langganan Growser</translation>
 <translation id="7107609441453408294">Putar audio yang sama melalui semua speaker</translation>
 <translation id="7108338896283013870">Sembunyikan</translation>
 <translation id="7108419148561505648">Isi minimal satu kolom sebelum menyimpan</translation>
@@ -8220,7 +8220,7 @@ Anda memiliki # sandi lainnya yang telah dibobol. Pengelola Sandi Growser mereko
 <translation id="7395774987022469191">Seluruh layar</translation>
 <translation id="7396017167185131589">Folder bersama akan muncul di sini</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> akan diluncurkan pada permulaan sistem dan tetap berjalan di latar meskipun Anda telah menutup semua jendela <ph name="PRODUCT_NAME"/>.</translation>
-<translation id="8572914900293297191">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Brave. Gemini adalah AI dan dapat melakukan kesalahan. Beberapa konten mungkin tidak sesuai untuk sebagian orang. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Growser. Gemini adalah AI dan dapat melakukan kesalahan. Beberapa konten mungkin tidak sesuai untuk sebagian orang. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Sesuaikan sinkronisasi</translation>
 <translation id="7399616692258236448">Permintaan lokasi otomatis diblokir untuk semua situs kecuali situs yang Anda izinkan</translation>
 <translation id="7399802613464275309">Pemeriksaan Keamanan</translation>
@@ -8753,7 +8753,7 @@ Tekan tombol akses atau tombol keyboard yang telah ditetapkan untuk menghapus pe
 <translation id="7807711621188256451">Selalu izinkan <ph name="HOST"/> mengakses kamera Anda</translation>
 <translation id="7810202088502699111">Pop-up diblokir di halaman ini.</translation>
 <translation id="7810367892333449285">Entri Anda harus memiliki format <ph name="LPA_0"/>$<ph name="LPA_1"/>alamat SM-DP+<ph name="LPA_2"/>$<ph name="LPA_3"/>ID kecocokan opsional<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave dikembangkan berkat proyek open source Brave dan software <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> lainnya.</translation>
+<translation id="5014491767627896944">Growser dikembangkan berkat proyek open source Growser dan software <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> lainnya.</translation>
 <translation id="7811263553491007091">Coba lagi atau pilih dari salah satu tema yang dibuat sebelumnya di bawah.</translation>
 <translation id="7811926937048662341">Klik kanan di sini dan pilih “Tampilkan Tab Secara Vertikal”</translation>
 <translation id="7811986034759500329">Setel di setelan sistem</translation>
@@ -8776,7 +8776,7 @@ Tekan tombol akses atau tombol keyboard yang telah ditetapkan untuk menghapus pe
 <translation id="7826039927887234077">Tema AI terbaru <ph name="INDEX"/> dari <ph name="SUBJECT"/>, dengan mood <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Dukungan Browser Lama (LBS) - Internal</translation>
 <translation id="7826838152281937785">Tutup Tampilan Bawah</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Persyaratan Brave<ph name="END_LINK_TERMS"/> dan <ph name="BEGIN_LINK_PRIVACY"/>Pemberitahuan Privasi Aplikasi Gemini<ph name="END_LINK_PRIVACY"/> berlaku</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>Persyaratan Growser<ph name="END_LINK_TERMS"/> dan <ph name="BEGIN_LINK_PRIVACY"/>Pemberitahuan Privasi Aplikasi Gemini<ph name="END_LINK_PRIVACY"/> berlaku</translation>
 <translation id="7828642077514646543">Error: Tidak dapat mendekode sertifikat</translation>
 <translation id="7830276128493844263">Lokasi dinonaktifkan di setelan sistem</translation>
 <translation id="7830833461614351956">Salin <ph name="NUM_OF_FILES"/> file ke <ph name="CLOUD_PROVIDER"/> untuk dibuka?</translation>
@@ -9647,7 +9647,7 @@ Simpan file kunci Anda di tempat yang aman. Anda akan membutuhkannya untuk membu
 <translation id="850399339579925930">Kamus</translation>
 <translation id="850561044295157831">Pelajari lebih lanjut fitur Bantu tulis</translation>
 <translation id="8505669004895429027">Penghematan Kecil</translation>
-<translation id="869548515244800202">Langganan Brave</translation>
+<translation id="869548515244800202">Langganan Growser</translation>
 <translation id="8507052544157927817">Gaya garis bawah</translation>
 <translation id="8507227974644337342">Resolusi layar</translation>
 <translation id="8507443886219296894">Sembunyikan untuk situs ini</translation>
@@ -9787,7 +9787,7 @@ Simpan file kunci Anda di tempat yang aman. Anda akan membutuhkannya untuk membu
 <translation id="8619803522055190423">Drop shadow</translation>
 <translation id="8620206585293032550">Tampilan tab tidak aktif</translation>
 <translation id="8621979332865976405">Bagikan seluruh layar Anda</translation>
-<translation id="6089523089512126744">Mode AI Brave Penelusuran dan aplikasi terhubung</translation>
+<translation id="6089523089512126744">Mode AI Growser Penelusuran dan aplikasi terhubung</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Membaca nomor seri perangkat dan komponen ChromeOS</translation>
 <translation id="862542460444371744">&amp;Ekstensi</translation>
@@ -11345,17 +11345,17 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini di Growser</translation>
 <translation id="1975450474853317621">Buka di browser Growser</translation>
 <translation id="8516824290867275572">Akun Anda tidak memiliki akses ke Gemini di Growser</translation>
-<translation id="1649234713894562345">Brave dikembangkan berkat proyek open source Brave dan software <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> lainnya.</translation>
+<translation id="1649234713894562345">Growser dikembangkan berkat proyek open source Growser dan software <ph name="BEGIN_HIGHLIGHT"/>open source<ph name="END_HIGHLIGHT"/> lainnya.</translation>
 <translation id="870536819717176711">Saat Anda memilih untuk membagikan tab saat ini kepada Gemini, URL, media, dan konten lengkap tab tersebut akan dikirim ke Growser.</translation>
-<translation id="1130866111814048607">Saat tab dibagikan, konten halaman, media, serta URL di dalamnya akan dikirim ke Brave dan mungkin ditinjau demi keamanan.</translation>
-<translation id="7656790264713095385">Pertama, aktifkan fitur penjelajahan otomatis Brave untuk perangkat ini</translation>
+<translation id="1130866111814048607">Saat tab dibagikan, konten halaman, media, serta URL di dalamnya akan dikirim ke Growser dan mungkin ditinjau demi keamanan.</translation>
+<translation id="7656790264713095385">Pertama, aktifkan fitur penjelajahan otomatis Growser untuk perangkat ini</translation>
 <translation id="8572003230388132401">Gemini Spark dapat menggunakan fitur penjelajahan otomatis Growser di perangkat ini untuk berinteraksi dengan situs dan menyelesaikan tugas atas nama Anda. <ph name="LINK_BEGIN"/>Pelajari lebih lanjut<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark hanya dapat menggunakan penjelajahan otomatis di perangkat ini jika perangkat aktif dan Growser berjalan.</translation>
 <translation id="1982892581799327835">Siapa pun yang memiliki akses ke agen Gemini Spark Anda dapat mengontrol browser Growser Anda.</translation>
 <translation id="6689939585896001516">Izinkan Growser melakukan penjelajahan untuk Anda</translation>
 <translation id="640233545778658570">Gemini di Growser menggunakan penjelajahan otomatis untuk bekerja di tab Anda dan menyelesaikan tugas yang Anda berikan. <ph name="LINK_BEGIN"/>Pelajari lebih lanjut<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Pelajari lebih lanjut penjelajahan otomatis Brave</translation>
-<translation id="3570112771874223231">Konten halaman dan URL yang digunakan Gemini saat melakukan tugas akan dibagikan ke Brave dan mungkin ditinjau demi keamanan.</translation>
+<translation id="2740842679402949230">Pelajari lebih lanjut penjelajahan otomatis Growser</translation>
+<translation id="3570112771874223231">Konten halaman dan URL yang digunakan Gemini saat melakukan tugas akan dibagikan ke Growser dan mungkin ditinjau demi keamanan.</translation>
 <translation id="2314508080153323869">Gemini di Growser</translation>
 <translation id="1910632359330857071">Ngobrol dengan Gemini di Growser untuk mendapatkan jawaban, poin-poin penting, dan lainnya saat Anda menjelajah</translation>
 <translation id="2483218699324586641">Gunakan <ph name="FOCUS_TOGGLE_HOTKEY"/> untuk membuka Gemini di Growser</translation>
@@ -11385,8 +11385,8 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
     aplikasi Growser Home<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Dapatkan kunci sandi Anda di perangkat ini dengan Pengelola Sandi Growser</translation>
 <translation id="2364302372598204515">Akun ini bukan Akun Growser. Item yang Anda simpan ke Growser tidak akan tersedia di perangkat lain.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Langganan Brave</translation>
-<translation id="850632091665381275">Langganan Brave</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Langganan Growser</translation>
+<translation id="850632091665381275">Langganan Growser</translation>
 <translation id="6710172959248731469">Setelan layanan Growser</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 item hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, simpan item di Akun Growser Anda. Tindakan ini juga akan menghapus duplikat.}other{{ITEM_COUNT} item hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, simpan item di Akun Growser Anda. Tindakan ini juga akan menghapus duplikat.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 sandi hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, simpan sandi di Akun Growser Anda. Tindakan ini juga akan menghapus duplikat.}other{{PASSWORD_COUNT} sandi hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, simpan sandi di Akun Growser Anda. Tindakan ini juga akan menghapus duplikat.}}</translation>
@@ -11400,8 +11400,8 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 bookmark dan item lainnya hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, simpan sandi di Akun Growser Anda.}other{{BOOKMARK_COUNT} bookmark dan item lainnya hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, simpan sandi di Akun Growser Anda.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 item hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, <ph name="BEGIN_LINK"/>simpan item di Akun Growser Anda<ph name="END_LINK"/>.}other{{ITEM_COUNT} item hanya disimpan ke perangkat ini. Untuk menggunakannya di perangkat lain, <ph name="BEGIN_LINK"/>simpan item di Akun Growser Anda<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Gunakan Akun Growser Anda atau buat akun baru</translation>
-<translation id="1896353439080510710">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Brave. Gemini adalah AI dan dapat melakukan kesalahan. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Brave. Gemini adalah AI dan dapat melakukan kesalahan. Beberapa konten mungkin tidak sesuai untuk sebagian orang. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Growser. Gemini adalah AI dan dapat melakukan kesalahan. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Percakapan ditinjau dan digunakan untuk meningkatkan kualitas AI Growser. Gemini adalah AI dan dapat melakukan kesalahan. Beberapa konten mungkin tidak sesuai untuk sebagian orang. Anda dapat <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>mengelola aktivitas<ph name="END_LINK_MANAGE_ACTIVITY"/>, termasuk info tentang lokasi. <ph name="BEGIN_LINK_LEARN_MORE"/>Pelajari lebih lanjut pilihan Anda<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Ekstensi ini disimpan di Akun Growser Anda, tetapi semua data yang disimpan hanya di perangkat ini mungkin dihapus}other{Ekstensi ini disimpan di Akun Growser Anda, tetapi semua data yang disimpan hanya di perangkat ini mungkin dihapus}}</translation>
 <translation id="3523789730715594198">Anda dapat berhenti menyinkronkan kapan saja di setelan. Growser dapat mempersonalisasi Penelusuran dan layanan lainnya berdasarkan histori Anda.</translation>
 <translation id="8231595707224857577">Organisasi Anda menonaktifkan penyimpanan tab di Akun Growser Anda</translation>
@@ -11439,7 +11439,7 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
 <translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>Bentuk aktivitas lainnya<ph name="END_LINK_GOOGLE"/> dapat disimpan di Akun Growser Anda saat login. Anda dapat menghapusnya kapan saja.</translation>
 <translation id="6533315466883598769">Gunakan Growser Terjemahan</translation>
 <translation id="6010651352520077187">Saat diaktifkan, Growser Terjemahan akan menawarkan untuk menerjemahkan situs ke bahasa pilihan Anda. Fitur ini juga dapat menerjemahkan situs secara otomatis.</translation>
-<translation id="6873499199714317035">Saat diaktifkan, Brave Terjemahan akan menawarkan untuk menerjemahkan situs dan PDF ke dalam bahasa pilihan Anda. Fitur ini juga dapat menerjemahkan situs secara otomatis.</translation>
+<translation id="6873499199714317035">Saat diaktifkan, Growser Terjemahan akan menawarkan untuk menerjemahkan situs dan PDF ke dalam bahasa pilihan Anda. Fitur ini juga dapat menerjemahkan situs secara otomatis.</translation>
 <translation id="5911030830365207728">Growser Terjemahan</translation>
 <translation id="7458168200501453431">Menggunakan pemeriksa ejaan yang sama seperti yang digunakan di penelusuran Growser. Teks yang Anda ketik di browser akan dikirim ke Growser.</translation>
 <translation id="8972513834460200407">Hubungi administrator jaringan Anda untuk memastikan bahwa firewall tidak memblokir download dari server Growser.</translation>
@@ -11485,7 +11485,7 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
 <translation id="3293574207873361017">Kelola Akun Growser Anda</translation>
 <translation id="6901130673208235020">Saat Anda menelusuri histori penjelajahan, penelusuran histori Anda, konten halaman yang paling cocok, dan output model yang dihasilkan akan dikirim ke Growser</translation>
 <translation id="3178434360326457238">Saat Anda menjelajahi situs, konten halamannya dienkripsi dan disimpan ke perangkat Anda. Hal ini mungkin memengaruhi performa Growser</translation>
-<translation id="8622145666696249878">Mode AI Brave Penelusuran dan aplikasi terhubung</translation>
+<translation id="8622145666696249878">Mode AI Growser Penelusuran dan aplikasi terhubung</translation>
 <translation id="2760679829473121490">Tampilkan notifikasi sistem tentang fitur dan tips Growser</translation>
 <translation id="6713316345564743478">Untuk memeriksa sandi yang telah dibobol, login ke Akun Growser Anda</translation>
 <translation id="1342886103232377846">Untuk memeriksa sandi yang telah dibobol, buka Pengelola Sandi Growser</translation>
@@ -11548,7 +11548,7 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
 <translation id="1095879482467973146">Pengelola Sandi Growser di web</translation>
 <translation id="1368798504801939187">Lihat sandi Anda bahkan saat Anda tidak menggunakan Growser atau Android dengan login ke <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
 <translation id="829923460755755423">Tambahkan pintasan ke Pengelola Sandi Growser</translation>
-<translation id="7244677273667272006">Verifikasi diri Anda untuk menambahkan sandi dan mengaksesnya di semua perangkat dengan Akun Brave Anda</translation>
+<translation id="7244677273667272006">Verifikasi diri Anda untuk menambahkan sandi dan mengaksesnya di semua perangkat dengan Akun Growser Anda</translation>
 <translation id="8189517459248805166">Sandi Anda untuk <ph name="WEBSITE"/> disimpan di perangkat ini dan ke Akun Growser Anda. Mana yang ingin Anda hapus?</translation>
 <translation id="9101265711096405922">Dari Akun Growser Anda</translation>
 <translation id="927421426408921503">Pindahkan sandi tersimpan ke Akun Growser Anda?</translation>
@@ -11659,7 +11659,7 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         Anda dapat mengelola setelan dari menu kartu atau melihat opsi lainnya di Sesuaikan Growser.</translation>
-<translation id="6474021817475285003">Lihat selengkapnya di Brave Kalender</translation>
+<translation id="6474021817475285003">Lihat selengkapnya di Growser Kalender</translation>
 <translation id="9066394310994446814">Item ini ditampilkan berdasarkan aktivitas Anda sebelumnya saat menggunakan layanan Growser. Anda dapat melihat atau menghapus data dan mengubah setelan di <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11690,7 +11690,7 @@ other {Hapus atau gantikan dengan ekstensi serupa dari <ph name="BEGIN_LINK"/>To
 <translation id="6868193750403948178">Sesuaikan Growser</translation>
 <translation id="5009064339929592579">Simpan ke folder di Akun Growser Anda?</translation>
 <translation id="7400528739136719497">Beberapa suara Growser mungkin tidak tersedia saat ini</translation>
-<translation id="4857677595331912231">Konten dan URL tab Anda saat ini dibagikan kepada Brave untuk memberikan jawaban yang lebih relevan. Anda dapat menambahkan atau menghapus tab saat menjelajah.</translation>
+<translation id="4857677595331912231">Konten dan URL tab Anda saat ini dibagikan kepada Growser untuk memberikan jawaban yang lebih relevan. Anda dapat menambahkan atau menghapus tab saat menjelajah.</translation>
 <translation id="5639212636098910819">Tetap di Growser</translation>
 <translation id="3252169590975855820">Anda dapat mengaksesnya di Pengelola Sandi Growser</translation>
 <translation id="3843323136102787632">Download Growser dengan kode QR ini, dan login ke Akun Growser Anda.</translation>
@@ -11737,7 +11737,7 @@ Anda memiliki # sandi lainnya yang telah dibobol. Pengelola Sandi Growser mereko
 <translation id="1162630940779651724">Untuk mengirim tab ini ke perangkat lain, login ke Growser di kedua perangkat</translation>
 <translation id="5388608738812110907">Untuk mengirim tab ini ke perangkat lain, login ke Growser di sana</translation>
 <translation id="4007679133627124999">Untuk mengirim link antar-perangkat, pastikan kedua perangkat login ke Akun Growser yang sama.</translation>
-<translation id="2377999415409519333">Untuk mengirim link, verifikasi diri Anda. Anda dapat mengirim link saat login ke Akun Brave yang sama di kedua perangkat.</translation>
+<translation id="2377999415409519333">Untuk mengirim link, verifikasi diri Anda. Anda dapat mengirim link saat login ke Akun Growser yang sama di kedua perangkat.</translation>
 <translation id="4986706507552097681">Anda dapat memilih jenis data yang akan disinkronkan di setelan kapan saja. Growser dapat mempersonalisasi Penelusuran dan layanan lainnya berdasarkan histori Anda.</translation>
 <translation id="8002662358897231821">Login untuk mendapatkan bookmark, histori, sandi, dan setelan lain di semua perangkat. Anda juga akan otomatis masuk ke layanan Growser.</translation>
 <translation id="3128296144259620504">Growser sedang dikontrol oleh software uji otomatis</translation>

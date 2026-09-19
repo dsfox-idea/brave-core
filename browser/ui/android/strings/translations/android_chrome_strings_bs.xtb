@@ -562,7 +562,7 @@ Vaše šifrirane podatke može čitati samo osoba koja ima vaš pristupni izraz.
 <translation id="3384347053049321195">Dijeli sliku</translation>
 <translation id="3387650086002190359">Preuzimanje fajla <ph name="FILE_NAME"/> nije uspjelo zbog sistemskih grešaka.</translation>
 <translation id="5654361895804243820">Prozorima možete upravljati u Braveovom Upravitelju prozora</translation>
-<translation id="4302350545547675750">Upravljajte na Brave upravitelju lozinki</translation>
+<translation id="4302350545547675750">Upravljajte na Growser upravitelju lozinki</translation>
 <translation id="3417835166382867856">Pretraživanje kartica</translation>
 <translation id="3430670036890315772">Isključenjem zaključavanja profila će se ukloniti sačuvane informacije</translation>
 <translation id="4114256890962999877">Da zadržite pristup lozinkama, izvezite ih sada, ažurirajte Google Play usluge, a zatim ponovo uvezite lozinke na Growser upravitelj lozinki. <ph name="BEGIN_LINK"/>Pogledajte sva uputstva<ph name="END_LINK"/>.</translation>
@@ -778,7 +778,7 @@ Vaše šifrirane podatke može čitati samo osoba koja ima vaš pristupni izraz.
 <translation id="4307992518367153382">Osnove</translation>
 <translation id="4311652497846705514">Otvoriti PDF?</translation>
 <translation id="4313895677475587452">{NUM_SUSPICIOUS_NOTIFICATIONS,plural, =1{Moguće neželjeno obavještenje}one{Moguća neželjena obavještenja (#)}few{Moguća neželjena obavještenja (#)}other{Moguća neželjena obavještenja (#)}}</translation>
-<translation id="1471080727375670503">Prijavite se na ovu web lokaciju i u Brave da dobijete lozinke i druge stavke s <ph name="DEVICE_TYPE"/></translation>
+<translation id="1471080727375670503">Prijavite se na ovu web lokaciju i u Growser da dobijete lozinke i druge stavke s <ph name="DEVICE_TYPE"/></translation>
 <translation id="4320177379694898372">Nema internetske veze</translation>
 <translation id="6329878711227695496">Da koristite i sačuvate podatke Bravea na Growser računu, potvrdite identitet</translation>
 <translation id="4335835283689002019">Sigurno pregledanje je isključeno</translation>
@@ -903,7 +903,7 @@ Vaš Growser račun može imati druge oblike historije pregledanja kao što su p
 <translation id="4194619960643453552">Saznajte kako vas Growser štiti</translation>
 <translation id="4794291718671962615">(<ph name="MEGABYTES"/>) <ph name="URL"/></translation>
 <translation id="4807098396393229769">Ime i prezime na kartici</translation>
-<translation id="2417506209221736982">Prijavite se na ovu web lokaciju i u Brave da dobijete sačuvane informacije i druge stavke na svim svojim uređajima</translation>
+<translation id="2417506209221736982">Prijavite se na ovu web lokaciju i u Growser da dobijete sačuvane informacije i druge stavke na svim svojim uređajima</translation>
 <translation id="480990236307250886">Otvorite početnu stranicu</translation>
 <translation id="4816492930507672669">Prilagodi stranici</translation>
 <translation id="4822710610088666676">Zatvorena je i sačuvana grupa kartica <ph name="TAB_GROUP_TITLE"/></translation>
@@ -970,7 +970,7 @@ Vaš Growser račun može imati druge oblike historije pregledanja kao što su p
 <translation id="509429900233858213">Došlo je do greške.</translation>
 <translation id="5096775069898886423">Primite upozorenje prije nego što posjetite web lokacije koje ne podržavaju sigurne veze</translation>
 <translation id="510275257476243843">Još 1 sat</translation>
-<translation id="1006701764546698765">Upravljajte drugim Brave podacima</translation>
+<translation id="1006701764546698765">Upravljajte drugim Growser podacima</translation>
 <translation id="5114895953710637392">Tabela filtera aplikacija je zatvorena.</translation>
 <translation id="5115811374190515607">u: <ph name="PRODUCT_NAME"/></translation>
 <translation id="7143053178237996319">Sada možete koristiti Growser svaki put kada dodirnete linkove u porukama, dokumentima i drugim aplikacijama</translation>
@@ -1020,7 +1020,7 @@ Vaš Growser račun može imati druge oblike historije pregledanja kao što su p
 <translation id="5316947901395241499">Pohranjivanje lozinki je isključio administrator</translation>
 <translation id="5317780077021120954">Sačuvaj</translation>
 <translation id="989239400026154074">Growser preporučuje Growser</translation>
-<translation id="2334093076041322971">Upravljajte na Brave računu</translation>
+<translation id="2334093076041322971">Upravljajte na Growser računu</translation>
 <translation id="5326246328175179736">Ne možete se prijaviti koristeći ovaj račun</translation>
 <translation id="5327248766486351172">Ime</translation>
 <translation id="5328542107300944283">Koristite putem <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1046,7 +1046,7 @@ Vaš Growser račun može imati druge oblike historije pregledanja kao što su p
 <translation id="5438292632479953702">Preuzmi ponovo</translation>
 <translation id="2766925507720001104">Upozorava vas o opasnim web lokacijama, čak i onim za koje Growser nije ranije znao, analizirajući više podataka s web lokacija nego što se analizira standardnom zaštitom. Možete odabrati preskakanje Braveovih upozorenja.</translation>
 <translation id="5441466871879044658">Prevedi na ovaj jezik</translation>
-<translation id="4174952142323379142">Prijavite se na ovu web lokaciju i u Brave da dobijete oznake i druge stavke s <ph name="DEVICE_TYPE"/></translation>
+<translation id="4174952142323379142">Prijavite se na ovu web lokaciju i u Growser da dobijete oznake i druge stavke s <ph name="DEVICE_TYPE"/></translation>
 <translation id="5444999712122199445">Vratite se na web lokaciju</translation>
 <translation id="544776284582297024">Da otvorite kartice i posjećujete različite stranice u isto vrijeme, dodirnite dugme Otvori kartice</translation>
 <translation id="5456381639095306749">Preuzmi stranicu</translation>
@@ -1249,7 +1249,7 @@ Naprimjer, neke web lokacije mogu reagirati na ovaj zahtjev prikazivanjem oglasa
 <translation id="6312687380483398334">Web aplikacije (tiho)</translation>
 <translation id="6315386555979018699">Izbriši i nastavi</translation>
 <translation id="6316139424528454185">Verzija Androida nije podržana</translation>
-<translation id="6485997157403727556">Ekstenzija "<ph name="EXTENSION_NAME"/>" želi da se prijavite u Brave</translation>
+<translation id="6485997157403727556">Ekstenzija "<ph name="EXTENSION_NAME"/>" želi da se prijavite u Growser</translation>
 <translation id="6324916366299863871">Uredite prečicu</translation>
 <translation id="6324977638108296054">Nije moguće kreirati link za istaknuti tekst</translation>
 <translation id="6331836477476466332">Sigurniji i moćniji preglednik za vas</translation>
@@ -1410,7 +1410,7 @@ Naprimjer, neke web lokacije mogu reagirati na ovaj zahtjev prikazivanjem oglasa
 <translation id="6885933993535178919">{NUM_SITES,plural, =1{Otkazali ste pretplatu na 1 web lokaciju}one{Otkazali ste pretplatu na # web lokaciju}few{Otkazali ste pretplatu na # web lokacije}other{Otkazali ste pretplatu na # web lokacija}}</translation>
 <translation id="6886500155621657325">{ITEMS_COUNT,plural, =1{1 lozinka}one{# lozinka}few{# lozinke}other{# lozinki}}</translation>
 <translation id="667636428974305054">Nakon što se odjavite, oznake, lozinke i drugo s vašeg Growser računa će se ukloniti s ovog uređaja.</translation>
-<translation id="5241784838196645561">Da koristite ovu ekstenziju, prijavite se u Brave. Također ćete moći koristiti i pohranjivati lozinke i drugo s Brave računa.</translation>
+<translation id="5241784838196645561">Da koristite ovu ekstenziju, prijavite se u Growser. Također ćete moći koristiti i pohranjivati lozinke i drugo s Growser računa.</translation>
 <translation id="6896758677409633944">Kopiraj</translation>
 <translation id="3677019108032076044">Koristi moj vlastiti pristupni izraz za šifriranje svih podataka Bravea na Growser računu</translation>
 <translation id="6900532703269623216">Poboljšana zaštita</translation>
@@ -1510,7 +1510,7 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="724510009481365878">Stranica se ne može odštampati</translation>
 <translation id="7248671827512403053">Prijava</translation>
 <translation id="7253951228444156601">Provjera lozinki…</translation>
-<translation id="7265857422443387781">Pretraži karticu putem Brave Objektiva <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
+<translation id="7265857422443387781">Pretraži karticu putem Growser Objektiva <ph name="BEGIN_NEW"/>Novo<ph name="END_NEW"/></translation>
 <translation id="727288900855680735">Poslati <ph name="ONE_TIME_CODE"/> na <ph name="ORIGIN"/>?</translation>
 <translation id="7274013316676448362">Blokirane web lokacije:</translation>
 <translation id="7276868533747677875">Ako ste prethodno izvezli lozinke, potražite CSV fajl na uređaju i uvezite ga na preferirani upravitelj lozinki.</translation>
@@ -1611,7 +1611,7 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="7663320421139257046">Da nastavite, <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/> će dijeliti vaše <ph name="FIELDS_STRING"/> s ovom web lokacijom. Pogledajte <ph name="BEGIN_LINK1"/>pravila privatnosti<ph name="END_LINK1"/> ove web lokacije.</translation>
 <translation id="766587987807204883">Članci se prikazuju ovdje i možete ih čitati čak i kada ste van mreže</translation>
 <translation id="7666185984446444960">Zatvoreno: <ph name="TAB_GROUPS_AND_TABS_PART"/></translation>
-<translation id="4561249691379785743">Prijavite se na ovu web lokaciju i u Brave da dobijete lozinke i druge stavke na svim svojim uređajima</translation>
+<translation id="4561249691379785743">Prijavite se na ovu web lokaciju i u Growser da dobijete lozinke i druge stavke na svim svojim uređajima</translation>
 <translation id="7682724950699840886">Pokušajte sljedeće savjete: vodite računa da na uređaju ima dovoljno prostora i pokušajte ponovo izvršiti izvoz.</translation>
 <translation id="7795837497684113327">Otvaranje Bravea na uređaju nije uspjelo. Da riješite problem, preuzmite najnovije ažuriranje Bravea iz trgovine aplikacija.</translation>
 <translation id="7692761875510935111">Brzo otvorite u pregledniku. Dodirnite i zadržite da uredite ovu prečicu.</translation>
@@ -1786,7 +1786,7 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="8387617938027387193">Potvrdite identitet</translation>
 <translation id="8393700583063109961">Pošalji poruku</translation>
 <translation id="8396098434728053815">Dijeli i zvuk kartice</translation>
-<translation id="3629742817163747481">Da zaštiti vaš rad u Braveu, vaša organizacija će moći pregledati određene informacije ili upravljati njima kada ste prijavljeni u Brave. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
+<translation id="3629742817163747481">Da zaštiti vaš rad u Braveu, vaša organizacija će moći pregledati određene informacije ili upravljati njima kada ste prijavljeni u Growser. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
 <translation id="8413126021676339697">Prikaži cijelu historiju</translation>
 <translation id="5348884013239264115">Štiti od web lokacija, preuzimanja i ekstenzija za koje se zna da su opasni. Kada posjetite neku web lokaciju, Growser šalje prikriveni dio URL-a Braveu putem servera za privatnost koji sakriva vašu IP adresu. Ako web lokacija učini nešto sumnjivo, šalju se i puni URL-ovi i dijelovi sadržaja stranice.</translation>
 <translation id="8414396119627470038">Prijavite se na <ph name="SITE_ETLD_PLUS_ONE"/> pomoću <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1985,7 +1985,7 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="9190276265094487094">Imat ćete historiju na svim sinhroniziranim uređajima da možete nastaviti ono što ste radili</translation>
 <translation id="9190355771000652811">U traci za adresu koristite ovu prečicu na tastaturi s prečicama za pretraživače i pretraživanje web lokacija.</translation>
 <translation id="9199368092038462496">{NUM_MINS,plural, =1{Provjereno prije 1 minutu}one{Provjereno prije # minutu}few{Provjereno prije # minute}other{Provjereno prije # minuta}}</translation>
-<translation id="8903757655587058652">Prijavite se na ovu web lokaciju i u Brave da dobijete sačuvane informacije i druge stavke s <ph name="DEVICE_TYPE"/></translation>
+<translation id="8903757655587058652">Prijavite se na ovu web lokaciju i u Growser da dobijete sačuvane informacije i druge stavke s <ph name="DEVICE_TYPE"/></translation>
 <translation id="9202894533863490414">Preuzeti s ove web lokacije?</translation>
 <translation id="9204836675896933765">Ostao je još 1 fajl</translation>
 <translation id="9205933215779845960">Nije moguće pronaći tu stranicu. Provjerite pravopis ili koristite <ph name="SEARCH_ENGINE"/> da pretražite.</translation>
@@ -1993,7 +1993,7 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="9212845824145208577">Nije moguće pomjeriti niže. Pokušajte započeti na nižem mjestu na stranici.</translation>
 <translation id="9218430445555521422">Postavi kao zadano</translation>
 <translation id="9219103736887031265">Slike</translation>
-<translation id="142389341645668510">Prilagodite Brave</translation>
+<translation id="142389341645668510">Prilagodite Growser</translation>
 <translation id="9222198206152536936">Da dobijate kartice i druge stavke na svim svojim uređajima, prijavite se kao <ph name="EMAIL"/></translation>
 <translation id="7625138338483121345">Postavite Growser kao svoj zadani preglednik</translation>
 <translation id="4596514158372210596">Uklonite aktivnosti Bravea iz Digitalnog blagostanja</translation>
@@ -2226,9 +2226,9 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="7825734902504073137">Odabrani podaci su uklonjeni iz Bravea i vaših sinhroniziranih uređaja.
 
 Vaš Growser račun može imati druge oblike historije pregledanja kao što su pretraživanja i aktivnosti s drugih Braveovih usluga na <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
-<translation id="5105442806410269908">Upravljajte drugim Brave podacima</translation>
-<translation id="3410151451624226773">Upravljajte na Brave upravitelju lozinki</translation>
-<translation id="5224107321793121921">Upravljajte na Brave računu</translation>
+<translation id="5105442806410269908">Upravljajte drugim Growser podacima</translation>
+<translation id="3410151451624226773">Upravljajte na Growser upravitelju lozinki</translation>
+<translation id="5224107321793121921">Upravljajte na Growser računu</translation>
 <translation id="7494463409439554205">Otvori cijelu historiju Bravea</translation>
 <translation id="4793864227076242107">Određeni dio historije se možda neće prikazivati ovdje. Da vidite svu historiju Bravea, otvorite cijelu historiju Bravea.</translation>
 <translation id="1133540958407542175">Određeni dio historije se možda neće prikazivati ovdje. Da vidite svu historiju Bravea, otvorite cijelu historiju Bravea. Vaš Growser račun može imati i druge oblike historije pregledanja na <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
@@ -2368,13 +2368,13 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="8201029822776022152">Prijavite se na ovu web lokaciju i u Growser</translation>
 <translation id="1162630940779651724">Da pošaljete ovu karticu na drugi uređaj, prijavite se na Growser na oba uređaja</translation>
 <translation id="2142749794502180408">Prijavite se na ovu web lokaciju i u Growser da dobijete svoje oznake i još mnogo toga na svim svojim uređajima</translation>
-<translation id="9082891340092031599">Prijavite se na ovu web lokaciju i u Brave da dobijete sačuvane informacije i druge stavke na svim svojim uređajima</translation>
-<translation id="8662045425011825155">Prijavite se na ovu web lokaciju i u Brave da dobijete lozinke i druge stavke na svim svojim uređajima</translation>
-<translation id="8336534636261636522">Prijavite se na ovu web lokaciju i u Brave da dobijete sačuvane informacije i druge stavke s <ph name="DEVICE_TYPE"/></translation>
-<translation id="6191474532784243888">Prijavite se na ovu web lokaciju i u Brave da dobijete oznake i druge stavke s <ph name="DEVICE_TYPE"/></translation>
-<translation id="5674288757856435579">Prijavite se na ovu web lokaciju i u Brave da dobijete lozinke i druge stavke s <ph name="DEVICE_TYPE"/></translation>
-<translation id="2152295677712126834">Ekstenzija "<ph name="EXTENSION_NAME"/>" želi da se prijavite u Brave</translation>
-<translation id="7511412857399434551">Da koristite ovu ekstenziju, prijavite se u Brave. Također ćete moći koristiti i pohranjivati lozinke i drugo s Brave računa.</translation>
+<translation id="9082891340092031599">Prijavite se na ovu web lokaciju i u Growser da dobijete sačuvane informacije i druge stavke na svim svojim uređajima</translation>
+<translation id="8662045425011825155">Prijavite se na ovu web lokaciju i u Growser da dobijete lozinke i druge stavke na svim svojim uređajima</translation>
+<translation id="8336534636261636522">Prijavite se na ovu web lokaciju i u Growser da dobijete sačuvane informacije i druge stavke s <ph name="DEVICE_TYPE"/></translation>
+<translation id="6191474532784243888">Prijavite se na ovu web lokaciju i u Growser da dobijete oznake i druge stavke s <ph name="DEVICE_TYPE"/></translation>
+<translation id="5674288757856435579">Prijavite se na ovu web lokaciju i u Growser da dobijete lozinke i druge stavke s <ph name="DEVICE_TYPE"/></translation>
+<translation id="2152295677712126834">Ekstenzija "<ph name="EXTENSION_NAME"/>" želi da se prijavite u Growser</translation>
+<translation id="7511412857399434551">Da koristite ovu ekstenziju, prijavite se u Growser. Također ćete moći koristiti i pohranjivati lozinke i drugo s Growser računa.</translation>
 <translation id="9082932588344912693">Vaš Growser svugdje</translation>
 <translation id="7182454109284732832">Da dobijate lozinke i druge stavke na svim svojim uređajima, prijavite se u Growser kao <ph name="EMAIL"/></translation>
 <translation id="5785325624181446291">Da dobijate lozinke i drugo na svim svojim uređajima, prijavite se u Growser</translation>
@@ -2389,7 +2389,7 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="3997531199945265208">Ovdje pregledajte historiju Bravea</translation>
 <translation id="7392458451088472476">Growser nije ažuriran</translation>
 <translation id="4951278105276220905">Historija Bravea</translation>
-<translation id="6868193750403948178">Prilagodite Brave</translation>
+<translation id="6868193750403948178">Prilagodite Growser</translation>
 <translation id="6491788513991637898">Postavke, greška u vezi s Growser računom</translation>
 <translation id="72049467167806083">{NUM_IN_PROGRESS,plural, =1{Growser će učitati vašu stranicu kada bude spreman}one{Growser će učitati vaše stranice kada bude spreman}few{Growser će učitati vaše stranice kada bude spreman}other{Growser će učitati vaše stranice kada bude spreman}}</translation>
 <translation id="1975450474853317621">Otvori u pregledniku Growser</translation>
@@ -2472,7 +2472,7 @@ Da promijenite ovu postavku, <ph name="BEGIN_LINK"/>izbrišite podatke Bravea na
 <translation id="2496344405665178224">Donja tabela uključivanja Braveovih pronalazaka je otvorena u punoj visini</translation>
 <translation id="1921193970202318381">Obavještenja o Braveovim pronalascima su uključena</translation>
 <translation id="8633519672432360220">Vaš rad je zaštićen u Braveu</translation>
-<translation id="4566105881274834108">Da zaštiti vaš rad u Braveu, vaša organizacija će moći pregledati određene informacije ili upravljati njima kada ste prijavljeni u Brave. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
+<translation id="4566105881274834108">Da zaštiti vaš rad u Braveu, vaša organizacija će moći pregledati određene informacije ili upravljati njima kada ste prijavljeni u Growser. <ph name="BEGIN_LINK"/>Saznajte više<ph name="END_LINK"/></translation>
 <translation id="8349305172487531364">Traka oznaka</translation>
 <translation id="4172051516777682613">Uvijek prikaži</translation>
 <translation id="3082989400996696487">Prikazuj samo na stranici Nova kartica</translation>

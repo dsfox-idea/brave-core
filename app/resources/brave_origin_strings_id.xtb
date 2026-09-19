@@ -20,7 +20,7 @@
 <translation id="1203500561924088507">Terima kasih telah menginstal. Anda harus memulai ulang browser sebelum menggunakan <ph name="BUNDLE_NAME"/>.</translation>
 <translation id="1232234696885483911">Saat Anda membuka Penelusuran Gambar, judul halaman, URL, dan konten, termasuk PDF, akan otomatis dikirim ke server. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Saat Anda login, Anda dapat menggunakan sandi Anda dan info lainnya dari Akun Growser Anda di Growser. Untuk mengubahnya, buka “Akun Anda di Growser”.</translation>
-<translation id="583633806828413086">Tampilkan Gemini di Brave di panel menu Mac</translation>
+<translation id="583633806828413086">Tampilkan Gemini di Growser di panel menu Mac</translation>
 <translation id="1631493536097460865">Gunakan pintasan keyboard untuk memilih bagian tertentu dari layar di Gemini di Growser.</translation>
 <translation id="8799570501820813406">Saat tab ini tidak aktif, memori akan dikosongkan agar Growser tetap cepat. Anda dapat memilih untuk selalu mengecualikan situs ini agar tetap aktif.</translation>
 <translation id="8767381092474532098">Growser memblokir download ini karena file tersebut berbahaya</translation>
@@ -71,7 +71,7 @@
 <translation id="5679816001365584346">Download Growser di ponsel untuk membuka atau membuat grup tab baru kapan saja di mana saja</translation>
 <translation id="4559627161887338743">Anda dapat mengelola Akun Growser yang Anda gunakan untuk login. Akun Growser Anda digunakan untuk browser Growser, Play Store, Gmail, dan lainnya. Jika Anda ingin menambahkan akun untuk orang lain, seperti anggota keluarga, tambahkan pengguna baru ke <ph name="DEVICE_TYPE"/>. <ph name="LINK_BEGIN"/>Pelajari lebih lanjut<ph name="LINK_END"/></translation>
 <translation id="1862852878885210965">Telusuri dengan Penelusuran Gambar</translation>
-<translation id="2963742289915075304"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya dari <ph name="DEVICE"/>.</translation>
+<translation id="2963742289915075304"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya dari <ph name="DEVICE"/>.</translation>
 <translation id="1880677175115548835">Pilih teks</translation>
 <translation id="4528406859989804913">Anda masuk dengan akun terkelola dan memberikan administratornya kontrol atas profil Growser Anda. Data Growser Anda, seperti aplikasi, bookmark, histori, sandi, dan setelan lain selamanya akan dikaitkan ke <ph name="USER_NAME"/>. Anda dapat menghapus data ini melalui Dasbor Akun Growser, namun Anda tidak akan dapat mengaitkan data ini dengan akun yang lain. Secara opsional, Anda dapat membuat profil untuk menjaga data Growser Anda yang sudah ada tetap terpisah. <ph name="LEARN_MORE"/></translation>
 <translation id="2207454583030080759">Growser akan menghemat daya baterai dengan membatasi aktivitas latar belakang dan efek visual, seperti scroll yang lancar dan kecepatan frame video. <ph name="BEGIN_LINK"/>Pelajari lebih lanjut Penghemat Energi<ph name="END_LINK"/></translation>
@@ -130,7 +130,7 @@
 <translation id="5298352791080868905">Buka link di Growser dari aplikasi apa pun dan buat browser tetap dapat diakses di taskbar Anda</translation>
 <translation id="2600233721598267627">Klik tombol Ringkas untuk membagikan dokumen ini ke Gemini di Growser guna mendapatkan ringkasan cepat dan mengajukan pertanyaan lanjutan</translation>
 <translation id="2118275934191847461">Dengan <ph name="BEGIN_LINK"/>alat dari Growser<ph name="END_LINK"/>, Anda dapat menjelajah dengan aman dan tetap memegang kendali</translation>
-<translation id="7508460698788470991"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya semua perangkat Anda.</translation>
+<translation id="7508460698788470991"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya semua perangkat Anda.</translation>
 <translation id="2451727308784734061">Gunakan pintasan Anda untuk mengakses Pengelola Sandi dengan cepat. Anda dapat memindahkan pintasan ke layar utama atau peluncur aplikasi di komputer.</translation>
 <translation id="6381750314821942592">Growser akan segera ditutup</translation>
 <translation id="6078442581074612226">Di Growser</translation>
@@ -149,7 +149,7 @@
 <translation id="7931230852267968641">Organisasi Anda dapat melihat dan mengelola data penjelajahan, seperti bookmark, histori, dan sandi. Organisasi Anda tidak dapat melihat data penjelajahan di profil Growser lain</translation>
 <translation id="2257221826278123061">Verifikasi diri Anda untuk menggunakan dan menyimpan data Growser di akun Anda, <ph name="ACCOUNT_EMAIL"/></translation>
 <translation id="7048234400304379082">Untuk keluar dari atau kembali ke Gemini di Growser, gunakan pintasan keyboard.</translation>
-<translation id="5655607968417451974">Mulai Brave</translation>
+<translation id="5655607968417451974">Mulai Growser</translation>
 <translation id="7387051847644272380">Terjadi error pada sistem operasi saat pemasangan berlangsung. Download Growser lagi.</translation>
 <translation id="2648689842065142443">Jika Anda berbagi perangkat, teman dan keluarga dapat menjelajah secara terpisah dan menyiapkan Growser sesuai keinginannya</translation>
 <translation id="1001521084148238686">Akses mudah untuk menggunakan Gemini di Growser di berbagai perangkat Anda, bahkan saat Growser diperkecil.</translation>
@@ -252,7 +252,7 @@
 
           **Sarankan Pertanyaan:** Buat daftar berbutir berisi 3-5 pertanyaan yang dapat diajukan pengguna untuk lebih memahami screenshot. Pertanyaan ini harus mencakup setidaknya satu pertanyaan yang secara khusus membahas objek visual, desain, atau penempatannya.</translation>
 <translation id="6899774208752247219"><ph name="PAGE_TITLE"/> - Growser Origin</translation>
-<translation id="1118754729376002185">Brave memerlukan izin jaringan lokal untuk situs ini</translation>
+<translation id="1118754729376002185">Growser memerlukan izin jaringan lokal untuk situs ini</translation>
 <translation id="3885770153807205175">Pemilih bahasa</translation>
 <translation id="6315734375101223238">Sesuaikan dan kontrol Growser. Ada sesuatu yang memerlukan perhatian Anda - klik untuk melihat detailnya.</translation>
 <translation id="7130675370997202556">Klik nama Anda untuk membuka Growser dan mulai menjelajah.</translation>
@@ -394,7 +394,7 @@
 
 Jika halaman ini tidak berfungsi sebagaimana mestinya, coba izinkan pengoptimalan.</translation>
 <translation id="7074160267408082133">Tampilkan Gemini di Growser di panel menu Mac dan aktifkan pintasan keyboard</translation>
-<translation id="2938507901464407819"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya dari <ph name="DEVICE"/>.</translation>
+<translation id="2938507901464407819"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya dari <ph name="DEVICE"/>.</translation>
 <translation id="5579324208890605088">Error saat sistem dimulai: jalankan penginstal sebagai pengguna biasa, bukan sebagai administrator.</translation>
 <translation id="3588973534877826647">Gunakan Growser sebagai browser default dan sematkan ke taskbar</translation>
 <translation id="5596627076506792578">Opsi lainnya</translation>
@@ -409,7 +409,7 @@ Jika halaman ini tidak berfungsi sebagaimana mestinya, coba izinkan pengoptimala
 <translation id="1834213228893578875">Growser akan membebaskan memori dari tab yang tidak aktif. Tindakan ini akan memberikan lebih banyak resource komputer untuk tab aktif dan aplikasi lainnya, serta menjaga Growser tetap cepat. Tab yang tidak aktif akan otomatis menjadi aktif lagi saat Anda kembali ke tab tersebut. <ph name="BEGIN_LINK"/>Pelajari lebih lanjut Penghemat Memori<ph name="END_LINK"/></translation>
 <translation id="899523323751802352">Jika lupa frasa sandi atau ingin mengubah setelan ini, <ph name="SETTINGS_LINK"/> data Growser di akun Anda</translation>
 <translation id="82926023981336111">Sesuaikan dan kontrol Growser. Setel Growser sebagai browser default.</translation>
-<translation id="5660546041996455312">Selalu sinkronkan sandi, bookmark, dan histori lintas perangkat dengan menyetel Brave sebagai browser default Anda.</translation>
+<translation id="5660546041996455312">Selalu sinkronkan sandi, bookmark, dan histori lintas perangkat dengan menyetel Growser sebagai browser default Anda.</translation>
 <translation id="5809516625706423866">Tidak dapat terhubung ke internet. HTTP 401 Tidak Sah. Periksa konfigurasi proxy Anda.</translation>
 <translation id="95980832839683236">Mempercepat situs dengan mesin V8 Growser, tetapi membuat Growser sedikit lebih rentan terhadap serangan. Setelan ini nonaktif.</translation>
 <translation id="1224606669200461217">Untuk menggunakan dan menyimpan data Growser di Akun Growser Anda, update Growser</translation>
@@ -563,12 +563,12 @@ Bookmark baru tidak dapat disimpan di akun hingga Anda menghapus beberapa bookma
 <translation id="2332301637111071062">Organisasi Anda akan menghapus data Growser jika tidak digunakan selama <ph name="TIMEOUT_DURATION"/>. Data ini dapat mencakup histori, isi otomatis, dan download.</translation>
 <translation id="1008530050039597147">Growser memerlukan izin kamera untuk situs ini</translation>
 <translation id="1197672524850678392">Tidak dapat meluncurkan Growser. Harap coba lagi.</translation>
-<translation id="5020151688261063547">Tanya apa saja, langsung dari tempat Anda berada, dengan Gemini di Brave</translation>
+<translation id="5020151688261063547">Tanya apa saja, langsung dari tempat Anda berada, dengan Gemini di Growser</translation>
 <translation id="3625983487600668413">Simpan Growser di Dok untuk mengaksesnya dengan cepat kapan saja</translation>
 <translation id="5755581833598928580">Gunakan Growser kapan pun Anda mengklik link di pesan, dokumen, dan aplikasi lainnya</translation>
 <translation id="7216228761061470870">Saat Anda menggunakan Penelusuran Gambar di desktop, judul halaman, URL, dan konten, termasuk PDF, akan dikirim ke server</translation>
 <translation id="5516268345616100622">Pengelola Tugas - Growser</translation>
-<translation id="2416155625082200759"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya di semua perangkat Anda.</translation>
+<translation id="2416155625082200759"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya di semua perangkat Anda.</translation>
 <translation id="1871621397473741084">Langsung menjelajahi internet: Growser kini dapat diluncurkan saat Windows dimulai.</translation>
 <translation id="7274695763216404502">Disematkan. Gunakan Penelusuran Gambar lagi dari toolbar</translation>
 <translation id="7288567540154601580">Tab &amp; ekstensi</translation>
@@ -584,7 +584,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="7352651011704765696">Terjadi error</translation>
 <translation id="6085660187823915017">Untuk mendapatkan update Growser berikutnya, Anda perlu macOS 13 atau yang lebih baru. Komputer ini menggunakan macOS 12.</translation>
 <translation id="2865744782251083875">Anda tidak membuka situs ini baru-baru ini. Growser menghapus izin <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>.</translation>
-<translation id="3871306442916198768">Tampilkan Gemini di Brave di area notifikasi</translation>
+<translation id="3871306442916198768">Tampilkan Gemini di Growser di area notifikasi</translation>
 <translation id="4104934885375476361">Growser kini menjadi browser default Anda</translation>
 <translation id="7951152294775418909">Lanjutkan dari halaman terakhir yang dibuka: Growser memulihkan tab setiap kali Anda memulai ulang. Untuk menonaktifkannya, buka</translation>
 <translation id="3191314862567596053">Impor Sandi ke Growser</translation>
@@ -617,7 +617,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="4784414698887946907">Tindakan ini akan menghapus data browsing dari perangkat. Untuk mengambil data nanti, login ke Growser sebagai <ph name="USER_EMAIL"/>.</translation>
 <translation id="7747138024166251722">Pemasang tidak dapat membuat direktori sementara. Periksa kapasitas kosong pada disk dan izin untuk memasang software.</translation>
 <translation id="8543787950557226450">Reset ke Growser Default</translation>
-<translation id="4859382825808018797">Untuk mengamankan pekerjaan di Brave, organisasi Anda akan dapat melihat atau mengelola informasi tertentu saat Anda login ke Brave.</translation>
+<translation id="4859382825808018797">Untuk mengamankan pekerjaan di Growser, organisasi Anda akan dapat melihat atau mengelola informasi tertentu saat Anda login ke Growser.</translation>
 <translation id="4976450819672499783">Setel Growser sebagai default dan sematkan ke taskbar</translation>
 <translation id="1978509466033734608">Buat Growser lebih cepat</translation>
 <translation id="8607348724092473027"><ph name="PAGE_TITLE"/> - Growser Origin Canary</translation>
@@ -634,7 +634,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="5687542525349822727">Setel Growser sebagai browser default</translation>
 <translation id="6396151137840491551">Growser mengupgrade koneksi yang tidak aman ke HTTPS secara otomatis jika memungkinkan</translation>
 <translation id="2925193881330501265">Anda telah masuk ke Growser sebagai <ph name="USER_EMAIL_ADDRESS"/>. Gunakan akun yang sama untuk masuk kembali.</translation>
-<translation id="3744141798014187630"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya semua perangkat Anda.</translation>
+<translation id="3744141798014187630"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya semua perangkat Anda.</translation>
 <translation id="6915252145142862992">Ini adalah pemasangan Growser sekunder, dan tidak dapat digunakan sebagai browser default.</translation>
 <translation id="7766756101194440006">Optimalkan penggunaan Growser dengan aplikasi Growser di <ph name="DEVICE_TYPE"/> Anda</translation>
 <translation id="8004582292198964060">Browser</translation>
@@ -665,12 +665,12 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="1755067029031059271">Growser tidak dapat memverifikasi asal ekstensi ini, dan mungkin ekstensi ini tidak aman. Hapus dari Growser agar ekstensi ini tidak dapat lagi melihat dan mengubah data Anda di situs yang Anda kunjungi, termasuk info pribadi Anda.</translation>
 <translation id="8207657266087451193">Jika gambar tidak memiliki deskripsi yang berguna, Growser akan mencoba memberikan deskripsi untuk Anda. Untuk membuat deskripsi, gambar akan dikirim ke Growser. Anda dapat menonaktifkannya kapan saja di setelan.</translation>
 <translation id="7792526144795244436">Login ke Growser di profil baru?</translation>
-<translation id="784788600549915416"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya dari <ph name="DEVICE"/>.</translation>
+<translation id="784788600549915416"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya dari <ph name="DEVICE"/>.</translation>
 <translation id="183102473074922918">Tampilkan Gemini di Growser di area notifikasi dan aktifkan pintasan keyboard</translation>
 <translation id="976541154724186511"><ph name="BEGIN_LINK"/>Growser akan memperingatkan Anda<ph name="END_LINK"/> tentang situs dan download yang tidak aman</translation>
 <translation id="8060549744348950090">Anda tidak membuka situs ini baru-baru ini. Growser menghapus izin <ph name="PERMISSION"/>.</translation>
 <translation id="7402663241490331652">Gunakan kamera di aplikasi Growser versi iOS untuk berbelanja, menerjemahkan teks, dan mengidentifikasi objek yang Anda lihat</translation>
-<translation id="4470171586042711152">Kode QR untuk login ke Brave sebagai <ph name="USER_NAME"/></translation>
+<translation id="4470171586042711152">Kode QR untuk login ke Growser sebagai <ph name="USER_NAME"/></translation>
 <translation id="8313851650939857356">Error saat sistem dimulai: <ph name="STARTUP_ERROR"/>.</translation>
 <translation id="6098476632210317894">Organisasi Anda menutup Growser saat tidak digunakan selama <ph name="TIMEOUT_DURATION"/>.</translation>
 <translation id="8321888067342493336">Simpan sebagai gambar</translation>
@@ -974,7 +974,7 @@ Bookmark baru tidak dapat disimpan di akun hingga Anda menghapus beberapa bookma
 <translation id="2901628274067661379">Uninstal Growser</translation>
 <translation id="4255250495838298167">Growser bukan lagi browser default Anda. Jadikan Growser browser default?</translation>
 <translation id="4701159144509985041">Setel Growser sebagai browser default</translation>
-<translation id="6674282510961658141">Selalu sinkronkan sandi, bookmark, dan histori lintas perangkat dengan menyetel Brave sebagai browser default Anda.</translation>
+<translation id="6674282510961658141">Selalu sinkronkan sandi, bookmark, dan histori lintas perangkat dengan menyetel Growser sebagai browser default Anda.</translation>
 <translation id="3496230475498196433">Klik <ph name="BEGIN_BOLD"/>Ya<ph name="END_BOLD"/> di notifikasi Windows untuk menyematkan Growser ke taskbar agar dapat diakses dengan cepat.</translation>
 <translation id="6464100105052674345">Jalankan Growser di latar belakang</translation>
 <translation id="2352438365274458200">Nonaktifkan Growser agar tidak menjalankan aplikasi di latar belakang</translation>
@@ -1107,12 +1107,12 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="8301131823005186282">Agar tetap aman saat online dengan pilihan orang tuamu, beralihlah ke profil Growser-mu, tempat kamu sudah login sebagai <ph name="USER_EMAIL_ADDRESS"/></translation>
 <translation id="5123925581213723416"><ph name="EXISTING_USER"/> telah login ke profil Growser ini. Agar penjelajahan Anda tetap terpisah, Growser dapat membuat profil tersendiri untuk Anda.</translation>
 <translation id="5245337343687738049"><ph name="EXISTING_USER"/> sudah login.  Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="6515876849360167659"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya dari <ph name="DEVICE"/>.</translation>
-<translation id="6426933876042535118"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya dari <ph name="DEVICE"/>.</translation>
-<translation id="6873553785695129772"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya dari <ph name="DEVICE"/>.</translation>
-<translation id="1882791237209046433"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya semua perangkat Anda.</translation>
-<translation id="3931250744648698087"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya semua perangkat Anda.</translation>
-<translation id="1150972610527825536"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Brave di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya di semua perangkat Anda.</translation>
+<translation id="6515876849360167659"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya dari <ph name="DEVICE"/>.</translation>
+<translation id="6426933876042535118"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya dari <ph name="DEVICE"/>.</translation>
+<translation id="6873553785695129772"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya dari <ph name="DEVICE"/>.</translation>
+<translation id="1882791237209046433"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan sandi dan data lainnya semua perangkat Anda.</translation>
+<translation id="3931250744648698087"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan bookmark dan data lainnya semua perangkat Anda.</translation>
+<translation id="1150972610527825536"><ph name="EXISTING_USER"/> sudah login. Agar penjelajahan Anda tetap terpisah, login ke Growser di profil Anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapatkan info tersimpan dan data lainnya di semua perangkat Anda.</translation>
 <translation id="3505846189507037800">Agar tetap aman saat online dengan pilihan orang tuamu, login ke Growser</translation>
 <translation id="4245415605080139322">Saat Anda login, Anda dapat menggunakan sandi Anda dan info lainnya dari Akun Growser Anda di Growser. Untuk mengubahnya, buka “Akun Anda di Growser”.</translation>
 <translation id="4193690350845293524">Saat Anda login, Anda dapat menggunakan sandi Anda dan lainnya dari Akun Growser Anda di Growser. <ph name="SHORTCUT"/> dapat mengubah setelan layanan Growser Anda.</translation>
@@ -1136,7 +1136,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="3269077286059832796">Kelola profil Growser</translation>
 <translation id="2196448886818266718">Tambahkan profil Growser</translation>
 <translation id="3639562449300546186">Login ke Growser di ponsel Anda</translation>
-<translation id="3104294450494567786">Kode QR untuk login ke Brave sebagai <ph name="USER_NAME"/></translation>
+<translation id="3104294450494567786">Kode QR untuk login ke Growser sebagai <ph name="USER_NAME"/></translation>
 <translation id="7206238340597832726">Hapus data aplikasi ini dari Growser</translation>
 <translation id="7293870171608700967">Aplikasi Growser Origin</translation>
 <translation id="7006775661509770321">Growser menggunakan kamera dan mikrofon Anda.</translation>
@@ -1223,7 +1223,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="6539809395143501177">Setiap profil memiliki info Growser tersendiri, seperti bookmark, histori, sandi, dan lainnya</translation>
 <translation id="6359748718028735107">Jika Anda berbagi perangkat, teman dan keluarga dapat menjelajah secara terpisah dan menyiapkan Growser sesuai keinginannya</translation>
 <translation id="5254830036533869365">Profil Growser dengan akun ini sudah ada di perangkat ini</translation>
-<translation id="7671828190113127067">Mulai Brave</translation>
+<translation id="7671828190113127067">Mulai Growser</translation>
 <translation id="3109033858283726964">Login ke Growser</translation>
 <translation id="3194774009976956730">Mari siapkan Growser Anda</translation>
 <translation id="3040770245079391216">Gunakan Growser sebagai browser default dan sematkan ke taskbar</translation>
@@ -1240,7 +1240,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="842256045450098075">Logout untuk menghapus Akun Growser Anda dari Growser</translation>
 <translation id="6677784415412949473">Untuk menghapus Akun Growser Anda dari Growser, logout dari Growser di halaman Setelan</translation>
 <translation id="8235635284210221172">Diintegrasikan dalam Growser untuk membantu Anda membuat, menyimpan, dan mengisi otomatis sandi kuat. Tambahkan pintasan untuk memudahkan akses.</translation>
-<translation id="4166648098896027129">Tanya apa saja, langsung dari tempat Anda berada, dengan Gemini di Brave</translation>
+<translation id="4166648098896027129">Tanya apa saja, langsung dari tempat Anda berada, dengan Gemini di Growser</translation>
 <translation id="6168558359146786659">Personalisasi Growser Anda</translation>
 <translation id="2789075374752545467">Perubahan Anda akan berlaku saat berikutnya Anda membuka Growser.</translation>
 <translation id="519862482935410613">Growser memerlukan akses Bluetooth untuk menjelajah 
@@ -1268,7 +1268,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 <translation id="2016973756696213156">Coba dengan Gemini di Growser</translation>
 <translation id="3446744630960564006">Buka Gemini dengan cepat di Growser kapan pun Anda membutuhkannya</translation>
 <translation id="1985505085856398819">Tampilkan Gemini di Growser di area notifikasi dan aktifkan pintasan keyboard</translation>
-<translation id="7843414100742664106">Tampilkan Gemini di Brave di area notifikasi</translation>
+<translation id="7843414100742664106">Tampilkan Gemini di Growser di area notifikasi</translation>
 <translation id="5912735934441585874">Akses mudah untuk menggunakan Gemini di Growser di berbagai perangkat Anda, bahkan saat Growser diperkecil.</translation>
 <translation id="635775285804478675">Buka Gemini di Growser dengan pintasan keyboard.</translation>
 <translation id="6403063362298585665">Jika Gemini di Growser terbuka, panel samping akan tetap terbuka saat membuat tab baru</translation>
@@ -1323,7 +1323,7 @@ Growser tidak dapat memulihkan setelan Anda.</translation>
 Jika halaman ini tidak berfungsi sebagaimana mestinya, coba izinkan pengoptimalan.</translation>
 <translation id="4165169774507632897">Login ke Growser</translation>
 <translation id="8633519672432360220">Pekerjaan Anda diamankan di Growser</translation>
-<translation id="2298918301821382774">Untuk mengamankan pekerjaan di Brave, organisasi Anda akan dapat melihat atau mengelola informasi tertentu saat Anda login ke Brave.</translation>
+<translation id="2298918301821382774">Untuk mengamankan pekerjaan di Growser, organisasi Anda akan dapat melihat atau mengelola informasi tertentu saat Anda login ke Growser.</translation>
 <translation id="5670438198445413111">Pemasangan gagal karena kesalahan yang tidak ditentukan. Download Growser lagi.</translation>
 <translation id="4217571870635786043">Dikte</translation>
 </translationbundle>

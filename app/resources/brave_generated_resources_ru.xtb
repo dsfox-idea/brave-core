@@ -58,7 +58,7 @@
 <translation id="3218385319396786393">На этой странице заблокирован автозапуск</translation>
 <translation id="4988333904713528597">Всегда разрешать автоматическое воспроизведение на <ph name="HOST"/></translation>
 <translation id="4150684676757176434">Продолжить блокирование автоматического воспроизведения</translation>
-<translation id="2201935460386712655">Brave не проверяет безопасность и надежность расширений. Устанавливайте расширение «<ph name="EXTENSION_NAME"/>» только в том случае, если вы доверяете его разработчику.</translation>
+<translation id="2201935460386712655">Growser не проверяет безопасность и надежность расширений. Устанавливайте расширение «<ph name="EXTENSION_NAME"/>» только в том случае, если вы доверяете его разработчику.</translation>
 <translation id="2928844661231356557">Если сайты получат доступ к устройствам Bluetooth, то смогут узнать потенциально конфиденциальную информацию о вас. Предоставляйте такие разрешения только доверенным ресурсам. <ph name="LEARN_MORE"/></translation>
 <translation id="9005883459983913482">Окна Tor</translation>
 <translation id="7965178729203412357">Новый Tor-идентификатор</translation>
@@ -218,7 +218,7 @@
 <translation id="4515057635283480525">Интернет-архив хранит прежние версии многих веб-страниц. Поискать эту страницу в архиве?</translation>
 <translation id="8252977752585110703">К сожалению, в Интернет-архиве нет сохраненной версии этой страницы.</translation>
 <translation id="8748778103033196270">Искать в архиве</translation>
-<translation id="191143826155037518">Brave работает в соответствии с <ph name="BEGIN_LINK_MPL"/>лицензией Mozilla Public License 2.0<ph name="END_LINK_MPL"/> (MPL) и включает <ph name="BEGIN_LINK_OSS"/>программное обеспечение с открытым кодом<ph name="END_LINK_OSS"/> под многочисленными лицензиями других компаний.
+<translation id="191143826155037518">Growser работает в соответствии с <ph name="BEGIN_LINK_MPL"/>лицензией Mozilla Public License 2.0<ph name="END_LINK_MPL"/> (MPL) и включает <ph name="BEGIN_LINK_OSS"/>программное обеспечение с открытым кодом<ph name="END_LINK_OSS"/> под многочисленными лицензиями других компаний.
         Вы можете прочитать <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>инструкции о том, как скачать и написать самому<ph name="END_LINK_BUILD_INSTRUCTIONS"/> конкретный <ph name="BEGIN_LINK_SOURCE_CODE"/>исходный код, используемый для создания этой копии<ph name="END_LINK_SOURCE_CODE"/>.</translation>
 <translation id="4474155171896946103">Добавить все вкладки в закладки…</translation>
 <translation id="3987546108749866209">Использовать вертикальные вкладки</translation>
@@ -606,15 +606,15 @@
 <translation id="8868426106596092089">Автоматически отправляя данные диагностики при сбое браузера Growser, вы помогаете повышать стабильность его работы</translation>
 <translation id="4891600875049212418">Включать режим «Не для протокола» при посещении сайтов с деликатным контентом</translation>
 <translation id="1022603984240541480">Показывать уведомление о настройке приватности на поддерживаемых сайтах</translation>
-<translation id="3528176629974273019">Позволяет Brave автоматически предлагать (и настраивать) параметры конфиденциальности для конкретных сайтов.</translation>
+<translation id="3528176629974273019">Позволяет Growser автоматически предлагать (и настраивать) параметры конфиденциальности для конкретных сайтов.</translation>
 <translation id="2740687181110647855">Инструмент настройки параметров приватности</translation>
 <translation id="509873765238158442">Блокировать Microsoft Recall</translation>
 <translation id="4763421121695677716">Блокируйте функцию Recall на компьютерах Microsoft Windows от автоматического снятия скриншотов любых открытых вкладок Growser.</translation>
 <translation id="1968895725257436430">Сбор данных</translation>
 <translation id="1700052872056357670">Удалять данные при выходе</translation>
 <translation id="216468847346280584">Удалить данные Growser Рекламы</translation>
-<translation id="96212973142796240">Данные Рекламы Brave очищены</translation>
-<translation id="6665923829462527507">Не удалось очистить данные Рекламы Brave. Повторите попытку.</translation>
+<translation id="96212973142796240">Данные Рекламы Growser очищены</translation>
+<translation id="6665923829462527507">Не удалось очистить данные Рекламы Growser. Повторите попытку.</translation>
 <translation id="2808630562319398131">Сбросить данные  Вознаграждения Growser</translation>
 <translation id="6438096877646138757">Сайты, которые удаляют файлы cookie при закрытии</translation>
 <translation id="2988792685798128092">Удаление файлов cookie при закрытии сайта</translation>
@@ -1120,7 +1120,7 @@
 <translation id="1054078509920433577">Growser не может использовать этот файл. Выберите другое изображение и попробуйте снова.</translation>
 <translation id="530437350080973527">По этой теме вкладок не нашлось. Попробуйте описать её иначе.</translation>
 <translation id="1062407476771304334">Заменить</translation>
-<translation id="420057953503713346">Данные Рекламы Brave очищены</translation>
-<translation id="3399998090446159274">Не удалось очистить данные Рекламы Brave. Повторите попытку.</translation>
+<translation id="420057953503713346">Данные Рекламы Growser очищены</translation>
+<translation id="3399998090446159274">Не удалось очистить данные Рекламы Growser. Повторите попытку.</translation>
 <translation id="5831840958001766835">Изменение порядка. Используйте стрелки для перемещения.</translation>
 </translationbundle>

@@ -20,7 +20,7 @@
 <translation id="1203500561924088507">Tak for installationen. Du skal genstarte browseren, før du bruger <ph name="BUNDLE_NAME"/>.</translation>
 <translation id="1232234696885483911">Når du åbner Billedsøgning, sendes sidetitlen, webadressen og indholdet, herunder PDF-filer, automatisk til serveren. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Mens du er logget ind, kan du bruge dine adgangskoder m.m. fra din Growser-konto i Growser. Du kan ændre dette ved at gå til "Din konto i Growser".</translation>
-<translation id="583633806828413086">Vis Gemini i Brave på Mac-menulinjen</translation>
+<translation id="583633806828413086">Vis Gemini i Growser på Mac-menulinjen</translation>
 <translation id="1631493536097460865">Brug tastaturgenvejen til at markere en del af skærmen i Gemini i Growser.</translation>
 <translation id="8799570501820813406">Mens denne fane var inaktiv, blev der frigjort hukommelse for at sikre, at Growser kører hurtigt. Du kan vælge, at dette website altid skal være inaktivt.</translation>
 <translation id="8767381092474532098">Growser har blokeret denne download, fordi filen er skadelig</translation>
@@ -71,7 +71,7 @@
 <translation id="5679816001365584346">Download Growser på din telefon for at åbne eller oprette nye fanegrupper på farten.</translation>
 <translation id="4559627161887338743">Du kan administrere de Growser-konti, du er logget ind på. Dine Growser-konti bruges i Growser-browseren, Play Butik, Gmail m.m. Hvis du vil tilføje en konto, der tilhører en anden, f.eks. et familiemedlem, skal du føje en ny person til din <ph name="DEVICE_TYPE"/> i stedet. <ph name="LINK_BEGIN"/>Få flere oplysninger<ph name="LINK_END"/></translation>
 <translation id="1862852878885210965">Søg med billedsøgning</translation>
-<translation id="2963742289915075304"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="2963742289915075304"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere fra <ph name="DEVICE"/>.</translation>
 <translation id="1880677175115548835">Vælg tekst</translation>
 <translation id="4528406859989804913">Du er ved at logge ind med en managerstyret konto og give dens administrator kontrol over din profil i Growser. Dine Growser-data, f.eks. dine apps, bogmærker, historikdata, adgangskoder og andre indstillinger, knyttes permanent til <ph name="USER_NAME"/>. Du kan slette disse data via kontrolpanelet for Growser Konti, men du kan ikke knytte disse data til en anden konto. Du kan eventuelt oprette en ny profil for at holde dine Growser-data adskilt. <ph name="LEARN_MORE"/></translation>
 <translation id="2207454583030080759">Growser sparer på batteriet ved at begrænse aktivitet i baggrunden og visuelle effekter, f.eks. smooth scrolling og videobilledfrekvenser. <ph name="BEGIN_LINK"/>Få flere oplysninger om Energisparefunktion<ph name="END_LINK"/></translation>
@@ -130,7 +130,7 @@
 <translation id="5298352791080868905">Åbn links i Growser fra en hvilken som helst app, og sørg for, at browseren altid er tilgængelig på proceslinjen</translation>
 <translation id="2600233721598267627">Klik på knappen Opsummer for at dele dette dokument med Gemini i Growser for at få en hurtig oversigt og stille opfølgende spørgsmål</translation>
 <translation id="2118275934191847461">Med <ph name="BEGIN_LINK"/>værktøjer fra Growser<ph name="END_LINK"/> kan du søge sikkert på nettet og bevare styringen</translation>
-<translation id="7508460698788470991"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere på alle dine enheder.</translation>
+<translation id="7508460698788470991"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere på alle dine enheder.</translation>
 <translation id="2451727308784734061">Brug din genvej til hurtigt at gå til Adgangs­kode­admin­istrator. Du kan flytte din genvej til din computers startskærm eller appliste.</translation>
 <translation id="6381750314821942592">Growser lukkes snart</translation>
 <translation id="6078442581074612226">I Growser</translation>
@@ -149,7 +149,7 @@
 <translation id="7931230852267968641">Din organisation kan se og administrere browserdata, f.eks. bogmærker, historik og adgangskoder. Den kan ikke se browserdata på dine andre Growser-profiler</translation>
 <translation id="2257221826278123061">Verificer din identitet for at bruge og gemme Growser-data på din konto, <ph name="ACCOUNT_EMAIL"/></translation>
 <translation id="7048234400304379082">Brug tastaturgenvejen for at forlade eller vende tilbage til Gemini i Growser.</translation>
-<translation id="5655607968417451974">Start Brave</translation>
+<translation id="5655607968417451974">Start Growser</translation>
 <translation id="7387051847644272380">Der opstod en fejl i operativsystemet under installationen. Download Growser igen.</translation>
 <translation id="2648689842065142443">Hvis du deler en enhed, kan venner og familie browse individuelt og konfigurere Growser hver især</translation>
 <translation id="1001521084148238686">Nem adgang til Gemini i Growser overalt på din enhed, selvom Growser er minimeret.</translation>
@@ -252,7 +252,7 @@
 
           **Foreslå spørgsmål:** Generér en opstilling med punkttegn med 3-5 tankevækkende spørgsmål, som en bruger kan stille for bedre at forstå screenshottet. Disse spørgsmål skal omfatte mindst ét spørgsmål, der specifikt handler om et visuelt objekt, dets design eller dets placering.</translation>
 <translation id="6899774208752247219"><ph name="PAGE_TITLE"/> – Growser Origin</translation>
-<translation id="1118754729376002185">Brave skal have adgangstilladelse til det lokale netværk for at bruge dette website</translation>
+<translation id="1118754729376002185">Growser skal have adgangstilladelse til det lokale netværk for at bruge dette website</translation>
 <translation id="3885770153807205175">Sprogvælger</translation>
 <translation id="6315734375101223238">Tilpas og administrer Growser. Noget kræver din opmærksomhed – klik for at få oplysninger.</translation>
 <translation id="7130675370997202556">Klik på dit navn for at åbne Growser og gå i gang med at browse.</translation>
@@ -394,7 +394,7 @@
 
 Hvis denne side ikke fungerer som forventet, kan du prøve at tillade optimering.</translation>
 <translation id="7074160267408082133">Vis Gemini i Growser på Mac-menulinjen, og aktivér tastaturgenvejen</translation>
-<translation id="2938507901464407819"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="2938507901464407819"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere fra <ph name="DEVICE"/>.</translation>
 <translation id="5579324208890605088">Opstartsfejl: Kør installationsprogrammet som almindelig bruger, ikke som administrator.</translation>
 <translation id="3588973534877826647">Brug Growser som standard, og fastgør den</translation>
 <translation id="5596627076506792578">Flere valgmuligheder</translation>
@@ -409,7 +409,7 @@ Hvis denne side ikke fungerer som forventet, kan du prøve at tillade optimering
 <translation id="1834213228893578875">Growser frigør hukommelse fra inaktive faner. Dette tildeler aktive faner og andre apps flere computerressourcer og gør Growser hurtig. Dine inaktive faner bliver automatisk aktive igen, når du vender tilbage til dem. <ph name="BEGIN_LINK"/>Få flere oplysninger om Hukommelsessparefunktion<ph name="END_LINK"/></translation>
 <translation id="899523323751802352">Hvis du glemmer din adgangssætning eller vil ændre denne indstilling, skal du <ph name="SETTINGS_LINK"/> Growser-dataene på din konto.</translation>
 <translation id="82926023981336111">Tilpas og styr Growser. Angiv Growser som din standardbrowser.</translation>
-<translation id="5660546041996455312">Hold dine adgangskoder, dine bogmærker og din historik perfekt synkroniseret på alle enheder ved at angive Brave som din standardbrowser.</translation>
+<translation id="5660546041996455312">Hold dine adgangskoder, dine bogmærker og din historik perfekt synkroniseret på alle enheder ved at angive Growser som din standardbrowser.</translation>
 <translation id="5809516625706423866">Der kan ikke oprettes forbindelse til internettet. HTTP 401 (uautoriseret). Tjek din proxykonfiguration.</translation>
 <translation id="95980832839683236">Gør websites hurtigere ved hjælp af Braves V8-maskine, men gør Growser en smule mindre modstandsdygtig over for angreb. Denne indstilling er deaktiveret.</translation>
 <translation id="1224606669200461217">For at bruge og gemme Growser-data på din Growser-konto skal du opdatere Growser</translation>
@@ -563,12 +563,12 @@ Nye bogmærker kan ikke gemmes på din konto, før du sletter nogle. Hvis du log
 <translation id="2332301637111071062">Din organisation sletter Growser-data, når de ikke har været i brug i <ph name="TIMEOUT_DURATION"/>. Disse data kan omfatte historik, Autofyld og downloads.</translation>
 <translation id="1008530050039597147">Growser skal have kameratilladelse for at bruge dette website</translation>
 <translation id="1197672524850678392">Growser kunne ikke startes. Prøv igen.</translation>
-<translation id="5020151688261063547">Spørg om alt, lige der hvor du er, med Gemini i Brave</translation>
+<translation id="5020151688261063547">Spørg om alt, lige der hvor du er, med Gemini i Growser</translation>
 <translation id="3625983487600668413">Behold Growser på din applinje, så du hurtigt kan tilgå appen</translation>
 <translation id="5755581833598928580">Brug Growser, hver gang du klikker på links i beskeder, dokumenter og andre apps</translation>
 <translation id="7216228761061470870">Når du bruger Billedsøgning på en computer, sendes sidetitlen, webadressen og indholdet, herunder PDF-filer, til serveren</translation>
 <translation id="5516268345616100622">Jobliste – Growser</translation>
-<translation id="2416155625082200759"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere på alle dine enheder.</translation>
+<translation id="2416155625082200759"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere på alle dine enheder.</translation>
 <translation id="1871621397473741084">Begynd at browse med det samme: Growser kan nu åbnes, når Windows starter.</translation>
 <translation id="7274695763216404502">Panelet er fastgjort. Brug billedsøgning igen via værktøjslinjen</translation>
 <translation id="7288567540154601580">Faner og udvidelser</translation>
@@ -584,7 +584,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="7352651011704765696">Noget gik galt</translation>
 <translation id="6085660187823915017">Hvis du vil have Growser-opdateringer fremover, skal du have macOS 13 eller nyere. Denne computer anvender macOS 12.</translation>
 <translation id="2865744782251083875">Du har ikke besøgt websitet for nylig. Growser har fjernet <ph name="PERMISSION_1"/> og <ph name="PERMISSION_2"/>.</translation>
-<translation id="3871306442916198768">Vis Gemini i Brave i systembakken</translation>
+<translation id="3871306442916198768">Vis Gemini i Growser i systembakken</translation>
 <translation id="4104934885375476361">Growser er nu din standardbrowser</translation>
 <translation id="7951152294775418909">Fortsæt, hvor du slap: Growser gendanner dine faner, hver gang du genstarter. For at deaktivere dette skal du gå til</translation>
 <translation id="3191314862567596053">Importér adgangskoder til Growser</translation>
@@ -619,7 +619,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="4784414698887946907">Denne handling sletter dine browserdata på denne enhed. Hvis du senere vil hente dine data igen, skal du logge ind på Growser som <ph name="USER_EMAIL"/>.</translation>
 <translation id="7747138024166251722">Installationsprogrammet kunne ikke oprette en midlertidig mappe. Tjek, om der er tilstrækkelig diskplads, og om der er tilladelse til at installere software.</translation>
 <translation id="8543787950557226450">Nulstil til standardversionen af Growser</translation>
-<translation id="4859382825808018797">For at beskytte dit arbejde i Brave kan din organisation se eller administrere visse oplysninger, når du er logget ind i Brave.</translation>
+<translation id="4859382825808018797">For at beskytte dit arbejde i Growser kan din organisation se eller administrere visse oplysninger, når du er logget ind i Growser.</translation>
 <translation id="4976450819672499783">Angiv Growser som standard, og fastgør den til proceslinjen</translation>
 <translation id="1978509466033734608">Gør Growser hurtigere</translation>
 <translation id="8607348724092473027"><ph name="PAGE_TITLE"/> – Growser Origin Canary</translation>
@@ -636,7 +636,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="5687542525349822727">Angiv Growser som standardbrowser</translation>
 <translation id="6396151137840491551">Growser opgraderer automatisk usikre forbindelser til HTTPS, når det er muligt</translation>
 <translation id="2925193881330501265">Du loggede ind på Growser som <ph name="USER_EMAIL_ADDRESS"/>. Brug den samme konto til at logge ind igen.</translation>
-<translation id="3744141798014187630"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere på alle dine enheder.</translation>
+<translation id="3744141798014187630"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere på alle dine enheder.</translation>
 <translation id="6915252145142862992">Dette er en sekundær installation af Growser, og den kan ikke gøres til din standardbrowser.</translation>
 <translation id="7766756101194440006">Få det bedste fra Growser med Growser-appen på din <ph name="DEVICE_TYPE"/></translation>
 <translation id="8004582292198964060">Browser</translation>
@@ -667,12 +667,12 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="1755067029031059271">Growser kan ikke verificere, hvor denne udvidelse kommer fra, og den kan derfor være skadelig. Du bør fjerne udvidelsen fra Growser, så den ikke længere kan se og ændre dine data på de websites, du besøger, bl.a. dine personlige oplysninger.</translation>
 <translation id="8207657266087451193">Hvis et billede ikke har en brugbar beskrivelse, forsøger Growser at angive en for dig. Billederne sendes til Growser, så der kan oprettes beskrivelser. Du kan til enhver tid deaktivere denne funktion i indstillingerne.</translation>
 <translation id="7792526144795244436">Vil du logge ind i Growser med en ny profil?</translation>
-<translation id="784788600549915416"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="784788600549915416"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere fra <ph name="DEVICE"/>.</translation>
 <translation id="183102473074922918">Vis Gemini i Growser i systembakken, og aktivér tastaturgenvejen</translation>
 <translation id="976541154724186511"><ph name="BEGIN_LINK"/>Growser advarer dig<ph name="END_LINK"/> om usikre websites og downloads</translation>
 <translation id="8060549744348950090">Du har ikke besøgt websitet for nylig. Growser har fjernet <ph name="PERMISSION"/>.</translation>
 <translation id="7402663241490331652">Køb, oversæt og identificer det, du ser gennem dit kamera, i Growser-appen til iOS</translation>
-<translation id="4470171586042711152">QR-kode til at logge ind i Brave som <ph name="USER_NAME"/></translation>
+<translation id="4470171586042711152">QR-kode til at logge ind i Growser som <ph name="USER_NAME"/></translation>
 <translation id="8313851650939857356">Opstartsfejl: <ph name="STARTUP_ERROR"/>.</translation>
 <translation id="6098476632210317894">Din organisation lukker Growser, når browseren ikke har været i brug i <ph name="TIMEOUT_DURATION"/>.</translation>
 <translation id="8321888067342493336">Gem som billede</translation>
@@ -973,7 +973,7 @@ Nye bogmærker kan ikke gemmes på din konto, før du sletter nogle. Hvis du log
 <translation id="2901628274067661379">Afinstaller Growser</translation>
 <translation id="4255250495838298167">Growser er ikke længere din standardbrowser. Vil du gøre Growser til din standardbrowser?</translation>
 <translation id="4701159144509985041">Angiv Growser som din standardbrowser</translation>
-<translation id="6674282510961658141">Hold dine adgangskoder, dine bogmærker og din historik perfekt synkroniseret på alle enheder ved at angive Brave som din standardbrowser.</translation>
+<translation id="6674282510961658141">Hold dine adgangskoder, dine bogmærker og din historik perfekt synkroniseret på alle enheder ved at angive Growser som din standardbrowser.</translation>
 <translation id="3496230475498196433">Klik på <ph name="BEGIN_BOLD"/>Ja<ph name="END_BOLD"/> i Windows-notifikationen for at fastgøre Growser til proceslinjen og få hurtig adgang.</translation>
 <translation id="6464100105052674345">Lad Growser køre i baggrunden</translation>
 <translation id="2352438365274458200">Deaktiver, at Growser-apps kører i baggrunden</translation>
@@ -1108,12 +1108,12 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="8301131823005186282">Du kan skifte til din Growser-profil, hvor du allerede er logget ind som <ph name="USER_EMAIL_ADDRESS"/>, for at beskytte dig selv bedre på nettet med dine forældres valg</translation>
 <translation id="5123925581213723416"><ph name="EXISTING_USER"/> er allerede logget ind på denne Growser-profil. Hvis du vil holde din browsing adskilt, kan Growser oprette en ny profil til dig.</translation>
 <translation id="5245337343687738049"><ph name="EXISTING_USER"/> er allerede logget ind.  Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>.</translation>
-<translation id="6515876849360167659"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere fra <ph name="DEVICE"/>.</translation>
-<translation id="6426933876042535118"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere fra <ph name="DEVICE"/>.</translation>
-<translation id="6873553785695129772"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere fra <ph name="DEVICE"/>.</translation>
-<translation id="1882791237209046433"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere på alle dine enheder.</translation>
-<translation id="3931250744648698087"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere på alle dine enheder.</translation>
-<translation id="1150972610527825536"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Brave på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere på alle dine enheder.</translation>
+<translation id="6515876849360167659"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="6426933876042535118"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="6873553785695129772"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere fra <ph name="DEVICE"/>.</translation>
+<translation id="1882791237209046433"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine adgangskoder og meget mere på alle dine enheder.</translation>
+<translation id="3931250744648698087"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine bogmærker og meget mere på alle dine enheder.</translation>
+<translation id="1150972610527825536"><ph name="EXISTING_USER"/> er allerede logget ind. Hvis du vil holde din browsing adskilt, skal du logge ind i Growser på din egen profil som <ph name="USER_EMAIL_ADDRESS"/>. Du kan også se dine gemte oplysninger og meget mere på alle dine enheder.</translation>
 <translation id="3505846189507037800">Log ind i Growser for at blive beskyttet på nettet med dine forældres valg</translation>
 <translation id="4245415605080139322">Mens du er logget ind, kan du bruge dine adgangskoder m.m. fra din Growser-konto i Growser. Du kan ændre dette ved at gå til "Din konto i Growser".</translation>
 <translation id="4193690350845293524">Mens du er logget ind, kan du bruge dine adgangskoder m.m. fra din Growser-konto i Growser. <ph name="SHORTCUT"/> kan ændre dine indstillinger for Growser-tjenester.</translation>
@@ -1137,7 +1137,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="3269077286059832796">Administrer Growser-profiler</translation>
 <translation id="2196448886818266718">Tilføj Growser-profil</translation>
 <translation id="3639562449300546186">Log ind i Growser på din telefon</translation>
-<translation id="3104294450494567786">QR-kode til at logge ind i Brave som <ph name="USER_NAME"/></translation>
+<translation id="3104294450494567786">QR-kode til at logge ind i Growser som <ph name="USER_NAME"/></translation>
 <translation id="7206238340597832726">Fjern denne apps data fra Growser</translation>
 <translation id="7293870171608700967">Growser Origin-apps</translation>
 <translation id="7006775661509770321">Growser bruger dit kamera og din mikrofon.</translation>
@@ -1221,7 +1221,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="6539809395143501177">Hver profil har sine egne Growser-oplysninger som f.eks. bogmærker, historik, adgangskoder m.m.</translation>
 <translation id="6359748718028735107">Hvis du deler en enhed, kan venner og familie browse individuelt og konfigurere Growser hver især</translation>
 <translation id="5254830036533869365">Der findes allerede en Growser-profil med denne konto på enheden</translation>
-<translation id="7671828190113127067">Start Brave</translation>
+<translation id="7671828190113127067">Start Growser</translation>
 <translation id="3109033858283726964">Log ind i Growser</translation>
 <translation id="3194774009976956730">Lad os konfigurere Growser</translation>
 <translation id="3040770245079391216">Brug Growser som standard, og fastgør den</translation>
@@ -1238,7 +1238,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="842256045450098075">Log ud for at fjerne din Growser-konto fra Growser</translation>
 <translation id="6677784415412949473">Hvis du vil fjerne din Growser-konto fra Growser, skal du logge ud af Growser på siden Indstillinger</translation>
 <translation id="8235635284210221172">Indbygget i Growser for at hjælpe dig med at oprette, gemme og automatisk udfylde stærke adgangskoder. Tilføj genvejen for at få nem adgang.</translation>
-<translation id="4166648098896027129">Spørg om alt, lige der hvor du er, med Gemini i Brave</translation>
+<translation id="4166648098896027129">Spørg om alt, lige der hvor du er, med Gemini i Growser</translation>
 <translation id="6168558359146786659">Tilpas Growser</translation>
 <translation id="2789075374752545467">Dine ændringer træder i kraft, næste gang du genstarter Growser.</translation>
 <translation id="519862482935410613">Growser skal have adgang til Bluetooth for at finde 
@@ -1266,7 +1266,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 <translation id="2016973756696213156">Prøv med Gemini i Growser</translation>
 <translation id="3446744630960564006">Åbn hurtigt Gemini i Growser, når du har brug for det</translation>
 <translation id="1985505085856398819">Vis Gemini i Growser i systembakken, og aktivér tastaturgenvejen</translation>
-<translation id="7843414100742664106">Vis Gemini i Brave i systembakken</translation>
+<translation id="7843414100742664106">Vis Gemini i Growser i systembakken</translation>
 <translation id="5912735934441585874">Nem adgang til Gemini i Growser overalt på din enhed, selvom Growser er minimeret.</translation>
 <translation id="635775285804478675">Åbn Gemini i Growser med en tastaturgenvej.</translation>
 <translation id="6403063362298585665">Hvis Gemini i Growser er åben, forbliver sidepanelet åbent, når der oprettes nye faner</translation>
@@ -1321,7 +1321,7 @@ Growser kan ikke gendanne dine præferencer.</translation>
 Hvis denne side ikke fungerer som forventet, kan du prøve at tillade optimering.</translation>
 <translation id="4165169774507632897">Log ind på Growser</translation>
 <translation id="8633519672432360220">Dit arbejde beskyttes i Growser</translation>
-<translation id="2298918301821382774">For at beskytte dit arbejde i Brave kan din organisation se eller administrere visse oplysninger, når du er logget ind i Brave.</translation>
+<translation id="2298918301821382774">For at beskytte dit arbejde i Growser kan din organisation se eller administrere visse oplysninger, når du er logget ind i Growser.</translation>
 <translation id="5670438198445413111">Installationen mislykkedes på grund af en uspecificeret fejl. Download Growser igen.</translation>
 <translation id="4217571870635786043">Diktering</translation>
 </translationbundle>

@@ -194,7 +194,7 @@
 <translation id="132301787627749051">البحث عن صورة الحافظة</translation>
 <translation id="1323433172918577554">إظهار مزيد من الأقسام</translation>
 <translation id="1330449323196174374">الطي على شكل بوابة يسارًا</translation>
-<translation id="2753620827734134329">‏حفظ رقم الإنصاف (Redress number) بأمان في "محفظة Brave"</translation>
+<translation id="2753620827734134329">‏حفظ رقم الإنصاف (Redress number) بأمان في "محفظة Growser"</translation>
 <translation id="133173645041092770">إغلاق الموقع الإلكتروني</translation>
 <translation id="4274264486214599895">‏تشغيل لعبة الديناصور في Growser</translation>
 <translation id="1333989956347591814">قد يظل <ph name="BEGIN_EMPHASIS"/>نشاطك مرئيًا<ph name="END_EMPHASIS"/> للجهات التالية:
@@ -461,7 +461,7 @@
 <translation id="1756555787993603971">يمكنك الآن استخدام بطاقة افتراضية للدفع بشكل أكثر أمانًا باستخدام ميزة "الملء التلقائي".</translation>
 <translation id="1757773103848038814">‏خط Monospace</translation>
 <translation id="3727704638090640904">‏زر تغيير كلمة مرور Growser: انقر على هذا الزر لتغيير كلمة مرور حسابك على Growser.</translation>
-<translation id="593191007871547182">‏تملأ هذه الميزة تلقائيًا رموز التحقّق التي تستخدمها المواقع الإلكترونية لتحسين مستوى الأمان. ويمكن لمتصفّح Brave الحصول على هذه الرموز من حسابك على Gmail. <ph name="BEGIN_LINK"/>مزيد من المعلومات حول هذه الميزة<ph name="LINK_END"/></translation>
+<translation id="593191007871547182">‏تملأ هذه الميزة تلقائيًا رموز التحقّق التي تستخدمها المواقع الإلكترونية لتحسين مستوى الأمان. ويمكن لمتصفّح Growser الحصول على هذه الرموز من حسابك على Gmail. <ph name="BEGIN_LINK"/>مزيد من المعلومات حول هذه الميزة<ph name="LINK_END"/></translation>
 <translation id="1763864636252898013">هذا الخادم لم يتمكن من إثبات أن ذلك <ph name="DOMAIN"/>؛ بل إنه شهادة أمان غير موثوقة من خلال نظام تشغيل جهازك. وربما يكون السبب في ذلك خطأ في التكوين أو مهاجمًا يعترض الاتصال.</translation>
 <translation id="1768211456781949159">‏<ph name="BEGIN_LINK"/>تجربة تشغيل بيانات التشخيص لشبكة Windows<ph name="END_LINK"/>.</translation>
 <translation id="1777422078676229054">تصوير (أرشفة)</translation>
@@ -518,7 +518,7 @@
 <translation id="1871284979644508959">حقل مطلوب</translation>
 <translation id="1871739799120352748">السعر مرتفع</translation>
 <translation id="1874224422119691492">في <ph name="SETTINGS"/>، يمكنك تغيير اختيارك الحالي، وهو استخدام ميزة "قفل الشاشة" لملء كلمات المرور.</translation>
-<translation id="8768609471898592384">‏تم إرسال علامة التبويب إلى Brave على جهاز "<ph name="DEVICE_NAME"/>" • <ph name="USER_EMAIL"/></translation>
+<translation id="8768609471898592384">‏تم إرسال علامة التبويب إلى Growser على جهاز "<ph name="DEVICE_NAME"/>" • <ph name="USER_EMAIL"/></translation>
 <translation id="1875025161375567525">دُرج الصور</translation>
 <translation id="85321348617848915">‏نماذج Growser</translation>
 <translation id="1876399092304384674">حسب التاريخ</translation>
@@ -542,7 +542,7 @@
 <translation id="192020519938775529">{COUNT,plural, =0{بدون}=1{موقع واحد}two{ موقعان (#)}few{# مواقع}many{# موقعًا}other{# موقع}}</translation>
 <translation id="192095259937375524">زر مشاركة علامة التبويب هذه: انقر على هذا الزر لمشاركة علامة التبويب الحالية عن طريق مشاركة الرابط وإنشاء رمز استجابة سريعة وبث المحتوى وغير ذلك.</translation>
 <translation id="1924727005275031552">الجديد</translation>
-<translation id="4527827173940627753">‏يسجّل Brave طريقة استخدامك للميزة، بما في ذلك طلباتك وسلوكك عند قبول الاقتراحات أو تجاهلها</translation>
+<translation id="4527827173940627753">‏يسجّل Growser طريقة استخدامك للميزة، بما في ذلك طلباتك وسلوكك عند قبول الاقتراحات أو تجاهلها</translation>
 <translation id="1932098463447129402">أول يوم لتفعيل الصلاحية</translation>
 <translation id="1935353813610900265">إرسال ملاحظات عن البحث في السجلّ باستخدام الذكاء الاصطناعي</translation>
 <translation id="1935995810530254458">النسخ على أيّ حال</translation>
@@ -596,7 +596,7 @@
 <translation id="2027465737841872819">بلاستيك</translation>
 <translation id="2027707238798802149">البطاقة غير متوفّرة</translation>
 <translation id="2032962459168915086"><ph name="BEGIN_LINK"/>التحقق من الخادم الوكيل والجدار الناري<ph name="END_LINK"/></translation>
-<translation id="1211671941710012208">‏يتم تنفيذ هذه العملية في Brave باستخدام علامات سطر الأوامر التي تم ضبطها يدويًا. ويُرجى العِلم أنّ علامات سطر الأوامر قد تتغيّر في أي وقت ولا يُقدَّم دعم بخصوصها.</translation>
+<translation id="1211671941710012208">‏يتم تنفيذ هذه العملية في Growser باستخدام علامات سطر الأوامر التي تم ضبطها يدويًا. ويُرجى العِلم أنّ علامات سطر الأوامر قد تتغيّر في أي وقت ولا يُقدَّم دعم بخصوصها.</translation>
 <translation id="2033900728810589426">لا يمكن أن يكون الاختصار مطابقًا للكلمة الرئيسية لمزوِّد البحث التلقائي المحددة من قِبل <ph name="DEFAULT_SEARCH_PROVIDER_KEYWORD_POLICY_NAME"/>‏: <ph name="SHORTCUT_NAME"/></translation>
 <translation id="2034971124472263449">الحفظ على أي حال</translation>
 <translation id="2036514476578229158">‏لقد طلبت زيارة هذا الموقع الإلكتروني. يمكن لأحد والدَيك الرد على هذا الطلب في تطبيق Family Link.</translation>
@@ -750,7 +750,7 @@
 <translation id="2268044343513325586">تحسين</translation>
 <translation id="2268966938956566076">بدء التحميل بعد <ph name="MINUTES"/> دقيقة</translation>
 <translation id="2270484714375784793">رقم الهاتف</translation>
-<translation id="2274179746480077483">‏يمكنك ملء المعلومات تلقائيًا من تطبيقات مثل Gmail و"صور Brave". تستنِد هذه الميزة إلى "الذكاء المخصّص".</translation>
+<translation id="2274179746480077483">‏يمكنك ملء المعلومات تلقائيًا من تطبيقات مثل Gmail و"صور Growser". تستنِد هذه الميزة إلى "الذكاء المخصّص".</translation>
 <translation id="2276057643614339130">قاعدة الطباعة</translation>
 <translation id="2277103315734023688">الانتقال إلى الأمام</translation>
 <translation id="2277753418458118549">إظهار تفاصيل الاتصال</translation>
@@ -862,7 +862,7 @@
 <translation id="2469153820345007638">طباعة الصفحات بالترتيب الأساسي</translation>
 <translation id="24699311393038040">ورق (مطلي)</translation>
 <translation id="2471632709106952369">جداول المقارنة</translation>
-<translation id="768574016157037999">‏حفظ "رقم المسافر المعروف" بأمان في "محفظة Brave"</translation>
+<translation id="768574016157037999">‏حفظ "رقم المسافر المعروف" بأمان في "محفظة Growser"</translation>
 <translation id="50589553892093838">‏البيانات الأخرى على Growser</translation>
 <translation id="247903268499247848">لا يُسمح باستخدام أدوات استشعار الإضاءة والحركة</translation>
 <translation id="2479148705183875116">الانتقال إلى الإعدادات</translation>
@@ -1087,7 +1087,7 @@
 <translation id="2905107382358353958">تنبيه متعلّق بإعدادات الدفع الجديدة</translation>
 <translation id="2909946352844186028">تم اكتشاف حدوث تغيير في الشبكة.</translation>
 <translation id="2910062169995917863">انتهت مهلة الجلسة</translation>
-<translation id="7085506453142803285">‏تنطبق إعدادات "محفظة Brave" على المعلومات المحفوظة من Brave</translation>
+<translation id="7085506453142803285">‏تنطبق إعدادات "محفظة Growser" على المعلومات المحفوظة من Growser</translation>
 <translation id="2911973620368911614">رقم تعريف حساب العمل للمستخدم</translation>
 <translation id="2915068235268646559">مُعطّل منذ <ph name="CRASH_TIME"/></translation>
 <translation id="2916038427272391327">إغلاق البرامج الأخرى</translation>
@@ -1153,7 +1153,7 @@
 <translation id="3019738915977809060">‏حفظ بطاقة صعود الطائرة في "محفظة Growser"</translation>
 <translation id="3022959067768579802">مواصلة الكتابة</translation>
 <translation id="3024663005179499861">نوع السياسة غير صحيح</translation>
-<translation id="4839141088909071432">‏رصد Brave تفاصيل شائعة في المواقع الإلكترونية المرتبطة بالتصيّد الاحتيالي أو البرامج الضارة أو عمليات الخداع. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="4839141088909071432">‏رصد Growser تفاصيل شائعة في المواقع الإلكترونية المرتبطة بالتصيّد الاحتيالي أو البرامج الضارة أو عمليات الخداع. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
 <translation id="3027915437837548462">‏صورة SVG</translation>
 <translation id="3030331669969285614">تمنع هذه الميزات التجريبية حدوث أي تغيير قد يؤدي إلى عطل أو أو تُبطله، ولن تتوفّر إلا لفترة محدودة.</translation>
 <translation id="5877261609750575671">‏يمكن أن يساعدك عنوان منزلك في إنجاز المزيد على مختلف خدمات Growser، كالحصول على نتائج بحث واتجاهات في "خرائط Growser" أكثر صلة باهتماماتك. ويمكنك تعديل عنوانك أو حذفه<ph name="BEGIN_LINK"/> في حسابك على Growser ‏(<ph name="ACCOUNT"/>)‏<ph name="END_LINK"/>.</translation>
@@ -1262,7 +1262,7 @@
 <translation id="3207830513221832868">قد يتضمّن الموقع الإلكتروني <ph name="BLOCKED_URL"/> محتوى للكبار</translation>
 <translation id="3207960819495026254">تمت إضافتها إلى الإشارات المرجعية.</translation>
 <translation id="3209034400446768650">إمكانية تحصيل الصفحة للرسوم</translation>
-<translation id="809694630565139611">‏يتم إرسال طلباتك وعناوين الصفحات وعناوين URL إلى Brave، وقد تتم مراجعتها لتحسين ميزة "الملء التلقائي المحسّن"</translation>
+<translation id="809694630565139611">‏يتم إرسال طلباتك وعناوين الصفحات وعناوين URL إلى Growser، وقد تتم مراجعتها لتحسين ميزة "الملء التلقائي المحسّن"</translation>
 <translation id="3212468046572043669">بدأت عملية التنزيل. يمكنك السحب من أعلى الشاشة والنقر على زرّ الرجوع للاطّلاع عليها</translation>
 <translation id="3212581601480735796">تتم مراقبة نشاطك على <ph name="HOSTNAME"/></translation>
 <translation id="3215092763954878852">‏تعذّر استخدام WebAuthn</translation>
@@ -1309,7 +1309,7 @@
 <translation id="7460223968433527020">‏يمكن للمشرف إجراء تغييرات على ملفك الشخصي والمتصفّح عن بُعد، وتحليل المعلومات عن المتصفّح من خلال إعداد التقارير وتنفيذ المهام الضرورية الأخرى. وقد تتم أيضًا إدارة النشاط على هذا الجهاز خارج Growser. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
 <translation id="3273757719652748628">‏تمّ فتح نافذة "حفظ رقم الحساب بصيغة IBAN" بطول الشاشة.</translation>
 <translation id="327455571215090823">ملء تلقائي أكثر ذكاءً مع الحفاظ على خصوصيتك</translation>
-<translation id="5506816339792547413">‏تعديل معلومات جواز السفر بأمان في "محفظة Brave"</translation>
+<translation id="5506816339792547413">‏تعديل معلومات جواز السفر بأمان في "محفظة Growser"</translation>
 <translation id="3281350579597955952">{0,plural, =1{لا تنصح سياسة المشرف بفتح هذا الملف في <ph name="DESTINATION_NAME"/>.}zero{لا تنصح سياسة المشرف بفتح هذه الملفات في <ph name="DESTINATION_NAME"/>.}two{لا تنصح سياسة المشرف بفتح هذين الملفَّين في <ph name="DESTINATION_NAME"/>.}few{لا تنصح سياسة المشرف بفتح هذه الملفات في <ph name="DESTINATION_NAME"/>.}many{لا تنصح سياسة المشرف بفتح هذه الملفات في <ph name="DESTINATION_NAME"/>.}other{لا تنصح سياسة المشرف بفتح هذه الملفات في <ph name="DESTINATION_NAME"/>.}}</translation>
 <translation id="3282085321714087552">أرسلت مؤسستك التي تمتلك النطاق <ph name="ENROLLMENT_DOMAIN"/> بعض المعلومات، مثل الإعدادات أو السياسات، إلى المواقع الإلكترونية التالية.</translation>
 <translation id="3286372614333682499">عمودي</translation>
@@ -1318,7 +1318,7 @@
 <translation id="3293642807462928945">مزيد من المعلومات عن سياسة <ph name="POLICY_NAME"/></translation>
 <translation id="5894665462526421022">‏عرض كلمات المرور وإدارتها في إعدادات متصفِّح Growser</translation>
 <translation id="3299098170013242198">‏تم تفعيل ميزة Windows Hello لملء كلمات المرور.</translation>
-<translation id="3183696044082232280">‏تعذَّر لصق المحتوى خارج سياق Brave المُدار بسبب سياسات مؤسستك</translation>
+<translation id="3183696044082232280">‏تعذَّر لصق المحتوى خارج سياق Growser المُدار بسبب سياسات مؤسستك</translation>
 <translation id="3299720788264079132">حدث خطأ أثناء استخدام ميزة "<ph name="FEATURE_NAME"/>".</translation>
 <translation id="3303176609391916566">30 × 42 بوصة</translation>
 <translation id="3303855915957856445">لم يتم العثور على أي نتائج بحث</translation>
@@ -1584,7 +1584,7 @@
 <translation id="3769584711865378220">يريد <ph name="URL"/> تغيير إذن الوصول إلى الموقع الجغرافي من "تقريبي" إلى "دقيق"</translation>
 <translation id="3772211998634047851">ورق (سندات)</translation>
 <translation id="8247912309816231326">‏<ph name="CREATE_GOOGLE_KEEP_NOTE_FOCUSED_FRIENDLY_MATCH_TEXT"/>: اضغط على مفتاح التبويب (Tab) ثم Enter لإنشاء ملاحظة جديدة في Growser Keep بسرعة.</translation>
-<translation id="5647245195700278791">‏سيتم ربط حساب Pix بحساب <ph name="ACCOUNT_EMAIL"/>. لإيقاف ميزة "رصد رمز Pix"، يُرجى الانتقال إلى <ph name="BEGIN_LINK1"/>إعدادات Brave<ph name="END_LINK1"/>.</translation>
+<translation id="5647245195700278791">‏سيتم ربط حساب Pix بحساب <ph name="ACCOUNT_EMAIL"/>. لإيقاف ميزة "رصد رمز Pix"، يُرجى الانتقال إلى <ph name="BEGIN_LINK1"/>إعدادات Growser<ph name="END_LINK1"/>.</translation>
 <translation id="3780694243617746492">سلّة الإخراج</translation>
 <translation id="3783418713923659662">Mastercard</translation>
 <translation id="3784372983762739446">أجهزة بلوتوث</translation>
@@ -1850,7 +1850,7 @@
 <translation id="4231448684371260244">‫8 × 13 بوصة</translation>
 <translation id="279016548542240532">‏بإمكانك الدفع عبر Pix بدون التبديل بين التطبيقات في Growser</translation>
 <translation id="4238607350028440048">ساعدني في التدرُّب على مقابلة، من خلال طرح أسئلة عليّ كما لو أنّك مدير توظيف</translation>
-<translation id="3325641703531153643">‏حفظ معلومات رخصة القيادة بأمان في "محفظة Brave"</translation>
+<translation id="3325641703531153643">‏حفظ معلومات رخصة القيادة بأمان في "محفظة Growser"</translation>
 <translation id="4239799716689808527">تصنيفات</translation>
 <translation id="424063167283213501">حفظ رقم المسافر المعروف</translation>
 <translation id="4241830393007970744">يتضمّن هذا الموقع الإلكتروني مهاجمِين قد يتمكّنون من خداعك لتثبيت برامج معيَّنة أو الكشف عن بيانات، مثل كلمات المرور أو رقم الهاتف أو أرقام بطاقات الائتمان.</translation>
@@ -1961,7 +1961,7 @@
 <translation id="5221858344642681996">‏للحفاظ على الأمان، لا تسمح مؤسستك بإعادة استخدام كلمات المرور في Growser. ويتمّ تشفير كلمات المرور في Growser لحماية خصوصية المستخدم.</translation>
 <translation id="4409271659088619928">محرّك البحث المستخدَم لديك هو <ph name="DSE"/>. يمكنك الاطّلاع على تعليمات ذلك المحرّك حول حذف سجلّ البحث، إذا كان يوفّر هذه الميزة.</translation>
 <translation id="4409556632583862731">سلسلة محادثات جديدة</translation>
-<translation id="4235960211211581927">‏تعديل معلومات بطاقة التعريف بأمان في "محفظة Brave"</translation>
+<translation id="4235960211211581927">‏تعديل معلومات بطاقة التعريف بأمان في "محفظة Growser"</translation>
 <translation id="4412074349188076601">تم وضع علامة على هذه الإعدادات تشير إلى أنّها قابلة للتثبيت، إلا أنّه لم يتم تقديم أي نسخة لهذه البنية، لذا لا يمكن تثبيتها.</translation>
 <translation id="4412377069090572315">آراء الأشخاص</translation>
 <translation id="4414515549596849729">ملفات تعريف الارتباط وبيانات الموقع الإلكتروني</translation>
@@ -2052,7 +2052,7 @@
 <translation id="5585910165070997524">‏يمكنك الدفع بسرعة أكبر باستخدام Google Pay بعد حفظ بيانات بطاقتك. وللعلم، يتم تشفير معلومات بطاقة الدفع في "محفظة Growser".</translation>
 <translation id="4603727370377253901">حجوزات رحلات الطيران</translation>
 <translation id="8338928872956435647">‏الاطّلاع على معلومات بشأن استخدام متصفّح Growser</translation>
-<translation id="4607879293515681409">‏يمكن لميزة "الملء التلقائي المحسّن" الآن العثور على المعلومات وملؤها، مثل أرقام الرحلات الجوية والمواعيد، من تطبيقات، مثل Gmail و"صور Brave"</translation>
+<translation id="4607879293515681409">‏يمكن لميزة "الملء التلقائي المحسّن" الآن العثور على المعلومات وملؤها، مثل أرقام الرحلات الجوية والمواعيد، من تطبيقات، مثل Gmail و"صور Growser"</translation>
 <translation id="460848736049414407">‏حظَر المشرف عنوان URL هذا</translation>
 <translation id="4610279718074907952">يندرج هذا الموقع الإلكتروني ضمن مجموعة حدّدها <ph name="SET_OWNER"/> ويمكنها الاطّلاع على نشاطك.</translation>
 <translation id="4612631413844865947">حدث خطأ أثناء معالجة طلبك على <ph name="MERCHANT_ORIGIN"/> من خلال <ph name="PAYMENT_APP_ORIGIN"/>.</translation>
@@ -2173,7 +2173,7 @@
 <translation id="4807098396393229769">الاسم المكتوب على البطاقة</translation>
 <translation id="4809079943450490359">تعليمات من مشرف الجهاز:</translation>
 <translation id="4811450222531576619">الاطّلاع على مصدر الصفحة وموضوعها</translation>
-<translation id="1177020771645812087">‏حفظ معلومات المركبة بأمان في "محفظة Brave"</translation>
+<translation id="1177020771645812087">‏حفظ معلومات المركبة بأمان في "محفظة Growser"</translation>
 <translation id="4811918461974803225">‏شعارَي Google Pay وAffirm</translation>
 <translation id="4813512666221746211">حدث خطأ في الشبكة</translation>
 <translation id="4814114628197290459">‏حذف رقم الحساب بصيغة IBAN</translation>
@@ -2310,7 +2310,7 @@
 <translation id="5026121202864677765">أريد كتابة رسالة طلب عمل</translation>
 <translation id="5030338702439866405">جهة الإصدار</translation>
 <translation id="503069730517007720">يلزم شهادة جذر لـ "<ph name="SOFTWARE_NAME"/>" ولكن لم يتم تثبيتها. ينبغي على مشرف تقنية المعلومات أن يلقي نظرة على تعليمات الإعداد لـ "<ph name="SOFTWARE_NAME"/>" لإصلاح تلك المشكلة. <ph name="FURTHER_EXPLANATION"/></translation>
-<translation id="7106879493637631619">‏حفظ "رقم المسافر المعروف" بأمان في "محفظة Brave"</translation>
+<translation id="7106879493637631619">‏حفظ "رقم المسافر المعروف" بأمان في "محفظة Growser"</translation>
 <translation id="503498442187459473">يريد <ph name="HOST"/> استخدام الكاميرا والميكروفون.</translation>
 <translation id="503574301575803523">SRA3</translation>
 <translation id="5039762155821394373">حجم الخط</translation>
@@ -2674,7 +2674,7 @@
 <translation id="5635478143789726479">الأحكام والشروط لدى البائع</translation>
 <translation id="5640474731385449758">تريد الإضافة "<ph name="EXTENSION_NAME"/>" فتح روابط <ph name="PROTOCOL"/> في <ph name="ORIGIN"/> من خلال <ph name="HANDLER_HOSTNAME"/></translation>
 <translation id="5642508497713047">‏التوقيع على قوائم إبطال الشهادات (CRL)</translation>
-<translation id="1058971715947037197">‏تم إرسال علامة التبويب إلى Brave على جهاز "<ph name="DEVICE_NAME"/>"</translation>
+<translation id="1058971715947037197">‏تم إرسال علامة التبويب إلى Growser على جهاز "<ph name="DEVICE_NAME"/>"</translation>
 <translation id="5644090287519800334">‏طباعة الجانب الأول image X shift</translation>
 <translation id="5644128326840674462">إعلان بانر ترويجي</translation>
 <translation id="5645132789250840550">بلاستيك (شبه لامع)</translation>
@@ -2682,7 +2682,7 @@
 <translation id="5648166631817621825">آخر 7 أيام</translation>
 <translation id="5649053991847567735">عمليات التنزيل التلقائية</translation>
 <translation id="5651323159439184939">إدخال الورق عن طريق جرّار</translation>
-<translation id="5987316528511737389">‏تعديل معلومات بطاقة الهوية بأمان في "محفظة Brave"</translation>
+<translation id="5987316528511737389">‏تعديل معلومات بطاقة الهوية بأمان في "محفظة Growser"</translation>
 <translation id="5654927323611874862">مُعرّف تقرير الأعطال الذي تم تحميله:</translation>
 <translation id="5654965123204121933">‏لا يتضمّن عنوان URL سلسلة الاستبدال المطلوبة <ph name="SEARCH_TERMS_REPLACEMENT"/>‏: <ph name="SEARCH_URL"/></translation>
 <translation id="5659593005791499971">البريد الإلكتروني</translation>
@@ -2710,7 +2710,7 @@
 <translation id="5715150588940290235">هل تريد حذف رموز الأمان المحفوظة؟</translation>
 <translation id="5715918316982363436">‫<ph name="TAB_COUNT"/> من <ph name="WINDOW_COUNT"/> على هذا الجهاز</translation>
 <translation id="5716325061445053985">انقر لفتح علامة التبويب على هاتفك</translation>
-<translation id="5576354004856163244">‏يمكنك ملء معلومات بطاقة الدفع تلقائيًا عند إتمام الدفع على الإنترنت. وللعلم، يتم حفظ البطاقات في "محفظة Brave" بشكل آمن.</translation>
+<translation id="5576354004856163244">‏يمكنك ملء معلومات بطاقة الدفع تلقائيًا عند إتمام الدفع على الإنترنت. وللعلم، يتم حفظ البطاقات في "محفظة Growser" بشكل آمن.</translation>
 <translation id="5718326209176373202">إضافة تعليقات توضيحية نصية</translation>
 <translation id="5718601519531438273">يمكن تضمين معلومات مثل جوازات السفر ورخص القيادة</translation>
 <translation id="5720705177508910913">المستخدم الحالي</translation>
@@ -2795,7 +2795,7 @@
 <translation id="5866898949289125849">أنت تطّلع على صفحة أدوات المطوّرين.</translation>
 <translation id="5869405914158311789">لا يمكن الوصول إلى الموقع الإلكتروني هذا</translation>
 <translation id="5869522115854928033">كلمات المرور المحفوظة</translation>
-<translation id="1025941152813277982">‏تعديل "رقم المسافر المعروف" بأمان في "محفظة Brave"</translation>
+<translation id="1025941152813277982">‏تعديل "رقم المسافر المعروف" بأمان في "محفظة Growser"</translation>
 <translation id="5872215789867188990">لم تعُد مجموعة علامات التبويب "<ph name="GROUP_TITLE"/>" متوفّرة</translation>
 <translation id="5872692522325383488">‏تم حفظ رقم الحساب بصيغة IBAN</translation>
 <translation id="5879989559903563723">غير مسموح بهذا الإذن في "وضع الضيف"</translation>
@@ -3124,7 +3124,7 @@
 <translation id="6412543105195503444">مربّع حوار موافقة أحد الوالدَين</translation>
 <translation id="6416877227920300343">EDP</translation>
 <translation id="6418199314628742460">يُرجى التأكّد من أنّ البيانات الشخصية أو المتعلّقة بالعمل تم تخزينها خارج الجهاز.</translation>
-<translation id="4561848316196784217">‏تعديل معلومات المركبة بأمان في "محفظة Brave"</translation>
+<translation id="4561848316196784217">‏تعديل معلومات المركبة بأمان في "محفظة Growser"</translation>
 <translation id="6425092077175753609">متعدد الأبعاد</translation>
 <translation id="6427730057873428458">الطي على شكل بوابة</translation>
 <translation id="6429267199680088961">A4 Tab</translation>
@@ -3448,7 +3448,7 @@
 <translation id="7011763495818914549">بطاقة هوية</translation>
 <translation id="7012363358306927923">China UnionPay</translation>
 <translation id="7013835112918108252">بإمكان الموقع الإلكتروني طلب قفل الماوس واستخدامه</translation>
-<translation id="2871736177221289934">‏يسجّل Brave طريقة استخدامك للميزة، بما في ذلك طلباتك وسلوكك عند قبول الاقتراحات أو تجاهلها</translation>
+<translation id="2871736177221289934">‏يسجّل Growser طريقة استخدامك للميزة، بما في ذلك طلباتك وسلوكك عند قبول الاقتراحات أو تجاهلها</translation>
 <translation id="7014741021609395734">مستوى التكبير أو التصغير</translation>
 <translation id="7016992613359344582">قد يتمّ تحصيل هذه الرسوم لمرة واحدة أو بشكل متكرر، وقد تكون غير واضحة.</translation>
 <translation id="7020464868401003526">‏يتجاوز طول عنوان URL للاختصار الحدّ الأقصى المسموح به، وهو <ph name="MAX_LENGTH"/> حرف.</translation>
@@ -3479,7 +3479,7 @@
 <translation id="7064851114919012435">معلومات الاتصال</translation>
 <translation id="7070144569727915108">إعدادات النظام</translation>
 <translation id="70705239631109039">اتصالك بهذا الموقع تتخلله ثغرات أمنية.</translation>
-<translation id="1544480702884197290">‏يمكنك الآن حفظ طُرق الدفع لملء بيانات البطاقة تلقائيًا عند الدفع في Brave. <ph name="LINK_TEXT"/></translation>
+<translation id="1544480702884197290">‏يمكنك الآن حفظ طُرق الدفع لملء بيانات البطاقة تلقائيًا عند الدفع في Growser. <ph name="LINK_TEXT"/></translation>
 <translation id="7075452647191940183">الطلب كبير جدًا</translation>
 <translation id="7075513071073410194">‏PKCS #1 MD5 مع ترميز RSA</translation>
 <translation id="7075896597860500885">لا يُنصَح بالنسخ من هذا الموقع الإلكتروني.</translation>
@@ -3578,7 +3578,7 @@
 التفاصيل الإضافية:
 <ph name="DEBUG_INFO"/></translation>
 <translation id="7252424535852086046">لحذف هذه البيانات، يُرجى الانتقال إلى إعدادات إدارتها</translation>
-<translation id="4241646169865720085">‏تعديل رقم الإنصاف (Redress number) بأمان في "محفظة Brave"</translation>
+<translation id="4241646169865720085">‏تعديل رقم الإنصاف (Redress number) بأمان في "محفظة Growser"</translation>
 <translation id="7255540419660272073">‏الزر "لا يعجبني": اضغط على مفتاح Enter لفتح نموذج لإرسال ملاحظات مفصّلة حول سبب عدم إعجابك بـ <ph name="THUMBS_DOWN_SUGGESTION_BUTTON_FOCUSED_FRIENDLY_MATCH_TEXT"/></translation>
 <translation id="7256634549594854023">الدُرج الخلفي</translation>
 <translation id="725866823122871198">تعذر إنشاء اتصال خاص بـ <ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/> نظرًا لأن التاريخ والوقت لجهاز الكمبيوتر (<ph name="DATE_AND_TIME"/>) غير صحيحين.</translation>
@@ -3999,7 +3999,7 @@
 <translation id="7956713633345437162">الإشارات المرجعية للجوّال</translation>
 <translation id="7961015016161918242">مطلقًا</translation>
 <translation id="7962467575542381659">جهاز النظام الأساسي</translation>
-<translation id="5335890850142030688">‏سيتوقف Brave عن تأكيد هذا البريد الإلكتروني تلقائيًا على المواقع الإلكترونية المتوافقة.</translation>
+<translation id="5335890850142030688">‏سيتوقف Growser عن تأكيد هذا البريد الإلكتروني تلقائيًا على المواقع الإلكترونية المتوافقة.</translation>
 <translation id="7966803981046576691">نوع حساب المهمة</translation>
 <translation id="7967973398323409409">لا يمكن لأي شخص الاطّلاع على المعلومات التي ملأتها تلقائيًا</translation>
 <translation id="79682505114836835">القيمة "<ph name="VALUE"/>" هي لون سداسي عشري غير صالح.</translation>
@@ -4102,7 +4102,7 @@
 <translation id="8155253549374198915">علامات التبويب المفتوحة مؤخرًا</translation>
 <translation id="7904243652775639741">‏يتضمّن متصفِّح Growser ميزات أمان مدمجة لحمايتك أثناء التصفُّح، مثل ميزة "التصفُّح الآمن من Growser" التي <ph name="BEGIN_LINK"/>رصدت مؤخرًا برامج ضارة<ph name="END_LINK"/> على الموقع الإلكتروني الذي حاولت الانتقال إليه.</translation>
 <translation id="8161095570253161196">استئناف التصفُّح</translation>
-<translation id="4900205713719197017">‏يمكنك تفعيل ميزة "الملء التلقائي" لإكمال عمليات الدفع على الإنترنت بأمان. وللعلم، يتم تشفير معلومات بطاقة الدفع في "محفظة Brave".</translation>
+<translation id="4900205713719197017">‏يمكنك تفعيل ميزة "الملء التلقائي" لإكمال عمليات الدفع على الإنترنت بأمان. وللعلم، يتم تشفير معلومات بطاقة الدفع في "محفظة Growser".</translation>
 <translation id="8163866351304776260">عمل أربعة ثقوب يسارًا</translation>
 <translation id="8164078261547504572">هل تريد تلقّي رسائل إلكترونية عند انخفاض الأسعار؟</translation>
 <translation id="8169175551046720804">لا يمكن ضبط المفاتيح "<ph name="DATA_CONTROLS_KEYS"/>" في القاموس ذاته.</translation>
@@ -4112,7 +4112,7 @@
 <translation id="4351627595884993315">‏يتيح لك Growser حفظ بطاقاتك في حسابك على Growser لأنك سجَّلت الدخول. يمكنك تغيير هذا السلوك في الإعدادات.</translation>
 <translation id="8176440868214972690">أرسل مشرف هذا الجهاز بعض المعلومات، مثل الإعدادات أو السياسات، إلى المواقع الإلكترونية التالية.</translation>
 <translation id="818254048113802060">{0,plural, =1{تم حظر <ph name="FILE_NAME"/> بسبب المحتوى.}zero{تم حظر <ph name="FILE_COUNT"/> ملف بسبب المحتوى.}two{تم حظر ملفَين (<ph name="FILE_COUNT"/>) بسبب المحتوى.}few{تم حظر <ph name="FILE_COUNT"/> ملفات بسبب المحتوى.}many{تم حظر <ph name="FILE_COUNT"/> ملفًا بسبب المحتوى.}other{تم حظر <ph name="FILE_COUNT"/> ملف بسبب المحتوى.}}</translation>
-<translation id="4272901805803707638">‏يمكنك متى شئت تغيير محرك البحث من خلال إعدادات Brave. إذا لم يظهر لك محرك البحث المفضّل لديك، فبإمكانك إجراء بحث من موقعه الإلكتروني. وسيظهر محرك البحث هذا في قائمة محركات البحث التي تمت زيارتها مؤخرًا في إعدادات Brave، ويمكنك ضبطه كمحرك البحث التلقائي.</translation>
+<translation id="4272901805803707638">‏يمكنك متى شئت تغيير محرك البحث من خلال إعدادات Growser. إذا لم يظهر لك محرك البحث المفضّل لديك، فبإمكانك إجراء بحث من موقعه الإلكتروني. وسيظهر محرك البحث هذا في قائمة محركات البحث التي تمت زيارتها مؤخرًا في إعدادات Growser، ويمكنك ضبطه كمحرك البحث التلقائي.</translation>
 <translation id="8188830160449823068">‏تم حفظ رقم الحساب بصيغة IBAN على الجهاز فقط</translation>
 <translation id="8189557652711717875">سيتم استخدام محرك البحث الذي تختاره لتفعيل ميزات مثل البحث عبر شريط العناوين والبحث باستخدام الصور على صفحات الويب.</translation>
 <translation id="8190193880870196235">إذن تديره إحدى الإضافات</translation>
@@ -4186,7 +4186,7 @@
 <translation id="8297545700510100061">يتم استخدام ملفات تعريف الارتباط وبيانات المواقع الإلكترونية الأخرى لتذكُّر بياناتك، مثلاً بهدف تسجيل دخولك أو تقديم إعلانات مخصّصة لك. لإدارة ملفات تعريف الارتباط لجميع المواقع الإلكترونية، يمكنك الانتقال إلى <ph name="SETTINGS"/>.</translation>
 <translation id="8298115750975731693">‏قد يتتطلب Wi-Fi الذي تستخدمه (<ph name="WIFI_NAME"/>) زيارة <ph name="BEGIN_BOLD"/><ph name="LOGIN_URL"/><ph name="END_BOLD"/>.</translation>
 <translation id="8298399736867690281">تم حفظ البطاقة على الجهاز فقط</translation>
-<translation id="7150057276888666361">‏حفظ معلومات بطاقة التعريف بأمان في "محفظة Brave"</translation>
+<translation id="7150057276888666361">‏حفظ معلومات بطاقة التعريف بأمان في "محفظة Growser"</translation>
 <translation id="8301894345671534559">أدخِل الرمز</translation>
 <translation id="830498451218851433">الطي إلى نصفَين</translation>
 <translation id="830868413617744215">تجريبي</translation>
@@ -4334,7 +4334,7 @@
 <translation id="8559762987265718583">تعذر إنشاء اتصال خاص بـ <ph name="BEGIN_BOLD"/><ph name="DOMAIN"/><ph name="END_BOLD"/> نظرًا لأن التاريخ والوقت للجهاز (<ph name="DATE_AND_TIME"/>) غير صحيحين.</translation>
 <translation id="8564182942834072828">مستندات مفصولة/نُسخ مفصولة</translation>
 <translation id="8564466070529550495">البطاقة الافتراضية غير متوفّرة حاليًا، لذا يُرجى إعادة المحاولة لاحقًا.</translation>
-<translation id="6357650538613458024">‏يمكنك مساعدة Brave في فهم النماذج المعقّدة وملئها بشكل أفضل من خلال معالجة البيانات بأمان على خوادم Brave. وللعلم، ستظل معلوماتك خاصة ولا يراجعها أي شخص.</translation>
+<translation id="6357650538613458024">‏يمكنك مساعدة Growser في فهم النماذج المعقّدة وملئها بشكل أفضل من خلال معالجة البيانات بأمان على خوادم Growser. وللعلم، ستظل معلوماتك خاصة ولا يراجعها أي شخص.</translation>
 <translation id="8574570240981266561">تم حذف العنصر</translation>
 <translation id="8577192028579836704">كل خيارات السعر العادي هي ‫<ph name="TYPICAL_PRICE"/></translation>
 <translation id="8577348305244205642">البطاقة الافتراضية غير متوفّرة</translation>
@@ -4398,9 +4398,9 @@
 <translation id="8708134712139312373">السماح للموقع الإلكتروني بطلب الاتصال بأجهزة تتضمّن بلوتوث</translation>
 <translation id="8710842507289500830">شكل الخط</translation>
 <translation id="8712637175834984815">حسنًا</translation>
-<translation id="4328387382326136101">‏أبلَغ Brave للتو عن موقع إلكتروني حاولت زيارته. يُرجى مساعدتنا في تحسين هذه التحذيرات من خلال المشاركة في استطلاع يستغرق دقيقة واحدة.</translation>
+<translation id="4328387382326136101">‏أبلَغ Growser للتو عن موقع إلكتروني حاولت زيارته. يُرجى مساعدتنا في تحسين هذه التحذيرات من خلال المشاركة في استطلاع يستغرق دقيقة واحدة.</translation>
 <translation id="8716983145825913456">حفظ معلومات المركبة بأمان</translation>
-<translation id="3201352891862147498">‏حفظ معلومات جواز السفر بأمان في "محفظة Brave"</translation>
+<translation id="3201352891862147498">‏حفظ معلومات جواز السفر بأمان في "محفظة Growser"</translation>
 <translation id="8718314106902482036">لم تكتمل عملية الدفع</translation>
 <translation id="8719263113926255150"><ph name="ENTITY"/>، <ph name="DESCRIPTION"/>، اقتراح البحث</translation>
 <translation id="8719528812645237045">عمل عدة ثقوب بالأعلى</translation>
@@ -4439,7 +4439,7 @@
 <translation id="8775863327608679820">‏تم فتح قائمة مقدّمي خدمة "الدفع الآجل" (BNPL) المتاح لديهم إمكانية الدفع على أقساط في نصف الشاشة.</translation>
 <translation id="8776789089819232268">جميع طلباتك</translation>
 <translation id="877985182522063539">A4</translation>
-<translation id="5756777435786575965">‏عند تفعيل ميزة "الملء التلقائي المحسّن"، تتم مشاركة بيانات الاستخدام والطلبات وتفاصيل الصفحة مع Brave لتحسين تجربة استخدام ميزة "الملء التلقائي"</translation>
+<translation id="5756777435786575965">‏عند تفعيل ميزة "الملء التلقائي المحسّن"، تتم مشاركة بيانات الاستخدام والطلبات وتفاصيل الصفحة مع Growser لتحسين تجربة استخدام ميزة "الملء التلقائي"</translation>
 <translation id="514805123051954646">‏زر ترجمة الصفحة: انقر على هذا الزر لترجمة هذه الصفحة باستخدام "ترجمة Growser".</translation>
 <translation id="8790007591277257123">إعادة الح&amp;ذف</translation>
 <translation id="8790668801880409584">حفظ معلومات السفر وملؤها</translation>
@@ -4498,7 +4498,7 @@
 <translation id="888169490072887292">أريد البحث عن مطاعم مناسبة للعائلات وتقدّم قوائم طعام للأطفال</translation>
 <translation id="8883863364960302898">‏مجلّد Google Drive</translation>
 <translation id="8884537526797090108">لا يمكن تسجيل الشاشة بسبب المحتوى السري</translation>
-<translation id="4135437686782002023">‏تعديل معلومات رخصة القيادة بأمان في "محفظة Brave"</translation>
+<translation id="4135437686782002023">‏تعديل معلومات رخصة القيادة بأمان في "محفظة Growser"</translation>
 <translation id="8891031436559779793">سيتم إرسال إشعار إليك في حال انخفاض السعر على أي موقع إلكتروني.</translation>
 <translation id="8891727572606052622">وضع الخادم الوكيل غير صالح.</translation>
 <translation id="8894794286471754040">الحافة الطويلة أولًا</translation>
@@ -4735,7 +4735,7 @@
 <translation id="3666543487519182654">‏في حال حفظ هذه البطاقة في "محفظة Growser"، سيتم ملء بياناتها تلقائيًا لإجراء عمليات الشراء من خلال Growser</translation>
 <translation id="979107176848483472">تتم إدارة متصفِّحك وملفك الشخصي من خلال <ph name="DOMAIN"/>.</translation>
 <translation id="981121421437150478">بلا اتصال</translation>
-<translation id="5456048065008297112">‏حفظ معلومات بطاقة الهوية بأمان في "محفظة Brave"</translation>
+<translation id="5456048065008297112">‏حفظ معلومات بطاقة الهوية بأمان في "محفظة Growser"</translation>
 <translation id="983587187183716432">‏زر "<ph name="AI_ENGINE_NAME"/>"، يمكنك الضغط على مفتاح Enter لطرح سؤال في "<ph name="AI_ENGINE_NAME"/>"</translation>
 <translation id="984275831282074731">طرق الدفع</translation>
 <translation id="985199708454569384">‏&lt;p&gt;سيظهر هذا الخطأ إذا كان التاريخ والوقت غير دقيقَيْن في جهاز الكمبيوتر أو الجهاز الجوّال.&lt;/p&gt;
@@ -5570,9 +5570,9 @@
 <translation id="1151858212483238980">‏يمكنك تلقائيًا ملء بيانات البطاقات المحفوظة في "محفظة Growser"</translation>
 <translation id="1205344127823614428">‏يمكنك تلقائيًا ملء بيانات البطاقات المحفوظة في "محفظة Growser".</translation>
 <translation id="5848445080378515710">‏بعد مراجعة طلبك، عليك تسجيل الدخول أو إنشاء حساب باستخدام "<ph name="BNPL_ISSUER_NAME"/>". وسيتم ربط هذا الحساب تلقائيًا في "محفظة Growser".</translation>
-<translation id="8163468049564974856">‏يمكنك تفعيل ميزة "الملء التلقائي" لإكمال عمليات الدفع على الإنترنت بأمان. وللعلم، يتم تشفير معلومات بطاقة الدفع في "محفظة Brave".</translation>
-<translation id="5717281954932320486">‏يمكنك ملء معلومات بطاقة الدفع تلقائيًا عند إتمام الدفع على الإنترنت. وللعلم، يتم حفظ البطاقات في "محفظة Brave" بشكل آمن.</translation>
-<translation id="7055814742378298611">‏يمكنك الآن حفظ طُرق الدفع لملء بيانات البطاقة تلقائيًا عند الدفع في Brave. <ph name="LINK_TEXT"/></translation>
+<translation id="8163468049564974856">‏يمكنك تفعيل ميزة "الملء التلقائي" لإكمال عمليات الدفع على الإنترنت بأمان. وللعلم، يتم تشفير معلومات بطاقة الدفع في "محفظة Growser".</translation>
+<translation id="5717281954932320486">‏يمكنك ملء معلومات بطاقة الدفع تلقائيًا عند إتمام الدفع على الإنترنت. وللعلم، يتم حفظ البطاقات في "محفظة Growser" بشكل آمن.</translation>
+<translation id="7055814742378298611">‏يمكنك الآن حفظ طُرق الدفع لملء بيانات البطاقة تلقائيًا عند الدفع في Growser. <ph name="LINK_TEXT"/></translation>
 <translation id="5977205943292389390">‏سيتم حذف كل رموز الأمان المحفوظة على جهازك وفي حسابك على Growser.</translation>
 <translation id="7170930892977483182">‏سيتم حذف كل رموز الأمان المحفوظة على جهازك وفي "محفظة Growser"</translation>
 <translation id="755360750394433286">‏تم حفظ بطاقتك في حسابك على Growser، ما يسمح لك بملء بياناتها تلقائيًا عند إجراء عمليات شراء مستقبلية</translation>
@@ -5593,7 +5593,7 @@
 <translation id="7077165718541055322">‏إزالة عنوان المنزل من ميزة "الملء التلقائي" في Growser؟</translation>
 <translation id="7756454115562251695">‏إزالة عنوان العمل من ميزة "الملء التلقائي" في Growser؟</translation>
 <translation id="3068798232942246848">‏هل أردت إزالة هذه المعلومات من ميزة "الملء التلقائي" في Growser؟</translation>
-<translation id="967369588715984092">‏سيتوقف Brave عن تأكيد هذا البريد الإلكتروني تلقائيًا على المواقع الإلكترونية المتوافقة.</translation>
+<translation id="967369588715984092">‏سيتوقف Growser عن تأكيد هذا البريد الإلكتروني تلقائيًا على المواقع الإلكترونية المتوافقة.</translation>
 <translation id="7299769361777046949">‏إدارة بطاقات الولاء في "محفظة Growser"</translation>
 <translation id="2903623845283894856">‏يمكنك الآن استخدام العناوين المحفوظة في حسابك على Growser.</translation>
 <translation id="7058709760023777753">‏يمكنك ملء عنوانَي المنزل والعمل تلقائيًا من حسابك على Growser</translation>
@@ -5606,12 +5606,12 @@
 <translation id="3995632180712217177">‏يمكنك استخدام العناوين المحفوظة مع جميع منتجات Growser. لن يؤدي هذا الإجراء إلى تغيير عنوان منزلك الحالي. وسيتم حفظه في حسابك على Growser‏ (<ph name="ACCOUNT"/>).</translation>
 <translation id="2432673835335968473">‏يمكنك استخدام العناوين المحفوظة مع جميع منتجات Growser. لن يؤدي هذا الإجراء إلى تغيير عنوان عملك الحالي. وسيتم حفظه في حسابك على Growser‏ (<ph name="ACCOUNT"/>).</translation>
 <translation id="2024046927213376062">‏يمكن أن تساعدك المعلومات من حسابك على Growser‏ (<ph name="ACCOUNT"/>) في ملء النماذج بشكل أسرع في Growser</translation>
-<translation id="8430499469896241016">‏تملأ هذه الميزة تلقائيًا رموز التحقّق التي تستخدمها المواقع الإلكترونية لتحسين مستوى الأمان. ويمكن لمتصفّح Brave الحصول على هذه الرموز من حسابك على Gmail. <ph name="BEGIN_LINK"/>مزيد من المعلومات حول هذه الميزة<ph name="LINK_END"/></translation>
+<translation id="8430499469896241016">‏تملأ هذه الميزة تلقائيًا رموز التحقّق التي تستخدمها المواقع الإلكترونية لتحسين مستوى الأمان. ويمكن لمتصفّح Growser الحصول على هذه الرموز من حسابك على Gmail. <ph name="BEGIN_LINK"/>مزيد من المعلومات حول هذه الميزة<ph name="LINK_END"/></translation>
 <translation id="9221566509053798696">‏مقدّم خدمة الملء التلقائي على جهازك ليس Growser</translation>
 <translation id="7450759832930378803">‏لتفعيل هذه الإعدادات واستخدام معلومات الدفع من حسابك على Growser، يُرجى الانتقال إلى إعدادات خدمات الملء التلقائي.</translation>
 <translation id="7049940136908665440">‏لتفعيل هذه الإعدادات واستخدام المعلومات من حسابك على Growser، يُرجى الانتقال إلى إعدادات خدمات الملء التلقائي.</translation>
 <translation id="2450019289047528273">‏طُرق الدفع ومعلومات أخرى من "محفظة Growser"</translation>
-<translation id="1125406338060147524">‏تنطبق إعدادات "محفظة Brave" على المعلومات المحفوظة من Brave</translation>
+<translation id="1125406338060147524">‏تنطبق إعدادات "محفظة Growser" على المعلومات المحفوظة من Growser</translation>
 <translation id="5732084028114235391">‏هذا العنوان محفوظ حاليًا في Growser. لاستخدامه في جميع منتجات Growser، عليك حفظه في حسابك على Growser‏، <ph name="ACCOUNT"/>.</translation>
 <translation id="756794566964707799">‏تم حفظ هذا العنوان حاليًا على هذا الجهاز. لاستخدامه في جميع منتجات Growser، عليك حفظه في حسابك على Growser، <ph name="ACCOUNT"/>.</translation>
 <translation id="6935077351544118151">‏يمكنك الآن ملء بطاقات الولاء تلقائيًا من "محفظة Growser"</translation>
@@ -5621,43 +5621,43 @@
 <translation id="5831217499016131155">‏محفظة Growser</translation>
 <translation id="8421746712901926961">‏يمكنك حفظ معلوماتك في "<ph name="GOOGLE_WALLET_TITLE_1"/>" لإنجاز المهام بشكل أسرع، مثل ملء النماذج في جميع منتجات Growser. وبإمكانك <ph name="MANAGE_INFO_LINK"/> في "<ph name="GOOGLE_WALLET_TITLE_2"/>" لحساب <ph name="ACCOUNT"/>.</translation>
 <translation id="4619669610757527494">‏حفظ رخصة القيادة في "محفظة Growser"</translation>
-<translation id="4239215166147486528">‏حفظ معلومات رخصة القيادة بأمان في "محفظة Brave"</translation>
+<translation id="4239215166147486528">‏حفظ معلومات رخصة القيادة بأمان في "محفظة Growser"</translation>
 <translation id="1912750443952232242">‏يجب حفظ بطاقة التعريف في "محفظة Growser"</translation>
-<translation id="8300302621078931927">‏حفظ معلومات بطاقة التعريف بأمان في "محفظة Brave"</translation>
+<translation id="8300302621078931927">‏حفظ معلومات بطاقة التعريف بأمان في "محفظة Growser"</translation>
 <translation id="5447103258548475868">‏حفظ جواز السفر في "محفظة Growser"</translation>
-<translation id="8717177139469452440">‏حفظ معلومات جواز السفر بأمان في "محفظة Brave"</translation>
+<translation id="8717177139469452440">‏حفظ معلومات جواز السفر بأمان في "محفظة Growser"</translation>
 <translation id="760632772920590778">‏حفظ معلومات المركبة في "محفظة Growser"</translation>
-<translation id="4811696127853690432">‏حفظ معلومات المركبة بأمان في "محفظة Brave"</translation>
+<translation id="4811696127853690432">‏حفظ معلومات المركبة بأمان في "محفظة Growser"</translation>
 <translation id="5914185423510719251">‏يجب حفظ رقم KTN في "محفظة Growser"</translation>
-<translation id="5034488401832901795">‏حفظ "رقم المسافر المعروف" بأمان في "محفظة Brave"</translation>
+<translation id="5034488401832901795">‏حفظ "رقم المسافر المعروف" بأمان في "محفظة Growser"</translation>
 <translation id="1449251255954293933">‏حفظ رقم التعويض في "محفظة Growser"</translation>
-<translation id="1330952240988133220">‏حفظ رقم الإنصاف (Redress number) بأمان في "محفظة Brave"</translation>
+<translation id="1330952240988133220">‏حفظ رقم الإنصاف (Redress number) بأمان في "محفظة Growser"</translation>
 <translation id="8393948304336153065">‏ما رأيك في تعديل بيانات رخصة القيادة في "محفظة Growser"؟</translation>
-<translation id="8889525327610245418">‏تعديل معلومات رخصة القيادة بأمان في "محفظة Brave"</translation>
+<translation id="8889525327610245418">‏تعديل معلومات رخصة القيادة بأمان في "محفظة Growser"</translation>
 <translation id="7570524564113479209">‏ما رأيك في تعديل بيانات بطاقة التعريف في "محفظة Growser"؟</translation>
-<translation id="4410614037742891410">‏تعديل معلومات بطاقة التعريف بأمان في "محفظة Brave"</translation>
+<translation id="4410614037742891410">‏تعديل معلومات بطاقة التعريف بأمان في "محفظة Growser"</translation>
 <translation id="3426672782316020729">‏ما رأيك في تعديل بيانات جواز السفر في "محفظة Growser"؟</translation>
-<translation id="3280440382387335343">‏تعديل معلومات جواز السفر بأمان في "محفظة Brave"</translation>
+<translation id="3280440382387335343">‏تعديل معلومات جواز السفر بأمان في "محفظة Growser"</translation>
 <translation id="2124081665399116863">‏ما رأيك في تعديل بيانات المركبة في "محفظة Growser"؟</translation>
-<translation id="6422648598133086441">‏تعديل معلومات المركبة بأمان في "محفظة Brave"</translation>
+<translation id="6422648598133086441">‏تعديل معلومات المركبة بأمان في "محفظة Growser"</translation>
 <translation id="4770909831299304090">‏ما رأيك في تعديل "رقم المسافر المعروف" (KTN) في "محفظة Growser"؟</translation>
-<translation id="5872115357279348603">‏تعديل "رقم المسافر المعروف" بأمان في "محفظة Brave"</translation>
+<translation id="5872115357279348603">‏تعديل "رقم المسافر المعروف" بأمان في "محفظة Growser"</translation>
 <translation id="1732796940245838248">‏ما رأيك في تعديل رقم الإنصاف في "محفظة Growser"؟</translation>
-<translation id="7253051586755429279">‏تعديل رقم الإنصاف (Redress number) بأمان في "محفظة Brave"</translation>
+<translation id="7253051586755429279">‏تعديل رقم الإنصاف (Redress number) بأمان في "محفظة Growser"</translation>
 <translation id="5628060911499153873">‏يمكنك حفظ معلوماتك في "<ph name="IDS_AUTOFILL_GOOGLE_WALLET_TITLE"/>" للحساب <ph name="ACCOUNT"/> لإنجاز المهام بشكل أسرع في جميع منتجات Growser.</translation>
 <translation id="8369722293913575142">‏تعذَّر حفظ هذه المعلومات في "محفظة Growser". وبدلاً من ذلك، تم حفظها في Growser على هذا الجهاز. وسيعرض Growser خيار حفظها في "محفظة Growser" عند استخدامها المرة القادمة.</translation>
 <translation id="3237427677128462778">‏تعذَّر حفظ البيانات في "محفظة Growser"</translation>
 <translation id="9078170656887151974">‏لتقديم اقتراحات وتحسين هذه الميزة، تتم مشاركة عنوان URL للصفحة ومحتواها مع Growser. يمكنك متى شئت تغيير رأيك والتعرُّف على <ph name="LEARN_MORE"/>.</translation>
 <translation id="4954505713046251871">‏لتقديم اقتراحات وتحسين هذه الميزة، تتم مشاركة عنوان URL للصفحة ومحتواها مع Growser</translation>
 <translation id="2905902437192896563">‏يفهم Growser النماذج بشكل أفضل ويمكنه ملء بياناتها تلقائيًا بشكل أسرع</translation>
-<translation id="67310796271265436">‏يمكنك مساعدة Brave في فهم النماذج المعقّدة وملئها بشكل أفضل من خلال معالجة البيانات بأمان على خوادم Brave. وللعلم، ستظل معلوماتك خاصة ولا يراجعها أي شخص.</translation>
+<translation id="67310796271265436">‏يمكنك مساعدة Growser في فهم النماذج المعقّدة وملئها بشكل أفضل من خلال معالجة البيانات بأمان على خوادم Growser. وللعلم، ستظل معلوماتك خاصة ولا يراجعها أي شخص.</translation>
 <translation id="7422908041366284140">‏يمكن لمتصفّح Growser ملء الحقول الصعبة التي قد لا ترصدها ميزة "الملء التلقائي" العادية</translation>
 <translation id="6329742260390895689">‏لملء معلوماتك تلقائيًا، عليك تفعيل الإعداد "استخدام البطاقات في خدمات Growser المختلفة" عبر إعدادات "محفظة Growser"</translation>
 <translation id="5912796581727968237">‏فتح "محفظة Growser"</translation>
 <translation id="5160781056848005130">‏تساعد مشاركة البيانات مع Growser في تطوير ميزة "الملء التلقائي المحسّن"</translation>
-<translation id="8781233757384402598">‏عند تفعيل ميزة "الملء التلقائي المحسّن"، تتم مشاركة بيانات الاستخدام والطلبات وتفاصيل الصفحة مع Brave لتحسين تجربة استخدام ميزة "الملء التلقائي"</translation>
-<translation id="7044265724713929821">‏يسجّل Brave طريقة استخدامك للميزة، بما في ذلك طلباتك وسلوكك عند قبول الاقتراحات أو تجاهلها</translation>
-<translation id="3209071504641569648">‏يتم إرسال طلباتك وعناوين الصفحات وعناوين URL إلى Brave، وقد تتم مراجعتها لتحسين ميزة "الملء التلقائي المحسّن"</translation>
+<translation id="8781233757384402598">‏عند تفعيل ميزة "الملء التلقائي المحسّن"، تتم مشاركة بيانات الاستخدام والطلبات وتفاصيل الصفحة مع Growser لتحسين تجربة استخدام ميزة "الملء التلقائي"</translation>
+<translation id="7044265724713929821">‏يسجّل Growser طريقة استخدامك للميزة، بما في ذلك طلباتك وسلوكك عند قبول الاقتراحات أو تجاهلها</translation>
+<translation id="3209071504641569648">‏يتم إرسال طلباتك وعناوين الصفحات وعناوين URL إلى Growser، وقد تتم مراجعتها لتحسين ميزة "الملء التلقائي المحسّن"</translation>
 <translation id="2410385419742253857">{COUNT,plural, =0{ما مِن مواقع إلكترونية تستخدم ملفات تعريف ارتباط.}=1{‏ملفات تعريف ارتباط من موقع إلكتروني واحد (لن يتم تسجيل الخروج من حسابكِ على Growser)}two{‏ملفات تعريف ارتباط من موقعَين إلكترونيَّين (لن يتم تسجيل الخروج من حسابك على Growser)}few{‏ملفات تعريف ارتباط من # مواقع إلكترونية (لن يتم تسجيل الخروج من حسابك على Growser)}many{‏ملفات تعريف ارتباط من # موقعًا إلكترونيًا (لن يتم تسجيل الخروج من حسابك على Growser)}other{‏ملفات تعريف ارتباط من # موقع إلكتروني (لن يتم تسجيل الخروج من حسابك على Growser)}}</translation>
 <translation id="3410151451624226773">‏يمكنك إدارتها في "مدير كلمات المرور في Growser"</translation>
 <translation id="5224107321793121921">‏يمكنك إدارة هذه البيانات في حسابك على Growser</translation>
@@ -5673,7 +5673,7 @@
     <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
 <translation id="5164928537947209380">‏قد تكون هذه الأداة التجريبية المستندة إلى الذكاء الاصطناعي غير دقيقة في بعض الأحيان. وللمساعدة في تحسينها، يتم إرسال محتواك إلى Growser.
     <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
-<translation id="3419981648784795212">‏تعذَّر لصق المحتوى خارج سياق Brave المُدار بسبب سياسات مؤسستك</translation>
+<translation id="3419981648784795212">‏تعذَّر لصق المحتوى خارج سياق Growser المُدار بسبب سياسات مؤسستك</translation>
 <translation id="1351458950091269256">‏يستخدم هذا الإعلان العديد من الموارد لجهازك، لذلك أزاله متصفِّح Growser.</translation>
 <translation id="4366714044424353289">‏قد يتضمّن حسابك على Growser نماذج أخرى من سجلّ التصفّح على <ph name="BEGIN_LINK_GMA"/>myactivity.google.com<ph name="END_LINK_GMA"/></translation>
 <translation id="5626844006416355146">‏قد يتضمّن حسابك على Growser <ph name="BEGIN_LINK_GAA"/>نشاطك على تطبيقات Gemini<ph name="END_LINK_GAA"/></translation>
@@ -5839,7 +5839,7 @@
 <translation id="7571813784389228510">‏"وضع AI" من Growser</translation>
 <translation id="3415471717466570460">‏يتم إرسال عمليات البحث وأفضل النتائج المطابِقة ومحتوى الصفحات إلى Growser، وقد يطّلع عليها فريق من المراجعين لتحسين هذه الميزة. هذه ميزة تجريبية وقد تخطئ في بعض الأحيان.</translation>
 <translation id="9103366036378878818">‏رابط نصيحة من Growser: يمكنك الضغط على مفتاح Enter للاطّلاع على <ph name="IPH_LINK_FOCUSED_LINK_TEXT"/></translation>
-<translation id="2097698842685899280">‏رصد Brave تفاصيل شائعة في المواقع الإلكترونية المرتبطة بالتصيّد الاحتيالي أو البرامج الضارة أو عمليات الخداع. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
+<translation id="2097698842685899280">‏رصد Growser تفاصيل شائعة في المواقع الإلكترونية المرتبطة بالتصيّد الاحتيالي أو البرامج الضارة أو عمليات الخداع. <ph name="BEGIN_LINK"/>مزيد من المعلومات<ph name="END_LINK"/></translation>
 <translation id="319854178761292593">‏بسَّط Growser عرض هذه الصفحة لتسهيل قراءتها. استرَدّ Growser الصفحة الأصلية عبر اتصال آمن.</translation>
 <translation id="542284143784575620">‏بسَّط Growser عرض هذه الصفحة لتسهيل قراءتها. استرَدّ Growser الصفحة الأصلية عبر اتصال غير آمن.</translation>
 <translation id="5826875044227298275">‏لقد أدخلت للتو كلمة مرورك في موقع إلكتروني مريب. لحماية حساباتك، يقترح متصفِّح Growser التحقّق من كلمات المرور المحفوظة.</translation>
@@ -5876,7 +5876,7 @@
 <translation id="2867186026859663748">‏يتعذّر ضبط هذه السياسة على مستوى الملف الشخصي على Growser وسيتم تجاهلها.</translation>
 <translation id="277370491433906876">‏تم تجاهل هذه السياسة لأنّ المستخدم ليس تابعًا للمؤسسة. لكي تسري هذه السياسة، يجب إدارة متصفِّح Growser والملف الشخصي من خلال وحدة تحكُّم المشرف في المؤسسة نفسها.</translation>
 <translation id="1963194198237607890">‏يوفِّر لك إصدار Growser Enterprise Core أداة مركزية لضبط سياسات المتصفِّح من السحابة الإلكترونية</translation>
-<translation id="4553855485042734119">‏يتم تنفيذ هذه العملية في Brave باستخدام علامات سطر الأوامر التي تم ضبطها يدويًا. ويُرجى العِلم أنّ علامات سطر الأوامر قد تتغيّر في أي وقت ولا يُقدَّم دعم بخصوصها.</translation>
+<translation id="4553855485042734119">‏يتم تنفيذ هذه العملية في Growser باستخدام علامات سطر الأوامر التي تم ضبطها يدويًا. ويُرجى العِلم أنّ علامات سطر الأوامر قد تتغيّر في أي وقت ولا يُقدَّم دعم بخصوصها.</translation>
 <translation id="3858407183625528544">‏للحفاظ على الأمان، لا تسمح مؤسستك بإعادة استخدام كلمات المرور في Growser. ويتمّ تشفير كلمات المرور في Growser لحماية خصوصية المستخدم.</translation>
 <translation id="6376948191860056592">‏مزيد من المعلومات عن كيفية حماية كلمات المرور في Growser</translation>
 <translation id="59755378055907482">‏يُوصي Growser بإعادة تحديد كلمة المرور في حال إعادة استخدامها في مواقع إلكترونية أخرى.</translation>
@@ -5886,7 +5886,7 @@
 <translation id="5178006823023208130">‏بموجب القانون الساري في منطقتك، يطلب منك Growser اختيار محرك البحث التلقائي. إنّ محركات البحث هذه رائجة في منطقتك ويتم عرضها بترتيب عشوائي.</translation>
 <translation id="5511256646198860149">‏<ph name="BEGIN_BOLD"/>يتيح لك محرك البحث التلقائي البحث على الإنترنت ويفعِّل ميزات Growser<ph name="END_BOLD"/>، مثل البحث من شريط العناوين ومن الصور على صفحات الويب. قد لا تتوفر إحدى الميزات إذا لم يكن محرك البحث الخاص بك يتيحها.</translation>
 <translation id="652920213589772275">‏يمكنك متى شئت تغيير محرك البحث من خلال إعدادات Growser.</translation>
-<translation id="5113257522679527347">‏يمكنك متى شئت تغيير محرك البحث من خلال إعدادات Brave. إذا لم يظهر لك محرك البحث المفضّل لديك، فبإمكانك إجراء بحث من موقعه الإلكتروني. وسيظهر محرك البحث هذا في قائمة محركات البحث التي تمت زيارتها مؤخرًا في إعدادات Brave، ويمكنك ضبطه كمحرك البحث التلقائي.</translation>
+<translation id="5113257522679527347">‏يمكنك متى شئت تغيير محرك البحث من خلال إعدادات Growser. إذا لم يظهر لك محرك البحث المفضّل لديك، فبإمكانك إجراء بحث من موقعه الإلكتروني. وسيظهر محرك البحث هذا في قائمة محركات البحث التي تمت زيارتها مؤخرًا في إعدادات Growser، ويمكنك ضبطه كمحرك البحث التلقائي.</translation>
 <translation id="2493969470983483123">‏يعمل أحد التطبيقات على منع اتصال Growser بموقع الويب هذا على نحو آمن</translation>
 <translation id="463534029029027294">‏لإنشاء اتصال آمن، فإنك بحاجة إلى ضبط ساعتك بشكل صحيح. وذلك لأن الشهادات التي تستخدمها المواقع الإلكترونية لتعريف نفسها تكون صالحة فقط لفترات محددة من الوقت. فإذا كانت ساعة جهازك غير صحيحة، فلن يتمكن Growser من التحقق من هذه الشهادات.</translation>
 <translation id="6824867187541740495">‏يستخدم <ph name="SITE"/> التشفير عادة لحماية معلوماتك. عندما حاول Growser الاتصال بموقع <ph name="SITE"/> هذه المرة، أرجَع الموقع الإلكتروني بيانات اعتماد غير عادية وغير صحيحة. وقد يحدث هذا عندما يحاول أحد المهاجمين التظاهر بأنه موقع <ph name="SITE"/>، أو إذا قاطعت شاشة تسجيل دخول Wi-Fi الاتصال. ولكن لا تزال معلوماتك آمنة نظرًا لأن Growser أوقَفَ الاتصال قبل تبادل أي بيانات.</translation>
@@ -5924,9 +5924,9 @@
 <translation id="2026207410612449615">‏يمكنك عادةً الاتصال بهذا الموقع الإلكتروني بشكل آمن، ولكن تعذَّر على Growser استخدام اتصال آمن في الوقت الحالي، وقد يحاول أحد المهاجمين التجسس على اتصالك بالشبكة أو تعديله. <ph name="LEARN_MORE"/></translation>
 <translation id="1050989234936720259">‏يمكنك عادةً الاتصال بالمواقع الإلكترونية بشكل آمن، ولكن تعذَّر على Growser استخدام اتصال آمن في الوقت الحالي، وقد يحاول أحد المهاجمين التجسس على اتصالك بالشبكة أو تعديله. <ph name="LEARN_MORE"/></translation>
 <translation id="6692006953064648573">‏يظهر لك هذا التحذير لأنّ هذا الموقع الإلكتروني لا يتوافق مع بروتوكول HTTPS، ولأنّك فعّلت "برنامج الحماية المتقدّمة" من Growser. <ph name="LEARN_MORE"/></translation>
-<translation id="4899042284040818676">‏أبلَغ Brave للتو عن موقع إلكتروني حاولت زيارته. يُرجى مساعدتنا في تحسين هذه التحذيرات من خلال المشاركة في استطلاع يستغرق دقيقة واحدة.</translation>
-<translation id="3665741528710985669">‏تم إرسال علامة التبويب إلى Brave على جهاز "<ph name="DEVICE_NAME"/>"</translation>
-<translation id="2756090547781225493">‏تم إرسال علامة التبويب إلى Brave على جهاز "<ph name="DEVICE_NAME"/>" • <ph name="USER_EMAIL"/></translation>
+<translation id="4899042284040818676">‏أبلَغ Growser للتو عن موقع إلكتروني حاولت زيارته. يُرجى مساعدتنا في تحسين هذه التحذيرات من خلال المشاركة في استطلاع يستغرق دقيقة واحدة.</translation>
+<translation id="3665741528710985669">‏تم إرسال علامة التبويب إلى Growser على جهاز "<ph name="DEVICE_NAME"/>"</translation>
+<translation id="2756090547781225493">‏تم إرسال علامة التبويب إلى Growser على جهاز "<ph name="DEVICE_NAME"/>" • <ph name="USER_EMAIL"/></translation>
 <translation id="3087912139479831463">‏تم إرسال علامة التبويب إلى Growser على "<ph name="DEVICE_NAME"/>"</translation>
 <translation id="2665815858706570232">‏عند تفعيل هذه الميزة، سيشارك Growser علامات التبويب ذات الصلة في هذه النافذة لمساعدتك في الحصول على ردود أكثر دقة.</translation>
 <translation id="4585120639592593231">‏للحصول على ردود أكثر تخصيصًا، سيرسل Growser تلقائيًا محتوى الصفحة وعناوين URL لعلامات التبويب المفتوحة التي قد تكون ذات صلة بسؤالك إلى Growser. ولن يشارك Growser إلّا علامات التبويب من النافذة التي تستخدمها حاليًا.</translation>

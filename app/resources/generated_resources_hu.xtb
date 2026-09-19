@@ -186,7 +186,7 @@ Jelszavait bármikor ellenőrizheti itt: <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1130116586186908674">Osztott nézet létrehozása</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> – a(z) <ph name="GROUP_NAME"/> csoport része</translation>
 <translation id="1130676589211693127">Jobb akkumulátorszint: <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">A lapok megosztásakor a rendszer elküldi az oldalak tartalmát, médiatartalmait és URL-jét a Brave-nak, és biztonsági ellenőrzésen eshetnek át.</translation>
+<translation id="1412403201555978627">A lapok megosztásakor a rendszer elküldi az oldalak tartalmát, médiatartalmait és URL-jét a Growser-nak, és biztonsági ellenőrzésen eshetnek át.</translation>
 <translation id="1133418583142946603">Jelenlegi lap felvétele</translation>
 <translation id="1133751489735776037">Háromszoros kattintás az egérrel</translation>
 <translation id="1136712381129578788">A biztonsági hardverkulcs zárolva van, mert túl sokszor lett megadva helytelen PIN-kód. A zárolás feloldásához távolítsa el a hardverkulcsot, majd csatlakoztassa újra.</translation>
@@ -376,7 +376,7 @@ Jelszavait bármikor ellenőrizheti itt: <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="126768002343224824">16×</translation>
 <translation id="1272079795634619415">Leállítás</translation>
 <translation id="1272508081857842302">A <ph name="BEGIN_LINK"/>támogatott linkek<ph name="END_LINK"/> megnyitása</translation>
-<translation id="7823526956728613125">A Keresési szolgáltatások és a Brave Workspace-alkalmazások (például a Google Drive) közötti kapcsolat kezelése</translation>
+<translation id="7823526956728613125">A Keresési szolgáltatások és a Growser Workspace-alkalmazások (például a Google Drive) közötti kapcsolat kezelése</translation>
 <translation id="1274997165432133392">Cookie-k és egyéb webhelyadatok</translation>
 <translation id="1275936815032730048">indító + jobbra nyíl</translation>
 <translation id="1275963833368139883">A böngészési előzmények közötti kereséskor a válaszok és a keresési eredmények az oldal tartalmán alapulnak. Ezzel jobb eredményeket érhet el.</translation>
@@ -654,7 +654,7 @@ Jelszavait bármikor ellenőrizheti itt: <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1508931164824684991">A webhelyek használhatnak Javascriptet</translation>
 <translation id="1509163368529404530">&amp;Csoport visszaállítása</translation>
 <translation id="1509281256533087115">Bármely <ph name="DEVICE_NAME_AND_VENDOR"/> elérése USB-n keresztül</translation>
-<translation id="2825615584808054779">Sem a Geminivel folytatott beszélgetéseit, sem a Brave Workspace-adatait nem vizsgáljuk felül, és nem használjuk fel őket a generatív AI-modellek továbbfejlesztéséhez sem. A Gemini egy mesterséges intelligencia, amely hibázhat.</translation>
+<translation id="2825615584808054779">Sem a Geminivel folytatott beszélgetéseit, sem a Growser Workspace-adatait nem vizsgáljuk felül, és nem használjuk fel őket a generatív AI-modellek továbbfejlesztéséhez sem. A Gemini egy mesterséges intelligencia, amely hibázhat.</translation>
 <translation id="1510238584712386396">Indító</translation>
 <translation id="1510341833810331442">Webhelyek nem menthetnek adatokat az eszközére</translation>
 <translation id="1510882959204224895">Megnyitás ablakban</translation>
@@ -748,7 +748,7 @@ Jelszavait bármikor ellenőrizheti itt: <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1581962803218266616">Megjelenítés a Finderben</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>] törlése</translation>
 <translation id="1583127975413389276">A(z) <ph name="LANGUAGE"/> nyelv feldolgozása helyben, offline történik</translation>
-<translation id="491276955533054201">Először kapcsolja be a Brave automatikus böngészés funkcióját ezen az eszközön</translation>
+<translation id="491276955533054201">Először kapcsolja be a Growser automatikus böngészés funkcióját ezen az eszközön</translation>
 <translation id="1587275751631642843">&amp;JavaScript-konzol</translation>
 <translation id="1588438908519853928">Normál</translation>
 <translation id="1588772269240419305">Logó és név módosításainak áttekintése</translation>
@@ -1157,7 +1157,7 @@ Jelszavait bármikor ellenőrizheti itt: <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1892341345406963517">Üdvözöljük, <ph name="PARENT_NAME"/>!</translation>
 <translation id="1892453608039100484">1. Kattintson az alábbi <ph name="BUTTON_LABEL"/> gombra. Kattintson a Windows beállításaiban megtalálható <ph name="BUTTON_2"/> gombra.</translation>
 <translation id="1895658205118569222">Kikapcsolás</translation>
-<translation id="1189523243806849236">A csevegéseket átnézzük és felhasználjuk a Brave AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1189523243806849236">A csevegéseket átnézzük és felhasználjuk a Growser AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="1897120393475391208">Erős jelszót használjon</translation>
 <translation id="1897860317037652061">Sikertelen ellenőrzés</translation>
 <translation id="1898804291554630487">Tegyen fel kérdést az oldalról</translation>
@@ -1166,7 +1166,7 @@ Jelszavait bármikor ellenőrizheti itt: <ph name="GOOGLE_PASSWORD_MANAGER"/>.</
 <translation id="1901213235765457754">Kérje meg a rendszergazdát, hogy frissítse ezt az alkalmazást</translation>
 <translation id="1901303067676059328">Össz&amp;es kiválasztása</translation>
 <translation id="1901760057081700494">A jelenlegi időzóna: <ph name="TIME_ZONE_ENTRY"/>. Az időzóna automatikus frissítéséhez <ph name="BEGIN_LINK"/>kapcsolja be a rendszer helyhozzáférését<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Az otthoni cím segítségével hatékonyabban végezheti el feladatait a Brave-szolgáltatásokban, például relevánsabb keresési találatokat és útvonalterveket kaphat a Brave Térképben. Címét <ph name="BEGIN_LINK"/>Brave-fiókjában<ph name="END_LINK"/> (<ph name="USERNAME"/>) szerkesztheti vagy törölheti.</translation>
+<translation id="3930197956137872864">Az otthoni cím segítségével hatékonyabban végezheti el feladatait a Growser-szolgáltatásokban, például relevánsabb keresési találatokat és útvonalterveket kaphat a Growser Térképben. Címét <ph name="BEGIN_LINK"/>Growser-fiókjában<ph name="END_LINK"/> (<ph name="USERNAME"/>) szerkesztheti vagy törölheti.</translation>
 <translation id="6893464351226208429">A felkeresett URL-eket a Growser-fiókba menti a rendszer</translation>
 <translation id="190530012637606145">Figyelmezteti az összes nem biztonságos kapcsolatra, így a privát intranetre is</translation>
 <translation id="1906181697255754968">A webhelyek általában bizonyos funkciók (például a munkák automatikus mentése) érdekében férnek hozzá az Ön eszközén lévő fájlokhoz és mappákhoz</translation>
@@ -1539,7 +1539,7 @@ Ha kezelni szeretné a fiók beállításait, telepítse eszközére a Family Li
 <translation id="2198625180564913276">A profil hozzáadása folyamatban van. Ez eltarthat néhány percig.</translation>
 <translation id="2198712775285959645">Szerkesztés</translation>
 <translation id="2199298570273670671">Hiba</translation>
-<translation id="2798272130984183944">Kiválaszthatja, hogy a Brave használjon-e közvetlenül az eszközön futó AI-modelleket</translation>
+<translation id="2798272130984183944">Kiválaszthatja, hogy a Growser használjon-e közvetlenül az eszközön futó AI-modelleket</translation>
 <translation id="2200094388063410062">E-mail</translation>
 <translation id="2200781749203116929">ChromeOS-rendszernaplók</translation>
 <translation id="2202391868799679245">Billentyűparancs bekapcsolása</translation>
@@ -1619,7 +1619,7 @@ Ha kezelni szeretné a fiók beállításait, telepítse eszközére a Family Li
 <translation id="225716114209817872">Maximum</translation>
 <translation id="5642482119439119644">Ha a többi eszközéről is szeretne hozzáférni a lapjaihoz, igazolja személyazonosságát. A beállítások között bármikor leállíthatja a szinkronizálást. A Growser az Ön előzményei alapján személyre szabhatja a Keresőt és más szolgáltatásokat.</translation>
 <translation id="22614517036276112">Ez a dokumentum vagy az Ön eszköze nem felel meg szervezete egyes biztonsági irányelveinek. Érdeklődjön rendszergazdájánál arról, hogy mit kell kijavítani.</translation>
-<translation id="1829264724820495616">A munkahelyi cím segítségével hatékonyabban végezheti el feladatait a Brave-szolgáltatásokban, például relevánsabb keresési találatokat és útvonalterveket kaphat a Brave Térképben. Címét <ph name="BEGIN_LINK"/>Brave-fiókjában<ph name="END_LINK"/> (<ph name="USERNAME"/>) szerkesztheti vagy törölheti.</translation>
+<translation id="1829264724820495616">A munkahelyi cím segítségével hatékonyabban végezheti el feladatait a Growser-szolgáltatásokban, például relevánsabb keresési találatokat és útvonalterveket kaphat a Growser Térképben. Címét <ph name="BEGIN_LINK"/>Growser-fiókjában<ph name="END_LINK"/> (<ph name="USERNAME"/>) szerkesztheti vagy törölheti.</translation>
 <translation id="2262477216570151239">Ismétlés előtti késleltetés</translation>
 <translation id="2263371730707937087">Képernyő frissítési gyakorisága</translation>
 <translation id="7829329302663082098">Az Ön visszajelzése fontos számunkra a Growser Cast fejlesztéséhez.
@@ -1765,7 +1765,7 @@ Ha kezelni szeretné a fiók beállításait, telepítse eszközére a Family Li
 <translation id="2373499590298659902">A „0” billentyűvel nyomva tarthatja az egérgombot.</translation>
 <translation id="2373666622366160481">Igazítás a papírhoz</translation>
 <translation id="2375406435414127095">Kapcsolódjon telefonjához</translation>
-<translation id="6612559367203670996">A Brave felhasználja a megosztott lapok tartalmát és URL-jét. Az aktuális lap meg lesz osztva az új csevegésekben. Ezt a beállítást bármikor módosíthatja.</translation>
+<translation id="6612559367203670996">A Growser felhasználja a megosztott lapok tartalmát és URL-jét. Az aktuális lap meg lesz osztva az új csevegésekben. Ezt a beállítást bármikor módosíthatja.</translation>
 <translation id="2376056713414548745">Hangos felolvasás</translation>
 <translation id="2376122016044804363">Megerősítések vágólapra másolásról</translation>
 <translation id="2377667304966270281">Súlyos laphiba</translation>
@@ -3332,7 +3332,7 @@ Ha kezelni szeretné a fiók beállításait, telepítse eszközére a Family Li
 <translation id="3569614820047645079">A Saját meghajtón lévő fájljai automatikusan szinkronizálódnak a Chromebookkal, így internetkapcsolat nélkül is hozzájuk férhet.</translation>
 <translation id="3569617221227793022">A jelenlegi időzóna: <ph name="TIME_ZONE_ENTRY"/>. Ezt a beállítást a rendszergazdája kezeli.</translation>
 <translation id="3569682580018832495">A(z) <ph name="ORIGIN"/> megtekintheti a következő fájlokat és mappákat</translation>
-<translation id="4062501938325597704">A Gemini által az adott feladat során használt oldaltartalmak és URL-ek meg lesznek osztva a Brave-lal, és biztonsági ellenőrzésen eshetnek át.</translation>
+<translation id="4062501938325597704">A Gemini által az adott feladat során használt oldaltartalmak és URL-ek meg lesznek osztva a Growser-lal, és biztonsági ellenőrzésen eshetnek át.</translation>
 <translation id="3571734092741541777">Beállítás</translation>
 <translation id="3575121482199441727">Engedélyezés ezen a webhelyen</translation>
 <translation id="3575224072358507281">Gyűjtse a Measurement Lab IP-cím- és hálózatmérési eredményeit a szolgáltatás adatvédelmi irányelveinek megfelelően (measurementlab.net/privacy)</translation>
@@ -5010,7 +5010,7 @@ kicsinyítéshez pedig a Ctrl + Alt + Fényerő csökkentése billentyűpara
 <translation id="485480310608090163">További beállítások és engedélyek</translation>
 <translation id="4857304314344645169">Megtekintheti bármilyen probléma részletes magyarázatát</translation>
 <translation id="1913048435257025864">Kérdés feltevése a Growser-nak az előző oldalról: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">A rendszer megosztja a jelenlegi lap tartalmát és URL-jét a Brave-lal, hogy Ön relevánsabb válaszokat kaphasson. Böngészés közben hozzáadhat és eltávolíthat lapokat.</translation>
+<translation id="228735844055480091">A rendszer megosztja a jelenlegi lap tartalmát és URL-jét a Growser-lal, hogy Ön relevánsabb válaszokat kaphasson. Böngészés közben hozzáadhat és eltávolíthat lapokat.</translation>
 <translation id="485806788160414322">Médiatartalom lejátszása vagy szüneteltetése</translation>
 <translation id="4858913220355269194">Foci</translation>
 <translation id="4860012864737017059">Legutóbbi lap</translation>
@@ -5345,7 +5345,7 @@ kicsinyítéshez pedig a Ctrl + Alt + Fényerő csökkentése billentyűpara
 <translation id="5112577000029535889">Fejlesz&amp;tői eszközök</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 fájl áthelyezve}other{{NUM_OF_FILES} fájl áthelyezve}}</translation>
 <translation id="511313294362309725">Gyors párosítás bekapcsolása</translation>
-<translation id="6409962091529734959">További információ a Brave automatikus böngészés funkciójáról</translation>
+<translation id="6409962091529734959">További információ a Growser automatikus böngészés funkciójáról</translation>
 <translation id="51143538739122961">Helyezze be a biztonsági hardverkulcsot, majd érintse meg</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">H&amp;ang mentése másként...</translation>
@@ -5388,7 +5388,7 @@ kicsinyítéshez pedig a Ctrl + Alt + Fényerő csökkentése billentyűpara
 <translation id="5146235736676876345">Saját jelszó kiválasztása</translation>
 <translation id="5146896637028965135">Rendszerhang</translation>
 <translation id="5147113439721488265">Javaslat</translation>
-<translation id="5897101208018277582">Linkek küldéséhez igazolja személyazonosságát. Akkor küldhet át linkeket, ha mindkét eszközön ugyanabba a Brave-fiókba van bejelentkezve.</translation>
+<translation id="5897101208018277582">Linkek küldéséhez igazolja személyazonosságát. Akkor küldhet át linkeket, ha mindkét eszközön ugyanabba a Growser-fiókba van bejelentkezve.</translation>
 <translation id="5148285448107770349">A jelszónak legalább 8 karakterből kell állnia.</translation>
 <translation id="5149602533174716626">Videóképkocka másolása</translation>
 <translation id="5150254825601720210">Netscape tanúsítvány - SSL-szerver neve</translation>
@@ -6077,7 +6077,7 @@ Győződjön meg arról, hogy nem ad ki bizalmas adatokat.</translation>
 <translation id="5713158217420111469">Csatlakozva – <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Inverz</translation>
 <translation id="5714100381896040477">Mozgás korlátozása a képernyőn</translation>
-<translation id="8277434106940718633">Sem a Geminivel folytatott beszélgetéseit, sem a Brave Workspace-adatait nem vizsgáljuk felül, és nem használjuk fel őket a generatív AI-modellek továbbfejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. Előfordulhat, hogy egyes tartalmak nem mindenki számára megfelelők.</translation>
+<translation id="8277434106940718633">Sem a Geminivel folytatott beszélgetéseit, sem a Growser Workspace-adatait nem vizsgáljuk felül, és nem használjuk fel őket a generatív AI-modellek továbbfejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. Előfordulhat, hogy egyes tartalmak nem mindenki számára megfelelők.</translation>
 <translation id="5719854774000914513">A webhelyek engedélyt kérhetnek a HID-eszközökhöz való csatlakozásra</translation>
 <translation id="5720729194423017301">Webhelyek és keresőmotorok gyorsparancsai</translation>
 <translation id="572155275267014074">Android-beállítások</translation>
@@ -7012,7 +7012,7 @@ Győződjön meg arról, hogy nem ad ki bizalmas adatokat.</translation>
 <translation id="6464825623202322042">Ezen az eszközön</translation>
 <translation id="6465841119675156448">Internet nélkül</translation>
 <translation id="6466258437571594570">A webhelyek nem zavarhatják meg, amikor értesítések küldésére kérdeznek rá</translation>
-<translation id="1673835407889847350">Igazolja személyazonosságát, hogy hozzáadhasson jelszavakat, és az összes eszközén hozzájuk férhessen Brave-fiókjával.</translation>
+<translation id="1673835407889847350">Igazolja személyazonosságát, hogy hozzáadhasson jelszavakat, és az összes eszközén hozzájuk férhessen Growser-fiókjával.</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> vizsgálata</translation>
 <translation id="6467304607960172345">A teljes képernyős videók optimalizálása</translation>
 <translation id="6467377768028664108">Ezzel a következőket engedélyezi a(z) <ph name="DEVICE_TYPE"/> eszköznek:</translation>
@@ -7025,7 +7025,7 @@ Győződjön meg arról, hogy nem ad ki bizalmas adatokat.</translation>
 <translation id="6470823736074966819">Értesítések elnémítása</translation>
 <translation id="6472893788822429178">A Kezdőlap gomb megjelenítése</translation>
 <translation id="6473315466413288899">Válasszon egy lehetőséget</translation>
-<translation id="6199773995438617867">Továbbiak megtekintése a Brave Naptárban</translation>
+<translation id="6199773995438617867">Továbbiak megtekintése a Growser Naptárban</translation>
 <translation id="6474401088838630457">Kérdezze a Geminit erről</translation>
 <translation id="6474498546677193336">Nem sikerült a megosztás visszavonása, mivel valamelyik alkalmazás használja ezt a mappát. A mappa megosztásának visszavonása a Linux következő leállításakor történik majd meg.</translation>
 <translation id="6474884162850599008">Google Drive-fiók leválasztása</translation>
@@ -7206,7 +7206,7 @@ Győződjön meg arról, hogy nem ad ki bizalmas adatokat.</translation>
 <translation id="6613231539539868591">Megőrzött adatok</translation>
 <translation id="6613267708691765962">Rosszindulatú programok keresése…</translation>
 <translation id="6615455863669487791">Megjelenítés</translation>
-<translation id="5146630705831894319">A Brave Fordító használatának felajánlása más nyelvű webhelyeknél és PDF-eknél</translation>
+<translation id="5146630705831894319">A Growser Fordító használatának felajánlása más nyelvű webhelyeknél és PDF-eknél</translation>
 <translation id="6618013221808317456">A webhelyek nem használhatnak JavaScript-optimalizálást</translation>
 <translation id="6618154741503063152">Nem sikerült a feltöltés. A mellékletek nem engedélyezettek.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7560,7 +7560,7 @@ Győződjön meg arról, hogy nem ad ki bizalmas adatokat.</translation>
 <translation id="6871644448911473373">OCSP válaszadó: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Nyelvek…</translation>
 <translation id="6873156759937047811">PIN-kód:</translation>
-<translation id="5189979109199910058">Ha be van kapcsolva, a Brave Fordító lefordítja a webhelyeket és a PDF-eket a kívánt nyelvre. A webhelyek automatikus lefordítására is alkalmas.</translation>
+<translation id="5189979109199910058">Ha be van kapcsolva, a Growser Fordító lefordítja a webhelyeket és a PDF-eket a kívánt nyelvre. A webhelyek automatikus lefordítására is alkalmas.</translation>
 <translation id="6873571253135628430">Webhelyengedélyek módosítása</translation>
 <translation id="6874986444867497677">A telepítést nem sikerült befejezni. Próbálja újra, vagy zárja be ezt az ablakot.</translation>
 <translation id="6876155724392614295">Kerékpár</translation>
@@ -7848,7 +7848,7 @@ Győződjön meg arról, hogy nem ad ki bizalmas adatokat.</translation>
 <translation id="710224247908684995">Az egyik bővítmény kikapcsolta a Biztonságos Böngészést</translation>
 <translation id="7102832101143475489">A kérelem lejárt</translation>
 <translation id="7103944802169726298">A PC és az átküldő eszköz ugyanazon a Wi-Fi-hálózaton van</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave-tagság</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser-tagság</translation>
 <translation id="7107609441453408294">Hanganyag együttes lejátszása minden hangszórón</translation>
 <translation id="7108338896283013870">Elrejtés</translation>
 <translation id="7108419148561505648">Mentés előtt töltsön ki legalább egy mezőt</translation>
@@ -8219,7 +8219,7 @@ Győződjön meg arról, hogy nem ad ki bizalmas adatokat.</translation>
 <translation id="7395774987022469191">Teljes képernyő</translation>
 <translation id="7396017167185131589">A megosztott mappák itt jelennek meg</translation>
 <translation id="7396845648024431313">A(z) <ph name="APP_NAME"/>  el fog indulni a rendszer indításakor, és akkor is tovább fut a háttérben, ha már bezárta az összes többi <ph name="PRODUCT_NAME"/>-ablakot.</translation>
-<translation id="8572914900293297191">A csevegéseket átnézzük és felhasználjuk a Brave AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. Előfordulhat, hogy egyes tartalmak nem mindenki számára megfelelők. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="8572914900293297191">A csevegéseket átnézzük és felhasználjuk a Growser AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. Előfordulhat, hogy egyes tartalmak nem mindenki számára megfelelők. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="7399045143794278225">A szinkronizálás személyre szabása</translation>
 <translation id="7399616692258236448">Az Ön által engedélyezett webhelyek kivételével a rendszer automatikusan letiltja a helykérelmeket.</translation>
 <translation id="7399802613464275309">Biztonsági ellenőrzés</translation>
@@ -8752,7 +8752,7 @@ Nyomja meg valamelyik hozzárendelt kapcsolót vagy billentyűt a hozzárendelé
 <translation id="7807711621188256451">A(z) <ph name="HOST"/> mindig hozzáférhet az Ön kamerájához</translation>
 <translation id="7810202088502699111">Az előugró ablakok le vannak tiltva ezen az oldalon.</translation>
 <translation id="7810367892333449285">A beírt adatnak a következő formátumban kell lennie: <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ cím<ph name="LPA_2"/>$<ph name="LPA_3"/>nem kötelező egyező azonosító<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">A Brave a Brave nyílt forráskódú projektnek és további <ph name="BEGIN_HIGHLIGHT"/>nyílt forráskódú<ph name="END_HIGHLIGHT"/> szoftvereknek köszönhetően jött létre.</translation>
+<translation id="5014491767627896944">A Growser a Growser nyílt forráskódú projektnek és további <ph name="BEGIN_HIGHLIGHT"/>nyílt forráskódú<ph name="END_HIGHLIGHT"/> szoftvereknek köszönhetően jött létre.</translation>
 <translation id="7811263553491007091">Próbálkozzon újra, vagy válasszon egyet az alábbi korábban létrehozott témák közül.</translation>
 <translation id="7811926937048662341">Kattintson jobb egérgombbal ide, és válassza a „Lapok megjelenítése függőlegesen” lehetőséget.</translation>
 <translation id="7811986034759500329">Beállítás a rendszerbeállításokban</translation>
@@ -8775,7 +8775,7 @@ Nyomja meg valamelyik hozzárendelt kapcsolót vagy billentyűt a hozzárendelé
 <translation id="7826039927887234077"><ph name="INDEX"/>. új AI-téma: <ph name="SUBJECT"/>, <ph name="MOOD"/> hangulattal.</translation>
 <translation id="7826174860695147464">Régi böngészők támogatás – belső</translation>
 <translation id="7826838152281937785">Alsó nézet bezárása</translation>
-<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>A Brave Feltételei<ph name="END_LINK_TERMS"/> és <ph name="BEGIN_LINK_PRIVACY"/>A Gemini-appok adatvédelmi közleménye<ph name="END_LINK_PRIVACY"/> alkalmazandó.</translation>
+<translation id="45690163731419633"><ph name="BEGIN_LINK_TERMS"/>A Growser Feltételei<ph name="END_LINK_TERMS"/> és <ph name="BEGIN_LINK_PRIVACY"/>A Gemini-appok adatvédelmi közleménye<ph name="END_LINK_PRIVACY"/> alkalmazandó.</translation>
 <translation id="7828642077514646543">Hiba: Nem lehet dekódolni a tanúsítványt</translation>
 <translation id="7830276128493844263">A helyadatok ki vannak kapcsolva a rendszer beállításaiban</translation>
 <translation id="7830833461614351956">Átmásol <ph name="NUM_OF_FILES"/> fájlt a(z) <ph name="CLOUD_PROVIDER"/> szolgáltatásba, mielőtt megnyitja őket?</translation>
@@ -9646,7 +9646,7 @@ A kulcsfájlt tartsa biztonságos helyen. Szüksége lesz rá ahhoz, hogy új ve
 <translation id="850399339579925930">Szótárak</translation>
 <translation id="850561044295157831">További információ a Segítség az íráshoz funkcióról</translation>
 <translation id="8505669004895429027">Kis megtakarítás</translation>
-<translation id="869548515244800202">Brave-tagság</translation>
+<translation id="869548515244800202">Growser-tagság</translation>
 <translation id="8507052544157927817">Aláhúzás stílusa</translation>
 <translation id="8507227974644337342">Képernyőfelbontás</translation>
 <translation id="8507443886219296894">Elrejtés ennél a webhelynél</translation>
@@ -9786,7 +9786,7 @@ A kulcsfájlt tartsa biztonságos helyen. Szüksége lesz rá ahhoz, hogy új ve
 <translation id="8619803522055190423">Árnyékvetés</translation>
 <translation id="8620206585293032550">Inaktív lapok megjelenése</translation>
 <translation id="8621979332865976405">Teljes képernyő megosztása</translation>
-<translation id="6089523089512126744">A Brave Kereső AI-módja és az összekapcsolt alkalmazások</translation>
+<translation id="6089523089512126744">A Growser Kereső AI-módja és az összekapcsolt alkalmazások</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">A ChromeOS-eszköz és az összetevő sorozatszámának olvasása</translation>
 <translation id="862542460444371744">Bővítménye&amp;k</translation>
@@ -11344,17 +11344,17 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini a Growser-ban</translation>
 <translation id="1975450474853317621">Megnyitás a Growser böngészőben</translation>
 <translation id="8516824290867275572">A fiókja nem fér hozzá a Gemini a Growser-ban funkcióhoz</translation>
-<translation id="1649234713894562345">A Brave a Brave nyílt forráskódú projektnek és további <ph name="BEGIN_HIGHLIGHT"/>nyílt forráskódú<ph name="END_HIGHLIGHT"/> szoftvereknek köszönhetően jött létre.</translation>
+<translation id="1649234713894562345">A Growser a Growser nyílt forráskódú projektnek és további <ph name="BEGIN_HIGHLIGHT"/>nyílt forráskódú<ph name="END_HIGHLIGHT"/> szoftvereknek köszönhetően jött létre.</translation>
 <translation id="870536819717176711">Amikor úgy dönt, hogy megosztja az aktuális lapot a Geminivel, a rendszer lap teljes tartalmát, médiatartalmát és URL-jét elküldi a Growser-nak.</translation>
-<translation id="1130866111814048607">A lapok megosztásakor a rendszer elküldi az oldalak tartalmát, médiatartalmait és URL-jét a Brave-nak, és biztonsági ellenőrzésen eshetnek át.</translation>
-<translation id="7656790264713095385">Először kapcsolja be a Brave automatikus böngészés funkcióját ezen az eszközön</translation>
+<translation id="1130866111814048607">A lapok megosztásakor a rendszer elküldi az oldalak tartalmát, médiatartalmait és URL-jét a Growser-nak, és biztonsági ellenőrzésen eshetnek át.</translation>
+<translation id="7656790264713095385">Először kapcsolja be a Growser automatikus böngészés funkcióját ezen az eszközön</translation>
 <translation id="8572003230388132401">A Gemini Spark használhatja a Growser automatikus böngészés funkcióját ezen az eszközön a webhelyekkel való interakciókhoz és a feladatok elvégzéséhez az Ön nevében. <ph name="LINK_BEGIN"/>További információ<ph name="LINK_END"/>.</translation>
 <translation id="2732482226802306268">A Gemini Spark csak akkor használhatja az automatikus böngészést ezen az eszközön, ha az eszköz fel van ébresztve, és a Growser fut.</translation>
 <translation id="1982892581799327835">A Gemini Spark ügynökhöz hozzáféréssel rendelkező személyek vezérelhetik az Ön Growser böngészőjét.</translation>
 <translation id="6689939585896001516">A Growser böngészhet Ön helyett</translation>
 <translation id="640233545778658570">A Gemini a Growser-ban az automatikus böngészés funkciót használja az Ön lapjain való munkavégzéshez és az Ön által adott feladatok elvégzéséhez. <ph name="LINK_BEGIN"/>További információ<ph name="LINK_END"/>.</translation>
-<translation id="2740842679402949230">További információ a Brave automatikus böngészés funkciójáról</translation>
-<translation id="3570112771874223231">A Gemini által az adott feladat során használt oldaltartalmak és URL-ek meg lesznek osztva a Brave-lal, és biztonsági ellenőrzésen eshetnek át.</translation>
+<translation id="2740842679402949230">További információ a Growser automatikus böngészés funkciójáról</translation>
+<translation id="3570112771874223231">A Gemini által az adott feladat során használt oldaltartalmak és URL-ek meg lesznek osztva a Growser-lal, és biztonsági ellenőrzésen eshetnek át.</translation>
 <translation id="2314508080153323869">Gemini a Growser-ban</translation>
 <translation id="1910632359330857071">Cseveghet a Gemini a Growser-ban funkcióval, hogy válaszokat, fontos információkat és egyebeket kapjon böngészés közben</translation>
 <translation id="2483218699324586641">A(z) <ph name="FOCUS_TOGGLE_HOTKEY"/> billentyűparanccsal megnyithatja a Gemini a Growser-ban szolgáltatást</translation>
@@ -11384,8 +11384,8 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
     Growser Home alkalmazásban<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">A Growser Jelszókezelővel hozzáférhet azonosítókulcsaihoz ezen az eszközön</translation>
 <translation id="2364302372598204515">Ez nem Growser-fiók. A Growser-ba mentett elemek nem lesznek hozzáférhetők más eszközökön.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave-tagság</translation>
-<translation id="850632091665381275">Brave-tagság</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser-tagság</translation>
+<translation id="850632091665381275">Growser-tagság</translation>
 <translation id="6710172959248731469">Growser-szolgáltatások beállításai</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 elemet csak erre az eszközre ment a rendszer. Ha szeretné más eszközökön is használni, mentse Growser-fiókjába. Ezzel az esetleges ismétlődéseket is eltávolítja.}other{{ITEM_COUNT} elemet csak erre az eszközre ment a rendszer. Ha a többi eszközén is használni szeretné őket, mentse őket Growser-fiókjába. Ezzel az esetleges ismétlődéseket is eltávolítja.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 jelszót csak erre az eszközre ment a rendszer. Ha szeretné más eszközökön is használni, mentse Growser-fiókjába. Ezzel az esetleges ismétlődéseket is eltávolítja.}other{{PASSWORD_COUNT} jelszót csak erre az eszközre ment a rendszer. Ha a többi eszközén is használni szeretné őket, mentse őket Growser-fiókjába. Ezzel az esetleges ismétlődéseket is eltávolítja.}}</translation>
@@ -11399,8 +11399,8 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 könyvjelzőt és egyéb elemeket csak erre az eszközre ment a rendszer. Ha a többi eszközén is használni szeretné őket, mentse őket a Growser-fiókjába.}other{{BOOKMARK_COUNT} könyvjelzőt és egyéb elemeket csak erre az eszközre ment a rendszer. Ha a többi eszközén is használni szeretné őket, mentse őket a Growser-fiókjába.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 elemet csak erre az eszközre ment a rendszer. Ha szeretné más eszközökön is használni, <ph name="BEGIN_LINK"/>mentse a Growser-fiókjába<ph name="END_LINK"/>.}other{{ITEM_COUNT} elemet csak erre az eszközre ment a rendszer. Ha szeretné ezeket más eszközökön is használni, <ph name="BEGIN_LINK"/>mentse őket a Growser-fiókjába<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Használja Growser-fiókját, vagy hozzon létre egy újat</translation>
-<translation id="1896353439080510710">A csevegéseket átnézzük és felhasználjuk a Brave AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
-<translation id="7398815534290329738">A csevegéseket átnézzük és felhasználjuk a Brave AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. Előfordulhat, hogy egyes tartalmak nem mindenki számára megfelelők. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="1896353439080510710">A csevegéseket átnézzük és felhasználjuk a Growser AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
+<translation id="7398815534290329738">A csevegéseket átnézzük és felhasználjuk a Growser AI fejlesztéséhez. A Gemini egy mesterséges intelligencia, amely hibázhat. Előfordulhat, hogy egyes tartalmak nem mindenki számára megfelelők. <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Kezelheti a tevékenységeit<ph name="END_LINK_MANAGE_ACTIVITY"/>, beleértve a tartózkodási helyére vonatkozó adatokat is. <ph name="BEGIN_LINK_LEARN_MORE"/>További információ a választási lehetőségekről<ph name="END_LINK_LEARN_MORE"/>.</translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Ez a bővítmény el van mentve az Ön Growser-fiókjába, de a csak erre az eszközre mentett adatai törlődhetnek}other{Ezek a bővítmények el vannak mentve az Ön Growser-fiókjába, de a csak erre az eszközre mentett adataik törlődhetnek}}</translation>
 <translation id="3523789730715594198">A beállítások között bármikor leállíthatja a szinkronizálást. A Growser az Ön előzményei alapján személyre szabhatja a Keresőt és más szolgáltatásokat.</translation>
 <translation id="8231595707224857577">Szervezete kikapcsolta a lapok mentését az Ön Growser-fiókjában</translation>
@@ -11438,7 +11438,7 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
 <translation id="1024884937839269099">Amikor be van jelentkezve, a <ph name="BEGIN_LINK_GOOGLE"/>további tevékenységtípusokat<ph name="END_LINK_GOOGLE"/> a rendszer elmentheti a Growser-fiókjába. Bármikor törölheti őket.</translation>
 <translation id="6533315466883598769">A Growser Fordító használata</translation>
 <translation id="6010651352520077187">Ha be van kapcsolva, a Growser Fordító lefordítja a webhelyeket a kívánt nyelvre. A webhelyek automatikus lefordítására is alkalmas.</translation>
-<translation id="6873499199714317035">Ha be van kapcsolva, a Brave Fordító lefordítja a webhelyeket és a PDF-eket a kívánt nyelvre. A webhelyek automatikus lefordítására is alkalmas.</translation>
+<translation id="6873499199714317035">Ha be van kapcsolva, a Growser Fordító lefordítja a webhelyeket és a PDF-eket a kívánt nyelvre. A webhelyek automatikus lefordítására is alkalmas.</translation>
 <translation id="5911030830365207728">Growser Fordító</translation>
 <translation id="7458168200501453431">A Growser Kereső által használttal megegyező helyesírás-ellenőrzést használ. A begépelt szöveget a böngésző elküldi a Growser-nak.</translation>
 <translation id="8972513834460200407">Kérdezze meg a hálózati rendszergazdától, hogy a tűzfal nem tiltja-e le a Growser szervereiről érkező letöltéseket.</translation>
@@ -11484,7 +11484,7 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
 <translation id="3293574207873361017">Growser-fiók kezelése</translation>
 <translation id="6901130673208235020">A böngészési előzmények közötti kereséskor a böngésző elküldi az előzmények közötti kereséseket, a legjobb egyezések oldaltartalmait, valamint a modell által generált kimeneteket a Growser-nak.</translation>
 <translation id="3178434360326457238">A webhelyek közötti böngészés során az oldalak tartalmát a rendszer titkosítja és az Ön eszközére menti. Ez hatással lehet a Growser teljesítményére.</translation>
-<translation id="8622145666696249878">A Brave Kereső AI-módja és az összekapcsolt alkalmazások</translation>
+<translation id="8622145666696249878">A Growser Kereső AI-módja és az összekapcsolt alkalmazások</translation>
 <translation id="2760679829473121490">Rendszerértesítések megjelenítése a Growser funkcióival és tippjeivel kapcsolatban</translation>
 <translation id="6713316345564743478">Az illetéktelen kézbe került jelszavak előfordulásának ellenőrzéséhez jelentkezzen be Growser-fiókjába</translation>
 <translation id="1342886103232377846">Az illetéktelen kézbe került jelszavak előfordulásának ellenőrzéséhez nyissa meg a Growser Jelszókezelőt</translation>
@@ -11547,7 +11547,7 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
 <translation id="1095879482467973146">Growser Jelszókezelő az interneten</translation>
 <translation id="1368798504801939187">Jelszavait akkor is megtekintheti, ha nem Growser-ot vagy Androidot használ. Ehhez jelentkezzen be a <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> webhelyen.</translation>
 <translation id="829923460755755423">Parancsikon hozzáadása Growser Jelszókezelőhöz</translation>
-<translation id="7244677273667272006">Igazolja személyazonosságát, hogy hozzáadhasson jelszavakat, és az összes eszközén hozzájuk férhessen Brave-fiókjával.</translation>
+<translation id="7244677273667272006">Igazolja személyazonosságát, hogy hozzáadhasson jelszavakat, és az összes eszközén hozzájuk férhessen Growser-fiókjával.</translation>
 <translation id="8189517459248805166">A(z) Ön <ph name="WEBSITE"/> webhelyhez tartozó jelszavát erre az eszközre és Growser-fiókjába is elmentette a rendszer. Honnan szeretné törölni?</translation>
 <translation id="9101265711096405922">Az Ön Growser-fiókjából</translation>
 <translation id="927421426408921503">Áthelyezi a mentett jelszavakat a Growser-fiókjába?</translation>
@@ -11658,7 +11658,7 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         A beállításokat a kártyamenüben kezelheti, illetve megtekinthet további lehetőségeket A Growser személyre szabása szakaszban.</translation>
-<translation id="6474021817475285003">Továbbiak megtekintése a Brave Naptárban</translation>
+<translation id="6474021817475285003">Továbbiak megtekintése a Growser Naptárban</translation>
 <translation id="9066394310994446814">Ez az elem a Growser-szolgáltatások használatával végzett korábbi tevékenységei alapján jelenik meg. A saját adatait a <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> oldalon tekintheti meg és törölheti, illetve itt módosíthatja a beállításokat is.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11689,7 +11689,7 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
 <translation id="6868193750403948178">A Growser személyre szabása</translation>
 <translation id="5009064339929592579">Menti a könyvjelzőt a Growser-fiókja egyik mappájába?</translation>
 <translation id="7400528739136719497">Előfordulhat, hogy egyes Growser-hangok jelenleg nem állnak rendelkezésre</translation>
-<translation id="4857677595331912231">A rendszer megosztja a jelenlegi lap tartalmát és URL-jét a Brave-lal, hogy Ön relevánsabb válaszokat kaphasson. Böngészés közben hozzáadhat és eltávolíthat lapokat.</translation>
+<translation id="4857677595331912231">A rendszer megosztja a jelenlegi lap tartalmát és URL-jét a Growser-lal, hogy Ön relevánsabb válaszokat kaphasson. Böngészés közben hozzáadhat és eltávolíthat lapokat.</translation>
 <translation id="5639212636098910819">A Growser használatának folytatása</translation>
 <translation id="3252169590975855820">Mentett jelszavához a Growser Jelszókezelőben férhet hozzá</translation>
 <translation id="3843323136102787632">Töltse le a Growser-ot ezzel a QR-kóddal, és jelentkezzen be Growser-fiókjába.</translation>
@@ -11736,7 +11736,7 @@ Ide tartozhatnak a telepített szoftverekkel, valamint a fájlokkal, a böngész
 <translation id="1162630940779651724">A lap másik eszközre való elküldéséhez jelentkezzen be a Growser-ba mindkét eszközön</translation>
 <translation id="5388608738812110907">Ha szeretné elküldeni ezt a lapot másik eszközre, jelentkezzen be a Growser-ba az adott eszközön</translation>
 <translation id="4007679133627124999">Ha linkeket szeretne küldeni az eszközök között, győződjön meg arról, hogy mindkettő ugyanabba a Growser-fiókba van bejelentkezve.</translation>
-<translation id="2377999415409519333">Linkek küldéséhez igazolja személyazonosságát. Akkor küldhet át linkeket, ha mindkét eszközön ugyanabba a Brave-fiókba van bejelentkezve.</translation>
+<translation id="2377999415409519333">Linkek küldéséhez igazolja személyazonosságát. Akkor küldhet át linkeket, ha mindkét eszközön ugyanabba a Growser-fiókba van bejelentkezve.</translation>
 <translation id="4986706507552097681">A beállítások között bármikor módosíthatja a szinkronizálni kívánt elemeket. A Growser az Ön előzményei alapján személyre szabhatja a Keresőt és más szolgáltatásokat.</translation>
 <translation id="8002662358897231821">Ha bejelentkezik, könyvjelzőit, előzményeit és egyéb beállításait bármilyen eszközről elérheti. Ráadásul automatikusan bejelentkezik a Growser-szolgáltatásokba.</translation>
 <translation id="3128296144259620504">A Growser-ot automatizált tesztszoftverek irányítják</translation>

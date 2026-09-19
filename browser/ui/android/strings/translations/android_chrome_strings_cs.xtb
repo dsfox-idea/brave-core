@@ -562,7 +562,7 @@ Vaše šifrovaná data mohou číst pouze uživatelé, kteří mají vaši heslo
 <translation id="3384347053049321195">Sdílet obrázek</translation>
 <translation id="3387650086002190359">Stažení souboru <ph name="FILE_NAME"/> se nezdařilo z důvodu chyb systému souborů.</translation>
 <translation id="5654361895804243820">Okna můžete spravovat ve Správci oken Chromu</translation>
-<translation id="4302350545547675750">Spravovat ve Správci hesel Brave</translation>
+<translation id="4302350545547675750">Spravovat ve Správci hesel Growser</translation>
 <translation id="3417835166382867856">Hledat karty</translation>
 <translation id="3430670036890315772">Vypnutím zámku profilu odstraníte uložené informace</translation>
 <translation id="4114256890962999877">Pokud chcete zachovat přístup ke svým heslům, exportujte je, aktualizujte Služby Google Play a poté je importujte zpět do Správce hesel Growser. <ph name="BEGIN_LINK"/>Zobrazit úplné pokyny<ph name="END_LINK"/></translation>
@@ -1020,7 +1020,7 @@ Na stránce <ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> mohou
 <translation id="5316947901395241499">Administrátor ukládání hesel vypnul</translation>
 <translation id="5317780077021120954">Uložit</translation>
 <translation id="989239400026154074">Growser doporučuje prohlížeč Growser</translation>
-<translation id="2334093076041322971">Spravovat v účtu Brave</translation>
+<translation id="2334093076041322971">Spravovat v účtu Growser</translation>
 <translation id="5326246328175179736">Pomocí tohoto účtu se přihlásit nemůžete</translation>
 <translation id="5327248766486351172">Jméno</translation>
 <translation id="5328542107300944283">Použít na webu <ph name="IDENTITY_PROVIDER_ETLD_PLUS_ONE"/></translation>
@@ -1410,7 +1410,7 @@ Některé weby mohou například na tento požadavek reagovat tak, že vám zobr
 <translation id="6885933993535178919">{NUM_SITES,plural, =1{Byl odhlášen odběr oznámení z 1 webu}few{Byl odhlášen odběr oznámení ze # webů}many{Byl odhlášen odběr oznámení z # webu}other{Byl odhlášen odběr oznámení z # webů}}</translation>
 <translation id="6886500155621657325">{ITEMS_COUNT,plural, =1{1 heslo}few{# hesla}many{# hesla}other{# hesel}}</translation>
 <translation id="667636428974305054">Po odhlášení budou z tohoto zařízení odstraněny záložky, hesla a další položky z vašeho účtu Growser.</translation>
-<translation id="5241784838196645561">Pokud chcete používat toto rozšíření, přihlaste se do Chromu. Budete moct taky používat svá hesla a další informace z účtu Brave a ukládat je do něj.</translation>
+<translation id="5241784838196645561">Pokud chcete používat toto rozšíření, přihlaste se do Chromu. Budete moct taky používat svá hesla a další informace z účtu Growser a ukládat je do něj.</translation>
 <translation id="6896758677409633944">Kopírovat</translation>
 <translation id="3677019108032076044">Veškerá data Chromu ve vašem účtu Growser šifrovat pomocí vaší vlastní heslové fráze</translation>
 <translation id="6900532703269623216">Vylepšená ochrana</translation>
@@ -1993,7 +1993,7 @@ Pokud toto nastavení chcete změnit, <ph name="BEGIN_LINK"/>vymažte data prohl
 <translation id="9212845824145208577">Níže už přejít nelze. Zkuste začít níže na stránce.</translation>
 <translation id="9218430445555521422">Nastavit jako výchozí</translation>
 <translation id="9219103736887031265">Obrázky</translation>
-<translation id="142389341645668510">Přizpůsobit Brave</translation>
+<translation id="142389341645668510">Přizpůsobit Growser</translation>
 <translation id="9222198206152536936">Pokud své karty a další položky chcete mít na všech svých zařízeních, přihlaste se jako <ph name="EMAIL"/></translation>
 <translation id="7625138338483121345">Nastavte si Growser jako výchozí prohlížeč</translation>
 <translation id="4596514158372210596">Odstranit vaši aktivitu v Chromu z digitální rovnováhy</translation>
@@ -2227,8 +2227,8 @@ Pokud toto nastavení chcete změnit, <ph name="BEGIN_LINK"/>vymažte data prohl
 
 Na stránce <ph name="BEGIN_LINK"/>history.google.com<ph name="END_LINK"/> mohou být k dispozici další druhy historie prohlížení zaznamenané ve vašem účtu Growser, například vyhledávací dotazy a aktivita z ostatních služeb Growser.</translation>
 <translation id="5105442806410269908">Spravovat další data na Googlu</translation>
-<translation id="3410151451624226773">Spravovat ve Správci hesel Brave</translation>
-<translation id="5224107321793121921">Spravovat v účtu Brave</translation>
+<translation id="3410151451624226773">Spravovat ve Správci hesel Growser</translation>
+<translation id="5224107321793121921">Spravovat v účtu Growser</translation>
 <translation id="7494463409439554205">Otevřít úplnou historii Chromu</translation>
 <translation id="4793864227076242107">Je možné, že se zde nezobrazuje část vaší historie. Pokud chcete vidět celou svou historii Chromu, otevřete ji.</translation>
 <translation id="1133540958407542175">Část vaší historie se zde nemusí zobrazovat. Pokud chcete zobrazit celou historii Chromu, otevřete celou historii Chromu. Na stránce <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/> mohou být k dispozici také další druhy historie prohlížení zaznamenané ve vašem účtu Growser.</translation>
@@ -2374,7 +2374,7 @@ Pokud toto nastavení chcete změnit, <ph name="BEGIN_LINK"/>vymažte data prohl
 <translation id="6191474532784243888">Když se na tenhle web a do Chromu přihlásíte, budete mít k dispozici své záložky a další položky ze zařízení typu <ph name="DEVICE_TYPE"/></translation>
 <translation id="5674288757856435579">Když se na tenhle web a do Chromu přihlásíte, budete mít k dispozici svá hesla a další položky ze zařízení typu <ph name="DEVICE_TYPE"/></translation>
 <translation id="2152295677712126834">Rozšíření <ph name="EXTENSION_NAME"/> chce, abyste se do Chromu přihlásili</translation>
-<translation id="7511412857399434551">Pokud chcete používat toto rozšíření, přihlaste se do Chromu. Budete moct taky používat svá hesla a další informace z účtu Brave a ukládat je do něj.</translation>
+<translation id="7511412857399434551">Pokud chcete používat toto rozšíření, přihlaste se do Chromu. Budete moct taky používat svá hesla a další informace z účtu Growser a ukládat je do něj.</translation>
 <translation id="9082932588344912693">Váš Growser, všude</translation>
 <translation id="7182454109284732832">Pokud svá hesla a další položky chcete mít na všech svých zařízeních, přihlaste se do Chromu jako <ph name="EMAIL"/></translation>
 <translation id="5785325624181446291">Pokud svá hesla a další položky chcete mít na všech svých zařízeních, přihlaste se do Chromu</translation>
@@ -2389,7 +2389,7 @@ Pokud toto nastavení chcete změnit, <ph name="BEGIN_LINK"/>vymažte data prohl
 <translation id="3997531199945265208">Zde si můžete prohlédnout svou historii Chromu</translation>
 <translation id="7392458451088472476">Growser nelze aktualizovat</translation>
 <translation id="4951278105276220905">Historie Chromu</translation>
-<translation id="6868193750403948178">Přizpůsobit Brave</translation>
+<translation id="6868193750403948178">Přizpůsobit Growser</translation>
 <translation id="6491788513991637898">Nastavení, chyba účtu Growser</translation>
 <translation id="72049467167806083">{NUM_IN_PROGRESS,plural, =1{Growser stránku načte, až bude připraven}few{Growser stránky načte, až bude připraven}many{Growser stránky načte, až bude připraven}other{Growser stránky načte, až bude připraven}}</translation>
 <translation id="1975450474853317621">Otevřít v prohlížeči Growser</translation>

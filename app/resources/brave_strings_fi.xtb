@@ -20,7 +20,7 @@
 <translation id="1203500561924088507">Kiitos asennuksesta. Selain pitää käynnistää uudelleen ennen kuin <ph name="BUNDLE_NAME"/> otetaan käyttöön.</translation>
 <translation id="1232234696885483911">Kun avaat kuvahaun, sivun otsikko, URL-osoite ja sisältö (mukaan lukien PDF-tiedostot) lähetetään automaattisesti palvelimelle. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Kun olet kirjautunut sisään, voit käyttää esimerkiksi Growser-tilin salasanoja Braveissa. Jos haluat muuttaa tätä, siirry kohtaan "Tilisi Braveissa".</translation>
-<translation id="583633806828413086">Näytä Gemini in Brave Macin valikkopalkissa</translation>
+<translation id="583633806828413086">Näytä Gemini in Growser Macin valikkopalkissa</translation>
 <translation id="1631493536097460865">Voit valita osan näytöstä Gemini in Braveissa pikanäppäimellä.</translation>
 <translation id="8799570501820813406">Kun tämä välilehti ei ollut aktiivinen, muistia vapautettiin Bravein pitämiseksi nopeana. Voit halutessasi valita, että tämä sivusto ei ole koskaan ei-aktiivinen.</translation>
 <translation id="8767381092474532098">Growser on estänyt tämän latauksen, koska tiedosto on haitallinen</translation>
@@ -149,7 +149,7 @@
 <translation id="7931230852267968641">Organisaatiosi voi nähdä ja hallinnoida selausdataa, esimerkiksi kirjanmerkkejä, historiaa ja salasanoja. Se ei näe muiden Growser-profiilien selausdataa.</translation>
 <translation id="2257221826278123061">Vahvista henkilöllisyytesi, jotta voit käyttää ja tallentaa Growser-dataa tililläsi: <ph name="ACCOUNT_EMAIL"/></translation>
 <translation id="7048234400304379082">Voit poistua Gemini in Braveista tai palata siihen pikanäppäimellä.</translation>
-<translation id="5655607968417451974">Käynnistä Brave</translation>
+<translation id="5655607968417451974">Käynnistä Growser</translation>
 <translation id="7387051847644272380">Asennuksessa ilmeni käyttöjärjestelmävirhe. Lataa Growser uudelleen.</translation>
 <translation id="2648689842065142443">Jos käytät jaettua laitetta, kaverisi ja perheenjäsenesi voivat selata verkkoa erillään ja räätälöidä Braveista juuri itselleen sopivan</translation>
 <translation id="1001521084148238686">Gemini in Growser on helposti käytettävissä laitteella, vaikka Growser olisi pienennettynä.</translation>
@@ -252,7 +252,7 @@
 
           **Ehdota kysymyksiä:** Luo ranskalaisilla viivoilla lista, jossa on 3–5 ajatuksia herättävää kysymystä kuvakaappauksen ymmärtämisen tueksi. Ainakin yhden kysymyksen tulee koskea nimenomaan visuaalista kohdetta, sen asettelua tai sijoittelua.</translation>
 <translation id="5381622442243174305"><ph name="PAGE_TITLE"/> - Growser</translation>
-<translation id="1118754729376002185">Brave tarvitsee pääsyn lähiverkkoon tällä sivustolla</translation>
+<translation id="1118754729376002185">Growser tarvitsee pääsyn lähiverkkoon tällä sivustolla</translation>
 <translation id="3885770153807205175">Kielivalitsin</translation>
 <translation id="6315734375101223238">Yksilöi ja ylläpidä Braveia. Toimenpiteitä vaaditaan. Katso lisätiedot klikkaamalla.</translation>
 <translation id="7130675370997202556">Avaa Growser klikkaamalla nimeäsi ja aloita selaaminen.</translation>
@@ -409,7 +409,7 @@ Jos tämä sivu ei toimi odotetulla tavalla, kokeile sallia optimointi.</transla
 <translation id="1834213228893578875">Growser vapauttaa muistia ei-aktiivisilta välilehdiltä. Näin aktiiviset välilehdet ja muut sovellukset voivat käyttää enemmän tietokoneen resursseja ja Growser pysyy nopeana. Ei-aktiiviset välilehdet aktivoituvat automaattisesti, kun palaat niihin. <ph name="BEGIN_LINK"/>Lue lisää Muistinsäästöstä<ph name="END_LINK"/></translation>
 <translation id="899523323751802352">Jos unohdit tunnuslauseen tai haluat muuttaa asetusta, <ph name="SETTINGS_LINK"/> tilin Growser-data</translation>
 <translation id="82926023981336111">Yksilöi Braveia ja muuta sen asetuksia. Valitse Growser oletusselaimeksi.</translation>
-<translation id="5660546041996455312">Pidä salasanat, kirjanmerkit ja historia synkronoituina kaikilla laitteilla asettamalla Brave oletusselaimeksi.</translation>
+<translation id="5660546041996455312">Pidä salasanat, kirjanmerkit ja historia synkronoituina kaikilla laitteilla asettamalla Growser oletusselaimeksi.</translation>
 <translation id="5809516625706423866">Internetyhteyden muodostaminen ei onnistu. HTTP 401 (ei lupaa). Tarkista välityspalvelimen asetukset.</translation>
 <translation id="95980832839683236">Nopeuttaa sivustoja Bravein V8-moottorilla, mutta heikentää Bravein suojaa hyökkäyksiä vastaan. Tämä asetus on poissa päältä.</translation>
 <translation id="1224606669200461217">Growser-datan käyttö ja tallennus Growser-tilillä edellyttää Bravein päivittämistä</translation>
@@ -584,7 +584,7 @@ Growser ei voi palauttaa asetuksiasi.</translation>
 <translation id="7352651011704765696">Tapahtui jokin virhe</translation>
 <translation id="6085660187823915017">Sinulla on oltava macOS 13 tai uudempi, jotta saat tulevia Bravein päivityksiä. Tällä tietokoneella on macOS 12.</translation>
 <translation id="2865744782251083875">Sivustot, joilla et ole käynyt viime aikoina. Growser poisti nämä luvat: <ph name="PERMISSION_1"/> ja <ph name="PERMISSION_2"/>.</translation>
-<translation id="3871306442916198768">Näytä Gemini in Brave ilmaisinalueella</translation>
+<translation id="3871306442916198768">Näytä Gemini in Growser ilmaisinalueella</translation>
 <translation id="4104934885375476361">Growser on nyt oletusselain</translation>
 <translation id="7951152294775418909">Jatka siitä, mihin jäit: Growser palauttaa välilehdet aina, kun käynnistät sen uudelleen. Voit laittaa asetuksen pois päältä täältä:</translation>
 <translation id="3191314862567596053">Tuo salasanoja Braveiin</translation>
@@ -976,7 +976,7 @@ Uusia kirjanmerkkejä ei voi tallentaa tilillesi, ennen kuin poistat joitakin. J
 <translation id="2901628274067661379">Poista Growser</translation>
 <translation id="4255250495838298167">Growser ei ole enää oletusselaimesi. Haluatko tehdä Braveista oletusselaimen?</translation>
 <translation id="4701159144509985041">Aseta Growser oletusselaimeksi</translation>
-<translation id="6674282510961658141">Pidä salasanat, kirjanmerkit ja historia synkronoituina kaikilla laitteilla asettamalla Brave oletusselaimeksi.</translation>
+<translation id="6674282510961658141">Pidä salasanat, kirjanmerkit ja historia synkronoituina kaikilla laitteilla asettamalla Growser oletusselaimeksi.</translation>
 <translation id="3496230475498196433">Klikkaa Windowsin ilmoituksesta <ph name="BEGIN_BOLD"/>Kyllä<ph name="END_BOLD"/>, niin voit kiinnittää Bravein tehtäväpalkkiin nopeaa käyttöä varten.</translation>
 <translation id="6464100105052674345">Jätä Growser käyntiin taustalle</translation>
 <translation id="2352438365274458200">Poista käytöstä Bravein taustalla toimiminen sovelluksissa</translation>
@@ -1227,7 +1227,7 @@ Growser ei voi palauttaa asetuksiasi.</translation>
 <translation id="6539809395143501177">Jokainen profiili sisältää omat Growser-tietonsa, esim. kirjanmerkit, historian ja salasanat</translation>
 <translation id="6359748718028735107">Jos käytät jaettua laitetta, kaverisi ja perheenjäsenesi voivat selata verkkoa erillään ja räätälöidä Braveista juuri itselleen sopivan</translation>
 <translation id="5254830036533869365">Tämän tilin Growser-profiili on jo tällä laitteella</translation>
-<translation id="7671828190113127067">Käynnistä Brave</translation>
+<translation id="7671828190113127067">Käynnistä Growser</translation>
 <translation id="3109033858283726964">Braveiin kirjautuminen</translation>
 <translation id="3194774009976956730">Valmistellaan Growser</translation>
 <translation id="3040770245079391216">Bravein käyttäminen oletuksena ja kiinnittäminen</translation>
@@ -1272,7 +1272,7 @@ Growser ei voi palauttaa asetuksiasi.</translation>
 <translation id="2016973756696213156">Kokeile Gemini in Braveilla</translation>
 <translation id="3446744630960564006">Avaa Gemini in Growser nopeasti aina tarvittaessa</translation>
 <translation id="1985505085856398819">Näytä Gemini in Growser ilmaisinalueella ja laita pikanäppäin päälle</translation>
-<translation id="7843414100742664106">Näytä Gemini in Brave ilmaisinalueella</translation>
+<translation id="7843414100742664106">Näytä Gemini in Growser ilmaisinalueella</translation>
 <translation id="5912735934441585874">Gemini in Growser on helposti käytettävissä laitteella, vaikka Growser olisi pienennettynä.</translation>
 <translation id="635775285804478675">Avaa Gemini in Growser pikanäppäimellä.</translation>
 <translation id="6403063362298585665">Jos Gemini in Growser on auki, sivupaneeli pysyy auki, kun luot uusia välilehtiä</translation>

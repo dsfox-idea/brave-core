@@ -186,7 +186,7 @@ Du kannst deine Passwörter jederzeit im <ph name="GOOGLE_PASSWORD_MANAGER"/> pr
 <translation id="1130116586186908674">Geteilte Ansicht erstellen</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> – Teil der Gruppe <ph name="GROUP_NAME"/></translation>
 <translation id="1130676589211693127">Akkustand des rechten Kopfhörers bei <ph name="PERCENTAGE"/> %.</translation>
-<translation id="1412403201555978627">Beim Teilen von Tabs werden deren Seiteninhalte, Medien und URLs an Brave gesendet und möglicherweise zu Sicherheitszwecken überprüft.</translation>
+<translation id="1412403201555978627">Beim Teilen von Tabs werden deren Seiteninhalte, Medien und URLs an Growser gesendet und möglicherweise zu Sicherheitszwecken überprüft.</translation>
 <translation id="1133418583142946603">Aktuellen Tab hinzufügen</translation>
 <translation id="1133751489735776037">Mit der linken Maustaste dreimal klicken</translation>
 <translation id="1136712381129578788">Der Sicherheitsschlüssel wurde gesperrt, weil zu oft die falsche PIN eingegeben wurde. Entferne den Sicherheitsschlüssel und stecke ihn wieder ein, um ihn zu entsperren.</translation>
@@ -376,7 +376,7 @@ Du kannst deine Passwörter jederzeit im <ph name="GOOGLE_PASSWORD_MANAGER"/> pr
 <translation id="126768002343224824">16-fach</translation>
 <translation id="1272079795634619415">Stoppen</translation>
 <translation id="1272508081857842302"><ph name="BEGIN_LINK"/>Unterstützte Links<ph name="END_LINK"/> öffnen</translation>
-<translation id="7823526956728613125">Verbindung zwischen Suchdiensten und Brave Workspace-Apps wie Google Drive verwalten</translation>
+<translation id="7823526956728613125">Verbindung zwischen Suchdiensten und Growser Workspace-Apps wie Google Drive verwalten</translation>
 <translation id="1274997165432133392">Cookies und andere Websitedaten</translation>
 <translation id="1275936815032730048">Launcher-Taste + Rechtspfeil</translation>
 <translation id="1275963833368139883">Wenn du in deinem Browserverlauf suchst, basieren Antworten und Suchergebnisse auf dem Inhalt einer Seite. Dadurch werden die Ergebnisse verbessert.</translation>
@@ -653,7 +653,7 @@ Du kannst deine Passwörter jederzeit im <ph name="GOOGLE_PASSWORD_MANAGER"/> pr
 <translation id="1508931164824684991">Websites dürfen JavaScript verwenden</translation>
 <translation id="1509163368529404530">Gruppe wiederherstellen</translation>
 <translation id="1509281256533087115">Auf <ph name="DEVICE_NAME_AND_VENDOR"/> per USB zugreifen</translation>
-<translation id="2825615584808054779">Deine Unterhaltungen mit Gemini und deine Daten in Brave Workspace werden nicht überprüft und auch nicht verwendet, um generative KI-Modelle zu optimieren. Gemini ist eine KI und kann Fehler machen.</translation>
+<translation id="2825615584808054779">Deine Unterhaltungen mit Gemini und deine Daten in Growser Workspace werden nicht überprüft und auch nicht verwendet, um generative KI-Modelle zu optimieren. Gemini ist eine KI und kann Fehler machen.</translation>
 <translation id="1510238584712386396">Launcher</translation>
 <translation id="1510341833810331442">Websites dürfen keine Daten auf deinem Gerät speichern</translation>
 <translation id="1510882959204224895">In Fenster öffnen</translation>
@@ -747,7 +747,7 @@ Du kannst deine Passwörter jederzeit im <ph name="GOOGLE_PASSWORD_MANAGER"/> pr
 <translation id="1581962803218266616">Im Finder anzeigen</translation>
 <translation id="1582955169539260415">[<ph name="FINGERPRINT_NAME"/>] löschen</translation>
 <translation id="1583127975413389276"><ph name="LANGUAGE"/> wird lokal verarbeitet und funktioniert offline</translation>
-<translation id="491276955533054201">Zuerst automatisches Browsen in Brave für dieses Gerät aktivieren</translation>
+<translation id="491276955533054201">Zuerst automatisches Browsen in Growser für dieses Gerät aktivieren</translation>
 <translation id="1587275751631642843">&amp;JavaScript-Konsole</translation>
 <translation id="1588438908519853928">Normal</translation>
 <translation id="1588772269240419305">Aktualisierung des Logos und des Namens überprüfen</translation>
@@ -1149,7 +1149,7 @@ Du kannst deine Passwörter jederzeit im <ph name="GOOGLE_PASSWORD_MANAGER"/> pr
 <translation id="1892453608039100484">1. Klicke unten auf <ph name="BUTTON_LABEL"/>
 2. Klicke in den Windows-Einstellungen auf <ph name="BUTTON_2"/></translation>
 <translation id="1895658205118569222">Herunterfahren</translation>
-<translation id="1189523243806849236">Chats werden geprüft und zur Verbesserung von Brave AI verwendet. Gemini ist eine KI und kann Fehler machen. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Chats werden geprüft und zur Verbesserung von Growser AI verwendet. Gemini ist eine KI und kann Fehler machen. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Starkes Passwort verwenden</translation>
 <translation id="1897860317037652061">Fehler beim Scannen</translation>
 <translation id="1898804291554630487">Fragen zu dieser Seite stellen</translation>
@@ -1158,7 +1158,7 @@ Du kannst deine Passwörter jederzeit im <ph name="GOOGLE_PASSWORD_MANAGER"/> pr
 <translation id="1901213235765457754">Administrator um Aktualisierung dieser App bitten</translation>
 <translation id="1901303067676059328">&amp;Alles auswählen</translation>
 <translation id="1901760057081700494">Die Zeitzone ist derzeit auf <ph name="TIME_ZONE_ENTRY"/> eingestellt. Wenn die Zeitzone automatisch aktualisiert werden soll, <ph name="BEGIN_LINK"/>aktiviere den Standortzugriff für das System<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Mit deiner Privatadresse kannst du Brave-Dienste besser nutzen, z. B. relevantere Suchergebnisse und Wegbeschreibungen in Brave Maps erhalten. Du kannst deine Adresse in deinem <ph name="BEGIN_LINK"/>Brave-Konto<ph name="END_LINK"/> <ph name="USERNAME"/> bearbeiten oder löschen.</translation>
+<translation id="3930197956137872864">Mit deiner Privatadresse kannst du Growser-Dienste besser nutzen, z. B. relevantere Suchergebnisse und Wegbeschreibungen in Growser Maps erhalten. Du kannst deine Adresse in deinem <ph name="BEGIN_LINK"/>Growser-Konto<ph name="END_LINK"/> <ph name="USERNAME"/> bearbeiten oder löschen.</translation>
 <translation id="6893464351226208429">Die von dir besuchten URLs werden in deinem Growser-Konto gespeichert</translation>
 <translation id="190530012637606145">Warnt dich vor allen unsicheren Verbindungen, auch vor privaten Intranetverbindungen</translation>
 <translation id="1906181697255754968">Websites greifen normalerweise auf Dateien und Ordner auf deinem Gerät zu, um Funktionen wie die automatische Speicherung deiner Arbeit umsetzen zu können</translation>
@@ -1531,7 +1531,7 @@ Wenn du die Family Link App auf deinem Gerät installierst, kannst du die Einste
 <translation id="2198625180564913276">Profil wird hinzugefügt. Das kann einige Minuten dauern.</translation>
 <translation id="2198712775285959645">Bearbeiten</translation>
 <translation id="2199298570273670671">Fehler</translation>
-<translation id="2798272130984183944">Wähle aus, ob Brave KI-Modelle verwenden soll, die direkt auf deinem Gerät ausgeführt werden</translation>
+<translation id="2798272130984183944">Wähle aus, ob Growser KI-Modelle verwenden soll, die direkt auf deinem Gerät ausgeführt werden</translation>
 <translation id="2200094388063410062">E-Mail</translation>
 <translation id="2200781749203116929">ChromeOS-Systemprotokolle</translation>
 <translation id="2202391868799679245">Tastenkombination aktivieren</translation>
@@ -1611,7 +1611,7 @@ Wenn du die Family Link App auf deinem Gerät installierst, kannst du die Einste
 <translation id="225716114209817872">Maximal</translation>
 <translation id="5642482119439119644">Wenn du deine Tabs von deinen anderen Geräten abrufen möchtest, musst du deine Identität bestätigen. Du kannst die Synchronisierung jederzeit in den Einstellungen beenden. Growser kann die Growser Suche und andere Dienste auf der Grundlage deines Verlaufs personalisieren.</translation>
 <translation id="22614517036276112">Dieses Dokument oder dein Gerät entspricht nicht allen Sicherheitsrichtlinien deiner Organisation. Frage deinen Administrator, was korrigiert werden muss.</translation>
-<translation id="1829264724820495616">Mit deiner Arbeitsadresse kannst du Brave-Dienste besser nutzen, z. B. relevantere Suchergebnisse und Wegbeschreibungen in Brave Maps erhalten. Du kannst deine Adresse in deinem <ph name="BEGIN_LINK"/>Brave-Konto<ph name="END_LINK"/> <ph name="USERNAME"/> bearbeiten oder löschen.</translation>
+<translation id="1829264724820495616">Mit deiner Arbeitsadresse kannst du Growser-Dienste besser nutzen, z. B. relevantere Suchergebnisse und Wegbeschreibungen in Growser Maps erhalten. Du kannst deine Adresse in deinem <ph name="BEGIN_LINK"/>Growser-Konto<ph name="END_LINK"/> <ph name="USERNAME"/> bearbeiten oder löschen.</translation>
 <translation id="2262477216570151239">Verzögerung vor Wiederholung</translation>
 <translation id="2263371730707937087">Bildschirmaktualisierungsrate</translation>
 <translation id="7829329302663082098">Wir freuen uns über dein Feedback. Es hilft uns, Growser Cast zu verbessern. Informationen zur Behebung von Problemen mit Growser Cast findest du <ph name="BEGIN_LINK"/>in der Hilfe<ph name="END_LINK"/>.</translation>
@@ -1754,7 +1754,7 @@ Wenn du die Family Link App auf deinem Gerät installierst, kannst du die Einste
 <translation id="2373499590298659902">Verwende „0“, um eine Maustaste zu drücken und gedrückt zu halten</translation>
 <translation id="2373666622366160481">An Papierformat anpassen</translation>
 <translation id="2375406435414127095">Mit dem Smartphone verbinden</translation>
-<translation id="6612559367203670996">Brave verwendet die Inhalte und URLs geteilter Tabs. Dein aktueller Tab wird in neuen Chats geteilt. Du kannst diese Einstellung jederzeit ändern.</translation>
+<translation id="6612559367203670996">Growser verwendet die Inhalte und URLs geteilter Tabs. Dein aktueller Tab wird in neuen Chats geteilt. Du kannst diese Einstellung jederzeit ändern.</translation>
 <translation id="2376056713414548745">Vorlesen</translation>
 <translation id="2376122016044804363">Bestätigungen zum Kopieren von Inhalten in die Zwischenablage</translation>
 <translation id="2377667304966270281">Harte Fehler</translation>
@@ -3319,7 +3319,7 @@ Servernachricht: <ph name="SERVER_MSG"/></translation>
 <translation id="3569614820047645079">Die Dateien in „Meine Ablage“ werden automatisch mit deinem Chromebook synchronisiert, sodass du auch ohne Internetverbindung darauf zugreifen kannst.</translation>
 <translation id="3569617221227793022">Die Zeitzone ist derzeit auf <ph name="TIME_ZONE_ENTRY"/> eingestellt. Diese Einstellung wird von deinem Administrator verwaltet.</translation>
 <translation id="3569682580018832495"><ph name="ORIGIN"/> darf die folgenden Dateien und Ordner aufrufen</translation>
-<translation id="4062501938325597704">Die Seiteninhalte und URLs, die Gemini während des Erledigens einer Aufgabe verwendet, werden an Brave weitergegeben und können zu Sicherheitszwecken überprüft werden.</translation>
+<translation id="4062501938325597704">Die Seiteninhalte und URLs, die Gemini während des Erledigens einer Aufgabe verwendet, werden an Growser weitergegeben und können zu Sicherheitszwecken überprüft werden.</translation>
 <translation id="3571734092741541777">Einrichten</translation>
 <translation id="3575121482199441727">Für diese Website zulassen</translation>
 <translation id="3575224072358507281">IP-Adressen und Ergebnisse von Netzwerkmessungen für Measurement Lab gemäß der Datenschutzerklärung (measurementlab.net/privacy) erfassen</translation>
@@ -4997,7 +4997,7 @@ Zum Herauszoomen drücke Strg + Alt + „Helligkeit verringern“.</translatio
 <translation id="485480310608090163">Weitere Einstellungen und Berechtigungen</translation>
 <translation id="4857304314344645169">Du kannst dir zu jedem Problem eine detaillierte Beschreibung ansehen</translation>
 <translation id="1913048435257025864">Growser Fragen zur vorherigen Seite stellen: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Der Inhalt und die URL deines aktuellen Tabs werden mit Brave geteilt, um dir relevantere Antworten zu bieten. Du kannst beim Surfen Tabs hinzufügen oder entfernen.</translation>
+<translation id="228735844055480091">Der Inhalt und die URL deines aktuellen Tabs werden mit Growser geteilt, um dir relevantere Antworten zu bieten. Du kannst beim Surfen Tabs hinzufügen oder entfernen.</translation>
 <translation id="485806788160414322">Medien wiedergeben oder pausieren</translation>
 <translation id="4858913220355269194">Fußball</translation>
 <translation id="4860012864737017059">Zuletzt verwendeter Tab</translation>
@@ -5332,7 +5332,7 @@ Zum Herauszoomen drücke Strg + Alt + „Helligkeit verringern“.</translatio
 <translation id="5112577000029535889">E&amp;ntwicklertools</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{1 Datei verschoben}other{{NUM_OF_FILES} Dateien verschoben}}</translation>
 <translation id="511313294362309725">Schnelles Pairing einschalten</translation>
-<translation id="6409962091529734959">Weitere Informationen zum automatischen Browsen in Brave</translation>
+<translation id="6409962091529734959">Weitere Informationen zum automatischen Browsen in Growser</translation>
 <translation id="51143538739122961">Stecke deinen Sicherheitsschlüssel ein und tippe darauf</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Audio &amp;speichern unter...</translation>
@@ -5375,7 +5375,7 @@ Zum Herauszoomen drücke Strg + Alt + „Helligkeit verringern“.</translatio
 <translation id="5146235736676876345">Eigenes wählen</translation>
 <translation id="5146896637028965135">Systemstimme</translation>
 <translation id="5147113439721488265">Empfehlung</translation>
-<translation id="5897101208018277582">Um Links zu senden, musst du erst deine Identität bestätigen. Du kannst Links senden, wenn du auf beiden Geräten im selben Brave-Konto angemeldet bist.</translation>
+<translation id="5897101208018277582">Um Links zu senden, musst du erst deine Identität bestätigen. Du kannst Links senden, wenn du auf beiden Geräten im selben Growser-Konto angemeldet bist.</translation>
 <translation id="5148285448107770349">Passwort muss aus mindestens 8 Zeichen bestehen</translation>
 <translation id="5149602533174716626">Videoframe kop&amp;ieren</translation>
 <translation id="5150254825601720210">SSL-Servername für Netscape-Zertifikat</translation>
@@ -6060,7 +6060,7 @@ Du kannst dieser Aktion mehrere Schalter zuweisen.</translation>
 <translation id="5713158217420111469">Verbunden mit <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Umgekehrt</translation>
 <translation id="5714100381896040477">Bewegung auf Bildschirm einschränken</translation>
-<translation id="8277434106940718633">Deine Unterhaltungen mit Gemini und deine Daten in Brave Workspace werden nicht überprüft und auch nicht verwendet, um generative KI-Modelle zu optimieren. Gemini ist eine KI und kann Fehler machen. Einige Inhalte sind möglicherweise nicht für alle Nutzer geeignet.</translation>
+<translation id="8277434106940718633">Deine Unterhaltungen mit Gemini und deine Daten in Growser Workspace werden nicht überprüft und auch nicht verwendet, um generative KI-Modelle zu optimieren. Gemini ist eine KI und kann Fehler machen. Einige Inhalte sind möglicherweise nicht für alle Nutzer geeignet.</translation>
 <translation id="5719854774000914513">Websites dürfen nachfragen, wenn sie eine Verbindung mit HID-Geräten herstellen möchten</translation>
 <translation id="5720729194423017301">Kürzel für Websites und Suchmaschinen</translation>
 <translation id="572155275267014074">Android-Einstellungen</translation>
@@ -6994,7 +6994,7 @@ Du kannst dieser Aktion mehrere Schalter zuweisen.</translation>
 <translation id="6464825623202322042">Dieses Gerät</translation>
 <translation id="6465841119675156448">Ohne Internet</translation>
 <translation id="6466258437571594570">Websites können dich nicht unterbrechen, um dich zu fragen, ob du Benachrichtigungen erhalten möchtest</translation>
-<translation id="1673835407889847350">Bestätige deine Identität, damit du Passwörter hinzufügen und auf allen Geräten mit deinem Brave-Konto verwenden kannst</translation>
+<translation id="1673835407889847350">Bestätige deine Identität, damit du Passwörter hinzufügen und auf allen Geräten mit deinem Growser-Konto verwenden kannst</translation>
 <translation id="6467230443178397264"><ph name="FILE_NAME"/> scannen</translation>
 <translation id="6467304607960172345">Vollbildvideos optimieren</translation>
 <translation id="6467377768028664108"><ph name="DEVICE_TYPE"/> kann dann folgende Aktionen ausführen:</translation>
@@ -7007,7 +7007,7 @@ Du kannst dieser Aktion mehrere Schalter zuweisen.</translation>
 <translation id="6470823736074966819">Benachrichtigungen stummschalten</translation>
 <translation id="6472893788822429178">Button „Startseite“ anzeigen</translation>
 <translation id="6473315466413288899">Option auswählen</translation>
-<translation id="6199773995438617867">Mehr in Brave Kalender anzeigen</translation>
+<translation id="6199773995438617867">Mehr in Growser Kalender anzeigen</translation>
 <translation id="6474401088838630457">Gemini mehr dazu fragen</translation>
 <translation id="6474498546677193336">Die Aufhebung der Freigabe ist nicht möglich, weil eine Anwendung diesen Ordner verwendet. Die Freigabe des Ordners wird aufgehoben, wenn Linux das nächste Mal heruntergefahren wird.</translation>
 <translation id="6474884162850599008">Verbindung zu Google Drive-Konto aufheben</translation>
@@ -7188,7 +7188,7 @@ Du hast # weitere kompromittierte Passwörter. Der Growser Passwortmanager empf
 <translation id="6613231539539868591">Gespeicherte Daten</translation>
 <translation id="6613267708691765962">Nach Malware wird gesucht…</translation>
 <translation id="6615455863669487791">Zeigen</translation>
-<translation id="5146630705831894319">Brave Übersetzer für Websites und PDFs in anderen Sprachen anbieten</translation>
+<translation id="5146630705831894319">Growser Übersetzer für Websites und PDFs in anderen Sprachen anbieten</translation>
 <translation id="6618013221808317456">Websites dürfen die JavaScript-Optimierung nicht verwenden</translation>
 <translation id="6618154741503063152">Fehler beim Upload. Anhänge sind nicht zulässig.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7542,7 +7542,7 @@ Du hast # weitere kompromittierte Passwörter. Der Growser Passwortmanager empf
 <translation id="6871644448911473373">OCSP-Antwortdienst: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Sprachen…</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Wenn diese Option aktiviert ist, bietet Brave Übersetzer an, Websites und PDFs in deine bevorzugte Sprache zu übersetzen. Außerdem können Websites automatisch übersetzt werden.</translation>
+<translation id="5189979109199910058">Wenn diese Option aktiviert ist, bietet Growser Übersetzer an, Websites und PDFs in deine bevorzugte Sprache zu übersetzen. Außerdem können Websites automatisch übersetzt werden.</translation>
 <translation id="6873571253135628430">Websiteberechtigungen ändern</translation>
 <translation id="6874986444867497677">Die Installation konnte nicht abgeschlossen werden. Bitte versuche es noch einmal oder schließe dieses Fenster.</translation>
 <translation id="6876155724392614295">Fahrrad</translation>
@@ -7830,7 +7830,7 @@ Du hast # weitere kompromittierte Passwörter. Der Growser Passwortmanager empf
 <translation id="710224247908684995">Safe Browsing wurde durch eine Erweiterung deaktiviert</translation>
 <translation id="7102832101143475489">Zeitüberschreitung bei der Anfrage</translation>
 <translation id="7103944802169726298">PC und Übertragungsgerät im selben WLAN</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Brave-Abo</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Growser-Abo</translation>
 <translation id="7107609441453408294">Dieselben Audioinhalte über alle Lautsprecher wiedergeben</translation>
 <translation id="7108338896283013870">Ausblenden</translation>
 <translation id="7108419148561505648">Du musst mindestens ein Feld ausfüllen, um eine Änderung speichern zu können</translation>
@@ -8201,7 +8201,7 @@ Du hast # weitere kompromittierte Passwörter. Der Growser Passwortmanager empf
 <translation id="7395774987022469191">Gesamter Bildschirm</translation>
 <translation id="7396017167185131589">Freigegebene Ordner erscheinen hier</translation>
 <translation id="7396845648024431313"><ph name="APP_NAME"/> wird beim Systemstart gestartet und auch dann weiter im Hintergrund ausgeführt, wenn du alle anderen <ph name="PRODUCT_NAME"/>-Fenster geschlossen hast.</translation>
-<translation id="8572914900293297191">Chats werden geprüft und zur Verbesserung von Brave AI verwendet. Gemini ist eine KI und kann Fehler machen. Einige Inhalte sind möglicherweise nicht für alle Nutzer geeignet. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Chats werden geprüft und zur Verbesserung von Growser AI verwendet. Gemini ist eine KI und kann Fehler machen. Einige Inhalte sind möglicherweise nicht für alle Nutzer geeignet. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Synchronisierung anpassen</translation>
 <translation id="7399616692258236448">Standortanfragen werden automatisch für alle Websites blockiert, außer für diejenigen, die du zulässt</translation>
 <translation id="7399802613464275309">Sicherheitscheck</translation>
@@ -8735,7 +8735,7 @@ Drücke zum Entfernen der Zuweisung einen bereits zugewiesenen Schalter oder ein
 <translation id="7807711621188256451"><ph name="HOST"/> immer Zugriff auf deine Kamera gestatten</translation>
 <translation id="7810202088502699111">Pop-ups wurden auf dieser Seite blockiert.</translation>
 <translation id="7810367892333449285">Deine Eingabe muss dieses Format haben: <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+-Adresse<ph name="LPA_2"/>$<ph name="LPA_3"/>optionale ID zum Abgleich<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Brave wird durch das Open-Source-Projekt Brave und andere <ph name="BEGIN_HIGHLIGHT"/>Open-Source-Software<ph name="END_HIGHLIGHT"/> ermöglicht.</translation>
+<translation id="5014491767627896944">Growser wird durch das Open-Source-Projekt Growser und andere <ph name="BEGIN_HIGHLIGHT"/>Open-Source-Software<ph name="END_HIGHLIGHT"/> ermöglicht.</translation>
 <translation id="7811263553491007091">Versuche es noch einmal oder wähle unten eines der zuvor generierten Designs aus.</translation>
 <translation id="7811926937048662341">Klicke mit der rechten Maustaste hier und wähle „Tabs vertikal anzeigen“ aus</translation>
 <translation id="7811986034759500329">In den Systemeinstellungen festlegen</translation>
@@ -8758,7 +8758,7 @@ Drücke zum Entfernen der Zuweisung einen bereits zugewiesenen Schalter oder ein
 <translation id="7826039927887234077">Aktuelles KI-Design <ph name="INDEX"/> von <ph name="SUBJECT"/> mit der Stimmung „<ph name="MOOD"/>“.</translation>
 <translation id="7826174860695147464">Unterstützung älterer Browser – interne Elemente</translation>
 <translation id="7826838152281937785">Untere Ansicht schließen</translation>
-<translation id="45690163731419633">Es gelten die <ph name="BEGIN_LINK_TERMS"/>Brave-Nutzungsbedingungen<ph name="END_LINK_TERMS"/> und die <ph name="BEGIN_LINK_PRIVACY"/>Datenschutzhinweise für Gemini-Apps<ph name="END_LINK_PRIVACY"/></translation>
+<translation id="45690163731419633">Es gelten die <ph name="BEGIN_LINK_TERMS"/>Growser-Nutzungsbedingungen<ph name="END_LINK_TERMS"/> und die <ph name="BEGIN_LINK_PRIVACY"/>Datenschutzhinweise für Gemini-Apps<ph name="END_LINK_PRIVACY"/></translation>
 <translation id="7828642077514646543">Fehler: Zertifikat konnte nicht entschlüsselt werden</translation>
 <translation id="7830276128493844263">Standortbestimmung ist in den Systemeinstellungen deaktiviert</translation>
 <translation id="7830833461614351956"><ph name="NUM_OF_FILES"/> Dateien zu <ph name="CLOUD_PROVIDER"/> kopieren, um sie zu öffnen?</translation>
@@ -9629,7 +9629,7 @@ Speichere deine Schlüsseldatei an einem sicheren Ort. Du benötigst die Datei, 
 <translation id="850399339579925930">Wörterbücher</translation>
 <translation id="850561044295157831">Weitere Informationen zu „Formuliere für mich“</translation>
 <translation id="8505669004895429027">Geringe Einsparungen</translation>
-<translation id="869548515244800202">Brave-Abo</translation>
+<translation id="869548515244800202">Growser-Abo</translation>
 <translation id="8507052544157927817">Stil „Unterstreichen“</translation>
 <translation id="8507227974644337342">Bildschirmauflösung</translation>
 <translation id="8507443886219296894">Für diese Website ausblenden</translation>
@@ -9769,7 +9769,7 @@ Speichere deine Schlüsseldatei an einem sicheren Ort. Du benötigst die Datei, 
 <translation id="8619803522055190423">Schlagschatten</translation>
 <translation id="8620206585293032550">Darstellung inaktiver Tabs</translation>
 <translation id="8621979332865976405">Gesamten Bildschirm teilen</translation>
-<translation id="6089523089512126744">KI-Modus der Brave Suche und verbundene Apps</translation>
+<translation id="6089523089512126744">KI-Modus der Growser Suche und verbundene Apps</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Seriennummern von ChromeOS-Geräten und -Komponenten lesen</translation>
 <translation id="862542460444371744">&amp;Erweiterungen</translation>
@@ -11327,17 +11327,17 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini in Growser</translation>
 <translation id="1975450474853317621">In Growser-Browser öffnen</translation>
 <translation id="8516824290867275572">Mit deinem Konto hast du keinen Zugriff auf Gemini in Growser</translation>
-<translation id="1649234713894562345">Brave wird durch das Open-Source-Projekt Brave und andere <ph name="BEGIN_HIGHLIGHT"/>Open-Source-Software<ph name="END_HIGHLIGHT"/> ermöglicht.</translation>
+<translation id="1649234713894562345">Growser wird durch das Open-Source-Projekt Growser und andere <ph name="BEGIN_HIGHLIGHT"/>Open-Source-Software<ph name="END_HIGHLIGHT"/> ermöglicht.</translation>
 <translation id="870536819717176711">Wenn du den aktuellen Tab mit Gemini teilst, werden der gesamte Inhalt, alle Medien und die URL des Tabs an Growser gesendet.</translation>
-<translation id="1130866111814048607">Beim Teilen von Tabs werden deren Seiteninhalte, Medien und URLs an Brave gesendet und möglicherweise zu Sicherheitszwecken überprüft.</translation>
-<translation id="7656790264713095385">Zuerst automatisches Browsen in Brave für dieses Gerät aktivieren</translation>
+<translation id="1130866111814048607">Beim Teilen von Tabs werden deren Seiteninhalte, Medien und URLs an Growser gesendet und möglicherweise zu Sicherheitszwecken überprüft.</translation>
+<translation id="7656790264713095385">Zuerst automatisches Browsen in Growser für dieses Gerät aktivieren</translation>
 <translation id="8572003230388132401">Gemini Spark kann das automatische Browsen in Growser auf diesem Gerät verwenden, um mit Websites zu interagieren und Aufgaben in deinem Namen zu erledigen. <ph name="LINK_BEGIN"/>Weitere Informationen<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Gemini Spark kann das automatische Browsen auf diesem Gerät nur verwenden, wenn das Gerät aktiv ist und Growser ausgeführt wird.</translation>
 <translation id="1982892581799327835">Jeder, der Zugriff auf deinen Gemini Spark-KI-Agenten hat, kann deinen Growser-Browser steuern.</translation>
 <translation id="6689939585896001516">Growser für dich suchen lassen</translation>
 <translation id="640233545778658570">Gemini in Growser nutzt automatisches Browsen, um Aufgaben auf deinen Tabs zu erledigen. <ph name="LINK_BEGIN"/>Weitere Informationen<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Weitere Informationen zum automatischen Browsen in Brave</translation>
-<translation id="3570112771874223231">Die Seiteninhalte und URLs, die Gemini während des Erledigens einer Aufgabe verwendet, werden an Brave weitergegeben und können zu Sicherheitszwecken überprüft werden.</translation>
+<translation id="2740842679402949230">Weitere Informationen zum automatischen Browsen in Growser</translation>
+<translation id="3570112771874223231">Die Seiteninhalte und URLs, die Gemini während des Erledigens einer Aufgabe verwendet, werden an Growser weitergegeben und können zu Sicherheitszwecken überprüft werden.</translation>
 <translation id="2314508080153323869">Gemini in Growser</translation>
 <translation id="1910632359330857071">Unterhalte dich mit Gemini in Growser, um Antworten, wichtige Erkenntnisse und mehr zu erhalten</translation>
 <translation id="2483218699324586641">Du kannst Gemini in Growser mit <ph name="FOCUS_TOGGLE_HOTKEY"/> öffnen</translation>
@@ -11354,8 +11354,8 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
 <translation id="3187556136478864255">Siehst du dein Übertragungsgerät in der <ph name="BEGIN_LINK"/>Growser Home App<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Passkeys auf diesem Gerät mit dem Growser Passwortmanager verwenden</translation>
 <translation id="2364302372598204515">Dies ist kein Growser-Konto. Elemente, die du in Growser speicherst, sind nicht auf anderen Geräten verfügbar.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Brave-Abo</translation>
-<translation id="850632091665381275">Brave-Abo</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Growser-Abo</translation>
+<translation id="850632091665381275">Growser-Abo</translation>
 <translation id="6710172959248731469">Einstellungen für Growser-Dienste</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{1 Element ist nur auf diesem Gerät gespeichert. Wenn du es auf deinen anderen Geräten verwenden möchtest, speichere es in deinem Growser-Konto. Dadurch werden auch alle Duplikate entfernt.}other{{ITEM_COUNT} Elemente sind nur auf diesem Gerät gespeichert. Wenn du sie auf deinen anderen Geräten verwenden möchtest, speichere sie in deinem Growser-Konto. Dadurch werden auch alle Duplikate entfernt.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{1 Passwort ist nur auf diesem Gerät gespeichert. Wenn du es auf deinen anderen Geräten verwenden möchtest, speichere es in deinem Growser-Konto. Dadurch werden auch alle Duplikate entfernt.}other{{PASSWORD_COUNT} Passwörter sind nur auf diesem Gerät gespeichert. Wenn du sie auf deinen anderen Geräten verwenden möchtest, speichere sie in deinem Growser-Konto. Dadurch werden auch alle Duplikate entfernt.}}</translation>
@@ -11369,8 +11369,8 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{1 Lesezeichen und andere Elemente werden nur auf diesem Gerät gespeichert. Wenn du sie auf deinen anderen Geräten verwenden möchtest, speichere sie in deinem Growser-Konto.}other{{BOOKMARK_COUNT} Lesezeichen und andere Elemente werden nur auf diesem Gerät gespeichert. Wenn du sie auf deinen anderen Geräten verwenden möchtest, speichere sie in deinem Growser-Konto.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{1 Element wird nur auf diesem Gerät gespeichert. Wenn du es auf deinen anderen Geräten verwenden möchtest, <ph name="BEGIN_LINK"/>speichere es in deinem Growser-Konto<ph name="END_LINK"/>.}other{{ITEM_COUNT} Elemente werden nur auf diesem Gerät gespeichert. Wenn du sie auf deinen anderen Geräten verwenden möchtest, <ph name="BEGIN_LINK"/>speichere sie in deinem Growser-Konto<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Verwende dein Growser-Konto oder erstelle ein neues</translation>
-<translation id="1896353439080510710">Chats werden geprüft und zur Verbesserung von Brave AI verwendet. Gemini ist eine KI und kann Fehler machen. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Chats werden geprüft und zur Verbesserung von Brave AI verwendet. Gemini ist eine KI und kann Fehler machen. Einige Inhalte sind möglicherweise nicht für alle Nutzer geeignet. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Chats werden geprüft und zur Verbesserung von Growser AI verwendet. Gemini ist eine KI und kann Fehler machen. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Chats werden geprüft und zur Verbesserung von Growser AI verwendet. Gemini ist eine KI und kann Fehler machen. Einige Inhalte sind möglicherweise nicht für alle Nutzer geeignet. Du kannst deine <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>Aktivitäten verwalten<ph name="END_LINK_MANAGE_ACTIVITY"/>, einschließlich Informationen zu deinem Standort. <ph name="BEGIN_LINK_LEARN_MORE"/>Weitere Informationen zu möglichen Einstellungen<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Diese Erweiterung wird in deinem Growser-Konto gespeichert, aber alle Daten, die darüber nur auf diesem Gerät gespeichert wurden, können gelöscht werden}other{Diese Erweiterungen werden in deinem Growser-Konto gespeichert, aber alle Daten, die darüber nur auf diesem Gerät gespeichert wurden, können gelöscht werden}}</translation>
 <translation id="3523789730715594198">Du kannst die Synchronisierung jederzeit in den Einstellungen beenden. Growser kann die Growser Suche und andere Dienste auf der Grundlage deines Verlaufs personalisieren.</translation>
 <translation id="8231595707224857577">Deine Organisation hat das Speichern von Tabs in deinem Growser-Konto deaktiviert</translation>
@@ -11408,7 +11408,7 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
 <translation id="1024884937839269099"><ph name="BEGIN_LINK_GOOGLE"/>Andere Arten von Aktivitäten<ph name="END_LINK_GOOGLE"/> können in deinem Growser-Konto gespeichert werden, wenn du angemeldet bist. Du kannst sie jederzeit löschen.</translation>
 <translation id="6533315466883598769">Growser Übersetzer verwenden</translation>
 <translation id="6010651352520077187">Wenn diese Option aktiviert ist, bietet Growser Übersetzer an, Websites in deine bevorzugte Sprache zu übersetzen. Außerdem können Websites automatisch übersetzt werden.</translation>
-<translation id="6873499199714317035">Wenn diese Option aktiviert ist, bietet Brave Übersetzer an, Websites und PDFs in deine bevorzugte Sprache zu übersetzen. Außerdem können Websites automatisch übersetzt werden.</translation>
+<translation id="6873499199714317035">Wenn diese Option aktiviert ist, bietet Growser Übersetzer an, Websites und PDFs in deine bevorzugte Sprache zu übersetzen. Außerdem können Websites automatisch übersetzt werden.</translation>
 <translation id="5911030830365207728">Growser Übersetzer</translation>
 <translation id="7458168200501453431">Verwendet dieselbe Rechtschreibprüfung wie die Growser Suche. Der in den Browser eingegebene Text wird an Growser gesendet.</translation>
 <translation id="8972513834460200407">Bitte deinen Netzwerkadministrator, zu überprüfen, ob Downloads von Growser-Servern von der Firewall blockiert werden.</translation>
@@ -11454,7 +11454,7 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
 <translation id="3293574207873361017">Growser-Konto verwalten</translation>
 <translation id="6901130673208235020">Wenn du im Browserverlauf suchst, werden deine Anfragen in der Verlaufssuche, die Seiteninhalte der besten Ergebnisse und die generierten Modellausgaben an Growser gesendet</translation>
 <translation id="3178434360326457238">Wenn du Websites besuchst, werden die Seiteninhalte verschlüsselt und auf deinem Gerät gespeichert. Das kann die Leistung von Growser beeinträchtigen.</translation>
-<translation id="8622145666696249878">KI-Modus der Brave Suche und verbundene Apps</translation>
+<translation id="8622145666696249878">KI-Modus der Growser Suche und verbundene Apps</translation>
 <translation id="2760679829473121490">Systembenachrichtigungen zu Growser-Funktionen und ‑Tipps anzeigen</translation>
 <translation id="6713316345564743478">Melde dich in deinem Growser-Konto an, um nach den kompromittierten Passwörtern zu suchen</translation>
 <translation id="1342886103232377846">Rufe den Growser Passwortmanager auf, um nach kompromittierten Passwörtern zu suchen</translation>
@@ -11516,7 +11516,7 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
 <translation id="1095879482467973146">Growser Passwortmanager im Web</translation>
 <translation id="1368798504801939187">Wenn du dich unter <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/> anmeldest, kannst du dir deine Passwörter ansehen, auch wenn du nicht Growser oder Android verwendest</translation>
 <translation id="829923460755755423">Verknüpfung zum Growser Passwortmanager hinzufügen</translation>
-<translation id="7244677273667272006">Bestätige deine Identität, damit du Passwörter hinzufügen und auf allen Geräten mit deinem Brave-Konto verwenden kannst</translation>
+<translation id="7244677273667272006">Bestätige deine Identität, damit du Passwörter hinzufügen und auf allen Geräten mit deinem Growser-Konto verwenden kannst</translation>
 <translation id="8189517459248805166">Dein Passwort für <ph name="WEBSITE"/> ist auf diesem Gerät und in deinem Growser-Konto gespeichert. Von wo möchtest du es löschen?</translation>
 <translation id="9101265711096405922">Aus deinem Growser-Konto</translation>
 <translation id="927421426408921503">Gespeicherte Passwörter in dein Growser-Konto verschieben?</translation>
@@ -11627,7 +11627,7 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
        <ph name="BREAK"/>
        <ph name="BREAK"/>
        Über das Kartenmenü kannst du die Einstellungen verwalten und unter „Growser anpassen“ kannst du weitere Optionen aufrufen.</translation>
-<translation id="6474021817475285003">Mehr in Brave Kalender anzeigen</translation>
+<translation id="6474021817475285003">Mehr in Growser Kalender anzeigen</translation>
 <translation id="9066394310994446814">Wir zeigen dir diesen Eintrag auf Grundlage deiner bisherigen Nutzung von Growser-Diensten. Du kannst unter <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/> deine Daten ansehen und löschen oder deine Einstellungen ändern.
 <ph name="BREAK"/>
 <ph name="BREAK"/>
@@ -11658,7 +11658,7 @@ Informationen dazu, welche Daten von Growser erhoben werden und warum, findest d
 <translation id="6868193750403948178">Growser anpassen</translation>
 <translation id="5009064339929592579">In einem Ordner in deinem Growser-Konto speichern?</translation>
 <translation id="7400528739136719497">Einige Growser-Stimmen sind derzeit möglicherweise nicht verfügbar</translation>
-<translation id="4857677595331912231">Der Inhalt und die URL deines aktuellen Tabs werden mit Brave geteilt, um dir relevantere Antworten zu bieten. Du kannst beim Surfen Tabs hinzufügen oder entfernen.</translation>
+<translation id="4857677595331912231">Der Inhalt und die URL deines aktuellen Tabs werden mit Growser geteilt, um dir relevantere Antworten zu bieten. Du kannst beim Surfen Tabs hinzufügen oder entfernen.</translation>
 <translation id="5639212636098910819">In Growser bleiben</translation>
 <translation id="3252169590975855820">Du kannst im Growser Passwortmanager darauf zugreifen</translation>
 <translation id="3843323136102787632">Lade Growser mit diesem QR-Code herunter und melde dich in deinem Growser-Konto an.</translation>
@@ -11705,7 +11705,7 @@ Du hast # weitere kompromittierte Passwörter. Der Growser Passwortmanager empf
 <translation id="1162630940779651724">Wenn du diesen Tab an ein anderes Gerät senden möchtest, melde dich auf beiden Geräten in Growser an</translation>
 <translation id="5388608738812110907">Wenn du diesen Tab an ein anderes Gerät senden möchtest, melde dich dort in Growser an</translation>
 <translation id="4007679133627124999">Wenn du Links zwischen Geräten senden möchtest, müssen beide im selben Growser-Konto angemeldet sein.</translation>
-<translation id="2377999415409519333">Um Links zu senden, musst du erst deine Identität bestätigen. Du kannst Links senden, wenn du auf beiden Geräten im selben Brave-Konto angemeldet bist.</translation>
+<translation id="2377999415409519333">Um Links zu senden, musst du erst deine Identität bestätigen. Du kannst Links senden, wenn du auf beiden Geräten im selben Growser-Konto angemeldet bist.</translation>
 <translation id="4986706507552097681">In den Einstellungen kannst du auswählen, was synchronisiert werden soll. Growser kann die Growser Suche und andere Dienste auf der Grundlage deines Verlaufs personalisieren.</translation>
 <translation id="8002662358897231821">Melde dich an, um deine Lesezeichen, den Verlauf und deine anderen Einstellungen auf allen deinen Geräten zu sehen. Du wirst auch automatisch in deinen Growser-Diensten angemeldet.</translation>
 <translation id="3128296144259620504">Growser wird von automatisierter Testsoftware gesteuert</translation>

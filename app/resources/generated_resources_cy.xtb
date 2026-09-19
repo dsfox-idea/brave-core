@@ -189,7 +189,7 @@ Gwiriwch eich cyfrineiriau unrhyw bryd yn y <ph name="GOOGLE_PASSWORD_MANAGER"/>
 <translation id="5749925632993910318">{0,plural, =1{Cau'r Modd Anhysbys}zero{Cau'r Modd Anhysbys (# ffenestri)}two{Cau'r Modd Anhysbys (# ffenestr)}few{Cau'r Modd Anhysbys (# ffenestr)}many{Cau'r Modd Anhysbys (# ffenestr)}other{Cau'r Modd Anhysbys (# ffenestr)}}</translation>
 <translation id="1130589222747246278"><ph name="WINDOW_TITLE"/> - Rhan o'r grŵp <ph name="GROUP_NAME"/></translation>
 <translation id="1130676589211693127">Lefel batri dde <ph name="PERCENTAGE"/>%.</translation>
-<translation id="1412403201555978627">Pan fydd tabiau'n cael eu rhannu, anfonir cynnwys eu tudalennau, cyfryngau a chyfeiriadau URL at Brave a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
+<translation id="1412403201555978627">Pan fydd tabiau'n cael eu rhannu, anfonir cynnwys eu tudalennau, cyfryngau a chyfeiriadau URL at Growser a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
 <translation id="1133418583142946603">Ychwanegu'r tab presennol</translation>
 <translation id="1133751489735776037">Cliciwch y llygoden dairgwaith</translation>
 <translation id="1136712381129578788">Mae'r allwedd ddiogelwch wedi'i chloi oherwydd rhoddwyd y PIN anghywir ormod o weithiau. I'w datgloi, tynnwch hi a mewnosodwch hi eto.</translation>
@@ -379,7 +379,7 @@ Gwiriwch eich cyfrineiriau unrhyw bryd yn y <ph name="GOOGLE_PASSWORD_MANAGER"/>
 <translation id="126768002343224824">16x</translation>
 <translation id="1272079795634619415">Stopio</translation>
 <translation id="1272508081857842302">Wrthi'n agor <ph name="BEGIN_LINK"/>dolenni a gefnogir<ph name="END_LINK"/></translation>
-<translation id="7823526956728613125">Rheoli'r cysylltiad rhwng gwasanaethau Search ac apiau Brave Workspace, megis Google Drive</translation>
+<translation id="7823526956728613125">Rheoli'r cysylltiad rhwng gwasanaethau Search ac apiau Growser Workspace, megis Google Drive</translation>
 <translation id="1274997165432133392">Cwcis a data gwefan eraill</translation>
 <translation id="1275936815032730048">launcher + saeth dde</translation>
 <translation id="1275963833368139883">Pan fyddwch yn chwilio eich hanes pori, mae atebion a chanlyniadau chwilio yn seiliedig ar gynnwys tudalen. Mae hyn yn rhoi canlyniadau gwell i chi</translation>
@@ -657,7 +657,7 @@ Gwiriwch eich cyfrineiriau unrhyw bryd yn y <ph name="GOOGLE_PASSWORD_MANAGER"/>
 <translation id="1508931164824684991">Gall gwefannau ddefnyddio JavaScript</translation>
 <translation id="1509163368529404530">&amp;Adfer y grŵp</translation>
 <translation id="1509281256533087115">Cael mynediad at unrhyw <ph name="DEVICE_NAME_AND_VENDOR"/> drwy USB</translation>
-<translation id="2825615584808054779">Ni fydd eich sgyrsiau gyda Gemini na'ch data Brave Workspace yn cael eu hadolygu na'u defnyddio i wella modelau AI cynhyrchiol. Mae Gemini yn AI a gall wneud camgymeriadau.</translation>
+<translation id="2825615584808054779">Ni fydd eich sgyrsiau gyda Gemini na'ch data Growser Workspace yn cael eu hadolygu na'u defnyddio i wella modelau AI cynhyrchiol. Mae Gemini yn AI a gall wneud camgymeriadau.</translation>
 <translation id="1510238584712386396">Lansiwr</translation>
 <translation id="1510341833810331442">Ni chaniateir i wefannau gadw data ar eich dyfais</translation>
 <translation id="1510882959204224895">Agor mewn ffenestr</translation>
@@ -752,7 +752,7 @@ Gwiriwch eich cyfrineiriau unrhyw bryd yn y <ph name="GOOGLE_PASSWORD_MANAGER"/>
 <translation id="1581962803218266616">Dangos yn y Chwilydd</translation>
 <translation id="1582955169539260415">dileu [<ph name="FINGERPRINT_NAME"/>]</translation>
 <translation id="1583127975413389276">Mae <ph name="LANGUAGE"/> yn cael ei phrosesu'n lleol ac yn gweithio all-lein</translation>
-<translation id="491276955533054201">Yn gyntaf, trowch awto-bori Brave ymlaen ar gyfer y ddyfais hon</translation>
+<translation id="491276955533054201">Yn gyntaf, trowch awto-bori Growser ymlaen ar gyfer y ddyfais hon</translation>
 <translation id="1587275751631642843">&amp;Consol JavaScript</translation>
 <translation id="1588438908519853928">Normal</translation>
 <translation id="1588772269240419305">Adolygu diweddariadau logo ac enw</translation>
@@ -1168,7 +1168,7 @@ Gwiriwch eich cyfrineiriau unrhyw bryd yn y <ph name="GOOGLE_PASSWORD_MANAGER"/>
 <translation id="1892453608039100484">1. Cliciwch <ph name="BUTTON_LABEL"/> isod
 2. Cliciwch <ph name="BUTTON_2"/> yng eich gosodiadau Windows</translation>
 <translation id="1895658205118569222">Diffodd</translation>
-<translation id="1189523243806849236">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Brave. Mae Gemini yn AI a gall wneud camgymeriadau. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1189523243806849236">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Growser. Mae Gemini yn AI a gall wneud camgymeriadau. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="1897120393475391208">Defnyddiwch gyfrinair cryf</translation>
 <translation id="1897860317037652061">Methodd y sgan</translation>
 <translation id="1898804291554630487">Gofyn am y dudalen hon</translation>
@@ -1177,7 +1177,7 @@ Gwiriwch eich cyfrineiriau unrhyw bryd yn y <ph name="GOOGLE_PASSWORD_MANAGER"/>
 <translation id="1901213235765457754">Gofynnwch i'ch gweinyddwr ddiweddaru'r ap hwn</translation>
 <translation id="1901303067676059328">Dewis &amp;popeth</translation>
 <translation id="1901760057081700494">Mae'r gylchfa amser wedi'i gosod ar hyn o bryd i <ph name="TIME_ZONE_ENTRY"/>. I ddiweddaru'r parth amser yn awtomatig, <ph name="BEGIN_LINK"/>trowch fynediad lleoliad system ymlaen<ph name="END_LINK"/>.</translation>
-<translation id="3930197956137872864">Gall eich cyfeiriad cartref eich helpu i gyflawni pethau ar draws gwasanaethau Brave, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Brave Maps. Gallwch olygu neu ddileu eich cyfeiriad <ph name="BEGIN_LINK"/>yn eich Cyfrif Brave <ph name="END_LINK"/><ph name="USERNAME"/>.</translation>
+<translation id="3930197956137872864">Gall eich cyfeiriad cartref eich helpu i gyflawni pethau ar draws gwasanaethau Growser, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Growser Maps. Gallwch olygu neu ddileu eich cyfeiriad <ph name="BEGIN_LINK"/>yn eich Cyfrif Growser <ph name="END_LINK"/><ph name="USERNAME"/>.</translation>
 <translation id="6893464351226208429">Mae'r cyfeiriadau URL rydych yn ymweld â nhw wedi'u cadw i'ch Cyfrif Growser</translation>
 <translation id="190530012637606145">Yn eich rhybuddio am bob cysylltiad anniogel, gan gynnwys mewnrwydi preifat</translation>
 <translation id="1906181697255754968">Mae gwefannau fel arfer yn cyrchu ffeiliau a ffolderi ar eich dyfais ar gyfer nodweddion megis cadw eich gwaith yn awtomatig</translation>
@@ -1553,7 +1553,7 @@ Gallwch reoli gosodiadau'r cyfrif hwn drwy osod yr ap Family Link ar eich dyfais
 <translation id="2198625180564913276">Wrthi'n ychwanegu proffil. Gallai hyn gymryd ychydig funudau.</translation>
 <translation id="2198712775285959645">Golygu</translation>
 <translation id="2199298570273670671">Gwall</translation>
-<translation id="2798272130984183944">Dewiswch a yw Brave yn defnyddio modelau AI sy'n rhedeg yn uniongyrchol ar eich dyfais</translation>
+<translation id="2798272130984183944">Dewiswch a yw Growser yn defnyddio modelau AI sy'n rhedeg yn uniongyrchol ar eich dyfais</translation>
 <translation id="2200094388063410062">E-bost</translation>
 <translation id="2200781749203116929">Logiau System ChromeOS</translation>
 <translation id="2202391868799679245">Troi llwybr byr bysellfwrdd ymlaen</translation>
@@ -1633,7 +1633,7 @@ Gallwch reoli gosodiadau'r cyfrif hwn drwy osod yr ap Family Link ar eich dyfais
 <translation id="225716114209817872">Uchafswm</translation>
 <translation id="5642482119439119644">I gael eich tabiau o'ch dyfeisiau eraill, cadarnhewch mai chi sydd yno. Gallwch stopio cysoni unrhyw bryd yn y gosodiadau. Gall Growser bersonoleiddio Search a gwasanaethau eraill yn seiliedig ar eich hanes.</translation>
 <translation id="22614517036276112">Nid yw'r ddogfen hon neu eich dyfais yn bodloni rhai o bolisïau diogelwch eich sefydliad. Gwiriwch gyda'ch gweinyddwr beth sydd angen ei drwsio.</translation>
-<translation id="1829264724820495616">Gall eich cyfeiriad gwaith eich helpu i gyflawni pethau ar draws gwasanaethau Brave, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Brave Maps. Gallwch olygu neu ddileu eich cyfeiriad yn eich <ph name="BEGIN_LINK"/>Cyfrif Brave<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
+<translation id="1829264724820495616">Gall eich cyfeiriad gwaith eich helpu i gyflawni pethau ar draws gwasanaethau Growser, fel canlyniadau Chwilio mwy perthnasol a chyfarwyddiadau yn Growser Maps. Gallwch olygu neu ddileu eich cyfeiriad yn eich <ph name="BEGIN_LINK"/>Cyfrif Growser<ph name="END_LINK"/> <ph name="USERNAME"/>.</translation>
 <translation id="2262477216570151239">Oedi cyn ailadrodd</translation>
 <translation id="2263371730707937087">Cyfradd adnewyddu'r sgrîn</translation>
 <translation id="7829329302663082098">Mae eich adborth yn ein helpu i wella Growser Cast ac yn cael ei werthfawrogi.
@@ -1779,7 +1779,7 @@ Gallwch reoli gosodiadau'r cyfrif hwn drwy osod yr ap Family Link ar eich dyfais
 <translation id="2373499590298659902">Defnyddiwch “0” i bwyso botwm llygoden a dal</translation>
 <translation id="2373666622366160481">Ffitio i'r papur</translation>
 <translation id="2375406435414127095">Cysylltu â'ch ffôn</translation>
-<translation id="6612559367203670996">Mae Brave yn defnyddio cynnwys ac URL tabiau a rennir. Mae eich tab presennol yn cael ei rannu mewn sgyrsiau newydd. Gallwch newid y gosodiad hwn unrhyw bryd.</translation>
+<translation id="6612559367203670996">Mae Growser yn defnyddio cynnwys ac URL tabiau a rennir. Mae eich tab presennol yn cael ei rannu mewn sgyrsiau newydd. Gallwch newid y gosodiad hwn unrhyw bryd.</translation>
 <translation id="2376056713414548745">Darllen yn uchel</translation>
 <translation id="2376122016044804363">Cadarnhad wedi'i gopïo i'r clipfwrdd</translation>
 <translation id="2377667304966270281">Diffygion Caled</translation>
@@ -3356,7 +3356,7 @@ Gallwch reoli gosodiadau'r cyfrif hwn drwy osod yr ap Family Link ar eich dyfais
 <translation id="3569614820047645079">Bydd eich ffeiliau yn My Drive yn cysoni â'ch Chromebook yn awtomatig fel y gallwch gael mynediad atynt heb gysylltiad rhyngrwyd.</translation>
 <translation id="3569617221227793022">Mae'r gylchfa amser wedi'i gosod ar hyn o bryd i <ph name="TIME_ZONE_ENTRY"/>. Mae'r gosodiad hwn yn cael ei reoli gan eich gweinyddwr.</translation>
 <translation id="3569682580018832495">Gall <ph name="ORIGIN"/> weld y ffeiliau a'r ffolderi canlynol</translation>
-<translation id="4062501938325597704">Bydd cynnwys tudalen a chyfeiriadau URL y mae Gemini yn eu defnyddio yn ystod tasg yn cael eu rhannu â Brave a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
+<translation id="4062501938325597704">Bydd cynnwys tudalen a chyfeiriadau URL y mae Gemini yn eu defnyddio yn ystod tasg yn cael eu rhannu â Growser a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
 <translation id="3571734092741541777">Gosod</translation>
 <translation id="3575121482199441727">Caniatáu ar gyfer y wefan hon</translation>
 <translation id="3575224072358507281">Casglu cyfeiriad IP a chanlyniadau mesur rhwydwaith ar gyfer Labordy Mesur, yn unol â'u polisi preifatrwydd (measurementlab.net/privacy)</translation>
@@ -5045,7 +5045,7 @@ Defnyddiwch Ctrl + Alt + Lleihau disgleirdeb i bellhau.</translation>
 <translation id="485480310608090163">Rhagor o osodiadau a chaniatadau</translation>
 <translation id="4857304314344645169">Gweler esboniad cam wrth gam o unrhyw broblem</translation>
 <translation id="1913048435257025864">Gofyn i Growser am y dudalen flaenorol: <ph name="PAGE_TITLE"/></translation>
-<translation id="228735844055480091">Mae cynnwys a chyfeiriad gwe eich tab cyfredol yn cael eu rhannu â Brave i roi atebion mwy perthnasol i chi. Gallwch ychwanegu neu dynnu tabiau wrth i chi bori.</translation>
+<translation id="228735844055480091">Mae cynnwys a chyfeiriad gwe eich tab cyfredol yn cael eu rhannu â Growser i roi atebion mwy perthnasol i chi. Gallwch ychwanegu neu dynnu tabiau wrth i chi bori.</translation>
 <translation id="485806788160414322">Chwarae neu oedi cyfryngau</translation>
 <translation id="4858913220355269194">Fritz</translation>
 <translation id="4860012864737017059">Tab diweddar</translation>
@@ -5384,7 +5384,7 @@ Defnyddiwch Ctrl + Alt + Lleihau disgleirdeb i bellhau.</translation>
 <translation id="5112577000029535889">&amp;Offer Datblygwyr</translation>
 <translation id="5112686815928391420">{NUM_OF_FILES,plural, =1{Wedi symud 1 ffeil}zero{Wedi symud {NUM_OF_FILES} ffeil}two{Wedi symud {NUM_OF_FILES} ffeil}few{Wedi symud {NUM_OF_FILES} ffeil}many{Wedi symud {NUM_OF_FILES} ffeil}other{Wedi symud {NUM_OF_FILES} ffeil}}</translation>
 <translation id="511313294362309725">Troi Paru Cyflym ymlaen?</translation>
-<translation id="6409962091529734959">Dysgu rhagor am awto-bori Brave</translation>
+<translation id="6409962091529734959">Dysgu rhagor am awto-bori Growser</translation>
 <translation id="51143538739122961">Rhowch eich allwedd ddiogelwch i mewn a'i chyffwrdd</translation>
 <translation id="5115338116365931134">SSO</translation>
 <translation id="5116628073786783676">Ca&amp;dw'r Sain Fel…</translation>
@@ -5427,7 +5427,7 @@ Defnyddiwch Ctrl + Alt + Lleihau disgleirdeb i bellhau.</translation>
 <translation id="5146235736676876345">Dewiswch un eich hun</translation>
 <translation id="5146896637028965135">Llais system</translation>
 <translation id="5147113439721488265">Argymhelliad</translation>
-<translation id="5897101208018277582">I anfon dolenni, cadarnhewch mai chi sydd yno. Gallwch anfon dolenni pan fyddwch wedi mewngofnodi i'r un Cyfrif Brave ar y ddwy ddyfais.</translation>
+<translation id="5897101208018277582">I anfon dolenni, cadarnhewch mai chi sydd yno. Gallwch anfon dolenni pan fyddwch wedi mewngofnodi i'r un Cyfrif Growser ar y ddwy ddyfais.</translation>
 <translation id="5148285448107770349">Rhaid i gyfrinair fod o leiaf 8 nod</translation>
 <translation id="5149602533174716626">Copïo Ffrâm Fideo</translation>
 <translation id="5150254825601720210">Enw Gweinydd SSL Tystysgrif Netscape</translation>
@@ -6121,7 +6121,7 @@ Gallwch aseinio sawl switsh i'r weithred hon.</translation>
 <translation id="5713158217420111469">Wedi cysylltu â <ph name="DEVICE"/></translation>
 <translation id="5713988532993992900">Gwrthdroi</translation>
 <translation id="5714100381896040477">Cyfyngu ar symudiad ar y sgrîn</translation>
-<translation id="8277434106940718633">Ni fydd eich sgyrsiau gyda Gemini na'ch data Brave Workspace yn cael eu hadolygu na'u defnyddio i wella modelau AI cynhyrchiol. Mae Gemini yn AI a gall wneud camgymeriadau. Mae'n bosib na fydd rhywfaint o'r cynnwys yn addas i bawb.</translation>
+<translation id="8277434106940718633">Ni fydd eich sgyrsiau gyda Gemini na'ch data Growser Workspace yn cael eu hadolygu na'u defnyddio i wella modelau AI cynhyrchiol. Mae Gemini yn AI a gall wneud camgymeriadau. Mae'n bosib na fydd rhywfaint o'r cynnwys yn addas i bawb.</translation>
 <translation id="5719854774000914513">Gall gwefannau ofyn am gysylltu â dyfeisiau HID</translation>
 <translation id="5720729194423017301">Llwybrau byr ar gyfer gwefannau a pheiriannau chwilio</translation>
 <translation id="572155275267014074">Gosodiadau Android</translation>
@@ -7063,7 +7063,7 @@ Gallwch aseinio sawl switsh i'r weithred hon.</translation>
 <translation id="6464825623202322042">Y ddyfais hon</translation>
 <translation id="6465841119675156448">Heb ryngrwyd</translation>
 <translation id="6466258437571594570">Mae gwefannau yn cael eu rhwystro rhag torri ar eich traws pan fyddant yn gofyn am anfon hysbysiadau</translation>
-<translation id="1673835407889847350">Cadarnhewch mai chi sydd yno i ychwanegu cyfrineiriau a'u cael ar bob dyfais gyda'ch Cyfrif Brave</translation>
+<translation id="1673835407889847350">Cadarnhewch mai chi sydd yno i ychwanegu cyfrineiriau a'u cael ar bob dyfais gyda'ch Cyfrif Growser</translation>
 <translation id="6467230443178397264">Sganio <ph name="FILE_NAME"/></translation>
 <translation id="6467304607960172345">Optimeiddio fideos sgrîn lawn</translation>
 <translation id="6467377768028664108">Yna gall eich <ph name="DEVICE_TYPE"/>:</translation>
@@ -7076,7 +7076,7 @@ Gallwch aseinio sawl switsh i'r weithred hon.</translation>
 <translation id="6470823736074966819">Distewi Hysbysiadau</translation>
 <translation id="6472893788822429178">Dangos y Botwm Hafan</translation>
 <translation id="6473315466413288899">Dewiswch opsiwn</translation>
-<translation id="6199773995438617867">Gweld rhagor yn Brave Calendar</translation>
+<translation id="6199773995438617867">Gweld rhagor yn Growser Calendar</translation>
 <translation id="6474401088838630457">Gofyn rhagor i Gemini am hyn</translation>
 <translation id="6474498546677193336">Methu â dadrannu oherwydd bod ap yn defnyddio'r ffolder hon. Bydd y ffolder yn cael ei dadrannu pan fydd Linux yn cael ei gau nesaf.</translation>
 <translation id="6474884162850599008">Datgysylltu cyfrif Google Drive</translation>
@@ -7266,7 +7266,7 @@ Mae gennych # cyfrinair arall sydd wedi'u darganfod. Mae Rheolwr Cyfrineiriau Gr
 <translation id="6613231539539868591">Data Parhaus</translation>
 <translation id="6613267708691765962">Sganio am ddrwgwedd...</translation>
 <translation id="6615455863669487791">Dangos i fi</translation>
-<translation id="5146630705831894319">Cynnig Brave Translate ar gyfer gwefannau a ffeiliau PDF mewn ieithoedd eraill</translation>
+<translation id="5146630705831894319">Cynnig Growser Translate ar gyfer gwefannau a ffeiliau PDF mewn ieithoedd eraill</translation>
 <translation id="6618013221808317456">Peidiwch â chaniatáu i wefannau ddefnyddio optimeiddio JavaScript</translation>
 <translation id="6618154741503063152">Methu ag uwchlwytho. Ni chaniateir atodiadau.</translation>
 <translation id="6619058681307408113">Line Printer Daemon (LPD)</translation>
@@ -7623,7 +7623,7 @@ Mae gennych # cyfrinair arall sydd wedi'u darganfod. Mae Rheolwr Cyfrineiriau Gr
 <translation id="6871644448911473373">Ymatebydd OCSP: <ph name="LOCATION"/></translation>
 <translation id="6871860225073478239">Ieithoedd...</translation>
 <translation id="6873156759937047811">PIN:</translation>
-<translation id="5189979109199910058">Pan fydd ymlaen, bydd Brave Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
+<translation id="5189979109199910058">Pan fydd ymlaen, bydd Growser Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
 <translation id="6873571253135628430">Newid caniatadau gwefan</translation>
 <translation id="6874986444867497677">Nid oedd modd cwblhau'r gosodiad. Rhowch gynnig arall arni neu caewch y ffenestr hon.</translation>
 <translation id="6876155724392614295">Beic</translation>
@@ -7913,7 +7913,7 @@ Mae gennych # cyfrinair arall sydd wedi'u darganfod. Mae Rheolwr Cyfrineiriau Gr
 <translation id="710224247908684995">Mae estyniad wedi diffodd Pori'n Ddiogel</translation>
 <translation id="7102832101143475489">Mae'r cais wedi darfod</translation>
 <translation id="7103944802169726298">PC a dyfais castio ar yr un rhwydwaith Wi-Fi</translation>
-<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Aelodaeth Brave</translation>
+<translation id="6096190807498251842"><ph name="PROFILE_NAME"/>. Aelodaeth Growser</translation>
 <translation id="7107609441453408294">Chwarae'r un sain drwy'r holl seinyddion</translation>
 <translation id="7108338896283013870">Cuddio</translation>
 <translation id="7108419148561505648">Llenwch o leiaf un maes cyn cadw</translation>
@@ -8285,7 +8285,7 @@ Mae gennych # cyfrinair arall sydd wedi'u darganfod. Mae Rheolwr Cyfrineiriau Gr
 <translation id="7395774987022469191">Sgrîn gyfan</translation>
 <translation id="7396017167185131589">Bydd ffolderi sydd wedi'u rhannu'n ymddangos yma</translation>
 <translation id="7396845648024431313">Bydd <ph name="APP_NAME"/> yn lansio cychwyn system ac yn parhau i redeg yn y cefndir hyd yn oed ar ôl i chi gau pob ffenestr <ph name="PRODUCT_NAME"/> arall.</translation>
-<translation id="8572914900293297191">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Brave. Mae Gemini yn AI a gall wneud camgymeriadau. Mae'n bosib na fydd rhywfaint o'r cynnwys yn addas i bawb. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="8572914900293297191">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Growser. Mae Gemini yn AI a gall wneud camgymeriadau. Mae'n bosib na fydd rhywfaint o'r cynnwys yn addas i bawb. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="7399045143794278225">Addasu'r cysoni</translation>
 <translation id="7399616692258236448">Mae ceisiadau lleoliad yn cael eu rhwystro'n awtomatig ar gyfer pob gwefan ac eithrio'r rhai rydych yn eu caniatáu</translation>
 <translation id="7399802613464275309">Gwiriad Diogelwch</translation>
@@ -8821,7 +8821,7 @@ Pwyswch switsh neu fysell a aseiniwyd i dynnu aseiniad.</translation>
 <translation id="7807711621188256451">Rhoi mynediad i <ph name="HOST"/> at eich camera bob tro</translation>
 <translation id="7810202088502699111">Cafodd ffenestri naid eu rhwystro ar y dudalen hon.</translation>
 <translation id="7810367892333449285">Dylai fod gan eich cais y fformat <ph name="LPA_0"/>$<ph name="LPA_1"/>SM-DP+ cyfeiriad<ph name="LPA_2"/>$<ph name="LPA_3"/>dull adnabod sy'n cyfateb dewisol<ph name="LPA_4"/></translation>
-<translation id="5014491767627896944">Mae Brave yn bosib oherwydd prosiect ffynhonnell agored Brave a meddalwedd <ph name="BEGIN_HIGHLIGHT"/>ffynhonnell agored<ph name="END_HIGHLIGHT"/> eraill.</translation>
+<translation id="5014491767627896944">Mae Growser yn bosib oherwydd prosiect ffynhonnell agored Growser a meddalwedd <ph name="BEGIN_HIGHLIGHT"/>ffynhonnell agored<ph name="END_HIGHLIGHT"/> eraill.</translation>
 <translation id="7811263553491007091">Rhowch gynnig arall arni neu dewiswch un o'r themâu a gynhyrchwyd yn flaenorol isod.</translation>
 <translation id="7811926937048662341">De-gliciwch yma a dewiswch “Dangos Tabiau'n Fertigol”</translation>
 <translation id="7811986034759500329">Gosod yn y gosodiadau system</translation>
@@ -8844,7 +8844,7 @@ Pwyswch switsh neu fysell a aseiniwyd i dynnu aseiniad.</translation>
 <translation id="7826039927887234077">Thema AI diweddar <ph name="INDEX"/> o <ph name="SUBJECT"/>, gyda hwyl <ph name="MOOD"/>.</translation>
 <translation id="7826174860695147464">Cefnogaeth Porwr Etifeddiaeth (LBS) - Mewnol</translation>
 <translation id="7826838152281937785">Cau'r Wedd Waelod</translation>
-<translation id="45690163731419633">Mae <ph name="BEGIN_LINK_TERMS"/>Telerau Brave<ph name="END_LINK_TERMS"/> a'r <ph name="BEGIN_LINK_PRIVACY"/>Hysbysiad Preifatrwydd Apiau Gemini<ph name="END_LINK_PRIVACY"/> yn berthnasol</translation>
+<translation id="45690163731419633">Mae <ph name="BEGIN_LINK_TERMS"/>Telerau Growser<ph name="END_LINK_TERMS"/> a'r <ph name="BEGIN_LINK_PRIVACY"/>Hysbysiad Preifatrwydd Apiau Gemini<ph name="END_LINK_PRIVACY"/> yn berthnasol</translation>
 <translation id="7828642077514646543">Gwall: Methu â dadgodio’r dystysgrif</translation>
 <translation id="7830276128493844263">Mae Lleoliad wedi'i ddiffodd yng ngosodiadau'r system</translation>
 <translation id="7830833461614351956">Copïo <ph name="NUM_OF_FILES"/> ffeil i <ph name="CLOUD_PROVIDER"/> i'w hagor?</translation>
@@ -9723,7 +9723,7 @@ Cadwch eich ffeil allwedd mewn man diogel. Bydd ei hangen arnoch i greu fersiyna
 <translation id="850399339579925930">Geiriaduron</translation>
 <translation id="850561044295157831">Dysgu rhagor am Helpu fi i ysgrifennu</translation>
 <translation id="8505669004895429027">Arbedion Bach</translation>
-<translation id="869548515244800202">Aelodaeth Brave</translation>
+<translation id="869548515244800202">Aelodaeth Growser</translation>
 <translation id="8507052544157927817">Arddull tanlinellu</translation>
 <translation id="8507227974644337342">Cydraniad y sgrîn</translation>
 <translation id="8507443886219296894">Cuddio ar gyfer y wefan hon</translation>
@@ -9864,7 +9864,7 @@ Cadwch eich ffeil allwedd mewn man diogel. Bydd ei hangen arnoch i greu fersiyna
 <translation id="8619803522055190423">Gollwng cysgod</translation>
 <translation id="8620206585293032550">Gwedd tabiau anweithredol</translation>
 <translation id="8621979332865976405">Rhannu eich sgrîn gyfan</translation>
-<translation id="6089523089512126744">Dull AI Brave Search ac apiau cysylltiedig</translation>
+<translation id="6089523089512126744">Dull AI Growser Search ac apiau cysylltiedig</translation>
 <translation id="8624944202475729958"><ph name="PROFILE_NAME"/>: <ph name="ERROR_DESCRIPTION"/></translation>
 <translation id="8625124982056504555">Darllen rhifau cyfresol cydran a dyfais ChromeOS</translation>
 <translation id="862542460444371744">&amp;Estyniadau</translation>
@@ -11325,17 +11325,17 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="2412463899388924412"><ph name="DISPLAYED_TEXT"/>, Gemini yn Growser</translation>
 <translation id="1975450474853317621">Agor mewn porwr Growser</translation>
 <translation id="8516824290867275572">Nid oes gan eich cyfrif fynediad at Gemini yn Growser</translation>
-<translation id="1649234713894562345">Mae Brave yn bosib oherwydd prosiect ffynhonnell agored Brave a meddalwedd <ph name="BEGIN_HIGHLIGHT"/>ffynhonnell agored<ph name="END_HIGHLIGHT"/> eraill.</translation>
+<translation id="1649234713894562345">Mae Growser yn bosib oherwydd prosiect ffynhonnell agored Growser a meddalwedd <ph name="BEGIN_HIGHLIGHT"/>ffynhonnell agored<ph name="END_HIGHLIGHT"/> eraill.</translation>
 <translation id="870536819717176711">Pan fyddwch yn dewis rhannu'r tab cyfredol gyda Gemini, anfonir y cyfryngau, cynnwys llawn ac URL y tab at Growser.</translation>
-<translation id="1130866111814048607">Pan fydd tabiau'n cael eu rhannu, anfonir cynnwys eu tudalennau, cyfryngau a chyfeiriadau URL at Brave a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
-<translation id="7656790264713095385">Yn gyntaf, trowch awto-bori Brave ymlaen ar gyfer y ddyfais hon</translation>
+<translation id="1130866111814048607">Pan fydd tabiau'n cael eu rhannu, anfonir cynnwys eu tudalennau, cyfryngau a chyfeiriadau URL at Growser a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
+<translation id="7656790264713095385">Yn gyntaf, trowch awto-bori Growser ymlaen ar gyfer y ddyfais hon</translation>
 <translation id="8572003230388132401">Gall Gemini Spark ddefnyddio awto-bori ar y ddyfais hon i ryngweithio â gwefannau a chwblhau tasgau ar eich rhan. <ph name="LINK_BEGIN"/>Dysgu rhagor<ph name="LINK_END"/></translation>
 <translation id="2732482226802306268">Dim ond os yw'r ddyfais yn effro ac os yw Growser yn rhedeg y gall Gemini Spark ddefnyddio awto-bori ar y ddyfais hon.</translation>
 <translation id="1982892581799327835">Gallai unrhyw un sydd â mynediad at eich asiant Gemini Spark reoli eich porwr Growser.</translation>
 <translation id="6689939585896001516">Gadewch i Growser bori i chi</translation>
 <translation id="640233545778658570">Mae Gemini yn Growser yn defnyddio pori awtomatig i weithio yn eich tabiau a chwblhau tasgau rydych yn eu rhoi iddo. <ph name="LINK_BEGIN"/>Dysgu rhagor<ph name="LINK_END"/></translation>
-<translation id="2740842679402949230">Dysgu rhagor am awto-bori Brave</translation>
-<translation id="3570112771874223231">Bydd cynnwys tudalen a chyfeiriadau URL y mae Gemini yn eu defnyddio yn ystod tasg yn cael eu rhannu â Brave a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
+<translation id="2740842679402949230">Dysgu rhagor am awto-bori Growser</translation>
+<translation id="3570112771874223231">Bydd cynnwys tudalen a chyfeiriadau URL y mae Gemini yn eu defnyddio yn ystod tasg yn cael eu rhannu â Growser a gallant gael eu hadolygu ar gyfer diogelwch.</translation>
 <translation id="2314508080153323869">Gemini yn Growser</translation>
 <translation id="1910632359330857071">Sgwrsiwch â Gemini yn Growser i gael atebion, pwyntiau allweddol, a rhagor wrth i chi bori</translation>
 <translation id="2483218699324586641">Defnyddiwch <ph name="FOCUS_TOGGLE_HOTKEY"/> i agor Gemini yn Growser</translation>
@@ -11365,8 +11365,8 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
     ap Growser Home<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Cael eich cyfrineiriau ar y ddyfais hon gyda Rheolwr Cyfrineiriau Growser</translation>
 <translation id="2364302372598204515">Nid yw hwn yn Gyfrif Growser. Ni fydd eitemau rydych yn eu cadw i Growser ar gael ar ddyfeisiau eraill.</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Aelodaeth Brave</translation>
-<translation id="850632091665381275">Aelodaeth Brave</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Aelodaeth Growser</translation>
+<translation id="850632091665381275">Aelodaeth Growser</translation>
 <translation id="6710172959248731469">Gosodiadau gwasanaethau Growser</translation>
 <translation id="4969336592509599857">{ITEM_COUNT,plural, =1{Mae 1 eitem wedi'i chadw i'r ddyfais hon yn unig. Er mwyn ei defnyddio ar eich dyfeisiau eraill, cadwch hi yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}zero{Mae {ITEM_COUNT} eitemau yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}two{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}few{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}many{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}other{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}}</translation>
 <translation id="4054638287667531642">{PASSWORD_COUNT,plural, =1{Mae 1 cyfrinair wedi'i gadw i'r ddyfais hon yn unig. Er mwyn ei defnyddio ar eich dyfeisiau eraill, cadwch hi yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}zero{Mae {PASSWORD_COUNT} cyfrineiriau yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}two{Mae {PASSWORD_COUNT} gyfrinair yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}few{Mae {PASSWORD_COUNT} chyfrinair yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}many{Mae {PASSWORD_COUNT} chyfrinair yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}other{Mae {PASSWORD_COUNT} cyfrinair yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser. Bydd hyn hefyd yn glanhau unrhyw ddyblygiadau.}}</translation>
@@ -11380,8 +11380,8 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="8401222846038466875">{BOOKMARK_COUNT,plural, =1{Mae 1 nod tudalen ac eitemau eraill wedi'u cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser.}zero{Mae {BOOKMARK_COUNT} nod tudalen ac eitemau eraill wedi'u cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser.}two{Mae {BOOKMARK_COUNT} nod tudalen ac eitemau eraill wedi'u cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser.}few{Mae {BOOKMARK_COUNT} nod tudalen ac eitemau eraill wedi'u cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser.}many{Mae {BOOKMARK_COUNT} nod tudalen ac eitemau eraill wedi'u cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser.}other{Mae {BOOKMARK_COUNT} nod tudalen ac eitemau eraill wedi'u cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, cadwch nhw yn eich Cyfrif Growser.}}</translation>
 <translation id="5312888548294933729">{ITEM_COUNT,plural, =1{Mae 1 eitem wedi'i chadw i'r ddyfais hon yn unig. Er mwyn ei defnyddio ar eich dyfeisiau eraill, <ph name="BEGIN_LINK"/>cadwch hi yn eich Cyfrif Growser<ph name="END_LINK"/>.}zero{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, <ph name="BEGIN_LINK"/>cadwch nhw yn eich Cyfrif Growser<ph name="END_LINK"/>.}two{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, <ph name="BEGIN_LINK"/>cadwch nhw yn eich Cyfrif Growser<ph name="END_LINK"/>.}few{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, <ph name="BEGIN_LINK"/>cadwch nhw yn eich Cyfrif Growser<ph name="END_LINK"/>.}many{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, <ph name="BEGIN_LINK"/>cadwch nhw yn eich Cyfrif Growser<ph name="END_LINK"/>.}other{Mae {ITEM_COUNT} eitem yn cael eu cadw i'r ddyfais hon yn unig. Er mwyn eu defnyddio ar eich dyfeisiau eraill, <ph name="BEGIN_LINK"/>cadwch nhw yn eich Cyfrif Growser<ph name="END_LINK"/>.}}</translation>
 <translation id="8993421601514768334">Defnyddiwch eich cyfrif Growser neu crëwch un newydd</translation>
-<translation id="1896353439080510710">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Brave. Mae Gemini yn AI a gall wneud camgymeriadau. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
-<translation id="7398815534290329738">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Brave. Mae Gemini yn AI a gall wneud camgymeriadau. Mae'n bosib na fydd rhywfaint o'r cynnwys yn addas i bawb. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="1896353439080510710">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Growser. Mae Gemini yn AI a gall wneud camgymeriadau. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
+<translation id="7398815534290329738">Mae sgyrsiau'n cael eu hadolygu a'u defnyddio i wella AI Growser. Mae Gemini yn AI a gall wneud camgymeriadau. Mae'n bosib na fydd rhywfaint o'r cynnwys yn addas i bawb. Gallwch <ph name="BEGIN_LINK_MANAGE_ACTIVITY"/>reoli eich gweithgarwch<ph name="END_LINK_MANAGE_ACTIVITY"/>, gan gynnwys gwybodaeth am eich lleoliad. <ph name="BEGIN_LINK_LEARN_MORE"/>Dysgu rhagor am eich dewisiadau<ph name="END_LINK_LEARN_MORE"/></translation>
 <translation id="4459190615037709719">{ACCOUNT_EXTENSIONS_COUNT,plural, =1{Mae'r estyniad hwn wedi'i gadw yn eich Cyfrif Growser, ond mae'n bosib y bydd unrhyw ddata y mae wedi'u cadw ar y ddyfais hon yn unig yn cael eu dileu}zero{Mae'r estyniadau hyn wedi'u cadw yn eich Cyfrif Growser, ond mae'n bosib y bydd unrhyw ddata maent wedi'u cadw ar y ddyfais hon yn unig yn cael eu dileu}two{Mae'r estyniadau hyn wedi'u cadw yn eich Cyfrif Growser, ond mae'n bosib y bydd unrhyw ddata maent wedi'u cadw ar y ddyfais hon yn unig yn cael eu dileu}few{Mae'r estyniadau hyn wedi'u cadw yn eich Cyfrif Growser, ond mae'n bosib y bydd unrhyw ddata maent wedi'u cadw ar y ddyfais hon yn unig yn cael eu dileu}many{Mae'r estyniadau hyn wedi'u cadw yn eich Cyfrif Growser, ond mae'n bosib y bydd unrhyw ddata maent wedi'u cadw ar y ddyfais hon yn unig yn cael eu dileu}other{Mae'r estyniadau hyn wedi'u cadw yn eich Cyfrif Growser, ond mae'n bosib y bydd unrhyw ddata maent wedi'u cadw ar y ddyfais hon yn unig yn cael eu dileu}}</translation>
 <translation id="3523789730715594198">Gallwch stopio cysoni unrhyw bryd yn y gosodiadau. Gall Growser bersonoleiddio Search a gwasanaethau eraill yn seiliedig ar eich hanes.</translation>
 <translation id="8231595707224857577">Mae eich sefydliad wedi diffodd cadw tabiau yn eich Cyfrif Growser</translation>
@@ -11419,7 +11419,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="1024884937839269099">Gall <ph name="BEGIN_LINK_GOOGLE"/>mathau eraill o weithgarwch<ph name="END_LINK_GOOGLE"/> gael eu cadw i'ch Cyfrif Growser pan fyddwch wedi mewngofnodi. Gallwch eu dileu ar unrhyw adeg.</translation>
 <translation id="6533315466883598769">Defnyddio Google Translate</translation>
 <translation id="6010651352520077187">Pan fydd ymlaen, bydd Google Translate yn cynnig cyfieithu gwefannau i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
-<translation id="6873499199714317035">Pan fydd ymlaen, bydd Brave Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
+<translation id="6873499199714317035">Pan fydd ymlaen, bydd Growser Translate yn cynnig cyfieithu gwefannau a PDFs i'ch dewis iaith. Gall hefyd gyfieithu gwefannau yn awtomatig.</translation>
 <translation id="5911030830365207728">Google Translate</translation>
 <translation id="7458168200501453431">Yn defnyddio'r un gwiriwr sillafu ag a ddefnyddir yn Google Search. Anfonir testun rydych yn ei deipio yn y porwr at Growser.</translation>
 <translation id="8972513834460200407">Gwiriwch â'ch gweinyddwr rhwydwaith i sicrhau nad yw'r wal dân yn rhwystro lawrlwythiadau o weinyddion Growser.</translation>
@@ -11465,7 +11465,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="3293574207873361017">Rheoli'ch Cyfrif Growser</translation>
 <translation id="6901130673208235020">Pan fyddwch yn chwilio hanes pori, bydd eich chwiliadau hanes, cynnwys tudalennau'r gemau gorau, ac allbynnau model a gynhyrchir yn cael eu hanfon at Growser</translation>
 <translation id="3178434360326457238">Wrth i chi bori gwefannau, mae cynnwys eu tudalen yn cael ei amgryptio a'i gadw i'ch dyfais. Gall hyn effeithio ar berfformiad Growser</translation>
-<translation id="8622145666696249878">Dull AI Brave Search ac apiau cysylltiedig</translation>
+<translation id="8622145666696249878">Dull AI Growser Search ac apiau cysylltiedig</translation>
 <translation id="2760679829473121490">Dangos hysbysiadau system am nodweddion ac awgrymiadau Growser</translation>
 <translation id="6713316345564743478">I wirio am gyfrineiriau sydd wedi'u darganfod, mewngofnodwch i'ch Cyfrif Growser</translation>
 <translation id="1342886103232377846">I wirio am gyfrineiriau sydd wedi'u darganfod, ewch i Reolwr Cyfrineiriau Growser</translation>
@@ -11528,7 +11528,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="1095879482467973146">Rheolwr Cyfrineiriau Growser ar y we</translation>
 <translation id="1368798504801939187">Gweld eich cyfrineiriau hyd yn oed pan nad ydych yn defnyddio Growser neu Android trwy fewngofnodi i <ph name="BEGIN_LINK"/>passwords.google.com<ph name="END_LINK"/></translation>
 <translation id="829923460755755423">Ychwanegu llwybr byr at y Rheolwr Cyfrineiriau Growser</translation>
-<translation id="7244677273667272006">Cadarnhewch mai chi sydd yno i ychwanegu cyfrineiriau a'u cael ar bob dyfais gyda'ch Cyfrif Brave</translation>
+<translation id="7244677273667272006">Cadarnhewch mai chi sydd yno i ychwanegu cyfrineiriau a'u cael ar bob dyfais gyda'ch Cyfrif Growser</translation>
 <translation id="8189517459248805166">Mae eich cyfrinair ar gyfer <ph name="WEBSITE"/> wedi'i gadw ar y ddyfais hon ac i'ch Cyfrif Growser. Pa un ydych chi am ei ddileu?</translation>
 <translation id="9101265711096405922">O'ch Cyfrif Growser</translation>
 <translation id="927421426408921503">Symud cyfrineiriau sydd wedi'u cadw i'ch Cyfrif Growser?</translation>
@@ -11639,7 +11639,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
        <ph name="BREAK"/>
         <ph name="BREAK"/>
         Gallwch reoli gosodiadau o'r ddewislen cardiau neu weld rhagor o ddewisiadau yn Customize Growser.</translation>
-<translation id="6474021817475285003">Gweld rhagor yn Brave Calendar</translation>
+<translation id="6474021817475285003">Gweld rhagor yn Growser Calendar</translation>
 <translation id="9066394310994446814">Rydych yn gweld yr eitem hon yn seiliedig ar eich gweithgarwch blaenorol gan ddefnyddio gwasanaethau Growser. Gallwch weld eich data, eu dileu, a newid gosodiadau eich cyfrif yn <ph name="BEGIN_LINK1"/>myactivity.google.com<ph name="END_LINK1"/>.
         <ph name="BREAK"/>
         <ph name="BREAK"/>
@@ -11670,7 +11670,7 @@ Gall hyn gynnwys gwybodaeth am feddalwedd sydd wedi'i gosod, ffeiliau, eich porw
 <translation id="6868193750403948178">Personoleiddio Growser</translation>
 <translation id="5009064339929592579">Cadw i ffolder yn eich Cyfrif Growser?</translation>
 <translation id="7400528739136719497">Mae'n bosib na fydd rhai lleisiau Growser ar gael ar hyn o bryd</translation>
-<translation id="4857677595331912231">Mae cynnwys a chyfeiriad gwe eich tab cyfredol yn cael eu rhannu â Brave i roi atebion mwy perthnasol i chi. Gallwch ychwanegu neu dynnu tabiau wrth i chi bori.</translation>
+<translation id="4857677595331912231">Mae cynnwys a chyfeiriad gwe eich tab cyfredol yn cael eu rhannu â Growser i roi atebion mwy perthnasol i chi. Gallwch ychwanegu neu dynnu tabiau wrth i chi bori.</translation>
 <translation id="5639212636098910819">Aros yn Growser</translation>
 <translation id="3252169590975855820">Gallwch gael mynediad ato ar Rheolwr Cyfrineiriau Growser</translation>
 <translation id="3843323136102787632">Lawrlwythwch Growser gyda'r cod QR hwn, a mewngofnodwch i'ch Cyfrif Growser.</translation>
@@ -11725,7 +11725,7 @@ Mae gennych # cyfrinair arall sydd wedi'u darganfod. Mae Rheolwr Cyfrineiriau Gr
 <translation id="1162630940779651724">I anfon y tab hwn i ddyfais arall, mewngofnodwch i Growser ar y ddwy ddyfais</translation>
 <translation id="5388608738812110907">I anfon y tab hwn i ddyfais arall, mewngofnodwch i Growser yno</translation>
 <translation id="4007679133627124999">I anfon dolenni rhwng dyfeisiau, sicrhewch fod y ddwy wedi'u mewngofnodi i'r un cyfrif Growser.</translation>
-<translation id="2377999415409519333">I anfon dolenni, cadarnhewch mai chi sydd yno. Gallwch anfon dolenni pan fyddwch wedi mewngofnodi i'r un Cyfrif Brave ar y ddwy ddyfais.</translation>
+<translation id="2377999415409519333">I anfon dolenni, cadarnhewch mai chi sydd yno. Gallwch anfon dolenni pan fyddwch wedi mewngofnodi i'r un Cyfrif Growser ar y ddwy ddyfais.</translation>
 <translation id="4986706507552097681">Gallwch bob amser ddewis beth i'w gysoni yn y gosodiadau. Gall Growser bersonoleiddio Search a gwasanaethau eraill yn seiliedig ar eich hanes.</translation>
 <translation id="8002662358897231821">Mewngofnodwch i gael eich nodau tudalen, eich hanes, eich cyfrineiriau a'ch gosodiadau eraill ar eich holl ddyfeisiau. Byddwch hefyd yn cael eich mewngofnodi'n awtomatig i'ch gwasanaethau Growser.</translation>
 <translation id="3128296144259620504">Mae Growser yn cael ei reoli gan feddalwedd prawf awtomataidd</translation>
