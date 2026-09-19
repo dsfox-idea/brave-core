@@ -35,6 +35,8 @@
 #include "content/public/browser/web_contents.h"
 #include "third_party/skia/include/core/SkColor.h"
 #include "ui/color/color_provider.h"
+#include "ui/color/color_provider_manager.h"
+#include "ui/native_theme/native_theme.h"
 #include "ui/color/color_provider_utils.h"
 #endif
 
@@ -103,11 +105,22 @@ void AddBackgroundColorToSource(content::WebUIDataSource* source,
       browser_window = BrowserWindow::FromBrowser(browser);
     }
   }
-  if (!browser_window) {
-    DLOG(ERROR) << "No BrowserWindow could be found for WebContents";
-    return;
-  }
-  const ui::ColorProvider* color_provider = browser_window->GetColorProvider();
+  // Growser-249: returning here is a browser CRASH, not a graceful skip. The
+  // page still contains $i18n{backgroundColor}, and ReplaceTemplateExpressions
+  // CHECKs on a key it cannot resolve
+  // (ui/base/template_expressions.cc) - so a new tab loading while no browser
+  // window can be found kills the browser process. Reproduced from
+  // FirstPartyStorageCleanupSiteDataBrowserTest, where Shred closes the tab:
+  //   missing $i18n key=[backgroundColor] replacements=227
+  //
+  // There is always a colour to give. Without a window, take the one the
+  // native theme would produce - it still follows dark mode, and the value
+  // only shows for the instant before the page paints.
+  const ui::ColorProvider* color_provider =
+      browser_window ? browser_window->GetColorProvider()
+                     : ui::ColorProviderManager::Get().GetColorProviderFor(
+                           ui::NativeTheme::GetInstanceForNativeUi()
+                               ->GetColorProviderKey(nullptr));
   SkColor ntp_background_color =
       color_provider->GetColor(kColorNewTabPageBackground);
   // Set to a template replacement string that can be inserted to the
