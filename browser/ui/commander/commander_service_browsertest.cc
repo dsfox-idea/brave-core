@@ -8,6 +8,7 @@
 #include <memory>
 #include <string>
 
+#include "base/command_line.h"
 #include "base/functional/callback_forward.h"
 #include "base/location.h"
 #include "base/run_loop.h"
@@ -29,6 +30,7 @@
 #include "chrome/test/base/in_process_browser_test.h"
 #include "components/grit/brave_components_strings.h"
 #include "content/public/test/browser_test.h"
+#include "ui/base/ui_base_switches.h"
 #include "content/public/test/test_utils.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "ui/base/l10n/l10n_util.h"
@@ -41,6 +43,17 @@ class CommanderServiceBrowserTest : public InProcessBrowserTest {
 
   ~CommanderServiceBrowserTest() override = default;
   void SetUp() override { InProcessBrowserTest::SetUp(); }
+
+  // Growser-241: these tests type an English command name into the omnibox
+  // and assert against l10n strings, so they measure the matcher only in an
+  // English browser. Ours ships in Russian and every one of them sat waiting
+  // for a match that could not come. Pinning the locale is what makes the
+  // measurement about the matcher on any machine, rather than about the
+  // language the machine happens to run.
+  void SetUpCommandLine(base::CommandLine* command_line) override {
+    InProcessBrowserTest::SetUpCommandLine(command_line);
+    command_line->AppendSwitchASCII(switches::kLang, "en-US");
+  }
   void TearDownOnMainThread() override {
     commander()->Hide();
     content::RunAllTasksUntilIdle();
