@@ -260,40 +260,15 @@ IN_PROC_BROWSER_TEST_F(BraveSearchTest, CheckForAnUndefinedFunction) {
   EXPECT_EQ(base::Value(false), result_first);
 }
 
-IN_PROC_BROWSER_TEST_F(BraveSearchTestEnabled, DefaultAPIVisibleKnownHost) {
-  // Opensearch providers are only allowed in the root of a site,
-  // See SearchEngineTabHelper::GenerateKeywordFromNavigationEntry.
-  GURL url = https_server()->GetURL(kAllowedDomain, "/");
-  auto* template_url_service =
-      TemplateURLServiceFactory::GetForProfile(browser()->GetProfile());
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
-  content::WebContents* contents =
-      browser()->tab_strip_model()->GetActiveWebContents();
-  WaitForLoadStop(contents);
-  EXPECT_EQ(url, contents->GetURL());
-  EXPECT_EQ(true, content::EvalJs(contents, kScriptDefaultAPIExists));
-
-  // Wait for a TemplateURL matching the allowed domain to exist and be eligible
-  // to be made default. This ensures the opensearch XML has been fetched and
-  // processed (or the built-in entry is ready) before calling the JS API.
-  // We check in C++ to avoid calling getCanSetDefaultSearchProvider()
-  // repeatedly, which has side effects (it records each call against a
-  // rate limit, causing subsequent calls to return false).
-  ASSERT_TRUE(base::test::RunUntil([&]() {
-    for (const TemplateURL* t_url : template_url_service->GetTemplateURLs()) {
-      if (t_url->url_ref().GetHost(SearchTermsData()) == kAllowedDomain &&
-          template_url_service->CanMakeDefault(t_url)) {
-        return true;
-      }
-    }
-    return false;
-  })) << "Timeout waiting for a TemplateURL for "
-      << kAllowedDomain << " that can be made default";
-
-  // Now call the JS API exactly once. The preconditions are met so this
-  // should return true.
-  EXPECT_EQ(true, content::EvalJs(contents, kScriptDefaultAPIGetValue));
-}
+// Growser-246: DefaultAPIVisibleKnownHost is gone. It asserted that a page on
+// a vetted host can make ITSELF the default search engine - and the API that
+// would do it is off here, because growser#18 removed Brave Search from every
+// country's engine list, so there is no engine for it to set. Measured before
+// removing: getCanSetDefaultSearchProvider() answers false.
+//
+// The three tests below stay. They assert the API is NOT offered - to an
+// unknown host, in a private window - which is now the whole of what this
+// browser does.
 
 IN_PROC_BROWSER_TEST_F(BraveSearchTestEnabled, DefaultAPIHiddenUnknownHost) {
   // Opensearch providers are only allowed in the root of a site,

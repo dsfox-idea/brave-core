@@ -11,9 +11,19 @@
 
 namespace brave_search::features {
 
+// Growser-246: off. This is the JS API that lets a page offer itself as the
+// default search engine, and it is exposed to seven hosts that are not ours -
+// search.brave.com and its siblings, in kVettedHosts. growser#18 removed Brave
+// Search from every country's engine list, so there is nothing for that API to
+// set; what is left is a capability granted to somebody else's origins for a
+// feature this browser does not have.
+//
+// The flag closes the whole surface at once: the mojo interface is not bound
+// in the browser (brave_content_browser_client.cc) and the render frame
+// observer that injects the script is not created (brave_content_renderer_client.cc).
 BASE_FEATURE(kBraveSearchDefaultAPIFeature,
              "BraveSearchDefaultAPI",
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 
 const base::FeatureParam<int> kBraveSearchDefaultAPIDailyLimit{
     &kBraveSearchDefaultAPIFeature, kBraveSearchDefaultAPIDailyLimitName, 3};
