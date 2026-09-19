@@ -467,10 +467,17 @@ void BraveBrowserCommandController::UpdateCommandForWebcompatReporter() {
 void BraveBrowserCommandController::UpdateCommandForTor() {
   // Growser-157: back to following the pref, as upstream does. growser#78 held
   // these off because no Tor client could reach a fork; we publish one now.
-  const bool enabled = !TorProfileServiceFactory::IsTorDisabled(
-      browser_->GetProfile());
-  UpdateCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE, enabled);
-  UpdateCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR, enabled);
+  //
+  // The two are not the same condition, and collapsing them into one was a
+  // defect: a new circuit can only be asked for in a window that HAS one, so
+  // outside a Tor window the app menu offered "New Tor connection for this
+  // site" - an entry that cannot do anything, which is the promise growser#78
+  // existed to stop making. Restored to upstream's pair.
+  UpdateCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE,
+                       browser_->GetProfile()->IsTor());
+  UpdateCommandEnabled(
+      IDC_NEW_OFFTHERECORD_WINDOW_TOR,
+      !TorProfileServiceFactory::IsTorDisabled(browser_->GetProfile()));
 }
 #endif
 

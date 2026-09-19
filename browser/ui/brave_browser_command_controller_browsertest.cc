@@ -401,9 +401,13 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
   EXPECT_EQ(command_controller->IsCommandEnabled(IDC_SHOW_BRAVE_REWARDS),
             BUILDFLAG(ENABLE_BRAVE_REWARDS));
 
-  EXPECT_FALSE(
+  // Growser-157: Tor ships in every build again, so a Tor window offers both
+  // - a new circuit for this site, and another Tor window. These said FALSE
+  // from growser#78, when no Tor client could reach a fork; #157 turned the
+  // feature back on in the product and left the test behind.
+  EXPECT_TRUE(
       command_controller->IsCommandEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE));
-  EXPECT_FALSE(
+  EXPECT_TRUE(
       command_controller->IsCommandEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR));
 
   if (syncer::IsSyncAllowedByFlag()) {
