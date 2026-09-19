@@ -675,9 +675,9 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, ShowOriginalPage) {
     })();
   )js";
 
-  // Growser-241: the link is localized, and our UI ships in Russian - the
-  // literal read "Посмотреть оригинал" here, which is the browser being right.
-  // Ask the same resource the reader itself draws from.
+  // Growser-241: the link is localized and our UI ships in Russian, so the
+  // literal came back translated - the browser being right, not wrong. Ask the
+  // same resource the reader itself draws from.
   EXPECT_EQ(l10n_util::GetStringUTF8(IDS_READER_MODE_SHOW_ORIGINAL_PAGE_LINK),
             content::EvalJs(web_contents, kClickLinkAndGetTitle,
                             content::EXECUTE_SCRIPT_DEFAULT_OPTIONS,
