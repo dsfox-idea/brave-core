@@ -112,6 +112,7 @@
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/rounded_corners_f.h"
 #include "ui/gfx/image/image_skia_operations.h"
+#include "ui/gfx/image/image_skia_rep.h"
 #include "ui/gfx/image/image_unittest_util.h"
 #include "ui/views/animation/ink_drop.h"
 #include "ui/views/controls/button/label_button.h"
@@ -2962,22 +2963,34 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntryDrawsTheTabsIcon) {
       << "the page declares the same icon the model holds, so this test cannot "
          "tell the two sources apart";
 
-  // Growser-241: wait for the entry to CONVERGE on the model rather than
-  // reading both at one instant. The entry learns of an icon change through
-  // OnTabChangedAt, the model through its own observer, and there is no
-  // order between the two - so a read taken between them sees the model
-  // ahead of the entry, with the entry's update still in the queue. That
-  // is a race in this test, not in the view: measured 4 failures in 12 runs
-  // on a tree with nothing else changed, and the entry always catches up.
-  // What is asserted is unchanged: the entry ends up drawing the model's
-  // icon, resized, and nothing else.
+  // Growser-241: two things about this comparison, both measured.
+  //
+  // Compare ONE scale. gfx::test::AreImagesEqual first demands the same
+  // number of representations, and an entry that has been painted on a 150%
+  // display has grown a 1.5x rep that a freshly rasterized ImageModel does
+  // not have and cannot generate without a source. So on this machine the
+  // test failed 3 runs in 30 before a single pixel was looked at, whenever
+  // paint happened to land before the assertion - the same picture, judged
+  // incomparable. Brave's bots run at 100% and never see it. Both sides are
+  // read at 1x, which is the scale the model's icon actually exists at.
+  //
+  // And wait for the entry rather than reading it at one instant: it learns
+  // of an icon change through OnTabChangedAt, the model through its own
+  // observer, and there is no order between the two. What is asserted is
+  // unchanged: the entry ends up drawing the model's icon, resized, and
+  // nothing else - a view drawing the page's declared icon instead still
+  // fails here, by timeout.
   auto* entry = static_cast<views::LabelButton*>(EntryAt(0));
   auto entry_draws_wanted = [&]() {
     const gfx::ImageSkia drawn = entry->GetImage(views::Button::STATE_NORMAL);
-    return gfx::test::AreImagesEqual(
-        gfx::Image(drawn),
-        gfx::Image(gfx::ImageSkiaOperations::CreateResizedImage(
-            wanted, skia::ImageOperations::RESIZE_BEST, drawn.size())));
+    if (drawn.isNull()) {
+      return false;
+    }
+    const gfx::ImageSkia expected =
+        gfx::ImageSkiaOperations::CreateResizedImage(
+            wanted, skia::ImageOperations::RESIZE_BEST, drawn.size());
+    return gfx::test::AreBitmapsEqual(drawn.GetRepresentation(1.0f).GetBitmap(),
+                                      expected.GetRepresentation(1.0f).GetBitmap());
   };
   EXPECT_TRUE(base::test::RunUntil(entry_draws_wanted))
       << "the sidebar entry never settled on the tab's icon";
