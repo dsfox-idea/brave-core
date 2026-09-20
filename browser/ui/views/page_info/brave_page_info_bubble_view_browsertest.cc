@@ -3,6 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include "base/command_line.h"
 #include "brave/browser/ui/views/page_info/brave_page_info_bubble_view.h"
 
 #include "base/test/run_until.h"
@@ -25,6 +26,7 @@
 #include "components/page_info/page_info.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/test_navigation_observer.h"
+#include "ui/base/ui_base_switches.h"
 #include "ui/events/test/test_event.h"
 #include "ui/views/controls/button/button.h"
 #include "ui/views/test/button_test_api.h"
@@ -314,6 +316,17 @@ class BravePageInfoBubbleViewRepeatedReloadsBrowserTest
   }
 
   ~BravePageInfoBubbleViewRepeatedReloadsBrowserTest() override = default;
+
+  // Growser-241: adblock-only mode is English-only by Brave's design -
+  // kAdblockOnlyModeSupportedLanguageCodes is {"en"} - and this browser
+  // ships in Russian, so on this machine every gate in the feature reads
+  // "unsupported" and the tests can only measure that. Measured: the whole
+  // family passes with --lang=en-US on an unchanged binary. The locale is
+  // pinned here so the tests measure the mode rather than the machine.
+  void SetUpCommandLine(base::CommandLine* command_line) override {
+    BravePageInfoBubbleViewBrowserTestBase::SetUpCommandLine(command_line);
+    command_line->AppendSwitchASCII(switches::kLang, "en-US");
+  }
 
  private:
   base::test::ScopedFeatureList feature_list_;

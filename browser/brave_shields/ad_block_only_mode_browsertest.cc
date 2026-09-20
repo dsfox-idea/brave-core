@@ -3,6 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include "base/command_line.h"
 #include "base/functional/callback.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/run_loop.h"
@@ -29,6 +30,7 @@
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
 #include "testing/gtest/include/gtest/gtest.h"
+#include "ui/base/ui_base_switches.h"
 #include "url/gurl.h"
 
 namespace brave_shields {
@@ -58,6 +60,17 @@ class AdblockOnlyModeBrowserTestBase : public PlatformBrowserTest {
  public:
   AdblockOnlyModeBrowserTestBase() = default;
   ~AdblockOnlyModeBrowserTestBase() override = default;
+
+  // Growser-241: adblock-only mode is English-only by Brave's design -
+  // kAdblockOnlyModeSupportedLanguageCodes is {"en"} - and this browser
+  // ships in Russian, so on this machine every gate in the feature reads
+  // "unsupported" and the tests can only measure that. Measured: the whole
+  // family passes with --lang=en-US on an unchanged binary. The locale is
+  // pinned here so the tests measure the mode rather than the machine.
+  void SetUpCommandLine(base::CommandLine* command_line) override {
+    PlatformBrowserTest::SetUpCommandLine(command_line);
+    command_line->AppendSwitchASCII(switches::kLang, "en-US");
+  }
 
   PrefService* local_state() { return g_browser_process->local_state(); }
 
