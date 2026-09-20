@@ -209,6 +209,15 @@ class AdBlockService {
   AdBlockDATCacheManager* GetDATCacheManagerForTesting();
   bool IsDATLoadedForTesting(bool is_default_engine) const;
   bool IsFilterListLoadedForTesting(bool is_default_engine) const;
+  // Growser-248: stop the bundled catalogue from subscribing to its publishers
+  // in a browser test. Brave's tests run with NO catalogue - the component is
+  // never installed on their bots - and ours ships one (growser#87), so at
+  // startup 34 subscriptions go to hosts that a test resolves to 127.0.0.1
+  // with nothing listening. They fill the download service's 15-slot queue
+  // and retry with backoff for longer than any test waits, so a subscription
+  // the test itself creates is refused with BACKOFF and never leaves the
+  // queue. Measured: 15 accepted, 20 refused, zero completions in 30 s.
+  static void SetSkipCatalogSubscriptionsForTesting(bool skip);
 
  private:
   static std::string g_ad_block_dat_file_version_;

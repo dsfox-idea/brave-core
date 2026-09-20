@@ -147,8 +147,16 @@ void WaitForSelectorBlocked(const content::ToRenderFrameHost& target,
 }  // namespace
 
 AdBlockServiceTest::AdBlockServiceTest()
-    : https_server_(net::EmbeddedTestServer::Type::TYPE_HTTPS) {}
-AdBlockServiceTest::~AdBlockServiceTest() = default;
+    : https_server_(net::EmbeddedTestServer::Type::TYPE_HTTPS) {
+  // Growser-248: the same environment Brave's own tests get - no catalogue
+  // subscriptions. Ours ships a catalogue and would otherwise start 34
+  // downloads to hosts this test resolves to nothing, filling the download
+  // service's queue for longer than any test waits.
+  brave_shields::AdBlockService::SetSkipCatalogSubscriptionsForTesting(true);
+}
+AdBlockServiceTest::~AdBlockServiceTest() {
+  brave_shields::AdBlockService::SetSkipCatalogSubscriptionsForTesting(false);
+}
 
 void AdBlockServiceTest::SetUpCommandLine(base::CommandLine* command_line) {
   PlatformBrowserTest::SetUpCommandLine(command_line);

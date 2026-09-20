@@ -137,11 +137,21 @@ void AdBlockService::SourceProviderObserver::OnAllLoaded(
                            std::move(filter_set), std::move(storage));
 }
 
+namespace {
+bool g_skip_catalog_subscriptions_for_testing = false;
+}  // namespace
+
+// static
+void AdBlockService::SetSkipCatalogSubscriptionsForTesting(bool skip) {
+  g_skip_catalog_subscriptions_for_testing = skip;
+}
+
 void AdBlockService::OnCatalogListSourcesToggled(
     const std::vector<std::string>& urls,
     bool enabled) {
   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
-  if (!subscription_service_manager_) {
+  if (!subscription_service_manager_ ||
+      g_skip_catalog_subscriptions_for_testing) {
     return;
   }
   for (const auto& url : urls) {
