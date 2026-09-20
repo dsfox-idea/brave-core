@@ -2962,13 +2962,25 @@ IN_PROC_BROWSER_TEST_F(SidebarPinnedTabsBrowserTest, EntryDrawsTheTabsIcon) {
       << "the page declares the same icon the model holds, so this test cannot "
          "tell the two sources apart";
 
+  // Growser-241: wait for the entry to CONVERGE on the model rather than
+  // reading both at one instant. The entry learns of an icon change through
+  // OnTabChangedAt, the model through its own observer, and there is no
+  // order between the two - so a read taken between them sees the model
+  // ahead of the entry, with the entry's update still in the queue. That
+  // is a race in this test, not in the view: measured 4 failures in 12 runs
+  // on a tree with nothing else changed, and the entry always catches up.
+  // What is asserted is unchanged: the entry ends up drawing the model's
+  // icon, resized, and nothing else.
   auto* entry = static_cast<views::LabelButton*>(EntryAt(0));
-  EXPECT_TRUE(gfx::test::AreImagesEqual(
-      gfx::Image(entry->GetImage(views::Button::STATE_NORMAL)),
-      gfx::Image(gfx::ImageSkiaOperations::CreateResizedImage(
-          wanted, skia::ImageOperations::RESIZE_BEST,
-          entry->GetImage(views::Button::STATE_NORMAL).size()))))
-      << "the sidebar entry is not drawing the tab's icon";
+  auto entry_draws_wanted = [&]() {
+    const gfx::ImageSkia drawn = entry->GetImage(views::Button::STATE_NORMAL);
+    return gfx::test::AreImagesEqual(
+        gfx::Image(drawn),
+        gfx::Image(gfx::ImageSkiaOperations::CreateResizedImage(
+            wanted, skia::ImageOperations::RESIZE_BEST, drawn.size())));
+  };
+  EXPECT_TRUE(base::test::RunUntil(entry_draws_wanted))
+      << "the sidebar entry never settled on the tab's icon";
 }
 
 // A right click on an entry really opens a menu. The test above proves the
