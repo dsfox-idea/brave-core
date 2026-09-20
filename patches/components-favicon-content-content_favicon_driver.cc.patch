@@ -1,0 +1,53 @@
+diff --git a/components/favicon/content/content_favicon_driver.cc b/components/favicon/content/content_favicon_driver.cc
+index a8c08048e185653c94011d490aa70211b1ead612..dfa04e8250c531e04c68fd5266364def15c6da45 100644
+--- a/components/favicon/content/content_favicon_driver.cc
++++ b/components/favicon/content/content_favicon_driver.cc
+@@ -99,13 +99,45 @@ void ContentFaviconDriver::OnDidDownloadManifest(
+ int ContentFaviconDriver::DownloadImage(const GURL& url,
+                                         int max_image_size,
+                                         ImageDownloadCallback callback) {
++  // Growser-90: one download per URL, however many handlers want it. The
++  // second handler joins the first's request; its callback runs with the
++  // same bytes when they arrive. Only the FIRST request's size limit is
++  // used, and the large handler asks for the larger of the two, so a join
++  // is never handed a picture smaller than it wanted - handlers are started
++  // in that order in FaviconDriverImpl.
++  auto in_flight = downloads_in_flight_.find(url);
++  if (in_flight != downloads_in_flight_.end()) {
++    in_flight->second.push_back(std::move(callback));
++    return -1;
++  }
++
+   bool bypass_cache = (bypass_cache_page_url_ == GetActiveURL());
+   bypass_cache_page_url_ = GURL();
+ 
++  downloads_in_flight_[url].push_back(std::move(callback));
+   const gfx::Size preferred_size(max_image_size, max_image_size);
+-  return web_contents()->DownloadImage(url, true, preferred_size,
+-                                       /*max_bitmap_size=*/max_image_size,
+-                                       bypass_cache, std::move(callback));
++  return web_contents()->DownloadImage(
++      url, true, preferred_size,
++      /*max_bitmap_size=*/max_image_size, bypass_cache,
++      base::BindOnce(&ContentFaviconDriver::OnImageDownloadedForAll,
++                     weak_ptr_factory_.GetWeakPtr()));
++}
++
++void ContentFaviconDriver::OnImageDownloadedForAll(
++    int id,
++    int status_code,
++    const GURL& image_url,
++    const std::vector<SkBitmap>& bitmaps,
++    const std::vector<gfx::Size>& sizes) {
++  auto in_flight = downloads_in_flight_.find(image_url);
++  if (in_flight == downloads_in_flight_.end()) {
++    return;
++  }
++  std::vector<ImageDownloadCallback> waiting = std::move(in_flight->second);
++  downloads_in_flight_.erase(in_flight);
++  for (ImageDownloadCallback& callback : waiting) {
++    std::move(callback).Run(id, status_code, image_url, bitmaps, sizes);
++  }
+ }
+ 
+ void ContentFaviconDriver::DownloadManifest(const GURL& url,

@@ -1,0 +1,31 @@
+diff --git a/components/favicon/content/content_favicon_driver.h b/components/favicon/content/content_favicon_driver.h
+index 0b09c1e3f71197443b1d147ac2659e0e0d60aa78..68621060261d039ee34a4b6c0ad455068111638e 100644
+--- a/components/favicon/content/content_favicon_driver.h
++++ b/components/favicon/content/content_favicon_driver.h
+@@ -5,6 +5,7 @@
+ #ifndef COMPONENTS_FAVICON_CONTENT_CONTENT_FAVICON_DRIVER_H_
+ #define COMPONENTS_FAVICON_CONTENT_CONTENT_FAVICON_DRIVER_H_
+ 
++#include <map>
+ #include <vector>
+ 
+ #include "components/favicon/core/favicon_driver_impl.h"
+@@ -103,6 +104,18 @@ class ContentFaviconDriver
+ 
+   GURL bypass_cache_page_url_;
+ 
++  // Growser-90: the large-icon handlers share favicon.ico with the 16 dip
++  // one, and each FaviconHandler downloads on its own. Without this every
++  // page cost two requests for the same file - measured, and it was the extra
++  // DNS resolution the CNAME uncloaking tests counted. Downloads in flight,
++  // keyed by URL, so a second handler waits for the first's bytes.
++  void OnImageDownloadedForAll(int id,
++                               int status_code,
++                               const GURL& image_url,
++                               const std::vector<SkBitmap>& bitmaps,
++                               const std::vector<gfx::Size>& sizes);
++  std::map<GURL, std::vector<ImageDownloadCallback>> downloads_in_flight_;
++
+   base::WeakPtrFactory<ContentFaviconDriver> weak_ptr_factory_{this};
+ 
+   WEB_CONTENTS_USER_DATA_KEY_DECL();
