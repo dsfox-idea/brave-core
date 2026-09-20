@@ -10,6 +10,7 @@
 
 #include "base/files/file_util.h"
 #include "base/functional/bind.h"
+#include "base/time/time.h"
 #include "base/metrics/histogram_functions.h"
 #include "base/uuid.h"
 #include "brave/components/brave_shields/core/common/brave_shield_constants.h"
@@ -18,6 +19,11 @@
 #include "net/traffic_annotation/network_traffic_annotation.h"
 
 namespace brave_shields {
+
+// Growser-248: how long a BACKOFF-refused download waits before asking again.
+// Short, because the refusal is about the service's queue and not about the
+// network, and a person who has just added a list is waiting for it.
+constexpr base::TimeDelta kBackedOffRetryDelay = base::Seconds(2);
 
 namespace {
 
@@ -74,7 +80,7 @@ void AdBlockSubscriptionDownloadManager::StartDownload(const GURL& download_url,
   download_params.guid = base::Uuid::GenerateRandomV4().AsLowercaseString();
   download_params.callback = base::BindRepeating(
       &AdBlockSubscriptionDownloadManager::OnDownloadStarted, AsWeakPtr(),
-      download_url);
+      download_url, from_ui);
   download_params.traffic_annotation = net::MutableNetworkTrafficAnnotationTag(
       kBraveShieldsAdBlockSubscriptionTrafficAnnotation);
   download_params.request_params.url = download_url;
@@ -136,12 +142,45 @@ void AdBlockSubscriptionDownloadManager::OnDownloadServiceUnavailable() {
 
 void AdBlockSubscriptionDownloadManager::OnDownloadStarted(
     const GURL download_url,
+    bool from_ui,
     const std::string& guid,
     download::DownloadParams::StartResult start_result) {
   if (start_result == download::DownloadParams::StartResult::ACCEPTED) {
     pending_download_guids_.insert(
         std::pair<std::string, GURL>(guid, download_url));
+    return;
   }
+  // Growser-248: BACKOFF is the service saying "too many, retry later", and
+  // the retry has to be ours. Measured on a fresh profile: 15 accepted, 20
+  // refused, and the one a person had just added among the refused.
+  if (start_result == download::DownloadParams::StartResult::BACKOFF) {
+    backed_off_.emplace_back(download_url, from_ui);
+    ScheduleBackedOffRetry();
+  }
+}
+
+void AdBlockSubscriptionDownloadManager::ScheduleBackedOffRetry() {
+  // A completion of ours retries at once (below). This timer is for the case
+  // where none completes soon - measured in a browser test with no network,
+  // where all 15 accepted downloads sat waiting and zero retries ever fired.
+  // The service's own word for the refusal is "backoff", and this is it.
+  if (backed_off_.empty() || backoff_retry_timer_.IsRunning()) {
+    return;
+  }
+  backoff_retry_timer_.Start(
+      FROM_HERE, kBackedOffRetryDelay,
+      base::BindOnce(&AdBlockSubscriptionDownloadManager::RetryOneBackedOff,
+                     AsWeakPtr()));
+}
+
+void AdBlockSubscriptionDownloadManager::RetryOneBackedOff() {
+  if (backed_off_.empty()) {
+    return;
+  }
+  const auto [url, from_ui] = backed_off_.front();
+  backed_off_.erase(backed_off_.begin());
+  StartDownload(url, from_ui);
+  ScheduleBackedOffRetry();
 }
 
 void AdBlockSubscriptionDownloadManager::OnDownloadFailed(
@@ -158,6 +197,7 @@ void AdBlockSubscriptionDownloadManager::OnDownloadFailed(
       false);
 
   on_download_failed_callback_.Run(download_url);
+  RetryOneBackedOff();
 }
 
 bool EnsureDirExists(const base::FilePath& destination_dir) {
@@ -177,6 +217,7 @@ void AdBlockSubscriptionDownloadManager::OnDownloadSucceeded(
   base::UmaHistogramBoolean(
       "BraveShields.AdBlockSubscriptionDownloadManager.DownloadSucceeded",
       true);
+  RetryOneBackedOff();
 
   background_task_runner_->PostTaskAndReplyWithResult(
       FROM_HERE,

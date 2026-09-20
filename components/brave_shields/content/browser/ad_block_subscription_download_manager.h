@@ -11,10 +11,12 @@
 #include <set>
 #include <string>
 #include <utility>
+#include <vector>
 
 #include "base/files/file_path.h"
 #include "base/functional/callback.h"
 #include "base/memory/raw_ptr.h"
+#include "base/timer/timer.h"
 #include "base/memory/weak_ptr.h"
 #include "base/sequence_checker.h"
 #include "components/download/public/background_service/download_params.h"
@@ -99,6 +101,7 @@ class AdBlockSubscriptionDownloadManager final : public KeyedService {
   // Invoked when the download has been accepted and persisted by the
   // DownloadService.
   void OnDownloadStarted(const GURL download_url,
+                         bool from_ui,
                          const std::string& guid,
                          download::DownloadParams::StartResult start_result);
 
@@ -120,6 +123,17 @@ class AdBlockSubscriptionDownloadManager final : public KeyedService {
   // GUIDs that are still pending download, mapped to the corresponding URLs of
   // their subscription services.
   std::map<std::string, GURL> pending_download_guids_;
+
+  // Growser-248: downloads the service refused with BACKOFF, in order. The
+  // service takes at most kDefaultMaxScheduledDownloads (15) per client and
+  // answers BACKOFF to the rest - "retry later" - and growser#87 subscribes
+  // to 34 publisher lists at startup, so a list added by a person at that
+  // moment was refused and, with nothing retrying, never fetched. Retried
+  // here one at a time as each earlier download finishes, either way.
+  void RetryOneBackedOff();
+  void ScheduleBackedOffRetry();
+  std::vector<std::pair<GURL, bool>> backed_off_;
+  base::OneShotTimer backoff_retry_timer_;
 
   // The Download Service to schedule list downloads with.
   //
