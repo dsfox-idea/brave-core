@@ -7,6 +7,7 @@ import("//brave/components/brave_ads/buildflags/buildflags.gni")
 import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 
 # Tests that do not run on Android
 android_test_exception_sources = [
@@ -81,7 +82,6 @@ android_test_exception_deps = [
   "//brave/browser/ui/tabs/test:browser_tests",
   "//brave/browser/ui/views/tabs:browser_tests",
   "//brave/components/de_amp/browser/test:browser_tests",
-  "//brave/renderer/skus:browser_tests",
   "//brave/renderer/test:browser_tests",
   "//chrome/browser/profiles/keep_alive:test_support",
   "//chrome/browser/ui/views/translate",
@@ -101,6 +101,12 @@ if (enable_brave_ads) {
 # gn refuses to remove an item a list does not hold.
 if (enable_brave_news) {
   android_test_exception_deps += [ "//brave/browser/brave_news:browser_tests" ]
+}
+
+# Growser-261: enable_skus is ours (#126); test/BUILD.gn adds this dep only
+# under it.
+if (enable_skus) {
+  android_test_exception_deps += [ "//brave/renderer/skus:browser_tests" ]
 }
 
 if (enable_brave_rewards) {
