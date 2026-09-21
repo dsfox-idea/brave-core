@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/startup/BUILD.gn b/chrome/browser/ui/startup/BUILD.gn
-index 8b593031e4160c7c8a26943abe46b7f442b6d263..7b6c41d96677ccbfc1919c59dd5c23568b8797ef 100644
+index 8b593031e4160c7c8a26943abe46b7f442b6d263..2f3797308611ae66b41ebec2842810d22be98e21 100644
 --- a/chrome/browser/ui/startup/BUILD.gn
 +++ b/chrome/browser/ui/startup/BUILD.gn
 @@ -28,6 +28,7 @@ source_set("startup_tab") {
@@ -10,3 +10,11 @@ index 8b593031e4160c7c8a26943abe46b7f442b6d263..7b6c41d96677ccbfc1919c59dd5c2356
  }
  
  source_set("startup") {
+@@ -368,6 +369,7 @@ source_set("impl") {
+   if (!is_android) {
+     deps += [ "//chrome/browser/ui:browser_tab_strip_tracker" ]
+   }
++  import("//brave/browser/ui/startup/sources.gni") deps += brave_browser_ui_startup_impl_deps  # Growser-256
+ }
+ 
+ if (is_win) {

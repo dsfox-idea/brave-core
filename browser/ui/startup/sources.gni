@@ -12,3 +12,6 @@ if (enable_containers) {
   brave_browser_ui_startup_public_deps +=
       [ "//brave/components/containers/core/browser" ]
 }
+
+# Growser-256: for bad_flags_prompt.cc in //chrome/browser/ui/startup:impl.
+brave_browser_ui_startup_impl_deps = [ "//brave/components/growser_snap" ]

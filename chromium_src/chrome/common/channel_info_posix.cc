@@ -12,6 +12,7 @@
 #include "base/strings/string_util.h"
 #include "brave/common/brave_channel_info_posix.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
+#include "brave/components/growser_snap/snap.h"
 #include "build/build_config.h"
 #include "components/version_info/version_info.h"
 
@@ -60,8 +61,7 @@ std::string GetDesktopName(base::Environment* env) {
   // It said brave.desktop under a snap and brave-browser.desktop otherwise,
   // and neither is installed by anything we ship - which reads as a browser
   // that merely is not the default, and so went unnoticed.
-  if (auto growser_snap = env->GetVar("GROWSER_SNAP");
-      growser_snap && *growser_snap == "1") {
+  if (growser::IsRunningInSnap(env)) {
     // snapd names the file it publishes <instance>_<app>.desktop, even when
     // the two are the same word. Measured on an installed snap: the only file
     // in /var/lib/snapd/desktop/applications is growser_growser.desktop, and
