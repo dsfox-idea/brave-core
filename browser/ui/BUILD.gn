@@ -133,18 +133,6 @@ source_set("ui") {
     deps += [ "//brave/browser/ui/webui/local_ai" ]
   }
 
-  if (enable_skus) {
-    sources += [
-      "webui/skus_internals_ui.cc",
-      "webui/skus_internals_ui.h",
-    ]
-    deps += [
-      "//brave/browser/skus",
-      "//brave/components/skus/browser",
-      "//brave/components/skus/browser/resources:generated_resources",
-    ]
-  }
-
   allow_circular_includes_from = brave_ui_allow_circular_includes_from
   deps += brave_ui_allow_circular_includes_from
 
@@ -180,6 +168,18 @@ source_set("ui") {
     "webui/untrusted_sanitized_image_source.cc",
     "webui/untrusted_sanitized_image_source.h",
   ]
+
+  if (enable_skus) {
+    sources += [
+      "webui/skus_internals_ui.cc",
+      "webui/skus_internals_ui.h",
+    ]
+    deps += [
+      "//brave/browser/skus",
+      "//brave/components/skus/browser",
+      "//brave/components/skus/browser/resources:generated_resources",
+    ]
+  }
 
   if (enable_brave_wallet) {
     deps += [
