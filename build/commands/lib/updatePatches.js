@@ -254,9 +254,16 @@ async function updatePatches(
   keepPatchFilenames = [],
   plasterPathFilter,
 ) {
+  // Growser-239: a plaster-managed source stays in scope even when the repo
+  // filter excludes it (`*.grd` is excluded as branding noise). Otherwise its
+  // generated patch is never in `patchFilenames` and removeStalePatchFiles
+  // deletes it, with nothing on the screen but a *REMOVED* line.
+  const pathFilter = plasterPathFilter
+    ? (s) => plasterPathFilter(s) || (repoPathFilter?.(s) ?? true)
+    : repoPathFilter
   const { paths: modifiedPaths, binaryPaths } = await getModifiedPaths(
     gitRepoPath,
-    repoPathFilter,
+    pathFilter,
     onlyFiles,
   )
   const { patchFilenames, outdatedPlasterPaths } = await writePatchFiles(

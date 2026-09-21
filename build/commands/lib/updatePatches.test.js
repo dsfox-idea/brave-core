@@ -134,6 +134,33 @@ describe('updatePatches plaster detection', function () {
       await fs.pathExists(path.join(patchPath, sourceName + '.patch')),
     ).toBe(false)
   })
+
+  // Growser-239: the repo filter excludes `*.grd` and friends as branding
+  // noise, so a plaster-managed source under the exclusion never reached the
+  // modified list, its patch name never counted as valid, and
+  // removeStalePatchFiles deleted the generated patch - quietly, as a green
+  // diff. Plaster ownership outranks the repo filter.
+  test('keeps a plaster-managed patch whose source the repo filter excludes', async () => {
+    const patchFilename = await writePatchAsPlaster(
+      repoPath,
+      patchPath,
+      sourceName,
+    )
+    const patchFile = path.join(patchPath, patchFilename)
+    const before = await fs.readFile(patchFile, 'utf-8')
+
+    const errors = await updatePatches(
+      repoPath,
+      patchPath,
+      [],
+      (p) => p !== sourceName,
+      [],
+      (p) => p === sourceName,
+    )
+
+    expect(errors).toEqual([])
+    expect(await fs.readFile(patchFile, 'utf-8')).toBe(before)
+  })
 })
 
 describe('updatePatches diff pins', function () {
