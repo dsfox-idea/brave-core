@@ -1,5 +1,5 @@
 diff --git a/third_party/blink/renderer/core/exported/web_view_impl.cc b/third_party/blink/renderer/core/exported/web_view_impl.cc
-index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..b745273769ec2eef648b90ecf26cef41d5e352f4 100644
+index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..bfe19a13ec5c704f4f03c1f7c9e4a9a9fed2cc4b 100644
 --- a/third_party/blink/renderer/core/exported/web_view_impl.cc
 +++ b/third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -1458,6 +1458,14 @@ void WebViewImpl::ResizeWithBrowserControls(
@@ -33,7 +33,7 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..b745273769ec2eef648b90ecf26cef41
    SetPageScaleFactor(new_page_scale_factor);
  
    // The constraints may have changed above which affects the page scale limits,
-@@ -3126,6 +3143,15 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
+@@ -3126,6 +3143,18 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
        GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale;
    GetPageScaleConstraintsSet().UpdatePageDefinedConstraints(description,
                                                              default_min_width);
@@ -45,11 +45,14 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..b745273769ec2eef648b90ecf26cef41
 +             << " zoom=" << description.zoom
 +             << " old_initial=" << old_initial_scale
 +             << " new_initial="
-+             << GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale;
++             << GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale
++             << " type=" << static_cast<int>(description.type)
++             << " parsed=" << document->HasFinishedParsing()
++             << " url=" << document->Url().GetString().Left(40).Utf8();
  
    if (SettingsImpl()->ClobberUserAgentInitialScaleQuirk() &&
        GetPageScaleConstraintsSet().UserAgentConstraints().initial_scale != -1 &&
-@@ -3184,6 +3210,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
+@@ -3184,6 +3213,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
      layout_size.set_height(0);
    }
  
@@ -62,3 +65,32 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..b745273769ec2eef648b90ecf26cef41
    view->SetLayoutSize(layout_size);
  }
  
+@@ -4061,6 +4096,15 @@ void WebViewImpl::ResizeAfterLayout() {
+     RefreshPageScaleFactor();
+   }
+ 
++  // Growser-276 TEMPORARY
++  {
++    LocalFrameView* frame_view = MainFrameImpl()->GetFrame()->View();
++    LOG(ERROR) << "GROWSER276 resize-frame-view old="
++               << (frame_view ? frame_view->Size().ToString() : "-")
++               << " new=" << MainFrameSize().ToString()
++               << " min=" << MinimumPageScaleFactor() << " in_layout="
++               << (frame_view ? frame_view->IsInPerformLayout() : false);
++  }
+   resize_viewport_anchor_->ResizeFrameView(MainFrameSize());
+ }
+ 
+@@ -4092,6 +4136,12 @@ void WebViewImpl::DidChangeContentsSize() {
+     }
+   }
+ 
++  // Growser-276 TEMPORARY
++  LOG(ERROR) << "GROWSER276 contents=" << ContentsSize().ToString()
++             << " frame_view=" << (view ? view->Size().ToString() : "-")
++             << " layout=" << (view ? view->GetLayoutSize().ToString() : "-")
++             << " min=" << MinimumPageScaleFactor()
++             << " scale=" << PageScaleFactor();
+   GetPageScaleConstraintsSet().DidChangeContentsSize(
+       ContentsSize(), vertical_scrollbar_width, PageScaleFactor());
+ }
