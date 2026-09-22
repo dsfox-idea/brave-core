@@ -992,8 +992,14 @@ if (is_android) {
     "//brave/browser/android:android_browser_process",
     "//brave/browser/android:tabs_impl",
     "//brave/browser/android/preferences",
-    "//brave/browser/notifications",
   ]
+  # Growser-261: //brave/browser/notifications is a dep only under
+  # enable_brave_ads (above), and gn refuses an allow_circular_includes_from
+  # entry that is not in deps.
+  if (enable_brave_ads) {
+    brave_chrome_browser_allow_circular_includes_from +=
+        [ "//brave/browser/notifications" ]
+  }
 }
 
 # TODO(https://github.com/brave/brave-browser/issues/43310):
