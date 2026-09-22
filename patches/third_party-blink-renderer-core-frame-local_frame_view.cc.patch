@@ -1,0 +1,48 @@
+diff --git a/third_party/blink/renderer/core/frame/local_frame_view.cc b/third_party/blink/renderer/core/frame/local_frame_view.cc
+index 7194493c55895616fb03607736ddfe265cae32ba..64c5b84f89d697c7afb3b1f1cc90d7c961f090b7 100644
+--- a/third_party/blink/renderer/core/frame/local_frame_view.cc
++++ b/third_party/blink/renderer/core/frame/local_frame_view.cc
+@@ -1434,8 +1434,15 @@ void LocalFrameView::ViewportSizeChanged() {
+       frame_->GetPage()->GetBrowserControls().TotalHeight())
+     layout_view->SetShouldCheckForPaintInvalidation();
+ 
+-  if (GetFrame().GetDocument() && !IsInPerformLayout()) {
+-    InvalidateLayoutForViewportConstrainedObjects();
++  if (GetFrame().GetDocument()) {
++    // Growser-276: WebViewImpl::ResizeAfterLayout resizes the frame view from
++    // inside the layout pass, and layout must not be dirtied from there. Note
++    // it and invalidate once the pass is over - see UpdateStyleAndLayout().
++    if (IsInPerformLayout()) {
++      needs_viewport_constrained_invalidation_ = true;
++    } else {
++      InvalidateLayoutForViewportConstrainedObjects();
++    }
+   }
+ 
+   if (Document* document = GetFrame().GetDocument();
+@@ -3529,6 +3536,25 @@ void LocalFrameView::UpdateStyleAndLayout() {
+     auto_size_info_->Clear();
+   }
+ 
++  // Growser-276: a position:fixed box is sized from the frame view, the frame
++  // view is sized from the minimum page scale, and the minimum page scale is
++  // clamped to the contents width those boxes hold up. The frame view is
++  // resized from inside layout, so the boxes were never re-laid out for it and
++  // the loop advanced only when some unrelated layout happened to run: a page
++  // that finished loading kept a layout viewport about twice its window until
++  // a real scroll hid the browser controls. Run the loop to its fixed point
++  // here instead. It stops on its own, because an unchanged frame rect raises
++  // no ViewportSizeChanged and so sets the flag no further.
++  for (int pass = 0; needs_viewport_constrained_invalidation_ && pass < 8;
++       ++pass) {
++    needs_viewport_constrained_invalidation_ = false;
++    InvalidateLayoutForViewportConstrainedObjects();
++    if (!NeedsLayout()) {
++      break;
++    }
++    did_layout |= UpdateStyleAndLayoutInternal();
++  }
++
+   // Third pass: if layout hasn't stabilized, don't update layout viewport size
+   // based on content size.
+   if (NeedsLayout()) {

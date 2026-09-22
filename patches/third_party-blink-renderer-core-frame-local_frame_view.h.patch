@@ -1,0 +1,14 @@
+diff --git a/third_party/blink/renderer/core/frame/local_frame_view.h b/third_party/blink/renderer/core/frame/local_frame_view.h
+index c5dfbb1799b280a084665de9c7dae9d815b72d3a..a5b246183bc4d3e5d3cfead4606cc2e33234a632 100644
+--- a/third_party/blink/renderer/core/frame/local_frame_view.h
++++ b/third_party/blink/renderer/core/frame/local_frame_view.h
+@@ -1259,6 +1259,9 @@ class CORE_EXPORT LocalFrameView final
+   HeapLinkedHashSet<WeakMember<PaintLayerScrollableArea>> scroll_event_queue_;
+ 
+   bool suppress_adjust_view_size_;
++  // Growser-276: set when a frame view resize arrives during layout, where
++  // layout cannot be dirtied; UpdateStyleAndLayout() acts on it afterwards.
++  bool needs_viewport_constrained_invalidation_ = false;
+ #if DCHECK_IS_ON()
+   // In DCHECK on builds, this is set to false when we're running lifecycle
+   // phases past layout to ensure that phases after layout don't dirty layout.
