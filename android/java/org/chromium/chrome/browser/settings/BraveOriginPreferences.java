@@ -628,23 +628,11 @@ public class BraveOriginPreferences extends BravePreferenceFragment
      */
     @Nullable
     private String getPolicyKeyForPreference(String preferenceKey) {
-        // Map preference keys to policy keys
-        if (PREF_REWARDS_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_REWARDS_DISABLED;
-        } else if (PREF_PRIVACY_PRESERVING_ANALYTICS_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_P3A_ENABLED;
-        } else if (PREF_LEO_AI_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_AI_CHAT_ENABLED;
-        } else if (PREF_NEWS_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_NEWS_DISABLED;
-        } else if (PREF_STATISTICS_REPORTING_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_STATS_PING_ENABLED;
-        } else if (PREF_VPN_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_VPN_DISABLED;
-        } else if (PREF_WALLET_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_WALLET_DISABLED;
-        } else if (PREF_WEB_DISCOVERY_PROJECT_SWITCH.equals(preferenceKey)) {
-            return BravePolicyConstants.BRAVE_WEB_DISCOVERY_ENABLED;
+        // Map preference keys to policy keys. Growser-261: of the eight
+        // policies this once mapped, seven were dropped in growser#62 and the
+        // one left carries our name.
+        if (PREF_PRIVACY_PRESERVING_ANALYTICS_SWITCH.equals(preferenceKey)) {
+            return BravePolicyConstants.GROWSER_P3A_ENABLED;
         }
         // TODO: Add mappings for other preferences as they are implemented
         // PREF_EMAIL_ALIASES_SWITCH - no policy mapping found
