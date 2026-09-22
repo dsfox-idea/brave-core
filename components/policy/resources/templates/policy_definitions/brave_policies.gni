@@ -28,18 +28,6 @@ brave_policies = [
   "Growser/PsstEnabled.yaml",
   "Growser/IPFSEnabled.yaml",
   "Growser/TorDisabled.yaml",
-
-  # Growser-261 SIZING RUN ONLY: the eight policies growser#62 dropped,
-  # back so a build with Brave's features on has the keys the desktop
-  # policy map names. Not for the trunk.
-  "Growser/BraveAIChatEnabled.yaml",
-  "Growser/BraveNewsDisabled.yaml",
-  "Growser/BraveRewardsDisabled.yaml",
-  "Growser/BraveStatsPingEnabled.yaml",
-  "Growser/BraveTalkDisabled.yaml",
-  "Growser/BraveVPNDisabled.yaml",
-  "Growser/BraveWalletDisabled.yaml",
-  "Growser/BraveWebDiscoveryEnabled.yaml",
 ]
 
 # List Brave's policy files as inputs for policy_templates.py to trigger a
