@@ -1,0 +1,47 @@
+diff --git a/third_party/blink/renderer/core/exported/web_view_impl.cc b/third_party/blink/renderer/core/exported/web_view_impl.cc
+index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..8170994924b00c5082826af38c2d814a6c9f86f4 100644
+--- a/third_party/blink/renderer/core/exported/web_view_impl.cc
++++ b/third_party/blink/renderer/core/exported/web_view_impl.cc
+@@ -1458,6 +1458,14 @@ void WebViewImpl::ResizeWithBrowserControls(
+     return;
+   }
+ 
++  // Growser-276 TEMPORARY
++  LOG(ERROR) << "GROWSER276 Resize widget=" << main_frame_widget_size.ToString()
++             << " visible=" << visible_viewport_size.ToString()
++             << " top=" << browser_controls_params.top_controls_height
++             << " bottom=" << browser_controls_params.bottom_controls_height
++             << " shrink=" << browser_controls_params.browser_controls_shrink_blink_size
++             << " old_size=" << size_.ToString();
++
+   VisualViewport& visual_viewport = GetPage()->GetVisualViewport();
+ 
+   bool is_rotation =
+@@ -3126,6 +3134,14 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
+       GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale;
+   GetPageScaleConstraintsSet().UpdatePageDefinedConstraints(description,
+                                                             default_min_width);
++  // Growser-276 TEMPORARY
++  LOG(ERROR) << "GROWSER276 viewport-meta size_=" << size_.ToString()
++             << " min_width_type=" << static_cast<int>(description.min_width.GetType())
++             << " max_width_type=" << static_cast<int>(description.max_width.GetType())
++             << " zoom=" << description.zoom
++             << " old_initial=" << old_initial_scale
++             << " new_initial="
++             << GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale;
+ 
+   if (SettingsImpl()->ClobberUserAgentInitialScaleQuirk() &&
+       GetPageScaleConstraintsSet().UserAgentConstraints().initial_scale != -1 &&
+@@ -3184,6 +3200,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
+     layout_size.set_height(0);
+   }
+ 
++  // Growser-276 TEMPORARY
++  LOG(ERROR) << "GROWSER276 layout-size widget=" << size_.ToString()
++             << " layout=" << layout_size.ToString()
++             << " viewport_enabled=" << GetSettings()->ViewportEnabled()
++             << " page_scale=" << PageScaleFactor();
++
+   view->SetLayoutSize(layout_size);
+ }
+ 
