@@ -673,6 +673,36 @@ const update = () => {
       [androidIconBaseSource]: [androidIconBaseDest],
     }
 
+    // Growser-265: the RED mark for every build that is not the one people
+    // install - the Android half of #146/#162. Windows picks between two .ico
+    // files in a resource script and macOS between two .icns in GN; Android
+    // has neither, because the icon set is chosen by CHANNEL here, and the
+    // release channel is what a developer builds too. So the icons (and only
+    // the icons - the label and the widget titles stay) come from the
+    // development set unless this build says it is for people.
+    //
+    // Without it a developer's phone shows two Growsers with one icon, which
+    // is the whole point of #146; the gate that reads the APK catches it
+    // either way, but a gate that refuses every local build is a gate people
+    // learn to skip.
+    if (!config.isPublicRelease()) {
+      const redIconBase = path.join(
+        braveAppDir, 'theme', 'brave', 'android', 'res_brave_default_base')
+      if (fs.existsSync(redIconBase)) {
+        // Per subdirectory rather than the whole set: `values/` there holds
+        // channel_constants.xml, and the app would start calling itself
+        // "Growser - Debug" on a release-channel build.
+        for (const sub of fs.readdirSync(redIconBase)) {
+          if (sub === 'values') {
+            continue
+          }
+          copyAndroidResourceMapping[path.join(redIconBase, sub)] =
+            [path.join(androidIconBaseDest, sub)]
+        }
+        console.log('not a public release - the RED launcher icon (#146)')
+      }
+    }
+
     console.log('copy Android app icons and app resources')
     Object.entries(copyAndroidResourceMapping).map(
       ([sourcePath, destPaths]) => {
