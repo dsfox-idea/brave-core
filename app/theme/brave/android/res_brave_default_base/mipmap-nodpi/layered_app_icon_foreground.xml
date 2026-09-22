@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Growser-266: the ROUND launcher icon takes its foreground from here
+     (ic_launcher_round.xml), and Chromium's copy of this file is a
+     transparent shape - so Brave's round icon is a background with
+     nothing on it. Ours points at the same foreground the square icon
+     uses. -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@mipmap/layered_app_icon" />
