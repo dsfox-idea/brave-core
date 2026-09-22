@@ -1,5 +1,5 @@
 diff --git a/third_party/blink/renderer/core/exported/web_view_impl.cc b/third_party/blink/renderer/core/exported/web_view_impl.cc
-index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..4dc85453926afefcdacbffa3b27af28bcdf4d0f4 100644
+index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..b745273769ec2eef648b90ecf26cef41d5e352f4 100644
 --- a/third_party/blink/renderer/core/exported/web_view_impl.cc
 +++ b/third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -1458,6 +1458,14 @@ void WebViewImpl::ResizeWithBrowserControls(
@@ -17,7 +17,23 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..4dc85453926afefcdacbffa3b27af28b
    VisualViewport& visual_viewport = GetPage()->GetVisualViewport();
  
    bool is_rotation =
-@@ -3126,6 +3134,15 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
+@@ -3073,6 +3081,15 @@ void WebViewImpl::RefreshPageScaleFactor() {
+         GetPageScaleConstraintsSet().FinalConstraints().initial_scale;
+     GetPageScaleConstraintsSet().SetNeedsReset(false);
+   }
++  // Growser-276 TEMPORARY
++  LOG(ERROR) << "GROWSER276 refresh needs_reset="
++             << GetPageScaleConstraintsSet().NeedsReset()
++             << " final_initial="
++             << GetPageScaleConstraintsSet().FinalConstraints().initial_scale
++             << " final_min="
++             << GetPageScaleConstraintsSet().FinalConstraints().minimum_scale
++             << " was=" << PageScaleFactor()
++             << " new=" << new_page_scale_factor;
+   SetPageScaleFactor(new_page_scale_factor);
+ 
+   // The constraints may have changed above which affects the page scale limits,
+@@ -3126,6 +3143,15 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
        GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale;
    GetPageScaleConstraintsSet().UpdatePageDefinedConstraints(description,
                                                              default_min_width);
@@ -33,7 +49,7 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..4dc85453926afefcdacbffa3b27af28b
  
    if (SettingsImpl()->ClobberUserAgentInitialScaleQuirk() &&
        GetPageScaleConstraintsSet().UserAgentConstraints().initial_scale != -1 &&
-@@ -3184,6 +3201,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
+@@ -3184,6 +3210,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
      layout_size.set_height(0);
    }
  
