@@ -113,12 +113,17 @@ brave_chrome_all_java_deps = [
 ]
 
 brave_chrome_java_srcjar_deps = [
-  "//brave/android:brave_android_java_enums_srcjar",
   "//brave/android:brave_config_java",
   "//brave/android:brave_policy_constants_java_srcjar",
   "//brave/components/brave_account/android:brave_account_constants_srcjar",
   "//brave/components/web_discovery/browser/android:java_pref_names_srcjar",
 ]
+
+# Growser-261: see android/BUILD.gn - the enum srcjar exists only with wallet.
+if (enable_brave_wallet) {
+  brave_chrome_java_srcjar_deps +=
+      [ "//brave/android:brave_android_java_enums_srcjar" ]
+}
 
 brave_chrome_app_java_resources_deps = [
   "//brave/android:java_resources",
