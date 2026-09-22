@@ -1,5 +1,5 @@
 diff --git a/third_party/blink/renderer/core/exported/web_view_impl.cc b/third_party/blink/renderer/core/exported/web_view_impl.cc
-index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..8170994924b00c5082826af38c2d814a6c9f86f4 100644
+index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..4dc85453926afefcdacbffa3b27af28bcdf4d0f4 100644
 --- a/third_party/blink/renderer/core/exported/web_view_impl.cc
 +++ b/third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -1458,6 +1458,14 @@ void WebViewImpl::ResizeWithBrowserControls(
@@ -17,14 +17,15 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..8170994924b00c5082826af38c2d814a
    VisualViewport& visual_viewport = GetPage()->GetVisualViewport();
  
    bool is_rotation =
-@@ -3126,6 +3134,14 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
+@@ -3126,6 +3134,15 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
        GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale;
    GetPageScaleConstraintsSet().UpdatePageDefinedConstraints(description,
                                                              default_min_width);
 +  // Growser-276 TEMPORARY
 +  LOG(ERROR) << "GROWSER276 viewport-meta size_=" << size_.ToString()
-+             << " min_width_type=" << static_cast<int>(description.min_width.GetType())
-+             << " max_width_type=" << static_cast<int>(description.max_width.GetType())
++             << " max_width_device=" << description.max_width.IsDeviceWidth()
++             << " max_width_auto=" << description.max_width.IsAuto()
++             << " max_width_fixed=" << description.max_width.IsFixed()
 +             << " zoom=" << description.zoom
 +             << " old_initial=" << old_initial_scale
 +             << " new_initial="
@@ -32,7 +33,7 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..8170994924b00c5082826af38c2d814a
  
    if (SettingsImpl()->ClobberUserAgentInitialScaleQuirk() &&
        GetPageScaleConstraintsSet().UserAgentConstraints().initial_scale != -1 &&
-@@ -3184,6 +3200,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
+@@ -3184,6 +3201,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
      layout_size.set_height(0);
    }
  
