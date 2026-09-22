@@ -8,14 +8,17 @@
 
 #include <memory>
 
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "chrome/browser/android/tab_features.h"
 
 class Profile;
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-261
 namespace ai_chat {
 class TabDataWebContentsObserver;
 class WebMcpInjector;
 }
+#endif
 
 namespace content {
 class WebContents;
@@ -32,8 +35,10 @@ class BraveTabFeatures : public TabFeatures_Chromium {
   static BraveTabFeatures* FromTabFeatures(TabFeatures* tab_features);
 
  private:
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-261
   std::unique_ptr<ai_chat::TabDataWebContentsObserver> tab_data_observer_;
   std::unique_ptr<ai_chat::WebMcpInjector> web_mcp_injector_;
+#endif
 };
 
 }  // namespace tabs

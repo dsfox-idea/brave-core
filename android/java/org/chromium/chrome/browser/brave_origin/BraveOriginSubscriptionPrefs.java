@@ -840,15 +840,9 @@ public class BraveOriginSubscriptionPrefs {
         if (policyKey == null) {
             return false;
         }
-        switch (policyKey) {
-            case BravePolicyConstants.BRAVE_REWARDS_DISABLED:
-            case BravePolicyConstants.BRAVE_NEWS_DISABLED:
-            case BravePolicyConstants.BRAVE_VPN_DISABLED:
-            case BravePolicyConstants.BRAVE_WALLET_DISABLED:
-                return true;
-            default:
-                return false;
-        }
+        // Growser-261: the four *Disabled policies this switch named were
+        // dropped in growser#62; every policy left is an *Enabled one.
+        return false;
     }
 
     /**

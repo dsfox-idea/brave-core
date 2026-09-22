@@ -15,11 +15,12 @@ declare_args() {
   brave_android_developer_options_code = ""
 }
 
-java_cpp_enum("brave_android_java_enums_srcjar") {
-  sources = []
-
-  if (enable_brave_wallet) {
-    sources += [ "//brave/components/decentralized_dns/core/constants.h" ]
+# Growser-261: only the wallet enum lives here, and java_cpp_enum.py refuses
+# an empty input list - so the target exists only with the flag, as do its two
+# consumers (build/android/config.gni, browser/notifications/BUILD.gn).
+if (enable_brave_wallet) {
+  java_cpp_enum("brave_android_java_enums_srcjar") {
+    sources = [ "//brave/components/decentralized_dns/core/constants.h" ]
   }
 }
 
