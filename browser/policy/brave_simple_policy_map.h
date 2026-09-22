@@ -91,14 +91,13 @@
 namespace policy {
 
 inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
-#if BUILDFLAG(ENABLE_BRAVE_REWARDS)
-    {policy::key::kBraveRewardsDisabled,
-     brave_rewards::prefs::kDisabledByPolicy, base::Value::Type::BOOLEAN},
-#endif
-#if BUILDFLAG(ENABLE_BRAVE_WALLET)
-    {policy::key::kBraveWalletDisabled,
-     brave_wallet::kBraveWalletDisabledByPolicy, base::Value::Type::BOOLEAN},
-#endif
+    // Growser-62: seven policies are absent from this
+    // map on purpose - the features they governed are not
+    // in this browser, so their .yaml definitions were
+    // removed and policy::key:: has no such members. They
+    // were guarded by their features' buildflags here,
+    // which hid the fact until a build turned one of the
+    // features on (growser#265).
     {policy::key::kBraveShieldsDisabledForUrls,
      kManagedBraveShieldsDisabledForUrls, base::Value::Type::LIST},
     {policy::key::kBraveShieldsEnabledForUrls,
@@ -109,14 +108,6 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
     {policy::key::kTorDisabled, tor::prefs::kTorDisabled,
      base::Value::Type::BOOLEAN},
 #endif
-#if BUILDFLAG(ENABLE_BRAVE_VPN)
-    {policy::key::kBraveVPNDisabled, brave_vpn::prefs::kManagedBraveVPNDisabled,
-     base::Value::Type::BOOLEAN},
-#endif
-#if BUILDFLAG(ENABLE_AI_CHAT)
-    {policy::key::kBraveAIChatEnabled, ai_chat::prefs::kEnabledByPolicy,
-     base::Value::Type::BOOLEAN},
-#endif
 #if BUILDFLAG(ENABLE_LOCAL_AI)
     {policy::key::kGrowserLocalAIEnabled, local_ai::prefs::kBraveLocalAIEnabled,
      base::Value::Type::BOOLEAN},
@@ -125,18 +116,6 @@ inline constexpr PolicyToPreferenceMapEntry kBraveSimplePolicyMap[] = {
      base::Value::Type::BOOLEAN},
 #if BUILDFLAG(ENABLE_PLAYLIST)
     {policy::key::kGrowserPlaylistEnabled, playlist::kPlaylistEnabledPref,
-     base::Value::Type::BOOLEAN},
-#endif
-#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
-    {policy::key::kBraveWebDiscoveryEnabled, kWebDiscoveryEnabled,
-     base::Value::Type::BOOLEAN},
-#endif
-#if BUILDFLAG(ENABLE_BRAVE_NEWS)
-    {policy::key::kBraveNewsDisabled,
-     brave_news::prefs::kBraveNewsDisabledByPolicy, base::Value::Type::BOOLEAN},
-#endif
-#if BUILDFLAG(ENABLE_BRAVE_TALK)
-    {policy::key::kBraveTalkDisabled, brave_talk::prefs::kDisabledByPolicy,
      base::Value::Type::BOOLEAN},
 #endif
 #if BUILDFLAG(ENABLE_SPEEDREADER)
