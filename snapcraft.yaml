@@ -12,7 +12,7 @@
 # variable name ends and the next begins is not something to find out from a
 # broken download.
 name: growser
-version: 26.919.0
+version: 26.921.0
 title: Growser
 license: MPL-2.0
 website: https://growser.org
@@ -93,7 +93,7 @@ slots:
 parts:
   growser:
     plugin: dump
-    source: https://growser.org/apt/pool/main/g/growser/growser_26.919.0_amd64.deb
+    source: https://growser.org/apt/pool/main/g/growser/growser_26.921.0_amd64.deb
     override-pull: |
       set -eu
       craftctl default

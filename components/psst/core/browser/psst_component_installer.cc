@@ -27,7 +27,7 @@ using brave_component_updater::BraveOnDemandUpdater;
 namespace psst {
 
 // Directory structure of PSST component:
-// lhhcaamjbmbijmjbnnodjaknblkiagon/<component version>/
+// fgoclmlocoidkfpoifdeeihjpgnmbgno/<component version>/  (Growser-259: our id)
 //  |_ manifest.json
 //  |_ psst.json
 //  |_ scripts/

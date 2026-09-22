@@ -13,8 +13,10 @@ inline constexpr char kBravePsst[] = "bravePsst";
 inline constexpr char kBravePsstHost[] = "psst";
 inline constexpr char kBraveUIPsstURL[] = "chrome://psst/";
 
+// Growser-230: the report goes to our backend, so "Learn more" goes to our
+// page about what the settings do, not to Brave's help centre.
 inline constexpr char16_t kPsstReportDialogLearnMoreUrl[] =
-    u"https://support.brave.app/hc/en-us/articles/47405731650957";
+    u"https://growser.org/features.html";
 
 }  // namespace psst
 
