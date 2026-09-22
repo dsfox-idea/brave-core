@@ -1,5 +1,5 @@
 diff --git a/third_party/blink/renderer/core/exported/web_view_impl.cc b/third_party/blink/renderer/core/exported/web_view_impl.cc
-index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..bfe19a13ec5c704f4f03c1f7c9e4a9a9fed2cc4b 100644
+index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..c329f0d691275f03725bf9bff9ca1f4a64c6c15f 100644
 --- a/third_party/blink/renderer/core/exported/web_view_impl.cc
 +++ b/third_party/blink/renderer/core/exported/web_view_impl.cc
 @@ -1458,6 +1458,14 @@ void WebViewImpl::ResizeWithBrowserControls(
@@ -33,7 +33,7 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..bfe19a13ec5c704f4f03c1f7c9e4a9a9
    SetPageScaleFactor(new_page_scale_factor);
  
    // The constraints may have changed above which affects the page scale limits,
-@@ -3126,6 +3143,18 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
+@@ -3126,6 +3143,20 @@ void WebViewImpl::UpdatePageDefinedViewportConstraints(
        GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale;
    GetPageScaleConstraintsSet().UpdatePageDefinedConstraints(description,
                                                              default_min_width);
@@ -48,11 +48,13 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..bfe19a13ec5c704f4f03c1f7c9e4a9a9
 +             << GetPageScaleConstraintsSet().PageDefinedConstraints().initial_scale
 +             << " type=" << static_cast<int>(description.type)
 +             << " parsed=" << document->HasFinishedParsing()
-+             << " url=" << document->Url().GetString().Left(40).Utf8();
++             << " blank=" << document->Url().IsAboutBlankURL()
++             << " body_kids="
++             << (document->body() ? int(document->body()->CountChildren()) : -1);
  
    if (SettingsImpl()->ClobberUserAgentInitialScaleQuirk() &&
        GetPageScaleConstraintsSet().UserAgentConstraints().initial_scale != -1 &&
-@@ -3184,6 +3213,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
+@@ -3184,6 +3215,12 @@ void WebViewImpl::UpdateMainFrameLayoutSize() {
      layout_size.set_height(0);
    }
  
@@ -65,7 +67,7 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..bfe19a13ec5c704f4f03c1f7c9e4a9a9
    view->SetLayoutSize(layout_size);
  }
  
-@@ -4061,6 +4096,15 @@ void WebViewImpl::ResizeAfterLayout() {
+@@ -4061,6 +4098,15 @@ void WebViewImpl::ResizeAfterLayout() {
      RefreshPageScaleFactor();
    }
  
@@ -81,7 +83,7 @@ index 66e05f0dd9d7e87a02fc6e76ce74d4d149f4a943..bfe19a13ec5c704f4f03c1f7c9e4a9a9
    resize_viewport_anchor_->ResizeFrameView(MainFrameSize());
  }
  
-@@ -4092,6 +4136,12 @@ void WebViewImpl::DidChangeContentsSize() {
+@@ -4092,6 +4138,12 @@ void WebViewImpl::DidChangeContentsSize() {
      }
    }
  
