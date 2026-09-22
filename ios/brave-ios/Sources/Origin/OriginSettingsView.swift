@@ -19,49 +19,23 @@ public struct OriginSettingsView: View {
 
   public var body: some View {
     Form {
-      Section {
-        Toggle(isOn: $viewModel.isRewardsDisabled.inversed) {
-          Label(Strings.Origin.rewardsLabel, braveSystemImage: "leo.product.bat-outline")
-        }
-        .toggleStyle(.origin)
-      } header: {
-        Text(Strings.Origin.adsHeader)
-      }
+      // Growser-262: the rewards, statistics-ping, Leo, news, talk, VPN and
+      // wallet rows are gone along with the policies behind them. Each policy
+      // left brave_policies.gni when its feature was removed, so the key the
+      // row bound to stopped existing - see brave_origin_service_bridge.h.
+      // The "ads" section held only the rewards row and went with it. What is
+      // left is what our policy list still carries.
       Section {
         Toggle(isOn: $viewModel.isP3AEnabled) {
           Label(Strings.Origin.privacyPreservingAnalyticsLabel, braveSystemImage: "leo.bar.chart")
-        }
-        .toggleStyle(.origin)
-        Toggle(isOn: $viewModel.isStatsPingEnabled) {
-          Label(Strings.Origin.statisticsReportingLabel, braveSystemImage: "leo.bar.chart")
         }
         .toggleStyle(.origin)
       } header: {
         Text(Strings.Origin.analyticsHeader)
       }
       Section {
-        Toggle(isOn: $viewModel.isAIChatEnabled) {
-          Label(Strings.Origin.leoAILabel, braveSystemImage: "leo.product.brave-leo")
-        }
-        .toggleStyle(.origin)
-        Toggle(isOn: $viewModel.isNewsDisabled.inversed) {
-          Label(Strings.Origin.newsLabel, braveSystemImage: "leo.product.brave-news")
-        }
-        .toggleStyle(.origin)
         Toggle(isOn: $viewModel.isPlaylistEnabled) {
           Label(Strings.Origin.playlistLabel, braveSystemImage: "leo.product.playlist")
-        }
-        .toggleStyle(.origin)
-        Toggle(isOn: $viewModel.isTalkDisabled.inversed) {
-          Label(Strings.Origin.talkLabel, braveSystemImage: "leo.product.brave-talk")
-        }
-        .toggleStyle(.origin)
-        Toggle(isOn: $viewModel.isVPNDisabled.inversed) {
-          Label(Strings.Origin.vpnLabel, braveSystemImage: "leo.product.vpn")
-        }
-        .toggleStyle(.origin)
-        Toggle(isOn: $viewModel.isWalletDisabled.inversed) {
-          Label(Strings.Origin.walletLabel, braveSystemImage: "leo.product.brave-wallet")
         }
         .toggleStyle(.origin)
       } header: {

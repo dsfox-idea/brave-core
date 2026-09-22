@@ -66,37 +66,15 @@ public class OriginSettingsViewModel {
 
   var isRestartToastVisible: Bool = false
 
-  @ObservationIgnored
-  @OriginPolicyBooleanValue(key: .rewardsDisabled)
-  var isRewardsDisabled: Bool
-
-  @ObservationIgnored
-  @OriginPolicyBooleanValue(key: .aiChatEnabled)
-  var isAIChatEnabled: Bool
-
-  @ObservationIgnored
-  @OriginPolicyBooleanValue(key: .newsDisabled)
-  var isNewsDisabled: Bool
-
+  // Growser-262: seven properties are gone with the policies they bound to -
+  // rewards, Leo, news, the statistics ping, talk, VPN and wallet. Each policy
+  // left brave_policies.gni when its feature was removed, so the ObjC constant
+  // this wrapper takes as its key stopped existing
+  // (brave_origin_service_bridge.h). These two are the policies our list still
+  // carries.
   @ObservationIgnored
   @OriginPolicyBooleanValue(key: .p3AEnabled)
   var isP3AEnabled: Bool
-
-  @ObservationIgnored
-  @OriginPolicyBooleanValue(key: .statsPingEnabled)
-  var isStatsPingEnabled: Bool
-
-  @ObservationIgnored
-  @OriginPolicyBooleanValue(key: .talkDisabled)
-  var isTalkDisabled: Bool
-
-  @ObservationIgnored
-  @OriginPolicyBooleanValue(key: .walletDisabled)
-  var isWalletDisabled: Bool
-
-  @ObservationIgnored
-  @OriginPolicyBooleanValue(key: .vpnDisabled)
-  var isVPNDisabled: Bool
 
   @ObservationIgnored
   @OriginPolicyBooleanValue(key: .playlistEnabled)
@@ -121,14 +99,9 @@ public class OriginSettingsViewModel {
 
   /// Reset all of the policy values back to their defaults
   func reset() {
-    self.isRewardsDisabled = true
-    self.isAIChatEnabled = false
-    self.isNewsDisabled = true
+    // Growser-262: the seven removed policies are not reset here because they
+    // are not settable here any more - see the properties above.
     self.isP3AEnabled = false
-    self.isStatsPingEnabled = false
-    self.isTalkDisabled = true
-    self.isWalletDisabled = true
-    self.isVPNDisabled = true
     self.isPlaylistEnabled = false
   }
 }

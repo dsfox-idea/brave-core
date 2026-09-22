@@ -18,7 +18,13 @@
 #include "brave/components/brave_origin/brave_origin_service.h"
 #include "brave/components/brave_origin/profile_id.h"
 #include "brave/components/brave_rewards/core/pref_names.h"
+// Growser-262: this file tests ENABLE_BRAVE_WALLET and ENABLE_BRAVE_TALK and
+// used to receive their buildflags transitively, through the iOS policy map
+// header. That header stopped naming either feature when the policies behind
+// them were removed, so the flags are included here, where they are used.
+#include "brave/components/brave_talk/buildflags/buildflags.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
+#include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/email_aliases/buildflags/buildflags.h"
 #include "brave/components/p3a/pref_names.h"

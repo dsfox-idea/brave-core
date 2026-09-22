@@ -8,21 +8,9 @@
 #include "base/strings/sys_string_conversions.h"
 #include "components/policy/policy_constants.h"
 
-BraveOriginPolicyKey const BraveOriginPolicyKeyWalletDisabled =
-    base::SysUTF8ToNSString(policy::key::kBraveWalletDisabled);
-BraveOriginPolicyKey const BraveOriginPolicyKeyAIChatEnabled =
-    base::SysUTF8ToNSString(policy::key::kBraveAIChatEnabled);
-BraveOriginPolicyKey const BraveOriginPolicyKeyRewardsDisabled =
-    base::SysUTF8ToNSString(policy::key::kBraveRewardsDisabled);
-BraveOriginPolicyKey const BraveOriginPolicyKeyTalkDisabled =
-    base::SysUTF8ToNSString(policy::key::kBraveTalkDisabled);
-BraveOriginPolicyKey const BraveOriginPolicyKeyNewsDisabled =
-    base::SysUTF8ToNSString(policy::key::kBraveNewsDisabled);
-BraveOriginPolicyKey const BraveOriginPolicyKeyVPNDisabled =
-    base::SysUTF8ToNSString(policy::key::kBraveVPNDisabled);
+// Growser-262: only the two policies our own list still carries. The seven
+// that went with their features are named in the header, with why.
 BraveOriginPolicyKey const BraveOriginPolicyKeyP3AEnabled =
     base::SysUTF8ToNSString(policy::key::kGrowserP3AEnabled);
-BraveOriginPolicyKey const BraveOriginPolicyKeyStatsPingEnabled =
-    base::SysUTF8ToNSString(policy::key::kBraveStatsPingEnabled);
 BraveOriginPolicyKey const BraveOriginPolicyKeyPlaylistEnabled =
     base::SysUTF8ToNSString(policy::key::kGrowserPlaylistEnabled);

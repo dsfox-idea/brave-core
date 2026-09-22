@@ -11,14 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NSString* BraveOriginPolicyKey NS_TYPED_EXTENSIBLE_ENUM;
-OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyWalletDisabled;
-OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyAIChatEnabled;
-OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyRewardsDisabled;
-OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyTalkDisabled;
-OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyNewsDisabled;
-OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyVPNDisabled;
+// Growser-262: seven keys are gone with the policies they named - wallet, AI
+// chat, rewards, talk, news, VPN and the stats ping. Each policy left
+// brave_policies.gni when its feature was removed, so `policy::key::` stopped
+// declaring the constant and this bridge could not compile: it is the second
+// place iOS names those keys, after brave_simple_policy_map_ios.h, and the
+// first build anyone ran here failed on both. The Swift side that bound them
+// (Origin's settings screen) loses those rows with them.
 OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyP3AEnabled;
-OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyStatsPingEnabled;
 OBJC_EXPORT BraveOriginPolicyKey const BraveOriginPolicyKeyPlaylistEnabled;
 
 NS_SWIFT_NAME(BraveOriginService)
