@@ -117,7 +117,7 @@ base::DictValue GetValueWithTicketInfos(
   dict.Set(kSupportTicketEmailKey, email_trimmed);
   dict.Set(kSupportTicketSubjectKey, subject_trimmed);
   dict.Set(kSupportTicketSupportTicketKey, base::Base64Encode(body_trimmed));
-  dict.Set(kSupportTicketPartnerClientIdKey, "com.brave.browser");
+  dict.Set(kSupportTicketPartnerClientIdKey, "org.growser");
   dict.Set(kSupportTicketSubscriberCredential, subscriber_credential);
   dict.Set(kSupportTicketPaymentValidationMethodKey, "brave-premium");
 

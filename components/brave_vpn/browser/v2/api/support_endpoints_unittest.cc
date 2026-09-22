@@ -39,7 +39,7 @@ TEST(SupportEndpointsTest, CreateSupportTicketRequestBodyToValue) {
                 .Set("email", kTestEmail)
                 .Set("subject", kTestSubject)
                 .Set("support-ticket", expected_encoded_body)
-                .Set("partner-client-id", "com.brave.browser")
+                .Set("partner-client-id", "org.growser")
                 .Set("payment-validation-method", "brave-premium")
                 .Set("subscriber-credential", kTestSubscriberCredential));
 }

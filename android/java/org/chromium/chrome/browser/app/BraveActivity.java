@@ -311,7 +311,7 @@ public abstract class BraveActivity extends ChromeActivity
     public static final String STARTPAGE_SEARCH_ENGINE_KEYWORD = ":sp";
 
     /** Settings for sending local notification reminders. */
-    public static final String CHANNEL_ID = "com.brave.browser";
+    public static final String CHANNEL_ID = "org.growser";
 
     // Explicitly declare this variable to avoid build errors.
     // It will be removed in asm and parent variable will be used instead.

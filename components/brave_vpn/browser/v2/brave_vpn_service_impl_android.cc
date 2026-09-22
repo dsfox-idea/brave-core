@@ -26,7 +26,7 @@ namespace brave_vpn::v2 {
 namespace {
 // Package name is important; for real users, it'll be the Release package.
 // For testing we do have the ability to use the Nightly package.
-constexpr char kDefaultPackage[] = "com.brave.browser";
+constexpr char kDefaultPackage[] = "org.growser";
 constexpr char kDefaultProductId[] = "brave-firewall-vpn-premium";
 
 // Returns the stored value of |pref_name|, or |fallback| if the pref is

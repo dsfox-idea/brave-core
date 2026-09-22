@@ -15,7 +15,7 @@
 
 namespace {
 
-inline constexpr char kDefaultPackage[] = "com.brave.browser";
+inline constexpr char kDefaultPackage[] = "org.growser";
 inline constexpr char kProductId[] = "brave.origin.perpetual";
 
 }  // namespace

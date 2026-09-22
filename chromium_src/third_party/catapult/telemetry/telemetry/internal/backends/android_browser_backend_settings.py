@@ -5,19 +5,19 @@
 """A inline part of android_browser_backend_settings.py"""
 
 ANDROID_BRAVE = GenericChromeBackendSettings(browser_type='android-brave',
-                                             package='com.brave.browser')
+                                             package='org.growser')
 
 ANDROID_BRAVE_DEFAULT = GenericChromeBackendSettings(
-    browser_type='android-brave-default', package='com.brave.browser_default')
+    browser_type='android-brave-default', package='org.growser.debug')
 
 ANDROID_BRAVE_BETA = GenericChromeBackendSettings(
-    browser_type='android-brave-beta', package='com.brave.browser_beta')
+    browser_type='android-brave-beta', package='org.growser.beta')
 
 ANDROID_BRAVE_DEV = GenericChromeBackendSettings(
-    browser_type='android-brave-dev', package='com.brave.browser_dev')
+    browser_type='android-brave-dev', package='org.growser.dev')
 
 ANDROID_BRAVE_NIGHTLY = GenericChromeBackendSettings(
-    browser_type='android-brave-nightly', package='com.brave.browser_nightly')
+    browser_type='android-brave-nightly', package='org.growser.nightly')
 
 BRAVE_ANDROID_BACKEND_SETTINGS = (ANDROID_BRAVE_DEFAULT, ANDROID_BRAVE,
                                   ANDROID_BRAVE_BETA, ANDROID_BRAVE_DEV,

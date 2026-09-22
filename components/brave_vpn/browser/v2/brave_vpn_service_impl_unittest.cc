@@ -51,9 +51,9 @@ constexpr char kTestEnvironment[] = "unittest-env";
 constexpr char kTestEmail[] = "test@example.com";
 #else   // !BUILDFLAG(IS_ANDROID)
 constexpr char kTestPurchaseToken[] = "test-purchase-token";
-constexpr char kTestPackage[] = "com.brave.browser_nightly";
+constexpr char kTestPackage[] = "org.growser.nightly";
 constexpr char kTestProductId[] = "test-product-id";
-constexpr char kExpectedDefaultPackage[] = "com.brave.browser";
+constexpr char kExpectedDefaultPackage[] = "org.growser";
 constexpr char kExpectedDefaultProductId[] = "brave-firewall-vpn-premium";
 
 // The payload the Java side receives: base64 of a flat JSON dict. Returns

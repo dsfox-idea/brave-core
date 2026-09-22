@@ -19,13 +19,13 @@ import java.util.Set;
 
 public class BraveChannelDefinitions {
     public static class ChannelId {
-        public static final String BRAVE_ADS = "com.brave.browser.ads";
-        public static final String BRAVE_ADS_BACKGROUND = "com.brave.browser.ads.background";
-        public static final String BRAVE_BROWSER = "com.brave.browser";
+        public static final String BRAVE_ADS = "org.growser.ads";
+        public static final String BRAVE_ADS_BACKGROUND = "org.growser.ads.background";
+        public static final String BRAVE_BROWSER = "org.growser";
     }
 
     public static class ChannelGroupId {
-        public static final String BRAVE_ADS = "com.brave.browser.ads";
+        public static final String BRAVE_ADS = "org.growser.ads";
         public static final String GENERAL = "general";
     }
 

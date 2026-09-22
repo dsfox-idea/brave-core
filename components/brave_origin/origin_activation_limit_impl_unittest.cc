@@ -23,7 +23,7 @@ namespace {
 
 constexpr char kOrderId[] = "3d5f19e2-4b71-49f5-966d-02111a067af1";
 constexpr char kReceiptPayload[] =
-    R"({"type":"android","raw_receipt":"token","package":"com.brave.browser",)"
+    R"({"type":"android","raw_receipt":"token","package":"org.growser",)"
     R"("subscription_id":"brave-origin"})";
 
 constexpr char kCheckPathSuffix[] =

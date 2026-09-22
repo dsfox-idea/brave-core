@@ -111,20 +111,20 @@ public class BraveSetDefaultBrowserUtilsTest {
         // This test verifies the Brave package name constants are properly defined
         // and match the expected format.
         assertEquals(
-                "Production package name should be com.brave.browser",
-                "com.brave.browser",
+                "Production package name should be org.growser",
+                "org.growser",
                 BraveConstants.BRAVE_PRODUCTION_PACKAGE_NAME);
         assertEquals(
-                "Beta package name should be com.brave.browser_beta",
-                "com.brave.browser_beta",
+                "Beta package name should be org.growser.beta",
+                "org.growser.beta",
                 BraveConstants.BRAVE_BETA_PACKAGE_NAME);
         assertEquals(
-                "Nightly package name should be com.brave.browser_nightly",
-                "com.brave.browser_nightly",
+                "Nightly package name should be org.growser.nightly",
+                "org.growser.nightly",
                 BraveConstants.BRAVE_NIGHTLY_PACKAGE_NAME);
         assertEquals(
-                "Debug package name should be com.brave.browser_default",
-                "com.brave.browser_default",
+                "Debug package name should be org.growser.debug",
+                "org.growser.debug",
                 BraveConstants.BRAVE_DEBUG_PACKAGE_NAME);
     }
 }

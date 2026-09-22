@@ -24,7 +24,8 @@
 
 namespace brave_vpn::v2::endpoints {
 
-inline constexpr char kPartnerClientIdValue[] = "com.brave.browser";
+// Growser-265: this browser is org.growser wherever it names itself.
+inline constexpr char kPartnerClientIdValue[] = "org.growser";
 inline constexpr char kTimezoneMetadataKey[] = "timezone";
 
 // CreateSupportTicket API submits a customer support inquiry to Guardian.
