@@ -35,6 +35,10 @@ if (is_android) {
 
   brave_browser_search_engines_deps += [
     "//brave/components/brave_search/browser",
+
+    # Growser-265: the JNI helper asks whether the feature that owns its pref
+    # is on before reading it - IsDefaultAPIEnabled() lives here.
+    "//brave/components/brave_search/common",
     "//chrome/browser/profiles:profile",
     "//components/prefs",
   ]
