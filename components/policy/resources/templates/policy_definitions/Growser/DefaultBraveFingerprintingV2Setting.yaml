@@ -1,7 +1,8 @@
-caption: Default Brave fingerprinting protection setting
+# Growser-267: the product name in the two strings a person reads.
+caption: Default Growser fingerprinting protection setting
 default: null
 desc: |-
-  Enables or disables Brave fingerprinting protection.
+  Enables or disables Growser fingerprinting protection.
 
   Setting the policy to:
   - 1 disables fingerprinting protection
