@@ -223,7 +223,7 @@ public class AppState {
       }
     }
 
-    switches.append(.init(key: .rewardsFlags, value: BraveRewards.Configuration.current().flags))
+    // Growser-290: no rewards flags switch - Rewards is out.
 
     // Initialize BraveCore
     let braveCoreMain = BraveCoreMain(additionalSwitches: switches)

@@ -132,8 +132,7 @@ open class MockTabManagerDelegate: TabManagerDelegate {
     DataController.shared.initializeOnce()
     manager = TabManager(
       windowId: testWindowId,
-      rewards: nil,
-      braveCore: nil,
+      braveCore: nil,  // Growser-290: no rewards
       profile: FakeProfile(),
       privateBrowsingManager: privateBrowsingManager,
       tabCreationFactory: { params in

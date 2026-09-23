@@ -108,9 +108,9 @@ protocol NewTabPageDelegate: AnyObject {
   func focusURLBar()
   func navigateToInput(_ input: String, inNewTab: Bool, switchingToPrivateMode: Bool)
   func handleFavoriteAction(favorite: Favorite, action: BookmarksAction)
-  func brandedImageCalloutActioned(_ state: BrandedImageCalloutState)
+  // Growser-290: no brandedImageCalloutActioned(_:) or
+  // showNewTabTakeoverInfoBarIfNeeded() - both were sponsored images'.
   func showNTPOnboarding()
-  func showNewTabTakeoverInfoBarIfNeeded()
   func isNewTabPageOccluded() -> Bool
 }
 
@@ -136,15 +136,11 @@ class NewTabPageViewController: UIViewController {
   private let layout = NewTabPageFlowLayout()
   private let collectionView: NewTabCollectionView
   private weak var browserTab: (any TabState)?
-  private let rewards: BraveRewards
+  // Growser-290: no rewards.
 
   private var background: NewTabPageBackground
   private let backgroundView = NewTabPageBackgroundView()
   private let backgroundButtonsView: NewTabPageBackgroundButtonsView
-
-  // Track the ID of the last viewed sponsored background to prevent duplicate
-  // viewed impressions.
-  private var lastViewedSponsoredBackgroundId: String?
 
   /// A gradient to display over background images to ensure visibility of
   /// the NTP contents and sponsored logo
@@ -163,7 +159,7 @@ class NewTabPageViewController: UIViewController {
 
   // Growser-281: no feed data source, feed overlay or news reload guard.
 
-  private let notifications: NewTabPageNotifications
+  // Growser-290: no branded-image notifications - sponsored images are ads.
   private var cancellables: Set<AnyCancellable> = []
   private let privateBrowsingManager: PrivateBrowsingManager
 
@@ -173,20 +169,17 @@ class NewTabPageViewController: UIViewController {
     tab: some TabState,
     profilePrefs: any PrefService,
     dataSource: NTPDataSource,
-    // Growser-281: no feedDataSource.
-    rewards: BraveRewards,
+    // Growser-281: no feedDataSource. Growser-290: no rewards.
     privateBrowsingManager: PrivateBrowsingManager
   ) {
     self.browserTab = tab
     self.profilePrefs = profilePrefs
-    self.rewards = rewards
     self.privateBrowsingManager = privateBrowsingManager
     self.backgroundButtonsView = NewTabPageBackgroundButtonsView(
       privateBrowsingManager: privateBrowsingManager,
       profilePrefs: profilePrefs
     )
     background = NewTabPageBackground(dataSource: dataSource)
-    notifications = NewTabPageNotifications(rewards: rewards)
     collectionView = NewTabCollectionView(frame: .zero, collectionViewLayout: layout)
     super.init(nibName: nil, bundle: nil)
 
@@ -249,12 +242,8 @@ class NewTabPageViewController: UIViewController {
       }),
     ]
 
-    var isBackgroundNTPSI = false
-    if let ntpBackground = background.currentBackground, case .sponsoredMedia = ntpBackground {
-      isBackgroundNTPSI = true
-    }
     let ntpDefaultBrowserCalloutProvider = NTPDefaultBrowserCalloutProvider(
-      isBackgroundNTPSI: isBackgroundNTPSI
+      isBackgroundNTPSI: false  // Growser-290: there are no sponsored images.
     )
 
     // This is a one-off view, adding it to the NTP only if necessary.
@@ -274,13 +263,7 @@ class NewTabPageViewController: UIViewController {
     background.changed = { [weak self] in
       guard let self else { return }
       setupBackgroundImage()
-
-      let isTabVisible = viewIfLoaded?.window != nil
-      if isTabVisible {
-        // `viewDidAppear` is not called when the view is already visible, so
-        // report the viewed impression event here if needed.
-        reportSponsoredBackgroundViewedEventIfNeeded()
-      }
+      // Growser-290: no sponsored background impression to report.
     }
 
     // Growser-281: no Brave News observers or usage P3A.
@@ -400,9 +383,8 @@ class NewTabPageViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
-    reportSponsoredBackgroundViewedEventIfNeeded()
-
-    presentNotification()
+    // Growser-290: no sponsored background impression or branded-image
+    // notification.
 
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.50) {
       self.delegate?.showNTPOnboarding()
@@ -419,36 +401,14 @@ class NewTabPageViewController: UIViewController {
     super.willMove(toParent: parent)
 
     backgroundView.imageView.image = parent == nil ? nil : background.backgroundImage
-
-    lastViewedSponsoredBackgroundId = nil
   }
 
   // MARK: - Background
 
-  /// Hide any visible sponsored image notification if the current background
-  /// is no longer a sponsored image. If the visible notification is not
-  /// for sponsored images, this does nothing.
-  private func hideVisibleSponsoredImageNotification() {
-    if case .brandedImages = visibleNotification {
-      guard let background = background.currentBackground else {
-        hideNotification()
-        return
-      }
-      switch background {
-      case .image:
-        hideNotification()
-      case .sponsoredMedia:
-        // Current background is still a sponsored image so it can stay
-        // visible
-        break
-      }
-    }
-  }
+  // Growser-290: no hideVisibleSponsoredImageNotification().
 
   func setupBackgroundImage() {
     collectionView.reloadData()
-
-    hideVisibleSponsoredImageNotification()
 
     if let background = background.currentBackground {
       switch background {
@@ -458,8 +418,6 @@ class NewTabPageViewController: UIViewController {
         } else {
           backgroundButtonsView.activeButton = .none
         }
-      case .sponsoredMedia(let background, _):
-        backgroundButtonsView.activeButton = .brandLogo(background.logo)
       }
     } else {
       backgroundButtonsView.activeButton = .none
@@ -515,116 +473,9 @@ class NewTabPageViewController: UIViewController {
 
   // MARK: - Sponsored background events
 
-  private func reportSponsoredBackgroundViewedEventIfNeeded() {
-    // Only record a sponsored background viewed impression when the NTP
-    // background is not covered by the URL bar overlay.
-    if delegate?.isNewTabPageOccluded() == true {
-      return
-    }
+  // Growser-290: no sponsored background events - ads are out.
 
-    guard case .sponsoredMedia(_, let newTabPageAd) = background.currentBackground else {
-      return
-    }
-
-    // Ensure we only record a viewed impression once per placement id.
-    if lastViewedSponsoredBackgroundId == newTabPageAd.placementId {
-      return
-    }
-    lastViewedSponsoredBackgroundId = newTabPageAd.placementId
-
-    delegate?.showNewTabTakeoverInfoBarIfNeeded()
-    reportSponsoredBackgroundEvent(.viewedImpression)
-  }
-
-  private func reportSponsoredBackgroundEvent(
-    _ event: BraveAds.NewTabPageAdEventType,
-    completion: ((_ success: Bool) -> Void)? = nil
-  ) {
-    if browserTab != nil,
-      case .sponsoredMedia(let sponsoredBackground, let newTabPageAd) = background.currentBackground
-    {
-      rewards.ads.triggerNewTabPageAdEvent(
-        newTabPageAd.placementId,
-        creativeInstanceId: sponsoredBackground.creativeInstanceId,
-        metricType: sponsoredBackground.metricType,
-        eventType: event,
-        completion: { success in
-          completion?(success)
-        }
-      )
-    }
-  }
-
-  // MARK: - Notifications
-
-  private var notificationController: UIViewController?
-  private var visibleNotification: NewTabPageNotifications.NotificationType?
-  private var notificationShowing: Bool {
-    notificationController?.parent != nil
-  }
-
-  private func presentNotification() {
-    if privateBrowsingManager.isPrivateBrowsing || notificationShowing {
-      return
-    }
-
-    var isShowingSponseredImage = false
-    if case .sponsoredMedia = background.currentBackground {
-      isShowingSponseredImage = true
-    }
-
-    guard
-      let notification = notifications.notificationToShow(
-        isShowingBackgroundImage: background.currentBackground != nil,
-        isShowingSponseredImage: isShowingSponseredImage
-      )
-    else {
-      return
-    }
-
-    var vc: UIViewController?
-
-    switch notification {
-    case .brandedImages(let state):
-      if Preferences.NewTabPage.atleastOneNTPNotificationWasShowed.value { return }
-
-      guard let notificationVC = NTPNotificationViewController(state: state, rewards: rewards)
-      else { return }
-
-      notificationVC.closeHandler = { [weak self] in
-        self?.notificationController = nil
-      }
-
-      notificationVC.learnMoreHandler = { [weak self] in
-        self?.delegate?.brandedImageCalloutActioned(state)
-      }
-
-      vc = notificationVC
-    }
-
-    guard let viewController = vc else { return }
-    notificationController = viewController
-    visibleNotification = notification
-
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
-      guard let self = self else { return }
-
-      if case .brandedImages = notification {
-        Preferences.NewTabPage.atleastOneNTPNotificationWasShowed.value = true
-      }
-
-      self.addChild(viewController)
-      self.view.addSubview(viewController.view)
-    }
-  }
-
-  private func hideNotification() {
-    guard let controller = notificationController else { return }
-    controller.willMove(toParent: nil)
-    controller.removeFromParent()
-    controller.view.removeFromSuperview()
-    notificationController = nil
-  }
+  // Growser-290: no branded-image notifications.
 
   // Growser-281: no Brave News actions, feed state handling or loading.
 
@@ -665,42 +516,10 @@ class NewTabPageViewController: UIViewController {
     switch background {
     case .image:
       presentImageCredit(sender)
-    case .sponsoredMedia(let background, _):
-      tappedSponsorButton(background.logo)
     }
   }
 
-  private func tappedSponsorButton(_ logo: NTPSponsoredImageLogo) {
-    UIImpactFeedbackGenerator(style: .medium).vibrate()
-    reportSponsoredBackgroundEvent(.clicked)
-
-    guard let url = logo.destinationURL else { return }
-    if url.scheme != "https"
-      || !Preferences.General.followUniversalLinks.value
-      || (Preferences.General.keepYouTubeInBrave.value && url.isYouTubeURL)
-    {
-      delegate?.navigateToInput(
-        url.absoluteString,
-        inNewTab: false,
-        switchingToPrivateMode: false
-      )
-      return
-    }
-
-    // Try to open the destination URL as a universal link in case there is
-    // an installed app configured to open it. Fall back to loading the URL
-    // in the browser if no app opened it.
-    UIApplication.shared.open(url, options: [.universalLinksOnly: true]) {
-      [weak self] didOpen in
-      if !didOpen {
-        self?.delegate?.navigateToInput(
-          url.absoluteString,
-          inNewTab: false,
-          switchingToPrivateMode: false
-        )
-      }
-    }
-  }
+  // Growser-290: no tappedSponsorButton(_:).
 
   private func handleFavoriteAction(favorite: Favorite, action: BookmarksAction) {
     delegate?.handleFavoriteAction(favorite: favorite, action: action)
@@ -776,9 +595,7 @@ extension NewTabPageViewController {
     newTabsStorage.add(value: 1, to: Date())
     let newTabsCreatedAnswer = newTabsStorage.maximumDaysCombinedValue
 
-    if case .sponsoredMedia = background.currentBackground {
-      sponsoredStorage.add(value: 1, to: Date())
-    }
+    // Growser-290: no sponsored new tabs to count.
 
     UmaHistogramRecordValueToBucket(
       "Brave.NTP.NewTabsCreated.3",
@@ -1129,7 +946,7 @@ extension NewTabPageViewController {
 // MARK: - URL bar overlay
 extension NewTabPageViewController {
   func searchContainerDidDismiss() {
-    reportSponsoredBackgroundViewedEventIfNeeded()
+    // Growser-290: no sponsored background impression to report.
   }
 }
 

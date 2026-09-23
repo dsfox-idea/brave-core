@@ -174,6 +174,22 @@ var package = Package(
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletSolanaProviderScript.js",
         "Assets/InterstitialPages/Pages/Web3Domain.html",
         "Assets/InterstitialPages/Styles/Web3Domain.css",
+        // Growser-290: Brave Rewards and Brave Ads are out of the product, on
+        // the same terms: the Rewards service and panel, ads notifications,
+        // search-result ads, DeviceCheck enrolment and the internals pages.
+        "DeviceCheck",
+        "Extensions/Rewards",
+        "Frontend/Rewards",
+        "Frontend/BraveRewards",
+        "Frontend/BraveNotifications/BraveRewards",
+        "Frontend/Settings/Debug/RewardsInternals",
+        "Frontend/Settings/Features/BraveRewardsSettingsViewController.swift",
+        "Frontend/Browser/BrowserViewController/BVC+Rewards.swift",
+        "Frontend/Browser/NewTabPage/Notifications",
+        "Frontend/Browser/Search/BraveSearchResultAdManager.swift",
+        "Frontend/Browser/SearchResultAdClickedInfoBar.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveSearchResultAdScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchResultAdScript.js",
         // Growser-284: every alternate app icon is a Brave lion, so the
         // picker is out and the app wears the G only.
         "Frontend/Settings/Display/AltIconsModel.swift",
@@ -216,9 +232,6 @@ var package = Package(
         .copy("Frontend/Reader/ReaderViewLoading.html"),
         .copy("Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/corwin-prescott-3.jpg"),
         .copy("Frontend/Browser/Favorites/Data/top_sites_by_region.json"),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchResultAdScript.js"
-        ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchScript.js"
         ),
@@ -282,6 +295,8 @@ var package = Package(
     .target(
       name: "BraveShared",
       dependencies: ["BraveCore", "Shared", "Preferences"],
+      // Growser-290: ads are out of the product, and BraveAds with them.
+      exclude: ["Extensions/BraveAdsExtensions.swift"],
       plugins: ["LoggerPlugin"]
     ),
     .target(
@@ -436,7 +451,8 @@ var package = Package(
         "SnapKit",
       ],
       // Growser-280: the VPN promotions are out of the product with the VPN.
-      exclude: ["VPNNotifications"],
+      // Growser-290: so is the Rewards agreement, with Rewards.
+      exclude: ["VPNNotifications", "Callouts/OnboardingRewardsAgreementViewController.swift"],
       resources: [
         .copy("LottieAssets/onboarding-rewards.json"),
         .copy("LottieAssets/playlist-confetti.json"),

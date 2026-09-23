@@ -360,23 +360,7 @@ extension BrowserViewController {
     UmaHistogramEnumeration("Brave.General.BottomBarLocation", sample: answer)
   }
 
-  func recordAdsUsageType() {
-    enum Answer: Int, CaseIterable {
-      case none = 0
-      case ntpOnly = 1
-      case pushOnly = 2
-      case ntpAndPush = 3
-    }
-    var answer: Answer = .none
-    if rewards.ads.isEnabled && Preferences.NewTabPage.backgroundMediaType.isSponsored {
-      answer = .ntpAndPush
-    } else if rewards.ads.isEnabled {
-      answer = .pushOnly
-    } else if Preferences.NewTabPage.backgroundMediaType.isSponsored {
-      answer = .ntpOnly
-    }
-    UmaHistogramEnumeration("Brave.Rewards.AdTypesEnabled", sample: answer)
-  }
+  // Growser-290: no recordAdsUsageType() - there are no ads to count.
 
   func recordNavigationActionP3A(isNavigationActionForward: Bool) {
     var navigationActionStorage = P3ATimedStorage<Int>.navigationActionPerformedStorage

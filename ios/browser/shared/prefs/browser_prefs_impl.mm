@@ -7,8 +7,7 @@
 #include "base/version_info/channel.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_account/prefs.h"
-#include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
-#include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/buildflags/buildflags.h"
 #include "brave/components/brave_origin/brave_origin_prefs.h"
 #include "brave/components/brave_rewards/core/pref_registry.h"
@@ -62,6 +61,11 @@
 #include "brave/components/brave_talk/pref_names.h"
 #endif
 
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
+#include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
+#endif
+
 #if BUILDFLAG(ENABLE_P3A)  // Growser-289
 #include "brave/components/p3a/p3a_service.h"
 #endif
@@ -95,8 +99,10 @@ bool GetDefaultPrefValueForMetricsReporting() {
 }  // namespace
 
 void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   brave_ads::RegisterProfilePrefs(registry);
   brave_ads::RegisterProfilePrefsForMigration(registry);
+#endif
   brave_rewards::RegisterProfilePrefs(registry);
   brave_rewards::RegisterProfilePrefsForMigration(registry);
   brave_sync::Prefs::RegisterProfilePrefs(registry);
@@ -143,7 +149,9 @@ void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
 }
 
 void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   brave_ads::RegisterLocalStatePrefs(registry);
+#endif
   brave_stats::RegisterLocalStatePrefs(registry);
   brave_stats::RegisterLocalStatePrefsForMigration(registry);
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
@@ -204,7 +212,9 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
 
 void MigrateObsoleteProfilePrefs(PrefService* prefs) {
   brave_account::prefs::MigrateObsoleteProfilePrefs(prefs);
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   brave_ads::MigrateObsoleteProfilePrefs(prefs);
+#endif
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   brave_wallet::MigrateObsoleteProfilePrefs(prefs);
 #endif

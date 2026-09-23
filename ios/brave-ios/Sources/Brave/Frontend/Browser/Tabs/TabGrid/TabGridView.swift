@@ -950,7 +950,6 @@ extension Animation {
   let viewModel = TabGridViewModel(
     tabManager: .init(
       windowId: .init(),
-      rewards: nil,
       braveCore: nil,
       profile: FakeProfile(),
       privateBrowsingManager: .init(),

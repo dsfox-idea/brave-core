@@ -4,6 +4,8 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/skus/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
@@ -39,6 +41,8 @@ source_set("app") {
     "//brave/components/brave_shields/ios/browser",
     "//brave/components/brave_sync:constants",
     "//brave/components/brave_user_agent/browser",
+    "//brave/components/brave_ads/buildflags",
+    "//brave/components/brave_rewards/core/buildflags",
     "//brave/components/brave_user_agent/ios/common",
     "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/constants",
@@ -49,10 +53,7 @@ source_set("app") {
     "//brave/components/variations",
     "//brave/ios/app/resources",
     "//brave/ios/browser",
-    "//brave/ios/browser/api/ads",
-    "//brave/ios/browser/api/ads:brave_ads_mojom_wrappers",
     "//brave/ios/browser/api/bookmarks",
-    "//brave/ios/browser/api/brave_rewards",
     "//brave/ios/browser/api/brave_shields",
     "//brave/ios/browser/api/brave_stats",
     "//brave/ios/browser/api/brave_user_agent",
@@ -73,7 +74,6 @@ source_set("app") {
     "//brave/ios/browser/api/webcompat_reporter",
     "//brave/ios/browser/api/webcompat_reporter:webcompat_reporter_mojom_wrappers",
     "//brave/ios/browser/application_context",
-    "//brave/ios/browser/brave_ads",
     "//brave/ios/browser/brave_shields",
     "//brave/ios/browser/content_settings",
     "//brave/ios/browser/ui/webui",
@@ -141,6 +141,18 @@ source_set("app") {
       "//brave/ios/browser/api/skus:skus_mojom_wrappers",
       "//brave/ios/browser/skus",
     ]
+  }
+
+  # Growser-290: ads and rewards are compiled out, as on the desktop.
+  if (enable_brave_ads) {
+    deps += [
+      "//brave/ios/browser/api/ads",
+      "//brave/ios/browser/api/ads:brave_ads_mojom_wrappers",
+      "//brave/ios/browser/brave_ads",
+    ]
+  }
+  if (enable_brave_rewards) {
+    deps += [ "//brave/ios/browser/api/brave_rewards" ]
   }
 
   # Growser-287: the wallet is compiled out, as on the desktop.

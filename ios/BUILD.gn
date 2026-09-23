@@ -11,6 +11,8 @@ import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/ai_chat/ios/browser/headers.gni")
 import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_shields/ios/browser/headers.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/brave_user_agent/ios/common/headers.gni")
@@ -153,7 +155,6 @@ brave_core_public_headers = [
   "//brave/ios/browser/brave_shields/scriptlets/scriptlets_tab_helper_bridge.h",
 ]
 
-brave_core_public_headers += ads_public_headers
 brave_core_public_headers += brave_domains_public_headers
 brave_core_public_headers += brave_shields_public_headers
 brave_core_public_headers += brave_shields_api_public_headers
@@ -172,7 +173,6 @@ brave_core_public_headers += browser_debounce_public_headers
 brave_core_public_headers += brave_stats_public_headers
 brave_core_public_headers += browser_api_certificate_public_headers
 brave_core_public_headers += browser_api_favicon_public_headers
-brave_core_public_headers += rewards_public_headers
 brave_core_public_headers += browser_api_omnibox_public_headers
 brave_core_public_headers += browser_api_opentabs_public_headers
 brave_core_public_headers += browser_api_qr_code_public_headers
@@ -208,6 +208,18 @@ if (enable_skus) {
   brave_core_public_headers += skus_public_headers
   brave_core_public_headers +=
       [ "//brave/ios/browser/skus/skus_sdk_factory_wrappers.h" ]
+}
+
+# Growser-290: ads and rewards are compiled out, as on the desktop, and their
+# Objective-C APIs leave BraveCore with them.
+# The generated mojom header stays with ads off: ntp_sponsored_image.h names
+# its enum.
+brave_core_public_headers += [ "$root_gen_dir/brave/ios/browser/api/ads/brave_ads.mojom.objc.h" ]
+if (enable_brave_ads) {
+  brave_core_public_headers += [ "//brave/ios/browser/api/ads/brave_ads.h" ]
+}
+if (enable_brave_rewards) {
+  brave_core_public_headers += rewards_public_headers
 }
 
 # Growser-287: the wallet is compiled out, as on the desktop, and its
@@ -292,7 +304,7 @@ ios_framework_bundle("brave_core_ios_framework") {
     "//ui/base",
   ]
 
-  deps += ads_public_deps
+  deps += ads_public_deps  # Growser-290: the mojom wrappers, see above.
   if (enable_ai_chat) {  # Growser-279
     deps += ai_chat_component_public_deps
   }
@@ -300,7 +312,9 @@ ios_framework_bundle("brave_core_ios_framework") {
     deps += brave_wallet_public_deps
   }
   deps += brave_shields_component_public_deps
-  deps += rewards_public_deps
+  if (enable_brave_rewards) {  # Growser-290
+    deps += rewards_public_deps
+  }
   if (enable_skus) {  # Growser-283
     deps += skus_public_deps
   }

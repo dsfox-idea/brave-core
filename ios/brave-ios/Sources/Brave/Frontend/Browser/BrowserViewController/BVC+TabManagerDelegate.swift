@@ -89,16 +89,9 @@ extension BrowserViewController: TabManagerDelegate {
 
     // Growser-278: no tab.braveTalk helper.
 
-    tab.braveSearch = .init(tab: tab, rewards: rewards, searchEngines: profile.searchEngines)
-    tab.braveSearch?.presentSearchResultClickedInfoBar = { [weak self] in
-      guard let self else { return }
-      let searchResultClickedInfobar = SearchResultAdClickedInfoBar(
-        onLinkPressed: { [weak self] url in
-          self?.tabManager.addTabAndSelect(URLRequest(url: url), isPrivate: false)
-        }
-      )
-      show(toast: searchResultClickedInfobar, duration: nil)
-    }
+    // Growser-290: no rewards.
+    tab.braveSearch = .init(tab: tab, searchEngines: profile.searchEngines)
+    // Growser-290: no search-result-ad infobar.
     tab.braveSearch?.presentInQuickView = { [weak self] url, tab in
       guard let self else { return }
       let quickViewController = QuickViewController(
@@ -363,10 +356,6 @@ extension BrowserViewController: TabManagerDelegate {
   ) {
     if let downloadToast = toast as? DownloadToast {
       self.downloadToast = downloadToast
-    }
-
-    if let searchResultAdClickedInfoBar = toast as? SearchResultAdClickedInfoBar {
-      self.searchResultAdClickedInfoBar = searchResultAdClickedInfoBar
     }
 
     if let newTabTakeoverInfoBar = toast as? NewTabTakeoverInfoBar {

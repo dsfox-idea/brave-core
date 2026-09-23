@@ -500,7 +500,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
           braveCore: profileController,
           p3aUtils: braveCore.p3aUtils,
           localState: braveCore.localState,
-          rewards: rewards,
+          // Growser-290: no rewards.
           braveStats: profileController.braveStats,
           webcompatReporterHandler: WebcompatReporter.ServiceFactory.get(privateMode: false),
           clearDataCallback: { [weak self] isLoading, isHistoryCleared in
@@ -608,7 +608,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   }
 
   func topToolbarDidTapBraveRewardsButton(_ topToolbar: TopToolbarView) {
-    showBraveRewardsPanel()
+    // Growser-290: no Rewards panel - the button is never shown.
   }
 
   func topToolbarDidTapMenuButton(_ topToolbar: TopToolbarView) {

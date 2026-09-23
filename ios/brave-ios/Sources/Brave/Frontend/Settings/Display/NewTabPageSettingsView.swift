@@ -101,13 +101,13 @@ struct NewTabPageSettingsView: View {
 }
 
 class NTPTableViewController: UIHostingController<NewTabPageSettingsView> {
-  var rewards: BraveRewards?
+  // Growser-290: no rewards, so sponsored backgrounds are never supported.
   var linkTapped: ((URLRequest) -> Void)?
 
-  init(rewards: BraveRewards?, linkTapped: ((URLRequest) -> Void)?) {
+  init(linkTapped: ((URLRequest) -> Void)?) {
     super.init(
       rootView: .init(
-        isSponsoredBackgroundsSupported: rewards != nil,
+        isSponsoredBackgroundsSupported: false,
         linkTapped: linkTapped
       )
     )

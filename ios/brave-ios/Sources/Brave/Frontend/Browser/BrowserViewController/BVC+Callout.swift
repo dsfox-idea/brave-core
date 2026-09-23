@@ -47,7 +47,7 @@ extension BrowserViewController {
     case .defaultBrowser:
       presentDefaultBrowserScreenCallout(skipSafeGuards: skipSafeGuards)
     case .rewards:
-      presentBraveRewardsScreenCallout(skipSafeGuards: skipSafeGuards)
+      break  // Growser-290: Rewards is out of the product.
     case .vpnLinkReceipt:
       break  // Growser-280: the VPN is out of the product.
     }
@@ -136,26 +136,7 @@ extension BrowserViewController {
     present(defaultBrowserCallout, animated: true)
   }
 
-  private func presentBraveRewardsScreenCallout(skipSafeGuards: Bool = false) {
-    if !skipSafeGuards {
-      guard BraveRewards.isSupported(prefService: profileController.profile.prefs),
-        !Preferences.Rewards.rewardsToggledOnce.value
-      else {
-        return
-      }
-    }
-
-    let controller = OnboardingRewardsAgreementViewController()
-    controller.onOnboardingStateChanged = { [weak self] controller, state in
-      self?.completeOnboarding(controller)
-    }
-    controller.onRewardsStatusChanged = { [weak self] status in
-      self?.rewards.isEnabled = status
-    }
-
-    isOnboardingOrFullScreenCalloutPresented = true
-    present(controller, animated: true)
-  }
+  // Growser-290: no presentBraveRewardsScreenCallout(skipSafeGuards:).
 
   // Growser-280: no presentVPNLinkReceiptCallout(skipSafeGuards:).
 

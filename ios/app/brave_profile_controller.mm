@@ -10,6 +10,7 @@
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
 #include "brave/ios/browser/api/bookmarks/brave_bookmarks_api+private.h"
@@ -31,8 +32,6 @@
 #include "brave/ios/browser/api/web_view/brave_web_view_configuration_provider.h"
 #include "brave/ios/browser/api/web_view/brave_web_view_download_manager.h"
 #include "brave/ios/browser/application_context/brave_application_context_impl.h"
-#include "brave/ios/browser/brave_ads/ads_service_factory_ios.h"
-#include "brave/ios/browser/brave_ads/ads_service_impl_ios.h"
 #include "components/content_settings/core/browser/content_settings_utils.h"
 #include "components/history/core/browser/history_service.h"
 #include "components/keyed_service/core/service_access_type.h"
@@ -75,6 +74,11 @@
 #if BUILDFLAG(IOS_CREDENTIAL_PROVIDER_ENABLED)
 #include "ios/chrome/browser/credential_provider/model/credential_provider_service_factory.h"
 #include "ios/chrome/browser/credential_provider/model/credential_provider_util.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/ios/browser/brave_ads/ads_service_factory_ios.h"
+#include "brave/ios/browser/brave_ads/ads_service_impl_ios.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
@@ -171,8 +175,12 @@
                 GetApplicationContext()->GetVariationsService(),
                 GetApplicationContext()->GetComponentUpdateService(),
                 GetApplicationContext()->GetLocalState())
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
                             ads_service:brave_ads::AdsServiceFactoryIOS::
                                             GetForProfile(_profile)];
+#else
+                            ads_service:nullptr];
+#endif
   }
   return self;
 }

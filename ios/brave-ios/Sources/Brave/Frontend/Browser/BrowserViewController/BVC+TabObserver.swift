@@ -117,17 +117,7 @@ extension BrowserViewController: TabObserver {
     // Growser-283: no SKUS receipt to inject - SKUS is out of the product.
 
     navigateInTab(tab: tab)
-    rewards.reportTabUpdated(
-      tab: tab,
-      isSelected: tabManager.selectedTab === tab,
-      isPrivate: privateBrowsingManager.isPrivateBrowsing
-    )
-    tab.browserData?.reportPageLoad(to: rewards)
-
-    if tab.visibleURL?.isLocal == false {
-      // Set rewards inter site url as new page load url.
-      tab.rewardsXHRLoadURL = tab.visibleURL
-    }
+    // Growser-290: no Rewards page-load reporting - Rewards is out.
 
     if let lastCommittedURL = tab.lastCommittedURL {
       maybeRecordBraveSearchDailyUsage(url: lastCommittedURL)
@@ -205,16 +195,7 @@ extension BrowserViewController: TabObserver {
       }
     }
 
-    // Rewards reporting
-    if let url = tab.visibleURL, !url.isLocal {
-      // Notify Brave Rewards library of the same document navigation.
-      if let tab = tabManager.selectedTab,
-        let rewardsURL = tab.rewardsXHRLoadURL,
-        url.host == rewardsURL.host
-      {
-        tab.browserData?.reportPageLoad(to: rewards)
-      }
-    }
+    // Growser-290: no Rewards same-document reporting.
 
     // Update the estimated progress when the URL changes. Estimated progress may update to 0.1 when the url
     // is still an internal URL even though a request may be pending for a web page.
@@ -291,7 +272,7 @@ extension BrowserViewController {
       PrintScriptHandler(browserController: self),
       DarkReaderScriptHandler(),
       BraveGetUA(),
-      BraveSearchScriptHandler(profile: profile, rewards: rewards),
+      BraveSearchScriptHandler(profile: profile),  // Growser-290: no rewards
       ResourceDownloadScriptHandler(),
       AdsMediaReportingScriptHandler(),
       DeAmpScriptHandler(),
@@ -318,7 +299,7 @@ extension BrowserViewController {
     if !tab.isPrivate {
       injectedScripts += [
         LoginsScriptHandler(passwordAPI: profileController.passwordAPI),
-        BraveSearchResultAdScriptHandler(),
+        // Growser-290: no BraveSearchResultAdScriptHandler.
         // Growser-283: no BraveSkusScriptHandler.
       ]
       // Growser-287: no Ethereum, Solana or Cardano provider for pages.

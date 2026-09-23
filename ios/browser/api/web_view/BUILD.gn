@@ -4,6 +4,7 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
@@ -33,6 +34,7 @@ source_set("web_view") {
     "brave_web_view_internal.h",
   ]
   deps = [
+    "//brave/components/brave_ads/buildflags",
     "//base",
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account/mojom:mojom_objc",
@@ -45,7 +47,6 @@ source_set("web_view") {
     "//brave/ios/browser/api/url",
     "//brave/ios/browser/api/web_view/autofill",
     "//brave/ios/browser/api/web_view/passwords",
-    "//brave/ios/browser/brave_ads",
     "//brave/ios/browser/brave_search",
     "//brave/ios/browser/brave_shields",
     "//brave/ios/browser/brave_shields/cosmetic_filtering",
@@ -81,6 +82,9 @@ source_set("web_view") {
     "//ios/web_view/framework:web_view_sources",
     "//net",
   ]
+  if (enable_brave_ads) {  # Growser-290
+    deps += [ "//brave/ios/browser/brave_ads" ]
+  }
   if (enable_ai_chat) {  # Growser-279
     deps += [
       "//brave/components/ai_chat/core/common",

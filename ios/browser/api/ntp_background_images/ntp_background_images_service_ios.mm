@@ -100,9 +100,13 @@ class AdsServiceObserverBridge : public brave_ads::AdsServiceObserver {
   if ((self = [super init])) {
     _service = std::move(service);
     _adsService = ads_service;
-    _adsServiceObserverBridge =
-        std::make_unique<AdsServiceObserverBridge>(self);
-    _adsService->AddObserver(_adsServiceObserverBridge.get());
+    // Growser-290: ads are compiled out, so there may be no ads service; the
+    // code below already asks before using it (ParseAndSaveNewTabPageAds).
+    if (_adsService) {
+      _adsServiceObserverBridge =
+          std::make_unique<AdsServiceObserverBridge>(self);
+      _adsService->AddObserver(_adsServiceObserverBridge.get());
+    }
     _observerBridge =
         std::make_unique<NTPBackgroundImagesServiceObserverBridge>(self);
     _service->AddObserver(_observerBridge.get());
@@ -112,7 +116,9 @@ class AdsServiceObserverBridge : public brave_ads::AdsServiceObserver {
 }
 
 - (void)dealloc {
-  _adsService->RemoveObserver(_adsServiceObserverBridge.get());
+  if (_adsService) {  // Growser-290
+    _adsService->RemoveObserver(_adsServiceObserverBridge.get());
+  }
   _service->RemoveObserver(_observerBridge.get());
 }
 

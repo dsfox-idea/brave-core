@@ -208,8 +208,7 @@ public class BrowserViewController: UIViewController {
   var downloadToast: DownloadToast?
   /// A toast which is active and not yet dismissed
   var activeButtonToast: Toast?
-  /// An infobar displaying a privacy notice when a search result ad is clicked
-  var searchResultAdClickedInfoBar: SearchResultAdClickedInfoBar?
+  // Growser-290: no search-result-ad infobar.
   /// An infobar displaying a privacy notice when a new tab takeover is viewed
   var newTabTakeoverInfoBar: NewTabTakeoverInfoBar?
   // Growser-282: no playlist activity items.
@@ -228,12 +227,9 @@ public class BrowserViewController: UIViewController {
 
   private var cancellables: Set<AnyCancellable> = []
 
-  let rewards: BraveRewards
-  var rewardsObserver: RewardsObserver?
-  var promotionFetchTimer: Timer?
-  private var notificationsHandler: AdsNotificationHandler?
+  // Growser-290: no rewards, rewards observer, promotion timer, ads
+  // notification handler or publisher - Rewards and Ads are out.
   let notificationsPresenter = BraveNotificationsPresenter()
-  var publisher: BraveCore.BraveRewards.PublisherInfo?
 
   // Growser-280: no vpnProductInfo.
 
@@ -261,7 +257,6 @@ public class BrowserViewController: UIViewController {
 
   private(set) var widgetBookmarksFRC: NSFetchedResultsController<Favorite>?
   var widgetFaviconFetchers: [Task<Favicon, Error>] = []
-  let deviceCheckClient: DeviceCheckClient?
 
   // Growser-278: no Brave Talk coordinator.
 
@@ -284,7 +279,7 @@ public class BrowserViewController: UIViewController {
     attributionManager: AttributionManager,
     braveCore: BraveCoreMain,
     profileController: BraveProfileController,
-    rewards: BraveRewards,
+    // Growser-290: no rewards.
     crashedLastSession: Bool,
     // Growser-281: no newsFeedDataSource.
     privateBrowsingManager: PrivateBrowsingManager,
@@ -296,7 +291,6 @@ public class BrowserViewController: UIViewController {
     self.braveCore = braveCore
     self.profileController = profileController
     self.bookmarkManager = BookmarkManager(bookmarksAPI: profileController.bookmarksAPI)
-    self.rewards = rewards
     self.crashedLastSession = crashedLastSession
     self.privateBrowsingManager = privateBrowsingManager
     self.prefsChangeRegistrar = PrefChangeRegistrar(prefService: profileController.profile.prefs)
@@ -305,15 +299,14 @@ public class BrowserViewController: UIViewController {
     // Growser-281: no feed history API hook-up.
     backgroundDataSource = .init(
       service: profileController.backgroundImagesService,
-      rewards: BraveRewards.isSupported(prefService: profileController.profile.prefs)
-        ? rewards : nil,
+      // Growser-290: no rewards.
       privateBrowsingManager: privateBrowsingManager
     )
 
     // Initialize TabManager
     self.tabManager = TabManager(
       windowId: windowId,
-      rewards: rewards,
+      // Growser-290: no rewards.
       braveCore: profileController,
       profile: profileController.profile,
       privateBrowsingManager: privateBrowsingManager,
@@ -326,35 +319,14 @@ public class BrowserViewController: UIViewController {
     // Setup ReaderMode Cache
     self.readerModeCache = ReaderModeScriptHandler.cache(for: tabManager.selectedTab)
 
-    if !BraveRewards.isSupported(prefService: profileController.profile.prefs), rewards.isEnabled {
-      // Disable rewards services in case previous user already enabled
-      // rewards in previous build
-      rewards.isEnabled = false
-    } else {
-      if rewards.isEnabled && !Preferences.Rewards.rewardsToggledOnce.value {
-        Preferences.Rewards.rewardsToggledOnce.value = true
-      }
-    }
-
-    self.deviceCheckClient = DeviceCheckClient(
-      environment: BraveRewards.Configuration.current().environment
-    )
+    // Growser-290: no Rewards state to reconcile and no DeviceCheck client.
 
     super.init(nibName: nil, bundle: nil)
     didInit()
 
     // Growser-280: no VPN in-app purchase observer.
 
-    rewards.rewardsServiceDidStart = { [weak self] _ in
-      self?.setupLedger()
-    }
-
-    rewards.ads.captchaHandler = self
-    if rewards.isEnabled, BraveRewards.isSupported(prefService: profileController.profile.prefs) {
-      rewards.startRewardsService(nil)
-    } else {
-      rewards.ads.initialize { _ in }
-    }
+    // Growser-290: no Rewards service or ads to start.
 
     // Observer watching tab information is sent by another device
     openTabsModelStateListener = profileController.sendTabAPI.add(
@@ -442,8 +414,6 @@ public class BrowserViewController: UIViewController {
     }
   }
 
-  private var rewardsEnabledObserveration: NSKeyValueObservation?
-
   fileprivate func didInit() {
     updateApplicationShortcuts()
     tabManager.addDelegate(self)
@@ -455,8 +425,7 @@ public class BrowserViewController: UIViewController {
     Preferences.General.tabBarVisibility.observe(from: self)
     Preferences.General.defaultPageZoomLevel.observe(from: self)
     Preferences.Shields.allShields.forEach { $0.observe(from: self) }
-    Preferences.Rewards.hideRewardsIcon.observe(from: self)
-    Preferences.Rewards.rewardsToggledOnce.observe(from: self)
+    // Growser-290: no Rewards preferences to observe.
     // Growser-282: no playlist URL-bar preference to observe.
     Preferences.NewTabPage.backgroundMediaTypeRaw.observe(from: self)
     Preferences.Shields.blockAdsAndTrackingLevelRaw.observe(from: self)
@@ -464,10 +433,7 @@ public class BrowserViewController: UIViewController {
     Preferences.Translate.translateEnabled.observe(from: self)
 
     // Observe some Chromium prefs
-    prefsChangeRegistrar.addObserver(forPath: BraveRewardsDisabledByPolicyPrefName) {
-      [weak self] _ in
-      self?.updateRewardsButtonState()
-    }
+    // Growser-290: no Rewards policy observer.
     // Growser-280: no VPN policy observer.
     prefsChangeRegistrar.addObserver(forPath: kMediaBackgroundingEnabled) { [weak self] _ in
       guard let self else { return }
@@ -514,24 +480,11 @@ public class BrowserViewController: UIViewController {
       })
     }
 
-    rewardsEnabledObserveration = rewards.ads.observe(\.isEnabled, options: [.new]) {
-      [weak self] _, _ in
-      guard let self = self else { return }
-      self.updateRewardsButtonState()
-      self.setupAdsNotificationHandler()
-      self.recordAdsUsageType()
-    }
+    // Growser-290: no ads state to observe.
     Preferences.PrivacyReports.captureShieldsData.observe(from: self)
     // Growser-280: no captureVPNAlerts observation.
 
-    if rewards.rewardsAPI != nil {
-      // Ledger was started immediately due to user having ads enabled
-      setupLedger()
-    }
-
-    Preferences.NewTabPage.attemptToShowClaimRewardsNotification.value = true
-
-    setupAdsNotificationHandler()
+    // Growser-290: no ledger, claim-rewards notification or ads notifications.
 
     // Setup Widgets FRC
     widgetBookmarksFRC = Favorite.frc()
@@ -553,8 +506,7 @@ public class BrowserViewController: UIViewController {
     recordAccessibilityDocumentsDirectorySizeP3A()
     ReaderModeTabHelper.recordTimeBasedNumberReaderModeUsedP3A(activated: false)
     recordGeneralBottomBarLocationP3A()
-    // Growser-282: no Playlist P3A.
-    recordAdsUsageType()
+    // Growser-282: no Playlist P3A. Growser-290: no ads usage P3A.
     recordDefaultBrowserLikelyhoodP3A()
     recordWeeklyUsage()
     recordURLBarSubmitLocationP3A(from: nil)
@@ -582,27 +534,7 @@ public class BrowserViewController: UIViewController {
     // Origin settings screen to open.
   }
 
-  private func setupAdsNotificationHandler() {
-    notificationsHandler = AdsNotificationHandler(
-      ads: rewards.ads,
-      presentingController: self,
-      notificationsPresenter: notificationsPresenter
-    )
-    notificationsHandler?.canShowNotifications = { [weak self] in
-      guard let self = self else { return false }
-      return !self.privateBrowsingManager.isPrivateBrowsing && !self.isSearchContainerVisible
-    }
-    notificationsHandler?.actionOccured = { [weak self] ad, action in
-      guard let self = self, let ad = ad else { return }
-      if action == .opened {
-        let request = URLRequest(url: ad.targetUrl)
-        self.tabManager.addTabAndSelect(
-          request,
-          isPrivate: self.privateBrowsingManager.isPrivateBrowsing
-        )
-      }
-    }
-  }
+  // Growser-290: no setupAdsNotificationHandler().
 
   func shouldShowFooterForTraitCollection(_ previousTraitCollection: UITraitCollection) -> Bool {
     return previousTraitCollection.verticalSizeClass != .compact
@@ -992,7 +924,7 @@ public class BrowserViewController: UIViewController {
       action: #selector(tappedCollapsedURLBar),
       for: .touchUpInside
     )
-    updateRewardsButtonState()
+    // Growser-290: no Rewards button state.
 
     // Setup UIDropInteraction to handle dragging and dropping
     // links into the view from other apps.
@@ -1555,8 +1487,7 @@ public class BrowserViewController: UIViewController {
         tab: selectedTab,
         profilePrefs: profileController.profile.prefs,
         dataSource: backgroundDataSource,
-        // Growser-281: no feedDataSource.
-        rewards: rewards,
+        // Growser-281: no feedDataSource. Growser-290: no rewards.
         privateBrowsingManager: privateBrowsingManager
       )
       // Donate NewTabPage Activity For Custom Suggestions
@@ -1862,7 +1793,7 @@ public class BrowserViewController: UIViewController {
   func updateURLBar() {
     guard let tab = tabManager.selectedTab else { return }
 
-    updateRewardsButtonState()
+    // Growser-290: no Rewards button state.
 
     // Growser-282: no playlist URL-bar state to refresh.
 
@@ -2680,44 +2611,6 @@ extension BrowserViewController: NewTabPageDelegate {
     topToolbar.tabLocationViewDidTapLocation(topToolbar.locationView)
   }
 
-  func brandedImageCalloutActioned(_ state: BrandedImageCalloutState) {
-    guard state.hasDetailViewController else { return }
-
-    let vc = NTPLearnMoreViewController(state: state, rewards: rewards)
-
-    vc.linkHandler = { [weak self] url in
-      self?.tabManager.selectedTab?.loadRequest(PrivilegedRequest(url: url) as URLRequest)
-    }
-
-    addChild(vc)
-    view.addSubview(vc.view)
-    vc.view.snp.remakeConstraints {
-      $0.right.top.bottom.leading.equalToSuperview()
-    }
-  }
-
-  func showNewTabTakeoverInfoBarIfNeeded() {
-    // do not show if NTP is occluded by search
-    guard !isSearchContainerVisible,
-      rewards.ads.shouldDisplayNewTabTakeoverInfobar()
-    else { return }
-
-    rewards.ads.recordNewTabTakeoverInfobarWasDisplayed()
-
-    let newTabTakeoverInfoBar = NewTabTakeoverInfoBar(
-      onLinkPressed: { [weak self] url in
-        guard let self else { return }
-        self.rewards.ads.suppressNewTabTakeoverInfobar()
-        self.tabManager.addTabAndSelect(URLRequest(url: url), isPrivate: false)
-      },
-      onClosePressed: { [weak self] in
-        guard let self else { return }
-        self.rewards.ads.suppressNewTabTakeoverInfobar()
-      }
-    )
-    self.show(toast: newTabTakeoverInfoBar, duration: nil)
-  }
-
   func isNewTabPageOccluded() -> Bool {
     return isSearchContainerVisible
   }
@@ -2761,9 +2654,7 @@ extension BrowserViewController: PreferencesObserver {
       // Toggling Google safe browsing requires a hard reset of Webkit configuration.
       tabManager.reset()
       tabManager.reloadSelectedTab()
-    case Preferences.Rewards.hideRewardsIcon.key,
-      Preferences.Rewards.rewardsToggledOnce.key:
-      updateRewardsButtonState()
+    // Growser-290: no Rewards preferences.
     // Growser-282: no playlist URL-bar preference.
     case Preferences.PrivacyReports.captureShieldsData.key:
       PrivacyReportsManager.scheduleProcessingBlockedRequests(
@@ -2775,8 +2666,7 @@ extension BrowserViewController: PreferencesObserver {
         PrivacyReportsManager.scheduleNotification(debugMode: !AppConstants.isOfficialBuild)
       }
     // Growser-280: no captureVPNAlerts handling.
-    case Preferences.NewTabPage.backgroundMediaTypeRaw.key:
-      recordAdsUsageType()
+    // Growser-290: backgroundMediaTypeRaw only fed recordAdsUsageType().
     case Preferences.Privacy.screenTimeEnabled.key:
       if Preferences.Privacy.screenTimeEnabled.value, !ProcessInfo.processInfo.isiOSAppOnVisionOS {
         // Accessing `STWebpageController` on Vision OS results in a crash

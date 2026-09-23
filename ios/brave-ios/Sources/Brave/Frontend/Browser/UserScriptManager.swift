@@ -138,7 +138,8 @@ class UserScriptManager {
           ? ContentBlockerHelper.userScript : nil
       case .ethereumProvider, .solanaProvider, .cardanoProvider:
         return nil  // Growser-287: the provider script handlers are not built.
-      case .searchResultAd: return BraveSearchResultAdScriptHandler.userScript
+      case .searchResultAd:
+        return nil  // Growser-290: the search result ad script handler is not built.
 
       // Always enabled scripts
       case .faviconFetcher: return FaviconScriptHandler.userScript

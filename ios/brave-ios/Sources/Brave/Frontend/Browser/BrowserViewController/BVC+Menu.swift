@@ -24,8 +24,7 @@ extension BrowserViewController {
     let vc = SettingsViewController(
       profile: self.profile,
       tabManager: self.tabManager,
-      // Growser-281: no feedDataSource.
-      rewards: self.rewards,
+      // Growser-281: no feedDataSource. Growser-290: no rewards.
       windowProtection: self.windowProtection,
       p3aUtils: self.braveCore.p3aUtils,
       braveCore: self.profileController,

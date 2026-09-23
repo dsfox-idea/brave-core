@@ -24,16 +24,14 @@ extension TabDataValues {
 
 class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaultTabHelperBridge {
   private weak var tab: (any TabState)?
-  private let rewards: BraveRewards
+  // Growser-290: no rewards.
   private let searchEngines: SearchEngines
 
   /// A helper property that handles native to Brave Search communication.
   private var braveSearchManager: BraveSearchManager?
 
-  /// A helper property that handles Brave Search Result Ads.
-  private(set) var braveSearchResultAdManager: BraveSearchResultAdManager?
-
-  var presentSearchResultClickedInfoBar: (() -> Void)?
+  // Growser-290: no search result ads, so no ad manager and no infobar for a
+  // clicked ad.
 
   var presentInQuickView: ((URL, any TabState) -> Void)?
 
@@ -43,9 +41,8 @@ class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaul
   /// the upgraded page rather than a failure/interstitial.
   private var pendingQuickViewUpgradeURL: URL?
 
-  init(tab: some TabState, rewards: BraveRewards, searchEngines: SearchEngines) {
+  init(tab: some TabState, searchEngines: SearchEngines) {
     self.tab = tab
-    self.rewards = rewards
     self.searchEngines = searchEngines
 
     tab.addObserver(self)
@@ -115,26 +112,7 @@ class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaul
   }
 
   func tabDidFinishNavigation(_ tab: some TabState) {
-    if FeatureList.kUseProfileWebViewConfiguration.enabled,
-      let webView = BraveWebView.from(tab: tab),
-      let url = tab.lastCommittedURL,
-      DomainUserScript(for: url, isPrivateBrowsing: tab.isPrivate) == .braveSearchHelper
-    {
-      webView.fetchSearchAdCreatives { [weak self] creativesJSON in
-        guard let self, let creativesJSON else { return }
-        do {
-          let data = Data(creativesJSON.utf8)
-          let creatives = try JSONDecoder().decode(
-            [SearchResultAdResponse.SearchResultAd].self,
-            from: data
-          )
-          let response = SearchResultAdResponse(creatives: creatives)
-          processSearchResultAds(response)
-        } catch {
-          Logger.module.error("Failed to parse search result ads response")
-        }
-      }
-    }
+    // Growser-290: no search result ad creatives to fetch.
     // Second attempt to inject results to the BraveSearch.
     // This will be called if we got fallback results faster than
     // the page navigation.
@@ -203,37 +181,7 @@ class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaul
         cookies: cookies
       )
 
-      let isAdBlockModeAggressive =
-        tab.braveShieldsHelper?.shieldLevel(
-          for: requestURL,
-          considerAllShieldsOption: true
-        ).isAggressive ?? true
-
-      if BraveSearchResultAdManager.shouldTriggerSearchResultAdClickedEvent(
-        requestURL,
-        isPrivateBrowsing: tab.isPrivate,
-        isAggressiveAdsBlocking: isAdBlockModeAggressive
-      ) {
-        let showSearchResultAdClickedPrivacyNotice =
-          rewards.ads.shouldShowSearchResultAdClickedInfoBar()
-        BraveSearchResultAdManager.maybeTriggerSearchResultAdClickedEvent(
-          requestURL,
-          rewards: rewards,
-          completion: { [weak self] success in
-            guard let self, success, showSearchResultAdClickedPrivacyNotice else {
-              return
-            }
-            presentSearchResultClickedInfoBar?()
-          }
-        )
-      } else {
-        braveSearchResultAdManager = BraveSearchResultAdManager(
-          url: requestURL,
-          rewards: rewards,
-          isPrivateBrowsing: tab.isPrivate,
-          isAggressiveAdsBlocking: isAdBlockModeAggressive
-        )
-      }
+      // Growser-290: no search result ad events.
 
       if let braveSearchManager = braveSearchManager {
         braveSearchManager.fallbackQueryResultsPending = true
@@ -256,7 +204,6 @@ class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaul
       }
     } else {
       braveSearchManager = nil
-      braveSearchResultAdManager = nil
     }
 
     guard FeatureList.kQuickViewEnabled.enabled, Preferences.General.openLinkInQuickViewMode.value
@@ -297,48 +244,7 @@ class BraveSearchTabHelper: TabObserver, TabPolicyDecider, BraveSearchMakeDefaul
     return .allow
   }
 
-  func processSearchResultAds(
-    _ searchResultAds: SearchResultAdResponse
-  ) {
-    guard let braveSearchResultAdManager else { return }
-    for ad in searchResultAds.creatives {
-      guard let rewardsValue = Double(ad.rewardsValue)
-      else {
-        Logger.module.error("Failed to process search result ads JSON-LD")
-        return
-      }
-
-      var conversion: BraveAds.CreativeSetConversionInfo?
-      if let conversionUrlPatternValue = ad.conversionUrlPatternValue,
-        let conversionObservationWindowValue = ad.conversionObservationWindowValue
-      {
-        let timeInterval = TimeInterval(conversionObservationWindowValue) * 1.days
-        conversion = .init(
-          urlPattern: conversionUrlPatternValue,
-          observationWindow: Date(timeIntervalSince1970: timeInterval)
-        )
-      }
-
-      let searchResultAd: BraveAds.CreativeSearchResultAdInfo = .init(
-        type: .searchResultAd,
-        placementId: ad.placementId,
-        creativeInstanceId: ad.creativeInstanceId,
-        creativeSetId: ad.creativeSetId,
-        campaignId: ad.campaignId,
-        advertiserId: ad.advertiserId,
-        targetUrl: ad.landingPage,
-        headlineText: ad.headlineText,
-        description: ad.description,
-        value: rewardsValue,
-        creativeSetConversion: conversion
-      )
-
-      braveSearchResultAdManager.triggerSearchResultAdViewedEvent(
-        placementId: ad.placementId,
-        searchResultAd: searchResultAd
-      )
-    }
-  }
+  // Growser-290: no processSearchResultAds(_:).
 
   /// Call the api on the Brave Search website and passes the fallback results to it.
   /// Important: This method is also called when there is no fallback results

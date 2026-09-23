@@ -8,10 +8,10 @@
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/skus/buildflags/buildflags.h"
 #include "brave/components/brave_account/features.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/ios/browser/api/webcompat_reporter/webcompat_reporter_service_factory.h"
 #include "brave/ios/browser/brave_account/brave_account_service_factory_ios.h"
-#include "brave/ios/browser/brave_ads/ads_service_factory_ios.h"
 #include "brave/ios/browser/brave_origin/brave_origin_service_factory.h"
 #include "brave/ios/browser/brave_shields/brave_shields_settings_service_factory.h"
 #include "brave/ios/browser/debounce/debounce_service_factory+private.h"
@@ -22,6 +22,10 @@
 
 #if BUILDFLAG(ENABLE_SKUS)  // Growser-283
 #include "brave/ios/browser/skus/skus_service_factory.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/ios/browser/brave_ads/ads_service_factory_ios.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
@@ -46,7 +50,9 @@ void EnsureProfileKeyedServiceFactoriesBuilt() {
   if (brave_account::features::IsBraveAccountEnabled()) {
     brave_account::BraveAccountServiceFactoryIOS::GetInstance();
   }
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   brave_ads::AdsServiceFactoryIOS::GetInstance();
+#endif
   serp_metrics::SerpMetricsServiceFactoryIOS::GetInstance();
   brave_favicon::BraveIOSFaviconLoaderFactory::GetInstance();
   brave_origin::BraveOriginServiceFactory::GetInstance();

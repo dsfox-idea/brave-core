@@ -64,7 +64,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
 
   private let profile: LegacyBrowserProfile
   private let tabManager: TabManager
-  private let rewards: BraveRewards?
+  // Growser-290: no rewards.
   // Growser-281: no feedDataSource.
   private let braveCore: BraveProfileController
   private let historyAPI: BraveHistoryAPI
@@ -105,7 +105,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     profile: LegacyBrowserProfile,
     tabManager: TabManager,
     // Growser-281: no feedDataSource.
-    rewards: BraveRewards? = nil,
     windowProtection: WindowProtection?,
     p3aUtils: BraveP3AUtils,
     braveCore: BraveProfileController,
@@ -114,7 +113,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   ) {
     self.profile = profile
     self.tabManager = tabManager
-    self.rewards = rewards
     self.windowProtection = windowProtection
     self.braveCore = braveCore
     self.localState = localState
@@ -173,11 +171,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     navigationController?.setToolbarHidden(true, animated: animated)
   }
 
-  private func displayRewardsDebugMenu() {
-    guard let rewards = rewards else { return }
-    let settings = RewardsDebugSettingsViewController(rewards: rewards)
-    navigationController?.pushViewController(settings, animated: true)
-  }
+  // Growser-290: no displayRewardsDebugMenu().
 
   // Growser-281: no displayBraveNewsDebugMenu().
 
@@ -722,7 +716,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
                   braveCore: braveCore,
                   p3aUtils: p3aUtilities,
                   localState: localState,
-                  rewards: rewards,
+                  // Growser-290: no rewards.
                   braveStats: braveCore.braveStats,
                   webcompatReporterHandler: WebcompatReporter.ServiceFactory.get(
                     privateMode: false
@@ -768,19 +762,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       uuid: featureSectionUUID.uuidString
     )
 
-    if BraveRewards.isSupported(prefService: braveCore.profile.prefs), let rewards = rewards {
-      section.rows += [
-        Row(
-          text: Strings.braveRewardsSettingsTitle,
-          selection: { [unowned self] in
-            let rewardsVC = BraveRewardsSettingsViewController(rewards: rewards)
-            self.navigationController?.pushViewController(rewardsVC, animated: true)
-          },
-          image: UIImage(braveSystemNamed: "leo.product.bat-outline"),
-          accessory: .disclosureIndicator
-        )
-      ]
-    }
+    // Growser-290: no Brave Rewards settings row.
 
     // Growser-281: no Brave News settings row.
 
@@ -1167,8 +1149,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         selection: { [unowned self] in
           self.navigationController?.pushViewController(
             NTPTableViewController(
-              rewards: BraveRewards.isSupported(prefService: braveCore.profile.prefs)
-                ? rewards : nil,
+              // Growser-290: no rewards.
               linkTapped: { [unowned self] request in
                 self.tabManager.addTabAndSelect(
                   request,
@@ -1223,15 +1204,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       )
     )
 
-    if BraveRewards.isSupported(prefService: braveCore.profile.prefs) {
-      display.rows.append(
-        .boolRow(
-          title: Strings.hideRewardsIcon,
-          option: Preferences.Rewards.hideRewardsIcon,
-          image: UIImage(braveSystemNamed: "leo.product.bat-outline")
-        )
-      )
-    }
+    // Growser-290: no "Hide Brave Rewards icon" row.
 
     return display
   }()
@@ -1484,14 +1457,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           },
           accessory: .disclosureIndicator,
           cellClass: MultilineSubtitleCell.self
-        ),
-        Row(
-          text: "View Rewards Debug Menu",
-          selection: { [unowned self] in
-            self.displayRewardsDebugMenu()
-          },
-          accessory: .disclosureIndicator,
-          cellClass: MultilineValue1Cell.self
         ),
         // Growser-281: no "View Brave News Debug Menu" row.
         Row(

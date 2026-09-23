@@ -144,7 +144,7 @@ public class BraveLocalStateMigration {
   public func launchMigrations() {
     migrateDAUPingPreference()
     migrateDAULastLaunchInfoPreference()
-    migrateAdsPreferences()
+    // Growser-290: no migrateAdsPreferences().
   }
 
   private func migrateDAUPingPreference() {
@@ -166,17 +166,7 @@ public class BraveLocalStateMigration {
     }
   }
 
-  private func migrateAdsPreferences() {
-    guard !localState.hasPref(forPath: kBraveAdsFirstRunAtPrefName) else { return }
-
-    let installationDate = Preferences.P3A.installationDate.value
-    if let installationDate = installationDate {
-      adsRewardsLog.debug("Migrated ads first-run date: \(installationDate)")
-    }
-
-    let firstRunAt = installationDate ?? Date()
-    localState.set(firstRunAt, forPath: kBraveAdsFirstRunAtPrefName)
-  }
+  // Growser-290: no migrateAdsPreferences().
 }
 
 public class Migration {
@@ -255,38 +245,7 @@ public class Migration {
     Preferences.Migration.lostTabsWindowIDMigration.value = true
   }
 
-  public static func migrateAdsConfirmations(for configuration: BraveRewards.Configuration) {
-    // To ensure after a user launches 1.21 that their ads confirmations, viewed count and
-    // estimated payout remain correct.
-    //
-    // This hack is unfortunately neccessary due to a missed migration path when moving
-    // confirmations from ledger to ads, we must extract `confirmations.json` out of ledger's
-    // state file and save it as a new file under the ads directory.
-    let base = configuration.storageURL
-    let ledgerStateContainer = base.appendingPathComponent("ledger/random_state.plist")
-    let adsConfirmations = base.appendingPathComponent("ads/confirmations.json")
-    let fm = FileManager.default
-
-    if !fm.fileExists(atPath: ledgerStateContainer.path)
-      || fm.fileExists(atPath: adsConfirmations.path)
-    {
-      // Nothing to migrate or already migrated
-      return
-    }
-
-    do {
-      let contents = NSDictionary(contentsOfFile: ledgerStateContainer.path)
-      guard let confirmations = contents?["confirmations.json"] as? String else {
-        adsRewardsLog.debug("No confirmations found to migrate in ledger's state container")
-        return
-      }
-      try confirmations.write(toFile: adsConfirmations.path, atomically: true, encoding: .utf8)
-    } catch {
-      adsRewardsLog.error(
-        "Failed to migrate confirmations.json to ads folder: \(error.localizedDescription)"
-      )
-    }
-  }
+  // Growser-290: no migrateAdsConfirmations(for:) - ads are out.
 }
 
 extension Migration {

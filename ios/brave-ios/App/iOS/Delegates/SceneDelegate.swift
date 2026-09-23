@@ -34,7 +34,7 @@ extension Logger {
 /// State that must be associated with a profile-specific data
 @MainActor
 struct ProfileState {
-  var rewards: Brave.BraveRewards
+  // Growser-290: no rewards.
   var migrations: BraveProfileMigrations
   var dau: DAU
   var attributionManager: AttributionManager
@@ -58,10 +58,7 @@ struct ProfileState {
       )
     )
 
-    // Setup Rewards & Ads
-    let configuration = BraveRewards.Configuration.current()
-    Migration.migrateAdsConfirmations(for: configuration)
-    rewards = BraveRewards(configuration: configuration)
+    // Growser-290: no Rewards & Ads to set up.
 
     // Setup BraveCore profile migrations
     migrations = BraveProfileMigrations(profileController: profileController)
@@ -357,7 +354,7 @@ extension SceneDelegate {
       profileController: profileController,
       profile: AppState.shared.profile,
       attributionManager: profileState.attributionManager,
-      rewards: profileState.rewards,
+      // Growser-290: no rewards.
       // Growser-281: no newsFeedDataSource.
       userActivity: sceneState.connectionOptions.userActivities.first,
       downloadBackgroundTaskModel: AppState.shared.downloadBackgroundTaskModel
@@ -684,7 +681,7 @@ extension SceneDelegate {
     profileController: BraveProfileController,
     profile: LegacyBrowserProfile,
     attributionManager: AttributionManager,
-    rewards: Brave.BraveRewards,
+    // Growser-290: no rewards.
     // Growser-281: no newsFeedDataSource.
     userActivity: NSUserActivity?,
     downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?
@@ -754,7 +751,7 @@ extension SceneDelegate {
       attributionManager: attributionManager,
       braveCore: braveCore,
       profileController: profileController,
-      rewards: rewards,
+      // Growser-290: no rewards.
       crashedLastSession: crashedLastSession,
       // Growser-281: no newsFeedDataSource.
       privateBrowsingManager: privateBrowsingManager,
@@ -768,8 +765,7 @@ extension SceneDelegate {
       $0.restorationIdentifier = BrowserState.sceneId
       $0.restorationClass = SceneDelegate.self
 
-      // Remove Ad-Grant Reminders
-      $0.removeScheduledAdGrantReminders()
+      // Growser-290: no ad-grant reminders to remove - Rewards is out.
     }
 
     if let tabIdString = userActivity?.userInfo?["TabID"] as? String,

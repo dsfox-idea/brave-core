@@ -9,7 +9,7 @@
 #include "base/memory/raw_ptr.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/time/time.h"
-#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_stats/browser/brave_stats_updater_util.h"
 #include "brave/components/brave_stats/browser/buildflags.h"
 #include "brave/components/constants/pref_names.h"
@@ -18,6 +18,10 @@
 #include "components/prefs/pref_service.h"
 #include "ios/chrome/browser/shared/model/application_context/application_context.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
+#endif
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
 #error "This file requires ARC support."
@@ -53,7 +57,12 @@ NSString* const kWebcompatReportEndpoint =
 }
 
 - (BOOL)isNotificationAdsEnabled {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   return _profilePrefs->GetBoolean(brave_ads::prefs::kNotificationsEnabled);
+#else
+  // Growser-290: ads are compiled out and their prefs are not registered.
+  return NO;
+#endif
 }
 
 - (nullable NSDate*)lastPingDate {

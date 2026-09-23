@@ -87,7 +87,7 @@ class TabManager: NSObject {
   var normalTabSelectedIndex: Int?
   var privateTabSelectedIndex: Int?
   var tempTabs: [any TabState]?
-  private weak var rewards: BraveRewards?
+  // Growser-290: no rewards.
   private var braveCore: BraveProfileController?
   private let profile: any Profile
   private weak var tabGeneratorAPI: BraveTabGeneratorAPI?
@@ -116,7 +116,6 @@ class TabManager: NSObject {
 
   init(
     windowId: UUID,
-    rewards: BraveRewards?,
     braveCore: BraveProfileController?,
     profile: any Profile,
     privateBrowsingManager: PrivateBrowsingManager,
@@ -125,7 +124,6 @@ class TabManager: NSObject {
     assert(Thread.isMainThread)
 
     self.windowId = windowId
-    self.rewards = rewards
     self.braveCore = braveCore
     self.profile = profile
     self.tabGeneratorAPI = braveCore?.tabGeneratorAPI
@@ -373,29 +371,7 @@ class TabManager: NSObject {
       SessionTab.touch(tabId: tabID)
     }
 
-    guard let newSelectedTab = tab, let previousTab = previous,
-      let newTabUrl = newSelectedTab.visibleURL
-    else { return }
-
-    if !privateBrowsingManager.isPrivateBrowsing {
-      if previousTab.faviconTabHelper?.displayFavicon == nil {
-        adsRewardsLog.warning("No favicon found in tab to report to rewards panel")
-      }
-      rewards?.reportTabUpdated(
-        tab: previousTab,
-        isSelected: false,
-        isPrivate: previousTab.isPrivate
-      )
-
-      if newSelectedTab.faviconTabHelper?.displayFavicon == nil && !newTabUrl.isLocal {
-        adsRewardsLog.warning("No favicon found in tab to report to rewards panel")
-      }
-      rewards?.reportTabUpdated(
-        tab: newSelectedTab,
-        isSelected: true,
-        isPrivate: newSelectedTab.isPrivate
-      )
-    }
+    // Growser-290: no tab-switch reporting to Rewards.
   }
 
   // Called by other classes to signal that they are entering/exiting private mode

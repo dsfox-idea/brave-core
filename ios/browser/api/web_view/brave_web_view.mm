@@ -14,6 +14,7 @@
 #include "base/notreached.h"
 #include "base/strings/sys_string_conversions.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
@@ -22,7 +23,6 @@
 #include "brave/ios/browser/api/web_view/autofill/brave_web_view_autofill_client.h"
 #include "brave/ios/browser/api/web_view/brave_web_frame_internal.h"
 #include "brave/ios/browser/api/web_view/passwords/brave_web_view_password_manager_client.h"
-#include "brave/ios/browser/brave_ads/ads_tab_helper.h"
 #include "brave/ios/browser/brave_search/brave_search_ad_results_javascript_feature.h"
 #include "brave/ios/browser/brave_search/brave_search_make_default_tab_helper.h"
 #include "brave/ios/browser/brave_search/brave_search_make_default_tab_helper_bridge.h"
@@ -104,6 +104,10 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
 #include "brave/ios/browser/brave_talk/brave_talk_tab_helper.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/ios/browser/brave_ads/ads_tab_helper.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
@@ -432,7 +436,9 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
   }
 #endif
 
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   brave_ads::AdsTabHelper::MaybeCreateForWebState(self.webState);
+#endif
   if (base::FeatureList::IsEnabled(serp_metrics::kSerpMetricsFeature)) {
     serp_metrics::SerpMetricsTabHelper::MaybeCreateForWebState(self.webState);
   }
@@ -704,19 +710,23 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
 @implementation BraveWebView (AdsNotifier)
 
 - (void)notifyTabDidStartPlayingMedia:(NSInteger)playerId {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   auto* adsTabHelper = brave_ads::AdsTabHelper::FromWebState(self.webState);
   if (!adsTabHelper) {
     return;
   }
   adsTabHelper->NotifyTabDidStartPlayingMedia(static_cast<int>(playerId));
+#endif
 }
 
 - (void)notifyTabDidStopPlayingMedia:(NSInteger)playerId {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   auto* adsTabHelper = brave_ads::AdsTabHelper::FromWebState(self.webState);
   if (!adsTabHelper) {
     return;
   }
   adsTabHelper->NotifyTabDidStopPlayingMedia(static_cast<int>(playerId));
+#endif
 }
 
 @end

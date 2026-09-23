@@ -216,19 +216,4 @@ class RecentSearchClearable: Clearable {
   }
 }
 
-class BraveAdsDataClearable: Clearable {
-
-  private let rewards: BraveRewards?
-
-  init(rewards: BraveRewards?) {
-    self.rewards = rewards
-  }
-
-  var label: String {
-    return Strings.Ads.braveAdsDataToggleOption
-  }
-
-  func clear() async throws {
-    await rewards?.clearAdsData()
-  }
-}
+// Growser-290: no BraveAdsDataClearable - ads are out.
