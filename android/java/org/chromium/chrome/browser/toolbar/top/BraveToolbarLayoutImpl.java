@@ -31,12 +31,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.core.widget.ImageViewCompat;
 
-
 import org.chromium.base.ApiCompatibilityUtils;
-import org.chromium.base.BraveFeatureList;
 import org.chromium.base.BravePreferenceKeys;
 import org.chromium.base.BraveReflectionUtil;
 import org.chromium.base.Log;
@@ -46,22 +43,14 @@ import org.chromium.base.supplier.MonotonicObservableSupplier;
 import org.chromium.base.task.AsyncTask;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveConstants;
-import org.chromium.chrome.browser.BraveRewardsHelper;
-import org.chromium.chrome.browser.BraveRewardsNativeWorker;
-import org.chromium.chrome.browser.BraveRewardsObserver;
-import org.chromium.chrome.browser.BraveRewardsPolicy;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.brave_stats.BraveStatsUtil;
 import org.chromium.chrome.browser.custom_layout.popup_window_tooltip.PopupWindowTooltip;
-import org.chromium.chrome.browser.customtabs.FullScreenCustomTabActivity;
 import org.chromium.chrome.browser.customtabs.features.toolbar.CustomTabToolbar;
-import org.chromium.chrome.browser.dialogs.BraveAdsSignupDialog;
-import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.local_database.BraveStatsTable;
 import org.chromium.chrome.browser.local_database.DatabaseHelper;
 import org.chromium.chrome.browser.local_database.SavedBandwidthTable;
 import org.chromium.chrome.browser.media.PictureInPicture;
-import org.chromium.chrome.browser.ntp.NtpUtil;
 import org.chromium.chrome.browser.omnibox.BraveLocationBarCoordinator;
 import org.chromium.chrome.browser.omnibox.LocationBarCoordinator;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
@@ -97,9 +86,7 @@ import org.chromium.chrome.browser.toolbar.signin_button.SigninButtonCoordinator
 import org.chromium.chrome.browser.toolbar.top.NavigationPopup.HistoryDelegate;
 import org.chromium.chrome.browser.user_education.UserEducationHelper;
 import org.chromium.chrome.browser.util.BraveTouchUtils;
-import org.chromium.chrome.browser.util.PackageUtils;
 import org.chromium.chrome.browser.youtube_script_injector.BraveYouTubeScriptInjectorNativeHelper;
-import org.chromium.components.embedder_support.util.UrlUtilities;
 import org.chromium.components.feature_engagement.Tracker;
 import org.chromium.content_public.browser.NavigationHandle;
 import org.chromium.mojo.bindings.ConnectionErrorHandler;
@@ -112,14 +99,9 @@ import org.chromium.ui.resources.dynamics.ViewResourceAdapter;
 import org.chromium.ui.util.ColorUtils;
 import org.chromium.ui.widget.Toast;
 import org.chromium.url.GURL;
-import org.chromium.url.mojom.Url;
 
 import java.net.URL;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -130,30 +112,21 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         implements BraveToolbarLayout,
                 OnClickListener,
                 View.OnLongClickListener,
-                BraveRewardsObserver,
-                BraveRewardsNativeWorker.PublisherObserver,
-                ConnectionErrorHandler {
+                ConnectionErrorHandler { // Growser-271: no rewards observers
     private static final String TAG = "BraveToolbar";
-
-    private static final String PREF_WAS_TOOLBAR_BAT_LOGO_BUTTON_PRESSED =
-            "was_toolbar_bat_logo_button_pressed";
 
     private static final int URL_FOCUS_TOOLBAR_BUTTONS_TRANSLATION_X_DP = 10;
 
-    private static final int DAYS_7 = 7;
     public static boolean mShouldShowPlaylistMenu;
-
 
     private final DatabaseHelper mDatabaseHelper = DatabaseHelper.getInstance();
 
     private ImageButton mBraveWalletButton;
     private ImageButton mBraveShieldsButton;
-    private ImageButton mBraveRewardsButton;
     private ImageButton mYouTubePipButton;
     private HomeButton mHomeButton;
     private FrameLayout mWalletLayout;
     private FrameLayout mShieldsLayout;
-    private FrameLayout mRewardsLayout;
     private FrameLayout mYouTubePipLayout;
     private BraveUnifiedPanelHandler mUnifiedPanelHandler;
 
@@ -165,11 +138,8 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
     @SuppressWarnings("UnusedVariable")
     private TabModelSelectorTabModelObserver mTabModelSelectorTabModelObserver;
 
-    private BraveRewardsNativeWorker mBraveRewardsNativeWorker;
     private BraveShieldsContentSettings mBraveShieldsContentSettings;
     private BraveShieldsContentSettingsObserver mBraveShieldsContentSettingsObserver;
-    private TextView mBraveRewardsNotificationsCount;
-    private ImageView mBraveRewardsOnboardingIcon;
     private View mBraveWalletBadge;
     private ImageView mWalletIcon;
     private int mCurrentToolbarColor;
@@ -180,11 +150,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
 
     @Nullable private final Runnable mToolbarSnapshotCaptureRunnable;
 
-    private boolean mIsPublisherVerified;
-    private String mPublisherId;
-    private boolean mIsNotificationPosted;
-    private boolean mIsInitialNotificationPosted; // initial red circle notification
-
     private PopupWindowTooltip mShieldsPopupWindowTooltip;
 
     private boolean mIsBottomControlsVisible;
@@ -194,7 +159,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
 
     private final Set<Integer> mTabsWithWalletIcon =
             Collections.synchronizedSet(new HashSet<Integer>());
-
 
     public BraveToolbarLayoutImpl(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -221,10 +185,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             mBraveShieldsContentSettings.removeObserver(mBraveShieldsContentSettingsObserver);
         }
         super.destroy();
-        if (mBraveRewardsNativeWorker != null) {
-            mBraveRewardsNativeWorker.removeObserver(this);
-            mBraveRewardsNativeWorker.removePublisherObserver(this);
-        }
     }
 
     @Override
@@ -233,13 +193,9 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
 
         mWalletLayout = findViewById(R.id.brave_wallet_button_layout);
         mShieldsLayout = findViewById(R.id.brave_shields_button_layout);
-        mRewardsLayout = findViewById(R.id.brave_rewards_button_layout);
         mYouTubePipLayout = findViewById(R.id.brave_youtube_pip_layout);
-        mBraveRewardsNotificationsCount = findViewById(R.id.br_notifications_count);
-        mBraveRewardsOnboardingIcon = findViewById(R.id.br_rewards_onboarding_icon);
         mBraveWalletButton = findViewById(R.id.brave_wallet_button);
         mBraveShieldsButton = findViewById(R.id.brave_shields_button);
-        mBraveRewardsButton = findViewById(R.id.brave_rewards_button);
         mYouTubePipButton = findViewById(R.id.brave_youtube_pip_button);
         mHomeButton = findViewById(R.id.home_button);
         mBraveWalletBadge = findViewById(R.id.wallet_notfication_badge);
@@ -261,13 +217,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             mBraveShieldsButton.setOnClickListener(this);
             mBraveShieldsButton.setOnLongClickListener(this);
             BraveTouchUtils.ensureMinTouchTarget(mBraveShieldsButton);
-        }
-
-        if (mBraveRewardsButton != null) {
-            mBraveRewardsButton.setClickable(true);
-            mBraveRewardsButton.setOnClickListener(this);
-            mBraveRewardsButton.setOnLongClickListener(this);
-            BraveTouchUtils.ensureMinTouchTarget(mBraveRewardsButton);
         }
 
         if (mBraveWalletButton != null) {
@@ -343,7 +292,8 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             }
         }
 
-        updateShieldsLayoutBackground(isIncognito() || !NtpUtil.shouldShowRewardsIcon());
+        // Growser-271: no rewards button beside it, so Shields ends the row.
+        updateShieldsLayoutBackground(true);
     }
 
     public String getLocationBarQuery() {
@@ -378,47 +328,16 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
     }
 
     @Override
-    public void onTermsOfServiceUpdateAccepted() {
-        showOrHideRewardsBadge(false);
-    }
-
-    private void showOrHideRewardsBadge(boolean shouldShow) {
-        Context context = getContext();
-        if (context instanceof Activity
-                && (((Activity) context).isFinishing() || ((Activity) context).isDestroyed())) {
-            return;
-        }
-        View rewardsBadge = findViewById(R.id.rewards_notfication_badge);
-        if (rewardsBadge != null) {
-            mIsInitialNotificationPosted = shouldShow;
-            rewardsBadge.setVisibility(shouldShow ? View.VISIBLE : View.GONE);
-            if (shouldShow) {
-                // We shouldn't show both badges at the same time
-                mBraveRewardsNotificationsCount.setVisibility(View.INVISIBLE);
-            } else {
-                // Update the verified publisher mark depending on the current tab
-                updateVerifiedPublisherMark();
-            }
-        }
-    }
-
-    @Override
     protected void onNativeLibraryReady() {
         super.onNativeLibraryReady();
         mBraveShieldsContentSettings = BraveShieldsContentSettings.getInstance();
         mBraveShieldsContentSettings.addObserver(mBraveShieldsContentSettingsObserver);
 
-        mBraveRewardsNativeWorker = BraveRewardsNativeWorker.getInstance();
-        if (mBraveRewardsNativeWorker != null
-                && mBraveRewardsNativeWorker.isSupported()
-                && NtpUtil.shouldShowRewardsIcon()
-                && mRewardsLayout != null) {
-            // Check if Brave Rewards is disabled by policy before showing
-            checkRewardsPolicyAndUpdateToolbarButton();
-        } else {
-            // Rewards not supported or user disabled it - complete initialization without policy
-            // check
-            completeRewardsInitialization();
+        // Growser-271: what completeRewardsInitialization() did when rewards was
+        // unsupported, which is now always.
+        if (mShieldsLayout != null) {
+            updateShieldsLayoutBackground(true);
+            mShieldsLayout.setVisibility(View.VISIBLE);
         }
     }
 
@@ -484,7 +403,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                         mUnifiedPanelHandler.clearBraveShieldsCount(tab.getId());
                         dismissShieldsTooltip();
                         hidePlaylistButton();
-                        mPublisherId = "";
                     }
 
                     @Override
@@ -528,15 +446,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                         } else {
                             hideYouTubePipIcon();
                         }
-                        if (mBraveRewardsNativeWorker != null) {
-                            mBraveRewardsNativeWorker.triggerOnNotifyFrontTabUrlChanged();
-                        }
-                        if (getToolbarDataProvider().getTab() == tab
-                                && mBraveRewardsNativeWorker != null
-                                && !tab.isIncognito()) {
-                            mBraveRewardsNativeWorker.onNotifyFrontTabUrlChanged(
-                                    tab.getId(), tab.getUrl().getSpec());
-                        }
                         hidePlaylistButton();
                     }
 
@@ -552,26 +461,8 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                     @Override
                     public void didSelectTab(Tab tab, @TabSelectionType int type, int lastId) {
                         showYouTubePipIcon(tab);
-                        // Reset verified publisher checkmark immediately on tab
-                        // switch. The correct state will be restored asynchronously
-                        // by onFrontTabPublisherChanged once the publisher query
-                        // for the new tab completes.
-                        mIsPublisherVerified = false;
-                        mPublisherId = "";
-                        updateVerifiedPublisherMark();
-                        if (mBraveRewardsNativeWorker != null && !tab.isIncognito()) {
-                            mBraveRewardsNativeWorker.onNotifyFrontTabUrlChanged(
-                                    tab.getId(), tab.getUrl().getSpec());
-                            Tab providerTab = getToolbarDataProvider().getTab();
-                            if (providerTab != null && providerTab.getId() == tab.getId()) {
-                                showWalletIcon(mTabsWithWalletIcon.contains(tab.getId()));
-                            } else if (mWalletLayout != null) {
-                                mWalletLayout.setVisibility(
-                                        mTabsWithWalletIcon.contains(tab.getId())
-                                                ? View.VISIBLE
-                                                : View.GONE);
-                            }
-                        }
+                        // Growser-271: the publisher mark and the rewards tab notification
+                        // (which also carried the wallet icon, #275) are gone.
                     }
                 };
     }
@@ -628,20 +519,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
 
         removeCallbacks(mToolbarSnapshotCaptureRunnable);
         post(mToolbarSnapshotCaptureRunnable);
-    }
-
-    /** Updates the rewards layout visibility, keeping the tablet toolbar layout in sync. */
-    private void setRewardsLayoutVisibility(int visibility) {
-        if (mRewardsLayout == null || mRewardsLayout.getVisibility() == visibility) {
-            return;
-        }
-        mRewardsLayout.setVisibility(visibility);
-        // Tablet only: re-request layout on the rewards view so its row re-measures and the
-        // location bar reclaims the freed width, then refresh the toolbar snapshot.
-        if (BraveReflectionUtil.equalTypes(this.getClass(), ToolbarTablet.class)) {
-            post(mRewardsLayout::requestLayout);
-            invalidateToolbarSnapshotOnTablet();
-        }
     }
 
     private void requestToolbarSnapshotCapture() {
@@ -834,17 +711,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         showWalletIcon(show, null);
     }
 
-    public void hideRewardsOnboardingIcon() {
-        if (mBraveRewardsOnboardingIcon != null) {
-            mBraveRewardsOnboardingIcon.setVisibility(View.GONE);
-        }
-        if (mBraveRewardsNotificationsCount != null) {
-            mBraveRewardsNotificationsCount.setVisibility(View.GONE);
-        }
-        ChromeSharedPreferences.getInstance()
-                .writeBoolean(PREF_WAS_TOOLBAR_BAT_LOGO_BUTTON_PRESSED, true);
-    }
-
     @Override
     public void onClickImpl(View v) {
         if (mUnifiedPanelHandler == null) {
@@ -853,18 +719,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         }
         if (mBraveShieldsButton == v && mBraveShieldsButton != null) {
             showShieldsMenu();
-        } else if (mBraveRewardsButton == v && mBraveRewardsButton != null) {
-            hideRewardsOnboardingIcon();
-            OnboardingPrefManager.getInstance().setOnboardingShown(true);
-            showRewardsPage();
-
-            if (mBraveRewardsNotificationsCount.isShown()) {
-                ChromeSharedPreferences.getInstance()
-                        .writeBoolean(PREF_WAS_TOOLBAR_BAT_LOGO_BUTTON_PRESSED, true);
-                mBraveRewardsNotificationsCount.setVisibility(View.INVISIBLE);
-                mIsInitialNotificationPosted = false;
-            }
-        } else if (mHomeButton == v) {
+        } else if (mHomeButton == v) { // Growser-271: no rewards button
             // Helps Brave News know how to behave on home button action
             try {
                 BraveActivity.getBraveActivity().setComesFromNewTab(true);
@@ -887,14 +742,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         }
     }
 
-    public void showRewardsPage() {
-        String rewardsUrl = BraveActivity.BRAVE_REWARDS_SETTINGS_URL + "?bubble";
-        if (mPublisherId != null && !mPublisherId.isEmpty()) {
-            rewardsUrl += "&creator=" + URLEncoder.encode(mPublisherId);
-        }
-        FullScreenCustomTabActivity.showPage(getContext(), rewardsUrl);
-    }
-
     private void maybeShowWalletPanel() {
         // Growser-275: there is no wallet panel.
     }
@@ -906,19 +753,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
     @Override
     public void onClick(View v) {
         onClickImpl(v);
-    }
-
-    private boolean checkForRewardsOnboarding() {
-        return PackageUtils.isFirstInstall(getContext())
-                && mBraveRewardsNativeWorker != null
-                && !mBraveRewardsNativeWorker.isRewardsEnabled()
-                && mBraveRewardsNativeWorker.isSupported()
-                && !OnboardingPrefManager.getInstance().isOnboardingShown()
-                && (BraveRewardsHelper.getRewardsOnboardingIconInvisibleTiming() == 0
-                        || (BraveRewardsHelper.getRewardsOnboardingIconInvisibleTiming() > 0
-                                && System.currentTimeMillis()
-                                        <= BraveRewardsHelper
-                                                .getRewardsOnboardingIconInvisibleTiming()));
     }
 
     private void showShieldsMenu() {
@@ -947,9 +781,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
 
         if (v == mBraveShieldsButton) {
             description = resources.getString(R.string.accessibility_toolbar_btn_brave_shields);
-        } else if (v == mBraveRewardsButton) {
-            description = resources.getString(R.string.accessibility_toolbar_btn_brave_rewards);
-        } else if (v == mHomeButton) {
+        } else if (v == mHomeButton) { // Growser-271: no rewards button
             description = resources.getString(R.string.accessibility_toolbar_btn_home);
         } else if (v == mBraveWalletButton) {
             description = resources.getString(R.string.accessibility_toolbar_btn_brave_wallet);
@@ -1015,9 +847,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         if (mShieldsLayout != null) {
             mShieldsLayout.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_IN);
         }
-        if (mRewardsLayout != null) {
-            mRewardsLayout.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_IN);
-        }
         if (mWalletLayout != null) {
             mWalletLayout.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_IN);
         }
@@ -1044,26 +873,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                 isShieldsOnForTab(tab)
                         ? R.drawable.ic_growser_brand
                         : R.drawable.ic_growser_mono); // Growser-266
-
-        if (mRewardsLayout == null) return;
-        if (isIncognito()) {
-            setRewardsLayoutVisibility(View.GONE);
-            updateShieldsLayoutBackground(true);
-        } else if (isNativeLibraryReady()
-                && mBraveRewardsNativeWorker != null
-                && mBraveRewardsNativeWorker.isSupported()
-                && NtpUtil.shouldShowRewardsIcon()) {
-            // Check policy before showing rewards icon
-            Profile profile = Profile.fromWebContents(tab.getWebContents());
-            boolean isDisabled = BraveRewardsPolicy.isDisabledByPolicy(profile);
-            if (!isDisabled) {
-                setRewardsLayoutVisibility(View.VISIBLE);
-                updateShieldsLayoutBackground(false);
-            } else {
-                setRewardsLayoutVisibility(View.GONE);
-                updateShieldsLayoutBackground(true);
-            }
-        }
+        // Growser-271: no rewards button to show or hide beside it.
     }
 
     private boolean isShieldsOnForTab(Tab tab) {
@@ -1091,99 +901,11 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         // Growser-275: there is no wallet panel to dismiss.
     }
 
-    public void openRewardsPanel() {
-        onClick(mBraveRewardsButton);
-    }
-
     public boolean isShieldsTooltipShown() {
         if (mShieldsPopupWindowTooltip != null) {
             return mShieldsPopupWindowTooltip.isShowing();
         }
         return false;
-    }
-
-    @Override
-    public void onCompleteReset(boolean success) {
-        if (success) {
-            BraveRewardsHelper.resetRewards();
-        }
-    }
-
-    @Override
-    public void onNotificationAdded(String id, int type, long timestamp, String[] args) {
-        if (mBraveRewardsNativeWorker == null) {
-            return;
-        }
-        mBraveRewardsNativeWorker.getAllNotifications();
-    }
-
-    private boolean mayShowBraveAdsOnboardingDialog() {
-        Context context = getContext();
-
-        if (BraveAdsSignupDialog.shouldShowNewUserDialog(context)) {
-            BraveAdsSignupDialog.showNewUserDialog(getContext());
-            return true;
-        } else if (BraveAdsSignupDialog.shouldShowNewUserDialogIfRewardsIsSwitchedOff(context)) {
-            BraveAdsSignupDialog.showNewUserDialog(getContext());
-            return true;
-        } else if (BraveAdsSignupDialog.shouldShowExistingUserDialog(context)) {
-            BraveAdsSignupDialog.showExistingUserDialog(getContext());
-            return true;
-        }
-
-        return false;
-    }
-
-    @Override
-    public void onNotificationsCount(int count) {
-        if (mBraveRewardsNotificationsCount != null) {
-            if (count != 0) {
-                String value = Integer.toString(count);
-                if (count > 99) {
-                    mBraveRewardsNotificationsCount.setBackground(
-                            ResourcesCompat.getDrawable(getContext().getResources(),
-                                    R.drawable.brave_rewards_rectangle, /* theme= */ null));
-                    value = "99+";
-                } else {
-                    mBraveRewardsNotificationsCount.setBackground(
-                            ResourcesCompat.getDrawable(getContext().getResources(),
-                                    R.drawable.brave_rewards_circle, /* theme= */ null));
-                }
-                mBraveRewardsNotificationsCount.setText(value);
-                mBraveRewardsNotificationsCount.setVisibility(View.VISIBLE);
-                mIsNotificationPosted = true;
-            } else {
-                mBraveRewardsNotificationsCount.setText("");
-                mBraveRewardsNotificationsCount.setBackgroundResource(0);
-                mBraveRewardsNotificationsCount.setVisibility(View.INVISIBLE);
-                mIsNotificationPosted = false;
-                updateVerifiedPublisherMark();
-            }
-        }
-
-        if (!PackageUtils.isFirstInstall(getContext())
-                && !OnboardingPrefManager.getInstance().isAdsAvailable()) {
-            mayShowBraveAdsOnboardingDialog();
-        }
-
-        if (System.currentTimeMillis() > BraveRewardsHelper.getRewardsOnboardingIconTiming()
-                && checkForRewardsOnboarding()) {
-            if (mBraveRewardsOnboardingIcon != null) {
-                mBraveRewardsOnboardingIcon.setVisibility(View.VISIBLE);
-            }
-            if (mBraveRewardsNotificationsCount != null) {
-                mBraveRewardsNotificationsCount.setVisibility(View.GONE);
-            }
-
-            if (!BraveRewardsHelper.hasRewardsOnboardingIconInvisibleUpdated()) {
-                Calendar calender = Calendar.getInstance();
-                calender.setTime(new Date());
-                calender.add(Calendar.DATE, DAYS_7);
-                BraveRewardsHelper.setRewardsOnboardingIconInvisibleTiming(
-                        calender.getTimeInMillis());
-                BraveRewardsHelper.setRewardsOnboardingIconInvisible(true);
-            }
-        }
     }
 
     private boolean isCustomTab() {
@@ -1208,38 +930,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                 ThemeUtils.getTextBoxColorForToolbarBackgroundInNonNativePage(
                         getContext(), color, isIncognito(), isCustomTab());
         updateModernLocationBarColorImpl(textBoxColor);
-    }
-
-    /**
-     * BraveRewardsNativeWorker.PublisherObserver: Update a 'verified publisher' checkmark on url
-     * bar BAT icon only if no notifications are posted.
-     */
-    @Override
-    public void onFrontTabPublisherChanged(boolean verified, String publisherId) {
-        mIsPublisherVerified = verified;
-        mPublisherId = publisherId;
-        updateVerifiedPublisherMark();
-        maybeShowTermsOfServiceUpdateRequiredBadge();
-    }
-
-    private void updateVerifiedPublisherMark() {
-        if (mBraveRewardsNotificationsCount == null) {
-            // Most likely we are on a custom page
-            return;
-        }
-        if (mIsInitialNotificationPosted) {
-            return;
-        } else if (!mIsNotificationPosted) {
-            if (mIsPublisherVerified) {
-                mBraveRewardsNotificationsCount.setVisibility(View.VISIBLE);
-                mBraveRewardsNotificationsCount.setBackground(
-                        ResourcesCompat.getDrawable(getContext().getResources(),
-                                R.drawable.rewards_verified_tick_icon, /* theme= */ null));
-            } else {
-                mBraveRewardsNotificationsCount.setBackgroundResource(0);
-                mBraveRewardsNotificationsCount.setVisibility(View.INVISIBLE);
-            }
-        }
     }
 
     public void onBottomControlsVisibilityChanged(boolean isVisible) {
@@ -1304,7 +994,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         // The location bar paints the text box behind the buttons now, so the segment drawables
         // that continue it on phones would only double up here.
         for (View layout :
-                new View[] {mYouTubePipLayout, mWalletLayout, mShieldsLayout, mRewardsLayout}) {
+                new View[] {mYouTubePipLayout, mWalletLayout, mShieldsLayout}) { // Growser-271
             if (layout != null) {
                 layout.setBackground(null);
             }
@@ -1422,12 +1112,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             mShieldsLayout.draw(canvas);
             canvas.restore();
         }
-        if (mRewardsLayout != null && mRewardsLayout.getVisibility() != View.GONE) {
-            canvas.save();
-            ViewUtils.translateCanvasToView(toolbarButtonsContainer, mRewardsLayout, canvas);
-            mRewardsLayout.draw(canvas);
-            canvas.restore();
-        }
         if (mYouTubePipLayout != null && mYouTubePipLayout.getVisibility() != View.GONE) {
             canvas.save();
             ViewUtils.translateCanvasToView(toolbarButtonsContainer, mYouTubePipLayout, canvas);
@@ -1458,8 +1142,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         maybeHideTopTabSwitcherButton();
 
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-        maybeHideRewardsLayout(MeasureSpec.getSize(widthMeasureSpec));
+        // Growser-271: there is no rewards layout to hide.
     }
 
     /**
@@ -1478,84 +1161,4 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         }
     }
 
-    /**
-     * Updates the rewards layout visibility on tablet. The layout is shown only when all of the
-     * following are true: the current tab is not incognito, the toolbar width is at least the
-     * minimum tablet width (same threshold as the existing toolbar button visibility logic in
-     * ToolbarTablet), rewards are not disabled by policy, and the native rewards worker is
-     * available and reports rewards as supported. Also updates the shields layout background to
-     * match the resulting rewards layout visibility.
-     */
-    private void maybeHideRewardsLayout(int width) {
-        // Only hide the rewards layout on tablet devices, like it is done in the upstream code.
-        if (!BraveReflectionUtil.equalTypes(this.getClass(), ToolbarTablet.class)) {
-            return;
-        }
-
-        if (mRewardsLayout == null || !NtpUtil.shouldShowRewardsIcon()) {
-            return;
-        }
-
-        Tab tab = getToolbarDataProvider().getTab();
-        Profile profile = tab != null ? Profile.fromWebContents(tab.getWebContents()) : null;
-        boolean shouldShowRewards =
-                !isIncognito()
-                        && width
-                                >= DeviceFormFactor.getNonMultiDisplayMinimumTabletWidthPx(
-                                        getContext())
-                        && !BraveRewardsPolicy.isDisabledByPolicy(profile)
-                        && mBraveRewardsNativeWorker != null
-                        && mBraveRewardsNativeWorker.isSupported();
-        setRewardsLayoutVisibility(shouldShowRewards ? View.VISIBLE : View.GONE);
-        // Update the shields layout background to match the rewards layout visibility.
-        updateShieldsLayoutBackground(!shouldShowRewards);
-    }
-
-    public void maybeShowTermsOfServiceUpdateRequiredBadge() {
-        if (mBraveRewardsNativeWorker != null
-                && mBraveRewardsNativeWorker.isRewardsEnabled()
-                && mBraveRewardsNativeWorker.isSupported()
-                && mBraveRewardsNativeWorker.isTermsOfServiceUpdateRequired()) {
-            showOrHideRewardsBadge(true);
-        }
-    }
-
-    /**
-     * Completes rewards-related initialization that should happen after policy check. This includes
-     * updating shields layout background and setting up rewards observers.
-     */
-    private void completeRewardsInitialization() {
-        maybeShowTermsOfServiceUpdateRequiredBadge();
-        if (mShieldsLayout != null) {
-            updateShieldsLayoutBackground(
-                    !(mRewardsLayout != null && mRewardsLayout.getVisibility() == View.VISIBLE));
-            mShieldsLayout.setVisibility(View.VISIBLE);
-        }
-        if (mBraveRewardsNativeWorker != null) {
-            mBraveRewardsNativeWorker.addObserver(this);
-            mBraveRewardsNativeWorker.addPublisherObserver(this);
-            mBraveRewardsNativeWorker.getAllNotifications();
-        }
-    }
-
-    /**
-     * Checks if Brave Rewards is disabled by policy and updates the toolbar rewards button
-     * visibility accordingly. This ensures that when Brave Rewards is disabled by policy, the
-     * rewards icon in the toolbar is force-hidden regardless of user preference.
-     */
-    private void checkRewardsPolicyAndUpdateToolbarButton() {
-        Tab currentTab = getToolbarDataProvider().getTab();
-        Profile profile =
-                currentTab != null ? Profile.fromWebContents(currentTab.getWebContents()) : null;
-
-        boolean isDisabled = BraveRewardsPolicy.isDisabledByPolicy(profile);
-        // Only show if policy allows (not disabled)
-        if (!isDisabled) {
-            setRewardsLayoutVisibility(View.VISIBLE);
-        }
-        // If policy disables rewards, keep it hidden (default is GONE)
-
-        // Complete the rest of initialization after policy check
-        completeRewardsInitialization();
-    }
 }

@@ -20,18 +20,7 @@
         android:summaryOn="@string/text_on"
         android:summaryOff="@string/text_off" />
 
-    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
-        android:key="use_rewards_staging_server"
-        android:title="Use Rewards staging server"
-        android:summaryOn="@string/text_on"
-        android:summaryOff="@string/text_off" />
-
-    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
-        android:key="qa_maximize_initial_ads_number"
-        android:title="Maximize initial ads number"
-        android:summaryOn="@string/text_on"
-        android:summaryOff="@string/text_off"
-        android:defaultValue="true" />
+    <!-- Growser-271: the rewards staging server and ads-number rows left with rewards. -->
 
     <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
         android:key="qa_debug_ntp"

@@ -15,7 +15,6 @@ import android.content.Intent;
 import org.chromium.base.ApplicationStatus;
 import org.chromium.base.ThreadUtils;
 import org.chromium.base.task.AsyncTask;
-import org.chromium.chrome.browser.BraveRewardsNativeWorker;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
@@ -56,11 +55,7 @@ public class RetentionNotificationPublisher extends BroadcastReceiver {
                                         UrlConstants.NTP_URL, TabLaunchType.FROM_CHROME_UI);
                             }
                             break;
-                        case RetentionNotificationUtil.DAY_10:
-                        case RetentionNotificationUtil.DAY_30:
-                        case RetentionNotificationUtil.DAY_35:
-                            braveActivity.openRewardsPanel();
-                            break;
+                        // Growser-271: DAY_10/30/35 opened the rewards panel; rewards is out.
                         case RetentionNotificationUtil.DORMANT_USERS_DAY_14:
                         case RetentionNotificationUtil.DORMANT_USERS_DAY_25:
                         case RetentionNotificationUtil.DORMANT_USERS_DAY_40:
@@ -92,22 +87,7 @@ public class RetentionNotificationPublisher extends BroadcastReceiver {
                     case RetentionNotificationUtil.DAY_10:
                     case RetentionNotificationUtil.DAY_30:
                     case RetentionNotificationUtil.DAY_35:
-                        // Can't check for rewards code in background
-                        try {
-                            BraveRewardsNativeWorker rewardsNativeWorker =
-                                    BraveRewardsNativeWorker.getInstance();
-                            if (braveActivity != null
-                                    && rewardsNativeWorker != null
-                                    && !rewardsNativeWorker.isRewardsEnabled()
-                                    && rewardsNativeWorker.isSupported()) {
-                                createNotification(context, intent);
-                            }
-                        } catch (IllegalStateException exc) {
-                            // We can receive 'Browser hasn't finished initialization yet!' if
-                            // Profile.getLastUsedRegularProfile is called too early. Just ignore
-                            // it,
-                            // it's better comparing to crashing
-                        }
+                        // Growser-271: these invite the user into rewards, which is out.
                         break;
                     case RetentionNotificationUtil.EVERY_SUNDAY:
                         if (OnboardingPrefManager.getInstance().isBraveStatsNotificationEnabled()

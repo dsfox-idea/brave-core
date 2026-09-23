@@ -8,10 +8,3 @@ import("//brave/components/brave_origin/buildflags/buildflags.gni")
 declare_args() {
   enable_brave_ads = !is_brave_origin_branded
 }
-
-# Growser-271: on Android the Java side of the ads system is still compiled - it
-# declares the native methods this flag would remove, and the linker has no
-# way to be half-right about that. Taking both out is growser#271.
-if (is_android) {
-  enable_brave_ads = true
-}

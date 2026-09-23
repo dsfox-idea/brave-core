@@ -100,9 +100,11 @@ if (enable_ai_chat) {
   ]
 }
 
-# Growser-271: the rewards and ads Java is still compiled on Android, so its
-# mojom has to be too. Removing it is that issue.
-brave_chrome_java_deps += [ "//brave/components/brave_ads/core/mojom:mojom_java" ]
+# Growser-271: removed with the feature.
+if (enable_brave_ads) {
+  brave_chrome_java_deps +=
+      [ "//brave/components/brave_ads/core/mojom:mojom_java" ]
+}
 
 # Growser-272: removed with the feature.
 if (enable_brave_news) {
@@ -111,7 +113,11 @@ if (enable_brave_news) {
   ]
 }
 
-brave_chrome_java_deps += [ "//brave/components/brave_rewards/core/mojom:mojom_java" ]
+# Growser-271: removed with the feature.
+if (enable_brave_rewards) {
+  brave_chrome_java_deps +=
+      [ "//brave/components/brave_rewards/core/mojom:mojom_java" ]
+}
 
 # Growser-274: removed with the feature.
 if (enable_brave_vpn) {
@@ -186,7 +192,6 @@ brave_jni_headers_sources = [
   "//brave/android/java/org/chromium/chrome/browser/BraveFeatureUtil.java",
   "//brave/android/java/org/chromium/chrome/browser/BraveLocalState.java",
   "//brave/android/java/org/chromium/chrome/browser/BraveRelaunchUtils.java",
-  "//brave/android/java/org/chromium/chrome/browser/BraveRewardsNativeWorker.java",
   "//brave/android/java/org/chromium/chrome/browser/BraveSyncWorker.java",
   "//brave/android/java/org/chromium/chrome/browser/app/BraveActivity.java",
   "//brave/android/java/org/chromium/chrome/browser/bookmarks/BraveBookmarkBridge.java",
@@ -213,8 +218,15 @@ if (enable_ai_chat) {
   ]
 }
 
-# Growser-271: the ads Java is still compiled on Android, so its JNI is too.
-brave_jni_headers_sources += [ "//brave/browser/brave_ads/android/java/org/chromium/chrome/browser/BraveAdsNativeHelper.java" ]
+# Growser-271: removed with the feature.
+if (enable_brave_rewards) {
+  brave_jni_headers_sources += [ "//brave/android/java/org/chromium/chrome/browser/BraveRewardsNativeWorker.java" ]
+}
+
+# Growser-271: removed with the feature.
+if (enable_brave_ads) {
+  brave_jni_headers_sources += [ "//brave/browser/brave_ads/android/java/org/chromium/chrome/browser/BraveAdsNativeHelper.java" ]
+}
 
 # Growser-272: removed with the feature.
 if (enable_brave_news) {

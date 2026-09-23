@@ -6,13 +6,13 @@
 package org.chromium.chrome.browser.settings;
 
 import android.os.Bundle;
+import android.text.Html;
 
 import org.chromium.base.Log;
 import org.chromium.base.supplier.MonotonicObservableSupplier;
 import org.chromium.base.supplier.ObservableSuppliers;
 import org.chromium.base.supplier.SettableMonotonicObservableSupplier;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.BraveRewardsHelper;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
 import org.chromium.components.browser_ui.settings.search.BaseSearchIndexProvider;
 
@@ -51,7 +51,8 @@ public class BraveLicensePreferences extends BravePreferenceFragment {
             Scanner scanner = new Scanner(in).useDelimiter("\\A");
             String summary = scanner.hasNext() ? scanner.next() : "";
             in.close();
-            licenseText.setSummary(BraveRewardsHelper.spannedFromHtmlString(summary));
+            // Growser-271: BraveRewardsHelper leaves the build with rewards.
+            licenseText.setSummary(Html.fromHtml(summary, Html.FROM_HTML_MODE_LEGACY));
         } catch (IOException e) {
             Log.e(TAG, "Could not load license text: " + e);
         }

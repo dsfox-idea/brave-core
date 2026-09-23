@@ -7,7 +7,6 @@ package org.chromium.chrome.browser.tabbed_mode;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -15,8 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.content.res.AppCompatResources;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -31,8 +28,6 @@ import org.chromium.brave.browser.customize_menu.CustomizeBraveMenu;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ActivityTabProvider;
-import org.chromium.chrome.browser.BraveRewardsNativeWorker;
-import org.chromium.chrome.browser.BraveRewardsPolicy;
 import org.chromium.chrome.browser.RecentlyClosedEntriesManager;
 import org.chromium.chrome.browser.app.appmenu.AppMenuIconRowFooter;
 import org.chromium.chrome.browser.app.appmenu.AppMenuItemUtils;
@@ -56,7 +51,6 @@ import org.chromium.chrome.browser.tabmodel.TabModelSelector;
 import org.chromium.chrome.browser.toolbar.ToolbarManager;
 import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarConfiguration;
 import org.chromium.chrome.browser.toolbar.menu_button.BraveMenuButtonCoordinator;
-import org.chromium.chrome.browser.toolbar.top.BraveToolbarLayoutImpl;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuDelegate;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuHandler;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuHandler.AppMenuItemType;
@@ -133,30 +127,9 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
      * entry here.
      */
     private List<PolicyControlledMenuItem> getPolicyControlledMenuItems() {
-        // Growser-270/274/275: the wallet, Leo and VPN entries are gone with their
-        // features; what is left is what the product still has.
+        // Growser-270/271/274/275: the wallet, rewards, Leo and VPN entries are gone
+        // with their features; what is left is what the product still has.
         return Arrays.asList(
-                new PolicyControlledMenuItem(
-                        R.id.brave_rewards_id,
-                        this::buildBraveRewardsItem,
-                        () -> {
-                            // Native methods are not available in unit tests (Robolectric)
-                            if (mJunitIsTesting) {
-                                return false;
-                            }
-                            BraveRewardsNativeWorker worker =
-                                    BraveRewardsNativeWorker.getInstance();
-                            return worker != null && worker.isSupported();
-                        },
-                        () -> {
-                            Tab tab = mActivityTabProvider.get();
-                            return tab != null
-                                    && BraveRewardsPolicy.isDisabledByPolicy(tab.getProfile());
-                        },
-                        Arrays.asList(
-                                R.id.brave_news_id,
-                                CustomizeBraveMenu.BRAVE_CUSTOMIZE_ITEM_ID,
-                                R.id.exit_id)),
                 new PolicyControlledMenuItem(
                         R.id.brave_news_id,
                         this::buildBraveNewsItem,
@@ -1052,18 +1025,6 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
                         R.id.exit_id,
                         R.string.menu_exit,
                         shouldShowIconBeforeItem() ? R.drawable.ic_outside : 0,
-                        isMenuIconAtStart()));
-    }
-
-    private MVCListAdapter.ListItem buildBraveRewardsItem() {
-        return new MVCListAdapter.ListItem(
-                AppMenuHandler.AppMenuItemType.STANDARD,
-                AppMenuItemUtils.buildModelForStandardMenuItem(
-                        mContext,
-                        mAppMenuItemTheme,
-                        R.id.brave_rewards_id,
-                        R.string.menu_brave_rewards,
-                        shouldShowIconBeforeItem() ? R.drawable.ic_product_bat_outline : 0,
                         isMenuIconAtStart()));
     }
 

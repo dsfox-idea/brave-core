@@ -27,6 +27,8 @@ import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
 
 brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/BraveAdFreeCalloutDialogFragment.java",
@@ -43,12 +45,6 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/BraveLocalState.java",
   "../../brave/android/java/org/chromium/chrome/browser/BravePwaShortcutIconHelper.java",
   "../../brave/android/java/org/chromium/chrome/browser/BraveRelaunchUtils.java",
-  "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsBalance.java",
-  "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsExternalWallet.java",
-  "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsHelper.java",
-  "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsNativeWorker.java",
-  "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsObserver.java",
-  "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsPolicy.java",
   "../../brave/android/java/org/chromium/chrome/browser/BraveSwipeRefreshHandler.java",
   "../../brave/android/java/org/chromium/chrome/browser/BraveSyncWorker.java",
   "../../brave/android/java/org/chromium/chrome/browser/BraveWalletProvider.java",
@@ -140,7 +136,6 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/night_mode/settings/BraveRadioButtonGroupThemePreference.java",
   "../../brave/android/java/org/chromium/chrome/browser/notifications/BraveNotificationPlatformBridge.java",
   "../../brave/android/java/org/chromium/chrome/browser/notifications/BraveNotificationWarningDialog.java",
-  "../../brave/android/java/org/chromium/chrome/browser/notifications/BraveOnboardingNotification.java",
   "../../brave/android/java/org/chromium/chrome/browser/notifications/BravePermissionUtils.java",
   "../../brave/android/java/org/chromium/chrome/browser/notifications/channels/BraveSiteChannelsManagerBridge.java",
   "../../brave/android/java/org/chromium/chrome/browser/notifications/permissions/BraveNotificationPermissionRationaleDialog.java",
@@ -200,7 +195,6 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/rate/RateFeedbackUtils.java",
   "../../brave/android/java/org/chromium/chrome/browser/rate/RateUtils.java",
   "../../brave/android/java/org/chromium/chrome/browser/referrer/BraveReferrer.java",
-  "../../brave/android/java/org/chromium/chrome/browser/rewards/adaptive_captcha/AdaptiveCaptchaHelper.java",
   "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/BraveStandardProtectionSettingsFragment.java",
   "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/NoGooglePlayServicesDialog.java",
   "../../brave/android/java/org/chromium/chrome/browser/searchwidget/SearchWidgetProviderActivity.java",
@@ -243,7 +237,6 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/settings/MediaPreferences.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/SearchPreference.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/developer/BraveQAPreferences.java",
-  "../../brave/android/java/org/chromium/chrome/browser/settings/developer/BraveRewardsDebugPreferences.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/developer/BraveSafeBrowsingErrorsPreference.java",
   "../../brave/android/java/org/chromium/chrome/browser/share/BraveShareDelegateImpl.java",
   "../../brave/android/java/org/chromium/chrome/browser/shields/AddCustomFilterListsFragment.java",
@@ -571,7 +564,26 @@ if (enable_playlist) {
   ]
 }
 
-brave_java_sources += brave_ads_java_sources
+# Growser-271: the feature is removed, so its Java leaves the APK with it.
+if (enable_brave_rewards) {
+  brave_java_sources += [
+    "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsBalance.java",
+    "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsExternalWallet.java",
+    "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsHelper.java",
+    "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsNativeWorker.java",
+    "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsObserver.java",
+    "../../brave/android/java/org/chromium/chrome/browser/BraveRewardsPolicy.java",
+    "../../brave/android/java/org/chromium/chrome/browser/rewards/adaptive_captcha/AdaptiveCaptchaHelper.java",
+    "../../brave/android/java/org/chromium/chrome/browser/settings/developer/BraveRewardsDebugPreferences.java",
+  ]
+}
+
+# Growser-271: removed with rewards, whose ads they are.
+if (enable_brave_ads) {
+  brave_java_sources += brave_ads_java_sources
+  brave_java_sources += [ "../../brave/android/java/org/chromium/chrome/browser/notifications/BraveOnboardingNotification.java" ]
+}
+
 brave_java_sources += brave_browser_autofill_service_java_sources
 brave_java_sources += brave_components_embedder_support_java_sources
 brave_java_sources += brave_components_signin_java_sources

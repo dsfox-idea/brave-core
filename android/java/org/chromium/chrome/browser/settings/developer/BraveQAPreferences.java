@@ -31,21 +31,15 @@ import org.chromium.base.supplier.SettableMonotonicObservableSupplier;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.BraveRelaunchUtils;
-import org.chromium.chrome.browser.BraveRewardsHelper;
-import org.chromium.chrome.browser.BraveRewardsNativeWorker;
-import org.chromium.chrome.browser.BraveRewardsObserver;
 import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
 import org.chromium.chrome.browser.billing.LinkSubscriptionUtils;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
-import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
-import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.settings.BravePreferenceFragment;
 import org.chromium.chrome.browser.util.BraveDbUtil;
 import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
 import org.chromium.components.browser_ui.settings.search.BaseSearchIndexProvider;
-import org.chromium.components.user_prefs.UserPrefs;
 
 import java.io.File;
 import java.io.IOException;
@@ -53,15 +47,11 @@ import java.io.InputStream;
 
 /** Settings fragment containing preferences for QA team. */
 public class BraveQAPreferences extends BravePreferenceFragment
-        implements OnPreferenceChangeListener, BraveRewardsObserver {
-    private static final String PREF_USE_REWARDS_STAGING_SERVER = "use_rewards_staging_server";
-    private static final String PREF_QA_MAXIMIZE_INITIAL_ADS_NUMBER =
-            "qa_maximize_initial_ads_number";
+        implements OnPreferenceChangeListener { // Growser-271
     private static final String PREF_QA_DEBUG_NTP = "qa_debug_ntp";
     private static final String PREF_QA_VLOG_REWARDS = "qa_vlog_rewards";
     private static final String PREF_QA_COMMAND_LINE = "qa_command_line";
 
-    private static final String QA_ADS_PER_HOUR = "qa_ads_per_hour";
     private static final String QA_IMPORT_REWARDS_DB = "qa_import_rewards_db";
     private static final String QA_EXPORT_REWARDS_DB = "qa_export_rewards_db";
     private static final String QA_CONSUME_ORIGIN_PURCHASE = "qa_consume_origin_purchase";
@@ -69,13 +59,8 @@ public class BraveQAPreferences extends BravePreferenceFragment
     private static final int CHOOSE_FILE_FOR_IMPORT_REQUEST_CODE =
             STORAGE_PERMISSION_IMPORT_REQUEST_CODE + 1;
 
-    private static final int MAX_ADS = 10;
-    private static final int DEFAULT_ADS_PER_HOUR = 2;
-
     private ChromeSwitchPreference mLinkSubscriptionOnStaging;
     private ChromeSwitchPreference mBraveDormantFeatureEngagement;
-    private ChromeSwitchPreference mIsStagingServer;
-    private ChromeSwitchPreference mMaximizeAdsNumber;
     private ChromeSwitchPreference mDebugNTP;
     private ChromeSwitchPreference mVlogRewards;
     private Preference mCommandLine;
@@ -84,7 +69,6 @@ public class BraveQAPreferences extends BravePreferenceFragment
     private Preference mExportRewardsDb;
     private BraveDbUtil mDbUtil;
     private String mFileToImport;
-    private boolean mUseRewardsStagingServer;
 
     private final SettableMonotonicObservableSupplier<String> mPageTitle =
             ObservableSuppliers.createMonotonic();
@@ -111,20 +95,7 @@ public class BraveQAPreferences extends BravePreferenceFragment
             mBraveDormantFeatureEngagement.setOnPreferenceChangeListener(this);
         }
 
-        mIsStagingServer = (ChromeSwitchPreference) findPreference(PREF_USE_REWARDS_STAGING_SERVER);
-        if (mIsStagingServer != null) {
-            mIsStagingServer.setOnPreferenceChangeListener(this);
-        }
-        mIsStagingServer.setChecked(
-                UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
-                        .getBoolean(BravePref.USE_REWARDS_STAGING_SERVER));
-
-        mMaximizeAdsNumber =
-                (ChromeSwitchPreference) findPreference(PREF_QA_MAXIMIZE_INITIAL_ADS_NUMBER);
-        if (mMaximizeAdsNumber != null) {
-            mMaximizeAdsNumber.setEnabled(mIsStagingServer.isChecked());
-            mMaximizeAdsNumber.setOnPreferenceChangeListener(this);
-        }
+        // Growser-271: the rewards staging server and ads-number rows left with rewards.
 
         mDebugNTP = (ChromeSwitchPreference) findPreference(PREF_QA_DEBUG_NTP);
         if (mDebugNTP != null) {
@@ -249,36 +220,8 @@ public class BraveQAPreferences extends BravePreferenceFragment
     }
 
     @Override
-    public void onStart() {
-        BraveRewardsNativeWorker worker = BraveRewardsNativeWorker.getInstance();
-        if (worker != null) {
-            worker.addObserver(this);
-        }
-        super.onStart();
-    }
-
-    @Override
-    public void onStop() {
-        BraveRewardsNativeWorker worker = BraveRewardsNativeWorker.getInstance();
-        if (worker != null) {
-            worker.removeObserver(this);
-        }
-        super.onStop();
-    }
-
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (PREF_USE_REWARDS_STAGING_SERVER.equals(preference.getKey())) {
-            BraveRewardsNativeWorker worker = BraveRewardsNativeWorker.getInstance();
-            if (worker != null) {
-                worker.resetTheWholeState();
-            }
-            mUseRewardsStagingServer = (boolean) newValue;
-            mMaximizeAdsNumber.setEnabled((boolean) newValue);
-            enableMaximumAdsNumber(((boolean) newValue) && mMaximizeAdsNumber.isChecked());
-        } else if (PREF_QA_MAXIMIZE_INITIAL_ADS_NUMBER.equals(preference.getKey())) {
-            enableMaximumAdsNumber((boolean) newValue);
-        } else if (PREF_QA_DEBUG_NTP.equals(preference.getKey())
+        if (PREF_QA_DEBUG_NTP.equals(preference.getKey())
                 || PREF_QA_VLOG_REWARDS.equals(preference.getKey())
                 || LinkSubscriptionUtils.PREF_LINK_SUBSCRIPTION_ON_STAGING.equals(
                         preference.getKey())
@@ -356,39 +299,6 @@ public class BraveQAPreferences extends BravePreferenceFragment
         Dialog dialog = alertDialog.create();
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
-    }
-
-    private void enableMaximumAdsNumber(boolean enable) {
-        BraveRewardsNativeWorker worker = BraveRewardsNativeWorker.getInstance();
-        if (worker == null) {
-            return;
-        }
-        if (enable) {
-            // Save current values
-            int adsPerHour = worker.getAdsPerHour();
-            ChromeSharedPreferences.getInstance().writeInt(QA_ADS_PER_HOUR, adsPerHour);
-            // Set max value
-            worker.setAdsPerHour(MAX_ADS);
-            return;
-        }
-        // Set saved values
-        int adsPerHour =
-                ChromeSharedPreferences.getInstance()
-                        .readInt(QA_ADS_PER_HOUR, DEFAULT_ADS_PER_HOUR);
-        worker.setAdsPerHour(adsPerHour);
-    }
-
-    @Override
-    public void onResetTheWholeState(boolean success) {
-        if (success) {
-            UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
-                    .setBoolean(BravePref.USE_REWARDS_STAGING_SERVER, mUseRewardsStagingServer);
-            BraveRewardsHelper.setRewardsEnvChange(true);
-
-            BraveRelaunchUtils.askForRelaunch(getActivity());
-        } else {
-            BraveRelaunchUtils.askForRelaunchCustom(getActivity());
-        }
     }
 
     @Override

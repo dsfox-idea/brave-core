@@ -8,12 +8,9 @@ import android.content.SharedPreferences;
 
 import org.chromium.base.ContextUtils;
 import org.chromium.base.Log;
-import org.chromium.chrome.browser.BraveAdsNativeHelper;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.app.BraveActivity.BraveActivityNotFoundException;
-import org.chromium.chrome.browser.notifications.BraveOnboardingNotification;
 import org.chromium.chrome.browser.notifications.retention.RetentionNotificationUtil;
-import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.misc_metrics.mojom.MiscAndroidMetrics;
 
 import java.util.Calendar;
@@ -136,24 +133,13 @@ public class OnboardingPrefManager {
         sharedPreferencesEditor.apply();
     }
 
-    public boolean isAdsAvailable() {
-        return BraveAdsNativeHelper.nativeIsSupportedRegion(
-                ProfileManager.getLastUsedRegularProfile());
-    }
-
+    // Growser-271: isAdsAvailable() and onboardingNotification() left with ads.
     public boolean isOnboardingNotificationShown() {
         return sIsOnboardingNotificationShown;
     }
 
     public void setOnboardingNotificationShown(boolean isShown) {
         sIsOnboardingNotificationShown = isShown;
-    }
-
-    public void onboardingNotification() {
-        if (!isOnboardingNotificationShown()) {
-            BraveOnboardingNotification.showOnboardingNotification();
-            setOnboardingNotificationShown(true);
-        }
     }
 
     public boolean isFromNotification() {

@@ -15,16 +15,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceScreen;
 
 import org.chromium.base.ContextUtils;
 import org.chromium.build.annotations.NonNull;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.BraveRewardsNativeWorker;
 import org.chromium.chrome.browser.ChromeTabbedActivity;
-import org.chromium.chrome.browser.settings.developer.BraveRewardsDebugPreferences;
 
 public abstract class BravePreferenceFragment extends ChromeBaseSettingsFragment {
     protected static final int STORAGE_PERMISSION_EXPORT_REQUEST_CODE = 8000;
@@ -64,19 +61,7 @@ public abstract class BravePreferenceFragment extends ChromeBaseSettingsFragment
         return AnimationType.PROPERTY;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        BraveRewardsNativeWorker braveRewardsNativeWorker = BraveRewardsNativeWorker.getInstance();
-        if (braveRewardsNativeWorker == null || !braveRewardsNativeWorker.isSupported()) {
-            if (getPreferenceScreen() == null) return;
-            Preference braveRewardsDebugPreference =
-                    getPreferenceScreen().findPreference(BraveRewardsDebugPreferences.KEY);
-            if (braveRewardsDebugPreference != null) {
-                getPreferenceScreen().removePreference(braveRewardsDebugPreference);
-            }
-        }
-    }
+    // Growser-271: onResume removed the Rewards Debug row; the row is gone.
 
     protected boolean isStoragePermissionGranted(boolean isExport) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

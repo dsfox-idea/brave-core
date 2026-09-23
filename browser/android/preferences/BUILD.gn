@@ -66,8 +66,10 @@ java_cpp_strings("java_pref_names_srcjar") {
     "//components/translate/core/browser/translate_pref_names.h",
   ]
 
-  # Growser-271: BravePrivacySettings still reads these on Android.
-  sources += [ "//brave/components/brave_ads/core/public/prefs/pref_names.h" ]
+  # Growser-271: removed with the feature.
+  if (enable_brave_ads) {
+    sources += [ "//brave/components/brave_ads/core/public/prefs/pref_names.h" ]
+  }
 
   if (enable_brave_wallet) {
     sources += [ "//brave/components/decentralized_dns/core/pref_names.h" ]

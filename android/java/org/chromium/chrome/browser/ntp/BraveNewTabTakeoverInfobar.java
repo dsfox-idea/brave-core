@@ -10,7 +10,6 @@ import android.app.Activity;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.BraveRewardsHelper;
 import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.tab.Tab;
@@ -148,10 +147,7 @@ public class BraveNewTabTakeoverInfobar {
     }
 
     private boolean shouldDisplayInfobar() {
-        if (BraveRewardsHelper.isRewardsEnabled()) {
-            return false;
-        }
-
+        // Growser-271: rewards is out, so it can no longer be enabled.
         PrefService prefService = UserPrefs.get(mProfile);
         final int infobarDisplayCount =
                 prefService.getInteger(BravePref.NEW_TAB_TAKEOVER_INFOBAR_REMAINING_DISPLAY_COUNT);

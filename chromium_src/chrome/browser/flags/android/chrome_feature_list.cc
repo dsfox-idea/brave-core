@@ -10,7 +10,7 @@
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/features.h"
 #include "brave/components/brave_origin/features.h"
-#include "brave/components/brave_rewards/core/features.h"
+#include "brave/components/brave_rewards/core/buildflags/buildflags.h"
 #include "brave/components/brave_search_conversion/features.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
@@ -75,6 +75,16 @@
 #define BRAVE_PLAYLIST_FLAG
 #endif  // BUILDFLAG(ENABLE_PLAYLIST)
 
+#if BUILDFLAG(ENABLE_BRAVE_REWARDS)
+#include "brave/components/brave_rewards/core/features.h"
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_REWARDS_FLAG &brave_rewards::features::kBraveRewards,
+#else
+// Growser-271: rewards is out of the product.
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_REWARDS_FLAG
+#endif  // BUILDFLAG(ENABLE_BRAVE_REWARDS)
+
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
 // CHROMIUM_SRC_INTERNAL_USE
 #define BRAVE_NEW_TAB_PAGE_AD_FLAG &brave_ads::kNewTabPageAdFeature,
@@ -116,7 +126,7 @@
     BRAVE_WEB_DISCOVERY_FLAG                                                   \
     BRAVE_VPN_FLAG                                                             \
     EMAIL_ALIASES_FLAG                                                         \
-    &brave_rewards::features::kBraveRewards,                                   \
+    BRAVE_REWARDS_FLAG                                                         \
     &brave_search_conversion::features::kOmniboxBanner,                        \
     BRAVE_PLAYLIST_FLAG                                                        \
     &download::features::kParallelDownloading,                                 \
@@ -147,6 +157,7 @@
 #undef kForceWebContentsDarkMode
 #undef BRAVE_REQUEST_OTR_FLAG
 #undef BRAVE_PLAYLIST_FLAG
+#undef BRAVE_REWARDS_FLAG
 #undef BRAVE_AI_CHAT_FLAGS
 #undef BRAVE_NEW_TAB_PAGE_AD_FLAG
 #undef BRAVE_WEB_DISCOVERY_FLAG

@@ -30,7 +30,6 @@ import org.chromium.chrome.browser.BraveFeatureUtil;
 import org.chromium.chrome.browser.BraveLaunchIntentDispatcher;
 import org.chromium.chrome.browser.BraveLocalState;
 import org.chromium.chrome.browser.BraveRelaunchUtils;
-import org.chromium.chrome.browser.BraveRewardsPolicy;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.browsing_data.BraveClearBrowsingDataFragment;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
@@ -70,8 +69,6 @@ import org.chromium.webcompat_reporter.mojom.WebcompatReporterHandler;
 public class BravePrivacySettings extends PrivacySettings {
     private static final String BLOCK_ALL_COOKIES_LEARN_MORE_LINK =
             "https://github.com/brave/brave-browser/wiki/Block-all-cookies-global-Shields-setting";
-    private static final String SPONSORED_ADS_LEARN_MORE_LINK =
-            "https://support.brave.app/hc/en-us/articles/48376231110413";
     private static final String SURVEY_PANELIST_LEARN_MORE_LINK =
             "https://support.brave.app/hc/en-us/articles/36550092449165";
 
@@ -237,8 +234,6 @@ public class BravePrivacySettings extends PrivacySettings {
     private @Nullable ChromeSwitchPreference mSendP3A;
     private @Nullable ChromeSwitchPreference mSendCrashReports;
     private @Nullable ChromeSwitchPreference mBraveStatsUsagePing;
-    private @Nullable ChromeSwitchPreference mSponsoredAdsEnabled;
-    private @Nullable BraveTextButtonPreference mSponsoredAdsLearnMore;
     private ChromeSwitchPreference mSurveyPanelist;
     private BraveTextButtonPreference mSurveyPanelistLearnMore;
     private ChromeSwitchPreference mBlockSwitchToAppNoticesPref;
@@ -440,26 +435,10 @@ public class BravePrivacySettings extends PrivacySettings {
             mBraveStatsUsagePing.setOnPreferenceChangeListener(this);
         }
 
-        // Hide Sponsored Ads setting if Brave Rewards is disabled by policy
-        if (BraveRewardsPolicy.isDisabledByPolicy(getProfile())) {
-            removePreferenceIfPresent(PREF_SPONSORED_ADS_ENABLED);
-            removePreferenceIfPresent(PREF_SPONSORED_ADS_LEARN_MORE);
-            mSponsoredAdsEnabled = null;
-            mSponsoredAdsLearnMore = null;
-        } else {
-            mSponsoredAdsEnabled =
-                    (ChromeSwitchPreference) findPreference(PREF_SPONSORED_ADS_ENABLED);
-            mSponsoredAdsEnabled.setOnPreferenceChangeListener(this);
-            mSponsoredAdsLearnMore =
-                    (BraveTextButtonPreference) findPreference(PREF_SPONSORED_ADS_LEARN_MORE);
-            mSponsoredAdsLearnMore.setTitle(R.string.sponsored_ads_learn_more);
-            mSponsoredAdsLearnMore.setOnPreferenceClickListener(
-                    preference -> {
-                        TabUtils.openUrlInCustomTab(
-                                requireContext(), SPONSORED_ADS_LEARN_MORE_LINK);
-                        return true;
-                    });
-        }
+        // Growser-271: ads are out, so the Sponsored Ads setting is always hidden - the
+        // way Brave hides it when rewards is disabled by policy.
+        removePreferenceIfPresent(PREF_SPONSORED_ADS_ENABLED);
+        removePreferenceIfPresent(PREF_SPONSORED_ADS_LEARN_MORE);
 
         boolean surveyPanelistEnabled =
                 ChromeFeatureList.isEnabled(
@@ -712,9 +691,7 @@ public class BravePrivacySettings extends PrivacySettings {
                     (boolean) newValue, ChangeMetricsReportingStateCalledFrom.UI_SETTINGS);
         } else if (PREF_BRAVE_STATS_USAGE_PING.equals(key)) {
             BraveLocalState.get().setBoolean(BravePref.STATS_REPORTING_ENABLED, (boolean) newValue);
-        } else if (PREF_SPONSORED_ADS_ENABLED.equals(key)) {
-            UserPrefs.get(getProfile()).setBoolean(BravePref.SPONSORED_ENABLED, (boolean) newValue);
-        } else if (PREF_SURVEY_PANELIST.equals(key)) {
+        } else if (PREF_SURVEY_PANELIST.equals(key)) { // Growser-271: no sponsored ads row
             UserPrefs.get(getProfile())
                     .setBoolean(
                             BravePref.NEW_TAB_PAGE_SPONSORED_IMAGES_SURVEY_PANELIST,
@@ -924,11 +901,6 @@ public class BravePrivacySettings extends PrivacySettings {
                     BraveLocalState.get().getBoolean(BravePref.STATS_REPORTING_ENABLED));
         }
 
-        if (mSponsoredAdsEnabled != null) {
-            mSponsoredAdsEnabled.setChecked(
-                    UserPrefs.get(getProfile()).getBoolean(BravePref.SPONSORED_ENABLED));
-        }
-
         mSurveyPanelist.setChecked(
                 UserPrefs.get(getProfile())
                         .getBoolean(BravePref.NEW_TAB_PAGE_SPONSORED_IMAGES_SURVEY_PANELIST));
@@ -1114,9 +1086,8 @@ public class BravePrivacySettings extends PrivacySettings {
                             .isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
                         indexData.removeEntryForKey(frag, PREF_BRAVE_STATS_USAGE_PING);
                     }
-                    if (BraveRewardsPolicy.isDisabledByPolicy(profile)) {
-                        indexData.removeEntryForKey(frag, PREF_SPONSORED_ADS_ENABLED);
-                    }
+                    // Growser-271: always hidden, see onCreatePreferences.
+                    indexData.removeEntryForKey(frag, PREF_SPONSORED_ADS_ENABLED);
 
                     // Dynamic summaries for dialog prefs
                     String trackersPref = BraveShieldsContentSettings.getTrackersPref();

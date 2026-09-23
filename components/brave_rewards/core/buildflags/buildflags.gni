@@ -59,10 +59,3 @@ if (is_official_build) {
     assert(rewards_grant_prod_endpoint != "")
   }
 }
-
-# Growser-271: on Android the Java side of rewards is still compiled - it
-# declares the native methods this flag would remove, and the linker has no
-# way to be half-right about that. Taking both out is growser#271.
-if (is_android) {
-  enable_brave_rewards = true
-}

@@ -22,11 +22,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.res.ResourcesCompat;
 
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveDialogFragment;
-import org.chromium.chrome.browser.BraveRewardsHelper;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
 
 /**
@@ -38,7 +36,6 @@ public class BraveNotificationWarningDialog extends BraveDialogFragment {
 
     public static final int FROM_LAUNCHED_BRAVE_SETTINGS = 1;
     public static final int FROM_LAUNCHED_BRAVE_ACTIVITY = 2;
-    public static final int FROM_LAUNCHED_BRAVE_PANEL = 3;
     private static final String LAUNCHED_FROM = "launched_from";
 
     private TextView mTitleTextView;
@@ -79,28 +76,15 @@ public class BraveNotificationWarningDialog extends BraveDialogFragment {
     public static boolean shouldShowNotificationWarningDialog(Context context) {
         if (!BravePermissionUtils.hasNotificationPermission(context)) {
             return true;
-        } else if (shouldShowRewardWarningDialog(context)
-                || shouldShowPrivacyWarningDialog(context)) {
+        } else if (shouldShowPrivacyWarningDialog(context)) { // Growser-271
             return true;
         }
         return false;
     }
 
-    public static boolean shouldShowRewardWarningDialog(Context context) {
-        return BraveRewardsHelper.isRewardsEnabled()
-                && BravePermissionUtils.isBraveAdsNotificationPermissionBlocked(context);
-    }
-
     public static boolean shouldShowPrivacyWarningDialog(Context context) {
         return isPrivacyReportsEnabled()
                 && BravePermissionUtils.isGeneralNotificationPermissionBlocked(context);
-    }
-
-    private static boolean shouldShowBothWarningDialog(Context context) {
-        if (!BravePermissionUtils.hasNotificationPermission(context)) {
-            return true;
-        }
-        return shouldShowRewardWarningDialog(context) && shouldShowPrivacyWarningDialog(context);
     }
 
     @Override
@@ -147,57 +131,24 @@ public class BraveNotificationWarningDialog extends BraveDialogFragment {
             } else if (mLaunchedFrom == FROM_LAUNCHED_BRAVE_SETTINGS) {
                 launchedFromBraveSettings();
                 view.findViewById(R.id.btn_not_now).setVisibility(View.GONE);
-            } else if (mLaunchedFrom == FROM_LAUNCHED_BRAVE_PANEL) {
-                launchedFromBravePanel(view);
             }
         }
-    }
-
-    private void launchedFromBravePanel(View view) {
-        ImageView icon = view.findViewById(R.id.warning_imageview);
-        icon.setImageDrawable(
-                ResourcesCompat.getDrawable(view.getResources(), R.drawable.ic_bell_icon, null));
-        mTitleTextView.setText(R.string.enable_notifications_from_brave_to_earn_brave_rewards);
-        mDescriptionTextView.setText(
-                R.string.open_settings_and_turn_on_device_notifications_for_brave_ads);
-        view.findViewById(R.id.btn_not_now).setVisibility(View.GONE);
-        mPrimaryButton.setText(R.string.brave_open_system_sync_settings);
-        mPrimaryButton.setBackground(ResourcesCompat.getDrawable(
-                view.getResources(), R.drawable.blue_48_rounded_bg, null));
     }
 
     private void launchedFromBraveActivity() {
         mPrimaryButton.setText(R.string.turn_on_brave_notifications);
 
-        if (shouldShowBothWarningDialog(getContext())) {
-            mTitleTextView.setText(R.string.notification_os_dialog_header_both_rewards_privacy);
-            mDescriptionTextView.setText(
-                    R.string.notification_os_dialog_description_both_rewards_privacy);
-        } else if (shouldShowRewardWarningDialog(getContext())) {
-            mTitleTextView.setText(R.string.notification_os_dialog_header_only_rewards);
-            mDescriptionTextView.setText(R.string.notification_os_dialog_description_only_rewards);
-        } else if (shouldShowPrivacyWarningDialog(getContext())) {
-            mTitleTextView.setText(R.string.notification_os_dialog_header_only_privacy);
-            mDescriptionTextView.setText(R.string.notification_os_dialog_description_only_privacy);
-        }
+        // Growser-271: rewards is out, so privacy reports are the only reason.
+        mTitleTextView.setText(R.string.notification_os_dialog_header_only_privacy);
+        mDescriptionTextView.setText(R.string.notification_os_dialog_description_only_privacy);
     }
 
     private void launchedFromBraveSettings() {
         mPrimaryButton.setText(R.string.got_it);
 
-        if (shouldShowBothWarningDialog(getContext())) {
-            mTitleTextView.setText(R.string.notification_brave_dialog_header_both_rewards_privacy);
-            mDescriptionTextView.setText(
-                    R.string.notification_brave_dialog_description_both_rewards_privacy);
-        } else if (shouldShowRewardWarningDialog(getContext())) {
-            mTitleTextView.setText(R.string.notification_brave_dialog_header_only_rewards);
-            mDescriptionTextView.setText(
-                    R.string.notification_brave_dialog_description_only_rewards);
-        } else if (shouldShowPrivacyWarningDialog(getContext())) {
-            mTitleTextView.setText(R.string.notification_brave_dialog_header_only_privacy);
-            mDescriptionTextView.setText(
-                    R.string.notification_brave_dialog_description_only_privacy);
-        }
+        // Growser-271: rewards is out, so privacy reports are the only reason.
+        mTitleTextView.setText(R.string.notification_brave_dialog_header_only_privacy);
+        mDescriptionTextView.setText(R.string.notification_brave_dialog_description_only_privacy);
     }
 
     private void clickOnPrimaryButton(View view) {

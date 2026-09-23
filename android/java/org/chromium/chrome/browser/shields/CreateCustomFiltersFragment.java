@@ -8,6 +8,7 @@ package org.chromium.chrome.browser.shields;
 import static org.chromium.build.NullUtil.assumeNonNull;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -28,7 +29,6 @@ import org.chromium.brave_shields.mojom.FilterListAndroidHandler;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.BraveRewardsHelper;
 import org.chromium.chrome.browser.customtabs.CustomTabActivity;
 import org.chromium.chrome.browser.settings.BottomInsetViewProvider;
 import org.chromium.chrome.browser.settings.BravePreferenceFragment;
@@ -81,7 +81,8 @@ public class CreateCustomFiltersFragment extends BravePreferenceFragment
                 String.format(
                         getResources().getString(R.string.create_custom_filter_summary),
                         getResources().getString(R.string.adblock_filter_syntax));
-        Spanned summaryTextSpanned = BraveRewardsHelper.spannedFromHtmlString(summaryText);
+        // Growser-271: BraveRewardsHelper leaves the build with rewards.
+        Spanned summaryTextSpanned = Html.fromHtml(summaryText, Html.FROM_HTML_MODE_LEGACY);
         SpannableString summaryTextSpannableString =
                 new SpannableString(summaryTextSpanned.toString());
 
@@ -96,12 +97,14 @@ public class CreateCustomFiltersFragment extends BravePreferenceFragment
                                         getActivity(), BRAVE_ADBLOCK_FILTER_SYNTAX_PAGE);
                             });
 
-            BraveRewardsHelper.setSpan(
-                    getActivity(),
-                    summaryText,
-                    summaryTextSpannableString,
-                    R.string.adblock_filter_syntax,
-                    summaryTextClickableSpan);
+            // Growser-271: was BraveRewardsHelper.setSpan.
+            String linkText = getString(R.string.adblock_filter_syntax);
+            int linkStart = summaryText.indexOf(linkText);
+            summaryTextSpannableString.setSpan(
+                    summaryTextClickableSpan,
+                    linkStart,
+                    linkStart + linkText.length(),
+                    Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             tvSummary.setMovementMethod(LinkMovementMethod.getInstance());
             tvSummary.setText(summaryTextSpannableString);
         }
