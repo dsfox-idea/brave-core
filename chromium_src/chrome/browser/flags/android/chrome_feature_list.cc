@@ -3,6 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+#include "base/feature_list.h"
 #include "brave/browser/android/safe_browsing/features.h"
 #include "brave/browser/android/youtube_script_injector/features.h"
 #include "brave/browser/brave_browser_features.h"
@@ -50,8 +51,23 @@
       &ai_chat::features::kBraveSyncAIChat,
 #else
 // Growser-270: Leo is out of the product.
+// Growser-295: Java still asks about it by name, and FeatureMap CHECK-fails
+// on a name it does not hold (Settings crashed that way), so the answer is
+// "off".
+namespace {
+BASE_FEATURE(kGrowserAIChatOff,
+             "AIChat",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+BASE_FEATURE(kGrowserAIChatHistoryOff,
+             "AIChatHistory",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+BASE_FEATURE(kGrowserBraveSyncAIChatOff,
+             "BraveSyncAIChat",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+}  // namespace
 // CHROMIUM_SRC_INTERNAL_USE
-#define BRAVE_AI_CHAT_FLAGS
+#define BRAVE_AI_CHAT_FLAGS \
+  &kGrowserAIChatOff, &kGrowserAIChatHistoryOff, &kGrowserBraveSyncAIChatOff,
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
 #if BUILDFLAG(ENABLE_REQUEST_OTR)
@@ -59,10 +75,17 @@
 // CHROMIUM_SRC_INTERNAL_USE
 #define BRAVE_REQUEST_OTR_FLAG &request_otr::features::kBraveRequestOTRTab,
 #else
-// Growser: request-OTR is compiled out of this build, so it is not a flag
-// Java can see either.
+// Growser: request-OTR is compiled out of this build.
+// Growser-295: Java still asks about it by name, and FeatureMap CHECK-fails
+// on a name it does not hold (Settings crashed that way), so the answer is
+// "off".
+namespace {
+BASE_FEATURE(kGrowserBraveRequestOTRTabOff,
+             "BraveRequestOTRTab",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+}  // namespace
 // CHROMIUM_SRC_INTERNAL_USE
-#define BRAVE_REQUEST_OTR_FLAG
+#define BRAVE_REQUEST_OTR_FLAG &kGrowserBraveRequestOTRTabOff,
 #endif  // BUILDFLAG(ENABLE_REQUEST_OTR)
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
@@ -71,8 +94,16 @@
 #define BRAVE_PLAYLIST_FLAG &playlist::features::kPlaylist,
 #else
 // Growser-273: the playlist is out of the product.
+// Growser-295: Java still asks about it by name, and FeatureMap CHECK-fails
+// on a name it does not hold (Settings crashed that way), so the answer is
+// "off".
+namespace {
+BASE_FEATURE(kGrowserPlaylistOff,
+             "Playlist",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+}  // namespace
 // CHROMIUM_SRC_INTERNAL_USE
-#define BRAVE_PLAYLIST_FLAG
+#define BRAVE_PLAYLIST_FLAG &kGrowserPlaylistOff,
 #endif  // BUILDFLAG(ENABLE_PLAYLIST)
 
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
@@ -115,8 +146,16 @@
 // CHROMIUM_SRC_INTERNAL_USE
 #define EMAIL_ALIASES_FLAG &email_aliases::features::kEmailAliases,
 #else
+// Growser-295: Java still asks about it by name, and FeatureMap CHECK-fails
+// on a name it does not hold (Settings crashed that way), so the answer is
+// "off".
+namespace {
+BASE_FEATURE(kGrowserEmailAliasesOff,
+             "EmailAliases",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+}  // namespace
 // CHROMIUM_SRC_INTERNAL_USE
-#define EMAIL_ALIASES_FLAG
+#define EMAIL_ALIASES_FLAG &kGrowserEmailAliasesOff,
 #endif
 
 // clang-format off
