@@ -49,8 +49,9 @@
     *** setContentSetting(...);
 }
 
-# Needed by the gson use inside the prebuilt Brave Playlist AAR.
--keep,allowobfuscation,allowshrinking class com.google.gson.reflect.TypeToken
+# Growser-273: the rule below kept the gson use inside the prebuilt Brave
+# Playlist AAR, and that AAR is out of the build. R8 fails on a rule that
+# matches nothing, so it goes with the playlist and comes back with it.
 
 -keep class org.chromium.chrome.browser.tabmodel.TabCollectionTabModelImpl {
     *** shouldGroupWithParent(...);

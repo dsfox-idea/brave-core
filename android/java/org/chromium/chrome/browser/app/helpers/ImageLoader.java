@@ -41,9 +41,8 @@ import org.xmlpull.v1.XmlSerializer;
 import org.chromium.base.ContextUtils;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.content.WebContentsFactory;
-import org.chromium.chrome.browser.crypto_wallet.util.Utils;
-import org.chromium.chrome.browser.crypto_wallet.util.WalletConstants;
 import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.ui.favicon.FaviconHelper;
 import org.chromium.chrome.browser.util.ConfigurationUtils;
 import org.chromium.components.image_fetcher.ImageDataFetchResult;
@@ -67,6 +66,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ImageLoader {
+    // Growser-275: was WalletConstants.MAX_BITMAP_SIZE_FOR_DOWNLOAD, which left
+    // the build with the wallet.
+    private static final int MAX_BITMAP_SIZE_FOR_DOWNLOAD = 2048;
+
     private static final String TAG = "ImageLoader";
     private static final String UNUSED_CLIENT_NAME = "unused";
     private static final String BASE64_ENCODING_PATTERN =
@@ -87,7 +90,8 @@ public class ImageLoader {
         }
 
         Resources resources = ContextUtils.getApplicationContext().getResources();
-        Profile profile = Utils.getProfile(false);
+        // Growser-275: the wallet helper this took the profile from is gone.
+        Profile profile = ProfileManager.getLastUsedRegularProfile();
         if (isSvg(url)) {
             final String validUrl;
             if (URLUtil.isDataUrl(url)) {
@@ -119,7 +123,7 @@ public class ImageLoader {
             webContents.downloadImage(
                     new GURL(validUrl), // Url
                     false, // isFavIcon
-                    WalletConstants.MAX_BITMAP_SIZE_FOR_DOWNLOAD, // maxBitmapSize
+                    MAX_BITMAP_SIZE_FOR_DOWNLOAD, // maxBitmapSize
                     false, // bypassCache
                     (id, httpStatusCode, imageUrl, bitmaps, originalImageSizes) -> { // callback
                         ImageFetcherFacade imageFetcherFacade;

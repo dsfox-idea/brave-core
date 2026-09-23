@@ -23,7 +23,6 @@ import org.chromium.base.Log;
 import org.chromium.base.task.PostTask;
 import org.chromium.base.task.TaskTraits;
 import org.chromium.brave.browser.brave_origin.BraveOriginServiceFactory;
-import org.chromium.brave.browser.skus.SkusServiceFactory;
 import org.chromium.brave.browser.util.BraveDomainsUtils;
 import org.chromium.brave.browser.util.ServicesEnvironment;
 import org.chromium.brave_origin.mojom.BraveOriginSettingsHandler;
@@ -43,9 +42,6 @@ import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
 import org.chromium.chrome.browser.util.LiveDataUtil;
 import org.chromium.components.prefs.PrefService;
 import org.chromium.components.user_prefs.UserPrefs;
-import org.chromium.skus.mojom.SkusResult;
-import org.chromium.skus.mojom.SkusResultCode;
-import org.chromium.skus.mojom.SkusService;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -409,329 +405,27 @@ public class BraveOriginSubscriptionPrefs {
         prefService.setInteger(BravePref.BRAVE_ORIGIN_SUBSCRIPTION_LINK_STATUS_ANDROID, 0);
     }
 
-    /**
-     * Creates an order for the Origin subscription.
-     *
-     * @param profile The profile to use for the operation
-     * @param purchaseToken The purchase token to use for the operation
-     */
     private static void createFetchOrder(@Nullable Profile profile, String purchaseToken) {
-        PrefService prefService = getPrefs(profile);
-        if (prefService == null) {
-            Log.e(TAG, "createFetchOrder prefs are unavailable");
-            return;
-        }
-        sFetchInProgress = true;
-        String packageName = prefService.getString(BravePref.BRAVE_ORIGIN_PACKAGE_NAME_ANDROID);
-        String productId = prefService.getString(BravePref.BRAVE_ORIGIN_PRODUCT_ID_ANDROID);
-
-        // Perform JSON generation and Base64 encoding on background thread
-        PostTask.postTask(
-                TaskTraits.BEST_EFFORT_MAY_BLOCK,
-                () -> {
-                    String receiptPayload =
-                            buildReceiptPayload(purchaseToken, packageName, productId);
-                    if (receiptPayload == null) {
-                        notifyCredentialsFetched(CredentialFetchResult.FAILED);
-                        return;
-                    }
-                    String encodedRequestJson =
-                            Base64.encodeToString(
-                                    receiptPayload.getBytes(StandardCharsets.UTF_8),
-                                    Base64.NO_WRAP);
-
-                    // Switch back to UI thread for the service call
-                    PostTask.postTask(
-                            TaskTraits.UI_DEFAULT,
-                            () -> {
-                                // Hopping threads gave the profile a chance to go away, and the
-                                // service factory dereferences its native handle.
-                                if (!isProfileUsable(profile)) {
-                                    Log.e(TAG, "createFetchOrder profile is destroyed");
-                                    notifyCredentialsFetched(CredentialFetchResult.FAILED);
-                                    return;
-                                }
-                                SkusService skusService =
-                                        SkusServiceFactory.getInstance()
-                                                .getSkusService(profile, null);
-                                if (skusService == null) {
-                                    Log.e(TAG, "SkusService is null, cannot create order");
-                                    notifyCredentialsFetched(CredentialFetchResult.FAILED);
-                                    return;
-                                }
-                                String domain =
-                                        BraveDomainsUtils.getServicesDomain(
-                                                ORIGIN_SKU_HOSTNAME_PART,
-                                                ServicesEnvironment.STAGING);
-                                skusService.createOrderFromReceipt(
-                                        domain,
-                                        encodedRequestJson,
-                                        (result) -> {
-                                            if (result == null
-                                                    || result.code != SkusResultCode.OK
-                                                    || result.message == null
-                                                    || result.message.isEmpty()) {
-                                                Log.e(
-                                                        TAG,
-                                                        "Failed to create order: "
-                                                                + (result != null
-                                                                        ? result.message
-                                                                        : "null result"));
-                                                skusService.close();
-                                                notifyCredentialsFetched(
-                                                        CredentialFetchResult.FAILED);
-                                                return;
-                                            }
-                                            // Fetch order credentials using the same service
-                                            fetchOrderCredentials(
-                                                    profile,
-                                                    result.message,
-                                                    skusService,
-                                                    domain,
-                                                    receiptPayload);
-                                        });
-                            });
-                });
+        // Growser-126: no payment service to create an order with.
+        notifyCredentialsFetched(CredentialFetchResult.FAILED);
     }
 
-    /**
-     * Builds the request body the payment service identifies a subscription by: {@code {type,
-     * raw_receipt, package, subscription_id}}. Returns null when it cannot be serialized.
-     */
-    private static @Nullable String buildReceiptPayload(
-            String purchaseToken, String packageName, String productId) {
-        try {
-            JSONObject request = new JSONObject();
-            request.put(JSON_FIELD_TYPE, JSON_VALUE_ANDROID);
-            request.put(JSON_FIELD_RAW_RECEIPT, purchaseToken);
-            request.put(JSON_FIELD_PACKAGE, packageName);
-            request.put(JSON_FIELD_SUBSCRIPTION_ID, productId);
-            return request.toString();
-        } catch (JSONException e) {
-            Log.e(TAG, "Failed to create JSON request", e);
-            return null;
-        }
-    }
 
-    /**
-     * Fetches order credentials for the Origin subscription using the provided order ID and
-     * SkusService.
-     *
-     * @param profile The profile to use for the operation
-     * @param orderId The order ID to fetch credentials for
-     * @param skusService The SkusService instance to use for the operation
-     * @param domain The SKU service domain
-     * @param receiptPayload Request body identifying the subscription, used to ask about the
-     *     activation limit if the fetch fails.
-     */
-    private static void fetchOrderCredentials(
-            Profile profile,
-            @Nullable String orderId,
-            SkusService skusService,
-            String domain,
-            String receiptPayload) {
-        if (orderId == null || orderId.isEmpty()) {
-            skusService.close();
-            notifyCredentialsFetched(CredentialFetchResult.FAILED);
-            return;
-        }
-
-        skusService.fetchOrderCredentials(
-                domain,
-                orderId,
-                (result) -> {
-                    skusService.close();
-                    if (result == null || result.code != SkusResultCode.OK) {
-                        Log.e(
-                                TAG,
-                                "Failed to fetch order credentials for order ID: "
-                                        + orderId
-                                        + " "
-                                        + (result != null ? result.message : "null result"));
-                        // The activation limit is the one failure the user can act on, and the
-                        // service reports it as a generic bad request, so the only way to tell is
-                        // to ask.
-                        checkActivationLimit(profile, orderId, receiptPayload);
-                        return;
-                    }
-                    PrefService prefService = getPrefs(profile);
-                    if (prefService == null) {
-                        Log.e(TAG, "fetchOrderCredentials prefs are unavailable");
-                        notifyCredentialsFetched(CredentialFetchResult.FAILED);
-                        return;
-                    }
-                    // Store the order ID
-                    prefService.setString(BravePref.BRAVE_ORIGIN_ORDER_ID_ANDROID, orderId);
-                    // A successful Play Store order fetch is an authoritative "Origin is
-                    // active" signal; prime the sync cache immediately so promo gates honor
-                    // it without waiting for the next credential summary refresh.
-                    setIsCredentialSummaryActiveCached(true);
-                    notifyCredentialsFetched(CredentialFetchResult.SUCCESS);
-                });
-    }
-
-    /**
-     * Asks the payment service whether a failed credential fetch was caused by the order running
-     * out of device activations, and whether that budget can be raised. Reports {@link
-     * CredentialFetchResult#ACTIVATION_LIMIT_EXTENDABLE} only when the user can actually do
-     * something about it.
-     */
-    private static void checkActivationLimit(
-            Profile profile, String orderId, String receiptPayload) {
-        sPendingExtendOrderId = null;
-        if (!isProfileUsable(profile)) {
-            notifyCredentialsFetched(CredentialFetchResult.FAILED);
-            return;
-        }
-        OriginActivationLimit activationLimit =
-                BraveOriginServiceFactory.getInstance().getOriginActivationLimit(profile, null);
-        if (activationLimit == null) {
-            Log.e(TAG, "OriginActivationLimit is null, cannot check activation limit");
-            notifyCredentialsFetched(CredentialFetchResult.FAILED);
-            return;
-        }
-
-        activationLimit.canExtend(
-                orderId,
-                receiptPayload,
-                (eligibility) -> {
-                    activationLimit.close();
-                    if (eligibility == null || !eligibility.atLimit) {
-                        notifyCredentialsFetched(CredentialFetchResult.FAILED);
-                        return;
-                    }
-                    if (!eligibility.canExtend) {
-                        // At the limit with no room to grow, so there is no action to offer - but
-                        // the user still needs to know why their subscription is not working.
-                        Log.w(TAG, "Order is at its activation limit and cannot be extended");
-                        notifyCredentialsFetched(CredentialFetchResult.ACTIVATION_LIMIT_REACHED);
-                        return;
-                    }
-                    sPendingExtendOrderId = orderId;
-                    sPendingExtendReceiptPayload = receiptPayload;
-                    notifyCredentialsFetched(CredentialFetchResult.ACTIVATION_LIMIT_EXTENDABLE);
-                });
-    }
-
-    /**
-     * Raises the device activation limit for the order whose credential fetch was blocked by it,
-     * then retries that fetch. Only meaningful after a {@link
-     * CredentialFetchResult#ACTIVATION_LIMIT_EXTENDABLE} result, and only once per result.
-     *
-     * <p>Reports through {@link #setCredentialsFetchedCallback} rather than a callback of its own:
-     * raising the budget is only half the job, and what the caller is waiting for either way is
-     * the credential fetch that follows. Register that callback before calling this.
-     *
-     * @param profile The profile to use for the operation
-     */
     public static void extendActivationLimit(@Nullable Profile profile) {
-        String orderId = sPendingExtendOrderId;
-        String receiptPayload = sPendingExtendReceiptPayload;
+        // Growser-126: no payment service to raise an activation budget with.
         sPendingExtendOrderId = null;
         sPendingExtendReceiptPayload = null;
-        if (orderId == null || receiptPayload == null || !isProfileUsable(profile)) {
-            Log.e(TAG, "extendActivationLimit has no pending order or no usable profile");
-            notifyCredentialsFetched(CredentialFetchResult.FAILED);
-            return;
-        }
-        OriginActivationLimit activationLimit =
-                BraveOriginServiceFactory.getInstance().getOriginActivationLimit(profile, null);
-        if (activationLimit == null) {
-            Log.e(TAG, "OriginActivationLimit is null, cannot extend activation limit");
-            notifyCredentialsFetched(CredentialFetchResult.FAILED);
-            return;
-        }
-
-        // Claim the fetch before going async so a startup resume cannot start a second one
-        // while the extension is in flight.
-        sFetchInProgress = true;
-        activationLimit.extend(
-                orderId,
-                receiptPayload,
-                (succeeded, errorCode) -> {
-                    activationLimit.close();
-                    if (!succeeded) {
-                        Log.e(TAG, "Failed to extend activation limit: " + errorCode);
-                        notifyCredentialsFetched(CredentialFetchResult.FAILED);
-                        return;
-                    }
-                    // The extension only frees up budget; the credentials still have to be
-                    // fetched, and that is what actually unblocks the subscription.
-                    retryCredentialFetch(profile, orderId, receiptPayload);
-                });
+        notifyCredentialsFetched(CredentialFetchResult.FAILED);
     }
 
-    /** Re-runs the credential fetch for an order after its activation budget was raised. */
-    private static void retryCredentialFetch(
-            Profile profile, String orderId, String receiptPayload) {
-        if (!isProfileUsable(profile)) {
-            notifyCredentialsFetched(CredentialFetchResult.FAILED);
-            return;
-        }
-        SkusService skusService = SkusServiceFactory.getInstance().getSkusService(profile, null);
-        if (skusService == null) {
-            Log.e(TAG, "SkusService is null, cannot retry credential fetch");
-            notifyCredentialsFetched(CredentialFetchResult.FAILED);
-            return;
-        }
-        String domain =
-                BraveDomainsUtils.getServicesDomain(
-                        ORIGIN_SKU_HOSTNAME_PART, ServicesEnvironment.STAGING);
-        fetchOrderCredentials(profile, orderId, skusService, domain, receiptPayload);
-    }
 
-    /**
-     * Requests credential summary for the Origin subscription.
-     *
-     * @param profile The profile to use for the operation
-     * @param callback Callback to handle the credential summary result - true if active, false if
-     *     not
-     */
     public static void requestCredentialSummary(
             @Nullable Profile profile, @Nullable Callback<Boolean> callback) {
-        if (!isProfileUsable(profile)) {
-            Log.e(TAG, "requestCredentialSummary profile is null or destroyed");
-            if (callback != null) {
-                callback.onResult(false);
-            }
-            return;
+        // Growser-126: no payment service to ask, so no subscription.
+        setIsCredentialSummaryActiveCached(false);
+        if (callback != null) {
+            callback.onResult(false);
         }
-
-        SkusService skusService = SkusServiceFactory.getInstance().getSkusService(profile, null);
-        if (skusService == null) {
-            Log.e(TAG, "SkusService is null, cannot request credential summary");
-            if (callback != null) {
-                callback.onResult(false);
-            }
-            return;
-        }
-
-        String domain =
-                BraveDomainsUtils.getServicesDomain(
-                        ORIGIN_SKU_HOSTNAME_PART, ServicesEnvironment.STAGING);
-        skusService.credentialSummary(
-                domain,
-                (result) -> {
-                    try {
-                        // Move JSON parsing to background thread to avoid potential UI blocking
-                        PostTask.postTask(
-                                TaskTraits.BEST_EFFORT,
-                                () -> {
-                                    boolean isActive = parseCredentialSummary(result);
-                                    // Switch back to UI thread for callback
-                                    PostTask.postTask(
-                                            TaskTraits.UI_DEFAULT,
-                                            () -> {
-                                                setIsCredentialSummaryActiveCached(isActive);
-                                                if (callback != null) {
-                                                    callback.onResult(isActive);
-                                                }
-                                            });
-                                });
-                    } finally {
-                        skusService.close();
-                    }
-                });
     }
 
     /**
@@ -758,41 +452,6 @@ public class BraveOriginSubscriptionPrefs {
                 .readBoolean(BravePreferenceKeys.BRAVE_ORIGIN_CREDENTIAL_SUMMARY_CACHED, false);
     }
 
-    /**
-     * Parses the credential summary result on a background thread. This avoids potential UI
-     * blocking for JSON parsing operations.
-     *
-     * @param summary The credential summary result
-     * @return true if subscription is active, false otherwise
-     */
-    private static boolean parseCredentialSummary(@Nullable SkusResult summary) {
-        if (summary == null || summary.code != SkusResultCode.OK) {
-            return false;
-        }
-
-        String summaryMessage = summary.message != null ? summary.message.trim() : "";
-        if (summaryMessage.isEmpty()) {
-            return false;
-        }
-
-        try {
-            // Parse JSON response
-            JSONObject records = new JSONObject(summaryMessage);
-            // Empty dict - clean user
-            if (records.length() == 0) {
-                return false;
-            }
-
-            // Check if credential is valid (has active status and remaining credentials)
-            boolean active = records.optBoolean(JSON_FIELD_ACTIVE, false);
-            int remainingCredentialCount = records.optInt(JSON_FIELD_REMAINING_CREDENTIAL_COUNT, 0);
-
-            return active && remainingCredentialCount > 0;
-        } catch (JSONException e) {
-            Log.e(TAG, "Failed to parse credential summary JSON", e);
-            return false;
-        }
-    }
 
     /**
      * Clears all Origin subscription preferences for the given profile.

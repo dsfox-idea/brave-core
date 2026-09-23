@@ -14,7 +14,8 @@ declare_args() {
   enable_playlist_webui = enable_playlist && toolkit_views
 }
 
-assert(enable_playlist || !is_android,
-       "enable_playlist=false is not supported on Android")
+# Growser-273: Brave's Android build carries playlist Java unconditionally, so
+# upstream refuses the flag there. Ours puts that Java under the flag, which is
+# what makes the removal reach the APK instead of stopping at the C++.
 assert(enable_playlist || !is_ios,
        "enable_playlist=false is not supported on iOS")

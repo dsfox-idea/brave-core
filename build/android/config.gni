@@ -9,6 +9,13 @@ import("//brave/android/java/org/chromium/chrome/browser/billing/sources.gni")
 import("//brave/android/java/org/chromium/chrome/browser/playlist/sources.gni")
 import("//brave/build/android/bytecode/bytecode_rewriter.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
+import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
+import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
+import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 
 declare_args() {
   brave_android_manifest_includes = []
@@ -44,7 +51,6 @@ brave_chrome_java_deps = [
   "//brave/browser/quick_search_engines/android:java",
   "//brave/browser/safe_browsing/android/java/src/org/chromium/chrome/browser/safe_browsing/settings:java",
   "//brave/browser/signin/services/android:java",
-  "//brave/browser/skus/android:java",
   "//brave/browser/tab_group_sync:java",
   "//brave/browser/ui/android/bottombar:java",
   "//brave/browser/ui/android/favicon:java",
@@ -54,24 +60,17 @@ brave_chrome_java_deps = [
   "//brave/browser/ui/android/theme:java",
   "//brave/browser/ui/android/toolbar:java",
   "//brave/browser/url_sanitizer/android:java",
-  "//brave/components/ai_chat/core/common/mojom:mojom_java",
   "//brave/components/brave_account/android:features_java",
   "//brave/components/brave_account/mojom:mojom_java",
-  "//brave/components/brave_ads/core/mojom:mojom_java",
-  "//brave/components/brave_news/common:mojom_java",
   "//brave/components/brave_origin/mojom:mojom_java",
-  "//brave/components/brave_rewards/core/mojom:mojom_java",
   "//brave/components/brave_shields/core/common:mojom_java",
-  "//brave/components/brave_vpn/common/mojom:mojom_java",
   "//brave/components/browser_ui/media/android:java",
   "//brave/components/browser_ui/notifications/android:java",
   "//brave/components/browser_ui/settings/android:java",
   "//brave/components/browser_ui/site_settings/android:java",
   "//brave/components/browser_ui/widget/android:java",
   "//brave/components/misc_metrics/common:mojom_java",
-  "//brave/components/playlist/core/common/mojom:mojom_java",
   "//brave/components/safe_browsing/android:brave_safe_browsing_java",
-  "//brave/components/skus/common:mojom_java",
   "//brave/components/url_sanitizer/core/common/mojom:mojom_java",
   "//brave/components/variations/android:java",
   "//brave/components/version_info/android:java",
@@ -80,8 +79,6 @@ brave_chrome_java_deps = [
   "//brave/third_party/android_deps:com_github_bumptech_glide_java",
   "//brave/third_party/android_deps:com_google_android_play_app_update_java",
   "//brave/third_party/android_deps:com_google_android_play_integrity_java",
-  "//brave/third_party/android_deps:com_wireguard_android_J__unpack_aar",
-  "//brave/third_party/android_deps:com_wireguard_android_java",
   "//brave/third_party/android_deps:google_play_services_safetynet_java",
   "//brave/third_party/zxing:zxing_java",
   "//brave/ui/android:base_java",
@@ -96,8 +93,55 @@ brave_chrome_java_deps = [
   "//url/mojom:url_mojom_origin_java",
 ]
 
+# Growser-270: removed with the feature.
+if (enable_ai_chat) {
+  brave_chrome_java_deps += [
+    "//brave/components/ai_chat/core/common/mojom:mojom_java",
+  ]
+}
+
+# Growser-271: the rewards and ads Java is still compiled on Android, so its
+# mojom has to be too. Removing it is that issue.
+brave_chrome_java_deps += [ "//brave/components/brave_ads/core/mojom:mojom_java" ]
+
+# Growser-272: removed with the feature.
+if (enable_brave_news) {
+  brave_chrome_java_deps += [
+    "//brave/components/brave_news/common:mojom_java",
+  ]
+}
+
+brave_chrome_java_deps += [ "//brave/components/brave_rewards/core/mojom:mojom_java" ]
+
+# Growser-274: removed with the feature.
+if (enable_brave_vpn) {
+  brave_chrome_java_deps += [
+    "//brave/components/brave_vpn/common/mojom:mojom_java",
+    "//brave/third_party/android_deps:com_wireguard_android_J__unpack_aar",
+    "//brave/third_party/android_deps:com_wireguard_android_java",
+  ]
+}
+
+# Growser-273: removed with the feature.
+if (enable_playlist) {
+  brave_chrome_java_deps += [
+    "//brave/components/playlist/core/common/mojom:mojom_java",
+  ]
+}
+
+# Growser-270: removed with the feature.
+if (enable_skus) {
+  brave_chrome_java_deps += [
+    "//brave/browser/skus/android:java",
+    "//brave/components/skus/common:mojom_java",
+  ]
+}
+
 brave_chrome_java_deps += brave_app_billing_deps
-brave_chrome_java_deps += brave_app_playlist_deps
+# Growser-273: removed with the feature.
+if (enable_playlist) {
+  brave_chrome_java_deps += brave_app_playlist_deps
+}
 
 if (enable_brave_wallet) {
   brave_chrome_java_deps +=
@@ -147,26 +191,52 @@ brave_jni_headers_sources = [
   "//brave/android/java/org/chromium/chrome/browser/app/BraveActivity.java",
   "//brave/android/java/org/chromium/chrome/browser/bookmarks/BraveBookmarkBridge.java",
   "//brave/android/java/org/chromium/chrome/browser/brave_account/BraveAccountServiceFactory.java",
-  "//brave/android/java/org/chromium/chrome/browser/brave_leo/BraveLeoMojomHelper.java",
-  "//brave/android/java/org/chromium/chrome/browser/brave_leo/BraveLeoUtils.java",
-  "//brave/android/java/org/chromium/chrome/browser/brave_news/BraveNewsControllerFactory.java",
   "//brave/android/java/org/chromium/chrome/browser/browsing_data/BraveShortcutsUtils.java",
   "//brave/android/java/org/chromium/chrome/browser/cosmetic_filters/BraveCosmeticFiltersUtils.java",
   "//brave/android/java/org/chromium/chrome/browser/misc_metrics/MiscAndroidMetricsFactory.java",
   "//brave/android/java/org/chromium/chrome/browser/ntp/SponsoredRichMediaWebView.java",
   "//brave/android/java/org/chromium/chrome/browser/ntp_background_images/NTPBackgroundImagesBridge.java",
-  "//brave/android/java/org/chromium/chrome/browser/playlist/PlaylistServiceFactoryAndroid.java",
   "//brave/android/java/org/chromium/chrome/browser/preferences/BravePrefServiceBridge.java",
   "//brave/android/java/org/chromium/chrome/browser/preferences/website/BraveShieldsContentSettings.java",
   "//brave/android/java/org/chromium/chrome/browser/referrer/BraveReferrer.java",
   "//brave/android/java/org/chromium/chrome/browser/shields/FilterListServiceFactory.java",
   "//brave/android/java/org/chromium/chrome/browser/sync/BraveSyncDevices.java",
-  "//brave/android/java/org/chromium/chrome/browser/vpn/BraveVpnNativeWorker.java",
-  "//brave/android/java/org/chromium/chrome/browser/vpn/BraveVpnServiceFactoryAndroid.java",
   "//brave/android/java/org/chromium/chrome/browser/webcompat_reporter/WebcompatReporterServiceFactory.java",
   "//brave/android/java/org/chromium/chrome/browser/youtube_script_injector/BraveYouTubeScriptInjectorNativeHelper.java",
-  "//brave/browser/brave_ads/android/java/org/chromium/chrome/browser/BraveAdsNativeHelper.java",
 ]
+
+# Growser-270: removed with the feature.
+if (enable_ai_chat) {
+  brave_jni_headers_sources += [
+    "//brave/android/java/org/chromium/chrome/browser/brave_leo/BraveLeoMojomHelper.java",
+    "//brave/android/java/org/chromium/chrome/browser/brave_leo/BraveLeoUtils.java",
+  ]
+}
+
+# Growser-271: the ads Java is still compiled on Android, so its JNI is too.
+brave_jni_headers_sources += [ "//brave/browser/brave_ads/android/java/org/chromium/chrome/browser/BraveAdsNativeHelper.java" ]
+
+# Growser-272: removed with the feature.
+if (enable_brave_news) {
+  brave_jni_headers_sources += [
+    "//brave/android/java/org/chromium/chrome/browser/brave_news/BraveNewsControllerFactory.java",
+  ]
+}
+
+# Growser-274: removed with the feature.
+if (enable_brave_vpn) {
+  brave_jni_headers_sources += [
+    "//brave/android/java/org/chromium/chrome/browser/vpn/BraveVpnNativeWorker.java",
+    "//brave/android/java/org/chromium/chrome/browser/vpn/BraveVpnServiceFactoryAndroid.java",
+  ]
+}
+
+# Growser-273: removed with the feature.
+if (enable_playlist) {
+  brave_jni_headers_sources += [
+    "//brave/android/java/org/chromium/chrome/browser/playlist/PlaylistServiceFactoryAndroid.java",
+  ]
+}
 
 if (enable_brave_wallet) {
   brave_jni_headers_sources += [

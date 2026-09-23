@@ -23,8 +23,6 @@ import org.chromium.chrome.browser.toolbar.adaptive.AdaptiveToolbarButtonVariant
 import org.chromium.chrome.browser.toolbar.adaptive.BraveBookmarksButtonController;
 import org.chromium.chrome.browser.toolbar.adaptive.BraveDownloadsButtonController;
 import org.chromium.chrome.browser.toolbar.adaptive.BraveHistoryButtonController;
-import org.chromium.chrome.browser.toolbar.adaptive.BraveLeoButtonController;
-import org.chromium.chrome.browser.toolbar.adaptive.BraveWalletButtonController;
 import org.chromium.ui.modaldialog.ModalDialogManager;
 
 /**
@@ -101,25 +99,7 @@ public class BraveAdaptiveToolbarUiCoordinator extends AdaptiveToolbarUiCoordina
         mAdaptiveToolbarButtonController.addButtonVariant(
                 AdaptiveToolbarButtonVariant.DOWNLOADS, downloadsButtonController);
 
-        var leoButtonController =
-                new BraveLeoButtonController(
-                        mContext,
-                        AppCompatResources.getDrawable(mContext, R.drawable.ic_product_brave_leo),
-                        mActivityTabProvider,
-                        mProfileSupplier,
-                        mModalDialogManagerSupplier.get());
-        mAdaptiveToolbarButtonController.addButtonVariant(
-                AdaptiveToolbarButtonVariant.LEO, leoButtonController);
-
-        var walletButtonController =
-                new BraveWalletButtonController(
-                        mContext,
-                        AppCompatResources.getDrawable(
-                                mContext, R.drawable.ic_product_brave_wallet),
-                        mActivityTabProvider,
-                        mProfileSupplier,
-                        mModalDialogManagerSupplier.get());
-        mAdaptiveToolbarButtonController.addButtonVariant(
-                AdaptiveToolbarButtonVariant.WALLET, walletButtonController);
+        // Growser-270/275: Leo and the wallet are out of the product, so the
+        // toolbar shortcut never offers them.
     }
 }

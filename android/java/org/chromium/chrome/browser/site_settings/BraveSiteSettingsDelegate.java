@@ -14,7 +14,6 @@ import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.browser.browsing_data.BraveClearBrowsingDataFragment;
 import org.chromium.chrome.browser.browsing_data.ClearBrowsingDataFragment;
-import org.chromium.chrome.browser.crypto_wallet.BraveWalletPolicy;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
 import org.chromium.components.browser_ui.site_settings.BraveWalletSiteSettingsDelegate;
@@ -52,7 +51,8 @@ public class BraveSiteSettingsDelegate extends ChromeSiteSettingsDelegate
 
     @Override
     public boolean isWalletDisabledByPolicy() {
-        return BraveWalletPolicy.isDisabledByPolicy(mProfile);
+        // Growser-275: the wallet is out of the product.
+        return true;
     }
 
     @SuppressWarnings("NullAway")

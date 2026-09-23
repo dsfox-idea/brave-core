@@ -19,8 +19,6 @@ import android.widget.TextView;
 
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.InternetConnection;
-import org.chromium.chrome.browser.vpn.utils.BraveVpnPrefUtils;
-import org.chromium.chrome.browser.vpn.utils.BraveVpnUtils;
 import org.chromium.components.content_settings.CookieControlsEnforcement;
 import org.chromium.ui.base.ViewUtils;
 import org.chromium.ui.widget.Toast;
@@ -142,25 +140,8 @@ public class IncognitoNewTabPageView extends FrameLayout {
             return;
         }
 
-        // Show CTA only if VPN is supported and user hasn't purchased
-        boolean shouldShowCta =
-                BraveVpnUtils.isVpnFeatureSupported(getContext())
-                        && !BraveVpnPrefUtils.isSubscriptionPurchase();
-
-        if (shouldShowCta) {
-            mVpnCta.setVisibility(View.VISIBLE);
-            mVpnCta.setOnClickListener(
-                    v -> {
-                        if (!InternetConnection.isNetworkAvailable(getContext())) {
-                            Toast.makeText(getContext(), R.string.no_internet, Toast.LENGTH_SHORT)
-                                    .show();
-                        } else {
-                            BraveVpnUtils.openBraveVpnPlansActivity(getContext());
-                        }
-                    });
-        } else {
-            mVpnCta.setVisibility(View.GONE);
-        }
+        // Growser-274: there is no VPN to advertise.
+        mVpnCta.setVisibility(View.GONE);
     }
 
     /**

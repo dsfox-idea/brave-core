@@ -18,7 +18,6 @@ import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveAdsNativeHelper;
 import org.chromium.chrome.browser.BraveRewardsHelper;
 import org.chromium.chrome.browser.app.BraveActivity;
-import org.chromium.chrome.browser.brave_leo.BraveLeoMojomHelper;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.settings.BraveSettingsPreferenceGroupAdapter;
 import org.chromium.chrome.browser.util.TabUtils;
@@ -41,22 +40,11 @@ public class BraveClearBrowsingDataFragment extends ClearBrowsingDataFragment {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
 
-        getPreferenceScreen().addPreference(buildClearLeoAIHistory());
         getPreferenceScreen()
                 .addPreference(
                         BraveRewardsHelper.isRewardsEnabled()
                                 ? buildResetBraveRewardsDataPref()
                                 : buildClearBraveAdsDataPref());
-    }
-
-    private ClearBrowsingDataCheckBoxPreference buildClearLeoAIHistory() {
-        mClearAIChatDataCheckBoxPreference =
-                new ClearBrowsingDataCheckBoxPreference(getContext(), null);
-        mClearAIChatDataCheckBoxPreference.setTitle(R.string.brave_clear_ai_history_title);
-        mClearAIChatDataCheckBoxPreference.setSummary(R.string.brave_clear_ai_history_summary);
-        mClearAIChatDataCheckBoxPreference.setIcon(R.drawable.ic_product_brave_leo);
-
-        return mClearAIChatDataCheckBoxPreference;
     }
 
     private ClickableSpansTextMessagePreference buildResetBraveRewardsDataPref() {
@@ -118,19 +106,7 @@ public class BraveClearBrowsingDataFragment extends ClearBrowsingDataFragment {
     protected void onClearBrowsingData() {
         super.onClearBrowsingData();
 
-        if (mClearAIChatDataCheckBoxPreference != null
-                && mClearAIChatDataCheckBoxPreference.isChecked()) {
-            Profile profile = getProfile();
-            if (profile == null) {
-                return;
-            }
-            Object spinnerSelection =
-                    ((SpinnerPreference) findPreference(PREF_TIME_RANGE)).getSelectedOption();
-            @TimePeriod
-            int lastSelectedTimePeriod =
-                    ((TimePeriodUtils.TimePeriodSpinnerOption) spinnerSelection).getTimePeriod();
-
-            BraveLeoMojomHelper.getInstance(profile).deleteConversations(lastSelectedTimePeriod);
-        }
+        // Growser-270: Leo is out of the product, so there are no
+        // conversations to clear.
     }
 }

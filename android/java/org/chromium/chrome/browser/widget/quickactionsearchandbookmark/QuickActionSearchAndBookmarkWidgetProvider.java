@@ -37,7 +37,6 @@ import org.chromium.base.task.TaskTraits;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveIntentHandler;
 import org.chromium.chrome.browser.IntentHandler;
-import org.chromium.chrome.browser.brave_leo.BraveLeoPrefUtils;
 import org.chromium.chrome.browser.browserservices.intents.WebappConstants;
 import org.chromium.chrome.browser.document.ChromeLauncherActivity;
 import org.chromium.chrome.browser.init.BrowserParts;
@@ -185,10 +184,8 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
         // Widgets are top-level entry points similar to Activities, so
         // accessing the last used profile here is acceptable since
         // there's no existing Profile context to pass through.
-        updateAppWidgetsWithPolicy(
-                appWidgetIds,
-                BraveLeoPrefUtils.isLeoDisabledByPolicy(
-                        ProfileManager.getLastUsedRegularProfile()));
+        // Growser-270: Leo is out of the product.
+        updateAppWidgetsWithPolicy(appWidgetIds, /* isLeoDisabledByPolicy= */ true);
     }
 
     private static void updateAppWidgetsWithPolicy(
@@ -274,7 +271,7 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
                 R.id.layoutSearchWithBrave, createIntent(context, false, ++requestCode));
         views.setOnClickPendingIntent(
                 R.id.ivVoiceSearch, createIntent(context, true, ++requestCode));
-        if (BraveLeoPrefUtils.isLeoEnabled() && !isLeoDisabledByPolicy) {
+        if (!isLeoDisabledByPolicy) {
             views.setViewVisibility(R.id.ibLeo, View.VISIBLE);
             views.setOnClickPendingIntent(
                     R.id.ibLeo,

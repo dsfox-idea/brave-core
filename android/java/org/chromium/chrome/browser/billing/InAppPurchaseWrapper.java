@@ -40,13 +40,9 @@ import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveConstants;
 import org.chromium.chrome.browser.app.BraveActivity;
-import org.chromium.chrome.browser.brave_leo.BraveLeoPrefUtils;
-import org.chromium.chrome.browser.brave_leo.BraveLeoUtils;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.util.LiveDataUtil;
-import org.chromium.chrome.browser.vpn.utils.BraveVpnPrefUtils;
-import org.chromium.chrome.browser.vpn.utils.BraveVpnUtils;
 import org.chromium.ui.widget.Toast;
 
 import java.util.ArrayList;
@@ -642,11 +638,8 @@ public class InAppPurchaseWrapper {
                         }
                     });
         } else {
-            if (isVPNProduct) {
-                BraveVpnPrefUtils.setSubscriptionPurchase(true);
-            } else if (isLeoProduct) {
-                receiptAcknowledged(context, purchase, false, true, false);
-            } else if (isOriginProduct) {
+            // Growser-270/274: the VPN and Leo are out of the product.
+            if (isOriginProduct) {
                 receiptAcknowledged(context, purchase, false, false, true);
             }
         }
@@ -664,25 +657,8 @@ public class InAppPurchaseWrapper {
         } catch (BraveActivity.BraveActivityNotFoundException e) {
             Log.e(TAG, "acknowledgePurchase " + e.getMessage());
         }
-        if (isVPNProduct) {
-            BraveVpnPrefUtils.setSubscriptionPurchase(true);
-            if (activity != null) {
-                BraveVpnUtils.openBraveVpnProfileActivity(activity);
-            }
-        } else if (isLeoProduct && activity != null) {
-            activity.runOnUiThread(
-                    new Runnable() {
-                        @Override
-                        public void run() {
-                            BraveLeoPrefUtils.setIsSubscriptionActive(true);
-                            BraveLeoPrefUtils.setChatPackageName();
-                            BraveLeoPrefUtils.setChatProductId(
-                                    purchase.getProducts().get(0).toString());
-                            BraveLeoPrefUtils.setChatPurchaseToken(purchase.getPurchaseToken());
-                            BraveLeoUtils.bringMainActivityOnTop();
-                        }
-                    });
-        } else if (isOriginProduct && activity != null) {
+        // Growser-270/274: the VPN and Leo are out of the product.
+        if (isOriginProduct && activity != null) {
             final BraveActivity finalActivity = activity;
             ThreadUtils.runOnUiThread(
                     () -> {
@@ -738,9 +714,9 @@ public class InAppPurchaseWrapper {
         if (mInAppMessagesShownThisForeground) {
             return;
         }
-        boolean hasVpnSubscription = BraveVpnPrefUtils.isSubscriptionPurchase();
-        boolean hasLeoSubscription = BraveLeoPrefUtils.getIsSubscriptionActive(profile);
-        if (!hasVpnSubscription && !hasLeoSubscription) {
+        // Growser-270/274: the only subscriptions these messages were for are
+        // out of the product.
+        if (true) {
             return;
         }
         // Register the throttle-reset listener lazily, only after confirming
