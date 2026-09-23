@@ -10,7 +10,10 @@ namespace brave::features {
 BASE_FEATURE(kBraveTranslateEnabled,
              base::FEATURE_ENABLED_BY_DEFAULT);
 
+// Growser-296: on by default - phrases are translated by Apple on the device
+// and never leave it; only the script and its static files come over the
+// network, through our backend.
 BASE_FEATURE(kBraveAppleTranslateEnabled,
-             base::FEATURE_DISABLED_BY_DEFAULT);
+             base::FEATURE_ENABLED_BY_DEFAULT);
 
 }  // namespace brave::features

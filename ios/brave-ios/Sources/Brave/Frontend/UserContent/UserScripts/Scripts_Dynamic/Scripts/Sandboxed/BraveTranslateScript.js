@@ -109,7 +109,9 @@ var gtTimeInfo = {
     'fetchEnd': Date.now() + 1
 };
 var serverParams = '';
-var securityOrigin = 'https://translate.brave.com/';
+// Growser-296: our backend proxies the script's static files; phrases are
+// translated on the device and never reach it.
+var securityOrigin = 'https://backend.growser.org/';
 
 
 try {

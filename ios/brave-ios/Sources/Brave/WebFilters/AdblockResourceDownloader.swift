@@ -14,7 +14,11 @@ public actor AdblockResourceDownloader: Sendable {
 
   /// All the different resources this downloader handles
   static let handledResources: [BraveS3Resource] = {
-    return [.slimList]
+    // Growser-296: no slim list. Brave's bucket answers 403 to anyone without
+    // their service key, so every fetch only told Brave our users' IPs; the
+    // content blocker builds from the default filter list instead, as it does
+    // whenever the slim list is missing.
+    return []
   }()
 
   /// A list of old resources that need to be deleted so as not to take up the user's disk space

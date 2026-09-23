@@ -203,7 +203,8 @@ class BraveTranslateScriptHandler: NSObject, TabContentScript {
 
   private func downloadElementScript() async throws -> String {
     var urlRequest = URLRequest(
-      url: URL(string: "https://translate.brave.com/static/v1/element.js")!
+      // Growser-296: the same script, through our backend.
+      url: URL(string: "https://backend.growser.org/static/v1/element.js")!
     )
     urlRequest.httpMethod = "GET"
 
