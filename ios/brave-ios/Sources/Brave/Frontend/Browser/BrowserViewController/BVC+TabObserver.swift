@@ -356,9 +356,7 @@ extension BrowserViewController {
       ])
     }
 
-    if tab.profile.prefs.isBraveTalkAvailable {
-      injectedScripts.append(BraveTalkScriptHandler())
-    }
+    // Growser-278: no BraveTalkScriptHandler.
 
     if profileController.braveWalletAPI.isAllowed {
       injectedScripts.append(Web3NameServiceScriptHandler())

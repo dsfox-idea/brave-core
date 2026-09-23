@@ -50,7 +50,7 @@ var package = Package(
     .library(name: "PlaylistUI", targets: ["PlaylistUI"]),
     .library(name: "BrowserMenu", targets: ["BrowserMenu"]),
     .library(name: "Web", targets: ["Web"]),
-    .library(name: "BraveTalk", targets: ["BraveTalk"]),
+    // Growser-278: no BraveTalk library.
     .library(name: "Origin", targets: ["Origin"]),
     .plugin(name: "IntentBuilderPlugin", targets: ["IntentBuilderPlugin"]),
     .plugin(name: "LoggerPlugin", targets: ["LoggerPlugin"]),
@@ -73,7 +73,10 @@ var package = Package(
       url: "https://github.com/venmo/Static",
       revision: "622a6804d39515600ead16e6259cb5d5e50f40df"
     ),
-    .package(name: "JitsiMeet", path: "../third_party/JitsiMeet"),
+    // Growser-278: JitsiMeet went with BraveTalk, and with it the
+    // jitsi/webrtc package its own manifest pulls - a SECOND WebRTC, 302 MB,
+    // cloned from GitHub at the 35-50 KB/s this network gets (growser#264).
+    // That clone was the single slowest thing in bringing iOS up.
   ],
   targets: [
     .target(
@@ -114,13 +117,19 @@ var package = Package(
         "BrowserMenu",
         "Web",
         "BraveShields",
-        "BraveTalk",
+        // Growser-278: no BraveTalk.
         "Origin",
       ],
       exclude: [
         "Frontend/UserContent/UserScripts/AllFrames",
         "Frontend/UserContent/UserScripts/MainFrame",
         "Frontend/UserContent/UserScripts/Sandboxed",
+        // Growser-278: Brave Talk is out of the product. The files stay on
+        // disk so upstream merges do not conflict on them; excluding them is
+        // what keeps them out of the app.
+        "Frontend/Settings/Debug/BraveTalkLogsView.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveTalkScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveTalkScript.js",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
@@ -229,9 +238,6 @@ var package = Package(
         .copy("WebFilters/ContentBlocker/Lists/block-trackers.json"),
         .copy("WebFilters/ContentBlocker/Lists/mixed-content-upgrade.json"),
         .copy("WebFilters/ShieldStats/Adblock/Resources/ABPFilterParserData.dat"),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveTalkScript.js"
-        ),
       ],
       plugins: ["LoggerPlugin"]
     ),
@@ -600,21 +606,8 @@ var package = Package(
     .testTarget(name: "BrowserMenuTests", dependencies: ["BrowserMenu"]),
     .plugin(name: "IntentBuilderPlugin", capability: .buildTool()),
     .plugin(name: "LoggerPlugin", capability: .buildTool()),
-    .target(
-      name: "BraveTalk",
-      dependencies: [
-        "Shared", "Preferences", "JitsiMeet", "BraveCore", "Web",
-        .product(name: "Collections", package: "swift-collections"),
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
-    .testTarget(
-      name: "BraveTalkTests",
-      dependencies: [
-        "BraveTalk", "Shared", "TestHelpers", "BraveCore",
-        .product(name: "Collections", package: "swift-collections"),
-      ]
-    ),
+    // Growser-278: the BraveTalk target and its tests are not declared, so
+    // Sources/BraveTalk and Tests/BraveTalkTests are not built.
     .target(
       name: "Origin",
       dependencies: [

@@ -65,14 +65,7 @@ class ScriptFactory {
 
       return script
 
-    case .braveTalkHelper:
-      guard let script = BraveTalkScriptHandler.userScript else {
-        assertionFailure("Cannot load script. This should not happen as it's part of the codebase")
-        throw ScriptLoadFailure.notFound
-      }
-
-      return script
-
+    // Growser-278: no .braveTalkHelper.
     case .braveSkus:
       guard let script = BraveSkusScriptHandler.userScript else {
         assertionFailure("Cannot load script. This should not happen as it's part of the codebase")

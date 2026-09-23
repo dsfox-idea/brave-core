@@ -9,7 +9,7 @@ import BraveNews
 import BraveShared
 import BraveShields
 import BraveStore
-import BraveTalk
+// Growser-278: no BraveTalk.
 import BraveVPN
 import BraveWallet
 import BraveWidgetsModels
@@ -341,19 +341,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return shouldPerformAdditionalDelegateHandling
   }
 
-  func application(
-    _ application: UIApplication,
-    continue userActivity: NSUserActivity,
-    restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
-  ) -> Bool {
-    guard let prefService = AppState.shared.braveCore.profileController?.profile.prefs else {
-      return false
-    }
-    return BraveTalkJitsiCoordinator.sendAppLifetimeEvent(
-      .continueUserActivity(userActivity, restorationHandler: restorationHandler),
-      prefService: prefService
-    )
-  }
+  // Growser-278: application(_:continue:restorationHandler:) existed only to
+  // hand the activity to Brave Talk's Jitsi SDK. Activities reach the app
+  // through SceneDelegate's scene(_:continue:), which is untouched.
 
   func applicationWillTerminate(_ application: UIApplication) {
 

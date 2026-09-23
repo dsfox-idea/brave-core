@@ -44,7 +44,7 @@ extension BrowserViewController: TabManagerDelegate {
     tab.aiChatWebUIHelper = .init(
       tab: tab,
       webDelegate: tab.leoTabHelper,
-      braveTalkJavascript: braveTalkJitsiCoordinator,
+      braveTalkJavascript: nil,  // Growser-278: no Brave Talk.
       profileController: profileController
     )
     tab.aiChatWebUIHelper?.attachPrivacySensitiveTabHelpers = { detachedTab, _ in
@@ -135,21 +135,7 @@ extension BrowserViewController: TabManagerDelegate {
       tab.scriptletsTabHelper = .init(tab: tab)
     }
 
-    tab.braveTalk = .init(tab: tab, coordinator: braveTalkJitsiCoordinator)
-    tab.braveTalk?.onExitCall = { [weak self] in
-      guard let self = self else { return }
-      // When we close the call, redirect to Brave Talk home page if the selected tab is still the
-      // original talk URL
-      if let url = self.tabManager.selectedTab?.visibleURL,
-        let currentHost = url.host,
-        DomainUserScript.braveTalkHelper.associatedDomains.contains(currentHost)
-      {
-        var components = URLComponents()
-        components.host = currentHost
-        components.scheme = url.scheme
-        self.select(url: components.url!, isUserDefinedURLNavigation: false)
-      }
-    }
+    // Growser-278: no tab.braveTalk helper.
 
     tab.braveSearch = .init(tab: tab, rewards: rewards, searchEngines: profile.searchEngines)
     tab.braveSearch?.presentSearchResultClickedInfoBar = { [weak self] in

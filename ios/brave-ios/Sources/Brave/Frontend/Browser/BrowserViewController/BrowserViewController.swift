@@ -7,7 +7,7 @@ import BraveCore
 import BraveNews
 import BraveShared
 import BraveShields
-import BraveTalk
+// Growser-278: no BraveTalk.
 import BraveUI
 import BraveVPN
 import BraveWallet
@@ -266,8 +266,7 @@ public class BrowserViewController: UIViewController {
   var widgetFaviconFetchers: [Task<Favicon, Error>] = []
   let deviceCheckClient: DeviceCheckClient?
 
-  // Brave Talk native implementations
-  let braveTalkJitsiCoordinator: BraveTalkJitsiCoordinator
+  // Growser-278: no Brave Talk coordinator.
 
   /// The currently open WalletStore
   weak var walletStore: WalletStore?
@@ -315,7 +314,6 @@ public class BrowserViewController: UIViewController {
     self.privateBrowsingManager = privateBrowsingManager
     self.feedDataSource = newsFeedDataSource
     self.prefsChangeRegistrar = PrefChangeRegistrar(prefService: profileController.profile.prefs)
-    self.braveTalkJitsiCoordinator = .init(prefService: profileController.profile.prefs)
     self.downloadBackgroundTaskModel = downloadBackgroundTaskModel
 
     feedDataSource.historyAPI = profileController.historyAPI
@@ -444,18 +442,8 @@ public class BrowserViewController: UIViewController {
     }
   }
 
-  override public func viewWillTransition(
-    to size: CGSize,
-    with coordinator: UIViewControllerTransitionCoordinator
-  ) {
-    super.viewWillTransition(to: size, with: coordinator)
-
-    coordinator.animate(
-      alongsideTransition: { context in
-        self.braveTalkJitsiCoordinator.resetPictureInPictureBounds(.init(size: size))
-      }
-    )
-  }
+  // Growser-278: no viewWillTransition override - it only resized Brave
+  // Talk's picture-in-picture window.
 
   override public func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -3388,12 +3376,5 @@ extension BrowserViewController {
   }
 }
 
-extension BraveTalkJitsiCoordinator: AIChatBraveTalkJavascript {
-  @MainActor
-  public func getTranscript() async -> String? {
-    if self.isCallActive {
-      return await jitsiTranscriptProcessor?.getTranscript()
-    }
-    return nil
-  }
-}
+// Growser-278: no AIChatBraveTalkJavascript conformance - Leo has no call
+// transcript to read without Brave Talk.

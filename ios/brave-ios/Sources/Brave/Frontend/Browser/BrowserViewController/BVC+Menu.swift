@@ -516,23 +516,7 @@ extension BrowserViewController {
         }
       )
     }
-    if profileController.profile.prefs.isBraveTalkAvailable {
-      actions.append(
-        .init(id: .braveTalk) { @MainActor [unowned self] _ in
-          self.dismiss(animated: true) {
-            guard let url = URL(string: "https://talk.brave.com/") else { return }
-            self.popToBVC()
-            if pageURL == nil {
-              // Already on NTP
-              self.finishEditingAndSubmit(url)
-            } else {
-              self.openURLInNewTab(url, isPrivileged: false)
-            }
-          }
-          return .none
-        }
-      )
-    }
+    // Growser-278: no Brave Talk menu item.
     if profileController.profile.prefs.isBraveNewsAvailable {
       actions.append(
         .init(id: .braveNews) { @MainActor [unowned self] _ in
