@@ -116,9 +116,11 @@ private struct LockScreenFavoriteView: View {
         .widgetLabel(fav.title ?? "")
         .widgetURL(fav.url)
       } else {
-        Image(braveSystemName: "leo.brave.icon-monochrome")
-          .imageScale(.large)
-          .font(.system(size: 24))
+        // Growser-286: the G, not Leo's lion.
+        Image("growser-monochrome")
+          .resizable()
+          .aspectRatio(contentMode: .fit)
+          .frame(width: 30, height: 30)
           .foregroundColor(Color.black)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
           .background(

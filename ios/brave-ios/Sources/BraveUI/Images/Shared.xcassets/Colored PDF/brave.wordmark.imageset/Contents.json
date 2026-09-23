@@ -1,15 +1,16 @@
 {
-  "images" : [
+  "images": [
     {
-      "filename" : "Brave Wordmark.svg",
-      "idiom" : "universal"
+      "filename": "growser.wordmark.svg",
+      "idiom": "universal"
     }
   ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
+  "info": {
+    "author": "growser#286",
+    "version": 1
   },
-  "properties" : {
-    "preserves-vector-representation" : true
+  "properties": {
+    "preserves-vector-representation": true,
+    "template-rendering-intent": "template"
   }
 }
