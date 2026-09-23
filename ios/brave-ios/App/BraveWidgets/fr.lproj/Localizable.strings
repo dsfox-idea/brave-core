@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Demander à Brave";
+"widgets.askBrave" = "Demander à Growser";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Favoris";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "IA Leo";
 
 /* The name of the feature */
-"widgets.braveNews" = "Actualités Brave";
+"widgets.braveNews" = "Actualités Growser";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Téléchargements";
@@ -35,13 +35,13 @@
 "widgets.newsClusteringWidgetTitle" = "L’essentiel de l’actu";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Actualités Brave est désactivé";
+"widgets.newsUnavailableByPolicy" = "Actualités Growser est désactivé";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Désactivé par la politique de votre organisation";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Ouvrez Brave pour afficher vos favoris ici";
+"widgets.noFavoritesFound" = "Ouvrez Growser pour afficher vos favoris ici";
 
 /* QR Code section title */
 "widgets.QRCode" = "Code QR";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Recherche";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Découvrez comment Brave vous fait gagner du temps et vous protège pendant votre navigation.";
+"widgets.shieldStatsDescription" = "Découvrez comment Growser vous fait gagner du temps et vous protège pendant votre navigation.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Statistiques de confidentialité";
@@ -74,17 +74,17 @@
 "widgets.shortcutsPrivateTabButton" = "Onglet de navigation privée";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Effectuez une recherche sur le Web ou accédez rapidement à vos pages Web dans Brave.";
+"widgets.shortcutsWidgetDescription" = "Effectuez une recherche sur le Web ou accédez rapidement à vos pages Web dans Growser.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Raccourcis";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Découvrez comment Brave vous a protégé pendant votre navigation.";
+"widgets.singleStatDescription" = "Découvrez comment Growser vous a protégé pendant votre navigation.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Statistiques de confidentialité";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Portefeuille Brave";
+"widgets.walletShortcutTitle" = "Portefeuille Growser";
 

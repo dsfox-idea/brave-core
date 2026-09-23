@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Brave आइकन";
+"altAppIcon.braveIconsHeader" = "Growser आइकन";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "ऐप आइकन बदलें";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "ज़्यादा जानें / विकल्प ऑप्ट आउट करें";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "स्पॉन्सर की गई बैकग्राउंड इमेज Brave के स्वतंत्र, यूज़र्स को पहले रखने वाले वेब को सपोर्ट करती हैं। और Big Tech से हटकर, हम आपकी प्राइवेसी को सुरक्षित रखने के लिए ऐड की परफ़ॉर्मेंस को अनाम तरीके से मापते हैं।";
+"NewTabTakeoverInfoBarMessage" = "स्पॉन्सर की गई बैकग्राउंड इमेज Growser के स्वतंत्र, यूज़र्स को पहले रखने वाले वेब को सपोर्ट करती हैं। और Big Tech से हटकर, हम आपकी प्राइवेसी को सुरक्षित रखने के लिए ऐड की परफ़ॉर्मेंस को अनाम तरीके से मापते हैं।";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "नया टैब";
@@ -47,7 +47,7 @@
 "OpenSelectedTabFromTabTrayKeyCodeTitle" = "चुना हुआ टैब खोलें";
 
 /* Title label text for refreshing credentials from brave site. */
-"paywall.alreadyPurchasedTitle" = "Brave.com पर पहले ही खरीद चुके हैं?";
+"paywall.alreadyPurchasedTitle" = "Growser.com पर पहले ही खरीद चुके हैं?";
 
 /* A subtitle shown on the checkout button that denotes that this checkout option is full price */
 "paywall.appStoreCheckoutOptionSubtitle" = "पूरी कीमत";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "%2$@ की छूट के लिए कोड **%1$@**";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Brave अकाउंट";
+"paywall.braveAccountCheckoutOptionTitle" = "Growser अकाउंट";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Brave VPN के बारे में और जानें";
+"paywall.braveVPNLearnMoreButtonTitle" = "Growser VPN के बारे में और जानें";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "कोई प्रोमो कोड है?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "ज़्यादा जानें / विकल्प ऑप्ट आउट करें";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "एक प्राइवेट विज्ञापन पर क्लिक करके Brave Search को सपोर्ट करने के लिए शुक्रिया। हम Big Tech की तरह नहीं करते, बल्कि आपकी प्राइवेसी को बचाने के लिए विज्ञापन के प्रदर्शन को बिना किसी पहचान के मापते हैं।";
+"searchResultAdClickedInfoBarMessage" = "एक प्राइवेट विज्ञापन पर क्लिक करके Growser Search को सपोर्ट करने के लिए शुक्रिया। हम Big Tech की तरह नहीं करते, बल्कि आपकी प्राइवेसी को बचाने के लिए विज्ञापन के प्रदर्शन को बिना किसी पहचान के मापते हैं।";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "लोकेशन बार चुनें";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "ऐप्लिकेशन वर्शन";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo मासिक";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo मासिक";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo वार्षिक";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo वार्षिक";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "माफ़ करें, App Store की कोई रसीद नहीं मिली";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "रद्द करने की तारीख";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "रसीद शेयर करें";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN मासिक";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN मासिक";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN वार्षिक";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN वार्षिक";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "सामान्य ब्राउज़िंग वाला मोड";

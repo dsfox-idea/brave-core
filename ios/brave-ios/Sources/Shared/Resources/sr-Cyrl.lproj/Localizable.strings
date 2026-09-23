@@ -92,7 +92,7 @@
 "ScanQRCodeInvalidDataErrorMessage" = "Подаци нису важећи";
 
 /* Text of the prompt user to setup the camera authorization. */
-"ScanQRCodePermissionErrorMessage" = "Дозволите Brave-у приступ камери вашег уређаја, идите у „Подешавања“ -> „Приватност“ -> „Камера“.";
+"ScanQRCodePermissionErrorMessage" = "Дозволите Growser-у приступ камери вашег уређаја, идите у „Подешавања“ -> „Приватност“ -> „Камера“.";
 
 /* Title for the QR code scanner view. */
 "ScanQRCodeViewTitle" = "Скенирајте QR код";
@@ -119,7 +119,7 @@
 "UnableToAddPassErrorTitle" = "Додавање картице није успело";
 
 /* The message displayed to a user when they try to open a URL that cannot be handled by Brave, or any external app. */
-"UnableToOpenURLError" = "Brave не може да отвори страницу јер има неважећу адресу.";
+"UnableToOpenURLError" = "Growser не може да отвори страницу јер има неважећу адресу.";
 
 /* Title of the message shown when the user attempts to navigate to an invalid link. */
 "UnableToOpenURLErrorTitle" = "Отварање странице није успело";

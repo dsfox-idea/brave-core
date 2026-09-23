@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Aggiungi filtro per URL";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "Il **Player di Brave** è il tuo biglietto d’ingresso a video senza interruzioni e annunci pubblicitari.";
+"AntiAdBlockWarningBravePlayerDescription" = "Il **Player di Growser** è il tuo biglietto d’ingresso a video senza interruzioni e annunci pubblicitari.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Regola le protezioni al posto mio";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Questo sito ha iniziato a fermare alcuni blocchi delle pubblicità, e il sito potrebbe non funzionare come previsto.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Per risolvere questo problema, Brave è in grado di regolare le protezioni al posto tuo. Dopo la regolazione, puoi provare a guardare questo contenuto nel Player di Brave.";
+"AntiAdBlockWarningDescription2" = "Per risolvere questo problema, Growser è in grado di regolare le protezioni al posto tuo. Dopo la regolazione, puoi provare a guardare questo contenuto nel Player di Growser.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Mantieni le impostazioni attuali";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Blocca gli avvisi “Passa all’app”";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Player di Brave";
+"BravePlayer" = "Player di Growser";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Apri sempre i video di questo sito con il Player di Brave";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Apri sempre i video di questo sito con il Player di Growser";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Prova";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Non ora";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Con il Player di Brave puoi guardare i video senza interruzioni.";
+"BravePlayerInfoMessage" = "Con il Player di Growser puoi guardare i video senza interruzioni.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Usa il Player di Brave";
+"BravePlayerInfoTitle" = "Usa il Player di Growser";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Applicazione di filtri ai contenuti";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Torna indietro";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Poiché hai richiesto di bloccare in modo aggressivo i tracker e gli annunci, Brave blocca questo sito prima della prima connessione alla rete.";
+"DomainBlockedPageDescription" = "Poiché hai richiesto di bloccare in modo aggressivo i tracker e gli annunci, Growser blocca questo sito prima della prima connessione alla rete.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave ha impedito il caricamento del seguente sito:";
+"DomainBlockedPageMessage" = "Growser ha impedito il caricamento del seguente sito:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Questo sito potrebbe tentare di tracciare i tuoi comportamenti su altri siti";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "App chiusa";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "I dati di navigazione vengono eliminati automaticamente alla chiusura / riavvio dell'app Brave";
+"ShredOnAppCloseDescription" = "I dati di navigazione vengono eliminati automaticamente alla chiusura / riavvio dell'app Growser";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Schede del sito chiuse";

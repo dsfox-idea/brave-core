@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Спросить Brave";
+"widgets.askBrave" = "Спросить Growser";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Закладки";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "ИИ-помощник Leo";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave News";
+"widgets.braveNews" = "Growser News";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Загрузки";
@@ -35,13 +35,13 @@
 "widgets.newsClusteringWidgetTitle" = "Популярные новости";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Новости Brave отключены";
+"widgets.newsUnavailableByPolicy" = "Новости Growser отключены";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "Отключено политикой вашей организации";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "Откройте Brave, чтобы добавить сюда избранные сайты.";
+"widgets.noFavoritesFound" = "Откройте Growser, чтобы добавить сюда избранные сайты.";
 
 /* QR Code section title */
 "widgets.QRCode" = "QR-код";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "Поиск";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "Информация о том, как Brave экономит ваше время и обеспечивает конфиденциальность в Интернете.";
+"widgets.shieldStatsDescription" = "Информация о том, как Growser экономит ваше время и обеспечивает конфиденциальность в Интернете.";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "Показатели";
@@ -68,23 +68,23 @@
 "widgets.shortcutsNewTabButton" = "Новая вкладка";
 
 /* Button to open video playlist window. */
-"widgets.shortcutsPlaylistButton" = "Brave Плейлист";
+"widgets.shortcutsPlaylistButton" = "Growser Плейлист";
 
 /* Button to open new private browser tab. */
 "widgets.shortcutsPrivateTabButton" = "Приватная вкладка";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "Быстрый доступ к поиску и веб-страницам в Brave.";
+"widgets.shortcutsWidgetDescription" = "Быстрый доступ к поиску и веб-страницам в Growser.";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "Ярлыки";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "Информация о том, как Brave обеспечивает вашу безопасность в Интернете.";
+"widgets.singleStatDescription" = "Информация о том, как Growser обеспечивает вашу безопасность в Интернете.";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Конфиденциальность";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave Кошелек";
+"widgets.walletShortcutTitle" = "Growser Кошелек";
 

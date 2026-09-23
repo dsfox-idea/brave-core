@@ -17,7 +17,7 @@
 "importDataFileSelectorButtonTitle" = "Pilih file...";
 
 /* The message of a Text on screen that explains to the user what type of data can be imported. */
-"importDataFileSelectorMessage" = "Bawa bookmark, riwayat, dan data penelusuran lainnya ke Brave.";
+"importDataFileSelectorMessage" = "Bawa bookmark, riwayat, dan data penelusuran lainnya ke Growser.";
 
 /* The title of the main screen that lets the user import data. The title is shown in the navigation bar. */
 "importDataFileSelectorNavigationTitle" = "Impor Data Penelusuran";
@@ -35,7 +35,7 @@
 "importStateFailureTitle" = "Impor Gagal";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords. */
-"importStatePasswordConflictKeepExistingPasswordsTitle" = "Pertahankan kata sandi dari Brave";
+"importStatePasswordConflictKeepExistingPasswordsTitle" = "Pertahankan kata sandi dari Growser";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user use the passwords that were imported, overwriting your existing passwords. */
 "importStatePasswordConflictKeepImportedPasswordsTitle" = "Gunakan kata sandi dari Safari";
@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Lanjutkan";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Data Anda berhasil diimpor.\nAnda siap melakukan penelusuran dengan Brave.";
+"importStateSuccessMessage" = "Data Anda berhasil diimpor.\nAnda siap melakukan penelusuran dengan Growser.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Berhasil!";

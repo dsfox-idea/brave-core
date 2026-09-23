@@ -86,7 +86,7 @@
 "wallet.addCustomTokenTitle" = "Token";
 
 /* The description of the view shown over a dapps website that describes what adding a new network will do. */
-"wallet.addNetworkDescription" = "Bu, bu ağın Brave Cüzdanı içinde kullanılmasına izin verir.";
+"wallet.addNetworkDescription" = "Bu, bu ağın Growser Cüzdanı içinde kullanılmasına izin verir.";
 
 /* The subtitle of the view shown over a dapps website that requests permission from the user to add a new network. */
 "wallet.addNetworkSubtitle" = "Bu sitenin bir ağ eklemesine izin verilsin mi?";
@@ -161,7 +161,7 @@
 "wallet.auroraPopupDontShowAgain" = "Tekrar gösterme";
 
 /* The footer beneath the auto-lock title and interval duration */
-"wallet.autoLockFooter" = "Brave Cüzdanı'nın otomatik olarak kilitlenmesi için beklemeniz dakika sayısı";
+"wallet.autoLockFooter" = "Growser Cüzdanı'nın otomatik olarak kilitlenmesi için beklemeniz dakika sayısı";
 
 /* The title that appears before an auto-lock interval. Example: Automatically lock after 5 minutes */
 "wallet.autoLockTitle" = "Şu Süreden Sonra Otomatik Kilitle:";
@@ -221,10 +221,10 @@
 "wallet.biometricsSetupFaceId" = "Yüz Kimliği";
 
 /* The sub-title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupSubTitle" = "Brave Cüzdanı'nın kilidini açmak için %@ kullanmak ister misiniz?";
+"wallet.biometricsSetupSubTitle" = "Growser Cüzdanı'nın kilidini açmak için %@ kullanmak ister misiniz?";
 
 /* The title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupTitle" = "Brave Cüzdanı'nın Kilidini %@ ile Aç";
+"wallet.biometricsSetupTitle" = "Growser Cüzdanı'nın Kilidini %@ ile Aç";
 
 /* Type of biometrics. This will be used in Biometric setup screen. */
 "wallet.biometricsSetupTouchId" = "Dokunma Kimliği";
@@ -233,10 +233,10 @@
 "wallet.bitcoinImportExtendedKeyWarning" = "Sadece %@ genişletilmiş anahtarlar desteklenir.";
 
 /* The title for Brave Fee label in Swap. The fee percentage is displayed beside the label. */
-"wallet.braveFeeLabel" = "Brave Ücreti: %@";
+"wallet.braveFeeLabel" = "Growser Ücreti: %@";
 
 /* A disclaimer that appears at the bottom of an swap screen which discloses the fixed Brave fee included in the swap quotes. '%@' will be replaced by a percentage. For example: 'Quote includes a 0.875% Brave fee' */
-"wallet.braveSwapFeeDisclaimer" = "Teklif, %@ tutarında bir Brave ücretini de içerir.";
+"wallet.braveSwapFeeDisclaimer" = "Teklif, %@ tutarında bir Growser ücretini de içerir.";
 
 /* The text beside the striked-through percentage Brave would normally charge for a swap. */
 "wallet.braveSwapFree" = "Ücretsiz";
@@ -251,7 +251,7 @@
 "wallet.btcAvailableBalanceTitle" = "Müsait";
 
 /* A warning displayed in row before the Send button in Send Crypto view when a Bitcoin asset is selected. */
-"wallet.btcOrdinalsUnsupportedWarning" = "Brave Cüzdanı şu anda Bitcoin NFT'lerini (ordinaller) desteklemiyor. Ordinaller barındıran bir adresten BTC göndermek, ordinallerinin istenmeden transfer edilmesine sebep olabilir.";
+"wallet.btcOrdinalsUnsupportedWarning" = "Growser Cüzdanı şu anda Bitcoin NFT'lerini (ordinaller) desteklemiyor. Ordinaller barındıran bir adresten BTC göndermek, ordinallerinin istenmeden transfer edilmesine sebep olabilir.";
 
 /* Description displayed in row beside users pending balance. */
 "wallet.btcPendingBalanceDesc" = "Cüzdan bakiyenizde bekleyen bir değişiklik.";
@@ -452,7 +452,7 @@
 "wallet.creatingWallet" = "Cüzdan Oluşturuluyor...";
 
 /* The title of the crypto tab */
-"wallet.cryptoTitle" = "Brave Cüzdanı";
+"wallet.cryptoTitle" = "Growser Cüzdanı";
 
 /* The title above the input fields for users to input network block explorer urls in Custom Network Details Screen. */
 "wallet.customNetworkBlockExplorerUrlsTitle" = "Blok gezgini URL'leri";
@@ -524,13 +524,13 @@
 "wallet.customTokenTitle" = "Özel Varlık Ekle";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. The '%@' will be the site attempting to connect. For example: "app.uniswap.org wants to interact with Brave Wallet" */
-"wallet.dappsConnectionNotificationOriginTitle" = "%@, Brave Cüzdanı ile etkileşime girmek istiyor";
+"wallet.dappsConnectionNotificationOriginTitle" = "%@, Growser Cüzdanı ile etkileşime girmek istiyor";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. */
-"wallet.dappsConnectionNotificationTitle" = "Bu sayfa, Brave Cüzdanı'yla etkileşimde bulunmak istiyor";
+"wallet.dappsConnectionNotificationTitle" = "Bu sayfa, Growser Cüzdanı'yla etkileşimde bulunmak istiyor";
 
 /* A message that will be displayed under the section header when there is no dapps have been granted wallet connection. */
-"wallet.dappsSettingsConnectedSitesSectionEmpty" = "Brave Cüzdanına bağladığınız DApps burada görüntülenir";
+"wallet.dappsSettingsConnectedSitesSectionEmpty" = "Growser Cüzdanına bağladığınız DApps burada görüntülenir";
 
 /* The title of the section that will list all the permitted dapp connections */
 "wallet.dappsSettingsConnectedSitesSectionTitle" = "Bağlı DApps";
@@ -593,7 +593,7 @@
 "wallet.decimalsPrecision" = "Kesinlik ondalıkları";
 
 /* The message displayed when the user takes a screenshot of their dapp decrypt request. */
-"wallet.decryptMessageScreenshotDetectedMessage" = "Uyarı: Mesajınızın ekran görüntüsü bir bulut dosya hizmetinde saklanıyor ve fotoğraflara erişimi olan herhangi bir uygulama tarafından okunabiliyor olabilir. Brave, bu ekran görüntüsünü kaydetmemenizi ve en kısa sürede silmenizi öneriyor.";
+"wallet.decryptMessageScreenshotDetectedMessage" = "Uyarı: Mesajınızın ekran görüntüsü bir bulut dosya hizmetinde saklanıyor ve fotoğraflara erişimi olan herhangi bir uygulama tarafından okunabiliyor olabilir. Growser, bu ekran görüntüsünü kaydetmemenizi ve en kısa sürede silmenizi öneriyor.";
 
 /* The title of the button to approve a decrypt request from a dapps website. */
 "wallet.decryptRequestApprove" = "İzin Ver";
@@ -716,10 +716,10 @@
 "wallet.ensDomainInterstitialPageButtonProceed" = "Chainstack sunucusunu kullanarak ilerleyin";
 
 /* Description displayed when users chose Brave to ask them if they want the ENS to be resolved every time they enter one. The first '%@' will be replaced with a link to Chainstack's terms of use page. The second '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The third '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.ensDomainInterstitialPageDescription" = "Brave, Ethereum Name Service (ENS) üzerinde bulunan .eth alan adlarını çözmek için, varsayılan olarak Chainstack olan yapılandırdığınız Ethereum Mainnet RPC hizmetini kullanacaktır. Brave, IP adresinizi saklar. Bu özelliği açarsanız Chainstack, birilerinin bu .eth alan adlarını ziyaret etmeye çalıştığını görür, ancak başka hiçbir veriyi görmez. Chainstack'in <a href=%1$@>%2$@</a> ve <a href=%3$@>%4$@</a> belgelerine bakın.";
+"wallet.ensDomainInterstitialPageDescription" = "Growser, Ethereum Name Service (ENS) üzerinde bulunan .eth alan adlarını çözmek için, varsayılan olarak Chainstack olan yapılandırdığınız Ethereum Mainnet RPC hizmetini kullanacaktır. Growser, IP adresinizi saklar. Bu özelliği açarsanız Chainstack, birilerinin bu .eth alan adlarını ziyaret etmeye çalıştığını görür, ancak başka hiçbir veriyi görmez. Chainstack'in <a href=%1$@>%2$@</a> ve <a href=%3$@>%4$@</a> belgelerine bakın.";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS domain to be resolved every time they enter one. */
-"wallet.ensDomainInterstitialPageTitle" = "Brave'de Ethereum Name Service (ENS) Desteği Etkinleştirilsin mi?";
+"wallet.ensDomainInterstitialPageTitle" = "Growser'de Ethereum Name Service (ENS) Desteği Etkinleştirilsin mi?";
 
 /* Title on the button that users can click to enable Brave to resolve the ENS offchain lookup for the domain they entered. */
 "wallet.ensOffchainDomainInterstitialPageButtonProceed" = "Offchain aramasıyla devam et";
@@ -728,7 +728,7 @@
 "wallet.ensOffchainDomainInterstitialPageDescription" = "Bu .eth alan adı, offchain olarak depolanmıştır ve üçüncü taraf ağ geçidi tarafından çözülecektir. ENS offchain aramasını etkinleştirirseniz üçüncü taraf ağ geçidi .eth alan adını ziyaret etmeye çalıştığınızı görecektir. <a href=%1$@>%2$@</a>.";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS Offchain domain to be resolved every time they enter one. */
-"wallet.ensOffchainDomainInterstitialPageTitle" = "Brave'de Ethereum Name Service (ENS) offchain araması etkinleştirilsin mi?";
+"wallet.ensOffchainDomainInterstitialPageTitle" = "Growser'de Ethereum Name Service (ENS) offchain araması etkinleştirilsin mi?";
 
 /* Button title when requesting to do an ENS off chain lookup. */
 "wallet.ensOffchainGatewayButton" = "ENS Alan Adını Kullan";
@@ -737,7 +737,7 @@
 "wallet.ensOffchainGatewayDesc" = "Bir ENS adresi girmişsiniz gibi görünüyor. Bu talebi çözmek için bir üçüncü taraf çözümleyici kullanmamız gerekecek. Bu işlem, .eth alan adınızın sızmamasını ve işleminizin güvenli olmasını sağlar.";
 
 /* Title shown send address / ENS domain when requesting to do an ENS off chain lookup. */
-"wallet.ensOffchainGatewayTitle" = "Brave, .eth alan adlarını çözmek için offchain ağ geçitlerini kullanmayı destekler.";
+"wallet.ensOffchainGatewayTitle" = "Growser, .eth alan adlarını çözmek için offchain ağ geçitlerini kullanmayı destekler.";
 
 /* The description for the options to allow Ethereum Name service domain names offchain. '%@' will be replaced with a url to explain more about ENS offchain lookup. */
 "wallet.ensOffchainResolveMethodDescription" = "ENS offchain araması gizlilik hususları hakkında [daha fazla bilgi edinin](%@)";
@@ -962,7 +962,7 @@
 "wallet.legalTitle" = "Başlamadan Önce";
 
 /* The responsibility explained in screen for users to check indicates they understand before setting up a wallet. */
-"wallet.legalUserResponsibility" = "Bunun bir kendi kendini koruma cüzdanı olduğunu ve ilişkili fonlardan, varlıklardan veya hesaplardan ve cüzdanımı güvence altına almak, korumak ve yedeklemek için uygun önlemleri almaktan yalnızca benim sorumlu olduğumu anlıyorum. Brave cüzdanıma erişemeyeceğini veya benim adıma işlemleri tersine çeviremeyeceğini ve kurtarma cümlemin kayıp bir parola, çalıntı cihaz veya benzeri bir durum durumunda yeniden erişim kazanmanın TEK yolu olduğunu anlıyorum.";
+"wallet.legalUserResponsibility" = "Bunun bir kendi kendini koruma cüzdanı olduğunu ve ilişkili fonlardan, varlıklardan veya hesaplardan ve cüzdanımı güvence altına almak, korumak ve yedeklemek için uygun önlemleri almaktan yalnızca benim sorumlu olduğumu anlıyorum. Growser cüzdanıma erişemeyeceğini veya benim adıma işlemleri tersine çeviremeyeceğini ve kurtarma cümlemin kayıp bir parola, çalıntı cihaz veya benzeri bir durum durumunda yeniden erişim kazanmanın TEK yolu olduğunu anlıyorum.";
 
 /* The title of the lock option inside the menu when user clicks the three dots button beside assets search button. */
 "wallet.lock" = "Kilitle";
@@ -1025,13 +1025,13 @@
 "wallet.meldTransactionPartner" = "İşlem Ortağı";
 
 /* The description of the pop up when user first time open buy screen in Brave Wallet. */
-"wallet.meldTransactionPartnerDescription" = "Brave Cüzdan, bölgenizdeki çeşitli kripto sağlayıcılarını toplamak ve göstermek için Meld.io kullanır. İşlemi tamamlamak için cüzdan adresiniz ve ülke kodunuz dahil olmak üzere bilgilerinizi Meld.io ile paylaşacağız. Daha fazla bilgi için lütfen Meld'in kullanım koşullarını okuyun.";
+"wallet.meldTransactionPartnerDescription" = "Growser Cüzdan, bölgenizdeki çeşitli kripto sağlayıcılarını toplamak ve göstermek için Meld.io kullanır. İşlemi tamamlamak için cüzdan adresiniz ve ülke kodunuz dahil olmak üzere bilgilerinizi Meld.io ile paylaşacağız. Daha fazla bilgi için lütfen Meld'in kullanım koşullarını okuyun.";
 
 /* The description of the checkbox for the pop up when user first time open buy screen in Brave Wallet. */
 "wallet.meldTransactionPartnerLegal" = "[Meld'in Kullanım Koşulları]'nı okudum ve kabul ediyorum(%@)";
 
 /* The title shown on the wallet settings page, and the value shown when selecting the default wallet as Brave Wallet in wallet settings. */
-"wallet.module" = "Brave Cüzdanı";
+"wallet.module" = "Growser Cüzdanı";
 
 /* A button title for user to open more option in asset details screen other than buy/send/swap. */
 "wallet.more" = "Daha fazla";
@@ -1079,7 +1079,7 @@
 "wallet.newSiteConnectFooter" = "Yalnızca güvendiğiniz sitelere bağlanın.";
 
 /* The message displayed below the dapp's origin url in new site connection screen. */
-"wallet.newSiteConnectMessage" = "Brave Cüzdan'a Bağlan";
+"wallet.newSiteConnectMessage" = "Growser Cüzdan'a Bağlan";
 
 /* The transaction edit error alert button which will dismiss the alert. */
 "wallet.newSiteConnectScreenTitle" = "Bağlan";
@@ -1127,7 +1127,7 @@
 "wallet.nftDetailTokenStandard" = "Token Standardı";
 
 /* The title of the alert that asks users either to enable NFT discovery or import manually. `SimpleHash` is the third-party service name, so it does not need to be translated. */
-"wallet.nftDiscoveryCalloutDescription" = "Brave Cüzdan, NFT'lerinizi otomatik olarak görüntülemek için üçüncü taraf bir hizmet kullanabilir. Brave, bu hizmeti sağlamak için cüzdan adreslerinizi SimpleHash ile paylaşacaktır. Daha fazla bilgi alın.";
+"wallet.nftDiscoveryCalloutDescription" = "Growser Cüzdan, NFT'lerinizi otomatik olarak görüntülemek için üçüncü taraf bir hizmet kullanabilir. Growser, bu hizmeti sağlamak için cüzdan adreslerinizi SimpleHash ile paylaşacaktır. Daha fazla bilgi alın.";
 
 /* This is the same `Learn more` at the end of `nftDiscoveryCalloutDescription`, but we need a separat translation to detect the range of it in order to build some attributed strings. */
 "wallet.nftDiscoveryCalloutDescriptionLearnMore" = "Daha fazla bilgi edinin";
@@ -1163,10 +1163,10 @@
 "wallet.nftRemoveFromWallet" = "Cüzdanda Gösterme";
 
 /* The description of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertDescription" = "NFT, Brave Cüzdanı'ndan kaldırılacak ama blok zincirinde kalacaktır. Eğer kaldırırsanız ve sonradan fikrinizi değiştirirseniz NFT'yi manuel olarak tekrar içe aktarmanız gerekecektir.";
+"wallet.nftRemoveFromWalletAlertDescription" = "NFT, Growser Cüzdanı'ndan kaldırılacak ama blok zincirinde kalacaktır. Eğer kaldırırsanız ve sonradan fikrinizi değiştirirseniz NFT'yi manuel olarak tekrar içe aktarmanız gerekecektir.";
 
 /* The title of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertTitle" = "Brave Cüzdanı'ndan kaldırılsın mı?";
+"wallet.nftRemoveFromWalletAlertTitle" = "Growser Cüzdanı'ndan kaldırılsın mı?";
 
 /* The description of the NFTs row in Account Details when user has zero or multiple NFTs. */
 "wallet.nftsDescription" = "%d NFT";
@@ -1217,7 +1217,7 @@
 "wallet.onboardingNetworkSelectionTitle" = "Desteklenen Ağlar";
 
 /* The subtitle of the last step of creating a new wallet. */
-"wallet.onbordingCompletedSubTitle" = "Brave Cüzdanınız kullanıma hazır.";
+"wallet.onbordingCompletedSubTitle" = "Growser Cüzdanınız kullanıma hazır.";
 
 /* The title of the last step of creating a new wallet. */
 "wallet.onbordingCompletedTitle" = "Artık hazırsın!";
@@ -1274,7 +1274,7 @@
 "wallet.portfolioPageTitle" = "Portföy";
 
 /* The message displayed when the user takes a screenshot of their private key */
-"wallet.privateKeyScreenshotDetectedMessage" = "Uyarı: Özel anahtarınızın ekran görüntüsü bir bulut dosya hizmetine yedeklenebilir ve fotoğraflarınıza erişimi olan herhangi bir uygulama tarafından okunabilir. Brave, bu ekran görüntüsünü saklamamanızı ve mümkün olduğunca çabuk şekilde silmenizi önerir.";
+"wallet.privateKeyScreenshotDetectedMessage" = "Uyarı: Özel anahtarınızın ekran görüntüsü bir bulut dosya hizmetine yedeklenebilir ve fotoğraflarınıza erişimi olan herhangi bir uygulama tarafından okunabilir. Growser, bu ekran görüntüsünü saklamamanızı ve mümkün olduğunca çabuk şekilde silmenizi önerir.";
 
 /* The title for Protocol Fee label in Swap. The fee percentage is displayed beside the label. */
 "wallet.protocolFeeLabel" = "Protokol Ücreti: %@";
@@ -1316,7 +1316,7 @@
 "wallet.purchaseMethodButtonTitle" = "Ödeme yöntemini seç";
 
 /* The message displayed when the user takes a screenshot of their recovery phrase */
-"wallet.recoveryPhraseScreenshotDetectedMessage" = "Uyarı: Kurtarma ifadenizin ekran görüntüsü bir bulut dosya hizmetine yedeklenebilir ve fotoğraflarınıza erişimi olan herhangi bir uygulama tarafından okunabilir. Brave, bu ekran görüntüsünü saklamamanızı ve mümkün olduğunca çabuk şekilde silmenizi önerir.";
+"wallet.recoveryPhraseScreenshotDetectedMessage" = "Uyarı: Kurtarma ifadenizin ekran görüntüsü bir bulut dosya hizmetine yedeklenebilir ve fotoğraflarınıza erişimi olan herhangi bir uygulama tarafından okunabilir. Growser, bu ekran görüntüsünü saklamamanızı ve mümkün olduğunca çabuk şekilde silmenizi önerir.";
 
 /* A description for a refresh icon that when pressed receives a new snap quote for the currently swap assets */
 "wallet.refreshMarketPriceLabel" = "Piyasa fiyatını yenileyin";
@@ -1349,7 +1349,7 @@
 "wallet.repeatedPasswordPlaceholder" = "Şifreyi yeniden gir";
 
 /* A label for toggle for user to use to indicate importing a legacy brave wallet or not */
-"wallet.restoreLegacyBraveWalletToggleTitle" = "Eski sürüm Brave kripto cüzdanlarından içe aktarım yapmak istiyor musunuz?";
+"wallet.restoreLegacyBraveWalletToggleTitle" = "Eski sürüm Growser kripto cüzdanlarından içe aktarım yapmak istiyor musunuz?";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As to gain access to your assets from a different device */
 "wallet.restoreWalletBackButtonTitle" = "Cüzdanı Geri Yükleyin";
@@ -1559,7 +1559,7 @@
 "wallet.settingsResetWalletAlertMessage" = "Bu eylem geri alınamaz. Kurtarma ifadeniz, kripto varlıklarınıza yeniden erişim hakkını elde etmenin tek yoludur.";
 
 /* The title the confirmation dialog when resetting the wallet. As in to erase the users wallet from the device */
-"wallet.settingsResetWalletAlertTitle" = "Brave Cüzdanı'nı sıfırlamak istediğinizden emin misiniz?";
+"wallet.settingsResetWalletAlertTitle" = "Growser Cüzdanı'nı sıfırlamak istediğinizden emin misiniz?";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As in the first step of an onboarding process is to welcome a user. */
 "wallet.setupCryptoButtonBackButtonTitle" = "Hoş geldiniz";
@@ -1568,13 +1568,13 @@
 "wallet.setupCryptoButtonTitle" = "Başlayın";
 
 /* The subtitle displayed in the section for user that need to create a brand new wallet */
-"wallet.setupCryptoCreateNewSubTitle" = "Brave Cüzdanı'nı kullanmaya dakikalar içinde başlayın.";
+"wallet.setupCryptoCreateNewSubTitle" = "Growser Cüzdanı'nı kullanmaya dakikalar içinde başlayın.";
 
 /* The title displayed in the section for user that need to create a brand new wallet */
 "wallet.setupCryptoCreateNewTitle" = "Yeni bir cüzdana mı ihtiyacınız var?";
 
 /* The disclaimer text at the bottom of the first step of onboarding flow. */
-"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Brave ve Brave logosu, Brave'in tescilli ticari markalarıdır. Diğer ürün isimleri ve logoları, ilgili kurumların tescilli ticari markaları olabilir. Tüm hakları saklıdır.";
+"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Growser ve Growser logosu, Growser'in tescilli ticari markalarıdır. Diğer ürün isimleri ve logoları, ilgili kurumların tescilli ticari markaları olabilir. Tüm hakları saklıdır.";
 
 /* The subtitle displayed in the section for user that need to restore an existed wallet */
 "wallet.setupCryptoRestoreSubTitle" = "Mevcut cüzdanınızı içe aktarın.";
@@ -1583,7 +1583,7 @@
 "wallet.setupCryptoRestoreTitle" = "Zaten bir cüzdanınız var mı?";
 
 /* The subtitle displayed on the 'setup crypto' onboarding screen */
-"wallet.setupCryptoSubtitle" = "Kripto ve NFT'lerinizin kontrolünü elinize alın. Brave Cüzdanı Ethereum, EVM zincirleri, Solana ve daha fazlasını destekler.";
+"wallet.setupCryptoSubtitle" = "Kripto ve NFT'lerinizin kontrolünü elinize alın. Growser Cüzdanı Ethereum, EVM zincirleri, Solana ve daha fazlasını destekler.";
 
 /* The title displayed on the 'setup crypto' onboarding screen */
 "wallet.setupCryptoTitle" = "Tarayıcıya özgü.\nKendi kendini koruyan.\nVe çok zincirli.";
@@ -1637,10 +1637,10 @@
 "wallet.signedTransactionTitle" = "İşlem İmzalandı";
 
 /* The title of the view shown above a Sign In With Ethereum request. */
-"wallet.signInWithBraveWallet" = "Brave Cüzdan'la oturum açın";
+"wallet.signInWithBraveWallet" = "Growser Cüzdan'la oturum açın";
 
 /* The title of the view shown when a security issue is detected with a Sign In With Ethereum request. */
-"wallet.signInWithBraveWalletMessage" = "%1$@ oturumu açıyorsunuz. Brave Cüzdanı cüzdan adresinizi %2$@ ile paylaşacak.";
+"wallet.signInWithBraveWalletMessage" = "%1$@ oturumu açıyorsunuz. Growser Cüzdanı cüzdan adresinizi %2$@ ile paylaşacak.";
 
 /* A warning message to tell users that the sign request message contains consecutive new-line characters. */
 "wallet.signMessageConsecutiveNewlineWarning" = "Ardışık yeni satır karakterleri tespit edildi!";
@@ -1706,10 +1706,10 @@
 "wallet.snsDomainInterstitialPageButtonProceed" = "Bir SNS sunucusu kullanarak ilerleyin";
 
 /* Description displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. The first '%@' will be replaced with a link to Brave's wiki page which will link to the providersterms of use page and privacy policy page. The last '%@' will be replaced with the value of 'snsDomainInterstitialPagePrivacyPolicy'. */
-"wallet.snsDomainInterstitialPageDescription" = "Brave, .sol alan adlarını çözmek için bir üçüncü taraf yazılımı kullanacak. Brave, IP adresinizi gizler. Bunu etkinleştirirseniz, üçüncü taraf yazılımı birilerinin bu .sol alanlarını ziyaret etmeye çalıştığını görecek fakat başka bir şey göremeyecektir. Hangi üçüncü taraf yazılımlarını kullandığımız ve bu yazılımların gizlilik politikaları hakkında daha fazla bilgi için lütfen <a href=%@>yardım sayfamıza</a> bakın.";
+"wallet.snsDomainInterstitialPageDescription" = "Growser, .sol alan adlarını çözmek için bir üçüncü taraf yazılımı kullanacak. Growser, IP adresinizi gizler. Bunu etkinleştirirseniz, üçüncü taraf yazılımı birilerinin bu .sol alanlarını ziyaret etmeye çalıştığını görecek fakat başka bir şey göremeyecektir. Hangi üçüncü taraf yazılımlarını kullandığımız ve bu yazılımların gizlilik politikaları hakkında daha fazla bilgi için lütfen <a href=%@>yardım sayfamıza</a> bakın.";
 
 /* Title displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. */
-"wallet.snsDomainInterstitialPageTitle" = "Brave'de Solana Name Service (SNS) Desteği Etkinleştirilsin mi?";
+"wallet.snsDomainInterstitialPageTitle" = "Growser'de Solana Name Service (SNS) Desteği Etkinleştirilsin mi?";
 
 /* A description of an Solana account, displayed in Accounts tab. */
 "wallet.solAccountDescription" = "Solana + SVM Zincirleri";
@@ -1817,7 +1817,7 @@
 "wallet.solanaSignTransactionDetails" = "Detaylar";
 
 /* The warning message to let users understand the risk of using Brave Wallet to sign any transaction. */
-"wallet.solanaSignTransactionWarning" = "Brave'in imzalamanız halinde ne olacağını doğrulayamayacağını unutmayın. Bir imza, hesabınıza ve adınıza yapılacak, hesabınızın ve kripto varlıklarınızın tam kontrolünü talepte bulunan siteye devretmek de dahil olmak üzere (fakat bununla sınırlı olmaksızın) neredeyse her türlü değişikliği yetkilendirebilir. Sadece bu eylemi gerçekleştirmek istediğinizden eminseniz ve talepte bulunan siteye güveniyorsanız imzalayın.";
+"wallet.solanaSignTransactionWarning" = "Growser'in imzalamanız halinde ne olacağını doğrulayamayacağını unutmayın. Bir imza, hesabınıza ve adınıza yapılacak, hesabınızın ve kripto varlıklarınızın tam kontrolünü talepte bulunan siteye devretmek de dahil olmak üzere (fakat bununla sınırlı olmaksızın) neredeyse her türlü değişikliği yetkilendirebilir. Sadece bu eylemi gerçekleştirmek istediğinizden eminseniz ve talepte bulunan siteye güveniyorsanız imzalayın.";
 
 /* The title displayed above the value of a Solana swap transaction in transaction confirmation view, transaction details view and transaction summary rows. */
 "wallet.solanaSwapTransactionTitle" = "Takas İşlemi";
@@ -1913,7 +1913,7 @@
 "wallet.swapCryptoToTitle" = "Şuraya:";
 
 /* The description of where user will see once a test network has been picked in swap screen. '%@' will be replaced with a network such as 'Rinkeby Test Network' or 'Ropsten Test Network' */
-"wallet.swapCryptoUnsupportNetworkBody" = "Brave şu anda %@ ağında takası desteklemiyor. Lütfen desteklenen bir zincire geçin.";
+"wallet.swapCryptoUnsupportNetworkBody" = "Growser şu anda %@ ağında takası desteklemiyor. Lütfen desteklenen bir zincire geçin.";
 
 /* The title below account picker when user has selected a test network to swap cryptos */
 "wallet.swapCryptoUnsupportNetworkTitle" = "Desteklenmeyen zincir";
@@ -1925,7 +1925,7 @@
 "wallet.swapDexAggrigatorDisclaimer" = "%1$@ bir işlemi gerçekleştirmek için (teklif alımları dahil) %2$@ adresini ve IP adresini işleyecektir. %3$@ bu verileri SADECE işlemi gerçekleştirmek amacıyla kullanacaktır.";
 
 /* A disclaimer note shown on the Swap screen. '%@' will be replaced by a company name, ex. '0x' / 'Jupiter'. 'DEX aggregator' is a type of blockchain-based service (decentralized exchange) */
-"wallet.swapDexAggrigatorNote" = "Brave, bir DEX toplayıcısı olarak %@ platformunu kullanır.";
+"wallet.swapDexAggrigatorNote" = "Growser, bir DEX toplayıcısı olarak %@ platformunu kullanır.";
 
 /* The 'Limit' order type. Limit orders only execute when the price requirements are met */
 "wallet.swapLimitOrderType" = "Limit";
@@ -2177,16 +2177,16 @@
 "wallet.txStatusViewInActivity" = "Etkinlikte Görüntüle";
 
 /* Description displayed when users chose Brave to ask them if they want the Unstoppable Domains to be resolved every time they enter one. The first '%@' will be replaced with a list of supported TLDs like '.x' or '.bitcoin'. The second '%@' be replaced with a link to Chainstack's terms of use page. The third '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The fourth '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.udDomainInterstitialPageDescription" = "Unstoppable Domains üzerindeki alan adları. Brave, IP adresinizi gizler. Bunu etkinleştirirseniz, Chainstack birilerinin bu alanları ziyaret etmeye çalıştığını görecek fakat başka bir şey göremeyecektir. Chainstack'in <a href=%1$@>%2$@</a> ve <a href=%3$@>%4$@</a> bölümlerine bakın.";
+"wallet.udDomainInterstitialPageDescription" = "Unstoppable Domains üzerindeki alan adları. Growser, IP adresinizi gizler. Bunu etkinleştirirseniz, Chainstack birilerinin bu alanları ziyaret etmeye çalıştığını görecek fakat başka bir şey göremeyecektir. Chainstack'in <a href=%1$@>%2$@</a> ve <a href=%3$@>%4$@</a> bölümlerine bakın.";
 
 /* The intro displayed below `udDomainInterstitialPageTitle`. */
-"wallet.udDomainInterstitialPageIntro" = "Brave, çözümleme yapmak için varsayılan olarak Chainstack'i kullanan yapılandırılmış Ethereum RPC hizmeti olacak:";
+"wallet.udDomainInterstitialPageIntro" = "Growser, çözümleme yapmak için varsayılan olarak Chainstack'i kullanan yapılandırılmış Ethereum RPC hizmeti olacak:";
 
 /* The title of the button that user can tap to reveal more unstoppable domain extensions we support to resolve. */
 "wallet.udDomainInterstitialPageMore" = "+ daha fazla";
 
 /* Title displayed when users chose Brave to ask them if they want the Unstoppable Domains domain to be resolved every time they enter one. */
-"wallet.udDomainInterstitialPageTitle" = "Brave'de Unstoppable Domains desteği etkinleştirilsin mi?";
+"wallet.udDomainInterstitialPageTitle" = "Growser'de Unstoppable Domains desteği etkinleştirilsin mi?";
 
 /* The description for the options to allow Unstoppable Domain domain names. '%@' will be replaced with a url to explain more about Unstoppable Domains. */
 "wallet.udResolveMethodDescription" = "Unstoppable Domains'in gizlilik hususları hakkında [daha fazla bilgi edinin](%@).";

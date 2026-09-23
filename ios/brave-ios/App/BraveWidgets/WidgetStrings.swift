@@ -15,7 +15,7 @@ extension Strings {
     public static let noFavoritesFound = NSLocalizedString(
       "widgets.noFavoritesFound",
       bundle: widgetBundle,
-      value: "Please open Brave to view your favorites here",
+      value: "Please open Growser to view your favorites here",
       comment: "This shows when you add a widget but have no favorites added in your app"
     )
 
@@ -43,7 +43,7 @@ extension Strings {
     public static let shortcutsWidgetDescription = NSLocalizedString(
       "widgets.shortcutsWidgetDescription",
       bundle: widgetBundle,
-      value: "Quick access to search the web or open web pages in Brave.",
+      value: "Quick access to search the web or open web pages in Growser.",
       comment: "Description for shortcuts widget on 'add widget' screen."
     )
 
@@ -85,7 +85,7 @@ extension Strings {
     public static let shieldStatsDescription = NSLocalizedString(
       "widgets.shieldStatsDescription",
       bundle: widgetBundle,
-      value: "A summary of how Brave saves you time and protects you online.",
+      value: "A summary of how Growser saves you time and protects you online.",
       comment: "Description for Brave Shields widget on 'add widget' screen."
     )
 
@@ -106,7 +106,7 @@ extension Strings {
     public static let singleStatDescription = NSLocalizedString(
       "widgets.singleStatDescription",
       bundle: widgetBundle,
-      value: "A summary of how Brave has protected you online.",
+      value: "A summary of how Growser has protected you online.",
       comment: "Description for Brave Shields single stat widget on 'add widget' screen."
     )
 
@@ -120,7 +120,7 @@ extension Strings {
     public static let walletShortcutTitle = NSLocalizedString(
       "widgets.walletShortcutTitle",
       bundle: widgetBundle,
-      value: "Brave Wallet",
+      value: "Growser Wallet",
       comment: "Description for the Brave Wallet option on the 'shortcuts' widget."
     )
     public static let bookmarksMenuItem = NSLocalizedString(
@@ -175,7 +175,7 @@ extension Strings {
     public static let braveNews = NSLocalizedString(
       "widgets.braveNews",
       bundle: widgetBundle,
-      value: "Brave News",
+      value: "Growser News",
       comment: "The name of the feature"
     )
     public static let braveLeo = NSLocalizedString(
@@ -187,7 +187,7 @@ extension Strings {
     public static let askBrave = NSLocalizedString(
       "widgets.askBrave",
       bundle: widgetBundle,
-      value: "Ask Brave",
+      value: "Ask Growser",
       comment:
         "Title for Ask Brave shortcut. Brave is the company name and should not be translated"
     )
@@ -201,7 +201,7 @@ extension Strings {
     public static let newsUnavailableByPolicy = NSLocalizedString(
       "widgets.newsUnavailableByPolicy",
       bundle: widgetBundle,
-      value: "Brave News is Disabled",
+      value: "Growser News is Disabled",
       comment: "Displayed on a news widget wont load due to admin policies"
     )
     public static let newsUnavailableByPolicyDescription = NSLocalizedString(

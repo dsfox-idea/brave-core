@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Iconos de Brave";
+"altAppIcon.braveIconsHeader" = "Iconos de Growser";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "Cambiar el icono de la app";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "Más información / Opciones de exclusión";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "Las imágenes de fondo patrocinadas apoyan la misión de Brave de desarrollar una Web independiente y orientada al usuario. Y a diferencia de Big Tech, medimos el rendimiento de los anuncios de forma anónima para preservar tu privacidad.";
+"NewTabTakeoverInfoBarMessage" = "Las imágenes de fondo patrocinadas apoyan la misión de Growser de desarrollar una Web independiente y orientada al usuario. Y a diferencia de Big Tech, medimos el rendimiento de los anuncios de forma anónima para preservar tu privacidad.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "Nueva pestaña";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "Código **%1$@** para %2$@ de descuento";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Cuenta de Brave";
+"paywall.braveAccountCheckoutOptionTitle" = "Cuenta de Growser";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Más información sobre VPN de Brave";
+"paywall.braveVPNLearnMoreButtonTitle" = "Más información sobre VPN de Growser";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "¿Tienes un código promocional?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "Más información / Opciones de exclusión";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "Gracias por apoyar al Buscador de Brave al hacer clic en un anuncio privado. A diferencia de Big Tech, medimos el rendimiento de los anuncios de forma anónima para preservar tu privacidad.";
+"searchResultAdClickedInfoBarMessage" = "Gracias por apoyar al Buscador de Growser al hacer clic en un anuncio privado. A diferencia de Big Tech, medimos el rendimiento de los anuncios de forma anónima para preservar tu privacidad.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "Seleccionar barra de ubicación";
@@ -110,7 +110,7 @@
 "ShowPreviousTabTitle" = "Mostrar pestaña anterior";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields */
-"showShieldsTitle" = "Abrir Protecciones de Brave";
+"showShieldsTitle" = "Abrir Protecciones de Growser";
 
 /* Hardware shortcut to open the tab tray from a tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "ShowTabTrayFromTabKeyCodeTitle" = "Mostrar todas las pestañas";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "Versión de la aplicación";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo mensual";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo mensual";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo anual";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo anual";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "Lo sentimos, no se encontraron recibos de la App Store";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "Fecha de cancelación";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "Compartir Recibo";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN mensual";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN mensual";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN anual";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN anual";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "Modo de navegación normal";

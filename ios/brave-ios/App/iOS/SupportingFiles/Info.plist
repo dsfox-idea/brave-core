@@ -76,15 +76,15 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This lets you take and upload photos.</string>
 	<key>NSFaceIDUsageDescription</key>
-	<string>This authenticates your access to Brave</string>
+	<string>This authenticates your access to Growser</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Websites you visit may request your location.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>This allows Brave to submit search queries using your voice.</string>
+	<string>This allows Growser to submit search queries using your voice.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>This lets you save photos.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>This permission is used to enable Apple Advanced Speech Recognition. If not allowed `on device` recognition will be used and searches will be totally private. Brave does not store or share your voice searches.</string>
+	<string>This permission is used to enable Apple Advanced Speech Recognition. If not allowed `on device` recognition will be used and searches will be totally private. Growser does not store or share your voice searches.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>LockScreenFavoriteConfigurationIntent</string>

@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Додај филтер по URL-у";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave плејер** је ваша карта за гледање видео-снимака без огласа и прекида.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser плејер** је ваша карта за гледање видео-снимака без огласа и прекида.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Подеси ми штитове";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Овај сајт је почео да блокира неке блокаторе огласа, што значи да његова страница можда неће радити како је очекивано.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Да би решио овај проблем, Brave може да подеси ваше штитове уместо вас. Након подешавања, можете да гледате овај садржај у Brave плејеру.";
+"AntiAdBlockWarningDescription2" = "Да би решио овај проблем, Growser може да подеси ваше штитове уместо вас. Након подешавања, можете да гледате овај садржај у Growser плејеру.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Задржи тренутна подешавања";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Блокирај обавештења „Пређите на апликацију“";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave плејер";
+"BravePlayer" = "Growser плејер";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Увек отварај видео-садржај са овог сајта у Brave плејеру";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Увек отварај видео-садржај са овог сајта у Growser плејеру";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Испробајте";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Не сада";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave плејер вам омогућава гледање видео-садржаја без прекида.";
+"BravePlayerInfoMessage" = "Growser плејер вам омогућава гледање видео-садржаја без прекида.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Гледајте у Brave плејеру";
+"BravePlayerInfoTitle" = "Гледајте у Growser плејеру";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Филтрирање садржаја";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Иди назад";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Пошто сте тражили агресивно блокирање праћења и огласа, Brave блокира овај сајт пре прве везе са мрежом.";
+"DomainBlockedPageDescription" = "Пошто сте тражили агресивно блокирање праћења и огласа, Growser блокира овај сајт пре прве везе са мрежом.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave је спречио учитавање следећег сајта:";
+"DomainBlockedPageMessage" = "Growser је спречио учитавање следећег сајта:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Овај сајт можда може покушати да вас прати на другим сајтовима";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "По затварању апликације";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Подаци о прегледању се аутоматски уништавају када се Brave апликација затвори / поново покрене";
+"ShredOnAppCloseDescription" = "Подаци о прегледању се аутоматски уништавају када се Growser апликација затвори / поново покрене";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "По затварању картица сајта";

@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Εικονίδια Brave";
+"altAppIcon.braveIconsHeader" = "Εικονίδια Growser";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "Αλλαγή εικονιδίου εφαρμογής";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "Μάθετε περισσότερα / επιλογές εξαίρεσης";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "Οι χορηγούμενες εικόνες παρασκηνίου υποστηρίζουν την αποστολή του Brave να δημιουργήσει ένα ανεξάρτητο, με προτεραιότητα στον χρήστη, διαδίκτυο. Και σε αντίθεση με τις εταιρείες Big Tech, μετράμε τις επιδόσεις των διαφημίσεων ανώνυμα για να διαφυλάξουμε το απόρρητό σας.";
+"NewTabTakeoverInfoBarMessage" = "Οι χορηγούμενες εικόνες παρασκηνίου υποστηρίζουν την αποστολή του Growser να δημιουργήσει ένα ανεξάρτητο, με προτεραιότητα στον χρήστη, διαδίκτυο. Και σε αντίθεση με τις εταιρείες Big Tech, μετράμε τις επιδόσεις των διαφημίσεων ανώνυμα για να διαφυλάξουμε το απόρρητό σας.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "Νέα καρτέλα";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "Κωδικός **%1$@** για έκπτωση %2$@";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Λογαριασμός Brave";
+"paywall.braveAccountCheckoutOptionTitle" = "Λογαριασμός Growser";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Μάθετε περισσότερα για το Brave VPN";
+"paywall.braveVPNLearnMoreButtonTitle" = "Μάθετε περισσότερα για το Growser VPN";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "Έχετε κωδικό προσφοράς;";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "Μάθετε περισσότερα / επιλογές εξαίρεσης";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "Σας ευχαριστούμε που υποστηρίζετε το Brave Search κάνοντας κλικ σε μια ιδιωτική διαφήμιση. Σε αντίθεση με την Big Tech, μετράμε την απόδοση των διαφημίσεων ανώνυμα για να διατηρήσουμε το απόρρητό σας.";
+"searchResultAdClickedInfoBarMessage" = "Σας ευχαριστούμε που υποστηρίζετε το Growser Search κάνοντας κλικ σε μια ιδιωτική διαφήμιση. Σε αντίθεση με την Big Tech, μετράμε την απόδοση των διαφημίσεων ανώνυμα για να διατηρήσουμε το απόρρητό σας.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "Γραμμή επιλογής τοποθεσίας";
@@ -110,7 +110,7 @@
 "ShowPreviousTabTitle" = "Εμφάνιση προηγούμενης καρτέλας";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields */
-"showShieldsTitle" = "Άνοιγμα Ασπίδων Brave";
+"showShieldsTitle" = "Άνοιγμα Ασπίδων Growser";
 
 /* Hardware shortcut to open the tab tray from a tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "ShowTabTrayFromTabKeyCodeTitle" = "Εμφάνιση όλων των καρτελών";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "Έκδοση εφαρμογής";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo (Μηνιαία συνδρομή)";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo (Μηνιαία συνδρομή)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo (Ετήσια συνδρομή)";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo (Ετήσια συνδρομή)";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "Λυπούμαστε, δεν βρέθηκαν αποδείξεις από το App Store";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "Ημερομηνία ακύρωσης";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "Παραλαβή μετοχών";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN (Μηνιαία συνδρομή)";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN (Μηνιαία συνδρομή)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN (Ετήσια συνδρομή)";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN (Ετήσια συνδρομή)";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "Κανονική λειτουργία περιήγησης";

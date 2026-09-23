@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Adaugă filtru prin URL";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** este biletul tău către o experiență video fără reclame și întreruperi.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** este biletul tău către o experiență video fără reclame și întreruperi.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Ajustează scuturile pentru mine";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Acest site a început să blocheze anumite ad blockers, ceea ce înseamnă că s-ar putea să nu mai funcționeze așa cum era de așteptat.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Pentru a rezolva această problemă, Brave poate ajusta setările scuturilor pentru tine. Odată ajustate, poți încerca să urmărești acest conținut direct în Brave Player.";
+"AntiAdBlockWarningDescription2" = "Pentru a rezolva această problemă, Growser poate ajusta setările scuturilor pentru tine. Odată ajustate, poți încerca să urmărești acest conținut direct în Growser Player.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Păstrează setările actuale";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Blochează anunțurile de tip \"Deschide în aplicație\"";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Deschide întotdeauna videoclipurile de pe acest site cu Brave Player";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Deschide întotdeauna videoclipurile de pe acest site cu Growser Player";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Încearcă-l";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Nu acum";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave Player îți permite să vizionezi videoclipuri fără întreruperi.";
+"BravePlayerInfoMessage" = "Growser Player îți permite să vizionezi videoclipuri fără întreruperi.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Vizionează în Brave Player";
+"BravePlayerInfoTitle" = "Vizionează în Growser Player";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Filtrarea conținutului";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Înapoi";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Deoarece ai solicitat blocarea în mod agresiv a urmăritorilor și reclamelor, Brave blochează acest site înainte de prima conexiune de rețea.";
+"DomainBlockedPageDescription" = "Deoarece ai solicitat blocarea în mod agresiv a urmăritorilor și reclamelor, Growser blochează acest site înainte de prima conexiune de rețea.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave a împiedicat încărcarea următorului site:";
+"DomainBlockedPageMessage" = "Growser a împiedicat încărcarea următorului site:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Acest site ar putea încerca să te urmărească și pe alte site-uri pe care le accesezi";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "La închiderea aplicației";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Datele de navigare sunt eliminate automat când aplicația Brave este închisă / repornită";
+"ShredOnAppCloseDescription" = "Datele de navigare sunt eliminate automat când aplicația Growser este închisă / repornită";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "La închiderea filelor site-ului";

@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Afegeix un filtre per URL";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** és el teu bitllet per a una experiència de vídeo sense anuncis i sense interrupcions.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** és el teu bitllet per a una experiència de vídeo sense anuncis i sense interrupcions.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Ajusta els escuts per a mi";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Aquest lloc ha començat a bloquejar alguns bloquejadors d'anuncis, la qual cosa significa que és possible que el seu lloc no funcioni com s'esperava.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Per solucionar aquest problema, Brave pot ajustar la configuració dels escuts. Un cop ajustat, pots provar de veure aquest contingut a Brave Player.";
+"AntiAdBlockWarningDescription2" = "Per solucionar aquest problema, Growser pot ajustar la configuració dels escuts. Un cop ajustat, pots provar de veure aquest contingut a Growser Player.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Manté la configuració actual";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Bloqueja els avisos «Canviar a l'app»";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Obre sempre els vídeos d'aquest lloc amb Brave Player";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Obre sempre els vídeos d'aquest lloc amb Growser Player";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Intenta-ho";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Ara no";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave Player et permet veure vídeos sense interrupcions.";
+"BravePlayerInfoMessage" = "Growser Player et permet veure vídeos sense interrupcions.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Mira-ho a Brave Player";
+"BravePlayerInfoTitle" = "Mira-ho a Growser Player";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Filtració del contingut";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Endarrere";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Com que has demanat bloquejar agressivament els elements de rastrejament i anuncis, Brave està bloquejant aquest lloc abans de la primera connexió de xarxa.";
+"DomainBlockedPageDescription" = "Com que has demanat bloquejar agressivament els elements de rastrejament i anuncis, Growser està bloquejant aquest lloc abans de la primera connexió de xarxa.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave ha impedit que es carregui el lloc següent:";
+"DomainBlockedPageMessage" = "Growser ha impedit que es carregui el lloc següent:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Aquesta pàgina web et pot intentar rastrejar a altres pàgines";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Tancament de l'app";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Les dades de navegació es trituren automàticament quan es tanca / reinicia l'aplicació Brave";
+"ShredOnAppCloseDescription" = "Les dades de navegació es trituren automàticament quan es tanca / reinicia l'aplicació Growser";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Pestanyes del lloc tancades";

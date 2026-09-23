@@ -1,8 +1,8 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Brave 아이콘을 길게 누른 후 Dock으로 끌어다 놓으면 빠르게 액세스할 수 있습니다.";
+"focusOnboarding.addToDockScreenDescription" = "Growser 아이콘을 길게 누른 후 Dock으로 끌어다 놓으면 빠르게 액세스할 수 있습니다.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Dock에 Brave 추가하기";
+"focusOnboarding.addToDockScreenTitle" = "Dock에 Growser 추가하기";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "계속";
@@ -26,7 +26,7 @@
 "focusOnboarding.p3aScreenDescription" = "어떤 기능이 가장 마음에 드는지 알려주세요.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Brave 사용자 환경 개선";
+"focusOnboarding.p3aScreenTitle" = "Growser 사용자 환경 개선";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "설정의 **쉴드 및 개인 정보 보호**에서 언제든지 사용하지 않도록 선택할 수 있습니다. Brave의 개인 정보 보호 제품 분석에 관해 [자세히 알아보세요](#p3a-learn-more).";

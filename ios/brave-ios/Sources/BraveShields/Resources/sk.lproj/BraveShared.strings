@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Pridať filter pomocou adresy URL ";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** je vaša vstupenka do video zážitku bez reklám a bez prerušení.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** je vaša vstupenka do video zážitku bez reklám a bez prerušení.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Upravte štíty pre mňa";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Tento web začal blokovať niektoré blokovače reklám, čo znamená, že ich web nemusí fungovať podľa očakávania.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Na vyriešenie tohto problému môže Brave upraviť nastavenia štítov za vás. Po úprave môžete namiesto toho skúsiť sledovať tento obsah v Brave Player.";
+"AntiAdBlockWarningDescription2" = "Na vyriešenie tohto problému môže Growser upraviť nastavenia štítov za vás. Po úprave môžete namiesto toho skúsiť sledovať tento obsah v Growser Player.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Ponechať aktuálne nastavenia";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Blokovať upozornenia ‚Prejsť na aplikáciu‘";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Prehrávač Brave";
+"BravePlayer" = "Prehrávač Growser";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Videá z tejto lokality vždy otvárajte pomocou Brave Player";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Videá z tejto lokality vždy otvárajte pomocou Growser Player";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Vyskúšať";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Teraz nie";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave Player vám umožní sledovať videá bez prerušenia.";
+"BravePlayerInfoMessage" = "Growser Player vám umožní sledovať videá bez prerušenia.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Namiesto toho sledovať v prehrávači Brave";
+"BravePlayerInfoTitle" = "Namiesto toho sledovať v prehrávači Growser";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Filtrovanie obsahu";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Ísť naspäť";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Pretože jste požiadali o agresívne blokovanie sledovačov a reklám, Brave blokuje túto stránku před prvým pripojením k sieti.";
+"DomainBlockedPageDescription" = "Pretože jste požiadali o agresívne blokovanie sledovačov a reklám, Growser blokuje túto stránku před prvým pripojením k sieti.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Prehliadač Brave zabránil načítaniu nasledujúcich stránok:";
+"DomainBlockedPageMessage" = "Prehliadač Growser zabránil načítaniu nasledujúcich stránok:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Táto stránka sa môže pokúsiť sledovať vás na iných stránkach";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Zatvoriť aplikáciu";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Údaje prehliadania sa automaticky skartujú, keď sa aplikácia Brave zatvorí / reštartuje";
+"ShredOnAppCloseDescription" = "Údaje prehliadania sa automaticky skartujú, keď sa aplikácia Growser zatvorí / reštartuje";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Karty stránky zatvorené";

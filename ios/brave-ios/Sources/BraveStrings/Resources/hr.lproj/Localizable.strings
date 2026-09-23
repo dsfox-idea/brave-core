@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Brave Icons";
+"altAppIcon.braveIconsHeader" = "Growser Icons";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "Promijenite ikonu aplikacije";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "Kôd **%1$@** za %2$@ popusta";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Račun Brave";
+"paywall.braveAccountCheckoutOptionTitle" = "Račun Growser";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Saznajte više o Brave VPN";
+"paywall.braveVPNLearnMoreButtonTitle" = "Saznajte više o Growser VPN";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "Imate li promotivni kôd?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "Doznajte više / mogućnosti odjave";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "Hvala što podržavate Brave Search tako što klikate privatne oglase. Za razliku od velikih tehnoloških tvrtki mi anonimno mjerimo performanse oglasa kako bismo zaštitili vašu privatnost.";
+"searchResultAdClickedInfoBarMessage" = "Hvala što podržavate Growser Search tako što klikate privatne oglase. Za razliku od velikih tehnoloških tvrtki mi anonimno mjerimo performanse oglasa kako bismo zaštitili vašu privatnost.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "Odaberi traku lokacije";
@@ -110,7 +110,7 @@
 "ShowPreviousTabTitle" = "Pokaži prethodnu karticu";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields */
-"showShieldsTitle" = "Otvori značajku Štitovi Brave";
+"showShieldsTitle" = "Otvori značajku Štitovi Growser";
 
 /* Hardware shortcut to open the tab tray from a tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "ShowTabTrayFromTabKeyCodeTitle" = "Pokaži sve kartice";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "Verzija aplikacije";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo (Mjesečna)";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo (Mjesečna)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo (Godišnja)";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo (Godišnja)";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "Nažalost, nisu pronađeni računi iz App Storea";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "Datum otkazivanja";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "Potvrda o udjelu";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN (Mjesečna)";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN (Mjesečna)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN (Godišnja)";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN (Godišnja)";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "Način normalnog pregledavanja";

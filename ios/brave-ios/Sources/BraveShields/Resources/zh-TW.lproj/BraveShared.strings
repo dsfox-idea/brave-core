@@ -8,7 +8,7 @@
 "AddFilterByURL" = "透過 URL 新增篩選條件";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave 播放器**是您通往無廣告且不中斷影片體驗的鑰匙。";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser 播放器**是您通往無廣告且不中斷影片體驗的鑰匙。";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "為我調整防護";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "此網站已開始封鎖部分廣告封鎖程式，表示其網站可能不會正常運作。";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "若要解決此問題，Brave 可為您調整防護設定。調整後，您就能試著改在 Brave 播放器中觀看此內容。";
+"AntiAdBlockWarningDescription2" = "若要解決此問題，Growser 可為您調整防護設定。調整後，您就能試著改在 Growser 播放器中觀看此內容。";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "保留目前設定";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "封鎖「切換至應用程式」通知";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave 播放器";
+"BravePlayer" = "Growser 播放器";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "一律使用 Brave 播放器開啟此網站的影片";
+"BravePlayerAlwaysOpenYouTubeLinks" = "一律使用 Growser 播放器開啟此網站的影片";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "試用看看";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "現在不要";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave 播放器可讓您觀看影片不中斷。";
+"BravePlayerInfoMessage" = "Growser 播放器可讓您觀看影片不中斷。";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "改在 Brave 播放器中觀看";
+"BravePlayerInfoTitle" = "改在 Growser 播放器中觀看";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "內容過濾";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "返回";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "因為您要求積極封鎖追蹤器和廣告，Brave 將在首次網路連線之前封此網站。";
+"DomainBlockedPageDescription" = "因為您要求積極封鎖追蹤器和廣告，Growser 將在首次網路連線之前封此網站。";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave 已防止下列網站載入：";
+"DomainBlockedPageMessage" = "Growser 已防止下列網站載入：";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "此網站可能會嘗試在其他網站追蹤您";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "應用程式關閉";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "當 Brave 應用程式關閉／重新啟動時，瀏覽資料會自動粉碎";
+"ShredOnAppCloseDescription" = "當 Growser 應用程式關閉／重新啟動時，瀏覽資料會自動粉碎";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "網站分頁關閉";

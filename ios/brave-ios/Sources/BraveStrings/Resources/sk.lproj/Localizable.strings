@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Ikony Brave";
+"altAppIcon.braveIconsHeader" = "Ikony Growser";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "Zmeniť ikonu aplikácie";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "Ďalšie informácie / možnosti odhlásenia";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "Sponzorované obrázky na pozadí podporujú poslanie spoločnosti Brave budovať nezávislý web, ktorý je zameraný na používateľa. Na rozdiel od veľkých technologických spoločností meriame výkon reklamy anonymne, aby sme zachovali vaše súkromie.";
+"NewTabTakeoverInfoBarMessage" = "Sponzorované obrázky na pozadí podporujú poslanie spoločnosti Growser budovať nezávislý web, ktorý je zameraný na používateľa. Na rozdiel od veľkých technologických spoločností meriame výkon reklamy anonymne, aby sme zachovali vaše súkromie.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "Nová karta";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "Kód **%1$@** pre zľavu %2$@";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Účet Brave";
+"paywall.braveAccountCheckoutOptionTitle" = "Účet Growser";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Prečítajte si viac o Brave VPN";
+"paywall.braveVPNLearnMoreButtonTitle" = "Prečítajte si viac o Growser VPN";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "Máte promo kód?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "Ďalšie informácie / možnosti odhlásenia";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "Ďakujeme, že podporujete Vyhľadávač Brave kliknutím na súkromnú reklamu. Na rozdiel od veľkých technologických firiem meriame výkon reklamy anonymne, aby sme zachovali vaše súkromie.";
+"searchResultAdClickedInfoBarMessage" = "Ďakujeme, že podporujete Vyhľadávač Growser kliknutím na súkromnú reklamu. Na rozdiel od veľkých technologických firiem meriame výkon reklamy anonymne, aby sme zachovali vaše súkromie.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "Vybrať polohu panela";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "Verzia aplikácie";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo (Mesačník)";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo (Mesačník)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo (Ročné)";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo (Ročné)";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "Je nám ľúto, nenašli sa žiadne potvrdenia z App Store";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "Dátum zrušenia";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "Príjem akcií";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN (Mesačník)";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN (Mesačník)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN (Ročné)";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN (Ročné)";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "Normálny režim prehliadania";

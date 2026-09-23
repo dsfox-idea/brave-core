@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Brave ikonok";
+"altAppIcon.braveIconsHeader" = "Growser ikonok";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "Az alkalmazás ikonjának módosítása";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "További információk / lemondási lehetőségek";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "A szponzorált háttérképek hozzájárulnak a Brave küldetéséhez, hogy egy független, felhasználó-központú webet alakítson ki. A nagy techcégektől eltérően a hirdetések hatékonyságát anonim módon mérjük, ezáltal biztosítva a felhasználói adatok védelmét és a magánszféra tiszteletben tartását.";
+"NewTabTakeoverInfoBarMessage" = "A szponzorált háttérképek hozzájárulnak a Growser küldetéséhez, hogy egy független, felhasználó-központú webet alakítson ki. A nagy techcégektől eltérően a hirdetések hatékonyságát anonim módon mérjük, ezáltal biztosítva a felhasználói adatok védelmét és a magánszféra tiszteletben tartását.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "Új lap";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "Kód **%1$@** a %2$@ kedvezményért";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Brave fiók";
+"paywall.braveAccountCheckoutOptionTitle" = "Growser fiók";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "További információ a Brave VPN-ről";
+"paywall.braveVPNLearnMoreButtonTitle" = "További információ a Growser VPN-ről";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "Van promóciós kódja?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "További információk / lemondási lehetőségek";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "Köszönjük, hogy támogatja a Brave keresőmotort azzal, hogy rákattint egy privát hirdetésre. A nagy techcégekkel ellentétben mi anonim módon mérjük a hirdetések teljesítményét, hogy megőrizzük az Ön adatainak biztonságát.";
+"searchResultAdClickedInfoBarMessage" = "Köszönjük, hogy támogatja a Growser keresőmotort azzal, hogy rákattint egy privát hirdetésre. A nagy techcégekkel ellentétben mi anonim módon mérjük a hirdetések teljesítményét, hogy megőrizzük az Ön adatainak biztonságát.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "Helysáv kiválasztása";
@@ -110,7 +110,7 @@
 "ShowPreviousTabTitle" = "Előző lap megjelenítése";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields */
-"showShieldsTitle" = "A Brave-védelem megnyitása";
+"showShieldsTitle" = "A Growser-védelem megnyitása";
 
 /* Hardware shortcut to open the tab tray from a tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "ShowTabTrayFromTabKeyCodeTitle" = "Összes lap megjelenítése";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "Alkalmazási verzió";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo (Havi előfizetés)";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo (Havi előfizetés)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo (Éves előfizetés)";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo (Éves előfizetés)";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "Sajnáljuk, nem találtunk App Store-bevételeket.";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "Lemondás dátuma";
@@ -170,7 +170,7 @@
 "storekitReceiptViewer.vpnMonthlySubscriptionName" = "Bátor VPN (Havi előfizetés)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN (Éves előfizetés)";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN (Éves előfizetés)";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "Normál böngészési mód";

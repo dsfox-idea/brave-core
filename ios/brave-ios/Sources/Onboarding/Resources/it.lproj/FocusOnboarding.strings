@@ -1,14 +1,14 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Tocca e tieni premuta l'icona di Brave, quindi trascinala nel dock per un accesso rapido.";
+"focusOnboarding.addToDockScreenDescription" = "Tocca e tieni premuta l'icona di Growser, quindi trascinala nel dock per un accesso rapido.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Aggiungi Brave al tuo dock";
+"focusOnboarding.addToDockScreenTitle" = "Aggiungi Growser al tuo dock";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Continua";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Imposta Brave come browser predefinito.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Imposta Growser come browser predefinito.";
 
 /* The title of the screen that requests user to set Brave as default */
 "focusOnboarding.defaultBrowserScreenTitle" = "Blocca gli annunci su tutti i siti che visiti";
@@ -26,7 +26,7 @@
 "focusOnboarding.p3aScreenDescription" = "Facci sapere quali funzioni ti piacciono di più.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Aiutaci a migliorare Brave";
+"focusOnboarding.p3aScreenTitle" = "Aiutaci a migliorare Growser";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Puoi sospendere la condivisione in qualsiasi momento dalle Impostazioni alla sezione **Privacy e sicurezza**. [Scopri di più](#p3a-learn-more) sui nostri prodotti analitici e per la tutela della privacy.";

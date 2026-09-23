@@ -1,14 +1,14 @@
 /* A button title shown on the menu that presents the Brave News feature. */
-"ActionTitles.braveNews" = "Brave News";
+"ActionTitles.braveNews" = "Growser News";
 
 /* A button title shown on the menu that opens a link to the Brave Talk feature. */
-"ActionTitles.braveTalk" = "Brave Разговоры";
+"ActionTitles.braveTalk" = "Growser Разговоры";
 
 /* A button title shown on the menu that presents the Brave Leo AI feature. */
 "ActionTitles.leoAIChat" = "ИИ Чат";
 
 /* A button title shown on the menu that presents the Brave Playlist feature */
-"ActionTitles.playlist" = "Brave Плейлист";
+"ActionTitles.playlist" = "Growser Плейлист";
 
 /* A button title shown on the menu that when tapped lets the user print the page they're viewing */
 "ActionTitles.print" = "Печать";
@@ -23,7 +23,7 @@
 "ActionTitles.translate" = "Перевести страницу";
 
 /* A button title shown on the menu that when tapped presents a Brave VPN paywall */
-"ActionTitles.vpn" = "Brave VPN";
+"ActionTitles.vpn" = "Growser VPN";
 
 /* The title of a button that presents the settings screen */
 "BrowserMenu.allSettingsButtonTitle" = "Все настройки";
@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Сбросить по умолчанию";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Сбрасывая настройки по умолчанию, вы потеряете все настройки, сделанные вами в Brave. Это действие необратимо. Вы уверены, что хотите продолжить?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Сбрасывая настройки по умолчанию, вы потеряете все настройки, сделанные вами в Growser. Это действие необратимо. Вы уверены, что хотите продолжить?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Показать все…";
@@ -62,5 +62,5 @@
 "BrowserMenu.visibleActionsTitle" = "Основные действия";
 
 /* A title on a button that lets the user switch the active VPN's selected region. */
-"BrowserMenu.vpnButtonTitle" = "Brave VPN";
+"BrowserMenu.vpnButtonTitle" = "Growser VPN";
 

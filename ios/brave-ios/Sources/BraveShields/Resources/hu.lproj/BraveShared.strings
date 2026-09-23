@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Szűrő hozzáadása URL szerint";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "A **Brave lejátszó** a belépő a hirdetésmentes és megszakítás nélküli videóélményhez.";
+"AntiAdBlockWarningBravePlayerDescription" = "A **Growser lejátszó** a belépő a hirdetésmentes és megszakítás nélküli videóélményhez.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Pajzsok igazítása számomra";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Ez a webhely elkezdett blokkolni néhány hirdetésblokkolót, ami azt eredményezheti, hogy webhelyük nem a várt módon fog működni.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "A probléma megoldása érdekében a Brave módosíthatja a pajzsok beállításait. A beállítás után megpróbálhatja megnézni ezt a tartalmat a Brave lejátszóban.";
+"AntiAdBlockWarningDescription2" = "A probléma megoldása érdekében a Growser módosíthatja a pajzsok beállításait. A beállítás után megpróbálhatja megnézni ezt a tartalmat a Growser lejátszóban.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Aktuális beállítások megtartása";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Az 'Alkalmazásra váltás' értesítések letiltása";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave lejátszó";
+"BravePlayer" = "Growser lejátszó";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "A webhelyről származó videókat mindig a Brave lejátszóval nyissa meg";
+"BravePlayerAlwaysOpenYouTubeLinks" = "A webhelyről származó videókat mindig a Growser lejátszóval nyissa meg";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Próbálja ki";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Ne most";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "A Brave lejátszó segítségével megszakítás nélkül nézhet videókat.";
+"BravePlayerInfoMessage" = "A Growser lejátszó segítségével megszakítás nélkül nézhet videókat.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Megtekintés inkább a Brave lejátszóban";
+"BravePlayerInfoTitle" = "Megtekintés inkább a Growser lejátszóban";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Tartalomszűrés";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Vissza";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Mivel a követők és a hirdetés agresszív tiltását kérte, a Brave még az első hálózati csatlakozás előtt tiltja az oldalt.";
+"DomainBlockedPageDescription" = "Mivel a követők és a hirdetés agresszív tiltását kérte, a Growser még az első hálózati csatlakozás előtt tiltja az oldalt.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "A Brave megakadályozta a következő oldal betöltését:";
+"DomainBlockedPageMessage" = "A Growser megakadályozta a következő oldal betöltését:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Ez a webhely megkísérelheti nyomon követni Önt más webhelyeken";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Alkalmazás bezárásakor";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "A böngészési adatok automatikusan törlődnek, amikor a Brave alkalmazás bezárul / újraindul";
+"ShredOnAppCloseDescription" = "A böngészési adatok automatikusan törlődnek, amikor a Growser alkalmazás bezárul / újraindul";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Webhelylapok bezárásakor";

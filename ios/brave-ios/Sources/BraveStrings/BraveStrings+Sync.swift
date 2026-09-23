@@ -58,7 +58,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "To start, you will need Brave installed on all the devices you plan to sync. To chain them together, start a sync chain that you will use to securely link all of your devices together.",
+        "To start, you will need Growser installed on all the devices you plan to sync. To chain them together, start a sync chain that you will use to securely link all of your devices together.",
       comment: "Sync settings welcome"
     )
     public static let newSyncCode = NSLocalizedString(
@@ -122,7 +122,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Using existing synced device open Brave Settings and navigate to Settings -> Sync. Choose \"Add Device\" and scan the code displayed on the screen.",
+        "Using existing synced device open Growser Settings and navigate to Settings -> Sync. Choose \"Add Device\" and scan the code displayed on the screen.",
       comment: "Sync to existing device description"
     )
     public static let addDeviceScanDescription = NSLocalizedString(
@@ -384,7 +384,7 @@ extension Strings {
       "sync.deviceRestoreDetectedMessage",
       tableName: "BraveShared",
       bundle: .module,
-      value: "It appears your device was restored from backup, which can affect Brave Sync. To continue using Brave Sync, you should reset and rejoin the sync chain.",
+      value: "It appears your device was restored from backup, which can affect Growser Sync. To continue using Growser Sync, you should reset and rejoin the sync chain.",
       comment: "Message for alert when the user has restored their device from a backup"
     )
     public static let deviceRestoreResetActionTitle = NSLocalizedString(
@@ -407,7 +407,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "Data currently synced will be retained but all data in Brave’s Sync cache will be deleted. You will need to start a new sync chain to sync device data again.",
+        "Data currently synced will be retained but all data in Growser’s Sync cache will be deleted. You will need to start a new sync chain to sync device data again.",
       comment: "Message for removing last device from Sync"
     )
     public static let removeLastDeviceRemoveButtonName = NSLocalizedString(
@@ -467,7 +467,7 @@ extension Strings {
       tableName: "BraveShared",
       bundle: .module,
       value:
-        "It looks like this code was created on a device running an older version of Brave. Please update to the latest version of Brave on your other device, and then create a new sync code.",
+        "It looks like this code was created on a device running an older version of Growser. Please update to the latest version of Growser on your other device, and then create a new sync code.",
       comment: "Sync Error Description"
     )
     public static let expiredError = NSLocalizedString(
@@ -633,7 +633,7 @@ extension Strings {
         tableName: "BraveShared",
         bundle: .module,
         value:
-          "Deleting your account will remove your encrypted data from Brave servers and disable Sync on all of your connected devices.",
+          "Deleting your account will remove your encrypted data from Growser servers and disable Sync on all of your connected devices.",
         comment: "Part 1 Description for Alert used action Delete Sync Account."
       )
     public static let deleteAccountAlertDescriptionPart2 =

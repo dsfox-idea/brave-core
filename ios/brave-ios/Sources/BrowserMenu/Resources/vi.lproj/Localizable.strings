@@ -1,8 +1,8 @@
 /* A button title shown on the menu that presents the Brave News feature. */
-"ActionTitles.braveNews" = "Tin tức Brave";
+"ActionTitles.braveNews" = "Tin tức Growser";
 
 /* A button title shown on the menu that opens a link to the Brave Talk feature. */
-"ActionTitles.braveTalk" = "Trò chuyện Brave";
+"ActionTitles.braveTalk" = "Trò chuyện Growser";
 
 /* A button title shown on the menu that presents the Brave Leo AI feature. */
 "ActionTitles.leoAIChat" = "Trò chuyện với AI";
@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "Đặt lại về mặc định";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "Khi đặt lại về mặc định, bạn sẽ mất tất cả tùy chỉnh đã thực hiện trong Brave. Hành động này không thể hoàn tác. Bạn có chắc chắn muốn tiếp tục?";
+"BrowserMenu.resetToDefaultDialogMessage" = "Khi đặt lại về mặc định, bạn sẽ mất tất cả tùy chỉnh đã thực hiện trong Growser. Hành động này không thể hoàn tác. Bạn có chắc chắn muốn tiếp tục?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "Hiển thị tất cả…";

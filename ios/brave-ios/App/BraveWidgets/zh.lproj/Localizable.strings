@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "詢問 Brave";
+"widgets.askBrave" = "詢問 Growser";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "书签";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo 人工智能";
 
 /* The name of the feature */
-"widgets.braveNews" = "Brave 新闻";
+"widgets.braveNews" = "Growser 新闻";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "下载";
@@ -35,13 +35,13 @@
 "widgets.newsClusteringWidgetTitle" = "头条新闻";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave 新闻已禁用";
+"widgets.newsUnavailableByPolicy" = "Growser 新闻已禁用";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "已被你所在组织的政策关闭";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "请打开 Brave，在此查看您的收藏夹";
+"widgets.noFavoritesFound" = "请打开 Growser，在此查看您的收藏夹";
 
 /* QR Code section title */
 "widgets.QRCode" = "QR 碼";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "搜尋";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "一览 Brave 是如何节省时间以及提供在线保护的。";
+"widgets.shieldStatsDescription" = "一览 Growser 是如何节省时间以及提供在线保护的。";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "隐私统计数据";
@@ -74,17 +74,17 @@
 "widgets.shortcutsPrivateTabButton" = "私人标签";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "快速访问，在 Brave 中搜索 Web 或打开网页。";
+"widgets.shortcutsWidgetDescription" = "快速访问，在 Growser 中搜索 Web 或打开网页。";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "快捷方式";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "一览 Brave 是如何提供在线保护的。";
+"widgets.singleStatDescription" = "一览 Growser 是如何提供在线保护的。";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "隐私统计数据";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave 钱包";
+"widgets.walletShortcutTitle" = "Growser 钱包";
 

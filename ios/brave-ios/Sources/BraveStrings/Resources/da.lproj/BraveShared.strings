@@ -5,13 +5,13 @@
 "AboutBraveShields" = "Om Brave Shields ";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "Websteder indeholder ofte cookies og scripts, som forsøger at identificere dig og din enhed. De ønsker at finde ud af, hvem du er og følge dig på tværs af internettet – dvs. spore, hvad du laver på hvert websted.\n\nBrave blokerer disse ting, så du kan browse uden at blive fulgt.";
+"AboutBraveShieldsBody" = "Websteder indeholder ofte cookies og scripts, som forsøger at identificere dig og din enhed. De ønsker at finde ud af, hvem du er og følge dig på tværs af internettet – dvs. spore, hvad du laver på hvert websted.\n\nGrowser blokerer disse ting, så du kan browse uden at blive fulgt.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "Dette giver dig mulighed for at gemme billedet på din kamerarulle.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave vil gerne have adgang til dine billeder";
+"AccessPhotoDeniedAlertTitle" = "Growser vil gerne have adgang til dine billeder";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Tilføj bogmærke";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Tilføj bogmærke";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Data om Brave Ads";
+"ads.braveAdsDataToggleOption" = "Data om Growser Ads";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Annoncer og Trackere";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "Til";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Spørg Brave";
+"AskBraveMenuItem" = "Spørg Growser";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Dette autentificerer din adgang til Brave";
+"AuthenticationLoginsTouchReason" = "Dette autentificerer din adgang til Growser";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Annuller";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "Adresse";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave-panel";
+"BravePanel" = "Growser-panel";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave-belønninger";
+"BraveRewardsAdNotificationTitle" = "Growser-belønninger";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Åbn";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Rewards";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave-belønninger";
+"BraveRewardsTitle" = "Growser-belønninger";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Brave Search laver ikke profiler på dig.";
+"braveSearchPromotion.bannerDescription" = "Growser Search laver ikke profiler på dig.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Måske senere";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Støt uafhængig søgning med bedre privatliv";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Prøv Brave-søgninger";
+"braveSearchPromotion.bannerTryButtonTitle" = "Prøv Growser-søgninger";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Måske senere";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Hvis dette websted ser ud til at være ødelagt, så prøv at slå Shields fra";
 
 /* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave-Skjolde";
+"BraveShieldsStatusTitle" = "Growser-Skjolde";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
 "BraveShieldsStatusValueDown" = "Nede";
@@ -281,7 +281,7 @@
 "BraveShieldsToggleHint" = "Dobbelttryk for at skifte til Brave Shields";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Growser Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Vælg sprog";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Søg";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave Translate";
+"BraveTranslate.settingsMenuTitle" = "Growser Translate";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave Translate";
+"BraveTranslate.settingsScreenTitle" = "Growser Translate";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Når Brave Translate er aktiveret, registrerer den automatisk din sides aktuelle sprog og viser en oversættelsesknap i URL-linjen.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Når Growser Translate er aktiveret, registrerer den automatisk din sides aktuelle sprog og viser en oversættelsesknap i URL-linjen.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Oversættelse er slået til";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Browserlås";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Lås Brave op med Touch ID, Face ID eller systemadgangskode.";
+"BrowserLockDescription" = "Lås Growser op med Touch ID, Face ID eller systemadgangskode.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Browserhistorik";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "Flyt adresselinjen, faner, bogmærker og andre værktøjer til bunden af browseren.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Tilpas bjælken Brave-faner";
+"callout.bottomBarCalloutTitle" = "Tilpas bjælken Growser-faner";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Få Brave-privatliv på din computer eller tablet, og synkroniser bogmærker og udvidelser mellem enheder.";
+"callout.privacyEverywhereCalloutDescription" = "Få Growser-privatliv på din computer eller tablet, og synkroniser bogmærker og udvidelser mellem enheder.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Synkroniser nu";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Åbn Indstillinger";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Åbn alle links med Brave for at beskytte dine data";
+"defaultBrowserCallout.introPrimaryText" = "Åbn alle links med Growser for at beskytte dine data";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Brave Shields blokerer trackere og annoncer, gemmer data og sparer dig tid på hver eneste hjemmeside, du besøger";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Åbn Indstillinger, tryk på Standardbrowserapp, og vælg Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Åbn Indstillinger, tryk på Standardbrowserapp, og vælg Growser.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Angiv Brave som din standardbrowser";
+"defaultBrowserCallout.notificationBody" = "Angiv Growser som din standardbrowser";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Få Brave-beskyttelse på alle links";
+"defaultBrowserCallout.notificationTitle" = "Få Growser-beskyttelse på alle links";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Luk opfordring til standardbrowser";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave standard";
+"defaultThemeName" = "Growser standard";
 
 /* No comment provided by engineer. */
 "Delete" = "Slet";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Indtast mappenavn";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ bruger normalt kryptering til at beskytte dine oplysninger. Da Brave forsøgte at oprette forbindelse til %2$@ denne gang, sendte hjemmesiden usædvanlige og forkerte legitimationsoplysninger tilbage. Dette kan ske, når en angriber forsøger at foregive at være %3$@, eller en wi-fi-loginskærm har afbrudt forbindelsen. Dine oplysninger er stadig sikre, fordi Brave stoppede forbindelsen, før nogen data blev udvekslet.<br />Du kan ikke besøge %4$@ lige nu, fordi webstedet bruger certifikatfastgørelse. Netværksfejl og angreb er normalt midlertidige, så denne side vil sandsynligvis fungere senere.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ bruger normalt kryptering til at beskytte dine oplysninger. Da Growser forsøgte at oprette forbindelse til %2$@ denne gang, sendte hjemmesiden usædvanlige og forkerte legitimationsoplysninger tilbage. Dette kan ske, når en angriber forsøger at foregive at være %3$@, eller en wi-fi-loginskærm har afbrudt forbindelsen. Dine oplysninger er stadig sikre, fordi Growser stoppede forbindelsen, før nogen data blev udvekslet.<br />Du kan ikke besøge %4$@ lige nu, fordi webstedet bruger certifikatfastgørelse. Netværksfejl og angreb er normalt midlertidige, så denne side vil sandsynligvis fungere senere.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Denne server kunne ikke bevise, at den er %@. Din enheds operativsystem har ikke tillid til dens sikkerhedscertifikat.. Dette kan være forårsaget af en fejlkonfiguration eller en hacker, der forsøger at opsnappe din forbindelse.";
@@ -866,7 +866,7 @@
 "HideRewardsIcon" = "Skjul Braves Belønningsikon";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Skjuler ikonet Brave Rewards, når Brave Rewards ikke er aktiveret";
+"HideRewardsIconSubtitle" = "Skjuler ikonet Growser Rewards, når Growser Rewards ikke er aktiveret";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Historik";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Omdirigerer automatisk NPR-links til deres tekstbaserede version (på text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Brave-support";
+"ntp.braveSupportFavoriteTitle" = "Growser-support";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Få tokens";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Du tjente %@ ved at browse med Brave.";
+"ntp.earningsReport" = "Du tjente %@ ved at browse med Growser.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Godt gået!";
@@ -1088,7 +1088,7 @@
 "ntp.imageTypeSelectionDescription" = "Sponsorerede billeder er brandede baggrunde, der vises i nyåbnede faner i browseren. Aktivering af disse sponsorerede billeder støtter Braves mission. [Få mere at vide](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Lær mere om Brave Rewards";
+"ntp.learnMoreAboutRewards" = "Lær mere om Growser Rewards";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Lær mere om sponsorerede billeder ";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Optjen point, og beløn skabere for fantastisk indhold, mens du browser.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Brave Ads er her!";
+"OBAdsOptInTitle" = "Growser Ads er her!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brave viser din første annonce i";
+"OBAdsTitle" = "Growser viser din første annonce i";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Nu er du klar til at komme i gang.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Tilmeld dig";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Tillad Brave at tjekke min udklipsholder for en tilhørende henvisningskode";
+"OBPrivacyConsentClipboardPermission" = "Tillad Growser at tjekke min udklipsholder for en tilhørende henvisningskode";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Du har muligvis downloadet Brave for at støtte din henviser. For at finde ud af, hvem din henviser er, udfører Brave en engangskontrol af din udklipsholder for at tjekke den tilhørende henvisningskode. Denne kontrol er udelukkende begrænset til koden, og ingen andre personlige data vil blive overført. Hvis du fravælger, vil din henviser ikke modtage belønninger fra Brave.";
+"OBPrivacyConsentDetail" = "Du har muligvis downloadet Growser for at støtte din henviser. For at finde ud af, hvem din henviser er, udfører Growser en engangskontrol af din udklipsholder for at tjekke den tilhørende henvisningskode. Denne kontrol er udelukkende begrænset til koden, og ingen andre personlige data vil blive overført. Hvis du fravælger, vil din henviser ikke modtage belønninger fra Growser.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Tillad ikke denne kontrol";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "og";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave-belønninger";
+"OBRewardsAgreementTitle" = "Growser-belønninger";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Tilvalg af Brave Private Ads understøtter udgivere og indholdsskabere for hver annonce, der vises.";
+"OBRewardsDetail" = "Tilvalg af Growser Private Ads understøtter udgivere og indholdsskabere for hver annonce, der vises.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Optjen tokens, og beløn skabere for fantastisk indhold, mens du browser.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Privatlivspolitik";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave-belønninger";
+"OBRewardsTitle" = "Growser-belønninger";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Gem";
@@ -1202,13 +1202,13 @@
 "OBSearchEngineDetail" = "Vælg din standardsøgemaskine";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Velkommen til Brave Browser";
+"OBSearchEngineTitle" = "Velkommen til Growser Browser";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Bloker privatlivsinvaderende trackere, så du kan browse uden at blive fulgt rundt på nettet";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave-Skjolde";
+"OBShieldsTitle" = "Growser-Skjolde";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Vis mig";
@@ -1220,16 +1220,16 @@
 "onboarding.linkReceiptButton" = "Forbind dit VPN-abonnement";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Dit Brave VPN-abonnement kan beskytte op til 10 enheder på tværs af Android, iOS og desktop. Du skal blot linke dit App Store-abonnement til din Brave-konto.";
+"onboarding.linkReceiptDescription" = "Dit Growser VPN-abonnement kan beskytte op til 10 enheder på tværs af Android, iOS og desktop. Du skal blot linke dit App Store-abonnement til din Growser-konto.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Udvid din Brave Firewall + VPN-beskyttelse";
+"onboarding.linkReceiptTitle" = "Udvid din Growser Firewall + VPN-beskyttelse";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Ved at blokere trackere og annoncer bruger hjemmesider mindre data og indlæses meget hurtigere.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Se Brave-forskellen:\nIngen annoncer. Ingen trackere. Langt hurtigere sideindlæsning.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Se Growser-forskellen:\nIngen annoncer. Ingen trackere. Langt hurtigere sideindlæsning.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Indtast en websides navn eller URL";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Åbn alle (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Åbn Brave Rewards-indstillinger";
+"OpenBraveRewardsSettings" = "Åbn Growser Rewards-indstillinger";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Der opstod en ukendt fejl under åbning af mappen Downloads i appen Filer.";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "For at komme i gang skal du konfigurere en synkroniseringskæde og skifte til »Åbne faner« i Synkroniseringsindstillinger.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Administrer, hvad Brave synkroniserer i Indstillinger.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Administrer, hvad Growser synkroniserer i Indstillinger.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Der er ingen aktive sessioner at vise fra dine andre enheder.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Denne plads viser Brave-faner åbne på andre enheder";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Denne plads viser Growser-faner åbne på andre enheder";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Skjul indtil videre";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Fortsæt";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Disse private svar hjælper kun Brave med at anslå det generelle forbrug af visse funktioner og gøre servicen endnu bedre.";
+"p3a.settingSubtitle" = "Disse private svar hjælper kun Growser med at anslå det generelle forbrug af visse funktioner og gøre servicen endnu bedre.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Tillad anonymitetsbeskyttede produktanalyser (P3A)";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Vedvarende privat browsing";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Tillader Brave at gendanne private browsing-faner, selvom du lukker/genåbner appen";
+"PersistentPrivateBrowsingAlertMessage" = "Tillader Growser at gendanne private browsing-faner, selvom du lukker/genåbner appen";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Gendan private faner";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Vil du føje denne video til din playliste?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Føj til Brave Playlist";
+"playList.addToPlayListAlertTitle" = "Føj til Growser Playlist";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Afspilningsmuligheder";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Indstillinger ";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave-spilleliste";
+"playlist.carplayTitle" = "Growser-spilleliste";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Skift afspilningsliste";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Der opstod et problem med at indlæse ressourcen!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Du kan tilføje elementer til din Brave Playlist i browseren";
+"playList.noItemLabelDetailLabel" = "Du kan tilføje elementer til din Growser Playlist i browseren";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Ingen elementer til rådighed";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Fortryd";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Tilføjer en afspilningslisteknap ved siden af ​​adresselinjen i Brave-browseren. Denne knap giver dig hurtig adgang til at åbne afspilningslisten eller tilføje eller fjerne medier.";
+"playlist.urlBarButtonOptionFooter" = "Tilføjer en afspilningslisteknap ved siden af ​​adresselinjen i Growser-browseren. Denne knap giver dig hurtig adgang til at åbne afspilningslisten eller tilføje eller fjerne medier.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Aktiver hurtig adgang-knap";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Slå notifikationer fra";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "En opsummering af, hvordan Brave beskyttede dig online i denne uge.";
+"privacyHub.notificationMessage" = "En opsummering af, hvordan Growser beskyttede dig online i denne uge.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Ugentlig privatlivsrapport";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Tracker eller annonce";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave Firewall + VPN-advarsler";
+"privacyHub.vpnAlertsHeader" = "Growser Firewall + VPN-advarsler";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Firewall + VPN";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Tilstanden Kun privat browsing lukker alle dine nuværende faner og logger dig ud af alle websteder.";
 
 /* Private tab details */
-"PrivateTabBody" = "Private faner gemmes ikke i Brave, men de gør dig ikke anonym online. Sider, du besøger i en privat fane, vises ikke i din historik, og deres cookies forsvinder altid, når du lukker dem - der vil ikke være noget spor af dem tilbage i Brave. Downloads vil dog blive gemt.\nDin mobiloperatør (eller ejeren af det wi-fi-netværk eller den VPN, du er forbundet til) kan se, hvilke sider du besøger, og disse sider vil have adgang til din offentlige IP-adresse, selv i private faner.";
+"PrivateTabBody" = "Private faner gemmes ikke i Growser, men de gør dig ikke anonym online. Sider, du besøger i en privat fane, vises ikke i din historik, og deres cookies forsvinder altid, når du lukker dem - der vil ikke være noget spor af dem tilbage i Growser. Downloads vil dog blive gemt.\nDin mobiloperatør (eller ejeren af det wi-fi-netværk eller den VPN, du er forbundet til) kan se, hvilke sider du besøger, og disse sider vil have adgang til din offentlige IP-adresse, selv i private faner.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Brug af Private faner ændrer kun, hvad Brave gør på din enhed. Det ændrer ikke andres adfærd.\n\nWebsteder har altid adgang din IP-adresse, når du besøger dem. Ud fra den kan de ofte gætte, nogenlunde hvor du befinder dig - typisk din by. Nogle gange kan det gæt på din placering være meget mere specifikt. Websteder ved også alt, hvad du specifikt fortæller dem, såsom søgetermer. Hvis du logger ind på et websted, ved de, at du er ejer af den konto. Du vil stadig blive logget ud, når du lukker de private faner, fordi Brave sletter den cookie, som bevarer dig logget ind.\n\nDen, der forbinder dig til internettet (din internetudbyder), kan se al din netværksaktivitet. Ofte er det din mobiloperatør. Hvis du er forbundet til et wi-fi-netværk, er det ejeren af netværket, og hvis du bruger en VPN, er det den, der driver VPN'en. Din internetudbyder kan se, hvilke sider du besøger, når du besøger dem. Hvis disse sider bruger HTTPS, kan de allerhøjest lave et kvalificeret gæt på, hvad du laver på disse websteder. Men hvis en side kun bruger HTTP, kan din internetudbyder se alt: dine søgetermer, hvilke sider du læser, og hvilke links du følger.\n\nHvis en arbejdsgiver administrerer din enhed, kan de muligvis også holde øje med, hvad du gør med den. Brug af private faner vil sandsynligvis ikke forhindre dem i at vide, hvilke sider du har besøgt. En anden person med adgang til din enhed kan også have installeret software, der overvåger din aktivitet, og Private faner vil heller ikke beskytte dig mod dette.";
+"PrivateTabDetails" = "Brug af Private faner ændrer kun, hvad Growser gør på din enhed. Det ændrer ikke andres adfærd.\n\nWebsteder har altid adgang din IP-adresse, når du besøger dem. Ud fra den kan de ofte gætte, nogenlunde hvor du befinder dig - typisk din by. Nogle gange kan det gæt på din placering være meget mere specifikt. Websteder ved også alt, hvad du specifikt fortæller dem, såsom søgetermer. Hvis du logger ind på et websted, ved de, at du er ejer af den konto. Du vil stadig blive logget ud, når du lukker de private faner, fordi Growser sletter den cookie, som bevarer dig logget ind.\n\nDen, der forbinder dig til internettet (din internetudbyder), kan se al din netværksaktivitet. Ofte er det din mobiloperatør. Hvis du er forbundet til et wi-fi-netværk, er det ejeren af netværket, og hvis du bruger en VPN, er det den, der driver VPN'en. Din internetudbyder kan se, hvilke sider du besøger, når du besøger dem. Hvis disse sider bruger HTTPS, kan de allerhøjest lave et kvalificeret gæt på, hvad du laver på disse websteder. Men hvis en side kun bruger HTTP, kan din internetudbyder se alt: dine søgetermer, hvilke sider du læser, og hvilke links du følger.\n\nHvis en arbejdsgiver administrerer din enhed, kan de muligvis også holde øje med, hvad du gør med den. Brug af private faner vil sandsynligvis ikke forhindre dem i at vide, hvilke sider du har besøgt. En anden person med adgang til din enhed kan også have installeret software, der overvåger din aktivitet, og Private faner vil heller ikke beskytte dig mod dette.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Læs mere om Private faner.";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Aktivér Translate";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Bedøm Brave ";
+"RateBrave" = "Bedøm Growser ";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Gør teksten større";
@@ -2039,7 +2039,7 @@
 "ReportBrokenSiteBody1" = "Fortæl Braves udviklere, at denne side ikke fungerer som forventet:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Bemærk: Rapporten, der bliver sendt til Brave, indeholder webadressen, Braves versionsnummer, Shields-indstillinger, VPN-status og sprogindstillinger.";
+"ReportBrokenSiteBody2" = "Bemærk: Rapporten, der bliver sendt til Growser, indeholder webadressen, Braves versionsnummer, Shields-indstillinger, VPN-status og sprogindstillinger.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Indsend";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "Nej";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Desværre er Brave gået ned eller har ikke lukket ordentligt.\nVil du gendanne dine faner?";
+"RestoreTabOnCrashAlertMessage" = "Desværre er Growser gået ned eller har ikke lukket ordentligt.\nVil du gendanne dine faner?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave lukkede uventet.";
+"RestoreTabOnCrashAlertTitle" = "Growser lukkede uventet.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Aktivér for at hjælpe med at støtte Brave og BAT-fællesskabet.";
+"rewards.disabledBody" = "Aktivér for at hjælpe med at støtte Growser og BAT-fællesskabet.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Du hjælper med at understøtte Brave og BAT-fællesskabet, når du bruger Brave Rewards.";
+"rewards.disabledStatusBody" = "Du hjælper med at understøtte Growser og BAT-fællesskabet, når du bruger Growser Rewards.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Du hjælper med at støtte Brave og BAT-fællesskabet";
+"rewards.enabledBody" = "Du hjælper med at støtte Growser og BAT-fællesskabet";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Tak, fordi du hjælper med at støtte Brave og BAT-fællesskabet!";
+"rewards.enabledStatusBody" = "Tak, fordi du hjælper med at støtte Growser og BAT-fællesskabet!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Støt Brave og BAT-fællesskabet ved at slå Brave Rewards til, så du får vist Brave Ads.";
+"rewards.settingsToggleMessage" = "Støt Growser og BAT-fællesskabet ved at slå Growser Rewards til, så du får vist Growser Ads.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Aktiver Brave Rewards";
+"rewards.settingsToggleTitle" = "Aktiver Growser Rewards";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Denne indholdsskaber er verificeret hos Brave Creators";
+"rewards.supportingPublisher" = "Denne indholdsskaber er verificeret hos Growser Creators";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Antal indholdsskabere, du hjælper med at støtte denne måned.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Bidragsmængde";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Brave-tokens";
+"RewardsInternalsContributionProcessorBraveTokens" = "Growser-tokens";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Ingen";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "Vil du gerne aktivere søgeforslag?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Søg med Brave";
+"SearchWithBrave" = "Søg med Growser";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Send";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Send en nedbrudsrapport, så Brave kan løse problemet?";
+"SendCrashReportAlertMessage" = "Send en nedbrudsrapport, så Growser kan løse problemet?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Ups! Brave gik ned";
+"SendCrashReportAlertTitle" = "Ups! Growser gik ned";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Send rapport";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave kan nu indstilles som din standardbrowser i iOS. Tryk her for at åbne indstillinger.";
+"setDefaultBrowserCalloutTitle" = "Growser kan nu indstilles som din standardbrowser i iOS. Tryk her for at åbne indstillinger.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Indstil som standardbrowser";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Luk faner";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Tillad, at Brave automatisk lukker faner, der ikke er blevet vist for nylig.";
+"settings.autocloseTabsSettingFooter" = "Tillad, at Growser automatisk lukker faner, der ikke er blevet vist for nylig.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Bloker distraherende elementer på YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Medier";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Åbn YouTube-links i Brave";
+"settings.openYouTubeInBrave" = "Åbn YouTube-links i Growser";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Aktiver skærmtid";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Kvalitetsindstillinger";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Det private ping giver Brave mulighed for at estimere antallet af aktive brugere.";
+"settings.sendUsagePingDescription" = "Det private ping giver Growser mulighed for at estimere antallet af aktive brugere.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Send automatisk daglig ping om brug til Brave";
+"settings.sendUsagePingTitle" = "Send automatisk daglig ping om brug til Growser";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Giver Brave mulighed for at vise links til private undersøgelser i den nye fane. Undersøgelser hjælper os med at udvikle bedre funktioner og måle effektiviteten af browserbaserede annoncekampagner. [Få mere at vide](%@)";
+"settings.surveyPanelistDescription" = "Giver Growser mulighed for at vise links til private undersøgelser i den nye fane. Undersøgelser hjælper os med at udvikle bedre funktioner og måle effektiviteten af browserbaserede annoncekampagner. [Få mere at vide](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Tillad Brave-undersøgelser";
+"settings.surveyPanelistTitle" = "Tillad Growser-undersøgelser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Scan QR-kode";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Åbn Brave News, og tjek dagens tophistorier";
+"shortcuts.activityTypeBraveNewsDescription" = "Åbn Growser News, og tjek dagens tophistorier";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Åbn browser i en ny fane, og slet alle private browserhistorikdata";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Ryd browserhistorik";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Ryd Brave-browserhistorik";
+"shortcuts.activityTypeClearHistoryTitle" = "Ryd Growser-browserhistorik";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Åbn browser i en ny fane, og aktiver VPN";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Aktiver VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Åbn Brave Browser, og aktiver VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Åbn Growser Browser, og aktiver VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Åbn ny privat fane";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Åbn bogmærker";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Åbn Brave-browserens bogmærker";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Åbn Growser-browserens bogmærker";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Åbn Brave News";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Åbn Growser News";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Åbn Brave News";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Åbn Growser News";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Åbn skærmen Browserhistorik";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Åbn browserhistorik";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Åbn Brave-browserens historik";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Åbn Growser-browserens historik";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Begynd at afspille dine videoer i afspilningslisten";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Åbn spilleliste";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Åbn Brave-faner, der er åbne på andre enheder";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Åbn Growser-faner, der er åbne på andre enheder";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Åbn faner fra andre enheder";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Åbn faner fra andre enheder";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Begynd at søge sikkert på nettet med Brave";
+"shortcuts.activityTypeTabDescription" = "Begynd at søge sikkert på nettet med Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Åbn websted fra bogmærke";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Åbn webstedet";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Denne mulighed åbner indstillingerne for Brave. For at ændre forskellige Siri-indstillinger skal du vælge menupunktet 'Siri og søgning' og tilpasse dine valg.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Denne mulighed åbner indstillingerne for Growser. For at ændre forskellige Siri-indstillinger skal du vælge menupunktet 'Siri og søgning' og tilpasse dine valg.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Åbn Indstillinger";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Ryd browserhistorik";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Brug genveje til at aktivere Brave-VPN via Siri - Voice Assistant";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Brug genveje til at aktivere Growser-VPN via Siri - Voice Assistant";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Aktiver VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Åbn bogmærker";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Brug genveje til at åbne en ny fane og vise Brave News Feed via Siri - Voice Assistant";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Brug genveje til at åbne en ny fane og vise Growser News Feed via Siri - Voice Assistant";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Åbn Brave News";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Åbn Growser News";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Brug genveje til at åbne browserhistorikskærmen via Siri - Voice Assistant";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Afskærmning";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Hver dag sparer jeg data ved at bruge Brave som browser.";
+"socialSharing.domainSpecificDataSavedTitle" = "Hver dag sparer jeg data ved at bruge Growser som browser.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Hver dag sparer jeg data ved at bruge Brave som browser.";
+"socialSharing.shareDescriptionTitle" = "Hver dag sparer jeg data ved at bruge Growser som browser.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Standard fane";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Slet synkroniseringskonto";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Hvis du sletter din konto, bliver dine krypterede data fra Brave-servere fjernet, og Sync bliver deaktiveret på alle dine forbundne enheder.";
+"sync.deleteAccountAlertDescriptionPart1" = "Hvis du sletter din konto, bliver dine krypterede data fra Growser-servere fjernet, og Sync bliver deaktiveret på alle dine forbundne enheder.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Det sletter dog ikke data, der blev gemt lokalt på de enheder.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Slet synkroniseringskonto";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Denne kode ser ud til at være oprettet på en enhed med en ældre version af Brave. Opdatér til den nyeste version af Brave på din anden enhed, og opret en ny synkroniseringskode.";
+"sync.deprecatedVersionError" = "Denne kode ser ud til at være oprettet på en enhed med en ældre version af Growser. Opdatér til den nyeste version af Growser på din anden enhed, og opret en ny synkroniseringskode.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Noget gik galt under hentning af enheder i synkroniseringskæde.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Det ser ud til, at din enhed er blevet gendannet fra en sikkerhedskopi, hvilket kan påvirke Brave Sync. Hvis du vil fortsætte med at bruge Brave Sync, skal du nulstille og tilslutte dig synkroniseringskæden igen.";
+"sync.deviceRestoreDetectedMessage" = "Det ser ud til, at din enhed er blevet gendannet fra en sikkerhedskopi, hvilket kan påvirke Growser Sync. Hvis du vil fortsætte med at bruge Growser Sync, skal du nulstille og tilslutte dig synkroniseringskæden igen.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Gendannelse registreret";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Synkroniser til enhed";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Brug en eksisterende synkroniseret enhed til at åbne Brave-indstillinger og navigere til Indstillinger -> Synkronisering. Vælg \"Tilføj enhed\", og scan den kode, der vises på skærmen.";
+"sync.toDeviceDescription" = "Brug en eksisterende synkroniseret enhed til at åbne Growser-indstillinger og navigere til Indstillinger -> Synkronisering. Vælg \"Tilføj enhed\", og scan den kode, der vises på skærmen.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Denne enhed kan ikke synkroniseres";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Hoden er ugyldig. Kontrollér at tidspunkt og tidszone er korrekt indstillet på din enhed.";
 
 /* Sync settings welcome */
-"sync.welcome" = "For at begynde skal du have installeret Brave på alle de enheder du planlægger at Synkronisere. For at kæde dem sammen skal du oprette en synkroniseringskæde, som du skal bruge til at forbinde alle dine enheder sikkert. ";
+"sync.welcome" = "For at begynde skal du have installeret Growser på alle de enheder du planlægger at Synkronisere. For at kæde dem sammen skal du oprette en synkroniseringskæde, som du skal bruge til at forbinde alle dine enheder sikkert. ";
 
 /* Word count title */
 "sync.wordCount" = "Ordantal: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Efterlad ingen spor på din enhed";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN krypterer og beskytter alt, hvad du foretager dig online, også uden for Brave-browseren.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Growser VPN krypterer og beskytter alt, hvad du foretager dig online, også uden for Growser-browseren.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Growser VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Bemærk, at din browsingaktivitet stadig kan være synlig for din internetudbyder, netværksobservatører eller din arbejdsgiver (hvis du bruger en arbejdsmaskine/et arbejdsnetværk), selv i private vinduer.";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Åben automatisk tastatur";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Åbn links fra Ask Brave og Brave Søgning i forhåndsvisningsfaner";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Åbn links fra Ask Growser og Growser Søgning i forhåndsvisningsfaner";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Aktivér Quickview-faner";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Del...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Del Brave med dine venner! ";
+"themeQRCodeShareTitle" = "Del Growser med dine venner! ";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Automatisk";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Beklager, den feedadresse har ikke noget indhold.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Tilføj kilde til Brave News";
+"today.addSourceShareTitle" = "Tilføj kilde til Growser News";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Tilgængelige RSS-feeds";
 
 /* The name of the feature */
-"today.braveToday" = "Brave News";
+"today.braveToday" = "Growser News";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Nyheder";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Tilbud";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Brave News stopper med at vise indhold fra %@";
+"today.disabledAlertBody" = "Growser News stopper med at vise indhold fra %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Deaktiveret";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Tillad indhold fra %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Brave News oplever nogle problemer. Prøv igen.";
+"today.errorGeneralBody" = "Growser News oplever nogle problemer. Prøv igen.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Ups ...";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Usikre kilder. Tilføjelse er på eget ansvar";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Følg dine yndlingskilder i et enkelt feed. Bare åbn en fane i Brave, rul ned, og... sådan!\nBrave News er annonceunderstøttet med private, anonymiserede annoncer.";
+"today.introCardBody" = "Følg dine yndlingskilder i et enkelt feed. Bare åbn en fane i Growser, rul ned, og... sådan!\nGrowser News er annonceunderstøttet med private, anonymiserede annoncer.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Aktiver Brave News, og gå aldrig glip af en historie igen";
+"today.introCardTitle" = "Aktiver Growser News, og gå aldrig glip af en historie igen";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Vis Brave News";
+"today.isEnabledToggleLabel" = "Vis Growser News";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Få mere at vide om dine data";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Flere Brave-tilbud";
+"today.moreBraveOffers" = "Flere Growser-tilbud";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Intet internet";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Promoveret";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Bedøm Brave i AppStore";
+"today.rateBraveCardActionSheetTitle" = "Bedøm Growser i AppStore";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Skjul";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Bedøm Brave ";
+"today.rateBraveCardRateActionTitle" = "Bedøm Growser ";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Fortæl os, hvad du synes!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Kan du lide Brave?";
+"today.rateBraveCardTitle" = "Kan du lide Growser?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Opdater";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Foreslået";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Aktivér Brave News";
+"today.turnOnBraveToday" = "Aktivér Growser News";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Hold op med at følge";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Se på %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Tillad mikrofonadgang i iOS-systemindstillinger for at Brave kan bruge anonym stemmesøgning.";
+"voice.search.microphone.description.required" = "Tillad mikrofonadgang i iOS-systemindstillinger for at Growser kan bruge anonym stemmesøgning.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Mikrofonadgang påkrævet";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave gemmer eller deler ikke dine stemmesøgninger.";
+"voice.search.screen.disclaimer" = "Growser gemmer eller deler ikke dine stemmesøgninger.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Oprettelsesdato for wallet";

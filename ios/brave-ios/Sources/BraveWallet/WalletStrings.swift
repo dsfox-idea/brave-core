@@ -14,7 +14,7 @@ extension Strings {
       "wallet.module",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Brave Wallet",
+      value: "Growser Wallet",
       comment:
         "The title shown on the wallet settings page, and the value shown when selecting the default wallet as Brave Wallet in wallet settings."
     )
@@ -318,7 +318,7 @@ extension Strings {
       "wallet.cryptoTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Brave Wallet",
+      value: "Growser Wallet",
       comment: "The title of the crypto tab"
     )
     public static let buy = NSLocalizedString(
@@ -449,7 +449,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "Take control of your crypto and NFTs. Brave Wallet supports Ethereum, EVM chains, Solana and more.",
+        "Take control of your crypto and NFTs. Growser Wallet supports Ethereum, EVM chains, Solana and more.",
       comment: "The subtitle displayed on the 'setup crypto' onboarding screen"
     )
     public static let setupCryptoCreateNewTitle = NSLocalizedString(
@@ -463,7 +463,7 @@ extension Strings {
       "wallet.setupCryptoCreateNewSubTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Get started with Brave Wallet within minutes.",
+      value: "Get started with Growser Wallet within minutes.",
       comment:
         "The subtitle displayed in the section for user that need to create a brand new wallet"
     )
@@ -487,7 +487,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "©2023 Brave Software Inc. Brave and the Brave logo are registered trademarks of Brave. Other product names and logos may be trademarks of their respective companies. All rights reserved.",
+        "©2023 Brave Software Inc. Growser and the Growser logo are registered trademarks of Growser. Other product names and logos may be trademarks of their respective companies. All rights reserved.",
       comment: "The disclaimer text at the bottom of the first step of onboarding flow."
     )
     public static let setupCryptoButtonBackButtonTitle = NSLocalizedString(
@@ -519,7 +519,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "I understand this is a self-custody wallet, and that I alone am responsible for any associated funds, assets, or accounts, and for taking appropriate action to secure, protect and backup my wallet. I understand that Brave cannot access my wallet or reverse transactions on my behalf, and that my recovery phrase is the ONLY way to regain access in the event of a lost password, stolen device, or similar circumstance.",
+        "I understand this is a self-custody wallet, and that I alone am responsible for any associated funds, assets, or accounts, and for taking appropriate action to secure, protect and backup my wallet. I understand that Growser cannot access my wallet or reverse transactions on my behalf, and that my recovery phrase is the ONLY way to regain access in the event of a lost password, stolen device, or similar circumstance.",
       comment:
         "The responsibility explained in screen for users to check indicates they understand before setting up a wallet."
     )
@@ -610,7 +610,7 @@ extension Strings {
       "wallet.onbordingCompletedSubTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Your Brave Wallet is ready to use.",
+      value: "Your Growser Wallet is ready to use.",
       comment: "The subtitle of the last step of creating a new wallet."
     )
     public static let onboardingCompletedButtonTitle = NSLocalizedString(
@@ -686,7 +686,7 @@ extension Strings {
       "wallet.restoreLegacyBraveWalletToggleTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Import from legacy Brave crypto wallets?",
+      value: "Import from legacy Growser crypto wallets?",
       comment: "A label for toggle for user to use to indicate importing a legacy brave wallet or not"
     )
     public static let createWalletBackButtonTitle = NSLocalizedString(
@@ -770,7 +770,7 @@ extension Strings {
       "wallet.settingsResetWalletAlertTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Are you sure you want to reset Brave Wallet?",
+      value: "Are you sure you want to reset Growser Wallet?",
       comment:
         "The title the confirmation dialog when resetting the wallet. As in to erase the users wallet from the device"
     )
@@ -802,7 +802,7 @@ extension Strings {
       "wallet.biometricsSetupTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Unlock Brave Wallet with %@",
+      value: "Unlock Growser Wallet with %@",
       comment:
         "The title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device."
     )
@@ -810,7 +810,7 @@ extension Strings {
       "wallet.biometricsSetupSubTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Would you like to use %@ to unlock Brave Wallet?",
+      value: "Would you like to use %@ to unlock Growser Wallet?",
       comment:
         "The sub-title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device."
     )
@@ -856,7 +856,7 @@ extension Strings {
       "wallet.autoLockFooter",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "The number of minutes to wait until the Brave Wallet is automatically locked",
+      value: "The number of minutes to wait until the Growser Wallet is automatically locked",
       comment: "The footer beneath the auto-lock title and interval duration"
     )
     public static let braveSwapFree = NSLocalizedString(
@@ -1321,7 +1321,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "Warning: A screenshot of your recovery phrase may get backed up to a cloud file service, and be readable by any application with photos access. Brave recommends that you not save this screenshot, and delete it as soon as possible.",
+        "Warning: A screenshot of your recovery phrase may get backed up to a cloud file service, and be readable by any application with photos access. Growser recommends that you not save this screenshot, and delete it as soon as possible.",
       comment: "The message displayed when the user takes a screenshot of their recovery phrase"
     )
     public static let sendErrorZecAddressWrongTransparentAddress = NSLocalizedString(
@@ -1751,7 +1751,7 @@ extension Strings {
       "wallet.dappsConnectionNotificationTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "This page wants to interact with Brave Wallet",
+      value: "This page wants to interact with Growser Wallet",
       comment:
         "The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet."
     )
@@ -1759,7 +1759,7 @@ extension Strings {
       "wallet.dappsConnectionNotificationOriginTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "%@ wants to interact with Brave Wallet",
+      value: "%@ wants to interact with Growser Wallet",
       comment:
         "The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. The '%@' will be the site attempting to connect. For example: \"app.uniswap.org wants to interact with Brave Wallet\""
     )
@@ -1820,7 +1820,7 @@ extension Strings {
       "wallet.newSiteConnectMessage",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Connect to Brave Wallet",
+      value: "Connect to Growser Wallet",
       comment: "The message displayed below the dapp's origin url in new site connection screen."
     )
     public static let newSiteConnectFooter = NSLocalizedString(
@@ -1921,7 +1921,7 @@ extension Strings {
       "wallet.addNetworkDescription",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "This will allow this network to be used within Brave Wallet.",
+      value: "This will allow this network to be used within Growser Wallet.",
       comment:
         "The description of the view shown over a dapps website that describes what adding a new network will do."
     )
@@ -2330,7 +2330,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "Warning: A screenshot of your message may get backed up to a cloud file service, and be readable by any application with photos access. Brave recommends that you not save this screenshot, and delete it as soon as possible.",
+        "Warning: A screenshot of your message may get backed up to a cloud file service, and be readable by any application with photos access. Growser recommends that you not save this screenshot, and delete it as soon as possible.",
       comment:
         "The message displayed when the user takes a screenshot of their dapp decrypt request."
     )
@@ -2520,7 +2520,7 @@ extension Strings {
       "wallet.dappsSettingsConnectedSitesSectionEmpty",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "DApps you connect to Brave Wallet will appear here",
+      value: "DApps you connect to Growser Wallet will appear here",
       comment:
         "A message that will be displayed under the section header when there is no dapps have been granted wallet connection."
     )
@@ -2897,7 +2897,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "Note that Brave can’t verify what will happen if you sign. A signature could authorize nearly any operation in your account or on your behalf, including (but not limited to) giving total control of your account and crypto assets to the site making the request. Only sign if you’re sure you want to take this action, and trust the requesting site.",
+        "Note that Growser can’t verify what will happen if you sign. A signature could authorize nearly any operation in your account or on your behalf, including (but not limited to) giving total control of your account and crypto assets to the site making the request. Only sign if you’re sure you want to take this action, and trust the requesting site.",
       comment:
         "The warning message to let users understand the risk of using Brave Wallet to sign any transaction."
     )
@@ -3206,7 +3206,7 @@ extension Strings {
       "wallet.snsDomainInterstitialPageTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Enable Support of Solana Name Service (SNS) in Brave?",
+      value: "Enable Support of Solana Name Service (SNS) in Growser?",
       comment:
         "Title displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one."
     )
@@ -3215,7 +3215,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "Brave will use a third-party to resolve .sol domain names. Brave hides your IP address. If you enable this, the third-party will see that someone is trying to visit these .sol domains, but nothing else. For more information about which third-parties we use and their privacy policies, please see our <a href=%@>help page</a>.",
+        "Growser will use a third-party to resolve .sol domain names. Growser hides your IP address. If you enable this, the third-party will see that someone is trying to visit these .sol domains, but nothing else. For more information about which third-parties we use and their privacy policies, please see our <a href=%@>help page</a>.",
       comment:
         "Description displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. The first '%@' will be replaced with a link to Brave's wiki page which will link to the providersterms of use page and privacy policy page. The last '%@' will be replaced with the value of 'snsDomainInterstitialPagePrivacyPolicy'."
     )
@@ -3232,7 +3232,7 @@ extension Strings {
       "wallet.ensDomainInterstitialPageTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Enable Support of Ethereum Name Service (ENS) in Brave?",
+      value: "Enable Support of Ethereum Name Service (ENS) in Growser?",
       comment:
         "Title displayed when users chose Brave to ask them if they want the ENS domain to be resolved every time they enter one."
     )
@@ -3241,7 +3241,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "Brave will rely on your configured Ethereum Mainnet RPC service which is Chainstack by default to resolve .eth domain names that are on Ethereum Name Service (ENS). Brave hides your IP address. If you enable this, Chainstack will see that someone is trying to visit these .eth domains but nothing else. See Chainstack's <a href=%@>%@</a> and <a href=%@>%@</a>.",
+        "Growser will rely on your configured Ethereum Mainnet RPC service which is Chainstack by default to resolve .eth domain names that are on Ethereum Name Service (ENS). Growser hides your IP address. If you enable this, Chainstack will see that someone is trying to visit these .eth domains but nothing else. See Chainstack's <a href=%@>%@</a> and <a href=%@>%@</a>.",
       comment:
         "Description displayed when users chose Brave to ask them if they want the ENS to be resolved every time they enter one. The first '%@' will be replaced with a link to Chainstack's terms of use page. The second '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The third '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'."
     )
@@ -3258,7 +3258,7 @@ extension Strings {
       "wallet.ensOffchainDomainInterstitialPageTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Enable support of Ethereum Name Service (ENS) offchain lookup in Brave?",
+      value: "Enable support of Ethereum Name Service (ENS) offchain lookup in Growser?",
       comment:
         "Title displayed when users chose Brave to ask them if they want the ENS Offchain domain to be resolved every time they enter one."
     )
@@ -3284,7 +3284,7 @@ extension Strings {
       "wallet.udDomainInterstitialPageTitle",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Enable support of Unstoppable Domains in Brave?",
+      value: "Enable support of Unstoppable Domains in Growser?",
       comment:
         "Title displayed when users chose Brave to ask them if they want the Unstoppable Domains domain to be resolved every time they enter one."
     )
@@ -3292,7 +3292,7 @@ extension Strings {
       "wallet.udDomainInterstitialPageIntro",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Brave will be the configured Ethereum RPC service which defaults to Chainstack to resolve:",
+      value: "Growser will be the configured Ethereum RPC service which defaults to Chainstack to resolve:",
       comment:
         "The intro displayed below `udDomainInterstitialPageTitle`."
     )
@@ -3301,7 +3301,7 @@ extension Strings {
       tableName: "BraveWallet",
       bundle: .module,
       value:
-        "domain names that are on Unstoppable Domains. Brave hides your IP address. If you enable this, Chainstack will see that someone is trying to visit these domains but nothing else. See Chainstack's <a href=%@>%@</a> and <a href=%@>%@</a>.",
+        "domain names that are on Unstoppable Domains. Growser hides your IP address. If you enable this, Chainstack will see that someone is trying to visit these domains but nothing else. See Chainstack's <a href=%@>%@</a> and <a href=%@>%@</a>.",
       comment:
         "Description displayed when users chose Brave to ask them if they want the Unstoppable Domains to be resolved every time they enter one. The first '%@' will be replaced with a list of supported TLDs like '.x' or '.bitcoin'. The second '%@' be replaced with a link to Chainstack's terms of use page. The third '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The fourth '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'."
     )
@@ -3363,7 +3363,7 @@ extension Strings {
       "wallet.signInWithBraveWallet",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "Sign in with Brave Wallet",
+      value: "Sign in with Growser Wallet",
       comment: "The title of the view shown above a Sign In With Ethereum request."
     )
     public static let securityRiskDetectedTitle = NSLocalizedString(
@@ -3378,7 +3378,7 @@ extension Strings {
       "wallet.signInWithBraveWalletMessage",
       tableName: "BraveWallet",
       bundle: .module,
-      value: "You are signing into %@. Brave Wallet will share your wallet address with %@.",
+      value: "You are signing into %@. Growser Wallet will share your wallet address with %@.",
       comment:
         "The title of the view shown when a security issue is detected with a Sign In With Ethereum request."
     )

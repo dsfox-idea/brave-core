@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Filter nach URL hinzufügen";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "Der **Brave Player** ist dein Ticket zu einem werbe- und unterbrechungsfreien Videoerlebnis.";
+"AntiAdBlockWarningBravePlayerDescription" = "Der **Growser Player** ist dein Ticket zu einem werbe- und unterbrechungsfreien Videoerlebnis.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Schutz für mich anpassen";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Diese Website hat damit begonnen, einige Werbeblocker zu blockieren. Das bedeutet, dass die Website möglicherweise nicht wie erwartet funktioniert.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Um dieses Problem zu beheben, kann Brave deine Schutzeinstellungen für dich anpassen. Nach der Anpassung kannst du versuchen, diese Inhalte stattdessen im Brave Player anzuschauen.";
+"AntiAdBlockWarningDescription2" = "Um dieses Problem zu beheben, kann Growser deine Schutzeinstellungen für dich anpassen. Nach der Anpassung kannst du versuchen, diese Inhalte stattdessen im Growser Player anzuschauen.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Aktuelle Einstellungen beibehalten";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Hinweise zum Wechseln zur App blockieren";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Videos dieser Website immer mit dem Brave Player öffnen";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Videos dieser Website immer mit dem Growser Player öffnen";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Ausprobieren";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Nicht jetzt";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Mit dem Brave Player kannst du Videos unterbrechungsfrei anschauen.";
+"BravePlayerInfoMessage" = "Mit dem Growser Player kannst du Videos unterbrechungsfrei anschauen.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Stattdessen im Brave Player anschauen";
+"BravePlayerInfoTitle" = "Stattdessen im Growser Player anschauen";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Inhaltsfilterung";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Zurück";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Weil du darum gebeten hast, Tracker und Anzeigen aggressiv zu blockieren, blockt Brave diese Site, bevor die erste Netzwerkverbindung hergestellt wird.";
+"DomainBlockedPageDescription" = "Weil du darum gebeten hast, Tracker und Anzeigen aggressiv zu blockieren, blockt Growser diese Site, bevor die erste Netzwerkverbindung hergestellt wird.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave hat das Laden der folgenden Site verhindert:";
+"DomainBlockedPageMessage" = "Growser hat das Laden der folgenden Site verhindert:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Diese Website versucht möglicherweise, dich über andere Websites hinweg zu verfolgen";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Bei geschlossener App";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Browserdaten werden automatisch zerkleinert, wenn die Brave-App geschlossen / neu gestartet wird";
+"ShredOnAppCloseDescription" = "Browserdaten werden automatisch zerkleinert, wenn die Growser-App geschlossen / neu gestartet wird";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Registerkarten der Website geschlossen";

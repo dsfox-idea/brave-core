@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Biểu tượng Brave";
+"altAppIcon.braveIconsHeader" = "Biểu tượng Growser";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "Đổi biểu tượng ứng dụng";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "Tìm hiểu thêm / lựa chọn từ chối";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "Hình nền được tài trợ hỗ trợ sứ mệnh xây dựng một nền tảng web độc lập và ưu tiên người dùng của Brave. Khác với sản phẩm của công ty Big Tech, chúng tôi đo lường hiệu suất quảng cáo theo cách đo ẩn danh để bảo toàn quyền riêng tư của bạn.";
+"NewTabTakeoverInfoBarMessage" = "Hình nền được tài trợ hỗ trợ sứ mệnh xây dựng một nền tảng web độc lập và ưu tiên người dùng của Growser. Khác với sản phẩm của công ty Big Tech, chúng tôi đo lường hiệu suất quảng cáo theo cách đo ẩn danh để bảo toàn quyền riêng tư của bạn.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "Thẻ mới";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "Mã **%1$@** để được giảm %2$@";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Tài khoản Brave";
+"paywall.braveAccountCheckoutOptionTitle" = "Tài khoản Growser";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Tìm hiểu thêm về Brave VPN";
+"paywall.braveVPNLearnMoreButtonTitle" = "Tìm hiểu thêm về Growser VPN";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "Bạn có mã khuyến mãi?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "Tìm hiểu thêm / lựa chọn từ chối";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "Cảm ơn vì đã ủng hộ Tìm kiếm Brave khi bấm vào quảng cáo riêng tư. Khác với sản phẩm của công ty Big Tech, chúng tôi đo lường hiệu suất quảng cáo theo cách đo ẩn danh để bảo toàn quyền riêng tư của bạn.";
+"searchResultAdClickedInfoBarMessage" = "Cảm ơn vì đã ủng hộ Tìm kiếm Growser khi bấm vào quảng cáo riêng tư. Khác với sản phẩm của công ty Big Tech, chúng tôi đo lường hiệu suất quảng cáo theo cách đo ẩn danh để bảo toàn quyền riêng tư của bạn.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "Chọn thanh vị trí";
@@ -110,7 +110,7 @@
 "ShowPreviousTabTitle" = "Hiển thị thẻ trước";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields */
-"showShieldsTitle" = "Mở Lá chắn Brave";
+"showShieldsTitle" = "Mở Lá chắn Growser";
 
 /* Hardware shortcut to open the tab tray from a tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "ShowTabTrayFromTabKeyCodeTitle" = "Hiển thị tất cả thẻ";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "Phiên bản ứng dụng";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo hằng tháng";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo hằng tháng";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo hằng năm";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo hằng năm";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "Xin lỗi, không tìm thấy biên lai App Store";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "Ngày hủy";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "Chia sẻ biên lai";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN hằng tháng";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN hằng tháng";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN hằng năm";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN hằng năm";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "Chế độ duyệt bình thường";
