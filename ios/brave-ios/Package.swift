@@ -452,9 +452,12 @@ var package = Package(
       ],
       // Growser-280: the VPN promotions are out of the product with the VPN.
       // Growser-290: so is the Rewards agreement, with Rewards.
-      exclude: ["VPNNotifications", "Callouts/OnboardingRewardsAgreementViewController.swift"],
+      // Growser-286: and its animation, which shipped with nothing to play it.
+      exclude: [
+        "VPNNotifications", "Callouts/OnboardingRewardsAgreementViewController.swift",
+        "LottieAssets/onboarding-rewards.json",
+      ],
       resources: [
-        .copy("LottieAssets/onboarding-rewards.json"),
         .copy("LottieAssets/playlist-confetti.json"),
         .copy("WelcomeFocus/Resources/LottieAssets"),
         .copy("WelcomeFocus/Resources/Videos"),

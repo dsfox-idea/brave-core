@@ -15,8 +15,10 @@ struct DefaultBrowserGraphicView: View {
       try await DotLottieFile.named(
         colorScheme == .dark ? "browser-default-dark" : "browser-default-light",
         bundle: .module,
-        subdirectory: Locale.current.language.languageCode == "en"
-          ? "LottieAssets/en" : "LottieAssets"
+        // Growser-286: every language plays the version without words. The
+        // English one spelled Brave's name across the screen in glyph layers;
+        // this one has the name once, redrawn by brand/make-ios-onboarding.py.
+        subdirectory: "LottieAssets"
       )
     }
     .resizable()
