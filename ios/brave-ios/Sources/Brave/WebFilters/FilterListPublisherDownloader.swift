@@ -28,6 +28,15 @@ import os.log
   /// One refresh loop per enabled entry, keyed by the entry's uuid.
   private var tasks: [String: Task<Void, Never>] = [:]
   private var subscription: AnyCancellable?
+  private var resourcesTask: Task<Void, Never>?
+
+  /// The scriptlets and redirect resources that `+js(...)` rules name. This
+  /// file is the whole of Brave's resources component - the universal uBO
+  /// scriptlets are compiled into adblock-rust itself (measured for the
+  /// desktop in #87) - so it replaces the component, which a fork is not served.
+  static let resourcesURL = URL(
+    string: "https://raw.githubusercontent.com/brave/adblock-resources/master/dist/resources.json"
+  )!
 
   private static var fetchInterval: TimeInterval {
     AppConstants.isOfficialBuild ? 6.hours : 10.minutes
@@ -36,6 +45,12 @@ import os.log
   /// Follow the catalogue: fetch what is enabled, stop what is not.
   func start() {
     guard subscription == nil else { return }
+    resourcesTask = Task { [downloader] in
+      while !Task.isCancelled {
+        await Self.publishResources(downloader: downloader)
+        try? await Task.sleep(for: .seconds(Self.fetchInterval))
+      }
+    }
     subscription = FilterListStorage.shared.$filterLists.sink { lists in
       Task { @MainActor [weak self] in self?.follow(lists) }
     }
@@ -123,6 +138,40 @@ import os.log
     } catch {
       ContentBlockerManager.log.error(
         "growser#297: \(entry.title, privacy: .public): \(error.localizedDescription, privacy: .public)"
+      )
+    }
+  }
+}
+
+extension FilterListPublisherDownloader {
+  /// Hand the engines the publisher's resources. The engine versions its
+  /// resources by the name of the folder the file is in, so each copy goes
+  /// into a folder named by the time the publisher last changed it.
+  fileprivate static func publishResources(
+    downloader: ResourceDownloader<FilterListPublisherSource>
+  ) async {
+    let source = FilterListPublisherSource(entryId: "resources", url: resourcesURL)
+    do {
+      let result = try await downloader.download(resource: source)
+      let version = String(Int(result.date.timeIntervalSince1970))
+      let folder = try FileManager.default.url(
+        for: .cachesDirectory,
+        in: .userDomainMask,
+        appropriateFor: nil,
+        create: true
+      ).appending(path: "filter-list-publishers/resources/\(version)", directoryHint: .isDirectory)
+      let fileURL = folder.appending(path: "resources.json")
+      if !FileManager.default.fileExists(atPath: fileURL.path(percentEncoded: false)) {
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        try FileManager.default.copyItem(at: result.fileURL, to: fileURL)
+      }
+      await AdBlockGroupsManager.shared.didDownloadResources(fileURL: fileURL)
+      ContentBlockerManager.log.debug(
+        "growser#297: resources \(version, privacy: .public) from their publisher"
+      )
+    } catch {
+      ContentBlockerManager.log.error(
+        "growser#297: resources: \(error.localizedDescription, privacy: .public)"
       )
     }
   }
