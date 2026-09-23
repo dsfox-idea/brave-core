@@ -152,6 +152,10 @@ var package = Package(
         "Frontend/Browser/BrowserViewController/BVC+Origin.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveSkusScriptHandler.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSkusScript.js",
+        // Growser-284: every alternate app icon is a Brave lion, so the
+        // picker is out and the app wears the G only.
+        "Frontend/Settings/Display/AltIconsModel.swift",
+        "Frontend/Settings/Display/AltIconsView.swift",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),

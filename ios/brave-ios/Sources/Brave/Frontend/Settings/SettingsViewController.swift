@@ -78,7 +78,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   private let cryptoStore: CryptoStore?
   private let windowProtection: WindowProtection?
   private let ipfsAPI: IpfsAPI
-  private let altIconsModel = AltIconsModel()
+  // Growser-284: no AltIconsModel - the alternate icons are Brave lions.
 
   private lazy var braveAccountAuthentication: (any BraveAccountAuthentication)? = {
     guard IsBraveAccountEnabled() else { return nil }
@@ -100,7 +100,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   private let braveAccountResendConfirmationEmailRowUUID: UUID = .init()
   private let braveAccountChangePasswordRowUUID: UUID = .init()
   private let walletRowUUID: UUID = .init()
-  private let appIconRowUUID: UUID = .init()
 
   private var cancellables: Set<AnyCancellable> = []
 
@@ -171,22 +170,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
 
     // Growser-280: no NEVPNStatusDidChange observer.
 
-    self.altIconsModel.$selectedAltAppIcon
-      .dropFirst()
-      .receive(on: RunLoop.main)
-      .sink { [weak self] _ in
-        guard let self,
-          let indexPath = self.dataSource.indexPath(
-            rowUUID: appIconRowUUID.uuidString,
-            sectionUUID: displaySectionUUID.uuidString
-          )
-        else {
-          return
-        }
-        dataSource.sections[indexPath.section].rows[indexPath.row].image = selectedAppIcon
-        self.tableView.reloadData()
-      }
-      .store(in: &cancellables)
+    // Growser-284: no app icon row to refresh.
 
     braveAccountAuthentication?.addObserver(self)
   }
@@ -1131,12 +1115,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     return tabs
   }()
 
-  private var selectedAppIcon: UIImage? {
-    if let altIcon = altIconsModel.selectedAltAppIcon {
-      return UIImage(named: altIcon, in: .module, with: nil)
-    }
-    return Bundle.main.primaryIconName.flatMap { UIImage(named: $0) }
-  }
 
   private lazy var displaySection: Static.Section = {
     var display = Static.Section(
@@ -1196,20 +1174,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       self.navigationController?.pushViewController(optionsViewController, animated: true)
     }
     display.rows.append(row)
-    display.rows.append(
-      Row(
-        text: Strings.AltAppIcon.changeAppIcon,
-        selection: { [unowned self] in
-          let controller = UIHostingController(rootView: AltIconsView(model: altIconsModel))
-          controller.title = Strings.AltAppIcon.changeAppIcon
-          navigationController?.pushViewController(controller, animated: true)
-        },
-        image: selectedAppIcon,
-        accessory: .disclosureIndicator,
-        cellClass: AppIconCell.self,
-        uuid: appIconRowUUID.uuidString
-      )
-    )
+    // Growser-284: no "Change App Icon" row - every alternate is a Brave lion.
     display.rows.append(
       Row(
         text: Strings.NTP.settingsTitle,
