@@ -34,10 +34,10 @@ source_set("web_view") {
     "brave_web_view_internal.h",
   ]
   deps = [
-    "//brave/components/brave_ads/buildflags",
     "//base",
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account/mojom:mojom_objc",
+    "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_talk/buildflags",
     "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/playlist/core/common/buildflags",

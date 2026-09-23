@@ -16,10 +16,10 @@ source_set("model") {
     "brave_keyed_service_factories.mm",
   ]
   deps = [
-    "//brave/components/brave_ads/buildflags",
     "//base",
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account:features",
+    "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/skus/buildflags",
     "//brave/ios/browser/api/webcompat_reporter",

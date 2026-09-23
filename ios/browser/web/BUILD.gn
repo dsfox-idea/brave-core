@@ -18,8 +18,8 @@ source_set("web") {
     "brave_web_main_parts.mm",
   ]
   deps = [
-    "//brave/components/brave_ads/buildflags",
     "//base",
+    "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_component_updater/browser:public",
     "//brave/components/brave_shields/core/common",
     "//brave/components/brave_talk/buildflags",

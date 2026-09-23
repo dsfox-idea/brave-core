@@ -9,13 +9,13 @@ import("//brave/build/ios/create_xcframework.gni")
 import("//brave/build/mac/tweak_info_plist.gni")
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/ai_chat/ios/browser/headers.gni")
-import("//brave/components/brave_news/common/buildflags/buildflags.gni")
-import("//brave/components/brave_shields/ios/browser/headers.gni")
 import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
+import("//brave/components/brave_shields/ios/browser/headers.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
-import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/brave_user_agent/ios/common/headers.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/debounce/ios/browser/headers.gni")
 import("//brave/components/skus/buildflags/buildflags.gni")
 import("//brave/components/url_sanitizer/ios/browser/headers.gni")
@@ -214,7 +214,8 @@ if (enable_skus) {
 # Objective-C APIs leave BraveCore with them.
 # The generated mojom header stays with ads off: ntp_sponsored_image.h names
 # its enum.
-brave_core_public_headers += [ "$root_gen_dir/brave/ios/browser/api/ads/brave_ads.mojom.objc.h" ]
+brave_core_public_headers +=
+    [ "$root_gen_dir/brave/ios/browser/api/ads/brave_ads.mojom.objc.h" ]
 if (enable_brave_ads) {
   brave_core_public_headers += [ "//brave/ios/browser/api/ads/brave_ads.h" ]
 }
@@ -335,6 +336,7 @@ ios_framework_bundle("early_partition_alloc_framework") {
   output_name = "PartitionAllocSupport"
   sources = [ "//ios/chrome/app/early_pa_registration.cc" ]
   info_plist = "//ios/chrome/app/resources/EarlyPAFrameworkInfo.plist"
+
   # Growser-284: ours, like the app's.
   extra_substitutions = [ "BUNDLE_IDENTIFIER=org.growser.ios.$output_name" ]
 
