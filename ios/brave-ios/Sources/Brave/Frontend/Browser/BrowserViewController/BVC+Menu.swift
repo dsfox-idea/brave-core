@@ -98,6 +98,9 @@ extension BrowserViewController {
     pageActivitiesRemovedByAdminPolicies.insert(.addSourceNews)
     // Growser-298: and so is reporting a broken site to Brave (#78).
     pageActivitiesRemovedByAdminPolicies.insert(.reportBrokenSite)
+    // Growser-293: and sending a tab to your devices - they are Sync's, and
+    // Sync is not offered; the entry could only ever show greyed out.
+    pageActivitiesRemovedByAdminPolicies.insert(.sendURL)
     let remainingPageActivities: [Action] = Action.ID.allPageActivites
       .subtracting(pageActivities.map(\.id))
       .subtracting(pageActivitiesRemovedByAdminPolicies)
