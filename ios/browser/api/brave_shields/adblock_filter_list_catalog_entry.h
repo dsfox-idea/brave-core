@@ -25,6 +25,9 @@ OBJC_EXPORT
 @property(readonly) NSArray<NSString*>* platforms;
 @property(readonly) NSString* componentId;
 @property(readonly) NSString* base64PublicKey;
+/// Growser-297: the publishers' URLs the list is built from (#87 parses them;
+/// upstream ignores them and fetches the component, which a fork cannot).
+@property(readonly) NSArray<NSString*>* sourceURLs;
 - (instancetype)init NS_UNAVAILABLE;
 @end
 

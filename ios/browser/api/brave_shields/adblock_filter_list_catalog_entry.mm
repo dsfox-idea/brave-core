@@ -25,6 +25,7 @@
 @property(nonatomic, copy) NSArray<NSString*>* platforms;
 @property(nonatomic, copy) NSString* componentId;
 @property(nonatomic, copy) NSString* base64PublicKey;
+@property(nonatomic, copy) NSArray<NSString*>* sourceURLs;  // Growser-297
 @end
 
 @implementation AdblockFilterListCatalogEntry
@@ -45,12 +46,14 @@
     self.platforms = brave::vector_to_ns<std::string>(entry.platforms);
     self.componentId = base::SysUTF8ToNSString(entry.component_id);
     self.base64PublicKey = base::SysUTF8ToNSString(entry.base64_public_key);
+    self.sourceURLs =  // Growser-297
+        brave::vector_to_ns<std::string>(entry.source_urls);
   }
   return self;
 }
 
 - (brave_shields::FilterListCatalogEntry)entry {
-  return brave_shields::FilterListCatalogEntry(
+  auto entry = brave_shields::FilterListCatalogEntry(
       base::SysNSStringToUTF8(self.uuid), base::SysNSStringToUTF8(self.url),
       base::SysNSStringToUTF8(self.title),
       brave::ns_to_vector<std::string>(self.languages),
@@ -60,6 +63,9 @@
       brave::ns_to_vector<std::string>(self.platforms),
       base::SysNSStringToUTF8(self.componentId),
       base::SysNSStringToUTF8(self.base64PublicKey));
+  // Growser-297: keep the sources across the round trip.
+  entry.source_urls = brave::ns_to_vector<std::string>(self.sourceURLs);
+  return brave_shields::FilterListCatalogEntry(entry);  // the copy is explicit
 }
 
 - (BOOL)isEqual:(nullable id)object {
