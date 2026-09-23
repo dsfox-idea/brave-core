@@ -4,7 +4,7 @@
 
 import BraveCore
 import BraveShields
-import BraveWallet
+// Growser-287: no BraveWallet.
 import CoreData
 import Data
 import Favicon
@@ -91,7 +91,7 @@ class TabManager: NSObject {
   private var braveCore: BraveProfileController?
   private let profile: any Profile
   private weak var tabGeneratorAPI: BraveTabGeneratorAPI?
-  private var domainFrc = Domain.frc()
+  // Growser-287: no Domain observer - it existed for dApp permissions.
   private let syncedTabsQueue = DispatchQueue(label: "synced-tabs-queue")
   private var syncTabsTask: DispatchWorkItem?
   private var metricsHeartbeat: Timer?
@@ -135,15 +135,6 @@ class TabManager: NSObject {
     super.init()
 
     Preferences.Chromium.syncOpenTabsEnabled.observe(from: self)
-
-    domainFrc.delegate = self
-    do {
-      try domainFrc.performFetch()
-    } catch {
-      Logger.module.error(
-        "Failed to perform fetch of Domains for observing dapps permission changes: \(error.localizedDescription, privacy: .public)"
-      )
-    }
 
     // Initially fired and set up after tabs are restored
     metricsHeartbeat = Timer(
@@ -1623,48 +1614,7 @@ extension TabManager: PreferencesObserver {
   }
 }
 
-extension TabManager: NSFetchedResultsControllerDelegate {
-  func controller(
-    _ controller: NSFetchedResultsController<NSFetchRequestResult>,
-    didChange anObject: Any,
-    at indexPath: IndexPath?,
-    for type: NSFetchedResultsChangeType,
-    newIndexPath: IndexPath?
-  ) {
-    if let domain = anObject as? Domain, let domainURL = domain.url {
-      // if `wallet_permittedAccounts` changes on a `Domain` from
-      // wallet settings / manage web3 site connections, we need to
-      // fire `accountsChanged` event on open tabs for this `Domain`
-      let tabsForDomain = self.allTabs.filter {
-        $0.visibleURL?.domainURL.absoluteString.caseInsensitiveCompare(domainURL) == .orderedSame
-      }
-      tabsForDomain.forEach { tab in
-        Task { @MainActor in
-          let privateMode = privateBrowsingManager.isPrivateBrowsing
-          guard let keyringService = BraveWallet.KeyringServiceFactory.get(privateMode: privateMode)
-          else {
-            return
-          }
-          let allAccounts = await keyringService.allAccounts()
-          // iOS does not have `HostContentSettingsMap`, so we must
-          // implement `SolanaProviderImpl::OnContentSettingChanged`
-          if let selectedSolAccount = allAccounts.solDappSelectedAccount,
-            // currently connected
-            tab.wallet?.isSolanaAccountConnected(selectedSolAccount.address) == true,
-            tab.wallet?.isAccountAllowed(.sol, account: selectedSolAccount.address) == false
-          {  // user revoked access
-            tab.wallet?.walletSolProvider?.disconnect()
-          }
-
-          let ethAccountAddressess = allAccounts.accounts.filter { $0.coin == .eth }.map(\.address)
-          let allowedEthAccountAddresses =
-            tab.wallet?.getAllowedAccounts(.eth, accounts: ethAccountAddressess) ?? []
-          tab.wallet?.accountsChangedEvent(accounts: Array(allowedEthAccountAddresses))
-        }
-      }
-    }
-  }
-}
+// Growser-287: no NSFetchedResultsControllerDelegate - see the Domain observer above.
 
 extension WKWebViewConfiguration {
   /// Updates a WebKit configuration with Brave's defaults and preferences that can't be done

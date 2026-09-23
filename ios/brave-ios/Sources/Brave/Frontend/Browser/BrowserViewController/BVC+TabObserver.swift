@@ -5,7 +5,7 @@
 
 import BraveCore
 import BraveUI
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Foundation
 import Preferences
 import Shared
@@ -56,32 +56,7 @@ extension BrowserViewController: TabObserver {
       }
     }
 
-    // check if web view is loading a different origin than the one currently loaded
-    if let selectedTab = tabManager.selectedTab {
-      if selectedTab.visibleURL?.origin != visibleURL?.origin {
-        // new site has a different origin, hide wallet icon.
-        tabManager.selectedTab?.wallet?.isWalletIconVisible = false
-        // new site, reset connected addresses
-        tabManager.selectedTab?.wallet?.clearSolanaConnectedAccounts()
-        // close wallet panel if it's open
-        if let popoverController = self.presentedViewController as? PopoverController,
-          popoverController.contentController is WalletPanelHostingController
-        {
-          self.dismiss(animated: true)
-        }
-        // dismiss wallet notification (e.g. after redirect to different origin)
-        removeWalletNotificationAndClearOrigin()
-      } else if profileController.braveWalletAPI.isAllowed,
-        let selectedTabVisibleURL = selectedTab.visibleURL,
-        selectedTabVisibleURL.isWalletWebUIURL
-      {
-        // loading wallet webui. show wallet button in url bar if there are
-        // 1. pending web requests
-        // 2. pending transactions
-        tabManager.selectedTab?.wallet?.isWalletIconVisible = true
-        updateURLBarWalletButton()
-      }
-    }
+    // Growser-287: no wallet icon, panel or notification to reset on a new origin.
   }
 
   public func tabWasShown(_ tab: some TabState) {
@@ -115,19 +90,7 @@ extension BrowserViewController: TabObserver {
       return
     }
 
-    // Dismiss wallet panel and notification if the tab's committed URL origin no longer matches
-    let committedOrigin = tab.lastCommittedURL?.origin
-    if let popoverController = self.presentedViewController as? PopoverController,
-      let walletPanel = popoverController.contentController as? WalletPanelHostingController,
-      let committedOrigin,
-      walletPanel.origin != committedOrigin
-    {
-      self.dismiss(animated: true)
-      removeWalletNotificationAndClearOrigin()
-    } else if let committedOrigin {
-      // Tab navigated to a different origin (e.g. redirect); dismiss wallet notification if it was for another origin
-      dismissWalletNotificationIfOriginDiffers(from: committedOrigin)
-    }
+    // Growser-287: no wallet panel or notification to dismiss.
 
     updateUIForReaderHomeStateForTab(tab)
     updateBackForwardActionStatus(for: tab)
@@ -349,9 +312,7 @@ extension BrowserViewController {
 
     // Growser-278: no BraveTalkScriptHandler.
 
-    if profileController.braveWalletAPI.isAllowed {
-      injectedScripts.append(Web3NameServiceScriptHandler())
-    }
+    // Growser-287: no Web3NameServiceScriptHandler.
 
     // Only add the logins handler, wallet provider and skus if the tab is NOT a private tab
     if !tab.isPrivate {
@@ -360,15 +321,7 @@ extension BrowserViewController {
         BraveSearchResultAdScriptHandler(),
         // Growser-283: no BraveSkusScriptHandler.
       ]
-      if profileController.braveWalletAPI.isAllowed {
-        injectedScripts += [
-          EthereumProviderScriptHandler(),
-          SolanaProviderScriptHandler(),
-        ]
-      }
-      if WalletConstants.isCardanoDAppSupportEnabled {
-        injectedScripts.append(CardanoProviderScriptHandler())
-      }
+      // Growser-287: no Ethereum, Solana or Cardano provider for pages.
     }
 
     if FeatureList.kBraveTranslateEnabled.enabled {
@@ -389,8 +342,5 @@ extension BrowserViewController {
         contentWorld: type(of: $0).scriptSandbox
       )
     }
-
-    (tab.browserData?.getContentScript(name: Web3NameServiceScriptHandler.scriptName)
-      as? Web3NameServiceScriptHandler)?.delegate = self
   }
 }

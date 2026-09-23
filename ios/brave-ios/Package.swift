@@ -22,7 +22,7 @@ var package = Package(
     .library(name: "BraveShields", targets: ["BraveShields"]),
     .library(name: "BraveUI", targets: ["BraveUI"]),
     .library(name: "DesignSystem", targets: ["DesignSystem", "NalaAssets"]),
-    .library(name: "BraveWallet", targets: ["BraveWallet"]),
+    // Growser-287: no BraveWallet library.
     .library(name: "Data", targets: ["Data"]),
     .library(name: "DataImporter", targets: ["DataImporter"]),
     .library(name: "BrowserIntentsModels", targets: ["BrowserIntentsModels"]),
@@ -60,13 +60,13 @@ var package = Package(
     .package(url: "https://github.com/cezheng/Fuzi", from: "3.1.3"),
     .package(url: "https://github.com/airbnb/lottie-spm", from: "4.4.3"),
     .package(url: "https://github.com/SDWebImage/SDWebImage", exact: "5.10.3"),
-    .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI", from: "2.2.0"),
+    // Growser-287: no SDWebImageSwiftUI or Swift-BigInt - only BraveWallet
+    // used them.
     // Growser-281: no FeedKit - only BraveNews parsed RSS with it.
     .package(url: "https://github.com/apple/swift-collections", from: "1.0.0"),
     .package(url: "https://github.com/siteline/SwiftUI-Introspect", from: "26.0.2"),
     .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
     .package(url: "https://github.com/devxoul/Then", from: "2.7.0"),
-    .package(name: "Swift-BigInt", path: "../third_party/swift-bigint"),
     // Growser-280: no GuardianConnect - Guardian's VPN SDK went with the VPN.
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "0.6.0"),
     .package(
@@ -84,7 +84,7 @@ var package = Package(
       dependencies: [
         "BraveShared",
         "Shared",
-        "BraveWallet",
+        // Growser-287: no BraveWallet.
         "BraveCore",
         "PartitionAllocSupport",
         "BraveUI",
@@ -113,6 +113,9 @@ var package = Package(
         "UserAgent",
         .product(name: "Lottie", package: "lottie-spm"),
         .product(name: "Collections", package: "swift-collections"),
+        // Growser-287: two debug views used Algorithms without importing it,
+        // through BraveWallet's dependency; now it is declared where it is used.
+        .product(name: "Algorithms", package: "swift-algorithms"),
         // Growser-282: no PlaylistUI.
         "BrowserMenu",
         "Web",
@@ -152,6 +155,25 @@ var package = Package(
         "Frontend/Browser/BrowserViewController/BVC+Origin.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveSkusScriptHandler.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSkusScript.js",
+        // Growser-287: the wallet is out of the product, on the same terms:
+        // its UI glue, the Ethereum, Solana and Cardano providers pages talk to,
+        // and ENS/SNS/Unstoppable name resolution with its interstitial.
+        "Wallet",
+        "Frontend/BraveNotifications/BraveWallet",
+        "Frontend/Settings/Debug/BraveWallet",
+        "Frontend/Browser/BrowserViewController/BVC+Wallet.swift",
+        "Frontend/Browser/BrowserViewController/BVC+Web3NameService.swift",
+        "Frontend/Browser/Handlers/Web3DomainHandler.swift",
+        "Frontend/Browser/Helpers/WalletTabHelper.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Internal/Web3NameServiceScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/CardanoProviderScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/EthereumProviderScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/SolanaProviderScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletCardanoProviderScript.js",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletEthereumProviderScript.js",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletSolanaProviderScript.js",
+        "Assets/InterstitialPages/Pages/Web3Domain.html",
+        "Assets/InterstitialPages/Styles/Web3Domain.css",
         // Growser-284: every alternate app icon is a Brave lion, so the
         // picker is out and the app wears the G only.
         "Frontend/Settings/Display/AltIconsModel.swift",
@@ -183,12 +205,10 @@ var package = Package(
         .copy("Assets/Fonts/NewYorkMedium-RegularItalic.otf"),
         .copy("Assets/InterstitialPages/Pages/BlockedDomain.html"),
         .copy("Assets/InterstitialPages/Pages/HTTPBlocked.html"),
-        .copy("Assets/InterstitialPages/Pages/Web3Domain.html"),
         .copy("Assets/InterstitialPages/Images/Info.svg"),
         .copy("Assets/InterstitialPages/Images/warning-triangle-outline.svg"),
         .copy("Assets/InterstitialPages/Styles/BlockedDomain.css"),
         .copy("Assets/InterstitialPages/Styles/InterstitialStyles.css"),
-        .copy("Assets/InterstitialPages/Styles/Web3Domain.css"),
         .copy("Assets/Lottie/shred.json"),
         .copy("Assets/SearchPlugins"),
         .copy("Frontend/Reader/Reader.css"),
@@ -220,15 +240,6 @@ var package = Package(
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/TrackingProtectionStats.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletEthereumProviderScript.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletSolanaProviderScript.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletCardanoProviderScript.js"
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/YoutubeQualityScript.js"
@@ -360,6 +371,12 @@ var package = Package(
     .target(
       name: "Data",
       dependencies: ["BraveShared", "Strings", "Preferences", "Shared"],
+      // Growser-287: the wallet's own entities. The model keeps them, so a
+      // store written by an older build still opens; nothing reads them.
+      exclude: [
+        "models/WalletUserAsset.swift", "models/WalletUserAssetBalance.swift",
+        "models/WalletUserAssetGroup.swift",
+      ],
       plugins: ["LoggerPlugin"]
     ),
     .target(
@@ -377,30 +394,8 @@ var package = Package(
       ],
       plugins: ["LoggerPlugin"]
     ),
-    .target(
-      name: "BraveWallet",
-      dependencies: [
-        "Data",
-        "BraveCore",
-        "PartitionAllocSupport",
-        "BraveShared",
-        "BraveUI",
-        "DesignSystem",
-        "Favicon",
-        "Strings",
-        "SDWebImageSwiftUI",
-        "SnapKit",
-        "Then",
-        "Shared",
-        "BraveStrings",
-        "Web",
-        .product(name: "BigNumber", package: "Swift-BigInt"),
-        .product(name: "Algorithms", package: "swift-algorithms"),
-        .product(name: "Collections", package: "swift-collections"),
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-287: the BraveWallet target and its tests are not declared, so
+    // their sources are not built.
     .target(
       name: "BrowserIntentsModels",
       dependencies: ["Shared"],
@@ -479,19 +474,20 @@ var package = Package(
       dependencies: ["BraveShared", "Preferences"]
     ),
     .testTarget(
-      name: "BraveWalletTests",
-      dependencies: [
-        "BraveWallet",
-        "TestHelpers",
-        .product(name: "CustomDump", package: "swift-custom-dump"),
+      name: "DataTests",
+      dependencies: ["Data", "TestHelpers", "BraveShields"],
+      // Growser-287: the wallet entities they test are not built.
+      exclude: [
+        "WalletUserAssetBalanceTests.swift", "WalletUserAssetGroupTests.swift",
+        "WalletUserAssetTests.swift",
       ]
     ),
-    .testTarget(name: "DataTests", dependencies: ["Data", "TestHelpers", "BraveShields"]),
     .testTarget(
       name: "ClientTests",
       dependencies: ["Brave", "BraveStrings", "TestHelpers", "Web"],
-      // Growser-283: the SKUS glue it tests is not built.
-      exclude: ["Helpers/BraveSkusWebHelperTests.swift"],
+      // Growser-283: the SKUS glue it tests is not built. Growser-287: nor is
+      // the Solana provider.
+      exclude: ["Helpers/BraveSkusWebHelperTests.swift", "SolanaProviderScriptHandlerTests.swift"],
       resources: [
         .copy("Resources/debouncing.json"),
         .copy("Resources/content-blocking.json"),
@@ -521,7 +517,7 @@ var package = Package(
       dependencies: [
         // Growser-280: no BraveVPN or GuardianConnect.
         "DesignSystem", "BraveUI", "Preferences", "Strings", "BraveStrings",
-        "BraveWallet", "BraveShields",
+        "BraveShields",  // Growser-287: no BraveWallet
       ]
     ),
     .target(

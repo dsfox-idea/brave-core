@@ -132,8 +132,10 @@ struct QuickViewToolbarView: View {
         .frame(
           maxWidth: viewModel.secureContentState.shouldDisplayWarning ? .infinity : nil
         )
+        // Growser-287: hidden(isHidden:) was BraveWallet's; this is its body.
         progressBar
-          .hidden(isHidden: !viewModel.isProgressBarVisible)
+          .opacity(viewModel.isProgressBarVisible ? 1 : 0)
+          .accessibilityHidden(!viewModel.isProgressBarVisible)
       }
       .padding(.horizontal, 16)
 

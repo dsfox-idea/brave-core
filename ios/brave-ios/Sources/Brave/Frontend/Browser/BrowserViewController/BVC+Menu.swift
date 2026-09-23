@@ -7,7 +7,7 @@ import BraveCore
 import BraveShared
 import BraveUI
 // Growser-280: no BraveVPN.
-import BraveWallet
+// Growser-287: no BraveWallet.
 import BrowserMenu
 import Data
 import Foundation
@@ -20,33 +20,7 @@ import os.log
 
 extension BrowserViewController {
   private var settingsController: SettingsViewController {
-    let isPrivateMode = privateBrowsingManager.isPrivateBrowsing
-    let keyringService = BraveWallet.KeyringServiceFactory.get(privateMode: isPrivateMode)
-    let walletService = BraveWallet.ServiceFactory.get(privateMode: isPrivateMode)
-    let rpcService = BraveWallet.JsonRpcServiceFactory.get(privateMode: isPrivateMode)
-
-    var keyringStore: KeyringStore? = walletStore?.keyringStore
-    if keyringStore == nil {
-      if let keyringService = keyringService,
-        let walletService = walletService,
-        let rpcService = rpcService
-      {
-        keyringStore = KeyringStore(
-          keyringService: keyringService,
-          walletService: walletService,
-          rpcService: rpcService
-        )
-      }
-    }
-
-    var cryptoStore: CryptoStore? = walletStore?.cryptoStore
-    if cryptoStore == nil {
-      cryptoStore = CryptoStore.from(
-        ipfsApi: profileController.ipfsAPI,
-        privateMode: isPrivateMode
-      )
-    }
-
+    // Growser-287: no keyring or crypto store - the wallet is out.
     let vc = SettingsViewController(
       profile: self.profile,
       tabManager: self.tabManager,
@@ -56,39 +30,13 @@ extension BrowserViewController {
       p3aUtils: self.braveCore.p3aUtils,
       braveCore: self.profileController,
       localState: self.braveCore.localState,
-      attributionManager: attributionManager,
-      keyringStore: keyringStore,
-      cryptoStore: cryptoStore
+      attributionManager: attributionManager
     )
     vc.settingsDelegate = self
     return vc
   }
 
-  /// Presents Wallet without an origin (ex. from menu)
-  func presentWallet() {
-    self.dismiss(animated: true) {
-      self.tabManager.addTabAndSelect(
-        URLRequest(url: .webUI.wallet.home),
-        isPrivate: self.privateBrowsingManager.isPrivateBrowsing
-      )
-    }
-  }
-
-  /// Present Native Wallet from a Wallet WebUI Action
-  func presentNativeWallet(webUIAction: WalletWebUIAction) {
-    guard let walletStore = self.walletStore ?? newWalletStore() else { return }
-    walletStore.origin = nil
-    let presentingContext: PresentingContext = .webUI(action: webUIAction)
-    let vc = WalletHostingViewController(
-      walletStore: walletStore,
-      webImageDownloader: profileController.webImageDownloader,
-      presentingContext: presentingContext
-    )
-    vc.delegate = self
-    self.dismiss(animated: true) {
-      self.present(vc, animated: true)
-    }
-  }
+  // Growser-287: no presentWallet() or presentNativeWallet(webUIAction:).
 
   // Growser-282: no presentPlaylistController().
 
@@ -291,18 +239,7 @@ extension BrowserViewController {
       },
     ]
     // Growser-282: no Playlist menu item.
-    if profileController.braveWalletAPI.isAllowed {
-      actions.append(
-        .init(
-          id: .braveWallet,
-          attributes: isPrivateBrowsing ? .disabled : []
-        ) { @MainActor [unowned self] _ in
-          // Present wallet already handles dismiss + present
-          self.presentWallet()
-          return .none
-        }
-      )
-    }
+    // Growser-287: no Wallet menu item.
     // Growser-279: no Leo menu item.
     // Growser-278: no Brave Talk menu item.
     // Growser-281: no Brave News menu item.

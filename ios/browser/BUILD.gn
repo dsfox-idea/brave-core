@@ -6,6 +6,7 @@
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/config.gni")
 
@@ -17,7 +18,6 @@ group("browser") {
     "api/brave_domains",
     "api/brave_services_key",
     "api/brave_shields",
-    "api/brave_wallet:wallet_mojom_wrappers",
     "api/certificate",
     "api/content_settings",
     "api/credential_provider",
@@ -45,14 +45,12 @@ group("browser") {
     "api/web",
     "api/web_image",
     "api/web_view",
-    "brave_wallet",
     "//brave/browser/sync",
     "//brave/components/brave_policy",
     "//brave/components/constants",
     "//brave/ios/browser/application_context",
     "//brave/ios/browser/brave_origin",
     "//brave/ios/browser/brave_vpn",
-    "//brave/ios/browser/brave_wallet",
     "//brave/ios/browser/global_privacy_control",
     "//brave/ios/browser/most_visited_sites",
     "//brave/ios/browser/playlist",
@@ -66,6 +64,12 @@ group("browser") {
     "//brave/ios/components/prefs",
     "//ios/chrome/browser/shared/model/prefs",
   ]
+  if (enable_brave_wallet) {  # Growser-287
+    deps += [
+      "api/brave_wallet:wallet_mojom_wrappers",
+      "brave_wallet",
+    ]
+  }
   if (enable_ai_chat) {  # Growser-279
     deps += [ "//brave/ios/browser/ai_chat" ]
   }

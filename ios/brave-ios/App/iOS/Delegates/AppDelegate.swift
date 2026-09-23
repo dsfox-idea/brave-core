@@ -11,7 +11,7 @@ import BraveShields
 // Growser-283: no BraveStore.
 // Growser-278: no BraveTalk.
 // Growser-280: no BraveVPN.
-import BraveWallet
+// Growser-287: no BraveWallet.
 import BraveWidgetsModels
 import Combine
 import CoreSpotlight

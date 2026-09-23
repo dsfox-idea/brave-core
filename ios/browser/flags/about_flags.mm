@@ -123,6 +123,9 @@ const flags_ui::FeatureEntry::FeatureVariation
           FEATURE_VALUE_TYPE(                                                 \
               brave_wallet::features::kBraveWalletCardanoFeature),            \
       })
+#else  // Growser-287: the #if used to run on over every entry below.
+#define BRAVE_NATIVE_WALLET_FEATURE_ENTRIES
+#endif
 
 #define BRAVE_SHIELDS_FEATURE_ENTRIES                                          \
   EXPAND_FEATURE_ENTRIES(                                                      \
@@ -261,6 +264,7 @@ const flags_ui::FeatureEntry::FeatureVariation
 #define BRAVE_AI_CHAT_FEATURE_ENTRIES
 #endif
 
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
 #define BRAVE_WALLET_FEATURE_ENTRIES                                      \
   EXPAND_FEATURE_ENTRIES(                                                 \
       {                                                                   \
@@ -272,7 +276,6 @@ const flags_ui::FeatureEntry::FeatureVariation
               brave_wallet::features::kBraveWalletCardanoDAppSupportIOS), \
       })
 #else
-#define BRAVE_NATIVE_WALLET_FEATURE_ENTRIES
 #define BRAVE_WALLET_FEATURE_ENTRIES
 #endif
 

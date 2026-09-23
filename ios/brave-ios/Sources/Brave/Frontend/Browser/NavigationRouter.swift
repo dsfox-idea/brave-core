@@ -202,7 +202,7 @@ public enum NavigationPath: Equatable {
     case .playlist:
       break  // Growser-282: never offered (WidgetShortcutExtension removes it).
     case .wallet:
-      bvc.navigationHelper.openWallet()
+      break  // Growser-287: never offered (WidgetShortcutExtension removes it).
     case .scanQRCode:
       bvc.scanQRCode()
     case .braveNews, .braveLeo, .braveLeoVoiceInput:

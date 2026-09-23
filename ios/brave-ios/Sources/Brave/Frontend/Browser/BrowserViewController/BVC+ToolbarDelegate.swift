@@ -10,7 +10,7 @@ import BraveShared
 import BraveShields
 import BraveStrings
 import BraveUI
-import BraveWallet
+// Growser-287: no BraveWallet.
 import BraveWidgetsModels
 import BrowserMenu
 import CertificateUtilities
@@ -74,37 +74,8 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   }
 
   func topToolbarDidPressReload(_ topToolbar: TopToolbarView) {
-    if let url = topToolbar.currentURL {
-      if let decentralizedDNSHelper = decentralizedDNSHelperFor(url: topToolbar.currentURL) {
-        topToolbarDidPressReloadTask?.cancel()
-        topToolbarDidPressReloadTask = Task { @MainActor in
-          topToolbar.locationView.loading = true
-          let result = await decentralizedDNSHelper.lookup(
-            domain: url.schemelessAbsoluteDisplayString
-          )
-          topToolbar.locationView.loading = tabManager.selectedTab?.isLoading == true
-          guard !Task.isCancelled else { return }  // user pressed stop, or typed new url
-          switch result {
-          case .loadInterstitial(let service):
-            showWeb3ServiceInterstitialPage(service: service, originalURL: url)
-          case .load(let resolvedURL):
-            if resolvedURL.isIPFSScheme,
-              let resolvedIPFSURL = profileController.ipfsAPI.resolveGatewayUrl(for: resolvedURL)
-            {
-              tabManager.selectedTab?.loadRequest(URLRequest(url: resolvedIPFSURL))
-            } else {
-              tabManager.selectedTab?.loadRequest(URLRequest(url: resolvedURL))
-            }
-          case .none:
-            tabManager.selectedTab?.reload()
-          }
-        }
-      } else {
-        tabManager.selectedTab?.reload()
-      }
-    } else {
-      tabManager.selectedTab?.reload()
-    }
+    // Growser-287: no ENS/SNS lookup before a reload - it was the wallet's.
+    tabManager.selectedTab?.reload()
   }
 
   func topToolbarDidPressStop(_ topToolbar: TopToolbarView) {
@@ -251,33 +222,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       return false
     }
 
-    // check text is decentralized DNS supported domain
-    if let decentralizedDNSHelper = self.decentralizedDNSHelperFor(url: fixupURL) {
-      dismissSearchInput()
-      updateToolbarCurrentURL(fixupURL)
-      topToolbar.locationView.loading = true
-      let result = await decentralizedDNSHelper.lookup(
-        domain: fixupURL.schemelessAbsoluteDisplayString
-      )
-      topToolbar.locationView.loading = tabManager.selectedTab?.isLoading == true
-      guard !Task.isCancelled else { return true }  // user pressed stop, or typed new url
-      switch result {
-      case .loadInterstitial(let service):
-        showWeb3ServiceInterstitialPage(service: service, originalURL: fixupURL)
-        return true
-      case .load(let resolvedURL):
-        if resolvedURL.isIPFSScheme,
-          let resolvedIPFSURL = profileController.ipfsAPI.resolveGatewayUrl(for: resolvedURL)
-        {
-          finishEditingAndSubmit(resolvedIPFSURL)
-        } else {
-          finishEditingAndSubmit(resolvedURL)
-        }
-        return true
-      case .none:
-        break
-      }
-    }
+    // Growser-287: no ENS/SNS lookup for a typed name - it was the wallet's.
 
     // The user entered a URL, so use it.
     // Determine if url navigation is done from favourites or bookmarks
@@ -658,7 +603,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   ) -> OrderedSet<WidgetShortcut> {
     return WidgetShortcut.eligibleButtonShortcuts(
       prefs: profileController.profile.prefs,
-      isWalletAvailable: profileController.braveWalletAPI.isAllowed
+      isWalletAvailable: false  // Growser-287
     )
   }
 
@@ -763,15 +708,31 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   }
 
   func topToolbarDidTapWalletButton(_ urlBar: TopToolbarView) {
-    guard let selectedTab = tabManager.selectedTab,
-      let tabDappStore = selectedTab.wallet?.tabDappStore,
-      let origin = selectedTab.lastCommittedURL?.origin
-    else {
-      return
+    // Growser-287: the wallet button is never shown - nothing makes it active.
+  }
+
+  // Growser-287: moved here from BVC+Wallet.swift, which is not built. It was
+  // the wallet delegate's, and the settings opened through this toolbar use it.
+  func openDestinationURL(_ destinationURL: URL) {
+    if presentedViewController != nil {
+      // dismiss to show the new tab
+      self.dismiss(animated: true)
     }
-    // System components sit on top so we want to dismiss it
-    selectedTab.dismissFindInteraction()
-    presentWalletPanel(from: origin, with: tabDappStore)
+    if let url = tabManager.selectedTab?.visibleURL {
+      if InternalURL.isValid(url: url) {
+        select(url: destinationURL, isUserDefinedURLNavigation: false)
+      } else {
+        tabManager.addTabAndSelect(
+          URLRequest(url: destinationURL),
+          isPrivate: privateBrowsingManager.isPrivateBrowsing
+        )
+      }
+    } else {
+      _ = tabManager.addTabAndSelect(
+        URLRequest(url: destinationURL),
+        isPrivate: privateBrowsingManager.isPrivateBrowsing
+      )
+    }
   }
 
   /// Handles selection of a recent search in the favorites screen: seeds the input field and, when

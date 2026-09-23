@@ -239,7 +239,7 @@ public class AppState {
     let responders: [(String, InternalSchemeResponse)] = [
       (LegacyNTPHandler.path, LegacyNTPHandler()),
       (ReaderModeHandler.path, ReaderModeHandler()),
-      (Web3DomainHandler.path, Web3DomainHandler()),
+      // Growser-287: no Web3DomainHandler - ENS/SNS resolution was the wallet's.
       (BlockedDomainHandler.path, BlockedDomainHandler()),
       (HTTPBlockedHandler.path, HTTPBlockedHandler()),
     ]

@@ -4,6 +4,7 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/skus/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/config.gni")
@@ -17,13 +18,13 @@ source_set("model") {
     "//base",
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account:features",
+    "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/skus/buildflags",
     "//brave/ios/browser/api/webcompat_reporter",
     "//brave/ios/browser/brave_account",
     "//brave/ios/browser/brave_ads",
     "//brave/ios/browser/brave_origin",
     "//brave/ios/browser/brave_shields",
-    "//brave/ios/browser/brave_wallet",
     "//brave/ios/browser/debounce",
     "//brave/ios/browser/favicon",
     "//brave/ios/browser/misc_metrics",
@@ -35,5 +36,8 @@ source_set("model") {
   }
   if (enable_skus) {  # Growser-283
     deps += [ "//brave/ios/browser/skus" ]
+  }
+  if (enable_brave_wallet) {  # Growser-287
+    deps += [ "//brave/ios/browser/brave_wallet" ]
   }
 }

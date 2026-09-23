@@ -52,7 +52,7 @@ public class InternalSchemeHandler: NSObject, WKURLSchemeHandler {
       // interstitial
       "/interstitial-style/InterstitialStyles.css": "text/css",
       "/interstitial-style/BlockedDomain.css": "text/css",
-      "/interstitial-style/Web3Domain.css": "text/css",
+      // Growser-287: no Web3Domain.css - its page is not built.
       "/interstitial-icon/Info.svg": "image/svg+xml",
       "/interstitial-icon/warning-triangle-outline.svg": "image/svg+xml",
 

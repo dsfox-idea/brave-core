@@ -30,7 +30,7 @@ public class BraveProfileMigrations {
     migrateGPCPreference()
     migrateMediaBackgroundingPreference()
     migrateBlockAllCookiesPreference()
-    migrateDefaultWalletPreferences()
+    // Growser-287: no migrateDefaultWalletPreferences() - the wallet is out.
   }
 
   private func migrateDefaultUserAgentPreferences() {
@@ -133,33 +133,6 @@ public class BraveProfileMigrations {
       profileController.profile.prefs.set(value, forPath: kBlockAllCookiesEnabled)
     }
   }
-
-  private func migrateDefaultWalletPreferences() {
-    // iOS only ever exposed `none` and `brave` (`WalletType`) as options, which
-    // map onto the `DefaultWallet` values stored in the `PrefService`.
-    func defaultWallet(from value: Int) -> BraveWallet.DefaultWallet {
-      value == Preferences.DeprecatedPreferences.DeprecatedWalletType.none.rawValue
-        ? .none : .braveWallet
-    }
-    Preferences.DeprecatedPreferences.defaultEthWallet.migrate { value in
-      profileController.profile.prefs.set(
-        defaultWallet(from: value).rawValue,
-        forPath: kDefaultEthereumWallet
-      )
-    }
-    Preferences.DeprecatedPreferences.defaultSolWallet.migrate { value in
-      profileController.profile.prefs.set(
-        defaultWallet(from: value).rawValue,
-        forPath: kDefaultSolanaWallet
-      )
-    }
-    Preferences.DeprecatedPreferences.defaultCardanoWallet.migrate { value in
-      profileController.profile.prefs.set(
-        defaultWallet(from: value).rawValue,
-        forPath: kDefaultCardanoWallet
-      )
-    }
-  }
 }
 
 public class BraveLocalStateMigration {
@@ -212,7 +185,7 @@ public class Migration {
 
   public func launchMigrations(keyPrefix: String) {
     Preferences.migratePreferences(keyPrefix: keyPrefix)
-    Preferences.migrateWalletPreferences()
+    // Growser-287: no migrateWalletPreferences() - the wallet is out.
     Preferences.migrateAdAndTrackingProtection()
     Preferences.migrateHTTPSUpgradeLevel()
     Preferences.migrateBackgroundSponsoredImages()
@@ -646,20 +619,6 @@ extension Preferences {
     }
 
     Migration.adBlockAndTrackingProtectionShieldLevelCompleted.value = true
-  }
-
-  /// Migrate Wallet Preferences from version <1.43
-  fileprivate class func migrateWalletPreferences() {
-    guard Preferences.Migration.walletProviderAccountRequestCompleted.value != true else { return }
-
-    // Migrate `allowDappProviderAccountRequests` to `allowEthProviderAccess`
-    migrate(
-      keyPrefix: "",
-      key: "wallet.allow-eth-provider-account-requests",
-      to: Preferences.Wallet.allowEthProviderAccess
-    )
-
-    Preferences.Migration.walletProviderAccountRequestCompleted.value = true
   }
 
   fileprivate class func migrateBackgroundSponsoredImages() {

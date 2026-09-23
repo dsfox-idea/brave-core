@@ -30,9 +30,7 @@ extension WidgetShortcut {
     ])
     options.remove(.playlist)  // Growser-282: Playlist is out of the product.
     options.remove(.braveNews)  // Growser-281: Brave News is out of the product.
-    if !isWalletAvailable {
-      options.remove(.wallet)
-    }
+    options.remove(.wallet)  // Growser-287: the wallet is out of the product.
     // Growser-279: Leo is out of the product, so its shortcuts always go.
     options.remove(.braveLeo)
     options.remove(.braveLeoVoiceInput)
@@ -48,9 +46,7 @@ extension WidgetShortcut {
     var disabled: Set<WidgetShortcut> = []
     disabled.insert(.playlist)  // Growser-282: Playlist is out of the product.
     disabled.insert(.braveNews)  // Growser-281: Brave News is out of the product.
-    if !isWalletAvailable {
-      disabled.insert(.wallet)
-    }
+    disabled.insert(.wallet)  // Growser-287: the wallet is out of the product.
     // Growser-279: Leo is out of the product, so its shortcuts are always off.
     disabled.insert(.braveLeo)
     disabled.insert(.braveLeoVoiceInput)
@@ -70,7 +66,7 @@ extension WidgetShortcut {
     case .playlist:
       return Strings.bravePlaylistItemTitle
     case .wallet:
-      return Strings.Wallet.wallet
+      return ""  // Growser-287: never offered; its string left with BraveWallet.
     case .braveNews:
       return Strings.braveNewsItemTitle
     case .braveLeo:

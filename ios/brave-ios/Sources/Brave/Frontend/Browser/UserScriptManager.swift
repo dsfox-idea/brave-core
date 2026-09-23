@@ -3,7 +3,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Data
 import Preferences
 import Shared
@@ -97,13 +97,7 @@ class UserScriptManager {
     }
   }()
 
-  private var walletEthProviderScript: WKUserScript?
-  private var walletSolProviderScript: WKUserScript?
-  private var walletSolanaWeb3Script: WKUserScript?
-  private var walletSolanaWalletStandardScript: WKUserScript?
-
-  /// Whether or not a wallet is created and web3 provider scripts should be injected into the page
-  var isWalletCreated: Bool = false
+  // Growser-287: no wallet provider scripts - the wallet is out.
 
   enum ScriptType: String, CaseIterable {
     case faviconFetcher
@@ -142,15 +136,8 @@ class UserScriptManager {
       case .trackerProtectionStats:
         return Preferences.UserScript.trackingProtectionStats.value
           ? ContentBlockerHelper.userScript : nil
-      case .ethereumProvider:
-        return Preferences.UserScript.ethereumProvider.value
-          ? EthereumProviderScriptHandler.userScript : nil
-      case .solanaProvider:
-        return Preferences.UserScript.solanaProvider.value
-          ? SolanaProviderScriptHandler.userScript : nil
-      case .cardanoProvider:
-        return Preferences.UserScript.cardanoProvider.value
-          ? CardanoProviderScriptHandler.userScript : nil
+      case .ethereumProvider, .solanaProvider, .cardanoProvider:
+        return nil  // Growser-287: the provider script handlers are not built.
       case .searchResultAd: return BraveSearchResultAdScriptHandler.userScript
 
       // Always enabled scripts
@@ -185,95 +172,7 @@ class UserScriptManager {
     }
   }
 
-  func fetchWalletScripts(from braveWalletAPI: BraveWalletAPI) {
-    if !braveWalletAPI.isAllowed {
-      return
-    }
-    if let ethJS = braveWalletAPI.providerScripts(for: .eth)[.ethereum] {
-      let providerJS = """
-        window.__firefox__.execute(function($, $Object) {
-          if (window.isSecureContext) {
-            \(ethJS)
-          }
-        });
-        """
-      walletEthProviderScript = WKUserScript(
-        source: providerJS,
-        injectionTime: .atDocumentStart,
-        forMainFrameOnly: true,
-        in: EthereumProviderScriptHandler.scriptSandbox
-      )
-    }
-    if let solanaWeb3Script = braveWalletAPI.providerScripts(for: .sol)[.solanaWeb3] {
-      let script = """
-        // Define a global variable with a random name
-        // Local variables are NOT enumerable!
-        let \(UserScriptManager.walletSolanaNameSpace);
-
-        window.__firefox__.execute(function($, $Object, $Function, $Array) {
-          // Inject Solana as a Local Variable.
-          \(solanaWeb3Script)
-
-          \(UserScriptManager.walletSolanaNameSpace) = $({
-            solanaWeb3: $(solanaWeb3)
-          });
-
-          // Failed to load SolanaWeb3
-          if (typeof \(UserScriptManager.walletSolanaNameSpace) === 'undefined') {
-            return;
-          }
-
-          const freezeExceptions = $Array.of("BN");
-
-          for (const value of $Object.values(\(UserScriptManager.walletSolanaNameSpace).solanaWeb3)) {
-            if (!value) {
-              continue;
-            }
-
-            $.extensiveFreeze(value, freezeExceptions);
-          }
-
-          $.deepFreeze(\(UserScriptManager.walletSolanaNameSpace).solanaWeb3);
-          $.deepFreeze(\(UserScriptManager.walletSolanaNameSpace));
-        });
-        """
-      self.walletSolanaWeb3Script = WKUserScript(
-        source: script,
-        injectionTime: .atDocumentStart,
-        forMainFrameOnly: true,
-        in: SolanaProviderScriptHandler.scriptSandbox
-      )
-    }
-    if let walletSolProviderScript = braveWalletAPI.providerScripts(for: .sol)[.solana] {
-      let script = """
-        window.__firefox__.execute(function($, $Object) {
-          \(walletSolProviderScript)
-        });
-        """
-      self.walletSolProviderScript = WKUserScript(
-        source: script,
-        injectionTime: .atDocumentStart,
-        forMainFrameOnly: true,
-        in: SolanaProviderScriptHandler.scriptSandbox
-      )
-    }
-    if let walletStandardScript = braveWalletAPI.providerScripts(for: .sol)[.walletStandard] {
-      let script = """
-        window.__firefox__.execute(function($, $Object) {
-           \(walletStandardScript)
-           window.addEventListener('wallet-standard:app-ready', (e) => {
-              walletStandardBrave.initialize(window.braveSolana);
-          })
-        });
-        """
-      self.walletSolanaWalletStandardScript = WKUserScript(
-        source: script,
-        injectionTime: .atDocumentStart,
-        forMainFrameOnly: true,
-        in: SolanaProviderScriptHandler.scriptSandbox
-      )
-    }
-  }
+  // Growser-287: no fetchWalletScripts(from:).
 
   public func loadScripts(
     into userContentController: WKUserContentController,
@@ -361,75 +260,7 @@ class UserScriptManager {
     loadScripts(into: userContentController, scripts: userScripts, tab: tab)
 
     userContentController.do { scriptController in
-      // TODO: Somehow refactor wallet and get rid of this
-      // Inject WALLET specific scripts
-
-      // A default wallet other than `none` means the Brave Wallet provider
-      // should be injected to communicate with web3. Nothing is injected until
-      // the user has created a wallet: an empty keyring can't serve a dApp, but
-      // the provider is still observable by page scripts.
-      let prefs = tab.profile.prefs
-      let isEthProviderEnabled =
-        isWalletCreated
-        && prefs.integer(forPath: kDefaultEthereumWallet) != BraveWallet.DefaultWallet.none.rawValue
-      let isSolProviderEnabled =
-        isWalletCreated
-        && prefs.integer(forPath: kDefaultSolanaWallet) != BraveWallet.DefaultWallet.none.rawValue
-      let isCardanoProviderEnabled =
-        isWalletCreated
-        && prefs.integer(forPath: kDefaultCardanoWallet) != BraveWallet.DefaultWallet.none.rawValue
-
-      if !tab.isPrivate,
-        isEthProviderEnabled,
-        let script = self.dynamicScripts[.ethereumProvider]
-      {
-
-        // Inject ethereum provider
-        scriptController.addUserScript(script)
-
-        if let walletEthProviderScript = walletEthProviderScript {
-          scriptController.addUserScript(walletEthProviderScript)
-        }
-      }
-
-      // Inject SolanaWeb3Script.js
-      if !tab.isPrivate,
-        isSolProviderEnabled,
-        let solanaWeb3Script = Preferences.UserScript.solanaProvider.value
-          ? self.walletSolanaWeb3Script : nil
-      {
-        scriptController.addUserScript(solanaWeb3Script)
-      }
-
-      if !tab.isPrivate,
-        isSolProviderEnabled,
-        let script = self.dynamicScripts[.solanaProvider]
-      {
-
-        // Inject solana provider
-        scriptController.addUserScript(script)
-
-        if let walletSolProviderScript = walletSolProviderScript {
-          scriptController.addUserScript(walletSolProviderScript)
-        }
-      }
-
-      if !tab.isPrivate,
-        isSolProviderEnabled,
-        let walletStandardScript = Preferences.UserScript.solanaProvider.value
-          ? self.walletSolanaWalletStandardScript : nil
-      {
-        scriptController.addUserScript(walletStandardScript)
-      }
-
-      // Inject Cardano provider script
-      if WalletConstants.isCardanoDAppSupportEnabled,
-        !tab.isPrivate,
-        isCardanoProviderEnabled,
-        let script = self.dynamicScripts[.cardanoProvider]
-      {
-        scriptController.addUserScript(script)
-      }
+      // Growser-287: no Ethereum, Solana or Cardano provider for pages.
 
       // TODO: Refactor this and get rid of the `UserScriptType`
       // Inject Custom scripts

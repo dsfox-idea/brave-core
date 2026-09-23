@@ -8,7 +8,7 @@ import BraveCore
 import BraveShared
 import BraveShields
 import BraveUI
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Data
 import Foundation
 import Preferences
@@ -40,29 +40,7 @@ extension BrowserViewController: TabManagerDelegate {
     tab.externalAppURLHelper = .init(tab: tab, browserViewController: self)
     tab.forcePaste = .init(tab: tab)
     // Growser-279: no tab.aiChatWebUIHelper - Leo is out of the product.
-    tab.wallet = .init(tab: tab, braveWalletAPI: profileController.braveWalletAPI)
-    tab.wallet?.delegate = self
-    tab.walletWebUIHelper = .init(
-      tab: tab,
-      showApprovePanelUIHandler: { [weak self] tab in
-        self?.showApprovePanelUI(tab: tab)
-      },
-      showWalletBackUpHandler: { [weak self] in
-        self?.showWalletBackupUI()
-      },
-      unlockWalletHandler: { [weak self] in
-        self?.unlockWalletUI()
-      },
-      showOnboardingHandler: { [weak self] isNewWallet in
-        self?.showOnboarding(isNewWallet)
-      },
-      openWalletHomeHandler: { [weak self] in
-        self?.openWalletHome()
-      },
-      scanAddressQRCodeHandler: { [weak self] completion in
-        self?.scanAddressQRCode(completion: completion)
-      }
-    )
+    // Growser-287: no tab.wallet or tab.walletWebUIHelper - the wallet is out.
     let braveShieldsHelper: BraveShieldsTabHelper = .init(
       tab: tab,
       braveShieldsSettings: BraveShieldsSettingsServiceFactory.get(profile: tab.profile)
@@ -319,15 +297,8 @@ extension BrowserViewController: TabManagerDelegate {
     updateScreenTimeUrl(tabManager.selectedTab?.visibleURL)
     updateInContentHomePanel(selected?.visibleURL as URL?)
 
-    removeWalletNotificationAndClearOrigin()
-    let dappSupportedCoins = Array(WalletConstants.supportedCoinTypes(.dapps))
-    WalletProviderPermissionRequestsManager.shared.cancelAllPendingRequests(
-      for: dappSupportedCoins
-    )
-    WalletProviderAccountCreationRequestManager.shared.cancelAllPendingRequests(
-      coins: dappSupportedCoins
-    )
-    updateURLBarWalletButton()
+    // Growser-287: no wallet notification, pending web3 requests or URL-bar
+    // wallet button to reset.
 
     if #available(iOS 26.0, *) {
       if let topEdgeInteraction {
@@ -360,9 +331,6 @@ extension BrowserViewController: TabManagerDelegate {
 
     SnackBarTabHelper.from(tab: tab)?.delegate = self
 
-    tab.wallet?.walletKeyringService = BraveWallet.KeyringServiceFactory.get(
-      privateMode: tab.isPrivate
-    )
     updateTabsBarVisibility()
   }
 

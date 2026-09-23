@@ -4,7 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveShields
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Foundation
 
 /// The list of action identifiers
@@ -86,13 +86,7 @@ extension Action.Identifier {
     defaultVisibility: .hidden
   )
 
-  public static let braveWallet: Self = .init(
-    id: "BraveWallet",
-    title: Strings.Wallet.wallet,
-    braveSystemImage: "leo.product.brave-wallet",
-    defaultRank: 900,
-    defaultVisibility: .visible
-  )
+  // Growser-287: no braveWallet - the wallet is out of the product.
 
   public static let playlist: Self = .init(
     id: "Playlist",

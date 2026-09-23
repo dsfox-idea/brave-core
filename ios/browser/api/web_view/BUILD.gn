@@ -5,6 +5,7 @@
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/skus/buildflags/buildflags.gni")
 
@@ -36,6 +37,7 @@ source_set("web_view") {
     "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account/mojom:mojom_objc",
     "//brave/components/brave_talk/buildflags",
+    "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/playlist/core/common/buildflags",
     "//brave/components/serp_metrics:features",
     "//brave/components/skus/buildflags",
@@ -49,12 +51,10 @@ source_set("web_view") {
     "//brave/ios/browser/brave_shields/cosmetic_filtering",
     "//brave/ios/browser/brave_shields/request_blocking",
     "//brave/ios/browser/brave_shields/scriptlets",
-    "//brave/ios/browser/brave_wallet",
     "//brave/ios/browser/favicon",
     "//brave/ios/browser/serp_metrics",
     "//brave/ios/browser/ui/web_view:features",
     "//brave/ios/browser/ui/webui/brave_account",
-    "//brave/ios/browser/ui/webui/brave_wallet",
     "//brave/ios/browser/web/document_fetch",
     "//brave/ios/browser/web/force_paste",
     "//brave/ios/browser/web/logins",
@@ -96,6 +96,12 @@ source_set("web_view") {
   }
   if (enable_skus) {  # Growser-283
     deps += [ "//brave/ios/browser/skus" ]
+  }
+  if (enable_brave_wallet) {  # Growser-287
+    deps += [
+      "//brave/ios/browser/brave_wallet",
+      "//brave/ios/browser/ui/webui/brave_wallet",
+    ]
   }
   frameworks = [
     "Foundation.framework",

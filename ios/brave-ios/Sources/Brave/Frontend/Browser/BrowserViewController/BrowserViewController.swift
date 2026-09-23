@@ -10,7 +10,7 @@ import BraveShields
 // Growser-278: no BraveTalk.
 import BraveUI
 // Growser-280: no BraveVPN.
-import BraveWallet
+// Growser-287: no BraveWallet.
 import CertificateUtilities
 import CoreData
 import Data
@@ -265,8 +265,7 @@ public class BrowserViewController: UIViewController {
 
   // Growser-278: no Brave Talk coordinator.
 
-  /// The currently open WalletStore
-  weak var walletStore: WalletStore?
+  // Growser-287: no WalletStore.
 
   var processAddressBarTask: Task<(), Never>?
   var topToolbarDidPressReloadTask: Task<(), Never>?
@@ -274,14 +273,6 @@ public class BrowserViewController: UIViewController {
   // Growser-280: no VPN in-app purchase observer.
 
   private let prefsChangeRegistrar: PrefChangeRegistrar
-
-  /// Whether a wallet exists, to distinguish create/reset from the account
-  /// edits that also write the keyrings pref.
-  private var isWalletCreated: Bool = false {
-    didSet {
-      UserScriptManager.shared.isWalletCreated = isWalletCreated
-    }
-  }
 
   let defaultBrowserHelper: DefaultBrowserHelper = .init()
 
@@ -456,7 +447,7 @@ public class BrowserViewController: UIViewController {
   fileprivate func didInit() {
     updateApplicationShortcuts()
     tabManager.addDelegate(self)
-    UserScriptManager.shared.fetchWalletScripts(from: profileController.braveWalletAPI)
+    // Growser-287: no wallet provider scripts to fetch.
     downloadQueue.delegate = self
 
     // Observe some user preferences
@@ -503,32 +494,7 @@ public class BrowserViewController: UIViewController {
         tabManager.reloadSelectedTab()
       }
     }
-    prefsChangeRegistrar.addObserver(forPath: kDefaultEthereumWallet) { [weak self] _ in
-      self?.defaultWalletChanged(for: .eth)
-    }
-    prefsChangeRegistrar.addObserver(forPath: kDefaultSolanaWallet) { [weak self] _ in
-      self?.defaultWalletChanged(for: .sol)
-    }
-    prefsChangeRegistrar.addObserver(forPath: kDefaultCardanoWallet) { [weak self] _ in
-      self?.defaultWalletChanged(for: .ada)
-    }
-    // Creating or resetting a wallet flips whether the providers are injected,
-    // so the scripts have to be refreshed the same way a default wallet change
-    // refreshes them. The keyrings pref is also written on every account add,
-    // rename and removal, so only react when the created state actually
-    // changed — refreshing discards every web view.
-    isWalletCreated = !profileController.profile.prefs.dictionary(
-      forPath: kBraveWalletKeyrings
-    ).isEmpty
-    prefsChangeRegistrar.addObserver(forPath: kBraveWalletKeyrings) { [weak self] _ in
-      guard let self else { return }
-      let isWalletCreated = !self.profileController.profile.prefs.dictionary(
-        forPath: kBraveWalletKeyrings
-      ).isEmpty
-      guard isWalletCreated != self.isWalletCreated else { return }
-      self.isWalletCreated = isWalletCreated
-      self.defaultWalletChanged(for: .eth)
-    }
+    // Growser-287: no default-wallet or keyring observers.
 
     // Growser-280: no disconnectVPNIfDisabledByPolicy().
 
@@ -1842,30 +1808,7 @@ public class BrowserViewController: UIViewController {
     }
   }
 
-  func showWeb3ServiceInterstitialPage(service: Web3Service, originalURL: URL) {
-    if !profileController.braveWalletAPI.isAllowed {
-      return
-    }
-    dismissSearchInput()
-
-    guard let tab = tabManager.selectedTab,
-      let encodedURL = originalURL.absoluteString.addingPercentEncoding(
-        withAllowedCharacters: .alphanumerics
-      ),
-      let internalUrl = URL(
-        string:
-          "\(InternalURL.baseUrl)/\(Web3DomainHandler.path)?\(Web3NameServiceScriptHandler.ParamKey.serviceId.rawValue)=\(service.rawValue)&url=\(encodedURL)"
-      )
-    else {
-      return
-    }
-    let scriptHandler =
-      tab.browserData?.getContentScript(name: Web3NameServiceScriptHandler.scriptName)
-      as? Web3NameServiceScriptHandler
-    scriptHandler?.originalURL = originalURL
-
-    tab.loadRequest(PrivilegedRequest(url: internalUrl) as URLRequest)
-  }
+  // Growser-287: no showWeb3ServiceInterstitialPage(service:originalURL:).
 
   override public func accessibilityPerformEscape() -> Bool {
     if isSearchContainerVisible {
@@ -2463,114 +2406,7 @@ extension BrowserViewController: TabsBarViewControllerDelegate {
   }
 }
 
-extension BrowserViewController: WalletTabHelperDelegate {
-  func showWalletNotification(_ tab: some TabState, origin: URLOrigin) {
-    // only display notification when BVC is front and center
-    guard presentedViewController == nil,
-      Preferences.Wallet.displayWeb3Notifications.value,
-      let tabDappStore = tab.wallet?.tabDappStore
-    else {
-      return
-    }
-    let walletNotificaton = WalletNotification(
-      priority: .low,
-      origin: origin,
-      isUsingBottomBar: isUsingBottomBar
-    ) { [weak self] action in
-      // double check if tab lastCommittedURL's origin is the same as this notification's
-      guard let lastCommittedOrigin = tab.lastCommittedURL?.origin,
-        lastCommittedOrigin == origin
-      else {
-        return
-      }
-      if action == .connectWallet {
-        self?.presentWalletPanel(from: origin, with: tabDappStore)
-      }
-    }
-    notificationsPresenter.display(notification: walletNotificaton, from: self)
-  }
-
-  /// Removes the wallet notification and clears the stored origin so it can be shown again for a different origin.
-  func removeWalletNotificationAndClearOrigin() {
-    notificationsPresenter.removeNotification(with: WalletNotification.Constant.id)
-  }
-
-  /// Responds to a change in the default wallet used to communicate with web3
-  /// for the given `coin`, cancelling any pending web3 requests and refreshing
-  /// the injected provider scripts.
-  private func defaultWalletChanged(for coin: BraveWallet.CoinType) {
-    tabManager.reset()
-    tabManager.reloadSelectedTab()
-    removeWalletNotificationAndClearOrigin()
-    WalletProviderPermissionRequestsManager.shared.cancelAllPendingRequests(for: [coin])
-    WalletProviderAccountCreationRequestManager.shared.cancelAllPendingRequests(coins: [coin])
-    let privateMode = privateBrowsingManager.isPrivateBrowsing
-    if let cryptoStore = self.walletStore?.cryptoStore
-      ?? CryptoStore.from(
-        ipfsApi: profileController.ipfsAPI,
-        privateMode: privateMode
-      )
-    {
-      cryptoStore.rejectAllPendingWebpageRequests()
-    }
-    updateURLBarWalletButton()
-  }
-
-  /// Dismisses the wallet notification if it was shown for a different origin than the committed one (e.g. after redirect).
-  func dismissWalletNotificationIfOriginDiffers(from committedOrigin: URLOrigin) {
-    guard
-      let visibleWalletNotification = notificationsPresenter.visibleNotification
-        as? WalletNotification,
-      visibleWalletNotification.origin != committedOrigin
-    else {
-      return
-    }
-    removeWalletNotificationAndClearOrigin()
-  }
-
-  func isTabVisible(_ tab: some TabState) -> Bool {
-    tabManager.selectedTab === tab
-  }
-
-  func updateURLBarWalletButton() {
-    let shouldShowWalletButton = tabManager.selectedTab?.wallet?.isWalletIconVisible == true
-    if shouldShowWalletButton {
-      Task { @MainActor in
-        let isPendingRequestAvailable = await isPendingRequestAvailable()
-        topToolbar.updateWalletButtonState(
-          isPendingRequestAvailable ? .activeWithPendingRequest : .active
-        )
-      }
-    } else {
-      topToolbar.updateWalletButtonState(.inactive)
-    }
-  }
-
-  @MainActor
-  private func isPendingRequestAvailable() async -> Bool {
-    let privateMode = privateBrowsingManager.isPrivateBrowsing
-    // If we have an open `WalletStore`, use that so we can assign the pending request if the wallet is open,
-    // which allows us to store the new `PendingRequest` triggering a modal presentation for that request.
-    guard
-      let cryptoStore = self.walletStore?.cryptoStore
-        ?? CryptoStore.from(
-          ipfsApi: profileController.ipfsAPI,
-          privateMode: privateMode
-        )
-    else {
-      return false
-    }
-    if await cryptoStore.isPendingRequestAvailable() {
-      return true
-    } else if let selectedTabOrigin = tabManager.selectedTab?.visibleURL?.origin {
-      return WalletProviderPermissionRequestsManager.shared.hasPendingRequest(
-        for: selectedTabOrigin,
-        coinTypes: [.eth, .sol, .ada]
-      )
-    }
-    return false
-  }
-}
+// Growser-287: no WalletTabHelperDelegate - the wallet is out.
 
 extension BrowserViewController: SearchViewControllerDelegate {
   func searchViewController(
@@ -2705,7 +2541,6 @@ extension BrowserViewController: ToolbarUrlActionsDelegate {
     switch action {
     case .openInCurrentTab:
       finishEditingAndSubmit(url, isUserDefinedURLNavigation: isUserDefinedURLNavigation)
-      updateURLBarWalletButton()
     case .openInNewTab(let isPrivate):
       let tab = tabManager.addTab(
         PrivilegedRequest(url: url) as URLRequest,
@@ -2733,7 +2568,6 @@ extension BrowserViewController: ToolbarUrlActionsDelegate {
         )
         show(toast: toast)
       }
-      updateURLBarWalletButton()
     case .copy:
       UIPasteboard.general.url = url
     case .share:

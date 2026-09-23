@@ -4,6 +4,7 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/skus/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/chrome_build.gni")
@@ -11,10 +12,10 @@ import("//ios/build/config.gni")
 import("//ios/public/provider/chrome/browser/build_config.gni")
 
 source_set("app") {
-  configs += [
-    "//brave/ios/browser/api/webcompat_reporter:mojom_header_config",
-    "//brave/ios/browser/api/brave_wallet:mojom_header_config",
-  ]
+  configs += [ "//brave/ios/browser/api/webcompat_reporter:mojom_header_config" ]
+  if (enable_brave_wallet) {  # Growser-287
+    configs += [ "//brave/ios/browser/api/brave_wallet:mojom_header_config" ]
+  }
   if (enable_skus) {  # Growser-283
     configs += [ "//brave/ios/browser/api/skus:mojom_header_config" ]
   }
@@ -39,6 +40,7 @@ source_set("app") {
     "//brave/components/brave_sync:constants",
     "//brave/components/brave_user_agent/browser",
     "//brave/components/brave_user_agent/ios/common",
+    "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/constants",
     "//brave/components/ntp_background_images/browser",
     "//brave/components/ntp_background_images/common",
@@ -54,8 +56,6 @@ source_set("app") {
     "//brave/ios/browser/api/brave_shields",
     "//brave/ios/browser/api/brave_stats",
     "//brave/ios/browser/api/brave_user_agent",
-    "//brave/ios/browser/api/brave_wallet",
-    "//brave/ios/browser/api/brave_wallet:wallet_mojom_wrappers",
     "//brave/ios/browser/api/content_settings",
     "//brave/ios/browser/api/history",
     "//brave/ios/browser/api/https_upgrade_exceptions",
@@ -140,6 +140,14 @@ source_set("app") {
       "//brave/components/skus/browser",
       "//brave/ios/browser/api/skus:skus_mojom_wrappers",
       "//brave/ios/browser/skus",
+    ]
+  }
+
+  # Growser-287: the wallet is compiled out, as on the desktop.
+  if (enable_brave_wallet) {
+    deps += [
+      "//brave/ios/browser/api/brave_wallet",
+      "//brave/ios/browser/api/brave_wallet:wallet_mojom_wrappers",
     ]
   }
 

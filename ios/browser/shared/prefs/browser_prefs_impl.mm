@@ -21,7 +21,6 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/de_amp/common/pref_names.h"
 #include "brave/components/debounce/core/browser/debounce_service.h"
-#include "brave/components/decentralized_dns/core/utils.h"
 #include "brave/components/global_privacy_control/pref_names.h"
 #include "brave/components/l10n/common/prefs.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
@@ -65,6 +64,7 @@
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
 #include "brave/components/brave_wallet/browser/keyring_service.h"
 #include "brave/components/brave_wallet/browser/pref_names.h"
+#include "brave/components/decentralized_dns/core/utils.h"  // Growser-287
 #endif
 
 namespace brave {
@@ -144,8 +144,9 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   brave_wallet::RegisterLocalStatePrefs(registry);
   brave_wallet::RegisterLocalStatePrefsForMigration(registry);
-#endif
+  // Growser-287: ENS/SNS resolution is the wallet's, as on the desktop.
   decentralized_dns::RegisterLocalStatePrefs(registry);
+#endif
 #if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   skus::RegisterLocalStatePrefs(registry);
 #endif

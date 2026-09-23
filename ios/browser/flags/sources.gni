@@ -4,6 +4,7 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 
 brave_flags_deps = [
   "//base",
@@ -16,12 +17,11 @@ brave_flags_deps = [
   "//brave/components/brave_shields/core/common",
   "//brave/components/brave_sync:features",
   "//brave/components/brave_user_agent/common",
-  "//brave/components/brave_wallet/common",
+  "//brave/components/brave_wallet/common/buildflags",
   "//brave/components/de_amp/common",
   "//brave/components/debounce/core/common",
   "//brave/components/playlist/core/common",
   "//brave/components/skus/common",
-  "//brave/ios/browser/brave_wallet",
   "//brave/ios/browser/ui/quick_view:features",
   "//brave/ios/browser/ui/web_view:features",
   "//components/webui/flags",
@@ -31,4 +31,12 @@ brave_flags_deps = [
 # Growser-279: brave-core never guarded AI Chat on iOS; our .env turns it off.
 if (enable_ai_chat) {
   brave_flags_deps += [ "//brave/components/ai_chat/core/common" ]
+}
+
+# Growser-287: the wallet is compiled out, as on the desktop.
+if (enable_brave_wallet) {
+  brave_flags_deps += [
+    "//brave/components/brave_wallet/common",
+    "//brave/ios/browser/brave_wallet",
+  ]
 }

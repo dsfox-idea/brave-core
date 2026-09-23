@@ -9,7 +9,7 @@ import BraveShared
 // Growser-283: no BraveStore.
 import BraveUI
 // Growser-280: no BraveVPN.
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Combine
 import Data
 import DataImporter
@@ -74,8 +74,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   private let p3aUtilities: BraveP3AUtils
   private let localState: any PrefService
   private let attributionManager: AttributionManager
-  private let keyringStore: KeyringStore?
-  private let cryptoStore: CryptoStore?
+  // Growser-287: no keyring or crypto store.
   private let windowProtection: WindowProtection?
   private let ipfsAPI: IpfsAPI
   // Growser-284: no AltIconsModel - the alternate icons are Brave lions.
@@ -99,7 +98,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
 
   private let braveAccountResendConfirmationEmailRowUUID: UUID = .init()
   private let braveAccountChangePasswordRowUUID: UUID = .init()
-  private let walletRowUUID: UUID = .init()
 
   private var cancellables: Set<AnyCancellable> = []
 
@@ -112,9 +110,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     p3aUtils: BraveP3AUtils,
     braveCore: BraveProfileController,
     localState: any PrefService,
-    attributionManager: AttributionManager,
-    keyringStore: KeyringStore? = nil,
-    cryptoStore: CryptoStore? = nil
+    attributionManager: AttributionManager
   ) {
     self.profile = profile
     self.tabManager = tabManager
@@ -128,8 +124,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     self.syncProfileServices = braveCore.syncProfileService
     self.p3aUtilities = p3aUtils
     self.attributionManager = attributionManager
-    self.keyringStore = keyringStore
-    self.cryptoStore = cryptoStore
     self.ipfsAPI = braveCore.ipfsAPI
 
     super.init(style: .insetGrouped)
@@ -143,9 +137,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   }
 
   deinit {
-    keyringStore?.tearDown()
-    cryptoStore?.tearDown()
-
     NotificationCenter.default.removeObserver(self)
   }
 
@@ -197,12 +188,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     navigationController?.pushViewController(hostingController, animated: true)
   }
 
-  private func displayBraveWalletDebugMenu() {
-    let hostingController =
-      UIHostingController(rootView: BraveWalletDebugMenu())
-
-    navigationController?.pushViewController(hostingController, animated: true)
-  }
+  // Growser-287: no displayBraveWalletDebugMenu().
 
   // Growser-280: no vpnConfigChanged(notification:).
 
@@ -1222,11 +1208,10 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         text: Strings.ShortcutButton.shortcutButtonTitle,
         selection: { [weak self] in
           guard let self else { return }
-          let isWalletAvailable = braveCore.braveWalletAPI.isAllowed
           let controller = UIHostingController(
             rootView: ShortcutButtonPickerView(
               prefs: braveCore.profile.prefs,
-              isWalletAvailable: isWalletAvailable
+              isWalletAvailable: false  // Growser-287
             )
           )
           controller.navigationItem.title = Strings.ShortcutButton.shortcutButtonTitle
@@ -1518,14 +1503,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           cellClass: MultilineValue1Cell.self
         ),
         Row(
-          text: "View Brave Wallet Debug Menu",
-          selection: { [unowned self] in
-            self.displayBraveWalletDebugMenu()
-          },
-          accessory: .disclosureIndicator,
-          cellClass: MultilineValue1Cell.self
-        ),
-        Row(
           text: "Consolidate Privacy Report Data",
           detailText:
             "This will force all data to consolidate. All stats for 'last 7 days' should be cleared and 'all time data' views should be preserved.",
@@ -1715,51 +1692,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   }
 
   private func setUpSections() {
-    var copyOfSections = self.makeSections()
-
-    if let featureSectionIndex = copyOfSections.firstIndex(where: {
-      $0.uuid == self.featureSectionUUID.uuidString
-    }) {
-      let walletRowIndex = copyOfSections[featureSectionIndex].rows.firstIndex(where: {
-        $0.uuid == self.walletRowUUID.uuidString
-      })
-
-      if walletRowIndex == nil && braveCore.braveWalletAPI.isAllowed {
-        let settingsStore = cryptoStore?.settingsStore
-        copyOfSections[featureSectionIndex].rows.append(
-          Row(
-            text: Strings.Wallet.web3,
-            selection: { [unowned self] in
-              // iOS17 memory leak issue #8160
-              keyringStore?.setupObservers()
-              cryptoStore?.setupObservers()
-              let web3SettingsView = Web3SettingsView(
-                settingsStore: settingsStore,
-                networkStore: cryptoStore?.networkStore,
-                keyringStore: keyringStore
-              ).environment(
-                \.openURL,
-                .init(handler: { [weak self] url in
-                  guard let self = self else { return .discarded }
-                  (self.presentingViewController ?? self).dismiss(animated: true) { [self] in
-                    self.settingsDelegate?.settingsOpenURLInNewTab(url)
-                  }
-                  return .handled
-                })
-              )
-              let vc = UIHostingController(rootView: web3SettingsView)
-              self.navigationController?.pushViewController(vc, animated: true)
-            },
-            image: UIImage(braveSystemNamed: "leo.product.brave-wallet"),
-            accessory: .disclosureIndicator,
-            uuid: self.walletRowUUID.uuidString
-          )
-        )
-      } else if let index = walletRowIndex {
-        copyOfSections.remove(at: index)
-      }
-    }
-    self.dataSource.sections = copyOfSections
+    // Growser-287: no Web3 settings row - the wallet is out.
+    self.dataSource.sections = self.makeSections()
   }
 
   // Growser-280: no presentVPNPaywall(), enableVPNTapped() or

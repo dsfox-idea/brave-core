@@ -51,7 +51,6 @@
 		27FA21752837F8EA00FA2C45 /* BrowserIntentsModels in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21742837F8EA00FA2C45 /* BrowserIntentsModels */; };
 		27FA217B2837F95400FA2C45 /* Strings in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA217A2837F95400FA2C45 /* Strings */; };
 		27FA217F2837FB0100FA2C45 /* BraveShared in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA217E2837FB0100FA2C45 /* BraveShared */; };
-		27FA21812837FB0100FA2C45 /* BraveWallet in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21802837FB0100FA2C45 /* BraveWallet */; };
 		27FA21832837FB0100FA2C45 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21822837FB0100FA2C45 /* Data */; };
 		27FA21892837FB0100FA2C45 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21882837FB0100FA2C45 /* Shared */; };
 		27FA21A42838019000FA2C45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FA21902838018E00FA2C45 /* InfoPlist.strings */; };
@@ -556,7 +555,6 @@
 				279F8EE4300FFE9600B80983 /* MarketplaceKit.framework in Frameworks */,
 				2714EE8E2AF3F656002090A9 /* AuthenticationServices.framework in Frameworks */,
 				278852E62ACDE795005395CF /* UserAgent in Frameworks */,
-				27FA21812837FB0100FA2C45 /* BraveWallet in Frameworks */,
 				0A1DF486244A2ECB00541FE4 /* NetworkExtension.framework in Frameworks */,
 				27466BB1288EDB9C00584C90 /* RuntimeWarnings in Frameworks */,
 			);
@@ -1063,7 +1061,6 @@
 			name = Client;
 			packageProductDependencies = (
 				27FA217E2837FB0100FA2C45 /* BraveShared */,
-				27FA21802837FB0100FA2C45 /* BraveWallet */,
 				27FA21822837FB0100FA2C45 /* Data */,
 				27FA21882837FB0100FA2C45 /* Shared */,
 				270ECFC72838210F0089B8B7 /* Brave */,
@@ -4091,10 +4088,6 @@
 		27FA217E2837FB0100FA2C45 /* BraveShared */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BraveShared;
-		};
-		27FA21802837FB0100FA2C45 /* BraveWallet */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BraveWallet;
 		};
 		27FA21822837FB0100FA2C45 /* Data */ = {
 			isa = XCSwiftPackageProductDependency;

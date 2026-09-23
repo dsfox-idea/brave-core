@@ -160,9 +160,7 @@ class BrowserNavigationHelper {
 
   // Growser-282: no openPlaylist().
 
-  func openWallet() {
-    bvc?.presentWallet()
-  }
+  // Growser-287: no openWallet().
 
   @objc private func dismissView() {
     guard let bvc = bvc else { return }
