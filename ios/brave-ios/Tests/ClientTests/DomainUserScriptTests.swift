@@ -54,32 +54,17 @@ class DomainUserScriptTests: XCTestCase {
     }
   }
 
-  func testSKUsAPIAvailability() throws {
-    let goodURLs = [
+  // Growser-283: SKUS is out of the product, so account.brave.com gets no
+  // domain script at all.
+  func testAccountHostsGetNoDomainScript() throws {
+    let accountURLs = [
       URL(string: "https://account.brave.com"),
       URL(string: "https://account.bravesoftware.com"),
       URL(string: "https://account.brave.software"),
     ].compactMap { $0 }
 
-    goodURLs.forEach {
-      XCTAssertEqual(
-        DomainUserScript(for: $0, isPrivateBrowsing: false),
-        .braveSkus,
-        "\($0) failed"
-      )
-      XCTAssertNil(DomainUserScript(for: $0, isPrivateBrowsing: true))
-    }
-
-    let badURLs = [
-      URL(string: "https://talk.brave.com"),
-      URL(string: "https://search.brave.software.com"),
-      URL(string: "https://community.brave.app"),
-      URL(string: "https://subdomain.search.brave.com"),
-      URL(string: "https://brave.com"),
-    ].compactMap { $0 }
-
-    badURLs.forEach {
-      XCTAssertNotEqual(DomainUserScript(for: $0, isPrivateBrowsing: false), .braveSkus)
+    accountURLs.forEach {
+      XCTAssertNil(DomainUserScript(for: $0, isPrivateBrowsing: false), "\($0)")
     }
   }
 }

@@ -6,6 +6,7 @@
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 
 config("config") {
   # For our own public headers to be able to import the official public headers
@@ -37,6 +38,7 @@ source_set("web_view") {
     "//brave/components/brave_talk/buildflags",
     "//brave/components/playlist/core/common/buildflags",
     "//brave/components/serp_metrics:features",
+    "//brave/components/skus/buildflags",
     "//brave/ios/browser/api/profile",
     "//brave/ios/browser/api/url",
     "//brave/ios/browser/api/web_view/autofill",
@@ -50,7 +52,6 @@ source_set("web_view") {
     "//brave/ios/browser/brave_wallet",
     "//brave/ios/browser/favicon",
     "//brave/ios/browser/serp_metrics",
-    "//brave/ios/browser/skus",
     "//brave/ios/browser/ui/web_view:features",
     "//brave/ios/browser/ui/webui/brave_account",
     "//brave/ios/browser/ui/webui/brave_wallet",
@@ -92,6 +93,9 @@ source_set("web_view") {
   }
   if (enable_playlist) {
     deps += [ "//brave/ios/browser/playlist" ]
+  }
+  if (enable_skus) {  # Growser-283
+    deps += [ "//brave/ios/browser/skus" ]
   }
   frameworks = [
     "Foundation.framework",

@@ -17,7 +17,7 @@ public enum DeepLink: String {
   case browserMenu = "menu"
   case setDefaultBrowser = "set-default"
   case importData = "import-data"
-  case originPromo = "origin_promo"
+  // Growser-283: no originPromo ("origin_promo").
 }
 
 // The root navigation for the Router. Look at the tests to see a complete URL
@@ -91,15 +91,13 @@ public enum NavigationPath: Equatable {
   private static func handleDeepLink(_ link: DeepLink, with bvc: BrowserViewController) {
     switch link {
     // Growser-279: no .braveLeo. Growser-280: no .vpnCrossPlatformPromo.
-    // Growser-282: no .playlist.
+    // Growser-282: no .playlist. Growser-283: no .originPromo.
     case .browserMenu:
       bvc.presentMenu(from: bvc.navigationToolbar)
     case .setDefaultBrowser:
       bvc.presentDefaultBrowserScreenCallout(skipSafeGuards: true)
     case .importData:
       bvc.presentDataImporter()
-    case .originPromo:
-      bvc.presentBraveOriginDeepLink()
     }
   }
 

@@ -31,7 +31,7 @@
 #include "brave/components/p3a/p3a_service.h"
 #include "brave/components/p3a/rotation_scheduler.h"
 #include "brave/components/playlist/core/common/pref_names.h"
-#include "brave/components/skus/browser/skus_utils.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "brave/ios/browser/brave_stats/brave_stats_prefs.h"
 #include "brave/ios/browser/search_engines/template_url_service_prefs.h"
 #include "brave/ios/browser/shared/prefs/pref_names.h"
@@ -48,6 +48,10 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_NEWS)  // Growser-281
 #include "brave/components/brave_news/common/pref_names.h"
+#endif
+
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
+#include "brave/components/skus/browser/skus_utils.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
@@ -142,7 +146,9 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   brave_wallet::RegisterLocalStatePrefsForMigration(registry);
 #endif
   decentralized_dns::RegisterLocalStatePrefs(registry);
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   skus::RegisterLocalStatePrefs(registry);
+#endif
   p3a::P3AService::RegisterPrefs(registry, false);
   p3a::MetricLogStore::RegisterLocalStatePrefsForMigration(registry);
   p3a::RotationScheduler::RegisterLocalStatePrefsForMigration(registry);

@@ -496,11 +496,7 @@ extension SceneDelegate {
   }
 
   private func refreshSKUsCredentials(in scene: UIWindowScene) {
-    Task { @MainActor in
-      let isPrivateBrowsing =
-        scene.browserViewController?.privateBrowsingManager.isPrivateBrowsing == true
-      await Skus.SkusServiceFactory.get(privateMode: isPrivateBrowsing)?.refreshSkusCredentials()
-    }
+    // Growser-283: nothing to refresh - SKUS is out of the product.
   }
 
   private func handleCustomUserActivityActions(_ scene: UIScene, userActivity: NSUserActivity) {

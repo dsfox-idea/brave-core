@@ -151,12 +151,7 @@ extension BrowserViewController: TabObserver {
       tabManager.saveTab(tab)
     }
 
-    // Inject app's IAP receipt for Brave SKUs if necessary
-    if !tab.isPrivate {
-      Task { @MainActor in
-        await BraveSkusAccountLink.injectLocalStorage(tab: tab)
-      }
-    }
+    // Growser-283: no SKUS receipt to inject - SKUS is out of the product.
 
     navigateInTab(tab: tab)
     rewards.reportTabUpdated(
@@ -363,7 +358,7 @@ extension BrowserViewController {
       injectedScripts += [
         LoginsScriptHandler(passwordAPI: profileController.passwordAPI),
         BraveSearchResultAdScriptHandler(),
-        BraveSkusScriptHandler(),
+        // Growser-283: no BraveSkusScriptHandler.
       ]
       if profileController.braveWalletAPI.isAllowed {
         injectedScripts += [

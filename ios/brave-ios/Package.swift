@@ -32,7 +32,7 @@ var package = Package(
     // Growser-280: no BraveVPN library.
     // Growser-281: no BraveNews library.
     // Growser-279: no AIChat library.
-    .library(name: "BraveStore", targets: ["BraveStore"]),
+    // Growser-283: no BraveStore library.
     .library(name: "Favicon", targets: ["Favicon"]),
     .library(name: "FaviconModels", targets: ["FaviconModels"]),
     .library(name: "SpeechRecognition", targets: ["SpeechRecognition"]),
@@ -51,7 +51,7 @@ var package = Package(
     .library(name: "BrowserMenu", targets: ["BrowserMenu"]),
     .library(name: "Web", targets: ["Web"]),
     // Growser-278: no BraveTalk library.
-    .library(name: "Origin", targets: ["Origin"]),
+    // Growser-283: no Origin library.
     .plugin(name: "IntentBuilderPlugin", targets: ["IntentBuilderPlugin"]),
     .plugin(name: "LoggerPlugin", targets: ["LoggerPlugin"]),
   ],
@@ -101,7 +101,7 @@ var package = Package(
         // Growser-280: no BraveVPN.
         // Growser-281: no BraveNews.
         // Growser-279: no AIChat.
-        "BraveStore",
+        // Growser-283: no BraveStore.
         "Onboarding",
         "Growth",
         "SpeechRecognition",
@@ -118,7 +118,7 @@ var package = Package(
         "Web",
         "BraveShields",
         // Growser-278: no BraveTalk.
-        "Origin",
+        // Growser-283: no Origin.
       ],
       exclude: [
         "Frontend/UserContent/UserScripts/AllFrames",
@@ -147,6 +147,11 @@ var package = Package(
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/PlaylistScriptHandler.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistScript.js",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistSwizzlerScript.js",
+        // Growser-283: Brave's paid-product layer is out, on the same terms.
+        "BraveSkus",
+        "Frontend/Browser/BrowserViewController/BVC+Origin.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveSkusScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSkusScript.js",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
@@ -192,9 +197,6 @@ var package = Package(
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchScript.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSkusScript.js"
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/FrameCheckWrapper.js"
@@ -417,20 +419,8 @@ var package = Package(
     // Sources/BraveNews and Tests/BraveNewsTests are not built.
     // Growser-279: the AIChat target is not declared, so Sources/AIChat is
     // not built.
-    .target(
-      name: "BraveStore",
-      dependencies: [
-        "BraveCore",
-        "BraveShared",
-        "BraveStrings",
-        "BraveUI",
-        "DesignSystem",
-        "Preferences",
-        .product(name: "Collections", package: "swift-collections"),
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-283: the BraveStore and Origin targets are not declared, so their
+    // sources are not built.
     .target(name: "Preferences", dependencies: ["Shared"], plugins: ["LoggerPlugin"]),
     .target(
       name: "Onboarding",
@@ -496,6 +486,8 @@ var package = Package(
     .testTarget(
       name: "ClientTests",
       dependencies: ["Brave", "BraveStrings", "TestHelpers", "Web"],
+      // Growser-283: the SKUS glue it tests is not built.
+      exclude: ["Helpers/BraveSkusWebHelperTests.swift"],
       resources: [
         .copy("Resources/debouncing.json"),
         .copy("Resources/content-blocking.json"),
@@ -542,16 +534,6 @@ var package = Package(
     .plugin(name: "LoggerPlugin", capability: .buildTool()),
     // Growser-278: the BraveTalk target and its tests are not declared, so
     // Sources/BraveTalk and Tests/BraveTalkTests are not built.
-    .target(
-      name: "Origin",
-      dependencies: [
-        "DesignSystem",
-        "Strings",
-        "BraveCore",
-        "BraveStore",
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-      ]
-    ),
   ],
   swiftLanguageModes: [.v5],
   cxxLanguageStandard: .cxx17

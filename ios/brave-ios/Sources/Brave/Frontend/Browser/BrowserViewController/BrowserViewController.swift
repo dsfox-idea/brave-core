@@ -601,17 +601,7 @@ public class BrowserViewController: UIViewController {
       BraveWebView.didResetConfiguration = { profile, configuration in
         configuration.prepareBraveConfiguration()
       }
-      let configuration = BraveWebViewConfiguration(profile: profileController.profile)
-      configuration.setSkusCredentialsFetchedCallback { [weak self] domain, message in
-        guard let self,
-          let skusService = Skus.SkusServiceFactory.get(profile: profileController.profile)
-        else {
-          return
-        }
-        Task {
-          await skusService.updatePreferences(for: domain, summaryData: Data(message.utf8))
-        }
-      }
+      // Growser-283: no SKUS credentials callback - SKUS is out of the product.
     }
 
     Task { @MainActor in
@@ -622,14 +612,8 @@ public class BrowserViewController: UIViewController {
       }
     }
 
-    BraveOriginNavigation.openOriginSettings = { [weak self] in
-      guard let self else { return }
-      // Only present Origin settings if the user activated from the browser. Activating via Origin
-      // IAP paywall will already present Origin settings via settings
-      if presentedViewController == nil {
-        presentBraveOriginDeepLink()
-      }
-    }
+    // Growser-283: no BraveOriginNavigation.openOriginSettings - there is no
+    // Origin settings screen to open.
   }
 
   private func setupAdsNotificationHandler() {
@@ -2384,9 +2368,7 @@ extension BrowserViewController: SettingsDelegate {
     self.tabManager.addTabsForURLs(urls, isPrivate: tabIsPrivate)
   }
 
-  func settingsDidCompleteOriginPurchase() {
-    handleOriginPurchaseCompleted()
-  }
+  // Growser-283: no settingsDidCompleteOriginPurchase().
 
   // QA Stuff
   func settingsCreateFakeTabs() {

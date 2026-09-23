@@ -33,7 +33,7 @@
 #include "brave/ios/browser/global_privacy_control/gpc_javascript_feature.h"
 #include "brave/ios/browser/playlist/playlist_compatibility_javascript_feature.h"
 #include "brave/ios/browser/playlist/playlist_javascript_feature.h"
-#include "brave/ios/browser/skus/skus_javascript_feature.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "brave/ios/browser/ui/web_view/features.h"
 #include "brave/ios/browser/web/brave_web_main_parts.h"
 #include "brave/ios/browser/web/de_amp/de_amp_javascript_feature.h"
@@ -77,6 +77,10 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
 #include "brave/ios/browser/brave_talk/brave_talk_launcher_javascript_feature.h"
+#endif
+
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
+#include "brave/ios/browser/skus/skus_javascript_feature.h"
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
@@ -199,8 +203,10 @@ std::vector<web::JavaScriptFeature*> BraveWebClient::GetJavaScriptFeatures(
     }
 #endif
     features.push_back(brave::ReaderModeJavaScriptFeature::GetInstance());
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
     features.push_back(
         skus::SkusJavaScriptFeature::FromBrowserState(browser_state));
+#endif
     features.push_back(youtube::YouTubeQualityJavaScriptFeature::GetInstance());
     features.push_back(CosmeticFilteringJavaScriptFeature::GetInstance());
     features.push_back(ScriptletsJavaScriptFeature::GetInstance());

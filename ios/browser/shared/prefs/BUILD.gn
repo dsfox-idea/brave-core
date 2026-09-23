@@ -9,6 +9,7 @@ import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/email_aliases/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 
 source_set("prefs") {
   sources = [
@@ -40,7 +41,7 @@ source_set("prefs") {
     "//brave/components/ntp_background_images/common",
     "//brave/components/p3a",
     "//brave/components/playlist/core/common",
-    "//brave/components/skus/browser",
+    "//brave/components/skus/buildflags",
     "//brave/ios/browser/brave_stats",
     "//brave/ios/browser/search_engines",
     "//brave/ios/browser/youtube",
@@ -56,6 +57,9 @@ source_set("prefs") {
       "//brave/components/ai_chat/core/browser",
       "//brave/components/ai_chat/core/common",
     ]
+  }
+  if (enable_skus) {  # Growser-283
+    deps += [ "//brave/components/skus/browser" ]
   }
   if (enable_brave_news) {  # Growser-281
     deps += [ "//brave/components/brave_news/common" ]

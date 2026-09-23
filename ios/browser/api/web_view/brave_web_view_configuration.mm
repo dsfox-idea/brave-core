@@ -14,7 +14,7 @@
 #include "base/strings/sys_string_conversions.h"
 #include "brave/ios/browser/api/profile/profile_bridge_impl.h"
 #include "brave/ios/browser/api/web_view/brave_web_view_configuration_provider.h"
-#include "brave/ios/browser/skus/skus_javascript_feature.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "brave/ios/browser/ui/web_view/features.h"
 #include "components/autofill/core/browser/data_manager/personal_data_manager.h"
 #include "components/keyed_service/core/service_access_type.h"
@@ -25,6 +25,10 @@
 #include "ios/web/web_state/ui/wk_web_view_configuration_provider.h"
 #include "ios/web_view/internal/autofill/cwv_autofill_data_manager_internal.h"
 #include "ios/web_view/internal/cwv_web_view_configuration_internal.h"
+
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
+#include "brave/ios/browser/skus/skus_javascript_feature.h"
+#endif
 
 @implementation BraveWebViewConfiguration {
   CWVAutofillDataManager* _autofillDataManager;
@@ -84,12 +88,14 @@
 
 - (void)setSkusCredentialsFetchedCallback:
     (void (^)(NSString* domain, NSString* message))callback {
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   skus::SkusJavaScriptFeature::FromBrowserState(self.browserState)
       ->SetCredentialSummaryFetched(base::BindRepeating(
           ^(const std::string domain, const std::string message) {
             callback(base::SysUTF8ToNSString(domain),
                      base::SysUTF8ToNSString(message));
           }));
+#endif
 }
 
 @end

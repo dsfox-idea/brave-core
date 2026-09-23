@@ -14,6 +14,7 @@ import("//brave/components/brave_shields/ios/browser/headers.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/brave_user_agent/ios/common/headers.gni")
 import("//brave/components/debounce/ios/browser/headers.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 import("//brave/components/url_sanitizer/ios/browser/headers.gni")
 import("//brave/ios/browser/api/ads/headers.gni")
 import("//brave/ios/browser/api/brave_domains/headers.gni")
@@ -95,7 +96,6 @@ brave_core_public_headers = [
   "//brave/ios/browser/brave_vpn/brave_vpn_pref_names_bridge.h",
   "//brave/ios/browser/brave_wallet/brave_wallet_factory_wrappers.h",
   "//brave/ios/browser/brave_wallet/wallet_pref_names_bridge.h",
-  "//brave/ios/browser/skus/skus_sdk_factory_wrappers.h",
   "//brave/ios/browser/playlist/playlist_exclusions_bridge.h",
   "//brave/ios/browser/playlist/playlist_exclusions_factory.h",
   "//brave/ios/browser/most_visited_sites/most_visited_sites_bridge.h",
@@ -181,7 +181,6 @@ brave_core_public_headers += browser_api_opentabs_public_headers
 brave_core_public_headers += browser_api_qr_code_public_headers
 brave_core_public_headers += browser_api_session_restore_public_headers
 brave_core_public_headers += browser_api_query_filter_public_headers
-brave_core_public_headers += skus_public_headers
 brave_core_public_headers += browser_api_url_public_headers
 brave_core_public_headers += brave_p3a_public_headers
 brave_core_public_headers += browser_api_web_webstate_public_headers
@@ -204,6 +203,14 @@ brave_core_public_headers += brave_ios_web_view_public_headers
 if (enable_brave_talk) {
   brave_core_public_headers +=
       [ "//brave/ios/browser/brave_talk/brave_talk_pref_names_bridge.h" ]
+}
+
+# Growser-283: SKUS is compiled out, as on the desktop (growser#126), and its
+# Objective-C API leaves BraveCore with it.
+if (enable_skus) {
+  brave_core_public_headers += skus_public_headers
+  brave_core_public_headers +=
+      [ "//brave/ios/browser/skus/skus_sdk_factory_wrappers.h" ]
 }
 
 # Growser-281: Brave News is out of the product, and its pref-name bridge
@@ -284,7 +291,9 @@ ios_framework_bundle("brave_core_ios_framework") {
   deps += brave_wallet_public_deps
   deps += brave_shields_component_public_deps
   deps += rewards_public_deps
-  deps += skus_public_deps
+  if (enable_skus) {  # Growser-283
+    deps += skus_public_deps
+  }
   deps += credential_provider_public_deps
   deps += webcompat_reporter_public_deps
 

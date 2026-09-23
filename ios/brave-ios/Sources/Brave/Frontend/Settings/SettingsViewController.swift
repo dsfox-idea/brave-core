@@ -6,7 +6,7 @@
 import BraveCore
 // Growser-281: no BraveNews.
 import BraveShared
-import BraveStore
+// Growser-283: no BraveStore.
 import BraveUI
 // Growser-280: no BraveVPN.
 import BraveWallet
@@ -17,7 +17,7 @@ import Growth
 import LocalAuthentication
 import NetworkExtension
 import Onboarding
-import Origin
+// Growser-283: no Origin.
 // Growser-282: no Playlist.
 import Preferences
 import Shared
@@ -52,7 +52,7 @@ extension Preferences.AutoCloseTabsOption: RepresentableOptionType {
 protocol SettingsDelegate: AnyObject {
   func settingsOpenURLInNewTab(_ url: URL)
   func settingsOpenURLs(_ urls: [URL], loadImmediately: Bool)
-  func settingsDidCompleteOriginPurchase()
+  // Growser-283: no settingsDidCompleteOriginPurchase().
 
   func settingsCreateFakeTabs()
   func settingsCreateFakeBookmarks()
@@ -982,74 +982,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     )
     general.rows.append(browserLockRow)
 
-    // Always keep Brave Origin the last item in the section
-    if FeatureList.kBraveOrigin.enabled {
-      general.rows.append(
-        Row(
-          text: Strings.Origin.originProductName,
-          selection: { [unowned self] in
-            guard let originService = BraveOriginServiceFactory.get(profile: braveCore.profile),
-              let skusService = Skus.SkusServiceFactory.get(profile: braveCore.profile)
-            else {
-              return
-            }
-            let originSettingsController: () -> UIViewController = {
-              let controller = UIHostingController(
-                rootView: OriginSettingsView(
-                  viewModel: .init(
-                    service: originService,
-                    storeSDK: BraveStoreSDK(skusService: skusService)
-                  )
-                )
-                .environment(
-                  \.openURL,
-                  OpenURLAction { [weak self] url in
-                    guard let self else { return .handled }
-                    settingsDelegate?.settingsOpenURLInNewTab(url)
-                    dismiss(animated: true)
-                    return .handled
-                  }
-                )
-              )
-              controller.title = Strings.Origin.originProductName  // Not Translated
-              return controller
-            }
-            if originService.isPurchased() {
-              self.navigationController?.pushViewController(
-                originSettingsController(),
-                animated: true
-              )
-            } else {
-              let skusService = Skus.SkusServiceFactory.get(profile: braveCore.profile)
-              let controller = UIHostingController(
-                rootView: OriginPaywallView(
-                  viewModel: .init(store: .init(skusService: skusService)),
-                  didPurchase: { [weak self] in
-                    guard let self else { return }
-                    settingsDelegate?.settingsDidCompleteOriginPurchase()
-                    navigationController?.pushViewController(
-                      originSettingsController(),
-                      animated: true
-                    )
-                  }
-                )
-                .environment(
-                  \.openURL,
-                  OpenURLAction { [weak self] url in
-                    self?.settingsDelegate?.settingsOpenURLInNewTab(url)
-                    return .handled
-                  }
-                )
-              )
-              present(controller, animated: true)
-            }
-          },
-          image: UIImage(braveSystemNamed: "leo.product.origin"),
-          accessory: .disclosureIndicator,
-          cellClass: MultilineSubtitleCell.self
-        )
-      )
-    }
+    // Growser-283: no Brave Origin row.
 
     return general
   }()
@@ -1643,15 +1576,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         // Growser-278: no "Brave Talk Logs" row.
         // Growser-279: no "Leo Logs" row.
         // Growser-282: no "Playlist Debug" row.
-        Row(
-          text: "StoreKit Receipt Viewer",
-          selection: { [unowned self] in
-            let controller = UIHostingController(rootView: StoreKitReceiptView())
-            self.navigationController?.pushViewController(controller, animated: true)
-          },
-          accessory: .disclosureIndicator,
-          cellClass: MultilineValue1Cell.self
-        ),
+        // Growser-283: no "StoreKit Receipt Viewer" row.
         Row(
           text: "Onboarding Debug Menu",
           selection: { [unowned self] in

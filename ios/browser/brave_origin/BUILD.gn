@@ -9,6 +9,7 @@ import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/email_aliases/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 
 source_set("brave_origin") {
   sources = [
@@ -37,9 +38,9 @@ source_set("brave_origin") {
     "//brave/components/email_aliases/buildflags",
     "//brave/components/p3a",
     "//brave/components/playlist/core/common",
+    "//brave/components/skus/buildflags",
     "//brave/ios/browser/keyed_service",
     "//brave/ios/browser/policy",
-    "//brave/ios/browser/skus",
     "//components/keyed_service/core",
     "//components/policy/core/browser",
     "//components/user_prefs",
@@ -48,6 +49,9 @@ source_set("brave_origin") {
     "//ios/chrome/browser/shared/model/profile",
     "//ios/chrome/browser/shared/model/profile:profile_keyed_service_factory",
   ]
+  if (enable_skus) {  # Growser-283
+    deps += [ "//brave/ios/browser/skus" ]
+  }
   if (enable_ai_chat) {
     deps += [ "//brave/components/ai_chat/core/common" ]
   }

@@ -6,6 +6,7 @@
 #include "brave/ios/browser/profile/model/brave_keyed_service_factories.h"
 
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "brave/components/brave_account/features.h"
 #include "brave/ios/browser/api/webcompat_reporter/webcompat_reporter_service_factory.h"
 #include "brave/ios/browser/brave_account/brave_account_service_factory_ios.h"
@@ -17,8 +18,11 @@
 #include "brave/ios/browser/favicon/brave_ios_favicon_loader_factory.h"
 #include "brave/ios/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/ios/browser/serp_metrics/serp_metrics_service_factory_ios.h"
-#include "brave/ios/browser/skus/skus_service_factory.h"
 #include "brave/ios/browser/url_sanitizer/url_sanitizer_service_factory+private.h"
+
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
+#include "brave/ios/browser/skus/skus_service_factory.h"
+#endif
 
 #if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
 #include "brave/ios/browser/ai_chat/ai_chat_service_factory.h"
@@ -44,7 +48,9 @@ void EnsureProfileKeyedServiceFactoriesBuilt() {
   brave_origin::BraveOriginServiceFactory::GetInstance();
   brave_shields::BraveShieldsSettingsServiceFactory::GetInstance();
   brave_wallet::BraveWalletServiceFactory::GetInstance();
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   skus::SkusServiceFactory::GetInstance();
+#endif
   brave::URLSanitizerServiceFactory::GetInstance();
   debounce::DebounceServiceFactory::GetInstance();
   webcompat_reporter::WebcompatReporterServiceFactory::GetInstance();

@@ -11,7 +11,7 @@ import WebKit
 enum DomainUserScript: CaseIterable {
   case braveSearchHelper
   // Growser-278: no braveTalkHelper - Brave Talk is out of the product.
-  case braveSkus
+  // Growser-283: no braveSkus - SKUS is out of the product.
 
   /// Initialize this script with a URL
   init?(for url: URL, isPrivateBrowsing: Bool) {
@@ -47,12 +47,7 @@ enum DomainUserScript: CaseIterable {
         "search-dev-local.brave.com",
       ])
     // Growser-278: no .braveTalkHelper and its talk.brave.com hosts.
-    case .braveSkus:
-      return Set([
-        "account.brave.com",
-        "account.bravesoftware.com",
-        "account.brave.software",
-      ])
+    // Growser-283: no .braveSkus and its account.brave.com hosts.
     }
   }
 
@@ -60,8 +55,6 @@ enum DomainUserScript: CaseIterable {
     switch self {
     case .braveSearchHelper:  // Growser-278
       return true
-    case .braveSkus:
-      return false
     }
   }
 }

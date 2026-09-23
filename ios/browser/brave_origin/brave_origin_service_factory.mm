@@ -31,7 +31,7 @@
 #include "brave/components/playlist/core/common/pref_names.h"
 #include "brave/ios/browser/brave_origin/brave_origin_navigation_bridge_impl.h"
 #include "brave/ios/browser/policy/brave_simple_policy_map_ios.h"
-#include "brave/ios/browser/skus/skus_service_factory.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "components/keyed_service/core/keyed_service.h"
 #include "components/user_prefs/user_prefs.h"
 #include "ios/chrome/browser/policy/model/browser_policy_connector_ios.h"
@@ -61,6 +61,10 @@
 
 #if BUILDFLAG(ENABLE_EMAIL_ALIASES)
 #include "brave/components/email_aliases/pref_names.h"
+
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
+#include "brave/ios/browser/skus/skus_service_factory.h"
+#endif
 #endif
 
 namespace brave_origin {
@@ -168,7 +172,9 @@ BraveOriginServiceFactory::BraveOriginServiceFactory()
                                     ProfileSelection::kRedirectedInIncognito,
                                     ServiceCreation::kCreateWithProfile,
                                     TestingCreation::kNoServiceForTests) {
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   DependsOn(skus::SkusServiceFactory::GetInstance());
+#endif
   auto* policy_manager = BraveOriginPolicyManager::GetInstance();
   policy_manager->SetExpectedToBeInitialized();
   auto* application_context = GetApplicationContext();
@@ -185,8 +191,17 @@ BraveOriginServiceFactory::~BraveOriginServiceFactory() = default;
 std::unique_ptr<KeyedService>
 BraveOriginServiceFactory::BuildServiceInstanceFor(ProfileIOS* profile) const {
   std::string profile_id = GetProfileId(profile->GetStatePath());
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   auto skus_service_getter =
       base::BindRepeating(&skus::SkusServiceFactory::GetForProfile, profile);
+#else
+  // The SDK is compiled out, as on the desktop (growser#126): Origin's purchase
+  // flow gets no service, and runs only in Brave-Origin-branded builds anyway.
+  auto skus_service_getter = base::BindRepeating(
+      []() -> mojo::PendingRemote<skus::mojom::SkusService> {
+        return mojo::NullRemote();
+      });
+#endif
   return std::make_unique<BraveOriginService>(
       GetApplicationContext()->GetLocalState(),
       user_prefs::UserPrefs::Get(profile), profile_id,
