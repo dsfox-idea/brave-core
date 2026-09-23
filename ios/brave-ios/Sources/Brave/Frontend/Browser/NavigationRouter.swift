@@ -205,14 +205,11 @@ public enum NavigationPath: Equatable {
       break  // Growser-287: never offered (WidgetShortcutExtension removes it).
     case .scanQRCode:
       bvc.scanQRCode()
-    case .braveNews, .braveLeo, .braveLeoVoiceInput:
-      // Growser-281 (News), Growser-279 (Leo): never offered -
-      // WidgetShortcutExtension removes them - and there is nothing to open.
+    case .braveNews, .braveLeo, .braveLeoVoiceInput, .askBrave:
+      // Growser-281 (News), Growser-279 (Leo), Growser-292 (Ask Brave, which
+      // opened Brave Search): never offered - WidgetShortcutExtension removes
+      // them - and there is nothing to open.
       break
-    case .askBrave:
-      guard let url = URL(string: "https://search.brave.com/ask") else { return }
-      bvc.popToBVC()
-      bvc.openURLInNewTab(url, isPrivileged: false)
     @unknown default:
       assertionFailure()
       break

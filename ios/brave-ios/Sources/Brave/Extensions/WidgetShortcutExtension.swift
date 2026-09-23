@@ -34,6 +34,7 @@ extension WidgetShortcut {
     // Growser-279: Leo is out of the product, so its shortcuts always go.
     options.remove(.braveLeo)
     options.remove(.braveLeoVoiceInput)
+    options.remove(.askBrave)  // Growser-292: it opened Brave Search.
     return options
   }
 
@@ -50,6 +51,7 @@ extension WidgetShortcut {
     // Growser-279: Leo is out of the product, so its shortcuts are always off.
     disabled.insert(.braveLeo)
     disabled.insert(.braveLeoVoiceInput)
+    disabled.insert(.askBrave)  // Growser-292: it opened Brave Search.
     return disabled
   }
 

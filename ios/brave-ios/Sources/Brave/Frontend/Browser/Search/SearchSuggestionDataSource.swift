@@ -78,34 +78,7 @@ class SearchSuggestionDataSource {
   }
 
   var braveSearchPromotionAvailable: Bool {
-    guard Preferences.Review.launchCount.value > 1,
-      searchEngines?.defaultEngine(forType: isPrivate ? .privateMode : .standard)?
-        .shortName != OpenSearchEngine.EngineNames.brave,
-      let braveSearchPromotionLaunchDate = Preferences.BraveSearch.braveSearchPromotionLaunchDate
-        .value,
-      Preferences.BraveSearch.braveSearchPromotionCompletionState.value
-        != BraveSearchPromotionState.dismissed.rawValue,
-      Preferences.BraveSearch.braveSearchPromotionCompletionState.value
-        != BraveSearchPromotionState.maybeLaterSameSession.rawValue
-    else {
-      return false
-    }
-
-    if let region = Locale.current.region?.identifier, region == "JP" {
-      return false
-    }
-
-    let rightNow = Date()
-    let nextShowDate = braveSearchPromotionLaunchDate.addingTimeInterval(
-      AppConstants.isOfficialBuild
-        ? maxPeriodBraveSearchPromotion.days : maxPeriodBraveSearchPromotion.minutes
-    )
-
-    if rightNow > nextShowDate {
-      return false
-    }
-
-    return true
+    false  // Growser-292: Brave Search is in no engine list, so nothing to promote.
   }
 
   // MARK: - Initialization
