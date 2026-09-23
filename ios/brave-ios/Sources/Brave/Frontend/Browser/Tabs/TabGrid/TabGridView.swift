@@ -418,15 +418,17 @@ struct TabGridView: View {
           Label(Strings.TabGrid.viewHistoryMenuItemLabel, braveSystemImage: "leo.history")
         }
         .accessibilityLabel(Strings.TabGrid.viewHistoryAccessibilityLabel)
-        Button {
-          destinationSheet = .syncedTabs
-        } label: {
-          Label(
-            Strings.TabGrid.viewSyncedTabsMenuItemLabel,
-            braveSystemImage: "leo.smartphone.laptop"
-          )
+        if FeatureList.kBraveSync.enabled {  // Growser-293: no Sync (#43, #78).
+          Button {
+            destinationSheet = .syncedTabs
+          } label: {
+            Label(
+              Strings.TabGrid.viewSyncedTabsMenuItemLabel,
+              braveSystemImage: "leo.smartphone.laptop"
+            )
+          }
+          .accessibilityLabel(Strings.TabGrid.viewSyncedTabsAccessibilityLabel)
         }
-        .accessibilityLabel(Strings.TabGrid.viewSyncedTabsAccessibilityLabel)
       }
       .controlGroupStyle(.menu)
       if viewModel.isPrivateBrowsing && !privateBrowsingOnly.value {

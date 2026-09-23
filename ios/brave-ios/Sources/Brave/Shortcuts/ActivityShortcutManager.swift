@@ -193,6 +193,8 @@ public class ActivityShortcutManager: NSObject {
     case .openPlayList:
       return  // Growser-282: Playlist is out of the product.
     case .openSyncedTabs:
+      // Growser-293: a shortcut made before Sync left must not reopen it.
+      guard FeatureList.kBraveSync.enabled else { return }
       bvc.popToBVC()
       bvc.navigationHelper.openSyncedTabsList()
     }

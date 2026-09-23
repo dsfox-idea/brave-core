@@ -859,6 +859,11 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       ]
     )
 
+    // Growser-293: Sync is not offered until our own server exists (#43, #78).
+    if !FeatureList.kBraveSync.enabled {
+      general.rows.removeAll { $0.text == Strings.Sync.syncTitle }
+    }
+
     let defaultHostContentSettings = braveCore.defaultHostContentSettings
     if UIDevice.isIpad {
       let defaultPageModeSwitch = SwitchAccessoryView(
