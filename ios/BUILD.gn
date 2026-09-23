@@ -311,7 +311,8 @@ ios_framework_bundle("early_partition_alloc_framework") {
   output_name = "PartitionAllocSupport"
   sources = [ "//ios/chrome/app/early_pa_registration.cc" ]
   info_plist = "//ios/chrome/app/resources/EarlyPAFrameworkInfo.plist"
-  extra_substitutions = [ "BUNDLE_IDENTIFIER=com.brave.ios.$output_name" ]
+  # Growser-284: ours, like the app's.
+  extra_substitutions = [ "BUNDLE_IDENTIFIER=org.growser.ios.$output_name" ]
 
   deps = [
     "//base/allocator:early_zone_registration_apple",

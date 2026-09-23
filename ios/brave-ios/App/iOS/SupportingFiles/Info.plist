@@ -36,7 +36,8 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.brave.ios</string>
+			<!-- Growser-284 -->
+			<string>org.growser.ios</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>http</string>
@@ -93,8 +94,10 @@
 		<string>OpenWebsiteIntent</string>
 		<string>ShortcutsConfigurationIntent</string>
 		<string>StatsConfigurationIntent</string>
-		<string>com.brave.ios.browser-scene</string>
-		<string>com.brave.ios.browsing</string>
+		<!-- Growser-284: ours, and the same strings BrowserState.sceneId and
+		     UserActivityTabHelper's browsingActivityType use. -->
+		<string>org.growser.ios.browser-scene</string>
+		<string>org.growser.ios.browsing</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -8,7 +8,7 @@ import MobileCoreServices
 import Shared
 import Web
 
-private let browsingActivityType: String = "com.brave.ios.browsing"
+private let browsingActivityType: String = "org.growser.ios.browsing"  // Growser-284
 
 private let searchableIndex = CSSearchableIndex(name: "firefox")
 

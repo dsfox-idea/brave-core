@@ -7,9 +7,11 @@
 
 #include "Base.xcconfig"
 
-MOZ_BUNDLE_DISPLAY_NAME = Brave Nightly
+// Growser-284
+MOZ_BUNDLE_DISPLAY_NAME = Growser Nightly
 
-BRAVE_URL_SCHEME = brave-nightly
+// Growser-284
+BRAVE_URL_SCHEME = growser-nightly
 
 // Bundle Identifier
 MOZ_BUNDLE_ID = $(BASE_BUNDLE_ID).BrowserBeta
@@ -23,5 +25,6 @@ SWIFT_ACTIVE_COMPILATION_CONDITIONS = BRAVE_CHANNEL_NIGHTLY $(brave_swift_active
 GCC_PREPROCESSOR_DEFINITIONS= DEBUG=1
 
 // Manual Code-Signing
-CODE_SIGN_IDENTITY = Apple Distribution: Brave Software, Inc.
+// Growser-284: our distribution certificate, not Brave Software's.
+CODE_SIGN_IDENTITY = Apple Distribution
 CODE_SIGN_STYLE = Manual

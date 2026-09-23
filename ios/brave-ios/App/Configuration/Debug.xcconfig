@@ -4,9 +4,11 @@
 
 #include "Base.xcconfig"
 
-MOZ_BUNDLE_DISPLAY_NAME = Brave ($(USER))
+// Growser-284
+MOZ_BUNDLE_DISPLAY_NAME = Growser ($(USER))
 
-BRAVE_URL_SCHEME = brave-debug
+// Growser-284
+BRAVE_URL_SCHEME = growser-debug
 
 // Bundle Identifier (Same as nightly)
 MOZ_BUNDLE_ID = $(BASE_BUNDLE_ID).BrowserBeta
