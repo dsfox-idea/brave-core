@@ -6,6 +6,7 @@
 #ifndef BRAVE_IOS_BROWSER_API_P3A_BRAVE_P3A_UTILS_PRIVATE_H_
 #define BRAVE_IOS_BROWSER_API_P3A_BRAVE_P3A_UTILS_PRIVATE_H_
 
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/ios/browser/api/p3a/brave_p3a_utils.h"
 
 class PrefService;
@@ -17,8 +18,13 @@ class P3AService;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BraveP3AUtils (Private)
+#if BUILDFLAG(ENABLE_P3A)
 - (instancetype)initWithLocalState:(PrefService*)localState
                         p3aService:(scoped_refptr<p3a::P3AService>)p3aService;
+#else
+// Growser-289: the P3A engine is compiled out, as on the desktop (#98).
+- (instancetype)initWithLocalState:(PrefService*)localState;
+#endif
 @end
 
 NS_ASSUME_NONNULL_END

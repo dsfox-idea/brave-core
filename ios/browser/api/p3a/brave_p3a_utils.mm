@@ -12,10 +12,14 @@
 #include "base/metrics/histogram_macros.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/time/time.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/components/p3a/metric_log_type.h"
-#include "brave/components/p3a/p3a_service.h"
 #include "brave/components/p3a/pref_names.h"
 #include "components/prefs/pref_service.h"
+
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
+#include "brave/components/p3a/p3a_service.h"
+#endif
 
 P3AMetricLogType const P3AMetricLogTypeSlow =
     static_cast<P3AMetricLogType>(p3a::MetricLogType::kSlow);
@@ -44,9 +48,12 @@ NSString* const P3ACreativeMetricPrefix =
 
 @implementation BraveP3AUtils {
   raw_ptr<PrefService> _localState;
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   scoped_refptr<p3a::P3AService> _p3aService;
+#endif
 }
 
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
 - (instancetype)initWithLocalState:(PrefService*)localState
                         p3aService:(scoped_refptr<p3a::P3AService>)p3aService {
   if ((self = [super init])) {
@@ -55,18 +62,37 @@ NSString* const P3ACreativeMetricPrefix =
   }
   return self;
 }
+#else
+// Growser-289: no engine to hold. Every method below that needs one answers
+// the way it already did for a missing service: no registration, no-op.
+- (instancetype)initWithLocalState:(PrefService*)localState {
+  if ((self = [super init])) {
+    _localState = localState;
+  }
+  return self;
+}
+#endif
 
 - (bool)isP3AEnabled {
   return _localState->GetBoolean(p3a::kP3AEnabled);
 }
 
 - (void)setIsP3AEnabled:(bool)isP3AEnabled {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   _localState->SetBoolean(p3a::kP3AEnabled, isP3AEnabled);
   _localState->CommitPendingWrite();
+#endif
 }
 
 - (bool)isP3APreferenceManaged {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   return _localState->IsManagedPreference(p3a::kP3AEnabled);
+#else
+  // Growser-289: decided at build time, which is what "managed" means to the
+  // UI - every P3A toggle (onboarding, settings) hides itself for a managed
+  // pref, and the setter above cannot turn an engine that is not there on.
+  return true;
+#endif
 }
 
 - (bool)isNoticeAcknowledged {
@@ -80,6 +106,7 @@ NSString* const P3ACreativeMetricPrefix =
 
 - (P3ACallbackRegistration*)registerRotationCallback:
     (void (^)(P3AMetricLogType logType))callback {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   if (!_p3aService) {
     return nil;
   }
@@ -90,10 +117,14 @@ NSString* const P3ACreativeMetricPrefix =
                                      callback(static_cast<P3AMetricLogType>(
                                          log_type));
                                    }))];
+#else
+  return nil;
+#endif
 }
 
 - (P3ACallbackRegistration*)registerMetricCycledCallback:
     (void (^)(NSString* histogramName))callback {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   if (!_p3aService) {
     return nil;
   }
@@ -104,6 +135,9 @@ NSString* const P3ACreativeMetricPrefix =
                                      callback(base::SysUTF8ToNSString(
                                          histogram_name));
                                    }))];
+#else
+  return nil;
+#endif
 }
 
 - (void)registerDynamicMetric:(NSString*)histogramName
@@ -116,19 +150,23 @@ NSString* const P3ACreativeMetricPrefix =
 - (void)registerDynamicMetric:(NSString*)histogramName
                       logType:(P3AMetricLogType)logType
               mainThreadBound:(BOOL)mainThreadBound {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   if (!_p3aService) {
     return;
   }
   _p3aService->RegisterDynamicMetric(base::SysNSStringToUTF8(histogramName),
                                      static_cast<p3a::MetricLogType>(logType),
                                      mainThreadBound);
+#endif
 }
 
 - (void)removeDynamicMetric:(NSString*)histogramName {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   if (!_p3aService) {
     return;
   }
   _p3aService->RemoveDynamicMetric(base::SysNSStringToUTF8(histogramName));
+#endif
 }
 
 void UmaHistogramExactLinear(NSString* name,

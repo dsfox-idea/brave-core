@@ -26,8 +26,9 @@
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
 #include "brave/components/ntp_background_images/common/view_counter_pref_registry.h"
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/components/p3a/metric_log_store.h"
-#include "brave/components/p3a/p3a_service.h"
+#include "brave/components/p3a/pref_names.h"
 #include "brave/components/p3a/rotation_scheduler.h"
 #include "brave/components/playlist/core/common/pref_names.h"
 #include "brave/components/skus/buildflags/buildflags.h"
@@ -59,6 +60,10 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
 #include "brave/components/brave_talk/pref_names.h"
+#endif
+
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
+#include "brave/components/p3a/p3a_service.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
@@ -150,7 +155,15 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
 #if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   skus::RegisterLocalStatePrefs(registry);
 #endif
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   p3a::P3AService::RegisterPrefs(registry, false);
+#else
+  // Growser-289: the engine is compiled out, as on the desktop (#98), but
+  // BraveP3AUtils still reads these two. Registered so the readers keep
+  // working; false forever.
+  registry->RegisterBooleanPref(p3a::kP3AEnabled, false);
+  registry->RegisterBooleanPref(p3a::kP3ANoticeAcknowledged, false);
+#endif
   p3a::MetricLogStore::RegisterLocalStatePrefsForMigration(registry);
   p3a::RotationScheduler::RegisterLocalStatePrefsForMigration(registry);
   ntp_background_images::NTPBackgroundImagesService::
