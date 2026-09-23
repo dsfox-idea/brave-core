@@ -30,7 +30,7 @@ var package = Package(
     .library(name: "Strings", targets: ["Strings"]),
     .library(name: "BraveStrings", targets: ["BraveStrings"]),
     // Growser-280: no BraveVPN library.
-    .library(name: "BraveNews", targets: ["BraveNews"]),
+    // Growser-281: no BraveNews library.
     // Growser-279: no AIChat library.
     .library(name: "BraveStore", targets: ["BraveStore"]),
     .library(name: "Favicon", targets: ["Favicon"]),
@@ -61,7 +61,7 @@ var package = Package(
     .package(url: "https://github.com/airbnb/lottie-spm", from: "4.4.3"),
     .package(url: "https://github.com/SDWebImage/SDWebImage", exact: "5.10.3"),
     .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI", from: "2.2.0"),
-    .package(url: "https://github.com/nmdias/FeedKit", from: "9.1.2"),
+    // Growser-281: no FeedKit - only BraveNews parsed RSS with it.
     .package(url: "https://github.com/apple/swift-collections", from: "1.0.0"),
     .package(url: "https://github.com/siteline/SwiftUI-Introspect", from: "26.0.2"),
     .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
@@ -99,7 +99,7 @@ var package = Package(
         "BrowserIntentsModels",
         "BraveWidgetsModels",
         // Growser-280: no BraveVPN.
-        "BraveNews",
+        // Growser-281: no BraveNews.
         // Growser-279: no AIChat.
         "BraveStore",
         "Onboarding",
@@ -136,6 +136,9 @@ var package = Package(
         // Growser-280: the VPN is out of the product, on the same terms.
         "Frontend/Browser/BrowserViewController/BVC+VPN.swift",
         "Frontend/Settings/Debug/VPNLogsViewController.swift",
+        // Growser-281: Brave News is out of the product, on the same terms.
+        "Frontend/Browser/NewTabPage/NewTabPageFeedOverlayView.swift",
+        "Frontend/Browser/NewTabPage/Sections/BraveNewsSectionProvider.swift",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
@@ -406,33 +409,8 @@ var package = Package(
     .target(name: "TestHelpers", dependencies: ["Data", "BraveShared"]),
     // Growser-280: the BraveVPN target and its tests are not declared, so
     // Sources/BraveVPN and Tests/BraveVPNTests are not built.
-    .target(
-      name: "BraveNews",
-      dependencies: [
-        "BraveCore",
-        "BraveShared",
-        "BraveStrings",
-        "BraveUI",
-        "CodableHelpers",
-        "Data",
-        "DesignSystem",
-        "FeedKit",
-        "Fuzi",
-        "Growth",
-        "Preferences",
-        "Shared",
-        "SnapKit",
-        "Strings",
-        "Then",
-        .product(name: "Collections", package: "swift-collections"),
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-        .product(name: "Lottie", package: "lottie-spm"),
-      ],
-      resources: [
-        .copy("LottieAssets/brave-today-welcome-graphic.json")
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-281: the BraveNews target and its tests are not declared, so
+    // Sources/BraveNews and Tests/BraveNewsTests are not built.
     // Growser-279: the AIChat target is not declared, so Sources/AIChat is
     // not built.
     .target(
@@ -473,14 +451,6 @@ var package = Package(
         .copy("WelcomeFocus/Resources/Videos"),
       ],
       plugins: ["LoggerPlugin"]
-    ),
-    .testTarget(
-      name: "BraveNewsTests",
-      dependencies: ["BraveNews"],
-      resources: [
-        .copy("opml-test-files/subscriptionList.opml"),
-        .copy("opml-test-files/states.opml"),
-      ]
     ),
     .target(name: "CodableHelpers"),
     .target(name: "FaviconModels", dependencies: ["Shared"]),

@@ -19,9 +19,6 @@
 		271C57792B07F036008D824E /* CredentialProviderUI in Frameworks */ = {isa = PBXBuildFile; productRef = 271C57782B07F036008D824E /* CredentialProviderUI */; };
 		271D3F9A2E007B220093539A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FE7D54B2B50A11A0039FBA4 /* InfoPlist.strings */; };
 		271D3F9B2E007B2A0093539A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59B6912121B695A400E9388E /* InfoPlist.strings */; };
-		272947DE29C8DB2000BF2FDC /* topics_news.en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = 27444B6A29831BBE002E1EBE /* topics_news.en_US.json */; };
-		272947E329C8F86A00BF2FDC /* NewsTopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272947E029C8F6F200BF2FDC /* NewsTopicsModel.swift */; };
-		272FC5AF2979EA700027C53D /* TopNewsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272FC5AE2979E9D60027C53D /* TopNewsWidget.swift */; };
 		27462BEA29DF39EE00715268 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 27462BE929DF39EE00715268 /* OrderedCollections */; };
 		27466BB1288EDB9C00584C90 /* RuntimeWarnings in Frameworks */ = {isa = PBXBuildFile; productRef = 27466BB0288EDB9C00584C90 /* RuntimeWarnings */; };
 		2749F5CA2D088E6500A5DAAB /* BraveCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2749F5C92D088E6500A5DAAB /* BraveCore */; };
@@ -29,7 +26,6 @@
 		2787B06A2B7ED260004796F8 /* BraveCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2787B0692B7ED260004796F8 /* BraveCore */; };
 		278852E42ACDC26B005395CF /* Playlist in Frameworks */ = {isa = PBXBuildFile; productRef = 278852E32ACDC26B005395CF /* Playlist */; };
 		278852E62ACDE795005395CF /* UserAgent in Frameworks */ = {isa = PBXBuildFile; productRef = 278852E52ACDE795005395CF /* UserAgent */; };
-		278BB9FF297B0A1E00690BE3 /* TopNewsListWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278BB9FE297B0A1E00690BE3 /* TopNewsListWidget.swift */; };
 		279366882EB26E0300599776 /* OpenInBraveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279366872EB26DD400599776 /* OpenInBraveViewController.swift */; };
 		279366892EB26E0300599776 /* OpenInBraveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279366872EB26DD400599776 /* OpenInBraveViewController.swift */; };
 		279A828E28FEF01E00F55A5E /* BraveWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CA0391E5271E1382000EB13C /* BraveWidgets.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
@@ -50,7 +46,6 @@
 		27D7FF5B29BA75FB0096DD93 /* WidgetStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FF5A29BA75AD0096DD93 /* WidgetStrings.swift */; };
 		27D7FF5E29BA784C0096DD93 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FF6029BA784C0096DD93 /* Localizable.strings */; };
 		27D7FF7329BB816E0096DD93 /* PrivateCDN in Frameworks */ = {isa = PBXBuildFile; productRef = 27D7FF7229BB816E0096DD93 /* PrivateCDN */; };
-		27D972E628BD4D9900DDCF79 /* BraveNews in Frameworks */ = {isa = PBXBuildFile; productRef = 27D972E528BD4D9900DDCF79 /* BraveNews */; };
 		27DB270828BE9CB4005CB7AC /* LockScreenFavoriteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB270728BE9CAE005CB7AC /* LockScreenFavoriteWidget.swift */; };
 		27E998272B7BE1BC00D9ECF7 /* BraveCore in Frameworks */ = {isa = PBXBuildFile; productRef = 27E998262B7BE1BC00D9ECF7 /* BraveCore */; };
 		27F4439F2135E11200296C58 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27F443952135E11200296C58 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -557,7 +552,6 @@
 				5E8CD8E123D5E3DA00548FC0 /* libarchive.2.tbd in Frameworks */,
 				E6231C051B90A472005ABB0D /* libxml2.2.tbd in Frameworks */,
 				E6231C011B90A44F005ABB0D /* libz.tbd in Frameworks */,
-				27D972E628BD4D9900DDCF79 /* BraveNews in Frameworks */,
 				27D7FF5329BA69330096DD93 /* BraveShields in Frameworks */,
 				27FA217F2837FB0100FA2C45 /* BraveShared in Frameworks */,
 				27D7FF7329BB816E0096DD93 /* PrivateCDN in Frameworks */,
@@ -1077,7 +1071,6 @@
 				27FA21882837FB0100FA2C45 /* Shared */,
 				270ECFC72838210F0089B8B7 /* Brave */,
 				27466BB0288EDB9C00584C90 /* RuntimeWarnings */,
-				27D972E528BD4D9900DDCF79 /* BraveNews */,
 				7DDE6307292FEC9500B8B585 /* SDWebImage */,
 				27C1C5EC29B6AA8800739BE5 /* Preferences */,
 				27D7FF5229BA69330096DD93 /* BraveShields */,
@@ -1271,7 +1264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0391BC271E1026000EB13C /* Assets.xcassets in Resources */,
-				272947DE29C8DB2000BF2FDC /* topics_news.en_US.json in Resources */,
 				44A8A37B2BADE8D2004D1BF1 /* PrivacyInfo.xcprivacy in Resources */,
 				27D7FF5E29BA784C0096DD93 /* Localizable.strings in Resources */,
 			);
@@ -1368,8 +1360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272947E329C8F86A00BF2FDC /* NewsTopicsModel.swift in Sources */,
-				278BB9FF297B0A1E00690BE3 /* TopNewsListWidget.swift in Sources */,
 				CA0391FC271E143F000EB13C /* SingleStatWidget.swift in Sources */,
 				27A28ED528C00C1D001466A4 /* LockScreenShortcutWidget.swift in Sources */,
 				CA0391FB271E143F000EB13C /* StatsWidget.swift in Sources */,
@@ -1380,7 +1370,6 @@
 				27D7FF5B29BA75FB0096DD93 /* WidgetStrings.swift in Sources */,
 				CA0391B9271E1023000EB13C /* BraveWidgets.swift in Sources */,
 				CA0391E3271E1382000EB13C /* BraveWidgets.intentdefinition in Sources */,
-				272FC5AF2979EA700027C53D /* TopNewsWidget.swift in Sources */,
 				CA0391F9271E143F000EB13C /* FavoritesWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4101,10 +4090,6 @@
 		27D7FF7229BB816E0096DD93 /* PrivateCDN */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PrivateCDN;
-		};
-		27D972E528BD4D9900DDCF79 /* BraveNews */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BraveNews;
 		};
 		27E998262B7BE1BC00D9ECF7 /* BraveCore */ = {
 			isa = XCSwiftPackageProductDependency;

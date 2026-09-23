@@ -4,7 +4,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import Web
 
 extension BrowserViewController {
@@ -18,8 +18,8 @@ extension BrowserViewController {
       tab: tab,
       syncAPI: profileController.syncAPI,
       sendTabAPI: profileController.sendTabAPI,
-      feedDataSource: feedDataSource,
-      isBraveNewsAvailable: profileController.profile.prefs.isBraveNewsAvailable,
+      // Growser-281: no feedDataSource, and Brave News is never available.
+      isBraveNewsAvailable: false,
       source: source,
       callbacks: .init(
         onToggleReaderMode: { [weak tab] in

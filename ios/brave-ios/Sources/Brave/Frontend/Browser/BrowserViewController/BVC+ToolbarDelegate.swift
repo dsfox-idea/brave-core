@@ -5,7 +5,7 @@
 
 import AVFoundation
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveShields
 import BraveStrings
@@ -588,7 +588,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
         settings: AdvancedShieldsSettings(
           profile: self.profile,
           tabManager: self.tabManager,
-          feedDataSource: self.feedDataSource,
+          // Growser-281: no feedDataSource.
           debounceService: DebounceServiceFactory.get(privateMode: false),
           braveShieldsSettings: BraveShieldsSettingsServiceFactory.get(
             profile: profileController.profile
@@ -950,8 +950,8 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
         tab: tab,
         syncAPI: profileController.syncAPI,
         sendTabAPI: profileController.sendTabAPI,
-        feedDataSource: feedDataSource,
-        isBraveNewsAvailable: profileController.profile.prefs.isBraveNewsAvailable,
+        // Growser-281: no feedDataSource, and Brave News is never available.
+        isBraveNewsAvailable: false,
         source: .init(
           view: view,
           rect: view.convert(

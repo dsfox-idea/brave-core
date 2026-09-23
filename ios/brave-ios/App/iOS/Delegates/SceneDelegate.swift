@@ -5,7 +5,7 @@
 
 import Brave
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 // Growser-280: no BraveVPN.
 import BraveWidgetsModels
@@ -359,7 +359,7 @@ extension SceneDelegate {
       profile: AppState.shared.profile,
       attributionManager: profileState.attributionManager,
       rewards: profileState.rewards,
-      newsFeedDataSource: AppState.shared.newsFeedDataSource,
+      // Growser-281: no newsFeedDataSource.
       userActivity: sceneState.connectionOptions.userActivities.first,
       downloadBackgroundTaskModel: AppState.shared.downloadBackgroundTaskModel
     )
@@ -586,16 +586,7 @@ extension SceneDelegate {
     case ActivityType.enableBraveVPN.identifier:
       return  // Growser-280: the VPN is out of the product.
     case ActivityType.openBraveNews.identifier:
-      let isNewsAvailable =
-        AppState.shared.braveCore.profileController?.profile.prefs.isBraveNewsAvailable ?? true
-      if isNewsAvailable, let browserViewController = scene.browserViewController {
-        ActivityShortcutManager.shared.performShortcutActivity(
-          type: .openBraveNews,
-          using: browserViewController
-        )
-      }
-
-      return
+      return  // Growser-281: Brave News is out of the product.
     case ActivityType.openPlayList.identifier:
       if let browserViewController = scene.browserViewController {
         ActivityShortcutManager.shared.performShortcutActivity(
@@ -706,7 +697,7 @@ extension SceneDelegate {
     profile: LegacyBrowserProfile,
     attributionManager: AttributionManager,
     rewards: Brave.BraveRewards,
-    newsFeedDataSource: BraveNews.FeedDataSource,
+    // Growser-281: no newsFeedDataSource.
     userActivity: NSUserActivity?,
     downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?
   ) -> BrowserViewController {
@@ -777,7 +768,7 @@ extension SceneDelegate {
       profileController: profileController,
       rewards: rewards,
       crashedLastSession: crashedLastSession,
-      newsFeedDataSource: newsFeedDataSource,
+      // Growser-281: no newsFeedDataSource.
       privateBrowsingManager: privateBrowsingManager,
       downloadBackgroundTaskModel: downloadBackgroundTaskModel
     )

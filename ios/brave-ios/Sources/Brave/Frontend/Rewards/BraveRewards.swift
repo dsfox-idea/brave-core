@@ -40,8 +40,8 @@ public class BraveRewards: PreferencesObserver {
       Preferences.Rewards.adsEnabledTimestamp.value = Date()
     }
 
-    ads.notifyBraveNewsIsEnabledPreferenceDidChange(Preferences.BraveNews.isEnabled.value)
-    Preferences.BraveNews.isEnabled.observe(from: self)
+    // Growser-281: Brave News is out of the product, so it is never enabled.
+    ads.notifyBraveNewsIsEnabledPreferenceDidChange(false)
 
     ads.notifySponsoredImagesIsEnabledPreferenceDidChange(
       Preferences.NewTabPage.backgroundMediaType.isSponsored
@@ -50,7 +50,7 @@ public class BraveRewards: PreferencesObserver {
   }
 
   public func preferencesDidChange(for key: String) {
-    ads.notifyBraveNewsIsEnabledPreferenceDidChange(Preferences.BraveNews.isEnabled.value)
+    ads.notifyBraveNewsIsEnabledPreferenceDidChange(false)  // Growser-281
     ads.notifySponsoredImagesIsEnabledPreferenceDidChange(
       Preferences.NewTabPage.backgroundMediaType.isSponsored
     )
@@ -163,7 +163,7 @@ public class BraveRewards: PreferencesObserver {
     try? await AsyncFileManager.default.removeItem(
       at: configuration.storageURL.appendingPathComponent("ledger")
     )
-    if ads.isServiceRunning(), !Preferences.BraveNews.isEnabled.value {
+    if ads.isServiceRunning() {  // Growser-281: Brave News is never enabled.
       await withCheckedContinuation { continuation in
         ads.shutdownService {
           continuation.resume()

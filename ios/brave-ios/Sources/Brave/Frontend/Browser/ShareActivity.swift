@@ -4,8 +4,8 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveNews
-import FeedKit
+// Growser-281: no BraveNews.
+// Growser-281: no FeedKit - it parsed feeds for Brave News.
 import Growth
 import Preferences
 import Shared
@@ -34,7 +34,7 @@ extension UIViewController {
     tab: (any TabState)?,
     syncAPI: BraveSyncAPI,
     sendTabAPI: BraveSendTabAPI,
-    feedDataSource: FeedDataSource?,
+    // Growser-281: no feedDataSource.
     isBraveNewsAvailable: Bool,
     source: SharePopoverSource,
     callbacks: ShareActivityCallbacks
@@ -201,37 +201,7 @@ extension UIViewController {
         )
       )
 
-      // Add Feed To Brave News Activity
-      if let feedDataSource, isBraveNewsAvailable,
-        Preferences.BraveNews.isEnabled.value,
-        let metadata = tab?.pageMetadataHelper?.metadata,
-        !metadata.feeds.isEmpty
-      {
-        let feeds: [RSSFeedLocation] = metadata.feeds.compactMap { feed in
-          guard let url = URL(string: feed.href) else { return nil }
-          return RSSFeedLocation(title: feed.title, url: url)
-        }
-        if !feeds.isEmpty {
-          activities.append(
-            BasicMenuActivity(
-              activityType: .addSourceNews,
-              callback: { [weak self] in
-                guard let self = self else { return }
-                let controller = BraveNewsAddSourceResultsViewController(
-                  dataSource: feedDataSource,
-                  searchedURL: url,
-                  rssFeedLocations: feeds,
-                  sourcesAdded: nil
-                )
-                let container = UINavigationController(rootViewController: controller)
-                let idiom = UIDevice.current.userInterfaceIdiom
-                container.modalPresentationStyle = idiom == .phone ? .pageSheet : .formSheet
-                self.present(container, animated: true)
-              }
-            )
-          )
-        }
-      }
+      // Growser-281: no "add feed to Brave News" activity.
 
       // Create PDF Activity
       if let tab, tab.temporaryDocument == nil, tab.lastCommittedURL?.isWebPage() == true {
@@ -288,35 +258,7 @@ extension UIViewController {
         )
       }
     } else {
-      // Add Feed To Brave News Activity
-      // Check if it's a feed, url is a temp document file URL
-      if let feedDataSource, let tab,
-        tab.contentsMimeType == "application/xml"
-          || tab.contentsMimeType == "application/json",
-        let tabURL = tab.visibleURL
-      {
-        let parser = FeedParser(URL: url)
-        if case .success(let feed) = parser.parse() {
-          activities.append(
-            BasicMenuActivity(
-              activityType: .addSourceNews,
-              callback: { [weak self] in
-                guard let self = self else { return }
-                let controller = BraveNewsAddSourceResultsViewController(
-                  dataSource: feedDataSource,
-                  searchedURL: tabURL,
-                  rssFeedLocations: [.init(title: feed.title, url: tabURL)],
-                  sourcesAdded: nil
-                )
-                let container = UINavigationController(rootViewController: controller)
-                let idiom = UIDevice.current.userInterfaceIdiom
-                container.modalPresentationStyle = idiom == .phone ? .pageSheet : .formSheet
-                self.present(container, animated: true)
-              }
-            )
-          )
-        }
-      }
+      // Growser-281: no "add feed to Brave News" activity.
     }
 
     // Add Search Engine Activity
@@ -359,7 +301,7 @@ extension UIViewController {
     tab: (any TabState)?,
     syncAPI: BraveSyncAPI,
     sendTabAPI: BraveSendTabAPI,
-    feedDataSource: FeedDataSource?,
+    // Growser-281: no feedDataSource.
     isBraveNewsAvailable: Bool,
     source: SharePopoverSource,
     callbacks: ShareActivityCallbacks
@@ -369,7 +311,6 @@ extension UIViewController {
       tab: tab,
       syncAPI: syncAPI,
       sendTabAPI: sendTabAPI,
-      feedDataSource: feedDataSource,
       isBraveNewsAvailable: isBraveNewsAvailable,
       source: source,
       callbacks: callbacks

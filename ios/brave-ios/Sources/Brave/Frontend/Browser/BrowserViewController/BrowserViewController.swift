@@ -4,7 +4,7 @@
 
 // Growser-279: no AIChat.
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveShields
 // Growser-278: no BraveTalk.
@@ -138,7 +138,7 @@ public class BrowserViewController: UIViewController {
 
   // Single data source used for all favorites vcs
   public let backgroundDataSource: NTPDataSource
-  let feedDataSource: FeedDataSource
+  // Growser-281: no feedDataSource.
 
   private var postSetupTasks: [() -> Void] = []
   private var setupTasksCompleted: Bool = false
@@ -298,7 +298,7 @@ public class BrowserViewController: UIViewController {
     profileController: BraveProfileController,
     rewards: BraveRewards,
     crashedLastSession: Bool,
-    newsFeedDataSource: FeedDataSource,
+    // Growser-281: no newsFeedDataSource.
     privateBrowsingManager: PrivateBrowsingManager,
     downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?,
   ) {
@@ -311,11 +311,10 @@ public class BrowserViewController: UIViewController {
     self.rewards = rewards
     self.crashedLastSession = crashedLastSession
     self.privateBrowsingManager = privateBrowsingManager
-    self.feedDataSource = newsFeedDataSource
     self.prefsChangeRegistrar = PrefChangeRegistrar(prefService: profileController.profile.prefs)
     self.downloadBackgroundTaskModel = downloadBackgroundTaskModel
 
-    feedDataSource.historyAPI = profileController.historyAPI
+    // Growser-281: no feed history API hook-up.
     backgroundDataSource = .init(
       service: profileController.backgroundImagesService,
       rewards: BraveRewards.isSupported(prefService: profileController.profile.prefs)
@@ -1611,7 +1610,7 @@ public class BrowserViewController: UIViewController {
         tab: selectedTab,
         profilePrefs: profileController.profile.prefs,
         dataSource: backgroundDataSource,
-        feedDataSource: feedDataSource,
+        // Growser-281: no feedDataSource.
         rewards: rewards,
         privateBrowsingManager: privateBrowsingManager
       )

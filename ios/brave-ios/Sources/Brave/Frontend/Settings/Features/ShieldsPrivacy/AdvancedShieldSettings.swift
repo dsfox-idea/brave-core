@@ -4,7 +4,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveShields
 import Combine
@@ -194,7 +194,7 @@ import os
   init(
     profile: LegacyBrowserProfile,
     tabManager: TabManager,
-    feedDataSource: FeedDataSource,
+    // Growser-281: no feedDataSource.
     debounceService: (any DebounceService)?,
     braveShieldsSettings: (any BraveShieldsSettings)?,
     braveCore: BraveProfileController,
@@ -266,15 +266,7 @@ import os
       ),
       ClearableSetting(id: .downloads, clearable: DownloadsClearable(), isEnabled: true),
     ]
-    if braveCore.profile.prefs.isBraveNewsAvailable {
-      clearableSettings.append(
-        ClearableSetting(
-          id: .braveNews,
-          clearable: BraveNewsClearable(feedDataSource: feedDataSource),
-          isEnabled: true
-        )
-      )
-    }
+    // Growser-281: no Brave News clearable.
 
     if braveCore.profile.prefs.isPlaylistAvailable {
       clearableSettings.append(

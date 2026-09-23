@@ -3,7 +3,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import Data
 import Favicon
@@ -199,22 +199,7 @@ class DownloadsClearable: Clearable {
   }
 }
 
-class BraveNewsClearable: Clearable {
-
-  let feedDataSource: FeedDataSource
-
-  init(feedDataSource: FeedDataSource) {
-    self.feedDataSource = feedDataSource
-  }
-
-  var label: String {
-    return Strings.BraveNews.braveNews
-  }
-
-  func clear() async throws {
-    await feedDataSource.clearCachedFiles()
-  }
-}
+// Growser-281: no BraveNewsClearable.
 
 class PlayListCacheClearable: Clearable {
 

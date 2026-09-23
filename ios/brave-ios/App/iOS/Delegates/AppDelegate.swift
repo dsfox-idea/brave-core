@@ -5,7 +5,7 @@
 import AVFoundation
 import Brave
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveShields
 import BraveStore
@@ -78,31 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     SDImageCodersManager.shared.addCoder(PrivateCDNImageCoder())
 
-    if Preferences.BraveNews.isEnabled.value && !Preferences.BraveNews.userOptedIn.value {
-      // Opt-out any user that has not explicitly opted-in
-      Preferences.BraveNews.isEnabled.value = false
-      // User now has to explicitly opt-in
-      Preferences.BraveNews.isShowingOptIn.value = true
-    }
-
-    // If the user's language was checked but not included in the News supported languages list check it again
-    // each launch since updates could add support for a new language. If a user previously opted in to News
-    // however then we shouldn't show the opt-in card again.
-    let shouldPerformLanguageCheck =
-      !Preferences.BraveNews.languageChecked.value
-      || Preferences.BraveNews.languageWasUnavailableDuringCheck.value == true
-    let isNewsEnabledOrPreviouslyOptedIn =
-      Preferences.BraveNews.isEnabled.value || Preferences.BraveNews.userOptedIn.value
-    if shouldPerformLanguageCheck, !isNewsEnabledOrPreviouslyOptedIn,
-      let languageCode = Locale.preferredLanguages.first?.prefix(2)
-    {
-      Preferences.BraveNews.languageChecked.value = true
-      let languageShouldShowOptIn =
-        FeedDataSource.supportedLanguages.contains(String(languageCode))
-        || FeedDataSource.knownSupportedLocales.contains(Locale.current.identifier)
-      Preferences.BraveNews.languageWasUnavailableDuringCheck.value = !languageShouldShowOptIn
-      Preferences.BraveNews.isShowingOptIn.value = languageShouldShowOptIn
-    }
+    // Growser-281: no Brave News opt-in and language checks.
 
     // Clean Logger for Secure content state
     DebugLogger.cleanLogger(for: .secureState)

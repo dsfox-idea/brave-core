@@ -10,7 +10,7 @@
 #include "base/strings/sys_string_conversions.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/features.h"
-#include "brave/components/brave_news/common/features.h"
+#include "brave/components/brave_news/common/buildflags/buildflags.h"
 #include "brave/components/brave_origin/features.h"
 #include "brave/components/brave_rewards/core/features.h"
 #include "brave/components/brave_search/common/features.h"
@@ -42,6 +42,10 @@
 
 #if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
 #include "brave/components/ai_chat/core/common/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_NEWS)  // Growser-281
+#include "brave/components/brave_news/common/features.h"
 #endif
 
 @interface Feature () {
@@ -184,6 +188,7 @@
                           kBraveNTPBrandedWallpaperSurveyPanelist];
 }
 
+#if BUILDFLAG(ENABLE_BRAVE_NEWS)  // Growser-281
 + (Feature*)kBraveNewsCardPeekFeature {
   return [[Feature alloc]
       initWithFeature:&brave_news::features::kBraveNewsCardPeekFeature];
@@ -193,6 +198,17 @@
   return [[Feature alloc]
       initWithFeature:&brave_news::features::kBraveNewsFeedUpdate];
 }
+#else
+// The declarations stay: a public framework header cannot read a buildflag.
+// Nothing calls these with Brave News compiled out.
++ (Feature*)kBraveNewsCardPeekFeature {
+  NOTREACHED();
+}
+
++ (Feature*)kBraveNewsFeedUpdate {
+  NOTREACHED();
+}
+#endif
 
 + (Feature*)kBraveReduceLanguage {
   return [[Feature alloc]

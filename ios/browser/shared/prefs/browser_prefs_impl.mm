@@ -9,7 +9,7 @@
 #include "brave/components/brave_account/prefs.h"
 #include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
-#include "brave/components/brave_news/common/pref_names.h"
+#include "brave/components/brave_news/common/buildflags/buildflags.h"
 #include "brave/components/brave_origin/brave_origin_prefs.h"
 #include "brave/components/brave_rewards/core/pref_registry.h"
 #include "brave/components/brave_shields/core/browser/brave_shields_p3a.h"
@@ -44,6 +44,10 @@
 #include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
 #include "brave/components/ai_chat/core/browser/model_service.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_NEWS)  // Growser-281
+#include "brave/components/brave_news/common/pref_names.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
@@ -100,7 +104,9 @@ void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
 #endif
   brave_account::prefs::RegisterPrefs(registry);
   omnibox::RegisterBraveProfilePrefs(registry);
+#if BUILDFLAG(ENABLE_BRAVE_NEWS)  // Growser-281
   brave_news::prefs::RegisterProfilePrefs(registry);
+#endif
   ntp_background_images::RegisterProfilePrefs(registry);
   ntp_background_images::RegisterProfilePrefsForMigration(registry);
   brave_shields::RegisterShieldsP3AProfilePrefs(registry);

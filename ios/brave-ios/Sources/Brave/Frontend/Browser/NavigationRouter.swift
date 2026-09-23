@@ -209,17 +209,9 @@ public enum NavigationPath: Equatable {
       bvc.navigationHelper.openWallet()
     case .scanQRCode:
       bvc.scanQRCode()
-    case .braveNews:
-      // need to stay in NTP for Brave News
-      bvc.openBlankNewTab(attemptLocationFieldFocus: false, isPrivate: false, isExternal: true)
-      bvc.popToBVC()
-      guard let newTabPageController = bvc.tabManager.selectedTab?.newTabPageViewController else {
-        return
-      }
-      newTabPageController.scrollToBraveNews()
-    case .braveLeo, .braveLeoVoiceInput:
-      // Growser-279: never offered (WidgetShortcutExtension removes both), and
-      // there is no Leo to open.
+    case .braveNews, .braveLeo, .braveLeoVoiceInput:
+      // Growser-281 (News), Growser-279 (Leo): never offered -
+      // WidgetShortcutExtension removes them - and there is nothing to open.
       break
     case .askBrave:
       guard let url = URL(string: "https://search.brave.com/ask") else { return }

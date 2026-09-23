@@ -4,7 +4,7 @@
 
 // Growser-279: no AIChat.
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveStore
 import BraveUI
@@ -65,7 +65,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   private let profile: LegacyBrowserProfile
   private let tabManager: TabManager
   private let rewards: BraveRewards?
-  private let feedDataSource: FeedDataSource
+  // Growser-281: no feedDataSource.
   private let braveCore: BraveProfileController
   private let historyAPI: BraveHistoryAPI
   private let passwordAPI: BravePasswordAPI
@@ -107,7 +107,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   init(
     profile: LegacyBrowserProfile,
     tabManager: TabManager,
-    feedDataSource: FeedDataSource,
+    // Growser-281: no feedDataSource.
     rewards: BraveRewards? = nil,
     windowProtection: WindowProtection?,
     p3aUtils: BraveP3AUtils,
@@ -119,7 +119,6 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
   ) {
     self.profile = profile
     self.tabManager = tabManager
-    self.feedDataSource = feedDataSource
     self.rewards = rewards
     self.windowProtection = windowProtection
     self.braveCore = braveCore
@@ -205,12 +204,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     navigationController?.pushViewController(settings, animated: true)
   }
 
-  private func displayBraveNewsDebugMenu() {
-    let settings = UIHostingController(
-      rootView: BraveNewsDebugSettingsView(dataSource: feedDataSource)
-    )
-    navigationController?.pushViewController(settings, animated: true)
-  }
+  // Growser-281: no displayBraveNewsDebugMenu().
 
   private func displayBraveSearchDebugMenu() {
     let hostingController =
@@ -750,7 +744,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
                 settings: AdvancedShieldsSettings(
                   profile: self.profile,
                   tabManager: self.tabManager,
-                  feedDataSource: self.feedDataSource,
+                  // Growser-281: no feedDataSource.
                   debounceService: DebounceServiceFactory.get(privateMode: false),
                   braveShieldsSettings: BraveShieldsSettingsServiceFactory.get(
                     profile: braveCore.profile
@@ -818,32 +812,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       ]
     }
 
-    if braveCore.profile.prefs.isBraveNewsAvailable {
-      section.rows.append(
-        Row(
-          text: Strings.BraveNews.braveNewsTitle,
-          selection: { [unowned self] in
-            let controller = NewsSettingsViewController(
-              dataSource: self.feedDataSource,
-              openURL: { [weak self] url in
-                guard let self else { return }
-                self.dismiss(animated: true)
-                self.settingsDelegate?.settingsOpenURLs([url], loadImmediately: true)
-              }
-            )
-            controller.viewDidDisappear = {
-              if Preferences.Review.braveNewsCriteriaPassed.value {
-                AppReviewManager.shared.isRevisedReviewRequired = true
-                Preferences.Review.braveNewsCriteriaPassed.value = false
-              }
-            }
-            self.navigationController?.pushViewController(controller, animated: true)
-          },
-          image: UIImage(braveSystemNamed: "leo.product.brave-news"),
-          accessory: .disclosureIndicator
-        )
-      )
-    }
+    // Growser-281: no Brave News settings row.
 
     // Growser-279: no Leo settings row.
 
@@ -938,7 +907,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
               ShortcutSettingsViewController(
                 isPlaylistAvailable: braveCore.profile.prefs.isPlaylistAvailable,
                 isBraveVPNAvailable: false,  // Growser-280
-                isBraveNewsAvailable: braveCore.profile.prefs.isBraveNewsAvailable
+                isBraveNewsAvailable: false  // Growser-281
               ),
               animated: true
             )
@@ -1653,14 +1622,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           accessory: .disclosureIndicator,
           cellClass: MultilineValue1Cell.self
         ),
-        Row(
-          text: "View Brave News Debug Menu",
-          selection: { [unowned self] in
-            self.displayBraveNewsDebugMenu()
-          },
-          accessory: .disclosureIndicator,
-          cellClass: MultilineValue1Cell.self
-        ),
+        // Growser-281: no "View Brave News Debug Menu" row.
         Row(
           text: "View Brave Search Debug Menu",
           selection: { [unowned self] in

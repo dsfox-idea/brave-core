@@ -4,6 +4,7 @@
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/config.gni")
@@ -49,7 +50,6 @@ group("browser") {
     "//brave/components/brave_policy",
     "//brave/components/constants",
     "//brave/ios/browser/application_context",
-    "//brave/ios/browser/brave_news",
     "//brave/ios/browser/brave_origin",
     "//brave/ios/browser/brave_vpn",
     "//brave/ios/browser/brave_wallet",
@@ -68,6 +68,9 @@ group("browser") {
   ]
   if (enable_ai_chat) {  # Growser-279
     deps += [ "//brave/ios/browser/ai_chat" ]
+  }
+  if (enable_brave_news) {  # Growser-281
+    deps += [ "//brave/ios/browser/brave_news" ]
   }
   if (enable_brave_talk) {
     deps += [ "//brave/ios/browser/brave_talk" ]

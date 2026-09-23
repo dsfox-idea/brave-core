@@ -4,6 +4,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import("//brave/build/ios/mojom/mojom_wrappers.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 
 config("external_config") {
@@ -26,7 +27,7 @@ source_set("ads") {
     ":brave_ads_mojom_wrappers",
     "//base",
     "//brave/components/brave_ads/core",
-    "//brave/components/brave_news/common",
+    "//brave/components/brave_news/common/buildflags",
     "//brave/components/brave_rewards/core",
     "//brave/components/l10n/common",
     "//brave/components/ntp_background_images/browser",
@@ -40,6 +41,9 @@ source_set("ads") {
     "//services/network/public/cpp",
     "//services/network/public/mojom",
   ]
+  if (enable_brave_news) {  # Growser-281
+    deps += [ "//brave/components/brave_news/common" ]
+  }
 
   frameworks = [
     "Foundation.framework",

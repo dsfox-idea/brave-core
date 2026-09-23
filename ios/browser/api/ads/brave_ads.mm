@@ -38,7 +38,7 @@
 #include "brave/components/brave_ads/core/public/ads_util.h"
 #include "brave/components/brave_ads/core/public/command_line_switches/command_line_switches_util.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_names.h"
-#include "brave/components/brave_news/common/pref_names.h"
+#include "brave/components/brave_news/common/buildflags/buildflags.h"
 #include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/brave_rewards/core/pref_registry.h"
 #include "brave/components/brave_rewards/core/rewards_flags.h"
@@ -62,6 +62,10 @@
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/mojom/network_context.mojom.h"
 #include "url/gurl.h"
+
+#if BUILDFLAG(ENABLE_BRAVE_NEWS)  // Growser-281
+#include "brave/components/brave_news/common/pref_names.h"
+#endif
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
 #error "This file requires ARC support."
@@ -202,10 +206,12 @@ constexpr NSString* kAdsResourceComponentMetadataVersion = @".v1";
 }
 
 - (void)notifyBraveNewsIsEnabledPreferenceDidChange:(BOOL)isEnabled {
+#if BUILDFLAG(ENABLE_BRAVE_NEWS)  // Growser-281
   [self setProfilePref:brave_news::prefs::kBraveNewsOptedIn
                  value:base::Value(isEnabled)];
   [self setProfilePref:brave_news::prefs::kNewTabPageShowToday
                  value:base::Value(isEnabled)];
+#endif
 }
 
 - (void)notifySponsoredImagesIsEnabledPreferenceDidChange:(BOOL)isEnabled {

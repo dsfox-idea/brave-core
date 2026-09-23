@@ -31,9 +31,7 @@ extension WidgetShortcut {
     if !prefs.isPlaylistAvailable {
       options.remove(.playlist)
     }
-    if !prefs.isBraveNewsAvailable {
-      options.remove(.braveNews)
-    }
+    options.remove(.braveNews)  // Growser-281: Brave News is out of the product.
     if !isWalletAvailable {
       options.remove(.wallet)
     }
@@ -53,9 +51,7 @@ extension WidgetShortcut {
     if !prefs.isPlaylistAvailable {
       disabled.insert(.playlist)
     }
-    if !prefs.isBraveNewsAvailable {
-      disabled.insert(.braveNews)
-    }
+    disabled.insert(.braveNews)  // Growser-281: Brave News is out of the product.
     if !isWalletAvailable {
       disabled.insert(.wallet)
     }

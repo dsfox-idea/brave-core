@@ -11,8 +11,8 @@ struct BraveWidgets: WidgetBundle {
   var body: some Widget {
     ShortcutsWidget()
     FavoritesWidget()
-    TopNewsWidget()
-    TopNewsListWidget()
+    // Growser-281: no TopNewsWidget or TopNewsListWidget - Brave News is out of
+    // the product, and their sources are no longer compiled into the extension.
     SingleStatWidget()
     StatsWidget()
     LockScreenShortcutWidget()

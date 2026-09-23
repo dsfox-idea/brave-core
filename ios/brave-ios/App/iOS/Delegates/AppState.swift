@@ -5,7 +5,7 @@
 
 import Brave
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import Data
 import Foundation
@@ -35,7 +35,7 @@ public class AppState {
   public let migration: Migration
   public let localStateMigration: BraveLocalStateMigration
   public let profile: LegacyBrowserProfile
-  public let newsFeedDataSource: FeedDataSource
+  // Growser-281: no newsFeedDataSource.
   public let uptimeMonitor = UptimeMonitor()
   public let defaultProfileLoader = DefaultProfileLoader()
   public let downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?
@@ -110,7 +110,7 @@ public class AppState {
     migration.launchMigrations(keyPrefix: "profile")
     localStateMigration.launchMigrations()
 
-    newsFeedDataSource = FeedDataSource()
+    // Growser-281: no FeedDataSource.
 
     #if !targetEnvironment(simulator)
     if #available(iOS 26.0, *) {

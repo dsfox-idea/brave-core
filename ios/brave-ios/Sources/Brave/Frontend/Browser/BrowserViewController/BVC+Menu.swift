@@ -50,7 +50,7 @@ extension BrowserViewController {
     let vc = SettingsViewController(
       profile: self.profile,
       tabManager: self.tabManager,
-      feedDataSource: self.feedDataSource,
+      // Growser-281: no feedDataSource.
       rewards: self.rewards,
       windowProtection: self.windowProtection,
       p3aUtils: self.braveCore.p3aUtils,
@@ -176,9 +176,9 @@ extension BrowserViewController {
     // Sets up empty actions for any page actions that weren't setup as UIActivity's excluding any
     // that should be hidden due to admin policies
     var pageActivitiesRemovedByAdminPolicies: Set<Action.Identifier> = []
-    if !profileController.profile.prefs.isBraveNewsAvailable {
-      pageActivitiesRemovedByAdminPolicies.insert(.addSourceNews)
-    }
+    // Growser-281: Brave News is out of the product, so its "add source" entry
+    // is always removed, not only by policy.
+    pageActivitiesRemovedByAdminPolicies.insert(.addSourceNews)
     let remainingPageActivities: [Action] = Action.ID.allPageActivites
       .subtracting(pageActivities.map(\.id))
       .subtracting(pageActivitiesRemovedByAdminPolicies)
@@ -381,33 +381,7 @@ extension BrowserViewController {
     }
     // Growser-279: no Leo menu item.
     // Growser-278: no Brave Talk menu item.
-    if profileController.profile.prefs.isBraveNewsAvailable {
-      actions.append(
-        .init(id: .braveNews) { @MainActor [unowned self] _ in
-          self.dismiss(animated: true) {
-            if pageURL == nil,
-              let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController
-            {
-              // Already on NTP
-              newTabPageController.scrollToBraveNews()
-            } else {
-              // Make a new tab and scroll to it
-              // Need to stay in NTP for Brave News
-              self.openBlankNewTab(
-                attemptLocationFieldFocus: false,
-                isPrivate: false,
-                isExternal: true
-              )
-              self.popToBVC()
-              if let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController {
-                newTabPageController.scrollToBraveNews()
-              }
-            }
-          }
-          return .none
-        }
-      )
-    }
+    // Growser-281: no Brave News menu item.
     return actions
   }
 
