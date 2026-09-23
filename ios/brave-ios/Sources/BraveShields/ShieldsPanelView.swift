@@ -232,18 +232,9 @@ public struct ShieldsPanelView: View {
   }
 
   @ViewBuilder private var shieldsDownView: some View {
-    Section {
-      HStack {
-        Text(Strings.Shields.siteNotWorkingCorrectly)
-        Spacer()
-        Button {
-          action(.navigate(.reportBrokenSite, dismiss: true))
-        } label: {
-          Text(Strings.Shields.reportBrokenSiteButtonTitle)
-        }
-        .buttonStyle(.filled)
-      }
-    }
+    // Growser-298: no "report a broken site" here - the report goes to
+    // webcompat.brave.com with the page's URL (#78).
+    EmptyView()
   }
 }
 

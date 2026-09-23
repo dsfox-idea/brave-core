@@ -284,14 +284,8 @@ extension UIViewController {
       )
     }
 
-    // Report Web-compat Issue Activity
-    if let onShowSubmitReport = callbacks.onShowSubmitReport {
-      activities.append(
-        BasicMenuActivity(
-          activityType: .reportBrokenSite
-        ) { onShowSubmitReport(url) }
-      )
-    }
+    // Growser-298: no Report Web-compat Issue activity. The report carries
+    // the page's URL to webcompat.brave.com; the desktop closed it in #78.
 
     return activities
   }

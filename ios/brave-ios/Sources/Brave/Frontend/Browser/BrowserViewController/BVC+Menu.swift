@@ -96,6 +96,8 @@ extension BrowserViewController {
     // Growser-281: Brave News is out of the product, so its "add source" entry
     // is always removed, not only by policy.
     pageActivitiesRemovedByAdminPolicies.insert(.addSourceNews)
+    // Growser-298: and so is reporting a broken site to Brave (#78).
+    pageActivitiesRemovedByAdminPolicies.insert(.reportBrokenSite)
     let remainingPageActivities: [Action] = Action.ID.allPageActivites
       .subtracting(pageActivities.map(\.id))
       .subtracting(pageActivitiesRemovedByAdminPolicies)
