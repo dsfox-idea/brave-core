@@ -228,7 +228,7 @@ public class Migration {
       }
       // Default url bar location for new users is bottom
       Preferences.General.isUsingBottomBar.value = true
-      Preferences.Playlist.firstLoadAutoPlay.value = true
+      // Growser-282: no Playlist preference to default.
     }
   }
 

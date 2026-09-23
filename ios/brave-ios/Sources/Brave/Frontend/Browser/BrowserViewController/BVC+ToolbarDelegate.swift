@@ -19,7 +19,7 @@ import Data
 import Lottie
 import Onboarding
 import OrderedCollections
-import Playlist
+// Growser-282: no Playlist.
 import Preferences
 import Shared
 import SpeechRecognition
@@ -152,55 +152,14 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
     tabManager.selectedTab?.readerMode?.toggleReaderMode()
   }
 
-  func topToolbarDidPressPlaylistButton(_ urlBar: TopToolbarView) {
-    guard let tab = tabManager.selectedTab, let playlistItem = tab.playlistItem else { return }
-    let state = urlBar.locationView.playlistButton.buttonState
-    switch state {
-    case .addToPlaylist:
-      addToPlaylist(item: playlistItem) { [weak self] didAddItem in
-        guard let self else { return }
-
-        if didAddItem {
-          self.updatePlaylistURLBar(tab: tab, state: .existingItem, item: playlistItem)
-
-          DispatchQueue.main.async { [self] in
-            let popover = self.createPlaylistPopover(item: playlistItem, tab: tab)
-            popover.present(from: self.topToolbar.locationView.playlistButton, on: self)
-          }
-        }
-      }
-    case .addedToPlaylist:
-      // Shows its own menu
-      break
-    case .none:
-      break
-    }
-  }
+  // Growser-282: the playlist URL-bar button is never shown, so neither of
+  // these is reached; TopToolbarDelegate still asks for them.
+  func topToolbarDidPressPlaylistButton(_ urlBar: TopToolbarView) {}
 
   func topToolbarDidPressPlaylistMenuAction(
     _ urlBar: TopToolbarView,
     action: PlaylistURLBarButton.MenuAction
-  ) {
-    guard let tab = tabManager.selectedTab, let info = tab.playlistItem else { return }
-    switch action {
-    case .changeFolders:
-      guard let item = PlaylistItem.getItem(uuid: info.tagId) else { return }
-      let controller = PlaylistChangeFoldersViewController(item: item)
-      self.present(controller, animated: true)
-    case .openInPlaylist:
-      DispatchQueue.main.async {
-        self.openPlaylist(tab: tab, item: info)
-      }
-    case .remove:
-      Task { @MainActor in
-        if await PlaylistManager.shared.delete(item: info) {
-          self.updatePlaylistURLBar(tab: tab, state: .newItem, item: info)
-        }
-      }
-    case .undoRemove(let originalFolderUUID):
-      addToPlaylist(item: info, folderUUID: originalFolderUUID)
-    }
-  }
+  ) {}
 
   func topToolbarDisplayTextForURL(_ topToolbar: URL?) -> (String?, Bool) {
     // use the initial value for the URL so we can do proper pattern matching with search URLs
@@ -354,7 +313,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       privateBrowsingManager: privateBrowsingManager,
       speechRecognizer: speechRecognizer,
       isAIChatAvailable: false,  // Growser-279: Leo is out of the product.
-      isPlaylistAvailable: profileController.profile.prefs.isPlaylistAvailable,
+      isPlaylistAvailable: false,  // Growser-282: Playlist is out of the product.
       searchDelegate: self,
       delegate: self,
       bookmarkAction: { [weak self] bookmark, action in
@@ -739,10 +698,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
     }
 
     func openVoiceSearch(speechRecognizer: SpeechRecognizer) {
-      // Pause active playing in PiP when Audio Search is enabled
-      if PlaylistCoordinator.shared.isPictureInPictureActive {
-        PlaylistCoordinator.shared.pauseAllPlayback()
-      }
+      // Growser-282: no playlist picture-in-picture to pause.
 
       voiceSearchViewController = PopupViewController(
         rootView: SpeechToTextInputView(

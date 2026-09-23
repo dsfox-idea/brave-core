@@ -13,7 +13,7 @@ import Shared
 public enum DeepLink: String {
   // Growser-280: no vpnCrossPlatformPromo ("vpn_promo").
   // Growser-279: no braveLeo ("brave_leo") - Leo is out of the product.
-  case playlist
+  // Growser-282: no playlist deep link.
   case browserMenu = "menu"
   case setDefaultBrowser = "set-default"
   case importData = "import-data"
@@ -91,9 +91,7 @@ public enum NavigationPath: Equatable {
   private static func handleDeepLink(_ link: DeepLink, with bvc: BrowserViewController) {
     switch link {
     // Growser-279: no .braveLeo. Growser-280: no .vpnCrossPlatformPromo.
-    case .playlist:
-      let helper = BrowserNavigationHelper(bvc)
-      helper.openPlaylist()
+    // Growser-282: no .playlist.
     case .browserMenu:
       bvc.presentMenu(from: bvc.navigationToolbar)
     case .setDefaultBrowser:
@@ -204,7 +202,7 @@ public enum NavigationPath: Equatable {
         }
       }
     case .playlist:
-      bvc.navigationHelper.openPlaylist()
+      break  // Growser-282: never offered (WidgetShortcutExtension removes it).
     case .wallet:
       bvc.navigationHelper.openWallet()
     case .scanQRCode:

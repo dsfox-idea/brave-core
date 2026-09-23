@@ -212,10 +212,7 @@ public class BrowserViewController: UIViewController {
   var searchResultAdClickedInfoBar: SearchResultAdClickedInfoBar?
   /// An infobar displaying a privacy notice when a new tab takeover is viewed
   var newTabTakeoverInfoBar: NewTabTakeoverInfoBar?
-  /// A boolean to determine If AddToListActivity should be added
-  var addToPlayListActivityItem: (enabled: Bool, item: PlaylistInfo?)?
-  /// A boolean to determine if OpenInPlaylistActivity should be shown
-  var openInPlaylistActivityItem: (enabled: Bool, item: PlaylistInfo?)?
+  // Growser-282: no playlist activity items.
   var shouldDownloadNavigationResponse: Bool = false
 
   var navigationToolbar: ToolbarProtocol {
@@ -469,7 +466,7 @@ public class BrowserViewController: UIViewController {
     Preferences.Shields.allShields.forEach { $0.observe(from: self) }
     Preferences.Rewards.hideRewardsIcon.observe(from: self)
     Preferences.Rewards.rewardsToggledOnce.observe(from: self)
-    Preferences.Playlist.enablePlaylistURLBarButton.observe(from: self)
+    // Growser-282: no playlist URL-bar preference to observe.
     Preferences.NewTabPage.backgroundMediaTypeRaw.observe(from: self)
     Preferences.Shields.blockAdsAndTrackingLevelRaw.observe(from: self)
     Preferences.Privacy.screenTimeEnabled.observe(from: self)
@@ -590,7 +587,7 @@ public class BrowserViewController: UIViewController {
     recordAccessibilityDocumentsDirectorySizeP3A()
     ReaderModeTabHelper.recordTimeBasedNumberReaderModeUsedP3A(activated: false)
     recordGeneralBottomBarLocationP3A()
-    PlaylistP3A.recordHistogram()
+    // Growser-282: no Playlist P3A.
     recordAdsUsageType()
     recordDefaultBrowserLikelyhoodP3A()
     recordWeeklyUsage()
@@ -1094,8 +1091,7 @@ public class BrowserViewController: UIViewController {
       .sink(receiveValue: { [weak self] featureLinkageType in
         guard let self = self else { return }
         switch featureLinkageType {
-        case .playlist:
-          self.presentPlaylistController()
+        // Growser-282: no .playlist feature linkage.
         // Growser-280: no .vpn feature linkage.
         default:
           return
@@ -1436,8 +1432,7 @@ public class BrowserViewController: UIViewController {
     showQueuedAlertIfAvailable()
   }
 
-  /// Whether or not to show the playlist onboarding callout this session
-  var shouldShowPlaylistOnboardingThisSession = true
+  // Growser-282: no playlist onboarding callout.
 
   /// Wheter or not to show the translate onboarding callout this session
   var shouldShowTranslationOnboardingThisSession = true
@@ -1680,11 +1675,10 @@ public class BrowserViewController: UIViewController {
       )
         as? ReaderModeScriptHandler,
       readerMode.state == .active,
-      isReaderModeURL,
-      let state = tab.playlistItemState
+      isReaderModeURL
     {
       self.showReaderModeBar(animated: false)
-      self.updatePlaylistURLBar(tab: tab, state: state, item: tab.playlistItem)
+      // Growser-282: no playlist URL-bar state to refresh.
     }
   }
 
@@ -1933,7 +1927,7 @@ public class BrowserViewController: UIViewController {
 
       updateInContentHomePanel(url as URL)
       updateScreenTimeUrl(url)
-      updatePlaylistURLBar(tab: tab, state: tab.playlistItemState ?? .none, item: tab.playlistItem)
+      // Growser-282: no playlist URL-bar state to refresh.
     }
   }
 
@@ -1943,20 +1937,7 @@ public class BrowserViewController: UIViewController {
 
     updateRewardsButtonState()
 
-    let playlistItem = tab.playlistItem
-    DispatchQueue.main.async {
-      if let item = playlistItem {
-        if PlaylistItem.itemExists(uuid: item.tagId)
-          || PlaylistItem.itemExists(pageSrc: item.pageSrc)
-        {
-          self.updatePlaylistURLBar(tab: tab, state: .existingItem, item: item)
-        } else {
-          self.updatePlaylistURLBar(tab: tab, state: .newItem, item: item)
-        }
-      } else {
-        self.updatePlaylistURLBar(tab: tab, state: .none, item: nil)
-      }
-    }
+    // Growser-282: no playlist URL-bar state to refresh.
 
     updateToolbarCurrentURL(tab.visibleURL?.displayURL)
     if tabManager.selectedTab === tab {
@@ -2642,10 +2623,8 @@ extension BrowserViewController: SearchViewControllerDelegate {
     _ searchViewController: SearchViewController,
     didSelectPlaylistItem item: PlaylistItem
   ) {
-    guard let tab = tabManager.selectedTab else { return }
-    popToBVC(isAnimated: true) { [weak self] in
-      self?.openPlaylist(tab: tab, item: PlaylistInfo(item: item))
-    }
+    // Growser-282: unreachable - search offers no playlist items, because
+    // isPlaylistAvailable is false wherever the search view is built.
   }
 
   func searchViewController(
@@ -2969,13 +2948,7 @@ extension BrowserViewController: PreferencesObserver {
     case Preferences.Rewards.hideRewardsIcon.key,
       Preferences.Rewards.rewardsToggledOnce.key:
       updateRewardsButtonState()
-    case Preferences.Playlist.enablePlaylistURLBarButton.key:
-      let selectedTab = tabManager.selectedTab
-      updatePlaylistURLBar(
-        tab: selectedTab,
-        state: selectedTab?.playlistItemState ?? .none,
-        item: selectedTab?.playlistItem
-      )
+    // Growser-282: no playlist URL-bar preference.
     case Preferences.PrivacyReports.captureShieldsData.key:
       PrivacyReportsManager.scheduleProcessingBlockedRequests(
         isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing

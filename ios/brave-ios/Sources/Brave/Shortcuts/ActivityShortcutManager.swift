@@ -12,7 +12,7 @@ import Data
 import Growth
 import Intents
 import MobileCoreServices
-import PlaylistUI
+// Growser-282: no PlaylistUI.
 import Preferences
 import Shared
 import SwiftUI
@@ -191,20 +191,7 @@ public class ActivityShortcutManager: NSObject {
     case .openBraveNews:
       return  // Growser-281: Brave News is out of the product.
     case .openPlayList:
-      if !bvc.profileController.profile.prefs.isPlaylistAvailable {
-        return
-      }
-
-      bvc.popToBVC()
-
-      let tab = bvc.tabManager.selectedTab
-      PlaylistCoordinator.shared.getPlaylistController(
-        tab: tab,
-        profile: bvc.profileController.profile
-      ) { playlistController in
-        PlaylistP3A.recordUsage()
-        bvc.present(playlistController, animated: true)
-      }
+      return  // Growser-282: Playlist is out of the product.
     case .openSyncedTabs:
       bvc.popToBVC()
       bvc.navigationHelper.openSyncedTabsList()

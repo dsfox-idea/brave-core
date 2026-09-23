@@ -18,7 +18,7 @@ import LocalAuthentication
 import NetworkExtension
 import Onboarding
 import Origin
-import Playlist
+// Growser-282: no Playlist.
 import Preferences
 import Shared
 import Static
@@ -818,19 +818,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
 
     // Growser-280: no VPN settings row.
 
-    if braveCore.profile.prefs.isPlaylistAvailable {
-      section.rows.append(
-        Row(
-          text: Strings.PlayList.playListTitle,
-          selection: { [unowned self] in
-            let playlistSettings = PlaylistSettingsViewController()
-            self.navigationController?.pushViewController(playlistSettings, animated: true)
-          },
-          image: UIImage(braveSystemNamed: "leo.product.playlist"),
-          accessory: .disclosureIndicator
-        )
-      )
-    }
+    // Growser-282: no Playlist settings row.
 
     if FeatureList.kBraveTranslateEnabled.enabled {
       section.rows.append(
@@ -905,7 +893,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           selection: { [unowned self] in
             self.navigationController?.pushViewController(
               ShortcutSettingsViewController(
-                isPlaylistAvailable: braveCore.profile.prefs.isPlaylistAvailable,
+                isPlaylistAvailable: false,  // Growser-282
                 isBraveVPNAvailable: false,  // Growser-280
                 isBraveNewsAvailable: false  // Growser-281
               ),
@@ -1654,15 +1642,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         // Growser-280: no "VPN Logs" row.
         // Growser-278: no "Brave Talk Logs" row.
         // Growser-279: no "Leo Logs" row.
-        Row(
-          text: "Playlist Debug",
-          selection: { [unowned self] in
-            let controller = UIHostingController(rootView: PlaylistDebugView())
-            self.navigationController?.pushViewController(controller, animated: true)
-          },
-          accessory: .disclosureIndicator,
-          cellClass: MultilineValue1Cell.self
-        ),
+        // Growser-282: no "Playlist Debug" row.
         Row(
           text: "StoreKit Receipt Viewer",
           selection: { [unowned self] in

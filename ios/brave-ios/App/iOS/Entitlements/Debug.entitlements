@@ -3,6 +3,7 @@
 <plist version="1.0">
 <dict>
 	<!-- Growser-280: no VPN entitlements (packet tunnel, VPN API, the vpn.brave.com app link) - the VPN is out of the product. -->
+	<!-- Growser-282: no CarPlay audio - it existed only for Playlist. -->
 	<key>aps-environment</key>
 	<string>development</string>
 	<key>com.apple.developer.authentication-services.autofill-credential-provider</key>
@@ -17,7 +18,5 @@
 	<array>
 		<string>group.$(MOZ_BUNDLE_ID).unique</string>
 	</array>
-	<key>com.apple.developer.carplay-audio</key>
-	<true/>
 </dict>
 </plist>

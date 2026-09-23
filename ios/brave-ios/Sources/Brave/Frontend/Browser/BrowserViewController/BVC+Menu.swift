@@ -11,7 +11,7 @@ import BraveWallet
 import BrowserMenu
 import Data
 import Foundation
-import PlaylistUI
+// Growser-282: no PlaylistUI.
 import Preferences
 import Shared
 import SwiftUI
@@ -90,37 +90,7 @@ extension BrowserViewController {
     }
   }
 
-  public func presentPlaylistController() {
-    if !profileController.profile.prefs.isPlaylistAvailable {
-      return
-    }
-    if PlaylistCoordinator.shared.isPlaylistControllerPresented {
-      let alert = UIAlertController(
-        title: Strings.PlayList.playlistAlreadyShowingTitle,
-        message: Strings.PlayList.playlistAlreadyShowingBody,
-        preferredStyle: .alert
-      )
-      alert.addAction(UIAlertAction(title: Strings.OKString, style: .default))
-      dismiss(animated: true) {
-        self.present(alert, animated: true)
-      }
-      return
-    }
-
-    // Retrieve the item and offset-time from the current tab's webview.
-    let tab = self.tabManager.selectedTab
-    PlaylistCoordinator.shared.getPlaylistController(tab: tab, profile: profileController.profile) {
-      [weak self] playlistController in
-      guard let self = self else { return }
-
-      PlaylistP3A.recordUsage()
-
-      self.dismiss(animated: true) {
-        PlaylistCoordinator.shared.isPlaylistControllerPresented = true
-        self.present(playlistController, animated: true)
-      }
-    }
-  }
+  // Growser-282: no presentPlaylistController().
 
   func presentBrowserMenu(
     from sourceView: UIView,
@@ -234,45 +204,7 @@ extension BrowserViewController {
         return .updateAction(actionCopy)
       },
     ]
-    if profileController.profile.prefs.isPlaylistAvailable {
-      let playlistActivity = addToPlayListActivityItem ?? openInPlaylistActivityItem
-      let isPlaylistItemAdded = openInPlaylistActivityItem != nil
-      actions.append(
-        .init(
-          id: .addToPlaylist,
-          title: isPlaylistItemAdded ? Strings.PlayList.toastAddedToPlaylistTitle : nil,
-          image: isPlaylistItemAdded ? "leo.product.playlist-added" : nil,
-          attributes: playlistActivity?.enabled == true ? [] : .disabled
-        ) { @MainActor [unowned self] action in
-          let playlistActivity = addToPlayListActivityItem ?? openInPlaylistActivityItem
-          let isPlaylistItemAdded = openInPlaylistActivityItem != nil
-          guard let item = playlistActivity?.item else { return .none }
-          if !isPlaylistItemAdded {
-            // Add to playlist
-            // TODO: Need to be able to return something that will update the underlying action
-            let addedItem = await withCheckedContinuation { continuation in
-              self.addToPlaylist(item: item) { didAddItem in
-                continuation.resume(returning: didAddItem)
-              }
-            }
-            if addedItem {
-              var actionCopy = action
-              actionCopy.title = Strings.PlayList.toastAddedToPlaylistTitle
-              actionCopy.image = "leo.product.playlist-added"
-              return .updateAction(actionCopy)
-            }
-          } else {
-            self.dismiss(animated: true) {
-              self.openPlaylist(
-                tab: self.tabManager.selectedTab,
-                item: item
-              )
-            }
-          }
-          return .none
-        }
-      )
-    }
+    // Growser-282: no "add to playlist" page action.
     if BraveCore.FeatureList.kBraveShredFeature.enabled {
       let isShredAvailable = tabManager.selectedTab?.visibleURL?.isShredAvailable ?? false
       actions.append(
@@ -358,15 +290,7 @@ extension BrowserViewController {
         return .none
       },
     ]
-    if profileController.profile.prefs.isPlaylistAvailable {
-      actions.append(
-        .init(id: .playlist) { @MainActor [unowned self] _ in
-          // presentPlaylistController already handles dismiss + present
-          self.presentPlaylistController()
-          return .none
-        }
-      )
-    }
+    // Growser-282: no Playlist menu item.
     if profileController.braveWalletAPI.isAllowed {
       actions.append(
         .init(

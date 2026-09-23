@@ -20,7 +20,7 @@ import Growth
 import LocalAuthentication
 import MessageUI
 import Onboarding
-import Playlist
+// Growser-282: no Playlist.
 import Preferences
 import PrivateCDN
 import RuntimeWarnings
@@ -294,13 +294,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       )
     }
 
-    // Setup Playlist
-    // This restores the playlist incomplete downloads. So if a download was started
-    // and interrupted on application death, we restart it on next launch.
-    Task(priority: .low) { @MainActor in
-      PlaylistManager.shared.setupPlaylistFolder()
-      PlaylistManager.shared.restoreSession()
-    }
+    // Growser-282: no Playlist folder set-up or download restore.
 
     return shouldPerformAdditionalDelegateHandling
   }

@@ -3,13 +3,12 @@
 <plist version="1.0">
 <dict>
 	<!-- Growser-280: no VPN entitlements (packet tunnel, VPN API, the vpn.brave.com app link) - the VPN is out of the product. -->
+	<!-- Growser-282: no CarPlay audio - it existed only for Playlist. -->
 	<key>aps-environment</key>
 	<string>production</string>
 	<key>com.apple.developer.authentication-services.autofill-credential-provider</key>
 	<true/>
 	<key>com.apple.developer.browser.app-installation</key>
-	<true/>
-	<key>com.apple.developer.carplay-audio</key>
 	<true/>
 	<key>com.apple.developer.nfc.readersession.formats</key>
 	<array>

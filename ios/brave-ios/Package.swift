@@ -44,10 +44,10 @@ var package = Package(
     .library(name: "Preferences", targets: ["Preferences"]),
     .library(name: "PrivateCDN", targets: ["PrivateCDN"]),
     .library(name: "CertificateUtilities", targets: ["CertificateUtilities"]),
-    .library(name: "Playlist", targets: ["Playlist"]),
+    // Growser-282: no Playlist library.
     .library(name: "UserAgent", targets: ["UserAgent"]),
     .library(name: "CredentialProviderUI", targets: ["CredentialProviderUI"]),
-    .library(name: "PlaylistUI", targets: ["PlaylistUI"]),
+    // Growser-282: no PlaylistUI library.
     .library(name: "BrowserMenu", targets: ["BrowserMenu"]),
     .library(name: "Web", targets: ["Web"]),
     // Growser-278: no BraveTalk library.
@@ -109,11 +109,11 @@ var package = Package(
         "Preferences",
         "Favicon",
         "CertificateUtilities",
-        "Playlist",
+        // Growser-282: no Playlist.
         "UserAgent",
         .product(name: "Lottie", package: "lottie-spm"),
         .product(name: "Collections", package: "swift-collections"),
-        "PlaylistUI",
+        // Growser-282: no PlaylistUI.
         "BrowserMenu",
         "Web",
         "BraveShields",
@@ -139,6 +139,14 @@ var package = Package(
         // Growser-281: Brave News is out of the product, on the same terms.
         "Frontend/Browser/NewTabPage/NewTabPageFeedOverlayView.swift",
         "Frontend/Browser/NewTabPage/Sections/BraveNewsSectionProvider.swift",
+        // Growser-282: Playlist is out of the product, on the same terms.
+        "Frontend/Browser/Playlist",
+        "Frontend/Browser/BrowserViewController/BVC+Playlist.swift",
+        "Frontend/Browser/Helpers/PlaylistTabHelper.swift",
+        "Frontend/Settings/Features/PlaylistSettingsViewController.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/PlaylistScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistScript.js",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistSwizzlerScript.js",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
@@ -200,10 +208,6 @@ var package = Package(
         .copy("Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/gpc.js"),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/MediaBackgroundingScript.js"
-        ),
-        .copy("Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistScript.js"),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistSwizzlerScript.js"
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/RequestBlockingScript.js"
@@ -509,32 +513,12 @@ var package = Package(
     .target(name: "Strings"),
     .target(name: "RuntimeWarnings"),
     .target(name: "PrivateCDN", dependencies: ["SDWebImage"]),
-    .target(
-      name: "Playlist",
-      dependencies: [
-        "Data", "BraveShared", "Shared", "Preferences", "Strings", "CodableHelpers",
-        "UserAgent", "Then", "BraveShields",
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-282: the Playlist and PlaylistUI targets and their tests are not
+    // declared, so their sources are not built.
     .testTarget(name: "PrivateCDNTests", dependencies: ["PrivateCDN"]),
     .testTarget(
       name: "GrowthTests",
       dependencies: ["Growth", "Shared", "BraveShared"]  // Growser-280: no BraveVPN
-    ),
-    .target(
-      name: "PlaylistUI",
-      dependencies: [
-        "Favicon", "Data", "DesignSystem", "Playlist", "SDWebImage", "SnapKit", "Strings",
-        "CodableHelpers", .product(name: "Algorithms", package: "swift-algorithms"), "BraveStrings",
-        .product(name: "OrderedCollections", package: "swift-collections"), "BraveUI",
-      ],
-      resources: [.copy("Resources/oembed_providers.json")]
-    ),
-    .testTarget(
-      name: "PlaylistUITests",
-      dependencies: ["PlaylistUI", "Playlist", "Preferences", "Data", "TestHelpers"],
-      resources: [.copy("Resources/Big_Buck_Bunny_360_10s_1MB.mp4")]
     ),
     .target(
       name: "BrowserMenu",

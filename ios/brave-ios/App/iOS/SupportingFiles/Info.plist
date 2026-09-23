@@ -102,17 +102,6 @@
 		<true/>
 		<key>UISceneConfigurations</key>
 		<dict>
-			<key>CPTemplateApplicationSceneSessionRoleApplication</key>
-			<array>
-				<dict>
-					<key>UISceneClassName</key>
-					<string>CPTemplateApplicationScene</string>
-					<key>UISceneConfigurationName</key>
-					<string>CPTemplateSceneConfiguration</string>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).CarplayTemplateApplicationSceneDelegate</string>
-				</dict>
-			</array>
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
@@ -124,6 +113,7 @@
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 				</dict>
 			</array>
+			<!-- Growser-282: no CarPlay scene - it existed only for Playlist. -->
 		</dict>
 	</dict>
 	<key>UIBackgroundModes</key>

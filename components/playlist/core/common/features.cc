@@ -10,13 +10,10 @@
 
 namespace playlist::features {
 
-BASE_FEATURE(kPlaylist,
-#if BUILDFLAG(IS_IOS)
-             base::FEATURE_ENABLED_BY_DEFAULT
-#else
-             base::FEATURE_DISABLED_BY_DEFAULT
-#endif
-);
+// Growser-282: off on iOS too. Upstream forbids compiling Playlist out of iOS
+// (buildflags.gni), so this is the switch: it stops the page scripts
+// brave_web_client.mm injects and makes PrefService.isPlaylistAvailable false.
+BASE_FEATURE(kPlaylist, base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kPlaylistFakeUA, base::FEATURE_DISABLED_BY_DEFAULT);
 

@@ -150,8 +150,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       guard windowScene.session.scene != nil else { return }
 
       Self.profileState = profileState
-      PlaylistCoordinator.shared.isPlaylistAvailable =
-        profileController.profile.prefs.isPlaylistAvailable
+      // Growser-282: no PlaylistCoordinator.
 
       // Create WindowProtection early so we can use it for launch auth when launching in private mode
       let windowProtection = WindowProtection(windowScene: windowScene)
@@ -364,14 +363,7 @@ extension SceneDelegate {
       downloadBackgroundTaskModel: AppState.shared.downloadBackgroundTaskModel
     )
 
-    // Setup Playlist Car-Play
-    // TODO: Decide what to do if we have multiple windows
-    // as it is only possible to have a single car-play instance.
-    // Once we move to iOS 14+, this is easy to fix as we just pass car-play a `MediaStreamer`
-    // instance instead of a `BrowserViewController`.
-    PlaylistCoordinator.shared.do {
-      $0.browserController = browserViewController
-    }
+    // Growser-282: no Playlist CarPlay set-up.
 
     return browserViewController
   }

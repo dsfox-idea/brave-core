@@ -22,9 +22,7 @@ extension BrowserViewController: TabManagerDelegate {
   func attachTabHelpers(to tab: some TabState) {
     tab.browserData = .init(tab: tab, tabGeneratorAPI: profileController.tabGeneratorAPI)
     tab.pullToRefresh = .init(tab: tab)
-    if tab.profile.prefs.isPlaylistAvailable {
-      tab.playlist = .init(tab: tab, delegate: self)
-    }
+    // Growser-282: no playlist tab helper.
     if !FeatureList.kUseProfileWebViewConfiguration.enabled {
       tab.youtubeQualityTabHelper = .init(tab: tab)
     }
@@ -101,7 +99,7 @@ extension BrowserViewController: TabManagerDelegate {
       tab.showContent(true)
     }
     tab.readerMode?.onReaderModeToggled = { [weak self] tab in
-      tab.playlist?.processPlaylistInfo(item: tab.playlistItem)
+      // Growser-282: no playlist info to reprocess.
       self?.updateTranslateURLBar(tab: tab, state: tab.translationState)
     }
 
@@ -292,9 +290,9 @@ extension BrowserViewController: TabManagerDelegate {
       navigationToolbar.updateForwardStatus(tab.canGoForward)
     }
 
-    let shouldShowPlaylistURLBarButton =
-      selected?.visibleURL?.isPlaylistSupportedSiteURL == true
-      && selected?.playlist?.isPlaylistBlocked(selected?.visibleURL) == false
+    // Growser-282: Playlist is out of the product, so the reader-mode button
+    // always owns the slot.
+    let shouldShowPlaylistURLBarButton = false
 
     if !shouldShowPlaylistURLBarButton {
       let readerModeState = selected?.readerMode?.state
@@ -306,12 +304,6 @@ extension BrowserViewController: TabManagerDelegate {
           hideReaderModeBar(animated: false)
         }
       }
-
-      updatePlaylistURLBar(
-        tab: selected,
-        state: selected?.playlistItemState ?? .none,
-        item: selected?.playlistItem
-      )
     } else {
       topToolbar.updateReaderModeState(.unavailable)
     }
@@ -320,11 +312,6 @@ extension BrowserViewController: TabManagerDelegate {
       selectedTab.legacyTranslateHelper != nil || selectedTab.translate != nil
     {
       updateTranslateURLBar(tab: selectedTab, state: selectedTab.translationState)
-      updatePlaylistURLBar(
-        tab: selectedTab,
-        state: selectedTab.playlistItemState ?? .none,
-        item: selectedTab.playlistItem
-      )
     } else {
       topToolbar.updateTranslateButtonState(.unavailable)
     }

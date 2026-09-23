@@ -26,9 +26,7 @@ class UserScriptManager {
       .nightMode,
     ]
 
-    if Preferences.UserScript.playlist.value {
-      scripts.append(.playlist)
-    }
+    // Growser-282: never .playlist - Playlist is out of the product.
 
     if Preferences.UserScript.youtubeQuality.value {
       scripts.append(.youtubeQuality)
@@ -136,8 +134,7 @@ class UserScriptManager {
         return Preferences.UserScript.mediaBackgroundPlay.value
           ? loadScript(named: "MediaBackgroundingScript") : nil
       case .playlistMediaSource:
-        return Preferences.UserScript.mediaSource.value
-          ? loadScript(named: "PlaylistSwizzlerScript") : nil
+        return nil  // Growser-282: PlaylistSwizzlerScript is not bundled.
       case .deAmp: return Preferences.UserScript.deAmp.value ? DeAmpScriptHandler.userScript : nil
       case .requestBlocking:
         return Preferences.UserScript.requestBlocking.value
@@ -160,7 +157,7 @@ class UserScriptManager {
       case .faviconFetcher: return FaviconScriptHandler.userScript
       case .nightMode: return DarkReaderScriptHandler.userScript
       case .playlist:
-        return Preferences.UserScript.playlist.value ? PlaylistScriptHandler.userScript : nil
+        return nil  // Growser-282: PlaylistScriptHandler is not built.
       case .resourceDownloader: return ResourceDownloadScriptHandler.userScript
       case .youtubeQuality:
         return Preferences.UserScript.youtubeQuality.value

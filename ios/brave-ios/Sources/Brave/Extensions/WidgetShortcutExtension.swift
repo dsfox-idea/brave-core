@@ -28,9 +28,7 @@ extension WidgetShortcut {
       .askBrave,
       .braveLeoVoiceInput,
     ])
-    if !prefs.isPlaylistAvailable {
-      options.remove(.playlist)
-    }
+    options.remove(.playlist)  // Growser-282: Playlist is out of the product.
     options.remove(.braveNews)  // Growser-281: Brave News is out of the product.
     if !isWalletAvailable {
       options.remove(.wallet)
@@ -48,9 +46,7 @@ extension WidgetShortcut {
     isWalletAvailable: Bool
   ) -> Set<WidgetShortcut> {
     var disabled: Set<WidgetShortcut> = []
-    if !prefs.isPlaylistAvailable {
-      disabled.insert(.playlist)
-    }
+    disabled.insert(.playlist)  // Growser-282: Playlist is out of the product.
     disabled.insert(.braveNews)  // Growser-281: Brave News is out of the product.
     if !isWalletAvailable {
       disabled.insert(.wallet)

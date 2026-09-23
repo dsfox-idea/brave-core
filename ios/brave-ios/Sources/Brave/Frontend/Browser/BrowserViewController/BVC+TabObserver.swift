@@ -350,11 +350,7 @@ extension BrowserViewController {
       injectedScripts.append(contentBlocker)
     }
 
-    if tab.profile.prefs.isPlaylistAvailable {
-      injectedScripts.append(contentsOf: [
-        PlaylistScriptHandler()
-      ])
-    }
+    // Growser-282: no PlaylistScriptHandler.
 
     // Growser-278: no BraveTalkScriptHandler.
 

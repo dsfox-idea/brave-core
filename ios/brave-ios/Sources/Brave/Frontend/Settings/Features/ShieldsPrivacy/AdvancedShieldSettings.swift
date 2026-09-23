@@ -268,11 +268,7 @@ import os
     ]
     // Growser-281: no Brave News clearable.
 
-    if braveCore.profile.prefs.isPlaylistAvailable {
-      clearableSettings.append(
-        ClearableSetting(id: .playlistCache, clearable: PlayListCacheClearable(), isEnabled: false)
-      )
-    }
+    // Growser-282: no Playlist cache clearable.
 
     // Enable clearing of Brave Ads data only if:
     // - Brave Ads is running

@@ -6,7 +6,7 @@
 import BraveUI
 import Data
 import DesignSystem
-import PlaylistUI
+// Growser-282: no PlaylistUI.
 import Shared
 import UIKit
 
@@ -35,7 +35,7 @@ class SearchOnYourDeviceCell: UICollectionViewCell, CollectionViewReusable {
     let badge: UIImage
   }
 
-  private let thumbnailLoader: MediaThumbnailLoader = .init()
+  // Growser-282: no MediaThumbnailLoader - it came with PlaylistUI.
 
   private let stackView = UIStackView().then {
     $0.spacing = 16.0
@@ -228,19 +228,10 @@ class SearchOnYourDeviceCell: UICollectionViewCell, CollectionViewReusable {
   }
 
   func setPlaylistItem(_ item: PlaylistItem) {
-    Task {
-      if let assetURL = URL(string: item.mediaSrc), let pageURL = URL(string: item.pageSrc) {
-        do {
-          try await thumbnailLoader.loadThumbnail(assetURL: assetURL, pageURL: pageURL)
-          if let image = thumbnailLoader.image {
-            thumbnailImageView.image = image
-          } else {
-            thumbnailImageView.loadFavicon(for: pageURL, isPrivateBrowsing: false)
-          }
-        } catch {
-          thumbnailImageView.loadFavicon(for: pageURL, isPrivateBrowsing: false)
-        }
-      }
+    // Growser-282: unreachable (search offers no playlist items); the favicon
+    // stands in for the media thumbnail PlaylistUI used to render.
+    if let pageURL = URL(string: item.pageSrc) {
+      thumbnailImageView.loadFavicon(for: pageURL, isPrivateBrowsing: false)
     }
 
     siteImageContainerView.isHidden = true
@@ -263,7 +254,8 @@ class SearchOnYourDeviceCell: UICollectionViewCell, CollectionViewReusable {
     if item.duration != 0, !isItemLive {
       detailTextForPlaylistSuggestions.append(
         NSAttributedString(
-          string: " · \(Duration.seconds(item.duration).formatted(.timestamp))",
+          // Growser-282: Foundation's own style - .timestamp came with PlaylistUI.
+          string: " · \(Duration.seconds(item.duration).formatted())",
           attributes: [
             .font: DynamicFontHelper.defaultHelper.smallSizeRegularWeightAS,
             .foregroundColor: isPrivateBrowsing ? .white : UIColor(braveSystemName: .textSecondary),

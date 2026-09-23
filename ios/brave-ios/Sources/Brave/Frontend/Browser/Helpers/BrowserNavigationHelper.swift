@@ -158,9 +158,7 @@ class BrowserNavigationHelper {
     }
   }
 
-  func openPlaylist() {
-    bvc?.openPlaylist(tab: nil, item: nil)
-  }
+  // Growser-282: no openPlaylist().
 
   func openWallet() {
     bvc?.presentWallet()

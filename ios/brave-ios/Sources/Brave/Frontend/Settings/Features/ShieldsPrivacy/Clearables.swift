@@ -8,7 +8,7 @@ import BraveShared
 import Data
 import Favicon
 import Foundation
-import Playlist
+// Growser-282: no Playlist.
 import Shared
 import Web
 import WebKit
@@ -201,27 +201,7 @@ class DownloadsClearable: Clearable {
 
 // Growser-281: no BraveNewsClearable.
 
-class PlayListCacheClearable: Clearable {
-
-  init() {}
-
-  var label: String {
-    return Strings.PlayList.playlistOfflineDataToggleOption
-  }
-
-  func clear() async throws {
-    await PlaylistManager.shared.deleteAllItems(cacheOnly: true)
-
-    // Backup in case there is folder corruption, so we delete the cache anyway
-    if let playlistDirectory = await PlaylistDownloadManager.playlistDirectory {
-      do {
-        try await AsyncFileManager.default.removeItem(at: playlistDirectory)
-      } catch {
-        Logger.module.error("Error Deleting Playlist directory: \(error.localizedDescription)")
-      }
-    }
-  }
-}
+// Growser-282: no PlayListCacheClearable.
 
 class RecentSearchClearable: Clearable {
 

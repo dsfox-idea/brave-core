@@ -110,8 +110,7 @@ class TabBrowserData: NSObject, TabObserver {
   /// The page data is cleared when the user leaves the page (i.e. when the main frame url changes)
   @MainActor var currentPageData: PageData?
 
-  var playlistItem: PlaylistInfo?
-  var playlistItemState: PlaylistItemAddedState = .none
+  // Growser-282: no playlistItem or playlistItemState.
 
   /// This is the url for the current request
   var currentRequestURL: URL? {
