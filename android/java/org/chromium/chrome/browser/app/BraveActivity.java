@@ -326,7 +326,10 @@ public abstract class BraveActivity extends ChromeActivity
         mSafeBrowsingFlagEnabled =
                 ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_ANDROID_SAFE_BROWSING);
 
-        executeInitSafeBrowsing(0);
+        // Growser-303: no Play Services Safe Browsing init loop while it is off.
+        if (mSafeBrowsingFlagEnabled) {
+            executeInitSafeBrowsing(0);
+        }
 
         if (mAppUpdateManager == null) {
             mAppUpdateManager = AppUpdateManagerFactory.create(BraveActivity.this);

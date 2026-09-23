@@ -10,8 +10,11 @@
 namespace safe_browsing {
 namespace features {
 
+// Growser-303: off. Android Safe Browsing is Google Play Services' SafetyNet
+// lookup with a key we do not have, so it sent every URL to Play Services and
+// failed open; our Worker cannot serve it (Android has no local V4 database).
 BASE_FEATURE(kBraveAndroidSafeBrowsing,
-             base::FEATURE_ENABLED_BY_DEFAULT);
+             base::FEATURE_DISABLED_BY_DEFAULT);
 
 }  // namespace features
 }  // namespace safe_browsing
