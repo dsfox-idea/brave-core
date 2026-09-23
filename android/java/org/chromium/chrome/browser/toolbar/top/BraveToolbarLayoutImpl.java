@@ -861,13 +861,15 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         }
 
         if (tab == null) {
-            mBraveShieldsButton.setImageResource(R.drawable.ic_growser_mono); // Growser-266
+            // Growser-266: Brave Shields keeps its own brand (#55), as on the desktop.
+            mBraveShieldsButton.setImageResource(
+                    R.drawable.ic_social_brave_monochrome_favicon_fullheight_color);
             return;
         }
         mBraveShieldsButton.setImageResource(
                 isShieldsOnForTab(tab)
-                        ? R.drawable.ic_growser_brand
-                        : R.drawable.ic_growser_mono); // Growser-266
+                        ? R.drawable.ic_social_brave_release_favicon_fullheight_color
+                        : R.drawable.ic_social_brave_monochrome_favicon_fullheight_color);
         // Growser-271: no rewards button to show or hide beside it.
     }
 

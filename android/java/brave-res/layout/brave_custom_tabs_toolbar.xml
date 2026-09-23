@@ -9,9 +9,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Growser-266: Brave Shields keeps its own brand (#55), as on the
+         desktop, so its button draws the lion. -->
     <ImageButton android:id="@+id/brave_shields_button"
         style="@style/ToolbarButton"
-        android:src="@drawable/ic_growser_brand"
+        android:src="@drawable/ic_social_brave_release_favicon_fullheight_color"
         android:layout_marginEnd="42dp"
         android:layout_gravity="center_vertical|end"
         android:contentDescription="@string/accessibility_toolbar_btn_brave_shields" />
