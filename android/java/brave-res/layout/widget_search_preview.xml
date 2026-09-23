@@ -21,13 +21,14 @@
         android:layout_weight="0.5"
         android:layout_marginHorizontal="4dp"
         android:background="@drawable/widget_promo_panel_search_background">
+        <!-- Growser-266: our G, where Brave drew its lion. -->
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical|start"
             android:contentDescription="@string/search_widget_promo_search_content_description"
             android:padding="8dp"
-            android:src="@drawable/brave_icon_search"
+            android:src="@drawable/ic_growser_mono"
             app:tint="@color/schemes_on_primary_container" />
     </FrameLayout>
 

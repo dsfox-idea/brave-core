@@ -28,7 +28,8 @@ android_library("java") {
 }
 
 android_resources("java_resources") {
-  deps = [ "//brave/android/nala:java_resources" ]
+  # Growser-266: our G in place of the lion that came from nala.
+  sources = [ "java/res/drawable/ic_growser_tab_favicon.xml" ]
 }
 
 robolectric_library("junit") {

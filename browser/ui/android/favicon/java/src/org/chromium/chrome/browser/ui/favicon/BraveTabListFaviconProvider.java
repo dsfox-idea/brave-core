@@ -32,13 +32,13 @@ import java.util.Objects;
 /** Provides Brave favicon variants for Chromium tab-list UI. */
 @NullMarked
 public class BraveTabListFaviconProvider extends TabListFaviconProvider {
+    // Growser-266: one G for both - the drawable is tinted, so the lion's
+    // outline and carved variants had nothing left to tell apart.
     @VisibleForTesting
-    static final int BRAVE_NTP_FAVICON_DRAWABLE_ID_OUTLINE =
-            R.drawable.ic_social_brave_outline_favicon_fullheight;
+    static final int BRAVE_NTP_FAVICON_DRAWABLE_ID_OUTLINE = R.drawable.ic_growser_tab_favicon;
 
     @VisibleForTesting
-    static final int BRAVE_NTP_FAVICON_DRAWABLE_ID_FILLED =
-            R.drawable.ic_social_brave_carved_favicon_fullheight;
+    static final int BRAVE_NTP_FAVICON_DRAWABLE_ID_FILLED = R.drawable.ic_growser_tab_favicon;
 
     private final Context mContext;
     private final boolean mIsTabStrip;
