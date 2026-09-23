@@ -30,7 +30,6 @@ import org.chromium.chrome.browser.BraveFeatureUtil;
 import org.chromium.chrome.browser.BraveLaunchIntentDispatcher;
 import org.chromium.chrome.browser.BraveLocalState;
 import org.chromium.chrome.browser.BraveRelaunchUtils;
-import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.browsing_data.BraveClearBrowsingDataFragment;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.metrics.ChangeMetricsReportingStateCalledFrom;
@@ -425,25 +424,19 @@ public class BravePrivacySettings extends PrivacySettings {
             mSendCrashReports.setOnPreferenceChangeListener(this);
         }
 
-        // Hide stats usage ping setting if it's managed by policy
-        if (BraveLocalState.get().isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
-            removePreferenceIfPresent(PREF_BRAVE_STATS_USAGE_PING);
-            mBraveStatsUsagePing = null;
-        } else {
-            mBraveStatsUsagePing =
-                    (ChromeSwitchPreference) findPreference(PREF_BRAVE_STATS_USAGE_PING);
-            mBraveStatsUsagePing.setOnPreferenceChangeListener(this);
-        }
+        // Growser-304: the usage ping is compiled out (#38), so this toggle controlled
+        // nothing - hidden, as the desktop hides it (#78).
+        removePreferenceIfPresent(PREF_BRAVE_STATS_USAGE_PING);
+        mBraveStatsUsagePing = null;
 
         // Growser-271: ads are out, so the Sponsored Ads setting is always hidden - the
         // way Brave hides it when rewards is disabled by policy.
         removePreferenceIfPresent(PREF_SPONSORED_ADS_ENABLED);
         removePreferenceIfPresent(PREF_SPONSORED_ADS_LEARN_MORE);
 
-        boolean surveyPanelistEnabled =
-                ChromeFeatureList.isEnabled(
-                                BraveFeatureList.BRAVE_NTP_BRANDED_WALLPAPER_SURVEY_PANELIST)
-                        && !BraveOriginSubscriptionPrefs.getIsCredentialSummaryActiveCached();
+        // Growser-304: the only reader of this toggle is Brave Ads targeting, for surveys
+        // shown with sponsored new tab images - both out of the product.
+        boolean surveyPanelistEnabled = false;
         mSurveyPanelist = (ChromeSwitchPreference) findPreference(PREF_SURVEY_PANELIST);
         mSurveyPanelist.setOnPreferenceChangeListener(this);
         mSurveyPanelist.setVisible(surveyPanelistEnabled);
@@ -1041,11 +1034,8 @@ public class BravePrivacySettings extends PrivacySettings {
                         indexData.removeEntryForKey(
                                 frag, PREF_ALLOW_ELEMENTS_BLOCKING_ON_PRIVATE_TABS);
                     }
-                    if (!ChromeFeatureList.isEnabled(
-                                    BraveFeatureList.BRAVE_NTP_BRANDED_WALLPAPER_SURVEY_PANELIST)
-                            || BraveOriginSubscriptionPrefs.getIsCredentialSummaryActiveCached()) {
-                        indexData.removeEntryForKey(frag, PREF_SURVEY_PANELIST);
-                    }
+                    // Growser-304: always hidden, see onCreatePreferences.
+                    indexData.removeEntryForKey(frag, PREF_SURVEY_PANELIST);
                     if (ChromeFeatureList.isEnabled(
                             BraveFeatureList.BRAVE_GOOGLE_SIGN_IN_PERMISSION)) {
                         indexData.removeEntryForKey(frag, PREF_SOCIAL_BLOCKING_GOOGLE);
@@ -1082,10 +1072,8 @@ public class BravePrivacySettings extends PrivacySettings {
                             .isUsageAndCrashReportingPermittedByPolicy()) {
                         indexData.removeEntryForKey(frag, PREF_SEND_CRASH_REPORTS);
                     }
-                    if (BraveLocalState.get()
-                            .isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
-                        indexData.removeEntryForKey(frag, PREF_BRAVE_STATS_USAGE_PING);
-                    }
+                    // Growser-304: always hidden, see onCreatePreferences.
+                    indexData.removeEntryForKey(frag, PREF_BRAVE_STATS_USAGE_PING);
                     // Growser-271: always hidden, see onCreatePreferences.
                     indexData.removeEntryForKey(frag, PREF_SPONSORED_ADS_ENABLED);
 
