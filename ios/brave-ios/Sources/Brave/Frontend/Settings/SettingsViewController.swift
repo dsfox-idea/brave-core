@@ -1282,21 +1282,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           image: UIImage(braveSystemNamed: "leo.bug"),
           cellClass: MultilineValue1Cell.self
         ),
-        Row(
-          text: Strings.rateBrave,
-          selection: { [unowned self] in
-            // Rate Brave
-            guard
-              let writeReviewURL = URL(
-                string: "https://itunes.apple.com/app/id1052879175?action=write-review"
-              )
-            else { return }
-            UIApplication.shared.open(writeReviewURL)
-            self.dismiss(animated: true)
-          },
-          image: UIImage(braveSystemNamed: "leo.message.bubble-smile"),
-          cellClass: MultilineValue1Cell.self
-        ),
+        // Growser-299: no "Rate Growser" until the app has its own App Store
+        // listing - the row wrote a review of Brave's app (id1052879175).
       ]
     )
   }()
@@ -1385,14 +1372,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           accessory: .disclosureIndicator,
           cellClass: MultilineValue1Cell.self
         ),
-        Row(
-          text: Strings.termsOfUse,
-          selection: { [unowned self] in
-            settingsDelegate?.settingsOpenURLInNewTab(.brave.termsOfUse)
-          },
-          accessory: .disclosureIndicator,
-          cellClass: MultilineValue1Cell.self
-        ),
+        // Growser-299: no "Terms of use" - Growser has no terms of its own,
+        // and the row opened Brave's.
         Row(
           text: Strings.settingsLicenses,
           selection: { [unowned self] in
