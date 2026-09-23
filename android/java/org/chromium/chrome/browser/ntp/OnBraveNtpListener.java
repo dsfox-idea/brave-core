@@ -8,8 +8,6 @@
 package org.chromium.chrome.browser.ntp;
 
 public interface OnBraveNtpListener {
-    public void updateNewsOptin(boolean isOptin);
-    public void getFeed(boolean isNewContent);
-    public void loadNewContent();
+    // Growser-272: updateNewsOptin, getFeed and loadNewContent left with Brave News.
     public void checkForBraveStats();
 }

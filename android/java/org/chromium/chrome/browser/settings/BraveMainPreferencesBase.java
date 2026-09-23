@@ -30,7 +30,6 @@ import org.chromium.chrome.browser.accessibility.BraveAccessibilitySettings;
 import org.chromium.chrome.browser.autofill.settings.AutofillAndPasswordsFragment;
 import org.chromium.chrome.browser.autofill.settings.options.BraveAutofillOptionsSearchIndex;
 import org.chromium.chrome.browser.autofill.settings.options.BraveAutofillOptionsSearchIndex.SettingsRoutes;
-import org.chromium.chrome.browser.brave_news.BraveNewsPolicy;
 import org.chromium.chrome.browser.brave_origin.BraveOriginPlansActivity;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
@@ -317,7 +316,6 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         setPreferenceOrder(PREF_FEATURES_SECTION, ++featuresSectionOrder);
 
         setPreferenceOrder(PREF_SHIELDS_AND_PRIVACY, ++featuresSectionOrder);
-        setPreferenceOrder(PREF_BRAVE_NEWS_V2, ++featuresSectionOrder);
 
         // Growser-273/274/275 and growser#270: the wallet, playlist, VPN and Leo
         // are out of the product, so their rows never appear.
@@ -619,11 +617,9 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         removePreferenceIfPresent(PREF_BRAVE_LEO);
     }
 
-    /** Checks if News is disabled by policy via Brave Origin and removes the preference if so. */
+    /** Growser-272: Brave News is out of the product. */
     private void checkNewsPolicyAndUpdatePreference() {
-        if (BraveNewsPolicy.isDisabledByPolicy(getProfile())) {
-            removePreferenceIfPresent(PREF_BRAVE_NEWS_V2);
-        }
+        removePreferenceIfPresent(PREF_BRAVE_NEWS_V2);
     }
 
     /** Growser-274: the VPN is out of the product. */
@@ -822,11 +818,9 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
                         indexData.removeEntry(getUniqueId(PREF_HOME_SCREEN_WIDGET));
                     }
                     // Remove features disabled by Brave Origin or enterprise policy.
-                    // Growser-270/274/275: these rows do not exist.
+                    // Growser-270/272/274/275: these rows do not exist.
                     indexData.removeEntry(getUniqueId(PREF_BRAVE_LEO));
-                    if (BraveNewsPolicy.isDisabledByPolicy(profile)) {
-                        indexData.removeEntry(getUniqueId(PREF_BRAVE_NEWS_V2));
-                    }
+                    indexData.removeEntry(getUniqueId(PREF_BRAVE_NEWS_V2));
                     indexData.removeEntry(getUniqueId(PREF_BRAVE_VPN));
                     indexData.removeEntry(getUniqueId(PREF_BRAVE_WALLET));
                     String siteSettingsFrag = SiteSettings.class.getName();

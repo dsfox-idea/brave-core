@@ -4,7 +4,6 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/brave_ads/buildflags/buildflags.gni")
-import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//build/config/android/rules.gni")
@@ -34,10 +33,7 @@ source_set("preferences") {
     "//url",
   ]
 
-  # Growser-271/272: the bridge reaches these components only when they exist.
-  if (enable_brave_news) {
-    deps += [ "//brave/components/brave_news/common" ]
-  }
+  # Growser-271: the bridge reaches these components only when they exist.
   if (enable_brave_rewards) {
     deps += [ "//brave/components/brave_rewards/core" ]
   }

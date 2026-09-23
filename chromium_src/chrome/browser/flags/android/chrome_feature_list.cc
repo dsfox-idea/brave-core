@@ -9,7 +9,7 @@
 #include "brave/browser/brave_browser_features.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
-#include "brave/components/brave_news/common/features.h"
+// Growser-272: brave_news/common/features.h asserts the feature is compiled in.
 #include "brave/components/brave_origin/features.h"
 #include "brave/components/brave_rewards/core/buildflags/buildflags.h"
 #include "brave/components/brave_search_conversion/features.h"

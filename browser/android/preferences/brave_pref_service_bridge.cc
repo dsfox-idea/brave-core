@@ -9,13 +9,8 @@
 
 #include "base/android/jni_string.h"
 #include "brave/build/android/jni_headers/BravePrefServiceBridge_jni.h"
-#include "brave/components/brave_news/common/buildflags/buildflags.h"
 #include "brave/components/brave_perf_predictor/common/pref_names.h"
 #include "brave/components/brave_rewards/core/buildflags/buildflags.h"
-
-#if BUILDFLAG(ENABLE_BRAVE_NEWS)
-#include "brave/components/brave_news/common/pref_names.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
 #include "brave/components/brave_rewards/core/pref_names.h"
@@ -198,27 +193,7 @@ jboolean JNI_BravePrefServiceBridge_GetBooleanForContentSetting(JNIEnv* env,
   }
 }
 
-#if BUILDFLAG(ENABLE_BRAVE_NEWS)
-void JNI_BravePrefServiceBridge_SetNewsOptIn(JNIEnv* env, jboolean value) {
-  GetOriginalProfile()->GetPrefs()->SetBoolean(
-      brave_news::prefs::kBraveNewsOptedIn, value);
-}
-
-jboolean JNI_BravePrefServiceBridge_GetNewsOptIn(JNIEnv* env) {
-  return GetOriginalProfile()->GetPrefs()->GetBoolean(
-      brave_news::prefs::kBraveNewsOptedIn);
-}
-
-void JNI_BravePrefServiceBridge_SetShowNews(JNIEnv* env, jboolean value) {
-  GetOriginalProfile()->GetPrefs()->SetBoolean(
-      brave_news::prefs::kNewTabPageShowToday, value);
-}
-
-jboolean JNI_BravePrefServiceBridge_GetShowNews(JNIEnv* env) {
-  return GetOriginalProfile()->GetPrefs()->GetBoolean(
-      brave_news::prefs::kNewTabPageShowToday);
-}
-#endif  // BUILDFLAG(ENABLE_BRAVE_NEWS)
+// Growser-272: the Brave News accessors left with the feature.
 
 jint JNI_BravePrefServiceBridge_GetWebrtcPolicy(JNIEnv* env) {
   return static_cast<int>(

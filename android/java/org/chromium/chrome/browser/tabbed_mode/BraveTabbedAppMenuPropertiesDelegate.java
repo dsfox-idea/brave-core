@@ -32,7 +32,6 @@ import org.chromium.chrome.browser.RecentlyClosedEntriesManager;
 import org.chromium.chrome.browser.app.appmenu.AppMenuIconRowFooter;
 import org.chromium.chrome.browser.app.appmenu.AppMenuItemUtils;
 import org.chromium.chrome.browser.bookmarks.BookmarkModel;
-import org.chromium.chrome.browser.brave_news.BraveNewsPolicy;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.homepage.HomepageManager;
 import org.chromium.chrome.browser.hub.HubManager;
@@ -127,19 +126,9 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
      * entry here.
      */
     private List<PolicyControlledMenuItem> getPolicyControlledMenuItems() {
-        // Growser-270/271/274/275: the wallet, rewards, Leo and VPN entries are gone
-        // with their features; what is left is what the product still has.
-        return Arrays.asList(
-                new PolicyControlledMenuItem(
-                        R.id.brave_news_id,
-                        this::buildBraveNewsItem,
-                        () -> true,
-                        () -> {
-                            Tab tab = mActivityTabProvider.get();
-                            return tab != null
-                                    && BraveNewsPolicy.isDisabledByPolicy(tab.getProfile());
-                        },
-                        Arrays.asList(CustomizeBraveMenu.BRAVE_CUSTOMIZE_ITEM_ID, R.id.exit_id)));
+        // Growser-270/271/272/274/275: the wallet, rewards, news, Leo and VPN entries
+        // are gone with their features, which leaves none.
+        return Arrays.asList();
     }
 
     public BraveTabbedAppMenuPropertiesDelegate(
@@ -1025,18 +1014,6 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
                         R.id.exit_id,
                         R.string.menu_exit,
                         shouldShowIconBeforeItem() ? R.drawable.ic_outside : 0,
-                        isMenuIconAtStart()));
-    }
-
-    private MVCListAdapter.ListItem buildBraveNewsItem() {
-        return new MVCListAdapter.ListItem(
-                AppMenuHandler.AppMenuItemType.STANDARD,
-                AppMenuItemUtils.buildModelForStandardMenuItem(
-                        mContext,
-                        mAppMenuItemTheme,
-                        R.id.brave_news_id,
-                        R.string.brave_news_title,
-                        shouldShowIconBeforeItem() ? R.drawable.ic_product_brave_news : 0,
                         isMenuIconAtStart()));
     }
 

@@ -719,14 +719,9 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         }
         if (mBraveShieldsButton == v && mBraveShieldsButton != null) {
             showShieldsMenu();
-        } else if (mHomeButton == v) { // Growser-271: no rewards button
-            // Helps Brave News know how to behave on home button action
-            try {
-                BraveActivity.getBraveActivity().setComesFromNewTab(true);
-            } catch (BraveActivity.BraveActivityNotFoundException e) {
-                Log.e(TAG, "HomeButton click " + e);
-            }
         } else if (mBraveWalletButton == v && mBraveWalletButton != null) {
+            // Growser-271/272: no rewards button, and the home button no longer tells
+            // Brave News where the user came from.
             maybeShowWalletPanel();
         } else if (mYouTubePipButton == v && mYouTubePipButton != null) {
             Tab currentTab = getToolbarDataProvider().getTab();

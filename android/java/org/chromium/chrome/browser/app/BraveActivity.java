@@ -93,8 +93,6 @@ import org.chromium.chrome.browser.OpenYtInBraveDialogFragment;
 import org.chromium.chrome.browser.app.tabwindow.TabWindowManagerSingleton;
 import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
 import org.chromium.chrome.browser.bookmarks.TabBookmarker;
-import org.chromium.chrome.browser.brave_news.BraveNewsUtils;
-import org.chromium.chrome.browser.brave_news.models.FeedItemsCard;
 import org.chromium.chrome.browser.brave_origin.BraveOriginDeepLinkHandler;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.brave_shields.BraveFirstPartyStorageCleanerUtils;
@@ -147,7 +145,6 @@ import org.chromium.chrome.browser.safe_browsing.SafeBrowsingBridge;
 import org.chromium.chrome.browser.safe_browsing.SafeBrowsingState;
 import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
 import org.chromium.chrome.browser.set_default_browser.BraveSetDefaultBrowserUtils;
-import org.chromium.chrome.browser.settings.BraveNewsPreferencesV2;
 import org.chromium.chrome.browser.settings.BraveSearchEngineUtils;
 import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
 import org.chromium.chrome.browser.share.ShareDelegate;
@@ -201,7 +198,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /** Brave's extension for ChromeActivity */
 @JNINamespace("chrome::android")
@@ -251,9 +247,6 @@ public abstract class BraveActivity extends ChromeActivity
     private boolean mIsVerification;
     public boolean mIsDeepLink;
     private MiscAndroidMetrics mMiscAndroidMetrics;
-    public boolean mLoadedFeed;
-    public boolean mComesFromNewTab;
-    public CopyOnWriteArrayList<FeedItemsCard> mNewsItemsFeedCards;
     private boolean mIsProcessingPendingDappsTxRequest;
     private int mLastTabId;
     private boolean mNativeInitialized;
@@ -385,9 +378,7 @@ public abstract class BraveActivity extends ChromeActivity
             ShareDelegate shareDelegate = (ShareDelegate) getShareDelegateSupplier().get();
             shareDelegate.share(currentTab, false, ShareOrigin.OVERFLOW_MENU);
             return true;
-        } else if (id == R.id.reload_menu_id) {
-            setComesFromNewTab(true);
-        } else if (id == R.id.preferences_id) {
+        } else if (id == R.id.preferences_id) { // Growser-272: reload told the feed
             final AppMenuPropertiesDelegate delegate = createAppMenuPropertiesDelegate();
             assert delegate instanceof BraveTabbedAppMenuPropertiesDelegate;
             final BraveTabbedAppMenuPropertiesDelegate braveTabbedAppMenuPropertiesDelegate =
@@ -416,9 +407,7 @@ public abstract class BraveActivity extends ChromeActivity
             return false;
         } else if (id == R.id.exit_id) {
             exitBrave();
-        } else if (id == R.id.brave_news_id) { // Growser-271: no rewards item
-            openBraveNewsSettings();
-        } else if (id == CustomizeBraveMenu.BRAVE_CUSTOMIZE_ITEM_ID) {
+        } else if (id == CustomizeBraveMenu.BRAVE_CUSTOMIZE_ITEM_ID) { // Growser-271/272
             final AppMenuPropertiesDelegate delegate = createAppMenuPropertiesDelegate();
             assert delegate instanceof BraveTabbedAppMenuPropertiesDelegate;
             final BraveTabbedAppMenuPropertiesDelegate braveTabbedAppMenuPropertiesDelegate =
@@ -629,9 +618,7 @@ public abstract class BraveActivity extends ChromeActivity
             CommandLine.getInstance().appendSwitch(ChromeSwitches.NO_RESTORE_STATE);
         }
 
-        setLoadedFeed(false);
-        setComesFromNewTab(false);
-        setNewsItemsFeedCards(null);
+        // Growser-272: no feed state to reset.
         BraveSearchEngineUtils.initializeBraveSearchEngineStates(getTabModelSelector());
         if (false) {
         }
@@ -643,30 +630,6 @@ public abstract class BraveActivity extends ChromeActivity
 
     public void setLastTabId(int lastTabId) {
         this.mLastTabId = lastTabId;
-    }
-
-    public boolean isLoadedFeed() {
-        return mLoadedFeed;
-    }
-
-    public void setLoadedFeed(boolean loadedFeed) {
-        this.mLoadedFeed = loadedFeed;
-    }
-
-    public CopyOnWriteArrayList<FeedItemsCard> getNewsItemsFeedCards() {
-        return mNewsItemsFeedCards;
-    }
-
-    public void setNewsItemsFeedCards(CopyOnWriteArrayList<FeedItemsCard> newsItemsFeedCards) {
-        this.mNewsItemsFeedCards = newsItemsFeedCards;
-    }
-
-    public void setComesFromNewTab(boolean comesFromNewTab) {
-        this.mComesFromNewTab = comesFromNewTab;
-    }
-
-    public boolean isComesFromNewTab() {
-        return mComesFromNewTab;
     }
 
     @Override
@@ -941,7 +904,6 @@ public abstract class BraveActivity extends ChromeActivity
             showAdFreeCalloutDialog();
         }
 
-        initBraveNews();
         // Growser-273/274: the playlist and VPN deep links no longer land anywhere.
         if (false) {
         } else if (BraveOriginDeepLinkHandler.consumeDeferred()) {
@@ -1199,14 +1161,6 @@ public abstract class BraveActivity extends ChromeActivity
         }
     }
 
-    private void initBraveNews() {
-        ThreadUtils.assertOnUiThread();
-        if (BravePrefServiceBridge.getInstance().getShowNews()
-                && BravePrefServiceBridge.getInstance().getNewsOptIn()) {
-            BraveNewsUtils.getBraveNewsSettingsDataPerProfile(mTabModelProfileSupplier.get());
-        }
-    }
-
     public void setDormantUsersPrefs() {
         OnboardingPrefManager.getInstance().setDormantUsersPrefs();
         RetentionNotificationUtil.scheduleDormantUsersNotifications(this);
@@ -1261,11 +1215,6 @@ public abstract class BraveActivity extends ChromeActivity
     public void openQuickSearchEnginesSettings() {
         SettingsNavigation settingsLauncher = SettingsNavigationFactory.createSettingsNavigation();
         settingsLauncher.startSettings(this, QuickSearchEnginesFragment.class);
-    }
-
-    public void openBraveNewsSettings() {
-        SettingsNavigation settingsLauncher = SettingsNavigationFactory.createSettingsNavigation();
-        settingsLauncher.startSettings(this, BraveNewsPreferencesV2.class);
     }
 
     public void openBraveContentFilteringSettings() {

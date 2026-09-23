@@ -5,15 +5,6 @@
 
 import("//brave/components/brave_origin/buildflags/buildflags.gni")
 
-# Growser-272: Brave News is still compiled on Android. Its Java is woven
-# through the new tab page, and removing it is that issue, not this one.
 declare_args() {
   enable_brave_news = !is_brave_origin_branded
-}
-
-# Growser-272: on Android the flag does not reach the product yet - the
-# new tab page still carries the feed - so keep the code compiled there
-# rather than ship a build that cannot draw its own NTP.
-if (is_android) {
-  enable_brave_news = true
 }
