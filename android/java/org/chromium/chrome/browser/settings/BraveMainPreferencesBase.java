@@ -30,11 +30,9 @@ import org.chromium.chrome.browser.accessibility.BraveAccessibilitySettings;
 import org.chromium.chrome.browser.autofill.settings.AutofillAndPasswordsFragment;
 import org.chromium.chrome.browser.autofill.settings.options.BraveAutofillOptionsSearchIndex;
 import org.chromium.chrome.browser.autofill.settings.options.BraveAutofillOptionsSearchIndex.SettingsRoutes;
-import org.chromium.chrome.browser.brave_leo.BraveLeoPrefUtils;
 import org.chromium.chrome.browser.brave_news.BraveNewsPolicy;
 import org.chromium.chrome.browser.brave_origin.BraveOriginPlansActivity;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
-import org.chromium.chrome.browser.crypto_wallet.BraveWalletPolicy;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.homepage.settings.BraveHomepageSettings;
 import org.chromium.chrome.browser.notifications.BraveNotificationWarningDialog;
@@ -51,10 +49,6 @@ import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
 import org.chromium.chrome.browser.settings.search.ChromeBaseSearchIndexProvider;
 import org.chromium.chrome.browser.tasks.tab_management.BraveTabUiFeatureUtilities;
 import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarConfiguration;
-import org.chromium.chrome.browser.vpn.BraveVpnPolicy;
-import org.chromium.chrome.browser.vpn.settings.VpnCalloutPreference;
-import org.chromium.chrome.browser.vpn.utils.BraveVpnPrefUtils;
-import org.chromium.chrome.browser.vpn.utils.BraveVpnUtils;
 import org.chromium.chrome.browser.widget.quickactionsearchandbookmark.utils.BraveSearchWidgetUtils;
 import org.chromium.components.brave_account.BraveAccountFeatures;
 import org.chromium.components.browser_ui.settings.ChromeBasePreference;
@@ -123,7 +117,6 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
 
     private final HashMap<String, Preference> mRemovedPreferences = new HashMap<>();
     private @Nullable BraveAccountSectionController mAccountController;
-    private @Nullable VpnCalloutPreference mVpnCalloutPreference;
     private boolean mNotificationClicked;
 
     // Observes the profile policy service so we can defer the policy-controlled feature rows
@@ -309,26 +302,8 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
     private void rearrangePreferenceOrders() {
         int firstSectionOrder = 0;
 
-        if (getActivity() != null
-                && !getActivity().isFinishing()
-                && BraveVpnPrefUtils.shouldShowCallout()
-                && !BraveVpnPrefUtils.isSubscriptionPurchase()
-                && BraveVpnUtils.isVpnFeatureSupported(getActivity())
-                && !BraveVpnPolicy.isDisabledByPolicy(getProfile())) {
-            if (mVpnCalloutPreference == null) {
-                mVpnCalloutPreference = new VpnCalloutPreference(getActivity());
-                // Dismissing the callout removes it from the screen, which changes the position of
-                // the remaining preferences within their containment groups. Notify so the rounded
-                // card styling gets recomputed; otherwise neighbors keep stale corner/margin
-                // styling computed for their old positions.
-                mVpnCalloutPreference.setOnDismissedCallback(this::notifyPreferencesUpdated);
-            }
-            if (mVpnCalloutPreference != null) {
-                mVpnCalloutPreference.setKey(PREF_BRAVE_VPN_CALLOUT);
-                mVpnCalloutPreference.setOrder(firstSectionOrder);
-                getPreferenceScreen().addPreference(mVpnCalloutPreference);
-            }
-        }
+        // Growser-274: no VPN, so no promo for it.
+        removePreferenceIfPresent(PREF_BRAVE_VPN_CALLOUT);
 
         int braveAccountSectionOrder = firstSectionOrder;
         for (String key : BraveAccountSectionController.ALL_PREFERENCE_KEYS) {
@@ -345,27 +320,12 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         setPreferenceOrder(PREF_SHIELDS_AND_PRIVACY, ++featuresSectionOrder);
         setPreferenceOrder(PREF_BRAVE_NEWS_V2, ++featuresSectionOrder);
 
-        setPreferenceOrder(PREF_BRAVE_WALLET, ++featuresSectionOrder);
-
-        if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_PLAYLIST)) {
-            setPreferenceOrder(PREF_BRAVE_PLAYLIST, ++featuresSectionOrder);
-        } else {
-            removePreferenceIfPresent(PREF_BRAVE_PLAYLIST);
-        }
-
-        if (getActivity() != null
-                && !getActivity().isFinishing()
-                && BraveVpnUtils.isVpnFeatureSupported(getActivity())) {
-            setPreferenceOrder(PREF_BRAVE_VPN, ++featuresSectionOrder);
-        } else {
-            removePreferenceIfPresent(PREF_BRAVE_VPN);
-        }
-
-        if (BraveLeoPrefUtils.isLeoEnabled()) {
-            setPreferenceOrder(PREF_BRAVE_LEO, ++featuresSectionOrder);
-        } else {
-            removePreferenceIfPresent(PREF_BRAVE_LEO);
-        }
+        // Growser-273/274/275 and growser#270: the wallet, playlist, VPN and Leo
+        // are out of the product, so their rows never appear.
+        removePreferenceIfPresent(PREF_BRAVE_WALLET);
+        removePreferenceIfPresent(PREF_BRAVE_PLAYLIST);
+        removePreferenceIfPresent(PREF_BRAVE_VPN);
+        removePreferenceIfPresent(PREF_BRAVE_LEO);
 
         int generalOrder = featuresSectionOrder;
         setPreferenceOrder(PREF_GENERAL_SECTION, ++generalOrder);
@@ -655,11 +615,9 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         return true;
     }
 
-    /** Checks if Leo AI is disabled by policy and removes the preference if so. */
+    /** Growser-270: Leo is out of the product. */
     private void checkLeoPolicyAndUpdatePreference() {
-        if (BraveLeoPrefUtils.isLeoDisabledByPolicy(getProfile())) {
-            removePreferenceIfPresent(PREF_BRAVE_LEO);
-        }
+        removePreferenceIfPresent(PREF_BRAVE_LEO);
     }
 
     /** Checks if News is disabled by policy via Brave Origin and removes the preference if so. */
@@ -669,19 +627,15 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
         }
     }
 
-    /** Checks if Brave VPN is disabled by policy and removes the preference if so. */
+    /** Growser-274: the VPN is out of the product. */
     private void checkVpnPolicyAndUpdatePreference() {
-        if (BraveVpnPolicy.isDisabledByPolicy(getProfile())) {
-            removePreferenceIfPresent(PREF_BRAVE_VPN);
-            removePreferenceIfPresent(PREF_BRAVE_VPN_CALLOUT);
-        }
+        removePreferenceIfPresent(PREF_BRAVE_VPN);
+        removePreferenceIfPresent(PREF_BRAVE_VPN_CALLOUT);
     }
 
-    /** Checks if Brave Wallet is disabled by policy and removes the preference if so. */
+    /** Growser-275: the wallet is out of the product. */
     private void checkWalletPolicyAndUpdatePreference() {
-        if (BraveWalletPolicy.isDisabledByPolicy(getProfile())) {
-            removePreferenceIfPresent(PREF_BRAVE_WALLET);
-        }
+        removePreferenceIfPresent(PREF_BRAVE_WALLET);
     }
 
     /**
@@ -869,26 +823,20 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
                         indexData.removeEntry(getUniqueId(PREF_HOME_SCREEN_WIDGET));
                     }
                     // Remove features disabled by Brave Origin or enterprise policy.
-                    if (BraveLeoPrefUtils.isLeoDisabledByPolicy(profile)) {
-                        indexData.removeEntry(getUniqueId(PREF_BRAVE_LEO));
-                    }
+                    // Growser-270/274/275: these rows do not exist.
+                    indexData.removeEntry(getUniqueId(PREF_BRAVE_LEO));
                     if (BraveNewsPolicy.isDisabledByPolicy(profile)) {
                         indexData.removeEntry(getUniqueId(PREF_BRAVE_NEWS_V2));
                     }
-                    if (BraveVpnPolicy.isDisabledByPolicy(profile)) {
-                        indexData.removeEntry(getUniqueId(PREF_BRAVE_VPN));
-                    }
-                    if (BraveWalletPolicy.isDisabledByPolicy(profile)) {
-                        indexData.removeEntry(getUniqueId(PREF_BRAVE_WALLET));
-                        // Also remove wallet-related entries from site settings.
-                        String siteSettingsFrag = SiteSettings.class.getName();
-                        indexData.removeEntryForKey(
-                                siteSettingsFrag,
-                                BraveSiteSettingsPreferencesBase.ETHEREUM_CONNECTED_SITES_KEY);
-                        indexData.removeEntryForKey(
-                                siteSettingsFrag,
-                                BraveSiteSettingsPreferencesBase.SOLANA_CONNECTED_SITES_KEY);
-                    }
+                    indexData.removeEntry(getUniqueId(PREF_BRAVE_VPN));
+                    indexData.removeEntry(getUniqueId(PREF_BRAVE_WALLET));
+                    String siteSettingsFrag = SiteSettings.class.getName();
+                    indexData.removeEntryForKey(
+                            siteSettingsFrag,
+                            BraveSiteSettingsPreferencesBase.ETHEREUM_CONNECTED_SITES_KEY);
+                    indexData.removeEntryForKey(
+                            siteSettingsFrag,
+                            BraveSiteSettingsPreferencesBase.SOLANA_CONNECTED_SITES_KEY);
                     // Replace the AppearancePreferences entry so that the search result opens
                     // BraveCustomizeMenuPreferenceFragment directly with the last live bundle
                     // (cached when the user opened Settings via the app menu). Only replace when

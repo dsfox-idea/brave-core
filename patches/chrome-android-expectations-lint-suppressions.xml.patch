@@ -1,0 +1,20 @@
+diff --git a/chrome/android/expectations/lint-suppressions.xml b/chrome/android/expectations/lint-suppressions.xml
+index ba255f73ede5245ab70d1e54ab2927dbadc2f912..b21ec85af7a9bbffedd90de2112169572aa74a91 100644
+--- a/chrome/android/expectations/lint-suppressions.xml
++++ b/chrome/android/expectations/lint-suppressions.xml
+@@ -156,6 +156,15 @@ https://chromium.googlesource.com/chromium/src/+/main/build/android/docs/lint.md
+   <issue id="UnusedQuantity" severity="ignore"/>
+   <issue id="UnusedResources">
+     <!-- Do not add new suppressions without rationale. -->
++    <!-- Growser-288: the wallet, VPN, Leo and playlist Java left the Android
++         build in growser#270/#273/#274/#275; their resources have not, and
++         lint reports all 809 of them. Excluding those from the resource lists
++         is growser#288, and this suppression goes with it. -->
++    <ignore regexp="brave/android/java/brave-res/"/>
++    <ignore regexp="android_brave_strings_grd.resources.zip"/>
++    <ignore regexp="chrome/android/java/res/values/brave_dimens.xml"/>
++    <ignore regexp="brave/android/nala/res/"/>
++    <ignore regexp="chrome/android/java/res/values/brave_colors\.xml"/>
+     <!-- TODO(crbug.com/543028748): Remove temporarily suppress Safety FRE carousel screen strings. -->
+     <ignore regexp="The resource `R\..*safety_promo_.*` appears to be unused"/>
+     <ignore regexp="The resource `R\..*safety_fre_.*` appears to be unused"/>

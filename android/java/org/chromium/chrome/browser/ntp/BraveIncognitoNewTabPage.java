@@ -12,7 +12,6 @@ import org.chromium.build.annotations.NullMarked;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.ui.edge_to_edge.EdgeToEdgeController;
 import org.chromium.chrome.browser.ui.native_page.NativePageHost;
-import org.chromium.chrome.browser.vpn.BraveVpnPolicy;
 
 /** Brave's extension for IncognitoNewTabPage to add policy checks. */
 @NullMarked
@@ -25,7 +24,8 @@ public class BraveIncognitoNewTabPage extends IncognitoNewTabPage {
             MonotonicObservableSupplier<EdgeToEdgeController> edgeToEdgeControllerSupplier) {
         super(activity, host, profile, edgeToEdgeControllerSupplier);
 
-        // Pass VPN policy state to the view for VPN CTA visibility
-        mIncognitoNewTabPageView.setVpnDisabledByPolicy(BraveVpnPolicy.isDisabledByPolicy(profile));
+        // Growser-274: the VPN is out of the product, so the call to action
+        // never shows and there is no policy state to pass.
+        mIncognitoNewTabPageView.setVpnDisabledByPolicy(true);
     }
 }

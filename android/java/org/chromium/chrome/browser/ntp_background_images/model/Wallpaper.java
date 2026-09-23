@@ -5,8 +5,6 @@
 
 package org.chromium.chrome.browser.ntp_background_images.model;
 
-import org.chromium.brave_ads.mojom.NewTabPageAdMetricType;
-
 public class Wallpaper extends NTPImage {
     private final String mImagePath;
     private final int mFocalPointX;
@@ -17,7 +15,9 @@ public class Wallpaper extends NTPImage {
     private final String mCreativeInstanceId;
     private final String mWallpaperId;
     private final boolean mIsRichMedia;
-    private final @NewTabPageAdMetricType.EnumType int mMetricType;
+    // Growser-271: was @NewTabPageAdMetricType.EnumType, an IntDef from the
+    // ads mojom. The values still come from the native side unchanged.
+    private final int mMetricType;
 
     public Wallpaper(
             String imagePath,
@@ -29,7 +29,7 @@ public class Wallpaper extends NTPImage {
             String creativeInstanceId,
             String wallpaperId,
             boolean isRichMedia,
-            @NewTabPageAdMetricType.EnumType int metricType) {
+            int metricType) {
         mImagePath = imagePath;
         mFocalPointX = focalPointX;
         mFocalPointY = focalPointY;
@@ -78,7 +78,7 @@ public class Wallpaper extends NTPImage {
         return mIsRichMedia;
     }
 
-    public @NewTabPageAdMetricType.EnumType int metricType() {
+    public int metricType() {
         return mMetricType;
     }
 }

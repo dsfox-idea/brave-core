@@ -6,7 +6,7 @@
 #include "brave/browser/android/safe_browsing/features.h"
 #include "brave/browser/android/youtube_script_injector/features.h"
 #include "brave/browser/brave_browser_features.h"
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/features.h"
 #include "brave/components/brave_origin/features.h"
@@ -19,8 +19,8 @@
 #include "brave/components/email_aliases/buildflags/buildflags.h"
 #include "brave/components/google_sign_in_permission/features.h"
 #include "brave/components/ntp_background_images/browser/features.h"
-#include "brave/components/playlist/core/common/features.h"
-#include "brave/components/request_otr/common/features.h"
+#include "brave/components/playlist/core/common/buildflags/buildflags.h"
+#include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/components/webcompat/core/common/features.h"
 #include "net/base/features.h"
@@ -42,10 +42,38 @@
 #include "brave/components/email_aliases/features.h"
 #endif
 
+#if BUILDFLAG(ENABLE_AI_CHAT)
+#include "brave/components/ai_chat/core/common/features.h"
 // CHROMIUM_SRC_INTERNAL_USE
 #define BRAVE_AI_CHAT_FLAGS                                        \
   &ai_chat::features::kAIChat, &ai_chat::features::kAIChatHistory, \
       &ai_chat::features::kBraveSyncAIChat,
+#else
+// Growser-270: Leo is out of the product.
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_AI_CHAT_FLAGS
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
+
+#if BUILDFLAG(ENABLE_REQUEST_OTR)
+#include "brave/components/request_otr/common/features.h"
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_REQUEST_OTR_FLAG &request_otr::features::kBraveRequestOTRTab,
+#else
+// Growser: request-OTR is compiled out of this build, so it is not a flag
+// Java can see either.
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_REQUEST_OTR_FLAG
+#endif  // BUILDFLAG(ENABLE_REQUEST_OTR)
+
+#if BUILDFLAG(ENABLE_PLAYLIST)
+#include "brave/components/playlist/core/common/features.h"
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_PLAYLIST_FLAG &playlist::features::kPlaylist,
+#else
+// Growser-273: the playlist is out of the product.
+// CHROMIUM_SRC_INTERNAL_USE
+#define BRAVE_PLAYLIST_FLAG
+#endif  // BUILDFLAG(ENABLE_PLAYLIST)
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
 // CHROMIUM_SRC_INTERNAL_USE
@@ -90,11 +118,11 @@
     EMAIL_ALIASES_FLAG                                                         \
     &brave_rewards::features::kBraveRewards,                                   \
     &brave_search_conversion::features::kOmniboxBanner,                        \
-    &playlist::features::kPlaylist,                                            \
+    BRAVE_PLAYLIST_FLAG                                                        \
     &download::features::kParallelDownloading,                                 \
     &preferences::features::kBraveBackgroundVideoPlayback,                     \
     &preferences::features::kBravePictureInPictureForYouTubeVideos,            \
-    &request_otr::features::kBraveRequestOTRTab,                               \
+    BRAVE_REQUEST_OTR_FLAG                                     \
     &safe_browsing::features::kBraveAndroidSafeBrowsing,                       \
     &debounce::features::kBraveDebounce,                                       \
     &webcompat::features::kBraveWebcompatExceptionsService,                    \
@@ -117,6 +145,8 @@
 
 #include <chrome/browser/flags/android/chrome_feature_list.cc>
 #undef kForceWebContentsDarkMode
+#undef BRAVE_REQUEST_OTR_FLAG
+#undef BRAVE_PLAYLIST_FLAG
 #undef BRAVE_AI_CHAT_FLAGS
 #undef BRAVE_NEW_TAB_PAGE_AD_FLAG
 #undef BRAVE_WEB_DISCOVERY_FLAG

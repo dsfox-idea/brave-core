@@ -4,6 +4,8 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
+import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//build/config/android/rules.gni")
 
@@ -14,10 +16,8 @@ source_set("preferences") {
     "//base",
     "//brave/build/android:jni_headers",
     "//brave/components/brave_adaptive_captcha",
-    "//brave/components/brave_news/common",
     "//brave/components/brave_perf_predictor/common",
     "//brave/components/brave_referrals/common",
-    "//brave/components/brave_rewards/core",
     "//brave/components/brave_shields/core/browser",
     "//brave/components/brave_sync:prefs",
     "//brave/components/constants",
@@ -33,6 +33,14 @@ source_set("preferences") {
     "//third_party/blink/public/common",
     "//url",
   ]
+
+  # Growser-271/272: the bridge reaches these components only when they exist.
+  if (enable_brave_news) {
+    deps += [ "//brave/components/brave_news/common" ]
+  }
+  if (enable_brave_rewards) {
+    deps += [ "//brave/components/brave_rewards/core" ]
+  }
 }
 
 java_cpp_strings("java_pref_names_srcjar") {
@@ -58,9 +66,8 @@ java_cpp_strings("java_pref_names_srcjar") {
     "//components/translate/core/browser/translate_pref_names.h",
   ]
 
-  if (enable_brave_ads) {
-    sources += [ "//brave/components/brave_ads/core/public/prefs/pref_names.h" ]
-  }
+  # Growser-271: BravePrivacySettings still reads these on Android.
+  sources += [ "//brave/components/brave_ads/core/public/prefs/pref_names.h" ]
 
   if (enable_brave_wallet) {
     sources += [ "//brave/components/decentralized_dns/core/pref_names.h" ]

@@ -72,10 +72,6 @@ public class BravePrefServiceBridge {
         return BravePrefServiceBridgeJni.get().getDataSaved(profile);
     }
 
-    public void resetPromotionLastFetchStamp() {
-        BravePrefServiceBridgeJni.get().resetPromotionLastFetchStamp();
-    }
-
     public void setOldTrackersBlockedCount(Profile profile, long count) {
         BravePrefServiceBridgeJni.get().setOldTrackersBlockedCount(profile, count);
     }
@@ -143,8 +139,6 @@ public class BravePrefServiceBridge {
 
         void setOldHttpsUpgradesCount(Profile profile, long count);
 
-        void resetPromotionLastFetchStamp();
-
         boolean getBooleanForContentSetting(int contentType);
 
         void setWebrtcPolicy(int policy);
@@ -158,5 +152,6 @@ public class BravePrefServiceBridge {
         void setShowNews(boolean value);
 
         boolean getShowNews();
+
     }
 }

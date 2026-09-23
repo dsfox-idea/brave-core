@@ -34,6 +34,10 @@
 #include "components/optimization_guide/core/optimization_guide_features.h"
 #include "components/optimization_guide/optimization_guide_internals/webui/url_constants.h"
 #include "content/public/browser/web_contents.h"
+// Growser-270/274/275: the complete type used to arrive through one of the
+// feature WebUI headers above, and on Android every one of them is now
+// compiled out.
+#include "content/public/browser/web_ui_controller.h"
 #include "content/public/common/url_utils.h"
 #include "url/gurl.h"
 
@@ -86,8 +90,19 @@ namespace {
 typedef WebUIController* (*WebUIFactoryFunction)(WebUI* web_ui,
                                                  const GURL& url);
 
+// Growser-270/274/275: every WebUI this file serves is behind a flag, and on
+// Android they can all be off at once - then there is no host to match and
+// nothing to construct.
+#if !BUILDFLAG(IS_ANDROID) || BUILDFLAG(ENABLE_TOR) || \
+    BUILDFLAG(ENABLE_BRAVE_REWARDS) || BUILDFLAG(ENABLE_SKUS)
+#define GROWSER_HAS_BRAVE_WEBUI 1
+#endif
+
+#if defined(GROWSER_HAS_BRAVE_WEBUI)
 WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
-  std::string_view host = url.host();
+  // Growser-270/274/275: read by the flag-guarded arms below, all of which
+  // can be compiled out at once.
+  [[maybe_unused]] std::string_view host = url.host();
   Profile* profile = Profile::FromBrowserContext(
       web_ui->GetWebContents()->GetBrowserContext());
   CHECK(profile);
@@ -157,6 +172,8 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
 // Returns a function that can be used to create the right type of WebUI for a
 // tab, based on its URL. Returns NULL if the URL doesn't have WebUI associated
 // with it.
+#endif  // defined(GROWSER_HAS_BRAVE_WEBUI)
+
 WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
                                              Profile* profile,
                                              const GURL& url) {
@@ -170,6 +187,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
     return nullptr;
   }
 
+#if defined(GROWSER_HAS_BRAVE_WEBUI)
   if (
 #if BUILDFLAG(ENABLE_BRAVE_NEWS) && !BUILDFLAG(IS_ANDROID)
       (base::FeatureList::IsEnabled(
@@ -199,6 +217,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
       false) {
     return &NewWebUI;
   }
+#endif  // defined(GROWSER_HAS_BRAVE_WEBUI)
 
   return nullptr;
 }

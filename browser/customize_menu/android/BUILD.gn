@@ -3,6 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//build/config/android/rules.gni")
 
 android_library("java") {
@@ -16,7 +17,6 @@ android_library("java") {
     ":java_resources",
     "//base:base_java",
     "//brave/build/android:android_brave_strings_grd",
-    "//brave/third_party/android_deps:com_brave_playlist_java",
     "//chrome/android:chrome_app_java_resources",
     "//chrome/browser/flags:java",
     "//chrome/browser/preferences:java",
@@ -29,6 +29,11 @@ android_library("java") {
     "//third_party/androidx:androidx_preference_preference_java",
     "//ui/android:ui_no_recycler_view_java",
   ]
+
+  # Growser-273: a resource overlay only the playlist needs.
+  if (enable_playlist) {
+    deps += [ "//brave/third_party/android_deps:com_brave_playlist_java" ]
+  }
 
   resources_package = "org.chromium.brave.browser.customize_menu"
 }

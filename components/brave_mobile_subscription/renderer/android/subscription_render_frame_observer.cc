@@ -14,7 +14,10 @@
 #include "base/no_destructor.h"
 #include "base/strings/strcat.h"
 #include "base/strings/utf_string_conversions.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/components/ai_chat/core/common/features.h"
+#endif
 #include "brave/components/brave_origin/features.h"
 #include "brave/components/skus/renderer/skus_utils.h"
 #include "brave/gin/converter_specializations.h"
@@ -66,6 +69,7 @@ bool SubscriptionRenderFrameObserver::EnsureConnected() {
   }
 #endif
 
+#if BUILDFLAG(ENABLE_AI_CHAT)
   if (ai_chat::features::IsAIChatEnabled() && product_ == Product::kLeo) {
     if (!ai_chat_subscription_.is_bound()) {
       render_frame()->GetBrowserInterfaceBroker().GetInterface(
@@ -73,6 +77,7 @@ bool SubscriptionRenderFrameObserver::EnsureConnected() {
     }
     bound |= ai_chat_subscription_.is_bound();
   }
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
   if (base::FeatureList::IsEnabled(brave_origin::features::kBraveOrigin) &&
       product_ == Product::kOrigin) {
@@ -114,6 +119,7 @@ void SubscriptionRenderFrameObserver::DidCreateScriptContext(
                          weak_factory_.GetWeakPtr()));
     }
 #endif
+#if BUILDFLAG(ENABLE_AI_CHAT)
   } else if (product_ == Product::kLeo) {
     if (ai_chat_subscription_.is_bound()) {
       // Inject only linkResult object on the
@@ -128,6 +134,7 @@ void SubscriptionRenderFrameObserver::DidCreateScriptContext(
             weak_factory_.GetWeakPtr()));
       }
     }
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
   } else if (product_ == Product::kOrigin) {
     if (origin_subscription_.is_bound()) {
       if (page_ == Page::kResultLandingPage) {
@@ -203,10 +210,14 @@ void SubscriptionRenderFrameObserver::SetLinkStatus(
     return;
   }
 
+#if BUILDFLAG(ENABLE_AI_CHAT)
   if (product_ == Product::kLeo && ai_chat_subscription_.is_bound()) {
     ai_chat_subscription_->SetLinkStatus(
         status_dict.FindInt("status").value_or(0));
-  } else if (product_ == Product::kOrigin && origin_subscription_.is_bound()) {
+    return;
+  }
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
+  if (product_ == Product::kOrigin && origin_subscription_.is_bound()) {
     origin_subscription_->SetLinkStatus(
         status_dict.FindInt("status").value_or(0));
   }

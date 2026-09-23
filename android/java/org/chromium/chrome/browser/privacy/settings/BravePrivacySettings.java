@@ -33,7 +33,6 @@ import org.chromium.chrome.browser.BraveRelaunchUtils;
 import org.chromium.chrome.browser.BraveRewardsPolicy;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.browsing_data.BraveClearBrowsingDataFragment;
-import org.chromium.chrome.browser.crypto_wallet.BraveWalletPolicy;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.metrics.ChangeMetricsReportingStateCalledFrom;
 import org.chromium.chrome.browser.metrics.UmaSessionStats;
@@ -532,8 +531,9 @@ public class BravePrivacySettings extends PrivacySettings {
         removePreferenceIfPresent(PREF_PRIVACY_GUIDE);
         removePreferenceIfPresent(PREF_PASSWORD_LEAK_DETECTION);
 
-        // Hide decentralized DNS settings when wallet is disabled by policy
-        if (BraveWalletPolicy.isDisabledByPolicy(getProfile())) {
+        // Growser-275: the wallet is out of the product, and decentralized DNS
+        // went with it.
+        {
             removePreferenceIfPresent(PREF_UNSTOPPABLE_DOMAINS);
             removePreferenceIfPresent(PREF_ENS);
             removePreferenceIfPresent(PREF_SNS);
@@ -1097,8 +1097,8 @@ public class BravePrivacySettings extends PrivacySettings {
                         indexData.removeEntryForKey(frag, PREF_HTTPS_UPGRADE);
                     }
 
-                    // Policy-based removals
-                    if (BraveWalletPolicy.isDisabledByPolicy(profile)) {
+                    // Growser-275: no wallet, so no decentralized DNS rows.
+                    {
                         indexData.removeEntryForKey(frag, PREF_UNSTOPPABLE_DOMAINS);
                         indexData.removeEntryForKey(frag, PREF_ENS);
                         indexData.removeEntryForKey(frag, PREF_SNS);

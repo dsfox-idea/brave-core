@@ -27,7 +27,6 @@ import org.chromium.chrome.browser.BraveRewardsObserver;
 import org.chromium.chrome.browser.BraveRewardsPolicy;
 import org.chromium.chrome.browser.appearance.settings.AppearanceSettingsFragment;
 import org.chromium.chrome.browser.bookmarks.bar.BookmarkBarUtils;
-import org.chromium.chrome.browser.brave_leo.BraveLeoPrefUtils;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.multiwindow.BraveMultiWindowDialogFragment;
 import org.chromium.chrome.browser.multiwindow.BraveMultiWindowUtils;
@@ -458,7 +457,8 @@ public class AppearancePreferences extends AppearanceSettingsFragment
      * to toolbar shortcut settings, so the flag will be set when the preference screen opens.
      */
     private void checkLeoPolicyForToolbarShortcut() {
-        boolean isDisabled = BraveLeoPrefUtils.isLeoDisabledByPolicy(getProfile());
+        // Growser-270: Leo is out of the product, so the shortcut never offers it.
+        boolean isDisabled = true;
         BraveRadioButtonGroupAdaptiveToolbarPreference.setLeoDisabledByPolicy(isDisabled);
         // If Leo was selected and is now disabled, reset to default
         if (isDisabled

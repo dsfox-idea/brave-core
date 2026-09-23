@@ -15,8 +15,6 @@ import org.chromium.base.Callback;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.browser.app.BraveActivity;
-import org.chromium.chrome.browser.brave_leo.BraveLeoPrefUtils;
-import org.chromium.chrome.browser.brave_leo.BraveLeoUtils;
 import org.chromium.chrome.browser.lifecycle.ActivityLifecycleDispatcher;
 import org.chromium.chrome.browser.omnibox.DeferredIMEWindowInsetApplicationCallback;
 import org.chromium.chrome.browser.omnibox.LocationBarDataProvider;
@@ -201,16 +199,14 @@ class BraveAutocompleteMediator extends AutocompleteMediator
 
     @Override
     public boolean isLeoEnabled() {
-        Tab tab = mActivityTabSupplier.get();
-        Profile profile = tab != null ? tab.getProfile() : null;
-        return BraveLeoPrefUtils.isLeoEnabled()
-                && !BraveLeoPrefUtils.isLeoDisabledByPolicy(profile);
+        // Growser-270: Leo is out of the product.
+        return false;
     }
 
     @Override
     public void openLeoQuery(WebContents webContents, String conversationUuid, String query) {
+        // Growser-270: nothing to open; isLeoEnabled() never answers true.
         mDelegate.clearOmniboxFocus();
-        BraveLeoUtils.openLeoQuery(webContents, conversationUuid, query, true);
     }
 
     @Override
