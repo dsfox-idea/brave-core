@@ -133,12 +133,8 @@
         android:order="18"
         android:icon="@drawable/ic_window_tab_new"
         android:title="@string/prefs_new_tab_page"/>
-    <org.chromium.components.browser_ui.settings.ChromeBasePreference
-        android:fragment="org.chromium.chrome.browser.settings.BraveSyncScreensPreference"
-        android:key="brave_sync_layout"
-        android:order="22"
-        android:icon="@drawable/ic_product_sync"
-        android:title="@string/sync_category_title"/>
+    <!-- Growser-294: Sync is not offered - its server refuses us (#79), as on
+         the desktop (#78) and iOS (#293), until our own exists (#43). -->
     <Preference
         android:fragment="org.chromium.chrome.browser.language.settings.BraveLanguageSettings"
         android:key="brave_languages"

@@ -89,7 +89,6 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
     private static final String PREF_BRAVE_SEARCH_ENGINES = "brave_search_engines";
     @VisibleForTesting static final String PREF_BRAVE_NEWS_V2 = "brave_news_v2";
     private static final String PREF_BRAVE_PLAYLIST = "brave_playlist";
-    private static final String PREF_SYNC = "brave_sync_layout";
     private static final String PREF_PASSWORDS = "passwords";
     private static final String PREF_NOTIFICATIONS = "notifications";
     private static final String PREF_PAYMENT_METHODS = "autofill_payment_methods";
@@ -342,7 +341,7 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
             removePreferenceIfPresent(PREF_HOME_SCREEN_WIDGET);
         }
 
-        setPreferenceOrder(PREF_SYNC, ++generalOrder);
+        // Growser-294: no Sync row.
         setPreferenceOrder(PREF_BRAVE_STATS, ++generalOrder);
         // if notification is not available (eg. for emulators)
         if (findPreference(PREF_NOTIFICATIONS) != null) {
