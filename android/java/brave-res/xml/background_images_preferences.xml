@@ -33,9 +33,7 @@
             android:key="show_top_sites"
             android:title="@string/show_top_sites" />
 
-        <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
-            android:key="show_brave_stats"
-            android:title="@string/show_brave_stats" />
+        <!-- Growser-305: no stats card on the new tab page, as on the desktop. -->
 
     </PreferenceCategory>
 

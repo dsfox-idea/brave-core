@@ -29,13 +29,15 @@ public class SponsoredImageUtil {
     private static final List<BackgroundImage> sBackgroundImages =
             new ArrayList<BackgroundImage>(
                     Arrays.asList(
+                            // Growser-305: the desktop's photo (#90), credited and linked
+                            // the way the owner asked.
                             new BackgroundImage(
-                                    R.drawable.dylan_malval_sea_min,
-                                    1300,
+                                    R.drawable.growser_bay_01,
+                                    1280,
                                     720,
                                     new ImageCredit(
-                                            "Dylan Malval",
-                                            "https://www.instagram.com/vass_captures/"))));
+                                            "Dmitry Golubnichiy",
+                                            "https://www.flickr.com/photos/dsfox/7487121242"))));
 
     private static int sBackgroundImageIndex = getRandomIndex(sBackgroundImages.size());
 

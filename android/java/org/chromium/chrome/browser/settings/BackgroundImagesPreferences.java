@@ -45,7 +45,7 @@ public class BackgroundImagesPreferences extends BravePreferenceFragment
     public static final String PREF_SHOW_BACKGROUND_IMAGES = "show_background_images";
     public static final String PREF_SHOW_SPONSORED_IMAGES = "show_sponsored_images";
     public static final String PREF_SHOW_TOP_SITES = "show_top_sites";
-    public static final String PREF_SHOW_BRAVE_STATS = "show_brave_stats";
+    // Growser-305: PREF_SHOW_BRAVE_STATS left with the stats card.
     public static final String PREF_OPENING_SCREEN = "opening_screen_option";
     public static final String PREF_OPENING_SCREEN_CATEGORY = "opening_screen";
 
@@ -56,7 +56,6 @@ public class BackgroundImagesPreferences extends BravePreferenceFragment
 
     private ChromeSwitchPreference mShowBackgroundImagesPref;
     private ChromeSwitchPreference mShowSponsoredImagesPref;
-    private ChromeSwitchPreference mShowBraveStatsPref;
     private ChromeSwitchPreference mShowTopSitesPref;
     private BraveTextButtonPreference mLearnMorePreference;
     private BraveRadioButtonGroupOpeningScreenPreference mOpeningScreenPref;
@@ -101,12 +100,6 @@ public class BackgroundImagesPreferences extends BravePreferenceFragment
             mShowTopSitesPref.setEnabled(true);
             mShowTopSitesPref.setChecked(NtpUtil.shouldDisplayTopSites());
             mShowTopSitesPref.setOnPreferenceChangeListener(this);
-        }
-        mShowBraveStatsPref = (ChromeSwitchPreference) findPreference(PREF_SHOW_BRAVE_STATS);
-        if (mShowBraveStatsPref != null) {
-            mShowBraveStatsPref.setEnabled(true);
-            mShowBraveStatsPref.setChecked(NtpUtil.shouldDisplayBraveStats());
-            mShowBraveStatsPref.setOnPreferenceChangeListener(this);
         }
 
         // Initialize Opening Screen preference
@@ -161,8 +154,6 @@ public class BackgroundImagesPreferences extends BravePreferenceFragment
             BraveRelaunchUtils.askForRelaunch(getActivity());
         } else if (PREF_SHOW_TOP_SITES.equals(key)) { // Growser-271: no sponsored row
             NtpUtil.setDisplayTopSites((boolean) newValue);
-        } else if (PREF_SHOW_BRAVE_STATS.equals(key)) {
-            NtpUtil.setDisplayBraveStats((boolean) newValue);
         } else if (PREF_OPENING_SCREEN.equals(key)) {
             int option = (int) newValue;
             int previousOption =

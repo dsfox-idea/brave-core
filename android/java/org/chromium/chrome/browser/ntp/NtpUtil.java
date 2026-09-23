@@ -20,16 +20,7 @@ public class NtpUtil {
                         BackgroundImagesPreferences.PREF_SHOW_TOP_SITES, shouldDisplayTopSites);
     }
 
-    public static boolean shouldDisplayBraveStats() {
-        return ChromeSharedPreferences.getInstance()
-                .readBoolean(BackgroundImagesPreferences.PREF_SHOW_BRAVE_STATS, true);
-    }
-
-    public static void setDisplayBraveStats(boolean shouldDisplayBraveStats) {
-        ChromeSharedPreferences.getInstance()
-                .writeBoolean(
-                        BackgroundImagesPreferences.PREF_SHOW_BRAVE_STATS, shouldDisplayBraveStats);
-    }
+    // Growser-305: the stats card's show/hide pair left with the card.
 
     // Growser-271: shouldShowRewardsIcon() left with rewards.
 }

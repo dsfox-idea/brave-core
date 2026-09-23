@@ -43,7 +43,6 @@ import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.app.BraveActivity;
-import org.chromium.chrome.browser.brave_stats.BraveStatsUtil;
 import org.chromium.chrome.browser.ntp_background_images.NTPBackgroundImagesBridge;
 import org.chromium.chrome.browser.ntp_background_images.model.NTPImage;
 import org.chromium.chrome.browser.ntp_background_images.model.SponsoredTab;
@@ -68,8 +67,8 @@ import java.util.function.Supplier;
 
 @SuppressWarnings("UseSharedPreferencesManagerFromChromeCheck")
 @NullMarked
-public class BraveNewTabPageLayout extends NewTabPageLayout
-        implements OnBraveNtpListener { // Growser-272: no news controller
+// Growser-272/305: no news controller, and no stats card to listen to.
+public class BraveNewTabPageLayout extends NewTabPageLayout {
     private static final String TAG = "BraveNewTabPage";
 
     private @Nullable ViewGroup mMvTilesContainerLayout;
@@ -106,7 +105,6 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
 
     private SharedPreferences.@Nullable OnSharedPreferenceChangeListener mPreferenceListener;
     private boolean mIsTopSitesEnabled;
-    private boolean mIsBraveStatsEnabled;
     private ViewTreeObserver.@Nullable OnGlobalLayoutListener mBgImageViewOnGlobalLayoutListener;
 
     private @Nullable NewTabTakeoverSafeAreaReporter mSafeAreaReporter;
@@ -117,15 +115,6 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
 
     protected void updateTileGridPlaceholderVisibility() {
         // This function is kept empty to avoid placeholder implementation
-    }
-
-    @Override
-    public void checkForBraveStats() {
-        if (OnboardingPrefManager.getInstance().isBraveStatsEnabled()) {
-            BraveStatsUtil.showBraveStats();
-        } else {
-            ((BraveActivity) mActivity).showOnboardingV2(false);
-        }
     }
 
     @EnsuresNonNull({"mMvTilesContainerLayout"})
@@ -161,8 +150,7 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
                                                         () -> {
                                                             assertNonNull(mNtpAdapter);
                                                             mNtpAdapter.notifyItemRangeChanged(
-                                                                    mNtpAdapter.getStatsCount(),
-                                                                    2); // Growser-272
+                                                                    0, 2); // Growser-272/305
                                                         });
                                     }
                                 });
@@ -221,15 +209,14 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
         assertNonNull(mRecyclerView);
 
         mIsTopSitesEnabled = NtpUtil.shouldDisplayTopSites();
-        mIsBraveStatsEnabled = NtpUtil.shouldDisplayBraveStats();
 
         if (mNtpAdapter == null) {
             if (mActivity != null && !mActivity.isDestroyed() && !mActivity.isFinishing()) {
                 // Growser-272: no feed to hand the adapter.
-                mNtpAdapter = new BraveNtpAdapter(mActivity, this, mMvTilesContainerLayout,
+                mNtpAdapter = new BraveNtpAdapter(mActivity, mMvTilesContainerLayout,
                         mNtpImageGlobal, mSponsoredTab, mWallpaper, mSponsoredLogo,
                         mNTPBackgroundImagesBridge, mRecyclerView.getHeight(),
-                        mIsTopSitesEnabled, mIsBraveStatsEnabled);
+                        mIsTopSitesEnabled);
 
                 mRecyclerView.setAdapter(mNtpAdapter);
 
@@ -244,7 +231,6 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
         } else {
             mNtpAdapter.setRecyclerViewHeight(mRecyclerView.getHeight());
             mNtpAdapter.setTopSitesEnabled(mIsTopSitesEnabled);
-            mNtpAdapter.setBraveStatsEnabled(mIsBraveStatsEnabled);
         }
 
         if (mNtpAdapter == null) return;
@@ -344,9 +330,7 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
                                                                             + tab.getId(),
                                                                     0);
 
-                                            if (itemPosition
-                                                    == mNtpAdapter.getStatsCount()
-                                                            + mNtpAdapter.getTopSitesCount()) {
+                                            if (itemPosition == mNtpAdapter.getTopSitesCount()) {
                                                 offsetPosition -=
                                                         mNtpAdapter.getTopMarginImageCredit();
                                             }
@@ -375,11 +359,6 @@ public class BraveNewTabPageLayout extends NewTabPageLayout
                         assertNonNull(mNtpAdapter);
                         mIsTopSitesEnabled = NtpUtil.shouldDisplayTopSites();
                         mNtpAdapter.setTopSitesEnabled(mIsTopSitesEnabled);
-                    } else if (TextUtils.equals(
-                            key, BackgroundImagesPreferences.PREF_SHOW_BRAVE_STATS)) {
-                        assertNonNull(mNtpAdapter);
-                        mIsBraveStatsEnabled = NtpUtil.shouldDisplayBraveStats();
-                        mNtpAdapter.setBraveStatsEnabled(mIsBraveStatsEnabled);
                     }
                 };
     }
