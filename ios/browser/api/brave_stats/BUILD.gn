@@ -3,8 +3,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
+import("//brave/browser/brave_stats/buildflags.gni")
 import("//brave/components/brave_ads/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//build/buildflag_header.gni")
+
+# Growser-291: the desktop's switch for the usage ping, for the iOS bridge. The
+# desktop's own header lives beside targets iOS cannot load.
+buildflag_header("buildflags") {
+  header = "buildflags.h"
+  flags = [ "ENABLE_BRAVE_STATS_UPDATER=$enable_brave_stats_updater" ]
+}
 
 source_set("brave_stats") {
   sources = [
@@ -13,8 +22,9 @@ source_set("brave_stats") {
     "brave_stats.mm",
   ]
   deps = [
-    "//brave/components/brave_ads/buildflags",
+    ":buildflags",
     "//base",
+    "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_stats/browser",
     "//brave/components/brave_stats/browser:buildflags",
     "//brave/components/brave_wallet/common/buildflags",

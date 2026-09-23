@@ -15,6 +15,7 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/serp_metrics/pref_names.h"
 #include "brave/components/webcompat_reporter/buildflags/buildflags.h"
+#include "brave/ios/browser/api/brave_stats/buildflags.h"
 #include "components/prefs/pref_service.h"
 #include "ios/chrome/browser/shared/model/application_context/application_context.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
@@ -44,16 +45,30 @@ NSString* const kWebcompatReportEndpoint =
   return self;
 }
 
+// Growser-291: with the usage ping compiled out on the desktop (#38), iOS
+// reports it disabled and managed. The Swift DAU ping and both referral
+// requests already ask isStatsReportingEnabled before sending anything, and the
+// settings toggle hides itself for a managed pref.
 - (BOOL)isStatsReportingManaged {
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   return _localPrefs->IsManagedPreference(kStatsReportingEnabled);
+#else
+  return YES;
+#endif
 }
 
 - (BOOL)isStatsReportingEnabled {
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   return _localPrefs->GetBoolean(kStatsReportingEnabled);
+#else
+  return NO;
+#endif
 }
 
 - (void)setStatsReportingEnabled:(BOOL)statsReportingEnabled {
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   _localPrefs->SetBoolean(kStatsReportingEnabled, statsReportingEnabled);
+#endif
 }
 
 - (BOOL)isNotificationAdsEnabled {
