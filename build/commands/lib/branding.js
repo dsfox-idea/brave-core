@@ -673,6 +673,29 @@ const update = () => {
       [androidIconBaseSource]: [androidIconBaseDest],
     }
 
+    // Growser-266: the channel set's fre_product_logo.png lands in
+    // chrome/android/java/res_chromium above, which no GN target reads. Since
+    // Chromium 154 the logo the payment sheet, touch-to-fill and the custom
+    // tab notice draw comes from components/browser_ui/styles, so each
+    // density's copy goes there too.
+    const freLogoDest = path.join(
+      config.srcDir,
+      'components',
+      'browser_ui',
+      'styles',
+      'android',
+      'java',
+      'res_chromium',
+    )
+    for (const density of fs.readdirSync(androidIconSource)) {
+      const freLogo = path.join(androidIconSource, density, 'fre_product_logo.png')
+      if (fs.existsSync(freLogo)) {
+        copyAndroidResourceMapping[freLogo] = [
+          path.join(freLogoDest, density, 'fre_product_logo.png'),
+        ]
+      }
+    }
+
     // Growser-265: the RED mark for every build that is not the one people
     // install - the Android half of #146/#162. Windows picks between two .ico
     // files in a resource script and macOS between two .icns in GN; Android
