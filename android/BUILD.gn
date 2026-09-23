@@ -143,8 +143,8 @@ android_resources("java_resources") {
     "java/brave-res/drawable-night/tablet_recent_tab_empty_state_illustration.xml",
     "java/brave-res/drawable-night/wallet_portfolio.xml",
     "java/brave-res/drawable-nodpi/eth.png",
-    # Growser-305: the desktop photo (#90).
-    "java/brave-res/drawable-nodpi/growser_bay_01.webp",
+    # Growser-309: the owner's photo for mobile.
+    "java/brave-res/drawable-nodpi/growser_mobile_01.webp",
     "java/brave-res/drawable-nodpi/ic_quick_action_search_and_bookmark_widget_preview.png",
     "java/brave-res/drawable-xhdpi/brave_ads_launch_graphic.png",
     "java/brave-res/drawable-xhdpi/brave_sync_btn_laptop.png",

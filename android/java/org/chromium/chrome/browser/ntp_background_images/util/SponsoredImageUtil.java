@@ -29,15 +29,15 @@ public class SponsoredImageUtil {
     private static final List<BackgroundImage> sBackgroundImages =
             new ArrayList<BackgroundImage>(
                     Arrays.asList(
-                            // Growser-305: the desktop's photo (#90), credited and linked
-                            // the way the owner asked.
+                            // Growser-305/309: the owner's photo for mobile, credited and
+                            // linked the way the owner asked; focal point = its centre.
                             new BackgroundImage(
-                                    R.drawable.growser_bay_01,
-                                    1280,
-                                    720,
+                                    R.drawable.growser_mobile_01,
+                                    340,
+                                    512,
                                     new ImageCredit(
                                             "Dmitry Golubnichiy",
-                                            "https://www.flickr.com/photos/dsfox/7487121242"))));
+                                            "https://www.flickr.com/photos/dsfox/7492378116"))));
 
     private static int sBackgroundImageIndex = getRandomIndex(sBackgroundImages.size());
 
