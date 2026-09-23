@@ -3,6 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/config.gni")
 
@@ -13,8 +14,8 @@ source_set("model") {
   ]
   deps = [
     "//base",
+    "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account:features",
-    "//brave/ios/browser/ai_chat",
     "//brave/ios/browser/api/webcompat_reporter",
     "//brave/ios/browser/brave_account",
     "//brave/ios/browser/brave_ads",
@@ -28,4 +29,7 @@ source_set("model") {
     "//brave/ios/browser/skus",
     "//brave/ios/browser/url_sanitizer",
   ]
+  if (enable_ai_chat) {  # Growser-279
+    deps += [ "//brave/ios/browser/ai_chat" ]
+  }
 }

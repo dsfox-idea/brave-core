@@ -5,7 +5,7 @@
 
 // This file is included into //ios/chrome/browser/flags/about_flags.mm
 
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/features.h"
 #include "brave/components/brave_origin/features.h"
@@ -217,6 +217,8 @@ const flags_ui::FeatureEntry::FeatureVariation
               brave_shields::features::kTransitionToUpstreamHttpsUpgrades),    \
       })
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/core/common/features.h"
 #define BRAVE_AI_CHAT_FEATURE_ENTRIES                                       \
   EXPAND_FEATURE_ENTRIES(                                                   \
       {                                                                     \
@@ -255,6 +257,9 @@ const flags_ui::FeatureEntry::FeatureVariation
           flags_ui::kOsIos,                                                 \
           FEATURE_VALUE_TYPE(ai_chat::features::kAIChatUserChoiceTool),     \
       })
+#else
+#define BRAVE_AI_CHAT_FEATURE_ENTRIES
+#endif
 
 #define BRAVE_WALLET_FEATURE_ENTRIES                                      \
   EXPAND_FEATURE_ENTRIES(                                                 \

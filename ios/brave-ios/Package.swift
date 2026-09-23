@@ -31,7 +31,7 @@ var package = Package(
     .library(name: "BraveStrings", targets: ["BraveStrings"]),
     .library(name: "BraveVPN", targets: ["BraveVPN"]),
     .library(name: "BraveNews", targets: ["BraveNews"]),
-    .library(name: "AIChat", targets: ["AIChat"]),
+    // Growser-279: no AIChat library.
     .library(name: "BraveStore", targets: ["BraveStore"]),
     .library(name: "Favicon", targets: ["Favicon"]),
     .library(name: "FaviconModels", targets: ["FaviconModels"]),
@@ -100,7 +100,7 @@ var package = Package(
         "BraveWidgetsModels",
         "BraveVPN",
         "BraveNews",
-        "AIChat",
+        // Growser-279: no AIChat.
         "BraveStore",
         "Onboarding",
         "Growth",
@@ -130,6 +130,9 @@ var package = Package(
         "Frontend/Settings/Debug/BraveTalkLogsView.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveTalkScriptHandler.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveTalkScript.js",
+        // Growser-279: Leo is out of the product, on the same terms.
+        "Frontend/Browser/BrowserViewController/BVC+AIChat.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Sandboxed/BraveLeoScriptHandler.swift",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
@@ -439,21 +442,8 @@ var package = Package(
       ],
       plugins: ["LoggerPlugin"]
     ),
-    .target(
-      name: "AIChat",
-      dependencies: [
-        "BraveCore",
-        "BraveShared",
-        "BraveStore",
-        "BraveStrings",
-        "BraveUI",
-        "DesignSystem",
-        "Preferences",
-        "Strings",
-        "Web",
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-279: the AIChat target is not declared, so Sources/AIChat is
+    // not built.
     .target(
       name: "BraveStore",
       dependencies: [

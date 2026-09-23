@@ -7,6 +7,7 @@ import("//brave/build/config.gni")
 import("//brave/build/ios/config.gni")
 import("//brave/build/ios/create_xcframework.gni")
 import("//brave/build/mac/tweak_info_plist.gni")
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/ai_chat/ios/browser/headers.gni")
 import("//brave/components/brave_shields/ios/browser/headers.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
@@ -80,14 +81,10 @@ group("brave_ios") {
 
 brave_core_public_headers = [
   "//brave/base/apple/base_value_bridge.h",
-  "//brave/components/ai_chat/ios/browser/ai_chat_associated_content_page_fetcher.h",
   "//brave/components/brave_wallet/ios/browser/wallet_page_handler_bridge.h",
   "//brave/ios/app/brave_core_main.h",
   "//brave/ios/app/brave_profile_controller.h",
   "//brave/ios/app/brave_core_switches.h",
-  "//brave/ios/browser/ai_chat/ai_chat_utils.h",
-  "//brave/ios/browser/ai_chat/ai_chat_settings_helper.h",
-  "//brave/ios/browser/ai_chat/ai_chat_ui_handler_bridge.h",
   "//brave/ios/browser/brave_account/brave_account_authentication_provider.h",
   "//brave/ios/browser/brave_account/brave_account_constants_bridge.h",
   "//brave/ios/browser/brave_account/brave_account_feature_bridge.h",
@@ -159,7 +156,6 @@ brave_core_public_headers = [
 ]
 
 brave_core_public_headers += ads_public_headers
-brave_core_public_headers += ai_chat_component_public_headers
 brave_core_public_headers += brave_domains_public_headers
 brave_core_public_headers += brave_shields_public_headers
 brave_core_public_headers += brave_shields_api_public_headers
@@ -208,6 +204,19 @@ brave_core_public_headers += brave_ios_web_view_public_headers
 if (enable_brave_talk) {
   brave_core_public_headers +=
       [ "//brave/ios/browser/brave_talk/brave_talk_pref_names_bridge.h" ]
+}
+
+# Growser-279: AI Chat is out of the product, and its API leaves BraveCore
+# with it. brave-core lists these unconditionally because nobody turns the
+# feature off on iOS; our .env does.
+if (enable_ai_chat) {
+  brave_core_public_headers += ai_chat_component_public_headers
+  brave_core_public_headers += [
+    "//brave/components/ai_chat/ios/browser/ai_chat_associated_content_page_fetcher.h",
+    "//brave/ios/browser/ai_chat/ai_chat_utils.h",
+    "//brave/ios/browser/ai_chat/ai_chat_settings_helper.h",
+    "//brave/ios/browser/ai_chat/ai_chat_ui_handler_bridge.h",
+  ]
 }
 
 action("brave_core_umbrella_header") {
@@ -262,7 +271,9 @@ ios_framework_bundle("brave_core_ios_framework") {
   ]
 
   deps += ads_public_deps
-  deps += ai_chat_component_public_deps
+  if (enable_ai_chat) {  # Growser-279
+    deps += ai_chat_component_public_deps
+  }
   deps += brave_wallet_public_deps
   deps += brave_shields_component_public_deps
   deps += rewards_public_deps

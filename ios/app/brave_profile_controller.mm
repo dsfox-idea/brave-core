@@ -8,11 +8,9 @@
 #include "base/check.h"
 #include "base/functional/callback_helpers.h"
 #include "base/memory/raw_ptr.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat+private.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat_delegate.h"
+#include "base/notreached.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
-#include "brave/ios/browser/ai_chat/ai_chat_service_factory.h"
-#include "brave/ios/browser/ai_chat/model_service_factory.h"
 #include "brave/ios/browser/api/bookmarks/brave_bookmarks_api+private.h"
 #include "brave/ios/browser/api/brave_stats/brave_stats+private.h"
 #include "brave/ios/browser/api/brave_wallet/brave_wallet_api+private.h"
@@ -77,6 +75,13 @@
 #if BUILDFLAG(IOS_CREDENTIAL_PROVIDER_ENABLED)
 #include "ios/chrome/browser/credential_provider/model/credential_provider_service_factory.h"
 #include "ios/chrome/browser/credential_provider/model/credential_provider_util.h"
+#endif
+
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/ios/browser/ai_chat+private.h"
+#include "brave/components/ai_chat/ios/browser/ai_chat_delegate.h"
+#include "brave/ios/browser/ai_chat/ai_chat_service_factory.h"
+#include "brave/ios/browser/ai_chat/model_service_factory.h"
 #endif
 
 @interface BraveProfileController () {
@@ -325,6 +330,7 @@
 }
 
 - (AIChat*)aiChatAPIWithDelegate:(id<AIChatDelegate>)delegate {
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   auto* modelService = ai_chat::ModelServiceFactory::GetForProfile(_profile);
   auto* service = ai_chat::AIChatServiceFactory::GetForProfile(_profile);
   return [[AIChat alloc]
@@ -333,6 +339,12 @@
                profilePrefs:_profile->GetPrefs()
       sharedURLoaderFactory:_profile->GetSharedURLLoaderFactory()
                    delegate:delegate];
+#else
+  // Growser-279: AI Chat is compiled out, and so is every Swift caller of this
+  // method. The declaration stays because a public framework header cannot
+  // read a buildflag.
+  NOTREACHED();
+#endif
 }
 
 - (DefaultHostContentSettings*)defaultHostContentSettings {

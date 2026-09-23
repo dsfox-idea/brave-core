@@ -3,6 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 
@@ -31,13 +32,11 @@ source_set("web_view") {
   ]
   deps = [
     "//base",
-    "//brave/components/ai_chat/core/common",
-    "//brave/components/ai_chat/ios/browser",
+    "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account/mojom:mojom_objc",
     "//brave/components/brave_talk/buildflags",
     "//brave/components/playlist/core/common/buildflags",
     "//brave/components/serp_metrics:features",
-    "//brave/ios/browser/ai_chat",
     "//brave/ios/browser/api/profile",
     "//brave/ios/browser/api/url",
     "//brave/ios/browser/api/web_view/autofill",
@@ -81,6 +80,13 @@ source_set("web_view") {
     "//ios/web_view/framework:web_view_sources",
     "//net",
   ]
+  if (enable_ai_chat) {  # Growser-279
+    deps += [
+      "//brave/components/ai_chat/core/common",
+      "//brave/components/ai_chat/ios/browser",
+      "//brave/ios/browser/ai_chat",
+    ]
+  }
   if (enable_brave_talk) {
     deps += [ "//brave/ios/browser/brave_talk" ]
   }

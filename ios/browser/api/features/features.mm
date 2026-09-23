@@ -6,8 +6,9 @@
 #include "features.h"
 
 #include "base/memory/raw_ptr.h"
+#include "base/notreached.h"
 #include "base/strings/sys_string_conversions.h"
-#include "brave/components/ai_chat/core/common/features.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/features.h"
 #include "brave/components/brave_news/common/features.h"
 #include "brave/components/brave_origin/features.h"
@@ -37,6 +38,10 @@
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
 #include "brave/components/brave_wallet/common/features.h"
 #include "brave/ios/browser/brave_wallet/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/core/common/features.h"
 #endif
 
 @interface Feature () {
@@ -76,6 +81,7 @@
 
 // MARK: - Brave Features
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
 + (Feature*)kAIChat {
   return [[Feature alloc] initWithFeature:&ai_chat::features::kAIChat];
 }
@@ -83,6 +89,17 @@
 + (Feature*)kAIChatHistory {
   return [[Feature alloc] initWithFeature:&ai_chat::features::kAIChatHistory];
 }
+#else
+// The declarations stay: a public framework header cannot read a buildflag.
+// Nothing calls these with AI Chat compiled out.
++ (Feature*)kAIChat {
+  NOTREACHED();
+}
+
++ (Feature*)kAIChatHistory {
+  NOTREACHED();
+}
+#endif
 
 + (Feature*)kAdblockOverrideRegexDiscardPolicy {
   return

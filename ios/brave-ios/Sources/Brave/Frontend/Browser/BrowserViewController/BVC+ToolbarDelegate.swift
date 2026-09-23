@@ -345,7 +345,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       return
     }
 
-    let isPrivate = tabManager.selectedTab?.isPrivate ?? false
+    // Growser-279: no isPrivate here - it only decided whether to offer Leo.
     let container = SearchContainerViewController(
       tabManager: tabManager,
       bookmarkManager: bookmarkManager,
@@ -353,8 +353,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       searchEngines: profile.searchEngines,
       privateBrowsingManager: privateBrowsingManager,
       speechRecognizer: speechRecognizer,
-      isAIChatAvailable: !isPrivate && Preferences.AIChat.leoInQuickSearchBarEnabled.value
-        && AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs),
+      isAIChatAvailable: false,  // Growser-279: Leo is out of the product.
       isPlaylistAvailable: profileController.profile.prefs.isPlaylistAvailable,
       searchDelegate: self,
       delegate: self,

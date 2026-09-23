@@ -4,6 +4,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import("//brave/build/ios/mojom/mojom_wrappers.gni")
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/config.gni")
 import("//mojo/public/tools/bindings/mojom.gni")
@@ -35,11 +36,13 @@ test("ios_brave_unit_tests") {
     "//brave/ios/browser/brave_shields/request_blocking:unit_tests",
     "//brave/ios/browser/brave_shields/scriptlets:unit_tests",
     "//brave/ios/browser/serp_metrics:unit_tests",
-    "//brave/ios/browser/ui/webui/ai_chat:unit_tests",
 
     # This is required until we can sort out overridden deps symbols
     "//brave/ios/browser",
   ]
+  if (enable_ai_chat) {  # Growser-279
+    deps += [ "//brave/ios/browser/ui/webui/ai_chat:unit_tests" ]
+  }
 
   assert_no_deps = ios_assert_no_deps
 }

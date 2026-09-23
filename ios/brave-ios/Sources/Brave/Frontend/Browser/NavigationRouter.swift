@@ -12,7 +12,7 @@ import Shared
 // To open a URL use /open-url or to open a blank tab use /open-url with no params
 public enum DeepLink: String {
   case vpnCrossPlatformPromo = "vpn_promo"
-  case braveLeo = "brave_leo"
+  // Growser-279: no braveLeo ("brave_leo") - Leo is out of the product.
   case playlist
   case browserMenu = "menu"
   case setDefaultBrowser = "set-default"
@@ -92,8 +92,7 @@ public enum NavigationPath: Equatable {
     switch link {
     case .vpnCrossPlatformPromo:
       bvc.presentVPNInAppEventCallout()
-    case .braveLeo:
-      bvc.presentBraveLeoDeepLink()
+    // Growser-279: no .braveLeo.
     case .playlist:
       let helper = BrowserNavigationHelper(bvc)
       helper.openPlaylist()
@@ -220,13 +219,10 @@ public enum NavigationPath: Equatable {
         return
       }
       newTabPageController.scrollToBraveNews()
-    case .braveLeo:
-      bvc.popToBVC()
-      bvc.openBraveLeo()
-    case .braveLeoVoiceInput:
-      bvc.popToBVC {
-        bvc.presentLeoVoiceInput()
-      }
+    case .braveLeo, .braveLeoVoiceInput:
+      // Growser-279: never offered (WidgetShortcutExtension removes both), and
+      // there is no Leo to open.
+      break
     case .askBrave:
       guard let url = URL(string: "https://search.brave.com/ask") else { return }
       bvc.popToBVC()

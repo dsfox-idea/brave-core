@@ -3,6 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/chrome_build.gni")
 import("//ios/build/config.gni")
@@ -29,9 +30,7 @@ source_set("app") {
 
   deps = [
     "//base",
-    "//brave/components/ai_chat/core/browser",
-    "//brave/components/ai_chat/ios/browser",
-    "//brave/components/ai_chat/ios/common:mojom",
+    "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_component_updater/browser",
     "//brave/components/brave_shields/ios/browser",
     "//brave/components/brave_sync:constants",
@@ -46,7 +45,6 @@ source_set("app") {
     "//brave/components/variations",
     "//brave/ios/app/resources",
     "//brave/ios/browser",
-    "//brave/ios/browser/ai_chat",
     "//brave/ios/browser/api/ads",
     "//brave/ios/browser/api/ads:brave_ads_mojom_wrappers",
     "//brave/ios/browser/api/bookmarks",
@@ -134,6 +132,16 @@ source_set("app") {
 
   if (ios_enable_credential_provider_extension) {
     deps += [ "//ios/chrome/browser/credential_provider/model" ]
+  }
+
+  # Growser-279: brave-core never guarded AI Chat on iOS; our .env turns it off.
+  if (enable_ai_chat) {
+    deps += [
+      "//brave/components/ai_chat/core/browser",
+      "//brave/components/ai_chat/ios/browser",
+      "//brave/components/ai_chat/ios/common:mojom",
+      "//brave/ios/browser/ai_chat",
+    ]
   }
 
   frameworks = [

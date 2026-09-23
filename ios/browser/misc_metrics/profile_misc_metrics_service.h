@@ -9,6 +9,7 @@
 #include <memory>
 
 #include "base/memory/raw_ptr.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "components/keyed_service/core/keyed_service.h"
 
@@ -18,9 +19,11 @@ namespace web {
 class BrowserState;
 }  // namespace web
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
 namespace ai_chat {
 class AIChatMetrics;
 }  // namespace ai_chat
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
 namespace misc_metrics {
 
@@ -33,12 +36,16 @@ class ProfileMiscMetricsService : public KeyedService {
   ProfileMiscMetricsService& operator=(const ProfileMiscMetricsService&) =
       delete;
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::AIChatMetrics* GetAIChatMetrics();
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
  private:
   raw_ptr<PrefService> profile_prefs_;
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   std::unique_ptr<ai_chat::AIChatMetrics> ai_chat_metrics_;
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 };
 
 }  // namespace misc_metrics

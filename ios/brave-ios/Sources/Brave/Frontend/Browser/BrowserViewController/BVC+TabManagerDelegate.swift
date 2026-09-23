@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import AIChat
+// Growser-279: no AIChat.
 import BraveCore
 import BraveShared
 import BraveShields
@@ -41,31 +41,7 @@ extension BrowserViewController: TabManagerDelegate {
     tab.print = .init(tab: tab, baseViewController: self)
     tab.externalAppURLHelper = .init(tab: tab, browserViewController: self)
     tab.forcePaste = .init(tab: tab)
-    tab.aiChatWebUIHelper = .init(
-      tab: tab,
-      webDelegate: tab.leoTabHelper,
-      braveTalkJavascript: nil,  // Growser-278: no Brave Talk.
-      profileController: profileController
-    )
-    tab.aiChatWebUIHelper?.attachPrivacySensitiveTabHelpers = { detachedTab, _ in
-      detachedTab.detachedPrivacyHelper = .init(
-        tab: detachedTab
-      )
-    }
-    tab.aiChatWebUIHelper?.handler = { [weak self] tab, action in
-      self?.handleAIChatWebUIPageAction(tab, action: action)
-    }
-    tab.aiChatWebUIHelper?.tabsForPrivateMode = { [weak self] isPrivate in
-      // Technically we will never get a private tab here since AI Chat WebUI is not supported there
-      // but in case its called incorrectly, avoid returning any private tabs
-      guard let self, !isPrivate else { return [] }
-      return tabManager.allTabs.filter { !$0.isPrivate }
-    }
-    tab.aiChatWebUIHelper?.webDelegateForTab = { detachedTab in
-      /// If AIChat created a hidden tab for history or bookmarks, we need to
-      /// use it's `AIChatWebDelegate` to fetch content from.
-      detachedTab.leoTabHelper
-    }
+    // Growser-279: no tab.aiChatWebUIHelper - Leo is out of the product.
     tab.wallet = .init(tab: tab, braveWalletAPI: profileController.braveWalletAPI)
     tab.wallet?.delegate = self
     tab.walletWebUIHelper = .init(

@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import AIChat
+// Growser-279: no AIChat.
 import BraveCore
 import BraveNews
 import BraveShared
@@ -2675,8 +2675,8 @@ extension BrowserViewController: SearchViewControllerDelegate {
     _ searchViewController: SearchViewController,
     didSubmitAIChat query: String
   ) {
-    self.popToBVC()
-    self.openBraveLeo(with: query)
+    // Growser-279: unreachable - the search view offers no Leo button, because
+    // isAIChatAvailable is false wherever it is built.
   }
 
   func searchViewController(_ searchViewController: SearchViewController, didSelectURL url: URL) {
@@ -3326,55 +3326,7 @@ extension BrowserViewController {
   }
 }
 
-extension BrowserViewController {
-  func openBraveLeo(with query: String? = nil) {
-    if !AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs) {
-      let alert = UIAlertController(
-        title: Strings.AIChat.leoDisabledMessageTitle,
-        message: Strings.AIChat.leoDisabledMessageDescription,
-        preferredStyle: .alert
-      )
-      let action = UIAlertAction(title: Strings.OBErrorOkay, style: .default)
-      alert.addAction(action)
-      present(alert, animated: true)
-      return
-    }
-
-    if privateBrowsingManager.isPrivateBrowsing {
-      let alert = UIAlertController(
-        title: Strings.AIChat.leoDisabledPrivateBrowsingMessageTitle,
-        message: Strings.AIChat.leoDisabledPrivateBrowsingMessageDescription,
-        preferredStyle: .alert
-      )
-      let action = UIAlertAction(title: Strings.OBErrorOkay, style: .default)
-      alert.addAction(action)
-      present(alert, animated: true)
-      return
-    }
-
-    if let query,
-      let conversationURL = AIChatUtils.openLeoURL(
-        withQuerySubmitted: query,
-        profile: profileController.profile
-      )
-    {
-      tabManager.addTabAndSelect(URLRequest(url: conversationURL), isPrivate: false)
-    } else {
-      let tab = tabManager.addTab(
-        URLRequest(url: .webUI.aiChat),
-        // Ensure we don't start loading the WebUI until we assign the selected tab
-        zombie: true,
-        isPrivate: false
-      )
-      if let selectedTab = tabManager.selectedTab, let url = selectedTab.lastCommittedURL,
-        url.isWebPage(includeDataURIs: false)
-      {
-        tab.aiChatWebUIHelper?.associatedTab = selectedTab
-      }
-      tabManager.selectTab(tab)
-    }
-  }
-}
+// Growser-279: no openBraveLeo(with:) - Leo is out of the product.
 
 // Growser-278: no AIChatBraveTalkJavascript conformance - Leo has no call
 // transcript to read without Brave Talk.

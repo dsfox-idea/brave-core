@@ -37,10 +37,9 @@ extension WidgetShortcut {
     if !isWalletAvailable {
       options.remove(.wallet)
     }
-    if !AIChatUtils.isAIChatEnabled(for: prefs) {
-      options.remove(.braveLeo)
-      options.remove(.braveLeoVoiceInput)
-    }
+    // Growser-279: Leo is out of the product, so its shortcuts always go.
+    options.remove(.braveLeo)
+    options.remove(.braveLeoVoiceInput)
     return options
   }
 
@@ -60,10 +59,9 @@ extension WidgetShortcut {
     if !isWalletAvailable {
       disabled.insert(.wallet)
     }
-    if !AIChatUtils.isAIChatEnabled(for: prefs) {
-      disabled.insert(.braveLeo)
-      disabled.insert(.braveLeoVoiceInput)
-    }
+    // Growser-279: Leo is out of the product, so its shortcuts are always off.
+    disabled.insert(.braveLeo)
+    disabled.insert(.braveLeoVoiceInput)
     return disabled
   }
 

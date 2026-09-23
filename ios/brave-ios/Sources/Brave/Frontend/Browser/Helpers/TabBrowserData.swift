@@ -170,7 +170,7 @@ class TabBrowserData: NSObject, TabObserver {
   fileprivate var alertQueue = [JSAlertInfo]()
   weak var shownPromptAlert: UIAlertController?
 
-  private(set) lazy var leoTabHelper = BraveLeoScriptTabHelper(tab: tab)
+  // Growser-279: no leoTabHelper - BraveLeoScriptHandler is not built.
 
   /// A list of domains that we want to proceed to anyways regardless of any ad-blocking
   var proceedAnywaysDomainList: Set<String> = []

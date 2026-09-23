@@ -34,9 +34,7 @@ class UserScriptManager {
       scripts.append(.youtubeQuality)
     }
 
-    if Preferences.UserScript.leo.value {
-      scripts.append(.braveLeoAIChat)
-    }
+    // Growser-279: never .braveLeoAIChat - Leo is out of the product.
 
     return scripts
   }
@@ -168,7 +166,7 @@ class UserScriptManager {
         return Preferences.UserScript.youtubeQuality.value
           ? YoutubeQualityScriptHandler.userScript : nil
       case .braveLeoAIChat:
-        return Preferences.UserScript.leo.value ? BraveLeoScriptHandler.userScript : nil
+        return nil  // Growser-279: BraveLeoScriptHandler is not built.
       case .braveTranslate:
         return Preferences.UserScript.translate.value && FeatureList.kBraveTranslateEnabled.enabled
           ? BraveTranslateScriptHandler.userScript : nil

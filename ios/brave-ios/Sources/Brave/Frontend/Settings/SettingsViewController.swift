@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import AIChat
+// Growser-279: no AIChat.
 import BraveCore
 import BraveNews
 import BraveShared
@@ -901,11 +901,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
       )
     }
 
-    if !tabManager.privateBrowsingManager.isPrivateBrowsing
-      && AIChatUtils.isAIChatEnabled(for: braveCore.profile.prefs)
-    {
-      section.rows.append(leoSettingsRow)
-    }
+    // Growser-279: no Leo settings row.
 
     if braveCore.profile.prefs.isBraveVPNAvailable {
       section.rows.append(vpnSettingsRow)
@@ -1529,32 +1525,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     )
   }
 
-  private var leoSettingsRow: Row {
-    return Row(
-      text: Strings.leoMenuItem,
-      selection: { [unowned self] in
-        let model = AIChatSettingsViewModel(
-          helper: AIChatSettingsHelperImpl(profile: braveCore.profile),
-          skusService: Skus.SkusServiceFactory.get(profile: braveCore.profile)
-        )
-        let controller = UIHostingController(
-          rootView: AIChatSettingsView(viewModel: model)
-            .environment(
-              \.openURL,
-              OpenURLAction { [weak self] url in
-                guard let self = self else { return .handled }
-                self.settingsDelegate?.settingsOpenURLInNewTab(url)
-                self.dismiss(animated: true)
-                return .handled
-              }
-            )
-        )
-        self.navigationController?.pushViewController(controller, animated: true)
-      },
-      image: UIImage(braveSystemNamed: "leo.product.brave-leo"),
-      accessory: .disclosureIndicator
-    )
-  }
+  // Growser-279: no leoSettingsRow - Leo is out of the product.
 
   private lazy var autofillSection: Static.Section = {
     return Section(
@@ -1854,15 +1825,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
           cellClass: MultilineValue1Cell.self
         ),
         // Growser-278: no "Brave Talk Logs" row.
-        Row(
-          text: "Leo Logs",
-          selection: { [unowned self] in
-            let controller = UIHostingController(rootView: AIChatLeoSkusLogsView())
-            self.navigationController?.pushViewController(controller, animated: true)
-          },
-          accessory: .disclosureIndicator,
-          cellClass: MultilineValue1Cell.self
-        ),
+        // Growser-279: no "Leo Logs" row.
         Row(
           text: "Playlist Debug",
           selection: { [unowned self] in

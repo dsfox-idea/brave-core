@@ -3,9 +3,11 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+
 brave_flags_deps = [
   "//base",
-  "//brave/components/ai_chat/core/common",
+  "//brave/components/ai_chat/core/common/buildflags",
   "//brave/components/brave_ads/core",
   "//brave/components/brave_component_updater/browser:public",
   "//brave/components/brave_origin:features",
@@ -25,3 +27,8 @@ brave_flags_deps = [
   "//components/webui/flags",
   "//net",
 ]
+
+# Growser-279: brave-core never guarded AI Chat on iOS; our .env turns it off.
+if (enable_ai_chat) {
+  brave_flags_deps += [ "//brave/components/ai_chat/core/common" ]
+}

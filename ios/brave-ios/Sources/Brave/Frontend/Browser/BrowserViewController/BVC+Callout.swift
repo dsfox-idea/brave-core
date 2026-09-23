@@ -258,15 +258,7 @@ extension BrowserViewController {
     }
   }
 
-  func presentBraveLeoDeepLink() {
-    // If the onboarding has not completed we do not show any promo screens.
-    // This will most likely be the case for users who have not installed the app yet.
-    if Preferences.Onboarding.basicOnboardingCompleted.value != OnboardingState.completed.rawValue {
-      return
-    }
-
-    openBraveLeo()
-  }
+  // Growser-279: no presentBraveLeoDeepLink() - Leo is out of the product.
 
   func presentDataImporter() {
     // DataImportView is typically presented from inside settings, so we need to:

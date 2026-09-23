@@ -7,8 +7,10 @@
 
 #include <ios/chrome/browser/autocomplete/model/autocomplete_provider_client_impl.mm>
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
 void AutocompleteProviderClientImpl::OpenLeo(const std::u16string& query) {}
 
 bool AutocompleteProviderClientImpl::IsLeoProviderEnabled() {
   return false;
 }
+#endif

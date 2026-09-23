@@ -503,19 +503,7 @@ extension BrowserViewController {
         }
       )
     }
-    if AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs) {
-      actions.append(
-        .init(
-          id: .braveLeo,
-          attributes: isPrivateBrowsing ? .disabled : []
-        ) { @MainActor [unowned self] _ in
-          self.dismiss(animated: true) {
-            self.openBraveLeo()
-          }
-          return .none
-        }
-      )
-    }
+    // Growser-279: no Leo menu item.
     // Growser-278: no Brave Talk menu item.
     if profileController.profile.prefs.isBraveNewsAvailable {
       actions.append(

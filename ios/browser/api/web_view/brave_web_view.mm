@@ -13,14 +13,10 @@
 #include "base/functional/bind.h"
 #include "base/notreached.h"
 #include "base/strings/sys_string_conversions.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat_associated_content_page_fetcher.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat_tab_helper.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/serp_metrics/serp_metrics_feature.h"
-#include "brave/ios/browser/ai_chat/ai_chat_ui_handler_bridge_holder.h"
-#include "brave/ios/browser/ai_chat/tab_data_web_state_observer.h"
-#include "brave/ios/browser/ai_chat/tab_tracker_service_factory.h"
 #include "brave/ios/browser/api/web_view/autofill/brave_autofill_controller.h"
 #include "brave/ios/browser/api/web_view/autofill/brave_web_view_autofill_client.h"
 #include "brave/ios/browser/api/web_view/brave_web_frame_internal.h"
@@ -73,6 +69,14 @@
 #include "ios/chrome/browser/language/model/language_model_manager_factory.h"
 #include "ios/chrome/browser/language/model/url_language_histogram_factory.h"
 #include "ios/chrome/browser/passwords/model/ios_chrome_account_password_store_factory.h"
+
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/ios/browser/ai_chat_associated_content_page_fetcher.h"
+#include "brave/components/ai_chat/ios/browser/ai_chat_tab_helper.h"
+#include "brave/ios/browser/ai_chat/ai_chat_ui_handler_bridge_holder.h"
+#include "brave/ios/browser/ai_chat/tab_data_web_state_observer.h"
+#include "brave/ios/browser/ai_chat/tab_tracker_service_factory.h"
+#endif
 #include "ios/chrome/browser/passwords/model/ios_chrome_profile_password_store_factory.h"
 #include "ios/chrome/browser/passwords/model/password_controller.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
@@ -393,12 +397,14 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
   [super attachSecurityInterstitialHelpersToWebStateIfNecessary];
   AttachTabHelpers(self.webState);
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::UIHandlerBridgeHolder::CreateForWebState(self.webState);
   ai_chat::UIHandlerBridgeHolder::FromWebState(self.webState)
       ->SetBridge(self.aiChatUIHandler);
   ai_chat::AIChatTabHelper::CreateForWebState(self.webState);
   ai_chat::AIChatTabHelper::FromWebState(self.webState)
       ->SetPageFetcher(self.aiChatUIHandler);
+#endif
 
   brave_account::DialogModeHolder::CreateForWebState(self.webState);
   brave_account::DialogModeHolder::FromWebState(self.webState)
@@ -411,12 +417,14 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
 
   ProfileIOS* profile =
       ProfileIOS::FromBrowserState(self.webState->GetBrowserState());
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::TabTrackerService* tab_tracker_service =
       ai_chat::TabTrackerServiceFactory::GetForProfile(profile);
   if (tab_tracker_service) {
     ai_chat::TabDataWebStateObserver::CreateForWebState(self.webState,
                                                         *tab_tracker_service);
   }
+#endif
 
   brave_ads::AdsTabHelper::MaybeCreateForWebState(self.webState);
   if (base::FeatureList::IsEnabled(serp_metrics::kSerpMetricsFeature)) {
@@ -722,12 +730,14 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
     (id<AIChatUIHandlerBridge, AIChatAssociatedContentPageFetcher>)bridge {
   _aiChatUIHandler = bridge;
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::UIHandlerBridgeHolder::CreateForWebState(self.webState);
   ai_chat::UIHandlerBridgeHolder::FromWebState(self.webState)
       ->SetBridge(bridge);
   ai_chat::AIChatTabHelper::CreateForWebState(self.webState);
   ai_chat::AIChatTabHelper::FromWebState(self.webState)
       ->SetPageFetcher(self.aiChatUIHandler);
+#endif
 }
 
 @end

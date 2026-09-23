@@ -5,9 +5,7 @@
 
 #include "base/notreached.h"
 #include "base/version_info/channel.h"
-#include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
-#include "brave/components/ai_chat/core/browser/model_service.h"
-#include "brave/components/ai_chat/core/common/pref_names.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_account/prefs.h"
 #include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
@@ -41,6 +39,12 @@
 #include "components/metrics/metrics_pref_names.h"
 #include "components/pref_registry/pref_registry_syncable.h"
 #include "ios/chrome/common/channel_info.h"
+
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
+#include "brave/components/ai_chat/core/browser/model_service.h"
+#include "brave/components/ai_chat/core/common/pref_names.h"
+#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/pref_names.h"
@@ -90,8 +94,10 @@ void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
   de_amp::RegisterProfilePrefs(registry);
   debounce::DebounceService::RegisterProfilePrefs(registry);
   search_engines::RegisterProfilePrefs(registry);
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::prefs::RegisterProfilePrefs(registry);
   ai_chat::ModelService::RegisterProfilePrefs(registry);
+#endif
   brave_account::prefs::RegisterPrefs(registry);
   omnibox::RegisterBraveProfilePrefs(registry);
   brave_news::prefs::RegisterProfilePrefs(registry);
@@ -137,8 +143,10 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   ntp_background_images::NTPBackgroundImagesService::
       RegisterLocalStatePrefsForMigration(registry);
   brave_l10n::RegisterLocalStatePrefsForMigration(registry);
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::prefs::RegisterLocalStatePrefs(registry);
   ai_chat::AIChatMetrics::RegisterPrefs(registry);
+#endif
   ntp_background_images::RegisterLocalStatePrefs(registry);
   brave_shields::RegisterShieldsP3ALocalPrefs(registry);
   brave_origin::RegisterLocalStatePrefs(registry);

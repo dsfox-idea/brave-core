@@ -6,28 +6,36 @@
 #include "brave/ios/browser/misc_metrics/profile_misc_metrics_service.h"
 
 #include "base/metrics/histogram_macros.h"
-#include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "components/prefs/pref_service.h"
 #include "components/user_prefs/user_prefs.h"
 #include "ios/chrome/browser/shared/model/application_context/application_context.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
+
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
+#endif
 
 namespace misc_metrics {
 
 ProfileMiscMetricsService::ProfileMiscMetricsService(
     web::BrowserState* browser_state) {
   profile_prefs_ = user_prefs::UserPrefs::Get(browser_state);
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   auto* local_state = GetApplicationContext()->GetLocalState();
   if (profile_prefs_ && local_state) {
     ai_chat_metrics_ =
         std::make_unique<ai_chat::AIChatMetrics>(local_state, profile_prefs_);
   }
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 }
 
 ProfileMiscMetricsService::~ProfileMiscMetricsService() = default;
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
 ai_chat::AIChatMetrics* ProfileMiscMetricsService::GetAIChatMetrics() {
   return ai_chat_metrics_.get();
 }
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
 }  // namespace misc_metrics

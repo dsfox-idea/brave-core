@@ -342,7 +342,7 @@ extension BrowserViewController {
       URLPartinessScriptHandler(),
       FaviconScriptHandler(),
       YoutubeQualityScriptHandler(),
-      BraveLeoScriptHandler(),
+      // Growser-279: no BraveLeoScriptHandler.
       RequestBlockingContentScriptHandler(),
     ]
 
