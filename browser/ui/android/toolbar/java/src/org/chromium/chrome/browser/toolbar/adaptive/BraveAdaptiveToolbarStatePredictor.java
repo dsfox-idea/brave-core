@@ -48,7 +48,7 @@ public class BraveAdaptiveToolbarStatePredictor
             case AdaptiveToolbarButtonVariant.LEO:
                 return ChromeFeatureList.isEnabled(BraveFeatureList.AI_CHAT);
             case AdaptiveToolbarButtonVariant.WALLET:
-                return true;
+                return false; // Growser-275: the wallet is out of the product.
         }
 
         return BraveAdaptiveToolbarStatePredictorDummySuper.isValidSegment(variant);

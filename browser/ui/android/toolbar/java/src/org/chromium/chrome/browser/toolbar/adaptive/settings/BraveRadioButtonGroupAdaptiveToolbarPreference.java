@@ -79,6 +79,10 @@ public class BraveRadioButtonGroupAdaptiveToolbarPreference
         }
         mBraveWalletButton =
                 (RadioButtonWithDescription) holder.findViewById(R.id.adaptive_option_brave_wallet);
+        // Growser-275: the wallet is out of the product, so it is no shortcut.
+        if (mBraveWalletButton != null) {
+            mBraveWalletButton.setVisibility(View.GONE);
+        }
 
         super.onBindViewHolder(holder);
 
