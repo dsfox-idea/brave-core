@@ -6,30 +6,25 @@
     xmlns:aapt="http://schemas.android.com/aapt"
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="VectorRaster"
-    android:width="288dp"
-    android:height="288dp"
-    android:viewportWidth="288"
-    android:viewportHeight="288">
-  <group
-      android:name="brave_logo"
-      android:pivotX="144"
-      android:pivotY="144">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
   <path
-      android:pathData="M 174.28 100.75 A 52.80 52.80 0 1 0 196.80 144.00 M 196.80 144.00 L 150.57 144.00"
-      android:strokeWidth="18.05"
+      android:pathData="M 14.52 8.40 A 4.40 4.40 0 1 0 16.40 12.00 M 16.40 12.00 L 12.55 12.00"
+      android:strokeWidth="1.50"
       android:strokeLineCap="round"
       android:strokeLineJoin="round">
     <aapt:attr name="android:strokeColor">
       <gradient
-          android:startX="144"
+          android:startX="12"
           android:startY="0"
-          android:endX="144"
-          android:endY="288"
+          android:endX="12"
+          android:endY="24"
           android:type="linear">
         <item android:offset="0" android:color="#33C57B" />
         <item android:offset="1" android:color="#148C50" />
       </gradient>
     </aapt:attr>
   </path>
-  </group>
 </vector>

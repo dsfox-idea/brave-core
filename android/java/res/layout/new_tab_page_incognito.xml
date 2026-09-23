@@ -48,7 +48,7 @@
                 android:layout_width="@dimen/new_tab_page_incognito_logo_size"
                 android:layout_height="@dimen/new_tab_page_incognito_logo_size"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_social_brave_release_favicon_fullheight_color"
+                android:src="@drawable/ic_growser_brand"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintTop_toTopOf="@+id/title"
                 app:layout_constraintBottom_toBottomOf="@+id/title"
