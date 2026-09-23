@@ -166,7 +166,7 @@ class AppReviewManagerTests: XCTestCase {
     Preferences.Review.launchCount.reset()
     Preferences.Review.daysInUse.reset()
     Preferences.AppState.backgroundedCleanly.reset()
-    Preferences.VPN.expirationDate.value = nil
+    // Growser-280: no VPN expiration to reset.
     Preferences.Review.numberBookmarksAdded.reset()
     Preferences.Review.dateWalletConnectedToDapp.value = nil
     Preferences.Review.numberPlaylistItemsAdded.reset()
@@ -232,7 +232,7 @@ class AppReviewManagerTests: XCTestCase {
       Preferences.Review.numberBookmarksAdded.value = 1
       Preferences.Review.dateWalletConnectedToDapp.value = nil
       Preferences.Review.numberPlaylistItemsAdded.value = 3
-      Preferences.VPN.expirationDate.value = Date().addingTimeInterval(-5.days)
+      // Growser-280: no VPN expiration to fail with.
       Preferences.Chromium.syncOpenTabsEnabled.value = false
       Preferences.Chromium.syncEnabled.value = false
       return
