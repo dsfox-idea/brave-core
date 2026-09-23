@@ -3631,3 +3631,29 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Разрешать только при подключении к сети Wi-Fi";
 
+/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
+"EnableCrashReporterAlertMessage" = "Если произойдёт сбой или зависание, Growser может автоматически отправить анонимный диагностический отчёт, чтобы проблему исправили. Это всегда можно отключить в настройках.";
+"EnableCrashReporterAlertTitle" = "Включить автоматические отчёты о сбоях";
+"EnableCrashReporterConfirmButtonTitle" = "Включить";
+"EnableCrashReporterDenyButtonTitle" = "Не сейчас";
+"LeoVoiceInputMenuItem" = "Голосовой ввод Leo";
+"backgroundDownloadingSubtitle" = "%@";
+"backgroundDownloadingSubtitleWithExpectedSize" = "%@ из %@";
+"backgroundDownloadingTitleMultiDownload" = "Загружается файлов: %lld";
+"backgroundDownloadingTitleSingleDownload" = "Загрузка «%@»";
+"quickview.confirmation.alert.keep.button.title" = "Оставить быстрый просмотр";
+"quickview.confirmation.alert.message" = "Быстрый просмотр открывает ссылку, не уводя со страницы. Отключить его можно в любой момент в настройках.";
+"quickview.confirmation.alert.title" = "Открывать ссылки из переписки в быстром просмотре и дальше?";
+"quickview.confirmation.alert.turnOff.button.title" = "Отключить";
+"rewards.settingsResetConfirmationMessage" = "После сброса текущий профиль Growser Rewards будет удалён, а Growser Rewards — отключены.";
+"rewards.settingsResetConfirmationTitle" = "Сбросить Growser Rewards";
+"rewards.settingsResetTitle" = "Сбросить";
+"settings.sendCrashReportsDescription" = "Отправлять анонимные диагностические отчёты при сбое или зависании.";
+"settings.sendCrashReportsTitle" = "Отправлять отчёты о сбоях";
+"settings.sponsoredAdsEnabledDescription" = "Поддержите независимый интернет, в котором на первом месте пользователь, включив спонсорскую рекламу Growser. Эффективность рекламы измеряется конфиденциально, без вашей идентификации. [Подробнее](%@)";
+"settings.sponsoredAdsEnabledTitle" = "Включить спонсорскую рекламу";
+"tabGrid.privateBrowsingModeTitle" = "Приватные";
+"tabGrid.tabsCountFormatPlural" = "Вкладки: %lld";
+"tabGrid.tabsCountFormatSingular" = "Вкладки: %lld";
+"tabGrid.viewHistoryMenuItemLabel" = "История";
+"tabGrid.viewSyncedTabsMenuItemLabel" = "Синхронизация";

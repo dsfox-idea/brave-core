@@ -265,3 +265,11 @@
 /* A description shown an a page where the http page was blocked */
 "YourConnectionIsNotPrivate" = "Вы видите это предупреждение, потому что сайт не поддерживает HTTPS.";
 
+/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
+"CustomScriptletEmptyContentError" = "Скриптлет должен содержать код JavaScript";
+"CustomScriptletInvalidNameError" = "Недопустимое имя скриптлета";
+"shields.addNewScriptletTitle" = "Новый скриптлет";
+"shields.customScriptletContentSectionTitle" = "Содержимое";
+"shields.customScriptletContentWarning" = "Не вставляйте сюда код, который вы не понимаете или не проверили сами. С его помощью злоумышленники могут украсть ваши данные или получить контроль над устройством.";
+"shields.customScriptletNameSectionTitle" = "Название";
+"shields.editScriptletTitle" = "Изменить скриптлет";
