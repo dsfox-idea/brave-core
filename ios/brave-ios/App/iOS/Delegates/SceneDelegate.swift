@@ -7,7 +7,7 @@ import Brave
 import BraveCore
 import BraveNews
 import BraveShared
-import BraveVPN
+// Growser-280: no BraveVPN.
 import BraveWidgetsModels
 import BrowserIntentsModels
 import Combine
@@ -220,9 +220,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     AppState.shared.uptimeMonitor.pauseMonitoring()
   }
 
-  func sceneDidEnterBackground(_ scene: UIScene) {
-    BraveVPN.sendVPNWorksInBackgroundNotification()
-  }
+  // Growser-280: no sceneDidEnterBackground - it only sent the VPN's
+  // "works in the background" notification.
 
   func scene(_ scene: UIScene, openURLContexts contexts: Set<UIOpenURLContext>) {
     guard let scene = scene as? UIWindowScene else {
@@ -585,14 +584,7 @@ extension SceneDelegate {
 
       return
     case ActivityType.enableBraveVPN.identifier:
-      if let browserViewController = scene.browserViewController {
-        ActivityShortcutManager.shared.performShortcutActivity(
-          type: .enableBraveVPN,
-          using: browserViewController
-        )
-      }
-
-      return
+      return  // Growser-280: the VPN is out of the product.
     case ActivityType.openBraveNews.identifier:
       let isNewsAvailable =
         AppState.shared.braveCore.profileController?.profile.prefs.isBraveNewsAvailable ?? true
@@ -626,10 +618,7 @@ extension SceneDelegate {
 
     if let url = userActivity.webpageURL {
       switch UniversalLinkManager.universalLinkType(for: url, checkPath: false) {
-      case .buyVPN:
-        scene.browserViewController?.presentCorrespondingVPNViewController()
-        return
-      case .none:
+      case .buyVPN, .none:  // Growser-280: no VPN to buy - open it as a page.
         break
       }
 

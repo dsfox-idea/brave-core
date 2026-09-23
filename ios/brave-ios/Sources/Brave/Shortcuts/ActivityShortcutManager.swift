@@ -5,7 +5,7 @@
 
 import BraveCore
 import BraveNews
-import BraveVPN
+// Growser-280: no BraveVPN.
 import BrowserIntentsModels
 import CoreSpotlight
 import Data
@@ -187,20 +187,7 @@ public class ActivityShortcutManager: NSObject {
     case .clearBrowsingHistory:
       bvc.clearHistoryAndOpenNewTab()
     case .enableBraveVPN:
-      if !bvc.profileController.profile.prefs.isBraveVPNAvailable {
-        return
-      }
-      // need to stay in NTP for Brave VPN flow
-      openExternalNewTab(bvc.privateBrowsingManager.isPrivateBrowsing, false)
-
-      switch BraveVPN.vpnState {
-      case .notPurchased, .expired:
-        bvc.presentCorrespondingVPNViewController()
-      case .purchased(let connected):
-        if !connected {
-          BraveVPN.reconnect()
-        }
-      }
+      return  // Growser-280: the VPN is out of the product.
     case .openBraveNews:
       if !bvc.profileController.profile.prefs.isBraveNewsAvailable {
         return

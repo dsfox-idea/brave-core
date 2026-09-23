@@ -11,7 +11,7 @@ import Shared
 // Used by the App to navigate to different views.
 // To open a URL use /open-url or to open a blank tab use /open-url with no params
 public enum DeepLink: String {
-  case vpnCrossPlatformPromo = "vpn_promo"
+  // Growser-280: no vpnCrossPlatformPromo ("vpn_promo").
   // Growser-279: no braveLeo ("brave_leo") - Leo is out of the product.
   case playlist
   case browserMenu = "menu"
@@ -90,9 +90,7 @@ public enum NavigationPath: Equatable {
 
   private static func handleDeepLink(_ link: DeepLink, with bvc: BrowserViewController) {
     switch link {
-    case .vpnCrossPlatformPromo:
-      bvc.presentVPNInAppEventCallout()
-    // Growser-279: no .braveLeo.
+    // Growser-279: no .braveLeo. Growser-280: no .vpnCrossPlatformPromo.
     case .playlist:
       let helper = BrowserNavigationHelper(bvc)
       helper.openPlaylist()

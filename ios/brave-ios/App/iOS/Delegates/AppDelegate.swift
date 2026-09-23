@@ -10,7 +10,7 @@ import BraveShared
 import BraveShields
 import BraveStore
 // Growser-278: no BraveTalk.
-import BraveVPN
+// Growser-280: no BraveVPN.
 import BraveWallet
 import BraveWidgetsModels
 import Combine
@@ -69,8 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set the Safari UA for browsing.
     setUserAgent()
 
-    // Fetching details of GRDRegion for Automatic Region selection
-    BraveVPN.fetchLastUsedRegionDetail()
+    // Growser-280: no VPN region prefetch - the VPN is out of the product.
 
     // Start the keyboard helper to monitor and cache keyboard state.
     KeyboardHelper.defaultHelper.startObserving()
@@ -123,15 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Run migrations that need access to Data
     Migration.postDataLoadMigration()
 
-    // IAPs can trigger on the app as soon as it launches,
-    // for example when a previous transaction was not finished and is in pending state.
-    // Initializing the observer starts listening for transaction updates and purchase intents.
-    _ = BraveVPN.iapObserver
-    // Editing Product Promotion List
-    Task { @MainActor in
-      await BraveVPN.updateStorePromotionOrder()
-      await BraveVPN.hideActiveStorePromotion()
-    }
+    // Growser-280: no VPN in-app purchase observer or store promotions.
 
     // Override point for customization after application launch.
     var shouldPerformAdditionalDelegateHandling = true
@@ -250,10 +241,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       Preferences.DAU.installationDate.value = currentDate
       Preferences.P3A.installationDate.value = currentDate
 
-      // VPN credentials are kept in keychain and persist between app reinstalls.
-      // To avoid unexpected problems we clear all vpn keychain items.
-      // New set of keychain items will be created on purchase or iap restoration.
-      BraveVPN.clearCredentials()
+      // Growser-280: no VPN keychain items to clear.
 
       // Always load YouTube in Brave for new users
       Preferences.General.keepYouTubeInBrave.value = true

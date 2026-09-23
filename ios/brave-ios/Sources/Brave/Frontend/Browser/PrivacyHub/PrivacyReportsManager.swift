@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import BraveVPN
+// Growser-280: no BraveVPN.
 import Data
 import Foundation
 import Preferences
@@ -48,15 +48,8 @@ public struct PrivacyReportsManager {
 
   public static func scheduleVPNAlertsTask() {
     vpnAlertsTimer?.invalidate()
-
-    // Because fetching VPN alerts involves making a url request,
-    // the time interval to fetch them is longer than the local on-device blocked request processing.
-    let timeInterval = AppConstants.isOfficialBuild ? 5.minutes : 1.minutes
-    vpnAlertsTimer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { _ in
-      if Preferences.PrivacyReports.captureVPNAlerts.value {
-        BraveVPN.processVPNAlerts()
-      }
-    }
+    // Growser-280: nothing to schedule - VPN alerts come from the VPN, which is
+    // out of the product.
   }
 
   public static func clearAllData() {

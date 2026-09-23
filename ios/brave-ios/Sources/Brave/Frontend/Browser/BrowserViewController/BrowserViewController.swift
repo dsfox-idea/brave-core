@@ -9,7 +9,7 @@ import BraveShared
 import BraveShields
 // Growser-278: no BraveTalk.
 import BraveUI
-import BraveVPN
+// Growser-280: no BraveVPN.
 import BraveWallet
 import CertificateUtilities
 import CoreData
@@ -238,7 +238,7 @@ public class BrowserViewController: UIViewController {
   let notificationsPresenter = BraveNotificationsPresenter()
   var publisher: BraveCore.BraveRewards.PublisherInfo?
 
-  let vpnProductInfo = BraveVPNProductInfo()
+  // Growser-280: no vpnProductInfo.
 
   /// Window Protection instance which will be used for controller requires biometric authentication
   public var windowProtection: WindowProtection?
@@ -274,8 +274,7 @@ public class BrowserViewController: UIViewController {
   var processAddressBarTask: Task<(), Never>?
   var topToolbarDidPressReloadTask: Task<(), Never>?
 
-  /// In app purchase obsever for VPN Subscription action
-  let iapObserver: BraveVPNInAppPurchaseObserver
+  // Growser-280: no VPN in-app purchase observer.
 
   private let prefsChangeRegistrar: PrefChangeRegistrar
 
@@ -354,12 +353,10 @@ public class BrowserViewController: UIViewController {
       environment: BraveRewards.Configuration.current().environment
     )
 
-    iapObserver = BraveVPN.iapObserver
-
     super.init(nibName: nil, bundle: nil)
     didInit()
 
-    iapObserver.delegate = self
+    // Growser-280: no VPN in-app purchase observer.
 
     rewards.rewardsServiceDidStart = { [weak self] _ in
       self?.setupLedger()
@@ -484,9 +481,7 @@ public class BrowserViewController: UIViewController {
       [weak self] _ in
       self?.updateRewardsButtonState()
     }
-    prefsChangeRegistrar.addObserver(forPath: kManagedBraveVPNDisabledPrefName) { [weak self] _ in
-      self?.disconnectVPNIfDisabledByPolicy()
-    }
+    // Growser-280: no VPN policy observer.
     prefsChangeRegistrar.addObserver(forPath: kMediaBackgroundingEnabled) { [weak self] _ in
       guard let self else { return }
       tabManager.selectedTab?.browserData?.setScripts(scripts: [
@@ -539,7 +534,7 @@ public class BrowserViewController: UIViewController {
       self.defaultWalletChanged(for: .eth)
     }
 
-    disconnectVPNIfDisabledByPolicy()
+    // Growser-280: no disconnectVPNIfDisabledByPolicy().
 
     pageZoomListener = NotificationCenter.default.addObserver(
       forName: PageZoomView.notificationName,
@@ -565,7 +560,7 @@ public class BrowserViewController: UIViewController {
       self.recordAdsUsageType()
     }
     Preferences.PrivacyReports.captureShieldsData.observe(from: self)
-    Preferences.PrivacyReports.captureVPNAlerts.observe(from: self)
+    // Growser-280: no captureVPNAlerts observation.
 
     if rewards.rewardsAPI != nil {
       // Ledger was started immediately due to user having ads enabled
@@ -591,7 +586,7 @@ public class BrowserViewController: UIViewController {
 
     // P3A Record
     maybeRecordInitialShieldsP3A()
-    recordVPNUsageP3A(vpnEnabled: BraveVPN.isConnected)
+    // Growser-280: no VPN usage P3A.
     recordAccessibilityDisplayZoomEnabledP3A()
     recordAccessibilityDocumentsDirectorySizeP3A()
     ReaderModeTabHelper.recordTimeBasedNumberReaderModeUsedP3A(activated: false)
@@ -882,22 +877,7 @@ public class BrowserViewController: UIViewController {
     stopVoiceSearch()
   }
 
-  private func disconnectVPNIfDisabledByPolicy() {
-    if !profileController.profile.prefs.isBraveVPNAvailable,
-      BraveVPN.isConnected || BraveVPN.isConnecting
-    {
-      BraveVPN.disconnect(skipChecks: true)
-    }
-  }
-
-  @objc func vpnConfigChanged() {
-    // Load latest changes to the vpn.
-    NEVPNManager.shared().loadFromPreferences { _ in }
-
-    if case .purchased(let enabled) = BraveVPN.vpnState, enabled {
-      recordVPNUsageP3A(vpnEnabled: true)
-    }
-  }
+  // Growser-280: no disconnectVPNIfDisabledByPolicy() or vpnConfigChanged().
 
   @objc func sceneDidBecomeActiveNotification(_ notification: NSNotification) {
     guard let scene = notification.object as? UIScene, scene == currentScene else {
@@ -1034,14 +1014,7 @@ public class BrowserViewController: UIViewController {
         name: UIApplication.willTerminateNotification,
         object: nil
       )
-      if profileController.profile.prefs.isBraveVPNAvailable {
-        $0.addObserver(
-          self,
-          selector: #selector(vpnConfigChanged),
-          name: .NEVPNConfigurationChange,
-          object: nil
-        )
-      }
+      // Growser-280: no NEVPNConfigurationChange observer.
     }
 
     func observeAdblockChangeForDataSavedP3A(from oldValue: Int) {
@@ -1081,30 +1054,7 @@ public class BrowserViewController: UIViewController {
     view.addInteraction(dropInteraction)
     topToolbar.addInteraction(dropInteraction)
 
-    // Adding a small delay before fetching gives more reliability to it,
-    // epsecially when you are connected to a VPN.
-    if profileController.profile.prefs.isBraveVPNAvailable {
-      Task.delayed(bySeconds: 1.0) { @MainActor in
-        // Refresh Skus VPN Credentials before loading VPN state
-        let skusService = Skus.SkusServiceFactory.get(
-          privateMode: self.privateBrowsingManager.isPrivateBrowsing
-        )
-        await skusService?.refreshSkusCredentials()
-
-        self.vpnProductInfo.load()
-        if let customCredential = Preferences.VPN.skusCredential.value,
-          let customCredentialDomain = Preferences.VPN.skusCredentialDomain.value,
-          let vpnCredential = BraveSkusWebHelper.fetchVPNCredential(
-            customCredential,
-            domain: customCredentialDomain
-          )
-        {
-          BraveVPN.initialize(customCredential: vpnCredential)
-        } else {
-          BraveVPN.initialize(customCredential: nil)
-        }
-      }
-    }
+    // Growser-280: no VPN product/credential loading at start-up.
 
     // Schedule Default Browser Local Notification
     // If notification is not already scheduled or
@@ -1147,8 +1097,7 @@ public class BrowserViewController: UIViewController {
         switch featureLinkageType {
         case .playlist:
           self.presentPlaylistController()
-        case .vpn:
-          self.navigationHelper.openVPNBuyScreen(iapObserver: self.iapObserver)
+        // Growser-280: no .vpn feature linkage.
         default:
           return
         }
@@ -3037,8 +2986,7 @@ extension BrowserViewController: PreferencesObserver {
       } else {
         PrivacyReportsManager.scheduleNotification(debugMode: !AppConstants.isOfficialBuild)
       }
-    case Preferences.PrivacyReports.captureVPNAlerts.key:
-      PrivacyReportsManager.scheduleVPNAlertsTask()
+    // Growser-280: no captureVPNAlerts handling.
     case Preferences.NewTabPage.backgroundMediaTypeRaw.key:
       recordAdsUsageType()
     case Preferences.Privacy.screenTimeEnabled.key:
@@ -3247,24 +3195,7 @@ extension BrowserViewController {
   }
 }
 
-extension BrowserViewController: BraveVPNInAppPurchaseObserverDelegate {
-  public func purchasedOrRestoredProduct(validateReceipt: Bool) {
-    // No-op
-  }
-
-  public func purchaseFailed(error: BraveVPNInAppPurchaseObserver.PurchaseError) {
-    // No-op
-  }
-
-  public func handlePromotedInAppPurchase() {
-    // Open VPN Buy Screen before system triggers buy action
-    // Delaying the VPN Screen launch delibrately to syncronize promoted purchase launch
-    Task.delayed(bySeconds: 2.0) { @MainActor in
-      self.popToBVC()
-      self.navigationHelper.openVPNBuyScreen(iapObserver: self.iapObserver)
-    }
-  }
-}
+// Growser-280: no BraveVPNInAppPurchaseObserverDelegate conformance.
 
 // Certificate info
 extension BrowserViewController {

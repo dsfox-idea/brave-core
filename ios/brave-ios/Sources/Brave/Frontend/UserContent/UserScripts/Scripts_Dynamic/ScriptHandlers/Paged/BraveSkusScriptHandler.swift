@@ -6,7 +6,7 @@
 import BraveCore
 import BraveShared
 import BraveStore
-import BraveVPN
+// Growser-280: no BraveVPN.
 import Foundation
 import Preferences
 import Shared

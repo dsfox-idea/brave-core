@@ -1,5 +1,5 @@
 {
-  "originHash" : "636887e0d12f2dc37f728e5fb99f72bb28c4e1339f7dab1a2672f7baa298994b",
+  "originHash" : "4f29292b4346066f7c633dfaba988426b28a9b3893bee2f9b7c779130fc15a50",
   "pins" : [
     {
       "identity" : "feedkit",
@@ -17,15 +17,6 @@
       "state" : {
         "revision" : "f08c8323da21e985f3772610753bcfc652c2103f",
         "version" : "3.1.3"
-      }
-    },
-    {
-      "identity" : "guardianconnect",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/GuardianFirewall/GuardianConnect",
-      "state" : {
-        "revision" : "706cd111bd1c894c75d0f32b7f749451b8aab5ee",
-        "version" : "2.1.1"
       }
     },
     {

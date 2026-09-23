@@ -29,7 +29,7 @@ var package = Package(
     .library(name: "BraveWidgetsModels", targets: ["BraveWidgetsModels"]),
     .library(name: "Strings", targets: ["Strings"]),
     .library(name: "BraveStrings", targets: ["BraveStrings"]),
-    .library(name: "BraveVPN", targets: ["BraveVPN"]),
+    // Growser-280: no BraveVPN library.
     .library(name: "BraveNews", targets: ["BraveNews"]),
     // Growser-279: no AIChat library.
     .library(name: "BraveStore", targets: ["BraveStore"]),
@@ -67,7 +67,7 @@ var package = Package(
     .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
     .package(url: "https://github.com/devxoul/Then", from: "2.7.0"),
     .package(name: "Swift-BigInt", path: "../third_party/swift-bigint"),
-    .package(url: "https://github.com/GuardianFirewall/GuardianConnect", exact: "2.1.1"),
+    // Growser-280: no GuardianConnect - Guardian's VPN SDK went with the VPN.
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "0.6.0"),
     .package(
       url: "https://github.com/venmo/Static",
@@ -98,7 +98,7 @@ var package = Package(
         "Then",
         "BrowserIntentsModels",
         "BraveWidgetsModels",
-        "BraveVPN",
+        // Growser-280: no BraveVPN.
         "BraveNews",
         // Growser-279: no AIChat.
         "BraveStore",
@@ -133,6 +133,9 @@ var package = Package(
         // Growser-279: Leo is out of the product, on the same terms.
         "Frontend/Browser/BrowserViewController/BVC+AIChat.swift",
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Sandboxed/BraveLeoScriptHandler.swift",
+        // Growser-280: the VPN is out of the product, on the same terms.
+        "Frontend/Browser/BrowserViewController/BVC+VPN.swift",
+        "Frontend/Settings/Debug/VPNLogsViewController.swift",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
@@ -278,7 +281,9 @@ var package = Package(
     .target(
       name: "Growth",
       dependencies: [
-        "BraveVPN", "Shared", "BraveShared", "Strings", "SnapKit", "CertificateUtilities",
+        // Growser-280: no BraveVPN - and BraveUI (currentScene), which used to
+        // arrive through it, is now asked for by name.
+        "BraveUI", "Shared", "BraveShared", "Strings", "SnapKit", "CertificateUtilities",
         .product(name: "OrderedCollections", package: "swift-collections"),
       ],
       plugins: ["LoggerPlugin"]
@@ -399,22 +404,8 @@ var package = Package(
       plugins: ["IntentBuilderPlugin", "LoggerPlugin"]
     ),
     .target(name: "TestHelpers", dependencies: ["Data", "BraveShared"]),
-    .target(
-      name: "BraveVPN",
-      dependencies: [
-        "BraveCore",
-        "BraveStore",
-        "BraveStrings",
-        "SnapKit",
-        "Then",
-        "Data",
-        "GuardianConnect",
-        "BraveUI",
-        .product(name: "Lottie", package: "lottie-spm"),
-      ],
-      resources: [.copy("Resources/vpncheckmark.json")],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-280: the BraveVPN target and its tests are not declared, so
+    // Sources/BraveVPN and Tests/BraveVPNTests are not built.
     .target(
       name: "BraveNews",
       dependencies: [
@@ -473,6 +464,8 @@ var package = Package(
         "Shared",
         "SnapKit",
       ],
+      // Growser-280: the VPN promotions are out of the product with the VPN.
+      exclude: ["VPNNotifications"],
       resources: [
         .copy("LottieAssets/onboarding-rewards.json"),
         .copy("LottieAssets/playlist-confetti.json"),
@@ -518,10 +511,6 @@ var package = Package(
       dependencies: ["BraveShared", "Preferences"]
     ),
     .testTarget(
-      name: "BraveVPNTests",
-      dependencies: ["BraveVPN", "BraveShared", "GuardianConnect"]
-    ),
-    .testTarget(
       name: "BraveWalletTests",
       dependencies: [
         "BraveWallet",
@@ -561,7 +550,7 @@ var package = Package(
     .testTarget(name: "PrivateCDNTests", dependencies: ["PrivateCDN"]),
     .testTarget(
       name: "GrowthTests",
-      dependencies: ["Growth", "Shared", "BraveShared", "BraveVPN"]
+      dependencies: ["Growth", "Shared", "BraveShared"]  // Growser-280: no BraveVPN
     ),
     .target(
       name: "PlaylistUI",
@@ -580,8 +569,9 @@ var package = Package(
     .target(
       name: "BrowserMenu",
       dependencies: [
-        "DesignSystem", "BraveUI", "Preferences", "Strings", "BraveStrings", "BraveVPN",
-        "GuardianConnect", "BraveWallet", "BraveShields",
+        // Growser-280: no BraveVPN or GuardianConnect.
+        "DesignSystem", "BraveUI", "Preferences", "Strings", "BraveStrings",
+        "BraveWallet", "BraveShields",
       ]
     ),
     .target(

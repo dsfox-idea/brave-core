@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import BraveVPN
+// Growser-280: no BraveVPN.
 import Preferences
 import XCTest
 
@@ -39,17 +39,20 @@ class AppReviewManagerTests: XCTestCase {
   }
 
   func testRevisedReviewPassingMainCriteriasPassingSubCriteria() {
-    // Paid VPN Subcription
+    // Paid VPN Subcription - Growser-280: the VPN is out of the product, so
+    // this sub-criterion can never be what satisfies a review prompt.
     resetAppReviewConstants()
 
     generateMainCriterias(passing: true, failingCriteria: nil)
     generateSubCriterias(failing: false, passingCriteria: .paidVPNSubscription)
 
-    XCTAssert(AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .revised))
+    XCTAssertFalse(AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .revised))
 
-    XCTAssert(AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .revisedCrossPlatform))
+    XCTAssertFalse(
+      AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .revisedCrossPlatform)
+    )
 
-    XCTAssert(AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .newsRatingCard))
+    XCTAssertFalse(AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .newsRatingCard))
 
     // Number Of Bookmarks
     resetAppReviewConstants()
@@ -247,7 +250,7 @@ class AppReviewManagerTests: XCTestCase {
         Preferences.Chromium.syncOpenTabsEnabled.value = true
         Preferences.Chromium.syncEnabled.value = true
       case .paidVPNSubscription:
-        Preferences.VPN.expirationDate.value = Date().addingTimeInterval(5.days)
+        break  // Growser-280: nothing can make it pass.
       }
     }
   }

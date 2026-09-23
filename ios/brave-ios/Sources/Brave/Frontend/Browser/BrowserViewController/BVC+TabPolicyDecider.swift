@@ -117,14 +117,8 @@ extension BrowserViewController: TabPolicyDecider {
       return .cancel
     }
 
-    // Universal links do not work if the request originates from the app, manual handling is required.
-    if let mainDocURL = request.mainDocumentURL,
-      let universalLink = UniversalLinkManager.universalLinkType(for: mainDocURL, checkPath: true),
-      universalLink == .buyVPN
-    {
-      presentCorrespondingVPNViewController()
-      return .cancel
-    }
+    // Growser-280: no in-app handling of the vpn.brave.com buy link - the VPN
+    // is out of the product, so it is an ordinary web page.
 
     if #available(iOS 17.4, *), !ProcessInfo.processInfo.isiOSAppOnVisionOS {
       // Accessing `MarketplaceKitURIScheme` on Vision OS results in a crash
