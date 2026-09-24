@@ -202,6 +202,18 @@ class NewTabPageViewController: UIViewController {
       FavoritesOverflowSectionProvider(action: { [weak self] in
         self?.delegate?.focusURLBar()
       }),
+      // Growser-310: and the sites the person visits most, as Android shows.
+      MostVisitedSectionProvider(
+        profile: tab.profile,
+        isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing,
+        open: { [weak self] url, inNewTab in
+          self?.delegate?.navigateToInput(
+            url.absoluteString,
+            inNewTab: inNewTab,
+            switchingToPrivateMode: false
+          )
+        }
+      ),
     ]
 
     // Growser-310: no default-browser callout on the new tab page either;
