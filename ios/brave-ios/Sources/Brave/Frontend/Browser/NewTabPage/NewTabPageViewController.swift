@@ -186,48 +186,10 @@ class NewTabPageViewController: UIViewController {
     Preferences.NewTabPage.showNewTabPrivacyHub.observe(from: self)
     Preferences.NewTabPage.showNewTabFavourites.observe(from: self)
 
+    // Growser-310: the new tab page holds the favourites - its top sites -
+    // and the photo credit, as on Android (#305) and the desktop (#136). No
+    // privacy stats card.
     sections = [
-      StatsSectionProvider(
-        isPrivateBrowsing: tab.isPrivate,
-        openPrivacyHubPressed: { [weak self] in
-          guard let self, let tab = browserTab else { return }
-          if privateBrowsingManager.isPrivateBrowsing == true {
-            return
-          }
-
-          let isOriginPurchased =
-            BraveOriginServiceFactory.get(profile: tab.profile)?.isPurchased() == true
-          let host = UIHostingController(
-            rootView: PrivacyReportsManager.prepareView(
-              isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing,
-              isOriginPurchased: isOriginPurchased
-            )
-          )
-          host.rootView.onDismiss = { [weak self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-              guard let self = self else { return }
-
-              // Handle App Rating
-              // User finished viewing the privacy report (tapped close)
-              AppReviewManager.shared.handleAppReview(for: .revised, using: self)
-            }
-          }
-
-          host.rootView.openPrivacyReportsUrl = { [weak self] in
-            self?.delegate?.navigateToInput(
-              URL.brave.privacyFeatures.absoluteString,
-              inNewTab: false,
-              // Privacy Reports view is unavailable in private mode.
-              switchingToPrivateMode: false
-            )
-          }
-
-          present(host, animated: true)
-        },
-        hidePrivacyHubPressed: { [weak self] in
-          self?.hidePrivacyHub()
-        }
-      ),
       FavoritesSectionProvider(
         action: { [weak self] bookmark, action in
           self?.handleFavoriteAction(favorite: bookmark, action: action)
@@ -242,14 +204,8 @@ class NewTabPageViewController: UIViewController {
       }),
     ]
 
-    let ntpDefaultBrowserCalloutProvider = NTPDefaultBrowserCalloutProvider(
-      isBackgroundNTPSI: false  // Growser-290: there are no sponsored images.
-    )
-
-    // This is a one-off view, adding it to the NTP only if necessary.
-    if ntpDefaultBrowserCalloutProvider.shouldShowCallout() {
-      sections.insert(ntpDefaultBrowserCalloutProvider, at: 0)
-    }
+    // Growser-310: no default-browser callout on the new tab page either;
+    // onboarding asks that once (and the entitlement is not granted yet, #308).
 
     // Growser-281: no Brave News section.
 

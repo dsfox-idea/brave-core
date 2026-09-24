@@ -149,9 +149,11 @@ extension NTPDataSource: PreferencesObserver {
 }
 
 extension NTPBackgroundImage {
+  // Growser-310: the owner's photo, credited and linked the way Android does
+  // (#309). The component that would bring others is not served to a fork.
   static let fallback: NTPBackgroundImage = .init(
-    imagePath: Bundle.module.url(forResource: "corwin-prescott-3", withExtension: "jpg")!,
-    author: "Corwin Prescott",
-    link: URL(string: "https://www.brave.com")!
+    imagePath: Bundle.module.url(forResource: "growser_mobile_01", withExtension: "webp")!,
+    author: "Dmitry Golubnichiy",
+    link: URL(string: "https://www.flickr.com/photos/dsfox/7492378116")!
   )
 }

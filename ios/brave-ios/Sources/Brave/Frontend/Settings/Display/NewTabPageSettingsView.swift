@@ -56,7 +56,7 @@ struct NewTabPageSettingsView: View {
         Text(Strings.NTP.settingsBackgroundImages)
       }
       Section {
-        Toggle(Strings.PrivacyHub.privacyReportsTitle, isOn: $showNewTabPrivacyHub.value)
+        // Growser-310: no privacy stats card on the new tab page to show or hide.
         Toggle(Strings.Widgets.favoritesWidgetTitle, isOn: $showNewTabFavourites.value)
       } header: {
         Text(Strings.Widgets.widgetTitle)

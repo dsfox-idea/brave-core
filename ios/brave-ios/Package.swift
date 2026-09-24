@@ -174,6 +174,8 @@ var package = Package(
         "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletSolanaProviderScript.js",
         "Assets/InterstitialPages/Pages/Web3Domain.html",
         "Assets/InterstitialPages/Styles/Web3Domain.css",
+        // Growser-310: the new tab page shows the owner's photo, not Brave's.
+        "Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/corwin-prescott-3.jpg",
         // Growser-290: Brave Rewards and Brave Ads are out of the product, on
         // the same terms: the Rewards service and panel, ads notifications,
         // search-result ads, DeviceCheck enrolment and the internals pages.
@@ -230,7 +232,8 @@ var package = Package(
         .copy("Frontend/Reader/Reader.css"),
         .copy("Frontend/Reader/Reader.html"),
         .copy("Frontend/Reader/ReaderViewLoading.html"),
-        .copy("Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/corwin-prescott-3.jpg"),
+        // Growser-310: the owner's photo, the same file as Android's (#309).
+        .copy("Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/growser_mobile_01.webp"),
         .copy("Frontend/Browser/Favorites/Data/top_sites_by_region.json"),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchScript.js"
