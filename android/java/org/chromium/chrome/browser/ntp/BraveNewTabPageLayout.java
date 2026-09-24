@@ -109,6 +109,21 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
 
     private @Nullable NewTabTakeoverSafeAreaReporter mSafeAreaReporter;
 
+    // Growser-311: the adapter places the image credit by the list's height, and
+    // that height changes after the page is built - on a cold start the bottom
+    // controls take their space later. Every change reaches the adapter.
+    private final View.OnLayoutChangeListener mRecyclerViewHeightListener =
+            (view, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
+                if (bottom - top != oldBottom - oldTop) {
+                    view.post(
+                            () -> {
+                                if (mNtpAdapter != null) {
+                                    mNtpAdapter.setRecyclerViewHeight(view.getHeight());
+                                }
+                            });
+                }
+            };
+
     public BraveNewTabPageLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -192,6 +207,9 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
         // Growser-272: the news settings bar and "new content" pill left with Brave
         // News.
         mRecyclerView = findViewById(R.id.recyclerview);
+        // Growser-311: once per view, however often the page is attached.
+        mRecyclerView.removeOnLayoutChangeListener(mRecyclerViewHeightListener);
+        mRecyclerView.addOnLayoutChangeListener(mRecyclerViewHeightListener);
         // Growser-272: the news package's wrapper went with it.
         LinearLayoutManager linearLayoutManager =
                 new LinearLayoutManager(mActivity, LinearLayoutManager.VERTICAL, false);
@@ -417,16 +435,9 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
         // it will be called again once NTP image is ready.
         maybeShowNTPImage();
 
-        new Handler(Looper.getMainLooper())
-                .postDelayed(
-                        () -> {
-                            assertNonNull(mRecyclerView);
-                            if (mNtpAdapter != null) {
-                                mNtpAdapter.setRecyclerViewHeight(mRecyclerView.getHeight());
-                            }
-                            keepPosition();
-                        },
-                        10);
+        // Growser-311: the list's new height reaches the adapter through
+        // mRecyclerViewHeightListener.
+        new Handler(Looper.getMainLooper()).postDelayed(this::keepPosition, 10);
     }
 
     @Initializer
