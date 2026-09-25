@@ -57,7 +57,6 @@ import org.jni_zero.NativeMethods;
 import org.chromium.base.ApplicationState;
 import org.chromium.base.ApplicationStatus;
 import org.chromium.base.ApplicationStatus.ApplicationStateListener;
-import org.chromium.base.BraveFeatureList;
 import org.chromium.base.BravePreferenceKeys;
 import org.chromium.base.BraveReflectionUtil;
 import org.chromium.base.CollectionUtil;
@@ -106,7 +105,6 @@ import org.chromium.chrome.browser.compositor.layouts.LayoutManagerChrome;
 import org.chromium.chrome.browser.compositor.layouts.LayoutManagerImpl;
 import org.chromium.chrome.browser.customtabs.CustomTabActivity;
 import org.chromium.chrome.browser.customtabs.FullScreenCustomTabActivity;
-import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.flags.ChromeSwitches;
 import org.chromium.chrome.browser.fullscreen.BrowserControlsManager;
 import org.chromium.chrome.browser.incognito.reauth.IncognitoReauthController;
@@ -137,8 +135,6 @@ import org.chromium.chrome.browser.prefetch.settings.PreloadPagesState;
 import org.chromium.chrome.browser.privacy.settings.BravePrivacySettings;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.profiles.ProfileManager;
-import org.chromium.chrome.browser.safe_browsing.SafeBrowsingBridge;
-import org.chromium.chrome.browser.safe_browsing.SafeBrowsingState;
 import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
 import org.chromium.chrome.browser.set_default_browser.BraveSetDefaultBrowserUtils;
 import org.chromium.chrome.browser.settings.BraveSearchEngineUtils;
@@ -175,7 +171,6 @@ import org.chromium.components.browser_ui.util.motion.MotionEventInfo;
 import org.chromium.components.embedder_support.util.UrlConstants;
 import org.chromium.components.embedder_support.util.UrlUtilities;
 import org.chromium.components.omnibox.AutocompleteRequestType;
-import org.chromium.components.safe_browsing.BraveSafeBrowsingApiHandler;
 import org.chromium.components.search_engines.TemplateUrl;
 import org.chromium.components.search_engines.TemplateUrlService;
 import org.chromium.components.user_prefs.UserPrefs;
@@ -184,7 +179,6 @@ import org.chromium.content_public.browser.WebContents;
 import org.chromium.misc_metrics.mojom.MiscAndroidMetrics;
 import org.chromium.mojo.bindings.ConnectionErrorHandler;
 import org.chromium.mojo.system.MojoException;
-import org.chromium.ui.widget.Toast;
 import org.chromium.url.GURL;
 
 import java.util.Arrays;
@@ -201,7 +195,6 @@ import java.util.Set;
 public abstract class BraveActivity extends ChromeActivity
         implements BrowsingDataBridge.OnClearBrowsingDataListener,
                 ConnectionErrorHandler,
-                BraveSafeBrowsingApiHandler.BraveSafeBrowsingApiHandlerDelegate,
                 MiscAndroidMetricsConnectionErrorHandler
                         .MiscAndroidMetricsConnectionErrorHandlerDelegate,
                 QuickSearchEnginesCallback,
@@ -246,7 +239,6 @@ public abstract class BraveActivity extends ChromeActivity
     private boolean mIsProcessingPendingDappsTxRequest;
     private int mLastTabId;
     private boolean mNativeInitialized;
-    private boolean mSafeBrowsingFlagEnabled;
     private NewTabPageManager mNewTabPageManager;
     private UsageMonitor mUsageMonitor;
     private NotificationPermissionController mNotificationPermissionController;
@@ -314,18 +306,8 @@ public abstract class BraveActivity extends ChromeActivity
             FullScreenCustomTabActivity.sIsFullScreenCustomTabActivityClosed = false;
         }
 
-        BraveSafeBrowsingApiHandler.getInstance()
-                .setDelegate(BraveActivityJni.get().getSafeBrowsingApiKey(), this);
-
-        // We can store a state of that flag as a browser has to be restarted
-        // when the flag state is changed in any case
-        mSafeBrowsingFlagEnabled =
-                ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_ANDROID_SAFE_BROWSING);
-
-        // Growser-303: no Play Services Safe Browsing init loop while it is off.
-        if (mSafeBrowsingFlagEnabled) {
-            executeInitSafeBrowsing(0);
-        }
+        // Growser-303/317: no Safe Browsing through Play services - SafetyNet left
+        // the build; the Android path is to go through our proxy (#303).
 
         if (mAppUpdateManager == null) {
             mAppUpdateManager = AppUpdateManagerFactory.create(BraveActivity.this);
@@ -448,7 +430,6 @@ public abstract class BraveActivity extends ChromeActivity
             mApplicationStateListener = null;
         }
 
-        BraveSafeBrowsingApiHandler.getInstance().shutdownSafeBrowsing();
         if (mAppUpdateManager != null) {
             mAppUpdateManager.unregisterListener(mInstallStateUpdatedListener);
         }
@@ -703,27 +684,7 @@ public abstract class BraveActivity extends ChromeActivity
         BraveHelper.disableFREDRP();
     }
 
-    @Override
-    public void turnSafeBrowsingOff() {
-        SafeBrowsingBridge safeBrowsingBridge = new SafeBrowsingBridge(getCurrentProfile());
-        safeBrowsingBridge.setSafeBrowsingState(SafeBrowsingState.NO_SAFE_BROWSING);
-    }
-
-    // Shows SafeBrowsing errors if the switch in Developer Options is on
-    @Override
-    public void maybeShowSafeBrowsingError(String error) {
-        if (ChromeSharedPreferences.getInstance()
-                .readBoolean(BravePreferenceKeys.BRAVE_SAFE_BROWSING_ERRORS, false)) {
-            Toast.makeText(BraveActivity.this, error, Toast.LENGTH_LONG).show();
-        }
-    }
-
-    @Override
-    public boolean isSafeBrowsingEnabled() {
-        return mSafeBrowsingFlagEnabled;
-    }
-
-    @Override
+    // Growser-317: the SafetyNet handler's delegate methods left with it.
     public Activity getActivity() {
         return this;
     }
@@ -1732,31 +1693,6 @@ public abstract class BraveActivity extends ChromeActivity
         if (mBookmarkManagerOpenerSupplier.get() != null) {
             mBookmarkManagerOpenerSupplier.get().showBookmarkManager(this, currentTab, profile);
         }
-    }
-
-    // We call that method with an interval
-    // BraveSafeBrowsingApiHandler.SAFE_BROWSING_INIT_INTERVAL_MS,
-    // as upstream does, to keep the GmsCore process alive.
-    private void executeInitSafeBrowsing(long delay) {
-        // SafeBrowsingBridge.getSafeBrowsingState() has to be executed on a main thread
-        PostTask.postDelayedTask(
-                TaskTraits.UI_DEFAULT,
-                () -> {
-                    SafeBrowsingBridge safeBrowsingBridge =
-                            new SafeBrowsingBridge(getCurrentProfile());
-                    if (safeBrowsingBridge.getSafeBrowsingState()
-                            != SafeBrowsingState.NO_SAFE_BROWSING) {
-                        // initSafeBrowsing could be executed on a background thread
-                        PostTask.postTask(
-                                TaskTraits.USER_VISIBLE_MAY_BLOCK,
-                                () -> {
-                                    BraveSafeBrowsingApiHandler.getInstance().initSafeBrowsing();
-                                });
-                    }
-                    executeInitSafeBrowsing(
-                            BraveSafeBrowsingApiHandler.SAFE_BROWSING_INIT_INTERVAL_MS);
-                },
-                delay);
     }
 
     public void updateBottomSheetPosition(int orientation) {

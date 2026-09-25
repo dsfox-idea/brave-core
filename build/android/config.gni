@@ -69,7 +69,7 @@ brave_chrome_java_deps = [
   "//brave/components/browser_ui/site_settings/android:java",
   "//brave/components/browser_ui/widget/android:java",
   "//brave/components/misc_metrics/common:mojom_java",
-  "//brave/components/safe_browsing/android:brave_safe_browsing_java",
+  # Growser-317: brave_safe_browsing_java (SafetyNet) removed.
   "//brave/components/url_sanitizer/core/common/mojom:mojom_java",
   "//brave/components/variations/android:java",
   "//brave/components/version_info/android:java",
@@ -78,7 +78,7 @@ brave_chrome_java_deps = [
   "//brave/third_party/android_deps:com_github_bumptech_glide_java",
   "//brave/third_party/android_deps:com_google_android_play_app_update_java",
   "//brave/third_party/android_deps:com_google_android_play_integrity_java",
-  "//brave/third_party/android_deps:google_play_services_safetynet_java",
+  # Growser-317: google_play_services_safetynet_java removed.
   "//brave/third_party/zxing:zxing_java",
   "//brave/ui/android:base_java",
   # Growser-317: com_google_android_play_review_java removed with the rating prompt.

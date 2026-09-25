@@ -14,8 +14,6 @@ import org.chromium.base.Log;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.browser.base.SplitCompatApplication;
-import org.chromium.components.safe_browsing.BraveSafeBrowsingApiHandler;
-import org.chromium.components.safe_browsing.SafeBrowsingApiBridge;
 import org.chromium.mojo.bindings.BadMessageException;
 import org.chromium.mojo.bindings.ExceptionHandler;
 
@@ -48,9 +46,8 @@ public class BraveApplicationImplBase extends SplitCompatApplication.Impl {
                                 }
                                 throw JavaUtils.throwUnchecked(e);
                             });
-            // Set a handler for SafeBrowsing. It has to be done only once for a process lifetime.
-            SafeBrowsingApiBridge.setSafeBrowsingApiHandler(
-                    BraveSafeBrowsingApiHandler.getInstance());
+            // Growser-317: no Safe Browsing handler through Play services (SafetyNet
+            // left the build; the Android path is to go through our proxy, #303).
 
             // Fix ClassNotFoundException crash in Play Core's in-app review flow.
             //

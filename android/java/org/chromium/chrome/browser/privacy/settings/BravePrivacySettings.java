@@ -41,7 +41,6 @@ import org.chromium.chrome.browser.preferences.Pref;
 import org.chromium.chrome.browser.preferences.website.BraveShieldsContentSettings;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.profiles.ProfileManager;
-import org.chromium.chrome.browser.safe_browsing.settings.NoGooglePlayServicesDialog;
 import org.chromium.chrome.browser.safety_hub.SafetyHubExpandablePreference;
 import org.chromium.chrome.browser.settings.BraveDialogPreference;
 import org.chromium.chrome.browser.settings.BravePreferenceDialogFragment;
@@ -58,7 +57,6 @@ import org.chromium.components.browser_ui.settings.SettingsUtils;
 import org.chromium.components.browser_ui.settings.TextMessagePreference;
 import org.chromium.components.browser_ui.settings.search.SettingsIndexData;
 import org.chromium.components.user_prefs.UserPrefs;
-import org.chromium.gms.ChromiumPlayServicesAvailability;
 import org.chromium.ui.text.ChromeClickableSpan;
 import org.chromium.ui.text.SpanApplier;
 import org.chromium.webcompat_reporter.mojom.WebcompatReporterHandler;
@@ -511,23 +509,9 @@ public class BravePrivacySettings extends PrivacySettings {
             removePreferenceIfPresent(PREF_SNS);
         }
 
-        if (!ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_ANDROID_SAFE_BROWSING)) {
-            removePreferenceIfPresent(PREF_SAFE_BROWSING);
-        } else {
-            Preference preference = getPreferenceScreen().findPreference(PREF_SAFE_BROWSING);
-            if (preference != null) {
-                preference.setOnPreferenceClickListener((pref) -> {
-                    if (!ChromiumPlayServicesAvailability.isGooglePlayServicesAvailable(
-                                getActivity())) {
-                        NoGooglePlayServicesDialog.create(getContext()).show();
-                        // Don't show the menu if Google Play Services are not available
-                        return true;
-                    }
-
-                    return false;
-                });
-            }
-        }
+        // Growser-317: no Safe Browsing row until #303 gives Android a path through
+        // our proxy; the Play services one left with SafetyNet.
+        removePreferenceIfPresent(PREF_SAFE_BROWSING);
 
         updateBravePreferences();
     }

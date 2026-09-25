@@ -517,15 +517,9 @@ const char* const kBraveSyncImplLink[1] = {"https://github.com/brave/go-sync"};
       FEATURE_VALUE_TYPE(                                                    \
           preferences::features::kBraveYoutubeFullscreenVideoFitWorkaround), \
   })
-#define BRAVE_SAFE_BROWSING_ANDROID                                           \
-  EXPAND_FEATURE_ENTRIES({                                                    \
-      "brave-safe-browsing",                                                  \
-      "Safe Browsing",                                                        \
-      "Enables Google Safe Browsing for determining whether a URL has been "  \
-      "marked as a known threat.",                                            \
-      kOsAndroid,                                                             \
-      FEATURE_VALUE_TYPE(safe_browsing::features::kBraveAndroidSafeBrowsing), \
-  })
+// Growser-317: no switch for Safe Browsing through Play services - that path
+// left with SafetyNet; #303 is to route it through our proxy.
+#define BRAVE_SAFE_BROWSING_ANDROID
 #define BRAVE_CUSTOM_SEARCH_ENGINES                                        \
   EXPAND_FEATURE_ENTRIES({                                                 \
       "brave-custom-search-engines",                                       \
