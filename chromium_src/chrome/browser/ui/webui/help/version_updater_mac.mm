@@ -214,13 +214,16 @@ void SparkleVersionUpdater::UpdateShowPromoteButton() {
   WrapUnique(brave_updater::ShouldUseOmaha4() \
                  ? X                          \
                  : static_cast<VersionUpdater*>(new SparkleVersionUpdater()))
+#else  // Growser-263: no Omaha is built, so Sparkle is the only updater there
+       // is. Upstream's VersionUpdaterMac asks for an updater process we do
+       // not ship and can only answer "error 9" (kIPCConnectionFailed).
+#define WrapUnique(X) \
+  WrapUnique(static_cast<VersionUpdater*>(new SparkleVersionUpdater()))
 #endif  // BUILDFLAG(ENABLE_OMAHA4)
 
 #include <chrome/browser/ui/webui/help/version_updater_mac.mm>
 
-#if BUILDFLAG(ENABLE_OMAHA4)
-#undef WrapUnique
-#endif
+#undef WrapUnique  // Growser-263
 
 #if BUILDFLAG(ENABLE_SPARKLE)
 void SparkleVersionUpdater::GetIsSparkleForTesting(bool& result) const {

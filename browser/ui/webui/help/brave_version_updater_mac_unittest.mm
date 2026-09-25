@@ -7,10 +7,14 @@
 
 #include "base/strings/string_number_conversions.h"
 #include "base/test/scoped_feature_list.h"
-#include "brave/browser/updater/features.h"
+#include "brave/browser/updater/buildflags.h"  // Growser-263
 #include "chrome/browser/ui/webui/help/version_updater.h"
 #include "chrome/browser/ui/webui/help/version_updater_mac.h"
 #include "testing/gtest/include/gtest/gtest.h"
+
+#if BUILDFLAG(ENABLE_OMAHA4)  // Growser-263
+#include "brave/browser/updater/features.h"
+#endif
 
 class BraveVersionUpdaterMacTest : public testing::Test {
  protected:
@@ -23,6 +27,7 @@ class BraveVersionUpdaterMacTest : public testing::Test {
   base::test::ScopedFeatureList scoped_feature_list_;
 };
 
+#if BUILDFLAG(ENABLE_OMAHA4)  // Growser-263
 TEST_F(BraveVersionUpdaterMacTest, UsesSparkleWhenFeatureDisabled) {
   scoped_feature_list_.InitAndDisableFeature(brave_updater::kBraveUseOmaha4);
   EXPECT_TRUE(UsesSparkle());
@@ -35,3 +40,11 @@ TEST_F(BraveVersionUpdaterMacTest, UsesOmaha4WhenFeatureEnabled) {
         base::NumberToString(INT_MAX)}});
   EXPECT_FALSE(UsesSparkle());
 }
+#else   // Growser-263
+// With no Omaha built, the About page asks Sparkle. It used to get upstream's
+// updater instead, which has no process to reach and showed every user "error
+// 9 (error code 0)" in red while the updates themselves worked.
+TEST_F(BraveVersionUpdaterMacTest, UsesSparkleWithoutOmaha4) {
+  EXPECT_TRUE(UsesSparkle());
+}
+#endif  // BUILDFLAG(ENABLE_OMAHA4)
