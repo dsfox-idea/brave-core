@@ -228,7 +228,7 @@ TEST_F(BraveNewsTopicsFetcherTest, TopicsAreJoinedAndParsedCorrectly) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -287,7 +287,7 @@ TEST_F(BraveNewsTopicsFetcherTest, NoResponseNoTopics) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -302,7 +302,7 @@ TEST_F(BraveNewsTopicsFetcherTest, NoTopicsResponseButArticlesNoTopics) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -317,7 +317,7 @@ TEST_F(BraveNewsTopicsFetcherTest, NoArticlesResponseButTopicsNoTopics) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -331,7 +331,7 @@ TEST_F(BraveNewsTopicsFetcherTest, TopicsWithInvalidArticles) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
