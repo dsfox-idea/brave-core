@@ -186,11 +186,7 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/privacy/secure_dns/BraveSecureDnsProviderPreference.java",
   "../../brave/android/java/org/chromium/chrome/browser/privacy/settings/BravePrivacySettings.java",
   "../../brave/android/java/org/chromium/chrome/browser/quickactionsearchwidget/BraveQuickActionSearchWidgetProvider.java",
-  "../../brave/android/java/org/chromium/chrome/browser/rate/BraveAskPlayStoreRatingDialog.java",
-  "../../brave/android/java/org/chromium/chrome/browser/rate/BraveRateDialogFragment.java",
-  "../../brave/android/java/org/chromium/chrome/browser/rate/BraveRateThanksFeedbackDialog.java",
-  "../../brave/android/java/org/chromium/chrome/browser/rate/RateFeedbackUtils.java",
-  "../../brave/android/java/org/chromium/chrome/browser/rate/RateUtils.java",
+  # Growser-317: the rate package (prompts, feedback to Brave) removed.
   # Growser-317: referrer/BraveReferrer.java removed with the Play Install Referrer.
   "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/BraveStandardProtectionSettingsFragment.java",
   "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/NoGooglePlayServicesDialog.java",

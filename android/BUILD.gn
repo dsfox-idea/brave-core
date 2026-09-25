@@ -94,7 +94,7 @@ android_resources("java_resources") {
     "java/brave-res/color/brave_checkbox_background_color_selector.xml",
     "java/brave-res/color/brave_checkbox_color_selector.xml",
     "java/brave-res/color/brave_news_settings_follow_button_text_color.xml",
-    "java/brave-res/color/brave_rating_checkbox_tint.xml",
+    # Growser-317: brave_rating_checkbox_tint removed with the rating dialog.
     "java/brave-res/color/brave_switch_stroke_color.xml",
     "java/brave-res/color/crypto_wallet_onboarding_button_text_color.xml",
     "java/brave-res/color/wallet_checkbox_background_color_selector.xml",
@@ -112,8 +112,7 @@ android_resources("java_resources") {
     "java/brave-res/drawable-hdpi/ic_ad_free_videos.png",
     "java/brave-res/drawable-hdpi/share_activity_background.png",
     "java/brave-res/drawable-hdpi/vpn_install_bg.png",
-    "java/brave-res/drawable-ldrtl/brave_rating_emoji_happy_bg.xml",
-    "java/brave-res/drawable-ldrtl/brave_rating_emoji_sad_bg.xml",
+    # Growser-317: the rating dialog emoji backgrounds removed.
     "java/brave-res/drawable-ldrtl/modern_toolbar_background_grey_end_segment.xml",
     "java/brave-res/drawable-mdpi/brave_ads_launch_graphic.png",
     "java/brave-res/drawable-mdpi/brave_sync_btn_laptop.png",
@@ -199,9 +198,7 @@ android_resources("java_resources") {
     "java/brave-res/drawable/brave_news_settings_unfollow_bg.xml",
     "java/brave-res/drawable/brave_notification_permission_rationale_dialog_header.xml",
     "java/brave-res/drawable/brave_privacy_tabs_unlock_image.xml",
-    "java/brave-res/drawable/brave_rating_dont_show_again_bg.xml",
-    "java/brave-res/drawable/brave_rating_emoji_happy_bg.xml",
-    "java/brave-res/drawable/brave_rating_emoji_sad_bg.xml",
+    # Growser-317: the rating dialog backgrounds removed.
     "java/brave-res/drawable/brave_rewards_circle.xml",
     "java/brave-res/drawable/brave_rewards_rectangle.xml",
     "java/brave-res/drawable/brave_stats_radio_button_normal.xml",
@@ -495,7 +492,7 @@ android_resources("java_resources") {
     "java/brave-res/layout/brave_account_alert_dialog.xml",
     "java/brave-res/layout/brave_ads_existing_user_dialog_layout.xml",
     "java/brave-res/layout/brave_ads_new_user_dialog_layout.xml",
-    "java/brave-res/layout/brave_ask_play_store_rating_dialog.xml",
+    # Growser-317: brave_ask_play_store_rating_dialog removed.
     "java/brave-res/layout/brave_autofill_service_item.xml",
     "java/brave-res/layout/brave_bookmark_toolbar.xml",
     "java/brave-res/layout/brave_bottom_new_tab_button.xml",
@@ -517,9 +514,8 @@ android_resources("java_resources") {
     "java/brave-res/layout/brave_notification_warning_dialog.xml",
     "java/brave-res/layout/brave_panel_back_button.xml",
     "java/brave-res/layout/brave_permission_prompt_dialog.xml",
-    "java/brave-res/layout/brave_rating_dialog_fragment.xml",
     "java/brave-res/layout/brave_rating_news_layout.xml",
-    "java/brave-res/layout/brave_rating_thanks_feedback_dialog.xml",
+    # Growser-317: brave_rating_dialog_fragment and the feedback dialog removed.
     "java/brave-res/layout/brave_report_broken_site_panel.xml",
     "java/brave-res/layout/brave_shields_tab_content.xml",
     "java/brave-res/layout/brave_shields_tooltip_layout.xml",

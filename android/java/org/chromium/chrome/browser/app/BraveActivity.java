@@ -137,8 +137,6 @@ import org.chromium.chrome.browser.prefetch.settings.PreloadPagesState;
 import org.chromium.chrome.browser.privacy.settings.BravePrivacySettings;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.profiles.ProfileManager;
-import org.chromium.chrome.browser.rate.BraveRateDialogFragment;
-import org.chromium.chrome.browser.rate.RateUtils;
 import org.chromium.chrome.browser.safe_browsing.SafeBrowsingBridge;
 import org.chromium.chrome.browser.safe_browsing.SafeBrowsingState;
 import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
@@ -789,21 +787,8 @@ public abstract class BraveActivity extends ChromeActivity
         initMiscAndroidMetrics();
         checkForNotificationData();
 
-        if (RateUtils.getInstance().isLastSessionShown()) {
-            RateUtils.getInstance().setPrefNextRateDate();
-            RateUtils.getInstance().setLastSessionShown(false);
-        }
-
-        if (!RateUtils.getInstance().getPrefRateEnabled()) {
-            RateUtils.getInstance().setPrefRateEnabled(true);
-            RateUtils.getInstance().setPrefNextRateDate();
-        }
-        RateUtils.getInstance().setTodayDate();
-
-        if (RateUtils.getInstance().shouldShowRateDialog(this)) {
-            showBraveRateDialog();
-            RateUtils.getInstance().setLastSessionShown(true);
-        }
+        // Growser-317: no rating prompt - its sad path posted the device and the
+        // text typed to feedback.brave.com.
 
         // TODO commenting out below code as we may use it in next release
 
@@ -1431,11 +1416,6 @@ public abstract class BraveActivity extends ChromeActivity
         return openNewOrSelectExistingTab(url, false);
     }
 
-    private void showBraveRateDialog() {
-        BraveRateDialogFragment rateDialogFragment = BraveRateDialogFragment.newInstance(false);
-        rateDialogFragment.show(getSupportFragmentManager(), BraveRateDialogFragment.TAG_FRAGMENT);
-    }
-
     private void openYtInBraveDialog() {
         OpenYtInBraveDialogFragment mOpenYtInBraveDialogFragment =
                 new OpenYtInBraveDialogFragment();
@@ -1744,7 +1724,7 @@ public abstract class BraveActivity extends ChromeActivity
     }
 
     public void addOrEditBookmark(final Tab tabToBookmark) {
-        RateUtils.getInstance().setPrefAddedBookmarkCount();
+        // Growser-317: no bookmark count to keep - it only fed the rating prompt.
         ((TabBookmarker) mTabBookmarkerSupplier.get()).addOrEditBookmark(tabToBookmark);
     }
 

@@ -100,7 +100,7 @@
 }
 
 # Keep Play Core Review classes to prevent ClassNotFoundException during Parcelable deserialization
--keep class com.google.android.play.core.review.** { *; }
+# Growser-317: play.core.review left with the rating prompt.
 -keep class com.google.android.play.core.common.** { *; }
 
 # Keep Play Core App Update classes to prevent ClassNotFoundException during Parcelable deserialization

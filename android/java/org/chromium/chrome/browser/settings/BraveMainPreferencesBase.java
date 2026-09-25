@@ -7,9 +7,11 @@ package org.chromium.chrome.browser.settings;
 
 import static org.chromium.build.NullUtil.assumeNonNull;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -41,7 +43,6 @@ import org.chromium.chrome.browser.policy.PolicyServiceFactory;
 import org.chromium.chrome.browser.privacy.settings.BravePrivacySettings;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.profiles.ProfileManager;
-import org.chromium.chrome.browser.rate.BraveRateDialogFragment;
 import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
 import org.chromium.chrome.browser.settings.search.ChromeBaseSearchIndexProvider;
 import org.chromium.chrome.browser.tasks.tab_management.BraveTabUiFeatureUtilities;
@@ -520,6 +521,24 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
 
     }
 
+    // Growser-317: the store's own app page, or the web listing without a store app.
+    private void openStoreListing() {
+        Context context = getContext();
+        if (context == null) return;
+        String packageName = context.getPackageName();
+        try {
+            context.startActivity(
+                    new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + packageName)));
+        } catch (ActivityNotFoundException e) {
+            context.startActivity(
+                    new Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(
+                                    "https://play.google.com/store/apps/details?id="
+                                            + packageName)));
+        }
+    }
+
     private void initRateBrave() {
         Preference rateBravePreference = findPreference(PREF_RATE_BRAVE);
         assumeNonNull(rateBravePreference);
@@ -527,10 +546,9 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
                 new Preference.OnPreferenceClickListener() {
                     @Override
                     public boolean onPreferenceClick(Preference preference) {
-                        BraveRateDialogFragment rateDialogFragment =
-                                BraveRateDialogFragment.newInstance(true);
-                        rateDialogFragment.show(
-                                getParentFragmentManager(), BraveRateDialogFragment.TAG_FRAGMENT);
+                        // Growser-317: straight to the store listing - Brave's rating
+                        // dialog posted its sad path to feedback.brave.com.
+                        openStoreListing();
                         return true;
                     }
                 });
