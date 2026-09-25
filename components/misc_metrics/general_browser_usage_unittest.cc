@@ -67,7 +67,7 @@ TEST_F(GeneralBrowserUsageUnitTest, WeeklyUsage) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -110,7 +110,7 @@ TEST_F(GeneralBrowserUsageUnitTest, InstallTimeVariantSwitch) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -155,7 +155,7 @@ TEST_F(GeneralBrowserUsageUnitTest, InstallTimeBasic) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif

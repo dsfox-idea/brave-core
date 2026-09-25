@@ -67,11 +67,16 @@ source_set("unit_tests") {
     "//testing/gtest",
   ]
 
-  if (enable_sparkle && enable_omaha4) {
+  # Growser-263: also without omaha4 - our build - where the About page was
+  # left on an updater that does not exist and no test could see it.
+  if (enable_sparkle) {
     sources += [ "help/brave_version_updater_mac_unittest.mm" ]
     deps += [
-      "//brave/browser/updater:features",
+      "//brave/browser/updater:buildflags",  # Growser-263
       "//chrome/browser/ui/webui/help",
     ]
+    if (enable_omaha4) {  # Growser-263
+      deps += [ "//brave/browser/updater:features" ]
+    }
   }
 }

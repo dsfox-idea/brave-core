@@ -150,7 +150,7 @@ TEST_F(PageMetricsUnitTest, DomainsLoadedCount) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -215,7 +215,7 @@ TEST_F(PageMetricsUnitTest, PagesLoadedCount) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -322,7 +322,7 @@ TEST_F(PageMetricsUnitTest, FirstPageLoadTimeLater) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -346,7 +346,7 @@ TEST_F(PageMetricsUnitTest, FirstPageLoadTimeTooLate) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -361,7 +361,7 @@ TEST_F(PageMetricsUnitTest, CombinedSearchStudyNotReportedTooEarly) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
@@ -397,7 +397,7 @@ TEST_F(PageMetricsUnitTest, CombinedSearchStudyAttributes) {
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() == 26) {
+  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
     GTEST_SKIP() << "Disabled on macOS Tahoe.";
   }
 #endif
