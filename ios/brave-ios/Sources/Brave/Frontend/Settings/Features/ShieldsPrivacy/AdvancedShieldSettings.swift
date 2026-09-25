@@ -4,7 +4,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveShields
 import Combine
@@ -149,18 +149,14 @@ import os
     }
   }
 
-  @Published var isSurveyPanelistEnabled: Bool = false {
-    didSet {
-      rewards?.ads.isSurveyPanelistEnabled = isSurveyPanelistEnabled
-    }
-  }
+  // Growser-290: no isSurveyPanelistEnabled - surveys were an ads feature.
 
   /// Hide the Sponsored Ads toggle when Rewards is disabled by policy or in
   /// an unsupported region, because it would have no effect. This matches
   /// `AdsServiceImplIOS` logic when it is not started if Rewards is not
   /// supported.
   var isSponsoredAdsSupported: Bool {
-    BraveRewardsAPI.isSupported(prefs)
+    false  // Growser-290: sponsored images are ads, and ads are out.
   }
 
   /// If we should write Shields setting changes to content settings.
@@ -185,7 +181,7 @@ import os
   private let localState: any PrefService
   private let debounceService: (any DebounceService)?
   private let braveShieldsSettings: (any BraveShieldsSettings)?
-  private let rewards: BraveRewards?
+  // Growser-290: no rewards.
   private let clearDataCallback: ClearDataCallback
   private let braveStats: BraveStats
   private let webcompatReporterHandler: WebcompatReporterWebcompatReporterHandler?
@@ -194,13 +190,12 @@ import os
   init(
     profile: LegacyBrowserProfile,
     tabManager: TabManager,
-    feedDataSource: FeedDataSource,
+    // Growser-281: no feedDataSource.
     debounceService: (any DebounceService)?,
     braveShieldsSettings: (any BraveShieldsSettings)?,
     braveCore: BraveProfileController,
     p3aUtils: BraveP3AUtils,
     localState: any PrefService,
-    rewards: BraveRewards?,
     braveStats: BraveStats,
     webcompatReporterHandler: WebcompatReporterWebcompatReporterHandler?,
     clearDataCallback: @escaping ClearDataCallback
@@ -213,7 +208,6 @@ import os
     self.isP3AEnabled = p3aUtilities.isP3AEnabled
     self.isCrashReportingEnabled = localState.boolean(forPath: kMetricsReportingEnabled)
     self.isStatsReportingEnabled = braveStats.isStatsReportingEnabled
-    self.rewards = rewards
     self.clearDataCallback = clearDataCallback
     self.braveStats = braveStats
     self.prefs = braveCore.profile.prefs
@@ -237,7 +231,6 @@ import os
     self.isDebounceEnabled = debounceService?.isEnabled ?? false
     self.shredHistoryItems = Preferences.Shields.shredHistoryItems.value
     self.webcompatReporterHandler = webcompatReporterHandler
-    self.isSurveyPanelistEnabled = rewards?.ads.isSurveyPanelistEnabled ?? false
 
     blockMobileAnnoyances = FilterListStorage.shared.isEnabled(
       for: AdblockFilterListCatalogEntry.mobileAnnoyancesComponentID
@@ -266,34 +259,11 @@ import os
       ),
       ClearableSetting(id: .downloads, clearable: DownloadsClearable(), isEnabled: true),
     ]
-    if braveCore.profile.prefs.isBraveNewsAvailable {
-      clearableSettings.append(
-        ClearableSetting(
-          id: .braveNews,
-          clearable: BraveNewsClearable(feedDataSource: feedDataSource),
-          isEnabled: true
-        )
-      )
-    }
+    // Growser-281: no Brave News clearable.
 
-    if braveCore.profile.prefs.isPlaylistAvailable {
-      clearableSettings.append(
-        ClearableSetting(id: .playlistCache, clearable: PlayListCacheClearable(), isEnabled: false)
-      )
-    }
+    // Growser-282: no Playlist cache clearable.
 
-    // Enable clearing of Brave Ads data only if:
-    // - Brave Ads is running
-    // - Brave Rewards is disabled
-    if let rewards, !rewards.isEnabled, rewards.ads.isServiceRunning() {
-      clearableSettings.append(
-        ClearableSetting(
-          id: .braveAdsData,
-          clearable: BraveAdsDataClearable(rewards: rewards),
-          isEnabled: false
-        )
-      )
-    }
+    // Growser-290: no Brave Ads data to clear - ads are out.
 
     clearableSettings.append(contentsOf: [
       ClearableSetting(id: .recentSearches, clearable: RecentSearchClearable(), isEnabled: true),

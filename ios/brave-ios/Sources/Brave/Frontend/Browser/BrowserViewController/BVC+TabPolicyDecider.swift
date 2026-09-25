@@ -117,14 +117,8 @@ extension BrowserViewController: TabPolicyDecider {
       return .cancel
     }
 
-    // Universal links do not work if the request originates from the app, manual handling is required.
-    if let mainDocURL = request.mainDocumentURL,
-      let universalLink = UniversalLinkManager.universalLinkType(for: mainDocURL, checkPath: true),
-      universalLink == .buyVPN
-    {
-      presentCorrespondingVPNViewController()
-      return .cancel
-    }
+    // Growser-280: no in-app handling of the vpn.brave.com buy link - the VPN
+    // is out of the product, so it is an ordinary web page.
 
     if #available(iOS 17.4, *), !ProcessInfo.processInfo.isiOSAppOnVisionOS {
       // Accessing `MarketplaceKitURIScheme` on Vision OS results in a crash
@@ -143,34 +137,7 @@ extension BrowserViewController: TabPolicyDecider {
       }
     }
 
-    // handles Decentralized DNS
-    if let decentralizedDNSHelper = self.decentralizedDNSHelperFor(url: requestURL),
-      requestInfo.isMainFrame
-    {
-      topToolbar.locationView.loading = true
-      let result = await decentralizedDNSHelper.lookup(
-        domain: requestURL.schemelessAbsoluteDisplayString
-      )
-      topToolbar.locationView.loading = tabManager.selectedTab?.isLoading == true
-      guard !Task.isCancelled else {  // user pressed stop, or typed new url
-        return .cancel
-      }
-      switch result {
-      case .loadInterstitial(let service):
-        showWeb3ServiceInterstitialPage(service: service, originalURL: requestURL)
-        return .cancel
-      case .load(let resolvedURL):
-        if resolvedURL.isIPFSScheme,
-          profileController.ipfsAPI.resolveGatewayUrl(for: resolvedURL) != nil
-        {
-          // FIXME: This should cancel & load the resolved IPFS URL
-        } else {
-          // FIXME: This should cancel & load the resolvedURL
-        }
-      case .none:
-        break
-      }
-    }
+    // Growser-287: no ENS/SNS/Unstoppable name resolution - it was the wallet's.
 
     tab.currentRequestURL = requestURL
 

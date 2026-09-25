@@ -5,13 +5,13 @@
 import AVFoundation
 import Brave
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveShields
-import BraveStore
-import BraveTalk
-import BraveVPN
-import BraveWallet
+// Growser-283: no BraveStore.
+// Growser-278: no BraveTalk.
+// Growser-280: no BraveVPN.
+// Growser-287: no BraveWallet.
 import BraveWidgetsModels
 import Combine
 import CoreSpotlight
@@ -20,7 +20,7 @@ import Growth
 import LocalAuthentication
 import MessageUI
 import Onboarding
-import Playlist
+// Growser-282: no Playlist.
 import Preferences
 import PrivateCDN
 import RuntimeWarnings
@@ -69,8 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set the Safari UA for browsing.
     setUserAgent()
 
-    // Fetching details of GRDRegion for Automatic Region selection
-    BraveVPN.fetchLastUsedRegionDetail()
+    // Growser-280: no VPN region prefetch - the VPN is out of the product.
 
     // Start the keyboard helper to monitor and cache keyboard state.
     KeyboardHelper.defaultHelper.startObserving()
@@ -79,31 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     SDImageCodersManager.shared.addCoder(PrivateCDNImageCoder())
 
-    if Preferences.BraveNews.isEnabled.value && !Preferences.BraveNews.userOptedIn.value {
-      // Opt-out any user that has not explicitly opted-in
-      Preferences.BraveNews.isEnabled.value = false
-      // User now has to explicitly opt-in
-      Preferences.BraveNews.isShowingOptIn.value = true
-    }
-
-    // If the user's language was checked but not included in the News supported languages list check it again
-    // each launch since updates could add support for a new language. If a user previously opted in to News
-    // however then we shouldn't show the opt-in card again.
-    let shouldPerformLanguageCheck =
-      !Preferences.BraveNews.languageChecked.value
-      || Preferences.BraveNews.languageWasUnavailableDuringCheck.value == true
-    let isNewsEnabledOrPreviouslyOptedIn =
-      Preferences.BraveNews.isEnabled.value || Preferences.BraveNews.userOptedIn.value
-    if shouldPerformLanguageCheck, !isNewsEnabledOrPreviouslyOptedIn,
-      let languageCode = Locale.preferredLanguages.first?.prefix(2)
-    {
-      Preferences.BraveNews.languageChecked.value = true
-      let languageShouldShowOptIn =
-        FeedDataSource.supportedLanguages.contains(String(languageCode))
-        || FeedDataSource.knownSupportedLocales.contains(Locale.current.identifier)
-      Preferences.BraveNews.languageWasUnavailableDuringCheck.value = !languageShouldShowOptIn
-      Preferences.BraveNews.isShowingOptIn.value = languageShouldShowOptIn
-    }
+    // Growser-281: no Brave News opt-in and language checks.
 
     // Clean Logger for Secure content state
     DebugLogger.cleanLogger(for: .secureState)
@@ -123,15 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Run migrations that need access to Data
     Migration.postDataLoadMigration()
 
-    // IAPs can trigger on the app as soon as it launches,
-    // for example when a previous transaction was not finished and is in pending state.
-    // Initializing the observer starts listening for transaction updates and purchase intents.
-    _ = BraveVPN.iapObserver
-    // Editing Product Promotion List
-    Task { @MainActor in
-      await BraveVPN.updateStorePromotionOrder()
-      await BraveVPN.hideActiveStorePromotion()
-    }
+    // Growser-280: no VPN in-app purchase observer or store promotions.
 
     // Override point for customization after application launch.
     var shouldPerformAdditionalDelegateHandling = true
@@ -250,10 +217,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       Preferences.DAU.installationDate.value = currentDate
       Preferences.P3A.installationDate.value = currentDate
 
-      // VPN credentials are kept in keychain and persist between app reinstalls.
-      // To avoid unexpected problems we clear all vpn keychain items.
-      // New set of keychain items will be created on purchase or iap restoration.
-      BraveVPN.clearCredentials()
+      // Growser-280: no VPN keychain items to clear.
 
       // Always load YouTube in Brave for new users
       Preferences.General.keepYouTubeInBrave.value = true
@@ -330,30 +294,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       )
     }
 
-    // Setup Playlist
-    // This restores the playlist incomplete downloads. So if a download was started
-    // and interrupted on application death, we restart it on next launch.
-    Task(priority: .low) { @MainActor in
-      PlaylistManager.shared.setupPlaylistFolder()
-      PlaylistManager.shared.restoreSession()
-    }
+    // Growser-282: no Playlist folder set-up or download restore.
 
     return shouldPerformAdditionalDelegateHandling
   }
 
-  func application(
-    _ application: UIApplication,
-    continue userActivity: NSUserActivity,
-    restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void
-  ) -> Bool {
-    guard let prefService = AppState.shared.braveCore.profileController?.profile.prefs else {
-      return false
-    }
-    return BraveTalkJitsiCoordinator.sendAppLifetimeEvent(
-      .continueUserActivity(userActivity, restorationHandler: restorationHandler),
-      prefService: prefService
-    )
-  }
+  // Growser-278: application(_:continue:restorationHandler:) existed only to
+  // hand the activity to Brave Talk's Jitsi SDK. Activities reach the app
+  // through SceneDelegate's scene(_:continue:), which is untouched.
 
   func applicationWillTerminate(_ application: UIApplication) {
 

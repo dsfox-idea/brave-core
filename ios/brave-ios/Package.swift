@@ -22,17 +22,17 @@ var package = Package(
     .library(name: "BraveShields", targets: ["BraveShields"]),
     .library(name: "BraveUI", targets: ["BraveUI"]),
     .library(name: "DesignSystem", targets: ["DesignSystem", "NalaAssets"]),
-    .library(name: "BraveWallet", targets: ["BraveWallet"]),
+    // Growser-287: no BraveWallet library.
     .library(name: "Data", targets: ["Data"]),
     .library(name: "DataImporter", targets: ["DataImporter"]),
     .library(name: "BrowserIntentsModels", targets: ["BrowserIntentsModels"]),
     .library(name: "BraveWidgetsModels", targets: ["BraveWidgetsModels"]),
     .library(name: "Strings", targets: ["Strings"]),
     .library(name: "BraveStrings", targets: ["BraveStrings"]),
-    .library(name: "BraveVPN", targets: ["BraveVPN"]),
-    .library(name: "BraveNews", targets: ["BraveNews"]),
-    .library(name: "AIChat", targets: ["AIChat"]),
-    .library(name: "BraveStore", targets: ["BraveStore"]),
+    // Growser-280: no BraveVPN library.
+    // Growser-281: no BraveNews library.
+    // Growser-279: no AIChat library.
+    // Growser-283: no BraveStore library.
     .library(name: "Favicon", targets: ["Favicon"]),
     .library(name: "FaviconModels", targets: ["FaviconModels"]),
     .library(name: "SpeechRecognition", targets: ["SpeechRecognition"]),
@@ -44,14 +44,14 @@ var package = Package(
     .library(name: "Preferences", targets: ["Preferences"]),
     .library(name: "PrivateCDN", targets: ["PrivateCDN"]),
     .library(name: "CertificateUtilities", targets: ["CertificateUtilities"]),
-    .library(name: "Playlist", targets: ["Playlist"]),
+    // Growser-282: no Playlist library.
     .library(name: "UserAgent", targets: ["UserAgent"]),
     .library(name: "CredentialProviderUI", targets: ["CredentialProviderUI"]),
-    .library(name: "PlaylistUI", targets: ["PlaylistUI"]),
+    // Growser-282: no PlaylistUI library.
     .library(name: "BrowserMenu", targets: ["BrowserMenu"]),
     .library(name: "Web", targets: ["Web"]),
-    .library(name: "BraveTalk", targets: ["BraveTalk"]),
-    .library(name: "Origin", targets: ["Origin"]),
+    // Growser-278: no BraveTalk library.
+    // Growser-283: no Origin library.
     .plugin(name: "IntentBuilderPlugin", targets: ["IntentBuilderPlugin"]),
     .plugin(name: "LoggerPlugin", targets: ["LoggerPlugin"]),
   ],
@@ -60,20 +60,23 @@ var package = Package(
     .package(url: "https://github.com/cezheng/Fuzi", from: "3.1.3"),
     .package(url: "https://github.com/airbnb/lottie-spm", from: "4.4.3"),
     .package(url: "https://github.com/SDWebImage/SDWebImage", exact: "5.10.3"),
-    .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI", from: "2.2.0"),
-    .package(url: "https://github.com/nmdias/FeedKit", from: "9.1.2"),
+    // Growser-287: no SDWebImageSwiftUI or Swift-BigInt - only BraveWallet
+    // used them.
+    // Growser-281: no FeedKit - only BraveNews parsed RSS with it.
     .package(url: "https://github.com/apple/swift-collections", from: "1.0.0"),
     .package(url: "https://github.com/siteline/SwiftUI-Introspect", from: "26.0.2"),
     .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
     .package(url: "https://github.com/devxoul/Then", from: "2.7.0"),
-    .package(name: "Swift-BigInt", path: "../third_party/swift-bigint"),
-    .package(url: "https://github.com/GuardianFirewall/GuardianConnect", exact: "2.1.1"),
+    // Growser-280: no GuardianConnect - Guardian's VPN SDK went with the VPN.
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "0.6.0"),
     .package(
       url: "https://github.com/venmo/Static",
       revision: "622a6804d39515600ead16e6259cb5d5e50f40df"
     ),
-    .package(name: "JitsiMeet", path: "../third_party/JitsiMeet"),
+    // Growser-278: JitsiMeet went with BraveTalk, and with it the
+    // jitsi/webrtc package its own manifest pulls - a SECOND WebRTC, 302 MB,
+    // cloned from GitHub at the 35-50 KB/s this network gets (growser#264).
+    // That clone was the single slowest thing in bringing iOS up.
   ],
   targets: [
     .target(
@@ -81,7 +84,7 @@ var package = Package(
       dependencies: [
         "BraveShared",
         "Shared",
-        "BraveWallet",
+        // Growser-287: no BraveWallet.
         "BraveCore",
         "PartitionAllocSupport",
         "BraveUI",
@@ -95,10 +98,10 @@ var package = Package(
         "Then",
         "BrowserIntentsModels",
         "BraveWidgetsModels",
-        "BraveVPN",
-        "BraveNews",
-        "AIChat",
-        "BraveStore",
+        // Growser-280: no BraveVPN.
+        // Growser-281: no BraveNews.
+        // Growser-279: no AIChat.
+        // Growser-283: no BraveStore.
         "Onboarding",
         "Growth",
         "SpeechRecognition",
@@ -106,21 +109,93 @@ var package = Package(
         "Preferences",
         "Favicon",
         "CertificateUtilities",
-        "Playlist",
+        // Growser-282: no Playlist.
         "UserAgent",
         .product(name: "Lottie", package: "lottie-spm"),
         .product(name: "Collections", package: "swift-collections"),
-        "PlaylistUI",
+        // Growser-287: two debug views used Algorithms without importing it,
+        // through BraveWallet's dependency; now it is declared where it is used.
+        .product(name: "Algorithms", package: "swift-algorithms"),
+        // Growser-282: no PlaylistUI.
         "BrowserMenu",
         "Web",
         "BraveShields",
-        "BraveTalk",
-        "Origin",
+        // Growser-278: no BraveTalk.
+        // Growser-283: no Origin.
       ],
       exclude: [
         "Frontend/UserContent/UserScripts/AllFrames",
         "Frontend/UserContent/UserScripts/MainFrame",
         "Frontend/UserContent/UserScripts/Sandboxed",
+        // Growser-278: Brave Talk is out of the product. The files stay on
+        // disk so upstream merges do not conflict on them; excluding them is
+        // what keeps them out of the app.
+        "Frontend/Settings/Debug/BraveTalkLogsView.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveTalkScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveTalkScript.js",
+        // Growser-279: Leo is out of the product, on the same terms.
+        "Frontend/Browser/BrowserViewController/BVC+AIChat.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Sandboxed/BraveLeoScriptHandler.swift",
+        // Growser-280: the VPN is out of the product, on the same terms.
+        "Frontend/Browser/BrowserViewController/BVC+VPN.swift",
+        "Frontend/Settings/Debug/VPNLogsViewController.swift",
+        // Growser-281: Brave News is out of the product, on the same terms.
+        "Frontend/Browser/NewTabPage/NewTabPageFeedOverlayView.swift",
+        "Frontend/Browser/NewTabPage/Sections/BraveNewsSectionProvider.swift",
+        // Growser-282: Playlist is out of the product, on the same terms.
+        "Frontend/Browser/Playlist",
+        "Frontend/Browser/BrowserViewController/BVC+Playlist.swift",
+        "Frontend/Browser/Helpers/PlaylistTabHelper.swift",
+        "Frontend/Settings/Features/PlaylistSettingsViewController.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/PlaylistScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistScript.js",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistSwizzlerScript.js",
+        // Growser-283: Brave's paid-product layer is out, on the same terms.
+        "BraveSkus",
+        "Frontend/Browser/BrowserViewController/BVC+Origin.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveSkusScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSkusScript.js",
+        // Growser-287: the wallet is out of the product, on the same terms:
+        // its UI glue, the Ethereum, Solana and Cardano providers pages talk to,
+        // and ENS/SNS/Unstoppable name resolution with its interstitial.
+        "Wallet",
+        "Frontend/BraveNotifications/BraveWallet",
+        "Frontend/Settings/Debug/BraveWallet",
+        "Frontend/Browser/BrowserViewController/BVC+Wallet.swift",
+        "Frontend/Browser/BrowserViewController/BVC+Web3NameService.swift",
+        "Frontend/Browser/Handlers/Web3DomainHandler.swift",
+        "Frontend/Browser/Helpers/WalletTabHelper.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Internal/Web3NameServiceScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/CardanoProviderScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/EthereumProviderScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/SolanaProviderScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletCardanoProviderScript.js",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletEthereumProviderScript.js",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletSolanaProviderScript.js",
+        "Assets/InterstitialPages/Pages/Web3Domain.html",
+        "Assets/InterstitialPages/Styles/Web3Domain.css",
+        // Growser-310: the new tab page shows the owner's photo, not Brave's.
+        "Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/corwin-prescott-3.jpg",
+        // Growser-290: Brave Rewards and Brave Ads are out of the product, on
+        // the same terms: the Rewards service and panel, ads notifications,
+        // search-result ads, DeviceCheck enrolment and the internals pages.
+        "DeviceCheck",
+        "Extensions/Rewards",
+        "Frontend/Rewards",
+        "Frontend/BraveRewards",
+        "Frontend/BraveNotifications/BraveRewards",
+        "Frontend/Settings/Debug/RewardsInternals",
+        "Frontend/Settings/Features/BraveRewardsSettingsViewController.swift",
+        "Frontend/Browser/BrowserViewController/BVC+Rewards.swift",
+        "Frontend/Browser/NewTabPage/Notifications",
+        "Frontend/Browser/Search/BraveSearchResultAdManager.swift",
+        "Frontend/Browser/SearchResultAdClickedInfoBar.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/ScriptHandlers/Paged/BraveSearchResultAdScriptHandler.swift",
+        "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchResultAdScript.js",
+        // Growser-284: every alternate app icon is a Brave lion, so the
+        // picker is out and the app wears the G only.
+        "Frontend/Settings/Display/AltIconsModel.swift",
+        "Frontend/Settings/Display/AltIconsView.swift",
       ],
       resources: [
         .copy("Assets/About/AboutHome.html"),
@@ -148,27 +223,20 @@ var package = Package(
         .copy("Assets/Fonts/NewYorkMedium-RegularItalic.otf"),
         .copy("Assets/InterstitialPages/Pages/BlockedDomain.html"),
         .copy("Assets/InterstitialPages/Pages/HTTPBlocked.html"),
-        .copy("Assets/InterstitialPages/Pages/Web3Domain.html"),
         .copy("Assets/InterstitialPages/Images/Info.svg"),
         .copy("Assets/InterstitialPages/Images/warning-triangle-outline.svg"),
         .copy("Assets/InterstitialPages/Styles/BlockedDomain.css"),
         .copy("Assets/InterstitialPages/Styles/InterstitialStyles.css"),
-        .copy("Assets/InterstitialPages/Styles/Web3Domain.css"),
         .copy("Assets/Lottie/shred.json"),
         .copy("Assets/SearchPlugins"),
         .copy("Frontend/Reader/Reader.css"),
         .copy("Frontend/Reader/Reader.html"),
         .copy("Frontend/Reader/ReaderViewLoading.html"),
-        .copy("Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/corwin-prescott-3.jpg"),
+        // Growser-310: the owner's photo, the same file as Android's (#309).
+        .copy("Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/growser_mobile_01.webp"),
         .copy("Frontend/Browser/Favorites/Data/top_sites_by_region.json"),
         .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchResultAdScript.js"
-        ),
-        .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchScript.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSkusScript.js"
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/FrameCheckWrapper.js"
@@ -183,24 +251,11 @@ var package = Package(
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/MediaBackgroundingScript.js"
         ),
-        .copy("Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistScript.js"),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/PlaylistSwizzlerScript.js"
-        ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/RequestBlockingScript.js"
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/TrackingProtectionStats.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletEthereumProviderScript.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletSolanaProviderScript.js"
-        ),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/WalletCardanoProviderScript.js"
         ),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/Paged/YoutubeQualityScript.js"
@@ -229,9 +284,6 @@ var package = Package(
         .copy("WebFilters/ContentBlocker/Lists/block-trackers.json"),
         .copy("WebFilters/ContentBlocker/Lists/mixed-content-upgrade.json"),
         .copy("WebFilters/ShieldStats/Adblock/Resources/ABPFilterParserData.dat"),
-        .copy(
-          "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveTalkScript.js"
-        ),
       ],
       plugins: ["LoggerPlugin"]
     ),
@@ -246,6 +298,8 @@ var package = Package(
     .target(
       name: "BraveShared",
       dependencies: ["BraveCore", "Shared", "Preferences"],
+      // Growser-290: ads are out of the product, and BraveAds with them.
+      exclude: ["Extensions/BraveAdsExtensions.swift"],
       plugins: ["LoggerPlugin"]
     ),
     .target(
@@ -269,7 +323,9 @@ var package = Package(
     .target(
       name: "Growth",
       dependencies: [
-        "BraveVPN", "Shared", "BraveShared", "Strings", "SnapKit", "CertificateUtilities",
+        // Growser-280: no BraveVPN - and BraveUI (currentScene), which used to
+        // arrive through it, is now asked for by name.
+        "BraveUI", "Shared", "BraveShared", "Strings", "SnapKit", "CertificateUtilities",
         .product(name: "OrderedCollections", package: "swift-collections"),
       ],
       plugins: ["LoggerPlugin"]
@@ -333,6 +389,12 @@ var package = Package(
     .target(
       name: "Data",
       dependencies: ["BraveShared", "Strings", "Preferences", "Shared"],
+      // Growser-287: the wallet's own entities. The model keeps them, so a
+      // store written by an older build still opens; nothing reads them.
+      exclude: [
+        "models/WalletUserAsset.swift", "models/WalletUserAssetBalance.swift",
+        "models/WalletUserAssetGroup.swift",
+      ],
       plugins: ["LoggerPlugin"]
     ),
     .target(
@@ -350,30 +412,8 @@ var package = Package(
       ],
       plugins: ["LoggerPlugin"]
     ),
-    .target(
-      name: "BraveWallet",
-      dependencies: [
-        "Data",
-        "BraveCore",
-        "PartitionAllocSupport",
-        "BraveShared",
-        "BraveUI",
-        "DesignSystem",
-        "Favicon",
-        "Strings",
-        "SDWebImageSwiftUI",
-        "SnapKit",
-        "Then",
-        "Shared",
-        "BraveStrings",
-        "Web",
-        .product(name: "BigNumber", package: "Swift-BigInt"),
-        .product(name: "Algorithms", package: "swift-algorithms"),
-        .product(name: "Collections", package: "swift-collections"),
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-287: the BraveWallet target and its tests are not declared, so
+    // their sources are not built.
     .target(
       name: "BrowserIntentsModels",
       dependencies: ["Shared"],
@@ -390,78 +430,14 @@ var package = Package(
       plugins: ["IntentBuilderPlugin", "LoggerPlugin"]
     ),
     .target(name: "TestHelpers", dependencies: ["Data", "BraveShared"]),
-    .target(
-      name: "BraveVPN",
-      dependencies: [
-        "BraveCore",
-        "BraveStore",
-        "BraveStrings",
-        "SnapKit",
-        "Then",
-        "Data",
-        "GuardianConnect",
-        "BraveUI",
-        .product(name: "Lottie", package: "lottie-spm"),
-      ],
-      resources: [.copy("Resources/vpncheckmark.json")],
-      plugins: ["LoggerPlugin"]
-    ),
-    .target(
-      name: "BraveNews",
-      dependencies: [
-        "BraveCore",
-        "BraveShared",
-        "BraveStrings",
-        "BraveUI",
-        "CodableHelpers",
-        "Data",
-        "DesignSystem",
-        "FeedKit",
-        "Fuzi",
-        "Growth",
-        "Preferences",
-        "Shared",
-        "SnapKit",
-        "Strings",
-        "Then",
-        .product(name: "Collections", package: "swift-collections"),
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-        .product(name: "Lottie", package: "lottie-spm"),
-      ],
-      resources: [
-        .copy("LottieAssets/brave-today-welcome-graphic.json")
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
-    .target(
-      name: "AIChat",
-      dependencies: [
-        "BraveCore",
-        "BraveShared",
-        "BraveStore",
-        "BraveStrings",
-        "BraveUI",
-        "DesignSystem",
-        "Preferences",
-        "Strings",
-        "Web",
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
-    .target(
-      name: "BraveStore",
-      dependencies: [
-        "BraveCore",
-        "BraveShared",
-        "BraveStrings",
-        "BraveUI",
-        "DesignSystem",
-        "Preferences",
-        .product(name: "Collections", package: "swift-collections"),
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-280: the BraveVPN target and its tests are not declared, so
+    // Sources/BraveVPN and Tests/BraveVPNTests are not built.
+    // Growser-281: the BraveNews target and its tests are not declared, so
+    // Sources/BraveNews and Tests/BraveNewsTests are not built.
+    // Growser-279: the AIChat target is not declared, so Sources/AIChat is
+    // not built.
+    // Growser-283: the BraveStore and Origin targets are not declared, so their
+    // sources are not built.
     .target(name: "Preferences", dependencies: ["Shared"], plugins: ["LoggerPlugin"]),
     .target(
       name: "Onboarding",
@@ -477,21 +453,19 @@ var package = Package(
         "Shared",
         "SnapKit",
       ],
+      // Growser-280: the VPN promotions are out of the product with the VPN.
+      // Growser-290: so is the Rewards agreement, with Rewards.
+      // Growser-286: and its animation, which shipped with nothing to play it.
+      exclude: [
+        "VPNNotifications", "Callouts/OnboardingRewardsAgreementViewController.swift",
+        "LottieAssets/onboarding-rewards.json",
+      ],
       resources: [
-        .copy("LottieAssets/onboarding-rewards.json"),
         .copy("LottieAssets/playlist-confetti.json"),
         .copy("WelcomeFocus/Resources/LottieAssets"),
         .copy("WelcomeFocus/Resources/Videos"),
       ],
       plugins: ["LoggerPlugin"]
-    ),
-    .testTarget(
-      name: "BraveNewsTests",
-      dependencies: ["BraveNews"],
-      resources: [
-        .copy("opml-test-files/subscriptionList.opml"),
-        .copy("opml-test-files/states.opml"),
-      ]
     ),
     .target(name: "CodableHelpers"),
     .target(name: "FaviconModels", dependencies: ["Shared"]),
@@ -522,21 +496,20 @@ var package = Package(
       dependencies: ["BraveShared", "Preferences"]
     ),
     .testTarget(
-      name: "BraveVPNTests",
-      dependencies: ["BraveVPN", "BraveShared", "GuardianConnect"]
-    ),
-    .testTarget(
-      name: "BraveWalletTests",
-      dependencies: [
-        "BraveWallet",
-        "TestHelpers",
-        .product(name: "CustomDump", package: "swift-custom-dump"),
+      name: "DataTests",
+      dependencies: ["Data", "TestHelpers", "BraveShields"],
+      // Growser-287: the wallet entities they test are not built.
+      exclude: [
+        "WalletUserAssetBalanceTests.swift", "WalletUserAssetGroupTests.swift",
+        "WalletUserAssetTests.swift",
       ]
     ),
-    .testTarget(name: "DataTests", dependencies: ["Data", "TestHelpers", "BraveShields"]),
     .testTarget(
       name: "ClientTests",
       dependencies: ["Brave", "BraveStrings", "TestHelpers", "Web"],
+      // Growser-283: the SKUS glue it tests is not built. Growser-287: nor is
+      // the Solana provider.
+      exclude: ["Helpers/BraveSkusWebHelperTests.swift", "SolanaProviderScriptHandlerTests.swift"],
       resources: [
         .copy("Resources/debouncing.json"),
         .copy("Resources/content-blocking.json"),
@@ -554,38 +527,19 @@ var package = Package(
     .target(name: "Strings"),
     .target(name: "RuntimeWarnings"),
     .target(name: "PrivateCDN", dependencies: ["SDWebImage"]),
-    .target(
-      name: "Playlist",
-      dependencies: [
-        "Data", "BraveShared", "Shared", "Preferences", "Strings", "CodableHelpers",
-        "UserAgent", "Then", "BraveShields",
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
+    // Growser-282: the Playlist and PlaylistUI targets and their tests are not
+    // declared, so their sources are not built.
     .testTarget(name: "PrivateCDNTests", dependencies: ["PrivateCDN"]),
     .testTarget(
       name: "GrowthTests",
-      dependencies: ["Growth", "Shared", "BraveShared", "BraveVPN"]
-    ),
-    .target(
-      name: "PlaylistUI",
-      dependencies: [
-        "Favicon", "Data", "DesignSystem", "Playlist", "SDWebImage", "SnapKit", "Strings",
-        "CodableHelpers", .product(name: "Algorithms", package: "swift-algorithms"), "BraveStrings",
-        .product(name: "OrderedCollections", package: "swift-collections"), "BraveUI",
-      ],
-      resources: [.copy("Resources/oembed_providers.json")]
-    ),
-    .testTarget(
-      name: "PlaylistUITests",
-      dependencies: ["PlaylistUI", "Playlist", "Preferences", "Data", "TestHelpers"],
-      resources: [.copy("Resources/Big_Buck_Bunny_360_10s_1MB.mp4")]
+      dependencies: ["Growth", "Shared", "BraveShared"]  // Growser-280: no BraveVPN
     ),
     .target(
       name: "BrowserMenu",
       dependencies: [
-        "DesignSystem", "BraveUI", "Preferences", "Strings", "BraveStrings", "BraveVPN",
-        "GuardianConnect", "BraveWallet", "BraveShields",
+        // Growser-280: no BraveVPN or GuardianConnect.
+        "DesignSystem", "BraveUI", "Preferences", "Strings", "BraveStrings",
+        "BraveShields",  // Growser-287: no BraveWallet
       ]
     ),
     .target(
@@ -600,31 +554,8 @@ var package = Package(
     .testTarget(name: "BrowserMenuTests", dependencies: ["BrowserMenu"]),
     .plugin(name: "IntentBuilderPlugin", capability: .buildTool()),
     .plugin(name: "LoggerPlugin", capability: .buildTool()),
-    .target(
-      name: "BraveTalk",
-      dependencies: [
-        "Shared", "Preferences", "JitsiMeet", "BraveCore", "Web",
-        .product(name: "Collections", package: "swift-collections"),
-      ],
-      plugins: ["LoggerPlugin"]
-    ),
-    .testTarget(
-      name: "BraveTalkTests",
-      dependencies: [
-        "BraveTalk", "Shared", "TestHelpers", "BraveCore",
-        .product(name: "Collections", package: "swift-collections"),
-      ]
-    ),
-    .target(
-      name: "Origin",
-      dependencies: [
-        "DesignSystem",
-        "Strings",
-        "BraveCore",
-        "BraveStore",
-        .product(name: "SwiftUIIntrospect", package: "SwiftUI-Introspect"),
-      ]
-    ),
+    // Growser-278: the BraveTalk target and its tests are not declared, so
+    // Sources/BraveTalk and Tests/BraveTalkTests are not built.
   ],
   swiftLanguageModes: [.v5],
   cxxLanguageStandard: .cxx17

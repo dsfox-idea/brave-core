@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Brave иконе";
+"altAppIcon.braveIconsHeader" = "Growser иконе";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "Промени икону апликације";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "Сазнајте више / опције за одустанак";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "Спонзорисане слике позадине подржавају Brave-ову мисију изградње независног веба који је првенствено усмерен на кориснике. И за разлику од великих технолошких компанија, ми анонимно меримо учинак огласа како бисмо сачували вашу приватност.";
+"NewTabTakeoverInfoBarMessage" = "Спонзорисане слике позадине подржавају Growser-ову мисију изградње независног веба који је првенствено усмерен на кориснике. И за разлику од великих технолошких компанија, ми анонимно меримо учинак огласа како бисмо сачували вашу приватност.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "Нова картица";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "Шифра **%1$@** за попуст од %2$@";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Налог на Brave-у";
+"paywall.braveAccountCheckoutOptionTitle" = "Налог на Growser-у";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Сазнајте више о Brave VPN";
+"paywall.braveVPNLearnMoreButtonTitle" = "Сазнајте више о Growser VPN";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "Имате промотивни код?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "Сазнајте више / опције за одустанак";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "Хвала вам што сте кликнули на приватни оглас и тиме подржали Brave претрагу. За разлику од великих технолошких компанија, ми анонимно меримо учинак огласа да бисмо сачували вашу приватност.";
+"searchResultAdClickedInfoBarMessage" = "Хвала вам што сте кликнули на приватни оглас и тиме подржали Growser претрагу. За разлику од великих технолошких компанија, ми анонимно меримо учинак огласа да бисмо сачували вашу приватност.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "Изабери траку за локацију";
@@ -110,7 +110,7 @@
 "ShowPreviousTabTitle" = "Прикажи претходну картицу";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts which is for Showing Brave Shields */
-"showShieldsTitle" = "Отвори Brave штитове";
+"showShieldsTitle" = "Отвори Growser штитове";
 
 /* Hardware shortcut to open the tab tray from a tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "ShowTabTrayFromTabKeyCodeTitle" = "Прикажи све картице";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "Верзија апликације";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo – месечно";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo – месечно";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo – годишње";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo – годишње";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "Нису пронађене признанице из App Store-а";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "Датум отказивања";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "Подели признаницу";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN – месечно";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN – месечно";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN – годишње";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN – годишње";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "Режим нормалног прегледања веба";

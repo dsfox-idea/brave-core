@@ -2,16 +2,16 @@
 "About" = "इसके बारे में";
 
 /* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "Brave शील्ड के बारे में";
+"AboutBraveShields" = "Growser शील्ड के बारे में";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "साइटों में अक्सर कुकीज़ और स्क्रिप्ट्स शामिल होती हैं, जो आपको और आपके डिवाइस को पहचानने की कोशिश करती हैं। वे जानना चाहती हैं कि आप कौन हैं और पूरे वेब पर आपको फ़ॉलो करती हैं — हर साइट पर आप क्या करते हैं, इस पर नज़र रखती हैं।\n\nBrave इन चीज़ों को ब्लॉक करता है, ताकि आपको कोई फ़ॉलो न करे और आप आराम से ब्राउज़ कर सकें।";
+"AboutBraveShieldsBody" = "साइटों में अक्सर कुकीज़ और स्क्रिप्ट्स शामिल होती हैं, जो आपको और आपके डिवाइस को पहचानने की कोशिश करती हैं। वे जानना चाहती हैं कि आप कौन हैं और पूरे वेब पर आपको फ़ॉलो करती हैं — हर साइट पर आप क्या करते हैं, इस पर नज़र रखती हैं।\n\nGrowser इन चीज़ों को ब्लॉक करता है, ताकि आपको कोई फ़ॉलो न करे और आप आराम से ब्राउज़ कर सकें।";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "इससे आप इमेज को अपने कैमरा रोल में सेव कर सकते हैं।";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave आपकी फ़ोटो को ऐक्सेस करना चाहिए";
+"AccessPhotoDeniedAlertTitle" = "Growser आपकी फ़ोटो को ऐक्सेस करना चाहिए";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "बुकमार्क लगाएँ";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "बुकमार्क लगाएँ";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Brave Ads डेटा";
+"ads.braveAdsDataToggleOption" = "Growser Ads डेटा";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "विज्ञापन और ट्रैकर्स";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "चालू";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Brave से पूछें";
+"AskBraveMenuItem" = "Growser से पूछें";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "इससे Brave का आपका ऐक्सेस ऑथेंटिकेट हो जाता है";
+"AuthenticationLoginsTouchReason" = "इससे Growser का आपका ऐक्सेस ऑथेंटिकेट हो जाता है";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "रद्द करना";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "पता";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave पैनल";
+"BravePanel" = "Growser पैनल";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave रिवार्ड्स";
+"BraveRewardsAdNotificationTitle" = "Growser रिवार्ड्स";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "खोलें";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "रिवॉर्ड";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave रिवार्ड्स";
+"BraveRewardsTitle" = "Growser रिवार्ड्स";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Brave ब्रेव सर्च आपकी प्रोफ़ाइल नहीं बनाता";
+"braveSearchPromotion.bannerDescription" = "Growser ब्रेव सर्च आपकी प्रोफ़ाइल नहीं बनाता";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "शायद बाद में";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "बेहतर प्राइवेसी के साथ स्वतंत्र सर्च करने में मदद करता है";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Brave सर्च को आज़माएँ";
+"braveSearchPromotion.bannerTryButtonTitle" = "Growser सर्च को आज़माएँ";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "शायद बाद में";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "अगर यह साइट खराब लगती है, तो Shields को बंद करने की कोशिश करें";
 
 /* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave शील्ड्स";
+"BraveShieldsStatusTitle" = "Growser शील्ड्स";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
 "BraveShieldsStatusValueDown" = "नीचे ";
@@ -281,7 +281,7 @@
 "BraveShieldsToggleHint" = "Brave Shields को टॉगल करने के लिए डबल टैप करें";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Growser Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "भाषा चुनें";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "खोज";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave अनुवाद";
+"BraveTranslate.settingsMenuTitle" = "Growser अनुवाद";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave अनुवाद";
+"BraveTranslate.settingsScreenTitle" = "Growser अनुवाद";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "चालू होने पर, Brave अनुवाद अपने-आप आपके पेज की मौजूदा भाषा का पता लगाएगा और URL बार में अनुवाद बटन दिखाएगा।";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "चालू होने पर, Growser अनुवाद अपने-आप आपके पेज की मौजूदा भाषा का पता लगाएगा और URL बार में अनुवाद बटन दिखाएगा।";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "अनुवाद चालू किया गया";
@@ -314,7 +314,7 @@
 "BrowserLock" = "ब्राउज़र लॉक";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Touch ID, Face ID या सिस्टम पासकोड से Brave को अनलॉक करें।";
+"BrowserLockDescription" = "Touch ID, Face ID या सिस्टम पासकोड से Growser को अनलॉक करें।";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "ब्राउज़िंग इतिहास";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "ऐड्रेस बार, टैब्स, बुकमार्क्स और ब्राउज़र के निचले हिस्से में मौजूद दूसरे टूल्स की जगह बदलें।";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Brave टैब्स बार कस्टमाइज़ करें";
+"callout.bottomBarCalloutTitle" = "Growser टैब्स बार कस्टमाइज़ करें";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "अपने कंप्यूटर या टैबलेट पर Brave प्राइवेसी पाएँ और डिवाइसों के बीच बुकमार्क & एक्सटेंशन सिंक करें।";
+"callout.privacyEverywhereCalloutDescription" = "अपने कंप्यूटर या टैबलेट पर Growser प्राइवेसी पाएँ और डिवाइसों के बीच बुकमार्क & एक्सटेंशन सिंक करें।";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "अभी सिंक करें";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "सेटिंग खोलें";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "अपनी गोपनीयता की रक्षा के लिए सभी लिंक को Brave के साथ खोलें";
+"defaultBrowserCallout.introPrimaryText" = "अपनी गोपनीयता की रक्षा के लिए सभी लिंक को Growser के साथ खोलें";
 
 /* Secondary text on default browser popup. */
 "defaultBrowserCallout.introSecondaryText" = "Brave Shields & ऐड्स को ब्लॉक करता है, डेटा सेव करता है और आप जिस भी साइट पर जाते हैं वहाँ आपका समय बचाता है";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "सेटिंग खोलें, डिफ़ॉल्ट ब्राउज़र ऐप पर टैप करें, और Brave को चुनें।";
+"defaultBrowserCallout.introTertiaryText" = "सेटिंग खोलें, डिफ़ॉल्ट ब्राउज़र ऐप पर टैप करें, और Growser को चुनें।";
 
 /* Notification body to promote setting Brave app as default browser */
 "defaultBrowserCallout.notificationBody" = "क्रोमियम को अपने डिफ़ॉल्ट ब्राउज़र के रूप में सेट करें";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "हर लिंक पर Brave की सुरक्षा पाएँ";
+"defaultBrowserCallout.notificationTitle" = "हर लिंक पर Growser की सुरक्षा पाएँ";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "डिफ़ॉल्ट ब्राउज़र कॉलआउट बंद करें";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave डिफ़ॉल्ट";
+"defaultThemeName" = "Growser डिफ़ॉल्ट";
 
 /* No comment provided by engineer. */
 "Delete" = "हटाएं";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "फ़ोल्डर के नाम में बदलाव करें";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "आम तौर पर, %1$@ आपकी जानकारी को सुरक्षित रखने के लिए एन्क्रिप्शन का इस्तेमाल करता है। जब Brave ने इस बार %2$@ से कनेक्ट करने की कोशिश की, तो वेबसाइट ने अजीब और गलत क्रेडेंशियल वापस भेजे। ऐसा तब हो सकता है, जब कोई हमलावर %3$@ की कोशिश कर रहा हो या वाई-फ़ाई साइन इन स्क्रीन ने कनेक्शन में रुकावट डाली हो। आपकी जानकारी अब भी सुरक्षित है, क्योंकि Brave ने किसी भी डेटा के एक्सचेंज होने से पहले कनेक्शन रोक दिया था।<br />आप अभी %4$@ पर नहीं जा सकते, क्योंकि वेबसाइट प्रमाणपत्र को पिन करती है। औम तौर पर, नेटवर्क की गड़बड़ियाँ और हमले अस्थायी होते हैं, इसलिए यह पेज शायद बाद में काम करेगा।";
+"ErrorPagesAdvancedErrorPinningDetails" = "आम तौर पर, %1$@ आपकी जानकारी को सुरक्षित रखने के लिए एन्क्रिप्शन का इस्तेमाल करता है। जब Growser ने इस बार %2$@ से कनेक्ट करने की कोशिश की, तो वेबसाइट ने अजीब और गलत क्रेडेंशियल वापस भेजे। ऐसा तब हो सकता है, जब कोई हमलावर %3$@ की कोशिश कर रहा हो या वाई-फ़ाई साइन इन स्क्रीन ने कनेक्शन में रुकावट डाली हो। आपकी जानकारी अब भी सुरक्षित है, क्योंकि Growser ने किसी भी डेटा के एक्सचेंज होने से पहले कनेक्शन रोक दिया था।<br />आप अभी %4$@ पर नहीं जा सकते, क्योंकि वेबसाइट प्रमाणपत्र को पिन करती है। औम तौर पर, नेटवर्क की गड़बड़ियाँ और हमले अस्थायी होते हैं, इसलिए यह पेज शायद बाद में काम करेगा।";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "यह सर्वर साबित नहीं कर पाया कि यह %@ है; आपके डिवाइस का ऑपरेटिंग सिस्टम इसके सुरक्षा प्रमाणपत्र पर भरोसा नहीं करता। ऐसा लगत कॉन्फ़िगरेशन के कारण या इस कारण से हो सकता है कि कोई हमलावर आपके कनेक्शन को इंटरसेप्ट करने की कोशिश कर रहा हो।";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "लिंक के प्रीव्यू छिपाएँ";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Brave रिवार्ड्स आइकन छुपाएं";
+"HideRewardsIcon" = "Growser रिवार्ड्स आइकन छुपाएं";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Brave Rewards के चालू न होने पर, Brave Rewards आइकन छिपाता है";
+"HideRewardsIconSubtitle" = "Growser Rewards के चालू न होने पर, Growser Rewards आइकन छिपाता है";
 
 /* Title for history menu item */
 "HistortMenuItem" = "इतिहास";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "NPR को उनके टेक्स्ट वाले वर्शन (text.npr.org) में अपने-आप रीडायरेक्ट करता है।";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Brave सपोर्ट";
+"ntp.braveSupportFavoriteTitle" = "Growser सपोर्ट";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "टोकन क्लेम करें";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Brave के साथ ब्राउज़ करने पर आपको %@ मिले हैं।";
+"ntp.earningsReport" = "Growser के साथ ब्राउज़ करने पर आपको %@ मिले हैं।";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "ऐसे ही आगे बढ़ते रहें!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "स्पांसर्ड इमेजों को छिपाएँ";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "स्पॉन्सर की गई इमेज ब्रैंडेड बैकग्राउंड होती हैं, जो ब्राउज़र में नए खोले गए टैब में दिखती हैं। इन स्पॉन्सर की गई इमेज को सक्षम करने से Brave के लक्ष्य का समर्थन होता है। [और जानें](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "स्पॉन्सर की गई इमेज ब्रैंडेड बैकग्राउंड होती हैं, जो ब्राउज़र में नए खोले गए टैब में दिखती हैं। इन स्पॉन्सर की गई इमेज को सक्षम करने से Growser के लक्ष्य का समर्थन होता है। [और जानें](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Brave Rewards के बारे में ज़्यादा जानें";
+"ntp.learnMoreAboutRewards" = "Growser Rewards के बारे में ज़्यादा जानें";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "प्रायोजित इमेज के बारे में और जानें";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "ब्राउज़ करते समय बढ़िया कॉन्टेंट के लिए पॉइंट्स कमाएँ और क्रिएटर्स को रिवॉर्ड दें।";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "पेश हैं Brave Ads!";
+"OBAdsOptInTitle" = "पेश हैं Growser Ads!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "में Brave आपके पहले विज्ञापन को दिखाएगा";
+"OBAdsTitle" = "में Growser आपके पहले विज्ञापन को दिखाएगा";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "अब आप तैयार हैं।";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "शामिल हों";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "मैच करने वाले रेफ़रल कोड के लिए, Brave को मेरे क्लिपबोर्ड की जाँच करने की अनुमति दें";
+"OBPrivacyConsentClipboardPermission" = "मैच करने वाले रेफ़रल कोड के लिए, Growser को मेरे क्लिपबोर्ड की जाँच करने की अनुमति दें";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "शायद आपने अपने रेफ़रर के सपोर्ट में Brave डाउनलोड किया हो। अपने रेफ़रर का पता लगाने के लिए, Brave मैच करने वाला रेफ़रल कोड ढूँढने के लिए आपके क्लिपबोर्ड की एक बार जाँच करेगा। यह जाँच सिर्फ़ कोड के लिए होती है। कोई और व्यक्तिगत डेटा ट्रांसमिट नहीं किया जाता। अगर आप ऑप्ट आउट करते हैं, तो आपके रेफ़रर को Brave से रिवॉर्ड नहीं मिलेंगे।";
+"OBPrivacyConsentDetail" = "शायद आपने अपने रेफ़रर के सपोर्ट में Growser डाउनलोड किया हो। अपने रेफ़रर का पता लगाने के लिए, Growser मैच करने वाला रेफ़रल कोड ढूँढने के लिए आपके क्लिपबोर्ड की एक बार जाँच करेगा। यह जाँच सिर्फ़ कोड के लिए होती है। कोई और व्यक्तिगत डेटा ट्रांसमिट नहीं किया जाता। अगर आप ऑप्ट आउट करते हैं, तो आपके रेफ़रर को Growser से रिवॉर्ड नहीं मिलेंगे।";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "इस जाँच की अनुमति न दें";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "और";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave रिवार्ड्स";
+"OBRewardsAgreementTitle" = "Growser रिवार्ड्स";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Brave Private Ads के लिए ऑप्ट इन करने पर, हर देखे गए ऐड से पब्लिशर्स और कॉन्टेंट क्रिएटर्स की मदद होती है।";
+"OBRewardsDetail" = "Growser Private Ads के लिए ऑप्ट इन करने पर, हर देखे गए ऐड से पब्लिशर्स और कॉन्टेंट क्रिएटर्स की मदद होती है।";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "ब्राउज़ करते समय बढ़िया कॉन्टेंट के लिए टोकन कमाएँ और क्रिएटर्स को रिवॉर्ड दें।";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "गोपनीयता नीति";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave रिवार्ड्स";
+"OBRewardsTitle" = "Growser रिवार्ड्स";
 
 /* Save button to save current selection */
 "OBSaveButton" = "सेव करें";
@@ -1202,13 +1202,13 @@
 "OBSearchEngineDetail" = "अपने डिफ़ॉल्ट खोज इंजन का चयन करें";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Brave ब्राउज़र में आपका स्वागत है";
+"OBSearchEngineTitle" = "Growser ब्राउज़र में आपका स्वागत है";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "निजता का उल्लंघन करने वाले ट्रैकर्स को ब्लॉक करें, ताकि वेब पर कोई आप पर नज़र न रखे और आप आराम से ब्राउज़ कर सकें";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave शील्ड्स";
+"OBShieldsTitle" = "Growser शील्ड्स";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "मुझे दिखाएँ";
@@ -1220,16 +1220,16 @@
 "onboarding.linkReceiptButton" = "अपनी VPN की सदस्यता को लिंक करें";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Brave VPN की आपकी सदस्यता Android, iOS और डेक्सटॉप पर 10 डिवाइस तक की सुरक्षा कर सकती है। बस App Store की अपनी सदस्यता को अपने Brave अकाउंट से लिंक करें।";
+"onboarding.linkReceiptDescription" = "Growser VPN की आपकी सदस्यता Android, iOS और डेक्सटॉप पर 10 डिवाइस तक की सुरक्षा कर सकती है। बस App Store की अपनी सदस्यता को अपने Growser अकाउंट से लिंक करें।";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "अपनी Brave Firewall + VPN की सुरक्षा को बढ़ाएँ";
+"onboarding.linkReceiptTitle" = "अपनी Growser Firewall + VPN की सुरक्षा को बढ़ाएँ";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "ट्रैकर्स & ऐड्स को ब्लॉक करके, वेबसाइटें कम डेटा इस्तेमाल करती हैं और जल्दी लोड होती हैं।";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Brave का कमाल देखें:\nकोई ऐड नहीं। कोई ट्रैकर नहीं। पेज बहुत जल्दी खुलते हैं।";
+"onboarding.omniboxOnboardingPopOverDescription" = "Growser का कमाल देखें:\nकोई ऐड नहीं। कोई ट्रैकर नहीं। पेज बहुत जल्दी खुलते हैं।";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "किसी वेबसाइट का नाम या URL टाइप करें";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "सभी खोलें (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Brave Rewards की सेटिंग खोलें";
+"OpenBraveRewardsSettings" = "Growser Rewards की सेटिंग खोलें";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "'फ़ाइलें' ऐप में 'डाउनलोड्स' फ़ोल्डर खोलते समय, कोई अनजानी गड़बड़ी हुई।";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "शुरू करने के लिए, सिंक चेन सेट अप करें और सिंक की सेटिंग में \"खुले हुए टैब्स\" को टॉगल करें।";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "सेटिंग में मैनेज करें कि Brave क्या सिंक करता है।";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "सेटिंग में मैनेज करें कि Growser क्या सिंक करता है।";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "आपके दूसरे डिवाइसों से दिखाने के लिए कोई ऐक्टिव सेशन नहीं है।";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "इस जगह पर, दूसरे डिवाइसों में Brave के खुले हुए टैब्स दिखाए जाते हैं";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "इस जगह पर, दूसरे डिवाइसों में Growser के खुले हुए टैब्स दिखाए जाते हैं";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "अभी छिपाएं";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "जारी रखें";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "ये प्राइवेट रिस्पॉन्स, कुछ फ़ीचर्स के कुल उपयोग का अनुमान लगाने और उन्हें आपके लिए बेहतर बनाने में Brave की मदद करते हैं।";
+"p3a.settingSubtitle" = "ये प्राइवेट रिस्पॉन्स, कुछ फ़ीचर्स के कुल उपयोग का अनुमान लगाने और उन्हें आपके लिए बेहतर बनाने में Growser की मदद करते हैं।";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "गोपनीयता-संरक्षण प्रोडक्ट एनालिटिक्स की अनुमति दें (P3A)";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "लगातार प्राइवेट ब्राउज़िंग";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "आपके ऐप बंद / फिर से खोलने के बाद भी, Brave को प्राइवेट ब्राउज़िंग टैब्स खोलने की अनुमति देता है";
+"PersistentPrivateBrowsingAlertMessage" = "आपके ऐप बंद / फिर से खोलने के बाद भी, Growser को प्राइवेट ब्राउज़िंग टैब्स खोलने की अनुमति देता है";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "प्राइवेट टैब रीस्टोर करें";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "क्या आप इस वीडियो को अपनी प्लेलिस्ट में जोड़ना चाहेंगे?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Brave Playlist में जोडे़ं";
+"playList.addToPlayListAlertTitle" = "Growser Playlist में जोडे़ं";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "प्लेबैक के विकल्प";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "सेटिंग";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave प्लेलिस्ट";
+"playlist.carplayTitle" = "Growser प्लेलिस्ट";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "प्लेलिस्ट बदलें";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "रिसोर्स लोड करने में कोई समस्या हुई!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "आप ब्राउज़र में अपनी Brave Playlist में आइटम जोड़ सकते हैं";
+"playList.noItemLabelDetailLabel" = "आप ब्राउज़र में अपनी Growser Playlist में आइटम जोड़ सकते हैं";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "कोई आइटम उपलब्ध नहीं है";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "अनकिया करें";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Brave ब्राउज़र में ऐड्रेस बार के पास प्लेलिस्ट बटन जोड़ता है। इस बटन से आपको प्लेलिस्ट खोलने या मीडिया जोड़ने या हटाने का जल्दी ऐक्सेस मिलता है।";
+"playlist.urlBarButtonOptionFooter" = "Growser ब्राउज़र में ऐड्रेस बार के पास प्लेलिस्ट बटन जोड़ता है। इस बटन से आपको प्लेलिस्ट खोलने या मीडिया जोड़ने या हटाने का जल्दी ऐक्सेस मिलता है।";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "जल्दी ऐक्सेस वाला बटन चालू करें";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "नोटिफ़िकेशन चालू करें";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "इस हफ़्ते Brave ने आपको ऑनलाइन कैसे सुरक्षित रखा, इसका एक रीकैप।";
+"privacyHub.notificationMessage" = "इस हफ़्ते Growser ने आपको ऑनलाइन कैसे सुरक्षित रखा, इसका एक रीकैप।";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "साप्ताहिक प्राइवेसी रिपोर्ट";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "ट्रैकर या ऐड";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave Firewall + VPN चेतावनियाँ";
+"privacyHub.vpnAlertsHeader" = "Growser Firewall + VPN चेतावनियाँ";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "फ़ायरवॉल + VPN ";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "'सिर्फ़ प्राइवेट ब्राउज़िंग' मोड आपके सभी मौजूदा टैब बंद कर देगा और आपको सभी साइटों से लॉग आउट कर देगा।";
 
 /* Private tab details */
-"PrivateTabBody" = "प्राइवेट टैब्स को Brave में सेव नहीं किया जाता, लेकिन वे आपको ऑनलाइन अनाम नहीं बनाते। आप जिन साइटों पर प्राइवेट टैब में जाते हैं वे आपकी हिस्ट्री में नहीं दिखतीं और उन्हें बंद करने पर आपकी कुकीज़ हमेशा मिट जाती हैं — Brave में उनका कोई नामोंनिशान नहीं रह जाएगा। हालाँकि, डाउनलोड सेव होंगे।\nआपका मोबाइल कैरियर (या उस वाई-फ़ाई नेटवर्क या VPN का मालिक जिससे आप कनेक्ट हैं) देख सकता है आप किन साइटों पर जाते हैं और उन साइटों को आपके सार्वजनिक IP address पता चल जाएगा, प्राइवेट टैब्स में भी।";
+"PrivateTabBody" = "प्राइवेट टैब्स को Growser में सेव नहीं किया जाता, लेकिन वे आपको ऑनलाइन अनाम नहीं बनाते। आप जिन साइटों पर प्राइवेट टैब में जाते हैं वे आपकी हिस्ट्री में नहीं दिखतीं और उन्हें बंद करने पर आपकी कुकीज़ हमेशा मिट जाती हैं — Growser में उनका कोई नामोंनिशान नहीं रह जाएगा। हालाँकि, डाउनलोड सेव होंगे।\nआपका मोबाइल कैरियर (या उस वाई-फ़ाई नेटवर्क या VPN का मालिक जिससे आप कनेक्ट हैं) देख सकता है आप किन साइटों पर जाते हैं और उन साइटों को आपके सार्वजनिक IP address पता चल जाएगा, प्राइवेट टैब्स में भी।";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "प्राइवेट टैब्स इस्तेमाल करने से, सिर्फ़ यह बदलेगा कि Brave आपके डिवाइस के साथ क्या करता है, इससे किसी और का व्यवहार नहीं बदलेगा।\n\nआप जब साइटों पर जाते हैं, तो आपको हमेशा आपका IP address पता चल जाता है। इससे, अक्सर उन्हें इस बात का अंदाज़ा हो जाता है कि आप किस जगह से हैं — आम तौर पर, आपका शहर। कभी-कभी, लोकेशन का अंदाज़ा और भी बारीकी से लगाया जा सकता है। साइटों को वे बातें भी पता चल जाती हैं जो आप खास तौर पर उन्हें बताते हैं, जैसे कि खोजे गए शब्द। अगर आप किसी साइट में लॉग इन करते हैं, तो उन्हें पता चल जाएगा कि आप उस अकाउंट के मालिक हैं। प्राइवेट टैब्स को बंद करने पर, आप लॉग आउट हो जाएँगे, क्योंकि Brave उन कुकीज़ को हटा देगा जो आपको लॉग इन रखती हैं।\n\nआपको जो भी इंटरनेट से कनेक्ट करता है (आपका ISP) वह आपकी सभी नेटवर्क गतिविधि देख सकता है। अक्सर, यह आपका मोबाइल कैरियर होता है। अगर आप वाई-फ़ाई नेटवर्क से कनेक्ट हैं, तो यह उस नेटवर्क का मालिक है और अगर आप VPN का इस्तेमाल कर रहे हैं, तो यह वही है जो VPN चला रहा है। आपके साइटों पर जाने पर, आपका ISP देख सकता है कि आप किन साइटों पर जा रहे हैं। अगर वे साइटें HTTPS का इस्तेमाल करती हैं, तो वे सिर्फ़ अंदाज़ा लगा सकती हैं कि आप उन साइटों पर क्या करते हैं। मगर कोई साइट सिर्फ़ HTTP का इस्तेमाल करती है, तो आपका ISP सब कुछ देख सकता है: आपके खोजे गए शब्द, आप कौनसे पेज पढ़ते हैं और किन लिंक्स को फ़ॉलो करते हैं।\n\nअगर कोई कर्मचारी आपके डिवाइस को मैनेज करता है, तो वे इस बात पर भी नज़र रख सकते हैं कि आप इस पर क्या करते हैं। प्राइवेट टैब्स इस्तेमाल करने से शायद उन्हें यह जानने से नहीं रोका जा सकता कि आप किन साइटों पर गए हैं। आपके डिवाइस के ऐक्सस वाला कोई और व्यक्ति भी ऐसा सॉफ़्टवेयर इंस्टॉल कर सकता है जो आपकी गतिविधि पर नज़र रखता हो और प्राइवेट टैबआपको इससे भी सुरक्षित नहीं रखेंगे।";
+"PrivateTabDetails" = "प्राइवेट टैब्स इस्तेमाल करने से, सिर्फ़ यह बदलेगा कि Growser आपके डिवाइस के साथ क्या करता है, इससे किसी और का व्यवहार नहीं बदलेगा।\n\nआप जब साइटों पर जाते हैं, तो आपको हमेशा आपका IP address पता चल जाता है। इससे, अक्सर उन्हें इस बात का अंदाज़ा हो जाता है कि आप किस जगह से हैं — आम तौर पर, आपका शहर। कभी-कभी, लोकेशन का अंदाज़ा और भी बारीकी से लगाया जा सकता है। साइटों को वे बातें भी पता चल जाती हैं जो आप खास तौर पर उन्हें बताते हैं, जैसे कि खोजे गए शब्द। अगर आप किसी साइट में लॉग इन करते हैं, तो उन्हें पता चल जाएगा कि आप उस अकाउंट के मालिक हैं। प्राइवेट टैब्स को बंद करने पर, आप लॉग आउट हो जाएँगे, क्योंकि Growser उन कुकीज़ को हटा देगा जो आपको लॉग इन रखती हैं।\n\nआपको जो भी इंटरनेट से कनेक्ट करता है (आपका ISP) वह आपकी सभी नेटवर्क गतिविधि देख सकता है। अक्सर, यह आपका मोबाइल कैरियर होता है। अगर आप वाई-फ़ाई नेटवर्क से कनेक्ट हैं, तो यह उस नेटवर्क का मालिक है और अगर आप VPN का इस्तेमाल कर रहे हैं, तो यह वही है जो VPN चला रहा है। आपके साइटों पर जाने पर, आपका ISP देख सकता है कि आप किन साइटों पर जा रहे हैं। अगर वे साइटें HTTPS का इस्तेमाल करती हैं, तो वे सिर्फ़ अंदाज़ा लगा सकती हैं कि आप उन साइटों पर क्या करते हैं। मगर कोई साइट सिर्फ़ HTTP का इस्तेमाल करती है, तो आपका ISP सब कुछ देख सकता है: आपके खोजे गए शब्द, आप कौनसे पेज पढ़ते हैं और किन लिंक्स को फ़ॉलो करते हैं।\n\nअगर कोई कर्मचारी आपके डिवाइस को मैनेज करता है, तो वे इस बात पर भी नज़र रख सकते हैं कि आप इस पर क्या करते हैं। प्राइवेट टैब्स इस्तेमाल करने से शायद उन्हें यह जानने से नहीं रोका जा सकता कि आप किन साइटों पर गए हैं। आपके डिवाइस के ऐक्सस वाला कोई और व्यक्ति भी ऐसा सॉफ़्टवेयर इंस्टॉल कर सकता है जो आपकी गतिविधि पर नज़र रखता हो और प्राइवेट टैबआपको इससे भी सुरक्षित नहीं रखेंगे।";
 
 /* Private tab information link */
 "PrivateTabLink" = "प्राइवेट टैब के बारे में जानें।";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "अनुवाद सक्षम करें";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Brave का मूल्यांकन करें";
+"RateBrave" = "Growser का मूल्यांकन करें";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "टेक्स्ट का आकार बढ़ाएँ";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "एक विकल्प चुनें";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Brave डेवलपर्स को बताएँ कि यह साइट उम्मीद के मुताबिक काम नहीं कर रही है:";
+"ReportBrokenSiteBody1" = "Growser डेवलपर्स को बताएँ कि यह साइट उम्मीद के मुताबिक काम नहीं कर रही है:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "ध्यान दें : Brave सर्वर को भेजी जाने वाली रिपोर्ट में वेबसाइट का एड्रेस, Brave का वर्ज़न नंबर, शील्ड की सेटिंग्स, VPN स्टेटस और भाषा की सेटिंग्स की जानकारी होंगी.";
+"ReportBrokenSiteBody2" = "ध्यान दें : Growser सर्वर को भेजी जाने वाली रिपोर्ट में वेबसाइट का एड्रेस, Growser का वर्ज़न नंबर, शील्ड की सेटिंग्स, VPN स्टेटस और भाषा की सेटिंग्स की जानकारी होंगी.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "सबमिट करें";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "नहीं";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "माफ़ करें, Brave क्रैश हो गया या अच्छे से बंद नहीं हुआ।\nअपने टैब्स रीस्टोर करें?";
+"RestoreTabOnCrashAlertMessage" = "माफ़ करें, Growser क्रैश हो गया या अच्छे से बंद नहीं हुआ।\nअपने टैब्स रीस्टोर करें?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave अचानक बंद हो गया।";
+"RestoreTabOnCrashAlertTitle" = "Growser अचानक बंद हो गया।";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Brave और BAT कम्युनिटी की मदद के लिए चालू करें।";
+"rewards.disabledBody" = "Growser और BAT कम्युनिटी की मदद के लिए चालू करें।";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Brave Rewards इस्तेमाल करने से, Brave और BAT कम्युनिटी की सहायता करने में मदद मिलती है।";
+"rewards.disabledStatusBody" = "Growser Rewards इस्तेमाल करने से, Growser और BAT कम्युनिटी की सहायता करने में मदद मिलती है।";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "आप Brave और BAT समुदाय को सहायता दे रहे हैं।";
+"rewards.enabledBody" = "आप Growser और BAT समुदाय को सहायता दे रहे हैं।";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Brave और BAT कम्युनिटी को सहायता देने के लिए शुक्रिया!";
+"rewards.enabledStatusBody" = "Growser और BAT कम्युनिटी को सहायता देने के लिए शुक्रिया!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Brave Rewards चालू करके और Brave Ads देखकर, Brave और BAT कम्युनिटी की सहायता करें।";
+"rewards.settingsToggleMessage" = "Growser Rewards चालू करके और Growser Ads देखकर, Growser और BAT कम्युनिटी की सहायता करें।";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Brave रिवार्ड्स को सक्षम करें";
+"rewards.settingsToggleTitle" = "Growser रिवार्ड्स को सक्षम करें";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "यह कॉन्टेंट क्रिएटर Brave Creators के साथ वेरिफ़ाइड है";
+"rewards.supportingPublisher" = "यह कॉन्टेंट क्रिएटर Growser Creators के साथ वेरिफ़ाइड है";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "उन कॉन्टेंट क्रिएटर्स की संख्या जिनकी आप इस महीने सहायता कर रहे हैं।";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "योगदान की राशि";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Brave टोकंस";
+"RewardsInternalsContributionProcessorBraveTokens" = "Growser टोकंस";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "कुछ नहीं";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "क्या आप सर्च के सुझाव चालू करना चाहेंगे?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Brave पर सर्च करें";
+"SearchWithBrave" = "Growser पर सर्च करें";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "भेजें";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "क्रैश रिपोर्ट भेजता है, ताकि Brave समस्या को ठीक कर सके?";
+"SendCrashReportAlertMessage" = "क्रैश रिपोर्ट भेजता है, ताकि Growser समस्या को ठीक कर सके?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "ओह! Brave क्रैश हो गया";
+"SendCrashReportAlertTitle" = "ओह! Growser क्रैश हो गया";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "रिपोर्ट भेजें";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "अब Brave को iOS में आपके डिफ़ॉल्ट ब्राउज़र के तौर पर सेट किया जा सकता है। सेटिंग खोलने के लिए यहाँ टैप करें।";
+"setDefaultBrowserCalloutTitle" = "अब Growser को iOS में आपके डिफ़ॉल्ट ब्राउज़र के तौर पर सेट किया जा सकता है। सेटिंग खोलने के लिए यहाँ टैप करें।";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "डिफ़ॉल्ट ब्राउज़र के तौर पर सेट करें";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "टैब बंद करें";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Brave को अनुमति दें कि वह हाल ही न देखे गए टैब्स को अपने-आप बंद कर दे।";
+"settings.autocloseTabsSettingFooter" = "Growser को अनुमति दें कि वह हाल ही न देखे गए टैब्स को अपने-आप बंद कर दे।";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "YouTube की ध्यान बँटाने वाली चीज़ों को ब्लॉक करें";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "मीडिया";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "YouTube लिंक Brave पर खोलें";
+"settings.openYouTubeInBrave" = "YouTube लिंक Growser पर खोलें";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "स्क्रीन टाइम चालू करें";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "क्वॉलिटी की सेटिंग";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "यह प्राइवेट पिंग, Brave को सक्रिय उपयोगकर्ताओं का अनुमान लगाने देता है।";
+"settings.sendUsagePingDescription" = "यह प्राइवेट पिंग, Growser को सक्रिय उपयोगकर्ताओं का अनुमान लगाने देता है।";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "हर दिन के उपयोग पिंग Brave को अपने आप भेजें";
+"settings.sendUsagePingTitle" = "हर दिन के उपयोग पिंग Growser को अपने आप भेजें";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Brave को नए टैब पेज में प्राइवेट सर्वे के लिंक दिखाने की अनुमति दें। सर्वे की मदद से, हम बेहतर सुविधाएँ बना सकते हैं और ब्राउज़र पर आधारित ऐड कैंपेन के असर को माप सकते हैं। [ज़्यादा जानें](%@)";
+"settings.surveyPanelistDescription" = "Growser को नए टैब पेज में प्राइवेट सर्वे के लिंक दिखाने की अनुमति दें। सर्वे की मदद से, हम बेहतर सुविधाएँ बना सकते हैं और ब्राउज़र पर आधारित ऐड कैंपेन के असर को माप सकते हैं। [ज़्यादा जानें](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Brave के सर्वे को अनुमति दें";
+"settings.surveyPanelistTitle" = "Growser के सर्वे को अनुमति दें";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "यूट्यूब";
@@ -2561,7 +2561,7 @@
 "ShieldsDefaultsFooter" = "ये नई साइटों के लिए डिफ़ॉल्ट शील्ड सेटिंग्स हैं. इन्हें बदलने से आपकी मौजूदा प्रति-साइट सेटिंग्स पर कोई फ़र्क नहीं पड़ेगा.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "आप Brave की गोपनीयता सुरक्षा के बिना इस साइट को ब्राउज़ कर रहे हैं। क्या यह शील्ड के साथ सही तरीके से काम नहीं करता है?";
+"ShieldsDownDisclaimer" = "आप Growser की गोपनीयता सुरक्षा के बिना इस साइट को ब्राउज़ कर रहे हैं। क्या यह शील्ड के साथ सही तरीके से काम नहीं करता है?";
 
 /* shields overview message */
 "ShieldsOverview" = "साइट Shields आपको नियंत्रित करने देती है कि आप जिस भी साइट पर जाते हैं उस पर ऐड्स और ट्रैकर्स को कब ब्लॉक किया जाता है। अगर आप किसी खास साइट पर ऐड्स देखना चाहें, तो आप उन्हें यहाँ चालू कर सकते हैं।";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "QR कोड स्कैन करें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Brave News खोलें और आज की टॉप स्टोरीज़ देखें";
+"shortcuts.activityTypeBraveNewsDescription" = "Growser News खोलें और आज की टॉप स्टोरीज़ देखें";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "नए टैब में ब्राउज़र खोलें और प्राइवेट ब्राउज़र के पूरे हिस्ट्री डेटा को मिटाएँ";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "ब्राउज़र हिस्ट्री मिटाएँ";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Brave की ब्राउज़िंग हिस्ट्री मिटाएँ";
+"shortcuts.activityTypeClearHistoryTitle" = "Growser की ब्राउज़िंग हिस्ट्री मिटाएँ";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "नए टैब में ब्राउज़र खोलें और VPN चालू करें";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "VPN चालू करें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Brave ब्राउज़र खोलें और VPN चालू करें";
+"shortcuts.activityTypeEnableVPNTitle" = "Growser ब्राउज़र खोलें और VPN चालू करें";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "नया प्राइवेट टैब खोलें";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "बुकमार्क्स खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Brave ब्राउज़र बुकमार्क्स खोलें";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Growser ब्राउज़र बुकमार्क्स खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Brave News खोलें";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Growser News खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Brave News खोलें";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Growser News खोलें";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "ब्राउज़र हिस्ट्री स्क्रीन खोलें";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "ब्राउज़र हिस्ट्री खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Brave ब्राउज़र हिस्ट्री खोलें";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Growser ब्राउज़र हिस्ट्री खोलें";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "प्लेलिस्ट में अपने वीडियो चलाना शुरू करें";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "प्लेलिस्ट खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "दूसरे डिवाइसों में खुले Brave टैब्स खोलें";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "दूसरे डिवाइसों में खुले Growser टैब्स खोलें";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "दूसरे डिवाइसों के टैब्स खोलें";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "दूसरे डिवाइसों के टैब्स खोलें";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Brave के साथ वेब पर सुरक्षित रूप से सर्च शुरू करें";
+"shortcuts.activityTypeTabDescription" = "Growser के साथ वेब पर सुरक्षित रूप से सर्च शुरू करें";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "बुकमार्क वेबसाइट खोलें";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "वेबसाइट खोलें";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "इस विकल्प से Brave सेटिंग खुल जाएँगी। अलग-अलग Siri विकल्प बदलने के लिए, कृपया 'Siri & सर्च' मेम्यू आइटम चुनें और अपनी पसंद कस्टमाइज़ करें।";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "इस विकल्प से Growser सेटिंग खुल जाएँगी। अलग-अलग Siri विकल्प बदलने के लिए, कृपया 'Siri & सर्च' मेम्यू आइटम चुनें और अपनी पसंद कस्टमाइज़ करें।";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "सेटिंग खोलें";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "ब्राउज़र हिस्ट्री मिटाएँ";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Siri के ज़रिए Brave VPN चालू करने के लिए शॉर्टकट्स इस्तेमाल करें - वॉइस असिस्टेंट";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Siri के ज़रिए Growser VPN चालू करने के लिए शॉर्टकट्स इस्तेमाल करें - वॉइस असिस्टेंट";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "VPN चालू करें";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "बुकमार्क्स खोलें";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "नया टैब खोलने के लिए शॉर्टकट्स इस्तेमाल करें & Siri के ज़रिए Brave News फ़ीड दिखाएँ - वॉइस असिस्टेंट";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "नया टैब खोलने के लिए शॉर्टकट्स इस्तेमाल करें & Siri के ज़रिए Growser News फ़ीड दिखाएँ - वॉइस असिस्टेंट";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Brave News खोलें";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Growser News खोलें";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Siri के ज़रिए ब्राउज़र हिस्ट्री स्क्रीन खोलने के लिए शॉर्टकट्स इस्तेमाल करें - वॉइस असिस्टेंट";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "साइट और शील्ड सेटिंग";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "इस साइट की समस्या के बारे में Brave के डेवलपर्स को बताने के लिए धन्यवाद। हम इसे ठीक करने की पूरी कोशिश करेंगे!";
+"SiteReportedBody" = "इस साइट की समस्या के बारे में Growser के डेवलपर्स को बताने के लिए धन्यवाद। हम इसे ठीक करने की पूरी कोशिश करेंगे!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "शुक्रिया";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Shields";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Brave से हरदिन मैं वेब ब्राउज़ करके डेटा बचाता हूँ ";
+"socialSharing.domainSpecificDataSavedTitle" = "Growser से हरदिन मैं वेब ब्राउज़ करके डेटा बचाता हूँ ";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Brave से हरदिन मैं वेब ब्राउज़ करके डेटा बचाता हूँ ";
+"socialSharing.shareDescriptionTitle" = "Growser से हरदिन मैं वेब ब्राउज़ करके डेटा बचाता हूँ ";
 
 /* Open search section of settings */
 "StandardTabSearch" = "साधारण टैब";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "सिंक अकाउंट को मिटाएँ";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "अपना अकाउंट मिटाने से Brave के सर्वर पर आपका एन्क्रिप्ट किया हुआ डेटा हट जाएगा और आपके कनेक्ट किए हुए सभी डिवाइस पर सिंक बंद हो जाएगा.";
+"sync.deleteAccountAlertDescriptionPart1" = "अपना अकाउंट मिटाने से Growser के सर्वर पर आपका एन्क्रिप्ट किया हुआ डेटा हट जाएगा और आपके कनेक्ट किए हुए सभी डिवाइस पर सिंक बंद हो जाएगा.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "हालाँकि इससे उन डिवाइस पर लोकल तौर पर स्टोर किया गया डेटा नहीं मिटेगा.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "सिंक अकाउंट को मिटाएँ";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "ऐसा लगता है कि इस कोड को किसी ऐसे डिवाइस पर बनाया गया था जो Brave के पुराने वर्शन पर चल रहा था। कृपया अपने दूसरे डिवाइस पर Brave के नए वर्शन पर अपडेट करें और फिर नया सिंक कोड बनाएँ।";
+"sync.deprecatedVersionError" = "ऐसा लगता है कि इस कोड को किसी ऐसे डिवाइस पर बनाया गया था जो Growser के पुराने वर्शन पर चल रहा था। कृपया अपने दूसरे डिवाइस पर Growser के नए वर्शन पर अपडेट करें और फिर नया सिंक कोड बनाएँ।";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "सिंक चेन से डिवाइस रिट्रीव करते समय कोई गड़बड़ी हुई।";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "ऐसा लगता है कि आपके डिवाइस को बैकअप से रीस्टोर किया गया, जिससे Brave सिंक पर असर पड़ सकता है। Brave सिंक इस्तेमाल करना जारी रखने के लिए, आपको रीसेट करके सिंक चेन में फिर से शामिल होना होगा।";
+"sync.deviceRestoreDetectedMessage" = "ऐसा लगता है कि आपके डिवाइस को बैकअप से रीस्टोर किया गया, जिससे Growser सिंक पर असर पड़ सकता है। Growser सिंक इस्तेमाल करना जारी रखने के लिए, आपको रीसेट करके सिंक चेन में फिर से शामिल होना होगा।";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "रीस्टोर का पता चला";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "डिवाइस";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "जो डेटा अभी सिंक है उसे रखा जाएगा, लेकिन Brave की सिंक कैश का सभी डेटा मिटा दिया जाएगा। अपने डिवाइस का डेटा फिर से सिंक करने के लिए, आपको नई सिंक चेन शुरू करनी होगी।";
+"sync.removeLastDeviceMessage" = "जो डेटा अभी सिंक है उसे रखा जाएगा, लेकिन Growser की सिंक कैश का सभी डेटा मिटा दिया जाएगा। अपने डिवाइस का डेटा फिर से सिंक करने के लिए, आपको नई सिंक चेन शुरू करनी होगी।";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "सिंक चेन मिटाएँ";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "डिवाइस से सिंक करें";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "अभी जो डिवाइस सिंक है उसका इस्तेमाल करके Brave की सेटिंग खोलें और सेटिंग -> सिंक करें पर जाएँ। \"डिवाइस जोड़ें\" को चुनें और स्क्रीन पर दिखाया गया कोड स्कैन करें।";
+"sync.toDeviceDescription" = "अभी जो डिवाइस सिंक है उसका इस्तेमाल करके Growser की सेटिंग खोलें और सेटिंग -> सिंक करें पर जाएँ। \"डिवाइस जोड़ें\" को चुनें और स्क्रीन पर दिखाया गया कोड स्कैन करें।";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "इस डिवाइस को सिंक नहीं किया जा सकता";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "यह कोड अमान्य है। कृपया जांच लें कि आपके डिवाइस पर टाइम और टाइमज़ोन सही ढंग से सेट हैं.";
 
 /* Sync settings welcome */
-"sync.welcome" = "शुरूआत करने के लिए, आपको उन सभी डिवाइसों पर Brave इंस्टॉल करना होगा जिन्हें आप सिंक करना चाहते हैं। उन्हें एक साथ रखने के लिए, सिंक चेन को शुरू करें जिसे आप सभी डिवाइस को सुरक्षापूर्वक जोड़ने के लिए किये प्रयोग करेंगे।";
+"sync.welcome" = "शुरूआत करने के लिए, आपको उन सभी डिवाइसों पर Growser इंस्टॉल करना होगा जिन्हें आप सिंक करना चाहते हैं। उन्हें एक साथ रखने के लिए, सिंक चेन को शुरू करें जिसे आप सभी डिवाइस को सुरक्षापूर्वक जोड़ने के लिए किये प्रयोग करेंगे।";
 
 /* Word count title */
 "sync.wordCount" = "शब्दों की संख्या: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "अपने डिवाइस पर कोई सबूत न छोड़ें";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN उन सभी गतिविधियों को एन्क्रिप्ट और सुरक्षित करता है जो आप ऑनलाइन करते हैं, Brave ब्राउज़र के बाहर भी।";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Growser VPN उन सभी गतिविधियों को एन्क्रिप्ट और सुरक्षित करता है जो आप ऑनलाइन करते हैं, Growser ब्राउज़र के बाहर भी।";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Growser VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "ध्यान दें—प्राइवेट विंडो में भी—आपकी ब्राउज़िंग गतिविधि आपके ISP, नेटवर्क ऑब्ज़र्वर या आपके नियोक्ता (अगर आप दफ़्तर की मशीन/नेटवर्क इस्तेमाल कर रहे हैं) को दिख सकती है।";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "कीबोर्ड अपने-आप खोलें";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Ask Brave और Brave Search से लिंक प्रीव्यू टैब में खोलें";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Ask Growser और Growser Search से लिंक प्रीव्यू टैब में खोलें";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Quickview टैब चालू करें";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "शेयर करें...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Brave को अपने दोस्तों के साथ शेयर करें!";
+"themeQRCodeShareTitle" = "Growser को अपने दोस्तों के साथ शेयर करें!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "स्वचालित";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "माफ़ करें, उस फ़ीड ऐड्रेस में कोई कॉन्टेंट नहीं है।";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "सोर्स को Brave News में जोडे़ं";
+"today.addSourceShareTitle" = "सोर्स को Growser News में जोडे़ं";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "उपलब्ध RSS फ़ीड्स";
 
 /* The name of the feature */
-"today.braveToday" = "Brave News";
+"today.braveToday" = "Growser News";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "समाचार";
@@ -3371,7 +3371,7 @@
 "today.deals" = "डील्स";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Brave News %@ का कॉन्टेंट दिखाना रोक देगा";
+"today.disabledAlertBody" = "Growser News %@ का कॉन्टेंट दिखाना रोक देगा";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "अक्षम";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "%@ के कॉन्टेंट को अनुमति दें";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Brave News में कुछ समस्याएँ आ रही हैं। फिर से कोशिश करें।";
+"today.errorGeneralBody" = "Growser News में कुछ समस्याएँ आ रही हैं। फिर से कोशिश करें।";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "ओह...";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "असुरक्षित सोर्स - अपने जोखिम पर जोड़ें";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "एक ही फ़ीड में अपने पसंदीदा सोर्स को फ़ॉलो करें। बस Brave में एक टैब खोलें, नीचे स्क्रॉल करें और… लुत्फ़ उठाएँ! Brave News को गुप्त और अनाम ऐड्स से मदद मिलती है।";
+"today.introCardBody" = "एक ही फ़ीड में अपने पसंदीदा सोर्स को फ़ॉलो करें। बस Growser में एक टैब खोलें, नीचे स्क्रॉल करें और… लुत्फ़ उठाएँ! Growser News को गुप्त और अनाम ऐड्स से मदद मिलती है।";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Brave न्यूज़ चालू करें और कभी भी कोई स्टोरी छूटने न दें";
+"today.introCardTitle" = "Growser न्यूज़ चालू करें और कभी भी कोई स्टोरी छूटने न दें";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Brave न्यूज़ दिखाएँ";
+"today.isEnabledToggleLabel" = "Growser न्यूज़ दिखाएँ";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "डेटा के बारे में अधिक जानें";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Brave के अन्य ऑफ़र";
+"today.moreBraveOffers" = "Growser के अन्य ऑफ़र";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "इंटरनेट नहीं है";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "प्रमोट कर दिया गया";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "App Store में Brave को रेटिंग दें";
+"today.rateBraveCardActionSheetTitle" = "App Store में Growser को रेटिंग दें";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "छुपाएं";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Brave का मूल्यांकन करें";
+"today.rateBraveCardRateActionTitle" = "Growser का मूल्यांकन करें";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "हमें बताएँ कि आप क्या सोचते हैं!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Brave पसंद है?";
+"today.rateBraveCardTitle" = "Growser पसंद है?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "रीफ्रेश करें";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "सुझाया गए";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Brave न्यूज़ शुरू करें";
+"today.turnOnBraveToday" = "Growser न्यूज़ शुरू करें";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "अनफ़ॉलो करें";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "%@ पर देखें";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "अनाम वॉइस सर्च इस्तेमाल करने के लिए, कृपया Brave के लिए iOS सिस्टम सेटिंग में माइक्रोफ़ोन ऐक्सेस की अनुमति दें।";
+"voice.search.microphone.description.required" = "अनाम वॉइस सर्च इस्तेमाल करने के लिए, कृपया Growser के लिए iOS सिस्टम सेटिंग में माइक्रोफ़ोन ऐक्सेस की अनुमति दें।";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "माइक्रोफ़ोन ऐक्सेस की ज़रूरत है";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave आपकी वॉइस सर्च को स्टोर या शेयर नहीं करता है।";
+"voice.search.screen.disclaimer" = "Growser आपकी वॉइस सर्च को स्टोर या शेयर नहीं करता है।";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "वॉलेट बनाने की तारीख";

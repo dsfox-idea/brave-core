@@ -17,7 +17,7 @@
 "importDataFileSelectorButtonTitle" = "Επιλογή αρχείου...";
 
 /* The message of a Text on screen that explains to the user what type of data can be imported. */
-"importDataFileSelectorMessage" = "Προσθέστε τους σελιδοδείκτες, το ιστορικό και άλλα δεδομένα του προγράμματος περιήγησης στο Brave.";
+"importDataFileSelectorMessage" = "Προσθέστε τους σελιδοδείκτες, το ιστορικό και άλλα δεδομένα του προγράμματος περιήγησης στο Growser.";
 
 /* The title of the main screen that lets the user import data. The title is shown in the navigation bar. */
 "importDataFileSelectorNavigationTitle" = "Εισαγωγή δεδομένων περιήγησης";
@@ -35,7 +35,7 @@
 "importStateFailureTitle" = "Η εισαγωγή απέτυχε";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords. */
-"importStatePasswordConflictKeepExistingPasswordsTitle" = "Διατήρηση κωδικών πρόσβασης από το Brave";
+"importStatePasswordConflictKeepExistingPasswordsTitle" = "Διατήρηση κωδικών πρόσβασης από το Growser";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user use the passwords that were imported, overwriting your existing passwords. */
 "importStatePasswordConflictKeepImportedPasswordsTitle" = "Χρήση κωδικών πρόσβασης από το Safari";
@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Συνέχεια";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Τα δεδομένα σας έχουν εισαχθεί με επιτυχία.\nΕίστε έτοιμοι να ξεκινήσετε την περιήγηση με το Brave.";
+"importStateSuccessMessage" = "Τα δεδομένα σας έχουν εισαχθεί με επιτυχία.\nΕίστε έτοιμοι να ξεκινήσετε την περιήγηση με το Growser.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Επιτυχής!";

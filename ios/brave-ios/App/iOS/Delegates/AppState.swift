@@ -5,7 +5,7 @@
 
 import Brave
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import Data
 import Foundation
@@ -35,7 +35,7 @@ public class AppState {
   public let migration: Migration
   public let localStateMigration: BraveLocalStateMigration
   public let profile: LegacyBrowserProfile
-  public let newsFeedDataSource: FeedDataSource
+  // Growser-281: no newsFeedDataSource.
   public let uptimeMonitor = UptimeMonitor()
   public let defaultProfileLoader = DefaultProfileLoader()
   public let downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?
@@ -110,7 +110,7 @@ public class AppState {
     migration.launchMigrations(keyPrefix: "profile")
     localStateMigration.launchMigrations()
 
-    newsFeedDataSource = FeedDataSource()
+    // Growser-281: no FeedDataSource.
 
     #if !targetEnvironment(simulator)
     if #available(iOS 26.0, *) {
@@ -223,7 +223,7 @@ public class AppState {
       }
     }
 
-    switches.append(.init(key: .rewardsFlags, value: BraveRewards.Configuration.current().flags))
+    // Growser-290: no rewards flags switch - Rewards is out.
 
     // Initialize BraveCore
     let braveCoreMain = BraveCoreMain(additionalSwitches: switches)
@@ -239,7 +239,7 @@ public class AppState {
     let responders: [(String, InternalSchemeResponse)] = [
       (LegacyNTPHandler.path, LegacyNTPHandler()),
       (ReaderModeHandler.path, ReaderModeHandler()),
-      (Web3DomainHandler.path, Web3DomainHandler()),
+      // Growser-287: no Web3DomainHandler - ENS/SNS resolution was the wallet's.
       (BlockedDomainHandler.path, BlockedDomainHandler()),
       (HTTPBlockedHandler.path, HTTPBlockedHandler()),
     ]

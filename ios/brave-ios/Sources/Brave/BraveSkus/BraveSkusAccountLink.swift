@@ -46,11 +46,7 @@ class BraveSkusAccountLink {
 
   @MainActor
   static func injectLocalStorage(tab: some TabState) async {
-    if let vpnSubscriptionProductId = Preferences.VPN.subscriptionProductId.value,
-      let product = BraveStoreProduct(rawValue: vpnSubscriptionProductId)
-    {
-      await BraveSkusAccountLink.injectLocalStorage(tab: tab, product: product)
-    }
+    // Growser-280: no VPN subscription to link.
 
     if let aiChatSubscriptionProductId = Preferences.AIChat.subscriptionProductId.value,
       let product = BraveStoreProduct(rawValue: aiChatSubscriptionProductId)

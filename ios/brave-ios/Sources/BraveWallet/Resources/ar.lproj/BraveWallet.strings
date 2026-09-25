@@ -86,7 +86,7 @@
 "wallet.addCustomTokenTitle" = "عملة رمزية";
 
 /* The description of the view shown over a dapps website that describes what adding a new network will do. */
-"wallet.addNetworkDescription" = "سيسمح هذا باستخدام هذه الشبكة داخل Brave Wallet.";
+"wallet.addNetworkDescription" = "سيسمح هذا باستخدام هذه الشبكة داخل Growser Wallet.";
 
 /* The subtitle of the view shown over a dapps website that requests permission from the user to add a new network. */
 "wallet.addNetworkSubtitle" = "هل تسمح لهذا الموقع بإضافة شبكة؟";
@@ -161,7 +161,7 @@
 "wallet.auroraPopupDontShowAgain" = "لا تظهر مرة أخرى";
 
 /* The footer beneath the auto-lock title and interval duration */
-"wallet.autoLockFooter" = "عدد دقائق الانتظار حتى يتم قفل Brave Wallet تلقائيًا";
+"wallet.autoLockFooter" = "عدد دقائق الانتظار حتى يتم قفل Growser Wallet تلقائيًا";
 
 /* The title that appears before an auto-lock interval. Example: Automatically lock after 5 minutes */
 "wallet.autoLockTitle" = "قفل تلقائي بعد";
@@ -221,10 +221,10 @@
 "wallet.biometricsSetupFaceId" = "Face ID";
 
 /* The sub-title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupSubTitle" = "هل ترغب في استخدام %@ لفتح محفظة Brave؟";
+"wallet.biometricsSetupSubTitle" = "هل ترغب في استخدام %@ لفتح محفظة Growser؟";
 
 /* The title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupTitle" = "فتح محفظة Brave باستخدام %@";
+"wallet.biometricsSetupTitle" = "فتح محفظة Growser باستخدام %@";
 
 /* Type of biometrics. This will be used in Biometric setup screen. */
 "wallet.biometricsSetupTouchId" = "Touch ID";
@@ -233,10 +233,10 @@
 "wallet.bitcoinImportExtendedKeyWarning" = "يتم دعم مفاتيح %@ الموسعة فقط.";
 
 /* The title for Brave Fee label in Swap. The fee percentage is displayed beside the label. */
-"wallet.braveFeeLabel" = "رسوم Brave: %@";
+"wallet.braveFeeLabel" = "رسوم Growser: %@";
 
 /* A disclaimer that appears at the bottom of an swap screen which discloses the fixed Brave fee included in the swap quotes. '%@' will be replaced by a percentage. For example: 'Quote includes a 0.875% Brave fee' */
-"wallet.braveSwapFeeDisclaimer" = "يشمل عرض الأسعار رسوم Brave بنسبة %@.";
+"wallet.braveSwapFeeDisclaimer" = "يشمل عرض الأسعار رسوم Growser بنسبة %@.";
 
 /* The text beside the striked-through percentage Brave would normally charge for a swap. */
 "wallet.braveSwapFree" = "مجانًا";
@@ -251,7 +251,7 @@
 "wallet.btcAvailableBalanceTitle" = "متوفِّر";
 
 /* A warning displayed in row before the Send button in Send Crypto view when a Bitcoin asset is selected. */
-"wallet.btcOrdinalsUnsupportedWarning" = "لا تدعم Brave Wallet حاليًا Bitcoin NFTs (الأرقام الترتيبية). قد يؤدي إرسال BTC من عنوان يحتوي على أرقام ترتيبية إلى نقل الأرقام الترتيبية الخاصة به عن غير قصد.";
+"wallet.btcOrdinalsUnsupportedWarning" = "لا تدعم Growser Wallet حاليًا Bitcoin NFTs (الأرقام الترتيبية). قد يؤدي إرسال BTC من عنوان يحتوي على أرقام ترتيبية إلى نقل الأرقام الترتيبية الخاصة به عن غير قصد.";
 
 /* Description displayed in row beside users pending balance. */
 "wallet.btcPendingBalanceDesc" = "تغيير معلق في رصيد محفظتك.";
@@ -452,7 +452,7 @@
 "wallet.creatingWallet" = "جارِ إنشاء محفظة...";
 
 /* The title of the crypto tab */
-"wallet.cryptoTitle" = "محفظة Brave";
+"wallet.cryptoTitle" = "محفظة Growser";
 
 /* The title above the input fields for users to input network block explorer urls in Custom Network Details Screen. */
 "wallet.customNetworkBlockExplorerUrlsTitle" = "منع عناوين URL (محدد موقع الموارد الموحد) للمستكشف";
@@ -524,13 +524,13 @@
 "wallet.customTokenTitle" = "إضافة أصل مخصص";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. The '%@' will be the site attempting to connect. For example: "app.uniswap.org wants to interact with Brave Wallet" */
-"wallet.dappsConnectionNotificationOriginTitle" = "%@ يريد التفاعل مع محفظة Brave";
+"wallet.dappsConnectionNotificationOriginTitle" = "%@ يريد التفاعل مع محفظة Growser";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. */
-"wallet.dappsConnectionNotificationTitle" = "هذه الصفحة ترغب في التفاعل مع محفظة Brave";
+"wallet.dappsConnectionNotificationTitle" = "هذه الصفحة ترغب في التفاعل مع محفظة Growser";
 
 /* A message that will be displayed under the section header when there is no dapps have been granted wallet connection. */
-"wallet.dappsSettingsConnectedSitesSectionEmpty" = "ستظهر التطبيقات اللامركزية التي تتصل بها بمحفظة Brave هنا";
+"wallet.dappsSettingsConnectedSitesSectionEmpty" = "ستظهر التطبيقات اللامركزية التي تتصل بها بمحفظة Growser هنا";
 
 /* The title of the section that will list all the permitted dapp connections */
 "wallet.dappsSettingsConnectedSitesSectionTitle" = "التطبيقات اللامركزية المتصلة";
@@ -593,7 +593,7 @@
 "wallet.decimalsPrecision" = "دقة الكسور العشرية";
 
 /* The message displayed when the user takes a screenshot of their dapp decrypt request. */
-"wallet.decryptMessageScreenshotDetectedMessage" = "تحذير: قد يتم نسخ لقطة شاشة لرسالتك احتياطيًا إلى خدمة ملفات سحابية، ويمكن قراءتها بواسطة أي تطبيق لديه حق الوصول إلى الصور. يوصي Brave بعدم حفظ لقطة الشاشة هذه وحذفها في أقرب وقت ممكن.";
+"wallet.decryptMessageScreenshotDetectedMessage" = "تحذير: قد يتم نسخ لقطة شاشة لرسالتك احتياطيًا إلى خدمة ملفات سحابية، ويمكن قراءتها بواسطة أي تطبيق لديه حق الوصول إلى الصور. يوصي Growser بعدم حفظ لقطة الشاشة هذه وحذفها في أقرب وقت ممكن.";
 
 /* The title of the button to approve a decrypt request from a dapps website. */
 "wallet.decryptRequestApprove" = "السماح";
@@ -716,10 +716,10 @@
 "wallet.ensDomainInterstitialPageButtonProceed" = "المتابعة باستخدام خادم Chainstack";
 
 /* Description displayed when users chose Brave to ask them if they want the ENS to be resolved every time they enter one. The first '%@' will be replaced with a link to Chainstack's terms of use page. The second '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The third '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.ensDomainInterstitialPageDescription" = "سيعتمد Brave على خدمة RPC المُهيأة للشبكة الرئيسية لـ Ethereum، والتي تكون Chainstack افتراضيًا، لحل أسماء نطاقات .eth الموجودة على خدمة اسم Ethereum (ENS). ويقوم Brave بإخفاء عنوان بروتوكول الإنترنت الخاص بك. إذا قمت بتمكين ذلك، فسيرى Chainstack أن شخصًا ما يحاول زيارة نطاقات .eth هذه ولكن لا شيء آخر. انظر <a href=%1$@>%2$@</a> و<a href=%3$@>%4$@</a> من Chainstack.";
+"wallet.ensDomainInterstitialPageDescription" = "سيعتمد Growser على خدمة RPC المُهيأة للشبكة الرئيسية لـ Ethereum، والتي تكون Chainstack افتراضيًا، لحل أسماء نطاقات .eth الموجودة على خدمة اسم Ethereum (ENS). ويقوم Growser بإخفاء عنوان بروتوكول الإنترنت الخاص بك. إذا قمت بتمكين ذلك، فسيرى Chainstack أن شخصًا ما يحاول زيارة نطاقات .eth هذه ولكن لا شيء آخر. انظر <a href=%1$@>%2$@</a> و<a href=%3$@>%4$@</a> من Chainstack.";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS domain to be resolved every time they enter one. */
-"wallet.ensDomainInterstitialPageTitle" = "تمكين دعم خدمة اسم Ethereum (ENS) في Brave؟";
+"wallet.ensDomainInterstitialPageTitle" = "تمكين دعم خدمة اسم Ethereum (ENS) في Growser؟";
 
 /* Title on the button that users can click to enable Brave to resolve the ENS offchain lookup for the domain they entered. */
 "wallet.ensOffchainDomainInterstitialPageButtonProceed" = "تابع البحث خارج السلسلة";
@@ -728,7 +728,7 @@
 "wallet.ensOffchainDomainInterstitialPageDescription" = "يتم تخزين اسم نطاق .eth هذا خارج السلسلة وسيتم حله بواسطة بوابة جهة خارجية. إذا قمت بتمكين بحث ENS offchain، فسترى بوابة الجهة الخارجية أنك تحاول زيارة نطاق. <a href=%1$@>%2$@</a>.";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS Offchain domain to be resolved every time they enter one. */
-"wallet.ensOffchainDomainInterstitialPageTitle" = "هل تريد تمكين دعم بحث خدمة اسم إيثريوم (ENS) خارج السلسة في متصفح Brave؟";
+"wallet.ensOffchainDomainInterstitialPageTitle" = "هل تريد تمكين دعم بحث خدمة اسم إيثريوم (ENS) خارج السلسة في متصفح Growser؟";
 
 /* Button title when requesting to do an ENS off chain lookup. */
 "wallet.ensOffchainGatewayButton" = "استخدم نطاق ENS";
@@ -737,7 +737,7 @@
 "wallet.ensOffchainGatewayDesc" = "يبدو أنك أدخلت عنوان ENS. سنحتاج إلى استخدام محلل تابع لجهة خارجية لحل هذا الطلب. يساعد هذا في ضمان عدم تسريب نطاق .eth الخاص بك، وأن معاملتك آمنة.";
 
 /* Title shown send address / ENS domain when requesting to do an ENS off chain lookup. */
-"wallet.ensOffchainGatewayTitle" = "يدعم Brave استخدام بوابات offchain لحل نطاقات .eth.";
+"wallet.ensOffchainGatewayTitle" = "يدعم Growser استخدام بوابات offchain لحل نطاقات .eth.";
 
 /* The description for the options to allow Ethereum Name service domain names offchain. '%@' will be replaced with a url to explain more about ENS offchain lookup. */
 "wallet.ensOffchainResolveMethodDescription" = "[تعرف على المزيد](%@) حول اعتبارات خصوصية البحث خارج السلسلة في ENS.";
@@ -962,7 +962,7 @@
 "wallet.legalTitle" = "قبل أن نبدأ";
 
 /* The responsibility explained in screen for users to check indicates they understand before setting up a wallet. */
-"wallet.legalUserResponsibility" = "أفهم أن هذه محفظة ذاتية الحفظ، وأنني وحدي المسؤول عن أي أموال أو أصول أو حسابات مرتبطة بها، وعن اتخاذ الإجراء المناسب لتأمين محفظتي وحمايتها وإجراء النسخ الاحتياطي لها. أفهم أن Brave لا يمكنها الوصول إلى محفظتي أو عكس المعاملات نيابة عني، وأن عبارة الاسترداد الخاصة بي هي الطريقة الوحيدة لاستعادة الوصول في حالة فقدان كلمة المرور أو سرقة الجهاز أو حدوث ظرف مماثل.";
+"wallet.legalUserResponsibility" = "أفهم أن هذه محفظة ذاتية الحفظ، وأنني وحدي المسؤول عن أي أموال أو أصول أو حسابات مرتبطة بها، وعن اتخاذ الإجراء المناسب لتأمين محفظتي وحمايتها وإجراء النسخ الاحتياطي لها. أفهم أن Growser لا يمكنها الوصول إلى محفظتي أو عكس المعاملات نيابة عني، وأن عبارة الاسترداد الخاصة بي هي الطريقة الوحيدة لاستعادة الوصول في حالة فقدان كلمة المرور أو سرقة الجهاز أو حدوث ظرف مماثل.";
 
 /* The title of the lock option inside the menu when user clicks the three dots button beside assets search button. */
 "wallet.lock" = "القفل بإحكام";
@@ -1025,13 +1025,13 @@
 "wallet.meldTransactionPartner" = "شريك المعاملات";
 
 /* The description of the pop up when user first time open buy screen in Brave Wallet. */
-"wallet.meldTransactionPartnerDescription" = "تستخدم محفظة Brave موقع Meld.io للمساعدة على جمع وإظهار مختلف مزودي العملات الرقمية لمنطقتك. سنشارك معلومات مع موقع Meld.io لإكمال المعاملات، بما في ذلك عنوان محفظتك ورمز بلدك. للمزيد من المعلومات، يُرجى قراءة شروط استخدام Meld.";
+"wallet.meldTransactionPartnerDescription" = "تستخدم محفظة Growser موقع Meld.io للمساعدة على جمع وإظهار مختلف مزودي العملات الرقمية لمنطقتك. سنشارك معلومات مع موقع Meld.io لإكمال المعاملات، بما في ذلك عنوان محفظتك ورمز بلدك. للمزيد من المعلومات، يُرجى قراءة شروط استخدام Meld.";
 
 /* The description of the checkbox for the pop up when user first time open buy screen in Brave Wallet. */
 "wallet.meldTransactionPartnerLegal" = "قرأت وأوافق على [شروط استخدام Meld](%@)";
 
 /* The title shown on the wallet settings page, and the value shown when selecting the default wallet as Brave Wallet in wallet settings. */
-"wallet.module" = "محفظة Brave";
+"wallet.module" = "محفظة Growser";
 
 /* A button title for user to open more option in asset details screen other than buy/send/swap. */
 "wallet.more" = "المزيد";
@@ -1079,7 +1079,7 @@
 "wallet.newSiteConnectFooter" = "تواصل فقط مع المواقع التي تثق بها.";
 
 /* The message displayed below the dapp's origin url in new site connection screen. */
-"wallet.newSiteConnectMessage" = "اتصال بمحفظة Brave";
+"wallet.newSiteConnectMessage" = "اتصال بمحفظة Growser";
 
 /* The transaction edit error alert button which will dismiss the alert. */
 "wallet.newSiteConnectScreenTitle" = "اتصال";
@@ -1127,7 +1127,7 @@
 "wallet.nftDetailTokenStandard" = "معيار الرمز المميز";
 
 /* The title of the alert that asks users either to enable NFT discovery or import manually. `SimpleHash` is the third-party service name, so it does not need to be translated. */
-"wallet.nftDiscoveryCalloutDescription" = "يمكن لمحفظة Brave استخدام خدمة جهة خارجية لعرض رموز NFT تلقائيًا. سيشارك Brave عناوين محفظتك مع SimpleHash لتقديم هذه الخدمة. تعرف على المزيد.";
+"wallet.nftDiscoveryCalloutDescription" = "يمكن لمحفظة Growser استخدام خدمة جهة خارجية لعرض رموز NFT تلقائيًا. سيشارك Growser عناوين محفظتك مع SimpleHash لتقديم هذه الخدمة. تعرف على المزيد.";
 
 /* This is the same `Learn more` at the end of `nftDiscoveryCalloutDescription`, but we need a separat translation to detect the range of it in order to build some attributed strings. */
 "wallet.nftDiscoveryCalloutDescriptionLearnMore" = "اعرف المزيد";
@@ -1163,10 +1163,10 @@
 "wallet.nftRemoveFromWallet" = "عدم الظهور في المحفظة";
 
 /* The description of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertDescription" = "ستتم إزالة الـ NFT من محفظة Brave ولكنها ستبقى على البلوكتشين. إذا قمت بإزالته، ثم غيرت رأيك، فستحتاج إلى استيراده مرة أخرى يدويًا.";
+"wallet.nftRemoveFromWalletAlertDescription" = "ستتم إزالة الـ NFT من محفظة Growser ولكنها ستبقى على البلوكتشين. إذا قمت بإزالته، ثم غيرت رأيك، فستحتاج إلى استيراده مرة أخرى يدويًا.";
 
 /* The title of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertTitle" = "هل تريد الإزالة من محفظة Brave؟";
+"wallet.nftRemoveFromWalletAlertTitle" = "هل تريد الإزالة من محفظة Growser؟";
 
 /* The description of the NFTs row in Account Details when user has zero or multiple NFTs. */
 "wallet.nftsDescription" = "%d من رموز NFT";
@@ -1217,7 +1217,7 @@
 "wallet.onboardingNetworkSelectionTitle" = "الشبكات المدعومة";
 
 /* The subtitle of the last step of creating a new wallet. */
-"wallet.onbordingCompletedSubTitle" = "محفظة Brave الخاصة بك جاهزة للاستخدام.";
+"wallet.onbordingCompletedSubTitle" = "محفظة Growser الخاصة بك جاهزة للاستخدام.";
 
 /* The title of the last step of creating a new wallet. */
 "wallet.onbordingCompletedTitle" = "أنت جاهز تمامًا!";
@@ -1274,7 +1274,7 @@
 "wallet.portfolioPageTitle" = "ملف تعريف شخصي";
 
 /* The message displayed when the user takes a screenshot of their private key */
-"wallet.privateKeyScreenshotDetectedMessage" = "تحذير: قد يتم نسخ لقطة شاشة لمفتاحك الخاص احتياطيًا إلى خدمة ملفات سحابية، ويمكن قراءتها بواسطة أي تطبيق لديه إمكانية الوصول إلى الصور. يوصي Brave بعدم حفظ لقطة الشاشة هذه وحذفها في أقرب وقت ممكن.";
+"wallet.privateKeyScreenshotDetectedMessage" = "تحذير: قد يتم نسخ لقطة شاشة لمفتاحك الخاص احتياطيًا إلى خدمة ملفات سحابية، ويمكن قراءتها بواسطة أي تطبيق لديه إمكانية الوصول إلى الصور. يوصي Growser بعدم حفظ لقطة الشاشة هذه وحذفها في أقرب وقت ممكن.";
 
 /* The title for Protocol Fee label in Swap. The fee percentage is displayed beside the label. */
 "wallet.protocolFeeLabel" = "رسوم البروتوكول: %@";
@@ -1316,7 +1316,7 @@
 "wallet.purchaseMethodButtonTitle" = "تحديد طريقة الشراء";
 
 /* The message displayed when the user takes a screenshot of their recovery phrase */
-"wallet.recoveryPhraseScreenshotDetectedMessage" = "تحذير: قد يتم نسخ لقطة شاشة لعبارة الاسترداد احتياطيًا إلى خدمة ملفات سحابية، ويمكن قراءتها بواسطة أي تطبيق لديه حق الوصول إلى الصور. يوصي Brave بعدم حفظ لقطة الشاشة هذه وحذفها في أقرب وقت ممكن.";
+"wallet.recoveryPhraseScreenshotDetectedMessage" = "تحذير: قد يتم نسخ لقطة شاشة لعبارة الاسترداد احتياطيًا إلى خدمة ملفات سحابية، ويمكن قراءتها بواسطة أي تطبيق لديه حق الوصول إلى الصور. يوصي Growser بعدم حفظ لقطة الشاشة هذه وحذفها في أقرب وقت ممكن.";
 
 /* A description for a refresh icon that when pressed receives a new snap quote for the currently swap assets */
 "wallet.refreshMarketPriceLabel" = "تحديث سعر السوق";
@@ -1349,7 +1349,7 @@
 "wallet.repeatedPasswordPlaceholder" = "إعادة إدخال كلمة المرور";
 
 /* A label for toggle for user to use to indicate importing a legacy brave wallet or not */
-"wallet.restoreLegacyBraveWalletToggleTitle" = "هل ترغب في توريد محافظ التفشير القديمة الخاصة بـ Brave؟";
+"wallet.restoreLegacyBraveWalletToggleTitle" = "هل ترغب في توريد محافظ التفشير القديمة الخاصة بـ Growser؟";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As to gain access to your assets from a different device */
 "wallet.restoreWalletBackButtonTitle" = "استعادة المحفظة";
@@ -1559,7 +1559,7 @@
 "wallet.settingsResetWalletAlertMessage" = "لا يمكن عكس هذا الإجراء. عبارة الاسترداد الخاصة بك هي الطريقة الوحيدة لاستعادة وصول الحساب إلى أصولك المشفرة.";
 
 /* The title the confirmation dialog when resetting the wallet. As in to erase the users wallet from the device */
-"wallet.settingsResetWalletAlertTitle" = "هل تريد بالتأكيد إعادة تعيين محفظة Brave؟";
+"wallet.settingsResetWalletAlertTitle" = "هل تريد بالتأكيد إعادة تعيين محفظة Growser؟";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As in the first step of an onboarding process is to welcome a user. */
 "wallet.setupCryptoButtonBackButtonTitle" = "مرحبًا";
@@ -1568,13 +1568,13 @@
 "wallet.setupCryptoButtonTitle" = "البدء";
 
 /* The subtitle displayed in the section for user that need to create a brand new wallet */
-"wallet.setupCryptoCreateNewSubTitle" = "ابدأ مع محفظة Brave في غضون دقائق.";
+"wallet.setupCryptoCreateNewSubTitle" = "ابدأ مع محفظة Growser في غضون دقائق.";
 
 /* The title displayed in the section for user that need to create a brand new wallet */
 "wallet.setupCryptoCreateNewTitle" = "هل تحتاج إلى إنشاء محفظة جديدة؟";
 
 /* The disclaimer text at the bottom of the first step of onboarding flow. */
-"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Brave وشعار Brave هما علامتين تجاريتين مسجلتين لشركة Brave. قد تكون أسماء المنتجات والشعارات الأخرى علامات تجارية للشركات المالكة لها. جميع الحقوق محفوظة.";
+"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Growser وشعار Growser هما علامتين تجاريتين مسجلتين لشركة Growser. قد تكون أسماء المنتجات والشعارات الأخرى علامات تجارية للشركات المالكة لها. جميع الحقوق محفوظة.";
 
 /* The subtitle displayed in the section for user that need to restore an existed wallet */
 "wallet.setupCryptoRestoreSubTitle" = "استيراد محفظتك الحالية.";
@@ -1583,7 +1583,7 @@
 "wallet.setupCryptoRestoreTitle" = "هل لديك محفظة بالفعل؟";
 
 /* The subtitle displayed on the 'setup crypto' onboarding screen */
-"wallet.setupCryptoSubtitle" = "تحكم في عملاتك المشفرة ورموز NFT. تدعم محفظة Brave سلاسل Ethereum وEVM وSolana والمزيد.";
+"wallet.setupCryptoSubtitle" = "تحكم في عملاتك المشفرة ورموز NFT. تدعم محفظة Growser سلاسل Ethereum وEVM وSolana والمزيد.";
 
 /* The title displayed on the 'setup crypto' onboarding screen */
 "wallet.setupCryptoTitle" = "المتصفح الأصلي.\nالحضانة الذاتية.\nومتعدد السلاسل.";
@@ -1637,10 +1637,10 @@
 "wallet.signedTransactionTitle" = "تم توقيع المعاملة";
 
 /* The title of the view shown above a Sign In With Ethereum request. */
-"wallet.signInWithBraveWallet" = "قم بتسجيل الدخول إلى  Brave Wallet";
+"wallet.signInWithBraveWallet" = "قم بتسجيل الدخول إلى  Growser Wallet";
 
 /* The title of the view shown when a security issue is detected with a Sign In With Ethereum request. */
-"wallet.signInWithBraveWalletMessage" = "أنت تقوم بتسجيل الدخول إلى @ %1$. ستشارك محفظة Brave عنوان محفظتك مع %2$@.";
+"wallet.signInWithBraveWalletMessage" = "أنت تقوم بتسجيل الدخول إلى @ %1$. ستشارك محفظة Growser عنوان محفظتك مع %2$@.";
 
 /* A warning message to tell users that the sign request message contains consecutive new-line characters. */
 "wallet.signMessageConsecutiveNewlineWarning" = "تم اكتشاف أحرف سطر جديد متتالية!";
@@ -1706,10 +1706,10 @@
 "wallet.snsDomainInterstitialPageButtonProceed" = "المتابعة باستخدام خادم SNS";
 
 /* Description displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. The first '%@' will be replaced with a link to Brave's wiki page which will link to the providersterms of use page and privacy policy page. The last '%@' will be replaced with the value of 'snsDomainInterstitialPagePrivacyPolicy'. */
-"wallet.snsDomainInterstitialPageDescription" = "سيستخدم Brave جهة خارجية لحل أسماء نطاقات .sol. ويخفي Brave عنوان بروتوكول الإنترنت الخاص بك. إذا قمت بتمكين ذلك، فسيرى الطرف الثالث أن شخصًا ما يحاول زيارة نطاقات .sol هذه، ولكن لا شيء آخر. لمزيد من المعلومات حول الجهات الخارجية التي نستخدمها وسياسات الخصوصية الخاصة بها، يرجى الاطلاع على <a href=%@>صفحة المساعدة</a> الخاصة بنا.";
+"wallet.snsDomainInterstitialPageDescription" = "سيستخدم Growser جهة خارجية لحل أسماء نطاقات .sol. ويخفي Growser عنوان بروتوكول الإنترنت الخاص بك. إذا قمت بتمكين ذلك، فسيرى الطرف الثالث أن شخصًا ما يحاول زيارة نطاقات .sol هذه، ولكن لا شيء آخر. لمزيد من المعلومات حول الجهات الخارجية التي نستخدمها وسياسات الخصوصية الخاصة بها، يرجى الاطلاع على <a href=%@>صفحة المساعدة</a> الخاصة بنا.";
 
 /* Title displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. */
-"wallet.snsDomainInterstitialPageTitle" = "تمكين دعم Solana Name Service (SNS) في Brave؟";
+"wallet.snsDomainInterstitialPageTitle" = "تمكين دعم Solana Name Service (SNS) في Growser؟";
 
 /* A description of an Solana account, displayed in Accounts tab. */
 "wallet.solAccountDescription" = "منصة Solana + سلاسل SVM";
@@ -1817,7 +1817,7 @@
 "wallet.solanaSignTransactionDetails" = "التفاصيل";
 
 /* The warning message to let users understand the risk of using Brave Wallet to sign any transaction. */
-"wallet.solanaSignTransactionWarning" = "لاحظ أن Brave لا يمكنه التحقق مما سيحدث إذا قمت بالتوقيع. يمكن أن يخول التوقيع تقريبًا أي عملية في حسابك أو نيابة عنك ، بما في ذلك (على سبيل المثال لا الحصر) منح التحكم الكامل في حسابك وأصول التشفير للموقع الذي يقدم الطلب. قم بالتوقيع فقط إذا كنت متأكدًا من رغبتك في اتخاذ هذا الإجراء، وتثق في الموقع الطالب.";
+"wallet.solanaSignTransactionWarning" = "لاحظ أن Growser لا يمكنه التحقق مما سيحدث إذا قمت بالتوقيع. يمكن أن يخول التوقيع تقريبًا أي عملية في حسابك أو نيابة عنك ، بما في ذلك (على سبيل المثال لا الحصر) منح التحكم الكامل في حسابك وأصول التشفير للموقع الذي يقدم الطلب. قم بالتوقيع فقط إذا كنت متأكدًا من رغبتك في اتخاذ هذا الإجراء، وتثق في الموقع الطالب.";
 
 /* The title displayed above the value of a Solana swap transaction in transaction confirmation view, transaction details view and transaction summary rows. */
 "wallet.solanaSwapTransactionTitle" = "معاملة تبادل";
@@ -1913,7 +1913,7 @@
 "wallet.swapCryptoToTitle" = "إلى";
 
 /* The description of where user will see once a test network has been picked in swap screen. '%@' will be replaced with a network such as 'Rinkeby Test Network' or 'Ropsten Test Network' */
-"wallet.swapCryptoUnsupportNetworkBody" = "لا يدعم Brave حاليًا المبادلة على %@. يرجى التبديل إلى سلسلة مدعومة.";
+"wallet.swapCryptoUnsupportNetworkBody" = "لا يدعم Growser حاليًا المبادلة على %@. يرجى التبديل إلى سلسلة مدعومة.";
 
 /* The title below account picker when user has selected a test network to swap cryptos */
 "wallet.swapCryptoUnsupportNetworkTitle" = "سلسلة غير مدعومة";
@@ -1925,7 +1925,7 @@
 "wallet.swapDexAggrigatorDisclaimer" = "%1$@ سيعالج عنوان %2$@ وعنوان بروتوكول الإنترنت لإنجاز معاملة (بما في ذلك الحصول على عروض الأسعار). سيستخدم %3$@ هذه البيانات فقط لأغراض معالجة المعاملات.";
 
 /* A disclaimer note shown on the Swap screen. '%@' will be replaced by a company name, ex. '0x' / 'Jupiter'. 'DEX aggregator' is a type of blockchain-based service (decentralized exchange) */
-"wallet.swapDexAggrigatorNote" = "يستخدم Brave %@ كمجمع DEX.";
+"wallet.swapDexAggrigatorNote" = "يستخدم Growser %@ كمجمع DEX.";
 
 /* The 'Limit' order type. Limit orders only execute when the price requirements are met */
 "wallet.swapLimitOrderType" = "الحد";
@@ -2177,16 +2177,16 @@
 "wallet.txStatusViewInActivity" = "العرض في الأنشطة";
 
 /* Description displayed when users chose Brave to ask them if they want the Unstoppable Domains to be resolved every time they enter one. The first '%@' will be replaced with a list of supported TLDs like '.x' or '.bitcoin'. The second '%@' be replaced with a link to Chainstack's terms of use page. The third '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The fourth '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.udDomainInterstitialPageDescription" = "أسماء النطاقات الموجودة على Unstoppable Domains. يخفي Brave عنوان بروتوكول الإنترنت الخاص بك. إذا قمت بتمكين ذلك، فسيرى Chainstack أن شخصًا ما يحاول زيارة هذه النطاقات ولكن لا شيء آخر. انظر <a href=%1$@>%2$@</a> و<a href=%3$@>%4$@</a> من Chainstack.";
+"wallet.udDomainInterstitialPageDescription" = "أسماء النطاقات الموجودة على Unstoppable Domains. يخفي Growser عنوان بروتوكول الإنترنت الخاص بك. إذا قمت بتمكين ذلك، فسيرى Chainstack أن شخصًا ما يحاول زيارة هذه النطاقات ولكن لا شيء آخر. انظر <a href=%1$@>%2$@</a> و<a href=%3$@>%4$@</a> من Chainstack.";
 
 /* The intro displayed below `udDomainInterstitialPageTitle`. */
-"wallet.udDomainInterstitialPageIntro" = "سيكون Brave هو خدمة Ethereum RPC المُهيأة والتي تعتمد افتراضيًا على Chainstack للحل:";
+"wallet.udDomainInterstitialPageIntro" = "سيكون Growser هو خدمة Ethereum RPC المُهيأة والتي تعتمد افتراضيًا على Chainstack للحل:";
 
 /* The title of the button that user can tap to reveal more unstoppable domain extensions we support to resolve. */
 "wallet.udDomainInterstitialPageMore" = "+ المزيد";
 
 /* Title displayed when users chose Brave to ask them if they want the Unstoppable Domains domain to be resolved every time they enter one. */
-"wallet.udDomainInterstitialPageTitle" = "هل تريد تمكين دعم النطاقات التي لا يمكن إيقافها في Brave؟";
+"wallet.udDomainInterstitialPageTitle" = "هل تريد تمكين دعم النطاقات التي لا يمكن إيقافها في Growser؟";
 
 /* The description for the options to allow Unstoppable Domain domain names. '%@' will be replaced with a url to explain more about Unstoppable Domains. */
 "wallet.udResolveMethodDescription" = "[تعرف على المزيد](%@) حول اعتبارات خصوصية Unstoppable Domains.";

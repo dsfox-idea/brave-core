@@ -8,7 +8,7 @@
 "AddFilterByURL" = "URL로 필터 추가";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave 플레이어**를 이용하면 광고나 끊김 없이 동영상을 재생할 수 있습니다.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser 플레이어**를 이용하면 광고나 끊김 없이 동영상을 재생할 수 있습니다.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "나에게 맞게 Shields 조정하기";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "이 사이트는 일부 광고 차단 프로그램을 차단하기 시작했으므로 사이트가 제대로 작동하지 않을 수 있습니다.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "이 문제를 해결하려면 Brave의 Shield 설정을 조정하세요. 조정한 후 Brave 플레이어에서 이 콘텐츠를 시청하면 됩니다.";
+"AntiAdBlockWarningDescription2" = "이 문제를 해결하려면 Brave의 Shield 설정을 조정하세요. 조정한 후 Growser 플레이어에서 이 콘텐츠를 시청하면 됩니다.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "현재 설정 유지";
@@ -44,10 +44,10 @@
 "blockMobileAnnoyances" = "'앱으로 전환' 요청 차단";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave 플레이어";
+"BravePlayer" = "Growser 플레이어";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "이 사이트의 동영상을 항상 Brave 플레이어로 열기";
+"BravePlayerAlwaysOpenYouTubeLinks" = "이 사이트의 동영상을 항상 Growser 플레이어로 열기";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "사용해보기";
@@ -56,10 +56,10 @@
 "BravePlayerDismissButton" = "나중에";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave 플레이어를 이용하면 끊김 없이 동영상을 시청할 수 있습니다.";
+"BravePlayerInfoMessage" = "Growser 플레이어를 이용하면 끊김 없이 동영상을 시청할 수 있습니다.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "대신 Brave 플레이어에서 시청";
+"BravePlayerInfoTitle" = "대신 Growser 플레이어에서 시청";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "콘텐츠 필터링";

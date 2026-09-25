@@ -17,7 +17,7 @@
 "importDataFileSelectorButtonTitle" = "Bir dosya seçin...";
 
 /* The message of a Text on screen that explains to the user what type of data can be imported. */
-"importDataFileSelectorMessage" = "Yer işaretlerinizi, geçmişinizi ve diğer tarayıcı verilerinizi Brave'e taşıyın.";
+"importDataFileSelectorMessage" = "Yer işaretlerinizi, geçmişinizi ve diğer tarayıcı verilerinizi Growser'e taşıyın.";
 
 /* The title of the main screen that lets the user import data. The title is shown in the navigation bar. */
 "importDataFileSelectorNavigationTitle" = "Tarama Verilerini İçe Aktar";
@@ -35,7 +35,7 @@
 "importStateFailureTitle" = "İçe Aktarma Başarısız";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords. */
-"importStatePasswordConflictKeepExistingPasswordsTitle" = "Brave parolaları kalsın";
+"importStatePasswordConflictKeepExistingPasswordsTitle" = "Growser parolaları kalsın";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user use the passwords that were imported, overwriting your existing passwords. */
 "importStatePasswordConflictKeepImportedPasswordsTitle" = "Safari'deki parolaları kullan";
@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Devam";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Verileriniz başarıyla içe aktarıldı.\nBrave ile gezinmeye başlamak için hazırsınız.";
+"importStateSuccessMessage" = "Verileriniz başarıyla içe aktarıldı.\nGrowser ile gezinmeye başlamak için hazırsınız.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Başarılı!";

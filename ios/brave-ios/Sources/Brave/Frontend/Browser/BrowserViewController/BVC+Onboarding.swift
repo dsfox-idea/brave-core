@@ -6,7 +6,7 @@
 import BraveCore
 import BraveShields
 import BraveUI
-import BraveVPN
+// Growser-280: no BraveVPN.
 import Onboarding
 import Preferences
 import Shared
@@ -26,7 +26,7 @@ extension BrowserViewController {
 
   func showNTPOnboarding() {
     Preferences.AppState.shouldDeferPromotedPurchase.value = false
-    iapObserver.savedPromotedProduct = nil
+    // Growser-280: no VPN promoted purchase to forget.
 
     if !isSearchContainerVisible,
       topToolbar.currentURL == nil,
@@ -39,14 +39,7 @@ extension BrowserViewController {
     }
   }
 
-  private func triggerPromotedInAppPurchase(product: Product?) {
-    guard let product else {
-      return
-    }
-
-    navigationHelper.openVPNBuyScreen(iapObserver: iapObserver)
-    BraveVPN.activatePaymentTypeForStoredPromotion(product: product)
-  }
+  // Growser-280: no triggerPromotedInAppPurchase(product:) - it bought the VPN.
 
   private func showPrivacyReportsOnboardingIfNeeded() {
     if Preferences.PrivacyReports.ntpOnboardingCompleted.value

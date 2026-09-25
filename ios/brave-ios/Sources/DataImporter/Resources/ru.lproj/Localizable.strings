@@ -17,7 +17,7 @@
 "importDataFileSelectorButtonTitle" = "Выберите файл...";
 
 /* The message of a Text on screen that explains to the user what type of data can be imported. */
-"importDataFileSelectorMessage" = "Перенесите закладки, историю и другие данные браузера в Brave.";
+"importDataFileSelectorMessage" = "Перенесите закладки, историю и другие данные браузера в Growser.";
 
 /* The title of the main screen that lets the user import data. The title is shown in the navigation bar. */
 "importDataFileSelectorNavigationTitle" = "Импорт данных просмотра";
@@ -35,7 +35,7 @@
 "importStateFailureTitle" = "Импорт не удался";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords. */
-"importStatePasswordConflictKeepExistingPasswordsTitle" = "Храните пароли от Brave";
+"importStatePasswordConflictKeepExistingPasswordsTitle" = "Храните пароли от Growser";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user use the passwords that were imported, overwriting your existing passwords. */
 "importStatePasswordConflictKeepImportedPasswordsTitle" = "Использовать пароли из Safari";
@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Далее";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Ваши данные были успешно импортированы.\nВсе у вас настроено, чтобы начать просмотр с Brave.";
+"importStateSuccessMessage" = "Ваши данные были успешно импортированы.\nВсе у вас настроено, чтобы начать просмотр с Growser.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Успех!";

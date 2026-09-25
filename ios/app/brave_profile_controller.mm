@@ -8,14 +8,13 @@
 #include "base/check.h"
 #include "base/functional/callback_helpers.h"
 #include "base/memory/raw_ptr.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat+private.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat_delegate.h"
+#include "base/notreached.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
+#include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
-#include "brave/ios/browser/ai_chat/ai_chat_service_factory.h"
-#include "brave/ios/browser/ai_chat/model_service_factory.h"
 #include "brave/ios/browser/api/bookmarks/brave_bookmarks_api+private.h"
 #include "brave/ios/browser/api/brave_stats/brave_stats+private.h"
-#include "brave/ios/browser/api/brave_wallet/brave_wallet_api+private.h"
 #include "brave/ios/browser/api/content_settings/default_host_content_settings.h"
 #include "brave/ios/browser/api/content_settings/default_host_content_settings_internal.h"
 #include "brave/ios/browser/api/history/brave_history_api+private.h"
@@ -33,8 +32,6 @@
 #include "brave/ios/browser/api/web_view/brave_web_view_configuration_provider.h"
 #include "brave/ios/browser/api/web_view/brave_web_view_download_manager.h"
 #include "brave/ios/browser/application_context/brave_application_context_impl.h"
-#include "brave/ios/browser/brave_ads/ads_service_factory_ios.h"
-#include "brave/ios/browser/brave_ads/ads_service_impl_ios.h"
 #include "components/content_settings/core/browser/content_settings_utils.h"
 #include "components/history/core/browser/history_service.h"
 #include "components/keyed_service/core/service_access_type.h"
@@ -77,6 +74,22 @@
 #if BUILDFLAG(IOS_CREDENTIAL_PROVIDER_ENABLED)
 #include "ios/chrome/browser/credential_provider/model/credential_provider_service_factory.h"
 #include "ios/chrome/browser/credential_provider/model/credential_provider_util.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/ios/browser/brave_ads/ads_service_factory_ios.h"
+#include "brave/ios/browser/brave_ads/ads_service_impl_ios.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
+#include "brave/ios/browser/api/brave_wallet/brave_wallet_api+private.h"
+#endif
+
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/ios/browser/ai_chat+private.h"
+#include "brave/components/ai_chat/ios/browser/ai_chat_delegate.h"
+#include "brave/ios/browser/ai_chat/ai_chat_service_factory.h"
+#include "brave/ios/browser/ai_chat/model_service_factory.h"
 #endif
 
 @interface BraveProfileController () {
@@ -162,8 +175,12 @@
                 GetApplicationContext()->GetVariationsService(),
                 GetApplicationContext()->GetComponentUpdateService(),
                 GetApplicationContext()->GetLocalState())
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
                             ads_service:brave_ads::AdsServiceFactoryIOS::
                                             GetForProfile(_profile)];
+#else
+                            ads_service:nullptr];
+#endif
   }
   return self;
 }
@@ -318,13 +335,21 @@
 }
 
 - (BraveWalletAPI*)braveWalletAPI {
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
   if (!_braveWalletAPI) {
     _braveWalletAPI = [[BraveWalletAPI alloc] initWithBrowserState:_profile];
   }
   return _braveWalletAPI;
+#else
+  // Growser-287: the wallet is compiled out, and so is every Swift caller of
+  // this property. The declaration stays because a public framework header
+  // cannot read a buildflag.
+  NOTREACHED();
+#endif
 }
 
 - (AIChat*)aiChatAPIWithDelegate:(id<AIChatDelegate>)delegate {
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   auto* modelService = ai_chat::ModelServiceFactory::GetForProfile(_profile);
   auto* service = ai_chat::AIChatServiceFactory::GetForProfile(_profile);
   return [[AIChat alloc]
@@ -333,6 +358,12 @@
                profilePrefs:_profile->GetPrefs()
       sharedURLoaderFactory:_profile->GetSharedURLLoaderFactory()
                    delegate:delegate];
+#else
+  // Growser-279: AI Chat is compiled out, and so is every Swift caller of this
+  // method. The declaration stays because a public framework header cannot
+  // read a buildflag.
+  NOTREACHED();
+#endif
 }
 
 - (DefaultHostContentSettings*)defaultHostContentSettings {

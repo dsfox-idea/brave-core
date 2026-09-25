@@ -2,16 +2,16 @@
 "About" = "Informació";
 
 /* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "Sobre Escuts de Brave";
+"AboutBraveShields" = "Sobre Escuts de Growser";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "Els llocs sovint inclouen galetes i scripts que intenten identificar-te a tu i al teu dispositiu. Volen esbrinar qui ets i seguir-te al web, fent un rastrejament de què fas a cada lloc.\n\nBrave bloqueja aquestes coses perquè puguis navegar sense ser perseguit.";
+"AboutBraveShieldsBody" = "Els llocs sovint inclouen galetes i scripts que intenten identificar-te a tu i al teu dispositiu. Volen esbrinar qui ets i seguir-te al web, fent un rastrejament de què fas a cada lloc.\n\nGrowser bloqueja aquestes coses perquè puguis navegar sense ser perseguit.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "Això et permet desar la imatge al carret de la càmera.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave voldria accedir a les teves fotos";
+"AccessPhotoDeniedAlertTitle" = "Growser voldria accedir a les teves fotos";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Afegeix adreça d'interès";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Afegeix adreça d'interès";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Dades dels Anuncis de Brave";
+"ads.braveAdsDataToggleOption" = "Dades dels Anuncis de Growser";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Anuncis i rastrejadors";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "Activat";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Pregunta a Brave";
+"AskBraveMenuItem" = "Pregunta a Growser";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Això autentica el teu accés a Brave";
+"AuthenticationLoginsTouchReason" = "Això autentica el teu accés a Growser";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Cancel·la";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "Adreça";
 
 /* Button to show the brave panel */
-"BravePanel" = "Panell de Brave";
+"BravePanel" = "Panell de Growser";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Recompenses de Brave";
+"BraveRewardsAdNotificationTitle" = "Recompenses de Growser";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Obre";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Recompenses";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Recompenses de Brave";
+"BraveRewardsTitle" = "Recompenses de Growser";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "El cercador de Brave no crea un perfil vostre.";
+"braveSearchPromotion.bannerDescription" = "El cercador de Growser no crea un perfil vostre.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Potser més tard";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Accepta la cerca independent amb millor privacitat";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Prova el cercador de Brave";
+"braveSearchPromotion.bannerTryButtonTitle" = "Prova el cercador de Growser";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Potser més tard";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Controls avançats";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Privacitat i Escuts de Brave";
+"BraveShieldsAndPrivacy" = "Privacitat i Escuts de Growser";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Escuts & Privacitat";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Si aquest enllaç apareix trencat, prova de desactivar Escuts";
 
 /* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Escuts de Brave";
+"BraveShieldsStatusTitle" = "Escuts de Growser";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
 "BraveShieldsStatusValueDown" = "Avall";
@@ -278,10 +278,10 @@
 "BraveShieldsStatusValueUp" = "Amunt";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Fes doble toc per activar Escuts de Brave";
+"BraveShieldsToggleHint" = "Fes doble toc per activar Escuts de Growser";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Conversa de Brave";
+"bravetalk.braveTalkTitle" = "Conversa de Growser";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Seleccionar idioma";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Cerca";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave Translate";
+"BraveTranslate.settingsMenuTitle" = "Growser Translate";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave Translate";
+"BraveTranslate.settingsScreenTitle" = "Growser Translate";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Si està habilitat, Brave Translate detecta automàticament l'idioma de la pàgina actual i mostra un botó de traducció a la barra d'URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Si està habilitat, Growser Translate detecta automàticament l'idioma de la pàgina actual i mostra un botó de traducció a la barra d'URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Traductor habilitat";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Bloqueig del navegador";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Desbloqueja Brave amb Touch ID, Face ID o contrasenya del sistema.";
+"BrowserLockDescription" = "Desbloqueja Growser amb Touch ID, Face ID o contrasenya del sistema.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Historial de navegació";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "Mou la barra d'adreces, pestanyes, preferits, i altres eines a la part inferior del navegador. ";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Personalitza la barra de pestanyes de Brave";
+"callout.bottomBarCalloutTitle" = "Personalitza la barra de pestanyes de Growser";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Aconsegueix la privacitat de Brave al teu ordinador o tauleta i sincronitza les adreces d'interès i les extensions entre dispositius.";
+"callout.privacyEverywhereCalloutDescription" = "Aconsegueix la privacitat de Growser al teu ordinador o tauleta i sincronitza les adreces d'interès i les extensions entre dispositius.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Sincronitza ara";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Obre Configuració";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Obre tots els enllaços amb Brave per protegir la teva privacitat";
+"defaultBrowserCallout.introPrimaryText" = "Obre tots els enllaços amb Growser per protegir la teva privacitat";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Escuts de Brave bloqueja els rastrejadors i els anuncis, desa dades i t'estalvia temps a cada lloc que visites";
+"defaultBrowserCallout.introSecondaryText" = "Escuts de Growser bloqueja els rastrejadors i els anuncis, desa dades i t'estalvia temps a cada lloc que visites";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Obre Configuració, prem l'app del navegador predeterminat i selecciona Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Obre Configuració, prem l'app del navegador predeterminat i selecciona Growser.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Defineix Brave com a navegador predeterminat";
+"defaultBrowserCallout.notificationBody" = "Defineix Growser com a navegador predeterminat";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Aconsegueix la protecció de Brave a cada enllaç";
+"defaultBrowserCallout.notificationTitle" = "Aconsegueix la protecció de Growser a cada enllaç";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Tanca les crides del navegador predeterminat";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave predeterminat";
+"defaultThemeName" = "Growser predeterminat";
 
 /* No comment provided by engineer. */
 "Delete" = "Suprimeix";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Introdueix el nom de la carpeta";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ normalment utilitza el xifratge per protegir la teva informació. Quan Brave va intentar connectar-se a %2$@ aquesta vegada, el lloc web va enviar credencials inusuals i incorrectes. Això pot passar quan un atacant intenta fingir ser %3$@ o una pantalla d'inici de sessió per Wi-Fi ha interromput la connexió. La teva informació encara està segura perquè Brave va aturar la connexió abans que s'intercanviés cap dada.<br /> No pots visitar %4$@ ara mateix perquè el lloc web utilitza la fixació de certificats. Els errors i els atacs de xarxa solen ser temporals, de manera que probablement aquesta pàgina funcionarà més tard.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ normalment utilitza el xifratge per protegir la teva informació. Quan Growser va intentar connectar-se a %2$@ aquesta vegada, el lloc web va enviar credencials inusuals i incorrectes. Això pot passar quan un atacant intenta fingir ser %3$@ o una pantalla d'inici de sessió per Wi-Fi ha interromput la connexió. La teva informació encara està segura perquè Growser va aturar la connexió abans que s'intercanviés cap dada.<br /> No pots visitar %4$@ ara mateix perquè el lloc web utilitza la fixació de certificats. Els errors i els atacs de xarxa solen ser temporals, de manera que probablement aquesta pàgina funcionarà més tard.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Aquest servidor no ha pogut demostrar que és %@; el seu certificat de seguretat no és de confiança pel sistema operatiu del teu dispositiu. Això pot ser causat per una configuració incorrecta o per un atacant que intenta interceptar la teva connexió.";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Amaga les visualitzacions prèvies d'enllaços";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Amaga la icona de Recompenses de Brave";
+"HideRewardsIcon" = "Amaga la icona de Recompenses de Growser";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Amaga la icona de Recompenses de Brave quan Recompenses de Brave no estigui activat";
+"HideRewardsIconSubtitle" = "Amaga la icona de Recompenses de Growser quan Recompenses de Growser no estigui activat";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Historial";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Redirigeix ​​automàticament els enllaços NPR a la seva versió basada en text (a text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Suport de Brave";
+"ntp.braveSupportFavoriteTitle" = "Suport de Growser";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Reclama tokens";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Has guanyat %@ navegant amb Brave.";
+"ntp.earningsReport" = "Has guanyat %@ navegant amb Growser.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Via lliure!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Amaga imatges patrocinades";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "Les imatges patrocinades són fons de marca que apareixen a les pestanyes que s'acaben d'obrir al navegador. Habilitar aquestes imatges patrocinades recolza la missió de Brave. [Més informació](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "Les imatges patrocinades són fons de marca que apareixen a les pestanyes que s'acaben d'obrir al navegador. Habilitar aquestes imatges patrocinades recolza la missió de Growser. [Més informació](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Saber més sobre Recompenses de Brave";
+"ntp.learnMoreAboutRewards" = "Saber més sobre Recompenses de Growser";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Obté més informació sobre les imatges patrocinades";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Guanya punts i premia els creadors per contingut fantàstic mentre navegues.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Anuncis de Brave està aquí!";
+"OBAdsOptInTitle" = "Anuncis de Growser està aquí!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brave et mostrarà el teu primer anunci a";
+"OBAdsTitle" = "Growser et mostrarà el teu primer anunci a";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Ara ja estàs llest per començar.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Uneix-te";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Permet que Brave comprovi el meu porta-retalls per trobar un codi de referència coincident";
+"OBPrivacyConsentClipboardPermission" = "Permet que Growser comprovi el meu porta-retalls per trobar un codi de referència coincident";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "És possible que hagis descarregat Brave per donar suport al teu referent. Per detectar el teu remitent, Brave fa una comprovació única del porta-retalls per trobar el codi de referència coincident. Aquesta comprovació es limita només al codi i no es transmetrà cap altra dada personal. Si ho desactives, el teu referent no rebrà recompenses de Brave.";
+"OBPrivacyConsentDetail" = "És possible que hagis descarregat Growser per donar suport al teu referent. Per detectar el teu remitent, Growser fa una comprovació única del porta-retalls per trobar el codi de referència coincident. Aquesta comprovació es limita només al codi i no es transmetrà cap altra dada personal. Si ho desactives, el teu referent no rebrà recompenses de Growser.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "No permetis aquesta comprovació";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "i";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Recompenses de Brave";
+"OBRewardsAgreementTitle" = "Recompenses de Growser";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "L'opció dels anuncis privats de Brave admet els editors i els creadors de contingut amb cada anunci visualitzat.";
+"OBRewardsDetail" = "L'opció dels anuncis privats de Growser admet els editors i els creadors de contingut amb cada anunci visualitzat.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Guanya tokens i premia els creadors per contingut fantàstic mentre navegues.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Política de privacitat";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Recompenses de Brave";
+"OBRewardsTitle" = "Recompenses de Growser";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Desa";
@@ -1202,13 +1202,13 @@
 "OBSearchEngineDetail" = "Selecciona el teu motor de cerca predeterminat";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Et donem la benvinguda al navegador de Brave";
+"OBSearchEngineTitle" = "Et donem la benvinguda al navegador de Growser";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Bloqueja els rastrejadors que envaeixen la privacitat perquè puguis navegar sense ser perseguit per la web";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Escuts de Brave";
+"OBShieldsTitle" = "Escuts de Growser";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Mostra-m'ho";
@@ -1220,16 +1220,16 @@
 "onboarding.linkReceiptButton" = "Enllaça la teva subscripció VPN";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "La teva subscripció VPN de Brave pot protegir fins a 10 dispositius a Android, iOS i escriptori. Només has d'enllaçar la teva subscripció a l'App Store al teu compte de Brave.";
+"onboarding.linkReceiptDescription" = "La teva subscripció VPN de Growser pot protegir fins a 10 dispositius a Android, iOS i escriptori. Només has d'enllaçar la teva subscripció a l'App Store al teu compte de Growser.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Amplia la protecció del Tallafocs + VPN de Brave";
+"onboarding.linkReceiptTitle" = "Amplia la protecció del Tallafocs + VPN de Growser";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "En bloquejar els rastrejadors i els anuncis, els llocs web utilitzen menys dades i es carreguen molt més ràpidament.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Mira la diferència de Brave:\nSense anuncis. Sense rastrejadors. Càrrega de la pàgina molt més ràpida.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Mira la diferència de Growser:\nSense anuncis. Sense rastrejadors. Càrrega de la pàgina molt més ràpida.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Introdueix el nom o l'URL d'un lloc web";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Obre-ho tot (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Obre la configuració de Recompenses de Brave";
+"OpenBraveRewardsSettings" = "Obre la configuració de Recompenses de Growser";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "S'ha produït un error desconegut en obrir la carpeta de Descàrregues a l'aplicació de Fitxers.";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Per començar, configura una cadena de sincronització i activa \"Obre pestanyes\" a la configuració de sincronització.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Gestiona el que Brave sincronitza a Configuració.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Gestiona el que Growser sincronitza a Configuració.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "No hi ha sessions actives per mostrar des dels altres dispositius.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Aquest espai mostra les pestanyes Brave obertes en altres dispositius";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Aquest espai mostra les pestanyes Growser obertes en altres dispositius";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Amaga per ara";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Continua";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Aquestes respostes privades ajuden Brave a fer una estimació de l'ús total de determinades funcions i a millorar-les.";
+"p3a.settingSubtitle" = "Aquestes respostes privades ajuden Growser a fer una estimació de l'ús total de determinades funcions i a millorar-les.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Permet l'anàlisi de productes per preservar la privacitat (P3A)";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Navegació d'incògnit persistent";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Permet a Brave restablir les pestanyes de navegació d'incògnit, fins i tot si tanques/tornes a obrir l'aplicació";
+"PersistentPrivateBrowsingAlertMessage" = "Permet a Growser restablir les pestanyes de navegació d'incògnit, fins i tot si tanques/tornes a obrir l'aplicació";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Restaura les pestanyes d'incògnit";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Vols afegir aquest vídeo a la teva llista de reproducció?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Afegeix a la Llista de reproducció de Brave";
+"playList.addToPlayListAlertTitle" = "Afegeix a la Llista de reproducció de Growser";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Opcions de reproducció";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Configuració";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Llista de reproducció de Brave";
+"playlist.carplayTitle" = "Llista de reproducció de Growser";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Canvia la llista de reproducció";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Hi ha hagut un problema en carregar el recurs!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Pots afegir elements a la Llista de reproducció de Brave des del navegador";
+"playList.noItemLabelDetailLabel" = "Pots afegir elements a la Llista de reproducció de Growser des del navegador";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "No hi ha elements disponibles";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Desfés";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Afegeix un botó de llista de reproducció (semblen 4 línies amb un símbol +) al costat de la barra d'adreces del navegador de Brave. Aquest botó et permet accedir ràpidament per obrir la llista de reproducció o afegir o eliminar contingut multimèdia.";
+"playlist.urlBarButtonOptionFooter" = "Afegeix un botó de llista de reproducció (semblen 4 línies amb un símbol +) al costat de la barra d'adreces del navegador de Growser. Aquest botó et permet accedir ràpidament per obrir la llista de reproducció o afegir o eliminar contingut multimèdia.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Activa el botó d'accés ràpid";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Darrera setmana";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "Escuts de Brave ha bloquejat **%1$@** a **%2$lld** llocs";
+"privacyHub.mostFrequentTrackerAndAdBody" = "Escuts de Growser ha bloquejat **%1$@** a **%2$lld** llocs";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Rastrejador & anunci més freqüent";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Activa les notificacions";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Un resum de com Brave et va protegir en línia aquesta setmana.";
+"privacyHub.notificationMessage" = "Un resum de com Growser et va protegir en línia aquesta setmana.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Informe setmanal de privacitat";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Rastrejador i anunci";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Alertes del Tallafoc + VPN de Brave";
+"privacyHub.vpnAlertsHeader" = "Alertes del Tallafoc + VPN de Growser";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Tallafoc + VPN";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "El mode Només navegació d'incògnit tancarà totes les pestanyes actuals i tancarà la sessió de tots els llocs.";
 
 /* Private tab details */
-"PrivateTabBody" = "Les pestanyes d'incògnit no es guarden a Brave, però no et fan anònim en línia. Els llocs que visites en una pestanya d'incògnit no apareixeran a l'historial i les teves galetes sempre s'esvaeixen quan les tanques; no en quedarà cap rastre a Brave. Tanmateix, les descàrregues es desaran.\nEl teu operador de telefonia mòbil (o el propietari de la xarxa Wi-Fi o VPN a la qual estàs connectat) pot veure quins llocs visites i aquests llocs aprendran la teva adreça IP pública, fins i tot a les pestanyes d'incògnit.";
+"PrivateTabBody" = "Les pestanyes d'incògnit no es guarden a Growser, però no et fan anònim en línia. Els llocs que visites en una pestanya d'incògnit no apareixeran a l'historial i les teves galetes sempre s'esvaeixen quan les tanques; no en quedarà cap rastre a Growser. Tanmateix, les descàrregues es desaran.\nEl teu operador de telefonia mòbil (o el propietari de la xarxa Wi-Fi o VPN a la qual estàs connectat) pot veure quins llocs visites i aquests llocs aprendran la teva adreça IP pública, fins i tot a les pestanyes d'incògnit.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "L'ús de les pestanyes d'incògnit només canvia el que fa Brave al teu dispositiu, no canvia el comportament de ningú més.\n\nEls llocs sempre aprenen la teva adreça IP quan els visites. A partir d'això, sovint poden endevinar aproximadament on ets, normalment la teva ciutat. De vegades, aquesta estimació de la ubicació pot ser molt més específica. Els llocs també saben tot el que els dius específicament, com ara els termes de cerca. Si inicies sessió en un lloc, sabran que sou el propietari d'aquell compte. Encara estaràs fora de sessió quan tanquis les pestanyes d'incògnit perquè Brave llençarà la galeta que et manté connectat.\n\nQui et connecti a Internet (el teu ISP) pot veure tota l'activitat de la teva xarxa. Sovint, aquest és el teu operador de telefonia mòbil. Si estàs connectat a una xarxa Wi-Fi, aquest és el propietari d'aquesta xarxa i, si fas servir una VPN, és qui la dirigeix. El teu ISP pot veure quins llocs visites mentre els visites. Si aquests llocs utilitzen HTTPS, no poden fer molt més que una conjectura educada sobre el que fas en aquests llocs. Però si un lloc només utilitza HTTP, el teu ISP pot veure-ho tot: els termes de cerca, quines pàgines llegeixes i quins enllaços segueixes.\n\nSi un ocupador gestiona el teu dispositiu, també pots fer un rastrejament d'allò que fas amb ell. Probablement, l'ús de pestanyes d'incògnit no els impedirà saber quins llocs has visitat. Una altra persona amb accés al teu dispositiu també podria tenir instal·lat programari que supervisa la teva activitat, i les pestanyes d'incògnit tampoc et protegiran d'això.";
+"PrivateTabDetails" = "L'ús de les pestanyes d'incògnit només canvia el que fa Growser al teu dispositiu, no canvia el comportament de ningú més.\n\nEls llocs sempre aprenen la teva adreça IP quan els visites. A partir d'això, sovint poden endevinar aproximadament on ets, normalment la teva ciutat. De vegades, aquesta estimació de la ubicació pot ser molt més específica. Els llocs també saben tot el que els dius específicament, com ara els termes de cerca. Si inicies sessió en un lloc, sabran que sou el propietari d'aquell compte. Encara estaràs fora de sessió quan tanquis les pestanyes d'incògnit perquè Growser llençarà la galeta que et manté connectat.\n\nQui et connecti a Internet (el teu ISP) pot veure tota l'activitat de la teva xarxa. Sovint, aquest és el teu operador de telefonia mòbil. Si estàs connectat a una xarxa Wi-Fi, aquest és el propietari d'aquesta xarxa i, si fas servir una VPN, és qui la dirigeix. El teu ISP pot veure quins llocs visites mentre els visites. Si aquests llocs utilitzen HTTPS, no poden fer molt més que una conjectura educada sobre el que fas en aquests llocs. Però si un lloc només utilitza HTTP, el teu ISP pot veure-ho tot: els termes de cerca, quines pàgines llegeixes i quins enllaços segueixes.\n\nSi un ocupador gestiona el teu dispositiu, també pots fer un rastrejament d'allò que fas amb ell. Probablement, l'ús de pestanyes d'incògnit no els impedirà saber quins llocs has visitat. Una altra persona amb accés al teu dispositiu també podria tenir instal·lat programari que supervisa la teva activitat, i les pestanyes d'incògnit tampoc et protegiran d'això.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Saber més sobre pestanyes d'incògnit";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Activa la traducció";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Valora Brave";
+"RateBrave" = "Valora Growser";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Augmenta la mida del text";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Selecciona una opció";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Fes saber als desenvolupadors de Brave que aquesta web no funciona adequadament:";
+"ReportBrokenSiteBody1" = "Fes saber als desenvolupadors de Growser que aquesta web no funciona adequadament:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Nota: L'informe enviat als servidors de Brave inclourà l'adreça del lloc, el número de la versió de Brave, la configuració d'Escuts, l'estat de la VPN i la configuració de la llengua.";
+"ReportBrokenSiteBody2" = "Nota: L'informe enviat als servidors de Growser inclourà l'adreça del lloc, el número de la versió de Growser, la configuració d'Escuts, l'estat de la VPN i la configuració de la llengua.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Envia";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "No";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Malauradament, Brave va col·lapsar o no es va tancar correctament.\nVols restaurar les teves pestanyes?";
+"RestoreTabOnCrashAlertMessage" = "Malauradament, Growser va col·lapsar o no es va tancar correctament.\nVols restaurar les teves pestanyes?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave s'ha tancat inesperadament.";
+"RestoreTabOnCrashAlertTitle" = "Growser s'ha tancat inesperadament.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Activa per ajudar a donar suport a Brave i a la comunitat BAT.";
+"rewards.disabledBody" = "Activa per ajudar a donar suport a Growser i a la comunitat BAT.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "L'ús de Recompenses de Brave ajuda a donar suport a Brave i a la comunitat BAT.";
+"rewards.disabledStatusBody" = "L'ús de Recompenses de Growser ajuda a donar suport a Growser i a la comunitat BAT.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Estàs ajudant a donar suport a Brave i a la comunitat BAT.";
+"rewards.enabledBody" = "Estàs ajudant a donar suport a Growser i a la comunitat BAT.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Gràcies per ajudar a donar suport a Brave i a la comunitat BAT!";
+"rewards.enabledStatusBody" = "Gràcies per ajudar a donar suport a Growser i a la comunitat BAT!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Ajuda a donar suport a Brave i a la comunitat BAT activant Recompenses de Brave i veient Anuncis de Brave.";
+"rewards.settingsToggleMessage" = "Ajuda a donar suport a Growser i a la comunitat BAT activant Recompenses de Growser i veient Anuncis de Growser.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Activa Recompenses de Brave";
+"rewards.settingsToggleTitle" = "Activa Recompenses de Growser";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Aquest creador de contingut està verificat amb Creadors de Brave";
+"rewards.supportingPublisher" = "Aquest creador de contingut està verificat amb Creadors de Growser";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Nombre de creadors de contingut als quals ajudes a donar suport aquest mes.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Quantitat de la contribució";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Tokens de Brave";
+"RewardsInternalsContributionProcessorBraveTokens" = "Tokens de Growser";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Cap";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "T'agradaria activar els suggeriments de cerca?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Cerca amb Brave";
+"SearchWithBrave" = "Cerca amb Growser";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Envia";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Vols enviar un informe d'error perquè Brave pugui solucionar el problema?";
+"SendCrashReportAlertMessage" = "Vols enviar un informe d'error perquè Growser pugui solucionar el problema?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Oops! Brave s'ha col·lapsat";
+"SendCrashReportAlertTitle" = "Oops! Growser s'ha col·lapsat";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Envia un informe";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Ara es pot configurar Brave com a navegador predeterminat a iOS. Prem aquí per obrir la configuració.";
+"setDefaultBrowserCalloutTitle" = "Ara es pot configurar Growser com a navegador predeterminat a iOS. Prem aquí per obrir la configuració.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Configura com a navegador predeterminat";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Tanca les pestanyes";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Permet que Brave tanqui automàticament les pestanyes que no s'han vist recentment.";
+"settings.autocloseTabsSettingFooter" = "Permet que Growser tanqui automàticament les pestanyes que no s'han vist recentment.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Bloqueja els elements de distracció de YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Multimèdia";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Obre els enllaços de YouTube a Brave";
+"settings.openYouTubeInBrave" = "Obre els enllaços de YouTube a Growser";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Activa el temps de pantalla";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Configuració de qualitat";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Aquest ping privat permet que Brave faci una estimació dels usuaris actius.";
+"settings.sendUsagePingDescription" = "Aquest ping privat permet que Growser faci una estimació dels usuaris actius.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Envia automàticament el ping d'ús diari a Brave";
+"settings.sendUsagePingTitle" = "Envia automàticament el ping d'ús diari a Growser";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Permet que Brave et mostri enllaços a enquestes privades a la pàgina de nova pestanya. Les enquestes ens ajuden a desenvolupar millors característiques i mesurar l'efectivitat de les campanyes publicitàries basades en el navegador. [Més informació](%@)";
+"settings.surveyPanelistDescription" = "Permet que Growser et mostri enllaços a enquestes privades a la pàgina de nova pestanya. Les enquestes ens ajuden a desenvolupar millors característiques i mesurar l'efectivitat de les campanyes publicitàries basades en el navegador. [Més informació](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Permetre les enquestes de Brave";
+"settings.surveyPanelistTitle" = "Permetre les enquestes de Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Comparteix les notícies";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Escuts de Brave acaba de protegir la teva privacitat en línia.";
+"shieldEducation.trackerAdWarningSubTitle" = "Escuts de Growser acaba de protegir la teva privacitat en línia.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Enhorabona. Ets força especial.";
@@ -2555,13 +2555,13 @@
 "shieldEducation.videoAdBlockTitle" = "Els anuncis es bloquegen mentre es visualitzen els vídeos d'aquest lloc web.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Valors predeterminats globals d'Escuts de Brave";
+"ShieldsDefaults" = "Valors predeterminats globals d'Escuts de Growser";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Aquestes són les proteccions predeterminades d'Escuts pels nous llocs web. Si les canvies, no afectarà la configuració existent per a cada lloc web.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Estàs navegant per aquest lloc sense les proteccions de privacitat de Brave. No funciona correctament amb Escuts?";
+"ShieldsDownDisclaimer" = "Estàs navegant per aquest lloc sense les proteccions de privacitat de Growser. No funciona correctament amb Escuts?";
 
 /* shields overview message */
 "ShieldsOverview" = "El lloc web d'Escuts permet controlar quan es bloquegen els anuncis i els rastrejadors per a cada lloc que visites. Si prefereixes veure anuncis en un lloc específic, pots activar-los aquí.";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Escaneja el codi QR";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Obre Notícies de Brave i consulta les notícies més destacades d'avui";
+"shortcuts.activityTypeBraveNewsDescription" = "Obre Notícies de Growser i consulta les notícies més destacades d'avui";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Obre el navegador en una pestanya nova i suprimeix totes les dades privades de l'historial del navegador";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Esborra l'historial del navegador";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = " Esborra l'historial de navegació de Brave";
+"shortcuts.activityTypeClearHistoryTitle" = " Esborra l'historial de navegació de Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Obre el navegador en una pestanya nova i activa la VPN";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Activa la VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Obre el navegador de Brave i activa la VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Obre el navegador de Growser i activa la VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Obre una pestanya nova d'incògnit";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Obre adreces d'interès";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Obre les adreces d'interès del navegador de Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Obre les adreces d'interès del navegador de Growser";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Obre Notícies de Brave";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Obre Notícies de Growser";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Obre Notícies de Brave";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Obre Notícies de Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Obre la pantalla de l'historial del navegador";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Obre l'historial del navegador";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Obre l'historial del navegador de Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Obre l'historial del navegador de Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Comença a reproduir els teus vídeos a la llista de reproducció";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Obre la llista de reproducció";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Obre les pestanyes de Brave Obre en altres dispositius";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Obre les pestanyes de Growser Obre en altres dispositius";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Obre pestanyes d'altres dispositius";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Obre pestanyes d'altres dispositius";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Comença a cercar al web de manera segura amb Brave";
+"shortcuts.activityTypeTabDescription" = "Comença a cercar al web de manera segura amb Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Obre el lloc web de les adreces d'interès";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Obre lloc web";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Aquesta opció obrirà la configuració de Brave. Per canviar diverses opcions de Siri, selecciona l'element de menú \"Siri i cerca\" i personalitza les teves opcions.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Aquesta opció obrirà la configuració de Growser. Per canviar diverses opcions de Siri, selecciona l'element de menú \"Siri i cerca\" i personalitza les teves opcions.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Obre Configuració";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Esborra l'historial del navegador";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Utilitza dreceres per activar la VPN de Brave mitjançant l'assistent de veu Siri";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Utilitza dreceres per activar la VPN de Growser mitjançant l'assistent de veu Siri";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Activa la VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Obre adreces d'interès";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Utilitza dreceres per obrir una pestanya nova i mostrar el servei de notícies de Brave mitjançant l'assistent de veu Siri";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Utilitza dreceres per obrir una pestanya nova i mostrar el servei de notícies de Growser mitjançant l'assistent de veu Siri";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Obre Notícies de Brave";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Obre Notícies de Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Utilitza dreceres per obrir la pantalla de l'historial del navegador mitjançant l'assistent de veu Siri";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Configuració del Lloc i dels Escuts";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Gràcies per fer saber als desenvolupadors de Brave que hi ha un problema amb aquest lloc web. Farem tot el que puguem per arreglar-lo!";
+"SiteReportedBody" = "Gràcies per fer saber als desenvolupadors de Growser que hi ha un problema amb aquest lloc web. Farem tot el que puguem per arreglar-lo!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Gràcies";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Escuts";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Cada dia deso les dades explorant la web amb Brave.";
+"socialSharing.domainSpecificDataSavedTitle" = "Cada dia deso les dades explorant la web amb Growser.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Cada dia deso les dades explorant la web amb Brave.";
+"socialSharing.shareDescriptionTitle" = "Cada dia deso les dades explorant la web amb Growser.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Pestanya estàndard";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Suprimeix el compte de sincronització";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Si suprimeixes el compte, se suprimiran les teves dades xifrades dels servidors Brave i es desactivarà la sincronització en tots els dispositius connectats.";
+"sync.deleteAccountAlertDescriptionPart1" = "Si suprimeixes el compte, se suprimiran les teves dades xifrades dels servidors Growser i es desactivarà la sincronització en tots els dispositius connectats.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "No obstant això, no s'eliminaran les dades que s'emmagatzemen localment en aquests dispositius.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Suprimeix el compte de sincronització";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Sembla que s'ha creat aquest codi en un aparell amb una versió més antiga de Brave. Actualitzeu l'altre aparell amb la versió més recent de Brave i, a continuació, creeu un codi de sincronització nou.";
+"sync.deprecatedVersionError" = "Sembla que s'ha creat aquest codi en un aparell amb una versió més antiga de Growser. Actualitzeu l'altre aparell amb la versió més recent de Growser i, a continuació, creeu un codi de sincronització nou.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "S'ha produït un error en recuperar dispositius en cadena de sincronització.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Sembla que el teu dispositiu s'ha restaurat des d'una còpia de seguretat, i això podria afectar a Brave Sync. Per continuar utilitzant Brave Sync, has de restablir i tornar a unir-te a la cadena de sincronització.";
+"sync.deviceRestoreDetectedMessage" = "Sembla que el teu dispositiu s'ha restaurat des d'una còpia de seguretat, i això podria afectar a Growser Sync. Per continuar utilitzant Growser Sync, has de restablir i tornar a unir-te a la cadena de sincronització.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Restauració detectada";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Dispositiu";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Les actuals dades sincronitzades es conservaran, però se suprimiran totes les dades de la memòria cau de la sincronització de Brave. Hauràs d'iniciar una nova cadena de sincronització per tornar a sincronitzar les dades del dispositiu.";
+"sync.removeLastDeviceMessage" = "Les actuals dades sincronitzades es conservaran, però se suprimiran totes les dades de la memòria cau de la sincronització de Growser. Hauràs d'iniciar una nova cadena de sincronització per tornar a sincronitzar les dades del dispositiu.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Suprimeix cadena de sincronització";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Sincronitza amb el dispositiu";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Si utilitzes un dispositiu sincronitzat existent, obre la configuració de Brave i ves a Configuració -> Sincronització. Tria \"Afegeix dispositiu\" i escaneja el codi que es mostra a la pantalla.";
+"sync.toDeviceDescription" = "Si utilitzes un dispositiu sincronitzat existent, obre la configuració de Growser i ves a Configuració -> Sincronització. Tria \"Afegeix dispositiu\" i escaneja el codi que es mostra a la pantalla.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "No es pot sincronitzar aquest dispositiu";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Aquest codi no és vàlid. Comprova que l'hora i la zona horària s'han establert correctament al teu dispositiu.";
 
 /* Sync settings welcome */
-"sync.welcome" = "Per començar, necessitaràs tenir instal·lat Brave a tots els dispositius que tens la intenció de sincronitzar. Per encadenar-los, inicia una cadena de sincronització que faràs servir per enllaçar de forma segura tots els teus dispositius.";
+"sync.welcome" = "Per començar, necessitaràs tenir instal·lat Growser a tots els dispositius que tens la intenció de sincronitzar. Per encadenar-los, inicia una cadena de sincronització que faràs servir per enllaçar de forma segura tots els teus dispositius.";
 
 /* Word count title */
 "sync.wordCount" = "Nombre de paraules: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "No deixa cap rastre al teu dispositiu";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "El VPN de Brave xifra i protegeix tota la teva activitat en línia, fins i tot si aquesta té lloc fora del navegador de Brave.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "El VPN de Growser xifra i protegeix tota la teva activitat en línia, fins i tot si aquesta té lloc fora del navegador de Growser.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "VPN de Brave";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "VPN de Growser";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Tingues en compte que, fins i tot si estàs en una finestra d'incògnit, la teva activitat en línia pot ser visible per al teu proveïdor d'internet, observadors de xarxa o la teva companyia (si utilitzes una màquina/xarxa de l'empresa).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Obertura automàtica del teclat";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Obre els enllaços d'Ask Brave i del Cercador de Brave en pestanyes de vista prèvia";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Obre els enllaços d'Ask Growser i del Cercador de Growser en pestanyes de vista prèvia";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Activa les pestanyes de vista ràpida";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Comparteix...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Comparteix Brave amb els amics!";
+"themeQRCodeShareTitle" = "Comparteix Growser amb els amics!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Automàtic";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Disculpa, aquesta adreça d'alimentació no té contingut.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Afegeix una font a Notícies de Brave";
+"today.addSourceShareTitle" = "Afegeix una font a Notícies de Growser";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Fonts RSS disponibles";
 
 /* The name of the feature */
-"today.braveToday" = "Notícies de Brave";
+"today.braveToday" = "Notícies de Growser";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Notícies";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Ofertes";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Notícies de Brave deixarà de mostrar contingut de %@";
+"today.disabledAlertBody" = "Notícies de Growser deixarà de mostrar contingut de %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Desactivat";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Permet el contingut de %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Notícies de Brave està experimentant alguns problemes. Torna-ho a provar.";
+"today.errorGeneralBody" = "Notícies de Growser està experimentant alguns problemes. Torna-ho a provar.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Vaja…";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Afegeix les fonts insegures sota el teu propi risc";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Segueix les teves fonts preferides, en un sol canal. Només cal que obris una pestanya a Brave, desplaça't cap avall i... voilà!\nNotícies de Brave és compatible amb anuncis privats i anònims.";
+"today.introCardBody" = "Segueix les teves fonts preferides, en un sol canal. Només cal que obris una pestanya a Growser, desplaça't cap avall i... voilà!\nNotícies de Growser és compatible amb anuncis privats i anònims.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Activa Notícies de Brave, i no et perdis mai una història";
+"today.introCardTitle" = "Activa Notícies de Growser, i no et perdis mai una història";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Mostra Notícies de Brave";
+"today.isEnabledToggleLabel" = "Mostra Notícies de Growser";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Més informació sobre les teves dades";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Més ofertes de Brave";
+"today.moreBraveOffers" = "Més ofertes de Growser";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Sense internet";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Promocionat";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Valora Brave a l'App Store";
+"today.rateBraveCardActionSheetTitle" = "Valora Growser a l'App Store";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Amaga";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Valora Brave";
+"today.rateBraveCardRateActionTitle" = "Valora Growser";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Dona'ns la teva opinió!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "T'agrada Brave?";
+"today.rateBraveCardTitle" = "T'agrada Growser?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Actualitza";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Suggerit";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Activa Notícies de Brave";
+"today.turnOnBraveToday" = "Activa Notícies de Growser";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Deixa de seguir";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Veure a %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Permet l'accés al micròfon a la configuració del sistema iOS perquè Brave utilitzi la cerca per veu anònima.";
+"voice.search.microphone.description.required" = "Permet l'accés al micròfon a la configuració del sistema iOS perquè Growser utilitzi la cerca per veu anònima.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Accés al micròfon requerit";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave no emmagatzema ni comparteix les teves cerques per veu.";
+"voice.search.screen.disclaimer" = "Growser no emmagatzema ni comparteix les teves cerques per veu.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Data de creació de la cartera";

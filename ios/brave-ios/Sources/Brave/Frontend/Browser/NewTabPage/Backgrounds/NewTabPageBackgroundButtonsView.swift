@@ -89,7 +89,7 @@ class NewTabPageBackgroundButtonsView: UIView, PreferencesObserver {
 
     super.init(frame: .zero)
 
-    Preferences.BraveNews.isEnabled.observe(from: self)
+    // Growser-281: no Brave News preference to observe.
 
     backgroundColor = .clear
     addLayoutGuide(collectionViewSafeAreaLayoutGuide)
@@ -113,9 +113,7 @@ class NewTabPageBackgroundButtonsView: UIView, PreferencesObserver {
 
     let isLandscape = frame.width > frame.height
 
-    let braveNewsVisible =
-      profilePrefs.isBraveNewsAvailable && !privateBrowsingManager.isPrivateBrowsing
-      && (Preferences.BraveNews.isEnabled.value || Preferences.BraveNews.isShowingOptIn.value)
+    let braveNewsVisible = false  // Growser-281: Brave News is out of the product.
 
     imageCreditButton.snp.remakeConstraints {
       $0.leading.equalTo(collectionViewSafeAreaLayoutGuide).inset(16)

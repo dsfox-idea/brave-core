@@ -4,15 +4,15 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveNews
-import BraveVPN
+// Growser-281: no BraveNews.
+// Growser-280: no BraveVPN.
 import BrowserIntentsModels
 import CoreSpotlight
 import Data
 import Growth
 import Intents
 import MobileCoreServices
-import PlaylistUI
+// Growser-282: no PlaylistUI.
 import Preferences
 import Shared
 import SwiftUI
@@ -187,71 +187,14 @@ public class ActivityShortcutManager: NSObject {
     case .clearBrowsingHistory:
       bvc.clearHistoryAndOpenNewTab()
     case .enableBraveVPN:
-      if !bvc.profileController.profile.prefs.isBraveVPNAvailable {
-        return
-      }
-      // need to stay in NTP for Brave VPN flow
-      openExternalNewTab(bvc.privateBrowsingManager.isPrivateBrowsing, false)
-
-      switch BraveVPN.vpnState {
-      case .notPurchased, .expired:
-        bvc.presentCorrespondingVPNViewController()
-      case .purchased(let connected):
-        if !connected {
-          BraveVPN.reconnect()
-        }
-      }
+      return  // Growser-280: the VPN is out of the product.
     case .openBraveNews:
-      if !bvc.profileController.profile.prefs.isBraveNewsAvailable {
-        return
-      }
-
-      // Do nothing as browser when browser to PB only and Brave News isn't available on private tabs
-      guard !Preferences.Privacy.privateBrowsingOnly.value else {
-        return
-      }
-
-      if Preferences.BraveNews.isEnabled.value {
-        // need to stay in NTP for Brave News
-        openExternalNewTab(false, false)
-
-        guard let newTabPageController = bvc.tabManager.selectedTab?.newTabPageViewController else {
-          return
-        }
-        newTabPageController.scrollToBraveNews()
-      } else {
-        let controller = NewsSettingsViewController(
-          dataSource: bvc.feedDataSource,
-          openURL: { url in
-            bvc.dismiss(animated: true)
-            bvc.select(url: url, isUserDefinedURLNavigation: false)
-          }
-        )
-        controller.viewDidDisappear = {
-          if Preferences.Review.braveNewsCriteriaPassed.value {
-            AppReviewManager.shared.isRevisedReviewRequired = true
-            Preferences.Review.braveNewsCriteriaPassed.value = false
-          }
-        }
-        let container = UINavigationController(rootViewController: controller)
-        bvc.present(container, animated: true)
-      }
+      return  // Growser-281: Brave News is out of the product.
     case .openPlayList:
-      if !bvc.profileController.profile.prefs.isPlaylistAvailable {
-        return
-      }
-
-      bvc.popToBVC()
-
-      let tab = bvc.tabManager.selectedTab
-      PlaylistCoordinator.shared.getPlaylistController(
-        tab: tab,
-        profile: bvc.profileController.profile
-      ) { playlistController in
-        PlaylistP3A.recordUsage()
-        bvc.present(playlistController, animated: true)
-      }
+      return  // Growser-282: Playlist is out of the product.
     case .openSyncedTabs:
+      // Growser-293: a shortcut made before Sync left must not reopen it.
+      guard FeatureList.kBraveSync.enabled else { return }
       bvc.popToBVC()
       bvc.navigationHelper.openSyncedTabsList()
     }

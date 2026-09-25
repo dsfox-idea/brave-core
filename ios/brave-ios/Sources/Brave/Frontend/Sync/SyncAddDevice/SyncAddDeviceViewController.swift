@@ -5,7 +5,7 @@
 import BraveCore
 import BraveShared
 import BraveUI
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Data
 import Shared
 import UIKit

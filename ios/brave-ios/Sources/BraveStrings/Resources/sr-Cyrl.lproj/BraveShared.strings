@@ -2,16 +2,16 @@
 "About" = "Основни подаци";
 
 /* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "О Brave штитовима";
+"AboutBraveShields" = "О Growser штитовима";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "Сајтови често укључују колачиће и скрипте који покушавају да идентификују вас и ваш уређај. Желе да утврде ко сте и да вас прате на вебу – да прате шта радите на сваком сајту.\n\nBrave блокира те ствари, тако да можете да прегледате веб, а да притом не будете праћени.";
+"AboutBraveShieldsBody" = "Сајтови често укључују колачиће и скрипте који покушавају да идентификују вас и ваш уређај. Желе да утврде ко сте и да вас прате на вебу – да прате шта радите на сваком сајту.\n\nGrowser блокира те ствари, тако да можете да прегледате веб, а да притом не будете праћени.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "То вам омогућава да сачувате слику у галерију.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave жели да приступи вашим фотографијама";
+"AccessPhotoDeniedAlertTitle" = "Growser жели да приступи вашим фотографијама";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Додај обележивач";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Додај обележивач";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Подаци о Brave огласима";
+"ads.braveAdsDataToggleOption" = "Подаци о Growser огласима";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Огласи и праћења";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "На";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Питајте Brave";
+"AskBraveMenuItem" = "Питајте Growser";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Тиме се потврђује идентитет ради приступа Brave-у";
+"AuthenticationLoginsTouchReason" = "Тиме се потврђује идентитет ради приступа Growser-у";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Откажи";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "Адреса";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave панел";
+"BravePanel" = "Growser панел";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave награде";
+"BraveRewardsAdNotificationTitle" = "Growser награде";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Отвори";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Награде";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave награде";
+"BraveRewardsTitle" = "Growser награде";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Brave претрага вас не профилише.";
+"braveSearchPromotion.bannerDescription" = "Growser претрага вас не профилише.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Можда касније";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Подржите независну претрагу са бољом приватношћу";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Испробајте Brave претрагу";
+"braveSearchPromotion.bannerTryButtonTitle" = "Испробајте Growser претрагу";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Можда касније";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Напредне контроле";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave штитови и приватност";
+"BraveShieldsAndPrivacy" = "Growser штитови и приватност";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Штитови и приватност";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Ако је на овом сајту приказано да не функционише, пробајте да искључите штитове";
 
 /* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave штитови";
+"BraveShieldsStatusTitle" = "Growser штитови";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
 "BraveShieldsStatusValueDown" = "Искључено";
@@ -278,10 +278,10 @@
 "BraveShieldsStatusValueUp" = "Укључено";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Двапут додирните да активирате Brave штитове";
+"BraveShieldsToggleHint" = "Двапут додирните да активирате Growser штитове";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave разговор";
+"bravetalk.braveTalkTitle" = "Growser разговор";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Изаберите језик";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Претрага";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave преводилац";
+"BraveTranslate.settingsMenuTitle" = "Growser преводилац";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave преводилац";
+"BraveTranslate.settingsScreenTitle" = "Growser преводилац";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Када је активиран, Brave преводилац ће аутоматски препознати тренутни језик ваше странице и приказати дугме за превод у траци за URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Када је активиран, Growser преводилац ће аутоматски препознати тренутни језик ваше странице и приказати дугме за превод у траци за URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Превод је активиран";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Закључавање прегледача";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Откључајте Brave помоћу идентификације отиска, лица или системског приступног кода.";
+"BrowserLockDescription" = "Откључајте Growser помоћу идентификације отиска, лица или системског приступног кода.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Историја прегледања веба";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "Преместите траку за адресу, картице, обележиваче и друге алатке на дно прегледача.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Прилагодите траку са картицама у Brave-у";
+"callout.bottomBarCalloutTitle" = "Прилагодите траку са картицама у Growser-у";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Обезбедите себи приватност коју нуди Brave на рачунару или таблету и синхронизујте обележиваче и додатке међу уређајима.";
+"callout.privacyEverywhereCalloutDescription" = "Обезбедите себи приватност коју нуди Growser на рачунару или таблету и синхронизујте обележиваче и додатке међу уређајима.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Синхронизуј сада";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Отвори подешавања";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Отворите све линкове помоћу Brave-а да бисте заштитили своју приватност";
+"defaultBrowserCallout.introPrimaryText" = "Отворите све линкове помоћу Growser-а да бисте заштитили своју приватност";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave штитови блокирају праћења и огласе, смањују потрошњу података и штеде вам време на сваком сајту који посетите";
+"defaultBrowserCallout.introSecondaryText" = "Growser штитови блокирају праћења и огласе, смањују потрошњу података и штеде вам време на сваком сајту који посетите";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Отворите подешавања, додирните опцију за подразумевану апликацију прегледача и изаберите Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Отворите подешавања, додирните опцију за подразумевану апликацију прегледача и изаберите Growser.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Подесите Brave као подразумевани прегледач";
+"defaultBrowserCallout.notificationBody" = "Подесите Growser као подразумевани прегледач";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Набавите Brave заштиту, на сваком линку";
+"defaultBrowserCallout.notificationTitle" = "Набавите Growser заштиту, на сваком линку";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Затвори облачић за подразумевани прегледач";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave – подразумевано";
+"defaultThemeName" = "Growser – подразумевано";
 
 /* No comment provided by engineer. */
 "Delete" = "Избриши";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Унеси назив фолдера";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ обично користи шифровање да би се заштитили ваши подаци. Када је Brave покушао да се повеже са %2$@ овог пута, веб-сајт је послао необичне и нетачне акредитиве. То се може десити када нападач покушава да се претвара да је %3$@ или је екран за пријаву на Wi-Fi прекинуо везу. Ваше информације су и даље безбедне јер је Brave прекинуо везу пре него што су размењени било какви подаци.<br />Тренутно не можете посетити %4$@ јер веб-сајт користи качење сертификата. Мрежне грешке и напади су обично привремени, тако да ће ова страница вероватно радити касније.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ обично користи шифровање да би се заштитили ваши подаци. Када је Growser покушао да се повеже са %2$@ овог пута, веб-сајт је послао необичне и нетачне акредитиве. То се може десити када нападач покушава да се претвара да је %3$@ или је екран за пријаву на Wi-Fi прекинуо везу. Ваше информације су и даље безбедне јер је Growser прекинуо везу пре него што су размењени било какви подаци.<br />Тренутно не можете посетити %4$@ јер веб-сајт користи качење сертификата. Мрежне грешке и напади су обично привремени, тако да ће ова страница вероватно радити касније.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Овај сервер није могао да докаже да је %@. Оперативни систем вашег уређаја не верује његовом безбедносном сертификату. То може бити узроковано погрешном конфигурацијом или покушајем нападача да пресретне вашу везу.";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Сакриј приказе линкова";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Сакриј икону Brave награда";
+"HideRewardsIcon" = "Сакриј икону Growser награда";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Сакрива икону за Brave награде када Brave награде нису активиране";
+"HideRewardsIconSubtitle" = "Сакрива икону за Growser награде када Growser награде нису активиране";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Историја";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Аутоматски преусмерава линкове NPR-а на њихову текстуалну верзију (на text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Brave подршка";
+"ntp.braveSupportFavoriteTitle" = "Growser подршка";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Преузмите токене";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Зарадили сте %@ прегледајући веб помоћу Brave-а.";
+"ntp.earningsReport" = "Зарадили сте %@ прегледајући веб помоћу Growser-а.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Свака част!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Сакриј спонзорисане слике";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "Спонзорисане слике су брендиране позадине које се појављују у новоотвореним картицама у прегледачу. Активирањем тих спонзорисаних слика подржавате мисију Brave-а. [Сазнајте више](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "Спонзорисане слике су брендиране позадине које се појављују у новоотвореним картицама у прегледачу. Активирањем тих спонзорисаних слика подржавате мисију Growser-а. [Сазнајте више](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Сазнајте више о Brave наградама";
+"ntp.learnMoreAboutRewards" = "Сазнајте више о Growser наградама";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Сазнајте више о спонзорисаним сликама";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Зарадите поене и наградите ауторе за одличан садржај док прегледате веб.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Brave огласи су стигли!";
+"OBAdsOptInTitle" = "Growser огласи су стигли!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brave ће приказати ваш први оглас у";
+"OBAdsTitle" = "Growser ће приказати ваш први оглас у";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Сад сте спремни.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Придружите се";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Дозволите Brave-у да провери да ли у вашем међуспремнику постоји одговарајућа шифра за препоруку";
+"OBPrivacyConsentClipboardPermission" = "Дозволите Growser-у да провери да ли у вашем међуспремнику постоји одговарајућа шифра за препоруку";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Можда сте преузели Brave да подржите особу која вам га је препоручила. Да би сазнао ко је дао препоруку, Brave једнократно проверава да ли у вашем међуспремнику постоји одговарајућа шифра за препоруку. Та провера је ограничена само на шифру и неће се преносити други подаци о личности. Ако искључите ту опцију, особа која је послала препоруку неће добити награде од Brave-а.";
+"OBPrivacyConsentDetail" = "Можда сте преузели Growser да подржите особу која вам га је препоручила. Да би сазнао ко је дао препоруку, Growser једнократно проверава да ли у вашем међуспремнику постоји одговарајућа шифра за препоруку. Та провера је ограничена само на шифру и неће се преносити други подаци о личности. Ако искључите ту опцију, особа која је послала препоруку неће добити награде од Growser-а.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Немој да дозволиш ту проверу";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "и";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave награде";
+"OBRewardsAgreementTitle" = "Growser награде";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Укључивањем приватних Brave огласа подржавате ауторе и креаторе садржаја сваким огласом који одгледате.";
+"OBRewardsDetail" = "Укључивањем приватних Growser огласа подржавате ауторе и креаторе садржаја сваким огласом који одгледате.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Зарадите токене и наградите ауторе за одличан садржај док прегледате веб.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Правила за заштиту приватности";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave награде";
+"OBRewardsTitle" = "Growser награде";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Сачувај";
@@ -1202,13 +1202,13 @@
 "OBSearchEngineDetail" = "Изаберите подразумевани претраживач";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Добро дошли у Brave прегледач";
+"OBSearchEngineTitle" = "Добро дошли у Growser прегледач";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Блокирајте праћења којима се нарушава приватност да вас други не би пратили док прегледате веб";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave штитови";
+"OBShieldsTitle" = "Growser штитови";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Покажи ми";
@@ -1220,16 +1220,16 @@
 "onboarding.linkReceiptButton" = "Повежите претплату на VPN";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Ваша претплата на Brave VPN може да заштити до 10 уређаја, што обухвата Android, iOS и десктоп уређаје. Само повежите претплату преко App Store са својим налогом на Brave-у.";
+"onboarding.linkReceiptDescription" = "Ваша претплата на Growser VPN може да заштити до 10 уређаја, што обухвата Android, iOS и десктоп уређаје. Само повежите претплату преко App Store са својим налогом на Growser-у.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Продужите заштиту коју вам пружа Brave Firewall + VPN";
+"onboarding.linkReceiptTitle" = "Продужите заштиту коју вам пружа Growser Firewall + VPN";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Блокирањем праћења и огласа, веб-сајтови користе мање података и брже се учитавају.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Видите колико се Brave разликује од других:\nНема огласа, нема праћења, а учитавање страница је знатно брже.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Видите колико се Growser разликује од других:\nНема огласа, нема праћења, а учитавање страница је знатно брже.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Унесите назив веб-сајта или URL";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Отвори све (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Отвори подешавања Brave награда";
+"OpenBraveRewardsSettings" = "Отвори подешавања Growser награда";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Десила се непозната грешка приликом отварања фолдера са преузетим фајловима у апликацији за прегледање фајлова.";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Да бисте започели, подесите ланац синхронизације и укључите „Отворене картице“ у подешавањима синхронизације.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Одредите у подешавањима шта Brave синхронизује.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Одредите у подешавањима шта Growser синхронизује.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Нема активних сесија са ваших других уређаја.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "У овом простору су приказане Brave картице које су отворене на другим уређајима";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "У овом простору су приказане Growser картице које су отворене на другим уређајима";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Сакриј за сада";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Настави";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Ови приватни одговори омогућавају Brave-у да процени укупно коришћење одређених функција и да их учини бољим за вас.";
+"p3a.settingSubtitle" = "Ови приватни одговори омогућавају Growser-у да процени укупно коришћење одређених функција и да их учини бољим за вас.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Допусти аналитику производа којим се чува приватност (P3A)";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Трајно приватно прегледање";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Омогућава Brave-у да врати картице из приватног прегледања, чак и ако затворите / поново отворите апликацију";
+"PersistentPrivateBrowsingAlertMessage" = "Омогућава Growser-у да врати картице из приватног прегледања, чак и ако затворите / поново отворите апликацију";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Врати приватне картице";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Желите ли да додате овај видео на своју плејлисту?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Додавање на Brave плејлисту";
+"playList.addToPlayListAlertTitle" = "Додавање на Growser плејлисту";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Опције за пуштање садржаја";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Подешавања";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave плејлиста";
+"playlist.carplayTitle" = "Growser плејлиста";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Промени плејлисту";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Дошло је до проблема приликом учитавања ресурса!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Можете да додате ставке на Brave плејлисту у прегледачу";
+"playList.noItemLabelDetailLabel" = "Можете да додате ставке на Growser плејлисту у прегледачу";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Нема доступних ставки";
@@ -1568,7 +1568,7 @@
 "playlist.playlistDiskSpaceAddAnywayButtonTitle" = "Додај ипак";
 
 /* When the user's disk space is almost full */
-"playlist.playlistDiskSpaceWarningMessage" = "Ваш уређај нема довољно простора. Додавање овог видеа у Brave плејлисту може да не успе или да утиче на друге кеширане видео записе.";
+"playlist.playlistDiskSpaceWarningMessage" = "Ваш уређај нема довољно простора. Додавање овог видеа у Growser плејлисту може да не успе или да утиче на друге кеширане видео записе.";
 
 /* When the user's disk space is almost full */
 "playlist.playlistDiskSpaceWarningTitle" = "Меморијски простор је скоро пун";
@@ -1580,7 +1580,7 @@
 "playlist.playlistLongPressSettingsOptionTitle" = "Активирај опцију за дуго притискање";
 
 /* Text for Playlist Data Toggle for clearing the cache in settings */
-"playlist.playlistOfflineDataToggleOption" = "Подаци Brave плејлисте";
+"playlist.playlistOfflineDataToggleOption" = "Подаци Growser плејлисте";
 
 /* Title of a button displayed when first adding some media to Playlist. Its shown next to the name of a folder that the item is recently added to to imply that you are changing the folder it was saved to */
 "playlist.playlistPopoverChangeFoldersButtonTitle" = "Промени";
@@ -1589,7 +1589,7 @@
 "playList.playlistResetAlertTitle" = "Ресетуј";
 
 /* Footer Text for the Playlist Settings Option for resetting Playlist. */
-"playlist.playlistResetPlaylistOptionFooterText" = "Ова опција ће уклонити све податке Brave плејлисте.";
+"playlist.playlistResetPlaylistOptionFooterText" = "Ова опција ће уклонити све податке Growser плејлисте.";
 
 /* Title Playlist (used for back button, and playlist settings) */
 "playList.playListSettingTitle" = "Плејлиста";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Поништи";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Додаје дугме за плејлисту поред траке за адресу у Brave прегледачу. То дугме вам омогућава брз приступ отварању плејлисте или додавању или уклањању медија.";
+"playlist.urlBarButtonOptionFooter" = "Додаје дугме за плејлисту поред траке за адресу у Growser прегледачу. То дугме вам омогућава брз приступ отварању плејлисте или додавању или уклањању медија.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Активирај дугме за брзи приступ";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Прошла недеља";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "Brave штитови су блокирали **%1$@** на сајтовима (укупно **%2$lld**)";
+"privacyHub.mostFrequentTrackerAndAdBody" = "Growser штитови су блокирали **%1$@** на сајтовима (укупно **%2$lld**)";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Најчешће праћење и оглас";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Укључи обавештења";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Преглед начина на који вас је Brave заштитио онлајн ове недеље.";
+"privacyHub.notificationMessage" = "Преглед начина на који вас је Growser заштитио онлајн ове недеље.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Недељни извештај о приватности";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Праћење или оглас";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave Firewall + VPN – упозорења";
+"privacyHub.vpnAlertsHeader" = "Growser Firewall + VPN – упозорења";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Firewall + VPN";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Режим за само приватно прегледање веба ће затворити све ваше тренутне картице и одјавити вас са свих сајтова.";
 
 /* Private tab details */
-"PrivateTabBody" = "Приватне картице се не чувају у Brave-у, али то вас не чини анонимним онлајн. Сајтови које посећујете у приватној картици неће се приказивати у вашој историји и њихови колачићи увек нестају када их затворите — неће остати никакав траг од њих у Brave-у. С друге стране, преузимања ће бити сачувана.\nВаш мобилни оператер (или власник Wi-Fi мреже или VPN-а на који сте повезани) може да види које сајтове посећујете и ти сајтови ће сазнати вашу јавну IP адресу, чак и у приватним картицама.";
+"PrivateTabBody" = "Приватне картице се не чувају у Growser-у, али то вас не чини анонимним онлајн. Сајтови које посећујете у приватној картици неће се приказивати у вашој историји и њихови колачићи увек нестају када их затворите — неће остати никакав траг од њих у Growser-у. С друге стране, преузимања ће бити сачувана.\nВаш мобилни оператер (или власник Wi-Fi мреже или VPN-а на који сте повезани) може да види које сајтове посећујете и ти сајтови ће сазнати вашу јавну IP адресу, чак и у приватним картицама.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Коришћење приватних картица мења само оно што Brave ради на вашем уређају, али не мења понашање других.\n\nСајтови увек знају вашу IP адресу када их посетите. На основу тога, често могу да претпоставе где се отприлике налазите — обично ваш град. Понекад та претпоставка локације може бити много прецизнија. Сајтови такође знају све што им конкретно кажете, као што су термини за претрагу. Ако се пријавите на сајт, знаће да сте власник тог налога. И даље ћете бити одјављени када затворите приватне картице јер ће Brave одбацити колачић који вас држи пријављеним.\n\nКо год вас повезује са интернетом (ваш интернет провајдер) може да види све ваше мрежне активности. Често је то ваш мобилни оператер. Ако сте повезани на Wi-Fi мрежу, то је власник те мреже, а ако користите VPN, онда је то онај ко покреће тај VPN. Ваш интернет провајдер може да види које сајтове посећујете док их посећујете. Ако ти сајтови користе HTTPS, не могу да направе много више од претпоставке о томе шта радите на тим сајтовима. Али ако сајт користи само HTTP, онда ваш интернет провајдер може да види све: ваше претраге, које странице читате и које линкове пратите.\n\nАко послодавац управља вашим уређајем, можда ће и пратити шта радите са њим. Коришћење приватних картица вероватно их неће спречити да сазнају које сте сајтове посетили. Неко други са приступом вашем уређају такође је могао да инсталира софтвер који прати вашу активност, а приватне картице вас неће заштитити ни од тога.";
+"PrivateTabDetails" = "Коришћење приватних картица мења само оно што Growser ради на вашем уређају, али не мења понашање других.\n\nСајтови увек знају вашу IP адресу када их посетите. На основу тога, често могу да претпоставе где се отприлике налазите — обично ваш град. Понекад та претпоставка локације може бити много прецизнија. Сајтови такође знају све што им конкретно кажете, као што су термини за претрагу. Ако се пријавите на сајт, знаће да сте власник тог налога. И даље ћете бити одјављени када затворите приватне картице јер ће Growser одбацити колачић који вас држи пријављеним.\n\nКо год вас повезује са интернетом (ваш интернет провајдер) може да види све ваше мрежне активности. Често је то ваш мобилни оператер. Ако сте повезани на Wi-Fi мрежу, то је власник те мреже, а ако користите VPN, онда је то онај ко покреће тај VPN. Ваш интернет провајдер може да види које сајтове посећујете док их посећујете. Ако ти сајтови користе HTTPS, не могу да направе много више од претпоставке о томе шта радите на тим сајтовима. Али ако сајт користи само HTTP, онда ваш интернет провајдер може да види све: ваше претраге, које странице читате и које линкове пратите.\n\nАко послодавац управља вашим уређајем, можда ће и пратити шта радите са њим. Коришћење приватних картица вероватно их неће спречити да сазнају које сте сајтове посетили. Неко други са приступом вашем уређају такође је могао да инсталира софтвер који прати вашу активност, а приватне картице вас неће заштитити ни од тога.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Сазнајте о приватним картицама.";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Омогући превођење";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Оцените Brave";
+"RateBrave" = "Оцените Growser";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Повећај величину текста";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Изаберите једну опцију";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Обавестите развојне програмере Brave-а да овај сајт не функционише како је очекивано:";
+"ReportBrokenSiteBody1" = "Обавестите развојне програмере Growser-а да овај сајт не функционише како је очекивано:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Напомена: Извештај који се шаље Brave-овим серверима садржи адресу сајта, број верзије Brave-а, подешавања штитова, статус VPN-а и подешавања језика.";
+"ReportBrokenSiteBody2" = "Напомена: Извештај који се шаље Growser-овим серверима садржи адресу сајта, број верзије Growser-а, подешавања штитова, статус VPN-а и подешавања језика.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Пошаљи";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "Не";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Нажалост, Brave је пао или се није правилно затворио.\nЖелите ли да вратите картице?";
+"RestoreTabOnCrashAlertMessage" = "Нажалост, Growser је пао или се није правилно затворио.\nЖелите ли да вратите картице?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave се неочекивано затворио.";
+"RestoreTabOnCrashAlertTitle" = "Growser се неочекивано затворио.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Укључите да бисте подржали Brave и BAT заједницу.";
+"rewards.disabledBody" = "Укључите да бисте подржали Growser и BAT заједницу.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Коришћењем Brave награда пружате подршку Brave и BAT заједници.";
+"rewards.disabledStatusBody" = "Коришћењем Growser награда пружате подршку Growser и BAT заједници.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Подржавате Brave и BAT заједницу.";
+"rewards.enabledBody" = "Подржавате Growser и BAT заједницу.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Хвала вам на помоћи у виду подршке Brave и BAT заједнице!";
+"rewards.enabledStatusBody" = "Хвала вам на помоћи у виду подршке Growser и BAT заједнице!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Пружите подршку Brave и BAT заједници тако што ћете активирати Brave награде и гледати Brave огласе.";
+"rewards.settingsToggleMessage" = "Пружите подршку Growser и BAT заједници тако што ћете активирати Growser награде и гледати Growser огласе.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Активирајте Brave награде";
+"rewards.settingsToggleTitle" = "Активирајте Growser награде";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Овај аутор садржаја је верификован преко програма Brave аутори";
+"rewards.supportingPublisher" = "Овај аутор садржаја је верификован преко програма Growser аутори";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Број аутора садржаја којима пружате подршку овог месеца.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Износ доприноса";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Brave токени";
+"RewardsInternalsContributionProcessorBraveTokens" = "Growser токени";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Ништа";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "Желите ли да активирате преглоге за претрагу?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Претрага помоћу Brave-а";
+"SearchWithBrave" = "Претрага помоћу Growser-а";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Пошаљи";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Желите ли да нам пошаљете извештај о паду да би Brave могао да реши проблем?";
+"SendCrashReportAlertMessage" = "Желите ли да нам пошаљете извештај о паду да би Growser могао да реши проблем?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Упс! Brave је пао";
+"SendCrashReportAlertTitle" = "Упс! Growser је пао";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Пошаљи извештај";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Сада можете подесити Brave као подразумевани прегледач у iOS-у. Додирните овде да отворите подешавања.";
+"setDefaultBrowserCalloutTitle" = "Сада можете подесити Growser као подразумевани прегледач у iOS-у. Додирните овде да отворите подешавања.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Подеси као подразумевани прегледач";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Затвори картице";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Дозволите Brave-у да аутоматски затвори картице које нису скоро гледане.";
+"settings.autocloseTabsSettingFooter" = "Дозволите Growser-у да аутоматски затвори картице које нису скоро гледане.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Блокирај елементе YouTube-а који одвлаче пажњу";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Медији";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Отвори YouTube линкове у Brave-у";
+"settings.openYouTubeInBrave" = "Отвори YouTube линкове у Growser-у";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Активирај праћење времена проведеног пред екраном";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Подешавања квалитета";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Овај приватни пинг омогућава Brave-у да процени активне кориснике.";
+"settings.sendUsagePingDescription" = "Овај приватни пинг омогућава Growser-у да процени активне кориснике.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Аутоматски шаљи Brave-u пинг за свакодневно коришћење";
+"settings.sendUsagePingTitle" = "Аутоматски шаљи Growser-u пинг за свакодневно коришћење";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Омогућава Brave-у да приказује линкове за приватне анкете на новој картици. Анкете нам помажу да креирамо боље функције и меримо ефикасност огласних кампања заснованих на прегледачу. [Сазнајте више](%@)";
+"settings.surveyPanelistDescription" = "Омогућава Growser-у да приказује линкове за приватне анкете на новој картици. Анкете нам помажу да креирамо боље функције и меримо ефикасност огласних кампања заснованих на прегледачу. [Сазнајте више](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Активирај Brave анкете";
+"settings.surveyPanelistTitle" = "Активирај Growser анкете";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Поделите вести";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave штитови су управо заштитили вашу онлајн приватност.";
+"shieldEducation.trackerAdWarningSubTitle" = "Growser штитови су управо заштитили вашу онлајн приватност.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Честитамо. Прилично сте посебни.";
@@ -2555,13 +2555,13 @@
 "shieldEducation.videoAdBlockTitle" = "Огласи су блокирани док гледате видео садржаје на овом веб-сајту.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Глобалне подразумеване вредности за Brave штитове";
+"ShieldsDefaults" = "Глобалне подразумеване вредности за Growser штитове";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Ово су подразумевана подешавања штитова за нове сајтове. Промена ових подешавања неће утицати на ваша постојећа подешавања по сајту.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Прегледате овај сајт без Brave-ове заштите приватности. Да ли сајт не функционише исправно са укљученим штитовима?";
+"ShieldsDownDisclaimer" = "Прегледате овај сајт без Growser-ове заштите приватности. Да ли сајт не функционише исправно са укљученим штитовима?";
 
 /* shields overview message */
 "ShieldsOverview" = "Штитови за сајтове вам омогућавају да контролишете када су огласи и праћења блокирани за сваки сајт који посетите. Ако преферирате да видите огласе на одређеном сајту, можете их активирати овде.";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Скенирајте QR код";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Отворите Brave вести и видите шта је актуелно данас";
+"shortcuts.activityTypeBraveNewsDescription" = "Отворите Growser вести и видите шта је актуелно данас";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Отворите прегледач у новој картици и избришите све податке из приватне историје прегледача";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Избриши историју прегледача";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Избриши историју прегледања веба у Brave-у";
+"shortcuts.activityTypeClearHistoryTitle" = "Избриши историју прегледања веба у Growser-у";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Отвори прегледач у новој картици и активирај VPN";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Активирај VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Отвори Brave прегледач и активирај VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Отвори Growser прегледач и активирај VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Отвори нову приватну картицу";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Отвори обележиваче";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Отвори обележиваче у Brave прегледачу";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Отвори обележиваче у Growser прегледачу";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Отвори Brave вести";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Отвори Growser вести";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Отвори Brave вести";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Отвори Growser вести";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Отвори екран историје прегледача";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Отвори историју прегледача";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Отвори историју Brave прегледача";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Отвори историју Growser прегледача";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Започни пуштање видео садржаја у плејлисти";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Отвори плејлисту";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Отвори Brave картице које су отворене на другим уређајима";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Отвори Growser картице које су отворене на другим уређајима";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Отвори картице са других уређаја";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Отвори картице са других уређаја";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Започни безбедну претрагу веба помоћу Brave-а";
+"shortcuts.activityTypeTabDescription" = "Започни безбедну претрагу веба помоћу Growser-а";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Отвори веб-сајт са обележивачима";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Отвори веб-сајт";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ова опција отвара подешавања Brave-а. Да бисте променили различите опције за Siri, изаберите ставку менија „Siri и претрага“ и прилагодите своје изборе.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ова опција отвара подешавања Growser-а. Да бисте променили различите опције за Siri, изаберите ставку менија „Siri и претрага“ и прилагодите своје изборе.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Отвори подешавања";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Избриши историју прегледача";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Користите пречице да активирате Brave VPN помоћу гласовног асистента Siri";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Користите пречице да активирате Growser VPN помоћу гласовног асистента Siri";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Активирај VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Отвори обележиваче";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Користите пречице за отварање нове картице и приказивање фида Brave вести помоћу гласовног асистента Siri";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Користите пречице за отварање нове картице и приказивање фида Growser вести помоћу гласовног асистента Siri";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Отвори Brave вести";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Отвори Growser вести";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Користите пречице да отворите екран са историјом прегледача помоћу гласовног асистента Siri";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Подешавања сајтова и штитова";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Хвала што сте обавестили развојне програмере Brave-а да нешто није у реду са овим сајтом. Даћемо све од себе да то исправимо!";
+"SiteReportedBody" = "Хвала што сте обавестили развојне програмере Growser-а да нешто није у реду са овим сајтом. Даћемо све од себе да то исправимо!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Хвала";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Штитови";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Сваки дан трошим мање података тако што прегледам веб помоћу Brave-а.";
+"socialSharing.domainSpecificDataSavedTitle" = "Сваки дан трошим мање података тако што прегледам веб помоћу Growser-а.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Сваки дан трошим мање података тако што прегледам веб помоћу Brave-а.";
+"socialSharing.shareDescriptionTitle" = "Сваки дан трошим мање података тако што прегледам веб помоћу Growser-а.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Стандардна картица";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Брисање налога за синхронизацију";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Брисањем налога уклонићете шифроване податке са Brave сервера и искључити синхронизацију на свим повезаним уређајима.";
+"sync.deleteAccountAlertDescriptionPart1" = "Брисањем налога уклонићете шифроване податке са Growser сервера и искључити синхронизацију на свим повезаним уређајима.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Међутим, неће избрисати податке који се налазе на локалном меморијском простору на тим уређајима.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Брисање налога за синхронизацију";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Изгледа да је овај код креиран на уређају који користи старију верзију Brave-а. Ажурирајте Brave на најновију верзију на другом уређају, а затим креирајте нови код за синхронизацију.";
+"sync.deprecatedVersionError" = "Изгледа да је овај код креиран на уређају који користи старију верзију Growser-а. Ажурирајте Growser на најновију верзију на другом уређају, а затим креирајте нови код за синхронизацију.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Дошло је до грешке приликом преузимања информација о уређају у ланцу синхронизације.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Изгледа да је ваш уређај враћен из резервне копије, што може утицати на Brave синхронизацију. Да бисте наставили да користите Brave синхронизацију, требало би да ресетујете ланац синхронизације и поново му се прикључите.";
+"sync.deviceRestoreDetectedMessage" = "Изгледа да је ваш уређај враћен из резервне копије, што може утицати на Growser синхронизацију. Да бисте наставили да користите Growser синхронизацију, требало би да ресетујете ланац синхронизације и поново му се прикључите.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Откривено је враћање из резервне копије";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Уређај";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Тренутно синхронизовани подаци ће бити задржани, али ће сви подаци у кеш меморији Brave синхронизације бити избрисани. Мораћете да покренете нови ланац синхронизације да бисте поново синхронизовали податке са уређаја.";
+"sync.removeLastDeviceMessage" = "Тренутно синхронизовани подаци ће бити задржани, али ће сви подаци у кеш меморији Growser синхронизације бити избрисани. Мораћете да покренете нови ланац синхронизације да бисте поново синхронизовали податке са уређаја.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Избриши ланац синхронизације";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Синхронизуј на уређај";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Користећи постојећи синхронизовани уређај, отворите подешавања Brave-а и идите у Подешавања > Синхронизација. Изаберите „Додај уређај“ и скенирајте код који се прикаже на екрану.";
+"sync.toDeviceDescription" = "Користећи постојећи синхронизовани уређај, отворите подешавања Growser-а и идите у Подешавања > Синхронизација. Изаберите „Додај уређај“ и скенирајте код који се прикаже на екрану.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Синхронизација овог уређаја није успела";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Овај код је неважећи. Проверите да ли су време и временска зона исправно подешени на вашем уређају.";
 
 /* Sync settings welcome */
-"sync.welcome" = "За почетак вам треба инсталиран Brave на свим уређајима које планирате да синхронизујете. Да бисте их повезали, покрените ланац синхронизације који ћете користити да безбедно повежете све своје уређаје.";
+"sync.welcome" = "За почетак вам треба инсталиран Growser на свим уређајима које планирате да синхронизујете. Да бисте их повезали, покрените ланац синхронизације који ћете користити да безбедно повежете све своје уређаје.";
 
 /* Word count title */
 "sync.wordCount" = "Број речи: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Не остављајте траг на свом уређају";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN шифрује и штити све што радите онлајн, чак и ван Brave прегледача.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Growser VPN шифрује и штити све што радите онлајн, чак и ван Growser прегледача.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Growser VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Имајте у виду да – чак и у приватним прозорима – ваша активност прегледања веба и даље може бити видљива вашем интернет провајдеру, посматрачима мреже или вашем послодавцу (ако користите пословни рачунар / пословну мрежу).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Аутоматски отвори тастатуру";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Отварајте везе из Ask Brave и Brave претраге на картицама за преглед";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Отварајте везе из Ask Growser и Growser претраге на картицама за преглед";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Омогући картице брзог прегледа";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Подели...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Поделите Brave са пријатељима!";
+"themeQRCodeShareTitle" = "Поделите Growser са пријатељима!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Аутоматски";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Та адреса фида нема никакав садржај.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Додај извор у Brave вести";
+"today.addSourceShareTitle" = "Додај извор у Growser вести";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Доступни RSS фидови";
 
 /* The name of the feature */
-"today.braveToday" = "Brave вести";
+"today.braveToday" = "Growser вести";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Вести";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Понуде";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Brave вести ће престати да аутоматски приказују садржај аутора %@";
+"today.disabledAlertBody" = "Growser вести ће престати да аутоматски приказују садржај аутора %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Искључено";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Дозволи садржај аутора %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Brave вести имају неких проблема. Пробајте поново.";
+"today.errorGeneralBody" = "Growser вести имају неких проблема. Пробајте поново.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Упс…";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Небезбедни извори – додајте на сопствени ризик";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Пратите омиљене изворе у једном фиду. Само отворите картицу у Brave-у, скролујте надоле и то је то! Brave вести садрже потпуно приватне и анонимизоване огласе.";
+"today.introCardBody" = "Пратите омиљене изворе у једном фиду. Само отворите картицу у Growser-у, скролујте надоле и то је то! Growser вести садрже потпуно приватне и анонимизоване огласе.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Укључите Brave вести и никада не пропустите најновије информације";
+"today.introCardTitle" = "Укључите Growser вести и никада не пропустите најновије информације";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Прикажи Brave вести";
+"today.isEnabledToggleLabel" = "Прикажи Growser вести";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Сазнајте више о својим подацима";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Још Brave понуда";
+"today.moreBraveOffers" = "Још Growser понуда";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Нема интернета";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Промовисано";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Оцените Brave у App Store-у";
+"today.rateBraveCardActionSheetTitle" = "Оцените Growser у App Store-у";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Сакриј";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Оцените Brave";
+"today.rateBraveCardRateActionTitle" = "Оцените Growser";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Реците нам шта мислите!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Свиђа вам се Brave?";
+"today.rateBraveCardTitle" = "Свиђа вам се Growser?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Освежи";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Предложено";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Укључи Brave вести";
+"today.turnOnBraveToday" = "Укључи Growser вести";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Прекини праћење";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Прикажи на %@-у";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Дозволите приступ микрофону у системским подешавањима iOS-а за Brave да бисте користили анонимну гласовну претрагу.";
+"voice.search.microphone.description.required" = "Дозволите приступ микрофону у системским подешавањима iOS-а за Growser да бисте користили анонимну гласовну претрагу.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Неопходан је приступ микрофону";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave не чува нити уступа другима ваше гласовне претраге.";
+"voice.search.screen.disclaimer" = "Growser не чува нити уступа другима ваше гласовне претраге.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Датум креирања новчаника";

@@ -98,11 +98,8 @@ struct DefaultShieldsSectionView: View {
         )
       }
 
-      ToggleView(
-        title: Strings.Shields.braveShieldsSaveContactInfo,
-        subtitle: Strings.Shields.braveShieldsSaveContactInfoDescription,
-        toggle: $settings.isSaveContactInfoEnabled
-      )
+      // Growser-298: no contact info to save - there are no broken-site
+      // reports to put it in (#78).
 
       NavigationLink {
         FilterListsView()

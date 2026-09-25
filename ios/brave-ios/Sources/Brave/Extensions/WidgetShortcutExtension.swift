@@ -28,19 +28,13 @@ extension WidgetShortcut {
       .askBrave,
       .braveLeoVoiceInput,
     ])
-    if !prefs.isPlaylistAvailable {
-      options.remove(.playlist)
-    }
-    if !prefs.isBraveNewsAvailable {
-      options.remove(.braveNews)
-    }
-    if !isWalletAvailable {
-      options.remove(.wallet)
-    }
-    if !AIChatUtils.isAIChatEnabled(for: prefs) {
-      options.remove(.braveLeo)
-      options.remove(.braveLeoVoiceInput)
-    }
+    options.remove(.playlist)  // Growser-282: Playlist is out of the product.
+    options.remove(.braveNews)  // Growser-281: Brave News is out of the product.
+    options.remove(.wallet)  // Growser-287: the wallet is out of the product.
+    // Growser-279: Leo is out of the product, so its shortcuts always go.
+    options.remove(.braveLeo)
+    options.remove(.braveLeoVoiceInput)
+    options.remove(.askBrave)  // Growser-292: it opened Brave Search.
     return options
   }
 
@@ -51,19 +45,13 @@ extension WidgetShortcut {
     isWalletAvailable: Bool
   ) -> Set<WidgetShortcut> {
     var disabled: Set<WidgetShortcut> = []
-    if !prefs.isPlaylistAvailable {
-      disabled.insert(.playlist)
-    }
-    if !prefs.isBraveNewsAvailable {
-      disabled.insert(.braveNews)
-    }
-    if !isWalletAvailable {
-      disabled.insert(.wallet)
-    }
-    if !AIChatUtils.isAIChatEnabled(for: prefs) {
-      disabled.insert(.braveLeo)
-      disabled.insert(.braveLeoVoiceInput)
-    }
+    disabled.insert(.playlist)  // Growser-282: Playlist is out of the product.
+    disabled.insert(.braveNews)  // Growser-281: Brave News is out of the product.
+    disabled.insert(.wallet)  // Growser-287: the wallet is out of the product.
+    // Growser-279: Leo is out of the product, so its shortcuts are always off.
+    disabled.insert(.braveLeo)
+    disabled.insert(.braveLeoVoiceInput)
+    disabled.insert(.askBrave)  // Growser-292: it opened Brave Search.
     return disabled
   }
 
@@ -80,7 +68,7 @@ extension WidgetShortcut {
     case .playlist:
       return Strings.bravePlaylistItemTitle
     case .wallet:
-      return Strings.Wallet.wallet
+      return ""  // Growser-287: never offered; its string left with BraveWallet.
     case .braveNews:
       return Strings.braveNewsItemTitle
     case .braveLeo:

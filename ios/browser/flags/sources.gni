@@ -3,10 +3,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+
 brave_flags_deps = [
   "//base",
-  "//brave/components/ai_chat/core/common",
-  "//brave/components/brave_ads/core",
+  "//brave/components/ai_chat/core/common/buildflags",
+  "//brave/components/brave_ads/buildflags",
   "//brave/components/brave_component_updater/browser:public",
   "//brave/components/brave_origin:features",
   "//brave/components/brave_rewards/core",
@@ -14,14 +18,31 @@ brave_flags_deps = [
   "//brave/components/brave_shields/core/common",
   "//brave/components/brave_sync:features",
   "//brave/components/brave_user_agent/common",
-  "//brave/components/brave_wallet/common",
+  "//brave/components/brave_wallet/common/buildflags",
   "//brave/components/de_amp/common",
   "//brave/components/debounce/core/common",
   "//brave/components/playlist/core/common",
   "//brave/components/skus/common",
-  "//brave/ios/browser/brave_wallet",
   "//brave/ios/browser/ui/quick_view:features",
   "//brave/ios/browser/ui/web_view:features",
   "//components/webui/flags",
   "//net",
 ]
+
+# Growser-279: brave-core never guarded AI Chat on iOS; our .env turns it off.
+if (enable_ai_chat) {
+  brave_flags_deps += [ "//brave/components/ai_chat/core/common" ]
+}
+
+# Growser-287: the wallet is compiled out, as on the desktop.
+if (enable_brave_wallet) {
+  brave_flags_deps += [
+    "//brave/components/brave_wallet/common",
+    "//brave/ios/browser/brave_wallet",
+  ]
+}
+
+# Growser-290: ads are compiled out, as on the desktop.
+if (enable_brave_ads) {
+  brave_flags_deps += [ "//brave/components/brave_ads/core" ]
+}

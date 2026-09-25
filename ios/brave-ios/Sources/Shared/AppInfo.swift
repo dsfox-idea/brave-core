@@ -41,9 +41,11 @@ open class AppInfo {
     var bundleIdentifier = baseBundleIdentifier
 
     // External beta
-    if bundleIdentifier == "com.brave.ios.BrowserBeta" {
-      // com.brave.ios.BrowserBeta is taken and can't be used as an app group.
-      bundleIdentifier = "com.brave.ios.BrowserBeta.unique"
+    // Growser-284: by suffix, not by Brave's id - the same rule Debug.xcconfig
+    // and Nightly.xcconfig give BRAVE_GROUP_ID (group.$(MOZ_BUNDLE_ID).unique),
+    // so the app group the code asks for is the one the entitlements grant.
+    if bundleIdentifier.hasSuffix(".BrowserBeta") {
+      bundleIdentifier += ".unique"
     }
     return "group." + bundleIdentifier
   }

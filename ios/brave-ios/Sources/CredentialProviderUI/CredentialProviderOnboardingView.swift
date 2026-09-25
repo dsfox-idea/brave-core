@@ -16,7 +16,7 @@ public struct CredentialProviderOnboardingView: View {
   }
   public var body: some View {
     VStack(spacing: 40) {
-      Image(sharedName: "brave.logo")
+      Image(sharedName: "growser.logo")  // Growser-286
         .resizable()
         .aspectRatio(contentMode: .fit)
         .frame(height: 120)

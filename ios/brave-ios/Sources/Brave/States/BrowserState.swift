@@ -7,7 +7,7 @@ import Foundation
 import UIKit
 
 public class BrowserState {
-  public static let sceneId = "com.brave.ios.browser-scene"
+  public static let sceneId = "org.growser.ios.browser-scene"  // Growser-284
 
   let window: UIWindow
   let profile: LegacyBrowserProfile

@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Voeg filter op URL toe";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "Met **Brave Player** geniet je van een ononderbroken videoweergave zonder advertenties.";
+"AntiAdBlockWarningBravePlayerDescription" = "Met **Growser Player** geniet je van een ononderbroken videoweergave zonder advertenties.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Pas Shields aan voor mij";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Deze site blokkeert nu bepaalde advertentieblokkeringen, waardoor de site mogelijk niet zoals verwacht werkt.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Om dit probleem op te lossen, kan Brave de Shields-instellingen voor jou aanpassen. Daarna kun je deze content in Brave Player bekijken.";
+"AntiAdBlockWarningDescription2" = "Om dit probleem op te lossen, kan Growser de Shields-instellingen voor jou aanpassen. Daarna kun je deze content in Growser Player bekijken.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Behoud huidige instellingen";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Blokkeer meldingen om apps te openen";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Open video's op deze site altijd met Brave Player";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Open video's op deze site altijd met Growser Player";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Probeer";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Niet nu";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Met Brave Player kun je video's zonder onderbrekingen bekijken.";
+"BravePlayerInfoMessage" = "Met Growser Player kun je video's zonder onderbrekingen bekijken.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Bekijk in Brave Player";
+"BravePlayerInfoTitle" = "Bekijk in Growser Player";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Contentfilter";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Ga terug";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Je hebt gekozen voor de agressieve blokkering van trackers en advertenties. Daarom blokkeert Brave deze site vóór de eerste netwerkverbinding.";
+"DomainBlockedPageDescription" = "Je hebt gekozen voor de agressieve blokkering van trackers en advertenties. Daarom blokkeert Growser deze site vóór de eerste netwerkverbinding.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave heeft voorkomen dat de volgende site werd geladen:";
+"DomainBlockedPageMessage" = "Growser heeft voorkomen dat de volgende site werd geladen:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Deze site probeert je mogelijk via andere sites te volgen";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "App gesloten";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Browsegegevens worden automatisch versnipperd wanneer de Brave-app wordt gesloten / opnieuw wordt opgestart";
+"ShredOnAppCloseDescription" = "Browsegegevens worden automatisch versnipperd wanneer de Growser-app wordt gesloten / opnieuw wordt opgestart";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Tabbladen van site gesloten";

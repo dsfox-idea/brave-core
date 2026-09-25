@@ -17,7 +17,7 @@
 "importDataFileSelectorButtonTitle" = "Fájl kiválasztása...";
 
 /* The message of a Text on screen that explains to the user what type of data can be imported. */
-"importDataFileSelectorMessage" = "Importálja a könyvjelzőit, az előzményeket és egyéb böngészőadatait a Brave alkalmazásba.";
+"importDataFileSelectorMessage" = "Importálja a könyvjelzőit, az előzményeket és egyéb böngészőadatait a Growser alkalmazásba.";
 
 /* The title of the main screen that lets the user import data. The title is shown in the navigation bar. */
 "importDataFileSelectorNavigationTitle" = "Böngészési adatok importálása";
@@ -35,7 +35,7 @@
 "importStateFailureTitle" = "Az importálás sikertelen volt";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords. */
-"importStatePasswordConflictKeepExistingPasswordsTitle" = "Jelszavak megtartása a Brave-ből";
+"importStatePasswordConflictKeepExistingPasswordsTitle" = "Jelszavak megtartása a Growser-ből";
 
 /* The title of the button on the import error screen when there is a conflict, that lets the user use the passwords that were imported, overwriting your existing passwords. */
 "importStatePasswordConflictKeepImportedPasswordsTitle" = "Jelszavak használata a Safariból";
@@ -50,7 +50,7 @@
 "importStateSuccessContinueTitle" = "Folytatás";
 
 /* The message shown on the import data screen when importing the data from the browser profile succeeded. */
-"importStateSuccessMessage" = "Az adatok importálása sikeresen megtörtént.\nKészen áll a Brave böngészés megkezdésére.";
+"importStateSuccessMessage" = "Az adatok importálása sikeresen megtörtént.\nKészen áll a Growser böngészés megkezdésére.";
 
 /* The title shown on the import data screen when importing the data from the browser profile succeeded. */
 "importStateSuccessTitle" = "Sikerült!";

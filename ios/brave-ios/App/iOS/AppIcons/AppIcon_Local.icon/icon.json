@@ -1,67 +1,43 @@
 {
-  "color-space-for-untagged-svg-colors" : "display-p3",
-  "fill" : "system-light",
-  "groups" : [
-    {
-      "blur-material" : null,
-      "layers" : [
-        {
-          "fill" : "automatic",
-          "glass" : true,
-          "image-name" : "face.svg",
-          "name" : "face",
-          "position" : {
-            "scale" : 4.859999999999998,
-            "translation-in-points" : [
-              0,
-              -7
-            ]
-          }
-        }
-      ],
-      "name" : "Group",
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.65
+  "fill": {
+    "linear-gradient": [
+      "srgb:0.87843,0.27059,0.23922,1.00000",
+      "srgb:0.60000,0.11765,0.09412,1.00000"
+    ],
+    "orientation": {
+      "start": {
+        "x": 0.5,
+        "y": 0.0
       },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.2
+      "stop": {
+        "x": 0.5,
+        "y": 1.0
       }
-    },
+    }
+  },
+  "groups": [
     {
-      "blur-material" : null,
-      "hidden" : false,
-      "layers" : [
+      "layers": [
         {
-          "hidden" : false,
-          "image-name" : "head-dev.svg",
-          "name" : "head-dev",
-          "opacity" : 1,
-          "position" : {
-            "scale" : 4.85,
-            "translation-in-points" : [
-              0,
-              14
-            ]
-          }
+          "glass": true,
+          "image-name": "g.svg",
+          "name": "G"
         }
       ],
-      "shadow" : {
-        "kind" : "layer-color",
-        "opacity" : 0.5
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
       },
-      "specular" : true,
-      "translucency" : {
-        "enabled" : false,
-        "value" : 0.5
+      "translucency": {
+        "enabled": true,
+        "value": 0.2
       }
     }
   ],
-  "supported-platforms" : {
-    "circles" : [
+  "supported-platforms": {
+    "circles": [
       "watchOS"
     ],
-    "squares" : "shared"
+    "squares": "shared"
   }
 }

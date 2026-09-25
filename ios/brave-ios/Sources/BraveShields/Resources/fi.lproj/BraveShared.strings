@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Lisää suodatin URL-osoitteella";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave-mediasoitin** takaa videokokemuksen ilman mainoksia ja keskeytyksiä.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser-mediasoitin** takaa videokokemuksen ilman mainoksia ja keskeytyksiä.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Säädä suojausta";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Tämä sivusto on alkanut estää joitain mainosten estokeinoja, mikä tarkoittaa, että kyseinen sivusto ei välttämättä toimi odotetulla tavalla.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Tämän ongelman ratkaisemiseksi Brave voi säätää suojasi asetuksia puolestasi. Säätämisen jälkeen voit yrittää katsoa tätä sisältöä Brave-mediasoittimessa.";
+"AntiAdBlockWarningDescription2" = "Tämän ongelman ratkaisemiseksi Growser voi säätää suojasi asetuksia puolestasi. Säätämisen jälkeen voit yrittää katsoa tätä sisältöä Growser-mediasoittimessa.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Säilytä nykyiset asetukset";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Estä 'Vaihda sovellukseen' -ilmoitukset";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Avaa aina tämän sivuston videot Brave-mediasoittimella";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Avaa aina tämän sivuston videot Growser-mediasoittimella";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Kokeile";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Ei nyt";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave-mediasoittimella voit katsella videoita ilman keskeytyksiä.";
+"BravePlayerInfoMessage" = "Growser-mediasoittimella voit katsella videoita ilman keskeytyksiä.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Katso sen sijaan Brave-mediasoittimessa";
+"BravePlayerInfoTitle" = "Katso sen sijaan Growser-mediasoittimessa";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Sisällön suodatus";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Palaa takaisin";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Koska pyysit aggressiivisesti estämään seuraimet ja mainokset, Brave estää tämän sivuston ennen ensimmäistä verkkoyhteyttä.";
+"DomainBlockedPageDescription" = "Koska pyysit aggressiivisesti estämään seuraimet ja mainokset, Growser estää tämän sivuston ennen ensimmäistä verkkoyhteyttä.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave on estänyt seuraavaa sivustoa latautumasta:";
+"DomainBlockedPageMessage" = "Growser on estänyt seuraavaa sivustoa latautumasta:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Tämä sivusto voi yrittää seurata sinua muilla sivustoilla";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Sovellus suljettu";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Selaustiedot silputaan automaattisesti, kun Brave-sovellus suljetaan / käynnistetään uudelleen";
+"ShredOnAppCloseDescription" = "Selaustiedot silputaan automaattisesti, kun Growser-sovellus suljetaan / käynnistetään uudelleen";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Sivuston välilehdet suljettu";

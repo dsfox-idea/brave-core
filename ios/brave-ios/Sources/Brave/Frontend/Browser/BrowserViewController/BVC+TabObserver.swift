@@ -5,7 +5,7 @@
 
 import BraveCore
 import BraveUI
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Foundation
 import Preferences
 import Shared
@@ -56,32 +56,7 @@ extension BrowserViewController: TabObserver {
       }
     }
 
-    // check if web view is loading a different origin than the one currently loaded
-    if let selectedTab = tabManager.selectedTab {
-      if selectedTab.visibleURL?.origin != visibleURL?.origin {
-        // new site has a different origin, hide wallet icon.
-        tabManager.selectedTab?.wallet?.isWalletIconVisible = false
-        // new site, reset connected addresses
-        tabManager.selectedTab?.wallet?.clearSolanaConnectedAccounts()
-        // close wallet panel if it's open
-        if let popoverController = self.presentedViewController as? PopoverController,
-          popoverController.contentController is WalletPanelHostingController
-        {
-          self.dismiss(animated: true)
-        }
-        // dismiss wallet notification (e.g. after redirect to different origin)
-        removeWalletNotificationAndClearOrigin()
-      } else if profileController.braveWalletAPI.isAllowed,
-        let selectedTabVisibleURL = selectedTab.visibleURL,
-        selectedTabVisibleURL.isWalletWebUIURL
-      {
-        // loading wallet webui. show wallet button in url bar if there are
-        // 1. pending web requests
-        // 2. pending transactions
-        tabManager.selectedTab?.wallet?.isWalletIconVisible = true
-        updateURLBarWalletButton()
-      }
-    }
+    // Growser-287: no wallet icon, panel or notification to reset on a new origin.
   }
 
   public func tabWasShown(_ tab: some TabState) {
@@ -115,19 +90,7 @@ extension BrowserViewController: TabObserver {
       return
     }
 
-    // Dismiss wallet panel and notification if the tab's committed URL origin no longer matches
-    let committedOrigin = tab.lastCommittedURL?.origin
-    if let popoverController = self.presentedViewController as? PopoverController,
-      let walletPanel = popoverController.contentController as? WalletPanelHostingController,
-      let committedOrigin,
-      walletPanel.origin != committedOrigin
-    {
-      self.dismiss(animated: true)
-      removeWalletNotificationAndClearOrigin()
-    } else if let committedOrigin {
-      // Tab navigated to a different origin (e.g. redirect); dismiss wallet notification if it was for another origin
-      dismissWalletNotificationIfOriginDiffers(from: committedOrigin)
-    }
+    // Growser-287: no wallet panel or notification to dismiss.
 
     updateUIForReaderHomeStateForTab(tab)
     updateBackForwardActionStatus(for: tab)
@@ -151,25 +114,10 @@ extension BrowserViewController: TabObserver {
       tabManager.saveTab(tab)
     }
 
-    // Inject app's IAP receipt for Brave SKUs if necessary
-    if !tab.isPrivate {
-      Task { @MainActor in
-        await BraveSkusAccountLink.injectLocalStorage(tab: tab)
-      }
-    }
+    // Growser-283: no SKUS receipt to inject - SKUS is out of the product.
 
     navigateInTab(tab: tab)
-    rewards.reportTabUpdated(
-      tab: tab,
-      isSelected: tabManager.selectedTab === tab,
-      isPrivate: privateBrowsingManager.isPrivateBrowsing
-    )
-    tab.browserData?.reportPageLoad(to: rewards)
-
-    if tab.visibleURL?.isLocal == false {
-      // Set rewards inter site url as new page load url.
-      tab.rewardsXHRLoadURL = tab.visibleURL
-    }
+    // Growser-290: no Rewards page-load reporting - Rewards is out.
 
     if let lastCommittedURL = tab.lastCommittedURL {
       maybeRecordBraveSearchDailyUsage(url: lastCommittedURL)
@@ -247,16 +195,7 @@ extension BrowserViewController: TabObserver {
       }
     }
 
-    // Rewards reporting
-    if let url = tab.visibleURL, !url.isLocal {
-      // Notify Brave Rewards library of the same document navigation.
-      if let tab = tabManager.selectedTab,
-        let rewardsURL = tab.rewardsXHRLoadURL,
-        url.host == rewardsURL.host
-      {
-        tab.browserData?.reportPageLoad(to: rewards)
-      }
-    }
+    // Growser-290: no Rewards same-document reporting.
 
     // Update the estimated progress when the URL changes. Estimated progress may update to 0.1 when the url
     // is still an internal URL even though a request may be pending for a web page.
@@ -333,7 +272,7 @@ extension BrowserViewController {
       PrintScriptHandler(browserController: self),
       DarkReaderScriptHandler(),
       BraveGetUA(),
-      BraveSearchScriptHandler(profile: profile, rewards: rewards),
+      BraveSearchScriptHandler(profile: profile),  // Growser-290: no rewards
       ResourceDownloadScriptHandler(),
       AdsMediaReportingScriptHandler(),
       DeAmpScriptHandler(),
@@ -342,7 +281,7 @@ extension BrowserViewController {
       URLPartinessScriptHandler(),
       FaviconScriptHandler(),
       YoutubeQualityScriptHandler(),
-      BraveLeoScriptHandler(),
+      // Growser-279: no BraveLeoScriptHandler.
       RequestBlockingContentScriptHandler(),
     ]
 
@@ -350,36 +289,20 @@ extension BrowserViewController {
       injectedScripts.append(contentBlocker)
     }
 
-    if tab.profile.prefs.isPlaylistAvailable {
-      injectedScripts.append(contentsOf: [
-        PlaylistScriptHandler()
-      ])
-    }
+    // Growser-282: no PlaylistScriptHandler.
 
-    if tab.profile.prefs.isBraveTalkAvailable {
-      injectedScripts.append(BraveTalkScriptHandler())
-    }
+    // Growser-278: no BraveTalkScriptHandler.
 
-    if profileController.braveWalletAPI.isAllowed {
-      injectedScripts.append(Web3NameServiceScriptHandler())
-    }
+    // Growser-287: no Web3NameServiceScriptHandler.
 
     // Only add the logins handler, wallet provider and skus if the tab is NOT a private tab
     if !tab.isPrivate {
       injectedScripts += [
         LoginsScriptHandler(passwordAPI: profileController.passwordAPI),
-        BraveSearchResultAdScriptHandler(),
-        BraveSkusScriptHandler(),
+        // Growser-290: no BraveSearchResultAdScriptHandler.
+        // Growser-283: no BraveSkusScriptHandler.
       ]
-      if profileController.braveWalletAPI.isAllowed {
-        injectedScripts += [
-          EthereumProviderScriptHandler(),
-          SolanaProviderScriptHandler(),
-        ]
-      }
-      if WalletConstants.isCardanoDAppSupportEnabled {
-        injectedScripts.append(CardanoProviderScriptHandler())
-      }
+      // Growser-287: no Ethereum, Solana or Cardano provider for pages.
     }
 
     if FeatureList.kBraveTranslateEnabled.enabled {
@@ -400,8 +323,5 @@ extension BrowserViewController {
         contentWorld: type(of: $0).scriptSandbox
       )
     }
-
-    (tab.browserData?.getContentScript(name: Web3NameServiceScriptHandler.scriptName)
-      as? Web3NameServiceScriptHandler)?.delegate = self
   }
 }

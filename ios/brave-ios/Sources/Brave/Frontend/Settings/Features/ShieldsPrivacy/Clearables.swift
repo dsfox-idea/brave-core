@@ -3,12 +3,12 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import Data
 import Favicon
 import Foundation
-import Playlist
+// Growser-282: no Playlist.
 import Shared
 import Web
 import WebKit
@@ -199,44 +199,9 @@ class DownloadsClearable: Clearable {
   }
 }
 
-class BraveNewsClearable: Clearable {
+// Growser-281: no BraveNewsClearable.
 
-  let feedDataSource: FeedDataSource
-
-  init(feedDataSource: FeedDataSource) {
-    self.feedDataSource = feedDataSource
-  }
-
-  var label: String {
-    return Strings.BraveNews.braveNews
-  }
-
-  func clear() async throws {
-    await feedDataSource.clearCachedFiles()
-  }
-}
-
-class PlayListCacheClearable: Clearable {
-
-  init() {}
-
-  var label: String {
-    return Strings.PlayList.playlistOfflineDataToggleOption
-  }
-
-  func clear() async throws {
-    await PlaylistManager.shared.deleteAllItems(cacheOnly: true)
-
-    // Backup in case there is folder corruption, so we delete the cache anyway
-    if let playlistDirectory = await PlaylistDownloadManager.playlistDirectory {
-      do {
-        try await AsyncFileManager.default.removeItem(at: playlistDirectory)
-      } catch {
-        Logger.module.error("Error Deleting Playlist directory: \(error.localizedDescription)")
-      }
-    }
-  }
-}
+// Growser-282: no PlayListCacheClearable.
 
 class RecentSearchClearable: Clearable {
 
@@ -251,19 +216,4 @@ class RecentSearchClearable: Clearable {
   }
 }
 
-class BraveAdsDataClearable: Clearable {
-
-  private let rewards: BraveRewards?
-
-  init(rewards: BraveRewards?) {
-    self.rewards = rewards
-  }
-
-  var label: String {
-    return Strings.Ads.braveAdsDataToggleOption
-  }
-
-  func clear() async throws {
-    await rewards?.clearAdsData()
-  }
-}
+// Growser-290: no BraveAdsDataClearable - ads are out.

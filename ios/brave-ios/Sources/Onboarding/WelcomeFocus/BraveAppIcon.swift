@@ -18,15 +18,12 @@ struct BraveAppIcon: View {
   var matchedGeometryInfo: MatchedGeometryInfo?
 
   var body: some View {
-    Image(sharedName: "brave.logo")
+    // Growser-286: our icon is its own tile, so it casts the shadows itself
+    // rather than sitting on a white one the way Brave's lion did.
+    Image(sharedName: "growser.logo")
       .resizable()
-      .padding((size * 0.02).rounded())
-      .background(
-        Color(braveSystemName: .containerBackground)
-          .shadow(.drop(color: Color(braveSystemName: .elevationSecondary), radius: 4, y: 8))
-          .shadow(.drop(color: Color(braveSystemName: .elevationPrimary), radius: 0, y: 1)),
-        in: .rect(cornerRadius: size / 4.44, style: .continuous)
-      )
+      .shadow(color: Color(braveSystemName: .elevationSecondary), radius: 4, y: 8)
+      .shadow(color: Color(braveSystemName: .elevationPrimary), radius: 0, y: 1)
       .matchedGeometryEffect(
         id: "logo",
         in: matchedGeometryInfo?.namespace ?? Namespace().wrappedValue,

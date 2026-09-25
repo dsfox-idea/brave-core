@@ -5,13 +5,13 @@
 "AboutBraveShields" = "Bővebben a Brave Shieldsről";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "A webhelyek gyakran tartalmaznak cookie-kat és szkripteket, amelyek megpróbálják azonosítani Önt és eszközét. Ki akarják deríteni, hogy Ön kicsoda, és követni akarják Önt az interneten – minden webhelyen nyomon követik, mit csinál.\n\nA Brave letiltja ezeket a dolgokat, így anélkül böngészhet, hogy követnék.";
+"AboutBraveShieldsBody" = "A webhelyek gyakran tartalmaznak cookie-kat és szkripteket, amelyek megpróbálják azonosítani Önt és eszközét. Ki akarják deríteni, hogy Ön kicsoda, és követni akarják Önt az interneten – minden webhelyen nyomon követik, mit csinál.\n\nA Growser letiltja ezeket a dolgokat, így anélkül böngészhet, hogy követnék.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "Ez lehetővé teszi a kép elmentését a kamerafotók közé.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "A Brave szeretne hozzáférni a fotóihoz";
+"AccessPhotoDeniedAlertTitle" = "A Growser szeretne hozzáférni a fotóihoz";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Könyvjelző hozzáadása";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Könyvjelző hozzáadása";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Brave hirdetések adatai";
+"ads.braveAdsDataToggleOption" = "Growser hirdetések adatai";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Hirdetések és követők";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "Be";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Kérdezz a Brave-tól";
+"AskBraveMenuItem" = "Kérdezz a Growser-tól";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Ez hitelesíti az Ön hozzáférését a Brave-hez";
+"AuthenticationLoginsTouchReason" = "Ez hitelesíti az Ön hozzáférését a Growser-hez";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Mégse";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "Cím";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave panel";
+"BravePanel" = "Growser panel";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave jutalmak";
+"BraveRewardsAdNotificationTitle" = "Growser jutalmak";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Megnyitás";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Jutalmak";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave jutalmak";
+"BraveRewardsTitle" = "Growser jutalmak";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "A Brave Keresés nem készít Önről profilt.";
+"braveSearchPromotion.bannerDescription" = "A Growser Keresés nem készít Önről profilt.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Talán később";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Támogassa a független és fokozott adatvédelmet nyújtó keresőket";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "A Brave kereső kipróbálása";
+"braveSearchPromotion.bannerTryButtonTitle" = "A Growser kereső kipróbálása";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Talán később";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Ha ez a webhely hibásnak tűnik, próbálja ki a Pajzsok funkciót";
 
 /* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave védelem";
+"BraveShieldsStatusTitle" = "Growser védelem";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
 "BraveShieldsStatusValueDown" = "Lefelé";
@@ -278,10 +278,10 @@
 "BraveShieldsStatusValueUp" = "Fel";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Koppintson duplán a Brave pajzsok átkapcsolásához";
+"BraveShieldsToggleHint" = "Koppintson duplán a Growser pajzsok átkapcsolásához";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Growser Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Nyelv kiválasztása";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Keresés ";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave fordítás";
+"BraveTranslate.settingsMenuTitle" = "Growser fordítás";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave fordítás";
+"BraveTranslate.settingsScreenTitle" = "Growser fordítás";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Ha engedélyezi a Brave Translate-et, akkor az automatikusan felismeri az oldal aktuális nyelvét, és megjeleníti a fordítás gombot az URL sávban.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Ha engedélyezi a Growser Translate-et, akkor az automatikusan felismeri az oldal aktuális nyelvét, és megjeleníti a fordítás gombot az URL sávban.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Fordítás engedélyezve";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Böngészőzár";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Oldja fel a Brave feloldását Touch ID, Face ID vagy rendszerjelszó segítségével.";
+"BrowserLockDescription" = "Oldja fel a Growser feloldását Touch ID, Face ID vagy rendszerjelszó segítségével.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Böngészési előzmények";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "A címsáv, a lapok, a könyvjelzők és az egyéb eszközök áthelyezése a böngésző aljára.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "A Brave-lapsáv testreszabása";
+"callout.bottomBarCalloutTitle" = "A Growser-lapsáv testreszabása";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Szerezze be a Brave-adatvédelmet számítógépén vagy táblagépén, és szinkronizálja a könyvjelzőket és a bővítményeket az eszközök között.";
+"callout.privacyEverywhereCalloutDescription" = "Szerezze be a Growser-adatvédelmet számítógépén vagy táblagépén, és szinkronizálja a könyvjelzőket és a bővítményeket az eszközök között.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Szinkronizálás most";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Beállítások megnyitása";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Nyiss meg minden hivatkozást Brave-ben, hogy vigyázz az adataidra.";
+"defaultBrowserCallout.introPrimaryText" = "Nyiss meg minden hivatkozást Growser-ben, hogy vigyázz az adataidra.";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "A Brave-védelem blokkolja a követőket és reklámokat, menti az adatokat, és időt takarít meg Önnek minden felkeresett oldalon";
+"defaultBrowserCallout.introSecondaryText" = "A Growser-védelem blokkolja a követőket és reklámokat, menti az adatokat, és időt takarít meg Önnek minden felkeresett oldalon";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Nyissa meg a Beállításokat, koppintson az Alapértelmezett böngészőalkalmazásra, majd válassza ki a Brave-et.";
+"defaultBrowserCallout.introTertiaryText" = "Nyissa meg a Beállításokat, koppintson az Alapértelmezett böngészőalkalmazásra, majd válassza ki a Growser-et.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "A Brave beállítása alapértelmezett böngészőként";
+"defaultBrowserCallout.notificationBody" = "A Growser beállítása alapértelmezett böngészőként";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Használja ki a Brave által nyújtott védelmet minden hivatkozásnál";
+"defaultBrowserCallout.notificationTitle" = "Használja ki a Growser által nyújtott védelmet minden hivatkozásnál";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Alapértelmezett böngésző kiemelésének bezárása";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Brave alapértelmezett";
+"defaultThemeName" = "Growser alapértelmezett";
 
 /* No comment provided by engineer. */
 "Delete" = "Törlés";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Adja meg a mappa nevét";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "A(z) %1$@ általában titkosítást használ adatai védelme érdekében. Amikor a Brave megpróbált csatlakozni a(z) %2$@ oldalhoz, az szokatlan és hibás hitelesítő adatokat küldött vissza. Ez olyankor fordulhat elő, ha egy hacker a(z) %3$@-nak adja ki magát, vagy egy wifi bejelentkezési képernyő megszakítja a kapcsolatot. Adatai továbbra is biztonságban vannak, mert a Brave leállította a kapcsolatot, mielőtt adatcsere történt volna.<br />Jelenleg nem keresheti fel a(z) %4$@ weboldalt, mert az tanúsítványrögzítést alkalmaz. A hálózati hibák és támadások általában átmenetiek, így az oldal később valószínűleg működni fog.";
+"ErrorPagesAdvancedErrorPinningDetails" = "A(z) %1$@ általában titkosítást használ adatai védelme érdekében. Amikor a Growser megpróbált csatlakozni a(z) %2$@ oldalhoz, az szokatlan és hibás hitelesítő adatokat küldött vissza. Ez olyankor fordulhat elő, ha egy hacker a(z) %3$@-nak adja ki magát, vagy egy wifi bejelentkezési képernyő megszakítja a kapcsolatot. Adatai továbbra is biztonságban vannak, mert a Growser leállította a kapcsolatot, mielőtt adatcsere történt volna.<br />Jelenleg nem keresheti fel a(z) %4$@ weboldalt, mert az tanúsítványrögzítést alkalmaz. A hálózati hibák és támadások általában átmenetiek, így az oldal később valószínűleg működni fog.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "A szerver nem tudta igazolni, hogy az valóban a(z) %@; biztonsági tanúsítványa nem megbízható az eszköze operációs rendszere számára. Ezt okozhatja helytelen konfiguráció, vagy az, hogy egy hacker megpróbálja lehallgatni a kapcsolatát.";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Linkelőnézet elrejtése";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Brave Rewards ikon elrejtése";
+"HideRewardsIcon" = "Growser Rewards ikon elrejtése";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Elrejti a Brave jutalmak ikont, ha a Brave jutalmak nincs engedélyezve";
+"HideRewardsIconSubtitle" = "Elrejti a Growser jutalmak ikont, ha a Growser jutalmak nincs engedélyezve";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Előzmények";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Automatikusan átirányítja az NPR-hivatkozásokat a szöveges verziójukra (a text.npr.org címen).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Brave-támogatás";
+"ntp.braveSupportFavoriteTitle" = "Growser-támogatás";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Tokenek igénylése";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "A Brave-ben való böngészéssel a következőt szerezte: %@.";
+"ntp.earningsReport" = "A Growser-ben való böngészéssel a következőt szerezte: %@.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Csak így tovább!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Szponzorált képek elrejtése";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "A szponzorált képek egyedi hátterek, amelyek az új böngészőfülek megnyitásakor jelennek meg. Ezek engedélyezése támogatja a Brave küldetését. [További információ](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "A szponzorált képek egyedi hátterek, amelyek az új böngészőfülek megnyitásakor jelennek meg. Ezek engedélyezése támogatja a Growser küldetését. [További információ](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Tudjon meg többet a Brave-jutalmakról";
+"ntp.learnMoreAboutRewards" = "Tudjon meg többet a Growser-jutalmakról";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Tudj meg többet a szponzorált képekről";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Böngészés közben pontokat szerezhet, és jutalmazhatja az alkotókat a nagyszerű tartalmakért.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "A Brave Ads megérkezett!";
+"OBAdsOptInTitle" = "A Growser Ads megérkezett!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "A Brave ennyi idő múlva fogja mutatni az első hirdetésed:";
+"OBAdsTitle" = "A Growser ennyi idő múlva fogja mutatni az első hirdetésed:";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Most készen áll az indulásra.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Csatlakozás";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Engedélyezze a Brave-nek, hogy ellenőrizze a vágólapomon a megfelelő hivatkozási kódot";
+"OBPrivacyConsentClipboardPermission" = "Engedélyezze a Growser-nek, hogy ellenőrizze a vágólapomon a megfelelő hivatkozási kódot";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Lehetséges, hogy letöltötte a Brave alkalmazást az ajánló támogatására. Az ajánló megtalálásához a Brave egyszeri ellenőrzést végez a vágólapon, hogy megtalálja a megfelelő ajánlókódot. Ez az ellenőrzés csak a kódra korlátozódik, és semmilyen más személyes adat nem kerül továbbításra. Ha leiratkozik, ajánlója nem kap jutalmakat a Brave-től.";
+"OBPrivacyConsentDetail" = "Lehetséges, hogy letöltötte a Growser alkalmazást az ajánló támogatására. Az ajánló megtalálásához a Growser egyszeri ellenőrzést végez a vágólapon, hogy megtalálja a megfelelő ajánlókódot. Ez az ellenőrzés csak a kódra korlátozódik, és semmilyen más személyes adat nem kerül továbbításra. Ha leiratkozik, ajánlója nem kap jutalmakat a Growser-től.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Ne engedélyezze ezt az ellenőrzést";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "és";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave jutalmak";
+"OBRewardsAgreementTitle" = "Growser jutalmak";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "A Brave privát hirdetésekre történő feliratkozással minden megtekintett hirdetéssel támogatja a kiadókat és a tartalomkészítőket.";
+"OBRewardsDetail" = "A Growser privát hirdetésekre történő feliratkozással minden megtekintett hirdetéssel támogatja a kiadókat és a tartalomkészítőket.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Szerezzen tokeneket, és jutalmazza az alkotókat a nagyszerű tartalmakért böngészés közben.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Adatvédelmi szabályzat";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave jutalmak";
+"OBRewardsTitle" = "Growser jutalmak";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Mentés";
@@ -1202,13 +1202,13 @@
 "OBSearchEngineDetail" = "Válasszon alapértelmezett keresőmotort";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Üdvözöljük a Brave böngészőben";
+"OBSearchEngineTitle" = "Üdvözöljük a Growser böngészőben";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blokkolja az adatvédelmet megsértő nyomkövetőket, így anélkül böngészhet, hogy követnék az interneten";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave védelem";
+"OBShieldsTitle" = "Growser védelem";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Mutassa meg nekem";
@@ -1220,16 +1220,16 @@
 "onboarding.linkReceiptButton" = "Kapcsolja össze a VPN-előfizetését";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Brave VPN-előfizetésével akár 10 eszközre is kiterjeszthető a védelem, Androidon, iOS-en és asztali számítógépeken. Ehhez egyszerűen kapcsolja össze App Store-előfizetését Brave-fiókjával.";
+"onboarding.linkReceiptDescription" = "Growser VPN-előfizetésével akár 10 eszközre is kiterjeszthető a védelem, Androidon, iOS-en és asztali számítógépeken. Ehhez egyszerűen kapcsolja össze App Store-előfizetését Growser-fiókjával.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Bővítse ki a Brave tűzfal + VPN-védelmét";
+"onboarding.linkReceiptTitle" = "Bővítse ki a Growser tűzfal + VPN-védelmét";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "A trackerek és hirdetések letiltásával& a webhelyek kevesebb adatot használnak fel, és sokkal gyorsabban töltődnek be.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "A Brave-vel más:\nNincsenek hirdetések. Nincsenek nyomkövetők. Sokkal gyorsabban töltenek be az oldalak.";
+"onboarding.omniboxOnboardingPopOverDescription" = "A Growser-vel más:\nNincsenek hirdetések. Nincsenek nyomkövetők. Sokkal gyorsabban töltenek be az oldalak.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Adja meg a weboldal nevét vagy URL-jét";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Összes megnyitása (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "A Brave jutalmak beállításainak megnyitása";
+"OpenBraveRewardsSettings" = "A Growser jutalmak beállításainak megnyitása";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Ismeretlen hiba történt a Fájlok alkalmazás Letöltések mappájának megnyitásakor.";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "A kezdéshez állítson be egy szinkronizálási láncot, és kapcsolja be a „Nyitott lapok\" lehetőséget a Szinkronizálási beállításokban.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "A Beállításokban kezelheti, hogy mit szinkronizáljon a Brave.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "A Beállításokban kezelheti, hogy mit szinkronizáljon a Growser.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Nincsenek megjeleníthető aktív munkamenetek a többi eszközről.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Ezen a területen láthatók a más eszközökön megnyitott Brave-lapok";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Ezen a területen láthatók a más eszközökön megnyitott Growser-lapok";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Elrejtés most";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Folytatás";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Ezek a privát válaszok segítenek a Brave-nek megbecsülni bizonyos funkciók használatát, valamint fejleszteni a szolgáltatást.";
+"p3a.settingSubtitle" = "Ezek a privát válaszok segítenek a Growser-nek megbecsülni bizonyos funkciók használatát, valamint fejleszteni a szolgáltatást.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Az adatvédelmet megőrző termékelemzés (P3A) engedélyezése";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Privát böngészés állandó visszaállítása";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Lehetővé teszi a Brave számára, hogy akkor is visszaállítsa a privát böngészést, amikor Ön bezárja/újra megnyitja az alkalmazást";
+"PersistentPrivateBrowsingAlertMessage" = "Lehetővé teszi a Growser számára, hogy akkor is visszaállítsa a privát böngészést, amikor Ön bezárja/újra megnyitja az alkalmazást";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Privát lapok visszaállítása";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Hozzáadja ezt a videót a lejátszási listájához?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Hozzáadás a Brave lejátszási listához";
+"playList.addToPlayListAlertTitle" = "Hozzáadás a Growser lejátszási listához";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Lejátszási lehetőségek";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Beállítások";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave lejátszási lista";
+"playlist.carplayTitle" = "Growser lejátszási lista";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Lejátszási lista módosítása";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Hiba történt az erőforrás betöltésekor!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "A böngészőn belül hozzáadhat elemeket a Brave lejátszási listához";
+"playList.noItemLabelDetailLabel" = "A böngészőn belül hozzáadhat elemeket a Growser lejátszási listához";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Nincsenek elérhető tételek";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Visszavonás";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Hozzáad egy lejátszási lista gombot a Brave böngésző címsora mellé. Ez a gomb gyors hozzáférést biztosít a lejátszási lista megnyitásához, illetve a média hozzáadásához vagy eltávolításához.";
+"playlist.urlBarButtonOptionFooter" = "Hozzáad egy lejátszási lista gombot a Growser böngésző címsora mellé. Ez a gomb gyors hozzáférést biztosít a lejátszási lista megnyitásához, illetve a média hozzáadásához vagy eltávolításához.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Gyorselérési gomb engedélyezése";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Előző hét";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "A Brave-védelem **%2$lld** oldalon blokkolta a következőt: **%1$@**";
+"privacyHub.mostFrequentTrackerAndAdBody" = "A Growser-védelem **%2$lld** oldalon blokkolta a következőt: **%1$@**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Leggyakoribb tracker& hirdetés";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Értesítések bekapcsolása";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Összefoglaló a Brave védelmi műveleteiről az Ön e heti online tevékenysége során.";
+"privacyHub.notificationMessage" = "Összefoglaló a Growser védelmi műveleteiről az Ön e heti online tevékenysége során.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Heti adatvédelmi jelentés";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Nyomkövető vagy hirdetés";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave-tűzfal + VPN-figyelmeztetések";
+"privacyHub.vpnAlertsHeader" = "Growser-tűzfal + VPN-figyelmeztetések";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Tűzfal + VPN";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "A Csak privát böngészés mód bezárja az összes aktuális lapot, és kijelentkezteti Önt az összes webhelyről.";
 
 /* Private tab details */
-"PrivateTabBody" = "A Brave nem menti el a privát lapokat, de ezek nem teszik Önt névtelenné az interneten. A privát lapon meglátogatott webhelyek nem jelennek meg az előzményekben, és a cookie-jaik mindig eltűnnek, amikor bezárja őket – a Brave-ben nem marad nyomuk. A letöltések azonban mentésre kerülnek.\nMobilszolgáltatója (vagy annak a Wi-Fi-hálózatnak vagy VPN-nek a tulajdonosa, amelyhez csatlakozik) láthatja, hogy mely webhelyeket keresi fel, és ezek a webhelyek megtudják nyilvános IP-címét, még a Privát lapokon is.";
+"PrivateTabBody" = "A Growser nem menti el a privát lapokat, de ezek nem teszik Önt névtelenné az interneten. A privát lapon meglátogatott webhelyek nem jelennek meg az előzményekben, és a cookie-jaik mindig eltűnnek, amikor bezárja őket – a Growser-ben nem marad nyomuk. A letöltések azonban mentésre kerülnek.\nMobilszolgáltatója (vagy annak a Wi-Fi-hálózatnak vagy VPN-nek a tulajdonosa, amelyhez csatlakozik) láthatja, hogy mely webhelyeket keresi fel, és ezek a webhelyek megtudják nyilvános IP-címét, még a Privát lapokon is.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "A Privát lapok használata csak azt változtatja meg, amit a Brave az Ön eszközén végez, mások viselkedését nem.\n\nA webhelyek mindig megismerik az Ön IP-címét, amikor meglátogatja őket. Ebből gyakran kitalálják, hogy nagyjából hol van – jellemzően a várost. Néha ez a helymeghatározás sokkal pontosabb lehet. A webhelyek mindent tudnak, amit kifejezetten elmond nekik, például a keresési kifejezéseket. Ha bejelentkezik egy webhelyre, tudni fogják, hogy Ön a fiók tulajdonosa. A Privát lapok bezárásakor továbbra is ki lesz jelentkezve, mert a Brave eldobja a cookie-t, amely bejelentkezve tartja Önt.\n\nBárki, aki csatlakoztatja Önt az internethez (az Ön internetszolgáltatója), láthatja az összes hálózati tevékenységét. Ez gyakran az Ön mobilszolgáltatója. Ha Wi-Fi hálózathoz csatlakozik, akkor ez a hálózat tulajdonosa, ha pedig VPN-t használ, akkor az, aki a VPN-t futtatja. Internetszolgáltatója láthatja, hogy mely webhelyeket keresi fel, amikor felkeresi azokat. Ha ezek a webhelyek HTTPS-t használnak, akkor nem tehetnek többet, mint megtippelik, hogy mit csinál ezeken a webhelyeken. Viszont ha egy webhely csak HTTP-t használ, akkor az internetszolgáltató mindent láthat: a keresési kifejezéseket, az olvasott oldalakat és a követett linkeket.\n\nHa egy munkáltató kezeli az eszközt, akkor azt is nyomon követheti, hogy Ön mit csinál vele. A Privát lapok használata valószínűleg nem akadályozza meg őket abban, hogy tudják, mely webhelyeket kereste fel. Valaki más, aki hozzáfér az eszközéhez, szintén telepíthetett olyan szoftvert, amely figyeli az Ön tevékenységét, és a Privát lapok sem védenek meg ettől.";
+"PrivateTabDetails" = "A Privát lapok használata csak azt változtatja meg, amit a Growser az Ön eszközén végez, mások viselkedését nem.\n\nA webhelyek mindig megismerik az Ön IP-címét, amikor meglátogatja őket. Ebből gyakran kitalálják, hogy nagyjából hol van – jellemzően a várost. Néha ez a helymeghatározás sokkal pontosabb lehet. A webhelyek mindent tudnak, amit kifejezetten elmond nekik, például a keresési kifejezéseket. Ha bejelentkezik egy webhelyre, tudni fogják, hogy Ön a fiók tulajdonosa. A Privát lapok bezárásakor továbbra is ki lesz jelentkezve, mert a Growser eldobja a cookie-t, amely bejelentkezve tartja Önt.\n\nBárki, aki csatlakoztatja Önt az internethez (az Ön internetszolgáltatója), láthatja az összes hálózati tevékenységét. Ez gyakran az Ön mobilszolgáltatója. Ha Wi-Fi hálózathoz csatlakozik, akkor ez a hálózat tulajdonosa, ha pedig VPN-t használ, akkor az, aki a VPN-t futtatja. Internetszolgáltatója láthatja, hogy mely webhelyeket keresi fel, amikor felkeresi azokat. Ha ezek a webhelyek HTTPS-t használnak, akkor nem tehetnek többet, mint megtippelik, hogy mit csinál ezeken a webhelyeken. Viszont ha egy webhely csak HTTP-t használ, akkor az internetszolgáltató mindent láthat: a keresési kifejezéseket, az olvasott oldalakat és a követett linkeket.\n\nHa egy munkáltató kezeli az eszközt, akkor azt is nyomon követheti, hogy Ön mit csinál vele. A Privát lapok használata valószínűleg nem akadályozza meg őket abban, hogy tudják, mely webhelyeket kereste fel. Valaki más, aki hozzáfér az eszközéhez, szintén telepíthetett olyan szoftvert, amely figyeli az Ön tevékenységét, és a Privát lapok sem védenek meg ettől.";
 
 /* Private tab information link */
 "PrivateTabLink" = "További információ a privát lapokról.";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Fordítás engedélyezése";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Értékeld a Brave-et";
+"RateBrave" = "Értékeld a Growser-et";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Szövegméret növelése";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Válasszon ki egy lehetőséget";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Jelezze a Brave fejlesztőinek, ha ez a webhely nem működik megfelelően:";
+"ReportBrokenSiteBody1" = "Jelezze a Growser fejlesztőinek, ha ez a webhely nem működik megfelelően:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Megjegyzés: A Brave szerverekre küldött jelentés tartalmazza a webhely címét, a Brave verziószámát, a Shields beállításokat, a VPN állapotát és a nyelvi beállításokat.";
+"ReportBrokenSiteBody2" = "Megjegyzés: A Growser szerverekre küldött jelentés tartalmazza a webhely címét, a Growser verziószámát, a Shields beállításokat, a VPN állapotát és a nyelvi beállításokat.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Elküldés";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "Nem";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "A Brave sajnos összeomlott, vagy nem záródott be megfelelően.\nVisszaállítja a korábbi lapokat?";
+"RestoreTabOnCrashAlertMessage" = "A Growser sajnos összeomlott, vagy nem záródott be megfelelően.\nVisszaállítja a korábbi lapokat?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "A Brave váratlanul bezárult.";
+"RestoreTabOnCrashAlertTitle" = "A Growser váratlanul bezárult.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "A bekapcsolással segíthet támogatni a Brave-et és a BAT közösséget.";
+"rewards.disabledBody" = "A bekapcsolással segíthet támogatni a Growser-et és a BAT közösséget.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "A Brave-jutalmak használata segít támogatni a Brave-et és a BAT közösséget.";
+"rewards.disabledStatusBody" = "A Growser-jutalmak használata segít támogatni a Growser-et és a BAT közösséget.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Ön segít támogatni a Brave-et és a BAT-közösséget.";
+"rewards.enabledBody" = "Ön segít támogatni a Growser-et és a BAT-közösséget.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Köszönjük, hogy segít támogatni a Brave-et és a BAT közösséget!";
+"rewards.enabledStatusBody" = "Köszönjük, hogy segít támogatni a Growser-et és a BAT közösséget!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Segítsen támogatni a Brave-et és a BAT közösséget a Brave-jutalmak engedélyezése és a Brave hirdetések megtekintése révén.";
+"rewards.settingsToggleMessage" = "Segítsen támogatni a Growser-et és a BAT közösséget a Growser-jutalmak engedélyezése és a Growser hirdetések megtekintése révén.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Brave jutalmak engedélyezése";
+"rewards.settingsToggleTitle" = "Growser jutalmak engedélyezése";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Ez a Brave tartalomkészítők által ellenőrzött tartalomkészítő";
+"rewards.supportingPublisher" = "Ez a Growser tartalomkészítők által ellenőrzött tartalomkészítő";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Azon tartalomkészítők száma, akiket Ön segít támogatni ebben a hónapban.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Hozzájárulás összege";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Brave-tokenek";
+"RewardsInternalsContributionProcessorBraveTokens" = "Growser-tokenek";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Nincs";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "Szeretné engedélyezni a keresési javaslatokat?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Keresés a Brave-vel";
+"SearchWithBrave" = "Keresés a Growser-vel";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Küldés";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Elküldi az összeomlási jelentést, hogy a Brave kijavíthassa a problémát?";
+"SendCrashReportAlertMessage" = "Elküldi az összeomlási jelentést, hogy a Growser kijavíthassa a problémát?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Hoppá! A Brave összeomlott";
+"SendCrashReportAlertTitle" = "Hoppá! A Growser összeomlott";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Jelentés küldése";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "A Brave mostantól beállítható alapértelmezett böngészőként iOS rendszeren. Koppintson ide a beállítások megnyitásához.";
+"setDefaultBrowserCalloutTitle" = "A Growser mostantól beállítható alapértelmezett böngészőként iOS rendszeren. Koppintson ide a beállítások megnyitásához.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Beállítás alapértelmezett böngészőként";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Lapok bezárása";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Annak engedélyezése, hogy a Brave automatikusan bezárja a közelmúltban nem megtekintett lapokat.";
+"settings.autocloseTabsSettingFooter" = "Annak engedélyezése, hogy a Growser automatikusan bezárja a közelmúltban nem megtekintett lapokat.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Zavaró elemek letiltása a YouTube-on";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Média";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "YouTube-hivatkozások megnyitása a Brave-ben";
+"settings.openYouTubeInBrave" = "YouTube-hivatkozások megnyitása a Growser-ben";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Böngészési idő engedélyezése";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Minőségi beállítások";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Ez a privát értesítés lehetővé teszi a Brave számára, hogy megbecsülje az aktív felhasználók számát.";
+"settings.sendUsagePingDescription" = "Ez a privát értesítés lehetővé teszi a Growser számára, hogy megbecsülje az aktív felhasználók számát.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Napi használatról szóló értesítések automatikus küldése a Brave-be";
+"settings.sendUsagePingTitle" = "Napi használatról szóló értesítések automatikus küldése a Growser-be";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Engedélyezi, hogy a Brave privát kérdőívekre mutató linkeket jelenítsen meg az új lapon. Ezek segítenek a funkciók fejlesztésében és a hirdetések hatékonyságának mérésében. [Tudjon meg többet](%@)";
+"settings.surveyPanelistDescription" = "Engedélyezi, hogy a Growser privát kérdőívekre mutató linkeket jelenítsen meg az új lapon. Ezek segítenek a funkciók fejlesztésében és a hirdetések hatékonyságának mérésében. [Tudjon meg többet](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Brave felmérések engedélyezése";
+"settings.surveyPanelistTitle" = "Growser felmérések engedélyezése";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Ossza meg a hírt";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "A Brave-védelem épp segített megvédeni az Ön adatait.";
+"shieldEducation.trackerAdWarningSubTitle" = "A Growser-védelem épp segített megvédeni az Ön adatait.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Gratulálunk, Ön igazán különleges!";
@@ -2555,13 +2555,13 @@
 "shieldEducation.videoAdBlockTitle" = "A reklámok blokkolva vannak, míg videót nézel ezen az oldalon.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Brave pajzsok globális alapbeállításai";
+"ShieldsDefaults" = "Growser pajzsok globális alapbeállításai";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Ezek az alapértelmezett Shields beállítások új oldalak esetén. Ezek módosítása nem lesz hatással a meglévő oldalankénti beállításokra.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "A Brave adatvédelmi rendszere nélkül böngészel. Nem működik megfelelően ha be van kapcsolva Shields?";
+"ShieldsDownDisclaimer" = "A Growser adatvédelmi rendszere nélkül böngészel. Nem működik megfelelően ha be van kapcsolva Shields?";
 
 /* shields overview message */
 "ShieldsOverview" = "A Webhelyvédelem segítségével szabályozhatja, hogy a hirdetések és a nyomkövetők blokkolva legyenek-e az egyes felkeresett webhelyeken. Ha egy adott webhelyen szeretne hirdetéseket látni, itt engedélyezheti őket.";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "QR-kód beolvasása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "A Brave-hírek megnyitása és a mai nap legfontosabb híreinek megtekintése";
+"shortcuts.activityTypeBraveNewsDescription" = "A Growser-hírek megnyitása és a mai nap legfontosabb híreinek megtekintése";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Új böngészőlap megnyitása és az összes privát böngészési előzményadat törlése";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Böngészési előzmények törlése";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "A Brave böngészési előzményeinek törlése";
+"shortcuts.activityTypeClearHistoryTitle" = "A Growser böngészési előzményeinek törlése";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Új böngészőlap megnyitása és a VPN engedélyezése";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "VPN engedélyezése";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "A Brave böngésző megnyitása és a VPN engedélyezése";
+"shortcuts.activityTypeEnableVPNTitle" = "A Growser böngésző megnyitása és a VPN engedélyezése";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Új privát lap megnyitása";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "A Könyvjelzők megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "A Brave böngésző könyvjelzőinek megnyitása";
+"shortcuts.activityTypeOpenBookmarksTitle" = "A Growser böngésző könyvjelzőinek megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "A Brave-hírek megnyitása";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "A Growser-hírek megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "A Brave-hírek megnyitása";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "A Growser-hírek megnyitása";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "A Böngészési előzmények képernyő megnyitása";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "A Böngészési előzmények megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "A Brave böngészési előzményeinek megnyitása";
+"shortcuts.activityTypeOpenHistoryListTitle" = "A Growser böngészési előzményeinek megnyitása";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "A lejátszási listán szereplő videók lejátszásának megkezdése";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Lejátszási lista megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "A más eszközökön megnyitott Brave-lapok megnyitása";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "A más eszközökön megnyitott Growser-lapok megnyitása";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Más eszközökön nyitott lapok megnyitása";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Más eszközökön nyitott lapok megnyitása";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Biztonságos webes keresés megkezdése a Brave segítségével";
+"shortcuts.activityTypeTabDescription" = "Biztonságos webes keresés megkezdése a Growser segítségével";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Könyvjelző webhelyének megnyitása";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Webhely megnyitása";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ez a lehetőség megnyitja a Brave beállításait. A Siri beállításainak módosításához válassza a „Siri& keresés” menüpontot, és szabja személyre a beállításokat.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ez a lehetőség megnyitja a Growser beállításait. A Siri beállításainak módosításához válassza a „Siri& keresés” menüpontot, és szabja személyre a beállításokat.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Beállítások megnyitása";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Böngészési előzmények törlése";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Parancsikonok használata a Brave-VPN engedélyezéséhez a Siri – Voice Assistant segítségével";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Parancsikonok használata a Growser-VPN engedélyezéséhez a Siri – Voice Assistant segítségével";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "VPN engedélyezése";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "A Könyvjelzők megnyitása";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Parancsikonok használata egy új lap megnyitásához& a Brave-hírfolyam megjelenítéséhez a Siri – Voice Assistant segítségével";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Parancsikonok használata egy új lap megnyitásához& a Growser-hírfolyam megjelenítéséhez a Siri – Voice Assistant segítségével";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "A Brave-hírek megnyitása";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "A Growser-hírek megnyitása";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Parancsikonok használata a Böngészési előzmények képernyő megnyitásához a Siri – Voice Assistant segítségével";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Webhely és pajzsok beállításai";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Köszönjük, hogy értesítette a Brave fejlesztőit arról, hogy valami hiba van az oldalon. Mindent megteszünk, hogy kijavítsuk!";
+"SiteReportedBody" = "Köszönjük, hogy értesítette a Growser fejlesztőit arról, hogy valami hiba van az oldalon. Mindent megteszünk, hogy kijavítsuk!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Köszönjük";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Védelmek";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Minden nap spórolok az adatforgalmon, amikor a Brave-vel böngészek az interneten.";
+"socialSharing.domainSpecificDataSavedTitle" = "Minden nap spórolok az adatforgalmon, amikor a Growser-vel böngészek az interneten.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Minden nap spórolok az adatforgalmon, amikor a Brave-vel böngészek az interneten.";
+"socialSharing.shareDescriptionTitle" = "Minden nap spórolok az adatforgalmon, amikor a Growser-vel böngészek az interneten.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Szabványos fül";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Szinkronizálási fiók törlése";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Ha törli a fiókját, azzal eltávolítja a Brave szerverein található titkosított adatait, és letiltja a Szinkronizálást az összes csatlakoztatott eszközén.";
+"sync.deleteAccountAlertDescriptionPart1" = "Ha törli a fiókját, azzal eltávolítja a Growser szerverein található titkosított adatait, és letiltja a Szinkronizálást az összes csatlakoztatott eszközén.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Az ezeken az eszközökön helyileg tárolt adatokat azonban ezúton nem törli.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Szinkronizálási fiók törlése";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Úgy tűnik, ezt a kódot a Brave régebbi verzióját használó eszközön hozták létre. Frissítsen a legújabb Brave-verzióra a másik eszközén, majd hozzon létre új szinkronizálási kódot.";
+"sync.deprecatedVersionError" = "Úgy tűnik, ezt a kódot a Growser régebbi verzióját használó eszközön hozták létre. Frissítsen a legújabb Growser-verzióra a másik eszközén, majd hozzon létre új szinkronizálási kódot.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Hiba történt a szinkronizálási láncban szereplő eszközök lekérése közben.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Úgy tűnik, az eszközt egy biztonsági mentésből állították vissza, ami problémát okozhat a Brave Sync működésében. A szinkronizálás folytatásához állítsa vissza, majd csatlakozzon újra a szinkronlánchoz.";
+"sync.deviceRestoreDetectedMessage" = "Úgy tűnik, az eszközt egy biztonsági mentésből állították vissza, ami problémát okozhat a Growser Sync működésében. A szinkronizálás folytatásához állítsa vissza, majd csatlakozzon újra a szinkronlánchoz.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Visszaállítás észlelve";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Készülék";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "A jelenleg szinkronizált adatok megmaradnak, de a Brave szinkronizálási gyorsítótárában lévő összes adat törlődik. Az eszközadatok ismételt szinkronizálásához új szinkronizálási láncot kell indítania.";
+"sync.removeLastDeviceMessage" = "A jelenleg szinkronizált adatok megmaradnak, de a Growser szinkronizálási gyorsítótárában lévő összes adat törlődik. Az eszközadatok ismételt szinkronizálásához új szinkronizálási láncot kell indítania.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Szinkronizálási lánc törlése";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Szinkronizálás eszközzel";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "A meglévő szinkronizált eszköz használatával nyissa meg a Brave beállításait, és kattintson a Beállítások -> Szinkronizálásra. Válassza az „Eszköz hozzáadása” lehetőséget, és olvassa be a képernyőn megjelenő kódot.";
+"sync.toDeviceDescription" = "A meglévő szinkronizált eszköz használatával nyissa meg a Growser beállításait, és kattintson a Beállítások -> Szinkronizálásra. Válassza az „Eszköz hozzáadása” lehetőséget, és olvassa be a képernyőn megjelenő kódot.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Nem lehet szinkronizálni ezt az eszközt";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Ez a kód érvénytelen. Ellenőrizze, hogy az eszköze idő- és időzóna-beállításai helyesek-e.";
 
 /* Sync settings welcome */
-"sync.welcome" = "A kezdéshez telepítsd minden szinkronizálni kívánt készülékre a Brave-et. Az összeláncolásukhoz indíts egy szinkronláncot, amellyel minden készülékedet biztonságosan összeláncolhatod.";
+"sync.welcome" = "A kezdéshez telepítsd minden szinkronizálni kívánt készülékre a Growser-et. Az összeláncolásukhoz indíts egy szinkronláncot, amellyel minden készülékedet biztonságosan összeláncolhatod.";
 
 /* Word count title */
 "sync.wordCount" = "Szavak száma: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Nem hagy nyomot a készülékén";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "A Brave VPN titkosítja és védi az online tevékenységét a Brave böngészőn kívül is.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "A Growser VPN titkosítja és védi az online tevékenységét a Growser böngészőn kívül is.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Growser VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Felhívjuk figyelmét, hogy – még privát ablak használata esetén is – böngészési tevékenysége látható maradhat az internetszolgáltatója, a hálózati megfigyelők vagy a munkaadója számára (ha munkahelyi eszközt vagy hálózatot használ).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Billentyűzet automatikus megnyitása";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Az Ask Brave és a Brave keresés linkjeinek megnyitása előnézeti lapokon";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Az Ask Growser és a Growser keresés linkjeinek megnyitása előnézeti lapokon";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Gyorsnézeti lapok engedélyezése";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Megosztás...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Oszd meg a Brave-et barátaiddal!";
+"themeQRCodeShareTitle" = "Oszd meg a Growser-et barátaiddal!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Automatikus";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Elnézést, ez a csatornacím nem rendelkezik tartalommal.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Forrás hozzáadása a Brave-hírekhez";
+"today.addSourceShareTitle" = "Forrás hozzáadása a Growser-hírekhez";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Elérhető RSS-hírcsatornák";
 
 /* The name of the feature */
-"today.braveToday" = "Brave News";
+"today.braveToday" = "Growser News";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Hírek";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Ajánlatok";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "A Brave-hírekben innentől nem jelenik meg tartalom a következőtől: %@";
+"today.disabledAlertBody" = "A Growser-hírekben innentől nem jelenik meg tartalom a következőtől: %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Kikapcsolva";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Tartalom engedélyezése innen: %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "A Brave-hírekkel jelenleg problémák tapasztalhatók. Próbálja újra.";
+"today.errorGeneralBody" = "A Growser-hírekkel jelenleg problémák tapasztalhatók. Próbálja újra.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Hoppá…";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Nem biztonságos források – Saját felelősségére adja hozzá";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Kövesse kedvenc forrásait egyetlen hírfolyamban. Csak nyisson meg egy lapot a Brave-ben, görgessen le, és… íme!\nA Brave-hírek privát, anonimizált hirdetésekkel támogatott szolgáltatás.";
+"today.introCardBody" = "Kövesse kedvenc forrásait egyetlen hírfolyamban. Csak nyisson meg egy lapot a Growser-ben, görgessen le, és… íme!\nA Growser-hírek privát, anonimizált hirdetésekkel támogatott szolgáltatás.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "A Brave-hírek bekapcsolásával egyetlen történetről sem marad le";
+"today.introCardTitle" = "A Growser-hírek bekapcsolásával egyetlen történetről sem marad le";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "A Brave News mutatása";
+"today.isEnabledToggleLabel" = "A Growser News mutatása";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "További tudnivalók az adatokról";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "További Brave ajánlatok";
+"today.moreBraveOffers" = "További Growser ajánlatok";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Nincs internetkapcsolat";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Promotált";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Értékelje a Brave-et az App Store-ban";
+"today.rateBraveCardActionSheetTitle" = "Értékelje a Growser-et az App Store-ban";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Elrejtés";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Értékeld a Brave-et";
+"today.rateBraveCardRateActionTitle" = "Értékeld a Growser-et";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Mondja el, mit gondol!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Tetszik a Brave?";
+"today.rateBraveCardTitle" = "Tetszik a Growser?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Frissítés";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Javasolt";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "A Brave News bekapcsolása";
+"today.turnOnBraveToday" = "A Growser News bekapcsolása";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Leiratkozás";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Megtekintés itt: %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "A névtelen hangalapú keresés használatához engedélyezze a mikrofon-hozzáférést a Brave számára az iOS rendszerbeállításaiban.";
+"voice.search.microphone.description.required" = "A névtelen hangalapú keresés használatához engedélyezze a mikrofon-hozzáférést a Growser számára az iOS rendszerbeállításaiban.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Mikrofon-hozzáférés szükséges";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "A Brave nem tárolja és nem osztja meg hangalapú kereséseit.";
+"voice.search.screen.disclaimer" = "A Growser nem tárolja és nem osztja meg hangalapú kereséseit.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Pénztárca létrehozási dátuma";

@@ -5,7 +5,7 @@
 
 import Combine
 import Foundation
-import GuardianConnect
+// Growser-280: no GuardianConnect.
 import NetworkExtension
 import Preferences
 import SwiftUI

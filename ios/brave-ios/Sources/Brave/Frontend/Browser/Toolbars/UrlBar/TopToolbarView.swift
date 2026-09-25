@@ -260,6 +260,7 @@ class TopToolbarView: UIView, ToolbarProtocol {
   private(set) lazy var rewardsButton: RewardsButton = {
     let button = RewardsButton()
     button.addTarget(self, action: #selector(didTapBraveRewardsButton), for: .touchUpInside)
+    button.isHidden = true  // Growser-290: Rewards is out; nothing shows it again.
     return button
   }()
 

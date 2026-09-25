@@ -13,19 +13,16 @@
 #include "base/functional/bind.h"
 #include "base/notreached.h"
 #include "base/strings/sys_string_conversions.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat_associated_content_page_fetcher.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat_tab_helper.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
+#include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/serp_metrics/serp_metrics_feature.h"
-#include "brave/ios/browser/ai_chat/ai_chat_ui_handler_bridge_holder.h"
-#include "brave/ios/browser/ai_chat/tab_data_web_state_observer.h"
-#include "brave/ios/browser/ai_chat/tab_tracker_service_factory.h"
 #include "brave/ios/browser/api/web_view/autofill/brave_autofill_controller.h"
 #include "brave/ios/browser/api/web_view/autofill/brave_web_view_autofill_client.h"
 #include "brave/ios/browser/api/web_view/brave_web_frame_internal.h"
 #include "brave/ios/browser/api/web_view/passwords/brave_web_view_password_manager_client.h"
-#include "brave/ios/browser/brave_ads/ads_tab_helper.h"
 #include "brave/ios/browser/brave_search/brave_search_ad_results_javascript_feature.h"
 #include "brave/ios/browser/brave_search/brave_search_make_default_tab_helper.h"
 #include "brave/ios/browser/brave_search/brave_search_make_default_tab_helper_bridge.h"
@@ -35,13 +32,10 @@
 #include "brave/ios/browser/brave_shields/request_blocking/request_blocking_tab_helper.h"
 #include "brave/ios/browser/brave_shields/scriptlets/scriptlets_tab_helper.h"
 #include "brave/ios/browser/brave_talk/brave_talk_tab_helper_bridge.h"
-#include "brave/ios/browser/brave_wallet/cardano_provider_tab_helper.h"
-#include "brave/ios/browser/brave_wallet/ethereum_provider_tab_helper.h"
 #include "brave/ios/browser/favicon/brave_ios_web_favicon_driver.h"
 #include "brave/ios/browser/serp_metrics/serp_metrics_tab_helper.h"
 #include "brave/ios/browser/ui/web_view/features.h"
 #include "brave/ios/browser/ui/webui/brave_account/dialog_mode_holder.h"
-#include "brave/ios/browser/ui/webui/brave_wallet/wallet_page_handler_bridge_holder.h"
 #include "brave/ios/browser/web/document_fetch/document_fetch_javascript_feature.h"
 #include "brave/ios/browser/web/force_paste/force_paste_javascript_feature.h"
 #include "brave/ios/browser/web/logins/logins_tab_helper.h"
@@ -73,6 +67,14 @@
 #include "ios/chrome/browser/language/model/language_model_manager_factory.h"
 #include "ios/chrome/browser/language/model/url_language_histogram_factory.h"
 #include "ios/chrome/browser/passwords/model/ios_chrome_account_password_store_factory.h"
+
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
+#include "brave/components/ai_chat/ios/browser/ai_chat_associated_content_page_fetcher.h"
+#include "brave/components/ai_chat/ios/browser/ai_chat_tab_helper.h"
+#include "brave/ios/browser/ai_chat/ai_chat_ui_handler_bridge_holder.h"
+#include "brave/ios/browser/ai_chat/tab_data_web_state_observer.h"
+#include "brave/ios/browser/ai_chat/tab_tracker_service_factory.h"
+#endif
 #include "ios/chrome/browser/passwords/model/ios_chrome_profile_password_store_factory.h"
 #include "ios/chrome/browser/passwords/model/password_controller.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
@@ -102,6 +104,16 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
 #include "brave/ios/browser/brave_talk/brave_talk_tab_helper.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/ios/browser/brave_ads/ads_tab_helper.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
+#include "brave/ios/browser/brave_wallet/cardano_provider_tab_helper.h"
+#include "brave/ios/browser/brave_wallet/ethereum_provider_tab_helper.h"
+#include "brave/ios/browser/ui/webui/brave_wallet/wallet_page_handler_bridge_holder.h"
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
@@ -393,32 +405,40 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
   [super attachSecurityInterstitialHelpersToWebStateIfNecessary];
   AttachTabHelpers(self.webState);
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::UIHandlerBridgeHolder::CreateForWebState(self.webState);
   ai_chat::UIHandlerBridgeHolder::FromWebState(self.webState)
       ->SetBridge(self.aiChatUIHandler);
   ai_chat::AIChatTabHelper::CreateForWebState(self.webState);
   ai_chat::AIChatTabHelper::FromWebState(self.webState)
       ->SetPageFetcher(self.aiChatUIHandler);
+#endif
 
   brave_account::DialogModeHolder::CreateForWebState(self.webState);
   brave_account::DialogModeHolder::FromWebState(self.webState)
       ->SetDialogMode(static_cast<brave_account::mojom::DialogMode>(
           self.braveAccountDialogMode));
 
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
   brave_wallet::PageHandlerBridgeHolder::CreateForWebState(self.webState);
   brave_wallet::PageHandlerBridgeHolder::FromWebState(self.webState)
       ->SetBridge(self.walletPageHandler);
+#endif
 
   ProfileIOS* profile =
       ProfileIOS::FromBrowserState(self.webState->GetBrowserState());
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::TabTrackerService* tab_tracker_service =
       ai_chat::TabTrackerServiceFactory::GetForProfile(profile);
   if (tab_tracker_service) {
     ai_chat::TabDataWebStateObserver::CreateForWebState(self.webState,
                                                         *tab_tracker_service);
   }
+#endif
 
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   brave_ads::AdsTabHelper::MaybeCreateForWebState(self.webState);
+#endif
   if (base::FeatureList::IsEnabled(serp_metrics::kSerpMetricsFeature)) {
     serp_metrics::SerpMetricsTabHelper::MaybeCreateForWebState(self.webState);
   }
@@ -445,6 +465,7 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
   brave_shields::ProtectionStatsTabHelper::FromWebState(self.webState)
       ->SetBridge(self.protectionStatsHelper);
 
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
   brave_wallet::EthereumProviderTabHelper::MaybeCreateForWebState(
       self.webState);
   if (auto* tabHelper = brave_wallet::EthereumProviderTabHelper::FromWebState(
@@ -457,6 +478,7 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
           brave_wallet::CardanoProviderTabHelper::FromWebState(self.webState)) {
     tabHelper->SetBridge(self.walletProviderDelegate);
   }
+#endif
 
   LoginsTabHelper::MaybeCreateForWebState(self.webState, _loginsHelper);
 
@@ -688,19 +710,23 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
 @implementation BraveWebView (AdsNotifier)
 
 - (void)notifyTabDidStartPlayingMedia:(NSInteger)playerId {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   auto* adsTabHelper = brave_ads::AdsTabHelper::FromWebState(self.webState);
   if (!adsTabHelper) {
     return;
   }
   adsTabHelper->NotifyTabDidStartPlayingMedia(static_cast<int>(playerId));
+#endif
 }
 
 - (void)notifyTabDidStopPlayingMedia:(NSInteger)playerId {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   auto* adsTabHelper = brave_ads::AdsTabHelper::FromWebState(self.webState);
   if (!adsTabHelper) {
     return;
   }
   adsTabHelper->NotifyTabDidStopPlayingMedia(static_cast<int>(playerId));
+#endif
 }
 
 @end
@@ -722,12 +748,14 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
     (id<AIChatUIHandlerBridge, AIChatAssociatedContentPageFetcher>)bridge {
   _aiChatUIHandler = bridge;
 
+#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
   ai_chat::UIHandlerBridgeHolder::CreateForWebState(self.webState);
   ai_chat::UIHandlerBridgeHolder::FromWebState(self.webState)
       ->SetBridge(bridge);
   ai_chat::AIChatTabHelper::CreateForWebState(self.webState);
   ai_chat::AIChatTabHelper::FromWebState(self.webState)
       ->SetPageFetcher(self.aiChatUIHandler);
+#endif
 }
 
 @end
@@ -748,14 +776,17 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
 
 - (void)setWalletPageHandler:(id<WalletPageHandlerBridge>)bridge {
   _walletPageHandler = bridge;
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
   brave_wallet::PageHandlerBridgeHolder::CreateForWebState(self.webState);
   brave_wallet::PageHandlerBridgeHolder::FromWebState(self.webState)
       ->SetBridge(bridge);
+#endif
 }
 
 - (void)setWalletProviderDelegate:
     (id<BraveWalletProviderDelegate>)walletProviderDelegate {
   _walletProviderDelegate = walletProviderDelegate;
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
   if (auto* tabHelper = brave_wallet::EthereumProviderTabHelper::FromWebState(
           self.webState)) {
     tabHelper->SetBridge(_walletProviderDelegate);
@@ -764,6 +795,7 @@ class FaviconDriverObserver : public favicon::FaviconDriverObserver {
           brave_wallet::CardanoProviderTabHelper::FromWebState(self.webState)) {
     tabHelper->SetBridge(_walletProviderDelegate);
   }
+#endif
 }
 
 @end

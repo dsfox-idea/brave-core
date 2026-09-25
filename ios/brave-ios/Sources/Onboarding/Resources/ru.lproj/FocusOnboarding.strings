@@ -1,14 +1,14 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Нажмите и удерживайте значок Brave, затем перетащите его в док для быстрого доступа.";
+"focusOnboarding.addToDockScreenDescription" = "Нажмите и удерживайте значок Growser, затем перетащите его в док для быстрого доступа.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Добавьте Brave в док";
+"focusOnboarding.addToDockScreenTitle" = "Добавьте Growser в док";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Далее";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Установите Brave в качестве браузера по умолчанию сегодня.";
+"focusOnboarding.defaultBrowserScreenDescription" = "Сделайте Growser браузером по умолчанию.";
 
 /* The title of the screen that requests user to set Brave as default */
 "focusOnboarding.defaultBrowserScreenTitle" = "Блокируйте рекламу на каждом сайте, который вы посещаете";
@@ -17,16 +17,16 @@
 "focusOnboarding.notNowActionButtonTitle" = "Не сейчас";
 
 /* The subtitle of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenDescription" = "Блокируйте раздражающие прерывания на Ваших любимых сайтах потокового вещания.";
+"focusOnboarding.noVideoAdsScreenDescription" = "Смотрите видео на любимых сайтах без рекламных вставок.";
 
 /* The title of the screen that shows ads embeded in video are blocked */
-"focusOnboarding.noVideoAdsScreenTitle" = "Блокировать прерывания при вашем потоке";
+"focusOnboarding.noVideoAdsScreenTitle" = "Блокировать рекламу при просмотре видео онлайн";
 
 /* The subtitle of the screen that asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenDescription" = "Какие функции вам нравятся больше всего?";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Сделайте Brave лучше";
+"focusOnboarding.p3aScreenTitle" = "Сделайте Growser лучше";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Вы можете отказаться в любой момент в Настройках в разделе **Защита и конфиденциальность**. [Подробнее](#p3a-learn-more) о нашем продукте Аналитика, сохраняющая конфиденциальность.";
@@ -35,8 +35,11 @@
 "focusOnboarding.p3aToggleTitle" = "Делитесь **приватной и анонимной** информацией о продукте.";
 
 /* The title of the button that finishes the onboarding without setting default */
-"focusOnboarding.startBrowseActionButtonTitle" = "Начать поиск";
+"focusOnboarding.startBrowseActionButtonTitle" = "Начать";
 
 /* The title of the button that triggers navigation link to settings */
 "focusOnboarding.systemSettingsButtonTitle" = "Установить по умолчанию";
 
+/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
+"focusOnboarding.sendCrashReportsToggleDescription" = "Отправлять анонимные диагностические отчёты при сбое или зависании.";
+"focusOnboarding.sendCrashReportsToggleTitle" = "Отправлять отчёты о сбоях";

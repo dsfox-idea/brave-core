@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Thêm bộ lọc theo URL";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** là tấm vé cho trải nghiệm video không quảng cáo và không bị gián đoạn.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** là tấm vé cho trải nghiệm video không quảng cáo và không bị gián đoạn.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Điều chỉnh Lá chắn giúp tôi";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Trang web này đã bắt đầu chặn một số trình chặn quảng cáo, điều này có nghĩa là trang web của họ có thể không hoạt động như mong đợi.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Để giải quyết vấn đề này, Brave có thể điều chỉnh cài đặt lá chắn cho bạn. Sau khi điều chỉnh, bạn có thể thử xem nội dung này trong Brave Player.";
+"AntiAdBlockWarningDescription2" = "Để giải quyết vấn đề này, Growser có thể điều chỉnh cài đặt lá chắn cho bạn. Sau khi điều chỉnh, bạn có thể thử xem nội dung này trong Growser Player.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Giữ cài đặt hiện tại";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Chặn thông báo 'Chuyển sang ứng dụng'";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Luôn mở video từ trang này bằng Brave Player";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Luôn mở video từ trang này bằng Growser Player";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Thử ngay";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Không phải Bây giờ";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave Player cho phép bạn xem video không bị gián đoạn.";
+"BravePlayerInfoMessage" = "Growser Player cho phép bạn xem video không bị gián đoạn.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Xem bằng Brave Player";
+"BravePlayerInfoTitle" = "Xem bằng Growser Player";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Lọc nội dung";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Quay Lại";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Bởi vì bạn đã yêu cầu chặn nghiêm ngặt các trình theo dõi và quảng cáo, Brave sẽ chặn trang web này trước lần kết nối mạng đầu tiên.";
+"DomainBlockedPageDescription" = "Bởi vì bạn đã yêu cầu chặn nghiêm ngặt các trình theo dõi và quảng cáo, Growser sẽ chặn trang web này trước lần kết nối mạng đầu tiên.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave đã ngăn không cho website sau đây được tải:";
+"DomainBlockedPageMessage" = "Growser đã ngăn không cho website sau đây được tải:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Trang web này có thể cố gắng theo dõi bạn trên các trang web khác";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Khi ứng dụng đã đóng";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Dữ liệu duyệt web tự động bị hủy khi ứng dụng Brave bị đóng / khởi động lại";
+"ShredOnAppCloseDescription" = "Dữ liệu duyệt web tự động bị hủy khi ứng dụng Growser bị đóng / khởi động lại";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Khi các thẻ đã đóng";

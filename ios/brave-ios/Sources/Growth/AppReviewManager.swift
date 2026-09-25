@@ -3,7 +3,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import BraveVPN
+// Growser-280: no BraveVPN; BraveUI for currentScene, which arrived through it.
+import BraveUI
 import Combine
 import Foundation
 import Preferences
@@ -294,10 +295,7 @@ public class AppReviewManager: ObservableObject {
     case .numberOfBookmarks:
       return Preferences.Review.numberBookmarksAdded.value >= Constants.bookmarksCountLimit
     case .paidVPNSubscription:
-      if case .purchased(_) = BraveVPN.vpnState {
-        return true
-      }
-      return false
+      return false  // Growser-280: there is no VPN to pay for.
     case .walletConnectedDapp:
       guard let connectedDappDate = Preferences.Review.dateWalletConnectedToDapp.value else {
         return false

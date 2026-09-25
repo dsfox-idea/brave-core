@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Brave 아이콘";
+"altAppIcon.braveIconsHeader" = "Growser 아이콘";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "앱 아이콘 변경";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "코드 **%1$@**(으)로 %2$@ 할인";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Brave 계정";
+"paywall.braveAccountCheckoutOptionTitle" = "Growser 계정";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "Brave VPN 자세히 알아보기";
+"paywall.braveVPNLearnMoreButtonTitle" = "Growser VPN 자세히 알아보기";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "프로모션 코드가 있으신가요?";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "자세히 알아보기 / 옵트아웃 옵션";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "프라이빗 광고를 클릭하여 Brave 검색을 지원해 주셔서 감사합니다. 빅테크 기업들과 달리 당사는 사용자의 개인정보를 보호하기 위해 광고 실적을 익명으로 평가합니다.";
+"searchResultAdClickedInfoBarMessage" = "프라이빗 광고를 클릭하여 Growser 검색을 지원해 주셔서 감사합니다. 빅테크 기업들과 달리 당사는 사용자의 개인정보를 보호하기 위해 광고 실적을 익명으로 평가합니다.";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "주소창 선택";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "앱 버전";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo 월간 구독";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo 월간 구독";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo 연간 구독";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo 연간 구독";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "죄송합니다. App Store 영수증을 찾을 수 없습니다.";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "취소 날짜";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "영수증 공유";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN 월간 구독";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN 월간 구독";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN 연간 구독";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN 연간 구독";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "일반 브라우징 모드";

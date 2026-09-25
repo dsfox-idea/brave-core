@@ -11,13 +11,13 @@ import Shared
 // Used by the App to navigate to different views.
 // To open a URL use /open-url or to open a blank tab use /open-url with no params
 public enum DeepLink: String {
-  case vpnCrossPlatformPromo = "vpn_promo"
-  case braveLeo = "brave_leo"
-  case playlist
+  // Growser-280: no vpnCrossPlatformPromo ("vpn_promo").
+  // Growser-279: no braveLeo ("brave_leo") - Leo is out of the product.
+  // Growser-282: no playlist deep link.
   case browserMenu = "menu"
   case setDefaultBrowser = "set-default"
   case importData = "import-data"
-  case originPromo = "origin_promo"
+  // Growser-283: no originPromo ("origin_promo").
 }
 
 // The root navigation for the Router. Look at the tests to see a complete URL
@@ -90,21 +90,14 @@ public enum NavigationPath: Equatable {
 
   private static func handleDeepLink(_ link: DeepLink, with bvc: BrowserViewController) {
     switch link {
-    case .vpnCrossPlatformPromo:
-      bvc.presentVPNInAppEventCallout()
-    case .braveLeo:
-      bvc.presentBraveLeoDeepLink()
-    case .playlist:
-      let helper = BrowserNavigationHelper(bvc)
-      helper.openPlaylist()
+    // Growser-279: no .braveLeo. Growser-280: no .vpnCrossPlatformPromo.
+    // Growser-282: no .playlist. Growser-283: no .originPromo.
     case .browserMenu:
       bvc.presentMenu(from: bvc.navigationToolbar)
     case .setDefaultBrowser:
       bvc.presentDefaultBrowserScreenCallout(skipSafeGuards: true)
     case .importData:
       bvc.presentDataImporter()
-    case .originPromo:
-      bvc.presentBraveOriginDeepLink()
     }
   }
 
@@ -207,30 +200,16 @@ public enum NavigationPath: Equatable {
         }
       }
     case .playlist:
-      bvc.navigationHelper.openPlaylist()
+      break  // Growser-282: never offered (WidgetShortcutExtension removes it).
     case .wallet:
-      bvc.navigationHelper.openWallet()
+      break  // Growser-287: never offered (WidgetShortcutExtension removes it).
     case .scanQRCode:
       bvc.scanQRCode()
-    case .braveNews:
-      // need to stay in NTP for Brave News
-      bvc.openBlankNewTab(attemptLocationFieldFocus: false, isPrivate: false, isExternal: true)
-      bvc.popToBVC()
-      guard let newTabPageController = bvc.tabManager.selectedTab?.newTabPageViewController else {
-        return
-      }
-      newTabPageController.scrollToBraveNews()
-    case .braveLeo:
-      bvc.popToBVC()
-      bvc.openBraveLeo()
-    case .braveLeoVoiceInput:
-      bvc.popToBVC {
-        bvc.presentLeoVoiceInput()
-      }
-    case .askBrave:
-      guard let url = URL(string: "https://search.brave.com/ask") else { return }
-      bvc.popToBVC()
-      bvc.openURLInNewTab(url, isPrivileged: false)
+    case .braveNews, .braveLeo, .braveLeoVoiceInput, .askBrave:
+      // Growser-281 (News), Growser-279 (Leo), Growser-292 (Ask Brave, which
+      // opened Brave Search): never offered - WidgetShortcutExtension removes
+      // them - and there is nothing to open.
+      break
     @unknown default:
       assertionFailure()
       break

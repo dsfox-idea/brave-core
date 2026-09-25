@@ -5,7 +5,7 @@
 
 import BraveCore
 import BraveStore
-import BraveVPN
+// Growser-280: no BraveVPN.
 import Foundation
 import Preferences
 import Shared
@@ -35,18 +35,7 @@ extension SkusSkusService {
       case .valid:
         switch credentialType {
         case .vpn:
-          Logger.module.debug("[SkusManager] - Preparing VPN Credentials")
-          let credential = await prepareCredentialsPresentation(domain: domain, path: "*").message
-          if !credential.isEmpty,
-            let vpnCredential = BraveSkusWebHelper.fetchVPNCredential(credential, domain: domain)
-          {
-            Preferences.VPN.skusCredential.value = credential
-            BraveVPN.setCustomVPNCredential(vpnCredential)
-          }
-
-          Preferences.VPN.skusCredentialDomain.value = domain
-          Preferences.VPN.expirationDate.value = credentialSummary.expiresAt
-          Preferences.VPN.subscriptionProductId.value = credentialSummary.product?.rawValue
+          break  // Growser-280: the VPN is out of the product.
         case .leo:
           if Preferences.AIChat.subscriptionOrderId.value == nil {
             Preferences.AIChat.subscriptionOrderId.value = credentialSummary.orderId
@@ -73,9 +62,7 @@ extension SkusSkusService {
         }
       case .sessionExpired:
         Logger.module.debug("[SkusManager] - This credential session has expired")
-        if credentialType == .vpn {
-          BraveVPN.markSkusSessionExpired()
-        }
+        // Growser-280: no VPN session to mark expired.
       }
     } catch {
       Logger.module.error("[SkusManager] - \(error)")

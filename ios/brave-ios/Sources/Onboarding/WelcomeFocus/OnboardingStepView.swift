@@ -47,12 +47,13 @@ struct OnboardingStepView: View {
       HStack {
         if layoutStyle.isInset {
           HStack(spacing: 4) {
-            Image(sharedName: "brave.logo")
+            // Growser-286: our tile, which has no padding of its own - the
+            // height is the lion's ink height, not its 56 pt frame.
+            Image(sharedName: "growser.logo")
               .resizable()
               .aspectRatio(contentMode: .fit)
-              .frame(height: 56)
-              // the logo has some padding in the image itself
-              .padding(.leading, layoutStyle == .columnInset ? -8 : 0)
+              .frame(height: 44)
+              .padding(.trailing, 6)
             Image(sharedName: "brave.wordmark")
               .renderingMode(.template)
               .foregroundStyle(Color(braveSystemName: .neutral70))

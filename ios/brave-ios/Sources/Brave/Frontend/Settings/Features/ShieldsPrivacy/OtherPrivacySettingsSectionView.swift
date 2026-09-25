@@ -197,16 +197,7 @@ struct OtherPrivacySettingsSectionView: View {
           )
         )
       }
-      if FeatureList.kBraveNTPBrandedWallpaperSurveyPanelist.enabled {
-        ToggleView(
-          title: Strings.Settings.surveyPanelistTitle,
-          subtitle: String.localizedStringWithFormat(
-            Strings.Settings.surveyPanelistDescription,
-            URL.brave.surveyPanelistLearnMoreLinkUrl.absoluteString
-          ),
-          toggle: $settings.isSurveyPanelistEnabled
-        )
-      }
+      // Growser-290: no survey panelist toggle - surveys were an ads feature.
     } header: {
       Text(Strings.otherPrivacySettingsSection)
     }

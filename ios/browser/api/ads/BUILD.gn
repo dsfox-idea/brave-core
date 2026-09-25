@@ -4,6 +4,8 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import("//brave/build/ios/mojom/mojom_wrappers.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 
 config("external_config") {
@@ -11,41 +13,48 @@ config("external_config") {
   include_dirs = [ "$target_gen_dir" ]
 }
 
-source_set("ads") {
-  configs += [ ":external_config" ]
+# Growser-290: ads are compiled out, as on the desktop. The mojom wrappers
+# below stay: the new tab page's sponsored-image header names their enum.
+if (enable_brave_ads) {
+  source_set("ads") {
+    configs += [ ":external_config" ]
 
-  sources = [
-    "ads_client_bridge.h",
-    "ads_client_ios.h",
-    "ads_client_ios.mm",
-    "brave_ads.h",
-    "brave_ads.mm",
-  ]
+    sources = [
+      "ads_client_bridge.h",
+      "ads_client_ios.h",
+      "ads_client_ios.mm",
+      "brave_ads.h",
+      "brave_ads.mm",
+    ]
 
-  deps = [
-    ":brave_ads_mojom_wrappers",
-    "//base",
-    "//brave/components/brave_ads/core",
-    "//brave/components/brave_news/common",
-    "//brave/components/brave_rewards/core",
-    "//brave/components/l10n/common",
-    "//brave/components/ntp_background_images/browser",
-    "//brave/components/ntp_background_images/common",
-    "//brave/ios/browser/api/common",
-    "//brave/ios/browser/brave_ads",
-    "//components/prefs",
-    "//ios/chrome/browser/shared/model/application_context",
-    "//ios/chrome/browser/shared/model/profile",
-    "//net",
-    "//services/network/public/cpp",
-    "//services/network/public/mojom",
-  ]
+    deps = [
+      ":brave_ads_mojom_wrappers",
+      "//base",
+      "//brave/components/brave_ads/core",
+      "//brave/components/brave_news/common/buildflags",
+      "//brave/components/brave_rewards/core",
+      "//brave/components/l10n/common",
+      "//brave/components/ntp_background_images/browser",
+      "//brave/components/ntp_background_images/common",
+      "//brave/ios/browser/api/common",
+      "//brave/ios/browser/brave_ads",
+      "//components/prefs",
+      "//ios/chrome/browser/shared/model/application_context",
+      "//ios/chrome/browser/shared/model/profile",
+      "//net",
+      "//services/network/public/cpp",
+      "//services/network/public/mojom",
+    ]
+    if (enable_brave_news) {  # Growser-281
+      deps += [ "//brave/components/brave_news/common" ]
+    }
 
-  frameworks = [
-    "Foundation.framework",
-    "UIKit.framework",
-    "Network.framework",
-  ]
+    frameworks = [
+      "Foundation.framework",
+      "UIKit.framework",
+      "Network.framework",
+    ]
+  }
 }
 
 ios_objc_mojom_wrappers("brave_ads_mojom_wrappers") {

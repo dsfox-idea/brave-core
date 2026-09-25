@@ -68,6 +68,9 @@ public actor LaunchHelper {
       let signpostID = Self.signpost.makeSignpostID()
       let state = Self.signpost.beginInterval("nonBlockingLaunchTask", id: signpostID)
       await FilterListResourceDownloader.shared.start(with: adBlockService)
+      // Growser-297: the components above never arrive for a fork; the lists
+      // come from their publishers instead.
+      await FilterListPublisherDownloader.shared.start()
       await FilterListCustomURLDownloader.shared.startFetching()
       await AdblockResourceDownloader.shared.startFetching()
       // It's important to do this at the end to ensure we have our lists loaded

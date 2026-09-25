@@ -1,8 +1,8 @@
 /* A button title shown on the menu that presents the Brave News feature. */
-"ActionTitles.braveNews" = "חדשות Brave";
+"ActionTitles.braveNews" = "חדשות Growser";
 
 /* A button title shown on the menu that opens a link to the Brave Talk feature. */
-"ActionTitles.braveTalk" = "Brave Talk";
+"ActionTitles.braveTalk" = "Growser Talk";
 
 /* A button title shown on the menu that presents the Brave Leo AI feature. */
 "ActionTitles.leoAIChat" = "צ׳אט AI";
@@ -53,7 +53,7 @@
 "BrowserMenu.resetToDefault" = "איפוס להגדרות ברירת מחדל";
 
 /* A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state */
-"BrowserMenu.resetToDefaultDialogMessage" = "איפוס להגדרות ברירת מחדל יגרום לאיבוד כל ההתאמות האישיות שביצעת ב-Brave. הפעולה הזו אינה ניתנת לביטול. בטוח שברצונך להמשיך?";
+"BrowserMenu.resetToDefaultDialogMessage" = "איפוס להגדרות ברירת מחדל יגרום לאיבוד כל ההתאמות האישיות שביצעת ב-Growser. הפעולה הזו אינה ניתנת לביטול. בטוח שברצונך להמשיך?";
 
 /* A button title that when taps shows all actions that are hidden by default */
 "BrowserMenu.showAllButtonTitle" = "הצגת הכל…";

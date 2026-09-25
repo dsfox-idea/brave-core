@@ -3,8 +3,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 
 config("config") {
   # For our own public headers to be able to import the official public headers
@@ -31,30 +35,27 @@ source_set("web_view") {
   ]
   deps = [
     "//base",
-    "//brave/components/ai_chat/core/common",
-    "//brave/components/ai_chat/ios/browser",
+    "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_account/mojom:mojom_objc",
+    "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_talk/buildflags",
+    "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/playlist/core/common/buildflags",
     "//brave/components/serp_metrics:features",
-    "//brave/ios/browser/ai_chat",
+    "//brave/components/skus/buildflags",
     "//brave/ios/browser/api/profile",
     "//brave/ios/browser/api/url",
     "//brave/ios/browser/api/web_view/autofill",
     "//brave/ios/browser/api/web_view/passwords",
-    "//brave/ios/browser/brave_ads",
     "//brave/ios/browser/brave_search",
     "//brave/ios/browser/brave_shields",
     "//brave/ios/browser/brave_shields/cosmetic_filtering",
     "//brave/ios/browser/brave_shields/request_blocking",
     "//brave/ios/browser/brave_shields/scriptlets",
-    "//brave/ios/browser/brave_wallet",
     "//brave/ios/browser/favicon",
     "//brave/ios/browser/serp_metrics",
-    "//brave/ios/browser/skus",
     "//brave/ios/browser/ui/web_view:features",
     "//brave/ios/browser/ui/webui/brave_account",
-    "//brave/ios/browser/ui/webui/brave_wallet",
     "//brave/ios/browser/web/document_fetch",
     "//brave/ios/browser/web/force_paste",
     "//brave/ios/browser/web/logins",
@@ -81,11 +82,30 @@ source_set("web_view") {
     "//ios/web_view/framework:web_view_sources",
     "//net",
   ]
+  if (enable_brave_ads) {  # Growser-290
+    deps += [ "//brave/ios/browser/brave_ads" ]
+  }
+  if (enable_ai_chat) {  # Growser-279
+    deps += [
+      "//brave/components/ai_chat/core/common",
+      "//brave/components/ai_chat/ios/browser",
+      "//brave/ios/browser/ai_chat",
+    ]
+  }
   if (enable_brave_talk) {
     deps += [ "//brave/ios/browser/brave_talk" ]
   }
   if (enable_playlist) {
     deps += [ "//brave/ios/browser/playlist" ]
+  }
+  if (enable_skus) {  # Growser-283
+    deps += [ "//brave/ios/browser/skus" ]
+  }
+  if (enable_brave_wallet) {  # Growser-287
+    deps += [
+      "//brave/ios/browser/brave_wallet",
+      "//brave/ios/browser/ui/webui/brave_wallet",
+    ]
   }
   frameworks = [
     "Foundation.framework",

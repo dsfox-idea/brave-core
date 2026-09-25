@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Dodavanje filtra URL-om";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Reproduktor Brave** vaša je ulaznica za iskustvo prikazivanja videozapisa bez oglasa i prekida.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Reproduktor Growser** vaša je ulaznica za iskustvo prikazivanja videozapisa bez oglasa i prekida.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Namjesti štitove za mene";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Ovim su se mrežnim mjestom počeli blokirati neki programi za blokiranje oglasa, a to znači da mrežno mjesto možda neće raditi prema očekivanome.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Kako bi se riješio problem, preglednikom Brave mogu se namjestiti postavke štitova umjesto vas. Nakon namještanja možete pokušati gledati sadržaj u Reproduktoru Brave.";
+"AntiAdBlockWarningDescription2" = "Kako bi se riješio problem, preglednikom Growser mogu se namjestiti postavke štitova umjesto vas. Nakon namještanja možete pokušati gledati sadržaj u Reproduktoru Growser.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Zadrži trenutačne postavke";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Blokiraj obavijesti „Prebaci se na aplikaciju”";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Reproduktor Brave";
+"BravePlayer" = "Reproduktor Growser";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Uvijek otvarajte videozapise s ovog mrežnog mjesta Reproduktorom Brave";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Uvijek otvarajte videozapise s ovog mrežnog mjesta Reproduktorom Growser";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Isprobaj";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Ne sada";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Uz Reproduktor Brave možete gledati videozapise bez prekida.";
+"BravePlayerInfoMessage" = "Uz Reproduktor Growser možete gledati videozapise bez prekida.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Umjesto toga gledajte u Reproduktoru Brave";
+"BravePlayerInfoTitle" = "Umjesto toga gledajte u Reproduktoru Growser";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Filtriranje sadržaja";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Idi natrag";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Budući da ste zahtijevali strogo blokiranje sustava za praćenje i oglasa, preglednik Brave blokira to mrežno mjesto prije prvog povezivanja na mrežu.";
+"DomainBlockedPageDescription" = "Budući da ste zahtijevali strogo blokiranje sustava za praćenje i oglasa, preglednik Growser blokira to mrežno mjesto prije prvog povezivanja na mrežu.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Preglednikom Brave spriječilo se učitavanje sljedećeg mrežnog mjesta:";
+"DomainBlockedPageMessage" = "Preglednikom Growser spriječilo se učitavanje sljedećeg mrežnog mjesta:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Ovo mrežno mjesto može vas pratiti na drugim mrežnim mjestima";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Zatvaranje aplikacije";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Podaci o pregledanju se automatski uništavaju kada se Brave aplikacija zatvori / ponovo pokrene";
+"ShredOnAppCloseDescription" = "Podaci o pregledanju se automatski uništavaju kada se Growser aplikacija zatvori / ponovo pokrene";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Kartice mrežne stranice zatvorene";

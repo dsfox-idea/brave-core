@@ -6,7 +6,7 @@
 import BraveShared
 import BraveUI
 import DesignSystem
-import GuardianConnect
+// Growser-280: no GuardianConnect.
 import Preferences
 import Strings
 import SwiftUI

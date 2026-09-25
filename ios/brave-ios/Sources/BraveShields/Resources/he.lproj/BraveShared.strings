@@ -8,7 +8,7 @@
 "AddFilterByURL" = "הוספת סינון על פי URL";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**נגן Brave** הוא כרטיס הכניסה שלך לחוויית וידאו חלקה ללא פרסומות.";
+"AntiAdBlockWarningBravePlayerDescription" = "**נגן Growser** הוא כרטיס הכניסה שלך לחוויית וידאו חלקה ללא פרסומות.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "התאימו עבורי את המגנים";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "האתר התחיל לחסום חוסמי-פרסומות, אז ייתכן שהאתר שלהם לא עובד כפי שמצופה.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "כדי לטפל בבעיה, Brave יכול להתאים עבורך את הגדרות המגנים שלך. לאחר ההתאמה, תהיה לך אפשרות לנסות לצפות בתוכן הזה בנגן Brave במקום זאת.";
+"AntiAdBlockWarningDescription2" = "כדי לטפל בבעיה, Growser יכול להתאים עבורך את הגדרות המגנים שלך. לאחר ההתאמה, תהיה לך אפשרות לנסות לצפות בתוכן הזה בנגן Growser במקום זאת.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "שמירת ההגדרות הנוכחיות";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "חסום הודעות 'עבור לאפליקציה'";
 
 /* Title for the brave player feature */
-"BravePlayer" = "נגן Brave";
+"BravePlayer" = "נגן Growser";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "פתיחה תמידית של סרטונים מתוך אתר זה עם נגן Brave";
+"BravePlayerAlwaysOpenYouTubeLinks" = "פתיחה תמידית של סרטונים מתוך אתר זה עם נגן Growser";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "לנסות את זה";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "לא עכשיו";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "נגן Brave מאפשר לך לצפות בסרטונים ללא הפרעות.";
+"BravePlayerInfoMessage" = "נגן Growser מאפשר לך לצפות בסרטונים ללא הפרעות.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "צפייה בנגן Brave במקום זאת";
+"BravePlayerInfoTitle" = "צפייה בנגן Growser במקום זאת";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "סינון תוכן";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "חזור";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "מכיוון שביקשת לחסום באגרסיביות עוקבים ופרסומות, Brave חוסמת את האתר הזה לפני החיבור הראשון לרשת.";
+"DomainBlockedPageDescription" = "מכיוון שביקשת לחסום באגרסיביות עוקבים ופרסומות, Growser חוסמת את האתר הזה לפני החיבור הראשון לרשת.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave מנע את טעינת האתר הבא";
+"DomainBlockedPageMessage" = "Growser מנע את טעינת האתר הבא";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "ייתכן שהאתר הזה ינסה לעקוב אחריך במהלך השימוש באתרים אחרים";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "כשהאפליקציה סגורה";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "נתוני הגלישה נמחקים באופן אוטומטי כאשר האפליקציה Brave נסגרת / מופעלת מחדש";
+"ShredOnAppCloseDescription" = "נתוני הגלישה נמחקים באופן אוטומטי כאשר האפליקציה Growser נסגרת / מופעלת מחדש";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "כשכרטיסיות האתר סגורות";

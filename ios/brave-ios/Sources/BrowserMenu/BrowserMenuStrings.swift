@@ -90,7 +90,7 @@ extension Strings {
       "BrowserMenu.resetToDefaultDialogMessage",
       bundle: .module,
       value:
-        "By resetting to default, you'll lose any customizations you've made in Brave. This action cannot be undone. Are you sure you want to proceed?",
+        "By resetting to default, you'll lose any customizations you've made in Growser. This action cannot be undone. Are you sure you want to proceed?",
       comment:
         "A message presented in a confirmation dialog explaining the destructive action of resetting the menu to its default state"
     )
@@ -119,13 +119,13 @@ extension Strings {
     public static let braveTalk = NSLocalizedString(
       "ActionTitles.braveTalk",
       bundle: .module,
-      value: "Brave Talk",
+      value: "Growser Talk",
       comment: "A button title shown on the menu that opens a link to the Brave Talk feature."
     )
     public static let braveNews = NSLocalizedString(
       "ActionTitles.braveNews",
       bundle: .module,
-      value: "Brave News",
+      value: "Growser News",
       comment: "A button title shown on the menu that presents the Brave News feature."
     )
     public static let share = NSLocalizedString(

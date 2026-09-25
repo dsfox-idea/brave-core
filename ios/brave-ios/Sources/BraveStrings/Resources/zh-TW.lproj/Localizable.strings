@@ -1,5 +1,5 @@
 /* A label shown above a list of icons designed by Brave */
-"altAppIcon.braveIconsHeader" = "Brave 圖示";
+"altAppIcon.braveIconsHeader" = "Growser 圖示";
 
 /* The title for the screen that lets the user select a custom app icon */
 "altAppIcon.changeAppIcon" = "變更應用程式圖示";
@@ -35,7 +35,7 @@
 "newTabTakeoverInfoBarLearnMoreOptOutChoices" = "瞭解更多 / 退出選擇";
 
 /* The text of new tab takeover infobar message. */
-"NewTabTakeoverInfoBarMessage" = "贊助商背景圖片支援 Brave 建立一個獨立、使用者優先網路的使命。與大型科技公司不同，我們以匿名方式衡量廣告效能，以維護您的隱私。";
+"NewTabTakeoverInfoBarMessage" = "贊助商背景圖片支援 Growser 建立一個獨立、使用者優先網路的使命。與大型科技公司不同，我們以匿名方式衡量廣告效能，以維護您的隱私。";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "NewTabTitle" = "新建標籤頁";
@@ -59,10 +59,10 @@
 "paywall.braveAccountCheckoutOptionSubtitle" = "代碼 **%1$@** 可享 %2$@ 折扣優惠";
 
 /* The checkout option that lets the user use Brave's own purchase flow */
-"paywall.braveAccountCheckoutOptionTitle" = "Brave 帳戶";
+"paywall.braveAccountCheckoutOptionTitle" = "Growser 帳戶";
 
 /* Button action text which will bring user to Brave VPN web page for more information. */
-"paywall.braveVPNLearnMoreButtonTitle" = "深入瞭解 Brave VPN";
+"paywall.braveVPNLearnMoreButtonTitle" = "深入瞭解 Growser VPN";
 
 /* Title label text for entering a promo code. */
 "paywall.havePromoCodeTitle" = "有優惠代碼嗎？";
@@ -89,7 +89,7 @@
 "searchResultAdClickedInfoBarLearnMoreOptOutChoices" = "瞭解更多 / 退出選擇";
 
 /* The text label of creative search result ad infobar message. */
-"searchResultAdClickedInfoBarMessage" = "感謝您點擊私人廣告來支持 Brave Search。與大型科技公司不同，我們以匿名方式衡量廣告效能，以維護您的隱私。";
+"searchResultAdClickedInfoBarMessage" = "感謝您點擊私人廣告來支持 Growser Search。與大型科技公司不同，我們以匿名方式衡量廣告效能，以維護您的隱私。";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "SelectLocationBarTitle" = "選取位置列";
@@ -119,16 +119,16 @@
 "storekitReceiptViewer.applicationVersionTitle" = "应用版本";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.leoMonthlySubscriptionName" = "Brave Leo (每月)";
+"storekitReceiptViewer.leoMonthlySubscriptionName" = "Growser Leo (每月)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.leoYearlySubscriptionName" = "Brave Leo (年度)";
+"storekitReceiptViewer.leoYearlySubscriptionName" = "Growser Leo (年度)";
 
 /* The error message when the App Store Receipt was not found in the Application Bundle */
 "storekitReceiptViewer.noReceiptFoundTitle" = "抱歉，未找到 App Store 收据";
 
 /* The title of the Brave Origin product */
-"storekitReceiptViewer.originPurchaseName" = "Brave Origin";
+"storekitReceiptViewer.originPurchaseName" = "Growser Origin";
 
 /* The title of the label that shows the date when the product subscription was cancelled */
 "storekitReceiptViewer.receiptCancellationDate" = "取消日期";
@@ -167,10 +167,10 @@
 "storekitReceiptViewer.shareReceiptTitle" = "股份收据";
 
 /* The title of the product subscription the user purchased (Monthly subscription) */
-"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Brave VPN (每月)";
+"storekitReceiptViewer.vpnMonthlySubscriptionName" = "Growser VPN (每月)";
 
 /* The title of the product subscription the user purchased (Yearly subscription) */
-"storekitReceiptViewer.vpnYearlySubscriptionName" = "Brave VPN (年度訂閱)";
+"storekitReceiptViewer.vpnYearlySubscriptionName" = "Growser VPN (年度訂閱)";
 
 /* Hardware shortcut for non-private tab or tab. Shown in the Discoverability overlay when the hardware Command Key is held down. */
 "SwitchToNonPBMKeyCodeTitle" = "正常瀏覽模式";

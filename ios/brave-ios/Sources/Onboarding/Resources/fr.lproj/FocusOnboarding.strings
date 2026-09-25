@@ -1,14 +1,14 @@
 /* The subtitle of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenDescription" = "Appuyez longuement sur l'icône Brave, puis faites-la glisser dans votre dock pour y accéder rapidement.";
+"focusOnboarding.addToDockScreenDescription" = "Appuyez longuement sur l'icône Growser, puis faites-la glisser dans votre dock pour y accéder rapidement.";
 
 /* The title of the screen that explains how to add Brave to the iOS dock */
-"focusOnboarding.addToDockScreenTitle" = "Ajouter Brave à votre dock";
+"focusOnboarding.addToDockScreenTitle" = "Ajouter Growser à votre dock";
 
 /* The title of the button that changes the screen to next */
 "focusOnboarding.continueButtonTitle" = "Continuer";
 
 /* The subtitle of the screen that requests user to set Brave as default */
-"focusOnboarding.defaultBrowserScreenDescription" = "Définissez Brave comme votre navigateur par défaut !";
+"focusOnboarding.defaultBrowserScreenDescription" = "Définissez Growser comme votre navigateur par défaut !";
 
 /* The title of the screen that requests user to set Brave as default */
 "focusOnboarding.defaultBrowserScreenTitle" = "Bloquez les publicités sur tous les sites que vous consultez";
@@ -26,7 +26,7 @@
 "focusOnboarding.p3aScreenDescription" = "Indiquez-nous les fonctionnalités que vous préférez.";
 
 /* The title of the screen which asks user to enable privacy preserving analytics. */
-"focusOnboarding.p3aScreenTitle" = "Aidez-nous à améliorer Brave";
+"focusOnboarding.p3aScreenTitle" = "Aidez-nous à améliorer Growser";
 
 /* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
 "focusOnboarding.p3aToggleDescription" = "Vous pouvez vous désinscrire à tout moment dans les paramètres sous **Boucliers et confidentialité**. [En savoir plus](#p3a-learn-more) sur l’analyse anonyme des données d’utilisation.";

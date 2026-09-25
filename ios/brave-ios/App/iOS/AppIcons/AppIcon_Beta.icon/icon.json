@@ -1,99 +1,43 @@
 {
-  "color-space-for-untagged-svg-colors" : "display-p3",
-  "fill" : "system-light",
-  "groups" : [
-    {
-      "blur-material" : 0.5,
-      "hidden" : false,
-      "layers" : [
-        {
-          "glass" : false,
-          "image-name" : "BETA.svg",
-          "name" : "BETA"
-        },
-        {
-          "blend-mode" : "normal",
-          "image-name" : "beta-bg.svg",
-          "name" : "beta-bg",
-          "opacity" : 1
-        }
-      ],
-      "position" : {
-        "scale" : 4.1,
-        "translation-in-points" : [
-          204,
-          294
-        ]
+  "fill": {
+    "linear-gradient": [
+      "srgb:0.29804,0.43137,0.96078,1.00000",
+      "srgb:0.13333,0.23529,0.65882,1.00000"
+    ],
+    "orientation": {
+      "start": {
+        "x": 0.5,
+        "y": 0.0
       },
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.5
-      },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.5
+      "stop": {
+        "x": 0.5,
+        "y": 1.0
       }
-    },
+    }
+  },
+  "groups": [
     {
-      "blur-material" : null,
-      "layers" : [
+      "layers": [
         {
-          "fill" : "automatic",
-          "glass" : true,
-          "image-name" : "face.svg",
-          "name" : "face",
-          "position" : {
-            "scale" : 4.859999999999998,
-            "translation-in-points" : [
-              0,
-              -7
-            ]
-          }
+          "glass": true,
+          "image-name": "g.svg",
+          "name": "G"
         }
       ],
-      "name" : "Group",
-      "shadow" : {
-        "kind" : "neutral",
-        "opacity" : 0.65
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
       },
-      "translucency" : {
-        "enabled" : true,
-        "value" : 0.2
-      }
-    },
-    {
-      "blur-material" : null,
-      "hidden" : false,
-      "layers" : [
-        {
-          "hidden" : false,
-          "image-name" : "head-beta.svg",
-          "name" : "head-beta",
-          "opacity" : 1,
-          "position" : {
-            "scale" : 4.85,
-            "translation-in-points" : [
-              0,
-              14
-            ]
-          }
-        }
-      ],
-      "shadow" : {
-        "kind" : "layer-color",
-        "opacity" : 0.5
-      },
-      "specular" : true,
-      "translucency" : {
-        "enabled" : false,
-        "value" : 0.5
+      "translucency": {
+        "enabled": true,
+        "value": 0.2
       }
     }
   ],
-  "supported-platforms" : {
-    "circles" : [
+  "supported-platforms": {
+    "circles": [
       "watchOS"
     ],
-    "squares" : "shared"
+    "squares": "shared"
   }
 }

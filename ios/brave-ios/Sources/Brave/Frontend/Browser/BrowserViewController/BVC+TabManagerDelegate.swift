@@ -3,12 +3,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import AIChat
+// Growser-279: no AIChat.
 import BraveCore
 import BraveShared
 import BraveShields
 import BraveUI
-import BraveWallet
+// Growser-287: no BraveWallet.
 import Data
 import Foundation
 import Preferences
@@ -22,9 +22,7 @@ extension BrowserViewController: TabManagerDelegate {
   func attachTabHelpers(to tab: some TabState) {
     tab.browserData = .init(tab: tab, tabGeneratorAPI: profileController.tabGeneratorAPI)
     tab.pullToRefresh = .init(tab: tab)
-    if tab.profile.prefs.isPlaylistAvailable {
-      tab.playlist = .init(tab: tab, delegate: self)
-    }
+    // Growser-282: no playlist tab helper.
     if !FeatureList.kUseProfileWebViewConfiguration.enabled {
       tab.youtubeQualityTabHelper = .init(tab: tab)
     }
@@ -41,54 +39,8 @@ extension BrowserViewController: TabManagerDelegate {
     tab.print = .init(tab: tab, baseViewController: self)
     tab.externalAppURLHelper = .init(tab: tab, browserViewController: self)
     tab.forcePaste = .init(tab: tab)
-    tab.aiChatWebUIHelper = .init(
-      tab: tab,
-      webDelegate: tab.leoTabHelper,
-      braveTalkJavascript: braveTalkJitsiCoordinator,
-      profileController: profileController
-    )
-    tab.aiChatWebUIHelper?.attachPrivacySensitiveTabHelpers = { detachedTab, _ in
-      detachedTab.detachedPrivacyHelper = .init(
-        tab: detachedTab
-      )
-    }
-    tab.aiChatWebUIHelper?.handler = { [weak self] tab, action in
-      self?.handleAIChatWebUIPageAction(tab, action: action)
-    }
-    tab.aiChatWebUIHelper?.tabsForPrivateMode = { [weak self] isPrivate in
-      // Technically we will never get a private tab here since AI Chat WebUI is not supported there
-      // but in case its called incorrectly, avoid returning any private tabs
-      guard let self, !isPrivate else { return [] }
-      return tabManager.allTabs.filter { !$0.isPrivate }
-    }
-    tab.aiChatWebUIHelper?.webDelegateForTab = { detachedTab in
-      /// If AIChat created a hidden tab for history or bookmarks, we need to
-      /// use it's `AIChatWebDelegate` to fetch content from.
-      detachedTab.leoTabHelper
-    }
-    tab.wallet = .init(tab: tab, braveWalletAPI: profileController.braveWalletAPI)
-    tab.wallet?.delegate = self
-    tab.walletWebUIHelper = .init(
-      tab: tab,
-      showApprovePanelUIHandler: { [weak self] tab in
-        self?.showApprovePanelUI(tab: tab)
-      },
-      showWalletBackUpHandler: { [weak self] in
-        self?.showWalletBackupUI()
-      },
-      unlockWalletHandler: { [weak self] in
-        self?.unlockWalletUI()
-      },
-      showOnboardingHandler: { [weak self] isNewWallet in
-        self?.showOnboarding(isNewWallet)
-      },
-      openWalletHomeHandler: { [weak self] in
-        self?.openWalletHome()
-      },
-      scanAddressQRCodeHandler: { [weak self] completion in
-        self?.scanAddressQRCode(completion: completion)
-      }
-    )
+    // Growser-279: no tab.aiChatWebUIHelper - Leo is out of the product.
+    // Growser-287: no tab.wallet or tab.walletWebUIHelper - the wallet is out.
     let braveShieldsHelper: BraveShieldsTabHelper = .init(
       tab: tab,
       braveShieldsSettings: BraveShieldsSettingsServiceFactory.get(profile: tab.profile)
@@ -125,7 +77,7 @@ extension BrowserViewController: TabManagerDelegate {
       tab.showContent(true)
     }
     tab.readerMode?.onReaderModeToggled = { [weak self] tab in
-      tab.playlist?.processPlaylistInfo(item: tab.playlistItem)
+      // Growser-282: no playlist info to reprocess.
       self?.updateTranslateURLBar(tab: tab, state: tab.translationState)
     }
 
@@ -135,32 +87,11 @@ extension BrowserViewController: TabManagerDelegate {
       tab.scriptletsTabHelper = .init(tab: tab)
     }
 
-    tab.braveTalk = .init(tab: tab, coordinator: braveTalkJitsiCoordinator)
-    tab.braveTalk?.onExitCall = { [weak self] in
-      guard let self = self else { return }
-      // When we close the call, redirect to Brave Talk home page if the selected tab is still the
-      // original talk URL
-      if let url = self.tabManager.selectedTab?.visibleURL,
-        let currentHost = url.host,
-        DomainUserScript.braveTalkHelper.associatedDomains.contains(currentHost)
-      {
-        var components = URLComponents()
-        components.host = currentHost
-        components.scheme = url.scheme
-        self.select(url: components.url!, isUserDefinedURLNavigation: false)
-      }
-    }
+    // Growser-278: no tab.braveTalk helper.
 
-    tab.braveSearch = .init(tab: tab, rewards: rewards, searchEngines: profile.searchEngines)
-    tab.braveSearch?.presentSearchResultClickedInfoBar = { [weak self] in
-      guard let self else { return }
-      let searchResultClickedInfobar = SearchResultAdClickedInfoBar(
-        onLinkPressed: { [weak self] url in
-          self?.tabManager.addTabAndSelect(URLRequest(url: url), isPrivate: false)
-        }
-      )
-      show(toast: searchResultClickedInfobar, duration: nil)
-    }
+    // Growser-290: no rewards.
+    tab.braveSearch = .init(tab: tab, searchEngines: profile.searchEngines)
+    // Growser-290: no search-result-ad infobar.
     tab.braveSearch?.presentInQuickView = { [weak self] url, tab in
       guard let self else { return }
       let quickViewController = QuickViewController(
@@ -330,9 +261,9 @@ extension BrowserViewController: TabManagerDelegate {
       navigationToolbar.updateForwardStatus(tab.canGoForward)
     }
 
-    let shouldShowPlaylistURLBarButton =
-      selected?.visibleURL?.isPlaylistSupportedSiteURL == true
-      && selected?.playlist?.isPlaylistBlocked(selected?.visibleURL) == false
+    // Growser-282: Playlist is out of the product, so the reader-mode button
+    // always owns the slot.
+    let shouldShowPlaylistURLBarButton = false
 
     if !shouldShowPlaylistURLBarButton {
       let readerModeState = selected?.readerMode?.state
@@ -344,12 +275,6 @@ extension BrowserViewController: TabManagerDelegate {
           hideReaderModeBar(animated: false)
         }
       }
-
-      updatePlaylistURLBar(
-        tab: selected,
-        state: selected?.playlistItemState ?? .none,
-        item: selected?.playlistItem
-      )
     } else {
       topToolbar.updateReaderModeState(.unavailable)
     }
@@ -358,11 +283,6 @@ extension BrowserViewController: TabManagerDelegate {
       selectedTab.legacyTranslateHelper != nil || selectedTab.translate != nil
     {
       updateTranslateURLBar(tab: selectedTab, state: selectedTab.translationState)
-      updatePlaylistURLBar(
-        tab: selectedTab,
-        state: selectedTab.playlistItemState ?? .none,
-        item: selectedTab.playlistItem
-      )
     } else {
       topToolbar.updateTranslateButtonState(.unavailable)
     }
@@ -370,15 +290,8 @@ extension BrowserViewController: TabManagerDelegate {
     updateScreenTimeUrl(tabManager.selectedTab?.visibleURL)
     updateInContentHomePanel(selected?.visibleURL as URL?)
 
-    removeWalletNotificationAndClearOrigin()
-    let dappSupportedCoins = Array(WalletConstants.supportedCoinTypes(.dapps))
-    WalletProviderPermissionRequestsManager.shared.cancelAllPendingRequests(
-      for: dappSupportedCoins
-    )
-    WalletProviderAccountCreationRequestManager.shared.cancelAllPendingRequests(
-      coins: dappSupportedCoins
-    )
-    updateURLBarWalletButton()
+    // Growser-287: no wallet notification, pending web3 requests or URL-bar
+    // wallet button to reset.
 
     if #available(iOS 26.0, *) {
       if let topEdgeInteraction {
@@ -411,9 +324,6 @@ extension BrowserViewController: TabManagerDelegate {
 
     SnackBarTabHelper.from(tab: tab)?.delegate = self
 
-    tab.wallet?.walletKeyringService = BraveWallet.KeyringServiceFactory.get(
-      privateMode: tab.isPrivate
-    )
     updateTabsBarVisibility()
   }
 
@@ -446,10 +356,6 @@ extension BrowserViewController: TabManagerDelegate {
   ) {
     if let downloadToast = toast as? DownloadToast {
       self.downloadToast = downloadToast
-    }
-
-    if let searchResultAdClickedInfoBar = toast as? SearchResultAdClickedInfoBar {
-      self.searchResultAdClickedInfoBar = searchResultAdClickedInfoBar
     }
 
     if let newTabTakeoverInfoBar = toast as? NewTabTakeoverInfoBar {

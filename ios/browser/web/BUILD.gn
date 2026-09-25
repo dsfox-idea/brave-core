@@ -3,9 +3,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
 import("//brave/components/brave_talk/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 
 source_set("web") {
   sources = [
@@ -16,7 +19,7 @@ source_set("web") {
   ]
   deps = [
     "//base",
-    "//brave/components/ai_chat/core/browser",
+    "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_component_updater/browser:public",
     "//brave/components/brave_shields/core/common",
     "//brave/components/brave_talk/buildflags",
@@ -27,11 +30,10 @@ source_set("web") {
     "//brave/components/playlist/core/common/buildflags",
     "//brave/components/query_filter/browser",
     "//brave/components/query_filter/common",
-    "//brave/ios/browser/ai_chat",
+    "//brave/components/skus/buildflags",
     "//brave/ios/browser/api/profile",
     "//brave/ios/browser/api/web_view",
     "//brave/ios/browser/application_context",
-    "//brave/ios/browser/brave_ads",
     "//brave/ios/browser/brave_search",
     "//brave/ios/browser/brave_shields",
     "//brave/ios/browser/brave_shields/cosmetic_filtering",
@@ -40,7 +42,6 @@ source_set("web") {
     "//brave/ios/browser/component_updater:zxcvbn_data_component_installer",
     "//brave/ios/browser/global_privacy_control",
     "//brave/ios/browser/playlist",
-    "//brave/ios/browser/skus",
     "//brave/ios/browser/ui/web_view:features",
     "//brave/ios/browser/web/de_amp",
     "//brave/ios/browser/web/document_fetch",
@@ -74,6 +75,18 @@ source_set("web") {
     "//ios/public/provider/chrome/browser/url_rewriters:url_rewriters_api",
     "//ios/web_view/framework:web_view_sources",
   ]
+  if (enable_brave_ads) {  # Growser-290
+    deps += [ "//brave/ios/browser/brave_ads" ]
+  }
+  if (enable_skus) {  # Growser-283
+    deps += [ "//brave/ios/browser/skus" ]
+  }
+  if (enable_ai_chat) {  # Growser-279
+    deps += [
+      "//brave/components/ai_chat/core/browser",
+      "//brave/ios/browser/ai_chat",
+    ]
+  }
   if (enable_brave_talk) {
     deps += [ "//brave/ios/browser/brave_talk" ]
   }

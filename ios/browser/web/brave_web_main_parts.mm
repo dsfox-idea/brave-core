@@ -13,7 +13,7 @@
 #include "base/task/thread_pool.h"
 #include "brave/components/brave_component_updater/browser/brave_on_demand_updater.h"
 #include "brave/components/brave_user_agent/browser/brave_user_agent_component_installer.h"
-#include "brave/components/brave_wallet/browser/wallet_data_files_installer.h"
+#include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/playlist/core/browser/playlist_exclusions_component_installer.h"
 #include "brave/components/query_filter/browser/query_filter_component_installer.h"
 #include "brave/ios/browser/application_context/brave_application_context_impl.h"
@@ -24,13 +24,19 @@
 #include "ui/base/l10n/l10n_util_mac.h"
 #include "ui/base/resource/resource_bundle.h"
 
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
+#include "brave/components/brave_wallet/browser/wallet_data_files_installer.h"
+#endif
+
 namespace {
 void RegisterComponentsForUpdate(
     component_updater::ComponentUpdateService* cus) {
   RegisterSafetyTipsComponent(cus);
+#if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
   brave_wallet::WalletDataFilesInstaller::GetInstance()
       .MaybeRegisterWalletDataFilesComponent(
           cus, GetApplicationContext()->GetLocalState());
+#endif
   brave_user_agent::RegisterBraveUserAgentComponent(cus);
   playlist::MaybeRegisterPlaylistExclusionsComponent(cus);
   component_updater::RegisterQueryFilterComponent(cus);

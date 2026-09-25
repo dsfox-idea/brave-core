@@ -96,7 +96,7 @@ extension Strings {
       "importStateSuccessMessage",
       bundle: .module,
       value:
-        "Your data has been successfully imported.\nYou're all set to start browsing with Brave.",
+        "Your data has been successfully imported.\nYou're all set to start browsing with Growser.",
       comment:
         "The message shown on the import data screen when importing the data from the browser profile succeeded."
     )
@@ -128,7 +128,7 @@ extension Strings {
     public static let importStatePasswordConflictKeepExistingPasswordsTitle = NSLocalizedString(
       "importStatePasswordConflictKeepExistingPasswordsTitle",
       bundle: .module,
-      value: "Keep passwords from Brave",
+      value: "Keep passwords from Growser",
       comment:
         "The title of the button on the import error screen when there is a conflict, that lets the user keep your existing Brave passwords."
     )
@@ -237,7 +237,7 @@ extension Strings {
     public static let importDataFileSelectorMessage = NSLocalizedString(
       "importDataFileSelectorMessage",
       bundle: .module,
-      value: "Bring your bookmarks, history, and other browser data into Brave.",
+      value: "Bring your bookmarks, history, and other browser data into Growser.",
       comment:
         "The message of a Text on screen that explains to the user what type of data can be imported."
     )

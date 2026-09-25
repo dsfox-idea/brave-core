@@ -3,9 +3,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import BraveVPN
+// Growser-280: no BraveVPN or GuardianConnect.
 import Combine
-import GuardianConnect
 
 /// The current status of the Brave VPN connection
 enum VPNStatus: Equatable {
@@ -50,38 +49,5 @@ struct VPNRegion: Equatable {
   }
 }
 
-// MARK: - Live Values
-
-extension VPNRegion {
-  init(region: GRDRegion) {
-    self.init(
-      countryCode: region.countryISOCode,
-      displayName: region.displayName,
-      smartProxySupported: !region.smartRoutingProxyState.isEmpty
-        && region.smartRoutingProxyState != kGRDRegionSmartRoutingProxyNone
-    )
-  }
-}
-
-extension VPNStatus {
-  static var liveVPNStatus: VPNStatus {
-    if BraveVPN.isConnected, let region = BraveVPN.activatedRegion.map(VPNRegion.init) {
-      return .connected(
-        activeRegion: region,
-        isSmartProxyRoutingEnabled: BraveVPN.isSmartProxyRoutingEnabled
-      )
-    }
-    return .disconnected
-  }
-}
-
-extension AnyPublisher {
-  static var liveVPNStatus: AnyPublisher<VPNStatus, Never> {
-    NotificationCenter.default
-      .publisher(for: .NEVPNStatusDidChange)
-      .map { _ in
-        return .liveVPNStatus
-      }
-      .eraseToAnyPublisher()
-  }
-}
+// Growser-280: no live values - the VPN is out of the product, so the menu's
+// status is always .disconnected (BrowserMenuController).

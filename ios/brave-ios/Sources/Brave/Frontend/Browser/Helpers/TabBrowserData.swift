@@ -110,8 +110,7 @@ class TabBrowserData: NSObject, TabObserver {
   /// The page data is cleared when the user leaves the page (i.e. when the main frame url changes)
   @MainActor var currentPageData: PageData?
 
-  var playlistItem: PlaylistInfo?
-  var playlistItemState: PlaylistItemAddedState = .none
+  // Growser-282: no playlistItem or playlistItemState.
 
   /// This is the url for the current request
   var currentRequestURL: URL? {
@@ -170,7 +169,7 @@ class TabBrowserData: NSObject, TabObserver {
   fileprivate var alertQueue = [JSAlertInfo]()
   weak var shownPromptAlert: UIAlertController?
 
-  private(set) lazy var leoTabHelper = BraveLeoScriptTabHelper(tab: tab)
+  // Growser-279: no leoTabHelper - BraveLeoScriptHandler is not built.
 
   /// A list of domains that we want to proceed to anyways regardless of any ad-blocking
   var proceedAnywaysDomainList: Set<String> = []

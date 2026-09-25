@@ -177,9 +177,7 @@ extension BrowserViewController {
     searchContainer?.handleSearchKeyCommands(sender: sender)
   }
 
-  @objc private func toggleBraveTalkMuteCommand() {
-    braveTalkJitsiCoordinator.toggleMute()
-  }
+  // Growser-278: no Brave Talk mute command.
 
   @objc private func reopenRecentlyClosedTabCommand() {
     guard let recentlyClosed = RecentlyClosed.all().first else {
@@ -474,10 +472,6 @@ extension BrowserViewController {
       ),
     ]
 
-    let braveTalkKeyCommands: [UIKeyCommand] = [
-      UIKeyCommand(input: "m", modifierFlags: [], action: #selector(toggleBraveTalkMuteCommand))
-    ]
-
     // In iOS 15+, certain keys events are delivered to the text input or focus systems first, unless specified otherwise
     searchLocationCommands.forEach { $0.wantsPriorityOverSystemBehavior = true }
     tabMovementCommands.forEach { $0.wantsPriorityOverSystemBehavior = true }
@@ -488,30 +482,9 @@ extension BrowserViewController {
       keyCommandList.append(contentsOf: searchLocationCommands)
     }
 
-    if braveTalkJitsiCoordinator.isCallActive && !braveTalkJitsiCoordinator.isBraveTalkInPiPMode {
-      keyCommandList.append(contentsOf: braveTalkKeyCommands)
-    }
+    // Growser-278: no Brave Talk key commands, and no pressesBegan/Changed/
+    // Ended/Cancelled overrides - they existed only to forward presses to Jitsi.
 
     return keyCommandList
-  }
-
-  public override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-    super.pressesBegan(presses, with: event)
-    braveTalkJitsiCoordinator.handleResponderPresses(presses: presses, phase: .began)
-  }
-
-  public override func pressesChanged(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-    super.pressesChanged(presses, with: event)
-    braveTalkJitsiCoordinator.handleResponderPresses(presses: presses, phase: .changed)
-  }
-
-  public override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-    super.pressesEnded(presses, with: event)
-    braveTalkJitsiCoordinator.handleResponderPresses(presses: presses, phase: .ended)
-  }
-
-  public override func pressesCancelled(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-    super.pressesCancelled(presses, with: event)
-    braveTalkJitsiCoordinator.handleResponderPresses(presses: presses, phase: .cancelled)
   }
 }

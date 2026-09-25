@@ -2,16 +2,16 @@
 "About" = "Hakkında";
 
 /* The title of the screen explaining Brave Shields */
-"AboutBraveShields" = "Brave Kalkanları Hakkında";
+"AboutBraveShields" = "Growser Kalkanları Hakkında";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "Siteler genellikle sizi ve cihazınızı tanımlamaya çalışan çerezler ve komut dosyaları içerir. Kim olduğunuzu öğrenmek ve sizi web'de takip etmek ve her sitede ne yaptığınızı izlemek istiyorlar.\n\nBrave, takip edilmeden gezinebilmeniz için bunları engeller.";
+"AboutBraveShieldsBody" = "Siteler genellikle sizi ve cihazınızı tanımlamaya çalışan çerezler ve komut dosyaları içerir. Kim olduğunuzu öğrenmek ve sizi web'de takip etmek ve her sitede ne yaptığınızı izlemek istiyorlar.\n\nGrowser, takip edilmeden gezinebilmeniz için bunları engeller.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "Bu, görüntüyü Film Rulonuza kaydetmenizi sağlar.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave Fotoğraflarınıza erişmek istiyor";
+"AccessPhotoDeniedAlertTitle" = "Growser Fotoğraflarınıza erişmek istiyor";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Yer İşareti Ekle";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Yer İşareti Ekle";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Brave Reklamları Verileri";
+"ads.braveAdsDataToggleOption" = "Growser Reklamları Verileri";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Reklamlar ve İzleyiciler";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "Açık";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Brave'e Sor";
+"AskBraveMenuItem" = "Growser'e Sor";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Bu işlem, Brave erişiminizin kimliğini doğrular";
+"AuthenticationLoginsTouchReason" = "Bu işlem, Growser erişiminizin kimliğini doğrular";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "İptal";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "Adres";
 
 /* Button to show the brave panel */
-"BravePanel" = "Brave Paneli";
+"BravePanel" = "Growser Paneli";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave Ödülleri";
+"BraveRewardsAdNotificationTitle" = "Growser Ödülleri";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Açık";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Ödüller";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave Ödülleri";
+"BraveRewardsTitle" = "Growser Ödülleri";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Brave Arama, profilinizi çıkarmaz.";
+"braveSearchPromotion.bannerDescription" = "Growser Arama, profilinizi çıkarmaz.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Belki daha sonra";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Bağımsız aramayı daha iyi bir güvenlikle destekleyin";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Brave ile Aramayı Deneyin";
+"braveSearchPromotion.bannerTryButtonTitle" = "Growser ile Aramayı Deneyin";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Belki daha sonra";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Gelişmiş denetimler";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave Kalkanlar & Gizlilik";
+"BraveShieldsAndPrivacy" = "Growser Kalkanlar & Gizlilik";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Kalkanlar & Gizlilik";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Bu site bozuk görünüyorsa, Kalkanları indirerek deneyin";
 
 /* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Brave Kalkanları";
+"BraveShieldsStatusTitle" = "Growser Kalkanları";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
 "BraveShieldsStatusValueDown" = "Aşağı";
@@ -278,10 +278,10 @@
 "BraveShieldsStatusValueUp" = "Yukarı";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Brave Kalkanları'nı değiştirmek için iki kez dokunun";
+"BraveShieldsToggleHint" = "Growser Kalkanları'nı değiştirmek için iki kez dokunun";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Sohbet";
+"bravetalk.braveTalkTitle" = "Growser Sohbet";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Dil Seçiniz";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Ara";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave Çeviri";
+"BraveTranslate.settingsMenuTitle" = "Growser Çeviri";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave Çeviri";
+"BraveTranslate.settingsScreenTitle" = "Growser Çeviri";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Etkinleştirildiğinde, Brave Çeviri, sayfanızın geçerli dilini otomatik olarak algılar ve URL çubuğunda bir çeviri düğmesi görüntüler.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Etkinleştirildiğinde, Growser Çeviri, sayfanızın geçerli dilini otomatik olarak algılar ve URL çubuğunda bir çeviri düğmesi görüntüler.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Çeviri Etkin";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Tarayıcı Kilidi";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Touch ID, Face ID veya sistem geçiş koduyla Brave'in kilidini açın.";
+"BrowserLockDescription" = "Touch ID, Face ID veya sistem geçiş koduyla Growser'in kilidini açın.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Arama Geçmişi";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "Adres çubuğunu, sekmeleri, yer işaretleri ve diğer araçları tarayıcının altına taşıyın.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Brave Sekmeleri Çubuğunu Özelleştir";
+"callout.bottomBarCalloutTitle" = "Growser Sekmeleri Çubuğunu Özelleştir";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Bilgisayarınızda veya tabletinizde Brave'in gizliliğinin keyfini çıkarın, cihazlarınız arasında yer işaretlerinizi ve eklentilerinizi senkronize edin.";
+"callout.privacyEverywhereCalloutDescription" = "Bilgisayarınızda veya tabletinizde Growser'in gizliliğinin keyfini çıkarın, cihazlarınız arasında yer işaretlerinizi ve eklentilerinizi senkronize edin.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Şimdi Senkronize Et";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Ayarları Aç";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Gizliliğinizi korumak için Brave ile tüm bağlantıları açın";
+"defaultBrowserCallout.introPrimaryText" = "Gizliliğinizi korumak için Growser ile tüm bağlantıları açın";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Kalkanları, izleyicileri ve reklamları engeller, veri kurtarır ve ziyaret ettiğiniz her sitede size zaman kazandırır";
+"defaultBrowserCallout.introSecondaryText" = "Growser Kalkanları, izleyicileri ve reklamları engeller, veri kurtarır ve ziyaret ettiğiniz her sitede size zaman kazandırır";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Ayarlar'ı açın, Varsayılan Tarayıcı Uygulaması'nı dokunun ve Brave'i seçin.";
+"defaultBrowserCallout.introTertiaryText" = "Ayarlar'ı açın, Varsayılan Tarayıcı Uygulaması'nı dokunun ve Growser'i seçin.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Brave'u varsayılan tarayıcınız olarak ayarlama";
+"defaultBrowserCallout.notificationBody" = "Growser'u varsayılan tarayıcınız olarak ayarlama";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Her bağlantıda Brave koruması elde edin";
+"defaultBrowserCallout.notificationTitle" = "Her bağlantıda Growser koruması elde edin";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Varsayılan tarayıcı belirtecini kapat";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Varsayılan Brave";
+"defaultThemeName" = "Varsayılan Growser";
 
 /* No comment provided by engineer. */
 "Delete" = "Sil";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Klasör adını girin";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@, normalde verilerinizi korumak için şifreleme kullanır. Brave bu sefer %2$@ adresine bağlanmaya çalıştığında web sitesi beklenmedik ve yanlış kimlik bilgileri gönderdi. Bu durum, bir saldırgan %3$@ kimliğine bürünmeye çalıştığında veya Wi-Fi oturum açma ekranı bağlantıyı kesintiye uğrattığında yaşanabilir. Brave herhangi bir veri alışveriş yapılmadan önce bağlantıyı durdurduğu için bilgileriniz hala güvende.<br />Web sitesi sertifika sabitleme kullandığı için şu anda %4$@ adresini ziyaret edemezsiniz. Ağ hataları ve saldırılar genellikle geçicidir, o yüzden bu sayfa muhtemelen daha sonra çalışacaktır.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@, normalde verilerinizi korumak için şifreleme kullanır. Growser bu sefer %2$@ adresine bağlanmaya çalıştığında web sitesi beklenmedik ve yanlış kimlik bilgileri gönderdi. Bu durum, bir saldırgan %3$@ kimliğine bürünmeye çalıştığında veya Wi-Fi oturum açma ekranı bağlantıyı kesintiye uğrattığında yaşanabilir. Growser herhangi bir veri alışveriş yapılmadan önce bağlantıyı durdurduğu için bilgileriniz hala güvende.<br />Web sitesi sertifika sabitleme kullandığı için şu anda %4$@ adresini ziyaret edemezsiniz. Ağ hataları ve saldırılar genellikle geçicidir, o yüzden bu sayfa muhtemelen daha sonra çalışacaktır.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Bu sunucu, bunun %@ olduğunu kanıtlayamadı, cihazınızın işletim sistemi bunun güvenlik sertifikasına güvenmiyor. Bu durum hatalı yapılandırmadan veya bağlantınıza sızmaya çalışan bir saldırgandan kaynaklanıyor olabilir.";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Bağlantı Önizlemelerini Gizle";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Brave Ödülleri Simgesini Gizle";
+"HideRewardsIcon" = "Growser Ödülleri Simgesini Gizle";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Brave Ödülleri etkinleştirilmediğinde Brave Ödülleri simgesini gizler";
+"HideRewardsIconSubtitle" = "Growser Ödülleri etkinleştirilmediğinde Growser Ödülleri simgesini gizler";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Geçmiş";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "NPR bağlantıları otomatik olarak metin tabanlı sürümlerine (text.npr.org adresindeki) yönlendirir.";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Brave Destek";
+"ntp.braveSupportFavoriteTitle" = "Growser Destek";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Talep Belirteçleri";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Brave ile gezinti yaparak %@ kazandınız.";
+"ntp.earningsReport" = "Growser ile gezinti yaparak %@ kazandınız.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Tebrikler!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Sponsorlu resimleri gizle";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "Sponsorlu görseller, tarayıcıda yeni açılan sekmelerde görünen markalı arka planlardır. Bu Sponsorlu Görselleri etkinleştirmek Brave'in misyonunu destekler. [Daha Fazla Bilgi](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "Sponsorlu görseller, tarayıcıda yeni açılan sekmelerde görünen markalı arka planlardır. Bu Sponsorlu Görselleri etkinleştirmek Growser'in misyonunu destekler. [Daha Fazla Bilgi](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Brave Rewards hakkında daha fazla bilgi edinin";
+"ntp.learnMoreAboutRewards" = "Growser Rewards hakkında daha fazla bilgi edinin";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Sponsorlu resimler hakkında daha fazla bilgi edinin";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Göz atarken harika içerikler için puan kazanın ve içerik üreticilerini ödüllendirin.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Brave Ads geldi!";
+"OBAdsOptInTitle" = "Growser Ads geldi!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brave ilk reklamınızı";
+"OBAdsTitle" = "Growser ilk reklamınızı";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Şimdi gitmeye hazırsın.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "birleştirmek";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Brave'in panomda eşleşen bir başvuru kodu olup olmadığını denetlemesine izin ver";
+"OBPrivacyConsentClipboardPermission" = "Growser'in panomda eşleşen bir başvuru kodu olup olmadığını denetlemesine izin ver";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Brave'i sizi yönlendiren kişiyi desteklemek için indirmiş olabilirsiniz. Sizi yönlendiren kişiyi algılamak için Brave, panonuzda bir kerelik eşleşen başvuru kodu denetimi gerçekleştirir. Bu kontrol yalnızca kodla sınırlıdır ve başka hiçbir kişisel veri iletilmeyecektir.  Eğer vazgeçerseniz, sizi yönlendiren kişi Brave'den ödül almaz.";
+"OBPrivacyConsentDetail" = "Growser'i sizi yönlendiren kişiyi desteklemek için indirmiş olabilirsiniz. Sizi yönlendiren kişiyi algılamak için Growser, panonuzda bir kerelik eşleşen başvuru kodu denetimi gerçekleştirir. Bu kontrol yalnızca kodla sınırlıdır ve başka hiçbir kişisel veri iletilmeyecektir.  Eğer vazgeçerseniz, sizi yönlendiren kişi Growser'den ödül almaz.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Bu denetime izin verme";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "ve";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave Ödülleri";
+"OBRewardsAgreementTitle" = "Growser Ödülleri";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Brave Özel Reklamlara abone olmak, görüntülenen her reklamla birlikte yayıncıları ve içerik üreticilerini destekler.";
+"OBRewardsDetail" = "Growser Özel Reklamlara abone olmak, görüntülenen her reklamla birlikte yayıncıları ve içerik üreticilerini destekler.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Göz atarken harika içerikler için jetonlar kazanın ve içerik üreticilerini ödüllendirin.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Gizlilik Politikası";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave Ödülleri";
+"OBRewardsTitle" = "Growser Ödülleri";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Kaydet";
@@ -1202,13 +1202,13 @@
 "OBSearchEngineDetail" = "Varsayılan arama motorunuzu seçin";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Brave Tarayıcı'ya Hoş Geldiniz";
+"OBSearchEngineTitle" = "Growser Tarayıcı'ya Hoş Geldiniz";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Web'de takip edilmeden gezinebilmek için gizliliği ihlal eden izleyicileri engelleyin";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Brave Kalkanları";
+"OBShieldsTitle" = "Growser Kalkanları";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Göster";
@@ -1220,16 +1220,16 @@
 "onboarding.linkReceiptButton" = "VPN aboneliğinizi bağlayın";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Brave VPN aboneliğiniz; Android, iOS ve masaüstü genelinde 10 cihaza kadar koruma sağlayabilir. App Store aboneliğinizi Brave hesabınıza bağlamanız yeterlidir.";
+"onboarding.linkReceiptDescription" = "Growser VPN aboneliğiniz; Android, iOS ve masaüstü genelinde 10 cihaza kadar koruma sağlayabilir. App Store aboneliğinizi Growser hesabınıza bağlamanız yeterlidir.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Brave Güvenlik Duvarı + VPN korumanızı genişletin";
+"onboarding.linkReceiptTitle" = "Growser Güvenlik Duvarı + VPN korumanızı genişletin";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "İzleyiciler & reklamlar engellendiğinde, web siteleri daha az veri kullanır ve çok daha hızlı yüklenir.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Brave'in farkını görün\nReklam yok. İzleyici yok. Çok daha hızlı yüklenen sayfalar.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Growser'in farkını görün\nReklam yok. İzleyici yok. Çok daha hızlı yüklenen sayfalar.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Bir web sitesi adı veya URL yazın";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Tümünü Aç (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Brave Ödülleri Ayarlarını Aç";
+"OpenBraveRewardsSettings" = "Growser Ödülleri Ayarlarını Aç";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Dosyalar uygulamasında İndirilenler klasörü açılırken bilinmeyen bir hata oluştu.";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Başlamak için bir senkronizasyon zinciri ayarlayın ve Senkronizasyon Ayarlarından \"Sekmeleri Aç\"a geçin.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Brave'in Ayarlardaki senkronizasyonlarını yönetin.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Growser'in Ayarlardaki senkronizasyonlarını yönetin.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Diğer cihazlarınızdan gösterilecek etkin bir oturum bulunmuyor.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Bu alan, diğer cihazlarda açık olan Brave sekmelerini gösterir";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Bu alan, diğer cihazlarda açık olan Growser sekmelerini gösterir";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Şimdilik gizle";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Devam";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Bu gizli yanıtlar, Brave'in belirli özelliklerin genel kullanımını tahmin ederek sizin için daha iyi hale getirmesine yardımcı olur.";
+"p3a.settingSubtitle" = "Bu gizli yanıtlar, Growser'in belirli özelliklerin genel kullanımını tahmin ederek sizin için daha iyi hale getirmesine yardımcı olur.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Gizlilik Korumalı Ürün Analizine İzin Ver (P3A)";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Kalıcı Gizli Gezinti";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Brave'in, uygulamayı kapatsanız / yeniden açsanız bile özel gezinti sekmelerini geri yüklemesine olanak tanır";
+"PersistentPrivateBrowsingAlertMessage" = "Growser'in, uygulamayı kapatsanız / yeniden açsanız bile özel gezinti sekmelerini geri yüklemesine olanak tanır";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Özel Sekmeleri Geri Yükle";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Bu videoyu oynatma listenize eklemek ister misiniz?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Brave Oynatma Listesine Ekle";
+"playList.addToPlayListAlertTitle" = "Growser Oynatma Listesine Ekle";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Oynatma Seçenekleri";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Ayarlar";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Brave Oynatma Listesi";
+"playlist.carplayTitle" = "Growser Oynatma Listesi";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Oynatma Listesini Değiştir";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Kaynak yüklenirken bir sorun meydana geldi!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Tarayıcı içinde Brave Oynatma Listenize öğe ekleyebilirsiniz";
+"playList.noItemLabelDetailLabel" = "Tarayıcı içinde Growser Oynatma Listenize öğe ekleyebilirsiniz";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Kullanılabilir Öğe Yok";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "geri almak";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Brave tarayıcıda adres çubuğunun yanına bir oynatma listesi düğmesi ekler. Bu düğme, Oynatma Listesini açmak, medya eklemek ya da kaldırmak için hızlı erişim sağlar.";
+"playlist.urlBarButtonOptionFooter" = "Growser tarayıcıda adres çubuğunun yanına bir oynatma listesi düğmesi ekler. Bu düğme, Oynatma Listesini açmak, medya eklemek ya da kaldırmak için hızlı erişim sağlar.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Hızlı erişim düğmesini etkinleştir";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Geçen hafta";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@**, Brave Kalkanları tarafından **%2$lld** sitede engellendi";
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@**, Growser Kalkanları tarafından **%2$lld** sitede engellendi";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "En Sık Saptanan İzleyici & Reklam";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Bildirimleri aç";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Brave'in sizi bu hafta çevrimiçi olarak nasıl koruduğunun bir özeti.";
+"privacyHub.notificationMessage" = "Growser'in sizi bu hafta çevrimiçi olarak nasıl koruduğunun bir özeti.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Haftalık Gizlilik Raporu";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "İzleyici veya Reklam";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Brave Güvenlik Duvarı + VPN Uyarıları";
+"privacyHub.vpnAlertsHeader" = "Growser Güvenlik Duvarı + VPN Uyarıları";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Güvenlik Duvarı + VPN";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Yalnızca Gizli Tarama modu tüm mevcut sekmelerinizi ve tüm sitelerdeki oturumlarınızı kapatır.";
 
 /* Private tab details */
-"PrivateTabBody" = "Gizli Sekmeler Brave'e kaydedilmez, ancak bu sizi internette anonim hale getirmez. Gizli bir sekmede ziyaret ettiğiniz siteler geçmişinizde gösterilmez ve bunları kapattığınızda çerezleri her zaman kaybolur - Brave'de bunlardan hiçbir iz kalmaz. Ancak, indirmeler kaydedilir.\nMobil operatörünüz (veya bağlı olduğunuz Wi-Fi ağının veya VPN'in sahibi) hangi siteleri ziyaret ettiğinizi görebilir ve bu siteler Gizli Sekmelerde bile herkese açık IP adresinizi öğrenir.";
+"PrivateTabBody" = "Gizli Sekmeler Growser'e kaydedilmez, ancak bu sizi internette anonim hale getirmez. Gizli bir sekmede ziyaret ettiğiniz siteler geçmişinizde gösterilmez ve bunları kapattığınızda çerezleri her zaman kaybolur - Growser'de bunlardan hiçbir iz kalmaz. Ancak, indirmeler kaydedilir.\nMobil operatörünüz (veya bağlı olduğunuz Wi-Fi ağının veya VPN'in sahibi) hangi siteleri ziyaret ettiğinizi görebilir ve bu siteler Gizli Sekmelerde bile herkese açık IP adresinizi öğrenir.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Gizli Sekmeleri kullanmak yalnızca Brave'in cihazınızda yaptıklarını değiştirir, başka hiç kimsenin davranışını değiştirmez.\n\nSiteler IP adresinizi onları her ziyaret ettiğinizde öğrenir. Bundan genellikle nerede olduğunuzu, tipik olarak bulunduğunuz şehri tahmin edebilir. Bazen bu konum tahmini çok daha spesifik olabilir. Siteler ayrıca arama terimleri gibi özel olarak onlara ilettiğiniz her şeyi bilir. Bir siteye giriş yaptığınızda, söz konusu hesabın sahibi olduğunuzu anlarlar. Gizli Sekmeleri kapattığınızda yine de oturumunuz kapatılacaktır, çünkü Brave oturumunuzun açık kalmasını sağlayan çerezi silecektir.\n\nSizi internete bağlayan taraf (İSS'niz) tüm ağ etkinliğinizi görebilir. Genellikle, bu mobil operatörünüzdür. Bir Wi-Fi ağına bağlıysanız, bu ağın sahibidir ve bir VPN kullanıyorsanız, o VPN'i işleten taraftır. İSS'niz hangi siteleri ziyaret ettiğinizi siz siteleri ziyaret ederken görebilir. Bu siteler HTTPS kullanıyorsa, bu sitelerde ne yaptığınız hakkında bilgiye dayalı bir tahminden daha fazlasını yapamazlar. Ancak bir site yalnızca HTTP kullanıyorsa İSS'niz her şeyi görebilir: arama terimleriniz, hangi sayfaları okuduğunuz ve hangi bağlantıları takip ettiğiniz.\n\nCihazınızı bir işveren yönetiyorsa, o da cihazınızla ne yaptığınızı takip edebilir. Gizli Sekmeleri kullanmak muhtemelen hangi siteleri ziyaret ettiğinizi bilmelerini engellemez. Cihazınıza erişimi olan başka biri de etkinliğinizi izleyen bir yazılım yüklemiş olabilir ve Gizli Sekmeler sizi bundan korumaz.";
+"PrivateTabDetails" = "Gizli Sekmeleri kullanmak yalnızca Growser'in cihazınızda yaptıklarını değiştirir, başka hiç kimsenin davranışını değiştirmez.\n\nSiteler IP adresinizi onları her ziyaret ettiğinizde öğrenir. Bundan genellikle nerede olduğunuzu, tipik olarak bulunduğunuz şehri tahmin edebilir. Bazen bu konum tahmini çok daha spesifik olabilir. Siteler ayrıca arama terimleri gibi özel olarak onlara ilettiğiniz her şeyi bilir. Bir siteye giriş yaptığınızda, söz konusu hesabın sahibi olduğunuzu anlarlar. Gizli Sekmeleri kapattığınızda yine de oturumunuz kapatılacaktır, çünkü Growser oturumunuzun açık kalmasını sağlayan çerezi silecektir.\n\nSizi internete bağlayan taraf (İSS'niz) tüm ağ etkinliğinizi görebilir. Genellikle, bu mobil operatörünüzdür. Bir Wi-Fi ağına bağlıysanız, bu ağın sahibidir ve bir VPN kullanıyorsanız, o VPN'i işleten taraftır. İSS'niz hangi siteleri ziyaret ettiğinizi siz siteleri ziyaret ederken görebilir. Bu siteler HTTPS kullanıyorsa, bu sitelerde ne yaptığınız hakkında bilgiye dayalı bir tahminden daha fazlasını yapamazlar. Ancak bir site yalnızca HTTP kullanıyorsa İSS'niz her şeyi görebilir: arama terimleriniz, hangi sayfaları okuduğunuz ve hangi bağlantıları takip ettiğiniz.\n\nCihazınızı bir işveren yönetiyorsa, o da cihazınızla ne yaptığınızı takip edebilir. Gizli Sekmeleri kullanmak muhtemelen hangi siteleri ziyaret ettiğinizi bilmelerini engellemez. Cihazınıza erişimi olan başka biri de etkinliğinizi izleyen bir yazılım yüklemiş olabilir ve Gizli Sekmeler sizi bundan korumaz.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Gizli Sekmeler hakkında bilgi edinin.";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Çeviriyi Etkinleştir";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Brave'i Değerlendirin";
+"RateBrave" = "Growser'i Değerlendirin";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Metin boyutunu büyüt";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Bir seçenek seçin";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Brave'in geliştiricilerine bu sitenin beklendiği gibi çalışmadığını bildirin:";
+"ReportBrokenSiteBody1" = "Growser'in geliştiricilerine bu sitenin beklendiği gibi çalışmadığını bildirin:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Not: Brave sunucularına gönderilen rapor site adresini, Brave sürüm numarasını, Kalkanlar ayarlarını, VPN durumunu ve dil ayarlarını içerecektir.";
+"ReportBrokenSiteBody2" = "Not: Growser sunucularına gönderilen rapor site adresini, Growser sürüm numarasını, Kalkanlar ayarlarını, VPN durumunu ve dil ayarlarını içerecektir.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Gönder";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "Hayır";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Ne yazık ki Brave çöktü veya düzgün şekilde kapatılmadı.\nSekmeleriniz geri yüklensin mi?";
+"RestoreTabOnCrashAlertMessage" = "Ne yazık ki Growser çöktü veya düzgün şekilde kapatılmadı.\nSekmeleriniz geri yüklensin mi?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave, Beklenmedik Bir Şekilde Kapandı.";
+"RestoreTabOnCrashAlertTitle" = "Growser, Beklenmedik Bir Şekilde Kapandı.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Brave ve BAT topluluğunu desteklemeye yardım etmek için açın.";
+"rewards.disabledBody" = "Growser ve BAT topluluğunu desteklemeye yardım etmek için açın.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Brave Ödüllerini kullanmak Brave ve BAT topluluğunu desteklemeye yardımcı olur.";
+"rewards.disabledStatusBody" = "Growser Ödüllerini kullanmak Growser ve BAT topluluğunu desteklemeye yardımcı olur.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Brave ve BAT topluluğunu desteklemeye yardımcı oluyorsunuz.";
+"rewards.enabledBody" = "Growser ve BAT topluluğunu desteklemeye yardımcı oluyorsunuz.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Brave ve BAT topluluğunu desteklemeye yardımcı olduğunuz için teşekkürler!";
+"rewards.enabledStatusBody" = "Growser ve BAT topluluğunu desteklemeye yardımcı olduğunuz için teşekkürler!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Brave Ödüllerini etkinleştirerek ve Brave Reklamlarını görerek Brave ve BAT topluluğunu desteklemeye yardım edin.";
+"rewards.settingsToggleMessage" = "Growser Ödüllerini etkinleştirerek ve Growser Reklamlarını görerek Growser ve BAT topluluğunu desteklemeye yardım edin.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Brave Ödülleri'ni Etkinleştir";
+"rewards.settingsToggleTitle" = "Growser Ödülleri'ni Etkinleştir";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Bu içerik üreticisi, Brave Oluşturucuları üzerinden doğrulanmış";
+"rewards.supportingPublisher" = "Bu içerik üreticisi, Growser Oluşturucuları üzerinden doğrulanmış";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Bu ay desteklemeye yardımcı olduğunuz içerik oluşturucuların sayısı.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Katkı tutarı";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Brave Jetonları";
+"RewardsInternalsContributionProcessorBraveTokens" = "Growser Jetonları";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Hiçbiri";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "Arama Önerisini etkinleştirmek ister misiniz?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Brave ile Ara";
+"SearchWithBrave" = "Growser ile Ara";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Gönder";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Brave'in sorunu çözebilmesi için bir çökme raporu göndermek ister misiniz?";
+"SendCrashReportAlertMessage" = "Growser'in sorunu çözebilmesi için bir çökme raporu göndermek ister misiniz?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Hop! Brave çöktü!";
+"SendCrashReportAlertTitle" = "Hop! Growser çöktü!";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Rapor Gönder";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave artık iOS'ta varsayılan tarayıcınız olarak ayarlanabilir. Ayarları açmak için buraya dokunun.";
+"setDefaultBrowserCalloutTitle" = "Growser artık iOS'ta varsayılan tarayıcınız olarak ayarlanabilir. Ayarları açmak için buraya dokunun.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Varsayılan Tarayıcı Olarak Ayarla";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Sekmeleri Kapat";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Brave'in yakın zamanda görüntülenmeyen sekmeleri otomatik olarak kapatmasına izin ver.";
+"settings.autocloseTabsSettingFooter" = "Growser'in yakın zamanda görüntülenmeyen sekmeleri otomatik olarak kapatmasına izin ver.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Youtube'da Dikkat Dağıtıcı Öğeleri Engelle";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Medya";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "YouTube bağlantılarını Brave'de aç";
+"settings.openYouTubeInBrave" = "YouTube bağlantılarını Growser'de aç";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Ekran Süresini Etkinleştir";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Kalite Ayarları";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Bu özel ping, Brave'in aktif kullanıcıları tahmin etmesine olanak tanır.";
+"settings.sendUsagePingDescription" = "Bu özel ping, Growser'in aktif kullanıcıları tahmin etmesine olanak tanır.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Günlük kullanım ping'ini Brave'e otomatik olarak gönder";
+"settings.sendUsagePingTitle" = "Günlük kullanım ping'ini Growser'e otomatik olarak gönder";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Brave'in yeni sekme sayfasında özel anketlere bağlantılar göstermesine izin verir. Anketler, daha iyi özellikler oluşturmamıza ve tarayıcı tabanlı reklam kampanyalarının etkinliğini ölçmemize yardımcı olur. [Daha fazla bilgi edinin](%@)";
+"settings.surveyPanelistDescription" = "Growser'in yeni sekme sayfasında özel anketlere bağlantılar göstermesine izin verir. Anketler, daha iyi özellikler oluşturmamıza ve tarayıcı tabanlı reklam kampanyalarının etkinliğini ölçmemize yardımcı olur. [Daha fazla bilgi edinin](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Brave anketlerine izin verin";
+"settings.surveyPanelistTitle" = "Growser anketlerine izin verin";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Haberi paylaşın";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Kalkanları çevrimiçi gizliliğinizi korudu.";
+"shieldEducation.trackerAdWarningSubTitle" = "Growser Kalkanları çevrimiçi gizliliğinizi korudu.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Tebrikler. Çok özelsin.";
@@ -2555,13 +2555,13 @@
 "shieldEducation.videoAdBlockTitle" = "Bu web sitesinde video izlerken reklamlar engellenir.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Brave Kalkanları Küresel Varsayılanları";
+"ShieldsDefaults" = "Growser Kalkanları Küresel Varsayılanları";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Bunlar, yeni siteler için varsayılan Kalkan ayarlarıdır. Bunları değiştirmek mevcut site başına ayarlarınızı etkilemez.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Brave'in gizlilik koruması olmadan bu siteye göz atıyorsunuz. Kalkanlar açıkken düzgün çalışmıyor mu?";
+"ShieldsDownDisclaimer" = "Growser'in gizlilik koruması olmadan bu siteye göz atıyorsunuz. Kalkanlar açıkken düzgün çalışmıyor mu?";
 
 /* shields overview message */
 "ShieldsOverview" = "Site Kalkanları, ziyaret ettiğiniz her site için reklamların ve izleyicilerin ne zaman engellendiğini kontrol etmenizi sağlar. Reklamları belirli bir sitede görmeyi tercih ediyorsanız, reklamları burada etkinleştirebilirsiniz.";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "QR Kodunu Tara";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Brave News'i Aç ve Bugünün En İyi Hikayelerine Göz At";
+"shortcuts.activityTypeBraveNewsDescription" = "Growser News'i Aç ve Bugünün En İyi Hikayelerine Göz At";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Tarayıcıyı Yeni Sekmede Aç ve Tüm Gizli Tarayıcı Geçmiş Verilerini Sil";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Tarayıcı Geçmişini Temizle";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Brave Tarayıcı Geçmişini Temizle";
+"shortcuts.activityTypeClearHistoryTitle" = "Growser Tarayıcı Geçmişini Temizle";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Tarayıcıyı Yeni Sekmede Aç ve VPN'i Etkinleştir";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "VPN'i Etkinleştir";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Brave Tarayıcıyı Aç ve VPN'i Etkinleştir";
+"shortcuts.activityTypeEnableVPNTitle" = "Growser Tarayıcıyı Aç ve VPN'i Etkinleştir";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Yeni Gizli Sekme Aç";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Yer İşaretlerini Aç";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Brave Tarayıcı Yer İşaretlerini Aç";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Growser Tarayıcı Yer İşaretlerini Aç";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Brave News'i Aç";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Growser News'i Aç";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Brave News'i Aç";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Growser News'i Aç";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Tarayıcı Geçmişi Ekranını Aç";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Tarayıcı Geçmişini Aç";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Brave Tarayıcı Geçmişini Aç";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Growser Tarayıcı Geçmişini Aç";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Videolarınızı Oynatma Listesinde Oynatmaya Başlayın";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Oynatma Listesi Aç";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Brave Sekmelerini Diğer Cihazlarda Aç";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Growser Sekmelerini Diğer Cihazlarda Aç";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Diğer Cihazlardaki Sekmeleri Aç";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Diğer Cihazlardaki Sekmeleri Aç";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Brave ile Web'de Güvenle Arama Yapmaya Başlayın";
+"shortcuts.activityTypeTabDescription" = "Growser ile Web'de Güvenle Arama Yapmaya Başlayın";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Yer İşareti Web Sitesini Aç";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Web Sitesini Aç";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Bu seçenek Brave Ayarlarını açacaktır. Çeşitli Siri seçeneklerini değiştirmek için lütfen \"Siri & Arama\" menü öğesini seçin ve tercihlerinizi özelleştirin.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Bu seçenek Growser Ayarlarını açacaktır. Çeşitli Siri seçeneklerini değiştirmek için lütfen \"Siri & Arama\" menü öğesini seçin ve tercihlerinizi özelleştirin.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Ayarları Aç";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Tarayıcı Geçmişini Temizle";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Siri - Sesli Yardımcı ile Brave VPN'i etkinleştirmek için Kestirmeler'i kullanın";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Siri - Sesli Yardımcı ile Growser VPN'i etkinleştirmek için Kestirmeler'i kullanın";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "VPN'i Etkinleştir";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Yer İşaretlerini Aç";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Siri - Sesli Asistan aracılığıyla yeni bir sekme açmak & Brave Haberler Akışını görüntülemek için Kısayolları kullanın";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Siri - Sesli Asistan aracılığıyla yeni bir sekme açmak & Growser Haberler Akışını görüntülemek için Kısayolları kullanın";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Brave News'i Aç";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Growser News'i Aç";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Sesli Yardımcı Siri aracılığıyla tarayıcı geçmişini açmak için Kısayolları kullanın";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Site ve Kalkan Ayarları";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Brave'in geliştiricilerine bu sitede bir sorun olduğunu bildirin. Düzeltmek için elimizden geleni yapacağız!";
+"SiteReportedBody" = "Growser'in geliştiricilerine bu sitede bir sorun olduğunu bildirin. Düzeltmek için elimizden geleni yapacağız!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Teşekkürler";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Kalkanlar";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Her gün Brave ile web'de gezinerek veriden tasarruf ediyorum.";
+"socialSharing.domainSpecificDataSavedTitle" = "Her gün Growser ile web'de gezinerek veriden tasarruf ediyorum.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Her gün Brave ile web'de gezinerek veriden tasarruf ediyorum.";
+"socialSharing.shareDescriptionTitle" = "Her gün Growser ile web'de gezinerek veriden tasarruf ediyorum.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Standart Sekme";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Senkronizasyon Hesabını Sil";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Hesabınızı silmek, şifrelenmiş verilerinizi Brave sunucularından kaldırır ve bağlı tüm cihazlarınızda Senkronizasyonu devre dışı bırakır.";
+"sync.deleteAccountAlertDescriptionPart1" = "Hesabınızı silmek, şifrelenmiş verilerinizi Growser sunucularından kaldırır ve bağlı tüm cihazlarınızda Senkronizasyonu devre dışı bırakır.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Ancak bu işlem, bu cihazlarda yerel olarak depolanan verileri silmez.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Senkronizasyon Hesabını Sil";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Görünüşe göre bu kod Brave'in eski bir sürümünü çalıştıran bir cihazda oluşturulmuş. Lütfen diğer cihazınızda Brave'i en yeni sürümüne güncelleyin ve bundan sonra yeni bir senkronizasyon kodu oluşturun.";
+"sync.deprecatedVersionError" = "Görünüşe göre bu kod Growser'in eski bir sürümünü çalıştıran bir cihazda oluşturulmuş. Lütfen diğer cihazınızda Growser'i en yeni sürümüne güncelleyin ve bundan sonra yeni bir senkronizasyon kodu oluşturun.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Senkronizasyon zincirindeki cihazlar alınırken bir şeyler ters gitti.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Cihazınız Brave Sync'i etkileyebilecek şekilde yedekten geri yüklenmiş gibi görünüyor. Brave Sync'i kullanmaya devam etmek için senkronizasyon zincirini sıfırlamalı ve yeniden katılmalısınız.";
+"sync.deviceRestoreDetectedMessage" = "Cihazınız Growser Sync'i etkileyebilecek şekilde yedekten geri yüklenmiş gibi görünüyor. Growser Sync'i kullanmaya devam etmek için senkronizasyon zincirini sıfırlamalı ve yeniden katılmalısınız.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Geri Yükleme Algılandı";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "aygıt";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Şu anda eşitlenen veriler korunur, ancak Brave's Sync önbelleğinde bulunan tüm veriler silinir. Cihaz verilerini yeniden eşitlemek için yeni bir eşitleme zinciri başlatmanız gerekir.";
+"sync.removeLastDeviceMessage" = "Şu anda eşitlenen veriler korunur, ancak Growser's Sync önbelleğinde bulunan tüm veriler silinir. Cihaz verilerini yeniden eşitlemek için yeni bir eşitleme zinciri başlatmanız gerekir.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Eşitleme Zincirini Sil";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Aygıtla eşitle";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Mevcut eşitlenmiş cihazı kullanarak Brave Ayarlarını açın ve Ayarlar -> Eşitleme'ye gidin. \"Cihaz Ekle\"yi seçin ve ekranda görüntülenen kodu tarayın.";
+"sync.toDeviceDescription" = "Mevcut eşitlenmiş cihazı kullanarak Growser Ayarlarını açın ve Ayarlar -> Eşitleme'ye gidin. \"Cihaz Ekle\"yi seçin ve ekranda görüntülenen kodu tarayın.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Bu cihaz senkronize edilemiyor";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Bu kod geçersiz. Lütfen cihazınızdaki saatin ve saat diliminin doğru şekilde ayarlandığını teyit edin.";
 
 /* Sync settings welcome */
-"sync.welcome" = "Başlamak için, senkronize etmeyi planladığınız tüm cihazlarda Brave'in yüklü olması gerekir. Bunları birbirine zincirlemek için, tüm cihazlarınızı güvenli bir şekilde birbirine bağlarken kullanacağınız bir eşitleme zinciri başlatın.";
+"sync.welcome" = "Başlamak için, senkronize etmeyi planladığınız tüm cihazlarda Growser'in yüklü olması gerekir. Bunları birbirine zincirlemek için, tüm cihazlarınızı güvenli bir şekilde birbirine bağlarken kullanacağınız bir eşitleme zinciri başlatın.";
 
 /* Word count title */
 "sync.wordCount" = "Sözcük sayısı: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Cihazınızda iz bırakmayın";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN, Brave tarayıcısının dışında bile, çevrimiçi yaptığınız her şeyi şifreler ve korur.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Growser VPN, Growser tarayıcısının dışında bile, çevrimiçi yaptığınız her şeyi şifreler ve korur.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Growser VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Unutmayın ki tarama etkinliğiniz, gizli pencerelerde bile İSS'niz, ağ gözlemcileri veya işvereniniz (bir iş cihazı/ağ kullanıyorsanız) tarafından görülebilir.";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Klavyeyi Otomatik Aç";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Ask Brave ve Brave Arama bağlantılarını önizleme sekmelerinde aç";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Ask Growser ve Growser Arama bağlantılarını önizleme sekmelerinde aç";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Hızlı Görünüm Sekmelerini Etkinleştir";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Paylaş...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Brave'i arkadaşlarınızla paylaşın!";
+"themeQRCodeShareTitle" = "Growser'i arkadaşlarınızla paylaşın!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Otomatik";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Üzgünüz, bu özet akışı adresinin içeriği yok.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Brave News'e Kaynak Ekle";
+"today.addSourceShareTitle" = "Growser News'e Kaynak Ekle";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Mevcut RSS Akışı";
 
 /* The name of the feature */
-"today.braveToday" = "Brave News";
+"today.braveToday" = "Growser News";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Haberler";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Fırsatlar";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Brave News, %@ kaynağından içerik göstermeyi durduracak";
+"today.disabledAlertBody" = "Growser News, %@ kaynağından içerik göstermeyi durduracak";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "sakat";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "%@ öğesinden gelen içeriği etkinleştir";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Brave News bazı sorunlar yaşıyor. Yeniden deneyin.";
+"today.errorGeneralBody" = "Growser News bazı sorunlar yaşıyor. Yeniden deneyin.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Hop...";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Güvensiz Kaynaklar - Riski göze alıyorsanız ekleyin";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Favori kaynaklarınızı tek akıştan takip edin. Sadece Brave'de bir sekme açın, aşağı kaydırın ve... işte oldu!\nBrave News özel, anonim reklamlarla desteklenir.";
+"today.introCardBody" = "Favori kaynaklarınızı tek akıştan takip edin. Sadece Growser'de bir sekme açın, aşağı kaydırın ve... işte oldu!\nGrowser News özel, anonim reklamlarla desteklenir.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Brave News'i açın ve hiçbir haberi kaçırmayın";
+"today.introCardTitle" = "Growser News'i açın ve hiçbir haberi kaçırmayın";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Brave News'i Göster";
+"today.isEnabledToggleLabel" = "Growser News'i Göster";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Verileriniz hakkında daha fazla bilgi edinin";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Daha Fazla Brave Teklifi";
+"today.moreBraveOffers" = "Daha Fazla Growser Teklifi";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "İnternet Yok";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Desteklenen";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "App Store'da Brave'i Değerlendirin";
+"today.rateBraveCardActionSheetTitle" = "App Store'da Growser'i Değerlendirin";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Gizle";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Brave'i Değerlendirin";
+"today.rateBraveCardRateActionTitle" = "Growser'i Değerlendirin";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Bize ne düşündüğünü söyle!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Brave'den memnun musunuz?";
+"today.rateBraveCardTitle" = "Growser'den memnun musunuz?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Yenile";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Önerilen";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Brave News'i aç";
+"today.turnOnBraveToday" = "Growser News'i aç";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Takipten Çık";
@@ -3557,7 +3557,7 @@
 "voice.search.microphone.title.required" = "Mikrofon Erişimi Gerekli";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave, sesli aramalarınızı kaydetmez veya paylaşmaz.";
+"voice.search.screen.disclaimer" = "Growser, sesli aramalarınızı kaydetmez veya paylaşmaz.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Cüzdan Oluşturma Tarihi";

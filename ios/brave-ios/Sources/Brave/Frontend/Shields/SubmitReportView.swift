@@ -6,7 +6,7 @@
 import BraveCore
 import BraveShields
 import BraveUI
-import BraveVPN
+// Growser-280: no BraveVPN.
 import Data
 import DesignSystem
 import Preferences
@@ -220,7 +220,7 @@ struct SubmitReportView: View {
         adBlockListNames: adblkList,
         languages: Locale.current.language.languageCode?.identifier,
         languageFarbling: String(true),
-        braveVpnConnected: String(BraveVPN.isConnected),
+        braveVpnConnected: String(false),  // Growser-280: no VPN.
         category: selectedCategory?.value,
         details: additionalDetails,
         contact: contactDetails,

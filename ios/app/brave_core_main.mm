@@ -25,10 +25,7 @@
 #include "base/strings/sys_string_conversions.h"
 #include "base/threading/thread_restrictions.h"
 #include "brave/components/brave_user_agent/browser/brave_user_agent_exceptions.h"
-#include "brave/components/p3a/component_installer.h"
-#include "brave/components/p3a/histograms_braveizer.h"
-#include "brave/components/p3a/p3a_config.h"
-#include "brave/components/p3a/p3a_service.h"
+#include "brave/components/p3a/buildflags/buildflags.h"
 #include "brave/ios/app/brave_main_delegate.h"
 #include "brave/ios/app/brave_profile_controller+private.h"
 #include "brave/ios/app/brave_profile_controller.h"
@@ -43,6 +40,13 @@
 #include "brave/ios/components/prefs/pref_service_bridge_impl.h"
 #import "build/blink_buildflags.h"
 #include "components/component_updater/component_updater_paths.h"
+
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
+#include "brave/components/p3a/component_installer.h"
+#include "brave/components/p3a/histograms_braveizer.h"
+#include "brave/components/p3a/p3a_config.h"
+#include "brave/components/p3a/p3a_service.h"
+#endif
 #include "components/metrics/metrics_pref_names.h"
 #include "components/prefs/pref_change_registrar.h"
 #include "components/prefs/pref_service.h"
@@ -79,8 +83,10 @@ const BraveCoreLogSeverity BraveCoreLogSeverityVerbose =
   std::unique_ptr<BraveMainDelegate> _delegate;
   std::unique_ptr<web::WebMain> _webMain;
   std::unique_ptr<base::AtExitManager> _exitManager;
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   scoped_refptr<p3a::P3AService> _p3a_service;
   scoped_refptr<p3a::HistogramsBraveizer> _histogram_braveizer;
+#endif
   PrefChangeRegistrar _localStatePrefChangeRegistrar;
 }
 @property(nonatomic) BraveProfileController* profileController;
@@ -359,6 +365,7 @@ static bool CustomLogHandler(int severity,
 
 - (void)initializeP3AServiceForChannel:(NSString*)channel
                       installationDate:(NSDate*)installDate {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
   _p3a_service = base::MakeRefCounted<p3a::P3AService>(
       *GetApplicationContext()->GetLocalState(),
       base::SysNSStringToUTF8(channel), base::Time::FromNSDate(installDate),
@@ -373,13 +380,23 @@ static bool CustomLogHandler(int severity,
   // in the future, move this call there.
   p3a::MaybeToggleP3AComponent(
       GetApplicationContext()->GetComponentUpdateService(), _p3a_service.get());
+#else
+  // Growser-289: the P3A engine is compiled out, as on the desktop (#98), so
+  // there is nothing to start - no service, no uploads, no component. The
+  // method stays because a public framework header cannot read a buildflag.
+#endif
 }
 
 - (BraveP3AUtils*)p3aUtils {
   if (!_p3aUtils) {
+#if BUILDFLAG(ENABLE_P3A)  // Growser-289
     _p3aUtils = [[BraveP3AUtils alloc]
         initWithLocalState:GetApplicationContext()->GetLocalState()
                 p3aService:_p3a_service];
+#else
+    _p3aUtils = [[BraveP3AUtils alloc]
+        initWithLocalState:GetApplicationContext()->GetLocalState()];
+#endif
   }
   return _p3aUtils;
 }

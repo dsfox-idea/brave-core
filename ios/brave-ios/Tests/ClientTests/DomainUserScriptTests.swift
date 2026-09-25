@@ -40,58 +40,31 @@ class DomainUserScriptTests: XCTestCase {
     }
   }
 
-  func testBraveTalkAPIAvailability() throws {
-    let goodURLs = [
+  // Growser-278: Brave Talk is out of the product, so talk.brave.com gets no
+  // domain script at all.
+  func testBraveTalkHostsGetNoDomainScript() throws {
+    let talkURLs = [
       URL(string: "https://talk.brave.com"),
       URL(string: "https://talk.bravesoftware.com"),
       URL(string: "https://talk.brave.com/account"),
     ].compactMap { $0 }
 
-    goodURLs.forEach {
-      XCTAssertEqual(DomainUserScript(for: $0, isPrivateBrowsing: false), .braveTalkHelper)
-    }
-
-    let badURLs = [
-      URL(string: "https://search.brave.com"),
-      URL(string: "https://search-dev.brave.com"),
-      URL(string: "https://search.brave.com/custom/path"),
-      URL(string: "https://search-dev.brave.com/custom/path"),
-      URL(string: "https://community.brave.app"),
-      URL(string: "https://subdomain.brave.com"),
-      URL(string: "https://brave.com"),
-    ].compactMap { $0 }
-
-    badURLs.forEach {
-      XCTAssertNotEqual(DomainUserScript(for: $0, isPrivateBrowsing: false), .braveTalkHelper)
+    talkURLs.forEach {
+      XCTAssertNil(DomainUserScript(for: $0, isPrivateBrowsing: false))
     }
   }
 
-  func testSKUsAPIAvailability() throws {
-    let goodURLs = [
+  // Growser-283: SKUS is out of the product, so account.brave.com gets no
+  // domain script at all.
+  func testAccountHostsGetNoDomainScript() throws {
+    let accountURLs = [
       URL(string: "https://account.brave.com"),
       URL(string: "https://account.bravesoftware.com"),
       URL(string: "https://account.brave.software"),
     ].compactMap { $0 }
 
-    goodURLs.forEach {
-      XCTAssertEqual(
-        DomainUserScript(for: $0, isPrivateBrowsing: false),
-        .braveSkus,
-        "\($0) failed"
-      )
-      XCTAssertNil(DomainUserScript(for: $0, isPrivateBrowsing: true))
-    }
-
-    let badURLs = [
-      URL(string: "https://talk.brave.com"),
-      URL(string: "https://search.brave.software.com"),
-      URL(string: "https://community.brave.app"),
-      URL(string: "https://subdomain.search.brave.com"),
-      URL(string: "https://brave.com"),
-    ].compactMap { $0 }
-
-    badURLs.forEach {
-      XCTAssertNotEqual(DomainUserScript(for: $0, isPrivateBrowsing: false), .braveSkus)
+    accountURLs.forEach {
+      XCTAssertNil(DomainUserScript(for: $0, isPrivateBrowsing: false), "\($0)")
     }
   }
 }

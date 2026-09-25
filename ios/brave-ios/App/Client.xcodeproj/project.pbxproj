@@ -19,18 +19,12 @@
 		271C57792B07F036008D824E /* CredentialProviderUI in Frameworks */ = {isa = PBXBuildFile; productRef = 271C57782B07F036008D824E /* CredentialProviderUI */; };
 		271D3F9A2E007B220093539A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FE7D54B2B50A11A0039FBA4 /* InfoPlist.strings */; };
 		271D3F9B2E007B2A0093539A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59B6912121B695A400E9388E /* InfoPlist.strings */; };
-		272947DE29C8DB2000BF2FDC /* topics_news.en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = 27444B6A29831BBE002E1EBE /* topics_news.en_US.json */; };
-		272947E329C8F86A00BF2FDC /* NewsTopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272947E029C8F6F200BF2FDC /* NewsTopicsModel.swift */; };
-		272FC5AF2979EA700027C53D /* TopNewsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272FC5AE2979E9D60027C53D /* TopNewsWidget.swift */; };
 		27462BEA29DF39EE00715268 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 27462BE929DF39EE00715268 /* OrderedCollections */; };
 		27466BB1288EDB9C00584C90 /* RuntimeWarnings in Frameworks */ = {isa = PBXBuildFile; productRef = 27466BB0288EDB9C00584C90 /* RuntimeWarnings */; };
 		2749F5CA2D088E6500A5DAAB /* BraveCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2749F5C92D088E6500A5DAAB /* BraveCore */; };
 		2759468D29CCB62F0094BDDE /* GRDWireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2759468C29CCB62F0094BDDE /* GRDWireGuardKit */; };
-		2759468F29CCB6350094BDDE /* GRDWireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2759468E29CCB6350094BDDE /* GRDWireGuardKit */; };
 		2787B06A2B7ED260004796F8 /* BraveCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2787B0692B7ED260004796F8 /* BraveCore */; };
-		278852E42ACDC26B005395CF /* Playlist in Frameworks */ = {isa = PBXBuildFile; productRef = 278852E32ACDC26B005395CF /* Playlist */; };
 		278852E62ACDE795005395CF /* UserAgent in Frameworks */ = {isa = PBXBuildFile; productRef = 278852E52ACDE795005395CF /* UserAgent */; };
-		278BB9FF297B0A1E00690BE3 /* TopNewsListWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278BB9FE297B0A1E00690BE3 /* TopNewsListWidget.swift */; };
 		279366882EB26E0300599776 /* OpenInBraveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279366872EB26DD400599776 /* OpenInBraveViewController.swift */; };
 		279366892EB26E0300599776 /* OpenInBraveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279366872EB26DD400599776 /* OpenInBraveViewController.swift */; };
 		279A828E28FEF01E00F55A5E /* BraveWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CA0391E5271E1382000EB13C /* BraveWidgets.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
@@ -51,14 +45,12 @@
 		27D7FF5B29BA75FB0096DD93 /* WidgetStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7FF5A29BA75AD0096DD93 /* WidgetStrings.swift */; };
 		27D7FF5E29BA784C0096DD93 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27D7FF6029BA784C0096DD93 /* Localizable.strings */; };
 		27D7FF7329BB816E0096DD93 /* PrivateCDN in Frameworks */ = {isa = PBXBuildFile; productRef = 27D7FF7229BB816E0096DD93 /* PrivateCDN */; };
-		27D972E628BD4D9900DDCF79 /* BraveNews in Frameworks */ = {isa = PBXBuildFile; productRef = 27D972E528BD4D9900DDCF79 /* BraveNews */; };
 		27DB270828BE9CB4005CB7AC /* LockScreenFavoriteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB270728BE9CAE005CB7AC /* LockScreenFavoriteWidget.swift */; };
 		27E998272B7BE1BC00D9ECF7 /* BraveCore in Frameworks */ = {isa = PBXBuildFile; productRef = 27E998262B7BE1BC00D9ECF7 /* BraveCore */; };
 		27F4439F2135E11200296C58 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27F443952135E11200296C58 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		27FA21752837F8EA00FA2C45 /* BrowserIntentsModels in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21742837F8EA00FA2C45 /* BrowserIntentsModels */; };
 		27FA217B2837F95400FA2C45 /* Strings in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA217A2837F95400FA2C45 /* Strings */; };
 		27FA217F2837FB0100FA2C45 /* BraveShared in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA217E2837FB0100FA2C45 /* BraveShared */; };
-		27FA21812837FB0100FA2C45 /* BraveWallet in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21802837FB0100FA2C45 /* BraveWallet */; };
 		27FA21832837FB0100FA2C45 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21822837FB0100FA2C45 /* Data */; };
 		27FA21892837FB0100FA2C45 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA21882837FB0100FA2C45 /* Shared */; };
 		27FA21A42838019000FA2C45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FA21902838018E00FA2C45 /* InfoPlist.strings */; };
@@ -69,7 +61,6 @@
 		2FC7DF7B2B5AE98E0092553B /* ActionExtensionIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7DF7A2B5AE98E0092553B /* ActionExtensionIcons.xcassets */; };
 		2FD860C229C3D677005AADD1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1DF485244A2ECB00541FE4 /* NetworkExtension.framework */; };
 		2FD860C529C3D686005AADD1 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD860C429C3D686005AADD1 /* PacketTunnelProvider.swift */; };
-		2FD860CA29C3D686005AADD1 /* BraveWireGuard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2FD860C129C3D677005AADD1 /* BraveWireGuard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2FE7D51D2B509DA40039FBA4 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE7D51C2B509DA40039FBA4 /* UniformTypeIdentifiers.framework */; };
 		2FE7D5292B509DA50039FBA4 /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2FE7D51B2B509DA40039FBA4 /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		441A6360272445F9001492C3 /* StatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441A635F272444DE001492C3 /* StatDataModel.swift */; };
@@ -93,7 +84,6 @@
 		CA986FB2298C1249000C6DD8 /* BraveWidgetsModels in Frameworks */ = {isa = PBXBuildFile; productRef = CA986FB1298C1249000C6DD8 /* BraveWidgetsModels */; };
 		CA986FB4298C1254000C6DD8 /* BraveWidgetsModels in Frameworks */ = {isa = PBXBuildFile; productRef = CA986FB3298C1254000C6DD8 /* BraveWidgetsModels */; };
 		CAADEFE026E2707F0020DC4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAADEFDF26E2707F0020DC4C /* SceneDelegate.swift */; };
-		CAAE653D287C9FCF00FA44A3 /* CPTemplateApplicationSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAE653C287C9FCF00FA44A3 /* CPTemplateApplicationSceneDelegate.swift */; };
 		CABDE77F2A55DD1C00A388A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABDE77E2A55DD1C00A388A4 /* AppState.swift */; };
 		D522706430375C3200BC8DCD /* BraveStrings in Frameworks */ = {isa = PBXBuildFile; productRef = D522706330375C3200BC8DCD /* BraveStrings */; };
 		E6231C011B90A44F005ABB0D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E6231C001B90A44F005ABB0D /* libz.tbd */; };
@@ -122,13 +112,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2F6931B3260CFB3700ECEB38;
 			remoteInfo = BrowserIntents;
-		};
-		2FD860C829C3D686005AADD1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F84B21B61A090F8100AAB793 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2FD860C029C3D676005AADD1;
-			remoteInfo = BraveWireGuard;
 		};
 		2FE7D5272B509DA50039FBA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -166,7 +149,6 @@
 				CA8B4AF0276A8339002120F7 /* BraveWidgetsExtension.appex in Embed App Extensions */,
 				27F4439F2135E11200296C58 /* ShareExtension.appex in Embed App Extensions */,
 				2714EE762AF2D4CD002090A9 /* AutoFillProvider.appex in Embed App Extensions */,
-				2FD860CA29C3D686005AADD1 /* BraveWireGuard.appex in Embed App Extensions */,
 				2FE7D5292B509DA50039FBA4 /* ActionExtension.appex in Embed App Extensions */,
 				2F6931BB260CFB3700ECEB38 /* BrowserIntents.appex in Embed App Extensions */,
 			);
@@ -567,16 +549,12 @@
 				5E8CD8E123D5E3DA00548FC0 /* libarchive.2.tbd in Frameworks */,
 				E6231C051B90A472005ABB0D /* libxml2.2.tbd in Frameworks */,
 				E6231C011B90A44F005ABB0D /* libz.tbd in Frameworks */,
-				2759468F29CCB6350094BDDE /* GRDWireGuardKit in Frameworks */,
-				27D972E628BD4D9900DDCF79 /* BraveNews in Frameworks */,
 				27D7FF5329BA69330096DD93 /* BraveShields in Frameworks */,
 				27FA217F2837FB0100FA2C45 /* BraveShared in Frameworks */,
 				27D7FF7329BB816E0096DD93 /* PrivateCDN in Frameworks */,
 				279F8EE4300FFE9600B80983 /* MarketplaceKit.framework in Frameworks */,
 				2714EE8E2AF3F656002090A9 /* AuthenticationServices.framework in Frameworks */,
 				278852E62ACDE795005395CF /* UserAgent in Frameworks */,
-				27FA21812837FB0100FA2C45 /* BraveWallet in Frameworks */,
-				278852E42ACDC26B005395CF /* Playlist in Frameworks */,
 				0A1DF486244A2ECB00541FE4 /* NetworkExtension.framework in Frameworks */,
 				27466BB1288EDB9C00584C90 /* RuntimeWarnings in Frameworks */,
 			);
@@ -1074,7 +1052,6 @@
 				CA8B4AE4276A830F002120F7 /* PBXTargetDependency */,
 				27F4439E2135E11200296C58 /* PBXTargetDependency */,
 				2F6931BA260CFB3700ECEB38 /* PBXTargetDependency */,
-				2FD860C929C3D686005AADD1 /* PBXTargetDependency */,
 				2FE7D5282B509DA50039FBA4 /* PBXTargetDependency */,
 				2714EE752AF2D4CD002090A9 /* PBXTargetDependency */,
 			);
@@ -1084,18 +1061,14 @@
 			name = Client;
 			packageProductDependencies = (
 				27FA217E2837FB0100FA2C45 /* BraveShared */,
-				27FA21802837FB0100FA2C45 /* BraveWallet */,
 				27FA21822837FB0100FA2C45 /* Data */,
 				27FA21882837FB0100FA2C45 /* Shared */,
 				270ECFC72838210F0089B8B7 /* Brave */,
 				27466BB0288EDB9C00584C90 /* RuntimeWarnings */,
-				27D972E528BD4D9900DDCF79 /* BraveNews */,
 				7DDE6307292FEC9500B8B585 /* SDWebImage */,
-				2759468E29CCB6350094BDDE /* GRDWireGuardKit */,
 				27C1C5EC29B6AA8800739BE5 /* Preferences */,
 				27D7FF5229BA69330096DD93 /* BraveShields */,
 				27D7FF7229BB816E0096DD93 /* PrivateCDN */,
-				278852E32ACDC26B005395CF /* Playlist */,
 				278852E52ACDE795005395CF /* UserAgent */,
 			);
 			productName = Client;
@@ -1284,7 +1257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0391BC271E1026000EB13C /* Assets.xcassets in Resources */,
-				272947DE29C8DB2000BF2FDC /* topics_news.en_US.json in Resources */,
 				44A8A37B2BADE8D2004D1BF1 /* PrivacyInfo.xcprivacy in Resources */,
 				27D7FF5E29BA784C0096DD93 /* Localizable.strings in Resources */,
 			);
@@ -1381,8 +1353,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272947E329C8F86A00BF2FDC /* NewsTopicsModel.swift in Sources */,
-				278BB9FF297B0A1E00690BE3 /* TopNewsListWidget.swift in Sources */,
 				CA0391FC271E143F000EB13C /* SingleStatWidget.swift in Sources */,
 				27A28ED528C00C1D001466A4 /* LockScreenShortcutWidget.swift in Sources */,
 				CA0391FB271E143F000EB13C /* StatsWidget.swift in Sources */,
@@ -1393,7 +1363,6 @@
 				27D7FF5B29BA75FB0096DD93 /* WidgetStrings.swift in Sources */,
 				CA0391B9271E1023000EB13C /* BraveWidgets.swift in Sources */,
 				CA0391E3271E1382000EB13C /* BraveWidgets.intentdefinition in Sources */,
-				272FC5AF2979EA700027C53D /* TopNewsWidget.swift in Sources */,
 				CA0391F9271E143F000EB13C /* FavoritesWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1407,7 +1376,6 @@
 				27BEDCCC28AD37CE0073425E /* BraveWidgets.intentdefinition in Sources */,
 				CABDE77F2A55DD1C00A388A4 /* AppState.swift in Sources */,
 				CAADEFE026E2707F0020DC4C /* SceneDelegate.swift in Sources */,
-				CAAE653D287C9FCF00FA44A3 /* CPTemplateApplicationSceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1428,11 +1396,6 @@
 			isa = PBXTargetDependency;
 			target = 2F6931B3260CFB3700ECEB38 /* BrowserIntents */;
 			targetProxy = 2F6931B9260CFB3700ECEB38 /* PBXContainerItemProxy */;
-		};
-		2FD860C929C3D686005AADD1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2FD860C029C3D676005AADD1 /* BraveWireGuard */;
-			targetProxy = 2FD860C829C3D686005AADD1 /* PBXContainerItemProxy */;
 		};
 		2FE7D5282B509DA50039FBA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2303,7 +2266,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "windows 3d 80s aqua bat holo neon netscape supernova terminal popart popart-dark";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Local;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/iOS/Entitlements/Debug (AppStore).entitlements";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2520,7 +2482,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "windows 3d 80s aqua bat holo neon netscape supernova terminal popart popart-dark";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/iOS/Entitlements/Release.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -3622,7 +3583,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "windows 3d 80s aqua bat holo neon netscape supernova terminal popart popart-dark";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/iOS/Entitlements/Release (AppStore).entitlements";
 				DEVELOPMENT_ASSET_PATHS = "\"$(PROJECT_DIR)/../Sources/Brave/Frontend/PreviewContent\"";
@@ -3710,7 +3670,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "windows 3d 80s aqua bat holo neon netscape supernova terminal popart popart-dark";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Nightly;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/iOS/Entitlements/Nightly.entitlements";
 				DEVELOPMENT_ASSET_PATHS = "\"$(PROJECT_DIR)/../Sources/Brave/Frontend/PreviewContent\"";
@@ -3795,7 +3754,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "windows 3d 80s aqua bat holo neon netscape supernova terminal popart popart-dark";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Beta;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/iOS/Entitlements/Beta.entitlements";
 				DEVELOPMENT_ASSET_PATHS = "\"$(PROJECT_DIR)/../Sources/Brave/Frontend/PreviewContent\"";
@@ -3877,7 +3835,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "windows 3d 80s aqua bat holo neon netscape supernova terminal popart popart-dark";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_Local;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/iOS/Entitlements/Debug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -4072,17 +4029,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = GRDWireGuardKit;
 		};
-		2759468E29CCB6350094BDDE /* GRDWireGuardKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GRDWireGuardKit;
-		};
 		2787B0692B7ED260004796F8 /* BraveCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BraveCore;
-		};
-		278852E32ACDC26B005395CF /* Playlist */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Playlist;
 		};
 		278852E52ACDE795005395CF /* UserAgent */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -4124,10 +4073,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = PrivateCDN;
 		};
-		27D972E528BD4D9900DDCF79 /* BraveNews */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BraveNews;
-		};
 		27E998262B7BE1BC00D9ECF7 /* BraveCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BraveCore;
@@ -4143,10 +4088,6 @@
 		27FA217E2837FB0100FA2C45 /* BraveShared */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BraveShared;
-		};
-		27FA21802837FB0100FA2C45 /* BraveWallet */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BraveWallet;
 		};
 		27FA21822837FB0100FA2C45 /* Data */ = {
 			isa = XCSwiftPackageProductDependency;

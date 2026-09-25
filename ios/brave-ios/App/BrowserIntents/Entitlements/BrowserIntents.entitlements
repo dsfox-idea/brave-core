@@ -2,9 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- Growser-284: the configuration's app group, not a copy of Brave's. -->
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.brave.ios.BrowserBeta.unique</string>
+		<string>$(BRAVE_GROUP_ID)</string>
 	</array>
 </dict>
 </plist>

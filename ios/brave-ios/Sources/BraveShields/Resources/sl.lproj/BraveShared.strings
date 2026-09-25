@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Dodajte seznam filtrov prek URL-ja";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** je vaša vstopnica do oglasov proste in neprekinjene video izkušnje.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** je vaša vstopnica do oglasov proste in neprekinjene video izkušnje.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Prilagodite Ščite zame";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "To spletno mesto je začelo blokirati nekatere blokatorje oglasov, kar pomeni, da njihova spletna mesta morda ne bodo delovala pričakovano.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Da rešite to težavo, lahko Brave prilagodi vaše nastavitve ščitov za vas. Ko se prilagodijo, lahko poskusite gledam to vsebino namesto v Brave Player.";
+"AntiAdBlockWarningDescription2" = "Da rešite to težavo, lahko Growser prilagodi vaše nastavitve ščitov za vas. Ko se prilagodijo, lahko poskusite gledam to vsebino namesto v Growser Player.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Obdrži trenutne nastavitve";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Onemogočite obvestila 'Prehod na aplikacijo'";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave predvajalnik";
+"BravePlayer" = "Growser predvajalnik";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Vedno odpiraj videoposnetke s tega spletnega mesta z Brave Player";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Vedno odpiraj videoposnetke s tega spletnega mesta z Growser Player";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Preizkusi";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Ne zdaj";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave Player vam omogoča spremljanje videov brez prekinitev.";
+"BravePlayerInfoMessage" = "Growser Player vam omogoča spremljanje videov brez prekinitev.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Gledam v Brave Player namesto";
+"BravePlayerInfoTitle" = "Gledam v Growser Player namesto";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Filtriranje vsebine";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Pojdi nazaj";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Ker ste zahtevali agresivno blokiranje sledilcev in oglasov, Brave blokira to spletno mesto pred prvo omrežno povezavo.";
+"DomainBlockedPageDescription" = "Ker ste zahtevali agresivno blokiranje sledilcev in oglasov, Growser blokira to spletno mesto pred prvo omrežno povezavo.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave je preprečil nalaganje naslednje strani:";
+"DomainBlockedPageMessage" = "Growser je preprečil nalaganje naslednje strani:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "To spletno mesto vam bo morda poskušalo slediti na drugih spletnih mestih";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Zapiranje aplikacije";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Podatki o brskanju se samodejno uničijo, ko je aplikacija Brave zaprta/znova zagnana";
+"ShredOnAppCloseDescription" = "Podatki o brskanju se samodejno uničijo, ko je aplikacija Growser zaprta/znova zagnana";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Zavihek mesta zaprt";

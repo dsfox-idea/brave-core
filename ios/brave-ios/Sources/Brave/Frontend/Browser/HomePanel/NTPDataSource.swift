@@ -9,14 +9,12 @@ import UIKit
 
 enum NTPWallpaper {
   case image(NTPBackgroundImage)
-  case sponsoredMedia(NTPSponsoredImageBackground, BraveAds.NewTabPageAdInfo)
+  // Growser-290: no sponsoredMedia - sponsored images are ads, and ads are out.
 
   var backgroundImage: UIImage? {
     let imagePath: URL
     switch self {
     case .image(let background):
-      imagePath = background.imagePath
-    case .sponsoredMedia(let background, _):
       imagePath = background.imagePath
     }
     return UIImage(contentsOfFile: imagePath.path)
@@ -27,8 +25,6 @@ enum NTPWallpaper {
     switch self {
     case .image:
       imagePath = nil
-    case .sponsoredMedia(let background, _):
-      imagePath = background.logo.imagePath
     }
     return imagePath.flatMap { UIImage(contentsOfFile: $0.path) }
   }
@@ -37,14 +33,12 @@ enum NTPWallpaper {
     switch self {
     case .image:
       return nil  // Will eventually return a real value
-    case .sponsoredMedia(let background, _):
-      return background.focalPoint
     }
   }
 }
 
 public class NTPDataSource {
-  private var rewards: BraveRewards?
+  // Growser-290: no rewards.
 
   private(set) var privateBrowsingManager: PrivateBrowsingManager
 
@@ -61,11 +55,9 @@ public class NTPDataSource {
 
   public init(
     service: NTPBackgroundImagesService,
-    rewards: BraveRewards?,
     privateBrowsingManager: PrivateBrowsingManager
   ) {
     self.service = service
-    self.rewards = rewards
     self.privateBrowsingManager = privateBrowsingManager
 
     Preferences.NewTabPage.selectedCustomTheme.observe(from: self)
@@ -82,34 +74,7 @@ public class NTPDataSource {
   // This can 'easily' be adjusted to support both sets by switching to String, and using filePath to identify uniqueness.
   private var lastBackgroundChoices = [Int]()
 
-  func shouldAttemptSponsoredMedia() -> Bool {
-    return
-      Preferences.NewTabPage.backgroundMediaType.isSponsored
-      && Preferences.NewTabPage.backgroundRotationCounter.value
-        == service.initialCountToBrandedWallpaper
-      && !privateBrowsingManager.isPrivateBrowsing
-  }
-
-  func getSponsoredMediaBackground(for newTabPageAd: BraveAds.NewTabPageAdInfo) -> NTPWallpaper? {
-    guard let sponsoredImageData = service.sponsoredImageData
-    else { return nil }
-
-    for campaign in sponsoredImageData.campaigns {
-      if campaign.campaignId != newTabPageAd.campaignId {
-        continue
-      }
-
-      for creative in campaign.backgrounds {
-        if creative.logo.imagePath != nil
-          && creative.creativeInstanceId == newTabPageAd.creativeInstanceId
-        {
-          return .sponsoredMedia(creative, newTabPageAd)
-        }
-      }
-    }
-
-    return nil
-  }
+  // Growser-290: no shouldAttemptSponsoredMedia() or getSponsoredMediaBackground(for:).
 
   func getImageBackground() -> NTPWallpaper? {
     // Identifying the background array to use
@@ -161,18 +126,8 @@ public class NTPDataSource {
     // Increment regardless, this is a counter, not an index, so smallest should be `1`
     Preferences.NewTabPage.backgroundRotationCounter.value += 1
 
-    if shouldAttemptSponsoredMedia(), let rewards {
-      rewards.ads.maybeServeNewTabPageAd { [weak self] newTabPageAd in
-        guard let self else { return completion(nil) }
-        if let newTabPageAd, let background = getSponsoredMediaBackground(for: newTabPageAd) {
-          completion(background)
-        } else {
-          completion(getImageBackground())
-        }
-      }
-    } else {
-      completion(getImageBackground())
-    }
+    // Growser-290: no sponsored image to try first - ads are out.
+    completion(getImageBackground())
   }
 }
 
@@ -194,9 +149,11 @@ extension NTPDataSource: PreferencesObserver {
 }
 
 extension NTPBackgroundImage {
+  // Growser-310: the owner's photo, credited and linked the way Android does
+  // (#309). The component that would bring others is not served to a fork.
   static let fallback: NTPBackgroundImage = .init(
-    imagePath: Bundle.module.url(forResource: "corwin-prescott-3", withExtension: "jpg")!,
-    author: "Corwin Prescott",
-    link: URL(string: "https://www.brave.com")!
+    imagePath: Bundle.module.url(forResource: "growser_mobile_01", withExtension: "webp")!,
+    author: "Dmitry Golubnichiy",
+    link: URL(string: "https://www.flickr.com/photos/dsfox/7492378116")!
   )
 }

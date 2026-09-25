@@ -3,17 +3,25 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
+import("//brave/components/brave_rewards/core/buildflags/buildflags.gni")
+import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 import("//build/config/ios/rules.gni")
 import("//ios/build/chrome_build.gni")
 import("//ios/build/config.gni")
 import("//ios/public/provider/chrome/browser/build_config.gni")
 
 source_set("app") {
-  configs += [
-    "//brave/ios/browser/api/webcompat_reporter:mojom_header_config",
-    "//brave/ios/browser/api/brave_wallet:mojom_header_config",
-    "//brave/ios/browser/api/skus:mojom_header_config",
-  ]
+  configs +=
+      [ "//brave/ios/browser/api/webcompat_reporter:mojom_header_config" ]
+  if (enable_brave_wallet) {  # Growser-287
+    configs += [ "//brave/ios/browser/api/brave_wallet:mojom_header_config" ]
+  }
+  if (enable_skus) {  # Growser-283
+    configs += [ "//brave/ios/browser/api/skus:mojom_header_config" ]
+  }
 
   sources = [
     "brave_core_main.h",
@@ -29,33 +37,27 @@ source_set("app") {
 
   deps = [
     "//base",
-    "//brave/components/ai_chat/core/browser",
-    "//brave/components/ai_chat/ios/browser",
-    "//brave/components/ai_chat/ios/common:mojom",
+    "//brave/components/ai_chat/core/common/buildflags",
+    "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_component_updater/browser",
+    "//brave/components/brave_rewards/core/buildflags",
     "//brave/components/brave_shields/ios/browser",
     "//brave/components/brave_sync:constants",
     "//brave/components/brave_user_agent/browser",
     "//brave/components/brave_user_agent/ios/common",
+    "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/constants",
     "//brave/components/ntp_background_images/browser",
     "//brave/components/ntp_background_images/common",
     "//brave/components/p3a",
-    "//brave/components/skus/browser",
     "//brave/components/update_client:buildflags",
     "//brave/components/variations",
     "//brave/ios/app/resources",
     "//brave/ios/browser",
-    "//brave/ios/browser/ai_chat",
-    "//brave/ios/browser/api/ads",
-    "//brave/ios/browser/api/ads:brave_ads_mojom_wrappers",
     "//brave/ios/browser/api/bookmarks",
-    "//brave/ios/browser/api/brave_rewards",
     "//brave/ios/browser/api/brave_shields",
     "//brave/ios/browser/api/brave_stats",
     "//brave/ios/browser/api/brave_user_agent",
-    "//brave/ios/browser/api/brave_wallet",
-    "//brave/ios/browser/api/brave_wallet:wallet_mojom_wrappers",
     "//brave/ios/browser/api/content_settings",
     "//brave/ios/browser/api/history",
     "//brave/ios/browser/api/https_upgrade_exceptions",
@@ -67,17 +69,14 @@ source_set("app") {
     "//brave/ios/browser/api/profile",
     "//brave/ios/browser/api/qr_code",
     "//brave/ios/browser/api/query_filter",
-    "//brave/ios/browser/api/skus:skus_mojom_wrappers",
     "//brave/ios/browser/api/sync/driver",
     "//brave/ios/browser/api/web_image",
     "//brave/ios/browser/api/web_view",
     "//brave/ios/browser/api/webcompat_reporter",
     "//brave/ios/browser/api/webcompat_reporter:webcompat_reporter_mojom_wrappers",
     "//brave/ios/browser/application_context",
-    "//brave/ios/browser/brave_ads",
     "//brave/ios/browser/brave_shields",
     "//brave/ios/browser/content_settings",
-    "//brave/ios/browser/skus",
     "//brave/ios/browser/ui/webui",
     "//brave/ios/browser/web",
     "//brave/ios/components/prefs",
@@ -134,6 +133,45 @@ source_set("app") {
 
   if (ios_enable_credential_provider_extension) {
     deps += [ "//ios/chrome/browser/credential_provider/model" ]
+  }
+
+  # Growser-283: SKUS is compiled out, as on the desktop (growser#126).
+  if (enable_skus) {
+    deps += [
+      "//brave/components/skus/browser",
+      "//brave/ios/browser/api/skus:skus_mojom_wrappers",
+      "//brave/ios/browser/skus",
+    ]
+  }
+
+  # Growser-290: ads and rewards are compiled out, as on the desktop.
+  if (enable_brave_ads) {
+    deps += [
+      "//brave/ios/browser/api/ads",
+      "//brave/ios/browser/api/ads:brave_ads_mojom_wrappers",
+      "//brave/ios/browser/brave_ads",
+    ]
+  }
+  if (enable_brave_rewards) {
+    deps += [ "//brave/ios/browser/api/brave_rewards" ]
+  }
+
+  # Growser-287: the wallet is compiled out, as on the desktop.
+  if (enable_brave_wallet) {
+    deps += [
+      "//brave/ios/browser/api/brave_wallet",
+      "//brave/ios/browser/api/brave_wallet:wallet_mojom_wrappers",
+    ]
+  }
+
+  # Growser-279: brave-core never guarded AI Chat on iOS; our .env turns it off.
+  if (enable_ai_chat) {
+    deps += [
+      "//brave/components/ai_chat/core/browser",
+      "//brave/components/ai_chat/ios/browser",
+      "//brave/components/ai_chat/ios/common:mojom",
+      "//brave/ios/browser/ai_chat",
+    ]
   }
 
   frameworks = [

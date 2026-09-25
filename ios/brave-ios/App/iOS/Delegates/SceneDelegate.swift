@@ -5,9 +5,9 @@
 
 import Brave
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
-import BraveVPN
+// Growser-280: no BraveVPN.
 import BraveWidgetsModels
 import BrowserIntentsModels
 import Combine
@@ -34,7 +34,7 @@ extension Logger {
 /// State that must be associated with a profile-specific data
 @MainActor
 struct ProfileState {
-  var rewards: Brave.BraveRewards
+  // Growser-290: no rewards.
   var migrations: BraveProfileMigrations
   var dau: DAU
   var attributionManager: AttributionManager
@@ -58,10 +58,7 @@ struct ProfileState {
       )
     )
 
-    // Setup Rewards & Ads
-    let configuration = BraveRewards.Configuration.current()
-    Migration.migrateAdsConfirmations(for: configuration)
-    rewards = BraveRewards(configuration: configuration)
+    // Growser-290: no Rewards & Ads to set up.
 
     // Setup BraveCore profile migrations
     migrations = BraveProfileMigrations(profileController: profileController)
@@ -150,8 +147,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       guard windowScene.session.scene != nil else { return }
 
       Self.profileState = profileState
-      PlaylistCoordinator.shared.isPlaylistAvailable =
-        profileController.profile.prefs.isPlaylistAvailable
+      // Growser-282: no PlaylistCoordinator.
 
       // Create WindowProtection early so we can use it for launch auth when launching in private mode
       let windowProtection = WindowProtection(windowScene: windowScene)
@@ -220,9 +216,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     AppState.shared.uptimeMonitor.pauseMonitoring()
   }
 
-  func sceneDidEnterBackground(_ scene: UIScene) {
-    BraveVPN.sendVPNWorksInBackgroundNotification()
-  }
+  // Growser-280: no sceneDidEnterBackground - it only sent the VPN's
+  // "works in the background" notification.
 
   func scene(_ scene: UIScene, openURLContexts contexts: Set<UIOpenURLContext>) {
     guard let scene = scene as? UIWindowScene else {
@@ -359,20 +354,13 @@ extension SceneDelegate {
       profileController: profileController,
       profile: AppState.shared.profile,
       attributionManager: profileState.attributionManager,
-      rewards: profileState.rewards,
-      newsFeedDataSource: AppState.shared.newsFeedDataSource,
+      // Growser-290: no rewards.
+      // Growser-281: no newsFeedDataSource.
       userActivity: sceneState.connectionOptions.userActivities.first,
       downloadBackgroundTaskModel: AppState.shared.downloadBackgroundTaskModel
     )
 
-    // Setup Playlist Car-Play
-    // TODO: Decide what to do if we have multiple windows
-    // as it is only possible to have a single car-play instance.
-    // Once we move to iOS 14+, this is easy to fix as we just pass car-play a `MediaStreamer`
-    // instance instead of a `BrowserViewController`.
-    PlaylistCoordinator.shared.do {
-      $0.browserController = browserViewController
-    }
+    // Growser-282: no Playlist CarPlay set-up.
 
     return browserViewController
   }
@@ -505,11 +493,7 @@ extension SceneDelegate {
   }
 
   private func refreshSKUsCredentials(in scene: UIWindowScene) {
-    Task { @MainActor in
-      let isPrivateBrowsing =
-        scene.browserViewController?.privateBrowsingManager.isPrivateBrowsing == true
-      await Skus.SkusServiceFactory.get(privateMode: isPrivateBrowsing)?.refreshSkusCredentials()
-    }
+    // Growser-283: nothing to refresh - SKUS is out of the product.
   }
 
   private func handleCustomUserActivityActions(_ scene: UIScene, userActivity: NSUserActivity) {
@@ -585,25 +569,9 @@ extension SceneDelegate {
 
       return
     case ActivityType.enableBraveVPN.identifier:
-      if let browserViewController = scene.browserViewController {
-        ActivityShortcutManager.shared.performShortcutActivity(
-          type: .enableBraveVPN,
-          using: browserViewController
-        )
-      }
-
-      return
+      return  // Growser-280: the VPN is out of the product.
     case ActivityType.openBraveNews.identifier:
-      let isNewsAvailable =
-        AppState.shared.braveCore.profileController?.profile.prefs.isBraveNewsAvailable ?? true
-      if isNewsAvailable, let browserViewController = scene.browserViewController {
-        ActivityShortcutManager.shared.performShortcutActivity(
-          type: .openBraveNews,
-          using: browserViewController
-        )
-      }
-
-      return
+      return  // Growser-281: Brave News is out of the product.
     case ActivityType.openPlayList.identifier:
       if let browserViewController = scene.browserViewController {
         ActivityShortcutManager.shared.performShortcutActivity(
@@ -626,10 +594,7 @@ extension SceneDelegate {
 
     if let url = userActivity.webpageURL {
       switch UniversalLinkManager.universalLinkType(for: url, checkPath: false) {
-      case .buyVPN:
-        scene.browserViewController?.presentCorrespondingVPNViewController()
-        return
-      case .none:
+      case .buyVPN, .none:  // Growser-280: no VPN to buy - open it as a page.
         break
       }
 
@@ -716,8 +681,8 @@ extension SceneDelegate {
     profileController: BraveProfileController,
     profile: LegacyBrowserProfile,
     attributionManager: AttributionManager,
-    rewards: Brave.BraveRewards,
-    newsFeedDataSource: BraveNews.FeedDataSource,
+    // Growser-290: no rewards.
+    // Growser-281: no newsFeedDataSource.
     userActivity: NSUserActivity?,
     downloadBackgroundTaskModel: DownloadBackgroundTaskScheduler?
   ) -> BrowserViewController {
@@ -786,9 +751,9 @@ extension SceneDelegate {
       attributionManager: attributionManager,
       braveCore: braveCore,
       profileController: profileController,
-      rewards: rewards,
+      // Growser-290: no rewards.
       crashedLastSession: crashedLastSession,
-      newsFeedDataSource: newsFeedDataSource,
+      // Growser-281: no newsFeedDataSource.
       privateBrowsingManager: privateBrowsingManager,
       downloadBackgroundTaskModel: downloadBackgroundTaskModel
     )
@@ -800,8 +765,7 @@ extension SceneDelegate {
       $0.restorationIdentifier = BrowserState.sceneId
       $0.restorationClass = SceneDelegate.self
 
-      // Remove Ad-Grant Reminders
-      $0.removeScheduledAdGrantReminders()
+      // Growser-290: no ad-grant reminders to remove - Rewards is out.
     }
 
     if let tabIdString = userActivity?.userInfo?["TabID"] as? String,

@@ -3,6 +3,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_news/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 
 source_set("features") {
@@ -13,9 +15,9 @@ source_set("features") {
 
   deps = [
     "//base",
-    "//brave/components/ai_chat/core/common",
+    "//brave/components/ai_chat/core/common/buildflags",
     "//brave/components/brave_component_updater/browser:public",
-    "//brave/components/brave_news/common",
+    "//brave/components/brave_news/common/buildflags",
     "//brave/components/brave_origin:features",
     "//brave/components/brave_rewards/core:features",
     "//brave/components/brave_search/common",
@@ -45,6 +47,12 @@ source_set("features") {
       "//brave/components/brave_wallet/common",
       "//brave/ios/browser/brave_wallet",
     ]
+  }
+  if (enable_ai_chat) {  # Growser-279
+    deps += [ "//brave/components/ai_chat/core/common" ]
+  }
+  if (enable_brave_news) {  # Growser-281
+    deps += [ "//brave/components/brave_news/common" ]
   }
 
   frameworks = [ "Foundation.framework" ]

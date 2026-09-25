@@ -161,6 +161,12 @@ import os
     updateIfNeeded(resourcesInfo: resourcesInfo)
   }
 
+  /// Growser-297: the resources from their publisher instead of the component
+  /// (FilterListPublisherDownloader). The file's folder name is its version.
+  func didDownloadResources(fileURL: URL) async {
+    updateIfNeeded(resourcesInfo: await getResourcesInfo(fromFileURL: fileURL))
+  }
+
   /// Update the file managers with the latest files and start a delayed task to compile the engines.
   /// - Parameters:
   ///   - fileInfos: The file infos to update on the appropriate engine manager

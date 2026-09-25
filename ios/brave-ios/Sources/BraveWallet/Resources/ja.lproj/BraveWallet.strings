@@ -251,7 +251,7 @@
 "wallet.btcAvailableBalanceTitle" = "Available";
 
 /* A warning displayed in row before the Send button in Send Crypto view when a Bitcoin asset is selected. */
-"wallet.btcOrdinalsUnsupportedWarning" = "現在、Brave WalletはビットコインのNFT（ordinals）をサポートしていません。序数を含むアドレスからBTCを送信すると、序数が誤って転送される可能性があります。";
+"wallet.btcOrdinalsUnsupportedWarning" = "現在、Growser WalletはビットコインのNFT（ordinals）をサポートしていません。序数を含むアドレスからBTCを送信すると、序数が誤って転送される可能性があります。";
 
 /* Description displayed in row beside users pending balance. */
 "wallet.btcPendingBalanceDesc" = "ウォレットの残高に保留中の変更があります。";
@@ -1025,7 +1025,7 @@
 "wallet.meldTransactionPartner" = "トランザクションパートナー";
 
 /* The description of the pop up when user first time open buy screen in Brave Wallet. */
-"wallet.meldTransactionPartnerDescription" = "Brave WalletはMeld.ioを使用し、お住まいの地域のさまざまな暗号プロバイダを集約、表示します。ウォレットアドレスと国コードを含むトランザクションを完了するための情報は、Meld.ioに共有されます。詳細はMeldの利用規約をご覧ください。";
+"wallet.meldTransactionPartnerDescription" = "Growser WalletはMeld.ioを使用し、お住まいの地域のさまざまな暗号プロバイダを集約、表示します。ウォレットアドレスと国コードを含むトランザクションを完了するための情報は、Meld.ioに共有されます。詳細はMeldの利用規約をご覧ください。";
 
 /* The description of the checkbox for the pop up when user first time open buy screen in Brave Wallet. */
 "wallet.meldTransactionPartnerLegal" = "[Terms of Use](%@) を読み、これに同意します";
@@ -1079,7 +1079,7 @@
 "wallet.newSiteConnectFooter" = "信頼できるサイトのみを接続してください。";
 
 /* The message displayed below the dapp's origin url in new site connection screen. */
-"wallet.newSiteConnectMessage" = "Brave Walletに接続";
+"wallet.newSiteConnectMessage" = "Growser Walletに接続";
 
 /* The transaction edit error alert button which will dismiss the alert. */
 "wallet.newSiteConnectScreenTitle" = "接続";

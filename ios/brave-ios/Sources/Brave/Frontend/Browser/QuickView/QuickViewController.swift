@@ -217,7 +217,7 @@ class QuickViewController: UIViewController {
           tab: currentTab,
           syncAPI: syncAPI,
           sendTabAPI: sendTabAPI,
-          feedDataSource: nil,
+          // Growser-281: no feedDataSource.
           isBraveNewsAvailable: false,
           source: .init(
             view: anchorView,
@@ -760,7 +760,7 @@ extension QuickViewController: TabDelegate {
             tab: currentTab,
             syncAPI: self.syncAPI,
             sendTabAPI: self.sendTabAPI,
-            feedDataSource: nil,
+            // Growser-281: no feedDataSource.
             isBraveNewsAvailable: false,
             source: .init(
               view: anchorView,

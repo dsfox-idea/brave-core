@@ -6,12 +6,12 @@
 import BraveCore
 import BraveShared
 import BraveUI
-import BraveVPN
-import BraveWallet
+// Growser-280: no BraveVPN.
+// Growser-287: no BraveWallet.
 import BrowserMenu
 import Data
 import Foundation
-import PlaylistUI
+// Growser-282: no PlaylistUI.
 import Preferences
 import Shared
 import SwiftUI
@@ -20,107 +20,24 @@ import os.log
 
 extension BrowserViewController {
   private var settingsController: SettingsViewController {
-    let isPrivateMode = privateBrowsingManager.isPrivateBrowsing
-    let keyringService = BraveWallet.KeyringServiceFactory.get(privateMode: isPrivateMode)
-    let walletService = BraveWallet.ServiceFactory.get(privateMode: isPrivateMode)
-    let rpcService = BraveWallet.JsonRpcServiceFactory.get(privateMode: isPrivateMode)
-
-    var keyringStore: KeyringStore? = walletStore?.keyringStore
-    if keyringStore == nil {
-      if let keyringService = keyringService,
-        let walletService = walletService,
-        let rpcService = rpcService
-      {
-        keyringStore = KeyringStore(
-          keyringService: keyringService,
-          walletService: walletService,
-          rpcService: rpcService
-        )
-      }
-    }
-
-    var cryptoStore: CryptoStore? = walletStore?.cryptoStore
-    if cryptoStore == nil {
-      cryptoStore = CryptoStore.from(
-        ipfsApi: profileController.ipfsAPI,
-        privateMode: isPrivateMode
-      )
-    }
-
+    // Growser-287: no keyring or crypto store - the wallet is out.
     let vc = SettingsViewController(
       profile: self.profile,
       tabManager: self.tabManager,
-      feedDataSource: self.feedDataSource,
-      rewards: self.rewards,
+      // Growser-281: no feedDataSource. Growser-290: no rewards.
       windowProtection: self.windowProtection,
       p3aUtils: self.braveCore.p3aUtils,
       braveCore: self.profileController,
       localState: self.braveCore.localState,
-      attributionManager: attributionManager,
-      keyringStore: keyringStore,
-      cryptoStore: cryptoStore
+      attributionManager: attributionManager
     )
     vc.settingsDelegate = self
     return vc
   }
 
-  /// Presents Wallet without an origin (ex. from menu)
-  func presentWallet() {
-    self.dismiss(animated: true) {
-      self.tabManager.addTabAndSelect(
-        URLRequest(url: .webUI.wallet.home),
-        isPrivate: self.privateBrowsingManager.isPrivateBrowsing
-      )
-    }
-  }
+  // Growser-287: no presentWallet() or presentNativeWallet(webUIAction:).
 
-  /// Present Native Wallet from a Wallet WebUI Action
-  func presentNativeWallet(webUIAction: WalletWebUIAction) {
-    guard let walletStore = self.walletStore ?? newWalletStore() else { return }
-    walletStore.origin = nil
-    let presentingContext: PresentingContext = .webUI(action: webUIAction)
-    let vc = WalletHostingViewController(
-      walletStore: walletStore,
-      webImageDownloader: profileController.webImageDownloader,
-      presentingContext: presentingContext
-    )
-    vc.delegate = self
-    self.dismiss(animated: true) {
-      self.present(vc, animated: true)
-    }
-  }
-
-  public func presentPlaylistController() {
-    if !profileController.profile.prefs.isPlaylistAvailable {
-      return
-    }
-    if PlaylistCoordinator.shared.isPlaylistControllerPresented {
-      let alert = UIAlertController(
-        title: Strings.PlayList.playlistAlreadyShowingTitle,
-        message: Strings.PlayList.playlistAlreadyShowingBody,
-        preferredStyle: .alert
-      )
-      alert.addAction(UIAlertAction(title: Strings.OKString, style: .default))
-      dismiss(animated: true) {
-        self.present(alert, animated: true)
-      }
-      return
-    }
-
-    // Retrieve the item and offset-time from the current tab's webview.
-    let tab = self.tabManager.selectedTab
-    PlaylistCoordinator.shared.getPlaylistController(tab: tab, profile: profileController.profile) {
-      [weak self] playlistController in
-      guard let self = self else { return }
-
-      PlaylistP3A.recordUsage()
-
-      self.dismiss(animated: true) {
-        PlaylistCoordinator.shared.isPlaylistControllerPresented = true
-        self.present(playlistController, animated: true)
-      }
-    }
-  }
+  // Growser-282: no presentPlaylistController().
 
   func presentBrowserMenu(
     from sourceView: UIView,
@@ -129,9 +46,7 @@ extension BrowserViewController {
     pageURL: URL?
   ) {
     var actions: [Action] = []
-    if profileController.profile.prefs.isBraveVPNAvailable {
-      actions.append(vpnMenuAction)
-    }
+    // Growser-280: no VPN menu action.
     actions.append(contentsOf: destinationMenuActions(for: pageURL))
     actions.append(contentsOf: pageActions(for: pageURL, tab: tab))
     var pageActivities: Set<Action> = Set(
@@ -178,9 +93,14 @@ extension BrowserViewController {
     // Sets up empty actions for any page actions that weren't setup as UIActivity's excluding any
     // that should be hidden due to admin policies
     var pageActivitiesRemovedByAdminPolicies: Set<Action.Identifier> = []
-    if !profileController.profile.prefs.isBraveNewsAvailable {
-      pageActivitiesRemovedByAdminPolicies.insert(.addSourceNews)
-    }
+    // Growser-281: Brave News is out of the product, so its "add source" entry
+    // is always removed, not only by policy.
+    pageActivitiesRemovedByAdminPolicies.insert(.addSourceNews)
+    // Growser-298: and so is reporting a broken site to Brave (#78).
+    pageActivitiesRemovedByAdminPolicies.insert(.reportBrokenSite)
+    // Growser-293: and sending a tab to your devices - they are Sync's, and
+    // Sync is not offered; the entry could only ever show greyed out.
+    pageActivitiesRemovedByAdminPolicies.insert(.sendURL)
     let remainingPageActivities: [Action] = Action.ID.allPageActivites
       .subtracting(pageActivities.map(\.id))
       .subtracting(pageActivitiesRemovedByAdminPolicies)
@@ -197,13 +117,7 @@ extension BrowserViewController {
             self.presentSettingsNavigation(with: vc)
           }
         case .vpnRegionPicker:
-          let vc = UIHostingController(
-            rootView: BraveVPNRegionListView(onServerRegionSet: nil)
-          )
-          vc.title = Strings.VPN.vpnRegionListServerScreenTitle
-          self.dismiss(animated: true) {
-            self.presentSettingsNavigation(with: vc)
-          }
+          break  // Growser-280: unreachable - the menu never shows a connected VPN.
         }
       }
     )
@@ -242,45 +156,7 @@ extension BrowserViewController {
         return .updateAction(actionCopy)
       },
     ]
-    if profileController.profile.prefs.isPlaylistAvailable {
-      let playlistActivity = addToPlayListActivityItem ?? openInPlaylistActivityItem
-      let isPlaylistItemAdded = openInPlaylistActivityItem != nil
-      actions.append(
-        .init(
-          id: .addToPlaylist,
-          title: isPlaylistItemAdded ? Strings.PlayList.toastAddedToPlaylistTitle : nil,
-          image: isPlaylistItemAdded ? "leo.product.playlist-added" : nil,
-          attributes: playlistActivity?.enabled == true ? [] : .disabled
-        ) { @MainActor [unowned self] action in
-          let playlistActivity = addToPlayListActivityItem ?? openInPlaylistActivityItem
-          let isPlaylistItemAdded = openInPlaylistActivityItem != nil
-          guard let item = playlistActivity?.item else { return .none }
-          if !isPlaylistItemAdded {
-            // Add to playlist
-            // TODO: Need to be able to return something that will update the underlying action
-            let addedItem = await withCheckedContinuation { continuation in
-              self.addToPlaylist(item: item) { didAddItem in
-                continuation.resume(returning: didAddItem)
-              }
-            }
-            if addedItem {
-              var actionCopy = action
-              actionCopy.title = Strings.PlayList.toastAddedToPlaylistTitle
-              actionCopy.image = "leo.product.playlist-added"
-              return .updateAction(actionCopy)
-            }
-          } else {
-            self.dismiss(animated: true) {
-              self.openPlaylist(
-                tab: self.tabManager.selectedTab,
-                item: item
-              )
-            }
-          }
-          return .none
-        }
-      )
-    }
+    // Growser-282: no "add to playlist" page action.
     if BraveCore.FeatureList.kBraveShredFeature.enabled {
       let isShredAvailable = tabManager.selectedTab?.visibleURL?.isShredAvailable ?? false
       actions.append(
@@ -317,123 +193,7 @@ extension BrowserViewController {
     return actions
   }
 
-  private var vpnMenuAction: Action {
-    let alertForExpiredState: () -> UIAlertController? = { [unowned self] in
-      if !BraveVPN.isSkusCredentialSessionExpired {
-        return nil
-      }
-      return vpnSessionExpiredStateAlert(loginCallback: { _ in
-        self.openURLInNewTab(
-          .brave.account,
-          isPrivate: self.privateBrowsingManager.isPrivateBrowsing,
-          isPrivileged: false
-        )
-      })
-    }
-
-    let vpnState = BraveVPN.vpnState
-    switch vpnState {
-    case .notPurchased, .expired:
-      return .init(id: .vpn) { @MainActor [unowned self] _ in
-        if !BraveVPNProductInfo.isComplete {
-          // Reattempt to connect to the App Store to get VPN prices.
-          vpnProductInfo.load()
-          return .none
-        }
-
-        if let alert = alertForExpiredState() {
-          self.dismiss(animated: true) {
-            self.present(alert, animated: true)
-          }
-          return .none
-        }
-
-        // Expired Subcriptions can cause glitch because of connect on demand
-        // Disconnect VPN before showing Purchase
-        BraveVPN.disconnect(skipChecks: true)
-        guard BraveVPN.vpnState.isPaywallEnabled else { return .none }
-
-        let vpnPaywallView = BraveVPNPaywallView(
-          openVPNAuthenticationInNewTab: { [weak self] in
-            guard let self else { return }
-            self.popToBVC()
-            self.openURLInNewTab(
-              .brave.braveVPNRefreshCredentials,
-              isPrivate: self.privateBrowsingManager.isPrivateBrowsing,
-              isPrivileged: false
-            )
-          },
-          openDirectCheckoutInNewTab: { [weak self] in
-            guard let self else { return }
-            popToBVC()
-            openURLInNewTab(
-              .brave.braveVPNCheckoutURL,
-              isPrivate: self.privateBrowsingManager.isPrivateBrowsing,
-              isPrivileged: false
-            )
-          },
-          openLearnMoreInNewTab: { [weak self] in
-            guard let self else { return }
-            popToBVC()
-            openURLInNewTab(
-              .brave.braveVPNLearnMoreURL,
-              isPrivate: self.privateBrowsingManager.isPrivateBrowsing,
-              isPrivileged: false
-            )
-          },
-          installVPNProfile: { [weak self] in
-            guard let self else { return }
-            self.popToBVC()
-            self.present(UIHostingController(rootView: InstallVPNProfileView()), animated: true)
-          }
-        )
-
-        let vc = UIHostingController(rootView: vpnPaywallView)
-        self.dismiss(animated: true) {
-          self.present(vc, animated: true)
-        }
-        return .none
-      }
-    case .purchased:
-      let isConnected = BraveVPN.isConnected || BraveVPN.isConnecting
-      return .init(
-        id: .vpn,
-        title: isConnected ? Strings.VPN.vpnOnMenuButtonTitle : Strings.VPN.vpnOffMenuButtonTitle,
-        state: isConnected
-      ) { @MainActor [unowned self] _ in
-        if let alert = alertForExpiredState() {
-          self.dismiss(animated: true) {
-            self.present(alert, animated: true)
-          }
-          return .none
-        }
-
-        if BraveVPN.isConnected || BraveVPN.isConnecting {
-          await withCheckedContinuation { continuation in
-            BraveVPN.disconnect { error in
-              continuation.resume()
-            }
-          }
-        } else {
-          await withCheckedContinuation { continuation in
-            BraveVPN.reconnect { success in
-              continuation.resume()
-            }
-          }
-          // FIXME: VPN activity donation
-          // Donate Enable VPN Activity for suggestions
-          // let enableVPNActivity = ActivityShortcutManager.shared.createShortcutActivity(
-          //   type: .enableBraveVPN
-          // )
-          // Does this need to be attached to the menu specifically?
-          // browserMenuController.userActivity = enableVPNActivity
-          // enableVPNActivity.becomeCurrent()
-        }
-        try? await Task.sleep(for: .milliseconds(100))
-        return .updateAction(vpnMenuAction)
-      }
-    }
-  }
+  // Growser-280: no vpnMenuAction - the VPN is out of the product.
 
   private func destinationMenuActions(for pageURL: URL?) -> [Action] {
     let isPrivateBrowsing = privateBrowsingManager.isPrivateBrowsing
@@ -482,84 +242,11 @@ extension BrowserViewController {
         return .none
       },
     ]
-    if profileController.profile.prefs.isPlaylistAvailable {
-      actions.append(
-        .init(id: .playlist) { @MainActor [unowned self] _ in
-          // presentPlaylistController already handles dismiss + present
-          self.presentPlaylistController()
-          return .none
-        }
-      )
-    }
-    if profileController.braveWalletAPI.isAllowed {
-      actions.append(
-        .init(
-          id: .braveWallet,
-          attributes: isPrivateBrowsing ? .disabled : []
-        ) { @MainActor [unowned self] _ in
-          // Present wallet already handles dismiss + present
-          self.presentWallet()
-          return .none
-        }
-      )
-    }
-    if AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs) {
-      actions.append(
-        .init(
-          id: .braveLeo,
-          attributes: isPrivateBrowsing ? .disabled : []
-        ) { @MainActor [unowned self] _ in
-          self.dismiss(animated: true) {
-            self.openBraveLeo()
-          }
-          return .none
-        }
-      )
-    }
-    if profileController.profile.prefs.isBraveTalkAvailable {
-      actions.append(
-        .init(id: .braveTalk) { @MainActor [unowned self] _ in
-          self.dismiss(animated: true) {
-            guard let url = URL(string: "https://talk.brave.com/") else { return }
-            self.popToBVC()
-            if pageURL == nil {
-              // Already on NTP
-              self.finishEditingAndSubmit(url)
-            } else {
-              self.openURLInNewTab(url, isPrivileged: false)
-            }
-          }
-          return .none
-        }
-      )
-    }
-    if profileController.profile.prefs.isBraveNewsAvailable {
-      actions.append(
-        .init(id: .braveNews) { @MainActor [unowned self] _ in
-          self.dismiss(animated: true) {
-            if pageURL == nil,
-              let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController
-            {
-              // Already on NTP
-              newTabPageController.scrollToBraveNews()
-            } else {
-              // Make a new tab and scroll to it
-              // Need to stay in NTP for Brave News
-              self.openBlankNewTab(
-                attemptLocationFieldFocus: false,
-                isPrivate: false,
-                isExternal: true
-              )
-              self.popToBVC()
-              if let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController {
-                newTabPageController.scrollToBraveNews()
-              }
-            }
-          }
-          return .none
-        }
-      )
-    }
+    // Growser-282: no Playlist menu item.
+    // Growser-287: no Wallet menu item.
+    // Growser-279: no Leo menu item.
+    // Growser-278: no Brave Talk menu item.
+    // Growser-281: no Brave News menu item.
     return actions
   }
 

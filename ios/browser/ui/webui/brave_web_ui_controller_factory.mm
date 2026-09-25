@@ -14,10 +14,10 @@
 #include "brave/components/brave_account/features.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/url_constants.h"
 #include "brave/ios/browser/ui/webui/brave_account/brave_account_ui_ios.h"
-#include "brave/ios/browser/ui/webui/skus/skus_internals_ui.h"
 #include "build/build_config.h"
 #include "components/prefs/pref_service.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
@@ -26,6 +26,10 @@
 #include "ios/web/public/browser_state.h"
 #include "ios/web/public/web_state.h"
 #include "url/gurl.h"
+
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
+#include "brave/ios/browser/ui/webui/skus/skus_internals_ui.h"
+#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
 #include "brave/components/brave_rewards/core/pref_names.h"
@@ -159,8 +163,10 @@ WebUIIOSFactoryFunction GetWebUIIOSFactoryFunction(const GURL& url) {
   if (url_host == kBraveAccountHost &&
       brave_account::features::IsBraveAccountEnabled()) {
     return &NewWebUIIOS<BraveAccountUIIOS>;
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
   } else if (url_host == kSkusInternalsHost) {
     return &NewWebUIIOS<SkusInternalsUI>;
+#endif
 #if BUILDFLAG(ENABLE_AI_CHAT)
   } else if (url_host == kAIChatUIHost) {
     return &NewWebUIIOS<AIChatUI>;

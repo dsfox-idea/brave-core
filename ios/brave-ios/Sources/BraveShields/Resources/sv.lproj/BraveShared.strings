@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Lägg till filter efter webbadress";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** är din biljett till en reklamfri och oavbruten videoupplevelse.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** är din biljett till en reklamfri och oavbruten videoupplevelse.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Justera Shields åt mig";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Den här webbplatsen har börjat blockera vissa annonsblockerare, vilket innebär att deras webbplats kanske inte fungerar som förväntat.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "För att lösa det här problemet kan Brave justera dina Shields-inställningar åt dig. När du har justerat kan du prova att titta på det här innehållet i Brave Player istället.";
+"AntiAdBlockWarningDescription2" = "För att lösa det här problemet kan Growser justera dina Shields-inställningar åt dig. När du har justerat kan du prova att titta på det här innehållet i Growser Player istället.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Behåll nuvarande inställningar";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Blockera \"Växla till appen\"-aviseringar";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Öppna alltid videor från den här webbplatsen med Brave Player";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Öppna alltid videor från den här webbplatsen med Growser Player";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Prova det";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Inte nu";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Med Brave Player kan du titta på videor utan avbrott.";
+"BravePlayerInfoMessage" = "Med Growser Player kan du titta på videor utan avbrott.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Titta i Brave Player istället";
+"BravePlayerInfoTitle" = "Titta i Growser Player istället";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Innehållsfiltrering";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Gå tillbaka";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Eftersom du begärde att aggressivt blockera spårare och annonser blockerar Brave den här webbplatsen före den första nätverksanslutningen.";
+"DomainBlockedPageDescription" = "Eftersom du begärde att aggressivt blockera spårare och annonser blockerar Growser den här webbplatsen före den första nätverksanslutningen.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave har förhindrat följande webbplats från att laddas:";
+"DomainBlockedPageMessage" = "Growser har förhindrat följande webbplats från att laddas:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Den här webbplatsen kan försöka spåra dig på andra webbplatser";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Appen stängd";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Webbläsardata strimlas automatiskt när Brave-appen stängs/startas om";
+"ShredOnAppCloseDescription" = "Webbläsardata strimlas automatiskt när Growser-appen stängs/startas om";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Webbplatsflikar stängda";

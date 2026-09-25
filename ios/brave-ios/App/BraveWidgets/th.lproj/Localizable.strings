@@ -1,5 +1,5 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "ถามถึง Brave";
+"widgets.askBrave" = "ถามถึง Growser";
 
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "บุ๊กมาร์ก";
@@ -8,7 +8,7 @@
 "widgets.braveLeo" = "Leo AI";
 
 /* The name of the feature */
-"widgets.braveNews" = "ข่าว Brave";
+"widgets.braveNews" = "ข่าว Growser";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "ดาวน์โหลด";
@@ -35,13 +35,13 @@
 "widgets.newsClusteringWidgetTitle" = "ข่าวยอดนิยม";
 
 /* Displayed on a news widget wont load due to admin policies */
-"widgets.newsUnavailableByPolicy" = "Brave News ถูกปิดใช้งาน";
+"widgets.newsUnavailableByPolicy" = "Growser News ถูกปิดใช้งาน";
 
 /* Displayed on a news widget wont load due to admin policies */
 "widgets.newsUnavailableByPolicyDescription" = "ปิดใช้งานโดยนโยบายขององค์กรของคุณ";
 
 /* This shows when you add a widget but have no favorites added in your app */
-"widgets.noFavoritesFound" = "โปรดเปิด Brave เพื่อดูรายการโปรดของคุณที่นี่";
+"widgets.noFavoritesFound" = "โปรดเปิด Growser เพื่อดูรายการโปรดของคุณที่นี่";
 
 /* QR Code section title */
 "widgets.QRCode" = "QR Code";
@@ -50,7 +50,7 @@
 "widgets.searchShortcutTitle" = "ค้นหา";
 
 /* Description for Brave Shields widget on 'add widget' screen. */
-"widgets.shieldStatsDescription" = "ข้อมูลสรุปวิธีที่ Brave ช่วยคุณประหยัดเวลาและปกป้องคุณทางออนไลน์";
+"widgets.shieldStatsDescription" = "ข้อมูลสรุปวิธีที่ Growser ช่วยคุณประหยัดเวลาและปกป้องคุณทางออนไลน์";
 
 /* Title for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsTitle" = "สถิติความเป็นส่วนตัว";
@@ -74,17 +74,17 @@
 "widgets.shortcutsPrivateTabButton" = "แท็บส่วนตัว";
 
 /* Description for shortcuts widget on 'add widget' screen. */
-"widgets.shortcutsWidgetDescription" = "การเข้าถึงการค้นหาเว็บหรือเปิดหน้าเว็บอย่างรวดเร็วใน Brave";
+"widgets.shortcutsWidgetDescription" = "การเข้าถึงการค้นหาเว็บหรือเปิดหน้าเว็บอย่างรวดเร็วใน Growser";
 
 /* Title for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetTitle" = "ทางลัด";
 
 /* Description for Brave Shields single stat widget on 'add widget' screen. */
-"widgets.singleStatDescription" = "ข้อมูลสรุปวิธีที่ Brave จะปกป้องคุณทางออนไลน์";
+"widgets.singleStatDescription" = "ข้อมูลสรุปวิธีที่ Growser จะปกป้องคุณทางออนไลน์";
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "สถิติความเป็นส่วนตัว";
 
 /* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Brave Wallet";
+"widgets.walletShortcutTitle" = "Growser Wallet";
 

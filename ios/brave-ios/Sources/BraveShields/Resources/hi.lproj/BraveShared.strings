@@ -8,7 +8,7 @@
 "AddFilterByURL" = "URL के आधार पर फ़िल्टर जोड़ें";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** ऐड फ़्री और बिना रुकावट वाले वीडियो अनुभव के लिए आपका टिकट है।";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** ऐड फ़्री और बिना रुकावट वाले वीडियो अनुभव के लिए आपका टिकट है।";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "मेरे लिए Shields एडजस्ट करें";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "इस साइट ने कुछ ऐड ब्लॉकर्स को ब्लॉक करना शुरू कर दिया है, जिसका मतलब है कि शायद उनकी साइट उम्मीद के मुताबिक काम न करे।";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "इस समस्या को सुलझाने के लिए, Brave आपके लिए Shields सेटिंग एडजस्ट कर सकता है। एडजस्ट होने के बाद, आप इस सामग्री को इसके बजाय Brave Player में चलाकर देख सकते हैं।";
+"AntiAdBlockWarningDescription2" = "इस समस्या को सुलझाने के लिए, Growser आपके लिए Shields सेटिंग एडजस्ट कर सकता है। एडजस्ट होने के बाद, आप इस सामग्री को इसके बजाय Growser Player में चलाकर देख सकते हैं।";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "मौजूदा सेटिंग रखें";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "'ऐप में स्विच करें' सूचनाओं को अवरुद्ध करें";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave प्लेयर";
+"BravePlayer" = "Growser प्लेयर";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "इस साइट के वीडियो हमेशा Brave Player में खोलें";
+"BravePlayerAlwaysOpenYouTubeLinks" = "इस साइट के वीडियो हमेशा Growser Player में खोलें";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "इसे आज़माएँ";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "अभी नहीं";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave Player आपको बिना रुकावट के वीडियो देखने देता है।";
+"BravePlayerInfoMessage" = "Growser Player आपको बिना रुकावट के वीडियो देखने देता है।";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "इसके बजाय Brave Player में देखें";
+"BravePlayerInfoTitle" = "इसके बजाय Growser Player में देखें";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "कंटेंट फ़िल्टर करना";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "वापस जाएँ";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "क्योंकि आपने ट्रैकर्स और विज्ञापनों को बहुत ज़्यादा ब्लॉक करने का अनुरोध किया था, Brave पहले नेटवर्क कनेक्शन से पहले इस साइट को ब्लॉक कर रहा है.";
+"DomainBlockedPageDescription" = "क्योंकि आपने ट्रैकर्स और विज्ञापनों को बहुत ज़्यादा ब्लॉक करने का अनुरोध किया था, Growser पहले नेटवर्क कनेक्शन से पहले इस साइट को ब्लॉक कर रहा है.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave ने निम्नलिखित साइट को लोड होने से रोका है:";
+"DomainBlockedPageMessage" = "Growser ने निम्नलिखित साइट को लोड होने से रोका है:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "यह साइट आपको दूसरी साइटों पर ट्रैक करने की कोशिश कर सकती है";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "ऐप बंद होने पर";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "जब Brave ऐप बंद / पुनरारंभ किया जाता है तो ब्राउज़िंग डेटा स्वचालित रूप से श्रेड कर दिया जाता है";
+"ShredOnAppCloseDescription" = "जब Growser ऐप बंद / पुनरारंभ किया जाता है तो ब्राउज़िंग डेटा स्वचालित रूप से श्रेड कर दिया जाता है";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "साइट के टैब बंद होने पर";

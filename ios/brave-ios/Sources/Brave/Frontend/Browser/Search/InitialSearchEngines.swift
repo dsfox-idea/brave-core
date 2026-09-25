@@ -99,9 +99,8 @@ class InitialSearchEngines {
     engines.filter { !$0.id.excludedFromOnboarding(for: locale) }
   }
 
-  let braveSearchDefaultRegions = [
-    "US", "CA", "GB", "FR", "DE", "AU", "AT", "ES", "MX", "BR", "AR", "IN", "IT",
-  ]
+  // Growser-292: Brave Search is in no list and default nowhere (#18, #246).
+  let braveSearchDefaultRegions: [String] = []
   let yandexDefaultRegions = ["AM", "AZ", "BY", "KG", "KZ", "MD", "RU", "TJ", "TM", "UZ"]
   let ecosiaEnabledRegions = [
     "AT", "AU", "BE", "CA", "DK", "ES", "FI", "GR", "HU", "IT",
@@ -149,14 +148,15 @@ class InitialSearchEngines {
 
     // Default order and available search engines, applies to all locales
     engines = [
-      .init(id: .braveSearch),
+      // Growser-292: no Brave Search.
       .init(id: .google),
       .init(id: .bing),
       .init(id: .duckduckgo),
       .init(id: .qwant),
       .init(id: .startpage),
     ]
-    defaultSearchEngine = .google
+    // Growser-292: DuckDuckGo everywhere, as on the desktop (#18).
+    defaultSearchEngine = .duckduckgo
 
     // Locale and region specific overrides can be modified here.
     // For conflicting rules priorities are as follows:
@@ -175,20 +175,17 @@ class InitialSearchEngines {
   private func regionOverrides() {
     guard let region = locale.region?.identifier else { return }
 
+    // Growser-292: the regional engines are offered, never made the default.
     if yandexDefaultRegions.contains(region) {
-      defaultSearchEngine = .yandex
+      replaceOrInsert(engineId: .yandex, customId: nil)
     }
 
     if ecosiaEnabledRegions.contains(region) {
       replaceOrInsert(engineId: .ecosia, customId: nil)
     }
 
-    if braveSearchDefaultRegions.contains(region) {
-      defaultSearchEngine = .braveSearch
-    }
-
     if naverDefaultRegions.contains(region) {
-      defaultSearchEngine = .naver
+      replaceOrInsert(engineId: .naver, customId: nil)
     }
 
     if daumEnabledRegions.contains(region) {
@@ -199,12 +196,7 @@ class InitialSearchEngines {
       replaceOrInsert(engineId: .yahoojp, customId: nil)
     }
 
-    if Preferences.Search.shouldOverrideDSEForJapanRegion.value {
-      // This means it is new install, we want to override DSE for Japan region
-      if yahooJapanDefaultRegions.contains(region) {
-        defaultSearchEngine = .yahoojp
-      }
-    }
+    // Growser-292: no Yahoo Japan default on a new JP install (#247).
   }
 
   private func priorityOverrides() {

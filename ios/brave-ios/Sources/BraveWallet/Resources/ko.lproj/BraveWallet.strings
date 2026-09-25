@@ -86,7 +86,7 @@
 "wallet.addCustomTokenTitle" = "토큰";
 
 /* The description of the view shown over a dapps website that describes what adding a new network will do. */
-"wallet.addNetworkDescription" = "이 네트워크를 Brave 월렛 내에서 사용할 수 있게 됩니다.";
+"wallet.addNetworkDescription" = "이 네트워크를 Growser 월렛 내에서 사용할 수 있게 됩니다.";
 
 /* The subtitle of the view shown over a dapps website that requests permission from the user to add a new network. */
 "wallet.addNetworkSubtitle" = "이 사이트가 네트워크를 추가할 수 있게 허용하시겠습니까?";
@@ -161,7 +161,7 @@
 "wallet.auroraPopupDontShowAgain" = "다시 표시하지 않음";
 
 /* The footer beneath the auto-lock title and interval duration */
-"wallet.autoLockFooter" = "동작이 없을 때 Brave 월렛이 자동으로 잠길 때까지의 시간(분)";
+"wallet.autoLockFooter" = "동작이 없을 때 Growser 월렛이 자동으로 잠길 때까지의 시간(분)";
 
 /* The title that appears before an auto-lock interval. Example: Automatically lock after 5 minutes */
 "wallet.autoLockTitle" = "다음 시간 이후 자동 잠금";
@@ -221,10 +221,10 @@
 "wallet.biometricsSetupFaceId" = "Face ID";
 
 /* The sub-title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupSubTitle" = "%@를 사용하여 Brave 월렛을 잠금 해제하시겠습니까?";
+"wallet.biometricsSetupSubTitle" = "%@를 사용하여 Growser 월렛을 잠금 해제하시겠습니까?";
 
 /* The title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupTitle" = "%@로 Brave 월렛 잠금 해제";
+"wallet.biometricsSetupTitle" = "%@로 Growser 월렛 잠금 해제";
 
 /* Type of biometrics. This will be used in Biometric setup screen. */
 "wallet.biometricsSetupTouchId" = "Touch ID";
@@ -233,10 +233,10 @@
 "wallet.bitcoinImportExtendedKeyWarning" = "%@ 확장 키만 지원됩니다.";
 
 /* The title for Brave Fee label in Swap. The fee percentage is displayed beside the label. */
-"wallet.braveFeeLabel" = "Brave 수수료: %@";
+"wallet.braveFeeLabel" = "Growser 수수료: %@";
 
 /* A disclaimer that appears at the bottom of an swap screen which discloses the fixed Brave fee included in the swap quotes. '%@' will be replaced by a percentage. For example: 'Quote includes a 0.875% Brave fee' */
-"wallet.braveSwapFeeDisclaimer" = "Brave 수수료 %@가 견적에 포함되어 있습니다.";
+"wallet.braveSwapFeeDisclaimer" = "Growser 수수료 %@가 견적에 포함되어 있습니다.";
 
 /* The text beside the striked-through percentage Brave would normally charge for a swap. */
 "wallet.braveSwapFree" = "무료";
@@ -251,7 +251,7 @@
 "wallet.btcAvailableBalanceTitle" = "유효";
 
 /* A warning displayed in row before the Send button in Send Crypto view when a Bitcoin asset is selected. */
-"wallet.btcOrdinalsUnsupportedWarning" = "Brave 월렛은 현재 비트코인 NFT(오디널스)를 지원하지 않습니다. 오디널스를 보유한 주소에서 BTC를 보내면 해당 오디널스가 의도치 않게 이전될 수 있습니다.";
+"wallet.btcOrdinalsUnsupportedWarning" = "Growser 월렛은 현재 비트코인 NFT(오디널스)를 지원하지 않습니다. 오디널스를 보유한 주소에서 BTC를 보내면 해당 오디널스가 의도치 않게 이전될 수 있습니다.";
 
 /* Description displayed in row beside users pending balance. */
 "wallet.btcPendingBalanceDesc" = "월렛 잔액의 예상 변화량입니다.";
@@ -452,7 +452,7 @@
 "wallet.creatingWallet" = "월렛 생성 중...";
 
 /* The title of the crypto tab */
-"wallet.cryptoTitle" = "Brave 월렛";
+"wallet.cryptoTitle" = "Growser 월렛";
 
 /* The title above the input fields for users to input network block explorer urls in Custom Network Details Screen. */
 "wallet.customNetworkBlockExplorerUrlsTitle" = "블록 탐색기 URL";
@@ -524,13 +524,13 @@
 "wallet.customTokenTitle" = "맞춤 자산 추가";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. The '%@' will be the site attempting to connect. For example: "app.uniswap.org wants to interact with Brave Wallet" */
-"wallet.dappsConnectionNotificationOriginTitle" = "%@이(가) Brave 월렛과 상호작용하려고 함";
+"wallet.dappsConnectionNotificationOriginTitle" = "%@이(가) Growser 월렛과 상호작용하려고 함";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. */
-"wallet.dappsConnectionNotificationTitle" = "이 페이지가 Brave 월렛과 상호작용하려고 합니다.";
+"wallet.dappsConnectionNotificationTitle" = "이 페이지가 Growser 월렛과 상호작용하려고 합니다.";
 
 /* A message that will be displayed under the section header when there is no dapps have been granted wallet connection. */
-"wallet.dappsSettingsConnectedSitesSectionEmpty" = "Brave 월렛에 연결한 DApps가 여기 표시됩니다.";
+"wallet.dappsSettingsConnectedSitesSectionEmpty" = "Growser 월렛에 연결한 DApps가 여기 표시됩니다.";
 
 /* The title of the section that will list all the permitted dapp connections */
 "wallet.dappsSettingsConnectedSitesSectionTitle" = "연결된 DApps";
@@ -1025,13 +1025,13 @@
 "wallet.meldTransactionPartner" = "트랜잭션 파트너";
 
 /* The description of the pop up when user first time open buy screen in Brave Wallet. */
-"wallet.meldTransactionPartnerDescription" = "Brave 월렛은 Meld.io를 사용하여 해당 지역의 다양한 암호화폐 공급자를 모아서 표시합니다. 당사는 월렛 주소와 국가 코드를 비롯하여 트랜잭션을 완료하기 위해 Meld.io와 정보를 공유합니다. 자세한 내용은 Meld의 이용약관을 참조하시기 바랍니다.";
+"wallet.meldTransactionPartnerDescription" = "Growser 월렛은 Meld.io를 사용하여 해당 지역의 다양한 암호화폐 공급자를 모아서 표시합니다. 당사는 월렛 주소와 국가 코드를 비롯하여 트랜잭션을 완료하기 위해 Meld.io와 정보를 공유합니다. 자세한 내용은 Meld의 이용약관을 참조하시기 바랍니다.";
 
 /* The description of the checkbox for the pop up when user first time open buy screen in Brave Wallet. */
 "wallet.meldTransactionPartnerLegal" = "[Meld의 이용 약관](%@)을 읽었으며, 이에 동의합니다";
 
 /* The title shown on the wallet settings page, and the value shown when selecting the default wallet as Brave Wallet in wallet settings. */
-"wallet.module" = "Brave 월렛";
+"wallet.module" = "Growser 월렛";
 
 /* A button title for user to open more option in asset details screen other than buy/send/swap. */
 "wallet.more" = "더보기";
@@ -1079,7 +1079,7 @@
 "wallet.newSiteConnectFooter" = "신뢰할 수 있는 사이트에만 연결하십시오.";
 
 /* The message displayed below the dapp's origin url in new site connection screen. */
-"wallet.newSiteConnectMessage" = "Brave 월렛에 연결";
+"wallet.newSiteConnectMessage" = "Growser 월렛에 연결";
 
 /* The transaction edit error alert button which will dismiss the alert. */
 "wallet.newSiteConnectScreenTitle" = "연결";
@@ -1127,7 +1127,7 @@
 "wallet.nftDetailTokenStandard" = "토큰 표준";
 
 /* The title of the alert that asks users either to enable NFT discovery or import manually. `SimpleHash` is the third-party service name, so it does not need to be translated. */
-"wallet.nftDiscoveryCalloutDescription" = "Brave 월렛이 귀하의 NFT를 자동으로 표시하기 위해서는 제3자 서비스를 사용할 수 있습니다. Brave는 이 서비스를 제공하기 위해 SimpleHash에 귀하의 월렛 주소를 공유합니다. 자세히 알아보세요.";
+"wallet.nftDiscoveryCalloutDescription" = "Growser 월렛이 귀하의 NFT를 자동으로 표시하기 위해서는 제3자 서비스를 사용할 수 있습니다. Brave는 이 서비스를 제공하기 위해 SimpleHash에 귀하의 월렛 주소를 공유합니다. 자세히 알아보세요.";
 
 /* This is the same `Learn more` at the end of `nftDiscoveryCalloutDescription`, but we need a separat translation to detect the range of it in order to build some attributed strings. */
 "wallet.nftDiscoveryCalloutDescriptionLearnMore" = "자세히 알아보기";
@@ -1163,10 +1163,10 @@
 "wallet.nftRemoveFromWallet" = "월렛 내에 표시하지 않음";
 
 /* The description of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertDescription" = "NFT가 Brave 월렛에서 제거되지만 블록체인상에는 남아 있습니다. 제거한 후에는 마음이 바뀌면 다시 수동으로 가져와야 합니다.";
+"wallet.nftRemoveFromWalletAlertDescription" = "NFT가 Growser 월렛에서 제거되지만 블록체인상에는 남아 있습니다. 제거한 후에는 마음이 바뀌면 다시 수동으로 가져와야 합니다.";
 
 /* The title of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertTitle" = "Brave 월렛에서 제거하시겠습니까?";
+"wallet.nftRemoveFromWalletAlertTitle" = "Growser 월렛에서 제거하시겠습니까?";
 
 /* The description of the NFTs row in Account Details when user has zero or multiple NFTs. */
 "wallet.nftsDescription" = "NFT %d개";
@@ -1217,7 +1217,7 @@
 "wallet.onboardingNetworkSelectionTitle" = "지원되는 네트워크";
 
 /* The subtitle of the last step of creating a new wallet. */
-"wallet.onbordingCompletedSubTitle" = "Brave 월렛 사용 준비 완료.";
+"wallet.onbordingCompletedSubTitle" = "Growser 월렛 사용 준비 완료.";
 
 /* The title of the last step of creating a new wallet. */
 "wallet.onbordingCompletedTitle" = "설정이 다 끝났습니다!";
@@ -1349,7 +1349,7 @@
 "wallet.repeatedPasswordPlaceholder" = "비밀번호 다시 입력";
 
 /* A label for toggle for user to use to indicate importing a legacy brave wallet or not */
-"wallet.restoreLegacyBraveWalletToggleTitle" = "레거시 Brave 암호화폐 월렛에서 가져오시겠습니까?";
+"wallet.restoreLegacyBraveWalletToggleTitle" = "레거시 Growser 암호화폐 월렛에서 가져오시겠습니까?";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As to gain access to your assets from a different device */
 "wallet.restoreWalletBackButtonTitle" = "월렛 복구";
@@ -1559,7 +1559,7 @@
 "wallet.settingsResetWalletAlertMessage" = "이 액션은 되돌릴 수 없습니다. 복구 문구는 암호화폐 자산 계정에 다시 액세스할 수 있는 유일한 수단입니다.";
 
 /* The title the confirmation dialog when resetting the wallet. As in to erase the users wallet from the device */
-"wallet.settingsResetWalletAlertTitle" = "Brave 월렛을 재설정하시겠습니까?";
+"wallet.settingsResetWalletAlertTitle" = "Growser 월렛을 재설정하시겠습니까?";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As in the first step of an onboarding process is to welcome a user. */
 "wallet.setupCryptoButtonBackButtonTitle" = "환영합니다";
@@ -1568,13 +1568,13 @@
 "wallet.setupCryptoButtonTitle" = "시작하기";
 
 /* The subtitle displayed in the section for user that need to create a brand new wallet */
-"wallet.setupCryptoCreateNewSubTitle" = "Brave 월렛은 몇 분 만에 시작할 수 있습니다.";
+"wallet.setupCryptoCreateNewSubTitle" = "Growser 월렛은 몇 분 만에 시작할 수 있습니다.";
 
 /* The title displayed in the section for user that need to create a brand new wallet */
 "wallet.setupCryptoCreateNewTitle" = "새 월렛이 필요하신가요?";
 
 /* The disclaimer text at the bottom of the first step of onboarding flow. */
-"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Brave 및 Brave 로고는 Brave의 등록 상표입니다. 기타 제품 명칭 및 로고는 해당 회사의 상표일 수 있습니다. 모든 권한 보유.";
+"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Growser 및 Growser 로고는 Brave의 등록 상표입니다. 기타 제품 명칭 및 로고는 해당 회사의 상표일 수 있습니다. 모든 권한 보유.";
 
 /* The subtitle displayed in the section for user that need to restore an existed wallet */
 "wallet.setupCryptoRestoreSubTitle" = "기존 월렛 가져오기.";
@@ -1583,7 +1583,7 @@
 "wallet.setupCryptoRestoreTitle" = "이미 월렛이 있으십니까?";
 
 /* The subtitle displayed on the 'setup crypto' onboarding screen */
-"wallet.setupCryptoSubtitle" = "보유한 암호화폐 및 NFT를 온전히 관리하세요. Brave 월렛은 이더리움, EVM 체인, Solana 등을 지원합니다.";
+"wallet.setupCryptoSubtitle" = "보유한 암호화폐 및 NFT를 온전히 관리하세요. Growser 월렛은 이더리움, EVM 체인, Solana 등을 지원합니다.";
 
 /* The title displayed on the 'setup crypto' onboarding screen */
 "wallet.setupCryptoTitle" = "브라우저 네이티브.\n자기 보호관리.\n멀티체인.";
@@ -1637,10 +1637,10 @@
 "wallet.signedTransactionTitle" = "트랜잭션 서명됨";
 
 /* The title of the view shown above a Sign In With Ethereum request. */
-"wallet.signInWithBraveWallet" = "Brave 월렛으로 로그인";
+"wallet.signInWithBraveWallet" = "Growser 월렛으로 로그인";
 
 /* The title of the view shown when a security issue is detected with a Sign In With Ethereum request. */
-"wallet.signInWithBraveWalletMessage" = "%1$@에 로그인합니다. Brave 월렛이 귀하의 월렛 주소를 %2$@에 공유합니다.";
+"wallet.signInWithBraveWalletMessage" = "%1$@에 로그인합니다. Growser 월렛이 귀하의 월렛 주소를 %2$@에 공유합니다.";
 
 /* A warning message to tell users that the sign request message contains consecutive new-line characters. */
 "wallet.signMessageConsecutiveNewlineWarning" = "연속된 줄바꿈 문자가 감지되었습니다!";

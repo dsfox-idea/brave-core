@@ -4,7 +4,8 @@
 
 #include "Base.xcconfig"
 
-MOZ_BUNDLE_DISPLAY_NAME = Brave
+// Growser-284
+MOZ_BUNDLE_DISPLAY_NAME = Growser
 
 // Bundle Identifier
 MOZ_BUNDLE_ID = $(BASE_BUNDLE_ID).browser

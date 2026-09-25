@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-import BraveVPN
+// Growser-280: no BraveVPN.
 import Foundation
 import SwiftUI
 
@@ -21,8 +21,8 @@ public class BrowserMenuController: UIHostingController<BrowserMenu> {
       rootView: BrowserMenu(
         model: .init(
           actions: actions,
-          vpnStatus: .liveVPNStatus,
-          vpnStatusPublisher: .liveVPNStatus
+          vpnStatus: .disconnected,  // Growser-280: the VPN is out of the product.
+          vpnStatusPublisher: nil
         ),
         handlePresentation: handlePresentation
       )

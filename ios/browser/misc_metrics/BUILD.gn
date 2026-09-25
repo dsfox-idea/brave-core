@@ -3,6 +3,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+
 source_set("misc_metrics") {
   sources = [
     "profile_misc_metrics_service.h",
@@ -12,7 +14,7 @@ source_set("misc_metrics") {
   ]
 
   deps = [
-    "//brave/components/ai_chat/core/browser",
+    "//brave/components/ai_chat/core/common/buildflags",
     "//components/keyed_service/core",
     "//components/keyed_service/ios",
     "//components/prefs",
@@ -22,4 +24,9 @@ source_set("misc_metrics") {
     "//ios/chrome/browser/shared/model/profile",
     "//ios/chrome/browser/shared/model/profile:profile_keyed_service_factory",
   ]
+
+  # Growser-279: brave-core never guarded this on iOS; our .env turns it off.
+  if (enable_ai_chat) {
+    deps += [ "//brave/components/ai_chat/core/browser" ]
+  }
 }

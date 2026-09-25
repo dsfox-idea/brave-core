@@ -9,15 +9,20 @@
 #include "base/memory/raw_ptr.h"
 #include "base/strings/sys_string_conversions.h"
 #include "base/time/time.h"
-#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_stats/browser/brave_stats_updater_util.h"
 #include "brave/components/brave_stats/browser/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/serp_metrics/pref_names.h"
 #include "brave/components/webcompat_reporter/buildflags/buildflags.h"
+#include "brave/ios/browser/api/brave_stats/buildflags.h"
 #include "components/prefs/pref_service.h"
 #include "ios/chrome/browser/shared/model/application_context/application_context.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
+#endif
 
 #if !defined(__has_feature) || !__has_feature(objc_arc)
 #error "This file requires ARC support."
@@ -40,20 +45,39 @@ NSString* const kWebcompatReportEndpoint =
   return self;
 }
 
+// Growser-291: with the usage ping compiled out on the desktop (#38), iOS
+// reports it disabled and managed. The Swift DAU ping and both referral
+// requests already ask isStatsReportingEnabled before sending anything, and the
+// settings toggle hides itself for a managed pref.
 - (BOOL)isStatsReportingManaged {
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   return _localPrefs->IsManagedPreference(kStatsReportingEnabled);
+#else
+  return YES;
+#endif
 }
 
 - (BOOL)isStatsReportingEnabled {
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   return _localPrefs->GetBoolean(kStatsReportingEnabled);
+#else
+  return NO;
+#endif
 }
 
 - (void)setStatsReportingEnabled:(BOOL)statsReportingEnabled {
+#if BUILDFLAG(ENABLE_BRAVE_STATS_UPDATER)
   _localPrefs->SetBoolean(kStatsReportingEnabled, statsReportingEnabled);
+#endif
 }
 
 - (BOOL)isNotificationAdsEnabled {
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
   return _profilePrefs->GetBoolean(brave_ads::prefs::kNotificationsEnabled);
+#else
+  // Growser-290: ads are compiled out and their prefs are not registered.
+  return NO;
+#endif
 }
 
 - (nullable NSDate*)lastPingDate {

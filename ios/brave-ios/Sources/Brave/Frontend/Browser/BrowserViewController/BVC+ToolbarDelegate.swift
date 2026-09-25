@@ -5,12 +5,12 @@
 
 import AVFoundation
 import BraveCore
-import BraveNews
+// Growser-281: no BraveNews.
 import BraveShared
 import BraveShields
 import BraveStrings
 import BraveUI
-import BraveWallet
+// Growser-287: no BraveWallet.
 import BraveWidgetsModels
 import BrowserMenu
 import CertificateUtilities
@@ -19,7 +19,7 @@ import Data
 import Lottie
 import Onboarding
 import OrderedCollections
-import Playlist
+// Growser-282: no Playlist.
 import Preferences
 import Shared
 import SpeechRecognition
@@ -74,37 +74,8 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   }
 
   func topToolbarDidPressReload(_ topToolbar: TopToolbarView) {
-    if let url = topToolbar.currentURL {
-      if let decentralizedDNSHelper = decentralizedDNSHelperFor(url: topToolbar.currentURL) {
-        topToolbarDidPressReloadTask?.cancel()
-        topToolbarDidPressReloadTask = Task { @MainActor in
-          topToolbar.locationView.loading = true
-          let result = await decentralizedDNSHelper.lookup(
-            domain: url.schemelessAbsoluteDisplayString
-          )
-          topToolbar.locationView.loading = tabManager.selectedTab?.isLoading == true
-          guard !Task.isCancelled else { return }  // user pressed stop, or typed new url
-          switch result {
-          case .loadInterstitial(let service):
-            showWeb3ServiceInterstitialPage(service: service, originalURL: url)
-          case .load(let resolvedURL):
-            if resolvedURL.isIPFSScheme,
-              let resolvedIPFSURL = profileController.ipfsAPI.resolveGatewayUrl(for: resolvedURL)
-            {
-              tabManager.selectedTab?.loadRequest(URLRequest(url: resolvedIPFSURL))
-            } else {
-              tabManager.selectedTab?.loadRequest(URLRequest(url: resolvedURL))
-            }
-          case .none:
-            tabManager.selectedTab?.reload()
-          }
-        }
-      } else {
-        tabManager.selectedTab?.reload()
-      }
-    } else {
-      tabManager.selectedTab?.reload()
-    }
+    // Growser-287: no ENS/SNS lookup before a reload - it was the wallet's.
+    tabManager.selectedTab?.reload()
   }
 
   func topToolbarDidPressStop(_ topToolbar: TopToolbarView) {
@@ -152,55 +123,14 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
     tabManager.selectedTab?.readerMode?.toggleReaderMode()
   }
 
-  func topToolbarDidPressPlaylistButton(_ urlBar: TopToolbarView) {
-    guard let tab = tabManager.selectedTab, let playlistItem = tab.playlistItem else { return }
-    let state = urlBar.locationView.playlistButton.buttonState
-    switch state {
-    case .addToPlaylist:
-      addToPlaylist(item: playlistItem) { [weak self] didAddItem in
-        guard let self else { return }
-
-        if didAddItem {
-          self.updatePlaylistURLBar(tab: tab, state: .existingItem, item: playlistItem)
-
-          DispatchQueue.main.async { [self] in
-            let popover = self.createPlaylistPopover(item: playlistItem, tab: tab)
-            popover.present(from: self.topToolbar.locationView.playlistButton, on: self)
-          }
-        }
-      }
-    case .addedToPlaylist:
-      // Shows its own menu
-      break
-    case .none:
-      break
-    }
-  }
+  // Growser-282: the playlist URL-bar button is never shown, so neither of
+  // these is reached; TopToolbarDelegate still asks for them.
+  func topToolbarDidPressPlaylistButton(_ urlBar: TopToolbarView) {}
 
   func topToolbarDidPressPlaylistMenuAction(
     _ urlBar: TopToolbarView,
     action: PlaylistURLBarButton.MenuAction
-  ) {
-    guard let tab = tabManager.selectedTab, let info = tab.playlistItem else { return }
-    switch action {
-    case .changeFolders:
-      guard let item = PlaylistItem.getItem(uuid: info.tagId) else { return }
-      let controller = PlaylistChangeFoldersViewController(item: item)
-      self.present(controller, animated: true)
-    case .openInPlaylist:
-      DispatchQueue.main.async {
-        self.openPlaylist(tab: tab, item: info)
-      }
-    case .remove:
-      Task { @MainActor in
-        if await PlaylistManager.shared.delete(item: info) {
-          self.updatePlaylistURLBar(tab: tab, state: .newItem, item: info)
-        }
-      }
-    case .undoRemove(let originalFolderUUID):
-      addToPlaylist(item: info, folderUUID: originalFolderUUID)
-    }
-  }
+  ) {}
 
   func topToolbarDisplayTextForURL(_ topToolbar: URL?) -> (String?, Bool) {
     // use the initial value for the URL so we can do proper pattern matching with search URLs
@@ -292,33 +222,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       return false
     }
 
-    // check text is decentralized DNS supported domain
-    if let decentralizedDNSHelper = self.decentralizedDNSHelperFor(url: fixupURL) {
-      dismissSearchInput()
-      updateToolbarCurrentURL(fixupURL)
-      topToolbar.locationView.loading = true
-      let result = await decentralizedDNSHelper.lookup(
-        domain: fixupURL.schemelessAbsoluteDisplayString
-      )
-      topToolbar.locationView.loading = tabManager.selectedTab?.isLoading == true
-      guard !Task.isCancelled else { return true }  // user pressed stop, or typed new url
-      switch result {
-      case .loadInterstitial(let service):
-        showWeb3ServiceInterstitialPage(service: service, originalURL: fixupURL)
-        return true
-      case .load(let resolvedURL):
-        if resolvedURL.isIPFSScheme,
-          let resolvedIPFSURL = profileController.ipfsAPI.resolveGatewayUrl(for: resolvedURL)
-        {
-          finishEditingAndSubmit(resolvedIPFSURL)
-        } else {
-          finishEditingAndSubmit(resolvedURL)
-        }
-        return true
-      case .none:
-        break
-      }
-    }
+    // Growser-287: no ENS/SNS lookup for a typed name - it was the wallet's.
 
     // The user entered a URL, so use it.
     // Determine if url navigation is done from favourites or bookmarks
@@ -345,7 +249,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       return
     }
 
-    let isPrivate = tabManager.selectedTab?.isPrivate ?? false
+    // Growser-279: no isPrivate here - it only decided whether to offer Leo.
     let container = SearchContainerViewController(
       tabManager: tabManager,
       bookmarkManager: bookmarkManager,
@@ -353,9 +257,8 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       searchEngines: profile.searchEngines,
       privateBrowsingManager: privateBrowsingManager,
       speechRecognizer: speechRecognizer,
-      isAIChatAvailable: !isPrivate && Preferences.AIChat.leoInQuickSearchBarEnabled.value
-        && AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs),
-      isPlaylistAvailable: profileController.profile.prefs.isPlaylistAvailable,
+      isAIChatAvailable: false,  // Growser-279: Leo is out of the product.
+      isPlaylistAvailable: false,  // Growser-282: Playlist is out of the product.
       searchDelegate: self,
       delegate: self,
       bookmarkAction: { [weak self] bookmark, action in
@@ -589,7 +492,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
         settings: AdvancedShieldsSettings(
           profile: self.profile,
           tabManager: self.tabManager,
-          feedDataSource: self.feedDataSource,
+          // Growser-281: no feedDataSource.
           debounceService: DebounceServiceFactory.get(privateMode: false),
           braveShieldsSettings: BraveShieldsSettingsServiceFactory.get(
             profile: profileController.profile
@@ -597,7 +500,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
           braveCore: profileController,
           p3aUtils: braveCore.p3aUtils,
           localState: braveCore.localState,
-          rewards: rewards,
+          // Growser-290: no rewards.
           braveStats: profileController.braveStats,
           webcompatReporterHandler: WebcompatReporter.ServiceFactory.get(privateMode: false),
           clearDataCallback: { [weak self] isLoading, isHistoryCleared in
@@ -700,12 +603,12 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   ) -> OrderedSet<WidgetShortcut> {
     return WidgetShortcut.eligibleButtonShortcuts(
       prefs: profileController.profile.prefs,
-      isWalletAvailable: profileController.braveWalletAPI.isAllowed
+      isWalletAvailable: false  // Growser-287
     )
   }
 
   func topToolbarDidTapBraveRewardsButton(_ topToolbar: TopToolbarView) {
-    showBraveRewardsPanel()
+    // Growser-290: no Rewards panel - the button is never shown.
   }
 
   func topToolbarDidTapMenuButton(_ topToolbar: TopToolbarView) {
@@ -740,10 +643,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
     }
 
     func openVoiceSearch(speechRecognizer: SpeechRecognizer) {
-      // Pause active playing in PiP when Audio Search is enabled
-      if PlaylistCoordinator.shared.isPictureInPictureActive {
-        PlaylistCoordinator.shared.pauseAllPlayback()
-      }
+      // Growser-282: no playlist picture-in-picture to pause.
 
       voiceSearchViewController = PopupViewController(
         rootView: SpeechToTextInputView(
@@ -808,15 +708,31 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
   }
 
   func topToolbarDidTapWalletButton(_ urlBar: TopToolbarView) {
-    guard let selectedTab = tabManager.selectedTab,
-      let tabDappStore = selectedTab.wallet?.tabDappStore,
-      let origin = selectedTab.lastCommittedURL?.origin
-    else {
-      return
+    // Growser-287: the wallet button is never shown - nothing makes it active.
+  }
+
+  // Growser-287: moved here from BVC+Wallet.swift, which is not built. It was
+  // the wallet delegate's, and the settings opened through this toolbar use it.
+  func openDestinationURL(_ destinationURL: URL) {
+    if presentedViewController != nil {
+      // dismiss to show the new tab
+      self.dismiss(animated: true)
     }
-    // System components sit on top so we want to dismiss it
-    selectedTab.dismissFindInteraction()
-    presentWalletPanel(from: origin, with: tabDappStore)
+    if let url = tabManager.selectedTab?.visibleURL {
+      if InternalURL.isValid(url: url) {
+        select(url: destinationURL, isUserDefinedURLNavigation: false)
+      } else {
+        tabManager.addTabAndSelect(
+          URLRequest(url: destinationURL),
+          isPrivate: privateBrowsingManager.isPrivateBrowsing
+        )
+      }
+    } else {
+      _ = tabManager.addTabAndSelect(
+        URLRequest(url: destinationURL),
+        isPrivate: privateBrowsingManager.isPrivateBrowsing
+      )
+    }
   }
 
   /// Handles selection of a recent search in the favorites screen: seeds the input field and, when
@@ -951,8 +867,8 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
         tab: tab,
         syncAPI: profileController.syncAPI,
         sendTabAPI: profileController.sendTabAPI,
-        feedDataSource: feedDataSource,
-        isBraveNewsAvailable: profileController.profile.prefs.isBraveNewsAvailable,
+        // Growser-281: no feedDataSource, and Brave News is never available.
+        isBraveNewsAvailable: false,
         source: .init(
           view: view,
           rect: view.convert(

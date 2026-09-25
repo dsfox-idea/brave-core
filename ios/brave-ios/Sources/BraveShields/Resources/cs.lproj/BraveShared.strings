@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Přidat filtr podle adresy URL";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Přehrávač Brave** je vaše vstupenka na video bez reklam a nepřerušované zážitky z videa.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Přehrávač Growser** je vaše vstupenka na video bez reklam a nepřerušované zážitky z videa.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Upravit moje štíty";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Tato webová stránka začala blokovat některé blokátory reklam, což znamená, že jejich webová stránka nemusí fungovat podle očekávání.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Chcete-li tento problém vyřešit, může za vás Brave upravit nastavení vašich štítů. Po úpravě můžete zkusit sledovat tento obsah v přehrávači Brave.";
+"AntiAdBlockWarningDescription2" = "Chcete-li tento problém vyřešit, může za vás Growser upravit nastavení vašich štítů. Po úpravě můžete zkusit sledovat tento obsah v přehrávači Growser.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Zachovat aktuální nastavení";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Oznámení bloku „Přepnout na aplikaci";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Přehrávač Brave";
+"BravePlayer" = "Přehrávač Growser";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Vždy otevírejte videa z této webové stránky pomocí přehrávače Brave";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Vždy otevírejte videa z této webové stránky pomocí přehrávače Growser";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Vyzkoušejte to";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Teď ne";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Přehrávač Brave vám umožňuje sledovat videa bez přerušení.";
+"BravePlayerInfoMessage" = "Přehrávač Growser vám umožňuje sledovat videa bez přerušení.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Místo toho sledujte v přehrávači Brave";
+"BravePlayerInfoTitle" = "Místo toho sledujte v přehrávači Growser";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Filtrování obsahu";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Přejít zpět";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Jelikož jste požádali o agresivní blokování sledovačů a reklam, Brave tuto stránku před prvním připojením k síti blokuje. ";
+"DomainBlockedPageDescription" = "Jelikož jste požádali o agresivní blokování sledovačů a reklam, Growser tuto stránku před prvním připojením k síti blokuje. ";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Prohlížeč Brave zabránil načtení následujícího webu:";
+"DomainBlockedPageMessage" = "Prohlížeč Growser zabránil načtení následujícího webu:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Tato webová stránka se vás může pokusit sledovat i na jiných webových stránkách";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Zavřít aplikaci";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Data prohlížení se automaticky skartují, když je aplikace Brave zavřena / restartována";
+"ShredOnAppCloseDescription" = "Data prohlížení se automaticky skartují, když je aplikace Growser zavřena / restartována";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Záložky stránky zavřené";

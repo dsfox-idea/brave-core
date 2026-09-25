@@ -3,6 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import BraveCore  // Growser-293: FeatureList
 import BraveShared
 import BraveStrings
 import IntentsUI
@@ -41,6 +42,9 @@ struct ShortcutSettingsView: View {
     }
     if !isBraveNewsAvailable {
       types.remove(.openBraveNews)
+    }
+    if !FeatureList.kBraveSync.enabled {  // Growser-293: no Sync (#43, #78).
+      types.remove(.openSyncedTabs)
     }
     return Array(types)
   }

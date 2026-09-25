@@ -7,6 +7,7 @@ import("//brave/build/config.gni")
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
 import("//brave/components/brave_ads/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
+import("//brave/components/skus/buildflags/buildflags.gni")
 import("//build/config/features.gni")
 import("//mojo/public/tools/bindings/mojom.gni")
 
@@ -23,9 +24,9 @@ source_set("webui") {
     "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/constants",
+    "//brave/components/skus/buildflags",
     "//brave/components/webui",
     "//brave/ios/browser/ui/webui/brave_account",
-    "//brave/ios/browser/ui/webui/skus",
     "//brave/ios/web/webui",
     "//components/prefs",
     "//components/resources:components_resources_grit",
@@ -49,6 +50,10 @@ source_set("webui") {
 
   if (enable_brave_ads) {
     deps += [ "//brave/ios/browser/ui/webui/ads" ]
+  }
+
+  if (enable_skus) {  # Growser-283
+    deps += [ "//brave/ios/browser/ui/webui/skus" ]
   }
 
   if (enable_brave_wallet) {

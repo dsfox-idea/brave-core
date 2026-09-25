@@ -5,13 +5,13 @@
 "AboutBraveShields" = "O Brave Shields";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "Spletna mesta pogosto vključujejo piškotke in skripte, ki poskušajo prepoznati vas in vašo napravo. Želijo ugotoviti, kdo ste in vas spremljati po spletu - spremljati, kaj počnete na vsakem spletnem mestu.\n\nBrave to blokira, da lahko brskate, ne da bi vas povsod spremljali.";
+"AboutBraveShieldsBody" = "Spletna mesta pogosto vključujejo piškotke in skripte, ki poskušajo prepoznati vas in vašo napravo. Želijo ugotoviti, kdo ste in vas spremljati po spletu - spremljati, kaj počnete na vsakem spletnem mestu.\n\nGrowser to blokira, da lahko brskate, ne da bi vas povsod spremljali.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "To vam omogoči, da sliko shranite v svojo fotografijo.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave bi rad dostopal do vaših fotografij";
+"AccessPhotoDeniedAlertTitle" = "Growser bi rad dostopal do vaših fotografij";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Dodaj zaznamek";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Dodaj zaznamek";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Podatki Brave Oglasov";
+"ads.braveAdsDataToggleOption" = "Podatki Growser Oglasov";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Oglasi in sledilniki";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "Vklopljeno";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Vprašaj Brave";
+"AskBraveMenuItem" = "Vprašaj Growser";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "To avtentificira vaš dostop do Brave";
+"AuthenticationLoginsTouchReason" = "To avtentificira vaš dostop do Growser";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Prekliči";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "Naslov";
 
 /* Button to show the brave panel */
-"BravePanel" = "Plošča Brave";
+"BravePanel" = "Plošča Growser";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Storitev Brave Rewards";
+"BraveRewardsAdNotificationTitle" = "Storitev Growser Rewards";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Odpri";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Nagrade";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Storitev Brave Rewards";
+"BraveRewardsTitle" = "Storitev Growser Rewards";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Iskanje Brave vas ne spremlja.";
+"braveSearchPromotion.bannerDescription" = "Iskanje Growser vas ne spremlja.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Morda pozneje";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Podprite neodvisno iskanje z boljšo zasebnostjo";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Preizkusite iskanje Brave";
+"braveSearchPromotion.bannerTryButtonTitle" = "Preizkusite iskanje Growser";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Morda pozneje";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Napredne nastavitve";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Brave zaščita & zasebnost";
+"BraveShieldsAndPrivacy" = "Growser zaščita & zasebnost";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Ščiti & zasebnost";
@@ -269,7 +269,7 @@
 "BraveShieldsSiteBroken" = "Če se spletno mesto zdi okvarjeno, poskusite Ščite dol";
 
 /* Context: 'Brave Shields Up' or 'Brave Shields Down' */
-"BraveShieldsStatusTitle" = "Ščiti Brave";
+"BraveShieldsStatusTitle" = "Ščiti Growser";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
 "BraveShieldsStatusValueDown" = "Dol";
@@ -278,10 +278,10 @@
 "BraveShieldsStatusValueUp" = "Gor";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
-"BraveShieldsToggleHint" = "Dvakratni tap za vklop/izklop Brave Ščitov";
+"BraveShieldsToggleHint" = "Dvakratni tap za vklop/izklop Growser Ščitov";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Growser Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Izbira jezika";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Išči";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Brave Prevajalnik";
+"BraveTranslate.settingsMenuTitle" = "Growser Prevajalnik";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Brave Prevajalnik";
+"BraveTranslate.settingsScreenTitle" = "Growser Prevajalnik";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Če je omogočeno, bo Brave Prevajalnik samodejno zaznal trenutni jezik vaše strani in prikazal gumb za prevajanje v naslovno vrstico.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Če je omogočeno, bo Growser Prevajalnik samodejno zaznal trenutni jezik vaše strani in prikazal gumb za prevajanje v naslovno vrstico.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Prevajanje omogočeno";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Zaklep brskalnika";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Odklenite Brave s Touch ID, Face ID ali sistemskim kodom dostopa.";
+"BrowserLockDescription" = "Odklenite Growser s Touch ID, Face ID ali sistemskim kodom dostopa.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Zgodovina iskanja";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "Naslov vrstice, zavihke, zaznamke in druga orodja premaknite na dno brskalnika.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Prilagodi Brave vrstico zavihkov";
+"callout.bottomBarCalloutTitle" = "Prilagodi Growser vrstico zavihkov";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Pridobite Brave zasebnost na svojem računalniku ali tablici ter sinhroniziraje zaznamke in razširitve med napravami.";
+"callout.privacyEverywhereCalloutDescription" = "Pridobite Growser zasebnost na svojem računalniku ali tablici ter sinhroniziraje zaznamke in razširitve med napravami.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Sinhroniziraj zdaj";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Odpri nastavitve";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Odpri vse povezave z brskalnik Brave in zaščiti zasebnost";
+"defaultBrowserCallout.introPrimaryText" = "Odpri vse povezave z brskalnik Growser in zaščiti zasebnost";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Brave Ščiti blokira sledilnike in oglase, prihrani podatke in ti prihrani čas na vsaki spletni strani, ki jo obiskaš";
+"defaultBrowserCallout.introSecondaryText" = "Growser Ščiti blokira sledilnike in oglase, prihrani podatke in ti prihrani čas na vsaki spletni strani, ki jo obiskaš";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Odpri Nastavitve, se dotakni Privzeti brskalnik in izberi Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Odpri Nastavitve, se dotakni Privzeti brskalnik in izberi Growser.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Nastavi Brave kot privzeti brskalnik";
+"defaultBrowserCallout.notificationBody" = "Nastavi Growser kot privzeti brskalnik";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Zaščita Brave na vsaki povezavi";
+"defaultBrowserCallout.notificationTitle" = "Zaščita Growser na vsaki povezavi";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Zapri opomnik privzetega brskalnika";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Privzeto za Brave";
+"defaultThemeName" = "Privzeto za Growser";
 
 /* No comment provided by engineer. */
 "Delete" = "Izbriši";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Vnesite ime mape";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ običajno uporablja šifriranje za zaščito vaših informacij. Ko je Brave poskusil povezati se s %2$@, je spletno mesto poslalo nenavadne in nepravilne poverilnice. To se lahko zgodi, ko se napadalec poskuša predstavljati kot %3$@, ali ko zaslonska plošča za prijavo Wi-Fi prekine povezavo. Vaši podatki so še vedno varni, ker je Brave prekinil povezavo, preden so bili izmenjani kakršni koli podatki.<br />Vendar ne morete obiskati %4$@ ravno zdaj, ker spletno mesto uporablja fiksiranje potrdila. Napake v omrežju in napadi so ponavadi začasni, zato bo ta stran verjetno delala pozneje.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ običajno uporablja šifriranje za zaščito vaših informacij. Ko je Growser poskusil povezati se s %2$@, je spletno mesto poslalo nenavadne in nepravilne poverilnice. To se lahko zgodi, ko se napadalec poskuša predstavljati kot %3$@, ali ko zaslonska plošča za prijavo Wi-Fi prekine povezavo. Vaši podatki so še vedno varni, ker je Growser prekinil povezavo, preden so bili izmenjani kakršni koli podatki.<br />Vendar ne morete obiskati %4$@ ravno zdaj, ker spletno mesto uporablja fiksiranje potrdila. Napake v omrežju in napadi so ponavadi začasni, zato bo ta stran verjetno delala pozneje.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Ta strežnik ni mogel dokazati, da je %@; njegov varnostni certifikat ni pričakovan od operacijskega sistema vaše naprave. To lahko povzroči napačna konfiguracija ali napadalec, ki poskuša prestrezati vašo povezavo.";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Skrij predoglede povezav";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Skrij ikono storitve Brave Rewards";
+"HideRewardsIcon" = "Skrij ikono storitve Growser Rewards";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Skriva ikono Brave Rewards, kadar Brave Rewards ni omogočen";
+"HideRewardsIconSubtitle" = "Skriva ikono Growser Rewards, kadar Growser Rewards ni omogočen";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Zgodovina";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Samodejno preusmeri povezave NPR na njihovo besedilno različico (pri text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Podpora Brave";
+"ntp.braveSupportFavoriteTitle" = "Podpora Growser";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Zahtevaj žetone";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Zaslužil si %@ z brskanjem z brskalnikom Brave.";
+"ntp.earningsReport" = "Zaslužil si %@ z brskanjem z brskalnikom Growser.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Odlično se ti piše!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Skrij sponzorirane slike";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "Sponzorirane slike so blagovne znamke ozadja, ki se prikažejo v novo odprtih zavihkih v brskalniku. Omogočanje teh sponzoriranih slik podpira poslanstvo Brave. [Več informacij](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "Sponzorirane slike so blagovne znamke ozadja, ki se prikažejo v novo odprtih zavihkih v brskalniku. Omogočanje teh sponzoriranih slik podpira poslanstvo Growser. [Več informacij](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Preberite več o Brave nagradah";
+"ntp.learnMoreAboutRewards" = "Preberite več o Growser nagradah";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Preberite več o sponzoriranih slikah";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Zaslužite točke in nagradite ustvarjalce za odlično vsebino med brskanjem.";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Brave Oglasi so tukaj!";
+"OBAdsOptInTitle" = "Growser Oglasi so tukaj!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brskalnik Brave vam bo pokazal prvi oglas v";
+"OBAdsTitle" = "Brskalnik Growser vam bo pokazal prvi oglas v";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Zdaj ste pripravljeni za pot.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Pridruži se";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Dovolite Brave, da preverka moj odložišče za ujemajoči se kodo priporočila";
+"OBPrivacyConsentClipboardPermission" = "Dovolite Growser, da preverka moj odložišče za ujemajoči se kodo priporočila";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Morda ste prenasili Brave v podporo svojemu priporočitelju. Če želite odkriti svojega priporočitelja, Brave opravi enkratno preverjanje vašega odložišča za ujemajoči se kodo priporočila. To preverjanje je omejeno samo na kodo, nobeni drugi osebni podatki ne bodo poslani. Če se odjava, vaš priporočitelj ne bo prejel nagrad od Brave.";
+"OBPrivacyConsentDetail" = "Morda ste prenasili Growser v podporo svojemu priporočitelju. Če želite odkriti svojega priporočitelja, Growser opravi enkratno preverjanje vašega odložišča za ujemajoči se kodo priporočila. To preverjanje je omejeno samo na kodo, nobeni drugi osebni podatki ne bodo poslani. Če se odjava, vaš priporočitelj ne bo prejel nagrad od Growser.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Ne dovolite tega preverjanja";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "in";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Storitev Brave Rewards";
+"OBRewardsAgreementTitle" = "Storitev Growser Rewards";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Prijava v Brave zasebne oglase podpira izdajatelje in ustvarjalce vsebine z vsakim oglasom, ki ga vidite.";
+"OBRewardsDetail" = "Prijava v Growser zasebne oglase podpira izdajatelje in ustvarjalce vsebine z vsakim oglasom, ki ga vidite.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Zaslužite žetone in nagradite ustvarjalce za odličnde vsebine, medtem ko brskate.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Zasebnost";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Storitev Brave Rewards";
+"OBRewardsTitle" = "Storitev Growser Rewards";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Shrani";
@@ -1202,13 +1202,13 @@
 "OBSearchEngineDetail" = "Izberite privzeti iskalnik";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Dobrodošli v Brave brskalnik";
+"OBSearchEngineTitle" = "Dobrodošli v Growser brskalnik";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blokirajte zasebnostne sledilce, ki jih profilirajo, da lahko brskate brez sledenja po spletu";
 
 /* Title for shields onboarding screen */
-"OBShieldsTitle" = "Ščiti Brave";
+"OBShieldsTitle" = "Ščiti Growser";
 
 /* Button to show the Brave Rewards Ads. */
 "OBShowMeButton" = "Pokaži mi";
@@ -1220,16 +1220,16 @@
 "onboarding.linkReceiptButton" = "Povežite svojo naročnino VPN";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Vaša naročnina na Brave VPN lahko zaščiti do 10 naprav v sistemu Android, iOS in na namizju. Preprosto povežite svojo naročnino App Store s svojim računom Brave.";
+"onboarding.linkReceiptDescription" = "Vaša naročnina na Growser VPN lahko zaščiti do 10 naprav v sistemu Android, iOS in na namizju. Preprosto povežite svojo naročnino App Store s svojim računom Growser.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptTitle" = "Razširite zaščito požarnega zidu Brave + VPN";
+"onboarding.linkReceiptTitle" = "Razširite zaščito požarnega zidu Growser + VPN";
 
 /* Description for the NTP pop-over that describes the tracking information on NTP */
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Z blokiranjem sledilnikov in oglasov spletna mesta porabijo manj podatkov in se naložijo veliko hitreje.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Oglejte si razliko Brave:\nBrez oglasov. Brez sledilnikov. Veliko hitrejše nalaganje strani.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Oglejte si razliko Growser:\nBrez oglasov. Brez sledilnikov. Veliko hitrejše nalaganje strani.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Vnesite ime spletnega mesta ali URL";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Odpri vse (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Odpri nastavitve Brave Nagrade";
+"OpenBraveRewardsSettings" = "Odpri nastavitve Growser Nagrade";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Pri odpiranju mape Prenosi v aplikaciji Datoteke je prišlo do neznane napake.";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Če želiš začeti, nastavi sinhronizacijsko verigo in v Nastavitvah sinhronizacije vključi »Odprti zavihki«.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Upravljaj, kaj Brave sinhronizira, v Nastavitvah.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Upravljaj, kaj Growser sinhronizira, v Nastavitvah.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Nič aktivnih sej za prikaz s tvojih drugih naprav.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Ta prostor prikazuje Brave zavihke, odprte na drugih napravah";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Ta prostor prikazuje Growser zavihke, odprte na drugih napravah";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Skrij zaenkrat";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Naprej";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Ti zasebni odgovori pomagajo družbi Brave oceniti splošno uporabo določenih funkcij in jih izboljšati za vas.";
+"p3a.settingSubtitle" = "Ti zasebni odgovori pomagajo družbi Growser oceniti splošno uporabo določenih funkcij in jih izboljšati za vas.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Dovoli analitiko izdelkov, ki varuje zasebnost (P3A)";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Trajno zasebno brskanje";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Dovolite Brave, da obnovi zavihke zasebnega brskanja, tudi če zaprete / ponovno odprete aplikacijo";
+"PersistentPrivateBrowsingAlertMessage" = "Dovolite Growser, da obnovi zavihke zasebnega brskanja, tudi če zaprete / ponovno odprete aplikacijo";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Obnovi zasebne zavihke";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Ali želiš dodati ta video na svoj seznam predvajanja?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Dodaj na seznam predvajanja Brave";
+"playList.addToPlayListAlertTitle" = "Dodaj na seznam predvajanja Growser";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Možnosti predvajanja";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Nastavitve";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Seznam predvajanja Brave";
+"playlist.carplayTitle" = "Seznam predvajanja Growser";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Spremeni seznam predvajanja";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Pri nalaganju vira je prišlo do težave!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Elemente lahko dodasš v svoj seznam predvajanja Brave v brskalnika";
+"playList.noItemLabelDetailLabel" = "Elemente lahko dodasš v svoj seznam predvajanja Growser v brskalnika";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Nobenih elementov na voljo";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Razveljavi";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Doda gumb za seznam predvajanja ob naslovni vrstici v brskalniu Brave. Ta gumb ti daje hiter dostop do odpiranja seznama predvajanja ali dodajanja ali odstranjevanja medijev.";
+"playlist.urlBarButtonOptionFooter" = "Doda gumb za seznam predvajanja ob naslovni vrstici v brskalniu Growser. Ta gumb ti daje hiter dostop do odpiranja seznama predvajanja ali dodajanja ali odstranjevanja medijev.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Omogoči gumb za hiter dostop";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Prejšnji teden";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** je bil blokiran s strani Brave Ščiti na **%2$lld** spletnih mestih";
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** je bil blokiran s strani Growser Ščiti na **%2$lld** spletnih mestih";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Najpogostejši sledilnik in oglas";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Vklopite obvestila";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Povzetek tega, kako te je Brave zaščitil pri spletu to teden.";
+"privacyHub.notificationMessage" = "Povzetek tega, kako te je Growser zaščitil pri spletu to teden.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Tedensko poročilo o zasebnosti";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Sledilnik ali oglas";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Opozorila Brave požarnega zida + VPN";
+"privacyHub.vpnAlertsHeader" = "Opozorila Growser požarnega zida + VPN";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Požarni zid + VPN";
@@ -1835,7 +1835,7 @@
 "PrivateTabBody" = "Zasebni zavihki niso shranjeni v Bravu, vendar vas ne naredijo anonimne na spletu. Spletna mesta, ki jih obiščete v zasebnem zavihku, se ne bodo pojavila v vaši zgodovini in njihovi piškotki se vedno izginejo, ko jih zaprete – v Bravu ne bo nobene sledi. Prenos datotek pa bo shranjen.\nVaš mobilni operater (ali lastnik brezžične mreže ali VPN, na katerega ste povezani) lahko vidi, katera spletna mesta obiskujete in ta spletna mesta bodo izvedela vaš javni naslov IP, tudi v zasebnih zavihkih.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Uporaba samo zasebnih zavihkov spremeni le, kaj počne Brave na vaši napravi, ne spremeni pa vedenja druge osebe.\n\nSpletna mesta vedno izvedejo vaš naslov IP, ko jih obiščete. Na podlagi tega pogosto lahko ugibajo, kje se nahajate – običajno vaš kraj. Včasih je lahko ta ugibanje lokacije veliko bolj specifično. Spletna mesta tudi vedo vse, kar jim posebej poveste, kot so iskalni izrazi. Če se prijavite na spletno mesto, bodo vedeli, da ste lastnik tega računa. Še vedno boste odjavljeni, ko zaprete zasebne zavihke, ker bo Brave vrzel piškotka, ki vas drži prijavljenega.\n\nTok, ki vas povezuje s svetom (vaš ponudnik storitev interneta), lahko vidi vso vašo dejavnost omrežja. Pogosto je to vaš mobilni operater. Če ste povezani z brezžično mrežo, je to lastnik te mreže, in če uporabljate VPN, je to tisti, ki upravlja ta VPN. Vaš ponudnik storitev interneta lahko vidi, katera spletna mesta obiskujete, ko jih obiskujete. Če ta spletna mesta uporabljajo HTTPS, ne morejo narediti nič drugega kot izobrazovano ugibanje o tem, kaj počnete na teh spletnih mestih. Če pa spletno mesto uporablja samo HTTP, lahko vaš ponudnik storitev interneta vidi vse: vaše iskalne izraze, katere strani ste brali in katere povezave ste sledili.\n\nČe vaša delodajalec upravlja vašo napravo, lahko spremlja tudi, kaj počnete z njo. Uporaba zasebnih zavihkov verjetno ne bo preprečila, da bi vedeli, katera spletna mesta ste obiskali. Druga oseba z dostopom do vaše naprave bi lahko namestila tudi programsko opremo, ki spremlja vašo dejavnost, in zasebni zavihki vas ne bodo zaščitili niti pred tem.";
+"PrivateTabDetails" = "Uporaba samo zasebnih zavihkov spremeni le, kaj počne Growser na vaši napravi, ne spremeni pa vedenja druge osebe.\n\nSpletna mesta vedno izvedejo vaš naslov IP, ko jih obiščete. Na podlagi tega pogosto lahko ugibajo, kje se nahajate – običajno vaš kraj. Včasih je lahko ta ugibanje lokacije veliko bolj specifično. Spletna mesta tudi vedo vse, kar jim posebej poveste, kot so iskalni izrazi. Če se prijavite na spletno mesto, bodo vedeli, da ste lastnik tega računa. Še vedno boste odjavljeni, ko zaprete zasebne zavihke, ker bo Growser vrzel piškotka, ki vas drži prijavljenega.\n\nTok, ki vas povezuje s svetom (vaš ponudnik storitev interneta), lahko vidi vso vašo dejavnost omrežja. Pogosto je to vaš mobilni operater. Če ste povezani z brezžično mrežo, je to lastnik te mreže, in če uporabljate VPN, je to tisti, ki upravlja ta VPN. Vaš ponudnik storitev interneta lahko vidi, katera spletna mesta obiskujete, ko jih obiskujete. Če ta spletna mesta uporabljajo HTTPS, ne morejo narediti nič drugega kot izobrazovano ugibanje o tem, kaj počnete na teh spletnih mestih. Če pa spletno mesto uporablja samo HTTP, lahko vaš ponudnik storitev interneta vidi vse: vaše iskalne izraze, katere strani ste brali in katere povezave ste sledili.\n\nČe vaša delodajalec upravlja vašo napravo, lahko spremlja tudi, kaj počnete z njo. Uporaba zasebnih zavihkov verjetno ne bo preprečila, da bi vedeli, katera spletna mesta ste obiskali. Druga oseba z dostopom do vaše naprave bi lahko namestila tudi programsko opremo, ki spremlja vašo dejavnost, in zasebni zavihki vas ne bodo zaščitili niti pred tem.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Izvedite več o zasebnih zavihkih.";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Omogoči prevajanje";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Ocenite brskalnik Brave";
+"RateBrave" = "Ocenite brskalnik Growser";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Povečaj velikost pisave";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Izberite eno možnost";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Razvijalcem programa Brave sporočite, da to spletno mesto ne deluje po pričakovanjih:";
+"ReportBrokenSiteBody1" = "Razvijalcem programa Growser sporočite, da to spletno mesto ne deluje po pričakovanjih:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Opomba: Poročilo, poslano na strežnike Brave, bo vključevalo naslov spletnega mesta, številko različice Brave, nastavitve Ščitov, stanje VPN in jezikove nastavitve.";
+"ReportBrokenSiteBody2" = "Opomba: Poročilo, poslano na strežnike Growser, bo vključevalo naslov spletnega mesta, številko različice Growser, nastavitve Ščitov, stanje VPN in jezikove nastavitve.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Pošlji";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "Ne";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Žal se je Brave zrušil ali se ni pravilno zaprl.\nOpostavite zavihke?";
+"RestoreTabOnCrashAlertMessage" = "Žal se je Growser zrušil ali se ni pravilno zaprl.\nOpostavite zavihke?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave se je nepričakovano zaprl.";
+"RestoreTabOnCrashAlertTitle" = "Growser se je nepričakovano zaprl.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Vklopite, da pomagate podpirati Brave in skupnost BAT.";
+"rewards.disabledBody" = "Vklopite, da pomagate podpirati Growser in skupnost BAT.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Uporaba Brave Nagrad pomaga podpirati Brave in skupnost BAT.";
+"rewards.disabledStatusBody" = "Uporaba Growser Nagrad pomaga podpirati Growser in skupnost BAT.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Pomagate nam podpirati Brave in skupnost BAT.";
+"rewards.enabledBody" = "Pomagate nam podpirati Growser in skupnost BAT.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Hvala, ker ste nam pomagali podpirati Brave in skupnost BAT!";
+"rewards.enabledStatusBody" = "Hvala, ker ste nam pomagali podpirati Growser in skupnost BAT!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Pomagajte podpirati Brave in skupnost BAT z omogočanjem Brave Nagrad in ogledavanjem Brave Oglasov.";
+"rewards.settingsToggleMessage" = "Pomagajte podpirati Growser in skupnost BAT z omogočanjem Growser Nagrad in ogledavanjem Growser Oglasov.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Omogoči storitev Brave Rewards";
+"rewards.settingsToggleTitle" = "Omogoči storitev Growser Rewards";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Ta ustvarjalec vsebine je preverjen z Brave Ustvarjalci";
+"rewards.supportingPublisher" = "Ta ustvarjalec vsebine je preverjen z Growser Ustvarjalci";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Število ustvarjalcev vsebine, katerim pomagate pri podpori v tem mesecu.";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "Ali želite omogočiti predlog iskanja?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Iščite z Brave";
+"SearchWithBrave" = "Iščite z Growser";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Pošlji";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Pošlji poročilo o zrušitvi, da lahko Brave odpravi težavo?";
+"SendCrashReportAlertMessage" = "Pošlji poročilo o zrušitvi, da lahko Growser odpravi težavo?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Ups! Brave se je zrušil";
+"SendCrashReportAlertTitle" = "Ups! Growser se je zrušil";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Pošlji poročilo";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Brave je sedaj mogoče nastaviti kot privzeti brskalnik v sistemu iOS. Tapnite tukaj, da odprete nastavitve.";
+"setDefaultBrowserCalloutTitle" = "Growser je sedaj mogoče nastaviti kot privzeti brskalnik v sistemu iOS. Tapnite tukaj, da odprete nastavitve.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Nastavi kot privzeti brskalnik";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Zapri zavihke";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Dovolite Brave-u, da samodejno zapre zavihke, ki jih v zadnjem času niste ogledali.";
+"settings.autocloseTabsSettingFooter" = "Dovolite Growser-u, da samodejno zapre zavihke, ki jih v zadnjem času niste ogledali.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Blokiraj moteče elemente YouTuba";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Predstavnost";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Odprite povezave do YouTuba v aplikaciji Brave";
+"settings.openYouTubeInBrave" = "Odprite povezave do YouTuba v aplikaciji Growser";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Omogoči čas zaslona";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Nastavitve kakovosti";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "S tem zasebnim pingom lahko Brave oceni aktivne uporabnike.";
+"settings.sendUsagePingDescription" = "S tem zasebnim pingom lahko Growser oceni aktivne uporabnike.";
 
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Samodejno pošlji ping o dnevni uporabi Braveu";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Brave je omogočil prikaz povezav do zasebnih anket na novi strani zavihka. Ankete nam pomagajo pri ustvarjanju boljših funkcij in merjenju učinkovitosti oglaševalskih kampanj v brskalniku. [Več informacij](%@)";
+"settings.surveyPanelistDescription" = "Growser je omogočil prikaz povezav do zasebnih anket na novi strani zavihka. Ankete nam pomagajo pri ustvarjanju boljših funkcij in merjenju učinkovitosti oglaševalskih kampanj v brskalniku. [Več informacij](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Omogočite ankete Brave";
+"settings.surveyPanelistTitle" = "Omogočite ankete Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Delite novice";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Ščiti je pravkar zaščitila vašo spletno zasebnost.";
+"shieldEducation.trackerAdWarningSubTitle" = "Growser Ščiti je pravkar zaščitila vašo spletno zasebnost.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Čestitke. Ste kar posebni.";
@@ -2555,13 +2555,13 @@
 "shieldEducation.videoAdBlockTitle" = "Oglasi so blokirani med ogledovanjem videoposnetkov na tem spletnem mestu.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Brave Ščiti - globalne privzete vrednosti";
+"ShieldsDefaults" = "Growser Ščiti - globalne privzete vrednosti";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "To so privzete nastavitve za Shields glede novih spletnih mest. Če jih spremenite, to ne bo vplivalo na vaše obstoječe nastavitve za posamezno spletno mesto.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Na tej spletni strani brskate brez brez zaščite zasebnosti Brave. Ali stan ne deluje pravilno z zaščito Shields?";
+"ShieldsDownDisclaimer" = "Na tej spletni strani brskate brez brez zaščite zasebnosti Growser. Ali stan ne deluje pravilno z zaščito Shields?";
 
 /* shields overview message */
 "ShieldsOverview" = "Ščiti na ravni spletnega mesta omogočajo nadzor nad blokiranjem oglasov in sledilcev za vsako spletno mesto, ki ga obiščete. Če želite videti oglase na določenem spletnem mestu, jih lahko tukaj omogočite.";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Skeniraj QR kodo";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Odpri Brave Novice in preveri današnje vrhunske zgodbe";
+"shortcuts.activityTypeBraveNewsDescription" = "Odpri Growser Novice in preveri današnje vrhunske zgodbe";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Odpri Brskalnik v novem zavihku in izbriši vse podatke zgodovine zasebnega brskalnika";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Počisti zgodovino brskalnika";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Počisti Brave zgodovino brskanja";
+"shortcuts.activityTypeClearHistoryTitle" = "Počisti Growser zgodovino brskanja";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Odpri Brskalnik v novem zavihku in omogoči VPN";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Omogoči VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Odpri Brave Brskalnik in omogoči VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Odpri Growser Brskalnik in omogoči VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Odpri novi zasebni zavihek";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Odpri zaznamke";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Odpri zaznamke Brave brskalnika";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Odpri zaznamke Growser brskalnika";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Odpri Brave Novice";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Odpri Growser Novice";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Odpri Brave Novice";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Odpri Growser Novice";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Odpri zaslon zgodovine brskalnika";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Odpri zgodovino brskalnika";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Odpri Brave zgodovino brskalnika";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Odpri Growser zgodovino brskalnika";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Začni predvajati videoposnetke na seznamu predvajanja";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Odpri seznam predvajanja";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Odpri Brave zavihke odprte v drugih napravah";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Odpri Growser zavihke odprte v drugih napravah";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Odpri zavihke iz drugih naprav";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Odpri zavihke iz drugih naprav";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Začni iskati po spletu varno z Brave";
+"shortcuts.activityTypeTabDescription" = "Začni iskati po spletu varno z Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Odpri zaznamljeno spletno mesto";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Odpri spletno mesto";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ta možnost bo odprla Brave nastavitve. Če želite spremeniti različne možnosti za Siri, izberite element menija \"Siri in Iskanje\" in prilagodite svoje izbire.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Ta možnost bo odprla Growser nastavitve. Če želite spremeniti različne možnosti za Siri, izberite element menija \"Siri in Iskanje\" in prilagodite svoje izbire.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Odpri nastavitve";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Počisti zgodovino brskalnika";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Uporabite bližnjice za omogočanje Brave VPN prek Siri - glasovnega pomočnika";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Uporabite bližnjice za omogočanje Growser VPN prek Siri - glasovnega pomočnika";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Omogoči VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Odpri zaznamke";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Uporabite bližnjice za odpiranje novega zavihka in prikaz toka Brave Novice prek Siri - glasovnega pomočnika";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Uporabite bližnjice za odpiranje novega zavihka in prikaz toka Growser Novice prek Siri - glasovnega pomočnika";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Odpri Brave Novice";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Odpri Growser Novice";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Uporabite bližnjice za odpiranje zaslona zgodovine brskalnika prek Siri - glasovnega pomočnika";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Nastavitve spletne strani in ščita";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Hvala, ker ste obvestili razvijalce Brave, da je s to spletno stranjo nekaj narobe. Potrudili se bomo, da to popravimo!";
+"SiteReportedBody" = "Hvala, ker ste obvestili razvijalce Growser, da je s to spletno stranjo nekaj narobe. Potrudili se bomo, da to popravimo!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Hvala";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Shields";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Vsak dan shranjujem podatke z brskanjem po spletu z Brave.";
+"socialSharing.domainSpecificDataSavedTitle" = "Vsak dan shranjujem podatke z brskanjem po spletu z Growser.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Vsak dan shranjujem podatke z brskanjem po spletu z Brave.";
+"socialSharing.shareDescriptionTitle" = "Vsak dan shranjujem podatke z brskanjem po spletu z Growser.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Standardni zavihek";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Izbriši sinhronizacijski račun";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Če izbrišete svoj račun, boste s strežnikov Brave odstranili svoje šifrirane podatke in onemogočili sinhronizacijo v vseh povezanih napravah.";
+"sync.deleteAccountAlertDescriptionPart1" = "Če izbrišete svoj račun, boste s strežnikov Growser odstranili svoje šifrirane podatke in onemogočili sinhronizacijo v vseh povezanih napravah.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Ne boste pa izbrisali podatkov, ki so lokalno shranjeni v teh napravah.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Izbriši sinhronizacijski račun";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Izgleda, da je bila ta koda ustvarjena na napravi s starejšo različico Brave. Prosimo, posodobite na najnovejšo različico Brave na drugi napravi in nato ustvarite novo kodo sinhronizacije.";
+"sync.deprecatedVersionError" = "Izgleda, da je bila ta koda ustvarjena na napravi s starejšo različico Growser. Prosimo, posodobite na najnovejšo različico Growser na drugi napravi in nato ustvarite novo kodo sinhronizacije.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Pri pridobivanju naprav v sinhronizacijski verigi je prišlo do napake.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Izgleda, da je bila vaša naprava obnovljena iz varnostne kopije, kar lahko vpliva na Brave sinhronizacijo. Če želite nadaljevati z uporabo Brave sinhronizacije, morate ponastaviti in se ponovno pridružiti sinhronizacijski verigi.";
+"sync.deviceRestoreDetectedMessage" = "Izgleda, da je bila vaša naprava obnovljena iz varnostne kopije, kar lahko vpliva na Growser sinhronizacijo. Če želite nadaljevati z uporabo Growser sinhronizacije, morate ponastaviti in se ponovno pridružiti sinhronizacijski verigi.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Obnovitev zaznana";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Naprava";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Trenutno sinhronizirani podatki bodo obdržani, vendar bodo vsi podatki v Brave predpomnilniku sinhronizacije izbrisani. Če želite znova sinhronizirati podatke naprave, boste morali začeti novo sinhronizacijsko verigo.";
+"sync.removeLastDeviceMessage" = "Trenutno sinhronizirani podatki bodo obdržani, vendar bodo vsi podatki v Growser predpomnilniku sinhronizacije izbrisani. Če želite znova sinhronizirati podatke naprave, boste morali začeti novo sinhronizacijsko verigo.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Izbriši sinhronizacijsko verigo";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Sinhroniziraj na napravo";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Z obstoječo sinhronizirano napravo odprite Brave nastavitve in se pomaknite do Nastavitve -> Sinhroniziraj. Izberite \"Dodaj napravo\" in skenirajte kodo, prikazano na zaslonu.";
+"sync.toDeviceDescription" = "Z obstoječo sinhronizirano napravo odprite Growser nastavitve in se pomaknite do Nastavitve -> Sinhroniziraj. Izberite \"Dodaj napravo\" in skenirajte kodo, prikazano na zaslonu.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Te naprave ni mogoče sinhronizirati";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Ta koda ni veljavna. Preverite, ali sta ura in časovni pas na vaši napravi pravilno nastavljena.";
 
 /* Sync settings welcome */
-"sync.welcome" = "Za začetek morate v vseh napravah, ki jih nameravate sinhronizirati, namestiti Brave. Za povezavo v verigo začnite verigo sinhronizacije, ki jo boste uporabili za varno povezavo vseh vaših naprav.";
+"sync.welcome" = "Za začetek morate v vseh napravah, ki jih nameravate sinhronizirati, namestiti Growser. Za povezavo v verigo začnite verigo sinhronizacije, ki jo boste uporabili za varno povezavo vseh vaših naprav.";
 
 /* Word count title */
 "sync.wordCount" = "Število besed: %i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "V napravi ne puščajte sledi";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN šifrira in ščiti vse, kar počnete na spletu, tudi zunaj brskalnika Brave.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Growser VPN šifrira in ščiti vse, kar počnete na spletu, tudi zunaj brskalnika Growser.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Brave VPN";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "Growser VPN";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Upoštevajte, da je vaša dejavnost brskanja – tudi v zasebnih oknih – lahko še vedno vidna ponudniku internetnih storitev, opazovalcem omrežja ali delodajalcu (če uporabljate službeno napravo/omrežje).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Samodejno odpri tipkovnico";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Odpri povezave iz Ask Brave in Brave Iskanje v predoglednih zavihkih";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Odpri povezave iz Ask Growser in Growser Iskanje v predoglednih zavihkih";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Omogoči zavihke s hitrim pregledom";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Skupna raba...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Delite brskalnik Brave s svojimi prijatelji!";
+"themeQRCodeShareTitle" = "Delite brskalnik Growser s svojimi prijatelji!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Samodejno";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Žal ta naslov vira nima vsebine.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Dodaj vir v Brave Novice";
+"today.addSourceShareTitle" = "Dodaj vir v Growser Novice";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Razpoložljivi viri RSS";
 
 /* The name of the feature */
-"today.braveToday" = "Brave novice";
+"today.braveToday" = "Growser novice";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Novice";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Ponudbe";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Brave Novice bodo prenehale prikazovati vsebino od %@";
+"today.disabledAlertBody" = "Growser Novice bodo prenehale prikazovati vsebino od %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Onemogočeno";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Dovolite vsebino od %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Brave Novice imajo težave. Poskusite ponovno.";
+"today.errorGeneralBody" = "Growser Novice imajo težave. Poskusite ponovno.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Ojoj ...";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Nevarni viri - dodajte na lastno odgovornost";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Sledite svojim priljubljenim virom v enem samem viru. Preprosto odprite zavihek v Brave, se pomaknite navzdol in … tukaj je!\nBrave Novice podpirajo oglasi s popolnoma zasebnimi in anonimiziranimi oglasi.";
+"today.introCardBody" = "Sledite svojim priljubljenim virom v enem samem viru. Preprosto odprite zavihek v Growser, se pomaknite navzdol in … tukaj je!\nGrowser Novice podpirajo oglasi s popolnoma zasebnimi in anonimiziranimi oglasi.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Vklopite novice Brave in nikoli ne zamudite zgodbe";
+"today.introCardTitle" = "Vklopite novice Growser in nikoli ne zamudite zgodbe";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Prikaži Brave News";
+"today.isEnabledToggleLabel" = "Prikaži Growser News";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Več o vaših podatkih";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Več ponudb Brave";
+"today.moreBraveOffers" = "Več ponudb Growser";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Ni interneta";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Promovirano";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Oceni Brave v App Store";
+"today.rateBraveCardActionSheetTitle" = "Oceni Growser v App Store";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Skrij";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Ocenite brskalnik Brave";
+"today.rateBraveCardRateActionTitle" = "Ocenite brskalnik Growser";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Delite svoje mnenje z nami!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Vam je Brave všeč?";
+"today.rateBraveCardTitle" = "Vam je Growser všeč?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Osveži";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Predlagano";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Vklopite Brave novice";
+"today.turnOnBraveToday" = "Vklopite Growser novice";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Prenehajte slediti";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Pogled na %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Prosimo, dovolite dostop do mikrofona v nastavitvah sistema iOS, da lahko Brave uporablja anonimno glasovno iskanje.";
+"voice.search.microphone.description.required" = "Prosimo, dovolite dostop do mikrofona v nastavitvah sistema iOS, da lahko Growser uporablja anonimno glasovno iskanje.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Dostop do mikrofona je obvezen";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave ne shranjuje in ne deli vaših glasovnih iskanj.";
+"voice.search.screen.disclaimer" = "Growser ne shranjuje in ne deli vaših glasovnih iskanj.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Datum ustvarjanja denarnice";

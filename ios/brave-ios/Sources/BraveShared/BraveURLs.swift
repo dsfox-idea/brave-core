@@ -7,9 +7,11 @@ import UIKit
 
 extension URL {
   public enum Brave {
-    public static let community = URL(string: "https://community.brave.app/")!
+    // Growser-299: help, bug reports and the privacy pages are ours (#81) -
+    // nothing sends a person to Brave for them.
+    public static let community = URL(string: "https://growser.org/")!
     public static let account = URL(string: "https://account.brave.com")!
-    public static let privacy = URL(string: "https://brave.com/privacy/")!
+    public static let privacy = URL(string: "https://growser.org/privacy.html")!  // Growser-299
     public static let braveNewsPrivacy = URL(string: "https://brave.com/privacy/#brave-news")!
     public static let braveOffers = URL(string: "https://offers.brave.com/")!
     public static let playlist = URL(string: "https://brave.com/playlist")!
@@ -17,7 +19,7 @@ extension URL {
       string: "https://brave.com/faq-rewards/#unclaimed-funds"
     )!
     public static let termsOfUse = URL(string: "https://www.brave.com/terms_of_use")!
-    public static let privacyFeatures = URL(string: "https://brave.com/privacy-features/")!
+    public static let privacyFeatures = URL(string: "https://growser.org/features.html#shields")!  // Growser-299
     public static let support = URL(string: "https://support.brave.app")!
     public static let braveVPNFaq = URL(
       string: "https://support.brave.app/hc/en-us/articles/360045045952"
@@ -45,7 +47,7 @@ extension URL {
       string: "https://brave.com/firewall-vpn/"
     )!
     public static let safeBrowsingHelp = URL(
-      string: "https://support.brave.app/hc/en-us/articles/15222663599629-Safe-Browsing-in-Brave"
+      string: "https://growser.org/features.html"  // Growser-299
     )!
     public static let screenTimeHelp = URL(
       string: "https://support.apple.com/guide/security/secd8831e732/web"

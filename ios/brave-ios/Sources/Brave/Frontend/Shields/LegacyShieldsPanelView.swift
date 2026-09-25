@@ -171,22 +171,11 @@ struct LegacyShieldsPanelView: View {
   }
 
   @ViewBuilder private var shieldsOffFooterView: some View {
-    VStack(alignment: .center, spacing: 16) {
-      Text(Strings.Shields.shieldsDownDisclaimer)
-        .font(.caption)
-        .foregroundStyle(Color(braveSystemName: .textSecondary))
-        .multilineTextAlignment(.leading)
-      Button {
-        actionCallback(.navigate(.reportBrokenSite, dismiss: true))
-      } label: {
-        Text(Strings.Shields.reportABrokenSite)
-          .foregroundStyle(Color(braveSystemName: .textPrimary))
-      }
-      .buttonStyle(.outline)
-      .frame(maxWidth: .infinity, alignment: .center)
-    }
-    .padding(.horizontal)
-    .padding(.bottom)
+    // Growser-298: nothing here. The footer was a question ("does it not work
+    // right with Shields up?") leading to "report a broken site", which goes
+    // to Brave with the page's URL (#78); the label above already says
+    // Shields are down.
+    EmptyView()
   }
 
   @ViewBuilder private var advancedShieldsSection: some View {

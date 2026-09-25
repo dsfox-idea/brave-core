@@ -13,7 +13,7 @@ import os.log
 
 class BraveSearchScriptHandler: TabContentScript {
   private let profile: LegacyBrowserProfile
-  private weak var rewards: BraveRewards?
+  // Growser-290: no rewards - it was stored here and never read.
 
   /// Tracks how many in current browsing session the user has been prompted to set Brave Search as a default
   /// while on one of Brave Search websites.
@@ -23,9 +23,8 @@ class BraveSearchScriptHandler: TabContentScript {
   /// How many times user is shown the default browser prompt in total, this does not reset between app launches.
   private let maxCountOfDefaultBrowserPromptsTotal = 10
 
-  required init(profile: LegacyBrowserProfile, rewards: BraveRewards) {
+  required init(profile: LegacyBrowserProfile) {
     self.profile = profile
-    self.rewards = rewards
   }
 
   static let scriptName = "BraveSearchScript"

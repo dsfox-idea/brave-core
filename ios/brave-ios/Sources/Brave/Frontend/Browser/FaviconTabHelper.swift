@@ -31,7 +31,7 @@ class FaviconTabHelper: TabObserver {
     guard let tab else { return nil }
     if let url = tab.visibleURL, url.isNewTabURL {
       return Favicon(
-        image: UIImage(sharedNamed: "brave.logo"),
+        image: UIImage(sharedNamed: "growser.logo"),  // Growser-286
         isMonogramImage: false,
         backgroundColor: .clear
       )

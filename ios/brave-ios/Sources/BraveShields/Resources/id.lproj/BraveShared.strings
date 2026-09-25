@@ -8,7 +8,7 @@
 "AddFilterByURL" = "Tambahkan Filter Berdasarkan URL";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Pemutar Brave** adalah tiket Anda ke pengalaman menonton video yang bebas iklan dan tanpa interupsi.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Pemutar Growser** adalah tiket Anda ke pengalaman menonton video yang bebas iklan dan tanpa interupsi.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Sesuaikan Perisai Untuk Saya";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Situs ini telah mulai memblokir sejumlah pemblokir iklan, yang artinya situs mereka mungkin tidak berfungsi sebagaimana diharapkan.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Guna mengatasi masalah ini, Brave dapat menyesuaikan pengaturan perisai bagi Anda. Setelah disesuaikan, Anda dapat mencoba menonton konten ini di Pemutar Brave sebagai gantinya.";
+"AntiAdBlockWarningDescription2" = "Guna mengatasi masalah ini, Growser dapat menyesuaikan pengaturan perisai bagi Anda. Setelah disesuaikan, Anda dapat mencoba menonton konten ini di Pemutar Growser sebagai gantinya.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Tetap Gunakan Pengaturan Saat Ini";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "Pemberitahuan Blokir 'Beralih ke Aplikasi'";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Pemutar Brave";
+"BravePlayer" = "Pemutar Growser";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Selalu buka video dari situs ini dengan Pemutar Brave";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Selalu buka video dari situs ini dengan Pemutar Growser";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Coba Pemutar";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Jangan Sekarang";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Pemutar Brave memungkinkan Anda untuk menonton video tanpa interupsi.";
+"BravePlayerInfoMessage" = "Pemutar Growser memungkinkan Anda untuk menonton video tanpa interupsi.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Tonton Di Pemutar Brave Sebagai Gantinya";
+"BravePlayerInfoTitle" = "Tonton Di Pemutar Growser Sebagai Gantinya";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "Penyaringan Konten";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Kembali";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "Karena Anda meminta untuk memblokir pelacak dan iklan secara agresif, Brave memblokir situs ini sebelum koneksi jaringan pertama.";
+"DomainBlockedPageDescription" = "Karena Anda meminta untuk memblokir pelacak dan iklan secara agresif, Growser memblokir situs ini sebelum koneksi jaringan pertama.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave telah mencegah pemuatan situs berikut:";
+"DomainBlockedPageMessage" = "Growser telah mencegah pemuatan situs berikut:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Situs Ini Mungkin Akan Mencoba Untuk Melacak Anda ke Seluruh Situs Lainnya.";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Penutupan Aplikasi";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Data penjelajahan dihapus secara otomatis saat aplikasi Brave ditutup / dimulai ulang";
+"ShredOnAppCloseDescription" = "Data penjelajahan dihapus secara otomatis saat aplikasi Growser ditutup / dimulai ulang";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Tab Situs Tertutup";

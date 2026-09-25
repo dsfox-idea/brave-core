@@ -13,9 +13,11 @@ source_set("policy") {
     "brave_simple_policy_map_ios.h",
     "configuration_policy_handler_list_factory_impl.mm",
   ]
+
+  # Growser-279/281: no ai_chat/core/common or brave_news/common - nothing here
+  # names AI Chat or Brave News since their policies left the map
+  # (growser#262), and neither target builds with its feature off.
   deps = [
-    "//brave/components/ai_chat/core/common",
-    "//brave/components/brave_news/common",
     "//brave/components/brave_rewards/core",
     "//brave/components/brave_talk/buildflags",
     "//brave/components/brave_vpn/common/buildflags",

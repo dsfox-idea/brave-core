@@ -13,6 +13,7 @@
 #include "base/no_destructor.h"
 #include "base/notimplemented.h"
 #include "base/strings/sys_string_conversions.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_talk/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
@@ -21,7 +22,6 @@
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/ios/browser/api/profile/profile_bridge_impl.h"
 #include "brave/ios/browser/api/web_view/brave_web_view_internal.h"
-#include "brave/ios/browser/brave_ads/ads_media_reporting_javascript_feature.h"
 #include "brave/ios/browser/brave_search/brave_search_ad_results_javascript_feature.h"
 #include "brave/ios/browser/brave_search/brave_search_make_default_javascript_feature.h"
 #include "brave/ios/browser/brave_shields/cookie_control_javascript_feature.h"
@@ -33,7 +33,7 @@
 #include "brave/ios/browser/global_privacy_control/gpc_javascript_feature.h"
 #include "brave/ios/browser/playlist/playlist_compatibility_javascript_feature.h"
 #include "brave/ios/browser/playlist/playlist_javascript_feature.h"
-#include "brave/ios/browser/skus/skus_javascript_feature.h"
+#include "brave/components/skus/buildflags/buildflags.h"
 #include "brave/ios/browser/ui/web_view/features.h"
 #include "brave/ios/browser/web/brave_web_main_parts.h"
 #include "brave/ios/browser/web/de_amp/de_amp_javascript_feature.h"
@@ -75,8 +75,16 @@
 #import "net/base/apple/url_conversions.h"
 #include "url/gurl.h"
 
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
+#include "brave/ios/browser/brave_ads/ads_media_reporting_javascript_feature.h"
+#endif
+
 #if BUILDFLAG(ENABLE_BRAVE_TALK)
 #include "brave/ios/browser/brave_talk/brave_talk_launcher_javascript_feature.h"
+#endif
+
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
+#include "brave/ios/browser/skus/skus_javascript_feature.h"
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
@@ -162,8 +170,10 @@ std::vector<web::JavaScriptFeature*> BraveWebClient::GetJavaScriptFeatures(
 
     // Add Brave iOS ported JavaScriptFeatures based on their original
     // counterpart in //brave-ios
+#if BUILDFLAG(ENABLE_BRAVE_ADS)  // Growser-290
     features.push_back(
         brave_ads::AdsMediaReportingJavaScriptFeature::GetInstance());
+#endif
     features.push_back(TextContentDistillerJavaScriptFeature::GetInstance());
     features.push_back(BraveNavigatorJavaScriptFeature::GetInstance());
     features.push_back(brave_shields::FarblingJavaScriptFeature::GetInstance());
@@ -199,8 +209,10 @@ std::vector<web::JavaScriptFeature*> BraveWebClient::GetJavaScriptFeatures(
     }
 #endif
     features.push_back(brave::ReaderModeJavaScriptFeature::GetInstance());
+#if BUILDFLAG(ENABLE_SKUS)  // Growser-283
     features.push_back(
         skus::SkusJavaScriptFeature::FromBrowserState(browser_state));
+#endif
     features.push_back(youtube::YouTubeQualityJavaScriptFeature::GetInstance());
     features.push_back(CosmeticFilteringJavaScriptFeature::GetInstance());
     features.push_back(ScriptletsJavaScriptFeature::GetInstance());

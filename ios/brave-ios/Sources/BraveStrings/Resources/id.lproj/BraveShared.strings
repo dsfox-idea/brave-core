@@ -5,13 +5,13 @@
 "AboutBraveShields" = "Seputar Brave Shields";
 
 /* The body of the screen explaining Brave Shields */
-"AboutBraveShieldsBody" = "Sering kali saat membuka situs terdapat cookies dan skrip yang berusaha mengidentifikasi pengguna dan perangkatnya.  Mereka ingin mengetahui siapa Anda dan mengikuti Anda di seluruh situs - melacak apa yang Anda lakukan di setiap situs.\n\nBrave memblokir hal-hal tersebut sehingga Anda dapat menjelajah tanpa merasa diikuti.";
+"AboutBraveShieldsBody" = "Sering kali saat membuka situs terdapat cookies dan skrip yang berusaha mengidentifikasi pengguna dan perangkatnya.  Mereka ingin mengetahui siapa Anda dan mengikuti Anda di seluruh situs - melacak apa yang Anda lakukan di setiap situs.\n\nGrowser memblokir hal-hal tersebut sehingga Anda dapat menjelajah tanpa merasa diikuti.";
 
 /* See http://mzl.la/1G7uHo7 */
 "AccessPhotoDeniedAlertMessage" = "Ini mengizinkan kamu untuk simpan gambar ke rol kamera anda.";
 
 /* See http://mzl.la/1G7uHo7 */
-"AccessPhotoDeniedAlertTitle" = "Brave ingin mengakses Foto Anda";
+"AccessPhotoDeniedAlertTitle" = "Growser ingin mengakses Foto Anda";
 
 /* Label to display in the Discoverability overlay for keyboard shortcuts */
 "addBookmarkTitle" = "Tambahkan Markah";
@@ -35,7 +35,7 @@
 "AddToMenuItem" = "Tambahkan Markah";
 
 /* Text for the toggle switch to clear 'Brave Ads' data in settings */
-"ads.braveAdsDataToggleOption" = "Data Iklan Brave";
+"ads.braveAdsDataToggleOption" = "Data Iklan Growser";
 
 /* individual blocking statistic title */
 "AdsAndTrackers" = "Iklan dan Pelacak";
@@ -50,10 +50,10 @@
 "AlwaysShow" = "Aktifkan";
 
 /* Title for Ask Brave menu item. Brave is the company name and should not be translated */
-"AskBraveMenuItem" = "Tanya Brave";
+"AskBraveMenuItem" = "Tanya Growser";
 
 /* Touch ID or PIN entry prompt subtitle when accessing Brave with the Browser Lock feature enabled */
-"AuthenticationLoginsTouchReason" = "Ini mengautentikasi akses Anda ke Brave";
+"AuthenticationLoginsTouchReason" = "Ini mengautentikasi akses Anda ke Growser";
 
 /* Label for Cancel button */
 "AuthPromptAlertCancelButtonTitle" = "Batal";
@@ -206,10 +206,10 @@
 "BookmarkUrlPlaceholderText" = "Alamat";
 
 /* Button to show the brave panel */
-"BravePanel" = "Panel Brave";
+"BravePanel" = "Panel Growser";
 
 /* No comment provided by engineer. */
-"BraveRewardsAdNotificationTitle" = "Brave Rewards";
+"BraveRewardsAdNotificationTitle" = "Growser Rewards";
 
 /* No comment provided by engineer. */
 "BraveRewardsOpen" = "Buka";
@@ -218,10 +218,10 @@
 "BraveRewardsSettingsTitle" = "Imbalan";
 
 /* Brave Rewards title */
-"BraveRewardsTitle" = "Brave Rewards";
+"BraveRewardsTitle" = "Growser Rewards";
 
 /* Brave Search Banner Promotion description content in Search Suggestions */
-"braveSearchPromotion.bannerDescription" = "Penelusuran Brave tidak membuat profil Anda.";
+"braveSearchPromotion.bannerDescription" = "Penelusuran Growser tidak membuat profil Anda.";
 
 /* Brave Search Banner Promotion title for maybe later button to activate promotion later in Search Suggestions */
 "braveSearchPromotion.bannerMaybeLaterButtonTitle" = "Mungkin nanti";
@@ -230,7 +230,7 @@
 "braveSearchPromotion.bannerTitle" = "Mendukung pencarian independen dengan privasi yang lebih baik";
 
 /* Brave Search Banner Promotion title for try button in Search Suggestions */
-"braveSearchPromotion.bannerTryButtonTitle" = "Coba Penelusuran Brave";
+"braveSearchPromotion.bannerTryButtonTitle" = "Coba Penelusuran Growser";
 
 /* Button title for Bottom Bar Callout View for action later */
 "braveSearchPromotion.bottomBarCalloutDismissButtonTitle" = "Mungkin nanti";
@@ -242,7 +242,7 @@
 "BraveShieldsAdvancedControls" = "Kontrol lanjutan";
 
 /* No comment provided by engineer. */
-"BraveShieldsAndPrivacy" = "Perisai Brave & Privasi";
+"BraveShieldsAndPrivacy" = "Perisai Growser & Privasi";
 
 /* No comment provided by engineer. */
 "BraveShieldsAndPrivacyTitle" = "Perisai & Privasi";
@@ -254,7 +254,7 @@
 "BraveShieldsBlockedInfoButtonAccessibilityLabel" = "Pelajari lebih lanjut";
 
 /* No comment provided by engineer. */
-"BraveShieldsGlobalChangeButton" = "Ubah Bawaan Global Perisai Brave";
+"BraveShieldsGlobalChangeButton" = "Ubah Bawaan Global Perisai Growser";
 
 /* No comment provided by engineer. */
 "BraveShieldsGlobalControls" = "Kontrol Global";
@@ -281,7 +281,7 @@
 "BraveShieldsToggleHint" = "Ketuk dua kali untuk mengalihkan Brave Shields";
 
 /* The name of the feature */
-"bravetalk.braveTalkTitle" = "Brave Talk";
+"bravetalk.braveTalkTitle" = "Growser Talk";
 
 /* Title for the button that allows you go to the language selection screen, to select a language you want to translate to/from. */
 "BraveTranslate.languageSelectionButtonTitle" = "Pilih Bahasa";
@@ -293,13 +293,13 @@
 "BraveTranslate.searchInputTitle" = "Cari";
 
 /* This text is for the settings menu for all Brave-Translate options. */
-"BraveTranslate.settingsMenuTitle" = "Terjemahan Brave";
+"BraveTranslate.settingsMenuTitle" = "Terjemahan Growser";
 
 /* This text is for the translate settings screen. It's the title of the settings menu. */
-"BraveTranslate.settingsScreenTitle" = "Terjemahan Brave";
+"BraveTranslate.settingsScreenTitle" = "Terjemahan Growser";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
-"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Ketika diaktifkan, Terjemahan Brave otomatis mendeteksi bahasa di halaman, dan menampilkan tombol terjemahan di bilah URL.";
+"BraveTranslate.settingsTranslateEnabledOptionDescription" = "Ketika diaktifkan, Terjemahan Growser otomatis mendeteksi bahasa di halaman, dan menampilkan tombol terjemahan di bilah URL.";
 
 /* This text is for a Toggle that allows the user to enable or disable page translation. */
 "BraveTranslate.settingsTranslateEnabledOptionTitle" = "Terjemahkan Diaktifkan";
@@ -314,7 +314,7 @@
 "BrowserLock" = "Kunci Peramban";
 
 /* Description for setting to enable the browser lock privacy feature */
-"BrowserLockDescription" = "Buka kunci Brave dengan ID Sentuh, ID Wajah, atau kode sandi sistem.";
+"BrowserLockDescription" = "Buka kunci Growser dengan ID Sentuh, ID Wajah, atau kode sandi sistem.";
 
 /* Settings item for clearing browsing history */
 "BrowsingHistory" = "Riwayat Ramban";
@@ -329,10 +329,10 @@
 "callout.bottomBarCalloutDescription" = "Pindahkan bilah alamat, tab, markah, dan alat lainnya ke bagian bawah peramban.";
 
 /* Title for Bottom Bar Callout View */
-"callout.bottomBarCalloutTitle" = "Sesuaikan Bilah Tab Brave";
+"callout.bottomBarCalloutTitle" = "Sesuaikan Bilah Tab Growser";
 
 /* Subtitle - Description for Privacy Everywhere Full Screen Callout */
-"callout.privacyEverywhereCalloutDescription" = "Dapatkan privasi Brave pada komputer atau tablet Anda, dan sinkronisasikan markah & ekstensi antar perangkat.";
+"callout.privacyEverywhereCalloutDescription" = "Dapatkan privasi Growser pada komputer atau tablet Anda, dan sinkronisasikan markah & ekstensi antar perangkat.";
 
 /* Title for button in Default Browser Full Screen Callout */
 "callout.privacyEverywhereCalloutPrimaryButtonTitle" = "Sinkronisasikan Sekarang";
@@ -629,25 +629,25 @@
 "defaultBrowserCallout.introOpenSettingsButtonText" = "Buka Setelan";
 
 /* Primary text on default browser popup screen */
-"defaultBrowserCallout.introPrimaryText" = "Buka semua tautan dengan Brave untuk menjaga privasi Anda";
+"defaultBrowserCallout.introPrimaryText" = "Buka semua tautan dengan Growser untuk menjaga privasi Anda";
 
 /* Secondary text on default browser popup. */
-"defaultBrowserCallout.introSecondaryText" = "Perisai Brave memblokir pelacak & iklan, menghemat data, dan menghemat waktu Anda di setiap situs yang Anda kunjungi";
+"defaultBrowserCallout.introSecondaryText" = "Perisai Growser memblokir pelacak & iklan, menghemat data, dan menghemat waktu Anda di setiap situs yang Anda kunjungi";
 
 /* Tertiary text on default browser popup screen */
-"defaultBrowserCallout.introTertiaryText" = "Buka pengaturan, ketuk Default Browser App, dan pilih Brave.";
+"defaultBrowserCallout.introTertiaryText" = "Buka pengaturan, ketuk Default Browser App, dan pilih Growser.";
 
 /* Notification body to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationBody" = "Setel Brave sebagai browser default Anda";
+"defaultBrowserCallout.notificationBody" = "Setel Growser sebagai browser default Anda";
 
 /* Notification title to promote setting Brave app as default browser */
-"defaultBrowserCallout.notificationTitle" = "Dapatkan perlindungan Brave, pada setiap tautan";
+"defaultBrowserCallout.notificationTitle" = "Dapatkan perlindungan Growser, pada setiap tautan";
 
 /* No comment provided by engineer. */
 "defaultBrowserCalloutCloseAccesabilityLabel" = "Tutup penyorot peramban bawaan";
 
 /* Name for default Brave theme. */
-"defaultThemeName" = "Default Brave";
+"defaultThemeName" = "Default Growser";
 
 /* No comment provided by engineer. */
 "Delete" = "Hapus";
@@ -743,7 +743,7 @@
 "EnterFolderName" = "Masukkan nama folder";
 
 /* Additional warning text when clicking the Advanced button on error pages. %@ is a placeholder, do not localize it. Do not localize <br />. */
-"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ biasanya menggunakan enkripsi untuk melindungi informasi Anda. Saat Brave coba menyambung ke %2$@ kali ini, situs web mengirimkan kembali kredensial yang tidak biasa dan salah. Hal ini bisa terjadi saat penyerang mencoba berpura-pura menjadi %3$@, atau layar sign-in Wi-Fi telah mengganggu sambungan. Informasi Anda masih aman karena Brave memutus koneksi sebelum terjadi pertukaran data apa pun.<br />Anda tidak dapat mengunjungi %4$@ sekarang karena situs web menggunakan penyematan sertifikat. Kesalahan dan serangan jaringan biasanya bersifat sementara, jadi halaman ini mungkin bisa berfungsi nanti.";
+"ErrorPagesAdvancedErrorPinningDetails" = "%1$@ biasanya menggunakan enkripsi untuk melindungi informasi Anda. Saat Growser coba menyambung ke %2$@ kali ini, situs web mengirimkan kembali kredensial yang tidak biasa dan salah. Hal ini bisa terjadi saat penyerang mencoba berpura-pura menjadi %3$@, atau layar sign-in Wi-Fi telah mengganggu sambungan. Informasi Anda masih aman karena Growser memutus koneksi sebelum terjadi pertukaran data apa pun.<br />Anda tidak dapat mengunjungi %4$@ sekarang karena situs web menggunakan penyematan sertifikat. Kesalahan dan serangan jaringan biasanya bersifat sementara, jadi halaman ini mungkin bisa berfungsi nanti.";
 
 /* Additional warning text when clicking the Advanced button on error pages */
 "ErrorPagesAdvancedWarningDetails" = "Peladen ini tidak dapat membuktikan bahwa ini adalah %@; sertifikat keamanannya tidak dipercaya sistem pengoperasian perangkat Anda. Ini mungkin disebabkan karena kesalahan konfigurasi atau penyerang yang mencoba mencegat koneksi Anda.";
@@ -863,10 +863,10 @@
 "HideLinkPreviewsActionTitle" = "Sembunyikan Pratinjau Tautan";
 
 /* Hides the rewards icon */
-"HideRewardsIcon" = "Sembunyikan Ikon Imbalan Brave";
+"HideRewardsIcon" = "Sembunyikan Ikon Imbalan Growser";
 
 /* Hide the rewards icon explination. */
-"HideRewardsIconSubtitle" = "Menyembunyikan ikon Brave Rewards saat Brave Rewards tidak diaktifkan";
+"HideRewardsIconSubtitle" = "Menyembunyikan ikon Growser Rewards saat Growser Rewards tidak diaktifkan";
 
 /* Title for history menu item */
 "HistortMenuItem" = "Histori";
@@ -1070,13 +1070,13 @@
 "nprRedirectFooter" = "Mengarahkan ulang tautan NPR secara otomatis ke versi berbasis teks mereka (di text.npr.org).";
 
 /* Bookmark title for Brave Support */
-"ntp.braveSupportFavoriteTitle" = "Dukungan Brave";
+"ntp.braveSupportFavoriteTitle" = "Dukungan Growser";
 
 /* No comment provided by engineer. */
 "ntp.claimRewards" = "Klaim Token";
 
 /* Placeholder example: 'You earned 42 BAT by browsing with Brave.' */
-"ntp.earningsReport" = "Anda memperoleh %@ dengan menjelajahi dengan Brave.";
+"ntp.earningsReport" = "Anda memperoleh %@ dengan menjelajahi dengan Growser.";
 
 /* The context is to praise the user that they did a good job, to keep it up. It is used in full sentence like: 'Way to go! You earned 40 BAT last month.' */
 "ntp.goodJob" = "Berhasil!";
@@ -1085,10 +1085,10 @@
 "ntp.hideSponsoredImages" = "Sembunyikan gambar bersponsor";
 
 /* The text description of image type which is being used NTP. The text inside the square brackets should be translated and is a link */
-"ntp.imageTypeSelectionDescription" = "Gambar Bersponsor adalah latar belakang bermerek yang muncul di tab yang baru dibuka di browser. Mengaktifkan Gambar Bersponsor mendukung misi Brave. [Pelajari Lebih Lanjut](#learn-more)";
+"ntp.imageTypeSelectionDescription" = "Gambar Bersponsor adalah latar belakang bermerek yang muncul di tab yang baru dibuka di browser. Mengaktifkan Gambar Bersponsor mendukung misi Growser. [Pelajari Lebih Lanjut](#learn-more)";
 
 /* No comment provided by engineer. */
-"ntp.learnMoreAboutRewards" = "Pelajari lebih lanjut tentang Brave Rewards";
+"ntp.learnMoreAboutRewards" = "Pelajari lebih lanjut tentang Growser Rewards";
 
 /* No comment provided by engineer. */
 "ntp.learnMoreAboutSI" = "Pelajari lebih lanjut tentang gambar bersponsor";
@@ -1130,10 +1130,10 @@
 "OBAdsOptInMessageJapan" = "Dapatkan poin dan beri reward pada pembuat konten atas konten hebat selagi Anda menjelajahi";
 
 /* Title when opting into brave Ads when region becomes available */
-"OBAdsOptInTitle" = "Iklan Brave telah hadir!";
+"OBAdsOptInTitle" = "Iklan Growser telah hadir!";
 
 /* Title for ads onboarding screen */
-"OBAdsTitle" = "Brave akan menampilkan iklan pertama untuk Anda di";
+"OBAdsTitle" = "Growser akan menampilkan iklan pertama untuk Anda di";
 
 /* Title for when the user completes onboarding */
 "OBCompleteTitle" = "Sekarang Anda telah siap.";
@@ -1157,10 +1157,10 @@
 "OBJoinButton" = "Bergabung";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentClipboardPermission" = "Izinkan Brave memeriksa clipboard saya atas kode rujukan yang cocok";
+"OBPrivacyConsentClipboardPermission" = "Izinkan Growser memeriksa clipboard saya atas kode rujukan yang cocok";
 
 /* No comment provided by engineer. */
-"OBPrivacyConsentDetail" = "Anda mungkin telah mengunduh Brave untuk mendukung pemberi rujukan Anda. Untuk mendeteksi pemberi rujukan tersebut, Brave melakukan pemeriksaan satu kali di clipboard Anda atas kode rujukan yang cocok. Pemeriksaan ini terbatas hanya pada kode dan tidak ada data pribadi yang akan ditransfer. Jika Anda memilih untuk tidak ikut, pemberi rujukan Anda tidak akan menerima reward dari Brave.";
+"OBPrivacyConsentDetail" = "Anda mungkin telah mengunduh Growser untuk mendukung pemberi rujukan Anda. Untuk mendeteksi pemberi rujukan tersebut, Growser melakukan pemeriksaan satu kali di clipboard Anda atas kode rujukan yang cocok. Pemeriksaan ini terbatas hanya pada kode dan tidak ada data pribadi yang akan ditransfer. Jika Anda memilih untuk tidak ikut, pemberi rujukan Anda tidak akan menerima reward dari Growser.";
 
 /* No comment provided by engineer. */
 "OBPrivacyConsentNoButton" = "Jangan izinkan pemeriksaan ini";
@@ -1181,10 +1181,10 @@
 "OBRewardsAgreementDetailsAnd" = "dan";
 
 /* Title for rewards agreement onboarding screen */
-"OBRewardsAgreementTitle" = "Brave Rewards";
+"OBRewardsAgreementTitle" = "Growser Rewards";
 
 /* Detail text for rewards onboarding screen */
-"OBRewardsDetail" = "Memilih untuk menggunakan Brave Private Ads akan mendukung penerbit dan pembuat konten melalui setiap iklan yang dilihat.";
+"OBRewardsDetail" = "Memilih untuk menggunakan Growser Private Ads akan mendukung penerbit dan pembuat konten melalui setiap iklan yang dilihat.";
 
 /* Detail text for rewards onboarding screen */
 "OBRewardsDetailInAdRegion" = "Dapatkan token dan beri reward pada pembuat konten atas konten hebat selagi Anda menjelajahi.";
@@ -1193,7 +1193,7 @@
 "OBRewardsPrivacyPolicyDetailLink" = "Kebijakan Privasi";
 
 /* Title for rewards onboarding screen */
-"OBRewardsTitle" = "Brave Rewards";
+"OBRewardsTitle" = "Growser Rewards";
 
 /* Save button to save current selection */
 "OBSaveButton" = "Simpan";
@@ -1202,7 +1202,7 @@
 "OBSearchEngineDetail" = "Pilih mesin pencari baku Anda";
 
 /* Title for search engine onboarding screen */
-"OBSearchEngineTitle" = "Selamat Datang di Peramban Brave";
+"OBSearchEngineTitle" = "Selamat Datang di Peramban Growser";
 
 /* Detail text for shields onboarding screen */
 "OBShieldsDetail" = "Blokir pelacak privasi yang menginvasi agar Anda dapat menjelajahi di web tanpa dikuntit.";
@@ -1220,7 +1220,7 @@
 "onboarding.linkReceiptButton" = "Tautkan paket langganan VPN Anda";
 
 /* Popup description to let users know they can use the vpn on all their devices */
-"onboarding.linkReceiptDescription" = "Paket langganan VPN Brave Anda akan melindungi hingga 10 perangkat, di seluruh Android, iOS, dan desktop. Cukup hubungkan paket langganan App Store Anda ke akun Brave Anda.";
+"onboarding.linkReceiptDescription" = "Paket langganan VPN Growser Anda akan melindungi hingga 10 perangkat, di seluruh Android, iOS, dan desktop. Cukup hubungkan paket langganan App Store Anda ke akun Growser Anda.";
 
 /* Popup title to let users know they can use the vpn on all their devices */
 "onboarding.linkReceiptTitle" = "Perpanjang perlindungan Dinding Api + VPN Bravve Anda";
@@ -1229,7 +1229,7 @@
 "onboarding.ntpOnboardingPopOverTrackerDescription" = "Dengan memblokir pelacak & iklan, situs web pakai lebih sedikit data dan dimuat lebih cepat.";
 
 /* Description for the Omnibox (URL Bar) pop-over that describes faster load times. */
-"onboarding.omniboxOnboardingPopOverDescription" = "Lihat perbedaan Brave:\nTanpa iklan. Tanpa pelacak. Pemuatan halaman yang jauh lebih cepat.";
+"onboarding.omniboxOnboardingPopOverDescription" = "Lihat perbedaan Growser:\nTanpa iklan. Tanpa pelacak. Pemuatan halaman yang jauh lebih cepat.";
 
 /* Title for the Omnibox (URL Bar) pop-over that describes faster load times. */
 "onboarding.omniboxOnboardingPopOverTitle" = "Ketik nama atau URL situs web";
@@ -1247,7 +1247,7 @@
 "OpenAllBookmarks" = "Buka Semua (%i)";
 
 /* Button title for opening the Brave Rewards panel to settings */
-"OpenBraveRewardsSettings" = "Buka Pengaturan Brave Rewards";
+"OpenBraveRewardsSettings" = "Buka Pengaturan Growser Rewards";
 
 /* Error description when there is an error while navigating to Files App */
 "OpenDownloadsFolderErrorDescription" = "Terjadi kesalahan yang tidak diketahui saat membuka folder Unduhan di aplikasi Berkas.";
@@ -1310,13 +1310,13 @@
 "opentabs.noSyncChainPlaceHolderViewDescription" = "Untuk memulai, siapkan rantai sinkronisasi dan alihkan ke \"Buka Tab\" pada Pengaturan Sinkronisasi.";
 
 /* The additional description of the view describing tab syncing should be enabled. */
-"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Mengelola tab yang disinkronisasikan Brave pada Pengaturan.";
+"opentabs.noSyncSessionPlaceHolderViewAdditionalDescription" = "Mengelola tab yang disinkronisasikan Growser pada Pengaturan.";
 
 /* The description of the view describing no other sessions are active in sync. */
 "opentabs.noSyncSessionPlaceHolderViewDescription" = "Tidak ada sesi aktif yang dapat ditampilkan dari perangkat Anda yang lain.";
 
 /* The title of the view showing no synced sessions */
-"opentabs.noSyncSessionPlaceHolderViewTitle" = "Bidang ini menunjukkan tab Brave yang dibuka di perangkat lain";
+"opentabs.noSyncSessionPlaceHolderViewTitle" = "Bidang ini menunjukkan tab Growser yang dibuka di perangkat lain";
 
 /* The title for the action to hide open session with all tabs */
 "opentabs.openSessionHideAllActionTitle" = "Sembunyikan sekarang";
@@ -1403,7 +1403,7 @@
 "p3a.continue" = "Lanjutkan";
 
 /* A subtitle shown on the setting that toggles analytics on Brave. */
-"p3a.settingSubtitle" = "Respons privat ini membantu Brave memperkirakan seluruh penggunaan fitur tertentu dan menjadikan fitur-fitur ini lebih baik bagi Anda.";
+"p3a.settingSubtitle" = "Respons privat ini membantu Growser memperkirakan seluruh penggunaan fitur tertentu dan menjadikan fitur-fitur ini lebih baik bagi Anda.";
 
 /* The title for the setting that will allow a user to toggle sending privacy preserving analytics to Brave. */
 "p3a.settingTitle" = "Memungkinkan Analitik Produk yang Menjaga Privasi (P3A)";
@@ -1463,7 +1463,7 @@
 "PersistentPrivateBrowsing" = "Perambanan Privat yang Gigih";
 
 /* Persistent private browsing alert message to existing users */
-"PersistentPrivateBrowsingAlertMessage" = "Izinkan Brave untuk memperbaiki tab peramban privat, bahkan jika Anda menutup/membuka ulang aplikasi";
+"PersistentPrivateBrowsingAlertMessage" = "Izinkan Growser untuk memperbaiki tab peramban privat, bahkan jika Anda menutup/membuka ulang aplikasi";
 
 /* Persistent private browsing alert title to existing users */
 "PersistentPrivateBrowsingAlertTitle" = "Pulihkan Tab Privat";
@@ -1478,7 +1478,7 @@
 "playList.addToPlayListAlertDescription" = "Apakah Anda ingin menambahkan video ini ke daftar putar Anda?";
 
 /* Alert Title for adding videos to playlist */
-"playList.addToPlayListAlertTitle" = "Tambahkan ke Brave Playlist";
+"playList.addToPlayListAlertTitle" = "Tambahkan ke Growser Playlist";
 
 /* The title of the screen in CarPlay that contains all the audio/playback options */
 "playlist.carplayOptionsScreenTitle" = "Opsi Putar Kembali";
@@ -1499,7 +1499,7 @@
 "playlist.carplaySettingsSectionTitle" = "Setelan";
 
 /* The title of the playlist when in Carplay mode */
-"playlist.carplayTitle" = "Daftar Putar Brave";
+"playlist.carplayTitle" = "Daftar Putar Growser";
 
 /* Title for changing the folder of the current media playlist item */
 "playList.changeFoldersButtonTitle" = "Ubah Daftar Putar";
@@ -1520,7 +1520,7 @@
 "playList.loadResourcesErrorAlertDescription" = "Terjadi masalah saat memuat sumber!";
 
 /* Detail Text when there are no items in the playlist */
-"playList.noItemLabelDetailLabel" = "Anda dapat menambahkan media ke Brave Playlist Anda di dalam peramban";
+"playList.noItemLabelDetailLabel" = "Anda dapat menambahkan media ke Growser Playlist Anda di dalam peramban";
 
 /* Text when there are no items in the playlist */
 "playList.noItemLabelTitle" = "Video Tidak Tersedia";
@@ -1625,7 +1625,7 @@
 "playList.undoRemoveButtonTitle" = "Urungkan";
 
 /* Footer for option to disable URL-Bar button */
-"playlist.urlBarButtonOptionFooter" = "Tambahkan tombol daftar putar di samping bilah alamat pada peramban Brave. Tombol ini memberikan Anda akses cepat untuk membuka Daftar Putar, atau menambahkan atau menyingkirkan media.";
+"playlist.urlBarButtonOptionFooter" = "Tambahkan tombol daftar putar di samping bilah alamat pada peramban Growser. Tombol ini memberikan Anda akses cepat untuk membuka Daftar Putar, atau menambahkan atau menyingkirkan media.";
 
 /* Title for option to disable URL-Bar button */
 "playlist.urlBarButtonOptionTitle" = "Aktifkan tombol akses cepat";
@@ -1724,7 +1724,7 @@
 "privacyHub.lastWeekHeader" = "Minggu lalu";
 
 /* Do NOT localize asterisk('*') characters, they are used to make the text bold in the app. It says which tracker was blocked on how many websites, example usage: 'Google Analytics was blocked by Brave Shields on 42 sites' */
-"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** diblokir oleh Perisai Brave pada situs **%2$lld**";
+"privacyHub.mostFrequentTrackerAndAdBody" = "**%1$@** diblokir oleh Perisai Growser pada situs **%2$lld**";
 
 /* Title under which we display a tracker which was most frequently detected by our ad blocking mechanism. */
 "privacyHub.mostFrequentTrackerAndAdTitle" = "Pelacak & Iklan Paling Sering";
@@ -1742,7 +1742,7 @@
 "privacyHub.notificationCalloutButtonText" = "Aktifkan notifikasi";
 
 /* Message of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
-"privacyHub.notificationMessage" = "Rangkuman tentang cara Brave telah melindungi Anda secara daring minggu ini.";
+"privacyHub.notificationMessage" = "Rangkuman tentang cara Growser telah melindungi Anda secara daring minggu ini.";
 
 /* Title of a notification we show to the user, on tapping it, the Privacy Hub screen will open. */
 "privacyHub.notificationTitle" = "Laporan Privasi Mingguan";
@@ -1808,7 +1808,7 @@
 "privacyHub.vpnAlertRegularTrackerTypeSingular" = "Pelacak atau Iklan";
 
 /* Section title, this section displays vpn alerts: items which the vpn managed to block on users behalf. */
-"privacyHub.vpnAlertsHeader" = "Peringatan Dinding Api Brave + VPN";
+"privacyHub.vpnAlertsHeader" = "Peringatan Dinding Api Growser + VPN";
 
 /* This label says about Brave VPN, as a source of by what the resource was blocked by. Think of it in context of 'Blocked by VPN' */
 "privacyHub.vpnLabel" = "Dinding Api + VPN";
@@ -1832,10 +1832,10 @@
 "PrivateBrowsingOnlyWarning" = "Moda Hanya Peramban Pribadi akan menutup semua tab Anda saat ini dan mengeluarkan Anda dari semua situs.";
 
 /* Private tab details */
-"PrivateTabBody" = "Tab Pribadi tidak disimpan di Brave, tetapi tab tersebut tidak menjadikan Anda anonim secara online. Situs-situs yang Anda kunjungi di tab pribadi tidak akan muncul di riwayat Anda dan kukinya selalu terhapus saat Anda menutup situs, tidak akan ada jejak situs tersebut yang tertinggal di Brave. Namun unduhan Anda akan disimpan.\nOperator seluler Anda (atau pemilik jaringan WiFi atau VPN yang terhubung) dapat melihat situs apa yang Anda kunjungi dan situs tersebut akan mengetahui alamat IP publik Anda, bahkan dalam Tab Pribadi.";
+"PrivateTabBody" = "Tab Pribadi tidak disimpan di Growser, tetapi tab tersebut tidak menjadikan Anda anonim secara online. Situs-situs yang Anda kunjungi di tab pribadi tidak akan muncul di riwayat Anda dan kukinya selalu terhapus saat Anda menutup situs, tidak akan ada jejak situs tersebut yang tertinggal di Growser. Namun unduhan Anda akan disimpan.\nOperator seluler Anda (atau pemilik jaringan WiFi atau VPN yang terhubung) dapat melihat situs apa yang Anda kunjungi dan situs tersebut akan mengetahui alamat IP publik Anda, bahkan dalam Tab Pribadi.";
 
 /* Private tab detail text */
-"PrivateTabDetails" = "Menggunakan Tab Pribadi hanya akan mengubah fungsi Brave di perangkat Anda, namun tidak mengubah perilaku orang lain.\n\nSitus selalu mengetahui alamat IP Anda saat mengunjunginya. Dari sini, mereka sering kali dapat selalu menebak lokasi Anda, terutama kota. Terkadang lokasi yang diketahui dapat lebih spesifik. Situs juga mengetahui semua yang Anda beri tahu secara spesifik kepada mereka seperti istilah pencarian. Jika masuk, situs akan mengetahui bahwa Anda adalah pemilik akun tersebut. Anda tetap akan keluar saat menutup Tab Pribadi karena Brave akan menghapus kuki yang Anda gunakan untuk masuk.\n\nSiapa pun yang menyambungkan Anda ke Internet (ISP Anda) dapat melihat semua aktivitas jaringan Anda. Sering kali, operator seluler Anda yang melihatnya. Jika Anda tersambung ke jaringan WiFi, maka pemilik jaringan tersebut yang dapat melihat aktivitas jaringan, dan jika Anda menggunakan VPN, maka siapa pun yang menjalankan VPN tersebut yang dapat melihat aktivitas jaringan. ISP Anda dapat melihat situs yang dikunjungi saat Anda mengunjunginya. Jika situs tersebut menggunakan HTTPS, situs tersebut hanya dapat menebak aktivitas Anda di situs tersebut. Namun jika situs hanya menggunakan HTTP, maka ISP dapat melihat semuanya: istilah pencarian Anda, halaman yang dibaca, dan tautan yang diikuti.\n\nJika perusahaan mengelola perangkat Anda, mereka juga dapat melacak aktivitas perangkat Anda. Menggunakan Tab Pribadi mungkin tidak akan menghentikan mereka untuk mengetahui situs yang Anda kunjungi. Orang lain yang memiliki akses ke perangkat Anda juga dapat memasang perangkat lunak yang memantau aktivitas Anda, dan Tab Pribadi tidak akan dapat melindungi Anda dari hal ini.";
+"PrivateTabDetails" = "Menggunakan Tab Pribadi hanya akan mengubah fungsi Growser di perangkat Anda, namun tidak mengubah perilaku orang lain.\n\nSitus selalu mengetahui alamat IP Anda saat mengunjunginya. Dari sini, mereka sering kali dapat selalu menebak lokasi Anda, terutama kota. Terkadang lokasi yang diketahui dapat lebih spesifik. Situs juga mengetahui semua yang Anda beri tahu secara spesifik kepada mereka seperti istilah pencarian. Jika masuk, situs akan mengetahui bahwa Anda adalah pemilik akun tersebut. Anda tetap akan keluar saat menutup Tab Pribadi karena Growser akan menghapus kuki yang Anda gunakan untuk masuk.\n\nSiapa pun yang menyambungkan Anda ke Internet (ISP Anda) dapat melihat semua aktivitas jaringan Anda. Sering kali, operator seluler Anda yang melihatnya. Jika Anda tersambung ke jaringan WiFi, maka pemilik jaringan tersebut yang dapat melihat aktivitas jaringan, dan jika Anda menggunakan VPN, maka siapa pun yang menjalankan VPN tersebut yang dapat melihat aktivitas jaringan. ISP Anda dapat melihat situs yang dikunjungi saat Anda mengunjunginya. Jika situs tersebut menggunakan HTTPS, situs tersebut hanya dapat menebak aktivitas Anda di situs tersebut. Namun jika situs hanya menggunakan HTTP, maka ISP dapat melihat semuanya: istilah pencarian Anda, halaman yang dibaca, dan tautan yang diikuti.\n\nJika perusahaan mengelola perangkat Anda, mereka juga dapat melacak aktivitas perangkat Anda. Menggunakan Tab Pribadi mungkin tidak akan menghentikan mereka untuk mengetahui situs yang Anda kunjungi. Orang lain yang memiliki akses ke perangkat Anda juga dapat memasang perangkat lunak yang memantau aktivitas Anda, dan Tab Pribadi tidak akan dapat melindungi Anda dari hal ini.";
 
 /* Private tab information link */
 "PrivateTabLink" = "Pelajari tentang Tab Pribadi.";
@@ -1874,7 +1874,7 @@
 "quickview.translate.accessibility.label" = "Aktifkan Terjemahan";
 
 /* Open the App Store to rate Brave. */
-"RateBrave" = "Nilai Brave";
+"RateBrave" = "Nilai Growser";
 
 /* Accessibility label for button increasing font size in display settings of reader mode */
 "ReaderModeBiggerFontButtonAccessibilityLabel" = "Tambah ukuran teks";
@@ -2036,10 +2036,10 @@
 "ReportBrokenPlaceholder" = "Pilih satu opsi";
 
 /* First part of the report a broken site copy. After the colon is a new line and then a website address */
-"ReportBrokenSiteBody1" = "Beri tahu pengembang Brave bahwa situs ini tidak bekerja seperti yang diharapkan:";
+"ReportBrokenSiteBody1" = "Beri tahu pengembang Growser bahwa situs ini tidak bekerja seperti yang diharapkan:";
 
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
-"ReportBrokenSiteBody2" = "Catatan: Laporan yang dikirim ke peladen Brave akan mencakup alamat situs, nomor versi Brave, pengaturan Perisai, status VPN, serta pengaturan bahasa.";
+"ReportBrokenSiteBody2" = "Catatan: Laporan yang dikirim ke peladen Growser akan mencakup alamat situs, nomor versi Growser, pengaturan Perisai, status VPN, serta pengaturan bahasa.";
 
 /* No comment provided by engineer. */
 "ReportBrokenSubmitButtonTitle" = "Kirim";
@@ -2072,31 +2072,31 @@
 "RestoreTabNegativeButtonTitle" = "Tidak";
 
 /* Restore Tabs Prompt Description */
-"RestoreTabOnCrashAlertMessage" = "Sayangnya, Brave mengalami kerusakan dan tidak ditutup dengan benar.\nPulihkan tab Anda?";
+"RestoreTabOnCrashAlertMessage" = "Sayangnya, Growser mengalami kerusakan dan tidak ditutup dengan benar.\nPulihkan tab Anda?";
 
 /* Restore Tabs Prompt Title */
-"RestoreTabOnCrashAlertTitle" = "Brave Ditutup Mendadak.";
+"RestoreTabOnCrashAlertTitle" = "Growser Ditutup Mendadak.";
 
 /* Displayed when Brave Rewards is disabled */
-"rewards.disabledBody" = "Aktifkan untuk membantu mendukung Brave dan komunitas BAT.";
+"rewards.disabledBody" = "Aktifkan untuk membantu mendukung Growser dan komunitas BAT.";
 
 /* Displayed in the status container when rewards is disabled */
-"rewards.disabledStatusBody" = "Menggunakan Imbalan Brave membantu mendukung Brave dan komunitas BAT.";
+"rewards.disabledStatusBody" = "Menggunakan Imbalan Growser membantu mendukung Growser dan komunitas BAT.";
 
 /* Displayed when Brave Rewards is enabled */
-"rewards.enabledBody" = "Anda membantu mendukung Brave dan komunitas BAT.";
+"rewards.enabledBody" = "Anda membantu mendukung Growser dan komunitas BAT.";
 
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
-"rewards.enabledStatusBody" = "Terima kasih telah membantu mendukung Brave dan komunitas BAT!";
+"rewards.enabledStatusBody" = "Terima kasih telah membantu mendukung Growser dan komunitas BAT!";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleMessage" = "Bantulah mendukung Brave dan komunitas BAT dengan mengaktifkan Imbalan Brave dan melihat Iklan Brave.";
+"rewards.settingsToggleMessage" = "Bantulah mendukung Growser dan komunitas BAT dengan mengaktifkan Imbalan Growser dan melihat Iklan Growser.";
 
 /* No comment provided by engineer. */
-"rewards.settingsToggleTitle" = "Aktifkan Brave Rewards";
+"rewards.settingsToggleTitle" = "Aktifkan Growser Rewards";
 
 /* Displayed under verified publishers */
-"rewards.supportingPublisher" = "Kreator konten ini diverifikasi dengan Kreator Brave";
+"rewards.supportingPublisher" = "Kreator konten ini diverifikasi dengan Kreator Growser";
 
 /* Displayed next to a number representing the total number of publishers supported */
 "rewards.totalSupportedCount" = "Jumlah kreator konten yang Anda bantu dukung bulan ini.";
@@ -2123,7 +2123,7 @@
 "RewardsInternalsContributionAmount" = "Jumlah kontribusi";
 
 /* No comment provided by engineer. */
-"RewardsInternalsContributionProcessorBraveTokens" = "Token Brave";
+"RewardsInternalsContributionProcessorBraveTokens" = "Token Growser";
 
 /* No comment provided by engineer. */
 "RewardsInternalsContributionProcessorNone" = "Tidak ada";
@@ -2387,22 +2387,22 @@
 "searchSuggestionsSubtitle" = "Anda mau mengaktifkan Saran Penelusuran?";
 
 /* Title of an action that allows user to perform a one-click web search for selected text */
-"SearchWithBrave" = "Mencari dengan Brave";
+"SearchWithBrave" = "Mencari dengan Growser";
 
 /* No comment provided by engineer. */
 "sendButtonTitle" = "Kirim";
 
 /* Message displayed in the crash dialog above the buttons used to select when sending reports */
-"SendCrashReportAlertMessage" = "Kirim laporan mogok agar Brave dapat memperbaikinya?";
+"SendCrashReportAlertMessage" = "Kirim laporan mogok agar Growser dapat memperbaikinya?";
 
 /* Title for prompt displayed to user after the app crashes */
-"SendCrashReportAlertTitle" = "Duh! Brave mogok";
+"SendCrashReportAlertTitle" = "Duh! Growser mogok";
 
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Kirim Laporan";
 
 /* No comment provided by engineer. */
-"setDefaultBrowserCalloutTitle" = "Kini, Brave dapat diatur sebagai peramban bawaan Anda di iOS. Ketuk di sini untuk membuka pengaturan.";
+"setDefaultBrowserCalloutTitle" = "Kini, Growser dapat diatur sebagai peramban bawaan Anda di iOS. Ketuk di sini untuk membuka pengaturan.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Tetapkan sebagai Peramban Bawaan";
@@ -2426,7 +2426,7 @@
 "settings.autocloseTabsSetting" = "Tutup Tab";
 
 /* Description of autoclose tabs feature. */
-"settings.autocloseTabsSettingFooter" = "Izinkan Brave untuk secara otomatis menutup tab yang belum ditonton baru-baru ini.";
+"settings.autocloseTabsSettingFooter" = "Izinkan Growser untuk secara otomatis menutup tab yang belum ditonton baru-baru ini.";
 
 /* Description beside the toggle for blocking YouTube distracting elements */
 "settings.blockYouTubeDistractingElementsDesc" = "Blokir Elemen Distraktif YouTube";
@@ -2459,7 +2459,7 @@
 "settings.media.rootSetting" = "Media";
 
 /* A toggle label which lets the user always open YouTube urls in Brave */
-"settings.openYouTubeInBrave" = "Buka tautan YouTube di Brave";
+"settings.openYouTubeInBrave" = "Buka tautan YouTube di Growser";
 
 /* No comment provided by engineer. */
 "settings.privacy.screenTimeSetting" = "Aktifkan Waktu Melihat Layar";
@@ -2471,16 +2471,16 @@
 "settings.qualitySettings" = "Pengaturan Kualitas";
 
 /* Description to explain the daily usage ping toggle */
-"settings.sendUsagePingDescription" = "Pesan privat ini memungkinkan Brave memperkirakan pengguna aktifnya.";
+"settings.sendUsagePingDescription" = "Pesan privat ini memungkinkan Growser memperkirakan pengguna aktifnya.";
 
 /* Title to explain the daily usage ping toggle */
-"settings.sendUsagePingTitle" = "Kirimkan ping penggunaan harian secara otomatis ke Brave";
+"settings.sendUsagePingTitle" = "Kirimkan ping penggunaan harian secara otomatis ke Growser";
 
 /* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Memungkinkan Brave menampilkan tautan ke survei privat di halaman tab baru. Survei membantu kami membangun fitur yang lebih baik dan mengukur keefektifan kampanye iklan berbasis browser. [Pelajari selengkapnya](%@)";
+"settings.surveyPanelistDescription" = "Memungkinkan Growser menampilkan tautan ke survei privat di halaman tab baru. Survei membantu kami membangun fitur yang lebih baik dan mengukur keefektifan kampanye iklan berbasis browser. [Pelajari selengkapnya](%@)";
 
 /* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Izinkan survei Brave";
+"settings.surveyPanelistTitle" = "Izinkan survei Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -2540,7 +2540,7 @@
 "shieldEducation.shareTheNewsTitle" = "Bagikan berita";
 
 /* Subtitle for Shield Education Tracker Ad Warning */
-"shieldEducation.trackerAdWarningSubTitle" = "Brave Shield telah menjaga privasi online Anda.";
+"shieldEducation.trackerAdWarningSubTitle" = "Growser Shield telah menjaga privasi online Anda.";
 
 /* Subtitle for Shield Education Tracker Count Share */
 "shieldEducation.trackerCountShareSubtitle" = "Selamat. Anda cukup spesial.";
@@ -2555,13 +2555,13 @@
 "shieldEducation.videoAdBlockTitle" = "Iklan diblok selagi melihat video pada situs ini.";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
-"ShieldsDefaults" = "Default Global Perisai Brave";
+"ShieldsDefaults" = "Default Global Perisai Growser";
 
 /* Section footer for global shields defaults */
 "ShieldsDefaultsFooter" = "Ini adalah pengaturan bawaan Perisai untuk situs baru. Mengubah hal ini tidak akan memengaruhi pengaturan per-situs Anda yang telah ada.";
 
 /* No comment provided by engineer. */
-"ShieldsDownDisclaimer" = "Anda sedang meramban situs ini tanpa perlindungan privasi Brave. Apakah ini tidak berfungsi dengan benar jika memasang Shield?";
+"ShieldsDownDisclaimer" = "Anda sedang meramban situs ini tanpa perlindungan privasi Growser. Apakah ini tidak berfungsi dengan benar jika memasang Shield?";
 
 /* shields overview message */
 "ShieldsOverview" = "Perisai Situs memungkinkan Anda mengontrol saat iklan dan pelacak diblokir untuk setiap situs yang dikunjungi. Jika memilih untuk melihat iklan pada situs tertentu, Anda dapat mengaktifkannya di sini.";
@@ -2579,7 +2579,7 @@
 "ShortcutItemTitleQRCode" = "Pindai Kode QR";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeBraveNewsDescription" = "Buka Brave News dan Dapatkan Kabar Terpopuler Hari Ini";
+"shortcuts.activityTypeBraveNewsDescription" = "Buka Growser News dan Dapatkan Kabar Terpopuler Hari Ini";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeClearHistoryDescription" = "Buka Peramban di Tab Baru dan Hapus Semua Data Riwayat Peramban Privat";
@@ -2588,7 +2588,7 @@
 "shortcuts.activityTypeClearHistorySuggestedPhrase" = "Hapus Riwayat Peramban";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeClearHistoryTitle" = "Hapus Riwayat Peramban Brave";
+"shortcuts.activityTypeClearHistoryTitle" = "Hapus Riwayat Peramban Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeEnableVPNDescription" = "Buka Peramban di Tab Baru dan Aktfkan VPN";
@@ -2597,7 +2597,7 @@
 "shortcuts.activityTypeEnableVPNSuggestedPhrase" = "Aktifkan VPN";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeEnableVPNTitle" = "Buka Peramban Brave dan Aktifkan VPN";
+"shortcuts.activityTypeEnableVPNTitle" = "Buka Peramban Growser dan Aktifkan VPN";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeNewPrivateTabSuggestedPhrase" = "Buka di Tab Pribadi Baru";
@@ -2618,13 +2618,13 @@
 "shortcuts.activityTypeOpenBookmarksSuggestedPhrase" = "Buka Markah";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBookmarksTitle" = "Buka Markah Peramban Brave";
+"shortcuts.activityTypeOpenBookmarksTitle" = "Buka Markah Peramban Growser";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveNewsTitle" = "Buka Brave News";
+"shortcuts.activityTypeOpenBraveNewsTitle" = "Buka Growser News";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Buka Brave News";
+"shortcuts.activityTypeOpenBraveTodaySuggestedPhrase" = "Buka Growser News";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenHistoryListDescription" = "Buka Layar Riwayat Peramban";
@@ -2633,7 +2633,7 @@
 "shortcuts.activityTypeOpenHistoryListSuggestedPhrase" = "Buka Riwayat Peramban";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenHistoryListTitle" = "Buka Riwayat Peramban Brave";
+"shortcuts.activityTypeOpenHistoryListTitle" = "Buka Riwayat Peramban Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenPlaylistDescription" = "Mulai Memutar Video Anda di Daftar Putar";
@@ -2645,7 +2645,7 @@
 "shortcuts.activityTypeOpenPlaylistTitle" = "Buka Daftar Putar";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeOpenSyncedTabsDescription" = "Buka Tab Brave Buka di Perangkat Lain";
+"shortcuts.activityTypeOpenSyncedTabsDescription" = "Buka Tab Growser Buka di Perangkat Lain";
 
 /* No comment provided by engineer. */
 "shortcuts.activityTypeOpenSyncedTabsSuggestedPhrase" = "Buka Tab dari Perangkat Lain";
@@ -2654,7 +2654,7 @@
 "shortcuts.activityTypeOpenSyncedTabsTitle" = "Buka Tab dari Perangkat Lain";
 
 /* No comment provided by engineer. */
-"shortcuts.activityTypeTabDescription" = "Mulai Mencari di Web Dengan Aman Bersama Brave";
+"shortcuts.activityTypeTabDescription" = "Mulai Mencari di Web Dengan Aman Bersama Growser";
 
 /* No comment provided by engineer. */
 "shortcuts.customIntentOpenBookmarkSuggestedPhrase" = "Buka Situs Web Markah";
@@ -2666,7 +2666,7 @@
 "shortcuts.customIntentOpenWebsiteSuggestedPhrase" = "Buka Situs Web";
 
 /* Description for opening Brave Settings for altering Siri shortcut. */
-"shortcuts.shortcutOpenApplicationSettingsDescription" = "Pilihan ini akan membuka Pengaturan Brave. Untuk mengubah berbagai pilihan Siri, pilih item menu 'Siri & Cari' dan sesuaikan pilihan Anda.";
+"shortcuts.shortcutOpenApplicationSettingsDescription" = "Pilihan ini akan membuka Pengaturan Growser. Untuk mengubah berbagai pilihan Siri, pilih item menu 'Siri & Cari' dan sesuaikan pilihan Anda.";
 
 /* Button title that open application settings */
 "shortcuts.shortcutOpenApplicationSettingsTitle" = "Buka Setelan";
@@ -2678,7 +2678,7 @@
 "shortcuts.shortcutSettingsClearBrowserHistoryTitle" = "Hapus Riwayat Peramban";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsEnableVPNDescription" = "Gunakan Jalan Pintas untuk mengaktifkan VPN Brave melalui Siri - Bantuan Suara";
+"shortcuts.shortcutSettingsEnableVPNDescription" = "Gunakan Jalan Pintas untuk mengaktifkan VPN Growser melalui Siri - Bantuan Suara";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsEnableVPNTitle" = "Aktifkan VPN";
@@ -2690,10 +2690,10 @@
 "shortcuts.shortcutSettingsOpenBookmarksTitle" = "Buka Markah";
 
 /* Description of Open Brave News Siri Shortcut in Settings Screen */
-"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Pakai Pintasan untuk membuka tab baru & tampilkan Umpan Berita Brave via Siri - Asisten Suara";
+"shortcuts.shortcutSettingsOpenBraveNewsDescription" = "Pakai Pintasan untuk membuka tab baru & tampilkan Umpan Berita Growser via Siri - Asisten Suara";
 
 /* No comment provided by engineer. */
-"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Buka Brave News";
+"shortcuts.shortcutSettingsOpenBraveNewsTitle" = "Buka Growser News";
 
 /* No comment provided by engineer. */
 "shortcuts.shortcutSettingsOpenHistoryListDescription" = "Gunakan Jalan Pintas untuk membuka layar riwayat peramban melalui Siri - Asisten Suara";
@@ -2756,7 +2756,7 @@
 "SiteAndShieldsSettings" = "Pengaturan Situs dan Perisai";
 
 /* No comment provided by engineer. */
-"SiteReportedBody" = "Terima kasih telah memberi tahu pengembang Brave tentang masalah dengan situs ini. Kami akan berusaha sebaik mungkin untuk memperbaikinya!";
+"SiteReportedBody" = "Terima kasih telah memberi tahu pengembang Growser tentang masalah dengan situs ini. Kami akan berusaha sebaik mungkin untuk memperbaikinya!";
 
 /* No comment provided by engineer. */
 "SiteReportedTitle" = "Terima Kasih";
@@ -2765,10 +2765,10 @@
 "SiteShieldSettings" = "Pelindung";
 
 /* Title used when in warning pop-over when domain specific data save appears */
-"socialSharing.domainSpecificDataSavedTitle" = "Tiap hari saya menghemat data karena melakukan penelusuran web dengan Brave.";
+"socialSharing.domainSpecificDataSavedTitle" = "Tiap hari saya menghemat data karena melakukan penelusuran web dengan Growser.";
 
 /* Text used for social sharing together with Brave Shield values */
-"socialSharing.shareDescriptionTitle" = "Tiap hari saya menghemat data karena melakukan penelusuran web dengan Brave.";
+"socialSharing.shareDescriptionTitle" = "Tiap hari saya menghemat data karena melakukan penelusuran web dengan Growser.";
 
 /* Open search section of settings */
 "StandardTabSearch" = "Tab Standar";
@@ -2885,7 +2885,7 @@
 "sync.deleteAccount" = "Hapus Sinkronisasi Akun";
 
 /* Part 1 Description for Alert used action Delete Sync Account. */
-"sync.deleteAccountAlertDescriptionPart1" = "Menghapus akun Anda akan menghapus data Anda yang terenkripsi dari peladen Brave dan menonaktifkan Sinkronisasi dari semua perangkat Anda yang terhubung.";
+"sync.deleteAccountAlertDescriptionPart1" = "Menghapus akun Anda akan menghapus data Anda yang terenkripsi dari peladen Growser dan menonaktifkan Sinkronisasi dari semua perangkat Anda yang terhubung.";
 
 /* Part 2 Description for Alert used action Delete Sync Account. */
 "sync.deleteAccountAlertDescriptionPart2" = "Namun hal ini tidak akan menghapus data yang disimpan secara lokal pada perangkat-perangkat tersebut.";
@@ -2894,13 +2894,13 @@
 "sync.deleteAccountAlertTitle" = "Hapus Sinkronisasi Akun";
 
 /* Sync Error Description */
-"sync.deprecatedVersionError" = "Sepertinya kode ini dibuat dalam perangkat yang menjalankan Brave versi lebih lama. Silakan perbarui ke versi terbaru Brave pada perangkat Anda yang lain dan kemudian buatlah kode sinkronisasi yang baru.";
+"sync.deprecatedVersionError" = "Sepertinya kode ini dibuat dalam perangkat yang menjalankan Growser versi lebih lama. Silakan perbarui ke versi terbaru Growser pada perangkat Anda yang lain dan kemudian buatlah kode sinkronisasi yang baru.";
 
 /* The message displayed in alert when a there is a problem with fetching devices */
 "sync.deviceFetchErrorAlertDescription" = "Telah terjadi kesalahan saat mendeteksi perangkat dalam rantai sinkronisasi.";
 
 /* Message for alert when the user has restored their device from a backup */
-"sync.deviceRestoreDetectedMessage" = "Tampaknya perangkat Anda dipulihkan dari cadangan. Hal ini dapat memengaruhi Brave Sync. Untuk terus menggunakan Brave Sync, Anda harus mereset dan bergabung kembali dengan Sync Chain.";
+"sync.deviceRestoreDetectedMessage" = "Tampaknya perangkat Anda dipulihkan dari cadangan. Hal ini dapat memengaruhi Growser Sync. Untuk terus menggunakan Growser Sync, Anda harus mereset dan bergabung kembali dengan Sync Chain.";
 
 /* Title for alert when the user has restored their device from a backup */
 "sync.deviceRestoreDetectedTitle" = "Terdeteksi Pemulihan";
@@ -2990,7 +2990,7 @@
 "sync.removeDeviceDefaultName" = "Perangkat";
 
 /* Message for removing last device from Sync */
-"sync.removeLastDeviceMessage" = "Data yang saat ini disinkronisasi akan disimpan, namun semua data dalam tembolok Sinkronisasi Brave akan dihapus. Anda harus memulai rantai sinkronisasi baru agar dapat menyinkronkan data perangkat lagi.";
+"sync.removeLastDeviceMessage" = "Data yang saat ini disinkronisasi akan disimpan, namun semua data dalam tembolok Sinkronisasi Growser akan dihapus. Anda harus memulai rantai sinkronisasi baru agar dapat menyinkronkan data perangkat lagi.";
 
 /* Button name for removing last device from Sync */
 "sync.removeLastDeviceRemoveButtonName" = "Hapus Rantai Sinkronisasi";
@@ -3059,7 +3059,7 @@
 "sync.toDevice" = "Sync ke Peranti";
 
 /* Sync to existing device description */
-"sync.toDeviceDescription" = "Dengan perangkat yang sudah disinkronkan, buka Pengaturan Brave dan buka Pengaturan -> Sinkronisasi. Pilih \"Tambah Perangkat\" dan pindai kode yang ditampilkan di layar.";
+"sync.toDeviceDescription" = "Dengan perangkat yang sudah disinkronkan, buka Pengaturan Growser dan buka Pengaturan -> Sinkronisasi. Pilih \"Tambah Perangkat\" dan pindai kode yang ditampilkan di layar.";
 
 /* Description on popup when setting up a sync group fails */
 "sync.unableCreateGroup" = "Tidak dapat mensinkronkan perangkat ini";
@@ -3074,7 +3074,7 @@
 "sync.validForTooLongError" = "Kode ini tidak valid. Silakan periksa bahwa waktu dan zona waktu telah ditetapkan dengan tepat di peranti Anda.";
 
 /* Sync settings welcome */
-"sync.welcome" = "Untuk memulai, Anda harus memasang Brave pada semua perangkat yang ingin Anda sinkronkan. Untuk menyatukan semuanya, mulailah rantai sinkronisasi yang akan Anda gunakan untuk menghubungkan semua perangkat Anda dengan aman.";
+"sync.welcome" = "Untuk memulai, Anda harus memasang Growser pada semua perangkat yang ingin Anda sinkronkan. Untuk menyatukan semuanya, mulailah rantai sinkronisasi yang akan Anda gunakan untuk menghubungkan semua perangkat Anda dengan aman.";
 
 /* Word count title */
 "sync.wordCount" = "Jumlah kata:%i";
@@ -3107,10 +3107,10 @@
 "tabGrid.privateBrowsingInfoBulletOneTitle" = "Tidak meninggalkan jejak pada perangkat Anda";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeBody" = "Brave VPN mengenkripsi dan melindungi apa pun yang Anda lakukan secara daring, bahkan di luar browser Brave.";
+"tabGrid.privateBrowsingInfoBulletThreeBody" = "Growser VPN mengenkripsi dan melindungi apa pun yang Anda lakukan secara daring, bahkan di luar browser Growser.";
 
 /* A bullet point explaining the benefits of Brave VPN */
-"tabGrid.privateBrowsingInfoBulletThreeTitle" = "VPN Brave";
+"tabGrid.privateBrowsingInfoBulletThreeTitle" = "VPN Growser";
 
 /* A bullet point explaining that your browsing data is still visible to the users ISP, network observers, or your employer */
 "tabGrid.privateBrowsingInfoBulletTwoBody" = "Ingat, meskipun di jendela pribadi, aktivitas penelusuran Anda mungkin masih dapat dilihat oleh ISP, pengamat jaringan, atau atasan Anda (jika Anda menggunakan perangkat/jaringan di tempat kerja).";
@@ -3173,7 +3173,7 @@
 "tabs.settings.autoOpenKeyboardTitle" = "Papan Ketik Terbuka Otomatis";
 
 /* The description of the toggle for user to turn on open link in quick view mode. */
-"tabs.settings.openLinkInQuickViewModeDescription" = "Buka tautan dari Ask Brave dan Brave Penelusuran di tab pratinjau";
+"tabs.settings.openLinkInQuickViewModeDescription" = "Buka tautan dari Ask Growser dan Growser Penelusuran di tab pratinjau";
 
 /* The title of the toggle for user to turn on open link in quick view mode. */
 "tabs.settings.openLinkInQuickViewModeTitle" = "Aktifkan Tab Tampilan Cepat";
@@ -3302,7 +3302,7 @@
 "themeQRCodeShareButton" = "Bagikan...";
 
 /* Title for QR popup encouraging users to share the code with their friends. */
-"themeQRCodeShareTitle" = "Bagikan Brave ke teman-teman Anda!";
+"themeQRCodeShareTitle" = "Bagikan Growser ke teman-teman Anda!";
 
 /* Selection to automatically color/style the user interface. */
 "ThemesAutomaticOption" = "Otomatis";
@@ -3341,13 +3341,13 @@
 "today.addSourceNoFeedsFoundMessage" = "Maaf, alamat umpan tersebut tidak memiliki konten.";
 
 /* The action title displayed in the iOS share menu */
-"today.addSourceShareTitle" = "Tambahkan Sumber ke Berita Brave";
+"today.addSourceShareTitle" = "Tambahkan Sumber ke Berita Growser";
 
 /* A header title shown above a button that will allow the user to fetch RSS feeds for a website they have typed in */
 "today.availableRSSFeedsHeaderTitle" = "Umpan RSS yang Tersedia";
 
 /* The name of the feature */
-"today.braveToday" = "Brave News";
+"today.braveToday" = "Growser News";
 
 /* The name of the feature in settings */
 "today.braveToday.title" = "Berita";
@@ -3371,7 +3371,7 @@
 "today.deals" = "Penawaran Khusus";
 
 /* '%@' will turn into the name of a publisher (verbatim), for example: Brave Blog */
-"today.disabledAlertBody" = "Berita Brave akan berhenti menampilkan konten dari %@";
+"today.disabledAlertBody" = "Berita Growser akan berhenti menampilkan konten dari %@";
 
 /* No comment provided by engineer. */
 "today.disabledAlertTitle" = "Dinonaktifkan";
@@ -3389,7 +3389,7 @@
 "today.enablePublisherContent" = "Izinkan konten dari %@";
 
 /* No comment provided by engineer. */
-"today.errorGeneralBody" = "Berita Brave mengalami beberapa masalah. Coba lagi.";
+"today.errorGeneralBody" = "Berita Growser mengalami beberapa masalah. Coba lagi.";
 
 /* No comment provided by engineer. */
 "today.errorGeneralTitle" = "Aduh...";
@@ -3416,19 +3416,19 @@
 "today.insecureSourcesHeader" = "Sumber Tidak Aman - Risiko Tanggung Sendiri";
 
 /* Shown above a button that turns on the "Brave News" product in the app. by sources & feeds they mean websites & blogs. */
-"today.introCardBody" = "Ikuti sumber favorit Anda, dalam umpan tunggal. Cukup buka tab di Brave, gulir turun, dan... tara!\nBerita Brave didukung iklan dengan iklan privat yang anonim.";
+"today.introCardBody" = "Ikuti sumber favorit Anda, dalam umpan tunggal. Cukup buka tab di Growser, gulir turun, dan... tara!\nBerita Growser didukung iklan dengan iklan privat yang anonim.";
 
 /* Shown above a button that turns on the "Brave News" product in the app. */
-"today.introCardTitle" = "Aktifkan Berita Brave, dan jangan lewatkan cerita apa pun";
+"today.introCardTitle" = "Aktifkan Berita Growser, dan jangan lewatkan cerita apa pun";
 
 /* No comment provided by engineer. */
-"today.isEnabledToggleLabel" = "Tampilkan Brave News";
+"today.isEnabledToggleLabel" = "Tampilkan Growser News";
 
 /* No comment provided by engineer. */
 "today.learnMoreTitle" = "Pelajari lebih lanjut tentang data Anda";
 
 /* 'Brave Offers' is a product name */
-"today.moreBraveOffers" = "Penawaran Brave Lainnya";
+"today.moreBraveOffers" = "Penawaran Growser Lainnya";
 
 /* No comment provided by engineer. */
 "today.noInternet" = "Tidak ada internet";
@@ -3452,19 +3452,19 @@
 "today.promoted" = "Dipromosikan";
 
 /* Title for long press action sheet list which has item for rate / hide */
-"today.rateBraveCardActionSheetTitle" = "Nilai Brave di App Store";
+"today.rateBraveCardActionSheetTitle" = "Nilai Growser di App Store";
 
 /* Title for long press action that will hide Brave Rate Card */
 "today.rateBraveCardHideActionTitle" = "Sembunyikan";
 
 /* Button title / Title for long press action that will perform an action which open AppStore Rate screen */
-"today.rateBraveCardRateActionTitle" = "Nilai Brave";
+"today.rateBraveCardRateActionTitle" = "Nilai Growser";
 
 /* Subtitle shown on the Rate Brave Card */
 "today.rateBraveCardSubtitle" = "Beri tahu kami pendapat Anda!";
 
 /* Title shown on the Rate Brave Card */
-"today.rateBraveCardTitle" = "Suka Brave?";
+"today.rateBraveCardTitle" = "Suka Growser?";
 
 /* No comment provided by engineer. */
 "today.refresh" = "Segarkan";
@@ -3491,7 +3491,7 @@
 "today.suggestedTitle" = "Diusulkan";
 
 /* No comment provided by engineer. */
-"today.turnOnBraveToday" = "Aktifkan Brave News";
+"today.turnOnBraveToday" = "Aktifkan Growser News";
 
 /* A toggle title shown next to a source or channel that the user can unfollow. When tapped switches to 'Follow' */
 "today.unfollowToggleTitle" = "Batal ikuti";
@@ -3551,13 +3551,13 @@
 "ViewOn" = "Lihat di %@";
 
 /* Explanation for warning alert why the microphone access required. */
-"voice.search.microphone.description.required" = "Harap izinkan Akses Mikrofon di Pengaturan Sistem iOS agar Brave bisa menggunakan pencarian suara anonim.";
+"voice.search.microphone.description.required" = "Harap izinkan Akses Mikrofon di Pengaturan Sistem iOS agar Growser bisa menggunakan pencarian suara anonim.";
 
 /* Title for warning alert microphone access is required. */
 "voice.search.microphone.title.required" = "Diperlukan Akses Mikrofon";
 
 /* Disclaimer for screen to search using voice. */
-"voice.search.screen.disclaimer" = "Brave tidak menyimpan atau membagikan pencarian suara Anda.";
+"voice.search.screen.disclaimer" = "Growser tidak menyimpan atau membagikan pencarian suara Anda.";
 
 /* The date your wallet was created */
 "WalletCreationDate" = "Tanggal Pembuatan Dompet";

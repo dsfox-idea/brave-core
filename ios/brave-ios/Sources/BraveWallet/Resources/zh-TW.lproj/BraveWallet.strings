@@ -86,7 +86,7 @@
 "wallet.addCustomTokenTitle" = "代幣";
 
 /* The description of the view shown over a dapps website that describes what adding a new network will do. */
-"wallet.addNetworkDescription" = "這會允許 Brave 錢包使用這個網路。";
+"wallet.addNetworkDescription" = "這會允許 Growser 錢包使用這個網路。";
 
 /* The subtitle of the view shown over a dapps website that requests permission from the user to add a new network. */
 "wallet.addNetworkSubtitle" = "允許這個網站新增網路？";
@@ -161,7 +161,7 @@
 "wallet.auroraPopupDontShowAgain" = "不要再顯示";
 
 /* The footer beneath the auto-lock title and interval duration */
-"wallet.autoLockFooter" = "自動鎖定 Brave 錢包前的等候分鐘數";
+"wallet.autoLockFooter" = "自動鎖定 Growser 錢包前的等候分鐘數";
 
 /* The title that appears before an auto-lock interval. Example: Automatically lock after 5 minutes */
 "wallet.autoLockTitle" = "自動鎖定等候時間";
@@ -221,10 +221,10 @@
 "wallet.biometricsSetupFaceId" = "Face ID";
 
 /* The sub-title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupSubTitle" = "您要使用 %@ 解鎖 Brave 錢包嗎？";
+"wallet.biometricsSetupSubTitle" = "您要使用 %@ 解鎖 Growser 錢包嗎？";
 
 /* The title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupTitle" = "使用 %@ 解鎖 Brave 錢包";
+"wallet.biometricsSetupTitle" = "使用 %@ 解鎖 Growser 錢包";
 
 /* Type of biometrics. This will be used in Biometric setup screen. */
 "wallet.biometricsSetupTouchId" = "Touch ID";
@@ -233,10 +233,10 @@
 "wallet.bitcoinImportExtendedKeyWarning" = "僅支援 %@ 擴充金鑰。";
 
 /* The title for Brave Fee label in Swap. The fee percentage is displayed beside the label. */
-"wallet.braveFeeLabel" = "Brave 費用：%@";
+"wallet.braveFeeLabel" = "Growser 費用：%@";
 
 /* A disclaimer that appears at the bottom of an swap screen which discloses the fixed Brave fee included in the swap quotes. '%@' will be replaced by a percentage. For example: 'Quote includes a 0.875% Brave fee' */
-"wallet.braveSwapFeeDisclaimer" = "報價含 %@ Brave 費用。";
+"wallet.braveSwapFeeDisclaimer" = "報價含 %@ Growser 費用。";
 
 /* The text beside the striked-through percentage Brave would normally charge for a swap. */
 "wallet.braveSwapFree" = "免費";
@@ -251,7 +251,7 @@
 "wallet.btcAvailableBalanceTitle" = "可用";
 
 /* A warning displayed in row before the Send button in Send Crypto view when a Bitcoin asset is selected. */
-"wallet.btcOrdinalsUnsupportedWarning" = "Brave Wallet 目前不支援比特幣 NFT (Ordinal)。如果從具有 Ordinal 資料的位址傳送 BTC，可能導致意外轉移其中的 Ordinal 資料。";
+"wallet.btcOrdinalsUnsupportedWarning" = "Growser Wallet 目前不支援比特幣 NFT (Ordinal)。如果從具有 Ordinal 資料的位址傳送 BTC，可能導致意外轉移其中的 Ordinal 資料。";
 
 /* Description displayed in row beside users pending balance. */
 "wallet.btcPendingBalanceDesc" = "錢包餘額尚待更新。";
@@ -452,7 +452,7 @@
 "wallet.creatingWallet" = "正在建立錢包……";
 
 /* The title of the crypto tab */
-"wallet.cryptoTitle" = "Brave 錢包";
+"wallet.cryptoTitle" = "Growser 錢包";
 
 /* The title above the input fields for users to input network block explorer urls in Custom Network Details Screen. */
 "wallet.customNetworkBlockExplorerUrlsTitle" = "封鎖總管 URL";
@@ -524,13 +524,13 @@
 "wallet.customTokenTitle" = "新增自訂資產";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. The '%@' will be the site attempting to connect. For example: "app.uniswap.org wants to interact with Brave Wallet" */
-"wallet.dappsConnectionNotificationOriginTitle" = "%@ 想與 Brave 錢包互動";
+"wallet.dappsConnectionNotificationOriginTitle" = "%@ 想與 Growser 錢包互動";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. */
-"wallet.dappsConnectionNotificationTitle" = "此頁面想使用 Brave 錢包";
+"wallet.dappsConnectionNotificationTitle" = "此頁面想使用 Growser 錢包";
 
 /* A message that will be displayed under the section header when there is no dapps have been granted wallet connection. */
-"wallet.dappsSettingsConnectedSitesSectionEmpty" = "您連結到 Brave 錢包的 DApp 會顯示在這裡";
+"wallet.dappsSettingsConnectedSitesSectionEmpty" = "您連結到 Growser 錢包的 DApp 會顯示在這裡";
 
 /* The title of the section that will list all the permitted dapp connections */
 "wallet.dappsSettingsConnectedSitesSectionTitle" = "連結的 DApp";
@@ -593,7 +593,7 @@
 "wallet.decimalsPrecision" = "小數位數";
 
 /* The message displayed when the user takes a screenshot of their dapp decrypt request. */
-"wallet.decryptMessageScreenshotDetectedMessage" = "警告：訊息的螢幕截圖可能會備份到雲端檔案服務，任何擁有相片存取權限的應用程式都能讀取。Brave 建議您不要儲存此螢幕截圖，並儘快刪除。";
+"wallet.decryptMessageScreenshotDetectedMessage" = "警告：訊息的螢幕截圖可能會備份到雲端檔案服務，任何擁有相片存取權限的應用程式都能讀取。Growser 建議您不要儲存此螢幕截圖，並儘快刪除。";
 
 /* The title of the button to approve a decrypt request from a dapps website. */
 "wallet.decryptRequestApprove" = "允許";
@@ -716,10 +716,10 @@
 "wallet.ensDomainInterstitialPageButtonProceed" = "使用 Chainstack 伺服器繼續操作";
 
 /* Description displayed when users chose Brave to ask them if they want the ENS to be resolved every time they enter one. The first '%@' will be replaced with a link to Chainstack's terms of use page. The second '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The third '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.ensDomainInterstitialPageDescription" = "Brave 將會依賴您設定的 Ethereum Mainnet RPC 服務 (預設為 Chainstack) 來解析 Ethereum Name Service (ENS) 上的 .eth 網域名稱。Brave 會隱藏您的 IP 位址。如果您啟用這項功能，Chainstack 將會看到有人正在嘗試造訪這些 .eth 網域，但不會看到其他資料。查看 Chainstack 的<a href=%1$@>%2$@</a>和<a href=%3$@>%4$@</a>。";
+"wallet.ensDomainInterstitialPageDescription" = "Growser 將會依賴您設定的 Ethereum Mainnet RPC 服務 (預設為 Chainstack) 來解析 Ethereum Name Service (ENS) 上的 .eth 網域名稱。Growser 會隱藏您的 IP 位址。如果您啟用這項功能，Chainstack 將會看到有人正在嘗試造訪這些 .eth 網域，但不會看到其他資料。查看 Chainstack 的<a href=%1$@>%2$@</a>和<a href=%3$@>%4$@</a>。";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS domain to be resolved every time they enter one. */
-"wallet.ensDomainInterstitialPageTitle" = "是否在 Brave 中啟用 Ethereum Name Service (ENS) 支援？";
+"wallet.ensDomainInterstitialPageTitle" = "是否在 Growser 中啟用 Ethereum Name Service (ENS) 支援？";
 
 /* Title on the button that users can click to enable Brave to resolve the ENS offchain lookup for the domain they entered. */
 "wallet.ensOffchainDomainInterstitialPageButtonProceed" = "繼續鏈下查找";
@@ -728,7 +728,7 @@
 "wallet.ensOffchainDomainInterstitialPageDescription" = "這個 .eth 網域名稱儲存在鏈下，並會由第三方閘道解析。如果您啟用 ENS 鏈下查詢，第三方閘道將會看到您正在造訪 .eth 網域。<a href=%1$@>%2$@</a>。";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS Offchain domain to be resolved every time they enter one. */
-"wallet.ensOffchainDomainInterstitialPageTitle" = "在 Brave 中啟用以太坊域名服務 (ENS) 鏈下查找支援？";
+"wallet.ensOffchainDomainInterstitialPageTitle" = "在 Growser 中啟用以太坊域名服務 (ENS) 鏈下查找支援？";
 
 /* Button title when requesting to do an ENS off chain lookup. */
 "wallet.ensOffchainGatewayButton" = "使用 ENS 網域";
@@ -737,7 +737,7 @@
 "wallet.ensOffchainGatewayDesc" = "您輸入的似乎是 ENS 位址。我們需要使用第三方解析程式來解析此要求，如此有助於確保您的 .eth 網域不會外洩，交易安全無虞。";
 
 /* Title shown send address / ENS domain when requesting to do an ENS off chain lookup. */
-"wallet.ensOffchainGatewayTitle" = "Brave 支援使用鏈下閘道來解析 .eth 網域。";
+"wallet.ensOffchainGatewayTitle" = "Growser 支援使用鏈下閘道來解析 .eth 網域。";
 
 /* The description for the options to allow Ethereum Name service domain names offchain. '%@' will be replaced with a url to explain more about ENS offchain lookup. */
 "wallet.ensOffchainResolveMethodDescription" = "[深入瞭解](%@) ENS 鏈下查詢的隱私注意事項。";
@@ -962,7 +962,7 @@
 "wallet.legalTitle" = "開始之前";
 
 /* The responsibility explained in screen for users to check indicates they understand before setting up a wallet. */
-"wallet.legalUserResponsibility" = "我瞭解這是應自行保管的錢包，我獨自負責任何相關的資金、資產或帳戶，並負責採取適當的行動來保障、保護和備份我的錢包。我瞭解 Brave 不能代表我存取我的錢包或逆轉交易，並且在密碼遺失、裝置遭竊或類似情況下，我的復原詞句是重新取得存取權限的「唯一」方法。";
+"wallet.legalUserResponsibility" = "我瞭解這是應自行保管的錢包，我獨自負責任何相關的資金、資產或帳戶，並負責採取適當的行動來保障、保護和備份我的錢包。我瞭解 Growser 不能代表我存取我的錢包或逆轉交易，並且在密碼遺失、裝置遭竊或類似情況下，我的復原詞句是重新取得存取權限的「唯一」方法。";
 
 /* The title of the lock option inside the menu when user clicks the three dots button beside assets search button. */
 "wallet.lock" = "鎖定";
@@ -1025,13 +1025,13 @@
 "wallet.meldTransactionPartner" = "交易合作夥伴";
 
 /* The description of the pop up when user first time open buy screen in Brave Wallet. */
-"wallet.meldTransactionPartnerDescription" = "Brave 錢包使用 Meld.io 來幫助彙集和顯示您所在區域的各種加密貨幣供應商。我們將與 Meld.io 分享資訊以完成交易，包括您的錢包地址和國家或地區代碼。如需更多資訊，請閱讀 Meld 的使用條款。";
+"wallet.meldTransactionPartnerDescription" = "Growser 錢包使用 Meld.io 來幫助彙集和顯示您所在區域的各種加密貨幣供應商。我們將與 Meld.io 分享資訊以完成交易，包括您的錢包地址和國家或地區代碼。如需更多資訊，請閱讀 Meld 的使用條款。";
 
 /* The description of the checkbox for the pop up when user first time open buy screen in Brave Wallet. */
 "wallet.meldTransactionPartnerLegal" = "我已閱讀並同意 [Meld 的使用條款](%@)";
 
 /* The title shown on the wallet settings page, and the value shown when selecting the default wallet as Brave Wallet in wallet settings. */
-"wallet.module" = "Brave 錢包";
+"wallet.module" = "Growser 錢包";
 
 /* A button title for user to open more option in asset details screen other than buy/send/swap. */
 "wallet.more" = "更多";
@@ -1079,7 +1079,7 @@
 "wallet.newSiteConnectFooter" = "僅連線您信任的網站。";
 
 /* The message displayed below the dapp's origin url in new site connection screen. */
-"wallet.newSiteConnectMessage" = "連線至 Brave 錢包";
+"wallet.newSiteConnectMessage" = "連線至 Growser 錢包";
 
 /* The transaction edit error alert button which will dismiss the alert. */
 "wallet.newSiteConnectScreenTitle" = "連線";
@@ -1127,7 +1127,7 @@
 "wallet.nftDetailTokenStandard" = "代幣標準";
 
 /* The title of the alert that asks users either to enable NFT discovery or import manually. `SimpleHash` is the third-party service name, so it does not need to be translated. */
-"wallet.nftDiscoveryCalloutDescription" = "Brave 錢包可使用第三方服務來自動顯示您的 NFT。Brave 將與 SimpleHash 分享您的錢包位址，以提供此服務。深入瞭解。";
+"wallet.nftDiscoveryCalloutDescription" = "Growser 錢包可使用第三方服務來自動顯示您的 NFT。Growser 將與 SimpleHash 分享您的錢包位址，以提供此服務。深入瞭解。";
 
 /* This is the same `Learn more` at the end of `nftDiscoveryCalloutDescription`, but we need a separat translation to detect the range of it in order to build some attributed strings. */
 "wallet.nftDiscoveryCalloutDescriptionLearnMore" = "了解更多";
@@ -1163,10 +1163,10 @@
 "wallet.nftRemoveFromWallet" = "不要顯示在錢包中";
 
 /* The description of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertDescription" = "NFT 將從 Brave 錢包中移除，但仍保留在區塊鏈上。如果您在移除後改變主意，則需要再次手動匯入。";
+"wallet.nftRemoveFromWalletAlertDescription" = "NFT 將從 Growser 錢包中移除，但仍保留在區塊鏈上。如果您在移除後改變主意，則需要再次手動匯入。";
 
 /* The title of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertTitle" = "從 Brave 錢包中移除？";
+"wallet.nftRemoveFromWalletAlertTitle" = "從 Growser 錢包中移除？";
 
 /* The description of the NFTs row in Account Details when user has zero or multiple NFTs. */
 "wallet.nftsDescription" = "%d 個 NFT";
@@ -1217,7 +1217,7 @@
 "wallet.onboardingNetworkSelectionTitle" = "支援的網路";
 
 /* The subtitle of the last step of creating a new wallet. */
-"wallet.onbordingCompletedSubTitle" = "您的 Brave 錢包已可使用。";
+"wallet.onbordingCompletedSubTitle" = "您的 Growser 錢包已可使用。";
 
 /* The title of the last step of creating a new wallet. */
 "wallet.onbordingCompletedTitle" = "搞定了！";
@@ -1274,7 +1274,7 @@
 "wallet.portfolioPageTitle" = "投資組合";
 
 /* The message displayed when the user takes a screenshot of their private key */
-"wallet.privateKeyScreenshotDetectedMessage" = "警告：有心人士可能會將私密金鑰的螢幕擷取畫面備份至雲端檔案服務，而任何取得照片存取權限的應用程式都能加以讀取。Brave 建議您不要儲存該螢幕擷取畫面，並且儘快刪除。";
+"wallet.privateKeyScreenshotDetectedMessage" = "警告：有心人士可能會將私密金鑰的螢幕擷取畫面備份至雲端檔案服務，而任何取得照片存取權限的應用程式都能加以讀取。Growser 建議您不要儲存該螢幕擷取畫面，並且儘快刪除。";
 
 /* The title for Protocol Fee label in Swap. The fee percentage is displayed beside the label. */
 "wallet.protocolFeeLabel" = "通訊協定費用：%@";
@@ -1316,7 +1316,7 @@
 "wallet.purchaseMethodButtonTitle" = "選取購買方式";
 
 /* The message displayed when the user takes a screenshot of their recovery phrase */
-"wallet.recoveryPhraseScreenshotDetectedMessage" = "警告：有心人士可能會將復原詞句的螢幕擷取畫面備份至雲端檔案服務，而任何取得照片存取權限的應用程式都能加以讀取。Brave 建議您不要儲存該螢幕擷取畫面，並且儘快刪除。";
+"wallet.recoveryPhraseScreenshotDetectedMessage" = "警告：有心人士可能會將復原詞句的螢幕擷取畫面備份至雲端檔案服務，而任何取得照片存取權限的應用程式都能加以讀取。Growser 建議您不要儲存該螢幕擷取畫面，並且儘快刪除。";
 
 /* A description for a refresh icon that when pressed receives a new snap quote for the currently swap assets */
 "wallet.refreshMarketPriceLabel" = "重新整理市場價格";
@@ -1349,7 +1349,7 @@
 "wallet.repeatedPasswordPlaceholder" = "重新輸入密碼";
 
 /* A label for toggle for user to use to indicate importing a legacy brave wallet or not */
-"wallet.restoreLegacyBraveWalletToggleTitle" = "從舊版 Brave 加密錢包匯入？";
+"wallet.restoreLegacyBraveWalletToggleTitle" = "從舊版 Growser 加密錢包匯入？";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As to gain access to your assets from a different device */
 "wallet.restoreWalletBackButtonTitle" = "還原帳戶";
@@ -1559,7 +1559,7 @@
 "wallet.settingsResetWalletAlertMessage" = "此動作無法回復。您只能使用復原詞句重新取得帳戶存取權，以使用您的加密資產。";
 
 /* The title the confirmation dialog when resetting the wallet. As in to erase the users wallet from the device */
-"wallet.settingsResetWalletAlertTitle" = "您確定要重設 Brave 錢包嗎？";
+"wallet.settingsResetWalletAlertTitle" = "您確定要重設 Growser 錢包嗎？";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As in the first step of an onboarding process is to welcome a user. */
 "wallet.setupCryptoButtonBackButtonTitle" = "歡迎";
@@ -1568,13 +1568,13 @@
 "wallet.setupCryptoButtonTitle" = "開始使用";
 
 /* The subtitle displayed in the section for user that need to create a brand new wallet */
-"wallet.setupCryptoCreateNewSubTitle" = "在幾分鐘內開始使用 Brave 錢包。";
+"wallet.setupCryptoCreateNewSubTitle" = "在幾分鐘內開始使用 Growser 錢包。";
 
 /* The title displayed in the section for user that need to create a brand new wallet */
 "wallet.setupCryptoCreateNewTitle" = "需要新的錢包嗎？";
 
 /* The disclaimer text at the bottom of the first step of onboarding flow. */
-"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Brave 和 Brave 標誌是 Brave 的註冊商標。其他產品名稱和標誌為各自公司的商標。保留一切權利。";
+"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Growser 和 Growser 標誌是 Growser 的註冊商標。其他產品名稱和標誌為各自公司的商標。保留一切權利。";
 
 /* The subtitle displayed in the section for user that need to restore an existed wallet */
 "wallet.setupCryptoRestoreSubTitle" = "匯入您現有的錢包。";
@@ -1583,7 +1583,7 @@
 "wallet.setupCryptoRestoreTitle" = "已有錢包？";
 
 /* The subtitle displayed on the 'setup crypto' onboarding screen */
-"wallet.setupCryptoSubtitle" = "管理您的加密貨幣和 NFT。Brave 錢包支援以太坊、EVM 鏈、Solana 等。";
+"wallet.setupCryptoSubtitle" = "管理您的加密貨幣和 NFT。Growser 錢包支援以太坊、EVM 鏈、Solana 等。";
 
 /* The title displayed on the 'setup crypto' onboarding screen */
 "wallet.setupCryptoTitle" = "瀏覽器原生、\n自行保管\n且多鏈。";
@@ -1637,10 +1637,10 @@
 "wallet.signedTransactionTitle" = "交易已完成簽署";
 
 /* The title of the view shown above a Sign In With Ethereum request. */
-"wallet.signInWithBraveWallet" = "使用 Brave 錢包登入";
+"wallet.signInWithBraveWallet" = "使用 Growser 錢包登入";
 
 /* The title of the view shown when a security issue is detected with a Sign In With Ethereum request. */
-"wallet.signInWithBraveWalletMessage" = "您正在登入 %1$@。Brave 錢包會與 %2$@ 分享您的錢包位址。";
+"wallet.signInWithBraveWalletMessage" = "您正在登入 %1$@。Growser 錢包會與 %2$@ 分享您的錢包位址。";
 
 /* A warning message to tell users that the sign request message contains consecutive new-line characters. */
 "wallet.signMessageConsecutiveNewlineWarning" = "偵測到連續的換行字元！";
@@ -1706,10 +1706,10 @@
 "wallet.snsDomainInterstitialPageButtonProceed" = "使用 SNS 伺服器繼續操作";
 
 /* Description displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. The first '%@' will be replaced with a link to Brave's wiki page which will link to the providersterms of use page and privacy policy page. The last '%@' will be replaced with the value of 'snsDomainInterstitialPagePrivacyPolicy'. */
-"wallet.snsDomainInterstitialPageDescription" = "Brave 將使用第三方來解析 .sol 網域名稱。Brave 會隱藏您的 IP 位址。若您啟用此選項，則第三方會看到有人嘗試造訪這些 .sol 網域。更多關於我們所使用的第三方及其隱私權政策，請參閱我們的<a href=%@>說明頁面</a>。";
+"wallet.snsDomainInterstitialPageDescription" = "Growser 將使用第三方來解析 .sol 網域名稱。Growser 會隱藏您的 IP 位址。若您啟用此選項，則第三方會看到有人嘗試造訪這些 .sol 網域。更多關於我們所使用的第三方及其隱私權政策，請參閱我們的<a href=%@>說明頁面</a>。";
 
 /* Title displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. */
-"wallet.snsDomainInterstitialPageTitle" = "是否在 Brave 中啟用 Solana Name Service (SNS) 支援？";
+"wallet.snsDomainInterstitialPageTitle" = "是否在 Growser 中啟用 Solana Name Service (SNS) 支援？";
 
 /* A description of an Solana account, displayed in Accounts tab. */
 "wallet.solAccountDescription" = "Solana + SVM 鏈";
@@ -1817,7 +1817,7 @@
 "wallet.solanaSignTransactionDetails" = "詳細資訊";
 
 /* The warning message to let users understand the risk of using Brave Wallet to sign any transaction. */
-"wallet.solanaSignTransactionWarning" = "請注意，Brave 無法驗證您簽名後會發生什麼。簽名可以授權別人對您的帳戶進行幾乎任何操作或代表您，包括（但不限於）將您的帳戶和加密貨幣資產的完全控制權交給提出請求的網站。因此只有在您確定要採取此操作並信任請求的網站時才簽名。";
+"wallet.solanaSignTransactionWarning" = "請注意，Growser 無法驗證您簽名後會發生什麼。簽名可以授權別人對您的帳戶進行幾乎任何操作或代表您，包括（但不限於）將您的帳戶和加密貨幣資產的完全控制權交給提出請求的網站。因此只有在您確定要採取此操作並信任請求的網站時才簽名。";
 
 /* The title displayed above the value of a Solana swap transaction in transaction confirmation view, transaction details view and transaction summary rows. */
 "wallet.solanaSwapTransactionTitle" = "兌換交易";
@@ -1913,7 +1913,7 @@
 "wallet.swapCryptoToTitle" = "目的地";
 
 /* The description of where user will see once a test network has been picked in swap screen. '%@' will be replaced with a network such as 'Rinkeby Test Network' or 'Ropsten Test Network' */
-"wallet.swapCryptoUnsupportNetworkBody" = "Brave 目前不支援透過 %@ 進行交換。請切換至支援的測試網路。";
+"wallet.swapCryptoUnsupportNetworkBody" = "Growser 目前不支援透過 %@ 進行交換。請切換至支援的測試網路。";
 
 /* The title below account picker when user has selected a test network to swap cryptos */
 "wallet.swapCryptoUnsupportNetworkTitle" = "不支援的測試網路";
@@ -1925,7 +1925,7 @@
 "wallet.swapDexAggrigatorDisclaimer" = "%1$@ 會處理 %2$@ 位址和 IP 位址，以執行交易 (包括取得報價)。%3$@ 只會將此資料用於交易處理。";
 
 /* A disclaimer note shown on the Swap screen. '%@' will be replaced by a company name, ex. '0x' / 'Jupiter'. 'DEX aggregator' is a type of blockchain-based service (decentralized exchange) */
-"wallet.swapDexAggrigatorNote" = "Brave 使用 %@ 作為 DEX 聚合器。";
+"wallet.swapDexAggrigatorNote" = "Growser 使用 %@ 作為 DEX 聚合器。";
 
 /* The 'Limit' order type. Limit orders only execute when the price requirements are met */
 "wallet.swapLimitOrderType" = "限定";
@@ -2177,16 +2177,16 @@
 "wallet.txStatusViewInActivity" = "在活動中檢視";
 
 /* Description displayed when users chose Brave to ask them if they want the Unstoppable Domains to be resolved every time they enter one. The first '%@' will be replaced with a list of supported TLDs like '.x' or '.bitcoin'. The second '%@' be replaced with a link to Chainstack's terms of use page. The third '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The fourth '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.udDomainInterstitialPageDescription" = "位於 Unstoppable Domains 上的網域名稱。Brave 會隱藏您的 IP 位址。如果您啟用這項功能，Chainstack 只會看到有人正在嘗試造訪這些網域，不會看到其他資料。查看 Chainstack 的<a href=%1$@>%2$@</a>和<a href=%3$@>%4$@</a>。";
+"wallet.udDomainInterstitialPageDescription" = "位於 Unstoppable Domains 上的網域名稱。Growser 會隱藏您的 IP 位址。如果您啟用這項功能，Chainstack 只會看到有人正在嘗試造訪這些網域，不會看到其他資料。查看 Chainstack 的<a href=%1$@>%2$@</a>和<a href=%3$@>%4$@</a>。";
 
 /* The intro displayed below `udDomainInterstitialPageTitle`. */
-"wallet.udDomainInterstitialPageIntro" = "Brave 將會是設定的 Ethereum RPC 服務，預設使用 Chainstack 來解析：";
+"wallet.udDomainInterstitialPageIntro" = "Growser 將會是設定的 Ethereum RPC 服務，預設使用 Chainstack 來解析：";
 
 /* The title of the button that user can tap to reveal more unstoppable domain extensions we support to resolve. */
 "wallet.udDomainInterstitialPageMore" = "+ 更多";
 
 /* Title displayed when users chose Brave to ask them if they want the Unstoppable Domains domain to be resolved every time they enter one. */
-"wallet.udDomainInterstitialPageTitle" = "在 Brave 中啟用支援 Unstoppable Domains？";
+"wallet.udDomainInterstitialPageTitle" = "在 Growser 中啟用支援 Unstoppable Domains？";
 
 /* The description for the options to allow Unstoppable Domain domain names. '%@' will be replaced with a url to explain more about Unstoppable Domains. */
 "wallet.udResolveMethodDescription" = "[深入瞭解](%@) Unstoppable Domains 的隱私注意事項。";

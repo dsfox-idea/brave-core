@@ -86,7 +86,7 @@
 "wallet.addCustomTokenTitle" = "Токен";
 
 /* The description of the view shown over a dapps website that describes what adding a new network will do. */
-"wallet.addNetworkDescription" = "Це дозволить використовувати цю мережу в гаманці Brave.";
+"wallet.addNetworkDescription" = "Це дозволить використовувати цю мережу в гаманці Growser.";
 
 /* The subtitle of the view shown over a dapps website that requests permission from the user to add a new network. */
 "wallet.addNetworkSubtitle" = "Дозволити цьому сайту додавати мережу?";
@@ -161,7 +161,7 @@
 "wallet.auroraPopupDontShowAgain" = "Більше не показувати";
 
 /* The footer beneath the auto-lock title and interval duration */
-"wallet.autoLockFooter" = "Тривалість очікування в хвилинах до автоматичного блокування гаманця Brave";
+"wallet.autoLockFooter" = "Тривалість очікування в хвилинах до автоматичного блокування гаманця Growser";
 
 /* The title that appears before an auto-lock interval. Example: Automatically lock after 5 minutes */
 "wallet.autoLockTitle" = "Автоматично блокувати за";
@@ -221,10 +221,10 @@
 "wallet.biometricsSetupFaceId" = "Face ID";
 
 /* The sub-title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupSubTitle" = "Застосувати %@, щоб розблокувати гаманець Brave?";
+"wallet.biometricsSetupSubTitle" = "Застосувати %@, щоб розблокувати гаманець Growser?";
 
 /* The title shown when a user is asked if they would like to setup biometric unlock. `%@` will be replaced with the biometric type name of the current device. */
-"wallet.biometricsSetupTitle" = "Розблокувати гаманець Brave за допомогою %@";
+"wallet.biometricsSetupTitle" = "Розблокувати гаманець Growser за допомогою %@";
 
 /* Type of biometrics. This will be used in Biometric setup screen. */
 "wallet.biometricsSetupTouchId" = "Touch ID";
@@ -233,10 +233,10 @@
 "wallet.bitcoinImportExtendedKeyWarning" = "Підтримується лише %@ розширених ключів.";
 
 /* The title for Brave Fee label in Swap. The fee percentage is displayed beside the label. */
-"wallet.braveFeeLabel" = "Комісія Brave: %@";
+"wallet.braveFeeLabel" = "Комісія Growser: %@";
 
 /* A disclaimer that appears at the bottom of an swap screen which discloses the fixed Brave fee included in the swap quotes. '%@' will be replaced by a percentage. For example: 'Quote includes a 0.875% Brave fee' */
-"wallet.braveSwapFeeDisclaimer" = "Вартість передбачає комісію Brave розміром %@.";
+"wallet.braveSwapFeeDisclaimer" = "Вартість передбачає комісію Growser розміром %@.";
 
 /* The text beside the striked-through percentage Brave would normally charge for a swap. */
 "wallet.braveSwapFree" = "Безкоштовно";
@@ -251,7 +251,7 @@
 "wallet.btcAvailableBalanceTitle" = "Доступно\n";
 
 /* A warning displayed in row before the Send button in Send Crypto view when a Bitcoin asset is selected. */
-"wallet.btcOrdinalsUnsupportedWarning" = "Гаманець Brave наразі не підтримує Bitcoin NFT (ординали). Надсилаючи BTC з адреси, що має ординали, можна ненавмисно їх передати.";
+"wallet.btcOrdinalsUnsupportedWarning" = "Гаманець Growser наразі не підтримує Bitcoin NFT (ординали). Надсилаючи BTC з адреси, що має ординали, можна ненавмисно їх передати.";
 
 /* Description displayed in row beside users pending balance. */
 "wallet.btcPendingBalanceDesc" = "Очікується зміна балансу гаманця.";
@@ -452,7 +452,7 @@
 "wallet.creatingWallet" = "Створення гаманця…";
 
 /* The title of the crypto tab */
-"wallet.cryptoTitle" = "Гаманець Brave";
+"wallet.cryptoTitle" = "Гаманець Growser";
 
 /* The title above the input fields for users to input network block explorer urls in Custom Network Details Screen. */
 "wallet.customNetworkBlockExplorerUrlsTitle" = "URL-адреси оглядача блоків";
@@ -524,13 +524,13 @@
 "wallet.customTokenTitle" = "Додати користувацький актив";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. The '%@' will be the site attempting to connect. For example: "app.uniswap.org wants to interact with Brave Wallet" */
-"wallet.dappsConnectionNotificationOriginTitle" = "Користувач %@ хоче взаємодіяти з гаманцем Brave";
+"wallet.dappsConnectionNotificationOriginTitle" = "Користувач %@ хоче взаємодіяти з гаманцем Growser";
 
 /* The title of the notification which will prompt at the top of the browser when users are visiting web3 site that is not yet connected with Brave Wallet. */
-"wallet.dappsConnectionNotificationTitle" = "Ця сторінка хоче взаємодіяти з Brave Wallet";
+"wallet.dappsConnectionNotificationTitle" = "Ця сторінка хоче взаємодіяти з Growser Wallet";
 
 /* A message that will be displayed under the section header when there is no dapps have been granted wallet connection. */
-"wallet.dappsSettingsConnectedSitesSectionEmpty" = "Підключені до гаманця Brave децентралізовані програми відображатимуться тут";
+"wallet.dappsSettingsConnectedSitesSectionEmpty" = "Підключені до гаманця Growser децентралізовані програми відображатимуться тут";
 
 /* The title of the section that will list all the permitted dapp connections */
 "wallet.dappsSettingsConnectedSitesSectionTitle" = "Підключені децентралізовані програми";
@@ -593,7 +593,7 @@
 "wallet.decimalsPrecision" = "Точність у знаках після коми";
 
 /* The message displayed when the user takes a screenshot of their dapp decrypt request. */
-"wallet.decryptMessageScreenshotDetectedMessage" = "Попередження: знімок екрана з вашим повідомленням може бути збережено у файловому сховищі, його зможе прочитати будь-який додаток із доступом до фотографій. Brave рекомендує не зберігати цей знімок екрана та якомога швидше його видалити.";
+"wallet.decryptMessageScreenshotDetectedMessage" = "Попередження: знімок екрана з вашим повідомленням може бути збережено у файловому сховищі, його зможе прочитати будь-який додаток із доступом до фотографій. Growser рекомендує не зберігати цей знімок екрана та якомога швидше його видалити.";
 
 /* The title of the button to approve a decrypt request from a dapps website. */
 "wallet.decryptRequestApprove" = "Дозволити";
@@ -716,10 +716,10 @@
 "wallet.ensDomainInterstitialPageButtonProceed" = "Продовжити з використанням сервера Chainstack";
 
 /* Description displayed when users chose Brave to ask them if they want the ENS to be resolved every time they enter one. The first '%@' will be replaced with a link to Chainstack's terms of use page. The second '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The third '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.ensDomainInterstitialPageDescription" = "Brave покладатиметься на налаштований вами RPC-сервіс Ethereum Mainnet, яким за умовчанням є Chainstack, для обробки доменних імен .eth, які є в реєстрі Ethereum Name Service (ENS). Brave приховає вашу IP-адресу. Якщо ввімкнути цей параметр, Chainstack бачитиме лише те, що хтось намагається відвідати домени .eth. Див. <a href=%1$@>%2$@</a> та <a href=%3$@>%4$@</a> Chainstack.";
+"wallet.ensDomainInterstitialPageDescription" = "Growser покладатиметься на налаштований вами RPC-сервіс Ethereum Mainnet, яким за умовчанням є Chainstack, для обробки доменних імен .eth, які є в реєстрі Ethereum Name Service (ENS). Growser приховає вашу IP-адресу. Якщо ввімкнути цей параметр, Chainstack бачитиме лише те, що хтось намагається відвідати домени .eth. Див. <a href=%1$@>%2$@</a> та <a href=%3$@>%4$@</a> Chainstack.";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS domain to be resolved every time they enter one. */
-"wallet.ensDomainInterstitialPageTitle" = "Увімкнути підтримку Ethereum Name Service (ENS) у Brave?";
+"wallet.ensDomainInterstitialPageTitle" = "Увімкнути підтримку Ethereum Name Service (ENS) у Growser?";
 
 /* Title on the button that users can click to enable Brave to resolve the ENS offchain lookup for the domain they entered. */
 "wallet.ensOffchainDomainInterstitialPageButtonProceed" = "Продовжити пошук за межами мережі";
@@ -728,7 +728,7 @@
 "wallet.ensOffchainDomainInterstitialPageDescription" = "Це доменне ім’я .eth зберігається поза мережею та оброблятиметься стороннім шлюзом. Якщо ви ввімкнете пошук поза мережею ENS, сторонній шлюз побачить, що ви намагаєтеся відвідати домен .eth. <a href=%1$@>%2$@</a>.";
 
 /* Title displayed when users chose Brave to ask them if they want the ENS Offchain domain to be resolved every time they enter one. */
-"wallet.ensOffchainDomainInterstitialPageTitle" = "Увімкнути підтримку пошуку за межами мережі Ethereum Name Service (ENS) у Brave?";
+"wallet.ensOffchainDomainInterstitialPageTitle" = "Увімкнути підтримку пошуку за межами мережі Ethereum Name Service (ENS) у Growser?";
 
 /* Button title when requesting to do an ENS off chain lookup. */
 "wallet.ensOffchainGatewayButton" = "Використати домен мережі ENS";
@@ -737,7 +737,7 @@
 "wallet.ensOffchainGatewayDesc" = "Схоже, ви ввели ENS-адресу. Для вирішення цього запиту буде використано сторонній засіб. Це допоможе переконатися, що ваш домен .eth не розкрито, а транзакція безпечна.";
 
 /* Title shown send address / ENS domain when requesting to do an ENS off chain lookup. */
-"wallet.ensOffchainGatewayTitle" = "Brave підтримує використання позамережевих шлюзів для вирішення доменів .eth.";
+"wallet.ensOffchainGatewayTitle" = "Growser підтримує використання позамережевих шлюзів для вирішення доменів .eth.";
 
 /* The description for the options to allow Ethereum Name service domain names offchain. '%@' will be replaced with a url to explain more about ENS offchain lookup. */
 "wallet.ensOffchainResolveMethodDescription" = "[Детальніше](%@) про використання позамережевих шлюзів ENS з метою конфіденційності.";
@@ -962,7 +962,7 @@
 "wallet.legalTitle" = "Перед початком";
 
 /* The responsibility explained in screen for users to check indicates they understand before setting up a wallet. */
-"wallet.legalUserResponsibility" = "Я розумію, що це гаманець із самостійним зберіганням ключів і що лише я відповідаю за будь-які пов’язані кошти, активи чи рахунки, а також за вжиття відповідних заходів для убезпечення, захисту та резервного копіювання мого гаманця. Я розумію, що Brave НЕ може отримати доступ до мого гаманця чи скасувати транзакції від мого імені й що моя фраза для відновлення є ЄДИНИМ способом відновити доступ у разі втрати пароля, викрадення пристрою чи за подібних обставин.";
+"wallet.legalUserResponsibility" = "Я розумію, що це гаманець із самостійним зберіганням ключів і що лише я відповідаю за будь-які пов’язані кошти, активи чи рахунки, а також за вжиття відповідних заходів для убезпечення, захисту та резервного копіювання мого гаманця. Я розумію, що Growser НЕ може отримати доступ до мого гаманця чи скасувати транзакції від мого імені й що моя фраза для відновлення є ЄДИНИМ способом відновити доступ у разі втрати пароля, викрадення пристрою чи за подібних обставин.";
 
 /* The title of the lock option inside the menu when user clicks the three dots button beside assets search button. */
 "wallet.lock" = "Заблокувати";
@@ -1025,13 +1025,13 @@
 "wallet.meldTransactionPartner" = "Партнер транзакцій";
 
 /* The description of the pop up when user first time open buy screen in Brave Wallet. */
-"wallet.meldTransactionPartnerDescription" = "Гаманець Brave працює з Meld.io для збору й показу криптопровайдерів, які підходять для вашого регіону. Для завершення транзакції ми надаємо Meld.io дані, зокрема адресу вашого гаманця та код країни. Додаткову інформацію можна знайти в умовах використання Meld.";
+"wallet.meldTransactionPartnerDescription" = "Гаманець Growser працює з Meld.io для збору й показу криптопровайдерів, які підходять для вашого регіону. Для завершення транзакції ми надаємо Meld.io дані, зокрема адресу вашого гаманця та код країни. Додаткову інформацію можна знайти в умовах використання Meld.";
 
 /* The description of the checkbox for the pop up when user first time open buy screen in Brave Wallet. */
 "wallet.meldTransactionPartnerLegal" = "Я прочитав(-ла) та погоджуюсь з [Умовами використання Meld](%@)";
 
 /* The title shown on the wallet settings page, and the value shown when selecting the default wallet as Brave Wallet in wallet settings. */
-"wallet.module" = "Гаманець Brave";
+"wallet.module" = "Гаманець Growser";
 
 /* A button title for user to open more option in asset details screen other than buy/send/swap. */
 "wallet.more" = "Більше";
@@ -1079,7 +1079,7 @@
 "wallet.newSiteConnectFooter" = "Підключайтеся лише до сайтів, яким ви довіряєте.";
 
 /* The message displayed below the dapp's origin url in new site connection screen. */
-"wallet.newSiteConnectMessage" = "Підключити до гаманця Brave";
+"wallet.newSiteConnectMessage" = "Підключити до гаманця Growser";
 
 /* The transaction edit error alert button which will dismiss the alert. */
 "wallet.newSiteConnectScreenTitle" = "Підключити";
@@ -1127,7 +1127,7 @@
 "wallet.nftDetailTokenStandard" = "Стандарт токена";
 
 /* The title of the alert that asks users either to enable NFT discovery or import manually. `SimpleHash` is the third-party service name, so it does not need to be translated. */
-"wallet.nftDiscoveryCalloutDescription" = "Brave Wallet може використовувати сторонні сервіси для автоматичного відображення ваших NFT. Brave розкриє адреси ваших гаманців сервісу SimpleHash, щоб він працював. Детальніше.";
+"wallet.nftDiscoveryCalloutDescription" = "Growser Wallet може використовувати сторонні сервіси для автоматичного відображення ваших NFT. Growser розкриє адреси ваших гаманців сервісу SimpleHash, щоб він працював. Детальніше.";
 
 /* This is the same `Learn more` at the end of `nftDiscoveryCalloutDescription`, but we need a separat translation to detect the range of it in order to build some attributed strings. */
 "wallet.nftDiscoveryCalloutDescriptionLearnMore" = "Докладніше";
@@ -1163,10 +1163,10 @@
 "wallet.nftRemoveFromWallet" = "Не показувати в гаманці";
 
 /* The description of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertDescription" = "NFT буде видалено з гаманця Brave, але залишено в блокчейні. Якщо ви видалите його, а потім передумаєте, потрібно буде виконати імпорт уручну.";
+"wallet.nftRemoveFromWalletAlertDescription" = "NFT буде видалено з гаманця Growser, але залишено в блокчейні. Якщо ви видалите його, а потім передумаєте, потрібно буде виконати імпорт уручну.";
 
 /* The title of the alert when user attempts to remove an NFT from wallet. */
-"wallet.nftRemoveFromWalletAlertTitle" = "Видалити з гаманця Brave?";
+"wallet.nftRemoveFromWalletAlertTitle" = "Видалити з гаманця Growser?";
 
 /* The description of the NFTs row in Account Details when user has zero or multiple NFTs. */
 "wallet.nftsDescription" = "%d NFT";
@@ -1217,7 +1217,7 @@
 "wallet.onboardingNetworkSelectionTitle" = "Підтримувані мережі";
 
 /* The subtitle of the last step of creating a new wallet. */
-"wallet.onbordingCompletedSubTitle" = "Гаманець Brave готовий до використання.";
+"wallet.onbordingCompletedSubTitle" = "Гаманець Growser готовий до використання.";
 
 /* The title of the last step of creating a new wallet. */
 "wallet.onbordingCompletedTitle" = "Усе готово!";
@@ -1274,7 +1274,7 @@
 "wallet.portfolioPageTitle" = "Портфель";
 
 /* The message displayed when the user takes a screenshot of their private key */
-"wallet.privateKeyScreenshotDetectedMessage" = "Попередження: знімок екрана з вашим особистим ключем може бути збережено на хмарному файловому сервісі, його зможе зчитати будь-який додаток з доступом до фото. Brave рекомендує не зберігати знімок екрана й видалити його якомога швидше.";
+"wallet.privateKeyScreenshotDetectedMessage" = "Попередження: знімок екрана з вашим особистим ключем може бути збережено на хмарному файловому сервісі, його зможе зчитати будь-який додаток з доступом до фото. Growser рекомендує не зберігати знімок екрана й видалити його якомога швидше.";
 
 /* The title for Protocol Fee label in Swap. The fee percentage is displayed beside the label. */
 "wallet.protocolFeeLabel" = "Комісія за протокол: %@";
@@ -1316,7 +1316,7 @@
 "wallet.purchaseMethodButtonTitle" = "Вибір способу придбання";
 
 /* The message displayed when the user takes a screenshot of their recovery phrase */
-"wallet.recoveryPhraseScreenshotDetectedMessage" = "Попередження: знімок екрана з вашою фразою для відновлення може бути збережено на хмарному файловому сервісі, його зможе зчитати будь-який додаток з доступом до фото. Brave рекомендує не зберігати знімок екрана й видалити його якомога швидше.";
+"wallet.recoveryPhraseScreenshotDetectedMessage" = "Попередження: знімок екрана з вашою фразою для відновлення може бути збережено на хмарному файловому сервісі, його зможе зчитати будь-який додаток з доступом до фото. Growser рекомендує не зберігати знімок екрана й видалити його якомога швидше.";
 
 /* A description for a refresh icon that when pressed receives a new snap quote for the currently swap assets */
 "wallet.refreshMarketPriceLabel" = "Оновити ринкову ціну";
@@ -1349,7 +1349,7 @@
 "wallet.repeatedPasswordPlaceholder" = "Ще раз уведіть пароль";
 
 /* A label for toggle for user to use to indicate importing a legacy brave wallet or not */
-"wallet.restoreLegacyBraveWalletToggleTitle" = "Імпортувати із застарілих криптовалютних гаманців Brave?";
+"wallet.restoreLegacyBraveWalletToggleTitle" = "Імпортувати із застарілих криптовалютних гаманців Growser?";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As to gain access to your assets from a different device */
 "wallet.restoreWalletBackButtonTitle" = "Відновити гаманець";
@@ -1559,7 +1559,7 @@
 "wallet.settingsResetWalletAlertMessage" = "Цю дію неможливо буде скасувати. Ваша фраза для відновлення — це єдиний спосіб відновлення доступу до ваших криптовалютних активів.";
 
 /* The title the confirmation dialog when resetting the wallet. As in to erase the users wallet from the device */
-"wallet.settingsResetWalletAlertTitle" = "Дійсно скинути налаштування гаманця Brave?";
+"wallet.settingsResetWalletAlertTitle" = "Дійсно скинути налаштування гаманця Growser?";
 
 /* The title that will be displayed when long-pressing the back button in the navigation bar. As in the first step of an onboarding process is to welcome a user. */
 "wallet.setupCryptoButtonBackButtonTitle" = "Ласкаво просимо";
@@ -1568,13 +1568,13 @@
 "wallet.setupCryptoButtonTitle" = "Почати";
 
 /* The subtitle displayed in the section for user that need to create a brand new wallet */
-"wallet.setupCryptoCreateNewSubTitle" = "Починайте роботу з гаманцем Brave за лічені хвилини.";
+"wallet.setupCryptoCreateNewSubTitle" = "Починайте роботу з гаманцем Growser за лічені хвилини.";
 
 /* The title displayed in the section for user that need to create a brand new wallet */
 "wallet.setupCryptoCreateNewTitle" = "Потрібен новий гаманець?";
 
 /* The disclaimer text at the bottom of the first step of onboarding flow. */
-"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Brave і логотип Brave logo є зареєстрованими знаками для товарів і послуг Brave. Інші назви й логотипи продуктів можуть бути знаками для товарів і послуг відповідних компаній. Усі права захищено.";
+"wallet.setupCryptoDisclaimer" = "©2023 Brave Software Inc. Growser і логотип Growser logo є зареєстрованими знаками для товарів і послуг Growser. Інші назви й логотипи продуктів можуть бути знаками для товарів і послуг відповідних компаній. Усі права захищено.";
 
 /* The subtitle displayed in the section for user that need to restore an existed wallet */
 "wallet.setupCryptoRestoreSubTitle" = "Імпортуйте наявний гаманець.";
@@ -1583,7 +1583,7 @@
 "wallet.setupCryptoRestoreTitle" = "Маєте гаманець?";
 
 /* The subtitle displayed on the 'setup crypto' onboarding screen */
-"wallet.setupCryptoSubtitle" = "Візьміть у свої руки контроль над ресурсами в криптовалютах і NFT. Гаманець Brave підтримує Ethereum, монети EVM, Solana тощо.";
+"wallet.setupCryptoSubtitle" = "Візьміть у свої руки контроль над ресурсами в криптовалютах і NFT. Гаманець Growser підтримує Ethereum, монети EVM, Solana тощо.";
 
 /* The title displayed on the 'setup crypto' onboarding screen */
 "wallet.setupCryptoTitle" = "Розроблено для браузеру.\nСамостійний контроль.\nІ багатомережність.";
@@ -1637,10 +1637,10 @@
 "wallet.signedTransactionTitle" = "Транзакцію підписано";
 
 /* The title of the view shown above a Sign In With Ethereum request. */
-"wallet.signInWithBraveWallet" = "Увійти до гаманця Brave";
+"wallet.signInWithBraveWallet" = "Увійти до гаманця Growser";
 
 /* The title of the view shown when a security issue is detected with a Sign In With Ethereum request. */
-"wallet.signInWithBraveWalletMessage" = "Ви входите в %1$@. Brave Wallet передасть адресу вашого гаманця %2$@.";
+"wallet.signInWithBraveWalletMessage" = "Ви входите в %1$@. Growser Wallet передасть адресу вашого гаманця %2$@.";
 
 /* A warning message to tell users that the sign request message contains consecutive new-line characters. */
 "wallet.signMessageConsecutiveNewlineWarning" = "Виявлено символи нового рядка, що йдуть підряд!";
@@ -1706,10 +1706,10 @@
 "wallet.snsDomainInterstitialPageButtonProceed" = "Продовжити з використанням сервера SNS";
 
 /* Description displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. The first '%@' will be replaced with a link to Brave's wiki page which will link to the providersterms of use page and privacy policy page. The last '%@' will be replaced with the value of 'snsDomainInterstitialPagePrivacyPolicy'. */
-"wallet.snsDomainInterstitialPageDescription" = "Brave використовуватиме сторонній сервіс для розрішення доменних імен .sol. Brave приховує вашу IP-адресу. Якщо ви активуєте цю функцію, сторонній сервіс побачить, що хтось намагається відвідати домени .sol, але нічого більше. Для отримання додаткової інформації про сторонні сервіси, які ми використовуємо, та їхні політики конфіденційності, перегляньте нашу <a href=%@>сторінку довідки</a>.";
+"wallet.snsDomainInterstitialPageDescription" = "Growser використовуватиме сторонній сервіс для розрішення доменних імен .sol. Growser приховує вашу IP-адресу. Якщо ви активуєте цю функцію, сторонній сервіс побачить, що хтось намагається відвідати домени .sol, але нічого більше. Для отримання додаткової інформації про сторонні сервіси, які ми використовуємо, та їхні політики конфіденційності, перегляньте нашу <a href=%@>сторінку довідки</a>.";
 
 /* Title displayed when users chose Brave to ask them if they want the SNS to be resolved every time they enter one. */
-"wallet.snsDomainInterstitialPageTitle" = "Увімкнути в Brave підтримку для Solana Name Service (SNS)?";
+"wallet.snsDomainInterstitialPageTitle" = "Увімкнути в Growser підтримку для Solana Name Service (SNS)?";
 
 /* A description of an Solana account, displayed in Accounts tab. */
 "wallet.solAccountDescription" = "Solana + SVM Chains";
@@ -1817,7 +1817,7 @@
 "wallet.solanaSignTransactionDetails" = "Відомості";
 
 /* The warning message to let users understand the risk of using Brave Wallet to sign any transaction. */
-"wallet.solanaSignTransactionWarning" = "Зверніть увагу, що Brave не зможе перевірити, що буде відбуватися, якщо ви підпишетесь. Підпис може авторизувати майже будь-яку операцію у вашому обліковому записі або від вашого імені, зокрема (але без обмежень) надання повного контролю над вашим обліковим записом і криптоактивами сайту, який робить запит. Підпишіться лише в тому разі, якщо ви впевнені, що хочете виконати цю дію й довіряєте сайту, який робить запит.";
+"wallet.solanaSignTransactionWarning" = "Зверніть увагу, що Growser не зможе перевірити, що буде відбуватися, якщо ви підпишетесь. Підпис може авторизувати майже будь-яку операцію у вашому обліковому записі або від вашого імені, зокрема (але без обмежень) надання повного контролю над вашим обліковим записом і криптоактивами сайту, який робить запит. Підпишіться лише в тому разі, якщо ви впевнені, що хочете виконати цю дію й довіряєте сайту, який робить запит.";
 
 /* The title displayed above the value of a Solana swap transaction in transaction confirmation view, transaction details view and transaction summary rows. */
 "wallet.solanaSwapTransactionTitle" = "Своп-транзакція";
@@ -1913,7 +1913,7 @@
 "wallet.swapCryptoToTitle" = "Кому";
 
 /* The description of where user will see once a test network has been picked in swap screen. '%@' will be replaced with a network such as 'Rinkeby Test Network' or 'Ropsten Test Network' */
-"wallet.swapCryptoUnsupportNetworkBody" = "Наразі Brave не підтримує свопи в %@. Перейдіть на підтримуваний блокчейн.";
+"wallet.swapCryptoUnsupportNetworkBody" = "Наразі Growser не підтримує свопи в %@. Перейдіть на підтримуваний блокчейн.";
 
 /* The title below account picker when user has selected a test network to swap cryptos */
 "wallet.swapCryptoUnsupportNetworkTitle" = "Непідтримуваний блокчейн.";
@@ -1925,7 +1925,7 @@
 "wallet.swapDexAggrigatorDisclaimer" = "%1$@ опрацьовуватиме адресу %2$@ і IP-адресу для транзакції (зокрема, отримання цін). %3$@ використовуватиме ці дані ЛИШЕ для проведення транзакцій.";
 
 /* A disclaimer note shown on the Swap screen. '%@' will be replaced by a company name, ex. '0x' / 'Jupiter'. 'DEX aggregator' is a type of blockchain-based service (decentralized exchange) */
-"wallet.swapDexAggrigatorNote" = "Brave використовує %@ як агрегатор DEX.";
+"wallet.swapDexAggrigatorNote" = "Growser використовує %@ як агрегатор DEX.";
 
 /* The 'Limit' order type. Limit orders only execute when the price requirements are met */
 "wallet.swapLimitOrderType" = "Ліміт";
@@ -2177,16 +2177,16 @@
 "wallet.txStatusViewInActivity" = "Переглянути в розділі «Активність»";
 
 /* Description displayed when users chose Brave to ask them if they want the Unstoppable Domains to be resolved every time they enter one. The first '%@' will be replaced with a list of supported TLDs like '.x' or '.bitcoin'. The second '%@' be replaced with a link to Chainstack's terms of use page. The third '%@' will be replaced with the value of 'Web3DomainInterstitialPageTAndU'. The fourth '%@' will be replaced with a link to Chainstack's privacy policy page. The last '%@' will be replaced with the value of 'Web3DomainInterstitialPagePrivacyPolicy'. */
-"wallet.udDomainInterstitialPageDescription" = "доменні імена, які є в Unstoppable Domains. Brave приховує вашу IP-адресу. Якщо ввімкнути цей параметр, Chainstack бачитиме, що хтось намагається відвідати ці домени, але жодної іншої інформації. Див. <a href=%1$@>%2$@</a> й <a href=%3$@>%4$@</a> Chainstack.";
+"wallet.udDomainInterstitialPageDescription" = "доменні імена, які є в Unstoppable Domains. Growser приховує вашу IP-адресу. Якщо ввімкнути цей параметр, Chainstack бачитиме, що хтось намагається відвідати ці домени, але жодної іншої інформації. Див. <a href=%1$@>%2$@</a> й <a href=%3$@>%4$@</a> Chainstack.";
 
 /* The intro displayed below `udDomainInterstitialPageTitle`. */
-"wallet.udDomainInterstitialPageIntro" = "Brave буде налаштованою службою Ethereum RPC, яка за замовчуванням використовує Chainstack для вирішення:";
+"wallet.udDomainInterstitialPageIntro" = "Growser буде налаштованою службою Ethereum RPC, яка за замовчуванням використовує Chainstack для вирішення:";
 
 /* The title of the button that user can tap to reveal more unstoppable domain extensions we support to resolve. */
 "wallet.udDomainInterstitialPageMore" = "+ більше";
 
 /* Title displayed when users chose Brave to ask them if they want the Unstoppable Domains domain to be resolved every time they enter one. */
-"wallet.udDomainInterstitialPageTitle" = "Увімкнути підтримку Unstoppable Domains у Brave?";
+"wallet.udDomainInterstitialPageTitle" = "Увімкнути підтримку Unstoppable Domains у Growser?";
 
 /* The description for the options to allow Unstoppable Domain domain names. '%@' will be replaced with a url to explain more about Unstoppable Domains. */
 "wallet.udResolveMethodDescription" = "[Докладніше](%@) про використання доменів Unstoppable Domains із метою конфіденційності.";

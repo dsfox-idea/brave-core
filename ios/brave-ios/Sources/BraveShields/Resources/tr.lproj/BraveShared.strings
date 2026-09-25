@@ -8,7 +8,7 @@
 "AddFilterByURL" = "URL'ye Göre Filtre Ekle";
 
 /* A discription of the Brave Player. */
-"AntiAdBlockWarningBravePlayerDescription" = "**Brave Player** ile reklamsız ve kesintisiz bir video deneyimi elde edin.";
+"AntiAdBlockWarningBravePlayerDescription" = "**Growser Player** ile reklamsız ve kesintisiz bir video deneyimi elde edin.";
 
 /* A button that disables ad-blocking and uses brave player. */
 "AntiAdBlockWarningConfirmationButton" = "Kalkanları Benim İçin Ayarla";
@@ -17,7 +17,7 @@
 "AntiAdBlockWarningDescription" = "Bu site bazı reklam engelleyicileri engellemeye başladı, bu durumda bu siteler beklendiği gibi çalışmayabilir.";
 
 /* A descriptive message explaining to disable shields on this site. */
-"AntiAdBlockWarningDescription2" = "Bu sorunu çözmek amacıyla Brave sizin için kalkan ayarlarını yapabilir. Ayar yapıldıktan sonra bu içeriği Brave Player'da izlemeyi deneyebilirsiniz.";
+"AntiAdBlockWarningDescription2" = "Bu sorunu çözmek amacıyla Growser sizin için kalkan ayarlarını yapabilir. Ayar yapıldıktan sonra bu içeriği Growser Player'da izlemeyi deneyebilirsiniz.";
 
 /* A button that dismisses the warning and does nothing. */
 "AntiAdBlockWarningDismissButton" = "Mevcut Ayarları Tut";
@@ -47,10 +47,10 @@
 "blockMobileAnnoyances" = "\"Uygulamaya Git\" Bildirimlerini engelle";
 
 /* Title for the brave player feature */
-"BravePlayer" = "Brave Player";
+"BravePlayer" = "Growser Player";
 
 /* A label for a toggle that enables automatic launching of brave player for certain sites */
-"BravePlayerAlwaysOpenYouTubeLinks" = "Bu sitedeki videoları her zaman Brave Player ile aç";
+"BravePlayerAlwaysOpenYouTubeLinks" = "Bu sitedeki videoları her zaman Growser Player ile aç";
 
 /* A button that confirms to use the brave player. */
 "BravePlayerConfirmButton" = "Dene";
@@ -59,10 +59,10 @@
 "BravePlayerDismissButton" = "Şimdi Değil";
 
 /* A description of the brave player that is presented on the info panel when clicing on the brave player icon for the first time. */
-"BravePlayerInfoMessage" = "Brave Player ile videoları kesintisiz izleyin.";
+"BravePlayerInfoMessage" = "Growser Player ile videoları kesintisiz izleyin.";
 
 /* Title for the brave player info popup which appears when clicking on the brave player icon on the navigation bar. */
-"BravePlayerInfoTitle" = "Brave Player'da İzle";
+"BravePlayerInfoTitle" = "Growser Player'da İzle";
 
 /* A title to the content filtering page under global shield settings and the title on the Content filtering page */
 "ContentFiltering" = "İçerik Filtreleme";
@@ -98,10 +98,10 @@
 "DomainBlockedGoBackAction" = "Geri Git";
 
 /* A description in the warning page that appears when a page was blocked */
-"DomainBlockedPageDescription" = "İzleyicilerin ve reklamların katı bir şekilde engellenmesini istediğiniz için, Brave bu siteyi ilk ağ bağlantısından önce engelliyor.";
+"DomainBlockedPageDescription" = "İzleyicilerin ve reklamların katı bir şekilde engellenmesini istediğiniz için, Growser bu siteyi ilk ağ bağlantısından önce engelliyor.";
 
 /* A message in the warning page that appears when a page was blocked */
-"DomainBlockedPageMessage" = "Brave şu sitenin yüklenmesini engelledi:";
+"DomainBlockedPageMessage" = "Growser şu sitenin yüklenmesini engelledi:";
 
 /* A title in the warning page that appears when a page was blocked */
 "DomainBlockedPageTitle" = "Bu Site Diğer Sitelerdeki Hareketinizi İzleme Girişiminde Bulunabilir";
@@ -218,7 +218,7 @@
 "ShredOnAppClose" = "Uygulama Kapatıldığında";
 
 /* The description for shredding when the app is closed */
-"ShredOnAppCloseDescription" = "Tarama verileri, Brave uygulaması kapatıldığında / yeniden başlatıldığında otomatik olarak yok edilir";
+"ShredOnAppCloseDescription" = "Tarama verileri, Growser uygulaması kapatıldığında / yeniden başlatıldığında otomatik olarak yok edilir";
 
 /* An option setting for automatically shredding when the site is closed */
 "ShredOnSiteTabsClosed" = "Site Sekmeleri Kapatıldığında";
