@@ -688,11 +688,12 @@ const update = () => {
       'res_chromium',
     )
     for (const density of fs.readdirSync(androidIconSource)) {
-      const freLogo = path.join(androidIconSource, density, 'fre_product_logo.png')
-      if (fs.existsSync(freLogo)) {
-        copyAndroidResourceMapping[freLogo] = [
-          path.join(freLogoDest, density, 'fre_product_logo.png'),
-        ]
+      // Growser-300: the payment sheet's product_logo_name lives beside it.
+      for (const name of ['fre_product_logo.png', 'product_logo_name.png']) {
+        const logo = path.join(androidIconSource, density, name)
+        if (fs.existsSync(logo)) {
+          copyAndroidResourceMapping[logo] = [path.join(freLogoDest, density, name)]
+        }
       }
     }
 
