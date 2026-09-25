@@ -1281,11 +1281,9 @@ Are you sure you want to do this?
       <message name="IDS_DEVICE_REQUIRE_AUTH_TO_SYNC_PASSWORDS_SUMMARY" desc="Summary displayed on Sync passwords data preference turned off switch to inform user that in order to turn on Passwords sync, device should have enabled lockscreen biometrics/passcode authentication">
         To sync passwords, please enable biometrics/passcode authentication on your Android device. This extra security measure helps keep your passwords safe.
       </message>
+      <!-- Growser-312: our policy, the one the desktop links; no terms of use of ours yet. -->
       <message name="IDS_BRAVE_PRIVACY_NOTICE_URL" desc="URL for the Growser privacy notice" translateable="false">
-        https://brave.com/privacy_android
-      </message>
-      <message name="IDS_BRAVE_TERMS_OF_SERVICE_URL" desc="URL for Growser Terms of Service" translateable="false">
-        https://brave.com/terms_of_use
+        https://growser.org/privacy.html
       </message>
       <message name="IDS_BRAVE_LICENSE_TEXT" desc="Title for Growser License">
         Growser License
