@@ -4,6 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
+import BraveShared  // Growser-321
 import Combine
 import FaviconModels
 import Foundation
@@ -283,8 +284,9 @@ class ChromiumTabState: TabState, TabStateImpl {
       // New Tab Page is a special case, should be treated as `unknown` instead of `localhost`
       return .unknown
     }
+    // Growser-321: our WebUI scheme, not Brave's.
     let isAppSpecificURL =
-      lastCommittedURL.scheme == "brave" || lastCommittedURL.scheme == "chrome"
+      lastCommittedURL.scheme == URL.webUI.scheme || lastCommittedURL.scheme == "chrome"
       || InternalURL.isValid(url: lastCommittedURL)
     if isAppSpecificURL {
       return .localhost

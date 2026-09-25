@@ -310,7 +310,8 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
     let container = UINavigationController(rootViewController: controller)
     controller.title = L10nUtils.string(messageId: .BRAVE_ACCOUNT_TITLE)
     controller.webView.braveAccountDialogMode = dialogMode
-    controller.webView.load(URLRequest(url: URL(string: "brave://account")!))
+    // Growser-321: our WebUI scheme, not Brave's.
+    controller.webView.load(URLRequest(url: URL(string: "\(URL.webUI.scheme)://account")!))
     controller.navigationItem.rightBarButtonItem = .doneButton { [unowned container] in
       container.dismiss(animated: true)
     }
@@ -1377,9 +1378,7 @@ class SettingsViewController: TableViewController, BraveAccountAuthenticationObs
         Row(
           text: Strings.settingsLicenses,
           selection: { [unowned self] in
-            if let url = URL(string: "brave://credits") {
-              settingsDelegate?.settingsOpenURLInNewTab(url)
-            }
+            settingsDelegate?.settingsOpenURLInNewTab(.webUI.credits)  // Growser-321
           },
           accessory: .disclosureIndicator
         ),

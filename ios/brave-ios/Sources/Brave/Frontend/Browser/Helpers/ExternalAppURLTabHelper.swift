@@ -4,6 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
+import BraveShared  // Growser-321
 import BraveStrings
 import BraveUI
 import Foundation
@@ -172,7 +173,8 @@ class ExternalAppURLTabHelper: TabPolicyDecider, @preconcurrency TabObserver {
     }
 
     // Our own schemes are loaded in the web view
-    if scheme.contains("brave") || scheme.contains("chrome") {
+    // Growser-321: growser, and the growser-beta/-debug/-nightly app schemes.
+    if scheme.contains(URL.webUI.scheme) || scheme.contains("chrome") {
       return false
     }
 

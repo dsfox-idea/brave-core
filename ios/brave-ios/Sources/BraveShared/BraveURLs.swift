@@ -101,15 +101,24 @@ extension URL {
     )!
   }
   public enum WebUI {
-    public static let aiChat = URL(string: "brave://leo-ai")!
+    // Growser-321: the scheme the core serves WebUI under - kBraveUIScheme in
+    // components/constants/url_constants.h, "growser" since the desktop rename.
+    // Every Swift check and WebUI URL spells it through this, so the two
+    // sides cannot part again.
+    public static let scheme = "growser"
+    public static let credits = URL(string: "\(scheme)://credits")!  // Growser-321
+    public static let aiChat = URL(string: "\(scheme)://leo-ai")!  // Growser-321
 
     public enum Wallet {
-      public static let home = URL(string: "brave://wallet/crypto/portfolio/assets")!
-      public static let buy = URL(string: "brave://wallet/crypto/buy")!
-      public static let send = URL(string: "brave://wallet/crypto/send")!
-      public static let swap = URL(string: "brave://wallet/crypto/swap")!
-      public static let deposit = URL(string: "brave://wallet/crypto/deposit")!
-      public static let activity = URL(string: "brave://wallet/crypto/portfolio/activity")!
+      // Growser-321: the scheme, as above.
+      public static let home = URL(string: "\(WebUI.scheme)://wallet/crypto/portfolio/assets")!
+      public static let buy = URL(string: "\(WebUI.scheme)://wallet/crypto/buy")!
+      public static let send = URL(string: "\(WebUI.scheme)://wallet/crypto/send")!
+      public static let swap = URL(string: "\(WebUI.scheme)://wallet/crypto/swap")!
+      public static let deposit = URL(string: "\(WebUI.scheme)://wallet/crypto/deposit")!
+      public static let activity = URL(
+        string: "\(WebUI.scheme)://wallet/crypto/portfolio/activity"
+      )!
     }
     public static let wallet = Wallet.self
   }

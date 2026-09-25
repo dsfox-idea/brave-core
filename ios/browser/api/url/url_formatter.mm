@@ -9,6 +9,8 @@
 #include "base/functional/callback.h"
 #include "base/strings/string_util.h"
 #include "base/strings/sys_string_conversions.h"
+#include "base/strings/utf_string_conversions.h"      // Growser-321
+#include "brave/components/constants/url_constants.h"  // Growser-321
 #include "build/build_config.h"
 #include "components/url_formatter/elide_url.h"
 #include "components/url_formatter/url_formatter.h"
@@ -33,7 +35,6 @@ BraveURLSchemeDisplay const BraveURLSchemeDisplayOmitCryptographic =
 
 namespace {
 constexpr char16_t kChromeSchema16[] = u"chrome://";
-constexpr char16_t kBraveSchema16[] = u"brave://";
 }  // namespace
 
 namespace brave_utils {
@@ -41,8 +42,11 @@ namespace brave_utils {
 bool ReplaceChromeToBraveScheme(std::u16string& url_string) {
   if (base::StartsWith(url_string, kChromeSchema16,
                        base::CompareCase::INSENSITIVE_ASCII)) {
-    base::ReplaceFirstSubstringAfterOffset(&url_string, 0, kChromeSchema16,
-                                           kBraveSchema16);
+    // Growser-321: show the scheme brave_web_client.mm registers,
+    // kBraveUIScheme, rather than a literal of its own that said "brave".
+    base::ReplaceFirstSubstringAfterOffset(
+        &url_string, 0, kChromeSchema16,
+        base::ASCIIToUTF16(std::string(kBraveUIScheme) + "://"));
     return true;
   }
 
