@@ -27,11 +27,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.android.installreferrer.api.InstallReferrerClient;
-import com.android.installreferrer.api.InstallReferrerClient.InstallReferrerResponse;
-import com.android.installreferrer.api.InstallReferrerStateListener;
-import com.android.installreferrer.api.ReferrerDetails;
-
 import org.chromium.base.ActivityState;
 import org.chromium.base.ApplicationStatus;
 import org.chromium.base.ApplicationStatus.ActivityStateListener;
@@ -42,9 +37,7 @@ import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveConfig;
-import org.chromium.chrome.browser.BraveConstants;
 import org.chromium.chrome.browser.BraveLocalState;
-import org.chromium.chrome.browser.brave_origin.BraveOriginDeepLinkHandler;
 import org.chromium.chrome.browser.customtabs.CustomTabActivity;
 import org.chromium.chrome.browser.metrics.ChangeMetricsReportingStateCalledFrom;
 import org.chromium.chrome.browser.metrics.UmaSessionStats;
@@ -113,64 +106,6 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
     private boolean mHasRestoredState;
     private boolean mCrashReportingChecked;
     private boolean mP3aChecked;
-
-    private void checkReferral() {
-        InstallReferrerClient referrerClient = InstallReferrerClient.newBuilder(this).build();
-        referrerClient.startConnection(
-                new InstallReferrerStateListener() {
-                    @Override
-                    public void onInstallReferrerSetupFinished(int responseCode) {
-                        switch (responseCode) {
-                            case InstallReferrerResponse.OK:
-                                try {
-                                    ReferrerDetails response = referrerClient.getInstallReferrer();
-                                    String referrerUrl = response.getInstallReferrer();
-                                    if (referrerUrl == null) return;
-
-                                    if (referrerUrl.equals(
-                                            BraveConstants.DEEPLINK_ANDROID_PLAYLIST)) {
-                                        ChromeSharedPreferences.getInstance()
-                                                .writeBoolean(
-                                                        BravePreferenceKeys
-                                                                .BRAVE_DEFERRED_DEEPLINK_PLAYLIST,
-                                                        true);
-                                    } else if (referrerUrl.equals(
-                                            BraveConstants.DEEPLINK_ANDROID_VPN)) {
-                                        ChromeSharedPreferences.getInstance()
-                                                .writeBoolean(
-                                                        BravePreferenceKeys
-                                                                .BRAVE_DEFERRED_DEEPLINK_VPN,
-                                                        true);
-                                    } else if (referrerUrl.equals(
-                                            BraveOriginDeepLinkHandler.PATH_TOKEN)) {
-                                        ChromeSharedPreferences.getInstance()
-                                                .writeBoolean(
-                                                        BravePreferenceKeys
-                                                                .BRAVE_DEFERRED_DEEPLINK_ORIGIN_PROMO, // presubmit: ignore-long-line
-                                                        true);
-                                    }
-                                } catch (Exception e) {
-                                    // Play Store may return a null bundle alongside an OK
-                                    // response code, which makes ReferrerDetails throw.
-                                    Log.e(TAG, "Could not get referral", e);
-                                }
-                                // Connection established.
-                                break;
-                            case InstallReferrerResponse.FEATURE_NOT_SUPPORTED:
-                                // API not available on the current Play Store app.
-                                Log.e(TAG, "InstallReferrerResponse.FEATURE_NOT_SUPPORTED");
-                                break;
-                            case InstallReferrerResponse.SERVICE_UNAVAILABLE:
-                                // Connection couldn't be established.
-                                Log.e(TAG, "InstallReferrerResponse.SERVICE_UNAVAILABLE");
-                                break;
-                        }
-                    }
-
-                    @Override
-                    public void onInstallReferrerServiceDisconnected() {}
-                });
-    }
 
     private void enableWebDiscoverPreference() {
         UserPrefs.get(assumeNonNull(getProfileProviderSupplier().get()).getOriginalProfile())
@@ -288,7 +223,8 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
         // splash container, and it is what tells the two splash treatments apart.
         mBraveSplashContainer = findViewById(R.id.brave_splash_container);
 
-        checkReferral();
+        // Growser-317: no Play Install Referrer - its deferred deep links were
+        // for playlist, VPN and Brave Origin, none of them in the product.
         if (PackageUtils.isFirstInstall(this)) {
             ChromeSharedPreferences.getInstance()
                     .writeBoolean(

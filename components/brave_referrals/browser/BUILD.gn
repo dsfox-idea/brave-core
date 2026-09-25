@@ -39,20 +39,8 @@ static_library("browser") {
     ]
   }
 
-  if (is_android) {
-    sources += [
-      "android_brave_referrer.cc",
-      "android_brave_referrer.h",
-    ]
-
-    deps += [ ":jni_headers" ]
-  }
-}
-
-if (is_android) {
-  generate_jni("jni_headers") {
-    sources = [ "//brave/android/java/org/chromium/chrome/browser/referrer/BraveReferrer.java" ]
-  }
+  # Growser-317: android_brave_referrer and its JNI left with the Play
+  # Install Referrer.
 }
 
 source_set("unit_tests") {

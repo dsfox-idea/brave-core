@@ -23,10 +23,6 @@
 #include "base/timer/timer.h"
 #include "build/build_config.h"
 
-#if BUILDFLAG(IS_ANDROID)
-#include "brave/components/brave_referrals/browser/android_brave_referrer.h"
-#endif
-
 class PrefRegistrySimple;
 class PrefService;
 
@@ -118,15 +114,13 @@ class BraveReferralsService {
   void OnReadPromoCodeComplete(const std::string& promo_code);
 
 #if BUILDFLAG(IS_ANDROID)
-  void InitAndroidReferrer();
-  void OnAndroidBraveReferrerReady(const std::string& gbraid);
+  // Growser-317: the Play Install Referrer bridge is gone.
   // Reports the conversion on the first run after the one that captured the
   // gbraid. The value is dropped either way, so this reports at most once.
   void MaybeReportAndroidConversion();
   std::string BuildConversionPayload(const std::string& gbraid) const;
   void OnConversionLoadComplete(
       scoped_refptr<net::HttpResponseHeaders> headers);
-  android_brave_referrer::BraveReferrer android_brave_referrer_;
   std::unique_ptr<network::SimpleURLLoader> conversion_loader_;
 #endif
 

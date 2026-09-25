@@ -194,15 +194,13 @@ void BraveReferralsService::Start() {
       pref_service_->GetBoolean(kReferralCheckedForPromoCodeFile);
   const auto& download_id = pref_service_->GetString(kReferralDownloadID);
   if (!checked_for_promo_code_file && !has_initialized && download_id.empty()) {
-#if !BUILDFLAG(IS_ANDROID)
+    // Growser-317: Android no longer asks the Play Install Referrer for a
+    // promo code; like the desktop it reads the promo code file, which nothing
+    // writes, so the referral stays the default and nothing is sent.
     task_runner_->PostTaskAndReplyWithResult(
         FROM_HERE, base::BindOnce(&ReadPromoCode, GetPromoCodeFileName()),
         base::BindOnce(&BraveReferralsService::OnReadPromoCodeComplete,
                        weak_factory_.GetWeakPtr()));
-
-#else
-    InitAndroidReferrer();
-#endif
   }
 
   initialized_ = true;
@@ -605,28 +603,9 @@ void BraveReferralsService::CheckForReferralFinalization() {
 }
 
 #if BUILDFLAG(IS_ANDROID)
-void BraveReferralsService::InitAndroidReferrer() {
-  android_brave_referrer::InitReferrerCallback init_referrer_callback =
-      base::BindOnce(&BraveReferralsService::OnAndroidBraveReferrerReady,
-                     weak_factory_.GetWeakPtr());
-  android_brave_referrer_.InitReferrer(std::move(init_referrer_callback));
-}
-
-void BraveReferralsService::OnAndroidBraveReferrerReady(
-    const std::string& gbraid) {
-  DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
-  if (!gbraid.empty()) {
-    pref_service_->SetString(kReferralAndroidGbraid, gbraid);
-    // The referrer is fetched once per install and can't be re-fetched, so
-    // don't let a kill before the next scheduled flush lose it.
-    pref_service_->CommitPendingWrite();
-  }
-  task_runner_->PostTaskAndReplyWithResult(
-      FROM_HERE, base::BindOnce(&ReadPromoCode, GetPromoCodeFileName()),
-      base::BindOnce(&BraveReferralsService::OnReadPromoCodeComplete,
-                     weak_factory_.GetWeakPtr()));
-}
-
+// Growser-317: InitAndroidReferrer and OnAndroidBraveReferrerReady left with
+// the Play Install Referrer; nothing stores a gbraid any more, so the report
+// below returns before it builds a request.
 void BraveReferralsService::MaybeReportAndroidConversion() {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
 

@@ -193,7 +193,7 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/rate/BraveRateThanksFeedbackDialog.java",
   "../../brave/android/java/org/chromium/chrome/browser/rate/RateFeedbackUtils.java",
   "../../brave/android/java/org/chromium/chrome/browser/rate/RateUtils.java",
-  "../../brave/android/java/org/chromium/chrome/browser/referrer/BraveReferrer.java",
+  # Growser-317: referrer/BraveReferrer.java removed with the Play Install Referrer.
   "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/BraveStandardProtectionSettingsFragment.java",
   "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/NoGooglePlayServicesDialog.java",
   "../../brave/android/java/org/chromium/chrome/browser/searchwidget/SearchWidgetProviderActivity.java",

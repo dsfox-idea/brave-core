@@ -137,7 +137,7 @@ android_only_test_deps = [
   "//brave/browser/partnercustomizations:delegate_public_impl_java",
   "//brave/browser/password_manager/android:browser_tests",
   "//brave/components/cosmetic_filters/browser",
-  "//brave/third_party/android_deps:com_android_installreferrer_java",
+  # Growser-317: com_android_installreferrer_java removed.
   "//chrome:chrome_android_core",
   "//chrome/android:delegate_public_impl_java",
   "//chrome/browser/flags:flags_android",
