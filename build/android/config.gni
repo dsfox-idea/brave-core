@@ -77,7 +77,7 @@ brave_chrome_java_deps = [
   # Growser-317: com_android_installreferrer_java removed.
   "//brave/third_party/android_deps:com_github_bumptech_glide_java",
   "//brave/third_party/android_deps:com_google_android_play_app_update_java",
-  "//brave/third_party/android_deps:com_google_android_play_integrity_java",
+  # Growser-317: com_google_android_play_integrity_java moved under enable_brave_rewards.
   # Growser-317: google_play_services_safetynet_java removed.
   "//brave/third_party/zxing:zxing_java",
   "//brave/ui/android:base_java",
@@ -114,8 +114,12 @@ if (enable_brave_news) {
 
 # Growser-271: removed with the feature.
 if (enable_brave_rewards) {
-  brave_chrome_java_deps +=
-      [ "//brave/components/brave_rewards/core/mojom:mojom_java" ]
+  brave_chrome_java_deps += [
+    "//brave/components/brave_rewards/core/mojom:mojom_java",
+
+    # Growser-317: only AdaptiveCaptchaHelper (rewards) asks Play Integrity.
+    "//brave/third_party/android_deps:com_google_android_play_integrity_java",
+  ]
 }
 
 # Growser-274: removed with the feature.
