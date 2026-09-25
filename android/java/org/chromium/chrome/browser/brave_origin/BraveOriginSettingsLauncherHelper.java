@@ -5,15 +5,9 @@
 
 package org.chromium.chrome.browser.brave_origin;
 
-import android.app.Activity;
-import android.os.Bundle;
-
 import org.jni_zero.CalledByNative;
 
-import org.chromium.base.ApplicationStatus;
 import org.chromium.build.annotations.NullMarked;
-import org.chromium.chrome.browser.settings.BraveOriginPreferences;
-import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
 
 /**
  * Opens the Brave Origin settings screen when a purchase is first detected (from native for web
@@ -22,15 +16,9 @@ import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
  */
 @NullMarked
 public class BraveOriginSettingsLauncherHelper {
+    // Growser-317: the Brave Origin settings screen left with Play Billing. Native
+    // still calls this after a web purchase, so the entry point stays and does
+    // nothing.
     @CalledByNative
-    public static void showOriginSettingsForRestart() {
-        Activity activity = ApplicationStatus.getLastTrackedFocusedActivity();
-        if (activity == null) {
-            return;
-        }
-        Bundle args = new Bundle();
-        args.putBoolean(BraveOriginPreferences.EXTRA_SHOW_RESTART_PROMPT, true);
-        SettingsNavigationFactory.createSettingsNavigation()
-                .startSettings(activity, BraveOriginPreferences.class, args);
-    }
+    public static void showOriginSettingsForRestart() {}
 }

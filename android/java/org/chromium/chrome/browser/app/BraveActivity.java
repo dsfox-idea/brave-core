@@ -91,9 +91,7 @@ import org.chromium.chrome.browser.IntentHandler;
 import org.chromium.chrome.browser.LaunchIntentDispatcher;
 import org.chromium.chrome.browser.OpenYtInBraveDialogFragment;
 import org.chromium.chrome.browser.app.tabwindow.TabWindowManagerSingleton;
-import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
 import org.chromium.chrome.browser.bookmarks.TabBookmarker;
-import org.chromium.chrome.browser.brave_origin.BraveOriginDeepLinkHandler;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.brave_shields.BraveFirstPartyStorageCleanerUtils;
 import org.chromium.chrome.browser.brave_shields.FirstPartyStorageCleanerAnimationFragment;
@@ -354,11 +352,7 @@ public abstract class BraveActivity extends ChromeActivity
         }
 
         getYouTubePictureInPictureController().onResume();
-        Profile profile = mTabModelProfileSupplier.get();
-        if (profile != null) {
-            InAppPurchaseWrapper.getInstance()
-                    .maybeShowSubscriptionInAppMessages(BraveActivity.this, profile);
-        }
+        // Growser-317: no Play Billing, so no subscription in-app messages.
     }
 
     @Override
@@ -603,16 +597,11 @@ public abstract class BraveActivity extends ChromeActivity
 
     @Override
     public void initializeState() {
-        Intent intent = getIntent();
-        boolean isOriginPromoDeepLink = BraveOriginDeepLinkHandler.consumeFromIntent(intent);
+        // Growser-317: the Brave Origin promo deep link left with its paywall.
         if (BraveFreshNtpHelper.isEnabled()) {
             setForegroundSessionEndsTriggered();
         }
         super.initializeState();
-        if (isOriginPromoDeepLink) {
-            mIsDeepLink = true;
-            BraveOriginDeepLinkHandler.open(this);
-        }
         // Null savedInstanceState = real cold start; non-null = in-process recreation such as
         // a fold/unfold. The app-exit behaviors below must run only on a real cold start,
         // otherwise folding/unfolding wipes the live session.
@@ -853,34 +842,8 @@ public abstract class BraveActivity extends ChromeActivity
         }
 
         checkFingerPrintingOnUpgrade(isFirstInstall);
-        Profile profile = mTabModelProfileSupplier.get();
-        if (profile != null && ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_ORIGIN)) {
-            if (BraveOriginSubscriptionPrefs.getIsSubscriptionActive(profile)) {
-                // The subscription is active locally (Google Play purchase). If a prior session
-                // was killed mid-fetch (order ID never written), restart the credential fetch so
-                // the user isn't left permanently stuck on the "Disabling features" spinner.
-                BraveOriginSubscriptionPrefs.resumeCredentialFetchIfNeeded(profile);
-            }
-            // Refresh the cached Skus credential summary so sync "is Origin active" readers
-            // (promo/engagement gates) see up-to-date status. Local-first; only hits the backend
-            // when credentials are past their expiry window. The fresh result also decides whether
-            // to restore a Google Play purchase: only query Google Play when there is no local
-            // Play purchase AND no Origin SKU credentials, so a subscription purchased on desktop
-            // and linked to this account is never overridden by an unrelated account-wide Play
-            // purchase. Using the fresh result (not the cache) keeps this correct even on the very
-            // first restart right after linking.
-            BraveOriginSubscriptionPrefs.requestCredentialSummary(
-                    profile,
-                    (isActive) -> {
-                        // The summary request is asynchronous, so the profile captured above may
-                        // already be destroyed by the time this runs.
-                        if (BraveOriginSubscriptionPrefs.isProfileUsable(profile)
-                                && !BraveOriginSubscriptionPrefs.getIsSubscriptionActive(profile)
-                                && !isActive) {
-                            BraveOriginSubscriptionPrefs.verifyPurchase(profile);
-                        }
-                    });
-        }
+        // Growser-317: no Play Billing, so no Brave Origin purchase to restore or
+        // credential fetch to resume.
         if (isFirstInstall
                 && (OnboardingPrefManager.getInstance().isDormantUsersEngagementEnabled()
                         || getPackageName().equals(BraveConstants.BRAVE_PRODUCTION_PACKAGE_NAME))) {
@@ -907,12 +870,8 @@ public abstract class BraveActivity extends ChromeActivity
             showAdFreeCalloutDialog();
         }
 
-        // Growser-273/274: the playlist and VPN deep links no longer land anywhere.
-        if (false) {
-        } else if (BraveOriginDeepLinkHandler.consumeDeferred()) {
-            mIsDeepLink = true;
-            BraveOriginDeepLinkHandler.open(this);
-        }
+        // Growser-273/274/317: the playlist, VPN and Brave Origin deep links no
+        // longer land anywhere.
 
         // Added to reset app links settings for upgrade case
         if (!isFirstInstall
@@ -1610,12 +1569,8 @@ public abstract class BraveActivity extends ChromeActivity
 
     @Override
     public void onNewIntent(Intent intent) {
-        boolean isOriginPromoDeepLink = BraveOriginDeepLinkHandler.consumeFromIntent(intent);
+        // Growser-317: the Brave Origin promo deep link left with its paywall.
         super.onNewIntent(intent);
-        if (isOriginPromoDeepLink) {
-            mIsDeepLink = true;
-            BraveOriginDeepLinkHandler.open(this);
-        }
         if (intent != null) {
             String openUrl = intent.getStringExtra(BraveActivity.OPEN_URL);
             if (!TextUtils.isEmpty(openUrl) && !BraveIntentHandler.isUrlUnsafe(openUrl)) {

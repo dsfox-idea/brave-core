@@ -114,7 +114,6 @@ if (is_android) {
   robolectric_library(
       "brave_junit_tests_org.chromium.chrome.browser.brave_origin") {
     sources = [
-      "src/org/chromium/chrome/browser/brave_origin/BraveOriginDeepLinkHandlerTest.java",
       "src/org/chromium/chrome/browser/brave_origin/BraveOriginSubscriptionPrefsTest.java",
     ]
 

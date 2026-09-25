@@ -31,8 +31,6 @@ import org.chromium.base.supplier.SettableMonotonicObservableSupplier;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.BraveRelaunchUtils;
-import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
-import org.chromium.chrome.browser.billing.LinkSubscriptionUtils;
 import org.chromium.chrome.browser.onboarding.OnboardingPrefManager;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.chrome.browser.settings.BravePreferenceFragment;
@@ -54,12 +52,10 @@ public class BraveQAPreferences extends BravePreferenceFragment
 
     private static final String QA_IMPORT_REWARDS_DB = "qa_import_rewards_db";
     private static final String QA_EXPORT_REWARDS_DB = "qa_export_rewards_db";
-    private static final String QA_CONSUME_ORIGIN_PURCHASE = "qa_consume_origin_purchase";
 
     private static final int CHOOSE_FILE_FOR_IMPORT_REQUEST_CODE =
             STORAGE_PERMISSION_IMPORT_REQUEST_CODE + 1;
 
-    private ChromeSwitchPreference mLinkSubscriptionOnStaging;
     private ChromeSwitchPreference mBraveDormantFeatureEngagement;
     private ChromeSwitchPreference mDebugNTP;
     private ChromeSwitchPreference mVlogRewards;
@@ -81,12 +77,7 @@ public class BraveQAPreferences extends BravePreferenceFragment
         // Hardcoded because it is for internal use only, hidden by access code, not translated
         mPageTitle.set("QA Preferences");
 
-        mLinkSubscriptionOnStaging =
-                (ChromeSwitchPreference)
-                        findPreference(LinkSubscriptionUtils.PREF_LINK_SUBSCRIPTION_ON_STAGING);
-        if (mLinkSubscriptionOnStaging != null) {
-            mLinkSubscriptionOnStaging.setOnPreferenceChangeListener(this);
-        }
+        // Growser-317: no Play Billing, so no subscription QA switches.
 
         mBraveDormantFeatureEngagement =
                 (ChromeSwitchPreference)
@@ -113,15 +104,6 @@ public class BraveQAPreferences extends BravePreferenceFragment
         mImportRewardsDb = findPreference(QA_IMPORT_REWARDS_DB);
         mExportRewardsDb = findPreference(QA_EXPORT_REWARDS_DB);
         setRewardsDbClickListeners();
-
-        Preference consumeOriginPurchase = findPreference(QA_CONSUME_ORIGIN_PURCHASE);
-        if (consumeOriginPurchase != null) {
-            consumeOriginPurchase.setOnPreferenceClickListener(
-                    preference -> {
-                        InAppPurchaseWrapper.getInstance().consumeExistingOriginPurchase();
-                        return true;
-                    });
-        }
 
         mCommandLine = findPreference(PREF_QA_COMMAND_LINE);
         setCommandLineClickListener();
@@ -223,8 +205,6 @@ public class BraveQAPreferences extends BravePreferenceFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (PREF_QA_DEBUG_NTP.equals(preference.getKey())
                 || PREF_QA_VLOG_REWARDS.equals(preference.getKey())
-                || LinkSubscriptionUtils.PREF_LINK_SUBSCRIPTION_ON_STAGING.equals(
-                        preference.getKey())
                 || OnboardingPrefManager.PREF_DORMANT_USERS_ENGAGEMENT.equals(
                         preference.getKey())) {
             setOnPreferenceValue(preference.getKey(), (boolean)newValue);

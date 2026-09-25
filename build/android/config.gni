@@ -5,7 +5,6 @@
 
 import("//brave/android/brave_java_resources.gni")
 import("//brave/android/brave_java_sources.gni")
-import("//brave/android/java/org/chromium/chrome/browser/billing/sources.gni")
 import("//brave/android/java/org/chromium/chrome/browser/playlist/sources.gni")
 import("//brave/build/android/bytecode/bytecode_rewriter.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
@@ -143,7 +142,7 @@ if (enable_skus) {
   ]
 }
 
-brave_chrome_java_deps += brave_app_billing_deps
+# Growser-317: Play Billing removed.
 # Growser-273: removed with the feature.
 if (enable_playlist) {
   brave_chrome_java_deps += brave_app_playlist_deps

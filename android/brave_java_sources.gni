@@ -5,7 +5,6 @@
 
 import("//brave/android/features/tab_ui/brave_tab_management_java_sources.gni")
 import("//brave/android/feed/brave_feed_java_sources.gni")
-import("//brave/android/java/org/chromium/chrome/browser/billing/sources.gni")
 import(
     "//brave/android/java/org/chromium/chrome/browser/fullscreen/brave_fullscreen_java_sources.gni")
 import("//brave/android/java/org/chromium/chrome/browser/playlist/sources.gni")
@@ -73,8 +72,7 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/bookmarks/BraveBookmarkUtilsDummySuper.java",
   "../../brave/android/java/org/chromium/chrome/browser/bottombar/BraveBottomBarActionCoordinator.java",
   "../../brave/android/java/org/chromium/chrome/browser/brave_account/BraveAccountServiceFactory.java",
-  "../../brave/android/java/org/chromium/chrome/browser/brave_origin/BraveOriginDeepLinkHandler.java",
-  "../../brave/android/java/org/chromium/chrome/browser/brave_origin/BraveOriginPlansActivity.java",
+  # Growser-317: BraveOriginDeepLinkHandler and BraveOriginPlansActivity removed.
   "../../brave/android/java/org/chromium/chrome/browser/brave_origin/BraveOriginSettingsLauncherHelper.java",
   "../../brave/android/java/org/chromium/chrome/browser/brave_origin/BraveOriginSubscriptionPrefs.java",
   "../../brave/android/java/org/chromium/chrome/browser/brave_stats/BraveStatsBottomSheetDialogFragment.java",
@@ -211,9 +209,7 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/settings/BraveLicensePreference.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/BraveLicensePreferences.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/BraveMainPreferencesBase.java",
-  "../../brave/android/java/org/chromium/chrome/browser/settings/BraveOriginDescriptionPreference.java",
-  "../../brave/android/java/org/chromium/chrome/browser/settings/BraveOriginPreferences.java",
-  "../../brave/android/java/org/chromium/chrome/browser/settings/BraveOriginResetPreference.java",
+  # Growser-317: the Brave Origin settings screen removed.
   "../../brave/android/java/org/chromium/chrome/browser/settings/BravePreferenceDialogFragment.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/BravePreferenceFragment.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/BraveRadioButtonGroupOpeningScreenPreference.java",
@@ -589,7 +585,7 @@ brave_java_sources += brave_components_signin_java_sources
 brave_java_sources += brave_feed_java_sources
 brave_java_sources += brave_public_tab_management_java_sources
 brave_java_sources += brave_share_java_sources
-brave_java_sources += brave_app_billing_sources
+# Growser-317: Play Billing removed.
 brave_java_sources += brave_fullscreen_java_sources
 
 brave_browser_ui_android_appmenu_internal_sources = [
@@ -653,4 +649,4 @@ brave_java_base_module_deps = [
   "//third_party/androidx:androidx_lifecycle_lifecycle_viewmodel_java",
 ]
 
-brave_java_base_module_deps += brave_java_base_module_billing_deps
+# Growser-317: Play Billing removed.

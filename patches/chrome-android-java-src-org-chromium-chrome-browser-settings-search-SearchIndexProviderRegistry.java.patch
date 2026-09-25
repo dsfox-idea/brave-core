@@ -1,5 +1,5 @@
 diff --git a/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java b/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
-index b348f48a59a2e7a6658ee1fd085148161cd63816..d7ce5d771577f0c2797edde436306d4f1895b0df 100644
+index b348f48a59a2e7a6658ee1fd085148161cd63816..f0a8927eef1b60275fbaafffbaa17180b18a83a1 100644
 --- a/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
 +++ b/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
 @@ -7,7 +7,6 @@ package org.chromium.chrome.browser.settings.search;
@@ -73,7 +73,7 @@ index b348f48a59a2e7a6658ee1fd085148161cd63816..d7ce5d771577f0c2797edde436306d4f
 +                    org.chromium.chrome.browser.settings.MediaPreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.BackgroundImagesPreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.BraveStatsPreferences.SEARCH_INDEX_DATA_PROVIDER,
-+                    org.chromium.chrome.browser.settings.BraveOriginPreferences.SEARCH_INDEX_DATA_PROVIDER,
++                    // Growser-317: BraveOriginPreferences left with Play Billing.
 +                    org.chromium.chrome.browser.settings.BraveSearchEnginesPreferences.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.BraveSyncScreensPreference.SEARCH_INDEX_DATA_PROVIDER,
 +                    org.chromium.chrome.browser.settings.BraveWebrtcPolicyPreferencesFragment.SEARCH_INDEX_DATA_PROVIDER,

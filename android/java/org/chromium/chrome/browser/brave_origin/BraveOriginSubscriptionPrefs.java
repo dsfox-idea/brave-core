@@ -5,15 +5,7 @@
 
 package org.chromium.chrome.browser.brave_origin;
 
-import android.app.Activity;
-import android.util.Base64;
-
 import androidx.annotation.IntDef;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import org.chromium.base.BraveFeatureList;
 import org.chromium.base.BravePreferenceKeys;
@@ -23,29 +15,20 @@ import org.chromium.base.Log;
 import org.chromium.base.task.PostTask;
 import org.chromium.base.task.TaskTraits;
 import org.chromium.brave.browser.brave_origin.BraveOriginServiceFactory;
-import org.chromium.brave.browser.util.BraveDomainsUtils;
-import org.chromium.brave.browser.util.ServicesEnvironment;
 import org.chromium.brave_origin.mojom.BraveOriginSettingsHandler;
-import org.chromium.brave_origin.mojom.OriginActivationLimit;
 import org.chromium.build.annotations.Contract;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
-import org.chromium.chrome.browser.billing.InAppPurchaseWrapper;
-import org.chromium.chrome.browser.billing.PurchaseModel;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.policy.BravePolicyConstants;
 import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.chrome.browser.profiles.Profile;
-import org.chromium.chrome.browser.settings.BraveOriginPreferences;
-import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
-import org.chromium.chrome.browser.util.LiveDataUtil;
 import org.chromium.components.prefs.PrefService;
 import org.chromium.components.user_prefs.UserPrefs;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -186,10 +169,10 @@ public class BraveOriginSubscriptionPrefs {
      * <p>The fetch ({@link #createFetchOrder}) runs entirely in memory: if the browser is killed
      * before {@link #fetchOrderCredentials} writes the order ID, the prefs stay in the "fetching"
      * state ({@link #isFetchingCredentials} stays true) but no fetch is running. Nothing else
-     * re-triggers it on the next launch - the Play Store {@link #verifyPurchase} restore is skipped
+     * re-triggers it on the next launch - the Play Store verifyPurchase() (gone, growser#317) restore is skipped
      * while the subscription pref is already active - so the Origin settings screen would otherwise
      * show the "Disabling features" spinner forever. Call this on startup to restart the fetch from
-     * the persisted purchase token. Unlike {@link #verifyPurchase} it issues no Play Store billing
+     * the persisted purchase token. Unlike verifyPurchase() (gone, growser#317) it issues no Play Store billing
      * query and never clears local state, so a transient billing outage cannot un-enroll the user.
      *
      * <p>A failed fetch leaves the same state behind as a killed one - the order ID is only
@@ -242,44 +225,7 @@ public class BraveOriginSubscriptionPrefs {
         }
     }
 
-    /**
-     * Queries Google Play for an existing Origin purchase and restores it if found. This handles
-     * the case where a user changes devices - the purchase exists in their Google account but the
-     * local prefs are empty.
-     *
-     * @param profile The profile to use for preference storage
-     */
-    public static void verifyPurchase(@Nullable Profile profile) {
-        MutableLiveData<PurchaseModel> _activePurchases = new MutableLiveData<>();
-        LiveData<PurchaseModel> activePurchases = _activePurchases;
-        InAppPurchaseWrapper inAppPurchaseWrapper = InAppPurchaseWrapper.getInstance();
-        // Suppress toasts during startup query so devices without Google Play
-        // don't show "Billing service is not available" on every launch.
-        inAppPurchaseWrapper.setSuppressToasts(true);
-        inAppPurchaseWrapper.queryPurchases(
-                _activePurchases, InAppPurchaseWrapper.SubscriptionProduct.ORIGIN);
-        LiveDataUtil.observeOnce(
-                activePurchases,
-                activePurchaseModel -> {
-                    boolean purchaseFound = activePurchaseModel != null;
-                    setIsSubscriptionActive(profile, purchaseFound);
-                    if (purchaseFound) {
-                        setOriginPackageName(profile);
-                        setOriginProductId(profile, activePurchaseModel.getProductId());
-                        setOriginPurchaseToken(profile, activePurchaseModel.getPurchaseToken());
-                        // We only reach verifyPurchase() while the subscription pref is inactive
-                        // (see the BraveActivity guard), so a found purchase means a prior Play
-                        // Store purchase is being auto-restored. setOriginPurchaseToken() above
-                        // already started the credential fetch, so open the Origin settings screen:
-                        // it shows the spinner while credentials are fetched and prompts a restart
-                        // once the policies are enforced.
-                        BraveOriginSettingsLauncherHelper.showOriginSettingsForRestart();
-                    } else {
-                        setOriginProductId(profile, "");
-                        setOriginPurchaseToken(profile, "");
-                    }
-                });
-    }
+    //     // Growser-317: verifyPurchase and openOriginPreferences left with Play Billing and the Origin settings screen.
 
     /**
      * Sets the Origin subscription active status for the given profile.
@@ -410,14 +356,12 @@ public class BraveOriginSubscriptionPrefs {
         notifyCredentialsFetched(CredentialFetchResult.FAILED);
     }
 
-
     public static void extendActivationLimit(@Nullable Profile profile) {
         // Growser-126: no payment service to raise an activation budget with.
         sPendingExtendOrderId = null;
         sPendingExtendReceiptPayload = null;
         notifyCredentialsFetched(CredentialFetchResult.FAILED);
     }
-
 
     public static void requestCredentialSummary(
             @Nullable Profile profile, @Nullable Callback<Boolean> callback) {
@@ -452,7 +396,6 @@ public class BraveOriginSubscriptionPrefs {
                 .readBoolean(BravePreferenceKeys.BRAVE_ORIGIN_CREDENTIAL_SUMMARY_CACHED, false);
     }
 
-
     /**
      * Clears all Origin subscription preferences for the given profile.
      *
@@ -471,20 +414,6 @@ public class BraveOriginSubscriptionPrefs {
         prefService.setString(BravePref.BRAVE_ORIGIN_ORDER_ID_ANDROID, "");
         prefService.setString(BravePref.BRAVE_ORIGIN_PACKAGE_NAME_ANDROID, "");
         resetSubscriptionLinkedStatus(profile);
-    }
-
-    /**
-     * Opens the Brave Origin preferences settings screen.
-     *
-     * @param activity The activity to use for launching the settings
-     */
-    public static void openOriginPreferences(Activity activity) {
-        if (activity.isFinishing()) {
-            Log.e(TAG, "openOriginPreferences activity is finishing");
-            return;
-        }
-        SettingsNavigationFactory.createSettingsNavigation()
-                .startSettings(activity, BraveOriginPreferences.class);
     }
 
     /**

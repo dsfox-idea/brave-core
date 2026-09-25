@@ -18,7 +18,6 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import org.chromium.base.BraveFeatureList;
-import org.chromium.base.Callback;
 import org.chromium.base.ContextUtils;
 import org.chromium.base.task.PostTask;
 import org.chromium.base.task.TaskTraits;
@@ -30,7 +29,6 @@ import org.chromium.chrome.browser.accessibility.BraveAccessibilitySettings;
 import org.chromium.chrome.browser.autofill.settings.AutofillAndPasswordsFragment;
 import org.chromium.chrome.browser.autofill.settings.options.BraveAutofillOptionsSearchIndex;
 import org.chromium.chrome.browser.autofill.settings.options.BraveAutofillOptionsSearchIndex.SettingsRoutes;
-import org.chromium.chrome.browser.brave_origin.BraveOriginPlansActivity;
 import org.chromium.chrome.browser.brave_origin.BraveOriginSubscriptionPrefs;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
 import org.chromium.chrome.browser.homepage.settings.BraveHomepageSettings;
@@ -103,7 +101,6 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
     @VisibleForTesting static final String PREF_BRAVE_WALLET = "brave_wallet";
     @VisibleForTesting static final String PREF_BRAVE_VPN = "brave_vpn";
     @VisibleForTesting static final String PREF_BRAVE_LEO = "brave_leo";
-    private static final String PREF_BRAVE_ORIGIN = "brave_origin";
     private static final String PREF_LANGUAGES = "languages";
     private static final String PREF_BRAVE_LANGUAGES = "brave_languages";
     private static final String PREF_RATE_BRAVE = "rate_brave";
@@ -354,11 +351,7 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
             setPreferenceOrder(PREF_CLOSING_ALL_TABS_CLOSES_BRAVE, ++generalOrder);
         }
 
-        if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_ORIGIN)) {
-            setPreferenceOrder(PREF_BRAVE_ORIGIN, ++generalOrder);
-        } else {
-            removePreferenceIfPresent(PREF_BRAVE_ORIGIN);
-        }
+        // Growser-317: no Brave Origin row - its paywall left with Play Billing.
 
         // Only present when the upstream default browser entry point is enabled.
         Preference defaultBrowser = findPreference(MainSettings.PREF_DEFAULT_BROWSER);
@@ -525,53 +518,6 @@ public abstract class BraveMainPreferencesBase extends BravePreferenceFragment
             closingAllTabsClosesBravePreference.setOnPreferenceChangeListener(this);
         }
 
-        Preference braveOriginPreference = findPreference(PREF_BRAVE_ORIGIN);
-        if (braveOriginPreference != null) {
-            braveOriginPreference.setOnPreferenceClickListener(
-                    new Preference.OnPreferenceClickListener() {
-                        @Override
-                        public boolean onPreferenceClick(Preference preference) {
-                            handleOriginPreferenceClick();
-                            return true;
-                        }
-                    });
-        }
-    }
-
-    private void handleOriginPreferenceClick() {
-        if (getActivity() == null || getActivity().isFinishing()) {
-            return;
-        }
-
-        // A Play Store purchase exists but the SKUs order ID fetch is still in
-        // flight (e.g. after a device change). Skip the paywall and open the
-        // pref screen, which renders the fetching spinner.
-        if (BraveOriginSubscriptionPrefs.isFetchingCredentials(getProfile())) {
-            SettingsNavigationFactory.createSettingsNavigation()
-                    .startSettings(getActivity(), BraveOriginPreferences.class);
-            return;
-        }
-
-        // Always check SKUs SDK credential summary to handle both Play Store
-        // purchases and linked desktop purchases.
-        BraveOriginSubscriptionPrefs.requestCredentialSummary(
-                getProfile(),
-                new Callback<Boolean>() {
-                    @Override
-                    public void onResult(Boolean isActive) {
-                        if (getActivity() == null || getActivity().isFinishing()) {
-                            return;
-                        }
-                        if (isActive != null && isActive) {
-                            SettingsNavigationFactory.createSettingsNavigation()
-                                    .startSettings(getActivity(), BraveOriginPreferences.class);
-                        } else {
-                            Intent intent =
-                                    new Intent(getActivity(), BraveOriginPlansActivity.class);
-                            getActivity().startActivity(intent);
-                        }
-                    }
-                });
     }
 
     private void initRateBrave() {
