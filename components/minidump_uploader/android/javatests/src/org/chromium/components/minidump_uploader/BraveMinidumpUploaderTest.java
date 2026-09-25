@@ -5,6 +5,8 @@
 
 package org.chromium.components.minidump_uploader;
 
+import android.net.Uri;
+
 import androidx.test.filters.SmallTest;
 
 import org.junit.After;
@@ -70,8 +72,13 @@ public class BraveMinidumpUploaderTest {
 
     @Test
     @SmallTest
-    public void testCrashUrlStringIsBraveEndpoint() {
-        Assert.assertEquals("https://cr.brave.com", MinidumpUploader.sCrashUrlString);
+    // Growser-315: our GlitchTip, as on the desktop - never Brave's server.
+    public void testCrashUrlStringIsOurEndpoint() {
+        String url = MinidumpUploader.sCrashUrlString;
+        Assert.assertNotNull(url);
+        Uri uri = Uri.parse(url);
+        Assert.assertEquals("growser-crashes.humans.top", uri.getHost());
+        Assert.assertNotNull(uri.getQueryParameter("sentry_key"));
     }
 
     @Test
