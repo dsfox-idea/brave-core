@@ -8,8 +8,8 @@
     <color name="dialog_bg_color_dark_baseline">@color/default_bg_color_baseline</color>
 
     <!-- Theme colors -->
-    <color name="brave_link">#A0A5EB</color>
-    <color name="brave_button_pressed">#575CA4</color>
+    <color name="brave_link">#78BF92</color>  <!-- Growser-326 -->
+    <color name="brave_button_pressed">#207749</color>  <!-- Growser-326 -->
     <color name="menu_icon_color">#F0F2FF</color>
     <color name="url_text_primary">#e3e3e8</color>
 
@@ -29,13 +29,17 @@
     <color name="brave_wallet_dn_error_text_bg_color">#453e2d</color>
     <color name="brave_wallet_dn_highlight_bg_color">#1F1F27</color>
     <color name="brave_wallet_onboarding_card_view_background">#0D1214</color>
-    <color name="brave_wallet_dn_button_color">#C1C4FF</color>
+    <color name="brave_wallet_dn_button_color">#A0DAB4</color>  <!-- Growser-326 -->
 
     <!-- Brave wallet 2.0 colors -->
     <color name="brave_wallet_dn_panel_bg">@color/wallet_bg</color>
 
     <color name="text_on_primary">#251491</color>
-    <color name="icon_interactive">#bcc6f3</color>
+    <!-- Growser-326: Leo's semantic accent colours (schemes_primary,
+         schemes_on_primary, button_background, text_interactive,
+         icon_interactive, divider_interactive, primary_20) are no longer
+         redefined here. As violet literals they overrode Leo's own
+         references to the green primary ramp (#137). -->
     <color name="system_feedback_error">#FFB1B0</color>
 
 
@@ -46,11 +50,11 @@
     <!-- Text colors -->
     <color name="brave_theme_subtitle_text">#C2C4CF</color>
     <color name="brave_theme_hint_text">#84889C</color>
-    <color name="brave_text_button_color">#A0A5EB</color>
+    <color name="brave_text_button_color">#78BF92</color>  <!-- Growser-326 -->
 
     <!-- Onboarding colors -->
-    <color name="onboarding_background_gradient_start">#FF1A1F38</color>
-    <color name="onboarding_background_gradient_end">#FF101322</color>
+    <color name="onboarding_background_gradient_start">@color/primitive_primary_15</color>  <!-- Growser-326 -->
+    <color name="onboarding_background_gradient_end">@color/primitive_primary_5</color>  <!-- Growser-326 -->
 
     <!-- Set Default Browser colors -->
     <color name="set_default_bottom_sheet_bg_color">#1E2029</color>
@@ -78,7 +82,6 @@
     <color name="brave_sync_bg_secondary_color">#212529</color>
 
     <color name="container_background">#1c1c1d</color>
-    <color name="divider_interactive">#7686ec</color>
     <color name="systemfeedback_error_icon">#ff7f72</color>
     <color name="systemfeedback_info_text">#78abff</color>
     <color name="systemfeedback_info_icon">#78abff</color>
@@ -111,7 +114,7 @@
     <color name="brave_stats_radio_button_active">#3B3E4F</color>
     <color name="brave_stats_empty_border_color">#072542</color>
     <color name="brave_stats_empty_text_color">#F6F7F8</color>
-    <color name="brave_blue_tint_color">#737ADE</color>
+    <color name="brave_blue_tint_color">#1D9F5F</color>  <!-- Growser-326 -->
     <color name="brave_stats_ic_clock_color">#1075C9</color>
 
     <color name="wallet_text_color">#F6F7F8</color>
@@ -140,14 +143,14 @@
     <color name="bookmark_import_export_toast_bg_color">#1E2025</color>
     <color name="bookmark_import_export_dialog_title_color">#EDEEF1</color>
     <color name="bookmark_import_export_dialog_secondary_color">#878DA6</color>
-    <color name="bookmark_import_export_dialog_button_color">#AAA8F7</color>
+    <color name="bookmark_import_export_dialog_button_color">#76C795</color>  <!-- Growser-326 -->
 
     <color name="notification_volume_icon_color">#F0F2FF</color>
-    <color name="notification_bat1_icon_color">#A0A5EB</color>
+    <color name="notification_bat1_icon_color">#78BF92</color>  <!-- Growser-326 -->
     <color name="notification_bat2_icon_color">#FF7654</color>
-    <color name="notification_bat3_icon_color">#A0A5EB</color>
+    <color name="notification_bat3_icon_color">#78BF92</color>  <!-- Growser-326 -->
     <color name="notification_graph_icon_color">#FF7654</color>
-    <color name="notification_badge_icon_color">#737ADE</color>
+    <color name="notification_badge_icon_color">#1D9F5F</color>  <!-- Growser-326 -->
     <color name="notification_download_icon_color">#F0F2FF</color>
     <color name="notification_rationale_dialog_card_bg_color">#17171F</color>
 
@@ -161,9 +164,7 @@
     <color name="text_primary">#e4e4e5</color>
     <color name="text_secondary">#c9c9ca</color>
     <color name="text_tertiary">#909093</color>
-    <color name="primary_20">#271e93</color>
-    <color name="button_background">#bcc6f3</color>
-    <color name="button_background_10">#19BCC6F3</color>
+    <color name="button_background_10">#1982E0A6</color>  <!-- Growser-326 -->
     <color name="systemfeedback_error_text">#ff7f72</color>
 
     <color name="location_bar_background_color_for_ntp">#383839</color>
@@ -172,13 +173,10 @@
     <color name="schemes_on_surface">#e4e4e5</color>
     <color name="schemes_on_surface_variant">#c9c9ca</color>
     <color name="schemes_outline_variant">#464649</color>
-    <color name="schemes_primary">#bcc6f3</color>
-    <color name="schemes_on_primary">#20197f</color>
     <color name="schemes_surface_container_highest">#343438</color>
     <color name="schemes_surface_container_lowest">#0f0f0f</color>
     <color name="schemes_surface_container">#1F1F23</color>
 
-    <color name="text_interactive">#bcc6f3</color>
 
     <color name="open_yt_dialog_bg">#000000</color>
 </resources>

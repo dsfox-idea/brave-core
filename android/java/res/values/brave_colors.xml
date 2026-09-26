@@ -59,7 +59,7 @@
 
     <!-- Theme colors -->
     <color name="brave_white">@android:color/white</color>
-    <color name="brave_link">#4C54D2</color>
+    <color name="brave_link">#007C47</color>  <!-- Growser-326 -->
     <color name="menu_icon_color">#212529</color>
     <color name="url_text_primary">#1b1b1f</color>
 
@@ -86,13 +86,17 @@
     <color name="brave_wallet_dn_error_text_bg_color">#F0F2FF</color>
     <color name="brave_wallet_dn_highlight_bg_color">#FFFFFF</color>
     <color name="brave_wallet_onboarding_card_view_background">#FFFFFF</color>
-    <color name="brave_wallet_dn_button_color">#3E37D4</color>
+    <color name="brave_wallet_dn_button_color">#006A3C</color>  <!-- Growser-326 -->
 
     <!-- Brave wallet 2.0 colors -->
     <color name="brave_wallet_dn_panel_bg">#EDEEF1</color>
 
     <color name="text_on_primary">#FFFFFF</color>
-    <color name="icon_interactive">#434fcf</color>
+    <!-- Growser-326: Leo's semantic accent colours (schemes_primary,
+         schemes_on_primary, button_background, text_interactive,
+         icon_interactive, divider_interactive, primary_20) are no longer
+         redefined here. As violet literals they overrode Leo's own
+         references to the green primary ramp (#137). -->
     <color name="system_feedback_error">#B3002A</color>
 
     <!-- Text colors -->
@@ -101,13 +105,13 @@
     <color name="brave_theme_error">#cc0000</color>
     <color name="brave_theme_success">#51cf66</color>
     <color name="brave_theme_error_txt">#E32444</color>
-    <color name="brave_text_button_color">#4C54D2</color>
+    <color name="brave_text_button_color">#007C47</color>  <!-- Growser-326 -->
     <color name="text_color_20">#d5dcff</color>
     <color name="text_color_30">#b7c6ff</color>
 
     <!-- Onboarding colors -->
-    <color name="onboarding_background_gradient_start">#FFEEF2FF</color>
-    <color name="onboarding_background_gradient_end">#FFDFE4F6</color>
+    <color name="onboarding_background_gradient_start">@color/primitive_primary_95</color>  <!-- Growser-326 -->
+    <color name="onboarding_background_gradient_end">@color/primitive_primary_90</color>  <!-- Growser-326 -->
     <color name="onboarding_orange">#fb542b</color>
     <color name="onboarding_gray">#84889c</color>
     <color name="onboarding_black">#1e2029</color>
@@ -131,7 +135,7 @@
 
     <color name="ad_free_card_cancel_color">#212529</color>
     <color name="ad_free_card_bg_color">@android:color/white</color>
-    <color name="ad_free_check_color">#737ADE</color>
+    <color name="ad_free_check_color">#1D9F5F</color>  <!-- Growser-326 -->
 
     <!-- Sync colors -->
     <color name="brave_sync_bg_color">@android:color/transparent</color>
@@ -143,7 +147,7 @@
 
     <!-- Theme colors -->
     <color name="brave_theme_color">#fb542b</color>
-    <color name="brave_button_pressed">#7278C5</color>
+    <color name="brave_button_pressed">#3F9463</color>  <!-- Growser-326 -->
 
     <!--  Wallet gradient colors  -->
     <color name="wallet_gradient_center_color">#BF14A2</color>
@@ -200,7 +204,7 @@
     <color name="brave_state_time_count_color">#FFFFFF</color>
 
     <color name="brave_stats_pager_ads_color">#CD4400</color>
-    <color name="brave_stats_pager_data_saved_color">#545FF8</color>
+    <color name="brave_stats_pager_data_saved_color">#008E52</color>  <!-- Growser-326 -->
     <color name="brave_stats_pager_time_count_color">#687485</color>
     <color name="brave_stats_pager_title_color">#3F4855</color>
 
@@ -220,7 +224,7 @@
     <color name="brave_stats_empty_bg_color">#335DB5FC</color>
     <color name="brave_stats_empty_border_color">#EEF6FF</color>
     <color name="brave_stats_radio_button_active">@android:color/white</color>
-    <color name="brave_stats_share_data_save_no">#A1A5E6</color>
+    <color name="brave_stats_share_data_save_no">#7CBD93</color>  <!-- Growser-326 -->
     <color name="brave_stats_share_info">@android:color/white</color>
     <color name="brave_stats_share_time_saved_no">@android:color/white</color>
     <color name="brave_stats_share_trackers_ads_no">@color/onboarding_indicator_selected_color</color>
@@ -228,7 +232,7 @@
 
     <color name="white_alpha_50">#80FFFFFF</color>
 
-    <color name="brave_blue_tint_color">#4C54D2</color>
+    <color name="brave_blue_tint_color">#007C47</color>  <!-- Growser-326 -->
 
     <color name="shields_tooltip_arrow_color_1">#DD295B</color>
 
@@ -240,7 +244,7 @@
     <color name="tab_color">#FF4081</color>
     <color name="wallet_bg">#FFFFFF</color>
     <color name="wallet_edittext_outline_color">#AEB1C2</color>
-    <color name="brave_action_color">#4C54D2</color>
+    <color name="brave_action_color">#007C47</color>  <!-- Growser-326 -->
     <color name="wallet_top_banner_color">#33E32444</color>
     <color name="wallet_error_text_color">#FF4B6A</color>
 
@@ -261,7 +265,7 @@
     <color name="quick_action_search_and_bookmark_widget_tint">#495057</color>
     <color name="quick_action_search_and_bookmark_widget_text_color">#495057</color>
 
-    <color name="notification_button_color">#423EEE</color>
+    <color name="notification_button_color">#007744</color>  <!-- Growser-326 -->
 
 
     <color name="bookmark_menu_text_color">#484B4E</color>
@@ -269,13 +273,13 @@
     <color name="bookmark_import_export_toast_bg_color">@android:color/white</color>
     <color name="bookmark_import_export_dialog_title_color">#1C1E26</color>
     <color name="bookmark_import_export_dialog_secondary_color">#666D89</color>
-    <color name="bookmark_import_export_dialog_button_color">#423EEE</color>
+    <color name="bookmark_import_export_dialog_button_color">#007744</color>  <!-- Growser-326 -->
 
     <color name="notification_volume_icon_color">#D1E8EB</color>
     <color name="notification_bat1_icon_color">#FEDED6</color>
     <color name="notification_bat2_icon_color">#F195A4</color>
-    <color name="notification_bat3_icon_color">#E2E2FC</color>
-    <color name="notification_graph_icon_color">#A6ABE8</color>
+    <color name="notification_bat3_icon_color">#D4ECDB</color>  <!-- Growser-326 -->
+    <color name="notification_graph_icon_color">#85C19A</color>  <!-- Growser-326 -->
     <color name="notification_badge_icon_color">#C2A5D1</color>
     <color name="notification_download_icon_color">#F092C5</color>
     <color name="notification_rationale_dialog_card_bg_color">@android:color/white</color>
@@ -293,25 +297,19 @@
     <color name="text_primary">#1c1c1d</color>
     <color name="text_secondary">#464649</color>
     <color name="text_tertiary">#78787c</color>
-    <color name="primary_20">#dfe4f6</color>
-    <color name="button_background">#434fcf</color>
-    <color name="button_background_10">#19434FCF</color>
+    <color name="button_background_10">#19007643</color>  <!-- Growser-326 -->
 
-    <color name="divider_interactive">#bcc6f3</color>
 
-    <color name="text_interactive">#434fcf</color>
 
     <color name="location_bar_background_color_for_ntp">#f2f2f2</color>
     <color name="toolbar_background_color_for_ntp">@android:color/white</color>
 
-    <color name="semantic_text_interactive">#BCC6F3</color>
-    <color name="semantic_divider_interactive">#7686EC</color>
+    <color name="semantic_text_interactive">@color/primitive_primary_80</color>  <!-- Growser-326 -->
+    <color name="semantic_divider_interactive">@color/primitive_primary_60</color>  <!-- Growser-326 -->
 
     <color name="schemes_on_surface">#1c1c1d</color>
     <color name="schemes_on_surface_variant">#464649</color>
     <color name="schemes_outline_variant">#c9c9ca</color>
-    <color name="schemes_primary">#434fcf</color>
-    <color name="schemes_on_primary">#ffffff</color>
     <color name="schemes_surface_container_highest">#e4e4e5</color>
     <color name="schemes_surface_container_lowest">#ffffff</color>
     <color name="schemes_surface_container">#F2F2F3</color>
@@ -319,8 +317,8 @@
     <color name="open_yt_dialog_bg">#FFFFFF</color>
 
     <!-- Address Bar preference Colors -->
-    <color name="address_bar_preference_header_background_light">#EFF0FF</color>
-    <color name="address_bar_preference_header_background_dark">#000B89</color>
-    <color name="address_bar_preference_header_primary_light">#4551D1</color>
-    <color name="address_bar_preference_header_primary_dark">#828CFF</color>
+    <color name="address_bar_preference_header_background_light">#E8F6EC</color>  <!-- Growser-326 -->
+    <color name="address_bar_preference_header_background_dark">#00361C</color>  <!-- Growser-326 -->
+    <color name="address_bar_preference_header_primary_light">#007844</color>  <!-- Growser-326 -->
+    <color name="address_bar_preference_header_primary_dark">#1CB66D</color>  <!-- Growser-326 -->
 </resources>

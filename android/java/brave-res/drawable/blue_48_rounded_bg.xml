@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <solid android:color="#4C54D2" />
+    <!-- Growser-326: the green counterpart of Brave's #4C54D2 -->
+    <solid android:color="#007C47" />
     <corners android:radius="48dp" />
 </shape>
