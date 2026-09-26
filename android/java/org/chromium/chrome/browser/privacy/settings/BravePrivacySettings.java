@@ -246,7 +246,6 @@ public class BravePrivacySettings extends PrivacySettings {
     private ChromeSwitchPreference mClearBrowsingDataOnExit;
     private Preference mUstoppableDomains;
     private ChromeSwitchPreference mFingerprntLanguagePref;
-    private ChromeSwitchPreference mBraveShieldsSaveContactInfoPref;
     private @Nullable FilterListAndroidHandler mFilterListAndroidHandler;
 
     private void initFilterListAndroidHandler() {
@@ -374,9 +373,9 @@ public class BravePrivacySettings extends PrivacySettings {
                 (ChromeSwitchPreference) findPreference(PREF_FINGERPRINT_LANGUAGE);
         mFingerprntLanguagePref.setOnPreferenceChangeListener(this);
 
-        mBraveShieldsSaveContactInfoPref =
-                (ChromeSwitchPreference) findPreference(PREF_SHIELDS_SAVE_CONTACT_INFO);
-        mBraveShieldsSaveContactInfoPref.setOnPreferenceChangeListener(this);
+        // Growser-332: Report a Broken Site is gone on Android, so there is no report
+        // to save contact info for.
+        removePreferenceIfPresent(PREF_SHIELDS_SAVE_CONTACT_INFO);
 
         mForgetFirstPartyStoragePref =
                 (ChromeSwitchPreference) findPreference(PREF_FORGET_FIRST_PARTY_STORAGE);
@@ -1015,6 +1014,8 @@ public class BravePrivacySettings extends PrivacySettings {
                     }
                     // Growser-304: always hidden, see onCreatePreferences.
                     indexData.removeEntryForKey(frag, PREF_SURVEY_PANELIST);
+                    // Growser-332: always hidden, see onCreatePreferences.
+                    indexData.removeEntryForKey(frag, PREF_SHIELDS_SAVE_CONTACT_INFO);
                     if (ChromeFeatureList.isEnabled(
                             BraveFeatureList.BRAVE_GOOGLE_SIGN_IN_PERMISSION)) {
                         indexData.removeEntryForKey(frag, PREF_SOCIAL_BLOCKING_GOOGLE);

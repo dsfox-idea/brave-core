@@ -796,8 +796,10 @@ public class BraveUnifiedPanelHandler {
                     mAdvancedOptionsArrow.setRotation(0f);
                 }
             }
+            // Growser-332: no Report a Broken Site - it posts the page to
+            // webcompat.brave.com. Closed on the desktop (#78) and iOS (#298).
             if (mReportBrokenSiteSection != null) {
-                mReportBrokenSiteSection.setVisibility(View.VISIBLE);
+                mReportBrokenSiteSection.setVisibility(View.GONE);
             }
             if (mShieldsWarningSection != null) {
                 mShieldsWarningSection.setVisibility(View.GONE);
