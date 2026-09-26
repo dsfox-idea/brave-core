@@ -1,5 +1,5 @@
 diff --git a/media/base/media_switches.cc b/media/base/media_switches.cc
-index 6576dae682f87af8e8d4d80df6abe56869c0439b..bacc3e901c881e6058d4f10e1bcc712d301841a7 100644
+index 6576dae682f87af8e8d4d80df6abe56869c0439b..ab9fdcfc57fc72ce3c9e41d0cb3f3b8e46cfc380 100644
 --- a/media/base/media_switches.cc
 +++ b/media/base/media_switches.cc
 @@ -389,7 +389,7 @@ BASE_FEATURE(kAutoPictureInPictureSurveys, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -49,3 +49,14 @@ index 6576dae682f87af8e8d4d80df6abe56869c0439b..bacc3e901c881e6058d4f10e1bcc712d
  
  // An experimental feature to enable persistent-license type support in MediaDrm
  // when using Encrypted Media Extensions (EME) API.
+@@ -1343,8 +1343,8 @@ BASE_FEATURE(kMediaDrmPreprovisioning, base::FEATURE_ENABLED_BY_DEFAULT);
+ // IDs at startup (whenever a profile is loaded). Also used by tests that
+ // disable it so that the tests can setup before pre-provisioning is done.
+ // Note: Has no effect if kMediaDrmPreprovisioning feature is disabled.
+-BASE_FEATURE(kMediaDrmPreprovisioningAtStartup,
+-             base::FEATURE_ENABLED_BY_DEFAULT);
++BASE_OVERRIDDEN_FEATURE(kMediaDrmPreprovisioningAtStartup,
++             base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+ // This feature allows for some MediaDrm functions to be executed in a separate
+ // process so that crashes do not bring down the browser. Flag is available so

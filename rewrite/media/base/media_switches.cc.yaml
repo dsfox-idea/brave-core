@@ -37,3 +37,18 @@ substitutions:
     set_feature_flag_default_state:
       feature_name: kMediaDrmGetStatusForPolicy
       value: base::FEATURE_DISABLED_BY_DEFAULT
+
+  # Growser-313: no Widevine provisioning at startup.
+  - description: |-
+      Growser-313: ship kMediaDrmPreprovisioningAtStartup disabled.
+
+      Measured on Android (a NetLog of a fresh profile): 60 seconds after
+      startup, before any site was opened, the browser made four requests to
+      www.googleapis.com/certificateprovisioning - Widevine origin IDs being
+      provisioned ahead of need, straight to Google from the user's address.
+      Nothing a user did asked for it. With this off, provisioning happens
+      when a site actually plays protected media; kMediaDrmPreprovisioning
+      stays on, so later origins are still prepared after that first use.
+    set_feature_flag_default_state:
+      feature_name: kMediaDrmPreprovisioningAtStartup
+      value: base::FEATURE_DISABLED_BY_DEFAULT

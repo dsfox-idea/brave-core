@@ -123,6 +123,7 @@ X("LiveCaption")
 X("LocalNetworkAccessChecksWebSockets")
 X("LocationProviderManager")
 X("MediaDrmGetStatusForPolicy")
+X("MediaDrmPreprovisioningAtStartup")  // Growser-313
 X("MixedContentAutoupgrade")
 X("MlUrlScoring")
 X("MultistepFilter")
