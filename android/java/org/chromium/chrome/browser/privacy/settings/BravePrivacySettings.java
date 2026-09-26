@@ -404,14 +404,10 @@ public class BravePrivacySettings extends PrivacySettings {
         mClearBrowsingDataOnExit = (ChromeSwitchPreference) findPreference(PREF_CLEAR_ON_EXIT);
         mClearBrowsingDataOnExit.setOnPreferenceChangeListener(this);
 
-        // Hide P3A setting if it's managed by policy
-        if (BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED)) {
-            removePreferenceIfPresent(PREF_SEND_P3A);
-            mSendP3A = null;
-        } else {
-            mSendP3A = (ChromeSwitchPreference) findPreference(PREF_SEND_P3A);
-            mSendP3A.setOnPreferenceChangeListener(this);
-        }
+        // Growser-319: P3A is a no-op since #21, so its toggle controlled nothing -
+        // hidden, as the desktop hides it.
+        removePreferenceIfPresent(PREF_SEND_P3A);
+        mSendP3A = null;
 
         // Hide crash reporting setting if it's disabled by policy
         if (!mPrivacyPrefManager.isUsageAndCrashReportingPermittedByPolicy()) {
@@ -1049,9 +1045,8 @@ public class BravePrivacySettings extends PrivacySettings {
                         indexData.removeEntryForKey(frag, PREF_ENS);
                         indexData.removeEntryForKey(frag, PREF_SNS);
                     }
-                    if (BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED)) {
-                        indexData.removeEntryForKey(frag, PREF_SEND_P3A);
-                    }
+                    // Growser-319: always hidden, see onCreatePreferences.
+                    indexData.removeEntryForKey(frag, PREF_SEND_P3A);
                     if (!PrivacyPreferencesManagerImpl.getInstance()
                             .isUsageAndCrashReportingPermittedByPolicy()) {
                         indexData.removeEntryForKey(frag, PREF_SEND_CRASH_REPORTS);

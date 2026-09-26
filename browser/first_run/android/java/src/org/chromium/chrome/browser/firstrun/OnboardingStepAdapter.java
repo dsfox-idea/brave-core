@@ -214,6 +214,7 @@ public class OnboardingStepAdapter
         final Button mStartBrowsing;
         final MaterialCheckBox mSendCrashReports;
         final MaterialCheckBox mSendP3a;
+        final View[] mP3aRow;
 
         private MakeBraveBetterViewHolder(
                 final View itemView,
@@ -238,8 +239,14 @@ public class OnboardingStepAdapter
             }
 
             mSendP3a = itemView.findViewById(R.id.send_p3a_reports);
+            mP3aRow =
+                    new View[] {
+                        itemView.findViewById(R.id.send_p3a_reports_title),
+                        itemView.findViewById(R.id.send_p3a_reports_container),
+                        itemView.findViewById(R.id.brave_onboarding_subtitle),
+                    };
             if (p3aManaged) {
-                mSendP3a.setVisibility(View.INVISIBLE);
+                showP3aRow(false);
             } else {
                 mSendP3a.setChecked(p3aChecked);
                 mSendP3a.setOnCheckedChangeListener(
@@ -260,10 +267,19 @@ public class OnboardingStepAdapter
             }
 
             if (p3aManaged) {
-                mSendP3a.setVisibility(View.INVISIBLE);
+                showP3aRow(false);
             } else {
-                mSendP3a.setVisibility(View.VISIBLE);
+                showP3aRow(true);
                 mSendP3a.setChecked(p3aChecked);
+            }
+        }
+
+        // Growser-319: a P3A row that is not offered goes whole - its title, its
+        // checkbox and description, and the page subtitle, which asks which features
+        // the user enjoys; hiding the checkbox alone left the question on screen.
+        private void showP3aRow(boolean show) {
+            for (View view : mP3aRow) {
+                view.setVisibility(show ? View.VISIBLE : View.GONE);
             }
         }
 

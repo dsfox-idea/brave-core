@@ -237,7 +237,10 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
     public void finishNativeInitialization() {
         super.finishNativeInitialization();
 
-        mIsP3aManaged = BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED);
+        // Growser-319: P3A is a no-op since #21, so there is nothing to offer - it is
+        // treated as decided, which hides its row (and skips the page if crash
+        // reporting is decided by policy too).
+        mIsP3aManaged = true;
         mIsCrashReportingManaged =
                 !PrivacyPreferencesManagerImpl.getInstance()
                         .isUsageAndCrashReportingPermittedByPolicy();
