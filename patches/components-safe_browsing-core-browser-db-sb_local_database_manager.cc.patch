@@ -1,0 +1,14 @@
+diff --git a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
+index f4fb803e04a915aeebaaa00305e1c27e79e07f15..b64dbed75cc6db4a5bc3b88c34f06643dcfe6704 100644
+--- a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
++++ b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
+@@ -84,7 +84,8 @@ ListInfos GetListInfos() {
+   const bool kIsChromeBranded = false;
+ #endif
+ 
+-  const bool kSyncOnDesktopBuilds = !kSyncOnIos;
++  const bool kSyncOnDesktopBuilds =
++      !kSyncOnIos && !BUILDFLAG(IS_ANDROID);  // Growser-303
+   const bool kSyncOnChromeDesktopBuilds =
+       kIsChromeBranded && kSyncOnDesktopBuilds;
+   const bool kSyncAlways = true;

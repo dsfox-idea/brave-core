@@ -1,0 +1,36 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-303: include what the local database manager needs, in place of
+      the remote one's header.
+    regex:
+      pattern: '#include "components/safe_browsing/android/remote_database_manager.h"'
+      replace: |-
+        #include "chrome/browser/safe_browsing/safe_browsing_service.h"
+        #include "components/safe_browsing/core/browser/db/sb_local_database_manager.h"
+        #include "content/public/browser/browser_task_traits.h"
+
+  - description: |-
+      Growser-303: check URLs against the local Safe Browsing database, as the
+      desktop does, instead of asking Play services.
+
+      Upstream's remote manager hands every lookup to Google Play services,
+      and the handler behind it is gone (#317) - with none registered, every
+      lookup answers "safe". The local manager is already linked into the
+      Android build (chrome/browser/safe_browsing depends on it
+      unconditionally) and its update and full-hash requests go to
+      safebrowsing.googleapis.com, which the static redirect sends to our
+      backend. The extended reporting callback is left empty, as iOS does:
+      Brave switches extended reporting off.
+    regex:
+      pattern: 'base::WrapRefCounted(new RemoteSafeBrowsingDatabaseManager());'
+      replace: |-
+        SBLocalDatabaseManager::Create(  // Growser-303
+                    SafeBrowsingServiceImpl::GetBaseFilename(),
+                    content::GetUIThreadTaskRunner({}),
+                    content::GetIOThreadTaskRunner({}),
+                    ExtendedReportingLevelCallback());

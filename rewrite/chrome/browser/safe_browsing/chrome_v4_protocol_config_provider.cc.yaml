@@ -1,0 +1,22 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-303: Android names itself "chromium", not "chromium-a".
+
+      Upstream appends "-a" so the server can tell a mobile client apart, and
+      Google refuses that client the lists the local database needs.
+      Measured through our backend on the V4 protocol: for "chromium-a" the
+      update of the Android phishing and billing lists answers 403 "ThreatType
+      is not accessible" (which fails the whole update, so nothing is
+      downloaded), and a full-hash lookup for Google's own phishing test page
+      answers 200 with no match - the page is silently "safe". For "chromium"
+      both work.
+    regex:
+      pattern: 'client_name.append("-a");'
+      replace: |-
+        // Growser-303: no "-a" - Google refuses that client the lists the
+          // local database needs; see the recipe.

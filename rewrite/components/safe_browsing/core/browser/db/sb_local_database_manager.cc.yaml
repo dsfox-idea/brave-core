@@ -1,0 +1,21 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-303: Android does not sync the desktop-only lists.
+
+      Upstream never runs this database on Android, so "not iOS" meant
+      "desktop". On Android it would request UrlMalBin and
+      UrlCsdDownloadAllowlist, which Google does not serve for the Android
+      platform (500 "Could not fetch threat list updates", failing the whole
+      update with them), and ChromeExtMalware, which only matters where
+      extensions exist. What is left is what Android needs: phishing,
+      malware, unwanted software and billing.
+    regex:
+      pattern: 'const bool kSyncOnDesktopBuilds = !kSyncOnIos;'
+      replace: |-
+        const bool kSyncOnDesktopBuilds =
+              !kSyncOnIos && !BUILDFLAG(IS_ANDROID);  // Growser-303
