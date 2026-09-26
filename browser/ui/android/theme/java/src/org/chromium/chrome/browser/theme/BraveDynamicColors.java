@@ -35,7 +35,9 @@ public final class BraveDynamicColors {
             new CachedFlag(
                     ChromeFeatureMap.getInstance(),
                     BraveFeatureList.BRAVE_ANDROID_DYNAMIC_COLORS_BY_DEFAULT,
-                    true);
+                    // Growser-326: matches the native default, which is what a
+                    // first run reads before native has written the cache.
+                    false);
 
     private BraveDynamicColors() {}
 

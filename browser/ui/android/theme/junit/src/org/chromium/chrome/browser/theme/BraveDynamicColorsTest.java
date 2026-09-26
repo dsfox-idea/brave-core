@@ -43,9 +43,10 @@ public class BraveDynamicColorsTest {
         assertFalse(BraveDynamicColors.isDynamicColorsAvailable());
     }
 
+    // Growser-326: the brand green is the default; dynamic colors are opt-in.
     @Test
-    public void testIsDynamicColorsEnabled_defaultEnabled_userPreferenceUnset_returnsTrue() {
-        assertTrue(BraveDynamicColors.isDynamicColorsEnabled());
+    public void testIsDynamicColorsEnabled_userPreferenceUnset_returnsFalse() {
+        assertFalse(BraveDynamicColors.isDynamicColorsEnabled());
     }
 
     @Test
