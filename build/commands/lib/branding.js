@@ -493,6 +493,48 @@ const update = () => {
         console.log('primary ramp applied to ' + tokenFile)
       }
     }
+
+    // Growser-325: iOS carries the semantic colours resolved (button/background
+    // is a literal violet in the asset catalog), so the generator lists every
+    // colour set the ramp reaches, per appearance, with the components already
+    // written the way the catalog writes them. Nothing is computed here.
+    const iosColors = path.join(leoTokensDir, 'ios-swift', 'Colors.xcassets')
+    if (ramp.ios && fs.existsSync(iosColors)) {
+      let changed = 0
+      for (const [name, themes] of Object.entries(ramp.ios)) {
+        const file = path.join(iosColors, `${name}.colorset`, 'Contents.json')
+        if (!fs.existsSync(file)) {
+          continue
+        }
+        const colorSet = JSON.parse(fs.readFileSync(file, 'utf8'))
+        let touched = false
+        for (const entry of colorSet.colors) {
+          const dark = (entry.appearances || []).some((a) => a.value === 'dark')
+          const want = themes[dark ? 'dark' : 'light']
+          if (!want) {
+            continue
+          }
+          for (const channel of ['red', 'green', 'blue']) {
+            if (entry.color.components[channel] !== want[channel]) {
+              entry.color.components[channel] = want[channel]
+              touched = true
+            }
+          }
+        }
+        if (touched) {
+          fs.writeFileSync(file, JSON.stringify(colorSet, null, 2) + '\n')
+          changed++
+        }
+      }
+      if (changed) {
+        // The build takes the catalog as one directory input, and editing a
+        // file two levels down does not move the directory's mtime - the
+        // compiled Assets.car stayed violet until this touch (lesson 40).
+        const now = new Date()
+        fs.utimesSync(iosColors, now, now)
+        console.log(`primary ramp applied to ${changed} iOS colour sets`)
+      }
+    }
   }
 
   // growser (#139): 12px is the ceiling for corners in this product, and the
