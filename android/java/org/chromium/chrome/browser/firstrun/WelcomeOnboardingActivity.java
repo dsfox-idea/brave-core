@@ -113,6 +113,11 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
     }
 
     private void finalStep() {
+        // Growser-333: the crash-report answer is recorded when the user leaves the
+        // first run, not before.
+        if (!mIsCrashReportingManaged) {
+            setMetricsReportingConsent(mCrashReportingChecked, true);
+        }
         ChromeSharedPreferences.getInstance()
                 .writeBoolean(OnboardingPrefManager.SHOULD_SHOW_SEARCH_WIDGET_PROMO, true);
         CustomizeBraveMenu.initDefaultInvisibleItems(getResources());
@@ -324,9 +329,10 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
     }
 
     private boolean getCrashReportingPreference() {
-        if (PackageUtils.isFirstInstall(this)
-                && !OnboardingPrefManager.getInstance().isP3aCrashReportingMessageShown()) {
-            setMetricsReportingConsent(true, true);
+        // Growser-333: until the user has answered, the box starts ticked and
+        // nothing is recorded - finalStep() records the answer, as the desktop's
+        // first screen does (#92).
+        if (!OnboardingPrefManager.getInstance().isP3aCrashReportingMessageShown()) {
             return true;
         }
 
@@ -527,8 +533,8 @@ public class WelcomeOnboardingActivity extends FirstRunActivityBase
 
     @Override
     public void onCrashReportingPreferenceChanged(final boolean enabled) {
+        // Growser-333: a tap only changes the box; finalStep() records it.
         mCrashReportingChecked = enabled;
-        setMetricsReportingConsent(enabled, false);
     }
 
     @Override
