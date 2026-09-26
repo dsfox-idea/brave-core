@@ -12,10 +12,18 @@ void SetAPIKeyForTesting(const std::string& api_key) {
 }
 
 bool BraveHasAPIKeyConfigured() {
+#if BUILDFLAG(IS_ANDROID)
+  // Growser-331: translation is off on Android. There is no on-device
+  // translator there, so the page text would go to our backend, which has no
+  // provider (#245). This is the gate TranslateManager reads: false turns off
+  // the menu item, the automatic offer and IsAvailable together.
+  return false;
+#else
   // Google API key is not used in brave for translation service, always return
   // true for the API key check so the flow won't be blocked because of missing
   // keys.
   return true;
+#endif
 }
 
 }  // namespace google_apis

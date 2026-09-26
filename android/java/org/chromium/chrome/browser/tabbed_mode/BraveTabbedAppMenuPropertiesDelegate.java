@@ -720,17 +720,7 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
                                 0,
                                 isMenuIconAtStart())));
 
-        // Translate
-        modelList.add(
-                new MVCListAdapter.ListItem(
-                        AppMenuHandler.AppMenuItemType.STANDARD,
-                        AppMenuItemUtils.buildModelForStandardMenuItem(
-                                mContext,
-                                mAppMenuItemTheme,
-                                R.id.translate_id,
-                                R.string.menu_translate,
-                                0,
-                                isMenuIconAtStart())));
+        // Growser-331: no Translate - translation is off on Android.
 
         // Shred
         if (ChromeFeatureList.isEnabled(BraveFeatureList.BRAVE_SHRED)) {

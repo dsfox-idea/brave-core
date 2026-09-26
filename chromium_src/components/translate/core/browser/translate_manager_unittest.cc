@@ -197,7 +197,9 @@ TEST_F(TranslateManagerTest, CanManuallyTranslate_WithoutAPIKey) {
   network_notifier_.SimulateOnline();
 
   translate_manager_->GetLanguageState()->LanguageDetermined("de", true);
-  EXPECT_TRUE(translate_manager_->CanManuallyTranslate());
+  // Growser-331: translation is off on Android, whatever the key.
+  EXPECT_EQ(translate_manager_->CanManuallyTranslate(),
+            !BUILDFLAG(IS_ANDROID));
 
   ::google_apis::SetAPIKeyForTesting(api_key);
 }
@@ -217,7 +219,9 @@ TEST_F(TranslateManagerTest, CanManuallyTranslate_WithAPIKey) {
   network_notifier_.SimulateOnline();
 
   translate_manager_->GetLanguageState()->LanguageDetermined("de", true);
-  EXPECT_TRUE(translate_manager_->CanManuallyTranslate());
+  // Growser-331: translation is off on Android, whatever the key.
+  EXPECT_EQ(translate_manager_->CanManuallyTranslate(),
+            !BUILDFLAG(IS_ANDROID));
 
   ::google_apis::SetAPIKeyForTesting(api_key);
 }
