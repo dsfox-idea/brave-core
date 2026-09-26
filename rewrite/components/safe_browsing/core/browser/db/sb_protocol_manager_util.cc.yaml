@@ -1,0 +1,20 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-303: Android asks for the desktop lists, as ANY_PLATFORM.
+
+      Upstream Android never runs the local database, so its platform only
+      named lists nobody requested. Google's Android lists are a different
+      and smaller set - measured through our backend, the Android phishing
+      list is 2.39M prefixes against the desktop's 4.12M, and Google's own
+      malware test page is on the desktop list only. ANY_PLATFORM serves the
+      desktop set (the same contents as WINDOWS), every list this database
+      syncs included. The Android malware list, which the desktop set lacks,
+      is added beside it in sb_local_database_manager.cc.
+    regex:
+      pattern: 'return ANDROID_PLATFORM;'
+      replace: 'return ANY_PLATFORM;  // Growser-303: see the recipe'

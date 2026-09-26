@@ -3,19 +3,57 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+# Growser-303: Android checks the desktop lists (see the ANY_PLATFORM recipe
+# of sb_protocol_manager_util.cc) plus Google's Android malware list, which
+# the desktop lists do not cover. Measured through our backend: the Android
+# malware list holds 131072 prefixes and the desktop one 52431, with none in
+# common, while the Android phishing and unwanted-software lists are nearly
+# subsets of the desktop ones. The union costs about 17.5 MB on first
+# download.
+
 substitutions:
   - description: |-
-      Growser-303: Android does not sync the desktop-only lists.
-
-      Upstream never runs this database on Android, so "not iOS" meant
-      "desktop". On Android it would request UrlMalBin and
-      UrlCsdDownloadAllowlist, which Google does not serve for the Android
-      platform (500 "Could not fetch threat list updates", failing the whole
-      update with them), and ChromeExtMalware, which only matters where
-      extensions exist. What is left is what Android needs: phishing,
-      malware, unwanted software and billing.
+      Growser-303: the list id of Google's Android malware list.
     regex:
-      pattern: 'const bool kSyncOnDesktopBuilds = !kSyncOnIos;'
+      re_pattern: '(\nnamespace \{\n)'
+      replace: |
+        \1
+        #if BUILDFLAG(IS_ANDROID)
+        // Growser-303: Google's Android malware list, checked beside the
+        // desktop one; the two have no prefix in common.
+        ListIdentifier GetUrlMalwareAndroidId() {
+          return ListIdentifier(ANDROID_PLATFORM, URL, MALWARE_THREAT);
+        }
+        #endif
+
+  - description: |-
+      Growser-303: sync the Android malware list on Android.
+    regex:
+      re_pattern: '(\n( *)ListInfo\(kSyncAlways, "UrlMalware", GetUrlMalwareId\(\),\n *SB_THREAT_TYPE_URL_MALWARE\),)'
       replace: |-
-        const bool kSyncOnDesktopBuilds =
-              !kSyncOnIos && !BUILDFLAG(IS_ANDROID);  // Growser-303
+        \1
+        #if BUILDFLAG(IS_ANDROID)
+        \2ListInfo(kSyncAlways, "UrlMalwareAndroid",  // Growser-303
+        \2         GetUrlMalwareAndroidId(), SB_THREAT_TYPE_URL_MALWARE),
+        #endif
+
+  - description: |-
+      Growser-303: a malware check on Android reads both malware lists.
+    regex:
+      re_pattern: '(\n( *)stores_to_check\.insert\(GetUrlIdFromSBThreatType\(sb_threat_type\)\);)'
+      replace: |-
+        \1
+        #if BUILDFLAG(IS_ANDROID)
+        \2if (sb_threat_type == SBThreatType::SB_THREAT_TYPE_URL_MALWARE) {
+        \2  stores_to_check.insert(GetUrlMalwareAndroidId());  // Growser-303
+        \2}
+        #endif
+
+  - description: |-
+      Growser-303: no extension malware list on Android - there are no
+      extensions to check against it (1.9 MB for nothing).
+    regex:
+      pattern: 'ListInfo(kSyncOnDesktopBuilds, "ChromeExtMalware",'
+      replace: |-
+        ListInfo(kSyncOnDesktopBuilds && !BUILDFLAG(IS_ANDROID),  // Growser-303
+                       "ChromeExtMalware",

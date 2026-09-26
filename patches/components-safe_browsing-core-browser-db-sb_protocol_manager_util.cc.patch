@@ -1,0 +1,13 @@
+diff --git a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
+index 1216ddd7522144cca584f343e03865d3f7f06b88..d757999918f06aa5870d56d5c5543463d8f3a491 100644
+--- a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
++++ b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
+@@ -226,7 +226,7 @@ PlatformType GetCurrentPlatformType() {
+ #elif BUILDFLAG(IS_MAC)
+   return OSX_PLATFORM;
+ #else
+-  return ANDROID_PLATFORM;
++  return ANY_PLATFORM;  // Growser-303: see the recipe
+ #endif
+ }
+ 

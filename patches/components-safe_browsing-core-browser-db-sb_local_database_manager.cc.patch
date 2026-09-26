@@ -1,14 +1,49 @@
 diff --git a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
-index f4fb803e04a915aeebaaa00305e1c27e79e07f15..b64dbed75cc6db4a5bc3b88c34f06643dcfe6704 100644
+index f4fb803e04a915aeebaaa00305e1c27e79e07f15..47cefa11faa45b347257a137c4d6e799f390f142 100644
 --- a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
 +++ b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
-@@ -84,7 +84,8 @@ ListInfos GetListInfos() {
-   const bool kIsChromeBranded = false;
- #endif
+@@ -47,6 +47,14 @@ namespace safe_browsing {
  
--  const bool kSyncOnDesktopBuilds = !kSyncOnIos;
-+  const bool kSyncOnDesktopBuilds =
-+      !kSyncOnIos && !BUILDFLAG(IS_ANDROID);  // Growser-303
-   const bool kSyncOnChromeDesktopBuilds =
-       kIsChromeBranded && kSyncOnDesktopBuilds;
-   const bool kSyncAlways = true;
+ namespace {
+ 
++#if BUILDFLAG(IS_ANDROID)
++// Growser-303: Google's Android malware list, checked beside the
++// desktop one; the two have no prefix in common.
++ListIdentifier GetUrlMalwareAndroidId() {
++  return ListIdentifier(ANDROID_PLATFORM, URL, MALWARE_THREAT);
++}
++#endif
++
+ // The expiration time of the full hash stored in the artificial database.
+ const int64_t kFullHashExpiryTimeInMinutes = 60;
+ 
+@@ -95,11 +103,16 @@ ListInfos GetListInfos() {
+                SB_THREAT_TYPE_URL_PHISHING),
+       ListInfo(kSyncAlways, "UrlMalware", GetUrlMalwareId(),
+                SB_THREAT_TYPE_URL_MALWARE),
++#if BUILDFLAG(IS_ANDROID)
++      ListInfo(kSyncAlways, "UrlMalwareAndroid",  // Growser-303
++               GetUrlMalwareAndroidId(), SB_THREAT_TYPE_URL_MALWARE),
++#endif
+       ListInfo(kSyncAlways, "UrlUws", GetUrlUwsId(),
+                SB_THREAT_TYPE_URL_UNWANTED),
+       ListInfo(kSyncOnDesktopBuilds, "UrlMalBin", GetUrlMalBinId(),
+                SB_THREAT_TYPE_URL_BINARY_MALWARE),
+-      ListInfo(kSyncOnDesktopBuilds, "ChromeExtMalware",
++      ListInfo(kSyncOnDesktopBuilds && !BUILDFLAG(IS_ANDROID),  // Growser-303
++               "ChromeExtMalware",
+                GetChromeExtMalwareId(), SB_THREAT_TYPE_EXTENSION),
+       ListInfo(kSyncAlways, "UrlBilling", GetUrlBillingId(),
+                SB_THREAT_TYPE_BILLING),
+@@ -223,6 +236,11 @@ StoresToCheck CreateStoresToCheckFromSBThreatTypeSet(
+   StoresToCheck stores_to_check;
+   for (SBThreatType sb_threat_type : threat_types) {
+     stores_to_check.insert(GetUrlIdFromSBThreatType(sb_threat_type));
++#if BUILDFLAG(IS_ANDROID)
++    if (sb_threat_type == SBThreatType::SB_THREAT_TYPE_URL_MALWARE) {
++      stores_to_check.insert(GetUrlMalwareAndroidId());  // Growser-303
++    }
++#endif
+   }
+   return stores_to_check;
+ }
