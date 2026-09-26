@@ -505,9 +505,8 @@ public class BravePrivacySettings extends PrivacySettings {
             removePreferenceIfPresent(PREF_SNS);
         }
 
-        // Growser-317: no Safe Browsing row until #303 gives Android a path through
-        // our proxy; the Play services one left with SafetyNet.
-        removePreferenceIfPresent(PREF_SAFE_BROWSING);
+        // Growser-303: the Safe Browsing row stays, and needs no Play services
+        // check - lookups go to the local database through our backend.
 
         updateBravePreferences();
     }
