@@ -4,6 +4,7 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import BraveCore
+import BraveShared  // Growser-321
 import BraveShields
 import BraveUI
 import Data
@@ -279,7 +280,9 @@ extension BrowserViewController: TabPolicyDecider {
       return .allow
     }
 
-    if requestURL.scheme?.contains("brave") == true || requestURL.scheme?.contains("chrome") == true
+    // Growser-321: our WebUI scheme, which our channel schemes also contain.
+    if requestURL.scheme?.contains(URL.webUI.scheme) == true
+      || requestURL.scheme?.contains("chrome") == true
     {
       // brave://account should not be treated as a regular WebUI page.
       // It is part of the Settings UI and is intended to be opened only

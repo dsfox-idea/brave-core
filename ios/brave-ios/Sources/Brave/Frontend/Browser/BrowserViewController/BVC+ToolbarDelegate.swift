@@ -212,7 +212,8 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
     isUserDefinedURLNavigation: Bool
   ) async -> Bool {
 
-    if let url = URL(string: text), url.scheme == "brave" || url.scheme == "chrome" {
+    // Growser-321: our WebUI scheme, not Brave's.
+    if let url = URL(string: text), url.scheme == URL.webUI.scheme || url.scheme == "chrome" {
       dismissSearchInput()
       finishEditingAndSubmit(url, isUserDefinedURLNavigation: isUserDefinedURLNavigation)
       return true

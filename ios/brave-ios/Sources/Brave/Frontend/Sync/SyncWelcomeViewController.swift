@@ -325,7 +325,8 @@ class SyncWelcomeViewController: SyncViewController {
       isPrivateBrowsing: false
     ).then {
       $0.title = Strings.Sync.internalsTitle
-      $0.webView.load(URLRequest(url: URL(string: "brave://sync-internals")!))
+      // Growser-321: our WebUI scheme, not Brave's.
+      $0.webView.load(URLRequest(url: URL(string: "\(URL.webUI.scheme)://sync-internals")!))
     }
 
     navigationController?.pushViewController(syncInternalsController, animated: true)

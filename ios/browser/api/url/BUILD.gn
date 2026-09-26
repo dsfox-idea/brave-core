@@ -20,6 +20,7 @@ source_set("url") {
 
   deps = [
     "//base",
+    "//brave/components/constants",  # Growser-321
     "//brave/components/content_settings/core/common",
     "//brave/extensions:common",
     "//components/lookalikes/core",
