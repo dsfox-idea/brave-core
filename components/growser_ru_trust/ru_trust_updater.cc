@@ -16,6 +16,7 @@
 #include "base/values.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
+#include "crypto/sign.h"
 #include "crypto/signature_verifier.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
 #include "services/network/public/cpp/resource_request.h"
@@ -81,7 +82,7 @@ bool VerifySignature(std::string_view payload, std::string_view signature_b64) {
     return false;
   }
   crypto::SignatureVerifier verifier;
-  if (!verifier.VerifyInit(crypto::SignatureVerifier::ECDSA_SHA256, *signature,
+  if (!verifier.VerifyInit(crypto::sign::ECDSA_SHA256, *signature,
                            kPublicKeySpki)) {
     return false;
   }
