@@ -36,7 +36,6 @@ declare module '../page_visibility.js' {
     // <if expr="enable_speedreader">
     speedreader?: boolean
     // </if>
-    surveyPanelist?: boolean,
     braveTor?: boolean,
     emailAliases?: boolean
   }
@@ -76,7 +75,6 @@ function getPageVisibility () {
       // <if expr="enable_speedreader">
       speedreader: false,
       // </if>
-      surveyPanelist: false,
       braveTor: false,
       emailAliases: false,
     }
@@ -113,9 +111,6 @@ function getPageVisibility () {
     leoPersonalization: false,
     leoModels: false,
     // </if>
-    // growser (#78): Brave's own research panel, and it reported through P3A,
-    // which this build removed entirely (#21). Nothing behind the switch.
-    surveyPanelist: false,
     // <if expr="enable_containers">
     containers: loadTimeData.getBoolean('isContainersEnabled'),
     // </if>

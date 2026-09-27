@@ -736,6 +736,18 @@
 /* Accessibility Title for the button that edits the quick-search engines list. */
 "EditQuickSearchEnginesAccessibilityTitle" = "Редактирование систем быстрого поиска";
 
+/* The message on an alert presented to the user after the app crashes */
+"EnableCrashReporterAlertMessage" = "Если произойдёт сбой или зависание, Growser может автоматически отправить анонимный диагностический отчёт, чтобы проблему исправили. Это всегда можно отключить в настройках.";
+
+/* The title on an alert presented to the user after the app crashes */
+"EnableCrashReporterAlertTitle" = "Включить автоматические отчёты о сбоях";
+
+/* The confirmation button title on an alert presented to the user after the app crashes which will enable crash reporting */
+"EnableCrashReporterConfirmButtonTitle" = "Включить";
+
+/* The button title on an alert presented to the user after the app crashes that ignores the alert */
+"EnableCrashReporterDenyButtonTitle" = "Не сейчас";
+
 /* Describes whether or not the feature that allows the user to pull down from the top of a web page a certain amount before it triggers a page refresh */
 "enablePullToRefresh" = "Включить функцию «Потяните, чтобы обновить»";
 
@@ -1104,9 +1116,6 @@
 
 /* A selection to let the users only see a set of predefined, default images on the background of the app. */
 "ntp.settingsDefaultImagesOnly" = "Изображения по умолчанию";
-
-/* A selection to let the users see sponsored image and video backgrounds when opening a new tab. */
-"ntp.settingsSponsoredImagesAndVideosSelection" = "Спонсированные изображения & видео";
 
 /* A selection to let the users see sponsored image backgrounds when opening a new tab. */
 "ntp.settingsSponsoredImagesSelection" = "Спонсорские изображения";
@@ -2089,6 +2098,15 @@
 /* Displayed in the status container when rewards is enabled but you're not currently supporting any publishers (0 AC count) */
 "rewards.enabledStatusBody" = "Спасибо, что поддерживаете Growser и сообщество BAT!";
 
+/* Message of a confirmation dialog shown before resetting Brave Rewards */
+"rewards.settingsResetConfirmationMessage" = "После сброса текущий профиль Growser Rewards будет удалён, а Growser Rewards — отключены.";
+
+/* Title of a confirmation dialog shown before resetting Brave Rewards */
+"rewards.settingsResetConfirmationTitle" = "Сбросить Growser Rewards";
+
+/* Title of a button that resets the user's Brave Rewards profile */
+"rewards.settingsResetTitle" = "Сбросить";
+
 /* No comment provided by engineer. */
 "rewards.settingsToggleMessage" = "Вы можете поддержать Growser и сообщество BAT, включив Growser Награды и просматривая Growser Рекламу.";
 
@@ -2470,17 +2488,17 @@
 /* Title for the quality settings view */
 "settings.qualitySettings" = "Настройки качества";
 
+/* Description to explain the send crash reports toggle */
+"settings.sendCrashReportsDescription" = "Отправлять анонимные диагностические отчёты при сбое или зависании.";
+
+/* Title to explain the send crash reports toggle */
+"settings.sendCrashReportsTitle" = "Отправлять отчёты о сбоях";
+
 /* Description to explain the daily usage ping toggle */
 "settings.sendUsagePingDescription" = "Конфиденциальные уведомления помогают Growser оценивать количество активных пользователей.";
 
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Автоматически отправлять ежедневные данные PING в Growser";
-
-/* Description to explain the survey panelist toggle */
-"settings.surveyPanelistDescription" = "Позволяет Growser показывать ссылки на частные опросы на странице новой вкладки. Опросы помогают нам создавать лучшие функции и измерять эффективность рекламных кампаний в браузере. Узнать больше)";
-
-/* Title to explain the survey panelist toggle */
-"settings.surveyPanelistTitle" = "Разрешить опросы Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -3124,6 +3142,9 @@
 /* Accessibility label for the regular browsing option in the browsing mode picker */
 "tabGrid.privateBrowsingModeAccessibilityLabel" = "Приватный просмотр";
 
+/* A label in the tab tray mode switcher for private browsing mode */
+"tabGrid.privateBrowsingModeTitle" = "Приватные";
+
 /* A button title which when tapped will present settings for private tabs */
 "tabGrid.privateTabsSettingsTitle" = "Настройки приватных вкладок";
 
@@ -3148,11 +3169,23 @@
 /* Accessibility label for a button that allows users to shred their tabs (erase them & associated data) */
 "tabGrid.shredTabsAccessibilityLabel" = "Удаление вкладок";
 
+/* A label in the tab tray mode switcher shown when there are 0 or more than 1 regular tabs open e.g. '129 Tabs' */
+"tabGrid.tabsCountFormatPlural" = "Вкладки: %lld";
+
+/* A label in the tab tray mode switcher shown when there is 1 regular tab open e.g. '1 Tab' */
+"tabGrid.tabsCountFormatSingular" = "Вкладки: %lld";
+
 /* Accessibility label for a button that when tapped presents the users history & recently closed tabs */
 "tabGrid.viewHistoryAccessibilityLabel" = "Просмотр истории";
 
+/* Label for history menu item button that when tapped presents the users history & recently closed tabs */
+"tabGrid.viewHistoryMenuItemLabel" = "История";
+
 /* Accessibility label for a button that when tapped presents the users synced tabs */
 "tabGrid.viewSyncedTabsAccessibilityLabel" = "Просмотр синхронизированных вкладок";
+
+/* Label for synced tabs menu item that when tapped presents the users synced tabs */
+"tabGrid.viewSyncedTabsMenuItemLabel" = "Синхронизация";
 
 /* Accessiblity hint for toggling on/off private mode */
 "TabPrivateModeToggleAccessibilityHint" = "Включение или выключение приватного режима";
@@ -3631,11 +3664,9 @@
 /* Setting that enables high quality playback on wifi only */
 "YoutubeMediaQualityWifi" = "Разрешать только при подключении к сети Wi-Fi";
 
-/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
-"EnableCrashReporterAlertMessage" = "Если произойдёт сбой или зависание, Growser может автоматически отправить анонимный диагностический отчёт, чтобы проблему исправили. Это всегда можно отключить в настройках.";
-"EnableCrashReporterAlertTitle" = "Включить автоматические отчёты о сбоях";
-"EnableCrashReporterConfirmButtonTitle" = "Включить";
-"EnableCrashReporterDenyButtonTitle" = "Не сейчас";
+"ntp.settingsSponsoredImagesAndVideosSelection" = "Спонсированные изображения & видео";
+"settings.surveyPanelistDescription" = "Позволяет Growser показывать ссылки на частные опросы на странице новой вкладки. Опросы помогают нам создавать лучшие функции и измерять эффективность рекламных кампаний в браузере. Узнать больше)";
+"settings.surveyPanelistTitle" = "Разрешить опросы Growser";
 "LeoVoiceInputMenuItem" = "Голосовой ввод Leo";
 "backgroundDownloadingSubtitle" = "%@";
 "backgroundDownloadingSubtitleWithExpectedSize" = "%@ из %@";
@@ -3645,15 +3676,5 @@
 "quickview.confirmation.alert.message" = "Быстрый просмотр открывает ссылку, не уводя со страницы. Отключить его можно в любой момент в настройках.";
 "quickview.confirmation.alert.title" = "Открывать ссылки из переписки в быстром просмотре и дальше?";
 "quickview.confirmation.alert.turnOff.button.title" = "Отключить";
-"rewards.settingsResetConfirmationMessage" = "После сброса текущий профиль Growser Rewards будет удалён, а Growser Rewards — отключены.";
-"rewards.settingsResetConfirmationTitle" = "Сбросить Growser Rewards";
-"rewards.settingsResetTitle" = "Сбросить";
-"settings.sendCrashReportsDescription" = "Отправлять анонимные диагностические отчёты при сбое или зависании.";
-"settings.sendCrashReportsTitle" = "Отправлять отчёты о сбоях";
 "settings.sponsoredAdsEnabledDescription" = "Поддержите независимый интернет, в котором на первом месте пользователь, включив спонсорскую рекламу Growser. Эффективность рекламы измеряется конфиденциально, без вашей идентификации. [Подробнее](%@)";
 "settings.sponsoredAdsEnabledTitle" = "Включить спонсорскую рекламу";
-"tabGrid.privateBrowsingModeTitle" = "Приватные";
-"tabGrid.tabsCountFormatPlural" = "Вкладки: %lld";
-"tabGrid.tabsCountFormatSingular" = "Вкладки: %lld";
-"tabGrid.viewHistoryMenuItemLabel" = "История";
-"tabGrid.viewSyncedTabsMenuItemLabel" = "Синхронизация";

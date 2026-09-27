@@ -42,6 +42,9 @@ BASE_FEATURE(kBraveWalletPolkadotFeature,
 const base::FeatureParam<bool> kPolkadotAssetDiscovery{
     &kBraveWalletPolkadotFeature, "polkadot_asset_discovery", false};
 
+const base::FeatureParam<bool> kPolkadotDAppSupport{
+    &kBraveWalletPolkadotFeature, "polkadot_dapp_support", false};
+
 #if !defined(OFFICIAL_BUILD)
 BASE_FEATURE(kBraveWalletDebugFeature,
              "BraveWalletDebug",
@@ -66,7 +69,7 @@ const base::FeatureParam<bool> kZCashShieldedTransactionsEnabled{
     &kBraveWalletZCashFeature, "zcash_shielded_transactions_enabled", true};
 
 const base::FeatureParam<bool> kZCashIronwoodEnabled{
-    &kBraveWalletZCashFeature, "zcash_ironwood_enabled", false};
+    &kBraveWalletZCashFeature, "zcash_ironwood_enabled", true};
 
 BASE_FEATURE(kBraveWalletAnkrBalancesFeature,
              "BraveWalletAnkrBalances",
@@ -88,9 +91,9 @@ BASE_FEATURE(kBraveWalletAccountHidingFeature,
 #endif
 );
 
-BASE_FEATURE(kBraveWalletSnapsFeature,
-             "BraveWalletSnaps",
-             base::FEATURE_DISABLED_BY_DEFAULT);
+#if BUILDFLAG(ENABLE_SNAP)
+BASE_FEATURE(kBraveWalletSnapFeature, base::FEATURE_DISABLED_BY_DEFAULT);
+#endif
 
 BASE_FEATURE(kBraveWalletSidePanel, base::FEATURE_DISABLED_BY_DEFAULT);
 

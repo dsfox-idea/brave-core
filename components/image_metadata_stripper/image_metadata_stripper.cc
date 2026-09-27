@@ -41,6 +41,8 @@ constexpr std::string_view GetStrippingClient(StrippingClient client) {
       return "Download manager";
     case StrippingClient::kFileSelect:
       return "File selector";
+    case StrippingClient::kDragDrop:
+      return "Drag and drop";
   }
   NOTREACHED();
 }
@@ -118,6 +120,11 @@ StrippingResultCode RemoveIptcMetadataInternal(
 }
 
 }  // namespace
+
+bool IsSupportedImagePath(const base::FilePath& file_path) {
+  return file_path.MatchesExtension(FILE_PATH_LITERAL(".jpg")) ||
+         file_path.MatchesExtension(FILE_PATH_LITERAL(".jpeg"));
+}
 
 bool ContainsMetadataToStrip(const base::FilePath& file_path) {
   if (!base::PathExists(file_path)) {

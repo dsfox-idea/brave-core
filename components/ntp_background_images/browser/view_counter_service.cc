@@ -27,7 +27,7 @@
 #include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/ntp_background_images/browser/brave_ntp_custom_background_service.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_data.h"
-#include "brave/components/ntp_background_images/browser/ntp_sponsored_images_data.h"
+#include "brave/components/ntp_background_images/browser/sponsored_content/new_tab_takeover/ntp_sponsored_content_data.h"
 #include "brave/components/ntp_background_images/browser/url_constants.h"
 #include "brave/components/ntp_background_images/common/pref_names.h"
 #include "brave/components/ntp_background_images/common/view_counter_pref_names.h"
@@ -95,7 +95,7 @@ ViewCounterService::ViewCounterService(
       std::make_unique<WeeklyStorage>(local_state, prefs::kNewTabsCreated);
   new_tab_count_daily_state_ =
       std::make_unique<DailyStorage>(prefs, prefs::kNewTabsCreatedDaily);
-  branded_new_tab_count_state_ = std::make_unique<WeeklyStorage>(
+  new_tab_takeover_count_state_ = std::make_unique<WeeklyStorage>(
       local_state, prefs::kSponsoredNewTabsCreated);
 
   ResetModel();
@@ -118,7 +118,7 @@ ViewCounterService::ViewCounterService(
 
   OnBackgroundImagesDataDidUpdate(
       background_images_service_->GetBackgroundImagesData());
-  OnSponsoredImagesDataDidUpdate(GetSponsoredImagesData());
+  DeprecatedOnSponsoredContentDidUpdate(GetNewTabTakeover());
 
   UpdateP3AValues();
 }
@@ -146,7 +146,7 @@ void ViewCounterService::RecordViewedAdEvent(
     const std::string& placement_id,
     const std::string& creative_instance_id,
     brave_ads::mojom::NewTabPageAdMetricType mojom_ad_metric_type) {
-  branded_new_tab_count_state_->AddDelta(1);
+  new_tab_takeover_count_state_->AddDelta(1);
   UpdateP3AValues();
 
   MaybeTriggerNewTabPageAdEvent(
@@ -164,12 +164,12 @@ void ViewCounterService::RecordClickedAdEvent(
       brave_ads::mojom::NewTabPageAdEventType::kClicked);
 }
 
-NTPSponsoredImagesData* ViewCounterService::GetSponsoredImagesData() const {
-  const bool supports_rich_media =
+NTPSponsoredContentData* ViewCounterService::GetNewTabTakeover() const {
+  const bool supports_dynamic_new_tab_takeover =
       host_content_settings_map_->GetDefaultContentSetting(
           ContentSettingsType::JAVASCRIPT) == CONTENT_SETTING_ALLOW;
-  return background_images_service_->GetSponsoredImagesData(
-      supports_rich_media);
+  return background_images_service_->GetNewTabTakeover(
+      supports_dynamic_new_tab_takeover);
 }
 
 std::optional<base::DictValue>
@@ -180,8 +180,8 @@ ViewCounterService::GetNextWallpaperForDisplay() {
 
 void ViewCounterService::GetCurrentWallpaperForDisplay(
     base::OnceCallback<void(std::optional<base::DictValue>)> callback,
-    bool allow_sponsored_image) {
-  if (allow_sponsored_image && ShouldShowSponsoredImages()) {
+    bool allow_sponsored_content) {
+  if (allow_sponsored_content && ShouldShowNewTabTakeover()) {
     return GetCurrentBrandedWallpaper(
         base::BindOnce(&ViewCounterService::OnGetCurrentBrandedWallpaper,
                        weak_ptr_factory_.GetWeakPtr(), std::move(callback)));
@@ -217,8 +217,8 @@ std::optional<base::DictValue> ViewCounterService::GetCurrentWallpaper() const {
 
 void ViewCounterService::GetCurrentBrandedWallpaper(
     base::OnceCallback<void(std::optional<base::DictValue>)> callback) {
-  NTPSponsoredImagesData* images_data = GetSponsoredImagesData();
-  if (!images_data) {
+  NTPSponsoredContentData* sponsored_content_data = GetNewTabTakeover();
+  if (!sponsored_content_data) {
     return std::move(callback).Run(std::nullopt);
   }
 
@@ -234,14 +234,6 @@ void ViewCounterService::GetCurrentBrandedWallpaperFromAdsService(
       weak_ptr_factory_.GetWeakPtr(), std::move(callback)));
 }
 
-std::optional<base::DictValue>
-ViewCounterService::GetCurrentBrandedWallpaperFromModel() const {
-  const auto [campaign_index, creative_index] =
-      model_.GetCurrentBrandedImageIndex();
-  return GetSponsoredImagesData()->MaybeGetBackgroundAt(campaign_index,
-                                                        creative_index);
-}
-
 void ViewCounterService::Shutdown() {
   ads_service_observation_.Reset();
   host_content_settings_map_observation_.Reset();
@@ -251,15 +243,15 @@ void ViewCounterService::Shutdown() {
 void ViewCounterService::OnBackgroundImagesDataDidUpdate(
     NTPBackgroundImagesData* data) {
   if (data) {
-    DVLOG(2) << __func__ << ": NTP BI component is updated.";
+    DVLOG(2) << __func__ << ": The sponsored backgrounds component is updated.";
     ResetModel();
   }
 }
 
-void ViewCounterService::OnSponsoredImagesDataDidUpdate(
-    NTPSponsoredImagesData* data) {
+void ViewCounterService::DeprecatedOnSponsoredContentDidUpdate(
+    NTPSponsoredContentData* data) {
   if (data) {
-    DVLOG(2) << __func__ << ": NTP SI component is updated.";
+    DVLOG(2) << __func__ << ": The sponsored content component is updated.";
     ResetModel();
   }
 }
@@ -287,18 +279,20 @@ void ViewCounterService::ParseAndSaveNewTabPageAdsCallback(bool success) {
 void ViewCounterService::ResetModel() {
   model_.Reset();
 
-  model_.set_show_branded_wallpaper(IsSponsoredImagesWallpaperOptedIn());
+  model_.set_show_new_tab_takeover_wallpaper(CanShowNewTabTakeoverWallpaper());
   model_.set_show_wallpaper(IsShowBackgroundImageOptedIn());
 
-  if (const NTPSponsoredImagesData* const images_data =
-          GetSponsoredImagesData()) {
-    std::vector<size_t> campaigns_total_branded_images_count;
-    campaigns_total_branded_images_count.reserve(images_data->campaigns.size());
-    for (const auto& campaign : images_data->campaigns) {
-      campaigns_total_branded_images_count.push_back(campaign.creatives.size());
+  if (const NTPSponsoredContentData* const sponsored_content_data =
+          GetNewTabTakeover()) {
+    std::vector<size_t> campaigns_total_new_tab_takeover_creative_count;
+    campaigns_total_new_tab_takeover_creative_count.reserve(
+        sponsored_content_data->campaigns.size());
+    for (const auto& campaign : sponsored_content_data->campaigns) {
+      campaigns_total_new_tab_takeover_creative_count.push_back(
+          campaign.creatives.size());
     }
-    model_.SetCampaignsTotalBrandedImageCount(
-        campaigns_total_branded_images_count);
+    model_.SetCampaignsTotalNewTabTakeoverCreativeCount(
+        campaigns_total_new_tab_takeover_creative_count);
   }
 
   if (const NTPBackgroundImagesData* const images_data =
@@ -337,8 +331,8 @@ void ViewCounterService::RegisterPageView() {
   model_.RegisterPageView();
 }
 
-bool ViewCounterService::ShouldShowSponsoredImages() const {
-  return CanShowSponsoredImages() && model_.ShouldShowSponsoredImages();
+bool ViewCounterService::ShouldShowNewTabTakeover() const {
+  return CanShowNewTabTakeover() && model_.ShouldShowNewTabTakeover();
 }
 
 bool ViewCounterService::ShouldShowCustomBackgroundImages() const {
@@ -350,8 +344,8 @@ bool ViewCounterService::ShouldShowCustomBackgroundImages() const {
 #endif
 }
 
-bool ViewCounterService::CanShowSponsoredImages() const {
-  NTPSponsoredImagesData* images_data = GetSponsoredImagesData();
+bool ViewCounterService::CanShowNewTabTakeover() const {
+  NTPSponsoredContentData* images_data = GetNewTabTakeover();
   if (!images_data) {
     return false;
   }
@@ -360,7 +354,7 @@ bool ViewCounterService::CanShowSponsoredImages() const {
     return false;
   }
 
-  return IsSponsoredImagesWallpaperOptedIn();
+  return CanShowNewTabTakeoverWallpaper();
 }
 
 bool ViewCounterService::CanShowBackgroundImages() const {
@@ -378,7 +372,7 @@ bool ViewCounterService::IsShowBackgroundImageOptedIn() const {
   return prefs_->GetBoolean(prefs::kNewTabPageShowBackgroundImage);
 }
 
-bool ViewCounterService::IsSponsoredImagesWallpaperOptedIn() const {
+bool ViewCounterService::CanShowNewTabTakeoverWallpaper() const {
 #if BUILDFLAG(ENABLE_BRAVE_ADS)
   return prefs_->GetBoolean(brave_ads::prefs::kSponsoredEnabled) &&
          is_supported_locale_;
@@ -449,13 +443,13 @@ void ViewCounterService::GetCurrentBrandedWallpaperFromAdsServiceCallback(
     return std::move(callback).Run(std::nullopt);
   }
 
-  NTPSponsoredImagesData* images_data = GetSponsoredImagesData();
-  if (!images_data) {
+  NTPSponsoredContentData* sponsored_content_data = GetNewTabTakeover();
+  if (!sponsored_content_data) {
     return std::move(callback).Run(std::nullopt);
   }
 
   std::optional<base::DictValue> background =
-      images_data->MaybeGetBackground(*ad);
+      sponsored_content_data->MaybeGetBackground(*ad);
   if (!background) {
     return std::move(callback).Run(std::nullopt);
   }
@@ -505,13 +499,13 @@ void ViewCounterService::UpdateP3AValues() {
                                      kNewTabsCreatedMetricBuckets,
                                      static_cast<int>(new_tab_daily_count));
 
-  uint64_t branded_new_tab_count =
-      branded_new_tab_count_state_->GetHighestValueInWeek();
-  if (branded_new_tab_count == 0 || new_tab_count == 0) {
+  uint64_t new_tab_takeover_count =
+      new_tab_takeover_count_state_->GetHighestValueInWeek();
+  if (new_tab_takeover_count == 0 || new_tab_count == 0) {
     UMA_HISTOGRAM_EXACT_LINEAR(kSponsoredNewTabsHistogramName, 0,
                                std::size(kSponsoredNewTabsBuckets) + 1);
   } else {
-    double ratio = (static_cast<double>(branded_new_tab_count) /
+    double ratio = (static_cast<double>(new_tab_takeover_count) /
                     static_cast<double>(new_tab_count)) *
                    100;
     p3a_utils::RecordToHistogramBucket(kSponsoredNewTabsHistogramName,

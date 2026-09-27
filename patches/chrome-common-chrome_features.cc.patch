@@ -1,17 +1,8 @@
 diff --git a/chrome/common/chrome_features.cc b/chrome/common/chrome_features.cc
-index e9f21e32e51947e33568700ba41eaf22f9e83fe9..346e2bd28da10a8e7068a914dd5b14893ddcb715 100644
+index ee7411d364aa78a61f53a21d9dc37160e91ddba1..f94fd08ea0d6ec54570ae7f0ea20ea80f36a67a7 100644
 --- a/chrome/common/chrome_features.cc
 +++ b/chrome/common/chrome_features.cc
-@@ -180,7 +180,7 @@ BASE_FEATURE(kPreinstalledWebAppAlwaysMigrateForTesting,
- #endif
- 
- #if !BUILDFLAG(IS_ANDROID)
--BASE_FEATURE(kRemoteActorCredentialSharing, base::FEATURE_DISABLED_BY_DEFAULT);
-+BASE_OVERRIDDEN_FEATURE(kRemoteActorCredentialSharing, base::FEATURE_DISABLED_BY_DEFAULT);
- // This parameter is for testing purposes only and must not be used in
- // production. It overrides the whitelisted origins with the specified host.
- const base::FeatureParam<std::string>
-@@ -200,7 +200,7 @@ bool RemoteActorCredentialSharingEnabled() {
+@@ -193,7 +193,7 @@ bool RemoteActorCredentialSharingEnabled() {
  }
  
  // Controls the enablement of structured metrics on Windows, Linux, and Mac.
@@ -20,7 +11,7 @@ index e9f21e32e51947e33568700ba41eaf22f9e83fe9..346e2bd28da10a8e7068a914dd5b1489
  
  BASE_FEATURE(kDeferSpellcheckInitialization, base::FEATURE_DISABLED_BY_DEFAULT);
  
-@@ -224,7 +224,7 @@ BASE_FEATURE(kDesktopPWAsPreventClose,
+@@ -217,7 +217,7 @@ BASE_FEATURE(kDesktopPWAsPreventClose,
  );
  
  // Adds a user settings that allows PWAs to be opened with a tab strip.
@@ -29,7 +20,7 @@ index e9f21e32e51947e33568700ba41eaf22f9e83fe9..346e2bd28da10a8e7068a914dd5b1489
  
  // Removes the Window Controls Overlay toggle button from the PWA toolbar
  // and auto-enables WCO when the app developer specifies it in the manifest.
-@@ -394,7 +394,7 @@ const char kGlicActorUiDebounceTimerName[] = "glic-actor-ui-debounce-timer";
+@@ -392,7 +392,7 @@ const char kGlicActorUiDebounceTimerName[] = "glic-actor-ui-debounce-timer";
  
  // Controls whether the task icon in the actor ui is enabled.
  const base::FeatureParam<bool> kGlicActorUiTaskIcon{
@@ -38,32 +29,7 @@ index e9f21e32e51947e33568700ba41eaf22f9e83fe9..346e2bd28da10a8e7068a914dd5b1489
  // Controls whether the Actor Overlay in the actor ui is enabled.
  const base::FeatureParam<bool> kGlicActorUiOverlay{
      &kGlicActorUi, kGlicActorUiOverlayName, true};
-@@ -584,14 +584,7 @@ BASE_FEATURE(kGlicMessageFirstFre, base::FEATURE_DISABLED_BY_DEFAULT);
- // IMPORTANT: this feature should never be expired! It is used as the main
- // kill-switch for Glic and can be used in the future to handle unsupported
- // Chrome versions.
--BASE_FEATURE(kGlic,
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \
--    BUILDFLAG(IS_ANDROID)
--             base::FEATURE_ENABLED_BY_DEFAULT
--#else
--             base::FEATURE_DISABLED_BY_DEFAULT
--#endif
--);
-+BASE_OVERRIDDEN_FEATURE(kGlic, base::FEATURE_DISABLED_BY_DEFAULT);
- 
- BASE_FEATURE(kGlicBackgroundActuation, base::FEATURE_DISABLED_BY_DEFAULT);
- 
-@@ -936,7 +929,7 @@ BASE_FEATURE(kGlicTieredRollout, base::FEATURE_ENABLED_BY_DEFAULT);
- 
- BASE_FEATURE(kGlicRollout, base::FEATURE_ENABLED_BY_DEFAULT);
- 
--BASE_FEATURE(kGlicUserStatusCheck, base::FEATURE_ENABLED_BY_DEFAULT);
-+BASE_OVERRIDDEN_FEATURE(kGlicUserStatusCheck, base::FEATURE_DISABLED_BY_DEFAULT);
- 
- // When enabled, if GlicUserStatusFetcher receives an error when checking for
- // managed status, and the refresh token is missing, it will retry. This fixes
-@@ -1292,7 +1285,7 @@ const base::FeatureParam<bool>
+@@ -1284,7 +1284,7 @@ const base::FeatureParam<bool>
  
  // Enables HTTPS-First Mode in a balanced configuration that doesn't warn on
  // HTTP when HTTPS can't be reasonably expected.
@@ -72,16 +38,16 @@ index e9f21e32e51947e33568700ba41eaf22f9e83fe9..346e2bd28da10a8e7068a914dd5b1489
  
  // Automatically enables HTTPS-First Mode in a balanced configuration when
  // possible.
-@@ -1349,7 +1342,7 @@ BASE_FEATURE(kIncomingCallNotifications,
+@@ -1341,7 +1341,7 @@ BASE_FEATURE(kIncomingCallNotifications,
  #endif  // BUILDFLAG(IS_WIN)
  
  // Experimental image replacement feature. b/482792874
 -BASE_FEATURE(kIndigo, base::FEATURE_DISABLED_BY_DEFAULT);
 +BASE_OVERRIDDEN_FEATURE(kIndigo, base::FEATURE_DISABLED_BY_DEFAULT);
  BASE_FEATURE(kIndigoContextualCueingV2, base::FEATURE_DISABLED_BY_DEFAULT);
+ BASE_FEATURE(kIndigoWatermark, base::FEATURE_ENABLED_BY_DEFAULT);
  
- const base::FeatureParam<bool> kIndigoRequireGlicEnabling{
-@@ -1660,7 +1653,7 @@ BASE_FEATURE(kSafetyHubTrustSafetySentimentSurvey,
+@@ -1671,7 +1671,7 @@ BASE_FEATURE(kSafetyHubTrustSafetySentimentSurvey,
  // Safe Browsing Reporting to perform a k-anonymous query to see if Google knows
  // about an SCT seen in the wild. If it hasn't been seen, then it is considered
  // a security incident and uploaded to Google.
@@ -90,7 +56,7 @@ index e9f21e32e51947e33568700ba41eaf22f9e83fe9..346e2bd28da10a8e7068a914dd5b1489
  
  // An estimated high bound for the time it takes Google to ingest updates to an
  // SCT log. Chrome will wait for at least this time plus the Log's Maximum Merge
-@@ -1759,7 +1752,7 @@ BASE_FEATURE(kTreatUnsafeDownloadsAsActive, base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -1758,7 +1758,7 @@ BASE_FEATURE(kTreatUnsafeDownloadsAsActive, base::FEATURE_ENABLED_BY_DEFAULT);
  // TrustSafetySentimentSurvey
  #if !BUILDFLAG(IS_ANDROID)
  // Enables surveying of users of Trust & Safety features with HaTS.
@@ -99,7 +65,7 @@ index e9f21e32e51947e33568700ba41eaf22f9e83fe9..346e2bd28da10a8e7068a914dd5b1489
  // The minimum and maximum time after a user has interacted with a Trust and
  // Safety they are eligible to be surveyed.
  const base::FeatureParam<base::TimeDelta>
-@@ -1822,7 +1815,7 @@ const base::FeatureParam<base::TimeDelta>
+@@ -1821,7 +1821,7 @@ const base::FeatureParam<base::TimeDelta>
  #if !BUILDFLAG(IS_ANDROID)
  // Enables the second version of the sentiment survey for users of Trust &
  // Safety features, using HaTS.

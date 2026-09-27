@@ -1,5 +1,5 @@
 diff --git a/media/base/media_switches.cc b/media/base/media_switches.cc
-index 6576dae682f87af8e8d4d80df6abe56869c0439b..ab9fdcfc57fc72ce3c9e41d0cb3f3b8e46cfc380 100644
+index 3f75c218a35f4ab4ce2ae5ade0895eafb915f80b..2de113dc37f66a06b3a745cc33a25e2757f8603b 100644
 --- a/media/base/media_switches.cc
 +++ b/media/base/media_switches.cc
 @@ -389,7 +389,7 @@ BASE_FEATURE(kAutoPictureInPictureSurveys, base::FEATURE_DISABLED_BY_DEFAULT);
@@ -40,7 +40,7 @@ index 6576dae682f87af8e8d4d80df6abe56869c0439b..ab9fdcfc57fc72ce3c9e41d0cb3f3b8e
  
  // Enable automatic downloading of speech recognition language packs.
  BASE_FEATURE(kLiveCaptionAutomaticLanguageDownload,
-@@ -1327,7 +1327,7 @@ BASE_FEATURE(kMediaCodecLowDelayMode, base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -1314,7 +1314,7 @@ BASE_FEATURE(kMediaCodecLowDelayMode, base::FEATURE_DISABLED_BY_DEFAULT);
  
  // Enables MediaDrmBridge to call into MediaDrm API to query HDCP Status to
  // support the CDM API GetStatusForPolicy.
@@ -49,14 +49,3 @@ index 6576dae682f87af8e8d4d80df6abe56869c0439b..ab9fdcfc57fc72ce3c9e41d0cb3f3b8e
  
  // An experimental feature to enable persistent-license type support in MediaDrm
  // when using Encrypted Media Extensions (EME) API.
-@@ -1343,8 +1343,8 @@ BASE_FEATURE(kMediaDrmPreprovisioning, base::FEATURE_ENABLED_BY_DEFAULT);
- // IDs at startup (whenever a profile is loaded). Also used by tests that
- // disable it so that the tests can setup before pre-provisioning is done.
- // Note: Has no effect if kMediaDrmPreprovisioning feature is disabled.
--BASE_FEATURE(kMediaDrmPreprovisioningAtStartup,
--             base::FEATURE_ENABLED_BY_DEFAULT);
-+BASE_OVERRIDDEN_FEATURE(kMediaDrmPreprovisioningAtStartup,
-+             base::FEATURE_DISABLED_BY_DEFAULT);
- 
- // This feature allows for some MediaDrm functions to be executed in a separate
- // process so that crashes do not bring down the browser. Flag is available so

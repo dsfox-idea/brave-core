@@ -90,10 +90,6 @@ class BrowserWindowFeatures : public BrowserWindowFeatures_ChromiumImpl {
     return focus_mode_controller_.get();
   }
 
-  BraveShieldsUIContentsCache* brave_shields_ui_contents_cache() {
-    return brave_shields_ui_contents_cache_.get();
-  }
-
   BraveNonClientHitTestHelper* brave_non_client_hit_test_helper() {
     return brave_non_client_hit_test_helper_.get();
   }
@@ -102,10 +98,6 @@ class BrowserWindowFeatures : public BrowserWindowFeatures_ChromiumImpl {
   // feature is disabled.
   TreeTabSessionManager* GetTreeTabSessionManager() {
     return tree_tab_session_manager_.get();
-  }
-
-  screenshot::ScreenshotController* screenshot_controller() {
-    return screenshot_controller_.get();
   }
 
   VerticalTabController* vertical_tab_controller() {

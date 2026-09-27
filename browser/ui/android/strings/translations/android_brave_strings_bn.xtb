@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">Growser ব্রাউজার ক্র্যাশ করলে বা আটকে গেলে স্বয়ংক্রিয়ভাবে সমস্যা নির্ণয়ের রিপোর্টগুলো পাঠিয়ে Growser এর পণ্যের স্থিতিশীলতা উন্নত করতে সহায়তা করুন।</translation>
 <translation id="7977176350719484850">আনুমানিক ডেটা\nসাশ্রয়</translation>
 <translation id="9008534313521214777">গোপনীয়তাকে মর্যাদা\nদেওয়া</translation>
+<translation id="5668852698659986622">স্পনসর করা বিজ্ঞাপন সক্ষম করুন</translation>
+<translation id="431194936581466649">স্পনসর করা বিজ্ঞাপনের মাধ্যমে একটি স্বাধীন, ব্যবহারকারী-প্রথম ওয়েব তৈরি করার Growser-এর লক্ষ্যকে সমর্থন করতে সাহায্য করুন। আমরা আপনাকে সনাক্ত না করে, ব্যক্তিগতভাবে বিজ্ঞাপনের কর্মক্ষমতা পরিমাপ করি।</translation>
 <translation id="8347743943525229984">Growser সমীক্ষাগুলির অনুমতি দিন</translation>
 <translation id="6022939994702081659">Growser-কে নতুন ট্যাব পেজে ব্যক্তিগত সমীক্ষাগুলির লিঙ্কগুলি দেখানোর অনুমতি দিন। সমীক্ষাগুলি আরও উন্নত ফিচার গড়ে তুলতে এবং ব্রাউজার-ভিত্তিক বিজ্ঞাপনের প্রচারাভিযানগুলির কার্যকারিতা পরিমাপ করতে আমাদের সহায়তা করে।</translation>
 <translation id="7746496306508543965">Growser সমীক্ষাগুলি সম্পর্কে আরও জানুন</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">আমার একটি 12-শব্দের পুনরুদ্ধার বাক্যাংশ আছে</translation>
 <translation id="4225265925807365011">আমার একটি 24-শব্দের পুনরুদ্ধার বাক্যাংশ আছে</translation>
 <translation id="3570367516044491911">ডিফল্ট ব্রাউজার হিসাবে সেট করুন</translation>
-<translation id="6800338374677644736">ডিফল্ট ব্রাউজার হিসাবে সেট করুন</translation>
 <translation id="1545749641540134597">QR কোড স্ক্যান করুন</translation>
 <translation id="5317781812114905957">নির্দেশাবলী</translation>
 <translation id="8515319483805157233">QR কোড দিয়ে খুঁজতে, ফ্রেমের কেন্দ্রে QR কোডটি রাখুন।</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">প্রধান মেনু</translation>
 <translation id="7002271985859760052">পৃষ্ঠা অ্যাকশন</translation>
 <translation id="7104487676473617844">নিম্নোক্ত আইটেমগুলো শুধুমাত্র বর্তমান খোলা ওয়েবপেজে সমর্থিত হলে মেনুতে দৃশ্যমান হবে।</translation>
-<translation id="4159764849281393303">ওয়েব অ্যাপ</translation>
 <translation id="8038539967102225446">Growser বিজ্ঞাপনগুলি এখানে রয়েছে!</translation>
 <translation id="222883304157347087">(এই ডিভাইসটি)</translation>
 <translation id="4157741509680155021">সিঙ্ক চেইন ডিভাইসগুলি</translation>
@@ -720,6 +720,8 @@
 <translation id="1634828734222219955">মোট</translation>
 <translation id="7995708795274219641">অর্থরাশি + গ্যাস</translation>
 <translation id="2186011161688824046">অর্থরাশি + ফী</translation>
+<translation id="1118876217803190221">অপর্যান্ত ব্যালেন্স</translation>
+<translation id="275990379543116961">গ্যাসের পক্ষে ফান্ড অপর্যাপ্ত</translation>
 <translation id="1950052789869821983">লেনদেন</translation>
 <translation id="2304783958703511257">উন্নত সেটিংস</translation>
 <translation id="4220062530885628403">বর্তমান</translation>
@@ -1197,6 +1199,8 @@ Leo AI বেছে নিতে হবে এবং সেইসাথে আ�
 <translation id="1850594249589065646">অবস্থান নির্ভুলতা</translation>
 <translation id="2403474027143565107">নির্ভুল</translation>
 <translation id="4042597221652780603">প্রায়</translation>
+<translation id="6800338374677644736">ডিফল্ট ব্রাউজার হিসাবে সেট করুন</translation>
+<translation id="4159764849281393303">ওয়েব অ্যাপ</translation>
 <translation id="7759809451544302770">ঐচ্ছিক</translation>
 <translation id="4935400164159327304">আমরা Growser আরও ভালো কীভাবে করতে পারি আমাদের জানান।</translation>
 <translation id="8300751939969131609">যাতে কোনও স্টোরি মিস না হয় সেজন্য Growser নিউজ চালু করুন</translation>
@@ -1365,8 +1369,6 @@ Leo AI বেছে নিতে হবে এবং সেইসাথে আ�
 <translation id="6692114068321061469">Growser Origin ক্রয় যাচাই করুন</translation>
 <translation id="6671300057038059325">Growser এ সেভ করা পাসওয়ার্ড এক্সপোর্ট করুন</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">অপর্যান্ত ব্যালেন্স</translation>
-<translation id="275990379543116961">গ্যাসের পক্ষে ফান্ড অপর্যাপ্ত</translation>
 <translation id="1448289340149908413">ইথেরিয়াম</translation>
 <translation id="5390923430722428146">Solana</translation>
 </translationbundle>

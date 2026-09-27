@@ -197,7 +197,6 @@ struct OtherPrivacySettingsSectionView: View {
           )
         )
       }
-      // Growser-290: no survey panelist toggle - surveys were an ads feature.
     } header: {
       Text(Strings.otherPrivacySettingsSection)
     }

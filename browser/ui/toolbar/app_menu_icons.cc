@@ -63,7 +63,7 @@ constexpr auto kCommandIcons =
         // The `Bookmarks` submenu
         {IDC_BOOKMARK_THIS_TAB, &kLeoBrowserBookmarkAddIcon},
         {IDC_BOOKMARK_ALL_TABS, &kLeoBrowserBookmarkPluralIcon},
-        {IDC_BRAVE_BOOKMARK_BAR_SUBMENU, &kLeoProductBookmarksIcon},
+        {IDC_BOOKMARK_BAR_SUBMENU, &kLeoProductBookmarksIcon},
         {IDC_SHOW_BOOKMARK_MANAGER, &kLeoWindowBookmarkIcon},
         {IDC_SHOW_BOOKMARK_SIDE_PANEL, &kLeoProductBookmarksIcon},
         {IDC_IMPORT_SETTINGS, &kLeoImportArrowIcon},
@@ -83,7 +83,7 @@ constexpr auto kCommandIcons =
         {IDC_SHOW_PASSWORD_MANAGER, &kLeoKeyIcon},
         {IDC_SHOW_EMAIL_ALIASES, &kLeoEmailShieldIcon},
         {IDC_SHOW_PAYMENT_METHODS, &kLeoCreditCardIcon},
-        {IDC_SHOW_ADDRESSES, &kLeoLocationOnIcon},
+        {IDC_SHOW_CONTACT_INFO, &kLeoLocationOnIcon},
 
         // The `Find and edit` submenu
         {IDC_FIND, &kLeoSearchIcon},
@@ -114,7 +114,7 @@ constexpr auto kCommandIcons =
         {IDC_SHOW_APPS_PAGE, &kLeoGrid04Icon},
         {IDC_PERFORMANCE, &kLeoNetworkSpeedFastIcon},
         {IDC_DEV_TOOLS, &kLeoCodeIcon},
-        {IDC_TASK_MANAGER_APP_MENU, &kLeoWindowBinaryCodeIcon},
+        {IDC_TASK_MANAGER_APP_MENU, &kLeoWindowTaskManagerIcon},
         {IDC_SHOW_BRAVE_SYNC, &kLeoProductSyncIcon},
         {IDC_ROUTE_MEDIA, &kLeoChromeCastIcon},
         {IDC_SIDEBAR_SHOW_OPTION_MENU, &kLeoBrowserSidebarRightIcon},

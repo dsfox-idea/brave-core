@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">Braveブラウザのクラッシュやフリーズ時に診断レポートを自動送信し、Brave製品の安定性向上に貢献します。</translation>
 <translation id="7977176350719484850">節約できた\n通信量 (推定)</translation>
 <translation id="9008534313521214777">節約できた\n時間(推定)</translation>
+<translation id="5668852698659986622">スポンサー広告を有効にする</translation>
+<translation id="431194936581466649">スポンサー広告で、独立したユーザーファーストのウェブを構築するというBraveの使命を支援してください。私たちはあなたを特定することなく、プライベートに広告のパフォーマンスを測定します。</translation>
 <translation id="8347743943525229984">Braveアンケートを許可</translation>
 <translation id="6022939994702081659">Braveに対し、新しいタブページに匿名アンケートへのリンクを表示することを許可します。こうした調査は、より良い機能の構築や、ブラウザベースの広告キャンペーンの効果測定などに役立ちます。</translation>
 <translation id="7746496306508543965">Braveアンケートの詳細</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">12語のリカバリーフレーズをお持ちの方</translation>
 <translation id="4225265925807365011">24語のリカバリーフレーズをお持ちの方</translation>
 <translation id="3570367516044491911">デフォルトのブラウザに設定</translation>
-<translation id="6800338374677644736">デフォルトのブラウザとして設定</translation>
 <translation id="1545749641540134597">QRコードをスキャンする</translation>
 <translation id="5317781812114905957">手順</translation>
 <translation id="8515319483805157233">QRコードで検索するには、フレームの中心にQRコードを合わせます。</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">メインメニュー</translation>
 <translation id="7002271985859760052">ページアクション</translation>
 <translation id="7104487676473617844">次の項目は、現在開いているウェブページが対応している場合のみメニューに表示されます。</translation>
-<translation id="4159764849281393303">WebApp</translation>
 <translation id="8038539967102225446">Brave広告はここにあります！</translation>
 <translation id="222883304157347087">（このデバイス）</translation>
 <translation id="4157741509680155021">同期チェーン上のデバイス</translation>
@@ -723,6 +723,8 @@
 <translation id="1634828734222219955">合計</translation>
 <translation id="7995708795274219641">金額 + ガス</translation>
 <translation id="2186011161688824046">金額 + 手数料</translation>
+<translation id="1118876217803190221">残高不足です</translation>
+<translation id="275990379543116961">ガス代のための資金が不足しています</translation>
 <translation id="1950052789869821983">トランザクション</translation>
 <translation id="2304783958703511257">詳細設定</translation>
 <translation id="4220062530885628403">ノンス</translation>
@@ -1200,6 +1202,8 @@
 <translation id="1850594249589065646">位置の精度</translation>
 <translation id="2403474027143565107">正確な</translation>
 <translation id="4042597221652780603">おおよその</translation>
+<translation id="6800338374677644736">デフォルトのブラウザとして設定</translation>
+<translation id="4159764849281393303">WebApp</translation>
 <translation id="7759809451544302770">オプション</translation>
 <translation id="4935400164159327304">Braveをどのように改善できるかについてご意見をお聞かせください。</translation>
 <translation id="8300751939969131609">Growser Newsをオンにして、最新情報を見逃さないようにしましょう</translation>
@@ -1361,8 +1365,6 @@
 <translation id="6692114068321061469">Growser Origin購入を確認</translation>
 <translation id="6671300057038059325">Growser に保存されたパスワードをエクスポートします</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">残高不足です</translation>
-<translation id="275990379543116961">ガス代のための資金が不足しています</translation>
 <translation id="1448289340149908413">イーサリアム</translation>
 <translation id="5390923430722428146">Solana</translation>
 </translationbundle>

@@ -86,7 +86,9 @@ source_set("tabs_impl") {
   deps = [
     ":tabs_public",
     "//base",
+    "//brave/browser/misc_metrics:misc_metrics_impl",
     "//brave/components/ai_chat/core/common/buildflags",
+    "//brave/components/misc_metrics",
     "//chrome/browser/profiles:profile",
     "//content/public/browser",
   ]

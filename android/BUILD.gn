@@ -306,7 +306,6 @@ android_resources("java_resources") {
     "java/brave-res/drawable/ic_coinbase.xml",
     "java/brave-res/drawable/ic_disabled.xml",
     "java/brave-res/drawable/ic_discount.xml",
-    "java/brave-res/drawable/ic_drag.xml",
     "java/brave-res/drawable/ic_eth.xml",
     "java/brave-res/drawable/ic_eth_24.xml",
     "java/brave-res/drawable/ic_eth_color.xml",
@@ -489,7 +488,6 @@ android_resources("java_resources") {
     "java/brave-res/layout/bottom_toolbar_browsing.xml",
     "java/brave-res/layout/bottom_toolbar_menu_button.xml",
     "java/brave-res/layout/bottom_toolbar_tab_switcher.xml",
-    "java/brave-res/layout/brave_account_alert_dialog.xml",
     "java/brave-res/layout/brave_ads_existing_user_dialog_layout.xml",
     "java/brave-res/layout/brave_ads_new_user_dialog_layout.xml",
     # Growser-317: brave_ask_play_store_rating_dialog removed.

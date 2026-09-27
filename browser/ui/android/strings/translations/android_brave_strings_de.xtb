@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">Helfen Sie mit, die Produktstabilität von Growser zu verbessern, indem Sie automatisch Diagnoseberichte senden, wenn der Growser-Browser abstürzt oder einfriert.</translation>
 <translation id="7977176350719484850">Geschätzte nicht heruntergeladene\nDatenmenge</translation>
 <translation id="9008534313521214777">Ca. Zeit\ngespart</translation>
+<translation id="5668852698659986622">Gesponserte Ads aktivieren</translation>
+<translation id="431194936581466649">Unterstützen Sie Braves Mission, ein unabhängiges, nutzerorientiertes Web mit gesponserten Ads aufzubauen. Wir messen die Anzeigenleistung privat, ohne Sie zu identifizieren.</translation>
 <translation id="8347743943525229984">Growser Umfragen erlauben</translation>
 <translation id="6022939994702081659">Erlaube Growser, Links zu privaten Umfragen auf der neuen Tab-Seite anzuzeigen. Umfragen helfen uns, bessere Funktionen zu entwickeln und die Wirksamkeit von browserbasierten Werbekampagnen zu messen.</translation>
 <translation id="7746496306508543965">Mehr über Growser Umfragen erfahren</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">Ich habe eine 12-Wörter-Wiederherstellungsphrase</translation>
 <translation id="4225265925807365011">Ich habe eine 24-Wörter-Wiederherstellungsphrase</translation>
 <translation id="3570367516044491911">Als Standardbrowser setzen</translation>
-<translation id="6800338374677644736">Als Standardbrowser festlegen</translation>
 <translation id="1545749641540134597">QR-Code scannen</translation>
 <translation id="5317781812114905957">Anleitungen</translation>
 <translation id="8515319483805157233">Um mit einem QR-Code zu suchen, richten Sie den QR-Code in der Mitte des Rahmens aus.</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">Hauptmenü</translation>
 <translation id="7002271985859760052">Seitenaktionen</translation>
 <translation id="7104487676473617844">Die folgenden Elemente sind im Menü nur sichtbar, wenn sie von der aktuell geöffneten Website unterstützt werden.</translation>
-<translation id="4159764849281393303">WebApp</translation>
 <translation id="8038539967102225446">Growser Ads sind da!</translation>
 <translation id="222883304157347087">(dieses Gerät)</translation>
 <translation id="4157741509680155021">GERÄTE IN DER SYNC-KETTE</translation>
@@ -723,6 +723,8 @@ Wenn Sie diese Anfrage nicht akzeptieren, wird das VPN nicht erneut verbunden un
 <translation id="1634828734222219955">Gesamt</translation>
 <translation id="7995708795274219641">Betrag + Gas</translation>
 <translation id="2186011161688824046">Betrag + Gebühren</translation>
+<translation id="1118876217803190221">Guthaben reicht nicht aus.</translation>
+<translation id="275990379543116961">Unzureichende Mittel für Gebühr</translation>
 <translation id="1950052789869821983">Transaktion</translation>
 <translation id="2304783958703511257">Erweiterte Einstellungen</translation>
 <translation id="4220062530885628403">Nonce</translation>
@@ -1203,6 +1205,8 @@ Wenn Sie diese Anfrage nicht akzeptieren, wird das VPN nicht erneut verbunden un
 <translation id="1850594249589065646">Standortgenauigkeit</translation>
 <translation id="2403474027143565107">Präzise</translation>
 <translation id="4042597221652780603">Ungefähr</translation>
+<translation id="6800338374677644736">Als Standardbrowser festlegen</translation>
+<translation id="4159764849281393303">WebApp</translation>
 <translation id="7759809451544302770">Optional</translation>
 <translation id="4935400164159327304">Lassen Sie uns wissen, wie wir Growser verbessern können.</translation>
 <translation id="8300751939969131609">Aktiviere Growser News, um nichts mehr zu verpassen</translation>
@@ -1370,8 +1374,6 @@ Sind Sie sicher, dass Sie den Vorgang fortsetzen möchten?</translation>
 <translation id="6692114068321061469">Growser Origin-Kauf verifizieren</translation>
 <translation id="6671300057038059325">In Growser gespeicherte Passwörter exportieren</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">Guthaben reicht nicht aus.</translation>
-<translation id="275990379543116961">Unzureichende Mittel für Gebühr</translation>
 <translation id="1448289340149908413">Ethereum</translation>
 <translation id="5390923430722428146">Solana</translation>
 </translationbundle>

@@ -868,9 +868,11 @@
 <translation id="646023614746251785">Potvrdiť výmenu</translation>
 <translation id="6264944956989873014">Potvrdiť premostenie</translation>
 <translation id="7067917728851842589">Potvrdiť odoslanie</translation>
+<translation id="2841837950101800123">Poskytovateľ</translation>
 <translation id="1114725160772317155">Stav poskytovateľa</translation>
 <translation id="2351357639951873714">Potvrdiť ochranu</translation>
 <translation id="7480044382160806610">Potvrdiť unshield</translation>
+<translation id="6830542010524256586">Potvrdiť migráciu</translation>
 <translation id="8332923694292360653">Minúť</translation>
 <translation id="3735740477244556633">Zoradiť podľa</translation>
 <translation id="6484605214219822434">Zobraziť most</translation>
@@ -1409,8 +1411,10 @@
 <translation id="5503843345634715425">Refundované</translation>
 <translation id="1778601041100951971">Ochraňuje sa <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Prebieha unshield <ph name="AMOUNT"/></translation>
+<translation id="6022412719565214018">Migrácia <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> bolo ochránených</translation>
 <translation id="3860973324426281816"><ph name="AMOUNT"/> bolo odshieldované</translation>
+<translation id="7338153249873692854"><ph name="AMOUNT"/> bolo migrovaných</translation>
 <translation id="6622332794280225311">{PENDING_TRANSACTIONS, plural,
       =1 {{PENDING_TRANSACTIONS} ďalšia transakcia čaká.}
       other {{PENDING_TRANSACTIONS} ´dalších transakcií čaká.}
@@ -1849,14 +1853,18 @@
 <translation id="9086302186042011942">Synchronizácia</translation>
 <translation id="99991973626409495">Skontrolovať ochranu</translation>
 <translation id="6779429520470417361">Skontrolovať unshield</translation>
+<translation id="7861093868637278059">Skontrolovať migráciu</translation>
 <translation id="3114681061018999547">Ochraňuje sa</translation>
 <translation id="1564172583156967455">Unshielding</translation>
+<translation id="7040674372746105444">Migrácia</translation>
 <translation id="8897189056319316783">Chrániť ZEC</translation>
 <translation id="508249542337194541">Unshield ZEC</translation>
+<translation id="3242332985109374549">Migrovať ZEC</translation>
 <translation id="3382275793825152362">Chránené prostriedky</translation>
 <translation id="617149752238892649">Odstrániť chránené prostriedky</translation>
 <translation id="8631765320256788981">Odosielate prostriedky zo svojho transparentného účtu na chránený účet.</translation>
 <translation id="3860364671495430495">Odosielate prostriedky zo svojho chráneného účtu na transparentný účet.</translation>
+<translation id="9664108035970394">Odosielate prostriedky zo svojho chráneného staršieho účtu na chránený účet.</translation>
 <translation id="7144878232160441200">Skúsiť znova</translation>
 <translation id="4750109510113597688">Táto transakcia môže zahŕňať poplatok za vytvorenie účtu</translation>
 <translation id="6201709949885884577">Na vykonanie akcie sa vyžaduje heslo.</translation>
@@ -2214,7 +2222,7 @@
 <translation id="8151638057146502721">Konfigurovať</translation>
 <translation id="999273441077650169">Model sa dynamicky mení na ten najvhodnejší pre danú úlohu.<ph name="LINK_BEFORE"/>Viac informácií<ph name="LINK_AFTER"/></translation>
 <translation id="3852808100039989429">Ahoj, ja som Leo. Som asistent s umelou inteligenciou prevádzkovaný spoločnosťou Growser. Som poháňaný modelom Qwen VL 30B vytvoreným spoločnosťou Alibaba Cloud, aby som bol výkonný a použiteľný v mnohých prípadoch. Qwen prevádzkuje priamo spoločnosť Growser cez svoju vlastnú zabezpečenú infraštruktúru.<ph name="LINK_BEFORE"/>Zistiť viac<ph name="LINK_AFTER"/></translation>
-<translation id="784931275560506522">Ahoj, som Leo. Som AI asistent od spoločnosti Growser. Fungujem na základe modelu GLM-5.1, ktorý vytvorila spoločnosť Zhipu AI s cieľom dosiahnuť vysoký výkon a širokú škálu využitia. GLM-5.1 je hosťovaný na platforme NEAR prostredníctvom jej vlastnej overiteľne súkromnej a bezpečnej infraštruktúry.<ph name="LINK_BEFORE"/>Viac informácií nájdete na<ph name="LINK_AFTER"/></translation>
+<translation id="8659225822055186905">Ahoj, ja som Leo. Som asistent s umelou inteligenciou prevádzkovaný spoločnosťou Growser. Som poháňaný modelom GLM-5.3 Flash vytvoreným spoločnosťou Zhipu AI, aby som bol výkonný a použiteľný v mnohých prípadoch. GLM-5.3 Flash je prevádzkovaný cez verifikovanú a súkromnú zabezpečenú infraštruktúru spoločnosti NEAR.<ph name="LINK_BEFORE"/>Zistiť viac<ph name="LINK_AFTER"/></translation>
 <translation id="8932568551552504373">Ahoj, som Leo. Som AI asistent od Growser. Poháňa ma Claude Instant, model vytvorený spoločnosťou Anthropic na konverzačné úlohy a spracovanie textu. Claude Instant je hostovaný Growser na našej vlastnej zabezpečenej infraštruktúre.<ph name="LINK_BEFORE"/>Zistiť viac<ph name="LINK_AFTER"/></translation>
 <translation id="3789772321824682783">Ahoj, ja som Leo. Som asistent s umelou inteligenciou prevádzkovaný spoločnosťou Growser. Som poháňaný modelom Claude Haiku vytvoreným spoločnosťou Anthropic na spracovanie konverzačných a textových úloh. Claude Haiku prevádzkuje priamo spoločnosť Growser cez svoju vlastnú zabezpečenú infraštruktúru. <ph name="LINK_BEFORE"/>Zistiť viac<ph name="LINK_AFTER"/></translation>
 <translation id="1778885220602472158">Ahoj, ja som Leo. Som asistent s umelou inteligenciou prevádzkovaný spoločnosťou Growser. Som poháňaný modelom Claude Sonnet vytvoreným spoločnosťou Anthropic na spracovanie konverzačných a textových úloh. Claude Sonnet prevádzkuje priamo spoločnosť Growser cez svoju vlastnú zabezpečenú infraštruktúru. <ph name="LINK_BEFORE"/>Zistiť viac<ph name="LINK_AFTER"/></translation>
@@ -2336,6 +2344,8 @@
 <translation id="4370698775470316661">Táto konverzácia je príliš dlhá a nemôže pokračovať. Dostupné môžu byť aj iné modely, s ktorými je Leo schopný zachovať presnosť pri dlhších konverzáciách.</translation>
 <translation id="4744144453035015075">Vyhľadávanie na webe</translation>
 <translation id="8548351747582087191">Vyhľadávanie na webe pomocou <ph name="SEARCH_TERMS"/>.</translation>
+<translation id="4395536726196773278">Prehľadávanie otvorených kariet pre „<ph name="QUERY"/>“…</translation>
+<translation id="4724926708866789382">Žiadne otvorené karty sa nezhodujú s „<ph name="QUERY"/>“.</translation>
 <translation id="7307396647043599949"><ph name="COUNT"/> ďalšie…</translation>
 <translation id="8103700533980268469">Zavrieť toto oznámenie</translation>
 <translation id="3417835166382867856">Prehľadávať karty</translation>
@@ -2383,6 +2393,8 @@
 <translation id="443008484043213881">Nástroje</translation>
 <translation id="4343623396828510727">Tieto lokality poskytujú nástroje, ktoré môže Leo použiť na odosielanie údajov na túto lokalitu a z nej. Nepripájajte ani neschvaľujte tieto nástroje, ak táto konverzácia obsahuje údaje, ktoré nechcete, aby táto lokalita videla.</translation>
 <translation id="5021823940147712387">Odstrániť nástroje</translation>
+<translation id="8712279871321308580">Dostupné nástroje webovej stránky</translation>
+<translation id="3690996226559605619">Dostupné nástroje (<ph name="TOOL_COUNT"/>)</translation>
 <translation id="318819763888864209">Všetky typy predplatného sa automaticky obnovujú, ale je možné ich kedykoľvek pred obnovením zrušiť.</translation>
 <translation id="5091223967610958">Zdieľajte názov hostiteľa stránky, na ktorej sa nachádzate (<ph name="HOST_NAME"/>), aby ste nám pomohli vylepšiť Lea.</translation>
 <translation id="8732450785281947197">Nástroje Leo AI</translation>
@@ -2421,6 +2433,7 @@
 <translation id="6397861830483632092">Otvorené karty…</translation>
 <translation id="802080272588201037">Záložky…</translation>
 <translation id="2716127283451902393">História…</translation>
+<translation id="8888171900079152025">Priečinok pracovného priestoru</translation>
 <translation id="49269513399674318">Použiť mikrofón</translation>
 <translation id="3895031624234442305">Vlastné modely</translation>
 <translation id="4572010449071015143">Začať novú konverzáciu</translation>
@@ -2454,8 +2467,12 @@
 <translation id="3397808797783614750">Povolenie hovoriť AI, aby automaticky prehľadávala za vás, môže mať škodlivé, neúmyselné následky na vaše súkromie, financie a online komunikáciu. <ph name="LINK_BEFORE"/>Zistiť viac<ph name="LINK_AFTER"/></translation>
 <translation id="4522025297473237294">Bezpečnostné upozornenie</translation>
 <translation id="6077070599873946984">Growser AI potrebuje vaše povolenie pre: <ph name="TOOL_LABEL"/></translation>
+<translation id="908175046303050847">Growser AI by chcelo vykonať **<ph name="TOOL_NAME"/>** na **<ph name="SITE_ORIGIN"/>**</translation>
 <translation id="4163837693685963037">Operácia bola detegovaná ako potenciálne nezhodná s vašou požiadavkou:</translation>
+<translation id="5137568953923142260">Povoliť</translation>
 <translation id="3927932062596804919">Odmietnuť</translation>
+<translation id="4191349941249805855">Zobraziť argumenty nástroja</translation>
+<translation id="7237059533128264835">Skryť argumenty nástroja</translation>
 <translation id="4569155249847375786">Overené</translation>
 <translation id="8200772114523450471">Pokračovať</translation>
 <translation id="7607002721634913082">Pozastavené</translation>
@@ -2737,6 +2754,7 @@ other {Štíty Growser zablokovali {BLOCKED_COUNT} sledovacie zadiatenia na <ph 
 <translation id="701087249209337256">Prineste si obsah zo starého prehliadača</translation>
 <translation id="142389341645668510">Prispôsobiť prehliadač Growser</translation>
 <translation id="112005628409144325">Prispôsobte si svoj zážitok z prehliadania rozložením kariet a farebnými režimami, ktoré uprednostňujete.</translation>
+<translation id="4428982101636000516">Vyhľadajte pomocou Growser alebo zadajte adresu URL</translation>
 <translation id="7376367936988732808">Rozloženie kariet</translation>
 <translation id="4734965478015604180">Vodorovné</translation>
 <translation id="490375751687810070">Zvislé</translation>
@@ -2802,6 +2820,8 @@ other {Štíty Growser zablokovali {BLOCKED_COUNT} sledovacie zadiatenia na <ph 
 <translation id="8881997962573369342">Stovky serverov na celom svete</translation>
 <translation id="1513801084412881009">Mimoriadne rýchle pripojenie</translation>
 <translation id="6434859410115379558">Chráňte až 10 zariadení s jedným plánom</translation>
+<translation id="4886431881864826294">Jedno predplatné pokrýva 10 zariadení pre desktop, Android a iOS</translation>
+<translation id="3649011006120934011">Bez záväzkov, kedykoľvek môžete zrušiť</translation>
 <translation id="1693568075761612600">Nepodarilo sa vytvoriť žiadosť o podporu, skontrolujte pripojenie.</translation>
 <translation id="1407707415819020643">Vyberte svoj server</translation>
 <translation id="7406947191797765434">Mestá (<ph name="CITY_COUNT"/>) – servery ( <ph name="SERVER_COUNT"/>)</translation>
@@ -2984,10 +3004,10 @@ Pripojíme vás!</translation>
 <translation id="1063227610401477317">Aplikovať zmeny</translation>
 <translation id="5539769255716491933">Nahlásiť neúspešné kroky</translation>
 <translation id="7562163394445060270">Úloha sa nepodarilo dokončiť</translation>
+<translation id="784931275560506522">Ahoj, som Leo. Som AI asistent od spoločnosti Growser. Fungujem na základe modelu GLM-5.1, ktorý vytvorila spoločnosť Zhipu AI s cieľom dosiahnuť vysoký výkon a širokú škálu využitia. GLM-5.1 je hosťovaný na platforme NEAR prostredníctvom jej vlastnej overiteľne súkromnej a bezpečnej infraštruktúry.<ph name="LINK_BEFORE"/>Viac informácií nájdete na<ph name="LINK_AFTER"/></translation>
 <translation id="4593680147181354667">Diagnostické ID</translation>
 <translation id="3995471429906554168">Informácie o diagnostike</translation>
 <translation id="916115051162298064">Diagnostika reklám</translation>
-<translation id="2841837950101800123">Poskytovateľ</translation>
 <translation id="6749024162985917640">Localhost</translation>
 <translation id="4875290286426670462">Neobmedzené <ph name="ASSET_SYMBOL"/></translation>
 <translation id="6018568069962140636">Tento token nie je overený</translation>

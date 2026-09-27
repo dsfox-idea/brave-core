@@ -149,8 +149,6 @@ import os
     }
   }
 
-  // Growser-290: no isSurveyPanelistEnabled - surveys were an ads feature.
-
   /// Hide the Sponsored Ads toggle when Rewards is disabled by policy or in
   /// an unsupported region, because it would have no effect. This matches
   /// `AdsServiceImplIOS` logic when it is not started if Rewards is not

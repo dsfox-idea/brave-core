@@ -28,11 +28,17 @@
 /* The title of the screen which asks user to enable privacy preserving analytics. */
 "focusOnboarding.p3aScreenTitle" = "Vylepšete Growser";
 
-/* The description shown below the toggle for enabling privacy preserving analytics. This uses standard markdown syntax. The Learn More is a link and #p3a-learn-more is a URL fragment */
+/* The description shown below the toggle for enabling privacy preserving analytics. */
 "focusOnboarding.p3aToggleDescription" = "Tuto funkci můžete kdykoli vypnout v Nastavení v části **Štíty Growser a soukromí**. [Zjistit více](#p3a-learn-more) o naší produktové analýze uchovávající soukromí.";
 
-/* The title of the toggle for enable / disable the privacy preserving analytics. This uses standard markdown syntax. The "private & anonymous" snippet should be bold in all languages */
+/* The title of the toggle that allows the user to enable/disable the privacy preserving analytics. */
 "focusOnboarding.p3aToggleTitle" = "Sdílejte **soukromé a anonymní** informace o produktu.";
+
+/* The description shown below the toggle for enabling crash reporting. */
+"focusOnboarding.sendCrashReportsToggleDescription" = "Pokud dojde k pádu nebo zamrznutí, odešlete diagnostické hlášení.";
+
+/* The title of the toggle that allows the user to enable/disable crash reporting. */
+"focusOnboarding.sendCrashReportsToggleTitle" = "Odeslat zprávy o pádech";
 
 /* The title of the button that finishes the onboarding without setting default */
 "focusOnboarding.startBrowseActionButtonTitle" = "Začít prohlížet";

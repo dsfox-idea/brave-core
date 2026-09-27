@@ -168,6 +168,7 @@ BraveBrowserProcessImpl::~BraveBrowserProcessImpl() {
     p3a_service_->StartTeardown();
   }
 #endif
+  profile_manager_.reset();
 }
 
 BraveBrowserProcessImpl::BraveBrowserProcessImpl(StartupData* startup_data)

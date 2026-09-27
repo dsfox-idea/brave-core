@@ -120,41 +120,13 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->supports_tools = features::kAutomaticModelSupportsTools.Get();
       model->supported_capabilities =
           model->supports_tools
-              ? std::vector{mojom::ConversationCapability::CHAT,
-                            mojom::ConversationCapability::CONTENT_AGENT,
+              ? std::vector{mojom::ConversationCapability::CONTENT_AGENT,
                             mojom::ConversationCapability::DEEP_RESEARCH}
-              : std::vector{mojom::ConversationCapability::CHAT,
-                            mojom::ConversationCapability::DEEP_RESEARCH};
+              : std::vector{mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = true;
       model->is_near_model = false;
       model->options =
           mojom::ModelOptions::NewLeoModelOptions(std::move(options));
-      models.push_back(std::move(model));
-    }
-
-    {
-      auto options = mojom::LeoModelOptions::New();
-      options->display_maker = "Anthropic";
-      options->name = kClaudeHaikuModelName;
-      options->category = mojom::ModelCategory::CHAT;
-      options->access = kFreemiumAccess;
-      options->max_associated_content_length = 180000;
-      options->long_conversation_warning_character_limit = 320000;
-
-      auto model = mojom::Model::New();
-      model->key = kClaudeHaikuModelKey;
-      model->display_name = "Claude Haiku";
-      model->vision_support = true;
-      model->supports_tools = true;
-      model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
-          mojom::ConversationCapability::CONTENT_AGENT,
-          mojom::ConversationCapability::DEEP_RESEARCH};
-      model->is_suggested_model = false;
-      model->is_near_model = false;
-      model->options =
-          mojom::ModelOptions::NewLeoModelOptions(std::move(options));
-
       models.push_back(std::move(model));
     }
 
@@ -173,10 +145,9 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = true;
       model->supports_tools = true;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::CONTENT_AGENT,
           mojom::ConversationCapability::DEEP_RESEARCH};
-      model->is_suggested_model = true;
+      model->is_suggested_model = false;
       model->is_near_model = false;
       model->options =
           mojom::ModelOptions::NewLeoModelOptions(std::move(options));
@@ -201,7 +172,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = true;
       model->is_near_model = false;
@@ -229,7 +199,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -257,7 +226,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = false;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -267,23 +235,49 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       models.push_back(std::move(model));
     }
 
-    // GPT 5.4
+    // GPT 5.6 Luna
     {
       auto options = mojom::LeoModelOptions::New();
       options->display_maker = "OpenAI";
-      options->name = "bedrock-openai.gpt-5.4";
+      options->name = "bedrock-openai.gpt-5.6-luna";
+      options->category = mojom::ModelCategory::CHAT;
+      options->access = features::kFreemiumAvailable.Get()
+                            ? mojom::ModelAccess::BASIC_AND_PREMIUM
+                            : mojom::ModelAccess::BASIC;
+      options->max_associated_content_length = 1200000;
+      options->long_conversation_warning_character_limit = 960000;
+
+      auto model = mojom::Model::New();
+      model->key = "chat-gpt-5-6-luna-bedrock";
+      model->display_name = "GPT 5.6 Luna";
+      model->vision_support = true;
+      model->supports_tools = false;
+      model->supported_capabilities = {
+          mojom::ConversationCapability::DEEP_RESEARCH};
+      model->is_suggested_model = false;
+      model->is_near_model = false;
+      model->options =
+          mojom::ModelOptions::NewLeoModelOptions(std::move(options));
+
+      models.push_back(std::move(model));
+    }
+
+    // GPT 5.6 Terra
+    {
+      auto options = mojom::LeoModelOptions::New();
+      options->display_maker = "OpenAI";
+      options->name = "bedrock-openai.gpt-5.6-terra";
       options->category = mojom::ModelCategory::CHAT;
       options->access = mojom::ModelAccess::PREMIUM;
       options->max_associated_content_length = 1088000;
       options->long_conversation_warning_character_limit = 870400;
 
       auto model = mojom::Model::New();
-      model->key = "chat-gpt-5-4-bedrock";
-      model->display_name = "GPT 5.4";
+      model->key = "chat-gpt-5-6-terra-bedrock";
+      model->display_name = "GPT 5.6 Terra";
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -293,7 +287,7 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       models.push_back(std::move(model));
     }
 
-    // Grok 4.3
+    // Grok 4.6
     {
       auto options = mojom::LeoModelOptions::New();
       options->display_maker = "xAI";
@@ -304,12 +298,11 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       options->long_conversation_warning_character_limit = 870400;
 
       auto model = mojom::Model::New();
-      model->key = "chat-grok-4-3-bedrock";
-      model->display_name = "Grok 4.3";
+      model->key = "chat-grok-4-6-bedrock";
+      model->display_name = "Grok 4.6";
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -335,7 +328,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -361,7 +353,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = false;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -371,7 +362,7 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       models.push_back(std::move(model));
     }
 
-    // Qwen 3.5 122B
+    // Qwen 3.8 Flash Next
     {
       auto options = mojom::LeoModelOptions::New();
       options->display_maker = "Alibaba Cloud";
@@ -382,14 +373,13 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       options->long_conversation_warning_character_limit = 9700;
 
       auto model = mojom::Model::New();
-      model->key = "chat-qwen-3-235b";
-      model->display_name = "Qwen 3.5 122B";
+      model->key = "chat-qwen-3-8-flash-next";
+      model->display_name = "Qwen 3.8 Flash Next";
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
-      model->is_suggested_model = false;
+      model->is_suggested_model = true;
       model->is_near_model = false;
       model->options =
           mojom::ModelOptions::NewLeoModelOptions(std::move(options));
@@ -413,7 +403,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = false;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -439,7 +428,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -467,7 +455,6 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       model->vision_support = true;
       model->supports_tools = false;
       model->supported_capabilities = {
-          mojom::ConversationCapability::CHAT,
           mojom::ConversationCapability::DEEP_RESEARCH};
       model->is_suggested_model = false;
       model->is_near_model = false;
@@ -496,7 +483,7 @@ const std::vector<mojom::ModelPtr>& GetLeoModels() {
       options->name = "near-glm-5-1";
       model->key = "chat-near-glm-5-1";
       model->display_name = "GLM 5.3 Flash";
-      model->supported_capabilities = {mojom::ConversationCapability::CHAT};
+      model->supported_capabilities = {};
       model->supports_private_inference = true;
 
       model->options =
@@ -611,20 +598,6 @@ ModelService::ModelService(
   // `OnModelListUpdated()` so engines refresh via `UpdateModelOptions()`.
   InitModels();
 
-  // Perform migrations which depend on finding out about user's premium status.
-  const std::string& default_model_user_pref = GetDefaultModelKey();
-  if (default_model_user_pref == "chat-claude-instant") {
-    // 2024-05 Migration for old "claude instant" model
-    // The migration is performed here instead of
-    // ai_chat::prefs::MigrateProfilePrefs because the migration requires
-    // knowing about premium status.
-    // First set to an equivalent model that is available to all users. When
-    // we are told about premium status, we can switch to the premium
-    // equivalent.
-    SetDefaultModelKey(kClaudeHaikuModelKey);
-    is_migrating_claude_instant_ = true;
-  }
-
   CHECK_DEREF(os_crypt_async)
       .GetInstance(base::BindOnce(&ModelService::OnEncryptorReady,
                                   weak_ptr_factory_.GetWeakPtr()));
@@ -688,7 +661,7 @@ void ModelService::MigrateProfilePrefs(PrefService* profile_prefs) {
     profile_prefs->ClearPref(prefs::kObseleteBraveChatAutoGenerateQuestions);
 
     // Migrate old model keys to "chat-automatic"
-    constexpr std::array<const char*, 12> kOldModelKeys = {
+    constexpr std::array<const char*, 17> kOldModelKeys = {
         // Added: June 6, 2024. Checks can be removed eventually
         "chat-default",
         // Added: May 28, 2025. Checks can be removed eventually
@@ -707,6 +680,12 @@ void ModelService::MigrateProfilePrefs(PrefService* profile_prefs) {
         "chat-qwen-3-coder-480b",
         // Added: July 22, 2026. Checks can be removed eventually
         "chat-basic",
+        // Added: Aug 21, 2026. Checks can be removed eventually
+        "chat-claude-haiku",
+        "chat-claude-instant",
+        "chat-gpt-5-4-bedrock",
+        "chat-grok-4-3-bedrock",
+        "chat-qwen-3-235b",
     };
 
     if (auto* default_model_value =
@@ -794,12 +773,7 @@ const mojom::Model* ModelService::GetModelForTesting(std::string_view key) {
 }
 
 void ModelService::OnPremiumStatus(mojom::PremiumStatus status) {
-  if (is_migrating_claude_instant_) {
-    is_migrating_claude_instant_ = false;
-    if (status != mojom::PremiumStatus::Inactive) {
-      SetDefaultModelKey("chat-claude-sonnet");
-    }
-  } else if (IsPremiumStatus(status)) {
+  if (IsPremiumStatus(status)) {
     // If user hasn't changed default model and we configure that premium
     // default model is different to non-premium default model, then change to
     // premium default model.
@@ -932,9 +906,6 @@ ModelService::GetModelsWithSubtitles() {
       if (model->key == "chat-claude-instant") {
         model_with_subtitle->subtitle =
             l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_CLAUDE_INSTANT_SUBTITLE);
-      } else if (model->key == "chat-claude-haiku") {
-        model_with_subtitle->subtitle =
-            l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_CLAUDE_HAIKU_SUBTITLE);
       } else if (model->key == "chat-claude-sonnet") {
         model_with_subtitle->subtitle =
             l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_CLAUDE_SONNET_SUBTITLE);
@@ -950,12 +921,15 @@ ModelService::GetModelsWithSubtitles() {
       } else if (model->key == "chat-glm-4-7-flash") {
         model_with_subtitle->subtitle =
             l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_GLM_4_7_FLASH_SUBTITLE);
-      } else if (model->key == "chat-gpt-5-4-bedrock") {
-        model_with_subtitle->subtitle =
-            l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_GPT_5_4_BEDROCK_SUBTITLE);
-      } else if (model->key == "chat-grok-4-3-bedrock") {
+      } else if (model->key == "chat-gpt-5-6-luna-bedrock") {
         model_with_subtitle->subtitle = l10n_util::GetStringUTF8(
-            IDS_CHAT_UI_CHAT_GROK_4_3_BEDROCK_SUBTITLE);
+            IDS_CHAT_UI_CHAT_GPT_5_6_LUNA_BEDROCK_SUBTITLE);
+      } else if (model->key == "chat-gpt-5-6-terra-bedrock") {
+        model_with_subtitle->subtitle = l10n_util::GetStringUTF8(
+            IDS_CHAT_UI_CHAT_GPT_5_6_TERRA_BEDROCK_SUBTITLE);
+      } else if (model->key == "chat-grok-4-6-bedrock") {
+        model_with_subtitle->subtitle = l10n_util::GetStringUTF8(
+            IDS_CHAT_UI_CHAT_GROK_4_6_BEDROCK_SUBTITLE);
       } else if (model->key == "chat-nemotron-nano-3-30b") {
         model_with_subtitle->subtitle = l10n_util::GetStringUTF8(
             IDS_CHAT_UI_CHAT_NEMOTRON_NANO_3_30B_SUBTITLE);
@@ -965,9 +939,9 @@ ModelService::GetModelsWithSubtitles() {
       } else if (model->key == "chat-kimi-k2-5") {
         model_with_subtitle->subtitle =
             l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_KIMI_K2_5_SUBTITLE);
-      } else if (model->key == "chat-qwen-3-235b") {
-        model_with_subtitle->subtitle =
-            l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_QWEN_3_235B_SUBTITLE);
+      } else if (model->key == "chat-qwen-3-8-flash-next") {
+        model_with_subtitle->subtitle = l10n_util::GetStringUTF8(
+            IDS_CHAT_UI_CHAT_QWEN_3_8_FLASH_NEXT_SUBTITLE);
       } else if (model->key == "chat-deepseek-v3-2") {
         model_with_subtitle->subtitle =
             l10n_util::GetStringUTF8(IDS_CHAT_UI_CHAT_DEEPSEEK_V3_2_SUBTITLE);
@@ -1179,9 +1153,6 @@ void ModelService::SetDefaultModelKey(const std::string& new_key) {
     return;
   }
 
-  // Don't continue migrating if user choses another default in the meantime
-  is_migrating_claude_instant_ = false;
-
   const std::string previous_default_key = GetDefaultModelKey();
 
   if (previous_default_key == new_key) {
@@ -1237,7 +1208,7 @@ const std::vector<mojom::ModelPtr> ModelService::GetCustomModels() {
         model_pref.FindBool(kCustomModelVisionSupport).value_or(false);
     model->supports_tools =
         model_pref.FindBool(kCustomModelSupportsTools).value_or(false);
-    model->supported_capabilities = {mojom::ConversationCapability::CHAT};
+    model->supported_capabilities = {};
     model->options = mojom::ModelOptions::NewCustomModelOptions(
         std::move(custom_model_opts));
 
@@ -1275,8 +1246,8 @@ std::unique_ptr<EngineConsumer> ModelService::GetEngineForModel(
     AIChatCredentialManager* credential_manager) {
   const mojom::Model* model = GetModel(model_key);
   if (!model) {
-    // Model no longer exists — fall back to the configured default.
-    model = GetModel(features::kAIModelsDefaultKey.Get());
+    // Model no longer exists — fall back to automatic.
+    model = GetModel(kChatAutomaticModelKey);
   }
   if (!model) {
     // The configured default can itself be retired by a remote model

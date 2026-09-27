@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">Giúp cải thiện độ ổn định của sản phẩm Growser bằng cách tự động gửi báo cáo chẩn đoán khi Trình duyệt Growser gặp sự cố hoặc đóng băng.</translation>
 <translation id="7977176350719484850">Dữ liệu ước tính\ntiết kiệm được</translation>
 <translation id="9008534313521214777">Thời gian tiết kiệm được\nước tính</translation>
+<translation id="5668852698659986622">Bật Quảng cáo được tài trợ</translation>
+<translation id="431194936581466649">Hãy giúp hỗ trợ sứ mệnh của Growser trong việc xây dựng một Web độc lập, ưu tiên người dùng bằng Quảng cáo được tài trợ. Chúng tôi đo lường hiệu suất quảng cáo một cách riêng tư, không nhận dạng bạn.</translation>
 <translation id="8347743943525229984">Cho phép Growser thực hiện khảo sát</translation>
 <translation id="6022939994702081659">Cho phép Growser hiển thị liên kết đến các khảo sát riêng tư trên trang thẻ mới của bạn. Khảo sát giúp chúng tôi phát triển các tính năng tốt hơn và đo lường hiệu quả của các chiến dịch quảng cáo trên trình duyệt.</translation>
 <translation id="7746496306508543965">Tìm hiểu thêm về khảo sát của Growser</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">Tôi có một cụm từ phục hồi gồm 12 từ</translation>
 <translation id="4225265925807365011">Tôi có một cụm từ phục hồi gồm 24 từ</translation>
 <translation id="3570367516044491911">Đặt thành trình duyệt mặc định</translation>
-<translation id="6800338374677644736">Đặt làm Trình duyệt mặc định</translation>
 <translation id="1545749641540134597">Quét mã QR</translation>
 <translation id="5317781812114905957">Hướng dẫn</translation>
 <translation id="8515319483805157233">Để tìm kiếm bằng Mã QR, hãy căn chỉnh Mã QR ở giữa khung.</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">Menu chính</translation>
 <translation id="7002271985859760052">Hành động trên trang</translation>
 <translation id="7104487676473617844">Các mục sau sẽ chỉ hiển thị trong menu khi được trang web đang mở hiện tại hỗ trợ.</translation>
-<translation id="4159764849281393303">Ứng dụng Web</translation>
 <translation id="8038539967102225446">Đây là Quảng cáo Growser!</translation>
 <translation id="222883304157347087">(thiết bị này)</translation>
 <translation id="4157741509680155021">THIẾT BỊ TRÊN CHUỖI ĐỒNG BỘ</translation>
@@ -723,6 +723,8 @@ Nếu bạn không chấp nhận yêu cầu này, VPN sẽ không kết nối l�
 <translation id="1634828734222219955">Tổng cộng</translation>
 <translation id="7995708795274219641">Số lượng + Gas</translation>
 <translation id="2186011161688824046">Số tiền + phí</translation>
+<translation id="1118876217803190221">Số dư không đủ</translation>
+<translation id="275990379543116961">Không đủ tiền mua xăng</translation>
 <translation id="1950052789869821983">Giao dịch</translation>
 <translation id="2304783958703511257">Cài đặt nâng cao</translation>
 <translation id="4220062530885628403">Số giao dịch</translation>
@@ -1206,6 +1208,8 @@ Leo AI. Hành động này không thể được hoàn tác.</translation>
 <translation id="1850594249589065646">Độ chính xác về vị trí</translation>
 <translation id="2403474027143565107">Chính xác</translation>
 <translation id="4042597221652780603">Xấp xỉ</translation>
+<translation id="6800338374677644736">Đặt làm Trình duyệt mặc định</translation>
+<translation id="4159764849281393303">Ứng dụng Web</translation>
 <translation id="7759809451544302770">Không bắt buộc</translation>
 <translation id="4935400164159327304">Hãy cho chúng tôi biết cách chúng tôi có thể cải thiện Growser.</translation>
 <translation id="8300751939969131609">Bật Growser Tin tức để không bỏ lỡ câu chuyện nào</translation>
@@ -1376,8 +1380,6 @@ Leo AI. Hành động này không thể được hoàn tác.</translation>
 <translation id="6692114068321061469">Xác minh lần mua Growser Origin</translation>
 <translation id="6671300057038059325">Xuất mật khẩu đã lưu trữ với Growser</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">Số dư không đủ</translation>
-<translation id="275990379543116961">Không đủ tiền mua xăng</translation>
 <translation id="1448289340149908413">Ethereum</translation>
 <translation id="5390923430722428146">Solana</translation>
 </translationbundle>

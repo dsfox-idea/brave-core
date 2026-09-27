@@ -5,6 +5,8 @@
 
 #include "brave/browser/ui/webui/settings/brave_settings_localized_strings_provider.h"
 
+#include <string_view>
+
 #include "base/feature_list.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
@@ -29,6 +31,7 @@
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/containers/buildflags/buildflags.h"
 #include "brave/components/email_aliases/buildflags/buildflags.h"
+#include "brave/components/local_ai/buildflags/buildflags.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
@@ -41,6 +44,7 @@
 #include "brave/ui/webui/custom_profile_image/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"
+#include "chrome/browser/history_embeddings/history_embeddings_utils.h"
 #include "chrome/browser/media/router/media_router_feature.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/pref_names.h"
@@ -65,6 +69,11 @@
 #if BUILDFLAG(ENABLE_AI_CHAT)
 #include "brave/components/ai_chat/core/browser/model_validator.h"
 #include "brave/components/ai_chat/core/common/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_LOCAL_AI)
+#include "brave/browser/history_embeddings/brave_history_embeddings_status.h"
+#include "chrome/browser/history_embeddings/history_embeddings_utils.h"
 #endif
 
 #if BUILDFLAG(ENABLE_TOR)
@@ -149,6 +158,10 @@ constexpr char16_t kTabOrganizationLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/"
     u"35200007195917-How-to-use-Tab-Focus-Mode";
 
+// The Semantic history search toggle lives in brave://settings/privacy.
+constexpr char16_t kSemanticHistorySearchSettingURL[] =
+    u"chrome://settings/privacy";
+
 constexpr char16_t kLeoMemoryLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/38441287509261";
 
@@ -156,14 +169,16 @@ constexpr char16_t kLeoPrivacyPolicyURL[] =
     u"https://brave.com/privacy/browser/#brave-leo";
 #endif
 
+#if BUILDFLAG(ENABLE_LOCAL_AI)
+constexpr char kSemanticHistorySearchLearnMoreURL[] =
+    "https://support.brave.app/hc/en-us/articles/49008428284301";
+#endif
+
 constexpr char16_t kAdBlockOnlyModeLearnMoreURL[] =
     u"https://growser.org/features.html#adblock-only";
 
 constexpr char16_t kSponsoredAdsLearnMoreURL[] =
     u"https://support.brave.app/hc/en-us/articles/48376231110413";
-
-constexpr char16_t kSurveyPanelistLearnMoreURL[] =
-    u"https://support.brave.app/hc/en-us/articles/36550092449165";
 
 constexpr char16_t kExtensionsV2LearnMoreURL[] =
     u"https://growser.org/features.html#extensions-mv2";
@@ -297,19 +312,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_SHOW_BRAVE_NEWS_BUTTON_LABEL},
       {"appearanceSettingsShowLeoButtonLabel",
        IDS_SETTINGS_SHOW_LEO_BUTTON_LABEL},
-      {"appearanceSettingsBookmarBar", IDS_SETTINGS_SHOW_BOOKMARK_BAR},
-      {"appearanceSettingsBookmarBarAlways",
-       IDS_SETTINGS_ALWAYS_SHOW_BOOKMARK_BAR_ALWAYS},
-      {"appearanceSettingsBookmarBarNTP",
-       IDS_SETTINGS_ALWAYS_SHOW_BOOKMARK_BAR_ON_NTP},
-      {"appearanceSettingsBookmarBarNever",
-       IDS_SETTINGS_NEVER_SHOW_BOOKMARK_BAR},
-      {"appearanceSettingsBookmarBarAlwaysDesc",
-       IDS_SETTINGS_ALWAYS_SHOW_BOOKMARK_BAR_ALWAYS_DESC},
-      {"appearanceSettingsBookmarBarNTPDesc",
-       IDS_SETTINGS_ALWAYS_SHOW_BOOKMARK_BAR_ON_NTP_DESC},
-      {"appearanceSettingsBookmarBarNeverDesc",
-       IDS_SETTINGS_NEVER_SHOW_BOOKMARK_BAR_DESC},
       {"appearanceSettingsShowAutocompleteInAddressBar",
        IDS_SETTINGS_APPEARANCE_SETTINGS_SHOW_AUTOCOMPLETE_IN_ADDRESS_BAR},
       {"appearanceSettingsUseOnDeviceSuggestions",
@@ -513,6 +515,12 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"webRTCPolicySubLabel", IDS_SETTINGS_WEBRTC_POLICY_SUB_LABEL},
       {"webRTCDefault", IDS_SETTINGS_WEBRTC_POLICY_DEFAULT},
       {"pushMessagingLabel", IDS_SETTINGS_PUSH_MESSAGING},
+#if BUILDFLAG(ENABLE_LOCAL_AI)
+      {"semanticHistorySearchLabel",
+       IDS_SETTINGS_SEMANTIC_HISTORY_SEARCH_LABEL},
+      {"semanticHistorySearchSubLabel",
+       IDS_SETTINGS_SEMANTIC_HISTORY_SEARCH_SUB_LABEL},
+#endif  // BUILDFLAG(ENABLE_LOCAL_AI)
       {"historyRetentionLabel", IDS_SETTINGS_HISTORY_RETENTION_LABEL},
       {"historyRetentionSubLabel", IDS_SETTINGS_HISTORY_RETENTION_SUB_LABEL},
       {"historyRetentionOneDay", IDS_SETTINGS_HISTORY_RETENTION_ONE_DAY},
@@ -649,6 +657,8 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_LEO_ASSISTANT_SHOW_IN_CONTEXT_MENU_DESC},
       {"braveLeoAssistantTabOrganizationLabel",
        IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_LABEL},
+      {"braveLeoAssistantTabOrganizationSendPageContentLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_SEND_PAGE_CONTENT_LABEL},
       {"braveLeoAssistantTabOrganizationModelLabel",
        IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_MODEL_LABEL},
       {"braveLeoAssistantHistoryPreferenceLabel",
@@ -675,8 +685,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_LINK_LABEL},
       {"braveLeoModelSubtitle-chat-claude-instant",
        IDS_CHAT_UI_CHAT_CLAUDE_INSTANT_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-claude-haiku",
-       IDS_CHAT_UI_CHAT_CLAUDE_HAIKU_SUBTITLE},
       {"braveLeoModelSubtitle-chat-claude-sonnet",
        IDS_CHAT_UI_CHAT_CLAUDE_SONNET_SUBTITLE},
       {"braveLeoModelSubtitle-chat-qwen", IDS_CHAT_UI_CHAT_QWEN_SUBTITLE},
@@ -684,18 +692,20 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_CHAT_UI_CHAT_NEAR_GLM_5_1_SUBTITLE},
       {"braveLeoModelSubtitle-chat-glm-4-7-flash",
        IDS_CHAT_UI_CHAT_GLM_4_7_FLASH_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-gpt-5-4-bedrock",
-       IDS_CHAT_UI_CHAT_GPT_5_4_BEDROCK_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-grok-4-3-bedrock",
-       IDS_CHAT_UI_CHAT_GROK_4_3_BEDROCK_SUBTITLE},
+      {"braveLeoModelSubtitle-chat-gpt-5-6-luna-bedrock",
+       IDS_CHAT_UI_CHAT_GPT_5_6_LUNA_BEDROCK_SUBTITLE},
+      {"braveLeoModelSubtitle-chat-gpt-5-6-terra-bedrock",
+       IDS_CHAT_UI_CHAT_GPT_5_6_TERRA_BEDROCK_SUBTITLE},
+      {"braveLeoModelSubtitle-chat-grok-4-6-bedrock",
+       IDS_CHAT_UI_CHAT_GROK_4_6_BEDROCK_SUBTITLE},
       {"braveLeoModelSubtitle-chat-nemotron-nano-3-30b",
        IDS_CHAT_UI_CHAT_NEMOTRON_NANO_3_30B_SUBTITLE},
       {"braveLeoModelSubtitle-chat-mistral-large",
        IDS_CHAT_UI_CHAT_MISTRAL_LARGE_SUBTITLE},
       {"braveLeoModelSubtitle-chat-kimi-k2-5",
        IDS_CHAT_UI_CHAT_KIMI_K2_5_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-qwen-3-235b",
-       IDS_CHAT_UI_CHAT_QWEN_3_235B_SUBTITLE},
+      {"braveLeoModelSubtitle-chat-qwen-3-8-flash-next",
+       IDS_CHAT_UI_CHAT_QWEN_3_8_FLASH_NEXT_SUBTITLE},
       {"braveLeoModelSubtitle-chat-deepseek-v3-2",
        IDS_CHAT_UI_CHAT_DEEPSEEK_V3_2_SUBTITLE},
       {"braveLeoModelSubtitle-chat-claude-opus",
@@ -842,11 +852,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"braveLeoAssistantOllamaSyncLabel",
        IDS_SETTINGS_LEO_ASSISTANT_OLLAMA_SYNC_LABEL},
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
-
-      // Survey Panelist Page
-      {"surveyPanelist", IDS_SETTINGS_SURVEY_PANELIST},
-      {"braveSurveyPanelistLabel", IDS_SETTINGS_SURVEY_PANELIST_LABEL},
-      {"braveSurveyPanelistDesc", IDS_SETTINGS_SURVEY_PANELIST_DESC},
 
       // New Tab Page
       {"braveNewTab", IDS_SETTINGS_NEW_TAB},
@@ -1193,6 +1198,20 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       "braveLeoAssistantInputDefaultContextSize",
       base::NumberToString16(ai_chat::kDefaultCustomModelContextSize));
 
+  html_source->AddString(
+      "braveLeoAssistantTabOrganizationSendPageContentDesc",
+      l10n_util::GetStringFUTF16(
+          IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_SEND_PAGE_CONTENT_DESC,
+          kSemanticHistorySearchSettingURL,
+          l10n_util::GetStringUTF16(
+              IDS_SETTINGS_SEMANTIC_HISTORY_SEARCH_LABEL)));
+
+  // The Local AI master switch lives in local state and only takes effect on
+  // relaunch, so the page reads it once here rather than binding a pref.
+  html_source->AddBoolean(
+      "isHistoryEmbeddingsFeatureEnabled",
+      history_embeddings::IsHistoryEmbeddingsFeatureEnabled());
+
   html_source->AddString("braveLeoAssistantTabOrganizationDesc",
                          l10n_util::GetStringFUTF16(
                              IDS_SETTINGS_LEO_ASSISTANT_TAB_ORGANIZATION_DESC,
@@ -1212,6 +1231,22 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
   html_source->AddBoolean("isBraveSyncAIChatEnabled",
                           ai_chat::features::IsBraveSyncAIChatEnabled());
 #endif
+
+#if BUILDFLAG(ENABLE_LOCAL_AI)
+  html_source->AddString("semanticHistorySearchLearnMoreURL",
+                         kSemanticHistorySearchLearnMoreURL);
+
+  html_source->AddBoolean(
+      "isSemanticHistorySearchAvailable",
+      history_embeddings::IsHistoryEmbeddingsFeatureEnabled());
+
+  // The value the embedding services were built with, so the page can tell
+  // whether the toggle is waiting on a relaunch.
+  html_source->AddBoolean(
+      "semanticHistorySearchEnabledAtStartup",
+      history_embeddings::BraveHistoryEmbeddingsStatus::GetForProfile(profile)
+          ->IsEnabled());
+#endif  // BUILDFLAG(ENABLE_LOCAL_AI)
 
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY)
   html_source->AddString("webDiscoveryLearnMoreURL", kWebDiscoveryLearnMoreUrl);
@@ -1291,13 +1326,6 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
 
   html_source->AddString("sponsoredAdsLearnMoreURL", kSponsoredAdsLearnMoreURL);
 
-  html_source->AddString("braveSurveyPanelistLearnMoreURL",
-                         kSurveyPanelistLearnMoreURL);
-
-  html_source->AddString(
-      "braveSurveyPanelistDesc",
-      l10n_util::GetStringFUTF16(IDS_SETTINGS_SURVEY_PANELIST_DESC,
-                                 kSurveyPanelistLearnMoreURL));
   html_source->AddString(
       "extensionsV2Warn",
       l10n_util::GetStringFUTF16(IDS_SETTINGS_MANAGE_EXTENSIONS_V2_WARN,

@@ -21,7 +21,7 @@
 #include "brave/browser/shell_integrations/buildflags/buildflags.h"
 #include "brave/browser/ui/commands/accelerator_service_factory.h"
 #include "brave/browser/ui/page_info/features.h"
-#include "brave/browser/ui/webui/settings/brave_account/brave_account_row_handler.h"
+#include "brave/browser/ui/webui/settings/brave_account/brave_account_dialog_controller.h"
 #include "brave/browser/ui/webui/settings/brave_adblock_handler.h"
 #include "brave/browser/ui/webui/settings/brave_appearance_handler.h"
 #include "brave/browser/ui/webui/settings/brave_default_extensions_handler.h"
@@ -46,7 +46,6 @@
 #include "brave/components/commands/common/commands.mojom.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/email_aliases/buildflags/buildflags.h"
-#include "brave/components/ntp_background_images/browser/features.h"
 #include "brave/components/playlist/core/common/buildflags/buildflags.h"
 #include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/search_engines/brave_prepopulated_engines.h"
@@ -275,20 +274,14 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
 #endif
 
 #if BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
-  // Sponsored Ads and Survey Panelist are tied to Brave Rewards, which is
-  // compiled out of Brave Origin branded builds, so neither setting is ever
-  // available there.
+  // Sponsored Ads is tied to Brave Rewards, which is compiled out of Brave
+  // Origin branded builds, so the setting is never available there.
   html_source->AddBoolean("isSponsoredAdsAllowed", false);
-  html_source->AddBoolean("isSurveyPanelistAllowed", false);
 #else
-  // growser (#78): never. The survey panel is Brave's research programme, it
-  // is tied to Rewards - compiled out here - and it reported through P3A,
-  // which #21 removed entirely. Set at the source rather than hidden per
-  // page, because two different surfaces read this value: the settings
-  // section and the link row on the data-collection page.
-  html_source->AddBoolean("isSurveyPanelistAllowed", false);
-  // Growser-21: and upstream's new sponsored-ads toggle is the same answer for
-  // the same reason - there are no sponsored ads in this build to enable.
+  // growser (#78): the survey panel (Brave's research programme, tied to
+  // Rewards and reporting through P3A) left upstream in 155 as well.
+  // Growser-21: upstream's sponsored-ads toggle gets the answer the survey
+  // panel used to: there are no sponsored ads in this build to enable.
   html_source->AddBoolean("isSponsoredAdsAllowed", false);
 #endif
 #if BUILDFLAG(ENABLE_PLAYLIST)
@@ -434,9 +427,11 @@ void BraveSettingsUI::BindInterface(
 }
 
 void BraveSettingsUI::BindInterface(
-    mojo::PendingReceiver<brave_account::mojom::RowHandler> pending_receiver) {
+    mojo::PendingReceiver<brave_account::mojom::DialogController>
+        pending_receiver) {
   MakeOwnedReceiver(
-      std::make_unique<brave_account::BraveAccountRowHandler>(web_ui()),
+      std::make_unique<brave_account::BraveAccountDialogController>(
+          CHECK_DEREF(web_ui())),
       std::move(pending_receiver));
 }
 

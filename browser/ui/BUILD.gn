@@ -48,6 +48,7 @@ group("ui_public_dependencies") {
     "//brave/components/brave_wallet/common/buildflags",
     "//brave/components/brave_wayback_machine/buildflags",
     "//brave/components/containers/buildflags",
+    "//brave/components/local_ai/buildflags",
     "//brave/components/playlist/core/common/buildflags",
     "//brave/components/speedreader/common/buildflags",
     "//brave/components/traffic_control/buildflags",
@@ -99,6 +100,7 @@ source_set("ui") {
     "//chrome/browser:file_select_helper",
     "//chrome/browser/contextual_search",
     "//chrome/browser/history",
+    "//chrome/browser/history_embeddings",
     "//chrome/browser/image_fetcher",
     "//chrome/browser/ui:tab_modal_confirm_dialog_delegate",
     "//chrome/browser/ui/browser_window",
@@ -130,7 +132,10 @@ source_set("ui") {
   }
 
   if (enable_local_ai) {
-    deps += [ "//brave/browser/ui/webui/local_ai" ]
+    deps += [
+      "//brave/browser/history_embeddings:status",
+      "//brave/browser/ui/webui/local_ai",
+    ]
   }
 
   allow_circular_includes_from = brave_ui_allow_circular_includes_from
@@ -219,6 +224,10 @@ source_set("ui") {
         "//brave/browser/ui/webui/brave_wallet/wallet_panel",
         "//chrome/browser/picture_in_picture",
       ]
+
+      if (enable_snap) {
+        deps += [ "//brave/browser/ui/webui/brave_wallet/snap_host" ]
+      }
     }
   }
 
@@ -345,10 +354,6 @@ source_set("ui") {
     sources += [
       "bookmark/bookmark_helper.cc",
       "bookmark/bookmark_helper.h",
-      "bookmark/bookmark_prefs_service.cc",
-      "bookmark/bookmark_prefs_service.h",
-      "bookmark/bookmark_prefs_service_factory.cc",
-      "bookmark/bookmark_prefs_service_factory.h",
       "bookmark/brave_bookmark_prefs.cc",
       "bookmark/brave_bookmark_prefs.h",
       "brave_browser.cc",
@@ -396,14 +401,10 @@ source_set("ui") {
       "tabs/shared_pinned_tab_service_factory.h",
       "toolbar/app_menu_icons.cc",
       "toolbar/app_menu_icons.h",
-      "toolbar/bookmark_bar_sub_menu_model.cc",
-      "toolbar/bookmark_bar_sub_menu_model.h",
       "toolbar/brave_app_menu_model.cc",
       "toolbar/brave_app_menu_model.h",
       "toolbar/brave_bookmark_context_menu_controller.cc",
       "toolbar/brave_bookmark_context_menu_controller.h",
-      "toolbar/brave_bookmark_sub_menu_model.cc",
-      "toolbar/brave_bookmark_sub_menu_model.h",
       "toolbar/brave_recent_tabs_sub_menu_model.h",
       "webui/brave_settings_ui.cc",
       "webui/brave_settings_ui.h",
@@ -507,6 +508,7 @@ source_set("ui") {
       "//chrome/browser/sync",
       "//chrome/browser/themes",
       "//chrome/browser/ui:browser_actions",
+      "//chrome/browser/ui:browser_content_setting_bubble_model_delegate",
       "//chrome/browser/ui:chrome_pages",
       "//chrome/browser/ui:layout_constants",
       "//chrome/browser/ui:session_crashed_bubble",
@@ -777,12 +779,14 @@ source_set("ui") {
       "//chrome/browser/ui/views/download",
       "//chrome/browser/ui/views/extensions:extensions_menu_main_page_view",
       "//chrome/browser/ui/views/frame:contents_web_view",
+      "//chrome/browser/ui/views/frame:system_menu_model_builder",
       "//chrome/browser/ui/views/infobars",
       "//chrome/browser/ui/views/interaction",
       "//chrome/browser/ui/views/overlay",
       "//chrome/browser/ui/views/tabs:tab",
       "//chrome/browser/ui/views/tabs:tab_strip",
       "//chrome/browser/ui/views/tabs:tab_strip_button",
+      "//chrome/browser/ui/views/tabs/common",
       "//chrome/browser/ui/views/tabs/dragging",
       "//chrome/browser/ui/views/tabs/shared",
       "//chrome/browser/ui/views/tabs/tab",
@@ -838,7 +842,10 @@ source_set("ui") {
         "views/frame/brave_browser_frame_view_win.h",
       ]
 
-      deps += [ "//chrome/browser:titlebar_config" ]
+      deps += [
+        "//chrome/browser:titlebar_config",
+        "//chrome/browser/ui/views/frame:browser_caption_button_container_win",
+      ]
     }
 
     if (is_linux) {
@@ -1555,7 +1562,11 @@ source_set("brave_tab_prefs") {
     "tabs/brave_tab_prefs.cc",
     "tabs/brave_tab_prefs.h",
   ]
-  deps = [ "//components/prefs" ]
+  deps = [
+    "//brave/browser/ui/tabs:tabs_public",
+    "//chrome/common:constants",
+    "//components/prefs",
+  ]
 
   if (!is_android) {
     deps += [ "//chrome/browser/ui/tabs:features" ]
@@ -1576,6 +1587,7 @@ source_set("unit_tests") {
     deps = [
       ":brave_tab_prefs",
       "//base/test:test_support",
+      "//brave/browser/ui/tabs:tabs_public",
       "//brave/components/l10n/common:test_support",
       "//chrome/browser/ui",
       "//chrome/browser/ui/tabs:features",

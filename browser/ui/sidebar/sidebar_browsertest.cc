@@ -4,6 +4,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #include <algorithm>
+#include <atomic>
 #include <optional>
 
 #include "base/check.h"
@@ -15,10 +16,12 @@
 #include "base/scoped_observation.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
+#include "base/task/sequenced_task_runner.h"
 #include "base/test/bind.h"
 #include "base/test/run_until.h"
 #include "base/files/file_util.h"
 #include "base/test/scoped_feature_list.h"
+#include "base/test/test_timeouts.h"
 #include "brave/app/brave_command_ids.h"
 #include "brave/browser/ui/browser_commands.h"
 #include "brave/browser/ui/focus_mode/focus_mode_controller.h"
@@ -63,6 +66,7 @@
 #include "brave/components/sidebar/browser/sidebar_item.h"
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "brave/components/sidebar/common/features.h"
+#include "brave/components/tor/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/search_engines/template_url_service_factory.h"
@@ -74,6 +78,7 @@
 #include "brave/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/layout_constants.h"
 #include "chrome/browser/ui/side_panel/side_panel_entry.h"
 #include "chrome/browser/ui/side_panel/side_panel_registry.h"
@@ -97,6 +102,9 @@
 #include "chrome/test/base/ui_test_utils.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/test/browser_test.h"
+#include "net/dns/mock_host_resolver.h"
+#include "net/test/embedded_test_server/embedded_test_server.h"
+#include "net/test/embedded_test_server/http_request.h"
 #include "skia/ext/image_operations.h"
 #include "testing/gmock/include/gmock/gmock-matchers.h"
 #include "testing/gmock/include/gmock/gmock.h"
@@ -139,6 +147,10 @@
 #include "brave/components/brave_wallet/common/web_ui_constants.h"
 #endif
 
+#if BUILDFLAG(ENABLE_TOR)
+#include "brave/browser/tor/tor_profile_manager.h"
+#endif
+
 using ::testing::Eq;
 using ::testing::Ne;
 using ::testing::Optional;
@@ -158,7 +170,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, BasicTest) {
   // but `IsSidePanelShowing()` only flips once the entry finishes loading
   // asynchronously. Toggling again before the panel is actually showing makes
   // SidePanelCoordinator::Toggle() re-show instead of close, so wait on both.
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   chrome::BrowserCommandController::From(browser())->ExecuteCommand(
       IDC_TOGGLE_SIDEBAR);
   WaitUntil(base::BindLambdaForTesting([&]() {
@@ -317,7 +329,7 @@ class SidebarBrowserTestWalletSidePanel : public SidebarBrowserTest {
 
     controller()->ActivatePanelItem(SidebarItem::BuiltInItemType::kWallet);
 
-    auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+    auto* panel_ui = SidePanelUI::From(browser());
     EXPECT_TRUE(panel_ui);
     EXPECT_TRUE(base::test::RunUntil([&]() {
       return panel_ui &&
@@ -342,7 +354,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWalletSidePanel, WalletSidePanel) {
 
   ActivateWalletPanel();
 
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   ASSERT_TRUE(panel_ui);
   auto current_entry = panel_ui->GetCurrentEntryId();
   ASSERT_TRUE(current_entry.has_value());
@@ -371,7 +383,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWalletSidePanel,
   // Returning to the original tab restores the contextual wallet panel.
   tab_model()->ActivateTabAt(0);
   EXPECT_EQ(model()->active_index(), wallet_item_index);
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   ASSERT_TRUE(panel_ui);
   EXPECT_EQ(SidePanelEntryId::kWallet, panel_ui->GetCurrentEntryId());
 }
@@ -394,7 +406,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWalletSidePanel,
 #endif  // BUILDFLAG(ENABLE_BRAVE_WALLET)
 
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PRE_LastlyUsedSidePanelItemTest) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   panel_ui->Show(SidePanelEntryId::kBookmarks);
 
   // Wait till panel UI opens.
@@ -409,7 +421,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PRE_LastlyUsedSidePanelItemTest) {
 }
 
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, LastlyUsedSidePanelItemTest) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   panel_ui->Toggle();
 
   // Wait till panel UI opens.
@@ -424,7 +436,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, LastlyUsedSidePanelItemTest) {
 }
 
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, DefaultEntryTest) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto bookmark_item_index =
       model()->GetIndexOf(SidebarItem::BuiltInItemType::kBookmarks);
   panel_ui->Show(SidePanelEntryId::kBookmarks);
@@ -682,7 +694,7 @@ IN_PROC_BROWSER_TEST_P(SidebarBrowserWithWebPanelTest, WebPanelTest) {
 
     // Test toggle existing panel doesn't have any issue even web panel type
     // exists.
-    auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+    auto* panel_ui = SidePanelUI::From(browser());
     panel_ui->Show(SidePanelEntryId::kCustomizeChrome);
     ASSERT_TRUE(
         base::test::RunUntil([&]() { return GetSidePanel()->GetVisible(); }));
@@ -924,7 +936,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, ItemActivatedScrollTest) {
   EXPECT_TRUE(NeedScrollForItemAt(*bookmark_item_index, scroll_view));
 
   // Open bookmark panel.
-  browser()->GetFeatures().side_panel_ui()->Show(SidePanelEntryId::kBookmarks);
+  SidePanelUI::From(browser())->Show(SidePanelEntryId::kBookmarks);
 
   // Wait till bookmarks item is visible.
   WaitUntil(base::BindLambdaForTesting([&]() {
@@ -1114,7 +1126,7 @@ IN_PROC_BROWSER_TEST_P(SidebarBrowserTestWithkSidebarShowAlwaysOnStable,
       WindowOpenDisposition::NEW_FOREGROUND_TAB,
       ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP));
 
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   if (GetParam()) {
     // Wait till browser has active panel.
     WaitUntil(base::BindLambdaForTesting(
@@ -1285,7 +1297,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithTabSpecificAIChat,
 
   // Open a unmanaged "global" panel from Tab 0
   tab_model()->ActivateTabAt(0);
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   panel_ui->Show(SidePanelEntryId::kBookmarks);
   // Wait till sidebar show ends.
   WaitUntil(base::BindLambdaForTesting([&]() {
@@ -1504,9 +1516,9 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PanelPositionTest) {
   panel->DisableAnimationsForTesting();
   SidebarContainerView* sidebar = GetSidebarContainerView();
   auto* prefs = browser()->GetProfile()->GetPrefs();
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
 
-  browser()->GetFeatures().side_panel_ui()->Toggle();
+  SidePanelUI::From(browser())->Toggle();
   RunScheduledLayouts();
   ASSERT_TRUE(
       base::test::RunUntil([&]() { return panel_ui->IsSidePanelShowing(); }));
@@ -1599,7 +1611,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PanelPositionTest) {
 //   SidebarContainerView does not monitor panel show/hide events, so
 //   BraveSidePanelCoordinator updates the active state in Show() and Close().
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, SidebarActiveItemStateSync) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   panel_ui->DisableAnimationsForTesting();
 
   const auto bookmark_item_index =
@@ -1650,7 +1662,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, SidebarActiveItemStateSync) {
 // Verify the Brave-styled side panel header is attached for reading list and
 // bookmarks and absent for other entries.
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, BraveSidePanelHeaderTest) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser());
   auto* side_panel = browser_view->side_panel();
   side_panel->DisableAnimationsForTesting();
@@ -1708,7 +1720,7 @@ void ExpectContentChildLayerCorners(SidePanel* panel,
 //   (c) panel reopened after the pref changed while it was closed.
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
                        PanelContentCornersUpdateOnStateChange) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto* side_panel =
       BrowserView::GetBrowserViewForBrowser(browser())->side_panel();
   auto* prefs = browser()->GetProfile()->GetPrefs();
@@ -1792,7 +1804,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
 // child layers.
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
                        PanelContentCornersFollowSidebarVisibility) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto* side_panel = browser_view()->side_panel();
   auto* prefs = browser()->GetProfile()->GetPrefs();
   auto* service = SidebarServiceFactory::GetForProfile(browser()->GetProfile());
@@ -1868,7 +1880,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
 // the overlapping content edge.
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
                        PanelResizeAreaPositionMatchesBorderState) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser());
   auto* side_panel = browser_view->side_panel();
   side_panel->DisableAnimationsForTesting();
@@ -1950,7 +1962,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
 // SidePanel::UpdateBorder(). The content-facing edge owns the separator/margin
 // and the outer edge owns the rounded-corner gap.
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PanelBorderInsetsFollowAlignment) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser());
   auto* side_panel = browser_view->side_panel();
   side_panel->DisableAnimationsForTesting();
@@ -2046,7 +2058,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
   ASSERT_TRUE(separator);
   EXPECT_TRUE(separator->GetVisible());
 
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   panel_ui->Show(SidePanelEntryId::kBookmarks);
   ASSERT_TRUE(
       base::test::RunUntil([&]() { return panel_ui->IsSidePanelShowing(); }));
@@ -2303,7 +2315,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest,
 //     header/content would otherwise be flush with the panel edge), so the
 //     outline has room to show on all four sides.
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PanelRoundedOutline) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto* side_panel = browser_view()->side_panel();
   side_panel->DisableAnimationsForTesting();
   auto* prefs = browser()->GetProfile()->GetPrefs();
@@ -2354,7 +2366,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PanelRoundedOutline) {
 }
 
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, SidebarItemHighlightState) {
-  auto* panel_ui = browser()->GetFeatures().side_panel_ui();
+  auto* panel_ui = SidePanelUI::From(browser());
   auto* side_panel = browser_view()->side_panel();
   auto* service = SidebarServiceFactory::GetForProfile(browser()->GetProfile());
   auto items_contents_view = GetSidebarItemsContentsView(controller());
@@ -3402,5 +3414,88 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, PinnedTabsOnTopLegacyAtTheBottom) {
         << "legacy sidebar buttons must not be draggable";
   }
 }
+
+#if BUILDFLAG(ENABLE_TOR)
+class SidebarTorBrowserTest : public SidebarBrowserTest {
+ public:
+  SidebarTorBrowserTest() = default;
+  ~SidebarTorBrowserTest() override = default;
+
+  void SetUpOnMainThread() override {
+    SidebarBrowserTest::SetUpOnMainThread();
+    host_resolver()->AddRule("*", "127.0.0.1");
+    embedded_test_server()->RegisterRequestMonitor(base::BindRepeating(
+        &SidebarTorBrowserTest::MonitorRequest, base::Unretained(this)));
+    ASSERT_TRUE(embedded_test_server()->Start());
+  }
+
+ protected:
+  // Runs on the test server's IO thread.
+  void MonitorRequest(const net::test_server::HttpRequest& request) {
+    if (request.relative_url != "/favicon.ico") {
+      return;
+    }
+    const auto host = request.headers.find("Host");
+    if (host == request.headers.end()) {
+      return;
+    }
+    if (host->second.starts_with("tor-only.test")) {
+      ++tor_item_favicon_requests_;
+    } else if (host->second.starts_with("regular-only.test")) {
+      ++regular_item_favicon_requests_;
+    }
+  }
+
+  std::atomic<int> tor_item_favicon_requests_ = 0;
+  std::atomic<int> regular_item_favicon_requests_ = 0;
+};
+
+// A web item's favicon falls back to ImageFetcherService, which uses the
+// system network context. A Tor window must never use it, because the request
+// would go straight to the item's host instead of through Tor. The Tor proxy is
+// not reachable in tests, so any request for the Tor item's favicon that
+// reaches the test server has bypassed Tor.
+IN_PROC_BROWSER_TEST_F(SidebarTorBrowserTest,
+                       TorWindowSidebarFaviconNotFetchedOutsideTor) {
+  BrowserWindowInterface* tor_browser =
+      TorProfileManager::SwitchToTorProfile(browser()->GetProfile());
+  ASSERT_TRUE(tor_browser);
+  Profile* tor_profile = tor_browser->GetProfile();
+  ASSERT_TRUE(tor_profile->IsTor());
+  ASSERT_TRUE(tor_browser->GetFeatures().sidebar_controller());
+
+  // Add a web item in the Tor window. Its favicon is not in the regular
+  // profile's favicon database, which is the normal case for a page that was
+  // only visited over Tor.
+  SidebarServiceFactory::GetForProfile(tor_profile)
+      ->AddItem(SidebarItem::Create(
+          embedded_test_server()->GetURL("tor-only.test", "/"), u"tor-only",
+          SidebarItem::Type::kTypeWeb, SidebarItem::BuiltInItemType::kNone,
+          false));
+
+  // Opening another Tor window builds a new SidebarModel, which fetches the
+  // favicon of every stored item again.
+  chrome::OpenEmptyWindow(tor_profile);
+
+  // Control: a web item added in the regular window still gets its favicon
+  // from the network. Waiting for it makes sure the favicon lookups had time
+  // to run.
+  SidebarServiceFactory::GetForProfile(browser()->GetProfile())
+      ->AddItem(SidebarItem::Create(
+          embedded_test_server()->GetURL("regular-only.test", "/"),
+          u"regular-only", SidebarItem::Type::kTypeWeb,
+          SidebarItem::BuiltInItemType::kNone, false));
+  WaitUntil(base::BindLambdaForTesting(
+      [&]() { return regular_item_favicon_requests_ > 0; }));
+
+  // Give any late request from the Tor windows a chance to arrive.
+  base::RunLoop run_loop;
+  base::SequencedTaskRunner::GetCurrentDefault()->PostDelayedTask(
+      FROM_HERE, run_loop.QuitClosure(), TestTimeouts::tiny_timeout());
+  run_loop.Run();
+
+  EXPECT_EQ(0, tor_item_favicon_requests_);
+}
+#endif  // BUILDFLAG(ENABLE_TOR)
 
 }  // namespace sidebar
