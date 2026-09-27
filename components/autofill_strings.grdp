@@ -1398,8 +1398,8 @@
   <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_TO_WALLET_DIALOG_SUBTITLE_NEW" desc="A description that appears beneath the Save title prompt asking users whether they want to save their data to Google Wallet. This sentence essentially defines Autofill in Growser. We prompt the user to save their information with Google Wallet with the promise that Growser can then help the user fill out forms across devices more quickly using their saved info.">
     Save your info in <ph name="GOOGLE_WALLET_TITLE_1">$1<ex>Google Wallet</ex></ph> and get things done faster, like filling forms across Google products. You can <ph name="MANAGE_INFO_LINK">$2<ex>manage your info</ex></ph> in <ph name="GOOGLE_WALLET_TITLE_2">$3<ex>Google Wallet</ex></ph> for <ph name="ACCOUNT">$4<ex>alexpark@gmail.com</ex></ph>.
   </message>
-  <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_TO_WALLET_DIALOG_SUBTITLE_BRANDED" desc="A description that appears beneath the Save title prompt asking users whether they want to save their data to Growser Wallet, used when Growser Wallet branding is already present in the title.">
-    Save your info and get things done faster, like filling forms across Growser products. You can <ph name="MANAGE_WALLET_SETTINGS_LINK">$1<ex>manage your Wallet settings</ex></ph> for <ph name="ACCOUNT">$2<ex>alexpark@gmail.com</ex></ph>.
+  <message name="IDS_AUTOFILL_AI_SAVE_ENTITY_TO_WALLET_DIALOG_SUBTITLE_BRANDED" desc="A description that appears beneath the Save title prompt asking users whether they want to save their data to Google Wallet, used when Google Wallet branding is already present in the title.">
+    Save your info and get things done faster, like filling forms across Google products. You can <ph name="MANAGE_WALLET_SETTINGS_LINK">$1<ex>manage your Wallet settings</ex></ph> for <ph name="ACCOUNT">$2<ex>alexpark@gmail.com</ex></ph>.
   </message>
   <!-- Prompt strings used on Desktop -->
   <if expr="not is_android">
@@ -1569,7 +1569,7 @@
     <message name="IDS_AUTOFILL_MANAGE_YOUR_INFO_LINK" desc="Link text prompting users to manage their autofill information.">
       manage your info
     </message>
-    <message name="IDS_AUTOFILL_MANAGE_YOUR_WALLET_SETTINGS_LINK" desc="Link text prompting users to manage their Growser Wallet settings.">
+    <message name="IDS_AUTOFILL_MANAGE_YOUR_WALLET_SETTINGS_LINK" desc="Link text prompting users to manage their Google Wallet settings.">
       manage your Wallet settings
     </message>
     <message name="IDS_AUTOFILL_AI_UPDATE_ENTITY_DIALOG_UPDATED_ATTRIBUTE_ACCESSIBLE_NAME" desc="Used in entity update dialogs, as the accessible names for rows with updated attributes">
@@ -2046,16 +2046,16 @@ You can remove this suggestion from Growser. Your original source won't be delet
     <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_SUMMARY" desc="A subheader for a settings section for AI powered autofill. 'Personal Intelligence' and 'Gemini' are brand names and should match standard branding guidelines across languages.">
       Powered by Personal Intelligence
     </message>
-    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_SUBPAGE_SUMMARY" desc="Description appearing under the 'Enhanced autofill ' section in settings. It directs users to manage how the underlying AI model retrieves and fills data. 'Gemini' is a proper Growser product name and must remain unlocalized.">
+    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_SUBPAGE_SUMMARY" desc="Description appearing under the 'Enhanced autofill ' section in settings. It directs users to manage how the underlying AI model retrieves and fills data. 'Gemini' is a proper Google product name and must remain unlocalized.">
       Manage finding and filling info with Gemini
     </message>
-    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_TOGGLE_TITLE" desc="Toggle label in Growser settings for enabling AI-driven autofill suggestions. 'Gemini' is a proper Growser product name and must remain unlocalized.">
+    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_TOGGLE_TITLE" desc="Toggle label in Growser settings for enabling AI-driven autofill suggestions. 'Gemini' is a proper Google product name and must remain unlocalized.">
       Find and fill with Gemini
     </message>
-    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_TOGGLE_SUMMARY" desc="Description text under the 'Find and fill with Gemini' setting explaining the functionality and data sources. 'Gmail', 'Photos', and 'Personal Intelligence' are proper Growser product and feature names that must adhere to standard branding guidelines.">
+    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_TOGGLE_SUMMARY" desc="Description text under the 'Find and fill with Gemini' setting explaining the functionality and data sources. 'Gmail', 'Photos', and 'Personal Intelligence' are proper Google product and feature names that must adhere to standard branding guidelines.">
       Autofill info from apps such as Gmail and Photos. Powered by Personal Intelligence.
     </message>
-    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_MANAGE_CONNECTED_APPS_TITLE" desc="Linkout text in Growser settings. It navigates the user to a Gemini page where they can manage which third-party or Growser ecosystem applications are linked to the enhanced autofill feature.">
+    <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_MANAGE_CONNECTED_APPS_TITLE" desc="Linkout text in Growser settings. It navigates the user to a Gemini page where they can manage which third-party or Google ecosystem applications are linked to the enhanced autofill feature.">
       Manage Connected Apps
     </message>
     <message name="IDS_AUTOFILL_PERSONAL_CONTEXT_SETTINGS_MANAGE_CONNECTED_APPS_SUMMARY" desc="Subtext or description beneath the 'Manage Connected Apps' entry point, explaining its purpose. 'Gemini' is a proper product name and must remain unlocalized.">
