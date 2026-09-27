@@ -1,5 +1,5 @@
 diff --git a/components/on_device_translation/features.cc b/components/on_device_translation/features.cc
-index 23eec92ff27539488ab686c9f135126a5620aacd..c66638ad0f092abad0716d86e19f2b39542a1b47 100644
+index 89c1ac1cc065a09bd6d24b9cb844d2a2ddbefb8f..5b6f2763ac36403c410b0377914135c8c3a7994b 100644
 --- a/components/on_device_translation/features.cc
 +++ b/components/on_device_translation/features.cc
 @@ -38,8 +38,8 @@ const base::FeatureParam<base::TimeDelta> kTranslationAPIServiceIdleTimeout{

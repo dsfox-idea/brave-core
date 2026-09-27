@@ -1,5 +1,5 @@
 diff --git a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
-index 1216ddd7522144cca584f343e03865d3f7f06b88..d757999918f06aa5870d56d5c5543463d8f3a491 100644
+index 4d5c202aa7cf48a50e6a109d3dd93e4dd1ce51bc..9a97b87799c8a48e3c39884fca9b95b217a944df 100644
 --- a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
 +++ b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
 @@ -226,7 +226,7 @@ PlatformType GetCurrentPlatformType() {

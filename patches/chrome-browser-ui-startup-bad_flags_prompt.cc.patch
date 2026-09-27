@@ -1,16 +1,16 @@
 diff --git a/chrome/browser/ui/startup/bad_flags_prompt.cc b/chrome/browser/ui/startup/bad_flags_prompt.cc
-index ec4de18dce2482604b684a33f4ebc9d6a03b667e..5d415c3df90e8e647e2548c6f2a46ded656aba2d 100644
+index 75f26af3ddce3d29e84117ed8236cd21a4e2b2d6..3dbe3d3338596feec68989e69dc008317dac928b 100644
 --- a/chrome/browser/ui/startup/bad_flags_prompt.cc
 +++ b/chrome/browser/ui/startup/bad_flags_prompt.cc
-@@ -15,6 +15,7 @@
+@@ -16,6 +16,7 @@
  #include "base/files/file_path.h"
  #include "base/strings/utf_string_conversions.h"
  #include "base/trace_event/memory_dump_manager.h"
 +#include "brave/components/growser_snap/snap.h"  // Growser-256
  #include "build/build_config.h"
  #include "cc/base/switches.h"
- #include "chrome/browser/infobars/simple_alert_infobar_creator.h"
-@@ -266,6 +267,9 @@ void ShowBadFlagsPrompt(content::WebContents* web_contents) {
+ #include "chrome/browser/browser_process.h"
+@@ -285,6 +286,9 @@ void ShowBadFlagsPrompt(content::WebContents* web_contents) {
  // for flags which are not available in about:flags.
  #if !BUILDFLAG(IS_ANDROID)
    for (const char* flag : kBadFlags) {
