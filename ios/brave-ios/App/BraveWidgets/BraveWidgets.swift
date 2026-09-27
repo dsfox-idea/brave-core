@@ -18,6 +18,8 @@ struct BraveWidgets: WidgetBundle {
     LockScreenShortcutWidget()
     LockScreenFavoriteWidget()
     BraveSearchControlWidget()
-    AskBraveControlWidget()
+    // Growser-292: no AskBraveControlWidget - Ask Brave opened Brave Search, the
+    // router has nothing to open for it, and a Control Center button that does
+    // nothing is worse than none.
   }
 }
