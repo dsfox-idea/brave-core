@@ -6,10 +6,12 @@
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "build/build_config.h"
 
-#if BUILDFLAG(ENABLE_REQUEST_OTR)
-
 #include "chrome/browser/history/history_tab_helper.h"
 
+// Growser-335: only the includes are guarded. Since 155 the recipe
+// rewrite/chrome/browser/history/history_tab_helper.cc.yaml calls the helper
+// below unconditionally, so it has to exist with request_otr compiled out too.
+#if BUILDFLAG(ENABLE_REQUEST_OTR)
 #include "brave/components/request_otr/browser/request_otr_storage_tab_helper.h"
 #include "chrome/browser/profiles/profile.h"
 #include "components/keyed_service/content/browser_context_keyed_service_factory.h"
@@ -19,6 +21,7 @@
 #if BUILDFLAG(IS_ANDROID)
 #include "chrome/browser/ui/android/tab_model/tab_model.h"
 #endif
+#endif  // BUILDFLAG(ENABLE_REQUEST_OTR)
 
 namespace {
 
@@ -36,7 +39,5 @@ bool BraveTabRequestedOffTheRecord(content::WebContents* web_contents) {
 }
 
 }  // namespace
-
-#endif
 
 #include <chrome/browser/history/history_tab_helper.cc>
