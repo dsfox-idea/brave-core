@@ -3678,3 +3678,9 @@
 "quickview.confirmation.alert.turnOff.button.title" = "Отключить";
 "settings.sponsoredAdsEnabledDescription" = "Поддержите независимый интернет, в котором на первом месте пользователь, включив спонсорскую рекламу Growser. Эффективность рекламы измеряется конфиденциально, без вашей идентификации. [Подробнее](%@)";
 "settings.sponsoredAdsEnabledTitle" = "Включить спонсорскую рекламу";
+
+/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
+"ntp.topsites" = "Сайты на главной";
+"ntp.topsitesTypeFavorites" = "Избранное";
+"ntp.topsitesTypeMostVisited" = "Часто посещаемые";
+"ntp.topsitesTypeNone" = "Не показывать";
