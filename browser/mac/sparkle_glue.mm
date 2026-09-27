@@ -491,7 +491,8 @@ std::string GetDescriptionFromAppcastItem(id item) {
 
   // growser (#35): auto-update appcast feed is hosted on our site
   // (https://growser.org/sparkle/<channel>/appcast.xml, GitHub Pages on
-  // growser.org). Bundles are served from dl.growser.org (Cloudflare R2).
+  // growser.org). Bundles are served from growser.org/mac/ (Cloudflare R2
+  // through the backend worker, growser#264); dl.growser.org never existed.
   // The --update-feed-url switch still overrides this for testing.
   std::string channel = GetUpdateChannel();
   if (channel.empty())

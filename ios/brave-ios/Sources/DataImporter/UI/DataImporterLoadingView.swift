@@ -13,7 +13,8 @@ struct DataImporterLoadingView: View {
     VStack(spacing: 32.0) {
       ProgressView()
         .progressViewStyle(BraveProgressStyleCircular(thickness: 5, speed: 3.0))
-        .backgroundStyle(Color(braveSystemName: .blurple20))
+        // Growser-325: the accent family is primary, which is our green.
+        .backgroundStyle(Color(braveSystemName: .primary20))
         .foregroundStyle(Color(braveSystemName: .iconInteractive))
         .frame(width: 40, height: 40)
 

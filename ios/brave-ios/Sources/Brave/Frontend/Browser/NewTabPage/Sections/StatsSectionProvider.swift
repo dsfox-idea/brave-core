@@ -157,7 +157,8 @@ struct StatsNTPWidget: View {
           }
           LabeledContent {
             Text(stats.dataSaved)
-              .foregroundStyle(Color(braveSystemName: .primitiveBlurple70))
+              // Growser-325: the accent family is primary, which is our green.
+              .foregroundStyle(Color(braveSystemName: .primitivePrimary70))
           } label: {
             Text(Strings.Shields.dataSavedStat)
           }

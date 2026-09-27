@@ -44,7 +44,8 @@ extension Strings {
       "focusOnboarding.p3aScreenDescription",
       tableName: "FocusOnboarding",
       bundle: .module,
-      value: "Let us know which features you’re enjoying the most.",
+      // Growser-323: the step only asks about crash reports now; P3A is out.
+      value: "Help us find and fix crashes.",
       comment: "The subtitle of the screen that asks user to enable privacy preserving analytics."
     )
 
