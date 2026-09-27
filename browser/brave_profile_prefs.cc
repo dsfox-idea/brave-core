@@ -221,9 +221,9 @@ void OverrideDefaultPrefValues(user_prefs::PrefRegistrySyncable* registry) {
   // Since 155 Brave uses Chromium's visibility pref, whose default is
   // kOnlyShowOnNtp; ours used to be set on Brave's own pref, now gone.
   registry->SetDefaultPrefValue(
-      bookmarks::prefs::kBookmarkBarVisibilityState,
-      base::Value(
-          static_cast<int>(bookmarks::BookmarkBarVisibilityState::kAlwaysHide)));
+      ::bookmarks::prefs::kBookmarkBarVisibilityState,
+      base::Value(static_cast<int>(
+          ::bookmarks::BookmarkBarVisibilityState::kAlwaysHide)));
 
   // growser: the sidebar opens on the left. Chromium registers this as
   // !IsRTL(), i.e. on the right for a left-to-right locale
