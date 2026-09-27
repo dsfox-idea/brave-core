@@ -42,18 +42,17 @@ class BraveBrowserPrefsTest : public testing::Test {
 };
 
 // When the deprecated `kAlwaysShowBookmarkBarOnNTP` was never set by the user,
-// the migration must leave the upstream `kBookmarkBarVisibilityState` at its
-// default (`kOnlyShowOnNtp`).
-TEST_F(BraveBrowserPrefsTest, BookmarkBarState_Untouched_KeepsUpstreamDefault) {
+// the migration must leave `kBookmarkBarVisibilityState` at its default.
+// Growser-28: that default is ours, kAlwaysHide - upstream's is kOnlyShowOnNtp.
+TEST_F(BraveBrowserPrefsTest, BookmarkBarState_Untouched_KeepsDefault) {
   ASSERT_TRUE(
       prefs_.FindPreference(bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP)
           ->IsDefaultValue());
 
   MigrateObsoletePrefs();
 
-  EXPECT_EQ(
-      prefs_.GetInteger(bookmarks::prefs::kBookmarkBarVisibilityState),
-      static_cast<int>(bookmarks::BookmarkBarVisibilityState::kOnlyShowOnNtp));
+  EXPECT_EQ(prefs_.GetInteger(bookmarks::prefs::kBookmarkBarVisibilityState),
+            static_cast<int>(bookmarks::BookmarkBarVisibilityState::kAlwaysHide));
   EXPECT_TRUE(
       prefs_.FindPreference(bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP)
           ->IsDefaultValue());

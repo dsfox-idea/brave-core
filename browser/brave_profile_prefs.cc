@@ -67,6 +67,7 @@
 #include "chrome/browser/prefs/session_startup_pref.h"
 #include "chrome/browser/preloading/preloading_prefs.h"
 #include "chrome/common/pref_names.h"
+#include "components/bookmarks/common/bookmark_bar_visibility_state.h"  // Growser-28
 #include "components/bookmarks/common/bookmark_pref_names.h"
 #include "components/content_settings/core/common/pref_names.h"
 #include "components/embedder_support/pref_names.h"
@@ -214,6 +215,15 @@ void OverrideDefaultPrefValues(user_prefs::PrefRegistrySyncable* registry) {
   registry->SetDefaultPrefValue(
       bookmarks_webui::prefs::kBookmarksViewType,
       base::Value(static_cast<int>(side_panel::mojom::ViewType::kCompact)));
+
+  // Growser-28: the bookmark bar is hidden everywhere by default, the new tab
+  // page included - that row is what makes the toolbar look double height.
+  // Since 155 Brave uses Chromium's visibility pref, whose default is
+  // kOnlyShowOnNtp; ours used to be set on Brave's own pref, now gone.
+  registry->SetDefaultPrefValue(
+      bookmarks::prefs::kBookmarkBarVisibilityState,
+      base::Value(
+          static_cast<int>(bookmarks::BookmarkBarVisibilityState::kAlwaysHide)));
 
   // growser: the sidebar opens on the left. Chromium registers this as
   // !IsRTL(), i.e. on the right for a left-to-right locale
