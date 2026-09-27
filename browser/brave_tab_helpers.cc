@@ -6,6 +6,7 @@
 #include "brave/browser/brave_tab_helpers.h"
 
 #include "brave/browser/new_tab/board_hosts.h"
+#include "chrome/browser/profiles/profile.h"  // Growser-90
 #include "components/favicon/content/content_favicon_driver.h"
 
 #include <memory>
