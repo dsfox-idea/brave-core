@@ -11994,8 +11994,8 @@ other {Приватное (#)}
 <translation id="8376752431516546391">Боковая панель Google Поиска</translation>
 <translation id="2360792123962658445">Чтобы перейти к обзору страницы, связанным поисковым запросам и другим полезным сведениям о ней, нажмите на значок боковой панели Google Поиска на панели инструментов</translation>
 <translation id="870536819717176711">Когда вы делитесь с Gemini текущей вкладкой, ее URL и все содержимое, включая медиаконтент, отправляются в Google.</translation>
-<translation id="1130866111814048607">Когда вы делитесь вкладками, их содержимое, медиаконтент и URL отправляются в Growser и могут проверяться на соответствие требованиям безопасности.</translation>
-<translation id="3570112771874223231">URL и содержимое страниц, которые Gemini использует при выполнении задач, отправляются в Growser и могут проверяться на соответствие требованиям безопасности.</translation>
+<translation id="1130866111814048607">Когда вы делитесь вкладками, их содержимое, медиаконтент и URL отправляются в Google и могут проверяться на соответствие требованиям безопасности.</translation>
+<translation id="3570112771874223231">URL и содержимое страниц, которые Gemini использует при выполнении задач, отправляются в Google и могут проверяться на соответствие требованиям безопасности.</translation>
 <translation id="7448460315754729743">Пользуйтесь лучшим ИИ от Google. Для удобства закрепите Gemini на панели инструментов или открывайте его в меню Growser.</translation>
 <translation id="96535553604365597">Сообщить о проблеме с Google Cast</translation>
 <translation id="8492960370534528742">Отзыв о Google Cast</translation>
@@ -12006,7 +12006,7 @@ other {Приватное (#)}
     <ph name="BEGIN_LINK"/>
     приложении Google Home<ph name="END_LINK"/>?</translation>
 <translation id="2984923316661218534">Используйте ключи доступа на этом устройстве с помощью Google Менеджера паролей</translation>
-<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Подписка Growser</translation>
+<translation id="7105387152460258846"><ph name="PROFILE_NAME"/>. Подписка Google</translation>
 <translation id="6710172959248731469">Настройки сервисов Google</translation>
 <translation id="6348655410494610085">Войдите в аккаунт Google или создайте новый.</translation>
 <translation id="2375947780110007467">Google использует содержимое и URL вкладок, которыми вы делитесь. В новых чатах передаётся текущая вкладка. Эту настройку можно изменить в любой момент.</translation>
@@ -12171,7 +12171,7 @@ other {Приватное (#)}
 <translation id="2934862573358659343">Шифровать пароли в аккаунте Growser с помощью механизма Google по умолчанию</translation>
 <translation id="6877405010867703324">Выбранные данные удалены из Growser и с синхронизированных устройств. История также может храниться в вашем аккаунте Growser, например в виде поисковых запросов и сведений из сервисов Google. Их можно найти на сайте <ph name="BEGIN_LINK"/>myactivity.google.com<ph name="END_LINK"/>.</translation>
 <translation id="1649234713894562345">Growser создан на основе Growser и другого <ph name="BEGIN_HIGHLIGHT"/>ПО с открытым исходным кодом<ph name="END_HIGHLIGHT"/>.</translation>
-<translation id="850632091665381275">Подписка Growser</translation>
+<translation id="850632091665381275">Подписка Google</translation>
 <translation id="2994495699095559601">Чтобы ответы были точнее, Google использует содержимое и URL общих вкладок. В новых чатах текущая вкладка становится общей. Эту настройку можно изменить в любой момент.</translation>
 <translation id="5300667117276823109">Ни ваши разговоры с Gemini, ни <ph name="BEGIN_LINK_WORKSPACE_DATA_PRIVACY"/>данные Google Workspace<ph name="END_LINK_WORKSPACE_DATA_PRIVACY"/> не проверяются и не используются для улучшения генеративных моделей ИИ. Gemini — это ИИ, и он может ошибаться.</translation>
 <translation id="7780716468751073938">Ни ваши разговоры с Gemini, ни <ph name="BEGIN_LINK_WORKSPACE_DATA_PRIVACY"/>данные Google Workspace<ph name="END_LINK_WORKSPACE_DATA_PRIVACY"/> не проверяются и не используются для улучшения генеративных моделей ИИ. Gemini — это ИИ, и он может ошибаться. Некоторое содержимое подходит не всем.</translation>
@@ -12193,4 +12193,10 @@ other {Приватное (#)}
 <translation id="9149350223856106714">Спросить Google об этой странице</translation>
 <translation id="1129631262126951963">Спросить Google об этом изображении</translation>
 <translation id="4378647510691230047">Спросить Google о “<ph name="SEARCH_TERMS"/>”</translation>
+<translation id="46102579836129277">Выполнить поиск на странице с помощью Google</translation>
+<translation id="5135634659232860135">Найти это изображение в Google</translation>
+<translation id="4592634244097223647">Спросить Google об этом изображении</translation>
+<translation id="6112197885362646874">Задать вопрос Google по теме "<ph name="SEARCH_TERMS"/>"</translation>
+<translation id="4165169774507632897">Войти в Growser</translation>
+<translation id="1406812885827747674">Разрешить в этот раз</translation>
 </translationbundle>
