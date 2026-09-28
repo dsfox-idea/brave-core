@@ -1,0 +1,23 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-337: the Android menu button is announced as Growser.
+
+      IDS_ACCESSIBILITY_TOOLBAR_BTN_MENU is the content description (and the
+      tooltip) of every menu button - the toolbar, the bottom bar, custom
+      tabs, the tab switcher - and Chromium writes "Google Chrome" into it
+      literally. brave-core keeps no copy of this .grd, so none of our
+      rebrand passes ever read it, and TalkBack said "Customize and control
+      Google Chrome" in our browser.
+
+      Changing the English moves the grit id, so the 81 translations filed
+      under the old one no longer apply; Russian gets its own entry from the
+      companion recipe on android_ui_strings_ru.xtb, the other locales fall
+      back to this English.
+    regex:
+      pattern: 'Customize and control Google Chrome'
+      replace: 'Customize and control Growser'

@@ -1,0 +1,13 @@
+diff --git a/ui/android/java/strings/android_ui_strings.grd b/ui/android/java/strings/android_ui_strings.grd
+index e90ebd1df6900c8d0518e8d3e25dfc6151a5592e..c2b004700a88786f01053ac3dcf3e7577055464a 100644
+--- a/ui/android/java/strings/android_ui_strings.grd
++++ b/ui/android/java/strings/android_ui_strings.grd
+@@ -209,7 +209,7 @@
+ 
+       <!-- Button Menu -->
+       <message name="IDS_ACCESSIBILITY_TOOLBAR_BTN_MENU" desc="Content description for the settings menu button.">
+-        Customize and control Google Chrome
++        Customize and control Growser
+       </message>
+       <message name="IDS_ACCESSIBILITY_LIST_MENU_BUTTON" desc="Content description for the button that shows option menu for a list item.">
+         <ph name="NAME_OF_LIST_ITEM">%1$s<ex>Movie Title</ex></ph> Options

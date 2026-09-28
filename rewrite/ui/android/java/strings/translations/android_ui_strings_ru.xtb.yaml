@@ -1,0 +1,16 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-337: Russian for the menu button's new English, "Customize and
+      control Growser" (id 7222463235177542287, the grit fingerprint of that
+      text). The recipe on android_ui_strings.grd moved the id away from the
+      old "Google Chrome" entry, which stays for grit to ignore.
+    regex:
+      pattern: '<translation id="4053720452172726777">Настройка и управление Google Chrome</translation>'
+      replace: |-
+        <translation id="4053720452172726777">Настройка и управление Google Chrome</translation>
+        <translation id="7222463235177542287">Настройка и управление Growser</translation>
