@@ -52,7 +52,9 @@ class AppReviewManagerTests: XCTestCase {
       AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .revisedCrossPlatform)
     )
 
-    XCTAssertFalse(AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .newsRatingCard))
+    // Growser-340: .newsRatingCard has no sub-criteria, so the VPN one cannot
+    // decide it - the main criteria alone pass it, as upstream asserts.
+    XCTAssert(AppReviewManager.shared.checkLogicCriteriaSatisfied(for: .newsRatingCard))
 
     // Number Of Bookmarks
     resetAppReviewConstants()
