@@ -166,7 +166,15 @@ final class ScriptExecutionTests: XCTestCase {
     XCTAssertNotNil(controlResult?.hardwareConcurrency)
 
     // Ensure farbled and unfarbled results are not the same
-    XCTAssertNotEqual(farblingResult?.voiceNames, controlResult?.voiceNames)
+    // Growser-340: a fake voice is copied from a real one, so with no voices
+    // installed (the iOS 26.5 simulator's voice database does not load) both
+    // lists are rightly empty. That the farbled page reported at all is the
+    // regression check: getVoices() used to throw there and hang this test.
+    if controlResult?.voiceNames.isEmpty == false {
+      XCTAssertNotEqual(farblingResult?.voiceNames, controlResult?.voiceNames)
+    } else {
+      XCTAssertEqual(farblingResult?.voiceNames, [])
+    }
     if BraveCore.FeatureList.kBraveIOSEnableFarblingPlugins.enabled {
       XCTAssertNotEqual(farblingResult?.pluginNames, controlResult?.pluginNames)
     }

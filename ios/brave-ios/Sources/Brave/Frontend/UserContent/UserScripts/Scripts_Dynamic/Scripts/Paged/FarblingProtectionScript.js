@@ -180,6 +180,13 @@ window.__firefox__.execute(function($) {
       getVoicesPrototype.getVoices = function () {
         const voices = Reflect.apply(getVoices, this, arguments)
 
+        // Growser-340: an empty list (voices not loaded yet, or none installed)
+        // has no voice to copy - makeFakeVoiceFromVoice(undefined) threw a
+        // TypeError into the page's own getVoices() call. Wait for real voices.
+        if (voices.length === 0) {
+          return voices
+        }
+
         if (fakeVoice === undefined) {
           const randomVoiceIndex = Math.round(randomVoiceIndexScale * voices.length)
           originalVoice = voices[randomVoiceIndex]
