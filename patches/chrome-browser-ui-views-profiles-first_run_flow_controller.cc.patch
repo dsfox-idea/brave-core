@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/views/profiles/first_run_flow_controller.cc b/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
-index deb8fb0dc354640e02cccf71f4423fb01108183a..562b11013dd28f2195b55fbd4ec582d4bb26fdfe 100644
+index e6a815e2c00d48131a0b3b24c51c1830dc67afe4..8e9af99d76e15e61abe6a5bed10a2defc4bc7947 100644
 --- a/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
 +++ b/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
 @@ -1031,23 +1031,6 @@ void FirstRunFlowController::Init() {

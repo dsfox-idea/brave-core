@@ -393,6 +393,17 @@ const update = () => {
     }
   }
 
+  // Growser-335: pnpm hard-links node_modules files to its content store, and
+  // files with the same content share one inode - primitive_primary_98 and _99
+  // did, with Brave's blurple, purple, Tor and private-window sets. Writing in
+  // place rewrote all of them and the store itself, so the last write won.
+  // Unlink first, and only the file meant gets new content.
+  const writeOwnCopy = (file, data) => {
+    if (fs.existsSync(file)) {
+      fs.unlinkSync(file)
+    }
+    fs.writeFileSync(file, data)
+  }
   // growser: the Brave lion also lives in the Leo design system. Its glyphs are
   // in node_modules/@brave/leo/icons-skia, which is outside git and regenerated
   // by `pnpm install`, so they cannot simply be committed over. We overwrite
@@ -421,7 +432,7 @@ const update = () => {
         || util.calculateFileChecksum(sourceFile)
           !== util.calculateFileChecksum(destinationFile)
       ) {
-        fs.copySync(sourceFile, destinationFile)
+        writeOwnCopy(destinationFile, fs.readFileSync(sourceFile))
         console.log(sourceFile + ' copied to ' + destinationFile)
       }
     }
@@ -489,7 +500,7 @@ const update = () => {
         )
       }
       if (after !== before) {
-        fs.writeFileSync(tokenFile, after)
+        writeOwnCopy(tokenFile, after)
         console.log('primary ramp applied to ' + tokenFile)
       }
     }
@@ -522,7 +533,7 @@ const update = () => {
           }
         }
         if (touched) {
-          fs.writeFileSync(file, JSON.stringify(colorSet, null, 2) + '\n')
+          writeOwnCopy(file, JSON.stringify(colorSet, null, 2) + '\n')
           changed++
         }
       }
@@ -579,7 +590,7 @@ const update = () => {
         )
       }
       if (after !== before) {
-        fs.writeFileSync(tokenFile, after)
+        writeOwnCopy(tokenFile, after)
         console.log('radius ceiling applied to ' + tokenFile)
       }
     }

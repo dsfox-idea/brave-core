@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">Help improve Growser\u2019s product stability by automatically sending diagnostic reports when the Growser Browser crashes or freezes.</translation>
 <translation id="7977176350719484850">Est. Data\nSaved</translation>
 <translation id="9008534313521214777">Est. Time\nSaved</translation>
+<translation id="5668852698659986622">Enable Sponsored Ads</translation>
+<translation id="431194936581466649">Help support Growser's mission to build an independent, user-first Web with Sponsored Ads. We measure ad performance privately, without identifying you.</translation>
 <translation id="8347743943525229984">Allow Growser surveys</translation>
 <translation id="6022939994702081659">Allows Growser to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns.</translation>
 <translation id="7746496306508543965">Learn more about Growser surveys</translation>
@@ -201,7 +203,6 @@
 <translation id="2903783737778379345">Don't allow legacy Google Sign-In via third-party cookies</translation>
 <translation id="6880817299303842099">Allowed to use third-party cookies for legacy Google Sign-In</translation>
 <translation id="181905442828471321">Growser shields global defaults</translation>
-<translation id="1234040926595014124">Growser shields global defaults</translation>
 <translation id="2675679258824361492">Other privacy settings</translation>
 <translation id="8026334261755873520">Clear browsing data</translation>
 <translation id="1690924763769415936">Background play</translation>
@@ -251,7 +252,6 @@
 <translation id="6213254277250932867">I have a 12-word recovery phrase</translation>
 <translation id="4225265925807365011">I have a 24-word recovery phrase</translation>
 <translation id="3570367516044491911">Set as default browser</translation>
-<translation id="6800338374677644736">Set as default browser</translation>
 <translation id="1545749641540134597">Scan QR Code</translation>
 <translation id="5317781812114905957">Instructions</translation>
 <translation id="8515319483805157233">To search by QR code, align the QR code in the centre of frame.</translation>
@@ -283,7 +283,6 @@
 <translation id="5582839680698949063">Main menu</translation>
 <translation id="7002271985859760052">Page actions</translation>
 <translation id="7104487676473617844">The following items will only appear in the menu when supported by the currently open webpage.</translation>
-<translation id="4159764849281393303">WebApp</translation>
 <translation id="8038539967102225446">Growser Ads are here!</translation>
 <translation id="222883304157347087">(this device)</translation>
 <translation id="4157741509680155021">DEVICES ON SYNC CHAIN</translation>
@@ -724,6 +723,8 @@ If you don't accept this request, VPN will not reconnect and your Internet conne
 <translation id="1634828734222219955">Total</translation>
 <translation id="7995708795274219641">Amount + Gas</translation>
 <translation id="2186011161688824046">Amount + fee</translation>
+<translation id="1118876217803190221">Insufficient balance</translation>
+<translation id="275990379543116961">Insufficient funds for gas</translation>
 <translation id="1950052789869821983">Transaction</translation>
 <translation id="2304783958703511257">Advanced settings</translation>
 <translation id="4220062530885628403">Nonce</translation>
@@ -1200,6 +1201,9 @@ If you don't accept this request, VPN will not reconnect and your Internet conne
 <translation id="1850594249589065646">Location precision</translation>
 <translation id="2403474027143565107">Precise</translation>
 <translation id="4042597221652780603">Approximate</translation>
+<translation id="1234040926595014124">Growser shields global defaults</translation>
+<translation id="6800338374677644736">Set as default browser</translation>
+<translation id="4159764849281393303">WebApp</translation>
 <translation id="7759809451544302770">Optional</translation>
 <translation id="4935400164159327304">Let us know how we can improve Growser.</translation>
 <translation id="8300751939969131609">Turn on Growser News and never miss a story</translation>

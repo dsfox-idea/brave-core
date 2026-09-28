@@ -864,9 +864,11 @@
 <translation id="646023614746251785">Xác nhận hoán đổi</translation>
 <translation id="6264944956989873014">Xác nhận chuyển qua cầu nối</translation>
 <translation id="7067917728851842589">Xác nhận gửi</translation>
+<translation id="2841837950101800123">Nhà cung cấp</translation>
 <translation id="1114725160772317155">Trạng thái nhà cung cấp</translation>
 <translation id="2351357639951873714">Xác nhận bảo vệ</translation>
 <translation id="7480044382160806610">Xác nhận hủy bảo vệ</translation>
+<translation id="6830542010524256586">Xác nhận di chuyển</translation>
 <translation id="8332923694292360653">Chi tiêu</translation>
 <translation id="3735740477244556633">Sắp xếp theo</translation>
 <translation id="6484605214219822434">Đánh giá cầu nối</translation>
@@ -1405,8 +1407,10 @@
 <translation id="5503843345634715425">Đã hoàn lại tiền</translation>
 <translation id="1778601041100951971">Đang bảo vệ <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Đang hủy bảo vệ <ph name="AMOUNT"/></translation>
+<translation id="6022412719565214018">Đang di chuyển <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> đã được bảo vệ</translation>
 <translation id="3860973324426281816"><ph name="AMOUNT"/> đã được hủy bảo vệ</translation>
+<translation id="7338153249873692854"><ph name="AMOUNT"/> đã được di chuyển</translation>
 <translation id="6622332794280225311">{PENDING_TRANSACTIONS, plural,
       =1 {{PENDING_TRANSACTIONS} giao dịch đang chờ xử lý.}
       other {{PENDING_TRANSACTIONS} giao dịch đang chờ xử lý.}
@@ -1845,14 +1849,18 @@
 <translation id="9086302186042011942">Đang đồng bộ hóa</translation>
 <translation id="99991973626409495">Kiểm tra khâu bảo vệ</translation>
 <translation id="6779429520470417361">Kiểm tra hủy bảo vệ</translation>
+<translation id="7861093868637278059">Xem lại di chuyển</translation>
 <translation id="3114681061018999547">Đang bảo vệ</translation>
 <translation id="1564172583156967455">Đang hủy bảo vệ</translation>
+<translation id="7040674372746105444">Đang di chuyển</translation>
 <translation id="8897189056319316783">Bảo vệ ZEC</translation>
 <translation id="508249542337194541">Hủy bảo vệ ZEC</translation>
+<translation id="3242332985109374549">Di chuyển ZEC</translation>
 <translation id="3382275793825152362">Bảo vệ tài sản</translation>
 <translation id="617149752238892649">Bỏ bảo vệ tài sản</translation>
 <translation id="8631765320256788981">Bạn đang chuyển tài sản từ tài khoản minh bạch sang tài khoản được bảo vệ của mình.</translation>
 <translation id="3860364671495430495">Bạn đang chuyển tài sản từ tài khoản được bảo vệ sang tài khoản minh bạch của mình.</translation>
+<translation id="9664108035970394">Bạn đang chuyển tài sản từ tài khoản kế thừa được bảo vệ sang tài khoản được bảo vệ của mình.</translation>
 <translation id="7144878232160441200">Thử lại</translation>
 <translation id="4750109510113597688">Giao dịch này có thể bao gồm phí tạo tài khoản</translation>
 <translation id="6201709949885884577">Cần phải nhập mật khẩu để thực hiện hành động này.</translation>
@@ -2209,7 +2217,7 @@
 <translation id="8151638057146502721">Cấu hình</translation>
 <translation id="999273441077650169">Mô hình thay đổi động để sử dụng mô hình tốt nhất cho tác vụ này.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="3852808100039989429">Xin chào, tôi là Leo. Tôi là một trợ lý AI của Growser. Tôi được hỗ trợ bởi Qwen VL 30B, một mô hình được tạo ra bởi Alibaba Cloud để hoạt động hiệu quả và áp dụng cho nhiều trường hợp sử dụng. Qwen được Growser lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
-<translation id="784931275560506522">Xin chào, mình là Leo. Mình là trợ lý AI của Growser. Mình được vận hành bởi GLM-5.1, một mô hình do Zhipu AI phát triển nhằm mang lại hiệu suất cao và phù hợp với nhiều trường hợp sử dụng. GLM-5.1 được NEAR lưu trữ thông qua cơ sở hạ tầng bảo mật riêng tư có thể xác minh của họ.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
+<translation id="8659225822055186905">Xin chào, tôi là Leo. Tôi là một trợ lý AI của Growser. Tôi được hỗ trợ bởi GLM-5.3 Flash, một mô hình được tạo ra bởi Zhipu AI để hoạt động hiệu quả và áp dụng cho nhiều trường hợp sử dụng. GLM-5.3 Flash được NEAR lưu trữ thông qua cơ sở hạ tầng bảo mật riêng của họ có thể xác minh.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="8932568551552504373">Xin chào, tôi là Leo. Tôi là trợ lý AI của Growser. Tôi được cung cấp bởi Claude Instant, một mô hình do Anthropic phát triển để xử lý hội thoại và văn bản. Claude Instant được Growser lưu trữ thông qua cơ sở hạ tầng bảo mật riêng.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="3789772321824682783">Xin chào, tôi là Leo. Tôi là một trợ lý AI của Growser. Tôi được hỗ trợ bởi Claude Haiku, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Haiku được Growser lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="1778885220602472158">Xin chào, tôi là Leo. Tôi là một trợ lý AI của Growser. Tôi được hỗ trợ bởi Claude Sonnet, một mô hình được tạo ra bởi Anthropic để hỗ trợ các công việc đàm thoại và xử lý văn bản. Claude Sonnet được Growser lưu trữ thông qua cơ sở hạ tầng bảo mật của chúng tôi.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
@@ -2331,6 +2339,8 @@
 <translation id="4370698775470316661">Cuộc trò chuyện này quá dài và không thể tiếp tục. Có thể có sẵn các mô hình khác mà Leo có khả năng duy trì độ chính xác cho các cuộc trò chuyện dài hơn.</translation>
 <translation id="4744144453035015075">Tìm kiếm trên web</translation>
 <translation id="8548351747582087191">Tìm kiếm trên web với địa chỉ <ph name="SEARCH_TERMS"/>.</translation>
+<translation id="4395536726196773278">Đang tìm kiếm trong các thẻ đang mở của bạn cho "<ph name="QUERY"/>"…</translation>
+<translation id="4724926708866789382">Không có thẻ đang mở nào khớp với "<ph name="QUERY"/>".</translation>
 <translation id="7307396647043599949"><ph name="COUNT"/> khác…</translation>
 <translation id="8103700533980268469">Đóng thông báo này</translation>
 <translation id="3417835166382867856">Tìm thẻ</translation>
@@ -2378,6 +2388,8 @@
 <translation id="443008484043213881">Công cụ</translation>
 <translation id="4343623396828510727">Các trang web này cung cấp công cụ mà Leo có thể sử dụng để gửi dữ liệu đến và từ trang web này. Không đính kèm hoặc phê duyệt các công cụ này nếu cuộc trò chuyện này chứa dữ liệu mà bạn không muốn trang web này thấy.</translation>
 <translation id="5021823940147712387">Xóa công cụ</translation>
+<translation id="8712279871321308580">Công cụ trang web có sẵn</translation>
+<translation id="3690996226559605619">Công cụ có sẵn (<ph name="TOOL_COUNT"/>)</translation>
 <translation id="318819763888864209">Tất cả các đăng ký đều được tự động gia hạn nhưng có thể bị hủy bất kỳ lúc nào trước khi gia hạn.</translation>
 <translation id="5091223967610958">Chia sẻ tên máy chủ của trang bạn đang truy cập (<ph name="HOST_NAME"/>) để giúp chúng tôi cải thiện Leo.</translation>
 <translation id="8732450785281947197">Công cụ Leo AI</translation>
@@ -2416,6 +2428,7 @@
 <translation id="6397861830483632092">Mở các tab…</translation>
 <translation id="802080272588201037">Dấu trang…</translation>
 <translation id="2716127283451902393">Lịch sử…</translation>
+<translation id="8888171900079152025">Thư mục không gian làm việc</translation>
 <translation id="49269513399674318">Sử dụng micrô</translation>
 <translation id="3895031624234442305">Mô hình tùy chỉnh</translation>
 <translation id="4572010449071015143">Bắt đầu cuộc trò chuyện mới</translation>
@@ -2449,8 +2462,12 @@
 <translation id="3397808797783614750">Kích hoạt AI để tự động duyệt web thay cho bạn có thể dẫn đến hậu quả không mong muốn và gây hại cho quyền riêng tư, tài chính và giao tiếp trực tuyến của bạn. <ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="4522025297473237294">Cảnh báo bảo mật</translation>
 <translation id="6077070599873946984">Growser AI cần quyền của bạn cho: <ph name="TOOL_LABEL"/></translation>
+<translation id="908175046303050847">Growser AI muốn thực thi **<ph name="TOOL_NAME"/>** trên **<ph name="SITE_ORIGIN"/>**</translation>
 <translation id="4163837693685963037">Hoạt động này được phát hiện là có khả năng không phù hợp với yêu cầu của bạn:</translation>
+<translation id="5137568953923142260">Cho phép</translation>
 <translation id="3927932062596804919">Từ chối</translation>
+<translation id="4191349941249805855">Hiển thị đối số công cụ</translation>
+<translation id="7237059533128264835">Ẩn đối số công cụ</translation>
 <translation id="4569155249847375786">Đã xác minh</translation>
 <translation id="8200772114523450471">Tiếp tục</translation>
 <translation id="7607002721634913082">Tạm dừng</translation>
@@ -2732,6 +2749,7 @@
 <translation id="701087249209337256">Mang theo nội dung trình duyệt cũ của bạn</translation>
 <translation id="142389341645668510">Tùy chỉnh Growser</translation>
 <translation id="112005628409144325">Cá nhân hóa trải nghiệm duyệt web của bạn với bố cục thẻ và chế độ màu mà bạn thích.</translation>
+<translation id="4428982101636000516">Tìm kiếm với Growser hoặc nhập URL</translation>
 <translation id="7376367936988732808">Bố cục thẻ</translation>
 <translation id="4734965478015604180">Ngang</translation>
 <translation id="490375751687810070">Dọc</translation>
@@ -2797,6 +2815,8 @@
 <translation id="8881997962573369342">Hàng trăm máy chủ trên toàn thế giới</translation>
 <translation id="1513801084412881009">Tốc độ kết nối cực nhanh</translation>
 <translation id="6434859410115379558">Bảo vệ tối đa 10 thiết bị với một gói</translation>
+<translation id="4886431881864826294">Một gói đăng ký bao gồm 10 thiết bị trên desktop, Android, &amp; iOS</translation>
+<translation id="3649011006120934011">Không ràng buộc, hủy bất kỳ lúc nào</translation>
 <translation id="1693568075761612600">Không tạo được thẻ hỗ trợ, vui lòng kiểm tra kết nối của bạn.</translation>
 <translation id="1407707415819020643">Chọn máy chủ của bạn</translation>
 <translation id="7406947191797765434"><ph name="CITY_COUNT"/> thành phố - <ph name="SERVER_COUNT"/> máy chủ</translation>
@@ -2979,10 +2999,10 @@ Chúng tôi sẽ giúp bạn kết nối!</translation>
 <translation id="1063227610401477317">Áp dụng thay đổi</translation>
 <translation id="5539769255716491933">Báo cáo các bước thất bại</translation>
 <translation id="7562163394445060270">Không hoàn thành tác vụ</translation>
+<translation id="784931275560506522">Xin chào, mình là Leo. Mình là trợ lý AI của Growser. Mình được vận hành bởi GLM-5.1, một mô hình do Zhipu AI phát triển nhằm mang lại hiệu suất cao và phù hợp với nhiều trường hợp sử dụng. GLM-5.1 được NEAR lưu trữ thông qua cơ sở hạ tầng bảo mật riêng tư có thể xác minh của họ.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="4593680147181354667">Mã chẩn đoán</translation>
 <translation id="3995471429906554168">Thông tin chẩn đoán</translation>
 <translation id="916115051162298064">Chẩn đoán quảng cáo</translation>
-<translation id="2841837950101800123">Nhà cung cấp</translation>
 <translation id="6749024162985917640">Máy chủ cục bộ</translation>
 <translation id="4875290286426670462">Không giới hạn <ph name="ASSET_SYMBOL"/></translation>
 <translation id="6018568069962140636">Mã thông báo này không hợp lệ</translation>
@@ -3331,4 +3351,9 @@ Chúng tôi sẽ giúp bạn kết nối!</translation>
 <translation id="5806601733251372221">Khiên Growser</translation>
 <translation id="2902312830803030883">Thao tác khác</translation>
 <translation id="2168036794078614559">Đã gửi báo cáo</translation>
+<translation id="7734704032751124849">Xin chào, tôi là Leo. Tôi là một trợ lý AI của Growser. Tôi được hỗ trợ bởi GLM-5.3 Flash, một mô hình được tạo ra bởi Zhipu AI để hoạt động hiệu quả và áp dụng cho nhiều trường hợp sử dụng. GLM-5.3 Flash được NEAR lưu trữ thông qua cơ sở hạ tầng bảo mật riêng của họ có thể xác minh.<ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
+<translation id="5597986670710298404">Growser AI muốn thực thi **<ph name="TOOL_NAME"/>** trên **<ph name="SITE_ORIGIN"/>**</translation>
+<translation id="7091858490694045344">Tìm kiếm với Growser hoặc nhập URL</translation>
+<translation id="2433507940547922241">Hình thức</translation>
+<translation id="3435738964857648380">Bảo mật</translation>
 </translationbundle>

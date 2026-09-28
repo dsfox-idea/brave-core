@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
-index d05ae95afce359b9edd607aec4cba95f94fde6dc..d5528ccad4aaec38df9c006893e5028ae888acc3 100644
+index 67be696b30045eb76c78cfaefec83bdf9ba580d3..f112919aaf7524a3cd801279a9fd9a2eca948f4b 100644
 --- a/chrome/browser/net/profile_network_context_service.cc
 +++ b/chrome/browser/net/profile_network_context_service.cc
-@@ -659,7 +659,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
+@@ -660,7 +660,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
                                  false);
    registry->RegisterListPref(prefs::kHSTSPolicyBypassList);
    registry->RegisterListPref(prefs::kCACertificates);
@@ -11,7 +11,7 @@ index d05ae95afce359b9edd607aec4cba95f94fde6dc..d5528ccad4aaec38df9c006893e5028a
    registry->RegisterListPref(prefs::kCADistrustedCertificates);
    registry->RegisterListPref(prefs::kCAHintCertificates);
    // For information about whether to reset the HTTP Cache or not, defaults
-@@ -750,6 +750,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
+@@ -746,6 +746,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
    std::vector<std::string> excluded_spkis(
        TranslateStringArray(ct_excluded_spkis));
  
@@ -19,7 +19,7 @@ index d05ae95afce359b9edd607aec4cba95f94fde6dc..d5528ccad4aaec38df9c006893e5028a
    return network::mojom::CTPolicy::New(std::move(excluded),
                                         std::move(excluded_spkis));
  }
-@@ -1422,9 +1423,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
+@@ -1418,9 +1419,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
      network_context_params->file_paths->cookie_database_name =
          base::FilePath(chrome::kCookieFilename);
  

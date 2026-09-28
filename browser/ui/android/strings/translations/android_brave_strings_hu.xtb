@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">Segítsen fejleszteni a Growser termékstabilitását azáltal, hogy engedélyezi a diagnosztikai jelentések automatikus elküldését a Growser böngésző összeomlása vagy lefagyása esetén.</translation>
 <translation id="7977176350719484850">Becs. adatok\nmentve</translation>
 <translation id="9008534313521214777">Becsült megtakarított\nidő</translation>
+<translation id="5668852698659986622">Szponzorált hirdetések engedélyezése</translation>
+<translation id="431194936581466649">Támogassa a Growser küldetését, hogy egy független, felhasználó-központú webet építsen a szponzorált hirdetésekkel. A hirdetések teljesítményét privát módon mérjük, anélkül, hogy azonosítanánk Önt.</translation>
 <translation id="8347743943525229984">Growser felmérések engedélyezése</translation>
 <translation id="6022939994702081659">Engedélyezi, hogy a Growser privát kérdőívekre mutató hivatkozásokat jelenítsen meg az új lap oldalon. A kérdőívek segítenek jobb funkciókat létrehozni, és mérni a böngészőalapú hirdetési kampányok hatékonyságát.</translation>
 <translation id="7746496306508543965">Tudjon meg többet a Growser-felmérésekről</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">12 szavas helyreállítási kifejezésem van</translation>
 <translation id="4225265925807365011">24 szavas helyreállítási kifejezésem van</translation>
 <translation id="3570367516044491911">Beállítás alapértelmezett böngészőként</translation>
-<translation id="6800338374677644736">Beállítás alapértelmezett böngészőként</translation>
 <translation id="1545749641540134597">QR-kód beolvasása</translation>
 <translation id="5317781812114905957">Utasítások</translation>
 <translation id="8515319483805157233">A QR-kód alapján történő kereséshez helyezze a QR-kódot a keret közepéhez.</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">Főmenü</translation>
 <translation id="7002271985859760052">Oldalműveletek</translation>
 <translation id="7104487676473617844">A következő elemek csak akkor jelennek meg a menüben, ha az aktuálisan megnyitott weboldal támogatja őket.</translation>
-<translation id="4159764849281393303">WebApp</translation>
 <translation id="8038539967102225446">Itt vannak a Growser Hirdetések!</translation>
 <translation id="222883304157347087">(ez a készülék)</translation>
 <translation id="4157741509680155021">KÉSZÜLÉKEK A fSZINKRONLÁNCON</translation>
@@ -720,6 +720,8 @@ other {<ph name="CITY_COUNT_MANY"/> város - }
 <translation id="1634828734222219955">Összesen</translation>
 <translation id="7995708795274219641">Összeg + gáz</translation>
 <translation id="2186011161688824046">Összeg + díj</translation>
+<translation id="1118876217803190221">Nincs fedezet</translation>
+<translation id="275990379543116961">Nincs elegendő fedezet a gashez</translation>
 <translation id="1950052789869821983">Tranzakció</translation>
 <translation id="2304783958703511257">Speciális beállítások</translation>
 <translation id="4220062530885628403">Nonce</translation>
@@ -1196,6 +1198,8 @@ other {<ph name="CITY_COUNT_MANY"/> város - }
 <translation id="1850594249589065646">A helymeghatározás pontossága</translation>
 <translation id="2403474027143565107">Pontos</translation>
 <translation id="4042597221652780603">Körülbelül</translation>
+<translation id="6800338374677644736">Beállítás alapértelmezett böngészőként</translation>
+<translation id="4159764849281393303">WebApp</translation>
 <translation id="7759809451544302770">Opcionális</translation>
 <translation id="4935400164159327304">Mondja el, hogyan fejleszthetjük a Growser-et!</translation>
 <translation id="8300751939969131609">A Growser-hírek bekapcsolásával egyetlen történetről sem marad le</translation>
@@ -1363,8 +1367,8 @@ Biztosan végrehajtja a műveletet?</translation>
 <translation id="6692114068321061469">Growser Origin vásárlás ellenőrzése</translation>
 <translation id="6671300057038059325">A Growser-ban tárolt jelszavak exportálása</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">Nincs fedezet</translation>
-<translation id="275990379543116961">Nincs elegendő fedezet a gashez</translation>
 <translation id="1448289340149908413">Ethereum</translation>
 <translation id="5390923430722428146">Solana</translation>
+<translation id="6524973012848479397">Támogassa a Growser küldetését, hogy egy független, felhasználó-központú webet építsen a szponzorált hirdetésekkel. A hirdetések teljesítményét privát módon mérjük, anélkül, hogy azonosítanánk Önt.</translation>
+<translation id="9194561096821877683">Growser</translation>
 </translationbundle>

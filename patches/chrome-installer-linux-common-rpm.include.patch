@@ -1,21 +1,36 @@
 diff --git a/chrome/installer/linux/common/rpm.include b/chrome/installer/linux/common/rpm.include
-index 9965c8227052c263eb4fcf02cdd3764e6338ad46..90dc86d5d80c1ab84895ec2d68f05f07699cce82 100644
+index 9b87ef588baa2afd7f690917a8bb3ed5d9ce49e8..d9a97a446868c64cd2cdb6db18bf47776777954f 100644
 --- a/chrome/installer/linux/common/rpm.include
 +++ b/chrome/installer/linux/common/rpm.include
-@@ -4,7 +4,11 @@
+@@ -4,15 +4,20 @@
  # Install the repository signing key (see also:
  # https://www.google.com/linuxrepositories/)
  install_rpm_key() {
--  KEY_PACKAGE="gpg-pubkey-d38b4796-570c8cd3"
-+  # Growser-207: from key.include, not hardcoded. This was GOOGLE's key
-+  # package name, and the code below does not merely test for it - it
-+  # ERASES the package it names before importing. On any machine with
+-  # The version of the gpg-pubkey package is the short key ID for rpm < 6.0
+-  # (gpg-pubkey-d38b4796-570c8cd3) and the full key fingerprint for rpm >= 6.0
+-  # (gpg-pubkey-eb4c1bfd4f042f6dddccec917721f63bd38b4796-570c8cd3), so look for
+-  # either form rather than hardcoding a package name.
++  # Growser-207: from key.include, not hardcoded. Upstream's pattern names
++  # GOOGLE's key package, and the code below does not merely test for it - it
++  # ERASES the packages it matches before importing. On any machine with
 +  # Chrome installed, our postinst would have removed Google signing key.
-+  KEY_PACKAGE="$PGP_KEY_PACKAGE"
-   # Check to see if all keys already exists.
++  # Growser-335: like upstream's, the pattern accepts both package names, the
++  # short key id (rpm < 6.0) and the full fingerprint (rpm >= 6.0).
+   # Use an explicit query format since the default is configurable via the
+-  # %_query_all_fmt rpm macro.
++  # %_query_all_fmt rpm macro. An empty pattern would match, and so erase,
++  # every key package on the machine.
++  if [ -z "$PGP_KEY_PACKAGE_REGEX" ]; then
++    return
++  fi
+   KEY_PACKAGES=$(rpm -q --qf '%{NAME}-%{VERSION}-%{RELEASE}\n' gpg-pubkey \
+-    2>/dev/null | grep -Ei \
+-    '^gpg-pubkey-(eb4c1bfd4f042f6dddccec917721f63b)?d38b4796-570c8cd3$')
++    2>/dev/null | grep -Ei "$PGP_KEY_PACKAGE_REGEX")
+ 
+   # Check to see if all keys already exist.
    # Make sure all the most recent signing subkeys are installed.
-   NEED_KEYS=0
-@@ -106,7 +110,20 @@ YUM_REPO_FILE="/etc/yum.repos.d/@@PACKAGE.repo"
+@@ -120,7 +125,20 @@ YUM_REPO_FILE="/etc/yum.repos.d/@@PACKAGE.repo"
  ZYPPER_REPO_FILE="/etc/zypp/repos.d/@@PACKAGE.repo"
  
  install_yum() {
@@ -37,7 +52,7 @@ index 9965c8227052c263eb4fcf02cdd3764e6338ad46..90dc86d5d80c1ab84895ec2d68f05f07
  
    if [ ! "$REPOCONFIG" ]; then
      return 0
-@@ -119,7 +136,7 @@ name=@@PACKAGE
+@@ -133,7 +151,7 @@ name=@@PACKAGE
  baseurl=$REPOCONFIG/$DEFAULT_ARCH
  enabled=1
  gpgcheck=1
@@ -46,7 +61,7 @@ index 9965c8227052c263eb4fcf02cdd3764e6338ad46..90dc86d5d80c1ab84895ec2d68f05f07
  REPOCONTENT
    fi
  }
-@@ -140,7 +157,7 @@ enabled=1
+@@ -154,7 +172,7 @@ enabled=1
  autorefresh=1
  baseurl=$REPOCONFIG/$DEFAULT_ARCH
  gpgcheck=1

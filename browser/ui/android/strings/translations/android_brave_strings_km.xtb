@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">ជួយកែលម្អស្ថិរភាពផលិតផលរបស់ Growser ដោយផ្ញើរបាយការណ៍វិភាគដោយស្វ័យប្រវត្តិ នៅពេលដែលកម្មវិធីរុករក Growser គាំង ឬបង្កក។</translation>
 <translation id="7977176350719484850">ប៉ាន់ស្មាន ទិន្នន័យ\nបានរក្សាទុក</translation>
 <translation id="9008534313521214777">ប៉ាន់ស្មាន រយះពេល\nបានរក្សាទុក</translation>
+<translation id="5668852698659986622">បើកការផ្សាយពាណិជ្ជកម្មដែលបានឧបត្ថម្ភ</translation>
+<translation id="431194936581466649">ជួយគាំទ្របេសកកម្មរបស់ Growser ក្នុងការកសាងបណ្ដាញឯករាជ្យដែលផ្ដល់អាទិភាពដល់អ្នកប្រើ ជាមួយការផ្សាយពាណិជ្ជកម្មដែលបានឧបត្ថម្ភ។ យើងវាស់ស្ទង់ដំណើរការនៃការផ្សាយពាណិជ្ជកម្មដោយឯកជន ដោយមិនកំណត់អត្តសញ្ញាណអ្នក។</translation>
 <translation id="8347743943525229984">អនុញ្ញាតឱ្យមានការស្ទង់មតិ Growser</translation>
 <translation id="6022939994702081659">អនុញ្ញាតឱ្យ Growser បង្ហាញតំណទៅកាន់ការស្ទង់មតិឯកជននៅក្នុងទំព័រផ្ទាំងថ្មី។ ការស្ទង់មតិជួយយើងបង្កើតមុខងារកាន់តែប្រសើរ និងវាស់ស្ទង់ប្រសិទ្ធភាពនៃយុទ្ធនាការផ្សាយពាណិជ្ជកម្មផ្អែកលើកម្មវិធីរុករក។</translation>
 <translation id="7746496306508543965">ស្វែងយល់បន្ថែមអំពីការស្ទង់មតិ Growser</translation>
@@ -249,7 +251,6 @@
 <translation id="6213254277250932867">ខ្ញុំមានមន្តសម្ងាត់ពាក្យ១០២</translation>
 <translation id="4225265925807365011">ខ្ញុំមានមន្តសម្ងាត់ពាក្យ២៤២</translation>
 <translation id="3570367516044491911">កំណត់ជាកម្មវិធីរុករកតាមលំនាំដើម</translation>
-<translation id="6800338374677644736">កំណត់ជាកម្មវិធីរុករកតាមលំនាំដើម</translation>
 <translation id="1545749641540134597">ស្កេន QR Code</translation>
 <translation id="5317781812114905957">សេចក្ដីណែនាំ</translation>
 <translation id="8515319483805157233">ដើម្បីស្វែងរកដោយ QR Code សូមស្កេនលេខ QR Code នៅកណ្តាលនៃគ្រាប់ចុច។</translation>
@@ -281,7 +282,6 @@
 <translation id="5582839680698949063">ម៉ឺនុយ​មេ</translation>
 <translation id="7002271985859760052">សកម្មភាព​ទំព័រ</translation>
 <translation id="7104487676473617844">ធាតុ​ខាងក្រោម​នឹង​មើលឃើញ​នៅ​ក្នុងម៉ឺនុយ ប្រសិន​បើ​គេហទំព័រ​បច្ចុប្បន្ន​គាំទ្រ។</translation>
-<translation id="4159764849281393303">កម្មវិធីវែប</translation>
 <translation id="8038539967102225446">ការផ្សាយពាណិជ្ជកម្ម Growser មកដល់ហើយ!</translation>
 <translation id="222883304157347087">( ឧបករណ៍នេះ )</translation>
 <translation id="4157741509680155021">ឧបករណ៍ការការពារ Growser សមប់</translation>
@@ -731,6 +731,8 @@
 <translation id="1634828734222219955">សរុប</translation>
 <translation id="7995708795274219641">ចំនួន + ថ្លៃឧស្ម័ន</translation>
 <translation id="2186011161688824046">ចំនួនទឹកប្រាក់ + កម្រៃ</translation>
+<translation id="1118876217803190221">សមតុល្យមិនគ្រប់គ្រាន់</translation>
+<translation id="275990379543116961">ទុនមិនគ្រប់គ្រាន់សម្រាប់ហ្គាស</translation>
 <translation id="1950052789869821983">ប្រតិបត្តិការ</translation>
 <translation id="2304783958703511257">ការកំណត់កម្រិតខ្ពស់</translation>
 <translation id="4220062530885628403">កំណត់លេខតែប</translation>
@@ -1212,6 +1214,8 @@
 <translation id="1079140196216383600">លុបម៉ាស៊ីនស្វែងរកផ្ទាល់ខ្លួន</translation>
 <translation id="525276572490219787">តើអ្នកប្រាកដថាចង់លុប "<ph name="SEARCH_ENGINE_NAME"/>" មែនទេ? សកម្មភាពនេះមិនអាចដកហូតបានវិញទេ។</translation>
 <translation id="6406506848690869874">សមកាលកម្ម</translation>
+<translation id="6800338374677644736">កំណត់ជាកម្មវិធីរុករកតាមលំនាំដើម</translation>
+<translation id="4159764849281393303">កម្មវិធីវែប</translation>
 <translation id="7759809451544302770">ស្រេចចិត្ត</translation>
 <translation id="4935400164159327304">ប្រាប់ពួកយើង​ថាអ្នកគិតថាពួកយើងអាចកែលម្អ Growser ប្រក់ក្បាលបានយ៉ាងដូចម្តេច។</translation>
 <translation id="8300751939969131609">បើក Growser News ហើយកុំខកខានរឿង</translation>
@@ -1385,10 +1389,10 @@
 <translation id="6692114068321061469">ផ្ទៀងផ្ទាត់ការទិញ Growser Origin</translation>
 <translation id="6671300057038059325">នាំចេញ​ពាក្យ​សម្ងាត់​ដែលផ្ទុក​នៅក្នុង Growser</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">សមតុល្យមិនគ្រប់គ្រាន់</translation>
-<translation id="275990379543116961">ទុនមិនគ្រប់គ្រាន់សម្រាប់ហ្គាស</translation>
 <translation id="1448289340149908413">Ethereum</translation>
 <translation id="5390923430722428146">Solana</translation>
 <translation id="2403474027143565107">ជាក់លាក់</translation>
 <translation id="4042597221652780603">ប្រហាក់ប្រហែល</translation>
+<translation id="6524973012848479397">ជួយគាំទ្របេសកកម្មរបស់ Growser ក្នុងការកសាងបណ្ដាញឯករាជ្យដែលផ្ដល់អាទិភាពដល់អ្នកប្រើ ជាមួយការផ្សាយពាណិជ្ជកម្មដែលបានឧបត្ថម្ភ។ យើងវាស់ស្ទង់ដំណើរការនៃការផ្សាយពាណិជ្ជកម្មដោយឯកជន ដោយមិនកំណត់អត្តសញ្ញាណអ្នក។</translation>
+<translation id="9194561096821877683">Growser</translation>
 </translationbundle>

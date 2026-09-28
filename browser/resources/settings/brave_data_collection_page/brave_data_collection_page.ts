@@ -15,8 +15,6 @@ import {getTemplate} from './brave_data_collection_page.html.js'
 
 import {MetricsReporting} from '/shared/settings/privacy_page/privacy_page_browser_proxy.js'
 
-import {Router} from '../router.js'
-
 import {loadTimeData} from "../i18n_setup.js"
 
 const SettingBraveDataCollectionPageElementBase =
@@ -64,7 +62,6 @@ extends SettingBraveDataCollectionPageElementBase
       },
       showRestartForMetricsReporting_: Boolean,
       showSponsoredAdsEnabledToggle_: Boolean,
-      showSurveyPanelist_: Boolean,
       isStatsReportingEnabledManaged_: Boolean,
     }
   }
@@ -73,7 +70,6 @@ extends SettingBraveDataCollectionPageElementBase
   private declare metricsReportingPref_: chrome.settingsPrivate.PrefObject<boolean>
   private declare showRestartForMetricsReporting_: boolean
   private declare showSponsoredAdsEnabledToggle_: boolean
-  private declare showSurveyPanelist_: boolean
   private declare isStatsReportingEnabledManaged_: boolean
 
   browserProxy_ = BraveDataCollectionBrowserProxyImpl.getInstance()
@@ -100,16 +96,6 @@ extends SettingBraveDataCollectionPageElementBase
       (enabled: boolean) => setStatsUsagePingEnabledPref(enabled, this.isStatsReportingEnabledManaged_))
 
     this.showSponsoredAdsEnabledToggle_ = loadTimeData.getBoolean('isSponsoredAdsAllowed')
-    this.showSurveyPanelist_ = loadTimeData.getBoolean('isSurveyPanelistAllowed')
-  }
-
-  override getAssociatedControlFor(childViewId: string): HTMLElement {
-    switch (childViewId) {
-      case 'surveyPanelist':
-        return this.shadowRoot!.querySelector('#surveyPanelistLinkRow')!;
-      default:
-        throw new Error(`Unknown child view id: ${childViewId}`)
-    }
   }
 
   setStatsUsagePingEnabledPref_(userEnabled: boolean, isManaged: boolean) {
@@ -164,11 +150,6 @@ extends SettingBraveDataCollectionPageElementBase
   restartBrowser_(e: Event) {
     e.stopPropagation()
     window.open("chrome://restart", "_self")
-  }
-
-  onSurveyPanelistLinkClicked_() {
-    const router = Router.getInstance()
-    router.navigateTo(router.getRoutes().BRAVE_SURVEY_PANELIST)
   }
 }
 

@@ -29,7 +29,7 @@ extension BrowserViewController {
     // Growser-280: no VPN promoted purchase to forget.
 
     if !isSearchContainerVisible,
-      topToolbar.currentURL == nil,
+      tabManager.selectedTab?.visibleURL?.displayURL == nil,
       Preferences.DebugFlag.skipNTPCallouts != true
     {
 

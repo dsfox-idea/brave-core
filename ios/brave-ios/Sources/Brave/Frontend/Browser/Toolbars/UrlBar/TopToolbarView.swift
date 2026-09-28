@@ -196,7 +196,7 @@ class TopToolbarView: UIView, ToolbarProtocol {
   var shareButton = ToolbarButton()
   var addTabButton = ToolbarButton()
   var searchButton = ToolbarButton()
-  lazy var menuButton = MenuButton().then {
+  lazy var menuButton = ToolbarButton().then {
     $0.accessibilityIdentifier = "topToolbarView-menuButton"
   }
 
@@ -309,10 +309,8 @@ class TopToolbarView: UIView, ToolbarProtocol {
       )
     }
 
-    if UIDevice.current.userInterfaceIdiom == .phone {
-      trailingItemsStackView.addArrangedSubview(addTabButton)
-    }
     trailingItemsStackView.addArrangedSubview(tabsButton)
+    trailingItemsStackView.addArrangedSubview(addTabButton)
     trailingItemsStackView.addArrangedSubview(menuButton)
 
     shieldsRewardsStack.addArrangedSubview(shieldsButton)

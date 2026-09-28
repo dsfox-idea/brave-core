@@ -8,6 +8,8 @@
 #include "brave/components/constants/pref_names.h"
 #include "build/build_config.h"
 #include "chrome/common/pref_names.h"
+#include "components/bookmarks/common/bookmark_bar_visibility_state.h"  // Growser-28
+#include "components/bookmarks/common/bookmark_pref_names.h"  // Growser-28
 #include "components/signin/public/base/signin_pref_names.h"
 #include "components/spellcheck/browser/pref_names.h"
 #include "ui/color/system_theme.h"
@@ -30,6 +32,19 @@ void RegisterProfilePrefs(bool is_signin_profile,
 
   registry->SetDefaultPrefValue(prefs::kSigninAllowedOnNextStartup,
                                 base::Value(false));
+#if !BUILDFLAG(IS_ANDROID)
+  // Growser-28: the bookmark bar is hidden everywhere by default, the new tab
+  // page included - that row is what makes the toolbar look double height.
+  // Since 155 Brave uses Chromium's visibility pref, whose default is
+  // kOnlyShowOnNtp; ours lived on Brave's own pref, which is gone. The pref
+  // is registered by BookmarkModelFactory, hence here and not in
+  // brave_profile_prefs.cc, which runs before the keyed services register.
+  registry->SetDefaultPrefValue(
+      bookmarks::prefs::kBookmarkBarVisibilityState,
+      base::Value(static_cast<int>(
+          bookmarks::BookmarkBarVisibilityState::kAlwaysHide)));
+#endif
+
 #if BUILDFLAG(IS_LINUX)
   // Use brave theme by default instead of gtk theme.
   registry->SetDefaultPrefValue(

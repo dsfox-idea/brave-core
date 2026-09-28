@@ -1,0 +1,14 @@
+diff --git a/chrome/browser/safe_browsing/chrome_sb_protocol_config_provider.cc b/chrome/browser/safe_browsing/chrome_sb_protocol_config_provider.cc
+index 85d8986083ac2fdede4caa45ea6d53f54b9b04ed..742cbc322d742d0faa3bbdb051cf0e2f0caa0440 100644
+--- a/chrome/browser/safe_browsing/chrome_sb_protocol_config_provider.cc
++++ b/chrome/browser/safe_browsing/chrome_sb_protocol_config_provider.cc
+@@ -33,7 +33,8 @@ std::string GetProtocolConfigClientName() {
+ 
+   // Mark client string to allow server to differentiate mobile.
+ #if BUILDFLAG(IS_ANDROID)
+-  client_name.append("-a");
++  // Growser-303: no "-a" - Google refuses that client the lists the
++  // local database needs; see the recipe.
+ #endif
+ 
+ #endif  // BUILDFLAG(IS_WIN)

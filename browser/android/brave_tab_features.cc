@@ -5,9 +5,13 @@
 
 #include "brave/browser/android/brave_tab_features.h"
 
+#include "base/feature_list.h"
+#include "brave/browser/misc_metrics/captcha_metrics.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/misc_metrics/features.h"
 #include "chrome/browser/android/tab_android.h"
 #include "chrome/browser/profiles/profile.h"
+#include "components/tabs/public/tab_interface.h"
 #include "content/public/browser/web_contents.h"
 
 #if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-261
@@ -21,6 +25,10 @@ namespace tabs {
 BraveTabFeatures::BraveTabFeatures(content::WebContents* web_contents,
                                    Profile* profile)
     : TabFeatures_Chromium(web_contents, profile) {
+  // Clients should rely on this for observing web contents based changes.
+  tabs::TabInterface& tab_interface =
+      *TabInterface::GetFromContents(web_contents);
+
 #if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-261
   if (ai_chat::IsAllowedForContext(profile)) {
     tab_data_observer_ = std::make_unique<ai_chat::TabDataWebContentsObserver>(
@@ -31,6 +39,12 @@ BraveTabFeatures::BraveTabFeatures(content::WebContents* web_contents,
     web_mcp_injector_ = ai_chat::WebMcpInjector::MaybeCreate(web_contents);
   }
 #endif
+
+  if (base::FeatureList::IsEnabled(
+          misc_metrics::features::kCaptchaMetricsCollection)) {
+    cloudflare_js_detection_tab_helper_ = misc_metrics::CaptchaMetrics::
+        CloudflareJsDetectionTabHelper::MaybeCreate(tab_interface);
+  }
 }
 
 BraveTabFeatures::~BraveTabFeatures() = default;

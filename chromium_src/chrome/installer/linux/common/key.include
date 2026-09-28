@@ -77,8 +77,10 @@ PGP_KEY_CHECKSUM="=jJ+t"
 
 PGP_SUBKEYS="BEA85017DD82CBFA"
 
-# Growser-207: the name rpm gives the imported key, gpg-pubkey-<short id>-<hex
+# Growser-207: the name rpm gives the imported key, gpg-pubkey-<id>-<hex
 # creation time>. rpm.include hardcoded GOOGLE's, and it does not merely test
-# for it - it ERASES the package it names before importing. On any machine
+# for it - it ERASES the packages it matches before importing. On any machine
 # with Chrome installed, that would have removed Google's signing key.
-PGP_KEY_PACKAGE="gpg-pubkey-5059e6fd-6a9ee037"
+# Growser-335: <id> is the short key id for rpm < 6.0 and the full
+# fingerprint for rpm >= 6.0, so the pattern takes both, as upstream's does.
+PGP_KEY_PACKAGE_REGEX='^gpg-pubkey-(98819ef6618b88a1fa2774882dd21359)?5059e6fd-6a9ee037$'

@@ -31,6 +31,7 @@ public class BraveProfileMigrations {
     migrateMediaBackgroundingPreference()
     migrateBlockAllCookiesPreference()
     // Growser-287: no migrateDefaultWalletPreferences() - the wallet is out.
+    migrateShowNewFavoritesPreference()
   }
 
   private func migrateDefaultUserAgentPreferences() {
@@ -131,6 +132,17 @@ public class BraveProfileMigrations {
   private func migrateBlockAllCookiesPreference() {
     Preferences.DeprecatedPreferences.blockAllCookies.migrate { value in
       profileController.profile.prefs.set(value, forPath: kBlockAllCookiesEnabled)
+    }
+  }
+
+  private func migrateShowNewFavoritesPreference() {
+    Preferences.NewTabPage.showNewTabFavourites.migrate { value in
+      if value {
+        Preferences.NewTabPage.topsitesMode.value =
+          Favorite.hasFavorites ? TopsitesMode.favourite : TopsitesMode.mostVisited
+      } else {
+        Preferences.NewTabPage.topsitesMode.value = TopsitesMode.none
+      }
     }
   }
 }

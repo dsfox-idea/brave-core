@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">ช่วยปรับปรุงความเสถียรของผลิตภัณฑ์ Growser โดยส่งรายงานการวินิจฉัยโดยอัตโนมัติเมื่อเบราว์เซอร์ Growser ขัดข้องหรือค้าง</translation>
 <translation id="7977176350719484850">ข้อมูลที่บันทึกไว้โดยประมาณ</translation>
 <translation id="9008534313521214777">ประหยัดเวลาโดยประมาณ</translation>
+<translation id="5668852698659986622">เปิดใช้งานโฆษณาสปอนเซอร์</translation>
+<translation id="431194936581466649">ช่วยสนับสนุนภารกิจของ Growser ในการสร้างเว็บที่เป็นอิสระและให้ผู้ใช้มาก่อนด้วยโฆษณาสปอนเซอร์ เราวัดประสิทธิภาพโฆษณาแบบเป็นส่วนตัว โดยไม่ระบุตัวตนของคุณ</translation>
 <translation id="8347743943525229984">เปิดใช้งานแบบสำรวจจาก Growser</translation>
 <translation id="6022939994702081659">อนุญาตให้ Growser แสดงลิงก์ไปยังแบบสำรวจส่วนตัวในหน้าแท็บใหม่ แบบสำรวจเหล่านี้ช่วยให้เราพัฒนาฟีเจอร์ให้ดีขึ้นและวัดประสิทธิภาพของแคมเปญโฆษณาที่แสดงผ่านเบราว์เซอร์</translation>
 <translation id="7746496306508543965">ดูข้อมูลเพิ่มเติมเกี่ยวกับแบบสำรวจของ Growser</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">ฉันมีวลีกู้คืนรหัส 12 คำ</translation>
 <translation id="4225265925807365011">ฉันมีวลีกู้คืนรหัส 24 คำ</translation>
 <translation id="3570367516044491911">ตั้งเป็นเบราว์เซอร์เริ่มต้น</translation>
-<translation id="6800338374677644736">ตั้งเป็นเบราว์เซอร์เริ่มต้น</translation>
 <translation id="1545749641540134597">สแกน QR Code</translation>
 <translation id="5317781812114905957">คำแนะนำ</translation>
 <translation id="8515319483805157233">หากต้องการค้นหาด้วย QR Code ให้นำ QR Code มาไว้ตรงกลางกรอบ</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">เมนูหลัก</translation>
 <translation id="7002271985859760052">การกระทำของหน้า</translation>
 <translation id="7104487676473617844">รายการต่อไปนี้จะแสดงบนเมนูเฉพาะเมื่อหน้าเว็บที่เปิดอยู่รองรับเท่านั้น</translation>
-<translation id="4159764849281393303">WebApp</translation>
 <translation id="8038539967102225446">Growser Ads อยู่นี่!</translation>
 <translation id="222883304157347087">(อุปกรณ์นี้)</translation>
 <translation id="4157741509680155021">อุปกรณ์บนห่วงโซ่การซิงก์</translation>
@@ -723,6 +723,8 @@
 <translation id="1634828734222219955">รวม</translation>
 <translation id="7995708795274219641">จำนวน + แก๊ส</translation>
 <translation id="2186011161688824046">จำนวน + ค่าธรรมเนียม</translation>
+<translation id="1118876217803190221">ยอดคงเหลือไม่เพียงพอ</translation>
+<translation id="275990379543116961">เงินทุนไม่เพียงพอสำหรับค่าแก๊ส</translation>
 <translation id="1950052789869821983">ธุรกรรม</translation>
 <translation id="2304783958703511257">การตั้งค่าขั้นสูง</translation>
 <translation id="4220062530885628403">Nonce</translation>
@@ -1203,6 +1205,8 @@
 <translation id="1850594249589065646">ความแม่นยำของตำแหน่ง</translation>
 <translation id="2403474027143565107">แม่นยำ</translation>
 <translation id="4042597221652780603">ประมาณ</translation>
+<translation id="6800338374677644736">ตั้งเป็นเบราว์เซอร์เริ่มต้น</translation>
+<translation id="4159764849281393303">WebApp</translation>
 <translation id="7759809451544302770">ไม่บังคับ</translation>
 <translation id="4935400164159327304">แจ้งให้เราทราบว่าควรปรับปรุง Growser อย่างไรบ้าง</translation>
 <translation id="8300751939969131609">เปิด Growser News และไม่พลาดทุกเรื่องราว</translation>
@@ -1370,8 +1374,8 @@
 <translation id="6692114068321061469">ยืนยันการซื้อ Growser Origin</translation>
 <translation id="6671300057038059325">ส่งออกรหัสผ่านที่เก็บไว้ใน Growser</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">ยอดคงเหลือไม่เพียงพอ</translation>
-<translation id="275990379543116961">เงินทุนไม่เพียงพอสำหรับค่าแก๊ส</translation>
 <translation id="1448289340149908413">Ethereum</translation>
 <translation id="5390923430722428146">Solana</translation>
+<translation id="6524973012848479397">ช่วยสนับสนุนภารกิจของ Growser ในการสร้างเว็บที่เป็นอิสระและให้ผู้ใช้มาก่อนด้วยโฆษณาสปอนเซอร์ เราวัดประสิทธิภาพโฆษณาแบบเป็นส่วนตัว โดยไม่ระบุตัวตนของคุณ</translation>
+<translation id="9194561096821877683">Brave Software</translation>
 </translationbundle>

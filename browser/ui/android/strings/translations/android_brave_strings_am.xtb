@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">የ Growser አሳሽ ሲበላሽ ወይም ሲቆም የምርመራ ሪፖርቶችን በራስ ሰር በመላክ፣ የ Growser\u2019s ምርት በስርዓት እንዲሰራ ለማስቻል ያግዙ።</translation>
 <translation id="7977176350719484850">Est. ውሂብ\nተቀምጧል</translation>
 <translation id="9008534313521214777">የተቆጠበ\nጊዜ በግምት</translation>
+<translation id="5668852698659986622">የተደገፉ ማስታወቂያዎችን አንቃ</translation>
+<translation id="431194936581466649">Growser ገለልተኛ የሆነ፣ ተጠቃሚን ቅድሚያ የሚሰጥ ድር ለመገንባት ያለውን ተልእኮ በተደገፉ ማስታወቂያዎች ይደግፉ። የማስታወቂያ አፈጻጸምን በግል እንለካለን፣ እርስዎን ሳንለይ።</translation>
 <translation id="8347743943525229984">የBrave ምርመራዎችን ፍቀድ</translation>
 <translation id="6022939994702081659">እንድትረዱ Growser የኢንዱስትሪ መሪነት ሥራ ለየድር ግልጋሎትና ለክፍተት የተቀመጡ መዘምበር ቆጥሮች</translation>
 <translation id="7746496306508543965">ስለ Growser እሴቶች ተጨማሪ ተማሩ</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">12-ቃላት የመመለሻ ሐረግ አለኝ</translation>
 <translation id="4225265925807365011">24-ቃላት የመመለሻ ሐረግ አለኝ</translation>
 <translation id="3570367516044491911">እንደ ነባሪ አሳሽዎ አድርገው ያዋቅሩት</translation>
-<translation id="6800338374677644736">ነባሪ አሳሽዎ ያድርጉት።</translation>
 <translation id="1545749641540134597">የ QR ኮድ ስካን ያድርጉ</translation>
 <translation id="5317781812114905957">መመሪያዎች</translation>
 <translation id="8515319483805157233">በ QR ኮድ ለመፈለግ QR ኮዱን በፍሬሙ መሃል ላይ አስተካክለው ያስቀምጡ።</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">ዋና ምናሌ</translation>
 <translation id="7002271985859760052">የገፅ ተግባራት</translation>
 <translation id="7104487676473617844">የሚከተሉት ንጥሎች በአሁኑ ከፍተኛ ዌብጤት ድጋፍ ያገኛሉ ብቻ በምናሌ ላይ የሚታዩ ይሆናሉ።</translation>
-<translation id="4159764849281393303">ዌብአፕ</translation>
 <translation id="8038539967102225446">የ Growser ማስታወቂያዎች እዚህ ናቸው!</translation>
 <translation id="222883304157347087">(ይህ መሳሪያ)</translation>
 <translation id="4157741509680155021">በ አስምር ሰንሰለት ውስጥ ያሉ መሳሪያዎች</translation>
@@ -706,6 +706,8 @@
 <translation id="1634828734222219955">ድምር</translation>
 <translation id="7995708795274219641">የገንዘብ መጠን + ነዳጅ</translation>
 <translation id="2186011161688824046">መጠን + ክፍያ</translation>
+<translation id="1118876217803190221">በቂ ያልሆነ ገንዘብ</translation>
+<translation id="275990379543116961">ለነዳጅ በቂ ገንዘብ የለም</translation>
 <translation id="1950052789869821983">ግብይት</translation>
 <translation id="2304783958703511257">የላቁ ቅንብሮች</translation>
 <translation id="4220062530885628403">የአንድ ጊዜ</translation>
@@ -1187,6 +1189,8 @@
 <translation id="1079140196216383600">ጸደይ ፍለጋ ፕሮግራም 삭제</translation>
 <translation id="525276572490219787">"<ph name="SEARCH_ENGINE_NAME"/>" መሰረዝ ይፈልጋሉ? ይህ እርምጃ ሊቀለበስ አይችልም።</translation>
 <translation id="6406506848690869874">አመሳስል</translation>
+<translation id="6800338374677644736">ነባሪ አሳሽዎ ያድርጉት።</translation>
+<translation id="4159764849281393303">ዌብአፕ</translation>
 <translation id="7759809451544302770">በአማራጭነት የቀረበ</translation>
 <translation id="4935400164159327304">Braveን እንዴት ማሻሻል እንደምንችል ያሳውቁን።</translation>
 <translation id="8300751939969131609">Growser News ያብሩት፣ እና ማንኛውም ታሪክ አያምልጥዎ</translation>
@@ -1353,10 +1357,10 @@
 <translation id="6692114068321061469">Growser Origin ግዥን ያረጋግጡ</translation>
 <translation id="6671300057038059325">ከBrave ጋር የተከማቹ የይለፍ ቃሎችን ወደ ውጭ ላክ</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">በቂ ያልሆነ ገንዘብ</translation>
-<translation id="275990379543116961">ለነዳጅ በቂ ገንዘብ የለም</translation>
 <translation id="1448289340149908413">Ethereum</translation>
 <translation id="5390923430722428146">Solana</translation>
 <translation id="2403474027143565107">ትክክለኛ</translation>
 <translation id="4042597221652780603">ግምታዊ</translation>
+<translation id="6524973012848479397">Growser ገለልተኛ የሆነ፣ ተጠቃሚን ቅድሚያ የሚሰጥ ድር ለመገንባት ያለውን ተልእኮ በተደገፉ ማስታወቂያዎች ይደግፉ። የማስታወቂያ አፈጻጸምን በግል እንለካለን፣ እርስዎን ሳንለይ።</translation>
+<translation id="9194561096821877683">Brave Software</translation>
 </translationbundle>

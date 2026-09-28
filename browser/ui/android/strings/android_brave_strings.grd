@@ -750,15 +750,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_SPONSORED_ADS_LEARN_MORE" desc="Title of learn more link for the sponsored ads toggle.">
         Learn more about Sponsored Ads
       </message>
-      <message name="IDS_SURVEY_PANELIST_TITLE" desc="Title for enable/disable brave survey panelist toggle.">
-        Allow Growser surveys
-      </message>
-      <message name="IDS_SURVEY_PANELIST_SUMMARY" desc="Summary for enable/disable brave survey panelist toggle.">
-        Allows Growser to show links to private surveys in the new tab page. Surveys help us build better features and measure the effectiveness of browser-based ad campaigns.
-      </message>
-      <message name="IDS_SURVEY_PANELIST_LEARN_MORE" desc="Title of learn more about survey panelist.">
-        Learn more about Growser surveys
-      </message>
       <!-- AUTOPLAY SITE SETTING-->
       <message name="IDS_AUTOPLAY_TITLE" desc="Title for the Autoplay settings screen [CHAR-LIMIT=32]">
         Autoplay
@@ -841,6 +832,9 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
       <message name="IDS_BOTTOM_TOOLBAR_TITLE" desc="Title for the bottom navigation toolbar setting.">
         Bottom navigation toolbar
+      </message>
+      <message name="IDS_ENABLE_BOTTOM_BAR_TITLE" desc="Title for the setting that enables the bottom bar.">
+        Enable bottom bar
       </message>
       <message name="IDS_BOTTOM_TOOLBAR_SUMMARY" desc="Summary for preference that enables the bottom navigation toolbar.">
         Show a bottom bar for quick access to home, bookmarks, and search

@@ -190,6 +190,8 @@
 <translation id="5987838417172370108">Συμβάλλετε στη βελτίωση της σταθερότητας του προϊόντος Growser\u2019s με την αυτόματη αποστολή αναφορών διαγνωστικών όταν το πρόγραμμα περιήγησης Growser κολλάει ή παγώνει.</translation>
 <translation id="7977176350719484850">Εκτ. Δεδομένα\nΕξοικονομήθηκαν</translation>
 <translation id="9008534313521214777">Εκτ. Χρόνος Εξοικονομήθηκε</translation>
+<translation id="5668852698659986622">Ενεργοποίηση χορηγούμενων Ads</translation>
+<translation id="431194936581466649">Βοηθήστε να υποστηριχθεί η αποστολή της Growser για τη δημιουργία ενός ανεξάρτητου, με προτεραιότητα στον χρήστη Ιστού με χορηγούμενα Ads. Μετράμε την απόδοση των διαφημίσεων ιδιωτικά, χωρίς να σας ταυτοποιούμε.</translation>
 <translation id="8347743943525229984">Να επιτρέπονται οι έρευνες Growser</translation>
 <translation id="6022939994702081659">Επιτρέπει στο Growser να εμφανίζει συνδέσμους προς ιδιωτικές έρευνες στη σελίδα νέας καρτέλας. Οι έρευνες μάς βοηθούν να δημιουργήσουμε καλύτερες λειτουργίες και να μετρήσουμε την αποτελεσματικότητα των διαφημιστικών εκστρατειών που βασίζονται στο πρόγραμμα περιήγησης.</translation>
 <translation id="7746496306508543965">Μάθετε περισσότερα για τις έρευνες Growser</translation>
@@ -250,7 +252,6 @@
 <translation id="6213254277250932867">Έχω μια φράση ανάκτησης 12 λέξεων</translation>
 <translation id="4225265925807365011">Έχω μια φράση ανάκτησης 24 λέξεων</translation>
 <translation id="3570367516044491911">Ορισμός ως προεπιλεγμένο πρόγραμμα περιήγησης</translation>
-<translation id="6800338374677644736">Να οριστεί ως προεπιλεγμένο πρόγραμμα περιήγησης</translation>
 <translation id="1545749641540134597">Σάρωση Κωδικού QR</translation>
 <translation id="5317781812114905957">Οδηγίες</translation>
 <translation id="8515319483805157233">Για αναζήτηση με κωδικό QR, ευθυγραμμίστε τον κωδικό QR στο κέντρο του πλαισίου.</translation>
@@ -282,7 +283,6 @@
 <translation id="5582839680698949063">Κύριο μενού</translation>
 <translation id="7002271985859760052">Ενέργειες σελίδας</translation>
 <translation id="7104487676473617844">Τα παρακάτω στοιχεία θα είναι ορατά στο μενού μόνο όταν υποστηρίζονται από την τρέχουσα ανοιχτή ιστοσελίδα.</translation>
-<translation id="4159764849281393303">WebApp</translation>
 <translation id="8038539967102225446">Οι Διαφημίσεις Growser είναι εδώ!</translation>
 <translation id="222883304157347087">(αυτή η συσκευή)</translation>
 <translation id="4157741509680155021">ΣΥΣΚΕΥΕΣ ΣΤΗΝ ΑΛΥΣΙΔΑ ΣΥΓΧΡΟΝΙΣΜΟΥ</translation>
@@ -720,6 +720,8 @@
 <translation id="1634828734222219955">Σύνολο</translation>
 <translation id="7995708795274219641">Ποσό + Καύσιμο</translation>
 <translation id="2186011161688824046">Ποσό + τέλος</translation>
+<translation id="1118876217803190221">Ανεπαρκές υπόλοιπο</translation>
+<translation id="275990379543116961">Ανεπαρκή κεφάλαια για καύσιμα</translation>
 <translation id="1950052789869821983">Συναλλαγή</translation>
 <translation id="2304783958703511257">Ρυθμίσεις για προχωρημένους</translation>
 <translation id="4220062530885628403">Nonce</translation>
@@ -1196,6 +1198,8 @@
 <translation id="1850594249589065646">Ακρίβεια εντοπισμού θέσης</translation>
 <translation id="2403474027143565107">Ακριβής</translation>
 <translation id="4042597221652780603">Περίπου</translation>
+<translation id="6800338374677644736">Να οριστεί ως προεπιλεγμένο πρόγραμμα περιήγησης</translation>
+<translation id="4159764849281393303">WebApp</translation>
 <translation id="7759809451544302770">Προαιρετικά</translation>
 <translation id="4935400164159327304">Ενημερώστε μας πώς μπορούμε να βελτιώσουμε το Growser.</translation>
 <translation id="8300751939969131609">Ενεργοποιήστε το Growser News, για να μην χάσετε ούτε μία είδηση</translation>
@@ -1363,8 +1367,8 @@
 <translation id="6692114068321061469">Επαλήθευση αγοράς Growser Origin</translation>
 <translation id="6671300057038059325">Εξαγωγή κωδικών πρόσβασης που έχουν αποθηκευτεί στο Growser</translation>
 <translation id="3705722231355495246">-</translation>
-<translation id="1118876217803190221">Ανεπαρκές υπόλοιπο</translation>
-<translation id="275990379543116961">Ανεπαρκή κεφάλαια για καύσιμα</translation>
 <translation id="1448289340149908413">Ethereum</translation>
 <translation id="5390923430722428146">Solana</translation>
+<translation id="6524973012848479397">Βοηθήστε να υποστηριχθεί η αποστολή της Growser για τη δημιουργία ενός ανεξάρτητου, με προτεραιότητα στον χρήστη Ιστού με χορηγούμενα Ads. Μετράμε την απόδοση των διαφημίσεων ιδιωτικά, χωρίς να σας ταυτοποιούμε.</translation>
+<translation id="9194561096821877683">Brave Software</translation>
 </translationbundle>

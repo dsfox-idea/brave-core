@@ -78,6 +78,7 @@ source_set("impl") {
     "//chrome/browser/search_engines",
     "//chrome/browser/ui",
     "//chrome/browser/ui/browser_window:create_browser_window",
+    "//chrome/browser/ui/navigator",
     "//chrome/common:channel_info",
     "//chrome/common:chrome_features",
     "//chrome/common:constants",
@@ -167,6 +168,7 @@ source_set("browser_tests") {
     "//brave/components/brave_ads/core/browser/service:test_support",
     "//chrome/browser",
     "//chrome/browser/lifetime",
+    "//chrome/browser/tab_list",
     "//chrome/test:test_support",
   ]
 

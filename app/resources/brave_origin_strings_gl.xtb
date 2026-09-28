@@ -10,6 +10,7 @@
 É posible que algunhas funcións non estean dispoñibles e que non se garden os cambios nas preferencias.</translation>
 <translation id="7577672138294294152">O teu pai ou nai desactivou en Growser a opción Permisos para sitios, aplicacións e extensións</translation>
 <translation id="4408482856437790071">Para buscar unha extensión ou función específica de Growser, escribe o seu atallo na barra de enderezos, seguido da tecla que seleccionases</translation>
+<translation id="3257316091303113323">Mostrar busca con Growser na bandexa do sistema e activar atallo de teclado</translation>
 <translation id="5918095577778020936">Growser quere exportar os teus contrasinais. Escribe o teu contrasinal de Windows para permitir esta acción.</translation>
 <translation id="112640046208448578">Identifica obxectos ou lugares, e copia ou traduce texto. Cando usas a busca de imaxes, envíase unha captura de pantalla da páxina ao servidor. <ph name="LEARN_MORE"/></translation>
 <translation id="5468853758063275923">Growser é o teu navegador predeterminado</translation>
@@ -40,7 +41,6 @@
 <translation id="1356661055722410047">Novidade! Podes traducir texto e imaxes na túa pantalla</translation>
 <translation id="1383876407941801731">Buscar</translation>
 <translation id="3535301204632475895">Usa a aplicación Growser para seguir navegando esteas onde esteas</translation>
-<translation id="7009295044271335553">&amp;Xestionar perfís de Growser</translation>
 <translation id="141901961143729572">Comparte o que pensas</translation>
 <translation id="3880714039086599943">Para compartir a ventá, vai á configuración do sistema e activa a función de gravación de pantalla para Growser.</translation>
 <translation id="1586284627848250203">Recibir axuda con Growser for Testing</translation>
@@ -150,7 +150,6 @@
 <translation id="2620436844016719705">Sistema</translation>
 <translation id="7931230852267968641">A túa organización pode ver e xestionar os datos de navegación (como, por exemplo, os marcadores, o historial e os contrasinais). Non poderá ver os datos de navegación doutros perfís de Growser</translation>
 <translation id="2257221826278123061">Verifica a túa identidade para usar e gardar os datos de Growser na túa conta (<ph name="ACCOUNT_EMAIL"/>)</translation>
-<translation id="7048234400304379082">Para saír de Gemini en Growser ou volver, usa o atallo de teclado.</translation>
 <translation id="5655607968417451974">Iniciar Growser</translation>
 <translation id="7387051847644272380">Produciuse un erro no sistema operativo durante a instalación. Volve descargar Growser.</translation>
 <translation id="2648689842065142443">Se compartes un dispositivo, as túas amizades e os membros da túa familia poden navegar cun perfil independente e configurar Growser como prefiran</translation>
@@ -225,6 +224,7 @@
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">Queres cambiar ao perfil existente de Growser?</translation>
 <translation id="3412460710772753638">No xestor de contrasinais neste dispositivo</translation>
+<translation id="3438772217992559640">Buscar nesta pestana coa busca de imaxes</translation>
 <translation id="2491221873705777076">Amplía a función Navegación segura mellorada con Growser no teléfono</translation>
 <translation id="7304389940068374923">Personalizando Growser...</translation>
 <translation id="5853262807109651878">Esta acción eliminará <ph name="ITEMS_COUNT"/> elementos deste dispositivo. Para recuperar os teus datos máis tarde, inicia sesión en Growser como <ph name="USER_EMAIL"/>.</translation>
@@ -260,7 +260,6 @@
 <translation id="7130675370997202556">Fai clic no teu nome para abrir Growser e comezar a navegar.</translation>
 <translation id="3892148308691398805">Copiar texto</translation>
 <translation id="4920958997042285125"><ph name="EXISTING_USER"/> xa ten a sesión iniciada neste perfil de Growser. Se queres xestionar a túa navegación cun perfil independente e de teu, Growser pode crearche un.</translation>
-<translation id="8744239658215739511">Personalizar o teu Growser</translation>
 <translation id="3941890832296813527">Erro de instalación: O nome de ficheiro do instalador non é válido ou non se admite.</translation>
 <translation id="8090497651549769448">Growser está tentando copiar os contrasinais. Escribe o teu contrasinal de Windows para permitir esta acción.</translation>
 <translation id="4256965182800026277">Os contrasinais, métodos de pago e enderezos que gardes na túa Conta de Growser quitaranse deste dispositivo. Para usalos de novo en Growser, volve iniciar sesión.</translation>
@@ -299,6 +298,7 @@
 <translation id="6368144843345980623">Exportar os contrasinais de Growser</translation>
 <translation id="4304713468139749426">Xestor de contrasinais</translation>
 <translation id="4334241893986177674">Buscar esta captura de pantalla</translation>
+<translation id="3985621805803699376">Fai buscas e preguntas desde calquera lugar, mesmo se Growser está minimizado</translation>
 <translation id="242356249838681145">Abrir Growser cando se inicie Windows</translation>
 <translation id="4400772909124543403">Non hai ningunha actualización dispoñible</translation>
 <translation id="9183662282810237335">Queres saír de Growser de todas formas?</translation>
@@ -328,6 +328,7 @@
 <translation id="4970880042055371251">Versión de Chrome OS</translation>
 <translation id="2182657378556811785">A actualización case rematou. Volve iniciar Growser para finalizala.</translation>
 <translation id="6311668361877328515">Acelera os sitios co motor V8 de Growser, pero fai que Growser sexa un pouco menos resistente aos ataques</translation>
+<translation id="7960968658810899127">Abrir busca con Growser</translation>
 <translation id="7402642357351265733">Se, ademais, compartes os informes de uso de Growser, neles inclúense os URL que visites</translation>
 <translation id="4673710618874938871">Sesión iniciada como <ph name="USER_NAME"/>, subscrición. Abrir o menú da conta</translation>
 <translation id="8142245354207161805">Parece que outro proceso de Growser (<ph name="PROCESS_ID"/>) está utilizando o perfil noutro ordenador (<ph name="HOST_NAME"/>). Growser bloqueou o perfil para que non se dane. Se estás seguro de que ningún outro proceso está utilizando este perfil, podes desbloquear o perfil e volver iniciar Growser.</translation>
@@ -366,6 +367,7 @@
 <translation id="8586264863973514035">Para aplicar os cambios, reinicia Growser</translation>
 <translation id="5286907366254680517">Detectado</translation>
 <translation id="7264453786974905915">Obter a aplicación Growser</translation>
+<translation id="7230006500876504868">Buscar con Growser</translation>
 <translation id="6944930779012811739">Servizo interno de Growser Updater</translation>
 <translation id="6214255602211289863">Úsaas xunto con outras funcións de Gemini en Growser</translation>
 <translation id="5346389065299425353">Engade varias pestanas, ficheiros e ferramentas para afondar na busca</translation>
@@ -376,6 +378,7 @@
 <translation id="7708394612738038097">Estás iniciando sesión cunha conta xestionada e concedendo control ao seu administrador sobre o teu perfil de Growser. Os teus datos de Growser, como as túas aplicacións, marcadores, historial, contrasinais e outras configuracións ligaranse permanentemente a <ph name="USER_NAME"/>. Poderás eliminar estes datos a través do Panel de control das contas de Growser, pero non poderás asociar estes datos a outra conta. <ph name="LEARN_MORE"/></translation>
 <translation id="5368118228313795342">Código adicional: <ph name="EXTRA_CODE"/>.</translation>
 <translation id="2487133103111559902">Para desfrutar da personalización, inclúe Growser en Actividade web e das aplicacións</translation>
+<translation id="3311284381627742014">Abrir busca con Growser</translation>
 <translation id="5154625106151193600">Descubre por que Growser bloquea algúns ficheiros</translation>
 <translation id="1786715389543715322">Actualizando Growser (<ph name="PROGRESS_PERCENT"/>)</translation>
 <translation id="7021823858304886493">Permitir inicio de sesión en Growser</translation>
@@ -432,6 +435,7 @@ Proba a permitila se esta páxina non funciona como debería.</translation>
 <translation id="5977420883993828287">Elemento fixado! Usa de novo as tarefas contextuais desde a barra de ferramentas</translation>
 <translation id="4357808717322635817">{COUNT,plural, =1{A túa organización pechará Growser automaticamente cando leve 1 minuto sen usarse.}other{A túa organización pechará Growser automaticamente cando leve # minutos sen usarse.}}</translation>
 <translation id="3598551856834560515">Actualiza Growser para iniciar a sincronización</translation>
+<translation id="5990360079535151574">Usa o botón Tarefas contextuais da barra de ferramentas para volver abrir esta función e facer preguntas mentres navegas</translation>
 <translation id="6003112304606738118">Descargando… Tempo restante: <ph name="HOURS"/> h</translation>
 <translation id="6009821354356307391">Facer outra consulta</translation>
 <translation id="6040143037577758943">Pechar</translation>
@@ -494,6 +498,7 @@ Proba a permitila se esta páxina non funciona como debería.</translation>
 <translation id="7185585387858242335">Atallos abertos en Growser</translation>
 <translation id="3617744907966785605">A túa organización pecha Growser cando non se usa durante <ph name="TIMEOUT_DURATION"/>. Elimináronse os datos de navegación. Entre esa información, poden incluírse o historial, os datos da función de autocompletar e as descargas.</translation>
 <translation id="8646609321956191980">En cada perfil gárdase a información de Growser que lle corresponde (por exemplo, os marcadores, o historial ou os contrasinais)</translation>
+<translation id="6556755379298048869">Fai buscas cun atallo de teclado.</translation>
 <translation id="6756656512757374876">Máis información sobre <ph name="BEGIN_LINK"/>como protexe Growser a privacidade dos teus datos<ph name="END_LINK"/></translation>
 <translation id="3556601443414636547">Os cambios nesta opción de configuración aplicaranse cando se reinicie Growser.</translation>
 <translation id="3396870972301571614">No menú principal de Growser, fai clic en Extensións para xestionalas.</translation>
@@ -528,6 +533,7 @@ Proba a permitila se esta páxina non funciona como debería.</translation>
 <translation id="8237613041998823669">Growser Origin: <ph name="PAGE_TITLE"/></translation>
 <translation id="6859580922007887573">Toca para continuar</translation>
 <translation id="6862030660799253820">Busca esta imaxe coa busca de imaxes</translation>
+<translation id="6869568587896659271">Acceso sinxelo aos sitios web desde debaixo da barra de enderezos</translation>
 <translation id="3028928628792374067">Growser detectou que "<ph name="EXTENSION_NAME"/>" contén software malicioso</translation>
 <translation id="6877155553248388166">esquina inferior dereita da área de busca: <ph name="RIGHT"/> % á dereita, <ph name="BOTTOM"/> % abaixo</translation>
 <translation id="6896758677409633944">Copiar</translation>
@@ -580,6 +586,7 @@ Non poderás gardar máis ata que elimines uns cantos. Se pechas a sesión agora
 <translation id="3403365884036456766">O teu ficheiro de preferencias está danado ou non é válido.
 
 Growser non pode recuperar a túa configuración.</translation>
+<translation id="7324051657739063017">Podes volver abrir as tarefas contextuais para facer preguntas mentres navegas</translation>
 <translation id="3511996232906761537">Aquí podes atopar as túas páxinas web, marcadores e outros contidos de Growser.</translation>
 <translation id="1754899895078387289">Só poderá ler os teus datos encriptados quen teña a túa frase de acceso (Growser non a recibirá nin a almacenará). Se a esqueces ou queres cambiar esta opción de configuración, terás que <ph name="BEGIN_LINK"/>eliminar os datos de Growser da túa conta<ph name="END_LINK"/>.</translation>
 <translation id="5380963249588143069">A persoa que administra o teu sistema configurou Growser para abrir o navegador <ph name="TARGET_URL_HOSTNAME"/> co obxectivo de acceder a <ph name="ALTERNATIVE_BROWSER_NAME"/>.</translation>
@@ -587,6 +594,7 @@ Growser non pode recuperar a túa configuración.</translation>
 <translation id="6085660187823915017">Se queres recibir actualizacións de Growser no futuro, debes instalar o sistema operativo macOS 13 ou unha versión posterior. Este ordenador ten macOS 12.</translation>
 <translation id="2865744782251083875">Levas un tempo sen entrar. Growser quitou os seguintes permisos: <ph name="PERMISSION_1"/> e <ph name="PERMISSION_2"/>.</translation>
 <translation id="3871306442916198768">Mostrar Gemini en Growser na bandexa do sistema</translation>
+<translation id="7401687852903179959">Buscar neste vídeo coa busca de imaxes</translation>
 <translation id="4104934885375476361">Growser é agora o teu navegador predeterminado</translation>
 <translation id="7951152294775418909">Retoma a actividade onde a deixaches: Growser restaura as pestanas cada vez que o reinicies. Para desactivar esta opción, vai a</translation>
 <translation id="3191314862567596053">Importar os contrasinais a Growser</translation>
@@ -620,6 +628,7 @@ Growser non pode recuperar a túa configuración.</translation>
 <translation id="77283119132245232">Fornece servizos de seguimento do sistema para <ph name="BROWSER_NAME"/>. Se este servizo está desactivado, os rastros de rendemento creados polo navegador non incluirán eventos de todo o sistema (como os eventos de subprocesos ou de cambio de contexto).</translation>
 <translation id="4784414698887946907">Esta acción eliminará os teus datos de navegación deste dispositivo. Para recuperar os teus datos máis tarde, inicia sesión en Growser como <ph name="USER_EMAIL"/>.</translation>
 <translation id="7747138024166251722">O programa de instalación non puido crear un directorio temporal. Comproba se hai espazo libre no disco e se tes autorización para instalar o software.</translation>
+<translation id="644418935605751729">Busca en Growser</translation>
 <translation id="8543787950557226450">Restablecer Growser predeterminado</translation>
 <translation id="4859382825808018797">Para protexer o teu traballo en Growser, a túa organización poderá ver ou xestionar certa información cando teñas a sesión iniciada en Growser.</translation>
 <translation id="4976450819672499783">Define Growser como o navegador predeterminado e fíxao na barra de tarefas</translation>
@@ -627,6 +636,7 @@ Growser non pode recuperar a túa configuración.</translation>
 <translation id="8607348724092473027"><ph name="PAGE_TITLE"/> (versión experimental de Growser Origin)</translation>
 <translation id="2684504034454188774">Fai que ás persoas que teñan acceso ao teu tráfico de Internet lles resulte máis difícil ver os sitios que visitas. Growser usa unha conexión segura para buscar o enderezo IP dos sitios no DNS (Sistema de nomes de dominios).</translation>
 <translation id="7810005234485217901">Podes fixar a busca de imaxes para acceder facilmente</translation>
+<translation id="4191642852677143100">Escoller o que queres compartir con Growser</translation>
 <translation id="1652855885539187849">Neste dispositivo xa existe un perfil de Growser con esta conta</translation>
 <translation id="7845233973568007926">Grazas por levar a cabo a instalación. Para utilizar <ph name="BUNDLE_NAME"/>, debes reiniciar o ordenador.</translation>
 <translation id="7397737266068428588">O teu buscador cambiouse desde fóra de Growser. Para protexerte, Growser restableceu a configuración predeterminada orixinal. <ph name="LEARN_MORE_LINK"/></translation>
@@ -664,6 +674,7 @@ Growser non pode recuperar a túa configuración.</translation>
 <translation id="9067428552314418522">Este ficheiro é perigoso, así que Growser bloqueouno.</translation>
 <translation id="8177472873527554730">Non se puido atopar contido na páxina</translation>
 <translation id="6219250889396046657">Escribe a túa frase de acceso para usar e gardar os datos de Growser na túa conta (<ph name="USER_EMAIL"/>)</translation>
+<translation id="820759916613250543">Buscar nesta imaxe coa busca de imaxes</translation>
 <translation id="8221491193165283816">Adoitas bloquear as notificacións. Para permitir que este sitio che envíe notificacións, fai clic aquí.</translation>
 <translation id="8377926237617998195">Para usar a cámara, concédelle acceso a Growser na <ph name="BEGIN_LINK"/>configuración do sistema<ph name="END_LINK"/></translation>
 <translation id="1755067029031059271">Growser non pode verificar de onde procede esta extensión, polo que pode non ser segura. Quítaa de Growser para que non poida ver nin cambiar os teus datos (como a túa información persoal) nos sitios que visites.</translation>
@@ -742,12 +753,15 @@ Growser non pode recuperar a túa configuración.</translation>
             • Eliminaranse as cookies e outros datos temporais dos sitios
             <ph name="LINE_BREAKS"/>
             Os marcadores, o historial e os contrasinais gardados non se verán afectados.</translation>
+<translation id="6034174407583692244">Mostrar atallos de sitios de Growser</translation>
 <translation id="7731184591599776500">Logotipo de Growser Enterprise</translation>
 <translation id="2001474182910589370">Goza da seguranza de Growser esteas onde esteas coa aplicación Growser no teu dispositivo <ph name="DEVICE_TYPE"/></translation>
 <translation id="6500340165622970282">Non se puido iniciar Growser porque se produciu un erro ao abrir o perfil. Proba a reiniciar Growser.</translation>
 <translation id="3424657754843264466">Xestionar perfís de Growser</translation>
+<translation id="1454821212628854849">Usa o teclado para navegar entre Gemini en Growser e a pestana que tes aberta.</translation>
 <translation id="9018218886431812662">Completouse a instalación</translation>
 <translation id="82609232232243542">Iniciar sesión en Growser</translation>
+<translation id="7428750281620987416">Mostrar busca con Growser na barra de menú de Mac e activar atallo de teclado</translation>
 <translation id="7055223246119657449">Growser bloqueou esta descarga porque o ficheiro de arquivo inclúe outros ficheiros que é posible que conteñan software malicioso</translation>
 <translation id="8341362078156319636">Mantén os contrasinais, os marcadores e o historial perfectamente sincronizados en todos os dispositivos. Actualiza o teu navegador predeterminado a Growser para acceder con facilidade ás funcións que xa coñeces e que tanto che gustan. Growser fixarase na barra de tarefas para que poidas comezar a usalo ben axiña.</translation>
 <translation id="8965179855019347124">Usa as mellores ferramentas de IA de Growser coa aplicación Growser no teléfono</translation>
@@ -797,6 +811,9 @@ Growser non pode recuperar a túa configuración.</translation>
 <translation id="79269250264141507">Cando escribas na barra de enderezos ou na caixa de busca, Growser enviará o que escribas ao teu motor de busca predeterminado para obter mellores suxestións. Esta opción está desactivada na opción Privado.</translation>
 <translation id="2589970573128789862">Modo de incógnito de Growser</translation>
 <translation id="5994282802285556682">Cando navegues no modo privado, Growser avisarate antes de cargar un sitio cunha conexión insegura</translation>
+<translation id="7009295044271335553">&amp;Xestionar perfís de Growser</translation>
+<translation id="7048234400304379082">Para saír de Gemini en Growser ou volver, usa o atallo de teclado.</translation>
+<translation id="8744239658215739511">Personalizar o teu Growser</translation>
 <translation id="4747339441562331861">Define Growser como navegador predeterminado para acceder con facilidade ás funcións que xa coñeces, que tanto che gustan e nas que confías. Growser fixarase na barra de tarefas para que poidas acceder a el ben axiña.</translation>
 <translation id="9068395155143628872">A medición dos anuncios permite que os sitios que visites lle soliciten a Growser información que lles axude a medir o rendemento dos seus anuncios. Ademais, restrinxe o seguimento en varios sitios, dado que se transfire a menor cantidade posible de información entre eles.</translation>
 <translation id="7813580490378477695"><ph name="PARTNER_NAME"/> engadiu unha extensión que pode cambiar o funcionamento de Growser.
@@ -1326,4 +1343,15 @@ Proba a permitila se esta páxina non funciona como debería.</translation>
 <translation id="2298918301821382774">Para protexer o teu traballo en Growser, a túa organización poderá ver ou xestionar certa información cando teñas a sesión iniciada en Growser.</translation>
 <translation id="5670438198445413111">Non se puido efectuar a instalación debido a un erro. Volve descargar Growser.</translation>
 <translation id="4217571870635786043">Ditado</translation>
+<translation id="2259803399683359951">Escoller o que queres compartir con Growser</translation>
+<translation id="500270176593123005">Abrir busca con Growser</translation>
+<translation id="2053199730416935114">Busca en Growser</translation>
+<translation id="5643829416494586310">Buscar con Growser</translation>
+<translation id="1846320424163529614">Mostrar busca con Growser na bandexa do sistema e activar atallo de teclado</translation>
+<translation id="1920231236859272373">Mostrar atallos de sitios de Growser</translation>
+<translation id="8449153672360606600">Usa o teclado para navegar entre Gemini en Growser e a pestana que tes aberta.</translation>
+<translation id="3239690985451206831">Growser Origin</translation>
+<translation id="9194561096821877683">Growser</translation>
+<translation id="3721794228264322796">Pechar Gemini en Growser</translation>
+<translation id="2314508080153323869">Gemini en Growser</translation>
 </translationbundle>

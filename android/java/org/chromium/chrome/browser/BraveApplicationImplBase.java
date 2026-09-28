@@ -14,6 +14,8 @@ import org.chromium.base.Log;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.browser.base.SplitCompatApplication;
+import org.chromium.chrome.browser.profiles.OriginalProfileSupplier;
+import org.chromium.chrome.browser.settings.BraveSearchEngineUtils;
 import org.chromium.mojo.bindings.BadMessageException;
 import org.chromium.mojo.bindings.ExceptionHandler;
 
@@ -48,6 +50,13 @@ public class BraveApplicationImplBase extends SplitCompatApplication.Impl {
                             });
             // Growser-317: no Safe Browsing handler through Play services (SafetyNet
             // left the build; the Android path is to go through our proxy, #303).
+
+            // Apply Brave's default search engine as soon as the profile exists, instead of
+            // waiting for BraveActivity. Entry points such as the search widget resolve queries
+            // through SearchActivity, which never runs BraveActivity and would otherwise search
+            // with whatever engine the country default picked.
+            new OriginalProfileSupplier()
+                    .onAvailable(BraveSearchEngineUtils::initializeOnProfileAdded);
 
             // Fix ClassNotFoundException crash in Play Core's in-app review flow.
             //

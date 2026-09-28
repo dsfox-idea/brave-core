@@ -26,11 +26,9 @@ std::vector<mojom::ActionGroupPtr> GetActionMenuList();
 
 // Serialized into the `brave_capability` request field. Any capability a
 // conversation can enable needs an entry, or CreateJSONRequestBody CHECKs.
-// FILES and SUMMARY are absent as they're only ever model capabilities.
 inline constexpr auto kCapabilityStringMap =
     base::MakeFixedFlatMap<mojom::ConversationCapability, std::string_view>(
-        {{mojom::ConversationCapability::CHAT, "chat"},
-         {mojom::ConversationCapability::CONTENT_AGENT, "content_agent"},
+        {{mojom::ConversationCapability::CONTENT_AGENT, "content_agent"},
          {mojom::ConversationCapability::DEEP_RESEARCH, "deep_research"},
          {mojom::ConversationCapability::MATH_ML, "math_ml"}});
 
@@ -87,6 +85,12 @@ inline constexpr uint32_t kMaxTitleLength = 100u;
 // Maximum number of tabs to process in a single chunk for tab organization
 // operations (GetSuggestedTopics, GetFocusTabs).
 inline constexpr size_t kTabListChunkSize = 75;
+
+// Page excerpts sent alongside each tab so the model can infer a topic from
+// content rather than the title alone. Small because a request carries up to
+// `kTabListChunkSize` tabs.
+inline constexpr size_t kMaxPassagesPerTab = 2;
+inline constexpr size_t kMaxPassageBytes = 256;
 
 // Model name to send to the server for Claude Haiku model.
 inline constexpr char kClaudeHaikuModelName[] = "claude-3-haiku";

@@ -624,7 +624,7 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
     private void getAndShowNTPImage() {
         assertNonNull(mSponsoredTab);
         mSponsoredTab.getNTPImage(
-                /* allowSponsoredImage= */ true,
+                /* allowSponsoredContent= */ true,
                 ntpImage -> {
                     if (mActivity == null || mActivity.isFinishing() || mActivity.isDestroyed()) {
                         return;
@@ -637,7 +637,7 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
     private void initilizeSponsoredTab() {
         if (TabAttributes.from(getTab()).get(String.valueOf(getTab().getId())) == null) {
             SponsoredTab sponsoredTab =
-                    new SponsoredTab(mNTPBackgroundImagesBridge, /* allowSponsoredImage= */ true);
+                    new SponsoredTab(mNTPBackgroundImagesBridge, /* allowSponsoredContent= */ true);
             TabAttributes.from(getTab()).set(String.valueOf(getTab().getId()), sponsoredTab);
         }
         mSponsoredTab = TabAttributes.from(getTab()).get(String.valueOf(getTab().getId()));

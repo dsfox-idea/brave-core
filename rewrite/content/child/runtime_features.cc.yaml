@@ -28,6 +28,9 @@ substitutions:
       substitution is now the row rather than the condition: with no row,
       nothing drives the feature and it keeps its status:stable default, which
       is the state Chrome ships. Same outcome, one layer up.
+
+      Growser-335: Chromium 155 dropped the raw_ref() around the feature in
+      every row of that table; the row itself is unchanged.
     regex:
-      re_pattern: '\{"AttributionReporting",\s*raw_ref\(attribution_reporting::features::kConversionMeasurement\)\},'
+      re_pattern: '\{"AttributionReporting",\s*attribution_reporting::features::kConversionMeasurement\},'
       replace: '// growser #109: no row here on purpose - AttributionReporting keeps its stable default so attributionSrc stays exposed as in Chrome.'

@@ -1,5 +1,5 @@
 diff --git a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
-index f4fb803e04a915aeebaaa00305e1c27e79e07f15..47cefa11faa45b347257a137c4d6e799f390f142 100644
+index f54c0ba6b07c18f24b535e39906b08488201017e..b6816a843cd9426e30e84808a73a0c241a2dde3e 100644
 --- a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
 +++ b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
 @@ -47,6 +47,14 @@ namespace safe_browsing {

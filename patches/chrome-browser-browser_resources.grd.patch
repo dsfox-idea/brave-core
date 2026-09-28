@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/browser_resources.grd b/chrome/browser/browser_resources.grd
-index 87ae613c0a25138cb89f88a75b025848ec47b5da..7d73797abc4c1d3c7ec1109e4332cb9353dcb030 100644
+index 6309487fa36359e216109dc910f5bb1bd07c5297..071948e8a5314366c081d9e10c7f537d91d11154 100644
 --- a/chrome/browser/browser_resources.grd
 +++ b/chrome/browser/browser_resources.grd
-@@ -89,15 +89,6 @@
+@@ -90,15 +90,6 @@
        </if>
      </structures>
      <includes>

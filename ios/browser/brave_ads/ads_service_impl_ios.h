@@ -36,12 +36,12 @@ class AdsServiceImplIOS : public AdsService {
  public:
   explicit AdsServiceImplIOS(PrefService& prefs);
 
-  AdsClientNotifier* GetAdsClientNotifier();
-
   AdsServiceImplIOS(const AdsServiceImplIOS&) = delete;
   AdsServiceImplIOS& operator=(const AdsServiceImplIOS&) = delete;
 
   ~AdsServiceImplIOS() override;
+
+  AdsClientNotifier* GetAdsClientNotifier();
 
   void InitializeAds(const std::string& storage_path,
                      std::unique_ptr<AdsClient> ads_client,
@@ -157,8 +157,9 @@ class AdsServiceImplIOS : public AdsService {
   void Shutdown() override;
 
   bool CanStartBatAdsService() const;
-  void InitializeAds(ResultCallback callback);
-  void InitializeAdsCallback(ResultCallback callback, bool success);
+  bool UserHasJoinedBraveRewards() const;
+  void InitializeBatAds(ResultCallback callback);
+  void InitializeBatAdsCallback(ResultCallback callback, bool success);
 
   void ShutdownAdsCallback(ResultCallback callback, bool success);
 
@@ -167,7 +168,9 @@ class AdsServiceImplIOS : public AdsService {
   void ClearAdsDataCallback(ResultCallback callback, bool was_running);
 
   void InitializePrefChangeRegistrar();
-  void OnSponsoredAdsPrefChanged();
+  void OnAdsPrefChanged(const std::string& path);
+  bool ShouldClearAdsData(const std::string& path) const;
+  void MaybeClearAdsData(const std::string& path);
 
   const raw_ref<PrefService> prefs_;
 

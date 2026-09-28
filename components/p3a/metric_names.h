@@ -35,6 +35,7 @@ inline constexpr auto kCollectedTypicalHistograms =
     {"Brave.AIChat.ContextMenu.FreeUsages", MetricConfig{.ephemeral = true}},
     {"Brave.AIChat.ContextMenu.MostUsedAction", MetricConfig{.ephemeral = true}},
     {"Brave.AIChat.ContextMenu.PremiumUsages", MetricConfig{.ephemeral = true}},
+    {"Brave.AIChat.ConversationCount", MetricConfig{.ephemeral = true}},
     {"Brave.AIChat.Enabled.2", {}},
     {"Brave.AIChat.FirstChatPrompts", MetricConfig{.ephemeral = true}},
     {"Brave.AIChat.FullPageSwitches", MetricConfig{.ephemeral = true}},
@@ -66,7 +67,6 @@ inline constexpr auto kCollectedTypicalHistograms =
     {"Brave.AIChat.UsageWeekly", MetricConfig{.ephemeral = true}},
     {"Brave.AIChat.UsedConversationStarter", {}},
     {"Brave.Ads.ClearData", MetricConfig{.ephemeral = true}},
-    {"Brave.Ads.SponsoredEnabled", {}},
     {"Brave.Core.BookmarkCount", {}},
     {"Brave.Core.CrashReportsEnabled", {}},
     {"Brave.Core.DomainsLoaded.Default", {}},
@@ -276,7 +276,7 @@ inline constexpr auto kCollectedSlowHistograms =
 
 inline constexpr auto kCollectedExpressHistograms =
   base::MakeFixedFlatMap<std::string_view, std::optional<MetricConfig>>({
-    {"Brave.Ads.SurveyPanelistEnabled", {}},
+    {"Brave.Ads.SponsoredEnabled", {}},
     {"Brave.AIChat.UsageDaily.2", MetricConfig{
       .ephemeral = true,
       .attributes = MetricAttributes{MetricAttribute::kAnswerIndex, MetricAttribute::kDateOfActivation, MetricAttribute::kVersion, MetricAttribute::kYoi, MetricAttribute::kChannel, MetricAttribute::kPlatform, MetricAttribute::kCountryCode, MetricAttribute::kWoi},

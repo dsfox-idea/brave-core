@@ -5,7 +5,6 @@
 
 import("//brave/browser/ai_chat/android/sources.gni")
 import("//brave/browser/autocomplete/sources.gni")
-import("//brave/browser/brave_account/android/sources.gni")
 import("//brave/browser/brave_referrals/sources.gni")
 import("//brave/browser/brave_vpn/sources.gni")
 import("//brave/browser/browsing_data/sources.gni")
@@ -151,6 +150,7 @@ brave_chrome_browser_deps = [
   "//brave/browser/brave_stats",
   "//brave/browser/component_updater",
   "//brave/browser/download",
+  "//brave/browser/drag_drop",
   "//brave/browser/file_select",
   "//brave/browser/metrics/buildflags",
   "//brave/browser/update/buildflags",
@@ -395,6 +395,10 @@ if (enable_brave_wallet) {
       "//brave/browser/ui/webui/brave_wallet/wallet_panel",
     ]
   }
+  if (enable_snap) {
+    brave_chrome_browser_deps +=
+        [ "//brave/browser/ui/webui/brave_wallet/snap_host" ]
+  }
 }
 
 if (enable_email_aliases) {
@@ -412,8 +416,8 @@ if (enable_local_ai) {
   brave_chrome_browser_deps += [
     "//brave/browser/history_embeddings",
     "//brave/browser/history_embeddings:status",
-    "//brave/browser/passage_embeddings:chromium_impl",
     "//brave/browser/speech",
+    "//brave/browser/speech:chromium_impl",
     "//brave/browser/ui/webui/local_ai",
     "//brave/components/local_ai/core",
     "//brave/components/local_ai/core:features",
@@ -429,10 +433,6 @@ if (enable_skus) {
 }
 
 if (!is_android) {
-  # Brave chrome://history toggle handler + WebUI subclass — desktop only;
-  # upstream Android uses HistoryUIAndroid which we don't extend.
-  brave_chrome_browser_deps += [ "//brave/browser/ui/webui/history" ]
-
   # BraveHidDelegate inherits from ChromeHidDelegate, and referenced by
   # BraveContentBrowserClient, so we put into the same source_set.
   brave_chrome_browser_sources += [
@@ -638,9 +638,7 @@ if (is_android) {
     "//chrome/browser/importer/profile_writer.h",
   ]
 
-  brave_chrome_browser_sources += brave_browser_brave_account_android_sources
   brave_chrome_browser_sources += brave_browser_misc_metrics_android_sources
-  brave_chrome_browser_deps += brave_browser_brave_account_android_deps
 
   if (enable_brave_rewards) {
     brave_chrome_browser_sources += brave_browser_brave_rewards_android_sources
@@ -871,8 +869,10 @@ brave_chrome_browser_ui_allow_circular_includes_from +=
 brave_chrome_browser_ui_deps =
     [ "//brave/components/brave_wallet/common/buildflags" ]
 if (enable_local_ai) {
-  brave_chrome_browser_ui_deps +=
-      [ "//brave/browser/history_embeddings:open_tab_search" ]
+  brave_chrome_browser_ui_deps += [
+    "//brave/browser/history_embeddings:open_tab_search",
+    "//brave/components/history_embeddings:open_tab_passages",
+  ]
 }
 if (enable_brave_wallet) {
   brave_chrome_browser_ui_deps += [

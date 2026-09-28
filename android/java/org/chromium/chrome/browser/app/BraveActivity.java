@@ -139,8 +139,6 @@ import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
 import org.chromium.chrome.browser.set_default_browser.BraveSetDefaultBrowserUtils;
 import org.chromium.chrome.browser.settings.BraveSearchEngineUtils;
 import org.chromium.chrome.browser.settings.SettingsNavigationFactory;
-import org.chromium.chrome.browser.share.ShareDelegate;
-import org.chromium.chrome.browser.share.ShareDelegate.ShareOrigin;
 import org.chromium.chrome.browser.shields.ContentFilteringFragment;
 import org.chromium.chrome.browser.shields.CreateCustomFiltersFragment;
 import org.chromium.chrome.browser.tab.Tab;
@@ -351,11 +349,7 @@ public abstract class BraveActivity extends ChromeActivity
             @Nullable MotionEventInfo triggeringMotion) {
         final Tab currentTab = getActivityTab();
         // Handle items replaced by Brave.
-        if (id == R.id.info_menu_id && currentTab != null) {
-            ShareDelegate shareDelegate = (ShareDelegate) getShareDelegateSupplier().get();
-            shareDelegate.share(currentTab, false, ShareOrigin.OVERFLOW_MENU);
-            return true;
-        } else if (id == R.id.preferences_id) { // Growser-272: reload told the feed
+        if (id == R.id.preferences_id) { // Growser-272: reload told the feed
             final AppMenuPropertiesDelegate delegate = createAppMenuPropertiesDelegate();
             assert delegate instanceof BraveTabbedAppMenuPropertiesDelegate;
             final BraveTabbedAppMenuPropertiesDelegate braveTabbedAppMenuPropertiesDelegate =
@@ -1952,7 +1946,7 @@ public abstract class BraveActivity extends ChromeActivity
         // Growser-270: Leo is out of the product, so it is not a search engine.
 
         QuickSearchEnginesViewAdapter adapter =
-                new QuickSearchEnginesViewAdapter(BraveActivity.this, searchEngines, this);
+                new QuickSearchEnginesViewAdapter(searchEngines, this);
         recyclerView.setAdapter(adapter);
         if (mQuickSearchEnginesView.getParent() == null) {
             WindowManager.LayoutParams params =
@@ -1996,12 +1990,16 @@ public abstract class BraveActivity extends ChromeActivity
                     GOOGLE_SEARCH_ENGINE_KEYWORD.equals(quickSearchEnginesModel.getKeyword())
                             ? QuickSearchEnginesUtil.GOOGLE_SEARCH_ENGINE_URL
                             : quickSearchEnginesModel.getUrl();
-            LoadUrlParams loadUrlParams =
-                    new LoadUrlParams(
-                            quickSearchEngineUrl
-                                    .replace("{searchTerms}", query)
-                                    .replace("{inputEncoding}", "UTF-8"));
-            getActivityTab().loadUrl(loadUrlParams);
+            String searchUrl =
+                    quickSearchEngineUrl
+                            .replace("{searchTerms}", query)
+                            .replace("{inputEncoding}", "UTF-8");
+            // Tells the Brave search backend the query started from the quick search bar.
+            // Leaves any other engine's URL untouched.
+            searchUrl =
+                    BraveIntentHandler.maybeReplaceBraveSearchSource(
+                            searchUrl, BraveIntentHandler.ANDROID_QUICK_SEARCH);
+            getActivityTab().loadUrl(new LoadUrlParams(searchUrl));
         }
         getBraveToolbarLayout().clearOmniboxFocus();
     }
@@ -2037,6 +2035,9 @@ public abstract class BraveActivity extends ChromeActivity
     public void onSharedPreferenceChanged(
             SharedPreferences sharedPreferences, @Nullable String key) {
         if (ChromePreferenceKeys.TOOLBAR_TOP_ANCHORED.equals(key)) {
+            // Upstream moves the address bar live. Only Brave's bottom controls, which the bottom
+            // bar replaces, are built once per run.
+            if (BottomToolbarConfiguration.isAndroidBottomBarEnabled()) return;
             Activity currentActivity = ApplicationStatus.getLastTrackedFocusedActivity();
             if (currentActivity == null) {
                 currentActivity = this;
