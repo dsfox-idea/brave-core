@@ -117,7 +117,14 @@ export function getBuildArgs(config: Config) {
     // Mojo targets are rebuilt (~23000) on each version bump.
     args.enable_mojom_message_id_scrambling = false
 
-    if (process.platform === 'darwin' && args.is_official_build) {
+    // Growser-335: not on iOS. There enable_stripping && !enable_dsyms makes
+    // save_unstripped_output declare <name>.unstripped for every dylib, while
+    // only build/config/mac passes the -Wcrl,unstripped that writes it - so
+    // 155's siso fails the iOS official link ("missing local outputs
+    // PartitionAllocSupport.unstripped"). Keeping dSYMs is also what Brave's
+    // own iOS release does, and we have no RBE cache to protect.
+    if (process.platform === 'darwin' && args.is_official_build
+        && config.targetOS !== 'ios') {
       // Don't create dSYMs in non-true Release builds. dSYMs should be disabled
       // in order to have relocatable compilation so RBE can share the cache
       // across multiple build directories. Enabled dSYMs enforce absolute
