@@ -11,7 +11,8 @@ import XCTest
 
 class SearchEnginesTests: XCTestCase {
 
-  private let defaultSearchEngineName = "Google"
+  // Growser-340: DuckDuckGo is the default in every region (#18, #292).
+  private let defaultSearchEngineName = "DuckDuckGo"
   // BRAVE TODO: This list is not accurate because Brave uses many more engines
   private let expectedEngineNames = ["Qwant", "Bing", "DuckDuckGo", "Google", "StartPage"]
 
@@ -41,7 +42,7 @@ class SearchEnginesTests: XCTestCase {
   }
 
   func testDefaultEngineOnStartup() async throws {
-    // If this is our first run, Google should be first for the en locale.
+    // If this is our first run, the default engine should be first.
     let engines = SearchEngines(locale: Locale(identifier: "pl_PL"))
     await engines.loadSearchEngines()
     XCTAssertEqual(
@@ -221,8 +222,8 @@ class SearchEnginesTests: XCTestCase {
     // default engine should be on second place if a priority engine is present.
     XCTAssertEqual(
       engines.orderedEngines[0].shortName,
-      "Google",
-      "Google should be the first search engine"
+      defaultSearchEngineName,  // Growser-340: ours, not Google (#18).
+      "The default engine should be the first search engine"
     )
   }
 

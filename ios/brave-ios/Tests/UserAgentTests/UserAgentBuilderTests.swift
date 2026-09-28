@@ -50,7 +50,11 @@ class UserAgentBuilderTests: XCTestCase {
 
     XCTAssertEqual(
       iOS16DesktopBraveUA,
-      UserAgentBuilder(device: iPhone, iOSVersion: iOS16).build(desktopMode: true),
+      // Growser-340: explicit, as every other call here - the default follows
+      // kUseBraveUserAgent, which is off in this build.
+      UserAgentBuilder(device: iPhone, iOSVersion: iOS16, useAppIdentifierEnabled: true).build(
+        desktopMode: true
+      ),
       "iOS 16 desktop Brave User Agent on iPhone doesn't match"
     )
 

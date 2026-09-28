@@ -2,6 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import BraveCore
 import Preferences
 import Shared
 import WebKit
@@ -41,7 +42,11 @@ class UserAgentTests: XCTestCase {
   func testBraveWebViewUserAgentOnPhone() {
     if UIDevice.current.userInterfaceIdiom != .phone { return }
 
-    XCTAssertTrue(mobileBraveUARegex(UserAgent.mobile), "User agent computes correctly.")
+    // Growser-340: the Brave/ token comes only with kUseBraveUserAgent, which
+    // is off here, so the default UA is the Safari-shaped one.
+    let expectedUARegex =
+      FeatureList.kUseBraveUserAgent.enabled ? mobileBraveUARegex : mobileUARegex
+    XCTAssertTrue(expectedUARegex(UserAgent.mobile), "User agent computes correctly.")
 
     let expectation = self.expectation(description: "Found Brave user agent")
 
@@ -50,7 +55,7 @@ class UserAgentTests: XCTestCase {
 
     webView.evaluateJavaScript("navigator.userAgent") { result, error in
       let userAgent = result as! String
-      if !self.mobileBraveUARegex(userAgent) || self.desktopBraveUARegex(userAgent) {
+      if !expectedUARegex(userAgent) || self.desktopBraveUARegex(userAgent) {
         XCTFail("User agent did not match expected pattern! \(userAgent)")
       }
       expectation.fulfill()
