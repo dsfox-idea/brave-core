@@ -1759,8 +1759,11 @@ Your Growser account may have other forms of browsing history like searches and 
       <message name="IDS_SAFE_BROWSING_STANDARD_PROTECTION_TITLE" desc="Title for Safe Browsing standard protection mode. [CHAR_LIMIT=32]">
         Standard protection
       </message>
+      <!-- Growser-329: what Standard does on Android here - list lookups
+           through our backend. No download checks (kMaliciousApkDownloadCheck
+           is off), no extensions, no page content sent anywhere. -->
       <message name="IDS_SAFE_BROWSING_STANDARD_PROTECTION_SUMMARY" desc="Summary for Safe Browsing standard protection mode.">
-        Protects against sites, downloads, and extensions that are known to be dangerous. If a page does something suspicious, URLs and bits of page content are sent to Google Safe Browsing.
+        Protects against sites that are known to be dangerous.
       </message>
       <message name="IDS_SAFE_BROWSING_STANDARD_PROTECTION_SUMMARY_PROXY" desc="Summary for Safe Browsing standard protection mode with proxy.">
         Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Growser sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent.
