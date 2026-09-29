@@ -1910,7 +1910,6 @@ if (is_android) {
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.ui",
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.ui.bottombar",
       "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.ui.messages.snackbar",
-      "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.vpn",
       "//brave/browser/customize_menu/android:junit",
       "//brave/browser/first_run/android:junit",
       "//brave/browser/ui/android/favicon:junit",
@@ -1920,6 +1919,11 @@ if (is_android) {
 
     if (enable_brave_wallet) {
       deps += [ "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.crypto_wallet" ]
+    }
+
+    # Growser-330: its tests go with the VPN.
+    if (enable_brave_vpn) {
+      deps += [ "//brave/android/junit:brave_junit_tests_org.chromium.chrome.browser.vpn" ]
     }
   }
 }  # if (is_android) {

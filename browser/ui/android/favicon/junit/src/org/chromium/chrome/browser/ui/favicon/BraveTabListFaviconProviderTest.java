@@ -49,7 +49,8 @@ public class BraveTabListFaviconProviderTest {
     }
 
     @Test
-    public void testGetRoundedChromeFaviconUsesDistinctLightAndDarkBraveVariants() {
+    // Growser-330: one tinted G serves both themes (#266), where Brave drew two lions.
+    public void testGetRoundedChromeFaviconUsesOneMarkForLightAndDark() {
         TabFavicon lightFavicon =
                 createProvider(/* isTabStrip= */ false).getRoundedChromeFavicon(false);
 
@@ -66,7 +67,7 @@ public class BraveTabListFaviconProviderTest {
         Assert.assertEquals(
                 darkFavicon,
                 createProvider(/* isTabStrip= */ false).getRoundedChromeFavicon(false));
-        Assert.assertNotEquals(lightFavicon, darkFavicon);
+        Assert.assertEquals(lightFavicon, darkFavicon);
     }
 
     @Test

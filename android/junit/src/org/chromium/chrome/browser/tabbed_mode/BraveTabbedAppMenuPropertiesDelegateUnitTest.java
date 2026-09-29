@@ -369,15 +369,12 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
             // (shouldShowPageInfoItem returns false for NTP pages).
             R.id.downloads_menu_id,
             R.id.all_bookmarks_menu_id,
-            R.id.brave_wallet_id,
-            R.id.brave_leo_id,
+            // Growser-330: no wallet, Leo, News or VPN items (#270-#275).
             R.id.recent_tabs_menu_id,
             R.id.divider_line_id,
             R.id.preferences_id,
             R.id.divider_line_id,
             R.id.default_browser_promo_menu_id,
-            R.id.brave_news_id,
-            R.id.request_brave_vpn_id,
             R.id.brave_customize_menu_id,
             R.id.exit_id,
         };
@@ -411,15 +408,12 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
             R.id.open_history_menu_id,
             R.id.downloads_menu_id,
             R.id.all_bookmarks_menu_id,
-            R.id.brave_wallet_id,
-            R.id.brave_leo_id,
+            // Growser-330: no wallet, Leo, News or VPN items (#270-#275).
             R.id.recent_tabs_menu_id,
             R.id.divider_line_id,
             R.id.preferences_id,
             R.id.divider_line_id,
             R.id.default_browser_promo_menu_id,
-            R.id.brave_news_id,
-            R.id.request_brave_vpn_id,
             R.id.brave_customize_menu_id,
             R.id.exit_id,
         };
@@ -483,8 +477,7 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         expectedItems.add(R.id.open_history_menu_id);
         expectedItems.add(R.id.downloads_menu_id);
         expectedItems.add(R.id.all_bookmarks_menu_id);
-        expectedItems.add(R.id.brave_wallet_id);
-        expectedItems.add(R.id.brave_leo_id);
+        // Growser-330: no wallet, Leo, News or VPN items (#270-#275).
         expectedItems.add(R.id.recent_tabs_menu_id);
         expectedItems.add(R.id.divider_line_id);
         expectedItems.add(R.id.find_in_page_id);
@@ -497,8 +490,6 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         expectedItems.add(R.id.preferences_id);
         expectedItems.add(R.id.divider_line_id);
         expectedItems.add(R.id.default_browser_promo_menu_id);
-        expectedItems.add(R.id.brave_news_id);
-        expectedItems.add(R.id.request_brave_vpn_id);
         expectedItems.add(R.id.brave_customize_menu_id);
         expectedItems.add(R.id.exit_id);
 

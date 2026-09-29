@@ -3,6 +3,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wallet/common/buildflags/buildflags.gni")
 import("//build/config/android/config.gni")
 import("//third_party/jni_zero/jni_zero.gni")
@@ -85,11 +86,14 @@ if (is_android) {
     ]
   }
 
-  robolectric_library("brave_junit_tests_org.chromium.chrome.browser.vpn") {
-    resources_package = "org.chromium.chrome.browser.vpn"
-    sources = [ "src/org/chromium/chrome/browser/vpn/activities/BraveVpnParentActivityTest.java" ]
+  # Growser-330: the VPN activities it tests leave the build with the VPN (#274).
+  if (enable_brave_vpn) {
+    robolectric_library("brave_junit_tests_org.chromium.chrome.browser.vpn") {
+      resources_package = "org.chromium.chrome.browser.vpn"
+      sources = [ "src/org/chromium/chrome/browser/vpn/activities/BraveVpnParentActivityTest.java" ]
 
-    deps = [ "//chrome/android/junit:chrome_junit_tests_helper" ]
+      deps = [ "//chrome/android/junit:chrome_junit_tests_helper" ]
+    }
   }
 
   if (enable_brave_wallet) {

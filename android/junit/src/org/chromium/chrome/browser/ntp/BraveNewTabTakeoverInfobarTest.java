@@ -33,8 +33,6 @@ import org.chromium.base.ApplicationStatus;
 import org.chromium.base.UnownedUserDataHost;
 import org.chromium.base.test.BaseRobolectricTestRunner;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.BraveRewardsNativeWorker;
-import org.chromium.chrome.browser.BraveRewardsNativeWorkerJni;
 import org.chromium.chrome.browser.preferences.BravePref;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.tab.Tab;
@@ -62,7 +60,6 @@ public class BraveNewTabTakeoverInfobarTest {
     @Mock private Profile mProfile;
     @Mock private PrefService mPrefService;
     @Mock private UserPrefs.Natives mUserPrefsNatives;
-    @Mock private BraveRewardsNativeWorker.Natives mRewardsNatives;
     @Mock private Tab mTab;
     @Mock private WebContents mWebContents;
     @Mock private WindowAndroid mWindowAndroid;
@@ -72,10 +69,8 @@ public class BraveNewTabTakeoverInfobarTest {
 
     @Before
     public void setUp() {
-        // The notice is only for users without Rewards. The mocked natives leave the worker's
-        // native pointer unset, which is how BraveRewardsHelper reports Rewards as disabled.
-        BraveRewardsNativeWorkerJni.setInstanceForTesting(mRewardsNatives);
-
+        // Growser-330: no Rewards to mock - it left the build (#271), and the notice
+        // no longer asks about it.
         UserPrefsJni.setInstanceForTesting(mUserPrefsNatives);
         when(mUserPrefsNatives.get(mProfile)).thenReturn(mPrefService);
         when(mPrefService.getInteger(BravePref.NEW_TAB_TAKEOVER_INFOBAR_REMAINING_DISPLAY_COUNT))

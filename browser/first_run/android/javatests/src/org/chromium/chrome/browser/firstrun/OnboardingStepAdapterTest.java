@@ -119,7 +119,10 @@ public class OnboardingStepAdapterTest {
         assertNotNull(p3aReports);
         assertNotNull(startBrowsing);
         assertEquals(View.INVISIBLE, crashReports.getVisibility());
-        assertEquals(View.INVISIBLE, p3aReports.getVisibility());
+        // Growser-330: a P3A row that is not offered goes whole (#319).
+        assertEquals(
+                View.GONE,
+                holder.itemView.findViewById(R.id.send_p3a_reports_container).getVisibility());
 
         startBrowsing.performClick();
         assertEquals(1, mListener.mDismissCount);
@@ -156,7 +159,10 @@ public class OnboardingStepAdapterTest {
         assertNotNull(crashReports);
         assertNotNull(p3aReports);
         assertEquals(View.VISIBLE, crashReports.getVisibility());
-        assertEquals(View.INVISIBLE, p3aReports.getVisibility());
+        // Growser-330: a P3A row that is not offered goes whole (#319).
+        assertEquals(
+                View.GONE,
+                holder.itemView.findViewById(R.id.send_p3a_reports_container).getVisibility());
     }
 
     @Test
