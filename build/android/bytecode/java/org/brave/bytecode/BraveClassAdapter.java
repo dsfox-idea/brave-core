@@ -67,7 +67,6 @@ public class BraveClassAdapter {
         chain = new BraveFaviconUtilsClassAdapter(chain);
         chain = new BraveFeedSurfaceCoordinatorClassAdapter(chain);
         chain = new BraveFeedSurfaceMediatorClassAdapter(chain);
-        chain = new BraveForegroundServiceUtilsClassAdapter(chain);
         chain = new BraveFragmentDependencyProviderClassAdapter(chain);
         chain = new BraveFreIntentCreatorClassAdapter(chain);
         chain = new BraveHelpAndFeedbackLauncherImplClassAdapter(chain);
@@ -87,9 +86,8 @@ public class BraveClassAdapter {
         chain = new BraveMainPreferenceBaseClassAdapter(chain);
         chain = new BraveManageAccountDevicesLinkViewClassAdapter(chain);
         chain = new BraveManageSyncSettingsClassAdapter(chain);
-        chain = new BraveMediaNotificationControllerDelegateAdapter(chain);
+        // Growser-301: no Brave Talk microphone notification to substitute.
         chain = new BraveMediaSessionHelperClassAdapter(chain);
-        chain = new BraveMediaSessionTabHelperClassAdapter(chain);
         chain = new BraveMenuButtonCoordinatorClassAdapter(chain);
         chain = new BraveMimeUtilsClassAdapter(chain);
         chain = new BraveMostVisitedTilesLayoutBaseClassAdapter(chain);

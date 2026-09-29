@@ -121,8 +121,7 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/media/BraveFullscreenVideoPictureInPictureController.java",
   "../../brave/android/java/org/chromium/chrome/browser/media/BravePictureInPictureActivity.java",
   "../../brave/android/java/org/chromium/chrome/browser/media/BraveYouTubePictureInPictureController.java",
-  "../../brave/android/java/org/chromium/chrome/browser/media/ui/BraveMediaNotificationControllerDelegate.java",
-  "../../brave/android/java/org/chromium/chrome/browser/media/ui/BraveMediaSessionTabHelper.java",
+  # Growser-301: the Brave Talk microphone notification left with Brave Talk.
   "../../brave/android/java/org/chromium/chrome/browser/misc_metrics/MiscAndroidMetricsConnectionErrorHandler.java",
   "../../brave/android/java/org/chromium/chrome/browser/misc_metrics/MiscAndroidMetricsFactory.java",
   "../../brave/android/java/org/chromium/chrome/browser/multiwindow/BraveMultiInstanceManagerApi31.java",
@@ -617,7 +616,6 @@ brave_java_base_module_sources = [
   "//brave/android/java/org/chromium/chrome/browser/autofill/BraveAutofillService.java",
   "//brave/android/java/org/chromium/chrome/browser/base/SplitCompatAutofillService.java",
   "//brave/android/java/org/chromium/chrome/browser/base/SplitCompatJobIntentService.java",
-  "//brave/android/java/org/chromium/chrome/browser/media/ui/BraveMediaNotificationControllerServices.java",
   "//brave/android/java/org/chromium/chrome/browser/widget/quickactionsearchandbookmark/QuickActionSearchAndBookmarkWidgetService.java",
 ]
 

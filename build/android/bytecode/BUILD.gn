@@ -62,7 +62,6 @@ java_binary("java_bytecode_rewriter") {
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveFaviconUtilsClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveFeedSurfaceCoordinatorClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveFeedSurfaceMediatorClassAdapter.java",
-    "//brave/build/android/bytecode/java/org/brave/bytecode/BraveForegroundServiceUtilsClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveFragmentDependencyProviderClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveFreIntentCreatorClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveFullscreenHtmlApiHandlerBaseClassAdapter.java",
@@ -86,9 +85,8 @@ java_binary("java_bytecode_rewriter") {
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveMainPreferenceBaseClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveManageAccountDevicesLinkViewClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveManageSyncSettingsClassAdapter.java",
-    "//brave/build/android/bytecode/java/org/brave/bytecode/BraveMediaNotificationControllerDelegateAdapter.java",
+    # Growser-301: the Brave Talk microphone notification adapters are gone.
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveMediaSessionHelperClassAdapter.java",
-    "//brave/build/android/bytecode/java/org/brave/bytecode/BraveMediaSessionTabHelperClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveMenuButtonCoordinatorClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveMessageQueueMediatorClassAdapter.java",
     "//brave/build/android/bytecode/java/org/brave/bytecode/BraveMimeUtilsClassAdapter.java",

@@ -460,14 +460,7 @@ public class BytecodeTest {
         Assert.assertTrue(classExists("org/chromium/content_public/browser/MediaSessionObserver"));
         Assert.assertTrue(
                 classExists("org/chromium/components/browser_ui/media/MediaSessionHelper"));
-        Assert.assertTrue(
-                classExists(
-                        "org/chromium/components/browser_ui/notifications/ForegroundServiceUtils"));
-        Assert.assertTrue(
-                classExists(
-                        "org/chromium/chrome/browser/media/ui/ChromeMediaNotificationControllerDelegate")); // presubmit: ignore-long-line
-        Assert.assertTrue(
-                classExists("org/chromium/chrome/browser/media/ui/MediaSessionTabHelper"));
+        // Growser-301: the Brave Talk microphone notification adapters are gone.
         Assert.assertTrue(
                 classExists(
                         "org/chromium/chrome/browser/media/FullscreenVideoPictureInPictureController")); // presubmit: ignore-long-line
@@ -1091,12 +1084,6 @@ public class BytecodeTest {
                         MethodModifier.REGULAR,
                         MediaSessionObserver.class,
                         MediaSession.class));
-        Assert.assertTrue(
-                methodExists(
-                        "org/chromium/chrome/browser/media/ui/ChromeMediaNotificationControllerDelegate", // presubmit: ignore-long-line
-                        "getContext",
-                        MethodModifier.STATIC,
-                        Context.class));
         Assert.assertTrue(
                 methodExists(
                         "org/chromium/chrome/browser/toolbar/ToolbarPositionController", // presubmit: ignore-long-line
@@ -2368,24 +2355,6 @@ public class BytecodeTest {
 
         Assert.assertTrue(
                 constructorsMatch(
-                        "org/chromium/components/browser_ui/notifications/ForegroundServiceUtils", // presubmit: ignore-long-line
-                        "org/chromium/components/browser_ui/notifications/BraveForegroundServiceUtils")); // presubmit: ignore-long-line
-
-        Assert.assertTrue(
-                constructorsMatch(
-                        "org/chromium/chrome/browser/media/ui/ChromeMediaNotificationControllerDelegate", // presubmit: ignore-long-line
-                        "org/chromium/chrome/browser/media/ui/BraveMediaNotificationControllerDelegate", // presubmit: ignore-long-line
-                        int.class,
-                        int.class));
-
-        Assert.assertTrue(
-                constructorsMatch(
-                        "org/chromium/chrome/browser/media/ui/MediaSessionTabHelper", // presubmit:
-                        // ignore-long-line
-                        "org/chromium/chrome/browser/media/ui/BraveMediaSessionTabHelper", // presubmit: ignore-long-line
-                        Tab.class));
-        Assert.assertTrue(
-                constructorsMatch(
                         "org/chromium/chrome/browser/fullscreen/FullscreenHtmlApiHandlerCompat",
                         "org/chromium/chrome/browser/fullscreen/BraveFullscreenHtmlApiHandlerCompat", // presubmit: ignore-long-line
                         Activity.class,
@@ -2889,8 +2858,6 @@ public class BytecodeTest {
                 fieldExists(
                         "org/chromium/components/browser_ui/media/MediaSessionHelper",
                         "mMediaSessionActions"));
-        Assert.assertTrue(
-                fieldExists("org/chromium/chrome/browser/media/ui/MediaSessionTabHelper", "mTab"));
         Assert.assertTrue(
                 fieldExists(
                         "org/chromium/chrome/browser/customtabs/BaseCustomTabActivity",

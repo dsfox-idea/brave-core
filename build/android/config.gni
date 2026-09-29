@@ -65,7 +65,7 @@ brave_chrome_java_deps = [
   "//brave/components/brave_origin/mojom:mojom_java",
   "//brave/components/brave_shields/core/common:mojom_java",
   "//brave/components/browser_ui/media/android:java",
-  "//brave/components/browser_ui/notifications/android:java",
+  # Growser-301: BraveForegroundServiceUtils left with the Talk notification.
   "//brave/components/browser_ui/settings/android:java",
   "//brave/components/browser_ui/site_settings/android:java",
   "//brave/components/browser_ui/widget/android:java",
