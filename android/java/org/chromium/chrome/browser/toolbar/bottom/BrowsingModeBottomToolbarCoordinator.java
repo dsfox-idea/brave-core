@@ -67,6 +67,10 @@ public class BrowsingModeBottomToolbarCoordinator {
     /** The tab switcher button view that lives in the bottom toolbar. */
     private final TabSwitcherButtonView mTabSwitcherButtonView;
 
+    // Growser-341: names the tab switcher button by its tab count.
+    private final Callback<Integer> mTabCountDescriber = this::describeTabSwitcherButton;
+    private @Nullable MonotonicObservableSupplier<Integer> mTabCountSupplier;
+
     /** The view group that includes all views shown on browsing mode */
     private final BrowsingModeBottomToolbarLinearLayout mToolbarRoot;
 
@@ -223,6 +227,10 @@ public class BrowsingModeBottomToolbarCoordinator {
             mTabSwitcherButtonCoordinator.setThemeColorProvider(themeColorProvider);
             mTabSwitcherButtonCoordinator.setTabCountSupplier(
                     tabModelSelector.getCurrentModelTabCountSupplier());
+            // Growser-341: nothing else describes this button, and ListMenuButton falls back
+            // to the app menu's description ("Customize and control ...").
+            mTabCountSupplier = tabModelSelector.getCurrentModelTabCountSupplier();
+            mTabCountSupplier.addSyncObserverAndPostIfNonNull(mTabCountDescriber);
         }
 
         mBookmarkButton.setThemeColorProvider(themeColorProvider);
@@ -308,10 +316,26 @@ public class BrowsingModeBottomToolbarCoordinator {
         mBraveHomeButton.destroy();
         mSearchAccelerator.destroy();
         mTabSwitcherButtonCoordinator.destroy();
+        // Growser-341
+        if (mTabCountSupplier != null) {
+            mTabCountSupplier.removeObserver(mTabCountDescriber);
+            mTabCountSupplier = null;
+        }
         mBookmarkButton.destroy();
         if (mThemeColorProvider != null) {
             mThemeColorProvider.removeTintObserver(mMenuButton);
         }
+    }
+
+    // Growser-341: the description upstream's ToggleTabStackButton gives the top toolbar's twin.
+    private void describeTabSwitcherButton(Integer tabCount) {
+        mTabSwitcherButtonView.setContentDescription(
+                mTabSwitcherButtonView
+                        .getResources()
+                        .getQuantityString(
+                                R.plurals.accessibility_toolbar_btn_tabswitcher_toggle_default,
+                                tabCount,
+                                tabCount));
     }
 
     public void updateBookmarkButton(boolean isBookmarked, boolean editingAllowed) {
