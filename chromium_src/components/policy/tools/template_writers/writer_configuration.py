@@ -51,7 +51,9 @@ _BRAVE_VALUES = {
     },
     'admx_prefix': 'growser',
     'linux_policy_path': '/etc/growser/policies/',
-    'bundle_id': 'com.growser.ios.core',
+    # Growser-223: the iOS app's own id (ios/Info.plist) - growser.com is
+    # not ours, so nothing we ship is com.growser.
+    'bundle_id': 'org.growser.ios.core',
 }
 
 def _merge_dicts(src, dst):
