@@ -3226,12 +3226,7 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     <message name="IDS_LINK_SUBSCRIPTION_DIALOG_TEXT" desc="Growser vpn link subscription dialog text">
       Your Growser VPN subscription can protect up to 5 devices, across Android, iOS, and desktop. Just link your Google Play subscription to your Growser account.
     </message>
-    <message name="IDS_SAFE_BROWSING_NO_GOOGLE_PLAY_SERVICES_DIALOG_TITLE" desc="Growser no Google Play Services dialog title">
-      Cannot enable Safe Browsing
-    </message>
-    <message name="IDS_SAFE_BROWSING_NO_GOOGLE_PLAY_SERVICES_DIALOG_MESSAGE" desc="Growser no Google Play Services dialog message">
-      Safe Browsing has been disabled on your device. To enable it, ensure that Google Play Services is installed and that it's up to date.
-    </message>
+    <!-- Growser-328: the no-Play-services dialog left with its path. -->
     <message name="IDS_BRAVE_ADS_TEXT" desc="Growser ads text">
       Growser Ads
     </message>
@@ -3737,9 +3732,7 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     <message name="IDS_BRAVE_CLEAR_AI_HISTORY_SUMMARY" desc="A summary to delete Leo AI history">
       Chat history
     </message>
-    <message name="IDS_SAFEBROWSING_ERRORS_PREF" desc="A preferences to show Safe Browsing errors">
-      Show Safe Browsing errors
-    </message>
+    <!-- Growser-328: the Safe Browsing errors switch is gone. -->
     <message name="IDS_PRIVATE_TAB_SCREENSHOT_TITLE" desc="A title to show private tab screenshot">
       Allow screenshots in private tabs
     </message>

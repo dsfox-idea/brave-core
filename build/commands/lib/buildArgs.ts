@@ -12,7 +12,6 @@ import path from 'node:path'
 const FORWARD_ENV_CONFIG_VARS_TO_GN_ARGS = [
   'brave_android_developer_options_code',
   'brave_google_api_key',
-  'brave_safebrowsing_api_key',
   'brave_services_key',
   'brave_stats_api_key',
   'brave_sync_endpoint',
@@ -278,7 +277,6 @@ export function getBuildArgs(config: Config) {
 
     args.brave_android_developer_options_code =
       config.braveAndroidDeveloperOptionsCode
-    args.brave_safebrowsing_api_key = config.braveAndroidSafeBrowsingApiKey
 
     args.android_aab_to_apk = config.androidAabToApk
 

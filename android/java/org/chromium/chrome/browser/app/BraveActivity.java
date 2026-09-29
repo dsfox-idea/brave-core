@@ -1617,7 +1617,7 @@ public abstract class BraveActivity extends ChromeActivity
     @NativeMethods
     interface Natives {
         void restartStatsUpdater();
-        String getSafeBrowsingApiKey();
+        // Growser-328: getSafeBrowsingApiKey left with the Play-services path.
     }
 
     @Override

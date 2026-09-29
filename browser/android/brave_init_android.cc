@@ -3,11 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-#include <string>
-
 #include "base/android/jni_android.h"
-#include "base/android/jni_string.h"
-#include "brave/browser/android/safe_browsing/buildflags.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_stats/buildflags.h"
 #include "chrome/android/chrome_jni_headers/BraveActivity_jni.h"
@@ -28,11 +24,7 @@ static void JNI_BraveActivity_RestartStatsUpdater(JNIEnv* env) {
 #endif
 }
 
-static base::android::ScopedJavaLocalRef<jstring>
-JNI_BraveActivity_GetSafeBrowsingApiKey(JNIEnv* env) {
-  return base::android::ConvertUTF8ToJavaString(
-      env, BUILDFLAG(SAFEBROWSING_API_KEY));
-}
+// Growser-328: GetSafeBrowsingApiKey left with the Play-services path.
 
 }  // namespace android
 }  // namespace chrome

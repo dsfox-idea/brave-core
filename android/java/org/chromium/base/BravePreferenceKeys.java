@@ -124,9 +124,6 @@ public final class BravePreferenceKeys {
             "quick_search_engines_previous_dse";
     public static final String MIGRATE_YAHOO_JP_QSE = "migrate_yahoo_jp_qse";
 
-    public static final String BRAVE_SAFE_BROWSING_ERRORS =
-            "org.chromium.brave.browser.Brave_SAFE_BROWSING_ERRORS";
-
     public static final String DEFAULT_SEARCH_ENGINE_CHANGED = "default_search_engine_changed";
     public static final String STANDARD_DSE_SHORTNAME = "standard_dse_shortname";
     public static final String PRIVATE_DSE_SHORTNAME = "private_dse_shortname";

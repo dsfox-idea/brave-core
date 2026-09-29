@@ -25,8 +25,5 @@
         android:key="qa_preferences"
         android:title="QA Preferences"/>
     <!-- Growser-271: the Rewards Debug screen left with rewards. -->
-    <org.chromium.chrome.browser.settings.developer.BraveSafeBrowsingErrorsPreference
-        android:key="safebrowsing_errors_switch"
-        android:title="@string/safebrowsing_errors_pref"
-        android:defaultValue="false" />
+    <!-- Growser-328: the Safe Browsing errors switch wrote a key nothing read. -->
 </PreferenceScreen>

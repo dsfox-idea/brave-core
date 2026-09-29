@@ -654,7 +654,7 @@ if (is_android) {
     "//brave/browser/android:android_browser_process",
     "//brave/browser/android:tabs_impl",
     "//brave/browser/android/preferences",
-    "//brave/browser/android/safe_browsing:buildflags",
+    # Growser-328: no Safe Browsing API key to hand to Java.
     "//brave/browser/android/youtube_script_injector",
     "//brave/browser/android/youtube_script_injector:features",
     "//brave/browser/download/android:jni_headers",

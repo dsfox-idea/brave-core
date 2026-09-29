@@ -187,7 +187,7 @@ brave_java_sources = [
   # Growser-317: the rate package (prompts, feedback to Brave) removed.
   # Growser-317: referrer/BraveReferrer.java removed with the Play Install Referrer.
   "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/BraveStandardProtectionSettingsFragment.java",
-  "../../brave/android/java/org/chromium/chrome/browser/safe_browsing/settings/NoGooglePlayServicesDialog.java",
+  # Growser-328: NoGooglePlayServicesDialog had no callers.
   "../../brave/android/java/org/chromium/chrome/browser/searchwidget/SearchWidgetProviderActivity.java",
   "../../brave/android/java/org/chromium/chrome/browser/set_default_browser/BraveSetDefaultBrowserUtils.java",
   "../../brave/android/java/org/chromium/chrome/browser/set_default_browser/SetDefaultBrowserBottomSheetFragment.java",
@@ -225,7 +225,7 @@ brave_java_sources = [
   "../../brave/android/java/org/chromium/chrome/browser/settings/MediaPreferences.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/SearchPreference.java",
   "../../brave/android/java/org/chromium/chrome/browser/settings/developer/BraveQAPreferences.java",
-  "../../brave/android/java/org/chromium/chrome/browser/settings/developer/BraveSafeBrowsingErrorsPreference.java",
+  # Growser-328: the Safe Browsing errors switch wrote a key nothing read.
   "../../brave/android/java/org/chromium/chrome/browser/share/BraveShareDelegateImpl.java",
   "../../brave/android/java/org/chromium/chrome/browser/shields/AddCustomFilterListsFragment.java",
   "../../brave/android/java/org/chromium/chrome/browser/shields/BraveContentFilteringListener.java",

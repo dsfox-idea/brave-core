@@ -96,7 +96,6 @@ export class Config {
   sisoLimits: Record<string, any>
   sisoJobsLimit: number | undefined
   sisoCacheDir: string | undefined
-  braveAndroidSafeBrowsingApiKey: string | undefined
   braveAndroidDeveloperOptionsCode: string | undefined
   braveAndroidKeystorePath: string | undefined
   braveAndroidKeystoreName: string | undefined
@@ -239,9 +238,6 @@ export class Config {
     this.sisoJobsLimit = undefined
     this.sisoCacheDir =
       envConfig.getPath(['siso_cache_dir']) || this.resolveCacheDir('siso')
-    this.braveAndroidSafeBrowsingApiKey = envConfig.getString([
-      'brave_safebrowsing_api_key',
-    ])
     this.braveAndroidDeveloperOptionsCode = envConfig.getString([
       'brave_android_developer_options_code',
     ])

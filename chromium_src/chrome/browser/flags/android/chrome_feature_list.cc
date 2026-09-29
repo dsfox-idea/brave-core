@@ -4,7 +4,6 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #include "base/feature_list.h"
-#include "brave/browser/android/safe_browsing/features.h"
 #include "brave/browser/android/youtube_script_injector/features.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
@@ -171,7 +170,6 @@ BASE_FEATURE(kGrowserEmailAliasesOff,
     &preferences::features::kBraveBackgroundVideoPlayback,                     \
     &preferences::features::kBravePictureInPictureForYouTubeVideos,            \
     BRAVE_REQUEST_OTR_FLAG                                     \
-    &safe_browsing::features::kBraveAndroidSafeBrowsing,                       \
     &debounce::features::kBraveDebounce,                                       \
     &webcompat::features::kBraveWebcompatExceptionsService,                    \
     &net::features::kBraveHttpsByDefault,                                      \
