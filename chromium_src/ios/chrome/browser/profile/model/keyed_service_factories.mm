@@ -57,6 +57,14 @@
 #include "ios/chrome/browser/push_notification/model/push_notification_profile_service_factory.h"
 #include "ios/chrome/browser/reading_list/model/reading_list_model_factory.h"
 #include "ios/chrome/browser/safe_browsing/model/safe_browsing_client_factory.h"
+// Growser-343: registers each profile with the Safe Browsing service, which
+// only starts its local database for a profile it has been told about.
+#include "ios/chrome/browser/safe_browsing/model/safe_browsing_helper_factory.h"
+// Growser-343: the Safe Browsing blocking page reaches these two when shown:
+// enterprise reporting (sends nothing without a policy) and the local
+// feature-engagement tracker. Unregistered, the first warning DCHECKs.
+#import "ios/chrome/browser/enterprise/connectors/reporting/ios_reporting_event_router_factory.h"
+#import "ios/chrome/browser/feature_engagement/model/tracker_factory.h"
 #include "ios/chrome/browser/safe_browsing/model/safe_browsing_metrics_collector_factory.h"
 #include "ios/chrome/browser/saved_tab_groups/model/tab_group_service_factory.h"
 #include "ios/chrome/browser/saved_tab_groups/model/tab_group_sync_service_factory.h"
@@ -163,6 +171,9 @@ void EnsureProfileKeyedServiceFactoriesBuilt() {
   ReadingListModelFactory::GetInstance();
   RemoteSuggestionsServiceFactory::GetInstance();
   SafeBrowsingClientFactory::GetInstance();
+  SafeBrowsingHelperFactory::GetInstance();  // Growser-343
+  enterprise_connectors::IOSReportingEventRouterFactory::GetInstance();  // Growser-343
+  feature_engagement::TrackerFactory::GetInstance();  // Growser-343
   SafeBrowsingMetricsCollectorFactory::GetInstance();
   SendTabToSelfSyncServiceFactory::GetInstance();
   SessionRestorationServiceFactory::GetInstance();

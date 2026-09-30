@@ -41,6 +41,10 @@ OBJC_EXPORT
 @property(readonly) BraveWebViewConfiguration* defaultWebViewConfiguration;
 @property(readonly)
     BraveWebViewConfiguration* nonPersistentWebViewConfiguration;
+/// Growser-343: Chromium Safe Browsing (local list through our backend) for
+/// this profile and its private profile. The app writes its own setting here
+/// at startup and on every change.
+@property(nonatomic) BOOL safeBrowsingEnabled;
 - (void)notifyLastPrivateTabClosed;
 
 @end

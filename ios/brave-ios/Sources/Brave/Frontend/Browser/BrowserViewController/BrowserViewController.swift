@@ -290,6 +290,8 @@ public class BrowserViewController: UIViewController {
     self.attributionManager = attributionManager
     self.braveCore = braveCore
     self.profileController = profileController
+    // Growser-343: the saved choice drives Chromium Safe Browsing from launch.
+    profileController.safeBrowsingEnabled = Preferences.Shields.googleSafeBrowsing.value
     self.bookmarkManager = BookmarkManager(bookmarksAPI: profileController.bookmarksAPI)
     self.crashedLastSession = crashedLastSession
     self.privateBrowsingManager = privateBrowsingManager
@@ -2619,9 +2621,9 @@ extension BrowserViewController: PreferencesObserver {
         $0.viewScale = zoomLevel
       })
     case Preferences.Shields.googleSafeBrowsing.key:
-      // Toggling Google safe browsing requires a hard reset of Webkit configuration.
-      tabManager.reset()
-      tabManager.reloadSelectedTab()
+      // Growser-343: a Chromium pref now, which SafeBrowsingTabHelper follows
+      // live - no WebKit reset.
+      profileController.safeBrowsingEnabled = Preferences.Shields.googleSafeBrowsing.value
     // Growser-290: no Rewards preferences.
     // Growser-282: no playlist URL-bar preference.
     case Preferences.PrivacyReports.captureShieldsData.key:
