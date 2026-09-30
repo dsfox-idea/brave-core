@@ -1,8 +1,22 @@
 diff --git a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
-index 4d5c202aa7cf48a50e6a109d3dd93e4dd1ce51bc..9a97b87799c8a48e3c39884fca9b95b217a944df 100644
+index 4d5c202aa7cf48a50e6a109d3dd93e4dd1ce51bc..45789940f6a5978916ea191a658895e2485bddb2 100644
 --- a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
 +++ b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
-@@ -226,7 +226,7 @@ PlatformType GetCurrentPlatformType() {
+@@ -39,8 +39,13 @@ namespace safe_browsing {
+ const char* g_sbv4_url_prefix_for_testing = nullptr;
+ const char* g_sbv5_url_prefix_for_testing = nullptr;
+ 
++#if BUILDFLAG(IS_IOS)  // Growser-343: see the recipe
++const char kSbV4UrlPrefix[] = "https://backend.growser.org/v4";
++const char kSbV5UrlPrefix[] = "https://backend.growser.org/v5";
++#else
+ const char kSbV4UrlPrefix[] = "https://safebrowsing.googleapis.com/v4";
+ const char kSbV5UrlPrefix[] = "https://safebrowsing.googleapis.com/v5";
++#endif
+ 
+ const base::FilePath::CharType kStoreSuffix[] = FILE_PATH_LITERAL(".store");
+ 
+@@ -226,7 +231,7 @@ PlatformType GetCurrentPlatformType() {
  #elif BUILDFLAG(IS_MAC)
    return OSX_PLATFORM;
  #else
