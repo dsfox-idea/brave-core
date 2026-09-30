@@ -18,3 +18,31 @@ substitutions:
     regex:
       pattern: 'return ANDROID_PLATFORM;'
       replace: 'return ANY_PLATFORM;  // Growser-303: see the recipe'
+  - description: |-
+      Growser-343: on iOS, Safe Browsing talks to our backend itself.
+
+      Desktop and Android reach backend.growser.org because Brave's static
+      redirect rewrites safebrowsing.googleapis.com. iOS runs its Safe
+      Browsing requests on a private URLRequestContext with no network
+      delegate (ios/components/security_interstitials/safe_browsing/
+      safe_browsing_service_impl.mm), so nothing rewrites them and they
+      would go to Google with the user's IP. The prefix itself points at
+      the backend, which proxies /v4/ and adds our key. Measured there as
+      client "chromium": the IOS_PLATFORM lists update (200) and carry
+      Google's test pages, and full-hash lookups return them. V5
+      (kLocalListsUseSBv5) is disabled by default and we run no Finch;
+      its search-hashes prefix points here too, so it would fail at our
+      backend. Its list download is a separate hardcoded URL in
+      v5_update_protocol_manager.cc, left as is while V5 stays off.
+    regex:
+      pattern: |-
+        const char kSbV4UrlPrefix[] = "https://safebrowsing.googleapis.com/v4";
+        const char kSbV5UrlPrefix[] = "https://safebrowsing.googleapis.com/v5";
+      replace: |-
+        #if BUILDFLAG(IS_IOS)  // Growser-343: see the recipe
+        const char kSbV4UrlPrefix[] = "https://backend.growser.org/v4";
+        const char kSbV5UrlPrefix[] = "https://backend.growser.org/v5";
+        #else
+        const char kSbV4UrlPrefix[] = "https://safebrowsing.googleapis.com/v4";
+        const char kSbV5UrlPrefix[] = "https://safebrowsing.googleapis.com/v5";
+        #endif
