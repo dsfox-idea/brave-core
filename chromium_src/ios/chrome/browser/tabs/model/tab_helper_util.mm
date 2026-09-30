@@ -18,6 +18,13 @@
 #import "ios/components/security_interstitials/https_only_mode/https_only_mode_container.h"
 #import "ios/components/security_interstitials/ios_blocking_page_tab_helper.h"
 #import "ios/web/public/web_state.h"
+// Growser-343: Chromium's Safe Browsing replaces WebKit's warning.
+#import "components/safe_browsing/ios/browser/safe_browsing_url_allow_list.h"
+#import "ios/chrome/browser/safe_browsing/model/safe_browsing_client_factory.h"
+#import "ios/components/security_interstitials/safe_browsing/safe_browsing_client.h"
+#import "ios/components/security_interstitials/safe_browsing/safe_browsing_query_manager.h"
+#import "ios/components/security_interstitials/safe_browsing/safe_browsing_tab_helper.h"
+#import "ios/components/security_interstitials/safe_browsing/safe_browsing_unsafe_resource_container.h"
 
 void AttachTabHelpers(web::WebState* web_state, TabHelperFilter filter_flags) {
   IOSTaskTabHelper::CreateForWebState(web_state);
@@ -38,4 +45,15 @@ void AttachTabHelpers(web::WebState* web_state, TabHelperFilter filter_flags) {
         HttpsUpgradeServiceFactory::GetForProfile(profile));
     HttpsOnlyModeContainer::CreateForWebState(web_state);
   }
+  // Growser-343: upstream's four Safe Browsing helpers. The lookup runs on the
+  // local database through our backend; the blocking page comes from
+  // ChromeWebClient::PrepareErrorPage and its buttons from
+  // IOSBlockingPageTabHelper above. No SnapshotTabHelper here, so
+  // CreateClientSideDetectionHost returns nullptr: no page content is read.
+  SafeBrowsingClient* client = SafeBrowsingClientFactory::GetForProfile(
+      ProfileIOS::FromBrowserState(web_state->GetBrowserState()));
+  SafeBrowsingQueryManager::CreateForWebState(web_state, client);
+  SafeBrowsingTabHelper::CreateForWebState(web_state, client);
+  SafeBrowsingUrlAllowList::CreateForWebState(web_state);
+  SafeBrowsingUnsafeResourceContainer::CreateForWebState(web_state);
 }

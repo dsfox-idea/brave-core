@@ -1599,7 +1599,9 @@ extension WKWebViewConfiguration {
   /// from inside Chromium's `WKWebViewConfigurationProvider::ResetWithWebViewConfiguration`
   func prepareBraveConfiguration() {
     upgradeKnownHostsToHTTPS = Preferences.Shields.httpsUpgradeLevel.isEnabled
-    preferences.isFraudulentWebsiteWarningEnabled = Preferences.Shields.googleSafeBrowsing.value
+    // Growser-343: Chromium Safe Browsing does the checking (through our
+    // backend), so WebKit's own warning, which asks Apple, stays off.
+    preferences.isFraudulentWebsiteWarningEnabled = false
 
     if FeatureList.kWebKitAdvancedPrivacyProtections.enabled {
       let senderKeyPath = String(format: "_setNetw%@rityEnabled:", "orkConnectionInteg")

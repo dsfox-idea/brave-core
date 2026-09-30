@@ -44,8 +44,10 @@ void BraveWKWebViewConfigurationProvider::ResetWithWebViewConfiguration(
     NOTREACHED() << "Error setting value for longPressActionsEnabled";
   }
 
-  // Restore Apple's safe browsing implementation
-  [[configuration_ preferences] setFraudulentWebsiteWarningEnabled:YES];
+  // Growser-343: Chromium's Safe Browsing (SafeBrowsingTabHelper, local list
+  // through our backend) replaces Apple's, so WebKit's warning stays off here,
+  // before any web view copies this configuration.
+  [[configuration_ preferences] setFraudulentWebsiteWarningEnabled:NO];
 
   // Reset fullscreen to default as it wasn't set in Brave
   [[configuration_ preferences] setElementFullscreenEnabled:NO];
