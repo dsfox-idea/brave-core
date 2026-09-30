@@ -143,8 +143,8 @@
     _profile = _profileKeepAlive.profile();
     _profileBridge = [[ProfileBridgeImpl alloc] initWithProfile:_profile];
 
-    // Disable Safe-Browsing via Prefs
-    _profile->GetPrefs()->SetBoolean(prefs::kSafeBrowsingEnabled, false);
+    // Growser-343: no longer forced off here; the app sets it through
+    // safeBrowsingEnabled.
 
     // Setup main browser
     _browserList = BrowserListFactory::GetForProfile(_profile);
@@ -397,6 +397,15 @@
 }
 
 // Matches lastIncognitoTabClosed from Chrome's SceneController
+- (BOOL)safeBrowsingEnabled {  // Growser-343
+  return _profile->GetPrefs()->GetBoolean(prefs::kSafeBrowsingEnabled);
+}
+
+- (void)setSafeBrowsingEnabled:(BOOL)enabled {  // Growser-343
+  // The private profile reads this through its pref overlay.
+  _profile->GetPrefs()->SetBoolean(prefs::kSafeBrowsingEnabled, enabled);
+}
+
 - (void)notifyLastPrivateTabClosed {
   // If no other window has incognito tab, then destroy and rebuild the
   // BrowserState. Otherwise, just do the state transition animation.
