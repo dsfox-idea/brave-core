@@ -267,7 +267,7 @@ bool SidebarPinnedTabsView::IsHostingEnabled() const {
   }
 
   // Vertical tabs already show pinned tabs in a column of their own.
-  auto* vertical_tab_controller = VerticalTabController::FromBrowser(browser_);
+  auto* vertical_tab_controller = VerticalTabController::From(browser_);
   if (vertical_tab_controller &&
       vertical_tab_controller->ShouldShowBraveVerticalTabs()) {
     return false;
