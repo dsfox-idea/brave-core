@@ -169,12 +169,9 @@ final class BrowserToolbarState {
       loadingProgress = nil
     }
 
-    let isPlaylistButtonVisible =
-      tab.visibleURL?.isPlaylistSupportedSiteURL == true
-      && tab.playlist?.isPlaylistBlocked(tab.visibleURL) == false
-    // The playlist button takes priority over the reader mode button
-    readerModeState =
-      isPlaylistButtonVisible ? .unavailable : (tab.readerMode?.state ?? .unavailable)
+    // Growser-282: no Playlist, so its button never takes the reader mode
+    // button's place.
+    readerModeState = tab.readerMode?.state ?? .unavailable
   }
 
   private func updateNavigationState(from tab: some TabState) {

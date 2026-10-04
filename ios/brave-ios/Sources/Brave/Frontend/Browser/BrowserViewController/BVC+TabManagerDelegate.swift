@@ -240,12 +240,6 @@ extension BrowserViewController: TabManagerDelegate {
     clearPageZoomDialog()
     updateTabsBarVisibility()
 
-    if let tab = selected {
-      topToolbar.locationView.loading = tab.isLoading
-      updateBackForwardActionStatus(for: tab)
-      navigationToolbar.updateForwardStatus(tab.canGoForward)
-    }
-
     // Growser-282: Playlist is out of the product, so the reader-mode button
     // always owns the slot.
     let shouldShowPlaylistURLBarButton = false
@@ -258,8 +252,6 @@ extension BrowserViewController: TabManagerDelegate {
           hideReaderModeBar(animated: false)
         }
       }
-    } else {
-      topToolbar.updateReaderModeState(.unavailable)
     }
 
     if FeatureList.kBraveTranslateEnabled.enabled, let selectedTab = selected,

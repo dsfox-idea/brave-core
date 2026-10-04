@@ -178,42 +178,6 @@ extension BrowserViewController: TabObserver {
     }
 
     // Growser-290: no Rewards same-document reporting.
-
-    // Update the estimated progress when the URL changes. Estimated progress may update to 0.1 when the url
-    // is still an internal URL even though a request may be pending for a web page.
-    if tab === tabManager.selectedTab, let url = tab.visibleURL,
-      !url.isNewTabURL, !InternalURL.isValid(url: url), tab.isLoading, tab.estimatedProgress > 0
-    {
-      topToolbar.updateProgressBar(Float(tab.estimatedProgress))
-    }
-
-    Task {
-      if self.tabManager.selectedTab === tab {
-        self.updateToolbarSecureContentState(tab.visibleSecureContentState)
-      }
-    }
-  }
-
-  public func tabDidChangeLoadProgress(_ tab: some TabState) {
-    guard tab === tabManager.selectedTab else { return }
-    if let url = tab.visibleURL, !url.isNewTabURL, !InternalURL.isValid(url: url), tab.isLoading {
-      topToolbar.updateProgressBar(Float(tab.estimatedProgress))
-    } else {
-      topToolbar.hideProgressBar()
-    }
-  }
-
-  public func tabDidStartLoading(_ tab: some TabState) {
-    guard tab === tabManager.selectedTab else { return }
-    topToolbar.locationView.loading = tab.isLoading
-  }
-
-  public func tabDidStopLoading(_ tab: some TabState) {
-    guard tab === tabManager.selectedTab else { return }
-    topToolbar.locationView.loading = tab.isLoading
-    if tab.estimatedProgress != 1 {
-      topToolbar.updateProgressBar(1)
-    }
   }
 
   public func tabDidChangeTitle(_ tab: some TabState) {
