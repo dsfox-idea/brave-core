@@ -20,7 +20,6 @@ import org.chromium.base.test.BaseRobolectricTestRunner;
 import org.chromium.chrome.browser.native_page.BraveNtpDelegate;
 import org.chromium.chrome.browser.native_page.ContextMenuManager;
 import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
-import org.chromium.chrome.browser.settings.AppearancePreferences;
 import org.chromium.chrome.browser.settings.BackgroundImagesPreferences;
 
 /**
@@ -121,27 +120,6 @@ public class BraveNtpTopSitesModeUnitTest {
         }
     }
 
-    @Test
-    public void testShowBraveStatsPrefKeyMatchesSettings() {
-        ChromeSharedPreferences.getInstance()
-                .writeBoolean(BackgroundImagesPreferences.PREF_SHOW_BRAVE_STATS, false);
-        try {
-            assertFalse(NtpUtil.shouldDisplayBraveStats());
-        } finally {
-            ChromeSharedPreferences.getInstance()
-                    .removeKey(BackgroundImagesPreferences.PREF_SHOW_BRAVE_STATS);
-        }
-    }
-
-    @Test
-    public void testShowBraveRewardsIconPrefKeyMatchesSettings() {
-        ChromeSharedPreferences.getInstance()
-                .writeBoolean(AppearancePreferences.PREF_SHOW_BRAVE_REWARDS_ICON, false);
-        try {
-            assertFalse(NtpUtil.shouldShowRewardsIcon());
-        } finally {
-            ChromeSharedPreferences.getInstance()
-                    .removeKey(AppearancePreferences.PREF_SHOW_BRAVE_REWARDS_ICON);
-        }
-    }
+    // Growser-345: no key-mirror tests for the stats card (#305) or the rewards
+    // icon (#271) - their settings left the product with them.
 }
