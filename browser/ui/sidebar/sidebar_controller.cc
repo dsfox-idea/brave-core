@@ -11,6 +11,8 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
+#include "brave/browser/misc_metrics/profile_misc_metrics_service.h"
+#include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/browser/ui/sidebar/sidebar.h"
 #include "brave/browser/ui/sidebar/sidebar_model.h"
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
@@ -36,9 +38,28 @@
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "components/prefs/pref_service.h"
 
+#if BUILDFLAG(ENABLE_AI_CHAT)
+#include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
+
 namespace sidebar {
 
 namespace {
+
+#if BUILDFLAG(ENABLE_AI_CHAT)
+void RecordLeoOpenedViaSidebar(Profile* profile) {
+  auto* profile_metrics =
+      misc_metrics::ProfileMiscMetricsServiceFactory::GetServiceForContext(
+          profile);
+  if (!profile_metrics) {
+    return;
+  }
+
+  if (auto* ai_chat_metrics = profile_metrics->GetAIChatMetrics()) {
+    ai_chat_metrics->HandleOpenViaEntryPoint(ai_chat::EntryPoint::kSidebar);
+  }
+}
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
 
 std::vector<int> GetAllExistingTabIndexForHost(TabStripModel* tab_strip_model,
                                                std::string_view host) {
@@ -97,6 +118,32 @@ void SidebarController::TearDownPreBrowserWindowDestruction() {
   sidebar_ = nullptr;
 }
 
+void SidebarController::OnItemPressed(size_t index,
+                                      WindowOpenDisposition disposition) {
+  if (IsActiveIndex(index)) {
+    GetSidePanelUI()->Close();
+    return;
+  }
+
+  CHECK_LT(index, sidebar_model_->GetAllSidebarItems().size());
+  const auto& item = sidebar_model_->GetAllSidebarItems()[index];
+
+  // Built-in panel items are handled by SidePanelCoordinator. Web panel item is
+  // not a side panel, so it goes through ActivateItemAt() as it's loaded into
+  // another contents view in MultiContentsView.
+  if (!item.is_web_type() && item.open_in_panel) {
+#if BUILDFLAG(ENABLE_AI_CHAT)
+    if (item.built_in_item_type == SidebarItem::BuiltInItemType::kChatUI) {
+      RecordLeoOpenedViaSidebar(profile_);
+    }
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
+    ActivatePanelItem(item.built_in_item_type);
+    return;
+  }
+
+  ActivateItemAt(index, disposition);
+}
+
 void SidebarController::ActivateItemAt(std::optional<size_t> index,
                                        WindowOpenDisposition disposition) {
   // disengaged means there is no active item.
@@ -151,26 +198,23 @@ void SidebarController::ActivateItemAt(std::optional<size_t> index,
 
 void SidebarController::ActivatePanelItem(
     SidebarItem::BuiltInItemType panel_item) {
-  // For panel item activation, SidePanelUI is the single source of truth.
-  auto* side_panel_ui = side_panel_ui_for_testing_
-                            ? side_panel_ui_for_testing_.get()
-                            : SidePanelUI::From(browser_);
-  CHECK(side_panel_ui);
-  if (panel_item == SidebarItem::BuiltInItemType::kNone) {
-    side_panel_ui->Close();
-    return;
-  }
+  CHECK_NE(panel_item, SidebarItem::BuiltInItemType::kNone);
 
   // Suppress opening animation when we have active item.
   // When opening another panel while other panel is visible,
   // we don't need to open new panel with animation.
   const bool suppress_animations = sidebar_model_->active_index().has_value();
-  side_panel_ui->Show(sidebar::SidePanelIdFromSideBarItemType(panel_item),
-                      /*open_trigger*/ std::nullopt, suppress_animations);
+  GetSidePanelUI()->Show(sidebar::SidePanelIdFromSideBarItemType(panel_item),
+                         /*open_trigger*/ std::nullopt, suppress_animations);
 }
 
-void SidebarController::DeactivateCurrentPanel() {
-  ActivatePanelItem(SidebarItem::BuiltInItemType::kNone);
+SidePanelUI* SidebarController::GetSidePanelUI() {
+  // For panel item activation, SidePanelUI is the single source of truth.
+  auto* side_panel_ui = side_panel_ui_for_testing_
+                            ? side_panel_ui_for_testing_.get()
+                            : SidePanelUI::From(browser_);
+  CHECK(side_panel_ui);
+  return side_panel_ui;
 }
 
 void SidebarController::ToggleSidebarPinning() {

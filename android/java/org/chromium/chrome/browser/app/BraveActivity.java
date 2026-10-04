@@ -105,6 +105,7 @@ import org.chromium.chrome.browser.compositor.layouts.LayoutManagerChrome;
 import org.chromium.chrome.browser.compositor.layouts.LayoutManagerImpl;
 import org.chromium.chrome.browser.customtabs.CustomTabActivity;
 import org.chromium.chrome.browser.customtabs.FullScreenCustomTabActivity;
+import org.chromium.chrome.browser.day_zero.DayZeroHelper;
 import org.chromium.chrome.browser.flags.ChromeSwitches;
 import org.chromium.chrome.browser.fullscreen.BrowserControlsManager;
 import org.chromium.chrome.browser.incognito.reauth.IncognitoReauthController;
@@ -260,6 +261,9 @@ public abstract class BraveActivity extends ChromeActivity
     private boolean mIsColdStart;
     // One-shot guard so the app-close shred notification fires at most once per cold start.
     private boolean mAppCloseShredTriggered;
+
+    // Day Zero experiment variant, read in finishNativeInitialization().
+    private String mDayZeroVariant;
 
     /** Serves as a general exception for failed attempts to get BraveActivity. */
     public static class BraveActivityNotFoundException extends Exception {
@@ -741,6 +745,7 @@ public abstract class BraveActivity extends ChromeActivity
 
         initMiscAndroidMetrics();
         checkForNotificationData();
+        mDayZeroVariant = getDayZeroVariant();
 
         // Growser-317: no rating prompt - its sad path posted the device and the
         // text typed to feedback.brave.com.
@@ -928,6 +933,21 @@ public abstract class BraveActivity extends ChromeActivity
                                                         this, dataTypesArray, TimePeriod.ALL_TIME));
                     });
         }
+    }
+
+    /**
+     * Returns the active Day Zero experiment variant, or {@link
+     * DayZeroHelper#DAY_ZERO_DEFAULT_VARIANT} when the stored one is unset or unknown to this
+     * build.
+     */
+    private String getDayZeroVariant() {
+        final String variant = DayZeroHelper.getDayZeroVariant();
+        // Filter out day zero variants different from A and B.
+        if (DayZeroHelper.DAY_ZERO_VARIANT_A.equals(variant)
+                || DayZeroHelper.DAY_ZERO_VARIANT_B.equals(variant)) {
+            return variant;
+        }
+        return DayZeroHelper.DAY_ZERO_DEFAULT_VARIANT;
     }
 
     private void applyChangesForYahooJp() {
@@ -1994,11 +2014,26 @@ public abstract class BraveActivity extends ChromeActivity
                     quickSearchEngineUrl
                             .replace("{searchTerms}", query)
                             .replace("{inputEncoding}", "UTF-8");
+
+            final String quickSearchVariation;
+            if (mDayZeroVariant != null
+                    && mDayZeroVariant.equals(DayZeroHelper.DAY_ZERO_VARIANT_A)) {
+                // Control variant.
+                quickSearchVariation = "-c";
+            } else if (mDayZeroVariant != null
+                    && mDayZeroVariant.equals(DayZeroHelper.DAY_ZERO_VARIANT_B)) {
+                // Test variant.
+                quickSearchVariation = "-t";
+            } else {
+                // Default.
+                quickSearchVariation = "";
+            }
             // Tells the Brave search backend the query started from the quick search bar.
             // Leaves any other engine's URL untouched.
             searchUrl =
                     BraveIntentHandler.maybeReplaceBraveSearchSource(
-                            searchUrl, BraveIntentHandler.ANDROID_QUICK_SEARCH);
+                            searchUrl,
+                            BraveIntentHandler.ANDROID_QUICK_SEARCH + quickSearchVariation);
             getActivityTab().loadUrl(new LoadUrlParams(searchUrl));
         }
         getBraveToolbarLayout().clearOmniboxFocus();

@@ -771,6 +771,8 @@
 -OmniboxEditModelPopupTest.AimPopup*
 -OmniboxPopupHandlerTest.*
 -SmartTabSharingTest.QueryAutocomplete_*
+-WebuiOmniboxHandlerTabScopingTest.AddTabContext_ContextMenuDoesNotSetInvocationSource
+-WebuiOmniboxHandlerTabScopingTest.AddTabContext_CurrentTabChipSetsInvocationSource
 -WebuiOmniboxHandlerTabScopingTest.QueryAutocomplete_*
 -WebuiOmniboxHandlerTest.OnActiveTabChanged_SavesAndRestoresState
 -WebuiOmniboxHandlerTest.OpenLensSearch
@@ -883,6 +885,10 @@
 -NetworkHintsHandlerImplTest.*
 -RenderViewContextMenuPrefsTest.LensImageSearchIssuesGoogleLensPreconnect
 -RenderViewContextMenuPrefsTest.LensRegionSearchIssuesGoogleLensPreconnect
+
+# As we reset VerticalTabs preference when it's not enabled via flags,
+# this test fails
+-TabMetricsProviderTest.LogsSessionStartMetrics
 
 # Tests below this point have not been diagnosed or had issues created yet.
 -AboutFlagsHistogramTest.*

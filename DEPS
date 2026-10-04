@@ -20,7 +20,7 @@ deps = {
   # disabled by default. A pin rather than a copy, so the version we ship is
   # recorded and the extension can be developed in its own repository.
   "vendor/webharvester": "https://github.com/dsfox-idea/webharvester.git@d4efd3df982b297e79dd43a54ce445f2ca55e391",
-  "vendor/web-discovery-project": "https://github.com/brave/web-discovery-project@58b1b53f046e955d9d577ac531d7d6b4d18a6016",
+  "vendor/web-discovery-project": "https://github.com/brave/web-discovery-project@15570be559b8669f514fa87bf9e9f3afe6f4f368",
   "third_party/bip39wally-core-native": "https://github.com/brave-intl/bat-native-bip39wally-core.git@547a7810333d821e29b8f55126aba031aa0d5fcd",
   "third_party/ethash/src": "https://github.com/chfast/ethash.git@e4a15c3d76dc09392c7efd3e30d84ee3b871e9ce",
   "third_party/bitcoin-core/src": "https://github.com/bitcoin/bitcoin.git@8105bce5b384c72cf08b25b7c5343622754e7337", # v25.0
@@ -32,10 +32,6 @@ deps = {
   "third_party/reclient_configs/src": "https://github.com/EngFlow/reclient-configs.git@21c8fe69ff771956c179847b8c1d9fd216181967",
   "third_party/playlist_component/src": "https://github.com/brave/playlist-component.git@673d40f017a1559bb685a15cf608ad1d4a94f8fb",
   "third_party/rust/futures_retry/v0_5/crate": "https://github.com/brave-intl/futures-retry.git@2aaaafbc3d394661534d4dbd14159d164243c20e",
-  "third_party/macholib": {
-    "url": "https://github.com/ronaldoussoren/macholib.git@36a6777ccd0891c5d1b44ba885573d7c90740015",
-    "condition": "checkout_mac",
-  },
   "components/brave_wallet/browser/zcash/rust/librustzcash/src": "https://github.com/brave/librustzcash.git@f01f50d64214278552edbe4a34b9049244ce03c1", # brave_ironwood_support
 }
 
@@ -101,24 +97,19 @@ hooks = [
                'src/brave/third_party/updater/mac']
   },
   {
-    'name': 'update_pip',
+    # Remove files and directories no longer needed, whose leftover copies
+    # would otherwise break things (e.g. the license check).
+    'name': 'remove_stale_files',
     'pattern': '.',
-    # Required for download_cryptography below. Specifically, newer versions of
-    # pip are required for obtaining binary wheels on Arm64 macOS.
-    'action': ['python3', '-m', 'ensurepip', '--upgrade'],
-  },
-  {
-    'name': 'download_cryptography',
-    'pattern': '.',
-    # We don't include cryptography as a DEP because building it from source is
-    # difficult. We pin to a version >=37.0.2 and <38.0.0 to avoid an
-    # incompatibility with our pyOpenSSL version on Android. See:
-    # https://github.com/pyca/cryptography/issues/7126.
-    # We use python3 instead of vpython3 for two reasons: First, our GN actions
-    # are run with python3, so this environment mirrors the one in which
-    # cryptography will be used. Second, we cannot update pip in vpython3 on at
-    # least macOS due to permission issues.
-    'action': ['python3', '-m', 'pip', '-q', '--disable-pip-version-check', 'install', '-U', '-t', 'third_party/cryptography', '--only-binary', 'cryptography', 'cryptography==37.0.4'],
+    'action': [
+        'python3',
+        'tools/remove_stale_files.py',
+        # cryptography used to be pip-installed and macholib was a DEPS entry.
+        # TODO(https://github.com/brave/brave-browser/issues/59301): Remove
+        # after M157.
+        'third_party/cryptography',
+        'third_party/macholib',
+    ],
   },
   {
     'name': 'wireguard_nt',

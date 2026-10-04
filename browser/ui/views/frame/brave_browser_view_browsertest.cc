@@ -400,8 +400,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
 // browser() is actually launched with vertical tabs already on.
 IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
                        PRE_ShouldNotShowWindowIconWithVerticalTabTest) {
-  ASSERT_FALSE(VerticalTabController::FromBrowser(browser())
-                   ->ShouldShowBraveVerticalTabs());
+  ASSERT_FALSE(
+      VerticalTabController::From(browser())->ShouldShowBraveVerticalTabs());
   EXPECT_FALSE(browser_view()->ShouldShowWindowIcon());
 
   browser()->GetProfile()->GetPrefs()->SetBoolean(
@@ -411,8 +411,8 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
 IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
                        ShouldNotShowWindowIconWithVerticalTabTest) {
   // Browser is launched with vertical tab mode already on.
-  ASSERT_TRUE(VerticalTabController::FromBrowser(browser())
-                  ->ShouldShowBraveVerticalTabs());
+  ASSERT_TRUE(
+      VerticalTabController::From(browser())->ShouldShowBraveVerticalTabs());
   EXPECT_FALSE(browser_view()->ShouldShowWindowIcon());
 }
 
@@ -515,8 +515,8 @@ IN_PROC_BROWSER_TEST_P(BraveBrowserViewWithRoundedCornersTest,
 #if BUILDFLAG(IS_MAC)
   // TODO(https://github.com/brave/brave-browser/issues/55995): Re-enable on
   // macOS 26.
-  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
-    GTEST_SKIP() << "Disabled on macOS Tahoe.";
+  if (base::mac::MacOSMajorVersion() >= 26) {
+    GTEST_SKIP() << "Disabled on macOS Tahoe and later.";
   }
 #endif
 
@@ -574,8 +574,8 @@ IN_PROC_BROWSER_TEST_P(
 #if BUILDFLAG(IS_MAC)
   // TODO(https://github.com/brave/brave-browser/issues/55995): Re-enable on
   // macOS 26.
-  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
-    GTEST_SKIP() << "Disabled on macOS Tahoe.";
+  if (base::mac::MacOSMajorVersion() >= 26) {
+    GTEST_SKIP() << "Disabled on macOS Tahoe and later.";
   }
 #endif
 
@@ -662,8 +662,8 @@ IN_PROC_BROWSER_TEST_P(BraveBrowserViewWithRoundedCornersTest,
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
-    GTEST_SKIP() << "Disabled on macOS Tahoe.";
+  if (base::mac::MacOSMajorVersion() >= 26) {
+    GTEST_SKIP() << "Disabled on macOS Tahoe and later.";
   }
 #endif
 
@@ -700,8 +700,8 @@ IN_PROC_BROWSER_TEST_P(BraveBrowserViewWithRoundedCornersTest,
 #if BUILDFLAG(IS_MAC)
   // TODO(crbug.com/434660312): Re-enable on macOS 26 once issues with
   // unexpected test timeout failures are resolved.
-  if (base::mac::MacOSMajorVersion() >= 26) {  // Growser-320
-    GTEST_SKIP() << "Disabled on macOS Tahoe.";
+  if (base::mac::MacOSMajorVersion() >= 26) {
+    GTEST_SKIP() << "Disabled on macOS Tahoe and later.";
   }
 #endif
 
@@ -1014,8 +1014,8 @@ IN_PROC_BROWSER_TEST_F(
 IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
                        ImmersiveModeAndVerticalTabsAtStartup) {
   // Default browser: vertical tabs off at startup.
-  ASSERT_FALSE(VerticalTabController::FromBrowser(browser())
-                   ->ShouldShowBraveVerticalTabs());
+  ASSERT_FALSE(
+      VerticalTabController::From(browser())->ShouldShowBraveVerticalTabs());
   EXPECT_TRUE(
       WindowFeatureController::From(browser())->UsesImmersiveFullscreenMode());
   ToggleVerticalTabStrip();
@@ -1079,15 +1079,15 @@ IN_PROC_BROWSER_TEST_F(
     ShouldHideTopUIInTabFullscreenAfterVerticalTabsEnabledAtRuntime) {
   // Verify the precondition that triggers the bug: horizontal tabs at startup
   // means immersive mode is on (and fullscreen_toolbar_controller_ is nil).
-  ASSERT_FALSE(VerticalTabController::FromBrowser(browser())
-                   ->ShouldShowBraveVerticalTabs());
+  ASSERT_FALSE(
+      VerticalTabController::From(browser())->ShouldShowBraveVerticalTabs());
   ASSERT_TRUE(
       WindowFeatureController::From(browser())->UsesImmersiveFullscreenMode());
 
   // Switch to vertical tabs at runtime.
   ToggleVerticalTabStrip();
-  ASSERT_TRUE(VerticalTabController::FromBrowser(browser())
-                  ->ShouldShowBraveVerticalTabs());
+  ASSERT_TRUE(
+      VerticalTabController::From(browser())->ShouldShowBraveVerticalTabs());
   ASSERT_FALSE(
       WindowFeatureController::From(browser())->UsesImmersiveFullscreenMode());
 

@@ -1273,9 +1273,11 @@ class TabManager: NSObject {
   @MainActor fileprivate var restoreTabsInternal: (any TabState)? {
     var savedTabs = [SessionTab]()
 
-    if let autocloseTime = Preferences.AutoCloseTabsOption(
-      rawValue: Preferences.General.autocloseTabs.value
-    )?.timeInterval {
+    if let autocloseTime = Preferences.Debug.autocloseTabsMinutesOverride.value?.minutes
+      ?? Preferences.AutoCloseTabsOption(
+        rawValue: Preferences.General.autocloseTabs.value
+      )?.timeInterval
+    {
       // To avoid db problems, we first retrieve fresh tabs(on main thread context)
       // then delete old tabs(background thread context)
       savedTabs = SessionTab.all(noOlderThan: autocloseTime)

@@ -12,7 +12,7 @@ master/tools/recipes/engine_bootstrap.py \\
         | python3 - toolchains/rust/package_rust \\
             --properties '{"chromium_src": "~/dev/brave-next/src/",
                            "brave_subrevision": 1,
-                           "chromium_ref": "151.0.7917.1"}'
+                           "chromium_ref": "refs/tags/151.0.7917.1"}'
 
 That is the bootstrapping equivalent to running, from a checkout:
 
@@ -50,11 +50,14 @@ RECIPES_ENGINE_DEST = 'recipes_engine_bootstrap'
 # the vpython3 runtime.
 IS_WIN = sys.platform.startswith(('win', 'cygwin'))
 VPYTHON3 = 'vpython3' + ('.bat' if IS_WIN else '')
-VPYTHON_SPEC = '.vpython3'
+VPYTHON_SPEC = 'vpython.toml'
 
 # The URL to clone depot_tools from if vpython3 is not found.
 DEPOT_TOOLS_URL = 'https://chromium.googlesource.com/chromium/tools/depot_tools'
 DEPOT_TOOLS_DEST = 'depot_tools_bootstrap'
+
+# The hard-coded path for depot_tools in git cache.
+DEPOT_TOOLS_MIRROR_DIR = 'chromium.googlesource.com-chromium-tools-depot_tools'
 
 
 def _run(*cmd: str | Path, cwd: str | Path | None = None) -> None:
@@ -96,8 +99,18 @@ def _deploy_recipes(dest: str | Path) -> Path:
         _rmtree(dest)
 
     dest.parent.mkdir(parents=True, exist_ok=True)
-    _run('git', 'clone', '--depth', '2', '--filter=blob:none', '--sparse',
-         '--branch', BRAVE_CORE_REF, REPO_URL, dest)
+    _run(
+        'git',
+        'clone',
+        '--depth',
+        '2',
+        '--filter=blob:none',
+        '--sparse',
+        '--branch',
+        BRAVE_CORE_REF,
+        REPO_URL,
+        dest,
+    )
     _run('git', '-C', dest, 'sparse-checkout', 'add', RECIPES_PATH)
 
     engine = dest / RECIPES_PATH / 'engine.py'
@@ -109,11 +122,21 @@ def _deploy_recipes(dest: str | Path) -> Path:
     return engine
 
 
-def _deploy_depot_tools(dest: str | Path) -> Path:
-    """Shallow-clone depot_tools into *dest* and return its directory.
+def _depot_tools_mirror() -> Path | None:
+    """The depot_tools mirror in `$GIT_CACHE_PATH`, or None if there is none."""
+    cache_path = os.environ.get('GIT_CACHE_PATH')
+    if not cache_path:
+        return None
+    mirror = Path(cache_path).expanduser() / DEPOT_TOOLS_MIRROR_DIR
+    return mirror if (mirror / 'config').is_file() else None
 
-    An existing checkout that already has a `vpython3` is reused if found,
-    otherwise a fresh shallow clone is made.
+
+def _deploy_depot_tools(dest: str | Path) -> Path:
+    """Clone depot_tools into *dest* and return its directory.
+
+    An existing checkout that already has a `vpython3` is reused if found.
+    Otherwise depot_tools is shared-cloned from its git cache mirror when one
+    exists, falling back to a shallow clone from `DEPOT_TOOLS_URL`.
     """
     dest = Path(dest).expanduser().resolve()
     vpython3 = dest / VPYTHON3
@@ -127,18 +150,26 @@ def _deploy_depot_tools(dest: str | Path) -> Path:
         _rmtree(dest)
 
     dest.parent.mkdir(parents=True, exist_ok=True)
-    _run('git', 'clone', '--depth', '1', DEPOT_TOOLS_URL, dest)
+    mirror = _depot_tools_mirror()
+    if mirror:
+        logging.info('Cloning depot_tools from git cache at %s', mirror)
+        _run('git', 'clone', '--shared', mirror, dest)
+        # Point at the real remote, so depot_tools self-updates from it.
+        _run('git', '-C', dest, 'remote', 'set-url', 'origin', DEPOT_TOOLS_URL)
+    else:
+        _run('git', 'clone', '--depth', '1', DEPOT_TOOLS_URL, dest)
     if not vpython3.is_file():
         raise RuntimeError(
-            f'vpython3 not found after depot_tools clone: {vpython3}')
+            f'vpython3 not found after depot_tools clone: {vpython3}'
+        )
     return dest
 
 
 def _ensure_vpython3(depot_tools_dest: str | Path) -> str:
     """Return a runnable `vpython3`, deploying depot_tools if none is found.
 
-    If no `vpython3` is found on PATH, a shallow clone of depot_tools is
-    and that clone is added to PATH.
+    If no `vpython3` is found on PATH, depot_tools is cloned (see
+    `_deploy_depot_tools`) and that clone is added to PATH.
     """
     if shutil.which(VPYTHON3):
         return VPYTHON3
@@ -146,7 +177,8 @@ def _ensure_vpython3(depot_tools_dest: str | Path) -> str:
     logging.info('%s not on PATH; deploying depot_tools', VPYTHON3)
     depot_tools = _deploy_depot_tools(depot_tools_dest)
     os.environ['PATH'] = os.pathsep.join(
-        [str(depot_tools), os.environ.get('PATH', '')])
+        [str(depot_tools), os.environ.get('PATH', '')]
+    )
     return str(depot_tools / VPYTHON3)
 
 
@@ -155,31 +187,31 @@ def main(argv: list[str] | None = None) -> int:
 
     parser = argparse.ArgumentParser(
         description='Bootstrap and run a Brave recipe from a shallow '
-        'brave-core checkout.')
-    parser.add_argument('recipe',
-                        help='Recipe name (e.g. toolchains/rust/package_rust)')
+        'brave-core checkout.'
+    )
+    parser.add_argument(
+        'recipe', help='Recipe name (e.g. toolchains/rust/package_rust)'
+    )
     parser.add_argument(
         '--workspace',
         default=None,
         help='Root directory the job runs in (forwarded to '
-        'engine.py); the bootstrap checkouts are deployed here')
+        'engine.py); the bootstrap checkouts are deployed here',
+    )
     parser.add_argument('--verbose', action='store_true')
     args, _ = parser.parse_known_args(argv)
 
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO)
 
     # All boostrap checkouts are placed under workspace.
-    workspace = (Path(args.workspace).expanduser()
-                 if args.workspace else Path.cwd())
+    workspace = (
+        Path(args.workspace).expanduser() if args.workspace else Path.cwd()
+    )
     vpython3 = _ensure_vpython3(workspace / DEPOT_TOOLS_DEST)
     engine = _deploy_recipes(workspace / RECIPES_ENGINE_DEST)
 
     spec = engine.parent / VPYTHON_SPEC
-    forwarded = [
-        vpython3, '-vpython-spec',
-        str(spec), '-u',
-        str(engine), *argv
-    ]
+    forwarded = [vpython3, '-vpython-spec', str(spec), '-u', str(engine), *argv]
     logging.info('Launching engine: %s', ' '.join(forwarded))
     return subprocess.run(forwarded, check=False).returncode
 

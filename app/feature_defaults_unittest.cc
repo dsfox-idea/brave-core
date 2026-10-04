@@ -199,6 +199,7 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &feature_engagement::kIPHReadingListInSidePanelFeature,
       &feature_engagement::kIPHSideBySidePinnableFeature,
       &feature_engagement::kIPHSideBySideTabSwitchFeature,
+      &feature_engagement::kIPHSplitViewHorizontalIndirectAccessFeature,
       &feature_engagement::kIPHTabGroupsSaveV2IntroFeature,
       &feature_engagement::kIPHVerticalTabstripTutorialFeature,
 #endif
@@ -363,6 +364,9 @@ TEST(FeatureDefaultsTest, EnabledFeatures) {
 #if !BUILDFLAG(IS_ANDROID)
       &sharing_hub::kDesktopScreenshots,
 #endif
+#if !BUILDFLAG(IS_ANDROID)
+      &tabs::kVerticalTabsExpandOnHover,
+#endif  // !BUILDFLAG(IS_ANDROID)
       &network::features::kLocalNetworkAccessChecksWebSockets,
   };
 

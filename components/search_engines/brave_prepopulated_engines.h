@@ -30,8 +30,9 @@ namespace TemplateURLPrepopulateData {
 // the list/default migration in existing profiles. Bumped again on the merge
 // to upstream Chromium 152: upstream went 32 -> 33 with an engine definition
 // change of their own, and a profile that had already stored our 35 would
-// never re-merge it. 36 is above both, so every existing profile migrates.
-inline constexpr int kBraveCurrentDataVersion = 36;
+// never re-merge it. Growser-345: upstream went 34 -> 35 for the Yahoo! JAPAN
+// fr=crmas fix, and our profiles already hold 36, so 37 makes them re-merge.
+inline constexpr int kBraveCurrentDataVersion = 37;
 
 // DO NOT CHANGE THIS ONE. Used for backfilling kBraveDefaultSearchVersion.
 inline constexpr int kBraveFirstTrackedDataVersion = 6;

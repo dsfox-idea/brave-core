@@ -64,8 +64,7 @@ BraveBrowserFrameViewMac::BraveBrowserFrameViewMac(
   frame_graphic_ =
       std::make_unique<BraveWindowFrameGraphic>(browser->GetProfile());
 
-  if (VerticalTabController::FromBrowser(browser)
-          ->SupportsBraveVerticalTabs()) {
+  if (VerticalTabController::From(browser)->SupportsBraveVerticalTabs()) {
     auto* prefs = browser->GetProfile()->GetOriginalProfile()->GetPrefs();
     show_vertical_tabs_.Init(
         brave_tabs::kVerticalTabsEnabled, prefs,
@@ -131,7 +130,7 @@ void BraveBrowserFrameViewMac::OnPaint(gfx::Canvas* canvas) {
 }
 
 int BraveBrowserFrameViewMac::GetTopInset(bool restored) const {
-  if (VerticalTabController::FromBrowser(GetBrowserView()->browser())
+  if (VerticalTabController::From(GetBrowserView()->browser())
           ->ShouldShowBraveVerticalTabs()) {
     if (ShouldShowWindowTitleForVerticalTabs()) {
       // Set minimum top inset to show caption buttons on frame.
@@ -164,7 +163,7 @@ BraveBrowserFrameViewMac::GetCaptionButtonBounds() const {
 }
 
 bool BraveBrowserFrameViewMac::ShouldShowWindowTitleForVerticalTabs() const {
-  auto* vtc = VerticalTabController::FromBrowser(GetBrowserView()->browser());
+  auto* vtc = VerticalTabController::From(GetBrowserView()->browser());
   return vtc->ShouldShowWindowTitleForVerticalTabs() &&
          !GetBrowserView()->IsFullscreen();
 }
@@ -246,7 +245,7 @@ int BraveBrowserFrameViewMac::NonClientHitTest(const gfx::Point& point) {
   auto* browser = browser_view->browser();
   if (!ImmersiveModeController::From(browser)->IsEnabled()) {
     auto* non_client_hit_test_helper =
-        browser->GetFeatures().brave_non_client_hit_test_helper();
+        BraveNonClientHitTestHelper::From(browser);
     if (auto res =
             non_client_hit_test_helper->NonClientHitTest(browser_view, point);
         res != HTNOWHERE) {
@@ -274,7 +273,7 @@ void BraveBrowserFrameViewMac::UpdateWindowTitleAndControls() {
 }
 
 gfx::Size BraveBrowserFrameViewMac::GetMinimumSize() const {
-  auto* vtc = VerticalTabController::FromBrowser(GetBrowserView()->browser());
+  auto* vtc = VerticalTabController::From(GetBrowserView()->browser());
   if (vtc->ShouldShowBraveVerticalTabs()) {
     // In order to ignore tab strip height, skip BrowserFrameViewMac's
     // implementation.
@@ -325,7 +324,7 @@ bool BraveBrowserFrameViewMac::ShouldHideTopUIInFullscreen() const {
   // ObjC returns 0, which equals TOOLBAR_PRESENT, so the base implementation
   // incorrectly reports "don't hide" during tab (content) fullscreen. Intercept
   // that case explicitly.
-  if (VerticalTabController::FromBrowser(GetBrowserView()->browser())
+  if (VerticalTabController::From(GetBrowserView()->browser())
           ->ShouldShowBraveVerticalTabs() &&
       fullscreen_utils::IsInContentFullscreen(GetBrowserView()->browser())) {
     return true;

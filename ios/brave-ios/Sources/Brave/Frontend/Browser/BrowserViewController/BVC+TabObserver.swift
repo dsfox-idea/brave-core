@@ -50,7 +50,6 @@ extension BrowserViewController: TabObserver {
       // (orange color) as soon as the page has loaded.
       if let url = visibleURL {
         if !url.isInternalURL(for: .readermode) {
-          topToolbar.updateReaderModeState(.unavailable)
           hideReaderModeBar(animated: false)
         }
       }
@@ -93,7 +92,6 @@ extension BrowserViewController: TabObserver {
     // Growser-287: no wallet panel or notification to dismiss.
 
     updateUIForReaderHomeStateForTab(tab)
-    updateBackForwardActionStatus(for: tab)
   }
 
   public func tabDidCommitSameDocumentNavigation(_ tab: some TabState) {
@@ -123,10 +121,6 @@ extension BrowserViewController: TabObserver {
       maybeRecordBraveSearchDailyUsage(url: lastCommittedURL)
     }
 
-    // Added this method to determine long press menu actions better
-    // Since these actions are depending on tabmanager opened WebsiteCount
-    updateToolbarUsingTabManager(tabManager)
-
     recordFinishedPageLoadP3A()
   }
 
@@ -135,9 +129,9 @@ extension BrowserViewController: TabObserver {
     if error.code == Int(CFNetworkErrors.cfurlErrorCancelled.rawValue) {
       if tab === tabManager.selectedTab {
         if let displayURL = tab.visibleURL?.displayURL {
-          updateToolbarCurrentURL(displayURL)
+          updateScreenTimeUrl(displayURL)
         } else if let url = tab.lastCommittedURL, !url.isLocal, !InternalURL.isValid(url: url) {
-          updateToolbarCurrentURL(url.displayURL)
+          updateScreenTimeUrl(url.displayURL)
         }
         updateWebViewPageZoom(tab: tab)
       }
@@ -154,12 +148,6 @@ extension BrowserViewController: TabObserver {
   }
 
   public func tabDidUpdateURL(_ tab: some TabState) {
-    if tab.isDisplayingBasicAuthPrompt == true {
-      tab.setVirtualURL(
-        URL(string: "\(InternalURL.baseUrl)/\(InternalURL.Path.basicAuth.rawValue)")
-      )
-    }
-
     if tab === tabManager.selectedTab && !tab.isRestoring {
       updateUIForReaderHomeStateForTab(tab)
     }
@@ -176,7 +164,7 @@ extension BrowserViewController: TabObserver {
       // To fix this when tab display url is empty, webview url is used
       if tab === tabManager.selectedTab, tab.visibleURL?.displayURL == nil {
         if let url = tab.visibleURL, !url.isLocal, !InternalURL.isValid(url: url) {
-          updateToolbarCurrentURL(url.displayURL)
+          updateScreenTimeUrl(url.displayURL)
         }
       } else if tab === tabManager.selectedTab, tab.visibleURL?.displayURL?.scheme == "about",
         !tab.isLoading
@@ -186,12 +174,6 @@ extension BrowserViewController: TabObserver {
         }
 
         navigateInTab(tab: tab)
-      } else if tab === tabManager.selectedTab, let tabData = tab.browserData,
-        tabData.isDisplayingBasicAuthPrompt
-      {
-        updateToolbarCurrentURL(
-          URL(string: "\(InternalURL.baseUrl)/\(InternalURL.Path.basicAuth.rawValue)")
-        )
       }
     }
 
@@ -243,17 +225,6 @@ extension BrowserViewController: TabObserver {
     if !title.isEmpty && title != tab.lastTitle {
       navigateInTab(tab: tab)
       tabsBar.updateSelectedTabTitle()
-    }
-  }
-
-  public func tabDidChangeBackForwardState(_ tab: some TabState) {
-    if tab !== tabManager.selectedTab { return }
-    updateBackForwardActionStatus(for: tab)
-  }
-
-  public func tabDidChangeVisibleSecurityState(_ tab: some TabState) {
-    if tabManager.selectedTab === tab {
-      self.updateToolbarSecureContentState(tab.visibleSecureContentState)
     }
   }
 

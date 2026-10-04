@@ -132,6 +132,10 @@ class AdsServiceImpl : public AdsService,
 
   ~AdsServiceImpl() override;
 
+  // Runs the migration step for this service, registers the pref change
+  // registrars, and evaluates ads-eligibility to start the `bat_ads` service.
+  void Init();
+
   // AdsService:
   base::WeakPtr<AdsService> GetWeakPtr() override;
   bool IsIneligibleToStart() const override;
@@ -227,6 +231,7 @@ class AdsServiceImpl : public AdsService,
   bool StopNotificationAdTimeOutTimer(const std::string& placement_id);
   void NotificationAdTimedOut(const std::string& placement_id);
   void CloseAllNotificationAds();
+  void MaybeCloseAllNotificationAds();
   void RegisterOrUnregisterLanguageResourceComponent();
 
   // TODO(https://github.com/brave/brave-browser/issues/26193) Decouple open

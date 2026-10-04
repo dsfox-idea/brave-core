@@ -4,7 +4,10 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include <memory>
+#include <optional>
 #include <string>
+#include <utility>
+#include <vector>
 
 #include "base/files/file_path.h"
 #include "base/functional/bind.h"
@@ -18,8 +21,8 @@
 #include "brave/browser/ui/views/text_recognition_dialog_tracker.h"
 #include "brave/browser/ui/views/text_recognition_dialog_view.h"
 #include "brave/components/constants/brave_paths.h"
+#include "brave/ui/base/clipboard/test/privacy_capturing_test_clipboard.h"
 #include "chrome/browser/renderer_context_menu/render_view_context_menu_test_util.h"
-#include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
@@ -30,8 +33,10 @@
 #include "net/dns/mock_host_resolver.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "third_party/blink/public/mojom/context_menu/context_menu.mojom.h"
-#include "ui/views/controls/label.h"
-#include "ui/views/controls/scroll_view.h"
+#include "ui/base/clipboard/clipboard.h"
+#include "ui/views/view_utils.h"
+#include "ui/views/widget/widget.h"
+#include "ui/views/widget/widget_delegate.h"
 
 namespace {
 
@@ -42,6 +47,8 @@ constexpr char kEmbeddedTestServerDirectory[] = "text_recognition";
 class TextRecognitionBrowserTest : public InProcessBrowserTest {
  public:
   void SetUpOnMainThread() override {
+    clipboard_.emplace();
+
     host_resolver()->AddRule("*", "127.0.0.1");
     content::SetupCrossSiteRedirector(embedded_test_server());
 
@@ -52,6 +59,11 @@ class TextRecognitionBrowserTest : public InProcessBrowserTest {
 
     ASSERT_TRUE(embedded_test_server()->Start());
     image_html_url_ = embedded_test_server()->GetURL("a.com", "/image.html");
+  }
+
+  void TearDownOnMainThread() override {
+    clipboard_.reset();
+    InProcessBrowserTest::TearDownOnMainThread();
   }
 
   void OnGetTextFromImage(
@@ -66,6 +78,48 @@ class TextRecognitionBrowserTest : public InProcessBrowserTest {
     // Windows and never see it (lesson 25).
     EXPECT_THAT(supported_strs.second[0], ::testing::HasSubstr("brave"));
     run_loop_->Quit();
+  }
+
+  // Runs the "Copy Text From Image" flow on the test image in |target| and
+  // returns once the recognized text has been written to the clipboard.
+  void RunTextRecognitionFlow(BrowserWindowInterface* target) {
+    content::WebContents* contents =
+        target->tab_strip_model()->GetActiveWebContents();
+    ASSERT_TRUE(ui_test_utils::NavigateToURL(target, image_html_url_));
+    ASSERT_TRUE(WaitForLoadStop(contents));
+
+    // Using (10, 10) position will be fine because test image is set at (0, 0).
+    contents->GetPrimaryMainFrame()->GetImageAt(
+        10, 10,
+        base::BindOnce(&TextRecognitionBrowserTest::OnGetImageForTextCopy,
+                       base::Unretained(this), contents->GetWeakPtr()));
+    TextRecognitionDialogTracker::CreateForWebContents(contents);
+    auto* dialog_tracker =
+        TextRecognitionDialogTracker::FromWebContents(contents);
+
+    // Wait till text recognition dialog is launched.
+    WaitUntil(base::BindLambdaForTesting(
+        [&]() { return !!dialog_tracker->active_dialog(); }));
+
+    auto* dialog = views::AsViewClass<TextRecognitionDialogView>(
+        dialog_tracker->active_dialog()->widget_delegate()->GetContentsView());
+    ASSERT_TRUE(dialog);
+
+    // Early check - extracting could be done very quickly.
+    // Growser-241: the same reason as in OnGetTextFromImage - a localized
+    // OCR adds a glyph of its own, and this early exit must recognize that
+    // case too, or it falls through and waits for a callback that has
+    // already fired.
+    if (dialog->GetDisplayedTextForTesting().find(u"brave") !=
+        std::u16string::npos) {
+      return;
+    }
+
+    // OnGetTextFromImage() verifies extracted text from test image.
+    dialog->SetOnGetTextCallbackForTesting(
+        base::BindOnce(&TextRecognitionBrowserTest::OnGetTextFromImage,
+                       base::Unretained(this)));
+    Run();
   }
 
   void OnGetImageForTextCopy(base::WeakPtr<content::WebContents> web_contents,
@@ -98,6 +152,7 @@ class TextRecognitionBrowserTest : public InProcessBrowserTest {
 
   GURL image_html_url_;
   std::unique_ptr<base::RunLoop> run_loop_;
+  std::optional<brave::ScopedPrivacyCapturingTestClipboard> clipboard_;
 };
 
 IN_PROC_BROWSER_TEST_F(TextRecognitionBrowserTest, TextRecognitionTest) {
@@ -129,49 +184,22 @@ IN_PROC_BROWSER_TEST_F(TextRecognitionBrowserTest, TextRecognitionTest) {
     EXPECT_FALSE(menu.IsItemPresent(IDC_CONTENT_CONTEXT_COPY_TEXT_FROM_IMAGE));
   }
 
-  content::WebContents* contents =
-      browser()->tab_strip_model()->GetActiveWebContents();
-  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), image_html_url_));
-  ASSERT_TRUE(WaitForLoadStop(contents));
+  ASSERT_NO_FATAL_FAILURE(RunTextRecognitionFlow(browser()));
 
-  // Using (10, 10) position will be fine because test image is set at (0, 0).
-  browser()
-      ->tab_strip_model()
-      ->GetActiveWebContents()
-      ->GetPrimaryMainFrame()
-      ->GetImageAt(
-          10, 10,
-          base::BindOnce(&TextRecognitionBrowserTest::OnGetImageForTextCopy,
-                         base::Unretained(this), contents->GetWeakPtr()));
-  TextRecognitionDialogTracker::CreateForWebContents(contents);
-  auto* dialog_tracker =
-      TextRecognitionDialogTracker::FromWebContents(contents);
+  // A normal profile copy stays eligible for OS clipboard history and cloud
+  // clipboard sync.
+  constexpr uint32_t kNoPrivacyTypes = ui::Clipboard::kNone;
+  EXPECT_EQ(kNoPrivacyTypes, clipboard_->last_privacy_types());
+}
 
-  // Wait till text recognition dialog is launched.
-  WaitUntil(base::BindLambdaForTesting(
-      [&]() { return !!dialog_tracker->active_dialog(); }));
+// Text recognized from an image in a private/Tor window must not leak into the
+// OS clipboard history or cloud clipboard sync.
+IN_PROC_BROWSER_TEST_F(TextRecognitionBrowserTest,
+                       OffTheRecordTextIsNotSharedWithOS) {
+  ASSERT_NO_FATAL_FAILURE(RunTextRecognitionFlow(CreateIncognitoBrowser()));
 
-  TextRecognitionDialogView* text_recognition_dialog =
-      static_cast<TextRecognitionDialogView*>(
-          dialog_tracker->active_dialog()->widget_delegate());
-
-  // Early check - extracting could be done very quickly.
-  if (text_recognition_dialog->scroll_view_) {
-    const auto text = static_cast<views::Label*>(
-                          text_recognition_dialog->scroll_view_->contents())
-                          ->GetText();
-    // Growser-241: the same reason as in OnGetTextFromImage - a localized
-    // OCR adds a glyph of its own, and this early exit must recognize that
-    // case too, or it falls through and waits for a callback that has
-    // already fired.
-    if (text.find(u"brave") != std::u16string::npos) {
-      return;
-    }
-  }
-
-  // OnGetTextFromImage() verifies extracted text from test image.
-  text_recognition_dialog->on_get_text_callback_for_test_ = base::BindOnce(
-      &TextRecognitionBrowserTest::OnGetTextFromImage, base::Unretained(this));
-
-  Run();
+  constexpr uint32_t kExpectedPrivacyTypes =
+      ui::Clipboard::kNoLocalClipboardHistory |
+      ui::Clipboard::kNoCloudClipboard;
+  EXPECT_EQ(kExpectedPrivacyTypes, clipboard_->last_privacy_types());
 }

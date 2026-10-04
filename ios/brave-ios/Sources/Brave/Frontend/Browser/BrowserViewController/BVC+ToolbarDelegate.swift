@@ -907,6 +907,107 @@ extension BrowserViewController: ToolbarDelegate {
     topToolbar.tabLocationViewDidTapLocation(topToolbar.locationView)
   }
 
+  func tabToolbarDidSelectNewTab(_ tabToolbar: ToolbarProtocol, isPrivate: Bool) {
+    let openNewTab = { [weak self] in
+      self?.openBlankNewTab(
+        attemptLocationFieldFocus: Preferences.General.openKeyboardOnNTPSelection.value,
+        isPrivate: isPrivate
+      )
+    }
+    if isPrivate, !privateBrowsingManager.isPrivateBrowsing,
+      Preferences.Privacy.privateBrowsingLock.value
+    {
+      askForLocalAuthentication { success, error in
+        if success {
+          openNewTab()
+        }
+      }
+    } else {
+      openNewTab()
+    }
+  }
+
+  func tabToolbarDidSelectNewWindow(_ tabToolbar: ToolbarProtocol, isPrivate: Bool) {
+    openInNewWindow(url: nil, isPrivate: isPrivate)
+  }
+
+  func tabToolbarDidSelectBookmarkTab(_ tabToolbar: ToolbarProtocol) {
+    openAddBookmark()
+  }
+
+  func tabToolbarDidSelectBookmarkAllTabs(_ tabToolbar: ToolbarProtocol) {
+    let mode = BookmarkEditMode.addFolderUsingTabs(
+      title: Strings.savedTabsFolderTitle,
+      tabList: tabManager.tabsForCurrentMode
+    )
+    let addBookMarkController = AddEditBookmarkTableViewController(
+      bookmarkManager: bookmarkManager,
+      mode: mode,
+      isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing
+    )
+    presentSettingsNavigation(with: addBookMarkController, cancelEnabled: true)
+  }
+
+  func tabToolbarDidSelectDuplicateTab(_ tabToolbar: ToolbarProtocol) {
+    guard let selectedTab = tabManager.selectedTab, let url = selectedTab.visibleURL else {
+      return
+    }
+    tabManager.addTabAndSelect(
+      URLRequest(url: url),
+      afterTab: selectedTab,
+      isPrivate: selectedTab.isPrivate
+    )
+  }
+
+  func tabToolbarDidSelectViewRecentlyClosedTabs(_ tabToolbar: ToolbarProtocol) {
+    if privateBrowsingManager.isPrivateBrowsing {
+      return
+    }
+    var recentlyClosedTabsView = RecentlyClosedTabsView(tabManager: tabManager)
+    recentlyClosedTabsView.onRecentlyClosedSelected = { [weak self] recentlyClosed in
+      self?.tabManager.addAndSelectRecentlyClosed(recentlyClosed)
+
+      // After opening the Recently Closed in a new tab delete it from list
+      RecentlyClosed.remove(with: recentlyClosed.url)
+    }
+    present(UIHostingController(rootView: recentlyClosedTabsView), animated: true)
+  }
+
+  func tabToolbarDidSelectReopenRecentlyClosedTab(_ tabToolbar: ToolbarProtocol) {
+    if privateBrowsingManager.isPrivateBrowsing {
+      return
+    }
+    guard let recentlyClosedTab = RecentlyClosed.first() else { return }
+    tabManager.addAndSelectRecentlyClosed(recentlyClosedTab)
+    RecentlyClosed.remove(with: recentlyClosedTab.url)
+  }
+
+  func tabToolbarDidSelectCloseTab(_ tabToolbar: ToolbarProtocol) {
+    guard let tab = tabManager.selectedTab else { return }
+    if tab.readerMode?.state == .active {
+      hideReaderModeBar(animated: false)
+    }
+    // Add the tab information to recently closed before removing
+    tabManager.addTabToRecentlyClosed(tab)
+    tabManager.removeTab(tab)
+  }
+
+  func tabToolbarDidSelectShredSiteData(_ tabToolbar: ToolbarProtocol) {
+    guard let tab = tabManager.selectedTab, let url = tab.visibleURL else { return }
+    let alert = UIAlertController.shredDataAlert(url: url) { [weak self] _ in
+      self?.shredData(for: url, in: tab)
+    }
+    present(alert, animated: true)
+  }
+
+  func tabToolbarDidSelectCloseOtherTabs(_ tabToolbar: ToolbarProtocol) {
+    showCloseTabsWarning(isActiveTabIncluded: false, from: tabToolbar.tabsButton)
+  }
+
+  func tabToolbarDidSelectCloseAllTabs(_ tabToolbar: ToolbarProtocol) {
+    showCloseTabsWarning(isActiveTabIncluded: true, from: tabToolbar.tabsButton)
+  }
+
   func tabToolbarDidPressBack(_ tabToolbar: ToolbarProtocol, button: UIButton) {
     tabManager.selectedTab?.goBack()
     tabManager.selectedTab?.externalAppURLHelper?.reset()
@@ -966,6 +1067,38 @@ extension BrowserViewController: ToolbarDelegate {
     popoverController.present(from: urlBar.locationView.secureContentStateButton, on: self)
   }
 
+  private func showCloseTabsWarning(isActiveTabIncluded: Bool, from sourceView: UIView) {
+    let alert = UIAlertController(
+      title: nil,
+      message: isActiveTabIncluded ? Strings.closeAllTabsPrompt : Strings.closeAllOtherTabsPrompt,
+      preferredStyle: .actionSheet
+    )
+    let cancelAction = UIAlertAction(title: Strings.CancelString, style: .cancel)
+    let closedTabsTitle =
+      isActiveTabIncluded
+      ? String(format: Strings.closeAllTabsTitle, tabManager.tabsForCurrentMode.count)
+      : Strings.closeAllOtherTabsTitle
+    let closeAllAction = UIAlertAction(title: closedTabsTitle, style: .destructive) {
+      [weak self] _ in
+      guard let self else { return }
+      if !self.privateBrowsingManager.isPrivateBrowsing {
+        // Add the tab information to recently closed before removing
+        self.tabManager.addAllTabsToRecentlyClosed(isActiveTabIncluded: isActiveTabIncluded)
+      }
+      self.tabManager.removeAllForCurrentMode(isActiveTabIncluded: isActiveTabIncluded)
+    }
+    alert.addAction(closeAllAction)
+    alert.addAction(cancelAction)
+
+    if let popoverPresentation = alert.popoverPresentationController {
+      popoverPresentation.sourceView = sourceView
+      popoverPresentation.sourceRect =
+        .init(x: sourceView.frame.width / 2, y: sourceView.frame.height, width: 1, height: 1)
+    }
+
+    present(alert, animated: true)
+  }
+
   func showBackForwardList() {
     if let backForwardList = tabManager.selectedTab?.backForwardList {
       let backForwardViewController = BackForwardListViewController(
@@ -999,7 +1132,6 @@ extension BrowserViewController: ToolbarDelegate {
     tabManager.selectedTab?.stopLoading()
     processAddressBarTask?.cancel()
     topToolbarDidPressReloadTask?.cancel()
-    topToolbar.locationView.loading = tabManager.selectedTab?.isLoading == true
   }
 }
 

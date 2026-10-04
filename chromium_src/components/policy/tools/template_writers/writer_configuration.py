@@ -5,6 +5,7 @@
 
 import override_utils
 
+
 @override_utils.override_function(globals())
 def GetConfigurationForBuild(original_function, defines):
     base = original_function(defines)
@@ -56,9 +57,11 @@ _BRAVE_VALUES = {
     'bundle_id': 'org.growser.ios.core',
 }
 
+
 def _merge_dicts(src, dst):
     result = dict(dst)
     for k, v in src.items():
-        result[k] = _merge_dicts(v, dst.get(k, {})) if isinstance(v,
-                                                                  dict) else v
+        result[k] = (
+            _merge_dicts(v, dst.get(k, {})) if isinstance(v, dict) else v
+        )
     return result

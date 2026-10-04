@@ -122,7 +122,7 @@ public class NTPDataSource {
     if !Preferences.NewTabPage.backgroundImages.value { return completion(nil) }
 
     // Force back to `0` if at end
-    Preferences.NewTabPage.backgroundRotationCounter.value %= service.countToBrandedWallpaper
+    Preferences.NewTabPage.backgroundRotationCounter.value %= service.countToNewTabTakeoverWallpaper
     // Increment regardless, this is a counter, not an index, so smallest should be `1`
     Preferences.NewTabPage.backgroundRotationCounter.value += 1
 

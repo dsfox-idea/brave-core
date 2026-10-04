@@ -4,9 +4,13 @@
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import * as React from 'react'
+import Icon from '@brave/leo/react/icon'
+
+// Utils
+import { getLocale } from '$web-common/locale'
 
 // Styles
-import { CardFace, StyledCard } from './cards.style'
+import { CardFace, HideButton, StyledCard } from './cards.style'
 
 // Constants
 const maxTiltDeg = 12
@@ -20,10 +24,12 @@ const prefersReducedMotion = () => {
 interface Props {
   children: React.ReactNode
   onClick?: () => void
+  onHide?: () => void
+  locked?: boolean
 }
 
 export const Card = (props: Props) => {
-  const { children, onClick } = props
+  const { children, onClick, onHide, locked } = props
 
   // Refs
   const cardRef = React.useRef<HTMLDivElement>(null)
@@ -41,10 +47,16 @@ export const Card = (props: Props) => {
     card.style.setProperty('--shadow-y', '4px')
   }, [])
 
+  React.useEffect(() => {
+    if (locked) {
+      resetTilt()
+    }
+  }, [locked, resetTilt])
+
   const onMouseMove = React.useCallback(
     (event: React.MouseEvent<HTMLDivElement>) => {
       const card = cardRef.current
-      if (!card || prefersReducedMotion()) {
+      if (!card || locked || prefersReducedMotion()) {
         return
       }
 
@@ -68,8 +80,13 @@ export const Card = (props: Props) => {
       card.style.setProperty('--shadow-x', `${shadowX.toFixed(1)}px`)
       card.style.setProperty('--shadow-y', `${shadowY.toFixed(1)}px`)
     },
-    [],
+    [locked],
   )
+
+  const onHideClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation()
+    onHide?.()
+  }
 
   return (
     <StyledCard
@@ -79,7 +96,18 @@ export const Card = (props: Props) => {
       onMouseLeave={resetTilt}
       onClick={onClick}
     >
-      <CardFace>{children}</CardFace>
+      <CardFace>
+        {children}
+        {onHide && (
+          <HideButton
+            type='button'
+            onClick={onHideClick}
+            aria-label={getLocale(S.BRAVE_WALLET_CONFIRM_HIDING_TOKEN)}
+          >
+            <Icon name='close' />
+          </HideButton>
+        )}
+      </CardFace>
     </StyledCard>
   )
 }

@@ -1948,7 +1948,7 @@ Growser is unable to recover your settings.
           Growser needs location permission for this site
         </message>
         <message name="IDS_MESSAGE_MISSING_LOCAL_NETWORK_PERMISSION_TEXT" desc="Text shown in a prompt ui when a website has requested access to the local network capabilities, but Growser is missing the Android local network permission.">
-          Growser needs local network permission for this site
+          Growser needs access to your local network to discover and use nearby devices
         </message>
         <message name="IDS_MESSAGE_STORAGE_ACCESS_PERMISSION_TEXT" desc="Text shown educating the user that Growser is missing the Android storage permission, which is required to download files.">
           Growser needs storage access permission to download files

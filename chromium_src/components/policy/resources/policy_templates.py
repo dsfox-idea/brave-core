@@ -13,8 +13,8 @@ import override_utils
 # upstream loader can be pointed at it as-is:
 # `//brave/components/policy/resources/templates/policy_definitions/Growser` # pylint: disable=line-too-long
 BRAVE_TEMPLATES_PATH = os.path.relpath(
-    brave_chromium_utils.wspath(
-        '//brave/components/policy/resources/templates'))
+    brave_chromium_utils.wspath('//brave/components/policy/resources/templates')
+)
 
 # Growser-62 (renamed again by Growser-174): our group directory is Growser,
 # not BraveSoftware. Upstream turned this name into a constant during the 153
@@ -49,7 +49,8 @@ def _GetPoliciesAndGroups(orig_func):
         TEMPLATES_PATH = chromium_templates_path
 
     assert BRAVE_GROUP_NAME in brave_result, (
-        f"'{BRAVE_GROUP_NAME}' policies not found in {BRAVE_TEMPLATES_PATH}")
+        f"'{BRAVE_GROUP_NAME}' policies not found in {BRAVE_TEMPLATES_PATH}"
+    )
     result.update(brave_result)
 
     return result
@@ -77,7 +78,9 @@ def _LoadPolicies(orig_func):
     # to:
     # `//components/policy/resources/templates/policy_definitions`
     policy_definition_yaml = policies['policy_definitions']
-    assert policy_definition_yaml, "'policy_definitions' is None (did upstream change?)"  # pylint: disable=line-too-long
+    assert policy_definition_yaml, (
+        "'policy_definitions' is None (did upstream change?)"
+    )  # pylint: disable=line-too-long
 
     brave_policies = []
     brave_policy_section = policy_definition_yaml['Growser']
@@ -98,7 +101,9 @@ def _LoadPolicies(orig_func):
     assert policy_yaml, "'policies' is None (did upstream change?)"
 
     policy_section = policy_yaml['policies']
-    assert policy_section, "'policies > policies' is None (did upstream change?)"  # pylint: disable=line-too-long
+    assert policy_section, (
+        "'policies > policies' is None (did upstream change?)"
+    )  # pylint: disable=line-too-long
 
     offset = max(map(int, policy_section), default=0)
     for i, entry in enumerate(brave_policies):
@@ -186,7 +191,8 @@ def _WriteDepFile(orig_func, dep_file, target, source_files):
     stale_path = f'/{POLICY_DEFINITIONS_KEY}/{BRAVE_GROUP_NAME}/'
     source_files = [f for f in source_files if stale_path not in f]
     brave_files = sorted(
-        f.replace('\\', '/') for f in glob.glob(
-            f'{BRAVE_TEMPLATES_PATH}/**/*.yaml', recursive=True))
+        f.replace('\\', '/')
+        for f in glob.glob(f'{BRAVE_TEMPLATES_PATH}/**/*.yaml', recursive=True)
+    )
 
     orig_func(dep_file, target, source_files + brave_files)

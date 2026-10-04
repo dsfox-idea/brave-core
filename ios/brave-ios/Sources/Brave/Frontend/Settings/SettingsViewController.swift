@@ -84,6 +84,7 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
 
 
   private var cancellables: Set<AnyCancellable> = []
+  private weak var braveAccountDialog: UIViewController?
 
   init(
     profile: LegacyBrowserProfile,
@@ -280,10 +281,11 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
     return Static.Section(rows: rows)
   }()
 
+  @discardableResult
   private func openBraveAccountWebUI(
     url: URL,
     dialogMode: BraveAccount.DialogMode? = nil
-  ) {
+  ) -> UIViewController {
     let controller = ChromeWebUIController(braveCore: braveCore, isPrivateBrowsing: false)
     let container = UINavigationController(rootViewController: controller)
     controller.title = L10nUtils.string(messageId: .BRAVE_ACCOUNT_TITLE)
@@ -303,6 +305,7 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
       presenter = presented
     }
     presenter.present(container, animated: true)
+    return container
   }
 
   private func openBraveAccountSettings() {
@@ -320,6 +323,10 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
     initiatingServiceName: String = "",
     dialogMode: BraveAccount.DialogMode = .default
   ) {
+    if braveAccountDialog?.presentingViewController != nil {
+      return
+    }
+
     // Growser-321: our WebUI scheme, not Brave's.
     var components = URLComponents(string: "\(URL.webUI.scheme)://account")!
     if !initiatingServiceName.isEmpty {
@@ -331,7 +338,7 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
       ]
     }
 
-    openBraveAccountWebUI(
+    braveAccountDialog = openBraveAccountWebUI(
       url: components.url!,
       dialogMode: dialogMode
     )
@@ -1058,6 +1065,17 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
           selection: { [unowned self] in
             self.navigationController?.pushViewController(
               UIHostingController(rootView: UserAgentOverrideView()),
+              animated: true
+            )
+          },
+          accessory: .disclosureIndicator,
+          cellClass: MultilineValue1Cell.self
+        ),
+        Row(
+          text: "Auto Close Tabs Override",
+          selection: { [unowned self] in
+            self.navigationController?.pushViewController(
+              UIHostingController(rootView: AutoCloseTabsDebugView()),
               animated: true
             )
           },

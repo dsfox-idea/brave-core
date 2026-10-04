@@ -8,5 +8,5 @@ substitutions:
     add_literal_to_list:
       target: hid
       list_name: deps
-      literal: brave_hid_deps
-      import: //brave/components/brave_wallet/sources.gni
+      literal: brave_browser_ui_hid_deps
+      import: //brave/browser/ui/hid/sources.gni

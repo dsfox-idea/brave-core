@@ -15,6 +15,7 @@
 #include <variant>
 #include <vector>
 
+#include "base/containers/map_util.h"
 #include "base/dcheck_is_on.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
@@ -30,6 +31,7 @@
 #include "base/test/gmock_callback_support.h"
 #include "base/test/gtest_util.h"
 #include "base/test/mock_callback.h"
+#include "base/test/run_until.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
 #include "base/test/test_future.h"
@@ -1072,6 +1074,109 @@ TEST_F(ConversationHandlerUnitTest_NoAssociatedContent,
   EXPECT_EQ(cached_content.size(), 2u);
   EXPECT_EQ(cached_content[0].get().content, "The content of one");
   EXPECT_EQ(cached_content[1].get().content, "The content of two");
+}
+
+TEST_F(ConversationHandlerUnitTest, ThreadHistory) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeature(features::kAIChatThreads);
+
+  // Build initial state with three root entries, where the middle one has a
+  // child thread.
+  auto archive = mojom::ConversationArchive::New();
+  auto root_entry_1 = mojom::ConversationTurn::New(
+      "root-turn-1", std::nullopt /* thread_uuid */,
+      mojom::CharacterType::HUMAN, mojom::ActionType::QUERY, "hello",
+      std::nullopt, std::nullopt, std::nullopt, base::Time::Now(), std::nullopt,
+      std::nullopt, nullptr /* skill */, false, std::nullopt, nullptr,
+      std::vector<std::string>{} /* child_thread_uuids */);
+  auto root_entry_2 = root_entry_1->Clone();
+  root_entry_2->uuid = "root-turn-2";
+  root_entry_2->character_type = mojom::CharacterType::ASSISTANT;
+  root_entry_2->action_type = mojom::ActionType::RESPONSE;
+  root_entry_2->text = "response";
+  root_entry_2->child_thread_uuids.emplace_back("thread-1");
+  auto root_entry_3 = root_entry_1->Clone();
+  root_entry_3->uuid = "root-turn-3";
+  root_entry_3->text = "third";
+  auto thread = mojom::Thread::New("thread-1", "uuid", "root-turn-2", 0, 0, 2);
+  archive->threads.emplace_back(std::move(thread));
+  archive->entries.emplace_back(std::move(root_entry_1));
+  archive->entries.emplace_back(std::move(root_entry_2));
+  archive->entries.emplace_back(std::move(root_entry_3));
+
+  auto conversation = mojom::Conversation::New(
+      "uuid", "title", base::Time::Now(), true, std::nullopt, 0, 0, false,
+      std::vector<mojom::AssociatedContentPtr>());
+
+  std::vector<std::unique_ptr<ToolProvider>> tool_providers;
+  tool_providers.push_back(std::make_unique<NiceMock<MockToolProvider>>());
+
+  auto handler = std::make_unique<ConversationHandler>(
+      conversation.get(), ai_chat_service_.get(), model_service_.get(),
+      ai_chat_service_->GetCredentialManagerForTesting(),
+      mock_feedback_api_.get(), &prefs_, shared_url_loader_factory_,
+      std::move(tool_providers), std::make_optional(std::move(archive)));
+
+  const auto& history = handler->GetConversationHistory();
+  ASSERT_EQ(history.size(), 3u);
+  ASSERT_EQ(history[1]->child_thread_uuids.size(), 1u);
+  ASSERT_EQ(history[1]->child_thread_uuids[0], "thread-1");
+
+  // Thread metadata should be populated immediately.
+  base::test::TestFuture<std::vector<mojom::ThreadPtr>> threads_future;
+  handler->GetConversationThreads(threads_future.GetCallback());
+  auto threads = threads_future.Take();
+  ASSERT_EQ(threads.size(), 1u);
+  EXPECT_EQ(threads[0]->uuid, "thread-1");
+  EXPECT_EQ(threads[0]->conversation_uuid, "uuid");
+  EXPECT_EQ(threads[0]->origin_conversation_entry_uuid, "root-turn-2");
+  // Thread entries should NOT be loaded yet (lazy).
+  auto* container = base::FindOrNull(handler->threads_, "thread-1");
+  ASSERT_TRUE(container);
+  EXPECT_TRUE(container->entries.empty());
+
+  // Deliver thread entries as if received from the service and verify only
+  // the thread's own entries are returned.
+  std::vector<mojom::ConversationTurnPtr> thread_entries;
+  thread_entries.emplace_back(mojom::ConversationTurn::New(
+      "thread-entry-1", std::make_optional<std::string>("thread-1"),
+      mojom::CharacterType::HUMAN, mojom::ActionType::QUERY, "thread query",
+      std::nullopt, std::nullopt, std::nullopt, base::Time::Now(), std::nullopt,
+      std::nullopt, nullptr, false, std::nullopt, nullptr,
+      std::vector<std::string>{}));
+  thread_entries.emplace_back(mojom::ConversationTurn::New(
+      "thread-entry-2", std::make_optional<std::string>("thread-1"),
+      mojom::CharacterType::ASSISTANT, mojom::ActionType::RESPONSE,
+      "thread response", std::nullopt, std::nullopt, std::nullopt,
+      base::Time::Now(), std::nullopt, std::nullopt, nullptr, false,
+      std::nullopt, nullptr, std::vector<std::string>{}));
+
+  base::test::TestFuture<std::vector<mojom::ConversationTurnPtr>>
+      received_future;
+  handler->OnConversationThreadHistoryReceived(
+      "thread-1", received_future.GetCallback(), std::move(thread_entries));
+  auto received_entries = received_future.Take();
+  ASSERT_EQ(received_entries.size(), 2u);
+  EXPECT_EQ(received_entries[0]->uuid, "thread-entry-1");
+  EXPECT_EQ(received_entries[1]->uuid, "thread-entry-2");
+  EXPECT_EQ(container->entries.size(), 2u);
+
+  // Subsequent requests should be served from the cache.
+  base::test::TestFuture<std::vector<mojom::ConversationTurnPtr>> future;
+  handler->GetConversationHistory("thread-1", future.GetCallback());
+  auto entries = future.Take();
+  ASSERT_EQ(entries.size(), 2u);
+  EXPECT_EQ(entries[0]->uuid, "thread-entry-1");
+  EXPECT_EQ(entries[0]->text, "thread query");
+  EXPECT_EQ(entries[1]->uuid, "thread-entry-2");
+  EXPECT_EQ(entries[1]->text, "thread response");
+
+  // Unknown threads should return empty entries.
+  base::test::TestFuture<std::vector<mojom::ConversationTurnPtr>>
+      unknown_future;
+  handler->GetConversationHistory("unknown-thread",
+                                  unknown_future.GetCallback());
+  EXPECT_TRUE(unknown_future.Take().empty());
 }
 
 TEST_F(ConversationHandlerUnitTest, UpdateOrCreateLastAssistantEntry_Delta) {
@@ -2595,6 +2700,44 @@ TEST_F(ConversationHandlerUnitTest,
             l10n_util::GetStringUTF8(IDS_AI_CHAT_QUESTION_SUMMARIZE_PAGE));
 }
 
+TEST_F(ConversationHandlerUnitTest,
+       MaybeSeedOrClearSuggestions_RemovesContentActionsWithoutContent) {
+  // Suggestions the assistant offered should survive the content being
+  // removed, but a suggestion which acts on that content should not.
+  associated_content_->SetUrl(GURL("https://www.example.com"));
+  associated_content_->SetTextContent("Content");
+  conversation_handler_->SetChatHistoryForTesting(CreateSampleChatHistory(1));
+
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+  EXPECT_CALL(*engine, GenerateQuestionSuggestions(_, _))
+      .WillOnce(base::test::RunOnceCallback<1>(
+          std::vector<std::string>{"Question 1?", "Question 2?"}));
+
+  // ConversationHandler requires a client to be connected when generating
+  // questions.
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+  conversation_handler_->GenerateQuestions();
+
+  // Page content is fetched before the questions are asked for, so wait for
+  // the summarize action plus both generated questions.
+  ASSERT_TRUE(base::test::RunUntil([&] {
+    return conversation_handler_->GetSuggestedQuestionsForTest().size() == 3u;
+  }));
+
+  const auto& suggestions =
+      conversation_handler_->GetSuggestedQuestionsForTest();
+  EXPECT_EQ(suggestions[0].action_type, mojom::ActionType::SUMMARIZE_PAGE);
+
+  conversation_handler_->associated_content_manager()->ClearContent();
+
+  const auto& suggestions2 =
+      conversation_handler_->GetSuggestedQuestionsForTest();
+  ASSERT_EQ(suggestions2.size(), 2u);
+  EXPECT_EQ(suggestions2[0].title, "Question 1?");
+  EXPECT_EQ(suggestions2[1].title, "Question 2?");
+}
+
 TEST_F(ConversationHandlerUnitTest, SubmitSuggestion) {
   // Test suggestion removal with associated content because ConversationHandler
   // removes all suggestions after the first query when there is no associated
@@ -4036,6 +4179,284 @@ TEST_F(ConversationHandlerUnitTest,
   ASSERT_TRUE(assistant_after->events.has_value());
   auto& events_after = assistant_after->events.value();
   EXPECT_TRUE(events_after.empty());  // Tool use event should be removed
+}
+
+TEST_F(ConversationHandlerUnitTest,
+       ToolUseEvents_UserProvidedOutputContinuesLoop) {
+  // A tool which asks the user to provide its output (e.g. a preference choice)
+  // isn't executed - the user's answer becomes the tool's result and the loop
+  // continues with it.
+  conversation_handler_->associated_content_manager()->ClearContent();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+
+  auto tool1 = std::make_unique<NiceMock<MockTool>>("test_tool", "Test tool");
+  tool1->set_requires_user_interaction_before_handling(true);
+
+  ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
+    std::vector<base::WeakPtr<Tool>> tools;
+    tools.push_back(tool1->GetWeakPtr());
+    return tools;
+  });
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+
+  base::RunLoop first_generation_loop;
+  testing::Sequence seq;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .InSequence(seq)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewToolUseEvent(
+                        mojom::ToolUseEvent::New(
+                            "test_tool", "tool_id_1", "{\"param\":\"value\"}",
+                            std::nullopt, std::nullopt, nullptr, false)),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        mojom::ConversationEntryEvent::NewCompletionEvent(
+                            mojom::CompletionEvent::New("")),
+                        std::nullopt)));
+                first_generation_loop.Quit();
+              })));
+
+  // The user's answer is sent to the engine as the tool's result.
+  base::RunLoop second_generation_loop;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .InSequence(seq)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewCompletionEvent(
+                        mojom::CompletionEvent::New("Answer to the choice")),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        nullptr, std::nullopt)));
+                second_generation_loop.Quit();
+              })));
+
+  // The user provides the output, the tool is never executed.
+  EXPECT_CALL(*tool1, UseTool).Times(0);
+
+  conversation_handler_->SubmitHumanConversationEntry("First question",
+                                                      std::nullopt);
+  first_generation_loop.Run();
+
+  // The loop is waiting on the user, not on a request.
+  EXPECT_EQ(GetState()->tool_use_task_state, mojom::TaskState::kRunning);
+  EXPECT_FALSE(conversation_handler_->IsRequestInProgress());
+
+  // User chooses, which provides the tool's output.
+  std::vector<mojom::ContentBlockPtr> output;
+  output.push_back(mojom::ContentBlock::NewTextContentBlock(
+      mojom::TextContentBlock::New("first choice")));
+  conversation_handler_->RespondToToolUseRequest("tool_id_1", std::move(output),
+                                                 {});
+  second_generation_loop.Run();
+
+  // The answer completed the loop, so the task is over.
+  EXPECT_EQ(GetState()->tool_use_task_state, mojom::TaskState::kNone);
+  EXPECT_FALSE(conversation_handler_->IsRequestInProgress());
+
+  const auto& history = conversation_handler_->GetConversationHistory();
+  // human + assistant with the tool use + assistant with the answer.
+  ASSERT_EQ(history.size(), 3u);
+  auto& events = history[1]->events.value();
+  ASSERT_EQ(events.size(), 1u);
+  ASSERT_TRUE(events[0]->is_tool_use_event());
+  auto& tool_use = events[0]->get_tool_use_event();
+  ASSERT_TRUE(tool_use->output.has_value());
+  ASSERT_EQ(tool_use->output->size(), 1u);
+  EXPECT_EQ(tool_use->output->at(0)->get_text_content_block()->text,
+            "first choice");
+  EXPECT_EQ(history.back()->text, "Answer to the choice");
+}
+
+TEST_F(ConversationHandlerUnitTest,
+       ToolUseEvents_FollowUpChoicesBecomeSuggestions) {
+  // Follow-up choices end the assistant's turn, so they should be moved to the
+  // conversation's suggestions instead of leaving a tool use request pending.
+  conversation_handler_->associated_content_manager()->ClearContent();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+
+  // The tool loop is complete, so tool providers should be told so.
+  EXPECT_CALL(*mock_tool_provider_, OnGenerationCompleteWithNoToolsToHandle)
+      .Times(1);
+
+  // A single generation - there is no tool result to send back.
+  base::RunLoop generation_loop;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .Times(1)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewCompletionEvent(
+                        mojom::CompletionEvent::New("Here's the answer")),
+                    std::nullopt));
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewToolUseEvent(
+                        mojom::ToolUseEvent::New(
+                            mojom::kUserChoiceToolName, "tool_id_1",
+                            R"({"choice_type":"follow_up",)"
+                            R"("choices":["Ask A","Ask B"]})",
+                            std::nullopt, std::nullopt, nullptr, false)),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        nullptr, std::nullopt)));
+                generation_loop.Quit();
+              })));
+
+  conversation_handler_->SubmitHumanConversationEntry("First question",
+                                                      std::nullopt);
+  generation_loop.Run();
+
+  // The tool use request is taken out of the response, leaving the answer.
+  const auto& history = conversation_handler_->GetConversationHistory();
+  ASSERT_EQ(history.size(), 2u);
+  auto& events = history.back()->events.value();
+  ASSERT_EQ(events.size(), 1u);
+  EXPECT_TRUE(events[0]->is_completion_event());
+  EXPECT_EQ(history.back()->text, "Here's the answer");
+
+  // The choices are offered as suggestions instead.
+  const auto& suggestions =
+      conversation_handler_->GetSuggestedQuestionsForTest();
+  ASSERT_EQ(suggestions.size(), 2u);
+  EXPECT_EQ(suggestions[0].title, "Ask A");
+  EXPECT_EQ(suggestions[1].title, "Ask B");
+
+  // Nothing is waiting on the user, so there is no task and no request.
+  EXPECT_EQ(GetState()->tool_use_task_state, mojom::TaskState::kNone);
+  EXPECT_FALSE(conversation_handler_->IsRequestInProgress());
+}
+
+TEST_F(ConversationHandlerUnitTest,
+       ToolUseEvents_PreferenceChoicesAreNotSuggestions) {
+  // A preference choice is an answer the assistant needs before it can
+  // continue, so it stays in the response for the user to answer.
+  conversation_handler_->associated_content_manager()->ClearContent();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+
+  auto tool1 = std::make_unique<NiceMock<MockTool>>(mojom::kUserChoiceToolName,
+                                                    "User choice");
+  tool1->set_requires_user_interaction_before_handling(true);
+
+  ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
+    std::vector<base::WeakPtr<Tool>> tools;
+    tools.push_back(tool1->GetWeakPtr());
+    return tools;
+  });
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+
+  base::RunLoop generation_loop;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .Times(1)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewToolUseEvent(
+                        mojom::ToolUseEvent::New(
+                            mojom::kUserChoiceToolName, "tool_id_1",
+                            R"({"choice_type":"preference",)"
+                            R"("choices":["1pm","2:30pm"]})",
+                            std::nullopt, std::nullopt, nullptr, false)),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        nullptr, std::nullopt)));
+                generation_loop.Quit();
+              })));
+
+  conversation_handler_->SubmitHumanConversationEntry("Book me a table",
+                                                      std::nullopt);
+  generation_loop.Run();
+
+  const auto& history = conversation_handler_->GetConversationHistory();
+  ASSERT_EQ(history.size(), 2u);
+  auto& events = history.back()->events.value();
+  ASSERT_EQ(events.size(), 1u);
+  ASSERT_TRUE(events[0]->is_tool_use_event());
+  EXPECT_FALSE(events[0]->get_tool_use_event()->output.has_value());
+  EXPECT_TRUE(conversation_handler_->GetSuggestedQuestionsForTest().empty());
+}
+
+TEST_F(ConversationHandlerUnitTest,
+       ToolUseEvents_FollowUpChoicesWithNothingUsable) {
+  // The assistant said it was offering follow-ups but provided nothing
+  // displayable. The request must still be taken out of the response, otherwise
+  // the loop would wait for an answer the UI can't ask for.
+  conversation_handler_->associated_content_manager()->ClearContent();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+
+  EXPECT_CALL(*mock_tool_provider_, OnGenerationCompleteWithNoToolsToHandle)
+      .Times(1);
+
+  base::RunLoop generation_loop;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .Times(1)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewCompletionEvent(
+                        mojom::CompletionEvent::New("Here's the answer")),
+                    std::nullopt));
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewToolUseEvent(
+                        mojom::ToolUseEvent::New(
+                            mojom::kUserChoiceToolName, "tool_id_1",
+                            R"({"choice_type":"follow_up","choices":[]})",
+                            std::nullopt, std::nullopt, nullptr, false)),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        nullptr, std::nullopt)));
+                generation_loop.Quit();
+              })));
+
+  conversation_handler_->SubmitHumanConversationEntry("First question",
+                                                      std::nullopt);
+  generation_loop.Run();
+
+  const auto& history = conversation_handler_->GetConversationHistory();
+  ASSERT_EQ(history.size(), 2u);
+  auto& events = history.back()->events.value();
+  ASSERT_EQ(events.size(), 1u);
+  EXPECT_TRUE(events[0]->is_completion_event());
+
+  EXPECT_TRUE(conversation_handler_->GetSuggestedQuestionsForTest().empty());
+  EXPECT_EQ(GetState()->tool_use_task_state, mojom::TaskState::kNone);
+  EXPECT_FALSE(conversation_handler_->IsRequestInProgress());
 }
 
 TEST_F(ConversationHandlerUnitTest, ToolUseEvents_MultipleToolIterations) {

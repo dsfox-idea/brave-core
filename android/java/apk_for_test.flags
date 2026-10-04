@@ -117,12 +117,10 @@
 }
 
 -keep class org.chromium.chrome.browser.ntp_customization.NtpCustomizationUtils {
-    *** isInNarrowWindowOnLff(...);
     *** isNtpThemeCustomizationEnabled(...);
 }
 
 -keep class org.chromium.chrome.browser.ntp_customization.BraveNtpCustomizationUtils {
-    *** isInNarrowWindowOnLff(...);
     *** isNtpThemeCustomizationEnabled(...);
 }
 
@@ -597,7 +595,6 @@
 
 -keep class org.chromium.chrome.browser.omnibox.LocationBarCoordinator {
     *** mLocationBarMediator;
-    *** mUrlBar;
     public <init>(...);
 }
 

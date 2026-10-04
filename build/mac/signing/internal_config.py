@@ -18,7 +18,6 @@ BRAVE_CHANNEL = os.environ.get('BRAVE_CHANNEL')
 
 
 class InternalCodeSignConfig(ChromiumCodeSignConfig):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.is_in_sign_chrome = False

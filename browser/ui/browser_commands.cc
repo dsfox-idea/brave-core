@@ -285,7 +285,7 @@ void MaybeDistillAndShowSpeedreaderBubble(Browser* browser) {
 
 void ShowBraveVPNBubble(Browser* browser) {
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
-  browser->GetFeatures().brave_vpn_controller()->ShowBraveVPNBubble();
+  BraveVPNController::From(browser)->ShowBraveVPNBubble();
 #endif
 }
 
@@ -368,6 +368,10 @@ void CopySanitizedURL(BrowserWindowInterface* browser, const GURL& url) {
                            ->SanitizeURL(url);
 
   ui::ScopedClipboardWriter scw(ui::ClipboardBuffer::kCopyPaste);
+  if (browser->GetProfile()->IsOffTheRecord()) {
+    // Keep it out of the OS clipboard history and cloud clipboard sync.
+    scw.MarkAsOffTheRecord();
+  }
   scw.WriteText(base::UTF8ToUTF16(sanitized_url.spec()));
 }
 
@@ -401,6 +405,10 @@ void CopyLinkWithStrictCleaning(BrowserWindowInterface* browser,
                   ->SanitizeURL(final_url);
 
   ui::ScopedClipboardWriter scw(ui::ClipboardBuffer::kCopyPaste);
+  if (browser->GetProfile()->IsOffTheRecord()) {
+    // Keep it out of the OS clipboard history and cloud clipboard sync.
+    scw.MarkAsOffTheRecord();
+  }
   scw.WriteText(base::UTF8ToUTF16(final_url.spec()));
 }
 

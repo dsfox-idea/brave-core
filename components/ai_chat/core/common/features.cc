@@ -75,7 +75,7 @@ bool IsAIChatFirstEnabled() {
   return base::FeatureList::IsEnabled(features::kAIChatFirst);
 }
 
-BASE_FEATURE(kAIChatUserChoiceTool, base::FEATURE_DISABLED_BY_DEFAULT);
+BASE_FEATURE(kAIChatUserChoiceTool, base::FEATURE_ENABLED_BY_DEFAULT);
 
 // Enables experimental "workspace" local coding-agent tools that let Leo view,
 // search, and edit files within a user-selected local folder.
@@ -203,6 +203,10 @@ const base::FeatureParam<bool> kShowAIChatInputOnNewTabPageDayZero{
 bool IsShowAIChatInputOnNewTabPageEnabled(PrefService* local_state,
                                           bool is_first_run) {
   CHECK(local_state);
+  if (local_state->GetString(ai_chat::prefs::kNtpInputSourceSuffix).empty()) {
+    local_state->SetString(ai_chat::prefs::kNtpInputSourceSuffix,
+                           is_first_run ? "c" : "b");
+  }
   // If feature was enabled via day zero experiment at install time, leave
   // the feature enabled forever.
   if (local_state->GetBoolean(ai_chat::prefs::kNtpInputDayZeroEnabled)) {
@@ -234,6 +238,8 @@ BASE_FEATURE(kBraveSyncAIChat, base::FEATURE_DISABLED_BY_DEFAULT);
 bool IsBraveSyncAIChatEnabled() {
   return base::FeatureList::IsEnabled(features::kBraveSyncAIChat);
 }
+
+BASE_FEATURE(kAIChatThreads, base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kAIChatConversationShare, base::FEATURE_ENABLED_BY_DEFAULT);
 

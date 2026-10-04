@@ -141,8 +141,8 @@ brave_ads::mojom::NewTabPageAdInfoPtr BuildNewTabPageAd() {
   return mojom_ad;
 }
 
-int GetInitialCountToBrandedWallpaper() {
-  return features::kInitialCountToBrandedWallpaper.Get() - 1;
+int GetInitialCountToNewTabTakeoverWallpaper() {
+  return features::kInitialCountToNewTabTakeoverWallpaper.Get() - 1;
 }
 
 }  // namespace
@@ -190,6 +190,12 @@ class ViewCounterServiceTest : public testing::Test {
   void SimulateAdsServiceInitialized() {
     view_counter_service_->OnDidInitializeAdsService();
   }
+
+  void SimulateAdsServiceDataCleared() {
+    view_counter_service_->OnDidClearAdsServiceData();
+  }
+
+  void SimulateShutdown() { view_counter_service_->Shutdown(); }
 
   void CreateViewCounterService() {
     BraveNTPCustomBackgroundService* custom_background_service = nullptr;
@@ -275,9 +281,9 @@ class ViewCounterServiceTest : public testing::Test {
     return result;
   }
 
-  std::optional<base::DictValue> GetCurrentBrandedWallpaper() {
+  std::optional<base::DictValue> GetNewTabTakeoverWallpaper() {
     base::test::TestFuture<std::optional<base::DictValue>> future;
-    view_counter_service_->GetCurrentBrandedWallpaper(future.GetCallback());
+    view_counter_service_->GetNewTabTakeoverWallpaper(future.GetCallback());
     return future.Take();
   }
 
@@ -294,7 +300,7 @@ class ViewCounterServiceTest : public testing::Test {
   std::optional<base::DictValue>
   CycleThroughPageViewsAndMaybeGetNewTabTakeoverWallpaper() {
     // Loading initial count times.
-    for (int i = 0; i < GetInitialCountToBrandedWallpaper(); ++i) {
+    for (int i = 0; i < GetInitialCountToNewTabTakeoverWallpaper(); ++i) {
       const auto wallpaper =
           GetCurrentWallpaperForDisplay(/*allow_sponsored_content=*/true);
       EXPECT_TRUE(wallpaper);
@@ -412,7 +418,7 @@ TEST_F(ViewCounterServiceTest, IsActiveOptedIn) {
 }
 
 TEST_F(ViewCounterServiceTest, PrefsWithModelTest) {
-  EXPECT_EQ(features::kInitialCountToBrandedWallpaper.Get() - 1,
+  EXPECT_EQ(features::kInitialCountToNewTabTakeoverWallpaper.Get() - 1,
             view_counter_service_->model_
                 .count_to_new_tab_takeover_wallpaper_for_testing());
   EXPECT_TRUE(view_counter_service_->model_.show_wallpaper_for_testing());
@@ -506,7 +512,7 @@ TEST_F(
   brave_ads::mojom::NewTabPageAdInfoPtr ad = BuildNewTabPageAd();
   EXPECT_CALL(ads_service_mock_, MaybeServeNewTabPageAd)
       .WillOnce(base::test::RunOnceCallback<0>(std::move(ad)));
-  EXPECT_TRUE(GetCurrentBrandedWallpaper());
+  EXPECT_TRUE(GetNewTabTakeoverWallpaper());
 }
 
 TEST_F(
@@ -522,7 +528,7 @@ TEST_F(
   ASSERT_FALSE(view_counter_service_->CanShowNewTabTakeover());
 
   EXPECT_CALL(ads_service_mock_, MaybeServeNewTabPageAd).Times(0);
-  EXPECT_FALSE(GetCurrentBrandedWallpaper());
+  EXPECT_FALSE(GetNewTabTakeoverWallpaper());
 }
 
 TEST_F(ViewCounterServiceTest,
@@ -539,7 +545,7 @@ TEST_F(ViewCounterServiceTest,
   brave_ads::mojom::NewTabPageAdInfoPtr ad = BuildNewTabPageAd();
   EXPECT_CALL(ads_service_mock_, MaybeServeNewTabPageAd)
       .WillOnce(base::test::RunOnceCallback<0>(std::move(ad)));
-  EXPECT_TRUE(GetCurrentBrandedWallpaper());
+  EXPECT_TRUE(GetNewTabTakeoverWallpaper());
 }
 
 TEST_F(ViewCounterServiceTest,
@@ -556,7 +562,7 @@ TEST_F(ViewCounterServiceTest,
   brave_ads::mojom::NewTabPageAdInfoPtr ad = BuildNewTabPageAd();
   EXPECT_CALL(ads_service_mock_, MaybeServeNewTabPageAd)
       .WillOnce(base::test::RunOnceCallback<0>(std::move(ad)));
-  EXPECT_TRUE(GetCurrentBrandedWallpaper());
+  EXPECT_TRUE(GetNewTabTakeoverWallpaper());
 }
 
 TEST_F(ViewCounterServiceTest,
@@ -624,6 +630,40 @@ TEST_F(ViewCounterServiceTest,
   SimulateAdsServiceInitialized();
   EXPECT_EQ(1U, background_images_service_
                     ->register_sponsored_images_component_call_count());
+}
+
+TEST_F(ViewCounterServiceTest,
+       UnregistersSponsoredImagesComponentOnShutdownWhenOptedIn) {
+  SimulateAdsServiceInitialized();
+
+  SimulateShutdown();
+
+  EXPECT_EQ(1U, background_images_service_
+                    ->unregister_sponsored_images_component_call_count());
+}
+
+TEST_F(ViewCounterServiceTest,
+       DoesNotUnregisterSponsoredImagesComponentOnShutdownWhenNeverOptedIn) {
+  SimulateShutdown();
+
+  EXPECT_EQ(0U, background_images_service_
+                    ->unregister_sponsored_images_component_call_count());
+}
+
+TEST_F(
+    ViewCounterServiceTest,
+    DoesNotReRegisterSponsoredImagesComponentWhenClearingAdsDataAfterOptOut) {
+  SimulateAdsServiceInitialized();
+  SetBackgroundImagesVisibility(/*should_show=*/false);
+  const size_t register_call_count_after_opt_out =
+      background_images_service_
+          ->register_sponsored_images_component_call_count();
+
+  SimulateAdsServiceDataCleared();
+
+  EXPECT_EQ(register_call_count_after_opt_out,
+            background_images_service_
+                ->register_sponsored_images_component_call_count());
 }
 
 }  // namespace ntp_background_images

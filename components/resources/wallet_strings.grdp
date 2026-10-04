@@ -1014,7 +1014,7 @@
   <message name="IDS_BRAVE_WALLET_ORDINAL_TWENTY_SECOND" desc="Twenty-second" formatter_data="webui=Wallet">Twenty-second</message>
   <message name="IDS_BRAVE_WALLET_ORDINAL_TWENTY_THIRD" desc="Twenty-third" formatter_data="webui=Wallet">Twenty-third</message>
   <message name="IDS_BRAVE_WALLET_ORDINAL_TWENTY_FOURTH" desc="Twenty-fourth" formatter_data="webui=Wallet">Twenty-fourth</message>
-  <message name="IDS_BRAVE_WALLET_NON_ASCII_CHARACTERS_IN_MESSAGE_WARNING" desc="Warning to alert user that a message contains non-ASCII characters " formatter_data="webui=Wallet">Non-ASCII characters detected!</message>
+  <message name="IDS_BRAVE_WALLET_SIGN_MESSAGE_UNEXPECTED_CHARACTERS_WARNING" desc="Warning title when a wallet sign message contains null bytes, newlines, other non-printable characters, or non-ASCII characters" formatter_data="webui=Wallet">Unexpected characters detected</message>
   <message name="IDS_BRAVE_WALLET_VIEW_ENCODED_MESSAGE" desc="Button text to toggle to encoded message view" formatter_data="webui=Wallet">View original message</message>
   <message name="IDS_BRAVE_WALLET_VIEW_DECODED_MESSAGE" desc="Button text to toggle to decoded message view" formatter_data="webui=Wallet">View message in ASCII encoding</message>
   <message name="IDS_BRAVE_WALLET_INFORMATION" desc="Information label shown in coin market detail view" formatter_data="webui=Wallet">Information</message>
@@ -1300,4 +1300,6 @@
   <message name="IDS_BRAVE_WALLET_APPEARANCE" desc="Section label for appearance settings in the wallet card hub settings screen" formatter_data="webui=Wallet">Appearance</message>
   <message name="IDS_BRAVE_WALLET_SECURITY" desc="Section label for security settings in the wallet card hub settings screen" formatter_data="webui=Wallet">Security</message>
   <message name="IDS_BRAVE_WALLET_REQUIRE_UNLOCK_NEXT_TIME" desc="Description under the lock wallet button in the wallet card hub settings screen" formatter_data="webui=Wallet">Require unlock next time</message>
+  <message name="IDS_BRAVE_WALLET_HIDE_CARD_FROM_HOME" desc="Title of the confirmation dialog for hiding a wallet card hub card from home" formatter_data="webui=Wallet">Hide <ph name="CARD_NAME">$1<ex>Crypto</ex></ph> from home?</message>
+  <message name="IDS_BRAVE_WALLET_HIDE_CARD_FROM_HOME_DESCRIPTION" desc="Description of the confirmation dialog for hiding a wallet card hub card from home" formatter_data="webui=Wallet">Your <ph name="CARD_NAME">$1<ex>Crypto</ex></ph> balance is unchanged. This only hides the card from home. You can show it again anytime in Settings, under Wallet.</message>
 </grit-part>

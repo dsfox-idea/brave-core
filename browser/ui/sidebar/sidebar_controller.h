@@ -48,7 +48,7 @@ class SidebarController : public SidebarService::Observer {
   SidebarController(const SidebarController&) = delete;
   SidebarController& operator=(const SidebarController&) = delete;
 
-  // NOTE: Don't call this directly for panel item. Use ActivatePanelItem().
+  // NOTE: Don't call this directly for panel item. Use SidePanelUI instead.
   // This should be called as a result of SidePanelCoordinator's entry
   // opening/closing event. If this method is called directly for activating
   // panel, SidePanelCoordinator doesn't know about it.
@@ -58,13 +58,16 @@ class SidebarController : public SidebarService::Observer {
   void ActivateItemAt(
       std::optional<size_t> index,
       WindowOpenDisposition disposition = WindowOpenDisposition::CURRENT_TAB);
+
+  // Called when the item at |index| is pressed by the user. Deactivates the
+  // current panel if the item is already active.
+  // |disposition| is only used for shortcut type items.
+  void OnItemPressed(
+      size_t index,
+      WindowOpenDisposition disposition = WindowOpenDisposition::CURRENT_TAB);
   void AddItemWithCurrentTab();
   void UpdateActiveItemState(std::optional<SidebarItem::BuiltInItemType>
                                  active_panel_item = std::nullopt);
-
-  // Ask panel item activation state change to SidePanelUI.
-  void ActivatePanelItem(SidebarItem::BuiltInItemType panel_item);
-  void DeactivateCurrentPanel();
 
   // Toggles a session-only "pin" that forces the sidebar control view
   // visible regardless of the current show option. Pinned state is cleared
@@ -115,6 +118,12 @@ class SidebarController : public SidebarService::Observer {
 
  private:
   void OnPreferenceChanged(const std::string& pref_name);
+
+  // Ask panel item activation state change to SidePanelUI.
+  // Outside of this class, use SidePanelUI directly.
+  void ActivatePanelItem(SidebarItem::BuiltInItemType panel_item);
+
+  SidePanelUI* GetSidePanelUI();
 
   // Iterate tabs by host (if tabs with host of URL exist).
   // Otherwise, load URL in the active tab.

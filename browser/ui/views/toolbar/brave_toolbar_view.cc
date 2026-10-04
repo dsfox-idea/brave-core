@@ -191,7 +191,7 @@ bool SupportsBraveVerticalTabs(BrowserWindowInterface* browser) {
   if (!browser) {
     return false;
   }
-  auto* vtc = VerticalTabController::FromBrowser(browser);
+  auto* vtc = VerticalTabController::From(browser);
   return vtc && vtc->SupportsBraveVerticalTabs();
 }
 
@@ -222,10 +222,8 @@ void BraveToolbarView::Init() {
 
   // This will allow us to move this window by dragging toolbar.
   // See brave_non_client_hit_test_helper.h
-  CHECK_DEREF(browser())
-      .GetFeatures()
-      .brave_non_client_hit_test_helper()
-      ->RegisterCaptionArea(this);
+  CHECK_DEREF(BraveNonClientHitTestHelper::From(browser()))
+      .RegisterCaptionArea(this);
 
   // For non-normal mode, we don't have to do any more work.
   if (display_mode_ != DisplayMode::kNormal) {
@@ -580,7 +578,7 @@ void BraveToolbarView::UpdateHorizontalPadding() {
   // shown, or when the top container is hosted in the Focus Mode top overlay.
   // In the latter case, upstream's "top container reparented" layout branch
   // takes care of the insets.
-  auto* vtc = VerticalTabController::FromBrowser(browser_);
+  auto* vtc = VerticalTabController::From(browser_);
   const bool should_show_vertical_tabs =
       vtc && vtc->ShouldShowBraveVerticalTabs();
   const bool should_show_title_bar_for_vertical_tabs =
@@ -742,7 +740,7 @@ void BraveToolbarView::UpdateVerticalTabToggleVisibility() {
     return;
   }
 
-  vertical_tab_toggle_->SetVisible(VerticalTabController::FromBrowser(browser_)
+  vertical_tab_toggle_->SetVisible(VerticalTabController::From(browser_)
                                        ->ShouldShowVerticalTabToggleButton());
 }
 
@@ -762,7 +760,7 @@ void BraveToolbarView::UpdateVerticalTabTogglePlacement() {
   // (logical index 0 renders on the visual right). To keep the toggle on the
   // same physical side as the strip, invert the placement choice when the UI
   // is RTL.
-  auto* vtc = VerticalTabController::FromBrowser(browser_);
+  auto* vtc = VerticalTabController::From(browser_);
   const bool place_near_app_menu =
       vtc && vtc->IsVerticalTabOnRight() != base::i18n::IsRTL();
 
@@ -847,12 +845,12 @@ void BraveToolbarView::CreateWorkspaceButtonIfNeeded() {
       l10n_util::GetStringUTF16(IDS_TOOLTIP_WORKSPACES_BUTTON));
   workspaces_button_->GetViewAccessibility().SetName(
       l10n_util::GetStringUTF16(IDS_ACCNAME_WORKSPACES_BUTTON));
-  workspaces_button_->SetVisible(VerticalTabController::FromBrowser(browser_)
-                                     ->ShouldShowBraveVerticalTabs());
+  workspaces_button_->SetVisible(
+      VerticalTabController::From(browser_)->ShouldShowBraveVerticalTabs());
 }
 
 void BraveToolbarView::OnWorkspacesButtonPressed() {
-  auto* controller = browser_->GetFeatures().workspaces_bubble_controller();
+  auto* controller = WorkspacesBubbleController::From(browser_);
   CHECK(controller);
   controller->ShowBubble(workspaces_button_, browser_->GetProfile());
 }
@@ -861,8 +859,8 @@ void BraveToolbarView::UpdateWorkspaceButtonVisibility() {
   if (!workspaces_button_) {
     return;
   }
-  workspaces_button_->SetVisible(VerticalTabController::FromBrowser(browser_)
-                                     ->ShouldShowBraveVerticalTabs());
+  workspaces_button_->SetVisible(
+      VerticalTabController::From(browser_)->ShouldShowBraveVerticalTabs());
 }
 
 void BraveToolbarView::UpdateWorkspaceButtonPlacement() {
@@ -897,7 +895,7 @@ void BraveToolbarView::UpdateComboButtonState() {
     return;
   }
 
-  auto* vtc = VerticalTabController::FromBrowser(browser_);
+  auto* vtc = VerticalTabController::From(browser_);
   combo_button_->SetVisible(vtc && vtc->ShouldShowBraveVerticalTabs());
 }
 

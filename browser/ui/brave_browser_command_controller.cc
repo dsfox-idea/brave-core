@@ -49,7 +49,6 @@
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window.h"
-#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/tabs/features.h"
 #include "chrome/browser/ui/tabs/tab_change_type.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
@@ -129,6 +128,14 @@ bool IsBraveCommands(int id) {
 }
 
 bool IsBraveOverrideCommands(int id) {
+  if (id == IDC_TOGGLE_VERTICAL_TABS &&
+      tabs::IsUpstreamVerticalTabsForceEnabled()) {
+    // The upstream vertical tab strip is active, so the toggle must go through
+    // the upstream command controller (which drives the upstream
+    // VerticalTabStripStateController). brave::ToggleVerticalTabStrip() would
+    // toggle Brave's own pref, which has no effect on the upstream strip.
+    return false;
+  }
   static constexpr auto kOverrideCommands = base::MakeFixedFlatSet<int>({
       IDC_NEW_WINDOW,
       IDC_NEW_INCOGNITO_WINDOW,
@@ -223,6 +230,21 @@ bool BraveBrowserCommandController::SupportsCommand(int id) const {
 }
 
 bool BraveBrowserCommandController::IsCommandEnabled(int id) const {
+  if (id == IDC_COMMANDER) {
+    // When the display mode of the toolbar isn't normal, the omnibox is set to
+    // readonly. This is checked here as the browser view isn't not fully
+    // initialized in InitBraveCommandState().
+    auto* browser_view =
+        BraveBrowserView::GetBrowserViewForBrowser(base::to_address(browser_));
+    if (!browser_view) {
+      // Can be null in tests.
+      return false;
+    }
+    return brave_command_updater_.IsCommandEnabled(id) &&
+           browser_view->toolbar()->display_mode() ==
+               ToolbarView::DisplayMode::kNormal;
+  }
+
   return IsBraveCommands(id) ? brave_command_updater_.IsCommandEnabled(id)
                              : BrowserCommandController::IsCommandEnabled(id);
 }
@@ -769,6 +791,7 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       brave::ToggleActiveTabAudioMute(&*browser_);
       break;
     case IDC_TOGGLE_VERTICAL_TABS:
+      CHECK(!tabs::IsUpstreamVerticalTabsForceEnabled());
       brave::ToggleVerticalTabStrip(&*browser_);
       break;
     case IDC_SHARING_HUB_SCREENSHOT: {
@@ -879,9 +902,10 @@ bool BraveBrowserCommandController::ExecuteBraveCommandWithDisposition(
       break;
 #if BUILDFLAG(ENABLE_EMAIL_ALIASES)
     case IDC_SHOW_EMAIL_ALIASES:
-      browser_->GetFeatures().email_aliases_controller()->OpenSettingsPage(
-          email_aliases::SettingsPageMethod::kAppMenu,
-          browser_->tab_strip_model()->GetActiveWebContents());
+      email_aliases::EmailAliasesController::From(&*browser_)
+          ->OpenSettingsPage(
+              email_aliases::SettingsPageMethod::kAppMenu,
+              browser_->tab_strip_model()->GetActiveWebContents());
       break;
 #endif
 #if BUILDFLAG(ENABLE_CONTAINERS)

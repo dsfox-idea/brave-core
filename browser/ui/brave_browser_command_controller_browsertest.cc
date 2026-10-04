@@ -647,6 +647,19 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerElementPickerDisabledTest,
 }
 #endif  // !BUILDFLAG(IS_ANDROID)
 
+IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
+                       QuickCommandsDisabledForPopupWindow) {
+  auto* popup = CreateBrowserWindow(BrowserWindowCreateParams(
+      BrowserWindowInterface::TYPE_POPUP, browser()->GetProfile(), true));
+  chrome::AddTabAt(popup, GURL("about:blank"), -1, true);
+  BrowserWindow::FromBrowser(popup)->Show();
+
+  // IDC_COMMANDER (Quick commands) should be disabled in popup windows
+  // because the omnibox is read-only.
+  EXPECT_FALSE(chrome::BrowserCommandController::From(popup)->IsCommandEnabled(
+      IDC_COMMANDER));
+}
+
 // Closes every duplicate across the whole tab strip, keeping the first
 // occurrence of each URL.
 IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
@@ -828,7 +841,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerTest,
                        BraveCommandsToggleVerticalTabs) {
   auto* command_controller = chrome::BrowserCommandController::From(browser());
   EXPECT_TRUE(command_controller->IsCommandEnabled(IDC_TOGGLE_VERTICAL_TABS));
-  auto* vtc = VerticalTabController::FromBrowser(browser());
+  auto* vtc = VerticalTabController::From(browser());
   ASSERT_FALSE(vtc->ShouldShowBraveVerticalTabs());
 
   // Enable Vertical tabs
@@ -1034,7 +1047,7 @@ IN_PROC_BROWSER_TEST_F(BraveBrowserCommandControllerWithEmailAliasesTest,
   ASSERT_TRUE(command_controller->IsCommandEnabled(IDC_SHOW_EMAIL_ALIASES));
   command_controller->ExecuteCommand(IDC_SHOW_EMAIL_ALIASES);
 
-  auto* controller = browser()->GetFeatures().email_aliases_controller();
+  auto* controller = email_aliases::EmailAliasesController::From(browser());
   ASSERT_NE(nullptr, controller->GetBubbleForTesting());
 
   // Closing navigates to settings.

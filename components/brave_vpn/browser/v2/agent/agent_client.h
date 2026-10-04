@@ -19,6 +19,7 @@
 #include "base/timer/elapsed_timer.h"
 #include "base/timer/timer.h"
 #include "base/types/expected.h"
+#include "brave/components/brave_vpn/browser/v2/agent/agent_identity.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_vpn/common/mojom/browser_agent.mojom.h"
 #include "mojo/public/cpp/bindings/remote.h"
@@ -59,7 +60,7 @@ class AgentClient {
     kDisconnected,
     // Transport connect or handshake in flight.
     kConnecting,
-    // The agent accepted the connection; browser host is valid.
+    // The agent accepted the connection; browser host is bound and valid.
     kConnected,
     // Transient failure; a retry is on the timer.
     kWaitingToRetry,
@@ -85,24 +86,25 @@ class AgentClient {
     kAgentUnreachable,
     // Something is listening but never completes the handshake: an agent that
     // started but is wedged, or another process holding the agent's endpoint
-    // name. Retryable.
+    // name, or the browser cannot verify an agent process. Retryable.
     kAgentNotResponding,
     // Sessions keep being established and then lost again almost immediately,
     // likely an agent crashes on startup. Retryable.
     kAgentUnstable,
-    // The agent repeatedly could not determine whether this browser is Brave.
-    // Could be a legitimate transient issue - an image replaced mid-update, a
-    // rotated signing cert - so only a run of them is worth reporting.
-    // Retryable.
+    // The agent repeatedly could not determine whether this browser is Brave,
+    // or had no usable capture of this process. Could be transient - an image
+    // replaced mid-update, a rotated signing cert, an expired capture - so only
+    // a run of them is worth reporting. Retryable.
     kBrowserUnverified,
     // The agent ran its check on this browser and explicitly refused it. The
     // verdict is about this binary, which does not change while it runs. Could
     // also be a protocol version mismatch which means the binary is
     // incompatible. Non-retryable.
     kBrowserRejected,
-    // The peer answered in a way the agent would not have: it claims this
-    // connection is already authenticated when it has only just been opened.
-    // Either a bug or the peer is not the agent. Non-retryable.
+    // The peer failed browser's verification check, or answered in a way the
+    // agent would not have: it reports a host already bound, or refuses to bind
+    // one on a connection it has just accepted. Either a bug or the peer is not
+    // the agent. Non-retryable.
     kUnexpectedBehavior,
   };
 
@@ -127,14 +129,25 @@ class AgentClient {
     virtual void OnAgentConnectionFailed(Error error) {}
   };
 
+  // One established transport: the pipe the agent's BrowserHostProvider is
+  // bound to, and the capture of the process serving it. Both are produced off
+  // sequence, because pinning the peer needs the transport endpoint before Mojo
+  // consumes it. An invalid |pipe| means the transport could not be
+  // established; a null |identity| means it was, but the peer could not be
+  // pinned.
+  struct Transport {
+    mojo::ScopedMessagePipeHandle pipe;
+    std::unique_ptr<AgentIdentity> identity;
+  };
+
   // Resolves the agent's server name; runs on a blocking sequence.
   using ServerNameProvider = base::RepeatingCallback<
       std::optional<mojo::NamedPlatformChannel::ServerName>()>;
 
   // Establishes the transport to the agent listening on |server_name| and
-  // returns the pipe its BrowserHostProvider is bound to, or an invalid handle
-  // on failure; runs on a blocking sequence.
-  using Connector = base::RepeatingCallback<mojo::ScopedMessagePipeHandle(
+  // captures the identity of the process serving it; runs on a blocking
+  // sequence.
+  using Connector = base::RepeatingCallback<std::optional<Transport>(
       const mojo::NamedPlatformChannel::ServerName&)>;
 
   static std::string_view ErrorToString(Error error);
@@ -190,8 +203,7 @@ class AgentClient {
     // error, so retrying is appropriate.
     kNoAgentRunning,
   };
-  using ConnectResult =
-      base::expected<mojo::ScopedMessagePipeHandle, ConnectFailure>;
+  using ConnectResult = base::expected<Transport, ConnectFailure>;
 
   // Resolves the server name and connects, both blocking. Static because it
   // runs off-sequence, where |this| must not be touched.
@@ -200,7 +212,9 @@ class AgentClient {
 
   void StartConnect();
   void OnConnectBlockingCompleted(ConnectResult result);
-  void OnAuthResult(mojom::BrowserAuthResult result);
+  void OnInitializeResult(mojom::InitializeResult result);
+  void OnAgentVerified(AgentIdentity::VerificationResult result);
+  void OnBindBrowserHostResult(mojom::BindBrowserHostResult result);
   void OnHandshakeTimeout();
   void OnSessionBecameStable();
   void OnSessionPipeDisconnected(std::string_view reason);
@@ -225,12 +239,16 @@ class AgentClient {
   bool session_pipe_dropped_ = false;
   mojo::Remote<mojom::BrowserHostProvider> provider_;
   mojo::Remote<mojom::BrowserHost> host_;
+  std::unique_ptr<AgentIdentity> agent_identity_;
   std::unique_ptr<BrowserEndpointImpl> browser_endpoint_;
   base::OneShotTimer handshake_timer_;
   base::OneShotTimer retry_timer_;
   base::OneShotTimer stable_session_timer_;
   base::ObserverList<Observer> observers_;
   base::WeakPtrFactory<AgentClient> weak_factory_{this};
+  // Callbacks belonging to one connection attempt rather than to the entire
+  // object; reset in ResetConnection().
+  base::WeakPtrFactory<AgentClient> connection_weak_factory_{this};
 };
 
 }  // namespace brave_vpn::v2

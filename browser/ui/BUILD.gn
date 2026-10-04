@@ -111,6 +111,7 @@ source_set("ui") {
     "//chrome/browser/ui/toolbar",
     "//chrome/browser/ui/webui:chrome_web_ui_controller_factory",
     "//media",
+    "//ui/base/unowned_user_data",
   ]
 
   if (toolkit_views) {
@@ -1680,6 +1681,12 @@ source_set("browser_tests") {
 
     if (enable_text_recognition) {
       sources += [ "text_recognition_browsertest.cc" ]
+
+      deps += [ "//brave/ui/base/clipboard/test:test_support" ]
+    }
+
+    if (enable_brave_custom_profile_image_webui) {
+      deps += [ "//brave/browser/ui/views/profiles:browser_tests" ]
     }
   }
 }

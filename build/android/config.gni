@@ -24,12 +24,15 @@ declare_args() {
 brave_android_manifest_includes = [
   "//brave/android/java/AndroidManifest.xml",
   "//brave/android/java/AndroidManifest_intent_filters.xml",
+  "//brave/android/java/AndroidManifest_widgets.xml",
 ]
 
 brave_chrome_java_deps = [
   "//brave/android:qrreader_java",
+  "//brave/android:settings_insets_java",
   "//brave/android/java/org/chromium/chrome/browser/accessibility:java",
   "//brave/android/java/org/chromium/chrome/browser/brave_search:java",
+  "//brave/android/java/org/chromium/chrome/browser/day_zero:java",
   "//brave/android/java/org/chromium/chrome/browser/search_engines:java",
   "//brave/android/nala:chrome_app_overlay_resources",
   "//brave/brave_domains/android:java",
@@ -55,6 +58,7 @@ brave_chrome_java_deps = [
   "//brave/browser/ui/android/bottombar:prefs_java",
   "//brave/browser/ui/android/favicon:java",
   "//brave/browser/ui/android/logo:java",
+  "//brave/browser/ui/android/ntp_widgets:java",
   "//brave/browser/ui/android/omnibox:java",
   "//brave/browser/ui/android/theme:dynamic_colors_java",
   "//brave/browser/ui/android/theme:java",
@@ -179,6 +183,10 @@ if (enable_brave_wallet) {
   brave_chrome_java_srcjar_deps +=
       [ "//brave/android:brave_android_java_enums_srcjar" ]
 }
+# Compile with upstream site settings to avoid a dependency cycle.
+brave_components_browser_ui_site_settings_java_sources = [ "//brave/components/browser_ui/site_settings/android/java/src/org/chromium/components/browser_ui/site_settings/BraveAllSiteSettings.java" ]
+brave_components_browser_ui_site_settings_java_deps =
+    [ "//brave/android:settings_insets_java" ]
 
 brave_chrome_app_java_resources_deps = [
   "//brave/android:java_resources",

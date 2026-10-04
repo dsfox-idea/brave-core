@@ -5,14 +5,24 @@
 
 package org.chromium.chrome.browser.browsing_data;
 
+import android.view.View;
+
 import androidx.preference.PreferenceGroupAdapter;
 import androidx.preference.PreferenceScreen;
 
 import org.chromium.build.annotations.NonNull;
+import org.chromium.chrome.browser.settings.BottomInsetViewProvider;
 import org.chromium.chrome.browser.settings.BraveSettingsPreferenceGroupAdapter;
 
-public class BraveClearBrowsingDataFragment extends ClearBrowsingDataFragment {
+public class BraveClearBrowsingDataFragment extends ClearBrowsingDataFragment
+        implements BottomInsetViewProvider {
     ClearBrowsingDataCheckBoxPreference mClearAIChatDataCheckBoxPreference;
+
+    @Override
+    public View getBottomInsetView(View fragmentView) {
+        // The delete button is outside the preference list.
+        return fragmentView;
+    }
 
     @Override
     protected @NonNull PreferenceGroupAdapter onCreateAdapter(
