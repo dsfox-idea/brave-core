@@ -123,7 +123,8 @@
 	<array>
 		<string>audio</string>
 		<string>remote-notification</string>
-		<string>voip</string>
+		<!-- Growser-346: no voip - Brave Talk is out of the product, and nothing
+		     here uses CallKit or PushKit. -->
 		<string>processing</string>
 	</array>
 	<key>UIFileSharingEnabled</key>
@@ -134,10 +135,9 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>UISupportedExternalAccessoryProtocols</key>
-	<array>
-		<string>com.yubico.ylp</string>
-	</array>
+	<!-- Growser-346: no UISupportedExternalAccessoryProtocols (com.yubico.ylp).
+	     Declaring an MFi protocol needs the maker's MFi Product Plan, which is
+	     Brave's, not ours; no code here uses ExternalAccessory. -->
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
