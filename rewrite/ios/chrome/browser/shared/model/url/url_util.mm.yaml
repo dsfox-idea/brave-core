@@ -1,0 +1,20 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-346: no itms-services literal in the binary.
+
+      App Review rejected the iOS app under 2.5.2, "uses the itms-services URL
+      scheme to install an app". The only occurrence of the string in the whole
+      app was this list of App Store schemes, compiled into BraveCore. Its
+      users (AppLauncherTabHelper, the Chrome app delegate's URL opener) are
+      not part of Brave's iOS app. Our own navigation path,
+      ExternalAppURLTabHelper.swift, cancels itms-services and spells the
+      scheme in pieces for the same reason. Dropping the entry changes
+      nothing reachable and removes the literal.
+    regex:
+      pattern: '@"itms-books", @"itms-bookss", @"itms-services",'
+      replace: '@"itms-books", @"itms-bookss",  // Growser-346: no itms-services'
