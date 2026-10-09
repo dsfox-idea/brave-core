@@ -55,11 +55,15 @@ import org.chromium.components.browser_ui.settings.ChromeBasePreference;
 import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
 import org.chromium.components.browser_ui.settings.TextMessagePreference;
+import org.chromium.components.browser_ui.settings.search.PreferenceParser;
+import org.chromium.components.browser_ui.settings.search.SearchIndexProvider;
 import org.chromium.components.browser_ui.settings.search.SettingsIndexData;
 import org.chromium.components.user_prefs.UserPrefs;
 import org.chromium.ui.text.ChromeClickableSpan;
 import org.chromium.ui.text.SpanApplier;
 import org.chromium.webcompat_reporter.mojom.WebcompatReporterHandler;
+
+import java.util.Map;
 
 /** Fragment to keep track of the all the brave privacy related preferences. */
 @NullMarked
@@ -91,6 +95,20 @@ public class BravePrivacySettings extends PrivacySettings {
     private static final String PREF_JAVASCRIPT_OPTIMIZER = "javascript_optimizer";
     private static final String PREF_PASSWORD_LEAK_DETECTION = "password_leak_detection";
     private static final String PREF_ADVANCED_PROTECTION_INFO = "advanced_protection_info";
+    private static final String PREF_UNIVERSAL_OPT_OUT = "universal_opt_out";
+
+    // Growser-327: the rows of Chromium's privacy_preferences.xml this page never shows. The
+    // page and its search index both read this list, so the two cannot drift apart.
+    static final String[] UPSTREAM_PREFERENCES_REMOVED = {
+        PREF_SYNC_AND_SERVICES_LINK,
+        PREF_NETWORK_PREDICTIONS,
+        PREF_PRIVACY_SANDBOX,
+        PREF_PRIVACY_SECTION,
+        PREF_THIRD_PARTY_COOKIES,
+        PREF_SECURITY_SECTION,
+        PREF_PRIVACY_GUIDE,
+        PREF_PASSWORD_LEAK_DETECTION,
+    };
 
     // brave Prefs
     private static final String PREF_BRAVE_SHIELDS_GLOBALS_SECTION =
@@ -463,14 +481,10 @@ public class BravePrivacySettings extends PrivacySettings {
         mWebrtcPolicy = (ChromeBasePreference) findPreference(PREF_WEBRTC_POLICY);
 
         removePreferenceIfPresent(PREF_AD_BLOCK);
-        removePreferenceIfPresent(PREF_SYNC_AND_SERVICES_LINK);
-        removePreferenceIfPresent(PREF_NETWORK_PREDICTIONS);
-        removePreferenceIfPresent(PREF_PRIVACY_SANDBOX);
-        removePreferenceIfPresent(PREF_PRIVACY_SECTION);
-        removePreferenceIfPresent(PREF_THIRD_PARTY_COOKIES);
-        removePreferenceIfPresent(PREF_SECURITY_SECTION);
-        removePreferenceIfPresent(PREF_PRIVACY_GUIDE);
-        removePreferenceIfPresent(PREF_PASSWORD_LEAK_DETECTION);
+        // Growser-327
+        for (String key : UPSTREAM_PREFERENCES_REMOVED) {
+            removePreferenceIfPresent(key);
+        }
 
         // Growser-275: the wallet is out of the product, and decentralized DNS
         // went with it.
@@ -957,10 +971,54 @@ public class BravePrivacySettings extends PrivacySettings {
             new ChromeBaseSearchIndexProvider(
                     BravePrivacySettings.class.getName(), R.xml.brave_privacy_preferences) {
 
+                // Growser-327: the page is Chromium's privacy_preferences.xml with Brave's rows
+                // added on top (onCreatePreferences), so the index takes both. Chromium's own
+                // provider for that XML is out of the registry.
+                @Override
+                public void initPreferenceXml(
+                        Context context,
+                        Profile profile,
+                        SettingsIndexData indexData,
+                        Map<String, SearchIndexProvider> providerMap) {
+                    super.initPreferenceXml(context, profile, indexData, providerMap);
+                    String frag = BravePrivacySettings.class.getName();
+                    PreferenceParser.parseAndPopulate(
+                            context,
+                            R.xml.privacy_preferences,
+                            indexData,
+                            frag,
+                            new Bundle(),
+                            providerMap);
+                    for (String key : UPSTREAM_PREFERENCES_REMOVED) {
+                        indexData.removeEntryForKey(frag, key);
+                    }
+                    // As updateClearBrowsingFragment does for the page.
+                    SettingsIndexData.Entry clearBrowsingData =
+                            indexData.getEntryForKey(frag, PREF_CLEAR_BROWSING_DATA);
+                    if (clearBrowsingData != null) {
+                        indexData.updateEntry(
+                                clearBrowsingData.id,
+                                new SettingsIndexData.Entry.Builder(clearBrowsingData)
+                                        .setFragment(
+                                                BraveClearBrowsingDataFragment.class.getName())
+                                        .build());
+                    }
+                }
+
                 @Override
                 public void updateDynamicPreferences(
                         Context context, SettingsIndexData indexData, Profile profile) {
                     String frag = BravePrivacySettings.class.getName();
+
+                    // Growser-327: Chromium's rows, as PrivacySettings' own provider treats them.
+                    // The Safe Browsing summary is a template string.
+                    indexData.updateEntrySummaryForKey(frag, PREF_SAFE_BROWSING, 0);
+                    if (!UniversalOptOutSettings.shouldShowUniversalOptOutSettings(profile)) {
+                        indexData.removeEntryForKey(frag, PREF_UNIVERSAL_OPT_OUT);
+                    }
+                    // An information block, shown only under OS Advanced Protection, with its
+                    // click taken away (setupAdvancedProtectionInfoPreference): nothing to find.
+                    indexData.removeEntryForKey(frag, PREF_ADVANCED_PROTECTION_INFO);
 
                     // Feature-gated removals
                     if (!ChromeFeatureList.isEnabled(BraveFeatureList.DEBOUNCE)) {
@@ -1002,6 +1060,17 @@ public class BravePrivacySettings extends PrivacySettings {
                             ChromeFeatureList.isEnabled(BraveFeatureList.HTTPS_BY_DEFAULT);
                     if (!httpsByDefault) {
                         indexData.removeEntryForKey(frag, PREF_HTTPS_UPGRADE);
+                    }
+                    // Growser-327: the page shows one of Chromium's two HTTPS-First rows, and
+                    // neither when Brave's HTTPS upgrade row replaces them.
+                    boolean httpsFirstBalanced =
+                            ChromeFeatureList.isEnabled(
+                                    ChromeFeatureList.HTTPS_FIRST_BALANCED_MODE);
+                    if (httpsByDefault || httpsFirstBalanced) {
+                        indexData.removeEntryForKey(frag, PREF_HTTPS_FIRST_MODE_LEGACY);
+                    }
+                    if (httpsByDefault || !httpsFirstBalanced) {
+                        indexData.removeEntryForKey(frag, PREF_HTTPS_FIRST_MODE);
                     }
 
                     // Growser-275: no wallet, so no decentralized DNS rows.

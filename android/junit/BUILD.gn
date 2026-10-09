@@ -139,6 +139,8 @@ if (is_android) {
   robolectric_library(
       "brave_junit_tests_org.chromium.chrome.browser.settings") {
     sources = [
+      # Growser-327
+      "src/org/chromium/chrome/browser/privacy/settings/BravePrivacySettingsSearchIndexTest.java",
       "src/org/chromium/chrome/browser/settings/BraveSearchEngineUtilsTest.java",
       "src/org/chromium/chrome/browser/settings/BraveSettingsActivityTest.java",
       "src/org/chromium/chrome/browser/settings/BraveSettingsLauncherImplTest.java",
@@ -150,7 +152,9 @@ if (is_android) {
       "//brave/browser/custom_search_engines/android:java",
       "//brave/components/browser_ui/settings/android:java",
       "//chrome/android/junit:chrome_junit_tests_helper",
+      "//chrome/browser/profiles/android:java",  # Growser-327
       "//chrome/browser/safe_browsing/android:java",
+      "//components/browser_ui/settings/android:java",  # Growser-327
       "//components/browser_ui/site_settings/android:java",
     ]
   }
