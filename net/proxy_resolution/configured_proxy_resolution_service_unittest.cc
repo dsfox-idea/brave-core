@@ -6,6 +6,7 @@
 #include "net/proxy_resolution/configured_proxy_resolution_service.h"
 
 #include <memory>
+#include <optional>
 #include <string>
 
 #include "brave/net/proxy_resolution/proxy_config_service_tor.h"
@@ -80,6 +81,54 @@ TEST_F(ConfiguredProxyResolutionServiceTest, TorProxy) {
   EXPECT_EQ(host_port.port(), 5566);
   EXPECT_EQ(host_port.username(), circuit_anonymization_key);
   EXPECT_FALSE(host_port.password().empty());
+}
+
+// Growser-260: a Tor window closed and a new one opened get services that the
+// allocator may place at the same address, and the circuit passwords are
+// keyed by that address. Construct the second service in the first one's
+// storage, so the reuse is certain rather than likely, and expect a fresh
+// circuit for the same site.
+TEST_F(ConfiguredProxyResolutionServiceTest,
+       NewServiceAtSameAddressGetsNewCircuit) {
+  const GURL url("https://check.torproject.org/");
+  const SchemefulSite url_site(url);
+  const auto network_anonymization_key =
+      NetworkAnonymizationKey::CreateFromFrameSite(url_site, url_site);
+
+  std::optional<ConfiguredProxyResolutionService> storage;
+  const ConfiguredProxyResolutionService* first_address = nullptr;
+  auto resolve_in_storage = [&] {
+    ConfiguredProxyResolutionService& service = storage.emplace(
+        std::make_unique<ProxyConfigServiceTor>("socks5://127.0.0.1:5566"),
+        std::make_unique<MockAsyncProxyResolverFactory>(false), nullptr,
+        nullptr, /*quick_check_enabled=*/true);
+    if (!first_address) {
+      first_address = &service;
+    }
+    EXPECT_EQ(&service, first_address);
+    ProxyInfo info;
+    TestCompletionCallback callback;
+    std::unique_ptr<ProxyResolutionRequest> request;
+    EXPECT_THAT(
+        service.ResolveProxy(
+            url, std::string(), network_anonymization_key,
+            handles::kInvalidNetworkHandle, &info, callback.callback(),
+            &request, NetLogWithSource::Make(NetLogSourceType::NONE),
+            DEFAULT_PRIORITY),
+        IsOk());
+    request.reset();
+    storage.reset();
+    return info.proxy_chain()
+        .GetProxyServer(/*chain_index=*/0)
+        .host_port_pair()
+        .password();
+  };
+
+  const std::string first = resolve_in_storage();
+  const std::string second = resolve_in_storage();
+  EXPECT_FALSE(first.empty());
+  EXPECT_FALSE(second.empty());
+  EXPECT_NE(first, second);
 }
 
 }  // namespace net

@@ -267,8 +267,9 @@ void ProxyConfigServiceTor::SetBypassTorProxyConfigForTesting(bool bypass) {
 }
 
 // static
-void ProxyConfigServiceTor::ClearTorCircuitsForTesting() {
-  g_tor_proxy_map.get()->clear();
+// Growser-260
+void ProxyConfigServiceTor::ForgetCircuits(ProxyResolutionService* service) {
+  g_tor_proxy_map->erase(service);
 }
 
 // static

@@ -29,5 +29,11 @@ void SetTorCircuitIsolation(const ProxyConfigWithAnnotation& config,
                            network_anonymization_key, result, this); \
   }
 
+// Growser-260: a later service allocated at this address must not inherit
+// this one's circuits.
+#define BRAVE_CONFIGURED_PROXY_RESOLUTION_SERVICE_DESTRUCTOR \
+  ProxyConfigServiceTor::ForgetCircuits(this);
+
 #include <net/proxy_resolution/configured_proxy_resolution_service.cc>
+#undef BRAVE_CONFIGURED_PROXY_RESOLUTION_SERVICE_DESTRUCTOR
 #undef BRAVE_CONFIGURED_PROXY_RESOLUTION_SERVICE_RESOLVE_PROXY
