@@ -41,10 +41,6 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
                                                     kGeoLocationsPattern);
   static base::NoDestructor<URLPattern> safeBrowsing_pattern(
       URLPattern::SCHEME_HTTPS, kSafeBrowsingPrefix);
-  static base::NoDestructor<URLPattern> safebrowsingfilecheck_pattern(
-      URLPattern::SCHEME_HTTPS, kSafeBrowsingFileCheckPrefix);
-  static base::NoDestructor<URLPattern> safebrowsingcrxlist_pattern(
-      URLPattern::SCHEME_HTTPS, kSafeBrowsingCrxListPrefix);
 
   // To-Do (@jumde) - Update the naming for the variables below
   // https://github.com/brave/brave-browser/issues/10314
@@ -90,25 +86,10 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
     return;
   }
 
-  // These two were hardcoded to Brave's proxies, so a fork that pointed
-  // safebrowsing_api_endpoint at its own host still sent them to Brave. Each now
-  // has its own buildflag with the same default; empty means "do not redirect".
-  std::string_view filecheck_endpoint =
-      BUILDFLAG(SAFEBROWSING_FILECHECK_ENDPOINT);
-  if (!filecheck_endpoint.empty() &&
-      safebrowsingfilecheck_pattern->MatchesHost(request_url)) {
-    replacements.SetHostStr(filecheck_endpoint);
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
-
-  std::string_view crxlist_endpoint = BUILDFLAG(SAFEBROWSING_CRXLIST_ENDPOINT);
-  if (!crxlist_endpoint.empty() &&
-      safebrowsingcrxlist_pattern->MatchesHost(request_url)) {
-    replacements.SetHostStr(crxlist_endpoint);
-    *new_url = request_url.ReplaceComponents(replacements);
-    return;
-  }
+  // Growser-329: no redirect for the download and extension checks
+  // (sb-ssl.google.com/.../download, safebrowsing.google.com/.../crx-list-info).
+  // brave_block_safebrowsing_urls.cc blocks them, and a redirect here would
+  // override that.
 
   // Payload downloads for components and the CRLSet. Also hardcoded to Brave's
   // redirector, so the update check could succeed while every download 403'd.

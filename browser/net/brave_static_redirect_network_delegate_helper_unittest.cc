@@ -271,26 +271,20 @@ TEST(BraveStaticRedirectNetworkDelegateHelperTest,
   EXPECT_EQ(rc, net::OK);
 }
 
+// Growser-329: the download and extension checks are blocked
+// (brave_block_safebrowsing_urls.cc), so nothing here may redirect them.
 TEST(BraveStaticRedirectNetworkDelegateHelperTest,
-     ModifySafeBrowsingFileCheckURL) {
+     DoNotModifySafeBrowsingDownloadAndExtensionChecks) {
   brave::SetSafeBrowsingEndpointForTesting(true);
-  const GURL url(
-      "https://sb-ssl.google.com/safebrowsing/clientreport/download?"
-      "key=DUMMY_KEY");
-
-  GURL new_url;
-  int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(url, &new_url);
-  EXPECT_EQ(rc, net::OK);
-
-  // The target is configurable (SAFEBROWSING_FILECHECK_ENDPOINT). An empty
-  // value means the build talks to Google directly, so nothing is rewritten.
-  constexpr std::string_view kEndpoint =
-      BUILDFLAG(SAFEBROWSING_FILECHECK_ENDPOINT);
-  if (kEndpoint.empty()) {
-    EXPECT_TRUE(new_url.is_empty());
-  } else {
-    EXPECT_EQ(new_url, GURL(base::StrCat(
-                           {"https://", kEndpoint,
-                            "/safebrowsing/clientreport/download?key=DUMMY_KEY"})));
+  for (const char* url :
+       {"https://sb-ssl.google.com/safebrowsing/clientreport/download?"
+        "key=DUMMY_KEY",
+        "https://safebrowsing.google.com/safebrowsing/clientreport/"
+        "crx-list-info?key=DUMMY_KEY"}) {
+    GURL new_url;
+    int rc = brave::OnBeforeURLRequest_StaticRedirectWorkForGURL(GURL(url),
+                                                                 &new_url);
+    EXPECT_EQ(rc, net::OK);
+    EXPECT_TRUE(new_url.is_empty()) << url;
   }
 }

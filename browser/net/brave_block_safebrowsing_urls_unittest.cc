@@ -33,9 +33,7 @@ TEST(BraveBlockReportingUrlsHelperTest, PreserveNormalUrls) {
   const std::vector<std::string> normalUrls({
       "https://brave.com/",
       "https://safebrowsing.google.com/safebrowsing",
-      "https://safebrowsing.google.com/safebrowsing/clientreport/crx-list-info",
       "https://safebrowsing.googleapis.com/v4",
-      "https://sb-ssl.google.com/safebrowsing/clientreport/download",
   });
 
   for (const auto& url : normalUrls) {
@@ -60,6 +58,9 @@ TEST(BraveBlockReportingUrlsHelperTest, CancelReportingUrl) {
       "https://safebrowsing.google.com/safebrowsing/clientreport/malware",
       "https://safebrowsing.google.com/safebrowsing/uploads/chrome",
       "https://safebrowsing.google.com/safebrowsing/clientreport/realtime",
+      // Growser-329
+      "https://safebrowsing.google.com/safebrowsing/clientreport/crx-list-info",
+      "https://sb-ssl.google.com/safebrowsing/clientreport/download",
   });
 
   for (const auto& url : reportingUrls) {

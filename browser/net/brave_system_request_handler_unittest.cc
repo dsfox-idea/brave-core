@@ -45,4 +45,20 @@ TEST(BraveSystemRequestHandlerTest, DontAddBraveServiceKeyHeader) {
   ASSERT_FALSE(key);
 }
 
+// Growser-329: Google refuses the download and extension checks to our key, so
+// the browser must not send them anywhere - neither to Google nor to a proxy.
+TEST(BraveSystemRequestHandlerTest,
+     BlockSafeBrowsingDownloadAndExtensionChecks) {
+  for (const char* url :
+       {"https://sb-ssl.google.com/safebrowsing/clientreport/download?key=k",
+        "https://safebrowsing.google.com/safebrowsing/clientreport/"
+        "crx-list-info?key=k"}) {
+    network::ResourceRequest request;
+    request.url = GURL(url);
+    EXPECT_EQ(brave::OnBeforeSystemRequest(request).url,
+              GURL("https://no-thanks.invalid"))
+        << url;
+  }
+}
+
 }  // namespace brave
