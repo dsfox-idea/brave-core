@@ -79,6 +79,8 @@ MAINTNAME="Growser"
 MAINTMAIL="support@growser.org"
 PRODUCTURL="https://growser.org/"
 
-# Must match MAC_BUNDLE_ID in app/theme/brave/BRANDING - one product should
-# not answer to two application ids across platforms.
-RDN="com.growser.Browser"
+# Growser-349: org.growser, as on iOS and Android (growser#223). It names the
+# hidden .desktop file the XDG portal reads, and must equal the app id the
+# browser registers with: GetAppName in
+# chromium_src/base/version_info/nix/version_extra_utils.cc.
+RDN="org.growser.Browser"

@@ -641,6 +641,10 @@ test("brave_unit_tests") {
 
   if (is_linux) {
     configs += [ "//brave/build/linux:linux_channel_names" ]
+    # Growser-349
+    sources += [
+      "//brave/chromium_src/base/version_info/nix/version_extra_utils_unittest.cc",
+    ]
   }
 
   if (is_android) {
