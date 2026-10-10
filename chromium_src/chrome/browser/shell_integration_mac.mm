@@ -27,8 +27,8 @@
 // calls each one another channel of the other. We ship no Origin, so that
 // problem does not exist for us, and upstream's version is the better code
 // anyway: it lops OUR OWN bundle id to three components and compares,
-// hardcoding no identity at all. com.growser.Browser against
-// com.growser.Browser.beta matches; against com.brave.Browser it does not.
+// hardcoding no identity at all. org.growser.Browser against
+// org.growser.Browser.beta matches; against com.brave.Browser it does not.
 //
 // The replacement had gone stale the way a hardcoded identity always does - it
 // tested for "com.brave.Browser", which our bundle id has never been, so
