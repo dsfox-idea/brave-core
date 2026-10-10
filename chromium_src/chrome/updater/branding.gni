@@ -47,21 +47,17 @@ brave_updater_branding = {
   # growser: the macOS BROWSER bundle identifier as the updater (Omaha 4) knows
   # it - the id it registers and manages the browser by, and the id the
   # privileged helper's SMAuthorizedClients accepts. It MUST match the app's
-  # CFBundleIdentifier (MAC_BUNDLE_ID in app/theme/brave/BRANDING), which is
-  # already com.growser.Browser; the updater branding simply had to catch up.
-  # The profile/keychain/notification-permission move the original comment feared
-  # does not apply here - the app bundle id was renamed ahead of the updater, so
-  # the profile already lives under com.growser.Browser; this only makes the
-  # updater agree. Done as part of the macOS signing work (#35): without it
-  # sign_chrome looks for com.growser.Browser.UpdaterPrivilegedHelper while the
-  # build produces com.brave.Browser.UpdaterPrivilegedHelper -> "No such file".
+  # CFBundleIdentifier (MAC_BUNDLE_ID in app/theme/brave/BRANDING). Without it
+  # sign_chrome looks for <our id>.UpdaterPrivilegedHelper while the build
+  # produces com.brave.Browser.UpdaterPrivilegedHelper -> "No such file" (#35).
+  # Growser-223: org.growser, the domain we own; growser.com is someone else's.
   #
   # Brave Origin uses a separate browser bundle identifier for side-by-side
   # installation with Brave Browser.
   if (is_brave_origin_branded) {
-    mac_browser_bundle_identifier = "com.growser.Browser.origin"
+    mac_browser_bundle_identifier = "org.growser.Browser.origin"
   } else {
-    mac_browser_bundle_identifier = "com.growser.Browser"
+    mac_browser_bundle_identifier = "org.growser.Browser"
   }
   privileged_helper_name =
       "${mac_browser_bundle_identifier}.UpdaterPrivilegedHelper"

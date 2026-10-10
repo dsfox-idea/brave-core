@@ -17,7 +17,7 @@ def _make_plist(path):
     """A minimal app-Info.plist carrying both icon keys."""
     with open(path, 'wb') as f:
         plistlib.dump({
-            'CFBundleIdentifier': 'com.growser.Browser',
+            'CFBundleIdentifier': 'org.growser.Browser',
             'CFBundleShortVersionString': '1.0.0',
             # app.icns = our "G"
             'CFBundleIconFile': 'app.icns',
@@ -113,7 +113,7 @@ class TestOverrideVersionKey(unittest.TestCase):
             out = os.path.join(tmp, 'Out.plist')
             with open(src, 'wb') as f:
                 plistlib.dump({
-                    'CFBundleIdentifier': 'com.growser.Browser',
+                    'CFBundleIdentifier': 'org.growser.Browser',
                     # Mirrors the real pipeline: Chromium's apple tweak sets this
                     # from src/chrome/VERSION as @MAJOR@.@MINOR@.@BUILD@.@PATCH@.
                     'CFBundleShortVersionString': brave_version,
