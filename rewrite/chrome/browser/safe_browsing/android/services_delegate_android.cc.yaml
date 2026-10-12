@@ -27,7 +27,7 @@ substitutions:
       backend. The extended reporting callback is left empty, as iOS does:
       Brave switches extended reporting off.
     regex:
-      pattern: 'base::WrapRefCounted(new RemoteSafeBrowsingDatabaseManager());'
+      pattern: 'base::MakeRefCounted<RemoteSafeBrowsingDatabaseManager>();'
       replace: |-
         SBLocalDatabaseManager::Create(  // Growser-303
                     SafeBrowsingServiceImpl::GetBaseFilename(),

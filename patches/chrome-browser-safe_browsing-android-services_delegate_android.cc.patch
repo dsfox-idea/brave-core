@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/safe_browsing/android/services_delegate_android.cc b/chrome/browser/safe_browsing/android/services_delegate_android.cc
-index 46d90634b23a9a5e2f77b64d4f667bc5bf6f684d..5388e23c99ec9e42fe8a094f44f96a6bc22971eb 100644
+index 114c33179ad2ac1ffcece70434287cdd4bf31247..ee295471388c5e084926d3f37379675578d9f235 100644
 --- a/chrome/browser/safe_browsing/android/services_delegate_android.cc
 +++ b/chrome/browser/safe_browsing/android/services_delegate_android.cc
-@@ -11,7 +11,9 @@
+@@ -12,7 +12,9 @@
  #include "chrome/browser/safe_browsing/download_protection/download_protection_delegate_android.h"
  #include "chrome/browser/safe_browsing/download_protection/download_protection_service.h"
  #include "chrome/browser/safe_browsing/telemetry/android/android_telemetry_service.h"
@@ -13,11 +13,11 @@ index 46d90634b23a9a5e2f77b64d4f667bc5bf6f684d..5388e23c99ec9e42fe8a094f44f96a6b
  #include "components/safe_browsing/buildflags.h"
  #include "components/safe_browsing/core/common/features.h"
  #include "content/public/browser/browser_context.h"
-@@ -61,7 +63,11 @@ ServicesDelegateAndroid::database_manager() const {
+@@ -62,7 +64,11 @@ ServicesDelegateAndroid::database_manager() const {
  void ServicesDelegateAndroid::Initialize() {
    if (!database_manager_set_for_tests_) {
      database_manager_ =
--        base::WrapRefCounted(new RemoteSafeBrowsingDatabaseManager());
+-        base::MakeRefCounted<RemoteSafeBrowsingDatabaseManager>();
 +        SBLocalDatabaseManager::Create(  // Growser-303
 +            SafeBrowsingServiceImpl::GetBaseFilename(),
 +            content::GetUIThreadTaskRunner({}),
