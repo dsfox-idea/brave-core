@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/startup/bad_flags_prompt.cc b/chrome/browser/ui/startup/bad_flags_prompt.cc
-index 75f26af3ddce3d29e84117ed8236cd21a4e2b2d6..3dbe3d3338596feec68989e69dc008317dac928b 100644
+index f212d0761b76b01aac7d875d92013267b6500225..657baf87daa7736d58feb85de81088a77c1ed02b 100644
 --- a/chrome/browser/ui/startup/bad_flags_prompt.cc
 +++ b/chrome/browser/ui/startup/bad_flags_prompt.cc
 @@ -16,6 +16,7 @@
@@ -10,7 +10,7 @@ index 75f26af3ddce3d29e84117ed8236cd21a4e2b2d6..3dbe3d3338596feec68989e69dc00831
  #include "build/build_config.h"
  #include "cc/base/switches.h"
  #include "chrome/browser/browser_process.h"
-@@ -285,6 +286,9 @@ void ShowBadFlagsPrompt(content::WebContents* web_contents) {
+@@ -289,6 +290,9 @@ void ShowBadFlagsPrompt(content::WebContents* web_contents) {
  // for flags which are not available in about:flags.
  #if !BUILDFLAG(IS_ANDROID)
    for (const char* flag : kBadFlags) {
