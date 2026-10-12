@@ -58,7 +58,7 @@ import os.log
 
   private func follow(_ lists: [FilterList]) {
     var enabled: [String: FilterList] = [:]
-    for list in lists where list.isEnabled && !list.entry.sourceURLs.isEmpty {
+    for list in lists where list.isEnabledOrDefault && !list.entry.sourceURLs.isEmpty {
       enabled[list.id] = list
     }
     for (id, task) in tasks where enabled[id] == nil {
