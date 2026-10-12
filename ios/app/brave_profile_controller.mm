@@ -9,7 +9,6 @@
 #include "base/functional/callback_helpers.h"
 #include "base/memory/raw_ptr.h"
 #include "base/notreached.h"
-#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
@@ -83,13 +82,6 @@
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)  // Growser-287
 #include "brave/ios/browser/api/brave_wallet/brave_wallet_api+private.h"
-#endif
-
-#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
-#include "brave/components/ai_chat/ios/browser/ai_chat+private.h"
-#include "brave/components/ai_chat/ios/browser/ai_chat_delegate.h"
-#include "brave/ios/browser/ai_chat/ai_chat_service_factory.h"
-#include "brave/ios/browser/ai_chat/model_service_factory.h"
 #endif
 
 @interface BraveProfileController () {
