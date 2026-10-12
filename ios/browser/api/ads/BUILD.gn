@@ -52,7 +52,6 @@ if (enable_brave_ads) {
     frameworks = [
       "Foundation.framework",
       "UIKit.framework",
-      "Network.framework",
     ]
   }
 }

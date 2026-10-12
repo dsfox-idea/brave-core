@@ -5,13 +5,17 @@
 
 #include "chrome/browser/extensions/component_extensions_allowlist/allowlist.h"
 
+#include "chrome/common/extensions/extension_constants.h"
+#include "components/grit/brave_components_resources.h"
+#include "extensions/buildflags/buildflags.h"
+#include "extensions/common/constants.h"
+
+#if BUILDFLAG(ENABLE_EXTENSIONS)
 #include "brave/components/brave_extension/grit/brave_extension.h"
 // Growser-212
 #include "brave/components/webharvester/grit/webharvester.h"
 #include "brave/components/webharvester/webharvester.h"
-#include "chrome/common/extensions/extension_constants.h"
-#include "components/grit/brave_components_resources.h"
-#include "extensions/common/constants.h"
+#endif  // BUILDFLAG(ENABLE_EXTENSIONS)
 
 namespace extensions {
 
@@ -48,6 +52,7 @@ bool IsComponentExtensionDenylistedBraveImpl(const std::string& extension_id) {
 }
 
 bool IsComponentExtensionAllowlistedBraveImpl(int manifest_resource_id) {
+#if BUILDFLAG(ENABLE_EXTENSIONS)
   switch (manifest_resource_id) {
     // Please keep the list in alphabetical order.
     case IDR_BRAVE_EXTENSION:
@@ -55,6 +60,7 @@ bool IsComponentExtensionAllowlistedBraveImpl(int manifest_resource_id) {
     case IDR_WEBHARVESTER_MANIFEST:  // Growser-212
       return true;
   }
+#endif  // BUILDFLAG(ENABLE_EXTENSIONS)
 
   return false;
 }

@@ -37,7 +37,6 @@
 <translation id="1330562121671411446">Тілді анықтау</translation>
 <translation id="108284536240904209">Деректерді Growser-нен (<ph name="URL"/>) де жою</translation>
 <translation id="1345251407431278948">Бекітілді! "Сурет іздеу" функциясына құралдар тақтасындағы жаңа түймені басу арқылы қайта кіруге болады.</translation>
-<translation id="1356661055722410047">Жаңалық! Енді экрандағы мәтін мен суреттерді де аудара аласыз.</translation>
 <translation id="1383876407941801731">Іздеу</translation>
 <translation id="3535301204632475895">Жол-жөнекей шолу үшін Growser пайдаланыңыз.</translation>
 <translation id="141901961143729572">Ойыңызды бөлісіңіз.</translation>
@@ -66,6 +65,7 @@
 <translation id="5994491947936308173">Growser-ге жылдам кіру үшін оны тапсырмалар жолағына бекітіңіз. Ол үшін Windows хабарландыруындағы <ph name="BEGIN_BOLD"/>Иә<ph name="END_BOLD"/> түймесін басыңыз.</translation>
 <translation id="5875673934455379806">Growser қайта орнату</translation>
 <translation id="4529028207655448215">Growser <ph name="AUTHENTICATION_PURPOSE"/> қолданып көрейін деп жатыр</translation>
+<translation id="6387107728249269341"><ph name="EXISTING_USER"/> әлдеқашан кірді. Браузерді пайдалану тарихын бөлек сақтау үшін Growser-ге <ph name="USER_EMAIL_ADDRESS"/> ретінде жеке профиліңізбен кіріңіз. Кеңейтімдер мен басқа деректер <ph name="DEVICE"/> құрылғысында қолжетімді болады.</translation>
 <translation id="7362761326208547489">Келесі жолы Growser-ді <ph name="DEVICE_TYPE"/> құрылғысынан ашқан кезде, Growser Password Manager-ді пайдалану туралы нұсқауды көресіз.</translation>
 <translation id="1838374766361614909">Іздеуді тазарту</translation>
 <translation id="3541642064306182066">Браузерді пайдалану деректерін Growser аккаунтында сақтай отырып, тек осы құрылғыдан жою үшін <ph name="BEGIN_LINK"/>Growser-де аккаунттан шығыңыз<ph name="END_LINK"/>.</translation>
@@ -144,6 +144,7 @@
 <translation id="2575822587468774919">"Сурет іздеу" функциясымен іздеу керек кез келген нәрсені таңдаңыз.</translation>
 <translation id="3830890663494219270">Құпия сөздер мен басқа ақпаратты барлық құрылғыдан алу үшін Growser аккаунтына кіріңіз.</translation>
 <translation id="6908148552215338695">Growser браузерін жүктеп алу және Growser аккаунтына кіру үшін телефонмен QR кодын сканерлеңіз.</translation>
+<translation id="7985444384142764643">Growser-мен іздеу үшін.</translation>
 <translation id="6252796827759111076">Growser-ді пайдалана беру</translation>
 <translation id="259935314519650377">Жүктеп алынған орнату құралы кэштелмеді. Қате: <ph name="UNPACK_CACHING_ERROR_CODE"/>.</translation>
 <translation id="2620436844016719705">Жүйе</translation>
@@ -187,6 +188,7 @@
 <translation id="3038232873781883849">Сәлден соң орнатыла бастайды…</translation>
 <translation id="3045032126857188731">Аударма тілі: <ph name="LANGUAGE"/></translation>
 <translation id="3047590466164881923">"Пікір" диалогтік терезесін жабу</translation>
+<translation id="72283640173840794"><ph name="EXISTING_USER"/> әлдеқашан кірді. Браузерді пайдалану тарихын бөлек сақтау үшін Growser-ге <ph name="USER_EMAIL_ADDRESS"/> ретінде жеке профиліңізбен кіріңіз. Оқу тізімі мен басқа деректерді <ph name="DEVICE"/> құрылғысынан да аласыз.</translation>
 <translation id="4503085212612536713">Басқа Growser профильдері</translation>
 <translation id="2041039306630146369">Кеңейтімдер – Growser браузерін бейімдеуге мүмкіндік беретін қосымшалар. Олар Growser-ді өзіңізге ыңғайлы етіп реттеуге, күнделікті тапсырмаларды жеңілдетуге көмектеседі.</translation>
 <translation id="7918740962659365265">Growser компаниясына жаңылыс туралы есептер және <ph name="UMA_LINK"/> жіберу арқылы Growser жақсартуға көмектесіңіз</translation>
@@ -253,7 +255,7 @@
 
           **Сұрақтар ұсыну:** пайдаланушының скриншотты жете түсінуіне көмектесетін, ой тудыратын 3–5 сұрақтан тұратын таңбаланған тізім жаса. Бұл сұрақтардың кемінде біреуі нақты визуалдық нысан, оның дизайны немесе орналасуы туралы болуы керек.</translation>
 <translation id="5381622442243174305"><ph name="PAGE_TITLE"/> – Growser</translation>
-<translation id="1118754729376002185">Growser бұл сайт үшін жергілікті желіні пайдалануға рұқсат сұрайды</translation>
+<translation id="387514319934708384">Growser бұл сайт үшін жергілікті желіні пайдалануға рұқсат сұрайды</translation>
 <translation id="3885770153807205175">Тіл таңдағыш</translation>
 <translation id="6315734375101223238">Growser-ді реттеу және басқару. Назар аударуыңыз қажет. Толығырақ ақпарат алу үшін басыңыз.</translation>
 <translation id="7130675370997202556">Growser ашу үшін атыңызды басып, шарлауды бастаңыз.</translation>
@@ -283,6 +285,7 @@
 <translation id="6596295505984504022">Growser браузеріңізді бейімдеңіз</translation>
 <translation id="4148957013307229264">Орнатылуда…</translation>
 <translation id="4658486203392098459"><ph name="PAGE_TITLE"/> –Желіге кіру – Growser</translation>
+<translation id="305023898453185745"><ph name="EXISTING_USER"/> әлдеқашан кірді. Браузерді пайдалану тарихын бөлек сақтау үшін Growser-ге <ph name="USER_EMAIL_ADDRESS"/> ретінде жеке профиліңізбен кіріңіз. Оқу тізімі мен басқа деректер барлық құрылғыда қолжетімді болады.</translation>
 <translation id="2871190378186459992">Growser үшін тамаша қолданбалар, ойындар мен тақырыптарды таба аласыз.</translation>
 <translation id="462105622535258178">Осы кеңейтімді және тағы басқасын компьютерлеріңізге орнату үшін Growser аккаунтына кіріңіз.</translation>
 <translation id="6670140629169983459">Ата-анаңыздың таңдауымен интернетті қауіпсіз пайдалану үшін <ph name="USER_EMAIL_ADDRESS"/> ретінде кірген Growser профиліңізге ауысыңыз.</translation>
@@ -297,7 +300,6 @@
 <translation id="6368144843345980623">Құпия сөздерді Growser-нен экспорттау</translation>
 <translation id="4304713468139749426">Құпия сөздер реттегіші</translation>
 <translation id="4334241893986177674">Осы скриншотты іздеу</translation>
-<translation id="3985621805803699376">Growser кішірейтілсе де, кез келген жерден іздеңіз және сұрақ қойыңыз.</translation>
 <translation id="242356249838681145">Windows жұмысын бастағанда, Growser-ді іске қосады</translation>
 <translation id="4400772909124543403">Ешқандай жаңарту жоқ.</translation>
 <translation id="9183662282810237335">Growser браузерінен бәрібір шығасыз ба?</translation>
@@ -328,6 +330,7 @@
 <translation id="2182657378556811785">Сәл қалды! Жаңартуды аяқтау үшін Growser жүйесін қайта іске қосыңыз.</translation>
 <translation id="6311668361877328515">Growser-нің V8 жүйесімен сайттар жылдам жұмыс істейді, бірақ Growser-нің шабуылдарға төзімділігі сәл азаяды.</translation>
 <translation id="7960968658810899127">Growser-мен іздеу функциясын ашу</translation>
+<translation id="4600669659668950128">Growser профилі</translation>
 <translation id="7402642357351265733">Growser пайдалану есептерін де бөліссеңіз, бұл есептерде сіз кірген URL мекенжайлары қамтылады.</translation>
 <translation id="4673710618874938871"><ph name="USER_NAME"/> (мүше) ретінде кірдіңіз. Аккаунт мәзірін ашу</translation>
 <translation id="8142245354207161805">Профиль басқа Growser процесімен (<ph name="PROCESS_ID"/>) басқа компьютерде (<ph name="HOST_NAME"/>) пайдаланылып жатыр. Бүлінбеуі үшін Growser профильді құлыптап қойды. Басқа процестер бұл профильді пайдаланып жатпаса, профильді құлыптан ашып, Growser қайта іске қосуыңызға болады.</translation>
@@ -380,6 +383,7 @@
 <translation id="3311284381627742014">Growser-мен іздеу функциясын ашу</translation>
 <translation id="5154625106151193600">Неліктен Growser кейбір файлдарды блоктайтыны туралы ақпарат алыңыз</translation>
 <translation id="1786715389543715322">Growser жаңартылуда (<ph name="PROGRESS_PERCENT"/>)</translation>
+<translation id="3267146219387305979"><ph name="EXISTING_USER"/> әлдеқашан кірді. Браузерді пайдалану тарихын бөлек сақтау үшін Growser-ге <ph name="USER_EMAIL_ADDRESS"/> ретінде жеке профиліңізбен кіріңіз. Кеңейтімдер мен басқа деректер барлық құрылғыда қолжетімді болады.</translation>
 <translation id="7021823858304886493">Growser браузеріне кіруге рұқсат ету</translation>
 <translation id="5267531627648004734">Growser-нен жою</translation>
 <translation id="4620757336635063467">Өнімділік азаяды, бірақ Growser шабуылдарға төзімді болады.</translation>
@@ -456,6 +460,7 @@
 <translation id="6685697979743742605">Бұл файл қауіпті болуы мүмкін.<ph name="LINE_BREAK"/>Құпия сөзді көрсетсеңіз, Growser бұл жүктеп алу әрекетін тексере алады. Файл туралы ақпарат Google Safe Browsing қызметіне жіберіледі, бірақ файл контенті мен құпия сөз құрылғыңызда қалады.</translation>
 <translation id="6182736845697986886">Орнатылмады, себебі жаңарту серверінде ішкі қате пайда болды.</translation>
 <translation id="4368341489795135329"><ph name="TARGET_DEVICE_NAME"/> құрылғысындағы Growser браузеріне кіргеніңізді тексеріп, қайта жіберіп көріңіз.</translation>
+<translation id="3044046743226566469">Growser кішірейтілсе де, кез келген жерден іздеңіз және сұрақ қойыңыз. Growser-нің фондық режимде істеуіне мүмкіндік береді.</translation>
 <translation id="8320964054148936490">Бұл компьютерде жаңа Growser нұсқасы бұрыннан бар. Бағдарламалық жасақтама жұмыс істемесе, Growser жойып, әрекетті қайталап көріңіз.</translation>
 <translation id="3574823187131579180">{0,plural, =0{Growser браузері қазір қайта іске қосылады}=1{Growser браузері 1 секундтан кейін қайта іске қосылады}other{Growser браузері # секундтан кейін қайта іске қосылады}}</translation>
 <translation id="5980269616827212166">Growser файлдарды жүктеп алу үшін жадты пайдалануға рұқсат сұрайды.</translation>
@@ -581,6 +586,7 @@
 <translation id="7288567540154601580">Қойындылар мен кеңейтімдер</translation>
 <translation id="5468053269968670855">{NUM_EXTENSIONS,plural, =1{Growser мұны өшіруге кеңес береді.}other{Growser бұларды өшіруге кеңес береді.}}</translation>
 <translation id="4600669988724328687">Жүйе дыбысын бөлісу үшін жүйе параметрлерін ашып, Growser үшін "Тек жүйе дыбысын жазу" опциясына рұқсат беріңіз. Содан кейін Growser-ді қайта іске қосуыңыз қажет.</translation>
+<translation id="7299899569525778554">Компьютерден іздеу</translation>
 <translation id="1864557848095568223">Growser браузерін жаңарту</translation>
 <translation id="3403365884036456766">Реттеулер файлы бұзылған немесе жарамсыз.
 
@@ -635,6 +641,7 @@ Growser параметрлеріңізді қалпына келтіре алм�
 <translation id="6236814935154483927"><ph name="PAGE_TITLE"/> - Growser Canary</translation>
 <translation id="2684504034454188774">Интернет трафигіңізді пайдалана алатын адамдар қандай сайттарға кіретініңізді көрмейтіндей етіңіз. Growser браузері DNS жүйесіндегі сайттың IP мекенжайын іздеу үшін қауіпсіз байланысты пайдаланады.</translation>
 <translation id="7810005234485217901">"Сурет іздеу" функциясына оңай кіру үшін оны бекітуге болады.</translation>
+<translation id="3219490697448569661">Growser-нен тыс контент, мысалы, басқа қолданба немесе ашық файл туралы сұраңыз.</translation>
 <translation id="4191642852677143100">Growser-мен бөлісетін контентті таңдау</translation>
 <translation id="1652855885539187849">Осы құрылғыда бұл аккаунтқа Growser профилі тіркеліп қойған.</translation>
 <translation id="7845233973568007926">Орнатқаныңыз үшін рақмет. <ph name="BUNDLE_NAME"/> пайдаланбас бұрын компьютерді өшіріп қосуыңыз керек.</translation>
@@ -719,10 +726,10 @@ Growser параметрлеріңізді қалпына келтіре алм�
 <translation id="856656450041460113">Тілдер тізімін іздеу</translation>
 <translation id="839677568225616901">Growser-ді бірнеше ұйым басқарады</translation>
 <translation id="8121009781989288430">Copyright © <ph name="YEAR"/> Brave Software Inc. Барлық құқықтар қорғалған.</translation>
-<translation id="8601359445272098721">Жаңалық! Енді "экранды аудару" түймесін басу арқылы экрандағы мәтін мен суреттерді де аудара аласыз.</translation>
 <translation id="3052349005266761501">Growser іске қосылуда…</translation>
 <translation id="8624541899164515475">Параметрлер, жаңа қойындыда ашылады.</translation>
 <translation id="5128665650717824082">Growser for Testing браузерін әдепкі браузер қылу мүмкін емес.</translation>
+<translation id="3053208669360972929">Growser-мен кез келген жерден іздеңіз</translation>
 <translation id="2433912322225810055">Сонымен қатар ол Growser іске қосқаныңызда немесе Omnibox ішінен іздегеніңізде қайсы бет көрсетілетінін бақылайды.</translation>
 <translation id="4100716194836114130">Сізге арналған Growser.</translation>
 <translation id="8712637175834984815">Түсінікті</translation>
@@ -756,6 +763,7 @@ Growser параметрлеріңізді қалпына келтіре алм�
 <translation id="7731184591599776500">Growser Enterprise логотипі</translation>
 <translation id="2001474182910589370"><ph name="DEVICE_TYPE"/> құрылғысындағы Growser-мен жол-жөнекей Growser қауіпсіздігін қамтамасыз етіңіз</translation>
 <translation id="6500340165622970282">Профиліңізді ашу кезінде бірдеңе дұрыс болмағандықтан, Growser-ді іске қосу мүмкін емес. Growser-ді қайта іске қосып көріңіз.</translation>
+<translation id="8079450595783684960">Growser-мен іздеу немесе <ph name="BEGIN_LINK"/>Параметрлер<ph name="END_LINK"/> бөлімінде бейімдеу үшін</translation>
 <translation id="3424657754843264466">Growser профильдерін басқару</translation>
 <translation id="1454821212628854849">Growser-дегі Gemini мен ашық қойынды арасында ауысу үшін пернетақтаны пайдаланыңыз.</translation>
 <translation id="9018218886431812662">Орнату аяқталды</translation>
@@ -822,6 +830,10 @@ Growser параметрлеріңізді қалпына келтіре алм�
 <translation id="79269250264141507">Мекенжай жолағына немесе іздеу жолағына тергенде, Growser сіздің әдепкі іздеу жүйеңізге жақсы ұсыныстар алу үшін мәтінді жібереді. Бұл Жеке режимде өшірулі.</translation>
 <translation id="2589970573128789862">Growser Private</translation>
 <translation id="5994282802285556682">Жеке режимде шолу жасағанда, Growser жүйесі қауіпсіз емес қосылымды пайдаланып сайтты жүктеуден бұрын ескертеді.</translation>
+<translation id="1356661055722410047">Жаңалық! Енді экрандағы мәтін мен суреттерді де аудара аласыз.</translation>
+<translation id="1118754729376002185">Growser бұл сайт үшін жергілікті желіні пайдалануға рұқсат сұрайды</translation>
+<translation id="3985621805803699376">Growser кішірейтілсе де, кез келген жерден іздеңіз және сұрақ қойыңыз.</translation>
+<translation id="8601359445272098721">Жаңалық! Енді "экранды аудару" түймесін басу арқылы экрандағы мәтін мен суреттерді де аудара аласыз.</translation>
 <translation id="7009295044271335553">&amp;Growser профильдерін басқару</translation>
 <translation id="7048234400304379082">Growser-дегі Gemini-дан шығу немесе оған оралу үшін пернелер тіркесімін пайдаланыңыз.</translation>
 <translation id="8744239658215739511">Growser браузеріңізді бейімдеңіз</translation>

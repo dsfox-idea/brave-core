@@ -69,6 +69,7 @@
 #include "brave/components/icon_pack/icon_pack_component_installer.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/component_updater/component_updater_utils.h"
+#include "chrome/browser/global_features.h"
 // Growser-174: included explicitly now. This flag used to arrive transitively
 // through `#include <chrome/browser/component_updater/registration.cc>`, which
 // upstream moved from the top of this file to the bottom - so by the time the
@@ -140,9 +141,9 @@ void RegisterBraveComponentsForUpdate() {
   // so there is nothing for the exceptions to fix.
 #if BUILDFLAG(ENABLE_EXTENSIONS)
   extension_malware_blocklist::RegisterExtensionMalwareBlocklistComponent(
-      cus,
-      BraveGlobalFeatures::FromGlobalFeatures(g_browser_process->GetFeatures())
-          ->extension_malware_blocklist());
+      cus, g_browser_process->GetFeatures()
+               ->brave_global_features()
+               ->extension_malware_blocklist());
 #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
 #if BUILDFLAG(ENABLE_LOCAL_AI)
   local_ai::ManageLocalModelsComponentRegistration(

@@ -348,24 +348,6 @@
 #endif
 }
 
-- (AIChat*)aiChatAPIWithDelegate:(id<AIChatDelegate>)delegate {
-#if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-279
-  auto* modelService = ai_chat::ModelServiceFactory::GetForProfile(_profile);
-  auto* service = ai_chat::AIChatServiceFactory::GetForProfile(_profile);
-  return [[AIChat alloc]
-      initWithAIChatService:service
-               modelService:modelService
-               profilePrefs:_profile->GetPrefs()
-      sharedURLoaderFactory:_profile->GetSharedURLLoaderFactory()
-                   delegate:delegate];
-#else
-  // Growser-279: AI Chat is compiled out, and so is every Swift caller of this
-  // method. The declaration stays because a public framework header cannot
-  // read a buildflag.
-  NOTREACHED();
-#endif
-}
-
 - (DefaultHostContentSettings*)defaultHostContentSettings {
   if (!_defaultHostContentSettings) {
     HostContentSettingsMap* map =

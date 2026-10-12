@@ -725,7 +725,7 @@ class TabManager: NSObject {
             withQuery: nil,
             options: HistorySearchOptions(
               maxCount: 0,
-              hostOnly: false,
+              hostnameSuffix: nil,
               duplicateHandling: .removeAll,
               begin: nil,
               end: nil
@@ -951,7 +951,7 @@ class TabManager: NSObject {
         withQuery: query,
         options: HistorySearchOptions(
           maxCount: 0,
-          hostOnly: false,
+          hostnameSuffix: nil,
           duplicateHandling: .keepAll,
           begin: nil,
           end: nil

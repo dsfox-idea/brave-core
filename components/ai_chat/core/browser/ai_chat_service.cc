@@ -22,6 +22,7 @@
 #include "base/check_deref.h"
 #include "base/containers/adapters.h"
 #include "base/containers/fixed_flat_set.h"
+#include "base/containers/map_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/logging.h"
@@ -119,7 +120,16 @@ void CopyTextToClipboardAsConfidential(std::string_view text) {
 
 // Determines whether its safe to associate content with a conversation.
 bool CanAssociateContent(AssociatedContentDelegate* delegate) {
-  return delegate && kAllowedContentSchemes.contains(delegate->url().scheme());
+  if (!delegate) {
+    return false;
+  }
+  // Always allow workspace content (identified by content type).
+  if (delegate->cached_page_content().content_type ==
+      mojom::ContentType::Workspace) {
+    return true;
+  }
+  std::string_view scheme = delegate->url().scheme();
+  return kAllowedContentSchemes.contains(scheme);
 }
 
 AIChatService::AIChatService(
@@ -278,7 +288,8 @@ ConversationHandler* AIChatService::CreateConversation() {
       std::make_unique<ConversationHandler>(
           conversation, this, model_service_, credential_manager_.get(),
           feedback_api_.get(), profile_prefs_, url_loader_factory_,
-          CreateToolProvidersForNewConversation());
+          /*tool_providers=*/std::vector<std::unique_ptr<ToolProvider>>());
+  AddToolProvidersToConversation(conversation_handler.get());
   conversation_observations_.AddObservation(conversation_handler.get());
 
   // Own it
@@ -397,7 +408,9 @@ void AIChatService::OnConversationDataReceived(
       std::make_unique<ConversationHandler>(
           conversation, this, model_service_, credential_manager_.get(),
           feedback_api_.get(), profile_prefs_, url_loader_factory_,
-          CreateToolProvidersForNewConversation(), std::move(data));
+          /*tool_providers=*/std::vector<std::unique_ptr<ToolProvider>>(),
+          std::move(data));
+  AddToolProvidersToConversation(conversation_handler.get());
   conversation_observations_.AddObservation(conversation_handler.get());
   conversation_handlers_.insert_or_assign(conversation_uuid,
                                           std::move(conversation_handler));
@@ -704,7 +717,8 @@ void AIChatService::OnLoadConversationsLazyData(
       conversations_.emplace(uuid, std::move(conversation));
     }
     auto handler_it = conversation_handlers_.find(uuid);
-    if (handler_it != conversation_handlers_.end()) {
+    // Storage can have been turned off while the conversations loaded.
+    if (handler_it != conversation_handlers_.end() && ai_chat_db_) {
       // Notify the handler that metadata is possibly changed
       ConversationHandler* handler = handler_it->second.get();
       // If a reload was asked for, then we should also update the deeper
@@ -727,10 +741,13 @@ void AIChatService::OnLoadConversationsLazyData(
     }
   }
   if (on_conversations_loaded_callbacks_.has_value()) {
-    for (auto& callback : on_conversations_loaded_callbacks_.value()) {
+    // Taken first, since a callback can ask for the conversations again, and
+    // must then get them straight away.
+    std::vector<ConversationMapCallback> callbacks;
+    callbacks.swap(*on_conversations_loaded_callbacks_);
+    for (auto& callback : callbacks) {
       std::move(callback).Run(conversations_);
     }
-    on_conversations_loaded_callbacks_->clear();
   }
   OnConversationListChanged();
 }
@@ -1146,6 +1163,17 @@ bool AIChatService::IsAIChatHistoryEnabled() {
           profile_prefs_->GetBoolean(prefs::kBraveChatStorageEnabled));
 }
 
+std::unique_ptr<AssociatedContentDelegate>
+AIChatService::RestoreWorkspaceAssociatedContentFromUrl(const GURL& url) {
+  // Note: This can happen if there's a workspace in the DB but the flag has
+  // been disabled.
+  if (!workspace_content_restorer_) {
+    return nullptr;
+  }
+
+  return workspace_content_restorer_.Run(url);
+}
+
 void AIChatService::OnRequestInProgressChanged(ConversationHandler* handler,
                                                bool in_progress) {
   if (ai_chat_metrics_) {
@@ -1155,6 +1183,19 @@ void AIChatService::OnRequestInProgressChanged(ConversationHandler* handler,
   // again when that changes.
   if (!in_progress) {
     QueueMaybeUnloadConversation(handler);
+  }
+}
+
+void AIChatService::OnNewConversationThread(ConversationHandler* handler,
+                                            const mojom::Thread& thread) {
+  auto* conversation =
+      base::FindPtrOrNull(conversations_, handler->get_conversation_uuid());
+  CHECK(conversation);
+
+  if (ai_chat_db_ && !conversation->temporary) {
+    ai_chat_db_
+        .AsyncCall(base::IgnoreResult(&AIChatDatabase::AddConversationThread))
+        .WithArgs(thread.Clone());
   }
 }
 
@@ -1360,6 +1401,7 @@ void AIChatService::OnConversationTitleChanged(
 
 void AIChatService::OnConversationTokenInfoChanged(
     const std::string& conversation_uuid,
+    std::optional<std::string_view> thread_uuid,
     uint64_t total_tokens,
     uint64_t trimmed_tokens) {
   auto conversation_it = conversations_.find(conversation_uuid);
@@ -1369,6 +1411,17 @@ void AIChatService::OnConversationTokenInfoChanged(
   }
 
   auto& conversation_metadata = conversation_it->second;
+
+  if (thread_uuid.has_value()) {
+    // Persist the thread token info
+    if (ai_chat_db_ && !conversation_metadata->temporary) {
+      ai_chat_db_
+          .AsyncCall(base::IgnoreResult(&AIChatDatabase::UpdateThreadTokenInfo))
+          .WithArgs(std::string(*thread_uuid), total_tokens, trimmed_tokens);
+    }
+    return;
+  }
+
   conversation_metadata->total_tokens = total_tokens;
   conversation_metadata->trimmed_tokens = trimmed_tokens;
 
@@ -1635,19 +1688,19 @@ void AIChatService::OnGetFocusTabs(
   std::move(callback).Run(std::move(result));
 }
 
-std::vector<std::unique_ptr<ToolProvider>>
-AIChatService::CreateToolProvidersForNewConversation() {
+void AIChatService::AddToolProvidersToConversation(
+    ConversationHandler* conversation) {
   std::vector<std::unique_ptr<ToolProvider>> tool_providers;
 
   for (const auto& factory : tool_provider_factories_) {
-    tool_providers.push_back(factory->CreateToolProvider());
+    tool_providers.push_back(factory->CreateToolProvider(conversation));
   }
 
   // Basic set of tools that we can provide
   tool_providers.push_back(std::make_unique<ConversationToolProvider>(
       memory_tool_ ? memory_tool_->GetWeakPtr() : nullptr));
 
-  return tool_providers;
+  conversation->AddToolProviders(std::move(tool_providers));
 }
 
 void AIChatService::CreateTabOrganizationEngineIfNeeded() {

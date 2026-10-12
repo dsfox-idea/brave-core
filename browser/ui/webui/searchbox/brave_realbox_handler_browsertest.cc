@@ -11,7 +11,6 @@
 #include "base/time/time.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/search_engines/template_url_service_factory.h"
-#include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/omnibox/omnibox_controller.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/webui/searchbox/realbox_handler.h"
@@ -59,8 +58,8 @@ class BraveRealboxHandlerTest : public InProcessBrowserTest {
     handler.omnibox_controller()->client()->OnAutocompleteAccept(
         url, nullptr, WindowOpenDisposition::CURRENT_TAB,
         ui::PageTransition::PAGE_TRANSITION_TYPED,
-        AutocompleteMatchType::SEARCH_SUGGEST, base::TimeTicks::Now(), false,
-        false, u"", match, match);
+        omnibox::AutocompleteMatchType::kSearchSuggest, base::TimeTicks::Now(),
+        false, false, u"", match, match);
     content::WaitForLoadStop(contents());
   }
 

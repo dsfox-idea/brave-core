@@ -17,6 +17,7 @@
 #include "base/task/thread_pool.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "components/component_updater/component_updater_paths.h"
+#include "components/crx_file/id_util.h"
 #include "components/grit/brave_components_resources.h"
 #include "ui/base/resource/resource_bundle.h"
 
@@ -99,8 +100,8 @@ LocalDataFilesService::~LocalDataFilesService() {
 bool LocalDataFilesService::Start() {
   if (initialized_)
     return true;
-  Register(kLocalDataFilesComponentName, kLocalDataFilesComponentId,
-           kLocalDataFilesComponentBase64PublicKey);
+  Register(kLocalDataFilesComponentName,
+           kLocalDataFilesComponentPublicKeySHA256);
   initialized_ = true;
   UseBundledDataUnlessComponentArrives();
   return true;
@@ -122,7 +123,10 @@ void LocalDataFilesService::OnBundledDataWritten(
             << ")";
     return;
   }
-  OnComponentReady(kLocalDataFilesComponentId, install_dir, std::string());
+  // Growser-350: upstream derives the id from the key hash now.
+  OnComponentReady(crx_file::id_util::GenerateIdFromHash(
+                       kLocalDataFilesComponentPublicKeySHA256),
+                   install_dir, std::string());
 }
 
 void LocalDataFilesService::OnComponentReady(

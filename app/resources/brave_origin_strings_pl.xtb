@@ -35,7 +35,6 @@
 <translation id="1330562121671411446">Wykryj język</translation>
 <translation id="108284536240904209">Usuń też dane z Growser (<ph name="URL"/>)</translation>
 <translation id="1345251407431278948">Przypięto. Możesz ponownie uzyskać dostęp do wyszukiwania obrazów za pomocą nowego przycisku na pasku narzędzi</translation>
-<translation id="1356661055722410047">Nowość! Możesz tłumaczyć tekst i obrazy na ekranie</translation>
 <translation id="1383876407941801731">Szukaj</translation>
 <translation id="3535301204632475895">Używaj aplikacji Growser, aby przeglądać internet, gdziekolwiek jesteś</translation>
 <translation id="141901961143729572">Podziel się swoimi wrażeniami</translation>
@@ -64,6 +63,7 @@
 <translation id="5994491947936308173">Kliknij <ph name="BEGIN_BOLD"/>Tak<ph name="END_BOLD"/> w powiadomieniu systemu Windows, aby przypiąć przeglądarkę Growser do paska zadań i mieć do niej szybki dostęp.</translation>
 <translation id="5875673934455379806">Ponownie zainstaluj Growser</translation>
 <translation id="4529028207655448215">Growser próbuje <ph name="AUTHENTICATION_PURPOSE"/></translation>
+<translation id="6387107728249269341">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do rozszerzeń oraz innych danych z urządzenia <ph name="DEVICE"/>.</translation>
 <translation id="7362761326208547489">Gdy następnym razem otworzysz Growser na urządzeniu <ph name="DEVICE_TYPE"/>, zobaczysz prośbę o użycie Menedżera haseł Growser.</translation>
 <translation id="1838374766361614909">Wyczyść wyszukiwanie</translation>
 <translation id="3541642064306182066">Aby usunąć dane przeglądania tylko z tego urządzenia, zachowując je na swoim koncie Growser, <ph name="BEGIN_LINK"/>wyloguj się z Growser<ph name="END_LINK"/>.</translation>
@@ -142,6 +142,7 @@
 <translation id="2575822587468774919">Wybierz, co chcesz wyszukać za pomocą wyszukiwania obrazów</translation>
 <translation id="3830890663494219270">Aby mieć dostęp do haseł oraz innych ustawień i danych na wszystkich swoich urządzeniach, zaloguj się w Growser</translation>
 <translation id="6908148552215338695">Zeskanuj kod QR telefonem, aby pobrać Growser i zalogować się na konto Growser.</translation>
+<translation id="7985444384142764643">w celu wyszukania za pomocą Growser.</translation>
 <translation id="6252796827759111076">Nadal korzystaj z Growser</translation>
 <translation id="259935314519650377">Pobranego instalatora nie udało się załadować do pamięci podręcznej. Błąd: <ph name="UNPACK_CACHING_ERROR_CODE"/>.</translation>
 <translation id="2620436844016719705">System</translation>
@@ -185,6 +186,7 @@
 <translation id="3038232873781883849">Czekam na instalację…</translation>
 <translation id="3045032126857188731">Język tłumaczenia: <ph name="LANGUAGE"/></translation>
 <translation id="3047590466164881923">Zamknij okno opinii</translation>
+<translation id="72283640173840794">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do listy Do przeczytania oraz do innych danych z urządzenia <ph name="DEVICE"/>.</translation>
 <translation id="4503085212612536713">Inne profile Growser</translation>
 <translation id="2041039306630146369">Rozszerzenia to dodatki, które umożliwiają dostosowanie Growser. Dzięki nim możesz dopasować Growser do swoich potrzeb – od utrzymania porządku po łatwiejsze wykonywanie codziennych zadań.</translation>
 <translation id="7918740962659365265">Pomóż nam ulepszyć Growser, przesyłając do Growser raporty o awariach i <ph name="UMA_LINK"/></translation>
@@ -249,7 +251,7 @@
 
           **Zasugeruj pytania:** wygeneruj listę 3–5 pytań pobudzających do myślenia, które użytkownik może zadać, aby lepiej zrozumieć zrzut ekranu. Te pytania powinny zawierać co najmniej 1 pytanie dotyczące konkretnego obiektu wizualnego, jego wyglądu lub umiejscowienia.</translation>
 <translation id="6899774208752247219"><ph name="PAGE_TITLE"/> – Growser Origin</translation>
-<translation id="1118754729376002185">Ta strona musi mieć w Growser dostęp do sieci lokalnej</translation>
+<translation id="387514319934708384">Ta strona musi mieć w Growser dostęp do sieci lokalnej</translation>
 <translation id="3885770153807205175">Selektor języka</translation>
 <translation id="6315734375101223238">Dostosuj i kontroluj Growser. Pewna kwestia wymaga Twojej uwagi – kliknij, by przejść do szczegółów.</translation>
 <translation id="7130675370997202556">Otwórz Growser, klikając swoją nazwę i rozpocznij przeglądanie.</translation>
@@ -279,6 +281,7 @@
 <translation id="6596295505984504022">Spersonaliz&amp;uj Growser</translation>
 <translation id="4148957013307229264">Trwa instalowanie...</translation>
 <translation id="5011704081781303429"><ph name="PAGE_TITLE"/> – logowanie do sieci – Growser Origin</translation>
+<translation id="305023898453185745">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do listy Do przeczytania oraz innych danych na wszystkich swoich urządzeniach.</translation>
 <translation id="2871190378186459992">Odkryj znakomite aplikacje, gry, rozszerzenia i motywy do Growser.</translation>
 <translation id="462105622535258178">Aby móc korzystać z tego rozszerzenia i innych funkcji na wszystkich swoich komputerach, zaloguj się w Growser</translation>
 <translation id="6670140629169983459">Aby zapewnić sobie większe bezpieczeństwo online dzięki ustawieniom wybranym przez Twojego rodzica, przełącz się na swój profil Growser, na który jesteś już zalogowany(-a) jako <ph name="USER_EMAIL_ADDRESS"/></translation>
@@ -293,7 +296,6 @@
 <translation id="6368144843345980623">Eksportuj hasła z Growser</translation>
 <translation id="4304713468139749426">Menedżer haseł</translation>
 <translation id="4334241893986177674">Przeszukaj ten zrzut ekranu</translation>
-<translation id="3985621805803699376">Wyszukuj i zadawaj pytania z dowolnego miejsca, nawet gdy przeglądarka Growser jest zminimalizowana</translation>
 <translation id="242356249838681145">Uruchamiaj Growser po uruchomieniu systemu Windows</translation>
 <translation id="4400772909124543403">Brak dostępnych aktualizacji</translation>
 <translation id="9183662282810237335">Zamknąć Growser mimo to?</translation>
@@ -324,6 +326,7 @@
 <translation id="2182657378556811785">Już prawie gotowe. Uruchom ponownie Growser, by zakończyć aktualizację.</translation>
 <translation id="6311668361877328515">Witryny będą działać szybciej dzięki mechanizmowi V8 w przeglądarce Growser, ale będzie ona trochę mniej odporna na ataki</translation>
 <translation id="7960968658810899127">Otwórz wyszukiwanie w Growser</translation>
+<translation id="4600669659668950128">Profil Growser</translation>
 <translation id="7402642357351265733">Jeśli udostępnisz też raporty o użytkowaniu Growser, będą one zawierały odwiedzane przez Ciebie adresy URL.</translation>
 <translation id="4673710618874938871">Zalogowano jako <ph name="USER_NAME"/>, subskrypcja. Otwórz menu konta</translation>
 <translation id="8142245354207161805">Wygląda na to, że profil jest używany przez inny proces Growser (<ph name="PROCESS_ID"/>) na innym komputerze (<ph name="HOST_NAME"/>). Growser zablokowało profil, by zapobiec jego uszkodzeniu. Jeśli masz pewność, że żadne inne procesy nie używają tego profilu, możesz go odblokować i ponownie uruchomić Growser.</translation>
@@ -376,6 +379,7 @@
 <translation id="3311284381627742014">Otwórz wyszukiwanie w Growser</translation>
 <translation id="5154625106151193600">Dowiedz się, dlaczego Growser blokuje niektóre pliki</translation>
 <translation id="1786715389543715322">Aktualizuję Growser (<ph name="PROGRESS_PERCENT"/>)</translation>
+<translation id="3267146219387305979">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do rozszerzeń oraz innych danych na wszystkich swoich urządzeniach.</translation>
 <translation id="7021823858304886493">Zezwalaj na logowanie w Growser</translation>
 <translation id="5267531627648004734">Usuń z Growser</translation>
 <translation id="4620757336635063467">Zmniejsza wydajność, ale sprawia, że przeglądarka Growser jest bardziej odporna na ataki</translation>
@@ -452,6 +456,7 @@ Jeśli ta strona nie działa zgodnie z oczekiwaniami, spróbuj zezwolić na opt
 <translation id="6685697979743742605">Ten plik może być niebezpieczny<ph name="LINE_BREAK"/>Growser może go sprawdzić, jeśli podasz hasło. Informacje o pliku są wysyłane do Bezpiecznego przeglądania Growser, ale zawartość pliku i hasło pozostają na urządzeniu.</translation>
 <translation id="6182736845697986886">Instalacja się nie udała z powodu wewnętrznego błędu serwera aktualizacji.</translation>
 <translation id="4368341489795135329">Najpierw zaloguj się w Growser na swoim urządzeniu <ph name="TARGET_DEVICE_NAME"/>, a potem ponów próbę wysyłania.</translation>
+<translation id="3044046743226566469">Wyszukuj i zadawaj pytania z dowolnego miejsca, nawet gdy przeglądarka Growser jest zminimalizowana. Zezwala na działanie Growser w tle.</translation>
 <translation id="8320964054148936490">Na tym komputerze jest już zainstalowana nowsza wersja Growser. Jeśli program nie działa, odinstaluj go i spróbuj ponownie.</translation>
 <translation id="3574823187131579180">{0,plural, =0{Growser uruchomi się ponownie teraz}=1{Growser uruchomi się ponownie za 1 sekundę}few{Growser uruchomi się ponownie za # sekundy}many{Growser uruchomi się ponownie za # sekund}other{Growser uruchomi się ponownie za # sekundy}}</translation>
 <translation id="5980269616827212166">Aby pobierać pliki, Growser musi mieć dostęp do pamięci</translation>
@@ -577,6 +582,7 @@ Dopóki nie usuniesz niektórych zakładek, nie będzie można zapisywać nowych
 <translation id="7288567540154601580">Karty i rozszerzenia</translation>
 <translation id="5468053269968670855">{NUM_EXTENSIONS,plural, =1{Growser zaleca jego usunięcie}few{Growser zaleca ich usunięcie}many{Growser zaleca ich usunięcie}other{Growser zaleca ich usunięcie}}</translation>
 <translation id="4600669988724328687">Aby udostępnić dźwięk systemowy, otwórz ustawienia systemu i zezwól Growser na „Nagrywanie tylko dźwięku systemowego”. Następnie musisz ponownie uruchomić Growser.</translation>
+<translation id="7299899569525778554">Wyszukuj na komputerze</translation>
 <translation id="1864557848095568223">Aktualizuję Growser</translation>
 <translation id="3403365884036456766">Plik ustawień jest uszkodzony lub nieprawidłowy.
 
@@ -631,6 +637,7 @@ Growser nie może odzyskać ustawień.</translation>
 <translation id="8607348724092473027"><ph name="PAGE_TITLE"/> – Growser Origin Canary</translation>
 <translation id="2684504034454188774">Utrudnij osobom mającym dostęp do Twojego ruchu internetowego sprawdzanie, jakie strony odwiedzasz. Do wyszukiwania adresu IP witryny w Systemie nazw domenowych (DNS) Growser używa bezpiecznego połączenia.</translation>
 <translation id="7810005234485217901">Możesz przypiąć wyszukiwanie obrazów, aby mieć do niego łatwy dostęp</translation>
+<translation id="3219490697448569661">Zadawaj pytania dotyczące treści spoza Growser, np. innej aplikacji lub otwartego pliku</translation>
 <translation id="4191642852677143100">Wybierz, co chcesz udostępnić Growser</translation>
 <translation id="1652855885539187849">Na tym urządzeniu istnieje już profil Growser z tym kontem</translation>
 <translation id="7845233973568007926">Dziękujemy za instalację. Przed rozpoczęciem korzystania z programu <ph name="BUNDLE_NAME"/> musisz ponownie uruchomić komputer.</translation>
@@ -715,10 +722,10 @@ Growser nie może odzyskać ustawień.</translation>
 <translation id="856656450041460113">Przeszukaj listę języków</translation>
 <translation id="839677568225616901">Przeglądarką Growser zarządza kilka organizacji</translation>
 <translation id="8121009781989288430">Copyright © <ph name="YEAR"/> Autorzy Growser. Wszelkie prawa zastrzeżone.</translation>
-<translation id="8601359445272098721">Nowość! Możesz przetłumaczyć tekst i obrazy na ekranie, klikając przycisk „Przetłumacz ekran”</translation>
 <translation id="3052349005266761501">Uruchamiam Growser…</translation>
 <translation id="8624541899164515475">Ustawienia, otwierają się w nowej karcie.</translation>
 <translation id="5128665650717824082">Growser for Testing nie można ustawić jako przeglądarki domyślnej.</translation>
+<translation id="3053208669360972929">Wyszukuj w Growser z dowolnego miejsca</translation>
 <translation id="2433912322225810055">Kontroluje także to, jaka strona wyświetla się po uruchomieniu Growser lub wyszukiwaniu w omniboksie.</translation>
 <translation id="4100716194836114130">Oto Twoja przeglądarka Growser</translation>
 <translation id="8712637175834984815">OK</translation>
@@ -752,6 +759,7 @@ Growser nie może odzyskać ustawień.</translation>
 <translation id="7731184591599776500">Logo Growser Enterprise</translation>
 <translation id="2001474182910589370">Zabierz ze sobą funkcje bezpieczeństwa Growser dzięki aplikacji Growser na urządzeniu <ph name="DEVICE_TYPE"/></translation>
 <translation id="6500340165622970282">Nie można uruchomić Growser – coś poszło nie tak podczas otwierania Twojego profilu. Spróbuj jeszcze raz uruchomić Growser.</translation>
+<translation id="8079450595783684960">w celu wyszukania za pomocą Growser lub dostosowania w <ph name="BEGIN_LINK"/>Ustawieniach<ph name="END_LINK"/></translation>
 <translation id="3424657754843264466">Zarządzaj profilami Growser</translation>
 <translation id="1454821212628854849">Używaj klawiatury, aby przechodzić między Gemini w Growser a otwartą kartą.</translation>
 <translation id="9018218886431812662">Instalacja ukończona</translation>
@@ -809,6 +817,10 @@ Growser nie może odzyskać ustawień.</translation>
 <translation id="79269250264141507">Kiedy wpisujesz tekst w pasku adresu lub polu wyszukiwania, Growser wysyła wpisywany tekst do domyślnej wyszukiwarki w celu uzyskania lepszych wyników. Ta funkcja jest wyłączona w przeglądaniu prywatnym.</translation>
 <translation id="2589970573128789862">Tryb prywatny Growser</translation>
 <translation id="5994282802285556682">Przeglądając strony w trybie prywatnym, otrzymasz ostrzeżenie od Growser, kiedy ładowana strona korzysta z niezabezpieczonego połączenia</translation>
+<translation id="1356661055722410047">Nowość! Możesz tłumaczyć tekst i obrazy na ekranie</translation>
+<translation id="1118754729376002185">Ta strona musi mieć w Growser dostęp do sieci lokalnej</translation>
+<translation id="3985621805803699376">Wyszukuj i zadawaj pytania z dowolnego miejsca, nawet gdy przeglądarka Growser jest zminimalizowana</translation>
+<translation id="8601359445272098721">Nowość! Możesz przetłumaczyć tekst i obrazy na ekranie, klikając przycisk „Przetłumacz ekran”</translation>
 <translation id="7009295044271335553">Zarządzaj profila&amp;mi Growser</translation>
 <translation id="7048234400304379082">Aby wyjść z Gemini w Growser lub do niego wrócić, użyj skrótu klawiszowego.</translation>
 <translation id="8744239658215739511">Spersonaliz&amp;uj Growser</translation>

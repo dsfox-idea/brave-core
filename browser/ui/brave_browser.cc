@@ -13,7 +13,6 @@
 #include "base/functional/callback_helpers.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/ui/brave_browser_window.h"
-#include "brave/browser/ui/sidebar/sidebar.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/components/constants/pref_names.h"
@@ -21,7 +20,6 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
-#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/browser_window/public/profile_browser_collection.h"
 #include "chrome/browser/ui/exclusive_access/exclusive_access_manager.h"
 #include "chrome/browser/ui/tabs/features.h"
@@ -32,7 +30,6 @@
 #include "chrome/browser/ui/webui/new_tab_page/new_tab_page_ui.h"
 #include "chrome/browser/ui/webui/new_tab_page_third_party/new_tab_page_third_party_ui.h"
 #include "chrome/browser/ui/webui/ntp/new_tab_ui.h"
-#include "chrome/browser/ui/webui_browser/webui_browser.h"
 #include "components/bookmarks/common/bookmark_pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "components/tabs/public/tab_interface.h"
@@ -50,7 +47,13 @@ void BraveBrowser::SuppressBrowserWindowClosingDialogForTesting(bool suppress) {
 
 BraveBrowser::BraveBrowser(BrowserWindowCreateParams params)
     : Browser(std::move(params)) {
-  if (auto* sidebar_controller = GetFeatures().sidebar_controller()) {
+  auto* brave_browser_window = BraveBrowserWindow::FromBrowser(this);
+  if (!brave_browser_window) {
+    // The window is not a BrowserView, e.g. a WebUIBrowserWindow.
+    return;
+  }
+
+  if (auto* sidebar_controller = sidebar::SidebarController::From(this)) {
     // TODO(https://github.com/brave/brave-browser/issues/45633): Cleanup this.
     // Below call order is important.
     // When reaches here, Sidebar UI is setup in BraveBrowserView but
@@ -58,22 +61,14 @@ BraveBrowser::BraveBrowser(BrowserWindowCreateParams params)
     // ready yet. BraveBrowserView is instantiated by the ctor of Browser.
     // So, initializing sidebar controller/model here and then ask to initialize
     // sidebar UI. After that, UI will be updated for model's change.
-    sidebar_controller->SetSidebar(
-        BraveBrowserWindow::FromBrowser(this)->InitSidebar());
-  }
-
-  if (webui_browser::IsWebUIBrowserEnabled() &&
-      GetType() == BrowserWindowInterface::Type::TYPE_NORMAL) {
-    // WebUIBrowserWindow was created in Browser's c'tor (in
-    // BrowserWindow::CreateBrowserWindow), not a BraveBrowserWindow.
-    return;
+    sidebar_controller->SetSidebar(brave_browser_window->InitSidebar());
   }
 
   // As browser window(BrowserView) is initialized before fullscreen controller
   // is ready, it's difficult to know when browsr window can listen.
   // Notify exact timing to do it.
   CHECK(ExclusiveAccessManager::From(this));
-  BraveBrowserWindow::FromBrowser(this)->ReadyToListenFullscreenChanges();
+  brave_browser_window->ReadyToListenFullscreenChanges();
 }
 
 BraveBrowser::~BraveBrowser() = default;
@@ -154,19 +149,6 @@ void BraveBrowser::OnTabStripModelChanged(
         break;
       }
     }
-  }
-
-  // sidebar() can return a nullptr in unit tests.
-  auto* sidebar_controller = GetFeatures().sidebar_controller();
-  if (!sidebar_controller || !sidebar_controller->sidebar()) {
-    return;
-  }
-  // We need to update sidebar UI whenever active tab is changed or
-  // inactive tab is added/removed.
-  if (change.type() == TabStripModelChange::Type::kInserted ||
-      change.type() == TabStripModelChange::Type::kRemoved ||
-      selection.active_tab_changed()) {
-    sidebar_controller->sidebar()->UpdateSidebarItemsState();
   }
 
   // Check if all tabs we set to ignore onbeforeunload handler are closed.

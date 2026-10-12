@@ -6,6 +6,7 @@
 package org.chromium.chrome.browser.app;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PictureInPictureParams;
@@ -1810,6 +1811,26 @@ public abstract class BraveActivity extends ChromeActivity
                         ChromeTabbedActivity.class, "mMultiInstanceManager", this);
     }
 
+    /**
+     * Removes the browser's tasks from the Recents screen. Terminating only finishes the activities
+     * and kills the process, which leaves the task behind, so Brave still looks like it is running
+     * after the user chose to exit.
+     */
+    private void removeTasksFromRecents() {
+        // Activity#finishAndRemoveTask() is preferred for this instance because it sets
+        // isFinishing() synchronously, see MultiInstanceManagerApi31#closeInstance. AppTask covers
+        // the remaining windows, including those whose activity is no longer loaded.
+        finishAndRemoveTask();
+        final ActivityManager activityManager =
+                (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        if (activityManager == null) {
+            return;
+        }
+        for (ActivityManager.AppTask task : activityManager.getAppTasks()) {
+            task.finishAndRemoveTask();
+        }
+    }
+
     private void exitBrave() {
         LayoutInflater inflater =
                 (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -1817,6 +1838,7 @@ public abstract class BraveActivity extends ChromeActivity
         DialogInterface.OnClickListener onClickListener =
                 (dialog, button) -> {
                     if (button == AlertDialog.BUTTON_POSITIVE) {
+                        removeTasksFromRecents();
                         ApplicationLifetime.terminate(false);
                     } else {
                         dialog.dismiss();

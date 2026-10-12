@@ -1,0 +1,15 @@
+diff --git a/extensions/browser/extensions_browser_client.h b/extensions/browser/extensions_browser_client.h
+index 104ed9480c0f399053b4d492291174d7e0187f57..e289efbda849a6c0b5127781cfbe9df650811edd 100644
+--- a/extensions/browser/extensions_browser_client.h
++++ b/extensions/browser/extensions_browser_client.h
+@@ -728,6 +728,10 @@ class ExtensionsBrowserClient {
+   // services.
+   virtual bool IsLazyKeyedServiceInstantiationEnabled() const;
+ 
++  // Returns true if the embedder's own blocklist considers
++  // `extension_id` to be malware. Consulted alongside Safe Browsing.
++  virtual bool IsMalwareBlocklisted(const ExtensionId& extension_id) const;
++
+  protected:
+   std::unique_ptr<ExtensionAssetsManager> assets_manager_;
+ 

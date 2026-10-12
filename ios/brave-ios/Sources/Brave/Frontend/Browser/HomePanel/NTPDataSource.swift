@@ -40,6 +40,8 @@ enum NTPWallpaper {
 public class NTPDataSource {
   // Growser-290: no rewards.
 
+  private let prefs: any PrefService
+
   private(set) var privateBrowsingManager: PrivateBrowsingManager
 
   // Data is static to avoid duplicate loads
@@ -55,9 +57,11 @@ public class NTPDataSource {
 
   public init(
     service: NTPBackgroundImagesService,
+    prefs: any PrefService,
     privateBrowsingManager: PrivateBrowsingManager
   ) {
     self.service = service
+    self.prefs = prefs
     self.privateBrowsingManager = privateBrowsingManager
 
     Preferences.NewTabPage.selectedCustomTheme.observe(from: self)

@@ -22,6 +22,7 @@ extension BrowserViewController: TabManagerDelegate {
   func attachTabHelpers(to tab: some TabState) {
     tab.browserData = .init(tab: tab, tabGeneratorAPI: profileController.tabGeneratorAPI)
     tab.pullToRefresh = .init(tab: tab)
+    tab.renderProcessCrash = .init(tab: tab)
     // Growser-282: no playlist tab helper.
     if !FeatureList.kUseProfileWebViewConfiguration.enabled {
       tab.youtubeQualityTabHelper = .init(tab: tab)
@@ -55,7 +56,9 @@ extension BrowserViewController: TabManagerDelegate {
     // https request via `tab.httpsUpgradeHelper?.pendingUpgrade` and only opens QuickView once
     // `tabDidFinishNavigation` confirms it actually landed on the upgraded (or
     // gracefully-rolled-back) page rather than a failure/interstitial.
-    if FeatureList.kBraveHttpsByDefault.enabled {
+    if !FeatureList.kTransitionToUpstreamHttpsUpgrades.enabled,
+      FeatureList.kBraveHttpsByDefault.enabled
+    {
       tab.httpsUpgradeHelper = .init(
         tab: tab,
         httpsUpgradeExceptionsService: braveCore.httpsUpgradeExceptionsService

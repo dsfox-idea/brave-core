@@ -230,7 +230,7 @@ var package = Package(
         .copy("Frontend/Reader/ReaderViewLoading.html"),
         // Growser-310: the owner's photo, the same file as Android's (#309).
         .copy("Frontend/Browser/NewTabPage/Backgrounds/Assets/NTP_Images/growser_mobile_01.webp"),
-        .copy("Frontend/Browser/Favorites/Data/top_sites_by_region.json"),
+        .copy("Frontend/Browser/TopSites/Data/top_sites_by_region.json"),
         .copy(
           "Frontend/UserContent/UserScripts/Scripts_Dynamic/Scripts/DomainSpecific/Paged/BraveSearchScript.js"
         ),
@@ -418,11 +418,11 @@ var package = Package(
     ),
     .target(
       name: "BraveWidgetsModels",
-      dependencies: ["FaviconModels"],
+      dependencies: ["BraveStrings", "FaviconModels"],
       sources: [
         "BraveWidgets.intentdefinition", "LockScreenFavoriteIntentHandler.swift",
         "FavoritesWidgetData.swift", "DisabledShortcutsWidgetData.swift",
-        "OpenControlWidgetShortcutIntent.swift",
+        "OpenControlWidgetShortcutIntent.swift", "WidgetShortcut+Appearance.swift",
       ],
       plugins: ["IntentBuilderPlugin", "LoggerPlugin"]
     ),

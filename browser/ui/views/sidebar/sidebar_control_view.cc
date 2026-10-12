@@ -7,7 +7,6 @@
 
 #include "base/check.h"
 #include "brave/app/brave_command_ids.h"
-#include "brave/browser/ui/brave_browser.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
@@ -24,6 +23,7 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_command_controller.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/side_panel/side_panel_ui.h"
 #include "chrome/browser/ui/singleton_tabs.h"
@@ -61,7 +61,7 @@ class ControlViewMenuModel : public ui::SimpleMenuModel {
   }
 };
 
-bool IsSidebarOnLeft(Browser* browser) {
+bool IsSidebarOnLeft(BrowserWindowInterface* browser) {
   return !browser->GetProfile()->GetPrefs()->GetBoolean(
       prefs::kSidePanelHorizontalAlignment);
 }
@@ -69,7 +69,7 @@ bool IsSidebarOnLeft(Browser* browser) {
 }  // namespace
 
 SidebarControlView::SidebarControlView(Delegate* delegate,
-                                       BraveBrowser* browser)
+                                       BrowserWindowInterface* browser)
     : delegate_(delegate), browser_(browser) {
   // Don't follow RTL layout. Sidebar position is determined by its own setting.
   SetMirrored(false);
@@ -80,7 +80,7 @@ SidebarControlView::SidebarControlView(Delegate* delegate,
   UpdateSettingsButtonState();
 
   sidebar_model_observed_.Observe(
-      browser_->GetFeatures().sidebar_controller()->model());
+      sidebar::SidebarController::From(browser_)->model());
   SetLayoutManager(std::make_unique<views::FlexLayout>())
       ->SetOrientation(views::LayoutOrientation::kVertical);
   SetBackground(views::CreateSolidBackground(kColorToolbar));
@@ -258,8 +258,7 @@ void SidebarControlView::UpdateItemAddButtonState() {
 
   // Determine add button enabled state.
   bool should_enable = true;
-  if (browser_->GetFeatures()
-          .sidebar_controller()
+  if (sidebar::SidebarController::From(browser_)
           ->model()
           ->IsSidebarHasAllBuiltInItems() &&
       !sidebar::CanAddCurrentActiveTabToSidebar(browser_)) {

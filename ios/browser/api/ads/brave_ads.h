@@ -13,6 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 OBJC_EXPORT NSString* const kBraveAdsFirstRunAtPrefName;
+OBJC_EXPORT NSString* const kBraveAdsSponsoredEnabledPrefName;
 
 OBJC_EXPORT
 @protocol BraveAdsNotificationHandler
@@ -76,14 +77,10 @@ OBJC_EXPORT
 /// Brave News.
 - (void)notifyBraveNewsIsEnabledPreferenceDidChange:(BOOL)isEnabled;
 
-/// Used to notify the ads service that sponsored ads have been enabled or
-/// disabled.
-- (void)notifySponsoredImagesIsEnabledPreferenceDidChange:(BOOL)isEnabled;
-
-/// Whether or not Brave Ads is enabled and the user should receive
-/// notification-style ads and be rewarded for it
-@property(nonatomic, assign, getter=isEnabled)
-    BOOL enabled NS_SWIFT_NAME(isEnabled);
+/// Whether or not the user should receive notification-style ads and be
+/// rewarded for it
+@property(nonatomic, assign, getter=isNotificationsEnabled)
+    BOOL notificationsEnabled NS_SWIFT_NAME(isNotificationsEnabled);
 
 #pragma mark - Initialization / Shutdown
 

@@ -32,6 +32,8 @@ public class BraveProfileMigrations {
     migrateBlockAllCookiesPreference()
     // Growser-287: no migrateDefaultWalletPreferences() - the wallet is out.
     migrateShowNewFavoritesPreference()
+    migrateSponsoredAdsEnabledPreference()
+    migrateHTTPSUpgradeLevelPreference()
   }
 
   private func migrateDefaultUserAgentPreferences() {
@@ -78,6 +80,18 @@ public class BraveProfileMigrations {
     // migrate global / default settings first, then site-specific
     braveShieldsSettings.migrateGlobalSettings()
     braveShieldsSettings.migrateShieldsToContentSettings(for: domainsToMigrate)
+  }
+
+  /// Migrates the HTTPS upgrade level onto upstream's HTTPS-Only Mode pref.
+  /// Both `standard` and `strict` become enabled, the interstitial standard
+  /// used to skip is now shown for any failed upgrade.
+  private func migrateHTTPSUpgradeLevelPreference() {
+    guard !Preferences.Migration.httpsOnlyModeCompleted.value else { return }
+    profileController.profile.prefs.set(
+      Preferences.Shields.httpsUpgradeLevel.isEnabled,
+      forPath: kHttpsOnlyModeEnabled
+    )
+    Preferences.Migration.httpsOnlyModeCompleted.value = true
   }
 
   /// Migrate sync passwords default value to enabled.
@@ -138,12 +152,29 @@ public class BraveProfileMigrations {
   private func migrateShowNewFavoritesPreference() {
     Preferences.NewTabPage.showNewTabFavourites.migrate { value in
       if value {
-        Preferences.NewTabPage.topsitesMode.value =
-          Favorite.hasFavorites ? TopsitesMode.favourite : TopsitesMode.mostVisited
+        Preferences.NewTabPage.topSitesMode.value =
+          Favorite.hasFavorites ? TopSitesMode.favourite : TopSitesMode.mostVisited
       } else {
-        Preferences.NewTabPage.topsitesMode.value = TopsitesMode.none
+        Preferences.NewTabPage.topSitesMode.value = TopSitesMode.none
       }
     }
+  }
+
+  /// Migrates deprecated `backgroundMediaTypeRaw` to `kBraveAdsSponsoredEnabledPrefName`.
+  /// Must run after `Preferences.migrateBackgroundSponsoredImages()`, which
+  /// migrates `backgroundMediaTypeRaw` from the older
+  /// `backgroundSponsoredImages` pref.
+  private func migrateSponsoredAdsEnabledPreference() {
+    Preferences.DeprecatedPreferences.backgroundMediaTypeRaw.migrate { rawValue in
+      profileController.profile.prefs.set(
+        BraveProfileMigrations.isSponsoredAdsEnabled(forBackgroundMediaTypeRawValue: rawValue),
+        forPath: kBraveAdsSponsoredEnabledPrefName
+      )
+    }
+  }
+
+  static func isSponsoredAdsEnabled(forBackgroundMediaTypeRawValue rawValue: Int) -> Bool {
+    rawValue != DeprecatedBackgroundMediaType.defaultImages.rawValue
   }
 }
 
@@ -298,6 +329,14 @@ private enum DeprecatedYoutubeHighQualityPreference: String {
   case off
 }
 
+private enum DeprecatedBackgroundMediaType: Int {
+  case defaultImages = 0
+  case sponsoredImages = 1
+  // Video NTT was removed, but existing users' stored
+  // preference may still have this value.
+  case sponsoredImagesAndVideos = 2
+}
+
 extension Preferences {
   fileprivate final class DeprecatedPreferences {
     static let sendUsagePing = Option<Bool>(key: "dau.send-usage-ping", default: true)
@@ -323,6 +362,13 @@ extension Preferences {
     static let backgroundSponsoredImages = Option<Bool>(
       key: "newtabpage.background-sponsored-images",
       default: true
+    )
+
+    /// Used to specify the type of background media to display.
+    /// Superseded by the `kSponsoredEnabled` PrefService pref.
+    static let backgroundMediaTypeRaw = Option<Int>(
+      key: "newtabpage.background-media-type",
+      default: DeprecatedBackgroundMediaType.sponsoredImages.rawValue
     )
 
     /// Specifies whether the bookmark button is present on toolbar
@@ -424,6 +470,13 @@ extension Preferences {
     /// allows a user to select between `standard`, `strict` and `disabled` instead of a simple on/off `Bool`
     static let httpsUpgradesLivelCompleted = Option<Bool>(
       key: "migration.https-upgrades-level-completed",
+      default: false
+    )
+
+    /// The https upgrades preference is a simple on/off `Bool` again when using
+    /// upstream's HTTPS upgrades, stored in the profile `PrefService`
+    static let httpsOnlyModeCompleted = Option<Bool>(
+      key: "migration.https-only-mode-completed",
       default: false
     )
 
@@ -597,8 +650,9 @@ extension Preferences {
 
     // Migrate old Background Sponsored Images setting
     DeprecatedPreferences.backgroundSponsoredImages.migrate { isEnabled in
-      Preferences.NewTabPage.backgroundMediaType =
+      let backgroundMediaType: DeprecatedBackgroundMediaType =
         isEnabled ? .sponsoredImages : .defaultImages
+      DeprecatedPreferences.backgroundMediaTypeRaw.value = backgroundMediaType.rawValue
     }
 
     Migration.backgroundSponsoredImagesCompleted.value = true

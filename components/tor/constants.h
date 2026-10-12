@@ -6,32 +6,30 @@
 #ifndef BRAVE_COMPONENTS_TOR_CONSTANTS_H_
 #define BRAVE_COMPONENTS_TOR_CONSTANTS_H_
 
+#include <cstdint>
+#include <iterator>
+
 #include "base/compiler_specific.h"
 #include "base/files/file_path.h"
 #include "base/files/safe_base_name.h"
 #include "build/build_config.h"
+#include "crypto/sha2.h"
 
 namespace tor {
 
 #if BUILDFLAG(IS_WIN)
 // Growser-157: our own component. Brave's server answers a fork 403,
 // so the client is published by us - see scripts/make-tor-component.py
-// and deploy/growser-backend. The id is the first 128 bits of the key's
-// SHA-256, so these two lines cannot disagree without the updater
-// refusing whatever it downloads. Windows only for now: no macOS or
-// Linux package exists yet, and Tor stays off there.
+// and deploy/growser-backend. The id, magogemiibiafhlbpenemlaomhplhiok, is the
+// first 128 bits of the key hash below.
 inline constexpr char kTorClientComponentName[] =
     "Growser Tor Client Updater (Windows)";
-inline constexpr char kTorClientComponentId[] =
-    "magogemiibiafhlbpenemlaomhplhiok";
-inline constexpr char kTorClientComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsU43JFRgCUOdCDiDksl0"
-    "d6gLxxhcqij3Oa4PPvCvDniiheV8pzgglEjvzaTrcL9rZTND+3Mefo10jVo4MlRm"
-    "9pvrqtiRbU9eBUcOzrM75XPvadw8s09LUXcXvIOw/ywSqm7uPAD11iICQCiKNtAz"
-    "C+5WXyrCvvZ36+U5YA1ZTilDP2Mjlx8gWrli7J5URjkV1BCGaDjfd0M+xUAXuKPn"
-    "wp4je9D7bn+gET/jkxgPlG19DIW7MIcRR+b+wQIMN+5zkyWUNlrNxOJmO9Pfbn4n"
-    "Afw2HcTEpwaDhn3Q7Ns7lEZ0WjM+oCyjEvLwE1jm4R9cZJXCuzDn5UWvMrfxJ4Ku"
-    "rwIDAQAB";
+inline constexpr uint8_t kTorClientComponentPublicKeySHA256[32] = {
+    0xc0, 0x6e, 0x64, 0xc8, 0x81, 0x80, 0x57, 0xb1, 0xf4, 0xd4, 0xcb,
+    0x0e, 0xc7, 0xfb, 0x78, 0xea, 0xdc, 0xc8, 0x07, 0x05, 0x5b, 0xdc,
+    0x01, 0xf8, 0xea, 0x41, 0x41, 0x3e, 0xde, 0xa6, 0x98, 0xbb};
+static_assert(std::size(kTorClientComponentPublicKeySHA256) ==
+              crypto::kSHA256Length);
 #elif BUILDFLAG(IS_MAC)
 // Growser-163: our own component, with a key of its own - the Brave id that
 // stood here names a package we do not publish and the Worker does not serve.
@@ -40,16 +38,12 @@ inline constexpr char kTorClientComponentBase64PublicKey[] =
 // the Worker filters by appid.
 inline constexpr char kTorClientComponentName[] =
     "Growser Tor Client Updater (macOS)";
-inline constexpr char kTorClientComponentId[] =
-    "egpeghkdljbldfmebcbpceiegojamnac";
-inline constexpr char kTorClientComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh1eNm711Om6MWVbJJ+06"
-    "qcd05WCdLFdvPSA/r8NesxFQNXYSki0PPlK3s16AL6ndkYaI6/yLRPpm8nsgbSf6"
-    "TC9Vt/fyyHIS6CziWR+RPF+ZIq1Yd2gkJpsP6GHgUnuG0Vv4u1OwqoVzyxUpFwKJ"
-    "wCs8Ud8uoRqF7v3y8PtgYp8mbfJyGaDo4MupGFJ2dnslP6Pd4bQ+izpqBoyQh0/7"
-    "WPMlLDwHd8c6wxUXt9V2ZnlIUE6NMGD8BjstL4m9wmGRdK9WPxDJNF2QqzAeSeqf"
-    "SFvyl97MZmeBvYWXCiIkY3x5RUTp/4Uo84RBXkzP9hrigvhMpR+tfFStwvHKkvQ/"
-    "TQIDAQAB";
+inline constexpr uint8_t kTorClientComponentPublicKeySHA256[32] = {
+    0x46, 0xf4, 0x67, 0xa3, 0xb9, 0x1b, 0x35, 0xc4, 0x12, 0x1f, 0x24,
+    0x84, 0x6e, 0x90, 0xcd, 0x02, 0x78, 0x5a, 0x1f, 0x72, 0x89, 0x7e,
+    0x1f, 0x94, 0x21, 0x1f, 0xeb, 0xa0, 0x13, 0x65, 0x34, 0xd8};
+static_assert(std::size(kTorClientComponentPublicKeySHA256) ==
+              crypto::kSHA256Length);
 #elif BUILDFLAG(IS_LINUX)
 // Growser-202: ours, the third and last platform, for exactly the reason the
 // other two are. What stood here was Brave's id - a package we do not publish
@@ -66,16 +60,12 @@ inline constexpr char kTorClientComponentBase64PublicKey[] =
 #endif
 inline constexpr char kTorClientComponentName[] =
     "Growser Tor Client Updater (Linux)";
-inline constexpr char kTorClientComponentId[] =
-    "cdibmjeojommggomhejkgbfdmnmjhpbp";
-inline constexpr char kTorClientComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzeiscTKx+yMJ9KbkPOud"
-    "DmYrxU1l8X4AoB5Eh0wXznS97+2afYQ+pOa5zvrLdZsyJoHV+gAt1X0aXwnGE+oA"
-    "JYyFn+y20pLT8PyL+MbL2bFuvqH3nlLdMCxlhwFppNng2jbh8LHZ02g9zfElP5+v"
-    "9Wh0vbjWjtnbHsT8f8oIbBjYzt8h4k5TsbGb3BjoNlGICZJFMUhznEOGGGE+8SW2"
-    "nST55uDl9NNbf5jWDZ+D3CMLBZvhAh93DXP4Wzkh9dYWJiGSQ4hhHnkOUNwjulXd"
-    "l1CAeeZVsi+LKWrijdXHqTFQcLbdk1ck9NfcpuJ/w+bMKb972YGirS42ODUfSHSY"
-    "0QIDAQAB";
+inline constexpr uint8_t kTorClientComponentPublicKeySHA256[32] = {
+    0x23, 0x81, 0xc9, 0x4e, 0x9e, 0xcc, 0x66, 0xec, 0x74, 0x9a, 0x61,
+    0x53, 0xcd, 0xc9, 0x7f, 0x1f, 0xc0, 0x8f, 0x5f, 0x5d, 0xe6, 0x86,
+    0xe5, 0x00, 0x5b, 0x7e, 0x99, 0x65, 0x59, 0x94, 0x27, 0xc4};
+static_assert(std::size(kTorClientComponentPublicKeySHA256) ==
+              crypto::kSHA256Length);
 #endif
 
 // Returns the path for for where the Tor client binary is installed.

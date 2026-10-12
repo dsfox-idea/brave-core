@@ -122,6 +122,23 @@ import os
         fromStart: Date.distantPast,
         end: Date.distantFuture
       )
+      clearHttpsUpgradeAllowlist()
+    }
+  }
+  @Published var isHttpsOnlyModeEnabled: Bool {
+    didSet {
+      prefs.set(isHttpsOnlyModeEnabled, forPath: kHttpsOnlyModeEnabled)
+      clearHttpsUpgradeAllowlist()
+    }
+  }
+  /// Whether or not HTTPS upgrades are enabled at any level.
+  ///
+  /// Enabling restores the level that was set prior to disabling, or `standard` if there is none.
+  var isHTTPSUpgradeEnabled: Bool {
+    get { httpsUpgradeLevel.isEnabled }
+    set {
+      httpsUpgradeLevel =
+        newValue ? (Preferences.Shields.httpsUpgradePriorEnabledLevel ?? .standard) : .disabled
     }
   }
   @Published var shredLevel: SiteShredLevel {
@@ -146,6 +163,12 @@ import os
       }
 
       webcompatReporterHandler.setContactInfoSaveFlag(value: isSaveContactInfoEnabled)
+    }
+  }
+
+  @Published var isSponsoredAdsEnabled: Bool {
+    didSet {
+      prefs.set(isSponsoredAdsEnabled, forPath: kBraveAdsSponsoredEnabledPrefName)
     }
   }
 
@@ -223,12 +246,16 @@ import os
       self.shredLevel = Preferences.Shields.shredLevel
     }
     self.httpsUpgradeLevel = Preferences.Shields.httpsUpgradeLevel
+    self.isHttpsOnlyModeEnabled = prefs.boolean(forPath: kHttpsOnlyModeEnabled)
     self.isDeAmpEnabled = prefs.boolean(forPath: kDeAmpEnabled)
     self.isGPCEnabled = prefs.boolean(forPath: kGlobalPrivacyControlEnabled)
     self.isBlockAllCookiesEnabled = prefs.boolean(forPath: kBlockAllCookiesEnabled)
     self.isDebounceEnabled = debounceService?.isEnabled ?? false
     self.shredHistoryItems = Preferences.Shields.shredHistoryItems.value
     self.webcompatReporterHandler = webcompatReporterHandler
+    self.isSponsoredAdsEnabled = prefs.boolean(
+      forPath: kBraveAdsSponsoredEnabledPrefName
+    )
 
     blockMobileAnnoyances = FilterListStorage.shared.isEnabled(
       for: AdblockFilterListCatalogEntry.mobileAnnoyancesComponentID
@@ -286,6 +313,13 @@ import os
     Task { @MainActor in
       self.isSaveContactInfoEnabled = await webcompatReporterHandler?.browserParams().1 ?? false
     }
+  }
+
+  private func clearHttpsUpgradeAllowlist() {
+    HttpsUpgradeServiceFactory.get(privateMode: false)?.clearAllowlist(
+      fromStart: Date.distantPast,
+      end: Date.distantFuture
+    )
   }
 
   func clearPrivateData(_ clearables: [Clearable]) async {
@@ -380,8 +414,8 @@ import os
         for filterList in filterLists {
           switch filterList.entry.componentId {
           case AdblockFilterListCatalogEntry.mobileAnnoyancesComponentID:
-            if filterList.isEnabled != self.blockMobileAnnoyances {
-              self.blockMobileAnnoyances = filterList.isEnabled
+            if filterList.isEnabledOrDefault != self.blockMobileAnnoyances {
+              self.blockMobileAnnoyances = filterList.isEnabledOrDefault
             }
           default:
             continue

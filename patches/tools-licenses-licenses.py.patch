@@ -18,7 +18,7 @@ index 6b2eae031956dd3c69b2daf69ac6890078c701d4..f2770c2e31f37a47b22a91fb26028e99
  
  # These buildtools/third_party directories only contain
  # chromium build files. The actual third_party source files and their
-@@ -877,7 +879,8 @@ def FindThirdPartyDirs(
+@@ -883,7 +885,8 @@ def FindThirdPartyDirs(
          if skip in dirs:
            dirs.remove(skip)
  
@@ -28,7 +28,7 @@ index 6b2eae031956dd3c69b2daf69ac6890078c701d4..f2770c2e31f37a47b22a91fb26028e99
        # Add all subdirectories that are not marked for skipping.
        for d in dirs:
          dirpath = os.path.join(path, d)
-@@ -1081,6 +1084,7 @@ def _DiscoverMetadatas(args):
+@@ -1087,6 +1090,7 @@ def _DiscoverMetadatas(args):
          m['dir'] = d
          metadatas.append(m)
      except LicenseError as lic_exp:

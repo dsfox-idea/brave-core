@@ -18,6 +18,7 @@
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/leo_workspace_util.h"
 #include "brave/components/ai_chat/resources/grit/ai_chat_ui_generated_map.h"
+#include "brave/components/constants/webui_url_constants.h"
 #include "components/grit/brave_components_resources.h"
 #include "components/user_prefs/user_prefs.h"
 #include "content/public/browser/browser_context.h"
@@ -28,12 +29,10 @@
 #include "content/public/browser/web_ui.h"
 #include "content/public/browser/web_ui_data_source.h"
 #include "content/public/common/url_constants.h"
-#include "net/base/schemeful_site.h"
 #include "third_party/abseil-cpp/absl/strings/str_format.h"
 #include "third_party/blink/public/common/service_worker/service_worker_status_code.h"
 #include "third_party/blink/public/common/storage_key/storage_key.h"
 #include "third_party/blink/public/mojom/service_worker/service_worker_registration_options.mojom.h"
-#include "third_party/blink/public/mojom/storage_key/ancestor_chain_bit.mojom-shared.h"
 #include "ui/webui/webui_util.h"
 #include "url/gurl.h"
 #include "url/origin.h"
@@ -96,7 +95,7 @@ void CreateAndAddViewerDataSource(content::BrowserContext* browser_context,
 
   // Viewer-specific CSP overrides: allow 'unsafe-inline' styles for dynamic
   // content, allow framing itself for file display, allow being framed by
-  // workspace, and allow service worker.
+  // workspace and AI Chat page, and allow service worker.
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::StyleSrc,
       "style-src 'self' 'unsafe-inline' chrome-untrusted://resources;");
@@ -104,7 +103,8 @@ void CreateAndAddViewerDataSource(content::BrowserContext* browser_context,
       network::mojom::CSPDirectiveName::FrameSrc, "frame-src 'self';");
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameAncestors,
-      absl::StrFormat("frame-ancestors %s;", UntrustedOrigin(workspace_host)));
+      absl::StrFormat("frame-ancestors %s %s;", UntrustedOrigin(workspace_host),
+                      kAIChatUIURL));
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::WorkerSrc, "worker-src 'self';");
   source->OverrideContentSecurityPolicy(
@@ -128,13 +128,17 @@ void CreateAndAddWorkspaceDataSource(content::BrowserContext* browser_context,
       absl::StrFormat("frame-src %s;",
                       UntrustedOrigin(base::StrCat(
                           {kAIChatLeoWorkspaceViewUIHostPrefix, url.host()}))));
+
+  // Allow being framed by the AI Chat page for the workspace file lightbox.
+  source->OverrideContentSecurityPolicy(
+      network::mojom::CSPDirectiveName::FrameAncestors,
+      absl::StrFormat("frame-ancestors %s;", kAIChatUIURL));
 }
 
 // Registers the service worker from the browser since chrome-untrusted://
 // origins cannot call navigator.serviceWorker.register().
 void RegisterViewerServiceWorker(content::BrowserContext* browser_context,
-                                 const GURL& viewer_url,
-                                 const GURL& workspace_url) {
+                                 const GURL& viewer_url) {
   content::ServiceWorkerContext* service_worker_context =
       browser_context->GetStoragePartitionForUrl(viewer_url)
           ->GetServiceWorkerContext();
@@ -142,11 +146,8 @@ void RegisterViewerServiceWorker(content::BrowserContext* browser_context,
     return;
   }
 
-  // Storage is partitioned under the workspace's site since the viewer is
-  // cross-site framed by the workspace.
-  const blink::StorageKey storage_key = blink::StorageKey::Create(
-      url::Origin::Create(viewer_url), net::SchemefulSite(workspace_url),
-      blink::mojom::AncestorChainBit::kCrossSite);
+  const blink::StorageKey storage_key =
+      blink::StorageKey::CreateFirstParty(url::Origin::Create(viewer_url));
 
   blink::mojom::ServiceWorkerRegistrationOptions options(
       viewer_url, blink::mojom::ScriptType::kModule,
@@ -224,8 +225,7 @@ LeoWorkspaceViewUI::LeoWorkspaceViewUI(content::WebUI* web_ui, const GURL& url)
   const std::string_view workspace_host = url.host().substr(
       std::string_view(kAIChatLeoWorkspaceViewUIHostPrefix).size());
   CreateAndAddViewerDataSource(browser_context, viewer_url, workspace_host);
-  RegisterViewerServiceWorker(browser_context, viewer_url,
-                              GURL(UntrustedOrigin(workspace_host) + "/"));
+  RegisterViewerServiceWorker(browser_context, viewer_url);
 }
 
 LeoWorkspaceViewUI::~LeoWorkspaceViewUI() = default;

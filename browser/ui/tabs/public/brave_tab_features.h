@@ -131,9 +131,22 @@ class BraveTabFeatures : public TabFeatures {
   // Holds stripped image copies dropped onto this tab. Null when metadata
   // stripping is disabled.
   std::unique_ptr<ContentsObservingTabFeature> drop_strip_temp_dirs_;
+
   // Records Cloudflare javascript-detection script loads.
   std::unique_ptr<ContentsObservingTabFeature>
       cloudflare_js_detection_tab_helper_;
+
+  // Avoids a white flash on new tabs. Windows only, null elsewhere.
+  std::unique_ptr<ContentsObservingTabFeature> background_color_tab_helper_;
+
+  // Records page and media session metrics.
+  std::unique_ptr<ContentsObservingTabFeature> page_metrics_tab_helper_;
+
+  // Shows an infobar while browsing a site off the record at its request.
+  std::unique_ptr<ContentsObservingTabFeature> request_otr_tab_helper_;
+
+  // Opens the Leo panel once for users in the sidebar test.
+  std::unique_ptr<ContentsObservingTabFeature> sidebar_tab_helper_;
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
   std::unique_ptr<ai_chat::TabDataWebContentsObserver> tab_data_observer_;

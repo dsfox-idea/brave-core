@@ -5,8 +5,6 @@
 
 package org.chromium.components.minidump_uploader;
 
-import androidx.test.filters.SmallTest;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +21,6 @@ import java.net.HttpURLConnection;
 @Config(manifest = Config.NONE)
 public class BraveHttpURLConnectionFactoryImplTest {
     @Test
-    @SmallTest
     // Growser-315: the upload goes to the URL the uploader asks for.
     public void testUploadUrlIsTheOneAskedFor() {
         HttpURLConnectionFactory httpURLConnectionFactory = new BraveHttpURLConnectionFactoryImpl();

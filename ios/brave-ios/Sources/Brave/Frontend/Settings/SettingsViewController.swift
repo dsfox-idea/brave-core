@@ -238,7 +238,9 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
                 attributionManager: attributionManager,
                 localState: localState
               ),
-              steps: [.addToDock],
+              steps: [
+                AddToDockOnboardingStep(ctaTitle: Strings.FocusOnboarding.gotItButtonTitle)
+              ],
               showSplashScreen: false,
               showDismissButton: false
             ).then {
@@ -811,7 +813,8 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
                   isPrivate: false
                 )
                 self.dismiss(animated: true)
-              }
+              },
+              prefs: braveCore.profile.prefs
             ),
             animated: true
           )

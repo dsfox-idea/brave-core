@@ -30,7 +30,7 @@ namespace sidebar {
 class SidebarBrowserTest;
 }  // namespace sidebar
 
-class BraveBrowser;
+class BrowserWindowInterface;
 class SidebarItemView;
 
 class SidebarItemsContentsView : public views::View,
@@ -39,7 +39,7 @@ class SidebarItemsContentsView : public views::View,
                                  public ui::SimpleMenuModel::Delegate {
   METADATA_HEADER(SidebarItemsContentsView, views::View)
  public:
-  SidebarItemsContentsView(BraveBrowser* browser,
+  SidebarItemsContentsView(BrowserWindowInterface* browser,
                            views::DragController* drag_controller);
   ~SidebarItemsContentsView() override;
 
@@ -110,7 +110,7 @@ class SidebarItemsContentsView : public views::View,
   ui::ImageModel GetImageForBuiltInItems(
       sidebar::SidebarItem::BuiltInItemType type,
       views::Button::ButtonState state) const;
-  void UpdateAllBuiltInItemsViewState();
+  void UpdateAllItemsViewState();
   void ShowItemAddedFeedbackBubble(views::View* anchor_view);
 
   // When item count is five, drag indicator is drawn in front of first item.
@@ -122,7 +122,7 @@ class SidebarItemsContentsView : public views::View,
   SidebarItemView* GetItemViewAt(size_t index);
   void LaunchEditItemDialog();
 
-  raw_ptr<BraveBrowser> browser_ = nullptr;
+  raw_ptr<BrowserWindowInterface> browser_ = nullptr;
   raw_ptr<views::DragController> drag_controller_ = nullptr;
   raw_ptr<views::View> view_for_context_menu_ = nullptr;
   raw_ptr<sidebar::SidebarModel> sidebar_model_ = nullptr;

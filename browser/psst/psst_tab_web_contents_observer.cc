@@ -109,7 +109,7 @@ void PrepareParametersForPolicyExecution(
 
 // static
 std::unique_ptr<PsstTabWebContentsObserver>
-PsstTabWebContentsObserver::MaybeCreateForWebContents(
+PsstTabWebContentsObserver::MaybeCreate(
     tabs::TabInterface& tab,
     content::BrowserContext* browser_context,
     std::unique_ptr<PsstUiDelegate> ui_delegate,
@@ -228,6 +228,8 @@ void PsstTabWebContentsObserver::DocumentOnLoadCompletedInPrimaryMainFrame() {
   registry_->CheckIfMatch(
       web_contents()->GetLastCommittedURL(),
       base::BindOnce(&PsstTabWebContentsObserver::InsertUserScript,
+                     page_weak_factory_.GetWeakPtr()),
+      base::BindOnce(&PsstTabWebContentsObserver::NoRulesFoundHandler,
                      page_weak_factory_.GetWeakPtr()));
 }
 
@@ -413,9 +415,15 @@ void PsstTabWebContentsObserver::SetInjectAsyncScriptCallback(
 }
 
 void PsstTabWebContentsObserver::PageScopedReset() {
+  timeout_timer_.Stop();
   script_injector_remote_.reset();
   page_weak_factory_.InvalidateWeakPtrs();
   should_process_current_page_ = false;
+}
+
+void PsstTabWebContentsObserver::NoRulesFoundHandler() {
+  ui_delegate_->HideAll();
+  PageScopedReset();
 }
 
 }  // namespace psst

@@ -9,7 +9,6 @@
 #include "brave/components/commander/common/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/browser_window/public/profile_browser_collection.h"
 #include "content/public/browser/web_contents.h"
@@ -30,7 +29,7 @@
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/misc_metrics/profile_misc_metrics_service.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
-#include "brave/browser/ui/brave_browser.h"
+#include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "chrome/browser/ui/side_panel/side_panel_ui.h"
 #endif  // BUILDFLAG(!IS_ANDROID)
 
@@ -47,8 +46,8 @@
 // The setting is live, but the service is built from it once at profile setup,
 // so the two can disagree. `HistoryEmbeddingsProvider::Start()` CHECKs on the
 // service.
-#define IsHistoryEmbeddingsEnabledForProfile(profile)                    \
-  IsHistoryEmbeddingsEnabledForProfile(profile) &&                       \
+#define IsHistoryEmbeddingsEnabledForProfile(profile) \
+  IsHistoryEmbeddingsEnabledForProfile(profile) &&    \
       HistoryEmbeddingsServiceFactory::GetForProfile(profile) != nullptr
 
 #include <chrome/browser/autocomplete/chrome_autocomplete_provider_client.cc>

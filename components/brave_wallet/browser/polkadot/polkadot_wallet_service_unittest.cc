@@ -11,7 +11,6 @@
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
 #include "base/test/test_future.h"
-#include "base/test/values_test_util.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
 #include "brave/components/brave_wallet/browser/network_manager.h"
@@ -781,7 +780,7 @@ TEST_F(PolkadotWalletServiceUnitTest,
       8, 9, 10, 11, 12, 0x63};
 
   auto metadata = MakeWestendMetadata();
-  metadata->signed_extensions = tampered_extensions;
+  metadata->signed_extensions.bytes = tampered_extensions;
   metadata->spec_version = kSpecVersion;
 
   // Seed the untrusted on-disk cache. The service is already constructed, so

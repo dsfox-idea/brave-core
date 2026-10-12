@@ -107,7 +107,7 @@ protocol NTPObservableSectionProvider: NTPSectionProvider {
 protocol NewTabPageDelegate: AnyObject {
   func focusURLBar()
   func navigateToInput(_ input: String, inNewTab: Bool, switchingToPrivateMode: Bool)
-  func handleFavoriteAction(favorite: Favorite, action: BookmarksAction)
+  func handleTopSiteAction(action: TopSiteAction)
   // Growser-290: no brandedImageCalloutActioned(_:) or
   // showNewTabTakeoverInfoBarIfNeeded() - both were sponsored images'.
   func showNTPOnboarding()
@@ -168,6 +168,7 @@ class NewTabPageViewController: UIViewController {
   init(
     tab: some TabState,
     profilePrefs: any PrefService,
+    mostVisitedSites: MostVisitedSites?,
     dataSource: NTPDataSource,
     // Growser-281: no feedDataSource. Growser-290: no rewards.
     privateBrowsingManager: PrivateBrowsingManager
@@ -179,29 +180,33 @@ class NewTabPageViewController: UIViewController {
       privateBrowsingManager: privateBrowsingManager,
       profilePrefs: profilePrefs
     )
-    background = NewTabPageBackground(dataSource: dataSource)
+    background = NewTabPageBackground(dataSource: dataSource, prefs: profilePrefs)
     collectionView = NewTabCollectionView(frame: .zero, collectionViewLayout: layout)
     super.init(nibName: nil, bundle: nil)
 
     Preferences.NewTabPage.showNewTabPrivacyHub.observe(from: self)
-    Preferences.NewTabPage.topsitesMode.observe(from: self)
+    Preferences.NewTabPage.topSitesMode.observe(from: self)
 
-    // Growser-310: the new tab page holds the favourites - its top sites -
-    // and the photo credit, as on Android (#305) and the desktop (#136). No
-    // privacy stats card.
+    // Growser-310: the new tab page holds the top sites and the photo credit,
+    // as on Android (#305) and the desktop (#136). No privacy stats card.
+    let topSitesTileSource = TopSitesTileSource(
+      mostVisitedSites: mostVisitedSites,
+      isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing
+    )
     sections = [
-      FavoritesSectionProvider(
-        action: { [weak self] bookmark, action in
-          self?.handleFavoriteAction(favorite: bookmark, action: action)
+      TopSitesSectionProvider(
+        action: { [weak self] action in
+          self?.handleTopSiteAction(action: action)
         },
-        legacyLongPressAction: { [weak self] alertController in
-          self?.present(alertController, animated: true)
-        },
-        isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing
+        isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing,
+        tileSource: topSitesTileSource
       ),
-      FavoritesOverflowSectionProvider(action: { [weak self] in
-        self?.delegate?.focusURLBar()
-      }),
+      TopSitesOverflowSectionProvider(
+        action: { [weak self] in
+          self?.delegate?.focusURLBar()
+        },
+        tileSource: topSitesTileSource
+      ),
       // Growser-310: and the sites the person visits most, as Android shows.
       MostVisitedSectionProvider(
         profile: tab.profile,
@@ -325,25 +330,25 @@ class NewTabPageViewController: UIViewController {
   ) {
     super.viewWillTransition(to: size, with: coordinator)
     guard
-      let favoriteSection = sections.firstIndex(where: { $0 is FavoritesSectionProvider }),
-      let provider = sections[favoriteSection] as? FavoritesSectionProvider
+      let topSitesSection = sections.firstIndex(where: { $0 is TopSitesSectionProvider }),
+      let provider = sections[topSitesSection] as? TopSitesSectionProvider
     else {
       return
     }
-    // Only reload the favorites section (and its overflow section) when the
-    // number of favorites actually displayed would change, otherwise favorites
+    // Only reload the top sites section (and its overflow section) when the
+    // number of favorites/mostVisited actually displayed would change, otherwise favorites
     // may wrap onto a second row. The available width isn't known until the
     // collection view's bounds & insets update, so compute the new displayed
     // count in the transition completion handler.
-    let currentCount = collectionView.numberOfItems(inSection: favoriteSection)
+    let currentCount = collectionView.numberOfItems(inSection: topSitesSection)
     coordinator.animate(alongsideTransition: nil) { [weak self] _ in
       guard let self else { return }
       let updatedCount = provider.displayedItemCount(
         in: self.collectionView,
-        section: favoriteSection
+        section: topSitesSection
       )
       if currentCount != updatedCount {
-        self.collectionView.reloadSections(IndexSet([favoriteSection, favoriteSection + 1]))
+        self.collectionView.reloadSections(IndexSet([topSitesSection, topSitesSection + 1]))
       }
     }
   }
@@ -489,8 +494,8 @@ class NewTabPageViewController: UIViewController {
 
   // Growser-290: no tappedSponsorButton(_:).
 
-  private func handleFavoriteAction(favorite: Favorite, action: BookmarksAction) {
-    delegate?.handleFavoriteAction(favorite: favorite, action: action)
+  private func handleTopSiteAction(action: TopSiteAction) {
+    delegate?.handleTopSiteAction(action: action)
   }
 
   private func presentImageCredit(_ button: UIControl) {
@@ -529,7 +534,7 @@ class NewTabPageViewController: UIViewController {
 extension NewTabPageViewController: PreferencesObserver {
   func preferencesDidChange(for key: String) {
     if key == Preferences.NewTabPage.showNewTabPrivacyHub.key
-      || key == Preferences.NewTabPage.topsitesMode.key
+      || key == Preferences.NewTabPage.topSitesMode.key
     {
       collectionView.reloadData()
       return
@@ -777,14 +782,14 @@ extension NewTabPageViewController: UICollectionViewDragDelegate, UICollectionVi
     at indexPath: IndexPath
   ) -> [UIDragItem] {
     // Check If the item that is dragged is a favourite item
-    guard sections[indexPath.section] is FavoritesSectionProvider else {
+    guard sections[indexPath.section] is TopSitesSectionProvider else {
       return []
     }
 
     let itemProvider = NSItemProvider(object: "\(indexPath)" as NSString)
     let dragItem = UIDragItem(itemProvider: itemProvider).then {
       $0.previewProvider = { () -> UIDragPreview? in
-        guard let cell = collectionView.cellForItem(at: indexPath) as? FavoritesCell else {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TopSitesCell else {
           return nil
         }
         return UIDragPreview(view: cell.imageView)
@@ -815,7 +820,7 @@ extension NewTabPageViewController: UICollectionViewDragDelegate, UICollectionVi
       guard let item = coordinator.items.first else { return }
       _ = coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
 
-      guard let favouritesSection = sections.firstIndex(where: { $0 is FavoritesSectionProvider })
+      guard let favouritesSection = sections.firstIndex(where: { $0 is TopSitesSectionProvider })
       else {
         return
       }
@@ -839,8 +844,8 @@ extension NewTabPageViewController: UICollectionViewDragDelegate, UICollectionVi
     withDestinationIndexPath destinationIndexPath: IndexPath?
   ) -> UICollectionViewDropProposal {
     guard let destinationIndexSection = destinationIndexPath?.section,
-      let favouriteSection = sections[destinationIndexSection] as? FavoritesSectionProvider,
-      favouriteSection.hasMoreThanOneFavouriteItems
+      let topSitesSection = sections[destinationIndexSection] as? TopSitesSectionProvider,
+      topSitesSection.isReorderingEnabled
     else {
       return .init(operation: .cancel)
     }
@@ -874,7 +879,7 @@ extension NewTabPageViewController: UICollectionViewDragDelegate, UICollectionVi
     let previewParameters = UIDragPreviewParameters().then {
       $0.backgroundColor = .clear
 
-      if let cell = collectionView.cellForItem(at: indexPath) as? FavoritesCell {
+      if let cell = collectionView.cellForItem(at: indexPath) as? TopSitesCell {
         $0.visiblePath = UIBezierPath(roundedRect: cell.imageView.frame, cornerRadius: 8)
       }
     }

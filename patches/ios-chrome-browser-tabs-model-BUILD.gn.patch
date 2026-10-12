@@ -1,0 +1,12 @@
+diff --git a/ios/chrome/browser/tabs/model/BUILD.gn b/ios/chrome/browser/tabs/model/BUILD.gn
+index 3cabeb8bc7556dc96eddc991a937e9335cdb0fdc..66c82b9a67db284d43d1ad403d8191caed1c4c65 100644
+--- a/ios/chrome/browser/tabs/model/BUILD.gn
++++ b/ios/chrome/browser/tabs/model/BUILD.gn
+@@ -48,6 +48,7 @@ source_set("tabs_internal") {
+     ":synced_tabs",
+     ":tab_helper_attacher",
+     "//base",
++    "//brave/components/brave_shields/core/common",
+     "//components/autofill/ios/form_util",
+     "//components/breadcrumbs/core:status",
+     "//components/commerce/ios/browser",

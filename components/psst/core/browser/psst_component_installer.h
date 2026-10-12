@@ -6,6 +6,11 @@
 #ifndef BRAVE_COMPONENTS_PSST_CORE_BROWSER_PSST_COMPONENT_INSTALLER_H_
 #define BRAVE_COMPONENTS_PSST_CORE_BROWSER_PSST_COMPONENT_INSTALLER_H_
 
+#include <cstdint>
+#include <iterator>
+
+#include "crypto/sha2.h"
+
 namespace component_updater {
 class ComponentUpdateService;
 }  // namespace component_updater
@@ -14,21 +19,18 @@ namespace psst {
 
 // Growser-259: our own component, not Brave's. Brave's is signed with a key we
 // do not have and served by go-updater.brave.com, which refuses a fork, so
-// nothing ever installed. The id is the first 128 bits of SHA-256 of the key
-// below (../growser-keys/psst_component.pem); scripts/make-psst-component.py
-// builds the package from brave/psst-component and deploy/growser-backend
-// serves it. The three constants move together: the updater registers the id
-// it derives from the key, not this string.
+// nothing ever installed. The hash below is SHA-256 of our key
+// (../growser-keys/psst_component.pem), and the id is its first 128 bits:
+// fgoclmlocoidkfpoifdeeihjpgnmbgno. scripts/make-psst-component.py builds the
+// package from brave/psst-component and deploy/growser-backend serves it.
 inline constexpr char kPsstComponentName[] =
     "Growser Privacy Settings Selection for Sites Tool (PSST) Files";
-inline constexpr char kPsstComponentId[] = "fgoclmlocoidkfpoifdeeihjpgnmbgno";
-inline constexpr char kPsstComponentBase64PublicKey[] =
-    "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7PV0Bdn/cSPYqnS8JsWLJsc3Du6lpDMJ"
-    "ZVpa14hgYhHjd5I8DRUpYGQFrVQ+NfiyPRcxLRNMmzV82I4lUMNcwpWaP9A74VZSdqDLB4Co5TmS"
-    "oKT/yn9qr9konjy7jcr6rkuYMQyO8Gthj4uAPZ7H+iEFy3BGAfAMFFrZXHVHI/y6pR+2wxkk36Qr"
-    "9ZwPunRsDivSPFGSZQU5I+leNO9iYNXA6893KSALFT0lJVXj0kutj7CXrw3ucJp0TBRiRbqOmu7g"
-    "QGQLotHKIXEEAxer/2iAzmy8oZait4amndP1czuFxYRgTToPygiH5GnNn9+U6DcsmWY8TLc4vRts"
-    "PozELQIDAQAB";
+inline constexpr uint8_t kPsstComponentPublicKeySHA256[32] = {
+    0x56, 0xe2, 0xbc, 0xbe, 0x2e, 0x83, 0xa5, 0xfe, 0x85, 0x34, 0x48,
+    0x79, 0xf6, 0xdc, 0x16, 0xde, 0xf2, 0x49, 0xe3, 0x0e, 0x8f, 0x84,
+    0x47, 0x6d, 0x6c, 0xf2, 0x14, 0xc2, 0x8d, 0x1a, 0xcf, 0x40};
+static_assert(std::size(kPsstComponentPublicKeySHA256) ==
+              crypto::kSHA256Length);
 
 // Registers the PSST component with the component updater.
 void RegisterPsstComponent(component_updater::ComponentUpdateService* cus);

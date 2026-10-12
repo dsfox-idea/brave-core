@@ -98,6 +98,11 @@ public class BrowserViewController: UIViewController {
     return webViewContainerBackdrop
   }()
   private var isContentHiddenInBackground: Bool = false
+  private var requiresPrivateBrowsingUnlock = false
+  /// The system auth sheet activates the scene again. Prompting twice cancels the
+  /// in-flight Face ID challenge.
+  private var didPromptForPrivateBrowsingUnlock = false
+  private var privateBrowsingUnlockCancellables: Set<AnyCancellable> = []
 
   var readerModeBar: ReaderModeBarView?
   var readerModeCache: ReaderModeCache
@@ -181,6 +186,14 @@ public class BrowserViewController: UIViewController {
   let tabManager: TabManager
   let bookmarkManager: BookmarkManager
   public let privateBrowsingManager: PrivateBrowsingManager
+
+  /// The most visited sites shown by the top sites section of every NTP and the search screen in
+  /// this window.
+  private(set) lazy var mostVisitedSites: MostVisitedSites = {
+    let mostVisitedSites = MostVisitedSitesFactory.get(for: profileController.profile)
+    mostVisitedSites.enableTopSitesOnlyTileTypes()
+    return mostVisitedSites
+  }()
 
   /// Whether last session was a crash or not
   private let crashedLastSession: Bool
@@ -304,6 +317,7 @@ public class BrowserViewController: UIViewController {
     backgroundDataSource = .init(
       service: profileController.backgroundImagesService,
       // Growser-290: no rewards.
+      prefs: profileController.profile.prefs,
       privateBrowsingManager: privateBrowsingManager
     )
 
@@ -431,7 +445,6 @@ public class BrowserViewController: UIViewController {
     Preferences.Shields.allShields.forEach { $0.observe(from: self) }
     // Growser-290: no Rewards preferences to observe.
     // Growser-282: no playlist URL-bar preference to observe.
-    Preferences.NewTabPage.backgroundMediaTypeRaw.observe(from: self)
     Preferences.Shields.blockAdsAndTrackingLevelRaw.observe(from: self)
     Preferences.Privacy.screenTimeEnabled.observe(from: self)
     Preferences.Translate.translateEnabled.observe(from: self)
@@ -760,9 +773,91 @@ public class BrowserViewController: UIViewController {
       collapsedURLBarView.isKeyboardVisible = false
     }
 
-    if !isContentHiddenInBackground {
+    // Request only once the scene is active. `willEnterForeground` runs before that, and
+    // `WindowProtection` replaces its `LAContext` there, which cancels biometrics/passcode.
+    if requiresPrivateBrowsingUnlock {
+      promptForPrivateBrowsingUnlockIfNeeded()
       return
     }
+    showContentHiddenInBackground()
+  }
+
+  @objc private func sceneDidEnterBackgroundNotification(_ notification: NSNotification) {
+    guard let scene = notification.object as? UIScene, scene == currentScene else {
+      return
+    }
+    guard Preferences.Privacy.privateBrowsingLock.value,
+      privateBrowsingManager.isPrivateBrowsing
+    else {
+      return
+    }
+    requiresPrivateBrowsingUnlock = true
+    didPromptForPrivateBrowsingUnlock = false
+  }
+
+  private func promptForPrivateBrowsingUnlockIfNeeded() {
+    guard !didPromptForPrivateBrowsingUnlock else { return }
+    didPromptForPrivateBrowsingUnlock = true
+    // `.external` has no cancel button. Private-only has nowhere else to go.
+    let viewType: AuthViewType =
+      Preferences.Privacy.privateBrowsingOnly.value ? .external : .general
+    // Let the activation transition finish so Face ID can present.
+    DispatchQueue.main.async { [weak self] in
+      guard let self, self.requiresPrivateBrowsingUnlock else { return }
+      self.askForLocalAuthentication(viewType: viewType) { [weak self] success, error in
+        guard let self else { return }
+        guard success || error == .passcodeNotSet else { return }
+        self.endPrivateBrowsingUnlock(switchToNormalTabs: false)
+      }
+    }
+  }
+
+  private func observePrivateBrowsingUnlock() {
+    guard let windowProtection, privateBrowsingUnlockCancellables.isEmpty else { return }
+    windowProtection.finalizedAuthentication
+      .receive(on: RunLoop.main)
+      .sink { [weak self] success, _ in
+        guard success else { return }
+        // Also covers Browser Lock, which presents first and ignores a second challenge.
+        self?.endPrivateBrowsingUnlock(switchToNormalTabs: false)
+      }
+      .store(in: &privateBrowsingUnlockCancellables)
+    windowProtection.cancelPressed
+      .receive(on: RunLoop.main)
+      .sink { [weak self] in
+        guard Preferences.Privacy.privateBrowsingOnly.value == false else { return }
+        self?.endPrivateBrowsingUnlock(switchToNormalTabs: true)
+      }
+      .store(in: &privateBrowsingUnlockCancellables)
+  }
+
+  private func endPrivateBrowsingUnlock(switchToNormalTabs: Bool) {
+    guard requiresPrivateBrowsingUnlock else { return }
+    requiresPrivateBrowsingUnlock = false
+    if switchToNormalTabs {
+      let normalTabs = tabManager.allTabs.filter { !$0.isPrivate }
+      if let index = tabManager.normalTabSelectedIndex,
+        let tab = tabManager.allTabs[safe: index],
+        !tab.isPrivate
+      {
+        tabManager.selectTab(tab)
+      } else if let tab = normalTabs.last {
+        tabManager.selectTab(tab)
+      } else {
+        tabManager.addTabAndSelect(isPrivate: false)
+      }
+    }
+    if switchToNormalTabs, presentedViewController is TabGridHostingController {
+      dismiss(animated: false) { [weak self] in
+        self?.showContentHiddenInBackground()
+      }
+    } else {
+      showContentHiddenInBackground()
+    }
+  }
+
+  private func showContentHiddenInBackground() {
+    guard isContentHiddenInBackground else { return }
     isContentHiddenInBackground = false
     // Re-show any components that might have been hidden because they were being displayed
     // as part of a private mode tab
@@ -860,6 +955,7 @@ public class BrowserViewController: UIViewController {
     // We now show some elements since we're ready to use the app
     header.isHidden = false
     footer.isHidden = false
+    observePrivateBrowsingUnlock()
 
     NotificationCenter.default.do {
       $0.addObserver(
@@ -872,6 +968,12 @@ public class BrowserViewController: UIViewController {
         self,
         selector: #selector(sceneDidBecomeActiveNotification(_:)),
         name: UIScene.didActivateNotification,
+        object: nil
+      )
+      $0.addObserver(
+        self,
+        selector: #selector(sceneDidEnterBackgroundNotification(_:)),
+        name: UIScene.didEnterBackgroundNotification,
         object: nil
       )
       $0.addObserver(
@@ -1469,6 +1571,7 @@ public class BrowserViewController: UIViewController {
       let ntpController = NewTabPageViewController(
         tab: selectedTab,
         profilePrefs: profileController.profile.prefs,
+        mostVisitedSites: selectedTab.isPrivate ? nil : mostVisitedSites,
         dataSource: backgroundDataSource,
         // Growser-281: no feedDataSource. Growser-290: no rewards.
         privateBrowsingManager: privateBrowsingManager
@@ -2475,30 +2578,30 @@ extension BrowserViewController: NewTabPageDelegate {
     )
   }
 
-  func handleFavoriteAction(favorite: Favorite, action: BookmarksAction) {
-    guard let url = favorite.url else { return }
+  func handleTopSiteAction(action: TopSiteAction) {
     switch action {
-    case .opened(let inNewTab, let switchingToPrivateMode):
+    case .opened(let url, let isFavorite, let inNewTab, let switchingToPrivateMode):
+      guard let url else { return }
       if switchingToPrivateMode, Preferences.Privacy.privateBrowsingLock.value {
         self.askForLocalAuthentication { [weak self] success, error in
           if success {
             self?.handleURLInput(
-              url,
+              url.absoluteString,
               inNewTab: inNewTab,
               switchingToPrivateMode: switchingToPrivateMode,
-              isFavourite: true
+              isFavourite: isFavorite
             )
           }
         }
       } else {
         handleURLInput(
-          url,
+          url.absoluteString,
           inNewTab: inNewTab,
           switchingToPrivateMode: switchingToPrivateMode,
-          isFavourite: true
+          isFavourite: isFavorite
         )
       }
-    case .edited:
+    case .edited(let favorite):
       guard let title = favorite.displayTitle, let urlString = favorite.url else { return }
       let editPopup =
         UIAlertController
@@ -2517,6 +2620,20 @@ extension BrowserViewController: NewTabPageDelegate {
           }
         }
       self.present(editPopup, animated: true)
+    case .excluded(let tile):
+      let alert = UIAlertController(
+        title: Strings.excludeMostVisitedSiteAlertTitle,
+        message: Strings.excludeMostVisitedSiteAlertMessage,
+        preferredStyle: .alert
+      )
+      alert.addAction(
+        UIAlertAction(title: Strings.excludeMostVisitedSite, style: .destructive) {
+          [weak self] _ in
+          self?.mostVisitedSites.setBlocked(true, for: tile.url)
+        }
+      )
+      alert.addAction(UIAlertAction(title: Strings.CancelString, style: .default))
+      self.present(alert, animated: true)
     }
   }
 

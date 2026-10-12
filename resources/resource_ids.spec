@@ -261,6 +261,10 @@
     "META": {"sizes": {"includes": [10]}},
     "includes": [54180],
   },
+  "<(SHARED_INTERMEDIATE_DIR)/brave/web-ui-snaps_container/snaps_container.grd": {
+    "META": {"sizes": {"includes": [10]}},
+    "includes": [54190],
+  },
   # growser (#212): the webharvester extension, bundled and off by default.
   # Growser-335: moved again, from 54180, which upstream claimed for snap_host
   # in the 155 merge (it took 54170 in 154). Upstream appends at the next

@@ -5,6 +5,8 @@
 
 #include "brave/browser/ui/views/omnibox/brave_omnibox_view_views.h"
 
+#include <memory>
+
 #include "base/strings/utf_string_conversions.h"
 #include "base/test/test_future.h"
 #include "brave/browser/brave_browser_features.h"
@@ -57,21 +59,16 @@ testing::AssertionResult VerifyTemplateURLServiceLoad(
 
 class BraveOmniboxViewViewsTest : public InProcessBrowserTest {
  public:
-  // Growser-156: these tests share one machine-wide clipboard, and the launcher
-  // runs several of them at once - so a copy test's write lands between this
-  // test's write and its paste. It was invisible while the copied URL used a
-  // scheme this build does not have (pasting brave://version searched for it,
-  // which is what PasteAndSearchTest expects anyway); once growser#154 made the
-  // scheme real, pasting it navigated and the test failed - reproducibly, in
-  // both of two runs of this suite alone. A per-process clipboard removes the
-  // sharing rather than the symptom.
   void SetUpOnMainThread() override {
     InProcessBrowserTest::SetUpOnMainThread();
-    ui::TestClipboard::CreateForCurrentThread();
+    // Use an isolated test clipboard instead of the real OS clipboard so
+    // these tests aren't flaky due to contention on the system pasteboard
+    // shared across CI processes.
+    clipboard_scope_ = std::make_unique<content::BrowserTestClipboardScope>();
   }
 
   void TearDownOnMainThread() override {
-    ui::Clipboard::DestroyClipboardForCurrentThread();
+    clipboard_scope_.reset();
     InProcessBrowserTest::TearDownOnMainThread();
   }
 
@@ -100,6 +97,9 @@ class BraveOmniboxViewViewsTest : public InProcessBrowserTest {
 
     loop.Run();
   }
+
+ private:
+  std::unique_ptr<content::BrowserTestClipboardScope> clipboard_scope_;
 };
 
 class BraveOmniboxViewViewsEnabledFeatureTest

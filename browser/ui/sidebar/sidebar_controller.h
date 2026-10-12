@@ -16,6 +16,8 @@
 #include "base/scoped_observation.h"
 #include "brave/components/sidebar/browser/sidebar_item.h"
 #include "brave/components/sidebar/browser/sidebar_service.h"
+#include "chrome/browser/ui/tabs/tab_strip_model_observer.h"
+#include "ui/base/unowned_user_data/scoped_unowned_user_data.h"
 #include "ui/base/window_open_disposition.h"
 
 class BrowserWindowInterface;
@@ -23,6 +25,7 @@ class GURL;
 class Profile;
 class SidePanelUI;
 class TabStripModel;
+enum class SidePanelEntryId;
 
 namespace sidebar {
 
@@ -40,24 +43,20 @@ class SidebarWebPanelController;
 // Controller will request about add/delete items to SidebarService.
 // TODO(https://github.com/brave/brave-browser/issues/45977): Avoid direct
 // Browser dependency. We should pass what we need like TabStripModel.
-class SidebarController : public SidebarService::Observer {
+class SidebarController : public SidebarService::Observer,
+                          public TabStripModelObserver {
  public:
+  DECLARE_USER_DATA(SidebarController);
+
   SidebarController(BrowserWindowInterface* browser, Profile* profile);
   ~SidebarController() override;
 
+  // Returns the instance owned by `browser`, or nullptr. Null for windows that
+  // cannot use the sidebar, such as popups and desktop PWAs.
+  static SidebarController* From(BrowserWindowInterface* browser);
+
   SidebarController(const SidebarController&) = delete;
   SidebarController& operator=(const SidebarController&) = delete;
-
-  // NOTE: Don't call this directly for panel item. Use SidePanelUI instead.
-  // This should be called as a result of SidePanelCoordinator's entry
-  // opening/closing event. If this method is called directly for activating
-  // panel, SidePanelCoordinator doesn't know about it.
-
-  // |disposition| is only valid for shortcut type. If |disposition| is not
-  // CURRENT_TAB, item at |index| is handled based on |disposition|.
-  void ActivateItemAt(
-      std::optional<size_t> index,
-      WindowOpenDisposition disposition = WindowOpenDisposition::CURRENT_TAB);
 
   // Called when the item at |index| is pressed by the user. Deactivates the
   // current panel if the item is already active.
@@ -66,8 +65,11 @@ class SidebarController : public SidebarService::Observer {
       size_t index,
       WindowOpenDisposition disposition = WindowOpenDisposition::CURRENT_TAB);
   void AddItemWithCurrentTab();
-  void UpdateActiveItemState(std::optional<SidebarItem::BuiltInItemType>
-                                 active_panel_item = std::nullopt);
+
+  // Called by BraveSidePanelCoordinator when a side panel entry is shown or
+  // hidden, so the sidebar can mirror which item is active.
+  void HandleSidePanelOpened(SidePanelEntryId id);
+  void HandleSidePanelClosed();
 
   // Toggles a session-only "pin" that forces the sidebar control view
   // visible regardless of the current show option. Pinned state is cleared
@@ -116,14 +118,19 @@ class SidebarController : public SidebarService::Observer {
   void OnShowSidebarOptionChanged(
       SidebarService::ShowSidebarOption option) override;
 
+  // TabStripModelObserver overrides:
+  void OnTabStripModelChanged(
+      TabStripModel* tab_strip_model,
+      const TabStripModelChange& change,
+      const TabStripSelectionChange& selection) override;
+
  private:
   void OnPreferenceChanged(const std::string& pref_name);
 
-  // Ask panel item activation state change to SidePanelUI.
-  // Outside of this class, use SidePanelUI directly.
-  void ActivatePanelItem(SidebarItem::BuiltInItemType panel_item);
-
   SidePanelUI* GetSidePanelUI();
+
+  // Pushes the web panel's open/closed state into the model's active index.
+  void OnWebPanelStateChanged();
 
   // Iterate tabs by host (if tabs with host of URL exist).
   // Otherwise, load URL in the active tab.
@@ -147,6 +154,7 @@ class SidebarController : public SidebarService::Observer {
   std::unique_ptr<SidebarWebPanelController> web_panel_controller_;
   base::ScopedObservation<SidebarService, SidebarService::Observer>
       sidebar_service_observed_{this};
+  ui::ScopedUnownedUserData<SidebarController> scoped_unowned_user_data_;
 };
 
 }  // namespace sidebar

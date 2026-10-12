@@ -256,14 +256,18 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       bookmarkManager: bookmarkManager,
       historyAPI: profileController.historyAPI,
       searchEngines: profile.searchEngines,
+      tileSource: TopSitesTileSource(
+        mostVisitedSites: privateBrowsingManager.isPrivateBrowsing ? nil : mostVisitedSites,
+        isPrivateBrowsing: privateBrowsingManager.isPrivateBrowsing
+      ),
       privateBrowsingManager: privateBrowsingManager,
       speechRecognizer: speechRecognizer,
       isAIChatAvailable: false,  // Growser-279: Leo is out of the product.
       isPlaylistAvailable: false,  // Growser-282: Playlist is out of the product.
       searchDelegate: self,
       delegate: self,
-      bookmarkAction: { [weak self] bookmark, action in
-        self?.handleFavoriteAction(favorite: bookmark, action: action)
+      topSiteAction: { [weak self] action in
+        self?.handleTopSiteAction(action: action)
       },
       recentSearchAction: { [weak self] recentSearch, shouldSubmitSearch in
         self?.handleRecentSearch(recentSearch, shouldSubmitSearch: shouldSubmitSearch)

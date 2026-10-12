@@ -11,12 +11,14 @@
 #include <functional>
 #include <map>
 #include <memory>
+#include <optional>
 #include <string>
 #include <string_view>
 #include <utility>
 #include <vector>
 
 #include "base/functional/callback.h"
+#include "base/functional/callback_forward.h"
 #include "base/functional/callback_helpers.h"
 #include "base/gtest_prod_util.h"
 #include "base/memory/raw_ptr.h"
@@ -124,6 +126,8 @@ class AIChatService : public KeyedService,
       std::optional<PageContents> maybe_associated_content) override;
   void OnConversationEntryRemoved(ConversationHandler* handler,
                                   const std::string& entry_uuid) override;
+  void OnNewConversationThread(ConversationHandler* handler,
+                               const mojom::Thread& thread) override;
   void OnToolUseEventOutput(ConversationHandler* handler,
                             const std::string& entry_uuid,
                             size_t event_order,
@@ -131,9 +135,11 @@ class AIChatService : public KeyedService,
   void OnClientConnectionChanged(ConversationHandler* handler) override;
   void OnConversationTitleChanged(const std::string& conversation_uuid,
                                   const std::string& title) override;
-  void OnConversationTokenInfoChanged(const std::string& conversation_uuid,
-                                      uint64_t total_tokens,
-                                      uint64_t trimmed_tokens) override;
+  void OnConversationTokenInfoChanged(
+      const std::string& conversation_uuid,
+      std::optional<std::string_view> thread_uuid,
+      uint64_t total_tokens,
+      uint64_t trimmed_tokens) override;
   void OnAssociatedContentUpdated(ConversationHandler* handler) override;
 
   // mojom::TabDataObserver
@@ -253,6 +259,9 @@ class AIChatService : public KeyedService,
   // Whether the feature and user preference for history storage is enabled
   bool IsAIChatHistoryEnabled();
 
+  std::unique_ptr<AssociatedContentDelegate>
+  RestoreWorkspaceAssociatedContentFromUrl(const GURL& url);
+
   std::unique_ptr<EngineConsumer> GetDefaultAIEngine();
   std::unique_ptr<EngineConsumer> GetEngineForModel(
       const std::string& model_key);
@@ -293,6 +302,12 @@ class AIChatService : public KeyedService,
 
   void SetDatabaseForTesting(base::SequenceBound<AIChatDatabase> db) {
     ai_chat_db_ = std::move(db);
+  }
+
+  void SetWorkspaceContentRestorer(
+      base::RepeatingCallback<std::unique_ptr<AssociatedContentDelegate>(GURL)>
+          workspace_content_restorer) {
+    workspace_content_restorer_ = std::move(workspace_content_restorer);
   }
 
  private:
@@ -407,8 +422,8 @@ class AIChatService : public KeyedService,
   void OnGetFocusTabs(
       GetFocusTabsCallback callback,
       base::expected<std::vector<std::string>, mojom::APIError> result);
-  std::vector<std::unique_ptr<ToolProvider>>
-  CreateToolProvidersForNewConversation();
+  // Creates the tool providers for |conversation| and adds them to it.
+  void AddToolProvidersToConversation(ConversationHandler* conversation);
 
   raw_ptr<ModelService> model_service_;
   raw_ptr<TabTrackerService> tab_tracker_service_;
@@ -444,6 +459,10 @@ class AIChatService : public KeyedService,
 
   // All conversation metadata. Mainly just titles and uuids.
   ConversationMap conversations_;
+
+  // Used to restore a WorkspaceAssociatedContent from a url.
+  base::RepeatingCallback<std::unique_ptr<AssociatedContentDelegate>(GURL)>
+      workspace_content_restorer_;
 
   // Only keep ConversationHandlers around that are being
   // actively used. Any metadata that needs to stay in-memory

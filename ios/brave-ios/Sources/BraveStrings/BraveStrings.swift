@@ -2930,6 +2930,27 @@ extension Strings {
     value: "Remove Favorite",
     comment: "Button to remove a favorite"
   )
+  public static let excludeMostVisitedSite = NSLocalizedString(
+    "ExcludeMostVisitedSite",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Remove",
+    comment: "Button to exclude a topsite url from the most visited list"
+  )
+  public static let excludeMostVisitedSiteAlertTitle = NSLocalizedString(
+    "ExcludeMostVisitedSiteAlertTitle",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Remove from Most Visited?",
+    comment: "Title for the alert shown before excluding a site from the most visited list"
+  )
+  public static let excludeMostVisitedSiteAlertMessage = NSLocalizedString(
+    "ExcludeMostVisitedSiteAlertMessage",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "This site won't appear in your Most Visited list, but it won't be removed from your history.",
+    comment: "Message for the alert shown before excluding a site from the most visited list"
+  )
 
   public static let deleteBookmarksFolderAlertTitle = NSLocalizedString(
     "DeleteBookmarksFolderAlertTitle",
@@ -3503,6 +3524,35 @@ extension Strings {
     value: "Leo Voice Input",
     comment:
       "Title for Brave Leo voice input menu item. Brave Leo is the name of a product and should not be translated"
+  )
+  public static let shortcutPrivateTab = NSLocalizedString(
+    "shortcut.privateTab",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Private Tab",
+    comment: "Title for the private tab shortcut."
+  )
+  public static let shortcutSearch = NSLocalizedString(
+    "shortcut.search",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Search",
+    comment: "Title for the Search shortcut."
+  )
+  public static let shortcutBraveWallet = NSLocalizedString(
+    "shortcut.braveWallet",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "Growser Wallet",
+    comment:
+      "Title for the Brave Wallet shortcut. Brave Wallet is the name of a product and should not be translated"
+  )
+  public static let shortcutQRCode = NSLocalizedString(
+    "shortcut.qrCode",
+    tableName: "BraveShared",
+    bundle: .module,
+    value: "QR Code",
+    comment: "Title for the QR Code shortcut."
   )
   public static let passwordsMenuItem = NSLocalizedString(
     "PasswordsMenuItem",

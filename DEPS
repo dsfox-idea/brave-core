@@ -20,7 +20,7 @@ deps = {
   # disabled by default. A pin rather than a copy, so the version we ship is
   # recorded and the extension can be developed in its own repository.
   "vendor/webharvester": "https://github.com/dsfox-idea/webharvester.git@d4efd3df982b297e79dd43a54ce445f2ca55e391",
-  "vendor/web-discovery-project": "https://github.com/brave/web-discovery-project@15570be559b8669f514fa87bf9e9f3afe6f4f368",
+  "vendor/web-discovery-project": "https://github.com/brave/web-discovery-project@4b07a24d03ee1a266230d2ffb78fd390e35e262a",
   "third_party/bip39wally-core-native": "https://github.com/brave-intl/bat-native-bip39wally-core.git@547a7810333d821e29b8f55126aba031aa0d5fcd",
   "third_party/ethash/src": "https://github.com/chfast/ethash.git@e4a15c3d76dc09392c7efd3e30d84ee3b871e9ce",
   "third_party/bitcoin-core/src": "https://github.com/bitcoin/bitcoin.git@8105bce5b384c72cf08b25b7c5343622754e7337", # v25.0
@@ -94,7 +94,9 @@ hooks = [
     'action': ['vpython3',
                'tools/cr/install_extra_deps.py',
                'sync',
-               'src/brave/third_party/updater/mac']
+               'src/brave/third_party/updater/mac',
+               'src/third_party/updater/chromium_mac_amd64/cipd/BraveUpdater_test.app',
+               'src/third_party/updater/chromium_mac_arm64/cipd/BraveUpdater_test.app']
   },
   {
     # Remove files and directories no longer needed, whose leftover copies
@@ -174,7 +176,7 @@ hooks = [
     'name': 'download_swift_format',
     'pattern': '.',
     'condition': 'host_os == "mac"',
-    'action': ['python3', 'build/apple/download_swift_format.py', '510.1.0', '0ddbb486640cde862fa311dc0f7387e6c5171bdcc0ee0c89bc9a1f8a75e8bfaf']
+    'action': ['python3', 'build/apple/download_swift_format.py', '604.0.0', '6a66ac5354f598b8914e613fbb1435dc04c9d34e7d399dcfecc2b3ef17ddc0ba']
   },
   {
     # Chromium_src files require custom formatting to correctly sort includes

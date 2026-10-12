@@ -11,6 +11,7 @@
 
 #include "base/check.h"
 #include "base/check_op.h"
+#include "base/functional/bind.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/browser/ui/sidebar/sidebar.h"
@@ -31,7 +32,7 @@
 #include "chrome/browser/ui/navigator/browser_navigator.h"
 #include "chrome/browser/ui/navigator/browser_navigator_params.h"
 #include "chrome/browser/ui/navigator/browser_navigator_params_utils.h"
-#include "chrome/browser/ui/side_panel/side_panel_entry_id.h"
+#include "chrome/browser/ui/side_panel/side_panel_entry.h"
 #include "chrome/browser/ui/side_panel/side_panel_ui.h"
 #include "chrome/browser/ui/singleton_tabs.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
@@ -76,16 +77,25 @@ std::vector<int> GetAllExistingTabIndexForHost(TabStripModel* tab_strip_model,
 
 }  // namespace
 
+DEFINE_USER_DATA(SidebarController);
+
 SidebarController::SidebarController(BrowserWindowInterface* browser,
                                      Profile* profile)
     : tab_strip_model_(browser->GetTabStripModel()),
       profile_(profile),
       browser_(browser),
-      sidebar_model_(new SidebarModel(profile_)) {
+      sidebar_model_(new SidebarModel(profile_)),
+      scoped_unowned_user_data_(browser->GetUnownedUserDataHost(), *this) {
   sidebar_service_observed_.Observe(GetSidebarService());
+  tab_strip_model_->AddObserver(this);
 }
 
 SidebarController::~SidebarController() = default;
+
+// static
+SidebarController* SidebarController::From(BrowserWindowInterface* browser) {
+  return Get(browser->GetUnownedUserDataHost());
+}
 
 bool SidebarController::IsActiveIndex(std::optional<size_t> index) const {
   return sidebar_model_->active_index() == index;
@@ -120,60 +130,33 @@ void SidebarController::TearDownPreBrowserWindowDestruction() {
 
 void SidebarController::OnItemPressed(size_t index,
                                       WindowOpenDisposition disposition) {
-  if (IsActiveIndex(index)) {
-    GetSidePanelUI()->Close();
-    return;
-  }
-
   CHECK_LT(index, sidebar_model_->GetAllSidebarItems().size());
   const auto& item = sidebar_model_->GetAllSidebarItems()[index];
 
-  // Built-in panel items are handled by SidePanelCoordinator. Web panel item is
-  // not a side panel, so it goes through ActivateItemAt() as it's loaded into
-  // another contents view in MultiContentsView.
+  if (item.is_web_panel_type()) {
+    auto* web_panel_controller = GetWebPanelController();
+    CHECK(web_panel_controller);
+
+    // Try to close side panel as we could open web panel.
+    // Otherwise, it's no-op.
+    GetSidePanelUI()->Close();
+    web_panel_controller->ToggleWebPanel(item);
+    return;
+  }
+
+  // Built-in panel items are handled by SidePanelCoordinator.
   if (!item.is_web_type() && item.open_in_panel) {
+    CHECK_NE(item.built_in_item_type, SidebarItem::BuiltInItemType::kNone);
+
 #if BUILDFLAG(ENABLE_AI_CHAT)
     if (item.built_in_item_type == SidebarItem::BuiltInItemType::kChatUI) {
       RecordLeoOpenedViaSidebar(profile_);
     }
 #endif  // BUILDFLAG(ENABLE_AI_CHAT)
-    ActivatePanelItem(item.built_in_item_type);
-    return;
-  }
 
-  ActivateItemAt(index, disposition);
-}
-
-void SidebarController::ActivateItemAt(std::optional<size_t> index,
-                                       WindowOpenDisposition disposition) {
-  // disengaged means there is no active item.
-  if (!index) {
-    sidebar_model_->SetActiveIndex(index);
-    return;
-  }
-
-  DCHECK_LT(index.value(), sidebar_model_->GetAllSidebarItems().size());
-
-  const auto& item = sidebar_model_->GetAllSidebarItems()[*index];
-
-  if (sidebar::IsWebPanelFeatureEnabled() && item.is_web_panel_type()) {
-    // TODO(https://github.com/brave/brave-browser/issues/33533): web panel item
-    // also should be activated.
-    GetWebPanelController()->ToggleWebPanel(item);
-    return;
-  }
-
-  // Only an item for panel can get activated.
-  if (!item.is_web_type() && item.open_in_panel) {
-    sidebar_model_->SetActiveIndex(index);
-
-#if BUILDFLAG(ENABLE_AI_CHAT)
-    if (sidebar::features::kOpenOneShotLeoPanel.Get() &&
-        item.built_in_item_type == SidebarItem::BuiltInItemType::kChatUI) {
-      // Prevent one-time Leo panel open.
-      profile_->GetPrefs()->SetBoolean(kLeoPanelOneShotOpen, true);
-    }
-#endif
+    GetSidePanelUI()->Toggle(
+        SidePanelEntry::Key(sidebar::SidePanelIdFromSideBarItem(item)),
+        SidePanelOpenTrigger::kToolbarButton);
     return;
   }
 
@@ -194,18 +177,6 @@ void SidebarController::ActivateItemAt(std::optional<size_t> index,
   }
 
   LoadAtTab(item.url);
-}
-
-void SidebarController::ActivatePanelItem(
-    SidebarItem::BuiltInItemType panel_item) {
-  CHECK_NE(panel_item, SidebarItem::BuiltInItemType::kNone);
-
-  // Suppress opening animation when we have active item.
-  // When opening another panel while other panel is visible,
-  // we don't need to open new panel with animation.
-  const bool suppress_animations = sidebar_model_->active_index().has_value();
-  GetSidePanelUI()->Show(sidebar::SidePanelIdFromSideBarItemType(panel_item),
-                         /*open_trigger*/ std::nullopt, suppress_animations);
 }
 
 SidePanelUI* SidebarController::GetSidePanelUI() {
@@ -294,6 +265,22 @@ void SidebarController::OnShowSidebarOptionChanged(
   sidebar_->SetSidebarShowOption(option);
 }
 
+void SidebarController::OnTabStripModelChanged(
+    TabStripModel* tab_strip_model,
+    const TabStripModelChange& change,
+    const TabStripSelectionChange& selection) {
+  if (!sidebar_) {
+    return;
+  }
+
+  // Item state depends on the tabs that are open and on the active tab.
+  if (change.type() == TabStripModelChange::Type::kInserted ||
+      change.type() == TabStripModelChange::Type::kRemoved ||
+      selection.active_tab_changed()) {
+    sidebar_->UpdateSidebarItemsState();
+  }
+}
+
 void SidebarController::AddItemWithCurrentTab() {
   if (!sidebar::CanAddCurrentActiveTabToSidebar(browser_)) {
     return;
@@ -308,15 +295,51 @@ void SidebarController::AddItemWithCurrentTab() {
       SidebarItem::BuiltInItemType::kNone, IsWebPanelFeatureEnabled()));
 }
 
-void SidebarController::UpdateActiveItemState(
-    std::optional<SidebarItem::BuiltInItemType> active_panel_item) {
-  if (!active_panel_item) {
-    ActivateItemAt(std::nullopt);
+void SidebarController::HandleSidePanelOpened(SidePanelEntryId id) {
+  // We open side panel so close web panel if existed.
+  if (web_panel_controller_) {
+    web_panel_controller_->CloseWebPanel();
+  }
+
+  const auto item_type = BuiltInItemTypeFromSidePanelId(id);
+  if (!item_type) {
+    // An entry without a sidebar item is showing, so no item is active.
+    sidebar_model_->SetActiveIndex(std::nullopt);
     return;
   }
 
-  if (auto index = sidebar_model_->GetIndexOf(*active_panel_item)) {
-    ActivateItemAt(*index);
+  if (auto index = sidebar_model_->GetIndexOf(*item_type)) {
+    sidebar_model_->SetActiveIndex(*index);
+  }
+
+#if BUILDFLAG(ENABLE_AI_CHAT)
+  if (sidebar::features::kOpenOneShotLeoPanel.Get() &&
+      item_type == SidebarItem::BuiltInItemType::kChatUI) {
+    // Prevent one-time Leo panel open.
+    profile_->GetPrefs()->SetBoolean(kLeoPanelOneShotOpen, true);
+  }
+#endif  // BUILDFLAG(ENABLE_AI_CHAT)
+}
+
+void SidebarController::HandleSidePanelClosed() {
+  sidebar_model_->SetActiveIndex(std::nullopt);
+}
+
+void SidebarController::OnWebPanelStateChanged() {
+  CHECK(web_panel_controller_);
+
+  if (web_panel_controller_->HasOpenPanel()) {
+    sidebar_model_->SetActiveIndex(
+        sidebar_model_->GetIndexOf(web_panel_controller_->panel_item()));
+    return;
+  }
+
+  // Panel closed. Only clear if the active item is still the panel's - a side
+  // panel may already have taken over the active state.
+  const auto index = sidebar_model_->active_index();
+  if (index &&
+      sidebar_model_->GetAllSidebarItems()[*index].is_web_panel_type()) {
+    sidebar_model_->SetActiveIndex(std::nullopt);
   }
 }
 
@@ -357,7 +380,9 @@ SidebarWebPanelController* SidebarController::GetWebPanelController() {
 
   if (!web_panel_controller_) {
     web_panel_controller_ = std::make_unique<SidebarWebPanelController>(
-        *BrowserView::GetBrowserViewForBrowser(browser_));
+        *BrowserView::GetBrowserViewForBrowser(browser_),
+        base::BindRepeating(&SidebarController::OnWebPanelStateChanged,
+                            base::Unretained(this)));
   }
 
   return web_panel_controller_.get();

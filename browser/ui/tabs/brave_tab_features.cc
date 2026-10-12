@@ -14,10 +14,14 @@
 #include "base/no_destructor.h"
 #include "brave/browser/drag_drop/brave_drag_drop_image_metadata_stripper.h"
 #include "brave/browser/misc_metrics/captcha_metrics.h"
+#include "brave/browser/misc_metrics/page_metrics_tab_helper.h"
 #include "brave/browser/ui/side_panel/brave_side_panel_utils.h"
+#include "brave/browser/ui/sidebar/sidebar_tab_helper.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/image_metadata_stripper/common/features.h"
 #include "brave/components/misc_metrics/features.h"
+#include "brave/components/request_otr/common/buildflags/buildflags.h"
+#include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/page_action/action_ids.h"
 #include "chrome/browser/ui/page_action/page_action_controller.h"
@@ -26,6 +30,16 @@
 #include "chrome/browser/ui/thumbnails/thumbnail_tab_helper.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
 #include "components/tabs/public/tab_interface.h"
+
+#if BUILDFLAG(ENABLE_REQUEST_OTR)
+#include "brave/browser/request_otr/request_otr_tab_helper.h"
+#include "brave/components/request_otr/common/features.h"
+#endif
+
+#if BUILDFLAG(IS_WIN)
+#include "brave/browser/new_tab/background_color_tab_helper.h"
+#include "brave/browser/ui/brave_ui_features.h"
+#endif
 
 #if BUILDFLAG(ENABLE_CONTAINERS)
 #include "brave/browser/containers/container_tab_tracker.h"
@@ -92,10 +106,10 @@ void BraveTabFeatures::Init(TabInterface& tab, Profile* profile) {
 #if BUILDFLAG(ENABLE_AI_CHAT)
   if (ai_chat::IsAllowedForContext(profile)) {
     tab_data_observer_ = std::make_unique<ai_chat::TabDataWebContentsObserver>(
-        tab.GetHandle().raw_value(), tab.GetContents());
+        tab.GetHandle().raw_value(), tab);
     // Injects Brave-provided WebMCP tools into matching pages; see
     // WebMcpInjector. Null when WebMCP is disabled or has no rules.
-    web_mcp_injector_ = ai_chat::WebMcpInjector::MaybeCreate(tab.GetContents());
+    web_mcp_injector_ = ai_chat::WebMcpInjector::MaybeCreate(tab);
   }
 #endif
 
@@ -112,18 +126,16 @@ void BraveTabFeatures::Init(TabInterface& tab, Profile* profile) {
     auto* psst_settings_service =
         PsstSettingsServiceFactory::GetForProfile(profile);
     auto* variations_service = g_browser_process->variations_service();
-    psst_web_contents_observer_ =
-        psst::PsstTabWebContentsObserver::MaybeCreateForWebContents(
-            tab, profile,
-            std::make_unique<psst::PsstUiDelegateImpl>(
-                psst_settings_service,
-                PsstReporterServiceFactory::GetForProfile(profile),
-                profile->GetPrefs(),
-                std::make_unique<psst::PsstUiDesktopPresenter>(
-                    tab.GetContents()->GetWeakPtr(),
-                    psst_action_controller_->AsWeakPtr())),
-            psst_settings_service, variations_service,
-            ISOLATED_WORLD_ID_BRAVE_INTERNAL);
+    psst_web_contents_observer_ = psst::PsstTabWebContentsObserver::MaybeCreate(
+        tab, profile,
+        std::make_unique<psst::PsstUiDelegateImpl>(
+            psst_settings_service,
+            PsstReporterServiceFactory::GetForProfile(profile),
+            profile->GetPrefs(),
+            std::make_unique<psst::PsstUiDesktopPresenter>(
+                tab, psst_action_controller_->AsWeakPtr())),
+        psst_settings_service, variations_service,
+        ISOLATED_WORLD_ID_BRAVE_INTERNAL);
   }
 #endif
 
@@ -202,6 +214,26 @@ void BraveTabFeatures::Init(TabInterface& tab, Profile* profile) {
     cloudflare_js_detection_tab_helper_ = misc_metrics::CaptchaMetrics::
         CloudflareJsDetectionTabHelper::MaybeCreate(tab);
   }
+
+  page_metrics_tab_helper_ =
+      std::make_unique<misc_metrics::PageMetricsTabHelper>(tab);
+
+  sidebar_tab_helper_ = sidebar::SidebarTabHelper::MaybeCreate(tab);
+
+#if BUILDFLAG(ENABLE_REQUEST_OTR)
+  if (!profile->IsOffTheRecord() &&
+      base::FeatureList::IsEnabled(
+          request_otr::features::kBraveRequestOTRTab)) {
+    request_otr_tab_helper_ = std::make_unique<RequestOTRTabHelper>(tab);
+  }
+#endif
+
+#if BUILDFLAG(IS_WIN)
+  if (base::FeatureList::IsEnabled(features::kBraveWorkaroundNewWindowFlash)) {
+    background_color_tab_helper_ =
+        std::make_unique<BackgroundColorTabHelper>(tab);
+  }
+#endif
 }
 
 }  // namespace tabs

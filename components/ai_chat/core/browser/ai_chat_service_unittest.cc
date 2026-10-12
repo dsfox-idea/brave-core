@@ -234,6 +234,11 @@ class MockAIChatDatabase : public AIChatDatabase {
               (std::string_view, uint64_t, uint64_t),
               (override));
 
+  MOCK_METHOD(bool,
+              UpdateThreadTokenInfo,
+              (std::string_view, uint64_t, uint64_t),
+              (override));
+
   MOCK_METHOD(bool, DeleteConversationEntry, (std::string_view), (override));
   MOCK_METHOD(bool, DeleteConversation, (std::string_view), (override));
   MOCK_METHOD(bool, DeleteAllData, (), (override));
@@ -936,6 +941,31 @@ TEST_P(AIChatServiceUnitTest, MaybeInitStorage_DisableStoragePref) {
   ExpectConversationsSize(FROM_HERE, 0);
 }
 
+TEST_P(AIChatServiceUnitTest, GetConversations_AgainFromLoadCallback) {
+  if (IsAIChatHistoryEnabled()) {
+    WaitForSyncBridgeReady();
+  }
+  std::vector<std::string> calls;
+  base::RunLoop run_loop;
+  // The first request starts loading the conversations, and the second waits
+  // for it.
+  ai_chat_service_->GetConversations(
+      base::BindLambdaForTesting([&](std::vector<mojom::ConversationPtr>) {
+        calls.push_back("first");
+        ai_chat_service_->GetConversations(base::BindLambdaForTesting(
+            [&](std::vector<mojom::ConversationPtr>) {
+              calls.push_back("again");
+            }));
+      }));
+  ai_chat_service_->GetConversations(
+      base::BindLambdaForTesting([&](std::vector<mojom::ConversationPtr>) {
+        calls.push_back("second");
+        run_loop.Quit();
+      }));
+  run_loop.Run();
+  EXPECT_THAT(calls, testing::ElementsAre("first", "again", "second"));
+}
+
 // With AI Chat sync enabled, toggling the storage pref off then on must keep
 // the sync backend usable. The backend (and the delegate the sync engine
 // holds) is long-lived and never swapped; disabling storage only detaches the
@@ -967,6 +997,22 @@ TEST_P(AIChatServiceUnitTest, SyncBackendSurvivesStorageToggle) {
   EXPECT_TRUE(SyncControllerDelegateResolves());
 
   EXPECT_TRUE(ai_chat_service_->CreateConversation());
+}
+
+TEST_P(AIChatServiceUnitTest, GetConversations_StorageTurnedOffWhileLoading) {
+  if (!IsAIChatHistoryEnabled()) {
+    return;
+  }
+  WaitForSyncBridgeReady();
+  ConversationHandler* conversation_handler = CreateConversation();
+  auto client = CreateConversationClient(conversation_handler);
+  conversation_handler->SetChatHistoryForTesting(CreateSampleChatHistory(1u));
+
+  base::test::TestFuture<std::vector<mojom::ConversationPtr>> future;
+  ai_chat_service_->GetConversations(future.GetCallback());
+  prefs_.SetBoolean(prefs::kBraveChatStorageEnabled, false);
+  // The conversation, still open, is listed from memory.
+  EXPECT_EQ(future.Take().size(), 1u);
 }
 
 TEST_P(AIChatServiceUnitTest, OpenConversationWithStagedEntries_NoPermission) {
@@ -1591,6 +1637,7 @@ TEST_P(AIChatServiceUnitTest, TemporaryConversation_NoDatabaseInteraction) {
   EXPECT_CALL(*mock_db_ptr, UpdateConversationTitle(_, _)).Times(0);
   EXPECT_CALL(*mock_db_ptr, UpdateConversationModelKey).Times(0);
   EXPECT_CALL(*mock_db_ptr, UpdateConversationTokenInfo(_, _, _)).Times(0);
+  EXPECT_CALL(*mock_db_ptr, UpdateThreadTokenInfo(_, _, _)).Times(0);
   EXPECT_CALL(*mock_db_ptr, DeleteConversationEntry(_)).Times(0);
   EXPECT_CALL(*mock_db_ptr, DeleteConversation(_)).Times(0);
 
@@ -1611,7 +1658,7 @@ TEST_P(AIChatServiceUnitTest, TemporaryConversation_NoDatabaseInteraction) {
   ai_chat_service_->OnConversationTitleChanged(uuid, "New Title");
 
   // Test token info change
-  ai_chat_service_->OnConversationTokenInfoChanged(uuid, 100, 50);
+  ai_chat_service_->OnConversationTokenInfoChanged(uuid, std::nullopt, 100, 50);
 
   // Test removing a message
   ai_chat_service_->OnConversationEntryRemoved(conversation, "uuid");

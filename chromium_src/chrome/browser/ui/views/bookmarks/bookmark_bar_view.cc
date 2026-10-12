@@ -9,12 +9,25 @@
 #include "components/bookmarks/browser/bookmark_model.h"
 #include "ui/views/controls/highlight_path_generator.h"
 
-// growser: the bookmark-import promo/nudge is out of the build (#22). There
-// used to be a Brave override here injecting the "Import bookmarks"
-// instruction layout into upstream bookmark_bar_view.cc through the
-// BRAVE_LAYOUT macro and a BookmarkBarInstructionsView, created whenever the
-// bar was empty. The class is gone and BRAVE_LAYOUT is empty, so there is no
-// nagging hint. Bookmark import as a menu item is untouched.
-#define BRAVE_LAYOUT
+class BrowserWindowInterface;
+
+// growser: the bookmark-import promo/nudge is out of the build (#22). Brave
+// lays out an "Import bookmarks" BookmarkBarInstructionsView whenever the bar
+// is empty; that class is gone here, so there is no nagging hint. Bookmark
+// import as a menu item is untouched.
+// Growser-350: upstream's recipe
+// (rewrite/chrome/browser/ui/views/bookmarks/bookmark_bar_view.cc.yaml) calls
+// LayoutBookmarkBarInstructionsView() from BookmarkBarView::Layout directly
+// now, where it used to go through the BRAVE_LAYOUT macro. The function stays
+// and lays out nothing.
+namespace {
+void LayoutBookmarkBarInstructionsView(views::View*,
+                                       bookmarks::BookmarkModel*,
+                                       BrowserWindowInterface*,
+                                       int,
+                                       int,
+                                       int,
+                                       int) {}
+}  // namespace
+
 #include <chrome/browser/ui/views/bookmarks/bookmark_bar_view.cc>
-#undef BRAVE_LAYOUT

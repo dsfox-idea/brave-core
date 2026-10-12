@@ -15,11 +15,19 @@ struct NewTabPageSettingsView: View {
 
   @ObservedObject private var backgroundImages = Preferences.NewTabPage.backgroundImages
   @ObservedObject private var showNewTabPrivacyHub = Preferences.NewTabPage.showNewTabPrivacyHub
-  @ObservedObject private var topsitesModeSelection = Preferences.NewTabPage.topsitesMode
+  @ObservedObject private var topSitesModeSelection = Preferences.NewTabPage.topSitesMode
 
-  // This is observed to ensure the view updates correctly, but we instead access
-  // Preferences.NewTabPage.backgroundMediaType which accesses backgroundMediaTypeRaw
-  @ObservedObject private var backgroundMediaTypeRaw = Preferences.NewTabPage.backgroundMediaTypeRaw
+  @Bindable private var isSponsoredAdsEnabled: PrefBackedBoolean
+
+  init(
+    isSponsoredBackgroundsSupported: Bool,
+    linkTapped: ((URLRequest) -> Void)?,
+    prefs: any PrefService
+  ) {
+    self.isSponsoredBackgroundsSupported = isSponsoredBackgroundsSupported
+    self.linkTapped = linkTapped
+    self.isSponsoredAdsEnabled = .init(prefs: prefs, key: kBraveAdsSponsoredEnabledPrefName)
+  }
 
   var body: some View {
     Form {
@@ -28,10 +36,7 @@ struct NewTabPageSettingsView: View {
         if backgroundImages.value, isSponsoredBackgroundsSupported {
           NavigationLink {
             BackgroundMediaTypePicker(
-              selection: Binding(
-                get: { Preferences.NewTabPage.backgroundMediaType },
-                set: { Preferences.NewTabPage.backgroundMediaType = $0 }
-              )
+              isSponsoredAdsEnabled: $isSponsoredAdsEnabled.value
             )
             .environment(
               \.openURL,
@@ -42,11 +47,10 @@ struct NewTabPageSettingsView: View {
             )
           } label: {
             LabeledContent {
-              switch Preferences.NewTabPage.backgroundMediaType {
-              case .defaultImages:
-                Text(Strings.NTP.settingsDefaultImagesOnly)
-              case .sponsoredImages:
+              if isSponsoredAdsEnabled.value {
                 Text(Strings.NTP.settingsSponsoredImagesSelection)
+              } else {
+                Text(Strings.NTP.settingsDefaultImagesOnly)
               }
             } label: {
               Text(Strings.NTP.settingsBackgroundImageSubMenu)
@@ -61,14 +65,9 @@ struct NewTabPageSettingsView: View {
         if FeatureList.kTopsitesEnabled.enabled {
           Picker(
             Strings.NTP.topsites,
-            selection: Binding(
-              get: { topsitesModeSelection.value },
-              set: {
-                topsitesModeSelection.value = $0
-              }
-            )
+            selection: $topSitesModeSelection.value
           ) {
-            ForEach(TopsitesMode.allCases) { mode in
+            ForEach(TopSitesMode.allCases) { mode in
               Text(mode.title)
             }
           }
@@ -76,12 +75,7 @@ struct NewTabPageSettingsView: View {
         } else {
           Toggle(
             Strings.Widgets.favoritesWidgetTitle,
-            isOn: Binding(
-              get: { topsitesModeSelection.value != TopsitesMode.none },
-              set: {
-                topsitesModeSelection.value = $0 ? TopsitesMode.favourite : TopsitesMode.none
-              }
-            )
+            isOn: $topSitesModeSelection.value.isEnabled
           )
         }
       } header: {
@@ -94,22 +88,22 @@ struct NewTabPageSettingsView: View {
   }
 
   private struct BackgroundMediaTypePicker: View {
-    @Binding var selection: BackgroundMediaType
+    @Binding var isSponsoredAdsEnabled: Bool
 
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
       Form {
         Section {
-          Picker("", selection: $selection) {
+          Picker("", selection: $isSponsoredAdsEnabled) {
             Text(Strings.NTP.settingsDefaultImagesOnly)
-              .tag(BackgroundMediaType.defaultImages)
+              .tag(false)
             Text(Strings.NTP.settingsSponsoredImagesSelection)
-              .tag(BackgroundMediaType.sponsoredImages)
+              .tag(true)
           }
           .pickerStyle(.inline)
           .labelsHidden()
-          .onChange(of: selection, initial: false) {
+          .onChange(of: isSponsoredAdsEnabled, initial: false) {
             dismiss()
           }
         } header: {
@@ -130,11 +124,12 @@ class NTPTableViewController: UIHostingController<NewTabPageSettingsView> {
   // Growser-290: no rewards, so sponsored backgrounds are never supported.
   var linkTapped: ((URLRequest) -> Void)?
 
-  init(linkTapped: ((URLRequest) -> Void)?) {
+  init(linkTapped: ((URLRequest) -> Void)?, prefs: any PrefService) {
     super.init(
       rootView: .init(
         isSponsoredBackgroundsSupported: false,
-        linkTapped: linkTapped
+        linkTapped: linkTapped,
+        prefs: prefs
       )
     )
   }

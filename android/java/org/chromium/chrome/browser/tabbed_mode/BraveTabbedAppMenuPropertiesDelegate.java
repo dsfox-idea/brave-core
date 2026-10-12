@@ -59,7 +59,6 @@ import org.chromium.chrome.browser.ui.messages.snackbar.SnackbarManager;
 import org.chromium.chrome.browser.ui.side_ui.SideUiStateProvider;
 import org.chromium.chrome.browser.util.BrowserUiUtils;
 import org.chromium.components.browser_ui.accessibility.PageZoomManager;
-import org.chromium.components.dom_distiller.core.DomDistillerFeatures;
 import org.chromium.components.embedder_support.util.UrlConstants;
 import org.chromium.components.embedder_support.util.UrlUtilities;
 import org.chromium.components.webapps.WebappsUtils;
@@ -761,18 +760,16 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
                                 isMenuIconAtStart())));
 
         // Reader mode
-        if (DomDistillerFeatures.sReaderModeDistillInApp.isEnabled()) {
-            modelList.add(
-                    new MVCListAdapter.ListItem(
-                            AppMenuHandler.AppMenuItemType.STANDARD,
-                            AppMenuItemUtils.buildModelForStandardMenuItem(
-                                    mContext,
-                                    mAppMenuItemTheme,
-                                    R.id.reader_mode_menu_id,
-                                    R.string.show_reading_mode_text,
-                                    0,
-                                    isMenuIconAtStart())));
-        }
+        modelList.add(
+                new MVCListAdapter.ListItem(
+                        AppMenuHandler.AppMenuItemType.STANDARD,
+                        AppMenuItemUtils.buildModelForStandardMenuItem(
+                                mContext,
+                                mAppMenuItemTheme,
+                                R.id.reader_mode_menu_id,
+                                R.string.show_reading_mode_text,
+                                0,
+                                isMenuIconAtStart())));
 
         // Open with…
         modelList.add(

@@ -7,6 +7,7 @@ package org.chromium.chrome.browser.ntp;
 
 import static org.chromium.build.NullUtil.assertNonNull;
 import static org.chromium.build.NullUtil.assumeNonNull;
+import static org.chromium.ui.base.ViewUtils.getRelativeLayoutPosition;
 
 import android.app.Activity;
 import android.content.Context;
@@ -578,6 +579,25 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
         }
     }
 
+    /**
+     * Returns the height the wallpaper is cropped to, measured from the top of {@code
+     * backgroundView} down to the bottom of the window.
+     *
+     * <p>The view is shorter than that while the window reserves room at the bottom, and it grows
+     * once that room is released, for example when the url bar takes focus. A fresh crop for each
+     * of those heights moves the wallpaper, so it is cropped for the tallest layout and the surplus
+     * is clipped. {@link ImageView.ScaleType#MATRIX} anchors the image to the top of the view, so
+     * only the bottom edge is lost.
+     */
+    private static int getWallpaperHeight(final View backgroundView) {
+        final View rootView = backgroundView.getRootView();
+        // Layout position, not draw position: the latter includes the translation the url focus
+        // animation applies to this view, which would move the height again.
+        final int[] position = new int[2];
+        getRelativeLayoutPosition(rootView, backgroundView, position);
+        return Math.max(backgroundView.getMeasuredHeight(), rootView.getHeight() - position[1]);
+    }
+
     private void setBackgroundImage(NTPImage ntpImage) {
         mBgImageView = (ImageView) findViewById(R.id.bg_image_view);
         mBgImageView.setScaleType(ImageView.ScaleType.MATRIX);
@@ -592,7 +612,7 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
                         public void onGlobalLayout() {
                             assertNonNull(mBgImageView);
                             int currentWidth = mBgImageView.getMeasuredWidth();
-                            int currentHeight = mBgImageView.getMeasuredHeight();
+                            int currentHeight = getWallpaperHeight(mBgImageView);
 
                             // Only re-fetch if dimensions actually changed
                             if (currentWidth > 0

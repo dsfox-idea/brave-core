@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.InternetConnection;
+import org.chromium.chrome.browser.native_page.ContextMenuManager;
+import org.chromium.chrome.browser.native_page.NativePageNavigationDelegate;
 import org.chromium.components.content_settings.CookieControlsEnforcement;
 import org.chromium.ui.base.ViewUtils;
 import org.chromium.ui.widget.Toast;
@@ -148,8 +150,13 @@ public class IncognitoNewTabPageView extends FrameLayout {
      * Initialize the incognito New Tab Page.
      *
      * @param manager The manager that handles external dependencies of the view.
+     * @param contextMenuManager Unused, Brave's private NTP has no clickable-span links.
+     * @param navigationDelegate Unused, Brave's private NTP has no clickable-span links.
      */
-    void initialize(IncognitoNewTabPageManager manager) {
+    void initialize(
+            IncognitoNewTabPageManager manager,
+            ContextMenuManager contextMenuManager,
+            NativePageNavigationDelegate navigationDelegate) {
         mManager = manager;
     }
 

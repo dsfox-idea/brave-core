@@ -7,8 +7,6 @@ package org.chromium.components.minidump_uploader;
 
 import android.net.Uri;
 
-import androidx.test.filters.SmallTest;
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -71,7 +69,6 @@ public class BraveMinidumpUploaderTest {
     }
 
     @Test
-    @SmallTest
     // Growser-315: our GlitchTip, as on the desktop - never Brave's server.
     public void testCrashUrlStringIsOurEndpoint() {
         String url = MinidumpUploader.sCrashUrlString;
@@ -82,7 +79,6 @@ public class BraveMinidumpUploaderTest {
     }
 
     @Test
-    @SmallTest
     public void testUploadReachesHttpLayer() {
         // If sCrashUrlString is null/empty, or upstream adds a new gate inside upload(),
         // this will return isFailure() instead of isUploadError() and the test will fail.

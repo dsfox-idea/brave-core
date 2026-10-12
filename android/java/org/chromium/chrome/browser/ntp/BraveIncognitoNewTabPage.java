@@ -10,6 +10,8 @@ import android.app.Activity;
 import org.chromium.base.supplier.MonotonicObservableSupplier;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.chrome.browser.profiles.Profile;
+import org.chromium.chrome.browser.tab.Tab;
+import org.chromium.chrome.browser.tabmodel.TabModelSelector;
 import org.chromium.chrome.browser.ui.edge_to_edge.EdgeToEdgeController;
 import org.chromium.chrome.browser.ui.native_page.NativePageHost;
 
@@ -21,8 +23,10 @@ public class BraveIncognitoNewTabPage extends IncognitoNewTabPage {
             Activity activity,
             NativePageHost host,
             Profile profile,
+            TabModelSelector tabModelSelector,
+            Tab tab,
             MonotonicObservableSupplier<EdgeToEdgeController> edgeToEdgeControllerSupplier) {
-        super(activity, host, profile, edgeToEdgeControllerSupplier);
+        super(activity, host, profile, tabModelSelector, tab, edgeToEdgeControllerSupplier);
 
         // Growser-274: the VPN is out of the product, so the call to action
         // never shows and there is no policy state to pass.

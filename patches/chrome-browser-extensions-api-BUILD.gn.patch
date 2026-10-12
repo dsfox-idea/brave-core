@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/extensions/api/BUILD.gn b/chrome/browser/extensions/api/BUILD.gn
+index 3bbbbf599d07ec182ca51771f951dd3ec946f8bb..34101b7f9e64b1e39bfb866f5330b77ad5575dc9 100644
+--- a/chrome/browser/extensions/api/BUILD.gn
++++ b/chrome/browser/extensions/api/BUILD.gn
+@@ -61,7 +61,7 @@ group("api_implementations") {
+     "//chrome/browser/extensions/api/webrtc_logging_private",
+   ]
+ 
+-  if (enable_service_discovery) {
++  if (enable_service_discovery && (!is_android || is_desktop_android)) {
+     public_deps += [ "//chrome/browser/extensions/api/mdns" ]
+   }
+ 

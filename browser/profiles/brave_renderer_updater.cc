@@ -7,7 +7,6 @@
 
 #include <utility>
 
-#include "base/check_is_test.h"
 #include "base/functional/bind.h"
 #include "brave/common/brave_renderer_configuration.mojom.h"
 #include "brave/components/brave_wallet/common/buildflags/buildflags.h"
@@ -35,7 +34,7 @@
 #include "brave/components/tor/pref_names.h"
 #endif
 
-#if BUILDFLAG(ENABLE_EXTENSIONS)
+#if BUILDFLAG(ENABLE_EXTENSIONS_CORE)
 #include "extensions/browser/extension_registry.h"
 #endif
 
@@ -116,16 +115,12 @@ BraveRendererUpdater::BraveRendererUpdater(
 #endif
 
 #if BUILDFLAG(ENABLE_WIDEVINE)
-  if (local_state_) {
-    widevine_enabled_.Init(kWidevineEnabled, local_state_);
-    local_state_change_registrar_.Init(local_state_);
-    local_state_change_registrar_.Add(
-        kWidevineEnabled,
-        base::BindRepeating(&BraveRendererUpdater::UpdateAllRenderers,
-                            base::Unretained(this)));
-  } else {
-    CHECK_IS_TEST();
-  }
+  widevine_enabled_.Init(kWidevineEnabled, local_state_);
+  local_state_change_registrar_.Init(local_state_);
+  local_state_change_registrar_.Add(
+      kWidevineEnabled,
+      base::BindRepeating(&BraveRendererUpdater::UpdateAllRenderers,
+                          base::Unretained(this)));
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
@@ -222,7 +217,7 @@ void BraveRendererUpdater::UpdateRenderer(
     mojo::AssociatedRemote<brave::mojom::BraveRendererConfiguration>*
         renderer_configuration) {
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
-#if BUILDFLAG(ENABLE_EXTENSIONS)
+#if BUILDFLAG(ENABLE_EXTENSIONS_CORE)
   extensions::ExtensionRegistry* registry =
       extensions::ExtensionRegistry::Get(profile_);
   bool has_installed_metamask =
@@ -300,11 +295,7 @@ void BraveRendererUpdater::UpdateRenderer(
 #endif
   bool widevine_enabled = false;
 #if BUILDFLAG(ENABLE_WIDEVINE)
-  if (local_state_) {
-    widevine_enabled = local_state_->GetBoolean(kWidevineEnabled);
-  } else {
-    CHECK_IS_TEST();
-  }
+  widevine_enabled = local_state_->GetBoolean(kWidevineEnabled);
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
