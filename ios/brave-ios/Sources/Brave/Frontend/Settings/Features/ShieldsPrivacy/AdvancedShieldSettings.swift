@@ -166,11 +166,9 @@ import os
     }
   }
 
-  @Published var isSponsoredAdsEnabled: Bool {
-    didSet {
-      prefs.set(isSponsoredAdsEnabled, forPath: kBraveAdsSponsoredEnabledPrefName)
-    }
-  }
+  // Growser-290: ads are compiled out, so there is no pref behind this, and
+  // isSponsoredAdsSupported below keeps the toggle hidden.
+  @Published var isSponsoredAdsEnabled = false
 
   /// Hide the Sponsored Ads toggle when Rewards is disabled by policy or in
   /// an unsupported region, because it would have no effect. This matches
@@ -253,9 +251,6 @@ import os
     self.isDebounceEnabled = debounceService?.isEnabled ?? false
     self.shredHistoryItems = Preferences.Shields.shredHistoryItems.value
     self.webcompatReporterHandler = webcompatReporterHandler
-    self.isSponsoredAdsEnabled = prefs.boolean(
-      forPath: kBraveAdsSponsoredEnabledPrefName
-    )
 
     blockMobileAnnoyances = FilterListStorage.shared.isEnabled(
       for: AdblockFilterListCatalogEntry.mobileAnnoyancesComponentID

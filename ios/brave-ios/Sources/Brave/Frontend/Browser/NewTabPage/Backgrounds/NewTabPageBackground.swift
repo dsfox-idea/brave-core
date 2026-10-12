@@ -52,9 +52,7 @@ class NewTabPageBackground: PreferencesObserver {
 
     Preferences.NewTabPage.backgroundImages.observe(from: self)
     Preferences.NewTabPage.selectedCustomTheme.observe(from: self)
-    prefsChangeRegistrar.addObserver(forPath: kBraveAdsSponsoredEnabledPrefName) { [weak self] _ in
-      self?.handlePreferencesChange()
-    }
+    // Growser-290: no sponsored-images pref to follow - ads are compiled out.
 
     recordSponsoredMediaTypeP3A()
   }
@@ -93,12 +91,7 @@ class NewTabPageBackground: PreferencesObserver {
       case images = 1
     }
 
-    var answer = Answer.disabled
-    if Preferences.NewTabPage.backgroundImages.value
-      && prefs.boolean(forPath: kBraveAdsSponsoredEnabledPrefName)
-    {
-      answer = .images
-    }
+    let answer = Answer.disabled  // Growser-290: sponsored images are ads.
 
     UmaHistogramEnumeration("Brave.NTP.SponsoredMediaType", sample: answer)
   }

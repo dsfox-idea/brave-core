@@ -32,7 +32,7 @@ public class BraveProfileMigrations {
     migrateBlockAllCookiesPreference()
     // Growser-287: no migrateDefaultWalletPreferences() - the wallet is out.
     migrateShowNewFavoritesPreference()
-    migrateSponsoredAdsEnabledPreference()
+    // Growser-290: no migrateSponsoredAdsEnabledPreference() - ads are out.
     migrateHTTPSUpgradeLevelPreference()
   }
 
@@ -157,19 +157,6 @@ public class BraveProfileMigrations {
       } else {
         Preferences.NewTabPage.topSitesMode.value = TopSitesMode.none
       }
-    }
-  }
-
-  /// Migrates deprecated `backgroundMediaTypeRaw` to `kBraveAdsSponsoredEnabledPrefName`.
-  /// Must run after `Preferences.migrateBackgroundSponsoredImages()`, which
-  /// migrates `backgroundMediaTypeRaw` from the older
-  /// `backgroundSponsoredImages` pref.
-  private func migrateSponsoredAdsEnabledPreference() {
-    Preferences.DeprecatedPreferences.backgroundMediaTypeRaw.migrate { rawValue in
-      profileController.profile.prefs.set(
-        BraveProfileMigrations.isSponsoredAdsEnabled(forBackgroundMediaTypeRawValue: rawValue),
-        forPath: kBraveAdsSponsoredEnabledPrefName
-      )
     }
   }
 

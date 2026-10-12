@@ -17,7 +17,8 @@ struct NewTabPageSettingsView: View {
   @ObservedObject private var showNewTabPrivacyHub = Preferences.NewTabPage.showNewTabPrivacyHub
   @ObservedObject private var topSitesModeSelection = Preferences.NewTabPage.topSitesMode
 
-  @Bindable private var isSponsoredAdsEnabled: PrefBackedBoolean
+  // Growser-290: ads are compiled out, so there is no pref behind this.
+  @State private var isSponsoredAdsEnabled = false
 
   init(
     isSponsoredBackgroundsSupported: Bool,
@@ -26,7 +27,6 @@ struct NewTabPageSettingsView: View {
   ) {
     self.isSponsoredBackgroundsSupported = isSponsoredBackgroundsSupported
     self.linkTapped = linkTapped
-    self.isSponsoredAdsEnabled = .init(prefs: prefs, key: kBraveAdsSponsoredEnabledPrefName)
   }
 
   var body: some View {
@@ -36,7 +36,7 @@ struct NewTabPageSettingsView: View {
         if backgroundImages.value, isSponsoredBackgroundsSupported {
           NavigationLink {
             BackgroundMediaTypePicker(
-              isSponsoredAdsEnabled: $isSponsoredAdsEnabled.value
+              isSponsoredAdsEnabled: $isSponsoredAdsEnabled
             )
             .environment(
               \.openURL,
@@ -47,7 +47,7 @@ struct NewTabPageSettingsView: View {
             )
           } label: {
             LabeledContent {
-              if isSponsoredAdsEnabled.value {
+              if isSponsoredAdsEnabled {
                 Text(Strings.NTP.settingsSponsoredImagesSelection)
               } else {
                 Text(Strings.NTP.settingsDefaultImagesOnly)
