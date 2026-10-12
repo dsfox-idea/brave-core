@@ -17,6 +17,10 @@
   // Files matching these exact paths will be excluded.
   // Please, keep in alphabetical order.
   'path_excludes': [
+    // Growser-350: overrides a header Crubit generates for the wallet; with
+    // enable_brave_wallet=false nothing generates it, so the check finds no
+    // source. The override is inert in our build.
+    'brave/components/brave_wallet/browser/internal/polkadot_extrinsic_rs.h',
     'check_chromium_src_config.json5',
     'chrome/browser/devtools/url_constants_unittest.cc',
     'chrome/browser/resources/side_panel/customize_chrome/close_panel_button.html.ts',
