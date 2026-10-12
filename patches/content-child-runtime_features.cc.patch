@@ -1,8 +1,8 @@
 diff --git a/content/child/runtime_features.cc b/content/child/runtime_features.cc
-index c49e9cf2ba242e5dc1a8662c9323562003b2ea82..d34c882da172cb18e8fff3ef36cd80927af95ea0 100644
+index 399eb78185eb334c87aa1ad514266220b063951c..48026ff5d9b36818b7c779aff62f16670ef1ebc3 100644
 --- a/content/child/runtime_features.cc
 +++ b/content/child/runtime_features.cc
-@@ -253,8 +253,7 @@ void SetRuntimeFeaturesFromChromiumFeatures() {
+@@ -255,8 +255,7 @@ void SetRuntimeFeaturesFromChromiumFeatures() {
            {"AllowURNsInIframes", features::kPrivacySandboxAdsAPIsOverride,
             kSetOnlyIfOverridden},
            {"AllowURNsInIframes", features::kPrivacySandboxAdsAPIsM1Override},

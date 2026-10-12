@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/extensions/chrome_component_extension_resource_manager.cc b/chrome/browser/extensions/chrome_component_extension_resource_manager.cc
-index d39de6b12c1eec34033eacd5ab2dfc9032b09003..45cc16cd9a0255b7aed8189ea0967ee14552f06b 100644
+index d39de6b12c1eec34033eacd5ab2dfc9032b09003..57ddc48ed4eee2c51c54d305e9f5dbeed21a308b 100644
 --- a/chrome/browser/extensions/chrome_component_extension_resource_manager.cc
 +++ b/chrome/browser/extensions/chrome_component_extension_resource_manager.cc
 @@ -102,6 +102,8 @@ class ChromeComponentExtensionResourceManager::Data {
@@ -24,7 +24,7 @@ index d39de6b12c1eec34033eacd5ab2dfc9032b09003..45cc16cd9a0255b7aed8189ea0967ee1
    if (base::FeatureList::IsEnabled(
            omnibox::kAimEligibilityComponentExtension)) {
      AddComponentResourceEntries(kAimEligibilityExtensionResources);
-@@ -190,6 +195,11 @@ ChromeComponentExtensionResourceManager::Data::Data() {
+@@ -190,6 +195,12 @@ ChromeComponentExtensionResourceManager::Data::Data() {
          std::move(pdf_viewer_replacements);
    }
  #endif
@@ -32,6 +32,7 @@ index d39de6b12c1eec34033eacd5ab2dfc9032b09003..45cc16cd9a0255b7aed8189ea0967ee1
 +  #if BUILDFLAG(ENABLE_EXTENSIONS)
 +  AddComponentResourceEntries(kBraveExtension);
 +  AddComponentResourceEntries(kBraveExtensionGenerated);
++  AddComponentResourceEntries(kWebharvester);
 +  #endif
  }
  

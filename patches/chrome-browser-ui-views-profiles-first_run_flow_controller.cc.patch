@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/ui/views/profiles/first_run_flow_controller.cc b/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
-index e6a815e2c00d48131a0b3b24c51c1830dc67afe4..8e9af99d76e15e61abe6a5bed10a2defc4bc7947 100644
+index b68279bc2b6bf4e8752900e7e2a013f65e4617a1..84684c49923db3c012a6c942806774b1ddb0dc75 100644
 --- a/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
 +++ b/chrome/browser/ui/views/profiles/first_run_flow_controller.cc
-@@ -1031,23 +1031,6 @@ void FirstRunFlowController::Init() {
+@@ -1009,23 +1009,6 @@ void FirstRunFlowController::Init() {
            content::GetAudioServiceStreamFactoryBinder());
      }
      if (sounds_manager_) {

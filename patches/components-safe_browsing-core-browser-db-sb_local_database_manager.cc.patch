@@ -1,8 +1,8 @@
 diff --git a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
-index f54c0ba6b07c18f24b535e39906b08488201017e..b6816a843cd9426e30e84808a73a0c241a2dde3e 100644
+index f8542a2d30ecc65011a378b921dd73a426f07b7a..b3369cec27cce9ac106300ac25c94a1b6054c6f8 100644
 --- a/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
 +++ b/components/safe_browsing/core/browser/db/sb_local_database_manager.cc
-@@ -47,6 +47,14 @@ namespace safe_browsing {
+@@ -46,6 +46,14 @@ namespace safe_browsing {
  
  namespace {
  
@@ -17,7 +17,7 @@ index f54c0ba6b07c18f24b535e39906b08488201017e..b6816a843cd9426e30e84808a73a0c24
  // The expiration time of the full hash stored in the artificial database.
  const int64_t kFullHashExpiryTimeInMinutes = 60;
  
-@@ -95,11 +103,16 @@ ListInfos GetListInfos() {
+@@ -94,11 +102,16 @@ ListInfos GetListInfos() {
                 SB_THREAT_TYPE_URL_PHISHING),
        ListInfo(kSyncAlways, "UrlMalware", GetUrlMalwareId(),
                 SB_THREAT_TYPE_URL_MALWARE),
@@ -35,7 +35,7 @@ index f54c0ba6b07c18f24b535e39906b08488201017e..b6816a843cd9426e30e84808a73a0c24
                 GetChromeExtMalwareId(), SB_THREAT_TYPE_EXTENSION),
        ListInfo(kSyncAlways, "UrlBilling", GetUrlBillingId(),
                 SB_THREAT_TYPE_BILLING),
-@@ -223,6 +236,11 @@ StoresToCheck CreateStoresToCheckFromSBThreatTypeSet(
+@@ -222,6 +235,11 @@ StoresToCheck CreateStoresToCheckFromSBThreatTypeSet(
    StoresToCheck stores_to_check;
    for (SBThreatType sb_threat_type : threat_types) {
      stores_to_check.insert(GetUrlIdFromSBThreatType(sb_threat_type));
