@@ -9,5 +9,7 @@
 
 namespace topsites::features {
 
-BASE_FEATURE(kTopsitesEnabled, base::FEATURE_DISABLED_BY_DEFAULT);
+// Growser-310: on, so the new tab page can show the most visited sites (the
+// default mode below), as Android does.
+BASE_FEATURE(kTopsitesEnabled, base::FEATURE_ENABLED_BY_DEFAULT);
 }

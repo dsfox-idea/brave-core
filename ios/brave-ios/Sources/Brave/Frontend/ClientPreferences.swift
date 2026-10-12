@@ -339,12 +339,11 @@ extension Preferences {
       Option<Bool>(key: "newtabpage.show-newtab-favourites", default: true)
 
     /// Mode to display NTP tiles in NTP
-    ///
-    /// Defaults to favourites so the mode matches what the NTP renders for users who never picked
-    /// one. Most visited is an explicit choice until the NTP reads the mode itself.
     public static let topSitesMode = Option<TopSitesMode>(
       key: "newtabpage.topsites-mode",
-      default: .favourite
+      // Growser-310: most visited, so a fresh install shows sites (favourites
+      // hold only hand-marked bookmarks and start empty), as Android does.
+      default: .mostVisited
     )
   }
 
