@@ -3543,3 +3543,12 @@
 "ntp.topsitesTypeFavorites" = "Избранное";
 "ntp.topsitesTypeMostVisited" = "Часто посещаемые";
 "ntp.topsitesTypeNone" = "Не показывать";
+
+/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
+"ExcludeMostVisitedSite" = "Удалить";
+"ExcludeMostVisitedSiteAlertMessage" = "Этот сайт не будет показываться в списке часто посещаемых, но из истории он не удалится.";
+"ExcludeMostVisitedSiteAlertTitle" = "Убрать из часто посещаемых?";
+"shortcut.braveWallet" = "Growser Кошелёк";
+"shortcut.privateTab" = "Приватная вкладка";
+"shortcut.qrCode" = "QR-код";
+"shortcut.search" = "Поиск";
