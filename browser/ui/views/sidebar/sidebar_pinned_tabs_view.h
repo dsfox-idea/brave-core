@@ -20,7 +20,7 @@
 #include "ui/views/context_menu_controller.h"
 #include "ui/views/view.h"
 
-class BraveBrowser;
+class BrowserWindowInterface;
 class BraveTabStrip;
 class Tab;
 
@@ -40,7 +40,7 @@ class SidebarPinnedTabsView : public views::View,
   METADATA_HEADER(SidebarPinnedTabsView, views::View)
 
  public:
-  explicit SidebarPinnedTabsView(BraveBrowser* browser);
+  explicit SidebarPinnedTabsView(BrowserWindowInterface* browser);
   ~SidebarPinnedTabsView() override;
 
   SidebarPinnedTabsView(const SidebarPinnedTabsView&) = delete;
@@ -127,7 +127,7 @@ class SidebarPinnedTabsView : public views::View,
   void ClearDragIndicator();
   void ResetDrag();
 
-  raw_ptr<BraveBrowser> browser_ = nullptr;
+  raw_ptr<BrowserWindowInterface> browser_ = nullptr;
   std::vector<raw_ptr<SidebarPinnedTabView>> entries_;
   int hosted_count_ = 0;
 

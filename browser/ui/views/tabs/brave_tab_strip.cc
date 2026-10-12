@@ -458,7 +458,7 @@ int BraveTabStrip::GetPinnedTabCountHostedBySidebar() const {
 sidebar::SidebarController* BraveTabStrip::GetSidebarController() const {
   auto* browser_window_interface = GetBrowserWindowInterface();
   return browser_window_interface
-             ? browser_window_interface->GetFeatures().sidebar_controller()
+             ? sidebar::SidebarController::From(browser_window_interface)
              : nullptr;
 }
 

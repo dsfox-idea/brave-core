@@ -1977,7 +1977,7 @@ bool BraveTabContainer::IsPinnedTabHostedBySidebar(const Tab* tab) const {
   }
 
   auto* sidebar_controller =
-      browser_window_interface->GetFeatures().sidebar_controller();
+      sidebar::SidebarController::From(browser_window_interface);
   if (!sidebar_controller) {
     return false;
   }

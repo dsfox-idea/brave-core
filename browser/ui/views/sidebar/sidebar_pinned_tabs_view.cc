@@ -12,7 +12,6 @@
 #include "base/check_op.h"
 #include "base/functional/bind.h"
 #include "base/strings/utf_string_conversions.h"
-#include "brave/browser/ui/brave_browser.h"
 #include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/sidebar/sidebar_pinned_tabs_layout.h"
@@ -25,6 +24,7 @@
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
+#include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/tabs/tab_data.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
@@ -79,7 +79,7 @@ constexpr SkAlpha kActiveGlowAlpha = 0xB3;
 
 }  // namespace
 
-SidebarPinnedTabsView::SidebarPinnedTabsView(BraveBrowser* browser)
+SidebarPinnedTabsView::SidebarPinnedTabsView(BrowserWindowInterface* browser)
     : browser_(browser) {
   SetLayoutManager(std::make_unique<views::BoxLayout>(
                        views::BoxLayout::Orientation::kVertical))
@@ -95,7 +95,7 @@ SidebarPinnedTabsView::SidebarPinnedTabsView(BraveBrowser* browser)
   sidebar_show_option_.Init(sidebar::kSidebarShowOption, prefs,
                             on_setting_changed);
 
-  browser_->tab_strip_model()->AddObserver(this);
+  browser_->GetTabStripModel()->AddObserver(this);
   RebuildEntries();
 }
 
@@ -225,7 +225,7 @@ void SidebarPinnedTabsView::OnTabStripModelChanged(
   }
 
   const size_t pinned_count = static_cast<size_t>(
-      browser_->tab_strip_model()->IndexOfFirstNonPinnedTab());
+      browser_->GetTabStripModel()->IndexOfFirstNonPinnedTab());
   if (pinned_count != entries_.size()) {
     RebuildEntries();
     return;
@@ -255,7 +255,7 @@ void SidebarPinnedTabsView::OnTabChangedAt(tabs::TabInterface* tab,
   if (!tab) {
     return;
   }
-  const int index = browser_->tab_strip_model()->GetIndexOfTab(tab);
+  const int index = browser_->GetTabStripModel()->GetIndexOfTab(tab);
   if (index >= 0 && static_cast<size_t>(index) < entries_.size()) {
     UpdateEntry(static_cast<size_t>(index));
   }
@@ -286,7 +286,7 @@ bool SidebarPinnedTabsView::IsHostingEnabled() const {
 // a view destroyed while the accessibility layer still holds a reference to it
 // leaves a ghost platform node behind.
 bool SidebarPinnedTabsView::IsWindowClosing() const {
-  return browser_->tab_strip_model()->closing_all();
+  return browser_->GetTabStripModel()->closing_all();
 }
 
 void SidebarPinnedTabsView::RebuildEntries() {
@@ -304,7 +304,7 @@ void SidebarPinnedTabsView::RebuildEntries() {
   // and nothing to destroy when the sidebar or the window goes away.
   const int pinned_count =
       IsHostingEnabled()
-          ? browser_->tab_strip_model()->IndexOfFirstNonPinnedTab()
+          ? browser_->GetTabStripModel()->IndexOfFirstNonPinnedTab()
           : 0;
   for (int i = 0; i < pinned_count; ++i) {
     auto* entry = AddChildView(std::make_unique<SidebarPinnedTabView>(u""));
@@ -323,7 +323,7 @@ void SidebarPinnedTabsView::RebuildEntries() {
 void SidebarPinnedTabsView::UpdateEntry(size_t entry_index) {
   CHECK_LT(entry_index, entries_.size());
 
-  auto* model = browser_->tab_strip_model();
+  auto* model = browser_->GetTabStripModel();
   const int index = static_cast<int>(entry_index);
   content::WebContents* contents = model->GetWebContentsAt(index);
   if (!contents) {
@@ -401,7 +401,7 @@ void SidebarPinnedTabsView::UpdateEntry(size_t entry_index) {
 }
 
 void SidebarPinnedTabsView::OnEntryPressed(size_t entry_index) {
-  auto* model = browser_->tab_strip_model();
+  auto* model = browser_->GetTabStripModel();
   const int index = static_cast<int>(entry_index);
   if (index >= model->IndexOfFirstNonPinnedTab()) {
     return;
@@ -434,7 +434,7 @@ BraveTabStrip* SidebarPinnedTabsView::GetBraveTabStrip() const {
 Tab* SidebarPinnedTabsView::GetTabForEntry(size_t entry_index) const {
   if (entry_index >= entries_.size() ||
       static_cast<int>(entry_index) >=
-          browser_->tab_strip_model()->IndexOfFirstNonPinnedTab()) {
+          browser_->GetTabStripModel()->IndexOfFirstNonPinnedTab()) {
     return nullptr;
   }
 
@@ -557,7 +557,7 @@ void SidebarPinnedTabsView::OnEntryMouseReleased(SidebarPinnedTabView* entry,
   if (drag_context_.ShouldMoveItem()) {
     const int from = static_cast<int>(*drag_context_.source_index());
     const int to = static_cast<int>(drag_context_.GetTargetIndex());
-    browser_->tab_strip_model()->MoveWebContentsAt(from, to,
+    browser_->GetTabStripModel()->MoveWebContentsAt(from, to,
                                                   /*select_after_move=*/false);
   }
 
@@ -630,7 +630,7 @@ void SidebarPinnedTabsView::PublishHostedCount(int count) {
   }
   hosted_count_ = count;
 
-  if (auto* controller = browser_->GetFeatures().sidebar_controller()) {
+  if (auto* controller = sidebar::SidebarController::From(browser_)) {
     controller->SetPinnedTabCountHostedBySidebar(count);
   }
 }
