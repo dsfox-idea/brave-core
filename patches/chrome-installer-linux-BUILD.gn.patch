@@ -1,16 +1,17 @@
 diff --git a/chrome/installer/linux/BUILD.gn b/chrome/installer/linux/BUILD.gn
-index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..9714f6de66fbc8de830a6b7e28b9dc56780f5246 100644
+index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..cfc96fa6a02b90a3cf4f6c50deb7f11cc3a47c16 100644
 --- a/chrome/installer/linux/BUILD.gn
 +++ b/chrome/installer/linux/BUILD.gn
-@@ -2,6 +2,7 @@
+@@ -2,6 +2,8 @@
  # Use of this source code is governed by a BSD-style license that can be
  # found in the LICENSE file.
  
++import("//brave/build/growser.gni")
 +import("//brave/build/config.gni")
  import("//build/config/c++/c++.gni")
  import("//build/config/chrome_build.gni")
  import("//build/config/sanitizers/sanitizers.gni")
-@@ -105,6 +106,9 @@ if (build_with_internal_optimization_guide) {
+@@ -105,6 +107,9 @@ if (build_with_internal_optimization_guide) {
    }
  }
  
@@ -20,29 +21,29 @@ index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..9714f6de66fbc8de830a6b7e28b9dc56
  packaging_files_binaries = packaging_files_executables + packaging_files_shlibs
  
  # TODO(mmoss) Any convenient way to get all the relevant build files?
-@@ -210,6 +214,10 @@ action("merge_rpm_dependencies") {
+@@ -210,6 +215,10 @@ action("merge_rpm_dependencies") {
  strip_binary("strip_chrome_binary") {
    binary_input = "$root_out_dir/chrome"
    deps = [ "//chrome" ]
 +  deps += strip_chrome_binary_deps
-+  binary_input = "$root_out_dir/brave"
-+  symbol_output = "$root_out_dir/brave.debug"
-+  stripped_binary_output = "$root_out_dir/brave.stripped"
++  binary_input = "$root_out_dir/$brave_product_name"
++  symbol_output = "$root_out_dir/$brave_product_name.debug"
++  stripped_binary_output = "$root_out_dir/dsfox-$brave_product_name.stripped"
  }
  
  strip_binary("strip_chrome_crashpad_handler") {
-@@ -225,6 +233,10 @@ strip_binary("strip_chrome_management_service") {
+@@ -225,6 +234,10 @@ strip_binary("strip_chrome_management_service") {
  strip_binary("strip_chrome_sandbox") {
    binary_input = "$root_out_dir/chrome_sandbox"
    deps = [ "//sandbox/linux:chrome_sandbox" ]
 +  deps += strip_chrome_sandbox_deps
-+  binary_input = "$root_out_dir/brave_sandbox"
-+  symbol_output = "$root_out_dir/brave_sandbox.debug"
-+  stripped_binary_output = "$root_out_dir/brave_sandbox.stripped"
++  binary_input = "$root_out_dir/${brave_product_name}_sandbox"
++  symbol_output = "$root_out_dir/${brave_product_name}_sandbox.debug"
++  stripped_binary_output = "$root_out_dir/dsfox-${brave_product_name}_sandbox.stripped"
  }
  
  # On ChromeOS, system services depend on real ANGLE libraries rather than dummy
-@@ -378,6 +390,8 @@ copy("common_packaging_files") {
+@@ -378,6 +391,8 @@ copy("common_packaging_files") {
    }
  
    outputs = [ "$root_out_dir/installer/common/{{source_file_part}}" ]
@@ -51,7 +52,36 @@ index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..9714f6de66fbc8de830a6b7e28b9dc56
  }
  
  copy("deb_packaging_files") {
-@@ -484,6 +498,7 @@ group("installer_deps") {
+@@ -397,15 +412,21 @@ copy("deb_packaging_files") {
+ 
+ copy("theme_files") {
+   visibility = [ ":*" ]
++  _logo_dir = "$branding_dir/linux"
++  _logo_dir_100 = "$branding_dir_100/linux"
++  if (!growser_public_release && branding_path_component == "brave") {
++    _logo_dir = "//brave/app/theme/brave/linux/development"
++    _logo_dir_100 = _logo_dir
++  }
+   sources = [
+     "$branding_dir/BRANDING",
+-    "$branding_dir/linux/product_logo_128.png",
+-    "$branding_dir/linux/product_logo_24.png",
+-    "$branding_dir/linux/product_logo_256.png",
+-    "$branding_dir/linux/product_logo_48.png",
+-    "$branding_dir/linux/product_logo_64.png",
+-    "$branding_dir_100/linux/product_logo_16.png",
+-    "$branding_dir_100/linux/product_logo_32.png",
++    "$_logo_dir/product_logo_128.png",
++    "$_logo_dir/product_logo_24.png",
++    "$_logo_dir/product_logo_256.png",
++    "$_logo_dir/product_logo_48.png",
++    "$_logo_dir/product_logo_64.png",
++    "$_logo_dir_100/product_logo_16.png",
++    "$_logo_dir_100/product_logo_32.png",
+   ]
+   if (is_chrome_branded) {
+     sources += [
+@@ -484,6 +505,7 @@ group("installer_deps") {
      ":theme_files",
      "//chrome",
    ]
@@ -59,7 +89,7 @@ index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..9714f6de66fbc8de830a6b7e28b9dc56
    public_deps += [
      "//chrome:packed_resources",
      "//chrome/browser/enterprise/connectors/device_trust/key_management/installer/management_service:chrome_management_service",
-@@ -561,11 +576,16 @@ group("installer_deps") {
+@@ -561,11 +583,16 @@ group("installer_deps") {
  template("linux_package") {
    assert(defined(invoker.channel))
    channel = invoker.channel
@@ -76,7 +106,7 @@ index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..9714f6de66fbc8de830a6b7e28b9dc56
    }
  
    deb_target_name = "${target_name}_deb"
-@@ -576,6 +596,12 @@ template("linux_package") {
+@@ -576,6 +603,12 @@ template("linux_package") {
  
      inputs = packaging_files
      outputs = [ "$root_out_dir/${package}-${channel}_${chrome_version_full}-1_${deb_arch}.deb" ]
@@ -89,7 +119,7 @@ index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..9714f6de66fbc8de830a6b7e28b9dc56
  
      args = [
        "-a",
-@@ -614,6 +640,10 @@ template("linux_package") {
+@@ -614,6 +647,10 @@ template("linux_package") {
  
        inputs = packaging_files
        outputs = [ "$root_out_dir/${package}-${channel}-${chrome_version_full}-1.${rpm_arch}.rpm" ]
@@ -100,7 +130,7 @@ index 2a75b4c07d1e744209f9c48e375d14f2820d6cd7..9714f6de66fbc8de830a6b7e28b9dc56
  
        args = [
          "-a",
-@@ -718,3 +748,6 @@ if (!is_chromeos) {
+@@ -718,3 +755,6 @@ if (!is_chromeos) {
      }
    }
  }

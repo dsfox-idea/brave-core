@@ -165,3 +165,43 @@ substitutions:
         if (enable_resource_allowlist_generation) {
           repack_allowlist = brave_allowlist_file
         }
+
+  - description: |-
+      Growser-146/162: make growser_public_release available.
+
+      It decides which mark a build carries: the build people install keeps
+      the release mark, every other build carries the same mark in red, so
+      two browsers side by side cannot be confused.
+    add_import:
+      import: //brave/build/growser.gni
+
+  - description: |-
+      Growser-146: tell brave_exe.rc which icon the Windows executable gets.
+    append_to_target:
+      target: chrome_initial
+      type: executable
+      code: |-
+        if (is_win && growser_public_release) {
+          defines += [ "GROWSER_PUBLIC_RELEASE" ]
+        }
+
+  - description: |-
+      Growser-162: the macOS app icon, red for every build but the public one.
+
+      The development icon is read from //brave rather than from
+      chrome/app/theme: branding.js copies only app.icns (and Assets.car) into
+      the Chromium tree, so a second file there would be a hand-made
+      duplicate going stale in silence. brand/make-raster-icons.py writes it.
+      The output name stays app.icns either way - that is the name
+      CFBundleIconFile carries.
+    regex:
+      re_pattern: '(  bundle_data\("chrome_app_icon"\) \{\n)    sources = \[ "app/theme/\$branding_path_component/mac/app\.icns" \]\n    outputs = \[ "\{\{bundle_resources_dir\}\}/\{\{source_file_part\}\}" \]\n'
+      replace: |
+        \1    if (growser_public_release) {
+              sources = [ "app/theme/$branding_path_component/mac/app.icns" ]
+            } else {
+              sources = [
+                "//brave/app/theme/$branding_path_component/mac/app_development.icns",
+              ]
+            }
+            outputs = [ "{{bundle_resources_dir}}/app.icns" ]

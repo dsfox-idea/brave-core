@@ -20,13 +20,19 @@ substitutions:
         packaging_files_executables -= excluded_packaging_files_executables
         packaging_files_executables += brave_packaging_files_executables
 
-  - description: Strip the Brave binary.
+  - description: |-
+      Strip the Brave binary.
+
+      Growser-197/222: the binary is named after the product, and the staged
+      copy carries the dsfox- prefix, because installer.py stages the browser
+      as PROGNAME and the wrapper as PACKAGE into one directory - with both
+      named growser the wrapper overwrote the browser.
     append_to_target:
       target: strip_chrome_binary
       code: |-
-        binary_input = "$root_out_dir/brave"
-        symbol_output = "$root_out_dir/brave.debug"
-        stripped_binary_output = "$root_out_dir/brave.stripped"
+        binary_input = "$root_out_dir/$brave_product_name"
+        symbol_output = "$root_out_dir/$brave_product_name.debug"
+        stripped_binary_output = "$root_out_dir/dsfox-$brave_product_name.stripped"
 
   - description: Build the Brave binary before stripping it.
     add_literal_to_list:
@@ -34,13 +40,16 @@ substitutions:
       list_name: deps
       literal: strip_chrome_binary_deps
 
-  - description: Strip the Brave sandbox.
+  - description: |-
+      Strip the Brave sandbox.
+
+      Growser-197/222: named the same way as the binary above.
     append_to_target:
       target: strip_chrome_sandbox
       code: |-
-        binary_input = "$root_out_dir/brave_sandbox"
-        symbol_output = "$root_out_dir/brave_sandbox.debug"
-        stripped_binary_output = "$root_out_dir/brave_sandbox.stripped"
+        binary_input = "$root_out_dir/${brave_product_name}_sandbox"
+        symbol_output = "$root_out_dir/${brave_product_name}_sandbox.debug"
+        stripped_binary_output = "$root_out_dir/dsfox-${brave_product_name}_sandbox.stripped"
 
   - description: Build the Brave sandbox before stripping it.
     add_literal_to_list:
@@ -111,3 +120,39 @@ substitutions:
         linux_package("nightly") {
           channel = "nightly"
         }
+
+  - description: |-
+      Growser-146/162: make growser_public_release available.
+    add_import:
+      import: //brave/build/growser.gni
+
+  - description: |-
+      Growser-146/162: the Linux icons, red for every build but the public one.
+
+      Two browsers in one launcher cannot be confused, and a development build
+      cannot be mistaken for the product. Windows does this in the .rc (#146)
+      and macOS in bundle_data (#162). A DIRECTORY is chosen rather than a
+      file renamed, because this copy uses {{source_file_part}} and everything
+      downstream - the postinstall's xdg-icon-resource loop, the .desktop
+      Icon= line - expects the release names. Read from //brave, like the mac
+      .icns: branding.js copies only some theme files into the Chromium tree.
+      brand/make-logos.py writes them.
+    regex:
+      re_pattern: '(copy\("theme_files"\) \{\n  visibility = \[ ":\*" \]\n)  sources = \[\n    "\$branding_dir/BRANDING",\n    "\$branding_dir/linux/product_logo_128\.png",\n    "\$branding_dir/linux/product_logo_24\.png",\n    "\$branding_dir/linux/product_logo_256\.png",\n    "\$branding_dir/linux/product_logo_48\.png",\n    "\$branding_dir/linux/product_logo_64\.png",\n    "\$branding_dir_100/linux/product_logo_16\.png",\n    "\$branding_dir_100/linux/product_logo_32\.png",\n  \]\n'
+      replace: |
+        \1  _logo_dir = "$branding_dir/linux"
+          _logo_dir_100 = "$branding_dir_100/linux"
+          if (!growser_public_release && branding_path_component == "brave") {
+            _logo_dir = "//brave/app/theme/brave/linux/development"
+            _logo_dir_100 = _logo_dir
+          }
+          sources = [
+            "$branding_dir/BRANDING",
+            "$_logo_dir/product_logo_128.png",
+            "$_logo_dir/product_logo_24.png",
+            "$_logo_dir/product_logo_256.png",
+            "$_logo_dir/product_logo_48.png",
+            "$_logo_dir/product_logo_64.png",
+            "$_logo_dir_100/product_logo_16.png",
+            "$_logo_dir_100/product_logo_32.png",
+          ]
