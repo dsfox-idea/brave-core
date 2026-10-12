@@ -454,8 +454,8 @@
   <message name="IDS_AUTOFILL_GMAIL_OTP_OPT_IN_TITLE" desc="Title of the bubble prompting the user to opt in to autofilling verification codes from Gmail.">
     Autofill verification codes from Gmail
   </message>
-  <message name="IDS_AUTOFILL_GMAIL_OTP_OPT_IN_DESCRIPTION" desc="Body text of the bubble prompting the user to opt in to autofilling verification codes from Gmail. Explains that Growser Password Manager can retrieve verification codes from the user's Gmail account and contains a link to learn more in settings.">
-    Growser Password Manager can get these codes for you from your Gmail <ph name="EMAIL">$1<ex>elisa.g.beckett@gmail.com</ex></ph>. You can change your mind and <ph name="IDS_AUTOFILL_GMAIL_OTP_OPT_IN_LEARN_MORE_LINK">$2<ex>learn more about this feature in settings</ex></ph>.
+  <message name="IDS_AUTOFILL_GMAIL_OTP_OPT_IN_DESCRIPTION" desc="Body text of the bubble prompting the user to opt in to autofilling verification codes from Gmail. Explains that Google Password Manager can retrieve verification codes from the user's Gmail account and contains a link to learn more in settings.">
+    Google Password Manager can get these codes for you from your Gmail <ph name="EMAIL">$1<ex>elisa.g.beckett@gmail.com</ex></ph>. You can change your mind and <ph name="IDS_AUTOFILL_GMAIL_OTP_OPT_IN_LEARN_MORE_LINK">$2<ex>learn more about this feature in settings</ex></ph>.
   </message>
   <message name="IDS_AUTOFILL_GMAIL_OTP_OPT_IN_LEARN_MORE_LINK" desc="Link text within the body of the Gmail OTP opt-in bubble that opens settings to learn more about autofilling verification codes from Gmail.">
     learn more about this feature in settings
