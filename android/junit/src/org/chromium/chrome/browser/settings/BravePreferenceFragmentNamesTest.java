@@ -49,8 +49,8 @@ public class BravePreferenceFragmentNamesTest {
 
     private static final Screen[] BRAVE_PREFERENCE_SCREENS = {
         new Screen(R.xml.brave_appearance_preferences),
-        new Screen(R.xml.brave_leo_default_model_preferences),
-        new Screen(R.xml.brave_leo_preferences),
+        // Growser-270: no Leo screens. Only the Leo fragments load them, and those are
+        // compiled out with enable_ai_chat, so the screens cannot be reached.
         new Screen(R.xml.brave_main_preferences),
         new Screen(R.xml.brave_privacy_preferences),
         new Screen(R.xml.brave_search_engines_preferences),
