@@ -5,4 +5,9 @@
 
 import("//brave/components/brave_origin/buildflags/buildflags.gni")
 
-enable_email_aliases = !is_ios && !is_android && !is_brave_origin_branded
+# Growser-111: kept a build argument. 1.99.31 made this a constant
+# (abf5f19134e), which left our gn_args_enable_email_aliases=false with no
+# effect and put Email Aliases back into every desktop build of 156.
+declare_args() {
+  enable_email_aliases = !is_ios && !is_android && !is_brave_origin_branded
+}
