@@ -23,6 +23,7 @@ import org.chromium.components.browser_ui.settings.search.PreferenceParser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Checks that every `android:fragment` in Brave's preference screens names a real Fragment.
@@ -55,7 +56,7 @@ public class BravePreferenceFragmentNamesTest {
         new Screen(R.xml.brave_privacy_preferences),
         new Screen(R.xml.brave_search_engines_preferences),
         new Screen(R.xml.brave_tabs_and_tab_groups_preferences),
-        new Screen(R.xml.brave_wallet_preferences),
+        // Growser-275: no wallet screen either - only the wallet's own fragment loads it.
         new Screen(
                 org.chromium.components.browser_ui.site_settings.R.xml
                         .brave_site_settings_preferences),
@@ -68,6 +69,19 @@ public class BravePreferenceFragmentNamesTest {
                 R.xml.legal_information_preferences,
                 "org.chromium.chrome.browser.settings.BraveLicensePreferences"),
     };
+
+    // Growser-275: rows whose fragments left the build with the wallet. Their screens are
+    // shared, so the rows stay in the XML and are removed when the screen is built:
+    // BravePrivacySettings drops the decentralized DNS rows, and BraveSiteSettingsDelegate
+    // reports the wallet as disabled so the connected-sites rows go too.
+    private static final Set<String> COMPILED_OUT_FRAGMENTS =
+            Set.of(
+                    "org.chromium.chrome.browser.decentralized_dns.settings"
+                            + ".UnstoppableDomainsSettingsFragment",
+                    "org.chromium.chrome.browser.decentralized_dns.settings.ENSSettingsFragment",
+                    "org.chromium.chrome.browser.decentralized_dns.settings.SnsSettingsFragment",
+                    "org.chromium.chrome.browser.site_settings.BraveWalletEthereumConnectedSites",
+                    "org.chromium.chrome.browser.site_settings.BraveWalletSolanaConnectedSites");
 
     @Test
     public void testFragmentAttributesNameRealFragments() throws Exception {
@@ -86,6 +100,9 @@ public class BravePreferenceFragmentNamesTest {
             }
 
             for (String fragment : fragments) {
+                if (COMPILED_OUT_FRAGMENTS.contains(fragment)) {
+                    continue;
+                }
                 Class<?> clazz;
                 try {
                     // Loaded without initializing: static initializers of real settings fragments
