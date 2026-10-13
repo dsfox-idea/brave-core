@@ -43,6 +43,7 @@
 #include "ui/gfx/animation/animation.h"
 #include "ui/gfx/geometry/point.h"
 #include "ui/gfx/geometry/point_f.h"
+#include "ui/views/controls/separator.h"  // Growser-149: bottom_separator_.
 #include "ui/views/view.h"
 #include "url/gurl.h"
 
