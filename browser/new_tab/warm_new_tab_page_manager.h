@@ -8,6 +8,7 @@
 
 #include <map>
 #include <memory>
+#include <optional>
 
 #include "base/feature_list.h"
 #include "base/memory/raw_ptr.h"
@@ -75,6 +76,7 @@ class WarmNewTabPageManager : public KeyedService,
     return warm_contents_.get();
   }
   bool is_ready_for_testing() const { return is_ready_; }
+  int tiles_updates_for_testing() const { return tiles_updates_; }
 
  private:
   // Watches the warm contents for its first visually non-empty paint.
@@ -106,8 +108,10 @@ class WarmNewTabPageManager : public KeyedService,
   // tiles change. Owned like brave's TopSitesFacade owns its own instance.
   std::unique_ptr<ntp_tiles::MostVisitedSites> most_visited_sites_;
   PrefChangeRegistrar pref_change_registrar_;
-  // OnURLsAvailable fires once on initial load; only later ones are changes.
-  bool seen_initial_sites_ = false;
+  // The tiles of the last OnURLsAvailable; empty until the initial load.
+  std::optional<std::map<ntp_tiles::SectionType, ntp_tiles::NTPTilesVector>>
+      built_sections_;
+  int tiles_updates_ = 0;
 
   base::WeakPtrFactory<WarmNewTabPageManager> weak_factory_{this};
 };

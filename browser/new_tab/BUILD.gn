@@ -101,20 +101,34 @@ if (!is_android) {
 source_set("browser_tests") {
   testonly = true
 
-  if (is_win) {
-    sources = [ "background_color_tab_helper_browsertest.cc" ]
+  # Growser-354: the warm New Tab Page keeps its page across repeated tiles.
+  if (!is_android) {
+    defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
+    sources = [ "warm_new_tab_page_manager_browsertest.cc" ]
     deps = [
+      ":new_tab",
+      "//base",
+      "//base/test:test_support",
+      "//brave/browser",
       "//chrome/browser",
-      "//chrome/browser:browser_process",
       "//chrome/browser/profiles:profile",
+      "//chrome/test:test_support",
+      "//components/history/core/browser",
+      "//content/public/browser",
+      "//content/test:test_support",
+      "//url",
+    ]
+  }
+
+  if (is_win) {
+    sources += [ "background_color_tab_helper_browsertest.cc" ]
+    deps += [
+      "//chrome/browser:browser_process",
       "//chrome/browser/themes",
       "//chrome/browser/ui",
       "//chrome/browser/ui/views/frame:browser_view_header",
-      "//chrome/test:test_support",
       "//chrome/test:test_support_ui",
     ]
-
-    defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
   }
 }
 

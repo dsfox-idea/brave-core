@@ -138,9 +138,17 @@ void WarmNewTabPageManager::OnURLsAvailable(
     const std::map<ntp_tiles::SectionType, ntp_tiles::NTPTilesVector>&
         sections) {
   // The first callback is the initial load, whose tiles the warm page is
-  // already building with; only later ones are genuine composition changes.
-  if (!seen_initial_sites_) {
-    seen_initial_sites_ = true;
+  // already building with. A later one is a change only if the tiles differ:
+  // the service repeats unchanged tiles, and every rebuild is a whole New Tab
+  // Page load (growser#354).
+  ++tiles_updates_;
+  const bool initial = !built_sections_.has_value();
+  if (!initial && *built_sections_ == sections) {
+    VLOG(1) << "WarmNTP: tiles unchanged, keeping warm NTP";
+    return;
+  }
+  built_sections_ = sections;
+  if (initial) {
     return;
   }
   OnTopSitesChanged();
