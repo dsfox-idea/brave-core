@@ -1,0 +1,14 @@
+diff --git a/components/security_interstitials/core/controller_client.cc b/components/security_interstitials/core/controller_client.cc
+index bd5a4e4a806a4526fcb9e4f82ab11ef428f35a1b..ebd5f777a270d6e85729c91275db876d5c84ac0f 100644
+--- a/components/security_interstitials/core/controller_client.cc
++++ b/components/security_interstitials/core/controller_client.cc
+@@ -21,7 +21,8 @@ const char kDisplayEnhancedProtectionMessage[] =
+     "displayEnhancedProtectionMessage";
+ const char kOptInLink[] = "optInLink";
+ const char kEnhancedProtectionMessage[] = "enhancedProtectionMessage";
+-const char kHelpCenterUrl[] = "https://support.google.com/chrome/";
++// Growser-344: our page, not Google's Chrome help.
++const char kHelpCenterUrl[] = "https://growser.org/features.html#security-warnings";
+ 
+ ControllerClient::ControllerClient(
+     std::unique_ptr<MetricsHelper> metrics_helper)

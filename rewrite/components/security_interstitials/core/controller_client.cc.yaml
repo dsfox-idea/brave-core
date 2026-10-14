@@ -1,0 +1,17 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+substitutions:
+  - description: |-
+      Growser-344: "Learn more" on every Chromium warning page - dangerous
+      site, certificate error - comes from this one constant, and it sent the
+      user to Google's Chrome help. We do not send a user to Google for help
+      with this browser (#81). The page appends ?p=<article>&hl=<locale>,
+      which growser.org ignores.
+    regex:
+      pattern: 'const char kHelpCenterUrl[] = "https://support.google.com/chrome/";'
+      replace: |-
+        // Growser-344: our page, not Google's Chrome help.
+        const char kHelpCenterUrl[] = "https://growser.org/features.html#security-warnings";
