@@ -11,6 +11,7 @@
 #include "base/task/thread_pool.h"
 #include "base/test/thread_test_helper.h"
 #include "brave/browser/brave_browser_process.h"
+#include "brave/components/brave_component_updater/browser/local_data_files_service.h"
 #include "brave/components/constants/brave_paths.h"
 #include "chrome/browser/extensions/extension_browsertest.h"
 #include "content/public/browser/browser_task_traits.h"
@@ -21,6 +22,20 @@
 using brave_component_updater::LocalDataFilesObserver;
 using content::BrowserThread;
 using extensions::ExtensionBrowserTest;
+
+// Growser-352: the environment Brave's own tests get - no bundled local data.
+// Every test here installs its rules with InstallMockExtension(), and the
+// bundled copy (growser#87), written in the background at startup, would
+// otherwise replace them whenever it lands after the test's own.
+BaseLocalDataFilesBrowserTest::BaseLocalDataFilesBrowserTest() {
+  brave_component_updater::LocalDataFilesService::SetSkipBundledDataForTesting(
+      true);
+}
+
+BaseLocalDataFilesBrowserTest::~BaseLocalDataFilesBrowserTest() {
+  brave_component_updater::LocalDataFilesService::SetSkipBundledDataForTesting(
+      false);
+}
 
 void BaseLocalDataFilesBrowserTest::SetUpOnMainThread() {
   MaybeInitEmbeddedTestServer();

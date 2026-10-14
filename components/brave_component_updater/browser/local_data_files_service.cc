@@ -84,6 +84,9 @@ base::FilePath WriteBundledLocalData() {
   return install_dir;
 }
 
+// Growser-352: see SetSkipBundledDataForTesting.
+bool g_skip_bundled_data_for_testing = false;
+
 }  // namespace
 
 namespace brave_component_updater {
@@ -103,8 +106,15 @@ bool LocalDataFilesService::Start() {
   Register(kLocalDataFilesComponentName,
            kLocalDataFilesComponentPublicKeySHA256);
   initialized_ = true;
-  UseBundledDataUnlessComponentArrives();
+  if (!g_skip_bundled_data_for_testing) {
+    UseBundledDataUnlessComponentArrives();
+  }
   return true;
+}
+
+// static
+void LocalDataFilesService::SetSkipBundledDataForTesting(bool skip) {
+  g_skip_bundled_data_for_testing = skip;
 }
 
 void LocalDataFilesService::UseBundledDataUnlessComponentArrives() {

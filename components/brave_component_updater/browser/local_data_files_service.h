@@ -45,6 +45,13 @@ class COMPONENT_EXPORT(BRAVE_COMPONENT_UPDATER) LocalDataFilesService
   void AddObserver(LocalDataFilesObserver* observer);
   void RemoveObserver(LocalDataFilesObserver* observer);
 
+  // Growser-352: keep the bundled payload out of a browser test that installs
+  // its own. Such a test hands its rules straight to one consumer, so
+  // component_ready_ never learns of them, and the bundled copy - written in
+  // the background - then replaces them mid-test. Brave's bots have no bundled
+  // data, so their tests never meet it.
+  static void SetSkipBundledDataForTesting(bool skip);
+
  protected:
   void OnComponentReady(const std::string& component_id,
       const base::FilePath& install_dir,

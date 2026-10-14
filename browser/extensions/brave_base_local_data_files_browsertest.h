@@ -14,7 +14,9 @@
 // LocalDataFiles-related extension browser tests.
 class BaseLocalDataFilesBrowserTest : public extensions::ExtensionBrowserTest {
  public:
-  BaseLocalDataFilesBrowserTest() {}
+  // Growser-352: defined out of line - they switch the bundled data off.
+  BaseLocalDataFilesBrowserTest();
+  ~BaseLocalDataFilesBrowserTest() override;
 
   // ExtensionBrowserTest overrides
   void SetUpOnMainThread() override;
