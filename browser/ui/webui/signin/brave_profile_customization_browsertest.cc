@@ -3,11 +3,13 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
+#include "base/command_line.h"
 #include "base/test/scoped_feature_list.h"
 #include "brave/browser/ui/webui/custom_profile_image/features.h"
 #include "chrome/common/webui_url_constants.h"
 #include "chrome/test/base/web_ui_mocha_browser_test.h"
 #include "content/public/test/browser_test.h"
+#include "ui/base/ui_base_switches.h"
 
 namespace {
 
@@ -18,6 +20,13 @@ class BraveProfileCustomizationWebUITest : public WebUIMochaBrowserTest {
         custom_profile_image::features::kBraveCustomProfileImage,
         feature_enabled);
     set_test_loader_host(chrome::kChromeUIProfileCustomizationHost);
+  }
+
+  // Growser-352: the mocha suites compare against English strings, and our
+  // browser starts in the machine's language - Russian here.
+  void SetUpCommandLine(base::CommandLine* command_line) override {
+    WebUIMochaBrowserTest::SetUpCommandLine(command_line);
+    command_line->AppendSwitchASCII(switches::kLang, "en-US");
   }
 
  private:

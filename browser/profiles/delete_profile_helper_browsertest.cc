@@ -19,6 +19,7 @@
 #include "chrome/browser/sync/sync_service_factory.h"
 #include "chrome/browser/ui/browser_window/public/create_browser_window.h"
 #include "chrome/test/base/in_process_browser_test.h"
+#include "components/sync/base/command_line_switches.h"
 #include "content/public/test/browser_test.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -67,12 +68,20 @@ IN_PROC_BROWSER_TEST_F(DeleteProfileHelperBrowserTest,
           SyncServiceFactory::GetAsSyncServiceImplForProfileForTesting(
               &profile_to_delete));
 
-  // Set the sync code to ensure it will be cleared on profile deletion
-  EXPECT_TRUE(brave_sync_service->SetSyncCode(kValidSyncCode));
+  // Growser-294, Growser-352: sync is not offered, so the profile has no sync
+  // service at all, and deleting it has to complete without one.
+  const bool sync_allowed = syncer::IsSyncAllowedByFlag();
+  if (sync_allowed) {
+    // Set the sync code to ensure it will be cleared on profile deletion
+    ASSERT_TRUE(brave_sync_service);
+    EXPECT_TRUE(brave_sync_service->SetSyncCode(kValidSyncCode));
 
-  auto seed = brave_sync_service->GetSeed();
-  ASSERT_TRUE(seed.has_value());
-  EXPECT_THAT(seed.value(), Not(IsEmpty()));
+    auto seed = brave_sync_service->GetSeed();
+    ASSERT_TRUE(seed.has_value());
+    EXPECT_THAT(seed.value(), Not(IsEmpty()));
+  } else {
+    EXPECT_FALSE(brave_sync_service);
+  }
 
   base::RunLoop loop;
   profile_manager->GetDeleteProfileHelper().MaybeScheduleProfileForDeletion(
@@ -83,9 +92,11 @@ IN_PROC_BROWSER_TEST_F(DeleteProfileHelperBrowserTest,
   keep_alive_added_waiter.Wait();
   loop.Run();
 
+  if (!sync_allowed) {
+    return;
+  }
   // Ensure that we've invoked BraveSyncServiceImpl::StopAndClear() from
   // DisableSyncForProfileDeletion at delete_profile_helper.cc, so
   // now seed should be empty
-  seed = brave_sync_service->GetSeed();
-  EXPECT_THAT(seed, Optional(IsEmpty()));
+  EXPECT_THAT(brave_sync_service->GetSeed(), Optional(IsEmpty()));
 }

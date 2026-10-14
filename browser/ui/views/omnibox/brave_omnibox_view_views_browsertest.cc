@@ -272,9 +272,12 @@ IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsTest,
 
   BrowserWindowInterface* private_browser = CreateIncognitoBrowser();
   ASSERT_TRUE(private_browser->GetProfile()->IsOffTheRecord());
+  // Growser-155, Growser-352: the "exempted" path, as in the test above - our
+  // bundled clean-urls data strips brave_testing1 on the rest of this page.
   ASSERT_TRUE(ui_test_utils::NavigateToURL(
-      private_browser, GURL("https://dev-pages.bravesoftware.com/clean-urls/"
-                            "?brave_testing1=foo&utm_content=removethis")));
+      private_browser,
+      GURL("https://dev-pages.bravesoftware.com/clean-urls/exempted/"
+           "?brave_testing1=foo&utm_content=removethis")));
 
   auto* private_omnibox_view =
       BrowserView::GetBrowserViewForBrowser(private_browser)
@@ -285,7 +288,8 @@ IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsTest,
   private_omnibox_view->ExecuteCommand(IDC_COPY_CLEAN_LINK, 0);
 
   EXPECT_EQ(
-      "https://dev-pages.bravesoftware.com/clean-urls/?brave_testing1=foo",
+      "https://dev-pages.bravesoftware.com/clean-urls/exempted/"
+      "?brave_testing1=foo",
       ui::clipboard_test_util::ReadAsciiText(
           ui::Clipboard::GetForCurrentThread(), ui::ClipboardBuffer::kCopyPaste,
           /*data_dst=*/nullptr));

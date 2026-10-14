@@ -4,9 +4,12 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include <string>
+#include <string_view>
 
 #include "base/containers/map_util.h"
+#include "brave/components/constants/brave_services_key.h"
 #include "brave/components/constants/network_constants.h"
+#include "brave/components/update_client/buildflags.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
 #include "content/public/test/browser_test.h"
@@ -105,19 +108,29 @@ IN_PROC_BROWSER_TEST_F(BraveServiceKeyNetworkDelegateBrowserTest,
   EXPECT_FALSE(header_result());
 }
 
+// Growser-245, Growser-352: the header goes out only when there is a key to
+// send. Ours is empty, so none of these hosts - our own updater host included,
+// which is also our translate backend - may receive it.
 IN_PROC_BROWSER_TEST_F(BraveServiceKeyNetworkDelegateBrowserTest,
                        IncludesBraveServiceKey) {
+  const bool has_services_key =
+      !std::string_view(BUILDFLAG(BRAVE_SERVICES_KEY)).empty();
   GURL target = https_server().GetURL(kExtensionUpdaterDomain, "/index.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), target));
-  EXPECT_TRUE(header_result());
+  EXPECT_EQ(has_services_key, header_result());
+
+  target = https_server().GetURL(
+      GURL(BUILDFLAG(UPDATER_PROD_ENDPOINT)).host(), "/index.html");
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), target));
+  EXPECT_EQ(has_services_key, header_result());
 
   target = https_server().GetURL("search.brave.com", "/index.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), target));
-  EXPECT_TRUE(header_result());
+  EXPECT_EQ(has_services_key, header_result());
 
   target = https_server().GetURL("search.brave.software", "/index.html");
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), target));
-  EXPECT_TRUE(header_result());
+  EXPECT_EQ(has_services_key, header_result());
 }
 
 IN_PROC_BROWSER_TEST_F(BraveServiceKeyNetworkDelegateBrowserTest,

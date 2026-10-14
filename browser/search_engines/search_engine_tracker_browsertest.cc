@@ -61,19 +61,21 @@ class SearchEngineProviderP3ATest : public InProcessBrowserTest {
   base::CallbackListSubscription create_services_subscription_;
 };
 
+// Growser-18, Growser-352: Brave Search is in none of our engine lists and
+// DuckDuckGo is the default everywhere, so these walk between engines we do
+// offer - DuckDuckGo and Bing - instead of to and from Brave Search.
 IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, DefaultSearchEngineP3A) {
   // Check that the metric is reported on startup.
   // By default, Rewards is disabled
   histogram_tester_->ExpectUniqueSample(kDefaultSearchEngineMetric,
-                                        SearchEngineP3A::kBrave, 1);
+                                        SearchEngineP3A::kDuckDuckGo, 1);
   // Since Rewards is disabled, NonRewards metric should have the value
   histogram_tester_->ExpectUniqueSample(kNonRewardsDefaultEngineMetric,
-                                        SearchEngineP3A::kBrave, 1);
+                                        SearchEngineP3A::kDuckDuckGo, 1);
   // And Rewards metric should be invalidated
   histogram_tester_->ExpectUniqueSample(kRewardsDefaultEngineMetric,
                                         INT_MAX - 1, 1);
-  // Wallet connected metric should be invalidated (Brave Search + Rewards
-  // disabled)
+  // Wallet connected metric should be invalidated (Rewards disabled)
   histogram_tester_->ExpectUniqueSample(kNonBraveSearchWalletConnectedMetric,
                                         INT_MAX - 1, 1);
 
@@ -87,19 +89,20 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, DefaultSearchEngineP3A) {
           ->GetRegionalPrepopulatedEngines();
 
   // Check that changing the default engine triggers emitting of a new value.
-  auto ddg_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
+  auto bing_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
       *browser()->GetProfile()->GetPrefs(), regional_engines,
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO);
-  TemplateURL ddg_url(*ddg_data);
+      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING);
+  ASSERT_TRUE(bing_data);
+  TemplateURL bing_url(*bing_data);
 
-  service->SetUserSelectedDefaultSearchProvider(&ddg_url);
+  service->SetUserSelectedDefaultSearchProvider(&bing_url);
   histogram_tester_->ExpectBucketCount(kDefaultSearchEngineMetric,
-                                       SearchEngineP3A::kDuckDuckGo, 1);
+                                       SearchEngineP3A::kBing, 1);
   histogram_tester_->ExpectBucketCount(kNonRewardsDefaultEngineMetric,
-                                       SearchEngineP3A::kDuckDuckGo, 1);
+                                       SearchEngineP3A::kBing, 1);
   histogram_tester_->ExpectUniqueSample(kRewardsDefaultEngineMetric,
                                         INT_MAX - 1, 2);
-  // Still invalidated (non-Brave Search but Rewards disabled)
+  // Still invalidated (Rewards disabled)
   histogram_tester_->ExpectUniqueSample(kNonBraveSearchWalletConnectedMetric,
                                         INT_MAX - 1, 2);
 
@@ -110,7 +113,7 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, DefaultSearchEngineP3A) {
   // Now Rewards metric should have the value and NonRewards should be
   // invalidated
   histogram_tester_->ExpectBucketCount(kRewardsDefaultEngineMetric,
-                                       SearchEngineP3A::kDuckDuckGo, 1);
+                                       SearchEngineP3A::kBing, 1);
   histogram_tester_->ExpectBucketCount(kNonRewardsDefaultEngineMetric,
                                        INT_MAX - 1, 1);
   // Wallet connected metric should now report 0 (non-Brave Search + Rewards
@@ -125,32 +128,33 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, DefaultSearchEngineP3A) {
                                        1);
 
   // Check switching back to original engine.
-  auto brave_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
+  auto ddg_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
       *browser()->GetProfile()->GetPrefs(), regional_engines,
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE);
-  TemplateURL brave_url(*brave_data);
-  service->SetUserSelectedDefaultSearchProvider(&brave_url);
+      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO);
+  ASSERT_TRUE(ddg_data);
+  TemplateURL ddg_url(*ddg_data);
+  service->SetUserSelectedDefaultSearchProvider(&ddg_url);
   histogram_tester_->ExpectBucketCount(kDefaultSearchEngineMetric,
-                                       SearchEngineP3A::kBrave, 2);
-  // With Rewards enabled, Rewards metric should show Brave
+                                       SearchEngineP3A::kDuckDuckGo, 2);
+  // With Rewards enabled, Rewards metric should show DuckDuckGo
   histogram_tester_->ExpectBucketCount(kRewardsDefaultEngineMetric,
-                                       SearchEngineP3A::kBrave, 1);
+                                       SearchEngineP3A::kDuckDuckGo, 1);
   histogram_tester_->ExpectBucketCount(kNonRewardsDefaultEngineMetric,
                                        INT_MAX - 1, 2);
-  // Wallet connected metric should be invalidated again (Brave Search)
-  histogram_tester_->ExpectBucketCount(kNonBraveSearchWalletConnectedMetric,
-                                       INT_MAX - 1, 3);
+  // Still a non-Brave engine with a connected wallet
+  histogram_tester_->ExpectBucketCount(kNonBraveSearchWalletConnectedMetric, 1,
+                                       2);
 
   // Disable Rewards again
   prefs->SetBoolean(brave_rewards::prefs::kEnabled, false);
   // NonRewards metric should have the value again
   histogram_tester_->ExpectBucketCount(kNonRewardsDefaultEngineMetric,
-                                       SearchEngineP3A::kBrave, 2);
+                                       SearchEngineP3A::kDuckDuckGo, 2);
   histogram_tester_->ExpectBucketCount(kRewardsDefaultEngineMetric, INT_MAX - 1,
                                        3);
-  // Still invalidated (Brave Search + Rewards disabled)
+  // Invalidated again (Rewards disabled)
   histogram_tester_->ExpectBucketCount(kNonBraveSearchWalletConnectedMetric,
-                                       INT_MAX - 1, 4);
+                                       INT_MAX - 1, 3);
 
   // Check that incognito or TOR profiles do not emit the metric.
   CreateIncognitoBrowser();
@@ -165,12 +169,10 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, DefaultSearchEngineP3A) {
 }
 
 IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, SwitchSearchEngineP3A) {
-  // Check that the metric is reported on startup.
-  // Since we override the region to US, Brave Search should be the default
-  auto start_count_brave = histogram_tester_->GetBucketCount(
-      kSwitchSearchEngineMetric, SearchEngineSwitchP3A::kNoSwitchBrave);
-  // We should see kNoSwitchBrave since Brave is default in US region
-  EXPECT_GT(start_count_brave, 0);
+  // Check that the metric is reported on startup: DuckDuckGo is the default,
+  // which is not Brave Search.
+  histogram_tester_->ExpectUniqueSample(
+      kSwitchSearchEngineMetric, SearchEngineSwitchP3A::kNoSwitchNonBrave, 1);
 
   // Load service for switching the default search engine.
   auto* service =
@@ -182,49 +184,35 @@ IN_PROC_BROWSER_TEST_F(SearchEngineProviderP3ATest, SwitchSearchEngineP3A) {
           browser()->GetProfile())
           ->GetRegionalPrepopulatedEngines();
   // Check that changing the default engine triggers emission of a new value.
-  auto ddg_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
-      *browser()->GetProfile()->GetPrefs(), regional_engines,
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO);
-  TemplateURL ddg_url(*ddg_data);
-
-  service->SetUserSelectedDefaultSearchProvider(&ddg_url);
-  // This assumes Brave Search is the default!
-  histogram_tester_->ExpectBucketCount(kSwitchSearchEngineMetric,
-                                       SearchEngineSwitchP3A::kBraveToDDG, 1);
-
-  // Check additional changes.
-  auto brave_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
-      *browser()->GetProfile()->GetPrefs(), regional_engines,
-      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BRAVE);
-  TemplateURL brave_url(*brave_data);
-
-  service->SetUserSelectedDefaultSearchProvider(&brave_url);
-  histogram_tester_->ExpectBucketCount(kSwitchSearchEngineMetric,
-                                       SearchEngineSwitchP3A::kDDGToBrave, 1);
-
-  // Check additional changes.
   auto bing_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
       *browser()->GetProfile()->GetPrefs(), regional_engines,
       TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_BING);
+  ASSERT_TRUE(bing_data);
   TemplateURL bing_url(*bing_data);
 
   service->SetUserSelectedDefaultSearchProvider(&bing_url);
   histogram_tester_->ExpectBucketCount(kSwitchSearchEngineMetric,
-                                       SearchEngineSwitchP3A::kBraveToOther, 1);
+                                       SearchEngineSwitchP3A::kOtherToOther, 1);
 
   // Check switching back to original engine.
-  service->SetUserSelectedDefaultSearchProvider(&brave_url);
+  auto ddg_data = TemplateURLPrepopulateData::GetPrepopulatedEngine(
+      *browser()->GetProfile()->GetPrefs(), regional_engines,
+      TemplateURLPrepopulateData::PREPOPULATED_ENGINE_ID_DUCKDUCKGO);
+  ASSERT_TRUE(ddg_data);
+  TemplateURL ddg_url(*ddg_data);
+
+  service->SetUserSelectedDefaultSearchProvider(&ddg_url);
   histogram_tester_->ExpectBucketCount(kSwitchSearchEngineMetric,
-                                       SearchEngineSwitchP3A::kOtherToBrave, 1);
+                                       SearchEngineSwitchP3A::kOtherToOther, 2);
 
   // Check that incognito or TOR profiles do not emit the metric.
-  histogram_tester_->ExpectTotalCount(kSwitchSearchEngineMetric, 5);
+  histogram_tester_->ExpectTotalCount(kSwitchSearchEngineMetric, 3);
   CreateIncognitoBrowser();
 #if BUILDFLAG(ENABLE_TOR)
   brave::NewOffTheRecordWindowTor(browser());
 #endif
 
-  histogram_tester_->ExpectTotalCount(kSwitchSearchEngineMetric, 5);
+  histogram_tester_->ExpectTotalCount(kSwitchSearchEngineMetric, 3);
 }
 
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY)

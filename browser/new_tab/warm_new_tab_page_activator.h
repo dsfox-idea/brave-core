@@ -21,7 +21,7 @@ namespace growser {
 // Warming is tied to window creation, never to profile init: an ownerless warm
 // chrome://newtab created for a windowless headless/automation browser tore
 // that browser down (it is the browser the icon gate drives), so those are
-// skipped here.
+// skipped here, and so are browser tests (growser#352).
 class WarmNewTabPageActivator : public BrowserCollectionObserver {
  public:
   WarmNewTabPageActivator();
