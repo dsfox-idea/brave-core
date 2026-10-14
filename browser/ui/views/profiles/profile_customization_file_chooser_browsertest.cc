@@ -312,6 +312,10 @@ IN_PROC_BROWSER_TEST_F(ProfileCustomizationFileChooserEnabledBrowserTest,
           resolve(true);
         }, {once: true});
       });
+      // Growser-352: with sync off (#294) this is the sync-disabled page, whose
+      // document-level Enter handler clicks Confirm instead of letting the
+      // input open. Keep the key on the input.
+      input.addEventListener('keydown', e => e.stopPropagation());
       document.body.append(input);
       input.focus();
       return document.activeElement === input;
