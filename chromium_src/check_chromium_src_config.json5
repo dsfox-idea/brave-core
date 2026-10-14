@@ -50,6 +50,8 @@
     'components/os_crypt/common/growser_keychain_migration.h',
     'components/search_engines/brave_template_url_prepopulate_data_unittest.cc',
     'components/search_engines/brave_template_url_service_util_unittest.cc',
+    // Growser-344: ours, a test of the help-center recipe, not an override.
+    'components/security_interstitials/core/controller_client_unittest.cc',
     'components/variations/service/field_trial_unittest.cc',
     'net/base/brave_proxy_string_util_unittest.cc',
     'net/cookies/brave_canonical_cookie_unittest.cc',
