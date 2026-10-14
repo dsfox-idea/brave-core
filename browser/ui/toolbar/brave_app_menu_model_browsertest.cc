@@ -30,6 +30,7 @@
 #include "chrome/browser/ui/views/toolbar/toolbar_view.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
+#include "components/sync/base/command_line_switches.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/test_utils.h"
 
@@ -105,7 +106,9 @@ void CheckCommandsAreInOrderInMenuModel(
   std::vector<size_t> commands_index;
   for (int id : commands_in_order) {
     std::optional<size_t> index = model->GetIndexOfCommandId(id);
-    EXPECT_TRUE(index.has_value());
+    // Growser-352: a missing command fails here rather than crashing on
+    // value() and taking the rest of the test with it.
+    ASSERT_TRUE(index.has_value()) << "command " << id;
     commands_index.push_back(index.value());
   }
   EXPECT_TRUE(
@@ -219,17 +222,26 @@ IN_PROC_BROWSER_TEST_F(BraveAppMenuModelBrowserTest, MenuOrderTest) {
                                       commands_disabled_for_normal_profile);
 
   // Same help menu is used for all profiles.
+  // Growser-78, Growser-352: "Report a broken site" is out of the menu.
   std::vector<int> help_commands_in_order = {
       IDC_ABOUT,
       IDC_HELP_PAGE_VIA_MENU,
-      IDC_SHOW_BRAVE_WEBCOMPAT_REPORTER,
   };
   CheckHelpCommandsAreInOrderInMenuModel(browser(), help_commands_in_order);
 
+  // Growser-352: sync is not offered (#294), so its entry is there only when
+  // sync is allowed.
   std::vector<int> more_tools_in_order = {
-      IDC_ADD_NEW_PROFILE, IDC_OPEN_GUEST_PROFILE, IDC_SHOW_BRAVE_SYNC,
-      IDC_SHOW_APPS_PAGE,  IDC_DEV_TOOLS,          IDC_TASK_MANAGER_APP_MENU,
+      IDC_ADD_NEW_PROFILE, IDC_OPEN_GUEST_PROFILE, IDC_SHOW_APPS_PAGE,
+      IDC_DEV_TOOLS,       IDC_TASK_MANAGER_APP_MENU,
   };
+  if (syncer::IsSyncAllowedByFlag()) {
+    more_tools_in_order.insert(more_tools_in_order.begin() + 2,
+                               IDC_SHOW_BRAVE_SYNC);
+  } else {
+    CheckMoreToolsCommandsAreDisabledInMenuModel(browser(),
+                                                 {IDC_SHOW_BRAVE_SYNC});
+  }
 
   CheckMoreToolsCommandsAreInOrderInMenuModel(browser(), more_tools_in_order);
 
