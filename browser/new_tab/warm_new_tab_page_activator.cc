@@ -67,9 +67,13 @@ void WarmNewTabPageActivator::WarmForBrowser(BrowserWindowInterface* browser) {
   }
   // Never warm a windowless browser (headless/automation): an ownerless warm
   // chrome://newtab tore down the headless browser the icon gate drives.
+  // Growser-352: nor a browser test - a WebContents nobody asked for breaks
+  // tests that count them, serve chrome:// themselves or run single-process.
+  const base::CommandLine* command_line =
+      base::CommandLine::ForCurrentProcess();
   if (headless::IsHeadlessMode() ||
-      base::CommandLine::ForCurrentProcess()->HasSwitch(
-          ::switches::kEnableAutomation)) {
+      command_line->HasSwitch(::switches::kEnableAutomation) ||
+      command_line->HasSwitch(::switches::kTestType)) {
     return;
   }
   // Growser-174: Chromium 153 moved SupportsWindowFeature off Browser and onto
