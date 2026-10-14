@@ -35,6 +35,8 @@ source_set("browser_tests") {
     "//brave/components/brave_shields/core/common",
     "//brave/components/brave_user_agent/browser",
     "//brave/components/brave_user_agent/common",
+    # Growser-352: the services key test reads the key and the updater host.
+    "//brave/components/constants",
     "//brave/components/geolocation",
     "//brave/components/safebrowsing",
     "//brave/components/global_privacy_control",
@@ -42,6 +44,7 @@ source_set("browser_tests") {
     "//brave/components/query_filter/common",
     "//brave/components/static_redirect_helper",
     "//brave/components/tor/buildflags",
+    "//brave/components/update_client:buildflags",  # Growser-352
     "//chrome/browser",
     "//chrome/browser:browser_process",
     "//chrome/browser/content_settings:content_settings_factory",
