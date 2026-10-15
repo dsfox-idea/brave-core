@@ -5,6 +5,8 @@
 
 #include "chrome/browser/policy/chrome_browser_policy_connector.h"
 
+#include "brave/components/growser_policy/buildflags/buildflags.h"  // Growser-358
+
 // Forward declare functions that will be implemented in
 // brave_browser_policy_provider.cc This is done so that we don't need to depend
 // on anything in the brave layer here. Otherwise we'd have a circular
@@ -26,8 +28,16 @@ namespace policy {
 
 std::vector<std::unique_ptr<policy::ConfigurationPolicyProvider>>
 ChromeBrowserPolicyConnector::CreatePolicyProviders() {
+#if BUILDFLAG(GROWSER_ENABLE_EXTERNAL_POLICY)  // Growser-358
   auto providers =
       ChromeBrowserPolicyConnector::CreatePolicyProviders_ChromiumImpl();
+#else
+  // Growser-358: none of Chromium's external providers - platform (registry,
+  // managed plist, policy JSON, Android MDM), cloud management, command line.
+  // Nothing written outside the browser can manage it; Brave's own provider
+  // below is the only source.
+  std::vector<std::unique_ptr<policy::ConfigurationPolicyProvider>> providers;
+#endif
   // Add browser policy provider for browser-level (local state) policies
   auto brave_browser_provider =
       ::brave_policy::CreateBraveBrowserPolicyProvider();

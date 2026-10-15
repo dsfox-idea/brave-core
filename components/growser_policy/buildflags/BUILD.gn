@@ -1,0 +1,13 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+import("//brave/build/growser.gni")
+import("//build/buildflag_header.gni")
+
+buildflag_header("buildflags") {
+  header = "buildflags.h"
+  flags =
+      [ "GROWSER_ENABLE_EXTERNAL_POLICY=$growser_enable_external_policy" ]
+}

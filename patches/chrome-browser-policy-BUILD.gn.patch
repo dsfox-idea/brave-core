@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/policy/BUILD.gn b/chrome/browser/policy/BUILD.gn
+index 2bb59d3e6217e3e126ab73b331940b2f66cdb7ff..d3c94be9a363c996c727c9f734b5d22b9dabe767 100644
+--- a/chrome/browser/policy/BUILD.gn
++++ b/chrome/browser/policy/BUILD.gn
+@@ -1261,6 +1261,7 @@ source_set("impl") {
+   deps = [
+     ":path_parser",
+     ":policy_util",
++    "//brave/components/growser_policy/buildflags",  # Growser-358
+     "//chrome/browser:browser_features",
+     "//chrome/browser:browser_process_platform_part",
+     "//chrome/browser/bookmarks",

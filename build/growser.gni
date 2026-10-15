@@ -22,4 +22,12 @@ declare_args() {
   # set the flag too. Without it the binaries differ - in the icon, and only
   # there.
   growser_public_release = false
+
+  # growser (#358): whether anything outside the browser may manage it. Off,
+  # the browser builds none of Chromium's external policy providers - the
+  # platform one (registry, managed plist, policy JSON directory, Android
+  # MDM, iOS managed app config), cloud management, command-line policies -
+  # so no file or key written by an admin, an MDM or a hijacker reaches it.
+  # Brave's own browser-level provider stays: Brave keeps settings on it.
+  growser_enable_external_policy = false
 }

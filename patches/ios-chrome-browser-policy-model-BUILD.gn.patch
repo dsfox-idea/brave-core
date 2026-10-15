@@ -1,0 +1,12 @@
+diff --git a/ios/chrome/browser/policy/model/BUILD.gn b/ios/chrome/browser/policy/model/BUILD.gn
+index d26e34e0f355d24071305848bb48ffed1eed49c5..27205b8376d1273ae5dd8d2ab262621d6d84ecba 100644
+--- a/ios/chrome/browser/policy/model/BUILD.gn
++++ b/ios/chrome/browser/policy/model/BUILD.gn
+@@ -75,6 +75,7 @@ source_set("model") {
+     ":policy_util",
+     ":saas_usage_reporting",
+     "//base",
++    "//brave/components/growser_policy/buildflags",  # Growser-358
+     "//components/account_id",
+     "//components/autofill/core/browser",
+     "//components/autofill/core/browser/policy",
