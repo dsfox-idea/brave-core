@@ -87,6 +87,7 @@
 
 #if defined(USE_AURA)
 #include "chrome/browser/ui/views/frame/opaque_browser_frame_view.h"
+#include "ui/aura/client/cursor_client.h"  // Growser-356
 #include "ui/aura/test/ui_controls_aurawin.h"
 #include "ui/aura/window.h"
 #endif
@@ -119,6 +120,20 @@ class VerticalTabStripBrowserTest : public InProcessBrowserTest {
   void ToggleVerticalTabStrip() {
     brave::ToggleVerticalTabStrip(browser());
     browser_non_client_frame_view()->DeprecatedLayoutImmediately();
+  }
+
+  // Growser-356: the region view picks floating over collapsed when
+  // IsMouseHovered(), which reads the machine's real cursor - so a test
+  // asserting kCollapsed failed whenever the mouse rested where the test
+  // window opened. With mouse events disabled the widget reports no hover.
+  // Call it right before synchronous asserts: real input processed later
+  // turns mouse events back on. No-op off aura, where this was never seen.
+  void IgnoreRealCursor() {
+#if defined(USE_AURA)
+    aura::client::GetCursorClient(
+        browser_view()->GetWidget()->GetNativeWindow()->GetRootWindow())
+        ->DisableMouseEvents();
+#endif
   }
 
   void AppendTab(BrowserWindowInterface* browser) {
@@ -402,6 +417,7 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripBrowserTest, VisualState) {
       prefs::kSidePanelHorizontalAlignment, true);
 
   ToggleVerticalTabStrip();
+  IgnoreRealCursor();  // Growser-356
 
   // Pre-condition: Floating mode is enabled by default.
   using State = BraveVerticalTabStripRegionView::State;
@@ -2320,6 +2336,7 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripHideCompletelyTest,
 IN_PROC_BROWSER_TEST_F(VerticalTabStripBrowserTest,
                        HidingToggleButtonCollapsesAndForcesFloating) {
   ToggleVerticalTabStrip();
+  IgnoreRealCursor();  // Growser-356
 
   auto* prefs = browser()->GetProfile()->GetPrefs();
   auto* container_view =
