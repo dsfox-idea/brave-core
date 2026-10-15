@@ -522,7 +522,8 @@
         "params": [
             "igsh",
             "igshid",
-            "ig_rid"
+            "ig_rid",
+            "stkn"
         ]
     },
     {
@@ -1173,7 +1174,14 @@
             "guce_referrer",
             "guce_referrer_sig",
             "ex_cid",
-            "eblastId"
+            "eblastId",
+            "hootPostID",
+            "tw_source",
+            "tw_adid",
+            "tw_campaign",
+            "tw_term",
+            "tw_content",
+            "tw_kwdid"
         ]
     },
     {
@@ -1220,6 +1228,20 @@
         ],
         "params": [
             "CMP"
+        ]
+    },
+    {
+        "include": [
+            "*://www.immobilienscout24.de/*"
+        ],
+        "exclude": [
+
+        ],
+        "params": [
+            "referrer",
+            "searchId",
+            "searchType",
+            "imgOrder"
         ]
     }
 ]
