@@ -29,6 +29,7 @@ source_set("android_browser_process") {
     # Growser-328: Brave's Play-services Safe Browsing switch and key are gone.
     "//brave/browser/brave_origin/android:jni_headers",
     "//brave/browser/brave_shields",
+    "//brave/browser/image_metadata_stripper",
     "//brave/build/android:jni_headers",
     "//brave/components/brave_ads/buildflags",
     "//brave/components/brave_shields/content/browser",
@@ -39,6 +40,7 @@ source_set("android_browser_process") {
     "//brave/components/brave_sync:prefs",
     "//brave/components/brave_sync:sync_service_impl_helper",
     "//brave/components/brave_sync:time_limited_codes",
+    "//brave/components/image_metadata_stripper/common",
     "//chrome/android:jni_headers",
     "//chrome/browser:browser_process",
     "//chrome/browser:browser_public_dependencies",
@@ -86,8 +88,10 @@ source_set("tabs_impl") {
   deps = [
     ":tabs_public",
     "//base",
+    "//brave/browser/image_metadata_stripper",
     "//brave/browser/misc_metrics:misc_metrics_impl",
     "//brave/components/ai_chat/core/common/buildflags",
+    "//brave/components/image_metadata_stripper/common",
     "//brave/components/misc_metrics",
     "//chrome/browser/profiles:profile",
     "//content/public/browser",

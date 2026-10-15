@@ -121,6 +121,18 @@
 /* Settings autofill section title */
 "autofill.settings.title" = "Автоматично попълване";
 
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with the current downloaded amount (e.g. '20MB') */
+"backgroundDownloadingSubtitle" = "%@";
+
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with a progress and a file size. E.g. '1MB of 20MB' */
+"backgroundDownloadingSubtitleWithExpectedSize" = "%1$@ от %2$@";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %lld is replaced with the number of active downloads */
+"backgroundDownloadingTitleMultiDownload" = "Изтегляне на %lld файла";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %@ is replaced with a file name */
+"backgroundDownloadingTitleSingleDownload" = "Изтегляне на „%@“";
+
 /* cookie settings option */
 "Block3rdPartyCookies" = "Блокиране на бисквитки на трети страни";
 
@@ -1774,6 +1786,18 @@
 /* Accessibility text for an icon button which will go back to the previous page in QuickView mode. */
 "quickview.back.accessibility.label" = "Предишна страница";
 
+/* Button title to keep opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.keep.button.title" = "Продължи с QuickView";
+
+/* Message of the alert shown the first time a user closes QuickView, explaining the feature and where to change it. */
+"quickview.confirmation.alert.message" = "QuickView ви позволява да преглеждате връзки, без да напускате страницата си. Можете да изключите това по всяко време в Настройки.";
+
+/* Title of the alert shown the first time a user closes QuickView, asking if they want to keep using it for future links. */
+"quickview.confirmation.alert.title" = "Да продължи ли отварянето на връзки от разговора в Quick View?";
+
+/* Button title to stop opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.turnOff.button.title" = "Изключване";
+
 /* Accessibility text for an icon button which will go forward to the next page in QuickView mode. */
 "quickview.forward.accessibility.label" = "Следваща страница";
 
@@ -2299,7 +2323,7 @@
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Изпращане на доклад";
 
-/* No comment provided by engineer. */
+/* A callout that explains how to set Brave as the default browser. This is a markdown string, the ** is for bold. */
 "setDefaultBrowserCalloutTitle" = "Growser вече може да бъде зададен като браузър по подразбиране в iOS. Докосни тук, за да отвориш настройките.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
@@ -2379,6 +2403,18 @@
 
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Автоматично изпращане на ping за ежедневното използване до Growser";
+
+/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
+"settings.sponsoredAdsEnabledDescription" = "Помогнете за подкрепата на мисията на Growser да изгради независим, ориентиран към потребителя интернет със спонсорирани реклами. Измерваме ефективността на рекламите поверително, без да ви идентифицираме. [Научете повече](%@)";
+
+/* Title of the settings toggle that enables Sponsored Ads */
+"settings.sponsoredAdsEnabledTitle" = "Активиране на спонсорираните реклами";
+
+/* Description to explain the survey panelist toggle */
+"settings.surveyPanelistDescription" = "Позволява на Growser да показва връзки към поверителни анкети в страницата на нов раздел. Тези анкети ни помагат да създаваме по-добри функции и да измерваме ефективността на рекламните кампании в браузъра. [Научи повече](%@)";
+
+/* Title to explain the survey panelist toggle */
+"settings.surveyPanelistTitle" = "Разрешаване на анкети в Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -3536,5 +3572,3 @@
 /* No comment provided by engineer. */
 "SiteReportedBody" = "Благодарим ви, че уведомихте разработчиците на Growser, че в този сайт има нещо нередно. Ще направим всичко възможно да го поправим!";
 "ntp.settingsSponsoredImagesAndVideosSelection" = "Спонсорирани изображения и видеа";
-"settings.surveyPanelistDescription" = "Позволява на Growser да показва връзки към поверителни анкети в страницата на нов раздел. Тези анкети ни помагат да създаваме по-добри функции и да измерваме ефективността на рекламните кампании в браузъра. [Научи повече](%@)";
-"settings.surveyPanelistTitle" = "Разрешаване на анкети в Growser";

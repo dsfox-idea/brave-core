@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 
 import org.chromium.base.BraveReflectionUtil;
 import org.chromium.base.Callback;
+import org.chromium.base.supplier.NonNullObservableSupplier;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.browser.app.BraveActivity;
@@ -78,7 +79,8 @@ class BraveAutocompleteMediator extends AutocompleteMediator
             WindowAndroid windowAndroid,
             DeferredIMEWindowInsetApplicationCallback deferredIMEWindowInsetApplicationCallback,
             FuseboxCoordinator fuseboxCoordinator,
-            LocationBarEmbedderUiOverrides uiOverrides) {
+            LocationBarEmbedderUiOverrides uiOverrides,
+            NonNullObservableSupplier<Boolean> urlTextWrappingSupplier) {
         super(
                 context,
                 resourceProvider,
@@ -98,7 +100,8 @@ class BraveAutocompleteMediator extends AutocompleteMediator
                 windowAndroid,
                 deferredIMEWindowInsetApplicationCallback,
                 fuseboxCoordinator,
-                uiOverrides);
+                uiOverrides,
+                urlTextWrappingSupplier);
 
         mDelegate = delegate;
         mActivityTabSupplier = activityTabSupplier;

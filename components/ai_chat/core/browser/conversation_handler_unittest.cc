@@ -7,6 +7,7 @@
 
 #include <algorithm>
 #include <cstdint>
+#include <map>
 #include <memory>
 #include <optional>
 #include <string>
@@ -4055,6 +4056,193 @@ TEST_F(ConversationHandlerUnitTest, ToolUseEvents_ArtifactStoredInHistory) {
   EXPECT_EQ(tool_event->artifacts->at(0)->content_json, kArtifactContentJson);
 }
 
+// Content a tool adds (e.g. a workspace) is associated with the assistant entry
+// whose tool use added it, so it's persisted with that answer rather than with
+// the user's next message, and is removed when that answer is regenerated,
+// letting the regenerated answer add it again.
+TEST_F(ConversationHandlerUnitTest,
+       ToolUseEvents_ContentAddedByToolIsAssociatedWithAssistantEntry) {
+  AssociatedContentManager* manager =
+      conversation_handler_->associated_content_manager();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+  // Sent with the human entry, so content is next persisted only once it has
+  // changed. Non-empty, so no screenshots are taken in place of its text.
+  associated_content_->SetTextContent("page content");
+
+  NiceMock<MockConversationHandlerObserver> observer;
+  observer.Observe(conversation_handler_.get());
+
+  auto tool1 =
+      std::make_unique<NiceMock<MockTool>>("content_tool", "Adds content");
+  tool1->set_requires_user_interaction_before_handling(false);
+  ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
+    std::vector<base::WeakPtr<Tool>> tools;
+    tools.push_back(tool1->GetWeakPtr());
+    return tools;
+  });
+
+  auto respond_with_tool_use =
+      [](EngineConsumer::GenerationDataCallback callback) {
+        callback.Run(EngineConsumer::GenerationResultData(
+            mojom::ConversationEntryEvent::NewToolUseEvent(
+                mojom::ToolUseEvent::New("content_tool", "tool_id_1", "{}",
+                                         std::nullopt, std::nullopt, nullptr,
+                                         false)),
+            std::nullopt));
+      };
+  auto complete = [](EngineConsumer::GenerationCompletedCallback callback) {
+    std::move(callback).Run(base::ok(EngineConsumer::GenerationResultData(
+        mojom::ConversationEntryEvent::NewCompletionEvent(
+            mojom::CompletionEvent::New("")),
+        std::nullopt)));
+  };
+  auto respond_with_text = [](EngineConsumer::GenerationDataCallback callback) {
+    callback.Run(EngineConsumer::GenerationResultData(
+        mojom::ConversationEntryEvent::NewCompletionEvent(
+            mojom::CompletionEvent::New("Done")),
+        std::nullopt));
+  };
+
+  std::string content_uuid;
+  base::RunLoop run_loop;
+  testing::Sequence seq;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .InSequence(seq)
+      .WillOnce(testing::DoAll(testing::WithArg<6>(respond_with_tool_use),
+                               testing::WithArg<7>(complete)));
+  EXPECT_CALL(*tool1, UseTool(StrEq("{}"), _))
+      .InSequence(seq)
+      .WillOnce(testing::WithArg<1>([&](Tool::UseToolCallback callback) {
+        auto content = std::make_unique<NiceMock<MockAssociatedContent>>();
+        content->SetTextContent("tool content");
+        content_uuid = content->uuid();
+        manager->AddOwnedContent(std::move(content));
+        conversation_handler_->AssociateContentWithToolUseEntry(content_uuid);
+        std::move(callback).Run(CreateContentBlocksForText("Added"), {});
+      }));
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .InSequence(seq)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(respond_with_text),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                complete(std::move(callback));
+                run_loop.QuitWhenIdle();
+              })));
+
+  // The number of contents each entry is persisted with, by entry uuid.
+  std::map<std::string, size_t> persisted_content_counts;
+  EXPECT_CALL(observer,
+              OnConversationEntryAdded(conversation_handler_.get(), _, _))
+      .WillRepeatedly([&](ConversationHandler*,
+                          mojom::ConversationTurnPtr& entry,
+                          std::optional<PageContents> contents) {
+        persisted_content_counts[entry->uuid.value()] =
+            contents ? contents->size() : 0;
+      });
+
+  conversation_handler_->SubmitHumanConversationEntry("Add content",
+                                                      std::nullopt);
+  run_loop.Run();
+  testing::Mock::VerifyAndClearExpectations(&observer);
+  testing::Mock::VerifyAndClearExpectations(engine);
+
+  // Human entry, the assistant entry with the tool use, then its answer.
+  const auto& history = conversation_handler_->GetConversationHistory();
+  ASSERT_EQ(history.size(), 3u);
+  EXPECT_EQ(history[1]->character_type, mojom::CharacterType::ASSISTANT);
+  const std::string tool_use_entry_uuid = history[1]->uuid.value();
+
+  auto associated_content = manager->GetAssociatedContent();
+  ASSERT_EQ(associated_content.size(), 2u);
+  EXPECT_EQ(associated_content[0]->conversation_turn_uuid, history[0]->uuid);
+  EXPECT_EQ(associated_content[1]->uuid, content_uuid);
+  EXPECT_EQ(associated_content[1]->conversation_turn_uuid, tool_use_entry_uuid);
+
+  // The tool use entry was persisted (with the page content) before the tool
+  // ran, so the tool's content is persisted with the answer that follows it.
+  EXPECT_EQ(persisted_content_counts[tool_use_entry_uuid], 1u);
+  EXPECT_EQ(persisted_content_counts[history[2]->uuid.value()], 2u);
+
+  // Regenerating the answer removes the tool's content along with the entry,
+  // keeping the content sent with the human entry, which is resubmitted.
+  base::RunLoop regenerate_run_loop;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(respond_with_text),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                complete(std::move(callback));
+                regenerate_run_loop.QuitWhenIdle();
+              })));
+  conversation_handler_->RegenerateAnswer(tool_use_entry_uuid, "");
+  regenerate_run_loop.Run();
+
+  associated_content = manager->GetAssociatedContent();
+  ASSERT_EQ(associated_content.size(), 1u);
+  EXPECT_EQ(associated_content[0]->uuid, associated_content_->uuid());
+}
+
+// Content added outside of a tool use isn't associated with an assistant entry,
+// so it stays staged for the user's next message.
+TEST_F(ConversationHandlerUnitTest,
+       AssociateContentWithToolUseEntry_NoToolUseInProgress) {
+  AssociatedContentManager* manager =
+      conversation_handler_->associated_content_manager();
+  manager->ClearContent();
+  SetupHistory({{"question", false}, {"answer", false}});
+
+  auto content = std::make_unique<NiceMock<MockAssociatedContent>>();
+  const std::string content_uuid = content->uuid();
+  manager->AddOwnedContent(std::move(content));
+  conversation_handler_->AssociateContentWithToolUseEntry(content_uuid);
+
+  auto associated_content = manager->GetAssociatedContent();
+  ASSERT_EQ(associated_content.size(), 1u);
+  EXPECT_FALSE(associated_content[0]->conversation_turn_uuid.has_value());
+}
+
+// Content associated with a human entry is kept when an answer is regenerated,
+// as the human entry is resubmitted.
+TEST_F(ConversationHandlerUnitTest,
+       RegenerateAnswer_KeepsContentAssociatedWithHumanEntry) {
+  AssociatedContentManager* manager =
+      conversation_handler_->associated_content_manager();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+  associated_content_->SetTextContent("content");
+
+  // Associates the fixture's content with the human entry.
+  auto history = SetupHistory({{"question", false}, {"answer", false}});
+  auto associated_content = manager->GetAssociatedContent();
+  ASSERT_EQ(associated_content.size(), 1u);
+  ASSERT_EQ(associated_content[0]->conversation_turn_uuid, history[0]->uuid);
+
+  base::RunLoop run_loop;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .WillOnce(testing::DoAll(
+          base::test::RunOnceCallback<6>(EngineConsumer::GenerationResultData(
+              mojom::ConversationEntryEvent::NewCompletionEvent(
+                  mojom::CompletionEvent::New("regenerated answer")),
+              std::nullopt)),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        mojom::ConversationEntryEvent::NewCompletionEvent(
+                            mojom::CompletionEvent::New("")),
+                        std::nullopt)));
+                run_loop.QuitWhenIdle();
+              })));
+  conversation_handler_->RegenerateAnswer(history[1]->uuid.value(), "");
+  run_loop.Run();
+
+  associated_content = manager->GetAssociatedContent();
+  ASSERT_EQ(associated_content.size(), 1u);
+  EXPECT_EQ(associated_content[0]->conversation_turn_uuid, history[0]->uuid);
+}
+
 TEST_F(ConversationHandlerUnitTest, ToolUseEvents_HandleErrorResponse) {
   conversation_handler_->associated_content_manager()->ClearContent();
   // Setup multiple tools with only 1 being called
@@ -6648,7 +6836,7 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge) {
                         "is off-topic",  // assessment
                         std::nullopt,    // plan
                         std::nullopt,    // description
-                        /*supports_allow_session=*/false),
+                        std::nullopt, /*supports_allow_session=*/false),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
                     mojom::ConversationEntryEvent::NewToolUseEvent(
@@ -6723,6 +6911,16 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge) {
       .WillOnce(
           testing::InvokeWithoutArgs([&second_loop]() { second_loop.Quit(); }));
 
+  // The tool is told which challenge the user answered, so it can tell the
+  // server's alignment check from one of its own.
+  EXPECT_CALL(*tool1,
+              UserPermissionGranted(
+                  StrEq("tool_id_1"),
+                  testing::Field(
+                      &mojom::PermissionChallenge::assessment,
+                      testing::Optional(StrEq("Server determined this tool use "
+                                              "is off-topic")))));
+
   // User approves permission
   conversation_handler_->ProcessPermissionChallenge(
       "tool_id_1", mojom::PermissionChallengeDecision::kAllowOnce);
@@ -6766,7 +6964,7 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_ToolReturnsChallenge) {
                 std::nullopt,                           // assessment
                 "This tool needs to manage your tabs",  // plan
                 std::nullopt,                           // description
-                /*supports_allow_session=*/false));
+                std::nullopt, /*supports_allow_session=*/false));
       });
 
   ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
@@ -6856,10 +7054,10 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_UserAllowsForSession) {
   manager->UpdateToolsForNewGenerationLoop(loaded.GetCallback());
   ASSERT_TRUE(loaded.Wait());
 
-  StageHaltedToolUse(
-      conversation_handler_.get(), "cancel_cart",
-      mojom::PermissionChallenge::New(std::nullopt, std::nullopt, std::nullopt,
-                                      /*supports_allow_session=*/true));
+  StageHaltedToolUse(conversation_handler_.get(), "cancel_cart",
+                     mojom::PermissionChallenge::New(
+                         std::nullopt, std::nullopt, std::nullopt, std::nullopt,
+                         /*supports_allow_session=*/true));
 
   conversation_handler_->ProcessPermissionChallenge(
       "tool_id_1", mojom::PermissionChallengeDecision::kAllowSession);
@@ -6892,10 +7090,10 @@ TEST_F(ConversationHandlerUnitTest,
   manager->UpdateToolsForNewGenerationLoop(loaded.GetCallback());
   ASSERT_TRUE(loaded.Wait());
 
-  StageHaltedToolUse(
-      conversation_handler_.get(), "cancel_cart",
-      mojom::PermissionChallenge::New(std::nullopt, std::nullopt, std::nullopt,
-                                      /*supports_allow_session=*/true));
+  StageHaltedToolUse(conversation_handler_.get(), "cancel_cart",
+                     mojom::PermissionChallenge::New(
+                         std::nullopt, std::nullopt, std::nullopt, std::nullopt,
+                         /*supports_allow_session=*/true));
 
   conversation_handler_->ProcessPermissionChallenge(
       "tool_id_1", mojom::PermissionChallengeDecision::kDeny);
@@ -6936,10 +7134,10 @@ TEST_F(ConversationHandlerUnitTest,
   manager->UpdateToolsForNewGenerationLoop(loaded.GetCallback());
   ASSERT_TRUE(loaded.Wait());
 
-  StageHaltedToolUse(
-      conversation_handler_.get(), "cancel_cart",
-      mojom::PermissionChallenge::New("Off-topic", std::nullopt, std::nullopt,
-                                      /*supports_allow_session=*/false));
+  StageHaltedToolUse(conversation_handler_.get(), "cancel_cart",
+                     mojom::PermissionChallenge::New(
+                         "Off-topic", std::nullopt, std::nullopt, std::nullopt,
+                         /*supports_allow_session=*/false));
 
   conversation_handler_->ProcessPermissionChallenge(
       "tool_id_1", mojom::PermissionChallengeDecision::kAllowSession);
@@ -7129,7 +7327,7 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_UserDeniesPermission) {
                                 "is off-topic",  // assessment
                                 std::nullopt,    // plan
                                 std::nullopt,    // description
-                                /*supports_allow_session=*/false),
+                                std::nullopt, /*supports_allow_session=*/false),
                             false)),
                     std::nullopt));
                 // Second tool use
@@ -7215,7 +7413,7 @@ TEST_F(ConversationHandlerUnitTest,
                 std::nullopt,  // assessment
                 "Client-side: This tool needs to access your tabs",  // plan
                 std::nullopt,  // description
-                /*supports_allow_session=*/false));
+                std::nullopt, /*supports_allow_session=*/false));
       });
 
   ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
@@ -7240,7 +7438,7 @@ TEST_F(ConversationHandlerUnitTest,
                     std::nullopt, std::nullopt,
                     mojom::PermissionChallenge::New(
                         "Server-side: This tool use needs alignment check",
-                        std::nullopt, std::nullopt,
+                        std::nullopt, std::nullopt, std::nullopt,
                         /*supports_allow_session=*/false),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
@@ -7367,7 +7565,7 @@ TEST_F(ConversationHandlerUnitTest,
                     "test_tool", "tool_id_1", "{}", std::nullopt, std::nullopt,
                     mojom::PermissionChallenge::New(
                         "Server determined this tool use is off-topic",
-                        std::nullopt, std::nullopt,
+                        std::nullopt, std::nullopt, std::nullopt,
                         /*supports_allow_session=*/false),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
@@ -7399,6 +7597,80 @@ TEST_F(ConversationHandlerUnitTest,
   EXPECT_EQ(
       tool_event->permission_challenge->description,
       "Brave AI would like to execute **thing** on **https://example.com**");
+}
+
+TEST_F(ConversationHandlerUnitTest,
+       PermissionChallenge_ServerChallengeDecoratedWithToolImplications) {
+  // Granting a challenge the server's alignment check raised also grants
+  // whatever the Tool's implications disclose. Verify that ConversationHandler
+  // shows the Tool's implications on that challenge, and that the Tool is
+  // told the user answered it with them.
+  conversation_handler_->associated_content_manager()->ClearContent();
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+
+  auto tool1 = std::make_unique<NiceMock<MockTool>>("test_tool", "Test tool");
+  constexpr char kImplications[] = "Allowing this will send **page text**";
+  ON_CALL(*tool1, GetPermissionChallengeImplications)
+      .WillByDefault(
+          [&](const mojom::ToolUseEvent& tool_use) { return kImplications; });
+  EXPECT_CALL(*tool1, RequiresUserInteractionBeforeHandling).Times(0);
+
+  ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
+    std::vector<base::WeakPtr<Tool>> tools;
+    tools.push_back(tool1->GetWeakPtr());
+    return tools;
+  });
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+
+  base::RunLoop loop;
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                auto tool_use = mojom::ToolUseEvent::New(
+                    "test_tool", "tool_id_1", "{}", std::nullopt, std::nullopt,
+                    mojom::PermissionChallenge::New(
+                        "Server determined this tool use is off-topic",
+                        std::nullopt, std::nullopt, std::nullopt,
+                        /*supports_allow_session=*/false),
+                    false);
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewToolUseEvent(
+                        std::move(tool_use)),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        mojom::ConversationEntryEvent::NewCompletionEvent(
+                            mojom::CompletionEvent::New("")),
+                        std::nullopt)));
+                loop.Quit();
+              })));
+
+  conversation_handler_->SubmitHumanConversationEntry("Test", std::nullopt);
+  loop.Run();
+
+  const auto& history = conversation_handler_->GetConversationHistory();
+  auto* tool_event =
+      history.back()->events.value()[0]->get_tool_use_event().get();
+  ASSERT_TRUE(tool_event->permission_challenge);
+  EXPECT_EQ(tool_event->permission_challenge->assessment,
+            "Server determined this tool use is off-topic");
+  EXPECT_EQ(tool_event->permission_challenge->implications, kImplications);
+
+  testing::Mock::VerifyAndClearExpectations(tool1.get());
+  EXPECT_CALL(*tool1, UserPermissionGranted(
+                          "tool_id_1",
+                          testing::Field(
+                              &mojom::PermissionChallenge::implications,
+                              testing::Optional(std::string(kImplications)))));
+  conversation_handler_->ProcessPermissionChallenge(
+      "tool_id_1", mojom::PermissionChallengeDecision::kAllowOnce);
+  testing::Mock::VerifyAndClearExpectations(tool1.get());
 }
 
 TEST_F(ConversationHandlerUnitTest, OnTaskStateChanged_Paused) {

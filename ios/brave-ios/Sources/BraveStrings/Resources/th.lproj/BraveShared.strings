@@ -121,6 +121,18 @@
 /* Settings autofill section title */
 "autofill.settings.title" = "ป้อนอัตโนมัติ";
 
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with the current downloaded amount (e.g. '20MB') */
+"backgroundDownloadingSubtitle" = "%@";
+
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with a progress and a file size. E.g. '1MB of 20MB' */
+"backgroundDownloadingSubtitleWithExpectedSize" = "%1$@ จาก %2$@";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %lld is replaced with the number of active downloads */
+"backgroundDownloadingTitleMultiDownload" = "กำลังดาวน์โหลด %lld ไฟล์";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %@ is replaced with a file name */
+"backgroundDownloadingTitleSingleDownload" = "กำลังดาวน์โหลด \"%@\"";
+
 /* cookie settings option */
 "Block3rdPartyCookies" = "บล็อกคุกกี้จากบุคคลที่ 3";
 
@@ -1774,6 +1786,18 @@
 /* Accessibility text for an icon button which will go back to the previous page in QuickView mode. */
 "quickview.back.accessibility.label" = "หน้าก่อนหน้า";
 
+/* Button title to keep opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.keep.button.title" = "ใช้ QuickView ต่อไป";
+
+/* Message of the alert shown the first time a user closes QuickView, explaining the feature and where to change it. */
+"quickview.confirmation.alert.message" = "QuickView ให้คุณดูตัวอย่างลิงก์ได้โดยไม่ต้องออกจากหน้าของคุณ คุณสามารถปิดได้ทุกเมื่อในการตั้งค่า";
+
+/* Title of the alert shown the first time a user closes QuickView, asking if they want to keep using it for future links. */
+"quickview.confirmation.alert.title" = "ต้องการเปิดลิงก์การสนทนาใน Quick View ต่อไปหรือไม่?";
+
+/* Button title to stop opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.turnOff.button.title" = "ปิด";
+
 /* Accessibility text for an icon button which will go forward to the next page in QuickView mode. */
 "quickview.forward.accessibility.label" = "หน้าถัดไป";
 
@@ -2299,7 +2323,7 @@
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "ส่งรายงาน";
 
-/* No comment provided by engineer. */
+/* A callout that explains how to set Brave as the default browser. This is a markdown string, the ** is for bold. */
 "setDefaultBrowserCalloutTitle" = "ตอนนี้ Growser สามารถตั้งค่าเป็นเบราว์เซอร์เริ่มต้นใน iOS ได้แล้ว แตะที่นี่เพื่อเปิดการตั้งค่า";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
@@ -2379,6 +2403,18 @@
 
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "ส่งปิงการใช้งานรายวันไปยัง Growser โดยอัตโนมัติ";
+
+/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
+"settings.sponsoredAdsEnabledDescription" = "ช่วยสนับสนุนภารกิจของ Growser ในการสร้างเว็บที่เป็นอิสระและให้ผู้ใช้มาก่อนด้วยโฆษณาสปอนเซอร์ เราวัดประสิทธิภาพโฆษณาแบบเป็นส่วนตัว โดยไม่ระบุตัวตนของคุณ [เรียนรู้เพิ่มเติม](%@)";
+
+/* Title of the settings toggle that enables Sponsored Ads */
+"settings.sponsoredAdsEnabledTitle" = "เปิดใช้งานโฆษณาสปอนเซอร์";
+
+/* Description to explain the survey panelist toggle */
+"settings.surveyPanelistDescription" = "อนุญาตให้ Growser แสดงลิงก์ไปยังแบบสำรวจส่วนตัวในหน้าแท็บใหม่ แบบสำรวจช่วยให้เราพัฒนาฟีเจอร์ที่ดียิ่งขึ้นและวัดประสิทธิภาพของแคมเปญโฆษณาผ่านเบราว์เซอร์ [เรียนรู้เพิ่มเติม](%@)";
+
+/* Title to explain the survey panelist toggle */
+"settings.surveyPanelistTitle" = "อนุญาตแบบสำรวจของ Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -3528,5 +3564,3 @@
 /* No comment provided by engineer. */
 "SiteReportedBody" = "ขอบคุณที่แจ้งให้ผู้พัฒนา Growser ทราบว่ามีข้อผิดพลาดในเว็บไซต์นี้ เราจะพยายามแก้ไขปัญหานี้อย่างเต็มที่";
 "ntp.settingsSponsoredImagesAndVideosSelection" = "ภาพ & วิดีโอที่ได้รับการสนับสนุน";
-"settings.surveyPanelistDescription" = "อนุญาตให้ Growser แสดงลิงก์ไปยังแบบสำรวจส่วนตัวในหน้าแท็บใหม่ แบบสำรวจช่วยให้เราพัฒนาฟีเจอร์ที่ดียิ่งขึ้นและวัดประสิทธิภาพของแคมเปญโฆษณาผ่านเบราว์เซอร์ [เรียนรู้เพิ่มเติม](%@)";
-"settings.surveyPanelistTitle" = "อนุญาตแบบสำรวจของ Growser";

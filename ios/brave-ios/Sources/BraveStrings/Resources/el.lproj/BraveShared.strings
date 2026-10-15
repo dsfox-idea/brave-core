@@ -121,6 +121,18 @@
 /* Settings autofill section title */
 "autofill.settings.title" = "Αυτόματη συμπλήρωση";
 
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with the current downloaded amount (e.g. '20MB') */
+"backgroundDownloadingSubtitle" = "%@";
+
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with a progress and a file size. E.g. '1MB of 20MB' */
+"backgroundDownloadingSubtitleWithExpectedSize" = "%1$@ από %2$@";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %lld is replaced with the number of active downloads */
+"backgroundDownloadingTitleMultiDownload" = "Λήψη %lld αρχείων";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %@ is replaced with a file name */
+"backgroundDownloadingTitleSingleDownload" = "Λήψη του \"%@\"";
+
 /* cookie settings option */
 "Block3rdPartyCookies" = "Αποκλεισμός cookies τρίτων";
 
@@ -1774,6 +1786,18 @@
 /* Accessibility text for an icon button which will go back to the previous page in QuickView mode. */
 "quickview.back.accessibility.label" = "Προηγούμενη σελίδα";
 
+/* Button title to keep opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.keep.button.title" = "Συνέχεια χρήσης του QuickView";
+
+/* Message of the alert shown the first time a user closes QuickView, explaining the feature and where to change it. */
+"quickview.confirmation.alert.message" = "Το QuickView σας επιτρέπει να κάνετε προεπισκόπηση συνδέσμων χωρίς να εγκαταλείπετε τη σελίδα σας. Μπορείτε να το απενεργοποιήσετε ανά πάσα στιγμή στις Ρυθμίσεις.";
+
+/* Title of the alert shown the first time a user closes QuickView, asking if they want to keep using it for future links. */
+"quickview.confirmation.alert.title" = "Να συνεχιστεί το άνοιγμα συνδέσμων συνομιλίας στο Quick View;";
+
+/* Button title to stop opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.turnOff.button.title" = "Απενεργοποίηση";
+
 /* Accessibility text for an icon button which will go forward to the next page in QuickView mode. */
 "quickview.forward.accessibility.label" = "Επόμενη σελίδα";
 
@@ -2299,7 +2323,7 @@
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Αποστολή αναφοράς";
 
-/* No comment provided by engineer. */
+/* A callout that explains how to set Brave as the default browser. This is a markdown string, the ** is for bold. */
 "setDefaultBrowserCalloutTitle" = "Το Growser μπορεί πλέον να οριστεί ως το προεπιλεγμένο πρόγραμμα περιήγησής σας στο iOS. Πατήστε εδώ για να ανοίξετε τις ρυθμίσεις.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
@@ -2379,6 +2403,18 @@
 
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Αυτόματη αποστολή ping καθημερινής χρήσης στο Growser";
+
+/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
+"settings.sponsoredAdsEnabledDescription" = "Υποστηρίξτε την αποστολή του Growser να δημιουργήσει έναν ανεξάρτητο Ιστό που δίνει προτεραιότητα στον χρήστη με χορηγούμενες διαφημίσεις. Μετράμε την απόδοση των διαφημίσεων ιδιωτικά, χωρίς να σας ταυτοποιούμε. [Μάθετε περισσότερα](%@)";
+
+/* Title of the settings toggle that enables Sponsored Ads */
+"settings.sponsoredAdsEnabledTitle" = "Ενεργοποίηση χορηγούμενων Ads";
+
+/* Description to explain the survey panelist toggle */
+"settings.surveyPanelistDescription" = "Επιτρέπει στο Growser να εμφανίζει συνδέσμους για ιδιωτικές έρευνες στη νέα σελίδα καρτέλας. Οι έρευνες μας βοηθούν να δημιουργήσουμε καλύτερες λειτουργίες και να μετρήσουμε την αποτελεσματικότητα των διαφημιστικών εκστρατειών που βασίζονται στο πρόγραμμα περιήγησης. [Μάθετε περισσότερα](%@)";
+
+/* Title to explain the survey panelist toggle */
+"settings.surveyPanelistTitle" = "Να επιτρέπονται οι έρευνες Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -3534,5 +3570,3 @@
 /* No comment provided by engineer. */
 "SiteReportedBody" = "Ευχαριστούμε που ενημερώσατε τους προγραμματιστές του Growser ότι υπάρχει κάποιο πρόβλημα μ' αυτόν τον ιστότοπο. Θα κάνουμε το καλύτερο δυνατό για να το διορθώσουμε!";
 "ntp.settingsSponsoredImagesAndVideosSelection" = "Χορηγούμενες εικόνες & βίντεο";
-"settings.surveyPanelistDescription" = "Επιτρέπει στο Growser να εμφανίζει συνδέσμους για ιδιωτικές έρευνες στη νέα σελίδα καρτέλας. Οι έρευνες μας βοηθούν να δημιουργήσουμε καλύτερες λειτουργίες και να μετρήσουμε την αποτελεσματικότητα των διαφημιστικών εκστρατειών που βασίζονται στο πρόγραμμα περιήγησης. [Μάθετε περισσότερα](%@)";
-"settings.surveyPanelistTitle" = "Να επιτρέπονται οι έρευνες Growser";

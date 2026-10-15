@@ -148,6 +148,7 @@ source_set("unit_tests") {
       "constellation/rs/cxx:rust_lib",
       "//brave/components/brave_stats/browser",
       "//components/cbor",
+      "//components/component_updater:test_support",
       "//net",
       "//services/network:test_support",
       "//services/network/public/cpp",

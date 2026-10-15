@@ -20,6 +20,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "base/containers/fixed_flat_set.h"
+#include "base/containers/flat_set.h"
 #include "base/containers/map_util.h"
 #include "base/containers/span.h"
 #include "base/containers/to_vector.h"
@@ -420,6 +421,47 @@ void ConversationHandler::OnContentToolsChanged(
   for (auto& client : conversation_ui_handlers_) {
     client->OnContentToolsChanged(content_uuid, mojo::Clone(tools));
   }
+}
+
+void ConversationHandler::AssociateContentWithToolUseEntry(
+    std::string_view content_uuid) {
+  if (!is_tool_use_in_progress_) {
+    return;
+  }
+
+  // The tool use being handled is in the last entry of the history it's
+  // running in.
+  const auto& history = GetMutableConversationHistory(thread_uuid_in_progress_);
+  if (history.empty() ||
+      history.back()->character_type != CharacterType::ASSISTANT ||
+      !history.back()->uuid.has_value()) {
+    return;
+  }
+
+  if (!associated_content_manager_->AssociateContentWithTurn(
+          content_uuid, history.back()->uuid.value())) {
+    return;
+  }
+
+  // The entry has already been persisted (it was completed before its tool use
+  // was handled), so have the content persisted with the next entry instead.
+  is_content_different_ = true;
+}
+
+void ConversationHandler::RemoveContentAssociatedWithAssistantEntries(
+    base::span<const mojom::ConversationTurnPtr> turns) {
+  base::flat_set<std::string> assistant_entry_uuids;
+  for (const auto& turn : turns) {
+    if (turn->character_type == CharacterType::ASSISTANT &&
+        turn->uuid.has_value()) {
+      assistant_entry_uuids.insert(turn->uuid.value());
+    }
+  }
+  if (assistant_entry_uuids.empty()) {
+    return;
+  }
+  associated_content_manager_->RemoveContentAssociatedWithTurns(
+      assistant_entry_uuids);
 }
 
 bool ConversationHandler::IsAnyClientConnected() {
@@ -988,6 +1030,8 @@ void ConversationHandler::ModifyConversation(
       std::back_inserter(erased_turn_ids),
       [](mojom::ConversationTurnPtr& turn) { return turn->uuid; });
   turn->edits->emplace_back(std::move(edited_turn));
+  RemoveContentAssociatedWithAssistantEntries(
+      base::span(chat_history_).subspan(static_cast<size_t>(turn_index)));
   auto new_turn = std::move(chat_history_.at(turn_index));
   chat_history_.erase(chat_history_.begin() + turn_index, chat_history_.end());
 
@@ -1024,6 +1068,8 @@ void ConversationHandler::RegenerateAnswer(const std::string& turn_uuid,
   std::ranges::transform(
       turns_to_erase, std::back_inserter(erased_turn_ids),
       [](const mojom::ConversationTurnPtr& turn) { return turn->uuid; });
+
+  RemoveContentAssociatedWithAssistantEntries(turns_to_erase);
 
   auto question_turn = std::move(turns_to_erase.front());
   // Specify model key to be used for generating the answer.
@@ -1403,7 +1449,8 @@ void ConversationHandler::ProcessPermissionChallenge(
   }
 
   // User approved - clear the permission challenge
-  tool_use->permission_challenge = nullptr;
+  mojom::PermissionChallengePtr answered_challenge =
+      std::move(tool_use->permission_challenge);
 
   // Notify UI of the state change
   OnToolUseEventOutput(GetMutableConversationHistory(thread_uuid).back().get(),
@@ -1423,10 +1470,8 @@ void ConversationHandler::ProcessPermissionChallenge(
     return;
   }
 
-  // Notify tool that permission was granted. At the moment there is no
-  // need to distinguish between different permission challenges. If that
-  // changes then we can add relevant parameters to this method.
-  tool_ptr->UserPermissionGranted(tool_use_id);
+  // Notify tool that permission was granted, and for which challenge.
+  tool_ptr->UserPermissionGranted(tool_use_id, *answered_challenge);
 
   // Continue with tool execution
   MaybeRespondToNextToolUseRequest(thread_uuid);
@@ -2848,6 +2893,12 @@ bool ConversationHandler::MaybeRespondToNextToolUseRequest(
         if (!tool_use_event->permission_challenge->description && tool_ptr) {
           tool_use_event->permission_challenge->description =
               tool_ptr->GetPermissionChallengeDescription(*tool_use_event);
+        }
+        // Granting it also grants what the Tool's implications disclose, so
+        // they have to be shown on it too.
+        if (!tool_use_event->permission_challenge->implications && tool_ptr) {
+          tool_use_event->permission_challenge->implications =
+              tool_ptr->GetPermissionChallengeImplications(*tool_use_event);
         }
 
         OnToolUseEventOutput(last_entry.get(), tool_use_event.get());

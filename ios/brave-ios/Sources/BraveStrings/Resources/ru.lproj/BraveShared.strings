@@ -121,6 +121,18 @@
 /* Settings autofill section title */
 "autofill.settings.title" = "Автозаполнение";
 
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with the current downloaded amount (e.g. '20MB') */
+"backgroundDownloadingSubtitle" = "%@";
+
+/* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with a progress and a file size. E.g. '1MB of 20MB' */
+"backgroundDownloadingSubtitleWithExpectedSize" = "%@ из %@";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %lld is replaced with the number of active downloads */
+"backgroundDownloadingTitleMultiDownload" = "Загружается файлов: %lld";
+
+/* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %@ is replaced with a file name */
+"backgroundDownloadingTitleSingleDownload" = "Загрузка «%@»";
+
 /* cookie settings option */
 "Block3rdPartyCookies" = "Блокировать сторонние файлы cookie";
 
@@ -1774,6 +1786,18 @@
 /* Accessibility text for an icon button which will go back to the previous page in QuickView mode. */
 "quickview.back.accessibility.label" = "Предыдущая страница";
 
+/* Button title to keep opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.keep.button.title" = "Оставить быстрый просмотр";
+
+/* Message of the alert shown the first time a user closes QuickView, explaining the feature and where to change it. */
+"quickview.confirmation.alert.message" = "Быстрый просмотр открывает ссылку, не уводя со страницы. Отключить его можно в любой момент в настройках.";
+
+/* Title of the alert shown the first time a user closes QuickView, asking if they want to keep using it for future links. */
+"quickview.confirmation.alert.title" = "Открывать ссылки из переписки в быстром просмотре и дальше?";
+
+/* Button title to stop opening links in QuickView after the confirmation alert. */
+"quickview.confirmation.alert.turnOff.button.title" = "Отключить";
+
 /* Accessibility text for an icon button which will go forward to the next page in QuickView mode. */
 "quickview.forward.accessibility.label" = "Следующая страница";
 
@@ -2299,7 +2323,7 @@
 /* Used as a button label for crash dialog prompt */
 "SendReportButtonTitle" = "Отправить отчет";
 
-/* No comment provided by engineer. */
+/* A callout that explains how to set Brave as the default browser. This is a markdown string, the ** is for bold. */
 "setDefaultBrowserCalloutTitle" = "Теперь можно установить Growser в качестве браузера по умолчанию для iOS. Нажмите, чтобы открыть настройки.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
@@ -2379,6 +2403,18 @@
 
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Автоматически отправлять ежедневные данные PING в Growser";
+
+/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
+"settings.sponsoredAdsEnabledDescription" = "Поддержите независимый интернет, в котором на первом месте пользователь, включив спонсорскую рекламу Growser. Эффективность рекламы измеряется конфиденциально, без вашей идентификации. [Подробнее](%@)";
+
+/* Title of the settings toggle that enables Sponsored Ads */
+"settings.sponsoredAdsEnabledTitle" = "Включить спонсорскую рекламу";
+
+/* Description to explain the survey panelist toggle */
+"settings.surveyPanelistDescription" = "Позволяет Growser показывать ссылки на частные опросы на странице новой вкладки. Опросы помогают нам создавать лучшие функции и измерять эффективность рекламных кампаний в браузере. Узнать больше)";
+
+/* Title to explain the survey panelist toggle */
+"settings.surveyPanelistTitle" = "Разрешить опросы Growser";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -3526,24 +3562,11 @@
 /* This is the info text that is presented when a user is submitting a web-compatibility report. */
 "ReportBrokenSiteBody2" = "Примечание. В отчете, который вы отправите на серверы Growser, будет указан адрес сайта, версия Growser, настройки Щита, статус VPN и языковые параметры.";
 "ntp.settingsSponsoredImagesAndVideosSelection" = "Спонсированные изображения & видео";
-"settings.surveyPanelistDescription" = "Позволяет Growser показывать ссылки на частные опросы на странице новой вкладки. Опросы помогают нам создавать лучшие функции и измерять эффективность рекламных кампаний в браузере. Узнать больше)";
-"settings.surveyPanelistTitle" = "Разрешить опросы Growser";
-"backgroundDownloadingSubtitle" = "%@";
-"backgroundDownloadingSubtitleWithExpectedSize" = "%@ из %@";
-"backgroundDownloadingTitleMultiDownload" = "Загружается файлов: %lld";
-"backgroundDownloadingTitleSingleDownload" = "Загрузка «%@»";
-"quickview.confirmation.alert.keep.button.title" = "Оставить быстрый просмотр";
-"quickview.confirmation.alert.message" = "Быстрый просмотр открывает ссылку, не уводя со страницы. Отключить его можно в любой момент в настройках.";
-"quickview.confirmation.alert.title" = "Открывать ссылки из переписки в быстром просмотре и дальше?";
-"quickview.confirmation.alert.turnOff.button.title" = "Отключить";
-"settings.sponsoredAdsEnabledDescription" = "Поддержите независимый интернет, в котором на первом месте пользователь, включив спонсорскую рекламу Growser. Эффективность рекламы измеряется конфиденциально, без вашей идентификации. [Подробнее](%@)";
-"settings.sponsoredAdsEnabledTitle" = "Включить спонсорскую рекламу";
 /* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
 "ntp.topsites" = "Сайты на главной";
 "ntp.topsitesTypeFavorites" = "Избранное";
 "ntp.topsitesTypeMostVisited" = "Часто посещаемые";
 "ntp.topsitesTypeNone" = "Не показывать";
-
 /* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
 "ExcludeMostVisitedSite" = "Удалить";
 "ExcludeMostVisitedSiteAlertMessage" = "Этот сайт не будет показываться в списке часто посещаемых, но из истории он не удалится.";

@@ -31,7 +31,6 @@
 #include "brave/components/sidebar/browser/constants.h"
 #include "brave/components/sidebar/browser/pref_names.h"
 #include "brave/components/sidebar/browser/sidebar_item.h"
-#include "brave/components/sidebar/common/features.h"
 #include "components/grit/brave_components_strings.h"
 #include "components/prefs/pref_registry_simple.h"
 #include "components/prefs/pref_service.h"
@@ -456,7 +455,10 @@ void SidebarService::UpdateSidebarItemsToPrefStore() {
     if (item.type != SidebarItem::Type::kTypeBuiltIn) {
       dict.Set(kSidebarItemURLKey, item.url.spec());
       dict.Set(kSidebarItemTitleKey, base::UTF16ToUTF8(item.title));
-      dict.Set(kSidebarItemOpenInPanelKey, item.open_in_panel);
+      // Store the declared type, not the effective one, so the choice survives
+      // a kSidebarWebPanel toggle.
+      dict.Set(kSidebarItemWebPanelKey,
+               item.panel_type == SidebarItem::PanelType::kWebPanel);
     }
     items.Append(std::move(dict));
   }
@@ -536,7 +538,7 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
         std::ranges::find(items_, type, &SidebarItem::built_in_item_type);
     if (found_item_iter != items_.end()) {
       default_item = *found_item_iter;
-      DCHECK_EQ(default_item->open_in_panel, true);
+      DCHECK(default_item->is_side_panel_type());
       break;
     }
   }
@@ -603,17 +605,17 @@ void SidebarService::LoadSidebarItems() {
       } else {
         continue;
       }
-      bool open_in_panel = false;
-      if (const auto value = item.FindBool(kSidebarItemOpenInPanelKey)) {
-        open_in_panel = *value;
+      auto panel_type = SidebarItem::PanelType::kNone;
+      if (item.FindBool(kSidebarItemWebPanelKey).value_or(false)) {
+        panel_type = SidebarItem::PanelType::kWebPanel;
       }
       std::string title;
       if (const auto* value = item.FindString(kSidebarItemTitleKey)) {
         title = *value;
       }
-      items_.push_back(SidebarItem::Create(
-          GURL(url), base::UTF8ToUTF16(title), type,
-          SidebarItem::BuiltInItemType::kNone, open_in_panel));
+      items_.push_back(
+          SidebarItem::Create(GURL(url), base::UTF8ToUTF16(title), type,
+                              SidebarItem::BuiltInItemType::kNone, panel_type));
     }
   }
 
@@ -686,7 +688,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
             l10n_util::GetStringUTF16(IDS_SIDEBAR_BRAVE_TALK_ITEM_TITLE),
             SidebarItem::Type::kTypeBuiltIn,
             SidebarItem::BuiltInItemType::kBraveTalk,
-            /* open_in_panel = */ false);
+            SidebarItem::PanelType::kWebPanel);
       }
       return SidebarItem();
 #endif  // BUILDFLAG(ENABLE_BRAVE_TALK)
@@ -703,14 +705,14 @@ SidebarItem SidebarService::GetBuiltInItemForType(
               l10n_util::GetStringUTF16(IDS_SIDEBAR_WALLET_ITEM_TITLE),
               SidebarItem::Type::kTypeBuiltIn,
               SidebarItem::BuiltInItemType::kWallet,
-              /* open_in_panel = */ true);
+              SidebarItem::PanelType::kSidePanel);
         }
         return SidebarItem::Create(
             GURL(kBraveUIWalletPageURL),
             l10n_util::GetStringUTF16(IDS_SIDEBAR_WALLET_ITEM_TITLE),
             SidebarItem::Type::kTypeBuiltIn,
             SidebarItem::BuiltInItemType::kWallet,
-            /* open_in_panel = */ false);
+            SidebarItem::PanelType::kNone);
       }
       return SidebarItem();
     }
@@ -720,7 +722,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
           l10n_util::GetStringUTF16(IDS_SIDEBAR_BOOKMARKS_ITEM_TITLE),
           SidebarItem::Type::kTypeBuiltIn,
           SidebarItem::BuiltInItemType::kBookmarks,
-          /* open_in_panel = */ true);
+          SidebarItem::PanelType::kSidePanel);
     case SidebarItem::BuiltInItemType::kReadingList:
       return SidebarItem::Create(
           // TODO(petemill): Have these items created under brave/browser
@@ -728,7 +730,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
           l10n_util::GetStringUTF16(IDS_SIDEBAR_READING_LIST_ITEM_TITLE),
           SidebarItem::Type::kTypeBuiltIn,
           SidebarItem::BuiltInItemType::kReadingList,
-          /* open_in_panel = */ true);
+          SidebarItem::PanelType::kSidePanel);
     case SidebarItem::BuiltInItemType::kHistory: {
       // TODO(sko) When should we show history item?
       constexpr bool kShowHistoryButton = false;
@@ -738,7 +740,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
             l10n_util::GetStringUTF16(IDS_SIDEBAR_HISTORY_ITEM_TITLE),
             SidebarItem::Type::kTypeBuiltIn,
             SidebarItem::BuiltInItemType::kHistory,
-            /* open_in_panel = */ true);
+            SidebarItem::PanelType::kNone);
       } else {
         return SidebarItem();
       }
@@ -751,7 +753,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
             l10n_util::GetStringUTF16(IDS_SIDEBAR_PLAYLIST_ITEM_TITLE),
             SidebarItem::Type::kTypeBuiltIn,
             SidebarItem::BuiltInItemType::kPlaylist,
-            /* open_in_panel = */ true);
+            SidebarItem::PanelType::kSidePanel);
       }
 
       return SidebarItem();
@@ -763,7 +765,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
         return SidebarItem::Create(l10n_util::GetStringUTF16(IDS_CHAT_UI_TITLE),
                                    SidebarItem::Type::kTypeBuiltIn,
                                    SidebarItem::BuiltInItemType::kChatUI,
-                                   /* open_in_panel = */ true);
+                                   SidebarItem::PanelType::kSidePanel);
       }
       return SidebarItem();
     }
@@ -780,7 +782,7 @@ SidebarItem SidebarService::GetBuiltInItemForType(
             l10n_util::GetStringUTF16(IDS_BRAVE_NEWS_TITLE),
             SidebarItem::Type::kTypeBuiltIn,
             SidebarItem::BuiltInItemType::kBraveNews,
-            /* open_in_panel = */ true);
+            SidebarItem::PanelType::kSidePanel);
       }
       return SidebarItem();
     }
