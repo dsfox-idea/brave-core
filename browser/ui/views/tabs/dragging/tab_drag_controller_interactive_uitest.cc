@@ -9,6 +9,7 @@
 #include <memory>
 
 #include "base/functional/bind.h"
+#include "base/memory/weak_ptr.h"  // Growser-355
 #include "base/run_loop.h"
 #include "base/scoped_observation.h"
 #include "base/test/bind.h"
@@ -228,6 +229,50 @@ class BrowserChangeWaiter : public BrowserCollectionObserver {
       browser_collection_observation_{this};
 };
 
+// Growser-355: the two below are upstream's, copied like the helpers above.
+// Posts `task` twice: the first lands in TabDragController's VisibilityWaiter
+// loop, the second in the RunMoveLoop() that follows it.
+void PostTaskToRunMoveLoop(base::OnceClosure task) {
+  base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
+      FROM_HERE, base::BindOnce(
+                     [](base::OnceClosure task) {
+                       base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
+                           FROM_HERE, std::move(task));
+                     },
+                     std::move(task)));
+}
+
+// Runs `callback` with the browser created for the detached tabs, from inside
+// that browser's move loop.
+class AsyncBrowserWaiter : public BrowserCollectionObserver {
+ public:
+  explicit AsyncBrowserWaiter(
+      base::OnceCallback<void(BrowserWindowInterface*)> callback)
+      : callback_(std::move(callback)) {
+    browser_collection_observation_.Observe(
+        GlobalBrowserCollection::GetInstance());
+  }
+  ~AsyncBrowserWaiter() override = default;
+
+  void OnBrowserCreated(BrowserWindowInterface* browser) override {
+    browser_collection_observation_.Reset();
+    PostTaskToRunMoveLoop(base::BindOnce(
+        [](base::WeakPtr<AsyncBrowserWaiter> waiter,
+           BrowserWindowInterface* browser) {
+          if (waiter && waiter->callback_) {
+            std::move(waiter->callback_).Run(browser);
+          }
+        },
+        weak_ptr_factory_.GetWeakPtr(), browser));
+  }
+
+ private:
+  base::OnceCallback<void(BrowserWindowInterface*)> callback_;
+  base::ScopedObservation<GlobalBrowserCollection, BrowserCollectionObserver>
+      browser_collection_observation_{this};
+  base::WeakPtrFactory<AsyncBrowserWaiter> weak_ptr_factory_{this};
+};
+
 }  // namespace
 
 // Drags a tree-tab parent (with its child) from `browser()` into a second,
@@ -305,17 +350,6 @@ class TreeTabDragControllerTest
     return browser2;
   }
 
-  // Like DragInputToCenter(), but posts `task` once the move completes
-  // instead of blocking.
-  bool DragInputToCenterNotifyWhenDone(const views::View* view,
-                                       base::OnceClosure task,
-                                       gfx::Vector2d offset = {}) {
-    gfx::Point location =
-        ui_test_utils::GetCenterInScreenCoordinates(view) + offset;
-    return ui_controls::SendMouseMoveNotifyWhenDone(
-        location.x(), location.y(), std::move(task), GetWindowHint(view));
-  }
-
   bool DragInputToAsync(const gfx::Point& location,
                         gfx::NativeWindow window_hint) {
     return ui_controls::SendMouseMove(location.x(), location.y(), window_hint);
@@ -327,14 +361,16 @@ class TreeTabDragControllerTest
 
 namespace {
 
-// Waits for the tab that was pressed on `browser()` to detach into a
-// temporary new browser, then drags that temporary browser onto
+// Called once the tab that was pressed on `browser()` has detached into the
+// temporary `new_browser`; drags that temporary browser onto
 // `target_browser`'s tab strip. This stops the nested move loop, since the
 // second window merges into `target_browser`.
 void DetachAndThenAttachToTargetWindow(
     TreeTabDragControllerTest* test,
     BrowserWindowInterface* not_attached_browser,
-    BrowserWindowInterface* target_browser) {
+    BrowserWindowInterface* target_browser,
+    BrowserWindowInterface* new_browser) {  // Growser-355
+
   TabStrip* const not_attached_tab_strip =
       GetTabStripForBrowser(not_attached_browser);
   CHECK(not_attached_tab_strip);
@@ -345,11 +381,6 @@ void DetachAndThenAttachToTargetWindow(
   EXPECT_FALSE(IsDragSessionActive(target_tab_strip));
   EXPECT_TRUE(TabDragController::IsActive());
 
-  BrowserWindowInterface* new_browser =
-      ui_test_utils::GetBrowserNotInSet({not_attached_browser, target_browser});
-  if (!new_browser) {
-    new_browser = ui_test_utils::WaitForBrowserToOpen();
-  }
   TabStrip* const new_tab_strip = GetTabStripForBrowser(new_browser);
   EXPECT_TRUE(IsDragSessionActive(new_tab_strip));
 
@@ -443,11 +474,20 @@ IN_PROC_BROWSER_TEST_F(
   // Drag to the second window, which triggers
   // TabDragController::AttachToNewContext() - we expect moving the whole
   // tree tab, wrapped in a TreeTabNodeTabCollection, to work correctly.
-  ASSERT_TRUE(DragInputToCenterNotifyWhenDone(
-      parent_tab_view,
-      base::BindOnce(&DetachAndThenAttachToTargetWindow, this, browser(),
-                     browser2),
-      gfx::Vector2d(0, GetDetachY(tab_strip))));
+  //
+  // Growser-355: the detach move is sent without waiting for it, and the next
+  // step starts when the temporary browser appears. Waiting for the move
+  // crashed on Windows now and then: a stale WM_MOUSEMOVE from the
+  // previous input made ui_controls pump the queue, the real move was handled
+  // inside that pump, the detach entered the nested move loop there, and the
+  // wait never completed - a 10 s timeout, then a crash on the dispatcher's
+  // double delete. Upstream's newer detach tests do it this way.
+  AsyncBrowserWaiter detached_waiter(base::BindOnce(
+      &DetachAndThenAttachToTargetWindow, this, browser(), browser2));
+  ASSERT_TRUE(DragInputToAsync(
+      ui_test_utils::GetCenterInScreenCoordinates(parent_tab_view) +
+          gfx::Vector2d(0, GetDetachY(tab_strip)),
+      GetWindowHint(parent_tab_view)));
 
   // Once attached to the second window, the temporary window goes away, and
   // we release the input.
