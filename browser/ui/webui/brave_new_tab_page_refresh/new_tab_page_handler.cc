@@ -546,7 +546,7 @@ void NewTabPageHandler::GetTopSites(GetTopSitesCallback callback) {
 void NewTabPageHandler::FetchPackTailIcon(const std::string& domain,
                                           FetchPackTailIconCallback callback) {
   // The page is a privileged context and must never reach the network
-  // itself (lesson 53); this request runs here, in the browser process,
+  // itself (lesson 59); this request runs here, in the browser process,
   // with no cookies and only the domain in the URL.
   static constexpr char kIconService[] = "https://icon.growser.org/icon";
   if (!re2::RE2::FullMatch(domain, "[a-z0-9.-]{3,253}") ||

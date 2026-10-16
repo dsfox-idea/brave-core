@@ -81,7 +81,7 @@ function isRecord(value: unknown) {
 // component updater's schedule, not while a tab is open.
 //
 // The page does not fetch this itself - a WebUI page is a privileged context
-// and does not reach the network in this browser (lesson 53) - and what comes
+// and does not reach the network in this browser (lesson 59) - and what comes
 // back is the WHOLE pack, so the ask says nothing about which sites are on
 // this board (growser#96).
 let packRequested = false

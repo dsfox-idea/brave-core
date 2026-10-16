@@ -540,7 +540,7 @@ const update = () => {
       if (changed) {
         // The build takes the catalog as one directory input, and editing a
         // file two levels down does not move the directory's mtime - the
-        // compiled Assets.car stayed violet until this touch (lesson 40).
+        // compiled Assets.car stayed violet until this touch (lesson 46).
         const now = new Date()
         fs.utimesSync(iosColors, now, now)
         console.log(`primary ramp applied to ${changed} iOS colour sets`)

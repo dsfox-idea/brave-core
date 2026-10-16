@@ -12,7 +12,7 @@ import { PackedIcon, packKeyFor } from './icon_pack'
 // domain is not asked again for days.
 //
 // The page NEVER touches the network itself (a WebUI page is a privileged
-// context - lesson 53): the ask goes over mojo to the browser process,
+// context - lesson 59): the ask goes over mojo to the browser process,
 // which sends the domain and nothing else, with no cookies.
 export interface TailAnswer {
   status: number

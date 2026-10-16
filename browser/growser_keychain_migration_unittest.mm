@@ -47,7 +47,7 @@ OSStatus DeleteItem(const std::string& service, const std::string& account) {
 // across the suite raced: one test created the new-named item while a sibling
 // asserted it was absent, and the add came back errSecDuplicateItem. Three
 // builds in a row carried a red test here that the launcher's retry turned
-// green again - a gate that has stopped measuring (lessons 44/47). The test
+// green again - a gate that has stopped measuring (lessons 50/53). The test
 // name separates siblings; the pid separates parallel processes, a retry, and
 // anything an interrupted earlier run left behind.
 struct GrowserKeychainMigrationTest : testing::Test {
