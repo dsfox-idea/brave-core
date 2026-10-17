@@ -10,3 +10,6 @@ substitutions:
       list_name: public_deps
       values:
         - //brave/components/brave_origin/buildflags
+        # Growser-360: the crash reporter decides on the user's consent alone
+        # unless this build lets external policy manage the browser.
+        - //brave/components/growser_policy/buildflags

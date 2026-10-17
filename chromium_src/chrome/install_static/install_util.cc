@@ -5,6 +5,7 @@
 
 #include "chrome/install_static/install_util.h"
 
+#include "brave/components/growser_policy/buildflags/buildflags.h"  // Growser-360
 #include "build/branding_buildflags.h"
 #include "chrome/chrome_elf/nt_registry/nt_registry.h"
 #include "chrome/install_static/buildflags.h"

@@ -5,6 +5,21 @@
 
 #include "components/crash/core/app/crashpad.h"
 
+#include "brave/components/growser_policy/buildflags/buildflags.h"
+
+// Growser-360: whether crash reports upload is the user's answer - the
+// welcome-screen checkbox and the settings switch (#92). Upstream lets a
+// MetricsReportingEnabled policy override it in both directions, read straight
+// from the registry or a managed plist and so beyond the providers #358
+// compiled out. Unless this build lets external policy manage the browser,
+// the policy is not asked.
+#if BUILDFLAG(GROWSER_ENABLE_EXTERNAL_POLICY)
+#define GROWSER_REPORTING_IS_ENFORCED_BY_POLICY(client, enabled) \
+  client->ReportingIsEnforcedByPolicy(enabled)
+#else
+#define GROWSER_REPORTING_IS_ENFORCED_BY_POLICY(client, enabled) false
+#endif
+
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)
 namespace {
 // Split into two places to avoid patching:
@@ -50,6 +65,7 @@ constexpr char kBraveWireguardProcessType[] = "brave-vpn-wireguard-service";
 #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)
 
 #include <components/crash/core/app/crashpad.cc>
+#undef GROWSER_REPORTING_IS_ENFORCED_BY_POLICY
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)
 #undef BRAVE_CRASHPAD_VPN_V1_PROCESS_TYPES
 #undef BRAVE_INITIALIZE_CRASHPAD_IMPL_PROCESS_TYPE

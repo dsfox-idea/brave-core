@@ -11,6 +11,7 @@
 #include "base/stl_util.h"
 #include "base/test/test_reg_util_win.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
+#include "brave/components/growser_policy/buildflags/buildflags.h"  // Growser-360
 #include "chrome/chrome_elf/nt_registry/nt_registry.h"
 #include "chrome/install_static/install_details.h"
 #include "chrome/install_static/install_modes.h"
@@ -630,6 +631,7 @@ TEST_P(InstallStaticUtilTest, UsageStatsOneMedium) {
   EXPECT_TRUE(GetCollectStatsConsent());
 }
 
+#if BUILDFLAG(GROWSER_ENABLE_EXTERNAL_POLICY)  // Growser-360
 TEST_P(InstallStaticUtilTest, ReportingIsEnforcedByPolicy) {
   bool reporting_enabled = false;
   EXPECT_FALSE(ReportingIsEnforcedByPolicy(&reporting_enabled));
@@ -660,6 +662,27 @@ TEST_P(InstallStaticUtilTest, UsageStatsPolicy) {
   SetUsageStat(1, false);
   EXPECT_FALSE(GetCollectStatsConsent());
 }
+#else
+// growser (#360): the user's answer decides; a policy key is not read.
+TEST_P(InstallStaticUtilTest, ReportingIsNotEnforcedByPolicy) {
+  bool reporting_enabled = false;
+  SetMetricsReportingPolicy(1);
+  EXPECT_FALSE(ReportingIsEnforcedByPolicy(&reporting_enabled));
+  EXPECT_FALSE(reporting_enabled);
+}
+
+TEST_P(InstallStaticUtilTest, UsageStatsIgnoresPolicy) {
+  // A policy that says yes does not consent for a user who said no.
+  SetMetricsReportingPolicy(1);
+  SetUsageStat(0, false);
+  EXPECT_FALSE(GetCollectStatsConsent());
+
+  // A policy that says no does not withdraw a user's yes.
+  SetMetricsReportingPolicy(0);
+  SetUsageStat(1, false);
+  EXPECT_TRUE(GetCollectStatsConsent());
+}
+#endif
 
 TEST_P(InstallStaticUtilTest, GetChromeChannelName) {
   EXPECT_EQ(default_channel(),

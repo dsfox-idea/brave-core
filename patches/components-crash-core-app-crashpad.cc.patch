@@ -1,5 +1,5 @@
 diff --git a/components/crash/core/app/crashpad.cc b/components/crash/core/app/crashpad.cc
-index db68eaa22030aca74f31a9d8612b4952a3b25642..3cef6ec2b84702000bbd51d77ca8e4c8f60e4805 100644
+index db68eaa22030aca74f31a9d8612b4952a3b25642..a2558fa44e48cacadb345e0e0ad7f34d36cb47e0 100644
 --- a/components/crash/core/app/crashpad.cc
 +++ b/components/crash/core/app/crashpad.cc
 @@ -85,6 +85,7 @@ bool InitializeCrashpadImpl(bool initial_client,
@@ -22,3 +22,14 @@ index db68eaa22030aca74f31a9d8612b4952a3b25642..3cef6ec2b84702000bbd51d77ca8e4c8
  #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
      DCHECK(browser_process);
  #else
+@@ -248,7 +252,9 @@ void SetUploadConsent(bool consent) {
+ 
+   bool enable_uploads = false;
+   CrashReporterClient* crash_reporter_client = GetCrashReporterClient();
+-  if (!crash_reporter_client->ReportingIsEnforcedByPolicy(&enable_uploads)) {
++  // Growser-360: the user's consent decides unless external policy is built.
++  if (!GROWSER_REPORTING_IS_ENFORCED_BY_POLICY(crash_reporter_client,
++                                               &enable_uploads)) {
+     // Breakpad provided a --disable-breakpad switch to disable crash dumping
+     // (not just uploading) here. Crashpad doesn't need it: dumping is enabled
+     // unconditionally and uploading is gated on consent, which tests/bots
