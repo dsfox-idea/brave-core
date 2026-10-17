@@ -555,6 +555,16 @@ test("brave_unit_tests") {
       "//brave/chromium_src/components/translate/core/browser/translate_manager_unittest.cc",
     ]
 
+    # Growser-360: crash consent is the user's, whatever the OS policy says.
+    if (is_win || is_mac || is_linux) {
+      sources += [ "//brave/chromium_src/components/crash/core/app/crashpad_policy_unittest.cc" ]
+      deps += [
+        "//brave/components/growser_policy/buildflags",
+        "//components/crash/core/app",
+        "//third_party/crashpad/crashpad/client",
+      ]
+    }
+
     deps += [
       "//brave/app:brave_generated_resources_grit",
       "//brave/app/theme:brave_theme_resources_grit",

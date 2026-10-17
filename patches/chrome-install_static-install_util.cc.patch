@@ -1,0 +1,35 @@
+diff --git a/chrome/install_static/install_util.cc b/chrome/install_static/install_util.cc
+index f7798f7da79cee7e0a5b1e2170921820ecd31707..1651f1eb4ea9dd4cdbbf6bf308a2683a02e2c305 100644
+--- a/chrome/install_static/install_util.cc
++++ b/chrome/install_static/install_util.cc
+@@ -74,7 +74,9 @@ constexpr wchar_t kChromeChannelStableExplicit[] = L"stable";
+ // These constants are defined in the chrome/installer directory as well. We
+ // need to unify them.
+ constexpr wchar_t kRegValueUsageStats[] = L"usagestats";
+-constexpr wchar_t kMetricsReportingEnabled[] = L"MetricsReportingEnabled";
++// Growser-360: unused when external policy is compiled out.
++[[maybe_unused]] constexpr wchar_t kMetricsReportingEnabled[] =
++    L"MetricsReportingEnabled";
+ 
+ void Trace(const wchar_t* format_string, ...) {
+   static const int kMaxLogBufferSize = 1024;
+@@ -518,6 +520,11 @@ std::wstring& AppendChromeInstallSubDirectory(const InstallConstants& mode,
+ }
+ 
+ bool ReportingIsEnforcedByPolicy(bool* crash_reporting_enabled) {
++#if !BUILDFLAG(GROWSER_ENABLE_EXTERNAL_POLICY)  // Growser-360
++  // Whether crash reports upload is the user's answer (#92); a key under
++  // SOFTWARE\Policies does not get to override it in this build (#358).
++  return false;
++#else
+   std::wstring policies_path = L"SOFTWARE\\Policies\\";
+   AppendChromeInstallSubDirectory(InstallDetails::Get().mode(),
+                                   false /* !include_suffix */, &policies_path);
+@@ -538,6 +545,7 @@ bool ReportingIsEnforcedByPolicy(bool* crash_reporting_enabled) {
+   }
+ 
+   return false;
++#endif  // !BUILDFLAG(GROWSER_ENABLE_EXTERNAL_POLICY)
+ }
+ 
+ void InitializeProcessType() {
