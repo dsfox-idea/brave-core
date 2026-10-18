@@ -9,6 +9,7 @@
 
 Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išsaugoti.</translation>
 <translation id="7577672138294294152">Vienas iš tėvų išjungė svetainių, programų ir plėtinių leidimus sistemoje „Growser“</translation>
+<translation id="446816247111620025">„Growser“ reikalinga prieiga prie vietinio tinklo, kad būtų galima aptikti ir naudoti netoliese esančius įrenginius</translation>
 <translation id="4408482856437790071">Jei norite ieškoti konkrečios „Growser“ funkcijos ar plėtinio, įveskite šaukinį adreso juostoje ir paspauskite pasirinktą klaviatūros klavišą</translation>
 <translation id="3257316091303113323">Rodyti paiešką naudojant „Growser“ sistemos juostelėje ir įjungti spartųjį klavišą</translation>
 <translation id="5918095577778020936">„Growser“ nori eksportuoti jūsų slaptažodžius. Įveskite „Windows“ slaptažodį, kad tai leistumėte.</translation>
@@ -43,6 +44,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 <translation id="141901961143729572">Pasidalykite mintimis</translation>
 <translation id="3880714039086599943">Jei norite bendrinti langą, sistemos nustatymuose leiskite įrašyti „Growser“ ekrano vaizdą.</translation>
 <translation id="1586284627848250203">Gauti pagalbos dėl „Growser for Testing“</translation>
+<translation id="6741861636851880121">Jei norite gauti išsaugotą informaciją ir kt. iš <ph name="DEVICE"/>, prisijunkite prie „Growser“</translation>
 <translation id="1497802159252041924">Diegimo klaida: <ph name="INSTALL_ERROR"/></translation>
 <translation id="1518627427551567882">Šis puslapis apsaugotas</translation>
 <translation id="5147525139567260139">„Growser“ skirtuko bendrinimas</translation>
@@ -102,6 +104,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 <translation id="2126108037660393668">Nepavyko patvirtinti atsisiųsto failo.</translation>
 <translation id="2135919691573380097">Pranešimas apie šią svetainę</translation>
 <translation id="2137162749895930932">Uždaryti vertimo ekraną</translation>
+<translation id="2147218225094845757">Slėpti šoninį skydelį</translation>
 <translation id="5789330946301045610">„Growser“ užblokavo šį atsisiuntimą, nes svetainėje nenaudojamas saugus ryšys ir failas gali būti sugadintas</translation>
 <translation id="2170098639895543546">Pasirinkite bet ką puslapyje</translation>
 <translation id="142389341645668510">Tinkinti „Growser“</translation>
@@ -185,6 +188,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 <translation id="7611046016537686219">{count,plural, =1{„Growser“ turi patvirtinti jūsų tapatybę, kad tam tikrus duomenis būtų galima išsaugoti „Growser“ paskyroje ir naudoti visuose jūsų įrenginiuose. Jei atsijungsite dabar, šie duomenys (1 elementas) bus ištrinti.}one{„Growser“ turi patvirtinti jūsų tapatybę, kad tam tikrus duomenis būtų galima išsaugoti „Growser“ paskyroje ir naudoti visuose jūsų įrenginiuose. Jei atsijungsite dabar, šie duomenys ({count} elementas) bus ištrinti.}few{„Growser“ turi patvirtinti jūsų tapatybę, kad tam tikrus duomenis būtų galima išsaugoti „Growser“ paskyroje ir naudoti visuose jūsų įrenginiuose. Jei atsijungsite dabar, šie duomenys ({count} elementai) bus ištrinti.}many{„Growser“ turi patvirtinti jūsų tapatybę, kad tam tikrus duomenis būtų galima išsaugoti „Growser“ paskyroje ir naudoti visuose jūsų įrenginiuose. Jei atsijungsite dabar, šie duomenys ({count} elemento) bus ištrinti.}other{„Growser“ turi patvirtinti jūsų tapatybę, kad tam tikrus duomenis būtų galima išsaugoti „Growser“ paskyroje ir naudoti visuose jūsų įrenginiuose. Jei atsijungsite dabar, šie duomenys ({count} elementų) bus ištrinti.}}</translation>
 <translation id="4202995875619419215">Atidarykite <ph name="URL"/> naujame „Growser“ skirtuke.</translation>
 <translation id="1266825212217391702">DI naujovės, pvz., įgūdžiai, išsaugomos „Growser“ paskyroje ir tvarkomos atskirai nuo „Growser“ sinchronizavimo</translation>
+<translation id="5459594001857520297">Jei norite pasiekti plėtinius ir kt. visuose įrenginiuose, prisijunkite prie „Growser“</translation>
 <translation id="8880183781256147665">Pridedama prie „Growser“...</translation>
 <translation id="3038232873781883849">Laukiama, kol bus įdiegta...</translation>
 <translation id="3045032126857188731">Vertimo kalba: <ph name="LANGUAGE"/></translation>
@@ -195,6 +199,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 <translation id="7918740962659365265">Padėkite tobulinti „Growser“ siųsdami „Growser“ strigčių ataskaitas ir <ph name="UMA_LINK"/></translation>
 <translation id="6828757829023033545">Naudokitės „Growser“ saugos funkcijomis keliaudami su „Growser“ programa</translation>
 <translation id="2332543193474246254">{NUM_DEVICES,plural, =0{Vienas USB įrenginys buvo pasiekiamas naudojant vieną ar daugiau „Growser“ plėtinių}=1{Vienas USB įrenginys pasiekiamas naudojant vieną ar daugiau „Growser“ plėtinių}one{# USB įrenginys pasiekiamas naudojant vieną ar daugiau „Growser“ plėtinių}few{# USB įrenginiai pasiekiami naudojant vieną ar daugiau „Growser“ plėtinių}many{# USB įrenginio pasiekiama naudojant vieną ar daugiau „Growser“ plėtinių}other{# USB įrenginių pasiekiama naudojant vieną ar daugiau „Growser“ plėtinių}}</translation>
+<translation id="3924086216508892728">Jei norite gauti skaitymo sąrašą ir kt. iš <ph name="DEVICE"/>, prisijunkite prie „Growser“</translation>
 <translation id="3700405816184340252">„Growser“ istorija</translation>
 <translation id="7365690458036015383">Diegimo programai nepavyko išpakuoti archyvo. Atsisiųskite „Growser“ dar kartą.</translation>
 <translation id="310459126943037700">Nepavyko užbaigti užduoties (-čių).</translation>
@@ -215,6 +220,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 
 <ph name="USER_DATA_DIRECTORY"/></translation>
 <translation id="8414435293910785169">Keliaudami pasiimkite mėgstamiausius „Growser“ DI įrankius su savimi, naudodami „Growser“ sistemoje „iOS“.</translation>
+<translation id="7474458067542595245">Jei norite gauti plėtinius ir kt. iš <ph name="DEVICE"/>, prisijunkite prie „Growser“</translation>
 <translation id="3286538390144397061">Paleisti iš naujo dabar</translation>
 <translation id="2339258256897053758">Trūksta „Growser“ API raktų. Bus išjungtos kai kurios „Growser“ funkcijos.</translation>
 <translation id="8926637909431618259">Toliau vykdyti fonines programas, kai „Growser“ uždaroma</translation>
@@ -226,6 +232,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 <translation id="2645435784669275700">„Growser“ OS</translation>
 <translation id="2297290224191497273">Perjungti į esamą „Growser“ profilį?</translation>
 <translation id="3412460710772753638">Slaptažodžių tvarkyklėje šiame įrenginyje</translation>
+<translation id="5079573433701109938">Jei norite gauti žymes ir kt. iš <ph name="DEVICE"/>, prisijunkite prie „Growser“</translation>
 <translation id="3438772217992559640">Ieškoti šiame skirtuke naudojant vaizdų paiešką</translation>
 <translation id="2491221873705777076">Sustiprinto saugaus naršymo išplėtimas naudojant „Growser“ telefone</translation>
 <translation id="7304389940068374923">„Growser“ suasmeninimas...</translation>
@@ -256,7 +263,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 
           **Pasiūlykite klausimų:** sugeneruokite tris–penkis mąstyti skatinančius klausimus, kuriuos naudotojas galėtų užduoti, kad geriau suprastų ekrano kopiją, sąrašą. Šie klausimai turi apimti bent vieną, kuris konkrečiai susijęs su vaizdiniu objektu, jo dizainu ar išdėstymu.</translation>
 <translation id="5381622442243174305">„<ph name="PAGE_TITLE"/>“ – „Growser“</translation>
-<translation id="387514319934708384">„Growser“ reikalingas vietinio tinklo leidimas šioje svetainėje</translation>
+<translation id="2715414892112164725">Jei norite pasiekti žymes ir kitas funkcijas visuose įrenginiuose, prisijunkite prie „Growser“</translation>
 <translation id="3885770153807205175">Kalbos rinkiklis</translation>
 <translation id="6315734375101223238">Tinkinkite ir valdykite „Growser“. Reikia atkreipti dėmesį – spustelėkite ir peržiūrėkite išsamią informaciją.</translation>
 <translation id="7130675370997202556">Spustelėkite savo vardą, kad atidarytumėte „Growser“ ir pradėtumėte naršyti.</translation>
@@ -264,6 +271,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 <translation id="4920958997042285125">Naudotojas (<ph name="EXISTING_USER"/>) jau yra prisijungęs prie šio „Growser“ profilio. Kad naršytumėte atskirai, „Growser“ gali sukurti jums atskirą profilį.</translation>
 <translation id="3941890832296813527">Diegimo klaida: diegimo programos failo pavadinimas netinkamas arba nepalaikomas.</translation>
 <translation id="8090497651549769448">„Growser“ bando kopijuoti slaptažodžius. Įveskite „Windows“ slaptažodį, kad tai leistumėte.</translation>
+<translation id="794644331787250140">Jei norite pasiekti išsaugotą informaciją ir kt. visuose įrenginiuose, prisijunkite prie „Growser“</translation>
 <translation id="4256965182800026277">Slaptažodžiai, mokėjimo metodai ir adresai, kuriuos išsaugojote „Growser“ paskyroje, bus pašalinti iš šio įrenginio. Jei norite juos vėl naudoti „Growser“, vėl prisijunkite.</translation>
 <translation id="395904275706073188">Apsaugotų puslapių negalima skaityti. Pabandykite kitą puslapį.</translation>
 <translation id="4194619960643453552">Sužinokite, kaip „Growser“ jus apsaugo</translation>
@@ -350,6 +358,7 @@ Kai kurios funkcijos gali būti nepasiekiamos ir nuostatų pakeitimai nebus išs
 <translation id="711601904575862069">Paleisti iš naujo atnaujinant „&amp;Growser“</translation>
 <translation id="4918086044614829423">Priimti</translation>
 <translation id="4918844574251943176">Vaizdas nukopijuotas</translation>
+<translation id="1762888370864318972">Jei norite pasiekti skaitymo sąrašą ir kt. visuose įrenginiuose, prisijunkite prie „Growser“</translation>
 <translation id="8797356639448065696">„Growser“ veikia fono režimu.</translation>
 <translation id="1895567721497166950">Spustelėkite, kad uždarytumėte „Growser“ prisijungimo dialogo langą</translation>
 <translation id="2692971232706994729">Naudodami „Growser“ profilius galite atskirti visus savo „Growser“ duomenis. Sukurkite profilius draugams ir šeimos nariams arba atskirkite darbą ir pramogas.</translation>
@@ -429,9 +438,9 @@ Jei šis puslapis neveikia taip, kaip tikimasi, pabandykite leisti naudoti optim
 <translation id="8054200348483755053">„Growser“ aptiko kenkėjišką programą šiuose elementuose:</translation>
 <translation id="3955583201925082436">„Growser“ reguliariai tikrina, ar naršyklės nustatymai yra saugiausi. Pranešime, jei reikės ką nors peržiūrėti.</translation>
 <translation id="5895138241574237353">Paleisti iš naujo</translation>
+<translation id="5095041423280144434">„Gemini Enterprise“ naršyklėje „Growser“</translation>
 <translation id="5903106910045431592">„<ph name="PAGE_TITLE"/>“ – prisijungimas prie tinklo</translation>
 <translation id="5924017743176219022">Prisijungiama prie interneto...</translation>
-<translation id="1275716786566134844">Paruoškime „Growser“</translation>
 <translation id="5941711191222866238">Sumažinti</translation>
 <translation id="5768962901674164501">Jei norite pasiekti šią žymę ir kt. visuose įrenginiuose, prisijunkite prie „Growser“</translation>
 <translation id="5101892358689285100">„Growser“ suasmeninimas</translation>
@@ -581,6 +590,7 @@ Naujų žymių negalima išsaugoti paskyroje, kol ištrinsite kai kurias žymes.
 <translation id="5755581833598928580">Naudokite „Growser“ bet kada spustelėję nuorodas pranešimuose, dokumentuose ir kitose programose</translation>
 <translation id="7216228761061470870">Kai naudojate vaizdų paiešką staliniame kompiuteryje, puslapio pavadinimas, URL ir turinys, įskaitant PDF failus, siunčiami į serverį</translation>
 <translation id="5516268345616100622">Užduočių tvarkytuvė – „Growser“</translation>
+<translation id="4366259698872849085">Klauskite apie turinį ne „Growser“, pvz., kitas programas ar failus</translation>
 <translation id="2416155625082200759"><ph name="EXISTING_USER"/> jau prisijungė. Jei norite atskirti naršymą, prisijunkite prie „Growser“ savo profilyje kaip <ph name="USER_EMAIL_ADDRESS"/>. Be to, išsaugotą informaciją ir kitas funkcijas pasieksite visuose įrenginiuose.</translation>
 <translation id="1871621397473741084">Pradėkite naršyti akimirksniu: „Growser“ dabar galima paleisti paleidus „Windows“.</translation>
 <translation id="7274695763216404502">Prisegta! Vėl naudokite vaizdų paiešką iš įrankių juostos</translation>
@@ -634,7 +644,6 @@ Naujų žymių negalima išsaugoti paskyroje, kol ištrinsite kai kurias žymes.
 <translation id="77283119132245232">Naršyklei „<ph name="BROWSER_NAME"/>“ teikiamos sistemos stebėjimo paslaugos. Jei ši paslauga išjungta, sistemos lygio įvykiai, pvz., konteksto perjungimai ir grupių parengties įvykiai, neįtraukiami naršyklės sugeneruotus našumo stebėjimo duomenis.</translation>
 <translation id="4784414698887946907">Atlikus šį veiksmą iš šio įrenginio bus ištrinti naršymo duomenys. Jei vėliau norėsite gauti duomenis, prisijunkite prie „Growser“ kaip <ph name="USER_EMAIL"/>.</translation>
 <translation id="7747138024166251722">Diegimo programai nepavyko sukurti laikino katalogo. Patikrinkite, ar yra laisvos vietos diske ir, ar leidžiama įdiegti programinę įrangą.</translation>
-<translation id="644418935605751729">Paieška naršyklėje „Growser“</translation>
 <translation id="8543787950557226450">Iš naujo nustatyti numatytąją „Growser“ temą</translation>
 <translation id="4859382825808018797">Kad apsaugotų jūsų darbą sistemoje „Growser“, jūsų organizacija galės peržiūrėti arba tvarkyti tam tikrą informaciją, kai būsite prisijungę prie „Growser“.</translation>
 <translation id="4976450819672499783">Nustatykite „Growser“ kaip numatytąją naršyklę ir prisekite ją prie užduočių juostos</translation>
@@ -642,7 +651,6 @@ Naujų žymių negalima išsaugoti paskyroje, kol ištrinsite kai kurias žymes.
 <translation id="6236814935154483927">„<ph name="PAGE_TITLE"/>“ – „Growser Canary“</translation>
 <translation id="2684504034454188774">Neleiskite srautą internete galintiems pasiekti žmonėms matyti svetainių, kuriose lankotės. „Growser“ naudoja saugų ryšį ieškodama svetainės IP adreso DNS (domenų pavadinimų sistemoje).</translation>
 <translation id="7810005234485217901">Galite prisegti vaizdų paiešką, kad lengvai ją pasiektumėte</translation>
-<translation id="3219490697448569661">Klauskite apie turinį ne „Growser“, pvz., kitoje programoje ar faile, kurį atidarėte</translation>
 <translation id="4191642852677143100">Pasirinkite, ką norite bendrinti su „Growser“</translation>
 <translation id="1652855885539187849">Šios paskyros „Growser“ profilis jau yra šiame įrenginyje</translation>
 <translation id="7845233973568007926">Dėkojame už diegimą. Turite iš naujo paleisti kompiuterį, prieš naudodami „<ph name="BUNDLE_NAME"/>“.</translation>
@@ -773,6 +781,7 @@ Naujų žymių negalima išsaugoti paskyroje, kol ištrinsite kai kurias žymes.
 <translation id="7055223246119657449">„Growser“ užblokavo šį atsisiuntimą, nes archyvo faile yra kitų failų, kurie gali slėpti kenkėjiškas programas</translation>
 <translation id="8341362078156319636">Užtikrinkite, kad slaptažodžiai, žymės ir istorija būtų tobulai sinchronizuojami įrenginiuose. Lengvai pasiekite žinomas ir mėgstamas funkcijas naujovinę numatytąją naršyklę į „Growser“. „Growser“ bus prisegta prie užduočių juostos, kad galėtumėte greitai ją pasiekti.</translation>
 <translation id="8965179855019347124">Naudokite geriausius „Growser“ DI įrankius su „Growser“ programa telefone</translation>
+<translation id="7591043002129819267">Jei norite gauti slaptažodžius ir kt. iš <ph name="DEVICE"/>, prisijunkite prie „Growser“</translation>
 <translation id="9049928023195059068">Prisijunkite prie „Growser“ prisijungdami prie kitų „Growser“ paslaugų</translation>
 <translation id="4561046754724442504">„Growser“ automatiškai uždaryta</translation>
 <translation id="5173820533850252773">„Growser“ versija yra pasenusi</translation>
@@ -822,6 +831,10 @@ Naujų žymių negalima išsaugoti paskyroje, kol ištrinsite kai kurias žymes.
 <translation id="79269250264141507">Siekiant užtikrinti, kad gausite tinkamiausius pasiūlymus, užklausa, kurią įvedate adreso juostoje arba paieškos lauke, perduodama numatytajai paieškos sistemai. Ši funkcija išjungta naršant privačiuoju režimu.</translation>
 <translation id="2589970573128789862">„Growser“ inkognito</translation>
 <translation id="5994282802285556682">Naršant inkognito režimu, prieš įkeliant svetainę, kurioje naudojamas nesaugus ryšys, „Growser“ jus įspės</translation>
+<translation id="387514319934708384">„Growser“ reikalingas vietinio tinklo leidimas šioje svetainėje</translation>
+<translation id="1275716786566134844">Paruoškime „Growser“</translation>
+<translation id="644418935605751729">Paieška naršyklėje „Growser“</translation>
+<translation id="3219490697448569661">Klauskite apie turinį ne „Growser“, pvz., kitoje programoje ar faile, kurį atidarėte</translation>
 <translation id="1356661055722410047">Naujiena! Galite versti ir tekstą, ir vaizdus ekrane</translation>
 <translation id="1118754729376002185">„Growser“ reikalingas vietinio tinklo leidimas šioje svetainėje</translation>
 <translation id="3985621805803699376">Ieškokite ir užduokite klausimų iš bet kur, net kai „Growser“ sumažinta</translation>

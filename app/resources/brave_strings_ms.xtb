@@ -7,6 +7,7 @@
 <translation id="3814674848168165531">Apabila laman meminta prapemuatan pautan secara peribadi pada halaman mereka, Growser menggunakan pelayan Growser. Tindakan ini akan menyembunyikan identiti anda daripada laman yang dipramuat tetapi Growser mengetahui laman yang dipramuat.</translation>
 <translation id="1065672644894730302">Pilihan anda tidak dapat dibaca. Beberapa ciri mungkin tidak tersedia dan perubahan terhadap pilihan tidak akan disimpan.</translation>
 <translation id="7577672138294294152">Ibu/bapa anda telah mematikan "Kebenaran untuk laman, apl dan sambungan" untuk Growser</translation>
+<translation id="446816247111620025">Growser memerlukan akses kepada rangkaian setempat anda untuk menemukan dan menggunakan peranti berdekatan</translation>
 <translation id="4408482856437790071">Untuk mencari ciri atau sambungan Growser tertentu, taip pintasan carian dalam bar alamat, diikuti dengan kekunci papan kekunci pilihan anda</translation>
 <translation id="3257316091303113323">Tunjukkan carian dengan Growser dalam dulang sistem dan hidupkan pintasan papan kekunci</translation>
 <translation id="5918095577778020936">Growser mahu mengeksport kata laluan anda. Taip kata laluan Windows anda untuk membenarkannya.</translation>
@@ -41,6 +42,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="141901961143729572">Kongsi pendapat anda</translation>
 <translation id="3880714039086599943">Untuk berkongsi tetingkap anda, benarkan rakaman skrin untuk Growser dalam Tetapan Sistem.</translation>
 <translation id="1586284627848250203">Dapatkan bantuan tentang Growser for Testing</translation>
+<translation id="6741861636851880121">Untuk mendapatkan maklumat anda yang disimpan dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
 <translation id="1497802159252041924">Ralat pemasangan: <ph name="INSTALL_ERROR"/></translation>
 <translation id="1518627427551567882">Halaman ini dilindungi</translation>
 <translation id="5147525139567260139">Kongsi tab Growser</translation>
@@ -100,6 +102,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="2126108037660393668">Pengesahan fail yang dimuat turun gagal.</translation>
 <translation id="2135919691573380097">Laporkan laman ini</translation>
 <translation id="2137162749895930932">Tutup skrin terjemahan</translation>
+<translation id="2147218225094845757">Sembunyikan panel sisi</translation>
 <translation id="5789330946301045610">Growser menyekat muat turun ini kerana laman tidak menggunakan sambungan selamat dan fail mungkin telah diubah</translation>
 <translation id="2170098639895543546">Pilih apa-apa sahaja pada halaman</translation>
 <translation id="142389341645668510">Sesuaikan Growser</translation>
@@ -183,6 +186,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="7611046016537686219">{count,plural, =1{Growser perlu mengesahkan identiti anda sebelum sesetengah data boleh disimpan dalam Growser sync chain anda dan digunakan pada semua peranti anda. Jika anda log keluar sekarang, data ini (1 item) akan dipadamkan.}other{Growser perlu mengesahkan identiti anda sebelum sesetengah data boleh disimpan dalam Growser sync chain anda dan digunakan pada semua peranti anda. Jika anda log keluar sekarang, data ini ({count} item) akan dipadamkan.}}</translation>
 <translation id="4202995875619419215">Buka <ph name="URL"/> dalam tab baharu dalam Growser.</translation>
 <translation id="1266825212217391702">Inovasi AI seperti kemahiran disimpan pada Growser sync chain anda dan diurus secara berasingan daripada penyegerakan Growser</translation>
+<translation id="5459594001857520297">Untuk mendapatkan sambungan anda dan pelbagai lagi alatan pada semua peranti anda, log masuk ke Growser</translation>
 <translation id="8880183781256147665">Menambah ke Growser...</translation>
 <translation id="3038232873781883849">Menunggu untuk memasang...</translation>
 <translation id="3045032126857188731">Bahasa terjemahan: <ph name="LANGUAGE"/></translation>
@@ -193,6 +197,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="7918740962659365265">Bantu jadikan Growser lebih baik dengan menghantar laporan ranap dan <ph name="UMA_LINK"/> kepada Growser.</translation>
 <translation id="6828757829023033545">Gunakan apl Growser untuk memanfaatkan keselamatan Growser semasa dalam perjalanan</translation>
 <translation id="2332543193474246254">{NUM_DEVICES,plural, =0{1 peranti USB telah diakses oleh satu atau beberapa sambungan Growser}=1{1 peranti USB sedang diakses oleh satu atau beberapa sambungan Growser}other{# peranti USB sedang diakses oleh satu atau beberapa sambungan Growser}}</translation>
+<translation id="3924086216508892728">Untuk mendapatkan senarai bacaan anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
 <translation id="3700405816184340252">Sejarah Growser</translation>
 <translation id="7365690458036015383">Pemasang gagal untuk menyahmampat arkib. Sila muat turun Growser sekali lagi.</translation>
 <translation id="310459126943037700">Gagal menamatkan tugasan.</translation>
@@ -213,6 +218,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 
 <ph name="USER_DATA_DIRECTORY"/></translation>
 <translation id="8414435293910785169">Bawa alatan Growser AI kegemaran anda semasa dalam perjalanan dengan Growser pada iOS.</translation>
+<translation id="7474458067542595245">Untuk mendapatkan sambungan anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
 <translation id="3286538390144397061">Mulakan Semula Sekarang</translation>
 <translation id="2339258256897053758">Kunci API Growser tiada. Sesetengah fungsi Growser akan dilumpuhkan.</translation>
 <translation id="8926637909431618259">Terus menjalankan apl latar belakang apabila Growser ditutup</translation>
@@ -224,6 +230,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">Tukar kepada profil Growser yang sedia ada?</translation>
 <translation id="3412460710772753638">Dalam Password Manager pada peranti ini</translation>
+<translation id="5079573433701109938">Untuk mendapatkan penanda halaman anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
 <translation id="3438772217992559640">Cari Tab Ini dengan Carian Imej</translation>
 <translation id="2491221873705777076">Lanjutkan Penyemakan Imbas Selamat Dipertingkat dengan Growser pada telefon anda</translation>
 <translation id="7304389940068374923">Menyesuaikan Growser anda...</translation>
@@ -254,7 +261,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 
           **Cadangkan Soalan:** Jana senarai berbulet 3-5 soalan yang mencabar minda yang boleh ditanya oleh pengguna untuk memahami tangkapan skrin dengan lebih baik. Soalan ini hendaklah mengandungi sekurang-kurangnya satu soalan yang khusus tentang objek visual, reka bentuk atau peletakan objek tersebut.</translation>
 <translation id="5381622442243174305"><ph name="PAGE_TITLE"/> - Growser</translation>
-<translation id="387514319934708384">Growser memerlukan kebenaran rangkaian setempat untuk laman ini</translation>
+<translation id="2715414892112164725">Untuk mendapatkan penanda halaman anda dan pelbagai lagi pada semua peranti anda, log masuk ke Growser</translation>
 <translation id="3885770153807205175">Pemilih bahasa</translation>
 <translation id="6315734375101223238">Sesuaikan dan kawal Growser. Perhatian anda diperlukan - klik untuk mendapatkan butiran.</translation>
 <translation id="7130675370997202556">Klik nama anda untuk membuka Growser dan mula menyemak imbas.</translation>
@@ -262,6 +269,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="4920958997042285125"><ph name="EXISTING_USER"/> telah pun dilog masuk ke profil Growser ini. Untuk menjadikan penyemakan imbas anda terpisah, Growser boleh membuat profil anda sendiri untuk anda.</translation>
 <translation id="3941890832296813527">Ralat pemasangan: Nama fail pemasang tidak sah atau tidak disokong.</translation>
 <translation id="8090497651549769448">Growser cuba menyalin kata laluan. Taip kata laluan Windows anda untuk membenarkan penyalinan.</translation>
+<translation id="794644331787250140">Untuk mendapatkan maklumat anda yang disimpan dan pelbagai lagi pada semua peranti anda, log masuk ke Growser</translation>
 <translation id="4256965182800026277">Kata laluan, kaedah pembayaran dan alamat anda yang anda simpan dalam Growser sync chain anda akan dialih keluar daripada peranti ini. Untuk menggunakan maklumat itu semula dalam Growser, log masuk semula.</translation>
 <translation id="395904275706073188">Halaman yang dilindungi tidak dapat dibaca. Cuba halaman yang lain.</translation>
 <translation id="4194619960643453552">Ketahui tentang cara Growser memastikan anda selamat</translation>
@@ -348,6 +356,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="711601904575862069">Lancarkan Semula untuk Mengemas Kini &amp;Growser</translation>
 <translation id="4918086044614829423">Terima</translation>
 <translation id="4918844574251943176">Imej disalin</translation>
+<translation id="1762888370864318972">Untuk mendapatkan senarai bacaan anda dan pelbagai lagi pada semua peranti anda, log masuk ke Growser</translation>
 <translation id="8797356639448065696">Growser dalam mod latar belakang.</translation>
 <translation id="1895567721497166950">Klik untuk menutup dialog log masuk Growser</translation>
 <translation id="2692971232706994729">Dengan profil Growser, anda dapat mengasingkan semua bahan Growser anda. Buat profil untuk rakan dan keluarga atau asingkan pekerjaan daripada keseronokan.</translation>
@@ -427,9 +436,9 @@ Jika halaman ini tidak berfungsi seperti yang dijangkakan, cuba benarkan pengopt
 <translation id="8054200348483755053">Growser mendapati bahawa item ini mengandungi perisian hasad:</translation>
 <translation id="3955583201925082436">Growser sentiasa menyemak untuk memastikan penyemak imbas anda menawarkan tetapan paling selamat. Kami akan memaklumi anda jika ada apa-apa yang memerlukan semakan anda.</translation>
 <translation id="5895138241574237353">Mulakan Semula</translation>
+<translation id="5095041423280144434">Gemini Enterprise dalam Growser</translation>
 <translation id="5903106910045431592"><ph name="PAGE_TITLE"/> - Log Masuk Rangkaian</translation>
 <translation id="5924017743176219022">Menyambung ke Internet...</translation>
-<translation id="1275716786566134844">Mari sediakan Growser anda</translation>
 <translation id="5941711191222866238">Minimumkan</translation>
 <translation id="5768962901674164501">Untuk mendapatkan penanda halaman ini dan pelbagai lagi pada semua peranti anda, log masuk ke Growser</translation>
 <translation id="5101892358689285100">Peribadikan Growser Anda</translation>
@@ -579,6 +588,7 @@ Penanda halaman baharu tidak boleh disimpan dalam akaun anda sehingga anda memad
 <translation id="5755581833598928580">Gunakan Growser pada bila-bila masa anda mengklik pautan dalam mesej, dokumen dan apl lain</translation>
 <translation id="7216228761061470870">Apabila anda menggunakan Carian Imej pada desktop, tajuk halaman, URL dan kandungan, termasuk PDF, akan dihantar kepada pelayan</translation>
 <translation id="5516268345616100622">Pengurus Tugas - Growser</translation>
+<translation id="4366259698872849085">Tanya tentang kandungan di luar Growser, seperti apl atau fail lain</translation>
 <translation id="2416155625082200759"><ph name="EXISTING_USER"/> sudah log masuk. Untuk memastikan penyemakan imbas anda terpisah, log masuk ke Growser dalam profil anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapat maklumat anda yang disimpan dan pelbagai lagi pada semua peranti anda.</translation>
 <translation id="1871621397473741084">Mula menyemak imbas dengan serta-merta: Kini Growser boleh dilancarkan apabila Windows dimulakan.</translation>
 <translation id="7274695763216404502">Disematkan! Gunakan Carian Imej lagi daripada bar alat</translation>
@@ -632,7 +642,6 @@ Growser tidak dapat mengembalikan tetapan anda.</translation>
 <translation id="77283119132245232">Menyediakan perkhidmatan penyurihan sistem untuk <ph name="BROWSER_NAME"/>. Jika perkhidmatan ini dilumpuhkan, penyurihan prestasi yang dibuat oleh penyemak imbas tidak akan menyertakan peristiwa seluruh sistem seperti peristiwa suis konteks dan urutan tersedia.</translation>
 <translation id="4784414698887946907">Tindakan ini akan memadamkan data semakan imbas anda daripada peranti ini. Untuk mendapatkan kembali data anda kemudian, log masuk ke Growser sebagai <ph name="USER_EMAIL"/>.</translation>
 <translation id="7747138024166251722">Pemasang tidak dapat mencipta direktori sementara. Sila semak ruang cakera kosong dan kebenaran untuk memasang perisian.</translation>
-<translation id="644418935605751729">Cari pada Growser</translation>
 <translation id="8543787950557226450">Tetapkan semula kepada Growser Lalai</translation>
 <translation id="4859382825808018797">Untuk melindungi kerja anda pada Growser, organisasi anda akan dapat melihat atau mengurus maklumat tertentu apabila anda log masuk ke Growser.</translation>
 <translation id="4976450819672499783">Tetapkan Growser sebagai lalai dan sematkan pada bar tugas</translation>
@@ -640,7 +649,6 @@ Growser tidak dapat mengembalikan tetapan anda.</translation>
 <translation id="6236814935154483927"><ph name="PAGE_TITLE"/> - Growser Canary</translation>
 <translation id="2684504034454188774">Jadikan lebih sukar untuk pengguna dengan akses kepada trafik Internet anda untuk melihat laman yang anda lawati. Growser menggunakan sambungan selamat untuk mencari alamat IP laman dalam DNS (Sistem Nama Domain).</translation>
 <translation id="7810005234485217901">Anda boleh menyematkan Carian Imej untuk akses mudah</translation>
-<translation id="3219490697448569661">Tanya tentang kandungan di luar Growser, seperti apl atau fail lain yang anda buka</translation>
 <translation id="4191642852677143100">Pilih perkara yang mahu dikongsi dengan Growser</translation>
 <translation id="1652855885539187849">Profil Growser dengan akaun ini telah pun wujud pada peranti ini</translation>
 <translation id="7845233973568007926">Terima kasih kerana memasang. Anda perlu memulakan semula komputer anda sebelum menggunakan <ph name="BUNDLE_NAME"/>.</translation>
@@ -771,6 +779,7 @@ Growser tidak dapat mengembalikan tetapan anda.</translation>
 <translation id="7055223246119657449">Growser menyekat muat turun ini kerana fail arkib termasuk fail lain yang mungkin menyembunyikan perisian hasad</translation>
 <translation id="8341362078156319636">Pastikan kata laluan, penanda halaman dan sejarah anda disegerakkan dengan sempurna merentas peranti. Akses ciri yang anda ketahui dan sukai dengan mudah dengan mengemaskinikan penyemak imbas lalai anda kepada Growser. Growser akan disematkan pada bar tugas anda untuk akses pantas.</translation>
 <translation id="8965179855019347124">Gunakan alatan AI terbaik Growser dengan apl Growser pada telefon anda</translation>
+<translation id="7591043002129819267">Untuk mendapatkan kata laluan anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
 <translation id="9049928023195059068">Log masuk ke Growser apabila anda log masuk ke perkhidmatan Growser yang lain</translation>
 <translation id="4561046754724442504">Growser telah ditutup secara automatik</translation>
 <translation id="5173820533850252773">Growser sudah usang</translation>
@@ -817,6 +826,10 @@ Growser tidak dapat mengembalikan tetapan anda.</translation>
 <translation id="79269250264141507">Apabila anda menaipkan maklumat ke dalam bar alamat atau kotak carian, Growser menghantar maklumat yang anda taipkan kepada enjin carian lalai anda untuk mendapatkan cadangan lebih baik. Ciri ini dimatikan dalam penyemak imbas Peribadi.</translation>
 <translation id="2589970573128789862">Growser Private</translation>
 <translation id="5994282802285556682">Apabila menyemak imbas dalam mod Peribadi, Growser akan memberikan amaran kepada anda sebelum memuatkan sesuatu laman menggunakan sambungan yang tidak selamat</translation>
+<translation id="387514319934708384">Growser memerlukan kebenaran rangkaian setempat untuk laman ini</translation>
+<translation id="1275716786566134844">Mari sediakan Growser anda</translation>
+<translation id="644418935605751729">Cari pada Growser</translation>
+<translation id="3219490697448569661">Tanya tentang kandungan di luar Growser, seperti apl atau fail lain yang anda buka</translation>
 <translation id="1356661055722410047">Baharu! Anda boleh menterjemahkan teks dan imej pada skrin anda</translation>
 <translation id="1118754729376002185">Growser memerlukan kebenaran rangkaian setempat untuk laman ini</translation>
 <translation id="3985621805803699376">Cari dan kemukakan pertanyaan dari mana-mana sahaja, walaupun Growser diminimumkan</translation>
