@@ -196,9 +196,6 @@ Growser News သည် လယ်မြေကို မှီခိုနေသ�
 <translation id="5668852698659986622">Sponsored ကြော်ငြာများကို ဖွင့်ပါ</translation>
 <translation id="431194936581466649">Sponsored ကြော်ငြာများဖြင့် လွတ်လပ်၍ အသုံးပြုသူ-ဦးစားပေး Web တစ်ခု တည်ဆောက်ရေး Growser ၏ မစ်ရှင်ကို ကူညီထောက်ပံ့ပါ။ ကျွန်ုပ်တို့သည် သင့်ကို မဖော်ထုတ်ဘဲ ကြော်ငြာ စွမ်းဆောင်ရည်ကို လျှို့ဝှက်စွာ တိုင်းတာပါသည်။</translation>
 <translation id="1939813747486101115">ကမကထပြု ကြော်ငြာများ အကြောင်း ပိုမိုလေ့လာရန်</translation>
-<translation id="8347743943525229984">Growser စစ်တမ်းများကို ခွင့်ပြုရန်</translation>
-<translation id="6022939994702081659">Growser သတင်းစာ Panel ကိုလိပ်စာအသုံးပြုခွင့်ပြုရန်</translation>
-<translation id="7746496306508543965">Growser သတင်းစာများတွေ့ရှာမှု သင့််အတွက် ဆက်တင်များကိုမြင်တို့များ</translation>
 <translation id="410351446219883937">အော်တိုပလိး</translation>
 <translation id="7445411102860286510">ဝဘ်ဆိုက်များသည်မိုက်ကရိုဖုန်းနဲ့ သီချင်းများကိုအလိုအလျောက်အလွယ်တကူကစားစေနိုင်သည် (အကြံပြုချက်များအတွက်ကော်မှုများ)</translation>
 <translation id="7837721118676387834">ဝဘ်ဆိုက်များသည် အလိုအလျောမြုပ်သီချင်းများ ကစားခွင့်ပြုပါသည်။</translation>
@@ -226,6 +223,7 @@ Growser News သည် လယ်မြေကို မှီခိုနေသ�
 <translation id="9040069796107003510">Growser အားကျကာစာတမ်း</translation>
 <translation id="6333347122924254968">Address bar မှာ Growser စာတမ်းအမှတ်တွေကိုပြပါ</translation>
 <translation id="4393974575368329991">အောက်ခြေ နာဗီဂေးရှင်း တူးလ်ဘား</translation>
+<translation id="8727059712928806451">အောက်ဘားကို ဖွင့်ရန်</translation>
 <translation id="1834226716203076292">အိမ်၊ ဘွတ်ခ်မတ်များ နှင့် ရှာဖွေမှုကို လျင်မြန်စွာ ရယူနိုင်ရန် အောက်ခြေဘားကို ပြပါ</translation>
 <translation id="1422686363939271829">အောက်ကလိပ်ရာ Toolbar နေရာသည်ရွေးထားသောအနှစ်ပြည့်သည့်အခါတွင်ဤတပ်ဆင်ချက်ကို မိမိကွက်မှာ ဖျက်ဆီးမည်။</translation>
 <translation id="6587448235155023666">သင့်ရဲ့ပြင်ဆင်မှုတွေက Growser မှာသုံးတဲ့အချိန်မှာသာအကျိူးရရှိမည်</translation>
@@ -397,6 +395,12 @@ Growser News သည် လယ်မြေကို မှီခိုနေသ�
 <translation id="8793108040181436796">ဝီဂျက်များ</translation>
 <translation id="8643377320501056697">ထိပ်ဆုံးနေရာများ ပြပါ</translation>
 <translation id="7275773481201277457">Growser စာရင်းကိုပြရန်</translation>
+<translation id="8516804522688861636">အလွန်အကြိမ်ရောက်သော ဆိုက်များကို ပြရန်</translation>
+<translation id="4546260624932151782">သင့်နှစ်သက်ဆုံးများကို ပြရန်</translation>
+<translation id="5313967007315987356">ဆိုက်အား ထည့်ရန်</translation>
+<translation id="1773147648972887693">အလွန် အကြိမ်ရောက်သော ဆိုက်များကို ပြရန်</translation>
+<translation id="752098910262610337">ဖြတ်လမ်းများ ပြရန်</translation>
+<translation id="7134741506051403308">Widget ဖျောက်ရန်</translation>
 <translation id="7462178177755090262">ဖွင့်သော မျက်နှာပြင်</translation>
 <translation id="5365434987337264071">နောက်ဆုံးဖွင့်ထားသော တැබလ်</translation>
 <translation id="6019856124237323989">{HOURS, plural,
@@ -995,6 +999,13 @@ Growser News သည် လယ်မြေကို မှီခိုနေသ�
 <translation id="7530313002494358590">Growser အင်္ဂါရပ်တစ်ခုကို ဖွင့်ခြင်း သို့မဟုတ် ပိတ်ခြင်းအတွက် ပြောင်းလဲမှုများ အကျိုးသက်ရောက်စေရန် browser ကို ပြန်စတင်ရန် လိုအပ်သည်။ Growser Origin အဆင့်မြှင့်တင်ခြင်း ပြီးစီးပါက <ph name="BEGIN_BOLD"/>ယခုပြန်စတင်ရန်<ph name="END_BOLD"/> ကို ထိပါ။</translation>
 <translation id="1028940738207645746">အားလုံးအတိုင်းတူသည့်ခြင်းများသို့ပြန်သတ်မှတ်လိုပါသလား။</translation>
 <translation id="5939518447894949180">ပြန်ထားပေးပါ</translation>
+<translation id="3222790865318305905">Activation အကန့်အသတ်သို့ ရောက်ရှိနေသည်</translation>
+<translation id="3787857711016546034">လိမ်လည်မှုကို ကာကွယ်ရန်အတွက် Origin activations များကို နှုန်းကန့်သတ်ထားသည်။ သို့သော် သင်၏ Origin လိုင်စင်ကို device များ ပိုမိုအသုံးပြုရန် activations ပိုမိုတောင်းဆိုနိုင်သည်။ activations ပိုမိုတောင်းဆိုရန် option ကို နှိပ်ပါ သို့မဟုတ် အကူအညီအတွက် <ph name="CONTACT_SUPPORT"/>။</translation>
+<translation id="6760819753412779585">ဆက်သွယ်ရန်ပံ့ပိုးမှု</translation>
+<translation id="571697836019670200">Activations ပိုမိုတောင်းဆိုရန်</translation>
+<translation id="9019545131475425538">ပြုလုပ်နေသည်…</translation>
+<translation id="7242700630179071243">Activate ပြုလုပ်ရန် အသင့်ဖြစ်ပြီ</translation>
+<translation id="5463918917265356202">ဤ device တွင် Growser Origin ကို ယခု activate ပြုလုပ်ပြီးဖြစ်သည်။ ဤအင်္ဂါရပ်ကို စတင်အသုံးပြုရန် browser ကို ပြန်လည်စတင်ရန် လိုအပ်သည်။ ယခု ပြန်လည်စတင်လိုပါသလား?</translation>
 <translation id="8554205386170195281">ဝယ်ယူခြင်း</translation>
 <translation id="8613144770663526433">Growser Wallet ဖြင့် ဝင်ပါ</translation>
 <translation id="3696514931437952995">သင်သည် <ph name="ORIGIN"/> တွင် စာရင်းဝင်နေပါသည်။ Growser wallet သည် သင်၏ Wallet လိပ်စာကို <ph name="ORIGIN"/> တွင် မျှဝေမည်ဖြစ်သည်။</translation>
@@ -1200,6 +1211,9 @@ Growser News သည် လယ်မြေကို မှီခိုနေသ�
 <translation id="1850594249589065646">တည်နေရာ တိကျမှု</translation>
 <translation id="2403474027143565107">တိကျ</translation>
 <translation id="4042597221652780603">ခန့်မှန်း</translation>
+<translation id="8347743943525229984">Growser စစ်တမ်းများကို ခွင့်ပြုရန်</translation>
+<translation id="6022939994702081659">Growser သတင်းစာ Panel ကိုလိပ်စာအသုံးပြုခွင့်ပြုရန်</translation>
+<translation id="7746496306508543965">Growser သတင်းစာများတွေ့ရှာမှု သင့််အတွက် ဆက်တင်များကိုမြင်တို့များ</translation>
 <translation id="6800338374677644736">ပင်မကြည့်ရန်ကိုမှတ်သားပါ</translation>
 <translation id="4159764849281393303">WebApp</translation>
 <translation id="7759809451544302770">ရွေးသားနိုင်သည်။</translation>
@@ -1371,8 +1385,4 @@ Growser News သည် လယ်မြေကို မှီခိုနေသ�
 <translation id="5390923430722428146">Solana</translation>
 <translation id="6524973012848479397">Sponsored ကြော်ငြာများဖြင့် လွတ်လပ်၍ အသုံးပြုသူ-ဦးစားပေး Web တစ်ခု တည်ဆောက်ရေး Growser ၏ မစ်ရှင်ကို ကူညီထောက်ပံ့ပါ။ ကျွန်ုပ်တို့သည် သင့်ကို မဖော်ထုတ်ဘဲ ကြော်ငြာ စွမ်းဆောင်ရည်ကို လျှို့ဝှက်စွာ တိုင်းတာပါသည်။</translation>
 <translation id="9194561096821877683">Growser</translation>
-<translation id="4546260624932151782">သင့်နှစ်သက်ဆုံးများကို ပြရန်</translation>
-<translation id="5313967007315987356">ဆိုက်အား ထည့်ရန်</translation>
-<translation id="1773147648972887693">အလွန် အကြိမ်ရောက်သော ဆိုက်များကို ပြရန်</translation>
-<translation id="752098910262610337">ဖြတ်လမ်းများ ပြရန်</translation>
 </translationbundle>
