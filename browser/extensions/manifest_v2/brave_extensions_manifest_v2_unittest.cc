@@ -84,6 +84,16 @@ TEST_F(BraveExtensionsManifestV2Test, CheckInstallVerifier) {
   }
 }
 
+// Growser-369: the MV2 section and its migrator are off unless a flag turns
+// them on; the Brave-hosted MV2 builds cannot be delivered to a fork.
+TEST_F(BraveExtensionsManifestV2Test, OffByDefault) {
+  EXPECT_FALSE(base::FeatureList::IsEnabled(
+      extensions_mv2::features::kExtensionsManifestV2));
+  EXPECT_FALSE(extensions_mv2::features::IsExtensionReplacementEnabled());
+  EXPECT_EQ(nullptr, extensions_mv2::ExtensionsManifestV2MigratorFactory::
+                         GetForBrowserContextForTesting(profile()));
+}
+
 struct TestCase {
   bool feature_enabled = false;
   bool backup_enabled = false;
