@@ -11,7 +11,9 @@
 // upstream GN files with dependencies.
 namespace extensions_mv2::features {
 
-BASE_FEATURE(kExtensionsManifestV2, base::FEATURE_ENABLED_BY_DEFAULT);
+// Growser-369: off. The section offers Brave-hosted MV2 builds that only
+// Brave's keyed server delivers, so none of them can install here.
+BASE_FEATURE(kExtensionsManifestV2, base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE_PARAM(bool, kBackupSettings, &kExtensionsManifestV2, true);
 
