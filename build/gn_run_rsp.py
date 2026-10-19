@@ -62,6 +62,13 @@ def main():
         else:
             break
 
+    # Growser-368: SDKROOT points at the build dir's xcode_links symlink, and
+    # xcrun cannot resolve a tool against an SDK outside a developer dir, so a
+    # bare `git` from a build script opened the Command Line Tools installer.
+    # The real path is the same SDK directory.
+    if 'SDKROOT' in env_vars:
+        env_vars['SDKROOT'] = os.path.realpath(env_vars['SDKROOT'])
+
     # Ensure the command contains a path (absolute or relative)
     cmd = args[len(env_vars)]
     if os.path.basename(cmd) == cmd:
