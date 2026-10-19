@@ -1,0 +1,24 @@
+diff --git a/chrome/browser/shell_integration_win.cc b/chrome/browser/shell_integration_win.cc
+index 4482eecc5e282bcb420e97cabb25e592a76b3e4a..43c046094be144fd75c304c09ee66b2b50adeb75 100644
+--- a/chrome/browser/shell_integration_win.cc
++++ b/chrome/browser/shell_integration_win.cc
+@@ -47,6 +47,7 @@
+ #include "base/win/scoped_propvariant.h"
+ #include "base/win/shlwapi.h"
+ #include "base/win/shortcut.h"
++#include "brave/installer/util/brave_shell_util.h"  // Growser-365
+ #include "chrome/browser/policy/policy_path_parser.h"
+ #include "chrome/browser/shell_integration.h"
+ #include "chrome/browser/shortcuts/platform_util_win.h"
+@@ -747,6 +748,11 @@ std::wstring GetAppUserModelIdForApp(const std::wstring& app_name,
+ }
+ 
+ std::wstring GetAppUserModelIdForBrowser(const base::FilePath& profile_path) {
++  // Growser-365: a package has one id; a profile suffix makes another app.
++  if (std::wstring package_id = installer::GetPackageAppUserModelId();
++      !package_id.empty()) {
++    return package_id;
++  }
+   return GetAppUserModelIdImpl(
+       std::wstring(),
+       ShellUtil::GetBrowserModelId(InstallUtil::IsPerUserInstall()),

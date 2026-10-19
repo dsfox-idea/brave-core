@@ -5,6 +5,10 @@
 
 #include "brave/installer/util/brave_shell_util.h"
 
+#include <windows.h>  // Growser-365
+
+#include <appmodel.h>  // Growser-365
+
 #include "base/notreached.h"
 #include "chrome/install_static/install_util.h"
 #include "components/version_info/channel.h"
@@ -40,6 +44,24 @@ std::wstring GetProgIdForFileType() {
 
 bool ShouldUseFileTypeProgId(std::wstring_view ext) {
   return (ext == L".pdf" || ext == L".svg");
+}
+
+// Growser-365 (moved here from #132's copy in the notification bridge).
+std::wstring GetPackageAppUserModelId() {
+  UINT32 length = 0;
+  if (::GetCurrentApplicationUserModelId(&length, nullptr) !=
+      ERROR_INSUFFICIENT_BUFFER) {
+    // APPMODEL_ERROR_NO_PACKAGE for every non-packaged build.
+    return std::wstring();
+  }
+  std::wstring app_user_model_id(length, L'\0');
+  if (::GetCurrentApplicationUserModelId(&length, app_user_model_id.data()) !=
+      ERROR_SUCCESS) {
+    return std::wstring();
+  }
+  // On success `length` counts the terminating null, which the string owns.
+  app_user_model_id.resize(length ? length - 1 : 0);
+  return app_user_model_id;
 }
 
 }  // namespace installer
