@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/util/shell_util.cc b/chrome/installer/util/shell_util.cc
-index 3710cb78f57047096c2f2651739a089f060cd6f8..0b23552e2d22b81f3539684186dae17f22205799 100644
+index 3710cb78f57047096c2f2651739a089f060cd6f8..1b5b13f594f2af77701e2348480f052e8e14a763 100644
 --- a/chrome/installer/util/shell_util.cc
 +++ b/chrome/installer/util/shell_util.cc
 @@ -302,6 +302,7 @@ void GetChromeProgIdEntries(
@@ -26,3 +26,11 @@ index 3710cb78f57047096c2f2651739a089f060cd6f8..0b23552e2d22b81f3539684186dae17f
    entries->push_back(
        std::make_unique<RegistryEntry>(key_name, prog_id, std::wstring()));
  }
+@@ -1783,6 +1786,7 @@ std::wstring ShellUtil::GetCurrentInstallationSuffix(
+ }
+ 
+ std::wstring ShellUtil::GetBrowserModelId(bool is_per_user_install) {
++  GROWSER_GET_BROWSER_MODEL_ID  // Growser-365
+   std::wstring app_id(install_static::GetBaseAppId());
+   std::wstring suffix;
+ 

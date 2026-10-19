@@ -68,7 +68,17 @@ int GetIconIndexForFileType() {
 #define BRAVE_GET_SHELL_INTEGRATION_ENTRIES
 #endif
 
+// Growser-365: inside an MSIX package the browser's id is the package's, or
+// its windows, jump list and pins become a second app next to the Start tile.
+#define GROWSER_GET_BROWSER_MODEL_ID                                \
+  if (std::wstring package_app_user_model_id =                      \
+          installer::GetPackageAppUserModelId();                    \
+      !package_app_user_model_id.empty()) {                         \
+    return package_app_user_model_id;                               \
+  }
+
 #include <chrome/installer/util/shell_util.cc>
+#undef GROWSER_GET_BROWSER_MODEL_ID
 #undef BRAVE_GET_SHELL_INTEGRATION_ENTRIES
 #undef BRAVE_GET_APP_EXT_REGISTRATION_ENTRIES
 #undef BRAVE_GET_CHROME_PROG_ID_ENTRIES

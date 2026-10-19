@@ -377,7 +377,14 @@ test("brave_unit_tests") {
 
       # growser (#64): the executable-name interception.
       "//brave/sandbox/win:unit_tests",
+
+      # Growser-365: the browser's AUMID inside and outside an MSIX package.
+      "//brave/installer/util",
+      "//chrome/install_static:install_static_util",
+      "//chrome/installer/util:with_no_strings",
     ]
+    sources +=
+        [ "//brave/installer/util/brave_shell_util_unittest.cc" ]  # Growser-365
   }
 
   if (is_win) {

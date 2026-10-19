@@ -13,6 +13,11 @@ namespace installer {
 std::wstring GetProgIdForFileType();
 bool ShouldUseFileTypeProgId(std::wstring_view ext);
 
+// Growser-365: the AUMID of the MSIX package this process runs from, empty when
+// it is not packaged. Inside a package Windows honours no other id: a window,
+// jump list or pin under any other id is a second app on the taskbar.
+std::wstring GetPackageAppUserModelId();
+
 }  // namespace installer
 
 #endif  // BRAVE_INSTALLER_UTIL_BRAVE_SHELL_UTIL_H_
