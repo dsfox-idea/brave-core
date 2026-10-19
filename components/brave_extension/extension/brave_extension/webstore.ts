@@ -7,6 +7,9 @@ import { getLocale } from './background/api/localeAPI'
 
 const config = { attributes: true, childList: true, subtree: true }
 
+// Growser-366: the translated labels name Brave; the button names this browser.
+const rebrand = (label: string) => label.replace(/\bBrave\b/g, 'Growser')
+
 const callback = () => {
   const buttonQueries = [
     'div.webstore-test-button-label', // https://chrome.google.com/webstore
@@ -15,11 +18,11 @@ const callback = () => {
   for (const button of document.querySelectorAll(buttonQueries.join(','))) {
     const text = button.textContent || ''
     if (text === getLocale('addToChrome')) {
-      button.textContent =
-        getLocale('addToBrave') || text.replace('Chrome', 'Brave')
+      button.textContent = rebrand(  // Growser-366
+        getLocale('addToBrave') || text.replace('Chrome', 'Brave'))
     } else if (text === getLocale('removeFromChrome')) {
-      button.textContent =
-        getLocale('removeFromBrave') || text.replace('Chrome', 'Brave')
+      button.textContent = rebrand(  // Growser-366
+        getLocale('removeFromBrave') || text.replace('Chrome', 'Brave'))
     }
   }
 }
