@@ -65,8 +65,11 @@ class SdkRootTest(unittest.TestCase):
 
     @unittest.skipUnless(sys.platform == 'darwin', 'xcrun is macOS only')
     def test_xcrun_finds_git_under_the_build_sdkroot(self):
-        sdk = subprocess.run(['xcrun', '--show-sdk-path'], capture_output=True,
-                             text=True, check=True).stdout.strip()
+        # The build links Xcode's SDK; a bare --show-sdk-path may name the
+        # Command Line Tools one, under which xcrun finds git either way.
+        sdk = subprocess.run(['xcrun', '--sdk', 'macosx', '--show-sdk-path'],
+                             capture_output=True, text=True,
+                             check=True).stdout.strip()
         os.rmdir(self.real)
         os.remove(self.link)
         os.symlink(sdk, self.link)
