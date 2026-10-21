@@ -3,10 +3,19 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include "base/strings/string_util.h"  // Growser-370
 #include "components/safe_browsing/core/common/proto/csd.pb.h"
+#include "url/gurl.h"  // Growser-370
 
-#define BRAVE_ON_REQUEST_BUILT_FILTER \
-  BraveFilterRequest(client_download_request_.get());
+// Growser-370: when the ping's destination is one the network layer cancels
+// anyway (#329), finish where it would be sent, the same way upstream does
+// when pings are off, instead of building it and resolving the stub host.
+#define BRAVE_ON_REQUEST_BUILT_FILTER                                  \
+  BraveFilterRequest(client_download_request_.get());                  \
+  if (IsBlockedDownloadPingUrl(service()->GetDownloadRequestUrl())) {  \
+    FinishRequest(DownloadCheckResult::UNKNOWN, REASON_PING_DISABLED); \
+    return;                                                            \
+  }
 
 namespace safe_browsing {
 
@@ -23,6 +32,15 @@ void BraveFilterRequest(ClientDownloadRequest* request) {
         request->mutable_archived_binary(i);
     archived_binary->clear_file_path();
   }
+}
+
+// Growser-370: the clientreport endpoints brave_block_safebrowsing_urls.cc
+// cancels (#329). Android's download check has its own host and still runs.
+bool IsBlockedDownloadPingUrl(const GURL& url) {
+  return url.SchemeIs("https") &&
+         (url.host() == "sb-ssl.google.com" ||
+          url.host() == "safebrowsing.google.com") &&
+         base::StartsWith(url.path(), "/safebrowsing/clientreport/");
 }
 
 }  // namespace safe_browsing

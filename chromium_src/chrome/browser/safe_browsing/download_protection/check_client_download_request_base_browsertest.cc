@@ -4,8 +4,11 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include "base/path_service.h"
+#include "base/test/metrics/histogram_tester.h"  // Growser-370
 #include "brave/components/constants/brave_paths.h"
+#include "build/build_config.h"  // Growser-370
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/safe_browsing/download_protection/download_protection_util.h"  // Growser-370
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/test/base/in_process_browser_test.h"
@@ -67,6 +70,21 @@ class BraveCheckClientDownloadRequestBaseBrowserTest
   net::test_server::EmbeddedTestServer https_server_;
 };
 
+#if !BUILDFLAG(IS_ANDROID)  // Growser-370
+// Growser-370: the desktop ping goes to an endpoint the network layer cancels
+// (#329), so the check finishes before building or sending it.
+IN_PROC_BROWSER_TEST_F(BraveCheckClientDownloadRequestBaseBrowserTest,
+                       NoPingToBlockedEndpoint) {
+  base::HistogramTester histograms;
+  ui_test_utils::DownloadURL(browser(), download_url());
+
+  EXPECT_TRUE(safe_browsing::WebUIContentInfoSingleton::GetInstance()
+                  ->client_download_requests_sent()
+                  .empty());
+  histograms.ExpectUniqueSample("SBClientDownload.CheckDownloadStats",
+                                safe_browsing::REASON_PING_DISABLED, 1);
+}
+#else   // Growser-370
 IN_PROC_BROWSER_TEST_F(BraveCheckClientDownloadRequestBaseBrowserTest,
                        FilterRequest) {
   ui_test_utils::DownloadURL(browser(), download_url());
@@ -84,3 +102,4 @@ IN_PROC_BROWSER_TEST_F(BraveCheckClientDownloadRequestBaseBrowserTest,
   EXPECT_EQ(requests[0]->referrer_chain_size(), 0);
   EXPECT_EQ(requests[0]->resources_size(), 0);
 }
+#endif  // !BUILDFLAG(IS_ANDROID)  // Growser-370
