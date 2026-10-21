@@ -471,6 +471,8 @@
         <ignore regexp="The resource `R.string.brave_news_disabled_content` appears to be unused" />
         <ignore regexp="The resource `R.string.brave_news_more_offers_title` appears to be unused" />
         <ignore regexp="The resource `R.string.brave_news_open_new_private_tab` appears to be unused" />
+        <!-- Growser-351: the rationale dialog shows Chromium's message, this one promises Rewards. -->
+        <ignore regexp="The resource `R.string.brave_notification_permission_rationale_dialog_message` appears to be unused" />
         <ignore regexp="The resource `R.string.brave_news_open_new_tab` appears to be unused" />
         <ignore regexp="The resource `R.string.brave_news_optin_button` appears to be unused" />
         <ignore regexp="The resource `R.string.brave_news_optin_learn_more` appears to be unused" />
