@@ -34,13 +34,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
+    <!-- Growser-351: Chromium's message; Brave's promises tokens, and Rewards is out (#271). -->
     <TextView
         android:id="@+id/notification_permission_rationale_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif"
-        android:text="@string/brave_notification_permission_rationale_dialog_message"
+        android:text="@string/notification_permission_rationale_dialog_message"
         android:textSize="16sp"
         android:textColor="@color/wallet_secondary_layout_text_color"
         app:layout_constraintBottom_toTopOf="@+id/notification_continue_button"
