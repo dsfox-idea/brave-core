@@ -402,6 +402,17 @@ if (is_android) {
     ]
   }
 
+  # Growser-351
+  robolectric_library(
+      "brave_junit_tests_org.chromium.chrome.browser.notifications.permissions") {
+    sources = [ "src/org/chromium/chrome/browser/notifications/permissions/BraveNotificationPermissionRationaleDialogTest.java" ]
+
+    deps = [
+      "//chrome/android:chrome_java",
+      "//chrome/android/junit:chrome_junit_tests_helper",
+    ]
+  }
+
   robolectric_library(
       "brave_junit_tests_org.chromium.chrome.browser.ui.messages.snackbar") {
     sources = [
