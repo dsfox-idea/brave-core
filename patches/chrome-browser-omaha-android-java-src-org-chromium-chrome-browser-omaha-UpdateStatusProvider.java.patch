@@ -1,0 +1,37 @@
+diff --git a/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/UpdateStatusProvider.java b/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/UpdateStatusProvider.java
+index 6d273b9b186de07160e24ef825379a35e12e093e..9931b06b16d00b0ab8332c4a82bdfd50f5d97b1a 100644
+--- a/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/UpdateStatusProvider.java
++++ b/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/UpdateStatusProvider.java
+@@ -22,7 +22,6 @@ import org.chromium.base.ApkInfo;
+ import org.chromium.base.Callback;
+ import org.chromium.base.DeviceInfo;
+ import org.chromium.base.ObserverList;
+-import org.chromium.base.PackageUtils;
+ import org.chromium.base.ThreadUtils;
+ import org.chromium.base.task.AsyncTask;
+ import org.chromium.base.task.AsyncTask.Status;
+@@ -192,8 +191,8 @@ public class UpdateStatusProvider {
+             mMetrics.startUpdate();
+ 
+             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mStatus.updateUrl));
+-            // Ensure that the app vs browser disambiguation dialog is not shown.
+-            intent.addFlags(Intent.FLAG_ACTIVITY_REQUIRE_NON_BROWSER);
++            // Growser-378: the update is an APK on growser.org; this browser downloads it.
++            intent.setPackage(context.getPackageName());
+             if (newTask) intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+             context.startActivity(intent);
+         } catch (ActivityNotFoundException e) {
+@@ -300,8 +299,11 @@ public class UpdateStatusProvider {
+                         checkForSufficientStorage()
+                                 // Disable the version update check for automotive. See b/297925838.
+                                 && !DeviceInfo.isAutomotive()
+-                                && PackageUtils.isPackageInstalled(
+-                                        GooglePlayServicesUtil.GOOGLE_PLAY_STORE_PACKAGE);
++                                // Growser-378: the APK from growser.org/android is the update;
++                                // a copy Google Play installed is updated by Play instead.
++                                && !TextUtils.equals(
++                                        GooglePlayServicesUtil.GOOGLE_PLAY_STORE_PACKAGE,
++                                        ApkInfo.getInstallerPackageName());
+                 status.updateState =
+                         allowedToUpdate ? UpdateState.UPDATE_AVAILABLE : UpdateState.NONE;
+ 
