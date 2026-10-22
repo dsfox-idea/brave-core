@@ -17,6 +17,8 @@ import org.chromium.base.ServiceLoaderUtil;
 import org.chromium.base.test.BaseRobolectricTestRunner;
 import org.chromium.chrome.browser.omaha.OmahaBase.VersionConfig;
 
+import java.net.HttpURLConnection;
+
 /** growser#378: the Android beta's update check, both ends of the exchange. */
 @RunWith(BaseRobolectricTestRunner.class)
 @Config(manifest = Config.NONE)
@@ -56,6 +58,44 @@ public class GrowserRequestGeneratorTest {
         assertTrue(
                 ServiceLoaderUtil.maybeCreate(RequestGenerator.class)
                         instanceof GrowserRequestGenerator);
+    }
+
+    /** OmahaBase as the browser builds it, with only what createConnection() reads. */
+    private static final class Delegate extends OmahaDelegate {
+        @Override
+        boolean isInSystemImage() {
+            return false;
+        }
+
+        @Override
+        ExponentialBackoffScheduler getScheduler() {
+            throw new AssertionError("not used by createConnection()");
+        }
+
+        @Override
+        String generateUUID() {
+            return "uuid";
+        }
+
+        @Override
+        boolean isChromeBeingUsed() {
+            return true;
+        }
+
+        @Override
+        void scheduleService(long currentTimestampMs, long nextTimestampMs) {}
+
+        @Override
+        RequestGenerator createRequestGenerator() {
+            return new GrowserRequestGenerator();
+        }
+    }
+
+    @Test
+    public void testTheConnectionNamesNeitherTheOsNorTheDevice() throws Exception {
+        HttpURLConnection connection = new OmahaBase(new Delegate()).createConnection();
+        assertEquals("https://backend.growser.org/android/update", connection.getURL().toString());
+        assertEquals("Growser", connection.getRequestProperty("User-Agent"));
     }
 
     @Test
