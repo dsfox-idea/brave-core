@@ -87,8 +87,34 @@ public class GrowserRequestGeneratorTest {
 
         @Override
         RequestGenerator createRequestGenerator() {
-            return new GrowserRequestGenerator();
+            return answering(true, true);
         }
+    }
+
+    /** The generator with the two health answers fixed. */
+    private static GrowserRequestGenerator answering(boolean primary, boolean mirror) {
+        return new GrowserRequestGenerator() {
+            @Override
+            boolean answers(String host) {
+                return host.equals("backend.growser.org") ? primary : mirror;
+            }
+        };
+    }
+
+    @Test
+    public void testAReachableBackendTakesTheCheck() {
+        assertEquals(GrowserRequestGenerator.SERVER_URL, answering(true, true).getServerUrl());
+    }
+
+    @Test
+    public void testABlockedBackendSendsTheCheckToTheMirror() {
+        assertEquals(
+                "https://ru.growser.org/android/update", answering(false, true).getServerUrl());
+    }
+
+    @Test
+    public void testNeitherAnsweringKeepsTheBackend() {
+        assertEquals(GrowserRequestGenerator.SERVER_URL, answering(false, false).getServerUrl());
     }
 
     @Test
@@ -100,9 +126,7 @@ public class GrowserRequestGeneratorTest {
 
     @Test
     public void testTheCheckGoesToOurBackend() {
-        assertEquals(
-                "https://backend.growser.org/android/update",
-                new GrowserRequestGenerator().getServerUrl());
+        assertEquals("https://backend.growser.org/android/update", GrowserRequestGenerator.SERVER_URL);
     }
 
     @Test

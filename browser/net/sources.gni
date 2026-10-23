@@ -82,6 +82,7 @@ brave_browser_net_deps = [
   "//brave/components/safebrowsing",
   "//brave/components/speech_to_text",
   "//brave/components/speech_to_text:buildflags",
+  "//brave/components/growser_backend",  # Growser-347
   "//brave/components/static_redirect_helper",
   "//brave/components/update_client:buildflags",
   "//chrome/browser:browser_process",

@@ -25,6 +25,7 @@
 #include "brave/common/brave_channel_info.h"
 #include "brave/components/brave_origin/buildflags/buildflags.h"
 #include "brave/components/constants/brave_switches.h"
+#include "brave/components/growser_backend/backend_route.h"  // Growser-347
 #include "chrome/common/channel_info.h"
 #include "chrome/common/chrome_constants.h"
 
@@ -497,9 +498,14 @@ std::string GetDescriptionFromAppcastItem(id item) {
   std::string channel = GetUpdateChannel();
   if (channel.empty())
     channel = "stable";
-  NSString* url =
-      [NSString stringWithFormat:@"https://growser.org/sparkle/%s/appcast.xml",
-                                 channel.c_str()];
+  // Growser-347: Sparkle has its own connection, outside the request hook,
+  // so it asks the route itself. The mirror serves the same appcast with its
+  // archive on the mirror; the archive's EdDSA signature is checked either way.
+  NSString* url = [NSString
+      stringWithFormat:@"https://%s/sparkle/%s/appcast.xml",
+                       growser_backend::IsOnMirror() ? growser_backend::kMirrorHost
+                                                     : "growser.org",
+                       channel.c_str()];
   // Growser-191: say it out loud. The channel comes from the build's own
   // officialness (brave::GetChannelName returns "developer" for a
   // non-official build and the bundle's channel - "stable" here - otherwise),

@@ -12,6 +12,7 @@
 #include "brave/components/constants/brave_services_key.h"
 #include "brave/components/constants/brave_services_key_helper.h"
 #include "brave/components/constants/network_constants.h"
+#include "brave/components/growser_backend/backend_route.h"  // Growser-347
 #include "extensions/common/url_pattern.h"
 #include "services/network/public/cpp/resource_request.h"
 #include "url/gurl.h"
@@ -43,6 +44,8 @@ network::ResourceRequest OnBeforeSystemRequest(
   if (!new_url.is_empty()) {
     patched_request.url = new_url;
   }
+  // Growser-347: after the redirects above, which point at our backend.
+  patched_request.url = growser_backend::RouteUrl(patched_request.url);
   stt::OnBeforeURLRequest_SpoofSpeechToText(&patched_request);
   AddBraveServicesKeyHeader(&patched_request);
   return patched_request;

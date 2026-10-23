@@ -5,6 +5,7 @@
 
 #include "brave/browser/brave_local_state_prefs.h"
 
+#include "brave/components/growser_backend/backend_route.h"  // Growser-347
 #include "brave/components/growser_ru_trust/ru_trust_updater.h"
 
 #include <string>
@@ -190,6 +191,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
 #endif
   brave_origin::RegisterLocalStatePrefs(registry);
   growser_ru_trust::RuTrustUpdater::RegisterLocalStatePrefs(registry);
+  growser_backend::BackendProber::RegisterLocalStatePrefs(registry);  // Growser-347
 #if BUILDFLAG(ENABLE_LOCAL_AI)
   local_ai::prefs::RegisterLocalStatePrefs(registry);
 #endif
