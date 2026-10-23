@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/OmahaBase.java b/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/OmahaBase.java
+index 2207422db73049051cdd80f631345b4579157d85..6bfab86c17d947fdd150bc7aabcac617d4a97e08 100644
+--- a/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/OmahaBase.java
++++ b/chrome/browser/omaha/android/java/src/org/chromium/chrome/browser/omaha/OmahaBase.java
+@@ -489,6 +489,8 @@ public class OmahaBase {
+                     (HttpURLConnection) ChromiumNetworkAdapter.openConnection(url, annotation);
+             connection.setConnectTimeout(MS_CONNECTION_TIMEOUT);
+             connection.setReadTimeout(MS_CONNECTION_TIMEOUT);
++            // Growser-378: Android's default agent names the OS version and the device model.
++            connection.setRequestProperty("User-Agent", "Growser");
+             return connection;
+         } catch (IOException e) {
+             throw new RequestFailureException(
