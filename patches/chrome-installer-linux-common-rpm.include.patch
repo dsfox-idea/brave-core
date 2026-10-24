@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/common/rpm.include b/chrome/installer/linux/common/rpm.include
-index 9b87ef588baa2afd7f690917a8bb3ed5d9ce49e8..d9a97a446868c64cd2cdb6db18bf47776777954f 100644
+index 9b87ef588baa2afd7f690917a8bb3ed5d9ce49e8..35a8196483b28cb152a66c13b0921d13189fb3d3 100644
 --- a/chrome/installer/linux/common/rpm.include
 +++ b/chrome/installer/linux/common/rpm.include
 @@ -4,15 +4,20 @@
@@ -30,9 +30,14 @@ index 9b87ef588baa2afd7f690917a8bb3ed5d9ce49e8..d9a97a446868c64cd2cdb6db18bf4777
  
    # Check to see if all keys already exist.
    # Make sure all the most recent signing subkeys are installed.
-@@ -120,7 +125,20 @@ YUM_REPO_FILE="/etc/yum.repos.d/@@PACKAGE.repo"
+@@ -119,8 +124,25 @@ DEFAULT_ARCH="@@architecture"
+ YUM_REPO_FILE="/etc/yum.repos.d/@@PACKAGE.repo"
  ZYPPER_REPO_FILE="/etc/zypp/repos.d/@@PACKAGE.repo"
  
++# Growser-347: the repository and its key are listed twice, growser.org and
++# its auxiliary server ru.growser.org, which relays the same signed files. dnf
++# and zypper try a baseurl list in order, so a network that cannot reach the
++# first still updates.
  install_yum() {
 -  install_rpm_key
 +  # Growser-218: install_rpm_key is NOT called, and the function's own comment
@@ -52,21 +57,28 @@ index 9b87ef588baa2afd7f690917a8bb3ed5d9ce49e8..d9a97a446868c64cd2cdb6db18bf4777
  
    if [ ! "$REPOCONFIG" ]; then
      return 0
-@@ -133,7 +151,7 @@ name=@@PACKAGE
- baseurl=$REPOCONFIG/$DEFAULT_ARCH
+@@ -130,10 +152,10 @@ install_yum() {
+ cat > "$YUM_REPO_FILE" << REPOCONTENT
+ [@@PACKAGE]
+ name=@@PACKAGE
+-baseurl=$REPOCONFIG/$DEFAULT_ARCH
++baseurl=$REPOCONFIG/$DEFAULT_ARCH https://ru.growser.org/rpm/stable/$DEFAULT_ARCH
  enabled=1
  gpgcheck=1
 -gpgkey=https://dl.google.com/linux/linux_signing_key.pub
-+gpgkey=https://growser.org/growser-signing-key.pub
++gpgkey=https://growser.org/growser-signing-key.pub https://ru.growser.org/growser-signing-key.pub
  REPOCONTENT
    fi
  }
-@@ -154,7 +172,7 @@ enabled=1
+@@ -152,9 +174,9 @@ cat > "$ZYPPER_REPO_FILE" << REPOCONTENT
+ name=@@PACKAGE
+ enabled=1
  autorefresh=1
- baseurl=$REPOCONFIG/$DEFAULT_ARCH
+-baseurl=$REPOCONFIG/$DEFAULT_ARCH
++baseurl=$REPOCONFIG/$DEFAULT_ARCH https://ru.growser.org/rpm/stable/$DEFAULT_ARCH
  gpgcheck=1
 -gpgkey=https://dl.google.com/linux/linux_signing_key.pub
-+gpgkey=https://growser.org/growser-signing-key.pub
++gpgkey=https://growser.org/growser-signing-key.pub https://ru.growser.org/growser-signing-key.pub
  type=rpm-md
  keeppackages=0
  REPOCONTENT

@@ -16,8 +16,14 @@
   EnabledCupSigning_Unused() const; \
   bool EnabledCupSigning
 
+// Growser-347: the URL list gains our auxiliary server; see the .cc.
+#define UpdateUrl                                     \
+  UpdateUrl_ChromiumImpl() const;                     \
+  std::vector<GURL> UpdateUrl
+
 #include <components/component_updater/configurator_impl.h>  // IWYU pragma: export
 
+#undef UpdateUrl
 #undef EnabledCupSigning
 
 #undef EnabledBackgroundDownloader

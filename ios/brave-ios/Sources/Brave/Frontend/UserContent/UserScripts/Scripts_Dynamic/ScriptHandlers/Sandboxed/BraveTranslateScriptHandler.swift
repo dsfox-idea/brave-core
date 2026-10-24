@@ -202,11 +202,22 @@ class BraveTranslateScriptHandler: NSObject, TabContentScript {
   // MARK: - Private
 
   private func downloadElementScript() async throws -> String {
+    // Growser-296: the same script, through our backend.
+    // Growser-347: and from its auxiliary server on the same domain when the
+    // backend does not answer on this network.
+    do {
+      return try await downloadElementScript(host: "backend.growser.org")
+    } catch {
+      return try await downloadElementScript(host: "ru.growser.org")
+    }
+  }
+
+  private func downloadElementScript(host: String) async throws -> String {
     var urlRequest = URLRequest(
-      // Growser-296: the same script, through our backend.
-      url: URL(string: "https://backend.growser.org/static/v1/element.js")!
+      url: URL(string: "https://\(host)/static/v1/element.js")!
     )
     urlRequest.httpMethod = "GET"
+    urlRequest.timeoutInterval = 15
 
     let session = URLSession(configuration: .ephemeral)
     defer { session.finishTasksAndInvalidate() }

@@ -138,6 +138,7 @@ test("brave_unit_tests") {
     # brave_shields/core/browser:unit_tests is not among its deps - a test
     # added there is compiled by nothing and proves nothing.
     "//brave/components/brave_shields/core/browser/ad_block_bundled_resources_unittest.cc",
+    "//brave/components/growser_backend/backend_route_unittest.cc",  # Growser-347
     "//brave/components/growser_ru_trust/ru_trust_anchors_unittest.cc",
     "//brave/components/growser_ru_trust/ru_trust_updater_unittest.cc",
     "//brave/components/growser_snap/snap_unittest.cc",
@@ -232,6 +233,7 @@ test("brave_unit_tests") {
     "//brave/components/brave_shields/content/test:test_support",
     "//brave/components/brave_shields/content/test:unit_tests",
     "//brave/components/brave_shields/core/browser",
+    "//brave/components/growser_backend",  # Growser-347
     "//brave/components/growser_ru_trust",
     "//brave/components/growser_snap",
     "//brave/components/brave_shields/core/common",
@@ -334,6 +336,8 @@ test("brave_unit_tests") {
     "//google_apis/gcm:test_support",
     "//mojo/core/embedder",
     "//services/device/public/cpp:test_support",
+    "//components/component_updater",  # Growser-347
+    "//net:test_support",  # Growser-347
     "//services/network:test_support",
     "//services/network/public/cpp",
     "//services/preferences/public/cpp",

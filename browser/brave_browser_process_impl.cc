@@ -383,6 +383,11 @@ void BraveBrowserProcessImpl::StartBraveServices() {
       local_state(), shared_url_loader_factory());
   ru_trust_updater_->Start();
 
+  // Growser-347: which of our two backend addresses this network reaches.
+  backend_prober_ = std::make_unique<growser_backend::BackendProber>(
+      local_state(), shared_url_loader_factory());
+  backend_prober_->Start();
+
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
   brave_wallet::WalletDataFilesInstaller::GetInstance().SetDelegate(
       std::make_unique<brave_wallet::WalletDataFilesInstallerDelegateImpl>());

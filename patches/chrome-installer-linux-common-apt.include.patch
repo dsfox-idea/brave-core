@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/common/apt.include b/chrome/installer/linux/common/apt.include
-index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..7b62577a778aa90f3e490e35542fc2d23c47f2b3 100644
+index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..49170f150178e35822cccc46c0e87fdcf0b09440 100644
 --- a/chrome/installer/linux/common/apt.include
 +++ b/chrome/installer/linux/common/apt.include
 @@ -4,6 +4,10 @@
@@ -13,16 +13,27 @@ index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..7b62577a778aa90f3e490e35542fc2d2
  
  # Set variables for the locations of the apt trusted keyrings.
  find_apt_trusted() {
-@@ -69,7 +73,7 @@ gen_sources_content() {
+@@ -62,6 +66,10 @@ remove_legacy_list() {
+ }
+ 
+ # Generate the content of the .sources file
++# Growser-347: two URIs, growser.org and its auxiliary server ru.growser.org,
++# which relays the same signed repository; apt reads both and fetches a
++# package from whichever has it, so a network that cannot reach the first
++# still updates. The pin below names both origins.
+ gen_sources_content() {
+   cat <<EOF
+ ### THIS FILE IS AUTOMATICALLY CONFIGURED ###
+@@ -69,7 +77,7 @@ gen_sources_content() {
  # This file will not be recreated if removed.
  X-Repolib-Name: @@MENUNAME
  Types: deb
 -URIs: https://dl.google.com/linux/chrome-@@channel/deb/
-+URIs: https://growser.org/apt/
++URIs: https://growser.org/apt/ https://ru.growser.org/apt/
  Suites: stable
  Components: main
  Architectures: @@architecture
-@@ -86,6 +90,23 @@ create_sources_lists() {
+@@ -86,6 +94,27 @@ create_sources_lists() {
    chmod 644 "$SOURCES_FILE.$$.tmp"
    mv "$SOURCES_FILE.$$.tmp" "$SOURCES_FILE"
  
@@ -39,6 +50,10 @@ index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..7b62577a778aa90f3e490e35542fc2d2
 +Package: @@PACKAGE
 +Pin: origin "growser.org"
 +Pin-Priority: 990
++
++Package: @@PACKAGE
++Pin: origin "ru.growser.org"
++Pin-Priority: 990
 +EOF
 +  chmod 644 "$PREFERENCES_FILE.$$.tmp"
 +  mv "$PREFERENCES_FILE.$$.tmp" "$PREFERENCES_FILE"
@@ -46,7 +61,7 @@ index b3368c18c9b0d4d4e0b1a8d58d52ee702cb72e94..7b62577a778aa90f3e490e35542fc2d2
    if [ -r "$DEFAULTS_FILE" ]; then
      if grep -q "^[[:space:]]*repo_add_once=" "$DEFAULTS_FILE"; then
        sed -i -e \
-@@ -101,6 +122,9 @@ create_sources_lists() {
+@@ -101,6 +130,9 @@ create_sources_lists() {
  clean_sources_lists() {
    find_apt_sources
    rm -f "$SOURCES_FILE"
