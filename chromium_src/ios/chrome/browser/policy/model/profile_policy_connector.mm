@@ -12,7 +12,12 @@ CreateBraveProfilePolicyProvider();
 
 // Create and Init the Brave Profile Policy Provider which is used
 // for Brave Origin and other Brave specific policies.
+// Growser-386: with external policy compiled out (#358) there is no platform
+// provider, and upstream pushes the null GetPlatformProvider() into the list
+// unchecked; PolicyServiceImpl then dereferences it on every launch.
 #define BRAVE_PROFILE_POLICY_CONNECTOR_INIT                          \
+  std::erase_if(policy_providers_,                                   \
+                [](const auto& provider) { return !provider; });     \
   brave_profile_policy_provider_ =                                   \
       brave_policy::CreateBraveProfilePolicyProvider();              \
   policy_providers_.push_back(brave_profile_policy_provider_.get()); \
