@@ -231,7 +231,13 @@ class BraveTranslateScriptHandler: NSObject, TabContentScript {
       throw BraveTranslateError.invalidTranslationResponse
     }
 
-    return script
+    return Self.elementScript(script, from: host)  // Growser-347
+  }
+
+  // Growser-347: the script loads main.js and its CSS from securityOrigin, so
+  // a script the mirror served points securityOrigin at the mirror.
+  static func elementScript(_ script: String, from host: String) -> String {
+    "securityOrigin = 'https://\(host)/';\n" + script
   }
 }
 

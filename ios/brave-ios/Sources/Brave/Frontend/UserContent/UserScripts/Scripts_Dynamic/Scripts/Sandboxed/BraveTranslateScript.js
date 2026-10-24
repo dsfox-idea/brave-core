@@ -131,7 +131,8 @@ try {
   const useGoogleTranslateEndpoint = false;
   const braveTranslateStaticPath = '/static/v1/';
   // securityOrigin is predefined by translate_script.cc.
-  const securityOriginHost = new URL(securityOrigin).host;
+  // Growser-347: read at each call, the loaded script may have moved it.
+  const securityOriginHost = () => new URL(securityOrigin).host;
 
   // A method to rewrite URL in the scripts:
   // 1. change the domain to translate.brave.com;
@@ -154,7 +155,7 @@ try {
               // braveTranslateStaticPath is predefined by translate_script.cc.
               newURL.pathname = newURL.pathname.replace('/translate_static/', braveTranslateStaticPath);
           }
-          newURL.host = securityOriginHost;
+          newURL.host = securityOriginHost();  // Growser-347
           return newURL.toString();
       } catch {
           return url;
