@@ -44,3 +44,17 @@ source_set("policy") {
     ]
   }
 }
+
+source_set("unit_tests") {
+  testonly = true
+
+  sources = [ "profile_policy_connector_unittest.mm" ]
+
+  deps = [
+    "//base",
+    "//brave/components/growser_policy/buildflags",
+    "//ios/chrome/browser/policy/model",
+    "//ios/web/public/test",
+    "//testing/gtest",
+  ]
+}
