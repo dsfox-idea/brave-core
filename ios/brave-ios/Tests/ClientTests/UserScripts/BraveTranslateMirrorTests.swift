@@ -49,6 +49,20 @@ final class BraveTranslateMirrorTests: XCTestCase {
       }
     )
     viewController.loadViewIfNeeded()
+    // translate.js (IDR_TRANSLATE_JS) lives in resources.pak, which
+    // initializeResourceBundleForTesting does not load, so the user script has
+    // no cr.googleTranslate, and its first catch calls the missing
+    // onTranslateElementError, which stops the script. The script overrides
+    // onLoadJavascript itself; it only needs the object and that handler.
+    viewController.add(
+      userScript: WKUserScript(
+        source: "var cr = cr || {}; cr.googleTranslate = cr.googleTranslate || {};"
+          + "cr.googleTranslate.onTranslateElementError = (e) => console.error(e);",
+        injectionTime: .atDocumentStart,
+        forMainFrameOnly: true,
+        in: BraveTranslateScriptHandler.scriptSandbox
+      )
+    )
     viewController.add(userScript: try XCTUnwrap(BraveTranslateScriptHandler.userScript))
     try await viewController.loadHTMLStringAndWait("<html><body>Hello</body></html>")
 
