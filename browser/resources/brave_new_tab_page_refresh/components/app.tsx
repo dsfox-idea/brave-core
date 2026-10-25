@@ -10,6 +10,7 @@ import { Background } from './background/background'
 import { TopSites } from './top_sites/top_sites'
 import { Clock } from './common/clock'
 import { useSearchLayoutReady } from './app_layout_ready'
+import { useBackgroundState } from '../context/background_context' // Growser-392
 
 import { style } from './app.style'
 
@@ -35,9 +36,14 @@ import { LazyQueryBox } from './query_box/lazy_query_box'
 // mac side is building (#118) - "important infobars stay" means that one.
 export function App() {
   const searchLayoutReady = useSearchLayoutReady()
+  // Growser-392: no wallpaper means a flat theme colour, and the light one
+  // needs dark text (app.style.ts).
+  const backgroundsEnabled = useBackgroundState((s) => s.backgroundsEnabled)
 
   return (
-    <div data-css-scope={style.scope}>
+    <div
+      data-css-scope={style.scope}
+      className={backgroundsEnabled ? undefined : 'solid-background'}>
       <Background />
       <div className='background-filter allow-background-pointer-events' />
       <main className='allow-background-pointer-events'>

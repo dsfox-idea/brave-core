@@ -17,6 +17,12 @@
       menu-options="[[newTabShowOptions_]]">
     </settings-dropdown-menu>
   </div>
+  <!-- Growser-392: the one look setting that stays - turned off, the page is
+       a flat theme colour instead of a photo. -->
+  <settings-toggle-button class="hr"
+    pref="{{prefs.brave.new_tab_page.show_background_image}}"
+    label="$i18n{braveNewTabShowBackgroundImage}">
+  </settings-toggle-button>
   <!-- growser (#136): the "customize the new tab page" row is gone. It opened
        chrome://newTab?openSettings=1, which is the way into the page's own
        settings modal - and those are no longer reachable, by design. What the

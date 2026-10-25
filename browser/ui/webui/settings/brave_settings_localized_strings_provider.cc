@@ -863,6 +863,8 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"braveNewTab", IDS_SETTINGS_NEW_TAB},
       {"braveNewTabBraveRewards", IDS_SETTINGS_NEW_TAB_BRAVE_REWARDS},
       {"braveNewTabNewTabPageShows", IDS_SETTINGS_NEW_TAB_NEW_TAB_PAGE_SHOWS},
+      {"braveNewTabShowBackgroundImage",  // Growser-392
+       IDS_BRAVE_NEW_TAB_SHOW_BACKGROUND_IMAGE},
       {"braveNewTabNewTabCustomizeWidgets",
        IDS_SETTINGS_NEW_TAB_NEW_TAB_CUSTOMIZE_WIDGETS},
   // Pin shortcut page

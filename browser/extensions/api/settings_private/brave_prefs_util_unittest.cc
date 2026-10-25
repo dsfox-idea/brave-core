@@ -5,6 +5,7 @@
 
 #include "brave/browser/extensions/api/settings_private/brave_prefs_util.h"
 
+#include "brave/components/ntp_background_images/common/pref_names.h"
 #include "brave/components/sidebar/browser/pref_names.h"
 #include "chrome/test/base/testing_profile.h"
 #include "content/public/test/browser_task_environment.h"
@@ -29,6 +30,13 @@ TEST_F(BravePrefsUtilTest, SidebarSettingsRowsAreReachableFromSettings) {
 
   EXPECT_TRUE(allowlist.contains(sidebar::kSidebarShowOption));
   EXPECT_TRUE(allowlist.contains(sidebar::kSidebarShowPinnedTabs));
+}
+
+// The new tab page's background toggle (growser#392) is bound by name too.
+TEST_F(BravePrefsUtilTest, NewTabBackgroundRowIsReachableFromSettings) {
+  BravePrefsUtil prefs_util(&profile_);
+  EXPECT_TRUE(prefs_util.GetAllowlistedKeys().contains(
+      ntp_background_images::prefs::kNewTabPageShowBackgroundImage));
 }
 
 }  // namespace extensions
