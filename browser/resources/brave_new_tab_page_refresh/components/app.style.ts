@@ -36,6 +36,18 @@ export const style = scoped.css`
     }
   }
 
+  /* Growser-392: backgrounds off draws one flat colour by theme
+   * (background_store.ts). On the near-white one the white, shadowed text made
+   * for photos disappears, so the page hands its children a dark foreground
+   * through custom properties - they inherit across the scopes the tiles use. */
+  &.solid-background {
+    @media (prefers-color-scheme: light) {
+      --ntp-foreground: #202124;
+      --ntp-foreground-shadow: none;
+      --ntp-add-tile-color: rgba(0, 0, 0, 0.08);
+    }
+  }
+
   @keyframes background-scroll-fade {
     from {
       background: rgba(0, 0, 0, 0);
@@ -132,9 +144,10 @@ export const style = scoped.css`
     /* the wallpaper can be bright, and white on a pale sky is unreadable with
      * the 1px shadow the top controls use - this one carries the text over
      * anything */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .40), 0 2px 24px rgba(0, 0, 0, .35);
+    text-shadow: var(--ntp-foreground-shadow,
+      0 1px 2px rgba(0, 0, 0, .40), 0 2px 24px rgba(0, 0, 0, .35));
 
-    color: #fff;
+    color: var(--ntp-foreground, #fff); /* Growser-392 */
     opacity: .9;
 
     display: flex;

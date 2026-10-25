@@ -185,8 +185,9 @@ export const style = scoped.css`
 
   .add-tile {
     --leo-icon-size: 32px;
-    --leo-icon-color: ${color.white};
-    --self-tile-color: rgba(255, 255, 255, 0.22);
+    /* Growser-392: dark on the light flat background (app.style.ts). */
+    --leo-icon-color: var(--ntp-foreground, ${color.white});
+    --self-tile-color: var(--ntp-add-tile-color, rgba(255, 255, 255, 0.22));
 
     backdrop-filter: blur(30px);
     box-shadow: none;
@@ -225,7 +226,7 @@ export const style = scoped.css`
 
 
   .menu-button {
-    --leo-icon-color: rgba(255, 255, 255, .8);
+    --leo-icon-color: var(--ntp-foreground, rgba(255, 255, 255, .8)); /* Growser-392 */
     --leo-icon-size: 24px;
 
     anchor-name: --top-sites-menu-button;

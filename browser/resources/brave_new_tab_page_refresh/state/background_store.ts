@@ -153,6 +153,16 @@ const defaultBackground: Background = {
   cssValue: gradientPreviewBackground,
 }
 
+// Growser-392: with backgrounds off the page is one flat colour that follows
+// the theme - dark grey in dark, near-white in light - instead of the purple
+// gradient upstream falls back to.
+export const solidThemeBackground = 'light-dark(#f4f4f5, #202124)'
+
+const backgroundsOffBackground: Background = {
+  type: 'color',
+  cssValue: solidThemeBackground,
+}
+
 export function getCurrentBackground(
   state: BackgroundState,
 ): Background | null {
@@ -172,7 +182,7 @@ export function getCurrentBackground(
   }
 
   if (!backgroundsEnabled) {
-    return defaultBackground
+    return backgroundsOffBackground // Growser-392
   }
 
   if (sponsoredImageBackground) {
