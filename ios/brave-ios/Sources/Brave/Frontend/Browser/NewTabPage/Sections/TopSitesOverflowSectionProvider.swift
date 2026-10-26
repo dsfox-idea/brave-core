@@ -19,7 +19,7 @@ class FavoritesOverflowButton: SpringButton {
     } else {
       view.effect = UIBlurEffect(style: .systemThinMaterial)
     }
-    view.overrideUserInterfaceStyle = .dark
+    // Growser-392: no overrideUserInterfaceStyle = .dark; the new tab page sets it.
     return view
   }()
 
@@ -28,7 +28,7 @@ class FavoritesOverflowButton: SpringButton {
 
     let label = UILabel().then {
       $0.text = Strings.NTP.showMoreFavorites
-      $0.textColor = .white
+      $0.textColor = .label  // Growser-392
       $0.font = UIFont.systemFont(ofSize: 12.0, weight: .medium)
     }
 
