@@ -96,7 +96,10 @@ public class BraveNtpAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             layoutParams.setMargins(margin, margin, margin, 0);
 
             mMvTilesContainerLayout.setLayoutParams(layoutParams);
-            mMvTilesContainerLayout.setBackgroundResource(R.drawable.rounded_dark_bg_alpha);
+            mMvTilesContainerLayout.setBackgroundResource( // Growser-392
+                    tilesBackground(
+                            UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
+                                    .getBoolean(BravePref.NEW_TAB_PAGE_SHOW_BACKGROUND_IMAGE)));
             mTopSitesHeight = NTPImageUtil.getViewHeight(holder.itemView) + margin;
 
         } else if (holder instanceof ImageCreditViewHolder) {
@@ -265,6 +268,12 @@ public class BraveNtpAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void setRecyclerViewHeight(int recyclerViewHeight) {
         mRecyclerViewHeight = recyclerViewHeight;
         notifyItemRangeChanged(0, getItemCount());
+    }
+
+    // Growser-392: the dark slab under the tiles is there to carry white labels over a photo. On
+    // the flat background it turns a light page grey and the labels fall under 4.5:1.
+    static int tilesBackground(boolean showBackgroundImage) {
+        return showBackgroundImage ? R.drawable.rounded_dark_bg_alpha : 0;
     }
 
     public static class TopSitesViewHolder extends RecyclerView.ViewHolder {

@@ -508,6 +508,8 @@ public class BraveNewTabPageLayout extends NewTabPageLayout {
                 setBackgroundImage(mNtpImageGlobal);
             } else {
                 wasWallpaperShown = false;
+                // Growser-392: no photo means the desktop's flat theme colour.
+                setBackgroundColor(getContext().getColor(R.color.ntp_solid_background));
             }
         }
 
