@@ -7,6 +7,7 @@ package org.chromium.chrome.browser.suggestions.tile;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.graphics.drawable.GradientDrawable; // Growser-393
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +30,15 @@ public class BraveTileView extends TileView {
 
     public BraveTileView(Context context, AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    // Growser-393: the plate under a tile's icon when background images are off - one step
+    // off ntp_solid_background, so the tile keeps its shape on the flat page.
+    public static GradientDrawable solidBackgroundIconPlate(Context context) {
+        GradientDrawable plate = new GradientDrawable();
+        plate.setShape(GradientDrawable.OVAL);
+        plate.setColor(context.getColor(R.color.ntp_tile_icon_plate));
+        return plate;
     }
 
     @VisibleForTesting
@@ -73,6 +83,9 @@ public class BraveTileView extends TileView {
                     ColorStateList textColors = titleView.getTextColors();
                     ImageViewCompat.setImageTintList(pinnedShortcutBadgeView, textColors);
                 }
+            } else {
+                // Growser-393: on the flat page the stock icon circle is the page colour.
+                mIconBackgroundView.setBackground(solidBackgroundIconPlate(getContext()));
             }
         } else {
             Log.w(TAG, "Attempt to access profile before native initialization");
