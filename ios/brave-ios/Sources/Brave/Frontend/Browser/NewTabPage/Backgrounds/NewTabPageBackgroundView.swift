@@ -23,13 +23,10 @@ class NewTabPageBackgroundView: UIView {
     super.init(frame: frame)
 
     clipsToBounds = true
+    // Growser-392: with background images off the page is a flat theme colour, the
+    // same as the desktop's; the tiles follow the theme (NewTabPageViewController).
     backgroundColor = .init {
-      if $0.userInterfaceStyle == .dark {
-        return UIColor(braveSystemName: .pageBackground)
-      }
-      // We use a special color here unfortunately when there is no background because
-      // favorite cells have white text
-      return .init(rgb: 0x3b3e4f)
+      $0.userInterfaceStyle == .dark ? .init(rgb: 0x202124) : .init(rgb: 0xf4f4f5)  // Growser-392
     }
 
     addSubview(imageView)

@@ -386,6 +386,13 @@ class NewTabPageViewController: UIViewController {
 
     gradientView.isHidden = background.backgroundImage == nil
     backgroundView.imageView.image = background.backgroundImage
+    // Growser-392: dark over a photo (and in private mode), the system theme on the
+    // flat background.
+    let style: UIUserInterfaceStyle =  // Growser-392
+      background.backgroundImage == nil && !privateBrowsingManager.isPrivateBrowsing  // Growser-392
+      ? .unspecified : .dark  // Growser-392
+    backgroundView.overrideUserInterfaceStyle = style  // Growser-392
+    collectionView.overrideUserInterfaceStyle = style  // Growser-392
   }
 
   private func calculateBackgroundCenterPoints() {

@@ -41,14 +41,16 @@ class TopSitesCell: UICollectionViewCell, CollectionViewReusable {
     $0.textAlignment = UI.labelAlignment
     $0.lineBreakMode = NSLineBreakMode.byWordWrapping
     $0.numberOfLines = 2
-    $0.textColor = .white
+    $0.textColor = .label  // Growser-392: white over a photo, dark on a light page
   }
 
   var title: String? {
     didSet {
       textLabel.attributedText = title.map {
         let shadow = NSShadow()
-        shadow.shadowColor = UIColor(white: 0, alpha: 0.35)
+        shadow.shadowColor = UIColor {  // Growser-392: no shadow under dark text
+          $0.userInterfaceStyle == .dark ? UIColor(white: 0, alpha: 0.35) : .clear  // Growser-392
+        }  // Growser-392
         shadow.shadowOffset = CGSize(width: 0, height: 1)
         shadow.shadowBlurRadius = 4
         return NSAttributedString(
@@ -107,7 +109,7 @@ class TopSitesCell: UICollectionViewCell, CollectionViewReusable {
     super.init(frame: frame)
 
     isAccessibilityElement = true
-    overrideUserInterfaceStyle = .dark
+    // Growser-392: no overrideUserInterfaceStyle = .dark; the new tab page sets it.
 
     imageContainerView.contentView.addSubview(imageView)
 
