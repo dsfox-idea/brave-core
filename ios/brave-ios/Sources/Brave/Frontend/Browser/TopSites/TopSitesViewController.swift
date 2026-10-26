@@ -595,8 +595,12 @@ extension TopSitesViewController: NSFetchedResultsControllerDelegate {
     if controller === recentSearchesFRC {
       if favoritesSectionExists {
         // New snapshot is created, items from the other frc must be added to it.
+        // Growser-394: from `tiles`, the way `updateUIWithSnapshot` builds them.
+        // `tiles` can already hold its first tile while the snapshot on screen
+        // has no `.topSites` section yet (`updateUIWithSnapshot` fetches before
+        // it applies), and `itemIdentifiers(inSection:)` threw then.
         newSnapshot.appendItems(
-          currentSnapshot.itemIdentifiers(inSection: .topSites),
+          tiles.map { .topSites(TopSitesTileDiffable($0)) },
           toSection: .topSites
         )
       }
