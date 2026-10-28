@@ -20,7 +20,7 @@ deps = {
   # disabled by default. A pin rather than a copy, so the version we ship is
   # recorded and the extension can be developed in its own repository.
   "vendor/webharvester": "https://github.com/dsfox-idea/webharvester.git@d4efd3df982b297e79dd43a54ce445f2ca55e391",
-  "vendor/web-discovery-project": "https://github.com/brave/web-discovery-project@5b60f585e1ae406289ca76791cc1d7cde8127710",
+  "vendor/web-discovery-project": "https://github.com/brave/web-discovery-project@80791e59ab389f3a49c94748f799dc3b5d8adb6b",
   "third_party/bip39wally-core-native": "https://github.com/brave-intl/bat-native-bip39wally-core.git@547a7810333d821e29b8f55126aba031aa0d5fcd",
   "third_party/ethash/src": "https://github.com/chfast/ethash.git@e4a15c3d76dc09392c7efd3e30d84ee3b871e9ce",
   "third_party/bitcoin-core/src": "https://github.com/bitcoin/bitcoin.git@8105bce5b384c72cf08b25b7c5343622754e7337", # v25.0
