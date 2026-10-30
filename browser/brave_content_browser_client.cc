@@ -99,6 +99,9 @@
 #include "brave/components/skus/common/skus_sdk.mojom.h"
 #endif
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
+#if !BUILDFLAG(IS_ANDROID)
+#include "brave/browser/ya_dev_folder/ya_dev_folder_service.h"  // Growser-ya-dev
+#endif
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/traffic_control/buildflags/buildflags.h"
 #include "brave/components/translate/core/common/brave_translate_switches.h"
@@ -1036,6 +1039,11 @@ void BraveContentBrowserClient::RegisterBrowserInterfaceBindersForFrame(
       render_frame_host, map);
   map->Add<cosmetic_filters::mojom::CosmeticFiltersResources>(
       base::BindRepeating(&BindCosmeticFiltersResources));
+#if !BUILDFLAG(IS_ANDROID)
+  // Growser-ya-dev: any origin, no check - the experiment.
+  map->Add<ya_dev_folder::mojom::YaDevFolder>(
+      base::BindRepeating(&ya_dev_folder::YaDevFolderService::Create));
+#endif
   map->Add<misc_metrics::mojom::Web3Metrics>(
       base::BindRepeating(&BindWeb3Metrics));
   if (brave_search::IsDefaultAPIEnabled()) {

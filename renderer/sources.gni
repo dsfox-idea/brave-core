@@ -62,6 +62,11 @@ if (enable_skus) {
   brave_chrome_renderer_deps += [ "//brave/components/skus/renderer" ]
 }
 
+# Growser-ya-dev
+if (!is_android) {
+  brave_chrome_renderer_deps += [ "//brave/components/ya_dev_folder/renderer" ]
+}
+
 if (enable_speedreader) {
   brave_chrome_renderer_deps += [
     "//brave/components/speedreader/common",

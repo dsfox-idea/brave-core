@@ -23,6 +23,7 @@ include_rules += [
   "+brave/components/script_injector/renderer",
   "+brave/components/skus/common",
   "+brave/components/skus/renderer",
+  "+brave/components/ya_dev_folder/renderer",  # Growser-ya-dev
   "+brave/components/speedreader/common",
   "+brave/components/speedreader/common",
   "+brave/components/speedreader/renderer",

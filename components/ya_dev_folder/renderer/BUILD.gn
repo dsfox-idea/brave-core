@@ -1,0 +1,25 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https:#mozilla.org/MPL/2.0/.
+# Growser-ya-dev (growser#397): experiment code, never ships.
+
+source_set("renderer") {
+  sources = [
+    "ya_dev_js_handler.cc",
+    "ya_dev_js_handler.h",
+    "ya_dev_render_frame_observer.cc",
+    "ya_dev_render_frame_observer.h",
+  ]
+
+  deps = [
+    "//base",
+    "//brave/components/ya_dev_folder/common:mojom",
+    "//content/public/renderer",
+    "//gin",
+    "//mojo/public/cpp/base",
+    "//mojo/public/cpp/bindings",
+    "//third_party/blink/public:blink",
+    "//v8",
+  ]
+}

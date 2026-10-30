@@ -1,0 +1,29 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https:#mozilla.org/MPL/2.0/.
+# Growser-ya-dev (growser#397): experiment code, never ships.
+
+assert(!is_android)
+
+source_set("ya_dev_folder") {
+  sources = [
+    "ya_dev_folder_service.cc",
+    "ya_dev_folder_service.h",
+    "ya_dev_folder_store.cc",
+    "ya_dev_folder_store.h",
+  ]
+
+  public_deps = [
+    "//brave/components/ya_dev_folder/common:mojom",
+    "//content/public/browser",
+    "//ui/shell_dialogs",
+  ]
+
+  deps = [
+    "//base",
+    "//brave/components/ya_dev_folder/browser",
+    "//mojo/public/cpp/base",
+    "//url",
+  ]
+}

@@ -24,6 +24,7 @@
 #if BUILDFLAG(ENABLE_SKUS)
 #include "brave/components/skus/common/features.h"
 #include "brave/components/skus/renderer/skus_render_frame_observer.h"
+#include "brave/components/ya_dev_folder/renderer/ya_dev_render_frame_observer.h"  // Growser-ya-dev
 #endif
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
@@ -225,6 +226,10 @@ void BraveContentRendererClient::RenderFrameCreated(
       !process_state::IsIncognitoProcess()) {
     skus::SkusRenderFrameObserver::Create(render_frame);
   }
+#endif
+
+#if !BUILDFLAG(IS_ANDROID)
+  ya_dev_folder::YaDevRenderFrameObserver::Create(render_frame);  // Growser-ya-dev
 #endif
 
 #if BUILDFLAG(IS_ANDROID)

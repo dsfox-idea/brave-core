@@ -79,6 +79,8 @@ include_rules += [
   "+brave/components/sidebar/common",
   "+brave/components/skus/browser",
   "+brave/components/skus/common",
+  "+brave/components/ya_dev_folder",  # Growser-ya-dev
+  "+brave/browser/ya_dev_folder",  # Growser-ya-dev
   "+brave/components/speedreader",
   "+brave/components/web_mcp/core/browser",
   "-brave/components/speedreader/renderer",

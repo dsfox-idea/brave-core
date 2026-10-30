@@ -1,0 +1,65 @@
+// Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this file,
+// You can obtain one at https://mozilla.org/MPL/2.0/.
+// Growser-ya-dev (growser#397): experiment code, never ships.
+
+module ya_dev_folder.mojom;
+
+import "mojo/public/mojom/base/big_buffer.mojom";
+
+enum ErrorCode {
+  kOk,
+  // No folder is linked for this origin.
+  kNotLinked,
+  // The page's origin is opaque (data:, sandboxed): it has no identity to
+  // link a folder to.
+  kOpaqueOrigin,
+  // The user closed the folder dialog without choosing.
+  kCancelled,
+  // Absolute path, "..", a drive letter or a stream name.
+  kInvalidPath,
+  // A symbolic link or reparse point is on the path or inside the tree.
+  kSymlink,
+  kNotFound,
+  kAlreadyExists,
+  kNotADirectory,
+  kIsADirectory,
+  // Larger than a single message can carry (see folder_sandbox.h).
+  kTooLarge,
+  kIo,
+};
+
+struct Entry {
+  string name;
+  bool is_directory;
+  uint64 size;
+  // Milliseconds since the Unix epoch.
+  double modified_ms;
+};
+
+// One reply shape for every call: the renderer turns whichever payload is set
+// into the JS value (see ya_dev_js_handler.cc), so a new method needs no new
+// reply type.
+struct Reply {
+  ErrorCode error;
+  array<Entry>? entries;
+  Entry? entry;
+  mojo_base.mojom.BigBuffer? data;
+  // The folder's name, for linkFolder().
+  string? name;
+};
+
+// Paths are relative to the linked folder and use '/'. "" is the folder.
+interface YaDevFolder {
+  LinkFolder() => (Reply reply);
+  UnlinkFolder() => (Reply reply);
+  List(string path) => (Reply reply);
+  Stat(string path) => (Reply reply);
+  Read(string path) => (Reply reply);
+  Write(string path, mojo_base.mojom.BigBuffer data) => (Reply reply);
+  MakeDirectory(string path) => (Reply reply);
+  Remove(string path, bool recursive) => (Reply reply);
+  Move(string from, string to) => (Reply reply);
+  Copy(string from, string to) => (Reply reply);
+};

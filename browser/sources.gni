@@ -434,6 +434,14 @@ if (enable_skus) {
   ]
 }
 
+# Growser-ya-dev
+if (!is_android) {
+  brave_chrome_browser_deps += [
+    "//brave/browser/ya_dev_folder",
+    "//brave/components/ya_dev_folder/browser",
+  ]
+}
+
 if (!is_android) {
   # BraveHidDelegate inherits from ChromeHidDelegate, and referenced by
   # BraveContentBrowserClient, so we put into the same source_set.

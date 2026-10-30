@@ -1,0 +1,32 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https:#mozilla.org/MPL/2.0/.
+# Growser-ya-dev (growser#397): experiment code, never ships.
+
+static_library("browser") {
+  sources = [
+    "folder_sandbox.cc",
+    "folder_sandbox.h",
+  ]
+
+  public_deps = [
+    "//base",
+    "//brave/components/ya_dev_folder/common:mojom",
+  ]
+
+  deps = [ "//mojo/public/cpp/base" ]
+}
+
+source_set("unit_tests") {
+  testonly = true
+
+  sources = [ "folder_sandbox_unittest.cc" ]
+
+  deps = [
+    ":browser",
+    "//base",
+    "//base/test:test_support",
+    "//testing/gtest",
+  ]
+}
