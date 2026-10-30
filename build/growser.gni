@@ -31,3 +31,9 @@ declare_args() {
   # Brave's own browser-level provider stays: Brave keeps settings on it.
   growser_enable_external_policy = false
 }
+
+# Growser-ya-dev (growser#397): this is the ya-dev experiment branch, and it
+# never ships. A public build of it stops here, at gn gen; the release scripts
+# refuse it before that (scripts/check-never-ship.py in the control repo).
+assert(!growser_public_release,
+       "Growser-ya-dev: the ya-dev branch never ships (growser#397)")
