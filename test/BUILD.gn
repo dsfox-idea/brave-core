@@ -1184,6 +1184,9 @@ test("brave_browser_tests") {
       "//brave/renderer/skus:browser_tests",
     ]
   }
+  if (!is_android) {
+    deps += [ "//brave/browser/ya_dev_folder/test:browser_tests" ]  # Growser-ya-dev
+  }
 
   deps += [
     "//brave/components/brave_account:features",

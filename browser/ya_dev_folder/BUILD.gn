@@ -15,6 +15,7 @@ source_set("ya_dev_folder") {
   ]
 
   public_deps = [
+    "//brave/components/ya_dev_folder/browser",
     "//brave/components/ya_dev_folder/common:mojom",
     "//content/public/browser",
     "//ui/shell_dialogs",
@@ -22,7 +23,6 @@ source_set("ya_dev_folder") {
 
   deps = [
     "//base",
-    "//brave/components/ya_dev_folder/browser",
     "//mojo/public/cpp/base",
     "//url",
   ]
