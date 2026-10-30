@@ -10,9 +10,12 @@
 #include <string>
 #include <vector>
 
+#include "base/command_line.h"
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
+#include "base/process/launch.h"
 #include "base/strings/string_view_util.h"
+#include "build/build_config.h"
 #include "mojo/public/cpp/base/big_buffer.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
@@ -24,6 +27,23 @@ using mojom::ErrorCode;
 
 std::vector<uint8_t> Bytes(const std::string& text) {
   return std::vector<uint8_t>(text.begin(), text.end());
+}
+
+// A symbolic link on POSIX; a junction on Windows, which needs no privilege
+// and is a reparse point the sandbox must refuse just the same.
+bool MakeLink(const base::FilePath& target, const base::FilePath& link) {
+#if BUILDFLAG(IS_WIN)
+  base::CommandLine command(base::FilePath(FILE_PATH_LITERAL("cmd.exe")));
+  command.AppendArg("/c");
+  command.AppendArg("mklink");
+  command.AppendArg("/J");
+  command.AppendArgPath(link);
+  command.AppendArgPath(target);
+  std::string output;
+  return base::GetAppOutput(command, &output) && base::DirectoryExists(link);
+#else
+  return base::CreateSymbolicLink(target, link);
+#endif
 }
 
 }  // namespace
@@ -192,7 +212,7 @@ class FolderSandboxSymlinkTest : public FolderSandboxTest {
     ASSERT_TRUE(base::CreateDirectory(outside_));
     ASSERT_TRUE(base::WriteFile(outside_.AppendASCII("secret"), "s"));
     link_ = root_.AppendASCII("link");
-    can_link_ = base::CreateSymbolicLink(outside_, link_);
+    can_link_ = MakeLink(outside_, link_);
   }
 
   base::FilePath outside_;
@@ -202,7 +222,7 @@ class FolderSandboxSymlinkTest : public FolderSandboxTest {
 
 TEST_F(FolderSandboxSymlinkTest, NothingFollowsALink) {
   if (!can_link_) {
-    GTEST_SKIP() << "cannot create symbolic links here";
+    GTEST_SKIP() << "cannot create links here";
   }
   EXPECT_EQ(sandbox_->Read("link/secret")->error, ErrorCode::kSymlink);
   EXPECT_EQ(sandbox_->Write("link/new", Bytes("x"))->error, ErrorCode::kSymlink);
@@ -215,7 +235,7 @@ TEST_F(FolderSandboxSymlinkTest, NothingFollowsALink) {
 
 TEST_F(FolderSandboxSymlinkTest, ALinkIsNotListed) {
   if (!can_link_) {
-    GTEST_SKIP() << "cannot create symbolic links here";
+    GTEST_SKIP() << "cannot create links here";
   }
   ASSERT_EQ(sandbox_->Write("real", Bytes("x"))->error, ErrorCode::kOk);
   auto list = sandbox_->List("");
@@ -226,11 +246,11 @@ TEST_F(FolderSandboxSymlinkTest, ALinkIsNotListed) {
 
 TEST_F(FolderSandboxSymlinkTest, TreesHoldingALinkAreNotWalked) {
   if (!can_link_) {
-    GTEST_SKIP() << "cannot create symbolic links here";
+    GTEST_SKIP() << "cannot create links here";
   }
   ASSERT_EQ(sandbox_->MakeDirectory("tree")->error, ErrorCode::kOk);
-  ASSERT_TRUE(base::CreateSymbolicLink(outside_,
-                                       root_.AppendASCII("tree").AppendASCII("l")));
+  ASSERT_TRUE(
+      MakeLink(outside_, root_.AppendASCII("tree").AppendASCII("l")));
   EXPECT_EQ(sandbox_->Remove("tree", true)->error, ErrorCode::kSymlink);
   EXPECT_EQ(sandbox_->Copy("tree", "tree2")->error, ErrorCode::kSymlink);
   EXPECT_EQ(sandbox_->Move("tree", "tree3")->error, ErrorCode::kSymlink);
@@ -240,7 +260,7 @@ TEST_F(FolderSandboxSymlinkTest, TreesHoldingALinkAreNotWalked) {
 
 TEST_F(FolderSandboxSymlinkTest, ALinkedRootIsRefused) {
   if (!can_link_) {
-    GTEST_SKIP() << "cannot create symbolic links here";
+    GTEST_SKIP() << "cannot create links here";
   }
   FolderSandbox through_link(link_);
   EXPECT_EQ(through_link.List("")->error, ErrorCode::kSymlink);

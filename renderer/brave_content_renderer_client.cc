@@ -24,6 +24,8 @@
 #if BUILDFLAG(ENABLE_SKUS)
 #include "brave/components/skus/common/features.h"
 #include "brave/components/skus/renderer/skus_render_frame_observer.h"
+#endif
+#if !BUILDFLAG(IS_ANDROID)
 #include "brave/components/ya_dev_folder/renderer/ya_dev_render_frame_observer.h"  // Growser-ya-dev
 #endif
 #include "brave/components/speedreader/common/buildflags/buildflags.h"

@@ -9,6 +9,7 @@
 #include "base/files/file_util.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/memory/raw_ptr.h"
+#include "base/task/single_thread_task_runner.h"
 #include "base/test/bind.h"
 #include "chrome/test/base/chrome_test_utils.h"
 #include "chrome/test/base/platform_browser_test.h"
@@ -18,6 +19,7 @@
 #include "net/dns/mock_host_resolver.h"
 #include "net/test/embedded_test_server/embedded_test_server.h"
 #include "ui/shell_dialogs/fake_select_file_dialog.h"
+#include "ui/shell_dialogs/selected_file_info.h"
 
 namespace ya_dev_folder {
 
@@ -49,10 +51,15 @@ class YaDevFolderBrowserTest : public PlatformBrowserTest {
                            "(async () => {" + script + "})()");
   }
 
-  // The user picks `folder_` when the dialog opens.
+  // The user picks `folder_` once the dialog is open. Posted, like a real
+  // dialog's answer: the service must not be re-entered from SelectFile().
   void PickFolderOnOpen() {
     factory_->SetOpenCallback(base::BindLambdaForTesting([this] {
-      EXPECT_TRUE(factory_->GetLastDialog()->CallFileSelected(folder_, ""));
+      base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
+          FROM_HERE, base::BindLambdaForTesting([this] {
+            factory_->GetLastDialog()->listener()->FileSelected(
+                ui::SelectedFileInfo(folder_), 0);
+          }));
     }));
   }
 
@@ -87,8 +94,12 @@ IN_PROC_BROWSER_TEST_F(YaDevFolderBrowserTest, NotLinkedUntilTheUserPicks) {
 
 IN_PROC_BROWSER_TEST_F(YaDevFolderBrowserTest, CancelledDialogRejects) {
   Open("a.test");
-  factory_->SetOpenCallback(base::BindLambdaForTesting(
-      [this] { factory_->GetLastDialog()->CallFileSelectionCanceled(); }));
+  factory_->SetOpenCallback(base::BindLambdaForTesting([this] {
+    base::SingleThreadTaskRunner::GetCurrentDefault()->PostTask(
+        FROM_HERE, base::BindLambdaForTesting([this] {
+          factory_->GetLastDialog()->CallFileSelectionCanceled();
+        }));
+  }));
   EXPECT_EQ("cancelled",
             Run("try { await alice.dev.linkFolder(); } catch (e) { return e.code; }"));
 }
