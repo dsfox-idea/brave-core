@@ -16483,7 +16483,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
           Swap with previous
         </message>
         <message name="IDS_SHELF_APP_MENU_INACTIVE_TAB_TOOLTIP" desc="Tooltip for an item in the shelf application menu that represents a browser tab which is not the active tab of its window. No window preview is shown for such an item, because the window only shows its active tab. The placeholder is the title of the window.">
-          Inactive tab in "<ph name="WINDOW_TITLE">$1<ex>Growser Search</ex></ph>"
+          Inactive tab in "<ph name="WINDOW_TITLE">$1<ex>Google Search</ex></ph>"
         </message>
       </if>
 
