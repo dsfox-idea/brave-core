@@ -1,5 +1,5 @@
 diff --git a/content/child/runtime_features.cc b/content/child/runtime_features.cc
-index 399eb78185eb334c87aa1ad514266220b063951c..48026ff5d9b36818b7c779aff62f16670ef1ebc3 100644
+index fcf03ba0b347e3015b31f85b153c593a4835d605..63f57bd23f9d1c6e43ad16d06451d8a5f6c848d2 100644
 --- a/content/child/runtime_features.cc
 +++ b/content/child/runtime_features.cc
 @@ -255,8 +255,7 @@ void SetRuntimeFeaturesFromChromiumFeatures() {

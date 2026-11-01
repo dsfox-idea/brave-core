@@ -1,8 +1,8 @@
 diff --git a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
-index d40f18125f768d5793d37477be4bb930165edce2..434f68ec2d1bc92b069e80175f547a051c2b16df 100644
+index 6e1846095e5911f59b7ab0ac5f71a9ab125193b1..838a95ec95fa2cfed94accad20c24ea668db4964 100644
 --- a/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
 +++ b/components/safe_browsing/core/browser/db/sb_protocol_manager_util.cc
-@@ -39,8 +39,13 @@ namespace safe_browsing {
+@@ -40,8 +40,13 @@ namespace safe_browsing {
  const char* g_sbv4_url_prefix_for_testing = nullptr;
  const char* g_sbv5_url_prefix_for_testing = nullptr;
  
@@ -16,7 +16,7 @@ index d40f18125f768d5793d37477be4bb930165edce2..434f68ec2d1bc92b069e80175f547a05
  
  const base::FilePath::CharType kStoreSuffix[] = FILE_PATH_LITERAL(".store");
  
-@@ -226,7 +231,7 @@ PlatformType GetCurrentPlatformType() {
+@@ -227,7 +232,7 @@ PlatformType GetCurrentPlatformType() {
  #elif BUILDFLAG(IS_MAC)
    return OSX_PLATFORM;
  #else
