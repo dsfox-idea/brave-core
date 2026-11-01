@@ -24,6 +24,7 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
+#include "chrome/browser/browser_process.h"  // Growser-399
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
@@ -154,6 +155,9 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
 #else
       false);
 #endif
+  // Growser-399: our tree has no metrics/P3A flags before this line (they used the local state),
+  // but the default-browser flag below still needs the local state.
+  PrefService* local_state = g_browser_process->local_state();
   // settings::DefaultBrowserHandler CHECK-fails if the WebUI asks it to set the
   // default browser while the policy forbids it, so don't offer the action.
   source->AddBoolean(
