@@ -1,6 +1,12 @@
 /* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
 "widgets.askBrave" = "Hỏi Growser";
 
+/* Description for the Ask Brave widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.askBraveWidgetDescription" = "Hỏi Growser một câu hỏi.";
+
+/* Title for the Ask Brave widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.askBraveWidgetTitle" = "Hỏi Growser";
+
 /* Title for bookmarks menu item */
 "widgets.BookmarksMenuItem" = "Dấu trang";
 
@@ -12,6 +18,15 @@
 
 /* The name of the feature */
 "widgets.braveNews" = "Tin tức Growser";
+
+/* Title for the Brave Search control. Brave is the company name and should not be translated */
+"widgets.braveSearch" = "Tìm kiếm Growser";
+
+/* Description for the Brave Search widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.braveSearchWidgetDescription" = "Tìm kiếm trên web với Growser.";
+
+/* Title for the Brave Search widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.braveSearchWidgetTitle" = "Tìm kiếm Growser";
 
 /* Title for downloads menu item */
 "widgets.DownloadsMenuItem" = "Tải xuống";

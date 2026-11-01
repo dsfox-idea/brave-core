@@ -15,6 +15,7 @@
 #include "brave/browser/ui/sidebar/sidebar_service_factory.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
+#include "brave/browser/ui/views/brave_layout_provider.h"
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
 #include "brave/browser/ui/views/frame/vertical_tabs/vertical_tab_strip_container_view.h"
@@ -79,9 +80,6 @@
 #include "chrome/browser/ui/fullscreen_util_mac.h"
 #endif  // BUILDFLAG(IS_MAC)
 
-using views::ShapeContextTokensOverride::kRoundedCornersBorderRadius;
-using views::ShapeContextTokensOverride::
-    kRoundedCornersBorderRadiusAtWindowCorner;
 
 namespace {
 class TestInfoBarDelegate : public ConfirmInfoBarDelegate {
@@ -151,6 +149,32 @@ class BraveBrowserViewTest : public InProcessBrowserTest {
   ScreenshotButton* screenshot_button() {
     return static_cast<BraveToolbarView*>(browser_view()->toolbar())
         ->screenshot_button();
+  }
+
+  void NewSplitTab() {
+    chrome::NewSplitTab(browser(), split_tabs::SplitTabLayout::kSideBySide,
+                        split_tabs::SplitTabCreatedSource::kToolbarButton);
+  }
+
+  int GetRoundedCornersBorderRadius() const {
+    return views::LayoutProvider::Get()->GetCornerRadiusMetric(
+        kRoundedCornersBorderRadius);
+  }
+
+  int GetRoundedCornersBorderRadiusAtWindowCorner() const {
+    return views::LayoutProvider::Get()->GetCornerRadiusMetric(
+        kRoundedCornersBorderRadiusAtWindowCorner);
+  }
+
+  void ExpectSplitContentsViewRadii(int index,
+                                    float lower_left,
+                                    float lower_right) {
+    auto radii = browser_view()
+                     ->GetContentsContainerViews()[index]
+                     ->contents_view()
+                     ->GetBackgroundRadii();
+    EXPECT_EQ(lower_left, radii.lower_left());
+    EXPECT_EQ(lower_right, radii.lower_right());
   }
 };
 
@@ -431,11 +455,6 @@ class BraveBrowserViewWithRoundedCornersTest
                                                     IsRoundedCornersEnabled());
   }
 
-  void NewSplitTab() {
-    chrome::NewSplitTab(browser(), split_tabs::SplitTabLayout::kSideBySide,
-                        split_tabs::SplitTabCreatedSource::kToolbarButton);
-  }
-
   BrowserFrameView* browser_non_client_frame_view() {
     return browser_view()->browser_widget()->GetFrameView();
   }
@@ -460,17 +479,6 @@ class BraveBrowserViewWithRoundedCornersTest
   bool IsRoundedCornersEnabled() const { return GetParam(); }
 
  protected:
-  // Helper methods to get metrics
-  int GetRoundedCornersBorderRadius() const {
-    return views::LayoutProvider::Get()->GetCornerRadiusMetric(
-        kRoundedCornersBorderRadius);
-  }
-
-  int GetRoundedCornersBorderRadiusAtWindowCorner() const {
-    return views::LayoutProvider::Get()->GetCornerRadiusMetric(
-        kRoundedCornersBorderRadiusAtWindowCorner);
-  }
-
   // Helper methods for common assertions
   void ExpectContentsContainerMargins(views::View* contents_container,
                                       int expected_margin) {
@@ -490,17 +498,6 @@ class BraveBrowserViewWithRoundedCornersTest
                      ->GetBackgroundRadii();
     EXPECT_EQ(upper_left, radii.upper_left());
     EXPECT_EQ(upper_right, radii.upper_right());
-    EXPECT_EQ(lower_left, radii.lower_left());
-    EXPECT_EQ(lower_right, radii.lower_right());
-  }
-
-  void ExpectSplitContentsViewRadii(int index,
-                                    float lower_left,
-                                    float lower_right) {
-    auto radii = browser_view()
-                     ->GetContentsContainerViews()[index]
-                     ->contents_view()
-                     ->GetBackgroundRadii();
     EXPECT_EQ(lower_left, radii.lower_left());
     EXPECT_EQ(lower_right, radii.lower_right());
   }
@@ -692,6 +689,50 @@ IN_PROC_BROWSER_TEST_P(BraveBrowserViewWithRoundedCornersTest,
                                rounded_corners_border_radius);
   ExpectSplitContentsViewRadii(1, rounded_corners_border_radius,
                                rounded_corners_border_radius);
+}
+
+// The corners meeting the split divider are shrunk to the border radius, so
+// switching to the stacked layout must move that from the left/right pairs to
+// the pairs facing the now horizontal divider. Not parameterized on the
+// rounded corners pref because a split always gets rounded corners.
+IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest,
+                       RoundedCornersWithStackedSplitTabTest) {
+#if BUILDFLAG(IS_MAC)
+  // TODO(https://github.com/brave/brave-browser/issues/55995): Re-enable on
+  // macOS 26.
+  if (base::mac::MacOSMajorVersion() >= 26) {
+    GTEST_SKIP() << "Disabled on macOS Tahoe and later.";
+  }
+#endif  // BUILDFLAG(IS_MAC)
+
+  NewSplitTab();
+  RunScheduledLayouts();
+
+  const auto border_radius = GetRoundedCornersBorderRadius();
+  const auto window_corner_radius =
+      GetRoundedCornersBorderRadiusAtWindowCorner();
+
+  // The sidebar sits at the right contents edge by default, so the right
+  // corners already use the border radius and only a lower left corner can
+  // show the window radius.
+  // Vertical divider: the first pane's lower left corner is at the window
+  // corner, while the second pane's faces the divider.
+  ExpectSplitContentsViewRadii(0, window_corner_radius, border_radius);
+  ExpectSplitContentsViewRadii(1, border_radius, border_radius);
+
+  auto* tab_strip_model = browser()->tab_strip_model();
+  auto split_id =
+      tab_strip_model->GetSplitForTab(tab_strip_model->active_index());
+  ASSERT_TRUE(split_id);
+  tab_strip_model->UpdateSplitLayout(*split_id,
+                                     split_tabs::SplitTabLayout::kStacked);
+  RunScheduledLayouts();
+
+  // Horizontal divider: both of the top pane's lower corners now face it, so
+  // its lower left drops to the border radius, and the bottom pane's lower
+  // left becomes the one at the window corner.
+  ExpectSplitContentsViewRadii(0, border_radius, border_radius);
+  ExpectSplitContentsViewRadii(1, window_corner_radius, border_radius);
 }
 
 // Test 3: Rounded corners after exiting split tab mode

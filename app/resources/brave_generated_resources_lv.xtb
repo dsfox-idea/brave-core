@@ -116,6 +116,8 @@
 <translation id="2162109630536601963">Ja šis paplašinājums veic tīkla pieprasījumus, tie neizmanto Tor vai inkognito režīmu.</translation>
 <translation id="2725327089319971976">Lai atspējotu šo paplašinājumu inkognito un Tor režīmā, noņemiet atzīmi no šīs opcijas.</translation>
 <translation id="438106944087726695">Viesots platformā Growser</translation>
+<translation id="2265651566599167057">Socket atzīmēts kā ļaunprogrammatūra.</translation>
+<translation id="2607395470596637070">Uzziniet vairāk par to, kā Socket pakalpojums Growser jūs aizsargā</translation>
 <translation id="3371343170427636147">Growser Nightly pārlūka lietotnes</translation>
 <translation id="4097979995947147464">Growser Beta pārlūka lietotnes</translation>
 <translation id="8303432794159193481">Growser Dev pārlūka lietotnes</translation>
@@ -722,7 +724,7 @@
 <translation id="4432071071853308688">Kods ir tukšs</translation>
 <translation id="955848693465029904">Iekšēja sinhronizācijas iestatīšanas kļūda</translation>
 <translation id="7456398316301207582">Konta dzēšanas iekšējā kļūda</translation>
-<translation id="859506441384380749">Šo kodu ģenerējusi novecojusi Growser versija. Vispirms jauniniet citu ierīci</translation>
+<translation id="4002014583969312635">Šķiet, ka šis kods tika izveidots ierīcē, kurā darbojas vecāka Growser versija. Lūdzu, atjauniniet Growser uz jaunāko versiju savā otrā ierīcē un pēc tam izveidojiet jaunu sinhronizācijas kodu.</translation>
 <translation id="3132642509209154999">Šis kods vairs nav derīgs. Izveidojiet jaunu citā ierīcē un mēģiniet vēlreiz.</translation>
 <translation id="2859229680945501779">Šis kods ir nederīgs. Lūdzu, pārbaudiet, vai laiks un laika zona jūsu ierīcē ir iestatīti pareizi.</translation>
 <translation id="2339730291919608488">Pamest sinhronizācijas ķēdi</translation>
@@ -1016,6 +1018,7 @@ Vai tiešām vēlaties to darīt?</translation>
 <translation id="6578040791557152233">Augšupielādēt pielāgotu profila attēlu</translation>
 <translation id="9222124079546967592">Noņemt pielāgoto profila attēlu</translation>
 <translation id="6058660912941570282">Growser nevar izmantot šo failu. Izvēlieties citu attēlu un mēģiniet vēlreiz.</translation>
+<translation id="859506441384380749">Šo kodu ģenerējusi novecojusi Growser versija. Vispirms jauniniet citu ierīci</translation>
 <translation id="4678672101289648246">Tikai jaunā cilnes lapā</translation>
 <translation id="8294286161128352783">Tikai jaunā cilnes lapā</translation>
 <translation id="1035309871698658326">Atverot parastas cilnes, to nosaukumi un izcelsme tiks automātiski nosūtīti Leo to klasifikācijai.</translation>
@@ -1135,4 +1138,6 @@ Vai tiešām vēlaties to darīt?</translation>
 <translation id="6524973012848479397">Palīdziet atbalstīt Growser misiju veidot neatkarīgu, lietotājam pirmajā vietā liktu tīmekli ar sponsorētajām reklāmām. Mēs mērām reklāmu veiktspēju privāti, jūs neidentificējot.</translation>
 <translation id="1054078509920433577">Growser nevar izmantot šo failu. Izvēlieties citu attēlu un mēģiniet vēlreiz.</translation>
 <translation id="9194561096821877683">Growser</translation>
+<translation id="6132163760114048767">Šķiet, ka šis kods tika izveidots ierīcē, kurā darbojas vecāka Growser versija. Lūdzu, atjauniniet Growser uz jaunāko versiju savā otrā ierīcē un pēc tam izveidojiet jaunu sinhronizācijas kodu.</translation>
+<translation id="2894616471536253971">Uzziniet vairāk par to, kā Socket pakalpojums Growser jūs aizsargā</translation>
 </translationbundle>

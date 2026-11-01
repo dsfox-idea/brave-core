@@ -23,6 +23,7 @@
 <translation id="8541922081612557424">Growser-ի մասին</translation>
 <translation id="987734326276404793">Ստացեք գների հետագծման ծանուցումներ ձեր հեռախոսի Growser դիտարկիչում</translation>
 <translation id="1203500561924088507">Շնորհակալություն տեղադրելու համար։ Նախքան <ph name="BUNDLE_NAME"/>-ն օգտագործելը դուք պետք է վերագործարկեք ձեր դիտարկիչը։</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/>ը առկախ է։ Ձեր դիտարկումն անվտանգ պահելու համար Growser-ը կթարմացվի հաջորդ անգամ, երբ դուք <ph name="IDLE_DURATION"/> ակտիվ չլինեք։</translation>
 <translation id="1232234696885483911">Երբ բացեք «Որոնում պատկերով» գործառույթը, էջի վերնագիրը, URL-ը և բովանդակությունը՝ ներառյալ PDF-ները, ավտոմատ կուղարկվեն սերվերին։ <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Հաշիվ մուտք գործած ժամանակ Growser-ում դուք կարող եք օգտագործել ձեր գաղտնաբառերն ու մյուս կարգավորումները ձեր Growser հաշվից։ Այս կարգավորումը փոխելու համար անցեք «Ձեր հաշիվը Growser-ում» բաժին։</translation>
 <translation id="583633806828413086">Ցույց տալ «Gemini-ը Growser-ում» հավելվածը Mac-ի ընտրացանկի գոտում</translation>
@@ -230,6 +231,7 @@
 <translation id="3286538390144397061">Վերագործարկել հիմա</translation>
 <translation id="2339258256897053758">Growser API-ի բանալիները չկան: Growser-ի որոշ գործառույթներ կանջատվեն:</translation>
 <translation id="8926637909431618259">Շարունակել հետնաշերտի հավելվածների աշխատանքը, երբ Growser-ը փակված է</translation>
+<translation id="8245661393996028021">Growser-ը կթարմացվի, երբ դուք տեղում չլինեք</translation>
 <translation id="518125528057094977">Նախքան ոչ ապահով միացման միջոցով որևէ կայք բեռնելը Growser-ը ձեզ կնախազգուշացնի</translation>
 <translation id="8652321858775514885">Դուք դուրս կգրվեք կայքերի մեծամասնությունից, երբ փակեք Growser-ի բոլոր պատուհանները, սակայն կմնաք ձեր Growser հաշվում, եթե մուտք եք գործել Growser։ Որպեսզի թույլ տաք կայքերին հիշել ձեզ, <ph name="SETTINGS_LINK"/>։</translation>
 <translation id="3352986031709923790">որոնման տարածքի վերևի աջ անկյուն՝ <ph name="RIGHT"/>% աջից, <ph name="TOP"/>% վերևից</translation>
@@ -238,6 +240,7 @@
 <translation id="2645435784669275700">ChromeOS</translation>
 <translation id="2297290224191497273">Անցնե՞լ Growser-ի ընթացիկ պրոֆիլ</translation>
 <translation id="3412460710772753638">Այս սարքի Գաղտնաբառերի կառավարիչում</translation>
+<translation id="172368702860945706">Growser-ն անհրաժեշտ է թարմացնել</translation>
 <translation id="5079573433701109938">Մուտք գործեք Growser՝ ձեր էջանիշները և այլ տվյալներ <ph name="DEVICE"/>ից օգտագործելու համար</translation>
 <translation id="3438772217992559640">Որոնել այս ներդիրը պատկերով որոնման միջոցով</translation>
 <translation id="2491221873705777076">Ընդլայնեք բարելավված Ապահով դիտարկման հնարավորությունները Growser-ի հետ ձեր հեռախոսում</translation>
@@ -380,6 +383,7 @@
 <translation id="4877750182157975795">Օգտագործեք Growser-ի ձեր սիրելի ծառայությունները Growser-ի միջոցով ձեր <ph name="DEVICE_TYPE"/> սարքում</translation>
 <translation id="1204184037023366446">Growser-ին անհրաժեշտ է թույլտվություն՝ ձեր ձեռքերի շարժումները հետագծելու համար</translation>
 <translation id="5406591571925937375">Դուք վաղուց չեք այցելել կայք։ Growser-ը հեռացրել է «<ph name="PERMISSION_1"/>», «<ph name="PERMISSION_2"/>» և «<ph name="PERMISSION_3"/>» թույլտվությունները։</translation>
+<translation id="3576895950897485019">Մուտք Growser</translation>
 <translation id="5174969993834422967">Դուք սովորաբար արգելափակում եք ծանուցումները։ Հասցեագոտու աջ անկյունում սեղմեք ծանուցման պատկերակը, որպեսզի թույլ տաք կայքին ծանուցել ձեզ։</translation>
 <translation id="5174983315706567306">Սկավառակում բավարար տարածք չկա։</translation>
 <translation id="8157129267754368853">Growser հաշիվը պահանջում է վերաիսկորոշում</translation>
@@ -389,6 +393,7 @@
 <translation id="1069969567644851798">Բացել հղումը Growser-ի ինկո&amp;գնիտո պատուհանում</translation>
 <translation id="7690383309583926074">Ներբեռնեք Growser հավելվածը՝ գաղտնաբառերը ցանկացած պահի պահելու համար</translation>
 <translation id="8586264863973514035">Փոփոխությունները կիրառելու համար վերագործարկեք Growser-ը</translation>
+<translation id="8127050479140582768">Այս ներդիրը մեկ այլ սարք ուղարկելու համար երկու սարքերում մուտք գործեք Growser</translation>
 <translation id="5286907366254680517">Ճանաչվել է</translation>
 <translation id="7264453786974905915">Ներբեռնել Growser հավելվածը</translation>
 <translation id="5994282802285556682">Երբ ինկոգնիտո ռեժիմում դիտարկելիս լինեք, նախքան ոչ ապահով միացման միջոցով կայք բեռնելը Growser-ը ձեզ կնախազգուշացնի</translation>
@@ -757,6 +762,7 @@ Growser-ին չհաջողվեց վերականգնել ձեր կարգավորո
 <translation id="5128665650717824082">Growser for Testing-ը չի կարող դառնալ ձեր կանխադրված դիտարկիչը։</translation>
 <translation id="3053208669360972929">Որոնեք Growser-ի միջոցով ցանկացած վայրից</translation>
 <translation id="2433912322225810055">Այն նաև վերահսկում է Growser-ի մեկնարկի կամ Omnibox-ից որոնում կատարելու ժամանակ ցուցադրվող էջը:</translation>
+<translation id="8789425457808164956">Այս ներդիրը մեկ այլ սարք ուղարկելու համար մուտք գործեք Growser այդ սարքում</translation>
 <translation id="4100716194836114130">Սա ձեր Growser-ն է</translation>
 <translation id="8712637175834984815">Պատրաստ է</translation>
 <translation id="1419543648228375718">Մուտք գործե՞լ Growser</translation>
@@ -1378,4 +1384,29 @@ Growser-ին չհաջողվեց վերականգնել ձեր կարգավորո
 <translation id="2375391460087228850">Growser-ի հավելվածներ</translation>
 <translation id="3721794228264322796">Փակել Gemini-ը Growser-ում</translation>
 <translation id="2314508080153323869">Gemini-ը Growser-ում</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/>-ն արդեն մտել է հաշիվ։ Ձեր այցելությունների պատմությունն առանձին պահելու համար ձեր սեփական պրոֆիլում մուտք գործեք Growser <ph name="USER_EMAIL_ADDRESS"/> հաշվով։ Ձեզ նաև հասանելի կլինեն ընթերցանության ցանկը և այլ տվյալներ <ph name="DEVICE"/>։</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/>-ն արդեն մտել է հաշիվ։ Ձեր այցելությունների պատմությունն առանձին պահելու համար ձեր սեփական պրոֆիլում մուտք գործեք Growser <ph name="USER_EMAIL_ADDRESS"/> հաշվով։ Ձեզ նաև հասանելի կլինեն ընդլայնումները և այլ տվյալներ <ph name="DEVICE"/>։</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/>-ն արդեն մտել է հաշիվ։ Ձեր այցելությունների պատմությունն առանձին պահելու համար ձեր սեփական պրոֆիլում մուտք գործեք Growser <ph name="USER_EMAIL_ADDRESS"/> հաշվով։ Ձեր ընթերցանության ցանկը և այլ տվյալները նույնպես հասանելի կլինեն ձեր բոլոր սարքերում։</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/>-ն արդեն մտել է հաշիվ։ Ձեր այցելությունների պատմությունն առանձին պահելու համար ձեր սեփական պրոֆիլում մուտք գործեք Growser <ph name="USER_EMAIL_ADDRESS"/> հաշվով։ Ընդլայնումները և այլ տվյալները նույնպես հասանելի կլինեն ձեր բոլոր սարքերում։</translation>
+<translation id="3429303382931281808">Մուտք գործեք Growser՝ ձեր գաղտնաբառերը և այլ տվյալներ <ph name="DEVICE"/>ից օգտագործելու համար</translation>
+<translation id="7681019317864236341">Մուտք գործեք Growser՝ ձեր էջանիշները և այլ տվյալներ <ph name="DEVICE"/>ից օգտագործելու համար</translation>
+<translation id="1910605032088789136">Մուտք գործեք Growser՝ ձեր պահված տեղեկություններն ու այլ տվյալներ <ph name="DEVICE"/>ից օգտագործելու համար</translation>
+<translation id="6794970122141277862">Մուտք գործեք Growser՝ ձեր ընթերցանության ցանկը և այլ տվյալներ <ph name="DEVICE"/>ից օգտագործելու համար</translation>
+<translation id="3538050518049904702">Մուտք գործեք Growser՝ ընդլայնումները և այլ տվյալներ <ph name="DEVICE"/>ից օգտագործելու համար</translation>
+<translation id="1447754948984825961">Էջանիշները և մյուս տվյալները ձեր բոլոր սարքերում օգտագործելու համար մուտք գործեք Growser</translation>
+<translation id="5758015234894546674">Մուտք գործեք Growser՝ ձեր պահած տեղեկությունները և մյուս տվյալները բոլոր սարքերում օգտագործելու համար</translation>
+<translation id="562156935182849823">Մուտք գործեք Growser՝ ձեր ընթերցանության ցանկը և մյուս տվյալները բոլոր սարքերում օգտագործելու համար</translation>
+<translation id="7817930780633998561">Մուտք գործեք Growser՝ ձեր բոլոր սարքերում ընդլայնումները և այլ տվյալներ օգտագործելու համար</translation>
+<translation id="4444512588051585636">Growser-ը կթարմացվի, երբ դուք տեղում չլինեք</translation>
+<translation id="950120991083623144">Growser-ն անհրաժեշտ է թարմացնել</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/>ը առկախ է։ Ձեր դիտարկումն անվտանգ պահելու համար Growser-ը կթարմացվի հաջորդ անգամ, երբ դուք <ph name="IDLE_DURATION"/> ակտիվ չլինեք։</translation>
+<translation id="8620823632809282061">Gemini Enterprise-ը Growser-ում</translation>
+<translation id="4719707676382088645">Growser պրոֆիլ</translation>
+<translation id="7944326067922128825">Որոնեք և հարցեր տվեք ցանկացած տեղից, նույնիսկ եթե Growser-ը ծալված է։ Թույլ է տալիս Growser-ին աշխատել ֆոնային ռեժիմում։</translation>
+<translation id="1760966099984077912">Որոնեք Growser-ի միջոցով ցանկացած վայրից</translation>
+<translation id="4011238820523740465">Հարցեր տվեք Growser-ից դուրս բովանդակության, օրինակ՝ այլ հավելվածների կամ ֆայլերի մասին</translation>
+<translation id="1491740387498395373">Growser-ով որոնելու կամ <ph name="BEGIN_LINK"/>Կարգավորումներում<ph name="END_LINK"/> անհատականացնելու համար</translation>
+<translation id="2672903539709015001">Growser-ով որոնելու համար։</translation>
+<translation id="1162630940779651724">Այս ներդիրը մեկ այլ սարք ուղարկելու համար երկու սարքերում մուտք գործեք Growser</translation>
+<translation id="5388608738812110907">Այս ներդիրը մեկ այլ սարք ուղարկելու համար մուտք գործեք Growser այդ սարքում</translation>
 </translationbundle>

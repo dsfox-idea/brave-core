@@ -117,6 +117,8 @@
 <translation id="2162109630536601963">אם תוסף זה שולח בקשות רשת, הן לא ישתמשו ב- Tor או במצב פרטי.</translation>
 <translation id="2725327089319971976">כדי להשבית תוסף זה במצב פרטי ובמצב Tor, יש לבטל הבחירה באפשרות זו.</translation>
 <translation id="438106944087726695">מנוהל על ידי Growser</translation>
+<translation id="2265651566599167057">סומן כתוכנה זדונית על ידי Socket.</translation>
+<translation id="2607395470596637070">מידע נוסף על האופן שבו Socket ב-Growser מגן עליך</translation>
 <translation id="3371343170427636147">יישומי לילה של דפדפן Growser</translation>
 <translation id="4097979995947147464">יישומי ביטא של דפדפן Growser</translation>
 <translation id="8303432794159193481">יישומי פיתוח של דפדפן Growser</translation>
@@ -722,7 +724,7 @@
 <translation id="4432071071853308688">הקוד הזה ריק</translation>
 <translation id="955848693465029904">שגיאה בהגדרת סנכרון פנימי</translation>
 <translation id="7456398316301207582">שגיאת מחיקת חשבון פנימי</translation>
-<translation id="859506441384380749">הקוד יוצר בידי גרסה של Growser שהוצאה משימוש, יש לשדרג את המכשיר האחר תחילה.</translation>
+<translation id="4002014583969312635">נראה שהקוד הזה נוצר במכשיר שמריץ גרסה ישנה יותר של Growser. יש לעדכן לגרסה האחרונה ביותר של Growser במכשיר האחר שלך, ואז ליצור קוד סנכרון חדש.</translation>
 <translation id="3132642509209154999">פג תוקפו של הקוד. יש לייצור קוד חדש במכשיר השני ולנסות שוב.</translation>
 <translation id="2859229680945501779">קוד זה אינו חוקי. אנא בדקו שהזמן ואזור הזמן מוגדרים כהלכה במכשיר שלכם.</translation>
 <translation id="2339730291919608488">השאר שרשרת סנכרון</translation>
@@ -1016,6 +1018,7 @@
 <translation id="6578040791557152233">העלאת תמונת פרופיל מותאמת אישית</translation>
 <translation id="9222124079546967592">הסרת תמונת פרופיל מותאמת אישית</translation>
 <translation id="6058660912941570282">Growser לא יכול להשתמש בקובץ הזה. בחרו תמונה אחרת ונסו שוב.</translation>
+<translation id="859506441384380749">הקוד יוצר בידי גרסה של Growser שהוצאה משימוש, יש לשדרג את המכשיר האחר תחילה.</translation>
 <translation id="4678672101289648246">בדף הכרטיסייה החדשה בלבד</translation>
 <translation id="8294286161128352783">בדף הכרטיסייה החדשה בלבד</translation>
 <translation id="1035309871698658326">כשהוא מופעל, זה ישלח אוטומטית את הכותרות ואת המקור של כל הכרטיסיות הלא-פרטיות אל Leo למטרת סיווג.</translation>
@@ -1135,4 +1138,6 @@
 <translation id="6524973012848479397">עזרו לתמוך במשימה של Growser לבנות רשת עצמאית שממקמת את המשתמש במקום הראשון, באמצעות מודעות ממומנות. אנחנו מודדים את ביצועי המודעות באופן פרטי, מבלי לזהות אתכם.</translation>
 <translation id="1054078509920433577">Growser לא יכול להשתמש בקובץ הזה. בחרו תמונה אחרת ונסו שוב.</translation>
 <translation id="9194561096821877683">Brave Software</translation>
+<translation id="6132163760114048767">נראה שהקוד הזה נוצר במכשיר שמריץ גרסה ישנה יותר של Growser. יש לעדכן לגרסה האחרונה ביותר של Growser במכשיר האחר שלך, ואז ליצור קוד סנכרון חדש.</translation>
+<translation id="2894616471536253971">מידע נוסף על האופן שבו Socket ב-Growser מגן עליך</translation>
 </translationbundle>

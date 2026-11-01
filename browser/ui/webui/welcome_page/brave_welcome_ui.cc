@@ -154,6 +154,12 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, std::string_view name)
 #else
       false);
 #endif
+  // settings::DefaultBrowserHandler CHECK-fails if the WebUI asks it to set the
+  // default browser while the policy forbids it, so don't offer the action.
+  source->AddBoolean(
+      "isDefaultBrowserDisabledByPolicy",
+      local_state->IsManagedPreference(prefs::kDefaultBrowserSettingEnabled) &&
+          !local_state->GetBoolean(prefs::kDefaultBrowserSettingEnabled));
 
   profile->GetPrefs()->SetBoolean(
       brave_welcome_page::prefs::kHasSeenBraveWelcomePage, true);

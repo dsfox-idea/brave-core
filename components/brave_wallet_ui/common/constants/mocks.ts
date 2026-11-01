@@ -72,9 +72,9 @@ export const getMockedTransactionInfo =
       txType: BraveWallet.TransactionType.Other,
       txParams: [],
       txArgs: [],
-      createdTime: { microseconds: 0 },
-      submittedTime: { microseconds: 0 },
-      confirmedTime: { microseconds: 0 },
+      createdTime: { msec: 0 },
+      submittedTime: { msec: 0 },
+      confirmedTime: { msec: 0 },
       originInfo: {
         originSpec: 'https://brave.com',
         eTldPlusOne: 'brave.com',
@@ -569,9 +569,9 @@ SerializableTransactionInfo = {
   txType: 11,
   txParams: [],
   txArgs: [],
-  createdTime: { microseconds: 1654540245386000 },
-  submittedTime: { microseconds: 0 },
-  confirmedTime: { microseconds: 0 },
+  createdTime: { msec: 1654540245386 },
+  submittedTime: { msec: 0 },
+  confirmedTime: { msec: 0 },
   originInfo: {
     originSpec: 'https://f40y4d.csb.app',
     eTldPlusOne: 'csb.app',
@@ -954,48 +954,53 @@ export const mockMeldFiatCurrencies: MeldFiatCurrency[] = [
 
 export const mockMeldCryptoCurrencies: MeldCryptoCurrency[] = [
   {
+    'coin': BraveWallet.CoinType.ETH,
+    'chainId': '0x1',
+    'symbol': '00',
     'currencyCode': '00',
     'name': '00 Token',
     'chainCode': 'ETH',
-    'chainName': 'Ethereum',
-    'chainId': '0x1',
     'contractAddress': undefined,
     'symbolImageUrl': 'https://images-currency.meld.io/crypto/00/symbol.png',
   },
   {
+    'coin': BraveWallet.CoinType.ETH,
+    'chainId': '0x1',
+    'symbol': 'ZRX',
     'currencyCode': 'ZRX',
     'name': '0x',
     'chainCode': 'ETH',
-    'chainName': 'Ethereum',
-    'chainId': '0x1',
     'contractAddress': '0xe41d2489571d322189246dafa5ebde1f4699f498',
     'symbolImageUrl': 'https://images-currency.meld.io/crypto/ZRX/symbol.png',
   },
   {
+    'coin': BraveWallet.CoinType.ETH,
+    'chainId': '0xfa',
+    'symbol': 'OXD',
     'currencyCode': 'OXD_FTM',
     'name': '0xDAO',
     'chainCode': 'FTM',
-    'chainName': 'Fantom',
-    'chainId': '0xfa',
     'contractAddress': undefined,
     'symbolImageUrl':
       'https://images-currency.meld.io/crypto/OXD_FTM/symbol.png',
   },
   {
+    'coin': BraveWallet.CoinType.ETH,
+    'chainId': '0x1',
+    'symbol': '1INCH',
     'currencyCode': '1INCH',
     'name': '1inch',
     'chainCode': 'ETH',
-    'chainName': 'Ethereum',
-    'chainId': '0x1',
     'contractAddress': '0x111111111117dc0aa78b770fa6a738034120c302',
     'symbolImageUrl': 'https://images-currency.meld.io/crypto/1INCH/symbol.png',
   },
   {
+    'coin': BraveWallet.CoinType.ETH,
+    'chainId': '0x38',
+    'symbol': '1INCH',
     'currencyCode': '1INCH_BSC',
     'name': '1inch',
     'chainCode': 'BSC',
-    'chainName': 'BNB Smart Chain',
-    'chainId': '0x38',
     'contractAddress': '0x111111111117dc0aa78b770fa6a738034120c302',
     'symbolImageUrl':
       'https://images-currency.meld.io/crypto/1INCH_BSC/symbol.png',
@@ -1034,15 +1039,10 @@ export const mockServiceProviders = [
       'CRYPTO_OFFRAMP': 'LIVE',
       'CRYPTO_ONRAMP': 'LIVE',
     },
-    'logoImages': {
-      'darkUrl': 'https://images-serviceprovider.meld.io/TRANSAK/logo_dark.png',
-      'darkShortUrl':
-        'https://images-serviceprovider.meld.io/TRANSAK/short_logo_dark.png',
-      'lightUrl':
-        'https://images-serviceprovider.meld.io/TRANSAK/logo_light.png',
-      'lightShortUrl':
-        'https://images-serviceprovider.meld.io/TRANSAK/short_logo_light.png',
-    },
+    'darkShortUrl':
+      'https://images-serviceprovider.meld.io/TRANSAK/short_logo_dark.png',
+    'lightShortUrl':
+      'https://images-serviceprovider.meld.io/TRANSAK/short_logo_light.png',
   },
 ]
 
@@ -1050,105 +1050,70 @@ export const mockMeldCountries = [
   {
     'countryCode': 'AF',
     'name': 'Afghanistan',
-    'flagImageUrl': 'https://images-country.meld.io/AF/flag.svg',
-    'regions': null,
   },
   {
     'countryCode': 'AL',
     'name': 'Albania',
-    'flagImageUrl': 'https://images-country.meld.io/AL/flag.svg',
-    'regions': null,
   },
   {
     'countryCode': 'DZ',
     'name': 'Algeria',
-    'flagImageUrl': 'https://images-country.meld.io/DZ/flag.svg',
-    'regions': null,
   },
   {
     'countryCode': 'AS',
     'name': 'American Samoa',
-    'flagImageUrl': 'https://images-country.meld.io/AS/flag.svg',
-    'regions': null,
   },
   {
     'countryCode': 'AD',
     'name': 'Andorra',
-    'flagImageUrl': 'https://images-country.meld.io/AD/flag.svg',
-    'regions': null,
   },
-] as unknown as MeldCountry[]
+] as MeldCountry[]
 
 export const mockMeldPaymentMethods = [
   {
     'paymentMethod': 'APPLE_PAY',
     'name': 'Apple Pay',
     'paymentType': 'MOBILE_WALLET',
-    'logoImages': {
-      'darkUrl': 'https://images-paymentMethod.meld.io/APPLE_PAY/logo_dark.png',
-      'darkShortUrl': null,
-      'lightUrl':
-        'https://images-paymentMethod.meld.io/APPLE_PAY/logo_light.png',
-      'lightShortUrl': null,
-    },
+    'darkUrl': 'https://images-paymentMethod.meld.io/APPLE_PAY/logo_dark.png',
+    'lightUrl': 'https://images-paymentMethod.meld.io/APPLE_PAY/logo_light.png',
   },
   {
     'paymentMethod': 'CREDIT_DEBIT_CARD',
     'name': 'Credit & Debit Card',
     'paymentType': 'CARD',
-    'logoImages': {
-      'darkUrl':
-        'https://images-paymentMethod.meld.io/CREDIT_DEBIT_CARD/logo_dark.png',
-      'darkShortUrl': null,
-      'lightUrl':
-        'https://images-paymentMethod.meld.io/CREDIT_DEBIT_CARD/logo_light.png',
-      'lightShortUrl': null,
-    },
+    'darkUrl':
+      'https://images-paymentMethod.meld.io/CREDIT_DEBIT_CARD/logo_dark.png',
+    'lightUrl':
+      'https://images-paymentMethod.meld.io/CREDIT_DEBIT_CARD/logo_light.png',
   },
   {
     'paymentMethod': 'FAST',
     'name': 'FAST',
     'paymentType': 'BANK_TRANSFER',
-    'logoImages': {
-      'darkUrl': 'https://images-paymentMethod.meld.io/FAST/logo_dark.png',
-      'darkShortUrl': null,
-      'lightUrl': 'https://images-paymentMethod.meld.io/FAST/logo_light.png',
-      'lightShortUrl': null,
-    },
+    'darkUrl': 'https://images-paymentMethod.meld.io/FAST/logo_dark.png',
+    'lightUrl': 'https://images-paymentMethod.meld.io/FAST/logo_light.png',
   },
   {
     'paymentMethod': 'NG_BANK_TRANSFER',
     'name': 'Local Manual Bank Transfer',
     'paymentType': 'BANK_TRANSFER',
-    'logoImages': {
-      'darkUrl':
-        'https://images-paymentMethod.meld.io/NG_BANK_TRANSFER/logo_dark.png',
-      'darkShortUrl': null,
-      'lightUrl':
-        'https://images-paymentMethod.meld.io/NG_BANK_TRANSFER/logo_light.png',
-      'lightShortUrl': null,
-    },
+    'darkUrl':
+      'https://images-paymentMethod.meld.io/NG_BANK_TRANSFER/logo_dark.png',
+    'lightUrl':
+      'https://images-paymentMethod.meld.io/NG_BANK_TRANSFER/logo_light.png',
   },
   {
     'paymentMethod': 'SEPA',
     'name': 'SEPA',
     'paymentType': 'BANK_TRANSFER',
-    'logoImages': {
-      'darkUrl': 'https://images-paymentMethod.meld.io/SEPA/logo_dark.png',
-      'darkShortUrl': null,
-      'lightUrl': 'https://images-paymentMethod.meld.io/SEPA/logo_light.png',
-      'lightShortUrl': null,
-    },
+    'darkUrl': 'https://images-paymentMethod.meld.io/SEPA/logo_dark.png',
+    'lightUrl': 'https://images-paymentMethod.meld.io/SEPA/logo_light.png',
   },
   {
     'paymentMethod': 'SPEI',
     'name': 'SPEI',
     'paymentType': 'BANK_TRANSFER',
-    'logoImages': {
-      'darkUrl': 'https://images-paymentMethod.meld.io/SPEI/logo_dark.png',
-      'darkShortUrl': null,
-      'lightUrl': 'https://images-paymentMethod.meld.io/SPEI/logo_light.png',
-      'lightShortUrl': null,
-    },
+    'darkUrl': 'https://images-paymentMethod.meld.io/SPEI/logo_dark.png',
+    'lightUrl': 'https://images-paymentMethod.meld.io/SPEI/logo_light.png',
   },
-] as unknown as MeldPaymentMethod[]
+] as MeldPaymentMethod[]

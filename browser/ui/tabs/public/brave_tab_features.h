@@ -152,6 +152,21 @@ class BraveTabFeatures : public TabFeatures {
 
   // Opens the Leo panel once for users in the sidebar test.
   std::unique_ptr<ContentsObservingTabFeature> sidebar_tab_helper_;
+  // Highlights the Brave Shields icon once for new users.
+  std::unique_ptr<ContentsObservingTabFeature> onboarding_tab_helper_;
+
+  // Records searches. Null when SERP metrics are disabled or off the record.
+  std::unique_ptr<ContentsObservingTabFeature> serp_metrics_tab_helper_;
+  // Notifies the ads service of tab events. Null without Brave Ads.
+  std::unique_ptr<ContentsObservingTabFeature> ads_tab_helper_;
+  // Handles search result ads. Null without Brave Ads or off the record.
+  std::unique_ptr<ContentsObservingTabFeature>
+      creative_search_result_ad_tab_helper_;
+  // Offers and runs Web Discovery. Null without it or outside regular profiles.
+  std::unique_ptr<ContentsObservingTabFeature> web_discovery_tab_helper_;
+  // Records whether the page asked for high accuracy geolocation.
+  std::unique_ptr<ContentsObservingTabFeature>
+      geolocation_permission_tab_helper_;
 
 #if BUILDFLAG(ENABLE_AI_CHAT)
   std::unique_ptr<ai_chat::TabDataWebContentsObserver> tab_data_observer_;

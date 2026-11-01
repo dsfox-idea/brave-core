@@ -18,6 +18,9 @@ public final class BraveConstants {
     // used in BravseSetDefaultBrowserUtils
     public static final int DEFAULT_BROWSER_ROLE_REQUEST_CODE = 37;
 
+    // used in BraveActivity, for the DApps panels
+    public static final int DAPPS_PANEL_REQUEST_CODE = 38;
+
     // Growser-265: these are compared against getPackageName(), so they
     // move with chrome_public_manifest_package in buildArgs.ts or every
     // comparison quietly answers false.

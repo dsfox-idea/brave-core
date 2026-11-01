@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Par Growser</translation>
 <translation id="987734326276404793">Brīdinājumu saņemšana par cenu izsekošanu, izmantojot pārlūku Growser savā tālrunī</translation>
 <translation id="1203500561924088507">Pateicamies, ka veicāt instalēšanu. Pirms <ph name="BUNDLE_NAME"/> izmantošanas ir jārestartē pārlūkprogramma.</translation>
+<translation id="1213674046343558619">Tiek gaidīts <ph name="IMPORTANT_UPDATE"/>. Lai gādātu par drošu pārlūkošanu, pārlūks Growser tiks atjaunināts, kad nākamreiz būsiet neaktīvs vismaz <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Kad atvērsiet attēlu meklēšanu, serverim tiks automātiski nosūtīts lapas nosaukums, vietrādis URL un saturs, tostarp PDF faili. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Kamēr esat pierakstījies, pārlūkā Growser varat izmantot savas paroles un citu saturu no Growser konta. Lai to mainītu, pārejiet uz sadaļu “Jūsu konts pārlūkā Growser”.</translation>
 <translation id="583633806828413086">Rādīt Gemini pārlūkā Growser Mac izvēļņu joslā</translation>
@@ -221,6 +222,7 @@
 <translation id="3286538390144397061">Restartēt tūlīt</translation>
 <translation id="2339258256897053758">Trūkst Growser API atslēgu. Tiks atspējotas dažas Growser funkcijas.</translation>
 <translation id="8926637909431618259">Turpināt lietotņu izpildi fonā, kad Growser ir aizvērts</translation>
+<translation id="8245661393996028021">Pārlūks Growser tiks atjaunināts jūsu prombūtnes laikā</translation>
 <translation id="518125528057094977">Pārlūkā Growser tiks parādīts brīdinājums pirms jebkuras vietnes ielādes, izmantojot nedrošu savienojumu.</translation>
 <translation id="8652321858775514885">Aizverot visus Growser logus, automātiski izrakstīsieties no lielākās daļas vietņu, bet ne no Growser konta, ja esat pierakstījies pārlūkā Growser. Lai atļautu vietnēm jūs atcerēties, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">meklēšanas apgabala augšējais labais stūris: <ph name="RIGHT"/>% pa labi, <ph name="TOP"/>% augšdaļā</translation>
@@ -229,6 +231,7 @@
 <translation id="2645435784669275700">Growser OS</translation>
 <translation id="2297290224191497273">Vai pāriet uz esošo Growser profilu?</translation>
 <translation id="3412460710772753638">Tā tiks atjaunināta Paroļu pārvaldniekā šajā ierīcē</translation>
+<translation id="172368702860945706">Growser vēlas veikt atjaunināšanu</translation>
 <translation id="5079573433701109938">Lai piekļūtu grāmatzīmēm un citiem datiem no ierīces <ph name="DEVICE"/>, pierakstieties pārlūkā Growser.</translation>
 <translation id="3438772217992559640">Meklēt šajā cilnē, izmantojot attēlu meklēšanas funkciju</translation>
 <translation id="2491221873705777076">Izmantojiet funkciju “Droša pārlūkošana ar papildu aizsardzību” pārlūkā Growser savā tālrunī</translation>
@@ -366,6 +369,7 @@
 <translation id="4877750182157975795">Piekļūstiet visām savām Growser izlases vietnēm, izmantojot pārlūku Growser savā ierīcē (<ph name="DEVICE_TYPE"/>)</translation>
 <translation id="1204184037023366446">Pārlūkam Growser ir nepieciešama atļauja izsekot jūsu roku kustības.</translation>
 <translation id="5406591571925937375">Pēdējā laikā šī vietne nav apmeklēta. Pārlūkā Growser tika noņemtas šādas atļaujas: <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>, <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Pierakstīšanās pārlūkprogrammā Growser</translation>
 <translation id="5174969993834422967">Parasti jūs bloķējat paziņojumus. Lai ļautu šai vietnei sūtīt jums paziņojumus, noklikšķiniet uz paziņojumu ikonas atrašanās vietas joslas labajā stūrī.</translation>
 <translation id="5174983315706567306">Diskā nepietiek brīvas vietas.</translation>
 <translation id="8157129267754368853">Growser kontam nepieciešama atkārtota autentifikācija</translation>
@@ -374,6 +378,7 @@
 <translation id="5234764350956374838">Nerādīt</translation>
 <translation id="7690383309583926074">Iegūstiet lietotni Growser, lai saglabātu paroles, atrodoties ceļā</translation>
 <translation id="8586264863973514035">Lai ieviestu veiktās izmaiņas, atkārtoti palaidiet pārlūku Growser.</translation>
+<translation id="8127050479140582768">Lai nosūtītu šo cilni uz citu ierīci, abās ierīcēs pierakstieties pārlūkā Growser.</translation>
 <translation id="5286907366254680517">Noteiktā valoda</translation>
 <translation id="7264453786974905915">Iegūt lietotni Growser</translation>
 <translation id="7230006500876504868">Meklēšana pārlūkā Growser</translation>
@@ -735,6 +740,7 @@ Jaunas grāmatzīmes nevar saglabāt jūsu kontā, kamēr neizdzēsīsiet dažas
 <translation id="5128665650717824082">Growser for Testing nevar iestatīt kā noklusējuma pārlūku.</translation>
 <translation id="3053208669360972929">Meklēšana pārlūkā Growser no jebkuras vietas</translation>
 <translation id="2433912322225810055">Tas nosaka arī to, kāda lapa tiks rādīta, kad atvērsiet pārlūku Growser vai meklēsiet, izmantojot universālo lodziņu.</translation>
+<translation id="8789425457808164956">Lai nosūtītu šo cilni uz citu ierīci, otrā ierīcē pierakstieties pārlūkā Growser.</translation>
 <translation id="4100716194836114130">Šis ir jūsu Growser</translation>
 <translation id="8712637175834984815">Sapratu!</translation>
 <translation id="1419543648228375718">Vai pierakstīties pārlūkā Growser?</translation>
@@ -1395,4 +1401,29 @@ Ja šī lapa nedarbojas, kā paredzēts, mēģiniet atļaut optimizāciju.</tran
 <translation id="9194561096821877683">Growser</translation>
 <translation id="3721794228264322796">Aizvērt Gemini pārlūkā Growser</translation>
 <translation id="2314508080153323869">Gemini pārlūkā Growser</translation>
+<translation id="5114210947713246258">Jau ir pierakstījies lietotājs <ph name="EXISTING_USER"/>. Lai atdalītu pārlūkošanu, pierakstieties pārlūkā Growser savā profilā, izmantojot e-pasta adresi <ph name="USER_EMAIL_ADDRESS"/>. Varēsiet arī piekļūt lasīšanas sarakstam un citiem datiem no <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861">Jau ir pierakstījies lietotājs <ph name="EXISTING_USER"/>. Lai atdalītu pārlūkošanu, pierakstieties pārlūkā Growser savā profilā, izmantojot e-pasta adresi <ph name="USER_EMAIL_ADDRESS"/>. Varēsiet arī piekļūt paplašinājumiem un citiem datiem no <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592">Jau ir pierakstījies lietotājs <ph name="EXISTING_USER"/>. Lai atdalītu pārlūkošanu, pierakstieties pārlūkā Growser savā profilā, izmantojot e-pasta adresi <ph name="USER_EMAIL_ADDRESS"/>. Varēsiet arī piekļūt lasīšanas sarakstam un citiem datiem visās savās ierīcēs.</translation>
+<translation id="1055314897144735151">Jau ir pierakstījies lietotājs <ph name="EXISTING_USER"/>. Lai atdalītu pārlūkošanu, pierakstieties pārlūkā Growser savā profilā, izmantojot e-pasta adresi <ph name="USER_EMAIL_ADDRESS"/>. Varēsiet arī piekļūt paplašinājumiem un citiem datiem visās savās ierīcēs.</translation>
+<translation id="3429303382931281808">Lai iegūtu paroles un citus datus no ierīces <ph name="DEVICE"/>, pierakstieties pārlūkā Growser.</translation>
+<translation id="7681019317864236341">Lai piekļūtu grāmatzīmēm un citiem datiem no ierīces <ph name="DEVICE"/>, pierakstieties pārlūkā Growser.</translation>
+<translation id="1910605032088789136">Lai piekļūtu saglabātajai informācijai un citiem datiem no ierīces <ph name="DEVICE"/>, pierakstieties pārlūkā Growser.</translation>
+<translation id="6794970122141277862">Lai iegūtu lasīšanas sarakstu un citus datus no ierīces <ph name="DEVICE"/>, pierakstieties pārlūkā Growser.</translation>
+<translation id="3538050518049904702">Lai piekļūtu paplašinājumiem un citiem datiem no ierīces <ph name="DEVICE"/>, pierakstieties pārlūkā Growser.</translation>
+<translation id="1447754948984825961">Lai piekļūtu grāmatzīmēm un citiem datiem visās savās ierīcēs, pierakstieties pārlūkā Growser.</translation>
+<translation id="5758015234894546674">Lai iegūtu saglabāto informāciju un citus datus visās savās ierīcēs, pierakstieties pārlūkā Growser.</translation>
+<translation id="562156935182849823">Lai piekļūtu lasīšanas sarakstam un citiem datiem visās savās ierīcēs, pierakstieties pārlūkā Growser.</translation>
+<translation id="7817930780633998561">Lai piekļūtu paplašinājumiem un citiem datiem visās savās ierīcēs, pierakstieties pārlūkā Growser.</translation>
+<translation id="4444512588051585636">Pārlūks Growser tiks atjaunināts jūsu prombūtnes laikā</translation>
+<translation id="950120991083623144">Growser vēlas veikt atjaunināšanu</translation>
+<translation id="8250854223127536286">Tiek gaidīts <ph name="IMPORTANT_UPDATE"/>. Lai gādātu par drošu pārlūkošanu, pārlūks Growser tiks atjaunināts, kad nākamreiz būsiet neaktīvs vismaz <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">Gemini Enterprise pārlūkā Growser</translation>
+<translation id="4719707676382088645">Growser profils</translation>
+<translation id="7944326067922128825">Meklējiet un uzdodiet jautājumus no jebkuras vietas, pat ja pārlūka Growser logs ir minimizēts. Pārlūks Growser var darboties fonā.</translation>
+<translation id="1760966099984077912">Meklēšana pārlūkā Growser no jebkuras vietas</translation>
+<translation id="4011238820523740465">Uzdodiet jautājumus par saturu ārpus pārlūka Growser, piemēram, par citām lietotnēm vai failiem.</translation>
+<translation id="1491740387498395373">meklēšanai pārlūkā Growser vai pielāgošanai sadaļā <ph name="BEGIN_LINK"/>Iestatījumi<ph name="END_LINK"/>.</translation>
+<translation id="2672903539709015001">meklēšanai pārlūkā Growser.</translation>
+<translation id="1162630940779651724">Lai nosūtītu šo cilni uz citu ierīci, abās ierīcēs pierakstieties pārlūkā Growser.</translation>
+<translation id="5388608738812110907">Lai nosūtītu šo cilni uz citu ierīci, otrā ierīcē pierakstieties pārlūkā Growser.</translation>
 </translationbundle>

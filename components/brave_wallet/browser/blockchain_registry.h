@@ -29,6 +29,7 @@ class BlockchainRegistry : public mojom::BlockchainRegistry {
  public:
   static constexpr char kRestrictedAddressFileName[] =
       "prohibited-addresses.json";
+  static constexpr char kPolkadotRpcUrlsFileName[] = "polkadot-rpc-urls.json";
 
   BlockchainRegistry(const BlockchainRegistry&) = delete;
   BlockchainRegistry& operator=(const BlockchainRegistry&) = delete;
@@ -44,6 +45,8 @@ class BlockchainRegistry : public mojom::BlockchainRegistry {
   void UpdateChainList(ChainList chains);
   void UpdateRestrictedAddressesList(
       std::vector<std::string> restricted_addresses_list);
+  void UpdatePolkadotRpcUrls(PolkadotRpcUrlsMap polkadot_rpc_urls);
+  const PolkadotRpcUrlsMap& GetPolkadotRpcUrls() const;
   mojom::BlockchainTokenPtr GetTokenByAddress(const std::string& chain_id,
                                               mojom::CoinType coin,
                                               const std::string& address);
@@ -88,6 +91,21 @@ class BlockchainRegistry : public mojom::BlockchainRegistry {
     base::flat_set<std::string> previous_addresses_;
   };
 
+  class ScopedPolkadotRpcUrlsForTesting {
+   public:
+    explicit ScopedPolkadotRpcUrlsForTesting(
+        PolkadotRpcUrlsMap polkadot_rpc_urls);
+    ~ScopedPolkadotRpcUrlsForTesting();
+
+    ScopedPolkadotRpcUrlsForTesting(const ScopedPolkadotRpcUrlsForTesting&) =
+        delete;
+    ScopedPolkadotRpcUrlsForTesting& operator=(
+        const ScopedPolkadotRpcUrlsForTesting&) = delete;
+
+   private:
+    PolkadotRpcUrlsMap previous_rpc_urls_;
+  };
+
   bool IsEmptyForTesting();
   void ResetForTesting();
 
@@ -103,6 +121,7 @@ class BlockchainRegistry : public mojom::BlockchainRegistry {
   TokenListMap token_list_map_;
   ChainList chain_list_;
   base::flat_set<std::string> restricted_addresses_;
+  PolkadotRpcUrlsMap polkadot_rpc_urls_;
 
   SEQUENCE_CHECKER(sequence_checker_);
   mojo::ReceiverSet<mojom::BlockchainRegistry> receivers_;

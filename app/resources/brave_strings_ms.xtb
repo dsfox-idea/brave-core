@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Mengenai Growser</translation>
 <translation id="987734326276404793">Dapatkan makluman penjejakan harga dengan Growser pada telefon anda</translation>
 <translation id="1203500561924088507">Terima kasih kerana memasang. Anda perlu memulakan semula penyemak imbas anda sebelum menggunakan <ph name="BUNDLE_NAME"/>.</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/> belum selesai. Untuk memastikan penyemakan imbas anda selamat, Growser akan dikemaskinikan apabila anda tidak aktif selepas ini selama <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Apabila anda membuka Carian Imej, tajuk halaman, URL dan kandungan, termasuk PDF, akan dihantar kepada pelayan secara automatik. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Semasa anda log masuk, anda boleh menggunakan kata laluan anda dan pelbagai lagi daripada Growser sync chain anda dalam Growser. Untuk menukar tetapan ini, akses “Akaun anda dalam Growser”.</translation>
 <translation id="583633806828413086">Tunjukkan Gemini dalam Growser dalam bar menu Mac</translation>
@@ -222,6 +223,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="3286538390144397061">Mulakan Semula Sekarang</translation>
 <translation id="2339258256897053758">Kunci API Growser tiada. Sesetengah fungsi Growser akan dilumpuhkan.</translation>
 <translation id="8926637909431618259">Terus menjalankan apl latar belakang apabila Growser ditutup</translation>
+<translation id="8245661393996028021">Growser akan dikemaskinikan apabila anda tiada</translation>
 <translation id="518125528057094977">Growser akan memberi anda amaran sebelum memuatkan sebarang laman menggunakan sambungan yang tidak selamat</translation>
 <translation id="8652321858775514885">Anda akan dilog keluar daripada kebanyakan laman apabila anda menutup semua tetingkap Growser, kecuali Growser sync chain anda jika anda log masuk ke Growser. Untuk membenarkan laman mengingati anda, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">penjuru atas sebelah kanan kawasan carian: kanan <ph name="RIGHT"/>%, atas <ph name="TOP"/>%</translation>
@@ -230,6 +232,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">Tukar kepada profil Growser yang sedia ada?</translation>
 <translation id="3412460710772753638">Dalam Password Manager pada peranti ini</translation>
+<translation id="172368702860945706">Growser mahu membuat pengemaskinian</translation>
 <translation id="5079573433701109938">Untuk mendapatkan penanda halaman anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
 <translation id="3438772217992559640">Cari Tab Ini dengan Carian Imej</translation>
 <translation id="2491221873705777076">Lanjutkan Penyemakan Imbas Selamat Dipertingkat dengan Growser pada telefon anda</translation>
@@ -367,6 +370,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="4877750182157975795">Akses semua kegemaran Growser anda dengan Growser pada <ph name="DEVICE_TYPE"/> anda</translation>
 <translation id="1204184037023366446">Growser memerlukan kebenaran untuk menjejaki tangan anda</translation>
 <translation id="5406591571925937375">Anda belum melawati laman web ini baru-baru ini. Growser mengalih keluar <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>, <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Log Masuk ke Growser</translation>
 <translation id="5174969993834422967">Anda biasanya menyekat pemberitahuan. Untuk membenarkan laman ini memaklumi anda, klik ikon pemberitahuan pada penjuru kanan bar lokasi anda.</translation>
 <translation id="5174983315706567306">Ruang cakera tidak mencukupi.</translation>
 <translation id="8157129267754368853">Akaun Growser memerlukan pengesahan semula</translation>
@@ -375,6 +379,7 @@ peranti Bluetooth. <ph name="IDS_SERIAL_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK"
 <translation id="5234764350956374838">Ketepikan</translation>
 <translation id="7690383309583926074">Dapatkan apl Growser untuk menyimpan kata laluan semasa dalam perjalanan</translation>
 <translation id="8586264863973514035">Untuk menggunakan perubahan anda, mulakan semula Growser</translation>
+<translation id="8127050479140582768">Untuk menghantar tab ini kepada peranti lain, log masuk ke Growser pada kedua-dua peranti</translation>
 <translation id="5286907366254680517">Dikesan</translation>
 <translation id="7264453786974905915">Dapatkan apl Growser</translation>
 <translation id="7230006500876504868">Buat carian dengan Growser</translation>
@@ -738,6 +743,7 @@ Growser tidak dapat mengembalikan tetapan anda.</translation>
 <translation id="5128665650717824082">Growser for Testing tidak boleh dijadikan penyemak imbas lalai anda.</translation>
 <translation id="3053208669360972929">Buat carian dengan Growser dari mana-mana sahaja</translation>
 <translation id="2433912322225810055">Sambungan turut mengawal halaman yang ditunjukkan apabila anda memulakan Growser atau membuat carian dari Kotak Omni.</translation>
+<translation id="8789425457808164956">Untuk menghantar tab ini kepada peranti lain, log masuk ke Growser pada peranti tersebut</translation>
 <translation id="4100716194836114130">Ini Growser anda</translation>
 <translation id="8712637175834984815">Faham</translation>
 <translation id="1419543648228375718">Log masuk ke Growser?</translation>
@@ -1377,4 +1383,29 @@ Jika halaman ini tidak berfungsi seperti yang dijangkakan, cuba benarkan pengopt
 <translation id="2375391460087228850">Growser Apps</translation>
 <translation id="3721794228264322796">Tutup Gemini dalam Growser</translation>
 <translation id="2314508080153323869">Gemini dalam Growser</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> sudah log masuk. Untuk memastikan penyemakan imbas anda terpisah, log masuk ke Growser dalam profil anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapat senarai bacaan anda dan pelbagai lagi daripada <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> sudah log masuk. Untuk memastikan penyemakan imbas anda terpisah, log masuk ke Growser dalam profil anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapat sambungan anda dan pelbagai lagi daripada <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> sudah log masuk. Untuk memastikan penyemakan imbas anda terpisah, log masuk ke Growser dalam profil anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapat senarai bacaan anda dan pelbagai lagi pada semua peranti anda.</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> sudah log masuk. Untuk memastikan penyemakan imbas anda terpisah, log masuk ke Growser dalam profil anda sendiri sebagai <ph name="USER_EMAIL_ADDRESS"/>. Anda juga akan mendapat sambungan anda dan pelbagai lagi pada semua peranti anda.</translation>
+<translation id="3429303382931281808">Untuk mendapatkan kata laluan anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
+<translation id="7681019317864236341">Untuk mendapatkan penanda halaman anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
+<translation id="1910605032088789136">Untuk mendapatkan maklumat anda yang disimpan dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
+<translation id="6794970122141277862">Untuk mendapatkan senarai bacaan anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
+<translation id="3538050518049904702">Untuk mendapatkan sambungan anda dan pelbagai lagi daripada <ph name="DEVICE"/>, log masuk ke Growser</translation>
+<translation id="1447754948984825961">Untuk mendapatkan penanda halaman anda dan pelbagai lagi pada semua peranti anda, log masuk ke Growser</translation>
+<translation id="5758015234894546674">Untuk mendapatkan maklumat anda yang disimpan dan pelbagai lagi pada semua peranti anda, log masuk ke Growser</translation>
+<translation id="562156935182849823">Untuk mendapatkan senarai bacaan anda dan pelbagai lagi pada semua peranti anda, log masuk ke Growser</translation>
+<translation id="7817930780633998561">Untuk mendapatkan sambungan anda dan pelbagai lagi alatan pada semua peranti anda, log masuk ke Growser</translation>
+<translation id="4444512588051585636">Growser akan dikemaskinikan apabila anda tiada</translation>
+<translation id="950120991083623144">Growser mahu membuat pengemaskinian</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/> belum selesai. Untuk memastikan penyemakan imbas anda selamat, Growser akan dikemaskinikan apabila anda tidak aktif selepas ini selama <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">Gemini Enterprise dalam Growser</translation>
+<translation id="4719707676382088645">Profil Growser</translation>
+<translation id="7944326067922128825">Buat carian dan kemukakan pertanyaan dari mana-mana sahaja, walaupun Growser diminimumkan. Membenarkan Growser dijalankan pada latar.</translation>
+<translation id="1760966099984077912">Buat carian dengan Growser dari mana-mana sahaja</translation>
+<translation id="4011238820523740465">Tanya tentang kandungan di luar Growser, seperti apl atau fail lain</translation>
+<translation id="1491740387498395373">untuk membuat carian dengan Growser atau membuat penyesuaian dalam <ph name="BEGIN_LINK"/>Tetapan<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">untuk membuat carian dengan Growser.</translation>
+<translation id="1162630940779651724">Untuk menghantar tab ini kepada peranti lain, log masuk ke Growser pada kedua-dua peranti</translation>
+<translation id="5388608738812110907">Untuk menghantar tab ini kepada peranti lain, log masuk ke Growser pada peranti tersebut</translation>
 </translationbundle>

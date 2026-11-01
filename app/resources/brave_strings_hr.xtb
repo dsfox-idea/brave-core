@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">O pregledniku Growser</translation>
 <translation id="987734326276404793">Primajte upozorenja o praćenju cijena uz Growser na telefonu</translation>
 <translation id="1203500561924088507">Zahvaljujemo što ste izvršili instaliranje. Da biste mogli koristiti <ph name="BUNDLE_NAME"/>, morate ponovno pokrenuti preglednik.</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/> je na čekanju. Da bi vaše pregledavanje ostalo sigurno, Growser će se ažurirati sljedeći put kad ne budete aktivni <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Kad otvorite pretraživanje slika, naslov, URL i sadržaj stranice, uključujući PDF-ove, automatski će se poslati poslužitelju. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Dok ste prijavljeni, možete koristiti svoje zaporke i još mnogo toga sa svojeg Growser računa u Braveu. Da biste to promijenili, idite na Vaš račun u Braveu.</translation>
 <translation id="583633806828413086">Prikaži Gemini u Braveu na traci izbornika Maca</translation>
@@ -222,6 +223,7 @@
 <translation id="3286538390144397061">Ponovo pokreni sad</translation>
 <translation id="2339258256897053758">Nedostaju ključevi Growser API-ja. Neke funkcije Bravea bit će onemogućene.</translation>
 <translation id="8926637909431618259">Nastavi izvršavati ​​pozadinske aplikacije po zatvaranju preglednika Growser</translation>
+<translation id="8245661393996028021">Growser će se ažurirati kad niste aktivni</translation>
 <translation id="518125528057094977">Growser će vas upozoriti prije učitavanja bilo koje web-lokacije putem nesigurne veze</translation>
 <translation id="8652321858775514885">Kad zatvorite sve prozore Bravea, odjavit ćete se s većine web-lokacija osim Growser računa ako ste prijavljeni na Growser. Da bi vas web-lokacije zapamtile, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">gornji desni kut područja za pretraživanje: desno <ph name="RIGHT"/>%, vrh <ph name="TOP"/>%</translation>
@@ -230,6 +232,7 @@
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">Želite li prijeći na postojeći profil u Braveu?</translation>
 <translation id="3412460710772753638">U Upravitelju zaporki na ovom uređaju</translation>
+<translation id="172368702860945706">Dostupno je ažuriranje za Growser</translation>
 <translation id="5079573433701109938">Da biste mogli pristupati svojim oznakama i drugim podacima s uređaja <ph name="DEVICE"/>, prijavite se u Growser</translation>
 <translation id="3438772217992559640">Pretražite ovu karticu pomoću pretraživanja slika</translation>
 <translation id="2491221873705777076">Proširite poboljšano sigurno pregledavanje uz Growser na telefonu</translation>
@@ -367,6 +370,7 @@
 <translation id="4877750182157975795">Pristupite svim svojim Braveovim favoritima uz Growser na uređaju <ph name="DEVICE_TYPE"/></translation>
 <translation id="1204184037023366446">Growser treba dopuštenje za praćenje pokreta vaših ruku</translation>
 <translation id="5406591571925937375">U posljednje vrijeme niste posjećivali web-lokaciju. Growser je uklonio dopuštenja <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>, <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Prijava na Growser</translation>
 <translation id="5174969993834422967">Uglavnom blokirate obavijesti. Da biste dopustili web-lokaciji da vas obavještava, kliknite ikonu obavijesti u desnom kutu trake za lokaciju.</translation>
 <translation id="5174983315706567306">Nema dovoljno prostora na disku.</translation>
 <translation id="8157129267754368853">Growser račun zahtijeva ponovnu autentifikaciju</translation>
@@ -375,6 +379,7 @@
 <translation id="5234764350956374838">Odbaci</translation>
 <translation id="7690383309583926074">Preuzmite aplikaciju Growser da biste spremali zaporke u pokretu</translation>
 <translation id="8586264863973514035">Da bi se vaše promjene primijenile, ponovo pokrenite Growser</translation>
+<translation id="8127050479140582768">Da biste poslali ovu karticu na drugi uređaj, prijavite se na Growser na oba uređaja</translation>
 <translation id="5286907366254680517">Otkriveno</translation>
 <translation id="7264453786974905915">Preuzmite aplikaciju Growser</translation>
 <translation id="7230006500876504868">Pretraživanje s Braveom</translation>
@@ -738,6 +743,7 @@ Growser ne može oporaviti vaše postavke.</translation>
 <translation id="5128665650717824082">Growser for Testing ne može biti vaš zadani preglednik.</translation>
 <translation id="3053208669360972929">Pretražujte uz Growser s bilo kojeg mjesta</translation>
 <translation id="2433912322225810055">Upravlja i time koja se stranica prikazuje prilikom pokretanja Bravea ili pretraživanja putem višenamjenskog okvira.</translation>
+<translation id="8789425457808164956">Da biste poslali ovu karticu na drugi uređaj, prijavite se na Growser na tom uređaju</translation>
 <translation id="4100716194836114130">To je vaš Growser</translation>
 <translation id="8712637175834984815">Shvaćam</translation>
 <translation id="1419543648228375718">Želite li se prijaviti na Growser?</translation>
@@ -1385,4 +1391,29 @@ Ako ova stranica ne funkcionira ispravno, dopustite optimizaciju.</translation>
 <translation id="2375391460087228850">Aplikacije sustava Growser</translation>
 <translation id="3721794228264322796">Zatvori Gemini u Braveu</translation>
 <translation id="2314508080153323869">Gemini u Braveu</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> već je prijavljen/a. Da bi vaše pregledavanje ostalo odvojeno, prijavite se na Growser na svojem profilu kao <ph name="USER_EMAIL_ADDRESS"/>. Moći ćete pristupati svojem popisu za čitanje i drugim podacima s uređaja <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> već je prijavljen/a. Da bi vaše pregledavanje ostalo odvojeno, prijavite se na Growser na svojem profilu kao <ph name="USER_EMAIL_ADDRESS"/>. Moći ćete pristupati svojim proširenjima i drugim podacima s uređaja <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> već je prijavljen/a. Da bi vaše pregledavanje ostalo odvojeno, prijavite se na Growser na svojem profilu kao <ph name="USER_EMAIL_ADDRESS"/>. Moći ćete pristupati svojem popisu za čitanje i drugim podacima na svim svojim uređajima.</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> već je prijavljen/a. Da bi vaše pregledavanje ostalo odvojeno, prijavite se na Growser na svojem profilu kao <ph name="USER_EMAIL_ADDRESS"/>. Moći ćete pristupati svojim proširenjima i drugim podacima na svim svojim uređajima.</translation>
+<translation id="3429303382931281808">Da biste mogli pristupati svojim zaporkama i drugim podacima s uređaja <ph name="DEVICE"/>, prijavite se u Growser</translation>
+<translation id="7681019317864236341">Da biste mogli pristupati svojim oznakama i drugim podacima s uređaja <ph name="DEVICE"/>, prijavite se u Growser</translation>
+<translation id="1910605032088789136">Da biste mogli pristupati svojim spremljenim podacima i drugim podacima s računa <ph name="DEVICE"/>, prijavite se u Growser</translation>
+<translation id="6794970122141277862">Da biste mogli pristupati svom popisu za čitanje i drugim podacima s uređaja <ph name="DEVICE"/>, prijavite se u Growser</translation>
+<translation id="3538050518049904702">Da biste mogli pristupati svojim proširenjima i drugim podacima s uređaja <ph name="DEVICE"/>, prijavite se u Growser</translation>
+<translation id="1447754948984825961">Da biste mogli pristupati svojim oznakama i drugim podacima na svim svojim uređajima, prijavite se u Growser</translation>
+<translation id="5758015234894546674">Da biste mogli pristupati svojim spremljenim podacima i drugim podacima na svim svojim uređajima, prijavite se u Growser</translation>
+<translation id="562156935182849823">Da biste mogli pristupati svom popisu za čitanje i drugim podacima na svim svojim uređajima, prijavite se u Growser</translation>
+<translation id="7817930780633998561">Da biste mogli pristupati svojim proširenjima i drugim podacima na svim svojim uređajima, prijavite se u Growser</translation>
+<translation id="4444512588051585636">Growser će se ažurirati kad niste aktivni</translation>
+<translation id="950120991083623144">Dostupno je ažuriranje za Growser</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/> je na čekanju. Da bi vaše pregledavanje ostalo sigurno, Growser će se ažurirati sljedeći put kad ne budete aktivni <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">Gemini Enterprise u Braveu</translation>
+<translation id="4719707676382088645">Growser profil</translation>
+<translation id="7944326067922128825">Pretražujte i postavljajte pitanja s bilo kojeg mjesta, čak i ako je Growser minimiziran. Omogućuje Braveu da se izvodi u pozadini.</translation>
+<translation id="1760966099984077912">Pretražujte uz Growser s bilo kojeg mjesta</translation>
+<translation id="4011238820523740465">Postavite pitanje o sadržaju izvan Bravea, kao što su druge aplikacije ili datoteke</translation>
+<translation id="1491740387498395373">za pretraživanje pomoću Bravea ili prilagodbu u <ph name="BEGIN_LINK"/>postavkama<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">za pretraživanje pomoću Bravea.</translation>
+<translation id="1162630940779651724">Da biste poslali ovu karticu na drugi uređaj, prijavite se na Growser na oba uređaja</translation>
+<translation id="5388608738812110907">Da biste poslali ovu karticu na drugi uređaj, prijavite se na Growser na tom uređaju</translation>
 </translationbundle>

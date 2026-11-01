@@ -9,7 +9,6 @@
 #include <cstddef>
 #include <memory>
 #include <optional>
-#include <set>
 #include <string>
 #include <string_view>
 #include <utility>
@@ -24,22 +23,18 @@
 #include "base/logging.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/run_loop.h"
-#include "base/scoped_observation.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/thread_pool.h"
 #include "base/test/bind.h"
 #include "base/test/gmock_callback_support.h"
-#include "base/test/mock_callback.h"
 #include "base/test/run_until.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
 #include "base/test/test_future.h"
-#include "base/test/values_test_util.h"
 #include "base/time/time.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_credential_manager.h"
 #include "brave/components/ai_chat/core/browser/associated_content_manager.h"
-#include "brave/components/ai_chat/core/browser/constants.h"
 #include "brave/components/ai_chat/core/browser/conversation_handler.h"
 #include "brave/components/ai_chat/core/browser/engine/engine_consumer.h"
 #include "brave/components/ai_chat/core/browser/engine/mock_engine_consumer.h"
@@ -49,7 +44,6 @@
 #include "brave/components/ai_chat/core/browser/tab_tracker_service.h"
 #include "brave/components/ai_chat/core/browser/test/mock_associated_content.h"
 #include "brave/components/ai_chat/core/browser/test_utils.h"
-#include "brave/components/ai_chat/core/browser/tools/memory_storage_tool.h"
 #include "brave/components/ai_chat/core/browser/tools/tool.h"
 #include "brave/components/ai_chat/core/browser/types.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
@@ -67,11 +61,9 @@
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/cpp/weak_wrapper_shared_url_loader_factory.h"
 #include "services/network/test/test_url_loader_factory.h"
-#include "services/network/test/test_utils.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/abseil-cpp/absl/strings/str_format.h"
-#include "ui/base/l10n/l10n_util.h"
 #include "url/gurl.h"
 #include "url/origin.h"
 
@@ -188,6 +180,13 @@ class MockConversationHandlerClient : public mojom::ConversationUI {
               OnVisionModelSwitchChanged,
               (const std::optional<std::string>& model_key),
               (override));
+
+  MOCK_METHOD(
+      void,
+      OnContentAgentChanged,
+      (bool is_content_agent_chosen,
+       const std::vector<mojom::ConversationCapability>& capabilities_enabled),
+      (override));
 
   MOCK_METHOD(void, OnConversationDeleted, (), (override));
 
@@ -1783,6 +1782,23 @@ TEST_P(AIChatServiceUnitTest, GetSkills) {
   EXPECT_EQ(result[0]->shortcut, "test");
   EXPECT_EQ(result[0]->prompt, "Test prompt");
   EXPECT_EQ(result[0]->model, "model");
+}
+
+TEST_P(AIChatServiceUnitTest, ServiceStateHasContentAgentUserSelectable) {
+  for (bool is_user_selectable : {false, true}) {
+    SCOPED_TRACE(testing::Message()
+                 << "is_user_selectable: " << is_user_selectable);
+    ai_chat_service_->set_content_agent_user_selectable(is_user_selectable);
+
+    mojo::PendingRemote<mojom::ServiceObserver> observer;
+    auto observer_receiver = observer.InitWithNewPipeAndPassReceiver();
+    base::test::TestFuture<mojom::ServiceStatePtr> state_future;
+    ai_chat_service_->BindObserver(std::move(observer),
+                                   state_future.GetCallback());
+
+    EXPECT_EQ(state_future.Take()->is_content_agent_user_selectable,
+              is_user_selectable);
+  }
 }
 
 TEST_P(AIChatServiceUnitTest, CreateSkill) {

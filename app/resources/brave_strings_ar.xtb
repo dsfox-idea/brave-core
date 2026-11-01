@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">‏لمحة عن Growser</translation>
 <translation id="987734326276404793">‏تلقّي تنبيهات ميزة "تتبُّع الأسعار" باستخدام Growser على هاتفك</translation>
 <translation id="1203500561924088507">شكرًا على التثبيت. عليك إعادة تشغيل المتصفِّح قبل استخدام <ph name="BUNDLE_NAME"/>.</translation>
+<translation id="1213674046343558619">‏هناك <ph name="IMPORTANT_UPDATE"/> قيد الانتظار. للحفاظ على أمان تصفّحك، سيتم تحديث Growser في المرة القادمة عند توقّف نشاطك عليه لمدة <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">‏عند فتح ميزة "البحث بالصور"، سيتم تلقائيًا إرسال عنوان الصفحة وعنوان URL والمحتوى (بما في ذلك ملفات PDF) إلى الخادم. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">‏بعد تسجيل الدخول إلى حسابك، يمكنك استخدام كلمات المرور وغيرها من بيانات حسابك على Growser في Growser. لتغيير ذلك، يُرجى الانتقال إلى "حسابك في Growser".</translation>
 <translation id="583633806828413086">‏عرض "Gemini في Growser" في شريط قوائم Mac</translation>
@@ -222,6 +223,7 @@
 <translation id="3286538390144397061">إعادة التشغيل الآن</translation>
 <translation id="2339258256897053758">‏مفاتيح واجهة برمجة تطبيقات Growser مفقودة. وسيترتب على ذلك توقف بعض وظائف Growser عن العمل.</translation>
 <translation id="8926637909431618259">‏استمرار تشغيل تطبيقات الخلفية عند إغلاق Growser</translation>
+<translation id="8245661393996028021">‏سيتم تحديث Growser عند توقّف نشاطك عليه</translation>
 <translation id="518125528057094977">‏سيحذرك Growser قبل تحميل أي موقع إلكتروني يستخدم اتصالاً غير آمن.</translation>
 <translation id="8652321858775514885">‏سيتم تسجيل خروجك من معظم المواقع الإلكترونية عند إغلاق جميع نوافذ Growser، باستثناء حسابك على Growser إذا كنت مسجلاً الدخول إلى Growser. للسماح للمواقع الإلكترونية بتذكُّر بياناتك، <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">أعلى يسار مساحة البحث: %<ph name="RIGHT"/> من الجهة اليسرى و%<ph name="TOP"/> من الأعلى</translation>
@@ -230,6 +232,7 @@
 <translation id="2645435784669275700">‏نظام التشغيل Growser</translation>
 <translation id="2297290224191497273">‏هل تريد الانتقال إلى الملف الشخصي الحالي على Growser؟</translation>
 <translation id="3412460710772753638">في "مدير كلمات المرور" على هذا الجهاز</translation>
+<translation id="172368702860945706">‏يجب تحديث Growser</translation>
 <translation id="5079573433701109938">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى الإشارات المرجعية وغيرها على "<ph name="DEVICE"/>"</translation>
 <translation id="3438772217992559640">البحث في علامة التبويب هذه باستخدام ميزة "البحث بالصور"</translation>
 <translation id="2491221873705777076">‏بتنزيل Growser، ستكون "الحماية المحّسنة للتصفح الآمن" متاحة على هاتفك أيضًا</translation>
@@ -367,6 +370,7 @@
 <translation id="4877750182157975795">‏جميع خدمات Growser المفضّلة لديك ستكون متاحة لك باستخدام Growser على "<ph name="DEVICE_TYPE"/>"</translation>
 <translation id="1204184037023366446">‏يحتاج Growser إلى إذن لتتبُّع حركات يديك</translation>
 <translation id="5406591571925937375">‏لم تتم زيارة هذا الموقع الإلكتروني مؤخرًا، لذلك أزال Growser أذونات <ph name="PERMISSION_1"/> و<ph name="PERMISSION_2"/> و<ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">‏تسجيل الدخول إلى Growser</translation>
 <translation id="5174969993834422967">أنت تحظر الإشعارات عادةً. للسماح لهذا الموقع الإلكتروني بإرسال إشعارات، انقر على رمز الإشعارات في الزاوية اليسرى من شريط الموقع الجغرافي.</translation>
 <translation id="5174983315706567306">لا تتوفّر مساحة كافية على القرص.</translation>
 <translation id="8157129267754368853">‏يتطلب حساب Growser إعادة المصادقة</translation>
@@ -375,6 +379,7 @@
 <translation id="5234764350956374838">إغلاق</translation>
 <translation id="7690383309583926074">‏تنزيل تطبيق Growser لحفظ كلمات المرور أثناء التنقل</translation>
 <translation id="8586264863973514035">‏لتطبيق التغييرات، يُرجى إعادة تشغيل Growser</translation>
+<translation id="8127050479140582768">‏لإرسال علامة التبويب هذه إلى جهاز آخر، يجب تسجيل الدخول إلى Growser على كلا الجهازين</translation>
 <translation id="5286907366254680517">تمّ رصد اللغة</translation>
 <translation id="7264453786974905915">‏تنزيل تطبيق Growser</translation>
 <translation id="7230006500876504868">‏البحث باستخدام Growser</translation>
@@ -738,6 +743,7 @@
 <translation id="5128665650717824082">‏لا يمكن اختيار الإصدار Growser for Test ليكون متصفِّحك التلقائي.</translation>
 <translation id="3053208669360972929">‏البحث باستخدام Growser من أي مكان</translation>
 <translation id="2433912322225810055">‏كما أنها تتحكم في الصفحة التي تظهر عند تشغيل Growser أو إجراء بحث من المربع متعدد الاستخدامات.</translation>
+<translation id="8789425457808164956">‏لإرسال علامة التبويب هذه إلى جهاز آخر، يجب تسجيل الدخول إلى Growser على ذلك الجهاز</translation>
 <translation id="4100716194836114130">‏هذا هو Growser الخاص بك</translation>
 <translation id="8712637175834984815">حسنًا</translation>
 <translation id="1419543648228375718">‏هل المطلوب تسجيل الدخول إلى Growser؟</translation>
@@ -1383,4 +1389,29 @@
 <translation id="2375391460087228850">‏تطبيقات Growser</translation>
 <translation id="3721794228264322796">‏إغلاق Gemini في Growser</translation>
 <translation id="2314508080153323869">‏‫Gemini في Growser</translation>
+<translation id="5114210947713246258">‏حساب "<ph name="EXISTING_USER"/>" مسجّل الدخول حاليًا. للحصول على تجربة تصفّح منفصلة، يُرجى تسجيل الدخول إلى ملفك الشخصي في Growser بحساب <ph name="USER_EMAIL_ADDRESS"/>. سيتيح لك ذلك أيضًا الوصول إلى قائمة القراءة وغيرها من <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861">‏حساب "<ph name="EXISTING_USER"/>" مسجّل الدخول حاليًا. للحصول على تجربة تصفّح منفصلة، يُرجى تسجيل الدخول إلى ملفك الشخصي في Growser بحساب <ph name="USER_EMAIL_ADDRESS"/>. سيتيح لك ذلك أيضًا الوصول إلى إضافاتك وغيرها من <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592">‏حساب "<ph name="EXISTING_USER"/>" مسجّل الدخول حاليًا. للحصول على تجربة تصفّح منفصلة، يُرجى تسجيل الدخول إلى ملفك الشخصي في Growser بحساب <ph name="USER_EMAIL_ADDRESS"/>. سيتيح لك ذلك أيضًا الوصول إلى قائمة القراءة وغيرها على جميع أجهزتك.</translation>
+<translation id="1055314897144735151">‏حساب "<ph name="EXISTING_USER"/>" مسجّل الدخول حاليًا. للحصول على تجربة تصفّح منفصلة، يُرجى تسجيل الدخول إلى ملفك الشخصي في Growser بحساب <ph name="USER_EMAIL_ADDRESS"/>. سيتيح لك ذلك أيضًا الوصول إلى الإضافات وغيرها على جميع أجهزتكِ.</translation>
+<translation id="3429303382931281808">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى كلمات المرور وغيرها على "<ph name="DEVICE"/>"</translation>
+<translation id="7681019317864236341">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى الإشارات المرجعية وغيرها على "<ph name="DEVICE"/>"</translation>
+<translation id="1910605032088789136">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى معلوماتك المحفوظة وغيرها على "<ph name="DEVICE"/>"</translation>
+<translation id="6794970122141277862">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى قائمة القراءة وغيرها على "<ph name="DEVICE"/>"</translation>
+<translation id="3538050518049904702">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى الإضافات وغيرها على "<ph name="DEVICE"/>"</translation>
+<translation id="1447754948984825961">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى الإشارات المرجعية وغيرها على جميع أجهزتك</translation>
+<translation id="5758015234894546674">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى معلوماتك المحفوظة وغيرها على جميع أجهزتك</translation>
+<translation id="562156935182849823">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى قائمة القراءة وغيرها على جميع أجهزتك</translation>
+<translation id="7817930780633998561">‏يمكنك تسجيل الدخول إلى Growser للوصول إلى الإضافات وغيرها على جميع أجهزتك</translation>
+<translation id="4444512588051585636">‏سيتم تحديث Growser عند توقّف نشاطك عليه</translation>
+<translation id="950120991083623144">‏يجب تحديث Growser</translation>
+<translation id="8250854223127536286">‏هناك <ph name="IMPORTANT_UPDATE"/> قيد الانتظار. للحفاظ على أمان تصفّحك، سيتم تحديث Growser في المرة القادمة عند توقّف نشاطك عليه لمدة <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">‏‫Gemini Enterprise في Growser</translation>
+<translation id="4719707676382088645">‏الملف الشخصي على Growser</translation>
+<translation id="7944326067922128825">‏يمكنك البحث وطرح الأسئلة باستخدام Growser من أي مكان، حتى إن كان مصغّرًا. ويسمح هذا الإعداد بتشغيل Growser في الخلفية.</translation>
+<translation id="1760966099984077912">‏البحث باستخدام Growser من أي مكان</translation>
+<translation id="4011238820523740465">‏يمكنك طرح أسئلة حول محتوى خارج Growser، مثل تطبيقات أو ملفات أخرى</translation>
+<translation id="1491740387498395373">‏للبحث باستخدام Growser أو التخصيص من خلال <ph name="BEGIN_LINK"/>الإعدادات<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">‏للبحث باستخدام Growser</translation>
+<translation id="1162630940779651724">‏لإرسال علامة التبويب هذه إلى جهاز آخر، يجب تسجيل الدخول إلى Growser على كلا الجهازين</translation>
+<translation id="5388608738812110907">‏لإرسال علامة التبويب هذه إلى جهاز آخر، يجب تسجيل الدخول إلى Growser على ذلك الجهاز</translation>
 </translationbundle>

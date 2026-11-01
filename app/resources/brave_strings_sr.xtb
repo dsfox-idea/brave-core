@@ -23,6 +23,7 @@
 <translation id="8541922081612557424">О Growser-у</translation>
 <translation id="987734326276404793">Добијајте обавештења о праћењу цена уз Growser на телефону</translation>
 <translation id="1203500561924088507">Хвала вам на инсталацији. Потребно је да рестартујете прегледач пре него што почнете да користите <ph name="BUNDLE_NAME"/>.</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/> је на чекању. Да би прегледање било безбедно, Growser ће се ажурирати следећи пут кад будете неактивни <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Када отворите претрагу слика, наслов, URL и садржај странице, укључујући PDF-ове, аутоматски се шаљу на сервер. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Док сте пријављени, можете да користите лозинке и друго са Growser налога у Growser-у. Да бисте то променили, идите на Налог у Growser-у.</translation>
 <translation id="583633806828413086">Прикажи Gemini у Growser-у на траци менија Mac-а</translation>
@@ -230,6 +231,7 @@
 <translation id="3286538390144397061">Рестартуј одмах</translation>
 <translation id="2339258256897053758">Недостају шифре за Growser API. Неке функције Growser-а ће бити онемогућене.</translation>
 <translation id="8926637909431618259">Настави са покретањем апликација у позадини када се Growser затвори</translation>
+<translation id="8245661393996028021">Growser ће се ажурирати док нисте активни</translation>
 <translation id="518125528057094977">Growser ће вас упозорити пре учитавања било ког сајта помоћу небезбедне везе</translation>
 <translation id="8652321858775514885">Бићете одјављени са већине сајтова када затворите све Growser прозоре, осим са Growser налога ако сте пријављени у Growser. Да бисте дозволили сајтовима да вас памте, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">горњи десни угао области претраге: удесно <ph name="RIGHT"/>%, нагоре <ph name="TOP"/>%</translation>
@@ -238,6 +240,7 @@
 <translation id="2645435784669275700">Growser ОС</translation>
 <translation id="2297290224191497273">Желите да пређете на постојећи Growser профил?</translation>
 <translation id="3412460710772753638">У Менаџеру лозинки на овом уређају</translation>
+<translation id="172368702860945706">Growser жели да се ажурира</translation>
 <translation id="5079573433701109938">Пријавите се у Growser да бисте преузели обележиваче и друго са уређаја <ph name="DEVICE"/></translation>
 <translation id="3438772217992559640">Претражи ову картицу помоћу претраге слика</translation>
 <translation id="2491221873705777076">Продужите побољшано безбедно прегледање уз Growser на телефону</translation>
@@ -380,6 +383,7 @@
 <translation id="4877750182157975795">Приступајте свим омиљеним Growser садржајима уз Growser на уређају <ph name="DEVICE_TYPE"/></translation>
 <translation id="1204184037023366446">Growser-у треба дозвола за праћење руку</translation>
 <translation id="5406591571925937375">Нисте скоро посећивали сајт. Growser је уклонио дозволе <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>, <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Пријавите се у Growser</translation>
 <translation id="5174969993834422967">Обично блокирате обавештења. Да бисте дозволили овом сајту да вас обавештава, кликните на икону обавештења у десном углу траке за локацију.</translation>
 <translation id="5174983315706567306">Нема довољно простора на диску.</translation>
 <translation id="8157129267754368853">Growser налог захтева поновну потврду идентитета</translation>
@@ -389,6 +393,7 @@
 <translation id="1069969567644851798">Отвори линк у Growser прозору без архи&amp;вирања</translation>
 <translation id="7690383309583926074">Преузмите апликацију Growser да бисте сачували лозинке у покрету</translation>
 <translation id="8586264863973514035">Да бисте применили промене, поново покрените Growser</translation>
+<translation id="8127050479140582768">Да бисте послали ову картицу на други уређај, пријавите се у Growser на оба уређаја</translation>
 <translation id="5286907366254680517">Откривено</translation>
 <translation id="7264453786974905915">Преузмите апликацију Growser</translation>
 <translation id="5994282802285556682">Када прегледате у режиму без архивирања, Growser ће вас упозорити пре учитавања сајта помоћу небезбедне везе</translation>
@@ -757,6 +762,7 @@ Growser не може да врати подешавања.</translation>
 <translation id="5128665650717824082">Growser for Testing не може да се постави за подразумевани прегледач.</translation>
 <translation id="3053208669360972929">Претражујте помоћу Growser-а са било ког места</translation>
 <translation id="2433912322225810055">Контролише и страницу која се приказује када покренете Growser или претражујете из омнибокса.</translation>
+<translation id="8789425457808164956">Да бисте послали ову картицу на други уређај, пријавите се у Growser на том уређају</translation>
 <translation id="4100716194836114130">Ово је ваш Growser</translation>
 <translation id="8712637175834984815">Важи</translation>
 <translation id="1419543648228375718">Желите ли да се пријавите у Growser?</translation>
@@ -1378,4 +1384,29 @@ Growser не може да врати подешавања.</translation>
 <translation id="2375391460087228850">Growser апликације</translation>
 <translation id="3721794228264322796">Затворите Gemini у Growser-у</translation>
 <translation id="2314508080153323869">Gemini у Growser-у</translation>
+<translation id="5114210947713246258">Корисник <ph name="EXISTING_USER"/> је већ пријављен. Да би вам прегледање било раздвојено, пријавите се у Growser преко свог профила као <ph name="USER_EMAIL_ADDRESS"/>. Моћи ћете да преузмете и листу за читање и друго са уређаја <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861">Корисник <ph name="EXISTING_USER"/> је већ пријављен. Да би вам прегледање било раздвојено, пријавите се у Growser преко свог профила као <ph name="USER_EMAIL_ADDRESS"/>. Моћи ћете да преузмете и додатке и друго са уређаја <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592">Корисник <ph name="EXISTING_USER"/> је већ пријављен. Да би вам прегледање било раздвојено, пријавите се у Growser преко свог профила као <ph name="USER_EMAIL_ADDRESS"/>. Моћи ћете да преузмете и листу за читање и друго на свим уређајима.</translation>
+<translation id="1055314897144735151">Корисник <ph name="EXISTING_USER"/> је већ пријављен. Да би вам прегледање било раздвојено, пријавите се у Growser преко свог профила као <ph name="USER_EMAIL_ADDRESS"/>. Моћи ћете да преузмете и додатке и друго на свим уређајима.</translation>
+<translation id="3429303382931281808">Пријавите се у Growser да бисте приступали лозинкама и другом са уређаја <ph name="DEVICE"/></translation>
+<translation id="7681019317864236341">Пријавите се у Growser да бисте преузели обележиваче и друго са уређаја <ph name="DEVICE"/></translation>
+<translation id="1910605032088789136">Пријавите се у Growser да бисте приступали сачуваним информацијама и другом са уређаја <ph name="DEVICE"/></translation>
+<translation id="6794970122141277862">Пријавите се у Growser да бисте преузели листу за читање и друго са уређаја <ph name="DEVICE"/></translation>
+<translation id="3538050518049904702">Пријавите се у Growser да бисте преузели додатке и друго са уређаја <ph name="DEVICE"/></translation>
+<translation id="1447754948984825961">Пријавите се у Growser да бисте приступали обележивачима и другом на свим уређајима</translation>
+<translation id="5758015234894546674">Пријавите се у Growser да бисте приступали сачуваним информацијама и другом на свим уређајима</translation>
+<translation id="562156935182849823">Пријавите се у Growser да бисте преузели листу за читање и друго на свим уређајима</translation>
+<translation id="7817930780633998561">Пријавите се у Growser да бисте преузели додатке и друго на свим уређајима</translation>
+<translation id="4444512588051585636">Growser ће се ажурирати док нисте активни</translation>
+<translation id="950120991083623144">Growser жели да се ажурира</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/> је на чекању. Да би прегледање било безбедно, Growser ће се ажурирати следећи пут кад будете неактивни <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">Gemini Enterprise у Growser-у</translation>
+<translation id="4719707676382088645">Growser профил</translation>
+<translation id="7944326067922128825">Претражујте и постављајте питања с било ког места, чак и ако је Growser умањен. Дозвољава Growser-у да ради у позадини.</translation>
+<translation id="1760966099984077912">Претражујте помоћу Growser-а са било ког места</translation>
+<translation id="4011238820523740465">Постављајте питања о садржају изван Growser-а, попут других апликација или фајлова</translation>
+<translation id="1491740387498395373">за претраживање помоћу Growser-а или прилагођавање у <ph name="BEGIN_LINK"/>Подешавањима<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">за претраживање помоћу Growser-а.</translation>
+<translation id="1162630940779651724">Да бисте послали ову картицу на други уређај, пријавите се у Growser на оба уређаја</translation>
+<translation id="5388608738812110907">Да бисте послали ову картицу на други уређај, пријавите се у Growser на том уређају</translation>
 </translationbundle>

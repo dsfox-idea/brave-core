@@ -430,6 +430,9 @@ void RegisterProfilePrefsForMigration(
   registry->RegisterBooleanPref(::bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP,
                                 true);
 #endif
+
+  // Added 10/2026.
+  registry->RegisterBooleanPref(kMRUCyclingEnabled, false);
 }
 
 void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
@@ -457,7 +460,6 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // blocks on the macOS keychain (see kGrowserCookieEncryptionEnabled).
   registry->RegisterBooleanPref(kGrowserCookieEncryptionEnabled, false);
   registry->RegisterBooleanPref(kGrowserCookieEncryptionPromoDismissed, false);
-  registry->RegisterBooleanPref(kMRUCyclingEnabled, false);
   registry->RegisterBooleanPref(kTabMuteIndicatorNotClickable, false);
 
   brave_sync::Prefs::RegisterProfilePrefs(registry);

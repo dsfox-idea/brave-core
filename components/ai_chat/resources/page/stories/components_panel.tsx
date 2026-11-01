@@ -30,13 +30,24 @@ import {
   SelectedChatDetails,
 } from '../state/active_chat_context'
 
+const makeWorkspaceContent = (uuid: string): Mojom.AssociatedContent => ({
+  uuid,
+  contentType: Mojom.ContentType.Workspace,
+  title: 'Workspace',
+  contentId: 0,
+  url: { url: `workspace://${uuid}` },
+  contentUsedPercentage: 100,
+  conversationTurnUuid: 'turn-uuid',
+  toolsAttached: true,
+})
+
 const CONVERSATIONS: Mojom.Conversation[] = [
   {
     title: 'Star Trek Poem',
     uuid: '1',
     hasContent: true,
     updatedTime: { internalValue: BigInt('13278618001000000') },
-    associatedContent: [],
+    associatedContent: [makeWorkspaceContent('workspace-1')],
     modelKey: undefined,
     totalTokens: BigInt(0),
     trimmedTokens: BigInt(0),
@@ -48,7 +59,7 @@ const CONVERSATIONS: Mojom.Conversation[] = [
     uuid: '2',
     hasContent: true,
     updatedTime: { internalValue: BigInt('13278618001000001') },
-    associatedContent: [],
+    associatedContent: [makeWorkspaceContent('workspace-2')],
     modelKey: undefined,
     totalTokens: BigInt(0),
     trimmedTokens: BigInt(0),
@@ -345,6 +356,8 @@ type CustomArgs = {
   currentErrorState: keyof typeof Mojom.APIError
   toolUseTaskState: keyof typeof Mojom.TaskState
   capabilitiesEnabled: Array<keyof typeof Mojom.ConversationCapability>
+  isContentAgentUserSelectable: boolean
+  isContentAgentChosen: boolean
   model: string
   inputText: Content
   editingConversationId: string | null
@@ -364,6 +377,7 @@ type CustomArgs = {
   suggestionStatus: keyof typeof Mojom.SuggestionGenerationStatus
   isMobile: boolean
   isHistoryEnabled: boolean
+  isWorkspaceToolsEnabled: boolean
   isAIChatAgentProfileFeatureEnabled: boolean
   isAIChatAgentProfile: boolean
   isStandalone: boolean
@@ -395,6 +409,8 @@ const args: CustomArgs = {
     `Write a Star Trek poem about Data's life on board the Enterprise`,
   ],
   capabilitiesEnabled: [],
+  isContentAgentUserSelectable: false,
+  isContentAgentChosen: false,
   conversationListCount: CONVERSATIONS.length,
   hasSuggestedQuestions: true,
   hasAssociatedContent: true,
@@ -416,6 +432,7 @@ const args: CustomArgs = {
   model: MODELS[0].key,
   isMobile: false,
   isHistoryEnabled: true,
+  isWorkspaceToolsEnabled: true,
   isAIChatAgentProfileFeatureEnabled: false,
   isAIChatAgentProfile: false,
   isStandalone: false,
@@ -582,6 +599,7 @@ function StoryContext(
     selectedConversationId: CONVERSATIONS[0].uuid,
     updateSelectedConversationId: () => {},
     createNewConversation: () => {},
+    createNewConversationWithWorkspace: () => {},
     isMainConversation: argsRef.current.isDefaultConversation,
     openMainConversation: () => {},
   }
@@ -638,6 +656,7 @@ function StoryContext(
             isStoragePrefEnabled: args.isStoragePrefEnabled,
             isStorageNoticeDismissed: args.isStorageNoticeDismissed,
             canShowPremiumPrompt: args.canShowPremiumPrompt,
+            isContentAgentUserSelectable: args.isContentAgentUserSelectable,
           },
         }),
         [args],
@@ -662,6 +681,7 @@ function StoryContext(
               capabilitiesEnabled: argsRef.current.capabilitiesEnabled.map(
                 (value) => Mojom.ConversationCapability[value],
               ),
+              isContentAgentChosen: argsRef.current.isContentAgentChosen,
               visionModelSwitchKey: argsRef.current
                 .isWaitingForVisionModelSwitch
                 ? MODELS.find((model) => model.visionSupport)?.key
@@ -691,6 +711,7 @@ function StoryContext(
         isAIChatAgentProfile: args.isAIChatAgentProfile,
         isMobile: args.isMobile,
         isHistoryFeatureEnabled: args.isHistoryEnabled,
+        isWorkspaceToolsEnabled: args.isWorkspaceToolsEnabled,
         isConversationShareEnabled: true,
         isAIChatExportJSONEnabled: true,
         skillDialog: args.skillDialog,
@@ -757,6 +778,7 @@ function StoryContext(
               isStoragePrefEnabled: args.isStoragePrefEnabled,
               isStorageNoticeDismissed: args.isStorageNoticeDismissed,
               canShowPremiumPrompt: args.canShowPremiumPrompt,
+              isContentAgentUserSelectable: args.isContentAgentUserSelectable,
             },
           }}
           overrides={{

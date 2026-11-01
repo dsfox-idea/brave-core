@@ -179,6 +179,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterStringPref(kBraveWalletSelectedEthDappAccount, "");
   registry->RegisterStringPref(kBraveWalletSelectedSolDappAccount, "");
   registry->RegisterStringPref(kBraveWalletSelectedAdaDappAccount, "");
+  registry->RegisterStringPref(kBraveWalletSelectedDotDappAccount, "");
 
   registry->RegisterIntegerPref(
       kBraveWalletTransactionSimulationOptInStatus,
@@ -275,6 +276,7 @@ void ClearKeyringServiceProfilePrefs(PrefService* prefs) {
   prefs->ClearPref(kBraveWalletSelectedEthDappAccount);
   prefs->ClearPref(kBraveWalletSelectedSolDappAccount);
   prefs->ClearPref(kBraveWalletSelectedAdaDappAccount);
+  prefs->ClearPref(kBraveWalletSelectedDotDappAccount);
   prefs->ClearPref(kBraveWalletHiddenAccounts);
 }
 

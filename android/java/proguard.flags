@@ -54,7 +54,6 @@
 
 -keep class org.chromium.chrome.browser.tabmodel.TabCollectionTabModelImpl {
     *** shouldGroupWithParent(...);
-    *** isTabModelRestored(...);
 }
 
 -keep class org.chromium.chrome.browser.omnibox.suggestions.editurl.EditUrlSuggestionProcessor {

@@ -5,8 +5,6 @@
 
 #include "brave/components/brave_origin/features.h"
 
-#include "base/feature_list.h"
-
 namespace brave_origin::features {
 
 // growser (#78): Brave Origin is off. It is a paid edition of Brave, and with

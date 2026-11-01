@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Growser について</translation>
 <translation id="987734326276404793">スマートフォンの Growser で価格トラッキングのアラートを受け取る</translation>
 <translation id="1203500561924088507">インストールいただきありがとうございます。<ph name="BUNDLE_NAME"/> を使用するにはブラウザを再起動してください。</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/>が保留中です。ブラウジングを保護するため、Growser はあなたが <ph name="IDLE_DURATION"/>間操作しなかったときにアップデートされます。</translation>
 <translation id="1232234696885483911">画像検索を開くと、ページのタイトル、URL、コンテンツ（PDF を含む）が自動的にサーバーに送信されます。<ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Growser にログイン中は、Growser アカウントのパスワードやその他の設定を使用できます。この設定を変更するには、[Growser のアカウント設定] に移動してください。</translation>
 <translation id="583633806828413086">Mac のメニューバーに Gemini in Growser を表示する</translation>
@@ -221,6 +222,7 @@
 <translation id="3286538390144397061">今すぐ再起動</translation>
 <translation id="2339258256897053758">Growser API キーが欠落しています。Growser の一部の機能は無効になります。</translation>
 <translation id="8926637909431618259">Growser を閉じた際にバックグラウンド アプリの処理を続行する</translation>
+<translation id="8245661393996028021">Growser は、あなたが操作していないときにアップデートされます</translation>
 <translation id="518125528057094977">Growser で安全でない接続を使用してサイトを読み込む前に警告を表示します</translation>
 <translation id="8652321858775514885">Growser のウィンドウをすべて閉じると、ほとんどのサイトからログアウトします。ただし Growser にログインしている場合、Growser アカウントからはログアウトしません。サイトにあなたの情報を記憶させるには、<ph name="SETTINGS_LINK"/>します。</translation>
 <translation id="3352986031709923790">検索範囲の右上隅: 右 <ph name="RIGHT"/>%、上 <ph name="TOP"/>%</translation>
@@ -229,6 +231,7 @@
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">既存の Growser プロフィールに切り替えますか？</translation>
 <translation id="3412460710772753638">このデバイスのパスワード マネージャーで更新</translation>
+<translation id="172368702860945706">Growser のアップデートが予定されています</translation>
 <translation id="5079573433701109938"><ph name="DEVICE"/> のブックマークなどを使用するには、Growser にログインしてください</translation>
 <translation id="3438772217992559640">画像検索でこのタブを検索</translation>
 <translation id="2491221873705777076">スマートフォンの Growser でセーフ ブラウジング保護強化機能を有効にする</translation>
@@ -366,6 +369,7 @@
 <translation id="4877750182157975795"><ph name="DEVICE_TYPE"/> の Growser で、Growser のお気に入りすべてにアクセスできます</translation>
 <translation id="1204184037023366446">Growser がハンド トラッキングの許可を求めています</translation>
 <translation id="5406591571925937375">最近アクセスしていないため、Growser で <ph name="PERMISSION_1"/>、<ph name="PERMISSION_2"/>、<ph name="PERMISSION_3"/> の権限を削除しました。</translation>
+<translation id="3576895950897485019">Growser にログイン</translation>
 <translation id="5174969993834422967">通知はデフォルトでブロックされています。このサイトの通知を表示するには、ロケーション バーの右上にある通知アイコンをクリックしてください。</translation>
 <translation id="5174983315706567306">ディスクの空き容量が不足しています。</translation>
 <translation id="8157129267754368853">Growser アカウントの再認証が必要です</translation>
@@ -374,6 +378,7 @@
 <translation id="5234764350956374838">閉じる</translation>
 <translation id="7690383309583926074">Growser アプリを入手して、外出先でパスワードを保存</translation>
 <translation id="8586264863973514035">変更を適用するには Growser を再起動してください</translation>
+<translation id="8127050479140582768">このタブを別のデバイスに送信するには、両方のデバイスで Growser にログインしてください</translation>
 <translation id="5286907366254680517">検出しました</translation>
 <translation id="7264453786974905915">Growser アプリを入手</translation>
 <translation id="7230006500876504868">Growser で検索</translation>
@@ -735,6 +740,7 @@
 <translation id="5128665650717824082">Growser for Testing は、既定のブラウザには設定できません。</translation>
 <translation id="3053208669360972929">どこからでも Growser で検索</translation>
 <translation id="2433912322225810055">この拡張機能では、Growser の起動時、またはアドレスバーからの検索時に表示されるページも制御されます。</translation>
+<translation id="8789425457808164956">このタブを別のデバイスに送信するには、送信先のデバイスで Growser にログインしてください</translation>
 <translation id="4100716194836114130">自分好みに設定</translation>
 <translation id="8712637175834984815">理解しました</translation>
 <translation id="1419543648228375718">Growser にログインしますか？</translation>
@@ -1365,4 +1371,29 @@
 <translation id="9194561096821877683">Growser</translation>
 <translation id="3721794228264322796">Gemini in Growser を閉じる</translation>
 <translation id="2314508080153323869">Gemini in Growser</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> がすでにログインしています。ブラウジング環境を分ける場合は、<ph name="USER_EMAIL_ADDRESS"/> として自分用のプロフィールで Growser にログインしてください。<ph name="DEVICE"/> のリーディング リストなどを使用できます。</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> がすでにログインしています。ブラウジング環境を分ける場合は、<ph name="USER_EMAIL_ADDRESS"/> として自分用のプロフィールで Growser にログインしてください。<ph name="DEVICE"/> の拡張機能などを使用できます。</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> がすでにログインしています。ブラウジング環境を分ける場合は、<ph name="USER_EMAIL_ADDRESS"/> として自分用のプロフィールで Growser にログインしてください。すべてのデバイスで同じリーディング リストなどを使用できます。</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> がすでにログインしています。ブラウジング環境を分ける場合は、<ph name="USER_EMAIL_ADDRESS"/> として自分用のプロフィールで Growser にログインしてください。すべてのデバイスで同じ拡張機能などを使用できます。</translation>
+<translation id="3429303382931281808"><ph name="DEVICE"/> のパスワードなどを使用するには、Growser にログインしてください</translation>
+<translation id="7681019317864236341"><ph name="DEVICE"/> のブックマークなどを使用するには、Growser にログインしてください</translation>
+<translation id="1910605032088789136"><ph name="DEVICE"/> で保存した情報などを使用するには、Growser にログインしてください</translation>
+<translation id="6794970122141277862"><ph name="DEVICE"/> のリーディング リストなどを使用するには、Growser にログインしてください</translation>
+<translation id="3538050518049904702"><ph name="DEVICE"/> の拡張機能などを使用するには、Growser にログインしてください</translation>
+<translation id="1447754948984825961">すべてのデバイスで同じブックマークやその他の設定を使用するには、Growser にログインしてください</translation>
+<translation id="5758015234894546674">すべてのデバイスで保存した情報などを使用するには、Growser にログインしてください</translation>
+<translation id="562156935182849823">すべてのデバイスで同じリーディング リストなどを使用するには、Growser にログインしてください</translation>
+<translation id="7817930780633998561">すべてのデバイスで同じ拡張機能などを使用するには、Growser にログインしてください</translation>
+<translation id="4444512588051585636">Growser は、あなたが操作していないときにアップデートされます</translation>
+<translation id="950120991083623144">Growser のアップデートが予定されています</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/>が保留中です。ブラウジングを保護するため、Growser はあなたが <ph name="IDLE_DURATION"/>間操作しなかったときにアップデートされます。</translation>
+<translation id="8620823632809282061">Gemini Enterprise in Growser</translation>
+<translation id="4719707676382088645">Growser プロファイル</translation>
+<translation id="7944326067922128825">Growser を最小化しているときでも、あらゆる場所から検索や質問を行えます。Growser のバックグラウンドでの実行を許可します。</translation>
+<translation id="1760966099984077912">どこからでも Growser で検索</translation>
+<translation id="4011238820523740465">他のアプリやファイルなど、Growser 以外のコンテンツについて質問できます</translation>
+<translation id="1491740387498395373">Growser で検索するか、[<ph name="BEGIN_LINK"/>設定<ph name="END_LINK"/>] でカスタマイズします</translation>
+<translation id="2672903539709015001">Growser で検索します。</translation>
+<translation id="1162630940779651724">このタブを別のデバイスに送信するには、両方のデバイスで Growser にログインしてください</translation>
+<translation id="5388608738812110907">このタブを別のデバイスに送信するには、送信先のデバイスで Growser にログインしてください</translation>
 </translationbundle>

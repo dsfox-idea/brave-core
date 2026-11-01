@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Giới thiệu về Growser</translation>
 <translation id="987734326276404793">Nhận thông báo theo dõi giá từ Growser trên điện thoại</translation>
 <translation id="1203500561924088507">Cảm ơn bạn đã cài đặt. Bạn phải khởi động lại trình duyệt trước khi sử dụng <ph name="BUNDLE_NAME"/>.</translation>
+<translation id="1213674046343558619">Có một <ph name="IMPORTANT_UPDATE"/> đang chờ xử lý. Để đảm bảo an toàn cho hoạt động duyệt web của bạn, Growser sẽ cập nhật vào lần tới khi bạn không hoạt động trong <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Khi bạn mở tính năng Tìm kiếm hình ảnh, thì tiêu đề, URL và nội dung của trang, bao gồm cả tệp PDF, sẽ được tự động gửi đến máy chủ. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Khi đăng nhập, bạn có thể sử dụng mật khẩu và nhiều nội dung khác từ Tài khoản Growser của mình trong Growser. Để thay đổi chế độ cài đặt này, hãy chuyển đến phần "Tài khoản của bạn trong Growser".</translation>
 <translation id="583633806828413086">Hiện Gemini trong Growser trên thanh trình đơn của máy Mac</translation>
@@ -222,6 +223,7 @@
 <translation id="3286538390144397061">Khởi động lại Ngay bây giờ</translation>
 <translation id="2339258256897053758">Khóa API của Growser bị thiếu. Một số chức năng của Growser sẽ bị tắt.</translation>
 <translation id="8926637909431618259">Tiếp tục chạy các ứng dụng dưới nền khi Growser bị đóng</translation>
+<translation id="8245661393996028021">Growser sẽ cập nhật khi bạn rời đi</translation>
 <translation id="518125528057094977">Growser sẽ cảnh báo bạn trước khi tải trang web bằng kết nối không an toàn</translation>
 <translation id="8652321858775514885">Khi đóng tất cả các cửa sổ Growser, bạn sẽ bị đăng xuất khỏi hầu hết các trang web, ngoại trừ Tài khoản Growser nếu bạn đã đăng nhập vào Growser. Để cho phép trang web ghi nhớ bạn, hãy <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">góc trên cùng bên phải của khu vực tìm kiếm: <ph name="RIGHT"/>% từ bên phải sang, <ph name="TOP"/>% từ trên cùng xuống</translation>
@@ -230,6 +232,7 @@
 <translation id="2645435784669275700">ChromeOS</translation>
 <translation id="2297290224191497273">Chuyển sang hồ sơ hiện có trên Growser?</translation>
 <translation id="3412460710772753638">Trong Trình quản lý mật khẩu trên thiết bị này</translation>
+<translation id="172368702860945706">Growser cần cập nhật</translation>
 <translation id="5079573433701109938">Để sử dụng dấu trang và nhiều dữ liệu khác trên <ph name="DEVICE"/>, hãy đăng nhập vào Growser</translation>
 <translation id="3438772217992559640">Tìm kiếm thẻ này bằng tính năng Tìm kiếm hình ảnh</translation>
 <translation id="2491221873705777076">Mở rộng phạm vi của tính năng Duyệt web an toàn có tăng cường bảo vệ với Growser trên điện thoại</translation>
@@ -367,6 +370,7 @@
 <translation id="4877750182157975795">Truy cập vào tất cả tính năng của Growser mà bạn yêu thích nhờ Growser trên <ph name="DEVICE_TYPE"/></translation>
 <translation id="1204184037023366446">Growser cần có quyền theo dõi cử chỉ tay của bạn</translation>
 <translation id="5406591571925937375">Gần đây bạn không truy cập trang web này. Growser đã xoá <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>, <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Đăng nhập vào Growser</translation>
 <translation id="5174969993834422967">Bạn thường chặn các thông báo. Để trang web này có thể gửi thông báo cho bạn, hãy nhấp vào biểu tượng thông báo ở góc bên phải của thanh vị trí.</translation>
 <translation id="5174983315706567306">Dung lượng ổ đĩa không đủ.</translation>
 <translation id="8157129267754368853">Tài khoản Growser cần được xác thực lại</translation>
@@ -375,6 +379,7 @@
 <translation id="5234764350956374838">Bỏ qua</translation>
 <translation id="7690383309583926074">Tải ứng dụng Growser để lưu mật khẩu mọi lúc, mọi nơi</translation>
 <translation id="8586264863973514035">Để áp dụng các mục thay đổi của bạn, hãy chạy lại Growser</translation>
+<translation id="8127050479140582768">Để gửi thẻ này tới một thiết bị khác, hãy đăng nhập vào Growser trên cả hai thiết bị</translation>
 <translation id="5286907366254680517">Đã phát hiện</translation>
 <translation id="7264453786974905915">Tải ứng dụng Growser</translation>
 <translation id="7230006500876504868">Tìm kiếm bằng Growser</translation>
@@ -738,6 +743,7 @@ Growser không thể khôi phục cài đặt của bạn.</translation>
 <translation id="5128665650717824082">Bạn không thể đặt Growser for Testing làm trình duyệt mặc định.</translation>
 <translation id="3053208669360972929">Tìm kiếm bằng Growser ở bất cứ đâu</translation>
 <translation id="2433912322225810055">Tiện ích này cũng điều khiển trang nào được hiển thị khi bạn khởi động Growser hoặc tìm kiếm từ Thanh địa chỉ.</translation>
+<translation id="8789425457808164956">Để gửi thẻ này tới một thiết bị khác, hãy đăng nhập vào Growser trên thiết bị đó</translation>
 <translation id="4100716194836114130">Đây là Growser của bạn</translation>
 <translation id="8712637175834984815">Tôi hiểu</translation>
 <translation id="1419543648228375718">Bạn muốn đăng nhập vào Growser?</translation>
@@ -1383,4 +1389,29 @@ Nếu trang này không hoạt động như mong đợi, hãy thử cho phép t�
 <translation id="9194561096821877683">Growser</translation>
 <translation id="3721794228264322796">Đóng Gemini trong Growser</translation>
 <translation id="2314508080153323869">Gemini trong Growser</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> đã đăng nhập. Để tách biệt hoạt động duyệt web của bạn, hãy đăng nhập vào Growser bằng hồ sơ của riêng bạn qua địa chỉ <ph name="USER_EMAIL_ADDRESS"/>. Bạn cũng có thể sử dụng danh sách đọc và nhiều nội dung khác trên <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> đã đăng nhập. Để tách biệt hoạt động duyệt web của bạn, hãy đăng nhập vào Growser bằng hồ sơ của riêng bạn qua địa chỉ <ph name="USER_EMAIL_ADDRESS"/>. Bạn cũng có thể sử dụng các tiện ích và nhiều nội dung khác trên <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> đã đăng nhập. Để tách biệt hoạt động duyệt web của bạn, hãy đăng nhập vào Growser bằng hồ sơ của riêng bạn qua địa chỉ <ph name="USER_EMAIL_ADDRESS"/>. Bạn cũng có thể sử dụng danh sách đọc và nhiều nội dung khác trên mọi thiết bị của mình.</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> đã đăng nhập. Để tách biệt hoạt động duyệt web của bạn, hãy đăng nhập vào Growser bằng hồ sơ của riêng bạn qua địa chỉ <ph name="USER_EMAIL_ADDRESS"/>. Bạn cũng có thể sử dụng các tiện ích và nhiều nội dung khác trên mọi thiết bị của mình.</translation>
+<translation id="3429303382931281808">Để sử dụng mật khẩu và nhiều dữ liệu khác trên <ph name="DEVICE"/>, hãy đăng nhập vào Growser</translation>
+<translation id="7681019317864236341">Để sử dụng dấu trang và nhiều dữ liệu khác trên <ph name="DEVICE"/>, hãy đăng nhập vào Growser</translation>
+<translation id="1910605032088789136">Để sử dụng thông tin đã lưu và nhiều dữ liệu khác trên <ph name="DEVICE"/>, hãy đăng nhập vào Growser</translation>
+<translation id="6794970122141277862">Để sử dụng danh sách đọc và nhiều dữ liệu khác trên <ph name="DEVICE"/>, hãy đăng nhập vào Growser</translation>
+<translation id="3538050518049904702">Để sử dụng tiện ích và nhiều dữ liệu khác trên <ph name="DEVICE"/>, hãy đăng nhập vào Growser</translation>
+<translation id="1447754948984825961">Để sử dụng dấu trang và nhiều dữ liệu khác trên mọi thiết bị của bạn, hãy đăng nhập vào Growser</translation>
+<translation id="5758015234894546674">Để sử dụng thông tin đã lưu và nhiều dữ liệu khác trên mọi thiết bị của bạn, hãy đăng nhập vào Growser</translation>
+<translation id="562156935182849823">Để sử dụng danh sách đọc và nhiều dữ liệu khác trên mọi thiết bị của bạn, hãy đăng nhập vào Growser</translation>
+<translation id="7817930780633998561">Để sử dụng tiện ích và nhiều dữ liệu khác trên mọi thiết bị của bạn, hãy đăng nhập vào Growser</translation>
+<translation id="4444512588051585636">Growser sẽ cập nhật khi bạn rời đi</translation>
+<translation id="950120991083623144">Growser cần cập nhật</translation>
+<translation id="8250854223127536286">Có một <ph name="IMPORTANT_UPDATE"/> đang chờ xử lý. Để đảm bảo an toàn cho hoạt động duyệt web của bạn, Growser sẽ cập nhật vào lần tới khi bạn không hoạt động trong <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">Gemini Enterprise trong Growser</translation>
+<translation id="4719707676382088645">Hồ sơ Growser</translation>
+<translation id="7944326067922128825">Tìm kiếm và đặt câu hỏi ở bất cứ đâu, ngay cả khi Growser đang ở trạng thái thu nhỏ. Cho phép Growser chạy ở chế độ nền.</translation>
+<translation id="1760966099984077912">Tìm kiếm bằng Growser ở bất cứ đâu</translation>
+<translation id="4011238820523740465">Hỏi về nội dung bên ngoài Growser, chẳng hạn như các ứng dụng hoặc tệp khác</translation>
+<translation id="1491740387498395373">để tìm kiếm bằng Growser hoặc tuỳ chỉnh trong phần <ph name="BEGIN_LINK"/>Cài đặt<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">để tìm kiếm bằng Growser.</translation>
+<translation id="1162630940779651724">Để gửi thẻ này tới một thiết bị khác, hãy đăng nhập vào Growser trên cả hai thiết bị</translation>
+<translation id="5388608738812110907">Để gửi thẻ này tới một thiết bị khác, hãy đăng nhập vào Growser trên thiết bị đó</translation>
 </translationbundle>

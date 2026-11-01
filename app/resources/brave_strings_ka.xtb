@@ -22,6 +22,7 @@
 <translation id="8541922081612557424">Growser-ის შესახებ</translation>
 <translation id="987734326276404793">მიიღეთ თქვენს ტელეფონში ფასების მეთვალყურის გაფრთხილებები Growser-ის მეშვეობით</translation>
 <translation id="1203500561924088507">გმადლობთ დაინსტალირებისთვის. <ph name="BUNDLE_NAME"/>-ის გამოყენებამდე თქვენი ბრაუზერი უნდა გადატვირთოთ.</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/> მოლოდინის რეჟიმშია. დათვალიერების უსაფრთხოების დასაცავად Growser განახლდება, როდესაც <ph name="IDLE_DURATION"/> განმავლობაში უმოქმედო იქნებით.</translation>
 <translation id="1232234696885483911">სურათების ძიების გახსნისას გვერდის სათაური, URL და კონტენტი, PDF-ების ჩათვლით, ავტომატურად გაიგზავნება სერვერზე. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">როცა შესული ხართ, Growser-ში შეგიძლიათ გამოიყენოთ თქვენი პაროლები და სხვა კონტენტი თქვენი Growser ანგარიშიდან. ამ პარამეტრის შესაცვლელად გახსენით „თქვენი ანგარიში Growser-ში“.</translation>
 <translation id="583633806828413086">Gemini-ს ჩვენება Growser-ში Mac-ის მენიუს ზოლში</translation>
@@ -224,6 +225,7 @@
 <translation id="3286538390144397061">გადატვირთეთ ახლა</translation>
 <translation id="2339258256897053758">Growser API გასაღები გამოტოვებულია. Growser-ის ზოგიერთი ფუნქცია გამორთული იქნება.</translation>
 <translation id="8926637909431618259">ფონური პროგრამების გაშვების გაგრძელება, როდესაც Growser იხურება</translation>
+<translation id="8245661393996028021">Growser განახლდება, როცა გასული იქნებით</translation>
 <translation id="518125528057094977">Growser გაგაფრთხილებთ ნებისმიერი საიტის დაუცველი კავშირის გამოყენებით ჩატვირთვამდე</translation>
 <translation id="8652321858775514885">Growser-ის ყველა ფანჯრის დახურვისას სისტემიდან გამოხვალთ საიტების უმეტესობაზე, გამონაკლისია თქვენი Growser ანგარიში, თუ მასში შესული ხართ Growser-იდან. ვებსაიტებმა რომ დაგიმახსოვროთ, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">ძიების არეალის ზედა მარჯვენა კუთხე: მარჯვნივ <ph name="RIGHT"/>%, ზემოთ <ph name="TOP"/>%</translation>
@@ -232,6 +234,7 @@
 <translation id="2645435784669275700">ChromeOS</translation>
 <translation id="2297290224191497273">გსურთ არსებულ Growser პროფილზე გადართვა?</translation>
 <translation id="3412460710772753638">პაროლების მმართველში ამ მოწყობილობაზე</translation>
+<translation id="172368702860945706">Growser-ს სურს განახლება</translation>
 <translation id="5079573433701109938"><ph name="DEVICE"/>-დან თქვენი სანიშნეებისა და სხვა კონტენტის მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
 <translation id="3438772217992559640">ამ ჩანართში ძიება სურათების ძიებით</translation>
 <translation id="2491221873705777076">გაახანგრძლივეთ გაძლიერებული Safe Browsing Growser-ით თქვენს ტელეფონში</translation>
@@ -369,6 +372,7 @@
 <translation id="4877750182157975795">მიიღეთ წვდომა Growser-ის ყველა რჩეულზე Growser-ის მეშვეობით თქვენს <ph name="DEVICE_TYPE"/>-ზე</translation>
 <translation id="1204184037023366446">Growser-ს სჭირდება ნებართვა თქვენი ხელების მოძრაობაზე თვალის მისადევნებლად</translation>
 <translation id="5406591571925937375">ბოლო დროს არ ყოფილხართ. Growser-მა ამოშალა <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/> და <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">შედით Growser-ში</translation>
 <translation id="5174969993834422967">როგორც წესი, თქვენ ბლოკავთ შეტყობინებებს. ამ საიტისგან შეტყობინებების მისაღებად დააწკაპუნეთ მდებარეობის ზოლის მარჯვენა კუთხეში მდებარე ხატულას.</translation>
 <translation id="5174983315706567306">სივრცე დისკზე საკმარისი არ არის.</translation>
 <translation id="8157129267754368853">Growser ანგარიში საჭიროებს ხელახლა ავტორიზაციას</translation>
@@ -377,6 +381,7 @@
 <translation id="5234764350956374838">გაუქმება</translation>
 <translation id="7690383309583926074">ჩამოტვირთეთ Growser აპი, რომ შეინახოთ პაროლები ნებისმიერი ადგილიდან</translation>
 <translation id="8586264863973514035">ცვლილებების მისასადაგებლად ხელახლა გაუშვით Growser</translation>
+<translation id="8127050479140582768">ეს ჩანართი სხვა მოწყობილობაზე რომ გაგზავნოთ, შედით Growser-ში ორივე მოწყობილობიდან</translation>
 <translation id="5286907366254680517">ამოცნობილია</translation>
 <translation id="7264453786974905915">Growser აპის ჩამოტვირთვა</translation>
 <translation id="7230006500876504868">Growser-ით ძიება</translation>
@@ -740,6 +745,7 @@ Growser ვერ შეძლებს თქვენი პარამეტ
 <translation id="5128665650717824082">Growser for Testing ვერ გახდება თქვენი ნაგულისხმევი ბრაუზერი.</translation>
 <translation id="3053208669360972929">მოიძიეთ Growser-ით ნებისმიერი ადგილიდან</translation>
 <translation id="2433912322225810055">იგი ასევე აკონტროლებს, თუ რომელი გვერდი გამოჩნდება Growser-ის გაშვებისას ან Omnibox-ში ძიების დროს.</translation>
+<translation id="8789425457808164956">ეს ჩანართი სხვა მოწყობილობაზე რომ გაგზავნოთ, შედით იქიდან Growser-ში</translation>
 <translation id="4100716194836114130">ეს არის თქვენი Growser</translation>
 <translation id="8712637175834984815">კარგი</translation>
 <translation id="1419543648228375718">გსურთ, შეხვიდეთ Growser-ში?</translation>
@@ -1403,4 +1409,29 @@ other {Growser-ის განახლებული ვერსია უ�
 <translation id="2375391460087228850">Growser-ის პროგრამები</translation>
 <translation id="3721794228264322796">Gemini Growser-ში დახურვა</translation>
 <translation id="2314508080153323869">Gemini Growser-ში</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> შესულია სისტემაში. ცალკე დათვალიერების გასაგრძელებლად შედით Growser-ში თქვენს პირად პროფილში ანგარიშით <ph name="USER_EMAIL_ADDRESS"/>. თქვენ ასევე მიიღებთ საკითხავ სიასა და სხვა მონაცემებს <ph name="DEVICE"/>-დან.</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> შესულია სისტემაში. ცალკე დათვალიერების გასაგრძელებლად შედით Growser-ში თქვენს პირად პროფილში ანგარიშით <ph name="USER_EMAIL_ADDRESS"/>. თქვენ ასევე მიიღებთ თქვენს გაფართოებებსა და სხვა მონაცემებს <ph name="DEVICE"/>-დან.</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> შესულია სისტემაში. ცალკე დათვალიერების გასაგრძელებლად შედით Growser-ში თქვენს პირად პროფილში ანგარიშით <ph name="USER_EMAIL_ADDRESS"/>. თქვენს საკითხავ სიასა და სხვა მონაცემებს თქვენს ყველა მოწყობილობაზე მიიღებთ.</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> შესულია სისტემაში. ცალკე დათვალიერების გასაგრძელებლად შედით Growser-ში თქვენს პირად პროფილში ანგარიშით <ph name="USER_EMAIL_ADDRESS"/>. თქვენს გაფართოებებსა და სხვა მონაცემებს თქვენს ყველა მოწყობილობაზე მიიღებთ.</translation>
+<translation id="3429303382931281808"><ph name="DEVICE"/>-დან თქვენი პაროლებისა და სხვა კონტენტის მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="7681019317864236341"><ph name="DEVICE"/>-დან თქვენი სანიშნეებისა და სხვა კონტენტის მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="1910605032088789136"><ph name="DEVICE"/>-დან თქვენი შენახული ინფორმაციისა და სხვა კონტენტის მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="6794970122141277862"><ph name="DEVICE"/>-დან თქვენი საკითხავი სიისა და სხვა კონტენტის მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="3538050518049904702"><ph name="DEVICE"/>-დან თქვენი გაფართოებებისა და სხვა კონტენტის მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="1447754948984825961">სანიშნეებისა და სხვა კონტენტის თქვენს ყველა მოწყობილობაზე მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="5758015234894546674">შენახული ინფორმაციისა და სხვა კონტენტის თქვენს ყველა მოწყობილობაზე მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="562156935182849823">საკითხავი სიისა და სხვა კონტენტის თქვენს ყველა მოწყობილობაზე მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="7817930780633998561">გაფართოებებისა და სხვა კონტენტის თქვენს ყველა მოწყობილობაზე მისაღებად გაიარეთ ავტორიზაცია Growser-ში</translation>
+<translation id="4444512588051585636">Growser განახლდება, როცა გასული იქნებით</translation>
+<translation id="950120991083623144">Growser-ს სურს განახლება</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/> მოლოდინის რეჟიმშია. დათვალიერების უსაფრთხოების დასაცავად Growser განახლდება, როდესაც <ph name="IDLE_DURATION"/> განმავლობაში უმოქმედო იქნებით.</translation>
+<translation id="8620823632809282061">Gemini Enterprise — Growser-ში</translation>
+<translation id="4719707676382088645">Growser პროფილი</translation>
+<translation id="7944326067922128825">მოიძიეთ ინფორმაცია და დასვით კითხვები ნებისმიერი ადგილიდან, მაშინაც კი, როცა Growser ჩაკეცილია. საშუალებას აძლევს Growser-ს, იმუშაოს ფონურ რეჟიმში.</translation>
+<translation id="1760966099984077912">მოიძიეთ Growser-ით ნებისმიერი ადგილიდან</translation>
+<translation id="4011238820523740465">დასვით შეკითხვა Growser-ის მიღმა არსებული კონტენტის, მაგალითად, სხვა აპების ან ფაილების შესახებ</translation>
+<translation id="1491740387498395373">Growser-ით ძიებისთვის ან მორგებისთვის <ph name="BEGIN_LINK"/>პარამეტრებში<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">Growser-ით ძიებისთვის.</translation>
+<translation id="1162630940779651724">ეს ჩანართი სხვა მოწყობილობაზე რომ გაგზავნოთ, შედით Growser-ში ორივე მოწყობილობიდან</translation>
+<translation id="5388608738812110907">ეს ჩანართი სხვა მოწყობილობაზე რომ გაგზავნოთ, შედით იქიდან Growser-ში</translation>
 </translationbundle>

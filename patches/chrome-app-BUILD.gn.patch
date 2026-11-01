@@ -1,16 +1,16 @@
 diff --git a/chrome/app/BUILD.gn b/chrome/app/BUILD.gn
-index eddd25c932ddba98c1a6985fc2810555c2463e45..2c677bfc8ccd694aaf42aeaa7815bd77a2eb4dbd 100644
+index 472b43a6f44ab329c18c7ca8c21d219880f49ec9..2fd3cc10d9c0ac6678c63b3b2f157128b3f09de4 100644
 --- a/chrome/app/BUILD.gn
 +++ b/chrome/app/BUILD.gn
 @@ -61,6 +61,7 @@ source_set("chrome_dll_resources") {
        "//build:branding_buildflags",
        "//printing/buildflags",
      ]
-+    import("//brave/components/brave_origin/buildflags/buildflags.gni") if (is_brave_origin_branded) { defines = [ "IS_BRAVE_ORIGIN_BRANDED" ] } import("//brave/build/growser.gni") if (growser_public_release) { if (defined(defines)) { defines += [ "GROWSER_PUBLIC_RELEASE" ] } else { defines = [ "GROWSER_PUBLIC_RELEASE" ] } }  # Growser-146
++    import("//brave/components/brave_origin/buildflags/buildflags.gni") if (is_brave_origin_branded) { defines = [ "IS_BRAVE_ORIGIN_BRANDED" ] }
    }
  }
  
-@@ -106,6 +107,7 @@ grit_strings("generated_resources") {
+@@ -110,6 +111,7 @@ grit_strings("generated_resources") {
    if (is_android) {
      create_android_resources = true
    }

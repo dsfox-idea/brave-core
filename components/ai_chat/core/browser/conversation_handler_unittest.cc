@@ -17,26 +17,22 @@
 #include <vector>
 
 #include "base/containers/map_util.h"
-#include "base/dcheck_is_on.h"
 #include "base/files/scoped_temp_dir.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/functional/callback_helpers.h"
 #include "base/memory/scoped_refptr.h"
 #include "base/run_loop.h"
-#include "base/scoped_observation.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "base/task/thread_pool.h"
 #include "base/test/bind.h"
 #include "base/test/gmock_callback_support.h"
 #include "base/test/gtest_util.h"
-#include "base/test/mock_callback.h"
 #include "base/test/run_until.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/test/task_environment.h"
 #include "base/test/test_future.h"
-#include "base/test/values_test_util.h"
 #include "base/time/time.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_credential_manager.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_service.h"
@@ -72,7 +68,6 @@
 #include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/cpp/weak_wrapper_shared_url_loader_factory.h"
 #include "services/network/test/test_url_loader_factory.h"
-#include "services/network/test/test_utils.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/abseil-cpp/absl/strings/str_format.h"
@@ -89,7 +84,7 @@ namespace ai_chat {
 
 namespace {
 
-inline constexpr char kNonVisionModelKey[] = "chat-nemotron-nano-3-30b";
+inline constexpr char kNonVisionModelKey[] = "chat-glm-5-3";
 
 class MockAIChatCredentialManager : public AIChatCredentialManager {
  public:
@@ -147,6 +142,10 @@ class MockConversationHandlerClient : public mojom::ConversationUI {
     conversation_ui_receiver_.reset();
   }
 
+  // Round-trips the pipe so any event the browser has already sent has been
+  // dispatched - including when the point is that it sent nothing.
+  void FlushForTesting() { conversation_ui_receiver_.FlushForTesting(); }
+
   MOCK_METHOD(void,
               OnConversationHistoryUpdate,
               (const mojom::ConversationTurnPtr),
@@ -194,6 +193,13 @@ class MockConversationHandlerClient : public mojom::ConversationUI {
               OnVisionModelSwitchChanged,
               (const std::optional<std::string>& model_key),
               (override));
+
+  MOCK_METHOD(
+      void,
+      OnContentAgentChanged,
+      (bool is_content_agent_chosen,
+       const std::vector<mojom::ConversationCapability>& capabilities_enabled),
+      (override));
 
   MOCK_METHOD(void, OnConversationDeleted, (), (override));
 
@@ -337,6 +343,22 @@ class ConversationHandlerUnitTest : public testing::Test {
     } else {
       EmulateUserOptedOut();
     }
+  }
+
+  // Rebuilds the handler so it picks up AIChatService state the test has
+  // changed. The capability set is built in the constructor, which in
+  // production always runs after the service has been configured.
+  void RecreateConversationHandler() {
+    mock_tool_provider_ = nullptr;
+    std::vector<std::unique_ptr<ToolProvider>> tool_providers;
+    tool_providers.push_back(std::make_unique<NiceMock<MockToolProvider>>());
+    conversation_handler_ = std::make_unique<ConversationHandler>(
+        conversation_.get(), ai_chat_service_.get(), model_service_.get(),
+        ai_chat_service_->GetCredentialManagerForTesting(),
+        mock_feedback_api_.get(), &prefs_, shared_url_loader_factory_,
+        std::move(tool_providers));
+    mock_tool_provider_ = static_cast<MockToolProvider*>(
+        conversation_handler_->GetFirstToolProviderForTesting());
   }
 
   void EmulateUserOptedIn() { ::ai_chat::SetUserOptedIn(&prefs_, true); }
@@ -1135,6 +1157,33 @@ TEST_F(ConversationHandlerUnitTest_NoAssociatedContent,
   EXPECT_EQ(cached_content.size(), 2u);
   EXPECT_EQ(cached_content[0].get().content, "The content of one");
   EXPECT_EQ(cached_content[1].get().content, "The content of two");
+}
+
+TEST_F(ConversationHandlerUnitTest_NoAssociatedContent,
+       LoadArchivedContent_RestoresWorkspaceWithStoredUuid) {
+  const GURL workspace_url("workspace://1b4e28ba-2fa1-41d2-883f-0016d3cca427");
+  base::test::TestFuture<GURL, std::string> restored;
+  ai_chat_service_->SetWorkspaceContentRestorer(base::BindLambdaForTesting(
+      [&](GURL url, std::string content_uuid)
+          -> std::unique_ptr<AssociatedContentDelegate> {
+        restored.SetValue(std::move(url), std::move(content_uuid));
+        return nullptr;
+      }));
+
+  auto metadata = mojom::Conversation::New();
+  metadata->associated_content.push_back(mojom::AssociatedContent::New(
+      "workspace-content", mojom::ContentType::Workspace, "Workspace", 1,
+      workspace_url, 100, "turn-1", true));
+  auto conversation_archive = mojom::ConversationArchive::New();
+  conversation_archive->associated_content.push_back(
+      mojom::ContentArchive::New("workspace-content", "", "turn-1"));
+
+  conversation_handler_->associated_content_manager()->LoadArchivedContent(
+      metadata.get(), conversation_archive);
+
+  ASSERT_TRUE(restored.IsReady());
+  EXPECT_EQ(workspace_url, restored.Get<0>());
+  EXPECT_EQ("workspace-content", restored.Get<1>());
 }
 
 TEST_F(ConversationHandlerUnitTest, ThreadHistory) {
@@ -6675,6 +6724,131 @@ TEST_F(ConversationHandlerUnitTest,
 }
 
 TEST_F(ConversationHandlerUnitTest,
+       ConnectionIssueRetry_DoesNotRerunResolvedToolCalls) {
+  base::test::ScopedFeatureList feature_list;
+  feature_list.InitAndEnableFeatureWithParameters(
+      features::kAIChat, {{"max_connection_issue_retries", "1"}});
+
+  conversation_handler_->associated_content_manager()->ClearContent();
+
+  MockEngineConsumer* engine = static_cast<MockEngineConsumer*>(
+      conversation_handler_->GetEngineForTesting());
+  EXPECT_CALL(*engine, RequiresClientSideTitleGeneration())
+      .WillRepeatedly(testing::Return(false));
+
+  auto tool =
+      std::make_unique<NiceMock<MockTool>>("weather_tool", "Get weather");
+  tool->set_requires_user_interaction_before_handling(false);
+  ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([&]() {
+    std::vector<base::WeakPtr<Tool>> tools;
+    tools.push_back(tool->GetWeakPtr());
+    return tools;
+  });
+
+  EXPECT_CALL(*tool, UseTool(StrEq("{\"location\":\"New York\"}"), _))
+      .WillOnce(testing::WithArg<1>([](Tool::UseToolCallback callback) {
+        std::vector<mojom::ContentBlockPtr> result;
+        result.push_back(mojom::ContentBlock::NewTextContentBlock(
+            mojom::TextContentBlock::New("Weather in New York: 72°F")));
+        std::move(callback).Run(std::move(result), {});
+      }));
+
+  base::RunLoop run_loop;
+  testing::Sequence seq;
+
+  // The first generation requests the tool.
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .InSequence(seq)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewToolUseEvent(
+                        mojom::ToolUseEvent::New("weather_tool", "tool_id_1",
+                                                 "{\"location\":\"New York\"}",
+                                                 std::nullopt, std::nullopt,
+                                                 nullptr, false)),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        mojom::ConversationEntryEvent::NewCompletionEvent(
+                            mojom::CompletionEvent::New("")),
+                        std::nullopt)));
+              })));
+
+  // The post-tool generation partially streams and then fails.
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .InSequence(seq)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewCompletionEvent(
+                        mojom::CompletionEvent::New("Partial")),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::unexpected(mojom::APIError::ConnectionIssue));
+              })));
+
+  // The automatic retry resumes from the resolved tool call rather than
+  // resubmitting the human turn.
+  EXPECT_CALL(*engine, GenerateAssistantResponse)
+      .InSequence(seq)
+      .WillOnce(testing::DoAll(
+          testing::WithArg<1>(
+              [](const EngineConsumer::ConversationHistoryView& history) {
+                ASSERT_EQ(history.size(), 2u);
+                EXPECT_EQ(history[0]->character_type,
+                          mojom::CharacterType::HUMAN);
+                EXPECT_EQ(history[1]->character_type,
+                          mojom::CharacterType::ASSISTANT);
+                ASSERT_TRUE(history[1]->events.has_value());
+                ASSERT_EQ(history[1]->events->size(), 1u);
+                EXPECT_TRUE(history[1]
+                                ->events->at(0)
+                                ->get_tool_use_event()
+                                ->output.has_value());
+              }),
+          testing::WithArg<6>(
+              [](EngineConsumer::GenerationDataCallback callback) {
+                callback.Run(EngineConsumer::GenerationResultData(
+                    mojom::ConversationEntryEvent::NewCompletionEvent(
+                        mojom::CompletionEvent::New("It is 72°F")),
+                    std::nullopt));
+              }),
+          testing::WithArg<7>(
+              [&](EngineConsumer::GenerationCompletedCallback callback) {
+                std::move(callback).Run(
+                    base::ok(EngineConsumer::GenerationResultData(
+                        mojom::ConversationEntryEvent::NewCompletionEvent(
+                            mojom::CompletionEvent::New("")),
+                        std::nullopt)));
+                run_loop.Quit();
+              })));
+
+  conversation_handler_->SubmitHumanConversationEntry("Test question",
+                                                      std::nullopt);
+  run_loop.Run();
+
+  const auto& history = conversation_handler_->GetConversationHistory();
+  ASSERT_EQ(history.size(), 3u);
+  EXPECT_EQ(history[0]->character_type, mojom::CharacterType::HUMAN);
+  EXPECT_EQ(history[1]->character_type, mojom::CharacterType::ASSISTANT);
+  EXPECT_EQ(history[2]->character_type, mojom::CharacterType::ASSISTANT);
+  ASSERT_TRUE(history[2]->events.has_value());
+  ASSERT_EQ(history[2]->events->size(), 1u);
+  EXPECT_EQ(history[2]->events->at(0)->get_completion_event()->completion,
+            "It is 72°F");
+  EXPECT_EQ(conversation_handler_->current_error(), mojom::APIError::None);
+}
+
+TEST_F(ConversationHandlerUnitTest,
        SubmitHumanConversationEntryWithSkill_ValidSkill) {
   conversation_handler_->associated_content_manager()->ClearContent();
 
@@ -7115,6 +7289,7 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge) {
                         "Server determined this tool use "
                         "is off-topic",  // assessment
                         std::nullopt,    // plan
+                        std::nullopt,    // title
                         std::nullopt,    // description
                         std::nullopt, /*supports_allow_session=*/false),
                     false);
@@ -7243,6 +7418,7 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_ToolReturnsChallenge) {
             mojom::PermissionChallenge::New(
                 std::nullopt,                           // assessment
                 "This tool needs to manage your tabs",  // plan
+                std::nullopt,                           // title
                 std::nullopt,                           // description
                 std::nullopt, /*supports_allow_session=*/false));
       });
@@ -7336,7 +7512,8 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_UserAllowsForSession) {
 
   StageHaltedToolUse(conversation_handler_.get(), "cancel_cart",
                      mojom::PermissionChallenge::New(
-                         std::nullopt, std::nullopt, std::nullopt, std::nullopt,
+                         std::nullopt, std::nullopt, /*title=*/std::nullopt,
+                         std::nullopt, std::nullopt,
                          /*supports_allow_session=*/true));
 
   conversation_handler_->ProcessPermissionChallenge(
@@ -7372,7 +7549,8 @@ TEST_F(ConversationHandlerUnitTest,
 
   StageHaltedToolUse(conversation_handler_.get(), "cancel_cart",
                      mojom::PermissionChallenge::New(
-                         std::nullopt, std::nullopt, std::nullopt, std::nullopt,
+                         std::nullopt, std::nullopt, /*title=*/std::nullopt,
+                         std::nullopt, std::nullopt,
                          /*supports_allow_session=*/true));
 
   conversation_handler_->ProcessPermissionChallenge(
@@ -7416,7 +7594,8 @@ TEST_F(ConversationHandlerUnitTest,
 
   StageHaltedToolUse(conversation_handler_.get(), "cancel_cart",
                      mojom::PermissionChallenge::New(
-                         "Off-topic", std::nullopt, std::nullopt, std::nullopt,
+                         "Off-topic", std::nullopt, /*title=*/std::nullopt,
+                         std::nullopt, std::nullopt,
                          /*supports_allow_session=*/false));
 
   conversation_handler_->ProcessPermissionChallenge(
@@ -7606,6 +7785,7 @@ TEST_F(ConversationHandlerUnitTest, PermissionChallenge_UserDeniesPermission) {
                                 "Server determined this tool use "
                                 "is off-topic",  // assessment
                                 std::nullopt,    // plan
+                                std::nullopt,    // title
                                 std::nullopt,    // description
                                 std::nullopt, /*supports_allow_session=*/false),
                             false)),
@@ -7692,6 +7872,7 @@ TEST_F(ConversationHandlerUnitTest,
             mojom::PermissionChallenge::New(
                 std::nullopt,  // assessment
                 "Client-side: This tool needs to access your tabs",  // plan
+                std::nullopt,                                        // title
                 std::nullopt,  // description
                 std::nullopt, /*supports_allow_session=*/false));
       });
@@ -7718,7 +7899,8 @@ TEST_F(ConversationHandlerUnitTest,
                     std::nullopt, std::nullopt,
                     mojom::PermissionChallenge::New(
                         "Server-side: This tool use needs alignment check",
-                        std::nullopt, std::nullopt, std::nullopt,
+                        std::nullopt, /*title=*/std::nullopt, std::nullopt,
+                        std::nullopt,
                         /*supports_allow_session=*/false),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
@@ -7845,7 +8027,8 @@ TEST_F(ConversationHandlerUnitTest,
                     "test_tool", "tool_id_1", "{}", std::nullopt, std::nullopt,
                     mojom::PermissionChallenge::New(
                         "Server determined this tool use is off-topic",
-                        std::nullopt, std::nullopt, std::nullopt,
+                        std::nullopt, /*title=*/std::nullopt, std::nullopt,
+                        std::nullopt,
                         /*supports_allow_session=*/false),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
@@ -7913,7 +8096,8 @@ TEST_F(ConversationHandlerUnitTest,
                     "test_tool", "tool_id_1", "{}", std::nullopt, std::nullopt,
                     mojom::PermissionChallenge::New(
                         "Server determined this tool use is off-topic",
-                        std::nullopt, std::nullopt, std::nullopt,
+                        std::nullopt, /*title=*/std::nullopt, std::nullopt,
+                        std::nullopt,
                         /*supports_allow_session=*/false),
                     false);
                 callback.Run(EngineConsumer::GenerationResultData(
@@ -8699,7 +8883,9 @@ TEST_F(ConversationHandlerUnitTest,
 TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
   struct TestCase {
     std::string name;
-    bool is_content_agent_allowed;
+    bool content_agent_tools_allowed;
+    bool content_agent_user_selectable;
+    bool content_agent_chosen;
     bool deep_research_enabled;
     bool math_rendering_enabled;
     ConversationCapabilitySet expected_capabilities;
@@ -8708,14 +8894,18 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
   const std::vector<TestCase> test_paramss = {
       {
           "Chat",
-          /*is_content_agent_allowed=*/false,
+          /*content_agent_tools_allowed=*/false,
+          /*content_agent_user_selectable=*/false,
+          /*content_agent_chosen=*/false,
           /*deep_research_enabled=*/false,
           /*math_rendering_enabled=*/true,
           {mojom::ConversationCapability::MATH_ML},
       },
       {
           "ChatWithDeepResearch",
-          /*is_content_agent_allowed=*/false,
+          /*content_agent_tools_allowed=*/false,
+          /*content_agent_user_selectable=*/false,
+          /*content_agent_chosen=*/false,
           /*deep_research_enabled=*/true,
           /*math_rendering_enabled=*/true,
           {mojom::ConversationCapability::DEEP_RESEARCH,
@@ -8723,7 +8913,9 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
       },
       {
           "ContentAgent",
-          /*is_content_agent_allowed=*/true,
+          /*content_agent_tools_allowed=*/true,
+          /*content_agent_user_selectable=*/false,
+          /*content_agent_chosen=*/false,
           /*deep_research_enabled=*/false,
           /*math_rendering_enabled=*/true,
           {mojom::ConversationCapability::CONTENT_AGENT,
@@ -8731,7 +8923,9 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
       },
       {
           "ContentAgentWithDeepResearch",
-          /*is_content_agent_allowed=*/true,
+          /*content_agent_tools_allowed=*/true,
+          /*content_agent_user_selectable=*/false,
+          /*content_agent_chosen=*/false,
           /*deep_research_enabled=*/true,
           /*math_rendering_enabled=*/true,
           {mojom::ConversationCapability::CONTENT_AGENT,
@@ -8742,10 +8936,45 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
       // off, or responses come back as raw LaTeX.
       {
           "MathRenderingDisabled",
-          /*is_content_agent_allowed=*/false,
+          /*content_agent_tools_allowed=*/false,
+          /*content_agent_user_selectable=*/false,
+          /*content_agent_chosen=*/false,
           /*deep_research_enabled=*/false,
           /*math_rendering_enabled=*/false,
           {},
+      },
+      // Where the user chooses, not choosing withholds the capability even
+      // though the tools are registered for the profile.
+      {
+          "ContentAgentUserSelectableNotChosen",
+          /*content_agent_tools_allowed=*/true,
+          /*content_agent_user_selectable=*/true,
+          /*content_agent_chosen=*/false,
+          /*deep_research_enabled=*/false,
+          /*math_rendering_enabled=*/true,
+          {mojom::ConversationCapability::MATH_ML},
+      },
+      {
+          "ContentAgentUserSelectableChosen",
+          /*content_agent_tools_allowed=*/true,
+          /*content_agent_user_selectable=*/true,
+          /*content_agent_chosen=*/true,
+          /*deep_research_enabled=*/false,
+          /*math_rendering_enabled=*/true,
+          {mojom::ConversationCapability::CONTENT_AGENT,
+           mojom::ConversationCapability::MATH_ML},
+      },
+      // The intended intermediate state while the main profile can offer the
+      // choice but the tools are not registered there: the choice is recorded
+      // and the model sees no difference.
+      {
+          "ContentAgentChosenWithoutTools",
+          /*content_agent_tools_allowed=*/false,
+          /*content_agent_user_selectable=*/true,
+          /*content_agent_chosen=*/true,
+          /*deep_research_enabled=*/false,
+          /*math_rendering_enabled=*/true,
+          {mojom::ConversationCapability::MATH_ML},
       },
   };
 
@@ -8757,8 +8986,10 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
         {{features::kAIChatDeepResearch, test_params.deep_research_enabled},
          {features::kAIChatMathRendering, test_params.math_rendering_enabled}});
 
-    ai_chat_service_->SetIsContentAgentAllowed(
-        test_params.is_content_agent_allowed);
+    ai_chat_service_->set_content_agent_tools_allowed(
+        test_params.content_agent_tools_allowed);
+    ai_chat_service_->set_content_agent_user_selectable(
+        test_params.content_agent_user_selectable);
 
     mock_tool_provider_ = nullptr;
     std::vector<std::unique_ptr<ToolProvider>> tool_providers;
@@ -8768,6 +8999,8 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
         ai_chat_service_->GetCredentialManagerForTesting(),
         mock_feedback_api_.get(), &prefs_, shared_url_loader_factory_,
         std::move(tool_providers));
+    conversation_handler_->SetContentAgentChosen(
+        test_params.content_agent_chosen);
     mock_tool_provider_ = static_cast<MockToolProvider*>(
         conversation_handler_->GetFirstToolProviderForTesting());
     ON_CALL(*mock_tool_provider_, GetTools()).WillByDefault([]() {
@@ -8802,6 +9035,68 @@ TEST_F(ConversationHandlerUnitTest, ConversationCapabilities) {
 
     testing::Mock::VerifyAndClearExpectations(engine);
   }
+}
+
+TEST_F(ConversationHandlerUnitTest, ContentAgentChoiceIgnoredWhenNotOffered) {
+  ai_chat_service_->set_content_agent_tools_allowed(true);
+  ai_chat_service_->set_content_agent_user_selectable(false);
+  RecreateConversationHandler();
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+  EXPECT_CALL(client, OnContentAgentChanged).Times(0);
+
+  conversation_handler_->SetContentAgentChosen(true);
+  client.FlushForTesting();
+
+  // The profile decides, so the choice is neither recorded nor needed: the
+  // content agent is already on.
+  auto state = GetState();
+  EXPECT_FALSE(state->is_content_agent_chosen);
+  EXPECT_THAT(state->capabilities_enabled,
+              testing::Contains(mojom::ConversationCapability::CONTENT_AGENT));
+}
+
+TEST_F(ConversationHandlerUnitTest, ContentAgentChoiceWithoutToolsIsInert) {
+  // The main profile before tool registration is permitted there: the choice
+  // round-trips but the model sees no difference.
+  ai_chat_service_->set_content_agent_tools_allowed(false);
+  ai_chat_service_->set_content_agent_user_selectable(true);
+  RecreateConversationHandler();
+
+  NiceMock<MockConversationHandlerClient> client(conversation_handler_.get());
+  EXPECT_CALL(client,
+              OnContentAgentChanged(
+                  true, testing::Not(testing::Contains(
+                            mojom::ConversationCapability::CONTENT_AGENT))));
+
+  conversation_handler_->SetContentAgentChosen(true);
+  client.FlushForTesting();
+
+  auto state = GetState();
+  EXPECT_TRUE(state->is_content_agent_chosen);
+  EXPECT_THAT(state->capabilities_enabled,
+              testing::Not(testing::Contains(
+                  mojom::ConversationCapability::CONTENT_AGENT)));
+}
+
+TEST_F(ConversationHandlerUnitTest, ContentAgentChoiceIsNotPersisted) {
+  ai_chat_service_->set_content_agent_tools_allowed(true);
+  ai_chat_service_->set_content_agent_user_selectable(true);
+  RecreateConversationHandler();
+
+  conversation_handler_->SetContentAgentChosen(true);
+  ASSERT_TRUE(GetState()->is_content_agent_chosen);
+
+  // Deliberately in-memory only: reloading the same conversation starts with
+  // the content agent off and the user chooses again. If this ever needs to
+  // survive, that is a product decision, not a bug to quietly fix.
+  RecreateConversationHandler();
+
+  auto state = GetState();
+  EXPECT_FALSE(state->is_content_agent_chosen);
+  EXPECT_THAT(state->capabilities_enabled,
+              testing::Not(testing::Contains(
+                  mojom::ConversationCapability::CONTENT_AGENT)));
 }
 
 TEST_F(ConversationHandlerUnitTest, FallsBackWhenModelKeyNoLongerExists) {

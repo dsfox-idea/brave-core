@@ -106,10 +106,16 @@ function getPageVisibility () {
     // <if expr="enable_brave_wallet">
     braveWallet: false,
     // </if>
+    // <if expr="not enable_brave_wallet">
+    braveWallet: false,
+    // </if>
     // <if expr="enable_ai_chat">
     leoAssistant: false,
     leoPersonalization: false,
     leoModels: false,
+    // </if>
+    // <if expr="not enable_ai_chat">
+    leoAssistant: false,
     // </if>
     // <if expr="enable_containers">
     containers: loadTimeData.getBoolean('isContainersEnabled'),

@@ -8,7 +8,6 @@
 #include <algorithm>
 #include <cstdint>
 #include <memory>
-#include <ranges>
 #include <string>
 #include <string_view>
 #include <utility>
@@ -21,7 +20,6 @@
 #include "base/functional/callback_forward.h"
 #include "base/logging.h"
 #include "base/memory/weak_ptr.h"
-#include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/sequenced_task_runner.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_service.h"
@@ -71,9 +69,9 @@ void AssociatedContentManager::LoadArchivedContent(
     auto* content = content_it->get();
     std::unique_ptr<AssociatedContentDelegate> owned_content;
     if (content->content_type == mojom::ContentType::Workspace) {
-      owned_content =
-          conversation_->ai_chat_service()
-              ->RestoreWorkspaceAssociatedContentFromUrl(content->url);
+      owned_content = conversation_->ai_chat_service()
+                          ->RestoreWorkspaceAssociatedContentFromUrl(
+                              content->url, content->uuid);
     }
 
     // Not a workspace, or workspace restoration failed, so create an archive.
@@ -109,7 +107,7 @@ void AssociatedContentManager::CreateArchiveContent(
                               [](const auto& ptr) { return ptr->uuid(); });
   CHECK(it != content_delegates_.end()) << "Couldn't find |content_id|";
 
-  auto* delegate = *it;
+  AssociatedContentDelegate* delegate = *it;
   content_observations_.RemoveObservation(delegate);
   RunContentToolsAddedCallbacks(content_uuid, 0);
 
@@ -486,7 +484,7 @@ AssociatedContentManager::GetAssociatedContent() const {
   uint32_t total_consumed_chars = 0;
 
   std::vector<mojom::AssociatedContentPtr> result;
-  for (auto* delegate : content_delegates_) {
+  for (AssociatedContentDelegate* delegate : content_delegates_) {
     auto cached_page_content = delegate->cached_page_content();
     mojom::AssociatedContentPtr content = mojom::AssociatedContent::New();
     content->uuid = delegate->uuid();
@@ -586,7 +584,7 @@ void AssociatedContentManager::GetContent(base::OnceClosure callback) {
               self->on_page_text_fetch_complete_ = nullptr;
             },
             weak_ptr_factory_.GetWeakPtr()));
-    for (auto* content : content_delegates_) {
+    for (AssociatedContentDelegate* content : content_delegates_) {
       content->GetContent(base::BindOnce(
           [](base::RepeatingClosure callback, PageContent) { callback.Run(); },
           content_callback));
@@ -631,7 +629,7 @@ void AssociatedContentManager::GetScreenshots(
               },
               std::move(callback)));
 
-  for (auto* content : content_delegates_) {
+  for (AssociatedContentDelegate* content : content_delegates_) {
     content->GetScreenshots(all_screenshots);
   }
 }
@@ -651,7 +649,7 @@ void AssociatedContentManager::GetStagedEntriesFromContent(
 PageContents AssociatedContentManager::GetCachedContents() const {
   DVLOG(1) << __func__;
   PageContents result;
-  for (auto* delegate : content_delegates_) {
+  for (AssociatedContentDelegate* delegate : content_delegates_) {
     result.push_back(delegate->cached_page_content());
   }
 
@@ -751,7 +749,7 @@ void AssociatedContentManager::UpdateToolsForNewGenerationLoop(
 
   // Only load tools from content the user has attached.
   std::vector<AssociatedContentDelegate*> attached_delegates;
-  for (auto* content : content_delegates_) {
+  for (AssociatedContentDelegate* content : content_delegates_) {
     if (content->tools_attached()) {
       attached_delegates.push_back(content);
     }
@@ -881,7 +879,7 @@ void AssociatedContentManager::DetachContent() {
   DVLOG(1) << __func__;
 
   content_observations_.RemoveAllObservations();
-  for (auto* delegate : content_delegates_) {
+  for (const AssociatedContentDelegate* delegate : content_delegates_) {
     RunContentToolsAddedCallbacks(delegate->uuid(), 0);
   }
   content_delegates_.clear();
@@ -892,7 +890,7 @@ void AssociatedContentManager::DetachContent() {
 
 bool AssociatedContentManager::HasLiveContentForOrigin(
     const url::Origin& origin) const {
-  for (auto* delegate : content_delegates_) {
+  for (AssociatedContentDelegate* delegate : content_delegates_) {
     // Archived content can't expose tools.
     auto owned_it =
         std::ranges::find(owned_content_, delegate,

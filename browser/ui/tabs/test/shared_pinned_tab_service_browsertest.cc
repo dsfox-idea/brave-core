@@ -11,6 +11,8 @@
 #include "base/functional/bind.h"
 #include "base/run_loop.h"
 #include "base/test/bind.h"
+#include "base/test/run_until.h"
+#include "base/test/scoped_feature_list.h"
 #include "brave/browser/ui/browser_commands.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/test/shared_pinned_tab_service_browsertest.h"
@@ -186,6 +188,45 @@ IN_PROC_BROWSER_TEST_F(SharedPinnedTabServiceBrowserTest, PinAndUnpinTabs) {
       tab_strip_model_2->GetWebContentsAt(0)));
 }
 
+class SharedPinnedTreeTabServiceBrowserTest
+    : public SharedPinnedTabServiceBrowserTest {
+ public:
+  SharedPinnedTreeTabServiceBrowserTest() {
+    tree_feature_list_.InitAndEnableFeature(tabs::kBraveTreeTab);
+  }
+
+ private:
+  base::test::ScopedFeatureList tree_feature_list_;
+};
+
+IN_PROC_BROWSER_TEST_F(SharedPinnedTreeTabServiceBrowserTest,
+                       UnpinSharedTabViaContextMenu_KeepsTabAndRemovesDummy) {
+  auto* prefs = browser()->GetProfile()->GetPrefs();
+  prefs->SetBoolean(brave_tabs::kVerticalTabsEnabled, true);
+  prefs->SetBoolean(brave_tabs::kTreeTabsEnabled, true);
+
+  auto* model = browser()->tab_strip_model();
+  auto* other_model = CreateNewBrowser()->GetTabStripModel();
+  auto* contents = model->GetWebContentsAt(0);
+  auto* service = GetForBrowser(browser());
+
+  BrowserWindow::FromBrowser(browser())->Show();
+  model->SetTabPinned(0, true);
+  ASSERT_TRUE(service->IsSharedContents(contents));
+  ASSERT_EQ(2, other_model->count());
+
+  // The context-menu command moves the tab through a detached tree node.
+  model->ExecuteContextMenuCommand(0, TabStripModel::CommandTogglePinned);
+  EXPECT_EQ(contents, model->GetWebContentsAt(0));
+  EXPECT_FALSE(model->IsTabPinned(0));
+
+  ASSERT_TRUE(
+      base::test::RunUntil([&]() { return other_model->count() == 1; }));
+  EXPECT_EQ(contents, model->GetWebContentsAt(0));
+  EXPECT_FALSE(service->IsSharedContents(contents));
+  EXPECT_FALSE(service->IsDummyContents(contents));
+}
+
 IN_PROC_BROWSER_TEST_F(SharedPinnedTabServiceBrowserTest, ActivatePinnedTab) {
   // Precondition
   auto* browser_1 = browser();
@@ -293,6 +334,44 @@ IN_PROC_BROWSER_TEST_F(SharedPinnedTabServiceBrowserTest, SynchronizeURL) {
                 ->GetController()
                 .GetVisibleEntry()
                 ->GetVirtualURL());
+}
+
+IN_PROC_BROWSER_TEST_F(SharedPinnedTabServiceBrowserTest,
+                       SynchronizeBlockedState) {
+  // Given that there're multiple windows with shared pinned tabs
+  auto* browser_1 = browser();
+  auto* tab_strip_model_1 = browser_1->tab_strip_model();
+  tab_strip_model_1->SetTabPinned(0, /* pinned= */ true);
+  auto* shared_pinned_tab_service = GetForBrowser(browser_1);
+  ASSERT_TRUE(shared_pinned_tab_service);
+
+  auto* browser_2 = CreateNewBrowser();
+  auto* tab_strip_model_2 = browser_2->tab_strip_model();
+  WaitUntil(base::BindLambdaForTesting(
+      [&]() { return tab_strip_model_2->count() > 1; }));
+  ASSERT_TRUE(tab_strip_model_2->IsTabPinned(0));
+  auto* dummy_contents = tab_strip_model_2->GetWebContentsAt(0);
+  ASSERT_TRUE(shared_pinned_tab_service->IsDummyContents(dummy_contents));
+  EXPECT_FALSE(
+      shared_pinned_tab_service->GetTabDataForDummyContents(0, dummy_contents)
+          ->blocked);
+
+  // When the shared pinned tab gets blocked, e.g. by a modal dialog,
+  tab_strip_model_1->SetTabBlocked(0, /* blocked= */ true);
+
+  // Then the dummy pinned tab should reflect it, so it shows the attention
+  // icon.
+  EXPECT_TRUE(
+      shared_pinned_tab_service->GetTabDataForDummyContents(0, dummy_contents)
+          ->blocked);
+
+  // When the shared pinned tab gets unblocked,
+  tab_strip_model_1->SetTabBlocked(0, /* blocked= */ false);
+
+  // Then the dummy pinned tab should reflect it too.
+  EXPECT_FALSE(
+      shared_pinned_tab_service->GetTabDataForDummyContents(0, dummy_contents)
+          ->blocked);
 }
 
 IN_PROC_BROWSER_TEST_F(SharedPinnedTabServiceBrowserTest,

@@ -1060,6 +1060,18 @@
 /* No comment provided by engineer. */
 "ntp.sponsoredImageDescription" = "Je steunt contentcreators en uitgevers door deze gesponsorde afbeelding te bekijken.";
 
+/* The title of a picker for user to pick which type of topsites to show in NTP */
+"ntp.topsites" = "Top websites";
+
+/* Favorites type of topsites. Selection means NTP will display favorites tiles if there is any. */
+"ntp.topsitesTypeFavorites" = "Favorieten";
+
+/* MostVisited type of topsites. Selection means NTP will display most visited tiles if there is any. */
+"ntp.topsitesTypeMostVisited" = "Vaak bezocht";
+
+/* None type of topsites. Selection means there won't be any topsites tiles in NTP */
+"ntp.topsitesTypeNone" = "Geen";
+
 /* The placeholder says 'Terms of Service'. So full sentence goes like: 'By turning Rewards, you agree to the Terms of Service'. */
 "ntp.turnRewardsTos" = "Als je Rewards aanzet, ga je akkoord met de %@.";
 
@@ -1450,12 +1462,6 @@
 /* The title for the alert that shows up when an item is expired */
 "playList.expiredAlertTitle" = "Verlopen video";
 
-/* Number of items in the playlsit folder. Example: '10 items' */
-"playlist.folderItemCountPlural" = "%d items";
-
-/* Title for when there's a single item inside of a folder */
-"playlist.foldersCountSingular" = "%d item";
-
 /* Description for load resources error alert */
 "playList.loadResourcesErrorAlertDescription" = "Er was een probleem met het laden van de bron.";
 
@@ -1587,12 +1593,6 @@
 
 /* The title of the screen to create a new folder */
 "playlistFolders.newFolderScreenTitle" = "Nieuwe playlist";
-
-/* The sub-title of the folder. Example: This folder contains 10 Items. This folder contains 3 Items. */
-"playlistFolders.subtitleItemCount" = "%lld Items";
-
-/* The sub-title of the folder. Example: This folder contains ONE item. This folder contains 1 Item. */
-"playlistFolders.subtitleItemSingleCount" = "1 Item";
 
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Naamloze playlist";
@@ -2324,7 +2324,7 @@
 "SendReportButtonTitle" = "Stuur rapport";
 
 /* A callout that explains how to set Brave as the default browser. This is a markdown string, the ** is for bold. */
-"setDefaultBrowserCalloutTitle" = "Growser kan nu als je standaardbrowser voor iOS worden ingesteld. Tik hier om de instellingen te openen.";
+"setDefaultBrowserCalloutTitle" = "**Stel Growser in als je standaardbrowser en blokkeer advertenties op elke site die je bezoekt.** Tik hier om Instellingen te openen en Growser in te stellen als standaard.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Stel in als standaardbrowser";
@@ -2415,6 +2415,12 @@
 
 /* Title to explain the survey panelist toggle */
 "settings.surveyPanelistTitle" = "Growser-enquêtes toestaan";
+
+/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
+"settings.sponsoredAdsEnabledDescription" = "Help Growser's missie ondersteunen om een onafhankelijk, gebruikersgericht web te bouwen met gesponsorde Ads. We meten advertentieprestaties privé, zonder je te identificeren. [Meer informatie](%@)";
+
+/* Title of the settings toggle that enables Sponsored Ads */
+"settings.sponsoredAdsEnabledTitle" = "Schakel gesponsorde Ads in";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";
@@ -3060,12 +3066,6 @@
 
 /* Accessibility label for a button that allows users to shred their tabs (erase them & associated data) */
 "tabGrid.shredTabsAccessibilityLabel" = "Tabbladen vernietigen";
-
-/* A label in the tab tray mode switcher shown when there are 0 or more than 1 regular tabs open e.g. '129 Tabs' */
-"tabGrid.tabsCountFormatPlural" = "%lld Tabbladen";
-
-/* A label in the tab tray mode switcher shown when there is 1 regular tab open e.g. '1 Tab' */
-"tabGrid.tabsCountFormatSingular" = "%lld Tab";
 
 /* Accessibility label for a button that when tapped presents the users history & recently closed tabs */
 "tabGrid.viewHistoryAccessibilityLabel" = "Bekijk geschiedenis";

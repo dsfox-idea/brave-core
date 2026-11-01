@@ -117,6 +117,8 @@ También puedes cambiar los permisos más adelante en <ph name="SETTINGS_EXTENIO
 <translation id="2162109630536601963">Si esta extensión hace peticiones de red, no se usará Tor ni el modo privado.</translation>
 <translation id="2725327089319971976">Para desactivar esta extensión en modo privado y modo Tor, deseleccione esta opción.</translation>
 <translation id="438106944087726695">Alojado en Growser</translation>
+<translation id="2265651566599167057">Marcado como malware por Socket.</translation>
+<translation id="2607395470596637070">Más información sobre cómo Socket en Growser te protege</translation>
 <translation id="3371343170427636147">Growser Browser Nightly Apps</translation>
 <translation id="4097979995947147464">Growser Browser Beta Apps</translation>
 <translation id="8303432794159193481">Growser Browser Dev Apps</translation>
@@ -723,7 +725,7 @@ También puedes cambiar los permisos más adelante en <ph name="SETTINGS_EXTENIO
 <translation id="4432071071853308688">Este código está vacío</translation>
 <translation id="955848693465029904">Error al configurar la sincronización interna</translation>
 <translation id="7456398316301207582">Error al eliminar la cuenta interna</translation>
-<translation id="859506441384380749">Este código se ha generado a través de una versión obsoleta de Growser. Actualice el otro dispositivo primero</translation>
+<translation id="4002014583969312635">Parece que este código se creó en un dispositivo que ejecuta una versión anterior de Growser. Actualiza a la versión más reciente de Growser en tu otro dispositivo y, a continuación, crea un nuevo código de sincronización.</translation>
 <translation id="3132642509209154999">Este código ha expirado. Genera uno nuevo en el otro dispositivo e inténtalo de nuevo.</translation>
 <translation id="2859229680945501779">Este código no es válido. Comprueba si la hora y la zona horaria de tu dispositivo son correctas.</translation>
 <translation id="2339730291919608488">Abandonar la cadena de sincronización</translation>
@@ -1017,6 +1019,7 @@ Comprueba que un dispositivo tuyo haya generado estas palabras clave.
 <translation id="6578040791557152233">Subir una imagen de perfil personalizada</translation>
 <translation id="9222124079546967592">Eliminar imagen de perfil personalizada</translation>
 <translation id="6058660912941570282">Growser no puede usar este archivo. Elige otra imagen e inténtalo de nuevo.</translation>
+<translation id="859506441384380749">Este código se ha generado a través de una versión obsoleta de Growser. Actualice el otro dispositivo primero</translation>
 <translation id="4678672101289648246">Solo en la página de la nueva pestaña</translation>
 <translation id="8294286161128352783">Solo en la página de la nueva pestaña</translation>
 <translation id="1035309871698658326">Cuando se abre, esto enviará automáticamente los títulos y el origen de todas las pestañas que no son de incógnito a Leo para clasificarlas.</translation>
@@ -1136,4 +1139,6 @@ Comprueba que un dispositivo tuyo haya generado estas palabras clave.
 <translation id="6524973012848479397">Ayuda a apoyar la misión de Growser de construir una Web independiente y centrada en el usuario con Anuncios Patrocinados. Medimos el rendimiento de los anuncios de forma privada, sin identificarte.</translation>
 <translation id="1054078509920433577">Growser no puede usar este archivo. Elige otra imagen e inténtalo de nuevo.</translation>
 <translation id="9194561096821877683">Growser</translation>
+<translation id="6132163760114048767">Parece que este código se creó en un dispositivo que ejecuta una versión anterior de Growser. Actualiza a la versión más reciente de Growser en tu otro dispositivo y, a continuación, crea un nuevo código de sincronización.</translation>
+<translation id="2894616471536253971">Más información sobre cómo Socket en Growser te protege</translation>
 </translationbundle>

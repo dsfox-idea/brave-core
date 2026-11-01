@@ -283,6 +283,7 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 
 #if BUILDFLAG(ENABLE_TOR)
 #include "brave/browser/tor/tor_profile_service_factory.h"
+#include "brave/components/tor/common/onion_domain_throttle.h"
 #include "brave/components/tor/onion_location_navigation_throttle.h"
 #include "brave/components/tor/pref_names.h"
 #include "brave/components/tor/tor_navigation_throttle.h"
@@ -549,16 +550,21 @@ bool IsJsBlockingEnforced(content::BrowserContext* browser_context,
   return settings_service->IsJsBlockingEnforced(url);
 }
 
+#if BUILDFLAG(ENABLE_TOR)
+bool IsOnionAllowed(content::BrowserContext* browser_context) {
+  if (!browser_context) {
+    return true;
+  }
+  return browser_context->IsTor() ||
+         !user_prefs::UserPrefs::Get(browser_context)
+              ->GetBoolean(tor::prefs::kOnionOnlyInTorWindows);
+}
+#endif  // BUILDFLAG(ENABLE_TOR)
+
 bool ShouldBlockOnionRequest(content::BrowserContext* browser_context,
                              const GURL& url) {
 #if BUILDFLAG(ENABLE_TOR)
-  if (!browser_context) {
-    return false;
-  }
-  if (!browser_context->IsTor() &&
-      user_prefs::UserPrefs::Get(browser_context)
-          ->GetBoolean(tor::prefs::kOnionOnlyInTorWindows) &&
-      net::IsOnion(url)) {
+  if (!IsOnionAllowed(browser_context) && net::IsOnion(url)) {
     return true;
   }
 #endif
@@ -876,6 +882,12 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
 void BraveContentBrowserClient::RegisterUntrustedWebUIInterfaceBrokers(
     content::WebUIBrowserInterfaceBrokerRegistry& registry) {
   ChromeContentBrowserClient::RegisterUntrustedWebUIInterfaceBrokers(registry);
+#if !BUILDFLAG(IS_ANDROID)
+  // Upstream's per-document ColorChangeHandler DCHECKs on a second bind, which
+  // happens when leo.bundle.js and a bundled WebUI each create a BrowserProxy.
+  registry.AddGlobal<color_change_listener::mojom::PageHandler>(
+      base::BindRepeating(&MaybeBindColorChangeHandler));
+#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN) && !BUILDFLAG(IS_ANDROID)
   if (brave_vpn::IsBraveVPNFeatureEnabled()) {
@@ -1053,6 +1065,10 @@ void BraveContentBrowserClient::RegisterBrowserInterfaceBindersForFrame(
     if (brave_wallet::IsCardanoDAppSupportEnabled()) {
       map->Add<brave_wallet::mojom::CardanoProvider>(base::BindRepeating(
           &brave_wallet::BraveWalletTabHelper::BindCardanoProvider));
+    }
+    if (brave_wallet::IsPolkadotDAppSupportEnabled()) {
+      map->Add<brave_wallet::mojom::PolkadotProvider>(base::BindRepeating(
+          &brave_wallet::BraveWalletTabHelper::BindPolkadotProvider));
     }
   }
 #endif
@@ -1256,6 +1272,26 @@ BraveContentBrowserClient::CreateURLLoaderThrottles(
   return result;
 }
 
+std::vector<std::unique_ptr<blink::URLLoaderThrottle>>
+BraveContentBrowserClient::CreateURLLoaderThrottlesForKeepAlive(
+    content::BrowserContext* browser_context,
+    content::FrameTreeNodeId frame_tree_node_id) {
+  auto result =
+      ChromeContentBrowserClient::CreateURLLoaderThrottlesForKeepAlive(
+          browser_context, frame_tree_node_id);
+#if BUILDFLAG(ENABLE_TOR)
+  // Keepalive requests, e.g. fetchLater(), can be sent or redirected after
+  // the initiating renderer is gone, so renderer-side throttles do not cover
+  // them.
+  if (auto onion_domain_throttle =
+          tor::OnionDomainThrottle::MaybeCreateThrottleForKeepAlive(
+              IsOnionAllowed(browser_context))) {
+    result.push_back(std::move(onion_domain_throttle));
+  }
+#endif  // BUILDFLAG(ENABLE_TOR)
+  return result;
+}
+
 void BraveContentBrowserClient::WillCreateURLLoaderFactory(
     content::BrowserContext* browser_context,
     content::RenderFrameHost* frame,
@@ -1274,17 +1310,30 @@ void BraveContentBrowserClient::WillCreateURLLoaderFactory(
     scoped_refptr<base::SequencedTaskRunner> navigation_response_task_runner,
     bool is_for_network_service) {
   // TODO(iefremov): Skip proxying for certain requests?
+  base::OnceCallback<void(bool)> set_bypass_redirect_checks;
   if (base::FeatureList::IsEnabled(features::kBraveRequestInfoUniquePtr)) {
-    BraveProxyingURLLoaderFactory<base::WeakPtr>::MaybeProxyRequest(
-        browser_context, frame, factory_builder, type, request_initiator,
-        isolation_info, navigation_id, navigation_response_task_runner);
+    if (auto* proxy =
+            BraveProxyingURLLoaderFactory<base::WeakPtr>::MaybeProxyRequest(
+                browser_context, frame, factory_builder, type,
+                request_initiator, isolation_info, navigation_id,
+                navigation_response_task_runner)) {
+      set_bypass_redirect_checks =
+          base::BindOnce(&BraveProxyingURLLoaderFactory<
+                             base::WeakPtr>::set_bypass_redirect_checks,
+                         base::Unretained(proxy));
+    }
   } else {
     // Ignore shared_ptr presubmit error, this is old code we are trying to
     // convert to unique_ptr/WeakPtr
-    BraveProxyingURLLoaderFactory<
-        std::shared_ptr>::MaybeProxyRequest(  // nocheck
-        browser_context, frame, factory_builder, type, request_initiator,
-        isolation_info, navigation_id, navigation_response_task_runner);
+    if (auto* proxy = BraveProxyingURLLoaderFactory<
+            std::shared_ptr>::MaybeProxyRequest(  // nocheck
+            browser_context, frame, factory_builder, type, request_initiator,
+            isolation_info, navigation_id, navigation_response_task_runner)) {
+      set_bypass_redirect_checks = base::BindOnce(
+          &BraveProxyingURLLoaderFactory<
+              std::shared_ptr>::set_bypass_redirect_checks,  // nocheck
+          base::Unretained(proxy));
+    }
   }
 
   ChromeContentBrowserClient::WillCreateURLLoaderFactory(
@@ -1293,6 +1342,12 @@ void BraveContentBrowserClient::WillCreateURLLoaderFactory(
       header_client, bypass_redirect_checks, disable_secure_dns,
       factory_override, navigation_response_task_runner,
       is_for_network_service);
+
+  // Brave's proxy sits outside upstream ones, so it must honor their
+  // authorization of otherwise-unsafe redirects, as downstream loaders do.
+  if (set_bypass_redirect_checks && bypass_redirect_checks) {
+    std::move(set_bypass_redirect_checks).Run(*bypass_redirect_checks);
+  }
 }
 
 // Intercept frame and worker handshakes so they go through Brave's network

@@ -8,6 +8,7 @@
 
 #include <map>
 #include <memory>
+#include <optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -81,7 +82,6 @@ class TabStripPlacementCoordinator;
 class BraveVerticalTabStripContainerView;
 
 #if BUILDFLAG(ENABLE_BRAVE_WALLET)
-class WalletButton;
 #endif
 
 class BraveBrowserView : public BrowserView,
@@ -116,14 +116,12 @@ class BraveBrowserView : public BrowserView,
   // consistently tied to that view's on-screen region.
   gfx::Rect GetBoundingBoxInScreenForMouseOverHandling() const;
 
+  // Width the vertical tab strip renders at the window edge beside the
+  // contents. Nullopt when the strip owns the edge instead: vertical tabs are
+  // off, the strip overlays the contents, or it's floated open over them.
+  std::optional<int> GetVerticalTabStripWidthAtWindowEdge() const;
+
   void ShowBraveVPNBubble(bool show_select = false);
-#if BUILDFLAG(ENABLE_BRAVE_WALLET)
-  void CreateWalletBubble();
-  void CreateApproveWalletBubble();
-  void CloseWalletBubble();
-  WalletButton* GetWalletButton();
-  views::View* GetWalletButtonAnchorView();
-#endif
 
   // BrowserView overrides:
   void StartTabCycling() override;
@@ -331,7 +329,6 @@ class BraveBrowserView : public BrowserView,
   // class's ctor body runs).
   void EnsureFindBarHostViewIsLastChild();
 
-  sidebar::Sidebar* InitSidebar() override;
   void ToggleSidebar() override;
   bool HasSelectedURL() const override;
   void CleanAndCopySelectedURL() override;

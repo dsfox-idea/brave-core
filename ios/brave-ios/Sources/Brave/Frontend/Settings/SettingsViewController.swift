@@ -321,27 +321,14 @@ class SettingsViewController: TableViewController, BraveAccountDialogOpenerBridg
 
   // Also called from the WebUI serving the account rows, which asks for the
   // dialog to be opened over it.
-  func openBraveAccountDialog(
-    initiatingServiceName: String = "",
-    dialogMode: BraveAccount.DialogMode = .default
-  ) {
+  func openBraveAccountDialog(dialogMode: BraveAccount.DialogMode = .default) {
     if braveAccountDialog?.presentingViewController != nil {
       return
     }
 
-    // Growser-321: our WebUI scheme, not Brave's.
-    var components = URLComponents(string: "\(URL.webUI.scheme)://account")!
-    if !initiatingServiceName.isEmpty {
-      components.queryItems = [
-        URLQueryItem(
-          name: BraveAccountInitiatingServiceNameQueryParam,
-          value: initiatingServiceName
-        )
-      ]
-    }
-
     braveAccountDialog = openBraveAccountWebUI(
-      url: components.url!,
+      // Growser-321: our WebUI scheme, not Brave's.
+      url: URL(string: "\(URL.webUI.scheme)://account")!,
       dialogMode: dialogMode
     )
   }

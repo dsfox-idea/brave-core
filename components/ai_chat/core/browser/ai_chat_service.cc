@@ -6,33 +6,25 @@
 #include "brave/components/ai_chat/core/browser/ai_chat_service.h"
 
 #include <algorithm>
-#include <compare>
 #include <functional>
-#include <ios>
 #include <iterator>
 #include <memory>
 #include <optional>
 #include <string>
 #include <string_view>
-#include <type_traits>
 #include <utility>
 #include <vector>
 
 #include "base/check.h"
 #include "base/check_deref.h"
-#include "base/containers/adapters.h"
-#include "base/containers/fixed_flat_set.h"
 #include "base/containers/map_util.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_helpers.h"
 #include "base/logging.h"
-#include "base/numerics/clamped_math.h"
-#include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/task/task_traits.h"
 #include "base/task/thread_pool.h"
 #include "base/time/time.h"
-#include "base/types/strong_alias.h"
 #include "base/uuid.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_credential_manager.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_database.h"
@@ -67,7 +59,6 @@
 #include "ui/base/clipboard/clipboard_buffer.h"
 #include "ui/base/clipboard/scoped_clipboard_writer.h"
 #include "url/gurl.h"
-#include "url/url_constants.h"
 
 namespace ai_chat {
 namespace {
@@ -1139,6 +1130,7 @@ mojom::ServiceStatePtr AIChatService::BuildState() {
   state->is_storage_pref_enabled = is_storage_enabled;
   state->is_storage_notice_dismissed = has_user_dismissed_storage_notice;
   state->can_show_premium_prompt = can_show_premium_prompt;
+  state->is_content_agent_user_selectable = content_agent_user_selectable_;
   return state;
 }
 
@@ -1164,14 +1156,16 @@ bool AIChatService::IsAIChatHistoryEnabled() {
 }
 
 std::unique_ptr<AssociatedContentDelegate>
-AIChatService::RestoreWorkspaceAssociatedContentFromUrl(const GURL& url) {
+AIChatService::RestoreWorkspaceAssociatedContentFromUrl(
+    const GURL& url,
+    const std::string& content_uuid) {
   // Note: This can happen if there's a workspace in the DB but the flag has
   // been disabled.
   if (!workspace_content_restorer_) {
     return nullptr;
   }
 
-  return workspace_content_restorer_.Run(url);
+  return workspace_content_restorer_.Run(url, content_uuid);
 }
 
 void AIChatService::OnRequestInProgressChanged(ConversationHandler* handler,
@@ -1500,14 +1494,6 @@ void AIChatService::BindObserver(
 void AIChatService::BindUntrustedService(
     mojo::PendingReceiver<mojom::UntrustedService> receiver) {
   untrusted_service_receivers_.Add(this, std::move(receiver));
-}
-
-bool AIChatService::GetIsContentAgentAllowed() const {
-  return is_content_agent_allowed_;
-}
-
-void AIChatService::SetIsContentAgentAllowed(bool is_allowed) {
-  is_content_agent_allowed_ = is_allowed;
 }
 
 bool AIChatService::HasUserOptedIn() {

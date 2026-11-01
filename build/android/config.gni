@@ -55,7 +55,6 @@ brave_chrome_java_deps = [
   "//brave/browser/signin/services/android:java",
   "//brave/browser/tab_group_sync:java",
   "//brave/browser/ui/android/bottombar:java",
-  "//brave/browser/ui/android/bottombar:prefs_java",
   "//brave/browser/ui/android/favicon:java",
   "//brave/browser/ui/android/logo:java",
   "//brave/browser/ui/android/ntp_widgets:java",
@@ -81,7 +80,6 @@ brave_chrome_java_deps = [
   "//brave/components/webcompat_reporter/common:mojom_java",
   # Growser-317: com_android_installreferrer_java removed.
   "//brave/third_party/android_deps:com_github_bumptech_glide_java",
-  "//brave/third_party/android_deps:com_google_android_play_app_update_java",
   # Growser-317: com_google_android_play_integrity_java moved under enable_brave_rewards.
   # Growser-317: google_play_services_safetynet_java removed.
   "//brave/third_party/zxing:zxing_java",
@@ -90,6 +88,7 @@ brave_chrome_java_deps = [
   "//third_party/android_deps:google_play_services_vision_common_java",
   "//third_party/android_deps:google_play_services_vision_java",
   "//third_party/android_deps:org_jetbrains_kotlinx_kotlinx_coroutines_android_java",
+  "//third_party/android_deps:playcore_app_update_java",
   "//third_party/androidx:androidx_lifecycle_lifecycle_livedata_core_java",
   "//third_party/androidx:androidx_lifecycle_lifecycle_livedata_java",
   "//third_party/androidx:androidx_lifecycle_lifecycle_viewmodel_java",

@@ -23,7 +23,6 @@
 #include "brave/components/sidebar/browser/pref_names.h"
 #include "brave/components/sidebar/browser/sidebar_service.h"
 #include "brave/components/sidebar/common/features.h"
-#include "chrome/browser/history/history_service_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/browser_window.h"
@@ -33,6 +32,7 @@
 #include "chrome/browser/ui/navigator/browser_navigator_params.h"
 #include "chrome/browser/ui/navigator/browser_navigator_params_utils.h"
 #include "chrome/browser/ui/side_panel/side_panel_entry.h"
+#include "chrome/browser/ui/side_panel/side_panel_enums.h"
 #include "chrome/browser/ui/side_panel/side_panel_ui.h"
 #include "chrome/browser/ui/singleton_tabs.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
@@ -128,6 +128,12 @@ void SidebarController::TearDownPreBrowserWindowDestruction() {
   sidebar_ = nullptr;
 }
 
+void SidebarController::CloseWebPanel() {
+  if (web_panel_controller_) {
+    web_panel_controller_->CloseWebPanel();
+  }
+}
+
 void SidebarController::OnItemPressed(size_t index,
                                       WindowOpenDisposition disposition) {
   CHECK_LT(index, sidebar_model_->GetAllSidebarItems().size());
@@ -138,8 +144,13 @@ void SidebarController::OnItemPressed(size_t index,
     CHECK(web_panel_controller);
 
     // Try to close side panel as we could open web panel.
-    // Otherwise, it's no-op.
-    GetSidePanelUI()->Close();
+    // Otherwise, it's no-op. The side panel shouldn't animate out while the
+    // web panel takes over its space - the two should swap in one frame.
+    // Unlike the open direction (ShouldSuppressSidePanelOpenAnimation()), the
+    // coordinator can't decide this: Close() runs for every close reason and
+    // the web panel isn't open yet, so only this call site knows it's a swap.
+    GetSidePanelUI()->Close(SidePanelEntryHideReason::kSidePanelClosed,
+                            /*suppress_animations=*/true);
     web_panel_controller->ToggleWebPanel(item);
     return;
   }
@@ -288,11 +299,9 @@ void SidebarController::AddItemWithCurrentTab() {
   DCHECK(active_contents);
   const GURL url = active_contents->GetVisibleURL();
   const std::u16string title = active_contents->GetTitle();
-  GetSidebarService()->AddItem(SidebarItem::Create(
-      url, title, SidebarItem::Type::kTypeWeb,
-      SidebarItem::BuiltInItemType::kNone,
-      IsWebPanelFeatureEnabled() ? SidebarItem::PanelType::kWebPanel
-                                 : SidebarItem::PanelType::kNone));
+  GetSidebarService()->AddItem(IsWebPanelFeatureEnabled()
+                                   ? SidebarItem::CreateWebPanelItem(url, title)
+                                   : SidebarItem::CreateWebTabItem(url, title));
 }
 
 void SidebarController::HandleSidePanelOpened(SidePanelEntryId id) {
@@ -323,6 +332,12 @@ void SidebarController::HandleSidePanelOpened(SidePanelEntryId id) {
 
 void SidebarController::HandleSidePanelClosed() {
   sidebar_model_->SetActiveIndex(std::nullopt);
+}
+
+bool SidebarController::ShouldSuppressSidePanelOpenAnimation() const {
+  // The side panel shouldn't animate in over a web panel already occupying its
+  // space.
+  return web_panel_controller_ && web_panel_controller_->HasOpenPanel();
 }
 
 void SidebarController::OnWebPanelStateChanged() {
@@ -359,15 +374,9 @@ SidebarController::RegisterPinnedTabCountHostedBySidebarChangedCallback(
   return pinned_tab_count_changed_callbacks_.Add(std::move(callback));
 }
 
-void SidebarController::SetSidebar(Sidebar* sidebar) {
+void SidebarController::SetSidebar(Sidebar& sidebar) {
   DCHECK(!sidebar_);
-  // |sidebar| can be null in unit test.
-  if (!sidebar)
-    return;
-  sidebar_ = sidebar;
-
-  sidebar_model_->Init(HistoryServiceFactory::GetForProfile(
-      profile_, ServiceAccessType::EXPLICIT_ACCESS));
+  sidebar_ = &sidebar;
 }
 
 SidebarWebPanelController* SidebarController::GetWebPanelController() {

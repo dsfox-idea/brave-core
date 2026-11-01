@@ -117,6 +117,8 @@ Eller ändra senare på <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="2162109630536601963">Om det här tillägget gör nätverksförfrågningar använder det inte Tor eller privat läge.</translation>
 <translation id="2725327089319971976">För att avaktivera detta tillägg i privat läge och Tor-läge, avmarkera detta alternativ.</translation>
 <translation id="438106944087726695">Growser-värd</translation>
+<translation id="2265651566599167057">Flaggad som skadlig kod av Socket.</translation>
+<translation id="2607395470596637070">Läs mer om hur Socket i Growser skyddar dig</translation>
 <translation id="3371343170427636147">Growser Browser Nightly-appar</translation>
 <translation id="4097979995947147464">Growser Browser Beta-appar</translation>
 <translation id="8303432794159193481">Growser Browser Dev-appar</translation>
@@ -723,7 +725,7 @@ Eller ändra senare på <ph name="SETTINGS_EXTENIONS_LINK"/>.</translation>
 <translation id="4432071071853308688">Koden är tom</translation>
 <translation id="955848693465029904">Installationsfel för intern synkronisering</translation>
 <translation id="7456398316301207582">Internt fel vid borttagning av konto</translation>
-<translation id="859506441384380749">Den här koden genererades av en Growser-version som är för gammal, uppgradera enheten först</translation>
+<translation id="4002014583969312635">Det ser ut som att den här koden skapades på en enhet som kör en äldre version av Growser. Uppdatera till den senaste versionen av Growser på din andra enhet och skapa sedan en ny synkroniseringskod.</translation>
 <translation id="3132642509209154999">Den här koden har upphört att gälla. Generera en ny på din andra enhet och försök igen.</translation>
 <translation id="2859229680945501779">Den här koden är ogiltig. Kontrollera att tid och tidszon är korrekt inställda på din enhet.</translation>
 <translation id="2339730291919608488">Lämna synkkedja</translation>
@@ -1017,6 +1019,7 @@ börja använda Sync igen måste du skapa ett nytt konto och lägga till varje e
 <translation id="6578040791557152233">Ladda upp en anpassad profilbild</translation>
 <translation id="9222124079546967592">Ta bort anpassad profilbild</translation>
 <translation id="6058660912941570282">Growser kan inte använda den här filen. Välj en annan bild och försök igen.</translation>
+<translation id="859506441384380749">Den här koden genererades av en Growser-version som är för gammal, uppgradera enheten först</translation>
 <translation id="4678672101289648246">Endast på sidan Ny flik</translation>
 <translation id="8294286161128352783">Endast på sidan Ny flik</translation>
 <translation id="1035309871698658326">När den öppnas kommer detta automatiskt att skicka titlar och ursprung för alla icke-privata flikar till Leo för att klassificera dem.</translation>
@@ -1136,4 +1139,6 @@ Dubbelkolla att dessa kodord genererades av en enhet som du äger.
 <translation id="6524973012848479397">Hjälp till att stödja Braves uppdrag att bygga en oberoende, användarfokuserad webb med Sponsrade annonser. Vi mäter annonsprestanda privat, utan att identifiera dig.</translation>
 <translation id="1054078509920433577">Growser kan inte använda den här filen. Välj en annan bild och försök igen.</translation>
 <translation id="9194561096821877683">Growser</translation>
+<translation id="6132163760114048767">Det ser ut som att den här koden skapades på en enhet som kör en äldre version av Growser. Uppdatera till den senaste versionen av Growser på din andra enhet och skapa sedan en ny synkroniseringskod.</translation>
+<translation id="2894616471536253971">Läs mer om hur Socket i Growser skyddar dig</translation>
 </translationbundle>

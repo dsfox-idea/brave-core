@@ -34,11 +34,14 @@
 #include "brave/browser/ui/sidebar/sidebar_web_panel_controller.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/public/vertical_tab_controller.h"
+#include "brave/browser/ui/views/brave_layout_provider.h"
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
 #include "brave/browser/ui/views/frame/split_view/brave_contents_container_view.h"
 #include "brave/browser/ui/views/frame/split_view/brave_multi_contents_view.h"
 #include "brave/browser/ui/views/frame/split_view/brave_multi_contents_view_mini_toolbar.h"
+#include "brave/browser/ui/views/frame/vertical_tabs/vertical_tab_strip_container_view.h"
+#include "brave/browser/ui/views/frame/vertical_tabs/vertical_tab_strip_region_view.h"
 #include "brave/browser/ui/views/side_panel/brave_side_panel_header.h"
 #include "brave/browser/ui/views/side_panel/brave_side_panel_resize_area.h"
 #include "brave/browser/ui/views/side_panel/side_panel_utils.h"
@@ -641,6 +644,183 @@ INSTANTIATE_TEST_SUITE_P(
     SidebarBrowserWithSplitViewTest,
     ::testing::Bool());
 
+// The vertical tab strip is laid out outside the sidebar, so when both are on
+// the same side the sidebar's hot corner has to start where the strip ends.
+class SidebarBrowserTestWithVerticalTabs : public SidebarBrowserTest {
+ public:
+  SidebarBrowserTestWithVerticalTabs() {
+    // The "hide completely when collapsed" pref is only registered behind this
+    // flag.
+    feature_list_.InitAndEnableFeature(tabs::kBraveVerticalTabHideCompletely);
+  }
+  ~SidebarBrowserTestWithVerticalTabs() override = default;
+
+  void SetUpOnMainThread() override {
+    SidebarBrowserTest::SetUpOnMainThread();
+
+    SidebarServiceFactory::GetForProfile(browser()->GetProfile())
+        ->SetSidebarShowOption(
+            SidebarService::ShowSidebarOption::kShowOnMouseOver);
+    brave::ToggleVerticalTabStrip(browser());
+    ASSERT_TRUE(
+        VerticalTabController::From(browser())->ShouldShowBraveVerticalTabs());
+    RunScheduledLayouts();
+  }
+
+  PrefService* GetPrefs() { return browser()->GetProfile()->GetPrefs(); }
+
+  void SetSidebarOnRight(bool on_right) {
+    GetPrefs()->SetBoolean(prefs::kSidePanelHorizontalAlignment, on_right);
+    RunScheduledLayouts();
+    ASSERT_EQ(on_right, !IsSidebarUIOnLeft());
+  }
+
+  void SetVerticalTabOnRight(bool on_right) {
+    GetPrefs()->SetBoolean(brave_tabs::kVerticalTabsOnRight, on_right);
+    RunScheduledLayouts();
+  }
+
+  // Width the vertical tab strip renders at the window edge. With rounded
+  // contents this is wider than the width the layout insets the contents by.
+  int GetVerticalTabStripWidth() {
+    return browser_view()->vertical_tab_strip_container_view()->width();
+  }
+
+  BraveVerticalTabStripRegionView* GetVerticalTabStripRegionView() {
+    return browser_view()
+        ->vertical_tab_strip_container_view()
+        ->vertical_tab_strip_region_view();
+  }
+
+  // Point |offset_from_edge| inward from the sidebar's window edge.
+  gfx::Point PointAtOffsetFromEdge(int offset_from_edge) {
+    const bool on_left = IsSidebarUIOnLeft();
+    const auto detect_bounds =
+        browser_view()->GetBoundingBoxInScreenForMouseOverHandling();
+    gfx::Point position =
+        on_left ? detect_bounds.origin() : detect_bounds.top_right();
+    position.Offset(on_left ? offset_from_edge : -offset_from_edge, 2);
+    return position;
+  }
+
+  // Hides the sidebar, then moves the cursor |offset_from_edge| inward from the
+  // sidebar's window edge and dispatches a mouse move.
+  bool RevealsSidebarAtOffsetFromEdge(int offset_from_edge) {
+    HideSidebar();
+    EXPECT_FALSE(GetSidebarContainerView()->IsSidebarVisible());
+
+    display::Screen::Get()->SetCursorScreenPointForTesting(
+        PointAtOffsetFromEdge(offset_from_edge));
+    HandleBrowserWindowMouseEvent();
+    return GetSidebarContainerView()->IsSidebarVisible();
+  }
+
+  // Moves the cursor to the middle of the window and dispatches a mouse move,
+  // which collapses the strip if it was floating.
+  void CollapseVerticalTabStrip() {
+    display::Screen::Get()->SetCursorScreenPointForTesting(
+        browser_view()->GetBoundsInScreen().CenterPoint());
+    HandleBrowserWindowMouseEvent();
+    RunScheduledLayouts();
+    ASSERT_EQ(BraveVerticalTabStripRegionView::State::kCollapsed,
+              GetVerticalTabStripRegionView()->state());
+  }
+
+ private:
+  base::test::ScopedFeatureList feature_list_;
+
+  // The hot corner is checked against Screen::GetCursorScreenPoint() rather
+  // than the event location, and only TestScreen implements
+  // SetCursorScreenPointForTesting().
+  display::test::TestScreen screen_{/*create_display=*/true,
+                                    /*register_screen=*/true};
+};
+
+IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithVerticalTabs,
+                       HotCornerExcludesVerticalTabStripOnSameSideTest) {
+  // Rounded contents move the strip's inner edge past the width the layout
+  // insets the contents by, so the hot corner has to follow the rendered edge.
+  for (const bool rounded_corners : {false, true}) {
+    SCOPED_TRACE(rounded_corners ? "rounded corners" : "square corners");
+    GetPrefs()->SetBoolean(kWebViewRoundedCorners, rounded_corners);
+    RunScheduledLayouts();
+
+    for (const bool on_right : {false, true}) {
+      SCOPED_TRACE(on_right ? "both on right" : "both on left");
+      SetVerticalTabOnRight(on_right);
+      SetSidebarOnRight(on_right);
+
+      const int vertical_tab_width = GetVerticalTabStripWidth();
+      ASSERT_GT(vertical_tab_width, 0);
+
+      // The window edge belongs to the vertical tab strip.
+      EXPECT_FALSE(RevealsSidebarAtOffsetFromEdge(2));
+
+      // Just inside the strip's inner edge is the sidebar's hot corner.
+      EXPECT_TRUE(RevealsSidebarAtOffsetFromEdge(vertical_tab_width + 2));
+    }
+  }
+}
+
+IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithVerticalTabs,
+                       HotCornerKeepsWindowEdgeOnOppositeSideTest) {
+  SetVerticalTabOnRight(false);
+  SetSidebarOnRight(true);
+
+  ASSERT_GT(GetVerticalTabStripWidth(), 0);
+
+  // Nothing sits outside the sidebar, so the window edge still reveals it.
+  EXPECT_TRUE(RevealsSidebarAtOffsetFromEdge(2));
+}
+
+// When the strip is collapsed to zero width it floats over the contents and
+// keeps the window edge for its own hover handling.
+IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithVerticalTabs,
+                       HotCornerYieldsToFloatingVerticalTabStripTest) {
+  SetVerticalTabOnRight(false);
+  SetSidebarOnRight(false);
+
+  GetPrefs()->SetBoolean(brave_tabs::kVerticalTabsHideCompletelyWhenCollapsed,
+                         true);
+  GetPrefs()->SetBoolean(brave_tabs::kVerticalTabsCollapsed, true);
+  RunScheduledLayouts();
+  ASSERT_EQ(0, GetVerticalTabStripWidth());
+
+  EXPECT_FALSE(RevealsSidebarAtOffsetFromEdge(2));
+}
+
+// While floating, the strip draws over the contents without taking any extra
+// width from them, so it covers where the sidebar's hot corner sits at rest.
+IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithVerticalTabs,
+                       HotCornerYieldsToFloatedOpenVerticalTabStripTest) {
+  GetPrefs()->SetBoolean(brave_tabs::kVerticalTabsFloatingEnabled, true);
+  GetPrefs()->SetBoolean(brave_tabs::kVerticalTabsHideCompletelyWhenCollapsed,
+                         false);
+  GetPrefs()->SetBoolean(brave_tabs::kVerticalTabsCollapsed, true);
+
+  for (const bool on_right : {false, true}) {
+    SCOPED_TRACE(on_right ? "both on right" : "both on left");
+    SetVerticalTabOnRight(on_right);
+    SetSidebarOnRight(on_right);
+    CollapseVerticalTabStrip();
+
+    const int collapsed_width = GetVerticalTabStripWidth();
+    ASSERT_GT(collapsed_width, 0);
+
+    // The window edge belongs to the collapsed strip, and hovering it floats
+    // the strip open over the contents.
+    EXPECT_FALSE(RevealsSidebarAtOffsetFromEdge(2));
+    RunScheduledLayouts();
+    ASSERT_EQ(BraveVerticalTabStripRegionView::State::kFloating,
+              GetVerticalTabStripRegionView()->state());
+    ASSERT_GT(GetVerticalTabStripWidth(), collapsed_width);
+
+    // The hot corner the collapsed strip left behind is now under the floated
+    // open strip.
+    EXPECT_FALSE(RevealsSidebarAtOffsetFromEdge(collapsed_width + 2));
+  }
+}
+
 class SidebarBrowserWithWebPanelTest
     : public SidebarBrowserTest,
       public testing::WithParamInterface<bool> {
@@ -670,11 +850,12 @@ class SidebarBrowserWithWebPanelTest
 };
 
 IN_PROC_BROWSER_TEST_P(SidebarBrowserWithWebPanelTest, WebPanelTest) {
-  auto contents_container_view_for_web_panel =
-      GetBraveMultiContentsView()->contents_container_view_for_web_panel_;
-  if (!IsWebPanelEnabled()) {
-    EXPECT_FALSE(contents_container_view_for_web_panel);
+  // The container is created on first use, so it doesn't exist yet regardless
+  // of the feature state.
+  EXPECT_FALSE(
+      GetBraveMultiContentsView()->contents_container_view_for_web_panel_);
 
+  if (!IsWebPanelEnabled()) {
     // Even web panel feature is disabled, sidebar could have web panel
     // type because it could be added when that feature enabled.
     // In this sitaution, web panel type should work like web type that
@@ -683,10 +864,8 @@ IN_PROC_BROWSER_TEST_P(SidebarBrowserWithWebPanelTest, WebPanelTest) {
     auto* sidebar_service =
         SidebarServiceFactory::GetForProfile(browser()->GetProfile());
     GURL item_url("http://foo.bar/");
-    sidebar_service->AddItem(sidebar::SidebarItem::Create(
-        item_url, u"title", SidebarItem::Type::kTypeWeb,
-        SidebarItem::BuiltInItemType::kNone,
-        SidebarItem::PanelType::kWebPanel));
+    sidebar_service->AddItem(
+        sidebar::SidebarItem::CreateWebPanelItem(item_url, u"title"));
     EXPECT_NE(tab_model()->GetActiveWebContents()->GetVisibleURL(), item_url);
     // Above item is added at last.
     controller()->OnItemPressed(sidebar_service->items().size() - 1);
@@ -713,7 +892,10 @@ IN_PROC_BROWSER_TEST_P(SidebarBrowserWithWebPanelTest, WebPanelTest) {
   browser()->GetProfile()->GetPrefs()->SetBoolean(
       prefs::kSidePanelHorizontalAlignment, true);
 
-  EXPECT_TRUE(contents_container_view_for_web_panel);
+  GetBraveMultiContentsView()->UseContentsContainerViewForWebPanel();
+  auto contents_container_view_for_web_panel =
+      GetBraveMultiContentsView()->contents_container_view_for_web_panel_;
+  ASSERT_TRUE(contents_container_view_for_web_panel);
   EXPECT_FALSE(contents_container_view_for_web_panel->GetVisible());
   EXPECT_GT(GetBraveMultiContentsView()->web_panel_width_, 0);
   EXPECT_EQ(GetBraveMultiContentsView()->GetWebPanelWidth(), 0);
@@ -885,9 +1067,8 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, ItemAddedBubbleAnchorViewTest) {
 
   // Add item at last.
   item_added_bubble_anchor_ = nullptr;
-  sidebar_service->AddItem(sidebar::SidebarItem::Create(
-      GURL("http://foo.bar/"), u"title", SidebarItem::Type::kTypeWeb,
-      SidebarItem::BuiltInItemType::kNone, SidebarItem::PanelType::kNone));
+  sidebar_service->AddItem(sidebar::SidebarItem::CreateWebTabItem(
+      GURL("http://foo.bar/"), u"title"));
 
   // Check item is added at last and check that bubble is anchored to
   // it properly.
@@ -900,9 +1081,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, ItemAddedBubbleAnchorViewTest) {
   // Add item at index 0.
   item_added_bubble_anchor_ = nullptr;
   sidebar_service->AddItemAtForTesting(
-      sidebar::SidebarItem::Create(
-          GURL("http://foo.bar/"), u"title", SidebarItem::Type::kTypeWeb,
-          SidebarItem::BuiltInItemType::kNone, SidebarItem::PanelType::kNone),
+      sidebar::SidebarItem::CreateWebTabItem(GURL("http://foo.bar/"), u"title"),
       0);
 
   // Check item is added at first and check that bubble is anchored to
@@ -963,9 +1142,7 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, ItemAddedScrollTest) {
   // After inserting item at index 0, it should be visible as sidebar
   // scrolls to make that new item visible. So last item becomes invisible.
   sidebar_service->AddItemAtForTesting(
-      sidebar::SidebarItem::Create(
-          GURL("https://abcd"), u"title", SidebarItem::Type::kTypeWeb,
-          SidebarItem::BuiltInItemType::kNone, SidebarItem::PanelType::kNone),
+      sidebar::SidebarItem::CreateWebTabItem(GURL("https://abcd"), u"title"),
       0);
   WaitUntil(base::BindLambdaForTesting(
       [&]() { return !NeedScrollForItemAt(0, scroll_view); }));
@@ -976,9 +1153,8 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, ItemAddedScrollTest) {
   // After inserting item at last, it should be visible as sidebar
   // scrolls to make that new item visible. So fisrt item becomes invisible.
   last_item_index++;
-  sidebar_service->AddItem(sidebar::SidebarItem::Create(
-      GURL("https://abcdefg"), u"title", SidebarItem::Type::kTypeWeb,
-      SidebarItem::BuiltInItemType::kNone, SidebarItem::PanelType::kNone));
+  sidebar_service->AddItem(sidebar::SidebarItem::CreateWebTabItem(
+      GURL("https://abcdefg"), u"title"));
   WaitUntil(base::BindLambdaForTesting(
       [&]() { return !NeedScrollForItemAt(last_item_index, scroll_view); }));
   EXPECT_TRUE(NeedScrollForItemAt(0, scroll_view));
@@ -1074,11 +1250,9 @@ class SidebarBrowserTestWithkSidebarShowAlwaysOnStable
 
   void TearDown() override { SidebarBrowserTest::TearDown(); }
 
-  // For skipping SidebarBrowserTest's PreRunTestOnMainThread
-  // as show option is set explicitely there.
-  void PreRunTestOnMainThread() override {
-    InProcessBrowserTest::PreRunTestOnMainThread();
-  }
+  // This test verifies the default show option, so the shared setup must not
+  // write one.
+  bool ShouldForceShowAlwaysOption() const override { return false; }
 
   void SetUpCommandLine(base::CommandLine* command_line) override {
     SidebarBrowserTest::SetUpCommandLine(command_line);
@@ -1186,9 +1360,8 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTestWithPlaylist, Incognito) {
   EXPECT_EQ(iter, items.end());
 
   // Try Adding an item
-  sidebar_service->AddItem(sidebar::SidebarItem::Create(
-      GURL("http://foo.bar/"), u"title", SidebarItem::Type::kTypeWeb,
-      SidebarItem::BuiltInItemType::kNone, SidebarItem::PanelType::kNone));
+  sidebar_service->AddItem(sidebar::SidebarItem::CreateWebTabItem(
+      GURL("http://foo.bar/"), u"title"));
 
   // Try moving an item
   sidebar_service->MoveItem(sidebar_service->items().size() - 1, 0);
@@ -1501,9 +1674,6 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, SidebarLayoutInRTLTest) {
             contents_view->GetMirroredBounds().x());
 }
 
-using views::ShapeContextTokensOverride::kRoundedCornersBorderRadius;
-using views::ShapeContextTokensOverride::
-    kRoundedCornersBorderRadiusAtWindowCorner;
 
 // The upstream side panel is a direct child of browser_view, positioned
 // by CalculateSideBarLayout.  Verify that when the panel is open it sits
@@ -3468,10 +3638,8 @@ IN_PROC_BROWSER_TEST_F(SidebarTorBrowserTest,
   // profile's favicon database, which is the normal case for a page that was
   // only visited over Tor.
   SidebarServiceFactory::GetForProfile(tor_profile)
-      ->AddItem(SidebarItem::Create(
-          embedded_test_server()->GetURL("tor-only.test", "/"), u"tor-only",
-          SidebarItem::Type::kTypeWeb, SidebarItem::BuiltInItemType::kNone,
-          SidebarItem::PanelType::kNone));
+      ->AddItem(SidebarItem::CreateWebTabItem(
+          embedded_test_server()->GetURL("tor-only.test", "/"), u"tor-only"));
 
   // Opening another Tor window builds a new SidebarModel, which fetches the
   // favicon of every stored item again.
@@ -3481,10 +3649,9 @@ IN_PROC_BROWSER_TEST_F(SidebarTorBrowserTest,
   // from the network. Waiting for it makes sure the favicon lookups had time
   // to run.
   SidebarServiceFactory::GetForProfile(browser()->GetProfile())
-      ->AddItem(SidebarItem::Create(
+      ->AddItem(SidebarItem::CreateWebTabItem(
           embedded_test_server()->GetURL("regular-only.test", "/"),
-          u"regular-only", SidebarItem::Type::kTypeWeb,
-          SidebarItem::BuiltInItemType::kNone, SidebarItem::PanelType::kNone));
+          u"regular-only"));
   WaitUntil(base::BindLambdaForTesting(
       [&]() { return regular_item_favicon_requests_ > 0; }));
 

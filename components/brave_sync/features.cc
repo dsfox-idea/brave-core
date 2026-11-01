@@ -5,8 +5,6 @@
 
 #include "brave/components/brave_sync/features.h"
 
-#include "base/feature_list.h"
-
 namespace brave_sync::features {
 
 // growser (#78/#43): sync is off until we run a sync server of our own.

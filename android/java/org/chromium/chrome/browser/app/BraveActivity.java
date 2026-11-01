@@ -171,6 +171,7 @@ import org.chromium.components.browser_ui.util.motion.MotionEventInfo;
 import org.chromium.components.embedder_support.util.UrlConstants;
 import org.chromium.components.embedder_support.util.UrlUtilities;
 import org.chromium.components.omnibox.AutocompleteRequestType;
+import org.chromium.components.omnibox.OmniboxFocusReason;
 import org.chromium.components.search_engines.TemplateUrl;
 import org.chromium.components.search_engines.TemplateUrlService;
 import org.chromium.components.user_prefs.UserPrefs;
@@ -184,6 +185,7 @@ import org.chromium.url.GURL;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -233,6 +235,13 @@ public abstract class BraveActivity extends ChromeActivity
             Arrays.asList("AM", "AZ", "BY", "KG", "KZ", "MD", "RU", "TJ", "TM", "UZ");
 
     private static final int PIP_UPDATE_DELAY_MS = 500;
+
+    // The kinds of DApps panel this window has open. Providers ask for a panel once per request
+    // they queue (see EthereumProviderImpl::SignMessageInternal), and a kind that already has one
+    // is not opened again.
+    private final EnumSet<BraveWalletDAppsActivity.ActivityType> mOpenDAppsPanels =
+            EnumSet.noneOf(BraveWalletDAppsActivity.ActivityType.class);
+
     private boolean mIsVerification;
     public boolean mIsDeepLink;
     private MiscAndroidMetrics mMiscAndroidMetrics;
@@ -244,7 +253,6 @@ public abstract class BraveActivity extends ChromeActivity
     private NotificationPermissionController mNotificationPermissionController;
     private MiscAndroidMetricsConnectionErrorHandler mMiscAndroidMetricsConnectionErrorHandler;
     private AppUpdateManager mAppUpdateManager;
-    private boolean mSpoofCustomTab;
 
     // Owns YouTube Picture-in-Picture session state and lifecycle.
     // Lazily created the first time a hook needs it; never null after first access.
@@ -1105,7 +1113,8 @@ public abstract class BraveActivity extends ChromeActivity
 
     public void focusSearchBox() {
         if (mNewTabPageManager != null) {
-            mNewTabPageManager.focusSearchBox(false, AutocompleteRequestType.SEARCH, false, null);
+            mNewTabPageManager.focusSearchBox(
+                    false, AutocompleteRequestType.SEARCH, OmniboxFocusReason.FAKE_BOX_TAP, null);
         }
     }
 
@@ -1542,7 +1551,9 @@ public abstract class BraveActivity extends ChromeActivity
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK
+        if (requestCode == BraveConstants.DAPPS_PANEL_REQUEST_CODE) {
+            onDAppsPanelClosed(resultCode, data);
+        } else if (resultCode == RESULT_OK
                 && (requestCode == BraveConstants.VERIFY_WALLET_ACTIVITY_REQUEST_CODE
                         || requestCode == BraveConstants.USER_WALLET_ACTIVITY_REQUEST_CODE
                         || requestCode == BraveConstants.SITE_BANNER_REQUEST_CODE)) {
@@ -1921,23 +1932,6 @@ public abstract class BraveActivity extends ChromeActivity
                         .create();
         alertDialog.getDelegate().setHandleNativeActionModesEnabled(false);
         alertDialog.show();
-    }
-
-    /*
-     * Whether we want to pretend to be a custom tab. May be usefull to avoid certain patches,
-     * when we want to have the same behaviour as in custom tabs.
-     */
-    public void spoofCustomTab(boolean spoof) {
-        mSpoofCustomTab = spoof;
-    }
-
-    @Override
-    public boolean isCustomTab() {
-        if (mSpoofCustomTab) {
-            return true;
-        }
-
-        return super.isCustomTab();
     }
 
     public void showQuickActionSearchEnginesView(int keypadHeight) {

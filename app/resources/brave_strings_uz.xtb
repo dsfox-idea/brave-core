@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Growser haqida</translation>
 <translation id="987734326276404793">Telefonda Growser orqali narxlar oʻzgarishi haqida bildirishnomalar oling</translation>
 <translation id="1203500561924088507">Oʻrnatganingiz uchun tashakkur! <ph name="BUNDLE_NAME"/>ni ishlatishdan oldin brauzerni qayta ishga tushirishingiz lozim.</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/> oʻrnatilishi kerak. Internetni xavfsiz kezish uchun Growser keyingi safar <ph name="IDLE_DURATION"/> ishlatilmaganda avtomatik yangilanadi.</translation>
 <translation id="1232234696885483911">Rasmli qidiruv ochilganda sahifa sarlavhasi, URL manzili, kontenti, jumladan, PDF fayllar Growser serverlariga avtomatik yuboriladi. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Braveda hisobdan chiqmasangiz, Growser hisobingizdagi parollar va boshqa maʼlumotlardan foydalana olasiz. Buni oʻzgartirish uchun “Growser hisobingiz” rukniga kiring.</translation>
 <translation id="583633806828413086">Growser ichidagi Gemini belgisini Mac menyu panelida chiqarish</translation>
@@ -219,6 +220,7 @@
 <translation id="3286538390144397061">Hozir qaytadan ishga tushirish</translation>
 <translation id="2339258256897053758">Growser API kalitlari yetishmayapti. Growser’ning ba’zi funksiyalari ishlamasligi mumkin.</translation>
 <translation id="8926637909431618259">Growser yopilishida orqa fon rejimida ishlayotgan ilovalar to‘xtatilmasin</translation>
+<translation id="8245661393996028021">Growser ishtirokingizsiz avtomatik yangilanadi</translation>
 <translation id="518125528057094977">Xavfsiz ulanishli har qanday saytga kirganingizda Growser sizni ogohlantiradi</translation>
 <translation id="8652321858775514885">Barcha Growser oynalari yopilganda aksariyat saytlardan chiqib ketasiz, ammo Growser hisobingizga kirganingizda Growser hisobingizdan chiqmaysiz. Saytlarga sizni eslab qolishga ruxsat berish uchun <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">qidiruv hududining yuqori oʻng burchagi: oʻng <ph name="RIGHT"/>%, yuqori <ph name="TOP"/>%</translation>
@@ -227,6 +229,7 @@
 <translation id="2645435784669275700">ChromeOS</translation>
 <translation id="2297290224191497273">Mavjud Growser profiliga almashilsinmi?</translation>
 <translation id="3412460710772753638">Bu qurilmada Parollar menejeriga</translation>
+<translation id="172368702860945706">Growser yangilanishi kerak</translation>
 <translation id="5079573433701109938"><ph name="DEVICE"/> qurilmasidagi bukmarklar va boshqa maʼlumotlaringizni olish uchun Growser hisobiga kiring</translation>
 <translation id="3438772217992559640">Bu varaqda rasmli qidiruv bilan qidirish</translation>
 <translation id="2491221873705777076">Telefonda Growser orqali Saytlarni kuchaytirilgan rejimda xavfsiz kezish imkoniyatini kengaytiring</translation>
@@ -364,6 +367,7 @@
 <translation id="4877750182157975795">Growser bilan <ph name="DEVICE_TYPE"/> qurilmangizda barcha sevimli Growser xizmatlaringizga kiring</translation>
 <translation id="1204184037023366446">Growser qoʻllaringiz holatini kuzatishi uchun ruxsat olmagan</translation>
 <translation id="5406591571925937375">Yaqinda ochmagansiz. Growser olib tashladi: <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>, <ph name="PERMISSION_3"/></translation>
+<translation id="3576895950897485019">Growser hisobiga kirish</translation>
 <translation id="5174969993834422967">Odatda bildirishnomalarni bloklaysiz. Ularni olish uchun manzillar qatoridan yuqori oʻng burchakdagi bildirishnoma belgisini bosing.</translation>
 <translation id="5174983315706567306">Diskdagi joy yetarli emas.</translation>
 <translation id="8157129267754368853">Growser hisobi uchun qayta autentifikatsiya kerak</translation>
@@ -372,6 +376,7 @@
 <translation id="5234764350956374838">Yopish</translation>
 <translation id="7690383309583926074">Parollarni istalgan joyda saqlash uchun Growser ilovasini yuklab oling</translation>
 <translation id="8586264863973514035">O‘zgarishlarni tatbi qilish uchun Growser qayta ishga tushirilishi zarur</translation>
+<translation id="8127050479140582768">Bu varaqni boshqa qurilmaga yuborish uchun har ikki qurilmada Growser hisobiga kiring</translation>
 <translation id="5286907366254680517">Aniqlandi</translation>
 <translation id="7264453786974905915">Growser ilovasini yuklab olish</translation>
 <translation id="7230006500876504868">Growser orqali qidirish</translation>
@@ -735,6 +740,7 @@ Growser sozlamalaringizni qaytadan tiklay olmadi.</translation>
 <translation id="5128665650717824082">Growser for Testing asosiy brauzer boʻla olmaydi.</translation>
 <translation id="3053208669360972929">Istalgan joydan Growser orqali qidiring</translation>
 <translation id="2433912322225810055">Bundan tashqari kengaytma Growser boshlash sahifasini va omniboksdagi so‘rovlar uchun foydalaniladigan birlamchi qidiruv tizimini o‘zgartirdi.</translation>
+<translation id="8789425457808164956">Bu varaqni boshqa qurilmaga yuborish uchun bu yerdan Growser hisobiga kiring</translation>
 <translation id="4100716194836114130">Bu sizning shaxsiy Growser brauzeringiz</translation>
 <translation id="8712637175834984815">Tushunarli</translation>
 <translation id="1419543648228375718">Growser hisobiga kirasizmi?</translation>
@@ -1389,4 +1395,29 @@ Bu sahifa kutilganidek ishlamasa, optimallashga ruxsat bering.</translation>
 <translation id="2375391460087228850">Growser ilovalari</translation>
 <translation id="3721794228264322796">Growser ichida Gemini oynasini yopish</translation>
 <translation id="2314508080153323869">Growser ichida Gemini</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> hisobiga allaqachon kirilgan. Internetni alohida kezish uchun Bravega shaxsiy profilingiz (<ph name="USER_EMAIL_ADDRESS"/>) orqali kiring. Shuningdek, <ph name="DEVICE"/> qurilmasidagi saqlangan sahifalar va boshqa maʼlumotlardan foydalana olasiz.</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> hisobiga allaqachon kirilgan. Internetni alohida kezish uchun Bravega shaxsiy profilingiz (<ph name="USER_EMAIL_ADDRESS"/>) orqali kiring. Shuningdek, <ph name="DEVICE"/> qurilmasidagi kengaytmalar va boshqa maʼlumotlardan foydalana olasiz.</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> hisobiga allaqachon kirilgan. Internetni alohida kezish uchun Bravega shaxsiy profilingiz (<ph name="USER_EMAIL_ADDRESS"/>) orqali kiring. Shuningdek, saqlangan sahifalar va boshqa maʼlumotlardan barcha qurilmalarda foydalana olasiz.</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> hisobiga allaqachon kirilgan. Internetni alohida kezish uchun Bravega shaxsiy profilingiz (<ph name="USER_EMAIL_ADDRESS"/>) orqali kiring. Shuningdek, kengaytmalar va boshqa maʼlumotlardan barcha qurilmalarda foydalana olasiz.</translation>
+<translation id="3429303382931281808"><ph name="DEVICE"/> qurilmasidagi parollar va boshqa maʼlumotlaringizni olish uchun Growser hisobiga kiring</translation>
+<translation id="7681019317864236341"><ph name="DEVICE"/> qurilmasidagi bukmarklar va boshqa maʼlumotlaringizni olish uchun Growser hisobiga kiring</translation>
+<translation id="1910605032088789136"><ph name="DEVICE"/> qurilmasidagi saqlangan axborot va boshqa maʼlumotlaringizni olish uchun Growser hisobiga kiring</translation>
+<translation id="6794970122141277862"><ph name="DEVICE"/> qurilmasidagi saqlangan sahifalar va boshqa maʼlumotlaringizni olish uchun Growser hisobiga kiring</translation>
+<translation id="3538050518049904702"><ph name="DEVICE"/> qurilmasidagi kengaytmalar va boshqa maʼlumotlaringizni olish uchun Growser hisobiga kiring</translation>
+<translation id="1447754948984825961">Barcha qurilmalarda bukmarklarni olish uchun Growser hisobiga kiring</translation>
+<translation id="5758015234894546674">Barcha qurilmalaringizda saqlangan maʼlumotlar va boshqalardan foydalanish uchun Growser hisobiga kiring</translation>
+<translation id="562156935182849823">Barcha qurilmalaringizda saqlangan sahifalar va boshqa maʼlumotlardan foydalanish uchun Growser hisobiga kiring</translation>
+<translation id="7817930780633998561">Oʻrnatilgan kengaytmalarni barcha qurilmalarda ishlatish uchun Growser hisobiga kiring</translation>
+<translation id="4444512588051585636">Growser ishtirokingizsiz avtomatik yangilanadi</translation>
+<translation id="950120991083623144">Growser yangilanishi kerak</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/> oʻrnatilishi kerak. Internetni xavfsiz kezish uchun Growser keyingi safar <ph name="IDLE_DURATION"/> ishlatilmaganda avtomatik yangilanadi.</translation>
+<translation id="8620823632809282061">Growser ichida Gemini Enterprise</translation>
+<translation id="4719707676382088645">Growser profili</translation>
+<translation id="7944326067922128825">Growser yigʻilgan boʻlsa ham, istalgan joydan qidiruv soʻrovini kiriting va savollaringizga javob oling. Bravega fonda ishlash ruxsatini beradi.</translation>
+<translation id="1760966099984077912">Istalgan joydan Growser orqali qidiring</translation>
+<translation id="4011238820523740465">Boshqa ilovalar yoki fayllar kabi Bravedan tashqaridagi kontent haqida soʻrang</translation>
+<translation id="1491740387498395373">va Growser orqali qidiring yoki <ph name="BEGIN_LINK"/>Sozlamalar<ph name="END_LINK"/> orqali moslang.</translation>
+<translation id="2672903539709015001">va Growser orqali qidiring.</translation>
+<translation id="1162630940779651724">Bu varaqni boshqa qurilmaga yuborish uchun har ikki qurilmada Growser hisobiga kiring</translation>
+<translation id="5388608738812110907">Bu varaqni boshqa qurilmaga yuborish uchun bu yerdan Growser hisobiga kiring</translation>
 </translationbundle>

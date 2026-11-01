@@ -120,6 +120,11 @@ const base::ListValue* FindParamsOrNull(const base::DictValue& req_body) {
 
 }  // namespace
 
+PolkadotRpcUrlMapCallback NoParachainUrlMap() {
+  return base::BindRepeating(
+      [](std::string_view chain_id) -> std::vector<GURL> { return {}; });
+}
+
 base::DictValue RequestBodyToJsonDict(const network::ResourceRequest& req) {
   const auto* body_elems = req.request_body->elements();
   CHECK(body_elems->size() == 1u);
@@ -229,9 +234,9 @@ std::optional<PolkadotChainMetadata> PolkadotMetadataFromChainName(
         /*transfer_allow_death_call_index=*/0,
         /*transfer_keep_alive_call_index=*/3,
         /*transfer_all_call_index=*/4,
-        /*ss58_prefix=*/0, /*spec_version=*/kUnknownSpecVersion,
+        /*ss58_prefix=*/42, /*spec_version=*/kUnknownSpecVersion,
         /*signed_extensions=*/
-        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18},
+        {21, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18},
         /*has_assets_pallet=*/true,
         /*assets_pallet_index=*/50,
         /*assets_transfer_all_call_index=*/32,
@@ -1246,6 +1251,10 @@ bool PolkadotMockRpc::HandleAuthorSubmitExtrinsic(
       } else {
         if (expected_extrinsic_.has_value()) {
           if (*expected_extrinsic_ != *extrinsic) {
+            ADD_FAILURE() << "author_submitExtrinsic extrinsic mismatch"
+                          << "\n  expected: " << *expected_extrinsic_
+                          << "\n    actual: " << *extrinsic;
+
             url_loader_factory_->AddResponse(req.url.spec(), R"(
               {
                 "jsonrpc": "2.0",

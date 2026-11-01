@@ -577,6 +577,7 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
     )
 
     viewController.modalPresentationStyle = .popover
+    viewController.preferredContentSize = CGSize(width: 400, height: 600)
 
     if let popover = viewController.popoverPresentationController {
       popover.sourceView = topToolbar.shieldsButton
@@ -586,7 +587,6 @@ extension BrowserViewController: TopToolbarDelegate, SearchContainerViewControll
       sheet.largestUndimmedDetentIdentifier = .medium
       sheet.prefersEdgeAttachedInCompactHeight = true
       sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
-      sheet.detents = [.medium(), .large()]
       sheet.prefersGrabberVisible = true
     }
     navigationController?.present(viewController, animated: true)

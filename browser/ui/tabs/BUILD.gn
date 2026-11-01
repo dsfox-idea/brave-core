@@ -4,12 +4,14 @@
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import("//brave/components/ai_chat/core/common/buildflags/buildflags.gni")
+import("//brave/components/brave_ads/buildflags/buildflags.gni")
 import("//brave/components/brave_wayback_machine/buildflags/buildflags.gni")
 import("//brave/components/containers/buildflags/buildflags.gni")
 import("//brave/components/playlist/core/common/buildflags/buildflags.gni")
 import("//brave/components/psst/buildflags/buildflags.gni")
 import("//brave/components/request_otr/common/buildflags/buildflags.gni")
 import("//brave/components/speedreader/common/buildflags/buildflags.gni")
+import("//brave/components/web_discovery/buildflags/buildflags.gni")
 import("//build/config/ui.gni")
 
 assert(is_win || is_mac || is_linux || is_chromeos || is_android)
@@ -58,15 +60,19 @@ if (!is_android) {
       "//brave/browser/image_metadata_stripper",
       "//brave/browser/misc_metrics:misc_metrics_impl",
       "//brave/browser/new_tab",
+      "//brave/browser/onboarding",
+      "//brave/browser/serp_metrics",
       "//brave/browser/ui:brave_tab_prefs",
       "//brave/browser/ui:ui_features",
       "//brave/browser/ui/focus_mode",
       "//brave/browser/ui/side_panel",
       "//brave/browser/ui/sidebar",
       "//brave/browser/ui/views/page_action",
+      "//brave/components/brave_ads/buildflags",
       "//brave/components/image_metadata_stripper/common",
       "//brave/components/misc_metrics",
       "//brave/components/request_otr/common/buildflags",
+      "//brave/components/web_discovery/buildflags",
       "//chrome/browser/content_settings:content_settings_factory",
       "//chrome/browser/profiles",
       "//chrome/browser/ui:browser_commands",
@@ -85,6 +91,21 @@ if (!is_android) {
 
     if (enable_ai_chat) {
       deps += [ "//brave/browser/ai_chat" ]
+    }
+
+    if (enable_web_discovery) {
+      deps += [ "//brave/browser/web_discovery" ]
+    }
+
+    if (is_win || is_mac || is_linux) {
+      deps += [ "//brave/browser/ui/geolocation" ]
+    }
+
+    if (enable_brave_ads) {
+      deps += [
+        "//brave/browser/brave_ads/creatives/search_result_ad",
+        "//brave/browser/brave_ads/tabs",
+      ]
     }
 
     if (enable_request_otr) {
@@ -135,6 +156,7 @@ if (!is_android) {
     ]
 
     deps = [
+      "//brave/browser/ui:brave_browser_window_header",
       "//brave/components/tabs",
       "//chrome/browser/ui:browser_window_header",
       "//chrome/browser/ui/tabs:features",
@@ -241,10 +263,10 @@ source_set("browser_tests") {
   sources = [ "brave_tab_menu_browsertest.cc" ]
 
   deps = [
+    "//brave/browser/ui",
     "//brave/browser/ui/tabs:tabs_public",
     "//brave/components/containers/buildflags",
     "//brave/components/resources:strings_grit",
-    "//chrome/browser/ui",
     "//chrome/test:test_support",
     "//content/public/browser",
     "//content/test:test_support",
@@ -265,6 +287,7 @@ source_set("browser_tests") {
     deps += [
       ":tab_menu",
       ":tab_model",
+      "//chrome/browser/ui:browser_tabstrip",
       "//chrome/browser/ui/tabs:tab_menu",
       "//chrome/browser/ui/views/frame:browser_view_header",
     ]

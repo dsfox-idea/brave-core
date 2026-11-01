@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Growser hakkında</translation>
 <translation id="987734326276404793">Telefonunuzda Growser ile fiyat takibi uyarıları alın</translation>
 <translation id="1203500561924088507">Yüklediğiniz için teşekkürler. <ph name="BUNDLE_NAME"/> uygulamasını kullanmadan önce tarayıcınızı yeniden başlatmanız gerekir.</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/> beklemede. Güvenli bir şekilde göz atmaya devam edebilmeniz için Growser, <ph name="IDLE_DURATION"/> boyunca işlem yapmadığınızda güncellenecek.</translation>
 <translation id="1232234696885483911">Görsel aramayı açtığınızda sayfa başlığı, URL'si ve içeriği (PDF'ler dahil) otomatik olarak sunucuya gönderilir. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Oturumunuz açıkken Growser'da Growser Hesabınızdaki şifrelerinizi ve diğer öğeleri kullanabilirsiniz. Bunu değiştirmek için "Growser'daki hesabınız" bölümüne gidin.</translation>
 <translation id="583633806828413086">Growser'da Gemini'ı Mac menü çubuğunda göster</translation>
@@ -219,6 +220,7 @@
 <translation id="3286538390144397061">Şimdi yeniden başlat</translation>
 <translation id="2339258256897053758">Growser API anahtarları eksik. Growser'un bazı işlevleri devre dışı bırakılacak.</translation>
 <translation id="8926637909431618259">Growser kapandığında arka plan uygulamaları çalıştırmaya devam et</translation>
+<translation id="8245661393996028021">Growser, siz bilgisayar başında olmadığınızda güncellenecek</translation>
 <translation id="518125528057094977">Growser, güvenli olmayan bağlantı kullanan siteleri yüklemeden önce sizi uyarır</translation>
 <translation id="8652321858775514885">Tüm Growser pencerelerini kapattığınızda çoğu sitedeki oturumunuz kapatılır. Growser'da oturum açtıysanız Growser Hesabınız buna dahil değildir. Sitelerin sizi hatırlamasını sağlamak için <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">arama alanının sağ üst köşesi: sağ %<ph name="RIGHT"/>, üst %<ph name="TOP"/></translation>
@@ -227,6 +229,7 @@
 <translation id="2645435784669275700">ChromeOS</translation>
 <translation id="2297290224191497273">Mevcut Growser profiline geçilsin mi?</translation>
 <translation id="3412460710772753638">Bu cihazdaki Şifre Yöneticisi'nde</translation>
+<translation id="172368702860945706">Growser güncelleme yapmak istiyor</translation>
 <translation id="5079573433701109938"><ph name="DEVICE"/> cihazınızdaki yer işaretlerinize ve diğer öğelerinize erişmek için Growser'da oturum açın</translation>
 <translation id="3438772217992559640">Bu Sekmeyi Görsel Arama ile Ara</translation>
 <translation id="2491221873705777076">Telefonunuzda Growser ile Gelişmiş Güvenli Tarama'yı genişletin</translation>
@@ -364,6 +367,7 @@
 <translation id="4877750182157975795"><ph name="DEVICE_TYPE"/> cihazınızda Growser ile tüm Growser favorilerinize erişin</translation>
 <translation id="1204184037023366446">Growser'un ellerinizi takip etmek için izne ihtiyacı var</translation>
 <translation id="5406591571925937375">Son zamanlarda ziyaret etmediniz. Growser; <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/> ve <ph name="PERMISSION_3"/> iznini kaldırdı.</translation>
+<translation id="3576895950897485019">Growser'da Oturum Açın</translation>
 <translation id="5174969993834422967">Genelde bildirimleri engelliyorsunuz. Bu sitenin size bildirim göndermesine izin vermek için konum çubuğunuzun sağ köşesindeki bildirim simgesini tıklayın.</translation>
 <translation id="5174983315706567306">Yeterli disk alanı yok.</translation>
 <translation id="8157129267754368853">Growser hesabı için yeniden kimlik doğrulama gerekiyor</translation>
@@ -372,6 +376,7 @@
 <translation id="5234764350956374838">Kapat</translation>
 <translation id="7690383309583926074">Hareket halindeyken şifreleri kaydetmek için Growser uygulamasını indirin</translation>
 <translation id="8586264863973514035">Yaptığınız değişiklikleri uygulamak için Growser'u yeniden başlatın</translation>
+<translation id="8127050479140582768">Bu sekmeyi başka bir cihaza göndermek için her iki cihazda da Growser'da oturum açın.</translation>
 <translation id="5286907366254680517">Algılandı</translation>
 <translation id="7264453786974905915">Growser uygulamasını indirin</translation>
 <translation id="7230006500876504868">Growser ile arama yapma</translation>
@@ -735,6 +740,7 @@ Growser ayarlarınızı kurtaramıyor.</translation>
 <translation id="5128665650717824082">Growser for Testing varsayılan tarayıcınız olarak ayarlanamaz.</translation>
 <translation id="3053208669360972929">Growser ile her yerden arama yapın</translation>
 <translation id="2433912322225810055">Ayrıca Growser'u başlattığınızda veya Çok Amaçlı Adres Çubuğu'ndan arama yaptığınızda gösterilecek sayfayı da denetler.</translation>
+<translation id="8789425457808164956">Bu sekmeyi başka bir cihaza göndermek için ilgili cihazda Growser'da oturum açın.</translation>
 <translation id="4100716194836114130">Bu sizin Growser'unuz</translation>
 <translation id="8712637175834984815">Anladım</translation>
 <translation id="1419543648228375718">Growser'da oturum açmak istiyor musunuz?</translation>
@@ -1377,4 +1383,29 @@ Bu sayfa beklendiği gibi çalışmıyorsa optimizasyona izin vermeyi deneyin.</
 <translation id="9194561096821877683">Brave Software</translation>
 <translation id="3721794228264322796">Growser'da Gemini'ı kapat</translation>
 <translation id="2314508080153323869">Growser'da Gemini</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> zaten oturum açmış durumda. Göz atma işlemlerinizi ayrı tutmak için Growser'da kendi profilinizde <ph name="USER_EMAIL_ADDRESS"/> olarak oturum açın. Ayrıca, <ph name="DEVICE"/> içindeki okuma listenize ve diğer öğelere de erişebilirsiniz.</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> zaten oturum açmış durumda. Göz atma işlemlerinizi ayrı tutmak için Growser'da kendi profilinizde <ph name="USER_EMAIL_ADDRESS"/> olarak oturum açın. Ayrıca, <ph name="DEVICE"/> içindeki uzantılarınıza ve diğer öğelere de erişebilirsiniz.</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> zaten oturum açmış durumda. Göz atma işlemlerinizi ayrı tutmak için Growser'da kendi profilinizde <ph name="USER_EMAIL_ADDRESS"/> olarak oturum açın. Ayrıca, tüm cihazlarınızdaki okuma listenize ve diğer öğelere de erişebilirsiniz.</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> zaten oturum açmış durumda. Göz atma işlemlerinizi ayrı tutmak için Growser'da kendi profilinizde <ph name="USER_EMAIL_ADDRESS"/> olarak oturum açın. Ayrıca, uzantılarınıza ve diğer öğelerinize tüm cihazlarınızdan erişebilirsiniz.</translation>
+<translation id="3429303382931281808"><ph name="DEVICE"/> cihazınızdaki şifrelerinize ve diğer öğelerinize erişmek için Growser'da oturum açın</translation>
+<translation id="7681019317864236341"><ph name="DEVICE"/> cihazınızdaki yer işaretlerinize ve diğer öğelerinize erişmek için Growser'da oturum açın</translation>
+<translation id="1910605032088789136"><ph name="DEVICE"/> cihazınızdaki kayıtlı bilgilerinize ve diğer öğelerinize erişmek için Growser'da oturum açın</translation>
+<translation id="6794970122141277862"><ph name="DEVICE"/> cihazınızdaki okuma listenize ve diğer öğelerinize erişmek için Growser'da oturum açın</translation>
+<translation id="3538050518049904702"><ph name="DEVICE"/> cihazınızdaki uzantılarınıza ve diğer öğelerinize erişmek için Growser'da oturum açın</translation>
+<translation id="1447754948984825961">Yer işaretlerinizi ve diğer öğelerinizi tüm cihazlarınızda kullanmak için Growser'da oturum açın</translation>
+<translation id="5758015234894546674">Kayıtlı bilgilerinize ve diğer öğelerinize tüm cihazlarınızda erişmek için Growser'da oturum açın</translation>
+<translation id="562156935182849823">Okuma listenize ve diğer öğelerinize tüm cihazlarınızda erişmek için Growser'da oturum açın</translation>
+<translation id="7817930780633998561">Uzantılarınıza ve diğer öğelerinize tüm cihazlarınızda erişmek için Growser'da oturum açın</translation>
+<translation id="4444512588051585636">Growser, siz bilgisayar başında olmadığınızda güncellenecek</translation>
+<translation id="950120991083623144">Growser güncelleme yapmak istiyor</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/> beklemede. Güvenli bir şekilde göz atmaya devam edebilmeniz için Growser, <ph name="IDLE_DURATION"/> boyunca işlem yapmadığınızda güncellenecek.</translation>
+<translation id="8620823632809282061">Growser'da Gemini Enterprise</translation>
+<translation id="4719707676382088645">Growser profili</translation>
+<translation id="7944326067922128825">Growser simge durumuna küçültülmüş olsa bile her yerden arama yapın ve soru sorun. Growser'un arka planda çalışmasına izin verir.</translation>
+<translation id="1760966099984077912">Growser ile her yerden arama yapın</translation>
+<translation id="4011238820523740465">Growser dışındaki içerikler (ör. diğer uygulamalar veya dosyalar) hakkında soru sorun</translation>
+<translation id="1491740387498395373">Growser ile arayın veya <ph name="BEGIN_LINK"/>Ayarlar<ph name="END_LINK"/>'da özelleştirin</translation>
+<translation id="2672903539709015001">Growser ile arayın.</translation>
+<translation id="1162630940779651724">Bu sekmeyi başka bir cihaza göndermek için her iki cihazda da Growser'da oturum açın.</translation>
+<translation id="5388608738812110907">Bu sekmeyi başka bir cihaza göndermek için ilgili cihazda Growser'da oturum açın.</translation>
 </translationbundle>

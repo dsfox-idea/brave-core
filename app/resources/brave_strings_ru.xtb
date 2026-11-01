@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">О Growser</translation>
 <translation id="987734326276404793">Получайте на телефон уведомления от Growser об изменении цен</translation>
 <translation id="1203500561924088507">Спасибо, что установили <ph name="BUNDLE_NAME"/>. Чтобы изменения вступили в силу, перезапустите браузер.</translation>
+<translation id="1213674046343558619">Запланировано <ph name="IMPORTANT_UPDATE"/>. Чтобы обеспечить безопасность работы в браузере, Growser обновится, когда вы не будете им пользоваться в течение <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Когда вы открываете поиск картинок, заголовок, URL и контент страницы, включая PDF-файлы, автоматически отправляются на сервер. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Когда выполнен вход, вы можете использовать в Growser свои пароли и другие данные, сохраненные в аккаунте Growser. Чтобы изменить это, откройте раздел "Ваш аккаунт в Growser".</translation>
 <translation id="583633806828413086">Показывать Gemini в Growser в строке меню macOS</translation>
@@ -219,6 +220,7 @@
 <translation id="3286538390144397061">Перезапустить сейчас</translation>
 <translation id="2339258256897053758">Отсутствуют ключи API Growser. Некоторые функции Growser могут не работать.</translation>
 <translation id="8926637909431618259">Продолжить выполнение фоновых приложений после закрытия Growser</translation>
+<translation id="8245661393996028021">Growser обновится во время бездействия.</translation>
 <translation id="518125528057094977">Growser будет предупреждать вас о переходе на любой сайт с незащищенным соединением</translation>
 <translation id="8652321858775514885">Если вы закроете все окна Growser, то выйдете из системы на большинстве сайтов. Вы останетесь в аккаунте Growser, если ранее вошли в Growser. Разрешить сайтам сохранять ваши данные можно <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">правый верхний угол области поиска: <ph name="RIGHT"/> % справа, <ph name="TOP"/> % сверху</translation>
@@ -227,6 +229,7 @@
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">Переключиться на существующий профиль Growser?</translation>
 <translation id="3412460710772753638">В Менеджере паролей на этом устройстве</translation>
+<translation id="172368702860945706">Growser необходимо обновить</translation>
 <translation id="5079573433701109938">Чтобы получить доступ к закладкам и другим данным с <ph name="DEVICE"/>, войдите в Growser.</translation>
 <translation id="3438772217992559640">Искать содержимое вкладки через поиск по картинке</translation>
 <translation id="2491221873705777076">Расширьте возможности улучшенного Безопасного просмотра с помощью Growser на телефоне</translation>
@@ -364,6 +367,7 @@
 <translation id="4877750182157975795">Пользуйтесь любимыми инструментами Growser в Growser на <ph name="DEVICE_TYPE"/>.</translation>
 <translation id="1204184037023366446">Growser необходимо разрешение на отслеживание рук</translation>
 <translation id="5406591571925937375">Вы давно не посещали этот сайт. Браузер Growser отозвал разрешения "<ph name="PERMISSION_1"/>", "<ph name="PERMISSION_2"/>" и "<ph name="PERMISSION_3"/>".</translation>
+<translation id="3576895950897485019">Вход в Growser</translation>
 <translation id="5174969993834422967">Обычно вы блокируете уведомления. Чтобы получать их с этого сайта, нажмите на значок оповещений в правом верхнем углу адресной строки.</translation>
 <translation id="5174983315706567306">Недостаточно места на диске.</translation>
 <translation id="8157129267754368853">Необходимо снова войти в аккаунт Growser</translation>
@@ -372,6 +376,7 @@
 <translation id="5234764350956374838">Закрыть</translation>
 <translation id="7690383309583926074">Скачайте приложение Growser, чтобы сохранять пароли на мобильных устройствах</translation>
 <translation id="8586264863973514035">Чтобы изменения вступили в силу, перезапустите Growser.</translation>
+<translation id="8127050479140582768">Чтобы отправить эту вкладку с одного устройства на другое, на обоих войдите в Growser.</translation>
 <translation id="5286907366254680517">Определен автоматически</translation>
 <translation id="7264453786974905915">Скачать Growser</translation>
 <translation id="7230006500876504868">Поиск с помощью Growser</translation>
@@ -733,6 +738,7 @@
 <translation id="5128665650717824082">Growser для тестирования нельзя сделать браузером по умолчанию.</translation>
 <translation id="3053208669360972929">Выполняйте поиск в Growser откуда угодно</translation>
 <translation id="2433912322225810055">Кроме того, расширение изменило стартовую страницу Growser и поисковую систему, используемую по умолчанию при вводе запроса в омнибокс.</translation>
+<translation id="8789425457808164956">Чтобы отправить эту вкладку на другое устройство, войдите на нем в Growser.</translation>
 <translation id="4100716194836114130">Ваш персональный Growser</translation>
 <translation id="8712637175834984815">OK</translation>
 <translation id="1419543648228375718">Войти в Growser?</translation>
@@ -1488,4 +1494,10 @@
 <translation id="7817930780633998561">Войдите в Growser, чтобы расширения и другие данные были на всех ваших устройствах</translation>
 <translation id="8620823632809282061">Gemini Enterprise в Growser</translation>
 <translation id="4011238820523740465">Спрашивайте о том, что находится за пределами Growser, например в других приложениях или файлах</translation>
+<translation id="4444512588051585636">Growser обновится во время бездействия.</translation>
+<translation id="950120991083623144">Growser необходимо обновить</translation>
+<translation id="8250854223127536286">Запланировано <ph name="IMPORTANT_UPDATE"/>. Чтобы обеспечить безопасность работы в браузере, Growser обновится, когда вы не будете им пользоваться в течение <ph name="IDLE_DURATION"/>.</translation>
+<translation id="4719707676382088645">Профиль Growser</translation>
+<translation id="1162630940779651724">Чтобы отправить эту вкладку с одного устройства на другое, на обоих войдите в Growser.</translation>
+<translation id="5388608738812110907">Чтобы отправить эту вкладку на другое устройство, войдите на нем в Growser.</translation>
 </translationbundle>

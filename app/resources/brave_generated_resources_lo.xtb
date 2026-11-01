@@ -117,6 +117,8 @@
 <translation id="2162109630536601963">ຖ້າ Extension ນີ້ໃຊ້ຄຳຮ້ອງຂໍເຄື່ອງເຊດ, ເຈົ້າຈະບໍ່ໄດ້ໃຊ້ Tor ຫຼື private mode.</translation>
 <translation id="2725327089319971976">ເພື່ອປິດການໃຊ້ Extension ໃນ private mode ແລະ Tor mode, ເລືອກຕົວເລືອກນີ໘ສຳເລັດໄດ້ໃຫ້.</translation>
 <translation id="438106944087726695">Growser-hosted</translation>
+<translation id="2265651566599167057">ຖືກທຳເຄື່ອງໝາຍວ່າເປັນ malware ໂດຍ Socket.</translation>
+<translation id="2607395470596637070">ຮຽນຮູ້ເພີ່ມເຕີມກ່ຽວກັບວິທີທີ່ Socket ໃນ Growser ປົກປ້ອງທ່ານ</translation>
 <translation id="3371343170427636147">Growser Browser Nightly Apps</translation>
 <translation id="4097979995947147464">Growser Browser Beta Apps</translation>
 <translation id="8303432794159193481">Growser Browser Dev Apps</translation>
@@ -722,7 +724,7 @@
 <translation id="4432071071853308688">ລະຫັດນີ້ເປັນຄ່າວ່າງ</translation>
 <translation id="955848693465029904">ມີຄວາມຜິດພາດໂປເລດຫານຂອງການຕັ້ງຄ່າ Sync</translation>
 <translation id="7456398316301207582">ມີຄວາມຜິດພາດໂປເລດຫານການລົບບັນຊີ</translation>
-<translation id="859506441384380749">ລະຫັດນີ້ຖືກສ້າງໂດຍຮຸ່ນເກົ່າຂອງ Growser. ກະລຸນາອັບເດດເຄรื่องອື່ນຂອງທ່ານກ່ອນ.</translation>
+<translation id="4002014583969312635">ເບິ່ງຄືວ່າລະຫັດນີ້ຖືກສ້າງຂຶ້ນໃນອຸປະກອນທີ່ໃຊ້ Growser ເວີຊັນເກົ່າ. ກະລຸນາອັບເດດເປັນ Growser ເວີຊັນຫຼ້າສຸດໃນອຸປະກອນອື່ນຂອງທ່ານ, ແລ້ວສ້າງລະຫັດ sync ໃໝ່.</translation>
 <translation id="3132642509209154999">ລະຫັດນີ້ໝົດກຳນົດແລ້ວ. ກະລຸນາສ້າງໃໝ່ໃນເຄື່ອງອື່ນຂອງທ່ານແລະລອງໃໝ່.</translation>
 <translation id="2859229680945501779">ລະຫັດນີ້ເປັນບໍ່ຖືກຕ້ອງ. ກະລຸນາກວດຄືນວ່າເວລາແລະເຂດເວລາຖືກຕັ້ງຄ່າຢ່າງຖືກຕ້ອງໃນເຄື່ອງອະນຸຍາດ.</translation>
 <translation id="2339730291919608488">ອອກຈາກ Sync Chain</translation>
@@ -1011,6 +1013,7 @@
 <translation id="6578040791557152233">ອັບໂຫຼດຮູບພາບ profile ແບບກໍານົດເອງ</translation>
 <translation id="9222124079546967592">ລຶບຮູບພາບ profile ແບບກໍານົດເອງ</translation>
 <translation id="6058660912941570282">Growser ບໍ່ສາມາດໃຊ້ໄຟລ໌ນີ້ໄດ້. ເລືອກຮູບພາບອື່ນ ແລ້ວລອງໃໝ່ອີກຄັ້ງ.</translation>
+<translation id="859506441384380749">ລະຫັດນີ້ຖືກສ້າງໂດຍຮຸ່ນເກົ່າຂອງ Growser. ກະລຸນາອັບເດດເຄรื่องອື່ນຂອງທ່ານກ່ອນ.</translation>
 <translation id="4678672101289648246">ເຉົ້າຢູ່ເທົ່ານັ້ນໃນໜ້າແທບໃໝ່</translation>
 <translation id="8294286161128352783">ເຉົ້າຢູ່ເທົ່ານັ້ນໃນໜ້າແທບໃໝ່</translation>
 <translation id="1035309871698658326">ເມື່ອເປີດແລ້ວ, ນີ້ຈະສົ່ງຫົວຂໍ້ ແລະ ຕົ້ນກຳເນີດຂອງແຖບທີ່ບໍ່ແມ່ນສ່ວນຕົວທັງໝົດໄປຫາ Leo ໂດຍອັດຕະໂນມັດເພື່ອຈັດປະເພດພວກມັນ.</translation>
@@ -1125,4 +1128,6 @@
 <translation id="6524973012848479397">ຊ່ວຍສະໜັບສະໜູນພາລະກິດຂອງ Growser ໃນການສ້າງເວັບທີ່ເປັນອິດສະຫຼະ, ໃຫ້ຄວາມສໍາຄັນກັບຜູ້ໃຊ້ເປັນອັນດັບໜຶ່ງດ້ວຍ Sponsored Ads. ພວກເຮົາວັດແທກປະສິດທິພາບຂອງ ad ຢ່າງເປັນສ່ວນຕົວ, ໂດຍບໍ່ໄດ້ລະບຸຕົວທ່ານ.</translation>
 <translation id="1054078509920433577">Growser ບໍ່ສາມາດໃຊ້ໄຟລ໌ນີ້ໄດ້. ເລືອກຮູບພາບອື່ນ ແລ້ວລອງໃໝ່ອີກຄັ້ງ.</translation>
 <translation id="9194561096821877683">Growser</translation>
+<translation id="6132163760114048767">ເບິ່ງຄືວ່າລະຫັດນີ້ຖືກສ້າງຂຶ້ນໃນອຸປະກອນທີ່ໃຊ້ Growser ເວີຊັນເກົ່າ. ກະລຸນາອັບເດດເປັນ Growser ເວີຊັນຫຼ້າສຸດໃນອຸປະກອນອື່ນຂອງທ່ານ, ແລ້ວສ້າງລະຫັດ sync ໃໝ່.</translation>
+<translation id="2894616471536253971">ຮຽນຮູ້ເພີ່ມເຕີມກ່ຽວກັບວິທີທີ່ Socket ໃນ Growser ປົກປ້ອງທ່ານ</translation>
 </translationbundle>

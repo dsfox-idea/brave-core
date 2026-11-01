@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/common/installer.py b/chrome/installer/linux/common/installer.py
-index a665f75dc61afd4cd23ac9a11ddbfbb23c097ccf..d13f068a1a0d3694f20e925f55c24929c293f3f6 100644
+index b2b6f8c06d07c23a86071f93c5733ee6029d23f2..770d524a80546490bf270890638a61e29d968268 100644
 --- a/chrome/installer/linux/common/installer.py
 +++ b/chrome/installer/linux/common/installer.py
 @@ -218,6 +218,8 @@ def gen_changelog(

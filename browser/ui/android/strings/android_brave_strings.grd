@@ -399,6 +399,9 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_MENU_EXIT" desc="Menu item for exit browser. [CHAR-LIMIT=27]">
         Exit
       </message>
+      <message name="IDS_BRAVE_MENU_ADD_TO_HOME_SCREEN" desc="Menu item for adding the current site to the device Home screen. [CHAR-LIMIT=27]">
+        Add to Home screen
+      </message>
       <message name="IDS_UNSTOPPABLE_DOMAINS_TITLE" desc="Title for Unstoppable Domains settings.">
         Unstoppable Domains
       </message>
@@ -832,9 +835,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
       <message name="IDS_BOTTOM_TOOLBAR_TITLE" desc="Title for the bottom navigation toolbar setting.">
         Bottom navigation toolbar
-      </message>
-      <message name="IDS_ENABLE_BOTTOM_BAR_TITLE" desc="Title for the setting that enables the bottom bar.">
-        Enable bottom bar
       </message>
       <message name="IDS_BOTTOM_TOOLBAR_SUMMARY" desc="Summary for preference that enables the bottom navigation toolbar.">
         Show a bottom bar for quick access to home, bookmarks, and search

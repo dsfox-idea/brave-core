@@ -15,17 +15,15 @@ namespace meld_integration_responses {
     dictionary Country {
         DOMString countryCode;
         DOMString? name;
-        DOMString? flagImageUrl;
     };
 
     dictionary CryptoCurrency {
         DOMString currencyCode;
-        DOMString? name;
-        DOMString? chainCode;
-        DOMString? chainName;
+        DOMString name;
+        DOMString chainCode;
         DOMString? chainId;
         DOMString? contractAddress;
-        DOMString? symbolImageUrl;
+        DOMString symbolImageUrl;
     };
 
     dictionary FiatCurrency {

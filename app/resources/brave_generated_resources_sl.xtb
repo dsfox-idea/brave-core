@@ -119,6 +119,8 @@ To lahko spremenite tudi pozneje na <ph name="SETTINGS_EXTENIONS_LINK"/>.</trans
 <translation id="2162109630536601963">Če ta razširitev daje omrežne zahteve, ne bo uporabljala Tor ali zasebnega načina.</translation>
 <translation id="2725327089319971976">Če želite onemogočiti to razširitev v zasebnem načinu in načinu Tor, počistite to možnost.</translation>
 <translation id="438106944087726695">Gostitelj: Growser</translation>
+<translation id="2265651566599167057">Socket je to označil kot zlonamerno programsko opremo.</translation>
+<translation id="2607395470596637070">Preberite več o tem, kako vas Socket v Growser ščiti</translation>
 <translation id="3371343170427636147">Nočne aplikacije brskalnika Growser</translation>
 <translation id="4097979995947147464">Beta aplikacije brskalnika Growser</translation>
 <translation id="8303432794159193481">Dev aplikacije brskalnika Growser</translation>
@@ -726,7 +728,7 @@ se lahko izteče. Ali ga želite obnoviti?</translation>
 <translation id="4432071071853308688">Ta koda je prazna</translation>
 <translation id="955848693465029904">Napaka pri nastavitvi notranje sinhronizacije</translation>
 <translation id="7456398316301207582">Notranja napaka pri brisanju računa</translation>
-<translation id="859506441384380749">To kodo je ustvarila zastarela različica Growser, najprej nadgradite svojo drugo napravo</translation>
+<translation id="4002014583969312635">Izgleda, da je bila ta koda ustvarjena na napravi s starejšo različico Growser. Prosimo, posodobite na najnovejšo različico Growser na drugi napravi in nato ustvarite novo kodo sinhronizacije.</translation>
 <translation id="3132642509209154999">Ta koda je potekla. Ustvarite novo v drugi napravi in poskusite znova.</translation>
 <translation id="2859229680945501779">Ta koda ni veljavna. Preverite, ali sta ura in časovni pas na vaši napravi pravilno nastavljena.</translation>
 <translation id="2339730291919608488">Zapusti sinhronizacijsko verigo</translation>
@@ -1020,6 +1022,7 @@ ponovno uporabo sinhronizacije, boste morali ustvariti nov račun in posamično 
 <translation id="6578040791557152233">Naloži sliko profila po meri</translation>
 <translation id="9222124079546967592">Odstrani sliko profila po meri</translation>
 <translation id="6058660912941570282">Growser ne more uporabiti te datoteke. Izberite drugo sliko in poskusite znova.</translation>
+<translation id="859506441384380749">To kodo je ustvarila zastarela različica Growser, najprej nadgradite svojo drugo napravo</translation>
 <translation id="4678672101289648246">Samo na strani »Nov zavihek«</translation>
 <translation id="8294286161128352783">Samo na strani nov zavihek</translation>
 <translation id="1035309871698658326">Ko jo odprete, bo Leu samodejno poslala naslove in izvor vseh zavihkov, ki niso zasebni, da jih razvrsti.</translation>
@@ -1139,4 +1142,6 @@ Preberete si lahko <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>navodila o tem, kak
 <translation id="6524973012848479397">Pomagajte podpreti poslanstvo Growser pri gradnji neodvisnega spleta, ki daje prednost uporabnikom, s sponzoriranimi oglasi. Uspešnost oglasov merimo zasebno, ne da bi vas identificirali.</translation>
 <translation id="1054078509920433577">Growser ne more uporabiti te datoteke. Izberite drugo sliko in poskusite znova.</translation>
 <translation id="9194561096821877683">Growser</translation>
+<translation id="6132163760114048767">Izgleda, da je bila ta koda ustvarjena na napravi s starejšo različico Growser. Prosimo, posodobite na najnovejšo različico Growser na drugi napravi in nato ustvarite novo kodo sinhronizacije.</translation>
+<translation id="2894616471536253971">Preberite več o tem, kako vas Socket v Growser ščiti</translation>
 </translationbundle>

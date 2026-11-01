@@ -125,13 +125,13 @@
 "backgroundDownloadingSubtitle" = "%@";
 
 /* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with a progress and a file size. E.g. '1MB of 20MB' */
-"backgroundDownloadingSubtitleWithExpectedSize" = "%@ из %@";
+"backgroundDownloadingSubtitleWithExpectedSize" = "%1$@ из %2$@";
 
 /* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %lld is replaced with the number of active downloads */
-"backgroundDownloadingTitleMultiDownload" = "Загружается файлов: %lld";
+"backgroundDownloadingTitleMultiDownload" = "Скачивание %lld файлов";
 
 /* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %@ is replaced with a file name */
-"backgroundDownloadingTitleSingleDownload" = "Загрузка «%@»";
+"backgroundDownloadingTitleSingleDownload" = "Скачивается «%@»";
 
 /* cookie settings option */
 "Block3rdPartyCookies" = "Блокировать сторонние файлы cookie";
@@ -1060,6 +1060,18 @@
 /* No comment provided by engineer. */
 "ntp.sponsoredImageDescription" = "Просматривая это спонсорское изображение, вы поддерживаете издателей и создателей контента.";
 
+/* The title of a picker for user to pick which type of topsites to show in NTP */
+"ntp.topsites" = "Топ-сайты";
+
+/* Favorites type of topsites. Selection means NTP will display favorites tiles if there is any. */
+"ntp.topsitesTypeFavorites" = "Избранное";
+
+/* MostVisited type of topsites. Selection means NTP will display most visited tiles if there is any. */
+"ntp.topsitesTypeMostVisited" = "Часто посещаемый";
+
+/* None type of topsites. Selection means there won't be any topsites tiles in NTP */
+"ntp.topsitesTypeNone" = "Нет";
+
 /* The placeholder says 'Terms of Service'. So full sentence goes like: 'By turning Rewards, you agree to the Terms of Service'. */
 "ntp.turnRewardsTos" = "Включая Growser Rewards, вы принимаете";
 
@@ -1450,12 +1462,6 @@
 /* The title for the alert that shows up when an item is expired */
 "playList.expiredAlertTitle" = "Время ожидания для видео истекло";
 
-/* Number of items in the playlsit folder. Example: '10 items' */
-"playlist.folderItemCountPlural" = "Объектов: %d";
-
-/* Title for when there's a single item inside of a folder */
-"playlist.foldersCountSingular" = "Объектов: %d";
-
 /* Description for load resources error alert */
 "playList.loadResourcesErrorAlertDescription" = "При загрузке этого ресурса произошла ошибка.";
 
@@ -1587,12 +1593,6 @@
 
 /* The title of the screen to create a new folder */
 "playlistFolders.newFolderScreenTitle" = "Новый плейлист";
-
-/* The sub-title of the folder. Example: This folder contains 10 Items. This folder contains 3 Items. */
-"playlistFolders.subtitleItemCount" = "Объектов: %lld.";
-
-/* The sub-title of the folder. Example: This folder contains ONE item. This folder contains 1 Item. */
-"playlistFolders.subtitleItemSingleCount" = "1 объект.";
 
 /* The title of a folder when the user enters no name (untitled) */
 "playlistFolders.untitledFolderTitle" = "Плейлист без названия";
@@ -1787,13 +1787,13 @@
 "quickview.back.accessibility.label" = "Предыдущая страница";
 
 /* Button title to keep opening links in QuickView after the confirmation alert. */
-"quickview.confirmation.alert.keep.button.title" = "Оставить быстрый просмотр";
+"quickview.confirmation.alert.keep.button.title" = "Продолжить использовать QuickView";
 
 /* Message of the alert shown the first time a user closes QuickView, explaining the feature and where to change it. */
-"quickview.confirmation.alert.message" = "Быстрый просмотр открывает ссылку, не уводя со страницы. Отключить его можно в любой момент в настройках.";
+"quickview.confirmation.alert.message" = "QuickView позволяет просматривать ссылки, не покидая страницу. Вы можете отключить это в любое время в настройках.";
 
 /* Title of the alert shown the first time a user closes QuickView, asking if they want to keep using it for future links. */
-"quickview.confirmation.alert.title" = "Открывать ссылки из переписки в быстром просмотре и дальше?";
+"quickview.confirmation.alert.title" = "Продолжить открывать ссылки из бесед в режиме быстрого просмотра?";
 
 /* Button title to stop opening links in QuickView after the confirmation alert. */
 "quickview.confirmation.alert.turnOff.button.title" = "Отключить";
@@ -2324,7 +2324,7 @@
 "SendReportButtonTitle" = "Отправить отчет";
 
 /* A callout that explains how to set Brave as the default browser. This is a markdown string, the ** is for bold. */
-"setDefaultBrowserCalloutTitle" = "Теперь можно установить Growser в качестве браузера по умолчанию для iOS. Нажмите, чтобы открыть настройки.";
+"setDefaultBrowserCalloutTitle" = "**Установите Growser в качестве браузера по умолчанию и блокируйте рекламу на каждом посещаемом сайте.** Нажмите здесь, чтобы открыть настройки и установить Growser по умолчанию.";
 
 /* Settings item to set the Brave as a default browser on the iOS device. */
 "setDefaultBrowserSettingsCell" = "Установить в качестве браузера по умолчанию";
@@ -2415,6 +2415,12 @@
 
 /* Title to explain the survey panelist toggle */
 "settings.surveyPanelistTitle" = "Разрешить опросы Growser";
+
+/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
+"settings.sponsoredAdsEnabledDescription" = "Помогите поддержать миссию Growser по созданию независимого, ориентированного на пользователя интернета с помощью спонсируемой рекламы. Мы измеряем эффективность рекламы конфиденциально, не идентифицируя вас. [Подробнее](%@)";
+
+/* Title of the settings toggle that enables Sponsored Ads */
+"settings.sponsoredAdsEnabledTitle" = "Включить спонсируемую рекламу";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";

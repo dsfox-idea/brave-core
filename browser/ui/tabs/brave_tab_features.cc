@@ -12,12 +12,16 @@
 #include "brave/browser/image_metadata_stripper/file_upload_controller.h"
 #include "brave/browser/misc_metrics/captcha_metrics.h"
 #include "brave/browser/misc_metrics/page_metrics_tab_helper.h"
+#include "brave/browser/onboarding/onboarding_tab_helper.h"
+#include "brave/browser/serp_metrics/serp_metrics_tab_helper.h"
 #include "brave/browser/ui/side_panel/brave_side_panel_utils.h"
 #include "brave/browser/ui/sidebar/sidebar_tab_helper.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/image_metadata_stripper/common/features.h"
 #include "brave/components/misc_metrics/features.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
+#include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/page_action/action_ids.h"
@@ -27,6 +31,19 @@
 #include "chrome/browser/ui/thumbnails/thumbnail_tab_helper.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
 #include "components/tabs/public/tab_interface.h"
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+#include "brave/browser/brave_ads/creatives/search_result_ad/creative_search_result_ad_tab_helper.h"
+#include "brave/browser/brave_ads/tabs/ads_tab_helper.h"
+#endif
+
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+#include "brave/browser/ui/geolocation/brave_geolocation_permission_tab_helper.h"
+#endif
+
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
+#include "brave/browser/web_discovery/web_discovery_tab_helper.h"
+#endif
 
 #if BUILDFLAG(ENABLE_REQUEST_OTR)
 #include "brave/browser/request_otr/request_otr_tab_helper.h"
@@ -216,6 +233,25 @@ void BraveTabFeatures::Init(TabInterface& tab, Profile* profile) {
       std::make_unique<misc_metrics::PageMetricsTabHelper>(tab);
 
   sidebar_tab_helper_ = sidebar::SidebarTabHelper::MaybeCreate(tab);
+  onboarding_tab_helper_ = OnboardingTabHelper::MaybeCreate(tab);
+  serp_metrics_tab_helper_ =
+      serp_metrics::SerpMetricsTabHelper::MaybeCreate(tab);
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+  ads_tab_helper_ = std::make_unique<brave_ads::AdsTabHelper>(tab);
+  creative_search_result_ad_tab_helper_ =
+      brave_ads::CreativeSearchResultAdTabHelper::MaybeCreate(tab);
+#endif
+
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
+  web_discovery_tab_helper_ =
+      web_discovery::WebDiscoveryTabHelper::MaybeCreate(tab, *profile);
+#endif
+
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+  geolocation_permission_tab_helper_ =
+      std::make_unique<BraveGeolocationPermissionTabHelper>(tab);
+#endif
 
 #if BUILDFLAG(ENABLE_REQUEST_OTR)
   if (!profile->IsOffTheRecord() &&

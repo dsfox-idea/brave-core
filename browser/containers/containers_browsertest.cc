@@ -39,6 +39,7 @@
 #include "chrome/browser/sessions/exit_type_service.h"
 #include "chrome/browser/sessions/tab_restore_service_factory.h"
 #include "chrome/browser/ui/actions/chrome_action_id.h"
+#include "chrome/browser/ui/browser_actions.h"
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_interface.h"
@@ -48,6 +49,7 @@
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/frame/horizontal_tab_strip_region_view.h"
+#include "chrome/browser/ui/views/frame/toolbar_button_provider.h"
 #include "chrome/browser/ui/views/location_bar/icon_label_bubble_view.h"
 #include "chrome/browser/ui/views/page_action/page_action_view.h"
 #include "chrome/browser/ui/views/page_action/test_support/page_action_test_accessor.h"
@@ -72,12 +74,15 @@
 #include "components/tabs/public/tab_interface.h"
 #include "components/webapps/common/web_app_id.h"
 #include "content/public/browser/browsing_data_remover.h"
+#include "content/public/browser/content_browser_client.h"
+#include "content/public/browser/hid_delegate.h"
 #include "content/public/browser/host_zoom_map.h"
 #include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/navigation_entry.h"
 #include "content/public/browser/security_principal.h"
 #include "content/public/browser/storage_partition.h"
 #include "content/public/browser/storage_partition_config.h"
+#include "content/public/common/content_client.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
 #include "content/public/test/browsing_data_remover_test_util.h"
@@ -1837,11 +1842,8 @@ IN_PROC_BROWSER_TEST_F(ContainersBrowserTest,
   auto* tab_strip_model = browser()->tab_strip_model();
   ASSERT_EQ(1, tab_strip_model->count());
 
-  IconLabelBubbleView* partitioned_storage_view =
-      page_actions::PageActionTestAccessor(browser(),
-                                           kActionShowPartitionedStorage)
-          .view();
-  ASSERT_NE(nullptr, partitioned_storage_view);
+  page_actions::PageActionTestAccessor partitioned_storage_view(
+      browser(), kActionShowPartitionedStorage);
 
   const GURL url("https://a.test/simple.html");
 
@@ -1859,31 +1861,34 @@ IN_PROC_BROWSER_TEST_F(ContainersBrowserTest,
   EXPECT_EQ(2, tab_strip_model->count());
   EXPECT_TRUE(content::WaitForLoadStop(tab_strip_model->GetWebContentsAt(1)));
 
-  EXPECT_TRUE(partitioned_storage_view->GetVisible())
+  EXPECT_TRUE(partitioned_storage_view.GetVisible())
       << "PartitionedStorage icon should be visible on container tab.";
 
   // Switch to tab 0 (default) -> icon should be hidden.
   tab_strip_model->ActivateTabAt(0);
   RunScheduledLayouts();
-  EXPECT_FALSE(partitioned_storage_view->GetVisible());
+  EXPECT_FALSE(partitioned_storage_view.GetVisible());
 
   // Switch back to tab 1 (container) -> icon should be visible.
   tab_strip_model->ActivateTabAt(1);
   RunScheduledLayouts();
-  EXPECT_TRUE(partitioned_storage_view->GetVisible());
+  EXPECT_TRUE(partitioned_storage_view.GetVisible());
 }
 
 IN_PROC_BROWSER_TEST_F(
     ContainersBrowserTest,
     PartitionedStoragePageActionRightClickSetsActionItemShowingBubble) {
   actions::ActionItem* const partitioned_storage_action =
-      actions::ActionManager::Get().FindAction(kActionShowPartitionedStorage);
+      actions::ActionManager::Get().FindAction(
+          kActionShowPartitionedStorage,
+          BrowserActions::From(browser())->root_action_item());
   ASSERT_NE(nullptr, partitioned_storage_action);
 
-  IconLabelBubbleView* const partitioned_storage_view =
-      page_actions::PageActionTestAccessor(browser(),
-                                           kActionShowPartitionedStorage)
-          .view();
+  auto* const partitioned_storage_view =
+      static_cast<page_actions::PageActionView*>(
+          BrowserView::GetBrowserViewForBrowser(browser())
+              ->toolbar_button_provider()
+              ->GetPageActionViewInterface(kActionShowPartitionedStorage));
   ASSERT_NE(nullptr, partitioned_storage_view);
 
   const GURL url("https://a.test/simple.html");
@@ -3081,6 +3086,95 @@ IN_PROC_BROWSER_TEST_F(
   // exactly when the iterator is dereferenceable.
   EXPECT_TRUE(temporary_container == locally_used_containers.end())
       << "Unexpected temporary container: " << (*temporary_container)->id;
+}
+
+// Device grants are stored per profile and origin, so they would leak between
+// storage partitions. WebHID therefore stays unavailable in containers, as
+// upstream refuses it for any non-default partition (WebUSB and Web Serial
+// are blocked the same way).
+IN_PROC_BROWSER_TEST_F(ContainersBrowserTest, HidUnavailableInContainer) {
+  const GURL url("https://a.test/simple.html");
+  content::HidDelegate* hid_delegate =
+      content::GetContentClientForTesting()->browser()->GetHidDelegate();
+  ASSERT_TRUE(hid_delegate);
+
+  ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
+  EXPECT_TRUE(hid_delegate->IsHidAllowedForFrame(browser()
+                                                     ->tab_strip_model()
+                                                     ->GetActiveWebContents()
+                                                     ->GetPrimaryMainFrame()));
+
+  content::WebContents* container_tab =
+      OpenUrlInContainerTab(url, kTestContainerId);
+  EXPECT_FALSE(
+      hid_delegate->IsHidAllowedForFrame(container_tab->GetPrimaryMainFrame()));
+}
+
+// Test opening a link in split view where source and destination tabs have
+// different containers - destination should inherit source container
+IN_PROC_BROWSER_TEST_F(ContainersBrowserTest,
+                       OpenLinkInSplitViewDifferentContainer) {
+  // Opening split view from a tab without container should still work correctly
+  chrome::NewSplitTab(browser(), split_tabs::SplitTabLayout::kSideBySide,
+                      split_tabs::SplitTabCreatedSource::kLinkClick);
+  auto config = GetStoragePartitionConfigOfTabAt(browser(), 1);
+  ASSERT_TRUE(config.has_value());
+  EXPECT_TRUE(config->partition_name().empty());
+  auto* model = browser()->tab_strip_model();
+  model->delegate()->CloseTab(model->GetTabAtIndex(1),
+                              CloseTabSource::kFromMouse, base::DoNothing());
+
+  // Open tab A in container A
+  OpenUrlInContainerTab(GURL("https://a.test/simple.html"), "container-a");
+  ASSERT_EQ(2, model->count());
+
+  // Open tab B in container B
+  OpenUrlInContainerTab(GURL("https://a.test/simple.html"), "container-b");
+  ASSERT_EQ(3, model->count());
+
+  // Verify both tabs have different containers
+  auto config_a = GetStoragePartitionConfigOfTabAt(browser(), 1);
+  auto config_b = GetStoragePartitionConfigOfTabAt(browser(), 2);
+  ASSERT_TRUE(config_a.has_value());
+  ASSERT_TRUE(config_b.has_value());
+  EXPECT_EQ("container-a", config_a->partition_name());
+  EXPECT_EQ("container-b", config_b->partition_name());
+
+  // Activate tab A (in container A)
+  model->ActivateTabAt(1, TabStripUserGestureDetails(
+                              TabStripUserGestureDetails::GestureType::kOther));
+  ASSERT_TRUE(model->GetActiveTab());
+
+  // Open split view from tab A
+  chrome::NewSplitTab(browser(), split_tabs::SplitTabLayout::kSideBySide,
+                      split_tabs::SplitTabCreatedSource::kLinkClick);
+
+  // Verify split view was created
+  ASSERT_EQ(4, model->count());
+  EXPECT_TRUE(model->GetActiveTab()->IsSplit());
+
+  // Check the active tab's container after split
+  // The newly created destination tab should inherit from source container
+  int active_index = model->active_index();
+  auto active_config =
+      GetStoragePartitionConfigOfTabAt(browser(), active_index);
+  ASSERT_TRUE(active_config.has_value());
+  EXPECT_EQ("container-a", active_config->partition_name());
+
+  // Open split view from tab b
+  model->ActivateTabAt(3);
+  chrome::NewSplitTab(browser(), split_tabs::SplitTabLayout::kSideBySide,
+                      split_tabs::SplitTabCreatedSource::kLinkClick);
+
+  // Verify split view was created
+  ASSERT_EQ(5, model->count());
+  EXPECT_TRUE(model->GetActiveTab()->IsSplit());
+
+  // Check the active tab's container after split
+  active_index = model->active_index();
+  active_config = GetStoragePartitionConfigOfTabAt(browser(), active_index);
+  ASSERT_TRUE(active_config.has_value());
+  EXPECT_EQ("container-b", active_config->partition_name());
 }
 
 // Installing a web app with OS integration requires a blocking registration to

@@ -6,7 +6,6 @@
 #include "brave/components/ai_chat/content/browser/content_tool.h"
 
 #include <string>
-#include <vector>
 
 #include "base/functional/callback_helpers.h"
 #include "base/test/test_future.h"
@@ -227,6 +226,10 @@ TEST_F(ContentToolTest, RequiresPermissionChallengeUntilGranted) {
   ASSERT_TRUE(std::holds_alternative<mojom::PermissionChallengePtr>(result));
   auto& challenge = std::get<mojom::PermissionChallengePtr>(result);
   ASSERT_TRUE(challenge);
+
+  // Website tool challenges get their own heading rather than the default
+  // "Security warning".
+  EXPECT_EQ(challenge->title, "Tool permission request");
 
   // The challenge describes the site-registered tool name and site origin in
   // a human-readable, markdown-formatted way (instead of the mangled

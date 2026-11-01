@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Growser – informacje</translation>
 <translation id="987734326276404793">Otrzymuj alerty o śledzeniu cen w Growser na telefonie</translation>
 <translation id="1203500561924088507">Dziękujemy za instalację. Przed rozpoczęciem korzystania z programu <ph name="BUNDLE_NAME"/> musisz ponownie uruchomić przeglądarkę.</translation>
+<translation id="1213674046343558619"><ph name="IMPORTANT_UPDATE"/> oczekuje na instalację. Aby zapewnić Ci bezpieczeństwo podczas przeglądania, Growser zaktualizuje się, gdy przez <ph name="IDLE_DURATION"/> nie będziesz nic robić.</translation>
 <translation id="1232234696885483911">Gdy otworzysz wyszukiwanie obrazów, tytuł, adres URL i zawartość strony, w tym pliki PDF, zostaną automatycznie wysłane na serwer. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Po zalogowaniu się w Growser możesz używać haseł i innych danych z konta Growser. Aby to zmienić, przejdź do sekcji „Twoje konto w Growser”.</translation>
 <translation id="583633806828413086">Pokaż Gemini w Growser na pasku menu Maca</translation>
@@ -219,6 +220,7 @@
 <translation id="3286538390144397061">Uruchom ponownie teraz</translation>
 <translation id="2339258256897053758">Brakuje kluczy interfejsu Growser API. Niektóre funkcje Growser będą wyłączone.</translation>
 <translation id="8926637909431618259">Kontynuuj działanie aplikacji w tle po zamknięciu Growser</translation>
+<translation id="8245661393996028021">Growser zaktualizuje się, gdy nie będziesz korzystać z urządzenia</translation>
 <translation id="518125528057094977">Growser będzie Cię ostrzegać przed wczytywaniem stron, które korzystają z niezabezpieczonego połączenia</translation>
 <translation id="8652321858775514885">Gdy zamkniesz wszystkie okna Growser, wylogujesz się na większości stron, ale nie z konta Growser, o ile wcześniej zalogujesz się w Growser. Aby pozwolić witrynom na zapamiętywanie Twoich danych, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">prawy górny róg obszaru wyszukiwania: po prawej stronie <ph name="RIGHT"/>%, u góry <ph name="TOP"/>%</translation>
@@ -227,6 +229,7 @@
 <translation id="2645435784669275700">System operacyjny Growser</translation>
 <translation id="2297290224191497273">Przełączyć na istniejący profil Growser?</translation>
 <translation id="3412460710772753638">W Menedżerze haseł na tym urządzeniu</translation>
+<translation id="172368702860945706">Growser chce się zaktualizować</translation>
 <translation id="5079573433701109938">Aby mieć dostęp do zakładek oraz innych danych z urządzenia <ph name="DEVICE"/>, zaloguj się w Growser</translation>
 <translation id="3438772217992559640">Wyszukaj na tej karcie za pomocą wyszukiwania obrazów</translation>
 <translation id="2491221873705777076">Korzystaj z Ulepszonego bezpiecznego przeglądania także na telefonie dzięki Growser</translation>
@@ -364,6 +367,7 @@
 <translation id="4877750182157975795">Korzystaj ze wszystkich ulubionych usług Growser w przeglądarce Growser na urządzeniu <ph name="DEVICE_TYPE"/></translation>
 <translation id="1204184037023366446">Growser potrzebuje uprawnień do śledzenia rąk</translation>
 <translation id="5406591571925937375">Od jakiegoś czasu nie odwiedzasz tej witryny. Przeglądarka Growser usunęła te uprawnienia: <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/>, <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Zaloguj się w Growser</translation>
 <translation id="5174969993834422967">Zazwyczaj blokujesz powiadomienia. Aby zezwolić tej stronie na wysyłanie powiadomień, kliknij ikonę powiadomienia w prawym rogu paska lokalizacji.</translation>
 <translation id="5174983315706567306">Za mało miejsca na dysku.</translation>
 <translation id="8157129267754368853">Konto Growser wymaga ponownego uwierzytelnienia</translation>
@@ -372,6 +376,7 @@
 <translation id="5234764350956374838">Zamknij</translation>
 <translation id="7690383309583926074">Pobierz aplikację Growser, aby zapisywać hasła, gdziekolwiek jesteś</translation>
 <translation id="8586264863973514035">Aby zastosować zmiany, uruchom ponownie Growser</translation>
+<translation id="8127050479140582768">Aby wysłać tę kartę na inne urządzenie, na obu urządzeniach zaloguj się w Growser</translation>
 <translation id="5286907366254680517">Wykryto</translation>
 <translation id="7264453786974905915">Pobierz aplikację Growser</translation>
 <translation id="7230006500876504868">Wyszukaj w Growser</translation>
@@ -735,6 +740,7 @@ Growser nie może odzyskać ustawień.</translation>
 <translation id="5128665650717824082">Growser for Testing nie można ustawić jako przeglądarki domyślnej.</translation>
 <translation id="3053208669360972929">Wyszukuj w Growser z dowolnego miejsca</translation>
 <translation id="2433912322225810055">Kontroluje także to, jaka strona wyświetla się po uruchomieniu Growser lub wyszukiwaniu w omniboksie.</translation>
+<translation id="8789425457808164956">Aby wysłać tę kartę na inne urządzenie, zaloguj się na nim w Growser</translation>
 <translation id="4100716194836114130">Oto Twoja przeglądarka Growser</translation>
 <translation id="8712637175834984815">OK</translation>
 <translation id="1419543648228375718">Chcesz zalogować się w Growser?</translation>
@@ -1377,4 +1383,29 @@ Jeśli ta strona nie działa zgodnie z oczekiwaniami, spróbuj zezwolić na opt
 <translation id="9194561096821877683">Growser</translation>
 <translation id="3721794228264322796">Zamknij Gemini w Growser</translation>
 <translation id="2314508080153323869">Gemini w Growser</translation>
+<translation id="5114210947713246258">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do listy Do przeczytania oraz do innych danych z urządzenia <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do rozszerzeń oraz innych danych z urządzenia <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do listy Do przeczytania oraz innych danych na wszystkich swoich urządzeniach.</translation>
+<translation id="1055314897144735151">Konto <ph name="EXISTING_USER"/> jest już zalogowane. Aby przeglądanie dalej odbywało się osobno, zaloguj się do swojego profilu w Growser jako <ph name="USER_EMAIL_ADDRESS"/>. Będziesz też mieć dostęp do rozszerzeń oraz innych danych na wszystkich swoich urządzeniach.</translation>
+<translation id="3429303382931281808">Aby mieć dostęp do haseł oraz innych danych z urządzenia <ph name="DEVICE"/>, zaloguj się w Growser</translation>
+<translation id="7681019317864236341">Aby mieć dostęp do zakładek oraz innych danych z urządzenia <ph name="DEVICE"/>, zaloguj się w Growser</translation>
+<translation id="1910605032088789136">Aby mieć dostęp do zapisanych informacji oraz innych ustawień i danych z urządzenia <ph name="DEVICE"/>, zaloguj się w Growser</translation>
+<translation id="6794970122141277862">Aby mieć dostęp do listy Do przeczytania oraz innych ustawień i danych z urządzenia <ph name="DEVICE"/>, zaloguj się w Growser</translation>
+<translation id="3538050518049904702">Aby korzystać z rozszerzeń oraz innych ustawień i danych z urządzenia <ph name="DEVICE"/>, zaloguj się w Growser</translation>
+<translation id="1447754948984825961">Aby mieć dostęp do zakładek oraz innych ustawień i danych na wszystkich swoich urządzeniach, zaloguj się w Growser</translation>
+<translation id="5758015234894546674">Aby mieć dostęp do zapisanych informacji oraz innych ustawień i danych na wszystkich swoich urządzeniach, zaloguj się w Growser</translation>
+<translation id="562156935182849823">Aby mieć dostęp do listy Do przeczytania oraz innych ustawień i danych na wszystkich swoich urządzeniach, zaloguj się w Growser</translation>
+<translation id="7817930780633998561">Aby korzystać z rozszerzeń oraz innych ustawień i danych na wszystkich swoich urządzeniach, zaloguj się w Growser</translation>
+<translation id="4444512588051585636">Growser zaktualizuje się, gdy nie będziesz korzystać z urządzenia</translation>
+<translation id="950120991083623144">Growser chce się zaktualizować</translation>
+<translation id="8250854223127536286"><ph name="IMPORTANT_UPDATE"/> oczekuje na instalację. Aby zapewnić Ci bezpieczeństwo podczas przeglądania, Growser zaktualizuje się, gdy przez <ph name="IDLE_DURATION"/> nie będziesz nic robić.</translation>
+<translation id="8620823632809282061">Gemini Enterprise w Growser</translation>
+<translation id="4719707676382088645">Profil Growser</translation>
+<translation id="7944326067922128825">Wyszukuj i zadawaj pytania z dowolnego miejsca, nawet gdy przeglądarka Growser jest zminimalizowana. Zezwala na działanie Growser w tle.</translation>
+<translation id="1760966099984077912">Wyszukuj w Growser z dowolnego miejsca</translation>
+<translation id="4011238820523740465">Zadawaj pytania dotyczące treści spoza Growser, np. innych aplikacji lub plików</translation>
+<translation id="1491740387498395373">w celu wyszukania za pomocą Growser lub dostosowania w <ph name="BEGIN_LINK"/>Ustawieniach<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">w celu wyszukania za pomocą Growser.</translation>
+<translation id="1162630940779651724">Aby wysłać tę kartę na inne urządzenie, na obu urządzeniach zaloguj się w Growser</translation>
+<translation id="5388608738812110907">Aby wysłać tę kartę na inne urządzenie, zaloguj się na nim w Growser</translation>
 </translationbundle>

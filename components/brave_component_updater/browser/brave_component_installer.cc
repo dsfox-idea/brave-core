@@ -5,7 +5,6 @@
 
 #include "brave/components/brave_component_updater/browser/brave_component_installer.h"
 
-#include <memory>
 #include <utility>
 
 #include "base/files/file_path.h"
@@ -13,7 +12,6 @@
 #include "base/json/json_string_value_serializer.h"
 #include "base/values.h"
 #include "base/version.h"
-#include "components/component_updater/component_updater_service.h"
 #include "components/crx_file/id_util.h"
 #include "components/update_client/update_client.h"
 #include "components/update_client/update_client_errors.h"
@@ -41,7 +39,7 @@ namespace brave_component_updater {
 
 BraveComponentInstallerPolicy::BraveComponentInstallerPolicy(
     const std::string& name,
-    base::span<const uint8_t, crypto::kSHA256Length> public_key_sha256,
+    base::span<const uint8_t, crypto::hash::kSha256Size> public_key_sha256,
     BraveComponent::ReadyCallback ready_callback)
     : name_(name), ready_callback_(std::move(ready_callback)) {
   base::span(public_key_sha256_).copy_from(public_key_sha256);

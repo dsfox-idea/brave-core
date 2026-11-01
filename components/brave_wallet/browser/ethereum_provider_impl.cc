@@ -31,6 +31,7 @@
 #include "brave/components/brave_wallet/browser/siwe_message_parser.h"
 #include "brave/components/brave_wallet/browser/tx_service.h"
 #include "brave/components/brave_wallet/common/brave_wallet_response_helpers.h"
+#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/brave_wallet/common/eth_address.h"
 #include "brave/components/brave_wallet/common/eth_request_helper.h"
 #include "brave/components/brave_wallet/common/eth_sign_typed_data_helper.h"
@@ -177,6 +178,8 @@ EthereumProviderImpl::EthereumProviderImpl(
       eth_block_tracker_(json_rpc_service_),
       eth_logs_tracker_(json_rpc_service_),
       prefs_(prefs) {
+  CHECK(IsValidDappOrigin(origin_));
+
   SetupMethodHandlers();
 
   DCHECK(json_rpc_service_);
@@ -1596,8 +1599,15 @@ void EthereumProviderImpl::AddSuggestToken(mojom::BlockchainTokenPtr token,
 
   auto request = mojom::AddSuggestTokenRequest::New(MakeOriginInfo(origin_),
                                                     std::move(token));
+  // The panel reads pending suggestions once, when it opens. Wait until the
+  // request is queued, including the contract lookup for an unknown token.
   brave_wallet_service_->AddSuggestTokenRequest(
-      std::move(request), std::move(callback), std::move(id));
+      std::move(request), std::move(callback), std::move(id),
+      base::BindOnce(&EthereumProviderImpl::OnSuggestTokenAdded,
+                     weak_factory_.GetWeakPtr()));
+}
+
+void EthereumProviderImpl::OnSuggestTokenAdded() {
   delegate_->ShowPanel(origin_);
 }
 

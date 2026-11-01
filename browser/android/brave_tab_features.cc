@@ -9,13 +9,25 @@
 #include "brave/browser/image_metadata_stripper/file_upload_controller.h"
 #include "brave/browser/misc_metrics/captcha_metrics.h"
 #include "brave/browser/misc_metrics/page_metrics_tab_helper.h"
+#include "brave/browser/serp_metrics/serp_metrics_tab_helper.h"
+#include "brave/components/brave_ads/buildflags/buildflags.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/image_metadata_stripper/common/features.h"
 #include "brave/components/misc_metrics/features.h"
+#include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "chrome/browser/android/tab_android.h"
 #include "chrome/browser/profiles/profile.h"
 #include "components/tabs/public/tab_interface.h"
 #include "content/public/browser/web_contents.h"
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+#include "brave/browser/brave_ads/creatives/search_result_ad/creative_search_result_ad_tab_helper.h"
+#include "brave/browser/brave_ads/tabs/ads_tab_helper.h"
+#endif
+
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
+#include "brave/browser/web_discovery/web_discovery_tab_helper.h"
+#endif
 
 #if BUILDFLAG(ENABLE_AI_CHAT)  // Growser-261
 #include "brave/browser/ai_chat/ai_chat_utils.h"
@@ -58,6 +70,19 @@ BraveTabFeatures::BraveTabFeatures(content::WebContents* web_contents,
 
   page_metrics_tab_helper_ =
       std::make_unique<misc_metrics::PageMetricsTabHelper>(tab_interface);
+  serp_metrics_tab_helper_ =
+      serp_metrics::SerpMetricsTabHelper::MaybeCreate(tab_interface);
+
+#if BUILDFLAG(ENABLE_BRAVE_ADS)
+  ads_tab_helper_ = std::make_unique<brave_ads::AdsTabHelper>(tab_interface);
+  creative_search_result_ad_tab_helper_ =
+      brave_ads::CreativeSearchResultAdTabHelper::MaybeCreate(tab_interface);
+#endif
+
+#if BUILDFLAG(ENABLE_WEB_DISCOVERY)
+  web_discovery_tab_helper_ = web_discovery::WebDiscoveryTabHelper::MaybeCreate(
+      tab_interface, *profile);
+#endif
 }
 
 BraveTabFeatures::~BraveTabFeatures() = default;

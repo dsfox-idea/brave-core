@@ -22,6 +22,7 @@ Es posible que algunas funciones no estén disponibles y que no se guarden los c
 <translation id="8541922081612557424">Información de Growser</translation>
 <translation id="987734326276404793">Recibe alertas de seguimiento de precios con Growser en tu teléfono</translation>
 <translation id="1203500561924088507">Gracias por realizar la instalación. Debes reiniciar tu navegador para poder usar <ph name="BUNDLE_NAME"/>.</translation>
+<translation id="1213674046343558619">Hay una <ph name="IMPORTANT_UPDATE"/> pendiente. Para protegerte mientras navegas, Growser se actualizará la próxima vez que no lo uses durante <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Cuando abres la búsqueda por imágenes, el título, la URL y el contenido de la página (incluidos los PDFs) se envían automáticamente al servidor. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Mientras tengas la sesión iniciada, puedes usar tus contraseñas y otros elementos de tu cuenta de Growser en Growser. Para cambiarlo, ve a Tu cuenta en Growser.</translation>
 <translation id="583633806828413086">Mostrar Gemini en Growser en la barra de menú de Mac</translation>
@@ -224,6 +225,7 @@ Es posible que algunas funciones no estén disponibles y que no se guarden los c
 <translation id="3286538390144397061">Reiniciar ahora</translation>
 <translation id="2339258256897053758">Faltan las claves de la API de Growser. Se inhabilitarán algunas funciones de Growser.</translation>
 <translation id="8926637909431618259">Seguir ejecutando aplicaciones en segundo plano al cerrar Growser</translation>
+<translation id="8245661393996028021">Growser se actualizará cuando no estés usando el dispositivo</translation>
 <translation id="518125528057094977">Growser te avisará antes de cargar un sitio usando una conexión no segura</translation>
 <translation id="8652321858775514885">Cuando cierres todas las ventanas de Growser, se cerrará tu sesión en la mayoría de los sitios, salvo la de tu cuenta de Growser si has iniciado sesión en Growser. Para permitir que los sitios te recuerden, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">esquina superior derecha del área de búsqueda: un <ph name="RIGHT"/> % a la derecha y un <ph name="TOP"/> % arriba</translation>
@@ -232,6 +234,7 @@ Es posible que algunas funciones no estén disponibles y que no se guarden los c
 <translation id="2645435784669275700">ChromeOS</translation>
 <translation id="2297290224191497273">¿Cambiar a un perfil de Growser?</translation>
 <translation id="3412460710772753638">En el gestor de contraseñas de este dispositivo</translation>
+<translation id="172368702860945706">Growser quiere actualizarse</translation>
 <translation id="5079573433701109938">Para acceder a tus marcadores y otros elementos de <ph name="DEVICE"/>, inicia sesión en Growser</translation>
 <translation id="3438772217992559640">Buscar en esta pestaña con la búsqueda por imágenes</translation>
 <translation id="2491221873705777076">Amplía Navegación segura mejorada con Growser en tu teléfono</translation>
@@ -369,6 +372,7 @@ Es posible que algunas funciones no estén disponibles y que no se guarden los c
 <translation id="4877750182157975795">Accede a todos tus favoritos de Growser con Growser en tu <ph name="DEVICE_TYPE"/></translation>
 <translation id="1204184037023366446">Growser necesita permiso para hacer seguimiento de tus manos</translation>
 <translation id="5406591571925937375">No has visitado el sitio recientemente. Growser ha eliminado <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/> y <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Inicia sesión en Growser</translation>
 <translation id="5174969993834422967">Sueles bloquear las notificaciones. Para permitir que este sitio te envíe notificaciones, haz clic en el icono de notificación que aparece en la esquina derecha de la barra de direcciones.</translation>
 <translation id="5174983315706567306">No hay suficiente espacio en disco.</translation>
 <translation id="8157129267754368853">La cuenta de Growser debe volver a autenticarse</translation>
@@ -377,6 +381,7 @@ Es posible que algunas funciones no estén disponibles y que no se guarden los c
 <translation id="5234764350956374838">Cerrar</translation>
 <translation id="7690383309583926074">Descarga la aplicación Growser para guardar contraseñas estés donde estés</translation>
 <translation id="8586264863973514035">Reinicia Growser para aplicar los cambios</translation>
+<translation id="8127050479140582768">Para enviar esta pestaña a otro dispositivo, inicia sesión en Growser en ambos dispositivos</translation>
 <translation id="5286907366254680517">Detectado</translation>
 <translation id="7264453786974905915">Descarga la aplicación Growser</translation>
 <translation id="7230006500876504868">Buscar con Growser</translation>
@@ -740,6 +745,7 @@ Growser no puede recuperar tu configuración.</translation>
 <translation id="5128665650717824082">Growser for Testing no se puede establecer como navegador predeterminado.</translation>
 <translation id="3053208669360972929">Busca con Growser desde cualquier lugar</translation>
 <translation id="2433912322225810055">También controla qué página se muestra al iniciar Growser o al hacer búsquedas desde el omnibox.</translation>
+<translation id="8789425457808164956">Para enviar esta pestaña a otro dispositivo, inicia sesión en Growser en ese dispositivo</translation>
 <translation id="4100716194836114130">Aquí tienes tu navegador Growser</translation>
 <translation id="8712637175834984815">Entendido</translation>
 <translation id="1419543648228375718">¿Iniciar sesión en Growser?</translation>
@@ -1403,4 +1409,29 @@ Si esta página no funciona correctamente, prueba a permitir la optimización.</
 <translation id="9194561096821877683">Growser</translation>
 <translation id="3721794228264322796">Cerrar Gemini en Growser</translation>
 <translation id="2314508080153323869">Gemini en Growser</translation>
+<translation id="5114210947713246258">Ya has iniciado sesión con <ph name="EXISTING_USER"/>. Para mantener tu información de navegación aparte, inicia sesión en Growser con tu perfil de <ph name="USER_EMAIL_ADDRESS"/>. También tendrás tu lista de lectura y otra información de <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861">Ya has iniciado sesión con <ph name="EXISTING_USER"/>. Para mantener tu información de navegación aparte, inicia sesión en Growser con tu perfil de <ph name="USER_EMAIL_ADDRESS"/>. También tendrás tus extensiones y otra información de <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592">Ya has iniciado sesión con <ph name="EXISTING_USER"/>. Para mantener tu información de navegación aparte, inicia sesión en Growser con tu perfil de <ph name="USER_EMAIL_ADDRESS"/>. También tendrás tu lista de lectura y otra información en todos tus dispositivos.</translation>
+<translation id="1055314897144735151">Ya has iniciado sesión con <ph name="EXISTING_USER"/>. Para mantener tu información de navegación aparte, inicia sesión en Growser con tu perfil de <ph name="USER_EMAIL_ADDRESS"/>. También tendrás tus extensiones y otra información en todos tus dispositivos.</translation>
+<translation id="3429303382931281808">Para acceder a tus contraseñas y otros elementos de <ph name="DEVICE"/>, inicia sesión en Growser</translation>
+<translation id="7681019317864236341">Para acceder a tus marcadores y otros elementos de <ph name="DEVICE"/>, inicia sesión en Growser</translation>
+<translation id="1910605032088789136">Para acceder a tu información guardada y otros elementos de <ph name="DEVICE"/>, inicia sesión en Growser</translation>
+<translation id="6794970122141277862">Para acceder a tu lista de lectura y otros elementos de <ph name="DEVICE"/>, inicia sesión en Growser</translation>
+<translation id="3538050518049904702">Para acceder a tus extensiones y otros elementos de <ph name="DEVICE"/>, inicia sesión en Growser</translation>
+<translation id="1447754948984825961">Para acceder a tus marcadores y otros elementos en todos tus dispositivos, inicia sesión en Growser</translation>
+<translation id="5758015234894546674">Para acceder a tu información guardada y otros elementos en todos tus dispositivos, inicia sesión en Growser</translation>
+<translation id="562156935182849823">Para acceder a tu lista de lectura y otros elementos en todos tus dispositivos, inicia sesión en Growser</translation>
+<translation id="7817930780633998561">Para acceder a tus extensiones y otros elementos en todos tus dispositivos, inicia sesión en Growser</translation>
+<translation id="4444512588051585636">Growser se actualizará cuando no estés usando el dispositivo</translation>
+<translation id="950120991083623144">Growser quiere actualizarse</translation>
+<translation id="8250854223127536286">Hay una <ph name="IMPORTANT_UPDATE"/> pendiente. Para protegerte mientras navegas, Growser se actualizará la próxima vez que no lo uses durante <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">Gemini Enterprise en Growser</translation>
+<translation id="4719707676382088645">Perfil de Growser</translation>
+<translation id="7944326067922128825">Busca y haz preguntas desde cualquier lugar, incluso si Growser está minimizado. Permite que Growser se ejecute en segundo plano.</translation>
+<translation id="1760966099984077912">Busca con Growser desde cualquier lugar</translation>
+<translation id="4011238820523740465">Pregunta sobre contenido que no esté en Growser, como otras aplicaciones o archivos</translation>
+<translation id="1491740387498395373">para buscar con Growser o personalizar en <ph name="BEGIN_LINK"/>Configuración<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">para buscar con Growser.</translation>
+<translation id="1162630940779651724">Para enviar esta pestaña a otro dispositivo, inicia sesión en Growser en ambos dispositivos</translation>
+<translation id="5388608738812110907">Para enviar esta pestaña a otro dispositivo, inicia sesión en Growser en ese dispositivo</translation>
 </translationbundle>

@@ -5,30 +5,24 @@
 
 #include "brave/components/brave_wallet/browser/meld_integration_response_parser.h"
 
+#include <cstdint>
 #include <optional>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
+#include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
+#include "base/strings/string_util.h"
 #include "base/types/expected.h"
 #include "base/values.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_constants.h"
 #include "brave/components/brave_wallet/browser/meld_integration_responses.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
 #include "brave/components/brave_wallet/common/meld_integration.mojom-forward.h"
 
 namespace {
-
-brave_wallet::mojom::MeldLogoImagesPtr ParseMeldLogos(
-    const std::optional<brave_wallet::meld_integration_responses::Logos>&
-        logos) {
-  if (!logos) {
-    return nullptr;
-  }
-
-  return brave_wallet::mojom::MeldLogoImages::New(
-      logos->dark, logos->dark_short, logos->light, logos->light_short);
-}
 
 base::flat_map<std::string, std::string> ParseOptionalMapOfStrings(
     const base::Value& val) {
@@ -42,6 +36,38 @@ base::flat_map<std::string, std::string> ParseOptionalMapOfStrings(
   }
 
   return result;
+}
+
+// Meld's chainId is only cross-checked for EVM chains, as Meld's ids of other
+// chains don't follow Brave's format.
+std::optional<std::pair<brave_wallet::mojom::CoinType, std::string_view>>
+GetBraveChain(
+    const brave_wallet::meld_integration_responses::CryptoCurrency& currency) {
+  const auto it = brave_wallet::kMeldSupportedChains.find(currency.chain_code);
+  if (it == brave_wallet::kMeldSupportedChains.end()) {
+    return std::nullopt;
+  }
+
+  const auto& [coin, chain_id] = it->second;
+  if (coin == brave_wallet::mojom::CoinType::ETH && currency.chain_id) {
+    uint64_t meld_chain_id = 0;
+    if (!base::StringToUint64(*currency.chain_id, &meld_chain_id) ||
+        brave_wallet::Uint256ValueToHex(meld_chain_id) != chain_id) {
+      return std::nullopt;
+    }
+  }
+
+  return it->second;
+}
+
+// Meld may suffix currency codes with their chain code, e.g. "USDT_POLYGON".
+std::string GetCurrencySymbol(
+    const brave_wallet::meld_integration_responses::CryptoCurrency& currency) {
+  if (const auto symbol = base::RemoveSuffix(
+          currency.currency_code, base::StrCat({"_", currency.chain_code}))) {
+    return std::string(*symbol);
+  }
+  return currency.currency_code;
 }
 
 }  //  namespace
@@ -83,13 +109,14 @@ std::optional<std::vector<mojom::MeldServiceProviderPtr>> ParseServiceProviders(
       return std::nullopt;
     }
 
-    auto logos = ParseMeldLogos(service_provider_value->logos);
+    const auto& logos = service_provider_value->logos;
     auto sp = mojom::MeldServiceProvider::New(
         service_provider_value->name, service_provider_value->service_provider,
         service_provider_value->status, service_provider_value->website_url,
         service_provider_value->categories,
         ParseOptionalMapOfStrings(service_provider_value->category_statuses),
-        std::move(logos));
+        logos ? logos->dark_short : std::nullopt,
+        logos ? logos->light_short : std::nullopt);
 
     service_providers.emplace_back(std::move(sp));
   }
@@ -220,10 +247,11 @@ std::optional<std::vector<mojom::MeldPaymentMethodPtr>> ParsePaymentMethods(
       return std::nullopt;
     }
 
-    auto logos = ParseMeldLogos(payment_method_value->logos);
+    const auto& logos = payment_method_value->logos;
     auto pm = mojom::MeldPaymentMethod::New(
         payment_method_value->payment_method, payment_method_value->name,
-        payment_method_value->payment_type, std::move(logos));
+        payment_method_value->payment_type, logos ? logos->dark : std::nullopt,
+        logos ? logos->light : std::nullopt);
 
     payment_methods.emplace_back(std::move(pm));
   }
@@ -302,17 +330,17 @@ std::optional<std::vector<mojom::MeldCryptoCurrencyPtr>> ParseCryptoCurrencies(
     if (!crypto_currency_value) {
       return std::nullopt;
     }
-    std::optional<std::string> chain_id_hex;
-    if (int chain_id_as_num;
-        crypto_currency_value->chain_id &&
-        base::StringToInt(*crypto_currency_value->chain_id, &chain_id_as_num)) {
-      chain_id_hex = Uint256ValueToHex(chain_id_as_num);
+    const auto brave_chain = GetBraveChain(*crypto_currency_value);
+    if (!brave_chain) {
+      continue;
     }
 
     auto cc = mojom::MeldCryptoCurrency::New(
+        brave_chain->first, std::string(brave_chain->second),
+        GetCurrencySymbol(*crypto_currency_value),
         crypto_currency_value->currency_code, crypto_currency_value->name,
-        crypto_currency_value->chain_code, crypto_currency_value->chain_name,
-        chain_id_hex, crypto_currency_value->contract_address,
+        crypto_currency_value->chain_code,
+        crypto_currency_value->contract_address,
         crypto_currency_value->symbol_image_url);
 
     crypto_currencies.emplace_back(std::move(cc));
@@ -350,8 +378,7 @@ std::optional<std::vector<mojom::MeldCountryPtr>> ParseCountries(
     }
 
     auto country = mojom::MeldCountry::New(country_value->country_code,
-                                           country_value->name,
-                                           country_value->flag_image_url);
+                                           country_value->name);
 
     countries.emplace_back(std::move(country));
   }

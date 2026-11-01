@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">‏על Growser</translation>
 <translation id="987734326276404793">‏רוצה לקבל התראות על מעקב מחירים באמצעות Growser בטלפון?</translation>
 <translation id="1203500561924088507">תודה שהתקנת. עליך להפעיל מחדש את הדפדפן לפני השימוש ב-<ph name="BUNDLE_NAME"/>.</translation>
+<translation id="1213674046343558619">‏יש <ph name="IMPORTANT_UPDATE"/> בהמתנה. כדי לשמור על בטיחות הגלישה, Growser יתעדכן בפעם הבאה שלא תהיה פעילות במשך <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">‏כשפותחים את חיפוש התמונות, כותרת הדף, כתובת ה-URL והתוכן שלו, כולל קובצי PDF, נשלחים באופן אוטומטי לשרת. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">‏אחרי הכניסה לחשבון, אפשר להשתמש בסיסמאות ובפרטים נוספים מחשבון Growser ב-Growser. כדי לשנות את האפשרות הזאת, כדאי לעבור אל "החשבון שלך ב-Growser".</translation>
 <translation id="583633806828413086">‏הצגת Gemini ב-Growser בסרגל התפריטים של Mac</translation>
@@ -220,6 +221,7 @@
 <translation id="3286538390144397061">הפעל מחדש כעת</translation>
 <translation id="2339258256897053758">‏המפתחות של Growser API חסרים. פונקציונליות מסוימת של Growser תהיה מושבתת.</translation>
 <translation id="8926637909431618259">‏המשך הפעלת יישומים ברקע כאשר Growser סגור</translation>
+<translation id="8245661393996028021">‏‫Growser יתעדכן כשלא תהיה פעילות</translation>
 <translation id="518125528057094977">‏Growser יציג אזהרה לפני טעינת אתר כלשהו באמצעות חיבור לא מאובטח</translation>
 <translation id="8652321858775514885">‏אם סוגרים את כל החלונות של Growser, מתבצעת יציאה מהחשבון ברוב האתרים, אבל לא מחשבון Growser, אם נכנסת אליו ב-Growser. כדי לאפשר לאתרים לזכור אותך, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">‏הפינה הימנית העליונה של אזור החיפוש: ‎<ph name="RIGHT"/>%‎ מימין, ‎<ph name="TOP"/>%‎ מלמעלה</translation>
@@ -228,6 +230,7 @@
 <translation id="2645435784669275700">ChromeOS</translation>
 <translation id="2297290224191497273">‏לעבור לפרופיל קיים של Growser?</translation>
 <translation id="3412460710772753638">עדכון במנהל הסיסמאות במכשיר הזה</translation>
+<translation id="172368702860945706">‏‫Growser רוצה להתעדכן</translation>
 <translation id="5079573433701109938">‏כדי לקבל גישה לסימניות ולנתונים נוספים מתוך <ph name="DEVICE"/>, צריך להיכנס ל-Growser</translation>
 <translation id="3438772217992559640">חיפוש בכרטיסייה בעזרת "חיפוש תמונות"</translation>
 <translation id="2491221873705777076">‏רוצה להרחיב את הגרסה המשופרת של גלישה בטוחה ב-Growser בטלפון?</translation>
@@ -365,6 +368,7 @@
 <translation id="4877750182157975795">‏עם Growser במכשיר <ph name="DEVICE_TYPE"/> אפשר להשתמש בכל הפריטים של Growser שמעניינים אותך</translation>
 <translation id="1204184037023366446">‏צריך לתת ל-Growser הרשאה כדי לעקוב אחרי תנועות הידיים</translation>
 <translation id="5406591571925937375">‏לא נכנסת לאתר הזה בזמן האחרון. ההרשאות "<ph name="PERMISSION_1"/>", "<ph name="PERMISSION_2"/>" ו"<ph name="PERMISSION_3"/>" הוסרו על ידי Growser.</translation>
+<translation id="3576895950897485019">‏כניסה אל Growser</translation>
 <translation id="5174969993834422967">הבחירה שלך היא בדרך כלל לחסום התראות. כדי לאפשר לאתר הזה להציג התראות, יש ללחוץ על סמל ההתראה בפינה השמאלית של סרגל המיקום.</translation>
 <translation id="5174983315706567306">אין מספיק מקום בכונן.</translation>
 <translation id="8157129267754368853">‏נדרש אימות מחדש לחשבון Growser</translation>
@@ -373,6 +377,7 @@
 <translation id="5234764350956374838">סגירה</translation>
 <translation id="7690383309583926074">‏כדי לשמור סיסמאות תוך כדי תנועה, צריך להוריד את אפליקציית Growser</translation>
 <translation id="8586264863973514035">‏כדי להחיל את השינויים שביצעת, יש להפעיל מחדש את Growser</translation>
+<translation id="8127050479140582768">‏כדי לשלוח את הכרטיסייה הזו למכשיר אחר, צריך להתחבר ל-Growser בשני המכשירים</translation>
 <translation id="5286907366254680517">זוהתה</translation>
 <translation id="7264453786974905915">‏הורדת אפליקציית Growser</translation>
 <translation id="7230006500876504868">‏חיפוש באמצעות Growser</translation>
@@ -736,6 +741,7 @@ Growser לא יכול לשחזר את ההגדרות שלך.</translation>
 <translation id="5128665650717824082">‏לא ניתן להגדיר את Growser for Testing כדפדפן ברירת המחדל.</translation>
 <translation id="3053208669360972929">‏חיפוש באמצעות Growser מכל מקום</translation>
 <translation id="2433912322225810055">‏הגדרה זו גם קובעת איזה דף מוצג כשמפעילים את Growser או מבצעים חיפוש מסרגל הכתובות.</translation>
+<translation id="8789425457808164956">‏כדי לשלוח את הכרטיסייה הזו למכשיר אחר, צריך להתחבר בו ל-Growser</translation>
 <translation id="4100716194836114130">‏זהו ה-Growser שלך</translation>
 <translation id="8712637175834984815">הבנתי</translation>
 <translation id="1419543648228375718">‏להיכנס אל Growser?</translation>
@@ -1379,4 +1385,29 @@ Growser לא יכול לשחזר את ההגדרות שלך.</translation>
 <translation id="9194561096821877683">Brave Software</translation>
 <translation id="3721794228264322796">‏סגירת Gemini ב-Growser</translation>
 <translation id="2314508080153323869">‏‫Gemini ב-Growser</translation>
+<translation id="5114210947713246258">‏החשבון של <ph name="EXISTING_USER"/> כבר מחובר. כדי לשמור על סביבת גלישה נפרדת, אפשר להיכנס ל-Growser בפרופיל נפרד בתור <ph name="USER_EMAIL_ADDRESS"/>. אפשר לקבל גם את רשימת הקריאה ופריטים נוספים ממכשיר <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861">‏החשבון של <ph name="EXISTING_USER"/> כבר מחובר. כדי לשמור על סביבת גלישה נפרדת, אפשר להיכנס ל-Growser בפרופיל נפרד בתור <ph name="USER_EMAIL_ADDRESS"/>. אפשר לקבל גם את התוספים ופריטים נוספים ממכשיר <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592">‏החשבון של <ph name="EXISTING_USER"/> כבר מחובר. כדי לשמור על סביבת גלישה נפרדת, אפשר להיכנס ל-Growser בפרופיל נפרד בתור <ph name="USER_EMAIL_ADDRESS"/>. אפשר לקבל גם את רשימת הקריאה ופריטים נוספים בכל המכשירים.</translation>
+<translation id="1055314897144735151">‏החשבון של <ph name="EXISTING_USER"/> כבר מחובר. כדי לשמור על סביבת גלישה נפרדת, אפשר להיכנס ל-Growser בפרופיל נפרד בתור <ph name="USER_EMAIL_ADDRESS"/>. אפשר לקבל גם את התוספים ופריטים נוספים בכל המכשירים.</translation>
+<translation id="3429303382931281808">‏כדי לקבל גישה לסיסמאות ולנתונים נוספים מתוך <ph name="DEVICE"/>, צריך להיכנס ל-Growser</translation>
+<translation id="7681019317864236341">‏כדי לקבל גישה לסימניות ולנתונים נוספים מתוך <ph name="DEVICE"/>, צריך להיכנס ל-Growser</translation>
+<translation id="1910605032088789136">‏כדי לקבל גישה למידע השמור ולנתונים נוספים מתוך <ph name="DEVICE"/>, צריך להיכנס ל-Growser</translation>
+<translation id="6794970122141277862">‏כדי לקבל גישה לרשימת הקריאה ולנתונים נוספים מתוך <ph name="DEVICE"/>, צריך להיכנס ל-Growser</translation>
+<translation id="3538050518049904702">‏כדי לקבל גישה לתוספים ולנתונים נוספים מתוך <ph name="DEVICE"/>, צריך להיכנס ל-Growser</translation>
+<translation id="1447754948984825961">‏כדי לקבל גישה לסימניות ולנתונים נוספים בכל המכשירים שלך, צריך להיכנס ל-Growser</translation>
+<translation id="5758015234894546674">‏כדי לקבל גישה למידע השמור ולנתונים נוספים בכל המכשירים, צריך להיכנס ל-Growser</translation>
+<translation id="562156935182849823">‏כדי לקבל גישה לרשימת הקריאה ולנתונים נוספים בכל המכשירים, צריך להיכנס ל-Growser</translation>
+<translation id="7817930780633998561">‏כדי לקבל גישה לתוספים ולנתונים נוספים בכל המכשירים, צריך להיכנס ל-Growser</translation>
+<translation id="4444512588051585636">‏‫Growser יתעדכן כשלא תהיה פעילות</translation>
+<translation id="950120991083623144">‏‫Growser רוצה להתעדכן</translation>
+<translation id="8250854223127536286">‏יש <ph name="IMPORTANT_UPDATE"/> בהמתנה. כדי לשמור על בטיחות הגלישה, Growser יתעדכן בפעם הבאה שלא תהיה פעילות במשך <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">‏‫Gemini Enterprise ב-Growser</translation>
+<translation id="4719707676382088645">‏פרופיל Growser</translation>
+<translation id="7944326067922128825">‏הקלדת חיפושים ושאלות מכל מקום במכשיר, גם אם Growser ממוזער ההגדרה מאפשרת ל-Growser לפעול ברקע.</translation>
+<translation id="1760966099984077912">‏חיפוש באמצעות Growser מכל מקום</translation>
+<translation id="4011238820523740465">‏אפשר לשאול על תוכן מחוץ ל-Growser, כמו אפליקציות או קבצים אחרים</translation>
+<translation id="1491740387498395373">‏כדי לחפש באמצעות Growser או להתאים אישית ב<ph name="BEGIN_LINK"/>הגדרות<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">‏כדי לחפש באמצעות Growser.</translation>
+<translation id="1162630940779651724">‏כדי לשלוח את הכרטיסייה הזו למכשיר אחר, צריך להתחבר ל-Growser בשני המכשירים</translation>
+<translation id="5388608738812110907">‏כדי לשלוח את הכרטיסייה הזו למכשיר אחר, צריך להתחבר בו ל-Growser</translation>
 </translationbundle>

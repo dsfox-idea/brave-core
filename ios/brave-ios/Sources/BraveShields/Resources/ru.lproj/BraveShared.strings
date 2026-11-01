@@ -1,21 +1,21 @@
 /* An error message telling the user that the custom scriptlet they are trying to save has no content */
-"CustomScriptletEmptyContentError" = "Скриптлет должен содержать код JavaScript";
+"CustomScriptletEmptyContentError" = "Скриптлет должен содержать JavaScript-код";
 
 /* An error message telling the user that the name they gave their custom scriptlet is invalid. */
-"CustomScriptletInvalidNameError" = "Недопустимое имя скриптлета";
+"CustomScriptletInvalidNameError" = "Неверное имя сценария";
 
 /* A navigation title for the screen where a user creates a new custom scriptlet */
-"shields.addNewScriptletTitle" = "Новый скриптлет";
+"shields.addNewScriptletTitle" = "Добавить новый сценарий";
 
 /* A section header above the text editor where a user enters the custom scriptlet's JavaScript */
-"shields.customScriptletContentSectionTitle" = "Содержимое";
+"shields.customScriptletContentSectionTitle" = "Контент";
 
 /* A warning shown in an empty custom scriptlet editor */
-"shields.customScriptletContentWarning" = "Не вставляйте сюда код, который вы не понимаете или не проверили сами. С его помощью злоумышленники могут украсть ваши данные или получить контроль над устройством.";
+"shields.customScriptletContentWarning" = "Не вставляйте сюда код, который вы не понимаете или не проверили сами. Это может позволить злоумышленникам украсть вашу личность или получить контроль над вашим устройством.";
 
 /* A section header above the text field where a user enters the custom scriptlet's name */
 "shields.customScriptletNameSectionTitle" = "Название";
 
 /* A navigation title for the screen where a user edits an existing custom scriptlet */
-"shields.editScriptletTitle" = "Изменить скриптлет";
+"shields.editScriptletTitle" = "Редактировать сценарий";
 

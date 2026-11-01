@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/rpm/build.py b/chrome/installer/linux/rpm/build.py
-index c66d3309dbf6c3c160a26e4db02b409b729e16da..f5185b71ae268aaa6e036bde92ac052055c3207a 100755
+index 43237aaad477263815bc59230a67d2da1f47a926..fc3b48726084075f085c1276ed4b78fa98837960 100755
 --- a/chrome/installer/linux/rpm/build.py
 +++ b/chrome/installer/linux/rpm/build.py
 @@ -30,10 +30,20 @@ def gen_spec(

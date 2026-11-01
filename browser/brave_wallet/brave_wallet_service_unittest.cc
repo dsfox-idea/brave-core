@@ -24,6 +24,7 @@
 #include "base/test/test_future.h"
 #include "base/test/values_test_util.h"
 #include "base/time/time.h"
+#include "base/types/expected.h"
 #include "base/values.h"
 #include "brave/browser/brave_wallet/brave_wallet_service_delegate_base.h"
 #include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
@@ -37,7 +38,9 @@
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
+#include "brave/components/brave_wallet/browser/polkadot/polkadot_substrate_rpc.h"
 #include "brave/components/brave_wallet/browser/polkadot/polkadot_test_utils.h"
+#include "brave/components/brave_wallet/browser/polkadot/polkadot_wallet_service.h"
 #include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/brave_wallet/browser/test_utils.h"
 #include "brave/components/brave_wallet/browser/tx_service.h"
@@ -60,10 +63,14 @@
 #include "components/sync_preferences/testing_pref_service_syncable.h"
 #include "content/public/browser/storage_partition.h"
 #include "content/public/test/browser_task_environment.h"
+#include "net/base/net_errors.h"
+#include "net/http/http_status_code.h"
 #include "services/network/public/cpp/weak_wrapper_shared_url_loader_factory.h"
 #include "services/network/test/test_url_loader_factory.h"
+#include "services/network/test/test_utils.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 #include "third_party/blink/public/common/storage_key/storage_key.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "url/origin.h"
@@ -175,6 +182,24 @@ const char interface_not_supported_response[] = R"({
   })";
 
 constexpr char kBraveUrl[] = "https://brave.com";
+
+std::string AbiEncodeUint(int value) {
+  return absl::StrFormat("0x%064x", value);
+}
+
+std::string AbiEncodeString(std::string_view value) {
+  std::string encoded = "0x";
+  absl::StrAppendFormat(&encoded, "%064x", 32);
+  absl::StrAppendFormat(&encoded, "%064x", static_cast<unsigned>(value.size()));
+  const size_t header_size = encoded.size();
+  for (unsigned char c : value) {
+    absl::StrAppendFormat(&encoded, "%02x", c);
+  }
+  while ((encoded.size() - header_size) % 64 != 0) {
+    encoded.push_back('0');
+  }
+  return encoded;
+}
 
 class MockDataRemovalObserver : public StoragePartition::DataRemovalObserver {
  public:
@@ -813,15 +838,48 @@ class BraveWalletServiceUnitTest : public testing::Test {
     return result;
   }
 
+  void SetSuggestedTokenMetadataInterceptor(const std::string& symbol,
+                                            int decimals) {
+    const std::string symbol_result = AbiEncodeString(symbol);
+    const std::string decimals_result = AbiEncodeUint(decimals);
+    url_loader_factory_.SetInterceptor(base::BindLambdaForTesting(
+        [=, this](const network::ResourceRequest& request) {
+          if (!request.request_body ||
+              request.request_body->elements()->empty()) {
+            return;
+          }
+          std::string_view request_string(request.request_body->elements()
+                                              ->at(0)
+                                              .As<network::DataElementBytes>()
+                                              .AsStringPiece());
+          url_loader_factory_.ClearResponses();
+          if (request_string.find("0x95d89b41") != std::string::npos) {
+            url_loader_factory_.AddResponse(
+                request.url.spec(),
+                "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"" + symbol_result +
+                    "\"}");
+          }
+          if (request_string.find("0x313ce567") != std::string::npos) {
+            url_loader_factory_.AddResponse(
+                request.url.spec(),
+                "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"" +
+                    decimals_result + "\"}");
+          }
+        }));
+  }
+
   void AddSuggestToken(mojom::BlockchainTokenPtr suggested_token,
                        mojom::BlockchainTokenPtr expected_token,
                        bool approve,
                        bool run_switch_network = false) {
+    SetSuggestedTokenMetadataInterceptor(expected_token->symbol,
+                                         expected_token->decimals);
     mojom::AddSuggestTokenRequestPtr request =
         mojom::AddSuggestTokenRequest::New(
             MakeOriginInfo(url::Origin::Create(GURL(kBraveUrl))),
             suggested_token.Clone());
     base::RunLoop run_loop;
+    base::RunLoop added_loop;
     service_->AddSuggestTokenRequest(
         request.Clone(),
         base::BindLambdaForTesting(
@@ -846,7 +904,8 @@ class BraveWalletServiceUnitTest : public testing::Test {
               }
               run_loop.Quit();
             }),
-        base::Value());
+        base::Value(), added_loop.QuitClosure());
+    added_loop.Run();
 
     auto requests = GetPendingAddSuggestTokenRequests();
     ASSERT_EQ(requests.size(), 1u);
@@ -2482,8 +2541,8 @@ TEST_F(BraveWalletServiceUnitTest, AddSuggestToken) {
 
     // Case 1: Suggested token does not exist (no entry with the same contract
     // address) in BlockchainRegistry nor user assets.
-    // Token should be in user asset list and is visible, and the data should be
-    // the same as the one in the request.
+    // The contract reports the same symbol and decimals as the request, so the
+    // stored token matches the request.
     AddSuggestToken(custom_token.Clone(), custom_token.Clone(), true);
     auto token = get_user_asset(chain_id, custom_token->contract_address);
     EXPECT_EQ(token, custom_token);
@@ -2574,6 +2633,78 @@ TEST_F(BraveWalletServiceUnitTest, AddSuggestToken) {
     AddSuggestToken(brb_from_request.Clone(), brb_from_request.Clone(), false);
     token = get_user_asset(chain_id, brb_from_request->contract_address);
     EXPECT_FALSE(token);
+  }
+}
+
+TEST_F(BraveWalletServiceUnitTest, AddSuggestTokenReplacesDappMetadata) {
+  json_rpc_service_->SetNetwork(mojom::kMainnetChainId, mojom::CoinType::ETH,
+                                std::nullopt);
+  mojom::BlockchainTokenPtr suggested = mojom::BlockchainToken::New(
+      "0x1111111111111111111111111111111111111111", "Fake Name", "", false,
+      true, false, false, mojom::SPLTokenProgram::kUnsupported, false, false,
+      "FAKE", 18, true, "", "", mojom::kMainnetChainId, mojom::CoinType::ETH,
+      mojom::ZCashTokenType::kNone);
+  mojom::BlockchainTokenPtr expected = suggested.Clone();
+  expected->symbol = "USDC";
+  expected->decimals = 6;
+
+  AddSuggestToken(suggested.Clone(), expected.Clone(), true);
+
+  std::vector<mojom::BlockchainTokenPtr> tokens;
+  GetUserAssets(mojom::kMainnetChainId, mojom::CoinType::ETH, &tokens);
+  mojom::BlockchainTokenPtr stored;
+  for (auto& token : tokens) {
+    if (token->contract_address == suggested->contract_address) {
+      stored = token.Clone();
+    }
+  }
+  EXPECT_EQ(stored, expected);
+}
+
+TEST_F(BraveWalletServiceUnitTest, AddSuggestTokenRejectsUnreadableContract) {
+  json_rpc_service_->SetNetwork(mojom::kMainnetChainId, mojom::CoinType::ETH,
+                                std::nullopt);
+  url_loader_factory_.SetInterceptor(
+      base::BindLambdaForTesting([&](const network::ResourceRequest& request) {
+        url_loader_factory_.ClearResponses();
+        url_loader_factory_.AddResponse(
+            request.url.spec(),
+            "{\"jsonrpc\":\"2.0\",\"id\":1,\"error\":{"
+            "\"code\":-32000,\"message\":\"execution reverted\"}}");
+      }));
+
+  mojom::BlockchainTokenPtr suggested = mojom::BlockchainToken::New(
+      "0x2222222222222222222222222222222222222222", "Fake Name", "", false,
+      true, false, false, mojom::SPLTokenProgram::kUnsupported, false, false,
+      "FAKE", 18, true, "", "", mojom::kMainnetChainId, mojom::CoinType::ETH,
+      mojom::ZCashTokenType::kNone);
+  bool callback_ran = false;
+  base::RunLoop run_loop;
+  service_->AddSuggestTokenRequest(
+      mojom::AddSuggestTokenRequest::New(
+          MakeOriginInfo(url::Origin::Create(GURL(kBraveUrl))),
+          suggested.Clone()),
+      base::BindLambdaForTesting(
+          [&](mojom::EthereumProviderResponsePtr response) {
+            callback_ran = true;
+            EXPECT_TRUE(response->reject);
+            mojom::ProviderError error = mojom::ProviderError::kSuccess;
+            std::string error_message;
+            GetErrorCodeMessage(std::move(response->formed_response), &error,
+                                &error_message);
+            EXPECT_NE(error, mojom::ProviderError::kSuccess);
+            EXPECT_FALSE(error_message.empty());
+            run_loop.Quit();
+          }),
+      base::Value(), base::DoNothing());
+  run_loop.Run();
+
+  EXPECT_TRUE(callback_ran);
+  EXPECT_TRUE(GetPendingAddSuggestTokenRequests().empty());
+  std::vector<mojom::BlockchainTokenPtr> tokens;
+  GetUserAssets(mojom::kMainnetChainId, mojom::CoinType::ETH, &tokens);
+  for (const auto& token : tokens) {
+    EXPECT_NE(token->contract_address, suggested->contract_address);
   }
 }
 
@@ -2670,6 +2801,51 @@ TEST_F(BraveWalletServiceUnitTest, Reset) {
   task_environment_.RunUntilIdle();
   EXPECT_TRUE(testing::Mock::VerifyAndClearExpectations(&observer));
 #endif
+}
+
+TEST_F(BraveWalletServiceUnitTest,
+       RecoverWalletClearsImportedAccountPermissions) {
+  SetupWallet();
+
+  base::test::TestFuture<mojom::AccountInfoPtr> import_future;
+  keyring_service_->ImportEthereumAccount(
+      "Imported",
+      "d118a12a1e3b595d7d9e5599370df4ddc58d246a3ae4a795597e50eb6a32afb5",
+      import_future.GetCallback());
+  auto imported_account = import_future.Take();
+  ASSERT_TRUE(imported_account);
+
+  auto derived_account = GetAccountUtils().EnsureEthAccount(0);
+  const auto origin = url::Origin::Create(GURL(kBraveUrl));
+  const auto imported_account_permission =
+      GetAccountPermissionIdentifier(imported_account->account_id);
+  const auto derived_account_permission =
+      GetAccountPermissionIdentifier(derived_account->account_id);
+
+  ASSERT_TRUE(permissions::BraveWalletPermissionContext::AddPermission(
+      blink::PermissionType::BRAVE_ETHEREUM, profile_.get(), origin,
+      imported_account_permission));
+  ASSERT_TRUE(permissions::BraveWalletPermissionContext::AddPermission(
+      blink::PermissionType::BRAVE_ETHEREUM, profile_.get(), origin,
+      derived_account_permission));
+
+  auto* delegate = service_->GetDelegateForTesting();
+  ASSERT_TRUE(delegate);
+  ASSERT_TRUE(delegate->HasPermission(mojom::CoinType::ETH, origin,
+                                      imported_account_permission));
+  ASSERT_TRUE(delegate->HasPermission(mojom::CoinType::ETH, origin,
+                                      derived_account_permission));
+
+  keyring_service_->Lock();
+  base::test::TestFuture<mojom::RecoverWalletResult> recover_future;
+  keyring_service_->RecoverWallet(kMnemonicDivideCruise, "new password", false,
+                                  true, recover_future.GetCallback());
+  EXPECT_EQ(recover_future.Get(), mojom::RecoverWalletResult::kSuccess);
+
+  EXPECT_FALSE(delegate->HasPermission(mojom::CoinType::ETH, origin,
+                                       imported_account_permission));
+  EXPECT_TRUE(delegate->HasPermission(mojom::CoinType::ETH, origin,
+                                      derived_account_permission));
 }
 
 TEST_F(BraveWalletServiceUnitTest, GetNftDiscoveryEnabled) {
@@ -3095,9 +3271,9 @@ TEST_F(BraveWalletServiceUnitTest, DisplayTxNotification) {
                                "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                                "0x0", std::vector<uint8_t>())),
         test_case.status, mojom::TransactionType::ETHSend,
-        std::vector<std::string>(), std::vector<std::string>(),
-        base::Milliseconds(0), base::Milliseconds(0), base::Milliseconds(0),
-        nullptr, mojom::kMainnetChainId, std::nullopt, false, nullptr, nullptr);
+        std::vector<std::string>(), std::vector<std::string>(), base::Time(),
+        base::Time(), base::Time(), nullptr, mojom::kMainnetChainId,
+        std::nullopt, false, nullptr, nullptr);
 
     EXPECT_CALL(*delegate_ptr,
                 DisplayTxNotification(test_case.status, account->name,
@@ -3127,6 +3303,63 @@ TEST_F(BraveWalletServiceUnitTest, AutolockIsDisabledInTests) {
   EXPECT_FALSE(another_wallet_service->keyring_service()->IsLockedSync());
   task_environment_.FastForwardBy(base::Minutes(20));
   EXPECT_TRUE(another_wallet_service->keyring_service()->IsLockedSync());
+}
+
+TEST_F(BraveWalletServiceUnitTest, PolkadotParachainRpcUrlsFromRegistry) {
+  BlockchainRegistry::ScopedPolkadotRpcUrlsForTesting scoped_empty_rpc_urls({});
+
+  auto* polkadot_rpc = service_->GetPolkadotWalletService()->GetPolkadotRpc();
+  ASSERT_TRUE(polkadot_rpc);
+
+  auto* registry = BlockchainRegistry::GetInstance();
+  ASSERT_TRUE(registry->GetPolkadotRpcUrls().empty());
+
+  // Parachains have no built-in network entry, so the registry callback
+  // installed by BraveWalletService is the only thing that can resolve them.
+  ASSERT_TRUE(network_manager_
+                  ->GetNetworkURL(mojom::kPolkadotAcala, mojom::CoinType::DOT)
+                  .is_empty());
+
+  // An unresolved chain yields an empty URL, which the real network service
+  // rejects outright.
+  url_loader_factory_.AddResponse(
+      GURL(), network::CreateURLResponseHead(net::HTTP_BAD_REQUEST), "",
+      network::URLLoaderCompletionStatus(net::ERR_INVALID_URL));
+
+  auto* reqs = url_loader_factory_.pending_requests();
+  reqs->clear();
+
+  base::test::TestFuture<base::expected<std::vector<uint8_t>, std::string>>
+      future;
+
+  polkadot_rpc->GetMetadata(mojom::kPolkadotAcala, future.GetCallback());
+  EXPECT_TRUE(reqs->empty());
+  auto metadata = future.Take();
+  ASSERT_FALSE(metadata.has_value());
+  EXPECT_EQ(metadata.error(), WalletInternalErrorMessage());
+
+  // The callback consults the registry per request, so URLs arriving after
+  // BraveWalletService was constructed still resolve.
+  auto rpc_urls = ParsePolkadotRpcUrls(R"({
+    "polkadot_acala": ["https://acala-rpc-0.aca-api.network/"]
+  })");
+  ASSERT_TRUE(rpc_urls);
+
+  BlockchainRegistry::ScopedPolkadotRpcUrlsForTesting scoped_rpc_urls(
+      std::move(*rpc_urls));
+
+  polkadot_rpc->GetMetadata(mojom::kPolkadotAcala, base::DoNothing());
+  ASSERT_EQ(reqs->size(), 1u);
+  EXPECT_EQ(reqs->front().request.url,
+            GURL("https://acala-rpc-0.aca-api.network/"));
+  reqs->clear();
+
+  // A chain the registry doesn't know about stays unresolved.
+  polkadot_rpc->GetMetadata(mojom::kPolkadotBifrost, future.GetCallback());
+  EXPECT_TRUE(reqs->empty());
+  metadata = future.Take();
+  ASSERT_FALSE(metadata.has_value());
+  EXPECT_EQ(metadata.error(), WalletInternalErrorMessage());
 }
 
 }  // namespace brave_wallet

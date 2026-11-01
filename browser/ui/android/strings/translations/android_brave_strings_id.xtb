@@ -220,7 +220,6 @@
 <translation id="9040069796107003510">Ikon Imbalan Growser</translation>
 <translation id="6333347122924254968">Tampilkan ikon Growser Rewards pada bilah alamat</translation>
 <translation id="4393974575368329991">Bilah alat navigasi bawah</translation>
-<translation id="8727059712928806451">Aktifkan bilah bawah</translation>
 <translation id="1834226716203076292">Tampilkan bilah bawah untuk akses cepat ke beranda, markah, dan penelusuran</translation>
 <translation id="1422686363939271829">Pengaturan ini dinonaktifkan apabila posisi bilah alamat bawah dipilih</translation>
 <translation id="6587448235155023666">Semua perubahan akan berlaku begitu Anda meluncurkan ulang Growser</translation>
@@ -290,7 +289,7 @@
 <translation id="2569646144216067185">Jumlah kata: <ph name="WORD_COUNT"/></translation>
 <translation id="7507533586185621084">Kode sinkronisasi salah</translation>
 <translation id="8284063834901328650">Kode QR sinkronisasi salah</translation>
-<translation id="859506441384380749">Kode ini dihasilkan oleh versi Growser yang lama, silakan tingkatkan perangkat Anda yang lainnya terlebih dahulu</translation>
+<translation id="4002014583969312635">Sepertinya kode ini dibuat dalam perangkat yang menjalankan Growser versi lebih lama. Silakan perbarui ke versi terbaru Growser pada perangkat Anda yang lain dan kemudian buatlah kode sinkronisasi yang baru.</translation>
 <translation id="3132642509209154999">Kode ini telah kedaluwarsa. Silakan menghasilkan yang baru pada perangkat Anda dan coba lagi.</translation>
 <translation id="2859229680945501779">Kode ini tidak valid. Silakan periksa bahwa waktu dan zona waktu telah ditetapkan dengan tepat di peranti Anda.</translation>
 <translation id="3149880132460839085">Growser Sync</translation>
@@ -336,8 +335,6 @@
 <translation id="8185825081026121627">Dapatkan Basic Attention Token untuk melihat iklan Growser Rewards yang menjaga privasi.</translation>
 <translation id="5321518976657560663">Penyetalan Ulang Eror</translation>
 <translation id="4114170343590425996">Terjadi masalah saat menyetel ulang Growser Rewards. Harap memulai ulang Growser dan mencoba lagi.</translation>
-<translation id="6417420737057016607">Iklan Growser</translation>
-<translation id="5611966874859284786">Tampilkan iklan notifikasi ketika Growser tidak digunakan</translation>
 <translation id="5717636703619499822"><ph name="BEGIN_LINK1"/>Mengatur ulang data Imbalan Growser…<ph name="END_LINK1"/></translation>
 <translation id="1830919318137227284"><ph name="BEGIN_LINK1"/>Hapus data Iklan Growser…<ph name="END_LINK1"/></translation>
 <translation id="8293206222192510085">Tambahkan Markah</translation>
@@ -400,8 +397,9 @@ Anda yakin ingin melakukan hal ini?</translation>
 <translation id="4546260624932151782">Tampilkan favorit</translation>
 <translation id="5313967007315987356">Tambahkan situs</translation>
 <translation id="1773147648972887693">Tampilkan situs yang sering dikunjungi</translation>
-<translation id="752098910262610337">Tampilkan pintasan</translation>
 <translation id="7134741506051403308">Sembunyikan widget</translation>
+<translation id="1247759249260562308">Edit favorit</translation>
+<translation id="6387214885349500492">Sematkan favorit ini</translation>
 <translation id="7462178177755090262">Layar Pembuka</translation>
 <translation id="5365434987337264071">Tab terakhir dibuka</translation>
 <translation id="6019856124237323989">{HOURS, plural, =1 {Tab baru setelah tidak aktif selama <ph name="HOURS_ONE"/> jam} other {Tab baru setelah tidak aktif selama <ph name="HOURS_MANY"/> jam}}</translation>
@@ -976,6 +974,7 @@ Jika Anda tidak menerima permintaan ini, VPN tidak akan tersambung kembali dan s
 <translation id="6365389672683343144">Paket langganan VPN Growser Anda dapat melindungi hingga 5 perangkat, meliputi Android, iOS, dan desktop. Cukup tautkan paket langganan Google Play Anda ke akun Growser Anda.</translation>
 <translation id="6610899852831463073">Tidak dapat mengaktifkan Perambanan Aman</translation>
 <translation id="7954263306665462056">Perambanan Aman telah dinonaktifkan pada perangkat Anda. Untuk mengaktifkannya, pastikan bahwa Layanan Google Play telah dipasang dan telah mengikuti versi terbarunya.</translation>
+<translation id="6417420737057016607">Iklan Growser</translation>
 <translation id="7748944510530490017">Jaringan Utama</translation>
 <translation id="2781668117338732220">Jaringan Sekunder</translation>
 <translation id="282560918037172384">Jaringan Pengujian</translation>
@@ -1214,6 +1213,10 @@ Jika Anda tidak menerima permintaan ini, VPN tidak akan tersambung kembali dan s
 <translation id="1850594249589065646">Ketepatan lokasi</translation>
 <translation id="2403474027143565107">Tepat</translation>
 <translation id="4042597221652780603">Kira-kira</translation>
+<translation id="8727059712928806451">Aktifkan bilah bawah</translation>
+<translation id="859506441384380749">Kode ini dihasilkan oleh versi Growser yang lama, silakan tingkatkan perangkat Anda yang lainnya terlebih dahulu</translation>
+<translation id="5611966874859284786">Tampilkan iklan notifikasi ketika Growser tidak digunakan</translation>
+<translation id="752098910262610337">Tampilkan pintasan</translation>
 <translation id="8347743943525229984">Izinkan survei Growser</translation>
 <translation id="6022939994702081659">Izinkan Growser menampilkan tautan ke survei privat di halaman tab baru. Survei membantu kami membangun fitur yang lebih baik dan mengukur keefektifan kampanye iklan berbasis browser.</translation>
 <translation id="7746496306508543965">Pelajari selengkapnya tentang survei Growser</translation>
@@ -1390,4 +1393,6 @@ Anda yakin ingin melakukan hal ini?</translation>
 <translation id="5390923430722428146">Solana</translation>
 <translation id="6524973012848479397">Bantu dukung misi Growser untuk membangun Web yang independen dan mengutamakan pengguna dengan Iklan Bersponsor. Kami mengukur performa iklan secara privat, tanpa mengidentifikasi Anda.</translation>
 <translation id="9194561096821877683">Growser</translation>
+<translation id="6132163760114048767">Sepertinya kode ini dibuat dalam perangkat yang menjalankan Growser versi lebih lama. Silakan perbarui ke versi terbaru Growser pada perangkat Anda yang lain dan kemudian buatlah kode sinkronisasi yang baru.</translation>
+<translation id="8374211255088179509">Growser Origin kini aktif pada perangkat ini. Untuk mulai menggunakan fitur ini, Anda perlu memulai ulang browser. Apakah Anda ingin memulai ulang sekarang?</translation>
 </translationbundle>

@@ -22,6 +22,7 @@ Vissa funktioner kanske inte är tillgängliga och ändringar i inställningarna
 <translation id="8541922081612557424">Om Growser</translation>
 <translation id="987734326276404793">Få prisbevakningsaviseringar med Growser på telefonen</translation>
 <translation id="1203500561924088507">Tack för att du installerat programmet. Du måste starta om webbläsaren innan du använder <ph name="BUNDLE_NAME"/>.</translation>
+<translation id="1213674046343558619">En <ph name="IMPORTANT_UPDATE"/> väntar. Growser uppdateras nästa gång du är inaktiv i <ph name="IDLE_DURATION"/> för att skydda ditt surfande.</translation>
 <translation id="1232234696885483911">När du öppnar bildsökning skickas sidans rubrik, webbadress och innehåll, inklusive PDF-filer, automatiskt till servern. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">När du är inloggad kan du använda dina lösenord och annat från ditt Growser-konto i Growser. Om du vill ändra detta öppnar du ditt konto i Growser.</translation>
 <translation id="583633806828413086">Visa Gemini i Growser i menyraden på Mac</translation>
@@ -224,6 +225,7 @@ Vissa funktioner kanske inte är tillgängliga och ändringar i inställningarna
 <translation id="3286538390144397061">Starta om nu</translation>
 <translation id="2339258256897053758">Braves API-nycklar saknas. Vissa funktioner i Growser Growser kommer att vara inaktiverade.</translation>
 <translation id="8926637909431618259">Fortsätt köra bakgrundsappar när Growser avslutas</translation>
+<translation id="8245661393996028021">Growser uppdateras när du är borta från enheten</translation>
 <translation id="518125528057094977">Growser varnar dig innan webbplatser med osäkra anslutningar läses in</translation>
 <translation id="8652321858775514885">Du loggas ut från de flesta webbplatser när du stänger alla fönster i Growser, med undantag för Growser-kontot om du är inloggad i Growser. <ph name="SETTINGS_LINK"/> och gör så att webbplatser kommer ihåg dig.</translation>
 <translation id="3352986031709923790">övre högra hörnet av sökområdet: <ph name="RIGHT"/> % åt höger, <ph name="TOP"/> % uppåt</translation>
@@ -232,6 +234,7 @@ Vissa funktioner kanske inte är tillgängliga och ändringar i inställningarna
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">Vill du byta till befintlig Growser-profil?</translation>
 <translation id="3412460710772753638">I Lösenordshantering på den här enheten</translation>
+<translation id="172368702860945706">Growser behöver uppdateras</translation>
 <translation id="5079573433701109938">Logga in i Growser om du vill få tillgång till dina bokmärken med mera från <ph name="DEVICE"/></translation>
 <translation id="3438772217992559640">Sök på den här fliken med bildsökning</translation>
 <translation id="2491221873705777076">Förbättrad säker webbsökning når längre med Growser på telefonen</translation>
@@ -369,6 +372,7 @@ Vissa funktioner kanske inte är tillgängliga och ändringar i inställningarna
 <translation id="4877750182157975795">Få åtkomst till alla dina Growser-favoriter med Growser på din <ph name="DEVICE_TYPE"/></translation>
 <translation id="1204184037023366446">Growser behöver behörighet för handspårning</translation>
 <translation id="5406591571925937375">Du har inte besökt webbplatsen på sistone. Growser har tagit bort <ph name="PERMISSION_1"/>, <ph name="PERMISSION_2"/> och <ph name="PERMISSION_3"/>.</translation>
+<translation id="3576895950897485019">Logga in i Growser</translation>
 <translation id="5174969993834422967">Du brukar blockera aviseringar. Klicka på aviseringsikonen uppe till höger om platsfältet om du vill tillåta aviseringar från webbplatsen.</translation>
 <translation id="5174983315706567306">Det finns inte tillräckligt med diskutrymme.</translation>
 <translation id="8157129267754368853">Omautentisering krävs för Growser-kontot</translation>
@@ -377,6 +381,7 @@ Vissa funktioner kanske inte är tillgängliga och ändringar i inställningarna
 <translation id="5234764350956374838">Stäng</translation>
 <translation id="7690383309583926074">Skaffa Growser-appen för att spara lösenord på språng</translation>
 <translation id="8586264863973514035">Ändringarna tillämpas när du startar om Growser</translation>
+<translation id="8127050479140582768">Om du vill skicka den här fliken till en annan enhet loggar du in i Growser på båda enheterna</translation>
 <translation id="5286907366254680517">Identifierades</translation>
 <translation id="7264453786974905915">Skaffa Growser-appen</translation>
 <translation id="7230006500876504868">Sök med Growser</translation>
@@ -740,6 +745,7 @@ Growser kan inte återställa dina inställningar.</translation>
 <translation id="5128665650717824082">Growser for Testing kan inte användas som standardwebbläsare.</translation>
 <translation id="3053208669360972929">Sök med Growser var du än är</translation>
 <translation id="2433912322225810055">Det styr också vilken sida som visas när du startar Growser eller söker i adressfältet.</translation>
+<translation id="8789425457808164956">Om du vill skicka den här fliken till en annan enhet loggar du in i Growser på den enheten</translation>
 <translation id="4100716194836114130">Det här är Growser</translation>
 <translation id="8712637175834984815">Uppfattat</translation>
 <translation id="1419543648228375718">Vill du logga in i Growser?</translation>
@@ -1385,4 +1391,29 @@ Om sidan inte fungerar som förväntat kan du testa att tillåta optimering.</tr
 <translation id="9194561096821877683">Growser</translation>
 <translation id="3721794228264322796">Stäng Gemini i Growser</translation>
 <translation id="2314508080153323869">Gemini i Growser</translation>
+<translation id="5114210947713246258"><ph name="EXISTING_USER"/> är redan inloggad. Du kan hålla isär webbinformationen genom att logga in i Growser i din egen profil med <ph name="USER_EMAIL_ADDRESS"/>. Du får även din läslista med mera från <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861"><ph name="EXISTING_USER"/> är redan inloggad. Du kan hålla isär webbinformationen genom att logga in i Growser i din egen profil med <ph name="USER_EMAIL_ADDRESS"/>. Du får även dina tillägg med mera från <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592"><ph name="EXISTING_USER"/> är redan inloggad. Du kan hålla isär webbinformationen genom att logga in i Growser i din egen profil med <ph name="USER_EMAIL_ADDRESS"/>. Du får även din läslista med mera på alla dina enheter.</translation>
+<translation id="1055314897144735151"><ph name="EXISTING_USER"/> är redan inloggad. Du kan hålla isär webbinformationen genom att logga in i Growser i din egen profil med <ph name="USER_EMAIL_ADDRESS"/>. Du får även dina tillägg med mera på alla dina enheter.</translation>
+<translation id="3429303382931281808">Logga in i Growser om du vill få tillgång dina lösenord med mera från <ph name="DEVICE"/></translation>
+<translation id="7681019317864236341">Logga in i Growser om du vill få tillgång till dina bokmärken med mera från <ph name="DEVICE"/></translation>
+<translation id="1910605032088789136">Logga in i Growser om du vill få tillgång till din sparade information med mera från <ph name="DEVICE"/></translation>
+<translation id="6794970122141277862">Logga in i Growser om du vill få tillgång till din läslista med mera från <ph name="DEVICE"/></translation>
+<translation id="3538050518049904702">Logga in i Growser om du vill få tillgång till dina tillägg med mera från <ph name="DEVICE"/></translation>
+<translation id="1447754948984825961">Logga in i Growser om du vill få tillgång till dina bokmärken med mera på alla dina enheter</translation>
+<translation id="5758015234894546674">Logga in i Growser om du vill få tillgång till din sparade information med mera på alla dina enheter</translation>
+<translation id="562156935182849823">Logga in i Growser om du vill få tillgång till din läslista med mera på alla dina enheter</translation>
+<translation id="7817930780633998561">Logga in i Growser om du vill få tillgång till dina tillägg med mera på alla dina enheter</translation>
+<translation id="4444512588051585636">Growser uppdateras när du är borta från enheten</translation>
+<translation id="950120991083623144">Growser behöver uppdateras</translation>
+<translation id="8250854223127536286">En <ph name="IMPORTANT_UPDATE"/> väntar. Growser uppdateras nästa gång du är inaktiv i <ph name="IDLE_DURATION"/> för att skydda ditt surfande.</translation>
+<translation id="8620823632809282061">Gemini Enterprise i Growser</translation>
+<translation id="4719707676382088645">Growser-profil</translation>
+<translation id="7944326067922128825">Sök och ställ frågor var som helst, även när Growser är minimerat. Tillåter att Growser körs i bakgrunden.</translation>
+<translation id="1760966099984077912">Sök med Growser var du än är</translation>
+<translation id="4011238820523740465">Fråga om innehåll utanför Growser, som andra appar eller filer</translation>
+<translation id="1491740387498395373">för att söka med Growser eller anpassa i <ph name="BEGIN_LINK"/>Inställningar<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">för att söka med Growser.</translation>
+<translation id="1162630940779651724">Om du vill skicka den här fliken till en annan enhet loggar du in i Growser på båda enheterna</translation>
+<translation id="5388608738812110907">Om du vill skicka den här fliken till en annan enhet loggar du in i Growser på den enheten</translation>
 </translationbundle>

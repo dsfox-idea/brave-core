@@ -7,11 +7,12 @@ package org.chromium.chrome.browser.tabbed_mode;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.content.res.AppCompatResources;
 
@@ -26,6 +27,7 @@ import org.chromium.base.supplier.NullableObservableSupplier;
 import org.chromium.base.supplier.OneshotSupplier;
 import org.chromium.brave.browser.customize_menu.CustomizeBraveMenu;
 import org.chromium.build.annotations.NullMarked;
+import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ActivityTabProvider;
 import org.chromium.chrome.browser.RecentlyClosedEntriesManager;
@@ -150,8 +152,8 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
             PageZoomManager pageZoomManager,
             OneshotSupplier<HubManager> hubManagerSupplier,
             @Nullable OpenInAppMenuItemProvider openInAppMenuItemProvider,
-            Supplier<RecentlyClosedEntriesManager> recentlyClosedEntriesManagerSupplier,
-            Supplier<SideUiStateProvider> sideUiStateProviderSupplier,
+            Supplier<@Nullable RecentlyClosedEntriesManager> recentlyClosedEntriesManagerSupplier,
+            Supplier<@Nullable SideUiStateProvider> sideUiStateProviderSupplier,
             NonNullObservableSupplier<Boolean> xrSpaceModeObservableSupplier,
             BooleanSupplier canActivateTabLayoutToggleMenu) {
         super(
@@ -402,6 +404,36 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
     }
 
     @Override
+    protected MVCListAdapter.ListItem buildAddToHomescreenListItem(
+            Tab currentTab, boolean showIcon) {
+        MVCListAdapter.ListItem item = super.buildAddToHomescreenListItem(currentTab, showIcon);
+        if (!isMergeInstallPwaAndCreateShortcutEnabled()) return item;
+
+        // Keep the disabled styling upstream applies while a WebAPK install is pending.
+        CharSequence oldTitle = item.model.get(AppMenuItemProperties.TITLE);
+        SpannableString title =
+                new SpannableString(mContext.getString(R.string.brave_menu_add_to_home_screen));
+        if (oldTitle instanceof Spanned spanned) {
+            for (Object span : spanned.getSpans(0, spanned.length(), Object.class)) {
+                title.setSpan(span, 0, title.length(), spanned.getSpanFlags(span));
+            }
+        }
+        item.model.set(AppMenuItemProperties.TITLE, title);
+
+        if (showIcon) {
+            item.model.set(
+                    AppMenuItemProperties.ICON,
+                    AppCompatResources.getDrawable(mBraveContext, R.drawable.ic_smartphone_home));
+        }
+        return item;
+    }
+
+    private static boolean isMergeInstallPwaAndCreateShortcutEnabled() {
+        return ChromeFeatureList.isEnabled(
+                BraveFeatureList.BRAVE_ANDROID_MERGE_INSTALL_PWA_AND_CREATE_SHORTCUT);
+    }
+
+    @Override
     public boolean shouldShowNewWindow() {
         return BraveMultiWindowUtils.shouldEnableMultiWindows() && super.shouldShowNewWindow();
     }
@@ -547,21 +579,22 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
         }
 
         // Manage windows
+        if (BraveMultiWindowUtils.isWindowManagerAvailable()) {
+            // Remove the windows count placeholder.
+            String manageWindows =
+                    mContext.getString(R.string.menu_manage_all_windows, 0)
+                            .replaceAll("\\s*\\(\\d+\\)$", "");
 
-        // Remove the windows count placeholder.
-        String manageWindows =
-                mContext.getString(R.string.menu_manage_all_windows, 0)
-                        .replaceAll("\\s*\\(\\d+\\)$", "");
-
-        modelList.add(
-                new MVCListAdapter.ListItem(
-                        AppMenuHandler.AppMenuItemType.STANDARD,
-                        AppMenuItemUtils.buildBaseModelForTextItem(
-                                        mAppMenuItemTheme,
-                                        R.id.manage_all_windows_menu_id,
-                                        isMenuIconAtStart())
-                                .with(AppMenuItemProperties.TITLE, manageWindows)
-                                .build()));
+            modelList.add(
+                    new MVCListAdapter.ListItem(
+                            AppMenuHandler.AppMenuItemType.STANDARD,
+                            AppMenuItemUtils.buildBaseModelForTextItem(
+                                            mAppMenuItemTheme,
+                                            R.id.manage_all_windows_menu_id,
+                                            isMenuIconAtStart())
+                                    .with(AppMenuItemProperties.TITLE, manageWindows)
+                                    .build()));
+        }
 
         // Open History
         modelList.add(
@@ -792,7 +825,9 @@ public class BraveTabbedAppMenuPropertiesDelegate extends TabbedAppMenuPropertie
                                     mContext,
                                     mAppMenuItemTheme,
                                     R.id.universal_install,
-                                    R.string.menu_install_create_shortcut,
+                                    isMergeInstallPwaAndCreateShortcutEnabled()
+                                            ? R.string.brave_menu_add_to_home_screen
+                                            : R.string.menu_install_create_shortcut,
                                     0,
                                     isMenuIconAtStart())));
         }

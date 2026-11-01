@@ -31,8 +31,10 @@ BrowsingHistoryCleaner::BrowsingHistoryCleaner(
   // it skips its sync observation when the pointer is null, and the notice
   // helper returns false - so requiring one here only meant that Shred never
   // deleted any history at all.
+  // No device tracker is needed as the service is not used to call
+  // `GetAllSyncedClientsGroupedByName`.
   browsing_history_service_ = std::make_unique<history::BrowsingHistoryService>(
-      this, history_service, sync_service);
+      this, history_service, sync_service, /*device_info_tracker=*/nullptr);
 }
 
 BrowsingHistoryCleaner::~BrowsingHistoryCleaner() = default;

@@ -20,6 +20,7 @@
 <translation id="8541922081612557424">Про Growser</translation>
 <translation id="987734326276404793">Отримуйте сповіщення про відстеження цін у Growser на телефоні</translation>
 <translation id="1203500561924088507">Дякуємо за встановлення. Щоб почати використовувати пакет <ph name="BUNDLE_NAME"/>, потрібно перезапустити веб-переглядач.</translation>
+<translation id="1213674046343558619">Потрібно встановити <ph name="IMPORTANT_UPDATE"/>. Щоб ви могли безпечно переглядати вебсторінки, Growser оновиться, коли ви не використовуватимете вебпереглядач протягом <ph name="IDLE_DURATION"/>.</translation>
 <translation id="1232234696885483911">Коли ви відкриваєте пошук за зображенням, на сервер автоматично надсилається назва сторінки, її URL-адреса й контент, зокрема файли PDF. <ph name="LEARN_MORE"/></translation>
 <translation id="1934377710648094656">Увійшовши в Growser, ви можете використовувати паролі й інші дані з облікового запису Growser. Щоб змінити це налаштування, перейдіть у розділ "Ваш обліковий запис у Growser".</translation>
 <translation id="583633806828413086">Показувати значок Gemini у Growser на панелі меню пристрою Mac</translation>
@@ -222,6 +223,7 @@ Growser потрібен доступ до Bluetooth. <ph name="IDS_SERIAL_DEVIC
 <translation id="3286538390144397061">Перезапустити зараз</translation>
 <translation id="2339258256897053758">Ключі API Growser відсутні. Деякі функції Growser буде вимкнено.</translation>
 <translation id="8926637909431618259">Продовжувати роботу фонових програм, коли Growser закрито</translation>
+<translation id="8245661393996028021">Growser оновиться, коли ви його не використовуватимете</translation>
 <translation id="518125528057094977">Growser показуватиме попередження, перш ніж завантажити сайт через незахищене з’єднання</translation>
 <translation id="8652321858775514885">Якщо ви закриєте всі вікна Growser, то вийдете з облікових записів на більшості сайтів, але не з облікового запису Growser (за умови, що ви ввійшли в Growser). Щоб дозволити сайтам запам’ятовувати вас, <ph name="SETTINGS_LINK"/>.</translation>
 <translation id="3352986031709923790">правий верхній кут області пошуку: <ph name="RIGHT"/>% праворуч, <ph name="TOP"/>% згори</translation>
@@ -230,6 +232,7 @@ Growser потрібен доступ до Bluetooth. <ph name="IDS_SERIAL_DEVIC
 <translation id="2645435784669275700">Chrome OS</translation>
 <translation id="2297290224191497273">Перейти в наявний профіль Growser?</translation>
 <translation id="3412460710772753638">У Менеджері паролів на цьому пристрої</translation>
+<translation id="172368702860945706">Потрібно оновити Growser</translation>
 <translation id="5079573433701109938">Щоб отримати доступ до закладок і інших даних із пристрою "<ph name="DEVICE"/>", увійдіть у Growser</translation>
 <translation id="3438772217992559640">Шукати на цій вкладці за допомогою функції "Пошук за зображенням"</translation>
 <translation id="2491221873705777076">Використовуйте Безпечний перегляд із розширеним захистом у Growser на телефоні</translation>
@@ -367,6 +370,7 @@ Growser потрібен доступ до Bluetooth. <ph name="IDS_SERIAL_DEVIC
 <translation id="4877750182157975795">Користуйтеся всіма улюбленими сервісами Growser у Growser на вашому пристрої <ph name="DEVICE_TYPE"/></translation>
 <translation id="1204184037023366446">Вебпереглядачу Growser потрібен дозвіл на відстеження ваших рук</translation>
 <translation id="5406591571925937375">Останнім часом ви не відвідували цей сайт. Вебпереглядач Growser скасував такі дозволи: "<ph name="PERMISSION_1"/>", "<ph name="PERMISSION_2"/>" і "<ph name="PERMISSION_3"/>".</translation>
+<translation id="3576895950897485019">Увійдіть у Growser</translation>
 <translation id="5174969993834422967">Зазвичай ви блокуєте сповіщення. Щоб дозволити сайту показувати сповіщення, натисніть значок сповіщення в правому куті панелі місцезнаходження.</translation>
 <translation id="5174983315706567306">Недостатньо місця на диску.</translation>
 <translation id="8157129267754368853">Потрібно пройти повторну автентифікацію в обліковому записі Growser</translation>
@@ -375,6 +379,7 @@ Growser потрібен доступ до Bluetooth. <ph name="IDS_SERIAL_DEVIC
 <translation id="5234764350956374838">Закрити</translation>
 <translation id="7690383309583926074">Завантажте додаток Growser, щоб зберігати паролі, де б ви не були</translation>
 <translation id="8586264863973514035">Щоб застосувати зміни, перезапустіть Growser</translation>
+<translation id="8127050479140582768">Щоб надіслати цю вкладку на інший пристрій, увійдіть в обліковий запис Growser на обох пристроях</translation>
 <translation id="5286907366254680517">Визначено</translation>
 <translation id="7264453786974905915">Завантажити додаток Growser</translation>
 <translation id="7230006500876504868">Пошук у Growser</translation>
@@ -738,6 +743,7 @@ Growser не може відновити ваші налаштування.</tra
 <translation id="5128665650717824082">Growser for Testing не можна зробити веб-переглядачем за умовчанням.</translation>
 <translation id="3053208669360972929">Виконуйте пошук у Growser будь-де</translation>
 <translation id="2433912322225810055">Розширення також змінило сторінку, яка відкривається під час запуску Growser або пошуку в універсальному вікні пошуку.</translation>
+<translation id="8789425457808164956">Щоб надіслати цю вкладку на інший пристрій, увійдіть на ньому в Growser</translation>
 <translation id="4100716194836114130">Це ваш Growser</translation>
 <translation id="8712637175834984815">OK</translation>
 <translation id="1419543648228375718">Увійти в Growser?</translation>
@@ -1413,4 +1419,29 @@ Growser потрібен доступ до Bluetooth. <ph name="IDS_SERIAL_DEVIC
 <translation id="9194561096821877683">Brave Software</translation>
 <translation id="3721794228264322796">Закрити Gemini у Growser</translation>
 <translation id="2314508080153323869">Gemini у Growser</translation>
+<translation id="5114210947713246258">Ви вже ввійшли в обліковий запис <ph name="EXISTING_USER"/>. Щоб переглядати вебсторінки окремо, увійдіть у свій профіль у Growser як <ph name="USER_EMAIL_ADDRESS"/>. Ви також отримаєте доступ до списку читання й інших даних із такого пристрою: <ph name="DEVICE"/>.</translation>
+<translation id="8540267408727588861">Ви вже ввійшли в обліковий запис <ph name="EXISTING_USER"/>. Щоб переглядати вебсторінки окремо, увійдіть у свій профіль у Growser як <ph name="USER_EMAIL_ADDRESS"/>. Ви також отримаєте доступ до розширень і інших даних із такого пристрою: <ph name="DEVICE"/>.</translation>
+<translation id="8037064765247024592">Ви вже ввійшли в обліковий запис <ph name="EXISTING_USER"/>. Щоб переглядати вебсторінки окремо, увійдіть у свій профіль у Growser як <ph name="USER_EMAIL_ADDRESS"/>. Ви також отримаєте доступ до списку читання й інших даних на всіх своїх пристроях.</translation>
+<translation id="1055314897144735151">Ви вже ввійшли в обліковий запис <ph name="EXISTING_USER"/>. Щоб переглядати вебсторінки окремо, увійдіть у свій профіль у Growser як <ph name="USER_EMAIL_ADDRESS"/>. Ви також отримаєте доступ до розширень і інших даних на всіх своїх пристроях.</translation>
+<translation id="3429303382931281808">Щоб отримати доступ до паролів і інших даних із пристрою "<ph name="DEVICE"/>", увійдіть у Growser</translation>
+<translation id="7681019317864236341">Щоб отримати доступ до закладок і інших даних із пристрою "<ph name="DEVICE"/>", увійдіть у Growser</translation>
+<translation id="1910605032088789136">Щоб отримати доступ до збереженої інформації і інших даних із пристрою "<ph name="DEVICE"/>", увійдіть у Growser</translation>
+<translation id="6794970122141277862">Щоб отримати доступ до списку читання й інших даних із пристрою "<ph name="DEVICE"/>", увійдіть у Growser</translation>
+<translation id="3538050518049904702">Щоб отримати доступ до розширень і інших даних із пристрою "<ph name="DEVICE"/>", увійдіть у Growser</translation>
+<translation id="1447754948984825961">Щоб отримати доступ до закладок і інших даних на всіх своїх пристроях, увійдіть у Growser</translation>
+<translation id="5758015234894546674">Щоб отримати доступ до збереженої інформації і інших даних на всіх своїх пристроях, увійдіть у Growser</translation>
+<translation id="562156935182849823">Щоб отримати доступ до списку читання й інших даних на всіх своїх пристроях, увійдіть у Growser</translation>
+<translation id="7817930780633998561">Щоб отримати доступ до розширень і інших даних на всіх своїх пристроях, увійдіть у Growser</translation>
+<translation id="4444512588051585636">Growser оновиться, коли ви його не використовуватимете</translation>
+<translation id="950120991083623144">Потрібно оновити Growser</translation>
+<translation id="8250854223127536286">Потрібно встановити <ph name="IMPORTANT_UPDATE"/>. Щоб ви могли безпечно переглядати вебсторінки, Growser оновиться, коли ви не використовуватимете вебпереглядач протягом <ph name="IDLE_DURATION"/>.</translation>
+<translation id="8620823632809282061">Gemini Enterprise у Growser</translation>
+<translation id="4719707676382088645">Профіль Growser</translation>
+<translation id="7944326067922128825">Шукайте інформацію і ставте запитання будь-де, навіть якщо Growser згорнуто. Дозволяє Growser працювати у фоновому режимі.</translation>
+<translation id="1760966099984077912">Виконуйте пошук у Growser будь-де</translation>
+<translation id="4011238820523740465">Ставте запитання про контент за межами Growser, наприклад про інші додатки або файли</translation>
+<translation id="1491740387498395373">щоб шукати в Growser або змінити <ph name="BEGIN_LINK"/>налаштування<ph name="END_LINK"/></translation>
+<translation id="2672903539709015001">щоб шукати в Growser.</translation>
+<translation id="1162630940779651724">Щоб надіслати цю вкладку на інший пристрій, увійдіть в обліковий запис Growser на обох пристроях</translation>
+<translation id="5388608738812110907">Щоб надіслати цю вкладку на інший пристрій, увійдіть на ньому в Growser</translation>
 </translationbundle>

@@ -41,7 +41,7 @@ import org.chromium.chrome.browser.toolbar.adaptive.BraveAdaptiveToolbarPrefs;
 import org.chromium.chrome.browser.toolbar.adaptive.settings.BraveRadioButtonGroupAdaptiveToolbarPreference;
 import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarConfiguration;
 import org.chromium.chrome.browser.toolbar.settings.AddressBarSettingsFragment;
-import org.chromium.chrome.browser.ui.bottombar.BraveBottomBarUserPrefs;
+import org.chromium.chrome.browser.ui.bottombar.BottomBarConfigUtils;
 import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
 import org.chromium.components.browser_ui.settings.search.PreferenceParser;
@@ -86,13 +86,9 @@ public class AppearancePreferences extends AppearanceSettingsFragment
                         ContextUtils.getApplicationContext());
         // The bottom navigation toolbar is not available on tablets. Off tablets it has two
         // implementations with a switch each - Brave's own bottom controls, and upstream's bottom
-        // bar - so only the switch for the one the flag selects is kept.
-        boolean isAndroidBottomBarEnabled = BottomToolbarConfiguration.isAndroidBottomBarEnabled();
-        if (isTablet || isAndroidBottomBarEnabled) {
+        // bar, whose switch upstream removes itself while the flag is off.
+        if (isTablet || BottomToolbarConfiguration.isAndroidBottomBarEnabled()) {
             removePreferenceIfPresent(BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY);
-        }
-        if (isTablet || !isAndroidBottomBarEnabled) {
-            removePreferenceIfPresent(BravePreferenceKeys.BRAVE_ENABLE_BOTTOM_BAR);
         }
 
         if (!new BraveMultiWindowUtils().shouldShowEnableWindow(getActivity())) {
@@ -159,11 +155,6 @@ public class AppearancePreferences extends AppearanceSettingsFragment
                 findPreference(BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY);
         if (enableBottomToolbar != null) {
             enableBottomToolbar.setOnPreferenceChangeListener(this);
-        }
-
-        Preference enableBottomBar = findPreference(BravePreferenceKeys.BRAVE_ENABLE_BOTTOM_BAR);
-        if (enableBottomBar != null) {
-            enableBottomBar.setOnPreferenceChangeListener(this);
         }
 
         ChromeSwitchPreference dynamicColorsPref =
@@ -255,13 +246,9 @@ public class AppearancePreferences extends AppearanceSettingsFragment
                     .setEnabled(BottomToolbarConfiguration.isToolbarTopAnchored());
         }
 
-        Preference enableBottomBar = findPreference(BravePreferenceKeys.BRAVE_ENABLE_BOTTOM_BAR);
-        if (enableBottomBar instanceof ChromeSwitchPreference) {
-            // The bottom bar is shown with the address bar in either position, so unlike the
-            // switch above this one has nothing to disable it for.
-            ((ChromeSwitchPreference) enableBottomBar)
-                    .setChecked(BraveBottomBarUserPrefs.isBottomBarSettingEnabled());
-        }
+        updatePreferenceIcon(
+                AppearanceSettingsFragment.PREF_BOTTOM_BAR_SWITCH,
+                R.drawable.ic_browser_mobile_bottom_toolbar);
 
         updatePreferenceIcon(
                 AppearanceSettingsFragment.PREF_TOOLBAR_SHORTCUT,
@@ -283,10 +270,6 @@ public class AppearancePreferences extends AppearanceSettingsFragment
             ChromeSharedPreferences.getInstance()
                     .writeBoolean(
                             BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY, !originalStatus);
-            shouldRelaunch = true;
-        } else if (BravePreferenceKeys.BRAVE_ENABLE_BOTTOM_BAR.equals(key)) {
-            ChromeSharedPreferences.getInstance()
-                    .writeBoolean(BravePreferenceKeys.BRAVE_ENABLE_BOTTOM_BAR, (boolean) newValue);
             shouldRelaunch = true;
         } else if (PREF_BRAVE_NIGHT_MODE_ENABLED.equals(key)) {
             BraveFeatureUtil.enableFeature(
@@ -389,7 +372,7 @@ public class AppearancePreferences extends AppearanceSettingsFragment
         setPreferenceOrder(PREF_ADDRESS_BAR, 5);
         // Only one of the two bottom navigation toolbar switches is present, so they share a slot.
         setPreferenceOrder(BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY, 6);
-        setPreferenceOrder(BravePreferenceKeys.BRAVE_ENABLE_BOTTOM_BAR, 6);
+        setPreferenceOrder(AppearanceSettingsFragment.PREF_BOTTOM_BAR_SWITCH, 6);
         setPreferenceOrder(PREF_ENABLE_MULTI_WINDOWS, 7);
         setPreferenceOrder(PREF_GENERAL_SECTION, 8);
         setPreferenceOrder(PREF_BRAVE_NIGHT_MODE_ENABLED, 9);
@@ -466,6 +449,11 @@ public class AppearancePreferences extends AppearanceSettingsFragment
                     if (!BookmarkBarUtils.isDeviceBookmarkBarCompatible(context)) {
                         indexData.removeEntryForKey(
                                 frag, AppearanceSettingsFragment.PREF_BOOKMARK_BAR);
+                    }
+
+                    if (!BottomBarConfigUtils.shouldShowSettingsToggle(context)) {
+                        indexData.removeEntryForKey(
+                                frag, AppearanceSettingsFragment.PREF_BOTTOM_BAR_SWITCH);
                     }
 
                     if (!shouldShowSharingHubPreference()) {

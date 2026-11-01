@@ -106,6 +106,10 @@ bool IsSnapFeatureEnabled() {
 #endif
 }
 
+bool IsCardStackUiEnabled() {
+  return base::FeatureList::IsEnabled(features::kBraveWalletCardStackUiFeature);
+}
+
 bool IsEthereumKeyring(mojom::KeyringId keyring_id) {
   return keyring_id == mojom::KeyringId::kDefault;
 }
@@ -429,7 +433,8 @@ std::vector<mojom::KeyringId> GetEnabledKeyrings() {
 
 bool CoinSupportsDapps(mojom::CoinType coin) {
   return coin == mojom::CoinType::ETH || coin == mojom::CoinType::SOL ||
-         coin == mojom::CoinType::ADA;
+         coin == mojom::CoinType::ADA ||
+         (coin == mojom::CoinType::DOT && IsPolkadotDAppSupportEnabled());
 }
 
 bool IsDeprecatedAddressBasedCoin(mojom::CoinType coin) {
@@ -565,6 +570,14 @@ mojom::AccountIdPtr MakeIndexBasedAccountId(mojom::CoinType coin,
 
 bool IsHTTPSOrLocalhostURL(const std::string& url_string) {
   return net::IsHTTPSOrLocalhostURL(GURL(url_string));
+}
+
+bool IsValidDappOrigin(const url::Origin& origin) {
+  if (origin.opaque()) {
+    return false;
+  }
+  return origin.scheme() == url::kHttpsScheme ||
+         origin.scheme() == url::kHttpScheme;
 }
 
 }  // namespace brave_wallet

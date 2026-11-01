@@ -46,7 +46,6 @@
 #include "chrome/browser/ui/tabs/features.h"
 #include "chrome/browser/ui/ui_features.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
-#include "chrome/browser/ui/views/location_bar/icon_label_bubble_view.h"
 #include "chrome/browser/ui/views/page_action/page_action_view.h"
 #include "chrome/browser/ui/views/page_action/test_support/page_action_test_accessor.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
@@ -178,10 +177,9 @@ class SpeedReaderBrowserTest : public InProcessBrowserTest {
     run_loop.Run();
   }
 
-  IconLabelBubbleView* GetReaderButton() {
+  page_actions::PageActionTestAccessor GetReaderButton() {
     return page_actions::PageActionTestAccessor(browser(),
-                                                kActionShowSpeedreader)
-        .view();
+                                                kActionShowSpeedreader);
   }
 
   bool WaitDistilled(speedreader::SpeedreaderTabHelper* th = nullptr) {
@@ -464,7 +462,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, ClickingOnReaderButton) {
   EXPECT_FALSE(speedreader_service()->IsAllowedForAllReadableSites());
 
   NavigateToPageSynchronously(kTestPageReadable);
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
 
   EXPECT_FALSE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
 
@@ -472,15 +470,15 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, ClickingOnReaderButton) {
       speedreader::kSpeedreaderPageViewsHistogramName, 0);
 
   ASSERT_TRUE(ClickReaderButton());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
 
   histogram_tester_.ExpectTotalCount(
       speedreader::kSpeedreaderPageViewsHistogramName, 1);
 
   ASSERT_TRUE(ClickReaderButton());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsViewOriginal(tab_helper()->PageDistillState()));
 
   EXPECT_FALSE(speedreader_service()->IsAllowedForAllReadableSites());
@@ -490,7 +488,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, OnDemandReader) {
   EXPECT_FALSE(speedreader_service()->IsAllowedForAllReadableSites());
 
   NavigateToPageSynchronously(kTestPageReadable);
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
 
   EXPECT_TRUE(speedreader::IsDistillable(tab_helper()->PageDistillState()));
   // Change content on the page.
@@ -520,7 +518,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, OnDemandReader) {
 IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, OnDemandReaderEncoding) {
   EXPECT_FALSE(speedreader_service()->IsAllowedForAllReadableSites());
   NavigateToPageSynchronously(kTestEsPageReadable);
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   ASSERT_TRUE(ClickReaderButton());
 
   static constexpr char kCheckText[] =
@@ -535,11 +533,11 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, SpeedreaderPrefDisabled) {
   DisableSpeedreader();
   NavigateToPageSynchronously(kTestPageReadable);
 
-  EXPECT_FALSE(GetReaderButton()->GetVisible());
+  EXPECT_FALSE(GetReaderButton().GetVisible());
   EXPECT_FALSE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
   EnableSpeedreaderAllowedForAllSites();
   content::WaitForLoadStop(ActiveWebContents());
-  EXPECT_FALSE(GetReaderButton()->GetVisible());
+  EXPECT_FALSE(GetReaderButton().GetVisible());
   EXPECT_FALSE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
 }
 
@@ -547,15 +545,15 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, EnableDisableSpeedreaderA) {
   EXPECT_FALSE(speedreader_service()->IsAllowedForAllReadableSites());
   NavigateToPageSynchronously(kTestPageReadable);
 
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistillable(tab_helper()->PageDistillState()));
   EnableSpeedreaderAllowedForAllSites();
   ASSERT_TRUE(WaitDistilled());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
   DisableSpeedreaderForAllSites();
   ASSERT_TRUE(WaitOriginal());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistillable(tab_helper()->PageDistillState()));
   EXPECT_TRUE(speedreader::IsViewOriginal(tab_helper()->PageDistillState()));
 }
@@ -564,15 +562,15 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, EnableDisableSpeedreaderB) {
   NavigateToPageSynchronously(kTestPageReadable);
   ASSERT_TRUE(ClickReaderButton());
   ASSERT_TRUE(WaitDistilled());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
   EnableSpeedreaderAllowedForAllSites();
   ASSERT_TRUE(WaitDistilled());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
   DisableSpeedreaderForAllSites();
   ASSERT_TRUE(WaitOriginal());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistillable(tab_helper()->PageDistillState()));
   EXPECT_TRUE(speedreader::IsViewOriginal(tab_helper()->PageDistillState()));
 }
@@ -584,12 +582,12 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, TogglingSiteSpeedreader) {
   for (int i = 0; i < 2; ++i) {
     EXPECT_TRUE(WaitForLoadStop(ActiveWebContents()));
     EXPECT_TRUE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
-    EXPECT_TRUE(GetReaderButton()->GetVisible());
+    EXPECT_TRUE(GetReaderButton().GetVisible());
 
     speedreader_service()->SetEnabledForSite(ActiveWebContents(), false);
     EXPECT_TRUE(WaitForLoadStop(ActiveWebContents()));
     EXPECT_TRUE(speedreader::IsViewOriginal(tab_helper()->PageDistillState()));
-    EXPECT_TRUE(GetReaderButton()->GetVisible());
+    EXPECT_TRUE(GetReaderButton().GetVisible());
 
     speedreader_service()->SetEnabledForSite(ActiveWebContents(), true);
     EXPECT_TRUE(WaitForLoadStop(ActiveWebContents()));
@@ -964,7 +962,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, RSS) {
   EnableSpeedreaderAllowedForAllSites();
   NavigateToPageSynchronously(kTestXml);
 
-  EXPECT_FALSE(GetReaderButton()->GetVisible());
+  EXPECT_FALSE(GetReaderButton().GetVisible());
 
   const std::string kNoStyleInjected =
       R"js(document.getElementById('brave_speedreader_style'))js";
@@ -998,20 +996,20 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest, ErrorPage) {
   NavigateToPageSynchronously(kTestErrorPage,
                               WindowOpenDisposition::CURRENT_TAB);
   EXPECT_TRUE(ActiveWebContents()->GetPrimaryMainFrame()->IsErrorDocument());
-  EXPECT_FALSE(GetReaderButton()->GetVisible());
+  EXPECT_FALSE(GetReaderButton().GetVisible());
 
   // Navigate to the non-automatic distillable page.
   NavigateToPageSynchronously(kTestPageReadableOnUnreadablePath,
                               WindowOpenDisposition::CURRENT_TAB);
   EXPECT_TRUE(speedreader::IsViewOriginal(tab_helper()->PageDistillState()));
   ASSERT_TRUE(WaitDistillable(tab_helper()));
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
 
   GoBack(browser());
   NavigateToPageSynchronously(kTestPageReadable,
                               WindowOpenDisposition::CURRENT_TAB);
   ASSERT_TRUE(WaitDistilled());
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
   EXPECT_TRUE(speedreader::IsDistilled(tab_helper()->PageDistillState()));
 }
 
@@ -1106,7 +1104,7 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderBrowserTest,
   run_loop.Run();
   tab_helper()->speedreader::PageDistiller::RemoveObserver(&observer);
 
-  EXPECT_TRUE(GetReaderButton()->GetVisible());
+  EXPECT_TRUE(GetReaderButton().GetVisible());
 
   EXPECT_TRUE(speedreader::IsDistillable(tab_helper()->PageDistillState()));
 
@@ -1316,6 +1314,59 @@ IN_PROC_BROWSER_TEST_F(SpeedReaderContentSpoofBrowserTest,
   navigation_observer.Wait();
 
   tab_helper()->ResumePageDistillationForTesting();
+  ASSERT_TRUE(content::WaitForLoadStop(ActiveWebContents()));
+
+  ExpectVictimPageIsIntact();
+}
+
+// The reload which speedreader triggers to show the distilled content is
+// replaced by another navigation before the reload builds its loader (e.g. the
+// page holds the reload in beforeunload and a cross-site frame navigates the
+// tab). The content stored for the reload must not become the body of the
+// navigation which replaced it, at its url and origin.
+IN_PROC_BROWSER_TEST_F(SpeedReaderContentSpoofBrowserTest,
+                       DistilledContentIsNotSentToNavigationReplacingReload) {
+  ASSERT_NO_FATAL_FAILURE(NavigateToReadablePage(""));
+  const GURL readable_url = ActiveWebContents()->GetLastCommittedURL();
+
+  // Pause the reload at the start of its request, i.e. before its URL loader
+  // (and the throttles which take the stored content) is created.
+  content::TestNavigationManager reload_manager(ActiveWebContents(),
+                                                readable_url);
+  TurnOnReaderMode();
+  ASSERT_TRUE(reload_manager.WaitForRequestStart());
+
+  // Replace the paused reload with a navigation to the victim page.
+  content::TestNavigationManager victim_manager(ActiveWebContents(),
+                                                victim_url());
+  ActiveWebContents()->GetController().LoadURL(
+      victim_url(), content::Referrer(), ui::PAGE_TRANSITION_TYPED,
+      std::string());
+  ASSERT_TRUE(victim_manager.WaitForNavigationFinished());
+  ASSERT_TRUE(content::WaitForLoadStop(ActiveWebContents()));
+
+  ExpectVictimPageIsIntact();
+}
+
+// Same as above, but the replacing navigation is started by the page itself,
+// like the beforeunload handler of a cross-site frame does.
+IN_PROC_BROWSER_TEST_F(
+    SpeedReaderContentSpoofBrowserTest,
+    DistilledContentIsNotSentToRendererNavigationReplacingReload) {
+  ASSERT_NO_FATAL_FAILURE(NavigateToReadablePage(""));
+  const GURL readable_url = ActiveWebContents()->GetLastCommittedURL();
+
+  content::TestNavigationManager reload_manager(ActiveWebContents(),
+                                                readable_url);
+  TurnOnReaderMode();
+  ASSERT_TRUE(reload_manager.WaitForRequestStart());
+
+  content::TestNavigationManager victim_manager(ActiveWebContents(),
+                                                victim_url());
+  content::ExecuteScriptAsync(
+      ActiveWebContents(),
+      content::JsReplace("location.href = $1", victim_url()));
+  ASSERT_TRUE(victim_manager.WaitForNavigationFinished());
   ASSERT_TRUE(content::WaitForLoadStop(ActiveWebContents()));
 
   ExpectVictimPageIsIntact();

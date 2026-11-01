@@ -1,17 +1,8 @@
 diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
-index 028fe9924cdbfe586c8a0029ac27d53746f995ff..1886dbc17fbd092d977e33b430d96c66e5163964 100644
+index 62ff3787b22a1227e47ea85ad4cfbda8707e1534..69dfccf1ca09ad39a94b81620ef2dc1185ac260a 100644
 --- a/chrome/browser/net/profile_network_context_service.cc
 +++ b/chrome/browser/net/profile_network_context_service.cc
-@@ -652,7 +652,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
-                                 false);
-   registry->RegisterListPref(prefs::kHSTSPolicyBypassList);
-   registry->RegisterListPref(prefs::kCACertificates);
--  registry->RegisterListPref(prefs::kCACertificatesWithConstraints);
-+  BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
-   registry->RegisterListPref(prefs::kCADistrustedCertificates);
-   registry->RegisterListPref(prefs::kCAHintCertificates);
-   // For information about whether to reset the HTTP Cache or not, defaults
-@@ -737,6 +737,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
+@@ -740,6 +740,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
    std::vector<std::string> excluded_spkis(
        TranslateStringArray(ct_excluded_spkis));
  
@@ -19,15 +10,16 @@ index 028fe9924cdbfe586c8a0029ac27d53746f995ff..1886dbc17fbd092d977e33b430d96c66
    return network::mojom::CTPolicy::New(std::move(excluded),
                                         std::move(excluded_spkis));
  }
-@@ -1409,9 +1410,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
-     network_context_params->file_paths->cookie_database_name =
-         base::FilePath(chrome::kCookieFilename);
+@@ -1354,6 +1355,12 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
+   g_browser_process->system_network_context_manager()
+       ->ConfigureDefaultNetworkContextParams(network_context_params);
  
--    g_browser_process->system_network_context_manager()
--        ->AddCookieEncryptionManagerToNetworkContextParams(
--            network_context_params);
-+    BRAVE_ADD_COOKIE_ENCRYPTION_MANAGER_TO_NETWORK_CONTEXT_PARAMS(
-+        network_context_params);
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++  if (profile_->IsTor()) {
++    network_context_params->system_proxy_resolver.reset();
++  }
++#endif
++
+   network_context_params->accept_language = ComputeAcceptLanguage();
+   network_context_params->enable_referrers = enable_referrers_.GetValue();
  
- #if BUILDFLAG(ENTERPRISE_CACHE_ENCRYPTION)
-     if (enterprise_encryption::ShouldEncryptHttpCache(profile_->GetPrefs())) {

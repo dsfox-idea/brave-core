@@ -19,14 +19,12 @@
 #include "base/barrier_closure.h"
 #include "base/check.h"
 #include "base/check_op.h"
-#include "base/containers/fixed_flat_set.h"
 #include "base/containers/flat_set.h"
 #include "base/containers/map_util.h"
 #include "base/containers/span.h"
 #include "base/containers/to_vector.h"
 #include "base/debug/crash_logging.h"
 #include "base/feature_list.h"
-#include "base/files/file_path.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback.h"
 #include "base/logging.h"
@@ -38,12 +36,10 @@
 #include "base/strings/string_util.h"
 #include "base/task/bind_post_task.h"
 #include "base/time/time.h"
-#include "base/types/expected.h"
 #include "base/uuid.h"
 #include "base/values.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_feedback_api.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_service.h"
-#include "brave/components/ai_chat/core/browser/associated_content_delegate.h"
 #include "brave/components/ai_chat/core/browser/associated_content_manager.h"
 #include "brave/components/ai_chat/core/browser/conversation_tools.h"
 #include "brave/components/ai_chat/core/browser/model_service.h"
@@ -201,18 +197,19 @@ ConversationHandler::ThreadContainer::ThreadContainer(ThreadContainer&&) =
 ConversationHandler::ThreadContainer&
 ConversationHandler::ThreadContainer::operator=(ThreadContainer&&) = default;
 
+bool ConversationHandler::IsContentAgentEnabled() const {
+  if (!ai_chat_service_->content_agent_tools_allowed()) {
+    return false;
+  }
+  // Where the user chooses, their choice decides. Where they do not, the
+  // content agent is the profile's purpose, so it is always on.
+  return !ai_chat_service_->content_agent_user_selectable() ||
+         content_agent_chosen_;
+}
+
 void ConversationHandler::BuildCapabilitiesSet() {
   conversation_capabilities_.clear();
-  // Set conversation capability based on profile-global state.
-  // TODO(https://github.com/brave/brave-browser/issues/49261): This is
-  // temporary whilst content agent conversations are
-  // 1) not toggleable by the user and
-  // 2) only for specific profiles.
-  // When this is toggleable by the user,
-  // we should have some client function that changes the conversation
-  // capability. And when this is not global to a Profile, we should not have
-  // the service make the determination.
-  if (ai_chat_service_->GetIsContentAgentAllowed()) {
+  if (IsContentAgentEnabled()) {
     conversation_capabilities_.insert(
         mojom::ConversationCapability::CONTENT_AGENT);
   }
@@ -648,7 +645,8 @@ void ConversationHandler::GetState(GetStateCallback callback) {
       current_error_.api_error,
       current_error_.details ? current_error_.details->Clone() : nullptr,
       metadata_->temporary, tool_use_task_state_,
-      base::ToVector(conversation_capabilities_), vision_model_switch_key_);
+      base::ToVector(conversation_capabilities_), vision_model_switch_key_,
+      content_agent_chosen_);
 
   std::move(callback).Run(std::move(state));
 }
@@ -1237,20 +1235,42 @@ void ConversationHandler::GetAssociatedContentInfo(
   std::move(callback).Run(associated_content_manager_->GetAssociatedContent());
 }
 
-void ConversationHandler::RetryAPIRequest() {
-  SetAPIError(mojom::APIError::None);
-  DCHECK(!chat_history_.empty());
+void ConversationHandler::RetryAPIRequest(
+    const std::optional<std::string>& thread_uuid) {
+  if (thread_uuid && (!base::FeatureList::IsEnabled(features::kAIChatThreads) ||
+                      !threads_.contains(*thread_uuid))) {
+    return;
+  }
 
-  // We're using a reverse iterator here to find the latest human turn
-  for (std::vector<mojom::ConversationTurnPtr>::reverse_iterator rit =
-           chat_history_.rbegin();
-       rit != chat_history_.rend(); ++rit) {
+  SetAPIError(mojom::APIError::None);
+  auto& history = GetMutableConversationHistory(thread_uuid);
+  DCHECK(!history.empty());
+
+  // Find the latest human turn, or the latest assistant turn with resolved tool
+  // calls. Retrying from the latter avoids re-running tools that already ran.
+  for (auto rit = history.rbegin(); rit != history.rend(); ++rit) {
     if (rit->get()->character_type == CharacterType::HUMAN) {
       auto turn = *std::make_move_iterator(rit);
       auto human_turn_iter = rit.base() - 1;
-      chat_history_.erase(human_turn_iter, chat_history_.end());
+      history.erase(human_turn_iter, history.end());
       SubmitHumanConversationEntry(std::move(turn));
-      break;
+      return;
+    }
+
+    const auto& events = rit->get()->events;
+    if (events.has_value() &&
+        std::ranges::any_of(*events, [](const auto& event) {
+          return event->is_tool_use_event() &&
+                 event->get_tool_use_event()->output.has_value();
+        })) {
+      history.erase(rit.base(), history.end());
+      OnHistoryUpdate(nullptr);
+      // The failed generation stopped the task, which would otherwise prevent
+      // the post-tool generation from running.
+      tool_use_task_state_ = mojom::TaskState::kNone;
+      OnToolUseTaskStateChanged();
+      PerformPostToolAssistantGeneration(thread_uuid);
+      return;
     }
   }
 }
@@ -2347,27 +2367,6 @@ bool ConversationHandler::MaybeAutoRetry(
     return false;
   }
 
-  const auto& history = GetMutableConversationHistory(thread_uuid);
-  if (history.empty()) {
-    return false;
-  }
-  // TODO(https://github.com/brave/brave-browser/issues/59807): Remove this
-  // check once retries correctly handle tool calls.
-  for (const auto& entry : std::views::reverse(history)) {
-    if (entry->character_type == mojom::CharacterType::HUMAN) {
-      break;
-    }
-    // Don't auto retry after resolved tool calls, otherwise the retry may
-    // rerun tool calls without the user's consent.
-    if (entry->events.has_value() &&
-        std::ranges::any_of(entry->events.value(), [](const auto& event) {
-          return event->is_tool_use_event() &&
-                 event->get_tool_use_event()->output.has_value();
-        })) {
-      return false;
-    }
-  }
-
   ++connection_issue_retry_count_;
   connection_issue_retry_timer_.Start(
       FROM_HERE, kConnectionIssueRetryDelay,
@@ -2379,7 +2378,7 @@ bool ConversationHandler::MaybeAutoRetry(
 void ConversationHandler::RetryAfterConnectionIssue(
     const std::optional<std::string>& thread_uuid) {
   CompleteGeneration(thread_uuid, false);
-  RetryAPIRequest();
+  RetryAPIRequest(thread_uuid);
 }
 
 void ConversationHandler::OnSuggestedQuestionsResponse(
@@ -3084,6 +3083,22 @@ bool ConversationHandler::should_send_page_contents() const {
 
 mojom::APIError ConversationHandler::current_error() const {
   return current_error_.api_error;
+}
+
+void ConversationHandler::SetContentAgentChosen(bool chosen) {
+  if (!ai_chat_service_->content_agent_user_selectable() ||
+      content_agent_chosen_ == chosen) {
+    return;
+  }
+
+  content_agent_chosen_ = chosen;
+  BuildCapabilitiesSet();
+
+  for (auto& client : conversation_ui_handlers_) {
+    client->OnContentAgentChanged(content_agent_chosen_,
+                                  base::ToVector(conversation_capabilities_));
+  }
+  OnStateForConversationEntriesChanged();
 }
 
 void ConversationHandler::SetTemporary(bool temporary) {

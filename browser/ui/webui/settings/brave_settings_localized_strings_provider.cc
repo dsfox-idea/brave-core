@@ -73,7 +73,10 @@
 
 #if BUILDFLAG(ENABLE_LOCAL_AI)
 #include "brave/browser/history_embeddings/brave_history_embeddings_status.h"
+#include "brave/components/local_ai/core/on_device_speech_models_state.h"
+#include "brave/components/local_ai/core/utils.h"
 #include "chrome/browser/history_embeddings/history_embeddings_utils.h"
+#include "ui/base/text/bytes_formatting.h"
 #endif
 
 #if BUILDFLAG(ENABLE_TOR)
@@ -524,6 +527,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_SEMANTIC_HISTORY_SEARCH_LABEL},
       {"semanticHistorySearchSubLabel",
        IDS_SETTINGS_SEMANTIC_HISTORY_SEARCH_SUB_LABEL},
+      {"onDeviceSpeechModelLabel", IDS_SETTINGS_ON_DEVICE_SPEECH_MODEL_LABEL},
 #endif  // BUILDFLAG(ENABLE_LOCAL_AI)
       {"historyRetentionLabel", IDS_SETTINGS_HISTORY_RETENTION_LABEL},
       {"historyRetentionSubLabel", IDS_SETTINGS_HISTORY_RETENTION_SUB_LABEL},
@@ -652,9 +656,12 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"braveShowFullscreenReminder",
        IDS_SETTINGS_SHOW_FULLSCREEN_REMINDER_OPTION_LABEL},
 
+      // Referenced by the settings menu template in every build, thus added
+      // outside of the BUILDFLAG(ENABLE_AI_CHAT)
+      {"leoAssistant", IDS_SETTINGS_LEO_ASSISTANT},
+
 #if BUILDFLAG(ENABLE_AI_CHAT)
       // Leo Assistant Page
-      {"leoAssistant", IDS_SETTINGS_LEO_ASSISTANT},
       {"braveLeoAssistantShowIconOnToolbarLabel",
        IDS_SETTINGS_LEO_ASSISTANT_SHOW_ICON_ON_TOOLBAR_LABEL},
       {"braveLeoAssistantShowInContextMenuLabel",
@@ -704,16 +711,13 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_CHAT_UI_CHAT_GPT_5_6_TERRA_BEDROCK_SUBTITLE},
       {"braveLeoModelSubtitle-chat-grok-4-6-bedrock",
        IDS_CHAT_UI_CHAT_GROK_4_6_BEDROCK_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-nemotron-nano-3-30b",
-       IDS_CHAT_UI_CHAT_NEMOTRON_NANO_3_30B_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-mistral-large",
-       IDS_CHAT_UI_CHAT_MISTRAL_LARGE_SUBTITLE},
+      {"braveLeoModelSubtitle-chat-claude-3-haiku",
+       IDS_CHAT_UI_CHAT_CLAUDE_3_HAIKU_SUBTITLE},
       {"braveLeoModelSubtitle-chat-kimi-k2-5",
        IDS_CHAT_UI_CHAT_KIMI_K2_5_SUBTITLE},
       {"braveLeoModelSubtitle-chat-qwen-3-8-flash-next",
        IDS_CHAT_UI_CHAT_QWEN_3_8_FLASH_NEXT_SUBTITLE},
-      {"braveLeoModelSubtitle-chat-deepseek-v3-2",
-       IDS_CHAT_UI_CHAT_DEEPSEEK_V3_2_SUBTITLE},
+      {"braveLeoModelSubtitle-chat-glm-5-3", IDS_CHAT_UI_CHAT_GLM_5_3_SUBTITLE},
       {"braveLeoModelSubtitle-chat-claude-opus",
        IDS_CHAT_UI_CHAT_CLAUDE_OPUS_SUBTITLE},
       {"braveLeoModelSubtitle-chat-brave-summary",
@@ -1254,6 +1258,14 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       "semanticHistorySearchEnabledAtStartup",
       history_embeddings::BraveHistoryEmbeddingsStatus::GetForProfile(profile)
           ->IsEnabled());
+
+  html_source->AddString(
+      "onDeviceSpeechModelSubLabel",
+      l10n_util::GetStringFUTF16(IDS_SETTINGS_ON_DEVICE_SPEECH_MODEL_SUB_LABEL,
+                                 ui::FormatBytes(local_ai::kApproxModelSize)));
+  html_source->AddBoolean(
+      "isOnDeviceSpeechModelAvailable",
+      local_ai::CanOfferOnDeviceSpeech(g_browser_process->local_state()));
 #endif  // BUILDFLAG(ENABLE_LOCAL_AI)
 
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY)
