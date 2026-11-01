@@ -738,7 +738,7 @@
 
   <!-- Autofill and passwords entry point summaries - mobile only -->
   <if expr="is_android or is_ios">
-    <message name="IDS_AUTOFILL_AND_PASSWORDS_PASSWORD_MANAGER_SUMMARY" desc="Summary for the Growser Password Manager entry in the Autofill and passwords settings." formatter_data="android_java">
+    <message name="IDS_AUTOFILL_AND_PASSWORDS_PASSWORD_MANAGER_SUMMARY" desc="Summary for the Google Password Manager entry in the Autofill and passwords settings." formatter_data="android_java">
       Passwords
     </message>
     <message name="IDS_AUTOFILL_AND_PASSWORDS_PAYMENTS_SUMMARY" desc="Summary for the Payments entry in the Autofill and passwords settings." formatter_data="android_java">
@@ -2159,7 +2159,7 @@ You can remove this suggestion from Growser. Your original source won't be delet
     <message name="IDS_AUTOFILL_AI_PRIVATE_INFERENCE_NOTICE_SHEET_TITLE" desc="Headline of an informational notice explaining that page content may be processed in a private space in the cloud to improve autofill." formatter_data="android_java">
       Smarter autofill, kept private
     </message>
-    <message name="IDS_AUTOFILL_AI_PRIVATE_INFERENCE_NOTICE_SHEET_DESCRIPTION" desc="Body text of an informational notice explaining that page content may be processed in a private space in the cloud to improve autofill. 'Growser' is a Growser product name and must remain unlocalized." formatter_data="android_java">
+    <message name="IDS_AUTOFILL_AI_PRIVATE_INFERENCE_NOTICE_SHEET_DESCRIPTION" desc="Body text of an informational notice explaining that page content may be processed in a private space in the cloud to improve autofill. 'Growser' is a Google product name and must remain unlocalized." formatter_data="android_java">
       Growser can now detect and fill more forms with smarter form understanding. To do this, page content and URLs can be processed in a private space in the cloud. Manage in settings.
     </message>
     <message name="IDS_AUTOFILL_AI_PRIVATE_INFERENCE_NOTICE_SHEET_OK_BUTTON" desc="Acknowledgment button label to dismiss the informational notice." formatter_data="android_java">
