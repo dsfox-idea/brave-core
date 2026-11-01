@@ -1,5 +1,5 @@
 diff --git a/components/favicon/content/content_favicon_driver.h b/components/favicon/content/content_favicon_driver.h
-index 0b09c1e3f71197443b1d147ac2659e0e0d60aa78..68621060261d039ee34a4b6c0ad455068111638e 100644
+index a87ede749b47a6e642280f19359e32885bec70dd..d236352bbdd5ccc4c659a9eb784a464c0fbfa10c 100644
 --- a/components/favicon/content/content_favicon_driver.h
 +++ b/components/favicon/content/content_favicon_driver.h
 @@ -5,6 +5,7 @@
@@ -10,9 +10,9 @@ index 0b09c1e3f71197443b1d147ac2659e0e0d60aa78..68621060261d039ee34a4b6c0ad45506
  #include <vector>
  
  #include "components/favicon/core/favicon_driver_impl.h"
-@@ -103,6 +104,18 @@ class ContentFaviconDriver
- 
-   GURL bypass_cache_page_url_;
+@@ -106,6 +107,18 @@ class ContentFaviconDriver
+   // Whether INVALIDATE_TYPE_ICON has been sent for the current page.
+   bool notified_icon_available_ = false;
  
 +  // Growser-90: the large-icon handlers share favicon.ico with the 16 dip
 +  // one, and each FaviconHandler downloads on its own. Without this every
