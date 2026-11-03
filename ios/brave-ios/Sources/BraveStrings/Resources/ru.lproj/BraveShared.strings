@@ -1060,18 +1060,6 @@
 /* No comment provided by engineer. */
 "ntp.sponsoredImageDescription" = "Просматривая это спонсорское изображение, вы поддерживаете издателей и создателей контента.";
 
-/* The title of a picker for user to pick which type of topsites to show in NTP */
-"ntp.topsites" = "Топ-сайты";
-
-/* Favorites type of topsites. Selection means NTP will display favorites tiles if there is any. */
-"ntp.topsitesTypeFavorites" = "Избранное";
-
-/* MostVisited type of topsites. Selection means NTP will display most visited tiles if there is any. */
-"ntp.topsitesTypeMostVisited" = "Часто посещаемый";
-
-/* None type of topsites. Selection means there won't be any topsites tiles in NTP */
-"ntp.topsitesTypeNone" = "Нет";
-
 /* The placeholder says 'Terms of Service'. So full sentence goes like: 'By turning Rewards, you agree to the Terms of Service'. */
 "ntp.turnRewardsTos" = "Включая Growser Rewards, вы принимаете";
 
@@ -2415,12 +2403,6 @@
 
 /* Title to explain the survey panelist toggle */
 "settings.surveyPanelistTitle" = "Разрешить опросы Growser";
-
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "Помогите поддержать миссию Growser по созданию независимого, ориентированного на пользователя интернета с помощью спонсируемой рекламы. Мы измеряем эффективность рекламы конфиденциально, не идентифицируя вас. [Подробнее](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "Включить спонсируемую рекламу";
 
 /* Header for the YouTube settings section */
 "settings.youtube" = "YouTube";

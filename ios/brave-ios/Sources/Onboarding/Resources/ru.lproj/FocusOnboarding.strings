@@ -34,12 +34,6 @@
 /* The title of the toggle that allows the user to enable/disable the privacy preserving analytics. */
 "focusOnboarding.p3aToggleTitle" = "Конфиденциальные данные о продукте";
 
-/* The description shown below the toggle for enabling crash reporting. */
-"focusOnboarding.sendCrashReportsToggleDescription" = "Отправлять отчеты для диагностики, когда происходит сбой или зависание.";
-
-/* The title of the toggle that allows the user to enable/disable crash reporting. */
-"focusOnboarding.sendCrashReportsToggleTitle" = "Отправить отчеты о сбоях";
-
 /* The title of the button that finishes the onboarding without setting default */
 "focusOnboarding.startBrowseActionButtonTitle" = "Начать";
 

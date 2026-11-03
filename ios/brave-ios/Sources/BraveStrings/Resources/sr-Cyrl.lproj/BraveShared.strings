@@ -2404,12 +2404,6 @@
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Аутоматски шаљи Growser-u пинг за свакодневно коришћење";
 
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "Помозите да подржите Growser мисију за изградњу независног интернета који ставља кориснике на прво место уз Спонзорисане огласе. Приватно меримо учинак огласа, без вашег идентификовања. [Сазнајте више](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "Активирај спонзорисане огласе";
-
 /* Description to explain the survey panelist toggle */
 "settings.surveyPanelistDescription" = "Омогућава Growser-у да приказује линкове за приватне анкете на новој картици. Анкете нам помажу да креирамо боље функције и меримо ефикасност огласних кампања заснованих на прегледачу. [Сазнајте више](%@)";
 

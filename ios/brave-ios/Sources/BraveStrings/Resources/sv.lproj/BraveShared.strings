@@ -2404,12 +2404,6 @@
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Skicka daglig användningsping till Growser automatiskt";
 
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "Hjälp till att stödja Braves uppdrag att bygga en oberoende, användarfokuserad webb med Sponsrade annonser. Vi mäter annonsprestanda privat, utan att identifiera dig. [Läs mer](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "Aktivera Sponsrade annonser";
-
 /* Description to explain the survey panelist toggle */
 "settings.surveyPanelistDescription" = "Tillåter Growser att visa länkar till privata undersökningar i den nya fliken. Undersökningar hjälper oss att bygga bättre funktioner och mäta effektiviteten i webbläsarbaserade annonskampanjer. [Learn more](%@)";
 

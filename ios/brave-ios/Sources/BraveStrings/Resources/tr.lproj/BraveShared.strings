@@ -2404,12 +2404,6 @@
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Günlük kullanım ping'ini Growser'e otomatik olarak gönder";
 
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "Growser'in bağımsız, kullanıcı öncelikli bir Web oluşturma misyonunu Sponsorlu Reklamlarla destekleyin. Reklam performansını sizi tanımlamadan, gizli bir şekilde ölçüyoruz. [Daha fazla bilgi](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "Sponsorlu Reklamları Etkinleştir";
-
 /* Description to explain the survey panelist toggle */
 "settings.surveyPanelistDescription" = "Growser'in yeni sekme sayfasında özel anketlere bağlantılar göstermesine izin verir. Anketler, daha iyi özellikler oluşturmamıza ve tarayıcı tabanlı reklam kampanyalarının etkinliğini ölçmemize yardımcı olur. [Daha fazla bilgi edinin](%@)";
 

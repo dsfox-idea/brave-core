@@ -2404,12 +2404,6 @@
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Napi használatról szóló értesítések automatikus küldése a Growser-be";
 
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "Támogassa a Growser küldetését, hogy egy független, felhasználó-központú webet építsen a szponzorált hirdetésekkel. A hirdetések teljesítményét privát módon mérjük, anélkül, hogy azonosítanánk Önt. [További információ](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "Szponzorált hirdetések engedélyezése";
-
 /* Description to explain the survey panelist toggle */
 "settings.surveyPanelistDescription" = "Engedélyezi, hogy a Growser privát kérdőívekre mutató linkeket jelenítsen meg az új lapon. Ezek segítenek a funkciók fejlesztésében és a hirdetések hatékonyságának mérésében. [Tudjon meg többet](%@)";
 

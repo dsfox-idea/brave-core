@@ -2404,12 +2404,6 @@
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Автоматично изпращане на ping за ежедневното използване до Growser";
 
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "Помогнете за подкрепата на мисията на Growser да изгради независим, ориентиран към потребителя интернет със спонсорирани реклами. Измерваме ефективността на рекламите поверително, без да ви идентифицираме. [Научете повече](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "Активиране на спонсорираните реклами";
-
 /* Description to explain the survey panelist toggle */
 "settings.surveyPanelistDescription" = "Позволява на Growser да показва връзки към поверителни анкети в страницата на нов раздел. Тези анкети ни помагат да създаваме по-добри функции и да измерваме ефективността на рекламните кампании в браузъра. [Научи повече](%@)";
 

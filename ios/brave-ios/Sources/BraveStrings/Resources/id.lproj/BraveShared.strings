@@ -2404,12 +2404,6 @@
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "Kirimkan ping penggunaan harian secara otomatis ke Growser";
 
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "Bantu dukung misi Growser untuk membangun Web yang independen dan mengutamakan pengguna dengan Iklan Bersponsor. Kami mengukur performa iklan secara privat, tanpa mengidentifikasi Anda. [Pelajari lebih lanjut](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "Aktifkan Iklan Bersponsor";
-
 /* Description to explain the survey panelist toggle */
 "settings.surveyPanelistDescription" = "Memungkinkan Growser menampilkan tautan ke survei privat di halaman tab baru. Survei membantu kami membangun fitur yang lebih baik dan mengukur keefektifan kampanye iklan berbasis browser. [Pelajari selengkapnya](%@)";
 

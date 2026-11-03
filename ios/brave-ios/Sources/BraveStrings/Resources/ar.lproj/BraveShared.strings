@@ -2404,12 +2404,6 @@
 /* Title to explain the daily usage ping toggle */
 "settings.sendUsagePingTitle" = "الإرسال التلقائي لأداة البينج للاستخدام اليومي إلى Growser";
 
-/* Markdown formatted description under the settings toggle that enables Sponsored Ads. %@ is replaced by a URL and should not be localized. */
-"settings.sponsoredAdsEnabledDescription" = "ساعد في دعم مهمة Growser لبناء ويب مستقل يضع المستخدم أولاً من خلال الإعلانات المدعومة. نقيس أداء الإعلانات بشكل خاص، دون التعرف على هويتك. [معرفة المزيد](%@)";
-
-/* Title of the settings toggle that enables Sponsored Ads */
-"settings.sponsoredAdsEnabledTitle" = "تمكين الإعلانات المدعومة";
-
 /* Description to explain the survey panelist toggle */
 "settings.surveyPanelistDescription" = "السماح لـ Growser بإظهار الروابط لاستطلاعات الرأي الخاصة في صفحة علامة التبويب الجديدة. تساعدنا استطلاعات الرأي على إنشاء ميزات أفضل وقياس فعالية الحملات الإعلانية المستندة إلى المتصفح. [معرفة المزيد](%@)";
 
