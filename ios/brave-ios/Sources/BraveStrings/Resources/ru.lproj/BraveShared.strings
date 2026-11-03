@@ -125,13 +125,13 @@
 "backgroundDownloadingSubtitle" = "%@";
 
 /* A subtitle that appears in the dynamic island when a download is continuing while Brave is backgrounded. The %@'s are replaced with a progress and a file size. E.g. '1MB of 20MB' */
-"backgroundDownloadingSubtitleWithExpectedSize" = "%1$@ из %2$@";
+"backgroundDownloadingSubtitleWithExpectedSize" = "%@ из %@";
 
 /* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %lld is replaced with the number of active downloads */
-"backgroundDownloadingTitleMultiDownload" = "Скачивание %lld файлов";
+"backgroundDownloadingTitleMultiDownload" = "Загружается файлов: %lld";
 
 /* A title that appears in the dynamic island when a download is continuing while Brave is backgrounded. %@ is replaced with a file name */
-"backgroundDownloadingTitleSingleDownload" = "Скачивается «%@»";
+"backgroundDownloadingTitleSingleDownload" = "Загрузка «%@»";
 
 /* cookie settings option */
 "Block3rdPartyCookies" = "Блокировать сторонние файлы cookie";
@@ -1775,13 +1775,13 @@
 "quickview.back.accessibility.label" = "Предыдущая страница";
 
 /* Button title to keep opening links in QuickView after the confirmation alert. */
-"quickview.confirmation.alert.keep.button.title" = "Продолжить использовать QuickView";
+"quickview.confirmation.alert.keep.button.title" = "Оставить быстрый просмотр";
 
 /* Message of the alert shown the first time a user closes QuickView, explaining the feature and where to change it. */
-"quickview.confirmation.alert.message" = "QuickView позволяет просматривать ссылки, не покидая страницу. Вы можете отключить это в любое время в настройках.";
+"quickview.confirmation.alert.message" = "Быстрый просмотр открывает ссылку, не уводя со страницы. Отключить его можно в любой момент в настройках.";
 
 /* Title of the alert shown the first time a user closes QuickView, asking if they want to keep using it for future links. */
-"quickview.confirmation.alert.title" = "Продолжить открывать ссылки из бесед в режиме быстрого просмотра?";
+"quickview.confirmation.alert.title" = "Открывать ссылки из переписки в быстром просмотре и дальше?";
 
 /* Button title to stop opening links in QuickView after the confirmation alert. */
 "quickview.confirmation.alert.turnOff.button.title" = "Отключить";
