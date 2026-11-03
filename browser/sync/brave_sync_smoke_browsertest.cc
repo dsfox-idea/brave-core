@@ -84,7 +84,9 @@ class BraveSyncSmokeBrowserTest : public PlatformBrowserTest {
   net::test_server::EmbeddedTestServerHandle embedded_test_server_handle_;
 };
 
-IN_PROC_BROWSER_TEST_F(BraveSyncSmokeBrowserTest, EnableSync) {
+// Growser-399: sync is not offered in this browser (#294), so there is no
+// sync service to drive.
+IN_PROC_BROWSER_TEST_F(BraveSyncSmokeBrowserTest, DISABLED_EnableSync) {
   auto* sync_service = static_cast<syncer::BraveSyncServiceImpl*>(
       SyncServiceFactory::GetAsSyncServiceImplForProfileForTesting(
           chrome_test_utils::GetProfile(this)));

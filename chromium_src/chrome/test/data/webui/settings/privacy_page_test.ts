@@ -101,7 +101,8 @@ suite('BravePrivacyPage', () => {
         'settings-brave-personalization-options')
     assertTrue(!!options)
     assertTrue(!!options.shadowRoot)
-    assertTrue(!!options.shadowRoot.querySelector('#pushMessagingEnabled'))
+    // Growser-399: the push messaging row is removed (settings #78), so
+    // only the Do Not Track row is expected here.
     assertTrue(!!options.shadowRoot.querySelector('#doNotTrack'))
   })
 
