@@ -17,6 +17,14 @@
 #include "components/prefs/pref_service.h"
 #include "url/gurl.h"
 
+// Growser-399: Chromium 157 hides these two pref names from code outside
+// //components/ntp_tiles; the keys themselves are persisted in profiles and
+// are unchanged, so we name them here.
+namespace {
+constexpr char kCustomLinksList[] = "custom_links.list";
+constexpr char kCustomLinksInitialized[] = "custom_links.initialized";
+}  // namespace
+
 namespace brave_new_tab {
 
 namespace {
@@ -77,10 +85,10 @@ BoardHosts::BoardHosts(Profile* profile)
   pref_registrar_.Init(profile->GetPrefs());
   // The custom links list is the board whenever the user has arranged one.
   pref_registrar_.Add(
-      ntp_tiles::prefs::kCustomLinksList,
+      kCustomLinksList,
       base::BindRepeating(&BoardHosts::Refresh, base::Unretained(this)));
   pref_registrar_.Add(
-      ntp_tiles::prefs::kCustomLinksInitialized,
+      kCustomLinksInitialized,
       base::BindRepeating(&BoardHosts::Refresh, base::Unretained(this)));
   // Which of the two lists the board is showing.
   pref_registrar_.Add(
@@ -155,7 +163,7 @@ void BoardHosts::OnMostVisitedURLs(const history::MostVisitedURLList& urls) {
       profile_->GetPrefs()->GetBoolean(ntp_prefs::kNtpCustomLinksVisible)
           ? HostsFromCustomLinks(
                 profile_->GetPrefs()->GetList(
-                    ntp_tiles::prefs::kCustomLinksList),
+                    kCustomLinksList),
                 kMaxBoardSites)
           : HostsFromMostVisited(urls, kMaxBoardSites);
 }
