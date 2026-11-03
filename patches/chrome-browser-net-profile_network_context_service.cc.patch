@@ -1,7 +1,16 @@
 diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
-index 62ff3787b22a1227e47ea85ad4cfbda8707e1534..69dfccf1ca09ad39a94b81620ef2dc1185ac260a 100644
+index 62ff3787b22a1227e47ea85ad4cfbda8707e1534..020e2e8b70b3ff63c48588defe81a09aab1c2341 100644
 --- a/chrome/browser/net/profile_network_context_service.cc
 +++ b/chrome/browser/net/profile_network_context_service.cc
+@@ -655,7 +655,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
+                                 false);
+   registry->RegisterListPref(prefs::kHSTSPolicyBypassList);
+   registry->RegisterListPref(prefs::kCACertificates);
+-  registry->RegisterListPref(prefs::kCACertificatesWithConstraints);
++  BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
+   registry->RegisterListPref(prefs::kCADistrustedCertificates);
+   registry->RegisterListPref(prefs::kCAHintCertificates);
+   // For information about whether to reset the HTTP Cache or not, defaults
 @@ -740,6 +740,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
    std::vector<std::string> excluded_spkis(
        TranslateStringArray(ct_excluded_spkis));
@@ -23,3 +32,15 @@ index 62ff3787b22a1227e47ea85ad4cfbda8707e1534..69dfccf1ca09ad39a94b81620ef2dc11
    network_context_params->accept_language = ComputeAcceptLanguage();
    network_context_params->enable_referrers = enable_referrers_.GetValue();
  
+@@ -1419,9 +1426,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
+     network_context_params->file_paths->cookie_database_name =
+         base::FilePath(chrome::kCookieFilename);
+ 
+-    g_browser_process->system_network_context_manager()
+-        ->AddCookieEncryptionManagerToNetworkContextParams(
+-            network_context_params);
++    BRAVE_ADD_COOKIE_ENCRYPTION_MANAGER_TO_NETWORK_CONTEXT_PARAMS(
++        network_context_params);
+ 
+ #if BUILDFLAG(ENTERPRISE_CACHE_ENCRYPTION)
+     if (enterprise_encryption::ShouldEncryptHttpCache(profile_->GetPrefs())) {

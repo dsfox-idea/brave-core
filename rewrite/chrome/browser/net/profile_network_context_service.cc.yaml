@@ -30,3 +30,23 @@ substitutions:
             network_context_params->system_proxy_resolver.reset();
           }
         #endif
+  - description: |
+      Growser-36: the CA constraints pref is registered with a default that
+      carries the bundled Russian trust anchors. The macro is defined in the
+      chromium_src override of this file.
+    regex:
+      re_pattern:
+        '^( *)registry->RegisterListPref\(prefs::kCACertificatesWithConstraints\);'
+      re_flags: [MULTILINE]
+      replace: |-
+        \1BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
+  - description: |
+      Growser (ff621b760f5): cookie encryption is opt-in per profile. The macro is
+      defined in the chromium_src override of this file.
+    regex:
+      re_pattern:
+        '^( *)g_browser_process->system_network_context_manager\(\)\n *->AddCookieEncryptionManagerToNetworkContextParams\(\n *network_context_params\);'
+      re_flags: [MULTILINE]
+      replace: |-
+        \1BRAVE_ADD_COOKIE_ENCRYPTION_MANAGER_TO_NETWORK_CONTEXT_PARAMS(
+        \1    network_context_params);

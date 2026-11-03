@@ -11,3 +11,9 @@ substitutions:
       target: impl
       list_name: deps
       literal: '[ "//brave/browser/policy:brave_simple_policy_map" ]'
+  - description: >-
+      Growser-358: our policy handlers include growser_policy buildflags.
+    add_literal_to_list:
+      target: impl
+      list_name: deps
+      literal: '[ "//brave/components/growser_policy/buildflags" ]'
