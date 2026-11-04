@@ -6,7 +6,9 @@ group("android_deps") {
     ":com_github_bumptech_glide_java",
     ":com_google_android_play_integrity_java",
     ":com_wireguard_android_java",
-    ":google_play_services_safetynet_java",
+
+    # Growser-399: no SafetyNet here; the 1.100 merge brought it back with
+    # upstream's list, but its prebuilt left in Growser-328.
     "//third_party/android_deps:playcore_app_update_java",
   ]
 }
