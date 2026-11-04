@@ -19,8 +19,10 @@ struct TestParams {
 constexpr TestParams kTestVectors[] = {
     {
         nullptr,
-        "Brave Safe Storage",
-        "Brave",
+        // Growser-400: our own keychain item (chromium_src/components/os_crypt/
+        // common/keychain_password_mac.mm), not Brave's.
+        "Growser Safe Storage",
+        "Growser",
     },
     {
         "import-brave",
