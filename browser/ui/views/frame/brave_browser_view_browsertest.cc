@@ -180,6 +180,12 @@ class BraveBrowserViewTest : public InProcessBrowserTest {
 
 // Tests bookmark/infobar/contents container layout with vertical tab.
 IN_PROC_BROWSER_TEST_F(BraveBrowserViewTest, LayoutWithVerticalTabTest) {
+  // Growser-400: like Growser-156 for VisualState - this layout assumes the
+  // sidebar on the side opposite the vertical tabs (upstream's default);
+  // growser starts it on the left (brave_profile_prefs.cc), where its 36 px
+  // strip sits between the tabs and the contents. Ask for the layout measured.
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      prefs::kSidePanelHorizontalAlignment, true);
   ToggleVerticalTabStrip();
 
   auto* prefs = browser()->GetProfile()->GetPrefs();
@@ -788,6 +794,12 @@ IN_PROC_BROWSER_TEST_P(BraveBrowserViewWithRoundedCornersTest,
 // Test 4: Rounded corners with vertical tabs (expanded/collapsed states)
 IN_PROC_BROWSER_TEST_P(BraveBrowserViewWithRoundedCornersTest,
                        RoundedCornersWithVerticalTabTest) {
+  // Growser-400: like Growser-156 for VisualState - this layout assumes the
+  // sidebar on the side opposite the vertical tabs (upstream's default);
+  // growser starts it on the left (brave_profile_prefs.cc), where its 36 px
+  // strip sits between the tabs and the contents. Ask for the layout measured.
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      prefs::kSidePanelHorizontalAlignment, true);
   // Only test when rounded corners are enabled
   if (!IsRoundedCornersEnabled()) {
     return;
