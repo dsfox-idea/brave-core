@@ -185,7 +185,6 @@ import org.chromium.url.GURL;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -235,12 +234,6 @@ public abstract class BraveActivity extends ChromeActivity
             Arrays.asList("AM", "AZ", "BY", "KG", "KZ", "MD", "RU", "TJ", "TM", "UZ");
 
     private static final int PIP_UPDATE_DELAY_MS = 500;
-
-    // The kinds of DApps panel this window has open. Providers ask for a panel once per request
-    // they queue (see EthereumProviderImpl::SignMessageInternal), and a kind that already has one
-    // is not opened again.
-    private final EnumSet<BraveWalletDAppsActivity.ActivityType> mOpenDAppsPanels =
-            EnumSet.noneOf(BraveWalletDAppsActivity.ActivityType.class);
 
     private boolean mIsVerification;
     public boolean mIsDeepLink;
@@ -1551,9 +1544,8 @@ public abstract class BraveActivity extends ChromeActivity
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == BraveConstants.DAPPS_PANEL_REQUEST_CODE) {
-            onDAppsPanelClosed(resultCode, data);
-        } else if (resultCode == RESULT_OK
+        // Growser-399: no DApps panel branch; the wallet is compiled out (Growser-275).
+        if (resultCode == RESULT_OK
                 && (requestCode == BraveConstants.VERIFY_WALLET_ACTIVITY_REQUEST_CODE
                         || requestCode == BraveConstants.USER_WALLET_ACTIVITY_REQUEST_CODE
                         || requestCode == BraveConstants.SITE_BANNER_REQUEST_CODE)) {
