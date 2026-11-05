@@ -2234,6 +2234,12 @@ IN_PROC_BROWSER_TEST_F(VerticalTabStripHideCompletelyTest, GetMinimumWidth) {
 }
 
 IN_PROC_BROWSER_TEST_F(VerticalTabStripHideCompletelyTest, ShouldBeInvisible) {
+  // Growser-400: like Growser-156 for VisualState - this layout assumes the
+  // sidebar on the side opposite the vertical tabs (upstream's default);
+  // growser starts it on the left (brave_profile_prefs.cc), where its 36 px
+  // strip sits between the tabs and the contents. Ask for the layout measured.
+  browser()->GetProfile()->GetPrefs()->SetBoolean(
+      prefs::kSidePanelHorizontalAlignment, true);
   ToggleVerticalTabStrip();
 
   const gfx::AnimationTestApi::RenderModeResetter render_mode_resetter =
