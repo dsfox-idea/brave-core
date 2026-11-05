@@ -11,6 +11,7 @@
 #include "base/test/test_future.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/url_sanitizer/url_sanitizer_service_factory.h"
+#include "brave/components/brave_component_updater/browser/local_data_files_service.h"  // Growser-400
 #include "brave/components/url_sanitizer/core/browser/url_sanitizer_service.h"
 #include "brave/ui/base/clipboard/test/privacy_capturing_test_clipboard.h"
 #include "build/build_config.h"
@@ -108,6 +109,18 @@ class BraveOmniboxViewViewsEnabledFeatureTest
   BraveOmniboxViewViewsEnabledFeatureTest() {
     features_.InitWithFeatureState(features::kBraveCopyCleanLinkByDefault,
                                    true);
+    // Growser-400: the environment Brave's own tests get - no bundled local
+    // data. The bundled clean-urls config (growser#87) and the test's own
+    // SetSanitizerRules() each REPLACE the sanitizer's config, so which one
+    // was active at the hotkey depended on the startup order (macOS lost it).
+    brave_component_updater::LocalDataFilesService::
+        SetSkipBundledDataForTesting(true);  // Growser-400
+  }
+
+  ~BraveOmniboxViewViewsEnabledFeatureTest() override {
+    // Growser-400: see the constructor.
+    brave_component_updater::LocalDataFilesService::
+        SetSkipBundledDataForTesting(false);  // Growser-400
   }
 
  private:
@@ -341,14 +354,10 @@ IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsEnabledFeatureTest,
   std::string text_from_clipboard = ui::clipboard_test_util::ReadAsciiText(
       clipboard, ui::ClipboardBuffer::kCopyPaste,
       /* data_dst = */ nullptr);
-  // Growser-87: brave_testing1 and brave_testing2 go too. SetSanitizerRules is
-  // not the only source of rules here - Brave's component server answers a
-  // fork 403, so the clean-urls payload is BUNDLED with the browser, and it
-  // carries a rule for this very host. On Brave's bots the component is absent
-  // and the test's own rules are all there is.
   EXPECT_EQ(text_from_clipboard,
             "https://dev-pages.bravesoftware.com/clean-urls/"
-            "?brave_testing3=keep&&;b&d&e=&f=g&=end");
+            "?brave_testing1=foo&brave_testing2=bar&brave_testing3=keep&&;b&d&"
+            "e=&f=g&=end");
 }
 
 IN_PROC_BROWSER_TEST_F(BraveOmniboxViewViewsTest, DoNotSanitizeInternalURLS) {

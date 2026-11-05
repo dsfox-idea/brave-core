@@ -7,6 +7,7 @@
 
 #include "base/feature_list.h"
 #include "base/path_service.h"
+#include "brave/components/brave_component_updater/browser/local_data_files_service.h"  // Growser-400
 #include "brave/components/brave_shields/core/browser/brave_shields_utils.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/constants/brave_paths.h"
@@ -102,6 +103,18 @@ class BraveContentSettingsAgentImplBrowserTest : public InProcessBrowserTest {
             webcompat::features::kBraveWebcompatExceptionsService,
         },
         {});
+    // Growser-400: the environment Brave's own tests get - no bundled local
+    // data. The bundled webcompat-exceptions list (growser#87) carries a
+    // referrer exception for www.fedex.com, which the remote-list provider
+    // adds to every count of referrer rules this fixture makes.
+    brave_component_updater::LocalDataFilesService::
+        SetSkipBundledDataForTesting(true);  // Growser-400
+  }
+
+  ~BraveContentSettingsAgentImplBrowserTest() override {
+    // Growser-400: see the constructor.
+    brave_component_updater::LocalDataFilesService::
+        SetSkipBundledDataForTesting(false);  // Growser-400
   }
 
   void SetUpOnMainThread() override {
