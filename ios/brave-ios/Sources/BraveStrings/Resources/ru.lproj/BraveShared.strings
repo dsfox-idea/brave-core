@@ -3568,3 +3568,6 @@
 "playlist.folderItemCountFormat" = "Элементов: %lld";
 "playlistFolders.subtitleItemCountFormat" = "Элементов: %lld";
 "tabGrid.tabsCountFormat" = "Вкладок: %lld";
+
+/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
+"JavaScriptDialogEmbeddedPageTitle" = "Встроенная страница";
