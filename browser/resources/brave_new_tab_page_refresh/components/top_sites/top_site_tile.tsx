@@ -34,7 +34,7 @@ interface Props {
 }
 
 export function TopSitesTile(props: Props) {
-  const { color, drawing, kind, label, title, url } = props.tile
+  const { captioned, color, drawing, kind, label, title, url } = props.tile // Growser-408
   const [iconMissing, setIconMissing] = React.useState(false)
   // The icon's own resolution, which is what caps how large it may be drawn.
   const [iconNatural, setIconNatural] = React.useState(0)
@@ -93,7 +93,11 @@ export function TopSitesTile(props: Props) {
 
   return (
     <a
-      className={'top-site-tile' + (kind === 'name' ? ' named' : '')}
+      className={
+        'top-site-tile'
+        + (kind === 'name' ? ' named' : '')
+        + (captioned ? ' captioned' : '') // Growser-408
+      }
       href={sanitizeTileURL(url)}
       draggable={false}
       onClick={props.onNavigate}

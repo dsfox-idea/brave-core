@@ -219,6 +219,8 @@ export const style = scoped.css`
     transition: opacity var(--self-transition-duration) ease-out;
   }
 
+  /* Growser-408: a tile drawn the same as another one keeps its caption. */
+  .top-site-tile.captioned .top-site-label,
   .top-site-tile:hover .top-site-label,
   .top-site-tile:focus-visible .top-site-label {
     opacity: 1;

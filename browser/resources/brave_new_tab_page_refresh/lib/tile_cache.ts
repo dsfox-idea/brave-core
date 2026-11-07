@@ -27,6 +27,9 @@ export interface CachedTile {
   // a drawing, 'name' means the tile carries the site's name instead.
   kind?: 'mono' | 'full' | 'name'
   drawing?: string | null
+  // growser#408: another tile on the board shows the same drawing, so this
+  // one's caption stays on.
+  captioned?: boolean
 }
 
 function request<T>(source: IDBRequest<T>): Promise<T> {

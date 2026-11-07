@@ -126,6 +126,48 @@ describe('use_tile_board', () => {
     expect(written.at(-1)).toEqual([])
   })
 
+  // growser#408: ya.ru and yandex.ru are one brand in the pack and one drawing.
+  it('keeps the caption on tiles that look like another tile', async () => {
+    const { result } = renderHook(() =>
+      useTileBoard(
+        [
+          site('ya.ru', 'Ya'),
+          site('github.com', 'GitHub'),
+          site('www.yandex.ru', 'Yandex'),
+        ],
+        true,
+      ),
+    )
+    await waitFor(() => expect(result.current.length).toBe(3))
+    expect(result.current[0].drawing).toBeTruthy()
+    expect(result.current.map((tile) => !!tile.captioned)).toEqual([
+      true,
+      false,
+      true,
+    ])
+  })
+
+  it('leaves the caption on hover for a brand that is on the board once', async () => {
+    const { result } = renderHook(() =>
+      useTileBoard(
+        [site('yandex.ru', 'Yandex'), site('github.com', 'GitHub')],
+        true,
+      ),
+    )
+    await waitFor(() => expect(result.current.length).toBe(2))
+    expect(result.current.some((tile) => tile.captioned)).toBe(false)
+  })
+
+  it('never captions tiles drawn from favicons, even of one colour', async () => {
+    colors.set(iconOf('a.example'), '#33c57b')
+    colors.set(iconOf('b.example'), '#33c57b')
+    const { result } = renderHook(() =>
+      useTileBoard([site('a.example', 'A'), site('b.example', 'B')], true),
+    )
+    await waitFor(() => expect(result.current[1].color).toBe('#33c57b'))
+    expect(result.current.some((tile) => tile.captioned)).toBe(false)
+  })
+
   it('caps the board at the number two rows hold', async () => {
     const sites = Array.from({ length: 30 }, (_, i) =>
       site('s' + i + '.example', 'S' + i),

@@ -21,6 +21,26 @@ import { maxTileCount } from './tile_rows'
 
 export type BoardTile = CachedTile
 
+// growser#408: one brand can own several sites - ya.ru and yandex.ru are both
+// Yandex - and the pack draws them the same, so on one board only the hover
+// caption told them apart. A tile whose drawing another tile also shows keeps
+// its caption on; every other tile keeps the hover-only one.
+function captionLookalikes(tiles: BoardTile[]): BoardTile[] {
+  const looks = (tile: BoardTile) =>
+    tile.drawing ? tile.drawing + '|' + tile.color : null
+  const seen = new Map<string, number>()
+  for (const tile of tiles) {
+    const key = looks(tile)
+    if (key) {
+      seen.set(key, (seen.get(key) ?? 0) + 1)
+    }
+  }
+  return tiles.map((tile) => {
+    const key = looks(tile)
+    return key && seen.get(key)! > 1 ? { ...tile, captioned: true } : tile
+  })
+}
+
 // The board a new tab paints, from three sources that arrive at three
 // different times:
 //
@@ -86,9 +106,10 @@ export function useTileBoard(
       // which is what `initialized` says - an empty board is the truth, and
       // showing the cache instead would leave tiles up for sites the user has
       // just removed.
-      return initialized ? [] : (cachedTiles ?? [])
+      // The cache does not keep the caption flag, so it is worked out again.
+      return initialized ? [] : captionLookalikes(cachedTiles ?? [])
     }
-    return sites.slice(0, maxTileCount).map((site) => {
+    const board = sites.slice(0, maxTileCount).map((site) => {
       // The pack first: a drawing we made and a colour we chose beat anything
       // read off a favicon, and asking it costs no request at all. The
       // server tail second: the same drawings, made between releases, at
@@ -112,6 +133,7 @@ export function useTileBoard(
         color: colorsRef.current.get(site.url) ?? null,
       }
     })
+    return captionLookalikes(board)
     // `colorVersion` is what makes a resolved colour reach the board; the
     // colours themselves live in a ref so that resolving one does not rebuild
     // the map for all of them. `packVersion` does the same for a pack newer

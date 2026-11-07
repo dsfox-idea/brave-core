@@ -106,6 +106,26 @@ describe('TopSites', () => {
     await settle()
   })
 
+  // growser#408: two sites the pack draws as one brand.
+  it('keeps the caption on two tiles of one brand', async () => {
+    const { container } = renderTopSites({
+      showTopSites: true,
+      topSites: [
+        { url: 'https://ya.ru/', title: 'Ya', favicon: '' },
+        { url: 'https://yandex.ru/', title: 'Yandex', favicon: '' },
+        { url: 'https://site0.example/', title: 'Site 0', favicon: '' },
+      ] as TopSite[],
+    })
+    await waitFor(() =>
+      expect(container.querySelectorAll('a.top-site-tile')).toHaveLength(3),
+    )
+    const captioned = [
+      ...container.querySelectorAll('a.top-site-tile.captioned'),
+    ].map((tile) => tile.querySelector('.top-site-label')?.textContent)
+    expect(captioned).toEqual(['ya.ru', 'yandex.ru'])
+    await settle()
+  })
+
   it('offers no add button once the board is full', async () => {
     const { container } = renderTopSites({
       showTopSites: true,
