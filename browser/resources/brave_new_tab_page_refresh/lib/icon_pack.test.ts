@@ -3,8 +3,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+import * as fs from 'fs'
+import * as path from 'path'
+
+import { packedDomains } from '../state/icon_pack'
 import {
   drawingSource,
+  hostingSuffixes,
   installPack,
   lookupPackedIcon,
   packKeyFor,
@@ -67,6 +72,44 @@ describe('icon_pack', () => {
       expect(icon).not.toBeNull()
       expect(icon!.drawing).not.toBeNull()
       expect(icon!.drawing).not.toBe(parent!.drawing)
+    }
+  })
+
+  // growser#408: a site on a hosting platform is somebody else's.
+  it('never draws a hosting platform mark on a site it hosts', () => {
+    const hosted = [
+      'https://someone.github.io/',
+      'https://www.someone.github.io/',
+      'https://a-blog.blogspot.com/',
+    ]
+    for (const site of hosted) {
+      expect(lookupPackedIcon(site)).toBeNull()
+    }
+    expect(lookupPackedIcon('https://github.io/')).not.toBeNull()
+    // Every site under service.gov.uk is the government's.
+    expect(lookupPackedIcon('https://www.tax.service.gov.uk/')).not.toBeNull()
+  })
+
+  it('names every pack domain that is a hosting public suffix', () => {
+    const pslPath = path.join(
+      __dirname,
+      '../../../../../net/base/registry_controlled_domains',
+      'effective_tld_names.dat',
+    )
+    const rules = new Set(
+      fs
+        .readFileSync(pslPath, 'utf8')
+        .split('\n')
+        .map((line) => line.trim().split(/\s/)[0])
+        .filter((rule) => rule && !rule.startsWith('//')),
+    )
+    const suffixes = Object.keys(packedDomains).filter(
+      (domain) => domain.includes('.') && rules.has(domain),
+    )
+    const unlisted = suffixes.filter((domain) => !hostingSuffixes.has(domain))
+    expect(unlisted).toEqual(['service.gov.uk'])
+    for (const suffix of hostingSuffixes) {
+      expect(rules.has(suffix)).toBe(true)
     }
   })
 

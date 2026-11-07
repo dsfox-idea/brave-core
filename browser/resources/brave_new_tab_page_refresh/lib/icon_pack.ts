@@ -150,13 +150,26 @@ export function lookupPackedIcon(url: string): PackedIcon | null {
   }
 }
 
+// growser#408: pack domains that are public suffixes, where every site under
+// them belongs to somebody else - someone.github.io is not GitHub's, so it
+// gets its own favicon rather than the platform's mark. service.gov.uk is a
+// public suffix too and stays out of this list: every site under it is the
+// government's. icon_pack.test.ts checks the list against Chromium's PSL.
+export const hostingSuffixes = new Set([
+  'akamai.net',
+  'blogspot.com',
+  'cloudflare.net',
+  'github.io',
+])
+
 // One label off the front, which turns news.bbc.co.uk into bbc.co.uk. Not a
 // public suffix list: it is only ever used as a second guess against a table
 // of known domains, so a wrong guess finds nothing rather than the wrong
-// brand.
+// brand - except under a hosting suffix above, where it would find one.
 function parentDomain(host: string) {
   const parts = host.split('.')
-  return parts.length > 2 ? parts.slice(1).join('.') : host
+  const parent = parts.length > 2 ? parts.slice(1).join('.') : host
+  return hostingSuffixes.has(parent) ? host : parent
 }
 
 // A drawing as something an <img> can take.
