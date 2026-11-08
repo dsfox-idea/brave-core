@@ -16,6 +16,8 @@
 #include <third_party/crashpad/crashpad/handler/minidump_to_upload_parameters.cc>
 #undef BreakpadHTTPFormParametersFromMinidump
 
+#include "snapshot/system_snapshot.h"
+
 namespace crashpad {
 
 namespace {
@@ -25,8 +27,13 @@ namespace {
 // sends is dropped (growser#412). Its tag values are 255 characters at most.
 constexpr char kSentryField[] = "sentry";
 constexpr size_t kMaxTagBytes = 255;
-constexpr const char* kTaggedKeys[] = {"ptype", "plat", "prod", "channel",
-                                       "LOG_FATAL"};
+// The uncaught Objective-C exception is what names an abort in AppKit or an
+// iOS crash in Crashpad's exception processor (#414, #415): macOS writes
+// first/lastexception, iOS exceptionName/exceptionReason.
+constexpr const char* kTaggedKeys[] = {
+    "ptype",          "plat",          "prod",
+    "channel",        "LOG_FATAL",     "lastexception",
+    "firstexception", "exceptionName", "exceptionReason"};
 
 std::string_view ValueOf(const std::map<std::string, std::string>& parameters,
                          const char* key) {
@@ -46,6 +53,15 @@ std::map<std::string, std::string> BreakpadHTTPFormParametersFromMinidump(
     std::string_view value = ValueOf(parameters, key);
     if (!value.empty()) {
       tags.Set(key, base::TruncateUTF8ToByteSize(value, kMaxTagBytes));
+    }
+  }
+  // An offset inside a system library resolves only against that exact OS
+  // build, and GlitchTip keeps just the OS name.
+  if (const SystemSnapshot* system = process_snapshot->System()) {
+    std::string os_build = system->OSVersionFull();
+    if (!os_build.empty()) {
+      tags.Set("os.build",
+               base::TruncateUTF8ToByteSize(os_build, kMaxTagBytes));
     }
   }
   base::DictValue sentry;

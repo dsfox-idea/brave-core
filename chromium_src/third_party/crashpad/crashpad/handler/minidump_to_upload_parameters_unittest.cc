@@ -11,6 +11,7 @@
 #include "base/values.h"
 #include "testing/gtest/include/gtest/gtest.h"
 #include "third_party/crashpad/crashpad/snapshot/test/test_process_snapshot.h"
+#include "third_party/crashpad/crashpad/snapshot/test/test_system_snapshot.h"
 
 namespace crashpad {
 
@@ -49,6 +50,36 @@ TEST(GrowserMinidumpUploadParametersTest, CarriesASentryFieldForGlitchTip) {
   EXPECT_EQ(fatal->size(), 255u);
   EXPECT_TRUE(fatal->starts_with("feature_map.cc:44: "));
   EXPECT_FALSE(tags->FindString("channel"));
+}
+
+// growser#414, #415: an uncaught Objective-C exception and the OS build are
+// what make an abort inside AppKit or Crashpad's iOS processor readable.
+TEST(GrowserMinidumpUploadParametersTest, TellsTheExceptionAndTheOsBuild) {
+  TestProcessSnapshot process_snapshot;
+  process_snapshot.SetAnnotationsSimpleMap({
+      {"lastexception", "NSInternalInconsistencyException reason boom"},
+      {"exceptionName", "NSRangeException"},
+  });
+  auto system = std::make_unique<test::TestSystemSnapshot>();
+  system->SetOSVersionFull("26.1 25B78");
+  process_snapshot.SetSystem(std::move(system));
+
+  std::map<std::string, std::string> parameters =
+      BreakpadHTTPFormParametersFromMinidump(&process_snapshot);
+
+  std::optional<base::Value> sentry = base::JSONReader::Read(
+      parameters["sentry"], base::JSON_PARSE_CHROMIUM_EXTENSIONS);
+  ASSERT_TRUE(sentry && sentry->is_dict()) << parameters["sentry"];
+  const base::DictValue* tags = sentry->GetDict().FindDict("tags");
+  ASSERT_TRUE(tags);
+  auto tag = [tags](const char* key) {
+    const std::string* value = tags->FindString(key);
+    return value ? *value : std::string("<missing>");
+  };
+  EXPECT_EQ(tag("lastexception"),
+            "NSInternalInconsistencyException reason boom");
+  EXPECT_EQ(tag("exceptionName"), "NSRangeException");
+  EXPECT_EQ(tag("os.build"), "26.1 25B78");
 }
 
 TEST(GrowserMinidumpUploadParametersTest, AddsNothingWhenThereIsNothingToTell) {
