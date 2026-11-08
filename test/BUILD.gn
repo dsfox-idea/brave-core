@@ -578,6 +578,15 @@ test("brave_unit_tests") {
       ]
     }
 
+    # Growser-412: every crash upload tells GlitchTip its version and process.
+    if (is_win || is_mac || is_linux) {
+      sources += [ "//brave/chromium_src/third_party/crashpad/crashpad/handler/minidump_to_upload_parameters_unittest.cc" ]
+      deps += [
+        "//third_party/crashpad/crashpad/handler:common",
+        "//third_party/crashpad/crashpad/snapshot:test_support",
+      ]
+    }
+
     deps += [
       "//brave/app:brave_generated_resources_grit",
       "//brave/app/theme:brave_theme_resources_grit",
