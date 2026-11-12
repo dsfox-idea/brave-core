@@ -1,5 +1,5 @@
 diff --git a/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java b/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
-index bd7b0543328ebfc041c639b1ef8e77488bca53f5..538d71e4f354feff61c4be4ef2761b9d6216121f 100644
+index bd7b0543328ebfc041c639b1ef8e77488bca53f5..6b5610988b17ab616f9ead09e2feca532fba3b5a 100644
 --- a/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
 +++ b/chrome/android/java/src/org/chromium/chrome/browser/settings/search/SearchIndexProviderRegistry.java
 @@ -7,7 +7,6 @@ package org.chromium.chrome.browser.settings.search;
@@ -59,7 +59,7 @@ index bd7b0543328ebfc041c639b1ef8e77488bca53f5..538d71e4f354feff61c4be4ef2761b9d
                      SafetyCheckSettingsFragment.SEARCH_INDEX_DATA_PROVIDER,
                      TabsSettings.SEARCH_INDEX_DATA_PROVIDER,
                      ManageSyncSettings.SEARCH_INDEX_DATA_PROVIDER,
-@@ -143,5 +136,38 @@ public final class SearchIndexProviderRegistry {
+@@ -143,5 +136,27 @@ public final class SearchIndexProviderRegistry {
                      DownloadSettings.SEARCH_INDEX_DATA_PROVIDER,
                      DeveloperSettings.SEARCH_INDEX_DATA_PROVIDER,
                      TracingSettings.SEARCH_INDEX_DATA_PROVIDER,

@@ -1,8 +1,8 @@
 diff --git a/testing/scripts/common.py b/testing/scripts/common.py
-index 8bf51c22f61ac99fcba04976189bba1808cf1ae6..1b3b79828a6a5693f34a0ef0ecf63a0be49cdec1 100644
+index 0b8c75eee21cdadef51bd1552c61be3626336f27..941ade83b97edcf4feebd62f19875b6db90c8987 100644
 --- a/testing/scripts/common.py
 +++ b/testing/scripts/common.py
-@@ -83,8 +83,15 @@ def set_lpac_acls(acl_dir, is_test_script=False):
+@@ -81,8 +81,15 @@ def set_lpac_acls(acl_dir, is_test_script=False):
    if sys.getwindowsversion().build < 19041:
      return
    try:

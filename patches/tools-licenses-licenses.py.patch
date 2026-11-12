@@ -1,5 +1,5 @@
 diff --git a/tools/licenses/licenses.py b/tools/licenses/licenses.py
-index 2abab0dc554360fc7c95f256ee74cb59b8851be5..24f46a0df6e284fcc40adf423856b096cfb5e64e 100755
+index 2abab0dc554360fc7c95f256ee74cb59b8851be5..29ef946069898e47746c47c64cd31de4cf141575 100755
 --- a/tools/licenses/licenses.py
 +++ b/tools/licenses/licenses.py
 @@ -34,6 +34,7 @@ import find_depot_tools
@@ -36,7 +36,7 @@ index 2abab0dc554360fc7c95f256ee74cb59b8851be5..24f46a0df6e284fcc40adf423856b096
        had_errors = True
        # TODO(phajdan.jr): Convert to fatal error (https://crbug.com/39240).
        if args.enable_warnings:
-@@ -1188,6 +1192,16 @@ def GenerateCredits(args, metadatas):
+@@ -1127,6 +1131,16 @@ def GenerateCredits(args, metadatas):
      },
      escape=False,
    )

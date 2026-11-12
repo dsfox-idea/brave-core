@@ -1,7 +1,16 @@
 diff --git a/chrome/browser/net/profile_network_context_service.cc b/chrome/browser/net/profile_network_context_service.cc
-index ec1e9b7c189bccf9c31e89fc66fe80e9d66b5a22..c8f0a0cbcc8fe52d9b61eac3d6157728edf44294 100644
+index ec1e9b7c189bccf9c31e89fc66fe80e9d66b5a22..38db38de08fbd04952ee0f5ee01d61a9c4ab80e7 100644
 --- a/chrome/browser/net/profile_network_context_service.cc
 +++ b/chrome/browser/net/profile_network_context_service.cc
+@@ -653,7 +653,7 @@ void ProfileNetworkContextService::RegisterProfilePrefs(
+                                 false);
+   registry->RegisterListPref(prefs::kHSTSPolicyBypassList);
+   registry->RegisterListPref(prefs::kCACertificates);
+-  registry->RegisterListPref(prefs::kCACertificatesWithConstraints);
++  BRAVE_REGISTER_CA_CERTIFICATES_WITH_CONSTRAINTS_PREF
+   registry->RegisterListPref(prefs::kCADistrustedCertificates);
+   registry->RegisterListPref(prefs::kCAHintCertificates);
+   // For information about whether to reset the HTTP Cache or not, defaults
 @@ -738,6 +738,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
    std::vector<std::string> excluded_spkis(
        TranslateStringArray(ct_excluded_spkis));
@@ -23,7 +32,7 @@ index ec1e9b7c189bccf9c31e89fc66fe80e9d66b5a22..c8f0a0cbcc8fe52d9b61eac3d6157728
    network_context_params->accept_language = ComputeAcceptLanguage();
    network_context_params->enable_referrers = enable_referrers_.GetValue();
  
-@@ -1419,9 +1426,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
+@@ -1417,9 +1424,8 @@ void ProfileNetworkContextService::ConfigureNetworkContextParamsInternal(
      network_context_params->file_paths->cookie_database_name =
          base::FilePath(chrome::kCookieFilename);
  

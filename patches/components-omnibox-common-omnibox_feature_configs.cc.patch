@@ -1,8 +1,8 @@
 diff --git a/components/omnibox/common/omnibox_feature_configs.cc b/components/omnibox/common/omnibox_feature_configs.cc
-index efa585c6a44e68ff729c6dde0c91ab1c154ea55f..3344c86f9f25899bed11d22f38590a39f025921f 100644
+index 8da6848bea9c2733c5993c40a7705e201287474c..20911c5b5cec021a33495b7a339dd33a5c3b7547 100644
 --- a/components/omnibox/common/omnibox_feature_configs.cc
 +++ b/components/omnibox/common/omnibox_feature_configs.cc
-@@ -375,7 +375,7 @@ DocumentProvider::~DocumentProvider() = default;
+@@ -351,7 +351,7 @@ DocumentProvider::~DocumentProvider() = default;
  
  BASE_FEATURE(AdjustOmniboxIndent::kAdjustOmniboxIndent,
               "AdjustOmniboxIndent",
