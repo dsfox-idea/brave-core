@@ -16,10 +16,12 @@ enum TabBarVisibility: Int, CaseIterable {
   case landscapeOnly
 }
 
-public enum TopSitesMode: Int, CaseIterable, Identifiable {
-  case none
-  case mostVisited
-  case favourite
+/// Raw values are spelled out so that reordering, inserting or renaming a case cannot remap
+/// already stored preferences, which is what broke the integer backed predecessor.
+public enum TopSitesMode: String, CaseIterable, Identifiable {
+  case none = "none"
+  case mostVisited = "most-visited"
+  case favourite = "favourite"
 
   public var id: Self { self }
 
@@ -334,13 +336,15 @@ extension Preferences {
       default: false
     )
 
-    /// Tells the app whether we should show Favourites in new tab page view controller
-    public static let showNewTabFavourites =
-      Option<Bool>(key: "newtabpage.show-newtab-favourites", default: true)
-
-    /// Mode to display NTP tiles in NTP
+    /// Mode to display top sites in the new tab page.
+    ///
+    /// The key intentionally does not match the name: 1.99.x burned
+    /// `newtabpage.topsites-mode` by reordering the integer raw values of the enum stored under
+    /// it while reusing the key, so values already on disk are ambiguous and are migrated here
+    /// exactly once rather than reinterpreted. String raw values mean editing the `TopSitesMode`
+    /// cases can never remap stored preferences again.
     public static let topSitesMode = Option<TopSitesMode>(
-      key: "newtabpage.topsites-mode",
+      key: "newtabpage.topsites-mode-v2",
       // Growser-310: most visited, so a fresh install shows sites (favourites
       // hold only hand-marked bookmarks and start empty), as Android does.
       default: .mostVisited

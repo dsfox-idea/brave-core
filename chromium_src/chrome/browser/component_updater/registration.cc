@@ -62,7 +62,6 @@
 #include "brave/components/p3a/buildflags/buildflags.h"
 #if BUILDFLAG(ENABLE_P3A)
 #include "brave/components/p3a/component_installer.h"
-#include "brave/components/p3a/p3a_service.h"
 #endif
 #include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/query_filter/browser/query_filter_component_installer.h"

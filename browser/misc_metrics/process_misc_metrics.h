@@ -41,6 +41,7 @@ class TabMetrics;
 class CaptchaMetrics;
 class DefaultBrowserMonitor;
 class DohMetrics;
+class ImageMetadataStripperMetrics;
 class MediaSessionMetricsImpl;
 class UptimeMonitorImpl;
 
@@ -69,6 +70,7 @@ class ProcessMiscMetrics {
   UptimeMonitorImpl* uptime_monitor();
   MediaSessionMetricsImpl* media_session_metrics();
   CaptchaMetrics* captcha_metrics();
+  ImageMetadataStripperMetrics* image_metadata_stripper_metrics();
 
 #if BUILDFLAG(ENABLE_P3A)
   serp_metrics::SerpMetricsP3A* serp_metrics_p3a();  // Growser-232
@@ -99,6 +101,8 @@ class ProcessMiscMetrics {
 #if BUILDFLAG(ENABLE_P3A)
   std::unique_ptr<serp_metrics::SerpMetricsP3A> serp_metrics_p3a_;  // Growser-232
 #endif
+  std::unique_ptr<ImageMetadataStripperMetrics>
+      image_metadata_stripper_metrics_;
 };
 
 }  // namespace misc_metrics

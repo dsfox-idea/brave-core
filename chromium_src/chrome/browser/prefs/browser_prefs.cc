@@ -8,6 +8,7 @@
 #include "brave/browser/brave_local_state_prefs.h"
 #include "brave/browser/brave_profile_prefs.h"
 #include "brave/browser/brave_stats/buildflags.h"
+#include "brave/browser/misc_metrics/fingerprint_frequency_metrics.h"
 #include "brave/browser/misc_metrics/uptime_monitor_impl.h"
 #include "brave/browser/translate/brave_translate_prefs_migration.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
@@ -63,9 +64,15 @@
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/ui/bookmark/bookmark_helper.h"
-#include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/new_tab_page_initializer.h"
 #include "brave/browser/ui/webui/brave_welcome_page/brave_welcome_page_prefs.h"
+
+// Defined in //brave/browser/ui:brave_tab_prefs, linked through
+// //brave/browser:core.
+namespace brave_tabs {
+void MigrateBraveProfilePrefs(PrefService* prefs);
+void MaybeApplyVerticalTabMigrationTestingOverride(PrefService* prefs);
+}  // namespace brave_tabs
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
@@ -305,6 +312,7 @@ void MigrateObsoleteBraveLocalStatePrefsAfterChromium(
 #endif
 
   misc_metrics::UptimeMonitorImpl::MigrateObsoletePrefs(local_state);
+  misc_metrics::FingerprintFrequencyMetrics::MigrateObsoletePrefs(local_state);
   brave_search::BackupResultsMetrics::MigrateObsoleteLocalStatePrefs(
       local_state);
   brave_search_conversion::p3a::MigrateObsoleteLocalStatePrefs(local_state);

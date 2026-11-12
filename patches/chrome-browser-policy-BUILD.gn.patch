@@ -1,8 +1,8 @@
 diff --git a/chrome/browser/policy/BUILD.gn b/chrome/browser/policy/BUILD.gn
-index cb75fa966685e348abea1ffa00588dadbac22b2d..f8b1b3165bf670f5c709b2123de685d66f8b3b34 100644
+index 0cccae20d6c63a797a8aa7d6b2ccf267fea0eef2..0f8f8435ce21967f3c59ac0ccd86091a0c2b5d65 100644
 --- a/chrome/browser/policy/BUILD.gn
 +++ b/chrome/browser/policy/BUILD.gn
-@@ -1356,6 +1356,8 @@ source_set("impl") {
+@@ -1348,6 +1348,7 @@ source_set("impl") {
      "//components/variations/service",
      "//services/device/public/cpp:device_features",
    ]

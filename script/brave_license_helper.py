@@ -248,85 +248,146 @@ def AddBraveCredits(
 
     # Add the licensing info that would normally be in a README.chromium file.
     # This is for when we pull in external repos directly.
-    special_cases.update({
-        os.path.join('brave', 'vendor', 'bat-native-tweetnacl'): {
-            "Name": "TweetNaCl",
-            "URL": "https://github.com/brave-intl/bat-native-tweetnacl",
-            "License": "MPL-2.0",
-        },
-        os.path.join('brave', 'third_party', 'bip39wally-core-native'): {
-            "Name": "libwally-core",
-            "URL": "https://github.com/brave-intl/bat-native-bip39wally-core",
-            "License": "MIT",
-        },
-        os.path.join('brave', 'third_party', 'rust', 'futures_retry', 'v0_5'): {
-            "Name": "futures-retry",
-            "URL": "https://crates.io/crates/futures-retry",
-            "License": "Apache-2.0",
-        },
-        os.path.join('brave', 'vendor', 'brave-extension'): {
-            "Name": "Brave Only Extension",
-            "URL": "https://github.com/brave/brave-extension",
-            "License": "MPL-2.0",
-        },
-        os.path.join('brave', 'vendor', 'web-discovery-project'): {
-            "Name": "Web Discovery Project",
-            "URL": "https://github.com/brave/web-discovery-project",
-            "License": "MPL-2.0",
-        },
-        # growser (#212): the webharvester extension, bundled with the
-        # browser. MIT, read off the dependency's own LICENSE rather than
-        # assumed - the first version of this entry guessed MPL-2.0 because
-        # that is what Growser is, and the guess was wrong.
-        os.path.join('brave', 'vendor', 'webharvester'): {
-            "Name": "webharvester",
-            "URL": "https://github.com/dsfox-idea/webharvester",
-            "License": "MIT",
-            "License File": ["/brave/vendor/webharvester/LICENSE"],
-        },
-        os.path.join('brave', 'vendor', 'omaha'): {
-            "Name": "Omaha",
-            "URL": "https://github.com/brave/omaha",
-            "License": "Apache-2.0",
-            "License File": ["/brave/vendor/omaha/LICENSE.txt"],
-        },
-        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'breakpad'): {
-            "Name": "Breakpad",
-            "URL": "https://chromium.googlesource.com/breakpad/breakpad",
-            "License File": [
-                "/brave/vendor/omaha/third_party/breakpad/LICENSE"
-            ],
-        },
-        # Unclear why, but presumbit wants this line formatted this way, while
-        # at the same time complaining it's too long when it is formatted so.
-        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'breakpad', 'src', 'third_party', 'musl'): {  # pylint: disable=line-too-long
-            "Name": "musl",
-            "URL": "https://musl.libc.org/",
-            "License File": [
-                "/brave/vendor/omaha/third_party/breakpad/src/third_party/"
-                "musl/COPYRIGHT"
-            ],
-        },
-        os.path.join('brave', 'vendor', 'omaha', 'third_party', 'googletest'): {
-            "Name": "GoogleTest",
-            "URL": "https://github.com/google/googletest",
-            "License": "BSD",
-            "License File": [
-                "/brave/vendor/omaha/third_party/googletest/LICENSE"
-            ],
-        },
-        os.path.join('brave', 'third_party', 'reclient_configs'): {
-            "Name": "reclient-configs",
-            "URL": "https://github.com/EngFlow/reclient-configs",
-            "License": "Apache-2.0",
-            "License File": ["/brave/third_party/reclient_configs/src/LICENSE"],
-        },
-        os.path.join('brave', 'vendor', 'sparkle'): {
-            "Name": "Sparkle",
-            "URL": "https://github.com/brave/Sparkle",
-            "License": "MIT",
-        },
-    })
+    special_cases.update(
+        {
+            os.path.join('brave', 'vendor', 'bat-native-tweetnacl'): {
+                "Name": "TweetNaCl",
+                "URL": "https://github.com/brave-intl/bat-native-tweetnacl",
+                "License": "MPL-2.0",
+            },
+            os.path.join('brave', 'third_party', 'bip39wally-core-native'): {
+                "Name": "libwally-core",
+                "URL": "https://github.com/brave-intl/bat-native-bip39wally-core",
+                "License": "MIT",
+            },
+            os.path.join(
+                'brave', 'third_party', 'rust', 'futures_retry', 'v0_5'
+            ): {
+                "Name": "futures-retry",
+                "URL": "https://crates.io/crates/futures-retry",
+                "License": "Apache-2.0",
+            },
+            os.path.join('brave', 'vendor', 'brave-extension'): {
+                "Name": "Brave Only Extension",
+                "URL": "https://github.com/brave/brave-extension",
+                "License": "MPL-2.0",
+            },
+            os.path.join('brave', 'vendor', 'web-discovery-project'): {
+                "Name": "Web Discovery Project",
+                "URL": "https://github.com/brave/web-discovery-project",
+                "License": "MPL-2.0",
+            },
+            # growser (#212): the webharvester extension, bundled with the
+            # browser. MIT, read off the dependency's own LICENSE rather than
+            # assumed - the first version of this entry guessed MPL-2.0 because
+            # that is what Growser is, and the guess was wrong.
+            os.path.join('brave', 'vendor', 'webharvester'): {
+                "Name": "webharvester",
+                "URL": "https://github.com/dsfox-idea/webharvester",
+                "License": "MIT",
+                "License File": ["/brave/vendor/webharvester/LICENSE"],
+            },
+            os.path.join('brave', 'vendor', 'omaha'): {
+                "Name": "Omaha",
+                "URL": "https://github.com/brave/omaha",
+                "License": "Apache-2.0",
+                "License File": ["/brave/vendor/omaha/LICENSE.txt"],
+            },
+            os.path.join(
+                'brave', 'vendor', 'omaha', 'third_party', 'breakpad'
+            ): {
+                "Name": "Breakpad",
+                "URL": "https://chromium.googlesource.com/breakpad/breakpad",
+                "License File": [
+                    "/brave/vendor/omaha/third_party/breakpad/LICENSE"
+                ],
+            },
+            # Unclear why, but presumbit wants this line formatted this way, while
+            # at the same time complaining it's too long when it is formatted so.
+            os.path.join(
+                'brave',
+                'vendor',
+                'omaha',
+                'third_party',
+                'breakpad',
+                'src',
+                'third_party',
+                'musl',
+            ): {  # pylint: disable=line-too-long
+                "Name": "musl",
+                "URL": "https://musl.libc.org/",
+                "License File": [
+                    "/brave/vendor/omaha/third_party/breakpad/src/third_party/"
+                    "musl/COPYRIGHT"
+                ],
+            },
+            os.path.join(
+                'brave', 'vendor', 'omaha', 'third_party', 'googletest'
+            ): {
+                "Name": "GoogleTest",
+                "URL": "https://github.com/google/googletest",
+                "License": "BSD",
+                "License File": [
+                    "/brave/vendor/omaha/third_party/googletest/LICENSE"
+                ],
+            },
+            os.path.join('brave', 'third_party', 'reclient_configs'): {
+                "Name": "reclient-configs",
+                "URL": "https://github.com/EngFlow/reclient-configs",
+                "License": "Apache-2.0",
+                "License File": [
+                    "/brave/third_party/reclient_configs/src/LICENSE"
+                ],
+            },
+            os.path.join('brave', 'vendor', 'sparkle'): {
+                "Name": "Sparkle",
+                "URL": "https://github.com/brave/Sparkle",
+                "License": "MIT",
+            },
+            # Android-tools jars fetched from their per-library CIPD packages,
+            # which carry no metadata of their own. Used only by the
+            # nala_vd_rasterizer host tool, so nothing here is shipped.
+            os.path.join(
+                'brave',
+                'third_party',
+                'android_deps',
+                'libs',
+                'com_android_tools_common',
+            ): {
+                "Name": "Android Tools common",
+                "URL": "https://android.googlesource.com/platform/tools/base",
+                "License": "Apache-2.0",
+                "License File": ["/brave/common/licenses/Apache-2.0"],
+                "Shipped": "no",
+            },
+            os.path.join(
+                'brave',
+                'third_party',
+                'android_deps',
+                'libs',
+                'com_android_tools_sdk_common',
+            ): {
+                "Name": "Android Tools sdk-common",
+                "URL": "https://android.googlesource.com/platform/tools/base",
+                "License": "Apache-2.0",
+                "License File": ["/brave/common/licenses/Apache-2.0"],
+                "Shipped": "no",
+            },
+            os.path.join(
+                'brave',
+                'third_party',
+                'android_deps',
+                'libs',
+                'com_android_tools_layoutlib_layoutlib_api',
+            ): {
+                "Name": "Android Tools layoutlib-api",
+                "URL": "https://android.googlesource.com/platform/tools/base",
+                "License": "Apache-2.0",
+                "License File": ["/brave/common/licenses/Apache-2.0"],
+                "Shipped": "no",
+            },
+        }
+    )
 
     # Don't recurse into these directories looking for third-party code.
     prune_list = list(prune_dirs)

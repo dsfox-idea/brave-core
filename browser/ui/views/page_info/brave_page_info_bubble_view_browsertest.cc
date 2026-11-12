@@ -44,14 +44,17 @@ void OpenPageInfoBubble(BrowserWindowInterface* browser) {
   ui::test::TestEvent event;
   location_icon_view->ShowBubble(event);
   views::BubbleDialogDelegateView* page_info =
-      PageInfoBubbleView::GetPageInfoBubbleForTesting();
+      PageInfoBubbleView::GetPageInfoBubbleForTesting(
+          browser_view->GetActiveWebContents());
   ASSERT_TRUE(page_info);
   page_info->set_close_on_deactivate(false);
 }
 
-BravePageInfoBubbleView* GetBubbleView() {
+BravePageInfoBubbleView* GetBubbleView(BrowserWindowInterface* browser) {
   return views::AsViewClass<BravePageInfoBubbleView>(
-      PageInfoBubbleView::GetPageInfoBubbleForTesting());
+      PageInfoBubbleView::GetPageInfoBubbleForTesting(
+          BrowserView::GetBrowserViewForBrowser(browser)
+              ->GetActiveWebContents()));
 }
 
 void ClickButton(views::View* bubble_view, int button_id) {
@@ -62,8 +65,9 @@ void ClickButton(views::View* bubble_view, int button_id) {
                      base::TimeTicks(), ui::EF_LEFT_MOUSE_BUTTON, 0));
 }
 
-void SetIdentityInfoForBubble(const PageInfoUI::IdentityInfo& identity) {
-  auto* bubble_view = GetBubbleView();
+void SetIdentityInfoForBubble(BrowserWindowInterface* browser,
+                              const PageInfoUI::IdentityInfo& identity) {
+  auto* bubble_view = GetBubbleView(browser);
   ASSERT_TRUE(bubble_view);
   auto* presenter = bubble_view->presenter_for_testing();
   ASSERT_TRUE(presenter);
@@ -98,7 +102,7 @@ class BravePageInfoBubbleViewBrowserTestBase : public InProcessBrowserTest {
 
     // Open the page info bubble.
     OpenPageInfoBubble(browser());
-    auto* bubble_view = GetBubbleView();
+    auto* bubble_view = GetBubbleView(browser());
     ASSERT_TRUE(bubble_view);
   }
 
@@ -146,7 +150,7 @@ class BravePageInfoBubbleViewBrowserTest
 // Test that the close button is hidden.
 IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest, CloseButtonHidden) {
   NavigateAndOpenBubble();
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
 
   // Verify that the close button exists but is not visible.
@@ -160,7 +164,7 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest, CloseButtonHidden) {
 IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
                        ShieldsPageVisibleByDefault) {
   NavigateAndOpenBubble();
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
 
   EXPECT_FALSE(IsSiteSettingsViewDrawn(bubble_view));
@@ -172,7 +176,7 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
 IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
                        SiteSettingsVisibleWhenSubpageOpened) {
   NavigateAndOpenBubble();
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
   bubble_view->OpenPermissionPage(ContentSettingsType::GEOLOCATION);
 
@@ -187,7 +191,7 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
 IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
                        SiteSettingsVisibleWhenConnectionNotSecure) {
   NavigateAndOpenBubble();
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
 
   // Before setting security info, the initial tab should be Shields.
@@ -197,7 +201,7 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
   // Create identity info with a security warning and sent it to the UI.
   PageInfoUI::IdentityInfo identity;
   identity.safe_browsing_status = PageInfo::SAFE_BROWSING_STATUS_MALWARE;
-  SetIdentityInfoForBubble(identity);
+  SetIdentityInfoForBubble(browser(), identity);
 
   // After setting security info, the initial tab should be Site Settings.
   EXPECT_EQ(bubble_view->GetInitialTab(),
@@ -209,24 +213,24 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest,
                        BraveBubbleNotUsedForInternalPages) {
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("about:blank")));
   OpenPageInfoBubble(browser());
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
   VerifyTabSwitcherNotRendered(bubble_view);
 
   ASSERT_TRUE(
       ui_test_utils::NavigateToURL(browser(), GURL("chrome://settings")));
   OpenPageInfoBubble(browser());
-  EXPECT_FALSE(GetBubbleView());
+  EXPECT_FALSE(GetBubbleView(browser()));
 
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), GURL("file:///invalid")));
   OpenPageInfoBubble(browser());
-  EXPECT_FALSE(GetBubbleView());
+  EXPECT_FALSE(GetBubbleView(browser()));
 }
 
 // Test the behavior of the tab switcher.
 IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewBrowserTest, TabSwitching) {
   NavigateAndOpenBubble();
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
 
   // Verify that both tab switcher buttons exist.
@@ -269,7 +273,7 @@ class BravePageInfoBubbleViewFlagDisabledBrowserTest
 IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewFlagDisabledBrowserTest,
                        CloseButtonVisible) {
   NavigateAndOpenBubble();
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
 
   // Verify that the close button exists and is visible.
@@ -283,7 +287,7 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewFlagDisabledBrowserTest,
 IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewFlagDisabledBrowserTest,
                        TabSwitcherNotPresent) {
   NavigateAndOpenBubble();
-  auto* bubble_view = GetBubbleView();
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
 
   // Verify that both tab switcher buttons do not exist.
@@ -342,18 +346,18 @@ IN_PROC_BROWSER_TEST_F(BravePageInfoBubbleViewRepeatedReloadsBrowserTest,
   auto reload = [&]() {
     content::TestNavigationObserver reload_observer(
         browser()->tab_strip_model()->GetActiveWebContents());
-    chrome::Reload(browser(), WindowOpenDisposition::CURRENT_TAB);
+    chrome::Reload(browser(), WindowOpenDisposition::kCurrentTab);
     reload_observer.Wait();
   };
 
   // The first reload should not open the bubble.
   reload();
-  EXPECT_FALSE(GetBubbleView());
+  EXPECT_FALSE(GetBubbleView(browser()));
 
   // The second reload should open the bubble with the Shields tab visible.
   reload();
-  ASSERT_TRUE(base::test::RunUntil([] { return GetBubbleView(); }));
-  auto* bubble_view = GetBubbleView();
+  ASSERT_TRUE(base::test::RunUntil([&] { return GetBubbleView(browser()); }));
+  auto* bubble_view = GetBubbleView(browser());
   ASSERT_TRUE(bubble_view);
   EXPECT_TRUE(IsShieldsViewDrawn(bubble_view));
   EXPECT_FALSE(IsSiteSettingsViewDrawn(bubble_view));

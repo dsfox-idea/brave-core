@@ -1,0 +1,37 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+# Growser-61: our own update namespace, not Brave's. The component updater
+# reads these to learn what an administrator configured for updates; pointing
+# at another product's keys would make a machine with Brave installed obey
+# Brave's administrator policy. The policy root matches #58
+# (SOFTWARE\Policies\Growser) and the app GUID matches our install mode. We
+# build no Brave Origin variant, so one GUID is enough.
+substitutions:
+  - description: 'Growser-61: point the update policy key at Growser Update.'
+    regex:
+      re_pattern: '(kGoogleUpdatePoliciesKey\[\]\s*=\s*)L"[^;]*;'
+      replace: |-
+        \1L"SOFTWARE\\\\Policies\\\\Growser\\\\Update";
+
+  - description: 'Growser-61: our product GUID in the update policy override.'
+    regex:
+      re_pattern: '(?:const|constexpr)\s+wchar_t\s+kChromeUpdatePolicyOverride\[\][^;]*;'
+      replace: |-
+        constexpr wchar_t kChromeUpdatePolicyOverride[] =
+            L"Update{B003E671-954C-4C60-A0D4-4172D74FD4C1}";
+
+  - description: 'Growser-61: point the Update registry path at Growser Update.'
+    regex:
+      re_pattern: '(kRegPathGoogleUpdate\[\]\s*=\s*)L"[^;]*;'
+      replace: |-
+        \1L"Software\\\\Growser\\\\Update";
+
+  - description: 'Growser-61: point the Update Clients registry path at Growser Update.'
+    regex:
+      re_pattern: '(kRegPathClientsGoogleUpdate\[\]\s*=\s*)L"[^;]*;'
+      replace: |-
+        \1L"Software\\\\Growser\\\\Update\\\\Clients\\\\"
+            L"{B003E671-954C-4C60-A0D4-4172D74FD4C1}";

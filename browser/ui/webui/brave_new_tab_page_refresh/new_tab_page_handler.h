@@ -25,6 +25,7 @@
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "mojo/public/cpp/bindings/receiver.h"
 #include "mojo/public/cpp/bindings/remote.h"
+#include "ui/base/mojom/window_open_disposition.mojom-forward.h"
 
 class GURL;
 class PrefService;
@@ -34,7 +35,6 @@ class ChromeAutocompleteSchemeClassifier;
 namespace network {
 class SimpleURLLoader;
 }  // namespace network
-enum class WindowOpenDisposition;
 
 namespace misc_metrics {
 class BraveSearchMetrics;
@@ -242,7 +242,7 @@ class NewTabPageHandler : public mojom::NewTabPageHandler {
 
   void OnUpdate(UpdateObserver::Source update_source);
   void OnSponsoredSitesUpdate();
-  void OpenGURL(const GURL& gurl, WindowOpenDisposition disposition);
+  void OpenGURL(const GURL& gurl, ui::mojom::WindowOpenDisposition disposition);
 
   // Builds the engine list from the (loaded) TemplateURLService; shared by
   // the direct answer and the delayed one for a not-yet-loaded service.

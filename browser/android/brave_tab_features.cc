@@ -6,6 +6,7 @@
 #include "brave/browser/android/brave_tab_features.h"
 
 #include "base/feature_list.h"
+#include "brave/browser/brave_tab_helpers.h"
 #include "brave/browser/image_metadata_stripper/file_upload_controller.h"
 #include "brave/browser/misc_metrics/captcha_metrics.h"
 #include "brave/browser/misc_metrics/page_metrics_tab_helper.h"
@@ -40,6 +41,8 @@ namespace tabs {
 BraveTabFeatures::BraveTabFeatures(content::WebContents* web_contents,
                                    Profile* profile)
     : TabFeatures_Chromium(web_contents, profile) {
+  brave::AttachTabHelpers(web_contents);
+
   // Clients should rely on this for observing web contents based changes.
   tabs::TabInterface& tab_interface =
       *TabInterface::GetFromContents(web_contents);
@@ -101,6 +104,15 @@ TabFeatures::new_tab_page_preload_pipeline_manager() {
 enterprise_data_protection::DataProtectionNavigationController*
 TabFeatures::data_protection_controller() {
   return brave_tab_features_->data_protection_controller();
+}
+
+tasks::TaskTabHelper* TabFeatures::task_tab_helper() {
+  return brave_tab_features_->task_tab_helper();
+}
+
+SupervisedUserNavigationObserver*
+TabFeatures::supervised_user_navigation_observer() {
+  return brave_tab_features_->supervised_user_navigation_observer();
 }
 
 // static
