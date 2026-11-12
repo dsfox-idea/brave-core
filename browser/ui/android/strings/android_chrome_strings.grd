@@ -998,10 +998,10 @@ For more settings that use data to improve your Growser experience, go to <ph na
         Gemini and your essentials on the new toolbar
       </message>
       <message name="IDS_BOTTOM_BAR_EDUCATION_TITLE_OPT_IN" desc="Title for the opt-in preview dialog">
-        Preview Brave's new look, built for convenience
+        Preview Growser's new look, built for convenience
       </message>
       <message name="IDS_BOTTOM_BAR_EDUCATION_BODY" desc="Body of the bottom bar education bubble. The link opens Appearance settings.">
-        Brave has a new toolbar, built for convenience. You can switch back anytime in <ph name="BEGIN_LINK">&lt;link&gt;</ph>settings<ph name="END_LINK">&lt;/link&gt;</ph>.
+        Growser has a new toolbar, built for convenience. You can switch back anytime in <ph name="BEGIN_LINK">&lt;link&gt;</ph>settings<ph name="END_LINK">&lt;/link&gt;</ph>.
       </message>
       <message name="IDS_BOTTOM_BAR_EDUCATION_BODY_OPT_IN" desc="Body of the bottom bar opt-in preview dialog. The link opens Appearance settings.">
         Your essentials, right on the toolbar. You can switch back anytime in <ph name="BEGIN_LINK">&lt;link&gt;</ph>settings<ph name="END_LINK">&lt;/link&gt;</ph>
@@ -1874,7 +1874,7 @@ Your Growser account may have other forms of browsing history like searches and 
       <message name="IDS_HISTORY_ACTOR_FILTER_USER" desc="Label of the item in the actor filter sheet, short for the longer phrase 'Browsing history that YOU performed.'. ">
         You
       </message>
-      <message name="IDS_HISTORY_ACTOR_FILTER_ACTOR" desc="Label of the item in the actor filter sheet, when selected restricts the history results to entries in Brave history that are the result of Gemini in Brave browsing while performing an auto browse task for the user.">
+      <message name="IDS_HISTORY_ACTOR_FILTER_ACTOR" desc="Label of the item in the actor filter sheet, when selected restricts the history results to entries in Growser history that are the result of Gemini in Growser browsing while performing an auto browse task for the user.">
         Gemini
       </message>
       <message name="IDS_HISTORY_RESET_FILTERS" desc="Text used in the button to reset all applied history filters.">
@@ -4012,8 +4012,8 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       <message name="IDS_ACCESSIBILITY_AI_MODE_MVT_TILE" desc="Accessibility description for the AI Mode shortcut tile in the Most Visited Tiles section in the New Tab Page.">
         AI Mode shortcut
       </message>
-      <message name="IDS_ACCESSIBILITY_GOOGLE_DOODLE" desc="Content description for the Brave Doodle (the fun, alternative Brave logo) shown on the new tab page.">
-        Brave doodle: <ph name="DOODLE_DESCRIPTION">%1$s<ex>Einstein’s birthday</ex></ph>
+      <message name="IDS_ACCESSIBILITY_GOOGLE_DOODLE" desc="Content description for the Growser Doodle (the fun, alternative Growser logo) shown on the new tab page.">
+        Growser doodle: <ph name="DOODLE_DESCRIPTION">%1$s<ex>Einstein’s birthday</ex></ph>
       </message>
       <message name="IDS_NTP_RECENT_TABS_SYNC_PROMO_TITLE" desc="Header for the promo explaining how users can see the list of tabs open on their other devices">
         Other devices
@@ -5570,7 +5570,7 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
         Attach files from Drive
       </message>
       <message name="IDS_ACCESSIBILITY_OMNIBOX_DRIVE_CONSENT_DIALOG" is_accessibility_with_no_ui="true" desc="Accessibility description for the modal dialog that prompts the user for permission to connect Google Drive when attaching files in the Omnibox.">
-        Consent to connect Brave Workspace to Search services
+        Consent to connect Growser Workspace to Search services
       </message>
 
       <message name="IDS_ACCESSIBILITY_SHARE_SELECTED_ITEMS" desc="Content description for the button to share selected items. [ICU Syntax]">
@@ -8035,14 +8035,14 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       <message name="IDS_GLIC_MIC_PERMISSION_DIALOG_ALLOW" desc="Positive button text to allow microphone permission for Gemini.">
         Allow
       </message>
-      <message name="IDS_GLIC_EXPERIMENTAL_OPT_IN_NOTIFICATION_TITLE" desc="Title of the notification shown when Gemini needs the user's permission to use Brave on this device to complete a task, and Brave is not open. Tapping the notification opens Brave, where the user can give permission.">
-        Gemini needs permission to use Brave
+      <message name="IDS_GLIC_EXPERIMENTAL_OPT_IN_NOTIFICATION_TITLE" desc="Title of the notification shown when Gemini needs the user's permission to use Growser on this device to complete a task, and Growser is not open. Tapping the notification opens Growser, where the user can give permission.">
+        Gemini needs permission to use Growser
       </message>
-      <message name="IDS_GLIC_EXPERIMENTAL_OPT_IN_NOTIFICATION_BODY" desc="Body text of the notification shown when Gemini needs the user's permission to use Brave on this device to complete a task. 'Brave auto browse' is the feature that lets Gemini browse and take actions in Brave for the user.">
-        To work on your tasks, let Gemini use Brave auto browse on this device
+      <message name="IDS_GLIC_EXPERIMENTAL_OPT_IN_NOTIFICATION_BODY" desc="Body text of the notification shown when Gemini needs the user's permission to use Growser on this device to complete a task. 'Growser auto browse' is the feature that lets Gemini browse and take actions in Growser for the user.">
+        To work on your tasks, let Gemini use Growser auto browse on this device
       </message>
-      <message name="IDS_GLIC_EXPERIMENTAL_OPT_IN_NOTIFICATION_ACTION" desc="Action button on the notification shown when Gemini needs the user's permission to use Brave. Tapping it opens Brave, where the user can give permission. [CHAR_LIMIT=20]">
-        Go to Brave
+      <message name="IDS_GLIC_EXPERIMENTAL_OPT_IN_NOTIFICATION_ACTION" desc="Action button on the notification shown when Gemini needs the user's permission to use Growser. Tapping it opens Growser, where the user can give permission. [CHAR_LIMIT=20]">
+        Go to Growser
       </message>
 
       <!-- TTC strings -->

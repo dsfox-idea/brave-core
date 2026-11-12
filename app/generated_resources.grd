@@ -1547,7 +1547,7 @@ are declared in tools/grit/grit_args.gni.
           <message name="IDS_RELAUNCH_TO_UPDATE_ALT_MINOR_TEXT" desc="Minor text for the alternate text label of the relaunch to update Growser menu item">
             Your tabs will reopen
           </message>
-          <message name="IDS_SCHEDULED_RESTART_MENU_ITEM" desc="The text label of the relaunch later menu item in the 3-dot app menu. Selecting it opens a dialog where the user can schedule Brave to relaunch later to apply a pending update. &quot;Relaunch&quot; is an imperative verb.">
+          <message name="IDS_SCHEDULED_RESTART_MENU_ITEM" desc="The text label of the relaunch later menu item in the 3-dot app menu. Selecting it opens a dialog where the user can schedule Growser to relaunch later to apply a pending update. &quot;Relaunch&quot; is an imperative verb.">
             Relaunch later...
           </message>
         </if>
@@ -6563,7 +6563,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Allow <ph name="ACTOR_NAME">$1<ex>Gemini</ex></ph> to sign in to <ph name="DOMAIN">$2<ex>example.com</ex></ph> for you?
       </message>
       <message name="IDS_REMOTE_ACTOR_SHARING_DIALOG_SUBTITLE" desc="Subtitle of the dialog asking the user to share credentials with a remote actor.">
-        <ph name="ACTOR_NAME">$3<ex>Gemini</ex></ph> can use Brave Password Manager to sign in for you. <ph name="BEGIN_LINK">$1</ph>Learn how <ph name="ACTOR_NAME">$3<ex>Gemini</ex></ph> handles your data<ph name="END_LINK">$2</ph>
+        <ph name="ACTOR_NAME">$3<ex>Gemini</ex></ph> can use Growser Password Manager to sign in for you. <ph name="BEGIN_LINK">$1</ph>Learn how <ph name="ACTOR_NAME">$3<ex>Gemini</ex></ph> handles your data<ph name="END_LINK">$2</ph>
       </message>
       <message name="IDS_REMOTE_ACTOR_SHARING_DIALOG_ALLOW_BUTTON" desc="Button label to allow password sharing for the remote actor this time.">
         Allow this time
@@ -7313,8 +7313,8 @@ Keep your key file in a safe place. You will need it to create new versions of y
           </message>
         </else>
       </if>
-      <message name="IDS_ASK_GOOGLE_ABOUT_THIS_PAGE" desc="The name of the Ask Brave about this page command in the app menu.">
-        Ask Brave about this page
+      <message name="IDS_ASK_GOOGLE_ABOUT_THIS_PAGE" desc="The name of the Ask Growser about this page command in the app menu.">
+        Ask Growser about this page
       </message>
 
       <!-- NTP -->
@@ -7848,8 +7848,8 @@ Keep your key file in a safe place. You will need it to create new versions of y
       <message name="IDS_NTP_SHOW_LESS_BUTTON_LABEL" desc="Label for a button that allows the user to see fewer most visited tiles on the New Tab Page.">
         Show less
       </message>
-      <message name="IDS_NTP_THREADS_GOOGLE_SEARCH_LABEL" desc="Label for navigating to Brave Search from the threads rail.">
-        Brave Search
+      <message name="IDS_NTP_THREADS_GOOGLE_SEARCH_LABEL" desc="Label for navigating to Growser Search from the threads rail.">
+        Growser Search
       </message>
       <message name="IDS_NTP_THREADS_HISTORY_LABEL" desc="Label for listing the user's AI Mode threads history.">
         AI Mode history
@@ -9938,23 +9938,23 @@ Keep your key file in a safe place. You will need it to create new versions of y
       </message>
 
       <!-- Contextual Tasks side panel identity -->
-      <message name="IDS_CONTEXTUAL_TASKS_IDENTITY_TOOLTIP_BODY" desc="Body text of the identity tooltip in the Contextual Tasks side panel informing the user which Brave sync chain they are signed in to Search with.">
+      <message name="IDS_CONTEXTUAL_TASKS_IDENTITY_TOOLTIP_BODY" desc="Body text of the identity tooltip in the Contextual Tasks side panel informing the user which Growser sync chain they are signed in to Search with.">
         You're signed in to Search with your <ph name="USER_EMAIL">$1<ex>account@gmail.com</ex></ph> account
       </message>
-      <message name="IDS_CONTEXTUAL_TASKS_IDENTITY_TOOLTIP_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screen reader announcement for the identity tooltip in the Contextual Tasks side panel informing the user which Brave sync chain they are signed in to Search with.">
+      <message name="IDS_CONTEXTUAL_TASKS_IDENTITY_TOOLTIP_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screen reader announcement for the identity tooltip in the Contextual Tasks side panel informing the user which Growser sync chain they are signed in to Search with.">
         You're signed in to Search with your <ph name="USER_EMAIL">$1<ex>account@gmail.com</ex></ph> account
       </message>
-      <message name="IDS_CONTEXTUAL_TASKS_IDENTITY_TOOLTIP_MANAGE_ACCOUNT_BUTTON" desc="Label for the button in the Contextual Tasks side panel identity tooltip that opens the user's Brave sync chain page.">
+      <message name="IDS_CONTEXTUAL_TASKS_IDENTITY_TOOLTIP_MANAGE_ACCOUNT_BUTTON" desc="Label for the button in the Contextual Tasks side panel identity tooltip that opens the user's Growser sync chain page.">
         Manage account
       </message>
       <message name="IDS_CONTEXTUAL_TASKS_IDENTITY_TOOLTIP_CLOSE_BUTTON" desc="Accessible label and tooltip for the close button on the Contextual Tasks side panel identity tooltip.">
         Close
       </message>
       <message name="IDS_CONTEXTUAL_TASKS_ACCOUNT_BUTTON_TOOLTIP" desc="Tooltip and accessible label for the account avatar button in the Contextual Tasks side panel toolbar showing the signed-in user's name and email.">
-        Brave sync chain: <ph name="USER_NAME">$1<ex>Jane Doe</ex></ph> (<ph name="USER_EMAIL">$2<ex>account@gmail.com</ex></ph>)
+        Growser sync chain: <ph name="USER_NAME">$1<ex>Jane Doe</ex></ph> (<ph name="USER_EMAIL">$2<ex>account@gmail.com</ex></ph>)
       </message>
       <message name="IDS_CONTEXTUAL_TASKS_ACCOUNT_BUTTON_EMAIL_ONLY_TOOLTIP" desc="Tooltip and accessible label for the account avatar button in the Contextual Tasks side panel toolbar showing the signed-in user's email.">
-        Brave sync chain: <ph name="USER_EMAIL">$1<ex>account@gmail.com</ex></ph>
+        Growser sync chain: <ph name="USER_EMAIL">$1<ex>account@gmail.com</ex></ph>
       </message>
       <message name="IDS_CONTEXTUAL_TASKS_ACCOUNT_BUTTON_SIGNED_OUT_TOOLTIP" desc="Tooltip and accessible label for the account avatar indicator in the Contextual Tasks side panel toolbar when the user is signed out of Search.">
         Signed out
@@ -11183,7 +11183,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
         Click the Unfocus button to bring your other tabs back
       </message>
 
-      <!-- Customize Brave Tutorial Strings -->
+      <!-- Customize Growser Tutorial Strings -->
       <message name="IDS_TUTORIAL_CUSTOMIZE_CHROME_START_TUTORIAL_IPH" desc="The description of the IPH to start the customize chrome tutorial">
         Customize Growser to give your browser a new look
       </message>
@@ -17875,7 +17875,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
           =1 {There is Private or Isolated window open. It won't reopen.}
           other {There are # Private and Isolated windows open across profiles. They won't reopen.}}
       </message>
-      <message name="IDS_IDLE_TIMEOUT_CLOSE_COUNTDOWN" desc="In the Idle Timeout dialog, a countdown that ticks every second. When it reaches zero, Brave closes all browsers.">
+      <message name="IDS_IDLE_TIMEOUT_CLOSE_COUNTDOWN" desc="In the Idle Timeout dialog, a countdown that ticks every second. When it reaches zero, Growser closes all browsers.">
         {0, plural,
           =0 {Closing now.}
           =1 {Closing in: 1 second}

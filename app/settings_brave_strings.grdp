@@ -333,10 +333,10 @@
     </message>
     <if expr="is_win">
       <message name="IDS_SETTINGS_SYSTEM_ISOLATION_STATE_LABEL" desc="Label for the Enable process isolation toggle.">
-        Isolate Brave from other apps
+        Isolate Growser from other apps
       </message>
       <message name="IDS_SETTINGS_SYSTEM_ISOLATION_STATE_SUBLABEL" desc="Sublabel for the Enable process isolation toggle.">
-        Protects Brave's memory from other applications on your computer.
+        Protects Growser's memory from other applications on your computer.
       </message>
     </if>
   </if>

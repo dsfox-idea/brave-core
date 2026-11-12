@@ -385,23 +385,23 @@
     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS" desc="Label for configuring Google Search AI Mode side panel alignment.">
       Google Search AI Mode
     </message>
-    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_GOOGLE_SEARCH" desc="Label for configuring Brave Search side panel alignment.">
-      Brave Search
+    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_GOOGLE_SEARCH" desc="Label for configuring Growser Search side panel alignment.">
+      Growser Search
     </message>
-    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_SIDE_PANEL" desc="Label for configuring Brave Search side panel alignment.">
-      Brave Search side panel
+    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_SIDE_PANEL" desc="Label for configuring Growser Search side panel alignment.">
+      Growser Search side panel
     </message>
-    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_IN_SIDE_PANEL" desc="Label for configuring Brave Search side panel alignment.">
-      Brave Search in side panel
+    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_IN_SIDE_PANEL" desc="Label for configuring Growser Search side panel alignment.">
+      Growser Search in side panel
     </message>
-    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_IN_CHROME" desc="Label for configuring Brave Search side panel alignment.">
-      Brave Search in Brave
+    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_IN_CHROME" desc="Label for configuring Growser Search side panel alignment.">
+      Growser Search in Growser
     </message>
-    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_PANEL" desc="Label for configuring Brave Search side panel alignment.">
-      Brave Search panel
+    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_PANEL" desc="Label for configuring Growser Search side panel alignment.">
+      Growser Search panel
     </message>
-    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CHROME_PANELS" desc="Label for the default Brave Panels alignment setting.">
-      Brave Panels
+    <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CHROME_PANELS" desc="Label for the default Growser Panels alignment setting.">
+      Growser Panels
     </message>
     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_A11Y_LABEL" is_accessibility_with_no_ui="true" desc="Accessible label for side panel alignment dropdown menus, combining the side panel item name and the side panel position category name for screen readers.">
       <ph name="ITEM_NAME">$1<ex>Google Search AI Mode</ex></ph> <ph name="CATEGORY_NAME">$2<ex>Side panel position</ex></ph>
@@ -3852,8 +3852,8 @@
       <message name="IDS_SETTINGS_SYSTEM_HARDWARE_ACCELERATION_LABEL" desc="Label for the checkbox that forces Growser to render via graphics acceleration (GPU) when available.">
         Use graphics acceleration when available
       </message>
-      <message name="IDS_SETTINGS_SYSTEM_FEATURE_NOTIFICATIONS_LABEL" desc="Label for the toggle that enables Brave system notifications about features.">
-        Show system notifications about Brave features and tips
+      <message name="IDS_SETTINGS_SYSTEM_FEATURE_NOTIFICATIONS_LABEL" desc="Label for the toggle that enables Growser system notifications about features.">
+        Show system notifications about Growser features and tips
       </message>
       <message name="IDS_SETTINGS_SYSTEM_PROXY_SETTINGS_LABEL" desc="Label for the control that opens the system network proxy settings. These settings apply to the entire computer.">
         Open your computer's proxy settings
@@ -4211,7 +4211,7 @@
         Restart your device to finish updating
       </message>
     </if>
-    <message name="IDS_SETTINGS_SAFETY_HUB_REVOKED_PERMISSIONS_MENU_NOTIFICATION" desc="The revoked permissions module of Safety Hub revokes permissions of sites that the user hasn't visited in a while or that send abusive notifications. This label is for the notification in Brave's three-dot menu indicating for how many sites the permission was revoked.">
+    <message name="IDS_SETTINGS_SAFETY_HUB_REVOKED_PERMISSIONS_MENU_NOTIFICATION" desc="The revoked permissions module of Safety Hub revokes permissions of sites that the user hasn't visited in a while or that send abusive notifications. This label is for the notification in Growser's three-dot menu indicating for how many sites the permission was revoked.">
       {NUM_SITES, plural,
         =1 {Removed permissions for 1 site}
         other {Removed permissions for {NUM_SITES} sites}}

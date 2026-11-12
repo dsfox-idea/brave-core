@@ -172,13 +172,13 @@
   <message name="IDS_SETTINGS_TAG_PRIVACY_ALT3" meaning="Settings search keyword for 'Privacy and security'" desc="Search keyword for the Privacy and security settings page (cookies, tracking protection, site permissions, and browsing safety). Alternate keyword for: 'Privacy and security'" translateable="false">
     track
   </message>
-  <message name="IDS_SETTINGS_TAG_PRIVACY_GUIDE_ALT1" meaning="Settings search keyword for 'Privacy Guide'" desc="Search keyword for the step-by-step guided tour of key Brave privacy and security controls. Alternate keyword for: 'Privacy Guide'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PRIVACY_GUIDE_ALT1" meaning="Settings search keyword for 'Privacy Guide'" desc="Search keyword for the step-by-step guided tour of key Growser privacy and security controls. Alternate keyword for: 'Privacy Guide'" translateable="false">
     wizard
   </message>
-  <message name="IDS_SETTINGS_TAG_PRIVACY_GUIDE_ALT2" meaning="Settings search keyword for 'Privacy Guide'" desc="Search keyword for the step-by-step guided tour of key Brave privacy and security controls. Alternate keyword for: 'Privacy Guide'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PRIVACY_GUIDE_ALT2" meaning="Settings search keyword for 'Privacy Guide'" desc="Search keyword for the step-by-step guided tour of key Growser privacy and security controls. Alternate keyword for: 'Privacy Guide'" translateable="false">
     tour
   </message>
-  <message name="IDS_SETTINGS_TAG_PRIVACY_GUIDE_ALT3" meaning="Settings search keyword for 'Privacy Guide'" desc="Search keyword for the step-by-step guided tour of key Brave privacy and security controls. Alternate keyword for: 'Privacy Guide'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PRIVACY_GUIDE_ALT3" meaning="Settings search keyword for 'Privacy Guide'" desc="Search keyword for the step-by-step guided tour of key Growser privacy and security controls. Alternate keyword for: 'Privacy Guide'" translateable="false">
     checkup
   </message>
   <message name="IDS_SETTINGS_TAG_THIRD_PARTY_COOKIES_ALT1" meaning="Settings search keyword for 'Third-party cookies'" desc="Search keyword for the setting that controls how websites use third-party cookies to track browsing across sites. Alternate keyword for: 'Third-party cookies'" translateable="false">
@@ -210,13 +210,13 @@
   <message name="IDS_SETTINGS_TAG_SAFETY_HUB_PAGE_CARD_SECTION_HEADER_ALT3" meaning="Settings search keyword for 'Safety at a glance'" desc="Search keyword for the Safety Check overview section showing proactive safety alerts, compromised password warnings, and security status. Alternate keyword for: 'Safety at a glance'" translateable="false">
     status
   </message>
-  <message name="IDS_SETTINGS_TAG_SAFETY_HUB_ALT1" meaning="Settings search keyword for 'Safety Check'" desc="Search keyword for the Safety Check page that checks for compromised passwords, dangerous extensions, unused site permissions, and Brave updates. Alternate keyword for: 'Safety Check'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SAFETY_HUB_ALT1" meaning="Settings search keyword for 'Safety Check'" desc="Search keyword for the Safety Check page that checks for compromised passwords, dangerous extensions, unused site permissions, and Growser updates. Alternate keyword for: 'Safety Check'" translateable="false">
     passwords
   </message>
-  <message name="IDS_SETTINGS_TAG_SAFETY_HUB_ALT2" meaning="Settings search keyword for 'Safety Check'" desc="Search keyword for the Safety Check page that checks for compromised passwords, dangerous extensions, unused site permissions, and Brave updates. Alternate keyword for: 'Safety Check'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SAFETY_HUB_ALT2" meaning="Settings search keyword for 'Safety Check'" desc="Search keyword for the Safety Check page that checks for compromised passwords, dangerous extensions, unused site permissions, and Growser updates. Alternate keyword for: 'Safety Check'" translateable="false">
     permissions
   </message>
-  <message name="IDS_SETTINGS_TAG_SAFETY_HUB_ALT3" meaning="Settings search keyword for 'Safety Check'" desc="Search keyword for the Safety Check page that checks for compromised passwords, dangerous extensions, unused site permissions, and Brave updates. Alternate keyword for: 'Safety Check'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SAFETY_HUB_ALT3" meaning="Settings search keyword for 'Safety Check'" desc="Search keyword for the Safety Check page that checks for compromised passwords, dangerous extensions, unused site permissions, and Growser updates. Alternate keyword for: 'Safety Check'" translateable="false">
     recommendations
   </message>
 
@@ -329,13 +329,13 @@
   <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_AUTOMATIC_DOWNLOADS_ALT3" meaning="Settings search keyword for 'Automatic downloads'" desc="Search keyword for the site setting that controls whether websites can automatically download multiple files in sequence. Alternate keyword for: 'Automatic downloads'" translateable="false">
     multiple
   </message>
-  <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_PDF_DOCUMENTS_ALT1" meaning="Settings search keyword for 'PDF documents'" desc="Search keyword for the site setting that chooses whether Brave opens PDF files directly in a tab or downloads them. Alternate keyword for: 'PDF documents'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_PDF_DOCUMENTS_ALT1" meaning="Settings search keyword for 'PDF documents'" desc="Search keyword for the site setting that chooses whether Growser opens PDF files directly in a tab or downloads them. Alternate keyword for: 'PDF documents'" translateable="false">
     acrobat
   </message>
-  <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_PDF_DOCUMENTS_ALT2" meaning="Settings search keyword for 'PDF documents'" desc="Search keyword for the site setting that chooses whether Brave opens PDF files directly in a tab or downloads them. Alternate keyword for: 'PDF documents'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_PDF_DOCUMENTS_ALT2" meaning="Settings search keyword for 'PDF documents'" desc="Search keyword for the site setting that chooses whether Growser opens PDF files directly in a tab or downloads them. Alternate keyword for: 'PDF documents'" translateable="false">
     reader
   </message>
-  <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_PDF_DOCUMENTS_ALT3" meaning="Settings search keyword for 'PDF documents'" desc="Search keyword for the site setting that chooses whether Brave opens PDF files directly in a tab or downloads them. Alternate keyword for: 'PDF documents'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_PDF_DOCUMENTS_ALT3" meaning="Settings search keyword for 'PDF documents'" desc="Search keyword for the site setting that chooses whether Growser opens PDF files directly in a tab or downloads them. Alternate keyword for: 'PDF documents'" translateable="false">
     viewer
   </message>
   <message name="IDS_SETTINGS_TAG_SITE_SETTINGS_CLIPBOARD_ALT1" meaning="Settings search keyword for 'Clipboard'" desc="Search keyword for the site setting that controls whether websites can ask to read text and images saved to your system clipboard. Alternate keyword for: 'Clipboard'" translateable="false">
@@ -367,67 +367,67 @@
   </message>
 
   <!-- People section. -->
-  <message name="IDS_SETTINGS_TAG_HOME_ALT1" meaning="Settings search keyword for 'Home'" desc="Search keyword for the central Settings Home page for managing Brave sync chain, Brave profile, quick actions, data import, and default browser. Alternate keyword for: 'Home'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_HOME_ALT1" meaning="Settings search keyword for 'Home'" desc="Search keyword for the central Settings Home page for managing Growser sync chain, Growser profile, quick actions, data import, and default browser. Alternate keyword for: 'Home'" translateable="false">
     you
   </message>
-  <message name="IDS_SETTINGS_TAG_HOME_ALT2" meaning="Settings search keyword for 'Home'" desc="Search keyword for the central Settings Home page for managing Brave sync chain, Brave profile, quick actions, data import, and default browser. Alternate keyword for: 'Home'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_HOME_ALT2" meaning="Settings search keyword for 'Home'" desc="Search keyword for the central Settings Home page for managing Growser sync chain, Growser profile, quick actions, data import, and default browser. Alternate keyword for: 'Home'" translateable="false">
     google
   </message>
-  <message name="IDS_SETTINGS_TAG_HOME_ALT3" meaning="Settings search keyword for 'Home'" desc="Search keyword for the central Settings Home page for managing Brave sync chain, Brave profile, quick actions, data import, and default browser. Alternate keyword for: 'Home'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_HOME_ALT3" meaning="Settings search keyword for 'Home'" desc="Search keyword for the central Settings Home page for managing Growser sync chain, Growser profile, quick actions, data import, and default browser. Alternate keyword for: 'Home'" translateable="false">
     people
   </message>
-  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT1" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Brave sync chain, Brave profile, and sync preferences. Alternate keyword for: 'You and Brave'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT1" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Growser'" translateable="false">
     home
   </message>
-  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT2" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Brave sync chain, Brave profile, and sync preferences. Alternate keyword for: 'You and Brave'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT2" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Growser'" translateable="false">
     people
   </message>
-  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT3" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Brave sync chain, Brave profile, and sync preferences. Alternate keyword for: 'You and Brave'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT3" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Growser'" translateable="false">
     services
   </message>
-  <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT1" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Brave sync chain data, sync settings, and encryption passphrase work in Brave. Alternate keyword for: 'Your account in Brave'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT1" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Growser sync chain data, sync settings, and encryption passphrase work in Growser. Alternate keyword for: 'Your account in Growser'" translateable="false">
     sync
   </message>
-  <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT2" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Brave sync chain data, sync settings, and encryption passphrase work in Brave. Alternate keyword for: 'Your account in Brave'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT2" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Growser sync chain data, sync settings, and encryption passphrase work in Growser. Alternate keyword for: 'Your account in Growser'" translateable="false">
     services
   </message>
-  <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT3" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Brave sync chain data, sync settings, and encryption passphrase work in Brave. Alternate keyword for: 'Your account in Brave'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT3" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Growser sync chain data, sync settings, and encryption passphrase work in Growser. Alternate keyword for: 'Your account in Growser'" translateable="false">
     people
   </message>
-  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT1" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Brave service integrations. Alternate keyword for: 'Sync and Brave services'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT1" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Growser service integrations. Alternate keyword for: 'Sync and Growser services'" translateable="false">
     data
   </message>
-  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT2" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Brave service integrations. Alternate keyword for: 'Sync and Brave services'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT2" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Growser service integrations. Alternate keyword for: 'Sync and Growser services'" translateable="false">
     encryption
   </message>
-  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT3" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Brave service integrations. Alternate keyword for: 'Sync and Brave services'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT3" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Growser service integrations. Alternate keyword for: 'Sync and Growser services'" translateable="false">
     manage
   </message>
-  <message name="IDS_SETTINGS_TAG_MANAGE_GOOGLE_ACCOUNT_ALT1" meaning="Settings search keyword for 'Manage Your Google Account'" desc="Search keyword for the link row that opens the Brave sync chain dashboard for security, privacy, and personal info. Alternate keyword for: 'Manage Your Brave sync chain'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_MANAGE_GOOGLE_ACCOUNT_ALT1" meaning="Settings search keyword for 'Manage Your Google Account'" desc="Search keyword for the link row that opens the Growser sync chain dashboard for security, privacy, and personal info. Alternate keyword for: 'Manage Your Growser sync chain'" translateable="false">
     security
   </message>
-  <message name="IDS_SETTINGS_TAG_MANAGE_GOOGLE_ACCOUNT_ALT2" meaning="Settings search keyword for 'Manage Your Google Account'" desc="Search keyword for the link row that opens the Brave sync chain dashboard for security, privacy, and personal info. Alternate keyword for: 'Manage Your Brave sync chain'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_MANAGE_GOOGLE_ACCOUNT_ALT2" meaning="Settings search keyword for 'Manage Your Google Account'" desc="Search keyword for the link row that opens the Growser sync chain dashboard for security, privacy, and personal info. Alternate keyword for: 'Manage Your Growser sync chain'" translateable="false">
     privacy
   </message>
-  <message name="IDS_SETTINGS_TAG_MANAGE_GOOGLE_ACCOUNT_ALT3" meaning="Settings search keyword for 'Manage Your Google Account'" desc="Search keyword for the link row that opens the Brave sync chain dashboard for security, privacy, and personal info. Alternate keyword for: 'Manage Your Brave sync chain'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_MANAGE_GOOGLE_ACCOUNT_ALT3" meaning="Settings search keyword for 'Manage Your Google Account'" desc="Search keyword for the link row that opens the Growser sync chain dashboard for security, privacy, and personal info. Alternate keyword for: 'Manage Your Growser sync chain'" translateable="false">
     personal info
   </message>
-  <message name="IDS_SETTINGS_TAG_CUSTOMIZE_PROFILE_ALT1" meaning="Settings search keyword for 'Customize your Chrome profile'" desc="Search keyword for the subpage to personalize your profile name, theme color, and avatar image. Alternate keyword for: 'Customize your Brave profile'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_CUSTOMIZE_PROFILE_ALT1" meaning="Settings search keyword for 'Customize your Chrome profile'" desc="Search keyword for the subpage to personalize your profile name, theme color, and avatar image. Alternate keyword for: 'Customize your Growser profile'" translateable="false">
     theme
   </message>
-  <message name="IDS_SETTINGS_TAG_CUSTOMIZE_PROFILE_ALT2" meaning="Settings search keyword for 'Customize your Chrome profile'" desc="Search keyword for the subpage to personalize your profile name, theme color, and avatar image. Alternate keyword for: 'Customize your Brave profile'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_CUSTOMIZE_PROFILE_ALT2" meaning="Settings search keyword for 'Customize your Chrome profile'" desc="Search keyword for the subpage to personalize your profile name, theme color, and avatar image. Alternate keyword for: 'Customize your Growser profile'" translateable="false">
     color
   </message>
-  <message name="IDS_SETTINGS_TAG_CUSTOMIZE_PROFILE_ALT3" meaning="Settings search keyword for 'Customize your Chrome profile'" desc="Search keyword for the subpage to personalize your profile name, theme color, and avatar image. Alternate keyword for: 'Customize your Brave profile'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_CUSTOMIZE_PROFILE_ALT3" meaning="Settings search keyword for 'Customize your Chrome profile'" desc="Search keyword for the subpage to personalize your profile name, theme color, and avatar image. Alternate keyword for: 'Customize your Growser profile'" translateable="false">
     avatar
   </message>
-  <message name="IDS_SETTINGS_TAG_SIGN_OUT_ALT1" meaning="Settings search keyword for 'Sign out'" desc="Search keyword for the action to sign out of your Brave sync chain and stop sync on this profile. Alternate keyword for: 'Sign out'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SIGN_OUT_ALT1" meaning="Settings search keyword for 'Sign out'" desc="Search keyword for the action to sign out of your Growser sync chain and stop sync on this profile. Alternate keyword for: 'Sign out'" translateable="false">
     logout
   </message>
-  <message name="IDS_SETTINGS_TAG_SIGN_OUT_ALT2" meaning="Settings search keyword for 'Sign out'" desc="Search keyword for the action to sign out of your Brave sync chain and stop sync on this profile. Alternate keyword for: 'Sign out'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SIGN_OUT_ALT2" meaning="Settings search keyword for 'Sign out'" desc="Search keyword for the action to sign out of your Growser sync chain and stop sync on this profile. Alternate keyword for: 'Sign out'" translateable="false">
     quit
   </message>
-  <message name="IDS_SETTINGS_TAG_SIGN_OUT_ALT3" meaning="Settings search keyword for 'Sign out'" desc="Search keyword for the action to sign out of your Brave sync chain and stop sync on this profile. Alternate keyword for: 'Sign out'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SIGN_OUT_ALT3" meaning="Settings search keyword for 'Sign out'" desc="Search keyword for the action to sign out of your Growser sync chain and stop sync on this profile. Alternate keyword for: 'Sign out'" translateable="false">
     exit
   </message>
   <message name="IDS_SETTINGS_TAG_IMPORT_DATA_ALT1" meaning="Settings search keyword for 'Import bookmarks and settings'" desc="Search keyword for the dialog to import bookmarks, saved passwords, and browsing history from other browsers. Alternate keyword for: 'Import bookmarks and settings'" translateable="false">
@@ -441,22 +441,22 @@
   </message>
 
   <!-- Autofill and passwords section. -->
-  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT1" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Brave Password Manager'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT1" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Growser Password Manager'" translateable="false">
     credentials
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT2" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Brave Password Manager'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT2" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Growser Password Manager'" translateable="false">
     sign-in
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT3" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Brave Password Manager'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT3" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Growser Password Manager'" translateable="false">
     passkey
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT1" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Brave Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT1" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Growser Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
     credentials
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT2" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Brave Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT2" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Growser Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
     passkey
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT3" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Brave Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT3" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Growser Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
     sign-in
   </message>
   <message name="IDS_SETTINGS_TAG_PASSKEYS_ALT1" meaning="Settings search keyword for 'Passkeys'" desc="Search keyword for the setting to manage cryptographic passkeys saved on this device for passwordless sign-in. Alternate keyword for: 'Passkeys'" translateable="false">
@@ -618,13 +618,13 @@
   <message name="IDS_SETTINGS_TAG_SHOPPING_ALT3" meaning="Settings search keyword for 'Shopping'" desc="Search keyword for the subpage to manage shopping autofill preferences, price tracking, discounts, and order details. Alternate keyword for: 'Shopping'" translateable="false">
     coupons
   </message>
-  <message name="IDS_SETTINGS_TAG_SUGGESTIONS_FROM_GEMINI_ALT1" meaning="Settings search keyword for 'Suggestions from Gemini'" desc="Search keyword for the setting that controls AI-powered form filling and autofill predictions provided by Gemini in Brave. Alternate keyword for: 'Suggestions from Gemini'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SUGGESTIONS_FROM_GEMINI_ALT1" meaning="Settings search keyword for 'Suggestions from Gemini'" desc="Search keyword for the setting that controls AI-powered form filling and autofill predictions provided by Gemini in Growser. Alternate keyword for: 'Suggestions from Gemini'" translateable="false">
     ai
   </message>
-  <message name="IDS_SETTINGS_TAG_SUGGESTIONS_FROM_GEMINI_ALT2" meaning="Settings search keyword for 'Suggestions from Gemini'" desc="Search keyword for the setting that controls AI-powered form filling and autofill predictions provided by Gemini in Brave. Alternate keyword for: 'Suggestions from Gemini'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SUGGESTIONS_FROM_GEMINI_ALT2" meaning="Settings search keyword for 'Suggestions from Gemini'" desc="Search keyword for the setting that controls AI-powered form filling and autofill predictions provided by Gemini in Growser. Alternate keyword for: 'Suggestions from Gemini'" translateable="false">
     autofill
   </message>
-  <message name="IDS_SETTINGS_TAG_SUGGESTIONS_FROM_GEMINI_ALT3" meaning="Settings search keyword for 'Suggestions from Gemini'" desc="Search keyword for the setting that controls AI-powered form filling and autofill predictions provided by Gemini in Brave. Alternate keyword for: 'Suggestions from Gemini'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SUGGESTIONS_FROM_GEMINI_ALT3" meaning="Settings search keyword for 'Suggestions from Gemini'" desc="Search keyword for the setting that controls AI-powered form filling and autofill predictions provided by Gemini in Growser. Alternate keyword for: 'Suggestions from Gemini'" translateable="false">
     smart
   </message>
   <message name="IDS_SETTINGS_TAG_GOOGLE_WALLET_ALT1" meaning="Settings search keyword for 'Google Wallet'" desc="Search keyword for the link row to open Google Wallet to manage payment methods, loyalty cards, passes, and tickets. Alternate keyword for: 'Google Wallet'" translateable="false">
