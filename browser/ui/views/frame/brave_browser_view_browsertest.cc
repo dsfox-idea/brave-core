@@ -508,6 +508,13 @@ class BraveBrowserViewWithRoundedCornersTest
     BraveBrowserViewTest::SetUpOnMainThread();
     browser()->GetProfile()->GetPrefs()->SetBoolean(kWebViewRoundedCorners,
                                                     IsRoundedCornersEnabled());
+    // Growser-404: as Growser-400 does for the vertical-tab layouts - these
+    // expect the contents flush with the window's left edge, which holds for
+    // upstream's sidebar on the right. Growser starts it on the left
+    // (brave_profile_prefs.cc), and its 36 px strip moves the contents off
+    // that edge. Tests that are about the alignment set it themselves.
+    browser()->GetProfile()->GetPrefs()->SetBoolean(
+        prefs::kSidePanelHorizontalAlignment, true);
   }
 
   BrowserFrameView* browser_non_client_frame_view() {
