@@ -60,7 +60,7 @@
   <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GAA_ONLY" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored in Gemini History. 'Gemini History' is the name of a Gemini setting, formerly called 'Gemini Apps Activity'.">
     Your Growser sync chain may have your <ph name="BEGIN_LINK_GAA">&lt;a target="_blank" id="footerGeminiAppsActivityLink" href="$1"&gt;</ph>Gemini History<ph name="END_LINK_GAA">&lt;/a&gt;</ph>
   </message>
-  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_AND_GAA" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Growser My Activity and in Gemini History. 'Gemini History' is the name of a Gemini setting, formerly called 'Gemini Apps Activity'.">
+  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_AND_GAA" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Google My Activity and in Gemini History. 'Gemini History' is the name of a Gemini setting, formerly called 'Gemini Apps Activity'.">
     Your Growser sync chain may have other forms of browsing history at <ph name="BEGIN_LINK_GMA">&lt;a target="_blank" id="footerBraveMyActivityLink" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK_GMA">&lt;/a&gt;</ph>, such as your <ph name="BEGIN_LINK_GAA">&lt;a target="_blank" id="footerGeminiAppsActivityLink" href="$2"&gt;</ph>Gemini History<ph name="END_LINK_GAA">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_HISTORY_LOADING" desc="Text shown when we're loading the user's history">
@@ -349,7 +349,7 @@
   <message name="IDS_HISTORY_GO_TO_GEMINI_CHAT_ERROR" desc="Toast notification shown when opening Gemini chat fails.">
     Couldn't open Gemini chat
   </message>
-  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_AND_GAA_CRITICAL_ACTIONS" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Growser My Activity and in Gemini History, shown when critical actions are enabled. 'Gemini History' is the name of a Gemini setting, formerly called 'Gemini Apps Activity'.">
+  <message name="IDS_HISTORY_OTHER_FORMS_OF_HISTORY_GMA_AND_GAA_CRITICAL_ACTIONS" desc="The notification at the bottom of the history page indicating that deleting Growser browsing history will not delete other forms of history stored at Google My Activity and in Gemini History, shown when critical actions are enabled. 'Gemini History' is the name of a Gemini setting, formerly called 'Gemini Apps Activity'.">
     Your Growser sync chain may have other forms of browsing history at <ph name="BEGIN_LINK_GMA">&lt;a target="_blank" id="footerBraveMyActivityLink" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK_GMA">&lt;/a&gt;</ph>, such as auto browse visits in your <ph name="BEGIN_LINK_GAA">&lt;a target="_blank" id="footerGeminiAppsActivityLink" href="$2"&gt;</ph>Gemini History<ph name="END_LINK_GAA">&lt;/a&gt;</ph>
   </message>
   <message name="IDS_HISTORY_GEMINI_KEY_BROWSING_ACTIONS_TITLE" desc="Tooltip text for the expand button on history items for Gemini actor visits.">
@@ -359,10 +359,10 @@
     <ph name="DESTINATION">$1<ex>Go to contact info</ex></ph>, opens in a new tab
   </message>
   <message name="IDS_HISTORY_CRITICAL_ACTION_PASSWORD_FILLED" desc="Label for password filled critical action in history item.">
-    Signed in using a Growser service like Password Manager
+    Signed in using a Google service like Password Manager
   </message>
   <message name="IDS_HISTORY_CRITICAL_ACTION_PASSWORD_TOOLTIP" desc="Tooltip for password filled critical action in history item.">
-    Go to Growser Password Manager
+    Go to Google Password Manager
   </message>
   <message name="IDS_HISTORY_CRITICAL_ACTION_FORM_FILLED" desc="Label for form filled critical action in history item.">
     Contact info filled

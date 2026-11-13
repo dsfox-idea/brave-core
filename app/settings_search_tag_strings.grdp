@@ -376,13 +376,13 @@
   <message name="IDS_SETTINGS_TAG_HOME_ALT3" meaning="Settings search keyword for 'Home'" desc="Search keyword for the central Settings Home page for managing Growser sync chain, Growser profile, quick actions, data import, and default browser. Alternate keyword for: 'Home'" translateable="false">
     people
   </message>
-  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT1" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Growser'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT1" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Google'" translateable="false">
     home
   </message>
-  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT2" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Growser'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT2" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Google'" translateable="false">
     people
   </message>
-  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT3" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Growser'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PEOPLE_ALT3" meaning="Settings search keyword for 'You and Google'" desc="Search keyword for the settings page to manage your signed-in Growser sync chain, Growser profile, and sync preferences. Alternate keyword for: 'You and Google'" translateable="false">
     services
   </message>
   <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT1" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Growser sync chain data, sync settings, and encryption passphrase work in Growser. Alternate keyword for: 'Your account in Growser'" translateable="false">
@@ -394,13 +394,13 @@
   <message name="IDS_SETTINGS_TAG_YOUR_ACCOUNT_ALT3" meaning="Settings search keyword for 'Your account in Chrome'" desc="Search keyword for the subpage to manage how your Growser sync chain data, sync settings, and encryption passphrase work in Growser. Alternate keyword for: 'Your account in Growser'" translateable="false">
     people
   </message>
-  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT1" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Growser service integrations. Alternate keyword for: 'Sync and Growser services'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT1" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Google service integrations. Alternate keyword for: 'Sync and Google services'" translateable="false">
     data
   </message>
-  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT2" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Growser service integrations. Alternate keyword for: 'Sync and Growser services'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT2" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Google service integrations. Alternate keyword for: 'Sync and Google services'" translateable="false">
     encryption
   </message>
-  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT3" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Growser service integrations. Alternate keyword for: 'Sync and Growser services'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_SYNC_AND_GOOGLE_SERVICES_ALT3" meaning="Settings search keyword for 'Sync and Google services'" desc="Search keyword for the subpage that controls what browsing data syncs across signed-in devices and configures Google service integrations. Alternate keyword for: 'Sync and Google services'" translateable="false">
     manage
   </message>
   <message name="IDS_SETTINGS_TAG_MANAGE_GOOGLE_ACCOUNT_ALT1" meaning="Settings search keyword for 'Manage Your Google Account'" desc="Search keyword for the link row that opens the Growser sync chain dashboard for security, privacy, and personal info. Alternate keyword for: 'Manage Your Growser sync chain'" translateable="false">
@@ -441,22 +441,22 @@
   </message>
 
   <!-- Autofill and passwords section. -->
-  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT1" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Growser Password Manager'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT1" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Google Password Manager'" translateable="false">
     credentials
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT2" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Growser Password Manager'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT2" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Google Password Manager'" translateable="false">
     sign-in
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT3" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Growser Password Manager'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORD_MANAGER_ALT3" meaning="Settings search keyword for 'Google Password Manager'" desc="Search keyword for the setting to manage and autofill saved passwords, passkeys, and sign-in credentials. Alternate keyword for: 'Google Password Manager'" translateable="false">
     passkey
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT1" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Growser Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT1" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Google Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
     credentials
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT2" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Growser Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT2" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Google Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
     passkey
   </message>
-  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT3" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Growser Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
+  <message name="IDS_SETTINGS_TAG_PASSWORDS_ALT3" meaning="Settings search keyword for 'Passwords'" desc="Search keyword for the setting to manage saved website usernames and passwords stored in Google Password Manager. Alternate keyword for: 'Passwords'" translateable="false">
     sign-in
   </message>
   <message name="IDS_SETTINGS_TAG_PASSKEYS_ALT1" meaning="Settings search keyword for 'Passkeys'" desc="Search keyword for the setting to manage cryptographic passkeys saved on this device for passwordless sign-in. Alternate keyword for: 'Passkeys'" translateable="false">

@@ -4012,8 +4012,8 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
       <message name="IDS_ACCESSIBILITY_AI_MODE_MVT_TILE" desc="Accessibility description for the AI Mode shortcut tile in the Most Visited Tiles section in the New Tab Page.">
         AI Mode shortcut
       </message>
-      <message name="IDS_ACCESSIBILITY_GOOGLE_DOODLE" desc="Content description for the Growser Doodle (the fun, alternative Growser logo) shown on the new tab page.">
-        Growser doodle: <ph name="DOODLE_DESCRIPTION">%1$s<ex>Einstein’s birthday</ex></ph>
+      <message name="IDS_ACCESSIBILITY_GOOGLE_DOODLE" desc="Content description for the Google Doodle (the fun, alternative Google logo) shown on the new tab page.">
+        Google doodle: <ph name="DOODLE_DESCRIPTION">%1$s<ex>Einstein’s birthday</ex></ph>
       </message>
       <message name="IDS_NTP_RECENT_TABS_SYNC_PROMO_TITLE" desc="Header for the promo explaining how users can see the list of tabs open on their other devices">
         Other devices
@@ -5570,7 +5570,7 @@ To change this setting, <ph name="BEGIN_LINK">BEGIN_LINK</ph>delete the Growser 
         Attach files from Drive
       </message>
       <message name="IDS_ACCESSIBILITY_OMNIBOX_DRIVE_CONSENT_DIALOG" is_accessibility_with_no_ui="true" desc="Accessibility description for the modal dialog that prompts the user for permission to connect Google Drive when attaching files in the Omnibox.">
-        Consent to connect Growser Workspace to Search services
+        Consent to connect Google Workspace to Search services
       </message>
 
       <message name="IDS_ACCESSIBILITY_SHARE_SELECTED_ITEMS" desc="Content description for the button to share selected items. [ICU Syntax]">
