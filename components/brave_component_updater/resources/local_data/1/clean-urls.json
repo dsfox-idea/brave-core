@@ -536,6 +536,7 @@
             "*://*.x.com/i/redirect?*"
         ],
         "params": [
+            "a",
             "cxt",
             "ref_src",
             "ref_url",
@@ -680,6 +681,8 @@
     },
     {
         "include": [
+			"*://*.youtube.com/shorts/*",
+        	"*://*.youtube.com/live/*",
             "*://youtu.be/*",
             "*://*.youtube.com/watch?*"
         ],
