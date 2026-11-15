@@ -221,6 +221,8 @@
         <ignore regexp="The resource `R.drawable.ic_ftm_color` appears to be unused" />
         <ignore regexp="The resource `R.drawable.ic_guardian` appears to be unused" />
         <ignore regexp="The resource `R.drawable.ic_idea` appears to be unused" />
+        <!-- Growser-404: Chromium 158 dropped the settings row that used it; the wallet was its other user. -->
+        <ignore regexp="The resource `R.drawable.ic_key` appears to be unused" />
         <ignore regexp="The resource `R.drawable.ic_mask` appears to be unused" />
         <ignore regexp="The resource `R.drawable.ic_matic_color` appears to be unused" />
         <ignore regexp="The resource `R.drawable.ic_menu` appears to be unused" />
