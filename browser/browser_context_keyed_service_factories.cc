@@ -69,6 +69,7 @@
 #endif
 
 #if !BUILDFLAG(IS_ANDROID)
+#include "brave/browser/aistream/aistream_service_factory.h"  // Growser-422
 #include "brave/browser/ui/commands/accelerator_service_factory.h"
 #include "brave/browser/ui/tabs/shared_pinned_tab_service_factory.h"
 #include "brave/browser/workspaces/workspace_service_factory.h"
@@ -278,6 +279,7 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
 
 #if !BUILDFLAG(IS_ANDROID)
   growser::WarmNewTabPageManagerFactory::GetInstance();
+  aistream::AistreamServiceFactory::GetInstance();  // Growser-422
   WorkspaceServiceFactory::GetInstance();
 #endif
 }

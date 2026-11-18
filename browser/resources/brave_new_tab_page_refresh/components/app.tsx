@@ -11,6 +11,7 @@ import { TopSites } from './top_sites/top_sites'
 import { Clock } from './common/clock'
 import { useSearchLayoutReady } from './app_layout_ready'
 import { useBackgroundState } from '../context/background_context' // Growser-392
+import { AistreamWidgets } from './aistream/aistream_widgets' // Growser-422
 
 import { style } from './app.style'
 
@@ -56,6 +57,7 @@ export function App() {
         <div className='clock allow-background-pointer-events'>
           <Clock />
         </div>
+        <AistreamWidgets /> {/* Growser-422 */}
       </main>
     </div>
   )

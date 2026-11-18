@@ -11,6 +11,7 @@
 #include "base/check.h"
 #include "base/feature_list.h"
 #include "base/strings/strcat.h"
+#include "brave/browser/aistream/aistream_frame_source.h"  // Growser-422
 #include "brave/browser/new_tab/new_tab_shows_options.h"
 #include "brave/browser/ntp_background/brave_ntp_custom_background_service_factory.h"
 #include "brave/browser/resources/brave_new_tab_page_refresh/grit/brave_new_tab_page_refresh_generated_map.h"
@@ -173,7 +174,8 @@ void NewTabPageInitializer::AddCSPOverrides() {
 
   source_->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameSrc,
-      base::StrCat({"frame-src ", kNTPDynamicNewTabTakeoverUrl, ";"}));
+      base::StrCat({"frame-src ", kNTPDynamicNewTabTakeoverUrl, " ",
+                    aistream::kFrameUrl, ";"}));  // Growser-422
 
   // Brave News uses a dedicated Trusted Types policy to parse imported OPML
   // subscription files (see brave_news .../customize/opml.ts). Append it to the
@@ -317,6 +319,9 @@ void NewTabPageInitializer::AddTileIconDataSource() {
   auto* profile = GetProfile();
   content::URLDataSource::Add(profile,
                               std::make_unique<TileIconSource>(profile));
+  // Growser-422: the frame the agent's widgets are drawn in.
+  content::URLDataSource::Add(
+      profile, std::make_unique<aistream::AistreamFrameSource>());
 }
 
 void NewTabPageInitializer::AddCustomImageDataSource() {

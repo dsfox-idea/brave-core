@@ -8,6 +8,7 @@
 
 #include <memory>
 
+#include "brave/browser/aistream/aistream.mojom.h"  // Growser-422
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page.mojom.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_news/common/buildflags/buildflags.h"
@@ -85,6 +86,10 @@ class BraveNewTabPageUI : public ui::MojoWebUIController,
   void BindInterface(mojo::PendingReceiver<searchbox::mojom::PageHandlerFactory>
                          pending_receiver);
 
+  // Growser-422: the widgets a local agent draws through the bridge.
+  void BindInterface(
+      mojo::PendingReceiver<aistream::mojom::WidgetHandler> receiver);
+
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
   void BindInterface(
       mojo::PendingReceiver<brave_rewards::mojom::RewardsPageHandler> receiver);
@@ -137,6 +142,8 @@ class BraveNewTabPageUI : public ui::MojoWebUIController,
   std::unique_ptr<ntp_background_images::NTPDynamicNewTabTakeoverAdEventHandler>
       sponsored_content_ad_event_handler_;
   std::unique_ptr<RealboxHandler> realbox_handler_;
+  std::unique_ptr<aistream::mojom::WidgetHandler>
+      aistream_handler_;  // Growser-422
   mojo::Receiver<searchbox::mojom::PageHandlerFactory>
       searchbox_page_factory_receiver_{this};
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)

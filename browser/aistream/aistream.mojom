@@ -1,0 +1,34 @@
+// Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this file,
+// You can obtain one at https://mozilla.org/MPL/2.0/.
+
+// growser#422: the New Tab Page's way to the widget bridge. The page never
+// touches the network itself (lesson 59); the browser process does.
+module aistream.mojom;
+
+struct Widget {
+  string id;
+  string title;
+  // HTML and CSS written by the agent; shown only inside the widget frame.
+  string markup;
+};
+
+// Implemented by the page.
+interface WidgetPage {
+  // The agent changed a widget, on its own or in answer to a message.
+  OnWidgetMarkup(string widget_id, string markup);
+};
+
+// Implemented by the browser.
+interface WidgetHandler {
+  SetPage(pending_remote<WidgetPage> page);
+
+  // Empty when the bridge cannot be reached.
+  GetWidgets() => (array<Widget> widgets);
+
+  // Sends a widget's message together with the page's DOM. Exactly one of
+  // `markup` and `error` is non-empty.
+  SendMessage(string widget_id, string message, string dom)
+      => (string markup, string error);
+};

@@ -166,6 +166,7 @@
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/hid/brave_hid_delegate.h"
 #include "brave/browser/ui/geolocation/brave_geolocation_permission_tab_helper.h"
+#include "brave/browser/aistream/aistream.mojom.h"  // Growser-422
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page.mojom.h"
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page_ui.h"
 #include "brave/browser/ui/webui/brave_settings_ui.h"
@@ -798,6 +799,7 @@ void BraveContentBrowserClient::RegisterTrustedWebUIInterfaceBrokers(
   auto ntp_refresh_registration =
       registry.ForWebUI<BraveNewTabPageUI>()
           .Add<brave_new_tab_page_refresh::mojom::NewTabPageHandler>()
+          .Add<aistream::mojom::WidgetHandler>()  // Growser-422
 #if BUILDFLAG(ENABLE_BRAVE_REWARDS)
           .Add<brave_rewards::mojom::RewardsPageHandler>()
 #endif

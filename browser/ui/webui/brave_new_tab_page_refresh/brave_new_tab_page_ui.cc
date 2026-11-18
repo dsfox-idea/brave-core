@@ -7,6 +7,8 @@
 
 #include <utility>
 
+#include "brave/browser/aistream/aistream_page_handler.h"  // Growser-422
+#include "brave/browser/aistream/aistream_service_factory.h"  // Growser-422
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service.h"
@@ -142,6 +144,14 @@ void BraveNewTabPageUI::BindInterface(
   // TODO(https://github.com/brave/brave-browser/issues/51359): Use tab
   // visibility instead of `was_restored_` flag.
   was_restored_ = false;
+}
+
+// Growser-422
+void BraveNewTabPageUI::BindInterface(
+    mojo::PendingReceiver<aistream::mojom::WidgetHandler> receiver) {
+  aistream_handler_ = std::make_unique<aistream::AistreamPageHandler>(
+      std::move(receiver), aistream::AistreamServiceFactory::GetForProfile(
+                               Profile::FromWebUI(web_ui())));
 }
 
 void BraveNewTabPageUI::BindInterface(

@@ -1,0 +1,83 @@
+# Copyright (c) 2026 Dmitry Golubnichiy. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+# growser#422: New Tab Page widgets driven by a local agent through a bridge.
+
+import("//mojo/public/tools/bindings/mojom.gni")
+
+assert(!is_android)
+
+mojom("mojom") {
+  sources = [ "aistream.mojom" ]
+}
+
+source_set("aistream") {
+  sources = [
+    "aistream_frame_source.cc",
+    "aistream_frame_source.h",
+    "aistream_page_handler.cc",
+    "aistream_page_handler.h",
+    "aistream_service.cc",
+    "aistream_service.h",
+    "aistream_service_factory.cc",
+    "aistream_service_factory.h",
+  ]
+
+  public_deps = [ ":mojom" ]
+
+  deps = [
+    "//base",
+    "//brave/components/api_request_helper",
+    "//chrome/browser/profiles:profile",
+    "//chrome/common",
+    "//components/keyed_service/content",
+    "//components/keyed_service/core",
+    "//content/public/browser",
+    "//mojo/public/cpp/bindings",
+    "//net",
+    "//net/traffic_annotation",
+    "//services/network/public/cpp",
+    "//url",
+  ]
+}
+
+source_set("unit_tests") {
+  testonly = true
+
+  sources = [ "aistream_service_unittest.cc" ]
+
+  deps = [
+    ":aistream",
+    "//base",
+    "//base/test:test_support",
+    "//net",
+    "//services/network:test_support",
+    "//services/network/public/cpp",
+    "//testing/gtest",
+    "//url",
+  ]
+}
+
+source_set("browser_tests") {
+  testonly = true
+
+  defines = [ "HAS_OUT_OF_PROC_TEST_RUNNER" ]
+
+  sources = [ "aistream_browsertest.cc" ]
+
+  deps = [
+    ":aistream",
+    "//base",
+    "//base/test:test_support",
+    "//chrome/browser/profiles:profile",
+    "//chrome/common",
+    "//chrome/test:test_support",
+    "//content/public/browser",
+    "//content/test:test_support",
+    "//net:test_support",
+    "//testing/gtest",
+    "//url",
+  ]
+}

@@ -21,6 +21,7 @@ transpile_web_ui("resources") {
     "//brave/components/brave_rewards/resources/",
   ]
   deps = [
+    "//brave/browser/aistream:mojom_js",  # Growser-422
     "//brave/browser/ui/webui/brave_new_tab_page_refresh:mojom_js",
 
     # Unconditional for gn check as typescript cannnot yet conditionally import
