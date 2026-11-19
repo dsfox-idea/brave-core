@@ -209,6 +209,11 @@
     Search
   </message>
 
+  <!-- Growser-422 -->
+  <message name="IDS_NEW_TAB_SEARCH_ASK_AGENT_LABEL" desc="Description of the search suggestion that sends the typed text as a question to the local agent (Hermes); the answer appears as a card on the New Tab Page" formatter_data="webui=BraveNewTabPage">
+    Ask Hermes
+  </message>
+
   <message name="IDS_NEW_TAB_SEARCH_SUGGESTIONS_DISMISS_BUTTON_LABEL" desc="Label for button to dismiss the search suggestions prompt" formatter_data="webui=BraveNewTabPage">
     No thanks
   </message>

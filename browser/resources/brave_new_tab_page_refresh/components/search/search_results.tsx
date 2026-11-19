@@ -165,7 +165,9 @@ export function SearchResults(props: Props) {
                 </span>
                 <span className='content'>
                   {option.query}
-                  <span className='description'>Ask Hermes</span>
+                  <span className='description'>
+                    {getString(S.NEW_TAB_SEARCH_ASK_AGENT_LABEL)}
+                  </span>
                 </span>
               </button>
             )
