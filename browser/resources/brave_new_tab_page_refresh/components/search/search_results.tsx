@@ -73,7 +73,16 @@ interface MatchResultOption {
   match: AutocompleteMatch
 }
 
-export type ResultOption = URLResultOption | MatchResultOption
+// Growser-422: a question for the local agent.
+interface AgentResultOption {
+  kind: 'agent'
+  query: string
+}
+
+export type ResultOption =
+  | URLResultOption
+  | MatchResultOption
+  | AgentResultOption // Growser-422
 
 interface Props {
   options: ResultOption[]
@@ -137,6 +146,29 @@ export function SearchResults(props: Props) {
           const className = isSelected ? 'selected' : ''
           const onClick = (event: React.MouseEvent) => {
             props.onOptionClick(option, event)
+          }
+
+          // Growser-422
+          if (option.kind === 'agent') {
+            return (
+              <button
+                key='agent'
+                className={className}
+                onClick={onClick}
+                data-testid='aistream-ask'
+              >
+                <span className='result-image'>
+                  <Icon
+                    name='message-bubble-ask'
+                    className='search-icon'
+                  />
+                </span>
+                <span className='content'>
+                  {option.query}
+                  <span className='description'>Ask Hermes</span>
+                </span>
+              </button>
+            )
           }
 
           if (option.kind === 'url') {

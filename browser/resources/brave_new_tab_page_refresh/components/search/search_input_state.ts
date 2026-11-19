@@ -19,6 +19,7 @@ import {
 
 import { ResultOption } from './search_results'
 import { urlFromInput } from '../../lib/url_input'
+import { aistream, useAistream } from '../aistream/aistream_store' // Growser-422
 
 export function useSearchInputState(inputKey: string) {
   const actions = useSearchActions()
@@ -32,6 +33,7 @@ export function useSearchInputState(inputKey: string) {
   const searchSuggestionsEnabled = useSearchState(
     (s) => s.searchSuggestionsEnabled,
   )
+  const agentOn = useAistream((s) => s.on) // Growser-422
 
   const [query, setQuery] = React.useState('')
   const [searchInputUrl, setSearchInputUrl] = React.useState<string | null>(
@@ -65,14 +67,23 @@ export function useSearchInputState(inputKey: string) {
   // Build the list of result options. The result options can contain a direct
   // URL (if the user has typed a URL) or a list of autocomplete options.
   const resultOptions = React.useMemo(
-    () => getResultOptions(query, searchInputUrl ?? '', searchMatches ?? []),
-    [query, searchInputUrl, searchMatches],
+    () =>
+      getResultOptions(
+        query,
+        searchInputUrl ?? '',
+        searchMatches ?? [],
+        agentOn, // Growser-422
+      ),
+    [query, searchInputUrl, searchMatches, agentOn], // Growser-422
   )
 
   // When the result option list changes, select the first available option that
   // is allowed to be the default match.
   React.useEffect(() => {
     const optionSelected = resultOptions.some((option, index) => {
+      if (option.kind === 'agent') {
+        return false // Growser-422
+      }
       if (option.kind === 'url' || option.match.allowedToBeDefaultMatch) {
         setSelectedResultOption(index)
         return true
@@ -172,6 +183,12 @@ export function useSearchInputState(inputKey: string) {
         actions.openAutocompleteMatch(option.matchIndex, event)
         break
       }
+      // Growser-422: the answer comes back as a widget on this page.
+      case 'agent': {
+        aistream.ask(option.query)
+        setQuery('')
+        break
+      }
     }
   }
 
@@ -221,10 +238,16 @@ function getResultOptions(
   query: string,
   url: string,
   matches: AutocompleteMatch[],
+  agentOn: boolean, // Growser-422
 ) {
   const options: ResultOption[] = []
   if (!query) {
     return options
+  }
+  // Growser-422: first in the list, never the default, so Enter still
+  // searches.
+  if (agentOn && query.trim()) {
+    options.push({ kind: 'agent', query: query.trim() })
   }
   if (url) {
     // If the URL has a trailing slash but the query input does not, remove it.

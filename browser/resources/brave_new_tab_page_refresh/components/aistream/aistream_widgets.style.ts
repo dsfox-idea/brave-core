@@ -68,6 +68,11 @@ export const style = scoped.css`
     background: rgba(255, 255, 255, 0.2);
   }
 
+  .waiting {
+    padding-inline: 16px;
+    opacity: 0.7;
+  }
+
   .error {
     padding-inline: 16px;
     font: ${font.small.regular};

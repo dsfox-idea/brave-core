@@ -24,6 +24,10 @@ interface WidgetPage {
 interface WidgetHandler {
   SetPage(pending_remote<WidgetPage> page);
 
+  // Whether the browser was started with a bridge; the page offers to ask
+  // the agent only then.
+  IsOn() => (bool on);
+
   // Empty when the bridge cannot be reached.
   GetWidgets() => (array<Widget> widgets);
 
@@ -31,4 +35,8 @@ interface WidgetHandler {
   // `markup` and `error` is non-empty.
   SendMessage(string widget_id, string message, string dom)
       => (string markup, string error);
+
+  // A question typed in the page's search box. The answer is a new widget;
+  // `widget` is null exactly when `error` is not empty.
+  Ask(string query, string dom) => (Widget? widget, string error);
 };

@@ -32,11 +32,15 @@ class AistreamPageHandler : public mojom::WidgetHandler,
 
   // mojom::WidgetHandler:
   void SetPage(mojo::PendingRemote<mojom::WidgetPage> page) override;
+  void IsOn(IsOnCallback callback) override;
   void GetWidgets(GetWidgetsCallback callback) override;
   void SendMessage(const std::string& widget_id,
                    const std::string& message,
                    const std::string& dom,
                    SendMessageCallback callback) override;
+  void Ask(const std::string& query,
+           const std::string& dom,
+           AskCallback callback) override;
 
   // AistreamService::Observer:
   void OnWidgetMarkup(const std::string& widget_id,

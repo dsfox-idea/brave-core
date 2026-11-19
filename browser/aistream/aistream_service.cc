@@ -51,6 +51,19 @@ constexpr net::NetworkTrafficAnnotationTag kTrafficAnnotation =
 
 constexpr char kJsonType[] = "application/json";
 
+// Why a request to the bridge failed, in words fit to show the person.
+std::string ReplyError(const api_request_helper::APIRequestResult& result) {
+  const base::DictValue* body = result.value_body().GetIfDict();
+  const std::string* reason = body ? body->FindString("error") : nullptr;
+  if (reason) {
+    return *reason;
+  }
+  return result.response_code() > 0
+             ? base::StrCat(
+                   {"HTTP ", base::NumberToString(result.response_code())})
+             : std::string("the bridge is not reachable");
+}
+
 }  // namespace
 
 // static
@@ -233,15 +246,44 @@ void AistreamService::OnMessageReply(
       return;
     }
   }
-  const std::string* reason = body ? body->FindString("error") : nullptr;
-  std::string error =
-      reason ? *reason
-             : (result.response_code() > 0
-                    ? base::StrCat({"HTTP ",
-                                    base::NumberToString(result.response_code())})
-                    : std::string("the bridge is not reachable"));
+  std::string error = ReplyError(result);
   LOG(ERROR) << "aistream: message to " << widget_id << " failed: " << error
              << " (net error " << result.error_code() << ")";
+  std::move(callback).Run(base::unexpected(std::move(error)));
+}
+
+void AistreamService::Ask(const std::string& query,
+                          const std::string& dom,
+                          AskCallback callback) {
+  std::optional<std::string> body =
+      base::WriteJson(base::DictValue().Set("query", query).Set("dom", dom));
+  CHECK(body);
+  api_request_helper::APIRequestOptions options;
+  options.timeout = kMessageTimeout;
+  api_request_helper_.Request(
+      "POST", Endpoint("/ask"), *body, kJsonType,
+      base::BindOnce(&AistreamService::OnAskReply,
+                     weak_ptr_factory_.GetWeakPtr(), std::move(callback)),
+      Headers(), options);
+}
+
+void AistreamService::OnAskReply(AskCallback callback,
+                                 api_request_helper::APIRequestResult result) {
+  const base::DictValue* body = result.value_body().GetIfDict();
+  if (result.Is2XXResponseCode() && body) {
+    const std::string* id = body->FindString("id");
+    const std::string* title = body->FindString("title");
+    const std::string* markup = body->FindString("markup");
+    if (id && IsValidWidgetId(*id) && title && markup) {
+      std::move(callback).Run(base::ok(Widget{*id, *title, *markup}));
+      return;
+    }
+  }
+  std::string error = result.Is2XXResponseCode()
+                          ? std::string("the bridge sent no widget")
+                          : ReplyError(result);
+  LOG(ERROR) << "aistream: a question failed: " << error << " (net error "
+             << result.error_code() << ")";
   std::move(callback).Run(base::unexpected(std::move(error)));
 }
 

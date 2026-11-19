@@ -29,6 +29,10 @@ void AistreamPageHandler::SetPage(
   page_.Bind(std::move(page));
 }
 
+void AistreamPageHandler::IsOn(IsOnCallback callback) {
+  std::move(callback).Run(service_ != nullptr);
+}
+
 void AistreamPageHandler::GetWidgets(GetWidgetsCallback callback) {
   if (!service_) {
     std::move(callback).Run({});
@@ -64,6 +68,30 @@ void AistreamPageHandler::SendMessage(const std::string& widget_id,
               std::move(callback).Run(std::move(reply.value()), std::string());
             } else {
               std::move(callback).Run(std::string(), std::move(reply.error()));
+            }
+          },
+          std::move(callback)));
+}
+
+void AistreamPageHandler::Ask(const std::string& query,
+                              const std::string& dom,
+                              AskCallback callback) {
+  if (!service_) {
+    std::move(callback).Run(nullptr, "widgets are off");
+    return;
+  }
+  service_->Ask(
+      query, dom,
+      base::BindOnce(
+          [](AskCallback callback, base::expected<Widget, std::string> reply) {
+            if (reply.has_value()) {
+              std::move(callback).Run(
+                  mojom::Widget::New(std::move(reply->id),
+                                     std::move(reply->title),
+                                     std::move(reply->markup)),
+                  std::string());
+            } else {
+              std::move(callback).Run(nullptr, std::move(reply.error()));
             }
           },
           std::move(callback)));

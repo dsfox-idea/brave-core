@@ -12,64 +12,35 @@ import * as React from 'react'
 
 import * as mojom from 'gen/brave/browser/aistream/aistream.mojom.m.js'
 
+import { aistream, snapshotDom, useAistream } from './aistream_store'
 import { style } from './aistream_widgets.style'
 
 const frameUrl = 'chrome-untrusted://aistream-widget/'
 const frameOrigin = 'chrome-untrusted://aistream-widget'
 
-let proxy: {
-  handler: mojom.WidgetHandlerRemote
-  router: mojom.WidgetPageCallbackRouter
-} | null = null
-
-function getProxy() {
-  if (!proxy) {
-    const router = new mojom.WidgetPageCallbackRouter()
-    const handler = mojom.WidgetHandler.getRemote()
-    handler.setPage(router.$.bindNewPipeAndPassRemote())
-    proxy = { handler, router }
-  }
-  return proxy
-}
-
-// The page as the agent sees it, without the widgets' own frames' innards
-// (an iframe's outerHTML carries no document).
-function snapshotDom() {
-  return document.documentElement.outerHTML
-}
-
 export function AistreamWidgets() {
-  const [widgets, setWidgets] = React.useState<mojom.Widget[]>([])
+  const widgets = useAistream((s) => s.widgets)
+  const pending = useAistream((s) => s.pending)
 
-  const updateMarkup = React.useCallback((widgetId: string, markup: string) => {
-    setWidgets((current) =>
-      current.map((widget) =>
-        widget.id === widgetId ? { ...widget, markup } : widget,
-      ),
-    )
-  }, [])
-
-  React.useEffect(() => {
-    const { handler, router } = getProxy()
-    handler
-      .getWidgets()
-      .then((reply: { widgets: mojom.Widget[] }) => setWidgets(reply.widgets))
-    const listenerId = router.onWidgetMarkup.addListener(updateMarkup)
-    return () => {
-      router.removeListener(listenerId)
-    }
-  }, [updateMarkup])
-
-  if (widgets.length === 0) {
+  if (widgets.length === 0 && pending.length === 0) {
     return null
   }
   return (
     <div data-css-scope={style.scope} data-testid='aistream-widgets'>
+      {pending.map((entry) => (
+        <section className='widget pending' key={entry.key}>
+          <h4>{entry.query}</h4>
+          {entry.error ? (
+            <p className='error'>{entry.error}</p>
+          ) : (
+            <p className='waiting'>…</p>
+          )}
+        </section>
+      ))}
       {widgets.map((widget) => (
         <AistreamWidget
           key={widget.id}
           widget={widget}
-          onMarkup={updateMarkup}
         />
       ))}
     </div>
@@ -78,7 +49,6 @@ export function AistreamWidgets() {
 
 interface WidgetProps {
   widget: mojom.Widget
-  onMarkup: (widgetId: string, markup: string) => void
 }
 
 function AistreamWidget(props: WidgetProps) {
@@ -124,7 +94,7 @@ function AistreamWidget(props: WidgetProps) {
     }
     setPending(true)
     setError('')
-    const reply = await getProxy().handler.sendMessage(
+    const reply = await aistream.connect().sendMessage(
       props.widget.id,
       text,
       snapshotDom(),
@@ -135,7 +105,7 @@ function AistreamWidget(props: WidgetProps) {
     } else {
       // The bridge also streams this, but the answer must not depend on the
       // stream being up.
-      props.onMarkup(props.widget.id, reply.markup)
+      aistream.updateMarkup(props.widget.id, reply.markup)
       setMessage('')
     }
   }

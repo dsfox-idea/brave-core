@@ -34,6 +34,7 @@ constexpr char kBridge[] = "http://127.0.0.1:8650/";
 constexpr char kEvents[] = "http://127.0.0.1:8650/events";
 constexpr char kWidgets[] = "http://127.0.0.1:8650/widgets";
 constexpr char kNoteMessage[] = "http://127.0.0.1:8650/widgets/note/message";
+constexpr char kAsk[] = "http://127.0.0.1:8650/ask";
 
 class FakeEnvironment : public base::Environment {
  public:
@@ -245,6 +246,48 @@ TEST_F(AistreamServiceTest, AFailedMessageSaysWhy) {
   reply = unreachable.Take();
   ASSERT_FALSE(reply.has_value());
   EXPECT_EQ(reply.error(), "the bridge is not reachable");
+}
+
+TEST_F(AistreamServiceTest, AQuestionCarriesTheDomAndReturnsTheNewWidget) {
+  base::test::TestFuture<base::expected<Widget, std::string>> future;
+  service_->Ask("why?", "<main>ntp</main>", future.GetCallback());
+
+  const network::ResourceRequest* request = nullptr;
+  ASSERT_TRUE(url_loader_factory_.IsPending(kAsk, &request));
+  EXPECT_EQ(request->method, "POST");
+  EXPECT_EQ(AuthorizationOf(kAsk), "Bearer secret");
+  std::optional<base::Value> body =
+      base::JSONReader::Read(network::GetUploadData(*request), 0);
+  ASSERT_TRUE(body && body->is_dict());
+  EXPECT_EQ(*body->GetDict().FindString("query"), "why?");
+  EXPECT_EQ(*body->GetDict().FindString("dom"), "<main>ntp</main>");
+
+  url_loader_factory_.SimulateResponseForPendingRequest(
+      kAsk, R"({"id": "ask-1", "title": "why?", "markup": "<p>because</p>"})");
+  auto reply = future.Take();
+  ASSERT_TRUE(reply.has_value()) << reply.error();
+  EXPECT_EQ(reply->id, "ask-1");
+  EXPECT_EQ(reply->title, "why?");
+  EXPECT_EQ(reply->markup, "<p>because</p>");
+}
+
+TEST_F(AistreamServiceTest, AFailedQuestionSaysWhy) {
+  base::test::TestFuture<base::expected<Widget, std::string>> failed;
+  service_->Ask("why?", "", failed.GetCallback());
+  url_loader_factory_.SimulateResponseForPendingRequest(
+      kAsk, R"({"error": "harness: HTTP 500"})", net::HTTP_BAD_GATEWAY);
+  auto reply = failed.Take();
+  ASSERT_FALSE(reply.has_value());
+  EXPECT_EQ(reply.error(), "harness: HTTP 500");
+
+  // A widget id that could reshape a later path is not a widget.
+  base::test::TestFuture<base::expected<Widget, std::string>> bad_id;
+  service_->Ask("why?", "", bad_id.GetCallback());
+  url_loader_factory_.SimulateResponseForPendingRequest(
+      kAsk, R"({"id": "../events", "title": "t", "markup": "m"})");
+  reply = bad_id.Take();
+  ASSERT_FALSE(reply.has_value());
+  EXPECT_EQ(reply.error(), "the bridge sent no widget");
 }
 
 TEST_F(AistreamServiceTest, AnInvalidWidgetIdSendsNothing) {

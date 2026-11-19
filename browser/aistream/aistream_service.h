@@ -64,6 +64,9 @@ class AistreamService : public KeyedService {
   // The new markup, or a reason fit to show the person.
   using MessageCallback =
       base::OnceCallback<void(base::expected<std::string, std::string>)>;
+  // The new widget, or a reason fit to show the person.
+  using AskCallback =
+      base::OnceCallback<void(base::expected<Widget, std::string>)>;
 
   static constexpr char kBridgeSwitch[] = "aistream-bridge";
   static constexpr char kTokenVariable[] = "AISTREAM_TOKEN";
@@ -93,6 +96,9 @@ class AistreamService : public KeyedService {
                    const std::string& message,
                    const std::string& dom,
                    MessageCallback callback);
+  void Ask(const std::string& query,
+           const std::string& dom,
+           AskCallback callback);
 
  private:
   base::flat_map<std::string, std::string> Headers() const;
@@ -106,6 +112,8 @@ class AistreamService : public KeyedService {
   void OnMessageReply(const std::string& widget_id,
                       MessageCallback callback,
                       api_request_helper::APIRequestResult result);
+  void OnAskReply(AskCallback callback,
+                  api_request_helper::APIRequestResult result);
 
   const Config config_;
   api_request_helper::APIRequestHelper api_request_helper_;

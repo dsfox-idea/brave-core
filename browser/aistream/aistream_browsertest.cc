@@ -56,9 +56,14 @@ class FakeBridge {
     }
     if (request.relative_url == "/widgets") {
       response->set_content_type("application/json");
-      response->set_content(
-          R"([{"id": "note", "title": "Note",)"
-          R"( "markup": "<p id=\"start\">start</p>"}])");
+      response->set_content(base::StrCat(
+          {"[", asked_.empty() ? "" : kAnswer, asked_.empty() ? "" : ",",
+           R"({"id": "note", "title": "Note",)"
+           R"( "markup": "<p id=\"start\">start</p>"}])"}));
+    } else if (request.relative_url == "/ask") {
+      asked_ = request.content;
+      response->set_content_type("application/json");
+      response->set_content(kAnswer);
     } else if (request.relative_url == "/events") {
       response->set_content_type("text/event-stream");
       response->set_content(event_.empty()
@@ -90,9 +95,18 @@ class FakeBridge {
     base::AutoLock lock(lock_);
     return last_message_;
   }
+  std::string asked() {
+    base::AutoLock lock(lock_);
+    return asked_;
+  }
 
  private:
+  static constexpr char kAnswer[] =
+      R"({"id": "ask-1", "title": "why?",)"
+      R"( "markup": "<p id=\"because\">because</p>"})";
+
   base::Lock lock_;
+  std::string asked_;
   std::string event_;
   std::string last_message_;
   int events_requests_ = 0;
@@ -233,6 +247,53 @@ IN_PROC_BROWSER_TEST_F(AistreamBrowserTest, TheMarkupRunsNoScriptAndLoadsNothing
     EXPECT_FALSE(bridge_.Saw(path)) << path << " reached the network";
   }
   EXPECT_TRUE(WidgetFrame()) << "the frame navigated away";
+}
+
+IN_PROC_BROWSER_TEST_F(AistreamBrowserTest,
+                       AQuestionFromTheSearchBoxBecomesAWidget) {
+  OpenNewTab();
+  ASSERT_TRUE(WaitForFrameElement("#start"));
+  ASSERT_TRUE(base::test::RunUntil([&] {
+    return content::EvalJs(web_contents(),
+                           "!!document.querySelector('.input-container input')")
+        .ExtractBool();
+  }));
+  ASSERT_TRUE(content::ExecJs(web_contents(), R"(
+    const input = document.querySelector('.input-container input');
+    input.focus();
+    Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')
+        .set.call(input, 'why?');
+    input.dispatchEvent(new Event('input', {bubbles: true}));
+  )"));
+  ASSERT_TRUE(base::test::RunUntil([&] {
+    return content::EvalJs(
+               web_contents(),
+               "!!document.querySelector('[data-testid=aistream-ask]')")
+        .ExtractBool();
+  })) << "the search box offers no question for the agent";
+  ASSERT_TRUE(content::ExecJs(
+      web_contents(),
+      "document.querySelector('[data-testid=aistream-ask]').click()"));
+
+  ASSERT_TRUE(base::test::RunUntil([&] {
+    return content::EvalJs(web_contents(),
+                           "!!document.querySelector('[data-widget-id=ask-1]')")
+        .ExtractBool();
+  })) << "the answer did not become a widget";
+  std::string body = bridge_.asked();
+  EXPECT_NE(body.find("\"query\":\"why?\""), std::string::npos) << body;
+  EXPECT_NE(body.find("aistream-widgets"), std::string::npos)
+      << "the question did not carry the page";
+  // The newest answer comes first, before the widgets the bridge started
+  // with.
+  EXPECT_EQ(content::EvalJs(web_contents(),
+                            "[...document.querySelectorAll('[data-widget-id]')]"
+                            ".map(e => e.dataset.widgetId).join()"),
+            "ask-1,note");
+  EXPECT_EQ(content::EvalJs(web_contents(),
+                            "document.querySelector('[data-widget-id=ask-1] "
+                            "h4').textContent"),
+            "why?");
 }
 
 }  // namespace aistream
