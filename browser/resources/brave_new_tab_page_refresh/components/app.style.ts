@@ -25,7 +25,7 @@ export const style = scoped.css`
      * when it expands, and an anchor that disappears drops its anchored
      * element back to the top of the page. Custom properties inherit down, so
      * the search box still reads it from here. */
-    --search-expand-travel: 13vh;
+    --search-expand-travel: 7vh; /* Growser-422: was 13vh */
 
     /* As of CR146, scrollbars for elements slotted into shadow DOM trees
      * sometimes do not respect the user's color scheme. Adding a rule for
@@ -128,7 +128,7 @@ export const style = scoped.css`
      * which is the flash the owner saw. */
     position-anchor: --ntp-search-row;
     inset-block-start: calc(
-      anchor(end) + var(--search-expand-travel) + 100px);
+      anchor(end) + var(--search-expand-travel) + 56px); /* Growser-422 */
     inset-inline-start: anchor(start);
     inset-inline-end: anchor(end);
     margin-inline: auto;

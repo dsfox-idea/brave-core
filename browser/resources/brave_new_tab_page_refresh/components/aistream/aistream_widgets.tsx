@@ -9,6 +9,7 @@
 // which runs no script of the agent's and loads nothing.
 
 import * as React from 'react'
+import ProgressRing from '@brave/leo/react/progressRing'
 
 import * as mojom from 'gen/brave/browser/aistream/aistream.mojom.m.js'
 
@@ -17,6 +18,15 @@ import { style } from './aistream_widgets.style'
 
 const frameUrl = 'chrome-untrusted://aistream-widget/'
 const frameOrigin = 'chrome-untrusted://aistream-widget'
+
+// The place the answer will take, held while the agent thinks.
+function AnswerSlot() {
+  return (
+    <div className='answer-slot' data-testid='aistream-waiting'>
+      <ProgressRing />
+    </div>
+  )
+}
 
 export function AistreamWidgets() {
   const widgets = useAistream((s) => s.widgets)
@@ -30,11 +40,7 @@ export function AistreamWidgets() {
       {pending.map((entry) => (
         <section className='widget pending' key={entry.key}>
           <h4>{entry.query}</h4>
-          {entry.error ? (
-            <p className='error'>{entry.error}</p>
-          ) : (
-            <p className='waiting'>…</p>
-          )}
+          {entry.error ? <p className='error'>{entry.error}</p> : <AnswerSlot />}
         </section>
       ))}
       {widgets.map((widget) => (
@@ -118,8 +124,12 @@ function AistreamWidget(props: WidgetProps) {
         src={frameUrl}
         title={props.widget.title}
         sandbox='allow-scripts allow-same-origin'
-        style={{ height: `${height}px` }}
+        style={{
+          height: `${height}px`,
+          display: props.widget.markup && !pending ? undefined : 'none',
+        }}
       />
+      {pending && <AnswerSlot />}
       <form
         onSubmit={(event) => {
           event.preventDefault()
@@ -132,9 +142,7 @@ function AistreamWidget(props: WidgetProps) {
           disabled={pending}
           onChange={(event) => setMessage(event.target.value)}
         />
-        <button type='submit' disabled={pending || !message.trim()}>
-          {pending ? '…' : '↵'}
-        </button>
+        {/* Enter submits; there is no button to press. */}
       </form>
       {error && <p className='error'>{error}</p>}
     </section>

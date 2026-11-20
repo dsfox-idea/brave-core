@@ -15,9 +15,9 @@ export const style = scoped.css`
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    /* The clock hangs 100px under the search row (app.style.ts) and is
-     * about 150px tall, so the widgets start below it. */
-    margin-block-start: calc(var(--search-expand-travel) + 260px);
+    /* The clock hangs 56px under the search row (app.style.ts) and is
+     * about 142px tall, so the widgets start 16px below it. */
+    margin-block-start: calc(var(--search-expand-travel) + 198px);
     padding-block-end: 32px;
   }
 
@@ -62,15 +62,17 @@ export const style = scoped.css`
     padding: 6px 10px;
   }
 
-  button {
-    padding: 6px 12px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.2);
+  input:disabled {
+    opacity: 0.5;
+    cursor: progress;
   }
 
-  .waiting {
-    padding-inline: 16px;
-    opacity: 0.7;
+  .answer-slot {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --leo-progressring-size: 32px;
   }
 
   .error {

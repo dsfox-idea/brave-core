@@ -71,6 +71,9 @@ class FakeBridge {
                                 : base::StrCat({"data: ", event_, "\n\n"}));
     } else if (request.relative_url == "/widgets/note/message") {
       last_message_ = request.content;
+      if (hold_answers_) {
+        return std::make_unique<net::test_server::HungResponse>();
+      }
       response->set_content_type("application/json");
       response->set_content(R"({"markup": "<p id=\"answer\">answer</p>"})");
     } else {
@@ -79,6 +82,10 @@ class FakeBridge {
     return response;
   }
 
+  void HoldAnswers() {
+    base::AutoLock lock(lock_);
+    hold_answers_ = true;
+  }
   void SetEvent(const std::string& event) {
     base::AutoLock lock(lock_);
     event_ = event;
@@ -110,6 +117,7 @@ class FakeBridge {
   std::string event_;
   std::string last_message_;
   int events_requests_ = 0;
+  bool hold_answers_ = false;
   std::set<std::string> paths_seen_;
 };
 
@@ -203,6 +211,37 @@ IN_PROC_BROWSER_TEST_F(AistreamBrowserTest,
   EXPECT_NE(body.find("\"message\":\"hello\""), std::string::npos) << body;
   // The DOM snapshot is the New Tab Page itself.
   EXPECT_NE(body.find("aistream-widgets"), std::string::npos);
+}
+
+IN_PROC_BROWSER_TEST_F(AistreamBrowserTest,
+                       AWaitingWidgetHoldsTheAnswerPlaceAndLocksItsInput) {
+  bridge_.HoldAnswers();
+  OpenNewTab();
+  ASSERT_TRUE(WaitForFrameElement("#start"));
+  ASSERT_TRUE(content::ExecJs(web_contents(), R"(
+    const input = document.querySelector('[data-widget-id=note] input');
+    Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')
+        .set.call(input, 'hello');
+    input.dispatchEvent(new Event('input', {bubbles: true}));
+    document.querySelector('[data-widget-id=note] form').requestSubmit();
+  )"));
+  ASSERT_TRUE(base::test::RunUntil([&] {
+    return content::EvalJs(web_contents(),
+                           "!!document.querySelector('[data-widget-id=note] "
+                           "[data-testid=aistream-waiting] leo-progressring')")
+        .ExtractBool();
+  })) << "no spinner in the answer's place";
+  EXPECT_EQ(content::EvalJs(web_contents(),
+                            "document.querySelector('[data-widget-id=note] "
+                            "input').disabled"),
+            true);
+  EXPECT_GE(content::EvalJs(web_contents(),
+                            "document.querySelector('[data-widget-id=note] "
+                            "[data-testid=aistream-waiting]')"
+                            ".getBoundingClientRect().height")
+                .ExtractDouble(),
+            100.0)
+      << "the answer's place is not held";
 }
 
 IN_PROC_BROWSER_TEST_F(AistreamBrowserTest, TheMarkupRunsNoScriptAndLoadsNothing) {
