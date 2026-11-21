@@ -1,23 +1,23 @@
-/* Title for Ask Brave shortcut. Brave is the company name and should not be translated */
-"widgets.askBrave" = "Спросить Growser";
+/* Description for the Ask Brave widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.askBraveWidgetDescription" = "Задать вопрос Growser.";
 
-/* Title for bookmarks menu item */
-"widgets.BookmarksMenuItem" = "Закладки";
-
-/* The name of the feature */
-"widgets.braveLeo" = "ИИ-помощник Leo";
+/* Title for the Ask Brave widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.askBraveWidgetTitle" = "Спросить Growser";
 
 /* The name of the feature */
 "widgets.braveNews" = "Growser News";
 
-/* Title for downloads menu item */
-"widgets.DownloadsMenuItem" = "Загрузки";
+/* Title for the Brave Search control. Brave is the company name and should not be translated */
+"widgets.braveSearch" = "Поиск Growser";
+
+/* Description for the Brave Search widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.braveSearchWidgetDescription" = "Поиск в интернете с Growser.";
+
+/* Title for the Brave Search widget on 'add custom control' screen. Brave is the company name and should not be translated */
+"widgets.braveSearchWidgetTitle" = "Поиск Growser";
 
 /* Description for favorites widget on 'add widget' screen. */
 "widgets.favoritesWidgetDescription" = "Быстрый доступ к любимым сайтам.";
-
-/* Title for history menu item */
-"widgets.HistoryMenuItem" = "История";
 
 /* Displayed on a news widget that has failed to load */
 "widgets.newsClusteringErrorLabel" = "Повторите попытку позже";
@@ -40,12 +40,6 @@
 /* This shows when you add a widget but have no favorites added in your app */
 "widgets.noFavoritesFound" = "Откройте Growser, чтобы добавить сюда избранные сайты.";
 
-/* QR Code section title */
-"widgets.QRCode" = "QR-код";
-
-/* Description for the search option on the 'shortcuts' widget. */
-"widgets.searchShortcutTitle" = "Поиск";
-
 /* Description for Brave Shields widget on 'add widget' screen. */
 "widgets.shieldStatsDescription" = "Информация о том, как Growser экономит ваше время и обеспечивает конфиденциальность в Интернете.";
 
@@ -61,15 +55,6 @@
 /* Button to the browser and enter URL or make a search query there. */
 "widgets.shortcutsEnterURLButton" = "Ввести запрос или URL";
 
-/* Button to open new browser tab. */
-"widgets.shortcutsNewTabButton" = "Новая вкладка";
-
-/* Button to open video playlist window. */
-"widgets.shortcutsPlaylistButton" = "Growser Плейлист";
-
-/* Button to open new private browser tab. */
-"widgets.shortcutsPrivateTabButton" = "Приватная вкладка";
-
 /* Description for shortcuts widget on 'add widget' screen. */
 "widgets.shortcutsWidgetDescription" = "Быстрый доступ к поиску и веб-страницам в Growser.";
 
@@ -81,16 +66,3 @@
 
 /* Title for Brave Shields single stat widget on 'add widget' screen. */
 "widgets.singleStatTitle" = "Конфиденциальность";
-
-/* Description for the Brave Wallet option on the 'shortcuts' widget. */
-"widgets.walletShortcutTitle" = "Growser Кошелек";
-
-/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
-"widgets.braveLeoVoiceInput" = "Голосовой ввод Leo";
-
-/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
-"widgets.askBraveWidgetDescription" = "Задать вопрос Growser.";
-"widgets.askBraveWidgetTitle" = "Спросить Growser";
-"widgets.braveSearch" = "Поиск Growser";
-"widgets.braveSearchWidgetDescription" = "Поиск в интернете с Growser.";
-"widgets.braveSearchWidgetTitle" = "Поиск Growser";

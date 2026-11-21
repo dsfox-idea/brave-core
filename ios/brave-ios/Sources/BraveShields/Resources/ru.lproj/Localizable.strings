@@ -125,10 +125,10 @@
 "BraveShieldsStatusTitle" = "Щиты Growser";
 
 /* Context: The 'Down' in 'Brave Shields Down' */
-"BraveShieldsStatusValueDown" = "выключены";
+"BraveShieldsStatusValueDown" = "выкл";
 
 /* Context: The 'Up' in 'Brave Shields Up' */
-"BraveShieldsStatusValueUp" = "включены";
+"BraveShieldsStatusValueUp" = "вкл";
 
 /* The accessibility hint spoken when focused on the main shields toggle */
 "BraveShieldsToggleHint" = "Brave Shields: чтобы переключить, нажмите дважды";
@@ -159,6 +159,9 @@
 
 /* An error message telling the user that they crossed the line limit */
 "CustomFiltersTooManyLinesError" = "Лимит строк для пользовательских фильтров: %i";
+
+/* An error message telling the user that the custom scriptlet failed to save to disk */
+"customScriptletFailedToSaveError" = "Не удалось сохранить скриптлет";
 
 /* Data Saved Shield Stat */
 "DataSavedStat" = "Прим. данных\nСохранено";
@@ -286,6 +289,9 @@
 /* Used to describe when a request was blocked by the Content Blocker in Blocked Requests view. */
 "shields.contentBlocker" = "Блокировка контента";
 
+/* A button title displayed on Shields panel linking to Webcompat Reporter. */
+"shields.reportBrokenSiteButtonTitle" = "Сообщить";
+
 /* Used to describe when a request was blocked by our request blocking scripts in Blocked Requests view. */
 "shields.requestBlocking" = "Блокировка запросов";
 
@@ -294,6 +300,15 @@
 
 /* A label displayed above the resource type of a request that was blocked in Blocked Requests view. */
 "shields.resourceTypeLabel" = "Тип ресурса";
+
+/* A label displayed on Shields panel beside the toggle enabling shields. */
+"shields.shieldsDownForSite" = "Shields **выключены** для этого сайта";
+
+/* A button title displayed on Shields panel linking to Shields global settings. */
+"shields.shieldsGlobalSettings" = "Общие настройки Shields";
+
+/* A label displayed on Shields panel beside the toggle disabling shields. */
+"shields.shieldsUpForSite" = "Shields **включены** для этого сайта";
 
 /* A description beside a toggle that appears in the Shred settings screen, within Shields & Privacy settings. */
 "shields.shredHistoryRowDescription" = "Если Shred должен удалять элементы истории.";
@@ -310,8 +325,17 @@
 /* A title for the Shred settings screen, within Shields & Privacy settings. */
 "shields.shredSettingsViewTitle" = "Удалить";
 
+/* A footer displayed on Shields panel when shields are down. */
+"shields.siteNotWorkingCorrectly" = "Сайт работает неправильно с включёнными Shields?";
+
+/* A label displayed on Shields panel at the bottom. Learn more link is clickable, where `%@` will be replaced with the URL. */
+"shields.siteSeemsBroken" = "Если сайт работает неправильно, попробуйте выключить Shields. Это может ослабить защиту конфиденциальности в Growser. [Подробнее](%@)";
+
 /* A label displayed above the source url of a request that was blocked in Blocked Requests view. */
 "shields.sourceURLLabel" = "URL источника";
+
+/* A label displayed on Shields panel beside the number of blocked items. */
+"shields.trackersAdsAndMoreBlocked" = "трекеров, объявлений и прочего заблокировано";
 
 /* Section title for adbblock, tracking protection, HTTPS-E, and cookies */
 "ShieldsDefaults" = "Общие настройки Brave Shields по умолчанию";
@@ -402,12 +426,3 @@
 
 /* A description shown an a page where the http page was blocked */
 "YourConnectionIsNotPrivate" = "Вы видите это предупреждение, потому что сайт не поддерживает HTTPS.";
-
-"customScriptletFailedToSaveError" = "Не удалось сохранить скриптлет";
-"shields.reportBrokenSiteButtonTitle" = "Сообщить";
-"shields.shieldsDownForSite" = "Shields **выключены** для этого сайта";
-"shields.shieldsGlobalSettings" = "Общие настройки Shields";
-"shields.shieldsUpForSite" = "Shields **включены** для этого сайта";
-"shields.siteNotWorkingCorrectly" = "Сайт работает неправильно с включёнными Shields?";
-"shields.siteSeemsBroken" = "Если сайт работает неправильно, попробуйте выключить Shields. Это может ослабить защиту конфиденциальности в Growser. [Подробнее](%@)";
-"shields.trackersAdsAndMoreBlocked" = "трекеров, объявлений и прочего заблокировано";

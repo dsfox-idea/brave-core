@@ -1517,27 +1517,37 @@
 "wallet.web3SettingsEnableNFTDiscoveryFooter" = "Füge NFTs, die du besitzt, mithilfe von Drittanbieter-APS automatisch zu deinem Wallet hinzu. [Mehr erfahren](%@)";
 
 /* A description of an ZCash account, displayed in Accounts tab. */
-"wallet.zecAccountDescription" = "ZCash";
+"wallet.zecAccountDescription" = "Zcash";
 
 /* The title for Brave Fee label in Swap. The fee percentage is displayed beside the label. */
 "wallet.braveFeeLabel" = "Growser-Gebühr: %@";
+
 /* A disclaimer that appears at the bottom of an swap screen which discloses the fixed Brave fee included in the swap quotes. '%@' will be replaced by a percentage. For example: 'Quote includes a 0.875% Brave fee' */
 "wallet.braveSwapFeeDisclaimer" = "Angebot enthält eine Growser-Gebühr von %@.";
+
 /* A warning displayed in row before the Send button in Send Crypto view when a Bitcoin asset is selected. */
 "wallet.btcOrdinalsUnsupportedWarning" = "Growser-Wallet unterstützt derzeit keine Bitcoin-NFTs („Ordinals“). Das Senden von BTC von einer Adresse, die Ordinals hat, kann dazu führen, dass die Ordinals versehentlich übertragen werden.";
+
 /* Title shown send address / ENS domain when requesting to do an ENS off chain lookup. */
 "wallet.ensOffchainGatewayTitle" = "Growser unterstützt die Verwendung von Offchain-Gateways zur Auflösung von .eth-Domains.";
+
 /* The description of the pop up when user first time open buy screen in Brave Wallet. */
 "wallet.meldTransactionPartnerDescription" = "Growser Wallet nutzt Meld.io, um verschiedene Krypto-Anbieter für deine Region zusammenzufassen und anzuzeigen. Wir werden Informationen mit Meld.io teilen, um die Transaktion abzuschließen, einschließlich deiner Wallet-Adresse und deines Ländercodes. Für weitere Informationen lese bitte die Nutzungsbedingungen von Meld.io.";
+
 /* The title of the alert that asks users either to enable NFT discovery or import manually. `SimpleHash` is the third-party service name, so it does not need to be translated. */
 "wallet.nftDiscoveryCalloutDescription" = "Die Growser Wallet kann mithilfe eines Drittanbieters automatisch Ihre NFTs anzeigen. Um diesen Dienst zu erbringen, wird Growser Ihre Wallet-Adressen mit SimpleHash teilen. Erfahre mehr.";
+
 /* The description of the alert when user attempts to remove an NFT from wallet. */
 "wallet.nftRemoveFromWalletAlertDescription" = "Das NFT wird aus der Growser Wallet entfernt, verbleibt aber in der Blockchain. Wenn du es entfernst und anschließend deine Meinung änderst, musst du es manuell reimportieren.";
+
 /* The title of the alert when user attempts to remove an NFT from wallet. */
 "wallet.nftRemoveFromWalletAlertTitle" = "Aus Growser Wallet entfernen?";
+
 /* The message displayed when the user takes a screenshot of their private key */
 "wallet.privateKeyScreenshotDetectedMessage" = "Warnung: Ein Screenshot deines privaten Schlüssels wird möglicherweise in einem Cloud-Dateidienst gesichert und kann von jeder Anwendung mit Fotozugriff gelesen werden. Growser empfiehlt, diesen Screenshot nicht zu speichern und so schnell wie möglich zu löschen.";
+
 /* The description of where user will see once a test network has been picked in swap screen. '%@' will be replaced with a network such as 'Rinkeby Test Network' or 'Ropsten Test Network' */
 "wallet.swapCryptoUnsupportNetworkBody" = "Growser unterstützt derzeit keinen Tausch im %@. Bitte wechsele zu einer unterstützten Blockchain.";
+
 /* A disclaimer note shown on the Swap screen. '%@' will be replaced by a company name, ex. '0x' / 'Jupiter'. 'DEX aggregator' is a type of blockchain-based service (decentralized exchange) */
 "wallet.swapDexAggrigatorNote" = "Growser nutzt %@ als DEX-Aggregator.";

@@ -742,6 +742,9 @@
 /* Button label to temporarily continue to the site from the certificate error page */
 "ErrorPagesProceedAnywayButton" = "Перейти на сайт %@ (небезопасно)";
 
+/* Button to exclude a topsite url from the most visited list */
+"ExcludeMostVisitedSite" = "Удалить";
+
 /* %@ will launch an external application */
 "ExternalAppURLAlertMessage" = "%@ запустит внешнее приложение";
 
@@ -1856,7 +1859,7 @@
 "ReaderModeSmallerFontButtonAccessibilityLabel" = "Уменьшить размер шрифта";
 
 /* Button for smaller reader font size. Keep this extremely short! This is shown in the reader mode toolbar. */
-"ReaderModeSmallerFontButtonTitle" = "–";
+"ReaderModeSmallerFontButtonTitle" = "-";
 
 /* Accessibility hint for the color theme setting buttons in reader mode display settings */
 "ReaderModeThemeButtonAccessibilityHint" = "Изменение цветовой темы.";
@@ -2475,6 +2478,15 @@
 
 /* Title for Shield Education Tracker Video Ad Block */
 "shieldEducation.videoAdBlockTitle" = "Реклама блокируется во время просмотра видео на этом сайте";
+
+/* Title for the private tab shortcut. */
+"shortcut.privateTab" = "Приватная вкладка";
+
+/* Title for the QR Code shortcut. */
+"shortcut.qrCode" = "QR-код";
+
+/* Title for the Search shortcut. */
+"shortcut.search" = "Поиск";
 
 /* Quick Action for 3D-Touch on the Application Icon */
 "ShortcutItemTitleNewPrivateTab" = "Новая вкладка инкогнито";
@@ -3555,15 +3567,9 @@
 "ntp.topsitesTypeFavorites" = "Избранное";
 "ntp.topsitesTypeMostVisited" = "Часто посещаемые";
 "ntp.topsitesTypeNone" = "Не показывать";
-/* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
-"ExcludeMostVisitedSite" = "Удалить";
 "ExcludeMostVisitedSiteAlertMessage" = "Этот сайт не будет показываться в списке часто посещаемых, но из истории он не удалится.";
 "ExcludeMostVisitedSiteAlertTitle" = "Убрать из часто посещаемых?";
 "shortcut.braveWallet" = "Growser Кошелёк";
-"shortcut.privateTab" = "Приватная вкладка";
-"shortcut.qrCode" = "QR-код";
-"shortcut.search" = "Поиск";
-
 /* growser#302: translations for keys this file is read for (scripts/ios-translations.py). */
 "playlist.folderItemCountFormat" = "Элементов: %lld";
 "playlistFolders.subtitleItemCountFormat" = "Элементов: %lld";
